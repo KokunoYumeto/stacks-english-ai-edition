@@ -974,6 +974,162 @@ presentation.
 
 
 
+\begin{lemma}
+\label{lemma-rigidified-invertible-fpqc-descent}
+\begin{reference}
+\cite[Expos\'e 190, n\textsuperscript{o} 4, pp. 322--323]{FGA}.
+\end{reference}
+Let $f : X \to S$ be a morphism with a section $s : S \to X$. Assume that
+for every $T \to S$ the canonical map
+$$
+\mathcal{O}_T \longrightarrow (f_T)_*\mathcal{O}_{X_T}
+$$
+is an isomorphism. Let $S' \to S$ be an fpqc covering and set
+$X' = X \times_S S'$. An invertible sheaf $\mathcal{L}'$ on $X'$ together
+with a trivialization of $s'^*\mathcal{L}'$ is the pullback of a unique such
+rigidified invertible sheaf on $X$ if and only if its two pullbacks to
+$X' \times_X X'$ are isomorphic as rigidified invertible sheaves.
+
+Without choosing a rigidification, an invertible sheaf $\mathcal{L}'$ is
+Zariski locally on $S'$ isomorphic to the pullback of an invertible sheaf on
+$X$ if and only if its two pullbacks to $X' \times_X X'$ are Zariski locally
+on $S' \times_S S'$ isomorphic.
+\end{lemma}
+
+\begin{proof}
+For every $T \to S$ and every invertible sheaf $\mathcal{L}$ on $X_T$, we
+have
+$$
+\operatorname{Aut}(\mathcal{L}) =
+\Gamma(X_T, \mathcal{O}_{X_T}^*) =
+\Gamma(T, \mathcal{O}_T^*).
+$$
+It follows that an automorphism preserving a rigidification along $s_T$ is
+the identity. Thus an isomorphism between two rigidified invertible sheaves,
+if it exists, is unique. On the triple fibre product the two composites of
+the isomorphism in the statement are both rigidified isomorphisms, so they
+agree. In other words, the cocycle condition is automatic. Effectivity now
+follows from Proposition \ref{proposition-fpqc-descent-quasi-coherent}, and
+the descended module is invertible by
+Lemma \ref{lemma-finite-locally-free-descends}. The rigidification descends by
+full faithfulness. This proves the first assertion.
+
+For the second assertion, replace $\mathcal{L}'$ by
+$$
+\mathcal{L}'_0 =
+\mathcal{L}' \otimes (f')^*(s'^*\mathcal{L}')^{-1},
+$$
+which has a canonical rigidification. Local isomorphisms between the two
+pullbacks can be uniquely normalized to preserve the induced
+rigidifications; uniqueness makes them glue. The first assertion descends
+$\mathcal{L}'_0$. Since $s'^*\mathcal{L}'$ is Zariski locally trivial on
+$S'$, this is exactly the claimed local pullback condition. The converse is
+immediate.
+\end{proof}
+
+\begin{proposition}
+\label{proposition-atiyah-cartier-invertible}
+\begin{reference}
+\cite[Expos\'e 190, n\textsuperscript{o} 4, p. 323]{FGA}.
+\end{reference}
+Let $A$, $B$, and $\partial_i$ be as in
+Lemma \ref{lemma-height-one-differential-operators}. Let
+$f : X \to \Spec(A)$ have a section $s$. For $r \geq 1$, set
+$$
+S_r = \Spec(B^{\otimes_A r}),
+\qquad X_r = X \times_A S_r,
+$$
+write $f_r : X_r \to S_r$ for the projection, and assume that
+$\mathcal{O}_{S_r} \to (f_r)_*\mathcal{O}_{X_r}$ is an
+isomorphism for every $r$. Set $X_B = X_1$, let $q : X_B \to X$ be the
+projection, and let $\mathcal{L}$ be an invertible sheaf on $X_B$.
+Normalize it along the induced section by setting
+$$
+\mathcal{L}_0 =
+\mathcal{L} \otimes f_B^*(s_B^*\mathcal{L})^{-1}.
+$$
+Define the {it Atiyah--Cartier class} $a(\mathcal{L})$ to be the extension
+class of the sequence of principal parts
+$$
+0 \longrightarrow
+\Omega^1_{X_B/X} \otimes \mathcal{L}_0 \longrightarrow
+\mathcal{P}^1_{X_B/X}(\mathcal{L}_0) \longrightarrow
+\mathcal{L}_0 \longrightarrow 0.
+$$
+Thus
+$$
+a(\mathcal{L}) \in
+\Ext^1_{\mathcal{O}_{X_B}}
+(\mathcal{L}_0, \Omega^1_{X_B/X} \otimes \mathcal{L}_0)
+= H^1(X_B, \Omega^1_{X_B/X}).
+$$
+This is the ordinary first Atiyah class for $q$.
+Then the following are equivalent:
+\begin{enumerate}
+\item $a(\mathcal{L}) = 0$, and
+\item there is an invertible sheaf $\mathcal{M}$ on $X$ such that
+$\mathcal{L}$ is Zariski locally on $\Spec(B)$ isomorphic to $q^*\mathcal{M}$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+The sequence in the statement is the sequence of
+Modules, Lemma \ref{modules-lemma-sequence-of-principal-parts}. Its splittings
+are the same as connections on $\mathcal{L}_0$ relative to $X_B/X$. Since
+$$
+\Omega^1_{X_B/X} =
+\mathcal{O}_{X_B} \otimes_B \Omega^1_{B/A}
+$$
+and $\Omega^1_{B/A}$ is free on $\mathrm{d}x_1, \ldots, \mathrm{d}x_n$,
+such a connection is given by additive operators
+$\nabla_i : \mathcal{L}_0 \to \mathcal{L}_0$ satisfying
+$$
+\nabla_i(gm) = \partial_i(g)m + g\nabla_i(m).
+$$
+
+Assume (1). Choose a connection. Its restriction along $s_B$ is a connection
+on $s_B^*\mathcal{L}_0 = \mathcal{O}_{\Spec(B)}$. Subtracting multiplication
+by suitable elements of $B$ from the $\nabla_i$, we may and do arrange that
+this restricted connection is the canonical one given by the $\partial_i$.
+The resulting normalized connection is unique, because the difference of
+two normalized connections is given by global functions on $X_B$ and these
+are exactly the elements of $B$.
+
+The commutators $[\nabla_i, \nabla_j]$ and the operators $\nabla_i^p$ are
+$\mathcal{O}_{X_B}$-linear. Hence they are multiplication by global functions
+on $X_B$. Their restrictions along $s_B$ vanish because the $\partial_i$
+commute and satisfy $\partial_i^p = 0$. The hypothesis on global functions
+therefore gives
+$$
+[\nabla_i, \nabla_j] = 0
+\quad\text{and}\quad
+\nabla_i^p = 0.
+$$
+On every affine open of $X$, Proposition
+\ref{proposition-cartier-descent-modules} identifies the horizontal sections
+with a module whose pullback is $\mathcal{L}_0$. These modules commute with
+localization and hence form the quasi-coherent sheaf
+$$
+\mathcal{M} = \bigcap_i \Ker(q_*\nabla_i)
+$$
+on $X$. The canonical map $q^*\mathcal{M} \to \mathcal{L}_0$ is an
+isomorphism, and $\mathcal{M}$ is invertible by
+Lemma \ref{lemma-finite-locally-free-descends}.
+The original $\mathcal{L}$ differs from $q^*\mathcal{M}$ by the pullback of
+the invertible sheaf $s_B^*\mathcal{L}$ on $\Spec(B)$, which is Zariski
+locally trivial. Thus (2) holds.
+
+Conversely, assume (2). After normalization, the local pullback
+descriptions give connections which restrict to the canonical connection
+along $s_B$. They agree on overlaps by the uniqueness just proved and hence
+give a global splitting of the sequence of principal parts. Thus
+$a(\mathcal{L}) = 0$.
+\end{proof}
+
+
+
+
+
 \section{Descent for universally injective morphisms}
 \label{section-descent-universally-injective}
 

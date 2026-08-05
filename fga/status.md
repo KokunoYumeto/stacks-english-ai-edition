@@ -495,11 +495,26 @@ final bibliography-complete builds at 99 pages with no new overfull boxes,
 and the complete addition on pages 9--11 passed rendered inspection.  Both
 semantic validators pass with no errors: 21,510 labels and 343 append-only
 decisions.  The next cursor is Expose 190, Section 4 on source page 323.
+The thirty-second source patch adds
+`descent-lemma-rigidified-invertible-fpqc-descent` and
+`descent-proposition-atiyah-cartier-invertible`.  Rigidification along a
+section removes all automorphisms when universal global functions come from
+the base, so any comparison isomorphism is unique and its cocycle condition
+is automatic.  The Atiyah--Cartier proposition then normalizes a line bundle,
+identifies vanishing of its ordinary first principal-parts class with a
+connection, normalizes that connection along the section, and forces both its
+curvature and p-curvature to vanish.  Cartier descent recovers the descended
+line bundle from horizontal sections.  Decision `D000344` supersedes
+`D000343` as `existing_stronger`; Expose 190, Section 4 no longer has a
+semantic residual.  The Descent chapter passed two final
+bibliography-complete builds at 100 pages with no new overfull boxes, and the
+complete addition on pages 11--13 passed rendered inspection.  Both semantic
+validators pass with no errors: 21,512 labels and 344 append-only decisions.
+The next cursor is Expose 190, Proposition 5.1 on source page 324.
 The Expose 190 residuals include the arbitrary finite-coequalizer extension
 of flat-object full faithfulness and effectivity beyond the pure case the
 finite-flat quasi-projective descent branch without a finite-presentation
-hypothesis the Atiyah--Cartier
-rationality criterion descent of abelian models and the non-GL_n torsor
+hypothesis descent of abelian models and the non-GL_n torsor
 consequences.  The Expose 195 residuals are the general minimal-pair
 prorepresentability theorem its Artinian equalizer criterion the narrow
 non-flat descent theorem the nonproper formal Hom Picard and scheme-moduli
