@@ -4,6 +4,13 @@
     "official_tags_joined": 21437,
     "tex_files": 119,
     "topic_candidates": 3816,
+    "topic_coverage": {
+      "broad": 14,
+      "direct": 30,
+      "no_direct": 5,
+      "partial": 6
+    },
+    "topic_maps": 55,
     "topics": 55
   },
   "errors": [],
@@ -11,10 +18,10 @@
   "sha256": {
     "fga/stx.csv": "8F62B0199607F55B86FF3EF92EAD0B0214EB2CEEA763262CE3A9C2353710C6B1",
     "fga/tcand.csv": "2D7C705AA92568A85D54737B33E90A3F0975DF3027D07D0B5AB7B63279BB6F5C",
-    "fga/topics.csv": "8B7A74ED2082C7191E77F24FD06D8BFB55B83C002EE2309829272E82285414F3",
+    "fga/tmap.csv": "F5F9098BCD3E276FF778880236A7C768E87B9D69F038B97236C192B4D83FCD34",
+    "fga/topics.csv": "97DD567F0E5E7EE0CC17B8AAF1EC4633608F481DE0047A8EF4EE0C5F2FDDDEF4",
     "tags/tags": "C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF"
   },
-  "source_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
   "status": "PASS",
   "tex_sha256": {
     "adequate.tex": "EF902B74711FE3C1EE4D39BD4ADE84C6324D19082982073AD9A819FFF7BFB10A",
@@ -137,6 +144,7 @@
     "varieties.tex": "6D7B8D7FD0122922F411297FCA82E51F916A9725A2CF1C7F2EB672143A9A1823",
     "weil.tex": "B17EDC8093596796ACBA992B059BC5FFBE00994B88ACB39388B479F3C7C042A2"
   },
+  "upstream_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
   "warnings": [
     "generated book label is outside chapter TeX: book-part-algebraic-spaces",
     "generated book label is outside chapter TeX: book-part-algebraic-stacks",

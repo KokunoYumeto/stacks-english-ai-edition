@@ -27,25 +27,35 @@ from the repository root.  The script produces:
 - `stx.csv`: every labelled object in the current TeX tree, joined to its
   existing official tag when one exists;
 - `tcand.csv`: bounded lexical candidates for each FGA topic; and
+- `tmap.csv`: reviewed topic-level scope decisions joined to exact labels and
+  tags; and
 - `check.json`: counts, hashes, and fail-closed validation results.
 
-`topics.csv` contains search vocabulary only.  A lexical hit is never treated
-as proof that two mathematical statements are equivalent.
+`topics.csv` contains search vocabulary and the human-reviewed topic scope.
+A lexical hit or topic-level decision is never treated as proof that two
+mathematical statements are equivalent.
 
 Run
 
 ```text
-python fga/mkmap.py PATH/TO/units.csv
+python fga/mkmap.py PATH/TO/units.csv PATH/TO/terms.csv
 ```
 
-with `units.csv` from the cited FGA source package.  This produces:
+with `units.csv` and `terms.csv` from the cited FGA source package.  This
+produces:
 
 - `map.csv`: one controlled-disposition row for every FGA semantic unit;
 - `ucand.csv`: ranked lexical candidates for units requiring comparison; and
 - `mcheck.json`: source identity, coverage counts, hashes, and validation.
 
-The generator is locked to the published 1,253-unit inventory.  It records no
-private source path.  Its candidate rankings are triage aids only.
+The generator is locked to the published 1,253-unit inventory and 1,612 topic
+links.  It records no private source path.  Topic evidence and candidate
+rankings are triage aids only.
+
+Validation records the exact `origin/master` commit as the upstream baseline
+and hashes every indexed TeX file.  It does not record the moving branch HEAD
+as a source identity because doing so would make a generated manifest stale as
+soon as that manifest itself was committed.
 
 ## Semantic dispositions
 
@@ -67,3 +77,7 @@ Every non-structural FGA unit must ultimately have source evidence, a Stacks
 label or an explicit residual, a rationale, and a review state.  Generated
 candidates remain `needs_review` until the underlying mathematics has been
 compared.
+
+Human decisions are append-only in `dec.csv`.  A later correction uses a new
+`replace` row naming the exact earlier decision in `supersedes`; the generator
+rejects silent replacement, unknown Stacks labels, and duplicate decision IDs.

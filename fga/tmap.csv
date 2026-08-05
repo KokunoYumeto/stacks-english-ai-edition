@@ -1,0 +1,56 @@
+topic_id,label,coverage,confidence,evidence_labels,evidence_tags,rationale,review_state
+coherent-sheaf,Coherent sheaf,direct,high,modules-section-coherent;coherent-section-coherent-sheaves,01BU;01XY,Dedicated definitions and Noetherian scheme theory are present.,topic_scope_reviewed
+ext-functor,Ext functor,direct,high,derived-section-ext;cohomology-section-ext,06XP;0BQP,Derived Ext and Ext sheaves have dedicated sections.,topic_scope_reviewed
+local-cohomology,Local cohomology,direct,high,local-cohomology-section-generalities;dualizing-section-local-cohomology,0DWQ;0952,Local cohomology has dedicated ring and scheme infrastructure.,topic_scope_reviewed
+duality,Duality,direct,high,duality-section-duality;duality-section-duality-proper-over-field,0AU3;0FVU,Modern derived duality and proper-over-field duality are present.,topic_scope_reviewed
+dualizing-sheaf,Dualizing sheaf,direct,high,duality-section-dualizing-module;dualizing-section-dualizing-module,0AWH;0DW3,Dualizing modules occur in both ring and scheme treatments.,topic_scope_reviewed
+fundamental-class,Fundamental class,partial,high,duality-section-fundamental-class,0E9X,The lci fundamental class is present but FGA cycle-class statements need comparison.,topic_scope_reviewed
+poincare-duality,Poincare duality,partial,high,derham-section-poincare-duality;weil-lemma-poincare-duality,0FW3;0FIJ,De Rham and Weil-cohomology forms are present but are not automatically the FGA form.,topic_scope_reviewed
+formal-geometry,Formal geometry,direct,high,formal-spaces-section-formal-schemes-EGA;algebraization-section-introduction,0AHY;0EI6,Formal spaces and algebraization supply a modern treatment.,topic_scope_reviewed
+formal-scheme,Formal scheme,direct,high,formal-spaces-section-formal-schemes-EGA,0AHY,EGA-style formal schemes have a dedicated section.,topic_scope_reviewed
+formal-completion,Formal completion,direct,high,formal-spaces-section-completion;coherent-section-coherent-formal,0AIX;0EHN,Completion and coherent formal modules are both present.,topic_scope_reviewed
+algebraization,Algebraization,direct,high,coherent-section-algebraization;algebraization-section-algebraization-modules,0898;0DXS,Grothendieck algebraization and coherent formal modules are present.,topic_scope_reviewed
+existence-theorem,Existence theorem,direct,high,coherent-section-existence;coherent-section-existence-proper,087V;0886,Grothendieck existence has dedicated sections.,topic_scope_reviewed
+descent,Descent,direct,high,descent-section-introduction;descent-section-fpqc-descent-quasi-coherent,0239;023R,The descent chapter directly covers the core topic.,topic_scope_reviewed
+faithfully-flat,Faithfully flat,direct,high,descent-section-fpqc-descent-quasi-coherent,023R,Fpqc descent of quasi-coherent sheaves is explicit.,topic_scope_reviewed
+descent-datum,Descent datum,direct,high,descent-section-descent-datum;descent-section-equivalence,023U;023A,Definitions for schemes and quasi-coherent sheaves are explicit.,topic_scope_reviewed
+effectivity,Effectivity,direct,high,descent-definition-effective;descent-section-descent-datum,023Z;023U,Effective descent data are explicitly defined and studied.,topic_scope_reviewed
+quotient,Quotient,direct,high,groupoids-quotients-section-categorical;groupoids-quotients-section-geometric;groupoids-section-finite-flat-general,048I;04AD;03JD,Categorical and geometric quotients and finite flat groupoids are present.,topic_scope_reviewed
+equivalence-relation,Equivalence relation,direct,high,spaces-section-spaces-from-equivalence-relations;groupoids-section-groupoids,0264;0230,Algebraic spaces and groupoids directly encode equivalence relations.,topic_scope_reviewed
+representability,Representability,broad,high,categories-section-representable;algebraic-section-representable-by-algebraic-spaces,0AHM;02ZV,Modern representability infrastructure is much broader than the historical usage.,topic_scope_reviewed
+hilbert-functor,Hilbert functor,direct,high,quot-section-hilb;moduli-section-hilb,0CZX;0DM5,The Hilbert functor and its properties have dedicated sections.,topic_scope_reviewed
+hilbert-scheme,Hilbert scheme,partial,high,pic-section-hilbert-scheme-points;quot-section-hilb,0B94;0CZX,Points and the general Hilbert functor are present but FGA existence statements need comparison.,topic_scope_reviewed
+picard-functor,Picard functor,direct,high,quot-section-picard-functor;moduli-section-picard-functor;pic-section-picard-functor,0D24;0DMD;0B9K,The functor and its moduli properties are explicit.,topic_scope_reviewed
+picard-scheme,Picard scheme,partial,high,pic-section-picard-curve;pic-section-representability,0B9R;0B9P,Curve representability is explicit while general FGA existence requires unit review.,topic_scope_reviewed
+cartier-divisor,Cartier divisor,direct,high,divisors-lemma-relative-Cartier;chow-section-relative-effective-cartier,056Q;02TP,Relative effective Cartier divisors are developed directly.,topic_scope_reviewed
+invertible-module,Invertible module,direct,high,modules-section-invertible;cohomology-section-invertible-sheaves,01CR;09NT,Invertible modules and their cohomological classification are present.,topic_scope_reviewed
+poincare-bundle,Poincare bundle,no_direct,medium,pic-section-picard-functor,0B9K,The Picard functor is nearby but no labelled Poincare-bundle treatment was found.,topic_scope_reviewed
+albanese,Albanese,no_direct,high,,,No Albanese occurrence was found in the current TeX tree.,topic_scope_reviewed
+abelian-scheme,Abelian scheme,partial,high,groupoids-section-abelian-varieties,0BF9,Abelian varieties over fields are treated but abelian schemes are not a systematic chapter.,topic_scope_reviewed
+neron-severi,Neron-Severi,no_direct,high,,,No Neron-Severi occurrence was found in the current TeX tree.,topic_scope_reviewed
+hilbert-polynomial,Hilbert polynomial,direct,high,varieties-subsection-hilbert,08A9,Hilbert polynomials have a dedicated subsection.,topic_scope_reviewed
+flatness,Flatness,broad,high,morphisms-section-flat,01U2,Flat morphisms and many refinements are developed throughout the project.,topic_scope_reviewed
+properness,Properness,broad,high,morphisms-section-proper,01W0,Proper morphisms and their criteria are developed directly.,topic_scope_reviewed
+smoothness,Smoothness,broad,high,morphisms-section-smooth,01V4,Smooth morphisms and their criteria are developed directly.,topic_scope_reviewed
+separatedness,Separatedness,broad,high,schemes-section-valuative-separatedness,01KY,Separatedness and its valuative criterion are explicit.,topic_scope_reviewed
+projectivity,Projectivity,broad,high,morphisms-section-projective,01W7,Projective morphisms have a dedicated section.,topic_scope_reviewed
+quasi-projectivity,Quasi-projectivity,broad,high,morphisms-section-quasi-projective,01VV,Quasi-projective morphisms have a dedicated section.,topic_scope_reviewed
+ampleness,Ampleness,broad,high,properties-section-ample;morphisms-section-relatively-ample,01PR;01VG,Absolute and relative ampleness are developed directly.,topic_scope_reviewed
+finite-type,Finite type,broad,high,morphisms-section-finite-type,01T0,Finite-type morphisms are basic project infrastructure.,topic_scope_reviewed
+connected-component,Connected component,direct,high,more-morphisms-section-connected;topology-section-connected-components,055C;004R,Topological and fibrewise connected components are explicit.,topic_scope_reviewed
+group-scheme,Group scheme,direct,high,groupoids-section-group-schemes;groupoids-section-properties-group-schemes-field,022R;047J,Group schemes and their fieldwise properties are explicit.,topic_scope_reviewed
+etale,Etale,broad,high,morphisms-section-etale;pione-section-finite-etale,02GH;0BL6,Etale and finite etale morphisms are developed directly.,topic_scope_reviewed
+fundamental-group,Fundamental group,direct,high,pione-section-fundamental-groups,0BQ8,The etale fundamental group has a dedicated section.,topic_scope_reviewed
+galois-cover,Galois cover,direct,high,pione-section-finite-etale-under-galois,03SF,Galois covers of connected schemes are explicit.,topic_scope_reviewed
+tame-ramification,Tame ramification,direct,high,pione-section-tame,0BSE,Tame ramification has a dedicated section.,topic_scope_reviewed
+frobenius-radicial,Frobenius and radicial morphisms,broad,high,morphisms-section-radicial;varieties-section-frobenius,01S2;0CC6,Radicial morphisms and Frobenius are treated in separate sections.,topic_scope_reviewed
+normality,Normality,broad,high,properties-section-normal;more-morphisms-section-normal,033H;038Z,Normal schemes and normal morphisms are explicit.,topic_scope_reviewed
+serre-s2,Serre S2,direct,high,properties-section-Rk,033P,Serre conditions are defined uniformly and include S2.,topic_scope_reviewed
+boundedness,Boundedness,direct,high,varieties-subsection-boundedness;moduli-section-quot-bounded,08AF;0DP9,Bounded quotients and moduli boundedness are explicit.,topic_scope_reviewed
+numerical-equivalence,Numerical equivalence,no_direct,medium,varieties-section-num,0BEL,Numerical intersections are nearby but no explicit numerical-equivalence treatment was found.,topic_scope_reviewed
+algebraic-equivalence,Algebraic equivalence,no_direct,high,,,No algebraic-equivalence occurrence was found in the current TeX tree.,topic_scope_reviewed
+torsion-equivalence,Torsion and equivalence,partial,medium,curves-section-torsion-in-pic,0C1Y,Torsion in curve Picard groups is present but the broader FGA relation is not explicit.,topic_scope_reviewed
+euler-characteristic,Euler characteristic,direct,high,varieties-section-euler;spaces-over-fields-section-euler,0BEI;0DN0,Euler characteristics are defined for schemes and spaces over fields.,topic_scope_reviewed
+base-change,Base change,broad,high,coherent-section-cohomology-and-base-change;duality-section-base-change-map,02KE;0AA5,Cohomology and duality base-change maps have dedicated treatments.,topic_scope_reviewed
+formal-functions,Formal functions,direct,high,coherent-section-theorem-formal-functions;algebraization-section-formal-functions,02O7;0A0H,The theorem on formal functions appears in two dedicated treatments.,topic_scope_reviewed
+cohomology,Cohomology,broad,high,cohomology-section-cech-cohomology-cohomology,01EO,General sheaf cohomology and many geometric specializations are present.,topic_scope_reviewed

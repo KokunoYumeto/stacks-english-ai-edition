@@ -1,26 +1,47 @@
 {
   "counts": {
-    "candidate_units": 968,
-    "historical_units": 9,
-    "no_lexical_candidate_units": 553,
-    "review_units": 968,
-    "structural_units": 276,
-    "unit_candidates": 5485,
-    "units": 1253
+    "candidate_units": 257,
+    "decided_units": 36,
+    "decisions": 36,
+    "dispositions": {
+      "existing_equivalent": 10,
+      "existing_stronger": 20,
+      "extend_existing": 2,
+      "historical_reference": 11,
+      "needs_review": 257,
+      "new_statement": 1,
+      "structural_only": 952
+    },
+    "historical_units": 11,
+    "no_lexical_candidate_units": 0,
+    "review_units": 257,
+    "structural_units": 952,
+    "term_links": 1612,
+    "unit_candidates": 3084,
+    "units": 1253,
+    "units_with_topics": 273
   },
   "errors": [],
-  "schema": "fga-stacks-map-v1",
+  "schema": "fga-stacks-map-v2",
   "sha256": {
-    "fga/map.csv": "9BCE5124A19A86F2D3C36DA85E8473BCAF63DEBA60EB36CE88E5452CF82778C8",
-    "fga/ucand.csv": "CA6FFF2A7430D9FBF276E9EF6C7CF99DEFBC2FAD2ACF613C11CD32DEB1FEAEEB"
+    "fga/dec.csv": "F332998524A5034AB64A27AAE283D6D3C20385B9E9B99C1649B6031ADD327821",
+    "fga/map.csv": "E549268960013E4E4AEA9AA138BFBD9B8DA2FEF327090112478191DEA4B04F5B",
+    "fga/ucand.csv": "F3C3B42D6717C98FAF37CD5EF273287105075E26AADA31E6E1A43278E1E47FAB"
   },
-  "source": {
-    "bytes": 482292,
-    "name": "units.csv",
-    "sha256": "D5E898D40B5AA51824ADF77EE6BA5E41DDF4FFA7B42E3754FBB91B81BA5F42FB"
-  },
-  "source_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "sources": [
+    {
+      "bytes": 482292,
+      "name": "units.csv",
+      "sha256": "D5E898D40B5AA51824ADF77EE6BA5E41DDF4FFA7B42E3754FBB91B81BA5F42FB"
+    },
+    {
+      "bytes": 367272,
+      "name": "terms.csv",
+      "sha256": "D93D861C338DD62C56624A551A41CBBB216DB302087F47AA7B02CD44546F6622"
+    }
+  ],
   "status": "PASS",
+  "upstream_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
   "warnings": [
     "generated book label is outside chapter TeX: book-part-algebraic-spaces",
     "generated book label is outside chapter TeX: book-part-algebraic-stacks",

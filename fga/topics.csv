@@ -1,56 +1,56 @@
-topic_id,label,pattern,cap
-coherent-sheaf,Coherent sheaf,coherent (?:algebraic )?sheaf|coherent module,100
-ext-functor,Ext functor,\bext\b|derived hom|yoneda ext,100
-local-cohomology,Local cohomology,local cohomology|cohomology with support,100
-duality,Duality,duality|dualizing complex|serre duality|grothendieck duality,120
-dualizing-sheaf,Dualizing sheaf,dualizing sheaf|canonical sheaf|dualizing module,100
-fundamental-class,Fundamental class,fundamental class|cycle class,100
-poincare-duality,Poincare duality,poincare duality|perfect pairing,80
-formal-geometry,Formal geometry,formal geometry|formal algebraic geometry,80
-formal-scheme,Formal scheme,formal scheme|adic formal,100
-formal-completion,Formal completion,formal completion|completion along|adic completion,100
-algebraization,Algebraization,algebrai[sz]|effectivization,100
-existence-theorem,Existence theorem,existence theorem|representability theorem,100
-descent,Descent,\bdescent\b|\bdescend,120
-faithfully-flat,Faithfully flat,faithfully flat|fpqc,100
-descent-datum,Descent datum,descent dat(?:um|a),100
-effectivity,Effectivity,effective descent|effectivity,100
-quotient,Quotient,\bquotients?\b|geometric quotient|categorical quotient,120
-equivalence-relation,Equivalence relation,equivalence relation|groupoid,120
-representability,Representability,representab,120
-hilbert-functor,Hilbert functor,hilbert functor|functor of quotients|quot functor,100
-hilbert-scheme,Hilbert scheme,hilbert scheme|hilbert space,100
-picard-functor,Picard functor,picard functor|relative picard,100
-picard-scheme,Picard scheme,picard scheme|picard space|picard stack,100
-cartier-divisor,Cartier divisor,cartier divisor|effective divisor,100
-invertible-module,Invertible module,invertible module|invertible sheaf|line bundle,120
-poincare-bundle,Poincare bundle,poincare (?:bundle|sheaf)|universal line bundle,80
-albanese,Albanese,albanese,80
-abelian-scheme,Abelian scheme,abelian scheme|abelian variety,100
-neron-severi,Neron-Severi,neron.?severi,80
-hilbert-polynomial,Hilbert polynomial,hilbert polynomial,80
-flatness,Flatness,\bflatness\b|\bflat morphism|\bflat module,120
-properness,Properness,\bproperness\b|\bproper morphism,120
-smoothness,Smoothness,\bsmoothness\b|\bsmooth morphism,120
-separatedness,Separatedness,\bseparatedness\b|\bseparated morphism,120
-projectivity,Projectivity,\bprojectiv(?:e|ity)\b,120
-quasi-projectivity,Quasi-projectivity,quasi-projectiv,100
-ampleness,Ampleness,\bample\b|\bampleness\b,120
-finite-type,Finite type,finite type|locally of finite type,120
-connected-component,Connected component,connected component|identity component,100
-group-scheme,Group scheme,group scheme|group algebraic space,120
-etale,Etale,etale,120
-fundamental-group,Fundamental group,fundamental group,100
-galois-cover,Galois cover,galois cover|galois covering,100
-tame-ramification,Tame ramification,tame ramification|tamely ramified,80
-frobenius-radicial,Frobenius and radicial morphisms,frobenius|radicial|universally injective,100
-normality,Normality,\bnormality\b|\bnormal scheme|\bnormal morphism,120
-serre-s2,Serre S2,serre.?s.?2|condition.?s.?2,80
-boundedness,Boundedness,bounded famil|boundedness,100
-numerical-equivalence,Numerical equivalence,numerical equivalence,80
-algebraic-equivalence,Algebraic equivalence,algebraic equivalence,80
-torsion-equivalence,Torsion and equivalence,torsion equivalence|torsion subgroup,80
-euler-characteristic,Euler characteristic,euler characteristic,80
-base-change,Base change,base change,120
-formal-functions,Formal functions,formal functions,80
-cohomology,Cohomology,\bcohomology\b,120
+topic_id,label,pattern,cap,coverage,confidence,evidence_labels,rationale
+coherent-sheaf,Coherent sheaf,coherent (?:algebraic )?sheaf|coherent module,100,direct,high,modules-section-coherent;coherent-section-coherent-sheaves,Dedicated definitions and Noetherian scheme theory are present.
+ext-functor,Ext functor,\bext\b|derived hom|yoneda ext,100,direct,high,derived-section-ext;cohomology-section-ext,Derived Ext and Ext sheaves have dedicated sections.
+local-cohomology,Local cohomology,local cohomology|cohomology with support,100,direct,high,local-cohomology-section-generalities;dualizing-section-local-cohomology,Local cohomology has dedicated ring and scheme infrastructure.
+duality,Duality,duality|dualizing complex|serre duality|grothendieck duality,120,direct,high,duality-section-duality;duality-section-duality-proper-over-field,Modern derived duality and proper-over-field duality are present.
+dualizing-sheaf,Dualizing sheaf,dualizing sheaf|canonical sheaf|dualizing module,100,direct,high,duality-section-dualizing-module;dualizing-section-dualizing-module,Dualizing modules occur in both ring and scheme treatments.
+fundamental-class,Fundamental class,fundamental class|cycle class,100,partial,high,duality-section-fundamental-class,The lci fundamental class is present but FGA cycle-class statements need comparison.
+poincare-duality,Poincare duality,poincare duality|perfect pairing,80,partial,high,derham-section-poincare-duality;weil-lemma-poincare-duality,De Rham and Weil-cohomology forms are present but are not automatically the FGA form.
+formal-geometry,Formal geometry,formal geometry|formal algebraic geometry,80,direct,high,formal-spaces-section-formal-schemes-EGA;algebraization-section-introduction,Formal spaces and algebraization supply a modern treatment.
+formal-scheme,Formal scheme,formal scheme|adic formal,100,direct,high,formal-spaces-section-formal-schemes-EGA,EGA-style formal schemes have a dedicated section.
+formal-completion,Formal completion,formal completion|completion along|adic completion,100,direct,high,formal-spaces-section-completion;coherent-section-coherent-formal,Completion and coherent formal modules are both present.
+algebraization,Algebraization,algebrai[sz]|effectivization,100,direct,high,coherent-section-algebraization;algebraization-section-algebraization-modules,Grothendieck algebraization and coherent formal modules are present.
+existence-theorem,Existence theorem,existence theorem|representability theorem,100,direct,high,coherent-section-existence;coherent-section-existence-proper,Grothendieck existence has dedicated sections.
+descent,Descent,\bdescent\b|\bdescend,120,direct,high,descent-section-introduction;descent-section-fpqc-descent-quasi-coherent,The descent chapter directly covers the core topic.
+faithfully-flat,Faithfully flat,faithfully flat|fpqc,100,direct,high,descent-section-fpqc-descent-quasi-coherent,Fpqc descent of quasi-coherent sheaves is explicit.
+descent-datum,Descent datum,descent dat(?:um|a),100,direct,high,descent-section-descent-datum;descent-section-equivalence,Definitions for schemes and quasi-coherent sheaves are explicit.
+effectivity,Effectivity,effective descent|effectivity,100,direct,high,descent-definition-effective;descent-section-descent-datum,Effective descent data are explicitly defined and studied.
+quotient,Quotient,\bquotients?\b|geometric quotient|categorical quotient,120,direct,high,groupoids-quotients-section-categorical;groupoids-quotients-section-geometric;groupoids-section-finite-flat-general,Categorical and geometric quotients and finite flat groupoids are present.
+equivalence-relation,Equivalence relation,equivalence relation|groupoid,120,direct,high,spaces-section-spaces-from-equivalence-relations;groupoids-section-groupoids,Algebraic spaces and groupoids directly encode equivalence relations.
+representability,Representability,representab,120,broad,high,categories-section-representable;algebraic-section-representable-by-algebraic-spaces,Modern representability infrastructure is much broader than the historical usage.
+hilbert-functor,Hilbert functor,hilbert functor|functor of quotients|quot functor,100,direct,high,quot-section-hilb;moduli-section-hilb,The Hilbert functor and its properties have dedicated sections.
+hilbert-scheme,Hilbert scheme,hilbert scheme|hilbert space,100,partial,high,pic-section-hilbert-scheme-points;quot-section-hilb,Points and the general Hilbert functor are present but FGA existence statements need comparison.
+picard-functor,Picard functor,picard functor|relative picard,100,direct,high,quot-section-picard-functor;moduli-section-picard-functor;pic-section-picard-functor,The functor and its moduli properties are explicit.
+picard-scheme,Picard scheme,picard scheme|picard space|picard stack,100,partial,high,pic-section-picard-curve;pic-section-representability,Curve representability is explicit while general FGA existence requires unit review.
+cartier-divisor,Cartier divisor,cartier divisor|effective divisor,100,direct,high,divisors-lemma-relative-Cartier;chow-section-relative-effective-cartier,Relative effective Cartier divisors are developed directly.
+invertible-module,Invertible module,invertible module|invertible sheaf|line bundle,120,direct,high,modules-section-invertible;cohomology-section-invertible-sheaves,Invertible modules and their cohomological classification are present.
+poincare-bundle,Poincare bundle,poincare (?:bundle|sheaf)|universal line bundle,80,no_direct,medium,pic-section-picard-functor,The Picard functor is nearby but no labelled Poincare-bundle treatment was found.
+albanese,Albanese,albanese,80,no_direct,high,,No Albanese occurrence was found in the current TeX tree.
+abelian-scheme,Abelian scheme,abelian scheme|abelian variety,100,partial,high,groupoids-section-abelian-varieties,Abelian varieties over fields are treated but abelian schemes are not a systematic chapter.
+neron-severi,Neron-Severi,neron.?severi,80,no_direct,high,,No Neron-Severi occurrence was found in the current TeX tree.
+hilbert-polynomial,Hilbert polynomial,hilbert polynomial,80,direct,high,varieties-subsection-hilbert,Hilbert polynomials have a dedicated subsection.
+flatness,Flatness,\bflatness\b|\bflat morphism|\bflat module,120,broad,high,morphisms-section-flat,Flat morphisms and many refinements are developed throughout the project.
+properness,Properness,\bproperness\b|\bproper morphism,120,broad,high,morphisms-section-proper,Proper morphisms and their criteria are developed directly.
+smoothness,Smoothness,\bsmoothness\b|\bsmooth morphism,120,broad,high,morphisms-section-smooth,Smooth morphisms and their criteria are developed directly.
+separatedness,Separatedness,\bseparatedness\b|\bseparated morphism,120,broad,high,schemes-section-valuative-separatedness,Separatedness and its valuative criterion are explicit.
+projectivity,Projectivity,\bprojectiv(?:e|ity)\b,120,broad,high,morphisms-section-projective,Projective morphisms have a dedicated section.
+quasi-projectivity,Quasi-projectivity,quasi-projectiv,100,broad,high,morphisms-section-quasi-projective,Quasi-projective morphisms have a dedicated section.
+ampleness,Ampleness,\bample\b|\bampleness\b,120,broad,high,properties-section-ample;morphisms-section-relatively-ample,Absolute and relative ampleness are developed directly.
+finite-type,Finite type,finite type|locally of finite type,120,broad,high,morphisms-section-finite-type,Finite-type morphisms are basic project infrastructure.
+connected-component,Connected component,connected component|identity component,100,direct,high,more-morphisms-section-connected;topology-section-connected-components,Topological and fibrewise connected components are explicit.
+group-scheme,Group scheme,group scheme|group algebraic space,120,direct,high,groupoids-section-group-schemes;groupoids-section-properties-group-schemes-field,Group schemes and their fieldwise properties are explicit.
+etale,Etale,etale,120,broad,high,morphisms-section-etale;pione-section-finite-etale,Etale and finite etale morphisms are developed directly.
+fundamental-group,Fundamental group,fundamental group,100,direct,high,pione-section-fundamental-groups,The etale fundamental group has a dedicated section.
+galois-cover,Galois cover,galois cover|galois covering,100,direct,high,pione-section-finite-etale-under-galois,Galois covers of connected schemes are explicit.
+tame-ramification,Tame ramification,tame ramification|tamely ramified,80,direct,high,pione-section-tame,Tame ramification has a dedicated section.
+frobenius-radicial,Frobenius and radicial morphisms,frobenius|radicial|universally injective,100,broad,high,morphisms-section-radicial;varieties-section-frobenius,Radicial morphisms and Frobenius are treated in separate sections.
+normality,Normality,\bnormality\b|\bnormal scheme|\bnormal morphism,120,broad,high,properties-section-normal;more-morphisms-section-normal,Normal schemes and normal morphisms are explicit.
+serre-s2,Serre S2,serre.?s.?2|condition.?s.?2,80,direct,high,properties-section-Rk,Serre conditions are defined uniformly and include S2.
+boundedness,Boundedness,bounded famil|boundedness,100,direct,high,varieties-subsection-boundedness;moduli-section-quot-bounded,Bounded quotients and moduli boundedness are explicit.
+numerical-equivalence,Numerical equivalence,numerical equivalence,80,no_direct,medium,varieties-section-num,Numerical intersections are nearby but no explicit numerical-equivalence treatment was found.
+algebraic-equivalence,Algebraic equivalence,algebraic equivalence,80,no_direct,high,,No algebraic-equivalence occurrence was found in the current TeX tree.
+torsion-equivalence,Torsion and equivalence,torsion equivalence|torsion subgroup,80,partial,medium,curves-section-torsion-in-pic,Torsion in curve Picard groups is present but the broader FGA relation is not explicit.
+euler-characteristic,Euler characteristic,euler characteristic,80,direct,high,varieties-section-euler;spaces-over-fields-section-euler,Euler characteristics are defined for schemes and spaces over fields.
+base-change,Base change,base change,120,broad,high,coherent-section-cohomology-and-base-change;duality-section-base-change-map,Cohomology and duality base-change maps have dedicated treatments.
+formal-functions,Formal functions,formal functions,80,direct,high,coherent-section-theorem-formal-functions;algebraization-section-formal-functions,The theorem on formal functions appears in two dedicated treatments.
+cohomology,Cohomology,\bcohomology\b,120,broad,high,cohomology-section-cech-cohomology-cohomology,General sheaf cohomology and many geometric specializations are present.

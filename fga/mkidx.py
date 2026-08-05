@@ -10,6 +10,7 @@ import json
 import re
 import subprocess
 import unicodedata
+from collections import Counter
 from pathlib import Path
 
 
@@ -33,9 +34,9 @@ def sha256(path: Path) -> str:
     return digest.hexdigest().upper()
 
 
-def git_commit() -> str:
+def upstream_commit() -> str:
     return subprocess.check_output(
-        ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True
+        ["git", "rev-parse", "origin/master"], cwd=ROOT, text=True
     ).strip()
 
 
@@ -219,6 +220,58 @@ def load_topics() -> list[dict[str, str]]:
     return rows
 
 
+def topic_map_rows(
+    index: list[dict[str, str]], topics: list[dict[str, str]]
+) -> tuple[list[dict[str, str]], list[str], list[str]]:
+    by_label = {row["full_label"]: row for row in index}
+    allowed_coverage = {"direct", "broad", "partial", "no_direct"}
+    allowed_confidence = {"high", "medium", "low"}
+    output: list[dict[str, str]] = []
+    errors: list[str] = []
+    warnings: list[str] = []
+    for topic in topics:
+        topic_id = topic["topic_id"]
+        coverage = topic.get("coverage", "")
+        confidence = topic.get("confidence", "")
+        labels = [
+            value for value in topic.get("evidence_labels", "").split(";")
+            if value
+        ]
+        if coverage not in allowed_coverage:
+            errors.append(f"invalid coverage for topic {topic_id}: {coverage}")
+        if confidence not in allowed_confidence:
+            errors.append(f"invalid confidence for topic {topic_id}: {confidence}")
+        if coverage != "no_direct" and not labels:
+            errors.append(f"topic {topic_id} has no evidence label")
+        if not topic.get("rationale", ""):
+            errors.append(f"topic {topic_id} has no rationale")
+        tags: list[str] = []
+        for label in labels:
+            if label not in by_label:
+                errors.append(f"unknown evidence label for topic {topic_id}: {label}")
+                continue
+            tag = by_label[label]["tag"]
+            if tag:
+                tags.append(tag)
+            else:
+                warnings.append(
+                    f"evidence label has no official tag for topic {topic_id}: {label}"
+                )
+        output.append(
+            {
+                "topic_id": topic_id,
+                "label": topic["label"],
+                "coverage": coverage,
+                "confidence": confidence,
+                "evidence_labels": ";".join(labels),
+                "evidence_tags": ";".join(tags),
+                "rationale": topic.get("rationale", ""),
+                "review_state": "topic_scope_reviewed",
+            }
+        )
+    return output, errors, warnings
+
+
 def candidate_rows(
     index: list[dict[str, str]], topics: list[dict[str, str]]
 ) -> list[dict[str, str]]:
@@ -275,8 +328,12 @@ def main() -> int:
     index, errors, warnings, tex_hashes = build_index()
     topics = load_topics()
     candidates = candidate_rows(index, topics)
+    topic_map, map_errors, map_warnings = topic_map_rows(index, topics)
+    errors.extend(map_errors)
+    warnings.extend(map_warnings)
     index_path = OUT / "stx.csv"
     candidate_path = OUT / "tcand.csv"
+    topic_map_path = OUT / "tmap.csv"
     check_path = OUT / "check.json"
     write_csv(
         index_path,
@@ -311,9 +368,24 @@ def main() -> int:
             "status",
         ],
     )
+    write_csv(
+        topic_map_path,
+        topic_map,
+        [
+            "topic_id",
+            "label",
+            "coverage",
+            "confidence",
+            "evidence_labels",
+            "evidence_tags",
+            "rationale",
+            "review_state",
+        ],
+    )
+    coverage_counts = Counter(row["coverage"] for row in topic_map)
     check = {
         "schema": "fga-stacks-index-v1",
-        "source_commit": git_commit(),
+        "upstream_commit": upstream_commit(),
         "status": "PASS" if not errors else "FAIL",
         "errors": errors,
         "warnings": warnings,
@@ -323,18 +395,20 @@ def main() -> int:
             "official_tags_joined": sum(1 for row in index if row["tag"]),
             "topics": len(topics),
             "topic_candidates": len(candidates),
+            "topic_maps": len(topic_map),
+            "topic_coverage": dict(sorted(coverage_counts.items())),
         },
         "sha256": {
             "tags/tags": sha256(ROOT / "tags" / "tags"),
             "fga/topics.csv": sha256(OUT / "topics.csv"),
             "fga/stx.csv": sha256(index_path),
             "fga/tcand.csv": sha256(candidate_path),
+            "fga/tmap.csv": sha256(topic_map_path),
         },
         "tex_sha256": tex_hashes,
     }
-    check_path.write_text(
-        json.dumps(check, indent=2, sort_keys=True) + "\n", encoding="utf-8"
-    )
+    with check_path.open("w", encoding="utf-8", newline="\n") as handle:
+        handle.write(json.dumps(check, indent=2, sort_keys=True) + "\n")
     return 0 if not errors else 1
 
 
