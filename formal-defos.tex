@@ -7677,6 +7677,81 @@ residue field extensions. The criterion itself remains valid; the 1970 paper
 replaces precisely the part of the proof which used that assertion.
 \end{remark}
 
+\begin{proposition}
+\label{proposition-formal-hom-prorepresentable-tangent}
+\begin{reference}
+\cite[Expos\'e 195, C, Proposition 2.1, p. 382]{FGA}.
+\end{reference}
+Let $\Lambda$ be a Noetherian ring and let $X$ and $Y$ be schemes over
+$\Lambda$. Assume that $X$ is flat over $\Lambda$. The functor
+$$
+F : \mathcal{A}_\Lambda \longrightarrow \textit{Sets}, \qquad
+A \longmapsto \Mor_A(X_A, Y_A)
+$$
+is strictly prorepresentable.
+
+For $A \in \mathcal{A}_\Lambda$, put
+$A_\epsilon = A[\epsilon]/(\epsilon^2)$. If $\xi \in F(A)$, then the fibre
+$$
+F(A_\epsilon, \xi) =
+\{\xi' \in F(A_\epsilon) \mid \xi'|_A = \xi\}
+$$
+is canonically isomorphic to
+$$
+\Gamma\left(X_A,
+\SheafHom_{\mathcal{O}_{X_A}}
+(\xi^*\Omega_{Y_A/A}, \mathcal{O}_{X_A})\right).
+$$
+\end{proposition}
+
+\begin{proof}
+The functor $F$ commutes with finite products because the spectrum of a
+product of rings is a disjoint union. We verify the two local equalizer tests
+of Theorem \ref{theorem-grothendieck-levelt-prorepresentability}.
+
+Let $A \to B$ be a map in $\mathcal{A}_\Lambda$ with $A$ local. If $B$ is a
+nonzero finite free $A$-module, then $A \to B$ is faithfully flat. Morphisms
+of schemes satisfy fpqc descent by Descent, Remark
+\ref{descent-remark-morphisms-of-schemes-satisfy-fpqc-descent}; hence the
+required diagram for $F$ is an equalizer.
+
+Suppose instead that $A \to B$ is injective and $B/A$ has length $1$.
+Lemma \ref{lemma-length-one-cech-equalizer} gives the ring equalizer, so
+$\Spec(B) \to \Spec(A)$ is a finite effective epimorphism by Descent, Lemma
+\ref{descent-lemma-finite-effective-epimorphism-functions}. Since $X_A$ is
+flat over $A$, Descent, Lemma
+\ref{descent-lemma-finite-effective-epimorphism-flat-schemes} gives precisely
+the required equalizer of sets of morphisms. The theorem cited above now
+proves that $F$ is strictly prorepresentable.
+
+For the tangent statement, regard
+$\Spec(A) \subset \Spec(A_\epsilon)$ as a first order thickening and base
+change it to $X$ and $Y$. The base change of $\xi$ is a distinguished element
+of $F(A_\epsilon, \xi)$. More on Morphisms, Lemma
+\ref{more-morphisms-lemma-action-sheaf} and Remark
+\ref{more-morphisms-remark-another-special-case} show that the sheaf of such
+lifts is acted on simply transitively by
+$$
+\SheafHom_{\mathcal{O}_{X_A}}
+(\xi^*\Omega_{Y_A/A},
+\mathcal{C}_{X_A/X_{A_\epsilon}}).
+$$
+The canonical identification
+$\mathcal{C}_{X_A/X_{A_\epsilon}} = \mathcal{O}_{X_A}\epsilon$ and the
+distinguished lift identify its global sections with the displayed group.
+\end{proof}
+
+\begin{remark}
+\label{remark-formal-hom-tangent-degree}
+The tangent group in Proposition
+\ref{proposition-formal-hom-prorepresentable-tangent} is in degree zero.
+The degree-one formula printed in the reference cannot be correct: for
+$X_A = \Spec(A)$ and $Y_A = \mathbf{A}^1_A$, the lift set is naturally $A$,
+whereas the corresponding first cohomology group is zero. In a general
+lifting problem without the distinguished base-change lift, degree one may
+instead contain the obstruction to the existence of a global lift.
+\end{remark}
+
 
 
 

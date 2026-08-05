@@ -4,12 +4,12 @@ Snapshot: Stacks commit `a04446e57ec1fbc252a871afcec7752fb2807b14`.
 
 The reproducible intake, topic crosswalk, and statement-level review are
 complete for the bounded FGA corpus.  Every review unit has an append-only
-decision and source problems remain explicit.  Thirty-eight mathematical
+decision and source problems remain explicit.  Thirty-nine mathematical
 source patches are implemented and validated; further source integration
 remains in progress.
 
 - 119 Stacks TeX files indexed
-- 21,532 labelled TeX objects indexed
+- 21,534 labelled TeX objects indexed
 - 21,437 objects joined to an existing official tag
 - 55 FGA topics reviewed: 30 direct and 14 broad coverage decisions plus 6
   partial and 5 no-direct decisions
@@ -62,7 +62,7 @@ because FGA sections contain substantial unboxed mathematics such as the
 composition law in Ext.  Equations subitems and diagrams inherit the decision
 of their semantic parent.
 
-Eight source issues are recorded in `issues.csv`; seven remain active.
+Eight source issues are recorded in `issues.csv`; six remain active.
 Expose 149 Proposition 2 is resolved by a narrowed hypothesis.  The direct
 scan states the all-degree stalk comparison from one finite presentation and
 its linked erratum does not alter the claim.  A finite presentation supplies
@@ -653,3 +653,23 @@ insertion and both joins pass rendered inspection.  Both semantic validators
 report no errors:
 21,532 labels and 351 append-only decisions.  The next cursor is Expose 195,
 Proposition C.2.1.
+The thirty-ninth source patch proves the valid part of Expose 195,
+Proposition C.2.1 and repairs its invalid tangent formula.  For schemes $X$
+and $Y$ over a Noetherian ring with $X$ flat, the formal Hom functor commutes
+with products; its finite-free local test is fpqc descent, and its length-one
+test follows from the finite-effective-epimorphism equalizer for morphisms
+with flat source.  The corrected Grothendieck--Levelt criterion therefore
+gives strict prorepresentability without adding properness or finite-type
+hypotheses.  The fibre over dual numbers has a distinguished base-change
+lift, and the existing derivation action identifies all lifts with global
+sections of the pulled-back tangent sheaf, in degree zero.  The printed
+$H^1$ formula is disproved explicitly by $X=\Spec(A)$ and
+$Y=\mathbf{A}^1_A$: its lift set is $A$ while the asserted first cohomology
+vanishes.  Decision `D000352` supersedes `D000157`; issue `I000004` is now
+resolved by an integrated correction rather than a silent normalization.
+The Formal Deformation Theory chapter passed a bibliography-complete build
+followed by two final TeX passes at 78 pages, no overfull box occurs in the
+added block, and page 76 containing the complete proposition, proof,
+correction, and both joins passes rendered inspection.  Both semantic
+validators report no errors: 21,534 labels and 352 append-only decisions.
+The next cursor is the corollary following Expose 195, Proposition C.2.1.
