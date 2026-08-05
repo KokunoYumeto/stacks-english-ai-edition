@@ -4,11 +4,11 @@ Snapshot: Stacks commit `a04446e57ec1fbc252a871afcec7752fb2807b14`.
 
 The reproducible intake, topic crosswalk, and statement-level review are
 complete for the bounded FGA corpus, apart from one explicitly fail-closed
-source hypothesis.  The first five mathematical source patches are implemented
+source hypothesis.  The first six mathematical source patches are implemented
 and validated; further source integration remains in progress.
 
 - 119 Stacks TeX files indexed
-- 21,457 labelled TeX objects indexed
+- 21,458 labelled TeX objects indexed
 - 21,437 objects joined to an existing official tag
 - 55 FGA topics reviewed: 30 direct and 14 broad coverage decisions plus 6
   partial and 5 no-direct decisions
@@ -49,7 +49,7 @@ and validated; further source integration remains in progress.
   decisions 11 `extend_existing` decisions 5 `new_statement` decisions and 8
   historical decisions
 - Expose 236 yields 4 `existing_equivalent` decisions 2 `existing_stronger`
-  decisions 6 `existing_weaker` decisions 12 `extend_existing` decisions 9
+  decisions 7 `existing_weaker` decisions 11 `extend_existing` decisions 9
   `new_statement` decisions 4 `new_section` decisions 1 example-or-remark
   decision and 5 historical decisions
 - the 3 Commentaires units are preserved as historical editorial provenance
@@ -101,9 +101,9 @@ claim.  The unit therefore remains an explicit extension target rather than
 being silently identified with fpqc descent.
 
 Both `check.json` and `mcheck.json` report `PASS` with empty `errors` arrays.
-The warnings preserve nine generated book-part labels and twenty current TeX
-labels that have no entry in upstream's `tags/tags`; eleven of these are the new
-source labels below.  No replacement tag has been invented.
+The warnings preserve nine generated book-part labels and twenty-one current
+TeX labels that have no entry in upstream's `tags/tags`; twelve of these are
+the new source labels below.  No replacement tag has been invented.
 
 The first source patch adds
 `more-morphisms-lemma-pic-roots-first-order-thickening`, a cartesian
@@ -154,6 +154,17 @@ upgrades FGA 236, Lemma 1.3 to direct equivalent coverage and `D000311`
 propagates the result into Theorem 1.1 without erasing its remaining clauses.
 Both affected page ranges in More on Morphisms passed compilation and rendered
 inspection.
+The sixth source patch adds
+`more-morphisms-lemma-characteristic-zero-component-loci`, which records the
+characteristic-zero identifications of the torsion-component subgroups and,
+under separatedness and properness of the fibrewise identity components,
+proves that the identity-component locus is closed and proper with its reduced
+structure and that the torsion locus is open and closed.  Decision `D000312`
+supersedes the former extension classification while retaining
+`existing_weaker`, since the historical universal-openness and
+reduced-base-smoothness assertions remain unproved.  The More on Morphisms
+chapter passed two PDF builds and the complete inserted lemma and transition
+passed rendered inspection.
 The identified Expose 149
 additions are the arbitrary-ideal Ext and Tor
 comparison maps the partial-range singular-duality equivalence and the general

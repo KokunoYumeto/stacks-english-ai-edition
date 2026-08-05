@@ -15798,6 +15798,36 @@ fpqc local on the base by Descent, Lemma
 \ref{descent-lemma-descending-property-proper}, so $Z$ is proper over $S$.
 \end{proof}
 
+\begin{lemma}
+\label{lemma-characteristic-zero-component-loci}
+Let $S$ be a locally Noetherian scheme all of whose residue fields have
+characteristic zero. Let $G$ be a commutative group scheme locally of finite
+type over $S$. Then
+$$
+G^\tau = G^\sigma \quad\text{is open in }G,
+\qquad
+G^0 = G^\rho.
+$$
+If $G \to S$ is separated and every $G_s^0$ is proper over $\kappa(s)$,
+then $G^0$ is closed in $G$ and its reduced induced closed subscheme is
+proper over $S$. In this case $G^\tau$ is open and closed in $G$.
+\end{lemma}
+
+\begin{proof}
+The characteristic exponent is $p=1$. Thus the definitions in
+Lemma \ref{lemma-order-in-component-group-constructible} give
+$G^\sigma=G^\tau$ and $G^\rho=G^0$. The openness of $G^\tau$ follows from
+Lemma \ref{lemma-torsion-component-locus-open}.
+
+Assume the additional hypotheses. For every $s \in S$, Lemma
+\ref{lemma-proper-connected-component-neighbourhood} gives an open
+neighbourhood $U$ of $s$ such that $G_U^0$ is closed and its reduced induced
+structure is proper over $U$. Thus $G^0$ is closed and its reduced induced
+structure is proper over $S$, as both assertions are local on the base.
+Finally, Lemma \ref{lemma-order-in-component-group-constructible} shows that
+$G^\tau$ is closed when $G^0$ is closed.
+\end{proof}
+
 
 
 
