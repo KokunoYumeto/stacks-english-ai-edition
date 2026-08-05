@@ -4,11 +4,11 @@ Snapshot: Stacks commit `a04446e57ec1fbc252a871afcec7752fb2807b14`.
 
 The reproducible intake, topic crosswalk, and statement-level review are
 complete for the bounded FGA corpus, apart from one explicitly fail-closed
-source hypothesis.  The first two mathematical source patches are implemented
+source hypothesis.  The first three mathematical source patches are implemented
 and validated; further source integration remains in progress.
 
 - 119 Stacks TeX files indexed
-- 21,450 labelled TeX objects indexed
+- 21,453 labelled TeX objects indexed
 - 21,437 objects joined to an existing official tag
 - 55 FGA topics reviewed: 30 direct and 14 broad coverage decisions plus 6
   partial and 5 no-direct decisions
@@ -49,7 +49,7 @@ and validated; further source integration remains in progress.
   decisions 11 `extend_existing` decisions 5 `new_statement` decisions and 8
   historical decisions
 - Expose 236 yields 3 `existing_equivalent` decisions 1 `existing_stronger`
-  decision 4 `existing_weaker` decisions 13 `extend_existing` decisions 12
+  decision 5 `existing_weaker` decisions 13 `extend_existing` decisions 11
   `new_statement` decisions 4 `new_section` decisions 1 example-or-remark
   decision and 5 historical decisions
 - the 3 Commentaires units are preserved as historical editorial provenance
@@ -62,7 +62,7 @@ because FGA sections contain substantial unboxed mathematics such as the
 composition law in Ext.  Equations subitems and diagrams inherit the decision
 of their semantic parent.
 
-Six source-hypothesis issues are fail-closed in `issues.csv`.  Expose 149
+Seven source issues are fail-closed in `issues.csv`.  Expose 149
 Proposition 2 remains open.  The confirmed issue is Expose 182 Corollary 6:
 the stated invariance under algebraically closed base-field extension needs
 properness in arbitrary characteristic; an Artin--Schreier cover of the affine
@@ -83,6 +83,14 @@ scheme-level Picard existence conjecture while current Stacks proves only
 algebraic-space representability under the universal constant-functions
 hypothesis.
 
+Expose 236 Remark on catalog page 223 contains a confirmed notation reversal:
+the displayed definitions make `sigma` prime-to-characteristic and `rho`
+primary while the following parenthetical prose assigns those descriptions in
+the opposite order.  The integration follows the displayed definitions and
+their intersection and product identities; `I000007` preserves the direct
+NUMDAM authority hash and prevents the reversed prose from being imported
+silently.
+
 The broad later conjecture that finite maps should always give effective
 descent for flat modules was disproved by Venken.  This does not by itself
 refute Expose 195 Theorem 2 because that theorem adds an Artinian maximal-ideal
@@ -93,9 +101,9 @@ claim.  The unit therefore remains an explicit extension target rather than
 being silently identified with fpqc descent.
 
 Both `check.json` and `mcheck.json` report `PASS` with empty `errors` arrays.
-The warnings preserve nine generated book-part labels and thirteen current TeX
-labels that have no entry in upstream's `tags/tags`; four of these are the new
-source lemmas below.  No replacement tag has been invented.
+The warnings preserve nine generated book-part labels and sixteen current TeX
+labels that have no entry in upstream's `tags/tags`; seven of these are the new
+source labels below.  No replacement tag has been invented.
 
 The first source patch adds
 `more-morphisms-lemma-pic-roots-first-order-thickening`, a cartesian
@@ -115,7 +123,18 @@ property to every section and fibrewise identity component.  Decisions
 `D000305` and `D000306` supersede the earlier ingredient-only records.  The
 Groupoid Schemes chapter compiles to PDF without TeX errors and the complete
 inserted page passed rendered inspection.  The next cursor remains the other
-relative group-locus results in Expose 236.  The identified Expose 149
+relative group-locus results in Expose 236.  The third source patch adds
+`bootstrap-lemma-component-group-scheme-over-field`, which represents the
+etale component quotient as a commutative group scheme and an fppf torsor,
+`bootstrap-lemma-torsion-component-subgroups`, which constructs its torsion,
+prime-to-characteristic, and primary open-and-closed subgroups, and
+`bootstrap-remark-component-group-picard-scheme`, which records the Picard
+terminology and the reduced-identity quotient without claiming an unproved
+specialization theorem.  Decision `D000307` supersedes the earlier gap record
+but deliberately retains `existing_weaker` for the historical perfect-or-
+proper criterion and specialization claim.  The Bootstrap chapter compiles to
+PDF without TeX errors and both inserted pages passed rendered inspection.
+The identified Expose 149
 additions are the arbitrary-ideal Ext and Tor
 comparison maps the partial-range singular-duality equivalence and the general
 Hodge fixed-point statement.  The Expose 182 residuals include the formal
@@ -150,7 +169,8 @@ component-gluing and nilpotent-thickening comparisons the arbitrary
 projective-scheme Picard theorem over a field and the Lefschetz and
 pro-algebraic class-group refinements.
 The Expose 236 residuals are the relative group loci and their constructibility
-and openness the Neron--Severi component scheme the properness smoothness and
+and openness the reduced-component specialization refinements the properness
+smoothness and
 torsion loci of the Picard object the general Picard multiplication map the
 canonical abelian Picard subscheme the Albanese torsor and universal map the
 deformation and local-freeness packages Picard boundedness and projectivity.

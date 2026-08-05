@@ -2024,6 +2024,116 @@ This finishes the proof.
 \end{proof}
 
 \begin{lemma}
+\label{lemma-component-group-scheme-over-field}
+Let $k$ be a field. Let $G$ be a commutative group scheme locally of
+finite type over $k$. Let $G^0 \subset G$ be the subgroup scheme of
+Groupoids, Proposition
+\ref{groupoids-proposition-connected-component}. The fppf quotient
+$$
+\pi_0(G) = G/G^0
+$$
+is an \'etale commutative group scheme over $k$. The morphism
+$G \to \pi_0(G)$ is an fppf $G^0$-torsor. If $G$ is quasi-compact, then
+$\pi_0(G)$ is finite \'etale over $k$.
+\end{lemma}
+
+\begin{proof}
+The scheme $G^0$ is quasi-compact and locally of finite type over $k$.
+Thus it is of finite type, and hence of finite presentation, over $k$.
+It is flat over $k$. Translation gives a free action of $G^0$ on $G$.
+Lemma \ref{lemma-quotient-free-action} shows that the quotient is an
+algebraic space and that $G \to \pi_0(G)$ is an fppf $G^0$-torsor.
+The quotient sheaf is a commutative group sheaf, so the representing
+algebraic space is a commutative group algebraic space.
+
+\medskip\noindent
+Let $\overline{k}$ be an algebraic closure of $k$. Formation of $G^0$
+commutes with extension of the ground field. Indeed, $G^0 \to G$ is a
+flat closed immersion of finite presentation, hence an open and closed
+immersion by Morphisms, Lemma
+\ref{morphisms-lemma-flat-closed-immersions-finite-presentation}, and
+$G^0$ is geometrically irreducible. Thus $(G^0)_{\overline{k}}$ is the
+connected component of the identity of $G_{\overline{k}}$.
+Every connected component of $G_{\overline{k}}$ is open and contains an
+$\overline{k}$-rational point. Translation by such a point identifies that
+component with $(G^0)_{\overline{k}}$. Since formation of the quotient
+sheaf commutes with base change, we obtain
+$$
+\pi_0(G)_{\overline{k}} =
+\coprod_{C \in \pi_0(|G_{\overline{k}}|)} \Spec(\overline{k}).
+$$
+Consequently $\pi_0(G)_{\overline{k}}$ is \'etale over $\overline{k}$.
+By Descent on Spaces, Lemma
+\ref{spaces-descent-lemma-descending-property-etale}, the algebraic space
+$\pi_0(G)$ is \'etale over $k$. In particular it is locally quasi-finite,
+and hence it is a scheme by Algebraic Spaces over Fields, Lemma
+\ref{spaces-over-fields-lemma-locally-quasi-finite-over-field}.
+
+If $G$ is quasi-compact, then so is its quotient $\pi_0(G)$. The
+description in Algebraic Spaces over Fields, Lemma
+\ref{spaces-over-fields-lemma-locally-quasi-finite-over-field} now shows
+that $\pi_0(G)$ is finite over $k$.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-torsion-component-subgroups}
+Let $k$ be a field and let $N$ be an \'etale commutative group scheme over
+$k$. Set $p = 1$ if $k$ has characteristic zero and set
+$p = \text{char}(k)$ otherwise. For $n \geq 1$, write
+$N[n] = \Ker([n] : N \to N)$ and set
+\begin{align*}
+N_{\mathrm{tors}} & = \bigcup_{n \geq 1} N[n], \\
+N_{p'} & = \bigcup_{(n,p)=1} N[n], \\
+N_p & = \bigcup_{h \geq 0} N[p^h].
+\end{align*}
+These are open and closed subgroup schemes of $N$, and
+$$
+N_{p'} \cap N_p = e, \qquad N_{p'}N_p = N_{\mathrm{tors}}.
+$$
+If $G$ is as in Lemma \ref{lemma-component-group-scheme-over-field} and
+$q : G \to \pi_0(G)$ is the quotient, then
+\begin{align*}
+G^\tau & = q^{-1}(\pi_0(G)_{\mathrm{tors}}), \\
+G^\sigma & = q^{-1}(\pi_0(G)_{p'}), \\
+G^\rho & = q^{-1}(\pi_0(G)_p)
+\end{align*}
+are open and closed subgroup schemes of $G$. They satisfy
+$$
+G^\sigma \cap G^\rho = G^0, \qquad
+G^\sigma G^\rho = G^\tau.
+$$
+\end{lemma}
+
+\begin{proof}
+An \'etale scheme over a field is a disjoint union of spectra of finite
+separable field extensions, see Algebraic Spaces over Fields, Lemma
+\ref{spaces-over-fields-lemma-locally-quasi-finite-over-field}. Hence a
+union of connected components of $N$ is open and closed. Each of the three
+subfunctors displayed in the statement is a union of connected components
+and is stable under the group operations. It is therefore an open and
+closed subgroup scheme.
+
+After extending the ground field to a separable closure, the assertions
+about intersections and products reduce to assertions about an abelian
+group. A torsion element has a unique sum decomposition into its
+prime-to-$p$ part and its $p$-primary part. This also covers characteristic
+zero, where $p=1$ and the $p$-primary subgroup is the identity. Thus the
+two equalities for $N$ hold, and they descend to $k$. Taking inverse images
+under $q$ proves all the assertions for $G$.
+\end{proof}
+
+\begin{remark}
+\label{remark-component-group-picard-scheme}
+When a group scheme $G$ represents a Picard functor, the \'etale group
+scheme $\pi_0(G)$ of Lemma
+\ref{lemma-component-group-scheme-over-field} is often called the
+reduced N\'eron--Severi scheme. If $(G^0)_{\mathrm{red}}$ is a subgroup
+scheme of $G$, Lemma \ref{lemma-quotient-free-action} also represents
+$G/(G^0)_{\mathrm{red}}$ by a commutative group algebraic space and makes
+$G \to G/(G^0)_{\mathrm{red}}$ an fppf torsor.
+\end{remark}
+
+\begin{lemma}
 \label{lemma-descent-torsor}
 Let $\{S_i \to S\}_{i \in I}$ be a covering of $(\Sch/S)_{fppf}$.
 Let $G$ be a group algebraic space over $S$, and denote
