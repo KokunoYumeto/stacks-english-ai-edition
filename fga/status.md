@@ -4,12 +4,12 @@ Snapshot: Stacks commit `a04446e57ec1fbc252a871afcec7752fb2807b14`.
 
 The reproducible intake, topic crosswalk, and statement-level review are
 complete for the bounded FGA corpus.  Every review unit has an append-only
-decision and source problems remain explicit.  The first twenty-four
-mathematical source patches are implemented and validated; further source
-integration remains in progress.
+decision and source problems remain explicit.  Twenty-eight mathematical
+source patches are implemented and validated; further source integration
+remains in progress.
 
 - 119 Stacks TeX files indexed
-- 21,489 labelled TeX objects indexed
+- 21,500 labelled TeX objects indexed
 - 21,437 objects joined to an existing official tag
 - 55 FGA topics reviewed: 30 direct and 14 broad coverage decisions plus 6
   partial and 5 no-direct decisions
@@ -32,9 +32,9 @@ integration remains in progress.
   `existing_equivalent` decisions 5 `existing_weaker` decisions 0
   `extend_existing` decisions 0 `new_statement` decisions and 4 historical
   decisions
-- Expose 190 yields 19 `existing_equivalent` decisions 8
-  `existing_stronger` decisions 1 `existing_weaker` decision 4
-  `extend_existing` decisions 2 `new_statement` decisions and 5 historical
+- Expose 190 yields 19 `existing_equivalent` decisions 9
+  `existing_stronger` decisions 2 `existing_weaker` decisions 3
+  `extend_existing` decisions 1 `new_statement` decision and 5 historical
   decisions
 - Expose 195 yields 2 `existing_equivalent` decisions 6 `existing_stronger`
   decisions 4 `existing_weaker` decisions 4 `extend_existing` decisions 4
@@ -436,9 +436,22 @@ overfull boxes, and the complete addition on pages 19--21 passed rendered
 inspection.  Both semantic validators pass with no errors: 21,496 labels and
 339 append-only decisions.  The next cursor is Expose 190's exact flat
 base-change and flat-object descent package on source pages 306--307.
-The Expose 190 residuals include the exact flat-base-change and flat-object
-descent package the analytic Grauert--Remmert passage Cartier p-connection
-descent the Atiyah--Cartier
+The twenty-eighth source patch adds
+`descent-lemma-equalizer-flat-module-descent`,
+`descent-lemma-effective-descent-flat-modules`,
+`descent-lemma-finite-effective-epimorphism-flat-schemes`, and
+`descent-lemma-finite-effective-epimorphism-flat-quasi-coherent`.  It proves
+full faithfulness on flat modules from the exact ring equalizer and packages
+the corresponding flat-scheme and flat-quasi-coherent results for a finite
+effective epimorphism.  It separately records the modern stronger conclusion:
+a universally injective ring map gives effective descent for flat modules.
+Decision `D000340` supersedes gap record `D000122` as `existing_weaker`, since
+the arbitrary finite coequalizer diagram and effectivity for every finite
+effective epimorphism remain explicit residuals.  The next cursor is Expose
+190's analytic Grauert--Remmert passage on source pages 307--312.
+The Expose 190 residuals include the arbitrary finite-coequalizer extension
+of flat-object full faithfulness and effectivity beyond the pure case the
+analytic Grauert--Remmert passage Cartier p-connection descent the Atiyah--Cartier
 rationality criterion descent of abelian models and the non-GL_n torsor
 consequences.  The Expose 195 residuals are the general minimal-pair
 prorepresentability theorem its Artinian equalizer criterion the narrow

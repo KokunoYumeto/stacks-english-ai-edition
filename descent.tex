@@ -1103,6 +1103,47 @@ faithful. We say that $f$ is an {\it effective descent morphism for modules}
 if $f^*$ is an equivalence of categories.
 \end{definition}
 
+\begin{lemma}
+\label{lemma-equalizer-flat-module-descent}
+\begin{reference}
+\cite[Expos\'e 190, n\textsuperscript{o} 2(c), pp. 306--307]{FGA}.
+\end{reference}
+Assume that
+$$
+R \longrightarrow S
+\mathrel{\substack{\longrightarrow \\[-0.6ex] \longrightarrow}}
+S \otimes_R S
+$$
+is an equalizer diagram, where the two arrows are
+$s \mapsto s \otimes 1$ and $s \mapsto 1 \otimes s$. If $M$ and $N$ are
+$R$-modules and $N$ is flat over $R$, then the canonical map
+$$
+\Hom_R(M, N) \longrightarrow \Hom_{DD_{S/R}}(f^*M, f^*N)
+$$
+is bijective. In particular, base extension is fully faithful on the full
+subcategory of flat $R$-modules.
+\end{lemma}
+
+\begin{proof}
+Tensoring the equalizer diagram in the statement with the flat $R$-module
+$N$ gives an equalizer diagram
+$$
+N \longrightarrow N \otimes_R S
+\mathrel{\substack{\longrightarrow \\[-0.6ex] \longrightarrow}}
+N \otimes_R S \otimes_R S.
+$$
+This immediately gives injectivity of the map in the statement. Let
+$$
+u : M \otimes_R S \longrightarrow N \otimes_R S
+$$
+be a morphism between the canonical descent data. For $m \in M$, compatibility
+with the descent data says that $u(m \otimes 1)$ has the same image under the
+two arrows in the displayed equalizer. Thus there is a unique $v(m) \in N$
+whose image in $N \otimes_R S$ is $u(m \otimes 1)$. Uniqueness shows that
+$m \mapsto v(m)$ is $R$-linear. Since $u$ is $S$-linear, we have
+$u = v \otimes_R S$, proving surjectivity.
+\end{proof}
+
 \noindent
 Our goal is to show that for $f$ universally injective, we can use $\theta$ to 
 locate $M_0$ within $M$. This process makes crucial use of some equalizer
@@ -1437,6 +1478,30 @@ so $N \otimes_R S$ is zero and hence $N$ is zero.
 To deduce (e) at this point, it suffices to recall that $M$ is finitely 
 generated and projective if and only if it is finitely presented and flat.
 See Algebra, Lemma \ref{algebra-lemma-finite-projective}.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-effective-descent-flat-modules}
+\begin{reference}
+\cite[Expos\'e 190, n\textsuperscript{o} 2(c), p. 307]{FGA},
+\cite{mesablishvili2}.
+\end{reference}
+If $f : R \to S$ is universally injective, then base extension induces an
+equivalence between
+\begin{enumerate}
+\item flat $R$-modules, and
+\item descent data relative to $f$ whose underlying $S$-module is flat.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Theorem \ref{theorem-descent} says that base extension is an equivalence on
+all modules. It carries flat modules to flat modules by Algebra, Lemma
+\ref{algebra-lemma-flat-base-change}. Conversely, if $(P, \theta)$ is a
+descent datum with $P$ flat over $S$, write
+$(P, \theta) \cong f^*M$ using Theorem \ref{theorem-descent}. Then
+$M \otimes_R S$ is flat over $S$, and Theorem
+\ref{theorem-descend-module-properties} shows that $M$ is flat over $R$.
 \end{proof}
 
 \noindent
@@ -1833,6 +1898,66 @@ Finally, formation of $\mathcal{A}$ and $\mathcal{A}_2$ commutes with base
 change because the morphisms involved are affine. Kernels of maps of
 quasi-coherent modules commute with flat base change. Thus (2), and hence
 (1), is preserved by flat base change.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-finite-effective-epimorphism-flat-schemes}
+\begin{reference}
+\cite[Expos\'e 190, n\textsuperscript{o} 2(c), pp. 306--307]{FGA}.
+\end{reference}
+Let $f : X \to S$ be a finite effective epimorphism. Let $T$ and $Y$ be
+$S$-schemes and assume that $T$ is flat over $S$. Set
+$X_2 = X \times_S X$. Then
+$$
+\Mor_S(T, Y) \longrightarrow
+\Mor_X(T \times_S X, Y \times_S X)
+\mathrel{\substack{\longrightarrow \\[-0.6ex] \longrightarrow}}
+\Mor_{X_2}(T \times_S X_2, Y \times_S X_2)
+$$
+is an equalizer diagram, where the two arrows are pullback by the projections
+$X_2 \to X$.
+\end{lemma}
+
+\begin{proof}
+The base change
+$$
+T \times_S X \longrightarrow T
+$$
+is an effective epimorphism by Lemma
+\ref{lemma-finite-effective-epimorphism-functions}, because $T \to S$ is
+flat. The equalizer condition on a morphism
+$T \times_S X \to Y \times_S X$ over $X$ says that its underlying
+$S$-morphism to $Y$ agrees after the two pullbacks to
+$$
+(T \times_S X) \times_T (T \times_S X) = T \times_S X_2.
+$$
+The effective epimorphism therefore gives a unique morphism $T \to Y$.
+Its pullback to $X$ is the original morphism, which proves the assertion.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-finite-effective-epimorphism-flat-quasi-coherent}
+\begin{reference}
+\cite[Expos\'e 190, n\textsuperscript{o} 2(c), pp. 306--307]{FGA}.
+\end{reference}
+Let $f : X \to S$ be a finite effective epimorphism. Pullback from $S$ to
+$X$ is fully faithful from the category of quasi-coherent
+$\mathcal{O}_S$-modules which are flat over $S$ to the category of descent
+data relative to $f$.
+\end{lemma}
+
+\begin{proof}
+The assertion is local on $S$. If $S = \Spec(R)$, then
+$X = \Spec(A)$ because $f$ is finite. Lemma
+\ref{lemma-finite-effective-epimorphism-functions} says that
+$$
+R \longrightarrow A
+\mathrel{\substack{\longrightarrow \\[-0.6ex] \longrightarrow}}
+A \otimes_R A
+$$
+is an equalizer. Full faithfulness now follows from Lemma
+\ref{lemma-equalizer-flat-module-descent}. The descended morphisms on affine
+opens agree on overlaps by uniqueness and hence glue.
 \end{proof}
 
 \begin{theorem}
