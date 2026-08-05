@@ -5168,13 +5168,54 @@ Morphisms, Lemma \ref{morphisms-lemma-ample-very-ample}.
 \end{proof}
 
 \begin{lemma}
+\label{lemma-descend-along-fpqc-radicial}
+\begin{reference}
+\cite[Expos\'e 190, Th\'eor\`eme 3, p. 318]{FGA}
+\end{reference}
+Let $X \to Y$ be a surjective, quasi-compact, flat, and radicial morphism.
+Let $V$ be a scheme over $X$. Then any descent datum on $V/X/Y$ is effective.
+\end{lemma}
+
+\begin{proof}
+Let $\varphi$ be a descent datum as in
+Descent, Definition \ref{descent-definition-descent-datum}.
+Since $X \to Y$ is radicial, the diagonal
+$X \to X \times_Y X$ is surjective by
+Morphisms, Lemma \ref{morphisms-lemma-universally-injective}.
+
+Let $v \in V$ and choose an affine open $A \subset X$ containing the
+image of $v$. The inverse images of $A$ by the two projections
+$X \times_Y X \to X$ agree: their inverse images by the surjective
+diagonal agree, and open subsets are determined by their underlying sets.
+By Descent, Lemma \ref{descent-lemma-open-fpqc-covering}, there is an open
+$U \subset Y$ such that $A = X \times_Y U$. After replacing everything by
+its restriction over $U$, we may assume that $X$ is affine.
+
+Choose an affine open neighbourhood $W \subset V$ of $v$. The two opens
+$$
+W \times_Y X
+\quad\text{and}\quad
+\varphi^{-1}(X \times_Y W)
+$$
+of $V \times_Y X$ have the same inverse image by the map
+$V \to V \times_Y X$ induced by the diagonal. This map is surjective on
+underlying topological spaces, and the pullback of $\varphi$ by the diagonal
+is the identity. Hence the two opens agree. Thus $W$ is
+$\varphi$-invariant. The morphism $W \to X$ is affine, so the restricted
+descent datum is effective by
+Descent, Lemma \ref{descent-lemma-affine}. We have found such a neighbourhood
+for every $v$, and the result follows from
+Descent, Lemma \ref{descent-lemma-effective-for-fpqc-is-local-upstairs}.
+\end{proof}
+
+\begin{lemma}
 \label{lemma-descend-along-finite-radicial}
 Let $X \to Y$ be a surjective finite locally free morphism which is radicial. 
 Let $V$ be a scheme over $X$. Then any descent datum on $V/X/Y$ is effective.
 \end{lemma}
 
 \begin{proof}
-Apply Lemma \ref{lemma-descend-along-finite-with-bound} with $d = 1$.
+Apply Lemma \ref{lemma-descend-along-fpqc-radicial}.
 \end{proof}
 
 

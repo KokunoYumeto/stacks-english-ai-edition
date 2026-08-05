@@ -466,9 +466,22 @@ neither addition introduced an overfull box.  The complete additions on pages
 pass with no errors: 21,504 labels and 341 append-only decisions.  The next
 cursor is Expose 190 Theorem 3 and the subsequent Cartier descent package on
 source pages 318--324.
+The thirtieth source patch adds
+`groupoids-lemma-descend-along-fpqc-radicial`.  It proves that every descent
+datum on a scheme is effective along an arbitrary surjective quasi-compact
+flat radicial morphism, with no finite-presentation hypothesis.  Surjectivity
+of the diagonal makes affine opens invariant after first descending an affine
+open neighbourhood of the base point; affine fpqc descent and the existing
+local effectivity criterion then finish the proof.  Decision `D000342`
+supersedes `D000138` and closes the radicial half of Expose 190, Theorem 3.
+Issue `I000003` is narrowed rather than erased: the finite branch still lacks
+coverage for finite faithfully flat morphisms that are not finite locally
+free.  The next cursor is the Cartier descent package on source pages
+318--324.
 The Expose 190 residuals include the arbitrary finite-coequalizer extension
-of flat-object full faithfulness and effectivity beyond the pure case Cartier
-p-connection descent the Atiyah--Cartier
+of flat-object full faithfulness and effectivity beyond the pure case the
+finite-flat quasi-projective descent branch without a finite-presentation
+hypothesis Cartier p-connection descent the Atiyah--Cartier
 rationality criterion descent of abelian models and the non-GL_n torsor
 consequences.  The Expose 195 residuals are the general minimal-pair
 prorepresentability theorem its Artinian equalizer criterion the narrow
