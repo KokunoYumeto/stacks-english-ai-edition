@@ -388,6 +388,11 @@ def load_decisions(
     stack_rows = {row["full_label"]: row for row in index}
     with path.open("r", encoding="utf-8-sig", newline="") as handle:
         decisions = list(csv.DictReader(handle))
+    superseded_ids = {
+        row.get("supersedes", "")
+        for row in decisions
+        if row.get("supersedes", "")
+    }
     errors: list[str] = []
     seen_ids: set[str] = set()
     current: dict[str, str] = {}
@@ -423,7 +428,10 @@ def load_decisions(
         tags: list[str] = []
         for label in labels:
             if label not in stack_rows:
-                errors.append(f"unknown Stacks label in {decision_id}: {label}")
+                if decision_id not in superseded_ids:
+                    errors.append(
+                        f"unknown Stacks label in {decision_id}: {label}"
+                    )
                 continue
             if stack_rows[label]["tag"]:
                 tags.append(stack_rows[label]["tag"])
@@ -444,6 +452,66 @@ def apply_decisions(
         row["stacks_labels"] = decision["stacks_labels"]
         row["stacks_tags"] = decision["_stacks_tags"]
         row["rationale"] = decision["rationale"]
+
+
+def load_issues(
+    path: Path,
+    mapped: list[dict[str, str]],
+    index: list[dict[str, str]],
+    decisions: list[dict[str, str]],
+) -> tuple[list[dict[str, str]], list[str]]:
+    errors: list[str] = []
+    unit_ids = {row["unit_id"] for row in mapped}
+    stack_labels = {row["full_label"] for row in index}
+    decision_ids = {row["decision_id"] for row in decisions}
+    required = {
+        "issue_id",
+        "unit_id",
+        "status",
+        "kind",
+        "claim",
+        "evidence_labels",
+        "evidence",
+        "control",
+        "resolution_decision",
+    }
+    with path.open("r", encoding="utf-8-sig", newline="") as handle:
+        reader = csv.DictReader(handle)
+        rows = list(reader)
+        if not reader.fieldnames or not required.issubset(reader.fieldnames):
+            errors.append("issues.csv is missing required columns")
+            return rows, errors
+    seen: set[str] = set()
+    allowed_status = {"open", "confirmed", "resolved"}
+    for row in rows:
+        issue_id = row.get("issue_id", "")
+        if not re.fullmatch(r"I[0-9]{6}", issue_id):
+            errors.append(f"invalid issue ID: {issue_id}")
+        if issue_id in seen:
+            errors.append(f"duplicate issue ID: {issue_id}")
+        seen.add(issue_id)
+        if row.get("unit_id", "") not in unit_ids:
+            errors.append(f"unknown issue unit in {issue_id}")
+        if row.get("status", "") not in allowed_status:
+            errors.append(f"invalid issue status in {issue_id}")
+        for field in ("kind", "claim", "evidence", "control"):
+            if not row.get(field, ""):
+                errors.append(f"missing {field} in {issue_id}")
+        labels = [
+            value
+            for value in row.get("evidence_labels", "").split(";")
+            if value
+        ]
+        for label in labels:
+            if label not in stack_labels:
+                errors.append(f"unknown issue label in {issue_id}: {label}")
+        if row.get("status", "") == "resolved":
+            resolution = row.get("resolution_decision", "")
+            if not resolution:
+                errors.append(f"resolved issue lacks decision in {issue_id}")
+            elif resolution not in decision_ids:
+                errors.append(f"unknown resolution decision in {issue_id}")
+    return rows, errors
 
 
 def privacy_errors(paths: list[Path]) -> list[str]:
@@ -487,6 +555,9 @@ def main() -> int:
     decisions, decision_errors = load_decisions(OUT / "dec.csv", mapped, index)
     errors.extend(decision_errors)
     apply_decisions(mapped, decisions)
+    issue_path = OUT / "issues.csv"
+    issues, issue_errors = load_issues(issue_path, mapped, index, decisions)
+    errors.extend(issue_errors)
     review_ids = {
         row["unit_id"] for row in mapped if row["disposition"] == "needs_review"
     }
@@ -539,7 +610,9 @@ def main() -> int:
             "status",
         ],
     )
-    errors.extend(privacy_errors([map_path, candidate_path, OUT / "dec.csv"]))
+    errors.extend(
+        privacy_errors([map_path, candidate_path, OUT / "dec.csv", issue_path])
+    )
     review_units = sum(
         1 for row in mapped if row["disposition"] == "needs_review"
     )
@@ -572,6 +645,10 @@ def main() -> int:
             "term_links": term_count,
             "decisions": len(decisions),
             "decided_units": sum(1 for row in mapped if row.get("decision_id")),
+            "source_issues": len(issues),
+            "active_source_issues": sum(
+                1 for row in issues if row["status"] != "resolved"
+            ),
             "units_with_topics": len(term_links),
             "structural_units": sum(
                 1 for row in mapped if row["disposition"] == "structural_only"
@@ -591,6 +668,7 @@ def main() -> int:
         },
         "sha256": {
             "fga/dec.csv": sha256(OUT / "dec.csv"),
+            "fga/issues.csv": sha256(issue_path),
             "fga/map.csv": sha256(map_path),
             "fga/ucand.csv": sha256(candidate_path),
         },

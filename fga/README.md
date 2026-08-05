@@ -81,3 +81,9 @@ compared.
 Human decisions are append-only in `dec.csv`.  A later correction uses a new
 `replace` row naming the exact earlier decision in `supersedes`; the generator
 rejects silent replacement, unknown Stacks labels, and duplicate decision IDs.
+
+Source claims whose exact hypotheses are open or demonstrably too broad are
+recorded in `issues.csv`.  The validator checks each issue ID, FGA unit,
+current Stacks evidence label, status, and corrective control.  This keeps a
+source problem distinct from a missing Stacks result and prevents a historical
+claim from being imported silently.
