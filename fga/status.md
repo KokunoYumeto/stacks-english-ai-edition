@@ -15,10 +15,11 @@ source patch.
 - 952 structural or embedded units classified
 - 9 item-level correction or historical units preserved
 - 292 independent mathematical or expository units identified for review
-- 189 review units now have append-only decisions: all 37 Expose 149 units
+- 222 review units now have append-only decisions: all 37 Expose 149 units
   including its erratum all 69 Expose 182 units including its erratum all 39
   Expose 190 units including its erratum all 21 Expose 195 units including its
-  erratum and all 23 Expose 212 units including its erratum
+  erratum all 23 Expose 212 units including its erratum and all 33 Expose 221
+  units including its erratum
 - Expose 149 Proposition 2 remains explicitly open pending its higher-Ext
   hypothesis check
 - Expose 149 currently yields 20 `existing_stronger` decisions 10
@@ -38,9 +39,12 @@ source patch.
 - Expose 212 yields 6 `existing_equivalent` decisions 2 `existing_stronger`
   decisions 1 `existing_weaker` decision 7 `extend_existing` decisions 4
   `new_statement` decisions and 3 historical decisions
-- 109 units remain in `needs_review`: 108 without a final decision and the
+- Expose 221 yields 4 `existing_equivalent` decisions 1 `existing_stronger`
+  decision 5 `existing_weaker` decisions 6 `extend_existing` decisions 13
+  `new_statement` decisions and 4 historical decisions
+- 77 units remain in `needs_review`: 76 without a final decision and the
   explicitly open Expose 149 proposition
-- 4 later correction or comment roots still require item-level link review
+- 3 later correction or comment roots still require item-level link review
 
 Sections remain independent review units.  A provisional rule that treated
 every section as a structural container was rejected before publication
@@ -80,7 +84,7 @@ labels that have no entry in upstream's `tags/tags`; no replacement tag has
 been invented.
 
 No Stacks mathematical TeX has been changed yet.  The next cursor is Expose
-221.  The identified Expose 149 additions are the arbitrary-ideal Ext and Tor
+232.  The identified Expose 149 additions are the arbitrary-ideal Ext and Tor
 comparison maps the partial-range singular-duality equivalence and the general
 Hodge fixed-point statement.  The Expose 182 residuals include the formal
 moduli theorem, local-cover descent, projective-bundle automorphisms,
@@ -99,3 +103,10 @@ statement the internal Segal nerve theorem the scheme and quasi-projectivity
 refinements for proper-flat quotients the saturated generic scheme quotient
 the abelian good-reduction application and the Artinian and field-valued
 group-scheme quotient theorems.
+The Expose 221 residuals are the general bounded-family calculus the
+dimension-filtration and partial-Hilbert-coefficient boundedness the classical
+Grassmann construction and projective-scheme conclusion the eventual very
+ample determinant line the local-to-global normal-sheaf smoothness package
+smooth Weil restriction along finite flat morphisms the norm morphism from
+finite-length Hilbert spaces to symmetric products and the scheme-level
+positive and negative Weil-restriction refinements.
