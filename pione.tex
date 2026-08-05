@@ -3681,6 +3681,103 @@ neighbourhood $V$.
 \end{proof}
 
 \begin{lemma}
+\label{lemma-finite-unramified-etale-after-pullback}
+Let $f : X \to S$ be a proper morphism such that
+$\mathcal{O}_S \to f_*\mathcal{O}_X$ is an isomorphism. Let $p : T \to S$ be
+a finite unramified morphism. If the base change
+$$
+X \times_S T \longrightarrow X
+$$
+is \'etale, then $p$ is \'etale.
+\end{lemma}
+
+\begin{proof}
+First, $f$ is surjective. Indeed, its image is closed, and on the complement
+the equality $\mathcal{O}_S = f_*\mathcal{O}_X$ would identify a nonzero
+structure sheaf with zero.
+
+\medskip\noindent
+The assertion is \'etale local on $S$. After an \'etale base change the equality
+of structure sheaves is preserved by Cohomology of Schemes, Lemma
+\ref{coherent-lemma-flat-base-change-cohomology}. Thus, by \'Etale Morphisms,
+Lemma \ref{etale-lemma-finite-unramified-etale-local}, we may assume that $S$
+is affine and
+$$
+T = \coprod T_i
+$$
+with every $T_i \to S$ a closed immersion. The base change
+$X_{T_i} \to X$ is both a closed immersion and \'etale, and hence is an open
+immersion by \'Etale Morphisms, Theorem
+\ref{etale-theorem-etale-radicial-open}. Thus $X_{T_i}$ is open and closed in
+$X$. It is defined by an idempotent in
+$$
+\Gamma(X, \mathcal{O}_X) = \Gamma(S, \mathcal{O}_S).
+$$
+Let $S_i \subset S$ be the corresponding open and closed subscheme. Then
+$X_{T_i} = X_{S_i}$ as subschemes of $X$.
+
+\medskip\noindent
+Let $\mathcal{I}_i$ be the ideal defining $T_i$. Over $S_i$ its pullback to
+$X$ is zero; the equality $\mathcal{O}_S = f_*\mathcal{O}_X$ therefore gives
+$\mathcal{I}_i|_{S_i} = 0$. Over $S \setminus S_i$ the scheme $X_{T_i}$ is
+empty. Surjectivity of $f$ then implies that $T_i$ is empty there. Hence
+$T_i = S_i$. Every $T_i \to S$ is consequently an open immersion as well as
+a closed immersion, and $p$ is \'etale.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-finite-etale-descends-trivial-all-fibres}
+\begin{reference}
+\cite[Expos\'e 182, Corollaire 1, p. 214]{FGA}
+\end{reference}
+Let $S$ be a locally Noetherian scheme. Let $f : X \to S$ be a proper
+morphism such that $\mathcal{O}_S \to f_*\mathcal{O}_X$ is an isomorphism.
+Let $h : X' \to X$ be a finite \'etale morphism, let
+$$
+X' \longrightarrow T \longrightarrow S
+$$
+be the Stein factorization of $f \circ h$, and let
+$\varphi : X' \to X \times_S T$ be the canonical morphism. The following are
+equivalent:
+\begin{enumerate}
+\item $T \to S$ is finite \'etale and $\varphi$ is an isomorphism;
+\item for every $s \in S$, every $t \in T$ over $s$, and the connected
+component $C \subset X'_s$ corresponding to $t$, the canonical morphism
+$$
+C \longrightarrow
+X_s \times_{\Spec(\kappa(s))} \Spec(\kappa(t))
+$$
+is an isomorphism.
+\end{enumerate}
+In particular, a finite \'etale cover of $X$ is pulled back from a finite
+\'etale cover of $S$ if and only if it is geometrically trivial on every
+fibre of $f$; the cover of $S$ is then unique up to unique isomorphism.
+\end{lemma}
+
+\begin{proof}
+The fibres of $f$ are geometrically connected by the structure-sheaf identity
+in the statement and
+More on Morphisms, Theorem
+\ref{more-morphisms-theorem-stein-factorization-general}. Thus if (1) holds,
+then (2) follows by taking fibres. Conversely, assume (2). The
+morphism $h$ is unramified along every $C$, so
+Lemma \ref{lemma-local-Stein-trivial-component}, applied at every point of
+$T$, shows that $T \to S$ is unramified and that $\varphi$ is an isomorphism.
+Thus the base change of $T \to S$ by $X \to S$ is the \'etale morphism $h$.
+Lemma \ref{lemma-finite-unramified-etale-after-pullback} shows that
+$T \to S$ is \'etale. It is finite by the proof of
+Lemma \ref{lemma-local-Stein-trivial-component}.
+
+\medskip\noindent
+Finally, if $X'$ is pulled back from a finite \'etale cover $T' \to S$, then
+flat base change and $f_*\mathcal{O}_X = \mathcal{O}_S$ give
+$$
+(f \circ h)_*\mathcal{O}_{X'} = (T' \to S)_*\mathcal{O}_{T'}.
+$$
+Hence $T'$ is the middle term of the Stein factorization, proving uniqueness.
+\end{proof}
+
+\begin{lemma}
 \label{lemma-stein-factorization-etale}
 \begin{reference}
 \cite[Expose X, Proposition 1.2, p. 262]{SGA1}.
