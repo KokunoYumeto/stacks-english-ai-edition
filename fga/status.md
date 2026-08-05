@@ -599,3 +599,16 @@ overfull box, and the complete addition on pages 24--27 passed rendered
 inspection.  Both semantic validators pass with no errors: 21,521 labels and
 347 append-only decisions.  Expose 190 is complete as classified, with
 `I000003` explicit; the next cursor is Expose 195.
+The thirty-sixth source patch adds the general minimal-pair criterion for
+strict prorepresentability to Categories.  It defines strict monomorphisms,
+strict proobjects, pointed objects, domination, and minimality; proves that a
+functor on a small finite-limit category is strictly prorepresentable exactly
+when it is left exact and every pointed object is dominated by a minimal one;
+and derives the Artinian-subobject corollary that every proobject then admits
+a strict presentation.  Decisions `D000348` and `D000349` supersede
+`D000149` and `D000150` with exact integrated coverage of Expose 195,
+Proposition A.3.1 and its corollary.  The Categories chapter passed two final
+bibliography-complete builds at 105 pages with no new overfull box, and the
+complete addition on pages 34--35 passed rendered inspection.  Both semantic
+validators pass with no errors: 21,525 labels and 349 append-only decisions.
+The next cursor is Expose 195, Theorem B.1.

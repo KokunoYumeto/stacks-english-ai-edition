@@ -3116,6 +3116,157 @@ Remark \ref{remark-pro-category}. We omit the construction of a
 transformation $B \to A$ given a morphism of pro-objects from $F$ to $G$.
 \end{remark}
 
+\begin{definition}
+\label{definition-strict-prorepresentable-minimal-pair}
+Let $\mathcal{C}$ be a category.
+\begin{enumerate}
+\item A monomorphism $u : X' \to X$ is called a
+{\it strict monomorphism} if the following holds: a morphism
+$v : Z \to X$ factors through $u$ whenever
+$$
+a \circ v = b \circ v
+$$
+for every pair $a, b : X \to W$ such that
+$a \circ u = b \circ u$.
+\item A pro-object is called {\it strict} if it can be represented by a
+cofiltered diagram all of whose transition morphisms are epimorphisms.
+\item A functor $F : \mathcal{C} \to \textit{Sets}$ is called
+{\it strictly prorepresentable} if there is a strict pro-object
+$(X_i)$ and an isomorphism
+$$
+F(Y) = \colim_i \Mor_\mathcal{C}(X_i, Y)
+$$
+functorial in $Y$.
+\item A {\it pointed object of $F$} is a pair $(X, \xi)$ with
+$\xi \in F(X)$. A morphism $(X, \xi) \to (Y, \eta)$ is a morphism
+$f : X \to Y$ such that $F(f)(\xi) = \eta$.
+\item A pointed object $(X, \xi)$ is {\it minimal} if every morphism
+$(X', \xi') \to (X, \xi)$ whose underlying morphism is a strict
+monomorphism is an isomorphism. We say that $(X, \xi)$
+{\it dominates} $(Y, \eta)$ if there is a morphism
+$(X, \xi) \to (Y, \eta)$.
+\end{enumerate}
+\end{definition}
+
+\begin{lemma}
+\label{lemma-strict-monomorphism-properties}
+Let $\mathcal{C}$ be a category.
+\begin{enumerate}
+\item Every equalizer is a strict monomorphism.
+\item A strict monomorphism which is also an epimorphism is an isomorphism.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Suppose that $u : E \to X$ is the equalizer of $a, b : X \to Y$.
+If $v : Z \to X$ satisfies the condition in
+Definition \ref{definition-strict-prorepresentable-minimal-pair}, then in
+particular $a \circ v = b \circ v$. Thus $v$ factors through $E$.
+
+Suppose that $u : X' \to X$ is both a strict monomorphism and an
+epimorphism. Every pair $a, b : X \to Y$ satisfying
+$a \circ u = b \circ u$ has $a = b$. Hence the identity of $X$ factors
+through $u$. The resulting inverse on one side is an inverse on both sides
+because $u$ is a monomorphism.
+\end{proof}
+
+\begin{theorem}
+\label{theorem-strict-prorepresentable-minimal-pairs}
+\begin{reference}
+\cite[Expos\'e 195, n\textsuperscript{o} A.3, pp. 373--374]{FGA}.
+\end{reference}
+Let $\mathcal{C}$ be a small category with finite limits and let
+$F : \mathcal{C} \to \textit{Sets}$ be a functor. The following are
+equivalent.
+\begin{enumerate}
+\item The functor $F$ is strictly prorepresentable.
+\item The functor $F$ is left exact and every pointed object of $F$ is
+dominated by a minimal pointed object.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Suppose that $F$ is represented by a cofiltered diagram $(X_i)$ whose
+transition morphisms are epimorphisms. A filtered colimit of sets commutes
+with finite limits. Since each functor
+$\Mor_\mathcal{C}(X_i, -)$ commutes with limits, $F$ is left exact.
+
+Let $\xi \in F(Y)$. It is represented by a morphism $g : X_i \to Y$.
+Denote by $\xi_i \in F(X_i)$ the class of $\text{id}_{X_i}$. We claim that
+$(X_i, \xi_i)$ is minimal. Suppose that $u : Y' \to X_i$ is a strict
+monomorphism and that $\eta \in F(Y')$ maps to $\xi_i$. Represent $\eta$
+by a morphism $X_j \to Y'$. The equality in the filtered colimit implies,
+after passing to a common refinement $X_k$, that a transition morphism
+$X_k \to X_i$ factors through $u$. This transition morphism is an
+epimorphism, hence $u$ is an epimorphism. Lemma
+\ref{lemma-strict-monomorphism-properties} shows that $u$ is an isomorphism.
+Thus $(X_i, \xi_i)$ is minimal, and $g$ shows that it dominates
+$(Y, \xi)$.
+
+Conversely, suppose (2) holds. Let $\mathcal{I}$ be the category of minimal
+pointed objects of $F$. It is small. We first show that between two objects
+of $\mathcal{I}$ there is at most one morphism. Indeed, the equalizer of two
+such morphisms carries a point lifting the point of their source because
+$F$ is left exact. The equalizer is a strict monomorphism by Lemma
+\ref{lemma-strict-monomorphism-properties}, and minimality of the source
+shows that it is an isomorphism.
+
+The category $\mathcal{I}$ is cofiltered. It is nonempty: apply the
+domination hypothesis to the unique point of the final object. Given two
+minimal pointed objects, form their product as pointed objects and dominate
+it by a minimal pointed object. This gives a common source. There is no
+condition left to check for parallel arrows by the preceding paragraph.
+
+The forgetful functor $\mathcal{I} \to \mathcal{C}$ is a strict
+pro-object. To see this, let
+$$
+f : (X, \xi) \longrightarrow (Y, \eta)
+$$
+be a morphism in $\mathcal{I}$. If $a, b : Y \to Z$ satisfy
+$a \circ f = b \circ f$, then the equalizer $E \to Y$ carries a point
+lifting $\eta$. Minimality of $(Y, \eta)$ shows that $E \to Y$ is an
+isomorphism. Hence $a = b$, and $f$ is an epimorphism.
+
+There is a natural map
+$$
+\colim_{(X, \xi) \in \mathcal{I}^{opp}}
+\Mor_\mathcal{C}(X, Y) \longrightarrow F(Y),
+\qquad
+g \longmapsto F(g)(\xi).
+$$
+It is surjective by the domination hypothesis. Suppose that
+$g : (X, \xi) \to (Y, \zeta)$ and
+$h : (X', \xi') \to (Y, \zeta)$ give the same point of $F(Y)$.
+The fibre product $X \times_Y X'$ carries the point $(\xi, \xi')$
+because $F$ is left exact. Dominate this pointed object by a minimal one.
+The resulting common refinement identifies the classes of $g$ and $h$.
+Thus the displayed map is injective and $F$ is strictly prorepresentable.
+\end{proof}
+
+\begin{proposition}
+\label{corollary-artinian-left-exact-strict-prorepresentable}
+Let $\mathcal{C}$ be a small category with finite limits. Assume that every
+nonempty collection of subobjects of any object of $\mathcal{C}$ has a
+minimal member. Then a functor
+$F : \mathcal{C} \to \textit{Sets}$ is strictly prorepresentable if and
+only if it is left exact. In particular, every pro-object of $\mathcal{C}$
+is isomorphic to a strict pro-object.
+\end{proposition}
+
+\begin{proof}
+Only the converse requires proof. Given a pointed object $(X, \xi)$,
+consider the nonempty collection of subobjects $X' \to X$ through which
+$\xi$ lifts. Choose a minimal member and a lift $\xi' \in F(X')$.
+Then $(X', \xi')$ is minimal, since any further strict subobject carrying
+$\xi'$ would give a smaller subobject of $X$. Theorem
+\ref{theorem-strict-prorepresentable-minimal-pairs} applies.
+
+The functor associated with any pro-object is left exact. Hence it is
+strictly prorepresentable by the first assertion. Remark
+\ref{remark-pro-category-copresheaves} then shows that the original
+pro-object is isomorphic to a strict one.
+\end{proof}
+
 \begin{lemma}
 \label{lemma-image-essentially-constant}
 Let $\mathcal{C}$ be a category. Let $M : \mathcal{I} \to \mathcal{C}$
