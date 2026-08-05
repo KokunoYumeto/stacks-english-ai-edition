@@ -15,10 +15,10 @@ source patch.
 - 952 structural or embedded units classified
 - 9 item-level correction or historical units preserved
 - 292 independent mathematical or expository units identified for review
-- 166 review units now have append-only decisions: all 37 Expose 149 units
+- 189 review units now have append-only decisions: all 37 Expose 149 units
   including its erratum all 69 Expose 182 units including its erratum all 39
-  Expose 190 units including its erratum and all 21 Expose 195 units including
-  its erratum
+  Expose 190 units including its erratum all 21 Expose 195 units including its
+  erratum and all 23 Expose 212 units including its erratum
 - Expose 149 Proposition 2 remains explicitly open pending its higher-Ext
   hypothesis check
 - Expose 149 currently yields 20 `existing_stronger` decisions 10
@@ -35,9 +35,12 @@ source patch.
 - Expose 195 yields 2 `existing_equivalent` decisions 6 `existing_stronger`
   decisions 4 `existing_weaker` decisions 4 `extend_existing` decisions 4
   `new_statement` decisions and 1 historical decision
-- 131 units remain in `needs_review`: 130 without a final decision and the
+- Expose 212 yields 6 `existing_equivalent` decisions 2 `existing_stronger`
+  decisions 1 `existing_weaker` decision 7 `extend_existing` decisions 4
+  `new_statement` decisions and 3 historical decisions
+- 109 units remain in `needs_review`: 108 without a final decision and the
   explicitly open Expose 149 proposition
-- 5 later correction or comment roots still require item-level link review
+- 4 later correction or comment roots still require item-level link review
 
 Sections remain independent review units.  A provisional rule that treated
 every section as a structural container was rejected before publication
@@ -45,7 +48,7 @@ because FGA sections contain substantial unboxed mathematics such as the
 composition law in Ext.  Equations subitems and diagrams inherit the decision
 of their semantic parent.
 
-Four source-hypothesis issues are fail-closed in `issues.csv`.  Expose 149
+Five source-hypothesis issues are fail-closed in `issues.csv`.  Expose 149
 Proposition 2 remains open.  The confirmed issue is Expose 182 Corollary 6:
 the stated invariance under algebraically closed base-field extension needs
 properness in arbitrary characteristic; an Artin--Schreier cover of the affine
@@ -57,7 +60,10 @@ a finite-presentation hypothesis.  Expose 195 Proposition 2.1 has a confirmed
 cohomological-degree error: infinitesimal lifts of a fixed morphism form a
 torsor under global derivations in degree zero while degree one contains the
 obstruction.  The affine-line map from a point is an immediate counterexample
-to the printed tangent formula.
+to the printed tangent formula.  Expose 212's projective-linear-group quotient
+conjecture is also confirmed false by its linked erratum: current Stacks gives
+an algebraic-space torsor quotient for a free flat action but neither scheme
+representability nor the asserted descended pre-ample polarization.
 
 The broad later conjecture that finite maps should always give effective
 descent for flat modules was disproved by Venken.  This does not by itself
@@ -74,7 +80,7 @@ labels that have no entry in upstream's `tags/tags`; no replacement tag has
 been invented.
 
 No Stacks mathematical TeX has been changed yet.  The next cursor is Expose
-212.  The identified Expose 149 additions are the arbitrary-ideal Ext and Tor
+221.  The identified Expose 149 additions are the arbitrary-ideal Ext and Tor
 comparison maps the partial-range singular-duality equivalence and the general
 Hodge fixed-point statement.  The Expose 182 residuals include the formal
 moduli theorem, local-cover descent, projective-bundle automorphisms,
@@ -88,3 +94,8 @@ prorepresentability theorem its Artinian equalizer criterion the narrow
 non-flat descent theorem the nonproper formal Hom Picard and scheme-moduli
 cases the Witt-smooth abelian deformation result and the generally
 non-Noetherian formal parameter object for ramified finite flat coverings.
+The Expose 212 residuals are the finite-scheme geometric-fibre exactness
+statement the internal Segal nerve theorem the scheme and quasi-projectivity
+refinements for proper-flat quotients the saturated generic scheme quotient
+the abelian good-reduction application and the Artinian and field-valued
+group-scheme quotient theorems.
