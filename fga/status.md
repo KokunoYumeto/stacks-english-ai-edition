@@ -4,11 +4,11 @@ Snapshot: Stacks commit `a04446e57ec1fbc252a871afcec7752fb2807b14`.
 
 The reproducible intake, topic crosswalk, and statement-level review are
 complete for the bounded FGA corpus, apart from one explicitly fail-closed
-source hypothesis.  The first mathematical source patch is implemented and
-validated; further source integration remains in progress.
+source hypothesis.  The first two mathematical source patches are implemented
+and validated; further source integration remains in progress.
 
 - 119 Stacks TeX files indexed
-- 21,448 labelled TeX objects indexed
+- 21,450 labelled TeX objects indexed
 - 21,437 objects joined to an existing official tag
 - 55 FGA topics reviewed: 30 direct and 14 broad coverage decisions plus 6
   partial and 5 no-direct decisions
@@ -48,10 +48,10 @@ validated; further source integration remains in progress.
 - Expose 232 yields 2 `existing_equivalent` decisions 7 `existing_weaker`
   decisions 11 `extend_existing` decisions 5 `new_statement` decisions and 8
   historical decisions
-- Expose 236 yields 3 `existing_equivalent` decisions 4 `existing_weaker`
-  decisions 14 `extend_existing` decisions 12 `new_statement` decisions 4
-  `new_section` decisions 1 example-or-remark decision and 5 historical
-  decisions
+- Expose 236 yields 3 `existing_equivalent` decisions 1 `existing_stronger`
+  decision 4 `existing_weaker` decisions 13 `extend_existing` decisions 12
+  `new_statement` decisions 4 `new_section` decisions 1 example-or-remark
+  decision and 5 historical decisions
 - the 3 Commentaires units are preserved as historical editorial provenance
 - exactly 1 unit remains in `needs_review`: the explicitly open Expose 149
   proposition; no correction or comment root remains unreviewed
@@ -93,9 +93,9 @@ claim.  The unit therefore remains an explicit extension target rather than
 being silently identified with fpqc descent.
 
 Both `check.json` and `mcheck.json` report `PASS` with empty `errors` arrays.
-The warnings preserve nine generated book-part labels and eleven current TeX
-labels that have no entry in upstream's `tags/tags`; the two additional labels
-are the new source lemmas below.  No replacement tag has been invented.
+The warnings preserve nine generated book-part labels and thirteen current TeX
+labels that have no entry in upstream's `tags/tags`; four of these are the new
+source lemmas below.  No replacement tag has been invented.
 
 The first source patch adds
 `more-morphisms-lemma-pic-roots-first-order-thickening`, a cartesian
@@ -106,7 +106,16 @@ Decision `D000304` append-only supersedes the earlier gap classification
 `D000278`; the narrower current section hypotheses remain explicit.  Both
 affected chapters compile to DVI and PDF without TeX errors, and the inserted
 diagram and theorem page passed rendered inspection.  The next cursor is the
-relative group-locus package in Expose 236.  The identified Expose 149
+relative group-locus package in Expose 236.  The second source patch adds
+`groupoids-lemma-smooth-flat-locus-group-scheme`, which makes the smooth or
+flat locus an open subgroup over the identity-locus open and proves that it
+contains every section, and
+`groupoids-lemma-smooth-flat-along-identity-component`, which propagates the
+property to every section and fibrewise identity component.  Decisions
+`D000305` and `D000306` supersede the earlier ingredient-only records.  The
+Groupoid Schemes chapter compiles to PDF without TeX errors and the complete
+inserted page passed rendered inspection.  The next cursor remains the other
+relative group-locus results in Expose 236.  The identified Expose 149
 additions are the arbitrary-ideal Ext and Tor
 comparison maps the partial-range singular-duality equivalence and the general
 Hodge fixed-point statement.  The Expose 182 residuals include the formal

@@ -709,6 +709,74 @@ by functoriality. Since the map is linear we see that
 $(\theta_1, \theta_2)$ maps to $\theta_1 + \theta_2$.
 \end{proof}
 
+\begin{lemma}
+\label{lemma-smooth-flat-locus-group-scheme}
+Let $S$ be a scheme and let $f : G \to S$ be a group scheme locally of
+finite presentation. Let $\mathcal{P}$ be either ``smooth'' or ``flat''.
+Denote by $W \subset G$ the locus where $f$ has property $\mathcal{P}$,
+and set
+$$
+U = e^{-1}(W) \subset S.
+$$
+Then $U$ is open in $S$, the open subscheme
+$W_U = W \times_S U$ is an open subgroup scheme of $G_U$, and every
+section of $G_U \to U$ factors through $W_U$.
+\end{lemma}
+
+\begin{proof}
+The smooth locus is open by the definition of a smooth morphism. The
+flat locus is open by More on Morphisms, Theorem
+\ref{more-morphisms-theorem-openness-flatness}, applied to
+$\mathcal{O}_G$. Thus $U$ is open. Formation of $W$ commutes with flat
+base change. In the smooth case this follows from Morphisms, Lemma
+\ref{morphisms-lemma-set-points-where-fibres-smooth}, and in the flat
+case from More on Morphisms, Lemma
+\ref{more-morphisms-lemma-flat-locus-base-change}.
+
+We may replace $S$ by $U$ and assume that $e(S) \subset W$. In either
+case $W \to S$ is flat. Consider the base change $G_W = W \times_S G$.
+The property $\mathcal{P}$ locus in $G_W$ is $W \times_S W$. The
+translation by the universal point
+$$
+G_W \longrightarrow G_W, \qquad (w, g) \longmapsto (w, m(w, g))
+$$
+is an isomorphism over $W$, and hence it preserves this locus. It
+follows that multiplication on $G$ maps $W \times_S W$ into $W$.
+The inverse morphism of $G$ preserves $W$ as well, since it is an
+isomorphism over $S$. As $e(S) \subset W$, this proves that $W$ is an
+open subgroup scheme of $G$.
+
+Let $\sigma : S \to G$ be a section. Translation by $\sigma$ is an
+isomorphism of $G$ over $S$ and therefore preserves $W$. Since it maps
+$e(S)$ onto $\sigma(S)$, the section $\sigma$ factors through $W$.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-smooth-flat-along-identity-component}
+In the situation of Lemma \ref{lemma-smooth-flat-locus-group-scheme},
+assume that $f$ has property $\mathcal{P}$ at every point of $e(S)$.
+Then $f$ has property $\mathcal{P}$ at every point in the image of any
+section of $f$ and at every point of
+$$
+G^0 = \bigcup_{s \in S} (G_s)^0,
+$$
+where $(G_s)^0$ is the connected component of the identity in $G_s$.
+\end{lemma}
+
+\begin{proof}
+Lemma \ref{lemma-smooth-flat-locus-group-scheme} shows that the
+$\mathcal{P}$ locus $W$ is an open subgroup scheme of $G$ containing
+every section. For $s \in S$, the subgroup $W_s \subset G_s$ is both
+open and closed. Indeed, if $x \in G_s \setminus W_s$ and
+$K = \kappa(x)$, then translation by the corresponding $K$-point of
+$G_K$ maps the open $W_K$ to an open whose image in $G_s$ is an open
+neighbourhood of $x$ disjoint from $W_s$. Here the projection
+$G_K \to G_s$ is open by Morphisms, Lemma
+\ref{morphisms-lemma-scheme-over-field-universally-open}. Thus the
+complement of $W_s$ is open. Since $W_s$ contains the identity, it
+contains the connected component $(G_s)^0$.
+\end{proof}
+
 
 
 
