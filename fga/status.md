@@ -4,11 +4,11 @@ Snapshot: Stacks commit `a04446e57ec1fbc252a871afcec7752fb2807b14`.
 
 The reproducible intake, topic crosswalk, and statement-level review are
 complete for the bounded FGA corpus, apart from one explicitly fail-closed
-source hypothesis.  The first seven mathematical source patches are implemented
+source hypothesis.  The first eight mathematical source patches are implemented
 and validated; further source integration remains in progress.
 
 - 119 Stacks TeX files indexed
-- 21,464 labelled TeX objects indexed
+- 21,467 labelled TeX objects indexed
 - 21,437 objects joined to an existing official tag
 - 55 FGA topics reviewed: 30 direct and 14 broad coverage decisions plus 6
   partial and 5 no-direct decisions
@@ -29,8 +29,8 @@ and validated; further source integration remains in progress.
   `existing_equivalent` decisions 2 `extend_existing` decisions 1
   `new_statement` decision 3 historical decisions and 1 open decision
 - Expose 182 yields 29 `existing_stronger` decisions 18
-  `existing_equivalent` decisions 2 `existing_weaker` decisions 8
-  `extend_existing` decisions 8 `new_statement` decisions and 4 historical
+  `existing_equivalent` decisions 4 `existing_weaker` decisions 8
+  `extend_existing` decisions 6 `new_statement` decisions and 4 historical
   decisions
 - Expose 190 yields 19 `existing_equivalent` decisions 8
   `existing_stronger` decisions 1 `existing_weaker` decision 4
@@ -62,11 +62,16 @@ because FGA sections contain substantial unboxed mathematics such as the
 composition law in Ext.  Equations subitems and diagrams inherit the decision
 of their semantic parent.
 
-Seven source issues are fail-closed in `issues.csv`.  Expose 149
+Eight source issues are fail-closed in `issues.csv`.  Expose 149
 Proposition 2 remains open.  The confirmed issue is Expose 182 Corollary 6:
 the stated invariance under algebraically closed base-field extension needs
 properness in arbitrary characteristic; an Artin--Schreier cover of the affine
 line supplies a characteristic-p counterexample to the unrestricted claim.
+Expose 182 Proposition 2 omits a necessary rank-at-least-two hypothesis:
+for a line bundle $E$ the projective bundle $\mathbf P(E)$ is the base and
+$\mathcal O(1)$ is pulled back from $E$, so the claimed integer is not unique.
+The projective-bundle Picard and automorphism results are integrated only in
+the corrected rank range and `I000008` retains the literal counterexample.
 Expose 190 Theorem 3 also remains open at its arbitrary non-Noetherian scope:
 the direct current Stacks results require a finite locally free cover whereas
 the historical statement assumes finite flat or radicial fpqc descent without
@@ -101,8 +106,8 @@ claim.  The unit therefore remains an explicit extension target rather than
 being silently identified with fpqc descent.
 
 Both `check.json` and `mcheck.json` report `PASS` with empty `errors` arrays.
-The warnings preserve nine generated book-part labels and twenty-seven current
-TeX labels that have no entry in upstream's `tags/tags`; eighteen of these are
+The warnings preserve nine generated book-part labels and thirty current TeX
+labels that have no entry in upstream's `tags/tags`; twenty-one of these are
 the new source labels below.  No replacement tag has been invented.
 
 The first source patch adds
@@ -173,12 +178,19 @@ groupoid versions.  Decisions `D000313` and `D000314` replace the two former
 gap records for FGA 212, Proposition 4.1 and Corollary 4.2 with direct modern
 equivalents.  The Simplicial Methods chapter passed two PDF builds and all
 four affected pages passed rendered inspection.
+The eighth source patch proves the Picard decomposition of a projective bundle
+over a connected base and the exact scalar-linear-projective-twisting sequence
+for its automorphism group.  It also proves that every twisting class is
+annihilated by the rank.  Decisions `D000315` and `D000316` replace the two
+former gaps with integrated results under the necessary rank-at-least-two
+hypothesis recorded in `I000008`.  Both inserted More on Morphisms pages passed
+two PDF builds and rendered inspection.
 The identified Expose 149
 additions are the arbitrary-ideal Ext and Tor
 comparison maps the partial-range singular-duality equivalence and the general
 Hodge fixed-point statement.  The Expose 182 residuals include the formal
-moduli theorem, local-cover descent, projective-bundle automorphisms,
-projective-space rigidity and lifting, a product formula for fundamental
+moduli theorem, local-cover descent, projective-space rigidity and lifting,
+a product formula for fundamental
 groups, finite generation for curves, and the tame specialization package.
 The Expose 190 residuals include finite-epimorphism factorization the analytic
 Grauert--Remmert passage Cartier p-connection descent the Atiyah--Cartier
@@ -189,8 +201,8 @@ non-flat descent theorem the nonproper formal Hom Picard and scheme-moduli
 cases the Witt-smooth abelian deformation result and the generally
 non-Noetherian formal parameter object for ramified finite flat coverings.
 The Expose 212 residuals are the finite-scheme geometric-fibre exactness
-statement the internal Segal nerve theorem the scheme and quasi-projectivity
-refinements for proper-flat quotients the saturated generic scheme quotient
+statement the scheme and quasi-projectivity refinements for proper-flat
+quotients the saturated generic scheme quotient
 the abelian good-reduction application and the Artinian and field-valued
 group-scheme quotient theorems.
 The Expose 221 residuals are the general bounded-family calculus the

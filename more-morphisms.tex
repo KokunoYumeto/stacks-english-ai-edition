@@ -704,6 +704,119 @@ by Lemma \ref{lemma-torsion-pic-thickening}. Thus the lift is unique.
 
 
 
+\section{Picard groups of projective bundles}
+\label{section-picard-projective-bundles}
+
+\begin{lemma}
+\label{lemma-picard-group-projective-bundle}
+Let $S$ be a connected scheme. Let $n \geq 1$ and let $\mathcal{E}$ be a
+finite locally free $\mathcal{O}_S$-module of rank $n + 1$. If
+$\pi : \mathbf{P}(\mathcal{E}) \to S$ is the associated projective bundle,
+then
+$$
+\Pic(S) \oplus \mathbf{Z} \longrightarrow \Pic(\mathbf{P}(\mathcal{E})),
+\qquad
+([\mathcal{N}], d) \longmapsto
+[\pi^*\mathcal{N} \otimes \mathcal{O}_{\mathbf{P}(\mathcal{E})}(d)]
+$$
+is an isomorphism.
+\end{lemma}
+
+\begin{proof}
+Let $\mathcal{L}$ be an invertible module on $\mathbf{P}(\mathcal{E})$ and
+let $s \in S$. By Divisors, Lemma
+\ref{divisors-lemma-Pic-projective-space-UFD}, there is a unique integer $d_s$
+such that
+$$
+\mathcal{L}|_{\mathbf{P}(\mathcal{E}_s)} \cong
+\mathcal{O}_{\mathbf{P}(\mathcal{E}_s)}(d_s).
+$$
+Set $\mathcal{F} = \mathcal{L}(-d_s)$. The cohomology of $\mathcal{F}_s$
+is $\kappa(s)$ in degree $0$ and zero in all other degrees by Cohomology of
+Schemes, Lemma
+\ref{coherent-lemma-cohomology-projective-space-over-ring}. By Derived
+Categories of Schemes, Lemma
+\ref{perfect-lemma-open-where-cohomology-in-degree-i-rank-r-geometric}, after
+shrinking $S$ about $s$ we have
+$$
+R\pi_*\mathcal{F} = \mathcal{N}[0]
+$$
+for an invertible $\mathcal{O}_S$-module $\mathcal{N}$, compatibly with base
+change. The evaluation map $\pi^*\mathcal{N} \to \mathcal{F}$ is an
+isomorphism on the fibre over $s$. Its isomorphism locus is open. Since $\pi$
+is proper, after shrinking $S$ once more it is an isomorphism everywhere.
+
+We have proved that $s \mapsto d_s$ is locally constant and that locally on
+$S$ every invertible module has the displayed form. Since $S$ is connected,
+the integer $d_s$ has a constant value $d$. Taking
+$$
+\mathcal{N} = \pi_*(\mathcal{L}(-d))
+$$
+and using the local result shows globally that $\mathcal{N}$ is invertible and
+$\pi^*\mathcal{N} \to \mathcal{L}(-d)$ is an isomorphism. This proves
+surjectivity. The integer is unique after restriction to a fibre. Once it is
+fixed, $\mathcal{N}$ is recovered by applying $\pi_*$, the projection formula,
+and Cohomology of Schemes, Lemma
+\ref{coherent-lemma-cohomology-projective-bundle}. This proves injectivity.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-automorphisms-projective-bundle}
+In the situation of Lemma \ref{lemma-picard-group-projective-bundle}, set
+$$
+\Gamma_{\mathcal{E}} =
+\{[\mathcal{N}] \in \Pic(S) \mid
+\mathcal{E} \otimes \mathcal{N} \cong \mathcal{E}\}.
+$$
+This is a subgroup of $\Pic(S)$, and there is an exact sequence
+$$
+1 \longrightarrow \Gamma(S, \mathcal{O}_S^*) \longrightarrow
+\text{Aut}_{\mathcal{O}_S}(\mathcal{E}) \longrightarrow
+\text{Aut}_S(\mathbf{P}(\mathcal{E})) \longrightarrow
+\Gamma_{\mathcal{E}} \longrightarrow 1.
+$$
+The first map sends a unit to the corresponding scalar automorphism. Every
+element of $\Gamma_{\mathcal{E}}$ is annihilated by $n + 1$ in $\Pic(S)$.
+\end{lemma}
+
+\begin{proof}
+Let $X = \mathbf{P}(\mathcal{E})$ and let $u$ be an $S$-automorphism of $X$.
+By Lemma \ref{lemma-picard-group-projective-bundle}, there are a unique integer
+$d$ and an invertible module $\mathcal{N}$ on $S$ such that
+$$
+u^*\mathcal{O}_X(1) \cong
+\mathcal{O}_X(d) \otimes \pi^*\mathcal{N}.
+$$
+On a fibre, pullback by $u$ is an automorphism of the Picard group
+$\mathbf{Z}$ and preserves ample invertible modules. Hence $d=1$. Applying
+$\pi_*$, the projection formula, and Cohomology of Schemes, Lemma
+\ref{coherent-lemma-cohomology-projective-bundle}, gives
+$$
+\mathcal{E} \cong \mathcal{E} \otimes \mathcal{N}.
+$$
+Thus $u \mapsto [\mathcal{N}]$ defines the fourth arrow in the sequence. It is
+a group homomorphism because pullback is compatible with composition and
+$u$ acts trivially on invertible modules pulled back from $S$.
+
+If $[\mathcal{N}]$ is trivial, a choice of the displayed isomorphism and the
+universal quotient $\pi^*\mathcal{E} \to \mathcal{O}_X(1)$ show that $u$ is
+induced by an automorphism of $\mathcal{E}$. Two such automorphisms induce the
+same automorphism of $X$ exactly when they differ by a scalar unit. This can
+be checked after trivializing $\mathcal{E}$ by comparing the universal
+quotient. Conversely, an isomorphism
+$\mathcal{E} \cong \mathcal{E} \otimes \mathcal{N}$, together with the
+canonical identification
+$\mathbf{P}(\mathcal{E} \otimes \mathcal{N}) \cong
+\mathbf{P}(\mathcal{E})$, gives an $S$-automorphism of $X$. This proves
+exactness and also shows that $\Gamma_{\mathcal{E}}$ is a subgroup.
+
+Finally, taking determinants in
+$\mathcal{E} \cong \mathcal{E} \otimes \mathcal{N}$ gives
+$\mathcal{N}^{\otimes(n + 1)} \cong \mathcal{O}_S$.
+\end{proof}
+
+
+
 \section{Infinitesimal neighbourhoods}
 \label{section-first-order-infinitesimal-neighbourhood}
 
