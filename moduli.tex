@@ -1494,6 +1494,77 @@ from Lemma \ref{lemma-pic-qs-lfp}.
 \end{proof}
 
 \begin{lemma}
+\label{lemma-pic-functor-multiplication-etale}
+Assume $X$ is a scheme in addition to the other assumptions in this
+section. Let $n$ be an integer which is invertible on $B$. Then
+multiplication by $n$
+$$
+[n] : \Picardfunctor_{X/B} \longrightarrow \Picardfunctor_{X/B}
+$$
+is an \'etale morphism.
+\end{lemma}
+
+\begin{proof}
+The morphism $[n]$ is locally of finite presentation by
+Lemma \ref{lemma-pic-functor-qs-lfp} and
+Morphisms of Spaces, Lemma
+\ref{spaces-morphisms-lemma-finite-presentation-permanence}.
+We prove that it is formally \'etale. Let $T_0 \subset T$ be a first
+order thickening of affine schemes over $B$. Suppose we have
+$$
+\xi_0 \in \Picardfunctor_{X/B}(T_0), \qquad
+\zeta \in \Picardfunctor_{X/B}(T)
+$$
+such that $n\xi_0 = \zeta|_{T_0}$.
+
+By Lemma \ref{lemma-pic-gerbe-over-pic-functor} and
+Morphisms of Stacks, Lemma
+\ref{stacks-morphisms-lemma-gerbe-smooth}, elements of the Picard
+functor are represented by invertible modules \'etale locally on the
+base; here we also use More on Morphisms, Lemma
+\ref{more-morphisms-lemma-etale-nbhd-dominates-smooth}.
+Moreover, an \'etale covering of $T_0$ lifts to an \'etale covering of
+$T$ by \'Etale Morphisms, Theorem
+\ref{etale-theorem-remarkable-equivalence}. Consequently, after
+replacing $T$ by an \'etale covering, we may choose
+$$
+\mathcal{L} \in \Pic(X_T), \qquad
+\mathcal{M}_0 \in \Pic(X_{T_0})
+$$
+representing $\zeta$ and $\xi_0$. By Quot, Lemma
+\ref{quot-lemma-flat-geometrically-connected-fibres}, and after a
+further Zariski refinement, we may arrange that
+$$
+n[\mathcal{M}_0] = [\mathcal{L}|_{X_{T_0}}]
+\quad\text{in}\quad \Pic(X_{T_0}).
+$$
+
+The closed immersion $X_{T_0} \subset X_T$ is a first order
+thickening. More on Morphisms, Lemma
+\ref{more-morphisms-lemma-pic-roots-first-order-thickening}
+gives a unique $\mathcal{M} \in \Pic(X_T)$ restricting to
+$\mathcal{M}_0$ and satisfying $n[\mathcal{M}] = [\mathcal{L}]$.
+
+We claim that any two lifts in the original lifting problem are equal.
+Their difference is an element
+$\delta \in \Picardfunctor_{X/B}(T)$ such that
+$\delta|_{T_0} = 0$ and $n\delta = 0$. After \'etale localization it
+is represented by some $\mathcal{D} \in \Pic(X_T)$. Using
+Quot, Lemma \ref{quot-lemma-flat-geometrically-connected-fibres},
+and further Zariski localization, we may arrange that
+$\mathcal{D}|_{X_{T_0}}$ and $\mathcal{D}^{\otimes n}$ are trivial.
+More on Morphisms, Lemma
+\ref{more-morphisms-lemma-torsion-pic-thickening} then shows that
+$\mathcal{D}$ is trivial. Thus $\delta$ is zero. It follows that the
+local lifts constructed above agree on overlaps. They descend because
+$\Picardfunctor_{X/B}$ is an fppf sheaf. Hence $[n]$ is formally
+\'etale.
+
+We conclude that $[n]$ is \'etale by More on Morphisms of Spaces,
+Lemma \ref{spaces-more-morphisms-lemma-etale-formally-etale}.
+\end{proof}
+
+\begin{lemma}
 \label{lemma-pic-functor-uniqueness-part}
 Assume the geometric fibres of $X \to B$ are integral
 in addition to the other assumptions in this section.

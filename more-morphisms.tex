@@ -664,6 +664,42 @@ Taking sections over affine opens this follows from
 Algebra, Lemma \ref{algebra-lemma-lift-nth-roots}.
 \end{proof}
 
+\begin{lemma}
+\label{lemma-pic-roots-first-order-thickening}
+Let $X \subset X'$ be a first order thickening. Let $n$ be an integer
+which is invertible on $X$. Then the diagram
+$$
+\xymatrix{
+\Pic(X') \ar[r]^{[n]} \ar[d] & \Pic(X') \ar[d] \\
+\Pic(X) \ar[r]^{[n]} & \Pic(X)
+}
+$$
+is cartesian.
+\end{lemma}
+
+\begin{proof}
+Let $\mathcal{I}$ be the ideal sheaf of $X$ in $X'$. We use the exact
+sequence of Lemma \ref{lemma-picard-group-first-order-thickening}.
+Suppose that $a \in \Pic(X')$ and $b \in \Pic(X)$ satisfy
+$a|_X = nb$. The obstruction $\partial(b) \in H^2(X, \mathcal{I})$
+to lifting $b$ satisfies
+$$
+n\partial(b) = \partial(nb) = \partial(a|_X) = 0.
+$$
+Multiplication by $n$ is an automorphism of $\mathcal{I}$ and hence of
+$H^2(X, \mathcal{I})$. Thus $b$ lifts to an element
+$b' \in \Pic(X')$. The element $a - nb'$ is in the kernel of
+$\Pic(X') \to \Pic(X)$, so it is the image of some
+$\xi \in H^1(X, \mathcal{I})$. Write $\xi = n\eta$, which is possible
+because multiplication by $n$ is also an automorphism of
+$H^1(X, \mathcal{I})$. Adding the image of $\eta$ to $b'$ produces a
+lift of $b$ whose $n$-fold multiple is $a$.
+
+If two such lifts exist, their difference is an element of
+$\Pic(X')[n]$ whose restriction to $X$ is zero. This difference is zero
+by Lemma \ref{lemma-torsion-pic-thickening}. Thus the lift is unique.
+\end{proof}
+
 
 
 

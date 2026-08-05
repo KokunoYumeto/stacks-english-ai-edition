@@ -4,11 +4,11 @@ Snapshot: Stacks commit `a04446e57ec1fbc252a871afcec7752fb2807b14`.
 
 The reproducible intake, topic crosswalk, and statement-level review are
 complete for the bounded FGA corpus, apart from one explicitly fail-closed
-source hypothesis.  The first mathematical source patch is now the active
-cursor.
+source hypothesis.  The first mathematical source patch is implemented and
+validated; further source integration remains in progress.
 
 - 119 Stacks TeX files indexed
-- 21,446 labelled TeX objects indexed
+- 21,448 labelled TeX objects indexed
 - 21,437 objects joined to an existing official tag
 - 55 FGA topics reviewed: 30 direct and 14 broad coverage decisions plus 6
   partial and 5 no-direct decisions
@@ -48,8 +48,8 @@ cursor.
 - Expose 232 yields 2 `existing_equivalent` decisions 7 `existing_weaker`
   decisions 11 `extend_existing` decisions 5 `new_statement` decisions and 8
   historical decisions
-- Expose 236 yields 3 `existing_equivalent` decisions 3 `existing_weaker`
-  decisions 14 `extend_existing` decisions 13 `new_statement` decisions 4
+- Expose 236 yields 3 `existing_equivalent` decisions 4 `existing_weaker`
+  decisions 14 `extend_existing` decisions 12 `new_statement` decisions 4
   `new_section` decisions 1 example-or-remark decision and 5 historical
   decisions
 - the 3 Commentaires units are preserved as historical editorial provenance
@@ -93,12 +93,21 @@ claim.  The unit therefore remains an explicit extension target rather than
 being silently identified with fpqc descent.
 
 Both `check.json` and `mcheck.json` report `PASS` with empty `errors` arrays.
-The warnings preserve nine generated book-part labels and nine current TeX
-labels that have no entry in upstream's `tags/tags`; no replacement tag has
-been invented.
+The warnings preserve nine generated book-part labels and eleven current TeX
+labels that have no entry in upstream's `tags/tags`; the two additional labels
+are the new source lemmas below.  No replacement tag has been invented.
 
-No Stacks mathematical TeX has been changed yet.  The next cursor is the first
-source patch.  The identified Expose 149 additions are the arbitrary-ideal Ext and Tor
+The first source patch adds
+`more-morphisms-lemma-pic-roots-first-order-thickening`, a cartesian
+root-lifting square for Picard groups, and
+`moduli-lemma-pic-functor-multiplication-etale`, the resulting prime-to-$n$
+etaleness theorem for the current Picard algebraic space when $X$ is a scheme.
+Decision `D000304` append-only supersedes the earlier gap classification
+`D000278`; the narrower current section hypotheses remain explicit.  Both
+affected chapters compile to DVI and PDF without TeX errors, and the inserted
+diagram and theorem page passed rendered inspection.  The next cursor is the
+relative group-locus package in Expose 236.  The identified Expose 149
+additions are the arbitrary-ideal Ext and Tor
 comparison maps the partial-range singular-duality equivalence and the general
 Hodge fixed-point statement.  The Expose 182 residuals include the formal
 moduli theorem, local-cover descent, projective-bundle automorphisms,
