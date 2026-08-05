@@ -2342,6 +2342,61 @@ $$
 of low degree terms.
 \end{remark}
 
+\begin{lemma}
+\label{lemma-conormal-ext-tor-maps}
+\begin{reference}
+\cite[Expos\'e 149, Section 3, pp. 173--175]{FGA}.
+\end{reference}
+Let $A \to B$ be a surjective map of rings with kernel $I$. For every
+$A$-module $M$ and every $p \geq 0$ there are functorial maps
+$$
+\Ext_A^p(B, M) \longrightarrow
+\Hom_B\left(\wedge_B^p(I/I^2), M \otimes_A B\right)
+$$
+and
+$$
+\wedge_B^p(I/I^2) \otimes_B \Hom_A(B, M)
+\longrightarrow \text{Tor}_p^A(B, M).
+$$
+\end{lemma}
+
+\begin{proof}
+Let
+$$
+\kappa_p : \wedge_B^p(I/I^2) \longrightarrow \text{Tor}_p^A(B, B)
+$$
+be the edge map of Remark \ref{remark-elucidate-ss}. We first construct a
+canonical $B$-bilinear pairing
+$$
+\Ext_A^p(B, M) \times \text{Tor}_p^A(B, B)
+\longrightarrow M \otimes_A B.
+$$
+Choose a projective resolution $P_\bullet \to B$. If
+$a : P_p \to M$ is a cocycle and $z \in P_p \otimes_A B$ is a cycle, then
+the pairing sends their classes to $(a \otimes 1)(z)$. A boundary in
+$P_\bullet \otimes_A B$ is killed because $a$ is a cocycle. Changing $a$
+by a coboundary does not change the result because $z$ is a cycle. Thus the
+pairing is well defined. Independence of the chosen resolution follows from
+Derived Categories, Lemmas
+\ref{derived-lemma-morphisms-lift-projective} and
+\ref{derived-lemma-morphisms-equal-up-to-homotopy-projective}. After currying
+and precomposing with $\kappa_p$ it gives the first map.
+
+An element $u \in \Hom_A(B, M)$ induces
+$$
+\text{Tor}_p^A(B, u) :
+\text{Tor}_p^A(B, B) \longrightarrow \text{Tor}_p^A(B, M).
+$$
+This construction is additive in $u$ and balanced for the $B$-module
+structures. It therefore gives a canonical map
+$$
+\text{Tor}_p^A(B, B) \otimes_B \Hom_A(B, M)
+\longrightarrow \text{Tor}_p^A(B, M).
+$$
+Precomposing with $\kappa_p \otimes 1$ gives the second map. All the
+constructions commute with homomorphisms of $A$-modules $M$.
+\end{proof}
+
 \begin{remark}
 \label{remark-elucidate-degree-two}
 Let $A \to B$ be a ring map. Let $P_\bullet$ be a resolution of

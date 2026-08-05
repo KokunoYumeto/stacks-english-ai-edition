@@ -4,12 +4,12 @@ Snapshot: Stacks commit `a04446e57ec1fbc252a871afcec7752fb2807b14`.
 
 The reproducible intake, topic crosswalk, and statement-level review are
 complete for the bounded FGA corpus.  Every review unit has an append-only
-decision and source problems remain explicit.  The first twenty-two
+decision and source problems remain explicit.  The first twenty-three
 mathematical source patches are implemented and validated; further source
 integration remains in progress.
 
 - 119 Stacks TeX files indexed
-- 21,487 labelled TeX objects indexed
+- 21,488 labelled TeX objects indexed
 - 21,437 objects joined to an existing official tag
 - 55 FGA topics reviewed: 30 direct and 14 broad coverage decisions plus 6
   partial and 5 no-direct decisions
@@ -24,9 +24,9 @@ integration remains in progress.
   erratum all 23 Expose 212 units including its erratum all 33 Expose 221
   units including its erratum all 33 Expose 232 units including its erratum all
   43 Expose 236 units including its erratum and all 3 Commentaires units
-- Expose 149 currently yields 20 `existing_stronger` decisions 10
-  `existing_equivalent` decisions 1 `existing_weaker` decision 2
-  `extend_existing` decisions 1 `new_statement` decision and 3 historical
+- Expose 149 currently yields 20 `existing_stronger` decisions 11
+  `existing_equivalent` decisions 1 `existing_weaker` decision 1
+  `extend_existing` decision 1 `new_statement` decision and 3 historical
   decisions
 - Expose 182 yields 30 `existing_stronger` decisions 30
   `existing_equivalent` decisions 5 `existing_weaker` decisions 0
@@ -113,8 +113,8 @@ claim.  The unit therefore remains an explicit extension target rather than
 being silently identified with fpqc descent.
 
 Both `check.json` and `mcheck.json` report `PASS` with empty `errors` arrays.
-The warnings preserve nine generated book-part labels and fifty current
-TeX labels that have no entry in upstream's `tags/tags`; forty-one of these
+The warnings preserve nine generated book-part labels and fifty-one current
+TeX labels that have no entry in upstream's `tags/tags`; forty-two of these
 are the new source labels below.  No replacement tag has been invented.
 
 The first source patch adds
@@ -366,10 +366,21 @@ linked erratum page were inspected at 1200 dpi-equivalent.  The Cohomology of
 Sheaves chapter passed two PDF builds and both affected pages passed rendered
 inspection.  The next cursor is Expose 149 Section 3's arbitrary-ideal Ext and
 Tor comparison maps.
-The identified Expose 149
-additions are the arbitrary-ideal Ext and Tor
-comparison maps the partial-range singular-duality equivalence and the general
-Hodge fixed-point statement.  The only remaining Expose 182 mismatch is the
+The twenty-third source patch adds
+`cotangent-lemma-conormal-ext-tor-maps`.  For an arbitrary quotient $A\to B$
+it constructs the functorial map from $\operatorname{Ext}^p_A(B,M)$ to the
+dual of $\bigwedge^p(I/I^2)$ and the companion map from that exterior power
+and $\operatorname{Hom}_A(B,M)$ to $\operatorname{Tor}_p^A(B,M)$.  The proof
+combines the canonical conormal-to-Tor edge map with an explicit Ext--Tor
+pairing on a projective resolution.  Decision `D000335` supersedes gap record
+`D000007`; together with the existing regular-Koszul calculation this closes
+Expose 149 Section 3's general construction.  The Cotangent Complex chapter
+passed two PDF builds and all three affected pages passed rendered inspection.
+The next cursor is Expose 149 Theorem 3 bis and its partial-range singular
+duality equivalence.
+The remaining identified Expose 149 additions are the partial-range
+singular-duality equivalence and the general Hodge fixed-point statement.  The
+only remaining Expose 182 mismatch is the
 non-geometrically-connected branch of the product injection.
 The Expose 190 residuals include finite-epimorphism factorization the analytic
 Grauert--Remmert passage Cartier p-connection descent the Atiyah--Cartier
