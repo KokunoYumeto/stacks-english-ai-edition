@@ -4,11 +4,11 @@ Snapshot: Stacks commit `a04446e57ec1fbc252a871afcec7752fb2807b14`.
 
 The reproducible intake, topic crosswalk, and statement-level review are
 complete for the bounded FGA corpus, apart from one explicitly fail-closed
-source hypothesis.  The first thirteen mathematical source patches are implemented
+source hypothesis.  The first fourteen mathematical source patches are implemented
 and validated; further source integration remains in progress.
 
 - 119 Stacks TeX files indexed
-- 21,474 labelled TeX objects indexed
+- 21,475 labelled TeX objects indexed
 - 21,437 objects joined to an existing official tag
 - 55 FGA topics reviewed: 30 direct and 14 broad coverage decisions plus 6
   partial and 5 no-direct decisions
@@ -29,7 +29,7 @@ and validated; further source integration remains in progress.
   `existing_equivalent` decisions 2 `extend_existing` decisions 1
   `new_statement` decision 3 historical decisions and 1 open decision
 - Expose 182 yields 30 `existing_stronger` decisions 22
-  `existing_equivalent` decisions 5 `existing_weaker` decisions 2
+  `existing_equivalent` decisions 6 `existing_weaker` decisions 1
   `extend_existing` decisions 6 `new_statement` decisions and 4 historical
   decisions
 - Expose 190 yields 19 `existing_equivalent` decisions 8
@@ -106,8 +106,8 @@ claim.  The unit therefore remains an explicit extension target rather than
 being silently identified with fpqc descent.
 
 Both `check.json` and `mcheck.json` report `PASS` with empty `errors` arrays.
-The warnings preserve nine generated book-part labels and thirty-seven current
-TeX labels that have no entry in upstream's `tags/tags`; twenty-eight of these
+The warnings preserve nine generated book-part labels and thirty-eight current
+TeX labels that have no entry in upstream's `tags/tags`; twenty-nine of these
 are the new source labels below.  No replacement tag has been invented.
 
 The first source patch adds
@@ -240,11 +240,24 @@ claiming it.  The Fundamental Groups chapter passed two PDF builds and both
 affected pages, including the exact-sequence diagram, passed rendered
 inspection.  The next cursor returns to the local finite-etale descent
 package.
+The fourteenth source patch adds
+`pione-lemma-finite-etale-descends-if-trivial-on-fibre`.  Under the modern
+flat proper finite-presentation hypotheses with geometrically connected and
+reduced fibres, a finite-etale cover descends uniquely from the base exactly
+when its restriction to one geometric fibre is trivial.  The proof makes the
+Galois-category content of the homotopy exact sequence reusable.  Decision
+`D000323` replaces the former ingredient-only record for FGA 182, Corollary 1
+on catalog page 214 while retaining `existing_weaker` for the historical
+criterion under only properness and the structure-sheaf pushforward identity.
+The Fundamental Groups chapter passed two PDF builds and the complete lemma
+page passed rendered inspection.  The next cursor is the broader local
+finite-etale descent theorem from which the historical generality follows.
 The identified Expose 149
 additions are the arbitrary-ideal Ext and Tor
 comparison maps the partial-range singular-duality equivalence and the general
 Hodge fixed-point statement.  The Expose 182 residuals include the formal
-moduli theorem, local-cover descent, the non-geometrically-connected branch
+moduli theorem, broader nonflat local-cover descent, the
+non-geometrically-connected branch
 of the product injection, finite generation for curves, and the tame
 specialization package.
 The Expose 190 residuals include finite-epimorphism factorization the analytic

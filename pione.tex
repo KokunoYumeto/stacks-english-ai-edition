@@ -3719,6 +3719,39 @@ both apply and the proof is complete.
 \end{proof}
 
 \begin{lemma}
+\label{lemma-finite-etale-descends-if-trivial-on-fibre}
+\begin{reference}
+\cite[Expos\'e 182, Corollaire 1, p. 214]{FGA}
+\end{reference}
+Let $f : X \to S$ be a flat proper morphism of finite presentation whose
+geometric fibres are connected and reduced. Assume $S$ is connected and let
+$\overline{s}$ be a geometric point of $S$. For a finite \'etale morphism
+$Y \to X$, the following are equivalent:
+\begin{enumerate}
+\item there is a finite \'etale morphism $T \to S$ and an isomorphism
+$Y \cong T \times_S X$ over $X$, and
+\item the finite \'etale cover
+$Y \times_X X_{\overline{s}} \to X_{\overline{s}}$ is isomorphic to a
+finite disjoint union of copies of $X_{\overline{s}}$.
+\end{enumerate}
+When these conditions hold, $T$ and the displayed isomorphism are unique up
+to unique isomorphism.
+\end{lemma}
+
+\begin{proof}
+The finite \'etale cover $Y \to X$ corresponds to a finite set with a
+continuous action of $\pi_1(X)$. It is pulled back from $S$ if and only if
+this action factors through $\pi_1(X) \to \pi_1(S)$. By
+Proposition \ref{proposition-first-homotopy-sequence}, this map is surjective
+and its kernel is the image of $\pi_1(X_{\overline{s}})$. Thus the action
+factors through $\pi_1(S)$ if and only if its restriction to
+$\pi_1(X_{\overline{s}})$ is trivial. By the Galois category description,
+the latter condition is exactly (2). Uniqueness follows from the full
+faithfulness of $\textit{F\'Et}_S \to \textit{F\'Et}_X$, proved in
+Proposition \ref{proposition-first-homotopy-sequence}.
+\end{proof}
+
+\begin{lemma}
 \label{lemma-fundamental-group-product-one-proper}
 \begin{reference}
 \cite[Expos\'e 182, Corollaire 5, p. 215, with the 1962 correction]{FGA}
