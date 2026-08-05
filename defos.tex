@@ -2439,6 +2439,99 @@ agrees with $\NL_{X/S}$ as used in
 Section \ref{section-deformations-ringed-spaces}.)
 \end{proof}
 
+\begin{lemma}
+\label{lemma-projective-space-rigid-complete-local}
+\begin{reference}
+\cite[Expos\'e 182, Corollaire 2, p. 206]{FGA}
+\end{reference}
+Let $(A, \mathfrak m, k)$ be a complete Noetherian local ring.
+Let $X \to \Spec(A)$ be a proper flat morphism. If for some $n \geq 0$
+$$
+X \times_{\Spec(A)} \Spec(k) \cong \mathbf{P}^n_k,
+$$
+then $X \cong \mathbf{P}^n_A$ as schemes over $A$.
+\end{lemma}
+
+\begin{proof}
+If $n = 0$, then $X \to \Spec(A)$ is finite by More on Morphisms,
+Lemma
+\ref{more-morphisms-lemma-proper-finite-fibre-finite-in-neighbourhood}.
+Indeed, the open neighbourhood in that lemma contains the closed point of
+the spectrum of a local ring and hence is the whole spectrum. Write
+$X = \Spec(B)$. The $A$-module $B$ is finite flat and
+$B/\mathfrak mB \cong k$. Thus $B$ is free of rank $1$ over $A$ by
+Algebra, Lemma \ref{algebra-lemma-finite-flat-local}, and the unit map
+$A \to B$, which is an isomorphism modulo $\mathfrak m$, is an
+isomorphism. This proves the result in this case.
+
+\medskip\noindent
+Assume $n \geq 1$. For $q \geq 1$, set
+$$
+A_q = A/\mathfrak m^q, \qquad
+S_q = \Spec(A_q), \qquad
+X_q = X \times_{\Spec(A)} S_q, \qquad
+P_q = \mathbf{P}^n_{A_q}.
+$$
+Choose an isomorphism $a_1 : X_1 \to P_1$. We claim that it can be
+extended inductively to a compatible system of isomorphisms
+$a_q : X_q \to P_q$. Suppose that $a_q$ has been constructed. The schemes
+$X_{q + 1}$ and $P_{q + 1}$, together with the identifications induced by
+$a_q$, are two flat deformations of $P_q$ over the first order thickening
+$$
+\Spec(A_q) \subset \Spec(A_{q + 1}).
+$$
+By Lemma \ref{lemma-deform}, the set of isomorphism classes of such
+deformations is principal homogeneous under
+$$
+\Ext^1_{\mathcal{O}_{P_q}}
+\left(
+\NL_{P_q/A_q},
+\mathcal{O}_{P_q} \otimes_{A_q}
+\mathfrak m^q/\mathfrak m^{q + 1}
+\right).
+$$
+The morphism $P_q \to \Spec(A_q)$ is smooth. Hence More on Morphisms,
+Lemma \ref{more-morphisms-lemma-NL-smooth} identifies the first argument
+with $\Omega_{P_q/A_q}$. Since this sheaf is finite locally free, the
+displayed group is
+$$
+H^1\left(P_q,
+\SheafHom_{\mathcal{O}_{P_q}}
+\left(\Omega_{P_q/A_q},
+\mathcal{O}_{P_q} \otimes_{A_q}
+\mathfrak m^q/\mathfrak m^{q + 1}\right)\right).
+$$
+Put $V_q = \mathfrak m^q/\mathfrak m^{q + 1}$ and let
+$i : P_1 \to P_q$ be the closed immersion. The vector space $V_q$ is finite
+dimensional over $k$. Base change for differentials and the fact that
+$\Omega_{P_q/A_q}$ is finite locally free show that the sheaf in the last
+display is
+$$
+i_*\left(
+\SheafHom_{\mathcal{O}_{P_1}}
+(\Omega_{P_1/k}, \mathcal{O}_{P_1}) \otimes_k V_q
+\right).
+$$
+Thus the displayed group is
+$$
+H^1\left(P_1,
+\SheafHom_{\mathcal{O}_{P_1}}
+(\Omega_{P_1/k}, \mathcal{O}_{P_1})\right) \otimes_k V_q,
+$$
+which vanishes by de Rham Cohomology, Lemma
+\ref{derham-lemma-H1-tangent-projective-space}. Hence this principal
+homogeneous space has at most one element. The two deformations are
+isomorphic compatibly with $a_q$, proving the claim.
+
+The compatible morphisms $a_q$ algebraize uniquely to a morphism
+$a : X \to \mathbf{P}^n_A$ by Cohomology of Schemes, Lemma
+\ref{coherent-lemma-algebraize-morphism}. Applying the same lemma to the
+compatible inverses $a_q^{-1}$ gives a morphism
+$b : \mathbf{P}^n_A \to X$. The uniqueness assertion of that lemma applied
+to the two compositions shows that $a \circ b$ and $b \circ a$ are the
+respective identity morphisms. Hence $a$ is an isomorphism.
+\end{proof}
+
 
 
 

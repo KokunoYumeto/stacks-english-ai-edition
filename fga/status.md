@@ -4,11 +4,11 @@ Snapshot: Stacks commit `a04446e57ec1fbc252a871afcec7752fb2807b14`.
 
 The reproducible intake, topic crosswalk, and statement-level review are
 complete for the bounded FGA corpus, apart from one explicitly fail-closed
-source hypothesis.  The first eight mathematical source patches are implemented
+source hypothesis.  The first nine mathematical source patches are implemented
 and validated; further source integration remains in progress.
 
 - 119 Stacks TeX files indexed
-- 21,467 labelled TeX objects indexed
+- 21,469 labelled TeX objects indexed
 - 21,437 objects joined to an existing official tag
 - 55 FGA topics reviewed: 30 direct and 14 broad coverage decisions plus 6
   partial and 5 no-direct decisions
@@ -28,8 +28,8 @@ and validated; further source integration remains in progress.
 - Expose 149 currently yields 20 `existing_stronger` decisions 10
   `existing_equivalent` decisions 2 `extend_existing` decisions 1
   `new_statement` decision 3 historical decisions and 1 open decision
-- Expose 182 yields 29 `existing_stronger` decisions 18
-  `existing_equivalent` decisions 4 `existing_weaker` decisions 8
+- Expose 182 yields 29 `existing_stronger` decisions 19
+  `existing_equivalent` decisions 4 `existing_weaker` decisions 7
   `extend_existing` decisions 6 `new_statement` decisions and 4 historical
   decisions
 - Expose 190 yields 19 `existing_equivalent` decisions 8
@@ -106,9 +106,9 @@ claim.  The unit therefore remains an explicit extension target rather than
 being silently identified with fpqc descent.
 
 Both `check.json` and `mcheck.json` report `PASS` with empty `errors` arrays.
-The warnings preserve nine generated book-part labels and thirty current TeX
-labels that have no entry in upstream's `tags/tags`; twenty-one of these are
-the new source labels below.  No replacement tag has been invented.
+The warnings preserve nine generated book-part labels and thirty-two current
+TeX labels that have no entry in upstream's `tags/tags`; twenty-three of these
+are the new source labels below.  No replacement tag has been invented.
 
 The first source patch adds
 `more-morphisms-lemma-pic-roots-first-order-thickening`, a cartesian
@@ -185,11 +185,20 @@ annihilated by the rank.  Decisions `D000315` and `D000316` replace the two
 former gaps with integrated results under the necessary rank-at-least-two
 hypothesis recorded in `I000008`.  Both inserted More on Morphisms pages passed
 two PDF builds and rendered inspection.
+The ninth source patch adds
+`derham-lemma-H1-tangent-projective-space`, deriving the vanishing of the
+first cohomology of the tangent sheaf from the Euler sequence, and
+`defos-lemma-projective-space-rigid-complete-local`, which uses that vanishing
+to construct compatible infinitesimal isomorphisms and then algebraizes them.
+Decision `D000317` replaces the former ingredient-only record for FGA 182,
+Corollary 2 on catalog page 206 with a direct modern equivalent, including
+the dimension-zero case.  Both affected chapters passed two PDF builds and
+the complete inserted pages passed rendered inspection.
 The identified Expose 149
 additions are the arbitrary-ideal Ext and Tor
 comparison maps the partial-range singular-duality equivalence and the general
 Hodge fixed-point statement.  The Expose 182 residuals include the formal
-moduli theorem, local-cover descent, projective-space rigidity and lifting,
+moduli theorem, local-cover descent, projective-space lifting,
 a product formula for fundamental
 groups, finite generation for curves, and the tame specialization package.
 The Expose 190 residuals include finite-epimorphism factorization the analytic

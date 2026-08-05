@@ -1417,6 +1417,35 @@ $\sum T_jg_j$. We omit the verification that this produces
 a short exact sequence.
 \end{proof}
 
+\begin{lemma}
+\label{lemma-H1-tangent-projective-space}
+In the situation above, set
+$$
+\mathcal{T} =
+\SheafHom_{\mathcal{O}_{\mathbf{P}^n_A}}
+(\Omega_{\mathbf{P}^n_A/A}, \mathcal{O}_{\mathbf{P}^n_A}).
+$$
+Then $H^1(\mathbf{P}^n_A, \mathcal{T}) = 0$.
+\end{lemma}
+
+\begin{proof}
+Dualizing the sequence of Lemma \ref{lemma-euler-sequence} gives
+the short exact sequence
+$$
+0 \to \mathcal{O} \to \mathcal{O}(1)^{\oplus n + 1}
+\to \mathcal{T} \to 0.
+$$
+Here we use that all the terms in the Euler sequence are finite locally
+free. By Cohomology of Schemes, Lemma
+\ref{coherent-lemma-cohomology-projective-space-over-ring}, we have
+$$
+H^1(\mathbf{P}^n_A, \mathcal{O}(1)) = 0
+\quad\text{and}\quad
+H^2(\mathbf{P}^n_A, \mathcal{O}) = 0.
+$$
+The result follows from the long exact cohomology sequence.
+\end{proof}
+
 \noindent
 Given an integer $k \in \mathbf{Z}$ and a quasi-coherent
 $\mathcal{O}_{\mathbf{P}^n_A}$-module $\mathcal{F}$
