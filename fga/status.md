@@ -4,7 +4,7 @@ Snapshot: Stacks commit `a04446e57ec1fbc252a871afcec7752fb2807b14`.
 
 The reproducible intake, topic crosswalk, and statement-level review are
 complete for the bounded FGA corpus, apart from one explicitly fail-closed
-source hypothesis.  The first sixteen mathematical source patches are implemented
+source hypothesis.  The first seventeen mathematical source patches are implemented
 and validated; further source integration remains in progress.
 
 - 119 Stacks TeX files indexed
@@ -252,7 +252,7 @@ criterion under only properness and the structure-sheaf pushforward identity.
 The Fundamental Groups chapter passed two PDF builds and the complete lemma
 page passed rendered inspection.  The next cursor is the broader local
 finite-etale descent theorem from which the historical generality follows.
-The fifteenth source patch adds
+The fifteenth source patch, in its initially published form, adds
 `pione-lemma-local-Stein-trivial-component`, a modern form of FGA 182,
 Theorem 11 on catalog pages 213--214.  For a proper morphism whose
 structure-sheaf pushforward is the base structure sheaf, it proves that a
@@ -278,6 +278,20 @@ record `D000323` with direct equivalent coverage.  The Fundamental Groups
 chapter passed two PDF builds and both inserted lemmas and their proofs passed
 rendered inspection.  The next cursor is the function-field consequence of
 the local Stein theorem.
+The seventeenth source patch is an append-only semantic correction to the
+fifteenth and sixteenth patches.  FGA explicitly defines an ``unramified
+covering'' as finite locally free with separable fibres, which is modern finite
+etale; the immediately following function-field corollary also requires the
+resulting generic extension to be separable.  The corrected
+`pione-lemma-local-Stein-trivial-component` therefore assumes that the finite
+map is etale along the selected component and produces an etale Stein
+neighbourhood.  The pointwise form of
+`pione-lemma-finite-unramified-etale-after-pullback` supplies the flatness
+descent step.  Decisions `D000326` and `D000327` supersede `D000324` and
+`D000325` without erasing the earlier interpretation.  The Fundamental Groups
+chapter again passed two PDF builds, and all three corrected pages passed
+rendered inspection.  The next cursor remains the function-field consequence
+of the local Stein theorem.
 The identified Expose 149
 additions are the arbitrary-ideal Ext and Tor
 comparison maps the partial-range singular-duality equivalence and the general

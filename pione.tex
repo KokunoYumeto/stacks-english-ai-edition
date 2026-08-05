@@ -3616,6 +3616,58 @@ Lemma \ref{lemma-functoriality-galois-surjective}.
 \end{proof}
 
 \begin{lemma}
+\label{lemma-finite-unramified-etale-after-pullback}
+Let $f : X \to S$ be a proper morphism such that
+$\mathcal{O}_S \to f_*\mathcal{O}_X$ is an isomorphism. Let $p : T \to S$ be
+a finite unramified morphism, let $t \in T$, and let $s = p(t)$. If the base
+change
+$$
+X \times_S T \longrightarrow X
+$$
+is \'etale at every point over $t$, then $p$ is \'etale at $t$.
+Consequently, if the base change is \'etale, then $p$ is \'etale.
+\end{lemma}
+
+\begin{proof}
+First, $f$ is surjective. Indeed, its image is closed, and on the complement
+the equality $\mathcal{O}_S = f_*\mathcal{O}_X$ would identify a nonzero
+structure sheaf with zero.
+
+\medskip\noindent
+The assertion is \'etale local around $s$ and $t$. After an \'etale base change
+the equality of structure sheaves is preserved by Cohomology of Schemes,
+Lemma \ref{coherent-lemma-flat-base-change-cohomology}. Thus, by \'Etale
+Morphisms, Lemma \ref{etale-lemma-finite-unramified-etale-local}, we may
+assume that $S$ is affine and
+$$
+T = \coprod T_i
+$$
+with every $T_i \to S$ a closed immersion. Let $T_1$ be the factor containing
+$t$. The non-\'etale locus of $X_{T_1} \to X$ has closed image in $T_1$ by
+properness, and this image does not contain $t$. After shrinking $S$ around
+$s$, we may therefore assume that $X_{T_1} \to X$ is \'etale.
+
+\medskip\noindent
+The morphism $X_{T_1} \to X$ is both a closed immersion and \'etale, and hence
+is an open immersion by \'Etale Morphisms, Theorem
+\ref{etale-theorem-etale-radicial-open}. Thus $X_{T_1}$ is open and closed in
+$X$. It is defined by an idempotent in
+$$
+\Gamma(X, \mathcal{O}_X) = \Gamma(S, \mathcal{O}_S).
+$$
+Let $S_1 \subset S$ be the corresponding open and closed subscheme. Then
+$X_{T_1} = X_{S_1}$ as subschemes of $X$.
+
+\medskip\noindent
+Let $\mathcal{I}_1$ be the ideal defining $T_1$. Over $S_1$ its pullback to
+$X$ is zero; the equality $\mathcal{O}_S = f_*\mathcal{O}_X$ therefore gives
+$\mathcal{I}_1|_{S_1} = 0$. Over $S \setminus S_1$ the scheme $X_{T_1}$ is
+empty. Surjectivity of $f$ then implies that $T_1$ is empty there. Hence
+$T_1 = S_1$. Thus $T_1 \to S$ is an open immersion as well as a closed
+immersion, proving that $p$ is \'etale at $t$.
+\end{proof}
+
+\begin{lemma}
 \label{lemma-local-Stein-trivial-component}
 \begin{reference}
 \cite[Expos\'e 182, Th\'eor\`eme 11, pp. 213--214]{FGA}
@@ -3630,7 +3682,7 @@ be the Stein factorization of $f \circ h$. Let $s \in S$, let $t \in T$ lie
 over $s$, and let $C \subset X'_s$ be the open and closed connected component
 corresponding to $t$. Assume
 \begin{enumerate}
-\item $h$ is unramified at every point of $C$, and
+\item $h$ is \'etale at every point of $C$, and
 \item the canonical morphism
 $$
 C \longrightarrow
@@ -3639,7 +3691,7 @@ $$
 is an isomorphism.
 \end{enumerate}
 Then there is an open neighbourhood $V \subset T$ of $t$ such that
-$V \to S$ is unramified and the canonical morphism
+$V \to S$ is \'etale and the canonical morphism
 $$
 X' \longrightarrow X \times_S T
 $$
@@ -3662,12 +3714,12 @@ canonical morphism in assumption (2), and therefore is an isomorphism. The
 isomorphism locus of $\varphi$ is open in $X \times_S T$. Its complement has
 closed image in $T$, because
 $X \times_S T \to T$ is proper, and this image does not contain $t$.
-After replacing $T$ by the complement of this image, we may assume that
-$\varphi$ is an isomorphism.
+Let $W \subset T$ be the complement of this image. Thus $W$ is an open
+neighbourhood of $t$ and $\varphi$ is an isomorphism over $W$.
 
 \medskip\noindent
-Choose $c \in C$. Via the isomorphism $\varphi$, the morphism $h$ is the base
-change of $T \to S$ by $X \to S$. Consequently
+Choose $c \in C$. Via the isomorphism over $W$, the morphism $h$ is the base
+change of $T \to S$ by $X \to S$ in a neighbourhood of $c$. Consequently
 $$
 \Omega_{T/S, t} \otimes_{\mathcal{O}_{T, t}} \kappa(c)
 = \Omega_{X'/X, c} \otimes_{\mathcal{O}_{X', c}} \kappa(c) = 0
@@ -3676,53 +3728,11 @@ by assumption (1). Since $\kappa(c)$ is a field extension of $\kappa(t)$,
 faithful flatness and Nakayama's lemma give $\Omega_{T/S, t} = 0$.
 The morphism $T \to S$ is finite and hence locally of finite type, so
 Morphisms, Lemma \ref{morphisms-lemma-unramified-omega-zero} shows that it is
-unramified at $t$. Shrinking to its unramified locus gives the required open
-neighbourhood $V$.
-\end{proof}
-
-\begin{lemma}
-\label{lemma-finite-unramified-etale-after-pullback}
-Let $f : X \to S$ be a proper morphism such that
-$\mathcal{O}_S \to f_*\mathcal{O}_X$ is an isomorphism. Let $p : T \to S$ be
-a finite unramified morphism. If the base change
-$$
-X \times_S T \longrightarrow X
-$$
-is \'etale, then $p$ is \'etale.
-\end{lemma}
-
-\begin{proof}
-First, $f$ is surjective. Indeed, its image is closed, and on the complement
-the equality $\mathcal{O}_S = f_*\mathcal{O}_X$ would identify a nonzero
-structure sheaf with zero.
-
-\medskip\noindent
-The assertion is \'etale local on $S$. After an \'etale base change the equality
-of structure sheaves is preserved by Cohomology of Schemes, Lemma
-\ref{coherent-lemma-flat-base-change-cohomology}. Thus, by \'Etale Morphisms,
-Lemma \ref{etale-lemma-finite-unramified-etale-local}, we may assume that $S$
-is affine and
-$$
-T = \coprod T_i
-$$
-with every $T_i \to S$ a closed immersion. The base change
-$X_{T_i} \to X$ is both a closed immersion and \'etale, and hence is an open
-immersion by \'Etale Morphisms, Theorem
-\ref{etale-theorem-etale-radicial-open}. Thus $X_{T_i}$ is open and closed in
-$X$. It is defined by an idempotent in
-$$
-\Gamma(X, \mathcal{O}_X) = \Gamma(S, \mathcal{O}_S).
-$$
-Let $S_i \subset S$ be the corresponding open and closed subscheme. Then
-$X_{T_i} = X_{S_i}$ as subschemes of $X$.
-
-\medskip\noindent
-Let $\mathcal{I}_i$ be the ideal defining $T_i$. Over $S_i$ its pullback to
-$X$ is zero; the equality $\mathcal{O}_S = f_*\mathcal{O}_X$ therefore gives
-$\mathcal{I}_i|_{S_i} = 0$. Over $S \setminus S_i$ the scheme $X_{T_i}$ is
-empty. Surjectivity of $f$ then implies that $T_i$ is empty there. Hence
-$T_i = S_i$. Every $T_i \to S$ is consequently an open immersion as well as
-a closed immersion, and $p$ is \'etale.
+unramified at $t$. The isomorphism over $W$ and assumption (1) also show that
+$X \times_S T \to X$ is \'etale at every point over $t$. Lemma
+\ref{lemma-finite-unramified-etale-after-pullback} now shows that $T \to S$ is
+\'etale at $t$. Intersecting $W$ with the \'etale locus gives the required
+open neighbourhood $V$.
 \end{proof}
 
 \begin{lemma}
@@ -3760,12 +3770,10 @@ in the statement and
 More on Morphisms, Theorem
 \ref{more-morphisms-theorem-stein-factorization-general}. Thus if (1) holds,
 then (2) follows by taking fibres. Conversely, assume (2). The
-morphism $h$ is unramified along every $C$, so
+morphism $h$ is \'etale along every $C$, so
 Lemma \ref{lemma-local-Stein-trivial-component}, applied at every point of
-$T$, shows that $T \to S$ is unramified and that $\varphi$ is an isomorphism.
-Thus the base change of $T \to S$ by $X \to S$ is the \'etale morphism $h$.
-Lemma \ref{lemma-finite-unramified-etale-after-pullback} shows that
-$T \to S$ is \'etale. It is finite by the proof of
+$T$, shows that $T \to S$ is \'etale and that $\varphi$ is an isomorphism.
+The morphism $T \to S$ is finite by the proof of
 Lemma \ref{lemma-local-Stein-trivial-component}.
 
 \medskip\noindent
