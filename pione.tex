@@ -3578,6 +3578,44 @@ of fundamental groups. See
 Proposition \ref{proposition-first-homotopy-sequence}.
 
 \begin{lemma}
+\label{lemma-pi1-surjective-pushforward-structure-sheaf}
+\begin{reference}
+\cite[Expos\'e 182, Lemme 4, p. 212]{FGA}
+\end{reference}
+Let $f : X \to S$ be a quasi-compact and quasi-separated morphism of
+connected schemes. If
+$$
+\mathcal{O}_S \longrightarrow f_*\mathcal{O}_X
+$$
+is an isomorphism, then for every geometric point $\overline{x}$ of $X$,
+with image $\overline{s}$ in $S$, the map
+$$
+\pi_1(X, \overline{x}) \longrightarrow \pi_1(S, \overline{s})
+$$
+is surjective. In particular, this applies when $f$ is proper and the
+displayed map is an isomorphism.
+\end{lemma}
+
+\begin{proof}
+Let $S' \to S$ be a connected finite \'etale morphism and set
+$X' = X \times_S S'$. Since $S' \to S$ is flat, flat base change gives
+$$
+\mathcal{O}_{S'} \longrightarrow f'_*\mathcal{O}_{X'}
+$$
+as an isomorphism, where $f' : X' \to S'$ is the projection; see
+Cohomology of Schemes, Lemma
+\ref{coherent-lemma-flat-base-change-cohomology}. Hence
+$$
+\Gamma(S', \mathcal{O}_{S'}) = \Gamma(X', \mathcal{O}_{X'}).
+$$
+If $X'$ were disconnected, the right hand side would contain a nontrivial
+idempotent, contrary to the connectedness of $S'$. Thus pullback by $f$
+sends every connected finite \'etale cover of $S$ to a connected finite
+\'etale cover of $X$. The result follows from
+Lemma \ref{lemma-functoriality-galois-surjective}.
+\end{proof}
+
+\begin{lemma}
 \label{lemma-stein-factorization-etale}
 \begin{reference}
 \cite[Expose X, Proposition 1.2, p. 262]{SGA1}.

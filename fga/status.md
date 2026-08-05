@@ -4,11 +4,11 @@ Snapshot: Stacks commit `a04446e57ec1fbc252a871afcec7752fb2807b14`.
 
 The reproducible intake, topic crosswalk, and statement-level review are
 complete for the bounded FGA corpus, apart from one explicitly fail-closed
-source hypothesis.  The first eleven mathematical source patches are implemented
+source hypothesis.  The first twelve mathematical source patches are implemented
 and validated; further source integration remains in progress.
 
 - 119 Stacks TeX files indexed
-- 21,472 labelled TeX objects indexed
+- 21,473 labelled TeX objects indexed
 - 21,437 objects joined to an existing official tag
 - 55 FGA topics reviewed: 30 direct and 14 broad coverage decisions plus 6
   partial and 5 no-direct decisions
@@ -28,8 +28,8 @@ and validated; further source integration remains in progress.
 - Expose 149 currently yields 20 `existing_stronger` decisions 10
   `existing_equivalent` decisions 2 `extend_existing` decisions 1
   `new_statement` decision 3 historical decisions and 1 open decision
-- Expose 182 yields 29 `existing_stronger` decisions 22
-  `existing_equivalent` decisions 4 `existing_weaker` decisions 4
+- Expose 182 yields 30 `existing_stronger` decisions 22
+  `existing_equivalent` decisions 4 `existing_weaker` decisions 3
   `extend_existing` decisions 6 `new_statement` decisions and 4 historical
   decisions
 - Expose 190 yields 19 `existing_equivalent` decisions 8
@@ -106,8 +106,8 @@ claim.  The unit therefore remains an explicit extension target rather than
 being silently identified with fpqc descent.
 
 Both `check.json` and `mcheck.json` report `PASS` with empty `errors` arrays.
-The warnings preserve nine generated book-part labels and thirty-five current
-TeX labels that have no entry in upstream's `tags/tags`; twenty-six of these
+The warnings preserve nine generated book-part labels and thirty-six current
+TeX labels that have no entry in upstream's `tags/tags`; twenty-seven of these
 are the new source labels below.  No replacement tag has been invented.
 
 The first source patch adds
@@ -216,6 +216,17 @@ Theorem 4 on catalog pages 198--199 with a direct modern equivalent.  The
 Deformation Theory lifting criterion now reuses this theorem.  Both affected
 chapters passed two PDF builds and the complete changed pages passed rendered
 inspection.
+The twelfth source patch adds
+`pione-lemma-pi1-surjective-pushforward-structure-sheaf`, which proves that a
+quasi-compact and quasi-separated morphism of connected schemes inducing an
+isomorphism on the pushforward of the structure sheaf induces a surjection on
+fundamental groups.  Flat base change shows that connected finite etale covers
+of the base remain connected after pullback, so the result strengthens the
+proper-morphism criterion in FGA 182, Lemma 4 on catalog page 212.  Decision
+`D000321` supersedes its former ingredient-only record.  The Fundamental
+Groups chapter passed two PDF builds and the complete inserted statement and
+proof passed rendered inspection.  The next cursor is the sharper local
+finite-etale descent package later in the same section.
 The identified Expose 149
 additions are the arbitrary-ideal Ext and Tor
 comparison maps the partial-range singular-duality equivalence and the general
