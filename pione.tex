@@ -3786,6 +3786,43 @@ Hence $T'$ is the middle term of the Stein factorization, proving uniqueness.
 \end{proof}
 
 \begin{lemma}
+\label{lemma-function-fields-local-Stein-trivial-component}
+\begin{reference}
+\cite[Expos\'e 182, Corollaire 2, p. 214]{FGA}
+\end{reference}
+In the situation of Lemma \ref{lemma-local-Stein-trivial-component}, assume in
+addition that $S$, $X$, and $X'$ are integral. Let $K$, $L$, and $L'$ be their
+function fields. Then there is a finite separable extension $K'/K$ contained
+in $L'$ such that the multiplication map
+$$
+L \otimes_K K' \longrightarrow L'
+$$
+is an isomorphism. In particular, $L$ and $K'$ are linearly disjoint over $K$
+and $L'$ is their compositum.
+\end{lemma}
+
+\begin{proof}
+Let $X' \to T \to S$ be the Stein factorization. The scheme $T$ is integral:
+it is the relative spectrum of $(f \circ h)_*\mathcal{O}_{X'}$, and the ring
+of sections over every nonempty affine open of $T$ is the ring of sections of
+a nonempty open of the integral scheme $X'$, hence is a domain. Let $K'$ be
+the function field of $T$. The morphism $T \to S$ is finite by the proof of
+Lemma \ref{lemma-local-Stein-trivial-component}.
+
+\medskip\noindent
+The same lemma gives a nonempty open $V \subset T$ which is \'etale over $S$
+and over which
+$$
+X' \longrightarrow X \times_S T
+$$
+is an isomorphism. Since $T$ and $S$ are integral, their generic points belong
+to $V$ and its image, respectively. It follows that $K'/K$ is finite separable
+and that the generic fibre product is integral. Thus $L \otimes_K K'$ is a domain. It is a
+finite-dimensional $L$-algebra, so it is a field, and the generic form of the
+displayed isomorphism identifies it with $L'$. This proves all the assertions.
+\end{proof}
+
+\begin{lemma}
 \label{lemma-stein-factorization-etale}
 \begin{reference}
 \cite[Expose X, Proposition 1.2, p. 262]{SGA1}.

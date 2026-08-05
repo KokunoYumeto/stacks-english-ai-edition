@@ -4,11 +4,11 @@ Snapshot: Stacks commit `a04446e57ec1fbc252a871afcec7752fb2807b14`.
 
 The reproducible intake, topic crosswalk, and statement-level review are
 complete for the bounded FGA corpus, apart from one explicitly fail-closed
-source hypothesis.  The first seventeen mathematical source patches are implemented
+source hypothesis.  The first eighteen mathematical source patches are implemented
 and validated; further source integration remains in progress.
 
 - 119 Stacks TeX files indexed
-- 21,478 labelled TeX objects indexed
+- 21,479 labelled TeX objects indexed
 - 21,437 objects joined to an existing official tag
 - 55 FGA topics reviewed: 30 direct and 14 broad coverage decisions plus 6
   partial and 5 no-direct decisions
@@ -28,9 +28,9 @@ and validated; further source integration remains in progress.
 - Expose 149 currently yields 20 `existing_stronger` decisions 10
   `existing_equivalent` decisions 2 `extend_existing` decisions 1
   `new_statement` decision 3 historical decisions and 1 open decision
-- Expose 182 yields 30 `existing_stronger` decisions 24
+- Expose 182 yields 30 `existing_stronger` decisions 25
   `existing_equivalent` decisions 5 `existing_weaker` decisions 0
-  `extend_existing` decisions 6 `new_statement` decisions and 4 historical
+  `extend_existing` decisions 5 `new_statement` decisions and 4 historical
   decisions
 - Expose 190 yields 19 `existing_equivalent` decisions 8
   `existing_stronger` decisions 1 `existing_weaker` decision 4
@@ -106,8 +106,8 @@ claim.  The unit therefore remains an explicit extension target rather than
 being silently identified with fpqc descent.
 
 Both `check.json` and `mcheck.json` report `PASS` with empty `errors` arrays.
-The warnings preserve nine generated book-part labels and forty-one current
-TeX labels that have no entry in upstream's `tags/tags`; thirty-two of these
+The warnings preserve nine generated book-part labels and forty-two current
+TeX labels that have no entry in upstream's `tags/tags`; thirty-three of these
 are the new source labels below.  No replacement tag has been invented.
 
 The first source patch adds
@@ -292,6 +292,18 @@ descent step.  Decisions `D000326` and `D000327` supersede `D000324` and
 chapter again passed two PDF builds, and all three corrected pages passed
 rendered inspection.  The next cursor remains the function-field consequence
 of the local Stein theorem.
+The eighteenth source patch adds
+`pione-lemma-function-fields-local-Stein-trivial-component`, the exact
+function-field consequence in FGA 182, Corollary 2 on catalog page 214.  The
+function field of the integral Stein factor is finite separable over the base
+field because its generic point lies in the etale neighbourhood.  The generic
+fibre-product isomorphism makes its tensor product with the function field of
+the total space a field, proving linear disjointness and identifying the
+compositum with the function field of the finite cover.  Decision `D000328`
+supersedes the former gap record `D000087` with direct equivalent coverage.
+The Fundamental Groups chapter passed two PDF builds and the complete lemma
+and proof passed rendered inspection.  The next cursor is the fibrewise
+function-field criterion later in the same FGA section.
 The identified Expose 149
 additions are the arbitrary-ideal Ext and Tor
 comparison maps the partial-range singular-duality equivalence and the general
