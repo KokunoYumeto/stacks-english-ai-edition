@@ -925,6 +925,88 @@ that $(u, v)$ is in the image of $s^{n - 1}_i$.
 
 
 
+\section{Nerves of categories}
+\label{section-nerves-categories}
+
+\begin{definition}
+\label{definition-nerve-category}
+Let $\mathcal{C}$ be a category. View $[n]$ as the category whose objects are
+$0, \ldots, n$ with a unique morphism $i \to j$ if $i \leq j$. The
+{\it nerve of $\mathcal{C}$} is the simplicial set $N(\mathcal{C})$ given by
+$$
+N(\mathcal{C})_n = \{\text{functors }[n] \longrightarrow \mathcal{C}\}.
+$$
+The simplicial operations are given by precomposition. For a simplicial set
+$U$ and $n \geq 2$, set
+$$
+P_n(U) = \{(a_1, \ldots, a_n) \in U_1^n \mid
+d_0(a_i) = d_1(a_{i + 1})\text{ for }1 \leq i < n\}.
+$$
+The {\it $n$th Segal map} is the map
+$$
+U_n \longrightarrow P_n(U)
+$$
+which sends a simplex to its consecutive edges.
+\end{definition}
+
+\begin{lemma}
+\label{lemma-characterize-nerves-categories}
+The functor
+$$
+N : \textit{Cat} \longrightarrow \textit{Simp}(\textit{Sets})
+$$
+is fully faithful. A simplicial set $U$ is isomorphic to the nerve of a
+category if and only if all its Segal maps are bijective.
+\end{lemma}
+
+\begin{proof}
+An $n$-simplex of $N(\mathcal{C})$ is the same thing as a string
+$$
+x_0 \xrightarrow{a_1} x_1 \xrightarrow{a_2} \ldots
+\xrightarrow{a_n} x_n
+$$
+of composable arrows of $\mathcal{C}$. Thus all the Segal maps of
+$N(\mathcal{C})$ are bijective.
+
+Conversely, suppose the Segal maps of $U$ are bijective. Define a category
+$\mathcal{C}_U$ as follows. Its objects are the elements of $U_0$, its arrows
+are the elements of $U_1$, and the source and target of an arrow $a$ are
+$d_1(a)$ and $d_0(a)$. The identity of $x \in U_0$ is $s_0(x)$. If $a$ and
+$b$ are composable, let $z \in U_2$ be the unique simplex whose consecutive
+edges are $a$ and $b$, and set
+$$
+b \circ a = d_1(z).
+$$
+The simplicial identities in degrees at most $2$ give the identity axioms.
+The bijectivity of the Segal map in degree $3$, together with the simplicial
+identities, gives associativity.
+
+The Segal maps give an isomorphism $U \to N(\mathcal{C}_U)$. Finally, a map
+between nerves is determined in degrees $0$ and $1$. Compatibility with the
+face and degeneracy maps says that it preserves sources, targets, and
+identities, while compatibility in degree $2$ says that it preserves
+composition. Hence it comes from a unique functor. This proves full
+faithfulness and the description of the essential image.
+\end{proof}
+
+\begin{remark}
+\label{remark-internal-category-nerve}
+Let $\mathcal{A}$ be a category with finite limits. The same construction
+works internally. Namely, a simplicial object $U$ of $\mathcal{A}$ is the
+nerve of a category object if and only if the Segal morphisms
+$$
+U_n \longrightarrow
+U_1 \times_{U_0} \ldots \times_{U_0} U_1
+$$
+are isomorphisms for all $n \geq 2$. The source, target, and identity are
+$d_1$, $d_0$, and $s_0$. Composition is obtained from $d_1 : U_2 \to U_1$
+after inverting the Segal morphism in degree $2$. The proof of the preceding
+lemma uses only finite limits and commutative diagrams, so it applies without
+change.
+\end{remark}
+
+
+
 \section{Truncated simplicial objects and skeleton functors}
 \label{section-skeleton}
 
@@ -5699,6 +5781,46 @@ a dotted arrow exists making the diagram commute. A {\it Kan complex}
 is a simplicial set $X$ such that $X \to *$ is a Kan fibration, where
 $*$ is the constant simplicial set on a singleton.
 \end{definition}
+
+\begin{lemma}
+\label{lemma-nerve-groupoid-kan}
+Let $\mathcal{C}$ be a category. The following are equivalent.
+\begin{enumerate}
+\item The category $\mathcal{C}$ is a groupoid.
+\item The nerve $N(\mathcal{C})$ is a Kan complex.
+\item Every map
+$\Lambda_k[n] \to N(\mathcal{C})$ with $n \geq 2$ has a unique extension
+to $\Delta[n]$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Suppose $\mathcal{C}$ is a groupoid. An inner horn in its nerve has a unique
+filler because composition in $\mathcal{C}$ is defined and associative. An
+outer horn has a unique filler because every arrow is invertible. This proves
+(3). Horns in degree $1$ can be filled using identity arrows, so (3) implies
+(2).
+
+Assume (2), and let $a : x \to y$ be an arrow of $\mathcal{C}$. Filling the
+$2$-horn whose two given edges are $a : x \to y$ and
+$\text{id}_y : y \to y$ produces an arrow $b : y \to x$ such that
+$a \circ b = \text{id}_y$. Filling the other outer $2$-horn produces an arrow
+$c : y \to x$ such that $c \circ a = \text{id}_x$. Then
+$$
+b = \text{id}_x \circ b = (c \circ a) \circ b
+= c \circ (a \circ b) = c,
+$$
+and $a$ is invertible. Thus $\mathcal{C}$ is a groupoid.
+\end{proof}
+
+\begin{remark}
+\label{remark-internal-groupoid-nerve}
+The argument is internal. In the situation of
+Remark \ref{remark-internal-category-nerve}, the category object is a
+groupoid object if and only if the two outer horn morphisms in degree $2$ are
+isomorphisms. The inverse morphism is recovered by filling either outer
+$2$-horn.
+\end{remark}
 
 \noindent
 Note that $\Lambda_k[n]$ is always nonempty. Thus a morphism from the empty

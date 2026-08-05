@@ -4,11 +4,11 @@ Snapshot: Stacks commit `a04446e57ec1fbc252a871afcec7752fb2807b14`.
 
 The reproducible intake, topic crosswalk, and statement-level review are
 complete for the bounded FGA corpus, apart from one explicitly fail-closed
-source hypothesis.  The first six mathematical source patches are implemented
+source hypothesis.  The first seven mathematical source patches are implemented
 and validated; further source integration remains in progress.
 
 - 119 Stacks TeX files indexed
-- 21,458 labelled TeX objects indexed
+- 21,464 labelled TeX objects indexed
 - 21,437 objects joined to an existing official tag
 - 55 FGA topics reviewed: 30 direct and 14 broad coverage decisions plus 6
   partial and 5 no-direct decisions
@@ -39,8 +39,8 @@ and validated; further source integration remains in progress.
 - Expose 195 yields 2 `existing_equivalent` decisions 6 `existing_stronger`
   decisions 4 `existing_weaker` decisions 4 `extend_existing` decisions 4
   `new_statement` decisions and 1 historical decision
-- Expose 212 yields 6 `existing_equivalent` decisions 2 `existing_stronger`
-  decisions 1 `existing_weaker` decision 7 `extend_existing` decisions 4
+- Expose 212 yields 8 `existing_equivalent` decisions 2 `existing_stronger`
+  decisions 1 `existing_weaker` decision 7 `extend_existing` decisions 2
   `new_statement` decisions and 3 historical decisions
 - Expose 221 yields 4 `existing_equivalent` decisions 1 `existing_stronger`
   decision 5 `existing_weaker` decisions 6 `extend_existing` decisions 13
@@ -101,8 +101,8 @@ claim.  The unit therefore remains an explicit extension target rather than
 being silently identified with fpqc descent.
 
 Both `check.json` and `mcheck.json` report `PASS` with empty `errors` arrays.
-The warnings preserve nine generated book-part labels and twenty-one current
-TeX labels that have no entry in upstream's `tags/tags`; twelve of these are
+The warnings preserve nine generated book-part labels and twenty-seven current
+TeX labels that have no entry in upstream's `tags/tags`; eighteen of these are
 the new source labels below.  No replacement tag has been invented.
 
 The first source patch adds
@@ -165,6 +165,14 @@ supersedes the former extension classification while retaining
 reduced-base-smoothness assertions remain unproved.  The More on Morphisms
 chapter passed two PDF builds and the complete inserted lemma and transition
 passed rendered inspection.
+The seventh source patch adds the ordinary nerve of a category and proves that
+the nerve functor is fully faithful with essential image characterized by the
+Segal bijections.  It also proves that a category is a groupoid exactly when
+its nerve is a Kan complex and records the finite-limit internal category and
+groupoid versions.  Decisions `D000313` and `D000314` replace the two former
+gap records for FGA 212, Proposition 4.1 and Corollary 4.2 with direct modern
+equivalents.  The Simplicial Methods chapter passed two PDF builds and all
+four affected pages passed rendered inspection.
 The identified Expose 149
 additions are the arbitrary-ideal Ext and Tor
 comparison maps the partial-range singular-duality equivalence and the general
