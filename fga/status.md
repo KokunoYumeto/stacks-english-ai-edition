@@ -421,8 +421,24 @@ final PDF builds at 89 pages with no new overfull boxes, and the complete
 additions on pages 39 and 44--45 passed rendered inspection.  The product
 residual in Expose 182 is closed.  The next cursor is Expose 190's
 finite-epimorphism factorization.
-The Expose 190 residuals include finite-epimorphism factorization the analytic
-Grauert--Remmert passage Cartier p-connection descent the Atiyah--Cartier
+The twenty-seventh source patch adds
+`descent-lemma-finite-epimorphism-injective-functions`,
+`descent-lemma-finite-effective-epimorphism-functions`, and
+`descent-theorem-finite-epimorphism-canonical-factorization`.  The first two
+lemmas identify finite scheme epimorphisms with injectivity on functions and
+finite effective epimorphisms with the exact function equalizer.  The theorem
+constructs the canonical sequence of finite effective epimorphisms over a
+Noetherian target, proves termination and flat-base-change compatibility, and
+proves minimality among all such factorizations.  Decision `D000339`
+supersedes gap record `D000121` with stronger coverage.  The Descent chapter
+passed its final two bibliography-complete PDF builds at 95 pages with no new
+overfull boxes, and the complete addition on pages 19--21 passed rendered
+inspection.  Both semantic validators pass with no errors: 21,496 labels and
+339 append-only decisions.  The next cursor is Expose 190's exact flat
+base-change and flat-object descent package on source pages 306--307.
+The Expose 190 residuals include the exact flat-base-change and flat-object
+descent package the analytic Grauert--Remmert passage Cartier p-connection
+descent the Atiyah--Cartier
 rationality criterion descent of abelian models and the non-GL_n torsor
 consequences.  The Expose 195 residuals are the general minimal-pair
 prorepresentability theorem its Artinian equalizer criterion the narrow
