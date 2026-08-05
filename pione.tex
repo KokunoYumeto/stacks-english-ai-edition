@@ -7130,6 +7130,98 @@ of fundamental groups by Proposition \ref{proposition-universal-homeomorphism}.
 \end{proof}
 
 
+\begin{lemma}
+\label{lemma-fundamental-group-smooth-proper-curve-generators}
+\begin{reference}
+\cite[Expos\'e 182, Corollaire 3, p. 217]{FGA}
+\end{reference}
+Let $k$ be an algebraically closed field. Let $X$ be a smooth proper
+connected curve over $k$ of genus $g$. There exist elements
+$$
+a_1, b_1, \ldots, a_g, b_g \in \pi_1(X)
+$$
+which topologically generate $\pi_1(X)$ and satisfy
+$$
+[a_1, b_1] \cdots [a_g, b_g] = 1,
+\qquad [a, b] = aba^{-1}b^{-1}.
+$$
+\end{lemma}
+
+\begin{proof}
+Assume first that $k$ has characteristic zero. We can find a subfield
+$k_0 \subset k$ finitely generated over $\mathbf{Q}$ and a smooth proper
+geometrically connected curve $X_0$ over $k_0$ whose base change to $k$
+is $X$. Let $\overline{k}_0 \subset k$ be the algebraic closure of $k_0$
+in $k$, and choose an embedding $\overline{k}_0 \to \mathbf{C}$.
+Base change gives isomorphisms
+$$
+\pi_1(X) \cong \pi_1(X_{0, \overline{k}_0})
+\cong \pi_1(X_{0, \mathbf{C}})
+$$
+by Lemma \ref{lemma-finite-etale-invariant-over-proper}. The genus is
+unchanged by Algebraic Curves, Lemma
+\ref{curves-lemma-genus-base-change}. By the Riemann existence theorem
+\cite[Expos\'e XII, Corollaire 5.2]{SGA1}, the last group is the profinite
+completion of the usual fundamental group of a compact Riemann surface of
+genus $g$. The latter has the presentation
+$$
+\langle a_1, b_1, \ldots, a_g, b_g \mid
+[a_1, b_1] \cdots [a_g, b_g] = 1 \rangle.
+$$
+This proves the result in characteristic zero.
+
+\medskip\noindent
+Assume that $k$ has characteristic $p > 0$. Choose a Cohen ring $A$ with
+residue field $k$ by Algebra, Lemma
+\ref{algebra-lemma-cohen-rings-exist}. By Deformation Theory, Lemma
+\ref{defos-lemma-smooth-proper-curve-lift-complete-local}, there is a
+smooth projective morphism $\mathcal{X} \to \Spec(A)$ whose special fibre
+is $X$. Its geometric fibres are connected by More on Morphisms, Lemma
+\ref{more-morphisms-lemma-proper-flat-geom-red}; indeed, the number of
+geometric connected components is locally constant and is one on the
+special fibre. If $\overline{K}$ is an algebraic closure of the fraction
+field of $A$, then $\mathcal{X}_{\overline{K}}$ has genus $g$ by
+Algebraic Curves, Lemma
+\ref{curves-lemma-genus-in-nodal-family-of-curves}. The characteristic-zero
+case supplies $2g$ generators with the stated relation for
+$\pi_1(\mathcal{X}_{\overline{K}})$. Their images have the same relation
+and topologically generate $\pi_1(X)$ because the specialization map is
+surjective by Lemma \ref{lemma-specialization-map-surjective}.
+\end{proof}
+
+\begin{proposition}
+\label{proposition-fundamental-group-smooth-projective-finitely-generated}
+\begin{reference}
+\cite[Expos\'e 182, Corollaire 4, pp. 217--218]{FGA}
+\end{reference}
+Let $k$ be an algebraically closed field. Let $X$ be a smooth projective
+connected scheme over $k$. Then $\pi_1(X)$ is topologically finitely
+generated.
+\end{proposition}
+
+\begin{proof}
+We argue by induction on $d = \dim(X)$. If $d = 0$, then $X = \Spec(k)$,
+and if $d = 1$, the result follows from
+Lemma \ref{lemma-fundamental-group-smooth-proper-curve-generators}.
+Assume $d \geq 2$. Since $X$ is smooth and connected, it is irreducible.
+Choose a projective embedding of $X$. There is a hyperplane section
+$Y \subset X$ which is smooth and irreducible by More on Morphisms,
+Remark \ref{more-morphisms-remark-geometric-proof-bertini-irreducible}.
+
+For $x \in X \setminus Y$, regularity of $X$ and the dimension formula give
+$$
+\text{depth}(\mathcal{O}_{X, x}) + \dim(\overline{\{x\}}) = d > 1.
+$$
+Hence the restriction functor
+$\textit{F\'Et}_X \to \textit{F\'Et}_Y$ is fully faithful by
+Proposition \ref{proposition-lefschetz-fully-faithful}. Consequently the map
+$\pi_1(Y) \to \pi_1(X)$ is surjective by
+Lemma \ref{lemma-functoriality-galois-surjective}. The induction hypothesis
+shows that $\pi_1(Y)$ is topologically finitely generated, and the same is
+therefore true of its quotient $\pi_1(X)$.
+\end{proof}
+
+
 
 
 
