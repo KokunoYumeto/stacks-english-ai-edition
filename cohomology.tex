@@ -13501,6 +13501,68 @@ Lemma \ref{lemma-pullback-internal-hom}
 to the flat inclusion morphism $Y \to X$.
 \end{proof}
 
+\begin{lemma}
+\label{lemma-stalk-ext-finite-resolution}
+Let $X$ be a ringed space. Let $\mathcal{F}$ and $\mathcal{G}$ be
+$\mathcal{O}_X$-modules, let $x \in X$, and let $n \geq 0$. Suppose that
+on an open neighbourhood $U$ of $x$ there is an exact sequence
+$$
+\mathcal{F}_{n + 1} \longrightarrow \mathcal{F}_n \longrightarrow
+\ldots \longrightarrow \mathcal{F}_0 \longrightarrow
+\mathcal{F}|_U \longrightarrow 0
+$$
+where $\mathcal{F}_0, \ldots, \mathcal{F}_{n + 1}$ are finite free
+$\mathcal{O}_U$-modules. Then the canonical maps
+$$
+\SheafExt^q_{\mathcal{O}_X}(\mathcal{F}, \mathcal{G})_x
+\longrightarrow
+\Ext^q_{\mathcal{O}_{X, x}}(\mathcal{F}_x, \mathcal{G}_x)
+$$
+are isomorphisms for $0 \leq q \leq n$.
+\end{lemma}
+
+\begin{proof}
+We may replace $X$ by $U$. We argue by induction on $n$. If $n = 0$,
+then $\mathcal{F}$ is of finite presentation and the assertion is
+Modules, Lemma \ref{modules-lemma-stalk-internal-hom}.
+
+Suppose $n > 0$ and set
+$\mathcal{K} = \Ker(\mathcal{F}_0 \to \mathcal{F})$. The sequence
+$$
+0 \longrightarrow \mathcal{K} \longrightarrow \mathcal{F}_0
+\longrightarrow \mathcal{F} \longrightarrow 0
+$$
+and its sequence of stalks give compatible long exact sequences for
+internal Ext and module Ext. The truncated sequence
+$$
+\mathcal{F}_{n + 1} \longrightarrow \ldots \longrightarrow
+\mathcal{F}_1 \longrightarrow \mathcal{K} \longrightarrow 0
+$$
+satisfies the induction hypothesis. Moreover, internal Ext and module Ext
+of the finite free module $\mathcal{F}_0$ vanish in positive degrees, and
+the comparison map in degree zero is an isomorphism. The comparison maps
+for $\mathcal{F}$ are therefore isomorphisms in degrees $0, \ldots, n$
+by the long exact sequences and the induction hypothesis.
+\end{proof}
+
+\begin{remark}
+\label{remark-stalk-ext-finite-presentation}
+\begin{reference}
+Compare with \cite[Expos\'e 149, Proposition 2, pp. 170--171]{FGA}.
+\end{reference}
+For $n = 0$ the hypothesis of
+Lemma \ref{lemma-stalk-ext-finite-resolution} is finite presentation, and
+the conclusion concerns degree zero only. Comparison in every degree
+requires finite free partial resolutions of arbitrary length; for example,
+it follows when $\mathcal{F}[0]$ is pseudo-coherent by
+Lemma \ref{lemma-stalk-internal-hom}. Thus a single finite presentation does
+not supply the syzygy hypotheses used for all higher Ext groups. On a
+Noetherian scheme a coherent module is pseudo-coherent by Derived Categories
+of Schemes, Lemma
+\ref{perfect-lemma-identify-pseudo-coherent-noetherian}, so the coherent
+algebraic case of the cited result is covered.
+\end{remark}
+
 
 
 

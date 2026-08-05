@@ -3,12 +3,13 @@
 Snapshot: Stacks commit `a04446e57ec1fbc252a871afcec7752fb2807b14`.
 
 The reproducible intake, topic crosswalk, and statement-level review are
-complete for the bounded FGA corpus, apart from one explicitly fail-closed
-source hypothesis.  The first twenty-one mathematical source patches are
-implemented and validated; further source integration remains in progress.
+complete for the bounded FGA corpus.  Every review unit has an append-only
+decision and source problems remain explicit.  The first twenty-two
+mathematical source patches are implemented and validated; further source
+integration remains in progress.
 
 - 119 Stacks TeX files indexed
-- 21,485 labelled TeX objects indexed
+- 21,487 labelled TeX objects indexed
 - 21,437 objects joined to an existing official tag
 - 55 FGA topics reviewed: 30 direct and 14 broad coverage decisions plus 6
   partial and 5 no-direct decisions
@@ -23,11 +24,10 @@ implemented and validated; further source integration remains in progress.
   erratum all 23 Expose 212 units including its erratum all 33 Expose 221
   units including its erratum all 33 Expose 232 units including its erratum all
   43 Expose 236 units including its erratum and all 3 Commentaires units
-- Expose 149 Proposition 2 remains explicitly open pending its higher-Ext
-  hypothesis check
 - Expose 149 currently yields 20 `existing_stronger` decisions 10
-  `existing_equivalent` decisions 2 `extend_existing` decisions 1
-  `new_statement` decision 3 historical decisions and 1 open decision
+  `existing_equivalent` decisions 1 `existing_weaker` decision 2
+  `extend_existing` decisions 1 `new_statement` decision and 3 historical
+  decisions
 - Expose 182 yields 30 `existing_stronger` decisions 30
   `existing_equivalent` decisions 5 `existing_weaker` decisions 0
   `extend_existing` decisions 0 `new_statement` decisions and 4 historical
@@ -53,8 +53,8 @@ implemented and validated; further source integration remains in progress.
   `new_statement` decisions 4 `new_section` decisions 1 example-or-remark
   decision and 5 historical decisions
 - the 3 Commentaires units are preserved as historical editorial provenance
-- exactly 1 unit remains in `needs_review`: the explicitly open Expose 149
-  proposition; no correction or comment root remains unreviewed
+- no unit remains in `needs_review`; no correction or comment root remains
+  unreviewed
 
 Sections remain independent review units.  A provisional rule that treated
 every section as a structural container was rejected before publication
@@ -62,8 +62,15 @@ because FGA sections contain substantial unboxed mathematics such as the
 composition law in Ext.  Equations subitems and diagrams inherit the decision
 of their semantic parent.
 
-Eight source issues are fail-closed in `issues.csv`.  Expose 149
-Proposition 2 remains open.  The confirmed issue is Expose 182 Corollary 6:
+Eight source issues are recorded in `issues.csv`; seven remain active.
+Expose 149 Proposition 2 is resolved by a narrowed hypothesis.  The direct
+scan states the all-degree stalk comparison from one finite presentation and
+its linked erratum does not alter the claim.  A finite presentation supplies
+the degree-zero comparison; degree $q$ requires a finite free partial
+resolution through degree $q+1$, while pseudo-coherence supplies all degrees.
+This covers the intended coherent case on a Noetherian scheme without
+importing the unrestricted historical wording.  The confirmed issue in
+Expose 182 Corollary 6 is that
 the stated invariance under algebraically closed base-field extension needs
 properness in arbitrary characteristic; an Artin--Schreier cover of the affine
 line supplies a characteristic-p counterexample to the unrestricted claim.
@@ -106,8 +113,8 @@ claim.  The unit therefore remains an explicit extension target rather than
 being silently identified with fpqc descent.
 
 Both `check.json` and `mcheck.json` report `PASS` with empty `errors` arrays.
-The warnings preserve nine generated book-part labels and forty-eight current
-TeX labels that have no entry in upstream's `tags/tags`; thirty-nine of these
+The warnings preserve nine generated book-part labels and fifty current
+TeX labels that have no entry in upstream's `tags/tags`; forty-one of these
 are the new source labels below.  No replacement tag has been invented.
 
 The first source patch adds
@@ -346,6 +353,19 @@ remaining `new_statement` or `extend_existing` disposition.  The Fundamental
 Groups chapter passed three PDF builds and all four affected pages passed
 rendered inspection.  The next cursor returns to the unresolved higher-Ext
 hypothesis in Expose 149, Proposition 2.
+The twenty-second source patch adds
+`cohomology-lemma-stalk-ext-finite-resolution` and
+`cohomology-remark-stalk-ext-finite-presentation`.  The lemma proves that a
+finite free partial resolution through degree $q+1$ identifies internal Ext
+and module Ext at a stalk through degree $q$.  The remark relates this exact
+finite-range statement to the existing pseudo-coherent derived theorem and
+to the Noetherian coherent case intended in Expose 149.  Decision `D000334`
+supersedes open record `D000004`, and issue `I000001` is resolved without
+silently strengthening the historical hypothesis.  The authority page and
+linked erratum page were inspected at 1200 dpi-equivalent.  The Cohomology of
+Sheaves chapter passed two PDF builds and both affected pages passed rendered
+inspection.  The next cursor is Expose 149 Section 3's arbitrary-ideal Ext and
+Tor comparison maps.
 The identified Expose 149
 additions are the arbitrary-ideal Ext and Tor
 comparison maps the partial-range singular-duality equivalence and the general
