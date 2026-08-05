@@ -4,12 +4,12 @@ Snapshot: Stacks commit `a04446e57ec1fbc252a871afcec7752fb2807b14`.
 
 The reproducible intake, topic crosswalk, and statement-level review are
 complete for the bounded FGA corpus.  Every review unit has an append-only
-decision and source problems remain explicit.  Twenty-nine mathematical
+decision and source problems remain explicit.  Thirty-seven mathematical
 source patches are implemented and validated; further source integration
 remains in progress.
 
 - 119 Stacks TeX files indexed
-- 21,504 labelled TeX objects indexed
+- 21,527 labelled TeX objects indexed
 - 21,437 objects joined to an existing official tag
 - 55 FGA topics reviewed: 30 direct and 14 broad coverage decisions plus 6
   partial and 5 no-direct decisions
@@ -36,8 +36,8 @@ remains in progress.
   `existing_stronger` decisions 2 `existing_weaker` decisions 2
   `extend_existing` decisions 1 `new_statement` decision and 5 historical
   decisions
-- Expose 195 yields 2 `existing_equivalent` decisions 6 `existing_stronger`
-  decisions 4 `existing_weaker` decisions 4 `extend_existing` decisions 4
+- Expose 195 yields 5 `existing_equivalent` decisions 6 `existing_stronger`
+  decisions 4 `existing_weaker` decisions 3 `extend_existing` decisions 2
   `new_statement` decisions and 1 historical decision
 - Expose 212 yields 8 `existing_equivalent` decisions 2 `existing_stronger`
   decisions 1 `existing_weaker` decision 7 `extend_existing` decisions 2
@@ -612,3 +612,22 @@ bibliography-complete builds at 105 pages with no new overfull box, and the
 complete addition on pages 34--35 passed rendered inspection.  Both semantic
 validators pass with no errors: 21,525 labels and 349 append-only decisions.
 The next cursor is Expose 195, Theorem B.1.
+The thirty-seventh source patch adds
+`descent-lemma-artinian-small-effective-descent-flat-modules` and
+`descent-remark-finite-artinian-flat-descent-counterexample`.  The theorem
+recovers the exact narrow non-flat descent result of Expose 195, Theorem B.2:
+the maximal-ideal hypothesis identifies the base ring with a fibre product
+over its residue field, faithfully flat descent handles the reduced datum,
+and the existing flat-module patching theorem reconstructs the module.  A
+cocycle argument in the embedded nilpotent maximal ideal proves that the
+reconstructed datum is the original one.  Venken's finite local Artinian
+counterexample is retained beside the theorem to show that the ring
+equalizer alone gives full faithfulness but not effectivity.  Decision
+`D000350` supersedes `D000155` with exact integrated coverage.  Validation,
+build, and rendered inspection all pass: the two semantic validators report
+no errors at 21,527 labels and 350 append-only decisions; a complete
+bibliography pass followed by two final TeX passes produces a 103-page
+Descent chapter; no overfull box occurs in the added source block; and pages
+17--19, containing the full theorem, proof, counterexample warning, and both
+joins to the surrounding chapter, pass rendered inspection.  The next cursor
+is Expose 195, Theorem B.1.

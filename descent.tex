@@ -1510,6 +1510,101 @@ $m \mapsto v(m)$ is $R$-linear. Since $u$ is $S$-linear, we have
 $u = v \otimes_R S$, proving surjectivity.
 \end{proof}
 
+\begin{lemma}
+\label{lemma-artinian-small-effective-descent-flat-modules}
+\begin{reference}
+\cite[Expos\'e 195, B, Th\'eor\`eme 2, p. 378]{FGA}.
+\end{reference}
+Let $(R, \mathfrak m)$ be an Artinian local ring and let
+$R \to S$ be an injective ring map. Assume that
+\begin{enumerate}
+\item $\mathfrak mS \subset R$, and
+\item the diagram
+$$
+R \longrightarrow S
+\mathrel{\substack{\longrightarrow \\[-0.6ex] \longrightarrow}}
+S \otimes_R S
+$$
+is an equalizer, where the two arrows are the canonical ones.
+\end{enumerate}
+Then base extension induces an equivalence between
+\begin{enumerate}
+\item flat $R$-modules, and
+\item descent data relative to $R \to S$ whose underlying $S$-module is flat.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+We first record the shape of the ring map. Since $\mathfrak m$ is nilpotent,
+$\mathfrak mS$ is a nilpotent ideal of $S$. By (1) it is contained in $R$,
+and hence in the nilradical $\mathfrak m$ of $R$. The reverse inclusion is
+automatic, so
+$$
+\mathfrak mS = \mathfrak m.
+$$
+Set $k = R/\mathfrak m$ and $C = S/\mathfrak m$. The map $k \to C$ is
+injective and hence faithfully flat. Moreover, the diagram
+$$
+\xymatrix{
+C & S \ar[l] \\
+k \ar[u] & R \ar[l] \ar[u]
+}
+$$
+is cartesian. Indeed, if $s \in S$ and $a \in R$ have the same image in
+$C$, then $s - a \in \mathfrak mS = \mathfrak m$, and hence $s \in R$.
+
+Let $(P, \theta)$ be a descent datum relative to $R \to S$ with $P$ flat
+over $S$. Reduction modulo $\mathfrak m$ gives a descent datum on
+$P/\mathfrak mP$ relative to the faithfully flat map $k \to C$. By
+Proposition \ref{proposition-descent-module}, there are a $k$-vector space
+$V$ and an isomorphism
+$$
+\beta : V \otimes_k C \longrightarrow P/\mathfrak mP
+$$
+compatible with these descent data. Apply More on Algebra, Lemma
+\ref{more-algebra-lemma-flat-module-over-fibre-product} to the cartesian
+diagram above and the triple $(V, P, \beta)$. We obtain a flat $R$-module
+$M$ and an isomorphism
+$$
+\alpha : M \otimes_R S \longrightarrow P
+$$
+whose reduction modulo $\mathfrak m$ is $\beta$.
+
+It remains to check that $\alpha$ respects the descent data. Transport the
+canonical descent datum on $M \otimes_R S$ across $\alpha$ and denote it by
+$\theta_0$. The reductions of $\theta$ and $\theta_0$ modulo $\mathfrak m$
+agree by the choice of $\beta$. The module $M$ is free by Algebra, Lemma
+\ref{algebra-lemma-local-artinian-characterize-flat}; fix a basis. Put
+$D = S \otimes_R S$. For $a \in \mathfrak m$ and $s,t \in S$, we have
+$$
+a(s \otimes t) = as \otimes t = 1 \otimes ast \in \mathfrak m \subset D.
+$$
+The multiplication map $D \to S$ shows that the resulting copy of
+$\mathfrak m$ in $D$ is embedded. Thus $\mathfrak mD = \mathfrak m$.
+The same argument works in every higher tensor power of $S$ over $R$.
+
+After identifying both pullbacks using the chosen basis, let $g$ be the
+automorphism obtained by composing $\theta$ with $\theta_0^{-1}$. It is the
+identity modulo $\mathfrak mD$. Hence all three pullbacks of $g$ to
+$S \otimes_R S \otimes_R S$ are the same automorphism: after subtracting the
+identity, its coefficients belong to the copy of $\mathfrak m$ coming from
+$R$. The cocycle condition therefore reads $g = g^2$. Since $g$ is
+invertible, $g = 1$. Thus $\alpha$ is compatible with the descent data, proving
+essential surjectivity. Full faithfulness follows from
+Lemma \ref{lemma-equalizer-flat-module-descent} and assumption (2).
+\end{proof}
+
+\begin{remark}
+\label{remark-finite-artinian-flat-descent-counterexample}
+The condition $\mathfrak mS \subset R$ in
+Lemma \ref{lemma-artinian-small-effective-descent-flat-modules} cannot simply
+be discarded. Venken constructed a finite injective map of local Artinian
+rings which is a descent morphism for flat modules but which admits a
+non-effective descent datum on a free module of rank one; see \cite{Venken}.
+Thus an equalizer statement gives full faithfulness, but not effectivity by
+itself.
+\end{remark}
+
 \noindent
 Our goal is to show that for $f$ universally injective, we can use $\theta$ to 
 locate $M_0$ within $M$. This process makes crucial use of some equalizer
