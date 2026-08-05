@@ -4,12 +4,12 @@ Snapshot: Stacks commit `a04446e57ec1fbc252a871afcec7752fb2807b14`.
 
 The reproducible intake, topic crosswalk, and statement-level review are
 complete for the bounded FGA corpus.  Every review unit has an append-only
-decision and source problems remain explicit.  Thirty-nine mathematical
+decision and source problems remain explicit.  Forty mathematical
 source patches are implemented and validated; further source integration
 remains in progress.
 
 - 119 Stacks TeX files indexed
-- 21,534 labelled TeX objects indexed
+- 21,535 labelled TeX objects indexed
 - 21,437 objects joined to an existing official tag
 - 55 FGA topics reviewed: 30 direct and 14 broad coverage decisions plus 6
   partial and 5 no-direct decisions
@@ -673,3 +673,22 @@ added block, and page 76 containing the complete proposition, proof,
 correction, and both joins passes rendered inspection.  Both semantic
 validators report no errors: 21,534 labels and 352 append-only decisions.
 The next cursor is the corollary following Expose 195, Proposition C.2.1.
+The fortieth source patch proves the full Noetherianity corollary following
+Expose 195, Proposition C.2.1, without the narrower separatedness and finite
+presentation assumptions in the previously mapped global Mor-space theorem.
+For a field-valued morphism $\xi:X_K\to Y_K$, local finite type of $Y$
+makes $\Omega_{Y_K/K}$ coherent; its pullback-Hom into
+$\mathcal O_{X_K}$ remains coherent, and properness of $X_K$ makes its
+global sections finite dimensional.  The corrected degree-zero tangent
+formula from the preceding patch therefore meets the local-component
+finite-tangent criterion of Expose 195, Proposition A.5.1, expressed in the
+current chapter by the bounded-cotangent-space inverse-limit argument.  Thus
+every local prorepresenting component is Noetherian for the source's full
+locally-finite-type target scope.  Decision `D000353` supersedes `D000158`
+with exact integrated coverage.  After the class-native lemma environment
+replaced an invalid draft `corollary` environment, the Formal Deformation
+Theory chapter passed a bibliography-complete build followed by two final TeX
+passes at 78 pages; no overfull box occurs in the added block, and pages
+76--77 containing the complete result and both joins pass rendered
+inspection.  Both semantic validators report no errors: 21,535 labels and
+353 append-only decisions.  The next cursor is Expose 195, Proposition C.3.1.

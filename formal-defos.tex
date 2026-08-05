@@ -7752,6 +7752,44 @@ lifting problem without the distinguished base-change lift, degree one may
 instead contain the obstruction to the existence of a global lift.
 \end{remark}
 
+\begin{lemma}
+\label{lemma-formal-hom-noetherian-components}
+\begin{reference}
+\cite[Expos\'e 195, A, Proposition 5.1, pp. 375--376 and
+C, Corollaire, p. 382]{FGA}.
+\end{reference}
+Let $\Lambda$ be a Noetherian ring. Let $X$ and $Y$ be schemes over
+$\Lambda$. If $X$ is flat and proper over $\Lambda$ and $Y$ is locally of
+finite type over $\Lambda$, then the local components of a topological
+$\Lambda$-algebra prorepresenting
+$$
+A \longmapsto \Mor_A(X_A, Y_A), \qquad A \in \mathcal{A}_\Lambda,
+$$
+are Noetherian.
+\end{lemma}
+
+\begin{proof}
+Proposition \ref{proposition-formal-hom-prorepresentable-tangent} gives the
+prorepresentability. Fix a field $K \in \mathcal{A}_\Lambda$ and a morphism
+$\xi : X_K \to Y_K$ corresponding to a point of a local component. The
+scheme $X_K$ is Noetherian and proper over $K$. Since $Y_K$ is locally of
+finite type over $K$, the module $\Omega_{Y_K/K}$ is coherent by Morphisms,
+Lemma \ref{morphisms-lemma-finite-type-differentials}. Hence
+$$
+\SheafHom_{\mathcal{O}_{X_K}}
+(\xi^*\Omega_{Y_K/K}, \mathcal{O}_{X_K})
+$$
+is coherent by Cohomology of Schemes, Lemma
+\ref{coherent-lemma-tensor-hom-coherent}. Its global sections form a finite
+dimensional $K$-vector space by Cohomology of Schemes, Lemma
+\ref{coherent-lemma-proper-over-affine-cohomology-finite}.
+By the tangent formula in the proposition, the tangent space of the local
+component is therefore finite dimensional. The finite-tangent criterion for
+a local component of a strict Artinian proobject now gives Noetherianity. In
+the language used above, this is the bounded-cotangent-space argument of
+Lemma \ref{lemma-limit-artinian}.
+\end{proof}
+
 
 
 
