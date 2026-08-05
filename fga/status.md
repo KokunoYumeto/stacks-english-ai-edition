@@ -4,11 +4,11 @@ Snapshot: Stacks commit `a04446e57ec1fbc252a871afcec7752fb2807b14`.
 
 The reproducible intake, topic crosswalk, and statement-level review are
 complete for the bounded FGA corpus, apart from one explicitly fail-closed
-source hypothesis.  The first twelve mathematical source patches are implemented
+source hypothesis.  The first thirteen mathematical source patches are implemented
 and validated; further source integration remains in progress.
 
 - 119 Stacks TeX files indexed
-- 21,473 labelled TeX objects indexed
+- 21,474 labelled TeX objects indexed
 - 21,437 objects joined to an existing official tag
 - 55 FGA topics reviewed: 30 direct and 14 broad coverage decisions plus 6
   partial and 5 no-direct decisions
@@ -29,7 +29,7 @@ and validated; further source integration remains in progress.
   `existing_equivalent` decisions 2 `extend_existing` decisions 1
   `new_statement` decision 3 historical decisions and 1 open decision
 - Expose 182 yields 30 `existing_stronger` decisions 22
-  `existing_equivalent` decisions 4 `existing_weaker` decisions 3
+  `existing_equivalent` decisions 5 `existing_weaker` decisions 2
   `extend_existing` decisions 6 `new_statement` decisions and 4 historical
   decisions
 - Expose 190 yields 19 `existing_equivalent` decisions 8
@@ -106,8 +106,8 @@ claim.  The unit therefore remains an explicit extension target rather than
 being silently identified with fpqc descent.
 
 Both `check.json` and `mcheck.json` report `PASS` with empty `errors` arrays.
-The warnings preserve nine generated book-part labels and thirty-six current
-TeX labels that have no entry in upstream's `tags/tags`; twenty-seven of these
+The warnings preserve nine generated book-part labels and thirty-seven current
+TeX labels that have no entry in upstream's `tags/tags`; twenty-eight of these
 are the new source labels below.  No replacement tag has been invented.
 
 The first source patch adds
@@ -227,12 +227,26 @@ proper-morphism criterion in FGA 182, Lemma 4 on catalog page 212.  Decision
 Groups chapter passed two PDF builds and the complete inserted statement and
 proof passed rendered inspection.  The next cursor is the sharper local
 finite-etale descent package later in the same section.
+The thirteenth source patch adds
+`pione-lemma-fundamental-group-product-one-proper`.  For geometrically
+connected finite-type schemes over a field, one of which is proper, it
+identifies the fundamental group of the product with the fibre product of the
+two fundamental groups over the absolute Galois group.  Over an algebraically
+closed field this is the direct-product isomorphism in FGA 182, Corollary 5 on
+catalog page 215, including the properness condition restored by the 1962
+erratum.  Decision `D000322` records the remaining historical generality for
+connected but not geometrically connected factors rather than silently
+claiming it.  The Fundamental Groups chapter passed two PDF builds and both
+affected pages, including the exact-sequence diagram, passed rendered
+inspection.  The next cursor returns to the local finite-etale descent
+package.
 The identified Expose 149
 additions are the arbitrary-ideal Ext and Tor
 comparison maps the partial-range singular-duality equivalence and the general
 Hodge fixed-point statement.  The Expose 182 residuals include the formal
-moduli theorem, local-cover descent, a product formula for fundamental
-groups, finite generation for curves, and the tame specialization package.
+moduli theorem, local-cover descent, the non-geometrically-connected branch
+of the product injection, finite generation for curves, and the tame
+specialization package.
 The Expose 190 residuals include finite-epimorphism factorization the analytic
 Grauert--Remmert passage Cartier p-connection descent the Atiyah--Cartier
 rationality criterion descent of abelian models and the non-GL_n torsor

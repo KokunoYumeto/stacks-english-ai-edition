@@ -3718,6 +3718,77 @@ Lemmas \ref{lemma-functoriality-galois-ses} and
 both apply and the proof is complete.
 \end{proof}
 
+\begin{lemma}
+\label{lemma-fundamental-group-product-one-proper}
+\begin{reference}
+\cite[Expos\'e 182, Corollaire 5, p. 215, with the 1962 correction]{FGA}
+\end{reference}
+Let $k$ be a field. Let $X$ and $Y$ be geometrically connected schemes of
+finite type over $k$. Assume that $X$ or $Y$ is proper over $k$. Choose an
+algebraic closure $\overline{k}$ and points
+$$
+\overline{x} \in X(\overline{k}), \qquad
+\overline{y} \in Y(\overline{k}), \qquad
+\overline{z} = (\overline{x}, \overline{y}).
+$$
+Set $G_k = \pi_1(\Spec(k), \Spec(\overline{k}))$. Then the natural map
+$$
+\pi_1(X \times_k Y, \overline{z}) \longrightarrow
+\pi_1(X, \overline{x}) \times_{G_k} \pi_1(Y, \overline{y})
+$$
+is an isomorphism. In particular, if $k$ is algebraically closed, then
+$$
+\pi_1(X \times_k Y, \overline{z}) \longrightarrow
+\pi_1(X, \overline{x}) \times \pi_1(Y, \overline{y})
+$$
+is an isomorphism.
+\end{lemma}
+
+\begin{proof}
+We first prove the result when $k$ is algebraically closed. By
+Lemma \ref{lemma-thickening} we may replace $X$ and $Y$ by their reductions.
+The induced closed immersion between the products is a thickening as all
+schemes in question are Noetherian, so this replacement does not change the
+fundamental group of the product either. The resulting schemes are
+geometrically reduced by Varieties, Lemma
+\ref{varieties-lemma-perfect-reduced}. After interchanging
+$X$ and $Y$ if necessary, we may assume that $X$ is proper. The projection
+$$
+p : X \times_k Y \longrightarrow Y
+$$
+is flat, proper, and of finite presentation, and its geometric fibres are
+connected and reduced. The assertion is unaffected by changing base points,
+so we may choose them to be $k$-rational. Proposition
+\ref{proposition-first-homotopy-sequence} therefore gives an exact sequence
+$$
+\pi_1(X) \longrightarrow \pi_1(X \times_k Y)
+\longrightarrow \pi_1(Y) \longrightarrow 1.
+$$
+The inclusions of the two factors through these points and the two
+projections show that the natural
+map from the middle group to $\pi_1(X) \times \pi_1(Y)$ is surjective. If an
+element maps to $(1, 1)$, exactness shows that it comes from $\pi_1(X)$, and
+the first projection then shows that this element of $\pi_1(X)$ is trivial.
+Thus the natural map is also injective, proving the algebraically closed
+case.
+
+\medskip\noindent
+For a general field, apply Lemma \ref{lemma-ses-field} to $X$, $Y$, and
+$X \times_k Y$. The algebraically closed case and the natural projections
+give a commutative diagram with exact rows
+$$
+\xymatrix{
+1 \ar[r] & \pi_1((X \times_k Y)_{\overline{k}}) \ar[r] \ar[d]^{\cong} &
+\pi_1(X \times_k Y) \ar[r] \ar[d] &
+G_k \ar[r] \ar@{=}[d] & 1 \\
+1 \ar[r] & \pi_1(X_{\overline{k}}) \times
+\pi_1(Y_{\overline{k}}) \ar[r] &
+\pi_1(X) \times_{G_k} \pi_1(Y) \ar[r] & G_k \ar[r] & 1.
+}
+$$
+The middle vertical arrow is an isomorphism by a diagram chase.
+\end{proof}
+
 
 
 
