@@ -15,11 +15,11 @@ source patch.
 - 952 structural or embedded units classified
 - 9 item-level correction or historical units preserved
 - 292 independent mathematical or expository units identified for review
-- 222 review units now have append-only decisions: all 37 Expose 149 units
+- 255 review units now have append-only decisions: all 37 Expose 149 units
   including its erratum all 69 Expose 182 units including its erratum all 39
   Expose 190 units including its erratum all 21 Expose 195 units including its
-  erratum all 23 Expose 212 units including its erratum and all 33 Expose 221
-  units including its erratum
+  erratum all 23 Expose 212 units including its erratum all 33 Expose 221
+  units including its erratum and all 33 Expose 232 units including its erratum
 - Expose 149 Proposition 2 remains explicitly open pending its higher-Ext
   hypothesis check
 - Expose 149 currently yields 20 `existing_stronger` decisions 10
@@ -42,9 +42,12 @@ source patch.
 - Expose 221 yields 4 `existing_equivalent` decisions 1 `existing_stronger`
   decision 5 `existing_weaker` decisions 6 `extend_existing` decisions 13
   `new_statement` decisions and 4 historical decisions
-- 77 units remain in `needs_review`: 76 without a final decision and the
+- Expose 232 yields 2 `existing_equivalent` decisions 7 `existing_weaker`
+  decisions 11 `extend_existing` decisions 5 `new_statement` decisions and 8
+  historical decisions
+- 45 units remain in `needs_review`: 44 without a final decision and the
   explicitly open Expose 149 proposition
-- 3 later correction or comment roots still require item-level link review
+- 2 later correction or comment roots still require item-level link review
 
 Sections remain independent review units.  A provisional rule that treated
 every section as a structural container was rejected before publication
@@ -52,7 +55,7 @@ because FGA sections contain substantial unboxed mathematics such as the
 composition law in Ext.  Equations subitems and diagrams inherit the decision
 of their semantic parent.
 
-Five source-hypothesis issues are fail-closed in `issues.csv`.  Expose 149
+Six source-hypothesis issues are fail-closed in `issues.csv`.  Expose 149
 Proposition 2 remains open.  The confirmed issue is Expose 182 Corollary 6:
 the stated invariance under algebraically closed base-field extension needs
 properness in arbitrary characteristic; an Artin--Schreier cover of the affine
@@ -67,7 +70,11 @@ obstruction.  The affine-line map from a point is an immediate counterexample
 to the printed tangent formula.  Expose 212's projective-linear-group quotient
 conjecture is also confirmed false by its linked erratum: current Stacks gives
 an algebraic-space torsor quotient for a free flat action but neither scheme
-representability nor the asserted descended pre-ample polarization.
+representability nor the asserted descended pre-ample polarization.  Expose
+232 Remark 5.2 is likewise fail-closed: its linked erratum retracts the
+scheme-level Picard existence conjecture while current Stacks proves only
+algebraic-space representability under the universal constant-functions
+hypothesis.
 
 The broad later conjecture that finite maps should always give effective
 descent for flat modules was disproved by Venken.  This does not by itself
@@ -84,7 +91,7 @@ labels that have no entry in upstream's `tags/tags`; no replacement tag has
 been invented.
 
 No Stacks mathematical TeX has been changed yet.  The next cursor is Expose
-232.  The identified Expose 149 additions are the arbitrary-ideal Ext and Tor
+236.  The identified Expose 149 additions are the arbitrary-ideal Ext and Tor
 comparison maps the partial-range singular-duality equivalence and the general
 Hodge fixed-point statement.  The Expose 182 residuals include the formal
 moduli theorem, local-cover descent, projective-bundle automorphisms,
@@ -110,3 +117,10 @@ ample determinant line the local-to-global normal-sheaf smoothness package
 smooth Weil restriction along finite flat morphisms the norm morphism from
 finite-length Hilbert spaces to symmetric products and the scheme-level
 positive and negative Weil-restriction refinements.
+The Expose 232 residuals are the classical Picard-scheme and
+quasi-projective-translate existence theorem the general relative-divisor
+open Hilbert scheme the projective-bundle fibres and projectivity of the
+divisor-to-Picard morphism the degeneration counterexamples the affine
+component-gluing and nilpotent-thickening comparisons the arbitrary
+projective-scheme Picard theorem over a field and the Lefschetz and
+pro-algebraic class-group refinements.
