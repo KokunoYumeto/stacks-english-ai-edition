@@ -4,12 +4,12 @@ Snapshot: Stacks commit `a04446e57ec1fbc252a871afcec7752fb2807b14`.
 
 The reproducible intake, topic crosswalk, and statement-level review are
 complete for the bounded FGA corpus.  Every review unit has an append-only
-decision and source problems remain explicit.  Thirty-seven mathematical
+decision and source problems remain explicit.  Thirty-eight mathematical
 source patches are implemented and validated; further source integration
 remains in progress.
 
 - 119 Stacks TeX files indexed
-- 21,527 labelled TeX objects indexed
+- 21,532 labelled TeX objects indexed
 - 21,437 objects joined to an existing official tag
 - 55 FGA topics reviewed: 30 direct and 14 broad coverage decisions plus 6
   partial and 5 no-direct decisions
@@ -631,3 +631,25 @@ Descent chapter; no overfull box occurs in the added source block; and pages
 17--19, containing the full theorem, proof, counterexample warning, and both
 joins to the surrounding chapter, pass rendered inspection.  The next cursor
 is Expose 195, Theorem B.1.
+The thirty-eighth source patch adds the Grothendieck--Levelt criterion to
+Formal Deformation Theory.  It distinguishes finite-length algebras with
+varying residue fields from the fixed-residue-field deformation category,
+defines the required Cech equalizer property, proves the ring equalizer for
+minimal local extensions of length one, and states the exact equivalence
+between strict prorepresentability, preservation of all applicable Cech
+equalizers, and the traditional local tests `(P)`, `(L)`, and `(M)`.  The
+proof records the finite normal residue-field extension and finite free local
+base-change step rather than suppressing it.  Direct inspection of Levelt's
+1969 paper and his 1970 correction established that the criterion is valid
+but the last assertion of the original Section 3, Lemma 5 is false; the
+replacement proof is therefore cited explicitly and the invalid shortcut is
+preserved as a warning in
+`formal-defos-remark-levelt-correction`.  Decision `D000351` supersedes
+`D000154` with exact integrated coverage.  The Formal Deformation Theory
+chapter passed a bibliography-complete build followed by two final TeX passes
+at 77 pages; both Levelt records are registered in `my.bib`, no overfull box
+occurs in the added source block, and pages 74--76 containing the full
+insertion and both joins pass rendered inspection.  Both semantic validators
+report no errors:
+21,532 labels and 351 append-only decisions.  The next cursor is Expose 195,
+Proposition C.2.1.
