@@ -2,9 +2,10 @@
 
 Snapshot: Stacks commit `a04446e57ec1fbc252a871afcec7752fb2807b14`.
 
-The reproducible intake and topic crosswalk are complete for the bounded FGA
-corpus.  Statement-level review is in progress and is not yet a completed
-source patch.
+The reproducible intake, topic crosswalk, and statement-level review are
+complete for the bounded FGA corpus, apart from one explicitly fail-closed
+source hypothesis.  The first mathematical source patch is now the active
+cursor.
 
 - 119 Stacks TeX files indexed
 - 21,446 labelled TeX objects indexed
@@ -14,12 +15,14 @@ source patch.
 - 1,253 FGA units ingested with no omissions or duplicate IDs
 - 952 structural or embedded units classified
 - 9 item-level correction or historical units preserved
-- 292 independent mathematical or expository units identified for review
-- 255 review units now have append-only decisions: all 37 Expose 149 units
+- 301 non-structural mathematical, expository, correction, or historical
+  units identified for review
+- all 301 review units now have append-only decisions: all 37 Expose 149 units
   including its erratum all 69 Expose 182 units including its erratum all 39
   Expose 190 units including its erratum all 21 Expose 195 units including its
   erratum all 23 Expose 212 units including its erratum all 33 Expose 221
-  units including its erratum and all 33 Expose 232 units including its erratum
+  units including its erratum all 33 Expose 232 units including its erratum all
+  43 Expose 236 units including its erratum and all 3 Commentaires units
 - Expose 149 Proposition 2 remains explicitly open pending its higher-Ext
   hypothesis check
 - Expose 149 currently yields 20 `existing_stronger` decisions 10
@@ -45,9 +48,13 @@ source patch.
 - Expose 232 yields 2 `existing_equivalent` decisions 7 `existing_weaker`
   decisions 11 `extend_existing` decisions 5 `new_statement` decisions and 8
   historical decisions
-- 45 units remain in `needs_review`: 44 without a final decision and the
-  explicitly open Expose 149 proposition
-- 2 later correction or comment roots still require item-level link review
+- Expose 236 yields 3 `existing_equivalent` decisions 3 `existing_weaker`
+  decisions 14 `extend_existing` decisions 13 `new_statement` decisions 4
+  `new_section` decisions 1 example-or-remark decision and 5 historical
+  decisions
+- the 3 Commentaires units are preserved as historical editorial provenance
+- exactly 1 unit remains in `needs_review`: the explicitly open Expose 149
+  proposition; no correction or comment root remains unreviewed
 
 Sections remain independent review units.  A provisional rule that treated
 every section as a structural container was rejected before publication
@@ -90,8 +97,8 @@ The warnings preserve nine generated book-part labels and nine current TeX
 labels that have no entry in upstream's `tags/tags`; no replacement tag has
 been invented.
 
-No Stacks mathematical TeX has been changed yet.  The next cursor is Expose
-236.  The identified Expose 149 additions are the arbitrary-ideal Ext and Tor
+No Stacks mathematical TeX has been changed yet.  The next cursor is the first
+source patch.  The identified Expose 149 additions are the arbitrary-ideal Ext and Tor
 comparison maps the partial-range singular-duality equivalence and the general
 Hodge fixed-point statement.  The Expose 182 residuals include the formal
 moduli theorem, local-cover descent, projective-bundle automorphisms,
@@ -124,3 +131,11 @@ divisor-to-Picard morphism the degeneration counterexamples the affine
 component-gluing and nilpotent-thickening comparisons the arbitrary
 projective-scheme Picard theorem over a field and the Lefschetz and
 pro-algebraic class-group refinements.
+The Expose 236 residuals are the relative group loci and their constructibility
+and openness the Neron--Severi component scheme the properness smoothness and
+torsion loci of the Picard object the general Picard multiplication map the
+canonical abelian Picard subscheme the Albanese torsor and universal map the
+deformation and local-freeness packages Picard boundedness and projectivity.
+Its erratum supplement additionally isolates finite-type pullbacks and power
+maps finite type of the torsion-component locus bounded Neron--Severi groups
+numerical-equivalence tests and openness-and-closedness of the torsion locus.
