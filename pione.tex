@@ -3560,6 +3560,56 @@ we conclude.
 
 
 
+\begin{lemma}
+\label{lemma-ses-field-component}
+Let $k$ be a field with algebraic closure $\overline{k}$.
+Let $X$ be a connected scheme of finite type over $k$ and let
+$\overline{x} \in X(\overline{k})$.
+Set $G_k = \pi_1(\Spec(k), \Spec(\overline{k}))$.
+Let $C$ be the connected component of $X_{\overline{k}}$ containing
+$\overline{x}$ and let $H \subset G_k$ be the stabilizer of $C$. Then the
+image of
+$$
+\pi_1(X, \overline{x}) \longrightarrow G_k
+$$
+is $H$, and there is a short exact sequence
+$$
+1 \longrightarrow \pi_1(C, \overline{x}) \longrightarrow
+\pi_1(X, \overline{x}) \longrightarrow H \longrightarrow 1.
+$$
+\end{lemma}
+
+\begin{proof}
+The connected components of $X_{\overline{k}}$ are open and closed and
+there are only finitely many of them. The group $G_k$ acts transitively on
+this finite set: a union of orbits would be a $G_k$-stable open and closed
+subset and hence would descend to an open and closed subset of $X$ by
+Varieties, Lemma \ref{varieties-lemma-closed-fixed-by-Galois}, applied also
+to its complement. This would contradict the connectedness of $X$.
+In particular, $H$ is open in $G_k$.
+
+\medskip\noindent
+Let $k' \subset \overline{k}$ be the finite separable extension with
+$H = \text{Gal}(\overline{k}/k')$. Applying the same descent lemma over
+$k'$ to $C$ and its complement gives an open and closed subscheme
+$X' \subset X_{k'}$ whose base change to $\overline{k}$ is $C$.
+View $X' \to X$ as a morphism of $k$-schemes. After base change to
+$\overline{k}$ its source is the disjoint union of the conjugates of $C$,
+one for every coset of $H$ in $G_k$, and the morphism identifies these
+with all the connected components of $X_{\overline{k}}$. It is therefore
+an isomorphism after this faithfully flat base change, hence an isomorphism
+by Descent, Lemma \ref{descent-lemma-descending-property-isomorphism}.
+
+\medskip\noindent
+Thus $X$, as a scheme, has the $k'$-structure $X'$, and its base change
+to $\overline{k}$ over $k'$ is the connected scheme $C$. Applying
+Lemma \ref{lemma-ses-field} to $X'/k'$ gives the displayed exact sequence
+and identifies the image in $G_k$ with
+$\text{Gal}(\overline{k}/k') = H$.
+\end{proof}
+
+
+
 \section{Homotopy exact sequence}
 \label{section-homotopy-exact-sequence}
 
@@ -3963,8 +4013,8 @@ Proposition \ref{proposition-first-homotopy-sequence}.
 \begin{reference}
 \cite[Expos\'e 182, Corollaire 5, p. 215, with the 1962 correction]{FGA}
 \end{reference}
-Let $k$ be a field. Let $X$ and $Y$ be geometrically connected schemes of
-finite type over $k$. Assume that $X$ or $Y$ is proper over $k$. Choose an
+Let $k$ be a field. Let $X$ and $Y$ be connected schemes of finite type
+over $k$. Assume that $X$ or $Y$ is proper over $k$. Choose an
 algebraic closure $\overline{k}$ and points
 $$
 \overline{x} \in X(\overline{k}), \qquad
@@ -3976,12 +4026,12 @@ $$
 \pi_1(X \times_k Y, \overline{z}) \longrightarrow
 \pi_1(X, \overline{x}) \times_{G_k} \pi_1(Y, \overline{y})
 $$
-is an isomorphism. In particular, if $k$ is algebraically closed, then
+is an isomorphism. Consequently, the natural map
 $$
 \pi_1(X \times_k Y, \overline{z}) \longrightarrow
 \pi_1(X, \overline{x}) \times \pi_1(Y, \overline{y})
 $$
-is an isomorphism.
+is injective. If $k$ is algebraically closed, then it is an isomorphism.
 \end{lemma}
 
 \begin{proof}
@@ -4013,20 +4063,41 @@ Thus the natural map is also injective, proving the algebraically closed
 case.
 
 \medskip\noindent
-For a general field, apply Lemma \ref{lemma-ses-field} to $X$, $Y$, and
-$X \times_k Y$. The algebraically closed case and the natural projections
-give a commutative diagram with exact rows
+For a general field, let $C_X$ and $C_Y$ be the connected components of
+$X_{\overline{k}}$ and $Y_{\overline{k}}$ containing $\overline{x}$ and
+$\overline{y}$. Let $H_X, H_Y \subset G_k$ be their stabilizers. The product
+$C_X \times_{\overline{k}} C_Y$ is connected: its projection to $C_Y$ is
+open and surjective with connected fibres. Thus it is the connected component
+of $(X \times_k Y)_{\overline{k}}$ containing $\overline{z}$. Its stabilizer is
+$$
+H = H_X \cap H_Y.
+$$
+Let $W$ be the connected component of $X \times_k Y$ containing
+$\overline{z}$; its fundamental group is the fundamental group of
+$X \times_k Y$ at $\overline{z}$. Set
+$$
+P = \pi_1(X, \overline{x}) \times_{G_k}
+\pi_1(Y, \overline{y}).
+$$
+Lemma \ref{lemma-ses-field-component}, applied to $X$, $Y$, and $W$, gives
+a commutative diagram with exact rows
 $$
 \xymatrix{
-1 \ar[r] & \pi_1((X \times_k Y)_{\overline{k}}) \ar[r] \ar[d]^{\cong} &
-\pi_1(X \times_k Y) \ar[r] \ar[d] &
-G_k \ar[r] \ar@{=}[d] & 1 \\
-1 \ar[r] & \pi_1(X_{\overline{k}}) \times
-\pi_1(Y_{\overline{k}}) \ar[r] &
-\pi_1(X) \times_{G_k} \pi_1(Y) \ar[r] & G_k \ar[r] & 1.
+1 \ar[r] & \pi_1(C_X \times_{\overline{k}} C_Y) \ar[r]
+\ar[d]^{\cong} &
+\pi_1(W, \overline{z}) \ar[r] \ar[d] &
+H \ar[r] \ar@{=}[d] & 1 \\
+1 \ar[r] & \pi_1(C_X, \overline{x}) \times
+\pi_1(C_Y, \overline{y}) \ar[r] &
+P \ar[r] & H \ar[r] & 1.
 }
 $$
-The middle vertical arrow is an isomorphism by a diagram chase.
+The bottom row is exact because
+$\pi_1(X, \overline{x}) \to H_X$ and
+$\pi_1(Y, \overline{y}) \to H_Y$ are surjective. The left vertical arrow
+is an isomorphism by the algebraically closed case; if one of $X$ and $Y$
+is proper, then the corresponding geometric component is proper. The middle
+vertical arrow is therefore an isomorphism by a diagram chase.
 \end{proof}
 
 

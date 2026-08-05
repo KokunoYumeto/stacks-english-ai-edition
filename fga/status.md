@@ -405,8 +405,22 @@ passed two final PDF builds at 70 pages with no new overfull boxes, and the
 complete additions on pages 59--61 passed rendered inspection.  Expose 149
 now has no remaining `new_statement` or `extend_existing` disposition.  The
 next cursor is Expose 182's non-geometrically-connected product injection.
-The only remaining Expose 182 mismatch is the
-non-geometrically-connected branch of the product injection.
+The twenty-sixth source patch adds
+`pione-lemma-ses-field-component` and strengthens
+`pione-lemma-fundamental-group-product-one-proper`.  The new exact sequence
+identifies the image of a connected scheme's fundamental group in the
+absolute Galois group with the stabilizer of its chosen geometric component.
+Intersecting the two stabilizers then identifies the fundamental group of the
+chosen product component with the arithmetic fibre product over the absolute
+Galois group.  It follows that the map to the direct product is injective for
+arbitrary connected finite-type factors when one is proper and is an
+isomorphism over an algebraically closed field; the historical separability
+hypothesis is unnecessary.  Decision `D000338` supersedes residual record
+`D000322` with stronger coverage.  The Fundamental Groups chapter passed two
+final PDF builds at 89 pages with no new overfull boxes, and the complete
+additions on pages 39 and 44--45 passed rendered inspection.  The product
+residual in Expose 182 is closed.  The next cursor is Expose 190's
+finite-epimorphism factorization.
 The Expose 190 residuals include finite-epimorphism factorization the analytic
 Grauert--Remmert passage Cartier p-connection descent the Atiyah--Cartier
 rationality criterion descent of abelian models and the non-GL_n torsor
