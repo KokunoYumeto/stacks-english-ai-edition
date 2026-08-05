@@ -4,11 +4,11 @@ Snapshot: Stacks commit `a04446e57ec1fbc252a871afcec7752fb2807b14`.
 
 The reproducible intake, topic crosswalk, and statement-level review are
 complete for the bounded FGA corpus, apart from one explicitly fail-closed
-source hypothesis.  The first nine mathematical source patches are implemented
+source hypothesis.  The first ten mathematical source patches are implemented
 and validated; further source integration remains in progress.
 
 - 119 Stacks TeX files indexed
-- 21,469 labelled TeX objects indexed
+- 21,471 labelled TeX objects indexed
 - 21,437 objects joined to an existing official tag
 - 55 FGA topics reviewed: 30 direct and 14 broad coverage decisions plus 6
   partial and 5 no-direct decisions
@@ -28,8 +28,8 @@ and validated; further source integration remains in progress.
 - Expose 149 currently yields 20 `existing_stronger` decisions 10
   `existing_equivalent` decisions 2 `extend_existing` decisions 1
   `new_statement` decision 3 historical decisions and 1 open decision
-- Expose 182 yields 29 `existing_stronger` decisions 19
-  `existing_equivalent` decisions 4 `existing_weaker` decisions 7
+- Expose 182 yields 29 `existing_stronger` decisions 21
+  `existing_equivalent` decisions 4 `existing_weaker` decisions 5
   `extend_existing` decisions 6 `new_statement` decisions and 4 historical
   decisions
 - Expose 190 yields 19 `existing_equivalent` decisions 8
@@ -106,8 +106,8 @@ claim.  The unit therefore remains an explicit extension target rather than
 being silently identified with fpqc descent.
 
 Both `check.json` and `mcheck.json` report `PASS` with empty `errors` arrays.
-The warnings preserve nine generated book-part labels and thirty-two current
-TeX labels that have no entry in upstream's `tags/tags`; twenty-three of these
+The warnings preserve nine generated book-part labels and thirty-four current
+TeX labels that have no entry in upstream's `tags/tags`; twenty-five of these
 are the new source labels below.  No replacement tag has been invented.
 
 The first source patch adds
@@ -194,12 +194,22 @@ Decision `D000317` replaces the former ingredient-only record for FGA 182,
 Corollary 2 on catalog page 206 with a direct modern equivalent, including
 the dimension-zero case.  Both affected chapters passed two PDF builds and
 the complete inserted pages passed rendered inspection.
+The tenth source patch adds
+`defos-lemma-projective-lift-complete-local`, which combines cotangent-complex
+obstructions, the Picard exact sequence for first-order thickenings, and
+Grothendieck algebraization to lift a smooth projective scheme when the second
+cohomology of its structure and tangent sheaves vanishes.  It also adds
+`defos-lemma-smooth-proper-curve-lift-complete-local`, using dimension-one
+projectivity and cohomological vanishing.  Decisions `D000318` and `D000319`
+replace the two former ingredient-only records for FGA 182, Corollaries 3 and
+4 on catalog page 206 with direct modern equivalents.  The Deformation Theory
+chapter passed two PDF builds and both complete inserted statements passed
+rendered inspection.
 The identified Expose 149
 additions are the arbitrary-ideal Ext and Tor
 comparison maps the partial-range singular-duality equivalence and the general
 Hodge fixed-point statement.  The Expose 182 residuals include the formal
-moduli theorem, local-cover descent, projective-space lifting,
-a product formula for fundamental
+moduli theorem, local-cover descent, a product formula for fundamental
 groups, finite generation for curves, and the tame specialization package.
 The Expose 190 residuals include finite-epimorphism factorization the analytic
 Grauert--Remmert passage Cartier p-connection descent the Atiyah--Cartier
