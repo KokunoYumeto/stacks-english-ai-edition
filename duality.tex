@@ -6886,6 +6886,141 @@ whence the result by the discussion in that remark.
 \end{proof}
 
 \begin{lemma}
+\label{lemma-duality-proper-over-field-in-range}
+Let $X$ be a nonempty projective scheme over a field $k$.
+Let $\mathcal{L}$ be an ample invertible $\mathcal{O}_X$-module.
+Let $\omega_X^\bullet$ and $\omega_X$ be as in
+Lemma \ref{lemma-duality-proper-over-field}, and set $d = \dim(X)$.
+For a coherent $\mathcal{O}_X$-module $\mathcal{F}$ and $p \in \mathbf{Z}$,
+consider the map
+$$
+\begin{aligned}
+a_{\mathcal{F}, p} :
+\Ext_X^{d - p}(\mathcal{F}, \omega_X)
+& = \Ext_X^{-p}(\mathcal{F}, \omega_X[d]) \\
+& \longrightarrow \Ext_X^{-p}(\mathcal{F}, \omega_X^\bullet) \\
+& = \Hom_k(H^p(X, \mathcal{F}), k).
+\end{aligned}
+$$
+Here the arrow is induced by the canonical map
+$\omega_X[d] \to \omega_X^\bullet$. For an integer $c \geq 0$, the
+following are equivalent.
+\begin{enumerate}
+\item The map $a_{\mathcal{F}, p}$ is an isomorphism for every coherent
+$\mathcal{F}$ and $d - c \leq p \leq d$.
+\item We have
+$H^p(X, \mathcal{L}^{\otimes -m}) = 0$ for $m \gg 0$ and
+$d - c \leq p < d$.
+\item For every coherent $\mathcal{F}$ and $d - c \leq p < d$, there
+is a surjection $\mathcal{E} \to \mathcal{F}$ of coherent modules such that
+$$
+H^p(X, \mathcal{E}) \longrightarrow H^p(X, \mathcal{F})
+$$
+is zero.
+\item We have $H^{-d + i}(\omega_X^\bullet) = 0$ for $0 < i \leq c$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+The canonical map in the statement exists because
+$\omega_X^\bullet$ has no cohomology in degrees less than $-d$.
+The final equality in the definition of $a_{\mathcal{F},p}$ is
+Lemma \ref{lemma-duality-proper-over-field} part (5).
+
+\medskip\noindent
+Assume (1). For $d - c \leq p < d$, apply (1) to
+$\mathcal{F} = \mathcal{L}^{\otimes -m}$. Since this module is invertible,
+the source of $a_{\mathcal{F},p}$ is
+$$
+H^{d - p}(X, \omega_X \otimes \mathcal{L}^{\otimes m}),
+$$
+which is zero for $m \gg 0$ by
+Cohomology of Schemes, Lemma \ref{coherent-lemma-coherent-proper-ample}.
+Thus (2) holds.
+
+\medskip\noindent
+Assume (2). Given $\mathcal{F}$ and $p$ as in (3), choose $m$ sufficiently
+large that $\mathcal{F} \otimes \mathcal{L}^{\otimes m}$ is globally
+generated and $H^p(X, \mathcal{L}^{\otimes -m}) = 0$. Such an $m$ exists by
+Properties, Proposition \ref{properties-proposition-characterize-ample}
+and (2). We obtain a surjection
+$$
+(\mathcal{L}^{\otimes -m})^{\oplus r} \longrightarrow \mathcal{F}
+$$
+for some $r$, and this surjection has the property required in (3).
+
+\medskip\noindent
+Assume (3). For $q \geq 0$, set
+$$
+T^q(\mathcal{F}) = \Ext_X^q(\mathcal{F}, \omega_X)
+\quad\text{and}\quad
+U^q(\mathcal{F}) = \Hom_k(H^{d - q}(X, \mathcal{F}), k).
+$$
+These are contravariant delta functors on coherent modules, and the maps
+$a_{\mathcal{F},d-q}$ give a morphism between them. The map
+$T^0(\mathcal{F}) \to U^0(\mathcal{F})$ is an isomorphism by
+Lemma \ref{lemma-duality-proper-over-field} part (6).
+
+For $q > 0$, the functor $T^q$ is co-effaceable with respect to
+surjections. Indeed, choose $m \gg 0$ and a surjection
+$$
+(\mathcal{L}^{\otimes -m})^{\oplus r} \longrightarrow \mathcal{F}.
+$$
+By Cohomology of Schemes, Lemma
+\ref{coherent-lemma-coherent-proper-ample}, we may choose $m$ such that
+$$
+\Ext_X^q(\mathcal{L}^{\otimes -m}, \omega_X) =
+H^q(X, \omega_X \otimes \mathcal{L}^{\otimes m}) = 0.
+$$
+Condition (3), after taking $k$-linear duals, says that $U^q$ is
+co-effaceable for $1 \leq q \leq c$.
+
+We finish by dimension shifting. Suppose by induction that
+$T^{q - 1} \to U^{q - 1}$ is an isomorphism on every coherent module.
+Given $\mathcal{F}$, take a surjection $\mathcal{E}_1 \to \mathcal{F}$
+which kills the map from $U^q(\mathcal{F})$, and then a surjection
+$\mathcal{E} \to \mathcal{E}_1$ with $T^q(\mathcal{E}) = 0$.
+The composite $\mathcal{E} \to \mathcal{F}$ kills the maps from both
+$T^q(\mathcal{F})$ and $U^q(\mathcal{F})$. If $\mathcal{K}$ is its kernel,
+the two long exact sequences identify $T^q(\mathcal{F})$ and
+$U^q(\mathcal{F})$ with the respective cokernels of
+$$
+T^{q - 1}(\mathcal{E}) \longrightarrow T^{q - 1}(\mathcal{K})
+\quad\text{and}\quad
+U^{q - 1}(\mathcal{E}) \longrightarrow U^{q - 1}(\mathcal{K}).
+$$
+The induction hypothesis identifies these cokernels. This proves (1).
+
+\medskip\noindent
+It remains to compare (2) and (4). By duality and invertibility of
+$\mathcal{L}$, we have
+$$
+\Hom_k(H^p(X, \mathcal{L}^{\otimes -m}), k) =
+H^{-p}(X, \omega_X^\bullet \otimes \mathcal{L}^{\otimes m}).
+$$
+The spectral sequence of Cohomology, Example
+\ref{cohomology-example-spectral-sequence} has terms
+$$
+H^a(X, H^b(\omega_X^\bullet) \otimes \mathcal{L}^{\otimes m})
+$$
+and converges to the group on the right. There are only finitely many
+nonzero coherent modules $H^b(\omega_X^\bullet)$. Hence, for $m \gg 0$,
+Serre vanishing makes the spectral sequence degenerate and gives
+$$
+\Hom_k(H^p(X, \mathcal{L}^{\otimes -m}), k) =
+H^0(X, H^{-p}(\omega_X^\bullet) \otimes \mathcal{L}^{\otimes m}).
+$$
+A coherent module $\mathcal{G}$ is zero if and only if
+$H^0(X, \mathcal{G} \otimes \mathcal{L}^{\otimes m})$ is zero for all
+sufficiently large $m$: use global generation for the nontrivial direction.
+Taking $p = d - i$ proves the equivalence of (2) and (4).
+
+This is the intrinsic dualizing-complex form of
+\cite[Expos\'e 149, Th\'eor\`eme 3 bis and Proposition 6,
+pp. 186--187]{FGA}.
+\end{proof}
+
+\begin{lemma}
 \label{lemma-duality-proper-over-field-CM}
 Let $X$ be a proper scheme over a field $k$ which is Cohen-Macaulay
 and equidimensional of dimension $d$. The module $\omega_X$
