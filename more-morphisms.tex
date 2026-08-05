@@ -8436,6 +8436,119 @@ This is an immediate consequence of
 Lemma \ref{lemma-connected-along-section-open-neighbourhood}.
 \end{proof}
 
+\begin{lemma}
+\label{lemma-torsion-component-locus-open}
+Let $S$ be a locally Noetherian scheme. Let $f : G \to S$ be a commutative
+group scheme locally of finite type over $S$. For $s \in S$, denote $G_s^0$ the
+connected component of the identity of $G_s$. Then
+$$
+G^\tau = \{x \in G \mid [n](x) \in G_{f(x)}^0
+\text{ for some }n \geq 1\}
+$$
+is an open subgroup scheme of $G$. Formation of this open subscheme commutes
+with arbitrary base change between locally Noetherian schemes.
+\end{lemma}
+
+\begin{proof}
+The assertion about base change follows from
+Lemma \ref{lemma-base-change-connected-along-section}. We first show that
+for every section $a : S \to G$ the set
+$$
+T_a = \{s \in S \mid a(s) \in G_s^\tau\}
+$$
+is open. We may work over an affine open of $S$ and hence assume that $S$
+is Noetherian.
+
+\medskip\noindent
+We claim that $T_a$ is stable under generalization. Let $s'$ be a
+specialization of $s$ and suppose that $s' \in T_a$. The powers of $a(s')$
+lie in finitely many connected components of $G_{s'}$. Each of these
+components is a translate of $G_{s'}^0$ and is quasi-compact by Groupoids,
+Proposition \ref{groupoids-proposition-connected-component}. Hence there is
+a quasi-compact open $W \subset G$ which contains all the powers of $a(s')$.
+Since $a(s)$ is a generalization of $a(s')$, all the powers of $a(s)$ lie
+in $W_s$. Connected components of the locally Noetherian scheme $G_s$ are
+open, and the quasi-compact scheme $W_s$ meets only finitely many of them.
+Two powers of $a(s)$ therefore lie in the same connected component.
+Translation by the inverse of the smaller power shows that a positive power
+of $a(s)$ lies in $G_s^0$. Thus $s \in T_a$, proving the claim.
+
+\medskip\noindent
+Let $Z \subset S$ be an irreducible closed subset with generic point $\eta$.
+If $T_a \cap Z$ is nonempty, then $\eta \in T_a$ by the claim. Choose
+$n \geq 1$ such that $[n](a(\eta)) \in G_\eta^0$. The subset
+$G^0 = \bigcup G_s^0$ is locally constructible by
+Lemma \ref{lemma-connected-along-section-locally-constructible}. Hence
+$([n] \circ a)^{-1}(G^0) \cap Z$ is constructible and contains $\eta$.
+It contains a nonempty open of $Z$ by Topology, Lemma
+\ref{topology-lemma-generic-point-in-constructible}. It follows from
+Topology, Lemma
+\ref{topology-lemma-characterize-constructible-Noetherian}
+that $T_a$ is constructible. Since it is stable under generalization, it is
+open by Topology, Lemma
+\ref{topology-lemma-characterize-closed-Noetherian}.
+
+Apply this result after base change by $G \to S$ to the section of
+$G \times_S G \to G$ which maps $x$ to $(x, x)$. Its inverse image of the
+torsion-component locus is $G^\tau$. Thus $G^\tau$ is open. It is a subgroup
+fibrewise, and hence its open subscheme structure makes it an open subgroup
+scheme of $G$.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-order-in-component-group-constructible}
+In the situation of Lemma \ref{lemma-torsion-component-locus-open}, define
+$$
+\nu : G^\tau \longrightarrow \{1, 2, 3, \ldots\}, \qquad
+\nu(x) = \min\{n \geq 1 \mid [n](x) \in G_{f(x)}^0\}.
+$$
+Every point of $G^\tau$ has a neighbourhood on which $\nu$ has finite image
+and all its level sets are constructible.
+
+Suppose there is a $p$, equal to $1$ or to a prime number, such that the
+characteristic exponent of every residue field of $S$ is $p$. Then
+$$
+G^\sigma = \{x \in G^\tau \mid (\nu(x),p)=1\}, \qquad
+G^\rho = \{x \in G^\tau \mid \nu(x)\text{ is a power of }p\}
+$$
+are locally constructible. If $G^0 = \bigcup G_s^0$ is closed in $G$, then
+$G^\tau$ is open and closed. Under the equal-characteristic-exponent
+assumption, $G^\sigma$ and $G^\rho$ are closed as well.
+\end{lemma}
+
+\begin{proof}
+Let $x \in G^\tau$. By Lemma
+\ref{lemma-torsion-component-locus-open}, we can choose a quasi-compact
+open neighbourhood $U \subset G^\tau$ of $x$. For $n \geq 1$, set
+$$
+E_n = U \cap [n]^{-1}(G^0).
+$$
+These are constructible subsets of the Noetherian scheme $U$ by
+Lemma \ref{lemma-connected-along-section-locally-constructible}. They cover
+$U$. Constructible subsets are open in the constructible topology, and this
+topology on $U$ is quasi-compact by Topology, Lemma
+\ref{topology-lemma-constructible-hausdorff-quasi-compact}. Thus finitely many
+$E_{n_1}, \ldots, E_{n_r}$ cover $U$. It follows that every value of $\nu$
+on $U$ divides one of the $n_i$. In particular $\nu$ has finite image on
+$U$. Moreover, for $n \geq 1$ we have
+$$
+\{u \in U \mid \nu(u)=n\} =
+E_n \setminus \bigcup_{\substack{d \mid n \\ d < n}} E_d,
+$$
+which is constructible. This proves the first assertion and also the local
+constructibility of $G^\sigma$ and $G^\rho$.
+
+Suppose $G^0$ is closed. If $x \in G^\tau$ specializes to $x'$, then
+$[n](x) \in G^0$ for some $n$, and hence $[n](x') \in G^0$. Thus
+$G^\tau$ is stable under specialization. Since it is locally constructible,
+it is closed by Topology, Lemma
+\ref{topology-lemma-characterize-closed-Noetherian}. If $\nu(x)$ is prime
+to $p$, the integer $n$ can be chosen prime to $p$, and if $\nu(x)$ is a
+power of $p$, the integer $n$ can be chosen to be a power of $p$. The same
+argument proves that $G^\sigma$ and $G^\rho$ are stable under specialization.
+Their local constructibility proves that they are closed.
+\end{proof}
+
 
 
 

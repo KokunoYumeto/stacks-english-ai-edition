@@ -4,11 +4,11 @@ Snapshot: Stacks commit `a04446e57ec1fbc252a871afcec7752fb2807b14`.
 
 The reproducible intake, topic crosswalk, and statement-level review are
 complete for the bounded FGA corpus, apart from one explicitly fail-closed
-source hypothesis.  The first three mathematical source patches are implemented
+source hypothesis.  The first four mathematical source patches are implemented
 and validated; further source integration remains in progress.
 
 - 119 Stacks TeX files indexed
-- 21,453 labelled TeX objects indexed
+- 21,455 labelled TeX objects indexed
 - 21,437 objects joined to an existing official tag
 - 55 FGA topics reviewed: 30 direct and 14 broad coverage decisions plus 6
   partial and 5 no-direct decisions
@@ -48,8 +48,8 @@ and validated; further source integration remains in progress.
 - Expose 232 yields 2 `existing_equivalent` decisions 7 `existing_weaker`
   decisions 11 `extend_existing` decisions 5 `new_statement` decisions and 8
   historical decisions
-- Expose 236 yields 3 `existing_equivalent` decisions 1 `existing_stronger`
-  decision 5 `existing_weaker` decisions 13 `extend_existing` decisions 11
+- Expose 236 yields 3 `existing_equivalent` decisions 2 `existing_stronger`
+  decisions 6 `existing_weaker` decisions 13 `extend_existing` decisions 9
   `new_statement` decisions 4 `new_section` decisions 1 example-or-remark
   decision and 5 historical decisions
 - the 3 Commentaires units are preserved as historical editorial provenance
@@ -101,8 +101,8 @@ claim.  The unit therefore remains an explicit extension target rather than
 being silently identified with fpqc descent.
 
 Both `check.json` and `mcheck.json` report `PASS` with empty `errors` arrays.
-The warnings preserve nine generated book-part labels and sixteen current TeX
-labels that have no entry in upstream's `tags/tags`; seven of these are the new
+The warnings preserve nine generated book-part labels and eighteen current TeX
+labels that have no entry in upstream's `tags/tags`; nine of these are the new
 source labels below.  No replacement tag has been invented.
 
 The first source patch adds
@@ -134,6 +134,16 @@ specialization theorem.  Decision `D000307` supersedes the earlier gap record
 but deliberately retains `existing_weaker` for the historical perfect-or-
 proper criterion and specialization claim.  The Bootstrap chapter compiles to
 PDF without TeX errors and both inserted pages passed rendered inspection.
+The fourth source patch adds
+`more-morphisms-lemma-torsion-component-locus-open`, which makes the
+fibrewise torsion-component locus a base-change-compatible open subgroup, and
+`more-morphisms-lemma-order-in-component-group-constructible`, which proves
+local finite-image constructibility of the component-order function and the
+equal-characteristic sigma and rho loci.  Decisions `D000308` and `D000309`
+replace the former gap records while retaining the unproved properness and
+universal-openness clauses as residuals.  The More on Morphisms chapter
+compiles to PDF without TeX errors and the two inserted pages and transition
+passed rendered inspection.
 The identified Expose 149
 additions are the arbitrary-ideal Ext and Tor
 comparison maps the partial-range singular-duality equivalence and the general
@@ -168,9 +178,9 @@ divisor-to-Picard morphism the degeneration counterexamples the affine
 component-gluing and nilpotent-thickening comparisons the arbitrary
 projective-scheme Picard theorem over a field and the Lefschetz and
 pro-algebraic class-group refinements.
-The Expose 236 residuals are the relative group loci and their constructibility
-and openness the reduced-component specialization refinements the properness
-smoothness and
+The Expose 236 residuals are the remaining relative component-locus
+properness and universal-openness assertions the reduced-component
+specialization refinements the properness smoothness and
 torsion loci of the Picard object the general Picard multiplication map the
 canonical abelian Picard subscheme the Albanese torsor and universal map the
 deformation and local-freeness packages Picard boundedness and projectivity.
