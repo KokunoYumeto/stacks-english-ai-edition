@@ -15,9 +15,10 @@ source patch.
 - 952 structural or embedded units classified
 - 9 item-level correction or historical units preserved
 - 292 independent mathematical or expository units identified for review
-- 145 review units now have append-only decisions: all 37 Expose 149 units
-  including its erratum all 69 Expose 182 units including its erratum and all
-  39 Expose 190 units including its erratum
+- 166 review units now have append-only decisions: all 37 Expose 149 units
+  including its erratum all 69 Expose 182 units including its erratum all 39
+  Expose 190 units including its erratum and all 21 Expose 195 units including
+  its erratum
 - Expose 149 Proposition 2 remains explicitly open pending its higher-Ext
   hypothesis check
 - Expose 149 currently yields 20 `existing_stronger` decisions 10
@@ -31,9 +32,12 @@ source patch.
   `existing_stronger` decisions 1 `existing_weaker` decision 4
   `extend_existing` decisions 2 `new_statement` decisions and 5 historical
   decisions
-- 151 units remain in `needs_review`: 150 without a final decision and the
+- Expose 195 yields 2 `existing_equivalent` decisions 6 `existing_stronger`
+  decisions 4 `existing_weaker` decisions 4 `extend_existing` decisions 4
+  `new_statement` decisions and 1 historical decision
+- 131 units remain in `needs_review`: 130 without a final decision and the
   explicitly open Expose 149 proposition
-- 6 later correction or comment roots still require item-level link review
+- 5 later correction or comment roots still require item-level link review
 
 Sections remain independent review units.  A provisional rule that treated
 every section as a structural container was rejected before publication
@@ -41,7 +45,7 @@ because FGA sections contain substantial unboxed mathematics such as the
 composition law in Ext.  Equations subitems and diagrams inherit the decision
 of their semantic parent.
 
-Three source-hypothesis issues are fail-closed in `issues.csv`.  Expose 149
+Four source-hypothesis issues are fail-closed in `issues.csv`.  Expose 149
 Proposition 2 remains open.  The confirmed issue is Expose 182 Corollary 6:
 the stated invariance under algebraically closed base-field extension needs
 properness in arbitrary characteristic; an Artin--Schreier cover of the affine
@@ -49,7 +53,20 @@ line supplies a characteristic-p counterexample to the unrestricted claim.
 Expose 190 Theorem 3 also remains open at its arbitrary non-Noetherian scope:
 the direct current Stacks results require a finite locally free cover whereas
 the historical statement assumes finite flat or radicial fpqc descent without
-a finite-presentation hypothesis.
+a finite-presentation hypothesis.  Expose 195 Proposition 2.1 has a confirmed
+cohomological-degree error: infinitesimal lifts of a fixed morphism form a
+torsor under global derivations in degree zero while degree one contains the
+obstruction.  The affine-line map from a point is an immediate counterexample
+to the printed tangent formula.
+
+The broad later conjecture that finite maps should always give effective
+descent for flat modules was disproved by Venken.  This does not by itself
+refute Expose 195 Theorem 2 because that theorem adds an Artinian maximal-ideal
+condition and an Amitsur equalizer condition.  The current Stacks chapter gives
+the exact general criterion of universal injectivity but does not prove that
+the historical hypotheses imply it or otherwise recover the flat-module-only
+claim.  The unit therefore remains an explicit extension target rather than
+being silently identified with fpqc descent.
 
 Both `check.json` and `mcheck.json` report `PASS` with empty `errors` arrays.
 The warnings preserve nine generated book-part labels and nine current TeX
@@ -57,7 +74,7 @@ labels that have no entry in upstream's `tags/tags`; no replacement tag has
 been invented.
 
 No Stacks mathematical TeX has been changed yet.  The next cursor is Expose
-195.  The identified Expose 149 additions are the arbitrary-ideal Ext and Tor
+212.  The identified Expose 149 additions are the arbitrary-ideal Ext and Tor
 comparison maps the partial-range singular-duality equivalence and the general
 Hodge fixed-point statement.  The Expose 182 residuals include the formal
 moduli theorem, local-cover descent, projective-bundle automorphisms,
@@ -66,4 +83,8 @@ groups, finite generation for curves, and the tame specialization package.
 The Expose 190 residuals include finite-epimorphism factorization the analytic
 Grauert--Remmert passage Cartier p-connection descent the Atiyah--Cartier
 rationality criterion descent of abelian models and the non-GL_n torsor
-consequences.
+consequences.  The Expose 195 residuals are the general minimal-pair
+prorepresentability theorem its Artinian equalizer criterion the narrow
+non-flat descent theorem the nonproper formal Hom Picard and scheme-moduli
+cases the Witt-smooth abelian deformation result and the generally
+non-Noetherian formal parameter object for ramified finite flat coverings.
