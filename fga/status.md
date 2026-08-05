@@ -583,3 +583,19 @@ validators pass with no errors: 21,519 labels and 346 append-only decisions.
 The next cursor returns to the two remaining Expose 190 theorem-level
 residuals: finite-coequalizer flat descent on source pages 305--307 and the
 finite-flat quasi-projective branch on source pages 318--319.
+The thirty-fifth source patch adds
+`descent-lemma-finite-coequalizer-flat-base-change` and
+`descent-example-finite-effective-epimorphism-not-pure`.  It proves the full
+arbitrary finite-coequalizer flat-base-change and Hom-equalizer statement of
+Expose 190, Section 2(c), separates full faithfulness from effectivity, and
+demonstrates that a finite effective epimorphism need not be pure.  Decision
+`D000347` supersedes `D000340` with stronger modern coverage while preserving
+the narrower flat-data effectivity question as historical rather than
+claiming an unsupported answer.  The finite faithfully flat
+quasi-projective branch remains `I000003`, because direct authority contains
+no finite-presentation or local-freeness hypothesis.  The Descent chapter
+passed two final bibliography-complete builds at 102 pages with no new
+overfull box, and the complete addition on pages 24--27 passed rendered
+inspection.  Both semantic validators pass with no errors: 21,521 labels and
+347 append-only decisions.  Expose 190 is complete as classified, with
+`I000003` explicit; the next cursor is Expose 195.

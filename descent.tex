@@ -2178,6 +2178,85 @@ $\mathcal{J} = 0$, and hence $Z = S$ and $g = h$.
 \end{proof}
 
 \begin{lemma}
+\label{lemma-finite-coequalizer-flat-base-change}
+\begin{reference}
+\cite[Expos\'e 190, n\textsuperscript{o} 2(c), pp. 306--307]{FGA}.
+\end{reference}
+Let
+$$
+\xymatrix{
+S'' \ar@<0.5ex>[r]^a \ar@<-0.5ex>[r]_b &
+S' \ar[r]^f & S
+}
+$$
+be a coequalizer diagram in the category of schemes. Assume that $S'$ and
+$S''$ are finite over $S$. Then the following statements hold.
+\begin{enumerate}
+\item The diagram of quasi-coherent $\mathcal{O}_S$-algebras
+$$
+\mathcal{O}_S \longrightarrow f_*\mathcal{O}_{S'}
+\mathrel{\substack{\longrightarrow \\[-0.6ex] \longrightarrow}}
+(f \circ a)_*\mathcal{O}_{S''}
+$$
+is an equalizer diagram.
+\item For every flat morphism $T \to S$, the base change
+$$
+\xymatrix{
+S''_T \ar@<0.5ex>[r] \ar@<-0.5ex>[r] & S'_T \ar[r] & T
+}
+$$
+is a coequalizer diagram in the category of schemes.
+\item If $T$ and $Y$ are $S$-schemes and $T$ is flat over $S$, then
+$$
+\Mor_S(T, Y) \longrightarrow \Mor_{S'}(T_{S'}, Y_{S'})
+\mathrel{\substack{\longrightarrow \\[-0.6ex] \longrightarrow}}
+\Mor_{S''}(T_{S''}, Y_{S''})
+$$
+is an equalizer diagram.
+\item If $\mathcal{F}$ and $\mathcal{G}$ are quasi-coherent
+$\mathcal{O}_S$-modules and $\mathcal{G}$ is flat, then the analogous
+diagram of sets of module maps after pullback to $S'$ and $S''$ is an
+equalizer diagram.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+For a diagram of schemes finite over $S$, the coequalizer condition is
+equivalent to the equalizer condition on the corresponding finite
+quasi-coherent algebras. Here is a reminder of the argument. The assertion
+is local on $S$, where all three schemes are affine. For affine targets it
+is the anti-equivalence between rings and affine schemes. For an arbitrary
+target, finiteness shows that the structure map $S' \to S$ is closed. The
+inverse image of an affine open under a map out of $S'$ which equalizes
+$a$ and $b$ is saturated and hence descends to an open of $S$. The affine
+case constructs the descended map on these opens, and uniqueness glues
+them. This is the same finite topological argument used in the proof of
+Lemma \ref{lemma-finite-effective-epimorphism-functions}. This proves (1)
+and the stated equivalence.
+
+Formation of the finite pushforward algebras commutes with base change.
+Tensoring the equalizer in (1) with the flat $\mathcal{O}_S$-algebra
+$\mathcal{O}_T$ preserves it. The equivalence just recalled gives (2),
+and the universal property of the coequalizer gives (3).
+
+We prove (4) affine locally. Write the equalizer in (1) as
+$$
+A \longrightarrow B
+\mathrel{\substack{\longrightarrow \\[-0.6ex] \longrightarrow}} C.
+$$
+Let $M$ and $N$ correspond to $\mathcal{F}$ and $\mathcal{G}$. Since $N$
+is flat, tensoring gives an equalizer
+$$
+N \longrightarrow N \otimes_A B
+\mathrel{\substack{\longrightarrow \\[-0.6ex] \longrightarrow}}
+N \otimes_A C.
+$$
+A compatible $B$-linear map $M \otimes_A B \to N \otimes_A B$ sends
+$m \otimes 1$ into this equalizer for every $m \in M$. It therefore comes
+from a unique $A$-linear map $M \to N$. These maps glue by uniqueness.
+\end{proof}
+
+\begin{lemma}
 \label{lemma-finite-effective-epimorphism-functions}
 \begin{reference}
 \cite[Expos\'e 190, n\textsuperscript{o} 2(b), pp. 305--306]{FGA}.
@@ -2325,6 +2404,41 @@ is an equalizer. Full faithfulness now follows from Lemma
 \ref{lemma-equalizer-flat-module-descent}. The descended morphisms on affine
 opens agree on overlaps by uniqueness and hence glue.
 \end{proof}
+
+\begin{example}
+\label{example-finite-effective-epimorphism-not-pure}
+The equalizer condition for a finite effective epimorphism does not imply
+universal injectivity. Let $k$ be a field and set
+$$
+A = k[x, y]/(xy), \qquad B = k[x] \times k[y].
+$$
+Map $A$ to $B$ by restriction to the two coordinate axes. We have
+$$
+B \otimes_A B \cong k[x] \times k \times k \times k[y].
+$$
+The equalizer of the two maps $B \to B \otimes_A B$ consists of the pairs
+$(p(x), q(y))$ such that $p(0) = q(0)$, and hence is $A$. Thus
+$\Spec(B) \to \Spec(A)$ is a finite effective epimorphism by
+Lemma \ref{lemma-finite-effective-epimorphism-functions}.
+
+On the other hand, it is not universally injective. For the ideal
+$I = (x + y) \subset A$, we have
+$$
+x \in IB \cap A \quad\text{but}\quad x \notin I.
+$$
+The last assertion can be checked after identifying
+$A/I = k[x]/(x^2)$. Thus tensoring $A \to B$ with $A/I$ kills the
+nonzero class of $x$. By Algebra, Definition
+\ref{algebra-definition-universally-injective}, the map $A \to B$ is not
+universally injective. By Theorem
+\ref{theorem-descent}, it is not an effective descent morphism for all
+modules.
+
+This does not by itself answer the more restricted historical question for
+descent data whose underlying module is flat. Under the additional
+hypothesis of universal injectivity, Lemma
+\ref{lemma-effective-descent-flat-modules} gives an affirmative answer.
+\end{example}
 
 \begin{theorem}
 \label{theorem-finite-epimorphism-canonical-factorization}
