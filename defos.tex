@@ -2552,18 +2552,16 @@ isomorphism $X \times_{\Spec(A)} \Spec(k) \cong Y$.
 \end{lemma}
 
 \begin{proof}
-Choose an ample invertible sheaf $\mathcal{L}_1$ on $Y$. For $q \geq 1$,
-set
+For $q \geq 1$, set
 $$
 A_q = A/\mathfrak m^q, \qquad
 S_q = \Spec(A_q), \qquad
 V_q = \mathfrak m^q/\mathfrak m^{q + 1}.
 $$
 We will construct a compatible system of smooth proper morphisms
-$X_q \to S_q$ and invertible sheaves $\mathcal{L}_q$ on $X_q$, starting
-with $X_1 = Y$, such that $\mathcal{L}_{q + 1}|_{X_q} = \mathcal{L}_q$.
+$X_q \to S_q$, starting with $X_1 = Y$.
 
-Suppose $X_q$ and $\mathcal{L}_q$ have been constructed. Apply Cotangent
+Suppose $X_q$ has been constructed. Apply Cotangent
 Complex, Lemma \ref{cotangent-lemma-find-obstruction-ringed-spaces} to the
 first order thickening $S_q \subset S_{q + 1}$ and the coefficient module
 $\mathcal{O}_{X_q} \otimes_{A_q} V_q$, using the canonical map from the
@@ -2590,41 +2588,12 @@ proper by More on Morphisms, Lemma
 \ref{more-morphisms-lemma-thicken-property-morphisms-cartesian}. Since its
 only fibre is $Y$, it is smooth by Morphisms, Lemma
 \ref{morphisms-lemma-smooth-flat-smooth-fibres}.
-
-Let $\mathcal{I}_q$ be the ideal sheaf of $X_q$ in $X_{q + 1}$. It is the
-pushforward from $Y$ of $\mathcal{O}_Y \otimes_k V_q$. The exact sequence
-of More on Morphisms, Lemma
-\ref{more-morphisms-lemma-picard-group-first-order-thickening} shows that
-the obstruction to lifting $\mathcal{L}_q$ belongs to
-$$
-H^2(X_q, \mathcal{I}_q) =
-H^2(Y, \mathcal{O}_Y) \otimes_k V_q = 0.
-$$
-Thus $\mathcal{L}_q$ lifts to an invertible sheaf
-$\mathcal{L}_{q + 1}$ on $X_{q + 1}$. It is ample by More on Morphisms,
-Lemma \ref{more-morphisms-lemma-thicken-property-relatively-ample}.
 This completes the induction.
 
-Apply Grothendieck's algebraization theorem, Cohomology of Schemes,
-Theorem \ref{coherent-theorem-algebraization}, to the systems $(X_q)$ and
-$(\mathcal{L}_q)$. We obtain a proper morphism $X \to \Spec(A)$, an ample
-invertible sheaf on $X$, and compatible identifications of the reductions
-with the $X_q$. The morphism is projective by Morphisms, Lemma
-\ref{morphisms-lemma-finite-type-over-affine-ample-very-ample}.
-
-We finish by checking flatness and smoothness. Let $x$ be a point of the
-closed fibre and choose an affine open neighbourhood $\Spec(B) \subset X$
-of $x$. The ring $B$ is Noetherian and $B/\mathfrak m^qB$ is flat over
-$A_q$ for every $q$. Algebra, Lemma
-\ref{algebra-lemma-flat-module-powers} shows that $X \to \Spec(A)$ is flat
-at $x$. Thus the flat locus is an open neighbourhood of the closed fibre by
-More on Morphisms, Theorem
-\ref{more-morphisms-theorem-openness-flatness}. Its closed complement has
-closed image in $\Spec(A)$ because $X$ is proper. A nonempty closed subset
-of the spectrum of a local ring contains the closed point, so this
-complement is empty. Hence $X$ is flat over $A$.
-
-The smooth locus is likewise an open neighbourhood of the closed fibre by
+By Cohomology of Schemes, Lemma
+\ref{coherent-lemma-algebraize-flat-formal-scheme-H2}, the system $(X_q)$
+algebraizes to a projective flat morphism $X \to \Spec(A)$. The smooth
+locus is an open neighbourhood of the closed fibre by
 Morphisms, Lemma \ref{morphisms-lemma-set-points-where-fibres-smooth}.
 Applying the same proper-image argument to its complement shows that
 $X \to \Spec(A)$ is smooth.

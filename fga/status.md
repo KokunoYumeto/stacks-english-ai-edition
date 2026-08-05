@@ -4,11 +4,11 @@ Snapshot: Stacks commit `a04446e57ec1fbc252a871afcec7752fb2807b14`.
 
 The reproducible intake, topic crosswalk, and statement-level review are
 complete for the bounded FGA corpus, apart from one explicitly fail-closed
-source hypothesis.  The first ten mathematical source patches are implemented
+source hypothesis.  The first eleven mathematical source patches are implemented
 and validated; further source integration remains in progress.
 
 - 119 Stacks TeX files indexed
-- 21,471 labelled TeX objects indexed
+- 21,472 labelled TeX objects indexed
 - 21,437 objects joined to an existing official tag
 - 55 FGA topics reviewed: 30 direct and 14 broad coverage decisions plus 6
   partial and 5 no-direct decisions
@@ -28,8 +28,8 @@ and validated; further source integration remains in progress.
 - Expose 149 currently yields 20 `existing_stronger` decisions 10
   `existing_equivalent` decisions 2 `extend_existing` decisions 1
   `new_statement` decision 3 historical decisions and 1 open decision
-- Expose 182 yields 29 `existing_stronger` decisions 21
-  `existing_equivalent` decisions 4 `existing_weaker` decisions 5
+- Expose 182 yields 29 `existing_stronger` decisions 22
+  `existing_equivalent` decisions 4 `existing_weaker` decisions 4
   `extend_existing` decisions 6 `new_statement` decisions and 4 historical
   decisions
 - Expose 190 yields 19 `existing_equivalent` decisions 8
@@ -106,8 +106,8 @@ claim.  The unit therefore remains an explicit extension target rather than
 being silently identified with fpqc descent.
 
 Both `check.json` and `mcheck.json` report `PASS` with empty `errors` arrays.
-The warnings preserve nine generated book-part labels and thirty-four current
-TeX labels that have no entry in upstream's `tags/tags`; twenty-five of these
+The warnings preserve nine generated book-part labels and thirty-five current
+TeX labels that have no entry in upstream's `tags/tags`; twenty-six of these
 are the new source labels below.  No replacement tag has been invented.
 
 The first source patch adds
@@ -205,6 +205,17 @@ replace the two former ingredient-only records for FGA 182, Corollaries 3 and
 4 on catalog page 206 with direct modern equivalents.  The Deformation Theory
 chapter passed two PDF builds and both complete inserted statements passed
 rendered inspection.
+The eleventh source patch adds
+`coherent-lemma-algebraize-flat-formal-scheme-H2`, which algebraizes a flat
+formal system over a complete Noetherian local ring when its special fibre is
+projective and has vanishing second structure-sheaf cohomology.  The proof
+lifts an ample invertible sheaf through every first-order thickening, applies
+Grothendieck algebraization, and verifies flatness of the algebraized scheme.
+Decision `D000320` replaces the former ingredient-only record for FGA 182,
+Theorem 4 on catalog pages 198--199 with a direct modern equivalent.  The
+Deformation Theory lifting criterion now reuses this theorem.  Both affected
+chapters passed two PDF builds and the complete changed pages passed rendered
+inspection.
 The identified Expose 149
 additions are the arbitrary-ideal Ext and Tor
 comparison maps the partial-range singular-duality equivalence and the general
