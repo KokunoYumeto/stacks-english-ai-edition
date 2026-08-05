@@ -8343,6 +8343,58 @@ This proves the lemma.
 \end{proof}
 
 \begin{lemma}
+\label{lemma-connected-along-section-proper}
+Let $S$ be a locally Noetherian scheme. Let $f : X \to S$ be a proper
+morphism and let $e : S \to X$ be a section. Define $X^0 \subset X$ as in
+Situation \ref{situation-connected-along-section}. Then $X^0$ is closed in
+$X$. Endowed with the reduced induced closed subscheme structure, $X^0$ is
+proper over $S$.
+\end{lemma}
+
+\begin{proof}
+The morphism $f$ is of finite presentation. Hence $X^0$ is locally
+constructible by
+Lemma \ref{lemma-connected-along-section-locally-constructible}. Since $X$
+is locally Noetherian, it suffices to prove that $X^0$ is stable under
+specialization, see Topology, Lemma
+\ref{topology-lemma-characterize-closed-Noetherian}.
+
+Let $x \leadsto x'$ be a specialization in $X$ with $x \in X^0$. By
+Properties, Lemma
+\ref{properties-lemma-locally-Noetherian-specialization-dvr}, there is a
+discrete valuation ring $R$ and a morphism
+$$
+b : \Spec(R) \longrightarrow X
+$$
+which maps the generic point $\eta$ to $x$ and the closed point $0$ to $x'$.
+Think of $b$ as a section of $X_R \to \Spec(R)$, and denote by $e_R$ the
+base change of $e$. By
+Lemma \ref{lemma-base-change-connected-along-section}, the points $b(\eta)$
+and $e_R(\eta)$ lie in the same connected component $C_\eta$ of
+$(X_R)_\eta$.
+
+Let $C \subset X_R$ be the scheme theoretic closure of $C_\eta$. It is
+proper and of finite presentation over $R$. It is flat over $R$: the
+definition of scheme theoretic closure makes its structure sheaf
+torsion free over $R$, and a torsion free module over a valuation ring is
+flat by More on Algebra, Lemma
+\ref{more-algebra-lemma-valuation-ring-torsion-free-flat}. The generic fibre
+$C_\eta$ is geometrically connected because it is connected and contains
+the rational point $e_R(\eta)$, see Varieties, Lemma
+\ref{varieties-lemma-geometrically-connected-if-connected-and-point}.
+By Lemma
+\ref{lemma-proper-flat-nr-geom-conn-comps-lower-semicontinuous}, the special
+fibre $C_0$ has at most one geometric connected component. It is nonempty
+because $C \to \Spec(R)$ is proper and has nonempty generic fibre. Thus
+$C_0$ is connected. Both sections $b$ and $e_R$ factor through $C$ because
+their generic points do. Hence $b(0)$ and $e_R(0)$ lie in the same connected
+component of $(X_R)_0$. It follows that $x' \in X^0$, as desired.
+
+Thus $X^0$ is closed. Its reduced induced closed subscheme is proper as a
+closed subscheme of the proper $S$-scheme $X$.
+\end{proof}
+
+\begin{lemma}
 \label{lemma-connected-along-section-open-neighbourhood}
 Let $f : X \to Y$, $s : Y \to X$ be as in
 Situation \ref{situation-connected-along-section}.
@@ -15693,6 +15745,57 @@ with $W'$ and $V'$ open and closed and
 with $Y' = W'_0$ and $Z' = V'_0$.
 Let $W$ be the inverse image in $X$
 to finish the proof.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-proper-connected-component-neighbourhood}
+Let $S$ be a locally Noetherian scheme. Let $f : X \to S$ be a separated
+morphism of finite type and let $e : S \to X$ be a section. Let $s \in S$.
+If the connected component $X_s^0$ containing $e(s)$ is proper over
+$\kappa(s)$, then there is an open neighbourhood $U \subset S$ of $s$ such
+that $X_U^0$ is closed in $X_U$. With the reduced induced closed subscheme
+structure, $X_U^0$ is proper over $U$.
+\end{lemma}
+
+\begin{proof}
+We may replace $S$ by an affine open neighbourhood of $s$. Let $A$ be the
+henselization of $\mathcal{O}_{S, s}$. Apply
+Lemma \ref{lemma-split-off-proper-part-henselian} to $X_A$ and the open and
+closed proper subscheme $X_s^0$ of its closed fibre. We obtain an open and
+closed subscheme $W_A \subset X_A$ which is proper over $A$ and whose closed
+fibre is $X_s^0$.
+
+By the construction of the henselization in Algebra, Lemma
+\ref{algebra-lemma-henselization}, and the limit results in Limits, Lemmas
+\ref{limits-lemma-descend-finite-presentation},
+\ref{limits-lemma-descend-open-immersion},
+\ref{limits-lemma-descend-closed-immersion-finite-presentation}, and
+\ref{limits-lemma-eventually-proper}, there is an affine \'etale
+neighbourhood $(S', s') \to (S, s)$ and an open and closed subscheme
+$$
+W' \subset X_{S'}
+$$
+which is proper over $S'$ and whose fibre at $s'$ is $X_s^0$. After
+shrinking $S'$ about $s'$, we may assume that the base change $e'$ of the
+section factors through $W'$.
+
+Let $U$ be the image of $S' \to S$. After replacing $S$ by $U$, the morphism
+$S' \to S$ is an fpqc covering. In every fibre the connected component
+containing $e'$ is contained in the open and closed subscheme $W'$. Hence
+$(X_{S'})^0$ is the connected-component locus of the proper $S'$-scheme
+$W'$ along $e'$. By
+Lemma \ref{lemma-connected-along-section-proper}, this locus is closed and,
+with its reduced induced structure, proper over $S'$.
+
+Formation of the connected-component locus commutes with base change by
+Lemma \ref{lemma-base-change-connected-along-section}. Since
+$X_{S'} \to X$ is a quasi-compact surjective flat morphism, Morphisms,
+Lemma \ref{morphisms-lemma-fpqc-quotient-topology} shows that $X^0$ is closed
+in $X$. Let $Z \subset X$ be the reduced induced closed subscheme. The base
+change $Z_{S'}$ has underlying set $(X_{S'})^0$ and is a closed subscheme of
+the proper scheme $W'$. Hence $Z_{S'}$ is proper over $S'$. Properness is
+fpqc local on the base by Descent, Lemma
+\ref{descent-lemma-descending-property-proper}, so $Z$ is proper over $S$.
 \end{proof}
 
 
