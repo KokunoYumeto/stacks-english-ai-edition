@@ -4,11 +4,11 @@ Snapshot: Stacks commit `a04446e57ec1fbc252a871afcec7752fb2807b14`.
 
 The reproducible intake, topic crosswalk, and statement-level review are
 complete for the bounded FGA corpus, apart from one explicitly fail-closed
-source hypothesis.  The first twenty mathematical source patches are implemented
-and validated; further source integration remains in progress.
+source hypothesis.  The first twenty-one mathematical source patches are
+implemented and validated; further source integration remains in progress.
 
 - 119 Stacks TeX files indexed
-- 21,482 labelled TeX objects indexed
+- 21,485 labelled TeX objects indexed
 - 21,437 objects joined to an existing official tag
 - 55 FGA topics reviewed: 30 direct and 14 broad coverage decisions plus 6
   partial and 5 no-direct decisions
@@ -28,9 +28,9 @@ and validated; further source integration remains in progress.
 - Expose 149 currently yields 20 `existing_stronger` decisions 10
   `existing_equivalent` decisions 2 `extend_existing` decisions 1
   `new_statement` decision 3 historical decisions and 1 open decision
-- Expose 182 yields 30 `existing_stronger` decisions 28
+- Expose 182 yields 30 `existing_stronger` decisions 30
   `existing_equivalent` decisions 5 `existing_weaker` decisions 0
-  `extend_existing` decisions 2 `new_statement` decisions and 4 historical
+  `extend_existing` decisions 0 `new_statement` decisions and 4 historical
   decisions
 - Expose 190 yields 19 `existing_equivalent` decisions 8
   `existing_stronger` decisions 1 `existing_weaker` decision 4
@@ -106,8 +106,8 @@ claim.  The unit therefore remains an explicit extension target rather than
 being silently identified with fpqc descent.
 
 Both `check.json` and `mcheck.json` report `PASS` with empty `errors` arrays.
-The warnings preserve nine generated book-part labels and forty-five current
-TeX labels that have no entry in upstream's `tags/tags`; thirty-six of these
+The warnings preserve nine generated book-part labels and forty-eight current
+TeX labels that have no entry in upstream's `tags/tags`; thirty-nine of these
 are the new source labels below.  No replacement tag has been invented.
 
 The first source patch adds
@@ -331,12 +331,26 @@ projective scheme.  Decisions `D000330` and `D000331` supersede gap records
 Groups chapter passed two PDF builds and both complete statements and proofs
 on catalog pages 217--218 passed rendered inspection.  The next cursor is the
 tame-specialization package later in the same FGA section.
+The twenty-first source patch adds
+`pione-definition-tame-fundamental-group`,
+`pione-theorem-tame-specialization`, and
+`pione-proposition-tame-fundamental-group-punctured-curve`.  The new Galois
+subcategory makes the tame fundamental group relative to its compactification
+machine-usable.  The specialization theorem gives the full tame surjection and
+the prime-to-residue-characteristic isomorphism for a smooth proper family with
+a smooth relative divisor.  The curve proposition supplies the exact $2g+n$
+generators, surface-and-inertia relation, tame inertia generators, and
+prime-to-characteristic realization theorem.  Decisions `D000332` and
+`D000333` supersede gap records `D000102` and `D000103`; Expose 182 now has no
+remaining `new_statement` or `extend_existing` disposition.  The Fundamental
+Groups chapter passed three PDF builds and all four affected pages passed
+rendered inspection.  The next cursor returns to the unresolved higher-Ext
+hypothesis in Expose 149, Proposition 2.
 The identified Expose 149
 additions are the arbitrary-ideal Ext and Tor
 comparison maps the partial-range singular-duality equivalence and the general
-Hodge fixed-point statement.  The Expose 182 residuals include the
-non-geometrically-connected branch of the product injection and the
-tame-specialization package.
+Hodge fixed-point statement.  The only remaining Expose 182 mismatch is the
+non-geometrically-connected branch of the product injection.
 The Expose 190 residuals include finite-epimorphism factorization the analytic
 Grauert--Remmert passage Cartier p-connection descent the Atiyah--Cartier
 rationality criterion descent of abelian models and the non-GL_n torsor

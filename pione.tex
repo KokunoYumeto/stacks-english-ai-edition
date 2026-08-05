@@ -7278,6 +7278,39 @@ separable field extensions of $K_\xi$ and we require each of these
 to be unramified, resp.\ tamely ramified with respect to
 $\mathcal{O}_{X, \xi}$.
 
+\begin{definition}
+\label{definition-tame-fundamental-group}
+Let $X$ be a locally Noetherian scheme and let $U \subset X$ be a connected
+dense open subscheme. Assume that the local ring of $X$ at every prime
+divisor contained in $X \setminus U$ is a discrete valuation ring. Let
+$\overline{u}$ be a geometric point of $U$. Denote by
+$$
+\textit{F\'Et}^t_{U/X} \subset \textit{F\'Et}_U
+$$
+the full subcategory of finite \'etale covers which are tamely ramified over
+$X$ in codimension $1$. The {\it tame fundamental group of $U$ with respect
+to $X$} is
+$$
+\pi_1^t(U/X, \overline{u}) =
+\text{Aut}(Y \mapsto Y_{\overline{u}}),
+\qquad Y \in \textit{F\'Et}^t_{U/X}.
+$$
+\end{definition}
+
+\noindent
+The category in the definition is a Galois category. Namely, tame extensions
+are preserved on passing to subextensions and admit common finite tame
+overextensions by More on Algebra, Lemmas
+\ref{more-algebra-lemma-subextension-tame} and
+\ref{more-algebra-lemma-permanence-tame}. Thus the subcategory is stable
+under finite limits, finite colimits, subobjects, and quotients in
+$\textit{F\'Et}_U$. Restriction of the fibre functor gives a canonical
+continuous surjection
+$$
+\pi_1(U, \overline{u}) \longrightarrow
+\pi_1^t(U/X, \overline{u}).
+$$
+
 \begin{lemma}
 \label{lemma-pullback-tame-codim1}
 Let $X' \to X$ be a morphism of locally Noetherian schemes.
@@ -7847,6 +7880,112 @@ assume $Z_i$ has a $\kappa(\eta_i)$-rational point
 mapping to $\sigma_i(\eta_i)$.
 Then we apply the lemma in the Noetherian case
 and we pullback to $X$ to conclude.
+\end{proof}
+
+\begin{theorem}[Tame specialization]
+\label{theorem-tame-specialization}
+\begin{reference}
+\cite[Expos\'e 182, Th\'eor\`eme 14, p. 219]{FGA} and
+\cite[Expos\'e XIII, Corollaire 2.9 and Section 2.10]{SGA1}.
+\end{reference}
+Let $S$ be a locally Noetherian scheme. Let $f : X \to S$ be a smooth
+proper morphism with geometrically connected fibres. Let $D \subset X$ be
+an effective Cartier divisor which is smooth over $S$, and set
+$U = X \setminus D$. Given a specialization
+$\overline{s}_1 \leadsto \overline{s}_0$ of geometric points of $S$, there
+is a specialization homomorphism, well defined up to inner automorphism,
+$$
+sp^t :
+\pi_1^t(U_{\overline{s}_1}/X_{\overline{s}_1})
+\longrightarrow
+\pi_1^t(U_{\overline{s}_0}/X_{\overline{s}_0}).
+$$
+It is surjective. If the characteristic of $\kappa(\overline{s}_0)$ is zero,
+then it is an isomorphism. If that characteristic is $p > 0$, then it induces
+an isomorphism on maximal prime-to-$p$ quotients.
+\end{theorem}
+
+\begin{proof}
+The smooth divisor $D$ is a relative normal crossings divisor with one
+branch. The cited base change theorem for tame covers says that finite tame
+covers on the two geometric fibres are related by a specialization functor.
+Its degree-zero assertion makes this functor fully faithful. Hence the
+associated homomorphism of Galois groups is surjective by
+Lemma \ref{lemma-functoriality-galois-surjective}.
+
+If a finite group $G$ has order invertible at $\overline{s}_0$, the
+degree-one assertion of the same base change theorem identifies the
+$G$-torsors on the two fibres. Every connected Galois cover with group of
+order prime to the positive residue characteristic is such a torsor. Thus
+specialization gives an equivalence on the finite Galois objects of
+prime-to-$p$ order when the residue characteristic is $p > 0$, which is
+exactly the asserted isomorphism on maximal prime-to-$p$ quotients. In residue
+characteristic zero this applies to every finite group and proves that
+$sp^t$ itself is an isomorphism.
+\end{proof}
+
+\begin{proposition}
+\label{proposition-tame-fundamental-group-punctured-curve}
+\begin{reference}
+\cite[Expos\'e 182, Corollaire sans num\'ero, pp. 219--220]{FGA} and
+\cite[Expos\'e XIII, Corollaire 2.12]{SGA1}.
+\end{reference}
+Let $k$ be an algebraically closed field. Let $X$ be a smooth proper
+connected curve over $k$ of genus $g$, let $s_1, \ldots, s_n$ be distinct
+closed points, and set $U = X \setminus \{s_1, \ldots, s_n\}$. There are
+topological generators
+$$
+x_1, y_1, \ldots, x_g, y_g, \sigma_1, \ldots, \sigma_n
+\quad\text{of}\quad \pi_1^t(U/X)
+$$
+such that $\sigma_j$ generates a tame inertia subgroup at $s_j$ and
+$$
+\left(\prod_{i = 1}^g [x_i, y_i]\right)
+\sigma_1 \cdots \sigma_n = 1.
+$$
+If $k$ has characteristic $p > 0$, the maximal prime-to-$p$ quotient of
+$\pi_1^t(U/X)$ is the pro-prime-to-$p$ completion of the group with these
+generators and this single relation. In characteristic zero,
+$\pi_1^t(U/X)$ is the profinite completion of that group.
+
+Equivalently, let $G$ be any finite group if $k$ has characteristic zero,
+and let $G$ have order prime to $p$ if $k$ has characteristic $p > 0$.
+Given generators
+$x_i, y_i, \sigma_j$ of $G$ satisfying the displayed relation, there exists
+a connected finite \'etale Galois cover of $U$ with group $G$ for which the
+inertia group above $s_j$ is generated by $\sigma_j$.
+\end{proposition}
+
+\begin{proof}
+In characteristic zero every finite cover is tame along the boundary.
+After spreading out the pointed curve and using
+Theorem \ref{theorem-tame-specialization} in characteristic zero, we may
+embed the field of definition into $\mathbf{C}$. The Riemann existence
+theorem \cite[Expos\'e XII, Corollaire 5.2]{SGA1} identifies the fundamental
+group with the profinite completion of the topological fundamental group of
+a genus $g$ surface punctured at $n$ points. This gives the generators, the
+relation, and the inertia description.
+
+Suppose $k$ has characteristic $p > 0$. Choose a Cohen ring $A$ with residue
+field $k$. By Deformation Theory, Lemma
+\ref{defos-lemma-smooth-proper-curve-lift-complete-local}, the curve $X$
+lifts to a smooth projective curve $\mathcal{X}$ over $A$. Each $s_j$ lifts
+to a section of $\mathcal{X} \to \Spec(A)$ by More on Algebra, Lemma
+\ref{more-algebra-lemma-lift-smooth-henselian}; the sections are disjoint
+because their special-fibre points are distinct. Their union is a smooth
+relative effective Cartier divisor $\mathcal{D}$. The geometric generic
+fibre has genus $g$ as in the proof of
+Lemma \ref{lemma-fundamental-group-smooth-proper-curve-generators}.
+
+Apply Theorem \ref{theorem-tame-specialization} to
+$(\mathcal{X}, \mathcal{D})$. The images of the characteristic-zero
+generators topologically generate the tame fundamental group of the special
+fibre and satisfy the displayed relation. The local standard tame coverings
+of Example \ref{example-tamely-ramified} show that the image of each
+$\sigma_j$ generates the corresponding tame inertia group. The same theorem
+identifies the maximal prime-to-$p$ quotients, proving that there are no
+further relations there. The final formulation follows from the Galois
+correspondence.
 \end{proof}
 
 
