@@ -4,12 +4,12 @@ Snapshot: Stacks commit `a04446e57ec1fbc252a871afcec7752fb2807b14`.
 
 The reproducible intake, topic crosswalk, and statement-level review are
 complete for the bounded FGA corpus.  Every review unit has an append-only
-decision and source problems remain explicit.  Twenty-eight mathematical
+decision and source problems remain explicit.  Twenty-nine mathematical
 source patches are implemented and validated; further source integration
 remains in progress.
 
 - 119 Stacks TeX files indexed
-- 21,500 labelled TeX objects indexed
+- 21,504 labelled TeX objects indexed
 - 21,437 objects joined to an existing official tag
 - 55 FGA topics reviewed: 30 direct and 14 broad coverage decisions plus 6
   partial and 5 no-direct decisions
@@ -32,8 +32,8 @@ remains in progress.
   `existing_equivalent` decisions 5 `existing_weaker` decisions 0
   `extend_existing` decisions 0 `new_statement` decisions and 4 historical
   decisions
-- Expose 190 yields 19 `existing_equivalent` decisions 9
-  `existing_stronger` decisions 2 `existing_weaker` decisions 3
+- Expose 190 yields 19 `existing_equivalent` decisions 10
+  `existing_stronger` decisions 2 `existing_weaker` decisions 2
   `extend_existing` decisions 1 `new_statement` decision and 5 historical
   decisions
 - Expose 195 yields 2 `existing_equivalent` decisions 6 `existing_stronger`
@@ -449,9 +449,26 @@ Decision `D000340` supersedes gap record `D000122` as `existing_weaker`, since
 the arbitrary finite coequalizer diagram and effectivity for every finite
 effective epimorphism remain explicit residuals.  The next cursor is Expose
 190's analytic Grauert--Remmert passage on source pages 307--312.
+The twenty-ninth source patch adds
+`etale-lemma-etale-analytification-local-isomorphism`,
+`pione-theorem-riemann-existence`, and
+`pione-lemma-fundamental-group-complex`.  It turns the existing unlabelled
+analytic criterion for etaleness into a cited result and states the full
+Riemann-existence equivalence for every finite-type complex scheme without a
+normality hypothesis together with the profinite fundamental-group comparison.
+The already present universal-homeomorphism theorem and modern Cech and stack
+formalism cover the remaining algebraic and descent assertions in greater
+generality.  Decision `D000341` supersedes gap record `D000123` with stronger
+coverage.  The Etale Morphisms chapter passed two final bibliography-complete
+builds at 31 pages and the Fundamental Groups chapter passed two at 90 pages;
+neither addition introduced an overfull box.  The complete additions on pages
+22 and 19 respectively passed rendered inspection.  Both semantic validators
+pass with no errors: 21,504 labels and 341 append-only decisions.  The next
+cursor is Expose 190 Theorem 3 and the subsequent Cartier descent package on
+source pages 318--324.
 The Expose 190 residuals include the arbitrary finite-coequalizer extension
-of flat-object full faithfulness and effectivity beyond the pure case the
-analytic Grauert--Remmert passage Cartier p-connection descent the Atiyah--Cartier
+of flat-object full faithfulness and effectivity beyond the pure case Cartier
+p-connection descent the Atiyah--Cartier
 rationality criterion descent of abelian models and the non-GL_n torsor
 consequences.  The Expose 195 residuals are the general minimal-pair
 prorepresentability theorem its Artinian equalizer criterion the narrow

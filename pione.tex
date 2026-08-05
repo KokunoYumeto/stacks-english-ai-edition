@@ -1598,6 +1598,65 @@ descends to a morphism $V_1 \to V_2$ over $Y$ by
 
 
 
+\section{Comparison over the complex numbers}
+\label{section-comparison-complex}
+
+\noindent
+Let $X$ be a scheme of finite type over $\mathbf{C}$. We write $X^{an}$ for
+the associated complex analytic space and $X(\mathbf{C})$ for its underlying
+set of complex points with the classical topology. Analytification sends a
+finite \'etale morphism of schemes to a finite covering in the analytic
+topology. The converse is the content of the following theorem.
+
+\begin{theorem}[Riemann existence]
+\label{theorem-riemann-existence}
+\begin{reference}
+\cite[Expos\'e 190, n\textsuperscript{o} 3, pp. 308--310]{FGA} and
+\cite[Expos\'e XII, Th\'eor\`eme 5.1]{SGA1}.
+\end{reference}
+Let $X$ be a scheme of finite type over $\mathbf{C}$. The analytification
+functor is an equivalence between
+\begin{enumerate}
+\item schemes finite \'etale over $X$, and
+\item finite \'etale analytic spaces over $X^{an}$.
+\end{enumerate}
+Equivalently, finite \'etale covers of $X$ are the same as finite topological
+covering spaces of $X(\mathbf{C})$.
+\end{theorem}
+
+\begin{proof}
+This is the Riemann existence theorem; see
+\cite[Expos\'e XII, Th\'eor\`eme 5.1]{SGA1}. In particular, no normality
+hypothesis on $X$ is needed. The passage from a reduced scheme to an arbitrary
+scheme is also visible algebraically: $X_{red} \to X$ is a universal
+homeomorphism, so Proposition \ref{proposition-universal-homeomorphism}
+identifies their categories of finite \'etale covers, while
+$X_{red}(\mathbf{C}) = X(\mathbf{C})$.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-fundamental-group-complex}
+Let $X$ be a connected scheme of finite type over $\mathbf{C}$, let
+$x \in X(\mathbf{C})$, and let $\overline{x}$ be the corresponding geometric
+point. There is a canonical isomorphism
+$$
+\widehat{\pi_1^{top}(X(\mathbf{C}), x)}
+\longrightarrow
+\pi_1(X, \overline{x}),
+$$
+where the left hand side is the profinite completion of the topological
+fundamental group.
+\end{lemma}
+
+\begin{proof}
+Apply Theorem \ref{theorem-riemann-existence} to the fibre functors at $x$ and
+use the classification of finite covering spaces; equivalently, this is
+\cite[Expos\'e XII, Corollaire 5.2]{SGA1}.
+\end{proof}
+
+
+
+
 \section{Finite \'etale covers of proper schemes}
 \label{section-finite-etale-over-proper}
 

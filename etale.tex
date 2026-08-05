@@ -2006,14 +2006,28 @@ Hence $B$ is a normal domain.
 
 \noindent
 The preceding propositions give some indication as to why we'd like to think
-of \'etale maps as ``local isomorphisms''. Another property that gives an
-excellent indication that we have the ``right'' definition is the fact that
-for $\mathbf{C}$-schemes of finite type, a morphism is \'etale if and only if
-the associated morphism on analytic spaces (the $\mathbf{C}$-valued points given
-the complex topology) is a local isomorphism in the analytic sense (open
-embedding locally on the source). This fact can be proven with the aid of the
-structure theorem and the fact that the analytification commutes with the
-formation of the completed local rings -- the details are left to the reader.
+of \'etale maps as ``local isomorphisms''. The following comparison gives
+another indication that we have the right definition.
+
+\begin{lemma}
+\label{lemma-etale-analytification-local-isomorphism}
+\begin{reference}
+\cite[Expos\'e 190, n\textsuperscript{o} 3, p. 308]{FGA}.
+\end{reference}
+Let $f : X \to Y$ be a morphism of schemes of finite type over
+$\mathbf{C}$. Then $f$ is \'etale if and only if the associated morphism
+$$
+f^{an} : X^{an} \longrightarrow Y^{an}
+$$
+of complex analytic spaces is a local isomorphism.
+\end{lemma}
+
+\begin{proof}
+This is the local analytic criterion for \'etaleness; see
+\cite[Expos\'e XII]{SGA1}. It can also be proved from the structure theorem
+for \'etale morphisms and the compatibility of analytification with completed
+local rings.
+\end{proof}
 
 
 
