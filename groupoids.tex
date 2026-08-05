@@ -2298,6 +2298,129 @@ and in fact any $\text{GL}_{n, S}$-torsor is locally trivial
 Descent, Lemma \ref{descent-lemma-finite-locally-free-descends}).
 \end{remark}
 
+\begin{lemma}
+\label{lemma-smooth-torsor-etale}
+\begin{reference}
+\cite[Expos\'e 190, n\textsuperscript{o} 6, p. 326]{FGA}.
+\end{reference}
+Let $G \to S$ be a smooth group scheme. Every $G$-torsor over $S$
+is a $G$-torsor in the \`etale topology.
+\end{lemma}
+
+\begin{proof}
+Let $X$ be a $G$-torsor. There is an fpqc covering
+$\{S_i \to S\}$ such that $X_{S_i} \cong G_{S_i}$. Hence $X \to S$
+is smooth by Descent, Lemma
+\ref{descent-lemma-descending-property-smooth}. It is surjective because
+this is true after the covering $\{S_i \to S\}$. For every $s \in S$,
+More on Morphisms, Lemma
+\ref{more-morphisms-lemma-etale-nbhd-dominates-smooth}
+gives an \`etale neighbourhood $S' \to S$ of $s$ and a section
+$S' \to X$. These neighbourhoods form an \`etale covering of $S$.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-torsors-special-linear-symplectic}
+\begin{reference}
+\cite[Expos\'e 190, Proposition 6.1 and the discussion following it,
+p. 326]{FGA}.
+\end{reference}
+Let $S$ be a scheme and let $n \geq 1$. Write
+$$
+\text{SL}_{n, S} = \Ker(\det :
+\text{GL}_{n, S} \to \mathbf{G}_{m, S})
+$$
+and let $\text{Sp}_{2n, S} \subset \text{GL}_{2n, S}$ be the group
+scheme preserving the standard perfect alternating form. Every torsor under
+$\text{SL}_{n, S}$ or $\text{Sp}_{2n, S}$ is locally trivial. The same is
+true for torsors under finite products of these groups and general linear
+groups.
+\end{lemma}
+
+\begin{proof}
+Let $P$ be an $\text{SL}_{n, S}$-torsor. Choose an fpqc covering
+trivializing $P$. The transition matrices belong to $\text{SL}_n$.
+By fpqc descent they define a finite locally free $\mathcal{O}_S$-module
+$\mathcal{E}$ of rank $n$ together with an isomorphism
+$$
+\epsilon : \wedge^n\mathcal{E} \longrightarrow \mathcal{O}_S.
+$$
+Here we use Descent, Proposition
+\ref{descent-proposition-fpqc-descent-quasi-coherent} and Lemma
+\ref{descent-lemma-finite-locally-free-descends}. The same descent
+identifies $P$ with the scheme of frames $(e_1, \ldots, e_n)$ of
+$\mathcal{E}$ such that
+$\epsilon(e_1 \wedge \ldots \wedge e_n) = 1$. Zariski locally
+$\mathcal{E}$ is free. If the value of $\epsilon$ on a chosen frame is
+$u \in \mathcal{O}_S^*$, then replacing $e_1$ by $u^{-1}e_1$ gives a
+section of $P$.
+
+The same argument for an $\text{Sp}_{2n, S}$-torsor gives a finite locally
+free module $\mathcal{E}$ of rank $2n$ with a perfect alternating form
+$b$, and identifies the torsor with the scheme of symplectic frames.
+Such frames exist Zariski locally. Indeed, over a local ring choose a
+basis vector $e$. Since $b$ is perfect, there is an $f$ such that
+$b(e, f)$ is a unit; rescale $f$ so that $b(e, f) = 1$. The span of
+$e, f$ is a nondegenerate direct summand, and its orthogonal complement
+is again finite free with a perfect alternating form. Induction produces
+a symplectic basis. The resulting basis over a local ring spreads out to
+an open neighbourhood.
+
+Finally, the projections of a trivializing cocycle for a torsor under a
+finite product give torsors under the factors. Their fibre product has the
+original cocycle. A common Zariski refinement which trivializes the factor
+torsors therefore trivializes the original torsor.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-subgroup-torsor-local-triviality}
+\begin{reference}
+\cite[Expos\'e 190, discussion following Proposition 6.1, p. 326]{FGA}.
+\end{reference}
+Let $H \to G$ be a homomorphism of affine group schemes over $S$. Assume
+the fppf quotient $H \backslash G$ is represented by a scheme $Q$ and
+$G \to Q$ is an $H$-torsor. Assume also that every $G_T$-torsor is
+Zariski locally trivial for every scheme $T$ over $S$.
+
+Let $\mathcal{C}$ be either the class of finite faithfully flat morphisms
+or the class of surjective \`etale morphisms. If $G \to Q$ is, Zariski
+locally on $Q$, trivialized by a morphism in $\mathcal{C}$, then every
+$H_T$-torsor is, Zariski locally on $T$, trivialized by a morphism in
+$\mathcal{C}$.
+\end{lemma}
+
+\begin{proof}
+Let $P$ be an $H_T$-torsor. Choose an fpqc covering trivializing $P$ and
+view its $H$-valued transition functions as $G$-valued transition
+functions. Affine fpqc descent, Descent, Lemma
+\ref{descent-lemma-affine}, produces a $G_T$-torsor $E$ and an
+$H$-equivariant morphism $P \to E$. Zariski locally on $T$ the torsor
+$E$ is trivial, so we may assume that $E = G_T$.
+
+The $H$-equivariant morphism $P \to G_T$ descends to a morphism
+$q : T \to Q$. Moreover, the diagram
+$$
+\xymatrix{
+P \ar[r] \ar[d] & G \ar[d] \\
+T \ar[r]^q & Q
+}
+$$
+is cartesian. This can be checked after the fpqc covering $P \to T$,
+where it is the standard description of the quotient. Pulling back the
+assumed local trivializations of $G \to Q$ along $q$ proves the result.
+\end{proof}
+
+\begin{remark}
+\label{remark-linear-subgroup-torsors}
+In Lemma \ref{lemma-subgroup-torsor-local-triviality}, one may take
+$G = \text{GL}_{n, S}$ by Remark \ref{remark-fun-with-torsors}.
+Inversion identifies $H \backslash G$ with $G/H$, exchanging left and
+right actions. Thus the lemma applies in either quotient convention to a
+flat closed subgroup $H \subset \text{GL}_{n, S}$ whenever the quotient
+and the displayed universal $H$-torsor exist. It gives both the finite
+faithfully flat and the \`etale conclusions discussed in the reference.
+\end{remark}
+
 
 
 \section{Equivariant quasi-coherent sheaves}

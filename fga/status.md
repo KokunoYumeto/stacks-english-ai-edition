@@ -566,3 +566,20 @@ at 80 pages; the additions on pages 54--55 and 65--67 respectively introduce
 no overfull box and passed rendered inspection.  Both semantic validators
 pass with no errors: 21,515 labels and 345 append-only decisions.  The next
 cursor is Expose 190, Section 6 on source pages 325--327.
+The thirty-fourth source patch adds
+`groupoids-lemma-smooth-torsor-etale`,
+`groupoids-lemma-torsors-special-linear-symplectic`,
+`groupoids-lemma-subgroup-torsor-local-triviality`, and
+`groupoids-remark-linear-subgroup-torsors`.  It states explicitly that every
+torsor under a smooth group scheme is etale locally trivial, proves Zariski
+local triviality for special-linear and symplectic torsors and their finite
+products, and packages the reduction-of-structure-group argument for both
+finite faithfully flat and etale trivializations.  Decision `D000346`
+supersedes `D000142` with stronger coverage of Expose 190, Proposition 6.1
+and its consequences.  The Groupoid Schemes chapter passed two final
+bibliography-complete builds at 58 pages with no new overfull box, and the
+complete addition on pages 24--26 passed rendered inspection.  Both semantic
+validators pass with no errors: 21,519 labels and 346 append-only decisions.
+The next cursor returns to the two remaining Expose 190 theorem-level
+residuals: finite-coequalizer flat descent on source pages 305--307 and the
+finite-flat quasi-projective branch on source pages 318--319.
