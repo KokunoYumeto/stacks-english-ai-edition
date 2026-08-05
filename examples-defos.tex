@@ -1364,6 +1364,67 @@ Formal Deformation Theory, Theorem
 \end{proof}
 
 \begin{lemma}
+\label{lemma-proper-smooth-formal-moduli-unobstructed}
+\begin{reference}
+\cite[Expos\'e 182, Th\'eor\`eme 10, p. 209]{FGA}
+\end{reference}
+Let $X$ be a smooth proper scheme over a field $k$. Set
+$$
+\mathcal{T}_{X/k} =
+\SheafHom_{\mathcal{O}_X}(\Omega_{X/k}, \mathcal{O}_X).
+$$
+If
+$$
+H^0(X, \mathcal{T}_{X/k}) = H^2(X, \mathcal{T}_{X/k}) = 0,
+$$
+then the functor of isomorphism classes of flat deformations of $X$ over
+local Artinian $k$-algebras is prorepresented by
+$$
+k[[x_1, \ldots, x_r]],
+\qquad r = \dim_k H^1(X, \mathcal{T}_{X/k}).
+$$
+In particular, $X$ has a universal unobstructed formal deformation over a
+regular complete local $k$-algebra.
+\end{lemma}
+
+\begin{proof}
+Let $F$ be the functor of isomorphism classes in
+$\Deformationcategory_X$. Since $X$ is smooth, Lemma \ref{lemma-schemes-TI}
+identifies its infinitesimal automorphisms with
+$H^0(X, \mathcal{T}_{X/k})$ and its tangent space with
+$H^1(X, \mathcal{T}_{X/k})$. Thus Lemma \ref{lemma-schemes-hull} gives a
+prorepresenting object $R$ for $F$.
+
+\medskip\noindent
+We claim that $F$ is smooth. By Formal Deformation Theory, Lemma
+\ref{formal-defos-lemma-smoothness-small-extensions}, it suffices to lift a
+deformation $Y \to \Spec(A)$ across a small extension $B \to A$ with kernel
+$I$. The morphism $Y \to \Spec(A)$ is smooth: it is flat, locally of finite
+presentation, and its only fibre is $X$. Cotangent Complex, Lemma
+\ref{cotangent-lemma-find-obstruction-ringed-spaces} places the obstruction in
+$$
+\Ext^2_{\mathcal{O}_Y}
+(L_{Y/A}, \mathcal{O}_X \otimes_k I)
+= \Ext^2_{\mathcal{O}_X}
+(\Omega_{X/k}, \mathcal{O}_X \otimes_k I)
+= H^2(X, \mathcal{T}_{X/k}) \otimes_k I = 0.
+$$
+Here the coefficient module is supported on the special fibre, and we used
+smooth base change for differentials. The resulting first order thickening is
+a scheme by More on Morphisms, Lemma
+\ref{more-morphisms-lemma-first-order-thickening}, and is flat over $B$ by
+More on Morphisms, Lemma \ref{more-morphisms-lemma-deform}. Hence it is the
+required deformation and the claim follows.
+
+\medskip\noindent
+The morphism from the prorepresentable functor $\underline{R}$ to the final
+functor is therefore smooth. Formal Deformation Theory, Lemma
+\ref{formal-defos-lemma-smooth-morphism-power-series} shows that
+$R \cong k[[x_1, \ldots, x_r]]$. The number of variables is the dimension of
+the tangent space computed above.
+\end{proof}
+
+\begin{lemma}
 \label{lemma-open}
 In Example \ref{example-schemes} let $X$ be a scheme over $k$.
 Let $U \subset X$ be an open subscheme.

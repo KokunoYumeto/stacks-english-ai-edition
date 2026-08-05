@@ -4,11 +4,11 @@ Snapshot: Stacks commit `a04446e57ec1fbc252a871afcec7752fb2807b14`.
 
 The reproducible intake, topic crosswalk, and statement-level review are
 complete for the bounded FGA corpus, apart from one explicitly fail-closed
-source hypothesis.  The first eighteen mathematical source patches are implemented
+source hypothesis.  The first nineteen mathematical source patches are implemented
 and validated; further source integration remains in progress.
 
 - 119 Stacks TeX files indexed
-- 21,479 labelled TeX objects indexed
+- 21,480 labelled TeX objects indexed
 - 21,437 objects joined to an existing official tag
 - 55 FGA topics reviewed: 30 direct and 14 broad coverage decisions plus 6
   partial and 5 no-direct decisions
@@ -28,9 +28,9 @@ and validated; further source integration remains in progress.
 - Expose 149 currently yields 20 `existing_stronger` decisions 10
   `existing_equivalent` decisions 2 `extend_existing` decisions 1
   `new_statement` decision 3 historical decisions and 1 open decision
-- Expose 182 yields 30 `existing_stronger` decisions 25
+- Expose 182 yields 30 `existing_stronger` decisions 26
   `existing_equivalent` decisions 5 `existing_weaker` decisions 0
-  `extend_existing` decisions 5 `new_statement` decisions and 4 historical
+  `extend_existing` decisions 4 `new_statement` decisions and 4 historical
   decisions
 - Expose 190 yields 19 `existing_equivalent` decisions 8
   `existing_stronger` decisions 1 `existing_weaker` decision 4
@@ -106,8 +106,8 @@ claim.  The unit therefore remains an explicit extension target rather than
 being silently identified with fpqc descent.
 
 Both `check.json` and `mcheck.json` report `PASS` with empty `errors` arrays.
-The warnings preserve nine generated book-part labels and forty-two current
-TeX labels that have no entry in upstream's `tags/tags`; thirty-three of these
+The warnings preserve nine generated book-part labels and forty-three current
+TeX labels that have no entry in upstream's `tags/tags`; thirty-four of these
 are the new source labels below.  No replacement tag has been invented.
 
 The first source patch adds
@@ -304,11 +304,24 @@ supersedes the former gap record `D000087` with direct equivalent coverage.
 The Fundamental Groups chapter passed two PDF builds and the complete lemma
 and proof passed rendered inspection.  The next cursor is the fibrewise
 function-field criterion later in the same FGA section.
+The nineteenth source patch adds
+`examples-defos-lemma-proper-smooth-formal-moduli-unobstructed`, the formal
+moduli theorem of FGA 182, Theorem 10 on catalog page 209.  Vanishing of
+zeroth tangent-sheaf cohomology removes infinitesimal automorphisms and makes
+the deformation functor prorepresentable; vanishing of second cohomology
+kills every cotangent obstruction across small extensions.  Smoothness of the
+represented functor then identifies the universal ring with a formal
+power-series ring whose number of variables is the dimension of first
+tangent-sheaf cohomology.  Decision `D000329` supersedes gap record `D000076`
+with direct equivalent coverage.  The Deformation Problems chapter passed two
+PDF builds and the complete statement and proof page passed rendered
+inspection.  The next cursor is the finite-generation theorem for fundamental
+groups of smooth proper varieties.
 The identified Expose 149
 additions are the arbitrary-ideal Ext and Tor
 comparison maps the partial-range singular-duality equivalence and the general
-Hodge fixed-point statement.  The Expose 182 residuals include the formal
-moduli theorem, the non-geometrically-connected branch
+Hodge fixed-point statement.  The Expose 182 residuals include the
+non-geometrically-connected branch
 of the product injection, finite generation for curves, and the tame
 specialization package.
 The Expose 190 residuals include finite-epimorphism factorization the analytic
