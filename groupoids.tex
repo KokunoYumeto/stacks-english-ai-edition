@@ -5168,6 +5168,39 @@ Morphisms, Lemma \ref{morphisms-lemma-ample-very-ample}.
 \end{proof}
 
 \begin{lemma}
+\label{lemma-projective-after-finite-locally-free-base-change}
+Let $S' \to S$ be a surjective finite locally free morphism of
+constant degree. Let $X \to S$ be a morphism. If
+$X' = S' \times_S X \to S'$ is projective, then $X \to S$ is projective.
+\end{lemma}
+
+\begin{proof}
+The morphism $X \to S$ is proper by
+Descent, Lemma \ref{descent-lemma-descending-property-proper}.
+Choose an $S'$-ample invertible sheaf $\mathcal{L}'$ on $X'$; this is
+possible by Morphisms, Lemma
+\ref{morphisms-lemma-projective-quasi-projective}. The projection
+$\pi : X' \to X$ is surjective finite locally free. The finite locally
+free norm and the norm of an invertible sheaf
+(Divisors, Lemmas \ref{divisors-lemma-finite-locally-free-has-norm}
+and \ref{divisors-lemma-norm-invertible}) give an invertible sheaf
+$$
+\mathcal{N} = \mathop{\rm Norm}\nolimits_\pi(\mathcal{L}')
+$$
+on $X$.
+
+We claim that $\mathcal{N}$ is $S$-ample. This may be checked over affine
+opens $U \subset S$. Then $S'_U$ is affine and
+$\mathcal{L}'|_{X'_U}$ is ample. The norm construction commutes with
+restriction to open subschemes. Hence
+$\mathcal{N}|_{X_U}$ is ample by
+Divisors, Lemma \ref{divisors-lemma-norm-ample}. Thus $X \to S$ is
+quasi-projective. Since it is also proper, it is projective by
+Morphisms, Lemma
+\ref{morphisms-lemma-projective-is-quasi-projective-proper}.
+\end{proof}
+
+\begin{lemma}
 \label{lemma-descend-along-fpqc-radicial}
 \begin{reference}
 \cite[Expos\'e 190, Th\'eor\`eme 3, p. 318]{FGA}

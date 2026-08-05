@@ -548,3 +548,21 @@ deformation and local-freeness packages Picard boundedness and projectivity.
 Its erratum supplement additionally isolates finite-type pullbacks and power
 maps finite type of the torsion-component locus bounded Neron--Severi groups
 numerical-equivalence tests and openness-and-closedness of the torsion locus.
+The thirty-third source patch adds
+`groupoids-lemma-projective-after-finite-locally-free-base-change`,
+`examples-definition-abelian-scheme`, and
+`examples-proposition-abelian-model-finite-etale-descent`.  The norm of an
+ample invertible sheaf proves that projectivity descends once the underlying
+scheme has descended through a finite locally free cover; this does not make
+the false claim that projectivity is fpqc-local for arbitrary descent data.
+The abelian-model proposition extends the generic comparison isomorphism over
+the regular double overlap using rational-section extension, obtains the
+cocycle by uniqueness, descends the scheme and group law, recovers
+projectivity by the norm lemma, and proves uniqueness of the resulting model.
+Decision `D000345` supersedes gap record `D000140` with exact coverage of
+Expose 190, Proposition 5.1.  The Groupoid Schemes chapter passed two final
+bibliography-complete builds at 57 pages and the Examples chapter passed two
+at 80 pages; the additions on pages 54--55 and 65--67 respectively introduce
+no overfull box and passed rendered inspection.  Both semantic validators
+pass with no errors: 21,515 labels and 345 append-only decisions.  The next
+cursor is Expose 190, Section 6 on source pages 325--327.

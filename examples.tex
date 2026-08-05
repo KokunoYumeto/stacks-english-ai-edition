@@ -5950,6 +5950,20 @@ give an example where it is not true and where $\mathcal{Y}$ is
 representable by a proper flat scheme over $S$ and $\mathcal{Z}$
 is smooth and proper over $S$.
 
+\begin{definition}
+\label{definition-abelian-scheme}
+Let $S$ be a scheme. An {\it abelian scheme} over $S$ is a group
+scheme $A \to S$ which is flat, proper, and of finite presentation and
+whose fibre $A_s$ is an abelian variety over $\kappa(s)$ for every
+$s \in S$; see Groupoids, Definition
+\ref{groupoids-definition-abelian-variety}.
+\end{definition}
+
+\noindent
+An abelian scheme is smooth: its fibres are smooth by Groupoids, Lemma
+\ref{groupoids-lemma-abelian-variety-smooth}, and one applies Morphisms,
+Lemma \ref{morphisms-lemma-smooth-flat-smooth-fibres}.
+
 \medskip\noindent
 Let $k$ be an algebraically closed field which is not the algebraic
 closure of a finite field. Let $S = \Spec(k[[t]])$
@@ -5969,9 +5983,7 @@ X\quad :\quad T_0T_1T_2 - t(T_0^3 + T_1^3 + T_2^3) = 0
 $$
 in $\mathbf{P}^2_{k[[t]]}$. Let $A_0$ be a non-zero abelian variety over $k$
 for example an elliptic curve.  Let $A = A_0 \times_{\Spec(k)} S$ be the
-constant abelian scheme\footnote{An abelian scheme over a base $S$ is
-a flat proper group scheme of finite presentation over $S$ all of
-whose fibres are abelian varieties.}
+constant abelian scheme
 over $S$ associated to $A_0$. We will show that the
 stack $\mathcal{X} = \underline{\Mor}_S(X, [S/A]))$ is not algebraic.
 
@@ -6050,6 +6062,85 @@ sheaves extend. In fact, one can weaken "$W$ is regular" to
 learned the Picard trick from Raynaud; there should be a reference
 somewhere in Raynaud's work.
 \end{remark}
+
+\begin{proposition}
+\label{proposition-abelian-model-finite-etale-descent}
+\begin{reference}
+\cite[Expos\'e 190, Proposition 5.1, p. 324]{FGA}
+\end{reference}
+Let $S$ be an integral Noetherian regular scheme with function field $K$.
+Let $S' \to S$ be a surjective finite \`etale morphism with $S'$ integral,
+and let $K'$ be the function field of $S'$. Let $A$ be an abelian variety
+over $K$. If there exist
+\begin{enumerate}
+\item a projective abelian scheme $A' \to S'$, and
+\item an isomorphism $A \times_{\Spec(K)} \Spec(K') \to A'_{K'}$
+of abelian varieties,
+\end{enumerate}
+then there is a projective abelian scheme $A_0 \to S$ whose generic fibre
+is isomorphic to $A$. The pair consisting of $A_0$ and this generic-fibre
+isomorphism is unique up to unique isomorphism.
+\end{proposition}
+
+\begin{proof}
+Let $\eta = \Spec(K)$. Set $S'' = S' \times_S S'$ and denote its
+projections to $S'$ by
+$p_1$ and $p_2$. Write $A_i = p_i^*A'$ for $i = 1, 2$.
+Over the inverse image of the generic point of $S$, the given isomorphism
+with $A$ determines an isomorphism
+$$
+\varphi_\eta : (A_1)_\eta \longrightarrow (A_2)_\eta.
+$$
+We claim that $\varphi_\eta$ extends uniquely to an isomorphism
+$\varphi : A_1 \to A_2$ over $S''$.
+
+The scheme $S''$ is Noetherian and regular. The scheme $A_1$ is regular
+because it is smooth over $S''$. View $\varphi_\eta$ as a rational section
+of the abelian scheme
+$$
+A_2 \times_{S''} A_1 \longrightarrow A_1.
+$$
+Applying Remark \ref{remark-torsors-over-regular} to the connected
+components of $A_1$ extends this rational section everywhere. Applying the
+same argument to $\varphi_\eta^{-1}$ gives an inverse. The two compositions
+are the identity because this holds on a dense open and rational maps from
+a reduced scheme to a separated scheme have unique representatives; see
+Morphisms, Lemma
+\ref{morphisms-lemma-rational-map-from-reduced-to-separated}.
+
+Over $S' \times_S S' \times_S S'$ the two possible composites formed from
+$\varphi$ agree over the inverse image of the generic point of $S$. They
+agree everywhere by the same uniqueness lemma. Thus $\varphi$ is a descent
+datum. It is effective by Groupoids, Lemma
+\ref{groupoids-lemma-descend-along-finite-quasi-projective}, giving a scheme
+$A_0 \to S$ and an isomorphism $S' \times_S A_0 \cong A'$ compatible with
+the descent datum. Moreover, $A_0 \to S$ is projective by Groupoids, Lemma
+\ref{groupoids-lemma-projective-after-finite-locally-free-base-change}.
+
+The multiplication, inverse, and unit of $A'$ are compatible with
+$\varphi$. Indeed, the required equalities hold over the generic point
+because $\varphi_\eta$ comes from the abelian variety $A$, and hence hold
+everywhere by uniqueness. Morphisms of schemes satisfy fpqc descent
+(Descent, Remark
+\ref{descent-remark-morphisms-of-schemes-satisfy-fpqc-descent}), so these
+maps descend and make $A_0$ a group scheme. The morphism $A_0 \to S$ is
+flat and of finite presentation by Descent, Lemmas
+\ref{descent-lemma-descending-property-flat} and
+\ref{descent-lemma-descending-property-finite-presentation}; it is already
+proper because it is projective. Every geometric point of $S$ lifts to
+$S'$, and after such a lift the corresponding fibre of $A_0$ is a fibre of
+$A'$. Hence all fibres of $A_0$ are abelian varieties, so $A_0$ is an
+abelian scheme. The original generic-fibre isomorphism is compatible with
+the descent datum and therefore descends to $A \cong (A_0)_K$.
+
+Finally, suppose $B_0 \to S$ is another abelian scheme with generic fibre
+identified with $A$. The resulting generic isomorphism
+$(A_0)_K \to (B_0)_K$ is a rational section of the abelian scheme
+$B_0 \times_S A_0 \to A_0$. Remark
+\ref{remark-torsors-over-regular} extends it uniquely over $A_0$, and the
+same argument applied to its inverse shows that the extension is an
+isomorphism. This proves uniqueness.
+\end{proof}
 
 \begin{lemma}
 \label{lemma-torsors-over-field-torsion}
