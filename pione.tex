@@ -3616,6 +3616,71 @@ Lemma \ref{lemma-functoriality-galois-surjective}.
 \end{proof}
 
 \begin{lemma}
+\label{lemma-local-Stein-trivial-component}
+\begin{reference}
+\cite[Expos\'e 182, Th\'eor\`eme 11, pp. 213--214]{FGA}
+\end{reference}
+Let $S$ be a locally Noetherian scheme. Let $f : X \to S$ be a proper
+morphism such that $\mathcal{O}_S \to f_*\mathcal{O}_X$ is an isomorphism.
+Let $h : X' \to X$ be a finite morphism and let
+$$
+X' \longrightarrow T \longrightarrow S
+$$
+be the Stein factorization of $f \circ h$. Let $s \in S$, let $t \in T$ lie
+over $s$, and let $C \subset X'_s$ be the open and closed connected component
+corresponding to $t$. Assume
+\begin{enumerate}
+\item $h$ is unramified at every point of $C$, and
+\item the canonical morphism
+$$
+C \longrightarrow
+X_s \times_{\Spec(\kappa(s))} \Spec(\kappa(t))
+$$
+is an isomorphism.
+\end{enumerate}
+Then there is an open neighbourhood $V \subset T$ of $t$ such that
+$V \to S$ is unramified and the canonical morphism
+$$
+X' \longrightarrow X \times_S T
+$$
+is an isomorphism over $V$.
+\end{lemma}
+
+\begin{proof}
+Write $g : X' \to T$ for the first morphism in the Stein factorization and
+consider
+$$
+\varphi = (h, g) : X' \longrightarrow X \times_S T.
+$$
+By More on Morphisms, Theorem
+\ref{more-morphisms-theorem-stein-factorization-general}, the scheme $T$ is
+the relative spectrum of $(f \circ h)_*\mathcal{O}_{X'}$. This algebra is
+coherent by Cohomology of Schemes, Proposition
+\ref{coherent-proposition-proper-pushforward-coherent}; hence $T$ is finite
+over $S$. It follows that $\varphi$ is finite. Its fibre over $t$ is the
+canonical morphism in assumption (2), and therefore is an isomorphism. The
+isomorphism locus of $\varphi$ is open in $X \times_S T$. Its complement has
+closed image in $T$, because
+$X \times_S T \to T$ is proper, and this image does not contain $t$.
+After replacing $T$ by the complement of this image, we may assume that
+$\varphi$ is an isomorphism.
+
+\medskip\noindent
+Choose $c \in C$. Via the isomorphism $\varphi$, the morphism $h$ is the base
+change of $T \to S$ by $X \to S$. Consequently
+$$
+\Omega_{T/S, t} \otimes_{\mathcal{O}_{T, t}} \kappa(c)
+= \Omega_{X'/X, c} \otimes_{\mathcal{O}_{X', c}} \kappa(c) = 0
+$$
+by assumption (1). Since $\kappa(c)$ is a field extension of $\kappa(t)$,
+faithful flatness and Nakayama's lemma give $\Omega_{T/S, t} = 0$.
+The morphism $T \to S$ is finite and hence locally of finite type, so
+Morphisms, Lemma \ref{morphisms-lemma-unramified-omega-zero} shows that it is
+unramified at $t$. Shrinking to its unramified locus gives the required open
+neighbourhood $V$.
+\end{proof}
+
+\begin{lemma}
 \label{lemma-stein-factorization-etale}
 \begin{reference}
 \cite[Expose X, Proposition 1.2, p. 262]{SGA1}.
