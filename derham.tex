@@ -5645,6 +5645,170 @@ of local cohomology group $H^d_{(f_1, \ldots, f_d)}(R)$ in this case,
 
 
 
+\begin{lemma}
+\label{lemma-hodge-classes-points-diagonal-graph}
+Let $k$ be an algebraically closed field. Let $X$ be a nonempty connected
+smooth proper scheme over $k$ of dimension $d$. The Hodge Gysin classes
+of the $k$-rational points of $X$ are all equal to a nonzero element
+$$
+\xi_X \in H^d(X, \Omega^d_{X/k}).
+$$
+Let $g : X \to X$ be a morphism, let
+$\Delta : X \to X \times_k X$ be the diagonal, and let
+$\Gamma_g : X \to X \times_k X$, $x \mapsto (g(x), x)$, be the graph.
+Then
+$$
+\gamma^{d, d}_\Delta(\xi_X) =
+\xi_X \boxtimes \xi_X =
+\gamma^{d, d}_{\Gamma_g}(\xi_X)
+$$
+in $H^{2d}(X \times_k X, \Omega^{2d}_{X \times_k X/k})$.
+Here the Gysin maps are those of Remark \ref{remark-how-to-use}.
+\end{lemma}
+
+\begin{proof}
+The scheme $X$ is irreducible because it is connected and regular. Thus
+the class of every $k$-rational point is nonzero by
+Lemma \ref{lemma-class-of-a-point}.
+
+\medskip\noindent
+Let $\eta_\Delta = \gamma^{0, 0}_\Delta(1)$. The decomposition of
+differentials on a product
+(Morphisms, Lemma \ref{morphisms-lemma-differential-product}) and the
+K\"unneth formula (Derived Categories of Schemes, Lemma
+\ref{perfect-lemma-kunneth-single-sheaf}) decompose $\eta_\Delta$ according
+to the Hodge degrees in the two factors. If $x \in X(k)$, then
+pullback by $(x, \text{id}_X) : X \to X \times_k X$ kills every summand
+of positive Hodge degree in the first factor. On the other hand,
+Lemma \ref{lemma-gysin-transverse-global} identifies this pullback with
+the Gysin class of $x$ in $X$. Consequently, the summand of
+$\eta_\Delta$ having Hodge degree zero in the first factor is
+$$
+1 \boxtimes \xi_x,
+$$
+where $\xi_x$ is the class of $x$. This summand does not depend on $x$,
+so all the classes $\xi_x$ are equal; denote their common nonzero value
+by $\xi_X$.
+
+\medskip\noindent
+By the projection formula of
+Lemma \ref{lemma-gysin-projection-global},
+$$
+\gamma^{d, d}_\Delta(\xi_X) =
+(\xi_X \boxtimes 1) \cup \eta_\Delta.
+$$
+The summand $1 \boxtimes \xi_X$ found above contributes
+$\xi_X \boxtimes \xi_X$. Every other summand has positive Hodge degree
+in the first factor and its product with $\xi_X \boxtimes 1$ is zero
+for dimension reasons. This proves the first equality.
+
+\medskip\noindent
+Set $\eta_g = \gamma^{0, 0}_{\Gamma_g}(1)$. Pullback by
+$(\text{id}_X, x) : X \to X \times_k X$ is transverse to $\Gamma_g$
+and its inverse image is the point $g(x)$. It follows as above that the
+summand of $\eta_g$ having Hodge degree zero in the second factor is
+$\xi_X \boxtimes 1$. Since
+$\Gamma_g^*(1 \boxtimes \xi_X) = \xi_X$, the projection formula gives
+$$
+\gamma^{d, d}_{\Gamma_g}(\xi_X) =
+(1 \boxtimes \xi_X) \cup \eta_g =
+\xi_X \boxtimes \xi_X;
+$$
+again all the other summands vanish for dimension reasons.
+\end{proof}
+
+\begin{lemma}[Hodge cohomology fixed point formula]
+\label{lemma-hodge-fixed-point-formula}
+Let $k$ be a field. Let $X$ be a smooth projective geometrically connected
+scheme over $k$, and let $g : X \to X$ be a morphism. Assume that the
+fixed point scheme
+$$
+Z = X \times_{X \times_k X} X,
+$$
+where the two maps to $X \times_k X$ are $(g, \text{id}_X)$ and $\Delta$,
+is finite \`etale over $k$. Then
+$$
+\deg(Z/k) \cdot 1_k =
+\sum_{p, q} (-1)^{p + q}
+\text{Tr}\left(g^* \mid H^q(X, \Omega^p_{X/k})\right)
+$$
+in $k$. Thus, in positive characteristic, the number of geometric fixed
+points of $g$ is congruent modulo the characteristic to the alternating
+sum of the traces on Hodge cohomology.
+\end{lemma}
+
+\begin{proof}
+By flat base change (Cohomology of Schemes, Lemma
+\ref{coherent-lemma-flat-base-change-cohomology}), the traces on the right
+are unchanged by extending the ground field. The degree of $Z$ is unchanged
+as well. We may therefore assume that $k$ is algebraically closed. Put
+$d = \dim(X)$ and let $r = \deg(Z/k)$. Then $Z$ is the disjoint union of
+$r$ reduced $k$-rational points.
+
+\medskip\noindent
+Write
+$$
+H^i = H^i_{Hodge}(X/k) =
+\bigoplus_{p + q = i} H^q(X, \Omega^p_{X/k}).
+$$
+Let $\xi_X$ be the class of Lemma
+\ref{lemma-hodge-classes-points-diagonal-graph}. Choose the trace map
+$t : H^d(X, \Omega^d_{X/k}) \to k$ in
+Lemma \ref{lemma-duality-hodge} so that $t(\xi_X) = 1$. It gives perfect
+pairings $H^i \times H^{2d-i} \to k$.
+
+\medskip\noindent
+Let $\eta_\Delta$ and $\eta_g$ be the Hodge Gysin classes of the diagonal
+and the graph of $g$. The assumption that $Z$ is \`etale says precisely
+that the graph and diagonal meet transversally: at a geometric fixed point
+the map $1 - \text{d}g$ on the tangent space is invertible. Hence
+Lemmas \ref{lemma-gysin-transverse-global} and
+\ref{lemma-gysin-projection-global} apply. The Gysin map is additive over
+the open and closed points of $Z$, and each of their classes is $\xi_X$ by
+Lemma \ref{lemma-hodge-classes-points-diagonal-graph}. Therefore
+\begin{align*}
+\eta_\Delta \cup \eta_g
+& = \gamma^{d, d}_\Delta(\Delta^*\eta_g) \\
+& = \gamma^{d, d}_\Delta(r\xi_X) \\
+& = r(\xi_X \boxtimes \xi_X).
+\end{align*}
+
+\medskip\noindent
+For every $i$, choose a basis $e_{i,j}$ of $H^i$. Under the Hodge
+K\"unneth isomorphism write
+$$
+\eta_\Delta =
+\sum_{i,j} e_{i,j} \boxtimes e'_{2d-i,j}.
+$$
+The projection formula for the diagonal, the normalization
+$t(\xi_X)=1$, and the first equality of Lemma
+\ref{lemma-hodge-classes-points-diagonal-graph} show, by the usual
+graded dual-basis calculation, that
+$$
+t(e_{i,j} \cup e'_{2d-i,j'}) = (-1)^i\delta_{jj'}.
+$$
+If the matrix of $g^* : H^i \to H^i$ in the chosen basis is
+$(a_{j'j})$, then the projection formula for the graph and the second
+equality of that lemma give
+$$
+\eta_g \cup (e_{i,j} \boxtimes e'_{2d-i,j}) =
+(-1)^i a_{jj}(\xi_X \boxtimes \xi_X).
+$$
+Consequently,
+$$
+\eta_\Delta \cup \eta_g =
+\left(\sum_i(-1)^i\text{Tr}(g^* \mid H^i)\right)
+(\xi_X \boxtimes \xi_X).
+$$
+Comparing this with the previous computation proves the formula. The final
+statement follows because $r$ is the number of geometric fixed points and
+the image of the integer $r$ in $k$ is its residue modulo
+$\operatorname{char}(k)$. Compare with
+\cite[Expos\'e 149, Th\'eor\`eme 5, p. 189]{FGA}.
+\end{proof}
+
+
+
 
 
 

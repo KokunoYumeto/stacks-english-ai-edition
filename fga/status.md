@@ -392,9 +392,20 @@ final two bibliography-complete PDF builds at 98 pages with no new overfull
 boxes, and the complete inserted lemma on pages 71--72 passed rendered
 inspection.  The next cursor is Expose 149 Theorem 5 and its general Hodge
 fixed-point statement.
-The only remaining identified Expose 149 addition is the general Hodge
-fixed-point statement.  The
-only remaining Expose 182 mismatch is the
+The twenty-fifth source patch adds
+`derham-lemma-hodge-classes-points-diagonal-graph` and
+`derham-lemma-hodge-fixed-point-formula`.  The normalization lemma proves
+that rational points have one common nonzero top Hodge Gysin class and that
+the diagonal and every graph send this class to its exterior square.  The
+fixed-point lemma then computes a transverse graph--diagonal intersection in
+two ways: as the degree of the finite etale fixed scheme and as the total
+Hodge supertrace.  Decision `D000337` supersedes gap record `D000033` with
+direct equivalent coverage of Expose 149, Theorem 5.  The De Rham chapter
+passed two final PDF builds at 70 pages with no new overfull boxes, and the
+complete additions on pages 59--61 passed rendered inspection.  Expose 149
+now has no remaining `new_statement` or `extend_existing` disposition.  The
+next cursor is Expose 182's non-geometrically-connected product injection.
+The only remaining Expose 182 mismatch is the
 non-geometrically-connected branch of the product injection.
 The Expose 190 residuals include finite-epimorphism factorization the analytic
 Grauert--Remmert passage Cartier p-connection descent the Atiyah--Cartier
