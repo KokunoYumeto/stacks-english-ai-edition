@@ -3,17 +3,17 @@
   "date": "2026-08-06",
   "scope": {
     "start": "fac:I:1:no:1",
-    "end": "fac:I:3:no:26",
-    "printed_pages": "199-219",
-    "units_decided": 81,
-    "stacks_references_added": 40
+    "end": "fac:I:4:no:27",
+    "printed_pages": "199-220",
+    "units_decided": 83,
+    "stacks_references_added": 42
   },
   "authority": {
     "bytes": 6305726,
     "sha256": "B8C6508249308F5D8BC886B9E6360F1EC4FDC8F0F18EFAA03EE0E36B591551CA",
     "render_dpi": 1100,
-    "physical_pages_inspected": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24],
-    "printed_pages_inspected": [199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219]
+    "physical_pages_inspected": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25],
+    "printed_pages_inspected": [199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220]
   },
   "builds": [
     {
@@ -38,6 +38,14 @@
       "bytes": 727139,
       "sha256": "13C139DBAC11F5EAAD793D69958A0BA0888A8CC42EDC2A02979F3C6D8CFAAAD9",
       "affected_pdf_pages_inspected": [3, 8, 9, 15, 16, 17, 18, 19, 22, 31, 32, 34],
+      "affected_page_result": "PASS"
+    },
+    {
+      "master": "homology.tex",
+      "pdf": "homology.pdf",
+      "bytes": 891878,
+      "sha256": "1640094B3D552450EEB5C1606426197DE5E310AF58E9D767FFDCF8707AB20F22",
+      "affected_pdf_pages_inspected": [42, 68],
       "affected_page_result": "PASS"
     },
     {
@@ -108,7 +116,7 @@
     "fac_citations_resolved": true,
     "undefined_reference_at_edited_lines": 0,
     "overfull_box_at_edited_lines": 0,
-    "note": "The isolated builds retain unrelated missing chapter-aux warnings, unrelated pre-existing cross-chapter warnings, and pre-existing overfull diagnostics. The FAC no. 26 primary reference introduces no unresolved citation, link, or overfull box at edited lines."
+    "note": "The isolated builds retain unrelated missing chapter-aux warnings, unrelated pre-existing cross-chapter warnings, and pre-existing overfull diagnostics. The FAC no. 27 primary references introduce no unresolved citation, link, or overfull box at edited lines."
   },
   "validators": {
     "intake": "PASS",
