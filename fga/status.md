@@ -863,3 +863,35 @@ SHA-256 B7A039B04D7BA3B861D2B29BE151E37A90BC8D9005A5945BE7000D316EE13568.
 The added proposition and consequence have no unresolved reference or
 overfull box; their complete pages 26--27 pass 1,200-dpi rendered inspection.
 The next substantive cursor is Expose 212, Section 5 and Theorem 5.1.
+
+The forty-seventh source patch closes Expose 212, Section 5.  Exact FGA
+references now accompany the invariant-ring integrality theorem, the affine
+orbit-space theorem, finite-flat effectivity, the invariant-affine
+neighbourhood construction, the global quotient theorem, and the modern
+uniform categorical-moduli strengthening.  The affine orbit-space lemma now
+also states Corollary 5.2 explicitly: the canonical arrow-scheme morphism to
+the quotient kernel pair is surjective.  Its proof lifts an arbitrary point of
+the kernel pair to an algebraically closed residue-field extension and applies
+the geometric-orbit equality.
+
+A separate lemma in Properties of Algebraic Spaces integrates Corollary 5.5.
+For the global finite locally free quotient it proves that the quotient degree
+is exactly the degree of either kernel-pair projection and that flatness over
+every further base is equivalent on the quotient and its finite locally free
+surjective cover.  Decisions D000362--D000368 supersede the seven former
+Section 5 decisions without changing any historical row.
+
+Both semantic validators pass with no errors at 21,554 labels, 368 append-only
+decisions, 1,253 source units, 1,612 term links, and 12 recorded source issues.
+Serial bibliography-complete builds followed by two final TeX passes produce
+Groupoid Schemes at 58 pages and 791,125 bytes with SHA-256
+75CFE5FC16FDC678832EF369071E55C09B5A5A729133010C160AC6DF9C18AA84;
+Properties of Algebraic Spaces at 63 pages and 823,689 bytes with SHA-256
+ED49741C270EC825AC4A4AD7E8C0E1ABEBFF4EF0A28F592CCE8C1CAE27D419E1;
+and More on Morphisms of Stacks at 51 pages and 712,885 bytes with SHA-256
+EE9A1C8CC3AE2BAD25D260C70D48F519DEF7C306B27736AE397397124BBB6EE9.
+The changed line ranges add no unresolved reference or overfull box;
+Groupoids pages 49--50 and Properties of Algebraic Spaces page 19 contain no
+placeholder and pass 1,200-dpi rendered inspection.  The next substantive
+cursor is Expose 212, Section 6 and Theorem 6.1 together with its linked
+erratum.

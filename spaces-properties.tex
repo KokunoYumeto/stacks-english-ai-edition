@@ -1702,6 +1702,10 @@ of the following result.
 
 \begin{proposition}
 \label{proposition-finite-flat-equivalence-global}
+\begin{reference}
+\cite[Expos\'e 212, Th\'eor\`eme 5.3, Corollaire 5.4, and Scholium,
+pp. 111--112]{FGA}.
+\end{reference}
 Let $S$ be a scheme.
 Let $(U, R, s, t, c)$ be a groupoid scheme over $S$.
 Assume
@@ -1737,6 +1741,34 @@ fppf locally on $T$ we can lift $T \to F$ to a morphism
 $f : T \to U$ and in that case $f^{-1}(U_i) \subset V_i$.
 Hence we conclude that $F$ is representable by a scheme, see
 Schemes, Lemma \ref{schemes-lemma-glue-functors}.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-finite-flat-equivalence-rank-flatness}
+\begin{reference}
+\cite[Expos\'e 212, Corollaire 5.5, p. 112]{FGA}.
+\end{reference}
+Notation and assumptions as in
+Proposition \ref{proposition-finite-flat-equivalence-global}. Let
+$q : U \to M$ be the resulting quotient morphism.
+\begin{enumerate}
+\item The morphism $q$ has constant degree $n$ if and only if
+$s : R \to U$ has constant degree $n$.
+\item For every morphism $S \to T$, the morphism $U \to T$ is flat if
+and only if $M \to T$ is flat.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+The isomorphism $R = U \times_M U$ identifies $s : R \to U$ with the
+base change of $q : U \to M$ by $q$. Thus (1) follows because the degree of
+a finite locally free morphism is preserved by base change and can be checked
+after the surjective flat base change $q$.
+
+If $M \to T$ is flat, then $U \to T$ is flat as the composition of the flat
+morphisms $q$ and $M \to T$. Conversely, if $U \to T$ is flat, then
+$M \to T$ is flat by Morphisms, Lemma
+\ref{morphisms-lemma-flat-permanence}, because $q$ is flat and surjective.
 \end{proof}
 
 \noindent
