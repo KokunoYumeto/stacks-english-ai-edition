@@ -2807,6 +2807,120 @@ Then $f^*\mathcal{N} \cong \mathcal{L}$ as the
 functor from descent data to modules is fully faithful.
 \end{proof}
 
+\begin{proposition}
+\label{proposition-formal-picard-prorepresentable-tangent}
+\begin{reference}
+\cite[Expos\'e 195, C, Proposition 3.1, p. 384, and the correction on
+p. 301]{FGA}.
+\end{reference}
+Let $\Lambda$ be a Noetherian ring, let $S = \Spec(\Lambda)$, and let
+$f : X \to S$ be a flat morphism of schemes. Assume that
+$$
+\mathcal{O}_T \longrightarrow f_{T, *}\mathcal{O}_{X_T}
+$$
+is an isomorphism for every scheme $T$ of finite type over $S$. Denote by
+$\mathcal{A}_\Lambda$ the category of $\Lambda$-algebras which have finite
+length as $\Lambda$-modules. Then the functor
+$$
+F : \mathcal{A}_\Lambda \longrightarrow \textit{Sets}, \qquad
+A \longmapsto \Picardfunctor_{X/S}(\Spec(A))
+$$
+is strictly prorepresentable.
+
+For $A \in \mathcal{A}_\Lambda$, put
+$A_\epsilon = A[\epsilon]/(\epsilon^2)$. If $\xi \in F(A)$, then the fibre
+$$
+F(A_\epsilon, \xi) =
+\{\xi' \in F(A_\epsilon) \mid \xi'|_A = \xi\}
+$$
+is canonically isomorphic to
+$$
+H^1(X_A, \mathcal{O}_{X_A}).
+$$
+\end{proposition}
+
+\begin{proof}
+The functor $F$ commutes with finite products. We verify the two local
+equalizer tests of Formal Deformation Theory, Theorem
+\ref{formal-defos-theorem-grothendieck-levelt-prorepresentability}.
+
+Let $A \to B$ be a map in $\mathcal{A}_\Lambda$ with $A$ local. If $B$ is a
+nonzero finite free $A$-module, then $\Spec(B) \to \Spec(A)$ is an fppf
+cover. The required equalizer is therefore the sheaf condition in the
+definition of $\Picardfunctor_{X/S}$.
+
+Suppose that $A \to B$ is injective and $B/A$ has length $1$. If $\mathfrak m$
+is the maximal ideal of $A$, then
+$\mathfrak mB = \mathfrak m$ by Formal Deformation Theory, Lemma
+\ref{formal-defos-lemma-length-one-cech-equalizer}. Put
+$$
+k = A/\mathfrak m, \qquad C = B/\mathfrak m.
+$$
+Thus $A = B \times_C k$ and $k \to C$ is faithfully flat. We recall why
+invertible modules have effective descent in this situation. If
+$U = \Spec(R)$ is an affine open of $X_A$, then $R$ is flat over $A$ and
+tensoring the cartesian square of rings with $R$ gives
+$$
+R = (R \otimes_A B) \mathbin{\times}_{R \otimes_A C} (R \otimes_A k).
+$$
+Reduce the descent datum on an invertible module over $U_B$ modulo
+$\mathfrak m$. Faithfully flat descent along $k \to C$ gives an invertible
+module over $U_k$. More on Algebra, Lemmas
+\ref{more-algebra-lemma-finite-module-over-fibre-product} and
+\ref{more-algebra-lemma-flat-module-over-fibre-product} patch the two
+modules to a finite flat module over $U$; it has rank $1$ after pullback to
+$U_B$ and $U_k$, whose images cover $U$, and hence is invertible. Full
+faithfulness in Descent, Lemma
+\ref{descent-lemma-equalizer-flat-module-descent} makes these local descents
+unique and hence glues them on overlaps. This is the scheme version of the
+argument in Descent, Lemma
+\ref{descent-lemma-artinian-small-effective-descent-flat-modules}.
+
+It remains to pass from the Picard groupoid to the fppf sheaf of its
+isomorphism classes. For every finite type $S$-scheme $D$ and every invertible
+module $\mathcal{L}$ on $X_D$, the hypothesis gives
+$$
+\operatorname{Aut}(\mathcal{L}) =
+\Gamma(X_D, \mathcal{O}_{X_D}^*) = \Gamma(D, \mathcal{O}_D^*).
+$$
+Hence the automorphisms in the preceding descent argument are exactly the
+automorphisms pulled back from the base. Applying the same effective descent
+argument to invertible modules on the bases shows that quotienting by these
+automorphisms commutes with the equalizer. Consequently
+$$
+F(A) \longrightarrow F(B)
+\mathrel{\substack{\longrightarrow \\[-0.6ex] \longrightarrow}}
+F(B \otimes_A B)
+$$
+is an equalizer. The cited prorepresentability criterion now proves the first
+assertion.
+
+For the tangent assertion, $X_A \subset X_{A_\epsilon}$ is a first order
+thickening with ideal $\mathcal{O}_{X_A}\epsilon$. More on Morphisms, Lemma
+\ref{more-morphisms-lemma-picard-group-first-order-thickening} gives the
+corresponding exact sequence of units, first cohomology, and Picard groups.
+Our hypothesis identifies the map on global units with the surjection
+$$
+A_\epsilon^* \longrightarrow A^*.
+$$
+It follows that the kernel of restriction on Picard classes is canonically
+$$
+H^1(X_A, \mathcal{O}_{X_A}).
+$$
+Translation by the distinguished lift of $\xi$ obtained by base change
+identifies the fibre in the statement with this kernel. The construction is
+fppf local on $\Spec(A)$ and therefore applies to the sheafified Picard
+functor.
+\end{proof}
+
+\begin{remark}
+\label{remark-formal-picard-separable-correction}
+The parenthetical reduction of the global-functions hypothesis in the cited
+source has a correction: the phrase ``if $f$ is proper'' must read ``if $f$
+is proper and separable''. The proposition above uses the base-change
+hypothesis itself, so this correction does not enter its proof.
+\end{remark}
+
 \begin{lemma}
 \label{lemma-flat-geometrically-connected-fibres-with-section}
 In Situation \ref{situation-pic} let $\sigma : B \to X$ be a section.

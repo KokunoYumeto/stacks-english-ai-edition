@@ -4,12 +4,12 @@ Snapshot: Stacks commit `a04446e57ec1fbc252a871afcec7752fb2807b14`.
 
 The reproducible intake, topic crosswalk, and statement-level review are
 complete for the bounded FGA corpus.  Every review unit has an append-only
-decision and source problems remain explicit.  Forty mathematical
+decision and source problems remain explicit.  Forty-one mathematical
 source patches are implemented and validated; further source integration
 remains in progress.
 
 - 119 Stacks TeX files indexed
-- 21,535 labelled TeX objects indexed
+- 21,537 labelled TeX objects indexed
 - 21,437 objects joined to an existing official tag
 - 55 FGA topics reviewed: 30 direct and 14 broad coverage decisions plus 6
   partial and 5 no-direct decisions
@@ -692,3 +692,31 @@ passes at 78 pages; no overfull box occurs in the added block, and pages
 76--77 containing the complete result and both joins pass rendered
 inspection.  Both semantic validators report no errors: 21,535 labels and
 353 append-only decisions.  The next cursor is Expose 195, Proposition C.3.1.
+The forty-first source patch integrates Expose 195, Proposition C.3.1 in the
+modern form required by the expos\'e's own warning about the naive Picard
+rule: the functor is the fppf sheafification of relative Picard classes, not
+the nonlocal assignment $A\mapsto\Pic(X_A)$.  For a flat $X$ over a
+Noetherian affine base satisfying the stated universal global-functions
+hypothesis, finite-free Cech equalizers are the fppf sheaf condition.  For a
+minimal injective extension $A\to B$, the equality
+$A=B\times_{B/\mathfrak m}A/\mathfrak m$ reduces the datum modulo the maximal
+ideal, uses faithfully flat descent there, and patches finite flat rank-one
+modules across the fibre-product square.  The global-functions hypothesis
+identifies all line-bundle automorphisms with base units, so passage from the
+Picard groupoid to the sheaf of isomorphism classes preserves the equalizer.
+The corrected Grothendieck--Levelt criterion then gives strict
+prorepresentability without a properness hypothesis.  The first-order
+Picard exact sequence and surjectivity on global units identify the tangent
+fibre canonically with $H^1(X_A,\mathcal O_{X_A})$; this degree one is valid
+and is deliberately distinct from the erroneous degree-one formal-Hom
+formula corrected two patches earlier.  An adjacent remark records the 1962
+erratum that the source's parenthetical reduction must say ``proper and
+separable'', not merely ``proper''.  Decision `D000354` supersedes
+`D000161` with exact integrated coverage.  The Quot and Hilbert Spaces
+chapter passed a bibliography-complete build followed by two final TeX
+passes at 60 pages; a targeted draft dependency build resolved the two
+initially missing fibre-product references, no overfull box occurs in the
+added block, and pages 28--29 containing the whole proposition, proof, and
+erratum remark pass 400 dpi rendered inspection.  Both semantic validators
+report no errors: 21,537 labels and 354 append-only decisions.  The next
+cursor is the corollary following Expose 195, Proposition C.3.1.
