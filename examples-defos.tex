@@ -1497,6 +1497,172 @@ bounded-cotangent-space argument of Formal Deformation Theory, Lemma
 \end{proof}
 
 \begin{lemma}
+\label{lemma-abelian-variety-formal-moduli-smooth}
+\begin{reference}
+\cite[Expos\'e 195, C, remarks following Proposition 4.1,
+pp. 386--387]{FGA} and
+\cite[Theorem 2.2.1, pp. 273--280]{Oort-local-moduli}.
+\end{reference}
+Let $\Lambda$ be a complete Noetherian local ring with residue field $k$,
+and let $X$ be an abelian variety of dimension $g$ over $k$. For a local
+object $A$ of $\mathcal{A}_\Lambda$, let $F(A)$ be the set of isomorphism
+classes of abelian schemes $X_A$ over $A$ endowed with an isomorphism
+$$
+X_A \times_{\Spec(A)} \Spec(\kappa(A))
+\longrightarrow
+X \times_{\Spec(k)} \Spec(\kappa(A))
+$$
+of abelian schemes. For arbitrary $A$, define $F(A)$ as the product over
+the local factors. Then $F$ is strictly prorepresentable. The local
+prorepresenting algebra at the marked $k$-point is isomorphic to
+$$
+\Lambda[[t_{ij} \mid 1 \leq i, j \leq g]].
+$$
+In particular, the deformation functor of $X$ as an abelian scheme is
+formally smooth over $\Lambda$ and has tangent space of dimension $g^2$.
+Moreover, forgetting the group law identifies its restriction to
+$\mathcal{C}_\Lambda$ with the functor of isomorphism classes of marked
+deformations of the underlying scheme $X$.
+\end{lemma}
+
+\begin{proof}
+We first discuss prorepresentability. We use the rigidity fact that a
+homomorphism between abelian schemes over a local Artinian ring which is zero
+on the closed fibre is zero. Consequently an automorphism of a marked abelian
+scheme which is the identity on the closed fibre is the identity. This is also
+the argument which shows that forgetting the group law gives the final
+bijection in the statement; see
+\cite[Proposition 2.2.6]{Oort-local-moduli}. Indeed, a section lifting the
+origin exists by smoothness, the rigidity lemma supplies a unique group law
+with that section as origin, and changing the lift of the origin translates
+the resulting group scheme.
+
+We may now use the two equalizer tests in Formal Deformation Theory, Theorem
+\ref{formal-defos-theorem-grothendieck-levelt-prorepresentability}. The proof
+is the same descent argument as in Lemma
+\ref{lemma-schemes-formal-moduli-no-infinitesimal-automorphisms}. For a
+nonzero finite free map $A \to B$, fppf descent gives the underlying marked
+scheme over $A$; multiplication, inverse, and the identity section descend by
+full faithfulness. For an injective map $A \to B$ with $B/A$ of length $1$,
+the affine-basis argument and effective descent for flat modules used there
+descend the underlying scheme and the three structure morphisms. The group
+identities may be checked after base change to $B$. Properness, finite
+presentation, and smoothness follow from the corresponding properties of the
+closed fibre. Rigidity makes the descent isomorphism unique, and hence makes
+its cocycle condition automatic. Thus the two diagrams
+$$
+F(A) \longrightarrow F(B)
+\mathrel{\substack{\longrightarrow \\[-0.6ex] \longrightarrow}}
+F(B \otimes_A B)
+$$
+are equalizers. The cited theorem proves strict prorepresentability.
+
+It remains to prove formal smoothness. Let $B \to A$ be a small extension in
+$\mathcal{C}_\Lambda$ with kernel $I$, and let $X_A$ be an abelian scheme
+deforming $X$. The obstruction to lifting its underlying smooth scheme lies
+in
+$$
+\omega(X_A) \in H^2(X, \mathcal{T}_{X/k}) \otimes_k I
+$$
+by Cotangent Complex, Lemma
+\ref{cotangent-lemma-find-obstruction-ringed-spaces}. Put
+$P_A = X_A \times_A X_A$. The two projections and the Kunneth decomposition
+(Varieties, Lemma \ref{varieties-lemma-kunneth}) give injections
+$$
+i_1, i_2 : H^2(X, \mathcal{T}_{X/k}) \otimes_k I
+\longrightarrow H^2(X \times_k X, \mathcal{T}_{X \times_k X/k}) \otimes_k I.
+$$
+The product construction of the obstruction gives
+$$
+\omega(P_A) = i_1(\omega(X_A)) + i_2(\omega(X_A)).
+$$
+Consider the automorphism $a : P_A \to P_A$ given by
+$a(x, y) = (x + y, y)$. Functoriality of the obstruction under this
+automorphism gives
+$$
+\omega(P_A) = (a_0^*)^{-1}d a_0(\omega(P_A))
+= 2i_1(\omega(X_A)) + i_2(\omega(X_A)).
+$$
+The two displayed equalities imply $i_1(\omega(X_A)) = 0$. Since $i_1$ is
+injective, $\omega(X_A) = 0$. This argument, including the product formula,
+is the characteristic-free obstruction calculation in
+\cite[pp. 279--280]{Oort-local-moduli}. Thus the underlying scheme lifts to
+$B$, and the forgetful bijection already proved equips the lift with an
+abelian-scheme structure. Hence $F|_{\mathcal{C}_\Lambda}$ is smooth.
+
+Finally, Groupoids, Lemma
+\ref{groupoids-lemma-group-scheme-module-differentials} identifies
+$\mathcal{T}_{X/k}$ with the trivial vector bundle having fibre the tangent
+space of $X$ at the origin. The classical identification
+$\dim_k H^1(X, \mathcal{O}_X) = g$ therefore gives
+$$
+\dim_k H^1(X, \mathcal{T}_{X/k}) = g^2.
+$$
+This is the tangent space by Lemma \ref{lemma-schemes-TI}. Formal Deformation
+Theory, Lemma \ref{formal-defos-lemma-smooth} now identifies the local
+prorepresenting algebra with the displayed power series ring.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-smooth-proper-curve-formal-moduli-dimension}
+\begin{reference}
+\cite[Expos\'e 195, C, remarks following Proposition 4.1, p. 386]{FGA}.
+\end{reference}
+Let $k$ be an algebraically closed field, let $\Lambda$ be a complete
+Noetherian local ring with residue field $k$, and let $X$ be a smooth proper
+connected curve of genus $g$ over $k$. The functor on
+$\mathcal{C}_\Lambda$ of isomorphism classes of flat deformations of $X$,
+marked on the closed fibre, is prorepresented by
+$$
+\begin{cases}
+\Lambda & \text{if } g = 0,\\
+\Lambda[[t]] & \text{if } g = 1,\\
+\Lambda[[t_1, \ldots, t_{3g - 3}]] & \text{if } g \geq 2.
+\end{cases}
+$$
+In every case the formal moduli scheme is smooth over $\Lambda$.
+\end{lemma}
+
+\begin{proof}
+If $g = 0$, then $X \cong \mathbf{P}^1_k$ by Algebraic Curves, Proposition
+\ref{curves-proposition-projective-line}. A deformation over an Artinian
+local $\Lambda$-algebra is proper and flat, and hence is $\mathbf{P}^1$ over
+that algebra by Deformation Theory, Lemma
+\ref{defos-lemma-projective-space-rigid-complete-local}. An automorphism of
+$\mathbf{P}^1_k$ lifts because an invertible $2$ by $2$ matrix lifts over a
+surjection of local rings. Thus the marking does not introduce a second
+isomorphism class, and the functor is the one-point functor represented by
+$\Lambda$.
+
+Suppose $g = 1$. Choose a point of $X(k)$ and use it as the origin of the
+resulting abelian variety. The final assertion of Lemma
+\ref{lemma-abelian-variety-formal-moduli-smooth} identifies deformations of
+this abelian variety with deformations of its underlying curve. The same
+lemma, with $g = 1$, gives the ring $\Lambda[[t]]$.
+
+Suppose $g \geq 2$. Algebraic Curves, Lemma
+\ref{curves-lemma-smooth-vector-fields} gives
+$H^0(X, \mathcal{T}_{X/k}) = 0$. Lemma
+\ref{lemma-schemes-formal-moduli-no-infinitesimal-automorphisms} therefore
+gives a Noetherian prorepresenting algebra $R$. The deformation category is
+unobstructed by Lemma \ref{lemma-curve-isolated-lci}; a smooth curve is a
+local complete intersection and has empty singular locus. Formal Deformation
+Theory, Lemma \ref{formal-defos-lemma-smooth-power-series-classical} shows
+that $R$ is a power series ring over $\Lambda$ with one variable for each
+dimension of $H^1(X, \mathcal{T}_{X/k})$.
+
+For a smooth curve, $\Omega_{X/k} \cong \omega_X$, and hence
+$\mathcal{T}_{X/k} \cong \omega_X^{-1}$. Riemann--Roch (Algebraic Curves,
+Lemma \ref{curves-lemma-rr}) gives
+$$
+\chi(X, \mathcal{T}_{X/k})
+= (2 - 2g) - \frac{1}{2}(2g - 2) = 3 - 3g.
+$$
+The zeroth cohomology vanishes as above, so
+$\dim_k H^1(X, \mathcal{T}_{X/k}) = 3g - 3$, as desired.
+\end{proof}
+
+\begin{lemma}
 \label{lemma-proper-smooth-formal-moduli-unobstructed}
 \begin{reference}
 \cite[Expos\'e 182, Th\'eor\`eme 10, p. 209]{FGA}

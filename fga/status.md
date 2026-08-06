@@ -746,3 +746,29 @@ has no undefined reference or overfull box, and pages 14--15 have no visible
 placeholder and pass 600 dpi rendered inspection.  Both semantic validators
 report no errors: 21,538 labels and 355 append-only decisions.  The next
 cursor is the remarks following Expose 195, Proposition C.4.1.
+The forty-third source patch resolves three of the four mathematical layers
+in the compound remarks following Expose 195, Proposition C.4.1.  The
+cotangent-complex formalism already supersedes the source's diagonal-Ext
+description for a nonsmooth scheme.  A new characteristic-free theorem proves
+that the marked deformation functor of a dimension-$g$ abelian variety over a
+complete Noetherian coefficient ring is strictly prorepresented by
+$\Lambda[[t_{ij}\mid 1\leq i,j\leq g]]$ and is formally smooth of relative
+dimension $g^2$.  Its proof combines rigidity, the Grothendieck--Levelt
+equalizer tests, and Oort's product-obstruction calculation; in characteristic
+two the automorphism $(x,y)\mapsto(x+y,y)$ changes
+$i_1(\omega)+i_2(\omega)$ into $2i_1(\omega)+i_2(\omega)$, so invariance still
+forces $\omega=0$.  A second theorem gives the exact smooth-proper-curve rings
+$\Lambda$, $\Lambda[[t]]$, and
+$\Lambda[[t_1,\ldots,t_{3g-3}]]$ in genera zero, one, and at least two.
+Decision `D000356` supersedes `D000165` but deliberately remains
+`extend_existing`: the covering-extension setup on printed pages 387--389 is
+the unresolved fourth layer and belongs with the following proposition.
+The exact Oort 1971 authority is registered in `my.bib`.  The Deformation
+Problems chapter passed a bibliography-complete build followed by two final
+TeX passes at 38 pages and 672,836 bytes; the added block has no unresolved
+reference or overfull box, pages 16--18 contain no `??`, pages 16--17 pass
+1,200 dpi rendered inspection, and an independent 300 dpi render confirms
+that the apparent page-18 running-header clipping was only a large-raster
+viewer artifact.  Both semantic validators report no errors: 21,540 labels
+and 356 append-only decisions.  The next cursor is the formal-covering setup
+in this same compound unit, followed by Expose 195, Proposition C.5.1.
