@@ -3472,3 +3472,57 @@ their rendered page images have SHA-256
 `51F8B400AE8B5C97891F580B2AF1F7C15F49CFE1306E4EAE1D1FB22318CA6C4D`,
 and `636FF2AC9BCABB9B75F0018797E9539AB27EB83BA915E8B69D9C67E94DFF1193`.
 The next sequential cursor is Remark 3.8 on printed pages 240--241.
+
+FGA 236, Remark 3.8 is now integrated as Moduli, Remark
+`moduli-remark-hodge-cohomology-local-freeness-history`. It preserves the
+source's characteristic-zero Hodge-theoretic local-freeness result, its
+Serre-based mixed-characteristic counterexamples to local freeness of
+`R^1f_*O_X`, and its report that no equal-characteristic counterexample was
+known in 1962. The last statement is explicitly classified as dated
+historical evidence rather than promoted to a current nonexistence theorem.
+The modern comparison separates perfect derived direct image and derived
+base change, ordinary flat cohomology base change, degeneration of the
+Hodge-to-de Rham spectral sequence, and local freeness of the individual
+cohomology sheaves; it also identifies the preceding abelian-scheme lemma as
+a distinct positive case.
+
+Decision `D000566` supersedes reviewed-historical decision `D000293` and
+records the unit as integrated historical and modern comparison. Direct
+serial 1,100-dpi source review covers printed pages 240--241. Their page
+images have SHA-256
+`5D0808CE1BFF8CB01E720159F00972A39F8D0DD8B6BC3D0593CD129DAE2C913E`
+and
+`F07E028BBE778B94414E41F52C2DF80607C37D5B054A4822006BFC464B7BC867`.
+The 24-page authority remains 2,461,968 bytes with SHA-256
+`266EEF77BF7BA34A75895ED69ACBFE791A2958DD52C2837D75AB29DF0D2F714A`.
+
+Both semantic validators pass with no errors at 21,722 labels, 21,437
+official-tag joins, 71 controlled topics, 4,273 topic candidates, 566
+append-only decisions, 1,253 source units, 1,612 term links, and 59 source
+issues, of which eight remain active; there are zero review units. The topic,
+decision, issue, map, Stacks-label, topic-candidate, reviewed-topic-map,
+index-validation, and map-validation files have SHA-256
+`B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0`,
+`B49C0C905A8A1308DFC8160D8C864C7C7AE1ECE0300EFCC5D1F55D49699794ED`,
+`ECE83F139D6E457796604266A142691BAD503DD937B38ED05BCCD0E80B378CDE`,
+`1B2D31D1EB7C37DE4C74A4ADB8ABA6313A19B6939F31125DB19299975C173AFA`,
+`DBE7CF9A43CE609F7465144613026F3DF5774F446F76A82ECE3A0E111E9D0AD3`,
+`F9744FF7936CC02DEB7EECBCC576008A008D3DCEB03EDF78A736ED443F814147`,
+`26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46`,
+`44B1867E4AA4F400DE28BB476CEACADE9DBCDF127650C6EA202C0ABBB242489A`,
+and `C1710A52A870F880DCD9BDB4C3780725BF2EE821A0E7637C34504F47A4F09E6A`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`;
+no official tag was invented for the new historical remark.
+
+Three reproducible serial TeX passes produce a 73-page Moduli chapter of
+882,555 bytes with SHA-256
+`569BCBAD70591744EFAE4503DD11033E29A23622D59ED3C81DAA108478F11C86`.
+An initial render exposed a 13.843-point overfull line caused by an
+unbreakable compound adjective; the wording was repaired without changing
+the mathematical content, and the final build has no overfull or underfull
+box. Final serial 1,100-dpi inspection of Moduli page 60 finds no clipping,
+collision, malformed formula, unresolved new reference, placeholder, or
+unreadable text; its rendered page image has SHA-256
+`C95694FF81F7EDB1E2137A2E4DEB1F0B410DE1E0E2F56E38A519023A1C312E4D`.
+The next sequential cursor is Corollary 3.8 on printed page 241.
