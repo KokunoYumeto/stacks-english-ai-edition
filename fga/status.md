@@ -840,3 +840,26 @@ B71E3AEDB8F00B325B561271C4844883A22B8397194FC2382FD27FCA0C1647F1.
 The added block has no new undefined reference or overfull box; pages 23--24
 contain no placeholder and pass 1,200-dpi rendered inspection.  The next
 substantive cursor is Expose 212.
+
+The forty-sixth source patch integrates Expose 212, Proposition 2.1 and its
+kernel-pair consequence for arbitrary finite schemes, rather than only the
+finite-locally-free quotient cases already present.  Over a locally
+Noetherian base, finite colimits are constructed by taking equalizers of the
+corresponding finite algebras.  At a geometric point, flat passage to the
+strict henselization preserves those equalizers.  Every finite algebra over
+the resulting strictly henselian local ring is a product of local algebras,
+each with exactly one point over the chosen algebraically closed field.
+Consequently the geometric-point functor is left adjoint to the constant
+finite-scheme functor and preserves finite colimits.  Applied to a finite
+equivalence relation, this proves that its map to the quotient kernel pair is
+a surjective closed immersion, hence is surjective and radicial exactly as
+the source asserts.
+
+Decision D000361 supersedes the former gap decision D000169.  Both semantic
+validators pass with no errors at 21,553 labels, 361 append-only decisions,
+1,253 source units, 1,612 term links, and 12 recorded source issues.  Two
+final TeX passes produce a 105-page Descent chapter of 1,179,762 bytes with
+SHA-256 B7A039B04D7BA3B861D2B29BE151E37A90BC8D9005A5945BE7000D316EE13568.
+The added proposition and consequence have no unresolved reference or
+overfull box; their complete pages 26--27 pass 1,200-dpi rendered inspection.
+The next substantive cursor is Expose 212, Section 5 and Theorem 5.1.

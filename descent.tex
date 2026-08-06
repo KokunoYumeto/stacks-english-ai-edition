@@ -2351,6 +2351,133 @@ $m \otimes 1$ into this equalizer for every $m \in M$. It therefore comes
 from a unique $A$-linear map $M \to N$. These maps glue by uniqueness.
 \end{proof}
 
+\begin{proposition}
+\label{proposition-finite-schemes-geometric-fibre-colimits}
+\begin{reference}
+\cite[Expos\'e 212, Proposition 2.1, pp. 103--104]{FGA}.
+\end{reference}
+Let $S$ be a locally Noetherian scheme, let $s \in S$, and let $\Omega$
+be an algebraically closed extension of $\kappa(s)$. The category of schemes
+finite over $S$ has finite colimits, and the functor
+$$
+X \longmapsto X_s(\Omega)
+$$
+from this category to the category of sets commutes with finite colimits.
+\end{proposition}
+
+\begin{proof}
+Finite coproducts of finite $S$-schemes exist and are finite over $S$.
+Consider two morphisms
+$X_1 \mathrel{\substack{\longrightarrow \\[-0.6ex] \longrightarrow}} X_0$
+of finite $S$-schemes.
+Write
+$$
+\mathcal{A}_i = (X_i \to S)_*\mathcal{O}_{X_i}
+$$
+and let $\mathcal{A}$ be the equalizer of
+$\mathcal{A}_0
+\mathrel{\substack{\longrightarrow \\[-0.6ex] \longrightarrow}}
+\mathcal{A}_1$. This is a finite
+quasi-coherent $\mathcal{O}_S$-algebra: the assertion is affine local, where
+it follows because a submodule of a finite module over a Noetherian ring is
+finite. The finite $S$-scheme
+$$
+X = \underline{\Spec}_S(\mathcal{A})
+$$
+is the coequalizer of
+$X_1 \mathrel{\substack{\longrightarrow \\[-0.6ex] \longrightarrow}} X_0$
+in the category of finite $S$-schemes. Thus finite colimits exist by
+Categories, Lemma
+\ref{categories-lemma-colimits-coproducts-coequalizers}.
+
+\medskip\noindent
+Choose a separable closure $\kappa(s)^{sep} \subset \Omega$ and let
+$R^{sh}$ be the corresponding strict henselization of
+$R = \mathcal{O}_{S, s}$. The morphism
+$$
+T = \Spec(R^{sh}) \longrightarrow S
+$$
+is flat by More on Algebra, Lemma
+\ref{more-algebra-lemma-dumb-properties-henselization}. Consequently, the
+construction by equalizers above shows that base change from $S$ to $T$
+preserves coequalizers of finite schemes.
+
+\medskip\noindent
+We claim that the functor
+$$
+G : \{\text{schemes finite over }T\} \longrightarrow
+\{\text{finite sets}\}, \qquad Y \longmapsto Y(\Omega)
+$$
+is left adjoint to the functor
+$$
+E \longmapsto E_T = \coprod_{e \in E} T.
+$$
+To see this, write $Y = \Spec(B)$. Since $R^{sh}$ is henselian, Algebra,
+Lemma \ref{algebra-lemma-characterize-henselian} gives a product
+decomposition
+$$
+B = B_1 \times \ldots \times B_n
+$$
+with each $B_i$ local. The residue field of $B_i$ is a finite purely
+inseparable extension of the separably algebraically closed residue field
+$\kappa(s)^{sep}$. It therefore has a unique
+$\kappa(s)^{sep}$-embedding into $\Omega$. It follows that $Y(\Omega)$ has
+exactly one element for each factor $B_i$. On the other hand, a morphism
+$Y \to E_T$ is exactly a choice of an element of $E$ for each of these
+factors. We have therefore obtained, naturally in $Y$ and $E$, a bijection
+$$
+\Mor_T(Y, E_T) = \operatorname{Map}(Y(\Omega), E),
+$$
+which proves the claim.
+
+\medskip\noindent
+As a left adjoint, $G$ commutes with finite colimits. Finally, for every
+finite $S$-scheme $Y$ we have
+$$
+Y_s(\Omega) = (Y \times_S T)(\Omega).
+$$
+Flat base change to $T$ preserves the coequalizers constructed above, and
+$G$ preserves them by the claim. Finite coproducts are preserved as well,
+which proves the proposition.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-finite-equivalence-relation-kernel-pair}
+\begin{reference}
+\cite[Expos\'e 212, p. 104]{FGA}.
+\end{reference}
+Let $S$ be a locally Noetherian scheme. Let
+$$
+j : R \longrightarrow X \times_S X
+$$
+be an equivalence relation with $R$ and $X$ finite over $S$. If $Y = X/R$
+is the coequalizer in the category of finite $S$-schemes, then the canonical
+morphism
+$$
+R \longrightarrow X \times_Y X
+$$
+is a surjective closed immersion. In particular, it is surjective and
+radicial.
+\end{lemma}
+
+\begin{proof}
+The canonical morphism is a monomorphism because $j$ is a monomorphism. It is
+finite, as every morphism between schemes finite over $S$ is finite, and hence
+it is a closed immersion by Morphisms, Lemma
+\ref{morphisms-lemma-finite-monomorphism-closed}.
+
+\medskip\noindent
+Let $z \in X \times_Y X$, let $s \in S$ be its image, and choose an
+algebraically closed extension $\Omega$ of $\kappa(z)$. The point $z$ gives
+two elements of $X_s(\Omega)$ with the same image in $Y_s(\Omega)$. By
+Proposition \ref{proposition-finite-schemes-geometric-fibre-colimits}, the
+latter set is the quotient of $X_s(\Omega)$ by $R_s(\Omega)$. Since
+$R_s(\Omega)$ is already an equivalence relation, there is an element of
+$R_s(\Omega)$ mapping to the given pair. Thus $z$ is in the image of the
+canonical morphism, which proves surjectivity. A monomorphism is universally
+injective, so the final assertion follows as well.
+\end{proof}
+
 \begin{lemma}
 \label{lemma-finite-effective-epimorphism-functions}
 \begin{reference}
