@@ -4084,7 +4084,8 @@ by an algebraic space
 $$
 P=\Picardfunctor_{X/B}.
 $$
-Let $n \geq 1$. Multiplication by $n$
+Then $P\to B$ is locally of finite presentation. Let $n \geq 1$.
+Multiplication by $n$
 $$
 [n] : P \longrightarrow P
 $$
@@ -4201,6 +4202,44 @@ geometric identity components contain no additive subgroup. Thus the stronger
 Picard-specific assertion requires an additional argument or hypothesis and
 is not inferred from the cited group-scheme results here.
 \end{remark}
+
+\begin{lemma}[Dimension of relative Picard schemes]
+\label{corollary-picard-dimension-semicontinuity}
+\begin{reference}
+\cite[Expos\'e 236, Corollary 2.7, p. 234]{FGA}. The printed statement
+writes $f:X\to Y$, but the Picard scheme and the dimension function which
+follow are both over $S$; thus the base of $f$ is $S$.
+\end{reference}
+Let $S$ be a locally Noetherian scheme and let $X\to S$ be a proper flat
+morphism of schemes. Suppose that the fppf Picard functor is represented by a
+scheme
+$$
+P=\Picardfunctor_{X/S}.
+$$
+Then
+$$
+S\longrightarrow\{0,1,2,\ldots\},\qquad
+s\longmapsto\dim(P_s)
+$$
+is upper semicontinuous.
+
+If, for every geometric point $\overline{s}\to S$, the identity component
+$P^0_{\overline{s}}$ contains no subgroup scheme isomorphic to
+$\mathbf G_{a,\overline{s}}$, then this function is locally constant.
+\end{lemma}
+
+\begin{proof}
+Theorem \ref{theorem-picard-multiplication-etale} shows that $P\to S$ is
+locally of finite presentation. Hence upper semicontinuity follows from More
+on Morphisms, Lemma
+\ref{more-morphisms-lemma-group-scheme-fibre-dimension-upper-semicontinuous}.
+
+Under the additional hypothesis, Lemma
+\ref{corollary-picard-prime-to-characteristic-openness} shows that $P\to S$
+is universally open along $P^0$. More on Morphisms, Lemma
+\ref{more-morphisms-lemma-identity-component-open-fibre-dimension} now gives
+local constancy.
+\end{proof}
 
 \begin{example}[A relative Picard space which is not a scheme]
 \label{example-picard-conic-not-scheme}

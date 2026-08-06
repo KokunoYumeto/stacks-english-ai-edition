@@ -9231,6 +9231,39 @@ dense in $C$. This proves the density assertion component by component.
 \end{proof}
 
 \begin{lemma}
+\label{lemma-group-scheme-fibre-dimension-upper-semicontinuous}
+\begin{reference}
+\cite[Expos\'e 236, Corollary 2.7, p. 234]{FGA}.
+\end{reference}
+Let $S$ be a scheme and let $G \to S$ be a group scheme locally of finite
+type. Then the function
+$$
+S \longrightarrow \{0,1,2,\ldots\}, \qquad
+s \longmapsto \dim(G_s)
+$$
+is upper semicontinuous.
+\end{lemma}
+
+\begin{proof}
+Let $e:S\to G$ be the identity section. For every $n\geq 0$, Morphisms,
+Lemma \ref{morphisms-lemma-openness-bounded-dimension-fibres} shows that
+$$
+U_n=\{x\in G\mid \dim_x(G_{f(x)})\leq n\}
+$$
+is open in $G$. For every $s\in S$ we have
+$$
+\dim(G_s)=\dim_{e(s)}(G_s).
+$$
+Indeed, after extending the residue field to an algebraic closure, every
+irreducible component is a translate of a component which meets the identity
+component. Consequently
+$$
+\{s\in S\mid \dim(G_s)\leq n\}=e^{-1}(U_n)
+$$
+is open in $S$, which proves the assertion.
+\end{proof}
+
+\begin{lemma}
 \label{lemma-identity-component-open-fibre-dimension}
 Let $S$ be a locally Noetherian scheme and let $G \to S$ be a group scheme
 locally of finite type. If $G \to S$ is universally open along the

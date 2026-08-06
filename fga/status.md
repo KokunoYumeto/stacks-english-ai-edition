@@ -2780,3 +2780,60 @@ box. Final serial 1,100-dpi inspection of Moduli page 45 and More on
 Morphisms page 93 finds no clipping, collision, malformed formula,
 unresolved new reference, placeholder, or unreadable text. The next
 sequential cursor is Corollary 2.7 on printed page 234.
+
+Corollary 2.7 is now integrated in full. More on Morphisms, Lemma
+`more-morphisms-lemma-group-scheme-fibre-dimension-upper-semicontinuous`
+proves the general first assertion: for a locally finite type group scheme,
+every fibre has the local dimension at the identity, so the inverse images
+under the identity section of the standard open local-fibre-dimension strata
+are exactly the dimension sublevel sets on the base. Moduli, Lemma
+`moduli-corollary-picard-dimension-semicontinuity` applies this to the
+represented proper-flat Picard scheme. When its geometric identity
+components have no additive subgroup, the preceding Picard openness lemma
+makes the morphism universally open along `P^0`; More on Morphisms, Lemma
+`more-morphisms-lemma-identity-component-open-fibre-dimension` then upgrades
+upper semicontinuity to local constancy.
+
+The Picard multiplication theorem now exposes its already-proved local
+finite-presentation conclusion in its statement so that the dimension lemma
+can cite it directly. Source issue `I000056` records and resolves the printed
+base-symbol error: page 234 prints `f:X to Y`, although the Picard prescheme
+and displayed function immediately use the base `S`; the corrected Stacks
+statement therefore has `f:X to S`. Decision `D000552` supersedes
+`D000281` and replaces the former reviewed gap with an exact corrected-source
+integration. The first isolated Moduli build rejected an unsupported
+`corollary` environment; the delivered source uses the repository's standard
+`lemma` environment and all subsequent serial passes succeed.
+
+Direct serial 1,100-dpi review covers printed page 234 of the 24-page NUMDAM
+authority. That authority remains 2,461,968 bytes with SHA-256
+`266EEF77BF7BA34A75895ED69ACBFE791A2958DD52C2837D75AB29DF0D2F714A`.
+Both semantic validators pass with no errors at 21,690 labels, 21,437
+official-tag joins, 71 controlled topics, 4,227 topic candidates, 552
+append-only decisions, 1,253 source units, 1,612 term links, and 56 source
+issues, of which eight remain active; there are zero review units. The topic,
+decision, issue, map, Stacks-label, topic-candidate, reviewed-topic-map,
+index-validation, and map-validation files have SHA-256
+`B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0`,
+`3E3C24C50645708CC51E18A5A95BCE55831A55A952E1398284305F2E86BD9E06`,
+`CE0DBC5B628432C66170E7ACC9D5CC7AFFCEF02A55F2BA325A6E0EC3C5624084`,
+`B17C08691376F724B391C3AEADB475D4EF5B4F828A669C8B31E9C477506669A9`,
+`B3A1DC4D5FEE78C9C96A02F04C54A69118F9D6D7F3F01FE66943E3BDF819E748`,
+`CEBBA2B28D46FBC413AC6E47C11AE7E2F37DB1B484B6A4771A3BCAB5346ADC4B`,
+`26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46`,
+`1D6FE669848B50946D1B2B54DA013E6294068777C6A1E3ADC7645DA3D8DCF2C9`,
+and `CA6443DF4C462B8F9E296A108CFD22126BA5C14412F797B8B7314E2ECEB5A904`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`;
+no official tag was invented for either new lemma.
+
+Stable serial TeX passes produce a 61-page Moduli chapter of 805,825 bytes
+with SHA-256
+`AE30644FDC95B3C68D02DAC179B13300DF29B12CEF723942DE456FC40C8AD8CA`
+and a 260-page More on Morphisms chapter of 2,402,958 bytes with SHA-256
+`F73C40831527D5426BA13C292865FB4E1BBFE2D37BAECD0E768D714DA9BA6AD1`.
+Neither affected source range creates an overfull or underfull horizontal
+box. Final serial 1,100-dpi inspection of Moduli pages 45--46 and More on
+Morphisms page 97 finds no clipping, collision, malformed formula,
+unresolved new reference, placeholder, or unreadable text. The next
+sequential cursor is Remark 2.8 on printed page 234.
