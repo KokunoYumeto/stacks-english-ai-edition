@@ -994,6 +994,9 @@ is isomorphic to $U$ by Lemma \ref{lemma-open-immersion}.
 
 \begin{lemma}
 \label{lemma-fibre-product-affine-schemes}
+\begin{reference}
+\cite[Chapter II, \S 1, no. 33, pp. 225--226]{FAC}
+\end{reference}
 The category of affine schemes has finite products, and fibre products.
 In other words, it has finite limits. Moreover, the products
 and fibre products in the category of affine schemes
@@ -3193,6 +3196,10 @@ we have already shown that fibre products of schemes exist.
 
 \begin{definition}
 \label{definition-fibre-product}
+\begin{reference}
+\cite[Chapter II, \S 1, no. 33, Propositions 6 and 7,
+pp. 225--226]{FAC}
+\end{reference}
 Given morphisms of schemes $f : X \to S$ and $g : Y \to S$
 the {\it fibre product} is a scheme $X \times_S Y$ together
 with projection morphisms $p : X \times_S Y \to X$
@@ -3381,6 +3388,35 @@ $\Spec(\kappa(x) \otimes_{\kappa(s)} \kappa(y)/\mathfrak p)$.
 We omit the verification that the two constructions are inverse
 to each other.
 \end{proof}
+
+\begin{remark}
+\label{remark-classical-products-varieties}
+\begin{reference}
+\cite[Chapter II, \S 1, no. 33, pp. 225--226]{FAC}
+\end{reference}
+Let $k$ be an algebraically closed field. For locally closed algebraic sets
+$T \subset k^n$ and $T' \subset k^m$, endowed with their reduced induced
+scheme structures, the classical product $T \times T'$ agrees with the
+scheme product over $k$ on closed points and with its classical
+regular-function sheaf. The product is reduced by
+Algebra, Lemma \ref{algebra-lemma-perfect-reduced}, since $k$ is perfect.
+The full scheme product generally has additional
+nonclosed points, as described in Lemma \ref{lemma-points-fibre-product}.
+Even on closed points, the induced Zariski topology is generally finer than
+the product topology; for example, the diagonal in $k \times k$ is Zariski
+closed but is not closed for the product of the two Zariski topologies when
+$k$ is infinite.
+
+The universal property of the scheme product says that a morphism
+$W \to T \times T'$ is equivalent to a pair of morphisms $W \to T$ and
+$W \to T'$. It also supplies the projections, constant-point sections, and
+products of morphisms used in the classical argument. The converse direction
+for a product of morphisms, and consequently the converse direction for a
+product isomorphism, require both source factors to be nonempty: choosing a
+$k$-point in either factor gives the section which recovers the other map.
+Without this hypothesis an empty factor makes the product map carry no
+information about the other map.
+\end{remark}
 
 \begin{lemma}
 \label{lemma-fibre-product-immersion}
