@@ -5483,6 +5483,35 @@ abelian subscheme of $P$, so $P \to S$ is smooth at $[n](x)$. Theorem
 smooth.
 \end{proof}
 
+\begin{lemma}[Characteristic-zero torsion components]
+\label{corollary-picard-torsion-components-smooth-characteristic-zero}
+\begin{reference}
+\cite[Expos\'e 236, Corollary 3.9, p. 241]{FGA}.
+\end{reference}
+In the situation of Proposition
+\ref{proposition-canonical-abelian-picard-parameter}, assume that every
+residue field of $S$ has characteristic zero. Then
+$$
+P^\tau \longrightarrow S
+$$
+is smooth.
+\end{lemma}
+
+\begin{proof}
+Let $s \in S$. Lemma \ref{lemma-picard-tangent-dimension}, applied to the
+proper scheme $X_s$ over $\kappa(s)$, shows that $P_s$ is smooth. Theorem
+\ref{theorem-picard-smooth-near-smooth-fibre} and Corollary
+\ref{corollary-picard-smooth-prime-to-characteristic-components} therefore
+give an open neighbourhood $U$ of $s$ over which $P$ is smooth along
+$P^\sigma$. Since all residue characteristics are zero, More on Morphisms,
+Lemma \ref{more-morphisms-lemma-characteristic-zero-component-loci} gives
+$$
+P^\tau=P^\sigma.
+$$
+Thus $P^\tau\to S$ is smooth over a neighbourhood of every point of $S$,
+which proves the assertion.
+\end{proof}
+
 \section{Properties of the Picard stack}
 \label{section-picard-stack}
 

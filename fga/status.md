@@ -3588,3 +3588,52 @@ their rendered page images have SHA-256
 and
 `0AE63A217EC29630429CC955B935CF68EFD31EA60DFD851F6F6B7073B73C388B`.
 The next sequential cursor is Corollary 3.9 on printed page 241.
+
+FGA 236, Corollary 3.9 is now integrated as Moduli, Lemma
+`moduli-corollary-picard-torsion-components-smooth-characteristic-zero`.
+Every Picard fibre in the stated situation is smooth in characteristic zero.
+The smooth-fibre theorem and the verified prime-to-characteristic component
+corollary therefore apply over a neighbourhood of every base point, while the
+characteristic-zero equality $P^\tau=P^\sigma$ recovers smoothness of the full
+torsion-component locus. Thus this corollary remains valid without relying on
+the unsupported positive-characteristic $P^\tau$ extension recorded at the
+preceding cursor.
+
+Decision `D000568` supersedes reviewed-gap decision `D000295` and records the
+result as integrated source and Stacks content. Direct 1,100-dpi source review
+uses printed page 241, whose page image has SHA-256
+`F07E028BBE778B94414E41F52C2DF80607C37D5B054A4822006BFC464B7BC867`.
+The 24-page authority remains 2,461,968 bytes with SHA-256
+`266EEF77BF7BA34A75895ED69ACBFE791A2958DD52C2837D75AB29DF0D2F714A`.
+
+Both semantic validators pass with no errors at 21,724 labels, 21,437
+official-tag joins, 71 controlled topics, 4,275 topic candidates, 568
+append-only decisions, 1,253 source units, 1,612 term links, and 60 source
+issues, of which nine remain active; there are zero review units. The topic,
+decision, issue, map, Stacks-label, topic-candidate, reviewed-topic-map,
+index-validation, and map-validation files have SHA-256
+`B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0`,
+`364451163B0F21D5B98C71990E4720047FC7D0B3646A988DBE4C7A522AC18DF7`,
+`735FD1C24D5C64988008014CAC9AB4053943B96659483F8CBCAE5401BDF60EAB`,
+`3F66DAD897D819A15C246C62475373CCAD136AB3B1EA0CCA8C2262B8C8B2DBB3`,
+`A20186DFC152919E60706F7B8FE158F595F5FAAB65DBEB28F53C3B53A771D492`,
+`E2A3213F04BA8AEEEF8D3A6CBE0F1231A955D85758660C961328B3BEB4D826C6`,
+`26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46`,
+`7740BEC7BF9904BCE2074782DDC6DB661213EB823D198289A26DE8C5CD45B076`,
+and `34A1C4F7265AF77AA7F8018B8AE3DD82862BBC39B7E9A3B1D6399CC530ECDF0F`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`;
+no official tag was invented for the new lemma.
+
+Three reproducible serial TeX passes produce a 74-page Moduli chapter of
+887,317 bytes with SHA-256
+`885FBE0E8990FC39326EC3386C59EFD75718C5DE61196127A7FDEBF15D278C91`.
+There is no overfull box and no box warning in the new source range; two
+underfull vertical-box pagination warnings occur later on output pages 67 and
+73. Final serial 1,100-dpi inspection of Moduli pages 60--61 finds no clipping,
+collision, malformed formula, unresolved new reference, placeholder, or
+unreadable text; their rendered page images have SHA-256
+`F9BEFF87F774DCE83F0C07B4302BA0C187C2B465F5C19FCF8BAE2469014700AD`
+and
+`C0DF284A0B17B22ADF8FCE7BFC3BE9EF893B77293202639FF33F5042915CC1D3`.
+The next sequential cursor is Remark 3.10 on printed page 241.
