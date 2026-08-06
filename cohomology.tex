@@ -2785,6 +2785,54 @@ whose sheafification is zero by locality of cohomology, see
 Lemma \ref{lemma-kill-cohomology-class-on-covering}.
 \end{proof}
 
+\begin{remark}
+\label{remark-FAC-cech-low-degree-exact-sequence}
+\begin{reference}
+\cite[Chapter I, \S 3, no. 24, Propositions 5 and 6 and
+Corollaries 1 and 2, pp. 216--217]{FAC}
+\end{reference}
+Let
+$$
+0 \to \mathcal{F} \to \mathcal{G} \to \mathcal{H} \to 0
+$$
+be a short exact sequence of sheaves. For a fixed open covering
+$\mathcal{U}$, the corresponding sequence of {\v C}ech complexes need
+not be exact on the right. The source replaces
+$\check{\mathcal{C}}^\bullet(\mathcal{U}, \mathcal{H})$ by the image
+$\mathcal{C}_0^\bullet(\mathcal{U}, \mathcal{H})$ of
+$\check{\mathcal{C}}^\bullet(\mathcal{U}, \mathcal{G})$. Write
+$H_0^q(\mathcal{U}, \mathcal{H})$ for the cohomology of this image
+complex and $H_0^q(X, \mathcal{H})$ for its colimit over refinements.
+The resulting short exact sequences of complexes are compatible with
+refinements.
+
+The local lifting property for a surjective map of sheaves, see
+Sheaves, Definition \ref{sheaves-definition-injective-surjective},
+shows after taking the colimit over coverings that
+$$
+H_0^0(X, \mathcal{H}) \longrightarrow \check{H}^0(X, \mathcal{H})
+$$
+is an isomorphism and that
+$$
+H_0^1(X, \mathcal{H}) \longrightarrow \check{H}^1(X, \mathcal{H})
+$$
+is injective.
+Thus the long exact sequence for the image complexes gives the exact
+sequence
+$$
+0 \to \Gamma(X, \mathcal{F}) \to \Gamma(X, \mathcal{G}) \to
+\Gamma(X, \mathcal{H}) \to \check{H}^1(X, \mathcal{F}) \to
+\check{H}^1(X, \mathcal{G}) \to \check{H}^1(X, \mathcal{H}).
+$$
+By Lemmas \ref{lemma-cech-h0-space} and \ref{lemma-cech-always}, its terms
+identify with degree zero and one derived-functor cohomology. In the current
+framework the same low-degree exactness, and its continuation in every
+degree, follow from the universal delta-functor construction discussed in
+Section \ref{section-derived-functors}. In particular,
+$H^1(X, \mathcal{F}) = 0$ implies that
+$\Gamma(X, \mathcal{G}) \to \Gamma(X, \mathcal{H})$ is surjective.
+\end{remark}
+
 \begin{lemma}
 \label{lemma-cech-Hausdorff-quasi-compact}
 Let $X$ be a Hausdorff and quasi-compact topological space. Let
@@ -2926,8 +2974,8 @@ $$
 \xymatrix{
 0 \ar[r] &
 \check{\mathcal{C}}^\bullet(\mathcal{U}, \mathcal{F}) \ar[r] \ar[d] &
-\check{\mathcal{C}}^\bullet(\mathcal{U}, \mathcal{F}) \ar[r] \ar[d] &
-\check{\mathcal{C}}^\bullet(\mathcal{U}, \mathcal{F}) \ar[r] \ar[d] &
+\check{\mathcal{C}}^\bullet(\mathcal{U}, \mathcal{G}) \ar[r] \ar[d] &
+\check{\mathcal{C}}^\bullet(\mathcal{U}, \mathcal{H}) \ar[r] \ar[d] &
 0 \\
 0 \ar[r] &
 \text{Tot}(\check{\mathcal{C}}^\bullet(\mathcal{U}, \mathcal{I}_1^\bullet))

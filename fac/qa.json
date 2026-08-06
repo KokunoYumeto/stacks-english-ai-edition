@@ -3,17 +3,17 @@
   "date": "2026-08-06",
   "scope": {
     "start": "fac:I:1:no:1",
-    "end": "fac:I:3:no:23",
-    "printed_pages": "199-216",
-    "units_decided": 66,
-    "stacks_references_added": 37
+    "end": "fac:I:3:no:24",
+    "printed_pages": "199-217",
+    "units_decided": 72,
+    "stacks_references_added": 38
   },
   "authority": {
     "bytes": 6305726,
     "sha256": "B8C6508249308F5D8BC886B9E6360F1EC4FDC8F0F18EFAA03EE0E36B591551CA",
     "render_dpi": 1100,
-    "physical_pages_inspected": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
-    "printed_pages_inspected": [199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216]
+    "physical_pages_inspected": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22],
+    "printed_pages_inspected": [199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217]
   },
   "builds": [
     {
@@ -43,9 +43,9 @@
     {
       "master": "cohomology.tex",
       "pdf": "cohomology.pdf",
-      "bytes": 1341835,
-      "sha256": "6C7F12F869BEE3B493F7E717D4228C4BB5A7B0E5E248DA167CEE760E4809FBAC",
-      "affected_pdf_pages_inspected": [9, 10, 24, 25, 40, 41, 43],
+      "bytes": 1342615,
+      "sha256": "EF684DEA99C5351682A1BD31DCE144FAD03D07CD4B434EA6CD5D5CB383066348",
+      "affected_pdf_pages_inspected": [9, 10, 24, 25, 27, 28, 40, 41, 43],
       "affected_page_result": "PASS"
     }
   ],
@@ -55,6 +55,13 @@
       "kind": "homotopy_sign",
       "evidence": "FAC printed p. 214 and the calculation following equation-transformation",
       "correction": "gamma-prime minus gamma equals d h plus h d",
+      "result": "PASS"
+    },
+    {
+      "label": "lemma-cech-Hausdorff-quasi-compact",
+      "kind": "wrong_coefficient_sheaves",
+      "evidence": "The baseline top Cech-complex row repeated F while the declared short exact sequence and aligned injective resolutions use F, G, H; FAC printed pp. 216--217 independently shows the three coefficients.",
+      "correction": "Replace the second and third top-row coefficients by G and H.",
       "result": "PASS"
     }
   ],
@@ -72,7 +79,7 @@
     "fac_citations_resolved": true,
     "undefined_reference_at_edited_lines": 0,
     "overfull_box_at_edited_lines": 0,
-    "note": "The isolated builds retain unrelated missing chapter-aux warnings, unrelated pre-existing cross-chapter warnings, and pre-existing overfull diagnostics on module pages 31--32. The FAC historical note and the edited Cech-complex links are resolved and introduce no unresolved citation or link."
+    "note": "The isolated builds retain unrelated missing chapter-aux warnings, unrelated pre-existing cross-chapter warnings, and pre-existing overfull diagnostics. The FAC no. 24 reference note and corrected diagram introduce no unresolved citation, link, or overfull box."
   },
   "validators": {
     "intake": "PASS",
