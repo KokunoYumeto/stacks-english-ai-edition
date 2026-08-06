@@ -1405,6 +1405,60 @@ Descent, Lemma
 shows that $f$ is an isomorphism and we win.
 \end{proof}
 
+\begin{lemma}[Artinian and discrete valuation tests]
+\label{lemma-surjective-monomorphism-tests}
+Let $f : T \to S$ be a surjective monomorphism of finite type, where $S$ is
+locally Noetherian.
+\begin{enumerate}
+\item The morphism $f$ is an isomorphism if and only if, for every $s \in S$
+and every $n \geq 0$, its base change to
+$$
+S_{s, n} =
+\Spec(\mathcal{O}_{S, s}/\mathfrak m_s^{n + 1})
+$$
+is an isomorphism.
+\item If $S$ is reduced, then $f$ is an isomorphism if and only if, for every
+morphism $\Spec(V) \to S$ from the spectrum of a discrete valuation ring,
+the base change $T_V \to \Spec(V)$ has a section.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Only the reverse implications require proof. Suppose first that the
+infinitesimal neighbourhood condition in (1) holds. For $s \in S$, let
+$t \in T$ be the unique point over $s$ and put
+$$
+A = \mathcal{O}_{S, s}, \qquad B = \mathcal{O}_{T, t}.
+$$
+The case $n = 0$ identifies the residue fields. For every $n$, the asserted
+isomorphism after base change gives
+$$
+A/\mathfrak m_A^{n + 1}
+\longrightarrow
+B/\mathfrak m_A^{n + 1}B
+$$
+as an isomorphism. In particular $\mathfrak m_B = \mathfrak m_A B$, and
+passing to inverse limits shows that $A^\wedge \to B^\wedge$ is an
+isomorphism. The local rings are Noetherian and $B$ is essentially of finite
+type over $A$. Thus
+Lemma \ref{lemma-characterize-etale-completions} shows that $A \to B$ is
+\'etale. Hence $f$ is \'etale. An \'etale monomorphism is an open immersion by
+Theorem \ref{theorem-etale-radicial-open}; since $f$ is surjective, it is an
+isomorphism.
+
+Assume now that $S$ is reduced and the condition in (2) holds. Consider a
+valuative diagram for $f$ with valuation ring a discrete valuation ring $V$.
+The section of $T_V \to \Spec(V)$ restricts on the generic point to the given
+map: both maps have the same composition with the monomorphism $T_V \to
+\Spec(V)$, so they agree. It is also the unique lift. The Noetherian discrete
+valuation criterion, Limits, Lemma
+\ref{limits-lemma-Noetherian-dvr-valuative-proper}, therefore shows that $f$
+is proper. A proper monomorphism is a closed immersion by
+Lemma \ref{lemma-characterize-closed-immersion}. Its image is all of $S$.
+The defining ideal is consequently locally nilpotent, and it is zero because
+$S$ is reduced. Thus $f$ is an isomorphism.
+\end{proof}
+
 \noindent
 Here is another result of a similar flavor.
 

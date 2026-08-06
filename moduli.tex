@@ -4701,6 +4701,111 @@ is the identity component of $P_{S'}$. It is therefore canonical, and the
 uniqueness just proved gives compatibility with iterated base change.
 \end{proof}
 
+\begin{proposition}[The Hilbert parameter scheme]
+\label{proposition-canonical-abelian-picard-parameter}
+\begin{reference}
+\cite[Expos\'e 236, Theorem 3.3(ii), pp. 237--238]{FGA}.
+\end{reference}
+Let $S$ be a locally Noetherian scheme and let $f : X \to S$ be proper and
+flat. Assume that
+$$
+\mathcal{O}_S \longrightarrow f_*\mathcal{O}_X
+$$
+is an isomorphism, that the fppf Picard functor is represented by a scheme
+$P = \Picardfunctor_{X/S}$ locally of finite type over $S$, and that the
+fibrewise identity components $P_s^0$ are proper. Suppose also that an open
+$U \subset P$ containing $P^0$ is quasi-projective over $S$.
+
+The functor which sends $S' \to S$ to the set of canonical abelian Picard
+subschemes of $P_{S'}$ is represented by a scheme $q : T \to S$ of finite
+type. The morphism $q$ is a surjective monomorphism. There is a universal
+canonical abelian Picard subscheme over $T$, and a canonical abelian Picard
+subscheme over $S'$ exists if and only if $T_{S'} \to S'$ has a section.
+When it has a section, it is an isomorphism.
+\end{proposition}
+
+\begin{proof}
+Every canonical abelian Picard subscheme is supported on $P^0$ and hence is
+contained in $U$. It is therefore a point of the Hilbert functor
+$H = \Hilbfunctor_{U/S}$. We recall the standard Hilbert-scheme construction
+of the required subfunctor. Over an \'etale scheme cover of $H$, let
+$Z \subset U_H$ be the universal closed subscheme. Impose the following
+base-change-stable conditions:
+\begin{enumerate}
+\item $Z$ is smooth and proper with geometrically connected fibres;
+\item the identity, inverse, and multiplication of $P$ restrict to $Z$; and
+\item for every geometric point $\overline{s}$ of the base, the underlying
+space of $Z_{\overline{s}}$ is $P^0_{\overline{s}}$.
+\end{enumerate}
+Smoothness and geometric connectedness give open conditions on the proper
+flat universal family. The subgroup conditions are the vanishing loci of the
+maps from the universal ideal under the identity, inverse, and multiplication
+maps. The last condition is obtained by the usual fibrewise open-and-closed
+decomposition and flattening stratification. These loci are compatible on the
+\'etale overlaps, so they descend to a locally closed subfunctor of $H$.
+
+Because $U$ is quasi-projective, the pieces of $H$ with a fixed Hilbert
+polynomial are schemes; see Proposition
+\ref{proposition-quot-projective-over-base} and
+Lemma \ref{lemma-hilb-qc-over-base}. Locally on the Noetherian base, only
+finitely many of these pieces meet the locus just constructed: its geometric
+member is the reduced proper identity component, and the identity-component
+locus is quasi-compact over the base. Thus the subfunctor is represented by a
+scheme $T$ of finite type over $S$.
+
+Lemma \ref{lemma-canonical-abelian-picard-unique} says that every base change
+has at most one such subgroup. Hence $q : T \to S$ is a monomorphism. For a
+field-valued point $s \to S$, the proper group scheme $P_s^0$ has no additive
+subgroup. Groupoids, Lemma
+\ref{groupoids-lemma-reduced-identity-component-no-additive} shows that
+$(P_s^0)_{\mathrm{red}}$ is a smooth connected proper closed subgroup and
+hence an abelian variety. Thus every fibre of $q$ is nonempty, so $q$ is
+surjective. The universal property gives the final assertions. A section of
+a monomorphism is its inverse.
+\end{proof}
+
+\begin{theorem}[Existence tests]
+\label{theorem-canonical-abelian-picard-existence-tests}
+In the situation of Proposition
+\ref{proposition-canonical-abelian-picard-parameter}, a canonical abelian
+Picard subscheme exists in each of the following cases.
+\begin{enumerate}
+\item It exists after every base change $S' \to S$ with $S'$ local Artinian.
+\item If $S = \Spec(A)$ is local, it exists after base change to
+$\Spec(A/\mathfrak m^{n + 1})$ for every $n \geq 0$.
+\item The scheme $S$ is reduced and it exists after every base change
+$\Spec(V) \to S$ with $V$ a discrete valuation ring. It is enough to use
+complete discrete valuation rings with algebraically closed residue field.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Let $q : T \to S$ be the surjective finite type monomorphism of Proposition
+\ref{proposition-canonical-abelian-picard-parameter}. In case (1), apply the
+hypothesis to
+$$
+S_{s, n} = \Spec(\mathcal{O}_{S, s}/\mathfrak m_s^{n + 1}).
+$$
+The resulting canonical subgroup gives a section of $T_{S_{s, n}} \to
+S_{s, n}$, and a monomorphism with a section is an isomorphism. Case (2) gives
+the same conclusion directly for the stated infinitesimal neighbourhoods.
+In either case, \'Etale Morphisms, Lemma
+\ref{etale-lemma-surjective-monomorphism-tests} shows that $q$ is an
+isomorphism.
+
+In case (3), the canonical subgroup over $\Spec(V)$ gives a section of
+$T_V \to \Spec(V)$. Part (2) of the same lemma again shows that $q$ is an
+isomorphism. Pulling back the universal subgroup over $T$ along the inverse
+$S \to T$ gives the required canonical abelian Picard subscheme.
+
+For the final refinement in (3), every discrete valuation ring $V$ has an
+extension $V \subset V'$ with $V'$ complete and with algebraically closed
+residue field. The restricted hypothesis gives the lift after this extension.
+Since a monomorphism is separated, Morphisms of Spaces, Lemma
+\ref{spaces-morphisms-lemma-push-down-solution} pushes the lift down to $V$.
+Thus the restricted tests imply the unrestricted tests already used above.
+\end{proof}
+
 
 
 \section{Properties of the Picard stack}

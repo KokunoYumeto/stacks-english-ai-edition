@@ -3152,3 +3152,63 @@ Final serial 1,100-dpi inspection of Moduli pages 50--51 finds no clipping,
 collision, malformed formula, unresolved new reference, placeholder, or
 unreadable text. The next sequential cursor is Theorem 3.3(ii) on printed
 pages 237--238.
+
+Theorem 3.3(ii) is now integrated. Moduli, Proposition
+`moduli-proposition-canonical-abelian-picard-parameter` constructs, from the
+quasi-projective neighbourhood in the relative Picard scheme and its Hilbert
+scheme, the finite-type scheme `T` parametrizing canonical abelian Picard
+subschemes. Uniqueness makes `T -> S` a monomorphism; existence of the reduced
+proper identity component over every field makes it surjective.
+
+Etale Morphisms, Lemma `etale-lemma-surjective-monomorphism-tests` supplies
+the reusable modern engine. A surjective finite-type monomorphism over a
+locally Noetherian base is an isomorphism when it is an isomorphism on every
+Artinian infinitesimal neighbourhood: the quotient local rings give identical
+completions, so the morphism is etale and hence a surjective open immersion.
+Over a reduced base, sections after every discrete-valuation base change give
+the DVR valuative criterion for properness; a surjective proper monomorphism
+is then a closed immersion with zero defining ideal. Moduli, Theorem
+`moduli-theorem-canonical-abelian-picard-existence-tests` applies these two
+criteria to the Hilbert parameter scheme, including the local test by
+`A/m^(n+1)` and the equivalent restriction to complete DVRs with
+algebraically closed residue field by the separated valuative
+solution-push-down lemma.
+
+Decision `D000560` supersedes `D000559` and records that parts (i) and (ii)
+are integrated while the dual Albanese scheme, its torsor, the universal map,
+and their base-change compatibility in part (iii) remain at the active
+sequential cursor.
+
+Direct serial 1,100-dpi review again covers printed pages 237--238 of the
+24-page NUMDAM authority. That authority remains 2,461,968 bytes with
+SHA-256
+`266EEF77BF7BA34A75895ED69ACBFE791A2958DD52C2837D75AB29DF0D2F714A`.
+Both semantic validators pass with no errors at 21,705 labels, 21,437
+official-tag joins, 71 controlled topics, 4,247 topic candidates, 560
+append-only decisions, 1,253 source units, 1,612 term links, and 59 source
+issues, of which eight remain active; there are zero review units. The topic,
+decision, issue, map, Stacks-label, topic-candidate, reviewed-topic-map,
+index-validation, and map-validation files have SHA-256
+`B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0`,
+`A5B9050569C0F4616D12FA9002EE6143A9997E856A04108B61D3D37A9D1FE23C`,
+`ECE83F139D6E457796604266A142691BAD503DD937B38ED05BCCD0E80B378CDE`,
+`D62D5149AA596800CC70E54963C7FB9134C9022DFD6352EB68A4EFFD6E00E608`,
+`0A6D7340DBD41C64620BE5D2EFBC8A5003E54CA41FB2CB62DAE3AB83674C804C`,
+`58B0C639461EA1BBB574179B77FDB7E07C648299C415E0752714403C534F5921`,
+`26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46`,
+`614919B1D655CCDC2AE485DAA1ED9AF5663DCA09D7C7C513EA3A39C702D82A51`,
+and `21C1D26B78FE780B72CD99C26608B6E9D86E6739B67AD770C4737EDD81AE7559`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`;
+no official tag was invented for the new lemma, proposition, or theorem.
+
+Three stable serial TeX passes produce a 31-page Etale Morphisms chapter of
+564,787 bytes with SHA-256
+`4DF25931C25B9F5026954B6960C3E4275E0B2E445DC4E538F2F609B1A1F5F170`
+and a 66-page Moduli chapter of 836,175 bytes with SHA-256
+`1C4EC08F1E4B14C8C5BFD408FA153429E37D865C49FB577231A429A0D4E27E0A`.
+Neither new source range creates an overfull or underfull box. Final serial
+1,100-dpi inspection of Etale Morphisms page 16 and Moduli pages 51--52 finds
+no clipping, collision, malformed formula, unresolved new reference,
+placeholder, or unreadable text. The next sequential cursor is Theorem
+3.3(iii) on printed page 238.
