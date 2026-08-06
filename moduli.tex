@@ -3775,6 +3775,52 @@ studied in More on Morphisms, Section
 \ref{more-morphisms-section-connected-components}.
 \end{remark}
 
+\begin{example}[N\'eron--Severi jumps obstruct universal openness]
+\label{example-picard-neron-severi-jump-not-open}
+\begin{reference}
+\cite[Expos\'e 236, Remark 1.6, p. 228]{FGA}.
+\end{reference}
+Let $N \geq 3$, let $M$ be a connected fine modular curve over
+$\mathbf{C}$ parametrizing elliptic curves with full level-$N$ structure,
+and let $E \to M$ be the universal elliptic curve. Set
+$$
+X=E\times_M E.
+$$
+Then $X \to M$ is smooth and projective with geometrically connected fibres,
+but the relative Picard scheme $\Picardfunctor_{X/M} \to M$ is not
+universally open.
+\end{example}
+
+\begin{proof}
+For a geometric point $s$ of $M$, the N\'eron--Severi group of
+$E_s\times E_s$ identifies, through the product principal polarization, with
+the symmetric homomorphisms
+$$
+E_s\times E_s \longrightarrow (E_s\times E_s)^\vee.
+$$
+At a non-CM point, where $\operatorname{End}(E_s)=\mathbf{Z}$, this group has
+rank $3$:
+it is generated rationally by the two factors and the diagonal. At a CM
+point it has rank $4$. Concretely, the graph of a complex multiplication
+endomorphism supplies an additional divisor class.
+
+That additional class cannot extend to a neighbourhood of the CM point. If
+it did, the associated symmetric homomorphism of the abelian surface would
+extend and would restrict on the geometric generic fibre to an endomorphism
+not contained in the symmetric matrices over $\mathbf{Z}$, whereas the
+generic elliptic curve has endomorphism ring $\mathbf{Z}$. Consequently the
+connected component of the special Picard fibre indexed by this class does
+not meet a neighbouring fibre. Its closure is a vertical irreducible
+component of the relative Picard scheme, and an open neighbourhood of its
+generic point has image supported at the CM point. Thus the Picard morphism
+is not open there, hence is not universally open.
+
+Passing to the level cover is the scheme-theoretic version of the source's
+shorthand ``modular family over the $j$-line''; it removes the automorphisms
+which prevent a universal elliptic curve from existing over the coarse
+$j$-line itself.
+\end{proof}
+
 \begin{remark}[Picard spaces of formal neighbourhoods]
 \label{remark-picard-formal-neighbourhoods-lefschetz}
 \begin{reference}

@@ -2202,3 +2202,58 @@ collision, malformed formula, unresolved marker, placeholder, or unreadable
 text. The next sequential cursor is Remark 1.6 on printed pages 228--229,
 followed by Corollaries 1.7 and 1.8, Remark 1.9, and Corollary 1.10 through
 printed page 230.
+
+Remark 1.6 is now integrated in its mathematically stable modern form.
+Remark `more-morphisms-remark-universal-openness-valuative-components`
+relates universal openness for locally finitely presented morphisms to the
+lifting of generalizations after every base change, records the DVR
+specialization test over a locally Noetherian base, and explains the
+vertical-component obstruction. It points to the proved
+prime-to-characteristic component result while preserving the source's
+statement that the full torsion-component locus is ``most often''
+universally open as explicitly tentative rather than promoting it to a
+theorem.
+
+Example `moduli-example-picard-neron-severi-jump-not-open` gives the source's
+modular counterexample on a fine level-`N` modular curve, where a universal
+elliptic curve exists. For its self-product, the Neron--Severi rank jumps
+from three at a non-CM point to four at a CM point; the extra graph class
+cannot extend to the generic fibre, so its Picard component is vertical and
+the relative Picard morphism is not universally open. Passing to the fine
+level cover makes precise the source's shorthand about a family over the
+coarse `j`-line.
+
+Decision `D000539` supersedes `D000266` and dispositions the complete remark
+as an existing equivalent with the historical qualification retained.
+Direct serial 1,100-dpi review covers printed page 228 of the 24-page NUMDAM
+authority. That authority remains 2,461,968 bytes with SHA-256
+`266EEF77BF7BA34A75895ED69ACBFE791A2958DD52C2837D75AB29DF0D2F714A`.
+Both semantic validators pass with no errors at 21,667 labels, 21,437
+official-tag joins, 71 controlled topics, 4,203 topic candidates, 539
+append-only decisions, 1,253 source units, 1,612 term links, and 49 source
+issues, of which seven remain active; there are zero review units. The topic,
+decision, issue, map, Stacks-label, topic-candidate, reviewed-topic-map,
+index-validation, and map-validation files have SHA-256
+`B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0`,
+`D02D6BB6F192FB1A0086546A6BE248444DD593F0D096F44D8DAA192378FA67B8`,
+`5659C5A6C5B50EB6C5EB02EBEFF58F7361A7302F3EC7FA8F966DA85536000A44`,
+`0F4DD0E860E1AE590A9D52AD1DE3DD0F6F7D449689B8E9DBBEAA19C78A760F8F`,
+`DADA619C1038B36C4C7F8BA5BCE258CEBD95F9E731BC139A5DF23E5A3448EE35`,
+`21AB63D7CFB6C3FBFD7E5005E26955B947FD194D118EA2F4849DBB28D1610A32`,
+`26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46`,
+`E3FC739EE53C0AFD52A3C4089B65CFA3C1DF7CAAF26F3574BF72EB8297A5BD3F`,
+and `1B6187F727E5D801B838907EED5829BA775389F2558332A89649A36FB9A57024`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`.
+
+Stable serial builds produce a 256-page More on Morphisms chapter of
+2,375,203 bytes with SHA-256
+`37D21B7AF2534AB3485A80A0EB5F26F85B8E83975F2AFBCBEA44C513B8BA8F3E`
+and a 54-page Moduli chapter of 761,998 bytes with SHA-256
+`8CBBCFAEA3DFF0437BA95CE70D7A1FB666C11038CFC67F0945456E0E965E0EE4`.
+The affected source ranges create no overfull or underfull horizontal box.
+Final serial 1,100-dpi inspection of More on Morphisms pages 232--233 and
+Moduli pages 40--41 finds no clipping, collision, malformed formula,
+unresolved marker, placeholder, or unreadable text. The next sequential
+cursor is Corollaries 1.7 and 1.8 on printed page 229, followed by Remark 1.9
+on printed pages 229--230 and Corollary 1.10 on printed page 230.
