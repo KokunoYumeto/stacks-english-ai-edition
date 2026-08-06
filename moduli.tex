@@ -4991,6 +4991,72 @@ modules, the torsor--Picard correspondence, and pushout of torsors all commute
 with base change. Hence so do $B$, $\operatorname{Alb}^1(X/S)$, and $u$.
 \end{proof}
 
+\begin{remark}[Specialization of canonical Picard varieties]
+\label{remark-canonical-abelian-picard-specialization}
+\begin{reference}
+\cite[Expos\'e 236, Remarks 3.4, pp. 238--239]{FGA}.
+\end{reference}
+The canonical abelian Picard subscheme of Definition
+\ref{definition-canonical-abelian-picard-subscheme} is denoted
+$\Picardfunctor_{X/S}^{\circ\circ}$ in the cited source. The source first
+records that this object need not exist over a nonreduced base: the
+first-order modular deformation of an Igusa surface gives a counterexample.
+The construction of that example is not included there; compare Remark
+\ref{remark-picard-torsion-flatness-boundary} for the related failure of
+flatness of the torsion-component locus.
+
+Here is the specialization picture recorded in the source. Let
+$S = \Spec(V)$ for a discrete valuation ring with fraction field $K$ and
+residue field $k$, and assume that $X \to S$ is smooth in addition to the
+hypotheses of Proposition
+\ref{proposition-canonical-abelian-picard-parameter}. Put
+$$
+A_K = (P_K^0)_{\mathrm{red}}.
+$$
+The source invokes a theorem of Koizumi to obtain an essentially unique
+abelian scheme $G \to S$ with generic fibre $A_K$. It then extends the
+generic-fibre inclusion to a homomorphism
+$$
+G \longrightarrow P
+$$
+and records that the induced map
+\begin{equation}
+\label{equation-canonical-picard-specialization}
+G_k \longrightarrow (P_k^0)_{\mathrm{red}}
+\end{equation}
+is surjective with finite $p$-primary kernel, where $p$ is the
+characteristic exponent of $k$.
+
+Writing $S_n = \Spec(V/\mathfrak m^{n + 1})$, the source states that the
+following conditions are equivalent:
+\begin{enumerate}
+\item the map (\ref{equation-canonical-picard-specialization}) is an
+isomorphism;
+\item the canonical abelian Picard subscheme over $S$ exists, in which case
+it is $G$; and
+\item the canonical abelian Picard subscheme over every $S_n$ exists.
+\end{enumerate}
+The equivalence of the last two conditions is now the local infinitesimal
+criterion in Theorem
+\ref{theorem-canonical-abelian-picard-existence-tests}. Since a finite
+$1$-primary group is trivial, the recorded description of the kernel makes
+the first condition automatic in residue characteristic zero.
+
+Two historical qualifications are important. The assertion that canonical
+abelian Picard subschemes should exist over every reduced base is posed in
+the source as a possibility, not proved; Theorem
+\ref{theorem-canonical-abelian-picard-existence-tests} reduces such an
+assertion to discrete-valuation tests but does not supply those tests. Also,
+the Koizumi extension and the finite-primary-kernel assertion above are
+reported with their source attribution rather than reproved here. Finally,
+if $P \to S$ is smooth along $P^0$, then the identity-component locus is
+open by More on Morphisms, Corollary
+\ref{more-morphisms-corollary-identity-component-open-smooth}; under the
+standing properness hypotheses it is the canonical abelian subscheme. The
+next theorem in the source gives a stronger neighbourhood criterion for this
+situation.
+\end{remark}
+
 
 
 \section{Properties of the Picard stack}
@@ -5983,14 +6049,12 @@ locally of finite presentation.
 \end{lemma}
 
 \begin{proof}
-To check $\Polarizedstack \to \Spec(\mathbf{Z})$ is quasi-separated we have to
-show that its diagonal is quasi-compact and quasi-separated.
-This is immediate from Lemma \ref{lemma-polarized-diagonal-separated-fp}.
-To prove that $\Polarizedstack \to \Spec(\mathbf{Z})$ is locally of finite
-presentation, it suffices to show that $\Polarizedstack$
-is limit preserving, see Limits of Stacks, Proposition
+Quasi-separatedness follows immediately from Lemma
+\ref{lemma-polarized-diagonal-separated-fp}. By Quot, Lemma
+\ref{quot-lemma-polarized-limits}, the stack $\Polarizedstack$ is limit
+preserving. Hence it is locally of finite presentation by Limits of Stacks,
+Proposition
 \ref{stacks-limits-proposition-characterize-locally-finite-presentation}.
-This is Quot, Lemma \ref{quot-lemma-polarized-limits}.
 \end{proof}
 
 \begin{lemma}

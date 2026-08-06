@@ -3265,3 +3265,53 @@ serial 1,100-dpi inspection of Moduli pages 52--55 finds no clipping,
 collision, malformed formula, unresolved new reference, placeholder, or
 unreadable text. The next sequential cursor is Remarks 3.4 on printed pages
 238--239.
+
+Remarks 3.4 is now integrated as Moduli, Remark
+`moduli-remark-canonical-abelian-picard-specialization`. It preserves the
+first-order modular deformation of the Igusa surface as a historical
+counterexample to existence over a nonreduced base and preserves the proposed
+reduced-base existence statement as conjectural rather than proved. Over a
+discrete valuation ring it records, with the source's Koizumi attribution,
+the essentially unique abelian model of the generic canonical Picard variety,
+the specialization homomorphism onto the special canonical Picard variety
+with finite primary kernel, and the resulting characteristic-zero
+consequence. The equivalence between existence over the DVR and existence on
+all infinitesimal neighbourhoods is tied to the modern local Artinian test in
+Moduli, Theorem `moduli-theorem-canonical-abelian-picard-existence-tests`.
+
+Decision `D000562` supersedes `D000289` and records the unit as integrated
+historical evidence with its modern criterion made explicit. Direct serial
+1,100-dpi review covers printed pages 238--239 of the 24-page NUMDAM
+authority. That authority remains 2,461,968 bytes with SHA-256
+`266EEF77BF7BA34A75895ED69ACBFE791A2958DD52C2837D75AB29DF0D2F714A`.
+
+Both semantic validators pass with no errors at 21,711 labels, 21,437
+official-tag joins, 71 controlled topics, 4,259 topic candidates, 562
+append-only decisions, 1,253 source units, 1,612 term links, and 59 source
+issues, of which eight remain active; there are zero review units. The topic,
+decision, issue, map, Stacks-label, topic-candidate, reviewed-topic-map,
+index-validation, and map-validation files have SHA-256
+`B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0`,
+`5341AAC904CD5BFD5C4210248807009E1DA7368C2107215A283B107E0CB1AE92`,
+`ECE83F139D6E457796604266A142691BAD503DD937B38ED05BCCD0E80B378CDE`,
+`9FE90A4435DFAF738A10DF16731CD5DB40A612018784CDDE39AB2FBB0D0BEC47`,
+`C3E48AD16910285B7B855B3F804363AA3BDF744ADBB56322FEB68F6802D29E24`,
+`0F33FB04E9C6E55C8FD1E994323CF9617F21D15505E7B5D379D299DA3F47019A`,
+`26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46`,
+`9D13350133A74EC0B4D967E69065D730CCC7669B1EEFF3640F096AAFCE46C35F`,
+and `4A828BDD565AE27940B21AD5F421B42C3B7F85A28F4DADED559673B72A29A570`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`;
+no official tag was invented for the new remark or its equation.
+
+Three stable serial TeX passes produce a 69-page Moduli chapter of 852,858
+bytes with SHA-256
+`5BCC8A50A81AD328D4937B27E2E89F1A261714440BE2F65543ECAFC224FC8F65`.
+The new source range creates no overfull or underfull box. A
+semantics-preserving compression of the existing proof of the
+quasi-separatedness and local finite presentation of the Polarized stack
+removes the 1.755-point downstream overfull-vbox warning caused by the new
+pagination. Final serial 1,100-dpi inspection of Moduli pages 55 and 65 finds
+no clipping, collision, malformed formula, unresolved new reference,
+placeholder, or unreadable text. The next sequential cursor is Theorem 3.5
+on printed pages 239--240.
