@@ -4241,6 +4241,56 @@ is universally open along $P^0$. More on Morphisms, Lemma
 local constancy.
 \end{proof}
 
+\begin{remark}[Specialization dimensions in Picard schemes]
+\label{remark-picard-specialization-dimensions}
+\begin{reference}
+\cite[Expos\'e 236, Remark 2.8, pp. 234--235]{FGA}.
+\end{reference}
+Let $s$ be a specialization of $s'$ in the base of a represented relative
+Picard scheme. In the notation of the source, let
+$$
+(\alpha,\mu,\lambda)
+\quad\text{and}\quad
+(\alpha',\mu',\lambda')
+$$
+be the dimensions of the abelian, multiplicative, and additive parts of the
+geometric identity components at $s$ and $s'$, respectively. Thus the two
+Picard-fibre dimensions are
+$$
+\alpha+\mu+\lambda
+\quad\text{and}\quad
+\alpha'+\mu'+\lambda'.
+$$
+Corollary \ref{corollary-picard-dimension-semicontinuity} gives
+\begin{equation}
+\label{equation-picard-specialization-total-dimension}
+\alpha+\mu+\lambda\geq\alpha'+\mu'+\lambda'.
+\end{equation}
+If the no-additive-subgroup hypothesis of that corollary holds on a
+neighbourhood of the specialization, then equality holds.
+
+The cited source also records Serre's specialization argument using the
+abelianized fundamental group and Kummer theory. It gives the following
+inequality when the fibres are geometrically reduced (called ``separable''
+there), or when the relevant torsion Picard functors are separated:
+\begin{equation}
+\label{equation-picard-specialization-tate-dimension}
+2\alpha+\mu\leq 2\alpha'+\mu'.
+\end{equation}
+Here the assertion that an $n$-torsion Picard functor is \'etale by Theorem
+\ref{theorem-picard-multiplication-etale} is used only where $n$ is invertible
+on the base.
+
+Finally, the source explicitly presents as conjectures both general equality
+in (\ref{equation-picard-specialization-total-dimension}) and the inequalities
+$$
+\alpha\leq\alpha',\qquad \lambda\geq\lambda'
+$$
+for a locally finite type group scheme of constant fibre dimension. These
+conjectural clauses are retained here as historical context, not as results
+of the Stacks Project, and no argument below uses them.
+\end{remark}
+
 \begin{example}[A relative Picard space which is not a scheme]
 \label{example-picard-conic-not-scheme}
 \begin{reference}

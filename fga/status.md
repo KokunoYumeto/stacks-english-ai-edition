@@ -2837,3 +2837,57 @@ box. Final serial 1,100-dpi inspection of Moduli pages 45--46 and More on
 Morphisms page 97 finds no clipping, collision, malformed formula,
 unresolved new reference, placeholder, or unreadable text. The next
 sequential cursor is Remark 2.8 on printed page 234.
+
+Remark 2.8 is now integrated as an explicit mathematical and historical
+boundary. Moduli, Remark
+`moduli-remark-picard-specialization-dimensions` identifies the source's
+total-dimension inequality
+`alpha + mu + lambda >= alpha' + mu' + lambda'` with the proved upper
+semicontinuity of Picard fibre dimension. It records equality under the
+imported no-additive-subgroup hypothesis on a neighbourhood of the
+specialization. It separately retains Serre's conditional Kummer and
+fundamental-group inequality
+`2 alpha + mu <= 2 alpha' + mu'` under the source's geometrically reduced
+fibre or torsion-separatedness hypotheses.
+
+The source explicitly calls its proposed general equality and the separate
+inequalities `alpha <= alpha'` and `lambda >= lambda'` conjectural. The new
+Stacks remark preserves them only as historical context and says that no
+subsequent result uses them. Source issue `I000057` records and resolves a
+missing qualification in the source's shorthand: Theorem 2.5 makes
+`n`-torsion etale only on the locus where `n` is invertible, not over an
+arbitrary base for every `n`. Decision `D000553` supersedes `D000282` and
+records the proved, conditional, and conjectural layers separately. The
+first isolated build exposed a 4.49-point overfull line caused by an
+unbreakable dash construction; the sentence was reflowed, and the final
+affected range has no overfull horizontal box.
+
+Direct serial 1,100-dpi review covers printed pages 234--235 of the 24-page
+NUMDAM authority. That authority remains 2,461,968 bytes with SHA-256
+`266EEF77BF7BA34A75895ED69ACBFE791A2958DD52C2837D75AB29DF0D2F714A`.
+Both semantic validators pass with no errors at 21,693 labels, 21,437
+official-tag joins, 71 controlled topics, 4,231 topic candidates, 553
+append-only decisions, 1,253 source units, 1,612 term links, and 57 source
+issues, of which eight remain active; there are zero review units. The topic,
+decision, issue, map, Stacks-label, topic-candidate, reviewed-topic-map,
+index-validation, and map-validation files have SHA-256
+`B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0`,
+`D4320B50913A7656AB2B54153EFE5DE8F8A594FDEC32C422E357B2260339FEB6`,
+`55FB6702462783815DD0E9D81ED4F87438460C03CA0BC7D09BA07FE71F42769B`,
+`7F6681DD4B062E35FFBDFF9A42B65B21FC2A2119F9349DCD3A3F2B141868BE5A`,
+`BC128F2D7B85800D8B800BD09427656465878C774D6D8403BB7EF71E848ADE37`,
+`FBDC216AD4370AB18A9632BF2B2A50F3CD8953ADEF48E3169EBA1F8D1ECE3896`,
+`26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46`,
+`F1A8F0F7FE4DC25BEFC115592180214B99FF0D92276BA468775415723143FCA7`,
+and `04F2DCECC522C311397E410659C646288CB0B39FD5E727CA74BDE95DCE042742`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`;
+no official tag was invented for the new remark or its two equations.
+
+Stable serial TeX passes produce a 61-page Moduli chapter of 808,333 bytes
+with SHA-256
+`FDD9257FEFFB31BBA75A479036C1236264270CF8B369F392663DDFB9964894F6`.
+Final serial 1,100-dpi inspection of Moduli page 46 finds no clipping,
+collision, malformed formula, unresolved new reference, placeholder, or
+unreadable text. The next sequential cursor is Remark 2.9 on printed page
+235.
