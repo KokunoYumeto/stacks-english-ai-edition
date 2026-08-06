@@ -3100,3 +3100,55 @@ The new source range creates no overfull or underfull box. Final serial
 malformed formula, unresolved new reference, placeholder, or unreadable
 text. The next sequential cursor is the setup paragraph and Theorem 3.3 on
 printed page 237.
+
+Theorem 3.3(i) is now integrated in a dedicated Moduli section,
+`moduli-section-canonical-abelian-picard-albanese`. Definition
+`moduli-definition-canonical-abelian-picard-subscheme` isolates the relevant
+object: a closed abelian subgroup scheme of the relative Picard scheme whose
+underlying fibrewise locus is the identity-component locus. Lemma
+`moduli-lemma-canonical-abelian-picard-unique` proves that such a subgroup is
+unique when it exists and is preserved by arbitrary base change. On every
+geometric fibre the candidates are the same reduced identity component;
+relative rigidity for homomorphisms of abelian schemes propagates this
+equality across each connected component, including a nonreduced base.
+
+Decision `D000558` supersedes `D000285` and records the new semantic section
+and definition. Decision `D000559` supersedes `D000288` and records the exact
+partial state of Theorem 3.3: part (i) is integrated, while the Artinian and
+discrete-valuation existence criteria in part (ii) and the dual Albanese
+scheme and torsor in part (iii) remain at the active sequential cursor. No
+narrow part build is described as completion of that theorem or of FGA.
+
+Direct serial 1,100-dpi review covers printed pages 237--238 of the 24-page
+NUMDAM authority, including the continuation of the proof on page 238. That
+authority remains 2,461,968 bytes with SHA-256
+`266EEF77BF7BA34A75895ED69ACBFE791A2958DD52C2837D75AB29DF0D2F714A`.
+Both semantic validators pass with no errors at 21,702 labels, 21,437
+official-tag joins, 71 controlled topics, 4,244 topic candidates, 559
+append-only decisions, 1,253 source units, 1,612 term links, and 59 source
+issues, of which eight remain active; there are zero review units. The topic,
+decision, issue, map, Stacks-label, topic-candidate, reviewed-topic-map,
+index-validation, and map-validation files have SHA-256
+`B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0`,
+`DA50C676FC9ED3331A9D7134588D9D2164A03B01CBD6B2F050E3C553E97EE3F5`,
+`ECE83F139D6E457796604266A142691BAD503DD937B38ED05BCCD0E80B378CDE`,
+`5F519ADBA8098789622D25EFDF1794D6A14A3D17A5937DD2F1912523660DC056`,
+`6BEDE2FAE5E8A55F39EF0673ECB51D9EE77D9C350DA7612DCD8EAEA4CDBD3836`,
+`97F4C83DBC0229BC69904D8D5D6DEE334477E266CD9AAA57D29BC1B55236E0C1`,
+`26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46`,
+`09348E7B39566927D1D9910167D9F6D8AFB89E5FBEB79E69685CF88CA9CA3AC0`,
+and `A0C303A48C83788268ED5244E38096C02232FA2BFC48F8FC6696795B67965069`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`;
+no official tag was invented for the new section, definition, or lemma.
+
+Three stable serial TeX passes produce a 64-page Moduli chapter of 826,778
+bytes with SHA-256
+`F05028EE00BDB481D212175E85FDEF1EAE9C636294E9B8058DD52EC14664E38C`.
+The new source range creates no overfull or underfull box. An initial visual
+pass exposed a malformed literal italic command in the definition; it was
+corrected before commit or push, then the chapter was rebuilt and rerendered.
+Final serial 1,100-dpi inspection of Moduli pages 50--51 finds no clipping,
+collision, malformed formula, unresolved new reference, placeholder, or
+unreadable text. The next sequential cursor is Theorem 3.3(ii) on printed
+pages 237--238.

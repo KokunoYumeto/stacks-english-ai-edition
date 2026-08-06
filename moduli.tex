@@ -4642,6 +4642,67 @@ are not needed for the statements above.
 
 
 
+\section{Canonical abelian Picard subschemes and Albanese torsors}
+\label{section-canonical-abelian-picard-albanese}
+
+\noindent
+Let $P\to S$ be a commutative group scheme. Write
+$$
+P^0=\bigcup_{s\in S}P_s^0
+$$
+for its fibrewise identity-component locus.
+
+\begin{definition}
+\label{definition-canonical-abelian-picard-subscheme}
+Let $X\to S$ be a proper flat morphism whose fppf Picard functor is
+represented by a scheme $P=\Picardfunctor_{X/S}$. A {\it canonical abelian
+Picard subscheme} is a closed subgroup scheme $A\subset P$ such that $A\to S$
+is proper and smooth with geometrically connected fibres and $|A|=P^0$; in
+other words, $A\to S$ is an abelian scheme.
+\end{definition}
+
+\noindent
+Over a field, Lemma \ref{corollary-picard-variety-normal-proper} constructs
+this subgroup under geometric normality. Over a general base, uniqueness is
+the first rigidity property.
+
+\begin{lemma}[Uniqueness and base change]
+\label{lemma-canonical-abelian-picard-unique}
+\begin{reference}
+\cite[Expos\'e 236, Theorem 3.3(i), pp. 237--238]{FGA}.
+\end{reference}
+Let $X\to S$ be a proper flat morphism whose fppf Picard functor is
+represented by a scheme $P=\Picardfunctor_{X/S}$. A canonical abelian Picard
+subscheme of $P$ is unique if it exists. If it exists, then for every morphism
+$S'\to S$ its base change is the canonical abelian Picard subscheme of
+$P_{S'}=\Picardfunctor_{X_{S'}/S'}$.
+\end{lemma}
+
+\begin{proof}
+We use the rigidity theorem for abelian subgroup schemes of a commutative
+group scheme: over a connected base, two such subgroup schemes which agree
+on one geometric fibre agree everywhere. This is the relative rigidity lemma
+for abelian schemes. One way to prove it is to apply the rigidity lemma to
+the difference morphism; the coincidence locus is open and closed in the
+base. The infinitesimal step uses that a homomorphism from a proper connected
+group scheme to a vector group is zero, so the statement also holds over a
+nonreduced base.
+
+Suppose that $A,A'\subset P$ are canonical abelian Picard subschemes. For
+every geometric point $\overline{s}\to S$, the fibres $A_{\overline{s}}$ and
+$A'_{\overline{s}}$ are smooth and hence reduced closed subschemes of
+$P_{\overline{s}}$ with the same underlying space $|P^0_{\overline{s}}|$.
+Thus they agree as closed subschemes. Choosing one geometric point on each
+connected component of $S$ and applying rigidity gives $A=A'$.
+
+For a morphism $S'\to S$, the base change $A_{S'}$ is again an abelian scheme
+and a closed subgroup scheme of $P_{S'}$. Fibre by fibre its underlying space
+is the identity component of $P_{S'}$. It is therefore canonical, and the
+uniqueness just proved gives compatibility with iterated base change.
+\end{proof}
+
+
+
 \section{Properties of the Picard stack}
 \label{section-picard-stack}
 
