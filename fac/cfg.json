@@ -1,0 +1,76 @@
+{
+  "adapter": "fac_targets",
+  "authority": [
+    {
+      "bytes": 6305726,
+      "doi": "10.2307/1969915",
+      "name": "FAC authority PDF",
+      "scope": "printed pages 197--278",
+      "sha256": "B8C6508249308F5D8BC886B9E6360F1EC4FDC8F0F18EFAA03EE0E36B591551CA"
+    }
+  ],
+  "corpus": "FAC",
+  "embedded_types": [
+    "diagram",
+    "display",
+    "footnote",
+    "proof",
+    "subitem"
+  ],
+  "expected_units": 661,
+  "historical_types": ["bibliography_entry"],
+  "inputs": {
+    "authority": {
+      "bytes": 6305726,
+      "name": "FAC authority PDF",
+      "sha256": "B8C6508249308F5D8BC886B9E6360F1EC4FDC8F0F18EFAA03EE0E36B591551CA"
+    },
+    "full_entities": {
+      "bytes": 127042,
+      "name": "SEMANTIC_ENTITIES.csv",
+      "sha256": "BF93C9E99FC62C5B039ED035265BBF1984F96D0604DBFA43EE6D5F7AE181BD97"
+    },
+    "full_relations": {
+      "bytes": 122122,
+      "name": "SEMANTIC_RELATIONS.csv",
+      "sha256": "2FE8A59AD202BDDEFECB5CE5C9244F0083EBAD9EB38359A52420ACA1210810FB"
+    },
+    "package": {
+      "bytes": 5763215,
+      "name": "FAC complete package ZIP",
+      "sha256": "1864EDB8B318112E6D4CAE32BC2929F9D67406AB7290A966A8F7B770DF9D72CA"
+    },
+    "primary": {
+      "bytes": 146450,
+      "name": "26_FAC_REFERENCE_TARGETS.csv",
+      "sha256": "2C11B8BAC3C4B53D0BDED8E50CD74842DDD1428CEC88BF9DA85FC8A5F652868D"
+    }
+  },
+  "integration_base": "f62c6866b23b0f3834c655dcb8c91f8610a301e1",
+  "official_upstream": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "root_id": "fac",
+  "structural_types": [
+    "bibliography",
+    "chapter",
+    "section",
+    "semantic_target"
+  ],
+  "topic_rules": [
+    {"topic_id": "sheaves", "pattern": "sheaf|faisceau"},
+    {"topic_id": "sheaf-modules", "pattern": "rings_and_modules|change_of_rings"},
+    {"topic_id": "coherent", "pattern": "coherent"},
+    {"topic_id": "cohomology", "pattern": "cohomology|cochain|covering|double_complex"},
+    {"topic_id": "cech", "pattern": "covering|cochain|double_complex"},
+    {"topic_id": "varieties", "pattern": "variet|regular_map|rational_function"},
+    {"topic_id": "affine", "pattern": "affine"},
+    {"topic_id": "module-sheaf", "pattern": "module_associated|sheaf_associated"},
+    {"topic_id": "projective", "pattern": "projective"},
+    {"topic_id": "graded-proj", "pattern": "graded|functor_A|F_n"},
+    {"topic_id": "ext", "pattern": "Ext|relations_global_local"},
+    {"topic_id": "support", "pattern": "support|closed_subvariety|fractional_ideals"},
+    {"topic_id": "invertible", "pattern": "invertible|fractional_ideals"},
+    {"topic_id": "hilbert", "pattern": "characteristic_function|arithmetic_genus|degree_characteristic"},
+    {"topic_id": "euler", "pattern": "euler|arithmetic_genus|characteristic_function"},
+    {"topic_id": "vanishing", "pattern": "vanishing"}
+  ]
+}

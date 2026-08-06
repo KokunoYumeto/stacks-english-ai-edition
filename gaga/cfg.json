@@ -1,0 +1,58 @@
+{
+  "adapter": "gaga_targets",
+  "authority": [
+    {
+      "bytes": 4134102,
+      "doi": "10.5802/aif.59",
+      "name": "NUMDAM GAGA authority PDF",
+      "scope": "printed pages 1--42",
+      "sha256": "9898F985DD6932496E26450BFE0BECA8655A937032F545B97CEBD88D1BC8EB98"
+    }
+  ],
+  "corpus": "GAGA",
+  "embedded_types": ["equation", "subitem"],
+  "expected_units": 126,
+  "historical_types": ["bibliography_entry"],
+  "inputs": {
+    "authority": {
+      "bytes": 4134102,
+      "name": "NUMDAM GAGA authority PDF",
+      "sha256": "9898F985DD6932496E26450BFE0BECA8655A937032F545B97CEBD88D1BC8EB98"
+    },
+    "candidates": {
+      "bytes": 80054,
+      "name": "REFERENCE_CANDIDATES.csv",
+      "sha256": "A05E1F4C195F1BB66AF2AC2A016AF6739AEE97D4F95F086068F13D01FB88FA71"
+    },
+    "edges": {
+      "bytes": 38896,
+      "name": "REFERENCE_EDGES.csv",
+      "sha256": "8F0E7539B3B73521BF59966025BA42944B1F47C9E8C57D9191CCC6551176A19B"
+    },
+    "primary": {
+      "bytes": 21229,
+      "name": "REFERENCE_TARGETS.csv",
+      "sha256": "79B3C600A96352167C5611D484DD9310785C77E99F611C0159339C88A8DE4343"
+    },
+    "residuals": {
+      "bytes": 24015,
+      "name": "REFERENCE_RESIDUALS.csv",
+      "sha256": "46862616AB92393CB072E8B586D89B9ECA6896FB51FBEC8E7E3213729FFA8433"
+    }
+  },
+  "integration_base": "f62c6866b23b0f3834c655dcb8c91f8610a301e1",
+  "official_upstream": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "root_id": "gaga",
+  "structural_types": ["section"],
+  "topic_rules": [
+    {"topic_id": "analytic-space", "pattern": "analytic space|analytic subset|holomorphic"},
+    {"topic_id": "analytification", "pattern": "associated analytic|analytification|X.h"},
+    {"topic_id": "coherent", "pattern": "coherent sheaf|coherent analytic"},
+    {"topic_id": "proper-projective", "pattern": "complete|compact|projective|proper"},
+    {"topic_id": "comparison-cohomology", "pattern": "cohomology|H.q|Theorem 1"},
+    {"topic_id": "comparison-sheaves", "pattern": "algebraic sheaf|analytic sheaf|Theorem 2|Theorem 3"},
+    {"topic_id": "flatness", "pattern": "flat pair|flatness|Tor"},
+    {"topic_id": "formal", "pattern": "completion|formal|inverse limit"},
+    {"topic_id": "invertible", "pattern": "invertible|line bundle|principal fibre"}
+  ]
+}

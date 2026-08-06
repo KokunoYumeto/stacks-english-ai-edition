@@ -1,0 +1,49 @@
+{
+  "adapter": "tohoku_nodes",
+  "corpus": "Tohoku",
+  "counts": {
+    "units": 990,
+    "units_with_topics": 498
+  },
+  "errors": [],
+  "inputs": [
+    {
+      "bytes": 582098,
+      "name": "nodes.csv",
+      "sha256": "B718AC2AE8274F19A23EE838BD8A4FC996DC93EF65331A14A823E5E5AD97CA46"
+    },
+    {
+      "bytes": 7305283,
+      "name": "jstage_part_I_9_2_119.pdf",
+      "sha256": "5A8E5720BC2EF8905BF85F7919C65AC4A87A31CFC854BD77E6B5084C0D2DEBEF"
+    },
+    {
+      "bytes": 3984260,
+      "name": "jstage_part_II_9_3_185.pdf",
+      "sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53"
+    },
+    {
+      "bytes": 260642,
+      "name": "edges.csv",
+      "sha256": "212545E29A51D00E165312920E5057A693F9AFE6A72D2A9FE83186F79245B0DE"
+    },
+    {
+      "bytes": 325192,
+      "name": "terms.csv",
+      "sha256": "6C0D1A82808DC95CBA70A69EB1114038C6382D99C3E4D9B8C0510E17B6E490AF"
+    },
+    {
+      "bytes": 11777,
+      "name": "stacks.csv",
+      "sha256": "E13EFA405B525D69BFF38256601E4AF64D22FA3075F3A95AB3DFB78C15CFD060"
+    }
+  ],
+  "outputs": {
+    "units.csv": {
+      "bytes": 390588,
+      "sha256": "D7A7ADF25EC2FA2A0D5F2ED35670787BCA4CEF5B5223FAB944F19594DE4657BB"
+    }
+  },
+  "schema": "historical-source-intake-v1",
+  "status": "PASS"
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "fac-checkpoint-qa-v1",
+  "date": "2026-08-06",
+  "scope": {
+    "start": "fac:I:1:no:1",
+    "end": "fac:I:1:no:10:prop:8",
+    "printed_pages": "199-206",
+    "units_decided": 20,
+    "stacks_references_added": 8
+  },
+  "authority": {
+    "bytes": 6305726,
+    "sha256": "B8C6508249308F5D8BC886B9E6360F1EC4FDC8F0F18EFAA03EE0E36B591551CA",
+    "render_dpi": 1100,
+    "physical_pages_inspected": [4, 5, 6, 7, 8, 9, 10, 11],
+    "printed_pages_inspected": [199, 200, 201, 202, 203, 204, 205, 206]
+  },
+  "builds": [
+    {
+      "master": "sheaves.tex",
+      "pdf": "sheaves.pdf",
+      "bytes": 659224,
+      "sha256": "487AC715C33C74DCEBC91CB6FB83DB65406BBF0745F4AEE869DC7DEDED85F31E",
+      "affected_pdf_pages_inspected": [6, 16, 17, 49, 51],
+      "affected_page_result": "PASS"
+    },
+    {
+      "master": "modules.tex",
+      "pdf": "modules.pdf",
+      "bytes": 721993,
+      "sha256": "B1E018885FD9329A52FF9320EFD2C730757A6864FE7AF04F482A490DA8DE9F8F",
+      "affected_pdf_pages_inspected": [3, 22],
+      "affected_page_result": "PASS"
+    }
+  ],
+  "visual_checks": {
+    "render_dpi": 1100,
+    "criteria": [
+      "no clipping",
+      "no collision",
+      "no broken formula",
+      "no unresolved link at an edited statement"
+    ],
+    "result": "PASS"
+  },
+  "log_scope": {
+    "fac_citations_resolved": true,
+    "undefined_reference_at_edited_lines": 0,
+    "overfull_box_at_edited_lines": 0,
+    "note": "The isolated build retains unrelated missing chapter-aux warnings in end matter and unrelated pre-existing cross-chapter warnings."
+  },
+  "validators": {
+    "intake": "PASS",
+    "stacks_index": "PASS",
+    "mapping": "PASS",
+    "active_source_issues": 0
+  },
+  "result": "PASS"
+}

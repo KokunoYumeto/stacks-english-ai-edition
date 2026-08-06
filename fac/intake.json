@@ -1,0 +1,44 @@
+{
+  "adapter": "fac_targets",
+  "corpus": "FAC",
+  "counts": {
+    "units": 661,
+    "units_with_topics": 491
+  },
+  "errors": [],
+  "inputs": [
+    {
+      "bytes": 146450,
+      "name": "26_FAC_REFERENCE_TARGETS.csv",
+      "sha256": "2C11B8BAC3C4B53D0BDED8E50CD74842DDD1428CEC88BF9DA85FC8A5F652868D"
+    },
+    {
+      "bytes": 6305726,
+      "name": "[Annals of Mathematics 1955-mar vol. 61 iss. 2] Faisceaux Algebriques Coherents{Jean-Pierre Serre}(1955 March)[10.2307_1969915]{29139667}.pdf",
+      "sha256": "B8C6508249308F5D8BC886B9E6360F1EC4FDC8F0F18EFAA03EE0E36B591551CA"
+    },
+    {
+      "bytes": 5763215,
+      "name": "04_FAC_Complete_Readers_Source_and_Blind_Comparison_Evidence_20260804.zip",
+      "sha256": "1864EDB8B318112E6D4CAE32BC2929F9D67406AB7290A966A8F7B770DF9D72CA"
+    },
+    {
+      "bytes": 127042,
+      "name": "SEMANTIC_ENTITIES.csv",
+      "sha256": "BF93C9E99FC62C5B039ED035265BBF1984F96D0604DBFA43EE6D5F7AE181BD97"
+    },
+    {
+      "bytes": 122122,
+      "name": "SEMANTIC_RELATIONS.csv",
+      "sha256": "2FE8A59AD202BDDEFECB5CE5C9244F0083EBAD9EB38359A52420ACA1210810FB"
+    }
+  ],
+  "outputs": {
+    "units.csv": {
+      "bytes": 239650,
+      "sha256": "52DE29B183CC45EB6461F5180B3A24555722260AF32FFB10F6B8E193C9872F7A"
+    }
+  },
+  "schema": "historical-source-intake-v1",
+  "status": "PASS"
+}

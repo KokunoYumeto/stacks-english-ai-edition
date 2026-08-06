@@ -1,0 +1,44 @@
+{
+  "adapter": "gaga_targets",
+  "corpus": "GAGA",
+  "counts": {
+    "units": 126,
+    "units_with_topics": 40
+  },
+  "errors": [],
+  "inputs": [
+    {
+      "bytes": 21229,
+      "name": "REFERENCE_TARGETS.csv",
+      "sha256": "79B3C600A96352167C5611D484DD9310785C77E99F611C0159339C88A8DE4343"
+    },
+    {
+      "bytes": 4134102,
+      "name": "Serre_GAGA_AIF_1956.pdf",
+      "sha256": "9898F985DD6932496E26450BFE0BECA8655A937032F545B97CEBD88D1BC8EB98"
+    },
+    {
+      "bytes": 80054,
+      "name": "REFERENCE_CANDIDATES.csv",
+      "sha256": "A05E1F4C195F1BB66AF2AC2A016AF6739AEE97D4F95F086068F13D01FB88FA71"
+    },
+    {
+      "bytes": 38896,
+      "name": "REFERENCE_EDGES.csv",
+      "sha256": "8F0E7539B3B73521BF59966025BA42944B1F47C9E8C57D9191CCC6551176A19B"
+    },
+    {
+      "bytes": 24015,
+      "name": "REFERENCE_RESIDUALS.csv",
+      "sha256": "46862616AB92393CB072E8B586D89B9ECA6896FB51FBEC8E7E3213729FFA8433"
+    }
+  ],
+  "outputs": {
+    "units.csv": {
+      "bytes": 60100,
+      "sha256": "8F8DB43D6732A1987ACD9A02BD47E96697CFDC35DFECDF9C6207977B1D515C9B"
+    }
+  },
+  "schema": "historical-source-intake-v1",
+  "status": "PASS"
+}

@@ -1,0 +1,10 @@
+topic_id,label,pattern,cap,coverage,confidence,evidence_labels,rationale
+analytic-space,Complex analytic spaces,complex analytic space|holomorphic,100,no_direct,high,,The current Stacks tree intentionally has no general category of complex analytic spaces.
+analytification,Analytification,analytification|associated analytic space,100,partial,high,etale-lemma-etale-analytification-local-isomorphism;pione-section-comparison-complex,Only bounded analytification comparisons are present.
+coherent,Coherent sheaves,coherent sheaf|coherent module,120,direct,high,modules-section-coherent;coherent-section-coherent-sheaves,The algebraic coherent-sheaf infrastructure is explicit.
+proper-projective,Proper and projective morphisms,proper|complete|projective,120,direct,high,morphisms-section-proper;morphisms-section-projective,Proper and projective morphisms are developed algebraically.
+comparison-cohomology,GAGA cohomology comparison,gaga|analytic cohomology,100,no_direct,high,,No general complex-analytic cohomology comparison theorem is currently present.
+comparison-sheaves,GAGA coherent-sheaf comparison,gaga|algebraization of analytic sheaf,100,no_direct,high,,The analytic coherent-sheaf equivalence is outside the current foundations.
+flatness,Flatness,flat|tor,100,direct,high,algebra-section-flat,Flatness and Tor criteria are developed directly.
+formal,Formal comparison,formal completion|formal functions|existence theorem,120,partial,high,algebraization-section-formal-functions;coherent-section-coherent-formal;coherent-section-existence-proper,Formal functions and algebraization provide algebraic analogues but not analytic GAGA itself.
+invertible,Invertible sheaves,invertible sheaf|line bundle|principal fibre,100,direct,high,modules-section-invertible;cohomology-section-h1-torsors,Invertible modules and their first-cohomology classification are explicit.
