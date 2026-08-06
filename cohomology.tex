@@ -2531,13 +2531,55 @@ $$
 $$
 associated to maps $I \to J$ and $J \to K$ is the map associated
 to the composition $I \to K$.
-In particular, we can define the {\v C}ech cohomology
-groups
+
+\begin{definition}
+\label{definition-cech-cohomology-space}
+\begin{reference}
+\cite[Chapter I, \S 3, no. 22, Definition, p. 215]{FAC}
+\end{reference}
+Let $(X, \mathcal{O}_X)$ be a ringed space. Let $\mathcal{F}$ be an
+$\mathcal{O}_X$-module. The groups
 $$
 \check{H}^p(X, \mathcal{F}) =
 \colim_\mathcal{U} \check{H}^p(\mathcal{U}, \mathcal{F})
 $$
-where the colimit is over all open coverings of $X$ preordered by refinement.
+where the colimit is over all open coverings of $X$ preordered by refinement,
+are the {\it {\v C}ech cohomology groups} of $X$ with coefficients in
+$\mathcal{F}$.
+\end{definition}
+
+\begin{remark}
+\label{remark-FAC-cech-colimit-notation}
+\begin{reference}
+\cite[Chapter I, \S 3, no. 22 and footnote 2, p. 215]{FAC}
+\end{reference}
+The source denotes this direct limit by $H^p(X, \mathcal{F})$. We use
+$\check{H}^p(X, \mathcal{F})$ to distinguish it from derived-functor
+cohomology. The colimit can be indexed by a set: replace every covering
+family by the set of its open members, a subset of the topology of $X$.
+Finite intersections give a common refinement of any two coverings.
+\end{remark}
+
+\begin{lemma}
+\label{lemma-cech-h0-space}
+\begin{reference}
+\cite[Chapter I, \S 3, no. 22, Proposition 4, p. 215]{FAC}
+\end{reference}
+Let $(X, \mathcal{O}_X)$ be a ringed space. Let $\mathcal{F}$ be an
+$\mathcal{O}_X$-module. The canonical map
+$$
+\Gamma(X, \mathcal{F}) \longrightarrow \check{H}^0(X, \mathcal{F})
+$$
+is an isomorphism.
+\end{lemma}
+
+\begin{proof}
+For every open covering $\mathcal{U}$ of $X$, the canonical map
+$\Gamma(X, \mathcal{F}) \to \check{H}^0(\mathcal{U}, \mathcal{F})$
+is an isomorphism by Lemma \ref{lemma-cech-h0}. Under these isomorphisms
+the transition maps are the identity on $\Gamma(X, \mathcal{F})$.
+Taking the colimit proves the lemma.
+\end{proof}
 
 \medskip\noindent
 It turns out that the maps $\gamma$ defined above are compatible with
