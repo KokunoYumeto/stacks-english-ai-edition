@@ -2,17 +2,17 @@
 
 - Frozen surface: 661 source targets through printed page 278.
 - Stage: sequential source review and statement-level Stacks integration.
-- Completed checkpoint: Chapter II, Section 4, no. 48, printed pages 199--241.
-- Reviewed decisions: 207 (54 equivalent, 91 stronger, 30 extensions,
-  18 new-statement decisions, 13 historical references, 1 outside scope).
-- Current Stacks references added: 125 across `topology.tex`, `sheaves.tex`,
+- Completed checkpoint: Chapter II, Section 4, no. 49, printed pages 199--242.
+- Reviewed decisions: 215 (54 equivalent, 95 stronger, 31 extensions,
+  18 new-statement decisions, 16 historical references, 1 outside scope).
+- Current Stacks references added: 132 across `topology.tex`, `sheaves.tex`,
   `modules.tex`, `homology.tex`, `coherent.tex`, `cohomology.tex`,
   `divisors.tex`, `constructions.tex`, `schemes.tex`, `morphisms.tex`,
   `derham.tex`, `algebra.tex`, `properties.tex`, and `varieties.tex`.
 - New Stacks theorem/lemma statements: 13, plus the paracompactness and
   locally-constant-sheaf definitions;
   each new theorem/lemma has a complete proof and no assigned tag.
-- Source/proof issues or convention boundaries: 169 found by direct authority-page and TeX inspection, all resolved and
+- Source/proof issues or convention boundaries: 182 found by direct authority-page and TeX inspection, all resolved and
   retained in `issues.csv`.
 - Existing Stacks defects corrected: 5, comprising the refinement-homotopy
   sign, repeated coefficient sheaves, wrong boundary domain, wrong boundary
@@ -25,7 +25,7 @@
   completed; every
   affected statement page passed direct 1100 dpi visual inspection. See
   `qa.json`.
-- Historical notes added: 34, preserving the source's operator calculus,
+- Historical notes added: 35, preserving the source's operator calculus,
   image-complex construction, two-covering double complex, and unproved
   cofinal-vanishing question, together with the classical closed-point to
   reduced-scheme bridge, the classical-map to scheme-morphism bridge, and the
@@ -54,6 +54,9 @@
   theorem matches, and no. 48 now records the character-space versus prime-
   spectrum boundary, the sheafification of the tensor construction, the
   fraction proof of localization exactness, and the essential Noetherian
-  hypothesis behind coherence of a finite module's associated sheaf.
-- Next unit: `fac:II:4:no:49` (the module associated to an algebraic sheaf).
+  hypothesis behind coherence of a finite module's associated sheaf; no. 49
+  now records the finite-free proof of the affine unit and counit, separates
+  affine right-exactness from general global sections, and resolves the
+  projective warning into the graded-module quotient by high-degree torsion.
+- Next unit: `fac:II:4:no:50` (projective modules and vector bundles).
 - No statement is mapped by lexical similarity alone.

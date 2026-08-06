@@ -3,38 +3,36 @@
   "date": "2026-08-06",
   "scope": {
     "start": "fac:I:1:no:1",
-    "end": "fac:II:4:no:48",
-    "printed_pages": "199-241",
-    "units_decided": 207,
-    "stacks_references_added": 125
+    "end": "fac:II:4:no:49",
+    "printed_pages": "199-242",
+    "units_decided": 215,
+    "stacks_references_added": 132
   },
   "authority": {
     "bytes": 6305726,
     "sha256": "B8C6508249308F5D8BC886B9E6360F1EC4FDC8F0F18EFAA03EE0E36B591551CA",
     "render_dpi": 1100,
-    "physical_pages_inspected": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46],
-    "printed_pages_inspected": [199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241]
+    "physical_pages_inspected": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47],
+    "printed_pages_inspected": [199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242]
   },
   "latest_review": {
-    "unit": "fac:II:4:no:48",
-    "component": "components/046_II_4_48_sheaf_associated_to_module.tex",
-    "bytes": 4771,
-    "sha256": "1A50F3E8F4E0342246474343F7C74393AE7ED25AA6B2520B1497729E2ED8A05B",
-    "authority_physical_pages": [45, 46],
-    "authority_printed_pages": [240, 241],
+    "unit": "fac:II:4:no:49",
+    "component": "components/047_II_4_49_module_associated_to_sheaf.tex",
+    "bytes": 4429,
+    "sha256": "5B00D6D3E4CE0C6F7C78C10CF0ACDFF4277B4FC8EB78942037C9E8CAF4CDE608",
+    "authority_physical_pages": [46, 47],
+    "authority_printed_pages": [241, 242],
     "authority_renders": [
-      {"physical_page": 45, "sha256": "20DC3F79AEA2B0DA9068EEA3B6C3067563698FD9082CF830D8E1EE266F5EDD60"},
-      {"physical_page": 46, "sha256": "D62D0BDD9AC947E2208D098AA720279F94315B063BFA4ACC278A30B4F154394F"}
+      {"physical_page": 46, "sha256": "D62D0BDD9AC947E2208D098AA720279F94315B063BFA4ACC278A30B4F154394F"},
+      {"physical_page": 47, "sha256": "22301BEECC04F48EC020626CDE4C4EDFD44868792E9FFF18CE460E69B6677852"}
     ],
     "high_detail_renders": [],
     "output_renders": [
-      {"master": "algebra.tex", "pdf_page": 17, "sha256": "13D507671E21BC29021EF427161AA04E3A9B2F2654A9BCAE6FEBB472FF3C29F4"},
-      {"master": "modules.tex", "pdf_page": 11, "sha256": "D85A934B6F0697AAD89253960B572DD2D0C9318922BD3FC4B715E430052A4CF6"},
-      {"master": "schemes.tex", "pdf_page": 8, "sha256": "8D8EB8A088F77091AD8546BEA61DFA87940D30BE6E0D2D60DC22EB61EA98DA63"},
-      {"master": "schemes.tex", "pdf_page": 10, "sha256": "577C477F9C0F653D48809ECA4C3DCD1033B4F567DEECA7A16B9AF5DC6B7B6CB0"},
-      {"master": "coherent.tex", "pdf_page": 22, "sha256": "C2A9A88B4D2E335BD0717A56386012804DAB53B6A4E5C3CE532EA4C3D1AF95C4"}
+      {"master": "properties.tex", "pdf_page": 21, "sha256": "D309DD711143397810E20D796016F9B4E94633762DAFE9B5FE7BFA12FA0DB1D3"},
+      {"master": "schemes.tex", "pdf_page": 14, "sha256": "76BF840A16EC2EACCEA08245D169C2CC051A40BCCB50F4D7BE4EED12D1C877E3"},
+      {"master": "coherent.tex", "pdf_page": 38, "sha256": "574F3B8EBEB2D42468A375EDB816B020F147213091CA5CA0BD1365A15D1E298F"}
     ],
-    "blind_review": {"id": "FAC-BLIND-REVIEW-N048-R1", "result": "PASS", "findings": []}
+    "blind_review": {"id": "FAC-BLIND-REVIEW-N049-R1", "result": "PASS", "findings": []}
   },
   "builds": [
     {
@@ -81,8 +79,8 @@
       "master": "coherent.tex",
       "pdf": "coherent.pdf",
       "bytes": 1035615,
-      "sha256": "2AD41CACDB908183A36B510594C4E1139CBD144CBC6F11E3AC464C994282DA33",
-      "affected_pdf_pages_inspected": [2, 3, 22, 23, 24, 25],
+      "sha256": "354A416258B0775398FE21547463C30375D4D2E7A96A41E079BA4B44C11CF77B",
+      "affected_pdf_pages_inspected": [2, 3, 22, 23, 24, 25, 38],
       "affected_page_result": "PASS"
     },
     {
@@ -121,7 +119,7 @@
       "master": "schemes.tex",
       "pdf": "schemes.pdf",
       "bytes": 722234,
-      "sha256": "132132612BBC3E92B8430027F0F37F537AF602E9E95A6AA5E6DC778B637A846F",
+      "sha256": "00E3A5362CACE1D41F9A18C1DA50E449854EF0EC22A21E388383FAE749DFFB73",
       "affected_pdf_pages_inspected": [2, 3, 8, 9, 10, 13, 14, 16, 17, 19, 22, 23, 25, 26, 31, 32, 33, 34, 40, 42, 43],
       "affected_page_result": "PASS"
     },
@@ -129,7 +127,7 @@
       "master": "properties.tex",
       "pdf": "properties.pdf",
       "bytes": 730319,
-      "sha256": "AC3E3D8742A4D2C1CA41C2029A4DEFF996CCDAA782190B61E83B59DF61A90311",
+      "sha256": "A14E97F1500DF5E096AC521D59266E4B7A59A983DD8E90A5FEB49FA03CFB37EF",
       "affected_pdf_pages_inspected": [21],
       "affected_page_result": "PASS"
     },
@@ -201,7 +199,7 @@
     "fac_citations_resolved": true,
     "undefined_reference_at_edited_lines": 0,
     "overfull_box_at_edited_lines": 0,
-    "note": "The isolated builds retain unrelated missing chapter-aux warnings and pre-existing overfull diagnostics. The no. 48 source citations are confined to the Stacks reference/history metadata, and no undefined reference or overfull box occurs at an edited statement. The inspected algebra.pdf page 17, modules.pdf page 11, schemes.pdf pages 8 and 10, and coherent.pdf page 22 are unclipped, collision-free, and contain no unresolved mark. No high-detail authority render was required because the pp. 240--241 coordinate-ring, tensor, localization, annihilator, and finite-presentation formulas were unambiguous at 1100 dpi; issues I000083, I000096, I000108, and I000118 retain earlier fail-closed receipts."
+    "note": "The isolated builds retain unrelated missing chapter-aux warnings and pre-existing overfull diagnostics. The no. 49 source citations are confined to the Stacks reference/history metadata, and no undefined reference or overfull box occurs at an edited statement. The inspected properties.pdf page 21, schemes.pdf page 14, and coherent.pdf page 38 are unclipped, collision-free, and contain no unresolved mark. No high-detail authority render was required because the pp. 241--242 unit, counit, finite-free diagram, and projective-warning text were unambiguous at 1100 dpi; the source diagram is already native TeX and issues I000083, I000096, I000108, and I000118 retain earlier fail-closed receipts."
   },
   "validators": {
     "intake": "PASS",
