@@ -1235,3 +1235,50 @@ reference, overfull horizontal box, or rerun warning and passes 1,200-dpi
 inspection on pages 17--22, with a final focused inspection on pages 19--21
 after the induction-base repair.  The next sequential cursor is Expose 221,
 Section 3, beginning with representability of the Hilbert and Quot functors.
+
+The fifty-eighth source patch completes Expose 221, Section 3.  It closes the
+classical gap explicitly noted in the Quot chapter introduction: fixed-
+polynomial Quot spaces for a coherent sheaf on a projective scheme over a
+Noetherian base are now proved to be projective schemes rather than only
+proper algebraic spaces.  The universal free case uses uniform regularity and
+cohomology with arbitrary base change to construct a closed Grassmann
+immersion.  A new Constructions lemma proves the Pluecker closed immersion and
+identifies its line bundle with the determinant of the universal quotient.
+Local reduction to the free projective-space case then gives the general Quot
+scheme and shows that the eventual determinant line is relatively very ample.
+The full Quot space consequently decomposes by Hilbert polynomial into a
+disjoint union of projective schemes.
+
+The valuative saturation argument is also isolated as
+`moduli-lemma-quotient-extension-valuation-ring` for an arbitrary algebraic
+space and quasi-coherent source over any valuation ring.  This removes the
+older proof's invalid finite-generation shortcut and proves uniqueness
+directly from torsion freeness.  Direct 1,200-dpi review covered all nine
+authority pages for Section 3 (printed pages 258--266 and physical PDF pages
+11--19) and both pages of the linked erratum.  The main authority remains
+2,747,079 bytes with SHA-256
+`ABBF37780FDC514BEBD2F1811BFC94E706E44FA8751402CE171510A3F1520968`;
+the erratum remains 157,623 bytes with SHA-256
+`007990D289E767A54A273CA45E8491F0052F9F015820DDB451D1E2B2D0FE27F9`.
+Issues `I000020` and `I000021` record all four page-263 corrections: the
+ordered polynomial dichotomy, both weak inequalities, and the replacement of
+the stray `r` by the closed locus `Z`.  No correction is imported silently.
+
+Both semantic validators pass with no errors at 21,587 labels, 3,860 topic
+candidates, 413 append-only decisions, 1,253 source units, 1,612 term links,
+and 21 source issues, of which eight remain active.  The decision, issue, map,
+and Stacks-label ledgers have SHA-256
+`107680F7FDF8EA8829A9D939303A6A381FDED534DD939E8939ADD06C4049CD0D`,
+`EA49D0F8E4C4C897CD94AF71DE32EF610C2122493EEE4E38A5463A1A29EB55F4`,
+`7E9CB5E2FADE485434B89956EFBB5EA3EB76B68A32545856678D1BE5A1CF6BE5`,
+and `1D19463D0473273ED3CE388B7C7C1E55794D495876A3A771CB8728339BCD38CE`.
+Bibliography-complete serial builds followed by two final TeX passes produce a
+51-page Constructions chapter of 785,646 bytes with SHA-256
+`977ACA3A29B300BD2D87B9A2077087A2F428238C7E32EB150690363DCCD5879C`
+and a 35-page Moduli Stacks chapter of 626,555 bytes with SHA-256
+`0074912F29E7762DC205434FBA11E465416D7AEF1C29C2248DC85A6EA669B836`.
+The new labels and citations all resolve and the additions create no overfull
+horizontal box; the standalone chapter builds retain only their pre-existing
+cross-chapter auxiliary warnings.  Final 1,200-dpi inspection covers
+Constructions page 50 and Moduli pages 6 and 15--18.  The next sequential
+cursor is Expose 221, Section 4, “Variants,” printed pages 266--268.

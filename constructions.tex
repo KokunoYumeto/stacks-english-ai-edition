@@ -5159,6 +5159,42 @@ We omit the verification that these constructions define mutually
 inverse transformations of functors.
 \end{proof}
 
+\begin{lemma}
+\label{lemma-grassmannian-pluecker}
+Let $0 < k < n$ and set $d = n - k$ and $N = \binom{n}{d}$.
+There is a closed immersion
+$$
+\mathbf{G}(k, n) \longrightarrow \mathbf{P}^{N - 1}_{\mathbf{Z}}
+$$
+which sends a quotient
+$q : \mathcal{O}_S^{\oplus n} \to \mathcal{Q}$ to the quotient
+$$
+\wedge^d q : \wedge^d\mathcal{O}_S^{\oplus n}
+\longrightarrow \det(\mathcal{Q}).
+$$
+The pullback of $\mathcal{O}_{\mathbf{P}^{N - 1}_{\mathbf{Z}}}(1)$
+is the determinant of the universal quotient on $\mathbf{G}(k, n)$.
+\end{lemma}
+
+\begin{proof}
+The displayed quotient defines the morphism by
+Lemma \ref{lemma-projective-space}. The assertion about the invertible
+module follows from the same description of projective space.
+
+Let $I \subset \{1, \ldots, n\}$ have cardinality $d$. The inverse
+image of the standard open where the Pl\"ucker coordinate indexed by
+$I$ is invertible is the open $F_I$ used in the proof of
+Lemma \ref{lemma-gkn-representable}. On this open we may identify the
+quotient with a matrix whose columns indexed by $I$ form the identity
+matrix. The Pl\"ucker coordinates obtained by replacing one element of
+$I$ by one element of its complement are, up to sign, the entries of
+the remaining columns. Consequently, the map from the coordinate ring
+of the standard open of projective space to the coordinate ring of
+$F_I \cong \mathbf{A}^{kd}_{\mathbf{Z}}$ is surjective. Thus the
+morphism is a closed immersion over each of these standard opens.
+Since these opens cover projective space, the result follows.
+\end{proof}
+
 
 \input{chapters}
 

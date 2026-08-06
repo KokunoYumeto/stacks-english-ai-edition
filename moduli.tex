@@ -550,6 +550,52 @@ Quot, Proposition \ref{quot-proposition-quot}.
 \end{proof}
 
 \begin{lemma}
+\label{lemma-quotient-extension-valuation-ring}
+\begin{reference}
+\cite[Expos\'e 221, Lemma 3.7, pp. 264--265]{FGA}.
+\end{reference}
+Let $R$ be a valuation ring with fraction field $K$, let $X$ be an
+algebraic space over $R$, and let $\mathcal{F}$ be a quasi-coherent
+$\mathcal{O}_X$-module. Every quasi-coherent quotient
+$$
+\mathcal{F}_K \longrightarrow \mathcal{Q}_K
+$$
+extends uniquely, up to unique isomorphism compatible with the quotient,
+to a quasi-coherent quotient
+$$
+\mathcal{F} \longrightarrow \mathcal{Q}
+$$
+such that $\mathcal{Q}$ is flat over $R$.
+\end{lemma}
+
+\begin{proof}
+Write $j : X_K \to X$. Define $\mathcal{L}$ to be the kernel of the
+composition
+$$
+\mathcal{F} \longrightarrow j_*\mathcal{F}_K
+\longrightarrow j_*\mathcal{Q}_K
+$$
+and set $\mathcal{Q} = \mathcal{F}/\mathcal{L}$. These modules are
+quasi-coherent because $j$ is affine. On an affine scheme over $X$ this
+construction is the following. If $M$ is the module corresponding to
+$\mathcal{F}$ and $M_K \to N_K$ is the given quotient, then
+$$
+L = \{x \in M \mid x/1 \text{ maps to }0\text{ in }N_K\}
+$$
+and $\mathcal{Q}$ corresponds to $M/L$. The module $M/L$ embeds into
+$N_K$ and hence is torsion free as an $R$-module. It is flat over $R$ by
+More on Algebra, Lemma
+\ref{more-algebra-lemma-valuation-ring-torsion-free-flat}.
+
+Suppose $\mathcal{F} \to \mathcal{Q}'$ is another extension flat over
+$R$. On an affine scheme as above, flatness implies that the module
+corresponding to $\mathcal{Q}'$ is $R$-torsion free. Its kernel is
+therefore exactly $L$: if the image of $x$ vanishes after tensoring with
+$K$, then it is annihilated by a nonzero element of $R$, hence is zero.
+This proves uniqueness and completes the proof.
+\end{proof}
+
+\begin{lemma}
 \label{lemma-quot-existence-part}
 Assume $X \to B$ is proper as well as of finite presentation
 and $\mathcal{F}$ quasi-coherent of finite type.
@@ -567,44 +613,13 @@ quotient $\mathcal{F}_K \to \mathcal{Q}_K$, show there exists
 a quotient $\mathcal{F} \to \mathcal{Q}$ where $\mathcal{Q}$ is a
 finitely presented $\mathcal{O}_X$-module
 flat over $R$ whose generic fibre is $\mathcal{Q}_K$.
-Observe that by Flatness on Spaces, Theorem
+Apply Lemma \ref{lemma-quotient-extension-valuation-ring}. The resulting
+$\mathcal{Q}$ is of finite type because it is a quotient of $\mathcal{F}$.
+By Flatness on Spaces, Theorem
 \ref{spaces-flat-theorem-finite-type-flat}
-any finite type quasi-coherent $\mathcal{O}_X$-module
-$\mathcal{F}$ flat over $R$ is of finite presentation.
-We first solve the existence of $\mathcal{Q}$ affine locally.
-
-\medskip\noindent
-Affine locally we arrive at the following problem:
-let $R \to A$ be a finitely presented ring map,
-let $M$ be a finite $A$-module, let $\varphi : M_K \to N_K$ be
-an $A_K$-quotient module. Then we may consider
-$$
-L = \{x \in M \mid \varphi(x \otimes 1) = 0 \}
-$$
-The $M \to M/L$ is an $A$-module quotient which is
-torsion free as an $R$-module. Hence it is flat as an
-$R$-module (More on Algebra, Lemma
-\ref{more-algebra-lemma-valuation-ring-torsion-free-flat}).
-Since $M$ is finite as an $A$-module so is $L$ and we
-conclude that $L$ is of finite presentation as an $A$-module
-(by the reference above). Clearly $M/L$ is the unique such
-quotient with $(M/L)_K = N_K$.
-
-\medskip\noindent
-The uniqueness in the construction of the previous paragraph
-guarantees these quotients glue and give the desired $\mathcal{Q}$.
-Here is a bit more detail. Choose a surjective \'etale morphism
-$U \to X$ where $U$ is an affine scheme. Use the above construction
-to construct a quotient $\mathcal{F}|_U \to \mathcal{Q}_U$
-which is quasi-coherent, is flat over $R$, and recovers $\mathcal{Q}_K|U$
-on the generic fibre. Since $X$ is separated, we see that
-$U \times_X U$ is an affine scheme \'etale over $X$ as well.
-Then $\mathcal{F}|_{U \times_X U} \to \text{pr}_1^*\mathcal{Q}_U$ and
-$\mathcal{F}|_{U \times_X U} \to \text{pr}_2^*\mathcal{Q}_U$
-agree as quotients by the uniquess in the construction. Hence we may descend
-$\mathcal{F}|_U \to \mathcal{Q}_U$ to a surjection
-$\mathcal{F} \to \mathcal{Q}$ as desired (Properties of Spaces,
-Proposition \ref{spaces-properties-proposition-quasi-coherent}).
+it is of finite presentation. Its support is closed in $X$ and hence
+proper over $R$. Thus this quotient is an object of the Quot functor
+and gives the required extension.
 \end{proof}
 
 \begin{lemma}
@@ -1377,6 +1392,107 @@ the image of $t$ under the morphism above is $x$ as desired.
 \end{proof}
 
 \begin{lemma}
+\label{lemma-quot-Pn-projective}
+\begin{reference}
+\cite[Expos\'e 221, Lemma 3.3, Theorem 3.2, and Proposition 3.8,
+pp. 260--266]{FGA}.
+\end{reference}
+Let $n \geq 0$, $r \geq 1$, $P \in \mathbf{Q}[t]$. The algebraic space
+$$
+X = \Quotfunctor^P_{\mathcal{O}^{\oplus r}_{\mathbf{P}^n_\mathbf{Z}}/
+\mathbf{P}^n_\mathbf{Z}/\mathbf{Z}}
+$$
+is a projective scheme over $\mathbf{Z}$. If $X$ is nonempty, then for
+all sufficiently large $m$ the universal quotient $\mathcal{G}$ has the
+following properties. The module
+$$
+\mathcal{E}_m = p_*\mathcal{G}(m),\qquad
+p : \mathbf{P}^n_X \longrightarrow X,
+$$
+is finite locally free of rank $P(m)$ and its formation commutes with
+arbitrary base change. The quotient
+$$
+H^0(\mathbf{P}^n_\mathbf{Z},
+\mathcal{O}(m)^{\oplus r}) \otimes_\mathbf{Z} \mathcal{O}_X
+\longrightarrow \mathcal{E}_m
+$$
+defines a closed immersion into the scheme of locally free quotients
+of the indicated rank, and the pullback of its Pl\"ucker invertible
+module is $\det(\mathcal{E}_m)$.
+\end{lemma}
+
+\begin{proof}
+By Lemma \ref{lemma-quot-Pn}, $X$ is proper over $\mathbf{Z}$; in
+particular it is quasi-compact. If $X$ is empty, the assertion is clear,
+so assume it is nonempty. On $\mathbf{P}^n_X$ write the universal
+sequence as
+$$
+0 \longrightarrow \mathcal{K} \longrightarrow
+\mathcal{O}^{\oplus r} \longrightarrow \mathcal{G}
+\longrightarrow 0.
+$$
+The modules $\mathcal{K}$ and $\mathcal{G}$ are of finite presentation
+and flat over $X$. Choose $m_0 \geq 0$ as in Varieties, Lemma
+\ref{varieties-lemma-bound-quotients-free}. For every geometric point
+$x$ of $X$, the module $\mathcal{K}_x$ is $m_0$-regular. Hence for
+$m \geq m_0$ the higher cohomology of $\mathcal{K}_x(m)$ and
+$\mathcal{G}_x(m)$ vanishes, and $\mathcal{K}_x(m)$ is globally
+generated; see Varieties, Lemmas
+\ref{varieties-lemma-m-regular-up} and
+\ref{varieties-lemma-m-regular-globally-generated}.
+
+By Derived Categories of Spaces, Lemmas
+\ref{spaces-perfect-lemma-flat-proper-perfect-direct-image-general} and
+\ref{spaces-perfect-lemma-open-where-cohomology-in-degree-i-rank-r-geometric},
+the modules
+$$
+\mathcal{W}_m = p_*\mathcal{K}(m)
+\quad\text{and}\quad
+\mathcal{E}_m = p_*\mathcal{G}(m)
+$$
+are finite locally free, of ranks
+$$
+r{n + m \choose n} - P(m)\quad\text{and}\quad P(m),
+$$
+respectively, their formation commutes with arbitrary base change, and
+there is an exact sequence
+$$
+0 \longrightarrow \mathcal{W}_m \longrightarrow
+H^0(\mathbf{P}^n_\mathbf{Z},
+\mathcal{O}(m)^{\oplus r}) \otimes_\mathbf{Z} \mathcal{O}_X
+\longrightarrow \mathcal{E}_m \longrightarrow 0.
+$$
+Indeed, the cited open loci contain every geometric point of $X$ and
+therefore equal $X$.
+
+Put $M = r{n + m \choose n}$ and $e = P(m)$. The last quotient defines
+a morphism
+$$
+\varphi_m : X \longrightarrow H,
+$$
+where $H = \mathbf{G}(M - e, M)$ if $0 < e < M$, and where $H$ is
+$\Spec(\mathbf{Z})$ in the two extreme cases. The evaluation map
+$p^*\mathcal{W}_m \to \mathcal{K}(m)$ is surjective: this can be checked
+on geometric fibres, where it follows from regularity. Thus after any
+base change the quotient of global sections determines
+$\mathcal{K}(m)$, and hence determines the universal quotient
+$\mathcal{G}$. It follows that $\varphi_m$ is a monomorphism.
+
+The morphism $\varphi_m$ is locally of finite type. It is also proper:
+its graph is a closed immersion because $H$ is separated over
+$\mathbf{Z}$, and the projection $X \times_\mathbf{Z} H \to H$ is
+proper. Hence $\varphi_m$ is a closed immersion by More on Morphisms of
+Spaces, Lemma
+\ref{spaces-more-morphisms-lemma-characterize-closed-immersion}.
+If $0 < e < M$, Constructions, Lemma
+\ref{constructions-lemma-grassmannian-pluecker} gives a closed immersion
+of $H$ into projective space and identifies the pullback of
+$\mathcal{O}(1)$ with the determinant of its universal quotient. The
+same conclusions are immediate in the extreme cases. Thus $X$ is a
+projective scheme and the final assertion follows.
+\end{proof}
+
+\begin{lemma}
 \label{lemma-quot-Pn-over-base}
 Let $B$ be an algebraic space. Let $X = B \times \mathbf{P}^n_\mathbf{Z}$.
 Let $\mathcal{L}$ be the pullback of $\mathcal{O}_{\mathbf{P}^n}(1)$ to $X$.
@@ -1451,6 +1567,117 @@ $\Quotfunctor^P_{\mathcal{F}/X/B} \cong
 Since $\Quotfunctor^P_{i_*\mathcal{F}/\mathbf{P}^n_B/B}$
 is proper over $B$ by Lemma \ref{lemma-quot-Pn-over-base}
 we conclude.
+\end{proof}
+
+\begin{proposition}
+\label{proposition-quot-projective-over-base}
+\begin{reference}
+\cite[Expos\'e 221, Theorem 3.2 and Proposition 3.8,
+pp. 260--266]{FGA}.
+\end{reference}
+Let $S$ be a Noetherian scheme, let $f : X \to S$ be a projective
+morphism of schemes, let $\mathcal{L}$ be an $f$-very ample invertible
+module, and let $\mathcal{F}$ be a coherent $\mathcal{O}_X$-module.
+For $P \in \mathbf{Q}[t]$ the algebraic space
+$$
+Q = \Quotfunctor^P_{\mathcal{F}/X/S}
+$$
+is a projective scheme over $S$.
+
+Let $\mathcal{G}$ be the universal quotient on $X_Q$, and write
+$p : X_Q \to Q$. If $Q$ is nonempty, then for all sufficiently large
+$m$ the module
+$$
+\mathcal{E}_m = p_*(\mathcal{G} \otimes \mathcal{L}^{\otimes m})
+$$
+is finite locally free of rank $P(m)$ and its formation commutes with
+arbitrary base change. Zariski locally on $S$, a quotient of a finite
+free module onto $\mathcal{E}_m$ defines a closed immersion of $Q$ into
+the corresponding Grassmannian. In particular,
+$\det(\mathcal{E}_m)$ is very ample on $Q/S$.
+\end{proposition}
+
+\begin{proof}
+The morphism $Q \to S$ is proper by
+Lemma \ref{lemma-quot-proper-over-base}. Since $S$ is Noetherian, it has
+a finite affine open covering $S = \bigcup U_i$. After refining this
+covering, Morphisms, Lemma
+\ref{morphisms-lemma-very-ample-finite-type-over-affine} and properness
+give closed immersions
+$$
+\iota_i : X_{U_i} \longrightarrow \mathbf{P}^{n_i}_{U_i}
+$$
+such that $\mathcal{L}|_{X_{U_i}} = \iota_i^*\mathcal{O}(1)$. After
+choosing $a_i \geq 0$ sufficiently large, there is a surjection
+$$
+\mathcal{O}_{\mathbf{P}^{n_i}_{U_i}}^{\oplus r_i}
+\longrightarrow (\iota_i)_*(\mathcal{F}|_{X_{U_i}})(a_i).
+$$
+Here we use Properties, Proposition
+\ref{properties-proposition-characterize-ample}.
+
+Put $P_i(t) = P(t + a_i)$. Lemmas
+\ref{lemma-quot-tensor-invertible}, \ref{lemma-quot-closed}, and
+\ref{lemma-quot-quotient} identify $Q_{U_i}$ with a closed subspace of
+$$
+\Quotfunctor^{P_i}_{
+\mathcal{O}^{\oplus r_i}_{\mathbf{P}^{n_i}_{U_i}}/
+\mathbf{P}^{n_i}_{U_i}/U_i}.
+$$
+The latter is the base change to $U_i$ of the projective scheme over
+$\mathbf{Z}$ constructed in Lemma \ref{lemma-quot-Pn-projective}.
+Consequently $Q_{U_i}$ is a projective scheme over $U_i$. Since being a
+scheme is local on the base, $Q$ is a scheme.
+
+If $Q$ is empty, this also proves that it is projective and there is
+nothing further to show. Assume $Q$ is nonempty.
+
+The final part of Lemma \ref{lemma-quot-Pn-projective}, restricted to
+the displayed closed subspace, shows that for all sufficiently large
+$d$ the module
+$$
+p_*\mathcal{G}(a_i + d)
+$$
+is finite locally free of rank $P(a_i + d)$, commutes with arbitrary
+base change, and is the universal quotient defining a closed immersion
+into a Grassmannian. As the covering is finite, one integer works for
+all $i$ after writing $m = a_i + d$. These local modules are the
+restrictions of $\mathcal{E}_m$, so they glue and prove the assertions
+about $\mathcal{E}_m$ and base change.
+
+By Constructions, Lemma
+\ref{constructions-lemma-grassmannian-pluecker}, the restriction of
+$\det(\mathcal{E}_m)$ to every $Q_{U_i}$ is very ample. Morphisms,
+Lemma \ref{morphisms-lemma-relatively-very-ample} shows that
+$\det(\mathcal{E}_m)$ is very ample on $Q/S$. It is therefore ample by
+Morphisms, Lemma \ref{morphisms-lemma-ample-very-ample}. Thus $Q \to S$
+is quasi-projective as well as proper, and hence projective by
+Morphisms, Lemma
+\ref{morphisms-lemma-projective-is-quasi-projective-proper}.
+\end{proof}
+
+\begin{lemma}
+\label{corollary-quot-projective-components}
+\begin{reference}
+\cite[Expos\'e 221, Theorem 3.1, pp. 259--260]{FGA}.
+\end{reference}
+Under the hypotheses of Proposition
+\ref{proposition-quot-projective-over-base}, there is a decomposition
+$$
+\Quotfunctor_{\mathcal{F}/X/S} =
+\coprod_{P \in \mathbf{Q}[t]}
+\Quotfunctor^P_{\mathcal{F}/X/S}
+$$
+as a disjoint union of projective $S$-schemes. In particular, the Quot
+space is a scheme locally of finite type over $S$.
+\end{lemma}
+
+\begin{proof}
+The Hilbert polynomial of a flat family is locally constant on the
+base. Thus the open and closed subspaces of
+Remark \ref{remark-quot-numerical} give the displayed disjoint union.
+Each term is projective by Proposition
+\ref{proposition-quot-projective-over-base}.
 \end{proof}
 
 \begin{proposition}
