@@ -703,6 +703,10 @@ The affine global-section assertion is proved in
 Its extension to every closed classical subvariety is
 \cite[Chapter II, \S 3, no. 44, Proposition 7, Corollary 3,
 p. 237]{FAC}.
+The exactness and object-detection assertions for the classical
+associated-sheaf functor are
+\cite[Chapter II, \S 4, no. 48, Propositions 1 and 2,
+pp. 240--241]{FAC}.
 \end{reference}
 \begin{history}
 In the irreducible classical case, the no. 43 proof identifies the
@@ -715,7 +719,11 @@ order is $\Gamma(V, \mathcal{O}_V)=\bigcap_x\mathcal{O}_{x,V}$ first and
 $A=\bigcap_x\mathcal{O}_{x,V}$ second. The lemma below proves the result
 directly for every ring and every associated module. The no. 44 corollary
 recovers the source's reducible closed-subvariety case by exactness of global
-sections on affine space.
+sections on affine space. In no. 48 the source identifies each classical
+closed-point stalk with a localization of the coordinate ring, proves
+exactness stalkwise, and detects a module from those stalks using maximal
+ideals. The statement below includes every prime stalk and, more directly,
+recovers the module as the global sections of its associated sheaf.
 \end{history}
 Let $R$ be a ring. Let $M$ be an $R$-module. Let $\widetilde M$
 be the sheaf of $\mathcal{O}_{\Spec(R)}$-modules
@@ -990,6 +998,18 @@ above.
 
 \begin{lemma}
 \label{lemma-category-affine-schemes}
+\begin{reference}
+\cite[Chapter II, \S 4, no. 48, coordinate-ring discussion,
+p. 240]{FAC}
+\end{reference}
+\begin{history}
+The cited discussion identifies a classical affine variety over the fixed
+algebraically closed field with the character space of its reduced finitely
+generated coordinate algebra. Thus it sees the classical closed points and
+their Zariski topology. The equivalence below uses the full prime spectrum,
+retains nilpotents, imposes no finite-type hypothesis, and records the
+contravariance on morphisms.
+\end{history}
 The category of affine schemes is equivalent to the opposite of the
 category of rings. The equivalence is given by the functor that associates
 to an affine scheme the global sections of its structure sheaf.

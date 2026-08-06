@@ -2,17 +2,17 @@
 
 - Frozen surface: 661 source targets through printed page 278.
 - Stage: sequential source review and statement-level Stacks integration.
-- Completed checkpoint: Chapter II, Section 3, no. 47, printed pages 199--240.
-- Reviewed decisions: 200 (54 equivalent, 85 stronger, 29 extensions,
+- Completed checkpoint: Chapter II, Section 4, no. 48, printed pages 199--241.
+- Reviewed decisions: 207 (54 equivalent, 91 stronger, 30 extensions,
   18 new-statement decisions, 13 historical references, 1 outside scope).
-- Current Stacks references added: 119 across `topology.tex`, `sheaves.tex`,
+- Current Stacks references added: 125 across `topology.tex`, `sheaves.tex`,
   `modules.tex`, `homology.tex`, `coherent.tex`, `cohomology.tex`,
   `divisors.tex`, `constructions.tex`, `schemes.tex`, `morphisms.tex`,
   `derham.tex`, `algebra.tex`, `properties.tex`, and `varieties.tex`.
 - New Stacks theorem/lemma statements: 13, plus the paracompactness and
   locally-constant-sheaf definitions;
   each new theorem/lemma has a complete proof and no assigned tag.
-- Source/proof issues or convention boundaries: 156 found by direct authority-page and TeX inspection, all resolved and
+- Source/proof issues or convention boundaries: 169 found by direct authority-page and TeX inspection, all resolved and
   retained in `issues.csv`.
 - Existing Stacks defects corrected: 5, comprising the refinement-homotopy
   sign, repeated coefficient sheaves, wrong boundary domain, wrong boundary
@@ -25,7 +25,7 @@
   completed; every
   affected statement page passed direct 1100 dpi visual inspection. See
   `qa.json`.
-- Historical notes added: 31, preserving the source's operator calculus,
+- Historical notes added: 34, preserving the source's operator calculus,
   image-complex construction, two-covering double complex, and unproved
   cofinal-vanishing question, together with the classical closed-point to
   reduced-scheme bridge, the classical-map to scheme-morphism bridge, and the
@@ -51,6 +51,9 @@
   affine sheaf-cohomology vanishing, and kernel-only global-section lifting,
   while no. 47 records the affine-intersection comparison and the historical
   image-complex route to the long exact sequence without claiming false modern
-  theorem matches.
-- Next unit: `fac:II:3:no:48` (the sheaf associated to a module).
+  theorem matches, and no. 48 now records the character-space versus prime-
+  spectrum boundary, the sheafification of the tensor construction, the
+  fraction proof of localization exactness, and the essential Noetherian
+  hypothesis behind coherence of a finite module's associated sheaf.
+- Next unit: `fac:II:4:no:49` (the module associated to an algebraic sheaf).
 - No statement is mapped by lexical similarity alone.
