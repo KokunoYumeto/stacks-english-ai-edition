@@ -853,6 +853,9 @@ each of his point, in other words $\mathcal{C}$ is open and (2) is proven.
 
 \begin{definition}
 \label{definition-irreducible-components}
+\begin{reference}
+\cite[Chapter II, \S 1, no. 30, p. 223]{FAC}
+\end{reference}
 Let $X$ be a topological space.
 \begin{enumerate}
 \item We say $X$ is {\it irreducible}, if $X$ is not empty, and whenever
@@ -861,6 +864,48 @@ $X = Z_1 \cup Z_2$ with $Z_i$ closed, we have $X = Z_1$ or $X = Z_2$.
 if $Z$ is a maximal irreducible subset of $X$.
 \end{enumerate}
 \end{definition}
+
+\begin{lemma}
+\label{lemma-irreducible-open-cover}
+\begin{reference}
+\cite[Chapter II, \S 1, no. 30, Proposition 3,
+pp. 223--224]{FAC}
+\end{reference}
+Let $X$ be a topological space.
+\begin{enumerate}
+\item The space $X$ is irreducible if and only if $X$ is nonempty and
+any two nonempty open subsets of $X$ have nonempty intersection.
+\item Every nonempty open subset of an irreducible space is irreducible
+and dense.
+\item Suppose that
+$$
+X = U_1 \cup \ldots \cup U_n, \qquad n \geq 1,
+$$
+where the $U_i$ are nonempty open subsets. Then $X$ is irreducible if
+and only if every $U_i$ is irreducible and
+$U_i \cap U_j \not = \emptyset$ for all $i, j$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+The first assertion follows by taking complements. If $X$ is irreducible
+and $U \subset X$ is nonempty open, then any two nonempty open subsets of
+$U$ are nonempty open subsets of $X$, hence meet. Thus $U$ is irreducible
+by (1). Moreover, $U$ meets every nonempty open subset of $X$, so it is
+dense. This proves (2).
+
+If $X$ is irreducible, then (2) shows that every $U_i$ is irreducible,
+and (1) shows that the $U_i$ pairwise intersect. Conversely, assume these
+conditions. Let $V, W \subset X$ be nonempty open subsets. Choose $i, j$
+such that $V \cap U_i$ and $W \cap U_j$ are nonempty. Since
+$U_i \cap U_j$ is nonempty, irreducibility of $U_i$ shows that
+$$
+V \cap U_i \cap U_j \not = \emptyset.
+$$
+This is a nonempty open subset of $U_j$, and hence its intersection with
+$W \cap U_j$ is nonempty by irreducibility of $U_j$. Thus
+$V \cap W \not = \emptyset$, and $X$ is irreducible by (1).
+\end{proof}
 
 \noindent
 An irreducible space is obviously connected.
@@ -923,6 +968,9 @@ as a singleton space is irreducible.
 
 \begin{lemma}
 \label{lemma-pick-irreducible-components}
+\begin{reference}
+\cite[Chapter II, \S 1, no. 30, Proposition 2, p. 223]{FAC}
+\end{reference}
 Let $X$ be a topological space and suppose $X = \bigcup_{i = 1, \ldots, n} X_i$
 where each $X_i$ is an irreducible closed subset of $X$ and no $X_i$
 is contained in the union of the other members.  Then each $X_i$ is an
@@ -1242,6 +1290,9 @@ Details omitted.
 
 \begin{definition}
 \label{definition-noetherian}
+\begin{reference}
+\cite[Chapter II, \S 1, no. 30, p. 223]{FAC}
+\end{reference}
 A topological space is called {\it Noetherian}
 if the descending chain condition holds for
 closed subsets of $X$. A topological space is called
@@ -1251,6 +1302,10 @@ which is Noetherian.
 
 \begin{lemma}
 \label{lemma-Noetherian}
+\begin{reference}
+\cite[Chapter II, \S 1, no. 30, Propositions 1(b) and 2,
+p. 223]{FAC}
+\end{reference}
 Let $X$ be a Noetherian topological space.
 \begin{enumerate}
 \item Any subset of $X$ with the induced topology is Noetherian.
@@ -1326,6 +1381,9 @@ which is Noetherian by part (1).
 
 \begin{lemma}
 \label{lemma-finite-union-Noetherian}
+\begin{reference}
+\cite[Chapter II, \S 1, no. 30, Proposition 1(c), p. 223]{FAC}
+\end{reference}
 Let $X$ be a topological space.
 Let $X_i \subset X$, $i = 1, \ldots, n$ be a finite collection of subsets.
 If each $X_i$ is Noetherian (with the induced topology), then
@@ -1930,6 +1988,9 @@ The lemma follows.
 
 \begin{lemma}
 \label{lemma-Noetherian-quasi-compact}
+\begin{reference}
+\cite[Chapter II, \S 1, no. 30, Proposition 1(a), p. 223]{FAC}
+\end{reference}
 Let $X$ be a Noetherian topological space.
 \begin{enumerate}
 \item The space $X$ is quasi-compact.
