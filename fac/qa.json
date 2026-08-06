@@ -3,17 +3,17 @@
   "date": "2026-08-06",
   "scope": {
     "start": "fac:I:1:no:1",
-    "end": "fac:I:1:no:10:prop:8",
-    "printed_pages": "199-206",
-    "units_decided": 20,
-    "stacks_references_added": 8
+    "end": "fac:I:1:no:11",
+    "printed_pages": "199-207",
+    "units_decided": 21,
+    "stacks_references_added": 10
   },
   "authority": {
     "bytes": 6305726,
     "sha256": "B8C6508249308F5D8BC886B9E6360F1EC4FDC8F0F18EFAA03EE0E36B591551CA",
     "render_dpi": 1100,
-    "physical_pages_inspected": [4, 5, 6, 7, 8, 9, 10, 11],
-    "printed_pages_inspected": [199, 200, 201, 202, 203, 204, 205, 206]
+    "physical_pages_inspected": [4, 5, 6, 7, 8, 9, 10, 11, 12],
+    "printed_pages_inspected": [199, 200, 201, 202, 203, 204, 205, 206, 207]
   },
   "builds": [
     {
@@ -28,8 +28,8 @@
       "master": "modules.tex",
       "pdf": "modules.pdf",
       "bytes": 721993,
-      "sha256": "B1E018885FD9329A52FF9320EFD2C730757A6864FE7AF04F482A490DA8DE9F8F",
-      "affected_pdf_pages_inspected": [3, 22],
+      "sha256": "0F0BC667E0048B56F28C27E2E4BB07B84EFD0D364D968C24C4C618BE9C8F36BF",
+      "affected_pdf_pages_inspected": [3, 22, 31, 32],
       "affected_page_result": "PASS"
     }
   ],
@@ -47,7 +47,7 @@
     "fac_citations_resolved": true,
     "undefined_reference_at_edited_lines": 0,
     "overfull_box_at_edited_lines": 0,
-    "note": "The isolated build retains unrelated missing chapter-aux warnings in end matter and unrelated pre-existing cross-chapter warnings."
+    "note": "The isolated build retains unrelated missing chapter-aux warnings in end matter, unrelated pre-existing cross-chapter warnings, and pre-existing overfull diagnostics on module pages 31--32; the FAC reference additions introduce none."
   },
   "validators": {
     "intake": "PASS",
