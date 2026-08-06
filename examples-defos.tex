@@ -1845,6 +1845,337 @@ and is quasi-inverse to the given one.
 
 
 
+\section{Finite locally free coverings}
+\label{section-finite-locally-free-coverings}
+
+\noindent
+We formulate the extension problem for coverings in terms of an adic system.
+The flatness over the coefficient ring in the following situation is
+essential; see Remark \ref{remark-formal-coverings-missing-flatness}. The
+use of the reduced coefficient algebra in the marking is essential as well;
+see Remark \ref{remark-formal-coverings-reduced-marking}.
+
+\begin{situation}
+\label{situation-formal-coverings}
+Let $(\Lambda, \mathfrak m, k)$ be a complete Noetherian local ring and put
+$\Lambda_n = \Lambda/\mathfrak m^{n + 1}$. Suppose given
+\begin{enumerate}
+\item Noetherian schemes $X_n$ flat over $\Lambda_n$ and cartesian
+identifications
+$$
+X_{n + 1} \times_{\Spec(\Lambda_{n + 1})} \Spec(\Lambda_n) = X_n,
+$$
+\item compatible retrocompact opens $U_n \subset X_n$ such that, after every
+base change by a finite $\Lambda_n$-algebra, the resulting open is scheme
+theoretically dense, and
+\item a finite locally free morphism $p_0 : Z_0 \to X_0$ whose restriction
+over $U_0$ is finite \'etale.
+\end{enumerate}
+For $A \in \mathcal{A}_\Lambda$, choose $n$ such that
+$\mathfrak m^{n + 1}A = 0$ and set
+$$
+X_A = X_n \times_{\Spec(\Lambda_n)} \Spec(A),
+\qquad
+U_A = U_n \times_{X_n} X_A.
+$$
+These schemes are independent of $n$ up to canonical isomorphism. Write
+$A_{\mathrm{red}} = A/\sqrt{(0)}$. The map $\Lambda \to A_{\mathrm{red}}$
+factors through $k$. Let $F(A)$ be the set of isomorphism classes of finite
+locally free morphisms
+$p_A : Z_A \to X_A$ endowed with an isomorphism
+$$
+Z_A \times_{\Spec(A)} \Spec(A_{\mathrm{red}})
+\longrightarrow
+Z_0 \times_{\Spec(k)} \Spec(A_{\mathrm{red}})
+$$
+over $X_0 \times_{\Spec(k)} \Spec(A_{\mathrm{red}})$.
+The isomorphisms used in defining $F(A)$ are required to respect this marking.
+\end{situation}
+
+\begin{lemma}
+\label{lemma-formal-coverings-rigidity}
+\begin{reference}
+\cite[Expos\'e 195, C, Section 5, p. 387]{FGA}.
+\end{reference}
+In Situation \ref{situation-formal-coverings}, let $A$ be an object of
+$\mathcal{A}_\Lambda$ and let $Z_A$ and $Z'_A$ be two marked coverings. The
+restriction map
+$$
+\Mor_{X_A}(Z_A, Z'_A)
+\longrightarrow
+\Mor_{X_{A_{\mathrm{red}}}}
+(Z_A|_{X_{A_{\mathrm{red}}}}, Z'_A|_{X_{A_{\mathrm{red}}}})
+$$
+is injective. In particular, a marked covering has no nontrivial
+automorphism inducing the identity on its reduction.
+\end{lemma}
+
+\begin{proof}
+The nilradical of $A$ is nilpotent. Over $U_A$, the morphism
+$Z'_A \to X_A$ is finite locally free and its reduction is finite \'etale.
+It is unramified by More on Morphisms, Lemma
+\ref{more-morphisms-lemma-properties-that-extend-over-thickenings}; since it
+is already flat and of finite presentation, it is \'etale. In particular, it
+is formally unramified. Thus two morphisms as in the statement which agree on
+the reduction agree after restriction to $U_A$.
+
+We finish on an affine open $V \subset X_A$. Write the restrictions of the
+two coverings as $\Spec(C)$ and $\Spec(D)$. The two morphisms correspond to
+two homomorphisms $D \to C$. Their difference vanishes after restriction to
+$U_A \cap V$. The module $C$ is finite locally free over
+$\mathcal{O}_{X_A}(V)$. Since $U_A \cap V$ is scheme theoretically dense,
+Morphisms, Lemma
+\ref{morphisms-lemma-characterize-scheme-theoretically-dense} shows that a
+section of a finite locally free module which vanishes there is zero. Hence
+the two algebra homomorphisms, and therefore the two morphisms, are equal.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-formal-coverings-local-completion}
+\begin{reference}
+\cite[Expos\'e 195, C, Section 5, p. 388, and the 1962 erratum,
+p. 301]{FGA}.
+\end{reference}
+Fix $A$ in Situation \ref{situation-formal-coverings}. On open subsets
+$V \subset X_A$, isomorphism classes of marked finite locally free coverings
+form a Zariski sheaf $G_A$. For $x \in X_A$, finite presentation identifies
+its stalk with the corresponding class set over $\Spec(\mathcal{O}_{X_A,x})$,
+and completion induces an injection
+$$
+(G_A)_x
+= G_A(\Spec(\mathcal{O}_{X_A,x}))
+\longrightarrow
+G_A(\Spec(\widehat{\mathcal{O}}_{X_A,x})).
+$$
+\end{lemma}
+
+\begin{proof}
+Finite locally free algebras, their markings, and their isomorphisms glue in
+the Zariski topology. Lemma \ref{lemma-formal-coverings-rigidity} makes every
+isomorphism compatible with a marking unique. Hence local isomorphism classes
+glue, not merely the underlying groupoid, and $G_A$ is a sheaf. The usual
+finite-presentation limit argument spreads a covering and its marking from a
+local ring to a neighbourhood, giving the assertion about the stalk.
+
+Put $R = \mathcal{O}_{X_A,x}$. The map $R \to \widehat R$ is faithfully flat
+by Algebra, Lemma \ref{algebra-lemma-completion-faithfully-flat}. The pullback
+of $U_A$ remains scheme theoretically dense by Morphisms, Lemma
+\ref{morphisms-lemma-flat-morphism-scheme-theoretically-dense-open}. Suppose
+two classes over $R$ become isomorphic over $\widehat R$. By Lemma
+\ref{lemma-formal-coverings-rigidity}, this isomorphism is unique. Its two
+pullbacks to $\widehat R \otimes_R \widehat R$ are consequently equal, so it
+is an fpqc descent datum. Descent of morphisms gives a unique isomorphism over
+$R$, proving injectivity. This is the inclusion in the corrected formula; it
+is not an equality in general.
+\end{proof}
+
+
+
+
+\begin{lemma}
+\label{lemma-formal-coverings-limit-algebraize}
+\begin{reference}
+\cite[Expos\'e 195, C, Section 5, p. 388]{FGA}.
+\end{reference}
+Let $(Z_n \to X_n)$ be a compatible system of marked finite locally free
+coverings in Situation \ref{situation-formal-coverings}.
+\begin{enumerate}
+\item The isomorphism class of the system is the same datum as a compatible
+element of $\lim_n G_{\Lambda_n}(X_n)$.
+\item Suppose there is a proper scheme $X$ over $\Lambda$ with
+$X_n = X \times_\Lambda \Lambda_n$. Then the system algebraizes uniquely to
+a finite locally free covering $Z \to X$ with the prescribed reductions.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+For (1), an equality between the restriction of the class at level $n + 1$
+and the class at level $n$ supplies an isomorphism. It is unique by Lemma
+\ref{lemma-formal-coverings-rigidity}; hence these isomorphisms automatically
+satisfy every compatibility condition and define a unique adic system.
+
+For (2), Cohomology of Schemes, Lemma
+\ref{coherent-lemma-algebraize-formal-scheme-finite-over-proper} algebraizes
+the compatible finite morphisms and their algebra structures. Let
+$\mathcal{B}$ be the resulting coherent $\mathcal{O}_X$-algebra. At a point
+$x \in X$, every quotient of $\mathcal{B}_x$ by a power of
+$\mathfrak m\mathcal{O}_{X,x}$ is finite locally free over the corresponding
+quotient of $\mathcal{O}_{X,x}$. Algebra, Lemma
+\ref{algebra-lemma-flat-module-powers} therefore shows that
+$\mathcal{B}_x$ is flat over $\mathcal{O}_{X,x}$. It is finite, and hence
+finite free over the local ring $\mathcal{O}_{X,x}$. Thus $Z \to X$ is finite
+locally free. Full faithfulness in Grothendieck existence, or Cohomology of
+Schemes, Lemma \ref{coherent-lemma-algebraize-morphism}, gives uniqueness and
+algebraizes the marking.
+\end{proof}
+
+\begin{proposition}
+\label{proposition-formal-coverings-prorepresentable}
+\begin{reference}
+\cite[Expos\'e 195, C, Proposition 5.1, pp. 388--389]{FGA}.
+\end{reference}
+In Situation \ref{situation-formal-coverings}, the functor
+$$
+F : \mathcal{A}_\Lambda \longrightarrow \textit{Sets}
+$$
+is strictly prorepresentable.
+\end{proposition}
+
+\begin{proof}
+The functor commutes with finite products. We verify the two local Cech tests
+of Formal Deformation Theory, Theorem
+\ref{formal-defos-theorem-grothendieck-levelt-prorepresentability}.
+
+Let $A \to B$ be a map in $\mathcal{A}_\Lambda$ with $A$ local. If $B$ is a
+nonzero finite free $A$-module, then $A \to B$ is faithfully flat. Finite
+locally free algebras satisfy fpqc descent. If a class over $B$ has equal
+pullbacks to $B \otimes_A B$, the required isomorphism between those pullbacks
+is unique by Lemma \ref{lemma-formal-coverings-rigidity}; hence it
+automatically satisfies the cocycle condition and the covering descends. Put
+$K=A_{\mathrm{red}}$. Faithful flatness shows that
+$K \to B_{\mathrm{red}}$ is injective. It is a finite map from a field to a
+nonzero reduced Artinian ring, and hence is faithfully flat. The marking and
+its compatibility descend along this map. This proves the first equalizer
+test.
+
+Suppose instead that $A \to B$ is injective and $B/A$ has length $1$.
+Formal Deformation Theory, Lemma
+\ref{formal-defos-lemma-length-one-cech-equalizer} gives the ring equalizer
+and its proof gives $\mathfrak nB = \mathfrak n$, where $\mathfrak n$ is the
+maximal ideal of $A$. Consider a class over $B$ whose two pullbacks are equal.
+As above, rigidity turns the unique isomorphism into a descent datum.
+
+We descend it on an affine $V = \Spec(R) \subset X_A$. The ring $R$ is flat
+over $A$ by the flatness assumption in Situation
+\ref{situation-formal-coverings}. Let $C$ be the finite locally free algebra
+of the covering on $V_B$. It is flat as a $B$-module. Descent, Lemma
+\ref{descent-lemma-artinian-small-effective-descent-flat-modules} produces an
+$A$-flat module $M$ with $M \otimes_A B \cong C$. Full faithfulness for flat
+modules first descends the $R$-action. Put $K=A/\mathfrak n$ and
+$\overline B=B_{\mathrm{red}}$. The injection $A \to B$ induces an
+injection $K \to \overline B$: an element of $A$ whose image in $B$ is
+nilpotent was already nilpotent. Thus $K \to \overline B$ is faithfully
+flat. We have
+$$
+(M/\mathfrak nM) \otimes_K \overline B
+= C \otimes_B \overline B.
+$$
+The module on the right is finite locally free over
+$(R/\mathfrak nR) \otimes_K \overline B$. Hence
+$M/\mathfrak nM$ is finite locally free over $R/\mathfrak nR$ by fpqc
+descent. Since $\mathfrak n$ is nilpotent, Algebra, Lemma
+\ref{algebra-lemma-criterion-flatness-fibre-nilpotent} shows that $M$ is flat
+over $R$. Lifting finitely many generators modulo $\mathfrak n$ shows that
+$M$ is finite over $R$, and hence it is finite locally free.
+
+Now $R$, $M$, and $M \otimes_R M$ are flat over $A$. Full faithfulness in the
+same descent lemma descends the unit and multiplication of $C$. The algebra
+identities hold because they hold after base change to $B$. The descended
+algebras agree on affine overlaps by uniqueness and therefore glue. The
+given marking over $\overline B$ is compatible with this descent datum. It
+descends along the faithfully flat map $K \to \overline B$ to the required
+marking over $K$. We have proved the second equalizer test, and the
+Grothendieck--Levelt criterion proves the proposition.
+\end{proof}
+
+\begin{remark}
+\label{remark-formal-coverings-trivial-etale}
+If $U_0 = X_0$, then every covering in the situation is finite \'etale.
+Invariance of finite \'etale coverings under nilpotent thickenings (Fundamental
+Groups, Lemma \ref{pione-lemma-thickening}) makes $F$ the one-point functor,
+represented by $\Lambda$. In the ramified case the strict prorepresenting
+topological algebra need not be Noetherian.
+\end{remark}
+
+\begin{remark}
+\label{remark-formal-coverings-reduced-marking}
+The reduced-fibre marking in Situation
+\ref{situation-formal-coverings} is necessary when
+$\mathcal{A}_\Lambda$ contains all finite-length $\Lambda$-algebras. A
+marking only over $A/\mathfrak mA$, as in the literal formulation in
+Expos\'e 195, is not stable enough for the length-one equalizer test.
+
+For an example, let $k$ have characteristic different from $2$ and set
+$$
+\Lambda=k[\epsilon]/(\epsilon^2),
+\qquad
+A=k[\epsilon,a]/(\epsilon^2,a^2,\epsilon a),
+\qquad
+B=k[\epsilon,b]/(\epsilon^2,b^2).
+$$
+Make $A$ a subalgebra of $B$ by $a=\epsilon b$. Then $B/A$ has length $1$
+over the local ring $A$. Moreover,
+$$
+\mathfrak mA=(\epsilon)
+\quad\text{whereas}\quad
+\mathfrak mB=(\epsilon,\epsilon b)=(\epsilon,a).
+$$
+Take $X=\Spec(\Lambda[z])$, $U=D(z)$, and the fixed covering
+$Z_0=\Spec(k[z,s]/(s^2-z))$. The finite locally free covering over $X_A$
+defined by
+$$
+s^2=z+a
+$$
+is finite \'etale over $U_A$. After base change to $B$ it has the required
+$B/\mathfrak mB$-marking and its two pullbacks to $B\otimes_A B$ agree. It
+cannot descend as an $A/\mathfrak mA$-marked covering: its reduction there
+has discriminant ideal $(4(z+a))$, whereas the fixed covering has
+discriminant ideal $(4z)$. These ideals are distinct in
+$k[a,z]/(a^2)$. Flat-module descent and rigidity show that no different
+covering over $A$ can provide the missing preimage. Thus the literal functor
+fails the Cech equalizer property even though $X$ is flat over $\Lambda$.
+
+Marking over $A_{\mathrm{red}}$ repairs this defect. For a local $A$ this is
+its residue field, and for every injective test map $A \to B$ the induced map
+$A_{\mathrm{red}} \to B_{\mathrm{red}}$ is faithfully flat. Notice that for
+$A=\Lambda_n$ the reduced fibre is still $X_0$, so the adic system and its
+algebraization retain the prescribed covering $Z_0$.
+\end{remark}
+
+\begin{remark}
+\label{remark-formal-coverings-missing-flatness}
+The statement of Expos\'e 195, Proposition 5.1 does not explicitly assume
+flatness of the formal scheme over $\Lambda$. Its 1962 erratum strengthens the
+nonzerodivisor condition defining $U$ and replaces an incorrect equality with
+the completion inclusion of Lemma
+\ref{lemma-formal-coverings-local-completion}, but it does not add flatness.
+Without flatness the prorepresentability assertion is false.
+
+Indeed, let $k$ have characteristic different from $2$, put
+$$
+B = k[t]/(t^4),
+\qquad
+\Lambda = k \oplus kt^2 \oplus kt^3 \subset B,
+$$
+and write $x=t^2$, $y=t^3$. Thus
+$\Lambda \cong k[x,y]/(x,y)^2$, and $B/\Lambda$ has length $1$ as a
+$\Lambda$-module. Set
+$$
+R = (\Lambda/(x))[z] = k[y,z]/(y^2),
+\qquad X = \Spec(R),
+\qquad U = D(z).
+$$
+The element $z$ is a nonzerodivisor both on $X$ and on its closed fibre. The
+two rank-two coverings
+$$
+\Spec(R[s]/(s^2-z)) \longrightarrow X,
+\qquad
+\Spec(R[s]/(s^2-z-y)) \longrightarrow X
+$$
+have the same marked closed fibre and are finite \'etale over $U$. They are not
+isomorphic: their discriminant ideals are $(4z)$ and $(4(z+y))$, which are
+distinct because $y$ is nonzero modulo $(z)$. After base change along the
+injective length-one map $\Lambda \to B$, they become identical, since
+$(x)B=(t^2,t^3)$ kills $y$. Thus the map on covering classes is not injective.
+Every strictly prorepresentable functor sends an injective map of coefficient
+algebras to an injective map of sets, which gives the contradiction. The
+flatness hypothesis in Situation \ref{situation-formal-coverings} prevents
+exactly this failure of base change.
+\end{remark}
+
+
+
+
 \section{Morphisms of Schemes}
 \label{section-schemes-morphisms}
 

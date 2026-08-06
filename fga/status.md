@@ -772,3 +772,41 @@ that the apparent page-18 running-header clipping was only a large-raster
 viewer artifact.  Both semantic validators report no errors: 21,540 labels
 and 356 append-only decisions.  The next cursor is the formal-covering setup
 in this same compound unit, followed by Expose 195, Proposition C.5.1.
+The forty-fourth source patch integrates the formal-covering setup and the
+valid corrected form of Expose 195, Proposition C.5.1.  It constructs the
+Zariski sheaf of rigid marked finite locally free coverings, proves the
+erratum-corrected injection from a local class set into its completion,
+identifies compatible infinitesimal systems, and algebraizes them uniquely
+over a proper scheme.  The prorepresentability proof applies the corrected
+Grothendieck--Levelt criterion: finite-free extensions use fpqc descent, while
+minimal injective extensions use effective descent of flat modules followed
+by descent of the algebra structure and the reduced-fibre marking.
+
+Two independent defects in the printed proposition are now fail-closed
+rather than silently inherited.  First, the literal marking over
+$A/\mathfrak mA$ is not cartesian enough on the category of all finite-length
+coefficient algebras.  The explicit length-one inclusion
+$A\subset B$ with $a=\epsilon b$ makes a flat-family quadratic covering
+correctly marked over $B$ although its discriminant prevents the required
+marking over $A$; the integrated functor therefore uses the functorial
+reduced fibre, which agrees with $X_0$ on every $\Lambda_n$.  Second, the
+source omits coefficient-flatness, and the two quadratic coverings over
+$k[y,z]/(y^2)$ with discriminants $(4z)$ and $(4(z+y))$ become identical
+after an injective length-one base extension.  This disproves the
+unconditional assertion, and the linked 1962 erratum does not repair either
+gap.  Issues I000009 and I000010 retain both counterexamples; decision
+D000358 supersedes D000166, while D000357 records the completed setup and
+leaves only the subsequent one-dimensional local-product and smoothness
+claims open.
+
+Both semantic validators pass with no errors at 21,549 labels, 358
+append-only decisions, 1,253 source units, 1,612 term links, and 10 recorded
+source issues.  Sequential draft builds of only the eight exact dependency
+chapters followed by two final TeX passes produce a 42-page Deformation
+Problems chapter of 712,186 bytes with SHA-256
+720BE41CE339819C59FC216FACF2E2725B3A18429A753ADFA935948E29CF2ADC.
+The added block has no undefined reference or overfull box; extracted pages
+19--23 contain no placeholder, and all five pages and both joins pass
+1,200-dpi rendered inspection.  The next cursor is the claimed product of
+arbitrary completed-local extension classes in dimension one and the claimed
+smoothness when the closed fibre is normal.
