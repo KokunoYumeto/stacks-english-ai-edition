@@ -6,6 +6,11 @@ Source IDs use `ega.<volume>.<source-number>[.<subitem>]`. They identify the
 mathematical source unit, not a mutable line or PDF coordinate. Page, TeX,
 hash, and language locators attach as versioned evidence.
 
+The `volume` field is the logical EGA volume determined from the stable label
+or source-file role. `printed_page` is an independent witness locator and may
+name another volume when a later erratum supplies text for an earlier volume.
+It must never reclassify the semantic unit.
+
 Topic IDs use `ega-topic-<slug>`. Local Stacks labels may be recorded as
 evidence, but this branch never writes or claims an official Stacks tag.
 
@@ -36,6 +41,13 @@ or an exact published authority can support a canonical source claim.
 - `upstream_accepted`: upstream merged or explicitly accepted the material.
 
 Build success never promotes mathematical review state by itself.
+
+`tmap.csv` records bounded reviewed correspondences. Its granularity and
+coverage columns are part of the claim: a `source_subsection_to_stacks_section`
+row with `topical_overlap_only` establishes only a topic-level bridge. It does
+not establish theorem equivalence or complete coverage of the source
+subsection. Existing official tags in that table are read back from the fixed
+upstream `tags/tags`; the scaffold assigns no tags.
 
 ## Feedback integration
 

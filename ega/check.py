@@ -54,6 +54,7 @@ if (ROOT / "units.csv").exists() and (ROOT / "files.csv").exists():
     unit_rows = rows("units.csv")
     unit_ids = {row["unit_id"] for row in unit_rows}
     file_ids = {row["relative_path"] for row in rows("files.csv")}
+    logical_volumes = {"0", "I", "II", "III", "IV"}
     for row in unit_rows:
         if row["parent_id"] and row["parent_id"] not in unit_ids:
             ERRORS.append(f"missing parent {row['parent_id']} for {row['unit_id']}")
@@ -63,6 +64,9 @@ if (ROOT / "units.csv").exists() and (ROOT / "files.csv").exists():
             ERRORS.append(f"unexpected authority promotion for {row['unit_id']}")
         if row["review_state"] != "unreviewed":
             ERRORS.append(f"unexpected review promotion for {row['unit_id']}")
+        if row["kind"] != "corpus" and row["volume"] not in logical_volumes:
+            ERRORS.append(
+                f"invalid logical volume {row['volume']!r} for {row['unit_id']}")
 
 intake_path = ROOT / "intake.json"
 if intake_path.exists():
@@ -112,6 +116,84 @@ if cand_path.exists():
             ERRORS.append(f"candidate has unknown topic {row['topic_id']}")
         if row["status"] != "lexical_candidate_only":
             ERRORS.append(f"candidate promoted without review {key}")
+
+tmap_path = ROOT / "tmap.csv"
+existing_tags_referenced = set()
+if tmap_path.exists():
+    reviewed = rows("tmap.csv")
+    counts["tmap.csv"] = len(reviewed)
+    map_ids = [row["map_id"] for row in reviewed]
+    if len(map_ids) != len(set(map_ids)):
+        ERRORS.append("duplicate map_id in tmap.csv")
+    for map_id in map_ids:
+        if not re.fullmatch(r"M\d{6}", map_id):
+            ERRORS.append(f"invalid map_id {map_id!r}")
+
+    topic_ids = {row["topic_id"] for row in rows("topics.csv")}
+    unit_ids = {row["unit_id"] for row in rows("units.csv")}
+    tag_map = {}
+    with (ROOT.parent / "tags" / "tags").open(encoding="utf-8") as handle:
+        for raw in handle:
+            raw = raw.rstrip("\n")
+            if not raw or "," not in raw:
+                continue
+            tag, label = raw.split(",", 1)
+            tag_map[label] = tag
+    french_sha = interface["french_cursor"]["manifest_sha256"]
+    upstream = scope["stacks_upstream"]
+    source_units = set()
+    touched_topics = set()
+    for row in reviewed:
+        source_units.add(row["source_unit"])
+        touched_topics.add(row["topic_id"])
+        if row["topic_id"] not in topic_ids:
+            ERRORS.append(f"reviewed mapping has unknown topic {row['topic_id']}")
+        if row["source_unit"] not in unit_ids:
+            ERRORS.append(f"reviewed mapping has unknown unit {row['source_unit']}")
+        if row["authority_state"] != "french_admitted":
+            ERRORS.append(f"reviewed mapping lacks French admission {row['map_id']}")
+        if row["source_receipt_sha256"] != french_sha:
+            ERRORS.append(f"reviewed mapping has wrong French receipt {row['map_id']}")
+        if row["stacks_commit"] != upstream:
+            ERRORS.append(f"reviewed mapping has wrong Stacks commit {row['map_id']}")
+        if row["relation"] != "split":
+            ERRORS.append(f"first review slice overclaims relation {row['map_id']}")
+        if row["granularity"] != "source_subsection_to_stacks_section":
+            ERRORS.append(f"unexpected mapping granularity {row['map_id']}")
+        if row["review_state"] != "reviewed_existing":
+            ERRORS.append(f"unexpected mapping state {row['map_id']}")
+        if row["coverage_claim"] != "topical_overlap_only":
+            ERRORS.append(f"first review slice overclaims coverage {row['map_id']}")
+
+        target = ROOT.parent / row["stacks_file"]
+        if not target.is_file():
+            ERRORS.append(f"missing Stacks target {row['stacks_file']}")
+        else:
+            local_label = row["stacks_label"]
+            prefix = target.stem + "-"
+            if not local_label.startswith(prefix):
+                ERRORS.append(f"target label/file mismatch {row['map_id']}")
+            else:
+                raw_label = local_label[len(prefix):]
+                marker = "\\label{" + raw_label + "}"
+                if marker not in target.read_text(encoding="utf-8"):
+                    ERRORS.append(f"target label absent from file {row['map_id']}")
+        if tag_map.get(row["stacks_label"]) != row["official_tag"]:
+            ERRORS.append(f"official tag mismatch {row['map_id']}")
+        else:
+            existing_tags_referenced.add(row["official_tag"])
+
+    review_snapshot = scope.get("review_snapshot", {})
+    actual_review = {
+        "file": "tmap.csv",
+        "section_topic_rows": len(reviewed),
+        "source_subsections": len(source_units),
+        "topics_touched": len(touched_topics),
+        "existing_official_tags_referenced": len(existing_tags_referenced),
+        "theorem_equivalences_claimed": 0,
+    }
+    if review_snapshot != actual_review:
+        ERRORS.append("scope review snapshot does not match tmap.csv")
 
 for name, (field, pattern) in tables.items():
     data = rows(name)
@@ -174,7 +256,8 @@ result = {
     "status": "PASS" if not ERRORS else "FAIL",
     "errors": ERRORS,
     "counts": counts,
-    "official_tags_asserted": 0,
+    "official_tags_assigned_by_scaffold": 0,
+    "existing_official_tags_referenced": len(existing_tags_referenced),
 }
 print(json.dumps(result, indent=2, sort_keys=True))
 raise SystemExit(1 if ERRORS else 0)

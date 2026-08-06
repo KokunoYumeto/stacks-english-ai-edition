@@ -59,9 +59,13 @@ def write_csv(path, fields, data):
         writer.writerows(data)
 
 
-def volume_from(path, label="", page_volume=""):
-    if page_volume:
-        return page_volume.split("-")[0]
+def logical_volume_from(path, label=""):
+    """Return the logical EGA volume, independently of the printed witness page.
+
+    An erratum incorporated into EGA I can have an ``oldpage[II]`` locator.
+    That page-volume is provenance for the witness, not the volume containing
+    the semantic unit.
+    """
     match = re.search(r"(?:^|:)(0|IV|III|II|I)(?:[.:]|$)", label)
     if match:
         return match.group(1)
@@ -147,7 +151,8 @@ def main():
                 errors.append(f"duplicate unit ID {unit_id}: {rel}:{line_no} and {labels_seen[unit_id]}")
                 return
             labels_seen[unit_id] = f"{rel}:{line_no}"
-            volume = volume_from(rel_path, source_label, page_volume)
+            volume = logical_volume_from(
+                rel_path, source_label or parent_id or unit_id)
             units.append({
                 "unit_id": unit_id,
                 "volume": volume,
@@ -202,7 +207,7 @@ def main():
             for label_match in LABEL_RE.finditer(active):
                 label = label_match.group(1)
                 unit_id = f"ega:{label}"
-                found_volume = volume_from(rel_path, label, page_volume)
+                found_volume = logical_volume_from(rel_path, label)
                 parent = current_subsection or current_section or (
                     f"ega:volume:{found_volume}" if found_volume else "ega:corpus")
                 kind = "label"
@@ -215,7 +220,7 @@ def main():
                         parent = current_section or parent
                         current_subsection = unit_id
                     elif kind in {"section", "chapter", "part"}:
-                        found_volume = volume_from(rel_path, label, page_volume)
+                        found_volume = logical_volume_from(rel_path, label)
                         parent = f"ega:volume:{found_volume}" if found_volume else "ega:corpus"
                         current_section = unit_id
                         current_subsection = ""
@@ -275,7 +280,7 @@ def main():
     write_csv(args.out / "units.csv", unit_fields, units)
 
     result = {
-        "schema": "ega-english-discovery-intake-v1",
+        "schema": "ega-english-discovery-intake-v2",
         "status": "PASS" if not errors else "FAIL",
         "errors": errors,
         "manifest": {

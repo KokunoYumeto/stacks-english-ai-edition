@@ -28,7 +28,11 @@ or published here.
   metadata-only semantic units. No source prose is copied into the branch.
 - Current Stacks snapshot: 21,446 chapter labels, 21,437 exact official-tag
   joins, and 2,670 lexical candidates across all 35 discovery topics. Reviewed
-  mappings remain exactly zero at this scaffold stage.
+  lexical candidates remain exactly zero in `map.json`.
+- First bounded review slice: 23 source-subsection-to-Stacks-section bridges
+  across 22 EGA I subsections and eight topics. These are explicitly
+  topic-level split correspondences; they claim zero theorem equivalences and
+  zero complete source-subsection coverage.
 
 ## State model
 
@@ -59,11 +63,14 @@ append-only.
   stable unit registry, and fail-closed intake receipt.
 - `map.py`, `cand.csv`, and `map.json`: lexical candidate generation against
   the exact upstream Stacks snapshot. Candidates are not reviewed mappings.
+- `tmap.csv`: French-admitted topic-level bridges to existing Stacks sections;
+  granularity and non-coverage claims are explicit in every row.
 - `interface.json`: hash-bound read-only contract with the active French and
   English EGA edition task.
 - `../reports/findings.jsonl`: append-only suspected-correction referrals;
   the edition task alone decides and mutates canonical source.
 
-The immediate work is corpus-wide source-unit extraction and topic
-classification. Mathematical Stacks chapter edits begin only after a bounded
-unit has direct evidence and an explicit reviewed disposition.
+The immediate work is theorem-level comparison within the bounded EGA I
+bridges and progressive topic classification across the remaining corpus.
+Mathematical Stacks chapter edits begin only after a bounded unit has direct
+evidence and an explicit reviewed disposition.
