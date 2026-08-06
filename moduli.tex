@@ -5824,6 +5824,49 @@ counterexample, but no such replacement is attributed to the source here
 without a separate proof.
 \end{example}
 
+\begin{lemma}[Projective Picard pieces]
+\label{corollary-picard-Hilbert-torsion-projective}
+\begin{reference}
+\cite[Expos\'e 236, Corollary 4.2, p. 243]{FGA}.
+\end{reference}
+Let $S$ be a Noetherian scheme and let $f:X\to S$ be smooth and projective
+with geometrically connected fibres. Fix an $f$-very ample invertible module
+$\mathcal{H}$. The fppf Picard functor is represented by a separated scheme
+$$
+P=\Picardfunctor_{X/S}.
+$$
+For every numerical polynomial $Q$, the open and closed Hilbert-polynomial
+piece $P^Q\subset P$ is projective over $S$. The torsion-component locus
+$P^\tau\subset P$ is an open and closed projective $S$-subscheme.
+\end{lemma}
+
+\begin{proof}
+The geometric fibres are integral: a smooth scheme over a field has disjoint
+irreducible components, and the fibres here are connected. Representability,
+separatedness, and quasi-projectivity of the finite-type Picard pieces follow
+from the classical projective Picard theorem, Remark
+\ref{remark-classical-projective-picard-theorem}.
+
+The numerical substacks of coherent modules are open and closed by Example
+\ref{example-hilbert-polynomial}. Hence $P^Q$ is open and closed in $P$.
+Theorem \ref{theorem-picard-boundedness-Hilbert-polynomial}, applied to the
+single polynomial $Q$, shows that $P^Q$ is of finite type over $S$. It is
+proper by Theorem \ref{theorem-picard-smooth-proper-pieces}, and therefore
+projective by Morphisms, Lemma
+\ref{morphisms-lemma-projective-is-quasi-projective-proper}.
+
+The locus $P^\tau$ is open and closed by Theorem
+\ref{theorem-picard-normal-relative-components}. A point of $P^\tau$ has a
+positive multiple in the identity component. Its divisor class is therefore
+numerically trivial, and its Hilbert polynomial with respect to $\mathcal H$
+is the Hilbert polynomial of the structure sheaf of the same fibre. Since
+$S$ is Noetherian, only finitely many such polynomials occur. Theorem
+\ref{theorem-picard-boundedness-Hilbert-polynomial} now shows that
+$P^\tau$ is of finite type. It is proper by Theorem
+\ref{theorem-picard-smooth-proper-pieces}, quasi-projective by the classical
+Picard theorem, and hence projective by the same Morphisms lemma.
+\end{proof}
+
 \section{Properties of the Picard stack}
 \label{section-picard-stack}
 

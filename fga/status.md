@@ -3822,3 +3822,57 @@ C72E0177FFC7356E3FDC27EA9FAD418A85478D828554E8B8B9E821A0BE4E5126
 and
 759FD39C774378E5CE21C39378CED717E300721C8DC09FB8312A63AD0537A1A1.
 The next sequential cursor is Corollary 4.2 on printed page 243.
+
+FGA 236, Corollary 4.2 is now integrated as Moduli, Lemma
+moduli-corollary-picard-Hilbert-torsion-projective. For a smooth projective
+family with geometrically connected fibres, each fixed Hilbert-polynomial
+Picard piece is open and closed and finite type by Theorem 4.1, proper by the
+proper-smooth-family valuative theorem, and quasi-projective by the classical
+Picard construction; proper plus quasi-projective makes it projective. A
+torsion-component class is numerically trivial, so only the finitely many
+structure-sheaf Hilbert polynomials of the Noetherian base occur on
+P to the tau. The same boundedness, properness, and quasi-projectivity
+argument makes P to the tau an open and closed projective subscheme.
+
+Decision D000572 supersedes reviewed-gap decision D000299 and records the
+corollary as integrated source and Stacks content. Direct serial 1,100-dpi
+source review covers printed page 243; its page image has SHA-256
+6F730167161A0A2C947029D7F4D3FF7B552953DDA802F2516701CAB79B07086F.
+The 24-page authority remains 2,461,968 bytes with SHA-256
+266EEF77BF7BA34A75895ED69ACBFE791A2958DD52C2837D75AB29DF0D2F714A.
+
+Both semantic validators pass with no errors at 21,734 labels, 21,437
+official-tag joins, 71 controlled topics, 4,288 topic candidates, 572
+append-only decisions, 1,253 source units, 1,612 term links, and 64 source
+issues, of which nine remain active; there are zero review units. The topic,
+decision, issue, map, Stacks-label, topic-candidate, reviewed-topic-map,
+index-validation, and map-validation files have SHA-256
+B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0,
+73D161FFD83BDDB9968D03BF8611FB37E38A0C6F6FC30F771CC9738FC2D2E582,
+A1CADC548D954D8156825965065D510F3AE874D74841CB60AB830A7BCCE20F82,
+581FA2D1BA505D894288714B6FA09B6CC4B3EC59FD27D7CB5240AEAD63EBCA3D,
+8EB846999032D8BE275C781BFE7DD15B5112F47AAF371670E5AFE1BFA210754C,
+C8CD47D07400B9D7C97383FED8248EB940C916DCD26F3BC472AB4B14F0FAE569,
+26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46,
+46A229205ED499AAC21CF61635A876B51402A48F702E430C413336A417F1A026,
+and
+2526CEF2405CAA1D65DC795D48A45104F8CBBB6FF59D861080FE60EF9137CAB3.
+The official tags/tags file remains unmodified at SHA-256
+C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF;
+no official tag was invented for the new lemma.
+
+Three reproducible serial TeX passes produce a 78-page Moduli chapter of
+912,312 bytes with SHA-256
+EEEC335F6C07BEA06A92AFB2AAFE0AF7C987D4F173402B1D25A816E43CE6D763.
+There is no overfull box and no unresolved new internal reference. Two
+underfull vertical boxes occur only on displaced later output pages 71 and
+77; direct inspection confirms ordinary page-breaking whitespace with no
+content loss or collision. Final serial 1,100-dpi inspection of Moduli pages
+64--65 finds no clipping, collision, malformed formula, unresolved new
+reference, placeholder, or unreadable text; their rendered page images have
+SHA-256
+6E025CA49C696518AB30740B9AE94E5F4A2D1AD8A0E85DC8FBFBD3E639567832
+and
+03C5A361F1E301984C8F36B317AA6021FC9EACADA75795929C226196F54A7670.
+The next and final sequential source cursor is the linked supplement and
+erratum to Expose 236 on printed pages 303--307.
