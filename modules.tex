@@ -1972,12 +1972,20 @@ see Lemma \ref{lemma-i-star-right-adjoint}. Some details omitted.
 
 \begin{lemma}
 \label{lemma-i-star-reflects-finite-type}
+\begin{reference}
+\cite[Chapter I, \S 2, no. 17, Propositions 10 and 11 and Corollary,
+pp. 211--212]{FAC}
+\end{reference}
 Let $i : (Z, \mathcal{O}_Z) \to (X, \mathcal{O}_X)$ be a morphism of ringed
 spaces. Assume $i$ is a homeomorphism onto a closed subset of $X$ and
 that $\mathcal{O}_X \to i_*\mathcal{O}_Z$ is surjective.
 Let $\mathcal{F}$ be an $\mathcal{O}_Z$-module.
 Then $i_*\mathcal{F}$ is of finite type if and only if
 $\mathcal{F}$ is of finite type.
+If $\mathcal{O}_X \to i_*\mathcal{O}_Z$ is an isomorphism, then
+$i_*\mathcal{F}$ is coherent if and only if $\mathcal{F}$ is coherent.
+In this case $\mathcal{O}_X$ is coherent as a module over itself if and
+only if $\mathcal{O}_Z$ is coherent as a module over itself.
 \end{lemma}
 
 \begin{proof}
@@ -2015,6 +2023,20 @@ $$
 $$
 is surjective by inspection of what it does on stalks. Hence
 $\mathcal{F}$ is of finite type.
+
+\medskip\noindent
+Assume now that $\mathcal{O}_X \to i_*\mathcal{O}_Z$ is an isomorphism.
+Let $U \subset X$ be open and set $V = i^{-1}(U)$. A finite collection
+of sections of $\mathcal{F}$ over $V$ is the same as a finite collection
+of sections of $i_*\mathcal{F}$ over $U$. Moreover, exactness of
+pushforward by the closed immersion $V \to U$
+(Lemma \ref{lemma-i-star-exact}) identifies the pushforward
+of the sheaf of relations over $\mathcal{O}_Z|_V$ with the sheaf of
+relations over $\mathcal{O}_X|_U$. The finite type assertion already
+proved, applied to $V \to U$, shows that one relation sheaf is of finite
+type if and only if the other is. The definition of coherence now gives
+the second assertion. Taking $\mathcal{F} = \mathcal{O}_Z$ gives the last
+assertion.
 \end{proof}
 
 \begin{lemma}
