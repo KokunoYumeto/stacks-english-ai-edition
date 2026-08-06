@@ -2581,6 +2581,41 @@ the transition maps are the identity on $\Gamma(X, \mathcal{F})$.
 Taking the colimit proves the lemma.
 \end{proof}
 
+\begin{lemma}
+\label{lemma-cech-cohomology-additive}
+\begin{reference}
+\cite[Chapter I, \S 3, no. 23, pp. 215--216]{FAC}
+\end{reference}
+Let $(X, \mathcal{A})$ be a ringed space. For every $p \geq 0$, the rule
+$$
+\mathcal{F} \longmapsto \check{H}^p(X, \mathcal{F})
+$$
+defines an additive functor
+$$
+\textit{Mod}(\mathcal{A})
+\longrightarrow
+\text{Mod}_{\Gamma(X, \mathcal{A})}.
+$$
+In particular, {\v C}ech cohomology commutes with finite direct sums.
+For $p = 0$, the isomorphism of Lemma \ref{lemma-cech-h0-space} is
+functorial and $\Gamma(X, \mathcal{A})$-linear.
+\end{lemma}
+
+\begin{proof}
+A morphism $\mathcal{F} \to \mathcal{G}$ induces a termwise map of
+{\v C}ech complexes for every open covering. These maps commute with the
+differentials and with the maps induced by refinements. Their construction
+commutes with addition, composition, and identity maps. Passing first to
+cohomology and then to the colimit gives an additive functor.
+
+Every term of the {\v C}ech complex of $\mathcal{F}$ is naturally a
+$\Gamma(X, \mathcal{A})$-module by restriction of global sections of
+$\mathcal{A}$. The differentials, refinement maps, and maps induced by
+morphisms of $\mathcal{A}$-modules are linear. This proves the module and
+linearity assertions. The final assertion follows from the construction
+in the proof of Lemma \ref{lemma-cech-h0-space}.
+\end{proof}
+
 \medskip\noindent
 It turns out that the maps $\gamma$ defined above are compatible with
 the map to cohomology, in other words, the composition
