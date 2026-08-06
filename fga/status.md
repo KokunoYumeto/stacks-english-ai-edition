@@ -2667,3 +2667,54 @@ Final serial 1,100-dpi inspection of Moduli pages 42--43 finds no clipping,
 collision, malformed formula, unresolved new reference, placeholder, or
 unreadable text. The next sequential cursor is Theorem 2.5 on printed page
 233.
+
+FGA 236, Theorem 2.5 and Lemma 2.6 are now integrated. Moduli, Theorem
+`moduli-theorem-picard-multiplication-etale` proves the full proper-flat
+statement for a represented fppf Picard space, and in fact allows the
+representing object to be an algebraic space. Over the locus where `n` is
+invertible, the line-bundle root square is cartesian on every fppf test
+scheme by More on Morphisms, Lemma
+`more-morphisms-lemma-pic-roots-first-order-thickening`. Exactness of fppf
+sheafification preserves that finite limit, so multiplication by `n` is
+formally etale; local finite presentation then makes it etale. The More on
+Morphisms lemma now directly cites FGA 236, Lemma 2.6 and is stronger than
+the source's local-Artinian final-layer formulation.
+
+Source issue `I000054` records and resolves the printed ambient-point error:
+the authority says `x in X`, while the power homomorphism is an endomorphism
+of the Picard prescheme, so the corrected statement has `x in Pic_{X/S}`.
+Decision `D000549` supersedes `D000304` and dispositions Theorem 2.5 as an
+existing equivalent now integrated with the corrected source. Decision
+`D000550` supersedes `D000279` and dispositions Lemma 2.6 as covered by an
+existing stronger first-order-thickening result.
+
+Both semantic validators pass with no errors at 21,685 labels, 21,437
+official-tag joins, 71 controlled topics, 4,221 topic candidates, 550
+append-only decisions, 1,253 source units, 1,612 term links, and 54 source
+issues, of which seven remain active; there are zero review units. The topic,
+decision, issue, map, Stacks-label, topic-candidate, reviewed-topic-map,
+index-validation, and map-validation files have SHA-256
+`B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0`,
+`8872927D8ABE319198459F235A6275F4DB5B10B488C741682C6C6F68DF400404`,
+`B7388B354EB573629C4C5ED076D50A8054AD321079EF4BE51705FF781753E684`,
+`1DB5D2861EE48D31FA1B0CEF3166767D384661E91E55BDF30D27284F0B9DA60C`,
+`B4E08B0F55F98E64F07734E358DF750AED0BF8F2EBE2E524614A826B54D8F7AD`,
+`F73EAF7181451BD51C17C81CD7B3ED552976691130724108D37A1D0892EF49BC`,
+`26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46`,
+`683C914C75532FFBFE83E8DCFDFDE1D1914F83D9707D9883B056D4D07DCF4C76`,
+and `29B1144B34A2FFE33514A8999FCCE2789F3D022340F91A5CA3D8D2C2349C97DA`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`;
+no official tag was invented for the new theorem.
+
+Stable serial TeX passes produce a 59-page Moduli chapter of 796,916 bytes
+with SHA-256
+`DE974557FFFD4CE4CF1AAA8DE2DF1D984E0EBC284704C676EAFF82B4562E3D55`
+and a 259-page More on Morphisms chapter of 2,398,056 bytes with SHA-256
+`84B7A762998321C787EC8946AD418E07F19EC37F547359D5681C9A6E40BC6CE3`.
+Neither affected source range creates an overfull or underfull horizontal
+box. Direct serial 1,100-dpi inspection covers printed page 233 of the
+24-page NUMDAM authority, Moduli page 44, and More on Morphisms pages 9--10;
+it finds no clipping, collision, malformed formula, unresolved new reference,
+placeholder, or unreadable text. The next sequential cursor is the unnamed
+corollary following Lemma 2.6 on printed pages 233--234.

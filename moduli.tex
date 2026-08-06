@@ -4071,6 +4071,65 @@ makes $P^\sigma$ closed under the stated equal-characteristic-exponent
 hypothesis.
 \end{proof}
 
+\begin{theorem}[Prime-to-$n$ multiplication on a Picard space]
+\label{theorem-picard-multiplication-etale}
+\begin{reference}
+\cite[Expos\'e 236, Theorem 2.5, p. 233]{FGA}. The printed statement
+places the point $x$ in $X$. Since the power map is an endomorphism of the
+Picard space, the point lies in the Picard space instead.
+\end{reference}
+Let $B$ be a scheme and let $X \to B$ be a proper flat morphism of schemes
+of finite presentation. Suppose that the fppf Picard functor is represented
+by an algebraic space
+$$
+P=\Picardfunctor_{X/B}.
+$$
+Let $n \geq 1$. Multiplication by $n$
+$$
+[n] : P \longrightarrow P
+$$
+is \'etale over the open subscheme of $B$ on which $n$ is invertible. In
+particular, it is \'etale at every point of $P$ whose residue characteristic
+is prime to $n$.
+\end{theorem}
+
+\begin{proof}
+First, $P \to B$ is locally of finite presentation. Indeed, the usual limit
+argument for invertible modules and fppf descent shows that the fppf Picard
+functor commutes with directed limits of affine $B$-schemes: a finite
+presentation fppf covering, the invertible modules on its pullback of $X$,
+the finite descent data, and all their relations descend to a finite stage.
+Thus the assertion follows from Limits, Proposition
+\ref{limits-proposition-characterize-locally-finite-presentation}.
+Consequently $[n]$ is locally of finite presentation by Morphisms of Spaces,
+Lemma \ref{spaces-morphisms-lemma-finite-presentation-permanence}.
+
+We may now replace $B$ by the open subscheme on which $n$ is invertible. Let
+$T_0 \subset T$ be a first order thickening of affine schemes over $B$. On
+the fppf site of $T$, put $U_0=U\times_TT_0$ for every $U/T$ and consider
+the square of presheaves whose value on $U$ is
+$$
+\xymatrix{
+\Pic(X_U) \ar[r]^{[n]} \ar[d] & \Pic(X_U) \ar[d] \\
+\Pic(X_{U_0}) \ar[r]^{[n]} & \Pic(X_{U_0}).
+}
+$$
+It is cartesian for every $U$ by More on Morphisms, Lemma
+\ref{more-morphisms-lemma-pic-roots-first-order-thickening}. Sheafification
+commutes with finite limits by Sites, Lemma
+\ref{sites-lemma-sheafification-exact}. After fppf sheafification and
+evaluation on $T$, we therefore obtain a cartesian square
+$$
+\xymatrix{
+P(T) \ar[r]^{[n]} \ar[d] & P(T) \ar[d] \\
+P(T_0) \ar[r]^{[n]} & P(T_0).
+}
+$$
+Thus $[n]$ is formally \'etale. Since it is locally of finite presentation,
+it is \'etale by More on Morphisms of Spaces, Lemma
+\ref{spaces-more-morphisms-lemma-etale-formally-etale}.
+\end{proof}
+
 \begin{example}[A relative Picard space which is not a scheme]
 \label{example-picard-conic-not-scheme}
 \begin{reference}
