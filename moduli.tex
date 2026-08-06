@@ -3715,6 +3715,144 @@ affirmative solution of the question printed in Remark 6.6, as recorded by
 the linked correction.
 \end{proof}
 
+\begin{lemma}[Laurent invariance for a normal scheme]
+\label{lemma-pic-normal-laurent-invariance}
+\begin{reference}
+\cite[Expos\'e 236, proof of Theorem 2.1(ii), pp. 231--232 and correction,
+p. 303]{FGA}.
+\end{reference}
+Let $X$ be a normal scheme of finite type over a field $k$. The projection
+$p : X\times_k\mathbf G_{m,k}\to X$ induces an isomorphism
+$$
+p^* : \Pic(X)\longrightarrow \Pic(X\times_k\mathbf G_{m,k}).
+$$
+\end{lemma}
+
+\begin{proof}
+The section defined by $t=1$ shows that $p^*$ is injective. Since the
+irreducible components of a normal Noetherian scheme are open and closed, we
+may assume that $X$ is integral. Put $Y=X\times_k\mathbf G_{m,k}$ and let
+$K$ be the function field of $X$.
+
+Represent an invertible module on $Y$ by a Cartier divisor $D$. Its
+restriction to
+$$
+Y_K=\Spec(K[t,t^{-1}])
+$$
+is principal because $K[t,t^{-1}]$ is a unique factorization domain. After
+subtracting the divisor of a rational function, we may therefore assume that
+no irreducible component of $D$ dominates $X$.
+
+Every prime divisor of $Y$ which does not dominate $X$ is of the form
+$Z\times_k\mathbf G_{m,k}$ for a unique prime divisor $Z$ of $X$. Hence
+$D=p^*E$ as a Weil divisor for some Weil divisor $E$ on $X$. The rank one
+reflexive module $\mathcal{O}_X(E)$ pulls back to the invertible module
+$\mathcal{O}_Y(D)$. Invertibility is fpqc local, and $p$ is faithfully flat;
+thus $\mathcal{O}_X(E)$ is invertible. Equivalently, $E$ is Cartier. It
+follows that the original invertible module is pulled back from $X$, proving
+surjectivity.
+\end{proof}
+
+\begin{theorem}[Proper smooth families]
+\label{theorem-picard-smooth-proper-pieces}
+\begin{reference}
+\cite[Expos\'e 236, Theorem 2.1(i), p. 231]{FGA}.
+\end{reference}
+Let $S$ be a locally Noetherian scheme and let $f:X\to S$ be proper and
+smooth. Suppose that the fppf Picard functor is represented by a scheme
+$$
+P=\Picardfunctor_{X/S}.
+$$
+Then $P\to S$ is separated. Every closed subscheme $Z\subset P$ which is of
+finite type over $S$ is proper over $S$.
+\end{theorem}
+
+\begin{proof}
+The representing scheme $P$ is locally of finite type over $S$. By Limits,
+Lemma \ref{limits-lemma-Noetherian-dvr-valuative-separation}, separatedness
+may be checked using discrete valuation rings. Consider two lifts to $P$ over
+a discrete valuation ring which agree over its fraction field. Equality of
+the lifts is fpqc local on the valuation ring, so we may pass to its strict
+henselization.
+
+The Stein factorization of the base change of $X$ is finite \'etale by More on
+Morphisms of Spaces, Lemma
+\ref{spaces-more-morphisms-lemma-stein-factorization-etale}. It therefore
+splits the base change of $X$ into a finite disjoint union of proper smooth
+families with geometrically connected fibres. These fibres are geometrically
+integral. Example \ref{example-picard-disjoint-union} identifies the Picard
+functor with the product of their Picard functors, and Lemma
+\ref{lemma-pic-functor-uniqueness-part} says that every factor is separated.
+The two lifts are therefore equal after strict henselization, hence equal over
+the original valuation ring. Thus $P\to S$ is separated.
+
+Let $Z\subset P$ be closed and of finite type over $S$. Given a valuative
+diagram for $Z$ over a discrete valuation ring $R$, pass to a faithfully flat
+extension $R\subset R'$ of valuation rings over which the generic Picard
+class is represented by an invertible module. Lemma
+\ref{lemma-pic-existence-part} extends that module over the proper smooth
+family and hence gives a point of $P(R')$. On
+$\Spec(R'\otimes_RR')$ its two pullbacks agree over the schematically dense
+generic fibre. They agree everywhere because $P\to S$ is separated. Thus the
+point descends to $P(R)$; it factors through $Z$ because its generic point
+does and $Z$ is closed. Uniqueness follows from separatedness. Limits, Lemma
+\ref{limits-lemma-Noetherian-dvr-valuative-proper}, now shows that $Z\to S$
+is proper.
+
+The classical proof in the cited source obtains the same extension by closing
+a Cartier divisor from the generic fibre. In its final sentence the printed
+phrase ``divisor on $S$'' has to be read as ``divisor on $X$'': it is the
+regular local rings of the smooth scheme $X$ which are factorial.
+\end{proof}
+
+\begin{theorem}[The identity component over a field]
+\label{theorem-picard-identity-component-proper-normal}
+\begin{reference}
+\cite[Expos\'e 236, Theorem 2.1(ii), pp. 231--232 and correction,
+p. 303]{FGA}.
+\end{reference}
+Let $X$ be a proper geometrically normal scheme over a field $k$. Let
+$$
+P=\Picardfunctor_{X/k}
+$$
+be its Picard scheme, whose existence is Theorem
+\ref{theorem-picard-proper-field}. Then the identity component $P^0$ is
+proper over $k$.
+\end{theorem}
+
+\begin{proof}
+Properness may be checked after extending the ground field, and the assertion
+is componentwise in $X$. We may therefore assume that $k$ is algebraically
+closed and that $X$ is nonempty and connected. Choose a point $x\in X(k)$;
+rigidification along $x$ identifies maps to $P$ with rigidified invertible
+modules.
+
+Let $H=(P^0)_{red}$. This is a smooth connected subgroup scheme by Groupoids,
+Lemmas \ref{groupoids-lemma-reduced-subgroup-scheme-perfect} and
+\ref{groupoids-lemma-reduced-group-scheme-prefect-field-characteristic-p-smooth}
+in positive characteristic, and by
+Lemma \ref{groupoids-lemma-group-scheme-characteristic-zero-smooth} in
+characteristic zero. Suppose that $H$ is not proper. Chevalley's structure
+theorem for the connected commutative algebraic group $H$ then gives a
+positive dimensional connected affine subgroup. Over an algebraically closed
+field such a group contains a subgroup isomorphic to $\mathbf G_a$ or
+$\mathbf G_m$. In the additive case compose its inclusion with, for example,
+$u\mapsto u-1$ on $\mathbf G_m$; in the multiplicative case use the subgroup
+itself. In either case there is a nonconstant morphism
+$$
+\mathbf G_m\longrightarrow H\longrightarrow P.
+$$
+
+The corresponding rigidified invertible module on
+$X\times_k\mathbf G_m$ is pulled back from $X$ by
+Lemma \ref{lemma-pic-normal-laurent-invariance}. Hence the displayed morphism
+is constant, a contradiction. Thus $H$ is proper. Finally $P^0$ is of finite
+type over $k$ and $H\subset P^0$ is a thickening. More on Morphisms, Lemma
+\ref{more-morphisms-lemma-thicken-property-morphisms} shows that $P^0$ is
+separated and universally closed because $H$ is; hence $P^0$ is proper.
+Properness descends from the algebraic closure, proving the theorem over $k$.
+\end{proof}
+
 \begin{example}[A relative Picard space which is not a scheme]
 \label{example-picard-conic-not-scheme}
 \begin{reference}

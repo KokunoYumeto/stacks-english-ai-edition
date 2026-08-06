@@ -2416,3 +2416,74 @@ The affected source range creates no overfull or underfull horizontal box.
 Final serial 1,100-dpi inspection of page 171 finds no clipping, collision,
 malformed formula, unresolved marker, placeholder, or unreadable text. The
 next sequential cursor is Proposition 1.11 on printed pages 230--231.
+
+Proposition 1.11 and Corollary 1.12 were already present exactly as
+`groupoids-lemma-smooth-flat-locus-group-scheme` and
+`groupoids-lemma-smooth-flat-along-identity-component`; their existing
+decisions remain valid and no duplicate statement was added. The sequential
+cursor therefore advanced to Theorem 2.1.
+
+Theorem 2.1 is now integrated in full and in its corrected form. Lemma
+`moduli-lemma-pic-normal-laurent-invariance` proves
+`Pic(X) = Pic(X times G_m)` for every normal finite-type scheme over a field
+by removing the generic Laurent divisor and descending the resulting
+vertical Cartier divisor. This implements both corrections printed in the
+linked erratum: the test scheme is the affine line with its origin removed,
+and the coordinate extension is Laurent, not polynomial.
+
+Theorem `moduli-theorem-picard-smooth-proper-pieces` proves that a represented
+Picard functor of a proper smooth family is separated and that every
+finite-type closed subscheme is proper. The proof combines strict-henselian
+Stein decomposition with the existing integral-fibre uniqueness theorem,
+then uses the Picard-stack existence theorem and fpqc descent for the
+valuative existence step. Its source note also corrects the printed
+``divisor on S'' to ``divisor on X'', the only reading compatible with the
+regular local rings and divisor closure used in the proof.
+
+Theorem `moduli-theorem-picard-identity-component-proper-normal` proves
+properness of Picard zero for every proper geometrically normal scheme over a
+field. After reduction to an algebraically closed field, Chevalley structure
+theory and Laurent invariance exclude a positive-dimensional affine part of
+the reduced identity component; properness then passes across the finite-type
+nilpotent thickening. The printed base `Pic_X/S` in this field-only clause is
+corrected to `Pic_X/k`.
+
+Issues `I000050` through `I000053` record the wrong Picard base, wrong divisor
+ambient, punctured-line erratum, and Laurent-ring erratum separately and are
+resolved by decision `D000544`. That decision supersedes `D000274` and
+dispositions the theorem as an existing equivalent with corrected-source
+integration. Direct serial 1,100-dpi review covers printed pages 231--232 of
+the 24-page NUMDAM authority and page 303 of the linked erratum. The expose
+remains 2,461,968 bytes with SHA-256
+`266EEF77BF7BA34A75895ED69ACBFE791A2958DD52C2837D75AB29DF0D2F714A`;
+the erratum remains 475,371 bytes with SHA-256
+`D8FFB36337F12CE15F9E15E917174A4C5EDCBD28C5B0CD9F0A501098DB8BD61B`.
+
+Both semantic validators pass with no errors at 21,677 labels, 21,437
+official-tag joins, 71 controlled topics, 4,214 topic candidates, 544
+append-only decisions, 1,253 source units, 1,612 term links, and 53 source
+issues, of which seven remain active; there are zero review units. The topic,
+decision, issue, map, Stacks-label, topic-candidate, reviewed-topic-map,
+index-validation, and map-validation files have SHA-256
+`B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0`,
+`B474179DAED6B7CA62C2EE842E0E88F7AF81CAC75116ECC1D5268F8CD0D12A3A`,
+`307FD2AAB0EF5C94FC6F07F118C1EC6D6995E9AB919C0D1D8A519359037A6274`,
+`C9A60727AD01CD0B92B7DF4668C7ED9AFBB280BA83AED0B70C87C1C27A451C2F`,
+`F2F4B9043D882DAAD6D173A526D3CF2F4F41CDE038EE3F15612ECAED3AB48784`,
+`5C848A2D572632986D5A6118D95765A11D0DF6AE164B500EF3C4E30AE94385A0`,
+`26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46`,
+`90FC61B0585B3BCC0E014C364C295D37F4BFD137C4194E2046E503CE4E171384`,
+and `6D551C59F36F3663B43B2BD361ED028A6F80995C0B3C26AE97EA0B4BE45C65FF`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`;
+no official tag was invented for the three new labels.
+
+Stable serial TeX passes produce a 56-page Moduli chapter of 772,135 bytes
+with SHA-256
+`C1AD902139C5C98BA79642EC85AE2286CBD11A04F0BB5FA330AC42FDDF41F7C7`.
+The affected source range creates no overfull or underfull horizontal box.
+The remaining missing-external-auxiliary warnings predate this checkpoint and
+none names a new label. Final serial 1,100-dpi inspection of Moduli pages
+40--41 finds no clipping, collision, malformed formula, unresolved marker,
+placeholder, or unreadable text. The next sequential cursor is Remark 2.2 on
+printed pages 231--232.
