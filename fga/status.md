@@ -1031,3 +1031,30 @@ Moduli Stacks chapter of 522,606 bytes with SHA-256
 The new source adds no unresolved reference or overfull horizontal box and
 passes 1,200-dpi inspection on pages 8--10.  The next sequential cursor is
 Expose 221, Proposition 1.2.
+
+The fifty-second source patch integrates Expose 221, Proposition 1.2.  The
+new Moduli Stacks proposition first represents every homomorphism between two
+bounded flat parameter families by the existing affine finite-presentation
+Hom scheme.  It then stratifies that scheme so the universal cokernel is flat;
+this makes the universal image and kernel commute with arbitrary fibres and
+prevents the common but invalid inference that kernels automatically commute
+with base change.  For extensions it records the separate noetherian
+cohomology-and-base-change stratification of relative Ext, whose vector bundle
+of classes carries the tautological short exact sequence.  Thus kernels,
+images, cokernels, and middle terms are each bounded by an explicit
+finite-type parameter scheme.  Decisions `D000385` and `D000386` supersede
+the former proposition and partial-section decisions without altering their
+history.
+
+Both semantic validators pass with no errors at 21,568 labels, 3,843 topic
+candidates, 386 append-only decisions, 1,253 source units, 1,612 term links,
+and 14 source issues, of which eight remain active.  The decision and map
+ledgers have SHA-256
+`908757EAB712977E0E7D0F3537A87F92A19E6A267A1F1E968251947CD9ECF42B`
+and `CE57E93D7F26490983D92363DE5AC14FC7D007C562D415E0611899E1F69BD167`.
+A bibliography-complete build and two final TeX passes produce a 24-page
+Moduli Stacks chapter of 527,758 bytes with SHA-256
+`E75251104C344051D77523CD345AA4BAF60A2A52FB84B81BE2EE688DA020F61D`.
+The new proposition adds no unresolved reference or overfull horizontal box
+and passes 1,200-dpi inspection on pages 9--11.  The next sequential cursor is
+Expose 221, Proposition 1.3.

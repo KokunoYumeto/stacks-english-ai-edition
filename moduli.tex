@@ -898,6 +898,83 @@ $T$, and carries a flat coherent sheaf whose fibre classes are the same.
 This proves (4).
 \end{proof}
 
+\begin{proposition}
+\label{proposition-bounded-coherent-morphisms-extensions}
+\begin{reference}
+\cite[Expos\'e 221, Proposition 1.2, pp. 252--253]{FGA}.
+\end{reference}
+Assume in addition that $X \to S$ is proper. Let $E$ and $E'$ be bounded
+families of fibrewise coherent sheaves over $X/S$.
+\begin{enumerate}
+\item The kernels, images, and cokernels of all homomorphisms
+$$
+\mathcal{F} \longrightarrow \mathcal{F}'
+$$
+between members of $E$ and $E'$ form bounded families.
+\item The middle terms of all short exact sequences
+$$
+0 \longrightarrow \mathcal{F}' \longrightarrow \mathcal{H}
+\longrightarrow \mathcal{F} \longrightarrow 0
+$$
+between members of $E$ and $E'$ form a bounded family. The same holds with
+$E$ and $E'$ interchanged.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+By Lemma \ref{lemma-bounded-coherent-elementary}, after replacing the two
+parameter schemes by finite stratifications on which their sheaves are flat
+and taking their fibre product over $S$, we may work with one scheme $T$ of
+finite type over $S$ and two coherent modules $\mathcal{G}$ and
+$\mathcal{G}'$ on $X_T$ which are flat over $T$ and bound $E$ and $E'$.
+
+The functor
+$$
+U/T \longmapsto
+\Hom_{\mathcal{O}_{X_U}}(\mathcal{G}_U, \mathcal{G}'_U)
+$$
+is represented by an algebraic space $H$ affine and of finite presentation
+over $T$; see Quot, Proposition \ref{quot-proposition-hom}. In particular,
+$H$ is a scheme of finite type over $S$. On $X_H$ there is a universal
+homomorphism
+$$
+u : \mathcal{G}_H \longrightarrow \mathcal{G}'_H.
+$$
+Its kernel, image, and cokernel are coherent. Every homomorphism between a
+member of $E$ and a member of $E'$ becomes a fibre of $u$ after passage to
+a common field extension. There is one base-change point to address. Apply
+More on Morphisms, Lemma
+\ref{more-morphisms-lemma-generic-flatness-stratification} to
+$\Coker(u)$ and replace $H$ by the finite disjoint union of the resulting
+strata. Then $\Coker(u)$ is flat over $H$. Since $\mathcal{G}'_H$ is flat,
+$\Im(u)$ is flat over $H$ as well. The two exact sequences defining
+$\Im(u)$ and $\Ker(u)$ therefore remain exact after every base change.
+Thus the fibres of the three coherent modules are respectively the kernel,
+image, and cokernel of the fibre homomorphism, and they bound the three
+families in (1).
+
+For completeness, we recall the additional base-change step needed for
+extensions. Noetherian generic flatness and cohomology and base change,
+applied to the relative derived Hom of $\mathcal{G}'$ into $\mathcal{G}$,
+give a finite stratification of $T$ such that on each stratum the relative
+$\Ext^1$ functor commutes with arbitrary base change and is the functor of
+sections of a finite locally free module. This is the Ext stratification
+used in the proof of the cited result. Replacing $T$ by the finite disjoint
+union of these strata, let $V \to T$ be the corresponding vector bundle.
+Its tautological section is a relative extension class and hence gives a
+short exact sequence
+$$
+0 \longrightarrow \mathcal{G}_V \longrightarrow \mathcal{H}
+\longrightarrow \mathcal{G}'_V \longrightarrow 0
+$$
+on $X_V$. The base-change assertion says that every extension of a geometric
+fibre of $\mathcal{G}'$ by the corresponding fibre of $\mathcal{G}$ occurs
+as a fibre of this sequence after a field extension. Since $V$ is of finite
+type over $S$ and $\mathcal{H}$ is coherent, it bounds the required middle
+terms. Interchanging $\mathcal{G}$ and $\mathcal{G}'$ proves the final
+assertion.
+\end{proof}
+
 
 
 
