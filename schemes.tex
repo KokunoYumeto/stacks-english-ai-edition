@@ -690,6 +690,9 @@ We summarize the results obtained so far.
 
 \begin{lemma}
 \label{lemma-spec-sheaves}
+\begin{reference}
+\cite[Chapter II, \S 1, no. 31, p. 224]{FAC}
+\end{reference}
 Let $R$ be a ring. Let $M$ be an $R$-module. Let $\widetilde M$
 be the sheaf of $\mathcal{O}_{\Spec(R)}$-modules
 associated to $M$.
@@ -1575,6 +1578,10 @@ over $\bigcup (D(f) \cup D(g_j)) = X$ as desired.
 
 \begin{example}
 \label{example-closed-immersion-affines}
+\begin{reference}
+\cite[Chapter II, \S 1, no. 31, Proposition 4 and Corollary,
+p. 225]{FAC}
+\end{reference}
 Let $R$ be a ring.
 Let $I \subset R$ be an ideal.
 Consider the morphism of affine schemes
@@ -1779,6 +1786,9 @@ also. We conclude that $\mathcal{I}$ is quasi-coherent.
 
 \begin{definition}
 \label{definition-immersion}
+\begin{reference}
+\cite[Chapter II, \S 1, no. 31, p. 224]{FAC}
+\end{reference}
 Let $X$ be a scheme.
 \begin{enumerate}
 \item A morphism of schemes is called an {\it open immersion}
@@ -2254,6 +2264,9 @@ scheme structure.
 
 \begin{remark}
 \label{remark-reduced-induced-locally-closed}
+\begin{reference}
+\cite[Chapter II, \S 1, no. 31, pp. 224--225]{FAC}
+\end{reference}
 Let $X$ be a scheme. Let $T \subset X$ be a locally closed subset.
 In this situation we sometimes also use the phrase
 ``reduced induced scheme structure on $T$''. It refers
@@ -2263,6 +2276,20 @@ when we view $T$ as a closed subset of the open subscheme
 $X \setminus \partial T$ of $X$. Here
 $\partial T = \overline{T} \setminus T$ is the ``boundary'' of $T$
 in the topological space of $X$.
+
+Suppose that $k$ is algebraically closed and that
+$T \subset k^n$ is a locally closed algebraic set. Via the identification
+of $k^n$ with the closed points of $\mathbf{A}^n_k$, its classical sheaf of
+functions locally represented by rational functions regular at the point
+agrees with the structure sheaf of the reduced induced scheme on $T$.
+More precisely, if $T = U \cap F$ with $U$ open and $F$ closed, then for
+$x \in T$ the local ring is
+$$
+\left(k[T_1, \ldots, T_n]/I(F)\right)_{\mathfrak m_x}.
+$$
+Indeed, the Hilbert Nullstellensatz identifies $I(F)$ as the radical ideal
+defining $F$, and the assertion follows from
+Example \ref{example-closed-immersion-affines} after restriction to $U$.
 \end{remark}
 
 \begin{lemma}
