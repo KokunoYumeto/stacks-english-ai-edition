@@ -1154,3 +1154,43 @@ The new proposition adds no unresolved citation, unresolved internal
 reference, or overfull horizontal box and passes 1,200-dpi inspection on
 pages 15--16.  The next sequential cursor is Expose 221, Theorem 2.2 and its
 dimension filtration.
+
+The fifty-sixth source patch integrates the intrinsic dimension filtration
+preceding Expose 221, Theorem 2.2 and records a newly confirmed source error
+before importing the theorem.  For every coherent sheaf on a finite-type
+scheme over a field, the new lemma constructs the unique maximal coherent
+submodule supported in dimension less than `r`, identifies the associated
+points of its successive factors and quotient, and proves that the
+construction commutes with extension of the ground field.
+
+Direct 1,200-dpi review of printed page 254 in the NUMDAM authority PDF,
+2,747,079 bytes with SHA-256
+`ABBF37780FDC514BEBD2F1811BFC94E706E44FA8751402CE171510A3F1520968`,
+confirms that Theorem 2.2 prints the coefficient range as degrees at most
+`s-1`.  The linked erratum PDF, 157,623 bytes with SHA-256
+`007990D289E767A54A273CA45E8491F0052F9F015820DDB451D1E2B2D0FE27F9`,
+does not correct it.  Issue `I000015` proves that wording false: on projective
+two-space, the quotients
+`O_{C_d} direct-sum O_{Z_d}`, where `C_d` is a smooth plane curve of degree
+`d` and `length(Z_d)=d(d-3)/2`, all have Hilbert polynomial `dn`; their
+constant coefficients are fixed while their dimension-one truncations
+`O_{C_d}` have unbounded degree.  Both Corollary 2.3 and the source induction
+force the corrected range to be degrees at least `s-1`.  The correction and
+counterexample are visible in
+`moduli-remark-FGA-Hilbert-coefficient-inequality`; no silent normalization is
+made.
+
+Both semantic validators pass with no errors at 21,576 labels, 3,851 topic
+candidates, 394 append-only decisions, 1,253 source units, 1,612 term links,
+and 15 source issues, of which nine remain active.  The decision, issue, and
+map ledgers have SHA-256
+`D8154C08EAF11CD9BCBC4C61F80B1B0BDED4F6CFDA7B819C78F72FD92D38021C`,
+`DA44C064E0944227F1C07E7278FC7B68D2A5531FBCCEC0F986F8A75E6E22D95A`,
+and `6277AD91BF1A334A25BF731E4587AD8B8E2967449BDF3B24B0B0275560C7BCA8`.
+A bibliography-complete build and two final TeX passes produce a 29-page
+Moduli Stacks chapter of 582,624 bytes with SHA-256
+`A4F1E0369656DD9929C770BBF394134035030DBA47AE5556C4E412778981EA1D`.
+The new material adds no unresolved citation, unresolved internal reference,
+or overfull horizontal box and passes 1,200-dpi inspection on pages 16--18.
+The next sequential cursor is the corrected Theorem 2.2, beginning with its
+Chow-coordinate and determinant bounds.

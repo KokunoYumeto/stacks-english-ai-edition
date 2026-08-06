@@ -1509,6 +1509,116 @@ $E$.
 
 
 \begin{lemma}
+\label{lemma-coherent-dimension-truncation}
+\begin{reference}
+\cite[Expos\'e 221, the paragraph preceding Theorem 2.2,
+pp. 254--255]{FGA}.
+\end{reference}
+Let $k$ be a field, let $X$ be a scheme of finite type over $k$, and let
+$\mathcal{F}$ be a coherent $\mathcal{O}_X$-module. For every integer $r$
+there is a unique largest coherent submodule
+$$
+\mathcal{N}_r(\mathcal{F}) \subset \mathcal{F}
+$$
+whose support has dimension $< r$. It is the subsheaf whose sections are the
+sections of $\mathcal{F}$ having support of dimension $< r$. Put
+$$
+\mathcal{F}_{(r)} = \mathcal{F}/\mathcal{N}_r(\mathcal{F}).
+$$
+Then
+\begin{enumerate}
+\item the $\mathcal{N}_r(\mathcal{F})$ form a finite increasing filtration,
+with $\mathcal{N}_r(\mathcal{F})=0$ for $r \leq 0$ and
+$\mathcal{N}_r(\mathcal{F})=\mathcal{F}$ for
+$r>\dim(\operatorname{Supp}(\mathcal{F}))$,
+\item
+$$
+\operatorname{Ass}(\mathcal{F}_{(r)})=
+\{x\in\operatorname{Ass}(\mathcal{F})\mid
+\dim(\overline{\{x\}})\geq r\},
+$$
+\item
+$$
+\operatorname{Ass}(\mathcal{N}_{r+1}(\mathcal{F})/
+\mathcal{N}_r(\mathcal{F}))=
+\{x\in\operatorname{Ass}(\mathcal{F})\mid
+\dim(\overline{\{x\}})=r\},
+$$
+and
+\item formation of $\mathcal{N}_r(\mathcal{F})$ and
+$\mathcal{F}_{(r)}$ commutes with extension of the ground field.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+The sum of two coherent submodules whose supports have dimension $<r$ has
+the same property. Since $\mathcal{F}$ is a Noetherian object, the sum of all
+such submodules is already a finite sum. This gives the largest submodule
+$\mathcal{N}_r(\mathcal{F})$. The same construction after restriction to an
+open subscheme gives its restriction. A local section belongs to this
+submodule if and only if the coherent submodule it generates has support of
+dimension $<r$. This proves the description by sections and (1).
+
+Set $\mathcal{N}=\mathcal{N}_r(\mathcal{F})$ and
+$\mathcal{Q}=\mathcal{F}/\mathcal{N}$. The maximality of $\mathcal{N}$ says
+that $\mathcal{Q}$ has no nonzero coherent submodule with support of
+dimension $<r$. Using the usual properties of associated primes in the exact
+sequence
+$$
+0\longrightarrow\mathcal{N}\longrightarrow\mathcal{F}
+\longrightarrow\mathcal{Q}\longrightarrow0
+$$
+we obtain
+$$
+\operatorname{Ass}(\mathcal{Q})=
+\{x\in\operatorname{Ass}(\mathcal{F})\mid
+\dim(\overline{\{x\}})\geq r\}.
+$$
+Indeed, an associated point of $\mathcal{Q}$ of smaller dimension would
+generate a forbidden submodule. Conversely, if $x$ is associated to
+$\mathcal{F}$ and has dimension at least $r$, then
+$x\notin\operatorname{Supp}(\mathcal{N})$, and localization at $x$ shows that
+$x$ is associated to $\mathcal{Q}$. This proves (2). The associated points of
+$\mathcal{N}_{r+1}(\mathcal{F})$ are precisely the associated points of
+$\mathcal{F}$ having dimension at most $r$. Applying (2) to this submodule
+proves (3).
+
+Let $K/k$ be a field extension. The support of
+$\mathcal{N}_r(\mathcal{F})_K$ has dimension $<r$. By Algebra, Lemma
+\ref{algebra-lemma-bourbaki}, the associated points of
+$\mathcal{F}_{(r),K}$ lie over associated points of
+$\mathcal{F}_{(r)}$; the corresponding irreducible components have the same
+dimension after extension of the ground field. Hence
+$\mathcal{F}_{(r),K}$ has no nonzero coherent submodule with support of
+dimension $<r$. Thus $\mathcal{N}_r(\mathcal{F})_K$ is the largest such
+submodule of $\mathcal{F}_K$, proving (4).
+\end{proof}
+
+\begin{remark}
+\label{remark-FGA-Hilbert-coefficient-inequality}
+The inequality in the printed hypothesis of
+\cite[Expos\'e 221, Theorem 2.2, pp. 254--255]{FGA} is reversed. It asks that
+the coefficients in degrees $\leq s-1$ be bounded. For a counterexample, let
+$X=\mathbf{P}^2_k$ over an algebraically closed field of characteristic zero.
+For $d\geq3$, choose a smooth plane curve $C_d$ of degree $d$ and a
+zero-dimensional subscheme $Z_d$ of length $d(d-3)/2$. Then
+$$
+\mathcal{F}_d=\mathcal{O}_{C_d}\oplus\mathcal{O}_{Z_d}
+$$
+is a quotient of $\mathcal{O}_X^{\oplus2}$ and
+$$
+P_{\mathcal{F}_d}(n)=
+dn+\frac{3d-d^2}{2}+\frac{d(d-3)}2=dn.
+$$
+Thus for $s=1$ all coefficients in degrees $\leq0$ are fixed, whereas
+$(\mathcal{F}_d)_{(1)}=\mathcal{O}_{C_d}$ is not a bounded family: its leading
+coefficient is $d$. The proof of the cited theorem and its Corollary 2.3 both
+require coefficients in degrees $\geq s-1$. We use this corrected inequality
+below.
+\end{remark}
+
+
+\begin{lemma}
 \label{lemma-quot-qc-over-base}
 Let $f : X \to B$ be a separated morphism of finite presentation
 of algebraic spaces. Let $\mathcal{F}$ be a finitely presented
