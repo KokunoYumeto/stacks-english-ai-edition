@@ -895,3 +895,35 @@ Groupoids pages 49--50 and Properties of Algebraic Spaces page 19 contain no
 placeholder and pass 1,200-dpi rendered inspection.  The next substantive
 cursor is Expose 212, Section 6 and Theorem 6.1 together with its linked
 erratum.
+
+The forty-eighth source patch integrates Expose 212, Section 6 at the exact
+point justified by the current Stacks machinery.  A new proper-flat groupoid
+proposition constructs the finite-inertia Keel--Mori algebraic-space quotient
+and proves that its presentation map is surjective, proper, and open, that its
+geometric-point fibres are precisely the orbits, and that the arrow scheme
+surjects onto the quotient kernel pair.  For an actual equivalence relation it
+also proves faithful flatness and effectivity.  The adjacent source-linked
+remark records, without conflation, that the historical theorem additionally
+asserts a scheme quotient and corrected quasi-projectivity, and that those two
+scheme-theoretic refinements do not follow from this argument.
+
+A second new proposition closes Theorem 6.2.  It takes the largest invariant
+dense open on which the quasi-finite stabilizer is finite, forms its
+finite-inertia moduli space, and passes to a dense scheme open in that
+quasi-separated Noetherian algebraic space.  This supplies the exact
+finite-type scheme quotient, openness, orbit fibres, quotient topology, and
+kernel-pair surjectivity of the source; for an equivalence relation the chosen
+quotient is faithfully flat, finitely presented, and effective.  Decisions
+`D000369`--`D000372` supersede the four former Section 6 decisions while
+retaining the unresolved scheme/quasi-projectivity refinement explicitly.
+
+Both semantic validators pass with no errors at 21,557 labels, 372 append-only
+decisions, 1,253 source units, 1,612 term links, and 12 recorded source issues.
+Serial dependency builds and two final TeX passes produce a 53-page More on
+Morphisms of Stacks chapter of 746,808 bytes with SHA-256
+`39BB958A982ED3C64BEB8789903857596AA3E3632591EFF65F7CB4489BDD9D62`.
+The added source occupies lines 4093--4267 and rendered pages 44--46; it adds
+no unresolved reference or overfull box, contains no placeholder, and passes
+1,200-dpi inspection.  The next substantive cursor remains Expose 212,
+Theorem 6.1: audit and, if valid, independently reconstruct the residual
+scheme and corrected quasi-projectivity argument before moving to Section 7.

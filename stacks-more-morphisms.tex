@@ -4090,6 +4090,180 @@ has these properties and $\mathcal{X} \to M$ is a universal
 homeomorphism.
 \end{proof}
 
+\begin{proposition}
+\label{proposition-proper-flat-groupoid-moduli}
+\begin{reference}
+\cite[Expos\'e 212, Th\'eor\`eme 6.1, pp. 112--113, and erratum,
+p. 301]{FGA}.
+\end{reference}
+Let $S$ be a locally Noetherian scheme and let
+$(U, R, s, t, c)$ be a groupoid scheme over $S$. Assume
+\begin{enumerate}
+\item $U \to S$ is quasi-projective,
+\item $s, t : R \to U$ are proper and flat, and
+\item $(t, s) : R \to U \times_S U$ is finite.
+\end{enumerate}
+Then there exist an algebraic space $M$ locally of finite type over $S$
+and a morphism $q : U \to M$ with the following properties:
+\begin{enumerate}
+\item $q$ is surjective, proper, and open,
+\item $|M|$ is the quotient of $|U|$ by the orbit equivalence relation,
+and the sets of geometric points of the fibres of $q$ are the orbits, and
+\item the canonical morphism
+$$
+(t, s) : R \longrightarrow U \times_M U
+$$
+is surjective.
+\end{enumerate}
+If $(t, s)$ is an equivalence relation, then it is effective and
+$q$ is faithfully flat and locally of finite presentation.
+\end{proposition}
+
+\begin{proof}
+The morphisms $s$ and $t$ are locally of finite presentation because
+their targets are locally Noetherian. Hence
+$\mathcal{X} = [U/R]$ is an algebraic stack by Criteria for
+Representability, Theorem
+\ref{criteria-theorem-flat-groupoid-gives-algebraic-stack}.
+Let $G \to U$ be the stabilizer group scheme. By Morphisms of Stacks,
+Lemma \ref{stacks-morphisms-lemma-presentation-inertia}, it is the
+pullback of the inertia of $\mathcal{X}$. On the other hand,
+$G \to U$ is the base change of $(t, s)$ by the diagonal
+$U \to U \times_S U$. Since being finite is fppf local on the target,
+the inertia of $\mathcal{X}$ is finite.
+
+Apply Theorem \ref{theorem-keel-mori} to obtain a uniform categorical
+moduli space $f : \mathcal{X} \to M$, and let
+$q : U \to \mathcal{X} \to M$ be the composition. The algebraic stack
+$\mathcal{X}$ is locally of finite type over $S$, and hence
+$M \to S$ is locally of finite type by
+Lemma \ref{lemma-keel-mori-finite-type}.
+
+Write $a : U \to \mathcal{X}$ for the presentation. It is surjective,
+flat, and locally of finite presentation. It is also proper: after the
+surjective fppf base change $U \to \mathcal{X}$ this assertion becomes
+the properness of $s : R \to U$. Since $f$ is quasi-compact and a
+universal homeomorphism, the composition $q = f \circ a$ is
+quasi-compact and universally closed. It is locally of finite type by
+Morphisms of Spaces, Lemma
+\ref{spaces-morphisms-lemma-permanence-finite-type}. It is separated
+because $U \to S$ is separated, by Morphisms of Spaces, Lemma
+\ref{spaces-morphisms-lemma-compose-after-separated}. Consequently
+$q$ is proper. The morphism $a$ is open, and $|f|$ is a homeomorphism;
+hence $q$ is open as well.
+
+Morphisms of Stacks, Lemma
+\ref{stacks-morphisms-lemma-points-presentation} identifies
+$|\mathcal{X}|$ with the orbit space of $|U|$. Since $|f|$ is a
+homeomorphism, this proves the assertion about topological spaces and
+geometric fibres. Finally, let $\Spec(k) \to U \times_M U$ be a
+geometric point. The description of geometric points in the proof of
+Theorem \ref{theorem-keel-mori} says that two objects over an
+algebraically closed field have the same image in $M(k)$ exactly when
+they are isomorphic. Such an isomorphism is a $k$-valued point of $R$.
+This proves the surjectivity of $R \to U \times_M U$.
+
+Suppose now that $(t, s)$ is an equivalence relation. Then
+$\mathcal{X}$ has no nontrivial automorphisms, so it is an algebraic
+space by Algebraic Stacks, Proposition
+\ref{algebraic-proposition-algebraic-stack-no-automorphisms}.
+The identity of $\mathcal{X}$ is a uniform categorical moduli space;
+the universal properties of it and of $f$ show that
+$f : \mathcal{X} \to M$ is an isomorphism. Thus $q=a$ is faithfully
+flat and locally of finite presentation, and
+$R = U \times_{\mathcal{X}} U = U \times_M U$.
+\end{proof}
+
+\begin{remark}
+\label{remark-proper-flat-groupoid-scheme-refinement}
+The historical theorem cited above asserts in addition that $M$ is a
+scheme and, when $S$ is Noetherian and $(t, s)$ is an equivalence
+relation, that $M$ is quasi-projective over $S$. Its published erratum
+specifies that the proof of the quasi-projectivity assertion applies
+only in the equivalence-relation case. Proposition
+\ref{proposition-proper-flat-groupoid-moduli} records the conclusions
+that follow from the algebraic-stack and moduli-space argument; it does
+not assert either of those two scheme-theoretic refinements.
+\end{remark}
+
+\begin{proposition}
+\label{proposition-dense-scheme-quotient-quasi-finite-stabilizer}
+\begin{reference}
+\cite[Expos\'e 212, Th\'eor\`eme 6.2, pp. 113--114]{FGA}.
+\end{reference}
+Let $S$ be a Noetherian scheme and let
+$(U, R, s, t, c)$ be a groupoid scheme over $S$. Assume
+\begin{enumerate}
+\item $U \to S$ is of finite type,
+\item $s, t : R \to U$ are flat and of finite type, and
+\item $(t, s) : R \to U \times_S U$ is quasi-finite.
+\end{enumerate}
+There exist a dense invariant open $V \subset U$, a scheme $M$ of
+finite type over $S$, and a morphism $q : V \to M$ such that
+\begin{enumerate}
+\item $q$ is surjective and open,
+\item $|M|$ is the quotient of $|V|$ by the orbit equivalence relation,
+and the sets of geometric points of the fibres of $q$ are the orbits, and
+\item the canonical morphism
+$$
+(t, s) : R|_V \longrightarrow V \times_M V
+$$
+is surjective.
+\end{enumerate}
+If $(t, s)$ is an equivalence relation, then $q$ may be chosen
+faithfully flat and of finite presentation, and the relation is
+effective on $V$.
+\end{proposition}
+
+\begin{proof}
+The schemes $U$ and $R$ are Noetherian, and $s$ and $t$ are locally of
+finite presentation. Let $G \to U$ be the stabilizer group scheme.
+It is quasi-finite because it is the base change of $(t, s)$ by the
+diagonal $U \to U \times_S U$. By More on Morphisms, Lemma
+\ref{more-morphisms-lemma-quasi-finite-finite-over-dense-open}, there
+is a dense open over which $G \to U$ is finite. Let $U_0 \subset U$
+be the largest such open. Since $s$ and $t$ are fppf coverings,
+More on Groupoids, Lemma
+\ref{more-groupoids-lemma-property-G-invariant} shows that $U_0$ is
+invariant. In particular $U_0$ is dense in $U$.
+
+Set $R_0 = R|_{U_0}$ and $\mathcal{X}_0 = [U_0/R_0]$. By Criteria for
+Representability, Theorem
+\ref{criteria-theorem-flat-groupoid-gives-algebraic-stack}, this is an
+algebraic stack. Its inertia is finite by Morphisms of Stacks, Lemma
+\ref{stacks-morphisms-lemma-presentation-inertia}. Theorem
+\ref{theorem-keel-mori} gives a uniform categorical moduli space
+$f : \mathcal{X}_0 \to M_0$. Lemma
+\ref{lemma-keel-mori-finite-type} shows that $M_0 \to S$ is locally of
+finite type. Moreover $\mathcal{X}_0$ is quasi-separated, because its
+diagonal is presented by the quasi-finite morphism
+$R_0 \to U_0 \times_S U_0$. Hence $M_0$ is quasi-separated by
+Lemma \ref{lemma-keel-mori-diagonal}. The space $M_0$ is quasi-compact:
+its underlying space is the image of the Noetherian scheme $U_0$.
+It is also locally Noetherian, and hence it is Noetherian. Thus
+$M_0 \to S$ is of finite type.
+
+By Properties of Spaces, Proposition
+\ref{spaces-properties-proposition-locally-quasi-separated-open-dense-scheme},
+there is a dense open subspace $M \subset M_0$ which is a scheme. Let
+$V \subset U_0$ be its inverse image. Since $M_0$ is Noetherian, the
+scheme $M$ is still of finite type over $S$. The morphism
+$U_0 \to \mathcal{X}_0 \to M_0$ is surjective and open: the first
+map is flat and locally of finite presentation, and the second is a
+homeomorphism on underlying spaces. It follows that $V$ is dense in
+$U_0$, hence in $U$, and it is invariant. The same argument as in
+Proposition \ref{proposition-proper-flat-groupoid-moduli} now gives
+the orbit, quotient-topology, geometric-fibre, and kernel-pair
+surjectivity assertions for $q : V \to M$.
+
+If $(t, s)$ is an equivalence relation, then $G \to U$ is an
+isomorphism, so $U_0=U$. As in the final paragraph of the proof of
+Proposition \ref{proposition-proper-flat-groupoid-moduli}, the quotient
+stack is an algebraic space and its moduli-space morphism is an
+isomorphism. Consequently $q$ is faithfully flat and of finite
+presentation and $R|_V = V \times_M V$.
+\end{proof}
+
 
 
 
