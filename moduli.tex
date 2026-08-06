@@ -2626,6 +2626,265 @@ Lemma \ref{quot-lemma-hilb-is-quot}.
 
 
 
+\section{Zero cycles and the Grothendieck--Deligne norm map}
+\label{section-zero-cycles}
+
+\noindent
+The symmetric product is the expected parameter space for effective zero
+cycles when the morphism to the base is flat. Without flatness, divided
+powers give a better behaved parameter space: they commute with arbitrary
+base change. We record the comparison before constructing the norm map.
+
+\begin{theorem}
+\label{theorem-divided-power-zero-cycles}
+\begin{reference}
+\cite[Theorem 3.4.1, Corollary 4.2.5, and Proposition
+4.2.6]{Rydh-zero-cycles-I}.
+\end{reference}
+Let $X \to S$ be a separated morphism of algebraic spaces and let $d \geq 0$.
+There is a separated algebraic space
+$$
+\Gamma^d(X/S) \longrightarrow S
+$$
+parametrizing effective zero cycles of degree $d$, with the following
+properties.
+\begin{enumerate}
+\item Formation of $\Gamma^d(X/S)$ commutes with arbitrary base change on
+$S$.
+\item If $S = \Spec(A)$ and $X = \Spec(B)$, then
+$$
+\Gamma^d(X/S) = \Spec(\Gamma_A^d(B)),
+$$
+where $\Gamma_A^d(B)$ represents homogeneous multiplicative polynomial
+laws of degree $d$ from $B$.
+\item Addition of cycles gives a morphism
+$$
+\Psi : (X/S)^d \longrightarrow \Gamma^d(X/S).
+$$
+The locus $\Gamma^d(X/S)_{\mathrm{nd}}$ where the corresponding geometric
+cycle has $d$ distinct points is open, and $\Psi$ is finite \'etale of degree
+$d!$ over this locus.
+\item The uniform categorical quotient
+$$
+\operatorname{Sym}^d_S(X) = (X/S)^d/\mathfrak S_d
+$$
+exists as a separated algebraic space. There is a canonical morphism
+$$
+\operatorname{Sym}^d_S(X) \longrightarrow \Gamma^d(X/S)
+$$
+which is a universal homeomorphism with trivial residue field extensions.
+It is an isomorphism if $X \to S$ is flat, and it is an isomorphism over
+$\Gamma^d(X/S)_{\mathrm{nd}}$ without a flatness assumption.
+\end{enumerate}
+For an $A$-algebra $C$, a homogeneous multiplicative polynomial law
+$F : B \to C$ of degree $d$ is a collection of maps
+$$
+F_{A'} : B \otimes_A A' \longrightarrow C \otimes_A A'
+$$
+natural in the $A$-algebra $A'$, multiplicative and unital, and satisfying
+$F_{A'}(a x) = a^dF_{A'}(x)$.
+\end{theorem}
+
+\begin{proof}
+The affine description is the universal property of the algebra of divided
+powers. It also proves arbitrary base change in the affine case. The global
+space is obtained from the affine spaces of divided powers using \'etale
+presentations. Addition of polynomial laws gives $\Psi$ and shows that the
+nondegenerate locus is open. The quotient morphism is integral and has the
+same geometric fibres as $\Psi$, which proves the assertion about its
+topological and residue-field behaviour. In the affine flat case the
+comparison is induced by the isomorphism between divided powers and
+symmetric tensors; the general flat case follows from the \'etale-local
+construction.
+\end{proof}
+
+\noindent
+Let $f : X \to S$ be separated and let $\mathcal{F}$ be a finitely presented
+quasi-coherent $\mathcal{O}_X$-module. We write
+$\Quotfunctor^d_{\mathcal{F}/X/S}$ for the subfunctor of the Quot functor
+whose objects over $T \to S$ are quotients
+$$
+\mathcal{F}_T \longrightarrow \mathcal{G}
+$$
+such that $\mathcal{G}$ is finitely presented and flat over $T$, its support
+is finite over $T$, and $p_*\mathcal{G}$ is locally free of rank $d$, where
+$p : X_T \to T$. Similarly, $\Hilbfunctor^d_{X/S}$ denotes the functor of
+closed subspaces $Z \subset X_T$ finite locally free of degree $d$ over $T$.
+
+\begin{proposition}
+\label{proposition-grothendieck-deligne-norm}
+\begin{reference}
+\cite[Expos\'e 221, Section 6]{FGA} and
+\cite[Sections 3 and 6]{Rydh-zero-cycles-II}.
+\end{reference}
+There are canonical transformations
+$$
+\Quotfunctor^d_{\mathcal{F}/X/S} \longrightarrow \Gamma^d(X/S)
+\quad\text{and}\quad
+\Hilbfunctor^d_{X/S} \longrightarrow \Gamma^d(X/S).
+$$
+They commute with arbitrary base change on $S$. The second transformation,
+obtained from the first by taking $\mathcal{F} = \mathcal{O}_X$, is called
+the Grothendieck--Deligne norm map.
+
+If $k$ is an algebraically closed field and $\mathcal{G}$ is a $k$-point of
+the first functor, then its image is
+$$
+\sum_{x \in \operatorname{Supp}(\mathcal{G})}
+\operatorname{length}_{\mathcal{O}_{X_k,x}}(\mathcal{G}_x)[x].
+$$
+\end{proposition}
+
+\begin{proof}
+The construction is local on the base. Suppose first that $T = \Spec(A)$
+and that the finite support of $\mathcal{G}$ is contained in an affine
+$\Spec(B) \subset X_T$. Multiplication gives an $A$-algebra homomorphism
+$$
+B \longrightarrow \operatorname{End}_A(p_*\mathcal{G}).
+$$
+For every $A$-algebra $A'$, take the determinant of the induced endomorphism
+of the rank $d$ locally free $A'$-module
+$p_*\mathcal{G} \otimes_A A'$. These determinants form a homogeneous
+multiplicative polynomial law of degree $d$. By Theorem
+\ref{theorem-divided-power-zero-cycles}, it determines a morphism
+$T \to \Gamma^d(X/S)$. Determinants commute with arbitrary base change.
+The construction is independent of the affine neighbourhood and glues
+\'etale locally, giving the asserted transformations.
+
+For the formula over $k$, decompose $p_*\mathcal{G}$ into the direct sum of
+its local factors. The determinant of multiplication by a function is the
+product of its values at the support points, each raised to the length of
+the corresponding local factor. This is exactly the displayed cycle.
+\end{proof}
+
+\begin{remark}
+\label{remark-norm-symmetric-morphism}
+\begin{reference}
+\cite[Expos\'e 221, Section 6]{FGA}.
+\end{reference}
+Assume that $X \to S$ is flat and let $Y \to S$ be an algebraic space. A
+symmetric morphism $u : (X/S)^d \to Y$ factors uniquely through the
+categorical quotient $\operatorname{Sym}^d_S(X)$. Since
+$\operatorname{Sym}^d_S(X) = \Gamma^d(X/S)$ by Theorem
+\ref{theorem-divided-power-zero-cycles}, composition with Proposition
+\ref{proposition-grothendieck-deligne-norm} gives the operation customarily
+denoted $\pi^u$. If $X = Y$ is a commutative monoid and $u$ is
+multiplication, this specializes to the usual norm operation. For a nonflat
+$X/S$, the canonical and base-change-compatible target of the determinant
+construction is $\Gamma^d(X/S)$, which need not equal the symmetric product.
+\end{remark}
+
+\begin{proposition}
+\label{proposition-hilbert-symmetric-product}
+\begin{reference}
+\cite[Definition 4.3.1]{Rydh-hilbert-chow-points}.
+\end{reference}
+For every separated morphism $X \to S$ there is a canonical transformation
+$$
+\Hilbfunctor^d_{X/S} \longrightarrow \operatorname{Sym}^d_S(X)
+$$
+whose composition with
+$\operatorname{Sym}^d_S(X) \to \Gamma^d(X/S)$ is the
+Grothendieck--Deligne norm map.
+\end{proposition}
+
+\begin{proof}
+Let $Z \subset X_T$ be finite locally free of degree $d$ over $T$. Since
+$Z \to T$ is flat, Theorem \ref{theorem-divided-power-zero-cycles} gives
+$$
+\operatorname{Sym}^d_T(Z) \xrightarrow{\sim} \Gamma^d(Z/T).
+$$
+The norm of $\mathcal{O}_Z$ is a $T$-point of the right hand side. Transport
+it to the symmetric product and then use the morphism
+$\operatorname{Sym}^d_T(Z) \to
+\operatorname{Sym}^d_S(X) \times_S T$ induced by $Z \to X_T$.
+This construction commutes with pullback in $T$ and has the required
+compatibility with the norm map.
+\end{proof}
+
+\begin{proposition}
+\label{proposition-hilbert-chow-nondegenerate}
+\begin{reference}
+\cite[Section 6]{Rydh-zero-cycles-II}.
+\end{reference}
+Let $X \to S$ be separated. The Grothendieck--Deligne norm map induces an
+isomorphism from the subfunctor of $\Hilbfunctor^d_{X/S}$ parametrizing
+finite \'etale closed subspaces onto
+$\Gamma^d(X/S)_{\mathrm{nd}}$. Equivalently, the morphism of Proposition
+\ref{proposition-hilbert-symmetric-product} is an isomorphism over the
+nondegenerate locus of the symmetric product.
+\end{proposition}
+
+\begin{proof}
+The assertion is \'etale local on the base. A nondegenerate cycle becomes a
+sum of $d$ pairwise distinct sections after an \'etale base change. Their
+disjoint union is the unique finite \'etale closed subspace producing the
+cycle. This construction descends, and it is inverse to the norm map.
+\end{proof}
+
+\begin{proposition}
+\label{proposition-hilbert-chow-smooth-curves}
+\begin{reference}
+\cite[Expos\'e 221, Section 6(b)]{FGA} and
+\cite[Section 6]{Rydh-zero-cycles-II}.
+\end{reference}
+Let $X \to S$ be a separated smooth morphism of schemes of relative
+dimension $1$.
+Then the canonical morphisms
+$$
+\Hilbfunctor^d_{X/S}
+\longrightarrow \operatorname{Sym}^d_S(X)
+\longrightarrow \Gamma^d(X/S)
+$$
+are isomorphisms.
+\end{proposition}
+
+\begin{proof}
+The second morphism is an isomorphism because $X \to S$ is flat. A finite
+locally free closed subspace of a smooth relative curve is a relative
+effective Cartier divisor; see Picard Schemes of Curves, Lemma
+\ref{pic-lemma-divisors-on-curves}. Addition of divisors gives an
+$\mathfrak S_d$-invariant morphism
+$$
+(X/S)^d \longrightarrow \Hilbfunctor^d_{X/S}.
+$$
+It is finite locally free of degree $d!$ by repeated application of Picard
+Schemes of Curves, Lemma \ref{pic-lemma-universal-object}. Hence it is an
+fpqc covering. It factors through a morphism
+$$
+\operatorname{Sym}^d_S(X) \longrightarrow \Hilbfunctor^d_{X/S}.
+$$
+Let $a$ denote this morphism and let $b$ denote the
+Hilbert-to-symmetric-product morphism. The equality
+$b \circ a = \operatorname{id}$ follows from the categorical quotient
+property after composition with $(X/S)^d \to \operatorname{Sym}^d_S(X)$.
+The equality $a \circ b = \operatorname{id}$ may be checked after the
+displayed fpqc covering of $\Hilbfunctor^d_{X/S}$, where it follows
+directly from the construction by adding the $d$ sections.
+\end{proof}
+
+\begin{example}
+\label{example-hilbert-chow-not-injective}
+Let $X$ be smooth of dimension at least $2$ over an algebraically closed
+field $k$, and let $x \in X(k)$. Put
+$R = \mathcal{O}_{X,x}$ and let $\mathfrak m$ be its maximal ideal. Ideals
+$$
+\mathfrak m^2 \subset I \subset \mathfrak m
+\quad\text{with}\quad
+\dim_k(\mathfrak m/I) = 1
+$$
+give distinct length-two closed subschemes supported at $x$. They are
+parametrized by the one-dimensional quotients of
+$\mathfrak m/\mathfrak m^2$, while all have norm cycle $2[x]$. Thus the
+Hilbert--Chow morphism need not be injective already for $d = 2$. Adding
+$d - 2$ fixed reduced points away from $x$ gives the same conclusion for
+every $d > 1$.
+\end{example}
+
+
+
+
+
 \section{Properties of the Picard stack}
 \label{section-picard-stack}
 

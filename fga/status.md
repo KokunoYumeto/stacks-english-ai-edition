@@ -1387,3 +1387,62 @@ Criteria pages 18--20, and Moduli pages 27--28 with no clipping, collision,
 malformed formula, or unreadable text.  The next sequential cursor is
 Expose 221, Section 6, beginning on printed page 273 with the relation
 between the norm and symmetric products.
+
+The sixty-first source patch completes Expose 221, Section 6, printed pages
+273--275 (physical PDF pages 26--28).  The Moduli chapter now represents
+effective relative zero cycles of degree `d` by the divided-power space
+`Gamma^d(X/S)`, including its affine divided-power description, arbitrary
+base change, addition law, nondegenerate locus, and comparison with the
+symmetric product.  A finite-support flat quotient carries the canonical
+Grothendieck--Deligne determinant norm cycle in `Gamma^d(X/S)`.  When `X/S`
+is flat this refines to the classical symmetric-product operation.
+
+The same section constructs the general Hilbert--symmetric-product morphism,
+proves that it is an isomorphism on the finite-etale locus, and proves
+`Hilb^d(X/S) = Sym^d(X/S) = Gamma^d(X/S)` for a smooth relative curve.  The
+higher-dimensional length-two tangent-direction example records why the
+Hilbert--Chow morphism is not injective in relative dimension greater than
+one.  The controlled topic map consequently adds explicit effective-zero-
+cycle, divided-power, symmetric-product, and norm-map topics and upgrades the
+Hilbert-scheme comparison from partial to direct coverage.
+
+Direct 1,200-dpi review covers all three authority pages.  The NUMDAM
+authority remains 2,747,079 bytes with SHA-256
+`ABBF37780FDC514BEBD2F1811BFC94E706E44FA8751402CE171510A3F1520968`.
+The linked erratum authority remains 157,623 bytes with SHA-256
+`007990D289E767A54A273CA45E8491F0052F9F015820DDB451D1E2B2D0FE27F9`
+and is silent on Section 6.  Issue `I000028` records that the source first
+states the symmetric-product comparison is an isomorphism for `n=0,1` and
+then prints “for `n >= 1`”; the mathematically coherent inequality `n > 1`
+is used and justified rather than normalized silently.  Issue `I000029`
+records the target refinement: the general determinant construction lands
+canonically in divided powers, while the symmetric-product target is
+available under flatness and the general Hilbert--symmetric-product map is a
+separate construction.
+
+Both semantic validators pass with no errors at 21,607 labels, 21,437
+official-tag joins, 59 controlled topics, 4,008 topic candidates, 435
+append-only decisions, 1,253 source units, 1,612 term links, and 29 source
+issues, of which eight remain active.  The topic, decision, issue, map,
+Stacks-label, topic-candidate, and reviewed-topic-map ledgers have SHA-256
+`6B7D676E9AB97940B8421BF7A837EC7C4E7B9DEC9696196CEC00BEE94A9A111A`,
+`C07E106FB6F51668F7BD485B1004D42A163747BC5580757F9E7EC542F7A9E40C`,
+`AC8AF727BD8D9A669E47C900F883CEADCCA49E1C94D894CECC548B81EC53E95D`,
+`AEFEA5817EC08A2B074D3744F6AC65A7102B4C0E891C90E9E3B2DDD2874C1137`,
+`A75FD5EFCE3F4DD34C9550853586E30564C8655588B2E12658057BA9C8CD215E`,
+`DA456BAD659D1BED051FC09AC20A23C1C250AF3D9A25CD5D0CADA75A95123FE9`,
+and `0E059E18B8038AC07A0A57CF659DCCF2AAA9B60BB4F8A4F29EFACB3A250377D9`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`;
+the new semantic labels deliberately have no invented official tags.
+
+A bibliography-complete serial build followed by two final TeX passes
+produces a 41-page Moduli chapter of 667,983 bytes with SHA-256
+`258C8E7F5E4A87CC5592F67D68F7F58B2FB10DF392780A1D18025155782CD2C2`.
+All new labels and citations resolve.  The addition creates no overfull or
+underfull horizontal box; the standalone build retains only pre-existing
+external cross-chapter auxiliary warnings.  Final 1,200-dpi inspection of
+Moduli pages 28--30 finds no clipping, collision, malformed formula, or
+unreadable text.  The next sequential cursor is Expose 221, Section 7,
+“Complements and questions,” beginning on printed page 275 (physical PDF
+page 28).
