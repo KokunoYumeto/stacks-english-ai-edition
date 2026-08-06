@@ -5278,6 +5278,149 @@ naturality identifies the displayed isomorphisms for general $T$ with the
 canonical cohomology base change map. This proves the final assertion.
 \end{proof}
 
+\begin{lemma}[Lifting the Picard identity component]
+\label{lemma-picard-identity-component-nilpotent-lift}
+\begin{reference}
+\cite[Expos\'e 236, Remark 3.7, p. 240]{FGA}.
+\end{reference}
+In the situation of Proposition
+\ref{proposition-canonical-abelian-picard-parameter}, let
+$S_0 \subset S$ be the closed subscheme defined by a coherent nilpotent ideal.
+Suppose that the fibrewise identity-component locus of $P_{S_0}$ is
+represented by an open subgroup scheme
+$$
+G_0 \subset P_{S_0}
+$$
+which is an abelian scheme over $S_0$. Then the fibrewise
+identity-component locus of $P$ is represented by an open abelian subscheme
+$G \subset P$, and $G_{S_0}=G_0$.
+\end{lemma}
+
+\begin{proof}
+Filter the defining ideal by its powers. It is enough to treat a square-zero
+extension with ideal $\mathcal{I}$. The obstruction calculation in Lemma
+\ref{lemma-lift-canonical-abelian-picard} is relative over $S_0$, as we now
+explain.
+
+Write $p : G_0 \to S_0$ and $f_0 : X_{S_0} \to S_0$. The relative form of
+Examples of Deformation Problems, Lemma
+\ref{examples-defos-lemma-abelian-variety-formal-moduli-smooth} gives, locally
+on $S$, lifts of $G_0$ as an abelian scheme. The sheaf of choices of a lift is
+a torsor under
+\begin{equation}
+\label{equation-relative-choices-lift-picard}
+R^1p_*\mathcal{T}_{G_0/S_0}\otimes_{\mathcal{O}_{S_0}}\mathcal{I}.
+\end{equation}
+Choose a lift locally. The obstruction to lifting the normalized Poincar\'e
+class which represents $G_0 \to P_{S_0}$ has, after removing its two pure
+components, its value in
+\begin{equation}
+\label{equation-relative-obstruction-lift-picard}
+R^1f_{0,*}\mathcal{O}_{X_{S_0}}
+\otimes_{\mathcal{O}_{S_0}}
+R^1p_*\mathcal{O}_{G_0}
+\otimes_{\mathcal{O}_{S_0}}\mathcal{I}.
+\end{equation}
+This is the relative Kunneth decomposition of the obstruction from More on
+Morphisms, Lemma
+\ref{more-morphisms-lemma-picard-group-first-order-thickening}.
+
+The tangent calculation in the proof of Lemma
+\ref{corollary-picard-R1-locally-free-base-change} identifies
+$$
+R^1f_{0,*}\mathcal{O}_{X_{S_0}}
+=e^*\mathcal{T}_{G_0/S_0}.
+$$
+Since the tangent bundle of an abelian scheme is pulled back from the identity
+section, the modules in
+(\ref{equation-relative-choices-lift-picard}) and
+(\ref{equation-relative-obstruction-lift-picard}) are canonically isomorphic.
+As in Lemma \ref{lemma-lift-canonical-abelian-picard}, varying the lift of
+$G_0$ changes the Poincar\'e obstruction through this isomorphism. There is
+therefore a unique correction which kills the obstruction. The lifted class
+gives a homomorphism from the corrected abelian scheme to $P$ and the same
+properness, quasi-finiteness, and Nakayama argument makes it a canonical
+closed abelian Picard subscheme.
+
+This construction is compatible with restriction. On overlaps the resulting
+subgroups agree by Lemma \ref{lemma-canonical-abelian-picard-unique}; hence the
+local subgroups descend to a subgroup $G \subset P$. Its reduction $G_0$ is
+open in $P_{S_0}$. Applying Nakayama's lemma to the ideal of $G$ on the
+corresponding open of $P$ shows that this ideal is zero. Thus $G$ is open in
+$P$. Repeating the square-zero argument along the chosen filtration proves
+the lemma.
+\end{proof}
+
+\begin{lemma}[Structure sheaf cohomology of an abelian scheme]
+\label{lemma-abelian-scheme-cohomology-exterior}
+\begin{reference}
+\cite[Expos\'e 236, Remark 3.7, p. 240]{FGA}.
+\end{reference}
+Let $f : A \to S$ be an abelian scheme. Cup product gives a canonical
+isomorphism of graded $\mathcal{O}_S$-algebras
+$$
+\bigwedge\nolimits^\bullet R^1f_*\mathcal{O}_A
+\longrightarrow
+\bigoplus_{i \geq 0}R^if_*\mathcal{O}_A.
+$$
+In particular, every $R^if_*\mathcal{O}_A$ is finite locally free and its
+formation commutes with arbitrary base change. On an open and closed part of
+$S$ where $A$ has relative dimension $g$, it has rank $\binom{g}{i}$ and is
+zero for $i>g$.
+\end{lemma}
+
+\begin{proof}
+The dual abelian scheme of Theorem \ref{theorem-dual-abelian-scheme} is smooth,
+so Lemma \ref{corollary-picard-R1-locally-free-base-change}, applied to $A$,
+first shows that $R^1f_*\mathcal{O}_A$ is finite locally free and commutes with
+base change.
+
+Put $K=Rf_*\mathcal{O}_A$. Perfect, Lemma
+\ref{perfect-lemma-flat-proper-perfect-direct-image-general} says that $K$ is
+perfect and commutes with arbitrary base change. The Rosenlicht--Serre fibre
+theorem recorded in the cited source says that for every geometric point
+$\overline{s}$ of $S$, cup product is an isomorphism
+$$
+\bigwedge\nolimits^i
+H^1(A_{\overline{s}},\mathcal{O}_{A_{\overline{s}}})
+\longrightarrow
+H^i(A_{\overline{s}},\mathcal{O}_{A_{\overline{s}}}).
+$$
+Before knowing base change for the higher direct images, take the iterated cup
+product from the tensor power of $R^1f_*\mathcal{O}_A$ to $R^if_*\mathcal{O}_A$.
+After tensoring with a geometric residue field and then applying the canonical
+cohomology base change map, this is the fibrewise cup product. It is
+surjective by the displayed Rosenlicht--Serre isomorphism. Hence the canonical
+base change map
+$$
+R^if_*\mathcal{O}_A\otimes\kappa(\overline{s})
+\longrightarrow H^i(A_{\overline{s}},\mathcal{O}_{A_{\overline{s}}})
+$$
+is surjective for every $i$ and every geometric point $\overline{s}$.
+
+We recall the elementary perfect-complex consequence of this simultaneous
+surjectivity. Near a point of $S$, More on Algebra, Lemma
+\ref{more-algebra-lemma-lift-perfect-from-residue-field} represents $K$ by a
+bounded complex $M^\bullet$ of finite free modules whose differentials vanish
+on the residue field. Surjectivity of the base change map in degree $i$ says
+that a basis of $M^i$ modulo the maximal ideal lifts to cycles in $M^i$.
+Those lifts form a basis after localization by Nakayama's lemma, and therefore
+the differential $M^i\to M^{i+1}$ is zero. Applying this in every degree shows
+that, locally on $S$, all differentials of $M^\bullet$ vanish. Consequently
+every $R^if_*\mathcal{O}_A$ is finite locally free and cohomology commutes with
+arbitrary base change.
+
+The cup products now give morphisms between finite locally free modules. The
+exterior relations hold on every geometric fibre by the Rosenlicht--Serre
+theorem, hence hold over $S$, and the resulting maps
+$$
+\bigwedge\nolimits^iR^1f_*\mathcal{O}_A
+\longrightarrow R^if_*\mathcal{O}_A
+$$
+are isomorphisms on every geometric fibre. They are therefore isomorphisms.
+This also proves the assertions about ranks and vanishing.
+\end{proof}
+
 \section{Properties of the Picard stack}
 \label{section-picard-stack}
 

@@ -3412,3 +3412,63 @@ The new source range creates no overfull or underfull box. Final serial
 1,100-dpi inspection of Moduli pages 57--58 finds no clipping, collision,
 malformed formula, unresolved new reference, placeholder, or unreadable text.
 The next sequential cursor is Remark 3.7 on printed pages 240--241.
+
+The preceding cursor is corrected here: FGA 236, Remark 3.7 occupies printed
+page 240 only. It is now integrated as Moduli, Lemmas
+`moduli-lemma-picard-identity-component-nilpotent-lift` and
+`moduli-lemma-abelian-scheme-cohomology-exterior`, with labelled relative
+deformation-choice and mixed Poincare-obstruction equations. The first lemma
+filters a coherent nilpotent thickening into square-zero layers, identifies
+the relative torsor of abelian lifts with the mixed obstruction space for the
+normalized Poincare class, corrects the lift, descends it uniquely, and uses
+Nakayama to recover the open Picard identity-component locus. The second
+lemma proves for an abelian scheme that every structure-sheaf direct image is
+finite locally free with arbitrary base change and that cup product gives the
+full graded exterior algebra on `R^1f_*O_A`.
+
+For the latter proof, fibre dimensions alone were explicitly rejected as
+insufficient over a nonreduced base. Instead, the Rosenlicht--Serre fibre
+isomorphism makes every canonical cohomology base-change map surjective; a
+minimal finite free representative of the perfect direct image then has
+every differential zero locally. This proves higher local freeness and base
+change before the fibrewise exterior-algebra maps are promoted to global
+isomorphisms.
+
+Decision `D000565` supersedes reviewed-gap decision `D000292` and records the
+unit as integrated source and Stacks content. Direct 1,100-dpi source review
+uses printed page 240, whose page image has SHA-256
+`5D0808CE1BFF8CB01E720159F00972A39F8D0DD8B6BC3D0593CD129DAE2C913E`.
+The 24-page authority remains 2,461,968 bytes with SHA-256
+`266EEF77BF7BA34A75895ED69ACBFE791A2958DD52C2837D75AB29DF0D2F714A`.
+
+Both semantic validators pass with no errors at 21,721 labels, 21,437
+official-tag joins, 71 controlled topics, 4,272 topic candidates, 565
+append-only decisions, 1,253 source units, 1,612 term links, and 59 source
+issues, of which eight remain active; there are zero review units. The topic,
+decision, issue, map, Stacks-label, topic-candidate, reviewed-topic-map,
+index-validation, and map-validation files have SHA-256
+`B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0`,
+`D0A4EEBC977FC785DA2873793102A6912F2256BE99173670F0E0C56CA4C52C50`,
+`ECE83F139D6E457796604266A142691BAD503DD937B38ED05BCCD0E80B378CDE`,
+`A5E99833722566CCED88F2AFB1FED4942ACA21FA1CCC6E959B401569F97EB102`,
+`1528D7595FD476AB4E5F7F46CFB5B43458AEC63CF8352E4969E62C1354E5A2CB`,
+`035066AEBF698216F5F90FC4695C0D468C9B28265504684676AB410E5401D880`,
+`26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46`,
+`90905D1A7FD0C4F25E2273EA1905428DB7114A354F812107E3EFBD857E16CCAF`,
+and `8691BF15EBDA57ED76BD1567BBB1DB071AD560EE56D555C86A94F4C9D5BD4B33`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`;
+no official tag was invented for either new lemma or either new equation.
+
+Successive reproducible serial TeX passes produce a 73-page Moduli chapter
+of 880,880 bytes with SHA-256
+`788584D52AC1296B7FD3B75BE57109F93CAC3C6A19BF1A158A8E25B07D81D548`.
+The new source range creates no overfull or underfull box. Final serial
+1,100-dpi inspection of Moduli pages 57--60 finds no clipping, collision,
+malformed formula, unresolved new reference, placeholder, or unreadable text;
+their rendered page images have SHA-256
+`0C2147DBF333B7228B58EFD7153CEDAD8542D19751C1354BC99EB707412115AF`,
+`878D48528781E55E97901305D99D564CA72831914A0F53F8A408538346372A3F`,
+`51F8B400AE8B5C97891F580B2AF1F7C15F49CFE1306E4EAE1D1FB22318CA6C4D`,
+and `636FF2AC9BCABB9B75F0018797E9539AB27EB83BA915E8B69D9C67E94DFF1193`.
+The next sequential cursor is Remark 3.8 on printed pages 240--241.
