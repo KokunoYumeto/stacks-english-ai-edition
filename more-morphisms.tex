@@ -8599,6 +8599,65 @@ closed subscheme of the proper $S$-scheme $X$.
 \end{proof}
 
 \begin{lemma}
+\label{lemma-connected-along-section-universally-open-neighbourhood}
+\begin{reference}
+\cite[IV, Proposition 15.6.4]{EGA};
+\cite[Expos\'e 236, Corollary 1.7, p. 229]{FGA}.
+\end{reference}
+Let $f : X \to Y$, $s : Y \to X$ be as in
+Situation \ref{situation-connected-along-section}. Assume that $Y$ is
+locally Noetherian and that $f$ is locally of finite type. Let $y \in Y$.
+Assume
+\begin{enumerate}
+\item $X_y^0$ is geometrically reduced over $\kappa(y)$, and
+\item $f$ is universally open along $X_y^0$.
+\end{enumerate}
+Then $X^0$ is a neighbourhood of $X_y^0$ in $X$.
+\end{lemma}
+
+\begin{proof}
+Base change by $Y_{red} \to Y$. The resulting morphisms on the base and the
+source are universal homeomorphisms by Morphisms, Lemmas
+\ref{morphisms-lemma-reduction-universal-homeomorphism} and
+\ref{morphisms-lemma-base-change-universal-homeomorphism}. The formation of
+$X^0$ commutes with this base change by
+Lemma \ref{lemma-base-change-connected-along-section}, and universal openness
+along the indicated locus is preserved by base change. We may therefore
+assume that $Y$ is reduced.
+
+It is enough to find, for every $x \in X_y^0$, an open neighbourhood of $x$
+contained in $X^0$. The locally Noetherian fibre is locally connected by
+Topology, Lemma \ref{topology-lemma-locally-Noetherian-locally-connected}.
+Consequently there is a connected quasi-compact open
+$$
+V \subset X_y^0
+$$
+containing both $s(y)$ and $x$. Indeed, the points which can be reached from
+$s(y)$ by a finite chain of connected quasi-compact open subsets form an open
+and closed nonempty subset of the connected space $X_y^0$.
+
+Choose a quasi-compact open $W \subset X$ such that $W_y=V$. After shrinking
+$Y$ about $y$, we may assume that $Y$ is affine and that the section factors
+through $W$. For every $v \in V$, the fibre $X_y$ is geometrically reduced at
+$v$, and every irreducible component of $X_y$ through $v$ is contained in
+$X_y^0$. Hence
+Lemma \ref{lemma-universally-open-geometrically-reduced-flat} shows that
+$W \to Y$ is flat at every point of $V$.
+
+The flat locus is open by More on Flatness, Lemma
+\ref{flat-lemma-finite-type-flat-X}. Since $V$ is quasi-compact, it has a
+quasi-compact open neighbourhood $W'$ in that locus. Shrinking $Y$ once more,
+the section factors through $W'$. The morphism $W' \to Y$ is flat and of
+finite presentation, the latter by Morphisms, Lemma
+\ref{morphisms-lemma-noetherian-finite-type-finite-presentation}. Its fibre
+over $y$ is $V$, which is connected and geometrically reduced. Applying
+Lemma \ref{lemma-connected-along-section-open-neighbourhood} to $W' \to Y$
+shows that $(W')^0$ is a neighbourhood of $x$. Since every connected subset
+of a fibre of $W'$ containing the section lies in the corresponding component
+of the fibre of $X$, we have $(W')^0 \subset X^0$, and the proof is complete.
+\end{proof}
+
+\begin{lemma}
 \label{lemma-connected-along-section-open-neighbourhood}
 Let $f : X \to Y$, $s : Y \to X$ be as in
 Situation \ref{situation-connected-along-section}.
@@ -22609,6 +22668,111 @@ $k$ of $\kappa(s)$ and a point $\overline{z} \in X_k$ above $z$. The open
 subset $U_k \cap Z_k$ contains $\overline{z}$ and hence meets $E_k$. The
 image of a point of this intersection is a point $e \in U \cap E$ lying over
 $s$. Since $f$ is open at $e$, the set $f(U)$ is a neighbourhood of $s$.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-universally-open-geometrically-reduced-flat}
+\begin{reference}
+\cite[IV, Theorem 15.2.2 and Corollary 15.2.3]{EGA};
+\cite[Expos\'e 236, Corollary 1.8, p. 229]{FGA}.
+\end{reference}
+Let $f : X \to S$ be a morphism which is locally of finite type, where $S$
+is locally Noetherian. Let $x \in X$ and set $s=f(x)$. Assume
+\begin{enumerate}
+\item $\mathcal{O}_{S,s}$ is reduced,
+\item $X_s$ is geometrically reduced at $x$, and
+\item $f$ is universally open at the generic points of every irreducible
+component of $X_s$ which contains $x$.
+\end{enumerate}
+Then $f$ is flat at $x$.
+\end{lemma}
+
+\begin{proof}
+We use the Noetherian valuative criterion for flatness in
+\cite[IV, 11.8.1]{EGA}. Thus it is enough to consider a local map
+$$
+\mathcal{O}_{S,s} \longrightarrow R
+$$
+to a discrete valuation ring and a point $x'$ of $X_R$ over the closed
+point of $\Spec(R)$ which maps to $x$. Universal openness is preserved by
+base change. Moreover, the generic point of every irreducible component of
+the closed fibre of $X_R$ through $x'$ maps to the generic point of an
+irreducible component of $X_s$ through $x$. Finally, the closed fibre is
+reduced at $x'$ by the geometric reducedness hypothesis.
+
+Let $C=\mathcal{O}_{X_R,x'}$ and let $\pi \in R$ be a uniformizer. We claim
+that $\pi$ is not contained in a minimal prime of $C$. Otherwise, since $C$
+has only finitely many minimal primes, there would be an open neighbourhood
+of such a minimal prime which meets no other irreducible component of
+$\Spec(C)$. This neighbourhood would be contained in the closed fibre. The
+minimal prime in question is then the generic point of an irreducible
+component of the closed fibre through $x'$, contradicting openness there.
+
+We next show that $\pi$ is a nonzerodivisor on $C$. Suppose that
+$\pi^n c=0$. Since $\pi$ avoids every minimal prime of $C$, the element $c$
+belongs to every minimal prime of $C$. Hence its image in $C/\pi C$ belongs
+to every minimal prime of that ring. The ring $C/\pi C$ is reduced, so
+$c \in \pi C$. Starting with an element $c$ such that $\pi c=0$ and applying
+this observation repeatedly, we obtain $c \in \pi^rC$ for every $r$.
+Krull's intersection theorem, Algebra, Lemma
+\ref{algebra-lemma-intersect-powers-ideal-module-zero}, gives $c=0$.
+Consequently $C$ is torsion free over $R$, and hence flat by More on
+Algebra, Lemma
+\ref{more-algebra-lemma-valuation-ring-torsion-free-flat}. The valuative
+criterion now proves that $f$ is flat at $x$.
+\end{proof}
+
+\begin{lemma}
+\label{corollary-universally-open-smooth-fibre-flat}
+\begin{reference}
+\cite[Expos\'e 236, Corollary 1.8, p. 229]{FGA}.
+\end{reference}
+Let $f : X \to S$ be a morphism which is locally of finite type, where $S$
+is locally Noetherian. Let $s \in S$ and let $U \subset X_s$ be open.
+Assume
+\begin{enumerate}
+\item $f$ is universally open along $U$,
+\item $X_s$ is smooth over $\kappa(s)$, and
+\item $\mathcal{O}_{S,s}$ is reduced.
+\end{enumerate}
+Then $f$ is flat and smooth at every point of $U$.
+\end{lemma}
+
+\begin{proof}
+Let $x \in U$. The generic point of every irreducible component of $X_s$
+through $x$ belongs to $U$. Thus
+Lemma \ref{lemma-universally-open-geometrically-reduced-flat} shows that
+$f$ is flat at $x$. Since finite type is finite presentation over a locally
+Noetherian base by Morphisms, Lemma
+\ref{morphisms-lemma-noetherian-finite-type-finite-presentation}, smoothness
+follows from Morphisms, Lemma
+\ref{morphisms-lemma-smooth-flat-smooth-fibres}.
+\end{proof}
+
+\begin{lemma}
+\label{corollary-identity-component-open-smooth}
+\begin{reference}
+\cite[Expos\'e 236, Corollary 1.7, p. 229]{FGA}.
+\end{reference}
+Let $S$ be a locally Noetherian scheme and let $G \to S$ be a group scheme
+locally of finite type. Assume
+\begin{enumerate}
+\item $G \to S$ is universally open along $G^0$, and
+\item every fibre $G_s$ is smooth over $\kappa(s)$.
+\end{enumerate}
+Then $G^0$ is open in $G$. If $S$ is reduced, then $G^0 \to S$ is smooth.
+\end{lemma}
+
+\begin{proof}
+For every $s \in S$, apply
+Lemma \ref{lemma-connected-along-section-universally-open-neighbourhood} to
+the neutral section. It shows that $G^0$ is a neighbourhood of $G_s^0$ in
+$G$. Hence $G^0$ is open. If $S$ is reduced, apply
+Lemma \ref{corollary-universally-open-smooth-fibre-flat} with
+$U=G_s^0$ for every $s$. This shows that the restriction $G^0 \to S$ is
+smooth. The fibre-smoothness hypothesis is automatic over points of residue
+characteristic zero by Groupoids, Lemma
+\ref{groupoids-lemma-group-scheme-characteristic-zero-smooth}.
 \end{proof}
 
 \begin{lemma}

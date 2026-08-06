@@ -2257,3 +2257,65 @@ Moduli pages 40--41 finds no clipping, collision, malformed formula,
 unresolved marker, placeholder, or unreadable text. The next sequential
 cursor is Corollaries 1.7 and 1.8 on printed page 229, followed by Remark 1.9
 on printed pages 229--230 and Corollary 1.10 on printed page 230.
+
+Corollaries 1.7 and 1.8 are now integrated without weakening the source's
+generic-component hypothesis. Lemma
+`more-morphisms-lemma-universally-open-geometrically-reduced-flat` states the
+precise local criterion: over a locally Noetherian base with reduced local
+ring, geometric reducedness at the selected fibre point and universal
+openness at the generic points of every fibre component through that point
+imply flatness. Its proof performs the cited Noetherian valuative reduction,
+then proves torsion-freeness over each test DVR by excluding vertical minimal
+primes and applying reducedness of the closed fibre plus Krull intersection.
+Lemma `more-morphisms-corollary-universally-open-smooth-fibre-flat` applies
+this criterion to an open subset of a smooth fibre and obtains flatness and
+smoothness at every selected point.
+
+Lemma
+`more-morphisms-lemma-connected-along-section-universally-open-neighbourhood`
+first reduces the base and source by universal homeomorphisms, applies the
+new flatness criterion along the chosen geometrically reduced connected
+component, and then invokes the existing flat component-neighbourhood
+theorem. Lemma
+`more-morphisms-corollary-identity-component-open-smooth` consequently makes
+the identity-component locus open whenever the group morphism is universally
+open there and its fibres are smooth; over a reduced base its restriction is
+smooth. The characteristic-zero Cartier consequence remains tied to the
+existing group-scheme smoothness lemma.
+
+Decisions `D000540` and `D000541` supersede `D000267` and `D000268` and
+disposition Corollaries 1.7 and 1.8 as existing equivalents. Direct serial
+1,100-dpi review covers printed page 229 of the 24-page NUMDAM authority.
+That authority remains 2,461,968 bytes with SHA-256
+`266EEF77BF7BA34A75895ED69ACBFE791A2958DD52C2837D75AB29DF0D2F714A`.
+The exact EGA IV comparison is the 34,399,720-byte local witness with SHA-256
+`F365212B38F20608BA34C21AE3EE40BBAE1B42D9D3DFF01A85356F9CC819C23E`:
+physical pages 225--226 contain Theorem 15.2.2 and Corollary 15.2.3, while
+physical pages 236--237 contain Proposition 15.6.4.
+
+Both semantic validators pass with no errors at 21,671 labels, 21,437
+official-tag joins, 71 controlled topics, 4,204 topic candidates, 541
+append-only decisions, 1,253 source units, 1,612 term links, and 49 source
+issues, of which seven remain active; there are zero review units. The topic,
+decision, issue, map, Stacks-label, topic-candidate, reviewed-topic-map,
+index-validation, and map-validation files have SHA-256
+`B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0`,
+`0F21842FF595CBC133E7010646CF3064857CAD718EEFCD5A55BDB36A5EBD5311`,
+`5659C5A6C5B50EB6C5EB02EBEFF58F7361A7302F3EC7FA8F966DA85536000A44`,
+`8F13937A87241D0C6BB8A58C4F61FC83025A47B0371B982CF5775DF493B84249`,
+`E9CC731AB23039B069B714413A72435E64BFD9443964B80AFAC77A805415759E`,
+`490DE3079291FA3C7455B98F94B047E5CC270991550742659E6F3B4E76A29919`,
+`26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46`,
+`F49C41D763224A75DD25799AAD4476BFC3F465AF684F421ED46FA780EEA78DB0`,
+and `FE099035F12E0A655AC75438F1252B881A593BAAD36046AF7FAB787C5E8E9A61`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`.
+
+A bibliography-complete serial build followed by stable TeX passes produces
+a 257-page More on Morphisms chapter of 2,386,548 bytes with SHA-256
+`71349387C4D2F4226B82E816904966D32916FAC561DB52B694FA131C45B5D592`.
+The affected source ranges create no overfull or underfull horizontal box.
+Final serial 1,100-dpi inspection of pages 89--90, 234, and 235 finds no clipping,
+collision, malformed formula, unresolved marker, placeholder, or unreadable
+text. The next sequential cursor is Remark 1.9 on printed pages 229--230,
+followed by Corollary 1.10 on printed page 230.
