@@ -3,10 +3,10 @@
   "date": "2026-08-06",
   "scope": {
     "start": "fac:I:1:no:1",
-    "end": "fac:II:1:no:34",
+    "end": "fac:II:1:no:35",
     "printed_pages": "199-228",
-    "units_decided": 132,
-    "stacks_references_added": 70
+    "units_decided": 136,
+    "stacks_references_added": 72
   },
   "authority": {
     "bytes": 6305726,
@@ -16,24 +16,22 @@
     "printed_pages_inspected": [199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228]
   },
   "latest_review": {
-    "unit": "fac:II:1:no:34",
-    "component": "components/032_II_1_34_algebraic_variety_structure.tex",
-    "bytes": 7278,
-    "sha256": "26ECAD6B19ACAF8C51801FA6E7D147165935047DA32C9E3EA929F40FC55B5D8B",
-    "authority_physical_pages": [31, 32, 33],
-    "authority_printed_pages": [226, 227, 228],
+    "unit": "fac:II:1:no:35",
+    "component": "components/033_II_1_35_regular_maps_induced_structures_products.tex",
+    "bytes": 3904,
+    "sha256": "B5B77AED526188B9CA4A8FC878CEA4940B2ECA0BFEDB510E9E423A59883767BB",
+    "authority_physical_pages": [33],
+    "authority_printed_pages": [228],
     "authority_renders": [
-      {"physical_page": 31, "sha256": "27809618B52BE8268D7631A30A25BC8D62960B7259C5A85D75DEB968E4788B5A"},
-      {"physical_page": 32, "sha256": "DF7FCF613D1CA3098F033CEE292C09CA0AF5FA13715FDC411E734ACCED890FA6"},
       {"physical_page": 33, "sha256": "50E9DDC1B209EB3CD700FB06187E2131E5BDB3B4919CE7D87E984B22DBF5293C"}
     ],
     "output_renders": [
-      {"master": "schemes.tex", "pdf_page": 16, "sha256": "30A3B7DF5136B1FEF183AF8F48D464323E0CD6C25C93435F2B16E5539C146350"},
-      {"master": "schemes.tex", "pdf_page": 25, "sha256": "D87F00510C583F8DFC460BBD3E717979E34AE1141AC71CF4907994BD5002B79B"},
-      {"master": "schemes.tex", "pdf_page": 26, "sha256": "DAF33673C761060E19DA99B14A2035432CA2BB41E018174048397F98AEC0A226"},
-      {"master": "schemes.tex", "pdf_page": 31, "sha256": "85DCD54A5151455BBACD9CC8FA34566CF17F862BB4DF6A96AB225CEC521CE0CD"},
-      {"master": "schemes.tex", "pdf_page": 40, "sha256": "E5D80002AD37A301DCF88AAAD0FD184D2771D76546A107881D5ABD31E38A1313"},
-      {"master": "varieties.tex", "pdf_page": 2, "sha256": "4B94D0545550AE02BEFE785FB2DD5D20863486A2661052491AD8E52115454D04"}
+      {"master": "schemes.tex", "pdf_page": 2, "sha256": "A806845D57ABF541CA7A277BF4DD5C529C1F24BF3A568EE8B2E954598EA8AC38"},
+      {"master": "schemes.tex", "pdf_page": 22, "sha256": "5B15C5A60B602175298AE41794DCB00919F70629932CEFC27941EC4B012AD8F2"},
+      {"master": "schemes.tex", "pdf_page": 23, "sha256": "CD27A27FF694FBA0D8DE5E73B78A5C1FD15E5ED6678EC6B184913AE308C97586"},
+      {"master": "schemes.tex", "pdf_page": 33, "sha256": "9D4CE0756293A77C3BF96555E4FFB44DABF2A677F0774155232ECA3A6A0E4956"},
+      {"master": "schemes.tex", "pdf_page": 34, "sha256": "EECB73A84BCA5F700C4EBB81A0A34B8245163D3A09E074B3822D1243751A855A"},
+      {"master": "schemes.tex", "pdf_page": 43, "sha256": "3A975BC5728CD840E0632DD4E33C6279CF4E1DCD4638CBEEB5208982BB4AF7AA"}
     ]
   },
   "builds": [
@@ -96,9 +94,9 @@
     {
       "master": "schemes.tex",
       "pdf": "schemes.pdf",
-      "bytes": 719846,
-      "sha256": "259D9FFB36E151D91624D149BEA92539202EB5C9A619BA6300B9E1C579708F02",
-      "affected_pdf_pages_inspected": [2, 3, 8, 9, 10, 16, 17, 22, 25, 26, 31, 32, 33, 40],
+      "bytes": 721851,
+      "sha256": "AA82FA9B956FD09CA3A63192825EE10415383263D00768D73A4FAA936380F719",
+      "affected_pdf_pages_inspected": [2, 3, 8, 9, 10, 16, 17, 22, 23, 25, 26, 31, 32, 33, 34, 40, 43],
       "affected_page_result": "PASS"
     },
     {
@@ -161,7 +159,7 @@
     "fac_citations_resolved": true,
     "undefined_reference_at_edited_lines": 0,
     "overfull_box_at_edited_lines": 0,
-    "note": "The isolated builds retain unrelated missing chapter-aux warnings, unrelated pre-existing cross-chapter warnings, and pre-existing overfull diagnostics. The FAC no. 34 references, classical reduced finite-type scheme bridge, separatedness equivalence, and terminology boundary introduce no unresolved citation, link, or overfull box at edited lines."
+    "note": "The isolated build retains unrelated missing chapter-aux warnings and pre-existing overfull diagnostics. The FAC no. 35 citation resolves; the induced-structure and reduced-source bridge, propagated nonempty-factor control, and graph/separatedness references introduce no unresolved citation, link, or overfull box at edited lines."
   },
   "validators": {
     "intake": "PASS",
