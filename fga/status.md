@@ -1844,3 +1844,83 @@ text. The next sequential cursor is Expose 232, Section 6, “Relative
 existence theorems,” on printed pages 157--161 (physical PDF pages 16--20).
 Its Remarks 6.6 through 6.8 have three separate linked corrections on printed
 page 303 and must be reviewed together with the source pages.
+
+The next sequential patch integrates Expose 232, Section 6, "Relative
+existence theorems," on printed pages 157--161 (physical PDF pages 16--20).
+New Section `moduli-section-reductions-picard-spaces` collects the
+scheme-level reductions which were absent from the current Stacks treatment.
+Proposition `moduli-proposition-picard-stein-restriction` identifies the
+Picard functor across a finite locally free Stein factor with restriction of
+scalars and retains the finite-subset affine-open argument that upgrades the
+resulting algebraic space to a scheme. Lemma
+`moduli-corollary-picard-geometrically-locally-integral` applies the finite
+etale Stein factor to projective flat families with geometrically locally
+integral fibres.
+
+Proposition `moduli-proposition-picard-closed-union-affine` proves that the
+Picard functor of a scheme-theoretic union maps affinely to the product for
+its two flat closed pieces. The proof uses fppf-local rigidification and the
+affine section functor for compatible gluing isomorphisms. Lemma
+`moduli-corollary-picard-reduced-components` iterates this construction over
+the irreducible components after a finite separable extension. Proposition
+`moduli-proposition-picard-nilpotent-thickening-affine` upgrades the
+first-order Picard cohomology sequence to affine representability and then
+iterates through a nilpotent filtration. Lemma
+`moduli-corollary-picard-projective-field` assembles these reductions into
+the projective Picard-scheme theorem over an arbitrary field.
+
+The three linked corrections are applied as mathematical statements rather
+than left as historical questions. Theorem
+`moduli-theorem-picard-proper-field` records Murre's affirmative proper-field
+Picard-scheme theorem. Theorem
+`moduli-theorem-picard-pullback-proper-surjective-affine` records the
+affirmative nonflat-descent result and its exact forward evidence in the
+final paragraph of the Comments on Expose 236. Remark
+`moduli-remark-picard-formal-neighbourhoods-lefschetz` states the Picard
+stabilization and Neron--Severi torsion boundary for infinitesimal hyperplane
+neighbourhoods and applies the correction from printed "regular" to "smooth
+over k." The local-class-group and pro-algebraic discussion is retained as
+historical application and expectation rather than promoted to a current
+theorem.
+
+Decisions `D000503` through `D000523` disposition all 21 semantic units in
+the section and supersede `D000246` through `D000255` without rewriting
+history. Issue `I000041` repairs the printed wrong flatness base in
+Proposition 6.3 from `X` to `S`. Issues `I000042` and `I000043` bind the two
+affirmative linked corrections. Issue `I000044` binds the smoothness
+hypothesis correction in Remark 6.8.
+
+Direct 1,200-dpi review covers all five source pages and the linked correction
+page. The NUMDAM authority remains 2,006,109 bytes with SHA-256
+`C84DCA027FAC1AF187B0B9F6C8D2E2CB95B43CE201815B2073577FD4425919F0`.
+The linked erratum remains 134,758 bytes with SHA-256
+`CBC9B1A1967B448A5087D97B4C102B028F1D1BD99A22A95BD4FE2F1F6147F344`.
+
+Both semantic validators pass with no errors at 21,649 labels, 21,437
+official-tag joins, 71 controlled topics, 4,188 topic candidates, 523
+append-only decisions, 1,253 source units, 1,612 term links, and 44 source
+issues, of which seven remain active. The topic, decision, issue, map,
+Stacks-label, topic-candidate, reviewed-topic-map, index-validation, and
+map-validation files have SHA-256
+`B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0`,
+`2E52D305EE8C7506E6C9BDB9DBC40116F3BA1DFED6F09887FDD5451BEAA9185C`,
+`7272EB27B06850286D76C8CF80228906CB36025AB6AA2C1CDED051DFB306D199`,
+`C07667FDC07EB3F8DC984BC213DC39322EB67E73ED67E65523C23DA05F7DFCDC`,
+`3B3E8575B760AFE3BD0012D8D05F9F05DF07EC82D4ABBCBD3B3919358EF254A1`,
+`9AA333D3D3AD05D63D22EE9D0B3DD83415F5586B75C10111AA5E305EBB5AF707`,
+`26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46`,
+`FAF92B7C1E4FECB7675362B9D47A63ADCB4189B77D063C8A6B0FD64A907C7BC1`,
+and `142F57D18F869F08A71237D8D7DF1838F95AD25211982273EE5C1E96D0FAC3B6`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`;
+the 16 new semantic labels deliberately have no invented official tags.
+
+A bibliography-complete serial build followed by stable TeX passes produces
+a 53-page Moduli chapter of 755,789 bytes with SHA-256
+`CC47AFC991FC41812ECA59155A3BBD797190E47C9100B89775E07F6627F42BE8`.
+The added section creates no overfull or underfull horizontal box. Bounded
+auxiliary builds resolve every external cross-reference visible on the added
+pages. Final serial 1,100-dpi inspection of Moduli pages 37--40 finds no
+clipping, collision, malformed formula, placeholder, or unreadable text.
+The next sequential cursor is Expose 236, its opening and Section 1 on
+printed pages 221--231.

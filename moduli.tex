@@ -3434,6 +3434,327 @@ algebraic-space theorem is Quot, Proposition
 
 
 
+\section{Reductions for Picard spaces}
+\label{section-reductions-picard-spaces}
+
+\noindent
+The results in this section explain how representability of a Picard functor
+can be transported through a finite Stein factor, a union of closed
+subschemes, and a nilpotent thickening. We also record two nonflat descent
+theorems over a field. The word ``scheme'' in the last two results is
+essential: algebraic-space representability alone does not contain these
+statements.
+
+\begin{proposition}[Picard functors and a finite Stein factor]
+\label{proposition-picard-stein-restriction}
+\begin{reference}
+\cite[Expos\'e 232, Proposition 6.1 and Corollary 6.2,
+pp. 157--158]{FGA}.
+\end{reference}
+Let $S$ be a locally Noetherian scheme and let $X \to S' \to S$ be
+morphisms of schemes such that
+\begin{enumerate}
+\item $X \to S'$ is projective and flat with geometrically integral fibres,
+and
+\item $S' \to S$ is finite locally free.
+\end{enumerate}
+Then there is a canonical isomorphism of fppf sheaves
+\begin{equation}
+\label{equation-picard-stein-restriction}
+\Picardfunctor_{X/S} \longrightarrow
+\mathop{\rm Res}\nolimits_{S'/S}(\Picardfunctor_{X/S'}).
+\end{equation}
+Moreover, both sides are represented by schemes.
+\end{proposition}
+
+\begin{proof}
+For a scheme $T$ over $S$ we have a canonical equality
+$$
+X \times_S T = X \times_{S'}(S' \times_S T).
+$$
+It identifies the isomorphism-class presheaves of invertible modules which
+occur on the two sides of
+(\ref{equation-picard-stein-restriction}). The identification is compatible
+with fppf pullback, and hence gives the displayed isomorphism after
+sheafification.
+
+By Remark \ref{remark-classical-projective-picard-theorem}, the Picard
+functor over $S'$ is a scheme covered by open subschemes which are
+quasi-projective over $S'$. The classical construction also has the
+finite-subset property used in the cited Proposition 6.1: every finite set
+in a fibre is contained in an affine open. Restriction of scalars of any one
+of these opens is a scheme by Criteria for Representability, Proposition
+\ref{criteria-proposition-restriction-of-scalars-properties}.
+These restrictions of scalars cover the right hand side. Indeed, over a
+point of $S$ the finite fibre of $S' \to S$ has finite image in the Picard
+scheme. Such an image is contained in one of the quasi-projective opens,
+and the same containment holds over an open neighbourhood of the point
+because $S' \to S$ is finite. Thus the algebraic space supplied by Criteria
+for Representability, Proposition
+\ref{criteria-proposition-restriction-of-scalars-algebraic-space} is covered
+by open subspaces which are schemes, and is therefore a scheme.
+\end{proof}
+
+\begin{lemma}
+\label{corollary-picard-geometrically-locally-integral}
+Let $S$ be a locally Noetherian scheme and let $X \to S$ be projective and
+flat with geometrically locally integral fibres. Then
+$\Picardfunctor_{X/S}$ is represented by a scheme.
+\end{lemma}
+
+\begin{proof}
+Let $X \to S' \to S$ be the Stein factorization. The morphism $S' \to S$
+is finite \'etale by More on Morphisms of Spaces, Lemma
+\ref{spaces-more-morphisms-lemma-stein-factorization-etale}. Its geometric
+fibres index the connected components of the geometric fibres of $X/S$.
+A connected locally integral scheme is integral, so $X \to S'$ has
+geometrically integral fibres. It is flat, and the result follows from
+Proposition \ref{proposition-picard-stein-restriction}.
+\end{proof}
+
+\begin{example}
+\label{example-picard-disjoint-union}
+If $X = \coprod_{i = 1}^r X_i$ is a finite disjoint union over $S$, then
+Proposition \ref{proposition-picard-stein-restriction} specializes to
+$$
+\Picardfunctor_{X/S} = \prod_{i = 1}^r \Picardfunctor_{X_i/S}.
+$$
+\end{example}
+
+\begin{proposition}[Gluing along a flat closed intersection]
+\label{proposition-picard-closed-union-affine}
+\begin{reference}
+\cite[Expos\'e 232, Proposition 6.3, pp. 158--159]{FGA}. The final letter
+in the printed description of the intersection is $X$; the displayed
+flatness hypothesis makes the intended base $S$.
+\end{reference}
+Let $S$ be locally Noetherian, let $X \to S$ be proper, and let
+$X_1, X_2 \subset X$ be closed subschemes defined by coherent ideals
+$\mathcal{I}_1, \mathcal{I}_2$. Assume that
+\begin{enumerate}
+\item $\mathcal{I}_1 \cap \mathcal{I}_2 = 0$,
+\item $X_1$ and $X_2$ are flat over $S$,
+\item $Z = X_1 \cap X_2$ is flat over $S$, and
+\item for every $s \in S$ the maps
+$$
+\kappa(s) \longrightarrow
+H^0((X_i)_s, \mathcal{O}_{(X_i)_s}), \qquad i = 1, 2,
+$$
+are isomorphisms.
+\end{enumerate}
+Then restriction induces a morphism
+\begin{equation}
+\label{equation-picard-closed-union}
+\Picardfunctor_{X/S} \longrightarrow
+\Picardfunctor_{X_1/S} \times_S \Picardfunctor_{X_2/S}
+\end{equation}
+which is representable by affine morphisms. In particular, if the two
+Picard functors on the right are schemes, then so is the Picard functor on
+the left.
+\end{proposition}
+
+\begin{proof}
+The first three assumptions give an exact sequence
+$$
+0 \longrightarrow \mathcal{O}_X \longrightarrow
+\mathcal{O}_{X_1} \oplus \mathcal{O}_{X_2} \longrightarrow
+\mathcal{O}_Z \longrightarrow 0.
+$$
+In particular $X$ and $Z$ are flat and of finite presentation over $S$.
+The assertion that a base change of
+(\ref{equation-picard-closed-union}) is affine is fppf local on the base.
+We may therefore work locally where the two Picard classes are represented
+by invertible modules $\mathcal{L}_1$ and $\mathcal{L}_2$. After separating
+the open and closed locus on which $Z$ is empty, we may also make an fppf
+base change such that $Z \to S$ has a section $\sigma$. This section gives
+sections of $X_1$ and $X_2$ and permits the modules to be rigidified; compare
+Quot, Lemmas \ref{quot-lemma-flat-geometrically-connected-fibres-with-section}
+and \ref{quot-lemma-pic-with-section-stack}.
+
+An invertible module on the scheme-theoretic union $X_1 \cup X_2 = X$ is
+then the same as a triple
+$$
+(\mathcal{L}_1, \mathcal{L}_2,
+u : \mathcal{L}_1|_Z \longrightarrow \mathcal{L}_2|_Z),
+$$
+where $u$ is an isomorphism compatible with the rigidifications. The
+isomorphism space between the two restrictions is affine over $Z$. Its
+functor of sections over the proper flat morphism $Z \to S$ is affine by
+Proposition \ref{proposition-sections-proper-flat}; compatibility at
+$\sigma$ cuts out the fibre over the identity and is again affine. Hence
+the fibre of (\ref{equation-picard-closed-union}) is affine. These affine
+schemes and their descent data descend along the fppf coverings used above,
+which proves representability and affineness.
+\end{proof}
+
+\begin{lemma}
+\label{corollary-picard-reduced-components}
+\begin{reference}
+\cite[Expos\'e 232, Corollary 6.4, p. 159]{FGA}.
+\end{reference}
+Let $X$ be a proper geometrically reduced scheme over a field $k$. After a
+finite separable extension $k'/k$, write $X_1, \ldots, X_r$ for the
+irreducible components of $X_{k'}$. If the Picard functors of the $X_i$ are
+represented by schemes, then the Picard functor of $X$ is represented by a
+scheme, and
+after that extension the canonical morphism
+$$
+\Picardfunctor_{X_{k'}/k'} \longrightarrow
+\prod_{i = 1}^r \Picardfunctor_{X_i/k'}
+$$
+is affine.
+\end{lemma}
+
+\begin{proof}
+The finite separable extension can be chosen so that all irreducible
+components are geometrically irreducible by Varieties, Lemma
+\ref{varieties-lemma-finite-extension-geometrically-irreducible-components}.
+Their reduced scheme-theoretic intersections are flat over the field.
+Applying Proposition \ref{proposition-picard-closed-union-affine}
+successively proves the assertion after this extension. The construction is
+equivariant for the finite descent datum; the affine morphism and its affine
+source descend. This gives the assertion over $k$.
+\end{proof}
+
+\begin{proposition}[Nilpotent thickenings]
+\label{proposition-picard-nilpotent-thickening-affine}
+\begin{reference}
+\cite[Expos\'e 232, Proposition 6.5, p. 159]{FGA}.
+\end{reference}
+Let $X$ be a proper scheme over a field $k$ and let $X_0 \subset X$ be a
+closed subscheme with the same underlying topological space. Then
+\begin{equation}
+\label{equation-picard-nilpotent-thickening}
+\Picardfunctor_{X/k} \longrightarrow \Picardfunctor_{X_0/k}
+\end{equation}
+is representable by affine morphisms. Consequently, representability of
+the Picard functor of $X_0$ by a scheme implies the same for $X$.
+\end{proposition}
+
+\begin{proof}
+Filtering the nilpotent ideal by its powers reduces the assertion to a first
+order thickening with ideal $\mathcal{I}$. More on Morphisms, Lemma
+\ref{more-morphisms-lemma-picard-group-first-order-thickening} gives the
+deformation sequence
+$$
+H^1(X_0, \mathcal{I}) \longrightarrow \Pic(X) \longrightarrow
+\Pic(X_0) \longrightarrow H^2(X_0, \mathcal{I}).
+$$
+The same sequence applies after every base change over $k$. Since $X_0$ is
+proper, the cohomology groups of $\mathcal{I}$ are finite dimensional and
+cohomology commutes with extension of the ground field. Thus, after pulling
+back a class of $\Picardfunctor_{X_0/k}$ to a test scheme, its obstruction to
+lifting is a section of the vector bundle associated to
+$H^2(X_0, \mathcal{I})$. Its zero scheme is affine over the test scheme.
+Over that zero scheme the sheaf of lifts is a torsor under the vector group
+associated to $H^1(X_0, \mathcal{I})$, and is therefore affine. This
+description is compatible with fppf descent and proves the claim. Iterating
+over the filtration by powers of the ideal finishes the proof.
+\end{proof}
+
+\begin{lemma}[The projective Picard scheme over a field]
+\label{corollary-picard-projective-field}
+\begin{reference}
+\cite[Expos\'e 232, Corollary 6.6, p. 159]{FGA}.
+\end{reference}
+For every projective scheme $X$ over a field $k$, the fppf Picard functor
+$\Picardfunctor_{X/k}$ is represented by a scheme.
+\end{lemma}
+
+\begin{proof}
+After a finite extension of the ground field, the reduced irreducible
+components are covered by the classical projective Picard theorem, Remark
+\ref{remark-classical-projective-picard-theorem}. Corollary
+\ref{corollary-picard-reduced-components} glues the components and
+Proposition \ref{proposition-picard-nilpotent-thickening-affine} restores
+the nilpotent structure. The inseparable and descent steps are the Oort
+reduction in the cited source.
+\end{proof}
+
+\begin{theorem}[Affine pullback under a proper surjection]
+\label{theorem-picard-pullback-proper-surjective-affine}
+\begin{reference}
+\cite[Expos\'e 232, Remark 6.7, p. 160 and correction, p. 303;
+Comments on Expos\'e 236, final paragraph, p. 307]{FGA}.
+\end{reference}
+Let $g : Y \to X$ be a surjective morphism of proper schemes over a field
+$k$. Pullback gives an affine morphism
+\begin{equation}
+\label{equation-picard-proper-surjective-pullback}
+g^* : \Picardfunctor_{X/k} \longrightarrow \Picardfunctor_{Y/k}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+This is the affirmative nonflat-descent theorem referenced in the correction
+to Expos\'e 232. The Comments on Expos\'e 236 first give the relative
+finite-type statement and then state explicitly that over the spectrum of a
+field the same proof makes the pullback morphism affine. Proposition
+\ref{proposition-picard-closed-union-affine} and Proposition
+\ref{proposition-picard-nilpotent-thickening-affine} are two elementary
+instances of the same theorem.
+\end{proof}
+
+\begin{theorem}[Murre]
+\label{theorem-picard-proper-field}
+\begin{reference}
+\cite[Expos\'e 232, Remark 6.6, pp. 159--160 and correction,
+p. 303]{FGA}.
+\end{reference}
+For every proper scheme $X$ over a field $k$, the fppf Picard functor
+$\Picardfunctor_{X/k}$ is represented by a scheme.
+\end{theorem}
+
+\begin{proof}
+The projective case is Corollary \ref{corollary-picard-projective-field}.
+After the component and nilpotent reductions, Chow's lemma supplies a proper
+surjection $Y \to X$ with $Y$ projective. The Picard functor of $Y$ is a
+scheme and Theorem \ref{theorem-picard-pullback-proper-surjective-affine}
+makes the pullback from the Picard functor of $X$ affine. This is Murre's
+affirmative solution of the question printed in Remark 6.6, as recorded by
+the linked correction.
+\end{proof}
+
+\begin{remark}[Picard spaces of formal neighbourhoods]
+\label{remark-picard-formal-neighbourhoods-lefschetz}
+\begin{reference}
+\cite[Expos\'e 232, Remark 6.8, pp. 160--161 and correction,
+p. 303]{FGA}.
+\end{reference}
+Let $X$ be a smooth projective irreducible scheme over a field $k$, let
+$Y \subset X$ be a hyperplane section, and let $Y_n$ be its $n$th
+infinitesimal neighbourhood. The classical Lefschetz statement recorded in
+the source says that for $n$ sufficiently large the morphism
+\begin{equation}
+\label{equation-picard-formal-neighbourhood}
+\Picardfunctor_{X/k} \longrightarrow \Picardfunctor_{Y_n/k}
+\end{equation}
+is an isomorphism if $\dim(X) \geq 4$. If $\dim(X) \geq 3$, it induces an
+isomorphism on the inverse images of the torsion subgroups of the
+N\'eron--Severi groups.
+
+This is precisely a setting in which the nilpotent Picard spaces in
+Proposition \ref{proposition-picard-nilpotent-thickening-affine} carry
+information that the reduced hyperplane alone does not record. The current
+formal-coherent infrastructure is Algebraization, Proposition
+\ref{algebraization-proposition-lefschetz} and Proposition
+\ref{algebraization-proposition-lefschetz-equivalence}; the deformation of
+invertible modules between successive neighbourhoods is controlled by More
+on Morphisms, Lemma
+\ref{more-morphisms-lemma-picard-group-first-order-thickening}.
+
+The printed source says that $X$ is ``regular''. The linked correction
+replaces this by ``smooth over $k$'', which is the hypothesis used here.
+The subsequent equal-characteristic description of two-dimensional local
+class groups by algebraic groups and the proposed higher-dimensional
+pro-algebraic extension are historical applications and expectations; they
+are not needed for the statements above.
+\end{remark}
+
+
+
+
+
 \section{Properties of the Picard stack}
 \label{section-picard-stack}
 
