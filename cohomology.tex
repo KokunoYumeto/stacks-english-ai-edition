@@ -2834,8 +2834,13 @@ $\Gamma(X, \mathcal{G}) \to \Gamma(X, \mathcal{H})$ is surjective.
 \end{remark}
 
 \begin{lemma}
-\label{lemma-cech-Hausdorff-quasi-compact}
-Let $X$ be a Hausdorff and quasi-compact topological space. Let
+\label{lemma-cech-paracompact}
+\begin{reference}
+\cite[Chapter I, \S 3, no. 25, Proposition 7 and its Corollary,
+pp. 217--218]{FAC}
+\end{reference}
+Let $X$ be a paracompact topological space, see
+Topology, Definition \ref{topology-definition-paracompact}. Let
 $\mathcal{F}$ be an abelian sheaf on $X$. Then
 the map $\check{H}^n(X, \mathcal{F}) \to H^n(X, \mathcal{F})$ defined
 in (\ref{equation-cech-to-cohomology}) is an isomorphism for
@@ -2845,7 +2850,7 @@ all $n$.
 \begin{proof}
 We already know that $\check{H}^n(X, -) \to H^n(X, -)$
 is an isomorphism of functors for $n = 0, 1$, see
-Lemma \ref{lemma-cech-always}.
+Lemmas \ref{lemma-cech-h0-space} and \ref{lemma-cech-always}.
 The functors $H^n(X, -)$ form a universal $\delta$-functor, see
 Derived Categories, Lemma \ref{derived-lemma-higher-derived-functors}.
 If we show that $\check{H}^n(X, -)$ forms a universal $\delta$-functor
@@ -2884,13 +2889,14 @@ U_{i_0 \ldots i_n} = \bigcup W_{i_0 \ldots i_n, k}
 $$
 such that $h_{i_0 \ldots i_n}|_{W_{i_0 \ldots i_n, k}}$
 lifts to a section of $\mathcal{G}$ over $W_{i_0 \ldots i_n, k}$.
-By Topology, Lemma \ref{topology-lemma-refine-covering}
-(this is where we use the assumption that $X$ is hausdorff and quasi-compact)
+By Topology, Lemma \ref{topology-lemma-paracompact-refine-covering}
+(this is where we use paracompactness)
 we can choose an open covering $\mathcal{V} : X = \bigcup_{j \in J} V_j$
 and $\alpha : J \to I$ such that $V_j \subset U_{\alpha(j)}$
 (it is a refinement) and such that for all $j_0, \ldots, j_n \in J$
-there is a $k$ such that
+with $V_{j_0 \ldots j_n}$ nonempty there is a $k$ such that
 $V_{j_0 \ldots j_n} \subset W_{\alpha(j_0) \ldots \alpha(j_n), k}$.
+On an empty intersection the unique section lifts automatically.
 We obtain maps of complexes
 $$
 \xymatrix{
@@ -2926,13 +2932,13 @@ $$
 \delta(\overline{h}) = \text{class of }\text{d}(g)\text{ in }
 \check{H}^{n + 1}(\mathcal{V}, \mathcal{F})
 $$
-Now, given an element $\xi \in \check{H}^n(X, \mathcal{G})$
+Now, given an element $\xi \in \check{H}^n(X, \mathcal{H})$
 we choose an open covering $\mathcal{U}$ and an element
-$\overline{h} \in \check{H}^n(\mathcal{U}, \mathcal{G})$
+$\overline{h} \in \check{H}^n(\mathcal{U}, \mathcal{H})$
 mapping to $\xi$ in the colimit defining {\v C}ech cohomology.
 Then we choose $\mathcal{V}$ and $g$ as above and set
 $\delta(\xi)$ equal to the image of $\delta(\overline{h})$
-in $\check{H}^n(X, \mathcal{F})$.
+in $\check{H}^{n + 1}(X, \mathcal{F})$.
 At this point a lot of properties have to be checked, all of which
 are straightforward. For example, we need to check that our construction
 is independent of the choice of
@@ -3012,6 +3018,20 @@ to see that higher {\v C}ech cohomology is trivial on injective
 sheaves. Hence we see that {\v C}ech cohomology is a universal
 $\delta$-functor by
 Homology, Lemma \ref{homology-lemma-efface-implies-universal}.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-cech-Hausdorff-quasi-compact}
+Let $X$ be a Hausdorff and quasi-compact topological space. Let
+$\mathcal{F}$ be an abelian sheaf on $X$. Then
+the map $\check{H}^n(X, \mathcal{F}) \to H^n(X, \mathcal{F})$ defined
+in (\ref{equation-cech-to-cohomology}) is an isomorphism for all $n$.
+\end{lemma}
+
+\begin{proof}
+Every open covering of $X$ has a finite subcover, which is a locally finite
+refinement. Thus $X$ is paracompact and the result follows from
+Lemma \ref{lemma-cech-paracompact}.
 \end{proof}
 
 \begin{lemma}

@@ -1997,6 +1997,138 @@ $X = U_i \cup \bigcup U_{i_{j, l}}$ a contradiction.
 
 
 
+\section{Paracompact spaces}
+\label{section-paracompact}
+
+\begin{definition}
+\label{definition-paracompact}
+A topological space $X$ is called {\it paracompact} if it is Hausdorff
+and every open covering of $X$ has a locally finite open refinement.
+Here locally finite has the meaning of
+Definition \ref{definition-locally-finite}.
+\end{definition}
+
+\begin{lemma}
+\label{lemma-paracompact-shrinking}
+Let $X$ be a paracompact topological space and let
+$X = \bigcup_{i \in I} U_i$ be an open covering. There exist
+\begin{enumerate}
+\item a locally finite open covering $X = \bigcup_{j \in J} V_j$,
+\item a map $\alpha : J \to I$, and
+\item an open covering $X = \bigcup_{j \in J} W_j$
+\end{enumerate}
+such that
+$$
+\overline{W_j} \subset V_j \subset U_{\alpha(j)}
+$$
+for every $j \in J$.
+\end{lemma}
+
+\begin{proof}
+We first make two elementary observations about locally finite families.
+If $\{E_j\}$ is locally finite, then $\{\overline{E_j}\}$ is locally
+finite: an open set meeting $\overline{E_j}$ also meets $E_j$. Moreover,
+the union of any subfamily of the closed sets $\overline{E_j}$ is closed.
+Indeed, near a point only finitely many of them have to be avoided.
+
+We next show that if $x \in U \subset X$ with $U$ open, then there is an
+open $V$ such that
+$$
+x \in V \subset \overline{V} \subset U.
+$$
+For every $y \in X \setminus U$, choose disjoint open neighbourhoods
+$A_y$ of $x$ and $B_y$ of $y$. Choose a locally finite refinement
+$X = \bigcup_{j \in J} E_j$ of the open covering consisting of $U$ and
+the opens $B_y$. Let $J' \subset J$ be the set of $j$ such that
+$E_j \cap (X \setminus U)$ is nonempty. Such an $E_j$ is contained in
+some $B_y$, and hence $x \notin \overline{E_j}$. Thus
+$$
+Z = \bigcup_{j \in J'} \overline{E_j}
+$$
+is closed and does not contain $x$. Set $V = X \setminus Z$. Every point
+of $X \setminus U$ has an open neighbourhood $E_j$ contained in $Z$, so
+no such point belongs to $\overline{V}$. This proves the claim.
+
+Choose a locally finite refinement $X = \bigcup_{j \in J} V_j$ of the
+given covering and a map $\alpha : J \to I$ such that
+$V_j \subset U_{\alpha(j)}$. For every $x \in X$, choose $j(x) \in J$
+with $x \in V_{j(x)}$. By the preceding claim there is an open $A_x$
+such that
+$$
+x \in A_x \subset \overline{A_x} \subset V_{j(x)}.
+$$
+Choose a locally finite open refinement $X = \bigcup_{k \in K} B_k$
+of the covering $\{A_x\}_{x \in X}$ and choose $x(k)$ such that
+$B_k \subset A_{x(k)}$. For $j \in J$, set
+$$
+W_j = \bigcup_{j(x(k)) = j} B_k.
+$$
+The family $\{W_j\}$ is a locally finite open covering. By the elementary
+observations at the start of the proof,
+$$
+\overline{W_j} \subset
+\bigcup_{j(x(k)) = j} \overline{B_k} \subset V_j.
+$$
+This finishes the proof.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-paracompact-refine-covering}
+Let $X$ be a paracompact topological space. Let
+$X = \bigcup_{i \in I} U_i$ be an open covering. Suppose given an integer
+$p \geq 0$ and, for every $(p + 1)$-tuple $i_0, \ldots, i_p$ of elements
+of $I$, an open covering
+$$
+U_{i_0} \cap \ldots \cap U_{i_p}
+= \bigcup_k T_{i_0 \ldots i_p, k}.
+$$
+Then there exist an open covering $X = \bigcup_{x \in X} N_x$ and a map
+$\gamma : X \to I$ such that $N_x \subset U_{\gamma(x)}$ and every
+nonempty intersection
+$$
+N_{x_0} \cap \ldots \cap N_{x_p}
+$$
+is contained in some
+$T_{\gamma(x_0) \ldots \gamma(x_p), k}$.
+\end{lemma}
+
+\begin{proof}
+By Lemma \ref{lemma-paracompact-shrinking}, there exist a locally finite
+open covering $X = \bigcup_{j \in J} V_j$, a map $\alpha : J \to I$,
+and an open covering $X = \bigcup_{j \in J} W_j$ such that
+$$
+\overline{W_j} \subset V_j \subset U_{\alpha(j)}.
+$$
+For every $x \in X$, choose an open neighbourhood $N_x$ of $x$ with the
+following properties:
+\begin{enumerate}
+\item if $x \in V_j$, then $N_x \subset V_j$, and if $x \in W_j$, then
+$N_x \subset W_j$;
+\item if $N_x \cap W_j$ is nonempty, then $N_x \subset V_j$;
+\item if $x \in V_{j_0} \cap \ldots \cap V_{j_p}$, then
+$N_x \subset T_{\alpha(j_0) \ldots \alpha(j_p), k}$ for some $k$.
+\end{enumerate}
+Such a choice is possible because the families $\{V_j\}$ and $\{W_j\}$
+are locally finite. For (2), if $x \in \overline{W_j}$, then
+$x \in V_j$ and (1) applies; otherwise we may shrink $N_x$ to avoid
+$W_j$. For (3), only finitely many $(p + 1)$-tuples occur near $x$.
+
+Choose $\tau(x) \in J$ such that $x \in W_{\tau(x)}$ and set
+$\gamma(x) = \alpha(\tau(x))$. By (1),
+$$
+N_x \subset W_{\tau(x)} \subset V_{\tau(x)}
+\subset U_{\gamma(x)}.
+$$
+Suppose $N_{x_0} \cap \ldots \cap N_{x_p}$ is nonempty. For every
+$a = 0, \ldots, p$, the set $N_{x_0}$ meets $W_{\tau(x_a)}$ because
+$N_{x_a} \subset W_{\tau(x_a)}$. By (2),
+$N_{x_0} \subset V_{\tau(x_a)}$. Hence (3), applied at $x_0$, shows that
+$N_{x_0}$, and therefore the displayed intersection, is contained in
+some $T_{\gamma(x_0) \ldots \gamma(x_p), k}$.
+\end{proof}
+
+
+
 \section{Locally quasi-compact spaces}
 \label{section-locally-quasi-compact}
 
