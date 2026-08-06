@@ -810,3 +810,33 @@ The added block has no undefined reference or overfull box; extracted pages
 1,200-dpi rendered inspection.  The next cursor is the claimed product of
 arbitrary completed-local extension classes in dimension one and the claimed
 smoothness when the closed fibre is normal.
+
+The forty-fifth source patch closes the two remaining mathematical claims in
+Expose 195.  For a finite ramification set the covering sheaf is exactly the
+product of its ordinary local stalks.  In the one dimensional
+principal-complement case tensor-compatible formal gluing separately proves
+that every completed-local covering class algebraizes to the local ring and
+hence recovers the source's product of arbitrary completed-local classes.  The
+separate argument is necessary: the 1962 erratum changes the general
+stalk-to-completion equality to an inclusion so the printed invocation of
+parts (a) and (b) no longer proves surjectivity by itself.
+
+The final normal-fibre smoothness assertion is false without further
+hypotheses on the fixed covering.  Over the normal DVR $k[t]_{(t)}$ a
+rank-four covering which is split after inverting $t$ has an explicit
+associative deformation modulo $\epsilon^2$.  Associativity for the triple
+$(x_1,x_2,x_2)$ forces an impossible coefficient of $x_3$ in every proposed
+lift modulo $\epsilon^3$.  Issue `I000011` records this nonlifting example and
+issue `I000012` records the proof gap repaired by formal gluing.  Decisions
+`D000359` and `D000360` supersede the two open covering decisions and close
+the Expose 195 mathematical cursor.
+
+Both semantic validators pass with no errors at 21,551 labels, 360
+append-only decisions, 1,253 source units, 1,612 term links, and 12 recorded
+source issues.  Eight exact dependency chapters were built serially before a
+bibliography-complete draft and two final TeX passes.  The resulting
+Deformation Problems chapter has 43 pages and 726,407 bytes with SHA-256
+B71E3AEDB8F00B325B561271C4844883A22B8397194FC2382FD27FCA0C1647F1.
+The added block has no new undefined reference or overfull box; pages 23--24
+contain no placeholder and pass 1,200-dpi rendered inspection.  The next
+substantive cursor is Expose 212.
