@@ -3,17 +3,17 @@
   "date": "2026-08-06",
   "scope": {
     "start": "fac:I:1:no:1",
-    "end": "fac:I:2:no:14:prop:6",
-    "printed_pages": "199-210",
-    "units_decided": 38,
-    "stacks_references_added": 19
+    "end": "fac:I:2:no:15:prop:9",
+    "printed_pages": "199-211",
+    "units_decided": 46,
+    "stacks_references_added": 24
   },
   "authority": {
     "bytes": 6305726,
     "sha256": "B8C6508249308F5D8BC886B9E6360F1EC4FDC8F0F18EFAA03EE0E36B591551CA",
     "render_dpi": 1100,
-    "physical_pages_inspected": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
-    "printed_pages_inspected": [199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210]
+    "physical_pages_inspected": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
+    "printed_pages_inspected": [199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211]
   },
   "builds": [
     {
@@ -28,8 +28,16 @@
       "master": "modules.tex",
       "pdf": "modules.pdf",
       "bytes": 721993,
-      "sha256": "F6AF9BB795F8B3F3A5AF02B5AFF1E8A5C0AA2D7E797048A5858D2D5E841B80DB",
-      "affected_pdf_pages_inspected": [3, 8, 9, 15, 22, 31, 32],
+      "sha256": "5BC172B2EE84F753DD4F4F9C16613574D5BA23FC285979A3EE4C4D48DF3A6D66",
+      "affected_pdf_pages_inspected": [3, 8, 9, 15, 16, 22, 31, 32, 34],
+      "affected_page_result": "PASS"
+    },
+    {
+      "master": "coherent.tex",
+      "pdf": "coherent.pdf",
+      "bytes": 1034840,
+      "sha256": "3D128DA2D37DD932FFDB85FB6F989025FCEF282FBA1313980CD6E9839E972F11",
+      "affected_pdf_pages_inspected": [22],
       "affected_page_result": "PASS"
     }
   ],
