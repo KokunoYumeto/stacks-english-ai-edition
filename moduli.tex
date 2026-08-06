@@ -5512,6 +5512,127 @@ Thus $P^\tau\to S$ is smooth over a neighbourhood of every point of $S$,
 which proves the assertion.
 \end{proof}
 
+\begin{lemma}[Prime-to-characteristic N\'eron--Severi torsion]
+\label{lemma-picard-Neron-Severi-prime-primary-constant}
+\begin{reference}
+Corrected finite-type formulation of
+\cite[Expos\'e 236, Remark 3.10, p. 241]{FGA}. The printed remark says that
+$P$ itself is proper and lists a smooth projective family as an example. With
+the modern finite-type meaning of proper this example is too broad: already
+$\Picardfunctor_{\mathbf P^1/S}=\mathbf Z_S$ is not proper. The argument and
+the later Corollary 4.2 of the source apply to the proper torsion-component
+locus $P^\tau$ used below.
+\end{reference}
+Let $S$ be a connected locally Noetherian scheme and let $X\to S$ be a
+proper flat morphism of finite presentation. Suppose that the fppf Picard
+functor is represented by a scheme
+$$
+P=\Picardfunctor_{X/S}
+$$
+and that the open subgroup scheme $P^\tau$ is proper over $S$. Let $q$ be a
+prime which is invertible on $S$. For a geometric point $\overline{s}\to S$,
+the isomorphism type of the $q$-primary subgroup of
+$$
+\mathop{\rm NS}(X_{\overline{s}})_{\rm tors}
+=P^\tau_{\overline{s}}(\overline{\kappa(s)})/
+P^0_{\overline{s}}(\overline{\kappa(s)})
+$$
+is independent of $\overline{s}$. If every residue field of $S$ has
+characteristic zero, then the isomorphism type of the whole finite group
+$\mathop{\rm NS}(X_{\overline{s}})_{\rm tors}$ is independent of
+$\overline{s}$.
+\end{lemma}
+
+\begin{proof}
+For $m\geq 1$, put
+$$
+K_m=\Ker([q^m]:P^\tau\longrightarrow P^\tau).
+$$
+Theorem \ref{theorem-picard-multiplication-etale} makes the displayed power
+map \'etale. It is also proper: both copies of $P^\tau$ are proper over $S$,
+and the graph followed by projection gives the usual proof. Hence it is
+finite \'etale, and so is $K_m\to S$. Its rank, denoted $r_m$, is constant
+because $S$ is connected.
+
+Fix $\overline{s}$ and write $k=\overline{\kappa(s)}$. The reduction
+$$
+A_{\overline{s}}=(P^0_{\overline{s}})_{\mathrm{red}}
+$$
+is an abelian variety over $k$. Put
+$$
+C_{\overline{s}}=
+\mathop{\rm NS}(X_{\overline{s}})_{\rm tors}.
+$$
+This is a finite abelian group because $P^\tau_{\overline{s}}$ is proper and
+hence has only finitely many connected components. For every $m$ there is an
+exact sequence of finite abstract groups
+$$
+0\longrightarrow A_{\overline{s}}(k)[q^m]
+\longrightarrow K_m(k)\longrightarrow C_{\overline{s}}[q^m]
+\longrightarrow 0.
+$$
+Surjectivity on the right follows from the surjectivity of $[q^m]$ on the
+connected group $P^0_{\overline{s}}$, see Groupoids, Lemma
+\ref{groupoids-lemma-connected-group-power-surjective}. If
+$g_{\overline{s}}=\dim(A_{\overline{s}})$, Groupoids, Proposition
+\ref{groupoids-proposition-review-abelian-varieties} gives
+\begin{equation}
+\label{equation-picard-prime-primary-kernel-rank}
+r_m=q^{2m g_{\overline{s}}}
+\#C_{\overline{s}}[q^m].
+\end{equation}
+
+Let $\overline{s}$ and $\overline{t}$ be two geometric points. Choose $M$
+which is at least the exponents of the $q$-primary parts of both finite groups
+$C_{\overline{s}}$ and $C_{\overline{t}}$. For $m\geq M$, the ratio
+$r_{m+1}/r_m$ in
+(\ref{equation-picard-prime-primary-kernel-rank}) is
+$q^{2g_{\overline{s}}}$ and also
+$q^{2g_{\overline{t}}}$. Thus the two dimensions agree. Formula
+(\ref{equation-picard-prime-primary-kernel-rank}) then shows that
+$$
+\#C_{\overline{s}}[q^m]=\#C_{\overline{t}}[q^m]
+$$
+for every $m$. These cardinalities determine the elementary divisors of a
+finite abelian $q$-group, proving the first assertion.
+
+If all residue characteristics are zero, every prime is invertible on $S$.
+The first assertion therefore identifies every primary part. Since each
+$C_{\overline{s}}$ is finite, their products identify the whole torsion
+groups.
+\end{proof}
+
+\begin{remark}[Primary torsion boundary]
+\label{remark-picard-primary-Neron-Severi-boundary}
+\begin{reference}
+\cite[Expos\'e 236, Remark 3.10, p. 241]{FGA}.
+\end{reference}
+The prime-to-characteristic hypothesis in Lemma
+\ref{lemma-picard-Neron-Severi-prime-primary-constant} is essential to its
+proof: residue-characteristic power maps need not be \'etale, and their
+kernels need not have locally constant rank. The cited source reports that
+in characteristic $p>0$ the $p$-primary N\'eron--Severi torsion can vary. It
+does not include the construction of a counterexample, so that sentence is
+retained here as historical boundary evidence rather than promoted to a new
+example.
+
+The source then asks whether the rank of the finite group scheme
+$$
+T_{X_s/\kappa(s)}=
+P^\tau_s/P^{\circ\circ}_s
+$$
+might nevertheless be locally constant. It reports that, over a reduced
+base, this question can be reformulated as the simultaneous existence of the
+canonical abelian Picard subscheme $P^{\circ\circ}$ and flatness of
+$P^\tau$, and that it is enough to test traits. This is posed as a possible
+statement, not a theorem of the source. Remark
+\ref{remark-canonical-abelian-picard-specialization} records the corresponding
+discrete-valuation problem, while Remark
+\ref{remark-picard-torsion-flatness-boundary} records the source's Artinian
+Igusa warning. No local-constancy assertion from this final paragraph is used
+here.
+\end{remark}
+
 \section{Properties of the Picard stack}
 \label{section-picard-stack}
 

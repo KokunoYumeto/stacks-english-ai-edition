@@ -3637,3 +3637,67 @@ unreadable text; their rendered page images have SHA-256
 and
 `C0DF284A0B17B22ADF8FCE7BFC3BE9EF893B77293202639FF33F5042915CC1D3`.
 The next sequential cursor is Remark 3.10 on printed page 241.
+
+FGA 236, Remark 3.10 is now integrated as Moduli, Lemma
+`moduli-lemma-picard-Neron-Severi-prime-primary-constant`, Equation
+`moduli-equation-picard-prime-primary-kernel-rank`, and Remark
+`moduli-remark-picard-primary-Neron-Severi-boundary`. For every prime invertible
+on the base, the prime-power kernels on a proper torsion-component Picard locus
+are finite etale of constant rank. On each geometric fibre their ranks factor
+as the prime-power torsion rank of the reduced abelian identity component times
+the corresponding Neron--Severi torsion rank. The full sequence of ranks
+determines both its asymptotic abelian-dimension slope and every elementary
+divisor of the prime-primary Neron--Severi group. This proves constancy of its
+isomorphism type and, in residue characteristic zero, of the whole finite
+torsion group.
+
+The printed smooth-projective parenthesis is too broad under the modern
+finite-type meaning of proper: already the full Picard scheme of projective
+space is the non-quasi-compact constant scheme of degrees. The needed and
+later source-supported hypothesis is properness of the torsion-component locus
+$P^\tau$. Resolved issue `I000061` records this correction. The source's report
+that residue-characteristic-primary torsion can vary, and its tentative
+reduced-base flatness and trait criterion for
+$P^\tau/P^{\circ\circ}$, are preserved as historical boundary evidence rather
+than promoted to unproved current assertions.
+
+Decision `D000569` supersedes reviewed-historical decision `D000296` and
+records the unit as corrected source integration with its historical boundary.
+Direct 1,100-dpi source review uses printed page 241, whose page image has
+SHA-256
+`F07E028BBE778B94414E41F52C2DF80607C37D5B054A4822006BFC464B7BC867`.
+The 24-page authority remains 2,461,968 bytes with SHA-256
+`266EEF77BF7BA34A75895ED69ACBFE791A2958DD52C2837D75AB29DF0D2F714A`.
+
+Both semantic validators pass with no errors at 21,727 labels, 21,437
+official-tag joins, 71 controlled topics, 4,280 topic candidates, 569
+append-only decisions, 1,253 source units, 1,612 term links, and 61 source
+issues, of which nine remain active; there are zero review units. The topic,
+decision, issue, map, Stacks-label, topic-candidate, reviewed-topic-map,
+index-validation, and map-validation files have SHA-256
+`B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0`,
+`04C212132FBCB2FCABC26E583943EF1A67AD97CE06F1D02426B3145C3AAFC960`,
+`71B8D7D36176209D3D3306D26E88EB8E40D293076F6AA0AAA74AFFB309E2D65B`,
+`4D903FAB160C58977B8A4186D0E2B2B6D706996DF630D99C1720FF2E33DD156A`,
+`03CEDBFE076B35EA63B39E4D7CB26E7121A31897DA2B9DB8FC0135BB6383AB93`,
+`4A8C37AB76D412408D130E06CFE82B2ABD1378EA828C6BCA21F40C7C326887F1`,
+`26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46`,
+`82A5C2FACD440D5043CC6A942C2F35A978747EDFAA3264F57D45CC6D7D563CB4`,
+and `1A7145A760FD868A09BD83E5D864F8853AE5C76B6EC0B545D2926DD58D15CA53`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`;
+no official tag was invented for the new lemma, equation, or remark.
+
+Three reproducible serial TeX passes produce a 75-page Moduli chapter of
+895,014 bytes with SHA-256
+`6AD9024BEB4CC73CC513737840F14F92088A15F8091D81C51FE52492A62D8004`.
+The new source range has no overfull or underfull box; the sole build warning
+is an underfull vertical box on bibliography output page 74. Final serial
+1,100-dpi inspection of Moduli pages 61--62 finds no clipping, collision,
+malformed formula, unresolved new reference, placeholder, or unreadable text;
+their rendered page images have SHA-256
+`10D8BB0BC3487F27760AC1EBD674CBDDDB653E840B1B674039F954A9380A16F9`
+and
+`1BFC0319C12CDBB33D9B0421AA35C455A991BBE367ACF8843D00C4C811A6433B`.
+The next sequential cursor is the Section 4 introductory discussion on
+printed pages 241--242.
