@@ -3,10 +3,10 @@
   "date": "2026-08-06",
   "scope": {
     "start": "fac:I:1:no:1",
-    "end": "fac:II:2:no:37",
+    "end": "fac:II:2:no:38",
     "printed_pages": "199-231",
-    "units_decided": 145,
-    "stacks_references_added": 80
+    "units_decided": 149,
+    "stacks_references_added": 84
   },
   "authority": {
     "bytes": 6305726,
@@ -16,20 +16,21 @@
     "printed_pages_inspected": [199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231]
   },
   "latest_review": {
-    "unit": "fac:II:2:no:37",
-    "component": "components/035_II_2_37_sheaf_of_local_rings.tex",
-    "bytes": 3868,
-    "sha256": "735A0D323CF3F3BA68EE36028CDA078AB168EB3BB9368AD9BD7146CE0F932727",
-    "authority_physical_pages": [35, 36],
-    "authority_printed_pages": [230, 231],
+    "unit": "fac:II:2:no:38",
+    "component": "components/036_II_2_38_coherent_algebraic_sheaves.tex",
+    "bytes": 1947,
+    "sha256": "126133714E6F80440032C6DFC6091EAF2308090E8D1281CF6151D6B95A489978",
+    "authority_physical_pages": [36],
+    "authority_printed_pages": [231],
     "authority_renders": [
-      {"physical_page": 35, "sha256": "D6963099BA9FDB191E31DA08F2A26D0A8E8FCD3AD89BDA4ED8B959ECA2D95749"},
       {"physical_page": 36, "sha256": "81E21B86A7F62BD10E1FEE7A32832322CBBF9197EBA3A3B4279CED8EE22DDE37"}
     ],
     "output_renders": [
-      {"master": "coherent.tex", "pdf_page": 22, "sha256": "C2A9A88B4D2E335BD0717A56386012804DAB53B6A4E5C3CE532EA4C3D1AF95C4"},
-      {"master": "coherent.tex", "pdf_page": 23, "sha256": "1C38A5E539557F991E727A6D36E6F0C86FBA3B2F8D43A25C3865838CC5B60D74"},
-      {"master": "schemes.tex", "pdf_page": 22, "sha256": "5B15C5A60B602175298AE41794DCB00919F70629932CEFC27941EC4B012AD8F2"}
+      {"master": "sheaves.tex", "pdf_page": 10, "sha256": "74C461EA98FF6AA6FD311B375CC1827C0DE8384247F4E949ECD1DBF17A22445F"},
+      {"master": "modules.tex", "pdf_page": 13, "sha256": "395CB27F75A4975B179B37CB9212572846ED549643BF9838A4AACD684EC95FDB"},
+      {"master": "modules.tex", "pdf_page": 15, "sha256": "C0B89499C5D548098D5A0BB7F8F5AB37F23CA10FEB13DDAD4C56F83B50EB9FCD"},
+      {"master": "cohomology.tex", "pdf_page": 2, "sha256": "12C1CD32C92C6C688C94422C20F6B5F2257DD828304B9614E1E68C9E79DFEB45"},
+      {"master": "cohomology.tex", "pdf_page": 3, "sha256": "D668B348D29BC6A07E84583D826C8ACB417C766BE8C451FA4FC7EAC446398D50"}
     ]
   },
   "builds": [
@@ -45,16 +46,16 @@
       "master": "sheaves.tex",
       "pdf": "sheaves.pdf",
       "bytes": 662692,
-      "sha256": "AC9609ECF26BDDD0DC6984DD65C86D268F27828FAD06BEF441BCA4344D0D3578",
-      "affected_pdf_pages_inspected": [6, 7, 16, 17, 49, 51],
+      "sha256": "7C40F4CCB5E638FC1CCD7486D215403002E73AA60D701AC3388D2C7168BE27AC",
+      "affected_pdf_pages_inspected": [6, 7, 10, 16, 17, 49, 51],
       "affected_page_result": "PASS"
     },
     {
       "master": "modules.tex",
       "pdf": "modules.pdf",
       "bytes": 727139,
-      "sha256": "13C139DBAC11F5EAAD793D69958A0BA0888A8CC42EDC2A02979F3C6D8CFAAAD9",
-      "affected_pdf_pages_inspected": [3, 8, 9, 15, 16, 17, 18, 19, 22, 31, 32, 34],
+      "sha256": "EAD09A63F4FFC6116613EAD7BDB37350A090355DAD003A41236390391588774B",
+      "affected_pdf_pages_inspected": [3, 8, 9, 13, 15, 16, 17, 18, 19, 22, 31, 32, 34],
       "affected_page_result": "PASS"
     },
     {
@@ -76,9 +77,9 @@
     {
       "master": "cohomology.tex",
       "pdf": "cohomology.pdf",
-      "bytes": 1355001,
-      "sha256": "1226FC5C72B6B291CBCFB3A08633EC37E6E12236FFB3C0464AD241950DEFBDB8",
-      "affected_pdf_pages_inspected": [9, 10, 24, 25, 26, 27, 28, 29, 35, 40, 41, 43],
+      "bytes": 1355871,
+      "sha256": "E78567FA90B2919D921BD04DB7C2846915CAA1803455058D399162D5E3517CD9",
+      "affected_pdf_pages_inspected": [2, 3, 9, 10, 24, 25, 26, 27, 28, 29, 35, 40, 41, 43],
       "affected_page_result": "PASS"
     },
     {
@@ -165,7 +166,7 @@
     "fac_citations_resolved": true,
     "undefined_reference_at_edited_lines": 0,
     "overfull_box_at_edited_lines": 0,
-    "note": "The isolated builds retain unrelated missing chapter-aux warnings and pre-existing overfull diagnostics. The FAC no. 37 references resolve; the classical reduced-structure-sheaf bridge, locally Noetherian coherence history, and quasi-coherent ideal-sheaf reference introduce no unresolved citation, link, or new overfull box at edited lines. The inspected coherent.pdf pages 22--23 and schemes.pdf page 22 are unclipped and collision-free."
+    "note": "The isolated builds retain unrelated missing chapter-aux warnings and pre-existing overfull diagnostics. The FAC no. 38 references resolve after the required cohomology bibliography refresh; the module-sheaf, finite-presentation, coherence, and cohomology-scalar references introduce no unresolved citation, link, or new overfull box at edited lines. The inspected sheaves.pdf page 10, modules.pdf pages 13 and 15, and cohomology.pdf pages 2--3 are unclipped and collision-free."
   },
   "validators": {
     "intake": "PASS",
