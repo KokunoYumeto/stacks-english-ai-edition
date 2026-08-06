@@ -3,49 +3,49 @@
   "date": "2026-08-06",
   "scope": {
     "start": "fac:I:1:no:1",
-    "end": "fac:II:2:no:41",
-    "printed_pages": "199-233",
-    "units_decided": 163,
-    "stacks_references_added": 93
+    "end": "fac:II:3:no:42",
+    "printed_pages": "199-234",
+    "units_decided": 172,
+    "stacks_references_added": 101
   },
   "authority": {
     "bytes": 6305726,
     "sha256": "B8C6508249308F5D8BC886B9E6360F1EC4FDC8F0F18EFAA03EE0E36B591551CA",
     "render_dpi": 1100,
-    "physical_pages_inspected": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38],
-    "printed_pages_inspected": [199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233]
+    "physical_pages_inspected": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39],
+    "printed_pages_inspected": [199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234]
   },
   "latest_review": {
-    "unit": "fac:II:2:no:41",
-    "component": "components/039_II_2_41_sheaf_associated_fiber_space.tex",
-    "bytes": 3596,
-    "sha256": "4F718D8C6D629A54A08702CE8AAFA11E071B112CD9C0FAD7262DA8B00BD951B0",
-    "authority_physical_pages": [38],
-    "authority_printed_pages": [233],
+    "unit": "fac:II:3:no:42",
+    "component": "components/040_II_3_42_affine_varieties.tex",
+    "bytes": 4006,
+    "sha256": "32493A787857261E2487F8122CACE38F0E565BBC2285DF28F248C2D2CAF8A491",
+    "authority_physical_pages": [38, 39],
+    "authority_printed_pages": [233, 234],
     "authority_renders": [
-      {"physical_page": 38, "sha256": "2B5E3325CC585516219AFC0282E181D393792BD48F9E091EC93034CA48F138A9"}
+      {"physical_page": 38, "sha256": "2B5E3325CC585516219AFC0282E181D393792BD48F9E091EC93034CA48F138A9"},
+      {"physical_page": 39, "sha256": "7CFDB8725BC99A90FA75B646A6E1723DB42350FADFC09E4340BF2664400B05FB"}
     ],
     "output_renders": [
-      {"master": "constructions.tex", "pdf_page": 9, "sha256": "E11955E8114264E4887E76E50C58AC7E34F4738926194F94CD8708C6B98EB708"},
-      {"master": "modules.tex", "pdf_page": 20, "sha256": "3CD21D0F7ACEC26227D86387271D00DA40A9E9099C82569E44B2554FDA750363"},
-      {"master": "derham.tex", "pdf_page": 5, "sha256": "03021DAFF6D5DD8EB97BF5B61A1F929BE74485E9C5B0B73EB3272F102E81C28F"}
+      {"master": "schemes.tex", "pdf_page": 9, "sha256": "3121B2315DD41CDD006D6A54FBF4D44E407664D496E3DCD3F3D6F3B269A4C3C6"},
+      {"master": "schemes.tex", "pdf_page": 10, "sha256": "577C477F9C0F653D48809ECA4C3DCD1033B4F567DEECA7A16B9AF5DC6B7B6CB0"},
+      {"master": "schemes.tex", "pdf_page": 19, "sha256": "8310E800F9C674E5B96CC389EDB544EDFFA7CDD586A866E66AF620FCF83A693D"},
+      {"master": "schemes.tex", "pdf_page": 42, "sha256": "B856C71A99905277100F29EDFAC3B591D694E12B8BE0BFA6319005C233F891B3"},
+      {"master": "algebra.tex", "pdf_page": 36, "sha256": "559BEAB62F671B3A74595EAB02614BA123260287C0DB0F9FC2FA6426E3C8F514"},
+      {"master": "morphisms.tex", "pdf_page": 21, "sha256": "16EB62F472F9D6E32948A10C01D423BAE4EB375B632EFCE0D94A1340560ECC6D"},
+      {"master": "varieties.tex", "pdf_page": 48, "sha256": "7860502304A95A193C693E478BCF6AC0275C2C56F6742CA178F2437C2F1FB302"}
     ],
-    "rejected_output": {
-      "master": "derham.tex",
-      "bytes": 909269,
-      "sha256": "F2B80C068353BA75A2FE9A8407AEF1305101D5CA949F9A7BB1AAFDE1EADCDEE1",
-      "pdf_page": 5,
-      "render_sha256": "FEA7D7521AE4B59660322666C190E59D319B8270D193F84B69471B594C0739E1",
-      "reason": "visible unresolved cross-chapter links"
-    },
-    "supporting_aux": {
-      "file": "sdga.aux",
-      "bytes": 15351,
-      "sha256": "D232EB80ABE07C329DAF3B19E8FE29D986BB3B8D8393D66E9A03F07E6A146879"
-    },
-    "blind_review": {"id": "FAC-BLIND-REVIEW-N041-R1", "result": "PASS", "findings": []}
+    "blind_review": {"id": "FAC-BLIND-REVIEW-N042-R1", "result": "PASS", "findings": []}
   },
   "builds": [
+    {
+      "master": "algebra.tex",
+      "pdf": "algebra.pdf",
+      "bytes": 3686880,
+      "sha256": "63A3BA11212A15F8BD752BBA684884ADA1FDD7A4C8D660CCA804D72AF78C5919",
+      "affected_pdf_pages_inspected": [36],
+      "affected_page_result": "PASS"
+    },
     {
       "master": "topology.tex",
       "pdf": "topology.pdf",
@@ -121,25 +121,25 @@
     {
       "master": "schemes.tex",
       "pdf": "schemes.pdf",
-      "bytes": 721851,
-      "sha256": "D6C9E2136D74172A079ADCF3AC0D00CBBD0FFAEF1E3E8F035A9A037F382A088C",
-      "affected_pdf_pages_inspected": [2, 3, 8, 9, 10, 16, 17, 22, 23, 25, 26, 31, 32, 33, 34, 40, 43],
+      "bytes": 722234,
+      "sha256": "8BE955592783763876E1A20280AA3149358067CBCB6BC2FFFB4B1BB10F99A493",
+      "affected_pdf_pages_inspected": [2, 3, 8, 9, 10, 16, 17, 19, 22, 23, 25, 26, 31, 32, 33, 34, 40, 42, 43],
       "affected_page_result": "PASS"
     },
     {
       "master": "morphisms.tex",
       "pdf": "morphisms.pdf",
-      "bytes": 1587630,
-      "sha256": "897A3BC9862757A265753CD83C4972544788A51C85EB441CB9B3C8C402968C83",
-      "affected_pdf_pages_inspected": [123, 124],
+      "bytes": 1588012,
+      "sha256": "7A0DCD813CAFBA68A910058735739EE9AB30D8DDDA23B76AE62D295B4022E675",
+      "affected_pdf_pages_inspected": [21, 123, 124],
       "affected_page_result": "PASS"
     },
     {
       "master": "varieties.tex",
       "pdf": "varieties.pdf",
-      "bytes": 1304100,
-      "sha256": "2440F9B09C55BD015593157381FA9ABB682980F53F22913D8CF423ECE668586C",
-      "affected_pdf_pages_inspected": [2, 38],
+      "bytes": 1304482,
+      "sha256": "A776594D49FB88E1F7DA0387C2A00C0639CC8C632B6675329D1140A840EA0391",
+      "affected_pdf_pages_inspected": [2, 38, 48],
       "affected_page_result": "PASS"
     }
   ],
@@ -194,7 +194,7 @@
     "fac_citations_resolved": true,
     "undefined_reference_at_edited_lines": 0,
     "overfull_box_at_edited_lines": 0,
-    "note": "The isolated builds retain unrelated missing chapter-aux warnings and pre-existing overfull diagnostics. All no. 41 FAC citations resolve. The inspected constructions.pdf page 9, modules.pdf page 20, and repaired derham.pdf page 5 are unclipped, collision-free, and have no unresolved mark at the edited statements. Issue I000096 retains the rejected De Rham build and the exact supplying auxiliary-file repair receipt; issue I000083 retains the separate rejected and repaired no. 39 target-page receipts."
+    "note": "The isolated builds retain unrelated missing chapter-aux warnings and pre-existing overfull diagnostics. All no. 42 FAC citations resolve. The inspected schemes.pdf pages 9, 10, 19, and 42, algebra.pdf page 36, morphisms.pdf page 21, and varieties.pdf page 48 are unclipped, collision-free, and contain no unresolved mark at an edited statement. Issues I000083 and I000096 retain the earlier rejected and repaired build receipts."
   },
   "validators": {
     "intake": "PASS",

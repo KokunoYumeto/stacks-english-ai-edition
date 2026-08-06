@@ -810,6 +810,15 @@ follows.
 
 \begin{lemma}
 \label{lemma-f-open}
+\begin{reference}
+\cite[Chapter II, \S 3, no. 42, p. 234]{FAC}
+\end{reference}
+\begin{history}
+For a regular function $f$ on a classical algebraic variety $V$, the cited
+source writes $V_f$ for the locus where the value $f(x)$ is nonzero. On the
+associated reduced scheme this is the locus where the germ of $f$ is a unit,
+namely the open $D(f)$ below.
+\end{history}
 Let $X$ be a locally ringed space.
 Let $f \in \Gamma(X, \mathcal{O}_X)$.
 The set
@@ -975,6 +984,14 @@ and Lemma \ref{lemma-morphism-into-affine}.
 
 \begin{lemma}
 \label{lemma-standard-open-affine}
+\begin{reference}
+\cite[Chapter II, \S 3, no. 42, Proposition 2, p. 234]{FAC}
+\end{reference}
+\begin{history}
+The cited proof realizes $V_f$ as the closed hypersurface
+$\lambda f(x)=1$ in $V \times \mathbf{A}^1$. The localization construction
+below is the scheme-theoretic version and applies over an arbitrary ring.
+\end{history}
 Let $Y$ be an affine scheme.
 Let $f \in \Gamma(Y, \mathcal{O}_Y)$.
 The open subspace $D(f)$ is an affine scheme.
@@ -996,6 +1013,8 @@ is isomorphic to $U$ by Lemma \ref{lemma-open-immersion}.
 \label{lemma-fibre-product-affine-schemes}
 \begin{reference}
 \cite[Chapter II, \S 1, no. 33, pp. 225--226]{FAC}
+The affine-product assertion is repeated in
+\cite[Chapter II, \S 3, no. 42, pp. 233--234]{FAC}.
 \end{reference}
 The category of affine schemes has finite products, and fibre products.
 In other words, it has finite limits. Moreover, the products
@@ -1981,6 +2000,17 @@ immediately that $\xi' = \xi$.
 
 \begin{lemma}
 \label{lemma-basis-affine-opens}
+\begin{reference}
+\cite[Chapter II, \S 3, no. 42, Theorem 1 and Corollary, p. 234]{FAC}
+\end{reference}
+\begin{history}
+The cited theorem says that affine opens form a basis for a classical
+algebraic variety, hence every open covering admits an affine refinement.
+The result below holds for every scheme by local affineness. The source's
+additional assertion that finite intersections of members of such a cover
+remain affine uses its closed-diagonal axiom; it is not valid for arbitrary
+schemes, as Remark \ref{remark-intersection-affine-opens} records.
+\end{history}
 Let $X$ be a scheme. The collection of affine opens
 of $X$ forms a basis for the topology on $X$.
 \end{lemma}
@@ -4277,6 +4307,16 @@ The implication (2) $\Rightarrow$ (3) is trivial.
 
 \begin{lemma}
 \label{lemma-characterize-separated}
+\begin{reference}
+\cite[Chapter II, \S 3, no. 42, Proposition 1, p. 234]{FAC}
+\end{reference}
+\begin{history}
+The cited source proves that two affine opens of an algebraic variety have
+affine intersection by pulling back the closed diagonal inside their affine
+product, and explicitly notes failure for prealgebraic varieties. Part (1)(a)
+is the relative scheme-theoretic form: separatedness supplies the closed
+diagonal, and the statement is false without it.
+\end{history}
 Let $f : X \to S$ be a morphism of schemes.
 \begin{enumerate}
 \item If $f$ is separated then for every pair of affine
