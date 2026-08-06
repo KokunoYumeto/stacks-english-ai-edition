@@ -279,6 +279,7 @@ The final assertion follows from Schemes, Lemma
 \begin{reference}
 \cite[Chapter II, \S 3, no. 47, Proposition 8 and Theorem 4,
 pp. 239--240]{FAC}
+\cite[Chapter III, \S 1, no. 52, Proposition 2, p. 244]{FAC}
 \end{reference}
 \begin{history}
 The cited proposition proves Cech vanishing for a finite affine-open covering
@@ -286,7 +287,10 @@ of an affine classical variety by refinement to principal opens. The cited
 theorem then proves that a finite affine-open covering of an arbitrary
 classical variety computes sheaf cohomology. The lemma below obtains the
 comparison directly whenever all finite intersections are affine, allows an
-arbitrary index set, and applies to every quasi-coherent module.
+arbitrary index set, and applies to every quasi-coherent module. The later
+application in no. 52 uses the $r + 1$ standard affine charts of classical
+projective space; in the scheme formulation their finite intersections are
+affine because projective space is separated.
 \end{history}
 Let $X$ be a scheme.
 Let $\mathcal{U} : X = \bigcup_{i \in I} U_i$ be an open covering such that
@@ -632,6 +636,17 @@ $U_i \cap U_n$ is separated as an open subscheme of the affine scheme $U_n$.
 
 \begin{lemma}
 \label{lemma-vanishing-nr-affines}
+\begin{reference}
+\cite[Chapter III, \S 1, no. 52, Proposition 2 and Corollary,
+p. 244]{FAC}
+\end{reference}
+\begin{history}
+The cited corollary uses the $r + 1$ standard affine charts of
+$\mathbf{P}_r(K)$ and the alternating Cech complex to obtain vanishing in
+degrees greater than $r$ for coherent algebraic sheaves. The lemma below
+isolates the covering argument for every quasi-coherent module on a
+quasi-compact scheme with affine diagonal and for any finite affine covering.
+\end{history}
 \begin{slogan}
 For schemes with affine diagonal, the cohomology of quasi-coherent
 modules vanishes in degrees bigger than the number of affine
@@ -3724,6 +3739,17 @@ projective space over a Noetherian ring.
 
 \begin{lemma}
 \label{lemma-coherent-projective}
+\begin{reference}
+\cite[Chapter III, \S 1, no. 52, Proposition 2 and Corollary,
+p. 244]{FAC}
+\end{reference}
+\begin{history}
+The cited result proves that the standard affine covering computes the
+cohomology of a coherent algebraic sheaf on classical projective space and
+deduces vanishing above its dimension. Part (2) below retains this bound over
+an arbitrary Noetherian base ring, while the other parts add generation,
+finiteness, and eventual twisted vanishing not asserted there.
+\end{history}
 Let $R$ be a Noetherian ring.
 Let $n \geq 0$ be an integer.
 For every coherent sheaf $\mathcal{F}$ on $\mathbf{P}^n_R$
