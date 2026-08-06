@@ -6504,6 +6504,53 @@ constant sheaf with value $\mathcal{F}_\eta$.
 Omitted.
 \end{proof}
 
+\begin{lemma}
+\label{lemma-coherent-subsheaf-meromorphic-functions}
+\begin{reference}
+\cite[Chapter II, \S 2, no. 40, pp. 232--233]{FAC}
+\end{reference}
+\begin{history}
+In the classical terminology of the cited source, an
+$\mathcal{O}_X$-submodule of the constant sheaf of rational functions is
+called a sheaf of fractional ideals. No invertibility or local-freeness is
+part of this terminology.
+\end{history}
+Let $X$ be a locally Noetherian integral scheme. Let $\mathcal{K}_X$ be
+the sheaf of meromorphic functions.
+\begin{enumerate}
+\item An $\mathcal{O}_X$-submodule $\mathcal{F} \subset \mathcal{K}_X$
+is coherent if and only if it is of finite type.
+\item The $\mathcal{O}_X$-module $\mathcal{K}_X$ is coherent if and only if
+$\dim(X) = 0$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+A coherent module is of finite type by definition. Conversely, suppose that
+$\mathcal{F}$ is of finite type. Fix $x \in X$. After replacing $X$ by an
+affine open neighbourhood $U = \Spec(A)$ of $x$, we may choose
+$f_1, \ldots, f_r \in \mathcal{K}_X(U)$ which generate
+$\mathcal{F}|_U$. By Lemma
+\ref{lemma-meromorphic-functions-integral-scheme}, we may view the $f_i$
+as elements of the fraction field of $A$. Choose a nonzero $b \in A$ such
+that $bf_i \in A$ for all $i$. Multiplication by $b$ identifies
+$\mathcal{F}|_U$ with the finite type submodule
+$b\mathcal{F}|_U \subset \mathcal{O}_U$. The module $\mathcal{O}_U$ is
+coherent by Cohomology of Schemes, Lemma
+\ref{coherent-lemma-coherent-Noetherian}; hence $b\mathcal{F}|_U$ is
+coherent by Modules, Lemma \ref{modules-lemma-coherent-abelian}.
+This proves (1).
+
+If $\dim(X) = 0$, every local ring of the integral scheme $X$ is a field,
+and hence $\mathcal{K}_X = \mathcal{O}_X$ is coherent. Conversely, suppose
+that $\mathcal{K}_X$ is coherent. For every $x \in X$, the fraction field
+of the domain $\mathcal{O}_{X, x}$ is then finite as an
+$\mathcal{O}_{X, x}$-module, and hence integral over
+$\mathcal{O}_{X, x}$. If $a \in \mathcal{O}_{X, x}$ is nonzero, a monic
+equation for $a^{-1}$ shows that $a^{-1} \in \mathcal{O}_{X, x}$.
+Thus every local ring of $X$ is a field and $\dim(X) = 0$.
+\end{proof}
+
 \noindent
 In some cases we can show regular meromorphic sections exist.
 

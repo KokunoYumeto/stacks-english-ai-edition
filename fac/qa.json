@@ -3,44 +3,33 @@
   "date": "2026-08-06",
   "scope": {
     "start": "fac:I:1:no:1",
-    "end": "fac:II:2:no:39",
-    "printed_pages": "199-232",
-    "units_decided": 154,
-    "stacks_references_added": 89
+    "end": "fac:II:2:no:40",
+    "printed_pages": "199-233",
+    "units_decided": 157,
+    "stacks_references_added": 90
   },
   "authority": {
     "bytes": 6305726,
     "sha256": "B8C6508249308F5D8BC886B9E6360F1EC4FDC8F0F18EFAA03EE0E36B591551CA",
     "render_dpi": 1100,
-    "physical_pages_inspected": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37],
-    "printed_pages_inspected": [199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232]
+    "physical_pages_inspected": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38],
+    "printed_pages_inspected": [199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233]
   },
   "latest_review": {
-    "unit": "fac:II:2:no:39",
-    "component": "components/037_II_2_39_ideal_sheaf_closed_subvariety.tex",
-    "bytes": 4180,
-    "sha256": "3376D06E7F0198F181FAD165B27585ECD2D8DF692740715367E96F1953B575CC",
-    "authority_physical_pages": [36, 37],
-    "authority_printed_pages": [231, 232],
+    "unit": "fac:II:2:no:40",
+    "component": "components/038_II_2_40_sheaves_of_fractional_ideals.tex",
+    "bytes": 1531,
+    "sha256": "F1F9671E20C96E62F313CA61C3D8D5BE17F5F02BBCAF0F5F72B7F2B657B28E47",
+    "authority_physical_pages": [37, 38],
+    "authority_printed_pages": [232, 233],
     "authority_renders": [
-      {"physical_page": 36, "sha256": "81E21B86A7F62BD10E1FEE7A32832322CBBF9197EBA3A3B4279CED8EE22DDE37"},
-      {"physical_page": 37, "sha256": "3EE23A3ED075AAF2E17DE0D03201963E9F7E43B116D3633AB300BE6CFF0EDAB1"}
+      {"physical_page": 37, "sha256": "3EE23A3ED075AAF2E17DE0D03201963E9F7E43B116D3633AB300BE6CFF0EDAB1"},
+      {"physical_page": 38, "sha256": "2B5E3325CC585516219AFC0282E181D393792BD48F9E091EC93034CA48F138A9"}
     ],
     "output_renders": [
-      {"master": "coherent.tex", "pdf_page": 23, "sha256": "1C38A5E539557F991E727A6D36E6F0C86FBA3B2F8D43A25C3865838CC5B60D74"},
-      {"master": "coherent.tex", "pdf_page": 24, "sha256": "66A4C18E1FE2029BD46AE58DEE8152BED90D559B97CAE7623C57F78A19A3C065"},
-      {"master": "coherent.tex", "pdf_page": 25, "sha256": "4A9F5BD5FBE5C1CB70F9DBE0EA526BC2B1A5B816D92DAF972B8C17C6021CE2AD"},
-      {"master": "cohomology.tex", "pdf_page": 36, "sha256": "8005EADA360B0796789515B23D3C98E7455629680E8A448F30556ADE135B4826"}
+      {"master": "divisors.tex", "pdf_page": 63, "sha256": "12D9A9634D34E3ED9314B3071F06E90207DA5BD9C7EADBC238345BA10391F1B8"}
     ],
-    "blind_review": {"id": "FAC-BLIND-REVIEW-N039-R1", "result": "PASS", "findings": []},
-    "rejected_output": {
-      "pdf": "cohomology.pdf",
-      "sha256": "873B46AA581FFDF06B40012389D3F65EE369F3DDAFA0832045F514ED8035D8A4",
-      "page": 36,
-      "page_sha256": "F111FF8E79CFFA397A2CE4FBCE000EE265F0BDA5A2F40DBC7EBCB8D26568320F",
-      "reason": "visible unresolved cross-chapter lemma number"
-    },
-    "supporting_aux": {"file": "derived.aux", "sha256": "ED48B2B991FB8DF75AA63F358C6C94DA4D582C7748985C1B2A6B235813AC9312"}
+    "blind_review": {"id": "FAC-BLIND-REVIEW-N040-R1", "result": "PASS", "findings": []}
   },
   "builds": [
     {
@@ -81,6 +70,14 @@
       "bytes": 1034851,
       "sha256": "CDB75349E4D77AA1048EAA70B1DDA8297309CDCFC09201A6CFC306B384F38909",
       "affected_pdf_pages_inspected": [22, 23, 24, 25],
+      "affected_page_result": "PASS"
+    },
+    {
+      "master": "divisors.tex",
+      "pdf": "divisors.pdf",
+      "bytes": 1108359,
+      "sha256": "958298B5A56244E98C5D88A0740E66FB809874B616A1B8A8EBC206118BD269F9",
+      "affected_pdf_pages_inspected": [63],
       "affected_page_result": "PASS"
     },
     {
@@ -175,7 +172,7 @@
     "fac_citations_resolved": true,
     "undefined_reference_at_edited_lines": 0,
     "overfull_box_at_edited_lines": 0,
-    "note": "The isolated builds retain unrelated missing chapter-aux warnings and pre-existing overfull diagnostics. The first no. 39 cohomology target-page render failed because a missing derived.aux left a visible unresolved lemma number; issue I000083 records the rejected hashes. After serially generating that exact aux file and rebuilding twice, all no. 39 target references resolve. The inspected coherent.pdf pages 23--25 and cohomology.pdf page 36 are unclipped and collision-free."
+    "note": "The isolated builds retain unrelated missing chapter-aux warnings and pre-existing overfull diagnostics. The no. 40 FAC citation and all links in the new meromorphic-function lemma resolve after the required bibliography pass. The inspected divisors.pdf page 63 is unclipped, collision-free, and has no unresolved mark at the edited statement or proof. Issue I000083 retains the separate rejected and repaired no. 39 target-page receipts."
   },
   "validators": {
     "intake": "PASS",
