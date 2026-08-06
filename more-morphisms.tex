@@ -8850,6 +8850,57 @@ fibrewise component group. Thus the image of $x'$ has $p$-power order, so
 $x' \in G^\rho$, as desired.
 \end{proof}
 
+\begin{lemma}
+\label{lemma-power-kernel-density-universally-open}
+\begin{reference}
+Corrected form of \cite[Expos\'e 236, Corollary 1.5, pp. 227--228]{FGA}.
+\end{reference}
+Let $S$ be a locally Noetherian scheme and let $G \to S$ be a commutative
+group scheme locally of finite type. Let $n > 1$ and assume that
+$$
+[n] : G \longrightarrow G
+$$
+is universally open. For $h \geq 0$, set
+$$
+G^{(n^h)} = [n^h]^{-1}(G^0)
+$$
+as a subset of $G$, where $G^0$ is the identity-component locus. Assume that,
+for every algebraically closed field $k$ and every morphism
+$\Spec(k) \to S$, the subset
+$$
+\bigcup_{h \geq 0} \left|\Ker([n^h] : G_k \to G_k)\right|
+$$
+is dense in $\bigcup_{h \geq 0}G^{(n^h)}_k$. Then $G \to S$ is universally
+open along $\bigcup_{h \geq 0}G^{(n^h)}$.
+\end{lemma}
+
+\begin{proof}
+The morphism $[n^h]$ is universally open because it is an iterate of $[n]$.
+Its kernel $K_h \to S$ is the base change of $[n^h]$ by the identity section
+$S \to G$, and hence is universally open. By
+Lemma \ref{lemma-universally-open-along}, the structure morphism $G \to S$
+is universally open along $|K_h|$, and therefore along
+$\bigcup_{h \geq 0}|K_h|$. The density hypothesis and
+Lemma \ref{lemma-universally-open-along-fibrewise-dense} give the result.
+\end{proof}
+
+\begin{remark}
+\label{remark-power-kernel-density-characteristic}
+The density hypothesis in
+Lemma \ref{lemma-power-kernel-density-universally-open} cannot be omitted.
+For example, if $k$ is algebraically closed of characteristic $p > 0$ and
+$G = \mathbf{G}_{m,k}$, then $[p]$ is finite locally free and hence
+universally open, and $G$ has no subgroup isomorphic to $\mathbf{G}_a$.
+Nevertheless, the underlying set of every $\Ker([p^h])$ is just
+the identity whereas $G^{(p^h)}=G$. Thus the unrestricted density assertion
+in the proof of the cited corollary is false when the residue characteristic
+divides $n$. When $n$ is invertible and the geometric identity components
+have no additive subgroup, the classical structure theorem for connected
+commutative algebraic groups supplies the required density of $n$-primary
+torsion. This prime-to-characteristic restriction is essential for that
+argument.
+\end{remark}
+
 
 
 
@@ -22252,6 +22303,66 @@ $\mathbf{P}^n_k$ is equal to $n$.
 
 \noindent
 Some material on universally open morphisms.
+
+\begin{definition}
+\label{definition-universally-open-along}
+Let $f : X \to S$ be a morphism of schemes and let $E \subset |X|$.
+For a morphism $S' \to S$, denote $E_{S'} \subset |X_{S'}|$ the inverse
+image of $E$.
+\begin{enumerate}
+\item We say that $f$ is \textit{open along $E$} if, for every $x \in E$
+and every open neighbourhood $U \subset X$ of $x$, the image $f(U)$ is a
+neighbourhood of $f(x)$.
+\item We say that $f$ is \textit{universally open along $E$} if, for every
+morphism $S' \to S$, the base change $X_{S'} \to S'$ is open along
+$E_{S'}$.
+\end{enumerate}
+We also say that $f$ is (universally) open at the points of $E$.
+\end{definition}
+
+\begin{lemma}
+\label{lemma-universally-open-along}
+Let $f : X \to S$ be a morphism of schemes and let $E \subset |X|$.
+\begin{enumerate}
+\item Universal openness along $E$ is preserved by arbitrary base change.
+\item The morphism $f$ is universally open if and only if it is universally
+open along $|X|$.
+\item Let $g : Z \to X$ be an $S$-morphism. If $Z \to S$ is universally
+open, then $f$ is universally open along the image of $|g|$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+The first assertion follows from the definition. For the second, only the
+converse requires a comment. After any base change, if $U \subset X$ is open,
+then every point of $f(U)$ has a neighbourhood contained in $f(U)$; hence
+$f(U)$ is open. For (3), after any base change, an open neighbourhood of a
+point in the image of $|g|$ pulls back to an open neighbourhood of a point of
+$Z$. Its image in the base is a neighbourhood and is contained in the image
+of the original open.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-universally-open-along-fibrewise-dense}
+Let $f : X \to S$ be a morphism of schemes and let
+$E \subset Z \subset |X|$. Assume
+\begin{enumerate}
+\item $f$ is universally open along $E$, and
+\item for every algebraically closed field $k$ and every morphism
+$\Spec(k) \to S$, the inverse image $E_k$ is dense in $Z_k$.
+\end{enumerate}
+Then $f$ is universally open along $Z$.
+\end{lemma}
+
+\begin{proof}
+The hypotheses have the same form after arbitrary base change, so it is
+enough to prove openness along $Z$. Let $z \in Z$, let $s=f(z)$, and let
+$U \subset X$ be an open neighbourhood of $z$. Choose an algebraic closure
+$k$ of $\kappa(s)$ and a point $\overline{z} \in X_k$ above $z$. The open
+subset $U_k \cap Z_k$ contains $\overline{z}$ and hence meets $E_k$. The
+image of a point of this intersection is a point $e \in U \cap E$ lying over
+$s$. Since $f$ is open at $e$, the set $f(U)$ is a neighbourhood of $s$.
+\end{proof}
 
 \begin{lemma}
 \label{lemma-test-universally-open}

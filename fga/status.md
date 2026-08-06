@@ -2048,3 +2048,57 @@ integrate the universal-openness argument (including the corrected value
 `g'(y') = x'`) and Corollary 1.5 (including the corrected condition that the
 residue characteristic be prime to `n`), before proceeding through Remarks
 1.6 and 1.9 and Corollaries 1.7, 1.8, and 1.10 on printed pages 228--230.
+
+The next Section 1 checkpoint introduces the pointwise notion of a morphism
+being universally open along a subset and proves its base-change image and
+geometric-fibre density properties. Lemma
+`more-morphisms-lemma-power-kernel-density-universally-open` then gives the
+valid form of the power-kernel argument in Corollary 1.5: universal openness
+of the power map propagates from its iterated kernels to the inverse-image
+loci exactly when those kernels are dense in the relevant geometric fibres.
+
+Remark `more-morphisms-remark-power-kernel-density-characteristic` records a
+newly detected boundary in the printed proof. In characteristic `p`, with
+`n = p` and `G = G_m`, the power map is finite locally free and universally
+open and the group contains no additive subgroup, but every `p`-power kernel
+has only the identity as its underlying set while every inverse-image locus is
+all of `G`. Thus absence of an additive subgroup alone does not imply the
+printed density assertion unless the exponent is invertible in the residue
+characteristic. Issue `I000049` records this overbreadth and decision
+`D000534` resolves it by using the exact fibrewise-density hypothesis and
+retaining the classical no-additive-component implication only in the
+prime-to-characteristic case. Decision `D000533` dispositions the displayed
+inverse-image locus. Issues `I000047` and `I000048` remain active for the next
+universal-openness clause and its corrected `n`-coprimality statement.
+
+Direct serial 1,100-dpi review covers printed pages 227--228 of the 24-page
+NUMDAM authority. That authority remains 2,461,968 bytes with SHA-256
+`266EEF77BF7BA34A75895ED69ACBFE791A2958DD52C2837D75AB29DF0D2F714A`.
+Both semantic validators pass with no errors at 21,661 labels, 21,437
+official-tag joins, 71 controlled topics, 4,197 topic candidates, 534
+append-only decisions, 1,253 source units, 1,612 term links, and 49 source
+issues, of which nine remain active; there are zero review units. The topic,
+decision, issue, map, Stacks-label, topic-candidate, reviewed-topic-map,
+index-validation, and map-validation files have SHA-256
+`B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0`,
+`127D4AEC50A2553DDEC4560B686D29E77B594DB2409F058DE94349815F424835`,
+`965746FF93DE4AB63950986418C0FF5B1FF21E2DA4C63A0CE6DD23994168917B`,
+`7F99D8FBAFDDEC1864ADC9C3ED935F650BBEC3B452D1D31E2D4C450419C78D2F`,
+`DD77EBF4C1FC936E200A644B2F4C9D99B14F4BE83999C20F7607844DC00A45E9`,
+`B4411BA8F5DD046EF434D9DFE52C657EF90CE40069450EF5894450BC3D5BA89B`,
+`26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46`,
+`811FB4A60715E4D473337ABCF56764D764A896AD9EAD669923F839F8B3ECD180`,
+and `4F39477E8A3E2CAA965098A5FE6A33A21B73F03E65ED2C73C8590D8955C39199`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`;
+the five new semantic labels deliberately have no invented official tags.
+
+A bibliography-complete serial build followed by stable TeX passes produces
+a 253-page More on Morphisms chapter of 2,355,792 bytes with SHA-256
+`CDC5D6B4CF701C1B696006119504C804F4C80944605A65F7652A59993CFF4BD3`.
+The added source ranges create no overfull or underfull horizontal box. Final
+serial 1,100-dpi inspection of pages 92 and 230 finds no clipping, collision,
+malformed formula, unresolved marker, placeholder, or unreadable text. The
+next sequential patch is the remaining Theorem 1.1(iii) generalization
+argument and the corrected prime-to-`n` consequence of Corollary 1.5 before
+proceeding to Remarks 1.6 and 1.9 and Corollaries 1.7, 1.8, and 1.10.
