@@ -1058,3 +1058,30 @@ Moduli Stacks chapter of 527,758 bytes with SHA-256
 The new proposition adds no unresolved reference or overfull horizontal box
 and passes 1,200-dpi inspection on pages 9--11.  The next sequential cursor is
 Expose 221, Proposition 1.3.
+
+The fifty-third source patch integrates the formal reduced-support statement
+of Expose 221, Proposition 1.3.  A reusable lemma proves that the reductions
+of all geometric fibres of any finite-type closed family are bounded.  On an
+irreducible parameter space it passes through the exact Stacks construction
+of a finite universal homeomorphism making the generic reduction
+geometrically reduced, shrinks to the locus of geometrically reduced fibres,
+and handles the closed complement by Noetherian induction.  The proposition
+then cuts out support with the zeroth Fitting ideal, whose formation commutes
+with every base change, and applies the lemma.  This separates scheme support
+from fibrewise reduction and does not assume that taking radicals itself
+commutes with base change.  Decisions `D000387` and `D000388` retain the
+following primary-decomposition variants as the remaining Section 1 cursor.
+
+Both semantic validators pass with no errors at 21,570 labels, 3,845 topic
+candidates, 388 append-only decisions, 1,253 source units, 1,612 term links,
+and 14 source issues, of which eight remain active.  The decision and map
+ledgers have SHA-256
+`CB9EE705AC2EF8DC87146CB6FDE35C99BF931215B13C63DF5FB3BBAEF7D5C18E`
+and `043BC5B26DEC57F4318411FBE3245F07A543BC86B5052E32FEBF07AA2C5DE681`.
+A bibliography-complete build and two final TeX passes produce a 25-page
+Moduli Stacks chapter of 533,850 bytes with SHA-256
+`3174E1E7D15EBE980094F823A1CCF44154FFFB35A21A44FE0882E16B51652DD2`.
+The new lemma and proposition add no unresolved reference or overfull
+horizontal box and pass 1,200-dpi inspection on pages 10--12.  The next
+sequential cursor is the primary and associated-component paragraph following
+Expose 221, Proposition 1.3.
