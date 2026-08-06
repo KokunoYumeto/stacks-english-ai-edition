@@ -2,17 +2,17 @@
 
 - Frozen surface: 661 source targets through printed page 278.
 - Stage: sequential source review and statement-level Stacks integration.
-- Completed checkpoint: Chapter II, Section 3, no. 45, printed pages 199--238.
-- Reviewed decisions: 190 (54 equivalent, 78 stronger, 28 extensions,
+- Completed checkpoint: Chapter II, Section 3, no. 46, printed pages 199--239.
+- Reviewed decisions: 194 (54 equivalent, 82 stronger, 28 extensions,
   18 new-statement decisions, 11 historical references, 1 outside scope).
-- Current Stacks references added: 111 across `topology.tex`, `sheaves.tex`,
+- Current Stacks references added: 114 across `topology.tex`, `sheaves.tex`,
   `modules.tex`, `homology.tex`, `coherent.tex`, `cohomology.tex`,
   `divisors.tex`, `constructions.tex`, `schemes.tex`, `morphisms.tex`,
   `derham.tex`, `algebra.tex`, `properties.tex`, and `varieties.tex`.
 - New Stacks theorem/lemma statements: 13, plus the paracompactness and
   locally-constant-sheaf definitions;
   each new theorem/lemma has a complete proof and no assigned tag.
-- Source/proof issues or convention boundaries: 134 found by direct authority-page and TeX inspection, all resolved and
+- Source/proof issues or convention boundaries: 144 found by direct authority-page and TeX inspection, all resolved and
   retained in `issues.csv`.
 - Existing Stacks defects corrected: 5, comprising the refinement-homotopy
   sign, repeated coefficient sheaves, wrong boundary domain, wrong boundary
@@ -25,7 +25,7 @@
   completed; every
   affected statement page passed direct 1100 dpi visual inspection. See
   `qa.json`.
-- Historical notes added: 29, preserving the source's operator calculus,
+- Historical notes added: 30, preserving the source's operator calculus,
   image-complex construction, two-covering double complex, and unproved
   cofinal-vanishing question, together with the classical closed-point to
   reduced-scheme bridge, the classical-map to scheme-morphism bridge, and the
@@ -47,6 +47,8 @@
   together with the affine global-generation theorem and the finite-type
   module route to a finite free quotient, while the existing localization and
   affine-equivalence histories now record no. 45's patching and exactness use,
+  and the no. 46 histories now distinguish standard-cover Cech vanishing,
+  affine sheaf-cohomology vanishing, and kernel-only global-section lifting,
   without claiming false modern theorem matches.
-- Next unit: `fac:II:3:no:46` (cohomology groups of an affine variety with values in a coherent algebraic sheaf).
+- Next unit: `fac:II:3:no:47` (coverings of algebraic varieties by affine open sets).
 - No statement is mapped by lexical similarity alone.
