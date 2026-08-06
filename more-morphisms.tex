@@ -16473,6 +16473,9 @@ fpqc local on the base by Descent, Lemma
 
 \begin{lemma}
 \label{lemma-characteristic-zero-component-loci}
+\begin{reference}
+\cite[Expos\'e 236, Corollary 1.10, p. 230]{FGA}.
+\end{reference}
 Let $S$ be a locally Noetherian scheme all of whose residue fields have
 characteristic zero. Let $G$ be a commutative group scheme locally of finite
 type over $S$. Then
@@ -16484,6 +16487,12 @@ $$
 If $G \to S$ is separated and every $G_s^0$ is proper over $\kappa(s)$,
 then $G^0$ is closed in $G$ and its reduced induced closed subscheme is
 proper over $S$. In this case $G^\tau$ is open and closed in $G$.
+
+Assume that $[n] : G\to G$ is universally open for every $n>1$. Then $G^0$
+is open in $G$. Assume, in addition, that for every algebraically closed
+field $k$ over a point of $S$, the identity component of $G_k$ contains no
+subgroup scheme isomorphic to $\mathbf G_{a,k}$. Then $G^\tau\to S$ is
+universally open. If moreover $S$ is reduced, then $G^\tau\to S$ is smooth.
 \end{lemma}
 
 \begin{proof}
@@ -16499,6 +16508,21 @@ structure is proper over $U$. Thus $G^0$ is closed and its reduced induced
 structure is proper over $S$, as both assertions are local on the base.
 Finally, Lemma \ref{lemma-order-in-component-group-constructible} shows that
 $G^\tau$ is closed when $G^0$ is closed.
+
+Suppose every power map in the statement is universally open. Since $p=1$,
+Lemma \ref{lemma-primary-component-locus-open} shows that $G^\rho$ is open.
+As $G^\rho=G^0$, this proves the first additional assertion.
+
+Under the hypothesis excluding additive subgroups,
+Lemma \ref{corollary-prime-to-characteristic-component-openness} shows that
+$G\to S$ is universally open along $G^\sigma=G^\tau$. The latter is an open
+subscheme of $G$, so its structure morphism to $S$ is universally open.
+Finally, every fibre of $G\to S$ is smooth by Groupoids, Lemma
+\ref{groupoids-lemma-group-scheme-characteristic-zero-smooth}. If $S$ is
+reduced, apply
+Lemma \ref{corollary-universally-open-smooth-fibre-flat} to $G^\tau\to S$,
+with the whole fibre as the indicated open subset, at every point of $S$.
+This proves that $G^\tau\to S$ is smooth.
 \end{proof}
 
 

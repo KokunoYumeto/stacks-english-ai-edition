@@ -2371,3 +2371,48 @@ The affected source range creates no overfull or underfull horizontal box.
 Final serial 1,100-dpi inspection of pages 93--94 finds no clipping,
 collision, malformed formula, unresolved marker, placeholder, or unreadable
 text. The next sequential cursor is Corollary 1.10 on printed page 230.
+
+Corollary 1.10 is now integrated in full. Lemma
+`more-morphisms-lemma-characteristic-zero-component-loci` already contained
+the characteristic-zero identifications, the open torsion locus, and the
+proper closed identity locus plus open-and-closed torsion locus under
+separatedness and proper fibrewise identity components. It now also proves
+that universally open power maps make the identity-component locus open.
+When every geometric identity component has no additive subgroup, the
+corrected prime-to-characteristic power-map theorem makes the torsion locus
+universally open over the base. Cartier smoothness of the characteristic-
+zero fibres and the exact reduced-base flatness criterion then make that
+open subgroup smooth over a reduced base.
+
+Decision `D000543` supersedes `D000312`, upgrading the former
+`existing_weaker` disposition to `existing_equivalent` without changing the
+earlier evidence history. Direct serial 1,100-dpi review covers printed page
+230 of the 24-page NUMDAM authority. That authority remains 2,461,968 bytes
+with SHA-256
+`266EEF77BF7BA34A75895ED69ACBFE791A2958DD52C2837D75AB29DF0D2F714A`.
+
+Both semantic validators pass with no errors at 21,674 labels, 21,437
+official-tag joins, 71 controlled topics, 4,207 topic candidates, 543
+append-only decisions, 1,253 source units, 1,612 term links, and 49 source
+issues, of which seven remain active; there are zero review units. The topic,
+decision, issue, map, Stacks-label, topic-candidate, reviewed-topic-map,
+index-validation, and map-validation files have SHA-256
+`B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0`,
+`2D357ED6A477A79A76468C6142C5AB74D5995C89B9F5ED532F16359875231ADF`,
+`5659C5A6C5B50EB6C5EB02EBEFF58F7361A7302F3EC7FA8F966DA85536000A44`,
+`73A58D81B3FB471FEBF75A626A365D00B7FFDE500501CE95F2B26B668ABDCFAA`,
+`6F33651140431E7045EE789A98E5A1EDB555C259F8D5DA5D92F6F45078B6B819`,
+`E19CBA98C7A295D094BA554A10B1BB2DFBBCB5C76B6A562C6E8F20432FF0CE79`,
+`26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46`,
+`5DAE67FC4FD7534C8093381882BAE1CD468302DC90DCCE383B81DB7B44F10621`,
+and `0FC69DE7760B8D3EEAA0E7DA6030A166EE9543EE564E2F25D2FAFD637AB302F1`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`.
+
+Stable serial TeX passes produce a 259-page More on Morphisms chapter of
+2,397,847 bytes with SHA-256
+`91BC2F5A068493284ADBAFDD59DBE7A801EF12BE9CD6A6ED78DDDDD08AE7CFDF`.
+The affected source range creates no overfull or underfull horizontal box.
+Final serial 1,100-dpi inspection of page 171 finds no clipping, collision,
+malformed formula, unresolved marker, placeholder, or unreadable text. The
+next sequential cursor is Proposition 1.11 on printed pages 230--231.
