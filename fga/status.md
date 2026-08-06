@@ -2553,3 +2553,66 @@ text. The isolated renders leave only the expected Divided Power Algebra
 cross-references unresolved because that unrelated chapter's auxiliary file
 was not built; every new same-book and Divisors-to-Moduli reference resolves.
 The next sequential cursor is Corollary 2.3 on printed page 232.
+
+Corollary 2.3 is now integrated in full. Moduli, Theorem
+`moduli-theorem-picard-normal-relative-components` proves that the represented
+Picard scheme of a proper flat family with geometrically normal fibres is
+separated. The field theorem makes every fibrewise identity component
+proper; the locally-finite-type component-neighbourhood theorem then makes
+the global identity-component locus closed and its reduced induced structure
+proper over the base. The torsion-component locus is open and closed, the
+residue-characteristic-primary locus is closed, and the
+prime-to-characteristic locus is closed when the characteristic exponent is
+constant on the base.
+
+This checkpoint also corrects an overbroad earlier integration claim for
+Theorem 1.1. The previous implementation only proved closedness of the
+primary locus under a fixed-characteristic hypothesis although the source
+asserts it without that restriction. More on Morphisms, Lemma
+`more-morphisms-lemma-order-in-component-group-constructible` now defines the
+prime-to-characteristic and primary loci for varying residue characteristic,
+proves both locally constructible, and proves the primary locus closed by
+specialization: characteristic zero forces component order one, while a
+positive residue characteristic survives specialization and preserves the
+relevant prime-power multiple. Lemma
+`more-morphisms-lemma-proper-connected-component-neighbourhood` now also
+states and proves its needed locally-finite-type form by first restricting to
+a quasi-compact Noetherian open around the proper fibre component.
+
+Decision `D000546` supersedes `D000537` to record that global repair rather
+than silently retaining the earlier completion claim. Decision `D000547`
+supersedes `D000276` and dispositions Corollary 2.3 as an existing equivalent
+with source-and-Stacks integration. Direct serial 1,100-dpi review covers
+printed page 232 of the 24-page NUMDAM authority. That authority remains
+2,461,968 bytes with SHA-256
+`266EEF77BF7BA34A75895ED69ACBFE791A2958DD52C2837D75AB29DF0D2F714A`.
+
+Both semantic validators pass with no errors at 21,683 labels, 21,437
+official-tag joins, 71 controlled topics, 4,219 topic candidates, 547
+append-only decisions, 1,253 source units, 1,612 term links, and 53 source
+issues, of which seven remain active; there are zero review units. The topic,
+decision, issue, map, Stacks-label, topic-candidate, reviewed-topic-map,
+index-validation, and map-validation files have SHA-256
+`B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0`,
+`7AEBE280D53135D0A7244EFF77D51545271AA20C524B4D4471A51BF1EA1FDCF7`,
+`307FD2AAB0EF5C94FC6F07F118C1EC6D6995E9AB919C0D1D8A519359037A6274`,
+`47F4AA6521884A56357815AF9F98BE985D86AFB15C46A8D16CDA9FCFB028FC54`,
+`458CE94F0406BB4BD42899F8061ACF6BFF4F3C604C74623CC4803D0D51A0EC7A`,
+`9D4ABB58582A574B3F643656F8CD462727F4BD4A3BFA33E60E4A435F3E251807`,
+`26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46`,
+`7861BAF343AD21B815DDD80D701967BA2C9E4C7310FA557D62572FE0E0E9DB42`,
+and `CC8FF2D58A1238462768D46425B21B623F24DB0D795F3BBF5145F3425E51492E`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`;
+no official tag was invented for the new theorem.
+
+Stable serial TeX passes produce a 259-page More on Morphisms chapter of
+2,398,056 bytes with SHA-256
+`3F41EB9BE428D9429CCCE16060CD6278A9C2FB77728ED66E0A60F7729B44D4FB`
+and a 58-page Moduli chapter of 791,042 bytes with SHA-256
+`0E70B530AA2A7EA91F9D75C302591ED8A7FF7AF39FB6EA1159ADC71B236D4866`.
+Neither affected source range creates an overfull or underfull horizontal
+box. Final serial 1,100-dpi inspection of More on Morphisms pages 92 and 171
+and Moduli page 43 finds no clipping, collision, malformed formula,
+unresolved new reference, placeholder, or unreadable text. The next
+sequential cursor is Corollary 2.4 on printed page 232.

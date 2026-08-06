@@ -8820,15 +8820,21 @@ $$
 Every point of $G^\tau$ has a neighbourhood on which $\nu$ has finite image
 and all its level sets are constructible.
 
-Suppose there is a $p$, equal to $1$ or to a prime number, such that the
-characteristic exponent of every residue field of $S$ is $p$. Then
+For $s \in S$, let $p(s)$ be the characteristic exponent of $\kappa(s)$.
+With the convention that every positive integer is prime to $1$ and that
+the only power of $1$ is $1$, set
 $$
-G^\sigma = \{x \in G^\tau \mid (\nu(x),p)=1\}, \qquad
-G^\rho = \{x \in G^\tau \mid \nu(x)\text{ is a power of }p\}
+G^\sigma = \{x \in G^\tau \mid (\nu(x),p(f(x)))=1\}.
 $$
-are locally constructible. If $G^0 = \bigcup G_s^0$ is closed in $G$, then
-$G^\tau$ is open and closed. Under the equal-characteristic-exponent
-assumption, $G^\sigma$ and $G^\rho$ are closed as well.
+The residue-characteristic-primary locus is
+$$
+G^\rho = \{x \in G^\tau \mid
+\nu(x)\text{ is a power of }p(f(x))\}.
+$$
+Then $G^\sigma$ and $G^\rho$ are locally constructible. If
+$G^0 = \bigcup G_s^0$ is closed in $G$, then $G^\tau$ is open and closed and
+$G^\rho$ is closed. If, in addition, $p(s)$ is constant on $S$, then
+$G^\sigma$ is closed as well.
 \end{lemma}
 
 \begin{proof}
@@ -8850,18 +8856,37 @@ $$
 \{u \in U \mid \nu(u)=n\} =
 E_n \setminus \bigcup_{\substack{d \mid n \\ d < n}} E_d,
 $$
-which is constructible. This proves the first assertion and also the local
-constructibility of $G^\sigma$ and $G^\rho$.
+which is constructible. This proves the first assertion.
+
+There are only finitely many values of $\nu$ on $U$. On the level set where
+$\nu=n$, the condition defining $G^\sigma$ is the inverse image of
+$$
+S\setminus\bigcup_{q\mid n}V(q),
+$$
+where $q$ runs through the prime divisors of $n$. The condition defining
+$G^\rho$ is automatic if $n=1$, is the inverse image of $V(q)$ if
+$n=q^h$ is a power of a prime, and is empty otherwise. These descriptions
+prove the local constructibility of both loci without an
+equal-characteristic hypothesis.
 
 Suppose $G^0$ is closed. If $x \in G^\tau$ specializes to $x'$, then
 $[n](x) \in G^0$ for some $n$, and hence $[n](x') \in G^0$. Thus
 $G^\tau$ is stable under specialization. Since it is locally constructible,
 it is closed by Topology, Lemma
-\ref{topology-lemma-characterize-closed-Noetherian}. If $\nu(x)$ is prime
-to $p$, the integer $n$ can be chosen prime to $p$, and if $\nu(x)$ is a
-power of $p$, the integer $n$ can be chosen to be a power of $p$. The same
-argument proves that $G^\sigma$ and $G^\rho$ are stable under specialization.
-Their local constructibility proves that they are closed.
+\ref{topology-lemma-characterize-closed-Noetherian}.
+
+Suppose $p(s)$ is constant, say equal to $p$. If $\nu(x)$ is prime to $p$,
+the integer $n$ can be chosen prime to $p$. Hence $G^\sigma$ is stable under
+specialization and its local constructibility proves that it is closed.
+
+It remains to treat $G^\rho$ without a restriction on the residue
+characteristics. Suppose $x \leadsto x'$ is a specialization in $G$ with
+$x \in G^\rho$. If $p(f(x))=1$, then $\nu(x)=1$, so $x\in G^0$ and closedness
+of $G^0$ gives $x'\in G^0\subset G^\rho$. If $p(f(x))=p$ is prime, then the
+specialization $f(x')$ also has characteristic exponent $p$. For some
+$h\geq 0$ we have $[p^h](x)\in G^0$, and hence
+$[p^h](x')\in G^0$. Thus $x'\in G^\rho$. We conclude that $G^\rho$ is stable
+under specialization; its local constructibility proves that it is closed.
 \end{proof}
 
 \begin{lemma}
@@ -16423,7 +16448,8 @@ to finish the proof.
 \begin{lemma}
 \label{lemma-proper-connected-component-neighbourhood}
 Let $S$ be a locally Noetherian scheme. Let $f : X \to S$ be a separated
-morphism of finite type and let $e : S \to X$ be a section. Let $s \in S$.
+morphism locally of finite type and let $e : S \to X$ be a section. Let
+$s \in S$.
 If the connected component $X_s^0$ containing $e(s)$ is proper over
 $\kappa(s)$, then there is an open neighbourhood $U \subset S$ of $s$ such
 that $X_U^0$ is closed in $X_U$. With the reduced induced closed subscheme
@@ -16431,8 +16457,17 @@ structure, $X_U^0$ is proper over $U$.
 \end{lemma}
 
 \begin{proof}
-We may replace $S$ by an affine open neighbourhood of $s$. Let $A$ be the
-henselization of $\mathcal{O}_{S, s}$. Apply
+We may first replace $S$ by an affine open neighbourhood of $s$.
+The proper scheme $X_s^0$ is quasi-compact. Choose a quasi-compact open
+$W\subset X$ which contains $X_s^0$. After shrinking $S$ inside the open
+neighbourhood $e^{-1}(W)$ of $s$, the section factors through $W$. The scheme
+$W$ is Noetherian: it is quasi-compact and locally Noetherian, and it is
+quasi-separated because $X\to S$ is separated. Hence $W\to S$ is of finite
+type. Replacing $X$ by $W$, which does not change the connected component of
+the fibre containing $e(s)$, reduces us to the case where $f$ is of finite
+type.
+
+Let $A$ be the henselization of $\mathcal{O}_{S, s}$. Apply
 Lemma \ref{lemma-split-off-proper-part-henselian} to $X_A$ and the open and
 closed proper subscheme $X_s^0$ of its closed fibre. We obtain an open and
 closed subscheme $W_A \subset X_A$ which is proper over $A$ and whose closed

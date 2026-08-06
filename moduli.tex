@@ -3990,6 +3990,58 @@ separated and universally closed because $H$ is; hence $P^0$ is proper.
 Properness descends from the algebraic closure, proving the theorem over $k$.
 \end{proof}
 
+\begin{theorem}[Normal families]
+\label{theorem-picard-normal-relative-components}
+\begin{reference}
+\cite[Expos\'e 236, Corollary 2.3, p. 232]{FGA}.
+\end{reference}
+Let $S$ be a locally Noetherian scheme and let $f:X\to S$ be proper and
+flat with geometrically normal fibres. Suppose the fppf Picard functor is
+represented by a scheme
+$$
+P=\Picardfunctor_{X/S}.
+$$
+Then $P\to S$ is separated. The identity-component locus
+$$
+P^0=\bigcup_{s\in S}P_s^0
+$$
+is closed in $P$ and, with its reduced induced closed subscheme structure,
+is proper over $S$. The torsion-component locus $P^\tau$ is open and closed,
+and the residue-characteristic-primary component locus $P^\rho$ is closed.
+If all residue fields of $S$ have the same characteristic exponent, then the
+prime-to-characteristic component locus $P^\sigma$ is closed as well.
+\end{theorem}
+
+\begin{proof}
+The scheme $P$ is locally of finite type over $S$. We first prove that it is
+separated. By the discrete-valuation criterion, fpqc descent, and strict
+henselization, it is enough to prove uniqueness over a strictly henselian
+discrete valuation ring. The Stein factorization of $X$ is finite \'etale by
+More on Morphisms of Spaces, Lemma
+\ref{spaces-more-morphisms-lemma-stein-factorization-etale}, since the
+geometric fibres are normal and hence reduced. It splits $X$ into finitely
+many proper flat families with geometrically connected normal fibres. Those
+fibres are geometrically integral. Example
+\ref{example-picard-disjoint-union} identifies $P$ with the product of the
+Picard functors of the factors, each of which is separated by Lemma
+\ref{lemma-pic-functor-uniqueness-part}. This proves that $P\to S$ is
+separated.
+
+For every $s\in S$, Theorem
+\ref{theorem-picard-identity-component-proper-normal}, applied over
+$\kappa(s)$, shows that $P_s^0$ is proper. More on Morphisms, Lemma
+\ref{more-morphisms-lemma-proper-connected-component-neighbourhood} gives,
+locally on $S$, closedness of $P^0$ and properness of its reduced induced
+structure. Both conclusions are local on the base, so they hold over $S$.
+
+Finally, More on Morphisms, Lemma
+\ref{more-morphisms-lemma-torsion-component-locus-open} makes $P^\tau$ open.
+Lemma \ref{more-morphisms-lemma-order-in-component-group-constructible},
+using the closedness of $P^0$, makes $P^\tau$ and $P^\rho$ closed and also
+makes $P^\sigma$ closed under the stated equal-characteristic-exponent
+hypothesis.
+\end{proof}
+
 \begin{example}[A relative Picard space which is not a scheme]
 \label{example-picard-conic-not-scheme}
 \begin{reference}
