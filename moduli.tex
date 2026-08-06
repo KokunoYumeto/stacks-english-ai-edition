@@ -814,10 +814,6 @@ Follows immediately after unwinding all the definitions.
 \end{proof}
 
 
-
-
-
-
 \section{Bounded families of coherent sheaves}
 \label{section-bounded-coherent}
 
@@ -1061,6 +1057,165 @@ $\mathcal{F}$ over an algebraically closed field, then after passage to a
 common extension it is isomorphic to a geometric fibre of $\mathcal{G}$.
 The same is therefore true of the reduced supports. This proves the
 proposition.
+\end{proof}
+
+
+\begin{lemma}
+\label{lemma-annihilator-stratification}
+Let $T$ be a scheme of finite type over $S$, and let $\mathcal{H}$ be a
+coherent $\mathcal{O}_{X_T}$-module. There is a finite stratification
+$$
+T = \coprod T_a
+$$
+by locally closed subschemes such that, for every $a$ and every morphism
+$T' \to T_a$, one has
+$$
+\mathop{\rm Ann}(\mathcal{H}_{T'}) =
+\mathop{\rm Ann}(\mathcal{H}_{T_a})\mathcal{O}_{X_{T'}}.
+$$
+In particular, the structure sheaves
+$$
+\mathcal{O}_{X_{\overline{t}}}/
+\mathop{\rm Ann}(\mathcal{H}_{\overline{t}})
+$$
+of the scheme theoretic supports of the geometric fibres form a bounded
+family.
+\end{lemma}
+
+\begin{proof}
+Choose a finite affine open covering $X_T = \bigcup U_j$. On $U_j$ choose
+generators $h_{j1}, \ldots, h_{jr_j}$ of $\mathcal{H}|_{U_j}$ and consider
+the map
+$$
+\mathcal{O}_{U_j} \longrightarrow
+(\mathcal{H}|_{U_j})^{\oplus r_j},\qquad
+a \longmapsto (ah_{j1},\ldots,ah_{jr_j}).
+$$
+Its kernel is $\mathop{\rm Ann}(\mathcal{H}|_{U_j})$. Apply More on
+Morphisms, Lemma
+\ref{more-morphisms-lemma-generic-flatness-stratification}, first to
+$\mathcal{H}|_{U_j}$ and then to the cokernel of the displayed map, and
+take a common finite refinement of the resulting stratifications of $T$.
+
+On a stratum both the target and the cokernel of the displayed map are
+flat over the stratum. Its image is therefore flat as well. The two short
+exact sequences obtained by factoring the map through its image remain
+exact after arbitrary base change. Hence its kernel commutes with arbitrary
+base change. The chosen sections continue to generate after base change,
+so the base-changed kernel is the annihilator of the base-changed module.
+This proves the asserted equality on every $U_j$, and hence on $X_{T'}$.
+The quotients by these annihilator ideals over the finitely many strata
+give the bounded family in the last assertion.
+\end{proof}
+
+
+\begin{proposition}
+\label{proposition-bounded-coherent-primary-pieces}
+\begin{reference}
+\cite[Expos\'e 221, the paragraph following Proposition 1.3, p. 253]{FGA};
+\cite[IV, 3.2.6 and 9.8.2--9.8.4]{EGA}.
+\end{reference}
+Let $E$ be a bounded family of fibrewise coherent sheaves over $X/S$.
+Let $(s,K,\mathcal{F})$ represent a member of $E$, with $K$ algebraically
+closed. The following families are bounded.
+\begin{enumerate}
+\item For every generic point $x$ of an irreducible component of
+$\operatorname{Supp}(\mathcal{F})$, the canonical primary quotient
+$$
+\mathcal{P}_x(\mathcal{F}) =
+\mathop{\rm Im}\bigl(
+\mathcal{F} \longrightarrow (j_x)_*j_x^*\mathcal{F}
+\bigr),
+$$
+where $j_x : \Spec(\mathcal{O}_{X_K,x}) \to X_K$ is the canonical
+morphism.
+\item For every $x \in \operatorname{Ass}(\mathcal{F})$, the structure
+sheaf $\mathcal{O}_{(\overline{\{x\}})_{red}}$.
+\item For every $x$ as in (1), the structure sheaf
+$$
+\mathcal{O}_{X_K}/\mathfrak q_x,
+\qquad
+\mathfrak q_x =
+\mathop{\rm Ann}(\mathcal{P}_x(\mathcal{F})).
+$$
+Here $\mathfrak q_x$ is primary with radical the prime ideal defining
+$(\overline{\{x\}})_{red}$.
+\end{enumerate}
+\end{proposition}
+
+\begin{remark}
+\label{remark-EGA-primary-localization-typo}
+In the last sentence of \cite[IV, 3.2.6]{EGA},
+$\Spec(\kappa(x))$ is a typographical error for
+$\Spec(\mathcal{O}_{X,x})$. The localization appearing in (1) is also
+the construction used in the proof there. For example, if
+$X = \Spec(k[\epsilon]/(\epsilon^2))$ and
+$\mathcal{F}=\mathcal{O}_X$, then $x$ is the unique associated point and
+the unique primary quotient is $\mathcal{F}$ itself, whereas the map to
+the residue-field fibre has nonzero kernel.
+\end{remark}
+
+\begin{proof}
+Choose a pair $(T,\mathcal{G})$ bounding $E$. It is enough to bound the
+three constructions for every geometric fibre of $\mathcal{G}$. We do
+this by Noetherian induction on $T$. Passing to the reduction and then to
+the finitely many irreducible components reduces the induction step to the
+case where $T$ is integral.
+
+We recall the generic-fibre primary-decomposition argument. After a finite
+dominant base change $T' \to V$, where $V$ is a nonempty open of $T$, a
+reduced irredundant primary decomposition of the generic fibre can be
+spread out to finitely many coherent quotients
+$$
+\mathcal{G}_{T'} \longrightarrow \mathcal{Q}_i.
+$$
+Let $Z_i$ be the closure of the associated point of the generic fibre of
+$\mathcal{Q}_i$. The base change and the quotient list may be chosen so
+that the generic fibres of all $Z_i \to T'$ are geometrically irreducible.
+Indeed, this is the finite field-extension and spreading-out construction
+of More on Morphisms, Lemma
+\ref{more-morphisms-lemma-make-components-generic-fibre-geometrically-irreducible},
+applied to the finitely many closures, followed by a refinement of the
+primary decomposition. After shrinking once more, More on Morphisms,
+Lemma \ref{more-morphisms-lemma-geom-irreducible-generic-fibre} makes every
+geometric fibre of every $Z_i$ irreducible.
+
+The primary-decomposition theorem near a generic fibre
+\cite[IV, 9.8.2--9.8.4]{EGA} now gives, after a further shrinking, the
+following facts for every geometric point $\overline{t}'$ of $T'$:
+the map
+$$
+\mathcal{G}_{\overline{t}'} \longrightarrow
+\bigoplus_i \mathcal{Q}_{i,\overline{t}'}
+$$
+is injective; each $\mathcal{Q}_{i,\overline{t}'}$ has no embedded
+associated point; its unique associated point is the generic point of
+$Z_{i,\overline{t}'}$; these points are pairwise distinct and exhaust
+$\operatorname{Ass}(\mathcal{G}_{\overline{t}'})$; and the associated
+point is maximal in the support precisely for the indices for which it was
+maximal on the generic fibre.
+
+For a maximal associated point the corresponding primary quotient is
+unique; equivalently it is the image of localization displayed in (1),
+see \cite[IV, 3.2.6]{EGA}. Thus the finitely many $\mathcal{Q}_i$
+whose generic associated point is maximal bound the family in (1) over
+$V$. For all indices $i$, Lemma
+\ref{lemma-bounded-fibrewise-reductions}, applied to $Z_i \to T'$, bounds
+the reduced closures of all associated points and hence the family in (2).
+Finally apply Lemma \ref{lemma-annihilator-stratification} to the maximal
+$\mathcal{Q}_i$. On its strata the quotient by the relative annihilator
+has geometric fibres
+$$
+\mathcal{O}_{X_{\overline{t}'}}/
+\mathop{\rm Ann}(\mathcal{Q}_{i,\overline{t}'}),
+$$
+which are exactly the sheaves in (3).
+
+The cover $T' \to V$ is surjective, so every geometric fibre over $V$
+occurs after a field extension among the fibres just constructed. The
+closed complement $T \setminus V$, with its reduced induced structure, is
+a proper closed subscheme and is handled by the induction hypothesis.
+Taking a finite union completes the proof.
 \end{proof}
 
 

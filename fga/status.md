@@ -1085,3 +1085,43 @@ The new lemma and proposition add no unresolved reference or overfull
 horizontal box and pass 1,200-dpi inspection on pages 10--12.  The next
 sequential cursor is the primary and associated-component paragraph following
 Expose 221, Proposition 1.3.
+
+The fifty-fourth source patch completes Expose 221, Section 1.  The primary
+decomposition paragraph following Proposition 1.3 is now represented by an
+annihilator base-change stratification and a boundedness proposition for the
+three constructions actually named by FGA: the canonical isolated primary
+quotient at every component of the support, the reduced closure of every
+associated point, and the primary annihilator quotient attached to every
+support component.  The proof uses a finite generic cover, geometrically
+irreducible associated-point closures, EGA's generic-fibre primary
+decomposition theorem, and Noetherian induction.  It deliberately does not
+claim boundedness for arbitrary noncanonical embedded primary components.
+
+The exact later authorities checked for this step are EGA IV, second part,
+31,819,022 bytes, SHA-256
+`C3E960AA1C5C37046E8892D8A3CAC098E2738164136B5CDAA5D5D893F89931DA`,
+especially 3.2.5--3.2.7 on printed pages 42--43, and EGA IV, third part,
+34,399,720 bytes, SHA-256
+`F365212B38F20608BA34C21AE3EE40BBAE1B42D9D3DFF01A85356F9CC819C23E`,
+especially 9.8.2--9.8.4 on printed pages 84--85.  Direct 1,200-dpi review of
+EGA IV2 page 42 confirms that its last sentence of 3.2.6 prints
+`Spec(kappa(x))`.  This is corrected explicitly to
+`Spec(O_{X,x})`: the local-scheme localization is what the proof uses, while
+the printed residue-field map fails the required injectivity already for
+`X = Spec(k[epsilon]/(epsilon^2))` and `F = O_X`.  The correction is visible
+in `moduli-remark-EGA-primary-localization-typo` rather than being silently
+normalized.
+
+Both semantic validators pass with no errors at 21,573 labels, 3,848 topic
+candidates, 390 append-only decisions, 1,253 source units, 1,612 term links,
+and 14 source issues, of which eight remain active.  The decision and map
+ledgers have SHA-256
+`390FEDA3589EC26D7D8F16AD856B087BC0F918C6372852413F5EC692D665B90F`
+and `0D6D4275C01B267BEB393538CE4D3C327EBDB5F07206A8DF72408BA7D5B58C7B`.
+A bibliography-complete build and two final TeX passes produce a 27-page
+Moduli Stacks chapter of 570,691 bytes with SHA-256
+`888F2458C2C79DCAD48364B26F4C89BB012575D635D95C79E035766BF61ACAA8`.
+The new material adds no unresolved citation, unresolved internal reference,
+or overfull horizontal box and passes 1,200-dpi inspection on pages 11--13.
+The next sequential cursor is Expose 221, Section 2, beginning with the
+Hilbert-polynomial setup and Theorem 2.1.
