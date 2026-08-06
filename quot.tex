@@ -2180,6 +2180,86 @@ the result and give a detailed proof (in fact, all of the above
 works in the setting of arbitrary ringed topoi).
 \end{remark}
 
+\begin{lemma}
+\label{lemma-quotient-lifts-torsor}
+\begin{reference}
+\cite[Expos\'e 221, Proposition 5.1 and Corollary 5.2]{FGA}.
+\end{reference}
+In Situation \ref{situation-q}, let $T \subset T'$ be a first order
+thickening of schemes over $B$ with ideal sheaf $\mathcal{J}$. Let
+\begin{equation}
+\label{equation-quotient-to-lift}
+0 \longrightarrow \mathcal{K} \longrightarrow \mathcal{F}_T
+\longrightarrow \mathcal{Q} \longrightarrow 0
+\end{equation}
+define an element of $Q_{\mathcal{F}/X/B}(T)$. Set
+$$
+\mathcal{A} =
+\SheafHom_{\mathcal{O}_{X_T}}
+(\mathcal{K},
+\mathcal{Q} \otimes_{\mathcal{O}_T} \mathcal{J}).
+$$
+On the common underlying topological space of $X_T$ and $X_{T'}$, let
+$\mathcal{L}$ be the sheaf whose sections over an open $U$ are the lifts of
+the restriction of (\ref{equation-quotient-to-lift}) to a quotient of
+$\mathcal{F}_{T'}|_U$ flat over $T'$. Then $\mathcal{A}$ acts on
+$\mathcal{L}$ and this action is simply transitive wherever
+$\mathcal{L}$ is nonempty.
+
+If lifts exist locally, then $\mathcal{L}$ is an $\mathcal{A}$-torsor. Its
+class
+$$
+c(\mathcal{Q}) \in H^1(X_T, \mathcal{A})
+$$
+vanishes if and only if a global lift exists. If it vanishes, the set of
+global lifts is a principal homogeneous space under
+$H^0(X_T, \mathcal{A})$. In particular, a global lift exists if local lifts
+exist and $H^1(X_T, \mathcal{A}) = 0$.
+\end{lemma}
+
+\begin{proof}
+We identify sheaves on $X_T$ and $X_{T'}$ using the equivalence associated
+to a thickening. Write $\mathcal{I}$ for the ideal of
+$X_T \subset X_{T'}$. Suppose over an open $U$ we have a lift
+$$
+0 \to \mathcal{K}' \to \mathcal{F}_{T'}|_U
+\to \mathcal{Q}' \to 0.
+$$
+Flatness of $\mathcal{Q}'$ gives canonical identifications
+$$
+\mathcal{I}\mathcal{Q}' =
+\mathcal{Q} \otimes_{\mathcal{O}_T} \mathcal{J}
+\quad\text{and}\quad
+\mathcal{K}'/\mathcal{I}\mathcal{K}' = \mathcal{K}|_U;
+$$
+see Deformation Theory, Lemma
+\ref{defos-lemma-deform-module-ringed-topoi}.
+
+Given a second lift with quotient $\mathcal{Q}''$, the composite
+$\mathcal{K}' \to \mathcal{F}_{T'}|_U \to \mathcal{Q}''$ has image in
+$\mathcal{I}\mathcal{Q}''$ and annihilates
+$\mathcal{I}\mathcal{K}'$. It therefore determines a unique map
+$$
+\mathcal{K}|_U \longrightarrow
+(\mathcal{Q} \otimes_{\mathcal{O}_T}\mathcal{J})|_U.
+$$
+Conversely, for such a map $\varphi$, define
+$\mathcal{K}'_\varphi \subset \mathcal{F}_{T'}|_U$ to consist of the
+local sections whose reduction belongs to $\mathcal{K}$ and whose image
+in $\mathcal{Q}'$ is $\varphi$ of that reduction. Then
+$\mathcal{F}_{T'}|_U/\mathcal{K}'_\varphi$ reduces to $\mathcal{Q}$ and
+has the same $\mathcal{I}$-multiple as $\mathcal{Q}'$.
+The flatness criterion in the lemma cited above shows that it is flat over
+$T'$. These two constructions are inverse to one another and are compatible
+with restriction. This proves the assertion about the action.
+
+Quotients and their kernels glue over open coverings, so $\mathcal{L}$ is a
+sheaf. If it is locally nonempty, the first part makes it an
+$\mathcal{A}$-torsor. The remaining assertions follow from Cohomology,
+Lemmas \ref{cohomology-lemma-torsors-h1} and
+\ref{cohomology-lemma-trivial-torsor}.
+\end{proof}
+
 
 
 
@@ -2368,6 +2448,59 @@ $\mathcal{Z}$ is representable by an open subspace
 of the algebraic space
 $\mathit{Hom}(\mathcal{F}_T, \mathcal{G})$ from
 Proposition \ref{proposition-hom}.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-cotangent-space-quot}
+\begin{reference}
+\cite[Expos\'e 221, Corollary 5.3]{FGA}.
+\end{reference}
+In Situation \ref{situation-quot}, put
+$Q = \Quotfunctor_{\mathcal{F}/X/B}$ and assume that $Q$ is an algebraic
+space (for example, this holds if $X \to B$ is separated by Proposition
+\ref{proposition-quot}). Let $g : T \to Q$ correspond to
+an exact sequence
+$$
+0 \longrightarrow \mathcal{K} \longrightarrow \mathcal{F}_T
+\longrightarrow \mathcal{G} \longrightarrow 0.
+$$
+For every quasi-coherent $\mathcal{O}_T$-module $\mathcal{M}$ there is a
+canonical isomorphism, functorial in $\mathcal{M}$,
+\begin{equation}
+\label{equation-cotangent-space-quot}
+\Hom_{\mathcal{O}_T}(g^*\Omega_{Q/B}, \mathcal{M})
+=
+\Hom_{\mathcal{O}_{X_T}}
+(\mathcal{K},
+\mathcal{G} \otimes_{\mathcal{O}_T} \mathcal{M}).
+\end{equation}
+In particular, if $x : \Spec(k) \to Q_b$ is a point, then
+$$
+T_{Q_b, x} =
+\Hom_{\mathcal{O}_{X_k}}(\mathcal{K}, \mathcal{G}).
+$$
+\end{lemma}
+
+\begin{proof}
+Let $T \subset T'$ be the split first order thickening with underlying
+space $T$, structure sheaf
+$\mathcal{O}_{T'} = \mathcal{O}_T \oplus \mathcal{M}$, and square zero
+ideal $\mathcal{M}$. Give $T'$ its $B$-structure through the retraction
+$T' \to T$. The set of lifts of $g$ to a $B$-morphism $T' \to Q$ is a
+principal homogeneous space under the left hand side of
+(\ref{equation-cotangent-space-quot}); this follows from More on Morphisms
+of Spaces, Lemma \ref{spaces-more-morphisms-lemma-action-sheaf}. It has a
+distinguished element obtained by composing $T' \to T$ with $g$.
+
+By representability of $Q$ the same set is the set of lifts of the quotient
+$\mathcal{F}_T \to \mathcal{G}$. Finite presentation and properness of the
+support are unchanged by this nilpotent thickening. Lemma
+\ref{lemma-quotient-lifts-torsor} identifies this set, with the same
+distinguished element, as a principal homogeneous space under the right
+hand side of (\ref{equation-cotangent-space-quot}). The difference
+constructions in the two torsor actions give the displayed canonical
+isomorphism. Taking $T = \Spec(k)$ and $\mathcal{M} = k$ gives the final
+statement.
 \end{proof}
 
 \begin{remark}[Quot via Artin's axioms]

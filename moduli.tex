@@ -2527,6 +2527,76 @@ and the second is flat and of finite presentation. Intersections of open
 subschemes are open.
 \end{proof}
 
+\begin{proposition}
+\label{proposition-hilbert-lci-tangent-smooth}
+\begin{reference}
+\cite[Expos\'e 221, Corollaries 5.3 and 5.4]{FGA}.
+\end{reference}
+Let $S$ be a Noetherian scheme and let $X \to S$ be flat and
+quasi-projective. Fix a Hilbert polynomial $P$ and put
+$$
+H = \Hilbfunctor^P_{X/S}.
+$$
+Let $h \in H$ be a point with residue field $k$, let $s \in S$ be its
+image, and let $Y \subset X_k$ be the corresponding closed subscheme.
+Assume that $Y \to X_k$ is a local complete intersection. Then
+$$
+T_{H_s,h} = H^0(Y, \mathcal{N}_{Y/X_k})
+$$
+canonically. If
+$H^1(Y, \mathcal{N}_{Y/X_k}) = 0$, then $H \to S$ is smooth at $h$.
+\end{proposition}
+
+\begin{proof}
+The scheme $H$ is locally of finite type over $S$ by Proposition
+\ref{proposition-quot-quasi-projective-over-base}. It is the fixed-polynomial
+part of the Quot functor for $\mathcal{O}_X$. If $\mathcal{I}$ is the ideal
+of $Y$ in $X_k$, Quot, Lemma
+\ref{quot-lemma-cotangent-space-quot} gives
+$$
+T_{H_s,h} =
+\Hom_{\mathcal{O}_{X_k}}(\mathcal{I}, \mathcal{O}_Y).
+$$
+Every such homomorphism annihilates $\mathcal{I}^2$. Since the conormal
+sheaf $\mathcal{I}/\mathcal{I}^2$ is finite locally free on $Y$, the right
+hand side is
+$H^0(Y, \mathcal{N}_{Y/X_k})$ by the definition of the normal sheaf.
+
+Assume the asserted $H^1$ vanishes. We use the pointwise infinitesimal
+lifting criterion in More on Morphisms, Lemma
+\ref{more-morphisms-lemma-lifting-along-artinian-at-point}. Let
+$A' \to A$ be a small extension of local Artinian rings with residue field
+$k$ and kernel $J$, and consider a solid diagram in that criterion centered
+at $h$. The map $\Spec(A) \to H$ corresponds to a closed subscheme
+$Y_A \subset X_A$ flat over $A$.
+
+The local-complete-intersection subfunctor is open by Proposition
+\ref{proposition-quot-open-fibre-conditions}. Since $\Spec(A)$ has one
+point, the map $\Spec(A) \to H$ factors through this open and
+$Y_A \to X_A$ is a local complete intersection. Locally on $X_A$, choose a
+quasi-regular sequence defining $Y_A$ and lift its members to $X_{A'}$.
+The morphism $X_{A'} \to \Spec(A')$ is flat and of finite presentation.
+More on Algebra, Lemma \ref{more-algebra-lemma-cut-by-koszul-flat} shows
+that the lifted equations define a flat lift over $A'$. Thus the quotient
+$\mathcal{O}_{X_A} \to \mathcal{O}_{Y_A}$ has lifts locally on $X_A$.
+
+Apply Quot, Lemma \ref{quot-lemma-quotient-lifts-torsor}. Because
+$A' \to A$ is a small extension, $J$ is a $k$-vector space, and its
+obstruction sheaf is canonically the pushforward from $Y$ of
+$$
+\mathcal{N}_{Y/X_k} \otimes_k J.
+$$
+Consequently its first cohomology group is
+$$
+H^1(Y, \mathcal{N}_{Y/X_k}) \otimes_k J = 0.
+$$
+The lemma therefore gives a global flat lift $Y_{A'} \subset X_{A'}$.
+Finite presentation and properness are unchanged by the nilpotent
+thickening, so this is an $A'$-point of $H$ lifting the given $A$-point.
+The pointwise infinitesimal lifting criterion now proves that $H \to S$ is
+smooth at $h$.
+\end{proof}
+
 \begin{lemma}
 \label{corollary-finite-etale-Hilbert-open}
 Let $S$ be a Noetherian scheme and let $X \to S$ be quasi-projective. For

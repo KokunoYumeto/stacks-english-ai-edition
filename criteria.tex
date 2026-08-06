@@ -1709,6 +1709,110 @@ Spaces, Lemma
 \ref{spaces-lemma-fibre-product-spaces-over-sheaf-with-representable-diagonal}).
 \end{proof}
 
+\begin{proposition}
+\label{proposition-restriction-of-scalars-properties}
+\begin{reference}
+\cite[Expos\'e 221, Proposition 5.7]{FGA}.
+\end{reference}
+Let $S$ be a scheme. Let $X \to Z \to B$ be morphisms of algebraic spaces
+over $S$, and assume that $Z \to B$ is finite locally free. Then
+\begin{enumerate}
+\item if $X \to Z$ is locally of finite presentation, then
+$\text{Res}_{Z/B}(X) \to B$ is locally of finite presentation;
+\item if $X \to Z$ is smooth, then
+$\text{Res}_{Z/B}(X) \to B$ is smooth;
+\item if $B$, $Z$, and $X$ are schemes and $X \to Z$ is quasi-projective,
+then $\text{Res}_{Z/B}(X)$ is a scheme.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+The restriction of scalars is an algebraic space by Proposition
+\ref{proposition-restriction-of-scalars-algebraic-space}.
+
+Suppose $X \to Z$ is locally of finite presentation. Let
+$T = \lim T_i$ be a directed inverse limit of affine schemes over $B$.
+Since $Z \to B$ is finite, all the schemes $Z_{T_i}$ and $Z_T$ are affine
+and $Z_T = \lim Z_{T_i}$. Since $X \to Z$ is locally of finite
+presentation, Limits of Spaces, Proposition
+\ref{spaces-limits-proposition-characterize-locally-finite-presentation}
+gives
+$$
+\Mor_Z(Z_T, X) = \colim_i \Mor_Z(Z_{T_i}, X).
+$$
+This says exactly that $\text{Res}_{Z/B}(X) \to B$ is limit preserving.
+Another application of the proposition just cited proves (1).
+
+Suppose $X \to Z$ is smooth. Part (1) shows that the restriction of
+scalars is locally of finite presentation. Let $T \subset T'$ be a first
+order thickening of affine schemes over $B$ and let
+$T \to \text{Res}_{Z/B}(X)$ correspond to a $Z$-morphism
+$Z_T \to X$. The spaces $Z_T$ and $Z_{T'}$ are affine schemes because
+they are finite over affine schemes. The morphism $X \to Z$ is formally
+smooth by More on Morphisms of Spaces, Lemma
+\ref{spaces-more-morphisms-lemma-smooth-formally-smooth}; hence the map
+$Z_T \to X$ extends to a $Z$-morphism $Z_{T'} \to X$. Thus the restriction
+of scalars is formally smooth. The same lemma, together with local finite
+presentation, proves (2).
+
+Finally, assertion (3) is local on $B$, so we may assume that $B$ is
+affine. The finite morphism $Z \to B$ is projective by Morphisms, Lemma
+\ref{morphisms-lemma-finite-projective}. Hence $X \to B$ is
+quasi-projective by Morphisms, Lemma
+\ref{morphisms-lemma-composition-quasi-projective}. More on Morphisms,
+Lemma \ref{more-morphisms-lemma-hom-from-finite-locally-free-representable}
+shows that both $\mathit{Mor}_B(Z, X)$ and $\mathit{Mor}_B(Z, Z)$ are
+schemes. The cartesian diagram of Lemma \ref{lemma-fibre-diagram} now
+expresses $\text{Res}_{Z/B}(X)$ as a fibre product of schemes. This proves
+(3).
+\end{proof}
+
+\begin{example}[Bundles of infinitesimal sections]
+\label{example-bundles-infinitesimal-sections}
+\begin{reference}
+\cite[Expos\'e 221, discussion following Proposition 5.7]{FGA}.
+\end{reference}
+Let $T \to S$ be a smooth separated morphism of schemes. Denote by
+$\mathcal{I}$ the ideal of the diagonal in $T \times_S T$, and for
+$n \geq 0$ let $T_n$ be the closed subscheme cut out by
+$\mathcal{I}^{n + 1}$. Write $p_1, p_2 : T_n \to T$ for the two
+projections. Then $p_1$ is finite locally free. For a scheme $X$ over $T$
+set
+$$
+\mathit{Germ}^n_{T/S}(X) =
+\text{Res}_{T_n/T}(T_n \times_{p_2, T} X),
+$$
+where $T_n \to T$ in the subscript is $p_1$. This is an algebraic space
+over $T$; it is a scheme if $X \to T$ is quasi-projective, and it is
+smooth over $T$ if $X \to T$ is smooth.
+\end{example}
+
+\begin{proof}
+The diagonal is a regular immersion by Divisors, Lemma
+\ref{divisors-lemma-section-smooth-regular-immersion}, hence a
+quasi-regular immersion by Lemma
+\ref{divisors-lemma-regular-quasi-regular-immersion}. Its conormal sheaf
+is finite locally free, and its conormal algebra is the symmetric algebra
+by Divisors, Lemma \ref{divisors-lemma-quasi-regular-immersion}. Thus the
+successive quotients in the filtration
+$$
+\mathcal{O}_{T_n} \supset \mathcal{I}/\mathcal{I}^{n + 1}
+\supset \cdots \supset \mathcal{I}^n/\mathcal{I}^{n + 1}
+\supset 0
+$$
+are finite locally free $\mathcal{O}_T$-modules. It follows that
+$\mathcal{O}_{T_n}$ is finite locally free over $\mathcal{O}_T$.
+Locally on $T$, the scheme $T_n$ is affine because it is a finite order
+thickening of the affine diagonal; see More on Morphisms, Lemma
+\ref{more-morphisms-lemma-thickening-affine-scheme}. Hence
+$p_1 : T_n \to T$ is finite locally free.
+
+The remaining assertions follow from Propositions
+\ref{proposition-restriction-of-scalars-algebraic-space} and
+\ref{proposition-restriction-of-scalars-properties}, applied to the base
+change $T_n \times_{p_2, T} X \to T_n$ of $X \to T$.
+\end{proof}
+
 
 
 

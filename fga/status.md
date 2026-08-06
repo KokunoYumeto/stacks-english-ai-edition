@@ -1327,3 +1327,63 @@ overfull horizontal box; only the pre-existing standalone cross-chapter
 auxiliary warnings remain.  Final 1,200-dpi inspection covers Moduli pages
 17--18, 26--27, and 31--32.  The next sequential cursor is Expose 221,
 Section 5, beginning with Proposition 5.1 on printed page 269.
+
+The sixtieth source patch completes Expose 221, Section 5, printed pages
+269--273 (physical PDF pages 22--26).  The Quot chapter now gives the local
+sheaf of quotient lifts as a torsor under sheaf Hom, its canonical first
+cohomology obstruction and global section action, and the functorial
+cotangent and residue-field tangent descriptions of a represented Quot
+space.  The Moduli chapter identifies the tangent space to the Hilbert
+scheme at a local-complete-intersection subscheme with global sections of
+the normal sheaf and proves the classical first-cohomology smoothness
+criterion using local Koszul lifts and the global torsor obstruction.  The
+Criteria chapter extends the existing algebraic-space representability of
+restriction of scalars by finite locally free morphisms to preservation of
+local finite presentation and smoothness, scheme representability in the
+quasi-projective case, and the correctly based bundles of infinitesimal
+sections.  The divisor and Picard discussion in paragraph 5.6 is retained
+as historical synthesis rather than restated as a new theorem.
+
+Direct 1,200-dpi review used the NUMDAM authority PDF, 2,747,079 bytes with
+SHA-256
+`ABBF37780FDC514BEBD2F1811BFC94E706E44FA8751402CE171510A3F1520968`,
+and the linked erratum PDF, 157,623 bytes with SHA-256
+`007990D289E767A54A273CA45E8491F0052F9F015820DDB451D1E2B2D0FE27F9`.
+Issues `I000022`--`I000026` record and repair the printed
+`O_X`/`O_{X_0}` structure-sheaf subscript, the `O_S`/`O_{S'}` tensor
+base, the ill-typed `Z/S`, the undefined `Z/K`, and the incorrect
+`T_n/S` restriction base.  Issue `I000027` records that the predecessor
+edition's claimed correction of printed number 3.3 was itself false: the
+direct scan reads Corollary 5.3.  No predecessor file was mutated and no
+correction was imported silently.
+
+Both semantic validators pass with no errors at 21,599 labels, 21,437
+official-tag joins, 3,874 topic candidates, 426 append-only decisions,
+1,253 source units, 1,612 term links, and 27 source issues, of which eight
+remain active.  The decision, issue, map, Stacks-label, and topic-candidate
+ledgers have SHA-256
+`1CBD45E3D59C0667CD162E3A5B906122A3BFFBB7082D11F03842F7C3771647E3`,
+`E5D246C9DE7EDDAA9721D862E7B4486DC1B48353CF172754307CD0C885F0ACC4`,
+`79675B45D91FDF56807DEC56E41F57324907786ECFA26A6AAA095D52E12FEA7B`,
+`7D98A2A4F7EEDB5807A790704D4111604753CFD9E6D4F5D4016E35C4E049FB55`,
+and
+`2DA2675A0224F461B2F31988FBAC9AFE60B94C5C8B89A0DB2ADBF5BA783D54CE`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`;
+no official Stacks tag has been invented.
+
+Bibliography-complete serial builds followed by two final TeX passes
+produce a 61-page Quot chapter of 850,429 bytes with SHA-256
+`4F628D1B9071C627DE97C67D218F1A9B8C965233ED2D3389285D4806CD1244D1`,
+a 37-page Criteria chapter of 665,338 bytes with SHA-256
+`ABD3E3EC7831E6D040E4F9C9B998B48081F6F0EF44E9662A731961AEA3BDEF40`,
+and a 38-page Moduli chapter of 650,591 bytes with SHA-256
+`E15F64121A4EE18E5A025DC8D97D32B3A643E3CA328073F5CB5CB9C519275C0E`.
+All new labels and citations resolve.  The additions create no overfull
+horizontal box; standalone builds retain only pre-existing external
+cross-chapter auxiliary warnings and overfull boxes outside the new line
+ranges.  Final 1,200-dpi inspection covers Quot pages 22--23 and 25--26,
+Criteria pages 18--20, and Moduli pages 27--28 with no clipping, collision,
+malformed formula, or unreadable text.  The next sequential cursor is
+Expose 221, Section 6, beginning on printed page 273 with the relation
+between the norm and symmetric products.
