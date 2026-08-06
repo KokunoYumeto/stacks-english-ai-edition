@@ -1364,6 +1364,139 @@ Formal Deformation Theory, Theorem
 \end{proof}
 
 \begin{lemma}
+\label{lemma-schemes-formal-moduli-no-infinitesimal-automorphisms}
+\begin{reference}
+\cite[Expos\'e 195, C, Proposition 4.1, pp. 385--386]{FGA}.
+\end{reference}
+Let $\Lambda$ be a Noetherian local ring with residue field $k$, and let
+$X$ be a scheme over $k$. For a local object $A$ of
+$\mathcal{A}_\Lambda$ (Formal Deformation Theory, Definition
+\ref{formal-defos-definition-artinian-algebra-functor-cech}), with residue
+field $\kappa(A)$, let $F(A)$ be the set of isomorphism classes of pairs
+$(X_A, \alpha_A)$, where $X_A$ is a flat $A$-scheme and
+$$
+\alpha_A : X_A \times_{\Spec(A)} \Spec(\kappa(A))
+\longrightarrow X \times_{\Spec(k)} \Spec(\kappa(A))
+$$
+is an isomorphism. Isomorphisms of pairs are required to respect $\alpha_A$.
+For arbitrary $A$, define $F(A)$ as the product of these sets over the local
+factors of $A$. If
+$$
+\text{Der}_k(\mathcal{O}_X, \mathcal{O}_X) = 0,
+$$
+then $F : \mathcal{A}_\Lambda \to \textit{Sets}$ is strictly
+prorepresentable. If $X$ is proper over $k$, then the corresponding local
+prorepresenting algebra is Noetherian.
+
+If $X$ is smooth over $k$, the tangent space at the marked point is
+canonically
+$$
+H^1(X, \mathcal{T}_{X/k}), \qquad
+\mathcal{T}_{X/k} =
+\SheafHom_{\mathcal{O}_X}(\Omega_{X/k}, \mathcal{O}_X).
+$$
+\end{lemma}
+
+\begin{proof}
+We first eliminate automorphisms, including after extension of the residue
+field. Let $l/k$ be a finite field extension. Finite base change gives
+$$
+\text{Der}_l(\mathcal{O}_{X_l}, \mathcal{O}_{X_l}) =
+\text{Der}_k(\mathcal{O}_X, \mathcal{O}_X) \otimes_k l = 0.
+$$
+Indeed, after pushing forward along the finite morphism $X_l \to X$, this is
+the fact that sheaf homomorphisms into a finite direct sum commute with that
+direct sum. Lemma \ref{lemma-schemes-TI} identifies this group with the
+infinitesimal automorphisms of $X_l$. Formal Deformation Theory, Lemma
+\ref{formal-defos-lemma-infaut-trivial} then shows that every automorphism of
+a marked deformation over a local Artinian ring with residue field $l$ is
+trivial.
+
+We verify the two local equalizer tests of Formal Deformation Theory, Theorem
+\ref{formal-defos-theorem-grothendieck-levelt-prorepresentability}. Let
+$A \to B$ be one of the maps occurring in those tests, with $A$ local. If a
+class over $B$ has equal pullbacks to $B \otimes_A B$, the equality supplies
+an isomorphism between the two pullbacks. It is unique by the preceding
+paragraph. Consequently its three pullbacks to
+$B \otimes_A B \otimes_A B$ satisfy the cocycle condition automatically.
+
+Suppose first that $B$ is a nonzero finite free $A$-module. The morphism
+$\Spec(B) \to \Spec(A)$ is an fppf covering. Fppf descent data for algebraic
+spaces are effective by Bootstrap, Lemma
+\ref{bootstrap-lemma-descend-algebraic-space}. Thus the marked flat
+$B$-scheme descends to an algebraic space $Y$ over $A$. Flatness descends by
+Descent on Spaces, Lemma
+\ref{spaces-descent-lemma-descending-property-flat}, and the marking descends
+to an isomorphism
+$Y_{\kappa(A)} \cong X_{\kappa(A)}$. Since
+$Y_{\kappa(A)} \subset Y$ is a thickening, $Y$ is a scheme by More on
+Morphisms of Spaces, Lemma
+\ref{spaces-more-morphisms-lemma-thickening-scheme}. Full faithfulness in
+fppf descent gives an equivalence between marked flat $A$-schemes and the
+descent data under consideration.
+
+Suppose next that $A \to B$ is injective and $B/A$ has length $1$. Put
+$\mathfrak m = \mathfrak m_A$. The proof of Formal Deformation Theory, Lemma
+\ref{formal-defos-lemma-length-one-cech-equalizer} gives
+$$
+\mathfrak mB = \mathfrak m
+$$
+and the required ring equalizer. Hence Descent, Lemma
+\ref{descent-lemma-artinian-small-effective-descent-flat-modules} applies.
+Choose an affine basis of $X$ together with all of its principal affine
+refinements. The inverse image of any member of this basis in a marked
+deformation over $B$ is affine: it is a nilpotent thickening of the
+corresponding affine open after base change to $B/\mathfrak m$. Its coordinate
+algebra is flat over $B$. The cited descent lemma descends the underlying
+module to a flat $A$-module. Multiplication, the unit, and all restriction
+maps descend uniquely by the full faithfulness part of that lemma, and their
+identities can be checked after base change to $B$.
+
+For completeness, these descended affine pieces have the required open
+overlaps. If $V = D(f) \subset U$ is one of the chosen principal refinements,
+lift $f$ to the descended coordinate algebra of $U$. After base change to
+$B$, localization at this lift is the coordinate algebra of the inverse image
+of $V$. Full faithfulness identifies its descent with the localization of the
+descended algebra of $U$. The affine pieces therefore glue to a flat
+$A$-scheme marked by $X$ on its special fibre. The same argument applied to
+morphisms proves full faithfulness. Thus marked flat schemes over $A$ are
+again equivalent to the relevant descent data over $B$.
+
+It follows in both cases that
+$$
+F(A) \longrightarrow F(B)
+\mathrel{\substack{\longrightarrow \\[-0.6ex] \longrightarrow}}
+F(B \otimes_A B)
+$$
+is an equalizer. The functor $F$ commutes with finite products by definition,
+so the Grothendieck--Levelt theorem cited above proves strict
+prorepresentability. Moreover, $F(K)$ is a singleton for every field
+$K \in \mathcal{A}_\Lambda$. Thus the strict representing system has a unique
+component through its $k$-point, and this component may be taken to consist of
+local Artinian algebras with residue field $k$.
+
+The tangent space at the marked $k$-point is the tangent space of
+$\Deformationcategory_X$, because the two functors are equivalent after the
+automorphisms have been eliminated. Lemma \ref{lemma-schemes-TI} identifies
+it with
+$$
+\text{Ext}^1_{\mathcal{O}_X}(\NL_{X/k}, \mathcal{O}_X).
+$$
+If $X$ is smooth, the naive cotangent complex is represented by the finite
+locally free module $\Omega_{X/k}$ in degree zero, and this Ext group is
+$H^1(X, \mathcal{T}_{X/k})$.
+
+Finally assume $X$ is proper. Lemma \ref{lemma-proper-schemes-TI} says that
+the tangent space is finite dimensional. In a local strict prorepresenting
+presentation, this bounds the relative cotangent spaces of all the Artinian
+quotients. Since $\Lambda$ is Noetherian, its cotangent space is finite
+dimensional as well, and hence the absolute cotangent spaces of the quotients
+are bounded. The inverse limit is therefore Noetherian by the
+bounded-cotangent-space argument of Formal Deformation Theory, Lemma
+\ref{formal-defos-lemma-limit-artinian}.
+\end{proof}
+
+\begin{lemma}
 \label{lemma-proper-smooth-formal-moduli-unobstructed}
 \begin{reference}
 \cite[Expos\'e 182, Th\'eor\`eme 10, p. 209]{FGA}

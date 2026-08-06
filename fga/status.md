@@ -720,3 +720,29 @@ added block, and pages 28--29 containing the whole proposition, proof, and
 erratum remark pass 400 dpi rendered inspection.  Both semantic validators
 report no errors: 21,537 labels and 354 append-only decisions.  The next
 cursor is the corollary following Expose 195, Proposition C.3.1.
+The forty-second source patch integrates Expose 195, Proposition C.4.1 for
+the full nonproper scope stated in the source.  A deformation over an
+Artinian local algebra is marked by an identification of its special fibre
+with the corresponding residue-field extension of the fixed scheme.  The
+vanishing of global derivations persists under every finite residue-field
+extension and eliminates all automorphisms of marked deformations, so an
+isomorphism between the two pullbacks of a class is unique and automatically
+satisfies the cocycle condition.  For the finite-free Grothendieck--Levelt
+test, fppf descent first produces an algebraic space; its marked special
+fibre is a scheme and the result is a nilpotent thickening of that fibre, so
+it is again a scheme.  For the length-one test, the exact maximal-ideal and
+ring-equalizer identities allow effective descent of every flat affine
+coordinate module; multiplication, units, principal localizations, and
+gluing descend by full faithfulness.  The corrected Grothendieck--Levelt
+criterion therefore gives strict prorepresentability without properness.
+The same lemma identifies the tangent space with
+$\operatorname{Ext}^1(\mathrm{NL}_{X/k},\mathcal O_X)$, hence with
+$H^1(X,\mathcal T_{X/k})$ when $X$ is smooth, and proves that the local
+prorepresenting algebra is Noetherian when $X$ is proper by the finite-tangent
+bounded-cotangent argument.  Decision `D000355` supersedes `D000164` with
+exact integrated coverage.  A bibliography-complete build followed by final
+TeX passes produces a 36-page Deformation Problems chapter; the added block
+has no undefined reference or overfull box, and pages 14--15 have no visible
+placeholder and pass 600 dpi rendered inspection.  Both semantic validators
+report no errors: 21,538 labels and 355 append-only decisions.  The next
+cursor is the remarks following Expose 195, Proposition C.4.1.
