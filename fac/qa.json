@@ -3,35 +3,33 @@
   "date": "2026-08-06",
   "scope": {
     "start": "fac:I:1:no:1",
-    "end": "fac:II:1:no:36",
-    "printed_pages": "199-230",
-    "units_decided": 140,
-    "stacks_references_added": 77
+    "end": "fac:II:2:no:37",
+    "printed_pages": "199-231",
+    "units_decided": 145,
+    "stacks_references_added": 80
   },
   "authority": {
     "bytes": 6305726,
     "sha256": "B8C6508249308F5D8BC886B9E6360F1EC4FDC8F0F18EFAA03EE0E36B591551CA",
     "render_dpi": 1100,
-    "physical_pages_inspected": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35],
-    "printed_pages_inspected": [199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230]
+    "physical_pages_inspected": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36],
+    "printed_pages_inspected": [199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231]
   },
   "latest_review": {
-    "unit": "fac:II:1:no:36",
-    "component": "components/034_II_1_36_rational_function_field.tex",
-    "bytes": 6019,
-    "sha256": "4554FB8E0D2B317174FC63982C430F304C73A59CAB1796CCA8B8AB4164510AF9",
-    "authority_physical_pages": [33, 34, 35],
-    "authority_printed_pages": [228, 229, 230],
+    "unit": "fac:II:2:no:37",
+    "component": "components/035_II_2_37_sheaf_of_local_rings.tex",
+    "bytes": 3868,
+    "sha256": "735A0D323CF3F3BA68EE36028CDA078AB168EB3BB9368AD9BD7146CE0F932727",
+    "authority_physical_pages": [35, 36],
+    "authority_printed_pages": [230, 231],
     "authority_renders": [
-      {"physical_page": 33, "sha256": "50E9DDC1B209EB3CD700FB06187E2131E5BDB3B4919CE7D87E984B22DBF5293C"},
-      {"physical_page": 34, "sha256": "2BAED84537CF184F1017C64DADDDFE778613CB297789FD86BF1596AF2E1B692A"},
-      {"physical_page": 35, "sha256": "D6963099BA9FDB191E31DA08F2A26D0A8E8FCD3AD89BDA4ED8B959ECA2D95749"}
+      {"physical_page": 35, "sha256": "D6963099BA9FDB191E31DA08F2A26D0A8E8FCD3AD89BDA4ED8B959ECA2D95749"},
+      {"physical_page": 36, "sha256": "81E21B86A7F62BD10E1FEE7A32832322CBBF9197EBA3A3B4279CED8EE22DDE37"}
     ],
     "output_renders": [
-      {"master": "sheaves.tex", "pdf_page": 7, "sha256": "D0A0B1DDEF9086147420911EC12C274871BB1C5394095448442D8CD94827A5B0"},
-      {"master": "morphisms.tex", "pdf_page": 123, "sha256": "31129223AC0D6CD6469B6F9514875DBA50525EDFB20F62B071BAA52FE79C5638"},
-      {"master": "morphisms.tex", "pdf_page": 124, "sha256": "2C103FF671066551B193DD5794D47B8D8E611DF64B4FF98A3C904887B6DDBD4A"},
-      {"master": "varieties.tex", "pdf_page": 38, "sha256": "E43D1E022684D31019CCADF1FC83C6D1F38F6FC8F8DE0300094A87BCA31C40B9"}
+      {"master": "coherent.tex", "pdf_page": 22, "sha256": "C2A9A88B4D2E335BD0717A56386012804DAB53B6A4E5C3CE532EA4C3D1AF95C4"},
+      {"master": "coherent.tex", "pdf_page": 23, "sha256": "1C38A5E539557F991E727A6D36E6F0C86FBA3B2F8D43A25C3865838CC5B60D74"},
+      {"master": "schemes.tex", "pdf_page": 22, "sha256": "5B15C5A60B602175298AE41794DCB00919F70629932CEFC27941EC4B012AD8F2"}
     ]
   },
   "builds": [
@@ -70,9 +68,9 @@
     {
       "master": "coherent.tex",
       "pdf": "coherent.pdf",
-      "bytes": 1034840,
-      "sha256": "3D128DA2D37DD932FFDB85FB6F989025FCEF282FBA1313980CD6E9839E972F11",
-      "affected_pdf_pages_inspected": [22],
+      "bytes": 1034851,
+      "sha256": "37A22DF8D6659351A9053F2AE4DC97231E9742E77C5D8081C8DA9E5BCB893048",
+      "affected_pdf_pages_inspected": [22, 23],
       "affected_page_result": "PASS"
     },
     {
@@ -95,7 +93,7 @@
       "master": "schemes.tex",
       "pdf": "schemes.pdf",
       "bytes": 721851,
-      "sha256": "AA82FA9B956FD09CA3A63192825EE10415383263D00768D73A4FAA936380F719",
+      "sha256": "D6C9E2136D74172A079ADCF3AC0D00CBBD0FFAEF1E3E8F035A9A037F382A088C",
       "affected_pdf_pages_inspected": [2, 3, 8, 9, 10, 16, 17, 22, 23, 25, 26, 31, 32, 33, 34, 40, 43],
       "affected_page_result": "PASS"
     },
@@ -167,7 +165,7 @@
     "fac_citations_resolved": true,
     "undefined_reference_at_edited_lines": 0,
     "overfull_box_at_edited_lines": 0,
-    "note": "The isolated builds retain unrelated missing chapter-aux warnings and pre-existing overfull diagnostics. The FAC no. 36 references resolve; the locally-constant-sheaf definition and proof, classical-to-generic-point history, intersection-of-local-rings lemma, and dimension reference introduce no unresolved citation, link, or new overfull box at edited lines. The pre-existing overfull statement at morphisms.tex lines 12709--12711 remains visually unclipped on inspected PDF page 123."
+    "note": "The isolated builds retain unrelated missing chapter-aux warnings and pre-existing overfull diagnostics. The FAC no. 37 references resolve; the classical reduced-structure-sheaf bridge, locally Noetherian coherence history, and quasi-coherent ideal-sheaf reference introduce no unresolved citation, link, or new overfull box at edited lines. The inspected coherent.pdf pages 22--23 and schemes.pdf page 22 are unclipped and collision-free."
   },
   "validators": {
     "intake": "PASS",
