@@ -1619,6 +1619,351 @@ below.
 
 
 \begin{lemma}
+\label{lemma-bounded-finite-pushforward}
+Let $S$ be a Noetherian scheme. Let $X$ and $Y$ be schemes proper and of
+finite type over $S$, and let $f:X\to Y$ be finite. A family $E$ of fibrewise
+coherent sheaves on $X/S$ is bounded if and only if the family
+$$
+\{f_*\mathcal{F}\mid\mathcal{F}\text{ represents a member of }E\}
+$$
+is bounded on $Y/S$.
+\end{lemma}
+
+\begin{proof}
+If $(T,\mathcal{G})$ bounds $E$, then
+$(T,(f_T)_*\mathcal{G})$ bounds the pushforwards. Here we use that a finite
+morphism is affine, that its pushforward preserves coherent modules, and that
+this pushforward commutes with base change.
+
+Conversely, choose $(T,\mathcal{H})$ bounding the pushforwards and put
+$$
+\mathcal{A}=(f_T)_*\mathcal{O}_{X_T}.
+$$
+After a finite stratification of $T$, we may assume that the coherent modules
+which occur below are flat over $T$. The functor of homomorphisms
+$$
+\mathcal{A}\otimes\mathcal{H}\longrightarrow\mathcal{H}
+$$
+is then represented by an affine scheme of finite presentation over $T$, as
+in the proof of Proposition
+\ref{proposition-bounded-coherent-morphisms-extensions}. The unit and
+associativity identities cut out a closed subscheme $M$ of this Hom scheme.
+Thus $M$ parametrizes all $\mathcal{A}$-module structures on the fibres of
+$\mathcal{H}$. The universal $\mathcal{A}$-module on $Y_M$ corresponds to a
+coherent module on $X_M$ by Morphisms, Lemma
+\ref{morphisms-lemma-affine-equivalence-modules}. Every module in $E$ occurs
+as a fibre after extending the ground field and transporting its
+$f_*\mathcal{O}_X$-module structure to the corresponding fibre of
+$\mathcal{H}$. Since $M$ is of finite type over $S$, the universal module on
+$X_M$ bounds $E$.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-bounded-reduced-equidimensional-degree}
+\begin{reference}
+\cite[Expos\'e 221, Lemma 2.4, p. 255]{FGA}.
+\end{reference}
+Let $S$ be a Noetherian scheme, let $X\to S$ be projective, and fix a
+relatively very ample invertible module $\mathcal{O}_X(1)$. Fix integers
+$r,d\geq0$. The structure sheaves of the reduced closed subschemes
+$$
+Z\subset X_K
+$$
+which are pure of dimension $r$ and have degree at most $d$ form a bounded
+family over $X/S$.
+\end{lemma}
+
+\begin{proof}
+Choose a closed immersion $X\to\mathbf{P}^N_S$ defined by
+$\mathcal{O}_X(1)$. For each $e\leq d$, the Chow-coordinate construction gives
+a projective parameter scheme for effective $r$-cycles of degree $e$ in
+$\mathbf{P}^N$, together with its incidence subscheme. Restricting to the
+closed locus of cycles supported on $X$ and taking the product with $S$ gives
+a finite-type parameter scheme over $S$. A reduced pure-dimensional
+$Z\subset X_K$ determines the cycle which is the sum of its irreducible
+components with coefficient $1$, and the reduction of the corresponding
+incidence fibre is exactly $Z$. Lemma
+\ref{lemma-bounded-fibrewise-reductions}, applied to the finitely many
+incidence families for $0\leq e\leq d$, bounds their reduced fibres and hence
+all the stated structure sheaves.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-bounded-top-dimensional-small-ambient}
+\begin{reference}
+\cite[Expos\'e 221, Lemma 2.5, pp. 255--257]{FGA}.
+\end{reference}
+Let $S$ be a Noetherian scheme, let $X\to S$ be projective with fibres of
+dimension at most $r$, and fix a relatively very ample invertible module
+$\mathcal{O}_X(1)$. Let $\mathcal{L}$ be a coherent $\mathcal{O}_X$-module,
+and let $E$ be a family of quotient modules of the modules $\mathcal{L}_K$.
+If $r\geq1$, write
+$$
+P_{\mathcal{F}}(n)=
+a_{\mathcal{F}}\frac{n^r}{r!}+
+b_{\mathcal{F}}\frac{n^{r-1}}{(r-1)!}+
+\text{terms of degree }<r-1.
+$$
+Then the $a_{\mathcal{F}}$ are bounded and the $b_{\mathcal{F}}$ are bounded
+below. If the $b_{\mathcal{F}}$ are bounded above, then the family of
+$\mathcal{F}_{(r)}$ is bounded. If $r=0$, then $E$ is bounded.
+\end{lemma}
+
+\begin{proof}
+Embed $X$ into $\mathbf{P}^N_S$ using $\mathcal{O}_X(1)$. The linear
+projections $\mathbf{P}^N\dashrightarrow\mathbf{P}^r$ are parametrized by a
+scheme of finite type. The condition that a projection be defined on $X$ and
+induce a finite morphism on $X$ is open, and the standard generic-projection
+argument shows that this open meets every geometric fibre over $S$. Hence,
+after replacing $S$ by a finite-type parameter scheme which meets every
+geometric fibre, we may assume there is a finite morphism
+$$
+f:X\longrightarrow\mathbf{P}^r_S,
+\qquad
+\mathcal{O}_X(1)=f^*\mathcal{O}_{\mathbf{P}^r_S}(1).
+$$
+This replacement is harmless for boundedness in Definition
+\ref{definition-bounded-coherent}, since every member is allowed a ground
+field extension.
+
+Finite pushforward preserves the Hilbert polynomial by the projection formula
+and the vanishing of higher direct images. Since a finite morphism preserves
+dimensions of supports, the description by sections in Lemma
+\ref{lemma-coherent-dimension-truncation} gives
+$$
+f_*(\mathcal{F}_{(r)})=(f_*\mathcal{F})_{(r)}.
+$$
+Lemma \ref{lemma-bounded-finite-pushforward} therefore reduces the question to
+$X=\mathbf{P}^r_S$. After taking a finite affine covering of $S$, replacing it
+by the corresponding disjoint union, and twisting by a fixed integer, we may
+also assume that every member is a quotient of
+$\mathcal{O}_{\mathbf{P}^r_K}^{\oplus q}$ for one fixed $q$. Twisting changes
+$b_{\mathcal{F}}$ by a fixed multiple of $a_{\mathcal{F}}$, so it does not
+change any of the boundedness assertions.
+
+The leading coefficient $a_{\mathcal{F}}$ is the generic rank of
+$\mathcal{F}$ and hence
+$$
+0\leq a_{\mathcal{F}}\leq q.
+$$
+The quotient $\mathcal{G}=\mathcal{F}_{(r)}$ is either zero or a torsion-free
+module of rank $a=a_{\mathcal{F}}$ on $\mathbf{P}^r_K$. Assume it is nonzero.
+On the complement of a closed subset of codimension at least $2$ it is
+locally free. Since projective space is regular and locally factorial, the
+rank-one reflexive module
+$$
+\det(\mathcal{G})=(\wedge^a\mathcal{G})^{**}
+$$
+is invertible. Divisors, Lemma
+\ref{divisors-lemma-Pic-projective-space-UFD} gives a unique integer $c$ such
+that $\det(\mathcal{G})\cong\mathcal{O}(c)$. The quotient map from
+$\mathcal{O}^{\oplus q}$ gives a nonzero homomorphism
+$$
+s:\wedge^a\mathcal{O}^{\oplus q}\longrightarrow\mathcal{O}(c).
+$$
+Consequently $c\geq0$.
+
+Modulo coherent modules supported in codimension at least $2$, the class of a
+torsion-free module on the regular scheme $\mathbf{P}^r_K$ is determined by
+its rank and determinant. Thus the Hilbert polynomials of $\mathcal{G}$ and
+$\mathcal{O}^{\oplus(a-1)}\oplus\mathcal{O}(c)$ differ in degree at most
+$r-2$. Expanding
+$$
+P_{\mathcal{O}(c)}(n)={n+c+r\choose r}
+$$
+shows that
+$$
+b_{\mathcal{G}}=a\frac{r+1}{2}+c.
+$$
+The coefficient of degree $r-1$ in
+$P_{\mathcal{N}_r(\mathcal{F})}$ is nonnegative. Hence
+$b_{\mathcal{F}}\geq b_{\mathcal{G}}\geq0$, which proves the asserted lower
+bound.
+
+If the $b_{\mathcal{F}}$ are bounded above, then so are the
+$b_{\mathcal{G}}$, and therefore only finitely many pairs $(a,c)$ occur. For
+fixed $(a,c)$ the homomorphisms $s$ above form a finite-dimensional affine
+parameter space. Moreover, $\mathcal{G}$ is the image of the homomorphism
+$$
+\mathcal{O}^{\oplus q}\longrightarrow
+\SheafHom(\wedge^{a-1}\mathcal{O}^{\oplus q},\mathcal{O}(c)),
+\qquad
+v\longmapsto(w\mapsto s(v\wedge w)).
+$$
+Indeed, this is true where $\mathcal{G}$ is locally free, and both sides are
+torsion-free. Proposition
+\ref{proposition-bounded-coherent-morphisms-extensions} now shows that all
+these images form a bounded family. This proves the assertion for $r\geq1$.
+
+If $r=0$, finite projection reduces to $\mathbf{P}^0_S=S$. The dimensions of
+quotients of one fixed finite module are bounded, so only finitely many
+constant Hilbert polynomials occur. Proposition
+\ref{proposition-bounded-coherent-Hilbert-polynomials} finishes the proof.
+\end{proof}
+
+\begin{proposition}
+\label{proposition-bounded-top-dimensional-pieces}
+\begin{reference}
+\cite[Expos\'e 221, Lemma 2.6, pp. 257--258]{FGA}.
+\end{reference}
+Let $S$ be a Noetherian scheme, let $X\to S$ be projective, and fix a
+relatively very ample invertible module $\mathcal{O}_X(1)$. Let $E$ be a
+family satisfying condition (1) of Proposition
+\ref{proposition-bounded-coherent-Hilbert-polynomials}. Suppose that every
+member has support of dimension at most $r$. For $r\geq1$, write
+$$
+P_{\mathcal{F}}(n)=
+a_{\mathcal{F}}\frac{n^r}{r!}+
+b_{\mathcal{F}}\frac{n^{r-1}}{(r-1)!}+
+\text{terms of degree }<r-1.
+$$
+If the $a_{\mathcal{F}}$ are bounded, then the $b_{\mathcal{F}}$ are bounded
+below. If in addition the $b_{\mathcal{F}}$ are bounded above, then the family
+of $\mathcal{F}_{(r)}$ is bounded. For $r=0$, boundedness of the constant
+coefficients implies that $E$ is bounded.
+\end{proposition}
+
+\begin{proof}
+We may extend the ground fields and assume they are algebraically closed.
+For a member $\mathcal{F}$, let
+$$
+Z_{\mathcal{F}}=
+(\operatorname{Supp}(\mathcal{F}_{(r)}))_{\mathrm{red}}.
+$$
+By Varieties, Lemma
+\ref{varieties-lemma-numerical-polynomial-leading-term},
+$$
+a_{\mathcal{F}}=
+\sum_Z
+\mathop{\rm length}_{\mathcal{O}_{X_K,\xi_Z}}
+((\mathcal{F}_{(r)})_{\xi_Z})\deg(Z),
+$$
+where the sum is over the irreducible components of $Z_{\mathcal{F}}$.
+Thus boundedness of $a_{\mathcal{F}}$ bounds both the degree of
+$Z_{\mathcal{F}}$ and every displayed generic length. Lemma
+\ref{lemma-bounded-reduced-equidimensional-degree} shows that the
+$Z_{\mathcal{F}}$ form a bounded family.
+
+Choose an integer $A \geq 1$ bounding all the generic lengths, and let
+$\mathcal{J}_{\mathcal{F}}$ be the ideal of $Z_{\mathcal{F}}$ in $X_K$.
+Then
+$$
+\mathcal{J}_{\mathcal{F}}^A\mathcal{F}_{(r)}=0.
+$$
+Indeed, at every associated point of $\mathcal{F}_{(r)}$ this follows from
+the elementary fact that the $A$th power of the maximal ideal annihilates a
+module of length at most $A$. A nonzero submodule
+$\mathcal{J}_{\mathcal{F}}^A\mathcal{F}_{(r)}$ would have an associated point
+among those of $\mathcal{F}_{(r)}$, giving a contradiction.
+
+Choose a finite-type family $Z\subset X_T$ which contains all the
+$Z_{\mathcal{F}}$ as geometric fibres. The closed subscheme
+$$
+Y=V(\mathcal{I}_Z^A)\subset X_T
+$$
+has fibres of dimension at most $r$, and every $\mathcal{F}_{(r)}$ is a module
+on a geometric fibre of $Y/T$. It is a quotient of the restriction to that
+fibre of the fixed coherent source in condition (1). Apply Lemma
+\ref{lemma-bounded-top-dimensional-small-ambient} to $Y/T$. This proves the
+lower bound for the $b_{\mathcal{F}}$ and, when they are bounded above, the
+boundedness of the $\mathcal{F}_{(r)}$. The same argument and the last
+sentence of that lemma handle $r=0$.
+\end{proof}
+
+\begin{proposition}
+\label{proposition-bounded-dimension-truncations}
+\begin{reference}
+\cite[Expos\'e 221, Theorem 2.2, pp. 254--258]{FGA}.
+\end{reference}
+Let $S$ be a Noetherian scheme, let $X\to S$ be projective, and fix a
+relatively very ample invertible module $\mathcal{O}_X(1)$. Let $E$ be a
+family satisfying condition (1) of Proposition
+\ref{proposition-bounded-coherent-Hilbert-polynomials}, and let $s$ be an
+integer. Suppose that the coefficients in degrees at least $s-1$ of the
+Hilbert polynomials of members of $E$ are bounded. Then the family of
+$\mathcal{F}_{(s)}$ is bounded. Moreover, the coefficients in degree $s-2$
+are bounded below, where coefficients in negative degrees are understood to
+be zero.
+\end{proposition}
+
+\begin{proof}
+Remark \ref{remark-FGA-Hilbert-coefficient-inequality} explains the correction
+of the inequality in the source. If $s\leq0$, all coefficients in nonnegative
+degrees are bounded. Numerical polynomials of bounded degree form a lattice
+in their coefficient space, so only finitely many Hilbert polynomials occur;
+Proposition \ref{proposition-bounded-coherent-Hilbert-polynomials} applies.
+We may therefore assume $s\geq1$.
+
+We prove both assertions simultaneously by induction on an upper bound $r$
+for the dimensions of the supports. If $r\leq s-2$, then
+$\mathcal{F}_{(s)}=0$ and the coefficient in degree $s-2$ is either zero or a
+leading coefficient, hence is nonnegative. If $r=s-1$, then again
+$\mathcal{F}_{(s)}=0$. When $s=1$ the coefficient in degree $s-2=-1$ is zero
+by convention. When $s\geq2$, Proposition
+\ref{proposition-bounded-top-dimensional-pieces}, applied with $r=s-1$,
+gives the required lower bound from the bounded coefficient in degree $s-1$.
+
+Assume $r\geq s$ and the result is known with upper bound $r-1$. The
+coefficients $a_{\mathcal{F}}$ and $b_{\mathcal{F}}$ in degrees $r$ and
+$r-1$ are bounded. Proposition
+\ref{proposition-bounded-top-dimensional-pieces} shows that the family of
+$\mathcal{F}_{(r)}$ is bounded. Let $\mathcal{L}_K\to\mathcal{F}$ be the
+fixed-source quotient from condition (1). The kernels of the composites
+$$
+\mathcal{L}_K\longrightarrow\mathcal{F}
+\longrightarrow\mathcal{F}_{(r)}
+$$
+form a bounded family by Proposition
+\ref{proposition-bounded-coherent-morphisms-extensions}. Each
+$\mathcal{N}_r(\mathcal{F})$ is a quotient of the corresponding kernel, so
+the family of the $\mathcal{N}_r(\mathcal{F})$ has a common coherent quotient
+source. Since
+$$
+P_{\mathcal{N}_r(\mathcal{F})}=P_{\mathcal{F}}-P_{\mathcal{F}_{(r)}}
+$$
+and a bounded family has only finitely many Hilbert polynomials, the
+coefficients in degrees at least $s-1$ on the left are bounded. The induction
+hypothesis therefore applies to the $\mathcal{N}_r(\mathcal{F})$.
+
+The dimension filtration gives a short exact sequence
+$$
+0\longrightarrow
+(\mathcal{N}_r(\mathcal{F}))_{(s)}\longrightarrow
+\mathcal{F}_{(s)}\longrightarrow
+\mathcal{F}_{(r)}\longrightarrow0.
+$$
+Its left and right terms form bounded families, so Proposition
+\ref{proposition-bounded-coherent-morphisms-extensions} bounds the middle
+terms. The coefficient in degree $s-2$ of the left term is bounded below by
+induction, and all coefficients of the right term are bounded. Additivity of
+Hilbert polynomials proves the asserted lower bound for $\mathcal{F}$ and
+completes the induction.
+\end{proof}
+
+\begin{lemma}
+\label{corollary-bounded-associated-dimensions}
+\begin{reference}
+\cite[Expos\'e 221, Corollary 2.3, p. 255]{FGA}.
+\end{reference}
+In the situation of Proposition
+\ref{proposition-bounded-coherent-Hilbert-polynomials}, suppose there are
+integers $s\leq r$ such that every associated point of every member
+$\mathcal{F}$ has closure of dimension between $s$ and $r$. Then, in addition
+to the common-source condition, it is enough to bound the coefficients of
+$P_{\mathcal{F}}$ in degrees from $s-1$ through $r$ in order to conclude that
+the family is bounded.
+\end{lemma}
+
+\begin{proof}
+There are no coefficients in degrees greater than $r$, and Lemma
+\ref{lemma-coherent-dimension-truncation} gives
+$\mathcal{F}_{(s)}=\mathcal{F}$. Thus Proposition
+\ref{proposition-bounded-dimension-truncations} applies. The converse follows
+from Proposition \ref{proposition-bounded-coherent-Hilbert-polynomials}.
+\end{proof}
+
+
+\begin{lemma}
 \label{lemma-quot-qc-over-base}
 Let $f : X \to B$ be a separated morphism of finite presentation
 of algebraic spaces. Let $\mathcal{F}$ be a finitely presented

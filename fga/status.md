@@ -1194,3 +1194,44 @@ The new material adds no unresolved citation, unresolved internal reference,
 or overfull horizontal box and passes 1,200-dpi inspection on pages 16--18.
 The next sequential cursor is the corrected Theorem 2.2, beginning with its
 Chow-coordinate and determinant bounds.
+
+The fifty-seventh source patch completes Expose 221, Section 2.  It integrates
+the Chow-coordinate boundedness of reduced equidimensional supports, finite
+pushforward invariance of boundedness, the generic-projection and determinant
+estimate for top-dimensional quotients, the corrected partial-coefficient
+theorem, and its associated-dimension corollary.  The proof of the corrected
+theorem simultaneously bounds the dimension truncation and the next Hilbert
+coefficient by induction on maximal support dimension; it uses the bounded
+kernel of the fixed source only as a common quotient source for the lower
+piece and does not repeat the source's false inference that all of its
+quotients are bounded.
+
+Direct 1,200-dpi review of the NUMDAM authority PDF, 2,747,079 bytes with
+SHA-256
+ABBF37780FDC514BEBD2F1811BFC94E706E44FA8751402CE171510A3F1520968,
+confirms four further defects in addition to the reversed inequality already
+recorded as I000015: printed page 254 reverses the increasing filtration
+factor as N_r/N_{r+1}; page 256 uses the undefined exponent n in the
+exterior-power source of Lemma 2.5; page 257 calls the dimension-r components
+components of degree r; and page 258 asserts boundedness of N_s from a
+proposition which supplies only a bounded common source.  Issues
+I000016--I000019 record the exact evidence and repairs.  The linked erratum
+PDF, 157,623 bytes with SHA-256
+007990D289E767A54A273CA45E8491F0052F9F015820DDB451D1E2B2D0FE27F9,
+does not correct any of these defects.
+
+Both semantic validators pass with no errors at 21,582 labels, 3,857 topic
+candidates, 400 append-only decisions, 1,253 source units, 1,612 term links,
+and 19 source issues, of which eight remain active.  The decision, issue, and
+map ledgers have SHA-256
+577676D6D3D310FC763CC37A54C90E117D85884732357649A6CC2481C3D10586,
+84F14E22A52107AC0547FFA05FBDB91A247657B0B1C8B53668AE1ED508A37E63,
+and B5E67DFDF6F3F8C502F31CA807278D11B299E4BC23279DC6F107FDCA56276652.
+Two final TeX passes produce a 33-page Moduli Stacks chapter of 609,784 bytes
+with SHA-256
+40FD080C95A98C96F9B5CCD211EB72BE7D46A23AA20CA922063F1DE3C7F293D6.
+The new material adds no unresolved FGA citation, unresolved internal
+reference, overfull horizontal box, or rerun warning and passes 1,200-dpi
+inspection on pages 17--22, with a final focused inspection on pages 19--21
+after the induction-base repair.  The next sequential cursor is Expose 221,
+Section 3, beginning with representability of the Hilbert and Quot functors.
