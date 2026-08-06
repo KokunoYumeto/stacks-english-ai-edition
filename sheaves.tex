@@ -596,6 +596,62 @@ the set of all locally constant maps $U \to A$ with restriction mappings
 given by restrictions of functions.
 \end{definition}
 
+\begin{definition}
+\label{definition-locally-constant-sheaf}
+Let $X$ be a topological space. A sheaf of sets $\mathcal{F}$ on $X$
+is {\it locally constant} if every point of $X$ has an open neighbourhood
+$U$ such that $\mathcal{F}|_U$ is isomorphic to a constant sheaf on $U$.
+\end{definition}
+
+\begin{lemma}
+\label{lemma-locally-constant-irreducible}
+\begin{reference}
+\cite[Chapter II, \S 1, no. 36, Lemmas 1 and 2, p. 229]{FAC}
+\end{reference}
+Let $X$ be a topological space and let $A$ be a set.
+\begin{enumerate}
+\item If $X$ is connected, then the canonical map
+$A \to \Gamma(X, \underline{A})$ is bijective.
+\item If $X$ is irreducible, then every locally constant sheaf of sets
+on $X$ is constant.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+The first assertion follows from Definition \ref{definition-constant-sheaf}:
+a locally constant map from a connected space to a discrete space is constant.
+
+Let $X$ be irreducible and let $\mathcal{F}$ be locally constant. Put
+$B = \mathcal{F}(X)$. Restriction of global sections gives a map from the
+constant presheaf with value $B$ to $\mathcal{F}$ and hence a map
+$$
+\varphi : \underline{B} \longrightarrow \mathcal{F}.
+$$
+We show that $\varphi$ is an isomorphism on stalks.
+
+Suppose first that $s, t \in B$ have the same germ at some $x \in X$.
+The locus where their germs agree is open. On an open over which
+$\mathcal{F}$ is constant, this locus and its complement are open, since
+the two sections become locally constant maps to a set. Thus the locus is
+also closed in $X$. It is nonempty, and an irreducible space is connected,
+so it is all of $X$. This proves that $B \to \mathcal{F}_x$ is injective.
+
+Conversely, let $m \in \mathcal{F}_x$. Represent $m$ by a section $s$
+over a nonempty open $U$ containing $x$. Choose a covering of $X$ by
+nonempty opens $U_i$ such that $\mathcal{F}|_{U_i}$ is constant. The opens
+$U \cap U_i$ and $U_i$ are irreducible and hence connected. Choose
+$x_i \in U \cap U_i$. By the first assertion there is a section $s_i$
+over $U_i$ whose germ at $x_i$ is the germ of $s$. The equality-locus
+argument above shows that $s_i$ and $s$ agree over $U \cap U_i$.
+For every $i,j$, the open $U \cap U_i \cap U_j$ is nonempty, so $s_i$
+and $s_j$ agree there and hence on the connected open $U_i \cap U_j$.
+The sections $s_i$ therefore glue to a section of $\mathcal{F}$ over $X$
+whose germ at $x$ is $m$. Thus $B \to \mathcal{F}_x$ is surjective.
+
+We conclude that $\varphi$ is an isomorphism by
+Lemma \ref{lemma-points-exactness}.
+\end{proof}
+
 \begin{example}
 \label{example-sheaf-product-pointwise}
 Let $X$ be a topological space. Let $(A_x)_{x \in X}$ be

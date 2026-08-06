@@ -12703,6 +12703,9 @@ For schemes with finitely many irreducible components we can compute this.
 
 \begin{lemma}
 \label{lemma-integral-scheme-rational-functions}
+\begin{reference}
+\cite[Chapter II, \S 1, no. 36, Proposition 9, pp. 229--230]{FAC}
+\end{reference}
 Let $X$ be a scheme with finitely many irreducible components
 $X_1, \ldots, X_n$. If $\eta_i \in X_i$ is the generic point, then
 $$
@@ -12740,6 +12743,17 @@ Algebra, Lemma \ref{algebra-lemma-minimal-prime-reduced-ring}.
 
 \begin{definition}
 \label{definition-function-field}
+\begin{reference}
+\cite[Chapter II, \S 1, no. 36, p. 230]{FAC}
+\end{reference}
+\begin{history}
+For an irreducible algebraic variety over an algebraically closed field in
+the classical closed-point formulation, \cite{FAC} takes the fraction fields
+of the rings of regular functions on nonempty opens. These fields form a
+constant sheaf, and its common value is denoted $K(X)$. For an integral scheme,
+the generic point packages the same data as
+$R(X) = \mathcal{O}_{X, \eta} = \kappa(\eta)$.
+\end{history}
 Let $X$ be an integral scheme.
 The {\it function field}, or the {\it field of rational functions}
 of $X$ is the field $R(X)$.
@@ -12752,6 +12766,36 @@ separation condition on an integral scheme.
 Note that by Lemma \ref{lemma-integral-scheme-rational-functions}
 on an integral scheme every local ring $\mathcal{O}_{X, x}$ may be viewed
 as a local subring of $R(X)$.
+
+\begin{lemma}
+\label{lemma-sections-intersection-local-rings}
+\begin{reference}
+\cite[Chapter II, \S 1, no. 36, p. 230]{FAC}
+\end{reference}
+Let $X$ be an integral scheme and let $U \subset X$ be a nonempty open.
+Using the embeddings above, we have
+$$
+\Gamma(U, \mathcal{O}_X)
+=
+\bigcap_{x \in U} \mathcal{O}_{X, x}
+$$
+as subrings of $R(X)$.
+\end{lemma}
+
+\begin{proof}
+Let $\eta$ be the generic point of $X$. The map
+$\Gamma(U, \mathcal{O}_X) \to \mathcal{O}_{X, \eta} = R(X)$ is injective.
+Indeed, this can be checked on an affine open covering of $U$, where it is
+the injection of a domain into its fraction field. Its image is contained
+in every $\mathcal{O}_{X, x}$ for $x \in U$.
+
+Conversely, let $f \in R(X)$ belong to $\mathcal{O}_{X, x}$ for every
+$x \in U$. For each $x$, choose an open neighbourhood $U_x \subset U$
+and a section $f_x \in \Gamma(U_x, \mathcal{O}_X)$ representing $f$.
+On every nonempty overlap $U_x \cap U_y$, the sections $f_x$ and $f_y$
+have the same image in $R(X)$ and hence are equal by the injectivity just
+proved. Thus the $f_x$ glue to a section over $U$ whose image is $f$.
+\end{proof}
 
 \begin{lemma}
 \label{lemma-distinct-local-rings}
