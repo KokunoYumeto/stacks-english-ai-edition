@@ -2,16 +2,16 @@
 
 - Frozen surface: 661 source targets through printed page 278.
 - Stage: sequential source review and statement-level Stacks integration.
-- Completed checkpoint: Chapter II, Section 2, no. 38, printed pages 199--231.
-- Reviewed decisions: 149 (53 equivalent, 46 stronger, 22 extensions,
+- Completed checkpoint: Chapter II, Section 2, no. 39, printed pages 199--232.
+- Reviewed decisions: 154 (53 equivalent, 51 stronger, 22 extensions,
   17 new-statement decisions, 10 historical references, 1 outside scope).
-- Current Stacks references added: 84 across `topology.tex`, `sheaves.tex`,
+- Current Stacks references added: 89 across `topology.tex`, `sheaves.tex`,
   `modules.tex`, `homology.tex`, `coherent.tex`, `cohomology.tex`,
   `constructions.tex`, `schemes.tex`, `morphisms.tex`, and `varieties.tex`.
 - New Stacks theorem/lemma statements: 12, plus the paracompactness and
   locally-constant-sheaf definitions;
   each new theorem/lemma has a complete proof and no assigned tag.
-- Source/proof issues or convention boundaries: 76 found by direct authority-page and TeX inspection, all resolved and
+- Source/proof issues or convention boundaries: 83 found by direct authority-page and TeX inspection, all resolved and
   retained in `issues.csv`.
 - Existing Stacks defects corrected: 5, comprising the refinement-homotopy
   sign, repeated coefficient sheaves, wrong boundary domain, wrong boundary
@@ -23,7 +23,7 @@
   completed; every
   affected statement page passed direct 1100 dpi visual inspection. See
   `qa.json`.
-- Historical notes added: 11, preserving the source's operator calculus,
+- Historical notes added: 12, preserving the source's operator calculus,
   image-complex construction, two-covering double complex, and unproved
   cofinal-vanishing question, together with the classical closed-point to
   reduced-scheme bridge, the classical-map to scheme-morphism bridge, and the
@@ -31,7 +31,8 @@
   classical-variety to reduced finite-type separated-scheme correspondence,
   the induced-subvariety terminology and reduced-source boundary, and the
   classical fraction-field sheaf to generic-point function-field bridge,
-  and the classical coherence proof's locally Noetherian scheme bridge,
+  the classical coherence proof's locally Noetherian scheme bridge, and the
+  closed-subvariety extension-by-zero to closed-immersion direct-image bridge,
   without claiming false modern theorem matches.
-- Next unit: `fac:II:2:no:39` (the ideal sheaf defined by a closed subvariety).
+- Next unit: `fac:II:2:no:40` (sheaves of fractional ideals).
 - No statement is mapped by lexical similarity alone.
