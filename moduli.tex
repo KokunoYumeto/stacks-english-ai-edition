@@ -4019,6 +4019,48 @@ separated and universally closed because $H$ is; hence $P^0$ is proper.
 Properness descends from the algebraic closure, proving the theorem over $k$.
 \end{proof}
 
+\begin{lemma}[The Picard variety]
+\label{corollary-picard-variety-normal-proper}
+\begin{reference}
+\cite[Expos\'e 236, Corollary 3.2, pp. 236--237]{FGA}.
+\end{reference}
+Let $X$ be a proper geometrically normal scheme over a field $k$. Let
+$$
+P=\Picardfunctor_{X/k}
+$$
+be its Picard scheme. Then
+$$
+A=(P^0)_{red}
+$$
+is an abelian variety over $k$ and a closed subgroup scheme of $P$. Its
+underlying space is $|P^0|$. For every field extension $K/k$ we have
+$$
+A_K=((P_K)^0)_{red},
+$$
+where $P_K$ represents $\Picardfunctor_{X_K/K}$.
+\end{lemma}
+
+\begin{proof}
+The group scheme $P^0$ is proper over $k$ by Theorem
+\ref{theorem-picard-identity-component-proper-normal}; in particular it is of
+finite type. The group scheme $(P^0)_{\overline{k}}$ contains no closed
+subgroup scheme isomorphic to $\mathbf{G}_{a,\overline{k}}$, since a closed
+subscheme of a proper scheme is proper whereas $\mathbf{G}_a$ is not proper.
+Groupoids, Lemma
+\ref{groupoids-lemma-reduced-identity-component-no-additive} therefore shows
+that $A$ is a smooth connected closed subgroup scheme of $P^0$. It is proper
+because it is closed in $P^0$. Hence $A$ is an abelian variety by Groupoids,
+Remark \ref{groupoids-remark-16-equivalent}.
+
+Formation of the Picard functor commutes with extension of the ground field.
+Moreover, $(P^0)_K=(P_K)^0$ by Groupoids, Proposition
+\ref{groupoids-proposition-connected-component}: the identity component is
+geometrically irreducible and hence remains the identity component after a
+field extension. The smooth scheme $A_K$ is reduced and has $|(P_K)^0|$ as
+its underlying space. It is therefore the reduction of $(P_K)^0$, proving
+the last assertion.
+\end{proof}
+
 \begin{theorem}[Normal families]
 \label{theorem-picard-normal-relative-components}
 \begin{reference}

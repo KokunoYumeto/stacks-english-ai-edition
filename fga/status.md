@@ -3054,3 +3054,49 @@ serial 1,100-dpi inspection of Groupoids page 13 finds no clipping,
 collision, malformed formula, unresolved new reference, placeholder, or
 unreadable text. The next sequential cursor is Corollary 3.2 on printed
 pages 236--237.
+
+Corollary 3.2 is now integrated as Moduli, Lemma
+`moduli-corollary-picard-variety-normal-proper`. For a proper geometrically
+normal scheme over a field it identifies the canonical Picard variety
+`A = (P^0)_red` as a smooth connected proper closed subgroup of the Picard
+scheme and hence as an abelian variety. It also proves that this construction
+commutes with every extension of the ground field.
+
+Source issue `I000059` records a required hypothesis correction. The printed
+corollary says only that `X` is normal on page 236, but its proof invokes
+Theorem 2.1(ii), whose printed statement on page 231 requires `X` to be
+geometrically normal. Normality does not imply geometric normality over an
+imperfect field. Decision `D000557` therefore supersedes `D000287` and imports
+the theorem with the geometrically normal hypothesis actually used by the
+source while preserving the weaker printed wording as source evidence.
+
+Direct serial 1,100-dpi review covers printed pages 231 and 236--237 of the
+24-page NUMDAM authority. That authority remains 2,461,968 bytes with
+SHA-256
+`266EEF77BF7BA34A75895ED69ACBFE791A2958DD52C2837D75AB29DF0D2F714A`.
+Both semantic validators pass with no errors at 21,699 labels, 21,437
+official-tag joins, 71 controlled topics, 4,239 topic candidates, 557
+append-only decisions, 1,253 source units, 1,612 term links, and 59 source
+issues, of which eight remain active; there are zero review units. The topic,
+decision, issue, map, Stacks-label, topic-candidate, reviewed-topic-map,
+index-validation, and map-validation files have SHA-256
+`B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0`,
+`92EBA500B35B6EA86297EE185A471A1872FE1F0C4674F7D5013F773F8490B6E1`,
+`ECE83F139D6E457796604266A142691BAD503DD937B38ED05BCCD0E80B378CDE`,
+`DC12FC7F22201CFCE8DD0C1561198F6AD594282BD6DD39B3DF082B6B8353B377`,
+`8B24F468FA756ECDC59F6BD3FDD0E29EB7622C6974C7C528CB264056ACD68D61`,
+`EE27B066DCECD6B7EFDC1700BE57996346A7208C6DBFC673AD88BFEBF1C312B7`,
+`26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46`,
+`9548F7DFDA21722B96A60AC8DB6F0E4501B8C4160E8CFE3D3F08E6F121A5ACE0`,
+and `41487501DD43A7F40D45F98DD82CA07BD696758E09B3520090F61D522C0567ED`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`.
+
+Three stable serial TeX passes produce a 63-page Moduli chapter of 822,115
+bytes with SHA-256
+`390BE2BEE9C97AFE44D0347CB6E1E3390E69503EEBCABD50DAA6CDF53088CF08`.
+The new source range creates no overfull or underfull box. Final serial
+1,100-dpi inspection of Moduli page 43 finds no clipping, collision,
+malformed formula, unresolved new reference, placeholder, or unreadable
+text. The next sequential cursor is the setup paragraph and Theorem 3.3 on
+printed page 237.
