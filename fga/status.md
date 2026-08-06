@@ -2945,3 +2945,62 @@ Final serial 1,100-dpi inspection of Moduli pages 46--47 finds no clipping,
 collision, malformed formula, unresolved new reference, placeholder, or
 unreadable text. The next sequential cursor is Proposition 2.10(i) on
 printed page 235.
+
+Proposition 2.10 is now integrated in all three parts. Groupoids, Lemma
+`groupoids-lemma-smooth-flat-along-identity-component` now cites both the
+source's Corollary 1.12 and Proposition 2.10(i); it proves, for any locally
+finitely presented group scheme, that smoothness or flatness along the
+identity section propagates to every section and every point of the
+fibrewise identity-component locus.
+
+Moduli, Lemma
+`moduli-lemma-picard-H2-vanishing-smooth-neighbourhood` proves part (ii).
+Perfect proper pushforward and arbitrary base change identify the fibre of
+`Rf_* O_X` in degree two with `H^2(X_t,O_Xt)`, so its vanishing is open. At
+each nearby identity point, the obstruction to lifting an infinitesimal
+invertible module through a small Artinian extension is
+`H^2(X_t,O_Xt) tensor I` and vanishes. Local finite presentation converts
+formal smoothness to smoothness along the identity, and translation after
+residue-field base change reaches every point of the Picard scheme.
+
+Moduli, Lemma `moduli-lemma-picard-tangent-dimension` proves part (iii). The
+first-order Picard exact sequence identifies the identity tangent space with
+`H^1(X,O_X)`. Local dimension is bounded by tangent dimension, with equality
+exactly when the geometric identity local ring is regular and hence the
+group scheme is smooth. Cartier's characteristic-zero theorem supplies
+smoothness, and therefore equality, in characteristic zero. Decision
+`D000555` supersedes `D000284` and replaces the former reviewed gap with the
+complete three-part integration.
+
+Direct serial 1,100-dpi review covers printed pages 235--236 of the 24-page
+NUMDAM authority. That authority remains 2,461,968 bytes with SHA-256
+`266EEF77BF7BA34A75895ED69ACBFE791A2958DD52C2837D75AB29DF0D2F714A`.
+Both semantic validators pass with no errors at 21,697 labels, 21,437
+official-tag joins, 71 controlled topics, 4,238 topic candidates, 555
+append-only decisions, 1,253 source units, 1,612 term links, and 57 source
+issues, of which eight remain active; there are zero review units. The topic,
+decision, issue, map, Stacks-label, topic-candidate, reviewed-topic-map,
+index-validation, and map-validation files have SHA-256
+`B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0`,
+`55C710CC5B6497C63A28975EC812ACACA00CFA4C3F35A6860C7A5B878FF1F98A`,
+`55FB6702462783815DD0E9D81ED4F87438460C03CA0BC7D09BA07FE71F42769B`,
+`8DF18345956E51214B21414806E1B3F1DC85E70D2BFEC97A12CE3FF534A7FF54`,
+`AC28A5C1B31B6F74B6DDB72B682E67939A7832E5813FB130F801D9D620334F2C`,
+`7487E59FB281153158C6C121005ABBE219261C858591629DFAC4C0441D54DCBB`,
+`26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46`,
+`A3B5E2CE530FBE80ACCA349A71AB97607FD8959486A5314457BD044668CE01AD`,
+and `335951A8D38FF9AA20B9727B6FFD050EF339031036313A220FA4D30BF4B3ED07`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`;
+no official tag was invented for either new Picard lemma.
+
+Stable serial TeX passes produce a 63-page Moduli chapter of 819,345 bytes
+with SHA-256
+`FA970F6967083D7EF55693B107AC7E19097ECDE95919DBB97A3CF70F64006E27`
+and a 59-page Groupoids chapter of 799,285 bytes with SHA-256
+`F74B0DCE9A089C59FFA29439FDFE5EF9322452759F27AF06566B548A53AB6918`.
+Neither affected source range creates an overfull or underfull horizontal
+box. Final serial 1,100-dpi inspection of Moduli pages 47--48 and Groupoids
+page 9 finds no clipping, collision, malformed formula, unresolved new
+reference, placeholder, or unreadable text. The next sequential cursor is
+the Section 3 heading and Proposition 3.1 on printed page 236.

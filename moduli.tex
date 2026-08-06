@@ -4354,6 +4354,106 @@ original family is normal. That stronger normal-family result is not inferred
 from Remark 2.9 and is handled at the Theorem 3.5 source cursor.
 \end{remark}
 
+\begin{lemma}[Vanishing of $H^2$ and smoothness of the Picard scheme]
+\label{lemma-picard-H2-vanishing-smooth-neighbourhood}
+\begin{reference}
+\cite[Expos\'e 236, Proposition 2.10(ii), p. 236]{FGA}.
+\end{reference}
+Let $S$ be a locally Noetherian scheme and let $f:X\to S$ be a proper flat
+morphism of schemes. Suppose that the fppf Picard functor is represented by a
+scheme
+$$
+P=\Picardfunctor_{X/S}.
+$$
+If $s\in S$ and
+$$
+H^2(X_s,\mathcal O_{X_s})=0,
+$$
+then there is an open neighbourhood $U$ of $s$ such that $P_U\to U$ is
+smooth.
+\end{lemma}
+
+\begin{proof}
+Perfect, Lemma
+\ref{perfect-lemma-flat-proper-perfect-direct-image-general} shows that
+$$
+K=Rf_*\mathcal O_X
+$$
+is perfect and that its formation commutes with arbitrary base change. Hence
+Perfect, Lemma \ref{perfect-lemma-jump-loci} shows that
+$$
+t\longmapsto \dim_{\kappa(t)}H^2(X_t,\mathcal O_{X_t})
+$$
+is upper semicontinuous. After shrinking around $s$, we may assume that this
+dimension is zero everywhere on $S$.
+
+Fix $t\in S$. We apply the infinitesimal lifting criterion at the identity
+point of $P_t$. For a small extension of local Artinian $\kappa(t)$-algebras
+with kernel $I$, the obstruction to lifting an infinitesimal invertible
+module lies in
+$$
+H^2(X_t,\mathcal O_{X_t})\otimes_{\kappa(t)}I
+$$
+by More on Morphisms, Lemma
+\ref{more-morphisms-lemma-picard-group-first-order-thickening}. It vanishes by
+our choice of $S$. Thus $P\to S$ is formally smooth at every point of the
+identity section.
+
+Theorem \ref{theorem-picard-multiplication-etale} shows that $P\to S$ is
+locally of finite presentation. More on Morphisms, Lemma
+\ref{more-morphisms-lemma-smooth-formally-smooth} makes it smooth along the
+identity section. Finally, after base change to the residue field of any
+point of $P$, translation by that point carries the identity to the given
+point. Smoothness is preserved by base change and descends under field
+extensions, so $P\to S$ is smooth everywhere.
+\end{proof}
+
+\begin{lemma}[Tangent dimension of a Picard scheme]
+\label{lemma-picard-tangent-dimension}
+\begin{reference}
+\cite[Expos\'e 236, Proposition 2.10(iii), p. 236]{FGA}.
+\end{reference}
+Let $X$ be a proper scheme over a field $k$, and suppose that its fppf Picard
+functor is represented by a scheme
+$$
+P=\Picardfunctor_{X/k}.
+$$
+Then
+$$
+\dim(P)\leq\dim_k H^1(X,\mathcal O_X).
+$$
+Equality holds if and only if $P\to\Spec(k)$ is smooth. In particular,
+equality always holds when $k$ has characteristic zero.
+\end{lemma}
+
+\begin{proof}
+Apply More on Morphisms, Lemma
+\ref{more-morphisms-lemma-picard-group-first-order-thickening} to
+$$
+X\subset X_{k[\epsilon]/(\epsilon^2)}.
+$$
+The map on global units is surjective, so the tangent space of $P$ at its
+identity $e$ is canonically
+$$
+T_eP=H^1(X,\mathcal O_X).
+$$
+Every fibrewise component of a locally finite type group scheme has the
+dimension of its identity component. Therefore
+$$
+\dim(P)=\dim_e(P)\leq\dim_k(T_eP),
+$$
+which proves the inequality.
+
+If $P$ is smooth, equality is immediate. Conversely, suppose equality holds.
+Both dimension and tangent-space dimension are preserved by extending $k$ to
+an algebraic closure. The local ring at the identity of the resulting group
+scheme is therefore regular. Translation makes the whole group scheme
+regular, and over an algebraically closed field it is smooth. Smoothness
+descends to $k$, proving the converse. Finally, in characteristic zero every
+locally algebraic group scheme is smooth by Groupoids, Lemma
+\ref{groupoids-lemma-group-scheme-characteristic-zero-smooth}.
+\end{proof}
+
 \begin{example}[A relative Picard space which is not a scheme]
 \label{example-picard-conic-not-scheme}
 \begin{reference}
