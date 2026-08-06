@@ -1504,3 +1504,58 @@ inspection of Moduli pages 36--38 finds no clipping, collision, malformed
 formula, or unreadable text.  The next sequential cursor is Expose 232,
 Section 1, “Relative Picard groups and functors,” beginning on printed page
 143.
+
+The next sequential patch integrates Expose 232, Section 1, “Relative Picard
+groups and functors,” on printed pages 143--146 (physical PDF pages 2--5).
+The Picard chapter now separates four objects that must not be conflated: the
+Picard stack of invertible modules and isomorphisms, the presheaf of fibrewise
+isomorphism classes, the restricted direct-image presheaf used historically
+in FGA, and the final associated fppf Picard sheaf.  The new remark gives the
+explicit modern refinement description of a section of the sheafification,
+explains why equality of classes on overlaps does not itself provide a
+cocycle of chosen isomorphisms, records the Brauer--Severi warning, and states
+the exact representability formula.  It is independent English exposition;
+no French source prose is copied.
+
+Decisions `D000438` through `D000449` give an explicit disposition for all
+twelve displayed or structural equations in the section.  Rollup decision
+`D000450` supersedes the earlier gap decision `D000224`.  Issue `I000032`
+fail-closes the layer distinction: representability may not be transferred
+between the restricted presheaf and the final Picard sheaf until their
+associated-sheaf comparison has been established.  A new controlled
+`picard-stack` topic records the stack-to-sheaf relation, while the existing
+`picard-functor` topic now points to the concrete sheafification description.
+
+Direct 1,200-dpi review covers all four source pages.  The NUMDAM authority is
+2,006,109 bytes with SHA-256
+`C84DCA027FAC1AF187B0B9F6C8D2E2CB95B43CE201815B2073577FD4425919F0`.
+The linked erratum authority is 134,758 bytes with SHA-256
+`CBC9B1A1967B448A5087D97B4C102B028F1D1BD99A22A95BD4FE2F1F6147F344`
+and contains no correction to Section 1.
+
+Both semantic validators pass with no errors at 21,612 labels, 21,437
+official-tag joins, 62 controlled topics, 4,038 topic candidates, 450
+append-only decisions, 1,253 source units, 1,612 term links, and 32 source
+issues, of which eight remain active.  The topic, decision, issue, map,
+Stacks-label, topic-candidate, and reviewed-topic-map ledgers have SHA-256
+`88E1323DF2B11F0B3554DB7D4111F578EFBB4E65B8AD35F615CD79A5CB95AF4F`,
+`FBB5D886CB7DF93EC871235EE04B79878438FF8D6C3F3E3C850CDD7E9A2A0AC6`,
+`2DA468C539AE8563437A322043E134C0731852EE965B9A0C44F47B5A960DDED0`,
+`08BF10973E49B3C76C7AFE6EF706BDAF30AE20A803EE7D2D6DFE1ECACA28505B`,
+`1D4B07AAA9A4C031118666AFB85667171A6734F3C7970BAB2D7E4598BE9B9B34`,
+`81040E58B8CC9612779BE008191C6978AA48C4AC45595DAA9F80BED6185EDA8F`,
+and `E9397FB0719F404A0AF97779B60D9990B7A780C3E968333D7707C67654294995`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`;
+the new semantic label deliberately has no invented official tag.
+
+A bibliography-complete serial build followed by three stable TeX passes
+produces a 19-page Picard chapter of 505,071 bytes with SHA-256
+`E0F91D31EFC7B36967D2CD48A07F7AEC5B130D71AC1BDB9091EBE575576E150E`.
+All mathematical cross-references and citations used by the new text resolve.
+The only overfull horizontal box is the pre-existing one at source lines
+279--283; the new text creates no overfull or underfull box.  Final 1,200-dpi
+inspection of Picard pages 9--11 finds no clipping, collision, malformed
+formula, or unreadable text.  The next sequential cursor is Expose 232,
+Section 2, “Relations among the various relative and absolute Picard groups,”
+beginning on printed page 146 (physical PDF page 5).

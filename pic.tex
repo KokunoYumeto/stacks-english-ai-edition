@@ -738,6 +738,9 @@ direct definition.
 
 \begin{definition}
 \label{definition-picard-functor}
+\begin{reference}
+\cite[Expos\'e 232, Section 1, pp. 143--146]{FGA}.
+\end{reference}
 Let $\Sch_{fppf}$ be a big site as in
 Topologies, Definition \ref{topologies-definition-big-small-fppf}.
 Let $f : X \to S$ be a morphism of this site. The {\it Picard functor}
@@ -749,6 +752,65 @@ $$
 If this functor is representable, then we denote
 $\underline{\Picardfunctor}_{X/S}$ a scheme representing it.
 \end{definition}
+
+\begin{remark}
+\label{remark-picard-stack-presheaf-sheaf}
+There are three related objects in Definition
+\ref{definition-picard-functor}. First, the Picard stack remembers
+invertible modules and their isomorphisms; see Examples of Stacks,
+Section \ref{examples-stacks-section-picard-stack}. Second, taking
+isomorphism classes in every fibre gives the presheaf
+$$
+P(T) = \Pic(X_T).
+$$
+Third, the Picard functor is the associated fppf sheaf $P^\#$.
+The second and third objects need not agree. Indeed, equality of two
+classes over an overlap only records the existence of an isomorphism
+between the corresponding invertible modules. It does not record a choice
+of isomorphism satisfying the cocycle condition; the automorphisms retained
+by the Picard stack have been forgotten. This also explains the relation
+with the Picard stack given in Quot and Hilbert Spaces, Lemma
+\ref{quot-lemma-pic-over-pic}.
+
+By Sites, Lemma \ref{sites-lemma-sections-sheafification}, a section of
+$\Picardfunctor_{X/S}$ over $T$ can be represented by an fppf covering
+$\{T_i \to T\}$ and classes
+$$
+\xi_i \in \Pic(X_{T_i})
+$$
+such that, for every $i,j$, the two pullbacks of $\xi_i$ and $\xi_j$
+become equal over an fppf covering of $T_i \times_T T_j$. Two such
+presentations determine the same section precisely when their pullbacks
+become equal after passing to a common refinement and covering once more.
+Thus sheafification imposes local equality of classes; it does not assert
+that a section is represented by a single invertible module on $X_T$.
+
+Historically, \cite[Expos\'e 232, Section 1]{FGA} first considered the
+intermediate presheaf
+$$
+P'(T) = H^0(T, R^1f_{T, *}\mathcal{O}_{X_T}^*)
+$$
+in the topology used there and called it the restricted relative Picard
+functor. In that setting the map $P \to P'$ is asserted to induce an
+isomorphism on the associated sheaves for faithfully flat quasi-compact
+coverings. The intermediate presheaf $P'$ should not be confused with the
+Picard functor $P^\#$ of Definition \ref{definition-picard-functor}.
+For example, the Brauer--Severi example in the cited section shows that
+$P'$ may fail to be representable even when the sheafified functor has a
+natural Picard scheme.
+
+If an intermediate presheaf such as $P'$ is representable, then it already
+satisfies fpqc descent; see \`Etale Cohomology, Lemma
+\ref{etale-cohomology-lemma-representable-sheaf-fpqc}. Hence, whenever its
+associated sheaf agrees with $P^\#$, it represents the same Picard functor.
+In general, representability of Definition \ref{definition-picard-functor}
+means exactly that there is a scheme $Q$ over $S$ and functorial
+isomorphisms
+$$
+\Mor_S(T, Q) = \Picardfunctor_{X/S}(T)
+$$
+for all $T$ over $S$.
+\end{remark}
 
 \noindent
 An often used remark is that if $T \in \Ob((\Sch/S)_{fppf})$, then
