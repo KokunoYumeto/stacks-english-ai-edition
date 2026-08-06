@@ -3505,6 +3505,142 @@ not a base-field construction.
 
 
 
+\begin{proposition}[Sections over a proper flat source]
+\label{proposition-sections-proper-flat}
+\begin{reference}
+\cite[Expos\'e 221, Section 7]{FGA}.
+\end{reference}
+Let $Y \to S$ be a flat proper morphism of schemes of finite presentation.
+For a morphism $Z \to Y$, let $\mathit{Sec}_{Y/S}(Z/Y)$ be the functor
+which assigns to $T \to S$ the set of sections of $Z_T \to Y_T$.
+\begin{enumerate}
+\item If $Z \to Y$ is separated and of finite presentation, then
+$\mathit{Sec}_{Y/S}(Z/Y)$ is a separated algebraic space locally of finite
+presentation over $S$.
+\item If $Z \to Y$ is a closed immersion, then
+$\mathit{Sec}_{Y/S}(Z/Y) \to S$ is represented by a closed immersion. It is
+of finite presentation if $Z \to S$ is of finite presentation.
+\item If $Z \to Y$ is affine, then $\mathit{Sec}_{Y/S}(Z/Y)$ is an affine
+scheme over $S$. If in addition $Z \to Y$ is of finite presentation, then
+this affine scheme is of finite presentation over $S$.
+\item Let $\mathcal{E}$ be a finite locally free $\mathcal{O}_Y$-module. The
+functor of sections of the vector bundle
+$\mathbf{V}(\mathcal{E}) \to Y$ is a vector bundle over $S$ in the sense of
+Constructions, Definition \ref{constructions-definition-vector-bundle}. Its
+associated quasi-coherent module is of finite presentation.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+For (1), composition with $Z \to Y$ and the identity of $Y$ give a
+cartesian diagram
+$$
+\xymatrix{
+\mathit{Sec}_{Y/S}(Z/Y) \ar[r] \ar[d] &
+\mathit{Mor}_S(Y, Z) \ar[d] \\
+S \ar[r]^-{\operatorname{id}_Y} & \mathit{Mor}_S(Y, Y).
+}
+$$
+Both relative morphism functors in the right column are algebraic spaces
+locally of finite presentation by Quot, Proposition
+\ref{quot-proposition-Mor}. The first is separated over $S$ by Lemma
+\ref{lemma-Mor-s-lfp}. The assertions follow by base change.
+
+For (2), a proper morphism is universally pure by More on Flatness, Lemma
+\ref{flat-lemma-proper-pure}. The result is therefore exactly More on
+Flatness, Lemma
+\ref{flat-lemma-Weil-restriction-closed-subschemes}.
+
+For (3), write
+$$
+Z = \underline{\Spec}_Y(\mathcal{A}).
+$$
+Choose a coequalizer presentation of the quasi-coherent algebra
+$\mathcal{A}$ by free commutative algebras
+$$
+\xymatrix{
+\operatorname{Sym}(\mathcal{F}_1)
+\ar@<0.5ex>[r] \ar@<-0.5ex>[r] &
+\operatorname{Sym}(\mathcal{F}_0) \ar[r] & \mathcal{A}.
+}
+$$
+After arbitrary base change on $S$, algebra maps from $\mathcal{A}$ to the
+structure sheaf are the equalizer of the corresponding pair of module-map
+functors
+$$
+\xymatrix{
+\mathit{Hom}(\mathcal{F}_0, \mathcal{O}_Y)
+\ar@<0.5ex>[r] \ar@<-0.5ex>[r] &
+\mathit{Hom}(\mathcal{F}_1, \mathcal{O}_Y).
+}
+$$
+Each of these functors is affine over $S$ by Quot, Proposition
+\ref{quot-proposition-hom}: the module $\mathcal{O}_Y$ is flat over $S$ and
+has proper support. An equalizer of morphisms of affine $S$-schemes is
+affine. Under the additional finite-presentation hypothesis, (1) shows that
+the result is of finite presentation.
+
+For (4), a section of $\mathbf{V}(\mathcal{E})_T \to Y_T$ is an
+$\mathcal{O}_{Y_T}$-linear map
+$\mathcal{E}_T \to \mathcal{O}_{Y_T}$. Apply Quot, Proposition
+\ref{quot-proposition-hom}. The explicit construction in Quot, Lemma
+\ref{quot-lemma-cohomology-perfect-complex} presents this affine functor,
+locally on $S$, by homogeneous linear equations in a finite affine space.
+It is consequently $\mathbf{V}(\mathcal{Q})$ for a finitely presented
+quasi-coherent $\mathcal{O}_S$-module $\mathcal{Q}$.
+\end{proof}
+
+\begin{remark}[The classical field-valued refinement]
+\label{remark-sections-proper-field-quasi-projective}
+Let $S = \Spec(k)$, let $Y$ be a proper $k$-scheme, and let $Z \to Y$ be
+quasi-projective. The argument recorded in
+\cite[Expos\'e 221, Section 7]{FGA} uses Chow's lemma and factorization of a
+finite morphism to show that $\mathit{Sec}_{Y/k}(Z/Y)$ is a scheme which is
+a disjoint union of quasi-projective $k$-schemes. The projective cover in
+Chow's lemma is automatically flat over the field. Proposition
+\ref{proposition-sections-proper-flat} gives the base-independent
+algebraic-space statement; representability by a scheme and
+quasi-projectivity are additional conclusions, not part of the general
+algebraic-space theorem.
+\end{remark}
+
+\begin{remark}[Scheme representability is essential]
+\label{remark-Nagata-Weil-restriction-scheme}
+\begin{reference}
+\cite[Expos\'e 221, Section 7]{FGA}.
+\end{reference}
+There are a quadratic field extension $k'/k$ and a smooth proper
+nonprojective threefold $X$ over $k'$ for which the restriction-of-scalars
+functor $\operatorname{Res}_{k'/k}(X)$ is not representable by a scheme.
+The corresponding finite \'etale locus in the degree-two Hilbert functor and
+the symmetric square likewise need not be schemes.
+
+In the terminology of the cited source, these objects ``do not exist''
+because only schemes are admitted as representing objects. As fppf sheaves
+they do exist as algebraic spaces: use Criteria for Representability,
+Proposition
+\ref{criteria-proposition-restriction-of-scalars-algebraic-space}, Quot,
+Proposition \ref{quot-proposition-hilb}, and Theorem
+\ref{theorem-divided-power-zero-cycles}. Thus the example is an obstruction
+to scheme representability, not to modern algebraic-space representability.
+\end{remark}
+
+\begin{remark}[A closed graph does not produce a scheme quotient]
+\label{remark-FGA-closed-graph-quotient}
+The addendum to \cite[Expos\'e 221]{FGA} retracts the quotient conjecture in
+Expos\'e 212, Section 8. Even for a smooth variety in characteristic zero,
+having a closed action graph does not imply existence or quasi-projectivity
+of a scheme quotient. A free action has an fppf quotient algebraic space by
+Bootstrap, Lemma \ref{bootstrap-lemma-quotient-free-action}; a scheme or a
+quasi-projective quotient requires additional hypotheses. This distinction
+is not removed by the Keel--Mori theorem of Morphisms of Algebraic Stacks,
+Theorem \ref{stacks-more-morphisms-theorem-keel-mori}.
+\end{remark}
+
+
+
+
+
 \section{Properties of the stack of polarized proper schemes}
 \label{section-polarized}
 

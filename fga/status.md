@@ -1446,3 +1446,61 @@ Moduli pages 28--30 finds no clipping, collision, malformed formula, or
 unreadable text.  The next sequential cursor is Expose 221, Section 7,
 “Complements and questions,” beginning on printed page 275 (physical PDF
 page 28).
+
+The sixty-second source patch completes Expose 221, Section 7, its
+bibliography, and its proof-correction addendum on printed pages 275--276
+(physical PDF pages 28--29).  Expose 221 is now sequentially complete.  The
+Moduli chapter gives the base-independent theorem that sections over a flat
+proper finitely presented source form a separated algebraic space locally of
+finite presentation.  It proves the closed-subscheme case is a closed
+subscheme of the base, the affine case is affine, and the section object of a
+locally trivial vector bundle is a vector bundle in the broad EGA and Stacks
+sense.  It also retains the classical field-valued theorem that a
+quasi-projective target gives a disjoint union of quasi-projective schemes.
+
+The Nagata example is now stated with its essential categorical qualifier.
+The restriction of scalars, degree-two Hilbert locus, and symmetric square
+can fail to be schemes; their fppf functors nevertheless exist as algebraic
+spaces in modern theory.  The proof-correction addendum is recorded as a
+separate fail-closed warning that a closed action graph does not imply
+existence or quasi-projectivity of a scheme quotient.  A free-action fppf
+quotient algebraic space does not supply either additional conclusion.
+
+Direct 1,200-dpi review covers both authority pages.  The NUMDAM authority
+remains 2,747,079 bytes with SHA-256
+`ABBF37780FDC514BEBD2F1811BFC94E706E44FA8751402CE171510A3F1520968`.
+The linked erratum authority remains 157,623 bytes with SHA-256
+`007990D289E767A54A273CA45E8491F0052F9F015820DDB451D1E2B2D0FE27F9`
+and contains no further correction to Section 7.  Issue `I000030` prevents
+the historical phrase “does not exist” from being propagated beyond the
+category of schemes.  Issue `I000031` records that “vector bundle” is used in
+the EGA and Stacks sense associated to a quasi-coherent module; local
+triviality over the base is not asserted without an additional
+cohomology-and-base-change hypothesis.
+
+Both semantic validators pass with no errors at 21,611 labels, 21,437
+official-tag joins, 61 controlled topics, 4,022 topic candidates, 437
+append-only decisions, 1,253 source units, 1,612 term links, and 31 source
+issues, of which eight remain active.  The topic, decision, issue, map,
+Stacks-label, topic-candidate, and reviewed-topic-map ledgers have SHA-256
+`B9B24B7CE2FDE4F31102B3DD12A10709B53300AD4F70A92A96F8F6D6BF4A00ED`,
+`30195271D55FAA25F66237E6C58A76FEF664C11056CE6895747AD7FBB118DF95`,
+`B33C4C1040AA98D90AF5DE4407E83CC9BED65E10A32ECCCDADFB4BD4195FAE62`,
+`2A096CEF6BB94E2940099B96399F604F36AF419DBC3245B1E93D81CAF4A0C750`,
+`8DA81C4352B8124368AFA48FC94E4E2E4AD1F1F4CF6F29F5DFC2513BC3BE8170`,
+`8026B2842D9BFE0BBAA1285DEE94C0E4238F9849EF55CAD029915EC0880E1388`,
+and `D1C5983571C206CFA33EFEE7C123BB1541C15F5C5E32A054C0EBB133802CBF8F`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`;
+no official tag has been invented.
+
+After generating the one newly required More on Flatness auxiliary file, two
+final Moduli passes produce a 43-page PDF of 680,008 bytes with SHA-256
+`CCF9DD5BF1E4BE3E7C411FF0185EFDACAD2F70C937FBD97C091F29A0FB304EFD`.
+All new labels and citations resolve.  The addition creates no overfull or
+underfull horizontal box; only three pre-existing external cross-chapter
+references remain unresolved in the standalone build.  Final 1,200-dpi
+inspection of Moduli pages 36--38 finds no clipping, collision, malformed
+formula, or unreadable text.  The next sequential cursor is Expose 232,
+Section 1, “Relative Picard groups and functors,” beginning on printed page
+143.
