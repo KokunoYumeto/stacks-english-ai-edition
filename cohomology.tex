@@ -978,6 +978,9 @@ is bijective for every open covering.
 
 \begin{lemma}
 \label{lemma-cech-trivial}
+\begin{reference}
+\cite[Chapter I, \S 4, no. 29, Lemma 1, p. 221]{FAC}
+\end{reference}
 Let $X$ be a topological space. Let $\mathcal{F}$ be an abelian presheaf on $X$.
 Let $\mathcal{U} : U = \bigcup_{i \in I} U_i$ be an open covering. If
 $U_i = U$ for some $i \in I$, then the extended {\v C}ech complex
@@ -2593,6 +2596,127 @@ $\check{H}^p(X, \mathcal{F})$ to distinguish it from derived-functor
 cohomology. The colimit can be indexed by a set: replace every covering
 family by the set of its open members, a subset of the topology of $X$.
 Finite intersections give a common refinement of any two coverings.
+\end{remark}
+
+\begin{lemma}
+\label{lemma-cech-refinement-acyclic}
+\begin{reference}
+\cite[Chapter I, \S 4, no. 29, Propositions 3--5,
+pp. 221--222]{FAC}
+\end{reference}
+Let $(X, \mathcal{O}_X)$ be a ringed space and let
+$\mathcal{F}$ be an $\mathcal{O}_X$-module. Let
+$\mathcal{U} : X = \bigcup_{i \in I} U_i$ and
+$\mathcal{V} : X = \bigcup_{j \in J} V_j$ be open coverings such that
+$\mathcal{V}$ refines $\mathcal{U}$. For a tuple
+$(i_0, \ldots, i_p)$, denote by
+$\mathcal{V}|_{U_{i_0 \ldots i_p}}$ the covering of
+$U_{i_0 \ldots i_p}$ by the opens
+$U_{i_0 \ldots i_p} \cap V_j$. If
+$$
+\check{H}^q(\mathcal{V}|_{U_{i_0 \ldots i_p}}, \mathcal{F}) = 0
+$$
+for all $q > 0$, $p \geq 0$, and $i_0, \ldots, i_p \in I$, then the
+map
+$$
+\check{H}^n(\mathcal{U}, \mathcal{F})
+\longrightarrow
+\check{H}^n(\mathcal{V}, \mathcal{F})
+$$
+induced by refinement is an isomorphism for every $n \geq 0$.
+\end{lemma}
+
+\begin{proof}
+Let $A^{\bullet, \bullet}$ be the double complex of
+Remark \ref{remark-FAC-two-covering-double-complex}. The hypothesis and
+Lemma \ref{lemma-cech-h0} show that the edge map
+$$
+\check{\mathcal{C}}^\bullet(\mathcal{U}, \mathcal{F})
+\longrightarrow \text{Tot}(A^{\bullet, \bullet})
+$$
+is a quasi-isomorphism by
+Homology, Lemma \ref{homology-lemma-double-complex-gives-resolution}.
+
+Choose $c : J \to I$ such that $V_j \subset U_{c(j)}$, and denote the
+induced refinement map of Cech complexes by $\gamma_c$. For every tuple
+$(j_0, \ldots, j_q)$, the covering of $V_{j_0 \ldots j_q}$ by the
+opens $V_{j_0 \ldots j_q} \cap U_i$ contains
+$V_{j_0 \ldots j_q}$ itself, namely for $i = c(j_0)$. Hence
+Lemma \ref{lemma-cech-trivial} and the second-variable version of the
+same Homology lemma show that the other edge map
+$$
+\check{\mathcal{C}}^\bullet(\mathcal{V}, \mathcal{F})
+\longrightarrow \text{Tot}(A^{\bullet, \bullet})
+$$
+is a quasi-isomorphism as well.
+
+It remains to identify the isomorphism obtained from the two edge maps.
+For $n > 0$ and an $n$-cocycle $f$ of
+$\check{\mathcal{C}}^\bullet(\mathcal{U}, \mathcal{F})$, set
+$$
+g^p_{i_0 \ldots i_p,j_0 \ldots j_{n-p-1}} =
+f_{i_0 \ldots i_p c(j_0) \ldots c(j_{n-p-1})}
+\big|_{U_{i_0 \ldots i_p} \cap V_{j_0 \ldots j_{n-p-1}}}
+$$
+for $0 \leq p \leq n - 1$. Writing $D$ for the total differential, a
+direct calculation using $d(f) = 0$ gives
+$$
+D(g^0 - g^1 + \ldots + (-1)^{n - 1}g^{n - 1})
+= \iota_{\mathcal{V}}(\gamma_c(f)) - \iota_{\mathcal{U}}(f),
+$$
+where $\iota_{\mathcal{U}}$ and $\iota_{\mathcal{V}}$ denote the two edge
+maps above. Thus the composite obtained from the edge maps is the usual refinement
+map. For $n = 0$ this follows directly from the sheaf condition. The
+result follows.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-cech-cofinal-refinements}
+\begin{reference}
+\cite[Chapter I, \S 4, no. 29, Theorem 1, p. 222]{FAC}
+\end{reference}
+Let $(X, \mathcal{O}_X)$ be a ringed space, let
+$\mathcal{F}$ be an $\mathcal{O}_X$-module, and let
+$\mathcal{U} : X = \bigcup_{i \in I} U_i$ be an open covering. Let
+$\mathcal{B}$ be a collection of open coverings cofinal for refinement.
+Assume that for every $\mathcal{V} \in \mathcal{B}$, every $p \geq 0$,
+every $i_0, \ldots, i_p \in I$, and every $q > 0$, we have
+$$
+\check{H}^q(\mathcal{V}|_{U_{i_0 \ldots i_p}}, \mathcal{F}) = 0.
+$$
+Then the canonical map
+$$
+\check{H}^n(\mathcal{U}, \mathcal{F})
+\longrightarrow \check{H}^n(X, \mathcal{F})
+$$
+is an isomorphism for every $n \geq 0$.
+\end{lemma}
+
+\begin{proof}
+The subcollection of coverings $\mathcal{V} \in \mathcal{B}$ which refine
+$\mathcal{U}$ is still cofinal. Indeed, given a covering $\mathcal{W}$,
+first take the common refinement by the intersections of members of
+$\mathcal{W}$ and $\mathcal{U}$ and then use cofinality of $\mathcal{B}$.
+For every member of this subcollection, the map from
+$\check{H}^n(\mathcal{U}, \mathcal{F})$ is an isomorphism by
+Lemma \ref{lemma-cech-refinement-acyclic}. These isomorphisms are compatible
+with further refinement. Taking the colimit proves the lemma.
+\end{proof}
+
+\begin{remark}
+\label{remark-FAC-cech-cofinal-question}
+\begin{reference}
+\cite[Chapter I, \S 4, no. 29, Remarks 1 and 2, p. 222]{FAC}
+\end{reference}
+The source asks whether the pointwise vanishing hypothesis of
+Lemma \ref{lemma-cech-cofinal-refinements} can be replaced by vanishing of
+the corresponding groups only after passage to the cofinal system. We do
+not assert that weakening here: the proof above uses the edge
+quasi-isomorphism before taking the colimit. The usual Leray criterion for
+comparison with derived-functor cohomology is
+Lemma \ref{lemma-cech-spectral-sequence-application}; its hypothesis is
+vanishing of derived cohomology on all finite intersections, and is not the
+same condition.
 \end{remark}
 
 \begin{lemma}
