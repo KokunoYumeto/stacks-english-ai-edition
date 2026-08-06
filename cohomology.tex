@@ -2490,7 +2490,7 @@ functorial in the sheaf of $\mathcal{O}_X$-modules $\mathcal{F}$.
 Suppose that $c' : I \to J$ is a second map such that
 $U_i \subset V_{c'(i)}$ for all $i \in I$. Then the corresponding maps
 $\gamma$ and $\gamma'$ are homotopic. Namely,
-$\gamma - \gamma' = \text{d} \circ h + h \circ \text{d}$
+$\gamma' - \gamma = \text{d} \circ h + h \circ \text{d}$
 with
 $h : \check{\mathcal{C}}^{p + 1}(\mathcal{V}, \mathcal{F}) \to
 \check{\mathcal{C}}^p(\mathcal{U}, \mathcal{F})$
@@ -2504,7 +2504,21 @@ $$
 We omit the computation showing this works; please see the discussion
 following (\ref{equation-transformation}) for the proof in a more general
 case. In particular, the map on {\v C}ech cohomology groups is independent
-of the choice of $c$. Moreover, it is clear that if
+of the choice of $c$.
+
+\begin{remark}
+\label{remark-FAC-refinement-homotopy}
+\begin{reference}
+\cite[Chapter I, \S 3, no. 21, Proposition 3, pp. 214--215]{FAC}
+\end{reference}
+For the ordering $c$, $c'$ used in the formula for $h$, its boundary is
+$\gamma' - \gamma$. This agrees with the total-complex calculation
+following Equation (\ref{equation-transformation}). Thus the cochain map
+depends on the refinement function, while its map on cohomology does not.
+\end{remark}
+
+\noindent
+Moreover, it is clear that if
 $\mathcal{W} : X = \bigcup_{k \in K} W_k$ is a third open covering
 and $\mathcal{V}$ is a refinement of $\mathcal{W}$, then the composition
 of the maps
