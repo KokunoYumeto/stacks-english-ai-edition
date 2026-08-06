@@ -8960,6 +8960,106 @@ torsion. This prime-to-characteristic restriction is essential for that
 argument.
 \end{remark}
 
+\begin{example}
+\label{example-nonseparated-component-loci-not-closed}
+\begin{reference}
+\cite[Expos\'e 236, Remark 1.9, pp. 229--230]{FGA}.
+\end{reference}
+Let $k$ be a field, put $S=\Spec(k[t])$, and, for every $n\in\mathbf Z$,
+let $S_n$ be a copy of $S$. Glue all the $S_n$ by identifying their open
+subschemes $D(t)$ using the identity maps. Denote the resulting scheme by
+$G$. The maps
+$$
+S_m\times_S S_n\longrightarrow S_{m+n}
+$$
+which are the identity on $S$, together with the maps
+$S_n\to S_{-n}$, glue to multiplication and inversion on $G$. The copy
+$S_0$ gives the neutral section. Thus $G\to S$ is a group scheme locally
+isomorphic to $S\to S$.
+
+Every fibre away from the origin of $S$ is the trivial group. The fibre at
+the origin is the constant, infinite discrete group $\mathbf Z$. It follows
+that, as underlying subsets,
+$$
+G^0=G^\tau=S_0.
+$$
+This subset is open, but it is not closed. Indeed, the common open $D(t)$ is
+dense in every chart $S_n$, and hence $S_0$ is dense in $G$. In particular,
+without a separatedness hypothesis neither the identity-component locus nor
+the torsion-component locus has to be closed. This example does not decide
+whether either locus is always closed for separated group schemes. The cited
+source also realizes this group as the closure of the neutral section in an
+open subgroup of the Picard prescheme of a family of conics degenerating to
+two intersecting lines.
+\end{example}
+
+\begin{example}
+\label{example-additive-kernel-identity-component-not-open}
+\begin{reference}
+\cite[Expos\'e 236, Remark 1.9, pp. 229--230]{FGA}.
+\end{reference}
+Let $V$ be a discrete valuation ring of characteristic $p>0$, let $t$ be a
+uniformizer, and set $S=\Spec(V)$. The additive polynomial
+$$
+a\longmapsto a^p-ta
+$$
+defines an endomorphism of $\mathbf G_{a,S}$. Its kernel is the finite locally
+free group scheme
+$$
+G=\Spec\bigl(V[x]/(x^p-tx)\bigr).
+$$
+The generic fibre is finite \'etale of degree $p$ and becomes the constant
+group $\mathbf Z/p\mathbf Z$ after a field extension. The special fibre is
+$\Spec(\kappa[x]/(x^p))$ and is connected. Consequently the underlying
+identity-component and prime-to-$p$ component loci are
+$$
+G^0=G^\sigma=e(S),
+$$
+where $e$ is the neutral section. This closed subset is not open. For
+example, after adjoining an element $u$ with $u^{p-1}=t$, the equation
+factors as
+$$
+x^p-u^{p-1}x=\prod_{a\in\mathbf F_p}(x-au),
+$$
+and all $p$ sections meet in the closed fibre. Thus even for a finite locally
+free separated group scheme the identity-component locus need not be open.
+\end{example}
+
+\begin{example}
+\label{example-mixed-characteristic-component-loci}
+\begin{reference}
+\cite[Expos\'e 236, Remark 1.9, p. 230]{FGA}.
+\end{reference}
+Let $V$ be a discrete valuation ring of mixed characteristic $(0,p)$, let
+$S=\Spec(V)$, and consider
+$$
+H=\mu_{p,S}=\Spec\bigl(V[z]/(z^p-1)\bigr),\qquad
+C=(\mathbf Z/p\mathbf Z)_S,
+$$
+and $G=H\times_S C$. This is a finite locally free separated group scheme.
+Its geometric generic fibre is the constant group
+$(\mathbf Z/p\mathbf Z)^2$. In the special fibre, $H$ is infinitesimal and
+connected while $C$ remains constant.
+
+Define the component loci fibrewise, using the characteristic exponent of
+the residue field in each fibre. Thus $G^\sigma$ is the inverse image of the
+torsion whose order is prime to the residue characteristic, while $G^\rho$
+is the inverse image of the primary part belonging to that characteristic.
+In characteristic zero the latter is the identity component. If $\eta$ and
+$s$ are the generic and closed points of $S$, then, as underlying subsets,
+$$
+G^\rho=e(S)\cup G_s,
+\qquad
+G^\sigma=e(S)\cup G_\eta.
+$$
+The first subset is not open: a nonidentity component of the special fibre
+has generic generalizations which it does not contain. The second subset is
+not closed: the closure of the generic fibre contains every point of the
+special fibre, whereas $G^\sigma$ contains only its identity component there.
+This shows why a fixed residue characteristic is essential in closedness
+statements for the two primary component loci.
+\end{example}
+
 \begin{lemma}
 \label{lemma-prime-to-characteristic-locus-universally-open}
 \begin{reference}

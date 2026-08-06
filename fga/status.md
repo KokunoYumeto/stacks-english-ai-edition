@@ -2319,3 +2319,55 @@ Final serial 1,100-dpi inspection of pages 89--90, 234, and 235 finds no clippin
 collision, malformed formula, unresolved marker, placeholder, or unreadable
 text. The next sequential cursor is Remark 1.9 on printed pages 229--230,
 followed by Corollary 1.10 on printed page 230.
+
+Remark 1.9 is now integrated as three explicit boundary examples. Example
+`more-morphisms-example-nonseparated-component-loci-not-closed` constructs
+the countably split origin by gluing copies of an affine line and supplies
+the group law directly; its identity and torsion-component loci coincide
+with one open dense chart and are not closed. It retains the source's
+Picard-prescheme realization and explicitly leaves the separated-case
+question unresolved.
+
+Example
+`more-morphisms-example-additive-kernel-identity-component-not-open`
+constructs the equal-characteristic finite locally free kernel of
+`a \mapsto a^p-ta`, computes its generic and special fibres, and shows that
+the identity and prime-to-`p` component loci are the closed neutral section
+but are not open. Example
+`more-morphisms-example-mixed-characteristic-component-loci` constructs
+`\mu_p` times the constant group `\mathbf Z/p\mathbf Z` over a mixed-
+characteristic trait and computes the two fibrewise primary loci exactly:
+one is the neutral section union the special fibre and is not open; the
+other is the neutral section union the generic fibre and is not closed.
+
+Decision `D000542` supersedes `D000269` and dispositions the complete remark
+as an integrated example-or-remark unit. Direct serial 1,100-dpi review
+covers printed pages 229--230 of the 24-page NUMDAM authority. That authority
+remains 2,461,968 bytes with SHA-256
+`266EEF77BF7BA34A75895ED69ACBFE791A2958DD52C2837D75AB29DF0D2F714A`.
+
+Both semantic validators pass with no errors at 21,674 labels, 21,437
+official-tag joins, 71 controlled topics, 4,207 topic candidates, 542
+append-only decisions, 1,253 source units, 1,612 term links, and 49 source
+issues, of which seven remain active; there are zero review units. The topic,
+decision, issue, map, Stacks-label, topic-candidate, reviewed-topic-map,
+index-validation, and map-validation files have SHA-256
+`B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0`,
+`9E9680AB29D7C1E798997BC3C16589752CC5CB0F679F73177D4953D07DEAE5F9`,
+`5659C5A6C5B50EB6C5EB02EBEFF58F7361A7302F3EC7FA8F966DA85536000A44`,
+`47B28BCA38CF58693B7BDFEEF416386EC02CD66217266B57A38DE5F8DEB84AE4`,
+`598E802E6D83F85CBD4CBE973B8B95CCF2AC705F990002B7332E464B9387061A`,
+`C28B116897E4A87075FD7558B9FE05CD0739D0DE5CBCB477A160C39246672C3D`,
+`26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46`,
+`0627F42B793D45F897FF6523C78D6E9138A4C7CB66A4C9653BEFF9670A61C658`,
+and `E022B8045B601B162142D70D9C02C320ECED21DCC0A7E14CDC6016E32826CD7C`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`.
+
+Stable serial TeX passes produce a 258-page More on Morphisms chapter of
+2,393,718 bytes with SHA-256
+`98AECDA480AED997B5F74CFB51C0C4B17F8691895AF49B55D5FE8C23FDB8B284`.
+The affected source range creates no overfull or underfull horizontal box.
+Final serial 1,100-dpi inspection of pages 93--94 finds no clipping,
+collision, malformed formula, unresolved marker, placeholder, or unreadable
+text. The next sequential cursor is Corollary 1.10 on printed page 230.
