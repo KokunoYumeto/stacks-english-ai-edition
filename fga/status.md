@@ -1696,3 +1696,75 @@ pages 33--35 finds no clipping, collision, malformed formula, or unreadable
 text.  The next sequential cursor is Expose 232, Section 4, “Relative Cartier
 divisors and projective bundles,” beginning on printed page 150 (physical PDF
 page 9).
+
+The next sequential patch integrates Expose 232, Section 4, "Relative Cartier
+divisors and projective bundles," on printed pages 150--154 (physical PDF
+pages 9--13). New Section
+`moduli-section-relative-effective-Cartier-divisors` defines the relative
+effective Cartier divisor functor. Lemma
+`moduli-lemma-divisors-open-in-hilbert` proves that it is the open
+Cartier-divisor locus in the Hilbert functor by applying the fibrewise
+Cartier criterion on an etale presentation and removing the proper image of
+the bad locus. Proposition
+`moduli-proposition-divisors-projective-flat` gives the open-and-closed
+Hilbert-polynomial decomposition and the quasi-projective fixed-polynomial
+pieces for a projective flat family over a Noetherian base.
+
+Equation `moduli-equation-divisor-to-picard` defines the Abel transformation.
+Lemma `moduli-lemma-universal-module-of-sections` constructs the canonical
+finitely presented module
+`Q_F = H^0(RHom(Rf_*F,O_S))`, proves arbitrary base change, and represents
+relative sections by its dual. Theorem
+`moduli-theorem-complete-linear-system` identifies the fibre of the Abel
+transformation over an invertible module with the projective bundle
+`P(Q_L)`. Lemma `moduli-corollary-divisor-to-picard-projective` proves that
+the Abel transformation is representable by projective morphisms using
+proper descent, locally constant Hilbert polynomials, and closed immersion
+into the fixed-polynomial projective Hilbert schemes. Remark
+`moduli-remark-complete-linear-system-base-change` records the exact
+degree-zero base-change criterion, the sufficient `H^1 = 0` condition, and
+the resulting smoothness criterion.
+
+Decisions `D000478` through `D000493` disposition every semantic unit in the
+section and supersede gap decisions `D000236` through `D000240` as well as
+the later unresolved terminology decision `D000257` without rewriting
+history. Issue `I000038` records a genuine printed type error: the source
+writes `Hom_{O_X}(Q,O_S)` although both arguments live on `S`; the integrated
+formula uses `Hom_{O_S}` while the diplomatic source remains unchanged.
+Issue `I000039` records that the printed historical adjective "simple" is
+rendered by the current term "smooth." The linked erratum contains no
+Section 4 correction, so neither repair is attributed to it.
+
+Direct 1,200-dpi review covers all five source pages and both erratum pages.
+The NUMDAM authority remains 2,006,109 bytes with SHA-256
+`C84DCA027FAC1AF187B0B9F6C8D2E2CB95B43CE201815B2073577FD4425919F0`.
+The linked erratum remains 134,758 bytes with SHA-256
+`CBC9B1A1967B448A5087D97B4C102B028F1D1BD99A22A95BD4FE2F1F6147F344`.
+
+Both semantic validators pass with no errors at 21,625 labels, 21,437
+official-tag joins, 66 controlled topics, 4,071 topic candidates, 493
+append-only decisions, 1,253 source units, 1,612 term links, and 39 source
+issues, of which eight remain active. The topic, decision, issue, map,
+Stacks-label, topic-candidate, and reviewed-topic-map ledgers have SHA-256
+`A70B3A5828BBBE1746198CB6933F06D9EE274BE958EC9DC0165EF9DF0B5683BD`,
+`9A4AC19017395B4E6DBF9EF5E4D3CC188E99F1F3A58024BF8E9581078B87BACE`,
+`693DEB1542A784DF12E9837C9BA0856250A6227B841CE83A43F8BE8C88DA3841`,
+`FBD96DA7DC2BCF283F31E787AA8F27BF123623D295AB422704C0FB770460652C`,
+`BA0EA3FC09F61F891398D53711155B771A6B1EAED16961A01204FE5C731AF6BB`,
+`B816A9C9A2920B04FE28FDCF41F68BF5137E7CC47D03670D10378DF333EA7221`,
+and `82CD74FC396DE262F8D7635DD3A3A898D2DFAE22A2C21F8AD9F40EBD7792AEAF`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`;
+the nine new semantic labels deliberately have no invented official tags.
+
+A bibliography-complete serial build followed by stable auxiliary passes
+produces a 47-page Moduli chapter of 710,902 bytes with SHA-256
+`45194C14FE7A5890D86047D06D9D758DC667EC3D43B3180019F3BCB76B46EB90`.
+The added text creates no overfull or underfull horizontal box. The
+standalone build retains one pre-existing unresolved external cross-chapter
+reference on page 35 after the added section. Final 1,200-dpi inspection of
+Moduli pages 31--34 finds no clipping, collision, malformed formula, or
+unreadable text. The next sequential cursor is Expose 232, Section 5,
+"An existence theorem for the Picard scheme," beginning on printed page 154
+(physical PDF page 13). Its Remark 5.2 is subject to the linked correction
+on printed page 303 and must not be imported from the original page alone.
