@@ -937,7 +937,7 @@ $\check{\mathcal{C}}^\bullet(\mathcal{U}, \mathcal{F})$ is a complex.
 \begin{definition}
 \label{definition-cech-complex}
 \begin{reference}
-\cite[Chapter I, \S 3, no. 18, p. 212]{FAC}
+\cite[Chapter I, \S 3, nos. 18 and 20, pp. 212--213]{FAC}
 \end{reference}
 Let $X$ be a topological space.
 Let $\mathcal{U} : U = \bigcup_{i \in I} U_i$ be an open covering.
@@ -953,6 +953,9 @@ They are denoted $\check H^i(\mathcal{U}, \mathcal{F})$.
 
 \begin{lemma}
 \label{lemma-cech-h0}
+\begin{reference}
+\cite[Chapter I, \S 3, no. 20, Proposition 1, p. 213]{FAC}
+\end{reference}
 Let $X$ be a topological space.
 Let $\mathcal{F}$ be an abelian presheaf on $X$.
 The following are equivalent
@@ -4292,6 +4295,9 @@ of the chosen total ordering.
 
 \begin{lemma}
 \label{lemma-alternating-usual}
+\begin{reference}
+\cite[Chapter I, \S 3, no. 20, Proposition 2, pp. 213--214]{FAC}
+\end{reference}
 Let $X$ be a topological space.
 Let $\mathcal{U} : U = \bigcup_{i \in I} U_i$ be an open covering.
 Assume $I$ comes equipped with a total ordering.
@@ -4481,6 +4487,33 @@ $$
 $$
 of the projection with the natural inclusion
 is homotopic to the identity map as desired.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-cech-vanishing-cover-dimension}
+\begin{reference}
+\cite[Chapter I, \S 3, no. 20, Corollary, p. 214]{FAC}
+\end{reference}
+Let $X$ be a topological space. Let
+$\mathcal{U} : X = \bigcup_{i \in I} U_i$ be an open covering. Let
+$\mathcal{F}$ be an abelian sheaf on $X$. Let $n \geq 0$ be an integer.
+Assume that
+$$
+U_{i_0 \ldots i_q} = \emptyset
+$$
+for every $q > n$ and every sequence of pairwise distinct elements
+$i_0, \ldots, i_q$ of $I$. Then
+$$
+\check{H}^q(\mathcal{U}, \mathcal{F}) = 0
+$$
+for every $q > n$.
+\end{lemma}
+
+\begin{proof}
+Choose a total ordering on $I$. Since $\mathcal{F}(\emptyset) = 0$, the
+alternating \v{C}ech complex is zero in degrees greater than $n$.
+Its inclusion into the usual \v{C}ech complex is a homotopy equivalence
+by Lemma \ref{lemma-alternating-usual}. This proves the result.
 \end{proof}
 
 \begin{lemma}
