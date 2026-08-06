@@ -1624,3 +1624,75 @@ collision, malformed formula, or unreadable text.  The next sequential cursor
 is Expose 232, Section 3, “The main existence theorem: statement,” beginning
 on printed page 148 (physical PDF page 7); the linked erratum must be applied
 to Remark 3.3 on the following printed page.
+
+The next sequential patch integrates Expose 232, Section 3, “The main
+existence theorem: statement,” on printed pages 148--150 (physical PDF pages
+7--9).  The Moduli chapter now identifies the exact relation between the
+classical projective Picard theorem and the current Stacks results.  Quot
+gives algebraic-space representability; Moduli gives local finite
+presentation and separatedness under integral geometric fibres; new Remark
+`moduli-remark-classical-projective-picard-theorem` records the stronger
+classical scheme statement and the open quasi-projective pieces
+`U - n xi`.  It states explicitly that the scheme and quasi-projectivity
+claims depend on the divisor and Hilbert construction developed in the next
+source sections rather than following formally from algebraic-space
+representability.
+
+New Remarks `moduli-remark-picard-separatedness-boundary` and
+`moduli-remark-picard-locally-projective-components` retain both sharp source
+boundaries.  Fibrewise isomorphisms from residue fields to global functions
+do not replace geometric integrality for separatedness; the conic-to-two-lines
+and double-elliptic-curve mechanisms are recorded.  A locally projective
+family formed from a connected principal Z-cover and the automorphism
+`(x,y) -> (x,y+x)` of `E x E` has a connected Picard component
+`P x Pic^0`, which is not of finite type.  The latter example now also gives
+direct semantic evidence for abelian schemes and Neron--Severi component
+data.  Review of the cited separatedness proof repairs the local typo `amd`
+to `and` and restores the missing closed-point argument in
+`beta_{M,0}(0) = 1`.
+
+Decisions `D000468` through `D000477` give an explicit disposition to all
+three theorem hypotheses, the theorem, both remarks, and all three displayed
+equations.  Rollup decisions supersede `D000232` through `D000235` without
+rewriting history.  Issue `I000035` binds the linked correction: the printed
+question in Remark 3.3 was answered affirmatively by Mumford and is not an
+open problem.  Issue `I000036` prevents local finite presentation from being
+misreported as componentwise finite type.  Issue `I000037` records that the
+printed closing reference to nonseparated examples says 3.3 although those
+examples occur in Remark 3.2.
+
+Direct 1,200-dpi review covers all three source pages and the linked correction
+page.  The NUMDAM authority remains 2,006,109 bytes with SHA-256
+`C84DCA027FAC1AF187B0B9F6C8D2E2CB95B43CE201815B2073577FD4425919F0`.
+The linked erratum remains 134,758 bytes with SHA-256
+`CBC9B1A1967B448A5087D97B4C102B028F1D1BD99A22A95BD4FE2F1F6147F344`;
+its exact correction says the question raised in Remark 3.3 was resolved
+affirmatively by Mumford.
+
+Both semantic validators pass with no errors at 21,616 labels, 21,437
+official-tag joins, 62 controlled topics, 4,043 topic candidates, 477
+append-only decisions, 1,253 source units, 1,612 term links, and 37 source
+issues, of which eight remain active.  The topic, decision, issue, map,
+Stacks-label, topic-candidate, and reviewed-topic-map ledgers have SHA-256
+`CD41DEB344E0F910689C1CD2C72F6BF157ACA35B2102495D0FE6F2E48D2A92FF`,
+`2E2F045D50B4845F4D2C4E4FF15D3B66ADE4DF0A8B19E28E5C74BB3D72CE6D11`,
+`0E4E5055B902F23A4A1BE443B12B3E1AA63A271FC869E18A134F2C3A9CCD0AEF`,
+`381785C9D865BC8D0D48BD11556AC374967AD8EAB592611092A2981E1E02C2E1`,
+`78907BCB90E23340B7D51E5BAC6FA943B1E671F143ED5887BFCAB7610339BFAD`,
+`6E4CEB76D442FBAE3E05A7E46F8DAD95B68C2335B2D126499C317B0DB6EB2414`,
+and `8608476ABDF7AAD5A78036B2FCF578436817CE4D2D967ABFC756F6D87986E12E`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`;
+the three new semantic labels deliberately have no invented official tags.
+
+A bibliography-complete serial build followed by three stable TeX passes
+produces a 44-page Moduli chapter of 688,221 bytes with SHA-256
+`DAC39E0E6185FDC20831E6FF7CFADA7344AF1F114748FCC94EADE972E020E908`.
+The added text creates no overfull or underfull horizontal box.  The
+standalone build retains external cross-chapter warnings caused by auxiliary
+files absent from this bounded build and two underfull vertical page-packing
+messages outside the added material.  Final 1,200-dpi inspection of Moduli
+pages 33--35 finds no clipping, collision, malformed formula, or unreadable
+text.  The next sequential cursor is Expose 232, Section 4, “Relative Cartier
+divisors and projective bundles,” beginning on printed page 150 (physical PDF
+page 9).

@@ -3168,6 +3168,9 @@ Lemma \ref{spaces-more-morphisms-lemma-etale-formally-etale}.
 
 \begin{lemma}
 \label{lemma-pic-functor-uniqueness-part}
+\begin{reference}
+\cite[Expos\'e 232, Theorem 3.1, pp. 148--149]{FGA}.
+\end{reference}
 Assume the geometric fibres of $X \to B$ are integral
 in addition to the other assumptions in this section.
 Then $\Picardfunctor_{X/B} \to B$ is separated.
@@ -3210,7 +3213,7 @@ Consider the functions
 $\beta_{K, i}, \beta_{M, i} : \Spec(R) \to \mathbf{Z}$
 of Derived Categories of Spaces, Lemma
 \ref{spaces-perfect-lemma-jump-loci} associated to $K$ and $M$.
-Since the formation of $K$ amd $M$ commutes with
+Since the formation of $K$ and $M$ commutes with
 base change (see lemma cited above) we find
 $\beta_{K, 0}(\eta) = \beta_{M, 0}(\eta) = 1$ by
 Spaces over Fields, Lemma
@@ -3223,7 +3226,7 @@ Spaces over Fields, Lemma
 \ref{spaces-over-fields-lemma-characterize-trivial-pic-integral}
 we conclude that the restriction of $\mathcal{L}$
 to the special fibre $X_0$ is trivial. In turn this gives
-$\beta_{K, 0}(0) = \beta_{M, 0} = 1$ as above.
+$\beta_{K, 0}(0) = \beta_{M, 0}(0) = 1$ as above.
 Then by More on Algebra, Lemma
 \ref{more-algebra-lemma-lift-pseudo-coherent-from-residue-field}
 we can represent $K$ by a complex of the form
@@ -3242,6 +3245,88 @@ commutes with base change). Then $s : \mathcal{O}_X \to \mathcal{L}$
 is a map of invertible sheaves whose restriction to $X_0$
 is an isomorphism and hence is an isomorphism as desired.
 \end{proof}
+
+\begin{remark}[The classical projective Picard theorem]
+\label{remark-classical-projective-picard-theorem}
+\begin{reference}
+\cite[Expos\'e 232, Theorem 3.1 and Remark 3.3, pp. 148--150;
+correction to Expos\'e 232, p. 303]{FGA}.
+\end{reference}
+Let $X$ and $B$ be locally Noetherian schemes and suppose that
+$X \to B$ is projective and flat with integral geometric fibres.
+The classical projective Picard theorem strengthens
+Quot, Proposition \ref{quot-proposition-pic-functor},
+Lemma \ref{lemma-pic-functor-qs-lfp}, and
+Lemma \ref{lemma-pic-functor-uniqueness-part}: in this situation
+$\Picardfunctor_{X/B}$ is represented by a separated scheme.
+If $\mathcal{O}_X(1)$ is relatively very ample and $\xi$ is its class,
+the classical construction gives an open subspace $U$ which is a disjoint
+union of open subschemes quasi-projective over $B$ and such that
+$$
+U + \xi \subset U
+\quad\text{and}\quad
+\Picardfunctor_{X/B} = \bigcup_{n \geq 0}(U - n\xi).
+$$
+Translation identifies every $U - n\xi$ with $U$. The scheme and
+quasi-projectivity assertions use the divisor and Hilbert scheme
+construction; they do not follow from algebraic-space representability and
+local finite presentation alone.
+
+The printed source also asks whether the Picard scheme is a disjoint union
+of open subschemes of finite type, and hence quasi-projective in this
+setting, over $B$. The correction appended to the collected expos\'es says
+that Mumford answered this question affirmatively. Thus the question in the
+printed Remark 3.3 is not open.
+\end{remark}
+
+\begin{remark}[A separatedness boundary]
+\label{remark-picard-separatedness-boundary}
+\begin{reference}
+\cite[Expos\'e 232, Remark 3.2, p. 149]{FGA}.
+\end{reference}
+Fibrewise constancy of global functions is not a substitute for the
+integrality hypothesis in Lemma
+\ref{lemma-pic-functor-uniqueness-part}. More precisely, the condition
+$$
+\kappa(b) \longrightarrow H^0(X_b, \mathcal{O}_{X_b})
+$$
+being an isomorphism for every $b \in B$ does not by itself force the
+relative Picard functor to be separated. The cited source records examples
+over discrete valuation rings in which an integral generic curve specializes
+either to two intersecting irreducible components, as for a degeneration of
+a conic to two lines, or to a nonreduced multiple fibre with irreducible
+support, as for a double elliptic curve. Both kinds of example occur in every
+characteristic.
+\end{remark}
+
+\begin{remark}[Locally projective families and components]
+\label{remark-picard-locally-projective-components}
+\begin{reference}
+\cite[Expos\'e 232, Remark 3.3, pp. 149--150]{FGA}.
+\end{reference}
+Replacing projectivity by projectivity locally on the base preserves the
+local representability problem, but it does not force connected components
+of the Picard scheme to be of finite type. Here is the construction recorded
+in the cited source. Let $X_0$ be a smooth projective variety over an
+algebraically closed field $k$. Choose an automorphism $u$ and a class
+$\xi$ in its N\'eron--Severi group such that the classes $u^n(\xi)$ are
+pairwise distinct. One example is $X_0 = E \times_k E$ for an elliptic curve
+$E$, with
+$$
+u(x, y) = (x, y + x).
+$$
+Let $B$ be the union of two smooth irreducible curves meeting in two points
+and let $P \to B$ be a connected principal $\mathbf{Z}$-cover. The family
+associated to the action of $\mathbf{Z}$ on $X_0$ is locally projective over
+$B$; for the displayed example it is an abelian scheme. Its Picard scheme has
+a connected component isomorphic to
+$$
+P \times_k \underline{\Picardfunctor}^{0}_{X_0/k}.
+$$
+This component is not of finite type over $B$. In particular, local finite
+presentation of the entire Picard space does not imply that each of its
+connected components is of finite type.
+\end{remark}
 
 \begin{lemma}
 \label{lemma-pic-functor-curves-smooth}

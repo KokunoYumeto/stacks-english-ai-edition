@@ -1,14 +1,14 @@
 {
   "counts": {
-    "labels": 21613,
+    "labels": 21616,
     "official_tags_joined": 21437,
     "tex_files": 119,
-    "topic_candidates": 4039,
+    "topic_candidates": 4043,
     "topic_coverage": {
       "broad": 14,
-      "direct": 38,
-      "no_direct": 5,
-      "partial": 5
+      "direct": 41,
+      "no_direct": 4,
+      "partial": 3
     },
     "topic_maps": 62,
     "topics": 62
@@ -16,10 +16,10 @@
   "errors": [],
   "schema": "fga-stacks-index-v1",
   "sha256": {
-    "fga/stx.csv": "E0BD256298AE662FFACE2C90563129584CA602A71D40A74C12846DBD3D45ACE0",
-    "fga/tcand.csv": "B18136E0E19EA5A014F24F3C10B3A4849842057517E3EF69C446A6F5FC11519E",
-    "fga/tmap.csv": "E9397FB0719F404A0AF97779B60D9990B7A780C3E968333D7707C67654294995",
-    "fga/topics.csv": "88E1323DF2B11F0B3554DB7D4111F578EFBB4E65B8AD35F615CD79A5CB95AF4F",
+    "fga/stx.csv": "78907BCB90E23340B7D51E5BAC6FA943B1E671F143ED5887BFCAB7610339BFAD",
+    "fga/tcand.csv": "6E4CEB76D442FBAE3E05A7E46F8DAD95B68C2335B2D126499C317B0DB6EB2414",
+    "fga/tmap.csv": "8608476ABDF7AAD5A78036B2FCF578436817CE4D2D967ABFC756F6D87986E12E",
+    "fga/topics.csv": "CD41DEB344E0F910689C1CD2C72F6BF157ACA35B2102495D0FE6F2E48D2A92FF",
     "tags/tags": "C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF"
   },
   "status": "PASS",
@@ -82,7 +82,7 @@
     "models.tex": "497DDACAA348B4905097D48C118253C54A17B20553B77B76E43B4780CD3D0B62",
     "modules.tex": "21904D1C30C4560BBE16C62F827F39917FD12A9D5EFF84CED8AC765E59D1E8D3",
     "moduli-curves.tex": "75473F916DE40288F1F8D715E7A0D81EBEBAA9127D1FFEFEBDECC0CC01B4C42C",
-    "moduli.tex": "593645D0970BB8591ED06260CA5D46E0D579171D86A6A005798DE84BD24588F5",
+    "moduli.tex": "97AC00F55102D94B1390701532377DB6C33BA21369760A7B407DBC5C2DD1646D",
     "more-algebra.tex": "EBD7A98350960545D81D56202C18F91BA33DBC0A44C19D53510EAD45677E471E",
     "more-etale.tex": "75F47019596F985B2559187020A3D275F51B7972864A284B0BF3ACA45893E771",
     "more-groupoids.tex": "63FDD1AB79B3B0B42CF0DD5A93A964689DA1C4C7E4F0E5D46531C81B7C88CCEE",
@@ -268,7 +268,10 @@
     "TeX label has no official tag in this snapshot: moduli-remark-FGA-closed-graph-quotient",
     "TeX label has no official tag in this snapshot: moduli-remark-Nagata-Weil-restriction-scheme",
     "TeX label has no official tag in this snapshot: moduli-remark-automorphism-scheme-nilpotents",
+    "TeX label has no official tag in this snapshot: moduli-remark-classical-projective-picard-theorem",
     "TeX label has no official tag in this snapshot: moduli-remark-norm-symmetric-morphism",
+    "TeX label has no official tag in this snapshot: moduli-remark-picard-locally-projective-components",
+    "TeX label has no official tag in this snapshot: moduli-remark-picard-separatedness-boundary",
     "TeX label has no official tag in this snapshot: moduli-remark-sections-proper-field-quasi-projective",
     "TeX label has no official tag in this snapshot: moduli-section-bounded-coherent",
     "TeX label has no official tag in this snapshot: moduli-section-zero-cycles",
@@ -345,6 +348,10 @@
     "evidence label has no official tag for topic norm-map: moduli-proposition-grothendieck-deligne-norm",
     "evidence label has no official tag for topic norm-map: moduli-remark-norm-symmetric-morphism",
     "evidence label has no official tag for topic picard-functor: pic-remark-picard-stack-presheaf-sheaf",
-    "evidence label has no official tag for topic picard-stack: pic-remark-picard-stack-presheaf-sheaf"
+    "evidence label has no official tag for topic picard-stack: pic-remark-picard-stack-presheaf-sheaf",
+    "evidence label has no official tag for topic picard-scheme: moduli-remark-classical-projective-picard-theorem",
+    "evidence label has no official tag for topic abelian-scheme: examples-definition-abelian-scheme",
+    "evidence label has no official tag for topic neron-severi: bootstrap-remark-component-group-picard-scheme",
+    "evidence label has no official tag for topic neron-severi: moduli-remark-picard-locally-projective-components"
   ]
 }

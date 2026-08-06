@@ -2,24 +2,24 @@
   "counts": {
     "active_source_issues": 8,
     "candidate_units": 0,
-    "decided_units": 336,
-    "decisions": 467,
+    "decided_units": 342,
+    "decisions": 477,
     "dispositions": {
-      "example_or_remark": 1,
+      "example_or_remark": 6,
       "existing_equivalent": 106,
       "existing_stronger": 75,
-      "existing_weaker": 22,
+      "existing_weaker": 21,
       "extend_existing": 43,
-      "historical_reference": 44,
+      "historical_reference": 43,
       "new_section": 6,
       "new_statement": 37,
-      "structural_only": 919
+      "structural_only": 916
     },
-    "historical_units": 44,
+    "historical_units": 43,
     "no_lexical_candidate_units": 0,
     "review_units": 0,
-    "source_issues": 34,
-    "structural_units": 919,
+    "source_issues": 37,
+    "structural_units": 916,
     "term_links": 1612,
     "unit_candidates": 0,
     "units": 1253,
@@ -28,9 +28,9 @@
   "errors": [],
   "schema": "fga-stacks-map-v2",
   "sha256": {
-    "fga/dec.csv": "BA6815507B926E671544A8000725B1C084688E1077B42DA2356FCE4EF4CC3F99",
-    "fga/issues.csv": "11B0D9C239A866D52BCB1E6E5EC45350BF9B4EA36B22E38EDC472E7582CF45DF",
-    "fga/map.csv": "D45D2C102288932DC17548B7E3369D4A48215746FF0ED0B0F71F402B094ACB32",
+    "fga/dec.csv": "2E2F045D50B4845F4D2C4E4FF15D3B66ADE4DF0A8B19E28E5C74BB3D72CE6D11",
+    "fga/issues.csv": "0E4E5055B902F23A4A1BE443B12B3E1AA63A271FC869E18A134F2C3A9CCD0AEF",
+    "fga/map.csv": "381785C9D865BC8D0D48BD11556AC374967AD8EAB592611092A2981E1E02C2E1",
     "fga/ucand.csv": "D7D823C01798DC15596F2C67D1177F427A50EE39CDD4F4B6B437FBD56A86D1A4"
   },
   "sources": [
@@ -170,7 +170,10 @@
     "TeX label has no official tag in this snapshot: moduli-remark-FGA-closed-graph-quotient",
     "TeX label has no official tag in this snapshot: moduli-remark-Nagata-Weil-restriction-scheme",
     "TeX label has no official tag in this snapshot: moduli-remark-automorphism-scheme-nilpotents",
+    "TeX label has no official tag in this snapshot: moduli-remark-classical-projective-picard-theorem",
     "TeX label has no official tag in this snapshot: moduli-remark-norm-symmetric-morphism",
+    "TeX label has no official tag in this snapshot: moduli-remark-picard-locally-projective-components",
+    "TeX label has no official tag in this snapshot: moduli-remark-picard-separatedness-boundary",
     "TeX label has no official tag in this snapshot: moduli-remark-sections-proper-field-quasi-projective",
     "TeX label has no official tag in this snapshot: moduli-section-bounded-coherent",
     "TeX label has no official tag in this snapshot: moduli-section-zero-cycles",
@@ -247,6 +250,10 @@
     "evidence label has no official tag for topic norm-map: moduli-proposition-grothendieck-deligne-norm",
     "evidence label has no official tag for topic norm-map: moduli-remark-norm-symmetric-morphism",
     "evidence label has no official tag for topic picard-functor: pic-remark-picard-stack-presheaf-sheaf",
-    "evidence label has no official tag for topic picard-stack: pic-remark-picard-stack-presheaf-sheaf"
+    "evidence label has no official tag for topic picard-stack: pic-remark-picard-stack-presheaf-sheaf",
+    "evidence label has no official tag for topic picard-scheme: moduli-remark-classical-projective-picard-theorem",
+    "evidence label has no official tag for topic abelian-scheme: examples-definition-abelian-scheme",
+    "evidence label has no official tag for topic neron-severi: bootstrap-remark-component-group-picard-scheme",
+    "evidence label has no official tag for topic neron-severi: moduli-remark-picard-locally-projective-components"
   ]
 }
