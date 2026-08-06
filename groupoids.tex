@@ -1154,6 +1154,69 @@ we see that $G^0$ is quasi-compact.
 \end{proof}
 
 \begin{lemma}
+\label{lemma-reduced-identity-component-no-additive}
+\begin{reference}
+\cite[Expos\'e 236, Proposition 3.1, p. 236 and correction,
+p. 303]{FGA}.
+\end{reference}
+Let $k$ be a field and let $G$ be a commutative group scheme of finite type
+over $k$. Let $\overline{k}$ be an algebraic closure of $k$. Assume that
+$G^0_{\overline{k}}$ contains no closed subgroup scheme isomorphic to
+$\mathbf{G}_{a, \overline{k}}$. Then $(G^0)_{red}$ is a smooth connected
+closed subgroup scheme of $G$. Moreover,
+$$
+((G^0)_{red})_{\overline{k}}=(G^0_{\overline{k}})_{red}
+$$
+as closed subschemes of $G_{\overline{k}}$.
+\end{lemma}
+
+\begin{proof}
+Set $\overline{G}=G_{\overline{k}}$ and
+$H=(\overline{G}^0)_{red}$. Since $\overline{k}$ is perfect, $H$ is a closed
+subgroup scheme of $\overline{G}$ by
+Lemma \ref{lemma-reduced-subgroup-scheme-perfect}, and it is smooth by
+Lemma \ref{lemma-reduced-group-scheme-prefect-field-characteristic-p-smooth}
+in positive characteristic and by
+Lemma \ref{lemma-group-scheme-characteristic-zero-smooth} in characteristic
+zero.
+
+The standard structure theorem for connected commutative algebraic groups
+says that the hypothesis on additive subgroups makes $H$ an extension of an
+abelian variety by a torus. Consequently multiplication by every positive
+integer on $H$ is surjective. This is immediate for a torus, follows from
+Lemma \ref{lemma-degree-multiplication-by-d} for an abelian variety, and
+passes to an extension in the fppf topology.
+
+By the standard quotient theorem for algebraic groups over a field, the fppf
+quotient $Q=\overline{G}/H$ is represented by a group scheme. It is finite:
+its underlying space is the finite set of connected components of
+$\overline{G}$ and its identity component is the finite infinitesimal quotient
+of $\overline{G}^0$ by its reduction. Choose $m>0$ annihilating $Q$. Such an
+$m$ exists because the finite \`etale quotient of $Q$ has finite exponent and,
+in positive characteristic, the connected part of $Q$ is killed by a power of
+the characteristic. It follows that
+$$
+[m] : \overline{G}\longrightarrow\overline{G}
+$$
+factors through $H$. Its restriction to $H$ is surjective, so the scheme
+theoretic image of $[m]$ is exactly $H$; here we also use that $H$ is reduced
+and Morphisms, Lemma
+\ref{morphisms-lemma-scheme-theoretic-image-reduced}.
+
+Let $Z\subset G$ be the scheme theoretic image of $[m]:G\to G$. The morphism
+$[m]$ is quasi-compact. Hence formation of its scheme theoretic image
+commutes with the flat base change $\Spec(\overline{k})\to\Spec(k)$ by
+Morphisms, Lemma
+\ref{morphisms-lemma-flat-base-change-scheme-theoretic-image}. Thus
+$Z_{\overline{k}}=H$. In particular $Z$ is smooth and geometrically
+connected over $k$. The identity, inverse, and multiplication maps make $Z$
+a closed subgroup scheme because this can be checked after the faithfully
+flat extension $\overline{k}/k$. Finally $Z$ has the identity component of
+$G$ as its underlying space and is reduced. Therefore $Z=(G^0)_{red}$, and
+the displayed base change identity follows.
+\end{proof}
+
+\begin{lemma}
 \label{lemma-profinite-product-over-field}
 Let $k$ be a field. Let $T = \Spec(A)$ where $A$ is a directed colimit of
 algebras which are finite products of copies of $k$. For any scheme $X$

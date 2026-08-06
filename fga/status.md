@@ -3004,3 +3004,53 @@ box. Final serial 1,100-dpi inspection of Moduli pages 47--48 and Groupoids
 page 9 finds no clipping, collision, malformed formula, unresolved new
 reference, placeholder, or unreadable text. The next sequential cursor is
 the Section 3 heading and Proposition 3.1 on printed page 236.
+
+Proposition 3.1 is now integrated as Groupoids, Lemma
+`groupoids-lemma-reduced-identity-component-no-additive`. For a finite type
+commutative group scheme over an arbitrary field it proves that the reduced
+identity component is a smooth connected closed subgroup when the geometric
+identity component contains no additive subgroup. Over an algebraic closure
+the reduced component is semiabelian. A suitable power map kills the finite
+quotient by that component while remaining surjective on it, so its scheme
+theoretic image is exactly the reduced component. Quasi-compact flat-base-
+change compatibility for scheme theoretic images descends this subgroup and
+proves the required geometric-reduction identity over the original field.
+
+The linked erratum is applied and recorded as resolved source issue
+`I000058`: the printed proof has `Or l'hypothese` while the correction on
+page 303 prescribes `Or de l'hypothese`. Decision `D000556` supersedes
+`D000286`; it records the complete theorem and the correction without
+inventing an official Stacks tag.
+
+Direct serial 1,100-dpi review covers printed page 236 of the 24-page NUMDAM
+authority and printed page 303 of the six-page linked erratum. The authority
+remains 2,461,968 bytes with SHA-256
+`266EEF77BF7BA34A75895ED69ACBFE791A2958DD52C2837D75AB29DF0D2F714A`;
+the erratum remains 475,371 bytes with SHA-256
+`D8FFB36337F12CE15F9E15E917174A4C5EDCBD28C5B0CD9F0A501098DB8BD61B`.
+Both semantic validators pass with no errors at 21,698 labels, 21,437
+official-tag joins, 71 controlled topics, 4,238 topic candidates, 556
+append-only decisions, 1,253 source units, 1,612 term links, and 58 source
+issues, of which eight remain active; there are zero review units. The topic,
+decision, issue, map, Stacks-label, topic-candidate, reviewed-topic-map,
+index-validation, and map-validation files have SHA-256
+`B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0`,
+`A2B3F3759D93023D700B405CEDD846F97B491E54BA8843B194F451C92654AAE5`,
+`102A7DF9DB1BEFD2579136EEBEBED0BCAF5ACE84E03DA8AB5DE4DCF3E440E71A`,
+`9738C4F0EC3979EA08D11EA9E4424E236FFA7A57E492808EB9F347A0A2768111`,
+`3874A5A05B8FDBAAA40ADA98902C20D3A7CEA05B2E65CAF721F82BA94E178830`,
+`5625C35416453CCA796FDE5E83B226EF4490C0C4AD631A8E6483B500A2EE108B`,
+`26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46`,
+`E5D1CC38BF35C56056408CCA72FA9FF020358DB3379F8C606D4DD24A2D1F8A05`,
+and `452F609CD60F58B4C923578AB8E9AEA926E265572DBFEEE747A955C19624DAC8`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`.
+
+Three stable serial TeX passes produce a 60-page Groupoids chapter of
+804,201 bytes with SHA-256
+`9CC0260CC2247179CE2256C595C73FE82159BCF708DDD51A5F33EA055D5392D9`.
+The new source range creates no overfull or underfull horizontal box. Final
+serial 1,100-dpi inspection of Groupoids page 13 finds no clipping,
+collision, malformed formula, unresolved new reference, placeholder, or
+unreadable text. The next sequential cursor is Corollary 3.2 on printed
+pages 236--237.
