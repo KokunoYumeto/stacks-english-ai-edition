@@ -2,17 +2,17 @@
 
 - Frozen surface: 661 source targets through printed page 278.
 - Stage: sequential source review and statement-level Stacks integration.
-- Completed checkpoint: Chapter II, Section 3, no. 42, printed pages 199--234.
-- Reviewed decisions: 172 (54 equivalent, 60 stronger, 28 extensions,
+- Completed checkpoint: Chapter II, Section 3, no. 43, printed pages 199--236.
+- Reviewed decisions: 180 (54 equivalent, 68 stronger, 28 extensions,
   18 new-statement decisions, 11 historical references, 1 outside scope).
-- Current Stacks references added: 101 across `topology.tex`, `sheaves.tex`,
+- Current Stacks references added: 103 across `topology.tex`, `sheaves.tex`,
   `modules.tex`, `homology.tex`, `coherent.tex`, `cohomology.tex`,
   `divisors.tex`, `constructions.tex`, `schemes.tex`, `morphisms.tex`,
-  `derham.tex`, `algebra.tex`, and `varieties.tex`.
+  `derham.tex`, `algebra.tex`, `properties.tex`, and `varieties.tex`.
 - New Stacks theorem/lemma statements: 13, plus the paracompactness and
   locally-constant-sheaf definitions;
   each new theorem/lemma has a complete proof and no assigned tag.
-- Source/proof issues or convention boundaries: 107 found by direct authority-page and TeX inspection, all resolved and
+- Source/proof issues or convention boundaries: 116 found by direct authority-page and TeX inspection, all resolved and
   retained in `issues.csv`.
 - Existing Stacks defects corrected: 5, comprising the refinement-homotopy
   sign, repeated coefficient sheaves, wrong boundary domain, wrong boundary
@@ -20,12 +20,12 @@
 - Validation: `intake.json`, `check.json`, and `mcheck.json` all PASS.
 - Builds: `topology.pdf`, `sheaves.pdf`, `modules.pdf`, `homology.pdf`,
   `coherent.pdf`, `cohomology.pdf`, `divisors.pdf`, `constructions.pdf`,
-  `schemes.pdf`, `morphisms.pdf`, `derham.pdf`, `algebra.pdf`, and
-  `varieties.pdf`
+  `schemes.pdf`, `morphisms.pdf`, `derham.pdf`, `algebra.pdf`,
+  `properties.pdf`, and `varieties.pdf`
   completed; every
   affected statement page passed direct 1100 dpi visual inspection. See
   `qa.json`.
-- Historical notes added: 22, preserving the source's operator calculus,
+- Historical notes added: 24, preserving the source's operator calculus,
   image-complex construction, two-covering double complex, and unproved
   cofinal-vanishing question, together with the classical closed-point to
   reduced-scheme bridge, the classical-map to scheme-morphism bridge, and the
@@ -41,6 +41,8 @@
   together with the classical affine-variety convention, the principal-open
   graph construction, the standard-open basis, the affine-refinement
   corollary, and the exact closed-diagonal role in affine intersections,
+  plus the corrected logical order in the printed affine-global-sections
+  proof and the two principal-open denominator-clearing arguments,
   without claiming false modern theorem matches.
-- Next unit: `fac:II:3:no:43` (some preliminary properties of irreducible varieties).
+- Next unit: `fac:II:3:no:44` (vanishing of certain cohomology groups).
 - No statement is mapped by lexical similarity alone.
