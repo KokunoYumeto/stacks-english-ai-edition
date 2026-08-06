@@ -2102,3 +2102,51 @@ malformed formula, unresolved marker, placeholder, or unreadable text. The
 next sequential patch is the remaining Theorem 1.1(iii) generalization
 argument and the corrected prime-to-`n` consequence of Corollary 1.5 before
 proceeding to Remarks 1.6 and 1.9 and Corollaries 1.7, 1.8, and 1.10.
+
+The next Section 1 checkpoint completes the integration of Theorem 1.1.
+Lemma `more-morphisms-lemma-prime-to-characteristic-locus-universally-open`
+proves that, over a locally Noetherian base of uniform characteristic
+exponent, the reduced prime-to-characteristic component locus is universally
+open when the identity-component locus is closed and the ambient group is
+universally open along that locus. The proof retains the source's trait,
+Bezout-decomposition, and component-quasi-section argument, while making the
+generic value of the newly constructed section explicitly `g'(y')`. This
+resolves the printed wrong-section symbol recorded as issue `I000047`.
+
+Decisions `D000535` and `D000536` disposition Theorem 1.1(iii) and (ii), and
+decision `D000537` supersedes `D000531`: every constructibility,
+quasi-compactness, properness, openness, closedness, and conditional
+universal-openness clause of Theorem 1.1 is now represented. No official
+Stacks tag has been invented. Issue `I000048`, concerning the printed
+coprimality variable in Corollary 1.5, remains active for the next patch.
+
+Direct serial 1,100-dpi review covers printed page 227 of the 24-page NUMDAM
+authority. That authority remains 2,461,968 bytes with SHA-256
+`266EEF77BF7BA34A75895ED69ACBFE791A2958DD52C2837D75AB29DF0D2F714A`.
+Both semantic validators pass with no errors at 21,662 labels, 21,437
+official-tag joins, 71 controlled topics, 4,198 topic candidates, 537
+append-only decisions, 1,253 source units, 1,612 term links, and 49 source
+issues, of which eight remain active; there are zero review units. The topic,
+decision, issue, map, Stacks-label, topic-candidate, reviewed-topic-map,
+index-validation, and map-validation files have SHA-256
+`B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0`,
+`1EF1E46133DFF0552DD8CA6656E3526F9522FBB6A76674A3DB1DD36A48B00D65`,
+`4CEF8D162D468A5B50AEBB914455412389C36BEAA2108F7370056E56A588B09D`,
+`7D8CDDA467410CCD1881654B80EA6A03962367C8389429A4EEC3FFC7F929091E`,
+`C24EE1855C99BAB423AB3E7EE85C963A0A13629C7FB89C56F6EFA78327149D2F`,
+`B49D7B3C69BE09F7CF6B792F33231C65FCEBEC19D60F4B574FA8573BE8C1C877`,
+`26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46`,
+`F6D88CE630A0DC343A979A44D9BD4C45BD28206B6E85D399B7890ED954AB2C0F`,
+and `BF3FA040CCA78DFA249FF6CC3DD1FB9EA4E68B9ACB88B9B3682FB006ADA5DD7F`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`.
+
+A bibliography-complete serial build followed by stable TeX passes produces
+a 254-page More on Morphisms chapter of 2,361,773 bytes with SHA-256
+`EC2883EB1402AD8A93E585BD96DE3E7AD5A2F9C360BDAE773C62D60AD890DB5C`.
+The added source range creates no overfull or underfull horizontal box.
+Final serial 1,100-dpi inspection of page 93 finds no clipping, collision,
+malformed formula, unresolved marker, placeholder, or unreadable text. The
+next sequential cursor is the corrected prime-to-`n` consequence and
+dimension clause of Corollary 1.5, followed by Remark 1.6, Corollaries 1.7
+and 1.8, Remark 1.9, and Corollary 1.10 on printed pages 228--230.
