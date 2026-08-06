@@ -1768,3 +1768,79 @@ unreadable text. The next sequential cursor is Expose 232, Section 5,
 "An existence theorem for the Picard scheme," beginning on printed page 154
 (physical PDF page 13). Its Remark 5.2 is subject to the linked correction
 on printed page 303 and must not be imported from the original page alone.
+
+The next sequential patch integrates Expose 232, Section 5, “Proof of the
+main existence theorem,” on printed pages 154--157 (physical PDF pages
+13--16). New Section `moduli-section-positive-picard-locus` extracts the
+reusable cohomological and quotient construction. Lemma
+`moduli-lemma-positive-picard-open` defines the positive Picard locus by
+fibrewise higher-cohomology vanishing and nonzero sections, proves that it is
+open and compatible with arbitrary base change, proves stability under the
+very-ample class, and proves that its negative translates cover the entire
+Picard space.
+
+Lemma `moduli-lemma-positive-divisor-cover` proves that the positive divisor
+locus is a scheme and that its Abel map to the positive Picard locus is
+smooth, projective, and surjective. It decomposes both sides by the Hilbert
+polynomial of the divisor and constructs on every fixed-polynomial
+quasi-projective piece the projective flat equivalence relation used in the
+classical proof. Remark `moduli-remark-classical-positive-divisor-quotient`
+separates the modern bootstrap conclusion, which is an algebraic space, from
+the stronger classical effective-quotient theorem which produces the
+quasi-projective scheme pieces. This records precisely the additional input
+behind the classical scheme statement rather than deriving it incorrectly
+from algebraic-space representability.
+
+Remark `moduli-remark-corrected-picard-existence-boundary` applies both
+linked corrections to Remark 5.2. The printed general Picard-scheme
+existence conjecture is false, while the current theorem gives an algebraic
+space under the universal global-functions hypothesis. The printed complete
+local example also omitted the indispensable algebraically closed
+residue-field condition. The remark identifies the geometric obstruction:
+without integral fibres the divisor locus can be only an open of the
+projective-bundle construction and the resulting relation can be flat but
+nonproper. Remark `moduli-remark-picard-before-abelian-schemes` retains the
+methodological independence from prior Jacobian and abelian-scheme
+constructions while classifying the dated reducible-curve and
+compactification claims as historical status rather than current
+nonexistence assertions.
+
+Decisions `D000494` through `D000502` disposition every section equation and
+remark and supersede `D000241` through `D000245` without deleting their
+earlier scope judgments. Existing issue `I000006` is resolved by the
+erratum-controlled nonintegral-boundary remark. New issue `I000040` records
+the omitted residue-field hypothesis and its exact linked correction.
+
+Direct 1,200-dpi review covers all four source pages and the linked correction
+page. The NUMDAM authority remains 2,006,109 bytes with SHA-256
+`C84DCA027FAC1AF187B0B9F6C8D2E2CB95B43CE201815B2073577FD4425919F0`.
+The linked erratum remains 134,758 bytes with SHA-256
+`CBC9B1A1967B448A5087D97B4C102B028F1D1BD99A22A95BD4FE2F1F6147F344`.
+
+Both semantic validators pass with no errors at 21,633 labels, 21,437
+official-tag joins, 67 controlled topics, 4,083 topic candidates, 502
+append-only decisions, 1,253 source units, 1,612 term links, and 40 source
+issues, of which seven remain active. The topic, decision, issue, map,
+Stacks-label, topic-candidate, and reviewed-topic-map ledgers have SHA-256
+`22F2D3FA1C01A0CD79E8C39AC7DA15FA12BC85C3AAB327D3991EEDC14F2041B1`,
+`341ADB43AD0AEA20ADE0B51B0575A57207EDFD8C501BE96673E8A5A607B4E04B`,
+`774E7507207792B6DFBA0E8DB4ECE305E2918F9A01C9AE61D57BF8B7DA6698E6`,
+`A1A5CA430DC13E0EC55BCD15605489412F808A5974BC9B3677D341056C767CB4`,
+`8EA7090D9CDC9CC3BC005EE131AB0C090B4093625002F37BFFB64F37DBE8E661`,
+`CEAE09CE4895F43F93B0008E3EC2E11383225F59DE805237EE420BB12C21084C`,
+and `26265ABCAB29DE8DF4139EA831155EBAAFB235BC5AFC874508FD7904EDCD86E5`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`;
+the eight new semantic labels deliberately have no invented official tags.
+
+A bibliography-complete serial build followed by stable auxiliary passes
+produces a 50-page Moduli chapter of 730,760 bytes with SHA-256
+`73ADA29BBE6BBED60B1457F5C1BD000EE714640ED41ADE6C8A0D7AEECF8FAA96`.
+The added text creates no overfull or underfull horizontal box. The standalone
+build retains the one pre-existing unresolved external cross-chapter
+reference now appearing on page 38. Final 1,200-dpi inspection of Moduli
+pages 34--37 finds no clipping, collision, malformed formula, or unreadable
+text. The next sequential cursor is Expose 232, Section 6, “Relative
+existence theorems,” on printed pages 157--161 (physical PDF pages 16--20).
+Its Remarks 6.6 through 6.8 have three separate linked corrections on printed
+page 303 and must be reviewed together with the source pages.

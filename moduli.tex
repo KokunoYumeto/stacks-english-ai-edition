@@ -3204,6 +3204,236 @@ printed source.
 
 
 
+\section{The positive Picard locus and the classical quotient construction}
+\label{section-positive-picard-locus}
+
+\noindent
+Let $S$ be a locally Noetherian scheme and let $f : X \to S$ be projective
+and flat with geometrically integral fibres. Fix an $f$-very ample invertible
+module $\mathcal{O}_X(1)$ and denote its class in the Picard functor by $\xi$.
+For $T \to S$, say that a class $\alpha \in \Picardfunctor_{X/S}(T)$ is
+\emph{positive} if, fppf locally on $T$, it is represented by an invertible
+module $\mathcal{L}$ such that for every geometric point $\bar t$ of $T$
+we have
+\begin{align*}
+H^i(X_{\bar t}, \mathcal{L}_{\bar t}(n)) & = 0
+&& \text{for all }i > 0\text{ and }n \geq 0, \\
+H^0(X_{\bar t}, \mathcal{L}_{\bar t}(n)) & \neq 0
+&& \text{for all }n \geq 0.
+\end{align*}
+This condition is unchanged if $\mathcal{L}$ is tensored by the pullback of
+an invertible module on $T$. Thus it defines a subfunctor
+$\mathit{Pic}^+_{X/S}$ of $\Picardfunctor_{X/S}$.
+
+\begin{lemma}
+\label{lemma-positive-picard-open}
+\begin{reference}
+\cite[Expos\'e 232, Section 5, pp. 154--155]{FGA}.
+\end{reference}
+The functor $\mathit{Pic}^+_{X/S}$ is represented by an open subspace of
+$\Picardfunctor_{X/S}$. Its formation commutes with arbitrary base change,
+it satisfies
+$$
+\mathit{Pic}^+_{X/S} + \xi \subset \mathit{Pic}^+_{X/S},
+$$
+and
+\begin{equation}
+\label{equation-picard-covered-positive-translates}
+\Picardfunctor_{X/S} =
+\bigcup_{n \geq 0}(\mathit{Pic}^+_{X/S} - n\xi).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The condition is formulated on geometric fibres, so it commutes with base
+change and is fppf local on the base. To prove openness, pull back to a
+locally Noetherian scheme $T$ over the Picard functor and then pass to an
+fppf cover on which the class is represented by an invertible module
+$\mathcal{L}$ on $X_T$.
+
+For every $n$, the complex
+$$
+K_n = Rf_{T, *}\mathcal{L}(n)
+$$
+is perfect and commutes with arbitrary base change by Derived Categories of
+Schemes, Lemma
+\ref{perfect-lemma-flat-proper-perfect-direct-image-general}. The dimensions
+of its fibre cohomology are upper semi-continuous by Lemma
+\ref{perfect-lemma-jump-loci-geometric}. At a positive geometric point
+$\bar t$, relative Serre vanishing, Cohomology of Schemes, Lemma
+\ref{coherent-lemma-kill-by-twisting}, gives an integer $N$ and a
+neighbourhood on which the higher fibre cohomology vanishes for every
+$n \geq N$. For the finitely many $0 \leq n < N$, upper semi-continuity
+gives the same conclusion after shrinking again.
+
+On this neighbourhood the dimension of $H^0$ equals the Euler
+characteristic and is therefore locally constant by Lemma
+\ref{perfect-lemma-chi-locally-constant-geometric}. Shrink once more so that
+it is positive for $0 \leq n \leq N$. If $n > N$, multiply a nonzero
+section of $\mathcal{L}_{\bar t}(N)$ by a nonzero section of
+$\mathcal{O}_{X_{\bar t}}(n - N)$. The product is nonzero because
+$X_{\bar t}$ is integral. Thus positivity is open. The opens obtained on an
+fppf cover descend, proving the first assertion.
+
+If $\mathcal{L}$ is positive, then $\mathcal{L}(1)$ is positive, which proves
+the inclusion under translation. Finally, for any invertible module
+$\mathcal{M}$ on a geometric fibre, Serre vanishing and global generation
+show that $\mathcal{M}(n)$ is positive for all sufficiently large $n$.
+Consequently every geometric point of the Picard functor belongs to one of
+the opens on the right hand side of
+(\ref{equation-picard-covered-positive-translates}), proving the equality.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-positive-divisor-cover}
+\begin{reference}
+\cite[Expos\'e 232, Section 5, pp. 154--155]{FGA}.
+\end{reference}
+Set
+$$
+\mathit{Div}^+_{X/S} =
+\mathit{Div}_{X/S} \times_{\Picardfunctor_{X/S}}
+\mathit{Pic}^+_{X/S}.
+$$
+Then $\mathit{Div}^+_{X/S}$ is an open subscheme of
+$\mathit{Div}_{X/S}$ and the Abel transformation restricts to a smooth,
+projective, and surjective morphism
+\begin{equation}
+\label{equation-positive-divisors-to-positive-picard}
+q : \mathit{Div}^+_{X/S} \longrightarrow \mathit{Pic}^+_{X/S}.
+\end{equation}
+There are open and closed decompositions
+$$
+\mathit{Div}^+_{X/S} = \coprod_P \mathit{Div}^{+,P}_{X/S},
+\qquad
+\mathit{Pic}^+_{X/S} = \coprod_P \mathit{Pic}^{+,P}_{X/S},
+$$
+where $P$ is the Hilbert polynomial of the divisor and
+$\mathit{Pic}^{+,P}_{X/S}$ is the image of
+$\mathit{Div}^{+,P}_{X/S}$. Each $\mathit{Div}^{+,P}_{X/S}$ is
+quasi-projective over $S$, and
+$$
+R^P = \mathit{Div}^{+,P}_{X/S}
+\times_{\mathit{Pic}^{+,P}_{X/S}}
+\mathit{Div}^{+,P}_{X/S}
+$$
+is a scheme defining an equivalence relation whose two projections are
+smooth and projective.
+\end{lemma}
+
+\begin{proof}
+The first assertion follows from Lemma \ref{lemma-positive-picard-open} and
+Proposition \ref{proposition-divisors-projective-flat}. Fppf locally on a
+scheme mapping to $\mathit{Pic}^+_{X/S}$, the Picard class is represented by
+an invertible module $\mathcal{L}$. Positivity and cohomology and base change
+show that $f_*\mathcal{L}$ is finite locally free of positive rank and
+commutes with base change. Lemma
+\ref{lemma-universal-module-of-sections} identifies
+$\mathcal{Q}_{\mathcal{L}}$ with $(f_*\mathcal{L})^\vee$. Theorem
+\ref{theorem-complete-linear-system} therefore identifies the pullback of
+$q$ with the projective space bundle
+$\mathbf{P}((f_*\mathcal{L})^\vee)$. This proves that $q$ is smooth,
+projective, and surjective.
+
+The decomposition of the divisor scheme and its quasi-projectivity were
+proved in Proposition \ref{proposition-divisors-projective-flat}. All
+divisors above the same Picard class have the same Hilbert polynomial: on a
+geometric fibre the exact sequence of a divisor gives
+$$
+P_{\mathcal{O}_D} =
+P_{\mathcal{O}_X} - P_{\mathcal{L}^{-1}}.
+$$
+Since $q$ is open, its fixed-polynomial images are open; since they are
+pairwise disjoint and cover, they are also closed. The projections from
+$R^P$ are base changes of $q$ and hence are smooth and projective. Finally,
+the separatedness of the Picard functor, Lemma
+\ref{lemma-pic-functor-uniqueness-part}, identifies $R^P$ with a closed
+subspace of the scheme
+$\mathit{Div}^{+,P}_{X/S} \times_S \mathit{Div}^{+,P}_{X/S}$.
+Thus $R^P$ is a scheme.
+\end{proof}
+
+\begin{remark}[The extra scheme-quotient step]
+\label{remark-classical-positive-divisor-quotient}
+\begin{reference}
+\cite[Expos\'e 232, Section 5 and Remark 5.1, pp. 154--155]{FGA}.
+\end{reference}
+Lemma \ref{lemma-positive-divisor-cover} gives an fppf presentation of every
+$\mathit{Pic}^{+,P}_{X/S}$ by a quasi-projective scheme with a projective
+flat equivalence relation. Bootstrap, Theorem
+\ref{bootstrap-theorem-final-bootstrap}, proves from this presentation that
+the quotient is an algebraic space. The classical proof invokes the stronger
+effective-quotient theorem for a projective flat equivalence relation on a
+quasi-projective scheme. That theorem makes
+$$
+\mathit{Pic}^{+,P}_{X/S} = \mathit{Div}^{+,P}_{X/S}/R^P
+$$
+a quasi-projective scheme, compatibly with base change. The disjoint union
+over $P$, followed by the translate covering
+(\ref{equation-picard-covered-positive-translates}), is the additional step
+which gives the scheme assertion in Remark
+\ref{remark-classical-projective-picard-theorem}. It must not be inferred
+from algebraic-space bootstrap alone.
+
+The source describes this as Matsusaka's construction. Its original
+effective quotient can also be constructed from the Hilbert scheme; older
+constructions used Chow coordinates.
+\end{remark}
+
+\begin{remark}[The corrected nonintegral boundary]
+\label{remark-corrected-picard-existence-boundary}
+\begin{reference}
+\cite[Expos\'e 232, Remark 5.2, pp. 155--156;
+correction to Expos\'e 232, p. 303]{FGA}.
+\end{reference}
+The printed remark conjectures that properness, flatness, and the
+base-change-stable equality
+$$
+\mathcal{O}_T \xrightarrow{\sim} f_{T, *}\mathcal{O}_{X_T}
+$$
+should suffice for existence of the Picard \emph{scheme}. The linked
+correction says explicitly that this conjecture is false; it adds that
+Mumford's methods prove a slightly weaker theorem. The same correction
+inserts the omitted hypothesis ``with algebraically closed residue field''
+in the printed example involving a complete local base and says that
+Mumford's counterexample makes that restriction indispensable.
+
+There is no conflict with Quot, Proposition
+\ref{quot-proposition-pic-functor}: under the displayed universal
+global-functions hypothesis the current theorem represents the Picard
+functor by an algebraic space, not necessarily by a scheme. The divisor
+argument also locates the obstruction. Without geometrically integral
+fibres, fibrewise nonzero sections cutting out relative effective Cartier
+divisors form only an open subfunctor of the projective bundle in Theorem
+\ref{theorem-complete-linear-system}. The resulting equivalence relation can
+be flat without being proper, so the classical scheme-quotient step above no
+longer applies.
+\end{remark}
+
+\begin{remark}[Picard spaces before abelian schemes]
+\label{remark-picard-before-abelian-schemes}
+\begin{reference}
+\cite[Expos\'e 232, Remarks 5.3 and 5.4, pp. 156--157]{FGA}.
+\end{reference}
+The construction above does not use a prior construction of Jacobians or the
+theory of abelian schemes. This order is useful: Picard spaces exist in
+situations where the answer is not an abelian scheme, as already happens for
+generalized Jacobians of singular curves, and Picard theory in turn supplies
+the natural setting for duality of abelian schemes.
+
+For a projective flat family of curves with geometrically integral fibres,
+the classical theorem applies even when the family is not smooth. The
+separate smooth-curve construction is discussed in Picard Schemes of Curves,
+Proposition \ref{pic-proposition-pic-curve}. Statements in the 1962 remark
+about then-unknown reducible-fibre cases and compactifications are historical
+status reports, not current nonexistence assertions; the modern
+algebraic-space theorem is Quot, Proposition
+\ref{quot-proposition-pic-functor}.
+\end{remark}
+
+
+
+
 \section{Properties of the Picard stack}
 \label{section-picard-stack}
 
