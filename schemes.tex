@@ -91,6 +91,9 @@ as follows.
 
 \begin{definition}
 \label{definition-locally-ringed-space}
+\begin{reference}
+\cite[Chapter II, \S 1, no. 32, p. 225]{FAC}
+\end{reference}
 Locally ringed spaces.
 \begin{enumerate}
 \item A {\it locally ringed space $(X, \mathcal{O}_X)$}
@@ -171,6 +174,9 @@ Here is a less abstract statement.
 
 \begin{lemma}
 \label{lemma-isomorphism-locally-ringed}
+\begin{reference}
+\cite[Chapter II, \S 1, no. 32, p. 225]{FAC}
+\end{reference}
 \begin{slogan}
 An isomorphism of ringed spaces between locally ringed spaces is an
 isomorphism of locally ringed spaces.
@@ -845,6 +851,8 @@ Omitted.
 \begin{reference}
 A reference for this fact is \cite[II, Err 1, Prop. 1.8.1]{EGA}
 where it is attributed to J. Tate.
+The coordinate-function criterion in the classical reduced setting
+appears in \cite[Chapter II, \S 1, no. 32, Proposition 5, p. 225]{FAC}.
 \end{reference}
 Let $X$ be a locally ringed space.
 Let $Y$ be an affine scheme.
@@ -2265,7 +2273,7 @@ scheme structure.
 \begin{remark}
 \label{remark-reduced-induced-locally-closed}
 \begin{reference}
-\cite[Chapter II, \S 1, no. 31, pp. 224--225]{FAC}
+\cite[Chapter II, \S 1, nos. 31--32, pp. 224--225]{FAC}
 \end{reference}
 Let $X$ be a scheme. Let $T \subset X$ be a locally closed subset.
 In this situation we sometimes also use the phrase
@@ -2290,6 +2298,27 @@ $$
 Indeed, the Hilbert Nullstellensatz identifies $I(F)$ as the radical ideal
 defining $F$, and the assertion follows from
 Example \ref{example-closed-immersion-affines} after restriction to $U$.
+
+Under the same hypotheses, let $T \subset k^n$ and $T' \subset k^m$ be
+locally closed algebraic sets, each endowed with its reduced induced scheme
+structure. A map $\varphi : T \to T'$ of classical point sets is regular in
+the classical sense if and only if it is induced by a morphism of schemes.
+Indeed, its coordinate functions determine a unique morphism
+$T \to \mathbf{A}^m_k$ by Lemma \ref{lemma-morphism-into-affine}.
+The scheme $T$ is Jacobson by
+Morphisms, Lemma \ref{morphisms-lemma-ubiquity-Jacobson-schemes}; hence its
+closed points are dense in every closed subset. The prescribed image on
+closed points therefore forces the morphism to factor through $T'$; after
+restriction to an open in which $T'$ is closed, the reduced factorization is
+Lemma \ref{lemma-map-into-reduction}. Conversely, a morphism pulls back local
+sections. Thus the classical coordinate criterion is the reduced locally
+closed case of the affine-scheme mapping property. A bijection is biregular
+exactly when the associated scheme morphism is an isomorphism, by
+Lemma \ref{lemma-isomorphism-locally-ringed}.
+
+Here ``regular'' describes a map preserving regular functions. It must not
+be confused with a regular morphism in the sense of
+More on Morphisms, Definition \ref{more-morphisms-definition-regular}.
 \end{remark}
 
 \begin{lemma}
