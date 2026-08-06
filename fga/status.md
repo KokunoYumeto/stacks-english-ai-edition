@@ -927,3 +927,33 @@ no unresolved reference or overfull box, contains no placeholder, and passes
 1,200-dpi inspection.  The next substantive cursor remains Expose 212,
 Theorem 6.1: audit and, if valid, independently reconstruct the residual
 scheme and corrected quasi-projectivity argument before moving to Section 7.
+
+The forty-ninth source patch completes that direct-source audit and fails
+closed on the residual rather than manufacturing the omitted proof.  Printed
+page 113 gives no quasi-section construction: it only says that suitable
+quasi-sections reduce Theorem 6.1 to the finite-flat case.  The linked erratum
+narrows quasi-projectivity to actual equivalence relations but supplies no
+argument.  As an independent later check, Lieblich's 2006 Remark 3.3.2 calls
+the corresponding general relative quasi-projective-scheme conclusion a
+tempting expectation and gives the argument only over a field or when a finite
+flat quasi-projective cover is already available.  The public Stacks remark now
+cites that comparison explicitly.
+
+Open source issue `I000013` records the diplomatic source and erratum hashes,
+the missing quasi-section step, the later comparison evidence, and the exact
+fail-close condition.  Decisions `D000373`--`D000375` supersede the affected
+Theorem 6.1, scholium, and section decisions: the proper open algebraic-space
+quotient and all effectivity conclusions remain proved; the global scheme and
+relative quasi-projectivity claims remain unasserted pending a theorem under
+the exact relative hypotheses.  No historical row was changed or removed.
+
+Both semantic validators pass with no errors at 21,557 labels, 375 append-only
+decisions, 1,253 source units, 1,612 term links, and 13 recorded source issues,
+of which seven remain active.  A bibliography-complete build and two final TeX
+passes produce a 53-page More on Morphisms of Stacks chapter of 747,776 bytes
+with SHA-256
+`D8187426A0B6C71B8811B37A42AAA5CE3D3D25DCCD66475552F8DD0AE80D9106`.
+The changed reader paragraph has no unresolved citation or new box warning and
+passes 1,200-dpi inspection on page 45.  The next substantive cursor is Expose
+212, Section 7 and Proposition 7.1; issue `I000013` remains an explicit global
+residual rather than an implicit completion claim.
