@@ -4806,6 +4806,191 @@ Since a monomorphism is separated, Morphisms of Spaces, Lemma
 Thus the restricted tests imply the unrestricted tests already used above.
 \end{proof}
 
+\begin{theorem}[Dual abelian schemes]
+\label{theorem-dual-abelian-scheme}
+\begin{reference}
+\cite[Expos\'e 236, Theorem 3.3(iii), p. 238]{FGA};
+see also \cite{AVar}.
+\end{reference}
+Let $C \to S$ be an abelian scheme. The identity component of its rigidified
+Picard functor is represented by an abelian scheme
+$$
+C^\vee = (\Picardfunctor_{C/S})^0,
+$$
+called the dual abelian scheme. There is a normalized Poincar\'e invertible
+module $\mathcal{P}_C$ on $C \times_S C^\vee$. It induces a canonical
+isomorphism
+$$
+C \longrightarrow (C^\vee)^\vee.
+$$
+These constructions commute with arbitrary base change. A homomorphism
+$a : C \to D$ has a dual homomorphism
+$$
+a^\vee : D^\vee \longrightarrow C^\vee
+$$
+given by pullback of invertible modules, and biduality identifies
+$a^{\vee\vee}$ with $a$.
+\end{theorem}
+
+\begin{proof}
+This is the duality theorem for abelian schemes. We recall its construction.
+The relative Picard scheme exists because an abelian scheme is projective,
+smooth, and has geometrically integral fibres. Rigidification along the zero
+section removes the ambiguity of tensoring by an invertible module from the
+base and produces the universal normalized Poincar\'e module. The theorem of
+the cube shows that the fibrewise algebraically trivial locus is a proper
+smooth group scheme and that the Poincar\'e module is additive in each
+variable. Thus this locus is the abelian scheme $C^\vee$.
+
+Viewing the same module in the other variable gives the displayed
+homomorphism $C \to (C^\vee)^\vee$. On every geometric fibre this is the
+classical biduality isomorphism for an abelian variety. A morphism between
+abelian schemes which is an isomorphism on every geometric fibre is an
+isomorphism, proving relative biduality. Pullback of the Poincar\'e module
+gives the dual of a homomorphism. The universal rigidified construction proves
+both bidual functoriality and compatibility with base change.
+\end{proof}
+
+\begin{lemma}[Factorization through the canonical subgroup]
+\label{lemma-abelian-map-factors-canonical-picard}
+Let $P \to S$ be a commutative group scheme locally of finite type over a
+locally Noetherian scheme. Suppose that $A \subset P$ is a canonical abelian
+subscheme. If $D \to S$ is an abelian scheme, then every homomorphism
+$D \to P$ factors uniquely through $A$.
+\end{lemma}
+
+\begin{proof}
+On a geometric fibre, the image of the connected scheme $D_{\overline{s}}$
+is contained in the identity component of $P_{\overline{s}}$. Since
+$D_{\overline{s}}$ is reduced and $A_{\overline{s}}$ is the reduced closed
+subscheme with that underlying space, the homomorphism factors through
+$A_{\overline{s}}$.
+
+It remains to exclude an infinitesimal failure of factorization. This is local
+on $S$. Induct through square-zero thickenings from the reduction of a
+Noetherian affine open. At each step, the obstruction is a homomorphism from
+the abelian scheme on the reduced base to the vector group associated to the
+conormal module of $A$ in $P$. Such a homomorphism is zero: a morphism from a
+proper geometrically connected scheme to an affine vector group is constant,
+and a group homomorphism takes the identity to zero. The fibrewise
+factorization therefore lifts through every infinitesimal layer. Uniqueness
+follows because $A \to P$ is a monomorphism.
+\end{proof}
+
+\begin{proposition}[Maps to torsors and the Picard scheme]
+\label{proposition-maps-to-abelian-torsors}
+Let $f : X \to S$ be proper and flat, with
+$\mathcal{O}_S \to f_*\mathcal{O}_X$ an isomorphism, and suppose that
+$P = \Picardfunctor_{X/S}$ is represented by a scheme. Let $C \to S$ be an
+abelian scheme. There is a natural bijection between
+\begin{enumerate}
+\item isomorphism classes of pairs $(Q, v)$, where $Q \to S$ is a
+$C$-torsor and $v : X \to Q$ is an $S$-morphism, and
+\item homomorphisms of group schemes $C^\vee \to P$.
+\end{enumerate}
+The bijection is functorial in $C$ and commutes with arbitrary base change.
+\end{proposition}
+
+\begin{proof}
+Let $(Q, v)$ be as in (1). Fppf locally on $S$, choose a section of $Q$ and
+use it to identify $Q$ with $C$. Pulling the normalized Poincar\'e module back
+by
+$$
+v \times 1 : X \times_S C^\vee \longrightarrow C \times_S C^\vee
+$$
+gives a family of invertible modules on $X$, parametrized by $C^\vee$. The
+biextension identities for the Poincar\'e module make the resulting morphism
+$C^\vee \to P$ a homomorphism. Changing the chosen section translates
+$v : X \to C$. Translation changes the pulled-back Poincar\'e module only by
+an invertible module from $C^\vee$, which is invisible in the relative Picard
+functor. The local homomorphisms therefore descend and depend only on
+$(Q, v)$.
+
+Conversely, let $\varphi : C^\vee \to P$ be a homomorphism. The Picard stack
+supplies fppf locally a representing invertible module $\mathcal{M}$ on
+$X \times_S C^\vee$, normalized over the zero of $C^\vee$. The morphism
+$X \to S$ has geometrically connected fibres and is surjective by the
+global-functions hypothesis and Stein factorization, More on Morphisms,
+Theorem \ref{more-morphisms-theorem-stein-factorization-Noetherian}. It is
+therefore an fppf covering, so after an fppf base change we may choose a
+section $x_0$ of $X$. For a variable point $x$ of $X$, the class
+$$
+\mathcal{M}|_{\{x\} \times C^\vee}
+\otimes
+\left(\mathcal{M}|_{\{x_0\} \times C^\vee}\right)^{-1}
+$$
+lies in the identity component because the fibres of $X$ are connected. It
+therefore belongs to $(C^\vee)^\vee = C$ and defines a morphism
+$v_{x_0} : X \to C$. If $x_1$ is another local section, then
+$$
+v_{x_1}(x) = v_{x_0}(x) - v_{x_0}(x_1).
+$$
+Consequently the trivial $C$-torsors carrying the maps $v_{x_0}$ glue by
+translations to a $C$-torsor $Q$, and the maps glue to $v : X \to Q$.
+Changing $\mathcal{M}$ by an invertible module from $C^\vee$ cancels in the
+displayed quotient, so the construction depends only on $\varphi$.
+
+The two constructions are inverse after an fppf base change on which the
+torsor and the required invertible modules are trivialized; hence they are
+inverse over $S$ by descent. Every operation used is compatible with base
+change, and the Poincar\'e biextension makes the correspondence functorial in
+$C$.
+\end{proof}
+
+\begin{theorem}[The relative Albanese torsor]
+\label{theorem-relative-albanese-torsor}
+\begin{reference}
+\cite[Expos\'e 236, Theorem 3.3(iii), pp. 237--238]{FGA}.
+\end{reference}
+In the situation of Proposition
+\ref{proposition-canonical-abelian-picard-parameter}, suppose that the
+canonical abelian Picard subscheme $A \subset P$ exists. Put
+$$
+\operatorname{Alb}^0(X/S) = B = A^\vee.
+$$
+There is a canonical $B$-torsor $\operatorname{Alb}^1(X/S)$ and a canonical
+morphism
+$$
+u : X \longrightarrow \operatorname{Alb}^1(X/S)
+$$
+with the following universal property. If $C \to S$ is an abelian scheme,
+$Q$ is a $C$-torsor, and $v : X \to Q$ is an $S$-morphism, then there is a
+unique homomorphism $h : B \to C$ such that $(Q, v)$ is the pushout of
+$(\operatorname{Alb}^1(X/S), u)$ along $h$. Equivalently, there is a unique
+$h$-equivariant morphism of torsors
+$$
+\operatorname{Alb}^1(X/S) \longrightarrow Q
+$$
+whose composition with $u$ is $v$. The formation of $B$, its torsor, and $u$
+commutes with arbitrary base change.
+\end{theorem}
+
+\begin{proof}
+By biduality, $B^\vee = A$. Apply Proposition
+\ref{proposition-maps-to-abelian-torsors} to the inclusion
+$$
+B^\vee = A \longrightarrow P.
+$$
+The corresponding pair is, by definition,
+$(\operatorname{Alb}^1(X/S), u)$.
+
+Now let $(Q, v)$ be a pair under an abelian scheme $C$. The same proposition
+associates to it a homomorphism
+$$
+\varphi : C^\vee \longrightarrow P.
+$$
+Lemma \ref{lemma-abelian-map-factors-canonical-picard} gives a unique
+factorization $C^\vee \to A \to P$. Duality turns its first arrow into the
+unique homomorphism $h : B = A^\vee \to C$. Functoriality of the
+torsor--Picard correspondence identifies $(Q, v)$ with the pushout along $h$.
+This proves the universal property.
+
+The canonical subgroup $A$ commutes with base change by Lemma
+\ref{lemma-canonical-abelian-picard-unique}. Dual abelian schemes, Poincar\'e
+modules, the torsor--Picard correspondence, and pushout of torsors all commute
+with base change. Hence so do $B$, $\operatorname{Alb}^1(X/S)$, and $u$.
+\end{proof}
+
 
 
 \section{Properties of the Picard stack}

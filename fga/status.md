@@ -3212,3 +3212,56 @@ Neither new source range creates an overfull or underfull box. Final serial
 no clipping, collision, malformed formula, unresolved new reference,
 placeholder, or unreadable text. The next sequential cursor is Theorem
 3.3(iii) on printed page 238.
+
+Theorem 3.3(iii) is now integrated, completing all three parts of Theorem
+3.3. Moduli, Theorem `moduli-theorem-dual-abelian-scheme` records relative
+duality, the normalized Poincare invertible module, biduality, dual maps, and
+arbitrary base change for abelian schemes. Lemma
+`moduli-lemma-abelian-map-factors-canonical-picard` proves that every
+homomorphism from an abelian scheme to the relative Picard scheme factors
+uniquely through its canonical abelian subgroup. Proposition
+`moduli-proposition-maps-to-abelian-torsors` gives the functorial Poincare
+correspondence between maps from `X` to torsors under an abelian scheme `C`
+and homomorphisms from `C^vee` to the Picard scheme; the proof makes the local
+section and descent step explicit and uses Stein factorization to justify the
+geometrically connected fppf cover. Theorem
+`moduli-theorem-relative-albanese-torsor` then defines
+`Alb^0(X/S)=A^vee`, its canonical torsor `Alb^1(X/S)`, and the map from `X`,
+and proves the universal pushout property and compatibility with arbitrary
+base change by factorization through `A` and duality.
+
+Decision `D000561` supersedes `D000560` and records the complete integration
+of parts (i), (ii), and (iii). Direct serial 1,100-dpi review covers printed
+pages 237--238 of the 24-page NUMDAM authority, including the universal
+property and its proof on page 238. That authority remains 2,461,968 bytes
+with SHA-256
+`266EEF77BF7BA34A75895ED69ACBFE791A2958DD52C2837D75AB29DF0D2F714A`.
+
+Both semantic validators pass with no errors at 21,709 labels, 21,437
+official-tag joins, 71 controlled topics, 4,257 topic candidates, 561
+append-only decisions, 1,253 source units, 1,612 term links, and 59 source
+issues, of which eight remain active; there are zero review units. The topic,
+decision, issue, map, Stacks-label, topic-candidate, reviewed-topic-map,
+index-validation, and map-validation files have SHA-256
+`B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0`,
+`3039478D56358C4EB9AB6C3B5E3A44A607F7CDA65D8B86F28C5F0DC80A464E0D`,
+`ECE83F139D6E457796604266A142691BAD503DD937B38ED05BCCD0E80B378CDE`,
+`2DD3B7443D3E7E6D75E9B1211316E8C1A1BAC2E18DBA94F1A5FD54677C5F95B7`,
+`67188EAE462EF891794FF6A65BB1338ECBE53CEF56B273DE0B52DCE926FA51A7`,
+`EB680A7EB07F557150A13634D1835234E7AE8F1A37097C289EBECB71FAF68CC8`,
+`26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46`,
+`EA7FCE4580F7D02596B7BD6AAB7B761D803732917C17F863BF811875D85D18F0`,
+and `4266A2D65F7AC966DAFCB84EEA44E53BA38EEE0FA191800280350769BB1A99AC`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`;
+no official tag was invented for the four new semantic statements.
+
+Three stable serial TeX passes produce a 68-page Moduli chapter of 847,831
+bytes with SHA-256
+`769365A5DA45D63F18CE5F79C97BBAB75CEF90AF458A93283454C98FE3C74650`.
+The new source range creates no overfull or underfull box and its Stein
+factorization reference resolves to More on Morphisms, Theorem 54.4. Final
+serial 1,100-dpi inspection of Moduli pages 52--55 finds no clipping,
+collision, malformed formula, unresolved new reference, placeholder, or
+unreadable text. The next sequential cursor is Remarks 3.4 on printed pages
+238--239.
