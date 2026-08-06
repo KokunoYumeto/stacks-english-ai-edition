@@ -8937,6 +8937,32 @@ fibrewise component group. Thus the image of $x'$ has $p$-power order, so
 $x' \in G^\rho$, as desired.
 \end{proof}
 
+\begin{example}[An open primary locus whose structure morphism is not open]
+\label{example-primary-component-open-not-universally-open}
+Let $k$ be a field of characteristic $p>0$, let $R=k[[t]]$, and put
+$S=\Spec(R)$. The ideal
+$$
+(tx,x^p-x)\subset R[x]
+$$
+is a Hopf ideal for the additive group law. Hence
+$$
+G=\Spec\bigl(R[x]/(tx,x^p-x)\bigr)
+$$
+is a commutative finite group scheme over $S$.
+
+The generic fibre of $G$ is the trivial group, while the special fibre is
+the constant group $\mathbf Z/p\mathbf Z$. Thus $G^0=e(S)$ and
+$G^\rho=G$. Every geometric identity component is trivial and in particular
+contains no subgroup isomorphic to $\mathbf G_a$. Moreover, for every $n$
+prime to $p$, multiplication by $n$ is an automorphism of $G$.
+
+Nevertheless, $G\to S$ is not open. Indeed, $D(x)\subset G$ is a nonempty
+open subset contained in the special fibre, and its image is the closed point
+of $S$. Thus openness of the primary component locus in $G$, even together
+with prime-to-characteristic power-map openness and the absence of additive
+identity components, does not imply that $G^\rho\to S$ is open.
+\end{example}
+
 \begin{lemma}
 \label{lemma-power-kernel-density-universally-open}
 \begin{reference}

@@ -4130,6 +4130,78 @@ it is \'etale by More on Morphisms of Spaces, Lemma
 \ref{spaces-more-morphisms-lemma-etale-formally-etale}.
 \end{proof}
 
+\begin{lemma}[Prime-to-characteristic openness for Picard spaces]
+\label{corollary-picard-prime-to-characteristic-openness}
+\begin{reference}
+\cite[Expos\'e 236, corollary following Lemma 2.6,
+pp. 233--234]{FGA}.
+\end{reference}
+Let $B$ be a locally Noetherian scheme and let $X\to B$ be a proper flat
+morphism of schemes. Suppose that the fppf Picard functor is represented by a
+scheme
+$$
+P=\Picardfunctor_{X/B}.
+$$
+Assume that for every geometric point $\overline{b}\to B$, the identity
+component $P_{\overline{b}}^0$ contains no subgroup scheme isomorphic to
+$\mathbf G_{a,\overline{b}}$. Then $P\to B$ is universally open along the
+prime-to-residue-characteristic component locus $P^\sigma$, and hence along
+$P^0$.
+
+Assume, in addition, that there is a $p$, equal to $1$ or to a prime number,
+which is the characteristic exponent of every residue field of $B$. If $P^0$
+is closed in $P$, then $P^\sigma$, with its reduced induced closed subscheme
+structure, is universally open over $B$. In the same equal-characteristic
+situation, $P^\rho$ is open in $P$.
+\end{lemma}
+
+\begin{proof}
+Let $x\in P^\sigma$ lie over $b\in B$. By the definition of $P^\sigma$, we
+can choose $n>1$, invertible in $\kappa(b)$, such that
+$[n^h](x)\in P_b^0$ for some $h\geq 0$. Here, if $x\in P_b^0$, we may choose
+any $n>1$ invertible in $\kappa(b)$. After replacing $B$ by a neighbourhood
+of $b$, the integer $n$ is invertible on $B$.
+
+Theorem \ref{theorem-picard-multiplication-etale} shows that
+$[n]:P\to P$ is \'etale, hence universally open. More on Morphisms, Lemma
+\ref{more-morphisms-lemma-prime-to-characteristic-torsion-dense} verifies the
+geometric fibrewise-density hypothesis of Lemma
+\ref{more-morphisms-lemma-power-kernel-density-universally-open}, even though
+the residue characteristic may vary, because $n$ is invertible on the chosen
+neighbourhood. The latter lemma shows that $P\to B$ is universally open along
+$$
+\bigcup_{r\geq 0}[n^r]^{-1}(P^0),
+$$
+which contains $x$. This proves universal openness along $P^\sigma$.
+
+Under the additional equal-characteristic and closedness hypotheses, the
+assertion about $P^\sigma$ is More on Morphisms, Lemma
+\ref{more-morphisms-lemma-prime-to-characteristic-locus-universally-open}.
+Finally every $[n]$ with $(n,p)=1$ is \'etale by Theorem
+\ref{theorem-picard-multiplication-etale}. Openness of $P^\rho$ follows from
+More on Morphisms, Lemma
+\ref{more-morphisms-lemma-primary-component-locus-open}.
+\end{proof}
+
+\begin{remark}[Boundary of the primary-component conclusion]
+\label{remark-picard-primary-component-openness-boundary}
+The cited corollary additionally says that, in equal characteristic,
+$P^\rho\to B$ is universally open. The two general results invoked there do
+not prove this: Corollary
+\ref{more-morphisms-corollary-prime-to-characteristic-component-openness}
+gives universal openness along $P^\sigma$, whereas More on Morphisms, Lemma
+\ref{more-morphisms-lemma-primary-component-locus-open} only makes $P^\rho$
+open as a subset of $P$.
+
+More on Morphisms, Example
+\ref{more-morphisms-example-primary-component-open-not-universally-open}
+shows that this implication is false for general commutative group schemes
+even when all prime-to-characteristic power maps are automorphisms and all
+geometric identity components contain no additive subgroup. Thus the stronger
+Picard-specific assertion requires an additional argument or hypothesis and
+is not inferred from the cited group-scheme results here.
+\end{remark}
+
 \begin{example}[A relative Picard space which is not a scheme]
 \label{example-picard-conic-not-scheme}
 \begin{reference}

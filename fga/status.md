@@ -2718,3 +2718,65 @@ box. Direct serial 1,100-dpi inspection covers printed page 233 of the
 it finds no clipping, collision, malformed formula, unresolved new reference,
 placeholder, or unreadable text. The next sequential cursor is the unnamed
 corollary following Lemma 2.6 on printed pages 233--234.
+
+The unnamed corollary following Lemma 2.6 is now integrated to the exact
+boundary supported by its cited results. Moduli, Lemma
+`moduli-corollary-picard-prime-to-characteristic-openness` combines the
+prime-to-characteristic etaleness of multiplication with fibrewise torsion
+density to prove that the represented Picard scheme is universally open
+along the variable-residue-characteristic locus `P^sigma`, and hence along
+`P^0`. When the characteristic exponent is constant and `P^0` is closed, it
+also proves that reduced `P^sigma` is universally open over the base and that
+the primary locus `P^rho` is open inside the Picard scheme.
+
+The source additionally asserts in equal characteristic that `P^rho` itself
+maps universally openly to the base. Its cited Corollary 1.5 supplies
+universal openness only along `P^sigma`, while Theorem 1.1(iv) supplies only
+openness of `P^rho` inside the group scheme. More on Morphisms, Example
+`more-morphisms-example-primary-component-open-not-universally-open` records
+the exact general obstruction: over `S = Spec(k[[t]])` in characteristic
+`p`, the finite additive Hopf group
+`Spec(k[[t]][x]/(tx, x^p-x))` has trivial identity components, primary locus
+equal to the whole group, and prime-to-`p` multiplication automorphisms, but
+the open subset `D(x)` maps only to the closed point of `S`. This disproves
+the cited inference for general commutative group schemes without claiming
+that the Picard-specific statement itself is false.
+
+Open source issue `I000055` therefore retains that Picard-specific universal
+openness claim pending an additional argument or sufficient hypothesis.
+Decision `D000551` supersedes `D000280` and records the unit as an existing
+weaker integration with an explicit residual, rather than repeating the
+source's unsupported inference as a Stacks theorem. Direct serial 1,100-dpi
+review covers printed page 233 of the 24-page NUMDAM authority, whose
+identity remains 2,461,968 bytes with SHA-256
+`266EEF77BF7BA34A75895ED69ACBFE791A2958DD52C2837D75AB29DF0D2F714A`.
+
+Both semantic validators pass with no errors at 21,688 labels, 21,437
+official-tag joins, 71 controlled topics, 4,224 topic candidates, 551
+append-only decisions, 1,253 source units, 1,612 term links, and 55 source
+issues, of which eight remain active; there are zero review units. The topic,
+decision, issue, map, Stacks-label, topic-candidate, reviewed-topic-map,
+index-validation, and map-validation files have SHA-256
+`B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0`,
+`CFE53A61107398F3C92042D909164ACA71371D07870758ABAE20258CEB559285`,
+`BC096FD5A46D330076821C1951D416B98E54F1E3EC10FAF7DEC0EB0B25AB25F3`,
+`2E5962B16D5CE8E658B1D0885FEE6D2B58E04D121C408A7E636CD004AB0ADFD6`,
+`07E515DAAF710B23408D3445C76F905F6F4128A24569BC41287D8119EBC4DFBD`,
+`6A7ADEFFB38D289699DA3715DF0E6BB3826B71EC240C94DC44EB918FD223A297`,
+`26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46`,
+`00925B48D11F7D06D5AFF73175B1FF14D7D6F02BE5E1D85FBA636E55211CAB67`,
+and `D5581BB2F37658BCF7CE6F3D3429330559F829CC3990F40780D24FB0446E8088`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`;
+no official tag was invented for either new label.
+
+Stable serial TeX passes produce a 60-page Moduli chapter of 802,760 bytes
+with SHA-256
+`874BA0A9B205FAB9C6A7A87A88996FA127207C84042FDD8C4E529497C356EA34`
+and a 260-page More on Morphisms chapter of 2,401,492 bytes with SHA-256
+`94A8415CF7492AEA6A29A7BBF76BF144D76DBE980003DA59DDD65B65E421FC24`.
+Neither affected source range creates an overfull or underfull horizontal
+box. Final serial 1,100-dpi inspection of Moduli page 45 and More on
+Morphisms page 93 finds no clipping, collision, malformed formula,
+unresolved new reference, placeholder, or unreadable text. The next
+sequential cursor is Corollary 2.7 on printed page 234.
