@@ -2150,3 +2150,55 @@ malformed formula, unresolved marker, placeholder, or unreadable text. The
 next sequential cursor is the corrected prime-to-`n` consequence and
 dimension clause of Corollary 1.5, followed by Remark 1.6, Corollaries 1.7
 and 1.8, Remark 1.9, and Corollary 1.10 on printed pages 228--230.
+
+The corrected Corollary 1.5 checkpoint separates the valid
+prime-to-characteristic theorem from the source's false characteristic-
+dividing density claim. Lemma
+`more-morphisms-lemma-prime-to-characteristic-torsion-dense` derives density
+of prime-to-characteristic primary torsion from the no-additive-subgroup
+hypothesis using the semi-abelian structure of the reduced identity
+component. Lemma
+`more-morphisms-lemma-identity-component-open-fibre-dimension` proves local
+constancy of fibre dimension from universal openness along the full
+identity-component locus. Lemma
+`more-morphisms-corollary-prime-to-characteristic-component-openness` then
+gives the fixed-power inverse-image result, the all-prime-to-characteristic
+openness result for `G^sigma`, and the closed-locus consequence.
+
+Decision `D000538` supersedes `D000534` and dispositions the whole corollary
+as an integrated corrected equivalent. Issue `I000048` is resolved: the
+printed phrase "residue characteristic prime to p" is typed as prime to the
+quantified exponent `n`. Issue `I000049` remains resolved by excluding
+characteristic-dividing exponents from the no-additive-subgroup density
+argument and retaining its explicit `G_m` counterexample.
+
+Direct serial 1,100-dpi review covers printed pages 227--228 of the 24-page
+NUMDAM authority. That authority remains 2,461,968 bytes with SHA-256
+`266EEF77BF7BA34A75895ED69ACBFE791A2958DD52C2837D75AB29DF0D2F714A`.
+Both semantic validators pass with no errors at 21,665 labels, 21,437
+official-tag joins, 71 controlled topics, 4,201 topic candidates, 538
+append-only decisions, 1,253 source units, 1,612 term links, and 49 source
+issues, of which seven remain active; there are zero review units. The topic,
+decision, issue, map, Stacks-label, topic-candidate, reviewed-topic-map,
+index-validation, and map-validation files have SHA-256
+`B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0`,
+`30259FDD14EF2534DA5A24DE343D147B0333C2CB12C862EFF56B683FB5CC8087`,
+`5659C5A6C5B50EB6C5EB02EBEFF58F7361A7302F3EC7FA8F966DA85536000A44`,
+`647B295FB05378A934AD7B2A072472391D42704CDBA7FAE676B86651B012C66C`,
+`49F898E4FFF6E4FB312F80745B05A6B1F6FBB2A1945583DCCD51597ADB127DD1`,
+`D3653CE651B4882C03311C24DD270A8B64B9D0716C9888EAE49E296E7FBD1901`,
+`26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46`,
+`CCC3861C2CEAC4DEC9DF44A4772364AFCA53907FEBAA6D85BDA4C87967DC7520`,
+and `37D7651664CDA3CE4E3F77239ABF44C158E2D243BEEA8A4691C6A009867A3FC7`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`.
+
+A bibliography-complete serial build followed by stable TeX passes produces
+a 256-page More on Morphisms chapter of 2,372,575 bytes with SHA-256
+`EFE33590D23A4027B4EEF0DF13ACBA55540E2AB2E2D357C9FD7464B81F80BC45`.
+The added source range creates no overfull or underfull horizontal box.
+Final serial 1,100-dpi inspection of pages 93--95 finds no clipping,
+collision, malformed formula, unresolved marker, placeholder, or unreadable
+text. The next sequential cursor is Remark 1.6 on printed pages 228--229,
+followed by Corollaries 1.7 and 1.8, Remark 1.9, and Corollary 1.10 through
+printed page 230.

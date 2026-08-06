@@ -8971,6 +8971,150 @@ Thus $g'(y')$ is a generalization of $x$ in $G^\sigma$ above $y'$. This proves
 that generalizations lift and hence proves the lemma.
 \end{proof}
 
+\begin{lemma}
+\label{lemma-prime-to-characteristic-torsion-dense}
+\begin{reference}
+Corrected prime-to-characteristic form of
+\cite[Expos\'e 236, Corollary 1.5, pp. 227--228]{FGA}.
+\end{reference}
+Let $k$ be an algebraically closed field of characteristic exponent $p$.
+Let $G$ be a commutative group scheme locally of finite type over $k$, and
+let $n > 1$ be prime to $p$. Assume that the identity component $G^0$
+contains no subgroup scheme isomorphic to $\mathbf{G}_a$. For $h \geq 0$, set
+$$
+G^{(n^h)}=[n^h]^{-1}(G^0).
+$$
+Then
+$$
+\bigcup_{h \geq 0}|\Ker([n^h])|
+$$
+is dense in $\bigcup_{h \geq 0}G^{(n^h)}$.
+\end{lemma}
+
+\begin{proof}
+The reduction $H=(G^0)_{red}$ is a smooth connected subgroup scheme, see
+Groupoids, Lemmas \ref{groupoids-lemma-reduced-subgroup-scheme-perfect},
+\ref{groupoids-lemma-reduced-group-scheme-prefect-field-characteristic-p-smooth},
+and \ref{groupoids-lemma-group-scheme-characteristic-zero-smooth}. The
+classical structure theorem for connected commutative algebraic groups says
+that the absence of an additive subgroup makes $H$ an extension of an
+abelian variety by a torus. The $n$-primary torsion is dense in such a group.
+Indeed, this is clear for a torus, it is the standard degree argument for an
+abelian variety, and it passes to an extension because multiplication by
+$n^r$ is surjective on the torus. Thus
+$$
+\bigcup_{h \geq 0}|\Ker([n^h] : H \to H)|
+$$
+is dense in $H$, and hence in $G^0$.
+
+Let $C$ be a connected component occurring in
+$\bigcup_{h \geq 0}G^{(n^h)}$. Since $k$ is algebraically closed, choose
+$g \in C(k)$. For some $r$ we have $[n^r](g) \in G^0(k)$. Multiplication by
+$n^r$ on $G^0$ is surjective by Groupoids, Lemma
+\ref{groupoids-lemma-connected-group-power-surjective}. Hence, after
+multiplying $g$ by a point of $G^0(k)$, we may assume that
+$[n^r](g)=e$. Translation by $g$ now shows that the $n$-primary torsion is
+dense in $C$. This proves the density assertion component by component.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-identity-component-open-fibre-dimension}
+Let $S$ be a locally Noetherian scheme and let $G \to S$ be a group scheme
+locally of finite type. If $G \to S$ is universally open along the
+identity-component locus $G^0$, then the function
+$$
+S \longrightarrow \{0,1,2,\ldots\}, \qquad
+s \longmapsto \dim(G_s)
+$$
+is locally constant.
+\end{lemma}
+
+\begin{proof}
+The assertion is local on $S$. After shrinking around a point of $S$, choose
+a quasi-compact open $U \subset G$ containing the identity section. The
+morphism $U \to S$ is of finite presentation, and
+$\dim(U_s)=\dim(G_s)$ for every $s$: an open neighbourhood of the identity in
+a group over a field has the dimension of the group. Thus the level sets of
+the displayed function are locally constructible by
+Lemma \ref{lemma-dimension-fibres-constructible}.
+
+It remains to show that the dimension is unchanged under specialization.
+By Properties, Lemma
+\ref{properties-lemma-locally-Noetherian-specialization-dvr}, invariance of
+fibre dimension under field extension, and the universal hypothesis, we may
+base change to the spectrum of a discrete valuation ring. Write $y$ and
+$\eta$ for its closed and generic points, and put $d=\dim(G_y)$. The open
+$$
+\{x \in G \mid \dim_x(G_{f(x)}) \leq d\}
+$$
+contains the identity of $G_y$, see Morphisms, Lemma
+\ref{morphisms-lemma-openness-bounded-dimension-fibres}. It therefore contains
+the identity of $G_\eta$, and hence $\dim(G_\eta) \leq d$.
+
+For the reverse inequality, choose an irreducible component $C$ of $G^0_y$
+of dimension $d$, with generic point $c$. Universal openness along $G^0$
+implies that $c$ lies in the closure of the generic fibre: otherwise the
+complement of that closure would be an open neighbourhood of $c$ whose image
+does not contain $\eta$. Hence $C$ is contained in an irreducible closed
+subscheme $Z \subset G$ which dominates the trait and whose generic fibre is
+an irreducible component of $G_\eta$. The scheme $Z$ is integral and flat
+over the discrete valuation ring. The dimension formula, Algebra, Lemma
+\ref{algebra-lemma-dimension-formula}, gives
+$$
+\dim(C)=\dim(Z_\eta) \leq \dim(G_\eta).
+$$
+Consequently $\dim(G_y)=\dim(G_\eta)$. The locally constructible level sets
+are therefore stable under specialization and generalization, so they are
+open and closed by Topology, Lemma
+\ref{topology-lemma-characterize-closed-Noetherian}. This proves local
+constancy.
+\end{proof}
+
+\begin{lemma}
+\label{corollary-prime-to-characteristic-component-openness}
+\begin{reference}
+Corrected form of \cite[Expos\'e 236, Corollary 1.5, pp. 227--228]{FGA}.
+\end{reference}
+Let $S$ be a locally Noetherian scheme and let $G \to S$ be a commutative
+group scheme locally of finite type. Assume there is a $p$, equal to $1$ or
+to a prime number, which is the characteristic exponent of every residue
+field of $S$. Let $n > 1$ be prime to $p$. Assume
+\begin{enumerate}
+\item $[n] : G \to G$ is universally open, and
+\item for every algebraically closed field $k$ over a point of $S$, the
+identity component of $G_k$ contains no subgroup isomorphic to
+$\mathbf{G}_{a,k}$.
+\end{enumerate}
+Then $G \to S$ is universally open along
+$$
+\bigcup_{h \geq 0}G^{(n^h)}, \qquad
+G^{(n^h)}=[n^h]^{-1}(G^0),
+$$
+and the function $s \mapsto \dim(G_s)$ is locally constant.
+
+If condition (1) holds for every $n > 1$ prime to $p$, then $G \to S$ is
+universally open along $G^\sigma$. If, in addition, $G^0$ is closed in $G$,
+then $G^\sigma$ with its reduced induced closed subscheme structure is
+universally open over $S$.
+\end{lemma}
+
+\begin{proof}
+Lemma \ref{lemma-prime-to-characteristic-torsion-dense} verifies the
+geometric fibrewise-density hypothesis of
+Lemma \ref{lemma-power-kernel-density-universally-open}. That lemma proves
+universal openness along the displayed union. Since $G^0$ is contained in
+the union, local constancy of the fibre dimension follows from
+Lemma \ref{lemma-identity-component-open-fibre-dimension}.
+
+If the hypothesis holds for every $n$ prime to $p$, then
+$$
+G^\sigma=
+\bigcup_{\substack{n>1 \\ (n,p)=1}}\ \bigcup_{h \geq 0}G^{(n^h)}.
+$$
+Thus $G \to S$ is universally open along $G^\sigma$. The final assertion is
+Lemma \ref{lemma-prime-to-characteristic-locus-universally-open}.
+\end{proof}
+
 
 
 
