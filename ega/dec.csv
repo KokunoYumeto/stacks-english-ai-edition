@@ -1,0 +1,5 @@
+decision_id,subject_id,action,state,evidence,supersedes,rationale
+D000001,ega.all,admit_discovery_surface,active,R172,,Complete English text is useful for discovery but is not canonical authority
+D000002,ega.all,gate_claims_by_french_authority,active,French page receipts,,Canonical claims require admitted diplomatic French evidence
+D000003,ega.all,prohibit_invented_official_tags,active,a04446e57ec1fbc252a871afcec7752fb2807b14,,New labels remain local until upstream assigns tags
+D000004,ega.all,record_feedback_append_only,active,GitHub review history,,Maintainer feedback must be integrable without changing stable source IDs

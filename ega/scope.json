@@ -1,0 +1,43 @@
+{
+  "schema": "ega-stacks-scaffold-scope-v1",
+  "status": "discovery_scaffold",
+  "claim": "public working scaffold for EGA-to-Stacks comparison",
+  "not_claimed": [
+    "complete EGA integration",
+    "upstream acceptance",
+    "formal verification",
+    "official Stacks tags for new labels",
+    "canonical authority of the English discovery text"
+  ],
+  "corpus": "EGA 0-IV",
+  "stacks_upstream": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "branch": "codex/ega-scaffold",
+  "inputs": {
+    "english_discovery": {
+      "manifest": "R172",
+      "files": 127,
+      "bytes": 7283317,
+      "tree_sha256": "F5EBDCAAA7C5B4A426085B1C696E821B2F74B9E5E58582664955AD37E8C2BC59",
+      "role": "complete discovery text; not canonical authority"
+    },
+    "french_authority": {
+      "status": "active page-by-page production",
+      "snapshot": "EGA II printed p.9 sealed locally; printed p.10 next",
+      "role": "diplomatic textual authority and claim-admission gate"
+    },
+    "incremental_notes": {
+      "bytes": 340356,
+      "sha256": "8C4E31D85658F6A8D82A809FB7FC4D6B89B7A02B9F9FBF5B7C0480FDD32D78FF",
+      "role": "source evidence to normalize; not a completed integration"
+    }
+  },
+  "rules": {
+    "edition_roots": "read_only",
+    "official_tags": "never invent or modify",
+    "source_ids": "stable across mapping and feedback revisions",
+    "decisions": "append_only with explicit supersession",
+    "feedback": "append_only and independently evidenced",
+    "promotion": "direct evidence plus bounded mathematical review",
+    "remote_claims": "a pushed branch is a scaffold checkpoint, not corpus completion"
+  }
+}
