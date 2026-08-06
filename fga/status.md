@@ -3876,3 +3876,67 @@ and
 03C5A361F1E301984C8F36B317AA6021FC9EACADA75795929C226196F54A7670.
 The next and final sequential source cursor is the linked supplement and
 erratum to Expose 236 on printed pages 303--307.
+
+The first bounded supplement checkpoint now integrates the three corrections
+on printed page 303 and results (i)--(v), together with the proof architecture
+on pages 306--307. Moduli, Section
+moduli-section-picard-finiteness-numerical contains finite-type pullback along
+a proper surjection, boundedness detected after pullback, Mumford's restricted
+fixed-polynomial criterion under S2, finite-type restriction to an ample
+divisor, the two-nonleading-coefficient criterion for integral projective
+fibres, nonzero power maps, and finite type of the torsion-component locus.
+The restricted Mumford lemma is placed before the ample-divisor theorem, and
+the full two-coefficient theorem follows it; this records the noncircular
+dependency order stated in the source's proof comments.
+
+Decision D000573 supersedes reviewed-gap decision D000300 and records this as
+a partial integration through (v). Issue I000065 records and resolves the
+source's unstated low-dimensional reading of coefficient a2: coefficients
+whose displayed degree would be negative are omitted. Results (vi)--(ix),
+including the Neron--Severi bounds, finite curve test, numerical criteria, and
+open-and-closed theorem, remain the active sequential cursor.
+
+The linked six-page authority is 475,371 bytes with SHA-256
+D8FFB36337F12CE15F9E15E917174A4C5EDCBD28C5B0CD9F0A501098DB8BD61B.
+Its first PDF page is the NUMDAM cover, so printed pages 303--307 are PDF
+pages 2--6. Direct serial 1,100-dpi inspection of all five printed pages finds
+the corrections, statements, and proof comments legible and source-aligned;
+their rendered images have SHA-256, in printed-page order,
+C9A3BCA4E77746125C0F9D56F54CD66208DA8C3D46292EF198C13DC37C686B27,
+989FFAF208C042C683B6BF1275684353D010E42F88C508B1BC79D86FD9917DC5,
+3EF8BAC0F34EE670F36337D5B749C31183B0CE9F99D43E4EC688B6A20F9726D7,
+728AA7594B572C64D1F3FF871CFFDB8BA8442D959702F6D24688A5931D120148,
+and
+E055FBB5A5DAC941EB3F0C119606A50A7DEC8CB206ACABB02358A06090C9EC43.
+
+Both semantic validators pass with no errors at 21,743 labels, 21,437
+official-tag joins, 71 controlled topics, 4,309 topic candidates, 573
+append-only decisions, 1,253 source units, 1,612 term links, and 65 source
+issues, of which nine remain active; there are zero review units. The topic,
+decision, issue, map, Stacks-label, topic-candidate, reviewed-topic-map,
+index-validation, and map-validation files have SHA-256
+B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0,
+5375E711BBD5E23552B51163B3A25AE0CF724C289EABECAAFF91FD03462F5E82,
+9C46805184CABC9E375A0DADA3ADD5F0C5B8DED7A247EFF5AB8900B0D2906363,
+DFE7CF6F8E64039CC61FCEB63E46B28C57CD91938220689B292FF2513DD3D825,
+C82454DCA0CAEF5650E2EFFCFDC4C7187CEBA3F6C2CEEF69890988775F717018,
+DC9BA1B53DA03398280C0028A128767C8E39DCE3B33CAE450388FAE1BBD62674,
+26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46,
+1686B6F9533EEA28505376A1F2F3B8BC6CA0A0688915EE18781167AAF0BF7D1C,
+and
+41E0F2345668CECF0692948BEF001C5F71DFC6F135BE5705F1E8EDEFF53B5AB9.
+The official tags/tags file remains unmodified at SHA-256
+C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF;
+no official Stacks tag was invented for any new label.
+
+Three reproducible serial TeX passes produce an 80-page Moduli chapter of
+927,454 bytes with SHA-256
+4920BA97828F73A5AA2BA8C18AC3421679453D535C23D91194BA00A02B0EE29A.
+The build has no overfull or underfull box and no unresolved new internal
+reference. Final serial 1,100-dpi inspection of Moduli pages 65--67 finds no
+clipping, collision, malformed formula, unresolved new reference,
+placeholder, or unreadable text; their rendered page images have SHA-256
+15015573476A5794AF38C3578BB7F6806208209D6E663BFAB5CF1CCA89F6B78B,
+5A756DBBBC926208267BEEEA080FC22766FECC6995533817F87A1F6D9EED12A2,
+and
+08BB27014FA031C7E15ACE834A69FF143901B3779B2C5CA5BCE40AB46D97035B.
