@@ -1178,6 +1178,18 @@ Sheaves, Lemma \ref{sheaves-lemma-extend-off-basis-module}.
 
 \begin{definition}
 \label{definition-structure-sheaf}
+\begin{reference}
+\cite[Chapter III, \S 1, no. 51, construction of the structure sheaf,
+pp. 243--244]{FAC}
+\end{reference}
+\begin{history}
+The cited source takes scalar-invariant regular functions on inverse images
+of opens in the punctured affine cone. It describes the local functions as
+fractions $P/Q$ of homogeneous polynomials of the same degree. On a standard
+open, the construction below encodes precisely this degree-zero condition in
+the ring $S_{(f)}$ and then extends the resulting sheaf from the standard-open
+basis to every open of the homogeneous prime spectrum.
+\end{history}
 Let $S$ be a graded ring.
 \begin{enumerate}
 \item The {\it structure sheaf $\mathcal{O}_{\text{Proj}(S)}$ of the
@@ -1284,6 +1296,16 @@ corresponds to $D(g) \subset \Spec(S_{(f)})$.
 
 \begin{lemma}
 \label{lemma-proj-scheme}
+\begin{reference}
+\cite[Chapter III, \S 1, no. 51, Proposition 1, p. 244]{FAC}
+\end{reference}
+\begin{history}
+The cited proposition verifies the classical variety axioms for projective
+space by its affine coordinate charts and the closed graphs on chart
+overlaps. The statement below proves the scheme property for $\operatorname{Proj}$
+of every graded ring by identifying each standard open with
+$\operatorname{Spec}(S_{(f)})$; separatedness is proved separately.
+\end{history}
 Let $S$ be a graded ring.
 The locally ringed space $\text{Proj}(S)$ is a scheme.
 The standard opens $D_{+}(f)$ are affine opens.
@@ -2836,6 +2858,17 @@ just $\Gamma(Y, \mathcal{L})$.
 
 \begin{definition}
 \label{definition-projective-space}
+\begin{reference}
+\cite[Chapter III, \S 1, no. 51, definition of projective space,
+p. 243]{FAC}
+\end{reference}
+\begin{history}
+The cited source writes $\mathbf{P}_n(K)$ for scalar orbits in
+$K^{n + 1} \setminus \{0\}$. The definition below constructs the full scheme
+as the homogeneous spectrum of a polynomial ring over $\mathbf{Z}$ and then
+base changes to an arbitrary scheme. The orbit description recovers its
+classical $K$-points, not its entire scheme-valued point functor.
+\end{history}
 The scheme
 $\mathbf{P}^n_{\mathbf{Z}} = \text{Proj}(\mathbf{Z}[T_0, \ldots, T_n])$
 is called {\it projective $n$-space over $\mathbf{Z}$}.
@@ -2877,6 +2910,17 @@ Lemma \ref{lemma-glue-relative-proj-twists}; details omitted.
 
 \begin{lemma}
 \label{lemma-standard-covering-projective-space}
+\begin{reference}
+\cite[Chapter III, \S 1, no. 51 and Proposition 1,
+pp. 243--244]{FAC}
+\end{reference}
+\begin{history}
+The source denotes the chart where the $i$th homogeneous coordinate is
+nonzero by $U_i$ and uses the ratios $t_j/t_i$, $j \neq i$, as affine
+coordinates. These are the standard opens $D_{+}(T_i)$ below. The modern
+form works over $\mathbf{Z}$, hence after base change over every scheme, and
+identifies the chart ring with the degree-zero localization.
+\end{history}
 Projective $n$-space over $\mathbf{Z}$ is covered by
 $n + 1$ standard opens
 $$
