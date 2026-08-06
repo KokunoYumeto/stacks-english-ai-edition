@@ -3805,6 +3805,143 @@ phrase ``divisor on $S$'' has to be read as ``divisor on $X$'': it is the
 regular local rings of the smooth scheme $X$ which are factorial.
 \end{proof}
 
+\begin{lemma}[The codimension two extension theorem]
+\label{lemma-pic-flat-lci-codimension-two-extension}
+\begin{reference}
+\cite[Expos\'e 236, Remark 2.2, pp. 231--232]{FGA} and
+\cite[Expos\'e XI, Corollaire 3.14]{SGA2}.
+\end{reference}
+Let $R$ be a discrete valuation ring with fraction field $K$. Let $X\to
+\Spec(R)$ be proper and flat. Assume every geometric fibre is a local complete
+intersection and is smooth at all points of codimension at most $2$. Then
+every invertible module on $X_K$ extends to an invertible module on $X$.
+\end{lemma}
+
+\begin{proof}
+The fibre hypotheses imply that the geometric fibres are normal: a local
+complete intersection is Cohen--Macaulay, hence $(S_2)$, and smoothness in
+codimension at most $2$ gives $(R_1)$. The total space $X$ is normal as well.
+Indeed, at a point of the closed fibre its local ring $A$ is a complete
+intersection by Divided Power Algebra, Lemma \ref{dpa-lemma-avramov}, and is
+therefore $(S_2)$. At a prime of height at most $1$, either one is on the
+generic fibre, where regularity follows from the fibre hypothesis, or one is
+on the closed fibre and regularity follows from Algebra, Lemma
+\ref{algebra-lemma-flat-over-regular-with-regular-fibre}. Thus $A$ is normal
+by Serre's criterion.
+
+Work componentwise. Represent an invertible module on $X_K$ by a Cartier
+divisor $D_K$, and let $D$ be its closure in $X$, viewed as a Weil divisor.
+It remains to prove that $D$ is Cartier at every point of the closed fibre.
+Fix such a point and put $A=\mathcal{O}_{X,x}$. As above, $A$ is a normal
+local complete intersection. Let $\mathfrak p\subset A$ have height at most
+$3$. If the uniformizer of $R$ is not in $\mathfrak p$, then $D$ is Cartier
+at $\mathfrak p$ because it restricts to $D_K$. If the uniformizer is in
+$\mathfrak p$, then
+$$
+\dim(A_\mathfrak p/\pi A_\mathfrak p)
+=\dim(A_\mathfrak p)-1\leq 2.
+$$
+The fibre hypothesis makes this quotient regular, and Algebra, Lemma
+\ref{algebra-lemma-flat-over-regular-with-regular-fibre} makes
+$A_\mathfrak p$ regular. Hence $D$ is Cartier at $\mathfrak p$. Divisors,
+Theorem \ref{divisors-theorem-ci-Cartier-codimension-three} now shows that
+$D$ is Cartier at $x$. Thus $\mathcal{O}_X(D)$ is the required extension.
+\end{proof}
+
+\begin{theorem}[Proper local-complete-intersection families]
+\label{theorem-picard-flat-lci-codimension-two}
+\begin{reference}
+\cite[Expos\'e 236, Remark 2.2, pp. 231--232]{FGA}.
+\end{reference}
+Let $S$ be a locally Noetherian scheme and let $f:X\to S$ be proper and flat.
+Assume every geometric fibre is a local complete intersection and is smooth
+at all points of codimension at most $2$. Suppose the fppf Picard functor is
+represented by a scheme
+$$
+P=\Picardfunctor_{X/S}.
+$$
+Then $P\to S$ is separated. Every closed subscheme $Z\subset P$ which is of
+finite type over $S$ is proper over $S$.
+\end{theorem}
+
+\begin{proof}
+The scheme $P$ is locally of finite type over $S$. The separation argument of
+Theorem \ref{theorem-picard-smooth-proper-pieces} applies without change.
+Indeed, after strict henselization the finite \'etale Stein factorization
+splits $X$ into proper flat families with geometrically integral fibres, and
+Lemma \ref{lemma-pic-functor-uniqueness-part} applies to every factor.
+
+Let $Z\subset P$ be closed and of finite type over $S$, and consider its
+valuative criterion over a discrete valuation ring $R$. After a faithfully
+flat extension which is again a discrete valuation ring, the generic Picard
+class is represented by an invertible module. Lemma
+\ref{lemma-pic-flat-lci-codimension-two-extension} extends it over the family.
+Separatedness makes the two pullbacks agree on the overlap, so the resulting
+point descends to $P(R)$ and factors through $Z$. Uniqueness follows from
+separatedness. Limits, Lemma
+\ref{limits-lemma-Noetherian-dvr-valuative-proper} proves that $Z\to S$ is
+proper.
+\end{proof}
+
+\begin{example}[The quadric-cone boundary]
+\label{example-picard-quadric-cone-boundary}
+\begin{reference}
+\cite[Expos\'e 236, Remark 2.2, pp. 231--232]{FGA}.
+\end{reference}
+Let $k$ be an algebraically closed field of characteristic different from
+$2$, let $R=k[[t]]$, and let $X\subset\mathbf P^3_R$ be defined by
+$$
+x_0x_1-x_2^2+t^2x_3^2=0.
+$$
+This is a projective flat family whose generic fibre is a smooth split
+quadric surface and whose special fibre is a normal quadric cone. Its Picard
+functor is represented by a scheme, but it has a finite type closed piece
+which is not proper over $R$.
+\end{example}
+
+\begin{proof}
+Representability follows from the projective geometrically integral-fibre
+criterion recorded in Remark
+\ref{remark-mumford-picard-scheme-boundary}.
+
+Over $K=k((t))$, put $y=x_2+tx_3$ and $z=x_2-tx_3$. The generic equation is
+$x_0x_1-yz=0$, so $X_K\cong\mathbf P^1_K\times\mathbf P^1_K$. Let
+$$
+\mathcal{L}_K=\mathcal{O}_{\mathbf P^1\times\mathbf P^1}(1,0)
+\quad\text{and}\quad
+\mathcal{H}=\mathcal{O}_X(1).
+$$
+Then $\deg(\mathcal{L}_K\cdot\mathcal{H}_K)=1$.
+
+Write $Q=X_k$. The resolution of the vertex of $Q$ is the Hirzebruch surface
+$\mathbf F_2$. Pullback on Picard groups is injective. If $C$ is the
+exceptional section and $F$ a ruling, then
+$C^2=-2$ and the pullback of $\mathcal{O}_Q(1)$ is
+$\mathcal{O}_{\mathbf F_2}(C+2F)$. A line bundle
+$\mathcal{O}_{\mathbf F_2}(aC+bF)$ in the image has degree zero on $C$,
+namely $b=2a$. Conversely, every such class is the pullback of
+$\mathcal{O}_Q(a)$. Consequently
+$$
+\Pic(Q)=\mathbf Z[\mathcal{O}_Q(1)].
+$$
+In particular, the intersection degree with $\mathcal{H}_k$ of every
+invertible module on $Q$ is even.
+
+If $\mathcal{L}_K$ extended after any dominating extension of discrete
+valuation rings, constancy of the Hilbert polynomial would make its
+intersection degree with $\mathcal{H}$ equal to $1$ on the special fibre.
+This contradicts the preceding parity calculation. Hence the corresponding
+$K$-point of the Picard scheme has no specialization, even after extending
+the valuation ring. It is isolated in the generic Picard scheme; its closure
+therefore gives a finite type closed copy of $\Spec(K)$ in the relative
+Picard scheme, and this copy is not proper over $R$.
+
+The special fibre is a hypersurface with one singular point of codimension
+$2$. Thus it is smooth in codimension at most $1$ and normal, but not smooth
+in codimension at most $2$. This proves the sharpness asserted in the cited
+remark.
+\end{proof}
+
 \begin{theorem}[The identity component over a field]
 \label{theorem-picard-identity-component-proper-normal}
 \begin{reference}

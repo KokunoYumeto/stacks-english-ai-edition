@@ -6958,6 +6958,76 @@ by Algebra, Lemma \ref{algebra-lemma-characterize-UFD-height-1}.
 
 
 
+\begin{theorem}[Grothendieck's parafactoriality theorem]
+\label{theorem-ci-parafactorial}
+\begin{reference}
+\cite[Expos\'e XI, Th\'eor\`eme 3.13(ii)]{SGA2}.
+\end{reference}
+Let $(A, \mathfrak m)$ be a Noetherian local ring which is a complete
+intersection in the sense of Divided Power Algebra, Definition
+\ref{dpa-definition-lci}. If $\dim(A)\geq 4$, then
+$$
+\Pic(\Spec(A)\setminus\{\mathfrak m\})=0.
+$$
+\end{theorem}
+
+\begin{proof}
+This is the local complete intersection case of Grothendieck's
+parafactoriality theorem. Since every invertible module over a local ring is
+free, the displayed vanishing is the Picard-group form of the cited result.
+\end{proof}
+
+\begin{theorem}[Samuel--Grothendieck]
+\label{theorem-ci-Cartier-codimension-three}
+\begin{reference}
+\cite[Expos\'e XI, Corollaire 3.14]{SGA2}.
+\end{reference}
+Let $(A, \mathfrak m)$ be a Noetherian local ring which is a complete
+intersection. Set $X=\Spec(A)$.
+\begin{enumerate}
+\item If $A$ is normal and a Weil divisor $D$ on $X$ is Cartier at every
+prime of height at most $3$, then $D$ is Cartier.
+\item If $A_\mathfrak p$ is a UFD for every prime $\mathfrak p$ of height at
+most $3$, then $A$ is a UFD.
+\item In particular, a complete intersection which is regular in codimension
+$\leq 3$ is a UFD.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+We first prove (1) by induction on $\dim(A)$. There is nothing to prove when
+$\dim(A)\leq 3$, because the hypothesis then applies at $\mathfrak m$.
+Suppose $\dim(A)\geq 4$. For every nonmaximal prime $\mathfrak p$, the ring
+$A_\mathfrak p$ is again a complete intersection by Divided Power Algebra,
+Lemma \ref{dpa-lemma-ci-good}, and the hypothesis on $D$ localizes. Induction
+therefore shows that $D$ is Cartier on
+$$
+U=X\setminus\{\mathfrak m\}.
+$$
+Theorem \ref{theorem-ci-parafactorial} says that $\Pic(U)=0$. Consequently
+$D|_U$ is the divisor of a rational function $f$. The Weil divisor
+$D-\text{div}(f)$ is supported at the closed point. Since this point has
+codimension at least $4$, it cannot occur in a Weil divisor. Thus
+$D=\text{div}(f)$, proving (1).
+
+A complete intersection is Cohen--Macaulay and hence has property $(S_2)$.
+Under the hypothesis of (2), its localizations at primes of height at most
+$1$ are regular: they are zero-dimensional fields or one-dimensional local
+normal domains. Serre's criterion for normality, Algebra, Lemma
+\ref{algebra-lemma-criterion-normal}, shows that $A$ is normal. Every Weil
+divisor is Cartier at the primes of height at most $3$ by hypothesis and
+hence Cartier by (1). Thus every height one prime of $A$ is principal, so
+$A$ is a UFD by Algebra, Lemma
+\ref{algebra-lemma-characterize-UFD-height-1}. This proves (2). Part (3)
+follows from (2) and More on Algebra, Lemma
+\ref{more-algebra-lemma-regular-local-UFD}.
+\end{proof}
+
+
+
+
+
+
 \section{More on invertible modules}
 \label{section-invertible-modules}
 

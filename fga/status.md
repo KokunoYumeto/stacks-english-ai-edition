@@ -2487,3 +2487,69 @@ none names a new label. Final serial 1,100-dpi inspection of Moduli pages
 40--41 finds no clipping, collision, malformed formula, unresolved marker,
 placeholder, or unreadable text. The next sequential cursor is Remark 2.2 on
 printed pages 231--232.
+
+Remark 2.2 is now integrated in full. Divisors, Theorem
+`divisors-theorem-ci-parafactorial` records Grothendieck's local complete
+intersection parafactoriality theorem in dimension at least four. Theorem
+`divisors-theorem-ci-Cartier-codimension-three` derives the exact
+Samuel--Grothendieck consequence: a Weil divisor on a normal local complete
+intersection which is Cartier through height three is Cartier everywhere;
+in particular, a complete intersection regular in codimension at most three
+is factorial. The primary comparison is SGA 2, Expose XI, Theorem 3.13(ii)
+and Corollary 3.14. The bounded arXiv source archive and extracted TeX used
+for that check are respectively 222,911 and 586,789 bytes with SHA-256
+`26C1C38F668A414A9A1535FC4A2EAD7C5E2CBA4BF8938DAC5CE3651DDE2A0476`
+and
+`C2F899E92A904E312B550C6452A117FF23D30AF984B2254A0961D2DF0DACD042`.
+
+Moduli, Lemma `moduli-lemma-pic-flat-lci-codimension-two-extension` applies
+that Cartier criterion to prove extension of every generic-fibre line bundle
+over a proper flat DVR family whose geometric fibres are local complete
+intersections smooth through codimension two. Theorem
+`moduli-theorem-picard-flat-lci-codimension-two` then gives separatedness of
+the represented relative Picard scheme and properness of each finite-type
+closed subscheme. Example `moduli-example-picard-quadric-cone-boundary`
+proves the hypothesis sharp: for
+`x_0 x_1 - x_2^2 + t^2 x_3^2 = 0`, the generic split quadric has a ruling
+class of hyperplane-intersection degree one, whereas every line bundle on
+the normal special quadric cone has even degree. Thus that class has no
+specialization after any dominating DVR extension and yields a finite-type
+closed piece of the relative Picard scheme which is not proper.
+
+Decision `D000545` supersedes `D000275` and dispositions the remark as an
+existing equivalent with source-and-Stacks integration. Direct serial
+1,100-dpi review covers printed pages 231--232 of the 24-page NUMDAM
+authority. That authority remains 2,461,968 bytes with SHA-256
+`266EEF77BF7BA34A75895ED69ACBFE791A2958DD52C2837D75AB29DF0D2F714A`.
+
+Both semantic validators pass with no errors at 21,682 labels, 21,437
+official-tag joins, 71 controlled topics, 4,217 topic candidates, 545
+append-only decisions, 1,253 source units, 1,612 term links, and 53 source
+issues, of which seven remain active; there are zero review units. The topic,
+decision, issue, map, Stacks-label, topic-candidate, reviewed-topic-map,
+index-validation, and map-validation files have SHA-256
+`B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0`,
+`F5955D91944C2EBE10E5D53F1BAD2B661541572FCC5B23EB00AA65A19A4EE38E`,
+`307FD2AAB0EF5C94FC6F07F118C1EC6D6995E9AB919C0D1D8A519359037A6274`,
+`FBE24C2DA2F73E9214C252884200BAD9E6B88DC91C952B3A7059D1E366144AFD`,
+`2354ABE5E0B9221274324C1486EE6C99A69EFA58D408A5C4B3990B9800852168`,
+`26DA2E3BD92948309271DC9B52807DA3F7CEEA22A3BD066D60CF020B153FB307`,
+`26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46`,
+`9C7C64A16A0B35388AD24633E95981403F90F82C30968B8E2D0F94344714D95E`,
+and `F65A56BA3EEDC28733E955952D51F31988CEA7D01E7E2BF63445AC2257429EE1`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`;
+no official tag was invented for the five new labels.
+
+Stable serial TeX passes produce a 95-page Divisors chapter of 1,105,186
+bytes with SHA-256
+`6EF0ACEA4D9DB118B69E8605613D81FC67942E59DA3311757E171CD014EDD187`
+and a 58-page Moduli chapter of 787,341 bytes with SHA-256
+`B94F2D7458F23002DFB7E56E0FDE411CD88ACE3E2BB687AAB598F1600C2B6A1E`.
+Neither affected source range creates an overfull or underfull horizontal
+box. Final serial 1,100-dpi inspection of Divisors pages 67--68 and Moduli
+pages 41--42 finds no clipping, collision, malformed formula, or unreadable
+text. The isolated renders leave only the expected Divided Power Algebra
+cross-references unresolved because that unrelated chapter's auxiliary file
+was not built; every new same-book and Divisors-to-Moduli reference resolves.
+The next sequential cursor is Corollary 2.3 on printed page 232.
