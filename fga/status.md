@@ -2616,3 +2616,54 @@ box. Final serial 1,100-dpi inspection of More on Morphisms pages 92 and 171
 and Moduli page 43 finds no clipping, collision, malformed formula,
 unresolved new reference, placeholder, or unreadable text. The next
 sequential cursor is Corollary 2.4 on printed page 232.
+
+Corollary 2.4 is now integrated as a direct consequence of the stronger
+proper-pieces theorem. The reference on Moduli, Theorem
+`moduli-theorem-picard-smooth-proper-pieces` now names both Theorem 2.1(i)
+and Corollary 2.4: in a disjoint-union decomposition of the Picard scheme,
+each finite-type summand is open and closed and therefore is one of the
+finite-type closed subschemes which that theorem proves proper.
+
+Remark `moduli-remark-picard-proper-pieces-boundary` preserves the source's
+following qualification. The local-complete-intersection theorem gives the
+same conclusion under the weaker codimension-two smoothness hypothesis. The
+quadric-cone family shows that geometrically normal fibres alone do not make
+every finite-type closed Picard piece proper. Its obstructed generic ruling
+class is `(1,0)` in the Neron--Severi group `Z^2`, hence has infinite order
+and lies outside the torsion-component locus. The counterexample therefore
+does not answer the narrower question which the cited source leaves open:
+whether finite-type Picard tau must be proper for a proper normal family.
+
+Decision `D000548` supersedes `D000277` and dispositions the corollary as
+covered by an existing stronger theorem together with its exact boundary.
+Direct serial 1,100-dpi review covers printed page 232 of the 24-page NUMDAM
+authority. That authority remains 2,461,968 bytes with SHA-256
+`266EEF77BF7BA34A75895ED69ACBFE791A2958DD52C2837D75AB29DF0D2F714A`.
+
+Both semantic validators pass with no errors at 21,684 labels, 21,437
+official-tag joins, 71 controlled topics, 4,220 topic candidates, 548
+append-only decisions, 1,253 source units, 1,612 term links, and 53 source
+issues, of which seven remain active; there are zero review units. The topic,
+decision, issue, map, Stacks-label, topic-candidate, reviewed-topic-map,
+index-validation, and map-validation files have SHA-256
+`B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0`,
+`CE0BC20BEA4FFA0F885F55113E70BF1A81665B5F79B17C8E60719460F6CB09D8`,
+`307FD2AAB0EF5C94FC6F07F118C1EC6D6995E9AB919C0D1D8A519359037A6274`,
+`DD043FFB47105B6BC2D75B95D95D07A9FE0A90676D7E1978927E20C1E3E918F1`,
+`5A4348E1D43F1D4BE96A13D85B3572B4150F2F1AE7BD98EF1A57B3A3CDDDB533`,
+`F91CF02923271EC2101543A346069F2AD9D6C4F27900B3E02FC4EB16B5143D36`,
+`26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46`,
+`8DEA395DB3EA95B07492F0344CDE872985EDAD09BDC6325FC0F77469710E6B25`,
+and `BE66C172DFA6C0350C55051BB45717865DD7D11BB850424DEFE3937BC386F5A3`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`;
+no official tag was invented for the new remark.
+
+Stable serial TeX passes produce a 59-page Moduli chapter of 793,305 bytes
+with SHA-256
+`0487D7343F17D0AFEA05870CA3674FDFB745C51771C6BC4C164ABD8EC802E552`.
+The affected source range creates no overfull or underfull horizontal box.
+Final serial 1,100-dpi inspection of Moduli pages 42--43 finds no clipping,
+collision, malformed formula, unresolved new reference, placeholder, or
+unreadable text. The next sequential cursor is Theorem 2.5 on printed page
+233.

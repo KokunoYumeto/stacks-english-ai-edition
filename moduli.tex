@@ -3756,7 +3756,8 @@ surjectivity.
 \begin{theorem}[Proper smooth families]
 \label{theorem-picard-smooth-proper-pieces}
 \begin{reference}
-\cite[Expos\'e 236, Theorem 2.1(i), p. 231]{FGA}.
+\cite[Expos\'e 236, Theorem 2.1(i) and Corollary 2.4,
+pp. 231--232]{FGA}.
 \end{reference}
 Let $S$ be a locally Noetherian scheme and let $f:X\to S$ be proper and
 smooth. Suppose that the fppf Picard functor is represented by a scheme
@@ -3941,6 +3942,34 @@ $2$. Thus it is smooth in codimension at most $1$ and normal, but not smooth
 in codimension at most $2$. This proves the sharpness asserted in the cited
 remark.
 \end{proof}
+
+\begin{remark}[Boundary of the proper-pieces theorem]
+\label{remark-picard-proper-pieces-boundary}
+\begin{reference}
+\cite[Expos\'e 236, Corollary 2.4 and the following comment,
+p. 232]{FGA}.
+\end{reference}
+In Theorem \ref{theorem-picard-smooth-proper-pieces}, suppose that
+$$
+P=\coprod_i P^{(i)}
+$$
+and every $P^{(i)}$ is of finite type over $S$. Each $P^{(i)}$ is open and
+closed in $P$, so the theorem makes it proper over $S$. Theorem
+\ref{theorem-picard-flat-lci-codimension-two} gives the same conclusion under
+its weaker local-complete-intersection fibre hypotheses.
+
+Example \ref{example-picard-quadric-cone-boundary} shows that geometrically
+normal fibres alone do not suffice for this conclusion. The nonproper point
+in that example is represented on the generic split quadric by
+$\mathcal{O}(1,0)$. Its class has infinite order in
+$$
+\mathop{\rm NS}(\mathbf P^1\times\mathbf P^1)=\mathbf Z^2,
+$$
+so it does not belong to $P^\tau$. Consequently the example does not answer
+the narrower question left open in the cited source: whether $P^\tau$ must
+be proper for a proper normal family when it is of finite type over the
+base.
+\end{remark}
 
 \begin{theorem}[The identity component over a field]
 \label{theorem-picard-identity-component-proper-normal}
