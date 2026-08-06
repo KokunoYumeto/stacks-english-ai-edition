@@ -3940,3 +3940,57 @@ placeholder, or unreadable text; their rendered page images have SHA-256
 5A756DBBBC926208267BEEEA080FC22766FECC6995533817F87A1F6D9EED12A2,
 and
 08BB27014FA031C7E15ACE834A69FF143901B3779B2C5CA5BCE40AB46D97035B.
+
+The linked supplement and erratum to Expose 236 are now integrated through
+the final printed cursor, page 307. Decision D000574 supersedes D000573 and
+records completion of all three corrections and all nine numbered results.
+The completed section adds uniform Neron--Severi finite-generation, rank, and
+torsion bounds; a finite integral-curve test for bounded Picard families;
+equivalent Euler-characteristic, curve-degree, ampleness, and Hilbert-
+polynomial criteria for tau-equivalence; the relative open-and-closed theorem
+for the tau locus; and an explicit summary of the supplement's proof
+architecture. The proper-pullback and ample-divisor restriction statements
+also record the source's field-level affineness assertions. No source remains
+after this cursor within the bounded FGA corpus.
+
+Both semantic validators pass with no errors at 21,748 labels, 21,437
+official-tag joins, 71 controlled topics, 4,317 topic candidates, 574
+append-only decisions, 1,253 source units, 1,612 term links, and 65 source
+issues, of which nine remain active; there are zero review units. Topic
+coverage is 51 direct, three partial, fourteen broad, and three no-direct.
+The topic, decision, issue, map, Stacks-label, topic-candidate, reviewed-topic-
+map, index-validation, and map-validation files have SHA-256
+D69591B2884C9137BBBAA2C7D815499B4EACBBA0BD4980AF3EB678656B4B3A1E,
+E278C361450D358E5F671977F0DAE1BD73594EF7A820043C04BEEBBDF969977D,
+9C46805184CABC9E375A0DADA3ADD5F0C5B8DED7A247EFF5AB8900B0D2906363,
+C5759DD9A94B53D39891585674228E249F9A971B7944B720C39A25538F877469,
+5049151093A6DE256AE7ACCFA21DDD333C91E7AE2E6662B50444C8885853F70A,
+7AE9E48B032E3BD7505D0B78524CABF27EFCD03FCD2C62BD43BA4060002767B1,
+56AC16FFEF0DAF7CF2D35EE786FA93D1202D1EFDDC4ADF6066A9767C69E081D4,
+71B11C82D26A61A603A74E226E58DB4B7195ED91D7A66991B4712E7C1C8E2AA5,
+and
+27B7ABF263C1015F2649909FC40823529421B553305AEE7FDFAE9FDDDEF71B30.
+The official tags/tags file remains unmodified at SHA-256
+C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF;
+no official Stacks tag was invented for any new label.
+
+Three reproducible serial TeX passes produce an 83-page Moduli chapter of
+941,799 bytes with SHA-256
+294D71F6C446F607DCC3AEEEC02E98512AD1F69CAAC856C27264781428F684D2.
+There is no overfull box. The sole underfull vertical box is on page 82, where
+direct inspection confirms ordinary two-column chapter-list and bibliography
+whitespace with no content loss or collision. Existing single-chapter-build
+cross-reference warnings are outside the new section; every new internal
+reference resolves. Final serial 1,100-dpi inspection of Moduli pages 66--70
+and 82 finds no clipping, collision, malformed formula, unresolved new
+reference, placeholder, or unreadable text. Their rendered page images have
+SHA-256, in page order,
+20CEB5F06148A8BBA511E58DFCAAB78FEF97FBCD94CBA822E16499F2BCEDA717,
+6F30AAE7076B9CBEE28D2D39991EFCF9A87DE33E072FECBF012A4A23F7B2E755,
+2E8B0C40BDFAFC2B75EF3CD64BF4F3481EBC07FD5107DDDE34CE4B7BA6DEAEE3,
+D0433DA18315517C490F589EF89D0313CE6A709EBAD8B232981034037B40031A,
+C97A2133E4C2171262F45AECA2400E564C82A618E07232098826F19A709D185B,
+and
+1ED38B2BF38E8704CD0A6E42F3B08BC5E25C7B08FE8B7DF9599D4EF451D72CA1.
+The next phase is the corpus-wide semantic, source, build, and no-invented-tag
+audit, not further source transcription or exposition.
