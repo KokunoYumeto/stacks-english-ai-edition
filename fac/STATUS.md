@@ -2,17 +2,17 @@
 
 - Frozen surface: 661 source targets through printed page 278.
 - Stage: sequential source review and statement-level Stacks integration.
-- Completed checkpoint: Chapter II, Section 4, no. 49, printed pages 199--242.
-- Reviewed decisions: 215 (54 equivalent, 95 stronger, 31 extensions,
-  18 new-statement decisions, 16 historical references, 1 outside scope).
-- Current Stacks references added: 132 across `topology.tex`, `sheaves.tex`,
+- Completed checkpoint: Chapter II, Section 4, no. 50, printed pages 199--243.
+- Reviewed decisions: 225 (55 equivalent, 101 stronger, 32 extensions,
+  18 new-statement decisions, 17 historical references, 2 outside scope).
+- Current Stacks references added: 140 across `topology.tex`, `sheaves.tex`,
   `modules.tex`, `homology.tex`, `coherent.tex`, `cohomology.tex`,
   `divisors.tex`, `constructions.tex`, `schemes.tex`, `morphisms.tex`,
   `derham.tex`, `algebra.tex`, `properties.tex`, and `varieties.tex`.
 - New Stacks theorem/lemma statements: 13, plus the paracompactness and
   locally-constant-sheaf definitions;
   each new theorem/lemma has a complete proof and no assigned tag.
-- Source/proof issues or convention boundaries: 182 found by direct authority-page and TeX inspection, all resolved and
+- Source/proof issues or convention boundaries: 196 found by direct authority-page and TeX inspection, all resolved and
   retained in `issues.csv`.
 - Existing Stacks defects corrected: 5, comprising the refinement-homotopy
   sign, repeated coefficient sheaves, wrong boundary domain, wrong boundary
@@ -25,7 +25,7 @@
   completed; every
   affected statement page passed direct 1100 dpi visual inspection. See
   `qa.json`.
-- Historical notes added: 35, preserving the source's operator calculus,
+- Historical notes added: 38, preserving the source's operator calculus,
   image-complex construction, two-covering double complex, and unproved
   cofinal-vanishing question, together with the classical closed-point to
   reduced-scheme bridge, the classical-map to scheme-morphism bridge, and the
@@ -57,6 +57,11 @@
   hypothesis behind coherence of a finite module's associated sheaf; no. 49
   now records the finite-free proof of the affine unit and counit, separates
   affine right-exactness from general global sections, and resolves the
-  projective warning into the graded-module quotient by high-degree torsion.
-- Next unit: `fac:II:4:no:50` (projective modules and vector bundles).
+  projective warning into the graded-module quotient by high-degree torsion;
+  no. 50 now distinguishes the direct-summand and Hom-exact definitions,
+  strengthens the classical closed-point projectivity criterion to the
+  all-prime/all-maximal modern formulation, records the locally constant rank
+  boundary and relative-spectrum dual convention, and dates the printed
+  polynomial-ring question while refusing to invent a Quillen--Suslin tag.
+- Next unit: `fac:II:4:no:51` (tensor products and Hom).
 - No statement is mapped by lexical similarity alone.

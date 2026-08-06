@@ -18798,6 +18798,14 @@ Some lemmas on projective modules.
 
 \begin{definition}
 \label{definition-projective}
+\begin{reference}
+\cite[Chapter II, \S 4, no. 50, opening definition, p. 242]{FAC}
+\end{reference}
+\begin{history}
+The cited source defines a projective module as a direct summand of a free
+module. This is condition (2) of Lemma \ref{lemma-characterize-projective};
+the definition below instead uses exactness of the Hom functor.
+\end{history}
 Let $R$ be a ring. An $R$-module $P$ is {\it projective} if and only if
 the functor $\Hom_R(P, -) : \text{Mod}_R \to \text{Mod}_R$ is
 an exact functor.
@@ -19044,6 +19052,21 @@ localizations $	R_{f_i}$ is a nonzero ring).
 
 \begin{lemma}
 \label{lemma-finite-projective}
+\begin{reference}
+\cite[Chapter II, \S 4, no. 50, Proposition 4 and final paragraph,
+pp. 242--243]{FAC}
+\end{reference}
+\begin{history}
+For a finite module over the coordinate ring of a classical affine variety,
+the cited proposition tests projectivity by freeness of the stalks at
+classical closed points. The equivalences below work over an arbitrary ring
+and test all prime ideals or all maximal ideals, with finite presentation
+made explicit. The source proof writes a local-to-global formula for
+projective dimension; this is homological dimension, not rank. Its final
+paragraph asks whether every finite projective module over a polynomial ring
+over a field is free. This question was later answered affirmatively by the
+Quillen--Suslin theorem, which is not developed in this chapter.
+\end{history}
 Let $R$ be a ring and let $M$ be an $R$-module.
 The following are equivalent
 \begin{enumerate}
