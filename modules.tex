@@ -1804,6 +1804,55 @@ Omitted.
 \end{proof}
 
 \begin{lemma}
+\label{lemma-coherent-change-rings}
+\begin{reference}
+\cite[Chapter I, \S 2, no. 16, Theorem 3, p. 211]{FAC}
+\end{reference}
+Let $(X, \mathcal{O}_X)$ be a ringed space such that $\mathcal{O}_X$ is
+coherent as an $\mathcal{O}_X$-module. Let
+$\mathcal{I} \subset \mathcal{O}_X$ be a sheaf of ideals which is coherent
+as an $\mathcal{O}_X$-module. Let $\mathcal{F}$ be an
+$\mathcal{O}_X/\mathcal{I}$-module. Then $\mathcal{F}$ is coherent as an
+$\mathcal{O}_X/\mathcal{I}$-module if and only if it is coherent as an
+$\mathcal{O}_X$-module. Moreover, $\mathcal{O}_X/\mathcal{I}$ is coherent
+as a module over itself.
+\end{lemma}
+
+\begin{proof}
+Set $\mathcal{O}' = \mathcal{O}_X/\mathcal{I}$. An $\mathcal{O}'$-module
+is of finite type over $\mathcal{O}'$ if and only if it is of finite type
+over $\mathcal{O}_X$.
+
+Suppose first that $\mathcal{F}$ is coherent over $\mathcal{O}_X$. Let
+$U \subset X$ be open and let $s_1, \ldots, s_n$ be sections of
+$\mathcal{F}$ over $U$. The sheaf of relations between the $s_i$ over
+$\mathcal{O}'|_U$ is the image of the sheaf of relations over
+$\mathcal{O}_U$ under the map
+$$
+\mathcal{O}_U^{\oplus n} \longrightarrow (\mathcal{O}'|_U)^{\oplus n}.
+$$
+Thus it is of finite type over $\mathcal{O}_X$, hence over
+$\mathcal{O}'$. This proves that $\mathcal{F}$ is coherent over
+$\mathcal{O}'$.
+
+By Lemma \ref{lemma-coherent-abelian}, $\mathcal{O}'$ is coherent as an
+$\mathcal{O}_X$-module. Applying the implication just proved to
+$\mathcal{F} = \mathcal{O}'$ shows that $\mathcal{O}'$ is coherent as a
+module over itself.
+
+Conversely, suppose that $\mathcal{F}$ is coherent over $\mathcal{O}'$.
+By Lemma \ref{lemma-coherent-finite-presentation}, locally on $X$ it is the
+cokernel of a map
+$$
+(\mathcal{O}')^{\oplus q} \longrightarrow
+(\mathcal{O}')^{\oplus p}.
+$$
+Finite direct sums of $\mathcal{O}'$ are coherent over $\mathcal{O}_X$.
+Another application of Lemma \ref{lemma-coherent-abelian} shows that
+$\mathcal{F}$ is coherent over $\mathcal{O}_X$.
+\end{proof}
+
+\begin{lemma}
 \label{lemma-finite-type-to-coherent-injective-on-stalk}
 Let $X$ be a ringed space.
 Let $\varphi : \mathcal{G} \to \mathcal{F}$ be a homomorphism
