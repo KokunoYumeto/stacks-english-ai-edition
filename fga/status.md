@@ -3994,3 +3994,64 @@ and
 1ED38B2BF38E8704CD0A6E42F3B08BC5E25C7B08FE8B7DF9599D4EF451D72CA1.
 The next phase is the corpus-wide semantic, source, build, and no-invented-tag
 audit, not further source transcription or exposition.
+
+The corpus-wide closure audit now passes. The exact 17-item set contains all
+1,253 source units and 1,612 source term links. Every unit has a controlled
+disposition; there are zero review units and zero nonstructural nonhistorical
+semantic residuals without Stacks labels. The nine active source issues are
+evidenced false, overbroad, or unsupported source claims with explicit
+fail-closed controls, not unreviewed work. The only partial topic is the
+standalone general theory of algebraic equivalence; all other controlled
+topics are classified as 56 direct and fourteen broad, with zero no-direct
+topics.
+
+The audit corrected stale topic classifications for fundamental classes,
+Poincare duality, the Poincare bundle, Albanese constructions, algebraic
+equivalence, and tau-equivalence. Decisions D000575--D000579 supersede the
+stale section-level states for Expose 236, Sections 1--4, without weakening
+the two explicit positive-characteristic boundaries. A workflow phrase that
+had leaked into a mathematical remark was replaced by the exact cross-
+reference to Theorem
+moduli-theorem-picard-smooth-near-smooth-fibre. A bounded scan of every TeX
+addition now finds zero workflow or AI prose, and the deliverable privacy scan
+finds zero private paths.
+
+The index and map validators pass with empty error arrays at 21,748 labels,
+21,437 official-tag joins, 4,317 topic candidates, and 579 append-only
+decisions. The topic, decision, issue, map, Stacks-label, topic-candidate,
+reviewed-topic-map, index-validation, and map-validation files have SHA-256
+791377F11D1787DEE97B25299FB72E46FC926A46FDE285A25B59495B57DCDA6C,
+C2CF5BCFBB39D946936A965E556D3BFBABA231660557CDB61EC9C761E990CEFA,
+9C46805184CABC9E375A0DADA3ADD5F0C5B8DED7A247EFF5AB8900B0D2906363,
+B5F3BD0F7583D2AEB74CAB43EB645AF1C3408BC1633F259B684B0114FB632665,
+1CFFB30225D9BE4159A9FDFBD22A83286405CD5F2AF4D9C276E4790526F4E6F3,
+DF408D6822AFD0608D9AF7C129A1A587871637B94240F63B32A738DB9395BEE7,
+37BF89504F082BE9FD55A345C4C1B6AFB438D850E3D03F776AE2AB2B625094EE,
+C65242879385F7F9B3984D6A2F746229FF02A59F77B9694CF564A62DD63B1FE7,
+and
+7632FEA15EF6FB38688B7D4C4256931375ACCFED8FCDA0DE2EF263152F5F97FA.
+The official tags/tags file is still unmodified at SHA-256
+C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF;
+there are zero invented official tags and zero case-sensitive duplicate
+labels.
+
+All 26 TeX chapters changed by the branch pass three deterministic serial
+builds, totalling 1,935 pages and 24,008,919 PDF bytes. No line-based box
+warning intersects a branch-added TeX hunk. The exact per-chapter build
+receipt is 3,090 bytes with SHA-256
+BF6EB96FE17DD1E22813750D0FA18A35225CD0276ABA6331CFE07EF697347B3C.
+The machine-readable closure receipt is 3,652 bytes with SHA-256
+EA2F18A53EEDC56E57BFE73BB3DFC2CD344522248AF523F2984D7FD35E5AA408.
+
+The rebuilt Moduli chapter is 83 pages and 941,995 bytes with SHA-256
+1FD6166FDC936BEA37CDEB99B844A67EB6E150F62FF17A5AE008E14579867705.
+It has no overfull box and one harmless underfull page-break warning on page
+82. Direct 1,100-dpi inspection of the corrected mathematical cross-reference
+on page 47 and the chapter-list/bibliography break on page 82 finds no
+clipping, collision, malformed formula, workflow prose, or content loss; the
+page images have SHA-256
+C323C343120353465D9F7BCEF3F1BBEF959EA87E627D8EC571D44206F8697CF0
+and
+1ED38B2BF38E8704CD0A6E42F3B08BC5E25C7B08FE8B7DF9599D4EF451D72CA1.
+The remaining work is remote publication of this audited closure and a
+coherent upstream review path.

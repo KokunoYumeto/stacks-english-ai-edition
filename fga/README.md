@@ -87,3 +87,13 @@ recorded in `issues.csv`.  The validator checks each issue ID, FGA unit,
 current Stacks evidence label, status, and corrective control.  This keeps a
 source problem distinct from a missing Stacks result and prevents a historical
 claim from being imported silently.
+
+## Closure audit
+
+`audit.json` is the corpus-wide closure receipt. It records the exact 17-item
+scope, semantic and topic closure, source identities, privacy and reader-prose
+checks, official-tag immutability, and the bounded residuals that remain
+explicitly fail-closed. `build.csv` records three serial deterministic builds
+of every TeX chapter changed by the FGA branch. Its raw box-warning columns are
+diagnostic; `changed_line_box_overlap` is the fail-closed comparison against
+branch-added TeX hunks.
