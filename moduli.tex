@@ -818,6 +818,90 @@ Follows immediately after unwinding all the definitions.
 
 
 
+\section{Bounded families of coherent sheaves}
+\label{section-bounded-coherent}
+
+\noindent
+Let $S$ be a Noetherian scheme and let $X \to S$ be a morphism of
+finite type. We introduce a fibrewise notion of boundedness which is useful
+when the sheaves in question do not come with a fixed parameter scheme.
+
+\begin{definition}
+\label{definition-bounded-coherent}
+\begin{reference}
+\cite[Expos\'e 221, D\'efinition 1.1, pp. 249--252]{FGA}.
+\end{reference}
+A fibrewise coherent sheaf over $X/S$ is a triple
+$$
+(s, K, \mathcal{F})
+$$
+where $s \in S$, where $K/\kappa(s)$ is a field extension, and where
+$\mathcal{F}$ is a coherent $\mathcal{O}_{X_K}$-module. Two such triples
+$(s, K, \mathcal{F})$ and $(s', K', \mathcal{F}')$ are equivalent if
+$s=s'$ and there are $\kappa(s)$-embeddings of $K$ and $K'$ into a field
+$L$ such that
+$$
+\mathcal{F}_L \cong \mathcal{F}'_L
+$$
+on $X_L$. A family of fibrewise coherent sheaves is a set of equivalence
+classes of such triples.
+
+A family $E$ is \emph{bounded} if there are a scheme $T$ of finite type
+over $S$ and a coherent $\mathcal{O}_{X_T}$-module $\mathcal{G}$ with the
+following property. For every $(s, K, \mathcal{F})$ whose class belongs to
+$E$, there are a point $t \in T$ above $s$, a field $L$, and
+$\kappa(s)$-embeddings
+$$
+K \longrightarrow L \longleftarrow \kappa(t)
+$$
+such that $\mathcal{F}_L \cong \mathcal{G}_t \otimes_{\kappa(t)} L$.
+We say that $(T, \mathcal{G})$ bounds $E$.
+\end{definition}
+
+\begin{lemma}
+\label{lemma-bounded-coherent-elementary}
+Let $E$ and $E'$ be bounded families of fibrewise coherent sheaves over
+$X/S$.
+\begin{enumerate}
+\item A finite union of bounded families is bounded.
+\item After any base change $S' \to S$, the family obtained from $E$ by
+base change is bounded over $X_{S'}/S'$.
+\item The family of all tensor products
+$\mathcal{F} \otimes_{\mathcal{O}_{X_K}} \mathcal{F}'$, where the two
+classes belong to $E$ and $E'$ over the same field-valued point, is bounded.
+\item There is a pair $(T, \mathcal{G})$ bounding $E$ for which
+$\mathcal{G}$ is flat over $T$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+For (1), take the disjoint union of finitely many parameter schemes and the
+sheaf which restricts to the given sheaf on each component. For (2), if
+$(T, \mathcal{G})$ bounds $E$, then
+$$
+(T \times_S S', \mathcal{G}_{S'})
+$$
+bounds the base-changed family.
+
+Choose $(T, \mathcal{G})$ and $(T', \mathcal{G}')$ bounding $E$ and $E'$.
+On $X_{T \times_S T'}$ form the tensor product of the pullbacks of
+$\mathcal{G}$ and $\mathcal{G}'$. It is coherent, and its formation
+commutes with arbitrary base change. Thus this sheaf, with parameter scheme
+$T \times_S T'$, bounds the family in (3).
+
+Finally, $T$ is Noetherian. More on Morphisms, Lemma
+\ref{more-morphisms-lemma-generic-flatness-stratification} gives a finite
+stratification of $T$ by locally closed subschemes such that the restriction
+of $\mathcal{G}$ to each stratum is flat over that stratum. The disjoint
+union of the strata is still of finite type over $S$, meets every point of
+$T$, and carries a flat coherent sheaf whose fibre classes are the same.
+This proves (4).
+\end{proof}
+
+
+
+
+
 \section{Boundedness for Quot}
 \label{section-quot-bounded}
 

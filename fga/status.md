@@ -1005,3 +1005,29 @@ Groupoids in Spaces page 12, and Examples pages 67--69.  Expose 212 has now
 received its complete sequential pass, with issues `I000013` and `I000014`
 still visibly open.  The next source cursor is Expose 221, beginning at its
 first substantive unit.
+
+The fifty-first source patch begins Expose 221 from authority SHA-256
+`ABBF37780FDC514BEBD2F1811BFC94E706E44FA8751402CE171510A3F1520968`.
+Moduli Stacks now defines a fibrewise coherent sheaf as a coherent module
+over a residue-field extension modulo isomorphism after passage to a common
+field, and defines boundedness by one coherent family over a finite-type
+parameter scheme.  The adjacent lemma proves directly that bounded families
+are closed under finite unions, arbitrary base change, and tensor products.
+It also uses generic flatness stratification to replace every bounding family
+by finitely many finite-type strata on which its coherent module is flat.
+This is the exact infrastructure needed for the harder Hom, extension, and
+support constructions that follow; it does not yet claim Propositions 1.2 or
+1.3.  Decisions `D000383` and `D000384` supersede the former definition and
+partial-section classifications.
+
+Both semantic validators pass with no errors at 21,567 labels, 3,842 topic
+candidates, 384 append-only decisions, 1,253 source units, 1,612 term links,
+and 14 source issues, of which eight remain active.  The decision ledger has
+SHA-256
+`3FD34AE025925147C29DEAD86983C4D483E70FB641DE66ACEAD08B3B605F1DA2`.
+A bibliography-complete build and two final TeX passes produce a 23-page
+Moduli Stacks chapter of 522,606 bytes with SHA-256
+`DFFECB9CC00DE875E7B405ED6D3147B83C61F5B115E124DBAB3B0D19D1332FBF`.
+The new source adds no unresolved reference or overfull horizontal box and
+passes 1,200-dpi inspection on pages 8--10.  The next sequential cursor is
+Expose 221, Proposition 1.2.
