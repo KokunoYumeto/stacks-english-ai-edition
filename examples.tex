@@ -6142,6 +6142,102 @@ same argument applied to its inverse shows that the extension is an
 isomorphism. This proves uniqueness.
 \end{proof}
 
+\begin{proposition}
+\label{proposition-abelian-good-reduction-quotient}
+\begin{reference}
+\cite[Expos\'e 212, Proposition 7.1, pp. 114--115]{FGA}.
+\end{reference}
+Let $V$ be a discrete valuation ring with fraction field $K$, and let
+$A \to \Spec(V)$ be an abelian scheme. If an abelian variety $B'$ over
+$K$ is isogenous to a quotient of $A_K$, then there exist an abelian
+scheme $B \to \Spec(V)$ and an isomorphism $B_K \to B'$. The pair
+consisting of $B$ and this isomorphism is unique up to unique isomorphism.
+\end{proposition}
+
+\begin{proof}
+Set $S = \Spec(V)$. By symmetry of isogeny for abelian varieties, we may
+choose a quotient $A_K \to Q$ and an isogeny $Q \to B'$. Their composite
+is a faithfully flat homomorphism
+$$
+f : A_K \longrightarrow B'.
+$$
+Let $C' = \Ker(f)$, a closed subgroup scheme of $A_K$, and let
+$C \subset A$ be its scheme theoretic closure. Semistable Reduction,
+Lemma \ref{models-lemma-closure-is-model} shows that $C \to S$ is flat
+and of finite type and that $C_K=C'$. It is proper because it is closed
+in $A$. Moreover, $C$ is a subgroup scheme of $A$. Indeed, inversion
+preserves $C$ by minimality of the scheme theoretic closure. The unit and
+multiplication factor through $C$ because they do so on the generic fibre
+and the generic fibres of the flat schemes $S$ and $C \times_S C$ are
+scheme theoretically dense.
+
+Consider the translation equivalence relation
+$$
+R=C\times_S A,\qquad s,t:R\longrightarrow A,
+\qquad s(c,a)=a,\quad t(c,a)=c+a.
+$$
+Both projections are proper and flat. The morphism
+$(t,s):R\to A\times_S A$ is the base change of the closed immersion
+$C\to A$ by the difference morphism $A\times_S A\to A$; hence it is a
+closed immersion and therefore finite. Since $A\to S$ is proper and of
+finite presentation, More on Morphisms of Stacks, Proposition
+\ref{stacks-more-morphisms-proposition-proper-flat-groupoid-moduli}
+gives an algebraic space $B$ and a proper, faithfully flat morphism
+of finite presentation
+$$
+q:A\longrightarrow B
+$$
+such that $C\times_S A=A\times_B A$. Thus $B$ represents the fppf
+quotient sheaf $A/C$. Since $A$ is commutative, this quotient sheaf is a
+group sheaf, and its operations make $B$ a group algebraic space over $S$.
+
+We record the properties needed to apply Raynaud's theorem. The morphism
+$B\to S$ is locally of finite type by the proposition just cited, and it
+is quasi-compact because $q$ is surjective and $A$ is quasi-compact. It is
+separated: after the fpqc base change
+$q\times q:A\times_S A\to B\times_S B$, its diagonal becomes the closed
+immersion $C\times_S A\to A\times_S A$; use Descent on Spaces, Lemma
+\ref{spaces-descent-lemma-descending-property-closed-immersion}.
+Consequently More on Groupoids in Spaces, Theorem
+\ref{spaces-more-groupoids-theorem-raynaud-group-space-scheme-dimension-one}
+shows that $B$ is a scheme.
+
+The morphism $B\to S$ is flat by Descent on Spaces, Lemma
+\ref{spaces-descent-lemma-flat-fpqc-local-source}, and it is of finite
+presentation because it is quasi-compact and is locally of finite
+presentation by Descent on Spaces, Lemma
+\ref{spaces-descent-lemma-locally-finite-presentation-fppf-local-source}.
+It is proper by Morphisms of Spaces, Lemma
+\ref{spaces-morphisms-lemma-image-proper-is-proper}: it is separated and
+of finite type, while $A\to S$ is proper and $q$ is surjective.
+
+Let $\overline{s}\to S$ be a geometric point. The scheme
+$B_{\overline{s}}$ is connected because it is the image of the connected
+abelian variety $A_{\overline{s}}$. It is geometrically reduced. To see
+this, let $k'/\kappa(\overline{s})$ be a field extension, let
+$b\in |B_{k'}|$, and choose $a\in |A_{k'}|$ above $b$. The local homomorphism
+$\mathcal{O}_{B_{k'},b}\to\mathcal{O}_{A_{k'},a}$ is faithfully flat.
+The second local ring is geometrically regular over $k'$ because
+$A_{k'}$ is smooth, so Algebra,
+Lemma \ref{algebra-lemma-geometrically-regular-descent} shows that the
+first is regular. Thus $B_{\overline{s}}$ is geometrically regular. Hence
+$B_{\overline{s}}$ is a proper, connected, geometrically reduced group
+scheme over a field, and hence is an abelian variety by Groupoids, Remark
+\ref{groupoids-remark-16-equivalent}. Therefore $B\to S$ is an abelian
+scheme.
+
+On the generic fibre, both $q_K:A_K\to B_K$ and $f:A_K\to B'$ are fppf
+quotients by the same effective equivalence relation with arrow scheme
+$C'\times_K A_K$ and object scheme $A_K$. Their universal properties give a
+unique isomorphism $B_K\to B'$ compatible with $q_K$ and $f$.
+
+Finally, let two such models be given. Their generic-fibre isomorphism is a
+rational section of one abelian scheme after base change to the other.
+Remark \ref{remark-torsors-over-regular} extends that section uniquely;
+applying the same argument to the inverse shows that the extension is an
+isomorphism. This proves uniqueness.
+\end{proof}
+
 \begin{lemma}
 \label{lemma-torsors-over-field-torsion}
 Let $G$ be a smooth commutative group algebraic space over a field $K$.

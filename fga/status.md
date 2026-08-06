@@ -957,3 +957,51 @@ The changed reader paragraph has no unresolved citation or new box warning and
 passes 1,200-dpi inspection on page 45.  The next substantive cursor is Expose
 212, Section 7 and Proposition 7.1; issue `I000013` remains an explicit global
 residual rather than an implicit completion claim.
+
+The fiftieth source patch completes the sequential Section 7 pass without
+silently extending any source beyond its proof.  Examples now contains an
+independent proof of Proposition 7.1: take the flat schematic closure of the
+generic kernel in the abelian model, form its proper fppf algebraic-space
+quotient, apply Raynaud's dimension-one representability theorem to obtain a
+scheme, and descend flatness and geometric regularity to prove that the
+quotient is an abelian scheme.  More on Groupoids in Spaces records the exact
+Raynaud theorem.  The inspected Raynaud PDF is 6,849,906 bytes with SHA-256
+`FDBA4B96E9F3FA3EEB158868217B95FFD4172F128148A70013115666CF04CF92`.
+
+More on Morphisms of Stacks now records the exact quotient theorem supplied by
+SGA 3 over a local Artinian base in its two proved branches: a flat target, or
+a monomorphic source homomorphism.  It also proves the flat closed-subgroup
+corollary and the quotient-by-kernel/closed-image factorization over a field,
+thereby integrating Corollary 7.4.  The checked SGA 3 re-edition PDFs are
+Expose V, 549,877 bytes, SHA-256
+`9DFB1CE933FF4D1C29710185433AADC99650A06934167C18A630D053730918D7`;
+Expose VI_A, 412,401 bytes, SHA-256
+`692D61E19DD522B36E87F4918CC7D7420A336ADB28D981A2217F0549C0CEB4CF`;
+and Expose VI_B, 862,924 bytes, SHA-256
+`981F2AC055F5359A80CEB5E48AEAC85F6B2102F0389446452D033EBFD02B10C9`.
+The Expose V editorial note cites VI_A 3.2 and 3.3, but those passages assume
+respectively that the target is flat or that the homomorphism is a
+monomorphism.  Open issue `I000014` therefore retains the remaining
+nonflat-target, nonmonomorphic corner of FGA Theorem 7.2 instead of converting
+that citation gap into a false theorem.  Decisions `D000377`--`D000382` are
+append-only replacements for the former Section 7 classifications.
+
+Both semantic validators pass with no errors at 21,564 labels, 3,839 topic
+candidates, 382 append-only decisions, 1,253 source units, 1,612 term links,
+and 14 recorded source issues, of which eight remain active.  The decision and
+issue ledgers have SHA-256
+`96368B888EC31F7A6A3D253707ABB59C2EBBB73B246F57EFE9C6DD94930F073E`
+and `2B72A51905C003F2B863DC400A2642D4029767FCB3009CD0BD27B1E361BCC43C`.
+Serial bibliography-complete builds and final TeX passes produce More on
+Morphisms of Stacks at 55 pages and 760,913 bytes, SHA-256
+`1D8354B56AD1540D1C7A35F7E462465D8354F442AEC6F17B0EB6A86DD819AB3D`;
+More on Groupoids in Spaces at 29 pages and 564,709 bytes, SHA-256
+`084EDF9E3CB6F73F9996EFB0D6BCFADEED7C67D91E3E4A58442A70B78CBD3DB8`;
+and Examples at 81 pages and 1,002,109 bytes, SHA-256
+`7ABD7C28A29F1875427E8929D65310EE036FF162638BE496E03C793DBF7B4DEA`.
+The new material adds no unresolved reference or overfull horizontal box and
+passes 1,200-dpi inspection on More on Morphisms pages 46--47, More on
+Groupoids in Spaces page 12, and Examples pages 67--69.  Expose 212 has now
+received its complete sequential pass, with issues `I000013` and `I000014`
+still visibly open.  The next source cursor is Expose 221, beginning at its
+first substantive unit.

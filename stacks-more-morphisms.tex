@@ -4099,7 +4099,7 @@ p. 301]{FGA}.
 Let $S$ be a locally Noetherian scheme and let
 $(U, R, s, t, c)$ be a groupoid scheme over $S$. Assume
 \begin{enumerate}
-\item $U \to S$ is quasi-projective,
+\item $U \to S$ is separated and locally of finite type,
 \item $s, t : R \to U$ are proper and flat, and
 \item $(t, s) : R \to U \times_S U$ is finite.
 \end{enumerate}
@@ -4182,8 +4182,11 @@ relation, that $M$ is quasi-projective over $S$. Its published erratum
 specifies that the proof of the quasi-projectivity assertion applies
 only in the equivalence-relation case. Proposition
 \ref{proposition-proper-flat-groupoid-moduli} records the conclusions
-that follow from the algebraic-stack and moduli-space argument; it does
-not assert either of those two scheme-theoretic refinements. Compare
+that follow from the algebraic-stack and moduli-space argument. Notice
+that this argument only needs $U \to S$ to be separated and locally of
+finite type, whereas the historical statement assumes that $U \to S$
+is quasi-projective. The proposition does not assert either of the two
+scheme-theoretic refinements. Compare
 \cite[Remark 3.3.2]{lieblich_remarks}, where the general relative
 conclusion for an algebraic space admitting such a proper flat
 quasi-projective cover is described as a tempting expectation; the
@@ -4269,6 +4272,134 @@ isomorphism. Consequently $q$ is faithfully flat and of finite
 presentation and $R|_V = V \times_M V$.
 \end{proof}
 
+
+
+
+
+\begin{proposition}
+\label{proposition-artinian-group-action-quotient}
+\begin{reference}
+\cite[Expos\'e 212, Th\'eor\`eme 7.2, p. 115]{FGA} and
+\cite[Expos\'e VI$_A$, Th\'eor\`emes 3.2 and 3.3.2, and 4.7]{SGA3}.
+\end{reference}
+Let $A$ be an Artinian ring and set $S = \Spec(A)$. Let $F$ and $G$
+be group schemes of finite type over $S$, and let $u : F \to G$ be a
+homomorphism. Assume that $F \to S$ is flat and that $\Ker(u) \to S$
+is finite. Assume in addition that either
+\begin{enumerate}
+\item $G \to S$ is flat, or
+\item $u$ is a monomorphism.
+\end{enumerate}
+Then there are a scheme $Q$ of finite type over $S$ and a morphism
+$q : G \to Q$ which is the quotient $G/F$ for the right action
+$(g, f) \mapsto gu(f)$. More precisely,
+\begin{enumerate}
+\item $q$ is surjective and open,
+\item its geometric fibres are the orbits, and
+\item the canonical morphism
+$$
+G \times_S F \longrightarrow G \times_Q G
+$$
+is surjective.
+\end{enumerate}
+If $u$ is a monomorphism, then $q$ is faithfully flat and locally of
+finite presentation, the displayed morphism is an isomorphism, and
+$Q$ represents the fppf quotient sheaf. In this case formation of $Q$
+commutes with arbitrary base change. If $G \to S$ is flat, formation
+of the quotient in the category of locally ringed spaces commutes with
+flat base change.
+\end{proposition}
+
+\begin{proof}
+By Algebra, Lemma \ref{algebra-lemma-artinian-finite-length}, the ring
+$A$ is a finite product of local Artinian rings. All the schemes and
+assertions in the statement split over the corresponding open and closed
+subschemes of $S$, and the resulting quotients recombine by disjoint union.
+Thus we may assume that $A$ is local.
+
+If $G$ is flat over $S$, the result, with left cosets in place of right
+cosets, is \cite[Expos\'e VI$_A$, Th\'eor\`eme 3.2]{SGA3}; inversion on
+$G$ exchanges the two conventions. The flat-base-change assertion is
+\cite[Expos\'e VI$_A$, 4.7]{SGA3}. If $u$ is a monomorphism, it is a
+closed immersion and the flatness hypothesis on $G$ can be omitted by
+\cite[Expos\'e VI$_A$, Th\'eor\`eme 3.3.2]{SGA3}. In that case $q$ is
+an fppf $F$-torsor. The fppf quotient sheaf and its formation commute
+with every base change by their definitions, which gives the last
+base-change assertion.
+\end{proof}
+
+\begin{remark}
+\label{remark-artinian-group-action-quotient-residual}
+The theorem cited from FGA does not impose either of the two additional
+alternatives in Proposition
+\ref{proposition-artinian-group-action-quotient}. The editorial note in
+\cite[Expos\'e V, note 1]{SGA3} points to Expos\'e VI$_A$, 3.2 and 3.3
+as its proof. However, 3.2 assumes that both $F$ and $G$ are flat, while
+3.3 removes flatness of $G$ only when $u$ is a monomorphism. Thus those
+passages do not by themselves prove the remaining case in which $G$ is
+not flat and $u$ is not a monomorphism. We do not assert that remaining
+case here.
+\end{remark}
+
+\begin{lemma}
+\label{lemma-artinian-flat-subgroup-quotient}
+\begin{reference}
+\cite[Expos\'e 212, Corollaire 7.3, p. 115]{FGA}.
+\end{reference}
+In the situation of Proposition
+\ref{proposition-artinian-group-action-quotient}, assume that $u$ is a
+monomorphism. Then $G$ is flat over $S$ if and only if $Q = G/F$ is flat
+over $S$. Formation of $Q$ commutes with arbitrary base change. If $F$
+is normal in $G$, then $Q$ has a unique group scheme structure for which
+$q : G \to Q$ is a homomorphism.
+\end{lemma}
+
+\begin{proof}
+The morphism $q$ is faithfully flat and locally of finite presentation
+by Proposition \ref{proposition-artinian-group-action-quotient}. If $Q$
+is flat over $S$, then $G \to S$ is flat by composition. The converse is
+fpqc locality of flatness on the source along $q$, see Descent, Lemma
+\ref{descent-lemma-flat-fpqc-local-source}. Base change was proved in
+the proposition. If $F$ is normal, the fppf quotient sheaf is a group
+sheaf. Its representing scheme $Q$ therefore acquires the asserted
+unique multiplication, identity, and inverse by Yoneda's lemma.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-homomorphism-algebraic-groups-factorization}
+\begin{reference}
+\cite[Expos\'e 212, Corollaire 7.4, pp. 115--116]{FGA}.
+\end{reference}
+Let $k$ be a field and let $u : F \to G$ be a homomorphism of group
+schemes of finite type over $k$. There is a factorization
+$$
+F \longrightarrow F' \longrightarrow G
+$$
+such that the first arrow is the fppf quotient by the closed normal
+subgroup scheme $\Ker(u)$ and the second arrow is a closed immersion.
+The scheme quotient $G/F = G/F'$ exists.
+\end{lemma}
+
+\begin{proof}
+Set $K = \Ker(u)$. Group schemes over a field are separated by Groupoids,
+Lemma \ref{groupoids-lemma-group-scheme-over-field-separated}, so
+$K \subset F$ is a closed normal subgroup scheme; it is flat over $k$.
+Proposition
+\ref{proposition-artinian-group-action-quotient} and Lemma
+\ref{lemma-artinian-flat-subgroup-quotient} give the group scheme
+$F' = F/K$ and an fppf quotient homomorphism $F \to F'$. The map $u$
+descends uniquely to a homomorphism $i : F' \to G$.
+
+The map $i$ is a monomorphism as a map of fppf sheaves. Indeed, fppf
+locally two sections of $F'$ lift to sections of $F$, and equality of
+their images in $G$ says that their quotient belongs to $K$. Since
+$F'$ and $G$ are of finite type over $k$, the morphism $i$ is
+quasi-compact. Hence $i$ is a closed immersion by
+\cite[Expos\'e VI$_B$, Corollaire 1.4.2]{SGA3}. Applying Proposition
+\ref{proposition-artinian-group-action-quotient} once more to
+$F' \subset G$ constructs $G/F'$. The actions of $F$ and $F'$ have the
+same quotient, and hence $G/F = G/F'$.
+\end{proof}
 
 
 
