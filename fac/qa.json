@@ -3,35 +3,35 @@
   "date": "2026-08-06",
   "scope": {
     "start": "fac:I:1:no:1",
-    "end": "fac:II:3:no:46",
-    "printed_pages": "199-239",
-    "units_decided": 194,
-    "stacks_references_added": 114
+    "end": "fac:II:3:no:47",
+    "printed_pages": "199-240",
+    "units_decided": 200,
+    "stacks_references_added": 119
   },
   "authority": {
     "bytes": 6305726,
     "sha256": "B8C6508249308F5D8BC886B9E6360F1EC4FDC8F0F18EFAA03EE0E36B591551CA",
     "render_dpi": 1100,
-    "physical_pages_inspected": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44],
-    "printed_pages_inspected": [199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239]
+    "physical_pages_inspected": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45],
+    "printed_pages_inspected": [199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240]
   },
   "latest_review": {
-    "unit": "fac:II:3:no:46",
-    "component": "components/044_II_3_46_affine_cohomology_coherent_sheaf.tex",
-    "bytes": 3670,
-    "sha256": "D910F599C22C3B93AD4CB9226265C27F748100BF6417C085C5770A7B00B1769D",
-    "authority_physical_pages": [43, 44],
-    "authority_printed_pages": [238, 239],
+    "unit": "fac:II:3:no:47",
+    "component": "components/045_II_3_47_affine_open_coverings.tex",
+    "bytes": 4315,
+    "sha256": "CF7131972519AF1B60BFF9056E1364302A7F37286008C89715AD8020E2DA130E",
+    "authority_physical_pages": [44, 45],
+    "authority_printed_pages": [239, 240],
     "authority_renders": [
-      {"physical_page": 43, "sha256": "1FA0BBF1443FF21EDA9F84A85E98CE386E7450E3985C9EF21C9BC1E9601EAE2E"},
-      {"physical_page": 44, "sha256": "961FA80039144CD390AFE1F9B146815FD3571A61ABB904713F1FC0F1E20B6C29"}
+      {"physical_page": 44, "sha256": "961FA80039144CD390AFE1F9B146815FD3571A61ABB904713F1FC0F1E20B6C29"},
+      {"physical_page": 45, "sha256": "20DC3F79AEA2B0DA9068EEA3B6C3067563698FD9082CF830D8E1EE266F5EDD60"}
     ],
     "high_detail_renders": [],
     "output_renders": [
-      {"master": "coherent.tex", "pdf_page": 2, "sha256": "854108C161D0946E382DF00511EEEB192ED66FED4975253C9BEAB747F71D469F"},
-      {"master": "cohomology.tex", "pdf_page": 16, "sha256": "EB48ED01421ABED02BF8537B4D0E1DA8006C7837A8044211A5779925A1C050AB"}
+      {"master": "coherent.tex", "pdf_page": 3, "sha256": "2FFE0483935AEA9E5BFB51FF6827F857E7F2EC4C844B3A9C9992A143BC807235"},
+      {"master": "cohomology.tex", "pdf_page": 28, "sha256": "B35B8ECCC0E4C3DAB22A265F90A1C6F5EEDEAF01CAC4769C90B94E63B7F5D5EB"}
     ],
-    "blind_review": {"id": "FAC-BLIND-REVIEW-N046-R1", "result": "PASS", "findings": []}
+    "blind_review": {"id": "FAC-BLIND-REVIEW-N047-R1", "result": "PASS", "findings": []}
   },
   "builds": [
     {
@@ -78,8 +78,8 @@
       "master": "coherent.tex",
       "pdf": "coherent.pdf",
       "bytes": 1035615,
-      "sha256": "E7EC467E1CC89C414D868CA8FA3E974446EA146ADE7C89E5B4F11A6B98518630",
-      "affected_pdf_pages_inspected": [2, 22, 23, 24, 25],
+      "sha256": "C699EACE71D9A287647A153EA8DF1A6F1B772B7DDE3B6D2C67806FCDC3EBB08D",
+      "affected_pdf_pages_inspected": [2, 3, 22, 23, 24, 25],
       "affected_page_result": "PASS"
     },
     {
@@ -93,8 +93,8 @@
     {
       "master": "cohomology.tex",
       "pdf": "cohomology.pdf",
-      "bytes": 1374803,
-      "sha256": "FCB60B4D199300E928939D90CD73B555113D3A77458FB7F3796A6D3A95664D44",
+      "bytes": 1373964,
+      "sha256": "C7F3BD39EF8017D5508DDDC86CE3FE651DB6FA56169B2144EC5BF18A4EE38772",
       "affected_pdf_pages_inspected": [2, 3, 9, 10, 16, 24, 25, 26, 27, 28, 29, 35, 36, 40, 41, 43],
       "affected_page_result": "PASS"
     },
@@ -198,7 +198,7 @@
     "fac_citations_resolved": true,
     "undefined_reference_at_edited_lines": 0,
     "overfull_box_at_edited_lines": 0,
-    "note": "The isolated builds retain unrelated missing chapter-aux warnings and pre-existing overfull diagnostics. The no. 46 source citations are confined to the Stacks reference/history metadata, and no undefined reference or overfull box occurs at an edited statement. The inspected coherent.pdf page 2 and cohomology.pdf page 16 are unclipped, collision-free, and contain no unresolved mark. No high-detail authority render was required because the p. 239 cover, exact-sequence, and cohomology formulas were unambiguous at 1100 dpi; issues I000083, I000096, I000108, and I000118 retain earlier fail-closed receipts."
+    "note": "The isolated builds retain unrelated missing chapter-aux warnings and pre-existing overfull diagnostics. The no. 47 source citations are confined to the Stacks reference/history metadata, and no undefined reference or overfull box occurs at an edited statement. The inspected coherent.pdf page 3 and cohomology.pdf page 28 are unclipped, collision-free, and contain no unresolved mark. No high-detail authority render was required because the pp. 239--240 affine-intersection, refinement, and image-complex formulas were unambiguous at 1100 dpi; issues I000083, I000096, I000108, and I000118 retain earlier fail-closed receipts."
   },
   "validators": {
     "intake": "PASS",
