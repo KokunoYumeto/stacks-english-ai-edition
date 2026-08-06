@@ -2891,3 +2891,57 @@ Final serial 1,100-dpi inspection of Moduli page 46 finds no clipping,
 collision, malformed formula, unresolved new reference, placeholder, or
 unreadable text. The next sequential cursor is Remark 2.9 on printed page
 235.
+
+Remark 2.9 is now split into a proved smoothness result and an explicit
+historical boundary. Moduli, Lemma
+`moduli-lemma-picard-smooth-prime-to-characteristic-reduced-base` proves the
+source's reduced-base assertion. The preceding Picard lemma gives universal
+openness along `P^sigma`; at a sigma point the generic points of all
+irreducible fibre components through it remain in sigma. Geometric
+reducedness of the fibre and reducedness of the base then give flatness by
+the universally-open geometrically-reduced-fibre criterion. A geometrically
+reduced group scheme over the algebraic closure is smooth, so local finite
+presentation upgrades flatness to smoothness.
+
+Moduli, Remark `moduli-remark-picard-torsion-flatness-boundary` separately
+records the source's report of Mumford's infinitesimal Igusa-surface
+deformation over a nonreduced Artinian base, where `P^tau` is not flat and
+the offending point lies in `P^rho`. Because the cited expose does not give
+the construction, this is not promoted to a standalone Stacks example. The
+source's questions about flatness of `P^tau` along sigma or even `P^0` over a
+discrete valuation ring remain questions, not assertions. Its stronger
+normal-family statement without a reduced-base hypothesis is explicitly
+deferred to the source Theorem 3.5 cursor rather than inferred prematurely.
+Decision `D000554` supersedes `D000283` and records these proved and
+historical layers separately.
+
+Direct serial 1,100-dpi review covers printed page 235 of the 24-page NUMDAM
+authority. That authority remains 2,461,968 bytes with SHA-256
+`266EEF77BF7BA34A75895ED69ACBFE791A2958DD52C2837D75AB29DF0D2F714A`.
+Both semantic validators pass with no errors at 21,695 labels, 21,437
+official-tag joins, 71 controlled topics, 4,234 topic candidates, 554
+append-only decisions, 1,253 source units, 1,612 term links, and 57 source
+issues, of which eight remain active; there are zero review units. The topic,
+decision, issue, map, Stacks-label, topic-candidate, reviewed-topic-map,
+index-validation, and map-validation files have SHA-256
+`B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0`,
+`C793F7895348054DD3AB7307C455864FED6A99E85B5B17F15764835CF470E00D`,
+`55FB6702462783815DD0E9D81ED4F87438460C03CA0BC7D09BA07FE71F42769B`,
+`78694673588657D9FCAFACFD097F8686BA4D5AC3D70F5728F2FC9DE753D66BF9`,
+`4D5DD1076739305A52CB4C92183D5402D1B777F038F168F121C3D82388118A4B`,
+`56C7DEC992255773D4618CCEA2F7D5EAE56074F7CED35001629B92CE00827C0B`,
+`26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46`,
+`C75FC329ED6F7F4641EB1BF31DD63C6A34CA6BC239FAEAB3974B4DE6F52CF741`,
+and `2B55A7ED822B961683E3C8B37C6298E062B4F1EAE03A0161C72707067C82E655`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`;
+no official tag was invented for the new lemma or remark.
+
+Stable serial TeX passes produce a 62-page Moduli chapter of 813,710 bytes
+with SHA-256
+`7F67BFF77BEC2C621A9B5E164CEDE98A78D140F1EC79179096AE83E90FAE161F`.
+The affected source ranges create no overfull or underfull horizontal box.
+Final serial 1,100-dpi inspection of Moduli pages 46--47 finds no clipping,
+collision, malformed formula, unresolved new reference, placeholder, or
+unreadable text. The next sequential cursor is Proposition 2.10(i) on
+printed page 235.

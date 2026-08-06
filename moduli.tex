@@ -4291,6 +4291,69 @@ conjectural clauses are retained here as historical context, not as results
 of the Stacks Project, and no argument below uses them.
 \end{remark}
 
+\begin{lemma}[Smoothness along prime-to-characteristic components]
+\label{lemma-picard-smooth-prime-to-characteristic-reduced-base}
+\begin{reference}
+\cite[Expos\'e 236, Remark 2.9, p. 235]{FGA}.
+\end{reference}
+Let $S$ be a reduced locally Noetherian scheme and let $X\to S$ be a proper
+flat morphism of schemes. Suppose that the fppf Picard functor is represented
+by a scheme
+$$
+P=\Picardfunctor_{X/S}.
+$$
+Assume that every geometric fibre of $P\to S$ is reduced and that none of
+its geometric identity components contains a subgroup scheme isomorphic to
+$\mathbf G_a$. Then $P\to S$ is smooth at every point of $P^\sigma$.
+\end{lemma}
+
+\begin{proof}
+Theorem \ref{theorem-picard-multiplication-etale} shows that $P\to S$ is
+locally of finite presentation, and Lemma
+\ref{corollary-picard-prime-to-characteristic-openness} shows that it is
+universally open along $P^\sigma$.
+
+Let $x\in P^\sigma$ lie over $s\in S$. Every irreducible component of $P_s$
+through $x$ is contained in the connected component of $x$, and hence its
+generic point is still in $P^\sigma$. The local ring $\mathcal O_{S,s}$ is
+reduced and $P_s$ is geometrically reduced at $x$. More on Morphisms, Lemma
+\ref{more-morphisms-lemma-universally-open-geometrically-reduced-flat}
+therefore shows that $P\to S$ is flat at $x$.
+
+After extending $\kappa(s)$ to an algebraic closure, the reduced group scheme
+$P_{\overline{s}}$ is smooth by Groupoids, Lemmas
+\ref{groupoids-lemma-group-scheme-characteristic-zero-smooth} and
+\ref{groupoids-lemma-reduced-group-scheme-prefect-field-characteristic-p-smooth}.
+Thus $P_s$ is smooth at $x$. Morphisms, Lemma
+\ref{morphisms-lemma-smooth-flat-smooth-fibres} now proves that $P\to S$ is
+smooth at $x$.
+\end{proof}
+
+\begin{remark}[Universal openness and torsion-component flatness]
+\label{remark-picard-torsion-flatness-boundary}
+\begin{reference}
+\cite[Expos\'e 236, Remark 2.9, p. 235]{FGA}.
+\end{reference}
+Universal openness of a torsion-component locus should not be confused with
+flatness over a nonreduced base. The source reports Mumford's infinitesimal
+deformation of an Igusa surface over an Artinian base for which $P^\tau$ is
+not flat; the point exhibiting nonflatness lies in $P^\rho$. The construction
+itself is not reproduced in the cited expos\'e, so this is retained as a
+historical boundary rather than promoted to a standalone Stacks example.
+
+The source asks whether, for a smooth proper family, $P^\tau$ might be flat
+at points of $P^\sigma$, and expresses doubt even for flatness along $P^0$
+over a discrete valuation ring. It relates the question to fixed loci of
+finite automorphism groups on abelian schemes. These are questions in the
+source, not assertions here.
+
+The source also points ahead to its Theorem 3.5 for removal of the reducedness
+hypothesis in Lemma
+\ref{lemma-picard-smooth-prime-to-characteristic-reduced-base} when the
+original family is normal. That stronger normal-family result is not inferred
+from Remark 2.9 and is handled at the Theorem 3.5 source cursor.
+\end{remark}
+
 \begin{example}[A relative Picard space which is not a scheme]
 \label{example-picard-conic-not-scheme}
 \begin{reference}
