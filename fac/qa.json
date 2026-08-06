@@ -3,17 +3,17 @@
   "date": "2026-08-06",
   "scope": {
     "start": "fac:I:1:no:1",
-    "end": "fac:I:3:no:18",
-    "printed_pages": "199-212",
-    "units_decided": 54,
-    "stacks_references_added": 28
+    "end": "fac:I:3:no:19",
+    "printed_pages": "199-213",
+    "units_decided": 55,
+    "stacks_references_added": 29
   },
   "authority": {
     "bytes": 6305726,
     "sha256": "B8C6508249308F5D8BC886B9E6360F1EC4FDC8F0F18EFAA03EE0E36B591551CA",
     "render_dpi": 1100,
-    "physical_pages_inspected": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
-    "printed_pages_inspected": [199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212]
+    "physical_pages_inspected": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
+    "printed_pages_inspected": [199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213]
   },
   "builds": [
     {
@@ -43,9 +43,9 @@
     {
       "master": "cohomology.tex",
       "pdf": "cohomology.pdf",
-      "bytes": 1334843,
-      "sha256": "6FB3F9C43841DC10284E88755855608D10B8AB449C323468F0A87E539BBC4822",
-      "affected_pdf_pages_inspected": [10, 39],
+      "bytes": 1334932,
+      "sha256": "647873DDA9C204CDA37A6A517B1F59F953B64A8715FDF644959ACFDBFD30E5A1",
+      "affected_pdf_pages_inspected": [9, 10, 40],
       "affected_page_result": "PASS"
     }
   ],
@@ -63,7 +63,7 @@
     "fac_citations_resolved": true,
     "undefined_reference_at_edited_lines": 0,
     "overfull_box_at_edited_lines": 0,
-    "note": "The isolated builds retain unrelated missing chapter-aux warnings, unrelated pre-existing cross-chapter warnings, and pre-existing overfull diagnostics on module pages 31--32. Cohomology page 39 visibly retains an unrelated unresolved cross-chapter link above the edited statement; the edited alternating-complex definition and equation link are resolved. The FAC additions introduce no unresolved citation or link."
+    "note": "The isolated builds retain unrelated missing chapter-aux warnings, unrelated pre-existing cross-chapter warnings, and pre-existing overfull diagnostics on module pages 31--32. The FAC historical note and the edited Cech-complex links are resolved and introduce no unresolved citation or link."
   },
   "validators": {
     "intake": "PASS",

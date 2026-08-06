@@ -891,7 +891,32 @@ and $i, j \in I$ then $s_{ij}$ and $s_{ji}$ are both elements
 of $\mathcal{F}(U_i \cap U_j)$ but there is no imposed
 relation between $s_{ij}$ and $s_{ji}$. In other words, we are {\it not}
 working with alternating cochains (these will be defined
-in Section \ref{section-alternating-cech}). We define
+in Section \ref{section-alternating-cech}).
+
+\begin{remark}
+\label{remark-FAC-simplicial-operators}
+\begin{reference}
+\cite[Chapter I, \S 3, no. 19, pp. 212--213]{FAC}
+\end{reference}
+The source packages operations on covering cochains as follows. Let
+$K_p(I)$ be the free abelian group on sequences of $p + 1$ elements of
+$I$. A homomorphism $h : K_p(I) \to K_q(I)$ is called simplicial there
+if the coefficient of a sequence $s'$ in $h(s)$ is zero unless every
+vertex of $s'$ occurs in $s$. Restriction maps then define a transpose
+$$
+{}^t h :
+\check{\mathcal{C}}^q(\mathcal{U}, \mathcal{F})
+\longrightarrow
+\check{\mathcal{C}}^p(\mathcal{U}, \mathcal{F}).
+$$
+This construction is additive, reverses composition, and preserves the
+identity. We do not use this full operator calculus. The differential
+below is written directly as the alternating sum of the face maps; see
+also Simplicial Methods, Section
+\ref{simplicial-section-dold-kan-cosimplicial}.
+\end{remark}
+
+We define
 $$
 d : \check{\mathcal{C}}^p(\mathcal{U}, \mathcal{F})
 \longrightarrow
