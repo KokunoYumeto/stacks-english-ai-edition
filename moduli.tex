@@ -5633,6 +5633,95 @@ Igusa warning. No local-constancy assertion from this final paragraph is used
 here.
 \end{remark}
 
+\section{Boundedness of Picard components}
+\label{section-picard-boundedness}
+
+\begin{example}[Unbounded multidegree in a conic degeneration]
+\label{example-picard-conic-fixed-Hilbert-not-finite-type}
+\begin{reference}
+\cite[Expos\'e 236, Section 4, pp. 241--242]{FGA}.
+\end{reference}
+Let $R=k[[t]]$ and consider the flat projective family
+$$
+X=\mathop{\rm Proj}\bigl(R[x,y,z]/(xy-tz^2)\bigr)
+\longrightarrow\Spec(R)
+$$
+with its invertible module $\mathcal{O}_X(1)$. The generic fibre is a smooth
+conic, while the special fibre is
+$$
+X_0=L_x\cup L_y,
+$$
+the union of two projective lines meeting in one point. For every pair
+$(a,b)\in\mathbf Z^2$, gluing
+$\mathcal{O}_{L_x}(a)$ and $\mathcal{O}_{L_y}(b)$ at the intersection point
+gives a unique isomorphism class of invertible module $\mathcal{L}_{a,b}$ on
+$X_0$. Its Hilbert polynomial is
+$$
+\chi(X_0,\mathcal{L}_{a,b}(m))=2m+a+b+1.
+$$
+Consequently, for every fixed integer $d$, the Hilbert-polynomial locus
+$Q_d(m)=2m+d+1$ in the Picard functor of the special fibre contains the
+infinite discrete set
+$$
+\{\mathcal{L}_{a,d-a}\mid a\in\mathbf Z\}.
+$$
+Thus the corresponding relative Hilbert-polynomial locus cannot be of finite
+type over $R$.
+\end{example}
+
+\begin{proof}
+Flatness follows because the defining quadratic is not divisible by $t$.
+The assertions about the fibres follow directly from their equations. The
+normalization of $X_0$ is $L_x\amalg L_y$, and its dual graph is a tree.
+Hence an invertible module is determined by the two degrees of its pullbacks;
+the scalar used to identify the two fibres at the node is absorbed by an
+automorphism on one component. This proves the classification by
+$\mathbf Z^2$.
+
+Twisting the normalization sequence by $\mathcal{L}_{a,b}(m)$ gives
+$$
+\chi(X_0,\mathcal{L}_{a,b}(m))
+=(m+a+1)+(m+b+1)-1,
+$$
+which is the displayed polynomial. Each degree pair is a distinct connected
+component of the Picard scheme of $X_0$. A finite-type fibre is
+quasi-compact, whereas the displayed fixed-polynomial locus is an infinite
+discrete union, proving the final assertion.
+\end{proof}
+
+\begin{remark}[The Picard boundedness problem]
+\label{remark-picard-boundedness-history}
+\begin{reference}
+\cite[Expos\'e 236, Section 4, pp. 241--242]{FGA}.
+\end{reference}
+Let $X\to S$ be projective and flat and fix a relatively ample invertible
+module. The Hilbert polynomial of an invertible module on a fibre is locally
+constant in flat families, so it cuts the Picard functor into open and closed
+subfunctors $P^Q$. Example
+\ref{example-picard-conic-fixed-Hilbert-not-finite-type} shows why these
+subfunctors need not be of finite type without additional hypotheses.
+
+The cited source asks whether finite type holds for separable families with
+geometrically irreducible fibres and whether $P^\tau$ is of finite type under
+still weaker hypotheses. It observes that for a smooth projective family
+$P^\tau$ lies in a fixed numerical, hence Hilbert-polynomial, class. These
+sentences are questions and reductions at this point of the source, not
+completion claims.
+
+The same issue can be stated without assuming representability of the Picard
+functor: one asks for a finite-type parameter space for invertible modules of
+fixed Hilbert polynomial on projective schemes in a fixed bounded family.
+The Hilbert and Quot numerical strata are organized in Remarks
+\ref{remark-hilb-numerical} and \ref{remark-quot-numerical}; the regularity
+bound in Varieties, Lemma
+\ref{varieties-lemma-bound-quotients-free} is the standard mechanism turning
+a fixed Hilbert polynomial into a finite-type parameter problem. Chow
+Homology identifies the intersection numbers used in the next theorem of the
+source with the corresponding cycle degrees. The theorem and its later
+supplement supply the source-specific boundedness conclusions sequentially
+below.
+\end{remark}
+
 \section{Properties of the Picard stack}
 \label{section-picard-stack}
 

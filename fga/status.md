@@ -3701,3 +3701,61 @@ and
 `1BFC0319C12CDBB33D9B0421AA35C455A991BBE367ACF8843D00C4C811A6433B`.
 The next sequential cursor is the Section 4 introductory discussion on
 printed pages 241--242.
+
+The introductory discussion of FGA 236, Section 4 is now integrated as
+Moduli, Section `moduli-section-picard-boundedness`, Example
+`moduli-example-picard-conic-fixed-Hilbert-not-finite-type`, and Remark
+`moduli-remark-picard-boundedness-history`. The source's conic degeneration is
+made explicit as
+$\mathop{\rm Proj}(k[[t]][x,y,z]/(xy-tz^2))$. Its special fibre is a tree of
+two projective lines, whose invertible modules are classified by two integer
+degrees. The Hilbert polynomial depends only on their sum, so every fixed sum
+contains infinitely many discrete Picard components. This proves directly
+that a fixed Hilbert-polynomial locus need not be of finite type.
+
+The accompanying remark distinguishes that obstruction from the source's
+then-open questions about separable geometrically irreducible families and
+finite type of $P^\tau$. It links the problem to the existing Hilbert and Quot
+numerical strata, regularity bounds for fixed Hilbert polynomial, and the
+intersection-number/cycle-degree comparison, without treating those questions
+as conclusions before their theorem and supplement cursors.
+
+Decision `D000570` supersedes reviewed-gap decision `D000297` and records the
+section as integrated source and Stacks content. Direct serial 1,100-dpi source
+review covers printed pages 241--242. Their page images have SHA-256
+`F07E028BBE778B94414E41F52C2DF80607C37D5B054A4822006BFC464B7BC867`
+and
+`2817B41755D858B81FB2D61C4E6F348186CCF92C2811ABF3177FA9FCA484A3B8`.
+The 24-page authority remains 2,461,968 bytes with SHA-256
+`266EEF77BF7BA34A75895ED69ACBFE791A2958DD52C2837D75AB29DF0D2F714A`.
+
+Both semantic validators pass with no errors at 21,730 labels, 21,437
+official-tag joins, 71 controlled topics, 4,284 topic candidates, 570
+append-only decisions, 1,253 source units, 1,612 term links, and 61 source
+issues, of which nine remain active; there are zero review units. The topic,
+decision, issue, map, Stacks-label, topic-candidate, reviewed-topic-map,
+index-validation, and map-validation files have SHA-256
+`B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0`,
+`0874574939FC68B9293FBB2C988A60304419D50DA3958E72C45D5DB6B54480F0`,
+`71B8D7D36176209D3D3306D26E88EB8E40D293076F6AA0AAA74AFFB309E2D65B`,
+`2615BE52B0382B52B235DC41DC3E622A8BD3945834AE27F6A99606144D48A51B`,
+`AC28D05125A342A305D6072D5EE3AD8623F614D26977B4CE4E04033533C43169`,
+`3E87867608E68F6F607850AFC2CCC8CF718FEF7E924E7AD170C658F13BDB4F23`,
+`26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46`,
+`45ECBE49797F5085E2CE070B9E9182A57F19D52BF9A8A86DD2B7991EB352FA48`,
+and `8D17C8E72FF55ACB4803025310172A42AFA38A1C403F761F342420CB86E6FBD8`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`;
+no official tag was invented for the new section, example, or remark.
+
+Three reproducible serial TeX passes produce a 76-page Moduli chapter of
+901,803 bytes with SHA-256
+`D7A6F8A41664EDA70D90DBBE21727655F8E72F91F6909ADA5C683CFE3CB70FCF`.
+The build has no overfull or underfull box. Final serial 1,100-dpi inspection
+of Moduli pages 62--63 finds no clipping, collision, malformed formula,
+unresolved new reference, placeholder, or unreadable text; their rendered
+page images have SHA-256
+`FFF199D9F6C9820089B35775EFE3BA9594CB5D53D9E675C75C5B8B4BC880E029`
+and
+`C8002A7A8C2348E568BD36CE74BA429E6C15EBCBA8DACAC033363C894C898D59`.
+The next sequential cursor is Theorem 4.1 on printed pages 242--243.
