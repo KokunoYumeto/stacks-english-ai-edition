@@ -3,38 +3,36 @@
   "date": "2026-08-06",
   "scope": {
     "start": "fac:I:1:no:1",
-    "end": "fac:II:3:no:44",
-    "printed_pages": "199-237",
-    "units_decided": 185,
-    "stacks_references_added": 107
+    "end": "fac:II:3:no:45",
+    "printed_pages": "199-238",
+    "units_decided": 190,
+    "stacks_references_added": 111
   },
   "authority": {
     "bytes": 6305726,
     "sha256": "B8C6508249308F5D8BC886B9E6360F1EC4FDC8F0F18EFAA03EE0E36B591551CA",
     "render_dpi": 1100,
-    "physical_pages_inspected": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42],
-    "printed_pages_inspected": [199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237]
+    "physical_pages_inspected": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43],
+    "printed_pages_inspected": [199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238]
   },
   "latest_review": {
-    "unit": "fac:II:3:no:44",
-    "component": "components/042_II_3_44_vanishing_cohomology_groups.tex",
-    "bytes": 4897,
-    "sha256": "EA0FD3B967C89DCBD71D21739A9B3F7391F6D15227BEE2A686E6B9E6F8CADD02",
-    "authority_physical_pages": [41, 42],
-    "authority_printed_pages": [236, 237],
+    "unit": "fac:II:3:no:45",
+    "component": "components/043_II_3_45_global_sections_affine_variety.tex",
+    "bytes": 5241,
+    "sha256": "5A2BF262ED3BC2091DEA5EBEC0F81E54267FEB27C3C053EC4D8981AA40EEA9A2",
+    "authority_physical_pages": [42, 43],
+    "authority_printed_pages": [237, 238],
     "authority_renders": [
-      {"physical_page": 41, "sha256": "2802D9DD12CED2300DBDD503AF51C21D11E3820758A419E8CA8E60731E9896AA"},
-      {"physical_page": 42, "sha256": "31E177F46116262F97D84D9ED2265DD092510CF6C892992E950DE8C3E70A9A3B"}
+      {"physical_page": 42, "sha256": "31E177F46116262F97D84D9ED2265DD092510CF6C892992E950DE8C3E70A9A3B"},
+      {"physical_page": 43, "sha256": "1FA0BBF1443FF21EDA9F84A85E98CE386E7450E3985C9EF21C9BC1E9601EAE2E"}
     ],
-    "high_detail_renders": [
-      {"physical_page": 41, "dpi": 5000, "region": "printed q exponent in the j-indexed Cech coboundary sum", "sha256": "00C03458AFCC974A5A8956EA37A19998163E2D66330B5783B0B3164D036FF0B7"}
-    ],
+    "high_detail_renders": [],
     "output_renders": [
-      {"master": "coherent.tex", "pdf_page": 2, "sha256": "854108C161D0946E382DF00511EEEB192ED66FED4975253C9BEAB747F71D469F"},
-      {"master": "schemes.tex", "pdf_page": 8, "sha256": "8D8EB8A088F77091AD8546BEA61DFA87940D30BE6E0D2D60DC22EB61EA98DA63"},
-      {"master": "schemes.tex", "pdf_page": 14, "sha256": "76BF840A16EC2EACCEA08245D169C2CC051A40BCCB50F4D7BE4EED12D1C877E3"}
+      {"master": "schemes.tex", "pdf_page": 13, "sha256": "5DFE193503B67F9282FEF7C14CE2412333BD1D0D74F54BD8F1E8B17B2C12FC97"},
+      {"master": "schemes.tex", "pdf_page": 14, "sha256": "76BF840A16EC2EACCEA08245D169C2CC051A40BCCB50F4D7BE4EED12D1C877E3"},
+      {"master": "properties.tex", "pdf_page": 21, "sha256": "D309DD711143397810E20D796016F9B4E94633762DAFE9B5FE7BFA12FA0DB1D3"}
     ],
-    "blind_review": {"id": "FAC-BLIND-REVIEW-N044-R1", "result": "PASS", "findings": []}
+    "blind_review": {"id": "FAC-BLIND-REVIEW-N045-R1", "result": "PASS", "findings": []}
   },
   "builds": [
     {
@@ -121,15 +119,15 @@
       "master": "schemes.tex",
       "pdf": "schemes.pdf",
       "bytes": 722234,
-      "sha256": "BB1EAD39D2F193B5CCE04C5B8A58E75CE40E0FF8CF0EEF13D7B23C6531A027FE",
-      "affected_pdf_pages_inspected": [2, 3, 8, 9, 10, 14, 16, 17, 19, 22, 23, 25, 26, 31, 32, 33, 34, 40, 42, 43],
+      "sha256": "23749C4BF3619DEDB8A88F17574BF466E40F1C2E2AD2537077FEF97ADB904205",
+      "affected_pdf_pages_inspected": [2, 3, 8, 9, 10, 13, 14, 16, 17, 19, 22, 23, 25, 26, 31, 32, 33, 34, 40, 42, 43],
       "affected_page_result": "PASS"
     },
     {
       "master": "properties.tex",
       "pdf": "properties.pdf",
-      "bytes": 730322,
-      "sha256": "DE678DBD4608D4911DC9E30178B6CBC5CCF3D7D412CF9F267E807A622B2FEB6E",
+      "bytes": 730319,
+      "sha256": "AC3E3D8742A4D2C1CA41C2029A4DEFF996CCDAA782190B61E83B59DF61A90311",
       "affected_pdf_pages_inspected": [21],
       "affected_page_result": "PASS"
     },
@@ -201,7 +199,7 @@
     "fac_citations_resolved": true,
     "undefined_reference_at_edited_lines": 0,
     "overfull_box_at_edited_lines": 0,
-    "note": "The isolated builds retain unrelated missing chapter-aux warnings and pre-existing overfull diagnostics. All no. 44 FAC citations resolve. The inspected coherent.pdf page 2 and schemes.pdf pages 8 and 14 are unclipped, collision-free, and contain no unresolved mark at an edited statement. Issue I000118 records the printed q exponent, its correction to j, and the targeted 5000 dpi confirmation; issues I000083, I000096, and I000108 retain earlier fail-closed receipts."
+    "note": "The isolated builds retain unrelated missing chapter-aux and bibliography warnings and pre-existing overfull diagnostics. The no. 45 source citations are confined to the Stacks reference/history metadata, and no undefined reference or overfull box occurs at an edited statement. The inspected schemes.pdf pages 13--14 and properties.pdf page 21 are unclipped, collision-free, and contain no unresolved mark. No high-detail authority render was required because the relevant p. 238 text and formulas were unambiguous at 1100 dpi; issues I000083, I000096, I000108, and I000118 retain earlier fail-closed receipts."
   },
   "validators": {
     "intake": "PASS",
