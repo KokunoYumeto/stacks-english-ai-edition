@@ -8456,6 +8456,97 @@ This proves the lemma.
 \end{proof}
 
 \begin{lemma}
+\label{lemma-identity-component-generic-open-subgroup}
+\begin{reference}
+\cite[Expos\'e 236, Lemma 1.2, pp. 224--225]{FGA}.
+\end{reference}
+Let $S$ be a locally Noetherian scheme and let $G \to S$ be a group scheme
+locally of finite type. Let $\eta$ be a generic point of an irreducible
+component of $S$. There exist an open neighbourhood $U \subset S$ of
+$\eta$ and an open subgroup scheme $H \subset G_U$ such that
+\begin{enumerate}
+\item $H \to U$ is of finite type and has geometrically connected fibres,
+and
+\item for every $u \in U$ the fibre $H_u$ is the connected component
+$G_u^0$ of the identity in $G_u$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+After shrinking about $\eta$, we may assume that $S$ is affine and that
+$\eta$ is its unique generic point. Put
+$$
+A = \mathcal{O}_{S, \eta}.
+$$
+This is an Artinian local ring. The closed fibre of $G_A \to \Spec(A)$
+has the same underlying topological space as $G_A$. Its identity component
+is open and closed and is quasi-compact by Groupoids, Proposition
+\ref{groupoids-proposition-connected-component}. Let $H_A \subset G_A$
+be the corresponding open and closed subscheme. The group operations on
+$G_A$ restrict to $H_A$: multiplication and inversion preserve the
+connected component containing the identity. Thus $H_A$ is an open subgroup
+scheme. It is quasi-compact and locally of finite type over $A$, and hence
+of finite type over $A$.
+
+The scheme $\Spec(A)$ is the limit of the open neighbourhoods of $\eta$ in
+$S$. Standard limit arguments spread the quasi-compact open immersion
+$H_A \to G_A$ to an open immersion
+$$
+H \longrightarrow G_U
+$$
+over some open neighbourhood $U$ of $\eta$; here $H \to U$ is of finite
+type. We use Limits, Lemmas
+\ref{limits-lemma-descend-finite-presentation},
+\ref{limits-lemma-descend-open-immersion}, and
+\ref{limits-lemma-descend-closed-immersion-finite-presentation}.
+After shrinking $U$, the identity, inverse, and multiplication of $G_U$
+restrict to $H$ and satisfy the group axioms, because these are equalities
+between morphisms of finite presentation which hold after base change to
+$\Spec(A)$. Hence $H$ is an open subgroup scheme of $G_U$.
+
+The generic fibre of $H \to U$ is geometrically connected: it is connected
+and contains the rational identity point. After shrinking $U$ once more,
+all fibres of $H \to U$ are geometrically connected by
+Lemma \ref{lemma-geometrically-connected-generic-fibre}. For $u \in U$,
+the open subgroup $H_u \subset G_u$ contains $G_u^0$. On the other hand,
+$H_u$ is connected and contains the identity, so $H_u \subset G_u^0$.
+This proves $H_u = G_u^0$.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-identity-component-locus-quasi-compact}
+\begin{reference}
+\cite[Expos\'e 236, Theorem 1.1(i) and Lemma 1.2,
+pp. 224--225]{FGA}.
+\end{reference}
+Let $S$ be a locally Noetherian scheme and let $G \to S$ be a group scheme
+locally of finite type. Then
+$$
+G^0 = \bigcup_{s \in S} G_s^0
+$$
+is quasi-compact over $S$. More precisely, every quasi-compact open of $S$
+has a finite stratification by locally closed subschemes $S_i$ such that
+$(G_{S_i})^0$ is an open subgroup scheme of finite type over $S_i$ with
+geometrically connected fibres.
+\end{lemma}
+
+\begin{proof}
+The formation of $G^0$ commutes with arbitrary base change by
+Lemma \ref{lemma-base-change-connected-along-section}. We may therefore
+work over a quasi-compact open of $S$, which is Noetherian. Noetherian
+induction and
+Lemma \ref{lemma-identity-component-generic-open-subgroup} give a finite
+stratification
+$$
+S = \coprod_{i = 1}^r S_i
+$$
+by locally closed subschemes with the asserted open subgroups $H_i$ over
+$S_i$. Each $S_i$ is quasi-compact and each $H_i \to S_i$ is of finite
+type. Consequently every $H_i$ is quasi-compact. Since $G^0$ is the union
+of the finitely many locally closed subsets $|H_i|$, it is quasi-compact.
+\end{proof}
+
+\begin{lemma}
 \label{lemma-connected-along-section-proper}
 Let $S$ be a locally Noetherian scheme. Let $f : X \to S$ be a proper
 morphism and let $e : S \to X$ be a section. Define $X^0 \subset X$ as in
@@ -8712,6 +8803,51 @@ to $p$, the integer $n$ can be chosen prime to $p$, and if $\nu(x)$ is a
 power of $p$, the integer $n$ can be chosen to be a power of $p$. The same
 argument proves that $G^\sigma$ and $G^\rho$ are stable under specialization.
 Their local constructibility proves that they are closed.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-primary-component-locus-open}
+\begin{reference}
+\cite[Expos\'e 236, Theorem 1.1(iv), pp. 224 and 227]{FGA}.
+\end{reference}
+Let $S$ be a locally Noetherian scheme and let $G \to S$ be a commutative
+group scheme locally of finite type. Assume there is a $p$, equal to $1$ or
+to a prime number, which is the characteristic exponent of every residue
+field of $S$. If
+$$
+[n] : G \longrightarrow G
+$$
+is open for every $n \geq 1$ prime to $p$, then the $p$-primary
+component locus
+$$
+G^\rho = \{x \in G \mid [p^h](x) \in G_{f(x)}^0
+\text{ for some }h \geq 0\}
+$$
+is open in $G$.
+\end{lemma}
+
+\begin{proof}
+The subset $G^\rho$ is locally constructible by
+Lemma \ref{lemma-order-in-component-group-constructible}. It is therefore
+enough to prove that it is stable under generalization. Let $x' \leadsto x$
+be a generalization with $x \in G^\rho$, and write $y=f(x)$. Replacing
+$x$ and $x'$ by their images under a suitable $[p^h]$, it is enough to
+consider the case $x \in G_y^0$.
+
+Choose a quasi-compact open $U \subset G^\tau$ which contains $G_y^0$.
+This is possible because $G_y^0$ is quasi-compact. By
+Lemma \ref{lemma-order-in-component-group-constructible} the function
+$\nu$ has finite image on $U$. Let $m$ be a common multiple of the
+prime-to-$p$ parts of all the integers $\nu(z)$ for $z \in U$.
+
+Groupoids, Lemma
+\ref{groupoids-lemma-connected-group-power-surjective} gives
+$[m](G_y^0)=G_y^0$. As $G_y^0 \subset U$, it follows that
+$x \in [m](U)$. The subset $[m](U)$ is open, and hence it contains the
+generalization $x'$. Choose $z \in U$ with $[m](z)=x'$. Multiplication by
+$m$ kills the prime-to-$p$ part of the order of the image of $z$ in its
+fibrewise component group. Thus the image of $x'$ has $p$-power order, so
+$x' \in G^\rho$, as desired.
 \end{proof}
 
 

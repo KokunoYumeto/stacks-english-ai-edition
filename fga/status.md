@@ -1976,3 +1976,75 @@ The added text creates no overfull or underfull horizontal box. Final serial
 malformed formula, placeholder, or unreadable text. The next sequential
 cursor is Expose 236, Section 1, on printed pages 222--230 (physical PDF
 pages 3--11); printed page 231 begins Section 2.
+
+The first Section 1 integration patch adds the component-group machinery
+needed for the opening parts of Theorem 1.1 without claiming the whole
+theorem. Lemma `more-morphisms-lemma-identity-component-generic-open-subgroup`
+spreads the identity component at a generic point to a finite-type open
+subgroup with geometrically connected fibres. Lemma
+`more-morphisms-lemma-identity-component-locus-quasi-compact` applies
+Noetherian induction to obtain the finite locally closed stratification and
+the quasi-compactness of the total identity-component locus. Lemma
+`groupoids-lemma-connected-group-power-surjective` proves that every power
+map whose exponent is invertible in the ground field is surjective on a
+connected commutative group scheme locally of finite type. Lemma
+`more-morphisms-lemma-primary-component-locus-open` then uses this result,
+the constructibility of component orders, and openness of the prime-to-
+characteristic power maps to prove openness of the primary component locus.
+
+Decisions `D000528` through `D000532` replace the earlier preliminary
+classifications for Lemmas 1.2 and 1.4 and for the covered clauses of Theorem
+1.1. The theorem-level decision remains deliberately `existing_weaker`:
+the final universal-openness assertion for the prime-to-characteristic locus
+is not yet integrated. Issue `I000045` corrects the undefined ambient symbol
+`X` in the proof of Lemma 1.4 to `G`, and issue `I000046` corrects the printed
+prime-power reduction from the impossible `phi_n^h` to `phi_p^h`; both are
+resolved by the new statements. Issue `I000047` records the printed `g(y') =
+x'` where the constructed section is `g'`, and issue `I000048` records the
+coprimality condition printed against `p` where the quantified power map is
+indexed by `n`. Those two issues remain confirmed and open until the
+universal-openness proof and Corollary 1.5 are integrated. Existing issue
+`I000007`, concerning the source remark which reverses the displayed roles
+of the prime-to-characteristic and primary loci, also remains confirmed; the
+displayed definitions continue to govern.
+
+Direct serial 1,100-dpi review for this patch covers printed pages 224--228
+of the 24-page NUMDAM authority. That authority is 2,461,968 bytes with
+SHA-256
+`266EEF77BF7BA34A75895ED69ACBFE791A2958DD52C2837D75AB29DF0D2F714A`.
+Both semantic validators pass with no errors at 21,656 labels, 21,437
+official-tag joins, 71 controlled topics, 4,195 topic candidates, 532
+append-only decisions, 1,253 source units, 1,612 term links, and 48 source
+issues, of which nine remain active. The topic, decision, issue, map,
+Stacks-label, topic-candidate, reviewed-topic-map, index-validation, and
+map-validation files have SHA-256
+`B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0`,
+`1E7E345D386439FBB8A7C342A185ADA8F952BD5C949CBD56737F916867398760`,
+`B02E197E409D0B2EC6562B5B29C5538A53DC734CEF06234D96A92928571CD577`,
+`21454B99767080692AFCAB7326537FB6E085C37263AB988C6A3604EA4929E60D`,
+`2DE2A5182704B454C168B5ADD11FC24A3770869D1C4F8F397DC67A94E00ECA6C`,
+`0FD6ADAB75C9D26D9C9FD0563E3D5BA7C4497A92EE33C6930036AE08624D89ED`,
+`26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46`,
+`0ACE5833F9A4015C6EE921F9C0C44E84B9EDA33B303CE5000E13A07DCC0BD592`,
+and `B64FF83B58F607924108989F60561AD984683823C028F3808BA0F54B4570681D`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`;
+the four new semantic labels deliberately have no invented official tags.
+
+Bibliography-complete serial builds followed by stable TeX passes produce a
+59-page Groupoid Schemes chapter of 799,285 bytes with SHA-256
+`02917100F16FA6A7EFEE63B70DB04CF0A1519B8F4F5DAD035027FEF0D08F6AEB`
+and a 251-page More on Morphisms chapter of 2,347,182 bytes with SHA-256
+`5C72F75D9A5AB3F4DE26DF5F66E07332B9F86092623DC81CCCD87460FC61ECA5`.
+The added source ranges create no overfull or underfull horizontal box.
+Final serial 1,100-dpi inspection of Groupoid Schemes page 8 and More on
+Morphisms pages 87--88 and 91--92 finds no clipping, collision, malformed
+formula, unresolved marker, placeholder, or unreadable text. The standalone
+builds retain only pre-existing external cross-chapter and generated-index
+warnings outside the additions.
+
+The next sequential cursor remains Expose 236, Section 1. The next patch must
+integrate the universal-openness argument (including the corrected value
+`g'(y') = x'`) and Corollary 1.5 (including the corrected condition that the
+residue characteristic be prime to `n`), before proceeding through Remarks
+1.6 and 1.9 and Corollaries 1.7, 1.8, and 1.10 on printed pages 228--230.
