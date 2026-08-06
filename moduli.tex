@@ -5219,6 +5219,65 @@ Consequently $G=W$ is open as well as closed in $P$. Its underlying space is
 $P^0$, and its smoothness over $S$ proves that $P$ is smooth along this locus.
 \end{proof}
 
+\begin{lemma}[The Picard tangent module]
+\label{corollary-picard-R1-locally-free-base-change}
+\begin{reference}
+\cite[Expos\'e 236, Corollary 3.6, p. 240]{FGA}.
+\end{reference}
+In the situation of Theorem
+\ref{theorem-picard-smooth-near-smooth-fibre}, after replacing $S$ by the open
+neighbourhood supplied there, $R^1f_*\mathcal{O}_X$ is a finite locally free
+$\mathcal{O}_S$-module. Its formation commutes with arbitrary base change: if
+$g : S' \to S$, $X'=X\times_S S'$, and $f' : X' \to S'$, then the canonical
+map
+$$
+g^*R^1f_*\mathcal{O}_X \longrightarrow R^1f'_*\mathcal{O}_{X'}
+$$
+is an isomorphism.
+\end{lemma}
+
+\begin{proof}
+Let $e : S \to P$ be the identity section and put
+$$
+\mathcal{E}=
+\SheafHom_{\mathcal{O}_S}(e^*\Omega_{P/S},\mathcal{O}_S).
+$$
+Theorem \ref{theorem-picard-smooth-near-smooth-fibre} makes $P \to S$ smooth
+along $e$. Thus $\mathcal{E}$ is finite locally free, and its formation
+commutes with arbitrary base change.
+
+We identify this tangent module. Let $T \to S$ be affine, write
+$f_T : X_T \to T$, and let $T[\epsilon]$ be the first order thickening with
+ideal $\epsilon\mathcal{O}_T$. Sections of
+$\mathcal{E}_T$ are the morphisms
+$$
+T[\epsilon] \longrightarrow P_T
+$$
+whose restriction to $T$ is the identity section. Since $P_T$ represents the
+relative Picard functor, these are the infinitesimal invertible-module classes
+on $X_T$. The exact sequence used in More on Morphisms, Lemma
+\ref{more-morphisms-lemma-picard-group-first-order-thickening} identifies them
+with
+$$
+H^1(X_T,\mathcal{O}_{X_T}).
+$$
+Indeed, reduction is surjective on global units, and the contribution from
+invertible modules on the base vanishes because $T$ is affine. On the other
+hand,
+$$
+H^1(X_T,\mathcal{O}_{X_T})
+=\Gamma(T,R^1f_{T,*}\mathcal{O}_{X_T}).
+$$
+These identifications are additive and natural in $T$. They therefore give a
+canonical isomorphism
+$$
+\mathcal{E}_T \longrightarrow R^1f_{T,*}\mathcal{O}_{X_T}
+$$
+for every base change $T \to S$. For $T=S$ this proves local freeness, and
+naturality identifies the displayed isomorphisms for general $T$ with the
+canonical cohomology base change map. This proves the final assertion.
+\end{proof}
+
 \section{Properties of the Picard stack}
 \label{section-picard-stack}
 

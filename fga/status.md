@@ -3367,3 +3367,48 @@ The new source range creates no overfull or underfull box. Final serial
 1,100-dpi inspection of Moduli pages 55--57 finds no clipping, collision,
 malformed formula, unresolved new reference, placeholder, or unreadable text.
 The next sequential cursor is Corollary 3.6 on printed page 240.
+
+FGA 236, Corollary 3.6 is now integrated as Moduli, Lemma
+`moduli-corollary-picard-R1-locally-free-base-change`. It identifies
+`R^1f_*O_X` functorially with the relative tangent module of the Picard scheme
+along its identity section: on every affine base change the dual-number
+tangent classes are exactly the first cohomology classes of the additive
+structure sheaf. The smooth neighbourhood supplied by Theorem 3.5 therefore
+makes this module finite locally free, while the base-change compatibility of
+the relative tangent bundle identifies with the canonical cohomology
+base-change map for every change of base.
+
+Decision `D000564` supersedes reviewed-gap decision `D000291` and records the
+unit as an extension of existing Stacks infrastructure integrated from the
+source. Direct 1,100-dpi source review uses printed page 240, whose page image
+has SHA-256
+`5D0808CE1BFF8CB01E720159F00972A39F8D0DD8B6BC3D0593CD129DAE2C913E`.
+The 24-page authority remains 2,461,968 bytes with SHA-256
+`266EEF77BF7BA34A75895ED69ACBFE791A2958DD52C2837D75AB29DF0D2F714A`.
+
+Both semantic validators pass with no errors at 21,717 labels, 21,437
+official-tag joins, 71 controlled topics, 4,265 topic candidates, 564
+append-only decisions, 1,253 source units, 1,612 term links, and 59 source
+issues, of which eight remain active; there are zero review units. The topic,
+decision, issue, map, Stacks-label, topic-candidate, reviewed-topic-map,
+index-validation, and map-validation files have SHA-256
+`B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0`,
+`5E5227B47C3DD57440178F126F7562F46F14D4266694875FBD3321664BD63E84`,
+`ECE83F139D6E457796604266A142691BAD503DD937B38ED05BCCD0E80B378CDE`,
+`EDC8FD4DC6558DEE5C19CC068C507FB3B1819430D32ADD24DE6BC5BE16F8583F`,
+`F603674379BDF40AB2C2111D21C9BC5591F0FBC266C814F5E4C42F074DE88A2D`,
+`D34909A75876B04703A9C08A1CC85F630A76F07872366481CE886CC8F8B5152F`,
+`26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46`,
+`9AB6863C3A65E5D7E36C573E72E1ABF9EBF0CE8E568B9F0EC6F7973DFE0EDA6B`,
+and `61AAB6735FDFFA38FFEC92BAC8BCBA4E5B8D952BB62AD8D7AE6E2946FD2BF5DE`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`;
+no official tag was invented for the new lemma.
+
+Three stable serial TeX passes produce a 71-page Moduli chapter of 869,182
+bytes with SHA-256
+`D0A40CD32761C51991C29E6EEAD514709D945DCAE848CB39D8DF3E318B833C1D`.
+The new source range creates no overfull or underfull box. Final serial
+1,100-dpi inspection of Moduli pages 57--58 finds no clipping, collision,
+malformed formula, unresolved new reference, placeholder, or unreadable text.
+The next sequential cursor is Remark 3.7 on printed pages 240--241.
