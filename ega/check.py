@@ -19,6 +19,14 @@ if scope.get("status") != "discovery_scaffold":
 if scope.get("stacks_upstream") != "a04446e57ec1fbc252a871afcec7752fb2807b14":
     ERRORS.append("unexpected upstream identity")
 
+interface = json.loads((ROOT / "interface.json").read_text(encoding="utf-8"))
+if interface.get("status") != "active" or interface.get("ownership", {}).get("cross_tree_writes") is not False:
+    ERRORS.append("edition interface is not active/read-only")
+if interface.get("english_discovery", {}).get("manifest_sha256") != scope["inputs"]["english_discovery"]["manifest_sha256"]:
+    ERRORS.append("edition interface English manifest mismatch")
+if interface.get("french_cursor", {}).get("page_gate_sha256") != scope["inputs"]["french_authority"]["page_gate_sha256"]:
+    ERRORS.append("edition interface French page-gate mismatch")
+
 tables = {
     "src.csv": ("source_id", re.compile(r"ega\.[a-z0-9.-]+$")),
     "topics.csv": ("topic_id", re.compile(r"ega-topic-[a-z0-9-]+$")),
@@ -124,14 +132,40 @@ for row in rows("topics.csv"):
     if row["evidence_labels"].strip():
         ERRORS.append(f"initial scaffold must not assert labels: {row['topic_id']}")
 
+findings_path = ROOT.parent / "reports" / "findings.jsonl"
+finding_fields = set(interface.get("required_finding_fields", []))
+finding_ids = set()
+finding_count = 0
+if not findings_path.exists():
+    ERRORS.append("missing findings channel")
+else:
+    for number, raw in enumerate(findings_path.read_text(encoding="utf-8").splitlines(), 1):
+        if not raw.strip():
+            continue
+        finding_count += 1
+        try:
+            finding = json.loads(raw)
+        except json.JSONDecodeError:
+            ERRORS.append(f"malformed findings JSON line {number}")
+            continue
+        missing = finding_fields - set(finding)
+        if missing:
+            ERRORS.append(f"findings line {number} missing {sorted(missing)}")
+        stable_id = finding.get("stable_id", "")
+        if stable_id in finding_ids:
+            ERRORS.append(f"duplicate finding stable_id {stable_id}")
+        finding_ids.add(stable_id)
+counts["findings.jsonl"] = finding_count
+
 private_parts = [
     r"C:" + r"[/\\]" + "Users" + r"[/\\]",
     "Documents" + r"[/\\]" + "interlanguage",
     "Flo" + "ris",
 ]
 privacy = re.compile("|".join(private_parts), re.I)
-for path in ROOT.iterdir():
-    if path.is_file() and path.suffix in {".md", ".json", ".csv", ".py"}:
+public_files = list(ROOT.iterdir()) + list((ROOT.parent / "reports").iterdir())
+for path in public_files:
+    if path.is_file() and path.suffix in {".md", ".json", ".jsonl", ".csv", ".py"}:
         if privacy.search(path.read_text(encoding="utf-8")):
             ERRORS.append(f"private path/name in {path.name}")
 

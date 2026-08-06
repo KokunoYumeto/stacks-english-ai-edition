@@ -59,6 +59,10 @@ append-only.
   stable unit registry, and fail-closed intake receipt.
 - `map.py`, `cand.csv`, and `map.json`: lexical candidate generation against
   the exact upstream Stacks snapshot. Candidates are not reviewed mappings.
+- `interface.json`: hash-bound read-only contract with the active French and
+  English EGA edition task.
+- `../reports/findings.jsonl`: append-only suspected-correction referrals;
+  the edition task alone decides and mutates canonical source.
 
 The immediate work is corpus-wide source-unit extraction and topic
 classification. Mathematical Stacks chapter edits begin only after a bounded

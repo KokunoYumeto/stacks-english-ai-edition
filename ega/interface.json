@@ -1,0 +1,45 @@
+{
+  "schema": "ega-edition-stacks-readonly-interface-v1",
+  "status": "active",
+  "edition_task": "EGA French Canon and English Recheck",
+  "ownership": {
+    "edition_roots": "edition task only",
+    "stacks_scaffold": "codex/ega-scaffold only",
+    "cross_tree_writes": false
+  },
+  "french_cursor": {
+    "admitted_through": "EGA II printed p.9, ending with Corollary 1.4.2",
+    "next": "NUMDAM EGA II PDF one-based p.7 / printed p.10, beginning Proposition 1.4.3",
+    "append_state": "true EOF; no temporary suffix",
+    "manifest": "F8.json",
+    "manifest_sha256": "2137BF64B9BD210176B58075DBDB58E7C8A5669F9EFAD61410510A01D32D0BC0",
+    "page_gate": "E2P9.json",
+    "page_gate_sha256": "AED8792DDE8CAD1B3B3B61F1E857AD786011744C181A397DE967506E876B3AD5",
+    "ledger": "E2P9_FR.jsonl",
+    "ledger_sha256": "A005C06CD4A2AAE2B95DFAC68287840CF3247E7538235BF7DABF75FAAF8DB7C9"
+  },
+  "english_discovery": {
+    "manifest": "R172.json",
+    "manifest_sha256": "01D0226BD1A31B14A250C29C18F3DBAE0C7537B245AB1C119422EBBEAF0C133E",
+    "ledger": "E2P9_EN.jsonl",
+    "ledger_sha256": "F101B421095CDBD8AE9D418685B91652CA06493FB3DE637C1D638C2F4A1F5272",
+    "role": "discovery text only"
+  },
+  "semantic_notes": {
+    "sha256": "8C4E31D85658F6A8D82A809FB7FC4D6B89B7A02B9F9FBF5B7C0480FDD32D78FF",
+    "role": "read-only source evidence requiring schema normalization"
+  },
+  "public_checkpoint": "https://zenodo.org/records/21828032",
+  "correction_channel": "reports/findings.jsonl",
+  "required_finding_fields": [
+    "stable_id",
+    "ega_locus",
+    "claim",
+    "suspected_error",
+    "authority_locator",
+    "evidence",
+    "proposed_disposition",
+    "reporter",
+    "utc"
+  ]
+}
