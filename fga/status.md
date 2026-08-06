@@ -1559,3 +1559,68 @@ inspection of Picard pages 9--11 finds no clipping, collision, malformed
 formula, or unreadable text.  The next sequential cursor is Expose 232,
 Section 2, “Relations among the various relative and absolute Picard groups,”
 beginning on printed page 146 (physical PDF page 5).
+
+The next sequential patch integrates Expose 232, Section 2, “Relations among
+the various relative and absolute Picard groups,” on printed pages 146--148
+(physical PDF pages 5--7).  The Quot and Hilbert Spaces chapter now cites the
+source at the modern absolute-to-relative exact sequence, its split form after
+a section, and the rigidified Picard stack.  New Lemma
+`quot-lemma-picard-cech-quotient-with-local-section` states the reusable Cech
+equalizer `Picardfunctor(T) -> Pic(X_T')/Pic(T') =>
+Pic(X_T'')/Pic(T'')` for the final Picard sheaf after a surjective fppf cover
+on which the family acquires a section.
+It also records the diagonal choice `T'=X_T` when the family itself is a
+surjective fppf morphism of schemes.
+
+Decisions `D000451` through `D000467` give explicit dispositions to every
+proposition, subitem, corollary, remark, and displayed structural equation in
+the section.  Rollup decisions supersede `D000225` through `D000231` without
+rewriting history.  The restricted direct-image presheaf remains an explicit
+historical layer; it is not silently identified with the final fppf Picard
+sheaf.  Issue `I000033` corrects the printed domain in Remark 2.5 from
+rigidified invertible modules “on S” to modules on `X`.  Issue `I000034`
+retains the final projective-flat and “separable” multisection refinement as
+historical evidence rather than importing an etale theorem with undefined
+modern hypotheses.
+
+Review of the cited existing Quot proofs also repairs five local type errors:
+two wrong fibre-product symbols in the global-units equality, the target of
+the descent cover `X_T`, the direction `X_T -> X_T'` of a base-change map, and
+an unmatched parenthesis in the rigidification descent citation.  These are
+mathematical typing repairs in the working Stacks text and do not alter the
+FGA source record.
+
+Direct 1,200-dpi review covers all three source pages.  The NUMDAM authority
+remains 2,006,109 bytes with SHA-256
+`C84DCA027FAC1AF187B0B9F6C8D2E2CB95B43CE201815B2073577FD4425919F0`.
+The linked erratum remains 134,758 bytes with SHA-256
+`CBC9B1A1967B448A5087D97B4C102B028F1D1BD99A22A95BD4FE2F1F6147F344`
+and is silent on Section 2.
+
+Both semantic validators pass with no errors at 21,613 labels, 21,437
+official-tag joins, 62 controlled topics, 4,039 topic candidates, 467
+append-only decisions, 1,253 source units, 1,612 term links, and 34 source
+issues, of which eight remain active.  The topic, decision, issue, map,
+Stacks-label, topic-candidate, and reviewed-topic-map ledgers have SHA-256
+`88E1323DF2B11F0B3554DB7D4111F578EFBB4E65B8AD35F615CD79A5CB95AF4F`,
+`BA6815507B926E671544A8000725B1C084688E1077B42DA2356FCE4EF4CC3F99`,
+`11B0D9C239A866D52BCB1E6E5EC45350BF9B4EA36B22E38EDC472E7582CF45DF`,
+`D45D2C102288932DC17548B7E3369D4A48215746FF0ED0B0F71F402B094ACB32`,
+`E0BD256298AE662FFACE2C90563129584CA602A71D40A74C12846DBD3D45ACE0`,
+`B18136E0E19EA5A014F24F3C10B3A4849842057517E3EF69C446A6F5FC11519E`,
+and `E9397FB0719F404A0AF97779B60D9990B7A780C3E968333D7707C67654294995`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`;
+the new semantic label deliberately has no invented official tag.
+
+A bibliography-complete serial build followed by stable TeX passes produces
+a 61-page Quot and Hilbert Spaces chapter of 859,482 bytes with SHA-256
+`3BE3413338B9A0EBB82FF0E74525E4F5D40BD7C52974A7778AE873B8C63B4F3D`.
+All new labels and citations resolve.  The addition creates no overfull or
+underfull horizontal box; the standalone build retains nine pre-existing
+overfull boxes and pre-existing external auxiliary warnings elsewhere in the
+chapter.  Final 1,200-dpi inspection of pages 29--32 finds no clipping,
+collision, malformed formula, or unreadable text.  The next sequential cursor
+is Expose 232, Section 3, “The main existence theorem: statement,” beginning
+on printed page 148 (physical PDF page 7); the linked erratum must be applied
+to Remark 3.3 on the following printed page.

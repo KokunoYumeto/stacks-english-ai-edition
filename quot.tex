@@ -2892,6 +2892,9 @@ is on schemes $T$ over $B$. Here is a lemma that helps with this task.
 
 \begin{lemma}
 \label{lemma-flat-geometrically-connected-fibres}
+\begin{reference}
+\cite[Expos\'e 232, Proposition 2.1 and Corollary 2.4]{FGA}.
+\end{reference}
 In Situation \ref{situation-pic}.
 If $\mathcal{O}_T \to f_{T, *}\mathcal{O}_{X_T}$ is an isomorphism
 for all schemes $T$ over $B$, then
@@ -2924,8 +2927,8 @@ trivialising sections of $\mathcal{L}$ over $X_{B_i \times_B B_j}$
 and hence differ by a multiplicative unit
 $$
 f_{ij} \in
-\Gamma(X_{S_i \times_B B_j}, \mathcal{O}_{X_{B_i \times_B B_j}}^*) =
-\Gamma(B_i \times_B B_j, \mathcal{O}_{B_i \times_N B_j}^*)
+\Gamma(X_{B_i \times_B B_j}, \mathcal{O}_{X_{B_i \times_B B_j}}^*) =
+\Gamma(B_i \times_B B_j, \mathcal{O}_{B_i \times_B B_j}^*)
 $$
 (equality by our assumption on pushforward of structure sheaves).
 Of course these elements satisfy the cocycle condition on
@@ -3056,6 +3059,9 @@ hypothesis itself, so this correction does not enter its proof.
 
 \begin{lemma}
 \label{lemma-flat-geometrically-connected-fibres-with-section}
+\begin{reference}
+\cite[Expos\'e 232, Proposition 2.1, Corollary 2.4, and Remark 2.5]{FGA}.
+\end{reference}
 In Situation \ref{situation-pic} let $\sigma : B \to X$ be a section.
 Assume that $\mathcal{O}_T \to f_{T, *}\mathcal{O}_{X_T}$ is an isomorphism
 for all $T$ over $B$. Then
@@ -3112,7 +3118,7 @@ By our choice of $\varphi_{ij}$ we see that the pullback of
 this map by $\sigma$ is equal to multiplication by $1$. By
 our assumption on functions on $X$, we see that $f_{ijk} = 1$.
 Thus we obtain a descent datum for the fppf covering
-$\{X_{T_i} \to X\}$. By
+$\{X_{T_i} \to X_T\}$. By
 Descent on Spaces, Proposition
 \ref{spaces-descent-proposition-fpqc-descent-quasi-coherent}
 there is an invertible $\mathcal{O}_{X_T}$-module $\mathcal{L}$
@@ -3120,6 +3126,46 @@ and an isomorphism $\alpha : \mathcal{O}_T \to \sigma_T^*\mathcal{L}$
 whose pullback to $X_{T_i}$ recovers $(\mathcal{L}_i, \alpha_i)$
 (small detail omitted). Thus $\mathcal{L}$ defines an object
 of $K(T)$ as desired.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-picard-cech-quotient-with-local-section}
+\begin{reference}
+\cite[Expos\'e 232, Remark 2.6, p. 148]{FGA}.
+\end{reference}
+In Situation \ref{situation-pic}, assume that
+$\mathcal{O}_U \to f_{U, *}\mathcal{O}_{X_U}$ is an isomorphism for every
+scheme $U$ over $B$. Let $T \to B$ be a scheme and let $T' \to T$ be a
+surjective fppf morphism such that $X_{T'} \to T'$ has a section. Set
+$T'' = T' \times_T T'$. Then the diagram
+$$
+\Picardfunctor_{X/B}(T) \longrightarrow
+\Pic(X_{T'})/\Pic(T')
+\mathrel{\substack{\longrightarrow \\[-0.6ex] \longrightarrow}}
+\Pic(X_{T''})/\Pic(T'')
+$$
+is an equalizer. In particular, every element of
+$\Picardfunctor_{X/B}(T)$ is represented after pullback to $T'$ by an
+invertible module on $X_{T'}$. If $X_T$ is a scheme and $X_T \to T$ is a
+surjective fppf morphism, then one may take $T' = X_T$; the required section
+after base change is the diagonal.
+\end{lemma}
+
+\begin{proof}
+Since $\Picardfunctor_{X/B}$ is an fppf sheaf, the diagram
+$$
+\Picardfunctor_{X/B}(T) \longrightarrow
+\Picardfunctor_{X/B}(T')
+\mathrel{\substack{\longrightarrow \\[-0.6ex] \longrightarrow}}
+\Picardfunctor_{X/B}(T'')
+$$
+is an equalizer. The section over $T'$ and either of its pullbacks to
+$T''$ allow us to apply
+Lemma \ref{lemma-flat-geometrically-connected-fibres-with-section} over
+$T'$ and $T''$. This identifies the last two terms with the two quotients
+in the statement. These identifications are compatible with pullback
+because they are induced by the canonical maps from Picard groups to the
+Picard functor.
 \end{proof}
 
 \noindent
@@ -3135,7 +3181,7 @@ is an isomorphism.
 is given by a morphism of schemes $g : T \to T'$ with $h = h' \circ g$
 and an isomorphism $\varphi : (g')^*\mathcal{L}' \to \mathcal{L}$
 such that $\sigma_T^*\varphi \circ g^*\alpha' = \alpha$.
-Here $g' : X_{T'} \to X_T$ is the base change of $g$.
+Here $g' : X_T \to X_{T'}$ is the base change of $g$.
 \end{enumerate}
 There is a natural faithful forgetful functor
 $$
@@ -3147,6 +3193,10 @@ over $(\Sch/S)_{fppf}$.
 
 \begin{lemma}
 \label{lemma-pic-with-section-stack}
+\begin{reference}
+\cite[Expos\'e 232, Remark 2.5, p. 147]{FGA}; in the sentence describing
+rigidified invertible modules, ``on $S$'' must read ``on $X$''.
+\end{reference}
 In Situation \ref{situation-pic} let $\sigma : B \to X$ be a section.
 Then $\Picardstack_{X/B, \sigma}$ as defined above is a stack in
 groupoids over $(\Sch/S)_{fppf}$.
@@ -3172,7 +3222,7 @@ $$
 Since the maps $\varphi_{ij}$ are compatible with the $\alpha_i$
 we see that $\alpha_i$ and $\alpha_j$ pullback to the same map
 on $T_i \times_T T_j$. By descent of quasi-coherent sheaves
-(Descent, Proposition \ref{descent-proposition-fpqc-descent-quasi-coherent},
+(Descent, Proposition \ref{descent-proposition-fpqc-descent-quasi-coherent}),
 we see that the $\alpha_i$ are the restriction of a single map
 $\alpha : \mathcal{O}_T \to \sigma_T^*\mathcal{L}$ as desired.
 We omit the proof of descent for morphisms.
