@@ -2,17 +2,18 @@
 
 - Frozen surface: 661 source targets through printed page 278.
 - Stage: sequential source review and statement-level Stacks integration.
-- Completed checkpoint: Chapter III, Section 1, no. 52, printed pages 199--245.
-- Reviewed decisions: 244 (56 equivalent, 112 stronger, 34 extensions,
-  18 new-statement decisions, 22 historical references, 2 outside scope).
-- Current Stacks references added: 157 across `topology.tex`, `sheaves.tex`,
+- Completed checkpoint: Chapter III, Section 1, no. 53, printed pages 199--246.
+- Reviewed decisions: 251 (56 equivalent, 113 stronger, 35 extensions,
+  18 new-statement decisions, 27 historical references, 2 outside scope).
+- Current Stacks references added: 163 across `topology.tex`, `sheaves.tex`,
   `modules.tex`, `homology.tex`, `coherent.tex`, `cohomology.tex`,
   `divisors.tex`, `constructions.tex`, `schemes.tex`, `morphisms.tex`,
-  `derham.tex`, `algebra.tex`, `properties.tex`, and `varieties.tex`.
+  `derham.tex`, `algebra.tex`, `properties.tex`, `varieties.tex`, and
+  `simplicial.tex`.
 - New Stacks theorem/lemma statements: 13, plus the paracompactness and
   locally-constant-sheaf definitions;
   each new theorem/lemma has a complete proof and no assigned tag.
-- Source/proof issues or convention boundaries: 233 found by direct authority-page and TeX inspection, all resolved and
+- Source/proof issues or convention boundaries: 252 found by direct authority-page and TeX inspection, all resolved and
   retained in `issues.csv`.
 - Existing Stacks defects corrected: 5, comprising the refinement-homotopy
   sign, repeated coefficient sheaves, wrong boundary domain, wrong boundary
@@ -21,11 +22,11 @@
 - Builds: `topology.pdf`, `sheaves.pdf`, `modules.pdf`, `homology.pdf`,
   `coherent.pdf`, `cohomology.pdf`, `divisors.pdf`, `constructions.pdf`,
   `schemes.pdf`, `morphisms.pdf`, `derham.pdf`, `algebra.pdf`,
-  `properties.pdf`, and `varieties.pdf`
+  `properties.pdf`, `varieties.pdf`, and `simplicial.pdf`
   completed; every
   affected statement page passed direct 1100 dpi visual inspection. See
   `qa.json`.
-- Historical notes added: 47, preserving the source's operator calculus,
+- Historical notes added: 48, preserving the source's operator calculus,
   image-complex construction, two-covering double complex, and unproved
   cofinal-vanishing question, together with the classical closed-point to
   reduced-scheme bridge, the classical-map to scheme-morphism bridge, and the
@@ -70,6 +71,12 @@
   no. 52 now separates the finite standard-cover and support-adapted Cech
   arguments from Grothendieck vanishing on Noetherian spaces, records the
   homogeneous-principal-open construction and its precise index bound, and
-  distinguishes the classical Veronese proof from direct Proj localization.
-- Next unit: `fac:III:1:no:53` (cohomology of irreducible algebraic curves).
+  distinguishes the classical Veronese proof from direct Proj localization;
+  no. 53 now records the cofinal finite-complement covers of an irreducible
+  classical curve and the finite-simplex contraction, preserves the fact that
+  the source is using direct-limit Cech groups, distinguishes the modern
+  derived-functor vanishing theorem from an unproved comparison of theories,
+  and closes the empty-index-set defect by the harmless choice of one closed
+  point without altering the authority text.
+- Next unit: `fac:III:1:no:54` (the operation `F(n)` and twists).
 - No statement is mapped by lexical similarity alone.

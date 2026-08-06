@@ -2605,12 +2605,19 @@ $\mathcal{F}$.
 \label{remark-FAC-cech-colimit-notation}
 \begin{reference}
 \cite[Chapter I, \S 3, no. 22 and footnote 2, p. 215]{FAC}
+\cite[Chapter III, \S 1, no. 53, Proposition 4 and Remark,
+pp. 245--246]{FAC}
 \end{reference}
 The source denotes this direct limit by $H^p(X, \mathcal{F})$. We use
 $\check{H}^p(X, \mathcal{F})$ to distinguish it from derived-functor
 cohomology. The colimit can be indexed by a set: replace every covering
 family by the set of its open members, a subset of the topology of $X$.
 Finite intersections give a common refinement of any two coverings.
+This convention is still in force in no. 53, where the cofinal curve-covering
+argument proves a statement about the direct-limit Cech groups. The
+corresponding derived-functor vanishing theorem is Proposition
+\ref{proposition-vanishing-Noetherian}; this comparison does not identify the
+two theories in all degrees without an additional comparison theorem.
 \end{remark}
 
 \begin{lemma}
@@ -4047,6 +4054,8 @@ hence we get the lemma.
 The projective-variety special case is
 \cite[Chapter III, \S 1, no. 52, Proposition 3 and Corollary,
 pp. 244--245]{FAC}.
+The curve case and its historical question are
+\cite[Chapter III, \S 1, no. 53, Proposition 4 and Remark, p. 246]{FAC}.
 \end{reference}
 \begin{history}
 The FAC proposition proves vanishing above the dimension of the support for a
@@ -4056,6 +4065,12 @@ principal opens and uses the alternating Cech complex. The proposition below
 is the stronger topological theorem: it applies to every abelian sheaf on an
 arbitrary Noetherian space. Applying it on the closed support and using closed
 pushforward recovers the FAC bound without the quasi-projective hypothesis.
+In the following number FAC gives a separate curve proof by a cofinal family
+of covers whose higher alternating complexes are those of finite simplices,
+then asks whether an analogous assertion holds in arbitrary dimension. Since
+the source notation there denotes direct-limit Cech cohomology, the theorem
+below supplies the affirmative derived-functor analogue rather than silently
+identifying the two cohomology theories.
 \end{history}
 Let $X$ be a Noetherian topological space.
 If $\dim(X) \leq d$, then $H^p(X, \mathcal{F}) = 0$
