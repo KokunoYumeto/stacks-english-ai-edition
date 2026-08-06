@@ -4055,3 +4055,18 @@ and
 1ED38B2BF38E8704CD0A6E42F3B08BC5E25C7B08FE8B7DF9599D4EF451D72CA1.
 The remaining work is remote publication of this audited closure and a
 coherent upstream review path.
+
+The audited closure commit
+9f8ebd00415cbd142a83733284f901f06bddd659, with tree
+920a23456a08239c462d63e4499918c5e14af696, was pushed to the existing
+KokunoYumeto fork on branch codex/fga-integration. Remote fetch,
+advertisement, tree comparison, and divergence checks all agree, with
+divergence zero in both directions. Upstream master remains exactly the
+audited baseline a04446e57ec1fbc252a871afcec7752fb2807b14. Draft upstream
+review request stacks/stacks-project#196 is public at
+https://github.com/stacks/stacks-project/pull/196. Authenticated API readback
+reports OPEN, draft, CLEAN, base master, and head
+9f8ebd00415cbd142a83733284f901f06bddd659; an independent public HTTP
+readback returns status 200 and contains both the title and head identity.
+The corpus-wide integration, closure audit, remote publication, and upstream
+review-path phases are therefore complete at this checkpoint.
