@@ -5451,6 +5451,38 @@ abelian-scheme case of Lemma
 \ref{lemma-abelian-scheme-cohomology-exterior} is a separate positive result.
 \end{remark}
 
+\begin{lemma}[Smoothness on prime-to-characteristic Picard components]
+\label{corollary-picard-smooth-prime-to-characteristic-components}
+\begin{reference}
+\cite[Expos\'e 236, Corollary 3.8, p. 241]{FGA}. The printed corollary
+uses $P^\tau$ and cites Proposition 2.10(i). Taken literally that proposition
+only treats the identity component and sections. Its proof invokes
+Theorem 2.5 and Corollary 1.12, whose additional consequence is the statement
+for $P^\sigma$ below. Thus the printed proof does not establish the assertion
+for residue-characteristic-primary components of $P^\tau$.
+\end{reference}
+In the situation of Theorem
+\ref{theorem-picard-smooth-near-smooth-fibre}, after replacing $S$ by the
+open neighbourhood supplied there, $P \to S$ is smooth at every point of
+$P^\sigma$ in the notation of More on Morphisms, Lemma
+\ref{more-morphisms-lemma-order-in-component-group-constructible}.
+\end{lemma}
+
+\begin{proof}
+Let $x \in P^\sigma$ and let $s$ be its image in $S$. By definition there is
+an integer $n \geq 1$, prime to the characteristic exponent of $\kappa(s)$,
+such that
+$$
+[n](x) \in P_s^0.
+$$
+Theorem \ref{theorem-picard-smooth-near-smooth-fibre} makes $P^0$ an open
+abelian subscheme of $P$, so $P \to S$ is smooth at $[n](x)$. Theorem
+\ref{theorem-picard-multiplication-etale} says that $[n] : P \to P$ is
+\'etale at $x$. The structure morphism at $x$ is the composite of this
+\'etale morphism with the structure morphism at $[n](x)$, and is therefore
+smooth.
+\end{proof}
+
 \section{Properties of the Picard stack}
 \label{section-picard-stack}
 

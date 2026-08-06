@@ -3526,3 +3526,65 @@ collision, malformed formula, unresolved new reference, placeholder, or
 unreadable text; its rendered page image has SHA-256
 `C95694FF81F7EDB1E2137A2E4DEB1F0B410DE1E0E2F56E38A519023A1C312E4D`.
 The next sequential cursor is Corollary 3.8 on printed page 241.
+
+FGA 236, Corollary 3.8 is now integrated, with its unsupported boundary
+recorded rather than silently inherited. The printed source claims smoothness
+on the full torsion-component locus $P^\tau$ and says to apply Proposition
+2.10(i). Direct review shows that Proposition 2.10(i) only propagates
+smoothness from the identity to points of $P^0$ and to sections; its proof
+uses Theorem 2.5 and Corollary 1.12. Those inputs prove the corresponding
+statement on $P^\sigma$: for a point whose component has order prime to the
+residue characteristic, a prime-to-characteristic multiplication map is
+\'etale and carries the point into the smooth identity component. They do not
+control residue-characteristic-primary torsion components. The full printed
+$P^\tau$ assertion is therefore not imported without additional lifting or
+flatness input; it is recovered whenever $P^\tau=P^\sigma$, in particular in
+residue characteristic zero.
+
+The verified statement is Moduli, Lemma
+`moduli-corollary-picard-smooth-prime-to-characteristic-components`.
+Decision `D000567` supersedes reviewed-gap decision `D000294` and classifies
+the result as an integrated source statement with a fail-closed boundary.
+Open source issue `I000060` records the unsupported $P^\tau$ extension and
+the exact condition under which it may later be closed. No official Stacks
+tag was invented.
+
+The 24-page authority remains 2,461,968 bytes with SHA-256
+`266EEF77BF7BA34A75895ED69ACBFE791A2958DD52C2837D75AB29DF0D2F714A`.
+Direct serial 1,100-dpi review uses printed pages 235, 236, and 241; their
+page images have SHA-256
+`89FD783A4372784913B4F057FA5944168C41177BFE9FFA56DE207B4ABB16C8E0`,
+`78400239DB319A93FBA2DC8E0AE9F338FBC2ABA186392F81459A9F6406F2F4A1`,
+and
+`F07E028BBE778B94414E41F52C2DF80607C37D5B054A4822006BFC464B7BC867`,
+respectively.
+
+Both semantic validators pass with no errors at 21,723 labels, 21,437
+official-tag joins, 71 controlled topics, 4,274 topic candidates, 567
+append-only decisions, 1,253 source units, 1,612 term links, and 60 source
+issues, of which nine remain active; there are zero review units. The topic,
+decision, issue, map, Stacks-label, topic-candidate, reviewed-topic-map,
+index-validation, and map-validation files have SHA-256
+`B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0`,
+`CD01E970662B981294BBB33385B23CE4F62197269BD3DEB39DF0B1355893A2D6`,
+`735FD1C24D5C64988008014CAC9AB4053943B96659483F8CBCAE5401BDF60EAB`,
+`CE384A6FC14641F03B8302883D2B9A23EBA5F2E78FAA6E0C449A2E9057676EB2`,
+`3D8D64D0A094784F9F71432114954D3E9F817BDB863CEBCDABECB796A3B1483C`,
+`D33E8712A50B94EF74EFC46F4DF327626DE96863FA0C8CBE30A47471F841684F`,
+`26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46`,
+`B9CB8CEFE199CFBAA713330C7961A7B4107110E733DF874B906826B87D75F2B7`,
+and `FE7C0C8870616B162516ACE4ED7D070CCEC352A7A4925FB59D7CC8B6F9250282`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`.
+
+Three reproducible serial TeX passes produce a 74-page Moduli chapter of
+885,266 bytes with SHA-256
+`23A6143D9038FA14D2EB6B867A4AC474A15A289C37D034D47CBC2833C97C1B97`.
+The new source range creates no overfull or underfull box. Final serial
+1,100-dpi inspection of Moduli pages 60--61 finds no clipping, collision,
+malformed formula, unresolved new reference, placeholder, or unreadable text;
+their rendered page images have SHA-256
+`699171CB574B5E2EBF52BE4FE56F070A42CAE34A1412D3A7D8E9EDF7579A355B`
+and
+`0AE63A217EC29630429CC955B935CF68EFD31EA60DFD851F6F6B7073B73C388B`.
+The next sequential cursor is Corollary 3.9 on printed page 241.
