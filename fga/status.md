@@ -3759,3 +3759,66 @@ page images have SHA-256
 and
 `C8002A7A8C2348E568BD36CE74BA429E6C15EBCBA8DACAC033363C894C898D59`.
 The next sequential cursor is Theorem 4.1 on printed pages 242--243.
+
+FGA 236, Theorem 4.1 is now integrated as Moduli, Theorem
+moduli-theorem-picard-boundedness-Hilbert-polynomial. The imported statement
+proves the equivalence between boundedness of a collection of fibrewise
+invertible modules, finiteness of their Hilbert polynomials, and in constant
+relative dimension finiteness of the two next-to-leading coefficients. Its
+modern parameter argument uses fixed-polynomial open loci in proper Quot
+spaces while retaining Matsusaka's numerical boundedness estimate as the
+nonformal source input.
+
+Three source defects are append-only records I000062--I000064. The malformed
+opening Soient colon X to S is read as Soit f colon X to S. Condition (a)
+uses the introduced family subset E rather than the printed Q. Most
+substantively, the printed condition b double prime is false: on
+X equal to P1 times P1 with H equal to O(1 comma 1), the divisors
+D_m equal to m(A minus B) satisfy H D_m equal to zero and D_m squared equal
+to minus 2m squared, so both printed quantities are bounded above, whereas
+the Hilbert polynomials t squared plus 2t plus 1 minus m squared are pairwise
+distinct. Moduli, Example moduli-example-picard-one-sided-intersection-bound
+and Equation moduli-equation-picard-one-sided-intersection-bound preserve the
+counterexample. The branch does not invent an unsupported two-sided repair.
+
+Decision D000571 supersedes reviewed-gap decision D000298 and records the
+valid theorem as integrated corrected source with a counterexample boundary.
+Direct serial 1,100-dpi source review covers printed pages 242--243. Their
+page images have SHA-256
+2817B41755D858B81FB2D61C4E6F348186CCF92C2811ABF3177FA9FCA484A3B8
+and
+6F730167161A0A2C947029D7F4D3FF7B552953DDA802F2516701CAB79B07086F.
+The 24-page authority remains 2,461,968 bytes with SHA-256
+266EEF77BF7BA34A75895ED69ACBFE791A2958DD52C2837D75AB29DF0D2F714A.
+
+Both semantic validators pass with no errors at 21,733 labels, 21,437
+official-tag joins, 71 controlled topics, 4,287 topic candidates, 571
+append-only decisions, 1,253 source units, 1,612 term links, and 64 source
+issues, of which nine remain active; there are zero review units. The topic,
+decision, issue, map, Stacks-label, topic-candidate, reviewed-topic-map,
+index-validation, and map-validation files have SHA-256
+B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0,
+0C112A778266B94624FFE87597C629834E06AB7A1FBEB59E292317D2D4BF663E,
+A1CADC548D954D8156825965065D510F3AE874D74841CB60AB830A7BCCE20F82,
+2E68519B1064200346B448136C8CE73752E2125AC079EF572079B51AA6240710,
+1D628691F0F397E8F05577B66098A79DD88BF64F66608D90B1DA484D9A00A977,
+35BACC180C8D7589F2068D84F76C80E68AE67EBE46DD86786AAAF6FF8C4D03EC,
+26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46,
+3090E3C434B7FF51E0E3D580A3020264823FE2AAC65C1DAD35CA4D8B391CC3F3,
+and
+55B7CBA2FC90C449EF3FB29F00D3FC9076EDAEC93C6BAE0773665DB4A46196CF.
+The official tags/tags file remains unmodified at SHA-256
+C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF;
+no official tag was invented for the new theorem, example, or equation.
+
+Three reproducible serial TeX passes produce a 77-page Moduli chapter of
+907,991 bytes with SHA-256
+2610454771D370B3B8C4385E8B63627B8806573C8862756516A0F87E8D60F58B.
+The build has no overfull or underfull box and no unresolved new internal
+reference. Final serial 1,100-dpi inspection of Moduli pages 63--64 finds no
+clipping, collision, malformed formula, unresolved new reference,
+placeholder, or unreadable text; their rendered page images have SHA-256
+C72E0177FFC7356E3FDC27EA9FAD418A85478D828554E8B8B9E821A0BE4E5126
+and
+759FD39C774378E5CE21C39378CED717E300721C8DC09FB8312A63AD0537A1A1.
+The next sequential cursor is Corollary 4.2 on printed page 243.
