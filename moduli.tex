@@ -5059,6 +5059,166 @@ situation.
 
 
 
+\begin{lemma}[Lifting the canonical Picard subgroup]
+\label{lemma-lift-canonical-abelian-picard}
+\begin{reference}
+\cite[Expos\'e 236, Theorem 3.5, pp. 239--240]{FGA}.
+\end{reference}
+Let $B \to A$ be a surjection of local Artinian rings with common residue
+field $k$. Assume that its kernel $I$ satisfies $\mathfrak m_BI = 0$. Let
+$$
+X_B \longrightarrow \Spec(B)
+$$
+satisfy the hypotheses of Proposition
+\ref{proposition-canonical-abelian-picard-parameter}. Write
+$P_B = \Picardfunctor_{X_B/B}$ and let $P_A$ and $P_k$ denote its base
+changes. If $P_k$ is smooth and $P_A$ has a canonical
+abelian Picard subscheme $G_A$, then $P_B$ has a canonical abelian Picard
+subscheme $G_B$ whose base change to $A$ is $G_A$.
+\end{lemma}
+
+\begin{proof}
+Put $G_0 = (G_A)_k$. Since $P_k$ is smooth, $G_0=P_k^0$ as schemes. Examples
+of Deformation Problems, Lemma
+\ref{examples-defos-lemma-abelian-variety-formal-moduli-smooth} shows that
+$G_A$ lifts to an abelian scheme over $B$. The set of isomorphism classes of
+such lifts is a torsor under
+\begin{equation}
+\label{equation-choices-lift-canonical-picard}
+H^1(G_0, \mathcal{T}_{G_0/k}) \otimes_k I.
+\end{equation}
+This is the usual difference space for lifts of a smooth scheme; forgetting
+the group law does not change it by the final assertion of the cited lemma.
+
+Choose a lift $G_B$. The inclusion $G_A \to P_A$ is represented, fppf locally,
+by a Poincar\'e invertible module $\mathcal{L}_A$ on $X_A \times_A G_A$.
+It is normalized over the zero of $G_A$. The calculation below is unchanged
+if $\mathcal{L}_A$ is tensored by an invertible module from $G_A$, and thus
+descends from the fppf cover on which a representative has been chosen. By
+More on Morphisms, Lemma
+\ref{more-morphisms-lemma-picard-group-first-order-thickening}, the obstruction
+to lifting $\mathcal{L}_A$ to $X_B \times_B G_B$ lies in
+$$
+H^2(X_k \times_k G_0, \mathcal{O}_{X_k \times_k G_0}) \otimes_k I.
+$$
+Its restriction to $X_k \times \{0\}$ is zero by the normalization. The pure
+$G_0$ component is the obstruction to the restriction of $\mathcal{L}_A$ on
+the other factor. Tensoring $\mathcal{L}_A$ by the inverse of this restriction
+pulled back from $G_A$ removes that component without changing the morphism to
+the Picard functor. Consequently the Kunneth decomposition of Varieties, Lemma
+\ref{varieties-lemma-kunneth} puts the effective obstruction in
+\begin{equation}
+\label{equation-obstruction-lift-poincare}
+H^1(X_k, \mathcal{O}_{X_k}) \otimes_k
+H^1(G_0, \mathcal{O}_{G_0}) \otimes_k I.
+\end{equation}
+
+The tangent-space calculation in Lemma
+\ref{lemma-picard-tangent-dimension} gives
+$$
+T_0G_0 = T_0P_k = H^1(X_k, \mathcal{O}_{X_k}).
+$$
+The tangent bundle of an abelian variety is the constant bundle with this
+fibre by Groupoids, Lemma
+\ref{groupoids-lemma-group-scheme-module-differentials}. Hence
+\begin{equation}
+\label{equation-obstruction-equals-deformation-space}
+H^1(G_0, \mathcal{T}_{G_0/k}) \otimes_k I
+=
+H^1(X_k, \mathcal{O}_{X_k}) \otimes_k
+H^1(G_0, \mathcal{O}_{G_0}) \otimes_k I.
+\end{equation}
+Under this equality, changing $G_B$ by a class in
+(\ref{equation-choices-lift-canonical-picard}) changes the obstruction by the
+same class up to the sign determined by the Cech convention. Indeed, represent
+the deformation class by a Cech cocycle of vector fields on $G_0$. Altering
+the gluing maps of $G_B$ adds to the obstruction cocycle for $\mathcal{L}_A$
+its contraction with the differential of $G_0 \to P_k$. That differential is
+the identity under the displayed tangent-space identification, so the
+variation map is an isomorphism. We may therefore alter $G_B$ so that the
+obstruction vanishes, and then lift $\mathcal{L}_A$.
+
+The lifted class defines a morphism $G_B \to P_B$. It is a homomorphism: its
+failure to respect addition is zero over $A$ and hence gives, on the special
+fibre, a morphism from the proper connected scheme $G_0 \times_k G_0$ to a
+vector group; this morphism is constant and normalization at the identity
+makes it zero. The morphism is a closed immersion. Indeed, its underlying
+topological image lies in the quasi-projective neighbourhood used in
+Proposition \ref{proposition-canonical-abelian-picard-parameter}. In that
+separated neighbourhood it is proper, and it is quasi-finite because its
+special fibre is a closed immersion and the base is a nilpotent thickening.
+It is therefore finite. Nakayama's lemma, applied to the cokernel of the map
+on structure sheaves, now reduces the closed-immersion assertion to the
+special fibre. Finally $\Spec(B)$ and $\Spec(k)$ have the same underlying
+space, so the image has underlying space $P_B^0$. It is the required canonical
+abelian Picard subscheme.
+\end{proof}
+
+\begin{theorem}[A smooth Picard fibre]
+\label{theorem-picard-smooth-near-smooth-fibre}
+\begin{reference}
+\cite[Expos\'e 236, Theorem 3.5, pp. 239--240]{FGA}.
+\end{reference}
+In the situation of Proposition
+\ref{proposition-canonical-abelian-picard-parameter}, let $s \in S$. If
+$P_s$ is smooth over $\kappa(s)$, or equivalently if
+$$
+\dim(P_s)=\dim_{\kappa(s)}H^1(X_s,\mathcal{O}_{X_s}),
+$$
+then there is an open neighbourhood $U \subset S$ of $s$ such that $P_U$ is
+smooth along $P_U^0$. Moreover, $P_U^0$ with its induced scheme structure is
+an open abelian subscheme of $P_U$ and is the canonical abelian Picard
+subscheme.
+\end{theorem}
+
+\begin{proof}
+The equivalence of the two hypotheses is Lemma
+\ref{lemma-picard-tangent-dimension}. Let $q : T \to S$ be the surjective
+finite type monomorphism of Proposition
+\ref{proposition-canonical-abelian-picard-parameter}, and let $t$ be the unique
+point of $T$ over $s$. Put
+$$
+S_n=\Spec(\mathcal{O}_{S,s}/\mathfrak m_s^{n+1}).
+$$
+The smooth group scheme $P_s^0$ is the canonical abelian Picard subscheme over
+$S_0$. Lemma \ref{lemma-lift-canonical-abelian-picard}, applied successively
+to $S_{n+1} \to S_n$, constructs the canonical subgroup over every $S_n$.
+Thus $T_{S_n} \to S_n$ has a section and, being a monomorphism, is an
+isomorphism.
+
+We use the local part of the argument in \'Etale Morphisms, Lemma
+\ref{etale-lemma-surjective-monomorphism-tests}. Set
+$$
+C=\mathcal{O}_{S,s}, \qquad D=\mathcal{O}_{T,t}.
+$$
+The preceding isomorphisms identify the residue fields and give
+$$
+C/\mathfrak m_C^{n+1}
+\longrightarrow D/\mathfrak m_C^{n+1}D
+$$
+as an isomorphism for every $n$. Hence $C^\wedge \to D^\wedge$ is an
+isomorphism. The rings are Noetherian and $D$ is essentially of finite type
+over $C$, so \'Etale Morphisms, Lemma
+\ref{etale-lemma-characterize-etale-completions} shows that $q$ is \'etale at
+$t$. An \'etale monomorphism is an open immersion. After shrinking $S$ around
+$s$, surjectivity and uniqueness of the points of $T$ over $S$ therefore make
+$q$ an isomorphism. Pulling back the universal subgroup gives a canonical
+abelian Picard subscheme
+$$
+G \subset P
+$$
+over this neighbourhood.
+
+It remains to see that $G$ is open in $P$. On the fibre over $s$, we have
+$G_s=P_s^0$ as schemes, and this identity component is open in the smooth
+group scheme $P_s$. Thus the ideal of $G$ in $P$ vanishes on an open
+neighbourhood of $G_s$ in $P_s$. Nakayama's lemma gives an open $W \subset P$
+containing $G_s$ on which this ideal is zero, so $W \subset G$. Since $G$ is
+proper over $S$, after shrinking once more around $s$ we have $G \subset W$.
+Consequently $G=W$ is open as well as closed in $P$. Its underlying space is
+$P^0$, and its smoothness over $S$ proves that $P$ is smooth along this locus.
+\end{proof}
+
 \section{Properties of the Picard stack}
 \label{section-picard-stack}
 

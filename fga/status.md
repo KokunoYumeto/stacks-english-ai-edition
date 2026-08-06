@@ -3315,3 +3315,55 @@ pagination. Final serial 1,100-dpi inspection of Moduli pages 55 and 65 finds
 no clipping, collision, malformed formula, unresolved new reference,
 placeholder, or unreadable text. The next sequential cursor is Theorem 3.5
 on printed pages 239--240.
+
+FGA 236, Theorem 3.5 is now integrated as Moduli, Lemma
+`moduli-lemma-lift-canonical-abelian-picard` and Theorem
+`moduli-theorem-picard-smooth-near-smooth-fibre`, together with three labelled
+equations for the deformation-choice space, the mixed Poincare obstruction,
+and their canonical identification. The lifting lemma uses the existing
+formally smooth deformation functor of an abelian variety, identifies the
+effective obstruction to the normalized Poincare class with
+`H^1(G_0,T_{G_0/k})`, corrects the abelian lift to annihilate that obstruction,
+and proves that the resulting Picard morphism is a canonical closed abelian
+subscheme. The theorem applies this lift inductively to every infinitesimal
+neighbourhood of the chosen fibre, proves that the finite-type parameter
+monomorphism is etale there by completed local rings, and then uses properness
+and Nakayama to make the canonical subgroup an open smooth identity-component
+locus on a neighbourhood.
+
+Decision `D000563` supersedes the reviewed-gap decision `D000290` and records
+the source unit as integrated source and Stacks content. Direct serial
+1,100-dpi review covers printed pages 239--240 of the 24-page NUMDAM authority.
+The page images have SHA-256
+`7A3E553AE02D64318DB31BBF85F3630E6D9E42A9C76D02332619F6D7F9CB9551`
+and
+`5D0808CE1BFF8CB01E720159F00972A39F8D0DD8B6BC3D0593CD129DAE2C913E`.
+The authority remains 2,461,968 bytes with SHA-256
+`266EEF77BF7BA34A75895ED69ACBFE791A2958DD52C2837D75AB29DF0D2F714A`.
+
+Both semantic validators pass with no errors at 21,716 labels, 21,437
+official-tag joins, 71 controlled topics, 4,264 topic candidates, 563
+append-only decisions, 1,253 source units, 1,612 term links, and 59 source
+issues, of which eight remain active; there are zero review units. The topic,
+decision, issue, map, Stacks-label, topic-candidate, reviewed-topic-map,
+index-validation, and map-validation files have SHA-256
+`B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0`,
+`C22C754D506D723FE2663D784316223F7AD43BD4D87C8676549B9A1A1993C8B4`,
+`ECE83F139D6E457796604266A142691BAD503DD937B38ED05BCCD0E80B378CDE`,
+`DBA686F9C2D4917AC99EAFD88241FE1C1128FE4A4B53C5A11C14D4CE939E93E2`,
+`4727CD3DD2814DC97EE6A2E684D64DED6FCD50944E2ACC275356AD07325259FC`,
+`528223E7DC93C01FBE3F3B880F62CD3338395D92F3379E149A1E6B139F801C91`,
+`26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46`,
+`797ABDB268DA7BC9682268352493B9F9960A1A025BB3CE35F6ACCCFFCCABDB43`,
+and `7CCF783CED2CB1982C07EDF9D51509D5ACA1D75A78CAEBF06B222EE13499505B`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`;
+no official tag was invented for either new statement or any new equation.
+
+Three stable serial TeX passes produce a 71-page Moduli chapter of 866,244
+bytes with SHA-256
+`561F8B19A62CE3057495D7F41F2F8F708B8D22F2D64F10351B586E1B778D0355`.
+The new source range creates no overfull or underfull box. Final serial
+1,100-dpi inspection of Moduli pages 55--57 finds no clipping, collision,
+malformed formula, unresolved new reference, placeholder, or unreadable text.
+The next sequential cursor is Corollary 3.6 on printed page 240.
