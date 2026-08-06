@@ -1125,3 +1125,32 @@ The new material adds no unresolved citation, unresolved internal reference,
 or overfull horizontal box and passes 1,200-dpi inspection on pages 11--13.
 The next sequential cursor is Expose 221, Section 2, beginning with the
 Hilbert-polynomial setup and Theorem 2.1.
+
+The fifty-fifth source patch integrates the Hilbert-polynomial setup and the
+erratum-corrected Expose 221, Theorem 2.1.  The new proposition states the
+criterion directly for the fibrewise boundedness definition: a common
+coherent quotient source together with a finite set of Hilbert polynomials is
+necessary and sufficient.  Necessity uses finite relative generation over a
+finite affine cover of the bounding parameter scheme and flat
+stratification.  Sufficiency uses the finite union of the corresponding
+proper Quot spaces and then a quasi-compact etale scheme presentation, so the
+bounding parameter remains a scheme as required by the definition rather
+than silently changing it to an algebraic space.  The linked erratum authority
+SHA-256
+`007990D289E767A54A273CA45E8491F0052F9F015820DDB451D1E2B2D0FE27F9`
+supplies the essential correction from "necessary" to "necessary and
+sufficient."
+
+Both semantic validators pass with no errors at 21,574 labels, 3,849 topic
+candidates, 392 append-only decisions, 1,253 source units, 1,612 term links,
+and 14 source issues, of which eight remain active.  The decision and map
+ledgers have SHA-256
+`BEBBF21435D69A152AC4D3CD05952D13A8F567AE1C5798BA757A710849B409AF`
+and `A5159107E43E8201FFD37A3B1F9395BD0B23DBE512816DE62D32A7068BCAF41D`.
+Two final TeX passes produce a 28-page Moduli Stacks chapter of 575,188 bytes
+with SHA-256
+`D891ADD107008EAAB7419BE4D6EEA858C89DA8EF7551210C5B48BA6948B7770E`.
+The new proposition adds no unresolved citation, unresolved internal
+reference, or overfull horizontal box and passes 1,200-dpi inspection on
+pages 15--16.  The next sequential cursor is Expose 221, Theorem 2.2 and its
+dimension filtration.

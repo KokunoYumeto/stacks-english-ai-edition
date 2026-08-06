@@ -1453,6 +1453,61 @@ is proper over $B$ by Lemma \ref{lemma-quot-Pn-over-base}
 we conclude.
 \end{proof}
 
+\begin{proposition}
+\label{proposition-bounded-coherent-Hilbert-polynomials}
+\begin{reference}
+\cite[Expos\'e 221, Theorem 2.1 and its erratum, pp. 253--254 and 302]{FGA}.
+\end{reference}
+Let $S$ be a Noetherian scheme, let $X \to S$ be projective, and fix a
+relatively very ample invertible module $\mathcal{O}_X(1)$. A family $E$
+of fibrewise coherent sheaves over $X/S$ is bounded if and only if the
+following conditions hold.
+\begin{enumerate}
+\item There is a coherent $\mathcal{O}_X$-module $\mathcal{L}$ such that
+every member $(s,K,\mathcal{F})$ of $E$, after a field extension if
+necessary, is represented by a quotient
+$$
+\mathcal{L}_K \longrightarrow \mathcal{F} \longrightarrow 0.
+$$
+One may require $\mathcal{L}$ to be a finite direct sum of negative twists
+of $\mathcal{O}_X$.
+\item The Hilbert polynomials of the members of $E$, computed with respect
+to $\mathcal{O}_X(1)$, belong to a fixed finite set.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Suppose first that $(T,\mathcal{G})$ bounds $E$. The scheme $T$ is
+quasi-compact. On each member of a finite affine open covering of $T$,
+relative Serre vanishing and relative global generation give a surjection
+$$
+\mathcal{O}_{X_T}(-n)^{\oplus N} \longrightarrow \mathcal{G}
+\longrightarrow 0
+$$
+for suitable $n$ and $N$, which may depend on the member of the covering.
+The direct sum of the finitely many corresponding modules on $X$ gives a
+single $\mathcal{L}$ satisfying (1).
+
+By Lemma \ref{lemma-bounded-coherent-elementary}, we may replace $T$ by a
+finite stratification on which $\mathcal{G}$ is flat. On each stratum its
+Hilbert polynomial is locally constant. Each stratum is Noetherian and has
+only finitely many connected components. Hence only finitely many Hilbert
+polynomials occur, proving (2).
+
+Conversely, let $P_1,\ldots,P_m$ be the finite list in (2). For each $i$,
+Lemma \ref{lemma-quot-proper-over-base} shows that
+$$
+\Quotfunctor^{P_i}_{\mathcal{L}/X/S}
+$$
+is proper, and in particular of finite type, over $S$. The finite disjoint
+union of these Quot spaces is quasi-compact. Choose a quasi-compact scheme
+mapping surjectively and \'etale to it. This scheme is of finite type over
+$S$, and the pullback of the universal quotient to it bounds all quotients
+allowed by (1) whose Hilbert polynomial is in the list. It therefore bounds
+$E$.
+\end{proof}
+
+
 \begin{lemma}
 \label{lemma-quot-qc-over-base}
 Let $f : X \to B$ be a separated morphism of finite presentation
