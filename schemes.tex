@@ -700,9 +700,12 @@ We summarize the results obtained so far.
 \cite[Chapter II, \S 1, no. 31, p. 224]{FAC}
 The affine global-section assertion is proved in
 \cite[Chapter II, \S 3, no. 43, Proposition 4, p. 235]{FAC}.
+Its extension to every closed classical subvariety is
+\cite[Chapter II, \S 3, no. 44, Proposition 7, Corollary 3,
+p. 237]{FAC}.
 \end{reference}
 \begin{history}
-In the irreducible classical case, the second cited proof identifies the
+In the irreducible classical case, the no. 43 proof identifies the
 regular functions with the intersection of the local rings inside the
 function field and then uses the Nullstellensatz to identify that intersection
 with the coordinate ring. The printed line places
@@ -710,7 +713,9 @@ $\Gamma(V, \mathcal{O}_V)=A=\bigcap_x\mathcal{O}_{x,V}$ before the
 Nullstellensatz step that establishes the second equality; the noncircular
 order is $\Gamma(V, \mathcal{O}_V)=\bigcap_x\mathcal{O}_{x,V}$ first and
 $A=\bigcap_x\mathcal{O}_{x,V}$ second. The lemma below proves the result
-directly for every ring and every associated module.
+directly for every ring and every associated module. The no. 44 corollary
+recovers the source's reducible closed-subvariety case by exactness of global
+sections on affine space.
 \end{history}
 Let $R$ be a ring. Let $M$ be an $R$-module. Let $\widetilde M$
 be the sheaf of $\mathcal{O}_{\Spec(R)}$-modules
@@ -1434,6 +1439,17 @@ $\varphi_i^{-1}$ on each $D(f_i)$ and hence is an isomorphism.
 
 \begin{lemma}
 \label{lemma-equivalence-quasi-coherent}
+\begin{reference}
+\cite[Chapter II, \S 3, no. 44, Proposition 7, Corollary 2,
+p. 237]{FAC}
+\end{reference}
+\begin{history}
+The cited corollary proves surjectivity on global sections for the quotient
+$\mathcal{O}_X^p/\mathcal{F}$ on an affine classical variety by vanishing of
+$H^1(X,\mathcal{F})$. The equivalence below identifies global sections with
+the corresponding module functor and gives the same exactness for arbitrary
+quasi-coherent modules on an affine scheme.
+\end{history}
 Let $(X, \mathcal{O}_X) = (\Spec(R), \mathcal{O}_{\Spec(R)})$
 be an affine scheme.
 The functors $M \mapsto \widetilde M$ and
