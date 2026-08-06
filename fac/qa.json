@@ -3,34 +3,37 @@
   "date": "2026-08-06",
   "scope": {
     "start": "fac:I:1:no:1",
-    "end": "fac:II:1:no:33",
-    "printed_pages": "199-226",
-    "units_decided": 117,
-    "stacks_references_added": 65
+    "end": "fac:II:1:no:34",
+    "printed_pages": "199-228",
+    "units_decided": 132,
+    "stacks_references_added": 70
   },
   "authority": {
     "bytes": 6305726,
     "sha256": "B8C6508249308F5D8BC886B9E6360F1EC4FDC8F0F18EFAA03EE0E36B591551CA",
     "render_dpi": 1100,
-    "physical_pages_inspected": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31],
-    "printed_pages_inspected": [199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226]
+    "physical_pages_inspected": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33],
+    "printed_pages_inspected": [199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228]
   },
   "latest_review": {
-    "unit": "fac:II:1:no:33",
-    "component": "components/031_II_1_33_products.tex",
-    "bytes": 2086,
-    "sha256": "701AE14037974DD840AB2C62AFD021C6FA3B42ADD58530FE1C7EE0B8C2E2D18B",
-    "authority_physical_pages": [30, 31],
-    "authority_printed_pages": [225, 226],
+    "unit": "fac:II:1:no:34",
+    "component": "components/032_II_1_34_algebraic_variety_structure.tex",
+    "bytes": 7278,
+    "sha256": "26ECAD6B19ACAF8C51801FA6E7D147165935047DA32C9E3EA929F40FC55B5D8B",
+    "authority_physical_pages": [31, 32, 33],
+    "authority_printed_pages": [226, 227, 228],
     "authority_renders": [
-      {"physical_page": 30, "sha256": "A4952573DF9373F7301F2107886FE341D80A6013E67BBDEE0AB789DD890EC244"},
-      {"physical_page": 31, "sha256": "27809618B52BE8268D7631A30A25BC8D62960B7259C5A85D75DEB968E4788B5A"}
+      {"physical_page": 31, "sha256": "27809618B52BE8268D7631A30A25BC8D62960B7259C5A85D75DEB968E4788B5A"},
+      {"physical_page": 32, "sha256": "DF7FCF613D1CA3098F033CEE292C09CA0AF5FA13715FDC411E734ACCED890FA6"},
+      {"physical_page": 33, "sha256": "50E9DDC1B209EB3CD700FB06187E2131E5BDB3B4919CE7D87E984B22DBF5293C"}
     ],
     "output_renders": [
-      {"pdf_page": 10, "sha256": "577C477F9C0F653D48809ECA4C3DCD1033B4F567DEECA7A16B9AF5DC6B7B6CB0"},
-      {"pdf_page": 31, "sha256": "85DCD54A5151455BBACD9CC8FA34566CF17F862BB4DF6A96AB225CEC521CE0CD"},
-      {"pdf_page": 32, "sha256": "2741A89924C9416824F43E41D898E3D52C567B739588BB274A3F49565A706098"},
-      {"pdf_page": 33, "sha256": "8F905C76138B0F9CAA10018FE388C7F0FBF94DD470EFF6116572CD051E29A8DA"}
+      {"master": "schemes.tex", "pdf_page": 16, "sha256": "30A3B7DF5136B1FEF183AF8F48D464323E0CD6C25C93435F2B16E5539C146350"},
+      {"master": "schemes.tex", "pdf_page": 25, "sha256": "D87F00510C583F8DFC460BBD3E717979E34AE1141AC71CF4907994BD5002B79B"},
+      {"master": "schemes.tex", "pdf_page": 26, "sha256": "DAF33673C761060E19DA99B14A2035432CA2BB41E018174048397F98AEC0A226"},
+      {"master": "schemes.tex", "pdf_page": 31, "sha256": "85DCD54A5151455BBACD9CC8FA34566CF17F862BB4DF6A96AB225CEC521CE0CD"},
+      {"master": "schemes.tex", "pdf_page": 40, "sha256": "E5D80002AD37A301DCF88AAAD0FD184D2771D76546A107881D5ABD31E38A1313"},
+      {"master": "varieties.tex", "pdf_page": 2, "sha256": "4B94D0545550AE02BEFE785FB2DD5D20863486A2661052491AD8E52115454D04"}
     ]
   },
   "builds": [
@@ -94,8 +97,16 @@
       "master": "schemes.tex",
       "pdf": "schemes.pdf",
       "bytes": 719846,
-      "sha256": "806A611B3949D64A18A053B1004671991EEC80A3539B71522EDC251376C24D26",
-      "affected_pdf_pages_inspected": [2, 3, 8, 9, 10, 16, 17, 22, 31, 32, 33],
+      "sha256": "259D9FFB36E151D91624D149BEA92539202EB5C9A619BA6300B9E1C579708F02",
+      "affected_pdf_pages_inspected": [2, 3, 8, 9, 10, 16, 17, 22, 25, 26, 31, 32, 33, 40],
+      "affected_page_result": "PASS"
+    },
+    {
+      "master": "varieties.tex",
+      "pdf": "varieties.pdf",
+      "bytes": 1304099,
+      "sha256": "AB7111767727DCBCCD6902C52BDC3C91BCE6C46D28B640A9CB182917BCCD427B",
+      "affected_pdf_pages_inspected": [2],
       "affected_page_result": "PASS"
     }
   ],
@@ -150,7 +161,7 @@
     "fac_citations_resolved": true,
     "undefined_reference_at_edited_lines": 0,
     "overfull_box_at_edited_lines": 0,
-    "note": "The isolated builds retain unrelated missing chapter-aux warnings, unrelated pre-existing cross-chapter warnings, and pre-existing overfull diagnostics. The FAC no. 33 references, classical product bridge, and empty-factor boundary introduce no unresolved citation, link, or overfull box at edited lines."
+    "note": "The isolated builds retain unrelated missing chapter-aux warnings, unrelated pre-existing cross-chapter warnings, and pre-existing overfull diagnostics. The FAC no. 34 references, classical reduced finite-type scheme bridge, separatedness equivalence, and terminology boundary introduce no unresolved citation, link, or overfull box at edited lines."
   },
   "validators": {
     "intake": "PASS",
