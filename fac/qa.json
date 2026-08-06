@@ -3,10 +3,10 @@
   "date": "2026-08-06",
   "scope": {
     "start": "fac:I:1:no:1",
-    "end": "fac:II:2:no:40",
+    "end": "fac:II:2:no:41",
     "printed_pages": "199-233",
-    "units_decided": 157,
-    "stacks_references_added": 90
+    "units_decided": 163,
+    "stacks_references_added": 93
   },
   "authority": {
     "bytes": 6305726,
@@ -16,20 +16,34 @@
     "printed_pages_inspected": [199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233]
   },
   "latest_review": {
-    "unit": "fac:II:2:no:40",
-    "component": "components/038_II_2_40_sheaves_of_fractional_ideals.tex",
-    "bytes": 1531,
-    "sha256": "F1F9671E20C96E62F313CA61C3D8D5BE17F5F02BBCAF0F5F72B7F2B657B28E47",
-    "authority_physical_pages": [37, 38],
-    "authority_printed_pages": [232, 233],
+    "unit": "fac:II:2:no:41",
+    "component": "components/039_II_2_41_sheaf_associated_fiber_space.tex",
+    "bytes": 3596,
+    "sha256": "4F718D8C6D629A54A08702CE8AAFA11E071B112CD9C0FAD7262DA8B00BD951B0",
+    "authority_physical_pages": [38],
+    "authority_printed_pages": [233],
     "authority_renders": [
-      {"physical_page": 37, "sha256": "3EE23A3ED075AAF2E17DE0D03201963E9F7E43B116D3633AB300BE6CFF0EDAB1"},
       {"physical_page": 38, "sha256": "2B5E3325CC585516219AFC0282E181D393792BD48F9E091EC93034CA48F138A9"}
     ],
     "output_renders": [
-      {"master": "divisors.tex", "pdf_page": 63, "sha256": "12D9A9634D34E3ED9314B3071F06E90207DA5BD9C7EADBC238345BA10391F1B8"}
+      {"master": "constructions.tex", "pdf_page": 9, "sha256": "E11955E8114264E4887E76E50C58AC7E34F4738926194F94CD8708C6B98EB708"},
+      {"master": "modules.tex", "pdf_page": 20, "sha256": "3CD21D0F7ACEC26227D86387271D00DA40A9E9099C82569E44B2554FDA750363"},
+      {"master": "derham.tex", "pdf_page": 5, "sha256": "03021DAFF6D5DD8EB97BF5B61A1F929BE74485E9C5B0B73EB3272F102E81C28F"}
     ],
-    "blind_review": {"id": "FAC-BLIND-REVIEW-N040-R1", "result": "PASS", "findings": []}
+    "rejected_output": {
+      "master": "derham.tex",
+      "bytes": 909269,
+      "sha256": "F2B80C068353BA75A2FE9A8407AEF1305101D5CA949F9A7BB1AAFDE1EADCDEE1",
+      "pdf_page": 5,
+      "render_sha256": "FEA7D7521AE4B59660322666C190E59D319B8270D193F84B69471B594C0739E1",
+      "reason": "visible unresolved cross-chapter links"
+    },
+    "supporting_aux": {
+      "file": "sdga.aux",
+      "bytes": 15351,
+      "sha256": "D232EB80ABE07C329DAF3B19E8FE29D986BB3B8D8393D66E9A03F07E6A146879"
+    },
+    "blind_review": {"id": "FAC-BLIND-REVIEW-N041-R1", "result": "PASS", "findings": []}
   },
   "builds": [
     {
@@ -51,9 +65,9 @@
     {
       "master": "modules.tex",
       "pdf": "modules.pdf",
-      "bytes": 727139,
-      "sha256": "EAD09A63F4FFC6116613EAD7BDB37350A090355DAD003A41236390391588774B",
-      "affected_pdf_pages_inspected": [3, 8, 9, 13, 15, 16, 17, 18, 19, 22, 31, 32, 34],
+      "bytes": 727707,
+      "sha256": "32685B3853A8A2EE17E3338CAD37C24761CA449C17C8D288209185313197677C",
+      "affected_pdf_pages_inspected": [3, 8, 9, 13, 15, 16, 17, 18, 19, 20, 22, 31, 32, 34],
       "affected_page_result": "PASS"
     },
     {
@@ -89,11 +103,19 @@
       "affected_page_result": "PASS"
     },
     {
+      "master": "derham.tex",
+      "pdf": "derham.pdf",
+      "bytes": 910224,
+      "sha256": "A50DB495D05006F79B2B97C5BF122FCCC98590CC09B4224ED7696E502607833F",
+      "affected_pdf_pages_inspected": [5],
+      "affected_page_result": "PASS"
+    },
+    {
       "master": "constructions.tex",
       "pdf": "constructions.pdf",
-      "bytes": 794357,
-      "sha256": "48D30D4AFB583E95D1AC29AAFBA36C5538AF3277BFA8DBE357334C7D33449154",
-      "affected_pdf_pages_inspected": [8],
+      "bytes": 794550,
+      "sha256": "6A9D883BB3004E80D86464181DC23194D7EA987F81C9C8694F44BCA9DFFB4F69",
+      "affected_pdf_pages_inspected": [8, 9],
       "affected_page_result": "PASS"
     },
     {
@@ -172,7 +194,7 @@
     "fac_citations_resolved": true,
     "undefined_reference_at_edited_lines": 0,
     "overfull_box_at_edited_lines": 0,
-    "note": "The isolated builds retain unrelated missing chapter-aux warnings and pre-existing overfull diagnostics. The no. 40 FAC citation and all links in the new meromorphic-function lemma resolve after the required bibliography pass. The inspected divisors.pdf page 63 is unclipped, collision-free, and has no unresolved mark at the edited statement or proof. Issue I000083 retains the separate rejected and repaired no. 39 target-page receipts."
+    "note": "The isolated builds retain unrelated missing chapter-aux warnings and pre-existing overfull diagnostics. All no. 41 FAC citations resolve. The inspected constructions.pdf page 9, modules.pdf page 20, and repaired derham.pdf page 5 are unclipped, collision-free, and have no unresolved mark at the edited statements. Issue I000096 retains the rejected De Rham build and the exact supplying auxiliary-file repair receipt; issue I000083 retains the separate rejected and repaired no. 39 target-page receipts."
   },
   "validators": {
     "intake": "PASS",
