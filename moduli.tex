@@ -3715,6 +3715,66 @@ affirmative solution of the question printed in Remark 6.6, as recorded by
 the linked correction.
 \end{proof}
 
+\begin{example}[A relative Picard space which is not a scheme]
+\label{example-picard-conic-not-scheme}
+\begin{reference}
+\cite[Expos\'e 236, Section 0(a), p. 221]{FGA}.
+\end{reference}
+Set
+$$
+S = \Spec(\mathbf{R}[[t]])
+$$
+and let $X \subset \mathbf{P}^2_S$ be the closed subscheme defined by
+\begin{equation}
+\label{equation-picard-conic-not-scheme}
+x^2 + y^2 = tz^2.
+\end{equation}
+The morphism $X \to S$ is a projective flat family of curves with
+geometrically reduced and geometrically connected fibres. Its fppf Picard
+functor is an algebraic space, but it is not a scheme.
+\end{example}
+
+\begin{proof}
+Let $S' = \Spec(\mathbf{C}[[t]])$. The morphism $S' \to S$ is finite
+\'etale. The explicit Picard calculation in the cited reference represents
+$\Picardfunctor_{X_{S'}/S'}$ by a disjoint union of copies of a scheme
+obtained from the trait $S'$ by replacing its closed point by infinitely
+many origins. The nontrivial element of
+$\operatorname{Gal}(\mathbf{C}/\mathbf{R})$ exchanges some of these origins.
+The resulting descent datum is not effective in schemes: some of its
+two-point orbits have no common affine open neighbourhood.
+
+On the other hand, fppf descent data for algebraic spaces are effective by
+Bootstrap, Lemma \ref{bootstrap-lemma-descend-algebraic-space}. Hence the
+same descent datum produces an algebraic space over $S$. Since formation of
+the fppf Picard functor commutes with base change, the descended algebraic
+space represents $\Picardfunctor_{X/S}$. If it were a scheme, its pullback
+and descent datum would give the scheme whose nonexistence was just
+established. Thus it is not a scheme.
+\end{proof}
+
+\begin{remark}[The scheme-level boundary]
+\label{remark-mumford-picard-scheme-boundary}
+\begin{reference}
+\cite[Expos\'e 236, Section 0(a), pp. 221--222]{FGA}.
+\end{reference}
+The historical adjective ``separable'' for the family in
+Example \ref{example-picard-conic-not-scheme} means flat with geometrically
+reduced fibres. Thus neither projectivity nor this fibrewise condition makes
+the relative Picard algebraic space a scheme.
+
+The cited source also records Mumford's positive scheme-level result: if a
+projective flat family has geometrically reduced fibres and every
+irreducible component of every fibre is geometrically irreducible over its
+residue field, then its Picard functor is represented by a scheme. This uses
+a strengthened effective-quotient theorem and is not a consequence of
+algebraic-space representability alone. The same discussion points out that
+the union of torsion components can still be representable by a scheme when
+the full Picard functor is not; the relative torsion-component loci are
+studied in More on Morphisms, Section
+\ref{more-morphisms-section-connected-components}.
+\end{remark}
+
 \begin{remark}[Picard spaces of formal neighbourhoods]
 \label{remark-picard-formal-neighbourhoods-lefschetz}
 \begin{reference}

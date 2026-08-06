@@ -1924,3 +1924,55 @@ pages. Final serial 1,100-dpi inspection of Moduli pages 37--40 finds no
 clipping, collision, malformed formula, placeholder, or unreadable text.
 The next sequential cursor is Expose 236, its opening and Section 1 on
 printed pages 221--231.
+
+The next sequential patch integrates Expose 236, Section 0, on printed
+pages 221--222. Example `moduli-example-picard-conic-not-scheme` gives the
+real formal-trait conic and proves the precise modern conclusion: its fppf
+Picard functor is an algebraic space but not a scheme. The proof keeps the
+two descent categories separate. After the finite etale extension to the
+complex formal trait the explicit Picard scheme has infinitely many origins
+and a Galois descent datum which is not effective in schemes, while fppf
+descent is effective for algebraic spaces. Remark
+`moduli-remark-mumford-picard-scheme-boundary` records Mumford's additional
+geometric-irreducibility criterion as a scheme-level effective-quotient
+result rather than deriving it from algebraic-space representability. The
+historical word separable is translated explicitly as flat with geometrically
+reduced fibres.
+
+The rest of Section 0 is joined to results already integrated from Expose
+232: Murre's theorem for every proper scheme over a field and the
+formal-neighbourhood Lefschetz comparison. Decisions `D000524` through
+`D000527` disposition every structural unit and supersede `D000258` for the
+section without rewriting prior history. No source correction is introduced
+in this patch.
+
+Direct serial 1,100-dpi review covers the two authority pages. The NUMDAM
+authority is 2,461,968 bytes with SHA-256
+`266EEF77BF7BA34A75895ED69ACBFE791A2958DD52C2837D75AB29DF0D2F714A`.
+Both semantic validators pass with no errors at 21,652 labels, 21,437
+official-tag joins, 71 controlled topics, 4,192 topic candidates, 527
+append-only decisions, 1,253 source units, 1,612 term links, and 44 source
+issues, of which seven remain active. The topic, decision, issue, map,
+Stacks-label, topic-candidate, reviewed-topic-map, index-validation, and
+map-validation files have SHA-256
+`B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0`,
+`FE1544AF5FB52A379FF5A0B9CE2C1D340FE5C3234F171E3E69ABBC82DB9DB77D`,
+`7272EB27B06850286D76C8CF80228906CB36025AB6AA2C1CDED051DFB306D199`,
+`F601B97775038447090849C5E7ED081D0C2549729D63BABCFA323773B6463595`,
+`9353833EDD070C751C20410EF0E957F6D7A7963E8E4A68F2F65650F4D2377550`,
+`FEB2A2D0EE677D60591A794F1AAC41797316F2D9D8929718834CBB88C6BEAC6C`,
+`26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46`,
+`7A7F76A8D16EC163185547966967411160483C6C8187FBAC1ABA690BE757C0E5`,
+and `D3F84647C554CE6C93414CDDEDB91E439A7C9AD57282A1AC4167F37515D92106`.
+The official `tags/tags` file remains unmodified at SHA-256
+`C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF`;
+the three new semantic labels deliberately have no invented official tags.
+
+A bibliography-complete serial build followed by stable TeX passes produces
+a 54-page Moduli chapter of 760,190 bytes with SHA-256
+`E26BA8A6426D0413D40C25002F220A52D5CA97365732986C182637747FF5CF79`.
+The added text creates no overfull or underfull horizontal box. Final serial
+1,100-dpi inspection of Moduli page 40 finds no clipping, collision,
+malformed formula, placeholder, or unreadable text. The next sequential
+cursor is Expose 236, Section 1, on printed pages 222--230 (physical PDF
+pages 3--11); printed page 231 begins Section 2.
