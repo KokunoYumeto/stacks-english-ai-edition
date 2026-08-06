@@ -15,9 +15,12 @@
   "inputs": {
     "english_discovery": {
       "manifest": "R172",
+      "manifest_bytes": 88062,
+      "manifest_sha256": "01D0226BD1A31B14A250C29C18F3DBAE0C7537B245AB1C119422EBBEAF0C133E",
       "files": 127,
       "bytes": 7283317,
       "tree_sha256": "F5EBDCAAA7C5B4A426085B1C696E821B2F74B9E5E58582664955AD37E8C2BC59",
+      "discovery_units": 9155,
       "role": "complete discovery text; not canonical authority"
     },
     "french_authority": {
@@ -30,6 +33,14 @@
       "sha256": "8C4E31D85658F6A8D82A809FB7FC4D6B89B7A02B9F9FBF5B7C0480FDD32D78FF",
       "role": "source evidence to normalize; not a completed integration"
     }
+  },
+  "mapping_snapshot": {
+    "stacks_labels": 21446,
+    "official_tag_joins": 21437,
+    "topics": 35,
+    "lexical_candidates": 2670,
+    "reviewed_mappings": 0,
+    "official_tags_assigned_by_scaffold": 0
   },
   "rules": {
     "edition_roots": "read_only",

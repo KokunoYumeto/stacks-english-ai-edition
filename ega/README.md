@@ -14,7 +14,9 @@ or published here.
 ## Current snapshot
 
 - Stacks upstream base: `a04446e57ec1fbc252a871afcec7752fb2807b14`.
-- English discovery manifest: R172, 127 files, 7,283,317 bytes, tree SHA-256
+- English discovery manifest: R172, 88,062 bytes, SHA-256
+  `01D0226BD1A31B14A250C29C18F3DBAE0C7537B245AB1C119422EBBEAF0C133E`;
+  127 files, 7,283,317 bytes, tree SHA-256
   `F5EBDCAAA7C5B4A426085B1C696E821B2F74B9E5E58582664955AD37E8C2BC59`.
 - French authority: production is active; the current interface snapshot has
   EGA II printed p.9 sealed locally and printed p.10 as the next cursor.
@@ -22,6 +24,11 @@ or published here.
   `8C4E31D85658F6A8D82A809FB7FC4D6B89B7A02B9F9FBF5B7C0480FDD32D78FF`.
   They are evidence to normalize into the new schema, not a completed
   deliverable or an upstream mapping.
+- Verified discovery inventory: 127 exact source files and 9,155
+  metadata-only semantic units. No source prose is copied into the branch.
+- Current Stacks snapshot: 21,446 chapter labels, 21,437 exact official-tag
+  joins, and 2,670 lexical candidates across all 35 discovery topics. Reviewed
+  mappings remain exactly zero at this scaffold stage.
 
 ## State model
 
@@ -46,6 +53,12 @@ append-only.
 - `fb.csv`: upstream feedback and its disposition.
 - `schema.md`: stable IDs, evidence rules, and promotion gates.
 - `check.py`: local structural validator.
+- `intake.py`: deterministic manifest verification and metadata-only unit
+  extraction; it does not copy source prose.
+- `files.csv`, `units.csv`, and `intake.json`: generated exact-file inventory,
+  stable unit registry, and fail-closed intake receipt.
+- `map.py`, `cand.csv`, and `map.json`: lexical candidate generation against
+  the exact upstream Stacks snapshot. Candidates are not reviewed mappings.
 
 The immediate work is corpus-wide source-unit extraction and topic
 classification. Mathematical Stacks chapter edits begin only after a bounded
