@@ -3,10 +3,10 @@
   "date": "2026-08-06",
   "scope": {
     "start": "fac:I:1:no:1",
-    "end": "fac:I:2:no:17:prop:11:cor",
+    "end": "fac:I:3:no:18",
     "printed_pages": "199-212",
-    "units_decided": 53,
-    "stacks_references_added": 26
+    "units_decided": 54,
+    "stacks_references_added": 28
   },
   "authority": {
     "bytes": 6305726,
@@ -39,6 +39,14 @@
       "sha256": "3D128DA2D37DD932FFDB85FB6F989025FCEF282FBA1313980CD6E9839E972F11",
       "affected_pdf_pages_inspected": [22],
       "affected_page_result": "PASS"
+    },
+    {
+      "master": "cohomology.tex",
+      "pdf": "cohomology.pdf",
+      "bytes": 1334843,
+      "sha256": "6FB3F9C43841DC10284E88755855608D10B8AB449C323468F0A87E539BBC4822",
+      "affected_pdf_pages_inspected": [10, 39],
+      "affected_page_result": "PASS"
     }
   ],
   "visual_checks": {
@@ -55,7 +63,7 @@
     "fac_citations_resolved": true,
     "undefined_reference_at_edited_lines": 0,
     "overfull_box_at_edited_lines": 0,
-    "note": "The isolated build retains unrelated missing chapter-aux warnings in end matter, unrelated pre-existing cross-chapter warnings, and pre-existing overfull diagnostics on module pages 31--32; the FAC reference additions introduce none."
+    "note": "The isolated builds retain unrelated missing chapter-aux warnings, unrelated pre-existing cross-chapter warnings, and pre-existing overfull diagnostics on module pages 31--32. Cohomology page 39 visibly retains an unrelated unresolved cross-chapter link above the edited statement; the edited alternating-complex definition and equation link are resolved. The FAC additions introduce no unresolved citation or link."
   },
   "validators": {
     "intake": "PASS",
