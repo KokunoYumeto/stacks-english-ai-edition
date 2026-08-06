@@ -1681,6 +1681,63 @@ Each term is projective by Proposition
 \end{proof}
 
 \begin{proposition}
+\label{proposition-quot-quasi-projective-over-base}
+\begin{reference}
+\cite[Expos\'e 221, Section 4(a), pp. 266--267]{FGA}.
+\end{reference}
+Let $S$ be a Noetherian scheme, let $X \to S$ be quasi-projective,
+and let $\mathcal{F}$ be a coherent $\mathcal{O}_X$-module. Choose a
+factorization
+$$
+X \xrightarrow{j} \overline{X} \longrightarrow S
+$$
+where $j$ is an open immersion and $\overline{X} \to S$ is projective,
+and choose a very ample invertible module $\overline{\mathcal{L}}$ on
+$\overline{X}/S$. For every numerical polynomial $P$, the functor
+$$
+\Quotfunctor^P_{\mathcal{F}/X/S}
+$$
+of quotients flat over the variable base and with proper support is a
+quasi-projective scheme over $S$. Consequently
+$$
+\Quotfunctor_{\mathcal{F}/X/S} =
+\coprod_{P \in \mathbf{Q}[t]}
+\Quotfunctor^P_{\mathcal{F}/X/S}
+$$
+is a scheme locally of finite type over $S$ whose fixed-polynomial
+components are quasi-projective. Here the Hilbert polynomial is computed
+with respect to $j^*\overline{\mathcal{L}}$.
+\end{proposition}
+
+\begin{proof}
+The factorization exists by Morphisms, Lemma
+\ref{morphisms-lemma-quasi-projective-open-projective}. Since $S$ is
+Noetherian, both $X$ and $\overline{X}$ are Noetherian and $j$ is
+quasi-compact. Properties, Lemma
+\ref{properties-lemma-lift-finite-presentation} gives a finitely presented,
+hence coherent, $\mathcal{O}_{\overline{X}}$-module
+$\overline{\mathcal{F}}$ with
+$j^*\overline{\mathcal{F}} \cong \mathcal{F}$.
+
+Lemma \ref{lemma-quot-better-open} gives an open immersion
+$$
+\Quotfunctor^P_{\mathcal{F}/X/S} \longrightarrow
+\Quotfunctor^P_{\overline{\mathcal{F}}/\overline{X}/S}.
+$$
+The target is a projective scheme by Proposition
+\ref{proposition-quot-projective-over-base}. It is Noetherian, so the open
+subscheme on the left is quasi-compact. The open immersion is therefore
+quasi-projective by Morphisms, Lemma
+\ref{morphisms-lemma-quasi-affine-finite-type-quasi-projective}, and the
+composite with the projective morphism to $S$ is quasi-projective by
+Morphisms, Lemma \ref{morphisms-lemma-composition-quasi-projective}.
+
+Finally, the Hilbert polynomial is locally constant in a flat family.
+Remark \ref{remark-quot-numerical} supplies the open and closed
+decomposition, and the preceding argument applies to every component.
+\end{proof}
+
+\begin{proposition}
 \label{proposition-bounded-coherent-Hilbert-polynomials}
 \begin{reference}
 \cite[Expos\'e 221, Theorem 2.1 and its erratum, pp. 253--254 and 302]{FGA}.
@@ -2416,6 +2473,81 @@ Thus this lemma is an immediate consequence of
 Lemma \ref{lemma-quot-qc-over-base}.
 \end{proof}
 
+\begin{proposition}
+\label{proposition-quot-open-fibre-conditions}
+\begin{reference}
+\cite[Expos\'e 221, Section 4(b), p. 267]{FGA} and
+\cite[Chapter IV, Theorems 12.2.1 and 12.2.4]{EGA4}.
+\end{reference}
+Let $S$ be a Noetherian scheme, let $X \to S$ be quasi-projective, let
+$\mathcal{F}$ be a coherent $\mathcal{O}_X$-module, and fix a Hilbert
+polynomial $P$ as in Proposition
+\ref{proposition-quot-quasi-projective-over-base}. Write
+$$
+Q = \Quotfunctor^P_{\mathcal{F}/X/S}
+$$
+and let $\mathcal{G}$ be the universal quotient on $X_Q$. If
+$D \subset \mathbf{Z}$ is finite, then the locus in $Q$ where the
+dimensions of all prime cycles associated to the fibre of $\mathcal{G}$
+belong to $D$ is open.
+
+If $\mathcal{F} = \mathcal{O}_X$, write $H = \Hilbfunctor^P_{X/S}$ and
+let $Z \subset X_H$ be the universal closed subscheme. The following define
+open subfunctors of $H$:
+\begin{enumerate}
+\item the locus where $Z \to H$ is smooth on every point of the fibre;
+\item the locus where the fibre of $Z \to H$ is geometrically normal;
+\item if $X \to S$ is flat, the locus where
+$Z_h \to X_h$ is a local complete intersection for every $h \in H$.
+\end{enumerate}
+Finite intersections of these loci represent simultaneous conditions.
+\end{proposition}
+
+\begin{proof}
+By Proposition \ref{proposition-quot-quasi-projective-over-base}, $Q$ is a
+locally Noetherian scheme. The support of $\mathcal{G}$ is proper over $Q$,
+and $\mathcal{G}$ is finitely presented and flat over $Q$. The first claim
+is therefore exactly the openness theorem of
+\cite[Chapter IV, Theorem 12.2.1(i)]{EGA4}.
+
+The universal family $Z \to H$ is proper, flat, and of finite presentation.
+The smooth and geometrically normal fibre loci are open by
+\cite[Chapter IV, Theorem 12.2.4(iii), (iv)]{EGA4}. These properties commute
+with field extension, so the resulting opens have the asserted functorial
+meaning. For the final locus, apply More on Morphisms of Spaces, Lemma
+\ref{spaces-more-morphisms-lemma-where-lci} to
+$$
+\xymatrix{
+Z \ar[rr] \ar[rd] & & X_H \ar[ld] \\
+& H.
+}
+$$
+The first vertical morphism is flat, proper, and of finite presentation,
+and the second is flat and of finite presentation. Intersections of open
+subschemes are open.
+\end{proof}
+
+\begin{lemma}
+\label{corollary-finite-etale-Hilbert-open}
+Let $S$ be a Noetherian scheme and let $X \to S$ be quasi-projective. For
+$r \geq 0$, the functor of closed subschemes of $X_T$ which are finite
+\'etale of rank $r$ over $T$ is represented by an open subscheme of
+$\Hilbfunctor^r_{X/S}$ and hence by a quasi-projective $S$-scheme.
+\end{lemma}
+
+\begin{proof}
+The constant Hilbert polynomial $r$ says that every fibre of the universal
+family is zero dimensional of length $r$. On the smooth open from
+Proposition \ref{proposition-quot-open-fibre-conditions}, the universal
+family is smooth of relative dimension zero, hence \'etale by definition.
+It is proper with finite
+fibres, hence finite by More on Morphisms, Lemma
+\ref{more-morphisms-lemma-characterize-finite}, and its finite locally free
+rank is $r$. The converse is immediate. Quasi-projectivity follows from
+Proposition \ref{proposition-quot-quasi-projective-over-base} and Quot,
+Lemma \ref{quot-lemma-hilb-is-quot}.
+\end{proof}
+
 
 
 
@@ -2955,6 +3087,89 @@ is an open subspace of $\Hilbfunctor^{P, \mathcal{M}}_{Y \times_B X/B}$ and
 hence quasi-compact (as an open of a Noetherian algebraic space
 is quasi-compact).
 \end{proof}
+
+\begin{proposition}
+\label{proposition-sections-Mor-quasi-projective}
+\begin{reference}
+\cite[Expos\'e 221, Section 4(c), pp. 267--268]{FGA}.
+\end{reference}
+Let $S$ be a Noetherian scheme.
+\begin{enumerate}
+\item Let $Y \to S$ be flat and proper and let $Z \to Y$ be an
+$S$-morphism such that $Z \to S$ is quasi-projective. The functor
+$\mathit{Sec}_{Y/S}(Z/Y)$ of sections is a scheme locally of finite type
+over $S$. It is an open subscheme of $\Hilbfunctor_{Z/S}$, and each
+fixed-Hilbert-polynomial component is quasi-projective over $S$.
+\item Let $Y \to S$ be flat and projective and let $X \to S$ be
+quasi-projective. Then $\mathit{Mor}_S(Y, X)$ is a scheme locally of finite
+type over $S$. The graph construction identifies it with an open subscheme
+of $\Hilbfunctor_{Y \times_S X/S}$, and every fixed-polynomial subfunctor
+$\mathit{Mor}^{P,\mathcal{M}}_S(Y, X)$ is quasi-projective over $S$, where
+$$
+\mathcal{M} = \operatorname{pr}_1^*\mathcal{N} \otimes
+\operatorname{pr}_2^*\mathcal{L}
+$$
+for relatively very ample invertible modules $\mathcal{N}$ on $Y/S$ and
+$\mathcal{L}$ on $X/S$. The subfunctor of morphisms $Y_T \to X_T$ which
+are immersions is open.
+\item If $X \to S$ is projective as well, then
+$\mathit{Isom}_S(Y, X)$ is an open subscheme of
+$\mathit{Mor}_S(Y, X)$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+A section of $Z_T \to Y_T$ has an image which is a closed subscheme of
+$Z_T$, and a closed subscheme $\Gamma \subset Z_T$ is the image of a
+section exactly when the projection $\Gamma \to Y_T$ is an isomorphism.
+On the universal family over $\Hilbfunctor_{Z/S}$ this is an open condition
+by More on Morphisms of Spaces, Lemma
+\ref{spaces-more-morphisms-lemma-where-isomorphism}. Thus the section
+functor is an open subspace of $\Hilbfunctor_{Z/S}$. Proposition
+\ref{proposition-quot-quasi-projective-over-base} and Quot, Lemma
+\ref{quot-lemma-hilb-is-quot} show that the fixed-polynomial Hilbert spaces
+are quasi-projective schemes. Their open section loci are quasi-compact,
+because these Hilbert spaces are Noetherian, and hence are quasi-projective.
+Taking their disjoint union proves (1).
+
+For (2), use
+$$
+\mathit{Mor}_S(Y, X) =
+\mathit{Sec}_{Y/S}((Y \times_S X)/Y).
+$$
+The product $Y \times_S X$ is quasi-projective over $S$: its projection to
+$X$ is a base change of the projective morphism $Y \to S$, and one applies
+Morphisms, Lemmas \ref{morphisms-lemma-base-change-quasi-projective} and
+\ref{morphisms-lemma-composition-quasi-projective}. The statement about
+graphs also follows directly from Quot, Lemma
+\ref{quot-lemma-Mor-into-Hilb-open}. The displayed invertible module is
+relatively very ample: locally on $S$, take the projective embeddings
+defined by $\mathcal{N}$ and $\mathcal{L}$ and compose their product with
+the Segre embedding of Constructions, Lemma
+\ref{constructions-lemma-segre-embedding}. The fixed-polynomial assertion
+follows from (1) or from Remark \ref{remark-Mor-numerical}. Finally, every
+immersion $Y_T \to X_T$ is closed: it is proper because $Y_T \to T$ is
+proper and $X_T \to T$ is separated. The closed-immersion locus of the
+universal morphism is open by More on Morphisms of Spaces, Lemma
+\ref{spaces-more-morphisms-lemma-where-closed-immersion}.
+
+If $X$ is projective, the isomorphism locus is open by Lemma
+\ref{lemma-Isom-in-Mor}. This proves (3).
+\end{proof}
+
+\begin{remark}
+\label{remark-automorphism-scheme-nilpotents}
+\begin{reference}
+\cite[Expos\'e 221, final paragraph of Section 4(c), p. 268]{FGA}.
+\end{reference}
+For a projective scheme over a field, the automorphism functor is represented
+by the open subscheme $\mathit{Isom}(X, X)$ above. Its scheme structure is
+essential: the reduction seen by classical constructions over an
+algebraically closed field can discard infinitesimal automorphisms. Over an
+imperfect field, the nilradical appearing after extending the ground field
+need not descend, so replacing the automorphism scheme by that reduction is
+not a base-field construction.
+\end{remark}
 
 
 

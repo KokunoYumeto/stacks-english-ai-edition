@@ -1282,3 +1282,48 @@ horizontal box; the standalone chapter builds retain only their pre-existing
 cross-chapter auxiliary warnings.  Final 1,200-dpi inspection covers
 Constructions page 50 and Moduli pages 6 and 15--18.  The next sequential
 cursor is Expose 221, Section 4, “Variants,” printed pages 266--268.
+
+The fifty-ninth source patch completes Expose 221, Section 4.  The
+quasi-projective variant now embeds the source scheme in a projective
+compactification, extends the coherent source sheaf, and realizes every
+fixed-polynomial proper-support Quot scheme as an open quasi-projective
+subscheme of the corresponding projective Quot scheme.  The full Quot
+functor is consequently a scheme locally of finite type decomposed by
+Hilbert polynomial.
+
+The fibre-condition proposition records the open associated-cycle-dimension,
+smooth, geometrically normal, and fibrewise local-complete-intersection loci.
+The first three classical openness inputs are identified exactly as EGA IV,
+Theorems 12.2.1(i) and 12.2.4(iii), (iv); the complete-intersection locus uses
+the existing base-change-stable Stacks lemma.  The constant-polynomial smooth
+locus gives the quasi-projective Hilbert scheme of finite etale closed
+subschemes of prescribed rank.  A separate graph proposition upgrades the
+section, Hom, Isom, and immersion functors to schemes with quasi-projective
+fixed-polynomial pieces under the source hypotheses, and the final remark
+preserves the distinction between the true possibly nonreduced automorphism
+scheme and its classical reduction.
+
+Direct 1,200-dpi review covers all three authority pages for Section 4
+(printed pages 266--268 and physical PDF pages 19--21).  The NUMDAM authority
+remains 2,747,079 bytes with SHA-256
+`ABBF37780FDC514BEBD2F1811BFC94E706E44FA8751402CE171510A3F1520968`.
+The linked erratum authority remains 157,623 bytes with SHA-256
+`007990D289E767A54A273CA45E8491F0052F9F015820DDB451D1E2B2D0FE27F9`
+and contains no correction to Section 4.
+
+Both semantic validators pass with no errors at 21,592 labels, 3,867 topic
+candidates, 419 append-only decisions, 1,253 source units, 1,612 term links,
+and 21 source issues, of which eight remain active.  The decision, issue, map,
+and Stacks-label ledgers have SHA-256
+`713EE235009C29F21ADBFEF3A7C3CC156E4BDEBED6074C4AF392C7040BC8A700`,
+`EA49D0F8E4C4C897CD94AF71DE32EF610C2122493EEE4E38A5463A1A29EB55F4`,
+`3D55A59EC74131EE2EE27EDF9A950D08C1F6311492A65B6119339888AF99DC93`,
+and `066903BF2569870C46DBA33917366A0AE861A66FF9467CD777D66039D06FB03A`.
+Bibliography-complete serial builds followed by two final TeX passes produce a
+38-page Moduli Stacks chapter of 645,379 bytes with SHA-256
+`4889EE8DEBD0C11F8D825F5ED39118B6F5885985E0C8447B09FD27CE02A950F0`.
+The new labels and FGA/EGA citations resolve and the additions create no
+overfull horizontal box; only the pre-existing standalone cross-chapter
+auxiliary warnings remain.  Final 1,200-dpi inspection covers Moduli pages
+17--18, 26--27, and 31--32.  The next sequential cursor is Expose 221,
+Section 5, beginning with Proposition 5.1 on printed page 269.
