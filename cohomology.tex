@@ -2532,6 +2532,41 @@ $$
 associated to maps $I \to J$ and $J \to K$ is the map associated
 to the composition $I \to K$.
 
+\begin{remark}
+\label{remark-FAC-two-covering-double-complex}
+\begin{reference}
+\cite[Chapter I, \S 4, no. 28, Proposition 2, pp. 220--221]{FAC}
+\end{reference}
+Let $\mathcal{U} : X = \bigcup_{i \in I} U_i$ and
+$\mathcal{V} : X = \bigcup_{j \in J} V_j$ be open coverings and let
+$\mathcal{F}$ be an abelian sheaf. The two-covering groups
+$$
+A^{p, q} =
+\prod_{(i_0, \ldots, i_p), (j_0, \ldots, j_q)}
+\mathcal{F}(U_{i_0 \ldots i_p} \cap V_{j_0 \ldots j_q})
+$$
+form a double complex in the convention of
+Homology, Definition \ref{homology-definition-double-complex}:
+the first and second differentials are the Cech differentials in the
+$i$- and $j$-indices. They commute, and the differential on the associated
+total complex is therefore $d_1 + (-1)^p d_2$ on $A^{p, q}$.
+
+For a fixed $(j_0, \ldots, j_q)$, let
+$\mathcal{U}_{j_0 \ldots j_q}$ be the covering of
+$V_{j_0 \ldots j_q}$ by the opens
+$U_i \cap V_{j_0 \ldots j_q}$. Taking cohomology in the first direction
+gives
+$$
+H^p_I(A^{\bullet, \bullet})^q =
+\prod_{(j_0, \ldots, j_q)}
+\check{H}^p(\mathcal{U}_{j_0 \ldots j_q}, \mathcal{F}).
+$$
+In degree $p = 0$, the sheaf condition identifies the resulting edge
+complex with $\check{\mathcal{C}}^\bullet(\mathcal{V}, \mathcal{F})$.
+Interchanging the two coverings gives the analogous identification with
+$\check{\mathcal{C}}^\bullet(\mathcal{U}, \mathcal{F})$.
+\end{remark}
+
 \begin{definition}
 \label{definition-cech-cohomology-space}
 \begin{reference}
