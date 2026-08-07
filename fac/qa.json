@@ -3,37 +3,39 @@
   "date": "2026-08-06",
   "scope": {
     "start": "fac:I:1:no:1",
-    "end": "fac:III:2:no:58",
-    "printed_pages": "199-251",
-    "units_decided": 300,
-    "stacks_references_added": 207
+    "end": "fac:III:2:no:59",
+    "printed_pages": "199-252",
+    "units_decided": 313,
+    "stacks_references_added": 219
   },
   "authority": {
     "bytes": 6305726,
     "sha256": "B8C6508249308F5D8BC886B9E6360F1EC4FDC8F0F18EFAA03EE0E36B591551CA",
     "render_dpi": 1100,
-    "physical_pages_inspected": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56],
-    "printed_pages_inspected": [199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251]
+    "physical_pages_inspected": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57],
+    "printed_pages_inspected": [199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252]
   },
   "latest_review": {
-    "unit": "fac:III:2:no:58",
-    "component": "components/056_III_2_58_first_properties_functor_A.tex",
-    "bytes": 5786,
-    "sha256": "B0BCA0061EF4BE08E4D03BFCEAAB7637E298E9F227846CD1B1EBC426178B4277",
-    "authority_physical_pages": [55, 56],
-    "authority_printed_pages": [250, 251],
+    "unit": "fac:III:2:no:59",
+    "component": "components/057_III_2_59_graded_module_associated_to_algebraic_sheaf.tex",
+    "bytes": 5076,
+    "sha256": "5985560E730D37B87D5CC23E8EF135E9BAFA5D2BA731B4C06B81023B9AD7213D",
+    "authority_physical_pages": [56, 57],
+    "authority_printed_pages": [251, 252],
     "authority_renders": [
-      {"physical_page": 55, "sha256": "00B393DD9E7DACDFAD7B257F6AEBA205E7BE1CADCD8029F7121CA8F7ACC4F1BF"},
-      {"physical_page": 56, "sha256": "0FD8EA0F2195F812200802753D1A031730BC2165F5B56EF4E4BABEA505F9D808"}
+      {"physical_page": 56, "sha256": "0FD8EA0F2195F812200802753D1A031730BC2165F5B56EF4E4BABEA505F9D808"},
+      {"physical_page": 57, "sha256": "6121BEB60B53456B25A4796129FDD05E60AAE00AB05178278CAC711EA30B131F"}
     ],
     "high_detail_renders": [],
     "output_renders": [
-      {"master": "constructions.tex", "pdf_page": 12, "sha256": "48CBA26948E174FEEFDE213747278F5B7C75BDE51FF6FD34D4828DBF7063636A"},
+      {"master": "modules.tex", "pdf_page": 38, "sha256": "0BEBEDCDBC4303D6DB8C98099E3D6241465FC6B06586A170F8016E2638AD6CAD"},
       {"master": "constructions.tex", "pdf_page": 18, "sha256": "006DD784C37061B38E85C6FBBC30A62835BCD783F9E516D14B09CCEC55F19F09"},
-      {"master": "coherent.tex", "pdf_page": 37, "sha256": "DC547ACECC8BF2DB3F497D6053B98D723CA375196A8789294209C7C9C7E61D91"},
+      {"master": "constructions.tex", "pdf_page": 20, "sha256": "F9916C84597AE224CD821BECC92FC7519A8D84C921A0049D17E64AA52EDFD045"},
+      {"master": "constructions.tex", "pdf_page": 21, "sha256": "788DFEBF4A83D625CDEF0A68803C0B15CD5D4C5883258ECA003641E8A02C2836"},
+      {"master": "properties.tex", "pdf_page": 49, "sha256": "DB8A7BD01A65FE1D997F694BBB1B19C566B1164C1AD3F89D06B9B523BB62E3C5"},
       {"master": "coherent.tex", "pdf_page": 38, "sha256": "574F3B8EBEB2D42468A375EDB816B020F147213091CA5CA0BD1365A15D1E298F"}
     ],
-    "lead_review": {"id": "FAC-LEAD-REVIEW-N058-R1", "result": "PASS", "findings_closed": ["I000346", "I000347", "I000348", "I000349", "I000350", "I000351", "I000352", "I000353", "I000354", "I000355", "I000356", "I000357", "I000358", "I000359", "I000360", "I000361", "I000362", "I000363", "I000364", "I000365", "I000366", "I000367", "I000368", "I000369", "I000370", "I000371", "I000372", "I000373", "I000374", "I000375", "I000376", "I000377", "I000378", "I000379", "I000380"]}
+    "lead_review": {"id": "FAC-LEAD-REVIEW-N059-R1", "result": "PASS", "findings_closed": ["I000381", "I000382", "I000383", "I000384", "I000385", "I000386", "I000387", "I000388", "I000389", "I000390", "I000391", "I000392", "I000393", "I000394", "I000395", "I000396", "I000397", "I000398", "I000399", "I000400", "I000401", "I000402", "I000403", "I000404", "I000405", "I000406", "I000407", "I000408", "I000409", "I000410", "I000411", "I000412", "I000413", "I000414", "I000415"]}
   },
   "builds": [
     {
@@ -64,8 +66,8 @@
       "master": "modules.tex",
       "pdf": "modules.pdf",
       "bytes": 728091,
-      "sha256": "22B83AD516D3F7D09C5B269714342FB1335AD58DA865756DC2A42EA088668078",
-      "affected_pdf_pages_inspected": [3, 8, 9, 11, 13, 15, 16, 17, 18, 19, 20, 22, 31, 32, 34],
+      "sha256": "CEF1085CD69B1CBCF8A16D3B826AC14DD82D191756BC613858896F9CE482F92A",
+      "affected_pdf_pages_inspected": [3, 8, 9, 11, 13, 15, 16, 17, 18, 19, 20, 22, 31, 32, 34, 38],
       "affected_page_result": "PASS"
     },
     {
@@ -80,7 +82,7 @@
       "master": "coherent.tex",
       "pdf": "coherent.pdf",
       "bytes": 1035615,
-      "sha256": "3115282E78C177AE1B891EECC4E241DF0A318ABC00F461CAAEB81BDAE50BC715",
+      "sha256": "1FF93D0B70BEBD07108AA7E63574C5E4265C51E9DE96EE32E65FC33554A460F8",
       "affected_pdf_pages_inspected": [2, 3, 6, 16, 22, 23, 24, 25, 34, 37, 38],
       "affected_page_result": "PASS"
     },
@@ -119,9 +121,9 @@
     {
       "master": "constructions.tex",
       "pdf": "constructions.pdf",
-      "bytes": 795088,
-      "sha256": "F4C16B8829AC23EA1B3C81A16E4BE9EB2E0F4790293AAF91410284C1AB0781B3",
-      "affected_pdf_pages_inspected": [8, 9, 12, 13, 17, 18, 23, 28],
+      "bytes": 799067,
+      "sha256": "74579F4842854A6A4204C77D9DF5FD7C680E5ABCC34046267FF18E19430D9E55",
+      "affected_pdf_pages_inspected": [8, 9, 12, 13, 17, 18, 20, 21, 23, 28],
       "affected_page_result": "PASS"
     },
     {
@@ -136,8 +138,8 @@
       "master": "properties.tex",
       "pdf": "properties.pdf",
       "bytes": 730319,
-      "sha256": "7D0220643C96E918E72610472368D31EAD857119DCBB48325C0A34BB01D2E80C",
-      "affected_pdf_pages_inspected": [21, 22, 26, 44],
+      "sha256": "9B4FFD6113654EC59279F1E9A877F4699BF2E7AC215E12FEAC6581E8FABE9160",
+      "affected_pdf_pages_inspected": [21, 22, 26, 44, 49],
       "affected_page_result": "PASS"
     },
     {
@@ -215,7 +217,7 @@
     "fac_citations_resolved": true,
     "undefined_reference_at_edited_lines": 0,
     "overfull_box_at_edited_lines": 0,
-    "note": "The isolated builds retain only unrelated chapter-aux warnings and one pre-existing overfull box away from the edited statements; there is no undefined reference or overfull box at an edited line. The no. 58 citations and histories record stalkwise exactness, the shift comparison, coherence and high-degree-tail detection, and the Serre-quotient interpretation. The checkpoint corrects the printed negative-shift expression by interpreting it after localization and repairs the same negative-power-before-localization defect in the existing Proj proof. Constructions.pdf pages 12 and 18 and coherent.pdf pages 37 and 38 are unclipped, collision-free, and contain no unresolved mark introduced by this checkpoint. No 5000 dpi authority render was required because every sign, exponent, formula, and printed correction was unambiguous at 1100 dpi."
+    "note": "The isolated builds retain only unrelated chapter-aux and bibliography warnings and pre-existing overfull boxes away from the edited statements; there is no undefined reference or overfull box at an edited line. No. 59 records the integer-graded twisted-section module, the canonical action and comparison maps, and their two identity composites. The new Stacks lemma supplies the standard-open fraction calculation omitted by the source and does not infer an adjunction or the no. 65 recovery theorem prematurely. Modules.pdf page 38, constructions.pdf pages 18 and 20--21, properties.pdf page 49, and coherent.pdf page 38 are unclipped, collision-free, and contain no unresolved mark introduced by this checkpoint. No 5000 dpi authority render was required because the formulas, exponents, chart indices, and no. 59/no. 60 boundary were unambiguous at 1100 dpi."
   },
   "validators": {
     "intake": "PASS",

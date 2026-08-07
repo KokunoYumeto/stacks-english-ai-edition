@@ -2,18 +2,18 @@
 
 - Frozen surface: 661 source targets through printed page 278.
 - Stage: sequential source review and statement-level Stacks integration.
-- Completed checkpoint: Chapter III, Section 2, no. 58, printed pages 199--251.
-- Reviewed decisions: 300 (82 equivalent, 126 stronger, 42 extensions,
-  18 new-statement decisions, 30 historical references, 2 outside scope).
-- Current Stacks references added: 207 across `topology.tex`, `sheaves.tex`,
+- Completed checkpoint: Chapter III, Section 2, no. 59, printed pages 199--252.
+- Reviewed decisions: 313 (87 equivalent, 129 stronger, 44 extensions,
+  20 new-statement decisions, 31 historical references, 2 outside scope).
+- Current Stacks references added: 219 across `topology.tex`, `sheaves.tex`,
   `modules.tex`, `homology.tex`, `coherent.tex`, `cohomology.tex`,
   `divisors.tex`, `constructions.tex`, `schemes.tex`, `morphisms.tex`,
   `derham.tex`, `algebra.tex`, `properties.tex`, `varieties.tex`, and
   `simplicial.tex`.
-- New Stacks theorem/lemma statements: 13, plus the paracompactness and
+- New Stacks theorem/lemma statements: 14, plus the paracompactness and
   locally-constant-sheaf definitions and the graded-conventions remark;
   each new theorem/lemma has a complete proof and no assigned tag.
-- Source/proof issues or convention boundaries: 380 found by direct
+- Source/proof issues or convention boundaries: 415 found by direct
   authority-page and TeX inspection, all resolved and
   retained in `issues.csv`.
 - Existing Stacks defects corrected: 6, comprising the refinement-homotopy
@@ -28,7 +28,7 @@
   completed; every
   affected statement page passed direct 1100 dpi visual inspection. See
   `qa.json`.
-- Historical notes added: 60, preserving the source's operator calculus,
+- Historical notes added: 64, preserving the source's operator calculus,
   image-complex construction, two-covering double complex, and unproved
   cofinal-vanishing question, together with the classical closed-point to
   reduced-scheme bridge, the classical-map to scheme-morphism bridge, and the
@@ -104,6 +104,11 @@
   interpretation of relative injectivity and surjectivity. It also corrects
   the printed negative-shift formula by moving negative powers into the
   localization and closes the matching pre-localization defect in the existing
-  Stacks proof.
-- Next unit: `fac:III:2:no:59` (graded module associated to an algebraic sheaf).
+  Stacks proof; no. 59 now identifies the integer-graded twisted-section
+  module, its canonical action, and the comparison maps with their modern
+  counterparts, while the new complete standard-open proof records both
+  triangle identities without promoting them to an unjustified adjunction.
+  The source's no. 65 sentence remains a forecast rather than a proof at this
+  cursor.
+- Next unit: `fac:III:2:no:60` (the case of coherent algebraic sheaves).
 - No statement is mapped by lexical similarity alone.
