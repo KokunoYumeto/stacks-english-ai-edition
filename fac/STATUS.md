@@ -2,22 +2,24 @@
 
 - Frozen surface: 661 source targets through printed page 278.
 - Stage: sequential source review and statement-level Stacks integration.
-- Completed checkpoint: Chapter III, Section 5, no. 73, printed pages 199--268.
-- Reviewed decisions: 493 (148 equivalent, 156 stronger, 65 extensions,
-  81 new-statement decisions, 41 historical references, 2 outside scope).
-- Current Stacks references added: 287 across `topology.tex`, `sheaves.tex`,
+- Completed checkpoint: Chapter III, Section 5, no. 74, printed pages 199--269.
+- Reviewed decisions: 509 (155 equivalent, 156 stronger, 65 extensions,
+  90 new-statement decisions, 41 historical references, 2 outside scope).
+- Current Stacks references added: 292 across `topology.tex`, `sheaves.tex`,
   `modules.tex`, `homology.tex`, `coherent.tex`, `cohomology.tex`,
   `divisors.tex`, `constructions.tex`, `schemes.tex`, `morphisms.tex`,
   `derham.tex`, `algebra.tex`, `properties.tex`, `varieties.tex`,
   `simplicial.tex`, `more-algebra.tex`, `dualizing.tex`, `local-cohomology.tex`,
   and `duality.tex`.
-- New Stacks theorem/lemma statements: 24, plus the paracompactness and
+- New Stacks theorem/lemma statements: 27, plus the paracompactness and
   locally-constant-sheaf definitions, the graded-conventions remark, and
   the internal graded Ext and degreewise graded dual definitions;
   each new theorem/lemma has a complete proof and no assigned tag.
-- Source/proof issues or convention boundaries: 793 found by direct
+- Source/proof issues or convention boundaries: 814 found by direct
   authority-page and TeX inspection, all resolved and
   retained in `issues.csv`.
+- Source corrections: 3, including the no. 74 repeated resolution index
+  restored from printed `L_p` to quantified `L_i` as correction `C0040`.
 - Existing Stacks defects corrected: 6, comprising the refinement-homotopy
   sign, repeated coefficient sheaves, wrong boundary domain, wrong boundary
   degree, incomplete low-degree citation, and multiplication by a negative
@@ -31,7 +33,7 @@
   completed; every
   affected statement page passed direct 1100 dpi visual inspection. See
   `qa.json`.
-- Historical notes added: 123, preserving the source's operator calculus,
+- Historical notes added: 127, preserving the source's operator calculus,
   image-complex construction, two-covering double complex, and unproved
   cofinal-vanishing question, together with the classical closed-point to
   reduced-scheme bridge, the classical-map to scheme-morphism bridge, and the
@@ -286,6 +288,24 @@
   pages algebra 135--137, constructions 13--14, modules 32, and more-algebra
   172 passed direct 1100 dpi-equivalent inspection after two serial builds,
   with an exact hard stop before no. 74 on printed page 268 and no high-detail
-  crop needed.
-- Next unit: `fac:III:5:no:74`.
+  crop needed; no. 74 now characterizes eventual cohomology vanishing under
+  increasingly negative twists by local Ext vanishing, and then by a bound
+  on stalkwise projective dimension. Three new completely proved untagged
+  lemmas retain the internal-degree sign, the exceptional `q=0` five-term
+  step, finite-tail detection through the associated sheaf, the local
+  trivialization of `O(-r-1)`, every scheme point, the `r`-variable affine
+  chart bound, and the exact reversal from `0 <= q < p` to
+  `r-p < i <= r`. Tags 01XD, 0AG7, and 0BXD supply standard-cover
+  cohomology, finite-tail recovery, and the coherent Proj equivalence; tags
+  00O4, 0CXF, 00O8, and 00OQ supply projective dimension, finite free local
+  resolutions, localization of global dimension, and the polynomial-ring
+  bound. None replaces the three new criteria. Direct authority review
+  confirms that the printed phrase “each `L_p`” leaves the displayed
+  `L_p,...,L_0` terms unquantified; correction `C0040` restores “each
+  `L_i`” and preserves the printed form in provenance. Authority physical
+  pages 73--74 and output pages algebra 263--266 and 274--275 and coherent
+  38--40 passed direct 1100 dpi-equivalent inspection after two serial
+  builds, with an exact hard stop before no. 75 on printed page 269 and no
+  high-detail crop needed.
+- Next unit: `fac:III:5:no:75`.
 - No statement is mapped by lexical similarity alone.

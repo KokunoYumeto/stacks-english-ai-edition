@@ -4340,6 +4340,148 @@ functor as well.
 
 
 
+\begin{lemma}
+\label{lemma-negative-twists-local-ext}
+\begin{reference}
+\cite[Chapter III, \S 5, no. 74, Theorem 1 and proof,
+p. 268]{FAC}
+\end{reference}
+\begin{history}
+For a coherent algebraic sheaf on classical projective $r$-space, the
+cited theorem characterizes eventual vanishing after increasingly negative
+twists by vanishing of one local Ext module at every point. Its proof
+passes from standard-cover cohomology to the finite high-degree tail of the
+graded dual, applies the graded duality theorem of no. 72, and then uses
+the local graded Ext comparison of no. 73.
+
+The proof below retains each of those transitions. In particular, the
+exceptional degree $q=0$ uses the high-degree part of the five-term
+sequence rather than an unavailable direct graded-duality isomorphism.
+The statement is made for all scheme points of projective space. The
+source writes $q\geq0$; we display the substantive range
+$0\leq q\leq r$, since cohomology above $r$ vanishes and negative-indexed
+Ext is not part of the convention used here.
+\end{history}
+Let $k$ be a field, let $r\geq1$, and set
+$X=\mathbf{P}^r_k$. Let $\mathcal{F}$ be a coherent
+$\mathcal{O}_X$-module and let $0\leq q\leq r$. The following are
+equivalent:
+\begin{enumerate}
+\item $H^q(X,\mathcal{F}(-n))=0$ for all sufficiently large $n$,
+\item
+$$
+\Ext^{r-q}_{\mathcal{O}_{X,x}}
+(\mathcal{F}_x,\mathcal{O}_{X,x})=0
+$$
+for every $x\in X$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Put $S=k[T_0,\ldots,T_r]$ with its standard grading and
+$\Omega=S(-r-1)$. By Proposition
+\ref{proposition-coherent-modules-on-proj}, choose a finite graded
+$S$-module $M$ and an isomorphism $\widetilde M\cong\mathcal{F}$.
+Use the notation $B^q(M)$ and $T^q(M)=B^q(M)^\vee$ of More on Algebra,
+Lemma \ref{more-algebra-lemma-graded-local-duality-polynomial-ring}.
+
+On the standard affine covering, Constructions, Lemma
+\ref{constructions-lemma-proj-sheaves} identifies the degree $-n$ part
+of the positive localization complex of $M$ with the alternating
+{\v C}ech complex of $\mathcal{F}(-n)$. Lemma
+\ref{lemma-cech-cohomology-quasi-coherent} therefore gives
+$$
+H^q(X,\mathcal{F}(-n))=B^q(M)_{-n}.
+$$
+By the definition of the graded $k$-dual, condition (1) is equivalent to
+$T^q(M)_n=0$ for all sufficiently large $n$.
+
+Set
+$$
+E=\text{GrExt}^{r-q}_S(M,\Omega).
+$$
+If $q>0$, More on Algebra, Lemma
+\ref{more-algebra-lemma-graded-local-duality-polynomial-ring}
+identifies $E$ with $T^q(M)$. If $q=0$, the five-term sequence in that
+lemma and the equality $M^\vee_n=0$ for $n\gg0$ identify
+$E_n$ with $T^0(M)_n$ for all sufficiently large $n$. Thus condition
+(1) is equivalent to $E_n=0$ for $n\gg0$.
+
+The graded module $E$ is finite by Algebra, Lemma
+\ref{algebra-lemma-graded-ext-properties}. For a finite graded module,
+$E_n=0$ for $n\gg0$ is equivalent to $\widetilde E=0$. Indeed, one
+direction follows from Lemma \ref{lemma-recover-tail-graded-module};
+for the other, high-degree vanishing and finite generation give
+$S_+^aE=0$ for some $a$, so every homogeneous localization defining
+$\widetilde E$ is zero.
+
+It remains to test $\widetilde E$ on stalks. If $x$ corresponds to the
+homogeneous prime $\mathfrak p$, Constructions, Lemma
+\ref{constructions-lemma-proj-internal-hom-ext} gives
+$$
+(\widetilde E)_x
+=
+\Ext^{r-q}_{S_{(\mathfrak p)}}
+\left(M_{(\mathfrak p)},\Omega_{(\mathfrak p)}\right).
+$$
+Here $S_{(\mathfrak p)}=\mathcal{O}_{X,x}$,
+$M_{(\mathfrak p)}=\mathcal{F}_x$, and
+$\widetilde\Omega=\mathcal{O}_X(-r-1)$ is invertible. After choosing a
+local basis of this invertible module, the last display is the Ext module
+in condition (2). Hence $\widetilde E=0$ if and only if condition (2)
+holds at every point.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-negative-twists-projective-dimension}
+\begin{reference}
+\cite[Chapter III, \S 5, no. 74, Theorem 2,
+p. 269]{FAC}
+\end{reference}
+\begin{history}
+The cited theorem combines its preceding local Ext criterion with
+Lemma 1 of no. 74. It calls the length of a finite free resolution the
+dimension of the module; in current terminology this is projective
+dimension. The statement below makes the local ring explicit and uses
+Algebra, Lemma \ref{algebra-lemma-projective-dimension-ext-local-ring}
+to test projective dimension against the ring itself. We state the
+nonvacuous range $0\leq p\leq r$ and retain all scheme points.
+\end{history}
+Let $k$ be a field, let $r\geq1$, and set
+$X=\mathbf{P}^r_k$. Let $\mathcal{F}$ be a coherent
+$\mathcal{O}_X$-module and let $0\leq p\leq r$. The following are
+equivalent:
+\begin{enumerate}
+\item $H^q(X,\mathcal{F}(-n))=0$ for all sufficiently large $n$ and
+every $0\leq q<p$,
+\item for every $x\in X$, the
+$\mathcal{O}_{X,x}$-module $\mathcal{F}_x$ has projective dimension
+at most $r-p$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Every point $x$ lies in a standard affine chart of $X$, whose coordinate
+ring is a polynomial ring in $r$ variables over $k$. Algebra, Proposition
+\ref{algebra-proposition-finite-gl-dim-polynomial-ring} and Lemma
+\ref{algebra-lemma-localize-finite-gl-dim} show that
+$\mathcal{O}_{X,x}$ has global dimension at most $r$. Thus the finite
+module $\mathcal{F}_x$ has finite projective dimension at most $r$.
+
+By Algebra, Lemma
+\ref{algebra-lemma-projective-dimension-ext-local-ring}, condition (2)
+is equivalent to
+$$
+\Ext^i_{\mathcal{O}_{X,x}}
+(\mathcal{F}_x,\mathcal{O}_{X,x})=0
+\quad\text{for }r-p<i\leq r
+$$
+at every point $x$. Writing $i=r-q$, this is exactly the collection of
+local conditions for $0\leq q<p$ in Lemma
+\ref{lemma-negative-twists-local-ext}, and the result follows.
+\end{proof}
+
+
 \section{Coherent sheaves on Proj, II}
 \label{section-coherent-proj-general}
 
