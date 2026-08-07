@@ -2,24 +2,26 @@
 
 - Frozen surface: 661 source targets through printed page 278.
 - Stage: sequential source review and statement-level Stacks integration.
-- Completed checkpoint: Chapter III, Section 5, no. 74, printed pages 199--269.
-- Reviewed decisions: 509 (155 equivalent, 156 stronger, 65 extensions,
-  90 new-statement decisions, 41 historical references, 2 outside scope).
-- Current Stacks references added: 292 across `topology.tex`, `sheaves.tex`,
+- Completed checkpoint: Chapter III, Section 5, no. 75, printed pages 199--270.
+- Reviewed decisions: 518 (159 equivalent, 157 stronger, 66 extensions,
+  93 new-statement decisions, 41 historical references, 2 outside scope).
+- Current Stacks references added: 296 across `topology.tex`, `sheaves.tex`,
   `modules.tex`, `homology.tex`, `coherent.tex`, `cohomology.tex`,
   `divisors.tex`, `constructions.tex`, `schemes.tex`, `morphisms.tex`,
   `derham.tex`, `algebra.tex`, `properties.tex`, `varieties.tex`,
   `simplicial.tex`, `more-algebra.tex`, `dualizing.tex`, `local-cohomology.tex`,
   and `duality.tex`.
-- New Stacks theorem/lemma statements: 27, plus the paracompactness and
+- New Stacks theorem/lemma statements: 28, plus the paracompactness and
   locally-constant-sheaf definitions, the graded-conventions remark, and
   the internal graded Ext and degreewise graded dual definitions;
   each new theorem/lemma has a complete proof and no assigned tag.
-- Source/proof issues or convention boundaries: 814 found by direct
+- Source/proof issues or convention boundaries: 831 found by direct
   authority-page and TeX inspection, all resolved and
   retained in `issues.csv`.
-- Source corrections: 3, including the no. 74 repeated resolution index
-  restored from printed `L_p` to quantified `L_i` as correction `C0040`.
+- Source corrections: 4, including the no. 74 repeated resolution index
+  restored from printed `L_p` to quantified `L_i` as correction `C0040`
+  and the no. 75 conflict between the general and degree-one Koszul signs
+  resolved as correction `C0041`.
 - Existing Stacks defects corrected: 6, comprising the refinement-homotopy
   sign, repeated coefficient sheaves, wrong boundary domain, wrong boundary
   degree, incomplete low-degree citation, and multiplication by a negative
@@ -33,7 +35,7 @@
   completed; every
   affected statement page passed direct 1100 dpi visual inspection. See
   `qa.json`.
-- Historical notes added: 127, preserving the source's operator calculus,
+- Historical notes added: 131, preserving the source's operator calculus,
   image-complex construction, two-covering double complex, and unproved
   cofinal-vanishing question, together with the classical closed-point to
   reduced-scheme bridge, the classical-map to scheme-morphism bridge, and the
@@ -306,6 +308,26 @@
   pages 73--74 and output pages algebra 263--266 and 274--275 and coherent
   38--40 passed direct 1100 dpi-equivalent inspection after two serial
   builds, with an exact hard stop before no. 75 on printed page 269 and no
-  high-detail crop needed.
-- Next unit: `fac:III:5:no:75`.
+  high-detail crop needed; no. 75 now derives increasingly negative-twist
+  vanishing for finite locally free sheaves on closed subschemes locally
+  cut out by a regular sequence of fixed length. One new completely proved
+  untagged lemma retains the regular-local quotient, the exterior-basis
+  Koszul resolution, the pushed-forward stalk, the exact projective-
+  dimension bound, finite pushforward coherence, the projection formula,
+  higher-direct-image vanishing, and the Leray comparison back to the
+  closed subscheme. Tags 00NR and 00NQ supply the regular local quotient and
+  regular sequence; tags 0622, 0623, and 062F supply the Koszul complex and
+  its exactness; tag 0E9J supplies the regular-immersion specialization;
+  tags 01Y6, 01E8, and 01F4 supply coherent finite pushforward, twisting,
+  and cohomology transfer. None replaces the assembled vanishing theorem.
+  Direct authority review finds that the printed general differential sign
+  `(-1)^j` contradicts the immediately following formula
+  `d(e<i>)=f_i` at `q=1`; correction `C0041` uses the standard
+  `(-1)^(j+1)` sign, preserves both printed forms, and records the
+  degreewise chain isomorphism for the uniformly opposite convention.
+  Authority physical pages 74--75 and output pages algebra 255,
+  more-algebra 76, divisors 50, and coherent 39--40 passed direct 1100
+  dpi-equivalent inspection after two serial builds, with an exact hard stop
+  before no. 76 on printed page 270 and no high-detail crop needed.
+- Next unit: `fac:III:5:no:76`.
 - No statement is mapped by lexical similarity alone.
