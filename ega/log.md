@@ -209,3 +209,28 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   inapplicable finite-presentation criterion. A serial 1100-dpi page review
   found no clipping overlap or changed-page layout defect; remaining undefined
   references are the ordinary standalone external-chapter references.
+
+### EGA I 1.6 review A000053--A000055
+
+- Eleven stable source units were checked against direct French F8: the ten
+  numbered units 1.6.1--1.6.10 and displayed formula 1.6.5.1. The cumulative
+  statement map now has 99 edges across 52 source units with 41 residuals.
+- The exact existing core is 00E2 00E3 008H 0096 0098 01AJ 01HV 01I1 01I2
+  01I8 01I9 01SB 02C6 05DQ and 0H7H. These targets distribute the spectrum
+  morphism construction arbitrary localization affine pullback and pushforward
+  adjunction maps tensor identities ideal and quotient base change and
+  functoriality. No reusable mathematical gap or new Stacks lemma was found.
+- EGA 1.6.8 only identifies the canonical internal-Hom base-change map with
+  the sheaf associated to its module counterpart. It does not claim an
+  isomorphism and assumes no flatness. Tag 0C6I was therefore excluded rather
+  than used as an overstrong match.
+- The arbitrary localization of 1.6.2 was kept distinct from the principal
+  localization open-immersion result 01I3: with an infinite multiplicative set
+  its image need not be open. Its induced-sheaf assertion is instead recorded
+  through exact topology local-ring and stalkwise-sheaf components.
+- Direct p.95--96 validation and owner reading found no source correction.
+  The historical phrase `pour chaque fibre` names the stalk maps in context;
+  it is not a geometric-fibre assertion. No TeX chapter changed in this slice,
+  so a Stacks build or visual render would test no substantive delta and was
+  intentionally omitted. The structural validator and remote identity gate
+  remain mandatory before the checkpoint is reported.

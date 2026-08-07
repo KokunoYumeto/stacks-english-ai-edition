@@ -68,6 +68,13 @@ or published here.
   omnibus lemma. This review also repaired one wrong internal reference in the
   proof of 01PI from the finite-presentation criterion to the finite-type
   criterion.
+- Sixth statement-level slice: EGA I 1.6.1--1.6.10 and displayed formula
+  1.6.5.1 now have direct-French dispositions. The cumulative map has 99 edges
+  across 52 source units and 41 explicit residuals. Existing affine-spectrum,
+  associated-sheaf, adjunction, localization, tensor, internal-Hom, and
+  categorical functoriality results cover the whole slice; no new lemma or
+  source correction was needed. The map-identification statement in 1.6.8 is
+  deliberately not promoted to flat base-change isomorphism tag 0C6I.
 
 ## State model
 
@@ -114,7 +121,7 @@ append-only.
   the edition task alone decides and mutates canonical source.
 
 The immediate work is sequential statement-level comparison across EGA 0--IV,
-continuing after EGA I 1.5.4 while EGA II is admitted through printed p.20.
+continuing after EGA I 1.6.10 while EGA II is admitted through printed p.20.
 The complete English discovery surface drives provisional candidates only.
 Mathematical Stacks chapter edits occur only after a bounded unit has direct
 French evidence, a reviewed disposition, explicit residual accounting, and
