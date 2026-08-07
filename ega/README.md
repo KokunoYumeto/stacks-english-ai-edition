@@ -19,7 +19,7 @@ or published here.
   127 files, 7,283,321 bytes, tree SHA-256
   `3BFB1C5103093481246EF4A6365E08544F6D5E19ACC0EA63E717F3F3643F064D`.
 - French authority: production is active; the current interface snapshot has
-  EGA II printed p.19 sealed and printed p.20 as the next cursor.
+  EGA II printed p.20 sealed and printed p.21 as the next cursor.
 - Existing incremental pre-Stacks notes: 399,689 bytes, SHA-256
   `4B4811B6F24F139020E15CF27D7BFA82C3872F0A549DCFF4F64B28F4454737D6`.
   They are evidence to normalize into the new schema, not a completed
@@ -61,6 +61,13 @@ or published here.
   cited local Properties lemma with no official tag. Lemma 1.4.1.1 remains a
   proof-device residual; 01PE covers 1.4.2 more generally; and 01SA--01SB split
   the algebra and module clauses of 1.4.3.
+- Fifth statement-level slice: EGA I 1.5.1--1.5.4 now have direct-French
+  dispositions. The cumulative map has 72 edges across 41 source units and 31
+  explicit residuals. Tags 01XZ and 0GN6 contain the coherent-sheaf results;
+  0EHM 01PE 01PF 01IA and 01PB give the two extension packages without a new
+  omnibus lemma. This review also repaired one wrong internal reference in the
+  proof of 01PI from the finite-presentation criterion to the finite-type
+  criterion.
 
 ## State model
 
@@ -107,7 +114,7 @@ append-only.
   the edition task alone decides and mutates canonical source.
 
 The immediate work is sequential statement-level comparison across EGA 0--IV,
-continuing after EGA I 1.4.3 while EGA II is admitted through printed p.20.
+continuing after EGA I 1.5.4 while EGA II is admitted through printed p.20.
 The complete English discovery surface drives provisional candidates only.
 Mathematical Stacks chapter edits occur only after a bounded unit has direct
 French evidence, a reviewed disposition, explicit residual accounting, and

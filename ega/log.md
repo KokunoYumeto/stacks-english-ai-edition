@@ -176,3 +176,36 @@ visual fidelity, publication, or ownership. The owner verifies every result.
 - Every completed Spark task was consumed before archival. The live French
   interface now records F19 and the E2P20 gate; the immutable F8 receipt remains
   the authority for all EGA I statement edges in this slice.
+
+### EGA I 1.5 review A000049--A000052
+
+- Four bounded numbered units were checked against direct French F8 and the
+  pinned Stacks base. The cumulative statement map now has 72 edges across 41
+  source units with 31 explicit residuals.
+- Theorem 1.5.1 is fully covered but not by one tag. Tag 01XZ gives coherent if
+  and only if finite type plus quasi-coherent; 0EHM 01PF 01IA and 01PB give the
+  finite ambient A-module clause. The split packaging remains explicit instead
+  of adding a redundant omnibus lemma.
+- Corollary 1.5.2 is an affine special case of the explicit structure-sheaf
+  conclusion in 01XZ. Corollary 1.5.3 is exactly derived from 01PE 01PF and
+  01XZ; 0FD0 is excluded because it extends a morphism between sheaves already
+  present on X. Corollary 1.5.4 is exactly tag 0GN6.
+- The review exposed a genuine upstream cross-reference error in the proof of
+  01PI. After the proof has established only finite type it cited 01PC to infer
+  a finitely generated affine module. Pinned base and current upstream HEAD are
+  identical at this locus. The branch now cites the exact finite-type criterion
+  01PB; no surrounding wording changed.
+- One nested source extractor claimed that printed p.93 duplicated corollary
+  number 1.5.3. The owner rendered the exact NUMDAM page once at 1100 dpi and
+  visibly confirmed the sequence 1.5.2 1.5.3 1.5.4; the sealed R16 receipt says
+  the same. The extraction was retained and the numbering claim was rejected;
+  no correction referral was created.
+- The bundled `pdftoppm` wrapper failed before producing an authority image as
+  it had in the predecessor workflow. One serial MiKTeX `pdftocairo` render of
+  the same page succeeded. This was a read-only check and changed no edition
+  file.
+- Two serial `properties.tex` PDF passes exited zero. On rendered output page
+  29 the repaired proof now links visibly to Lemma 17.1 rather than the
+  inapplicable finite-presentation criterion. A serial 1100-dpi page review
+  found no clipping overlap or changed-page layout defect; remaining undefined
+  references are the ordinary standalone external-chapter references.
