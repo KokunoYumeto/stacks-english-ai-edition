@@ -2,10 +2,10 @@
 
 - Frozen surface: 661 source targets through printed page 278.
 - Stage: sequential source review and statement-level Stacks integration.
-- Completed checkpoint: Chapter III, Section 2, no. 59, printed pages 199--252.
-- Reviewed decisions: 313 (87 equivalent, 129 stronger, 44 extensions,
-  20 new-statement decisions, 31 historical references, 2 outside scope).
-- Current Stacks references added: 219 across `topology.tex`, `sheaves.tex`,
+- Completed checkpoint: Chapter III, Section 2, no. 60, printed pages 199--253.
+- Reviewed decisions: 321 (91 equivalent, 131 stronger, 45 extensions,
+  20 new-statement decisions, 32 historical references, 2 outside scope).
+- Current Stacks references added: 226 across `topology.tex`, `sheaves.tex`,
   `modules.tex`, `homology.tex`, `coherent.tex`, `cohomology.tex`,
   `divisors.tex`, `constructions.tex`, `schemes.tex`, `morphisms.tex`,
   `derham.tex`, `algebra.tex`, `properties.tex`, `varieties.tex`, and
@@ -13,7 +13,7 @@
 - New Stacks theorem/lemma statements: 14, plus the paracompactness and
   locally-constant-sheaf definitions and the graded-conventions remark;
   each new theorem/lemma has a complete proof and no assigned tag.
-- Source/proof issues or convention boundaries: 415 found by direct
+- Source/proof issues or convention boundaries: 443 found by direct
   authority-page and TeX inspection, all resolved and
   retained in `issues.csv`.
 - Existing Stacks defects corrected: 6, comprising the refinement-homotopy
@@ -28,7 +28,7 @@
   completed; every
   affected statement page passed direct 1100 dpi visual inspection. See
   `qa.json`.
-- Historical notes added: 64, preserving the source's operator calculus,
+- Historical notes added: 65, preserving the source's operator calculus,
   image-complex construction, two-covering double complex, and unproved
   cofinal-vanishing question, together with the classical closed-point to
   reduced-scheme bridge, the classical-map to scheme-morphism bridge, and the
@@ -109,6 +109,12 @@
   counterparts, while the new complete standard-open proof records both
   triangle identities without promoting them to an unjustified adjunction.
   The source's no. 65 sentence remains a forecast rather than a proof at this
-  cursor.
-- Next unit: `fac:III:2:no:60` (the case of coherent algebraic sheaves).
+  cursor; no. 60 now records high-tail finiteness and recovery for finite
+  sums of twists, the projective zero-space exception to whole-module finite
+  generation, and the historical essential-surjectivity proof by a graded
+  cokernel presentation. It keeps that chosen representative distinct from
+  the later direct twisted-section comparison, and it records correction
+  `FAC-FR-C0035` only after direct 5000 dpi-equivalent inspection confirmed
+  the two type-inconsistent upper-row roman-L glyphs.
+- Next unit: `fac:III:3:no:61` (the complexes $C_k(M)$ and $C(M)$).
 - No statement is mapped by lexical similarity alone.
