@@ -2557,6 +2557,7 @@ Lemma \ref{lemma-coherent-Noetherian}
 \label{lemma-i-star-equivalence}
 \begin{reference}
 \cite[Chapter II, \S 2, no. 39, Proposition 3, p. 232]{FAC}
+\cite[Chapter III, \S 3, no. 66, opening paragraph, p. 259]{FAC}
 \end{reference}
 \begin{history}
 In the classical setting of a closed subvariety $W \subset V$,
@@ -2566,6 +2567,13 @@ $i_*\mathcal{O}_W$ with $\mathcal{O}_V/\mathcal{J}(W)$ and characterizes
 the coherent sheaves obtained in this way by annihilation by
 $\mathcal{J}(W)$. The formulation below retains the scheme structure and
 allows an arbitrary closed immersion of locally Noetherian schemes.
+
+No. 66 applies this construction to a closed projective subvariety
+$i:V\to\mathbf{P}_r(K)$, writes $\mathcal{F}^X$ for $i_*\mathcal{F}$,
+and uses equality of cohomology on $V$ and $X$. In scheme language the
+coherence assertion is the equivalence below, while the cohomology equality
+comes from the affineness of a closed immersion and relative affine
+cohomology.
 \end{history}
 Let $i : Z \to X$ be a closed immersion of locally Noetherian schemes.
 Let $\mathcal{I} \subset \mathcal{O}_X$ be the quasi-coherent sheaf of ideals
@@ -4600,6 +4608,19 @@ and then we deduce some results for projective morphisms.
 
 \begin{lemma}
 \label{lemma-coherent-proper-ample}
+\begin{reference}
+\cite[Chapter III, \S 3, no. 66, Theorems 1 and 2,
+pp. 259--260]{FAC}
+\end{reference}
+\begin{history}
+For a closed projective variety over a field with its hyperplane bundle, the
+cited source proves finite-dimensional coherent cohomology and eventual
+vanishing after positive twists. The lemma below gives the corresponding
+finite-module and vanishing statements over an arbitrary Noetherian base for
+every proper scheme equipped with an ample invertible sheaf. The source's
+eventual global-generation assertion is the ample-sheaf characterization in
+Properties, Proposition \ref{properties-proposition-characterize-ample}.
+\end{history}
 Let $R$ be a Noetherian ring. Let $X \to \Spec(R)$ be a proper morphism.
 Let $\mathcal{L}$ be an ample invertible sheaf on $X$. Let $\mathcal{F}$
 be a coherent $\mathcal{O}_X$-module.
@@ -5498,6 +5519,19 @@ coherent as desired.
 
 \begin{lemma}
 \label{lemma-proper-over-affine-cohomology-finite}
+\begin{reference}
+\cite[Chapter III, \S 3, no. 66, Theorem 1 and following conjecture,
+p. 259]{FAC}
+\end{reference}
+\begin{history}
+The cited theorem proves finite-dimensional coherent cohomology for a
+projective variety over a field and conjectures the same conclusion for every
+complete variety in Weil's sense. The lemma below supplies the modern proper
+scheme form over an arbitrary Noetherian affine base, without requiring a
+chosen projective embedding. Vanishing above dimension is supplied separately
+by Cohomology, Proposition
+\ref{cohomology-proposition-vanishing-Noetherian}.
+\end{history}
 Let $S = \Spec(A)$ with $A$ a Noetherian ring.
 Let $f : X \to S$ be a proper morphism.
 Let $\mathcal{F}$ be a coherent $\mathcal{O}_X$-module.

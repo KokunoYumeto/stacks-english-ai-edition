@@ -2,10 +2,10 @@
 
 - Frozen surface: 661 source targets through printed page 278.
 - Stage: sequential source review and statement-level Stacks integration.
-- Completed checkpoint: Chapter III, Section 3, no. 65, printed pages 199--259.
-- Reviewed decisions: 381 (121 equivalent, 150 stronger, 52 extensions,
-  20 new-statement decisions, 36 historical references, 2 outside scope).
-- Current Stacks references added: 241 across `topology.tex`, `sheaves.tex`,
+- Completed checkpoint: Chapter III, Section 3, no. 66, printed pages 199--260.
+- Reviewed decisions: 392 (124 equivalent, 155 stronger, 53 extensions,
+  20 new-statement decisions, 38 historical references, 2 outside scope).
+- Current Stacks references added: 248 across `topology.tex`, `sheaves.tex`,
   `modules.tex`, `homology.tex`, `coherent.tex`, `cohomology.tex`,
   `divisors.tex`, `constructions.tex`, `schemes.tex`, `morphisms.tex`,
   `derham.tex`, `algebra.tex`, `properties.tex`, `varieties.tex`,
@@ -13,7 +13,7 @@
 - New Stacks theorem/lemma statements: 14, plus the paracompactness and
   locally-constant-sheaf definitions and the graded-conventions remark;
   each new theorem/lemma has a complete proof and no assigned tag.
-- Source/proof issues or convention boundaries: 592 found by direct
+- Source/proof issues or convention boundaries: 622 found by direct
   authority-page and TeX inspection, all resolved and
   retained in `issues.csv`.
 - Existing Stacks defects corrected: 6, comprising the refinement-homotopy
@@ -29,7 +29,7 @@
   completed; every
   affected statement page passed direct 1100 dpi visual inspection. See
   `qa.json`.
-- Historical notes added: 80, preserving the source's operator calculus,
+- Historical notes added: 87, preserving the source's operator calculus,
   image-complex construction, two-covering double complex, and unproved
   cofinal-vanishing question, together with the classical closed-point to
   reduced-scheme bridge, the classical-map to scheme-morphism bridge, and the
@@ -169,6 +169,16 @@
   propagated rather than lost. Authority physical pages 63--64 and output
   pages coherent 16, 34, 37, and 38 and constructions 20 passed direct
   1100 dpi inspection after two serial builds, with no high-detail crop
-  needed.
-- Next unit: `fac:III:3:no:66`.
+  needed; no. 66 now routes closed-subvariety extension by zero, proper
+  coherent cohomology, the Noetherian dimension bound, eventual global
+  generation and vanishing, projective twists, and very ample line bundles
+  to tags 087T, 089W, 02O6, 02UZ, 01Q3, 0B5T, 01MN, and 01VM. It preserves
+  the printed conjectural status of the extension from projective to complete
+  varieties and the principal-bundle construction as historical lineage,
+  without inventing a direct tag for either presentation. Authority physical
+  pages 64--65 and output pages coherent 24, 42, and 50, cohomology 39,
+  properties 44, constructions 17, and morphisms 86 passed direct 1100 dpi
+  inspection after two serial builds, with an exact hard stop before no. 67
+  on printed page 260 and no high-detail crop needed.
+- Next unit: `fac:III:3:no:67`.
 - No statement is mapped by lexical similarity alone.
