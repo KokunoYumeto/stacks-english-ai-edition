@@ -2,10 +2,10 @@
 
 - Frozen surface: 661 source targets through printed page 278.
 - Stage: sequential source review and statement-level Stacks integration.
-- Completed checkpoint: Chapter III, Section 3, no. 64, printed pages 199--258.
-- Reviewed decisions: 373 (119 equivalent, 145 stronger, 51 extensions,
+- Completed checkpoint: Chapter III, Section 3, no. 65, printed pages 199--259.
+- Reviewed decisions: 381 (121 equivalent, 150 stronger, 52 extensions,
   20 new-statement decisions, 36 historical references, 2 outside scope).
-- Current Stacks references added: 236 across `topology.tex`, `sheaves.tex`,
+- Current Stacks references added: 241 across `topology.tex`, `sheaves.tex`,
   `modules.tex`, `homology.tex`, `coherent.tex`, `cohomology.tex`,
   `divisors.tex`, `constructions.tex`, `schemes.tex`, `morphisms.tex`,
   `derham.tex`, `algebra.tex`, `properties.tex`, `varieties.tex`,
@@ -13,7 +13,7 @@
 - New Stacks theorem/lemma statements: 14, plus the paracompactness and
   locally-constant-sheaf definitions and the graded-conventions remark;
   each new theorem/lemma has a complete proof and no assigned tag.
-- Source/proof issues or convention boundaries: 562 found by direct
+- Source/proof issues or convention boundaries: 592 found by direct
   authority-page and TeX inspection, all resolved and
   retained in `issues.csv`.
 - Existing Stacks defects corrected: 6, comprising the refinement-homotopy
@@ -29,7 +29,7 @@
   completed; every
   affected statement page passed direct 1100 dpi visual inspection. See
   `qa.json`.
-- Historical notes added: 75, preserving the source's operator calculus,
+- Historical notes added: 80, preserving the source's operator calculus,
   image-complex construction, two-covering double complex, and unproved
   cofinal-vanishing question, together with the classical closed-point to
   reduced-scheme bridge, the classical-map to scheme-morphism bridge, and the
@@ -158,6 +158,17 @@
   new theorem or tag was created. Transcription repair `T0036` remains separate
   from source correction. Authority physical pages 62--63 and output pages
   coherent 3, constructions 12, and more-algebra 74 passed direct 1100 dpi
-  inspection after two serial builds, with no high-detail crop needed.
-- Next unit: `fac:III:3:no:65`.
+  inspection after two serial builds, with no high-detail crop needed; no. 65
+  now completes the promised projective module--sheaf comparison through the
+  eventual unit, the sheaf counit, and their exact triangle identity. Tags
+  0AG7 and 0BXD supply the modern eventual-recovery and quotient-equivalence
+  forms, while tag 01YS gives the stronger Noetherian-base finiteness and
+  Serre-vanishing result. Proposition 8 and both displayed basis formulas map
+  to tag 01XT, including the reciprocal-monomial generator in twist
+  `-r-1`; the projective-zero-space exception discovered at no. 62 is
+  propagated rather than lost. Authority physical pages 63--64 and output
+  pages coherent 16, 34, 37, and 38 and constructions 20 passed direct
+  1100 dpi inspection after two serial builds, with no high-detail crop
+  needed.
+- Next unit: `fac:III:3:no:66`.
 - No statement is mapped by lexical similarity alone.
