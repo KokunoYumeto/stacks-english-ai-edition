@@ -7591,6 +7591,208 @@ kernels proves that $\nu_M$ is an isomorphism as well.
 \end{proof}
 
 \begin{lemma}
+\label{lemma-graded-local-duality-polynomial-ring}
+\begin{reference}
+\cite[Chapter III, \S 4, no. 72, Theorem 1 and Corollaries,
+pp. 265--267]{FAC}
+\end{reference}
+\begin{history}
+The cited theorem identifies the graded duals of the positive
+Koszul--{\v C}ech cohomology modules with internal graded Ext into
+$\Omega=S(-r-1)$. Its printed direct-isomorphism clause excludes only
+$q=r$, although the definition immediately following it treats both
+$q=r$ and $q=r+1$ separately and the displayed five-term sequence
+identifies the latter exceptional cokernel with
+$\text{GrExt}^{r+1}_S(M,\Omega)$. The formulation below removes that
+ambiguity: the direct formula is stated for $0\leq q<r$, the two
+exceptional degrees are stated by the five-term sequence, and degrees
+above $r+1$ are stated separately as zero.
+
+The source constructs the two exceptional connecting maps from a
+commutative diagram involving $T^1$, $T^0$, and the graded dual. Here the
+same diagram is retained, while the maps and their naturality are obtained
+simultaneously by reversing and dualizing the augmented {\v C}ech complex.
+This realizes the source's functors $E^q$ as the cohomology of one
+functorial complex and makes the kernel--cokernel splice intrinsic.
+
+For modules satisfying the source's condition (TF), one may replace the
+module by a finite graded representative without changing the positive
+{\v C}ech cohomology. The final assertions below give the resulting
+degree-zero perfect pairing, finiteness of $T^q$ for $q\geq1$, and the
+finite high-degree tail of $T^0$ for a finite representative. The general
+proper-scheme duality theorem is stronger, but it does not replace this
+graded-module statement or its internal-degree information.
+\end{history}
+Let $K$ be a field, let $r\geq1$, and let
+$S=K[t_0,\ldots,t_r]$ with the standard grading. Put
+$\Omega=S(-r-1)$. For a graded $S$-module $M$, use the notation
+$C^\bullet_+(M)$ and $B^q(M)$ of
+Lemma \ref{lemma-top-graded-duality-polynomial-ring}, put
+$T^q(M)=B^q(M)^\vee$, and let $a_M:M\to C^0_+(M)$ be the
+sum of the localization maps. Its image consists of cocycles; denote the
+induced map by
+$$
+\alpha_M:M\longrightarrow B^0(M)
+$$
+and consider the augmented complex
+$$
+A^\bullet(M)=
+\left(M\xrightarrow{a_M}
+C^0_+(M)\longrightarrow\cdots\longrightarrow C^r_+(M)\right),
+$$
+where $M$ is placed in degree $-1$. Define a complex $D^\bullet(M)$ by
+$$
+D^q(M)=A^{r-q}(M)^\vee\quad(0\leq q\leq r+1),
+\qquad D^q(M)=0\quad\text{otherwise},
+$$
+with differentials obtained by dualizing those of $A^\bullet(M)$ and
+reversing their direction. Then the following statements hold.
+\begin{enumerate}
+\item A short exact sequence $0\to M\to N\to P\to0$ gives a short exact
+sequence of complexes
+$$
+0\longrightarrow D^\bullet(P)\longrightarrow D^\bullet(N)
+\longrightarrow D^\bullet(M)\longrightarrow0
+$$
+and hence a functorial exact sequence
+$$
+\begin{matrix}
+\ldots\longrightarrow H^q(D^\bullet(P))\longrightarrow
+H^q(D^\bullet(N))\longrightarrow H^q(D^\bullet(M))\\
+\phantom{\ldots}\longrightarrow H^{q+1}(D^\bullet(P))
+\longrightarrow\ldots.
+\end{matrix}
+$$
+\item There are functorial isomorphisms of graded $S$-modules
+$$
+H^q(D^\bullet(M))\cong\text{GrExt}^q_S(M,\Omega),
+\qquad q\geq0,
+$$
+compatible with the exact sequences in (1) and the internal grading.
+\item More explicitly, there are functorial isomorphisms
+$$
+\text{GrExt}^q_S(M,\Omega)\cong T^{r-q}(M),
+\qquad 0\leq q<r,
+$$
+a functorial exact sequence
+$$
+0\longrightarrow\text{GrExt}^r_S(M,\Omega)
+\longrightarrow T^0(M)\xrightarrow{\alpha_M^\vee}M^\vee
+\longrightarrow\text{GrExt}^{r+1}_S(M,\Omega)
+\longrightarrow0,
+$$
+and $\text{GrExt}^q_S(M,\Omega)=0$ for $q>r+1$.
+\item If $M$ is a finite graded $S$-module, then for $1\leq p\leq r$
+there are functorial perfect pairings of finite dimensional vector spaces
+$$
+B^p(M)_0\times
+\text{GrExt}^{r-p}_S(M,\Omega)_0\longrightarrow K.
+$$
+Moreover, $T^p(M)$ is a finite graded $S$-module for every $p\geq1$,
+and $T^0(M)_{\geq n}$ is a finite graded $S$-module for all sufficiently
+large $n$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Localization is exact, so a short exact sequence of graded modules gives a
+termwise short exact sequence of the augmented complexes $A^\bullet$.
+The graded $K$-dual is exact by Algebra, Lemma
+\ref{algebra-lemma-graded-K-dual}; dualizing and reversing therefore gives
+the short exact sequence in (1). Its cohomology long exact sequence proves
+the rest of (1).
+
+Exactness of the graded dual also gives
+$$
+H^q(D^\bullet(M))=B^{r-q}(M)^\vee=T^{r-q}(M)
+\quad\text{for }0\leq q<r.
+$$
+At the two remaining terms, the differential
+$C^0_+(M)^\vee\to M^\vee$ descends to
+$\alpha_M^\vee:T^0(M)\to M^\vee$, and hence
+\begin{align*}
+H^r(D^\bullet(M))&=\Ker(\alpha_M^\vee),\\
+H^{r+1}(D^\bullet(M))&=\Coker(\alpha_M^\vee).
+\end{align*}
+For a short exact sequence $0\to M\to N\to P\to0$, the two connecting
+maps at this splice are the cohomology boundary maps arising from the
+following commutative diagram with exact rows:
+$$
+\xymatrix{
+T^1(M)\ar[r] &
+T^0(P)\ar[r]\ar[d]_{\alpha_P^\vee} &
+T^0(N)\ar[r]\ar[d]_{\alpha_N^\vee} &
+T^0(M)\ar[r]\ar[d]_{\alpha_M^\vee} & 0\\
+0\ar[r] & P^\vee\ar[r] & N^\vee\ar[r] & M^\vee\ar[r] & 0.
+}
+$$
+Thus the reversed-complex construction is exactly the intrinsic
+kernel--cokernel construction represented by this diagram.
+
+We next prove (2). Regard the two families
+$$
+M\longmapsto H^q(D^\bullet(M))
+\quad\text{and}\quad
+M\longmapsto\text{GrExt}^q_S(M,\Omega)
+$$
+as covariant cohomological delta functors on the opposite of the abelian
+category of graded $S$-modules and degree-zero maps. The first is a delta
+functor by (1), and the second is one by Algebra, Lemma
+\ref{algebra-lemma-graded-ext-properties}.
+
+If $L=S(m)$, then $A^\bullet(L)$ is a shift of the extended alternating
+{\v C}ech complex for the regular sequence
+$t_0,\ldots,t_r$. More on Algebra, Lemmas
+\ref{lemma-regular-koszul-regular} and
+\ref{lemma-extended-alternating-Cech-is-colimit-koszul}, together with
+exactness of filtered colimits, show that this complex has cohomology only
+in its top degree. The same holds for an arbitrary direct sum of twists,
+because localization and cohomology commute with direct sums. Consequently
+$$
+H^q(D^\bullet(L))=0\quad\text{for }q>0
+$$
+whenever $L$ is graded free. Internal graded Ext in positive degree also
+vanishes on such $L$.
+
+Every graded module is a quotient of a graded free module by Algebra,
+Lemma \ref{algebra-lemma-graded-free-resolutions}. In the opposite
+category this is an embedding into an object on which every positive
+member of either delta functor vanishes. Both delta functors are therefore
+effaceable and hence universal by Homology, Lemma
+\ref{homology-lemma-efface-implies-universal}. Finally, Lemma
+\ref{lemma-top-graded-duality-polynomial-ring} identifies their degree-zero
+members by the functorial isomorphism
+$$
+\text{GrExt}^0_S(M,\Omega)=\text{GrHom}(M,\Omega)
+\xrightarrow{\ \nu_M\ }B^r(M)^\vee=H^0(D^\bullet(M)).
+$$
+The uniqueness of a universal delta functor, Homology, Lemma
+\ref{homology-lemma-uniqueness-universal-delta-functor}, extends this map
+uniquely to the isomorphisms in (2).
+
+Part (3) follows from (2), the explicit cohomology calculation preceding
+it, and the fact that $D^q(M)=0$ for $q>r+1$.
+
+Suppose now that $M$ is finite. For $p\geq1$, the degree-zero part
+$B^p(M)_0$ is the cohomology of the associated coherent sheaf on
+$\mathbf P^r_K$, computed on the standard affine covering. It is finite
+dimensional by Cohomology of Schemes, Lemmas
+\ref{coherent-lemma-cech-cohomology-quasi-coherent} and
+\ref{coherent-lemma-coherent-projective}. Taking the degree-zero part of
+the isomorphism
+$T^p(M)\cong\text{GrExt}^{r-p}_S(M,\Omega)$ and using biduality gives the
+perfect pairing in (4). Algebra, Lemma
+\ref{algebra-lemma-graded-ext-properties} shows that the module on the
+right is finite; this proves that $T^p(M)$ is finite for
+$1\leq p\leq r$, while $T^p(M)=0$ for $p>r$ by the length of
+$C^\bullet_+(M)$. Finally, $M^\vee_n=0$ for $n\gg0$, because a finite
+graded module over the nonnegatively graded ring $S$ is bounded below.
+The exact sequence in (3) then identifies
+$T^0(M)_n$ with $\text{GrExt}^r_S(M,\Omega)_n$ for $n\gg0$, proving the
+last assertion.
+\end{proof}
+
+\begin{lemma}
 \label{lemma-koszul-regular-H1-regular}
 A $M$-Koszul-regular sequence is $M$-$H_1$-regular.
 A Koszul-regular sequence is $H_1$-regular.

@@ -2,20 +2,20 @@
 
 - Frozen surface: 661 source targets through printed page 278.
 - Stage: sequential source review and statement-level Stacks integration.
-- Completed checkpoint: Chapter III, Section 4, no. 71, printed pages 199--265.
-- Reviewed decisions: 462 (142 equivalent, 156 stronger, 62 extensions,
-  59 new-statement decisions, 41 historical references, 2 outside scope).
-- Current Stacks references added: 277 across `topology.tex`, `sheaves.tex`,
+- Completed checkpoint: Chapter III, Section 4, no. 72, printed pages 199--267.
+- Reviewed decisions: 479 (145 equivalent, 156 stronger, 64 extensions,
+  71 new-statement decisions, 41 historical references, 2 outside scope).
+- Current Stacks references added: 283 across `topology.tex`, `sheaves.tex`,
   `modules.tex`, `homology.tex`, `coherent.tex`, `cohomology.tex`,
   `divisors.tex`, `constructions.tex`, `schemes.tex`, `morphisms.tex`,
   `derham.tex`, `algebra.tex`, `properties.tex`, `varieties.tex`,
   `simplicial.tex`, `more-algebra.tex`, `dualizing.tex`, `local-cohomology.tex`,
   and `duality.tex`.
-- New Stacks theorem/lemma statements: 21, plus the paracompactness and
+- New Stacks theorem/lemma statements: 22, plus the paracompactness and
   locally-constant-sheaf definitions, the graded-conventions remark, and
   the internal graded Ext and degreewise graded dual definitions;
   each new theorem/lemma has a complete proof and no assigned tag.
-- Source/proof issues or convention boundaries: 753 found by direct
+- Source/proof issues or convention boundaries: 776 found by direct
   authority-page and TeX inspection, all resolved and
   retained in `issues.csv`.
 - Existing Stacks defects corrected: 6, comprising the refinement-homotopy
@@ -31,7 +31,7 @@
   completed; every
   affected statement page passed direct 1100 dpi visual inspection. See
   `qa.json`.
-- Historical notes added: 113, preserving the source's operator calculus,
+- Historical notes added: 119, preserving the source's operator calculus,
   image-complex construction, two-covering double complex, and unproved
   cofinal-vanishing question, together with the classical closed-point to
   reduced-scheme bridge, the classical-map to scheme-morphism bridge, and the
@@ -252,6 +252,25 @@
   no new authorial defect. Authority physical pages 69--70 and output pages
   more-algebra 76--78, coherent 16--17, and duality 35 passed direct 1100
   dpi-equivalent inspection after two direct serial builds, with an exact hard
-  stop before no. 72 on printed page 265 and no high-detail crop needed.
-- Next unit: `fac:III:4:no:72`.
+  stop before no. 72 on printed page 265 and no high-detail crop needed;
+  no. 72 now realizes the source's piecewise functors `E^q` as the
+  cohomology of the reversed graded dual augmented Cech complex and proves
+  their functorial identification with internal graded Ext for every graded
+  module. The single new completely proved lemma retains the exact
+  five-term sequence, both exceptional connecting maps, and the native
+  `T^1`/`T^0` comparison diagram. It proves free acyclicity for arbitrary
+  direct sums, applies tags 010T and 010U on the opposite graded-module
+  category, and records the finite degree-zero perfect pairing and the exact
+  finite-tail conclusion for `T^0`. The printed theorem omits the exceptional
+  degree `r+1`; direct authority review and the immediately following
+  definition force its restoration, now recorded as source correction
+  `C0039` rather than a silent normalization. Tag 01YS supplies projective
+  cohomology finiteness and tag 0FVX remains only the stronger proper-scheme
+  comparison. No official tag is assigned to the new theorem. Transcription
+  entry `T0043` remains separate. Authority physical pages 70--72 and output
+  pages algebra 130, homology 29, coherent 34, duality 70, and more-algebra
+  78--80 passed direct 1100 dpi-equivalent inspection after two serial direct
+  builds, with an exact hard stop before Section 5 and no. 73 on printed page
+  267 and no high-detail crop needed.
+- Next unit: `fac:III:5:no:73`.
 - No statement is mapped by lexical similarity alone.
