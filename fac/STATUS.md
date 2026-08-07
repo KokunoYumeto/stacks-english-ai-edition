@@ -2,10 +2,10 @@
 
 - Frozen surface: 661 source targets through printed page 278.
 - Stage: sequential source review and statement-level Stacks integration.
-- Completed checkpoint: Chapter III, Section 2, no. 57, printed pages 199--250.
-- Reviewed decisions: 286 (74 equivalent, 121 stronger, 41 extensions,
+- Completed checkpoint: Chapter III, Section 2, no. 58, printed pages 199--251.
+- Reviewed decisions: 300 (82 equivalent, 126 stronger, 42 extensions,
   18 new-statement decisions, 30 historical references, 2 outside scope).
-- Current Stacks references added: 194 across `topology.tex`, `sheaves.tex`,
+- Current Stacks references added: 207 across `topology.tex`, `sheaves.tex`,
   `modules.tex`, `homology.tex`, `coherent.tex`, `cohomology.tex`,
   `divisors.tex`, `constructions.tex`, `schemes.tex`, `morphisms.tex`,
   `derham.tex`, `algebra.tex`, `properties.tex`, `varieties.tex`, and
@@ -13,11 +13,13 @@
 - New Stacks theorem/lemma statements: 13, plus the paracompactness and
   locally-constant-sheaf definitions and the graded-conventions remark;
   each new theorem/lemma has a complete proof and no assigned tag.
-- Source/proof issues or convention boundaries: 345 found by direct authority-page and TeX inspection, all resolved and
+- Source/proof issues or convention boundaries: 380 found by direct
+  authority-page and TeX inspection, all resolved and
   retained in `issues.csv`.
-- Existing Stacks defects corrected: 5, comprising the refinement-homotopy
+- Existing Stacks defects corrected: 6, comprising the refinement-homotopy
   sign, repeated coefficient sheaves, wrong boundary domain, wrong boundary
-  degree, and incomplete low-degree citation.
+  degree, incomplete low-degree citation, and multiplication by a negative
+  power before localization in the Proj shift proof.
 - Validation: `intake.json`, `check.json`, and `mcheck.json` all PASS.
 - Builds: `topology.pdf`, `sheaves.pdf`, `modules.pdf`, `homology.pdf`,
   `coherent.pdf`, `cohomology.pdf`, `divisors.pdf`, `constructions.pdf`,
@@ -26,7 +28,7 @@
   completed; every
   affected statement page passed direct 1100 dpi visual inspection. See
   `qa.json`.
-- Historical notes added: 58, preserving the source's operator calculus,
+- Historical notes added: 60, preserving the source's operator calculus,
   image-complex construction, two-covering double complex, and unproved
   cofinal-vanishing question, together with the classical closed-point to
   reduced-scheme bridge, the classical-map to scheme-morphism bridge, and the
@@ -96,6 +98,12 @@
   functoriality formulas with the standard-open Proj construction, records
   the printed singleton typo, and corrects the false claim that the raw
   single-denominator assignment on every open is already a sheaf by using
-  the existing global-sections counterexample and the proved basis extension.
-- Next unit: `fac:III:2:no:58` (first properties of the associated-sheaf functor).
+  the existing global-sections counterexample and the proved basis extension;
+  no. 58 now records exactness by stalkwise localization, the all-integer
+  shift comparison, the high-degree-tail criterion, and the Serre-quotient
+  interpretation of relative injectivity and surjectivity. It also corrects
+  the printed negative-shift formula by moving negative powers into the
+  localization and closes the matching pre-localization defect in the existing
+  Stacks proof.
+- Next unit: `fac:III:2:no:59` (graded module associated to an algebraic sheaf).
 - No statement is mapped by lexical similarity alone.

@@ -1223,6 +1223,7 @@ We summarize the results obtained so far.
 \cite[Chapter III, \S 2, no. 54, Proposition 1,
 pp. 246--247]{FAC}
 \cite[Chapter III, \S 2, no. 57, pp. 249--250]{FAC}
+\cite[Chapter III, \S 2, no. 58, Proposition 3, p. 250]{FAC}
 \end{reference}
 \begin{history}
 For the polynomial ring and $M = S(n)$, the cited source describes the same
@@ -1238,7 +1239,9 @@ homogeneous annihilator required by localization, the module operations and
 restriction maps, the closed-point stalk formula, and the additive covariant
 functor. Items (1)--(5) below recover these formulas on standard opens and at
 all homogeneous primes. The exactness assertion is proved independently
-below and belongs to the subsequent Proposition 3 of no. 58.
+below. Proposition 3 of no. 58 proves its classical case by clearing one
+more homogeneous denominator in a stalk; the proof below uses the same
+localization exactness at every homogeneous prime.
 \end{history}
 Let $S$ be a graded ring. Let $M$ be a graded $S$-module.
 Let $\widetilde M$ be the sheaf of $\mathcal{O}_{\text{Proj}(S)}$-modules
@@ -1875,6 +1878,17 @@ definitions.
 
 \begin{lemma}
 \label{lemma-when-invertible}
+\begin{reference}
+\cite[Chapter III, \S 2, no. 58, Proposition 4, p. 250]{FAC}
+\end{reference}
+\begin{history}
+For the degree-one standard chart $D_{+}(t_i)$, the cited source trivializes
+the shifted-module sheaf by the localized fraction $m/(t_i^nQ)$. When
+$n < 0$ this notation must be interpreted after $t_i$ has been inverted
+(equivalently as $t_i^{-n}m/Q$), since $t_i^nQ$ is then not a polynomial.
+The proof below makes this valid for every integer $n$ and every positive
+degree homogeneous $f$ by performing multiplication by $f^n$ in $S_f$.
+\end{history}
 Let $S$ be a graded ring. Set $X = \text{Proj}(S)$.
 Let $f \in S$ be homogeneous of degree $d > 0$.
 The sheaves $\mathcal{O}_X(nd)|_{D_{+}(f)}$ are invertible,
@@ -1909,8 +1923,9 @@ are isomorphisms for all $n, m \in \mathbf{Z}$.
 \end{lemma}
 
 \begin{proof}
-The graded $S$-module maps $S \to S(nd)$, and $M \to M(nd)$, given by
-$x \mapsto f^n x$ become isomorphisms after inverting $f$. The first shows that
+After inverting $f$, multiplication by $f^n$ defines isomorphisms of
+graded modules $S_f \to S(nd)_f$ and $M_f \to M(nd)_f$ for every
+$n \in \mathbf{Z}$. The first shows that
 $S_{(f)} \cong S(nd)_{(f)}$ which gives an isomorphism
 $\mathcal{O}_{D_{+}(f)} \cong \mathcal{O}_X(nd)|_{D_{+}(f)}$.
 The second shows that the map
@@ -1924,6 +1939,8 @@ is a consequence of the case of the map (\ref{equation-multiply}).
 \begin{reference}
 \cite[Chapter III, \S 2, no. 54 and Propositions 1 and 2,
 pp. 246--247]{FAC}
+\cite[Chapter III, \S 2, no. 58, Proposition 4 and Corollary,
+pp. 250--251]{FAC}
 \end{reference}
 \begin{history}
 For $S = K[t_0, \ldots, t_r]$, the standard opens $D_{+}(t_i)$ cover
@@ -1935,6 +1952,12 @@ below recover the source's formulas
 $\mathcal{F}(n)(m) \cong \mathcal{F}(n+m)$ and
 $\mathcal{F}(n) \cong \mathcal{F} \otimes \mathcal{O}(n)$, while applying
 to every graded ring generated in degree one.
+
+Proposition 4 of no. 58 applies this chart calculation to an arbitrary
+graded module and checks that the local trivializations differ on overlaps
+by $(t_j/t_i)^n$. Its corollary specializes to $M=S$. The formulation below
+records these as the canonical multiplication maps and keeps the
+degree-one-cover hypothesis under which they are isomorphisms.
 \end{history}
 Let $S$ be a graded ring. Let $M$ be a graded $S$-module.
 Set $X = \text{Proj}(S)$. Assume $X$ is covered by the standard
