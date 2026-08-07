@@ -3768,6 +3768,8 @@ projective space over a Noetherian ring.
 p. 244]{FAC}
 \cite[Chapter III, \S 2, no. 55, Theorem 1 and Corollary,
 pp. 247--248]{FAC}
+\cite[Chapter III, \S 3, no. 63, Proposition 3(b) and (c),
+pp. 256--257]{FAC}
 \end{reference}
 \begin{history}
 The no. 52 result proves that the standard affine covering computes the
@@ -3777,6 +3779,15 @@ generation after twisting and deduces a finite quotient by copies of one
 twist of the structure sheaf. Part (1) below retains that quotient conclusion
 over an arbitrary Noetherian base ring, while the remaining parts add
 finiteness and eventual higher-cohomology vanishing to the source results.
+
+No. 63 proves its finiteness and vanishing statements over a field for the
+algebraic colimit groups attached to a graded module satisfying condition
+(TF). It resolves a finite graded representative by finite sums of shifts of
+the polynomial ring and inducts through the resulting long exact sequences.
+The source compares those groups with standard-cover cohomology only in
+no. 64. Parts (3) and (4) below state the corresponding sheaf results directly
+over an arbitrary Noetherian base and use a finite quotient by twists and
+descending induction on cohomological degree instead.
 \end{history}
 Let $R$ be a Noetherian ring.
 Let $n \geq 0$ be an integer.
@@ -4016,6 +4027,8 @@ by Lemma \ref{lemma-relative-affine-cohomology}.
 \label{lemma-recover-tail-graded-module}
 \begin{reference}
 \cite[Chapter III, \S 2, no. 58, Proposition 5, pp. 250--251]{FAC}
+\cite[Chapter III, \S 3, no. 63, Proposition 3(c),
+pp. 256--257]{FAC}
 \end{reference}
 \begin{history}
 The cited source proves over $K[t_0, \ldots, t_r]$ that a finite graded
@@ -4025,6 +4038,13 @@ annihilator of each of finitely many generators. The proof below uses the
 same finite-generator mechanism with a degree-one generating set, avoids
 closed-point language, and places the vanishing step inside the stronger
 eventual recovery of $M_n$ from $\Gamma(X, \widetilde M(n))$.
+
+The cited no. 63 proves eventual bijectivity of
+$M_n \to H^0(M(n))$ first for its algebraically defined colimit group. Its
+finite-free-resolution argument couples this with eventual higher-degree
+vanishing; the comparison with cover cochains follows in no. 64. The lemma
+below lands directly in global sections and works over a Noetherian degree-one
+generated base rather than only over a polynomial ring over a field.
 \end{history}
 Let $A$ be a graded ring such that $A_0$ is Noetherian and $A$ is generated
 by finitely many elements of $A_1$ over $A_0$. Let $M$ be a

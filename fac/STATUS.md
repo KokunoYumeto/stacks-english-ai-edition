@@ -2,10 +2,10 @@
 
 - Frozen surface: 661 source targets through printed page 278.
 - Stage: sequential source review and statement-level Stacks integration.
-- Completed checkpoint: Chapter III, Section 3, no. 62, printed pages 199--256.
-- Reviewed decisions: 353 (112 equivalent, 137 stronger, 48 extensions,
-  20 new-statement decisions, 34 historical references, 2 outside scope).
-- Current Stacks references added: 230 across `topology.tex`, `sheaves.tex`,
+- Completed checkpoint: Chapter III, Section 3, no. 63, printed pages 199--257.
+- Reviewed decisions: 363 (116 equivalent, 139 stronger, 50 extensions,
+  20 new-statement decisions, 36 historical references, 2 outside scope).
+- Current Stacks references added: 233 across `topology.tex`, `sheaves.tex`,
   `modules.tex`, `homology.tex`, `coherent.tex`, `cohomology.tex`,
   `divisors.tex`, `constructions.tex`, `schemes.tex`, `morphisms.tex`,
   `derham.tex`, `algebra.tex`, `properties.tex`, `varieties.tex`,
@@ -13,7 +13,7 @@
 - New Stacks theorem/lemma statements: 14, plus the paracompactness and
   locally-constant-sheaf definitions and the graded-conventions remark;
   each new theorem/lemma has a complete proof and no assigned tag.
-- Source/proof issues or convention boundaries: 508 found by direct
+- Source/proof issues or convention boundaries: 535 found by direct
   authority-page and TeX inspection, all resolved and
   retained in `issues.csv`.
 - Existing Stacks defects corrected: 6, comprising the refinement-homotopy
@@ -29,7 +29,7 @@
   completed; every
   affected statement page passed direct 1100 dpi visual inspection. See
   `qa.json`.
-- Historical notes added: 69, preserving the source's operator calculus,
+- Historical notes added: 72, preserving the source's operator calculus,
   image-complex construction, two-covering double complex, and unproved
   cofinal-vanishing question, together with the classical closed-point to
   reduced-scheme bridge, the classical-map to scheme-morphism bridge, and the
@@ -135,6 +135,17 @@
   formula must be replaced by rank one in degree zero. Direct 1100 dpi review
   of physical pages 59--61 and all three affected output pages passed; the
   visual gate caught and closed one compound-term hyphenation error before
-  admission, with no high-detail crop needed.
-- Next unit: `fac:III:3:no:63`.
+  admission, with no high-detail crop needed; no. 63 now preserves the
+  finite-graded-free-resolution proof of stabilization, finite-dimensionality,
+  eventual higher vanishing, and recovery of high graded pieces, while
+  distinguishing its algebraic colimit groups from the cover comparison that
+  begins only at no. 64. Its modern destinations are tags 0913, 01YS, 0AG7,
+  0BXD, 05QB, and 0117; no tag was invented for the source-specific
+  finite-stage stabilization or its resolution-dimension convention. The
+  corrected projective-zero-space computation from no. 62 is propagated into
+  the free base case, and source correction `C0037` restores the missing
+  superscript on the upper middle free-module term. Authority physical pages
+  61--62 and output pages coherent 34 and 37 and more-algebra 74 passed direct
+  1100 dpi inspection after two serial builds, with no high-detail crop needed.
+- Next unit: `fac:III:3:no:64`.
 - No statement is mapped by lexical similarity alone.
