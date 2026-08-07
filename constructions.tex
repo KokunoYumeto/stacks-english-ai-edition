@@ -1181,6 +1181,7 @@ Sheaves, Lemma \ref{sheaves-lemma-extend-off-basis-module}.
 \begin{reference}
 \cite[Chapter III, \S 1, no. 51, construction of the structure sheaf,
 pp. 243--244]{FAC}
+\cite[Chapter III, \S 2, no. 57, pp. 249--250]{FAC}
 \end{reference}
 \begin{history}
 The cited source takes scalar-invariant regular functions on inverse images
@@ -1189,6 +1190,12 @@ fractions $P/Q$ of homogeneous polynomials of the same degree. On a standard
 open, the construction below encodes precisely this degree-zero condition in
 the ring $S_{(f)}$ and then extends the resulting sheaf from the standard-open
 basis to every open of the homogeneous prime spectrum.
+
+For a graded module over the polynomial ring, no. 57 applies the same
+same-degree fraction construction to numerators in $M$, gives its restriction
+maps and stalk fractions, and records functoriality in $M$. The construction
+below first proves the sheaf condition on the standard-open basis before
+extending to all opens; this step is essential for a general graded module.
 \end{history}
 Let $S$ be a graded ring.
 \begin{enumerate}
@@ -1215,6 +1222,7 @@ We summarize the results obtained so far.
 \begin{reference}
 \cite[Chapter III, \S 2, no. 54, Proposition 1,
 pp. 246--247]{FAC}
+\cite[Chapter III, \S 2, no. 57, pp. 249--250]{FAC}
 \end{reference}
 \begin{history}
 For the polynomial ring and $M = S(n)$, the cited source describes the same
@@ -1224,6 +1232,13 @@ punctured affine cone with the appropriate scalar transformation law. The
 construction below gives the standard-open section and stalk formulas for
 every graded module over every graded ring; its degree-zero localization
 also retains nonclosed scheme points absent from the classical description.
+
+For arbitrary graded $M$, no. 57 writes the equality relation with the extra
+homogeneous annihilator required by localization, the module operations and
+restriction maps, the closed-point stalk formula, and the additive covariant
+functor. Items (1)--(5) below recover these formulas on standard opens and at
+all homogeneous primes. The exactness assertion is proved independently
+below and belongs to the subsequent Proposition 3 of no. 58.
 \end{history}
 Let $S$ be a graded ring. Let $M$ be a graded $S$-module.
 Let $\widetilde M$ be the sheaf of $\mathcal{O}_{\text{Proj}(S)}$-modules
@@ -1282,11 +1297,29 @@ Modules, Lemma \ref{modules-lemma-abelian}.
 
 \begin{remark}
 \label{remark-global-sections-not-isomorphism}
+\begin{reference}
+\cite[Chapter III, \S 2, no. 57, pp. 249--250]{FAC}
+\end{reference}
+\begin{history}
+The cited source assigns to every nonempty classical open $U$ the degree-zero
+fractions having one denominator nonvanishing everywhere on $U$, and says
+that these groups themselves form a sheaf. For arbitrary graded modules that
+last assertion is false: the example below gives a raw global section whose
+restrictions to a standard-open covering all vanish. Passing through the
+standard-open sheaf proved above, rather than using the raw all-open
+assignment, is the required correction.
+\end{history}
 The map from $M_0$ to the global sections of $\widetilde M$
 is generally far from being an isomorphism. A trivial
-example is to take $S = k[x, y, z]$ with $1 = \deg(x) = \deg(y) = \deg(z)$
+example is to take an algebraically closed field $k$ and
+$S = k[x, y, z]$ with $1 = \deg(x) = \deg(y) = \deg(z)$
 (or any number of variables) and to take $M = S/(x^{100}, y^{100}, z^{100})$.
 It is easy to see that $\widetilde M = 0$, but $M_0 = k$.
+In particular, the presheaf which assigns to an arbitrary open $U$
+the degree-zero fractions with a single homogeneous denominator
+nonvanishing everywhere on $U$ is not even separated in this example:
+its value on $\text{Proj}(S)$ contains $M_0 = k$, whereas its restrictions
+to the covering by $D_{+}(x)$, $D_{+}(y)$, and $D_{+}(z)$ all vanish.
 \end{remark}
 
 \begin{lemma}
