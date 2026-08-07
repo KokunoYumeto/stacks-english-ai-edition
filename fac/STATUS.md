@@ -2,18 +2,18 @@
 
 - Frozen surface: 661 source targets through printed page 278.
 - Stage: sequential source review and statement-level Stacks integration.
-- Completed checkpoint: Chapter III, Section 2, no. 55, printed pages 199--248.
-- Reviewed decisions: 268 (66 equivalent, 117 stronger, 37 extensions,
+- Completed checkpoint: Chapter III, Section 2, no. 56, printed pages 199--249.
+- Reviewed decisions: 277 (70 equivalent, 119 stronger, 40 extensions,
   18 new-statement decisions, 28 historical references, 2 outside scope).
-- Current Stacks references added: 178 across `topology.tex`, `sheaves.tex`,
+- Current Stacks references added: 186 across `topology.tex`, `sheaves.tex`,
   `modules.tex`, `homology.tex`, `coherent.tex`, `cohomology.tex`,
   `divisors.tex`, `constructions.tex`, `schemes.tex`, `morphisms.tex`,
   `derham.tex`, `algebra.tex`, `properties.tex`, `varieties.tex`, and
   `simplicial.tex`.
 - New Stacks theorem/lemma statements: 13, plus the paracompactness and
-  locally-constant-sheaf definitions;
+  locally-constant-sheaf definitions and the graded-conventions remark;
   each new theorem/lemma has a complete proof and no assigned tag.
-- Source/proof issues or convention boundaries: 300 found by direct authority-page and TeX inspection, all resolved and
+- Source/proof issues or convention boundaries: 321 found by direct authority-page and TeX inspection, all resolved and
   retained in `issues.csv`.
 - Existing Stacks defects corrected: 5, comprising the refinement-homotopy
   sign, repeated coefficient sheaves, wrong boundary domain, wrong boundary
@@ -26,7 +26,7 @@
   completed; every
   affected statement page passed direct 1100 dpi visual inspection. See
   `qa.json`.
-- Historical notes added: 54, preserving the source's operator calculus,
+- Historical notes added: 57, preserving the source's operator calculus,
   image-complex construction, two-covering double complex, and unproved
   cofinal-vanishing question, together with the classical closed-point to
   reduced-scheme bridge, the classical-map to scheme-morphism bridge, and the
@@ -86,6 +86,11 @@
   affine denominator-clearing lemma, the two-stage chart and overlap
   uniformization, eventual global generation by high twists, and the finite
   twist-quotient corollary, while matching them to localization at an
-  invertible section and the modern ample-sheaf characterization.
-- Next unit: `fac:III:2:no:56` (graded modules).
+  invertible section and the modern ample-sheaf characterization; no. 56 now
+  fixes the exact graded-module and shift conventions, identifies Serre's
+  class-C arrows with the morphisms inverted in the Serre quotient, preserves
+  the distinction between a finite high-degree tail and ordinary finite
+  generation, and records the homogeneous-basis sign convention. Its visual
+  gate also caught and closed the initially empty reader remark before push.
+- Next unit: `fac:III:2:no:57` (sheaf associated to a graded module).
 - No statement is mapped by lexical similarity alone.
