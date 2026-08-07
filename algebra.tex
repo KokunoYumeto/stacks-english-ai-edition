@@ -13386,6 +13386,8 @@ isomorphism, of the chosen resolution.
 sequences of graded Ext, pp. 261--262]{FAC}
 \cite[Chapter III, \S 4, no. 72, Theorem 1 and Corollary 2,
 pp. 265--267]{FAC}
+\cite[Chapter III, \S 5, no. 77, graded Ext twist preceding
+Proposition 2, p. 271]{FAC}
 \end{reference}
 \begin{history}
 For a polynomial ring in $r+1$ variables over a field, the source combines
@@ -13402,6 +13404,12 @@ dual-cohomology modules. More on Algebra, Lemma
 \ref{more-algebra-lemma-graded-local-duality-polynomial-ring} supplies the
 complete comparison, including the two exceptional degrees; the present
 lemma supplies the Ext delta functor and its finite-module boundary.
+
+No. 77 uses the shift formula in part (2), with
+$\Omega=S(-r-1)$, to replace vanishing of
+$\text{GrExt}^q_S(M,S)$ by vanishing of
+$\text{GrExt}^q_S(M,\Omega)$. This changes only the internal degree and not
+the cohomological range.
 \end{history}
 Let $S$ be a graded ring and let $M,N$ be graded $S$-modules.
 \begin{enumerate}
@@ -27315,6 +27323,53 @@ surjects onto the nonzero vector space
 $\Hom_R(F_d,R)/\mathfrak m\Hom_R(F_d,R)$. Thus the top Ext module is
 nonzero, while the displayed resolution gives $\Ext^i_R(M,R)=0$ for
 $i>d$. The two conditions in the statement now follow immediately.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-projective-dimension-ext-finite-module}
+\begin{reference}
+\cite[Chapter III, \S 5, no. 77, Lemma 3, p. 271]{FAC}
+\end{reference}
+\begin{history}
+For a finite graded module over a polynomial ring, the cited lemma calls
+projective dimension the dimension of the module and tests it by vanishing
+of internal graded Ext into the ring. Algebra, Lemma
+\ref{lemma-graded-ext-properties} compares that internal Ext with ordinary
+Ext. The statement below isolates the more general ungraded fact over every
+Noetherian ring, under the necessary finite-projective-dimension hypothesis.
+\end{history}
+Let $R$ be a Noetherian ring and let $M$ be a finite $R$-module of finite
+projective dimension. For $n\geq0$, the following are equivalent:
+\begin{enumerate}
+\item $M$ has projective dimension at most $n$,
+\item $\Ext^i_R(M,R)=0$ for every $i>n$.
+\end{enumerate}
+Moreover, if $M$ is nonzero and $d$ is its projective dimension, then
+$\Ext^d_R(M,R)$ is nonzero.
+\end{lemma}
+
+\begin{proof}
+The implication (1) $\Rightarrow$ (2) follows from Lemma
+\ref{lemma-projective-dimension-ext}. Suppose $M$ is nonzero and has
+projective dimension $d$. There is a maximal ideal $\mathfrak m$ such that
+$M_{\mathfrak m}$ has projective dimension $d$. For $d=0$, choose any
+maximal ideal in the support of $M$. For $d>0$, choose a resolution of $M$
+by finite free modules and let $K$ be the finite syzygy which tests the bound
+$d-1$ in Lemma \ref{lemma-what-kind-of-resolutions}. If no such maximal
+ideal existed, then $K_{\mathfrak m}$ would be projective for every maximal
+ideal $\mathfrak m$. Lemma \ref{lemma-finite-projective} would make $K$
+finite projective, contradicting the minimality of $d$.
+
+Localizing a finite projective resolution of $M$ of length $d$ gives
+$$
+\Ext^d_R(M,R)_{\mathfrak m}=
+\Ext^d_{R_{\mathfrak m}}(M_{\mathfrak m},R_{\mathfrak m}).
+$$
+The right hand side is nonzero by Lemma
+\ref{lemma-projective-dimension-ext-local-ring}. Hence the global top Ext
+module is nonzero. If (2) holds and the projective dimension were larger
+than $n$, this top nonvanishing would be a contradiction. Thus (2) implies
+(1), and the final assertion has been proved at the same time.
 \end{proof}
 
 \begin{lemma}

@@ -3819,6 +3819,8 @@ pp. 247--248]{FAC}
 \cite[Chapter III, \S 3, no. 63, Proposition 3(b) and (c),
 pp. 256--257]{FAC}
 \cite[Chapter III, \S 3, no. 65, Proposition 7, p. 258]{FAC}
+\cite[Chapter III, \S 5, no. 77, proof of Proposition 4(b),
+p. 272]{FAC}
 \cite[Chapter III, \S 4, no. 70, biduality observation for
 $M=\Gamma(\mathcal F)$, p. 264]{FAC}
 \cite[Chapter III, \S 4, no. 72, Corollaries 1 and 2,
@@ -3847,6 +3849,10 @@ algebraic finiteness and eventual-vanishing statements into the corresponding
 claims for every coherent algebraic sheaf on classical projective space.
 Parts (3) and (4) below state that conclusion directly and strengthen its
 field base to an arbitrary Noetherian ring.
+
+No. 77, Proposition 4(b) uses the same eventual vanishing simultaneously
+for the finitely many degrees $0<q<k$ and then restricts to all positive
+multiples of one sufficiently large twist.
 
 No. 70 uses the field case of part (3) for every twist to observe that all
 homogeneous pieces of $\Gamma(\mathcal F)$ are finite dimensional. Algebra,
@@ -4108,6 +4114,8 @@ pp. 256--257]{FAC}
 \cite[Chapter III, \S 3, no. 65, Proposition 5, p. 258]{FAC}
 \cite[Chapter III, \S 3, no. 67, proof of Proposition 9,
 pp. 260--261]{FAC}
+\cite[Chapter III, \S 5, no. 77, proof of Proposition 4(a),
+p. 272]{FAC}
 \end{reference}
 \begin{history}
 The cited source proves over $K[t_0, \ldots, t_r]$ that a finite graded
@@ -4137,6 +4145,10 @@ Constructions, Lemma
 \ref{constructions-lemma-comparison-proj-isomorphism} isolates that exact
 criterion; the lemma below supplies its eventual-bijectivity hypothesis in
 the present Noetherian finite-module setting.
+
+No. 77, Proposition 4(a) chooses one sufficiently large Veronese degree so
+that this eventual isomorphism holds in every positive multiple of that
+degree.
 \end{history}
 Let $A$ be a graded ring such that $A_0$ is Noetherian and $A$ is generated
 by finitely many elements of $A_1$ over $A_0$. Let $M$ be a
@@ -4336,9 +4348,71 @@ the composite right to left to right is isomorphic to the identity
 functor as well.
 \end{proof}
 
+\begin{lemma}
+\label{lemma-graded-projective-dimension-cohomology}
+\begin{reference}
+\cite[Chapter III, \S 5, no. 77, Propositions 2 and 3,
+pp. 271--272]{FAC}
+\end{reference}
+\begin{history}
+The source calls projective dimension the dimension of a module. It combines
+Lemma 3 with graded duality to characterize this dimension by the canonical
+maps from a graded module to all twisted global sections and by vanishing of
+all intermediate twisted cohomology groups.
 
+For the homogeneous coordinate ring of a closed subvariety, the source calls
+the bound in part (2) the property of being $k$-fold of the first kind. The
+statement below retains the exact reusable criterion without adopting that
+historical terminology as a general Stacks definition.
+\end{history}
+Let $K$ be a field, let $r\geq1$, put
+$S=K[t_0,\ldots,t_r]$, and set $X=\mathbf P^r_K$. Let $M$ be a finite
+graded $S$-module and let $\mathcal F=\widetilde M$. Denote the canonical
+maps by
+$$
+\alpha_n:M_n\longrightarrow H^0(X,\mathcal F(n)).
+$$
+Then:
+\begin{enumerate}
+\item $M$ has projective dimension at most $r$ if and only if $\alpha_n$
+is injective for every $n\in\mathbf Z$.
+\item If $1\leq k\leq r$, then $M$ has projective dimension at most
+$r-k$ if and only if every $\alpha_n$ is an isomorphism and
+$$
+H^q(X,\mathcal F(n))=0
+$$
+for every $n\in\mathbf Z$ and every $0<q<k$.
+\end{enumerate}
+\end{lemma}
 
+\begin{proof}
+Put $\Omega=S(-r-1)$. On the standard affine covering,
+Constructions, Lemma \ref{constructions-lemma-proj-sheaves} and Lemma
+\ref{lemma-cech-cohomology-quasi-coherent} identify the module $B^q(M)$ of
+More on Algebra, Lemma
+\ref{more-algebra-lemma-graded-local-duality-polynomial-ring} with
+$\bigoplus_n H^q(X,\mathcal F(n))$. For $q=0$, its canonical map
+$M\to B^0(M)$ is the sum of the maps $\alpha_n$. Every homogeneous piece
+in sight is finite dimensional over $K$ by Lemma
+\ref{lemma-coherent-projective}.
 
+Algebra, Lemmas \ref{algebra-lemma-graded-ext-properties} and
+\ref{algebra-lemma-projective-dimension-ext-finite-module} show
+that a projective-dimension bound is equivalent to the corresponding
+vanishing of $\text{GrExt}^i_S(M,\Omega)$. Graded local duality identifies
+these Ext modules with $B^{r-i}(M)^\vee$ for $0\leq i<r$ and gives the
+exact sequence
+$$
+0\to\text{GrExt}^r_S(M,\Omega)\to B^0(M)^\vee
+\xrightarrow{\alpha^\vee}M^\vee\to
+\text{GrExt}^{r+1}_S(M,\Omega)\to0.
+$$
+Because all homogeneous pieces are finite dimensional, the last Ext module
+vanishes exactly when every $\alpha_n$ is injective. This proves (1).
+Vanishing of both exceptional Ext modules says that every $\alpha_n$ is an
+isomorphism, while vanishing in degrees
+$r-k<i<r$ says precisely that $B^q(M)=0$ for $0<q<k$. This proves (2).
+\end{proof}
 
 \begin{lemma}
 \label{lemma-negative-twists-local-ext}
@@ -4437,6 +4511,8 @@ holds at every point.
 \begin{reference}
 \cite[Chapter III, \S 5, no. 74, Theorem 2,
 p. 269]{FAC}
+\cite[Chapter III, \S 5, no. 77, local corollary and
+proof of Proposition 4(c), pp. 272--273]{FAC}
 \end{reference}
 \begin{history}
 The cited theorem combines its preceding local Ext criterion with
@@ -4446,6 +4522,11 @@ dimension. The statement below makes the local ring explicit and uses
 Algebra, Lemma \ref{algebra-lemma-projective-dimension-ext-local-ring}
 to test projective dimension against the ring itself. We state the
 nonvacuous range $0\leq p\leq r$ and retain all scheme points.
+
+No. 77 first specializes the criterion at twist zero, and then uses its
+converse direction uniformly for all sufficiently negative multiples of a
+fixed Veronese degree. The statement below supplies both steps without any
+closed-point restriction.
 \end{history}
 Let $k$ be a field, let $r\geq1$, and set
 $X=\mathbf{P}^r_k$. Let $\mathcal{F}$ be a coherent
@@ -4554,6 +4635,131 @@ Finally, Lemma \ref{lemma-finite-pushforward-coherent} and Cohomology,
 Lemma \ref{cohomology-lemma-apply-Leray} identify the cohomology of the
 right hand side on $X$ with the cohomology of its argument on $Z$.
 This gives the asserted vanishing.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-veronese-projective-dimension}
+\begin{reference}
+\cite[Chapter III, \S 5, no. 77, Proposition 4 and proof,
+pp. 272--273]{FAC}
+\end{reference}
+\begin{history}
+The cited proposition starts with a connected closed subvariety of classical
+projective space whose structure-sheaf stalks have a fixed ambient
+projective-dimension bound. It proves that every sufficiently high Veronese
+embedding has a homogeneous coordinate ring satisfying the corresponding
+global bound. Its proof treats positive, zero, and negative twists separately.
+
+The statement below makes both polynomial rings and the new ambient dimension
+explicit. It also records the source's implicit conventions that the base
+field is algebraically closed and a subvariety is reduced. No tag is assigned
+to this new statement here.
+\end{history}
+Let $K$ be an algebraically closed field, let $r\geq1$, and let
+$1\leq k\leq r$. Put $S=K[t_0,\ldots,t_r]$. Let
+$X\subset\mathbf P^r_K$ be a connected reduced closed subscheme, let $I$
+be its defining saturated homogeneous ideal, and put $A=S/I$. Assume that
+\begin{enumerate}
+\item $H^q(X,\mathcal O_X)=0$ for every $0<q<k$, and
+\item for every $x\in X$, the $\mathcal O_{\mathbf P^r_K,x}$-module
+$\mathcal O_{X,x}$ has projective dimension at most $r-k$.
+\end{enumerate}
+For $d\geq1$, put
+$$
+P_d=\operatorname{Sym}_K(S_d),\qquad
+N_d=\dim_K(S_d)-1,
+$$
+where $S_d$ is placed in degree one. The natural graded map
+$P_d\to A^{(d)}$ is surjective. For every sufficiently large $d$,
+$$
+\operatorname{pd}_{P_d}(A^{(d)})\leq N_d-k.
+$$
+\end{lemma}
+
+\begin{proof}
+The scheme $X$ is proper over $K$. Since it is connected and reduced,
+Varieties, Lemma
+\ref{varieties-lemma-proper-geometrically-reduced-global-sections} shows
+that $H^0(X,\mathcal O_X)$ is a finite field extension of $K$, hence is
+$K$.
+
+Let $Y$ be an irreducible component of dimension $p$, and let $\eta$ be its
+generic point. The ambient local ring $\mathcal O_{\mathbf P^r_K,\eta}$ is
+regular of dimension $r-p$, while $\mathcal O_{X,\eta}$ is a field. The
+Auslander--Buchsbaum formula and hypothesis (2) therefore give
+$r-p\leq r-k$, so every component has dimension at least $k$. In particular,
+$\operatorname{Ass}(\mathcal O_X)$ contains no closed point. Varieties,
+Lemma \ref{varieties-lemma-vanishin-h0-negative}, applied to the ample
+invertible sheaf $\mathcal O_X(1)$, gives an integer $d_0$ such that
+$$
+H^0(X,\mathcal O_X(-m))=0\quad(m\geq d_0).
+$$
+
+Let $i:X\to\mathbf P^r_K$ be the closed immersion. Lemma
+\ref{lemma-recover-tail-graded-module} gives an integer $d_1$ such that
+$$
+A_m\longrightarrow H^0(X,\mathcal O_X(m))
+$$
+is an isomorphism for $m\geq d_1$. Lemma
+\ref{lemma-coherent-projective}, applied to $i_*\mathcal O_X$, gives an
+integer $d_2$ such that
+$$
+H^q(X,\mathcal O_X(m))=0
+$$
+for $m\geq d_2$ and $0<q<k$. Finally, Lemma
+\ref{lemma-negative-twists-projective-dimension} and hypothesis (2) give
+an integer $d_3$ such that the same vanishing holds for $m\leq-d_3$ and
+$0<q<k$.
+
+Choose $d\geq\max(d_0,d_1,d_2,d_3)$ large enough that $N_d\geq k$.
+Constructions, Lemma \ref{constructions-lemma-d-uple} identifies
+$\operatorname{Proj}(A^{(d)})$ with $X$ and its twist $n$ with
+$\mathcal O_X(nd)$. The canonical map for the finite graded
+$P_d$-module $A^{(d)}$ is an isomorphism in every degree: this follows from
+the choice of $d_1$ for $n>0$, from $H^0(X,\mathcal O_X)=K$ for $n=0$,
+and from the choice of $d_0$ for $n<0$. Its cohomology in degrees
+$0<q<k$ vanishes for every twist by the choices of $d_2,d_3$ and hypothesis
+(1) at $n=0$. Lemma
+\ref{lemma-graded-projective-dimension-cohomology}, applied in
+$\mathbf P^{N_d}_K$, proves the assertion.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-smooth-projective-coordinate-ring-projective-dimension}
+\begin{reference}
+\cite[Chapter III, \S 5, no. 77, final Corollary, p. 273]{FAC}
+\end{reference}
+\begin{history}
+The source expresses the conclusion by saying that a nonsingular projective
+variety admits an embedding $k$-fold of the first kind. The equivalent modern
+form below states the projective-dimension bound on the homogeneous coordinate
+ring and uses smoothness over the algebraically closed base field.
+\end{history}
+Let $K$ be an algebraically closed field, let $k\geq1$, and let $X$ be a
+smooth projective $K$-scheme of pure dimension $p\geq k$. The following are
+equivalent:
+\begin{enumerate}
+\item $X$ is connected and $H^q(X,\mathcal O_X)=0$ for every $0<q<k$,
+\item there is a closed immersion $X\to\mathbf P^N_K$ whose homogeneous
+coordinate ring $B$ satisfies
+$\operatorname{pd}_{K[x_0,\ldots,x_N]}(B)\leq N-k$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+If (2) holds, Lemma \ref{lemma-graded-projective-dimension-cohomology}
+gives the asserted cohomology vanishing at twist zero and identifies
+$K=B_0$ with $H^0(X,\mathcal O_X)$. The latter equality implies that $X$
+is connected, since a decomposition would give a nontrivial idempotent in
+its ring of global functions.
+
+Conversely, choose a projective embedding $X\to\mathbf P^r_K$. Both schemes
+are smooth over $K$, so Divisors, Lemma
+\ref{divisors-lemma-immersion-smooth-into-smooth-regular-immersion} makes
+this a regular immersion of codimension $r-p$. The Koszul resolution gives
+projective dimension $r-p\leq r-k$ at every stalk. Lemma
+\ref{lemma-veronese-projective-dimension} now gives (2) after any
+sufficiently high Veronese embedding.
 \end{proof}
 
 

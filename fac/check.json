@@ -1,7 +1,7 @@
 {
   "corpus": "fac",
   "counts": {
-    "labels": 21779,
+    "labels": 21783,
     "official_tags_joined": 21437,
     "tex_files": 119,
     "topic_candidates": 1258,
@@ -16,8 +16,8 @@
   "official_upstream": "a04446e57ec1fbc252a871afcec7752fb2807b14",
   "schema": "historical-source-stacks-index-v1",
   "sha256": {
-    "fac/stx.csv": "D7FCE47003C96CF4C4EAECDEF4AB822B18AACC86362E9D41F2EA29A406604BBB",
-    "fac/tcand.csv": "6B78C6AED578B9DD926FC3F0A2891F4EB27B84A04234049B172646A86A79EAB9",
+    "fac/stx.csv": "46CD9242CF9E7C45A15F40F7D3AECBCD0EE6400A69F35085492C789E0D57457F",
+    "fac/tcand.csv": "721C461883DBFA06BE3FB495FD57B4ECBE3D71C171A5C08944255F6C49B27BE0",
     "fac/tmap.csv": "4B0984056DA81E45F6359B0EB469C7C923CD0A23C56AD199265545A40CA3C2D2",
     "fac/topics.csv": "39C80EECD5B4EB1E261FCAA01313CF2C63D97490C8A360E91A70604F73066B83",
     "tags/tags": "C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF"
@@ -25,7 +25,7 @@
   "status": "PASS",
   "tex_sha256": {
     "adequate.tex": "EF902B74711FE3C1EE4D39BD4ADE84C6324D19082982073AD9A819FFF7BFB10A",
-    "algebra.tex": "F112BBDB6A8E13B69E995EA15573C05B8215648CB71603C6F68A6BD156DEAFC3",
+    "algebra.tex": "B2CE1BC461ED80EAA2B2F0A76B3FBB08591E01042487324B0D22BC911EA2E235",
     "algebraic.tex": "B160C511370A3F0D3283367E131876FD92D01CA335ABFE035BE05A3C714F2DFC",
     "algebraization.tex": "42F4F86784A0C37A49B83EBBA209AEEEB4659CEC4AFBA96CE029FE8AAF677CED",
     "artin.tex": "922B9E6163B1CE982FDF5CEA235F11BB774AD2C4B420FBDCEC4896256A395FFD",
@@ -36,9 +36,9 @@
     "chapters.tex": "0D1C01A1CB829E33114B7EE6DCC67E2C06DF43011D0AA9498C7BD2DCB283F11E",
     "chow.tex": "B1AE20756BD73C565C62D67D9DC85AFEDBE1748E914E9F8120F3B10FB85CF258",
     "coding.tex": "55EB96CBEE2D244287D7A5B921FA301395793BF78FCDB43CF9D38602B0CC7568",
-    "coherent.tex": "00DFFB80E1D87DF25442855589D498E0DC110900A47D7A4016BF2957763A7A21",
+    "coherent.tex": "6424014D034F90D00FE3542B258E4BFC1C10F240227DADCD6617DCCC9569BBC8",
     "cohomology.tex": "DAC2D02A77F9253B75ECC615888CC85FA96A491829C97C08FF975F33C62F110F",
-    "constructions.tex": "A0C3F391C04D24BCACE60292618FB22EE22133F3F7503950B5F0CC9C47AD97EB",
+    "constructions.tex": "6BDC63D07E641CF5852D5D207FF44189F4E7E63F3E3D9692B226788823829834",
     "conventions.tex": "B37BDC9188B005994D334222886A9C3D878D270F8BB2F79368F8351D12B50880",
     "cotangent.tex": "CF05449F3BA2EB4BF01B3389E1C684C99596AE90665E97B15681695A6B5AB6AB",
     "criteria.tex": "85A968AEA7598D68E6219A341925329D331A9C82641EABFA504C510E2B75E736",
@@ -141,7 +141,7 @@
     "topologies.tex": "7A4BA6F4BEA12B060EEC6A6F6613F729340A14F4C8A5B988C82D3663F2A29143",
     "topology.tex": "86FD4B6E4E0116F8DD6253E8B01BD04F6E270DDA0FCE0628996BEEEF1F24F190",
     "trace.tex": "642CB0F2314FC73BEF27542C79F55AF87DCC0B0BF87D7CECF29B9B61860E4BFC",
-    "varieties.tex": "A9EB07FA346438026E7BF2FBAF91CF16F015684127DB06244CB6A5E0CCA56919",
+    "varieties.tex": "9EC5F7C83F26D44B29BA64152D02F28EF92835C63BAD393D5407CAAA2A245FB0",
     "weil.tex": "B17EDC8093596796ACBA992B059BC5FFBE00994B88ACB39388B479F3C7C042A2"
   },
   "warnings": [
@@ -160,6 +160,7 @@
     "TeX label has no official tag in this snapshot: algebra-lemma-graded-ext-proj-prime",
     "TeX label has no official tag in this snapshot: algebra-lemma-graded-ext-properties",
     "TeX label has no official tag in this snapshot: algebra-lemma-graded-free-resolutions",
+    "TeX label has no official tag in this snapshot: algebra-lemma-projective-dimension-ext-finite-module",
     "TeX label has no official tag in this snapshot: algebra-lemma-projective-dimension-ext-local-ring",
     "TeX label has no official tag in this snapshot: algebra-lemma-projective-dimension-modulo-nonzerodivisor",
     "TeX label has no official tag in this snapshot: algebra-remark-FAC-graded-conventions",
@@ -171,9 +172,12 @@
     "TeX label has no official tag in this snapshot: categories-lemma-strict-monomorphism-properties",
     "TeX label has no official tag in this snapshot: categories-theorem-strict-prorepresentable-minimal-pairs",
     "TeX label has no official tag in this snapshot: coherent-lemma-algebraize-flat-formal-scheme-H2",
+    "TeX label has no official tag in this snapshot: coherent-lemma-graded-projective-dimension-cohomology",
     "TeX label has no official tag in this snapshot: coherent-lemma-negative-twists-complete-intersection",
     "TeX label has no official tag in this snapshot: coherent-lemma-negative-twists-local-ext",
     "TeX label has no official tag in this snapshot: coherent-lemma-negative-twists-projective-dimension",
+    "TeX label has no official tag in this snapshot: coherent-lemma-smooth-projective-coordinate-ring-projective-dimension",
+    "TeX label has no official tag in this snapshot: coherent-lemma-veronese-projective-dimension",
     "TeX label has no official tag in this snapshot: cohomology-definition-cech-cohomology-space",
     "TeX label has no official tag in this snapshot: cohomology-lemma-cech-cofinal-refinements",
     "TeX label has no official tag in this snapshot: cohomology-lemma-cech-cohomology-additive",

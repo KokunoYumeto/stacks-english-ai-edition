@@ -11105,6 +11105,22 @@ dimension $\geq 2$.
 
 \begin{lemma}
 \label{lemma-vanishin-h0-negative}
+\begin{reference}
+\cite[Chapter III, \S 5, no. 77, proof of Proposition 4,
+p. 272]{FAC}
+\end{reference}
+\begin{history}
+The cited proof treats the structure sheaf of a connected reduced closed
+subvariety whose irreducible components have positive dimension. It rules out
+sections of every negative twist by multiplying with positive-degree forms.
+The lemma below has broader sheaf and ample-invertible-sheaf hypotheses, but
+only concludes vanishing for all sufficiently negative twists. Thus neither
+form strictly contains the other.
+
+The final asymptotic argument is carried out on the integral closed subscheme
+$Z$. Earlier text inadvertently switched its global sections from $Z$ to the
+ambient scheme $X$; that subscript is corrected below.
+\end{history}
 Let $k$ be a field. Let $X$ be a proper scheme over $k$. Let $\mathcal{L}$
 be an ample invertible $\mathcal{O}_X$-module. Let $\mathcal{F}$ be a
 coherent $\mathcal{O}_X$-module. If $\text{Ass}(\mathcal{F})$ does not
@@ -11167,22 +11183,25 @@ Condition (2) is immediate.
 \medskip\noindent
 For condition (3) we choose $\mathcal{G} = \mathcal{O}_Z$.
 In this case, if $Z$ is a closed point of $X$, then there is
-nothing the show. If $\dim(Z) > 0$, then we will show that
+nothing to show. If $\dim(Z) > 0$, then we will show that
 $\Gamma(Z, \mathcal{L}^{\otimes n}|_Z) = 0$
-for $n < 0$. Namely, let $s$ be a nonzero section of a negative
-power of $\mathcal{L}|_Z$. Choose a nonzero section $t$ of a positive
-power of $\mathcal{L}|_Z$ (this is possible as $\mathcal{L}$ is ample, see
-Properties, Proposition \ref{properties-proposition-characterize-ample}).
-Then $s^{\deg(t)} \otimes t^{\deg(s)}$
-is a nonzero global section of $\mathcal{O}_Z$
+for $n < 0$. Namely, suppose that
+$s\in\Gamma(Z,\mathcal L^{\otimes -a}|_Z)$ is nonzero for some $a>0$.
+Choose $b>0$ and a nonzero section
+$t\in\Gamma(Z,\mathcal L^{\otimes b}|_Z)$ (this is possible as
+$\mathcal{L}$ is ample, see Properties, Proposition
+\ref{properties-proposition-characterize-ample}). Then
+$s^{\otimes b}\otimes t^{\otimes a}$ is a nonzero global section of
+$\mathcal{O}_Z$
 (because $Z$ is integral) and hence
 a unit (Lemma \ref{lemma-proper-geometrically-reduced-global-sections}).
 This implies that $t$ is a trivializing section
-of a positive power of $\mathcal{L}$.
-Thus the function $n \mapsto \dim_k \Gamma(X, \mathcal{L}^{\otimes n})$
+of a positive power of $\mathcal{L}|_Z$.
+Thus the function
+$n \mapsto \dim_k \Gamma(Z, \mathcal{L}^{\otimes n}|_Z)$
 is bounded on an infinite set of positive integers which contradicts
 asymptotic Riemann-Roch
-(Proposition \ref{proposition-asymptotic-riemann-roch})
+(Proposition \ref{proposition-asymptotic-riemann-roch}, applied to $Z$)
 since $\dim(Z) > 0$.
 \end{proof}
 

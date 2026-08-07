@@ -2,33 +2,37 @@
 
 - Frozen surface: 661 source targets through printed page 278.
 - Stage: sequential source review and statement-level Stacks integration.
-- Completed checkpoint: Chapter III, Section 5, no. 76, printed pages 199--271.
-- Reviewed source units: 530 through 537 append-only decision rows
-  (164 equivalent, 159 stronger, 68 extensions, 94 new-statement decisions,
-  43 historical references, 2 outside scope).
-- Current Stacks references added: 298 across `topology.tex`, `sheaves.tex`,
+- Completed checkpoint: Chapter III, Section 5, no. 77, printed pages 199--273.
+- Reviewed source units: 548 through 555 append-only decision rows
+  (167 equivalent, 164 stronger, 70 extensions, 101 new-statement decisions,
+  44 historical references, 2 outside scope).
+- Current Stacks references added: 308 across `topology.tex`, `sheaves.tex`,
   `modules.tex`, `homology.tex`, `coherent.tex`, `cohomology.tex`,
   `divisors.tex`, `constructions.tex`, `schemes.tex`, `morphisms.tex`,
   `derham.tex`, `algebra.tex`, `properties.tex`, `varieties.tex`,
   `simplicial.tex`, `more-algebra.tex`, `dualizing.tex`, `local-cohomology.tex`,
   and `duality.tex`.
-- New Stacks theorem/lemma statements: 29, plus the paracompactness and
+- New Stacks theorem/lemma statements: 33, plus the paracompactness and
   locally-constant-sheaf definitions, the graded-conventions remark, and
   the internal graded Ext and degreewise graded dual definitions;
   each new theorem/lemma has a complete proof and no assigned tag.
-- Source/proof issues or convention boundaries: 858 found by direct
+- Source/proof issues or convention boundaries: 890 found by direct
   authority-page and TeX inspection, all resolved and
   retained in `issues.csv`.
 - Source corrections: 4, including the no. 74 repeated resolution index
   restored from printed `L_p` to quantified `L_i` as correction `C0040`
   and the no. 75 conflict between the general and degree-one Koszul signs
   resolved as correction `C0041`.
-- Existing Stacks defects corrected: 9, comprising the refinement-homotopy
+- Existing Stacks defects corrected: 15, comprising the refinement-homotopy
   sign, repeated coefficient sheaves, wrong boundary domain, wrong boundary
   degree, incomplete low-degree citation, and multiplication by a negative
   power before localization in the Proj shift proof, plus the wrong
   projective-space dimension, reversed vertical exponents, and wrong ambient
-  local-ring subscript in the Enriques--Severi--Zariski proof.
+  local-ring subscript in the Enriques--Severi--Zariski proof, plus the missing
+  closing parenthesis, wrong inverse-prime membership, and false arbitrary
+  Veronese tensor isomorphism in the d-uple proof, and the ambient-scheme
+  switch, undefined signed-degree notation, and nearby infinitive typo in the
+  negative-twist proof.
 - Validation: `intake.json`, `check.json`, and `mcheck.json` all PASS.
 - Builds: `topology.pdf`, `sheaves.pdf`, `modules.pdf`, `homology.pdf`,
   `coherent.pdf`, `cohomology.pdf`, `divisors.pdf`, `constructions.pdf`,
@@ -38,7 +42,7 @@
   completed; every
   affected statement page passed direct 1100 dpi visual inspection. See
   `qa.json`.
-- Historical notes added: 133, preserving the source's operator calculus,
+- Historical notes added: 143, preserving the source's operator calculus,
   image-complex construction, two-covering double complex, and unproved
   cofinal-vanishing question, together with the classical closed-point to
   reduced-scheme bridge, the classical-map to scheme-morphism bridge, and the
@@ -353,6 +357,32 @@
   documented. Authority physical pages 75--76 and output pages algebra
   270--271 and varieties 109--111 passed direct 1100 dpi-equivalent
   inspection after two final serial builds, with no high-detail crop needed
-  and an exact hard stop before no. 77 on printed page 271.
-- Next unit: `fac:III:5:no:77`.
+  and an exact hard stop before no. 77 on printed page 271; no. 77 now proves
+  the global top-Ext test for projective dimension, the exact all-integer-twist
+  criterion through graded local duality, the high-Veronese projective-
+  dimension theorem, and its smooth-projective embedding corollary in four
+  completely proved untagged lemmas. The historical first-kind terminology is
+  retained without being promoted to a general definition. The high-Veronese
+  proof makes `P_d`, `N_d`, the saturated coordinate ideal, algebraically
+  closed base, reducedness, connectedness, component dimensions, and the
+  positive/zero/negative twist split explicit. Tags 0AG7, 01YS, 0FD7, 0BUG,
+  0B5J, and 067U provide the exact existing recovery, positive and negative
+  section vanishing, global-functions, Veronese, and regular-immersion inputs;
+  the untagged negative-twist criterion supplies the local-to-negative
+  direction. No official tag is invented for any assembled statement. A
+  bounded independent read-only
+  review checked the exact component and the four affected chapters against
+  base `2fb2edc6e7bb82c0aeab78342fef45fd3c28ef8a`; it made zero edits, used no
+  further agents, and its three concrete findings were independently verified
+  and closed by lead review. That review also propagated six global target
+  repairs: the d-uple statement parenthesis, inverse-prime membership, false
+  tensor isomorphism, the negative-twist proof's ambient-scheme switch and
+  signed tensor-power notation, and its nearby infinitive typo. Authority
+  physical pages 76--78 and output pages algebra 130 and 265--266, coherent
+  38--42, constructions 25--26, and varieties 109--110 passed direct 1100
+  dpi-equivalent inspection after two final serial builds. Every native TeX
+  diagram is intact, no edited line creates an overfull box or unresolved
+  reference, no high-detail crop was needed, and the scope stops exactly before
+  no. 78 on printed page 273.
+- Next unit: `fac:III:5:no:78`.
 - No statement is mapped by lexical similarity alone.
