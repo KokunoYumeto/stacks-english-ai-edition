@@ -7287,6 +7287,18 @@ $\bigoplus_{n \geq 0} (f^n)/(f^{n + 1}) \cong k[x]$ is a polynomial ring.
 
 \begin{lemma}
 \label{lemma-regular-koszul-regular}
+\begin{reference}
+\cite[Chapter III, \S 3, no. 62, Proposition 1, pp. 254--255]{FAC}
+\end{reference}
+\begin{history}
+The hypothesis of the cited proposition is precisely the injectivity
+condition in the first sentence below, applied to
+$t_0^k, \ldots, t_r^k$. In particular, it does not include the
+nonvanishing condition sometimes imposed in the definition of a regular
+sequence. The source uses the resulting exactness of the positive cochain
+Koszul complex to identify degree-zero cocycles and to kill its intermediate
+cohomology.
+\end{history}
 Let $R$ be a ring, $M$ an $R$-module, and $f_1, \ldots, f_r \in R$
 such that for $i = 1, \ldots, r$ multiplication by $f_i$
 is injective on $M/(f_1, \ldots, f_{i - 1})M$. Then $f_1, \ldots, f_r$
@@ -7885,21 +7897,37 @@ We continue the discussion from Section \ref{section-koszul-regular}.
 
 \begin{lemma}
 \label{lemma-vanishing-extended-alternating-koszul}
-Let $R$ be a ring. Let $f_1, \ldots, f_r \in R$ be an
-Koszul-regular sequence. Then the extended alternating
-{\v C}ech complex $R \to \bigoplus\nolimits_{i_0} R_{f_{i_0}} \to
-\bigoplus\nolimits_{i_0 < i_1} R_{f_{i_0}f_{i_1}} \to
-\ldots \to R_{f_1\ldots f_r}$ from Section \ref{section-alternating-cech}
-only has cohomology in degree $r$.
+\begin{reference}
+\cite[Chapter III, \S 3, no. 62, Proposition 1, pp. 254--255]{FAC}
+\end{reference}
+\begin{history}
+The cited proposition proves the finite-power, graded-module instance for
+the positive truncation of the cochain Koszul complex. Its sequence has
+$r + 1$ terms $t_0^k, \ldots, t_r^k$: exactness of the augmented complex
+identifies its degree-zero cocycles with the image of the module and makes
+the intermediate cohomology groups vanish. The module formulation below
+also applies without a grading or a homogeneity restriction.
+\end{history}
+Let $R$ be a ring and let $M$ be an $R$-module.
+Let $f_1, \ldots, f_r \in R$ be an $M$-Koszul-regular sequence.
+Then the extended alternating {\v C}ech complex
+$$
+M \to \bigoplus\nolimits_{i_0} M_{f_{i_0}} \to
+\bigoplus\nolimits_{i_0 < i_1} M_{f_{i_0}f_{i_1}} \to
+\ldots \to M_{f_1\ldots f_r}
+$$
+from Section \ref{section-alternating-cech} only has cohomology in
+degree $r$.
 \end{lemma}
 
 \begin{proof}
 By Lemma \ref{lemma-mult-koszul-regular} and induction the sequence
-$f_1, \ldots, f_{r - 1}, f_r^n$ is Koszul regular for all $n \geq 1$.
-By Lemma \ref{lemma-change-basis} any permutation of a Koszul regular
-sequence is a Koszul regular sequence. Hence we see that we may replace
-any (or all) $f_i$ by its $n$th power and still have a Koszul regular
-sequence. Thus $K_\bullet(R, f_1^n, \ldots, f_r^n)$ has nonzero
+$f_1, \ldots, f_{r - 1}, f_r^n$ is $M$-Koszul-regular for all
+$n \geq 1$. By Lemma \ref{lemma-change-basis} and tensoring with $M$,
+any permutation of an $M$-Koszul-regular sequence is
+$M$-Koszul-regular. Hence we see that we may replace any (or all) $f_i$
+by its $n$th power and still have an $M$-Koszul-regular sequence. Thus
+$K_\bullet(R, f_1^n, \ldots, f_r^n) \otimes_R M$ has nonzero
 cohomology only in homological degree $0$. This implies what we want by
 Lemma \ref{lemma-extended-alternating-Cech-is-colimit-koszul}.
 \end{proof}
