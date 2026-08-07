@@ -2,19 +2,20 @@
 
 - Frozen surface: 661 source targets through printed page 278.
 - Stage: sequential source review and statement-level Stacks integration.
-- Completed checkpoint: Chapter III, Section 4, no. 68, printed pages 199--262.
-- Reviewed decisions: 413 (128 equivalent, 155 stronger, 56 extensions,
-  32 new-statement decisions, 40 historical references, 2 outside scope).
-- Current Stacks references added: 261 across `topology.tex`, `sheaves.tex`,
+- Completed checkpoint: Chapter III, Section 4, no. 69, printed pages 199--263.
+- Reviewed decisions: 429 (132 equivalent, 156 stronger, 59 extensions,
+  40 new-statement decisions, 40 historical references, 2 outside scope).
+- Current Stacks references added: 268 across `topology.tex`, `sheaves.tex`,
   `modules.tex`, `homology.tex`, `coherent.tex`, `cohomology.tex`,
   `divisors.tex`, `constructions.tex`, `schemes.tex`, `morphisms.tex`,
   `derham.tex`, `algebra.tex`, `properties.tex`, `varieties.tex`,
-  `simplicial.tex`, and `more-algebra.tex`.
-- New Stacks theorem/lemma statements: 17, plus the paracompactness and
+  `simplicial.tex`, `more-algebra.tex`, `dualizing.tex`, `local-cohomology.tex`,
+  and `duality.tex`.
+- New Stacks theorem/lemma statements: 18, plus the paracompactness and
   locally-constant-sheaf definitions, the graded-conventions remark, and
   the internal graded Ext definition;
   each new theorem/lemma has a complete proof and no assigned tag.
-- Source/proof issues or convention boundaries: 676 found by direct
+- Source/proof issues or convention boundaries: 704 found by direct
   authority-page and TeX inspection, all resolved and
   retained in `issues.csv`.
 - Existing Stacks defects corrected: 6, comprising the refinement-homotopy
@@ -25,12 +26,12 @@
 - Builds: `topology.pdf`, `sheaves.pdf`, `modules.pdf`, `homology.pdf`,
   `coherent.pdf`, `cohomology.pdf`, `divisors.pdf`, `constructions.pdf`,
   `schemes.pdf`, `morphisms.pdf`, `derham.pdf`, `algebra.pdf`,
-  `properties.pdf`, `varieties.pdf`, `simplicial.pdf`, and
-  `more-algebra.pdf`
+  `properties.pdf`, `varieties.pdf`, `simplicial.pdf`, `more-algebra.pdf`,
+  `dualizing.pdf`, `local-cohomology.pdf`, and `duality.pdf`
   completed; every
   affected statement page passed direct 1100 dpi visual inspection. See
   `qa.json`.
-- Historical notes added: 100, preserving the source's operator calculus,
+- Historical notes added: 105, preserving the source's operator calculus,
   image-complex construction, two-covering double complex, and unproved
   cofinal-vanishing question, together with the classical closed-point to
   reduced-scheme bridge, the classical-map to scheme-morphism bridge, and the
@@ -203,6 +204,23 @@
   correction. Authority physical pages 66--67 and algebra output pages
   129--131, 171--172, and 272 passed direct 1100 dpi inspection after two
   serial builds, with an exact hard stop before no. 69 on printed page 262
-  and no high-detail crop needed.
-- Next unit: `fac:III:4:no:69`.
+  and no high-detail crop needed; no. 69 now identifies the positive graded
+  Koszul truncation as a free resolution of
+  `J_k=(t_0^k,...,t_r^k)` and computes its internal graded Ext. A new
+  completely proved equal-degree Koszul-ideal lemma records that reusable
+  bridge without an assigned tag. Tags 062F and 0913 retain regularity and
+  the finite-Koszul-to-extended-Cech colimit; tags 0954, 0DWR, 01YB, and
+  0G2H give the exact local-cohomology, punctured-open, and section forms,
+  with the `q+1` shift, low-degree exact sequence, cofinal ideals, and Ext
+  variance explicit. The `k=0` contractible stage and source condition-(TF)
+  boundary remain recorded rather than normalized away. Transcription entry
+  `T0040` remains separate from source correction. Authority physical pages
+  67--68 and output pages more-algebra 74--76, dualizing 12,
+  local-cohomology 2, coherent 25, and duality 80 passed direct 1100 dpi
+  inspection after two direct serial builds, with an exact hard stop before
+  no. 70 on printed page 263 and no high-detail crop needed. The aggregate
+  Makefile dependency path was rejected after its bounded attempt exposed an
+  unrelated marker cascade; direct named-master compilation is now the
+  recorded fail-closed build route.
+- Next unit: `fac:III:4:no:70`.
 - No statement is mapped by lexical similarity alone.
