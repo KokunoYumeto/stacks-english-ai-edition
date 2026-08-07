@@ -14,25 +14,25 @@
   "branch": "codex/ega-scaffold",
   "inputs": {
     "english_discovery": {
-      "manifest": "R172",
-      "manifest_bytes": 88062,
-      "manifest_sha256": "01D0226BD1A31B14A250C29C18F3DBAE0C7537B245AB1C119422EBBEAF0C133E",
+      "manifest": "R184",
+      "manifest_bytes": 92445,
+      "manifest_sha256": "5C64ECD32FD7C5458D2599D70ED667D2CF06D95517EFFA9C6D6DCEF7626913A0",
       "files": 127,
-      "bytes": 7283317,
-      "tree_sha256": "F5EBDCAAA7C5B4A426085B1C696E821B2F74B9E5E58582664955AD37E8C2BC59",
+      "bytes": 7283321,
+      "tree_sha256": "3BFB1C5103093481246EF4A6365E08544F6D5E19ACC0EA63E717F3F3643F064D",
       "discovery_units": 9155,
       "role": "complete discovery text; not canonical authority"
     },
     "french_authority": {
       "status": "active page-by-page production",
-      "snapshot": "EGA II printed p.9 sealed locally; printed p.10 next",
-      "page_gate": "E2P9.json",
-      "page_gate_sha256": "AED8792DDE8CAD1B3B3B61F1E857AD786011744C181A397DE967506E876B3AD5",
+      "snapshot": "EGA II printed p.19 sealed and published; printed p.20 next",
+      "page_gate": "E2P19.json",
+      "page_gate_sha256": "6A98810B0DBA2D8B238B61AB3985ABAB44497FB4E83A3399E9F7D288E84E4F45",
       "role": "diplomatic textual authority and claim-admission gate"
     },
     "incremental_notes": {
-      "bytes": 340356,
-      "sha256": "8C4E31D85658F6A8D82A809FB7FC4D6B89B7A02B9F9FBF5B7C0480FDD32D78FF",
+      "bytes": 399689,
+      "sha256": "4B4811B6F24F139020E15CF27D7BFA82C3872F0A549DCFF4F64B28F4454737D6",
       "role": "source evidence to normalize; not a completed integration"
     }
   },
@@ -51,6 +51,21 @@
     "topics_touched": 8,
     "existing_official_tags_referenced": 12,
     "theorem_equivalences_claimed": 0
+  },
+  "statement_review_snapshot": {
+    "file": "smap.csv",
+    "statement_edge_rows": 22,
+    "source_units": 14,
+    "existing_official_tag_rows": 21,
+    "distinct_existing_official_tags": 15,
+    "local_untagged_rows": 1,
+    "full_statement_equivalences": 3
+  },
+  "residual_snapshot": {
+    "file": "resid.csv",
+    "rows": 8,
+    "open_gaps": 2,
+    "integrated_local_pending_upstream": 1
   },
   "edition_interface": "interface.json",
   "correction_channel": "reports/findings.jsonl",

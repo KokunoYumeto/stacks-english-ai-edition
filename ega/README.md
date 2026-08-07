@@ -14,14 +14,14 @@ or published here.
 ## Current snapshot
 
 - Stacks upstream base: `a04446e57ec1fbc252a871afcec7752fb2807b14`.
-- English discovery manifest: R172, 88,062 bytes, SHA-256
-  `01D0226BD1A31B14A250C29C18F3DBAE0C7537B245AB1C119422EBBEAF0C133E`;
-  127 files, 7,283,317 bytes, tree SHA-256
-  `F5EBDCAAA7C5B4A426085B1C696E821B2F74B9E5E58582664955AD37E8C2BC59`.
+- English discovery manifest: R184, 92,445 bytes, SHA-256
+  `5C64ECD32FD7C5458D2599D70ED667D2CF06D95517EFFA9C6D6DCEF7626913A0`;
+  127 files, 7,283,321 bytes, tree SHA-256
+  `3BFB1C5103093481246EF4A6365E08544F6D5E19ACC0EA63E717F3F3643F064D`.
 - French authority: production is active; the current interface snapshot has
-  EGA II printed p.9 sealed locally and printed p.10 as the next cursor.
-- Existing incremental pre-Stacks notes: 340,356 bytes, SHA-256
-  `8C4E31D85658F6A8D82A809FB7FC4D6B89B7A02B9F9FBF5B7C0480FDD32D78FF`.
+  EGA II printed p.19 sealed and printed p.20 as the next cursor.
+- Existing incremental pre-Stacks notes: 399,689 bytes, SHA-256
+  `4B4811B6F24F139020E15CF27D7BFA82C3872F0A549DCFF4F64B28F4454737D6`.
   They are evidence to normalize into the new schema, not a completed
   deliverable or an upstream mapping.
 - Verified discovery inventory: 127 exact source files and 9,155
@@ -33,6 +33,15 @@ or published here.
   across 22 EGA I subsections and eight topics. These are explicitly
   topic-level split correspondences; they claim zero theorem equivalences and
   zero complete source-subsection coverage.
+- First statement-level slice: all fifteen numbered units in EGA I 1.1.1--1.1.15
+  were checked directly against admitted French and the pinned Stacks base.
+  `smap.csv` records 22 exact edges across fourteen units; `resid.csv` records
+  every partial, derived, unlabelled, terminology, or missing-tag remainder.
+  EGA I 1.1.3 has no direct tagged target.
+- First local integration: EGA I Proposition 1.1.15 is now a cited Algebra
+  lemma with an explicit use in `more-algebra.tex`. It fills a fact previously
+  used there without a named target. Its label is local and has no official
+  tag or upstream-acceptance claim.
 
 ## State model
 
@@ -65,12 +74,22 @@ append-only.
   the exact upstream Stacks snapshot. Candidates are not reviewed mappings.
 - `tmap.csv`: French-admitted topic-level bridges to existing Stacks sections;
   granularity and non-coverage claims are explicit in every row.
+- `smap.csv`: French-admitted statement and statement-component edges to
+  exact existing labels or explicitly untagged local labels.
+- `resid.csv`: noncoverage, partial coverage, terminology migration,
+  stronger-target, derived, and upstream-pending residuals.
+- `agent.csv`: exact task IDs, bounded scopes, runtimes when exposed, returned
+  findings, owner checks, accepted/rejected dispositions, and write claims.
 - `interface.json`: hash-bound read-only contract with the active French and
   English EGA edition task.
+- `log.md`: concise operating log, agent/Spark TODOs, and exact outcome
+  records.
 - `../reports/findings.jsonl`: append-only suspected-correction referrals;
   the edition task alone decides and mutates canonical source.
 
-The immediate work is theorem-level comparison within the bounded EGA I
-bridges and progressive topic classification across the remaining corpus.
-Mathematical Stacks chapter edits begin only after a bounded unit has direct
-evidence and an explicit reviewed disposition.
+The immediate work is sequential statement-level comparison across EGA 0--IV,
+continuing after EGA I 1.1.15 while EGA II is admitted through printed p.19.
+The complete English discovery surface drives provisional candidates only.
+Mathematical Stacks chapter edits occur only after a bounded unit has direct
+French evidence, a reviewed disposition, explicit residual accounting, and
+owner verification.

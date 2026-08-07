@@ -26,6 +26,16 @@ if interface.get("english_discovery", {}).get("manifest_sha256") != scope["input
     ERRORS.append("edition interface English manifest mismatch")
 if interface.get("french_cursor", {}).get("page_gate_sha256") != scope["inputs"]["french_authority"]["page_gate_sha256"]:
     ERRORS.append("edition interface French page-gate mismatch")
+admitted_receipts = {
+    (entry.get("manifest"), entry.get("manifest_sha256"))
+    for entry in interface.get("admitted_french_receipts", [])
+}
+current_receipt = (
+    interface.get("french_cursor", {}).get("manifest"),
+    interface.get("french_cursor", {}).get("manifest_sha256"),
+)
+if current_receipt not in admitted_receipts:
+    ERRORS.append("current French manifest missing from admitted receipt registry")
 
 tables = {
     "src.csv": ("source_id", re.compile(r"ega\.[a-z0-9.-]+$")),
@@ -33,6 +43,7 @@ tables = {
     "dec.csv": ("decision_id", re.compile(r"D\d{6}$")),
     "issues.csv": ("issue_id", re.compile(r"I\d{6}$")),
     "fb.csv": ("feedback_id", re.compile(r"F\d{6}$")),
+    "agent.csv": ("run_id", re.compile(r"A\d{6}$")),
 }
 
 counts = {}
@@ -139,7 +150,6 @@ if tmap_path.exists():
                 continue
             tag, label = raw.split(",", 1)
             tag_map[label] = tag
-    french_sha = interface["french_cursor"]["manifest_sha256"]
     upstream = scope["stacks_upstream"]
     source_units = set()
     touched_topics = set()
@@ -152,7 +162,7 @@ if tmap_path.exists():
             ERRORS.append(f"reviewed mapping has unknown unit {row['source_unit']}")
         if row["authority_state"] != "french_admitted":
             ERRORS.append(f"reviewed mapping lacks French admission {row['map_id']}")
-        if row["source_receipt_sha256"] != french_sha:
+        if (row["source_receipt"], row["source_receipt_sha256"]) not in admitted_receipts:
             ERRORS.append(f"reviewed mapping has wrong French receipt {row['map_id']}")
         if row["stacks_commit"] != upstream:
             ERRORS.append(f"reviewed mapping has wrong Stacks commit {row['map_id']}")
@@ -194,6 +204,213 @@ if tmap_path.exists():
     }
     if review_snapshot != actual_review:
         ERRORS.append("scope review snapshot does not match tmap.csv")
+
+smap_path = ROOT / "smap.csv"
+if smap_path.exists():
+    statement_edges = rows("smap.csv")
+    counts["smap.csv"] = len(statement_edges)
+    edge_ids = [row["edge_id"] for row in statement_edges]
+    if len(edge_ids) != len(set(edge_ids)):
+        ERRORS.append("duplicate edge_id in smap.csv")
+    for edge_id in edge_ids:
+        if not re.fullmatch(r"S\d{6}", edge_id):
+            ERRORS.append(f"invalid edge_id {edge_id!r}")
+
+    unit_ids = {row["unit_id"] for row in rows("units.csv")}
+    decision_ids = {row["decision_id"] for row in rows("dec.csv")}
+    tag_map = {}
+    with (ROOT.parent / "tags" / "tags").open(encoding="utf-8") as handle:
+        for raw in handle:
+            raw = raw.rstrip("\n")
+            if not raw or "," not in raw:
+                continue
+            tag, label = raw.split(",", 1)
+            tag_map[label] = tag
+
+    allowed_relations = {
+        "equivalent", "split", "merged", "partial",
+        "entailed_by_stronger",
+    }
+    allowed_coverage_claims = {
+        "component", "full_statement", "covered_unlabelled",
+        "covered_derived",
+    }
+    source_units = set()
+    existing_tags = set()
+    existing_tag_rows = 0
+    local_untagged_rows = 0
+    full_statement_equivalences = 0
+    for row in statement_edges:
+        source_units.add(row["source_unit"])
+        if row["source_unit"] not in unit_ids:
+            ERRORS.append(f"statement edge has unknown unit {row['source_unit']}")
+        if row["authority_state"] != "french_admitted":
+            ERRORS.append(f"statement edge lacks French admission {row['edge_id']}")
+        if (row["source_receipt"], row["source_receipt_sha256"]) not in admitted_receipts:
+            ERRORS.append(f"statement edge has wrong French receipt {row['edge_id']}")
+        if row["decision_id"] not in decision_ids:
+            ERRORS.append(f"statement edge has unknown decision {row['edge_id']}")
+        if row["relation"] not in allowed_relations:
+            ERRORS.append(f"invalid statement relation {row['edge_id']}")
+        if row["coverage_claim"] not in allowed_coverage_claims:
+            ERRORS.append(f"invalid statement coverage claim {row['edge_id']}")
+        for field in ("source_part", "evidence"):
+            if not row[field].strip():
+                ERRORS.append(
+                    f"blank statement {field} for {row['edge_id']}")
+
+        target = ROOT.parent / row["stacks_file"]
+        if not target.is_file():
+            ERRORS.append(f"missing statement target {row['stacks_file']}")
+        else:
+            prefix = target.stem + "-"
+            if not row["stacks_label"].startswith(prefix):
+                ERRORS.append(f"statement target label/file mismatch {row['edge_id']}")
+            else:
+                raw_label = row["stacks_label"][len(prefix):]
+                marker = "\\label{" + raw_label + "}"
+                if marker not in target.read_text(encoding="utf-8"):
+                    ERRORS.append(f"statement target label absent {row['edge_id']}")
+
+        if row["review_state"] == "reviewed_existing":
+            if row["stacks_commit"] != scope["stacks_upstream"]:
+                ERRORS.append(f"existing statement edge has wrong commit {row['edge_id']}")
+            if not row["official_tag"]:
+                ERRORS.append(f"existing statement edge lacks official tag {row['edge_id']}")
+            elif tag_map.get(row["stacks_label"]) != row["official_tag"]:
+                ERRORS.append(f"statement official tag mismatch {row['edge_id']}")
+            else:
+                existing_tag_rows += 1
+                existing_tags.add(row["official_tag"])
+        elif row["review_state"] == "integrated_local":
+            if row["stacks_commit"] != "LOCAL_WORKTREE":
+                ERRORS.append(f"local statement edge has wrong commit state {row['edge_id']}")
+            if row["official_tag"]:
+                ERRORS.append(f"local statement edge invents official tag {row['edge_id']}")
+            local_untagged_rows += 1
+        else:
+            ERRORS.append(f"invalid statement review state {row['edge_id']}")
+
+        if row["relation"] == "equivalent" and row["coverage_claim"] == "full_statement":
+            full_statement_equivalences += 1
+
+    actual_statement_review = {
+        "file": "smap.csv",
+        "statement_edge_rows": len(statement_edges),
+        "source_units": len(source_units),
+        "existing_official_tag_rows": existing_tag_rows,
+        "distinct_existing_official_tags": len(existing_tags),
+        "local_untagged_rows": local_untagged_rows,
+        "full_statement_equivalences": full_statement_equivalences,
+    }
+    if scope.get("statement_review_snapshot") != actual_statement_review:
+        ERRORS.append("scope statement review snapshot does not match smap.csv")
+
+residual_path = ROOT / "resid.csv"
+if residual_path.exists():
+    residuals = rows("resid.csv")
+    counts["resid.csv"] = len(residuals)
+    residual_ids = [row["residual_id"] for row in residuals]
+    if len(residual_ids) != len(set(residual_ids)):
+        ERRORS.append("duplicate residual_id in resid.csv")
+    unit_ids = {row["unit_id"] for row in rows("units.csv")}
+    decision_ids = {row["decision_id"] for row in rows("dec.csv")}
+    allowed_residual_states = {
+        "known_semantic_difference", "open_gap", "covered_unlabelled",
+        "covered_by_stronger", "covered_derived",
+        "integrated_local_pending_upstream",
+    }
+    residual_state_by_unit = {}
+    for row in residuals:
+        if not re.fullmatch(r"R\d{6}", row["residual_id"]):
+            ERRORS.append(f"invalid residual_id {row['residual_id']!r}")
+        if row["source_unit"] not in unit_ids:
+            ERRORS.append(f"residual has unknown unit {row['residual_id']}")
+        if row["decision_id"] not in decision_ids:
+            ERRORS.append(f"residual has unknown decision {row['residual_id']}")
+        if row["status"] not in allowed_residual_states:
+            ERRORS.append(f"invalid residual state {row['residual_id']}")
+        for field in ("kind", "evidence", "disposition"):
+            if not row[field].strip():
+                ERRORS.append(f"blank residual {field} for {row['residual_id']}")
+        residual_state_by_unit.setdefault(row["source_unit"], set()).add(
+            row["status"])
+
+    if smap_path.exists():
+        statement_edges = rows("smap.csv")
+        local_units = {
+            row["source_unit"] for row in statement_edges
+            if row["review_state"] == "integrated_local"
+        }
+        pending_local_units = {
+            row["source_unit"] for row in residuals
+            if row["status"] == "integrated_local_pending_upstream"
+        }
+        if local_units != pending_local_units:
+            ERRORS.append(
+                "local statement edges and upstream-pending residuals differ")
+        for row in statement_edges:
+            states = residual_state_by_unit.get(row["source_unit"], set())
+            if row["relation"] == "partial" and not (
+                    {"open_gap", "covered_derived"} & states):
+                ERRORS.append(
+                    f"partial statement edge lacks residual {row['edge_id']}")
+            if row["relation"] == "entailed_by_stronger" and (
+                    "covered_by_stronger" not in states):
+                ERRORS.append(
+                    f"stronger statement edge lacks residual {row['edge_id']}")
+            if row["coverage_claim"] == "covered_unlabelled" and (
+                    "covered_unlabelled" not in states):
+                ERRORS.append(
+                    f"unlabelled statement edge lacks residual {row['edge_id']}")
+            if row["coverage_claim"] == "covered_derived" and (
+                    "covered_derived" not in states):
+                ERRORS.append(
+                    f"derived statement edge lacks residual {row['edge_id']}")
+    actual_residual_snapshot = {
+        "file": "resid.csv",
+        "rows": len(residuals),
+        "open_gaps": sum(row["status"] == "open_gap" for row in residuals),
+        "integrated_local_pending_upstream": sum(
+            row["status"] == "integrated_local_pending_upstream"
+            for row in residuals
+        ),
+    }
+    if scope.get("residual_snapshot") != actual_residual_snapshot:
+        ERRORS.append("scope residual snapshot does not match resid.csv")
+
+agent_path = ROOT / "agent.csv"
+if agent_path.exists():
+    agent_rows = rows("agent.csv")
+    task_ids = [row["task_id"] for row in agent_rows]
+    if len(task_ids) != len(set(task_ids)):
+        ERRORS.append("duplicate task_id in agent.csv")
+    for row in agent_rows:
+        if not (
+                re.fullmatch(
+                    r"[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}",
+                    row["task_id"])
+                or re.fullmatch(r"/root/[a-z0-9_]+", row["task_id"])):
+            ERRORS.append(f"invalid agent task id {row['run_id']}")
+        if row["status"] != "completed":
+            ERRORS.append(f"non-completed recorded agent run {row['run_id']}")
+        if row["duration_ms"] != "not_exposed":
+            try:
+                if int(row["duration_ms"]) <= 0:
+                    ERRORS.append(f"invalid agent duration {row['run_id']}")
+            except ValueError:
+                ERRORS.append(f"non-integer agent duration {row['run_id']}")
+        if row["writes"] != "none":
+            ERRORS.append(f"unexpected agent writes {row['run_id']}")
+        if row["model"] not in {
+                "gpt-5.3-codex-spark", "inherited-parent"}:
+            ERRORS.append(f"invalid agent model {row['run_id']}")
+        if row["thinking"] not in {"xhigh", "inherited"}:
+            ERRORS.append(f"invalid agent effort {row['run_id']}")
+        for field in (
+                "scope", "returned", "owner_check", "disposition"):
+            if not row[field].strip():
+                ERRORS.append(f"blank agent {field} for {row['run_id']}")
 
 for name, (field, pattern) in tables.items():
     data = rows(name)

@@ -3584,6 +3584,24 @@ by (2) which implies that $f$ is a unit.
 \end{proof}
 
 \begin{lemma}
+\label{lemma-open-containing-vanishing-jacobson-radical}
+\begin{reference}
+\cite[Proposition 1.1.15]{EGA1}
+\end{reference}
+Let $R$ be a ring and let $I \subset R$ be an ideal contained in the
+Jacobson radical of $R$. If $U \subset \Spec(R)$ is an open subset and
+$V(I) \subset U$, then $U = \Spec(R)$.
+\end{lemma}
+
+\begin{proof}
+Suppose that $Z = \Spec(R) \setminus U$ is nonempty. Write $Z = V(J)$
+for an ideal $J \subset R$. Then $J$ is a proper ideal, so it is contained
+in a maximal ideal $\mathfrak m$. Since $I$ is contained in every maximal
+ideal, we have $\mathfrak m \in V(I) \cap V(J)$. This contradicts
+$V(I) \subset U$.
+\end{proof}
+
+\begin{lemma}
 \label{lemma-surjective-on-spec-units}
 Let $\varphi : R \to S$ be a ring map such that the induced map
 $\Spec(S) \to \Spec(R)$ is surjective. Then an element $x \in R$

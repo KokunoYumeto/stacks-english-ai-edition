@@ -8,28 +8,41 @@
     "cross_tree_writes": false
   },
   "french_cursor": {
-    "admitted_through": "EGA II printed p.9, ending with Corollary 1.4.2",
-    "next": "NUMDAM EGA II PDF one-based p.7 / printed p.10, beginning Proposition 1.4.3",
-    "append_state": "true EOF; no temporary suffix",
-    "manifest": "F8.json",
-    "manifest_sha256": "2137BF64B9BD210176B58075DBDB58E7C8A5669F9EFAD61410510A01D32D0BC0",
-    "page_gate": "E2P9.json",
-    "page_gate_sha256": "AED8792DDE8CAD1B3B3B61F1E857AD786011744C181A397DE967506E876B3AD5",
-    "ledger": "E2P9_FR.jsonl",
-    "ledger_sha256": "A005C06CD4A2AAE2B95DFAC68287840CF3247E7538235BF7DABF75FAAF8DB7C9"
+    "admitted_through": "EGA II printed p.19, completing 1.7.14, admitting Proposition 1.7.15, and opening 2.1.1 through la somme directe",
+    "next": "NUMDAM EGA II PDF one-based p.17 / printed p.20, continuation of 2.1.1",
+    "append_state": "temporary final 15-byte notation close; remove only it before the next authority append",
+    "manifest": "F18.json",
+    "manifest_sha256": "D7D933D809D962E7770DDCB4734A6BFFEBF60C2CC4082DB116E5E6A470015CD3",
+    "page_gate": "E2P19.json",
+    "page_gate_sha256": "6A98810B0DBA2D8B238B61AB3985ABAB44497FB4E83A3399E9F7D288E84E4F45",
+    "ledger": "E2P19_FR.jsonl",
+    "ledger_sha256": "BA76DFE6E3F8B778FBF3AB0B0B476F694C24B2E9B7A33D5CBB4ED4BB56943218"
   },
+  "admitted_french_receipts": [
+    {
+      "manifest": "F8.json",
+      "manifest_sha256": "2137BF64B9BD210176B58075DBDB58E7C8A5669F9EFAD61410510A01D32D0BC0",
+      "role": "historical direct-authority receipt used by the existing EGA I topic bridges"
+    },
+    {
+      "manifest": "F18.json",
+      "manifest_sha256": "D7D933D809D962E7770DDCB4734A6BFFEBF60C2CC4082DB116E5E6A470015CD3",
+      "role": "current direct-authority receipt through EGA II printed p.19"
+    }
+  ],
   "english_discovery": {
-    "manifest": "R172.json",
-    "manifest_sha256": "01D0226BD1A31B14A250C29C18F3DBAE0C7537B245AB1C119422EBBEAF0C133E",
-    "ledger": "E2P9_EN.jsonl",
-    "ledger_sha256": "F101B421095CDBD8AE9D418685B91652CA06493FB3DE637C1D638C2F4A1F5272",
+    "manifest": "R184.json",
+    "manifest_sha256": "5C64ECD32FD7C5458D2599D70ED667D2CF06D95517EFFA9C6D6DCEF7626913A0",
+    "ledger": "E2P19_EN.jsonl",
+    "ledger_sha256": "436F290ABCE9D7DF3B9F3D6D8D2526F4C0EC6B2E4A84B21441C8F8C12D971061",
     "role": "discovery text only"
   },
   "semantic_notes": {
-    "sha256": "8C4E31D85658F6A8D82A809FB7FC4D6B89B7A02B9F9FBF5B7C0480FDD32D78FF",
+    "bytes": 399689,
+    "sha256": "4B4811B6F24F139020E15CF27D7BFA82C3872F0A549DCFF4F64B28F4454737D6",
     "role": "read-only source evidence requiring schema normalization"
   },
-  "public_checkpoint": "https://zenodo.org/records/21828032",
+  "public_checkpoint": "https://zenodo.org/records/21843070",
   "correction_channel": "reports/findings.jsonl",
   "required_finding_fields": [
     "stable_id",

@@ -14,7 +14,8 @@ It must never reclassify the semantic unit.
 Topic IDs use `ega-topic-<slug>`. Local Stacks labels may be recorded as
 evidence, but this branch never writes or claims an official Stacks tag.
 
-Decision, issue, and feedback IDs use zero-padded `D`, `I`, and `F` prefixes.
+Decision, issue, feedback, statement-edge, residual, and agent-run IDs use
+zero-padded `D`, `I`, `F`, `S`, `R`, and `A` prefixes.
 Rows are append-only. A correction names the earlier row in `supersedes`; it
 does not rewrite history.
 
@@ -48,6 +49,18 @@ row with `topical_overlap_only` establishes only a topic-level bridge. It does
 not establish theorem equivalence or complete coverage of the source
 subsection. Existing official tags in that table are read back from the fixed
 upstream `tags/tags`; the scaffold assigns no tags.
+
+`smap.csv` records statement or statement-component edges. Existing targets
+must resolve to the fixed upstream commit and exact `tags/tags` join. A local
+integration uses `LOCAL_WORKTREE`, must leave `official_tag` empty, and cannot
+be reported as upstream acceptance. Multiple edges may share a source unit;
+`resid.csv` records every known remainder that prevents a misleading
+single-edge completeness claim.
+
+`agent.csv` records the task identity, model/effort when exposed, exact bounded
+scope, status/runtime, returned result, owner verification, accepted or
+rejected disposition, and write claim. Agent output is evidence only; it
+cannot promote authority or mathematical review state.
 
 ## Feedback integration
 
