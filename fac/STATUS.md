@@ -2,28 +2,31 @@
 
 - Frozen surface: 661 source targets through printed page 278.
 - Stage: sequential source review and statement-level Stacks integration.
-- Completed checkpoint: Chapter III, Section 5, no. 77, printed pages 199--273.
-- Reviewed source units: 548 through 555 append-only decision rows
-  (167 equivalent, 164 stronger, 70 extensions, 101 new-statement decisions,
+- Completed checkpoint: Chapter III, Section 5, no. 78, printed pages 199--274.
+- Reviewed source units: 562 through 569 append-only decision rows
+  (174 equivalent, 166 stronger, 72 extensions, 111 new-statement decisions,
   44 historical references, 2 outside scope).
-- Current Stacks references added: 308 across `topology.tex`, `sheaves.tex`,
+- Current Stacks references added: 319 across `topology.tex`, `sheaves.tex`,
   `modules.tex`, `homology.tex`, `coherent.tex`, `cohomology.tex`,
   `divisors.tex`, `constructions.tex`, `schemes.tex`, `morphisms.tex`,
   `derham.tex`, `algebra.tex`, `properties.tex`, `varieties.tex`,
   `simplicial.tex`, `more-algebra.tex`, `dualizing.tex`, `local-cohomology.tex`,
   and `duality.tex`.
-- New Stacks theorem/lemma statements: 33, plus the paracompactness and
+- New Stacks theorem/lemma statements: 35, plus the paracompactness and
   locally-constant-sheaf definitions, the graded-conventions remark, and
-  the internal graded Ext and degreewise graded dual definitions;
+  the internal graded Ext and degreewise graded dual definitions, together
+  with the dimension-zero complete-intersection remark;
   each new theorem/lemma has a complete proof and no assigned tag.
-- Source/proof issues or convention boundaries: 890 found by direct
+- Source/proof issues or convention boundaries: 916 found by direct
   authority-page and TeX inspection, all resolved and
   retained in `issues.csv`.
-- Source corrections: 4, including the no. 74 repeated resolution index
+- Source corrections: 6, including the no. 74 repeated resolution index
   restored from printed `L_p` to quantified `L_i` as correction `C0040`
   and the no. 75 conflict between the general and degree-one Koszul signs
-  resolved as correction `C0041`.
-- Existing Stacks defects corrected: 15, comprising the refinement-homotopy
+  resolved as correction `C0041`, plus the no. 78 selected-basis degree
+  repaired as `C0042` (external edition correction `FAC-FR-C0041`) and its
+  repeated sign occurrence recorded separately as `C0043` linked to `C0041`.
+- Existing Stacks defects corrected: 17, comprising the refinement-homotopy
   sign, repeated coefficient sheaves, wrong boundary domain, wrong boundary
   degree, incomplete low-degree citation, and multiplication by a negative
   power before localization in the Proj shift proof, plus the wrong
@@ -32,7 +35,8 @@
   closing parenthesis, wrong inverse-prime membership, and false arbitrary
   Veronese tensor isomorphism in the d-uple proof, and the ambient-scheme
   switch, undefined signed-degree notation, and nearby infinitive typo in the
-  negative-twist proof.
+  negative-twist proof, plus the omitted rank-zero case and wrong derived
+  sheaf-Hom base ring in tag `0BQZ`.
 - Validation: `intake.json`, `check.json`, and `mcheck.json` all PASS.
 - Builds: `topology.pdf`, `sheaves.pdf`, `modules.pdf`, `homology.pdf`,
   `coherent.pdf`, `cohomology.pdf`, `divisors.pdf`, `constructions.pdf`,
@@ -42,7 +46,9 @@
   completed; every
   affected statement page passed direct 1100 dpi visual inspection. See
   `qa.json`.
-- Historical notes added: 143, preserving the source's operator calculus,
+- History blocks: 110 present, of which 106 are added relative to upstream
+  base `a04446e57ec1fbc252a871afcec7752fb2807b14`, preserving the source's
+  operator calculus,
   image-complex construction, two-covering double complex, and unproved
   cofinal-vanishing question, together with the classical closed-point to
   reduced-scheme bridge, the classical-map to scheme-morphism bridge, and the
@@ -383,6 +389,35 @@
   dpi-equivalent inspection after two final serial builds. Every native TeX
   diagram is intact, no edited line creates an overfull box or unresolved
   reference, no high-detail crop was needed, and the scope stops exactly before
-  no. 78 on printed page 273.
-- Next unit: `fac:III:5:no:78`.
+  no. 78 on printed page 273. No. 78 now gives the heterogeneous graded Koszul
+  resolution of a complete-intersection quotient and its full graded Ext
+  calculation, followed by the section, intermediate-vanishing, and top-duality
+  formulas for positive-dimensional projective complete intersections. Two new
+  completely proved untagged lemmas and one untagged dimension-zero remark retain
+  every selected degree, graded shift, differential sign, exceptional local-
+  duality term, and orientation dependence. Direct authority review confirms two
+  printed defects on p. 273: the degree of `e_(i_1...i_q)` omits the selected
+  indices, and the one-based sign `(-1)^j` again conflicts with `d(e_i)=P_i`.
+  Corrections `C0042` and `C0043` preserve the print, keep external identifier
+  `FAC-FR-C0041` in its own namespace, and link the repeated sign intervention to
+  global correction `C0041`. The printed all-degree section assertion is false in
+  dimension zero: `K[t_0,t_1]/(t_1)` has `A_(-1)=0` while its Proj point has a
+  nonzero section of `O(-1)`. The modern theorem therefore requires `p>=1`; the
+  following remark supplies the exact dimension-zero sequence and separately
+  retains part (c) through the intrinsic dualizing module and tag `0FVZ`. Three
+  bounded independent read-only audits checked the exact component, target gaps,
+  signs, shifts, source boundary, and zero-dimensional case against committed base
+  `4496ca9b56f104e360143b804020b373f020888c`; all made zero edits and spawned no
+  downstream agents. Lead recheck reproduced every accepted finding and also
+  repaired two pre-existing defects in tag `0BQZ`: rank zero is now admitted for
+  the identity immersion, and the final derived sheaf Hom is correctly taken over
+  `O_Y`. Authority physical pp. 78--79 and output pages More on Algebra 76--77,
+  Coherent 42--43, and Duality 37--38 passed direct 1100 dpi-equivalent inspection
+  after two final serial builds. All edited references resolve, no edited line
+  creates an overfull box, and only inherited end-matter phantom hyperlinks remain
+  undefined. The scope stops exactly before Section 6/no. 79 on printed p. 274.
+  The previously unsupported status count of 143 history notes was also reconciled
+  to 106 added history blocks and 110 total, with the correction retained as
+  issue `I000916`.
+- Next unit: `fac:III:6:no:79`.
 - No statement is mapped by lexical similarity alone.

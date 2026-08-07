@@ -4762,6 +4762,127 @@ projective dimension $r-p\leq r-k$ at every stalk. Lemma
 sufficiently high Veronese embedding.
 \end{proof}
 
+\begin{lemma}
+\label{lemma-projective-complete-intersection-cohomology}
+\begin{reference}
+\cite[Chapter III, \S 5, no. 78, Proposition 5 and remark,
+pp. 273--274]{FAC}
+\end{reference}
+\begin{history}
+The cited proposition starts with a pure $p$-dimensional projective
+subvariety whose homogeneous ideal has $r-p$ generators. The dimension
+condition makes those equations a regular sequence in the polynomial ring:
+after localization at the homogeneous maximal ideal this follows from
+Algebra, Proposition \ref{algebra-proposition-CM-module}, and regularity of
+a homogeneous sequence is detected by that localization. The statement
+below exposes the resulting exact algebraic hypothesis and does not require
+the base field to be algebraically closed.
+
+The source states the canonical section isomorphism for every integer twist
+without excluding $p=0$. That exclusion is essential: if
+$S=K[t_0,t_1]$ and $A=S/(t_1)$, then $\text{Proj}(A)$ is a point,
+$A_{-1}=0$, and $H^0(\text{Proj}(A),\mathcal O(-1))=K$. We therefore state
+the three conclusions in their valid positive-dimensional range. The exact
+zero-dimensional replacement is recorded in the remark following the proof.
+\end{history}
+Let $K$ be a field, let $r\geq1$, and let $0\leq c\leq r-1$. Set
+$$
+S=K[t_0,\ldots,t_r],\qquad p=r-c.
+$$
+Let $f_1,\ldots,f_c\in S$ be a homogeneous regular sequence of positive
+degrees $m_1,\ldots,m_c$, and put
+$$
+A=S/(f_1,\ldots,f_c),\qquad X=\text{Proj}(A),\qquad
+N=m_1+\ldots+m_c-r-1.
+$$
+Then for every $n\in\mathbf Z$ the following hold:
+\begin{enumerate}
+\item the canonical map
+$$
+A_n\longrightarrow H^0(X,\mathcal O_X(n))
+$$
+is an isomorphism;
+\item $H^q(X,\mathcal O_X(n))=0$ for $0<q<p$;
+\item after fixing the displayed order of the equations, there are
+isomorphisms
+$$
+H^p(X,\mathcal O_X(n))\cong
+\Hom_K(A_{N-n},K)\cong
+\Hom_K(H^0(X,\mathcal O_X(N-n)),K).
+$$
+\end{enumerate}
+Moreover, if $H^p(X,\mathcal O_X)=0$, then $N<0$.
+\end{lemma}
+
+\begin{proof}
+The Koszul resolution in More on Algebra, Lemma
+\ref{more-algebra-lemma-graded-ext-complete-intersection} shows that
+$A$ has projective dimension $c=r-p$ over $S$. Since $p\geq1$, Lemma
+\ref{lemma-graded-projective-dimension-cohomology}, applied with $k=p$,
+proves (1) and (2).
+
+Put $\Omega=S(-r-1)$. The same Koszul--Ext lemma gives
+$$
+\text{GrExt}^c_S(A,\Omega)\cong A(N).
+$$
+Use the notation $B^q(A)$ and $T^q(A)=B^q(A)^\vee$ of More on Algebra,
+Lemma \ref{more-algebra-lemma-graded-local-duality-polynomial-ring}.
+Because $c<r$, that lemma identifies
+$$
+T^p(A)\cong\text{GrExt}^{r-p}_S(A,\Omega)\cong A(N).
+$$
+The degree $n$ part of $B^p(A)$ is
+$H^p(X,\mathcal O_X(n))$: this follows from the standard affine covering
+and Lemma \ref{lemma-cech-cohomology-quasi-coherent}. Hence the degree
+$-n$ part of the last display is
+$$
+\Hom_K(H^p(X,\mathcal O_X(n)),K)\cong A_{N-n}.
+$$
+Both vector spaces are finite dimensional by Lemma
+\ref{lemma-coherent-projective}. Dualizing and using (1) with twist $N-n$
+proves (3).
+
+Finally, if $H^p(X,\mathcal O_X)=0$, then (3) gives $A_N=0$. This is
+impossible for $N=0$ because $A_0=K$. If $N>0$, generation of $A$ by
+$A_1$ would make $A_+$ nilpotent. On the other hand, applying Algebra,
+Lemma \ref{algebra-lemma-one-equation} successively to the $c$ equations
+gives $\dim(A)\geq r+1-c=p+1>0$, whereas a nilpotent $A_+$ would give
+$\dim(A)=\dim(A/A_+)=0$. Thus $N<0$.
+\end{proof}
+
+\begin{remark}
+\label{remark-projective-complete-intersection-dimension-zero}
+Keep the notation above but take $c=r$, so that $X$ has dimension zero.
+The canonical section map need not be an isomorphism in negative degree.
+More on Algebra, Lemmas
+\ref{more-algebra-lemma-graded-ext-complete-intersection} and
+\ref{more-algebra-lemma-graded-local-duality-polynomial-ring} instead give,
+for every $n\in\mathbf Z$, an exact sequence
+$$
+0\longrightarrow A_n\longrightarrow H^0(X,\mathcal O_X(n))
+\longrightarrow\Hom_K(A_{N-n},K)\longrightarrow0.
+$$
+Thus this sequence, rather than an all-degree identification of its first
+two terms, is the graded-local-duality statement in dimension zero.
+
+The top-duality assertion itself remains valid in this case. Indeed,
+$X\to\mathbf P^r_K$ is a regular immersion with normal determinant
+$\mathcal O_X(m_1+\ldots+m_r)$. Duality, Lemmas
+\ref{duality-lemma-regular-immersion},
+\ref{duality-lemma-upper-shriek-P1},
+\ref{duality-lemma-upper-shriek-composition}, and
+\ref{duality-lemma-perfect-comparison-shriek} identify the dualizing module
+of $X$ with $\mathcal O_X(N)$. Duality, Lemma
+\ref{duality-lemma-duality-proper-over-field-CM}, applied to
+$\mathcal O_X(n)$, therefore gives
+$$
+H^0(X,\mathcal O_X(n))\cong
+\Hom_K(H^0(X,\mathcal O_X(N-n)),K).
+$$
+Thus part (c) of the source survives in dimension zero even though part (a)
+does not.
+\end{remark}
+
 
 \section{Coherent sheaves on Proj, II}
 \label{section-coherent-proj-general}

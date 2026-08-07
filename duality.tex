@@ -3555,6 +3555,14 @@ over $\mathcal{O}_X$.
 
 \begin{lemma}
 \label{lemma-regular-immersion-ext}
+\begin{history}
+The value $r=0$ is allowed: it occurs for the zero ideal and the identity
+closed immersion, whose Koszul complex is concentrated in degree zero.
+Thus the codomain of the rank function below includes zero. In the final
+parenthetical display of the proof, the derived sheaf Hom is taken over
+$\mathcal O_Y$, as in the statement; using $\mathcal O_X$ there would make
+the second argument $\mathcal O_Y$ ill-typed.
+\end{history}
 Let $Y$ be a ringed space. Let $\mathcal{I} \subset \mathcal{O}_Y$
 be a sheaf of ideals. Set $\mathcal{O}_X = \mathcal{O}_Y/\mathcal{I}$ and
 $\mathcal{N} =
@@ -3565,7 +3573,7 @@ $$
 R\SheafHom_{\mathcal{O}_Y}(\mathcal{O}_X, \mathcal{O}_Y) =
 \wedge^r \mathcal{N}[-r]
 $$
-where $r : Y \to \{1, 2, 3, \ldots \}$ sends $y$ to
+where $r : Y \to \{0, 1, 2, \ldots \}$ sends $y$ to
 the minimal number of generators of $\mathcal{I}$ needed in a neighbourhood
 of $y$.
 \end{lemma}
@@ -3640,7 +3648,7 @@ also follows in a straightforward manner from this.
 (We observe that our choice of conventions regarding
 Koszul complexes does intervene in the definition
 of the isomorphism
-$R\SheafHom_{\mathcal{O}_X}(\mathcal{O}_X, \mathcal{O}_Y) =
+$R\SheafHom_{\mathcal{O}_Y}(\mathcal{O}_X, \mathcal{O}_Y) =
 \wedge^r \mathcal{N}[-r]$.)
 \end{proof}
 

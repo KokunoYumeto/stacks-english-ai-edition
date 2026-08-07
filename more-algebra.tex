@@ -7462,6 +7462,86 @@ Definition \ref{algebra-definition-graded-ext} proves the final assertion.
 \end{proof}
 
 \begin{lemma}
+\label{lemma-graded-ext-complete-intersection}
+\begin{reference}
+\cite[Chapter III, \S 5, no. 78, Koszul resolution and
+Ext computation, pp. 273--274]{FAC}
+\end{reference}
+\begin{history}
+The cited source takes $S=K[t_0,\ldots,t_r]$, writes
+$A=S/(f_1,\ldots,f_c)$, and allows the homogeneous equations to have
+different degrees. Its free module in homological degree $q$ has the
+exterior basis indexed by increasing $q$-tuples. The printed degree of
+$e_{i_1\ldots i_q}$ is $\sum_{j=1}^q m_j$, independent of the chosen
+indices, although the next degree computation and the differential both
+use $m_{i_j}$ and $f_{i_j}$. The corrected degree used below is therefore
+$\sum_{j=1}^q m_{i_j}$; the printed form is retained in the source record.
+
+The printed differential again uses $(-1)^j$ with one-based indexing and
+immediately afterward says $d(e_i)=f_i$. In degree one these formulas have
+opposite signs. We use $(-1)^{j+1}$, the convention of Definition
+\ref{definition-koszul}. Multiplication by $(-1)^q$ in homological degree
+$q$ identifies the uniformly opposite convention with this one, so the
+Ext calculation is unchanged.
+\end{history}
+Let $S$ be a graded ring and let $f_1,\ldots,f_c\in S$ be a homogeneous
+regular sequence of positive degrees $m_1,\ldots,m_c$. Put
+$$
+A=S/(f_1,\ldots,f_c),\qquad m=m_1+\ldots+m_c.
+$$
+For $0\leq q\leq c$, let
+$$
+K_q=\bigoplus_{1\leq i_1<\ldots<i_q\leq c}
+S(-m_{i_1}-\ldots-m_{i_q}),
+$$
+where the summand indexed by the empty tuple is $K_0=S$, and set
+$$
+d(e_{i_1\ldots i_q})=
+\sum_{j=1}^q(-1)^{j+1}f_{i_j}
+e_{i_1\ldots\widehat{i_j}\ldots i_q}.
+$$
+Then
+$$
+0\longrightarrow K_c\longrightarrow\ldots\longrightarrow
+K_1\longrightarrow K_0\longrightarrow A\longrightarrow0
+$$
+is a graded free resolution with degree-zero differentials. For every
+$b\in\mathbf Z$ and $q\geq0$ there are isomorphisms of graded $S$-modules
+$$
+\text{GrExt}^q_S(A,S(b))\cong
+\left\{
+\begin{matrix}
+A(m+b) & \text{if }q=c,\\
+0 & \text{if }q\ne c.
+\end{matrix}
+\right.
+$$
+In particular, $A$ has projective dimension $c$ over $S$.
+\end{lemma}
+
+\begin{proof}
+The displayed shifts make every differential homogeneous of degree zero.
+By Lemma \ref{lemma-regular-koszul-regular}, the regular sequence is
+Koszul-regular, so its augmented Koszul complex is the asserted resolution.
+
+Let $E=\bigoplus_{i=1}^cS(-m_i)e_i$, so that $K_q=\wedge^qE$. Using the
+ordered generator $e_1\wedge\ldots\wedge e_c$ of
+$\wedge^cE\cong S(-m)$, the exterior product gives perfect pairings
+$$
+K_q\otimes_SK_{c-q}\longrightarrow S(-m).
+$$
+They identify $\text{GrHom}_S(K_q,S(b))$ with $K_{c-q}(m+b)$.
+If the term in cohomological degree $q$ is multiplied by
+$(-1)^{q(q-1)/2}$, these identifications carry the Hom differential to
+the differential of the reversed Koszul complex. Hence the cohomology of
+$\text{GrHom}_S(K_\bullet,S(b))$ is the homology of
+$K_\bullet(m+b)$ with degrees reversed. Koszul regularity leaves only
+$H_0(K_\bullet)=A$, which proves the Ext formula. Since $A\ne0$, the
+nonzero top Ext module shows that the displayed free resolution has minimal
+possible length $c$.
+\end{proof}
+
+\begin{lemma}
 \label{lemma-top-graded-duality-polynomial-ring}
 \begin{reference}
 \cite[Chapter III, \S 4, no. 71, Proposition 2 and proof,
