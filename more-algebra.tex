@@ -7447,6 +7447,150 @@ Definition \ref{algebra-definition-graded-ext} proves the final assertion.
 \end{proof}
 
 \begin{lemma}
+\label{lemma-top-graded-duality-polynomial-ring}
+\begin{reference}
+\cite[Chapter III, \S 4, no. 71, Proposition 2 and proof,
+pp. 264--265]{FAC}
+\end{reference}
+\begin{history}
+The cited source denotes $S(-r-1)$ by $\Omega$, fixes the class
+$\xi=1/(t_0\cdots t_r)$ in its top positive Koszul--{\v C}ech
+cohomology, and defines the pairing below by composition with a homogeneous
+map to $\Omega$. It proves perfection first for one shifted free summand by
+matching polynomial monomials with reciprocal monomials, then for arbitrary
+free direct sums by products, and finally for every graded module by a free
+presentation. The proof below retains all three steps and does not impose a
+finiteness hypothesis on $M$.
+
+The assumption $r\geq1$ is essential for this formulation. With one
+variable, the positive complex has no incoming differential in degree zero,
+so its zeroth cohomology is a localization and the displayed conclusion has
+to be replaced. The later derived duality statement for projective space
+uses the same twist $-r-1$, but the result here is the exact graded-module
+pairing and is not identified with that stronger relative statement.
+\end{history}
+Let $K$ be a field, let $r\geq1$, and let
+$S=K[t_0,\ldots,t_r]$ with the standard grading. For a graded $S$-module
+$M$, let $C^\bullet_+(M)$ be the positive alternating {\v C}ech complex
+with
+$$
+C^q_+(M)=
+\bigoplus_{0\leq i_0<\ldots<i_q\leq r}
+M_{t_{i_0}\cdots t_{i_q}},\qquad 0\leq q\leq r,
+$$
+and the usual alternating localization differential. Set
+$B^q(M)=H^q(C^\bullet_+(M))$ and let ${}^\vee$ denote the graded
+$K$-dual of Algebra, Definition \ref{algebra-definition-graded-K-dual}.
+There is a functorial isomorphism of graded $S$-modules
+$$
+\nu_M:\text{GrHom}(M,S(-r-1))
+\longrightarrow B^r(M)^\vee.
+$$
+\end{lemma}
+
+\begin{proof}
+Put $\Omega=S(-r-1)$. The class
+$$
+\xi=\left[\frac{1}{t_0\cdots t_r}\right]
+\in B^r(\Omega)_0
+$$
+is a basis of the one-dimensional vector space $B^r(\Omega)_0$.
+If $\varphi\in\text{GrHom}(M,\Omega)_n$ and
+$h\in B^r(M)_{-n}$, then the map induced by $\varphi$ sends $h$ to a
+unique scalar multiple of $\xi$. Write
+$$
+B^r(\varphi)(h)=\langle h,\varphi\rangle\xi.
+$$
+This defines $\nu_M(\varphi)\in(B^r(M)^\vee)_n$. Composition makes the
+construction functorial in $M$, and
+$\langle sh,\varphi\rangle=\langle h,s\varphi\rangle$ for homogeneous
+$s\in S$ shows that $\nu_M$ is $S$-linear.
+
+Suppose first that $M=S(m)$. For every $n$ we have
+$$
+\text{GrHom}(S(m),\Omega)_n=S_{n-m-r-1},
+$$
+with basis the monomials $t_0^{\gamma_0}\cdots t_r^{\gamma_r}$ such that
+$\gamma_i\geq0$ and
+$\sum\gamma_i=n-m-r-1$. On the other hand, the top cohomology is the
+quotient of $S(m)_{t_0\cdots t_r}$ by the sum of the localizations in
+which at least one variable is not inverted. Hence $B^r(S(m))_{-n}$ has
+basis
+$$
+\frac{1}{t_0^{\beta_0}\cdots t_r^{\beta_r}},
+\qquad
+\beta_i\geq1,
+\qquad
+\sum\beta_i=n-m.
+$$
+Multiplication followed by passage to top cohomology gives
+$$
+\left\langle
+\frac{1}{t_0^{\beta_0}\cdots t_r^{\beta_r}},
+t_0^{\gamma_0}\cdots t_r^{\gamma_r}
+\right\rangle
+=
+\left\{
+\begin{matrix}
+1 & \text{if }\beta_i=\gamma_i+1\text{ for every }i,\\
+0 & \text{otherwise.}
+\end{matrix}
+\right.
+$$
+Indeed, in the first case the product is $\xi$; in every other case one
+variable has nonnegative exponent and the class vanishes in the top
+quotient. Thus $\nu_{S(m)}$ identifies two dual bases and is an
+isomorphism.
+
+Let $L=\bigoplus_\alpha S(m_\alpha)$ be an arbitrary graded free module.
+Localization commutes with direct sums, and direct sums are exact, so
+$$
+B^r(L)=\bigoplus_\alpha B^r(S(m_\alpha)).
+$$
+In every internal degree, both $\text{GrHom}(L,\Omega)$ and the graded
+dual of $B^r(L)$ are the corresponding products over $\alpha$. Therefore
+$\nu_L$ is an isomorphism, without any restriction on the cardinality of
+the homogeneous basis.
+
+Finally, choose a graded free presentation
+$$
+L^1\longrightarrow L^0\longrightarrow M\longrightarrow0.
+$$
+The complex $C^\bullet_+(-)$ is degreewise exact as a functor of $M$,
+because localization is exact. Put
+$N=\mathop{\rm Im}(L^1\to L^0)$ and
+$P=\mathop{\rm Ker}(L^1\to N)$. Apply the cohomology long exact sequence
+first to $0\to P\to L^1\to N\to0$ and then to
+$0\to N\to L^0\to M\to0$. Since $C^q_+=0$ for $q>r$, the first gives a
+surjection $B^r(L^1)\to B^r(N)$ and the second gives an exact sequence
+$$
+B^r(N)\longrightarrow B^r(L^0)\longrightarrow B^r(M)
+\longrightarrow0.
+$$
+Consequently,
+$$
+B^r(L^1)\longrightarrow B^r(L^0)\longrightarrow B^r(M)
+\longrightarrow0
+$$
+is exact. Applying the exact graded $K$-dual and using left exactness of
+internal graded Hom gives a commutative diagram with exact rows
+$$
+\xymatrix{
+0 \ar[r] &
+\text{GrHom}(M,\Omega) \ar[r] \ar[d]^{\nu_M} &
+\text{GrHom}(L^0,\Omega) \ar[r] \ar[d]^{\nu_{L^0}} &
+\text{GrHom}(L^1,\Omega) \ar[d]^{\nu_{L^1}} \\
+0 \ar[r] &
+B^r(M)^\vee \ar[r] &
+B^r(L^0)^\vee \ar[r] &
+B^r(L^1)^\vee.
+}
+$$
+The two right vertical maps are isomorphisms by the free case. Comparing
+kernels proves that $\nu_M$ is an isomorphism as well.
+\end{proof}
+
+\begin{lemma}
 \label{lemma-koszul-regular-H1-regular}
 A $M$-Koszul-regular sequence is $M$-$H_1$-regular.
 A Koszul-regular sequence is $H_1$-regular.
