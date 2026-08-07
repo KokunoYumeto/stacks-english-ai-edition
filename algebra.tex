@@ -27853,6 +27853,56 @@ depths of both $R/xR$ and $M/xM$ have decreased by one and the projective
 dimension has not changed we conclude.
 \end{proof}
 
+\begin{lemma}
+\label{lemma-projective-dimension-modulo-nonzerodivisor}
+\begin{reference}
+\cite[Chapter III, \S 5, no. 76, Lemma 2 and proof,
+pp. 270--271]{FAC}
+\end{reference}
+\begin{history}
+The cited source calls projective dimension the dimension of a module. For a
+finite module over the regular local ring of a point of projective space, it
+proves the formula below from the long exact Ext sequence: higher Ext gives
+the upper bound, while a nonzero top Ext module and Nakayama's lemma give the
+lower bound.
+
+The source does not explicitly exclude the zero module, but its proof sets
+$p = \text{pd}(M)$ and chooses a nonzero top Ext module. Thus nonzeroness is
+an implicit source hypothesis which is made explicit in the statement below.
+
+The statement below isolates the same change of projective dimension over an
+arbitrary Noetherian local ring, assuming only that the original module has
+finite projective dimension. The short exact sequence first gives finite
+projective dimension for the quotient, after which the depth drop and the
+Auslander--Buchsbaum formula give the equality directly.
+\end{history}
+Let $(R, \mathfrak m)$ be a Noetherian local ring. Let $M$ be a nonzero
+finite $R$-module of finite projective dimension. If $x\in\mathfrak m$ is a
+nonzerodivisor on $M$, then
+$$
+\text{pd}_R(M/xM)=\text{pd}_R(M)+1.
+$$
+\end{lemma}
+
+\begin{proof}
+Put $d=\text{pd}_R(M)$. The short exact sequence
+$$
+0\longrightarrow M\xrightarrow{x}M\longrightarrow M/xM\longrightarrow0
+$$
+and Lemma \ref{lemma-exact-sequence-projective-dimension} show that $M/xM$
+has finite projective dimension at most $d+1$. It is nonzero by Nakayama's
+lemma (Lemma \ref{lemma-NAK}). Lemma \ref{lemma-depth-drops-by-one} and
+Proposition \ref{proposition-Auslander-Buchsbaum} now give
+$$
+\begin{aligned}
+\text{pd}_R(M/xM)
+&=\text{depth}(R)-\text{depth}(M/xM)\\
+&=\text{depth}(R)-\text{depth}(M)+1\\
+&=\text{pd}_R(M)+1.
+\end{aligned}
+$$
+\end{proof}
+
 
 
 

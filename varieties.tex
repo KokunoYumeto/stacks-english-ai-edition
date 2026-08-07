@@ -11188,6 +11188,46 @@ since $\dim(Z) > 0$.
 
 \begin{lemma}[Enriques-Severi-Zariski]
 \label{lemma-vanishin-h1-negative}
+\begin{reference}
+\cite[Chapter III, \S 5, no. 76, Theorem 4, Corollary, and Remarks,
+pp. 270--271]{FAC}
+\end{reference}
+\begin{history}
+The cited theorem treats an irreducible normal projective variety $X$ of
+dimension at least $2$ and a coherent sheaf whose stalks are finite free. It
+proves the asserted negative-twist vanishing by bounding the projective
+dimension of every stalk over the ambient projective space. The local
+argument successively divides by two module nonzerodivisors; the first uses
+the domain property, while the second uses the absence of embedded primes in
+a principal quotient of a normal domain and the associated-prime criterion
+for the existence of a nonzerodivisor. Algebra, Lemma
+\ref{algebra-lemma-projective-dimension-modulo-nonzerodivisor} retains the
+resulting change of projective dimension.
+
+The statement below is stronger and expresses the intrinsic input as depth.
+The source variety is proper by Morphisms, Lemma
+\ref{morphisms-lemma-locally-projective-proper}, and the restriction
+$\mathcal{O}_X(1)$ is ample by Properties, Lemma
+\ref{properties-lemma-ample-on-closed}.
+Indeed, at a closed point of the source variety, Varieties, Lemma
+\ref{lemma-dimension-locally-algebraic} identifies the local dimension with
+the dimension of the irreducible variety. Normality implies $(S_2)$ by
+Properties, Lemma \ref{properties-lemma-criterion-normal}; hence the local
+ring has depth at least $2$, and the same is true for a finite free stalk.
+Taking $\mathcal{L}=\mathcal{O}_X(1)$ and $m=-n$ recovers the source theorem,
+and taking $\mathcal{F}=\mathcal{O}_X$ recovers its corollary.
+
+The source attributes its classical syzygy proof to Gr\"obner. It also notes
+that the ambient projective-dimension bound can be sharp even in dimension
+greater than $2$, using cones over projectively normal irregular hyperplane
+sections. This sharpness remark concerns the source's ambient resolution
+method; the intrinsic depth statement below does not require that bound.
+
+The proof below corrects three typographical slips in its prior form: the
+space of linear forms is on $\mathbf{P}^n_k$, the two vertical arrows have
+exponent $m-m'$, and the ambient local ring at $y=i(x)$ is subscripted by
+$y$.
+\end{history}
 Let $k$ be a field. Let $X$ be a proper scheme over $k$. Let $\mathcal{L}$
 be an ample invertible $\mathcal{O}_X$-module. Let $\mathcal{F}$ be a
 coherent $\mathcal{O}_X$-module. Assume that
@@ -11222,13 +11262,13 @@ $\text{depth}(\mathcal{G}_y) = \infty$ if $y \not \in i(X)$
 and $\text{depth}(\mathcal{G}_y) = \text{depth}(\mathcal{F}_x)$
 if $y = i(x)$ because in this case
 $\mathcal{G}_y \cong \mathcal{F}_x^{\oplus e}$ as a module over
-$\mathcal{O}_{\mathbf{P}^n_k, x}$ and we can use for example
+$\mathcal{O}_{\mathbf{P}^n_k, y}$ and we can use for example
 Algebra, Lemma \ref{algebra-lemma-depth-goes-down-finite}
 to get the equality.
 
 \medskip\noindent
 Assume $X = \mathbf{P}^n_k$ and $\mathcal{L} = \mathcal{O}(1)$ and
-$k$ is infinite. Choose $s \in H^0(\mathbf{P}^1_k, \mathcal{O}(1))$
+$k$ is infinite. Choose $s \in H^0(\mathbf{P}^n_k, \mathcal{O}(1))$
 which determines an exact sequence
 $$
 0 \to \mathcal{F}(-1) \xrightarrow{s} \mathcal{F} \to \mathcal{G} \to 0
@@ -11267,8 +11307,8 @@ Observe that for $m' < m \leq m_0$ the diagram
 $$
 \xymatrix{
 H^0(\mathbf{P}^n_k, \mathcal{O}(d)) \times
-H^1(\mathbf{P}^n_k, \mathcal{F}(m' - d)) \ar[r] \ar[d]^{1 \times s^{m' - m}} &
-H^1(\mathbf{P}^n_k, \mathcal{F}(m')) \ar[d]^{s^{m' - m}}\\
+H^1(\mathbf{P}^n_k, \mathcal{F}(m' - d)) \ar[r] \ar[d]^{1 \times s^{m - m'}} &
+H^1(\mathbf{P}^n_k, \mathcal{F}(m')) \ar[d]^{s^{m - m'}}\\
 H^0(\mathbf{P}^n_k, \mathcal{O}(d)) \times
 H^1(\mathbf{P}^n_k, \mathcal{F}(m - d)) \ar[r] &
 H^1(\mathbf{P}^n_k, \mathcal{F}(m))

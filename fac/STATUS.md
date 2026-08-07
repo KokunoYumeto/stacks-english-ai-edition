@@ -2,30 +2,33 @@
 
 - Frozen surface: 661 source targets through printed page 278.
 - Stage: sequential source review and statement-level Stacks integration.
-- Completed checkpoint: Chapter III, Section 5, no. 75, printed pages 199--270.
-- Reviewed decisions: 518 (159 equivalent, 157 stronger, 66 extensions,
-  93 new-statement decisions, 41 historical references, 2 outside scope).
-- Current Stacks references added: 296 across `topology.tex`, `sheaves.tex`,
+- Completed checkpoint: Chapter III, Section 5, no. 76, printed pages 199--271.
+- Reviewed source units: 530 through 537 append-only decision rows
+  (164 equivalent, 159 stronger, 68 extensions, 94 new-statement decisions,
+  43 historical references, 2 outside scope).
+- Current Stacks references added: 298 across `topology.tex`, `sheaves.tex`,
   `modules.tex`, `homology.tex`, `coherent.tex`, `cohomology.tex`,
   `divisors.tex`, `constructions.tex`, `schemes.tex`, `morphisms.tex`,
   `derham.tex`, `algebra.tex`, `properties.tex`, `varieties.tex`,
   `simplicial.tex`, `more-algebra.tex`, `dualizing.tex`, `local-cohomology.tex`,
   and `duality.tex`.
-- New Stacks theorem/lemma statements: 28, plus the paracompactness and
+- New Stacks theorem/lemma statements: 29, plus the paracompactness and
   locally-constant-sheaf definitions, the graded-conventions remark, and
   the internal graded Ext and degreewise graded dual definitions;
   each new theorem/lemma has a complete proof and no assigned tag.
-- Source/proof issues or convention boundaries: 831 found by direct
+- Source/proof issues or convention boundaries: 858 found by direct
   authority-page and TeX inspection, all resolved and
   retained in `issues.csv`.
 - Source corrections: 4, including the no. 74 repeated resolution index
   restored from printed `L_p` to quantified `L_i` as correction `C0040`
   and the no. 75 conflict between the general and degree-one Koszul signs
   resolved as correction `C0041`.
-- Existing Stacks defects corrected: 6, comprising the refinement-homotopy
+- Existing Stacks defects corrected: 9, comprising the refinement-homotopy
   sign, repeated coefficient sheaves, wrong boundary domain, wrong boundary
   degree, incomplete low-degree citation, and multiplication by a negative
-  power before localization in the Proj shift proof.
+  power before localization in the Proj shift proof, plus the wrong
+  projective-space dimension, reversed vertical exponents, and wrong ambient
+  local-ring subscript in the Enriques--Severi--Zariski proof.
 - Validation: `intake.json`, `check.json`, and `mcheck.json` all PASS.
 - Builds: `topology.pdf`, `sheaves.pdf`, `modules.pdf`, `homology.pdf`,
   `coherent.pdf`, `cohomology.pdf`, `divisors.pdf`, `constructions.pdf`,
@@ -35,7 +38,7 @@
   completed; every
   affected statement page passed direct 1100 dpi visual inspection. See
   `qa.json`.
-- Historical notes added: 131, preserving the source's operator calculus,
+- Historical notes added: 133, preserving the source's operator calculus,
   image-complex construction, two-covering double complex, and unproved
   cofinal-vanishing question, together with the classical closed-point to
   reduced-scheme bridge, the classical-map to scheme-morphism bridge, and the
@@ -328,6 +331,28 @@
   Authority physical pages 74--75 and output pages algebra 255,
   more-algebra 76, divisors 50, and coherent 39--40 passed direct 1100
   dpi-equivalent inspection after two serial builds, with an exact hard stop
-  before no. 76 on printed page 270 and no high-detail crop needed.
-- Next unit: `fac:III:5:no:76`.
+  before no. 76 on printed page 270 and no high-detail crop needed; no. 76
+  now isolates the exact projective-dimension shift modulo a module
+  nonzerodivisor in one completely proved untagged algebra lemma. Its history
+  makes the printed lemma's implicit nonzero-module hypothesis explicit.
+  Tag 0FD8 supplies the stronger intrinsic vanishing theorem; tags 01WC and
+  01PU close properness and ampleness, while tags 0345, 0B18, and 0B19 close
+  the depth-two specialization. The classical ambient proof remains
+  separately traceable through tags 031T, 00LL, 00OQ, and 00O8, and tag 08YR
+  supplies the finite top Ext module required before Nakayama. A bounded
+  independent read-only review checked the exact component, authority
+  renders, twelve source units, and supporting chapters against base
+  `244d41fef29d7df2d2753d3bc816f9d918aa7b41`; it made no edits and used no
+  further agents. Lead recheck accepted its hard findings, replaced seven
+  earlier decisions append-only, and corrected the source-aligned English
+  interpretation from arbitrary primes containing `(f)` to the associated
+  primes of the principal quotient. The same review exposed three global
+  defects in the pre-existing proof of tag 0FD8: `P^1` instead of `P^n`,
+  exponent `m'-m` instead of `m-m'` on both downward arrows, and ambient
+  local-ring subscript `x` instead of `y=i(x)`. All three are now repaired and
+  documented. Authority physical pages 75--76 and output pages algebra
+  270--271 and varieties 109--111 passed direct 1100 dpi-equivalent
+  inspection after two final serial builds, with no high-detail crop needed
+  and an exact hard stop before no. 77 on printed page 271.
+- Next unit: `fac:III:5:no:77`.
 - No statement is mapped by lexical similarity alone.
