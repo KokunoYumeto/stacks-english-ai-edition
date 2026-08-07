@@ -3,48 +3,52 @@
   "date": "2026-08-07",
   "scope": {
     "start": "fac:I:1:no:1",
-    "end": "fac:III:4:no:69",
-    "printed_pages": "199-263",
-    "units_decided": 429,
-    "stacks_references_added": 268
+    "end": "fac:III:4:no:70",
+    "printed_pages": "199-264",
+    "units_decided": 444,
+    "stacks_references_added": 274
   },
   "authority": {
     "bytes": 6305726,
     "sha256": "B8C6508249308F5D8BC886B9E6360F1EC4FDC8F0F18EFAA03EE0E36B591551CA",
     "render_dpi": 1100,
-    "physical_pages_inspected": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68],
-    "printed_pages_inspected": [199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263]
+    "physical_pages_inspected": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69],
+    "printed_pages_inspected": [199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264]
   },
   "latest_review": {
-    "unit": "fac:III:4:no:69",
-    "component": "components/067_III_4_69_interpretation_Hk_via_Ext.tex",
-    "bytes": 5005,
-    "sha256": "D3C78A6A8624F6A402078C1F281511E80F54B8A571E55D7835DD737E0DE84B67",
-    "authority_physical_pages": [67, 68],
-    "authority_printed_pages": [262, 263],
+    "unit": "fac:III:4:no:70",
+    "component": "components/068_III_4_70_definition_functors_Tq.tex",
+    "bytes": 3979,
+    "sha256": "FEB67CF5524203433B797E1BE6F4DB28CE96E4E5206D2F621D36881C0282D3A2",
+    "authority_physical_pages": [68, 69],
+    "authority_printed_pages": [263, 264],
     "authority_renders": [
-      {"physical_page": 67, "sha256": "B60BBF9A4F09A8E31D1446FDA7412DE9A8E2FE2CF7E6B58C4108DEA14EC2AD68"},
-      {"physical_page": 68, "sha256": "1627AD8242C7EA2D1490BEE3FCEA2CB647C037C4CD146C3DE8F8E3E18B6F6EA2"}
+      {"physical_page": 68, "sha256": "1627AD8242C7EA2D1490BEE3FCEA2CB647C037C4CD146C3DE8F8E3E18B6F6EA2"},
+      {"physical_page": 69, "sha256": "66B0FE5E8BB211C73D30B6B1F60D65F6C7511F9012CAD892AFDC1F1ABAAE307A"}
     ],
-    "high_detail_renders": [],
+    "high_detail_renders": [
+      {"physical_page": 68, "dpi_equivalent": 5000, "purpose": "resolve the printed Hom subscript", "sha256": "D341F83B8158FE7F538122FB93F3A156EE96355A579D95F570EB60D00DD954A8"}
+    ],
     "output_renders": [
-      {"master": "more-algebra.tex", "pdf_page": 74, "sha256": "938B796E22AE1476077345AE52852BD74FEAAD0F9B1BEEB202A99F98C91B7D7A"},
-      {"master": "more-algebra.tex", "pdf_page": 75, "sha256": "5AC81A05014836779C35D475027980646E82D0ED187C30E836AD6D4B6856FD97"},
-      {"master": "more-algebra.tex", "pdf_page": 76, "sha256": "60672D737768220E04F55D9A77EA434FB351796DC404AC2891B184E94AF9D50A"},
-      {"master": "dualizing.tex", "pdf_page": 12, "sha256": "7E4E884ACB53182A1169990E3789E46A85070C55CA2E953C35989E0C855EB399"},
+      {"master": "algebra.tex", "pdf_page": 130, "sha256": "4EA6E0A9ABA1A21CF7DE454A47C406C4B048679E6B687266408CCDAE6F66AF87"},
+      {"master": "algebra.tex", "pdf_page": 131, "sha256": "4EB40C9C9C2C99F3389F9F1BE2F44A33FC65CDDA28443502CDA213048F3D4DA0"},
+      {"master": "algebra.tex", "pdf_page": 132, "sha256": "112222DF68C62EA3D939411F04F4FC25DD7AAB215646232A26E39907A24CE021"},
+      {"master": "homology.tex", "pdf_page": 27, "sha256": "096AE56ED63113D9C30525723F04530C0B01A7E1C98FD8D338FAB9C83A270F9F"},
+      {"master": "homology.tex", "pdf_page": 28, "sha256": "DC6B22D38571E2CAB8F27D7C070D58382DA323503A30E0EAE7B12C9CFDE0FA88"},
+      {"master": "homology.tex", "pdf_page": 29, "sha256": "F86395DADC1A808E2A4B9C2F1153795AB1AE24BDA5307C5B6DDDF5296938DEF7"},
       {"master": "local-cohomology.tex", "pdf_page": 2, "sha256": "075C125D832FADA795B16FC078250EF389873C723010F9F6CDDE5E552D5782C3"},
-      {"master": "coherent.tex", "pdf_page": 25, "sha256": "4A9F5BD5FBE5C1CB70F9DBE0EA526BC2B1A5B816D92DAF972B8C17C6021CE2AD"},
-      {"master": "duality.tex", "pdf_page": 80, "sha256": "B106F07F710943D1FD559E8D56D1174770D1DEF85FDB19E9A0899FABA3098167"}
+      {"master": "more-algebra.tex", "pdf_page": 74, "sha256": "938B796E22AE1476077345AE52852BD74FEAAD0F9B1BEEB202A99F98C91B7D7A"},
+      {"master": "coherent.tex", "pdf_page": 34, "sha256": "805DE3D9E17BDC78DB445E3970342BC8BC3FA691CAC35B293BD0E99AE8455737"}
     ],
-    "lead_review": {"id": "FAC-LEAD-REVIEW-N069-R1", "result": "PASS", "findings_closed": ["I000677", "I000678", "I000679", "I000680", "I000681", "I000682", "I000683", "I000684", "I000685", "I000686", "I000687", "I000688", "I000689", "I000690", "I000691", "I000692", "I000693", "I000694", "I000695", "I000696", "I000697", "I000698", "I000699", "I000700", "I000701", "I000702", "I000703", "I000704"]}
+    "lead_review": {"id": "FAC-LEAD-REVIEW-N070-R1", "result": "PASS", "findings_closed": ["I000705", "I000706", "I000707", "I000708", "I000709", "I000710", "I000711", "I000712", "I000713", "I000714", "I000715", "I000716", "I000717", "I000718", "I000719", "I000720", "I000721", "I000722", "I000723", "I000724", "I000725", "I000726", "I000727", "I000728"]}
   },
   "builds": [
     {
       "master": "algebra.tex",
       "pdf": "algebra.pdf",
-      "bytes": 3697837,
-      "sha256": "17F475E420A0A1FD885FFCA21FF72B350784FD188B8F332D1B765A41AAF9F2F5",
-      "affected_pdf_pages_inspected": [17, 36, 129, 130, 131, 171, 172, 180, 182, 272],
+      "bytes": 3711233,
+      "sha256": "EFE441F9940A5C02C948A0C25AF26DE7CF8635656619DAACF3F0CC8F643472F3",
+      "affected_pdf_pages_inspected": [17, 36, 129, 130, 131, 132, 171, 172, 180, 182, 272],
       "affected_page_result": "PASS"
     },
     {
@@ -74,16 +78,16 @@
     {
       "master": "homology.tex",
       "pdf": "homology.pdf",
-      "bytes": 892261,
-      "sha256": "3D492D778F6A126EB5B23B04A2DE9B6C82D65BA1443EA1959A3695F94DDEC955",
-      "affected_pdf_pages_inspected": [23, 24, 42, 68],
+      "bytes": 901390,
+      "sha256": "7147521D788B34008149CF4043859A5F3D3A1BB935D23A99B0BC20B9D1570FA8",
+      "affected_pdf_pages_inspected": [23, 24, 27, 28, 29, 42, 68],
       "affected_page_result": "PASS"
     },
     {
       "master": "coherent.tex",
       "pdf": "coherent.pdf",
       "bytes": 1044720,
-      "sha256": "619FC0F9613949F71B77C2E57D7C7B03B8F6A4E986DBF227341A0E55C813E43D",
+      "sha256": "E6C7246108A9F40DBE44D84DABFFCAF2242E07CB69655E8EC4ABC131948B1A25",
       "affected_pdf_pages_inspected": [2, 3, 6, 16, 22, 23, 24, 25, 34, 36, 37, 38, 42, 50],
       "affected_page_result": "PASS"
     },
@@ -163,7 +167,7 @@
       "master": "more-algebra.tex",
       "pdf": "more-algebra.pdf",
       "bytes": 3381680,
-      "sha256": "8C15CEB14CB97FFB257DF5144EB109848C80E23974FB68F33BF51867634C4ECF",
+      "sha256": "4B5FDEA2850A1D14253754EAA71013763DE6E85583E4E56E69C98C76990DE083",
       "affected_pdf_pages_inspected": [74, 75, 76, 82],
       "affected_page_result": "PASS"
     },
@@ -179,7 +183,7 @@
       "master": "local-cohomology.tex",
       "pdf": "local-cohomology.pdf",
       "bytes": 749691,
-      "sha256": "BDB4691D52E3982FD8F79A808140E0AF71202983D43BF210204193781FE0EE4E",
+      "sha256": "AC9CE846983ACFA9502B4A4871323E1FECACAFF547FAB2F201E7ECD2668D1778",
       "affected_pdf_pages_inspected": [2],
       "affected_page_result": "PASS"
     },
@@ -190,6 +194,16 @@
       "sha256": "2DAB36F36AF73865FBD79AAF1CFC4C7255295D90623155F101CFDDDEC6F9D5AB",
       "affected_pdf_pages_inspected": [80],
       "affected_page_result": "PASS"
+    }
+  ],
+  "source_corrections": [
+    {
+      "unit": "fac:III:4:no:70:formula:dual-Hom",
+      "kind": "wrong_Hom_subscript",
+      "printed_form": "M^* = Hom_S(M,K)",
+      "evidence": "The 5000 dpi-equivalent authority crop resolves the subscript as S. For M=S, internal GrHom_S(S,K)=K, whereas the preceding component formula gives a nonzero dual of every nonzero S_n.",
+      "integration": "Use the direct-sum internal graded K-linear dual GrHom_K(M,K), with K concentrated in degree zero, and preserve the printed form only in provenance.",
+      "result": "PASS"
     }
   ],
   "stacks_corrections": [
@@ -250,7 +264,7 @@
     "fac_citations_resolved": true,
     "undefined_reference_at_edited_lines": 0,
     "overfull_box_at_edited_lines": 0,
-    "note": "Two direct serial TeX builds completed for more-algebra.tex, dualizing.tex, local-cohomology.tex, coherent.tex, and duality.tex. All FAC citations resolve. The isolated logs contain no fatal diagnostic, undefined reference, or overfull box caused by the new no. 69 statement; adjacent unchanged proofs retain pre-existing overfull diagnostics. The aggregate Makefile path was abandoned after its bounded attempt exposed an unrelated missing-marker dependency cascade, and no such process survived. Direct named-master compilation is the fail-closed route. No. 69 adds the untagged equal-degree Koszul-ideal resolution and connects it to tags 062F, 0913, 0954, 0DWR, 01YB, and 0G2H while preserving internal degree, the q+1 shift, low-degree exact sequence, cofinal ideals, and contravariant transition direction. More-algebra.pdf pp. 74--76, dualizing.pdf p. 12, local-cohomology.pdf p. 2, coherent.pdf p. 25, and duality.pdf p. 80 are unclipped, collision-free, and mathematically complete. Authority physical pp. 67--68 passed direct 1100 dpi review; the shared page was stopped exactly before no. 70, and no ambiguous mark required a high-detail crop."
+    "note": "Two direct serial TeX builds completed for algebra.tex, homology.tex, local-cohomology.tex, more-algebra.tex, and coherent.tex. All FAC citations resolve. The isolated logs contain no fatal diagnostic, undefined reference, or overfull box caused by the no. 70 edits; adjacent unchanged text retains pre-existing diagnostics. Direct named-master compilation remains the fail-closed route. No. 70 adds the untagged graded K-dual definition, the complete exactness and biduality lemma, and the complete dualized-delta-functor lemma. It connects them to tags 010Q, 0117, 01YS, 0913, and 0DWR while preserving degree reversal, contravariance, and the finite-complex vanishing bound. Algebra.pdf pp. 130--132, homology.pdf pp. 27--29, local-cohomology.pdf p. 2, more-algebra.pdf p. 74, and coherent.pdf p. 34 are unclipped, collision-free, and mathematically complete. Authority physical pp. 68--69 passed direct 1100 dpi review; a 5000 dpi-equivalent crop confirmed the printed Hom subscript S, which is recorded as a source defect and corrected in the integration. The shared page was stopped exactly before no. 71."
   },
   "validators": {
     "intake": "PASS",

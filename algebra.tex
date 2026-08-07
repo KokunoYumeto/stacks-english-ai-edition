@@ -13465,6 +13465,99 @@ variables over a field has global dimension $r+1$ by Proposition
 comparison and Lemma \ref{lemma-projective-dimension-ext}.
 \end{proof}
 
+\begin{definition}
+\label{definition-graded-K-dual}
+\begin{reference}
+\cite[Chapter III, \S 4, no. 70, definition of the dual module and
+the Macaulay inverse-system remark, pp. 263--264]{FAC}
+\end{reference}
+\begin{history}
+The cited source takes $S=K[t_0,\ldots,t_r]$ and writes $M^*$ for the
+degreewise dual below. Its printed alternative formula has
+$\operatorname{Hom}_S(M,K)$, with $K=S/(t_0,\ldots,t_r)$. This cannot be
+correct: for $M=S$ the internal graded $S$-linear Hom is just $K$, whereas
+the displayed component definition has the dual of every $S_n$. The
+transposed action printed immediately before that formula instead gives
+$\text{GrHom}_K(M,K)$, where $K$ is concentrated in degree zero. We record
+that correction explicitly.
+
+The direct sum is essential. Ordinary ungraded $\Hom_K(M,K)$ is generally
+the product of the dual homogeneous pieces. For a homogeneous ideal $I$ in
+the polynomial ring, the source calls $(S/I)^\vee$ the inverse system of
+$I$ in Macaulay's sense; this historical apolarity terminology is distinct
+from a categorical inverse system indexed by a directed set.
+\end{history}
+Let $K$ be a field, let $S$ be a graded $K$-algebra, and let $M$ be a
+graded $S$-module. The {\it graded $K$-dual} of $M$ is
+$$
+M^\vee=\bigoplus_{n\in\mathbf Z}(M^\vee)_n,
+\qquad
+(M^\vee)_n=\Hom_K(M_{-n},K).
+$$
+For $s\in S_d$, $\lambda\in(M^\vee)_n$, and
+$m\in M_{-n-d}$, its graded $S$-module structure is defined by
+$$
+(s\lambda)(m)=\lambda(sm).
+$$
+Equivalently, if $K$ is viewed as a graded $K$-module concentrated in
+degree zero, then
+$$
+M^\vee=\text{GrHom}_K(M,K).
+$$
+\end{definition}
+
+\begin{lemma}
+\label{lemma-graded-K-dual}
+\begin{reference}
+\cite[Chapter III, \S 4, no. 70, functoriality, exactness, and
+biduality of the dual module, pp. 263--264]{FAC}
+\end{reference}
+Let $K$ be a field and let $S$ be a graded $K$-algebra.
+\begin{enumerate}
+\item The construction $M\mapsto M^\vee$ is an exact contravariant functor
+on the category of graded $S$-modules and degree-zero maps.
+\item There is a canonical degree-zero $S$-linear evaluation map
+$M\to M^{\vee\vee}$. It is an isomorphism if every $M_n$ is
+finite dimensional over $K$.
+\item For every $a\in\mathbf Z$ there is a canonical isomorphism
+$(M(a))^\vee\cong M^\vee(-a)$.
+\item If every $S_n$ is finite dimensional over $K$ and $M$ is a finite
+graded $S$-module, then $M\to M^{\vee\vee}$ is an isomorphism.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+A degree-zero map $u:M\to N$ restricts to maps $M_n\to N_n$ and hence,
+by precomposition, gives a degree-zero $S$-linear map
+$u^\vee:N^\vee\to M^\vee$. If
+$0\to M\to N\to P\to0$ is a short exact sequence of graded modules, then
+it is exact in every degree. Dualizing the degree $-n$ sequence over the
+field $K$ gives
+$$
+0\longrightarrow(P^\vee)_n\longrightarrow(N^\vee)_n
+\longrightarrow(M^\vee)_n\longrightarrow0;
+$$
+surjectivity follows by extending a linear functional from a subspace.
+These sequences assemble into a short exact sequence of graded modules,
+which proves (1).
+
+The usual evaluation maps $M_n\to(M_n')'$ assemble into a degree-zero map
+$M\to M^{\vee\vee}$. For $s\in S_d$, $m\in M_n$, and
+$\lambda\in(M^\vee)_{-n-d}$, both evaluation after multiplication and the
+transposed action send $(s,m,\lambda)$ to $\lambda(sm)$. Thus evaluation
+is $S$-linear. It is an isomorphism when every $M_n$ is finite dimensional,
+proving (2). Since
+$$
+((M(a))^\vee)_n=\Hom_K(M_{a-n},K)=(M^\vee)_{n-a},
+$$
+we obtain (3).
+
+Finally, choose homogeneous generators of $M$ of degrees
+$d_1,\ldots,d_t$. For every $n$, the vector space $M_n$ is a quotient of
+$\bigoplus_{i=1}^t S_{n-d_i}$ and is therefore finite dimensional under
+the hypothesis in (4). Part (2) finishes the proof.
+\end{proof}
+
 \begin{lemma}
 \label{lemma-graded-NAK}
 Let $S$ be a graded ring. Let $M$ be a graded $S$-module.

@@ -2690,6 +2690,45 @@ are commutative.
 \noindent
 Note that this in particular implies that $F^0$ is left exact.
 
+\begin{lemma}
+\label{lemma-dualize-delta-functor}
+\begin{reference}
+\cite[Chapter III, \S 4, no. 70, exact sequences for the functors
+$B^q$ and $T^q$, p. 264]{FAC}
+\end{reference}
+\begin{history}
+In the cited source, $F^q=B^q$ is the cohomological delta functor attached
+to the positive graded Koszul--{\v C}ech complexes and $D$ is the exact
+degreewise $K$-dual of Algebra, Definition
+\ref{algebra-definition-graded-K-dual}. Thus $T^q=D\circ B^q$ is
+contravariant and its displayed exact sequence is the reverse of the
+$B^q$ sequence. The statement below isolates that categorical operation.
+\end{history}
+Let $\mathcal A$, $\mathcal B$, and $\mathcal C$ be abelian categories.
+Let $(F^n,\delta)$ be a cohomological delta functor from $\mathcal A$ to
+$\mathcal B$, and let
+$D:\mathcal B^{opp}\to\mathcal C$ be an additive exact functor. Set
+$T^n=D\circ F^n$. Then the $T^n$ are contravariant functors and every short
+exact sequence $0\to A\to B\to C\to0$ in $\mathcal A$ gives an exact
+sequence
+$$
+\ldots\longrightarrow T^{n+1}(A)\longrightarrow T^n(C)
+\longrightarrow T^n(B)\longrightarrow T^n(A)\longrightarrow\ldots.
+$$
+\end{lemma}
+
+\begin{proof}
+The delta-functor axioms give an exact sequence
+$$
+\ldots\longrightarrow F^n(A)\longrightarrow F^n(B)
+\longrightarrow F^n(C)\longrightarrow F^{n+1}(A)\longrightarrow\ldots.
+$$
+Applying the exact contravariant functor $D$ reverses all arrows and
+preserves exactness, which gives the displayed sequence. Functoriality is
+the composite of the covariant functoriality of $F^n$ and the
+contravariant functoriality of $D$.
+\end{proof}
+
 \begin{definition}
 \label{definition-morphism-delta-functors}
 Let $\mathcal{A}, \mathcal{B}$ be abelian categories.

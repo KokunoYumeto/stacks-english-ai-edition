@@ -2,20 +2,20 @@
 
 - Frozen surface: 661 source targets through printed page 278.
 - Stage: sequential source review and statement-level Stacks integration.
-- Completed checkpoint: Chapter III, Section 4, no. 69, printed pages 199--263.
-- Reviewed decisions: 429 (132 equivalent, 156 stronger, 59 extensions,
-  40 new-statement decisions, 40 historical references, 2 outside scope).
-- Current Stacks references added: 268 across `topology.tex`, `sheaves.tex`,
+- Completed checkpoint: Chapter III, Section 4, no. 70, printed pages 199--264.
+- Reviewed decisions: 444 (137 equivalent, 156 stronger, 61 extensions,
+  47 new-statement decisions, 41 historical references, 2 outside scope).
+- Current Stacks references added: 274 across `topology.tex`, `sheaves.tex`,
   `modules.tex`, `homology.tex`, `coherent.tex`, `cohomology.tex`,
   `divisors.tex`, `constructions.tex`, `schemes.tex`, `morphisms.tex`,
   `derham.tex`, `algebra.tex`, `properties.tex`, `varieties.tex`,
   `simplicial.tex`, `more-algebra.tex`, `dualizing.tex`, `local-cohomology.tex`,
   and `duality.tex`.
-- New Stacks theorem/lemma statements: 18, plus the paracompactness and
+- New Stacks theorem/lemma statements: 20, plus the paracompactness and
   locally-constant-sheaf definitions, the graded-conventions remark, and
-  the internal graded Ext definition;
+  the internal graded Ext and degreewise graded dual definitions;
   each new theorem/lemma has a complete proof and no assigned tag.
-- Source/proof issues or convention boundaries: 704 found by direct
+- Source/proof issues or convention boundaries: 728 found by direct
   authority-page and TeX inspection, all resolved and
   retained in `issues.csv`.
 - Existing Stacks defects corrected: 6, comprising the refinement-homotopy
@@ -31,7 +31,7 @@
   completed; every
   affected statement page passed direct 1100 dpi visual inspection. See
   `qa.json`.
-- Historical notes added: 105, preserving the source's operator calculus,
+- Historical notes added: 110, preserving the source's operator calculus,
   image-complex construction, two-covering double complex, and unproved
   cofinal-vanishing question, together with the classical closed-point to
   reduced-scheme bridge, the classical-map to scheme-morphism bridge, and the
@@ -221,6 +221,20 @@
   no. 70 on printed page 263 and no high-detail crop needed. The aggregate
   Makefile dependency path was rejected after its bounded attempt exposed an
   unrelated marker cascade; direct named-master compilation is now the
-  recorded fail-closed build route.
-- Next unit: `fac:III:4:no:70`.
+  recorded fail-closed build route; no. 70 now defines the degreewise
+  direct-sum graded dual, proves exact contravariance and componentwise
+  biduality, and records the exact sequence obtained by applying an exact
+  contravariant functor to a cohomological delta functor. It distinguishes
+  Macaulay's apolar terminology from a categorical inverse system and keeps
+  the internal-degree sign in the definition of `T^q`. Direct 5000
+  dpi-equivalent inspection confirmed that the printed formula really has
+  subscript `S`; the integration records this as an authorial defect and uses
+  internal `GrHom_K(M,K)`, since `GrHom_S(S,K)=K` cannot equal the displayed
+  degreewise dual of `S`. Tags 010Q, 0117, 01YS, 0913, and 0DWR remain the
+  exact existing inputs; the new graded-dual definition and two completely
+  proved lemmas remain untagged. Authority physical pages 68--69 and output
+  pages algebra 130--132, homology 27--29, local-cohomology 2, more-algebra
+  74, and coherent 34 passed direct visual inspection after two direct serial
+  builds, with an exact hard stop before no. 71 on printed page 264.
+- Next unit: `fac:III:4:no:71`.
 - No statement is mapped by lexical similarity alone.
