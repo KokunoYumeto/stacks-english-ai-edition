@@ -2,10 +2,10 @@
 
 - Frozen surface: 661 source targets through printed page 278.
 - Stage: sequential source review and statement-level Stacks integration.
-- Completed checkpoint: Chapter III, Section 3, no. 63, printed pages 199--257.
-- Reviewed decisions: 363 (116 equivalent, 139 stronger, 50 extensions,
+- Completed checkpoint: Chapter III, Section 3, no. 64, printed pages 199--258.
+- Reviewed decisions: 373 (119 equivalent, 145 stronger, 51 extensions,
   20 new-statement decisions, 36 historical references, 2 outside scope).
-- Current Stacks references added: 233 across `topology.tex`, `sheaves.tex`,
+- Current Stacks references added: 236 across `topology.tex`, `sheaves.tex`,
   `modules.tex`, `homology.tex`, `coherent.tex`, `cohomology.tex`,
   `divisors.tex`, `constructions.tex`, `schemes.tex`, `morphisms.tex`,
   `derham.tex`, `algebra.tex`, `properties.tex`, `varieties.tex`,
@@ -13,7 +13,7 @@
 - New Stacks theorem/lemma statements: 14, plus the paracompactness and
   locally-constant-sheaf definitions and the graded-conventions remark;
   each new theorem/lemma has a complete proof and no assigned tag.
-- Source/proof issues or convention boundaries: 535 found by direct
+- Source/proof issues or convention boundaries: 562 found by direct
   authority-page and TeX inspection, all resolved and
   retained in `issues.csv`.
 - Existing Stacks defects corrected: 6, comprising the refinement-homotopy
@@ -29,7 +29,7 @@
   completed; every
   affected statement page passed direct 1100 dpi visual inspection. See
   `qa.json`.
-- Historical notes added: 72, preserving the source's operator calculus,
+- Historical notes added: 75, preserving the source's operator calculus,
   image-complex construction, two-covering double complex, and unproved
   cofinal-vanishing question, together with the classical closed-point to
   reduced-scheme bridge, the classical-map to scheme-morphism bridge, and the
@@ -146,6 +146,18 @@
   the free base case, and source correction `C0037` restores the missing
   superscript on the upper middle free-module term. Authority physical pages
   61--62 and output pages coherent 34 and 37 and more-algebra 74 passed direct
-  1100 dpi inspection after two serial builds, with no high-detail crop needed.
-- Next unit: `fac:III:3:no:64`.
+  1100 dpi inspection after two serial builds, with no high-detail crop needed;
+  no. 64 now identifies the internal-degree-zero Koszul colimit with alternating
+  cochains on the finite standard Proj cover by its explicit localization
+  fractions, including transition compatibility, a uniform denominator
+  exponent, and inverse identities at the colimit level. It preserves the
+  source's type-TF finite-presentation and cokernel proof while recording that
+  tags 0913 and 01M7 give the complex comparison for every graded module.
+  The corollary is routed through tags 01FM, 01XD, and 01XB, with the
+  alternating-to-usual and affine-intersection acyclicity steps explicit; no
+  new theorem or tag was created. Transcription repair `T0036` remains separate
+  from source correction. Authority physical pages 62--63 and output pages
+  coherent 3, constructions 12, and more-algebra 74 passed direct 1100 dpi
+  inspection after two serial builds, with no high-detail crop needed.
+- Next unit: `fac:III:3:no:65`.
 - No statement is mapped by lexical similarity alone.
