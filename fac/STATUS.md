@@ -2,20 +2,20 @@
 
 - Frozen surface: 661 source targets through printed page 278.
 - Stage: sequential source review and statement-level Stacks integration.
-- Completed checkpoint: Chapter III, Section 4, no. 72, printed pages 199--267.
-- Reviewed decisions: 479 (145 equivalent, 156 stronger, 64 extensions,
-  71 new-statement decisions, 41 historical references, 2 outside scope).
-- Current Stacks references added: 283 across `topology.tex`, `sheaves.tex`,
+- Completed checkpoint: Chapter III, Section 5, no. 73, printed pages 199--268.
+- Reviewed decisions: 493 (148 equivalent, 156 stronger, 65 extensions,
+  81 new-statement decisions, 41 historical references, 2 outside scope).
+- Current Stacks references added: 287 across `topology.tex`, `sheaves.tex`,
   `modules.tex`, `homology.tex`, `coherent.tex`, `cohomology.tex`,
   `divisors.tex`, `constructions.tex`, `schemes.tex`, `morphisms.tex`,
   `derham.tex`, `algebra.tex`, `properties.tex`, `varieties.tex`,
   `simplicial.tex`, `more-algebra.tex`, `dualizing.tex`, `local-cohomology.tex`,
   and `duality.tex`.
-- New Stacks theorem/lemma statements: 22, plus the paracompactness and
+- New Stacks theorem/lemma statements: 24, plus the paracompactness and
   locally-constant-sheaf definitions, the graded-conventions remark, and
   the internal graded Ext and degreewise graded dual definitions;
   each new theorem/lemma has a complete proof and no assigned tag.
-- Source/proof issues or convention boundaries: 776 found by direct
+- Source/proof issues or convention boundaries: 793 found by direct
   authority-page and TeX inspection, all resolved and
   retained in `issues.csv`.
 - Existing Stacks defects corrected: 6, comprising the refinement-homotopy
@@ -31,7 +31,7 @@
   completed; every
   affected statement page passed direct 1100 dpi visual inspection. See
   `qa.json`.
-- Historical notes added: 119, preserving the source's operator calculus,
+- Historical notes added: 123, preserving the source's operator calculus,
   image-complex construction, two-covering double complex, and unproved
   cofinal-vanishing question, together with the classical closed-point to
   reduced-scheme bridge, the classical-map to scheme-morphism bridge, and the
@@ -271,6 +271,21 @@
   pages algebra 130, homology 29, coherent 34, duality 70, and more-algebra
   78--80 passed direct 1100 dpi-equivalent inspection after two serial direct
   builds, with an exact hard stop before Section 5 and no. 73 on printed page
-  267 and no high-detail crop needed.
-- Next unit: `fac:III:5:no:73`.
+  267 and no high-detail crop needed; no. 73 now identifies internal graded
+  Hom and Ext after degree-zero homogeneous localization at every point of
+  Proj. Two new completely proved untagged lemmas retain the exact fraction
+  map, the finite-in-each-degree graded free resolution, both cocycle and
+  coboundary exact sequences before and after localization, and the
+  degree-one unit that trivializes every localized twist. The associated-
+  sheaf Hom isomorphism and local Ext comparison remain separate, with their
+  degree-zero compatibility explicit and the second module arbitrary. Tags
+  01CP, 01M7, and 087R supply the finite-presentation stalk comparison,
+  associated-sheaf stalks and exactness, and ordinary flat-base-change input;
+  none replaces the source's degree-zero graded step. Direct authority review
+  found no new source correction. Authority physical pages 72--73 and output
+  pages algebra 135--137, constructions 13--14, modules 32, and more-algebra
+  172 passed direct 1100 dpi-equivalent inspection after two serial builds,
+  with an exact hard stop before no. 74 on printed page 268 and no high-detail
+  crop needed.
+- Next unit: `fac:III:5:no:74`.
 - No statement is mapped by lexical similarity alone.
