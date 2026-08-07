@@ -104,6 +104,9 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   to 1.1.12 must be 1.1.11 in corrected layers; and the 1.2.7 proof must use
   `X'` and `A'` in three linked places. Both were added append-only to
   `reports/findings.jsonl`; diplomatic French was not changed.
+- The correction referral was delivered to the bounded canon task as a
+  2,465-byte file with SHA-256
+  `8C665633918EE9CC7DCAC9C4D56E63E692C56AFFEC353BF4AD89F4E5A308C1F2`.
 
 ### EGA I 1.2 integration gate
 
