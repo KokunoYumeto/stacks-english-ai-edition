@@ -7098,6 +7098,22 @@ by (3). This forces $H^q$ to be zero (small detail omitted).
 
 \begin{lemma}
 \label{lemma-extended-alternating-Cech-is-colimit-koszul}
+\begin{reference}
+\cite[Chapter III, \S 3, no. 61, pp. 253--254]{FAC}
+\end{reference}
+\begin{history}
+For $S = K[t_0, \ldots, t_r]$ and a graded $S$-module $M$, the cited
+source writes down the internal-degree-zero positive truncation of the
+module version of this system. Its term $C_k^q(M)$ consists of alternating
+families indexed by $q + 1$ variables, with values in $M_{k(q + 1)}$;
+the differential is exterior multiplication by
+$\sum t_i^k dx_i$. The transition from $k$ to $h$ multiplies the component
+indexed by $i_0 < \ldots < i_q$ by
+$(t_{i_0}\cdots t_{i_q})^{h-k}$. Thus passage to the colimit produces the
+degree-zero parts of the localization terms in positive alternating
+{\v C}ech degree. The source omits the augmentation term and shifts the
+remaining complex down by one degree.
+\end{history}
 Let $R$ be a ring. Let $f_1, \ldots, f_r \in R$. The extended alternating
 {\v C}ech complex
 $$
@@ -7107,6 +7123,9 @@ R \to \bigoplus\nolimits_{i_0} R_{f_{i_0}} \to
 $$
 is a colimit of the Koszul complexes $K(R, f_1^n, \ldots, f_r^n)$; see
 proof for a precise statement.
+For an $R$-module $M$, the same statement holds with the Koszul complexes
+replaced by $M \otimes_R K(R, f_1^n, \ldots, f_r^n)$ and the localization
+terms replaced by the corresponding localizations of $M$.
 \end{lemma}
 
 \begin{proof}
@@ -7194,6 +7213,11 @@ then we get an isomorphism of complexes from
 $\colim K(R, f_1^n, \ldots, f_r^n)$ to the
 extended alternating {\v C}ech complex defined in this section.
 We omit the verification that the signs work out.
+
+\medskip\noindent
+The module statement follows by tensoring the directed system with $M$,
+using that tensor product commutes with colimits, and applying
+Lemma \ref{lemma-extended-alternating-form-module}.
 \end{proof}
 
 
