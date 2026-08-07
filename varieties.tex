@@ -6191,6 +6191,18 @@ of coherent sheaves on schemes proper over fields.
 
 \begin{definition}
 \label{definition-euler-characteristic}
+\begin{reference}
+\cite[Chapter III, \S 6, no. 79, definition of the
+Euler--Poincar\'e characteristic, pp. 274--275]{FAC}
+\end{reference}
+\begin{history}
+The cited source defines $h^q(V, \mathfrak F)$ and
+$\chi(V, \mathfrak F)$ for a coherent algebraic sheaf on a projective
+variety, using finiteness and vanishing of coherent cohomology. The
+definition below retains the same alternating dimension sum for a coherent
+module on any proper scheme over a field. It also makes explicit that the
+ground field is part of the data.
+\end{history}
 Let $k$ be a field. Let $X$ be a proper scheme over $k$. Let $\mathcal{F}$
 be a coherent $\mathcal{O}_X$-module. In this situation the
 {\it Euler characteristic of $\mathcal{F}$} is the integer
@@ -6213,6 +6225,17 @@ $(X, \mathcal{F})$.
 
 \begin{lemma}
 \label{lemma-euler-characteristic-additive}
+\begin{reference}
+\cite[Chapter III, \S 6, no. 79, Proposition 2, p. 275]{FAC}
+\end{reference}
+\begin{history}
+The cited proposition gives the corresponding alternating formula for an
+arbitrary finite exact sequence of coherent algebraic sheaves on a projective
+variety. It splits that sequence at coherent kernels and applies the
+three-term formula repeatedly. Thus the source result follows immediately
+from the lemma below and the fact that coherent modules form an abelian
+category. The Stacks statement uses the more general proper-scheme setting.
+\end{history}
 Let $k$ be a field. Let $X$ be a proper scheme over $k$.
 Let $0 \to \mathcal{F}_1 \to \mathcal{F}_2 \to \mathcal{F}_3 \to 0$
 be a short exact sequence of coherent modules on $X$. Then
@@ -6234,6 +6257,47 @@ $$
 + \dim H^0(X, \mathcal{F}_3) - \dim H^1(X, \mathcal{F}_1) + \ldots
 $$
 This immediately implies the lemma.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-euler-characteristic-additive-k-linear}
+\begin{reference}
+\cite[Chapter III, \S 6, no. 79, Lemma 1 and Proposition 1,
+pp. 274--275]{FAC}
+\end{reference}
+\begin{history}
+The cited lemma proves that the alternating sum of the dimensions in a finite
+exact sequence of finite dimensional vector spaces is zero. The cited
+proposition then applies this to coherent algebraic sheaves, but explicitly
+requires the arrows to be only linear over the ground field, not morphisms of
+modules. The statement below retains this distinction; it is strictly more
+general in its arrows than Lemma
+\ref{lemma-euler-characteristic-additive}.
+\end{history}
+Let $k$ be a field. Let $X$ be a proper scheme over $k$.
+Let
+$$
+0 \to \mathcal{F}_1 \to \mathcal{F}_2 \to \mathcal{F}_3 \to 0
+$$
+be a short exact sequence of sheaves of $k$-vector spaces on $X$.
+Assume that each $\mathcal{F}_i$ is a coherent $\mathcal{O}_X$-module and
+that its $k$-vector space structure is the one induced by this module
+structure; the arrows need not be $\mathcal{O}_X$-linear. Then
+$$
+\chi(X, \mathcal{F}_2) =
+\chi(X, \mathcal{F}_1) + \chi(X, \mathcal{F}_3).
+$$
+\end{lemma}
+
+\begin{proof}
+By Cohomology on Sites, Lemma
+\ref{sites-cohomology-lemma-cohomology-modules-abelian-agree}, the cohomology
+of each $\mathcal{F}_i$ as a module agrees with the cohomology of its
+underlying sheaf of abelian groups. Thus the displayed sequence gives a long
+exact sequence of $k$-vector spaces. All of these vector spaces are finite
+dimensional and only finitely many are nonzero by the discussion following
+Definition \ref{definition-euler-characteristic}. The alternating sum of
+their dimensions is zero, which gives the formula.
 \end{proof}
 
 \begin{lemma}

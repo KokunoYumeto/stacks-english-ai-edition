@@ -2,22 +2,22 @@
 
 - Frozen surface: 661 source targets through printed page 278.
 - Stage: sequential source review and statement-level Stacks integration.
-- Completed checkpoint: Chapter III, Section 5, no. 78, printed pages 199--274.
-- Reviewed source units: 562 through 569 append-only decision rows
-  (174 equivalent, 166 stronger, 72 extensions, 111 new-statement decisions,
+- Completed checkpoint: Chapter III, Section 6, no. 79, printed pages 199--275.
+- Reviewed source units: 574 through 581 append-only decision rows
+  (176 equivalent, 170 stronger, 74 extensions, 115 new-statement decisions,
   44 historical references, 2 outside scope).
-- Current Stacks references added: 319 across `topology.tex`, `sheaves.tex`,
+- Current Stacks references added: 325 across `topology.tex`, `sheaves.tex`,
   `modules.tex`, `homology.tex`, `coherent.tex`, `cohomology.tex`,
   `divisors.tex`, `constructions.tex`, `schemes.tex`, `morphisms.tex`,
   `derham.tex`, `algebra.tex`, `properties.tex`, `varieties.tex`,
   `simplicial.tex`, `more-algebra.tex`, `dualizing.tex`, `local-cohomology.tex`,
-  and `duality.tex`.
-- New Stacks theorem/lemma statements: 35, plus the paracompactness and
+  `duality.tex`, and `spaces-over-fields.tex`.
+- New Stacks theorem/lemma statements: 36, plus the paracompactness and
   locally-constant-sheaf definitions, the graded-conventions remark, and
   the internal graded Ext and degreewise graded dual definitions, together
   with the dimension-zero complete-intersection remark;
   each new theorem/lemma has a complete proof and no assigned tag.
-- Source/proof issues or convention boundaries: 916 found by direct
+- Source/proof issues or convention boundaries: 934 found by direct
   authority-page and TeX inspection, all resolved and
   retained in `issues.csv`.
 - Source corrections: 6, including the no. 74 repeated resolution index
@@ -26,7 +26,7 @@
   resolved as correction `C0041`, plus the no. 78 selected-basis degree
   repaired as `C0042` (external edition correction `FAC-FR-C0041`) and its
   repeated sign occurrence recorded separately as `C0043` linked to `C0041`.
-- Existing Stacks defects corrected: 17, comprising the refinement-homotopy
+- Existing Stacks defects corrected: 18, comprising the refinement-homotopy
   sign, repeated coefficient sheaves, wrong boundary domain, wrong boundary
   degree, incomplete low-degree citation, and multiplication by a negative
   power before localization in the Proj shift proof, plus the wrong
@@ -36,17 +36,19 @@
   Veronese tensor isomorphism in the d-uple proof, and the ambient-scheme
   switch, undefined signed-degree notation, and nearby infinitive typo in the
   negative-twist proof, plus the omitted rank-zero case and wrong derived
-  sheaf-Hom base ring in tag `0BQZ`.
+  sheaf-Hom base ring in tag `0BQZ`, and the missing word `space` in the
+  proper-algebraic-space hypothesis at tag `0DN1`.
 - Validation: `intake.json`, `check.json`, and `mcheck.json` all PASS.
 - Builds: `topology.pdf`, `sheaves.pdf`, `modules.pdf`, `homology.pdf`,
   `coherent.pdf`, `cohomology.pdf`, `divisors.pdf`, `constructions.pdf`,
   `schemes.pdf`, `morphisms.pdf`, `derham.pdf`, `algebra.pdf`,
   `properties.pdf`, `varieties.pdf`, `simplicial.pdf`, `more-algebra.pdf`,
-  `dualizing.pdf`, `local-cohomology.pdf`, and `duality.pdf`
+  `dualizing.pdf`, `local-cohomology.pdf`, `duality.pdf`, and
+  `spaces-over-fields.pdf`
   completed; every
   affected statement page passed direct 1100 dpi visual inspection. See
   `qa.json`.
-- History blocks: 110 present, of which 106 are added relative to upstream
+- History blocks: 113 present, of which 109 are added relative to upstream
   base `a04446e57ec1fbc252a871afcec7752fb2807b14`, preserving the source's
   operator calculus,
   image-complex construction, two-covering double complex, and unproved
@@ -418,6 +420,30 @@
   undefined. The scope stops exactly before Section 6/no. 79 on printed p. 274.
   The previously unsupported status count of 143 history notes was also reconciled
   to 106 added history blocks and 110 total, with the correction retained as
-  issue `I000916`.
-- Next unit: `fac:III:6:no:79`.
+  issue `I000916`; no. 79 now defines the Euler--Poincare characteristic and
+  closes both additivity propositions. Tags `0BEJ` and `08AA` already supply
+  the proper-scheme definition and the module-linear short-exact formula, but
+  direct authority review exposed a deliberate stronger arrow class in
+  Proposition 1: its homomorphisms are only linear over the ground field,
+  whereas no. 38 reserves “algebraic homomorphism” for module-linear maps and
+  Proposition 2 returns to that narrower hypothesis. One new completely proved
+  untagged lemma therefore retains the exact ground-field-linear statement by
+  using tag `03FD` to pass to underlying abelian-sheaf cohomology. Proposition 2
+  remains the exact finite-sequence consequence of tag `08AA` and coherent
+  kernels from tag `01Y0`; no redundant theorem or official tag was created.
+  Three bounded read-only audits checked the 12 source units, both authority
+  pages, the arrow-class boundary, signs, finite truncation, target surface,
+  and exact stop against committed base
+  `f535adfc9001b4782eb5acffa3c046236ea1bc52`; all made zero edits and spawned
+  zero downstream agents. Lead review reproduced the strictness witness and
+  closed every accepted finding. The duplicate target audit also exposed and
+  repaired the pre-existing missing word `space` in tag `0DN1`. Authority
+  physical pp. 79--80 and output pages Varieties 61--62 and Algebraic Spaces
+  over Fields 28 passed direct 1100 dpi-equivalent inspection after two final
+  serial builds. Every edited reference resolves, no edited line creates an
+  overfull box, and the scope stops exactly after Proposition 2 on printed
+  p. 275, before no. 80. No tensor-product statement was attributed to this
+  checkpoint. The cumulative provenance surface is now 109 added history
+  blocks and 113 total.
+- Next unit: `fac:III:6:no:80`.
 - No statement is mapped by lexical similarity alone.
