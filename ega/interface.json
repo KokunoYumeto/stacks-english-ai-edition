@@ -8,15 +8,15 @@
     "cross_tree_writes": false
   },
   "french_cursor": {
-    "admitted_through": "EGA II printed p.19, completing 1.7.14, admitting Proposition 1.7.15, and opening 2.1.1 through la somme directe",
-    "next": "NUMDAM EGA II PDF one-based p.17 / printed p.20, continuation of 2.1.1",
-    "append_state": "temporary final 15-byte notation close; remove only it before the next authority append",
-    "manifest": "F18.json",
-    "manifest_sha256": "D7D933D809D962E7770DDCB4734A6BFFEBF60C2CC4082DB116E5E6A470015CD3",
-    "page_gate": "E2P19.json",
-    "page_gate_sha256": "6A98810B0DBA2D8B238B61AB3985ABAB44497FB4E83A3399E9F7D288E84E4F45",
-    "ledger": "E2P19_FR.jsonl",
-    "ledger_sha256": "BA76DFE6E3F8B778FBF3AB0B0B476F694C24B2E9B7A33D5CBB4ED4BB56943218"
+    "admitted_through": "EGA II printed p.20, completing 2.1.1 and opening 2.1.2 through formulas 2.1.2.1 and 2.1.2.2",
+    "next": "NUMDAM EGA II PDF one-based p.18 / printed p.21, continuation of 2.1.2",
+    "append_state": "remove only the final 10-byte temporary end-env before the next authority append",
+    "manifest": "F19.json",
+    "manifest_sha256": "B1B3A70C9E7AAB2745C476CEC0F0313E123126217A43977FCA8AAE626EC84CAF",
+    "page_gate": "E2P20.json",
+    "page_gate_sha256": "F2B390F4A2796886C3C343AC63C1065CED21F6EAD2C988AB0BFD87CE6037C593",
+    "ledger": "E2P20_FR.jsonl",
+    "ledger_sha256": "0B4ED786EDE87E4ADBE3154EC3DC4FB592B07D7588ADD9C6F10576D7BCB59E6C"
   },
   "admitted_french_receipts": [
     {
@@ -27,7 +27,12 @@
     {
       "manifest": "F18.json",
       "manifest_sha256": "D7D933D809D962E7770DDCB4734A6BFFEBF60C2CC4082DB116E5E6A470015CD3",
-      "role": "current direct-authority receipt through EGA II printed p.19"
+      "role": "historical direct-authority receipt through EGA II printed p.19"
+    },
+    {
+      "manifest": "F19.json",
+      "manifest_sha256": "B1B3A70C9E7AAB2745C476CEC0F0313E123126217A43977FCA8AAE626EC84CAF",
+      "role": "current direct-authority receipt through EGA II printed p.20"
     }
   ],
   "english_discovery": {
@@ -35,7 +40,9 @@
     "manifest_sha256": "5C64ECD32FD7C5458D2599D70ED667D2CF06D95517EFFA9C6D6DCEF7626913A0",
     "ledger": "E2P19_EN.jsonl",
     "ledger_sha256": "436F290ABCE9D7DF3B9F3D6D8D2526F4C0EC6B2E4A84B21441C8F8C12D971061",
-    "role": "discovery text only"
+    "latest_noop_gate": "E2P20_EN.jsonl",
+    "latest_noop_gate_sha256": "9807C8FC2A6679F44E05A74804174024CA1A64B5494C3C46DF6B9A2F27A8D1BB",
+    "role": "R184 remains the exact intake discovery surface; the p20 comparison changed no English source file"
   },
   "semantic_notes": {
     "bytes": 399689,

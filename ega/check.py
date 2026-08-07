@@ -382,15 +382,16 @@ if residual_path.exists():
 agent_path = ROOT / "agent.csv"
 if agent_path.exists():
     agent_rows = rows("agent.csv")
-    task_ids = [row["task_id"] for row in agent_rows]
-    if len(task_ids) != len(set(task_ids)):
-        ERRORS.append("duplicate task_id in agent.csv")
+    task_scopes = [(row["task_id"], row["scope"]) for row in agent_rows]
+    if len(task_scopes) != len(set(task_scopes)):
+        ERRORS.append("duplicate task_id/scope in agent.csv")
     for row in agent_rows:
         if not (
                 re.fullmatch(
                     r"[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}",
                     row["task_id"])
-                or re.fullmatch(r"/root/[a-z0-9_]+", row["task_id"])):
+                or re.fullmatch(
+                    r"/root(?:/[a-z0-9_]+)+", row["task_id"])):
             ERRORS.append(f"invalid agent task id {row['run_id']}")
         if row["status"] != "completed":
             ERRORS.append(f"non-completed recorded agent run {row['run_id']}")

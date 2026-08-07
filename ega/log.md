@@ -139,3 +139,40 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   correction and no genuine mathematical gap requiring new exposition was
   found. EGA-local saturation notation and unlabelled coherence formulas remain
   visible rather than being forced into invented tags.
+
+### EGA I 1.4 review A000037--A000048
+
+- Three bounded reviewers and one nested source extractor separated Theorem
+  1.4.1 into exact existing ingredients. Tags 0EHM and 01P7 cover the canonical
+  quasi-coherent and localization directions, but no official label packages
+  the ambient-module, finite-standard-cover, quasi-coherent, and converse
+  localization criterion as one statement.
+- A cited local Properties lemma now records that reusable four-way
+  characterization. It assigns no official tag. Two serial chapter passes exit
+  zero, the local label resolves, and standalone missing-external-aux warnings
+  remain outside the delta.
+- EGA I Lemma 1.4.1.1 has no exact named target under its arbitrary-sheaf
+  hypotheses. Its conclusion is absorbed by 01P7 in the quasi-coherent
+  application and its finite gluing maneuver already appears inside existing
+  proofs. It remains an explicit proof-device residual rather than a redundant
+  new lemma.
+- The closer target for Corollary 1.4.2 is 01PE, which works for any
+  quasi-compact open immersion. Corollary 1.4.3 splits across 01SA and 01SB,
+  with 01IB, 01I8, and 0H88 recorded as proof dependencies.
+- Eight read-only Spark audits attacked proof logic, duplicates, source
+  equivalence, Stacks conventions, map design, build evidence, source
+  corrections, and validator closure. Exact task IDs, runtimes, findings,
+  owner checks, accepted and rejected dispositions, and write claims are in
+  `agent.csv`.
+- Three Spark failures were retained rather than silently discarded: one
+  conflated the new worktree label with official tag 0EHM; one could not open
+  the real diff and changed the nonnegative exponent quantifier; and one
+  proposed unrelated tags 01P8 and 01P9. Pinned-base `git show`, exact
+  label-to-tag joins, and owner source reading closed all three.
+- A proposed new correction for the printed tilde on `N` was rejected as a
+  duplicate. Direct page-90 validation R13 already records the visible source
+  oddity, its diplomatic preservation, and the corrected English disposition.
+  No new finding row was added.
+- Every completed Spark task was consumed before archival. The live French
+  interface now records F19 and the E2P20 gate; the immutable F8 receipt remains
+  the authority for all EGA I statement edges in this slice.

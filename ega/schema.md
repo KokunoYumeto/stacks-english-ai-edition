@@ -68,6 +68,13 @@ scope, status/runtime, returned result, owner verification, accepted or
 rejected disposition, and write claim. Agent output is evidence only; it
 cannot promote authority or mathematical review state.
 
+One task path may appear in more than one row when a later follow-up receives
+a genuinely different bounded scope. The task-path and scope pair is unique.
+Nested agent paths are retained exactly. Official-target claims from an agent
+must be replayed against `git show` at the pinned upstream commit and the exact
+full-label join in `tags/tags`; an uncommitted worktree label is never evidence
+that the target already exists upstream.
+
 ## Feedback integration
 
 `fb.csv` records the immutable URL, source, date, affected stable ID, and

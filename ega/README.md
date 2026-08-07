@@ -55,6 +55,12 @@ or published here.
   edges across 34 source units and 24 explicit residuals. This slice required
   no new Stacks lemma: the apparent remainders are notation or consequences of
   the affine equivalence and its exact tensor and colimit behavior.
+- Fourth statement-level slice: EGA I 1.4.1--1.4.3 now have direct-French
+  dispositions. The cumulative map has 62 edges across 37 source units and 28
+  explicit residuals. The exact four-way quasi-coherent characterization is a
+  cited local Properties lemma with no official tag. Lemma 1.4.1.1 remains a
+  proof-device residual; 01PE covers 1.4.2 more generally; and 01SA--01SB split
+  the algebra and module clauses of 1.4.3.
 
 ## State model
 
@@ -101,7 +107,7 @@ append-only.
   the edition task alone decides and mutates canonical source.
 
 The immediate work is sequential statement-level comparison across EGA 0--IV,
-continuing after EGA I 1.3.14 while EGA II is admitted through printed p.19.
+continuing after EGA I 1.4.3 while EGA II is admitted through printed p.20.
 The complete English discovery surface drives provisional candidates only.
 Mathematical Stacks chapter edits occur only after a bounded unit has direct
 French evidence, a reviewed disposition, explicit residual accounting, and

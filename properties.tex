@@ -2430,6 +2430,57 @@ Restricting back to $U$ we get the lemma.
 \end{proof}
 
 \begin{lemma}
+\label{lemma-characterize-quasi-coherent-quasi-affine}
+\begin{reference}
+\cite[I, Theorem 1.4.1]{EGA1}
+\end{reference}
+Let $A$ be a ring and let $U \subset \Spec(A)$ be a quasi-compact open
+subscheme. Let $\mathcal{F}$ be an $\mathcal{O}_U$-module and set
+$M = \Gamma(U, \mathcal{F})$. The following are equivalent:
+\begin{enumerate}
+\item $\mathcal{F}$ is quasi-coherent,
+\item there are $f_1, \ldots, f_n \in A$ such that
+$U = \bigcup D(f_i)$ and
+$\mathcal{F}|_{D(f_i)} \cong \widetilde{M_i}$ for some
+$A_{f_i}$-module $M_i$,
+\item there is an $A$-module $N$ such that
+$\mathcal{F} \cong \widetilde N|_U$, and
+\item for every $f \in A$ such that $D(f) \subset U$ the canonical map
+$$
+M_f \longrightarrow \Gamma(D(f), \mathcal{F})
+$$
+is an isomorphism.
+\end{enumerate}
+If these conditions hold, then in (3) one can take $N = M$, and the
+resulting isomorphism is canonical.
+\end{lemma}
+
+\begin{proof}
+The standard opens contained in $U$ form a basis for its topology and,
+as $U$ is quasi-compact, a finite subcollection covers $U$.
+Thus (3) implies (2) by
+Schemes, Lemma \ref{schemes-lemma-widetilde-pullback}, and (2) implies
+(1) because being quasi-coherent is local. Lemma
+\ref{lemma-quasi-coherent-quasi-affine} proves that (1) implies (3),
+with $N = M$ and with the canonical isomorphism asserted above. The same
+lemma, followed by taking sections over $D(f)$, proves that (1) implies
+(4).
+
+Assume (4), and write $j : U \to \Spec(A)$ for the inclusion. By
+Schemes, Lemma \ref{schemes-lemma-compare-constructions}, the identity
+map of $M$ gives a map
+$$
+\widetilde M \longrightarrow j_*\mathcal{F}.
+$$
+After restriction to $U$, this gives a canonical map
+$\widetilde M|_U \to \mathcal{F}$. On a standard open
+$D(f) \subset U$, the induced map on sections is the map in (4).
+Consequently this map is an isomorphism on a basis for the topology of
+$U$, and hence it is an isomorphism. This proves (3) and the final
+assertion.
+\end{proof}
+
+\begin{lemma}
 \label{lemma-invert-f-affine}
 Let $X$ be a scheme. Let $f \in \Gamma(X, \mathcal{O}_X)$.
 Assume $X$ is quasi-compact and quasi-separated and assume that
