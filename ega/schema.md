@@ -6,6 +6,13 @@ Source IDs use `ega.<volume>.<source-number>[.<subitem>]`. They identify the
 mathematical source unit, not a mutable line or PDF coordinate. Page, TeX,
 hash, and language locators attach as versioned evidence.
 
+Native diagrams receive deterministic typed child IDs. Existing `tikzcd`
+units retain `ega:<parent>:diagram:<ordinal>`; Xy-pic units use the append-only
+namespace `ega:<parent>:diagram:xymatrix:<ordinal>`, including commands with
+`@` layout options. The type split prevents newly discovered earlier Xy-pic
+commands from renumbering published tikz-cd IDs. A diplomatic-French diagram
+label may be bound as an evidence alias without replacing the stable child ID.
+
 The `volume` field is the logical EGA volume determined from the stable label
 or source-file role. `printed_page` is an independent witness locator and may
 name another volume when a later erratum supplies text for an earlier volume.

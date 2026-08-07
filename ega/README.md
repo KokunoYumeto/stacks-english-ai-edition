@@ -24,8 +24,9 @@ or published here.
   `4B4811B6F24F139020E15CF27D7BFA82C3872F0A549DCFF4F64B28F4454737D6`.
   They are evidence to normalize into the new schema, not a completed
   deliverable or an upstream mapping.
-- Verified discovery inventory: 127 exact source files and 9,155
-  metadata-only semantic units. No source prose is copied into the branch.
+- Verified discovery inventory: 127 exact source files and 9,585
+  metadata-only semantic units including 445 native diagram units. No source
+  prose is copied into the branch.
 - Current Stacks snapshot: 21,446 chapter labels, 21,437 exact official-tag
   joins, and 2,670 lexical candidates across all 35 discovery topics. Reviewed
   lexical candidates remain exactly zero in `map.json`.
@@ -75,6 +76,16 @@ or published here.
   categorical functoriality results cover the whole slice; no new lemma or
   source correction was needed. The map-identification statement in 1.6.8 is
   deliberately not promoted to flat base-change isomorphism tag 0C6I.
+- Seventh statement-level slice: EGA I 1.7.1--1.7.5 and its labelled
+  global-to-local square now have direct-French dispositions. The cumulative
+  map has 112 edges across 58 source units and 46 explicit residuals. Tags
+  01HW 01HB 01I1 and 01I2 exactly split affine recognition and the opposite-
+  rings equivalence; 01IG gives a stronger closed-immersion form of the final
+  quotient monomorphism. No new Stacks lemma was needed.
+- The intake registry now recognizes all 430 native Xy-pic commands as well
+  as 15 tikz-cd environments. Synthetic diagram IDs are deterministic within
+  their semantic parent. This repairs an actual pre-Stacks graph omission;
+  source prose and diagram artwork remain uncopied.
 
 ## State model
 
@@ -121,7 +132,7 @@ append-only.
   the edition task alone decides and mutates canonical source.
 
 The immediate work is sequential statement-level comparison across EGA 0--IV,
-continuing after EGA I 1.6.10 while EGA II is admitted through printed p.20.
+continuing after EGA I 1.7.5 while EGA II is admitted through printed p.20.
 The complete English discovery surface drives provisional candidates only.
 Mathematical Stacks chapter edits occur only after a bounded unit has direct
 French evidence, a reviewed disposition, explicit residual accounting, and

@@ -15,6 +15,8 @@ PAGE_RE = re.compile(r"\\oldpage(?:\[([^]]+)\])?\{([^}]+)\}")
 SECTION_RE = re.compile(r"\\(part|chapter|section|subsection|subsubsection)\*?\{")
 BEGIN_RE = re.compile(r"\\begin\{([^}]+)\}(?:\[([^]]+)\])?")
 END_RE = re.compile(r"\\end\{([^}]+)\}")
+XYMATRIX_RE = re.compile(r"\\xymatrix\b")
+SECTION_LABEL_MAX_GAP = 4
 
 STATEMENT_KINDS = {
     "env": "statement",
@@ -135,6 +137,7 @@ def main():
     kind_counts = Counter()
     proof_counts = defaultdict(int)
     diagram_counts = defaultdict(int)
+    xymatrix_counts = defaultdict(int)
 
     for rel, text in file_text.items():
         rel_path = Path(rel)
@@ -145,6 +148,7 @@ def main():
         current_section = ""
         current_subsection = ""
         last_statement = ""
+        last_statement_container = ""
 
         def add_unit(unit_id, kind, line_no, source_label="", source_number="", parent_id="", anchor=""):
             if unit_id in labels_seen:
@@ -172,6 +176,9 @@ def main():
         lines = text.splitlines(keepends=True)
         for line_no, line in enumerate(lines, 1):
             active = active_tex(line)
+            if (pending_section and
+                    line_no - pending_section[1] > SECTION_LABEL_MAX_GAP):
+                pending_section = None
             page = PAGE_RE.search(active)
             if page:
                 if page.group(1):
@@ -180,7 +187,9 @@ def main():
 
             section = SECTION_RE.search(active)
             if section:
-                pending_section = section.group(1)
+                pending_section = (section.group(1), line_no)
+                last_statement = ""
+                last_statement_container = ""
 
             for begin in BEGIN_RE.finditer(active):
                 env = begin.group(1)
@@ -204,6 +213,21 @@ def main():
                     add_unit(unit_id, "diagram", line_no, source_number=str(suffix),
                              parent_id=parent, anchor=line)
 
+            # The source corpus overwhelmingly uses native Xy-pic diagrams
+            # rather than tikz-cd.  Register every command occurrence even
+            # when it carries an @-option such as \xymatrix@C=...{...}.
+            for _ in XYMATRIX_RE.finditer(active):
+                container = current_subsection or current_section
+                parent = (last_statement if last_statement_container == container
+                          else "") or container
+                xymatrix_counts[parent or rel] += 1
+                suffix = xymatrix_counts[parent or rel]
+                base = parent or f"ega:file:{rel.replace('/', ':')}"
+                unit_id = f"{base}:diagram:xymatrix:{suffix}"
+                add_unit(unit_id, "diagram", line_no,
+                         source_number=f"xymatrix:{suffix}",
+                         parent_id=parent, anchor=line)
+
             for label_match in LABEL_RE.finditer(active):
                 label = label_match.group(1)
                 unit_id = f"ega:{label}"
@@ -214,7 +238,7 @@ def main():
                 number = label
 
                 if pending_section:
-                    kind = pending_section
+                    kind = pending_section[0]
                     pending_section = None
                     if kind in {"subsection", "subsubsection"}:
                         parent = current_section or parent
@@ -233,6 +257,7 @@ def main():
                             kind = STATEMENT_KINDS[env]
                             frame["primary"] = unit_id
                             last_statement = unit_id
+                            last_statement_container = current_subsection or current_section
                         else:
                             kind = "subitem"
                             parent = frame["primary"]
@@ -280,7 +305,7 @@ def main():
     write_csv(args.out / "units.csv", unit_fields, units)
 
     result = {
-        "schema": "ega-english-discovery-intake-v2",
+        "schema": "ega-english-discovery-intake-v3",
         "status": "PASS" if not errors else "FAIL",
         "errors": errors,
         "manifest": {

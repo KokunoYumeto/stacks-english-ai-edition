@@ -234,3 +234,42 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   so a Stacks build or visual render would test no substantive delta and was
   intentionally omitted. The structural validator and remote identity gate
   remain mandatory before the checkpoint is reported.
+
+### EGA I 1.7 review A000056--A000060
+
+- Five numbered units and the labelled proof square were checked against
+  direct French F8. The cumulative map has 112 edges across 58 admitted source
+  units and 46 residuals. Tags 01HW 01HB 01HV 01HY 01I1 and 01I2 cover the
+  affine definition recognition criterion Hom bijection and opposite-category
+  equivalence. Tag 01IG is a stronger closed-immersion form of 1.7.5 and 01L6
+  records its point-and-stalk proof criterion in the scheme category.
+- The labelled square `I.1.7.3.diagram-fr` exposed a registry defect: intake
+  recognized 15 tikz-cd environments but none of 430 active native Xy-pic
+  commands. Intake v3 now registers both forms in disjoint typed namespaces
+  without renumbering any old ID. Exact R184 replay passes with 9,585 units
+  including 445 diagrams and copies no source prose.
+- Literal presentation-independent canonicity in 1.7.1 is false: on
+  `Spec(k[t])` the identity and `t -> t + 1` presentations give different
+  identifications with the witness ring. Context supports the harmless
+  intended meaning relative to a chosen affine presentation. The lowest-
+  severity clarification was referred append-only; diplomatic French was not
+  changed and the canon task owns disposition.
+- The correction channel was delivered directly to the canon task as
+  `reports/findings.jsonl`, 3,509 bytes, SHA-256
+  `F29BF107D0A7100A6E63AFEF0E89D9C9E4D63A428F75B214A08E6689FCF3D786`.
+  No source tree was mutated.
+- Two exact intake replays produced identical `units.csv` SHA-256
+  `7EC7BAB365BAC48101FA8C107D814CD26017A9AC728A99C1F90BD5B6908166CF`
+  and `intake.json` SHA-256
+  `E5C9609AD505DFDF51AE20AB50E25E44C4748B0CC67F2DCE5D479D1C8030C565`.
+  The Xy-pic namespace is disjoint so all old diagram rows remain
+  byte-identical; a unified diagram counter was rejected because it would have
+  reassigned one previously published tikz-cd ID.
+- The same audit found a pre-existing section-parser state leak. Exact R184 has
+  567 legitimate labelled headings with a maximum four-line label gap; an
+  unlabelled starred errata heading had remained pending for 107 lines. Intake
+  now expires that state after four lines. Stable IDs are unchanged while one
+  remark kind and eleven later parent links are repaired deterministically.
+- No Stacks TeX changed in this slice. A chapter build or visual render would
+  therefore test no substantive delta; exact intake replay structural
+  validation and remote identity are the applicable gates.
