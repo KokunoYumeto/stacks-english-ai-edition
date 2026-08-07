@@ -42,6 +42,14 @@ or published here.
   lemma with an explicit use in `more-algebra.tex`. It fills a fact previously
   used there without a named target. Its label is local and has no official
   tag or upstream-acceptance claim.
+- Second statement-level slice: all seven numbered units in EGA I 1.2.1--1.2.7
+  were checked against the same direct French authority. The cumulative map
+  now has 34 edges across 21 source units and 13 explicit residuals. Exact
+  existing targets include 00E2, 00E3, 00E5, and 00FL.
+- Second local integration: EGA I Corollary 1.2.4 supplies a general
+  unit-times-image criterion for a spectrum map to be a homeomorphism onto its
+  image. The new untagged lemma now supplies the common topology step in the
+  quotient and localization proofs.
 
 ## State model
 
@@ -88,7 +96,7 @@ append-only.
   the edition task alone decides and mutates canonical source.
 
 The immediate work is sequential statement-level comparison across EGA 0--IV,
-continuing after EGA I 1.1.15 while EGA II is admitted through printed p.19.
+continuing after EGA I 1.2.7 while EGA II is admitted through printed p.19.
 The complete English discovery surface drives provisional candidates only.
 Mathematical Stacks chapter edits occur only after a bounded unit has direct
 French evidence, a reviewed disposition, explicit residual accounting, and

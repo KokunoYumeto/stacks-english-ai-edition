@@ -83,3 +83,37 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   `01B2E4D9AB60A6CAF880DE8EF6D38282ACD80389A4BDEE92C02F700F8AC4E993`.
   This referral proposes a corrected-layer disposition and does not alter the
   diplomatic French authority.
+
+### Statement review A000028--A000029
+
+- Two read-only reviewers covered every numbered unit in EGA I 1.2.1--1.2.7
+  over three bounded turns. A requested third child could not be created
+  because the collaboration thread limit was reached; no task or duplicate
+  work was created. The completed first reviewer was reused for the remaining
+  disjoint slice.
+- Existing Stacks coverage is exact for the quotient-spectrum and localization
+  corollaries and strictly stronger for the dense-image criterion. Spectrum
+  functoriality merges continuity and the standard-open inverse-image formula.
+- The residue-field naturality package and the closure-of-image formula are
+  present only as prose or proof-level derivations at EGA's granularity; both
+  remain explicit residuals rather than fabricated theorem equivalences.
+- EGA I 1.2.4 exposed a reusable gap. The new cited but untagged Algebra lemma
+  states the general unit-times-image embedding criterion and now supplies the
+  common topology argument in the quotient and localization proofs.
+- Direct comparison exposed two printed-source defects: the 1.2.5 reference
+  to 1.1.12 must be 1.1.11 in corrected layers; and the 1.2.7 proof must use
+  `X'` and `A'` in three linked places. Both were added append-only to
+  `reports/findings.jsonl`; diplomatic French was not changed.
+
+### EGA I 1.2 integration gate
+
+- A follow-on adversarial review under A000029 passed the new lemma and both
+  refactored uses. It explicitly checked injectivity and the subspace topology;
+  zero rings; localization with zero in the multiplicative set; quotient by
+  the unit ideal; citation accuracy; style; and absence of circular dependence.
+- Two serial `algebra.tex` passes exited zero. The new label is present in
+  `algebra.aux`; neither it nor the EGA I citation is unresolved. Existing
+  standalone-chapter external-reference warnings are outside this delta.
+- The hardened scaffold validator passes with 9,155 units; 34 statement edges
+  across 21 source units; 13 residuals; three correction findings; 29 recorded
+  agent runs; and no errors.
