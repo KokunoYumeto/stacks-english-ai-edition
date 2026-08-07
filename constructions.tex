@@ -1961,6 +1961,8 @@ pp. 246--247]{FAC}
 pp. 250--251]{FAC}
 \cite[Chapter III, \S 2, no. 59, definition of $\alpha$,
 p. 252]{FAC}
+\cite[Chapter III, \S 3, no. 67, definition of $M^\natural$ and $\alpha$,
+p. 260]{FAC}
 \end{reference}
 \begin{history}
 For $S = K[t_0, \ldots, t_r]$, the standard opens $D_{+}(t_i)$ cover
@@ -1983,6 +1985,11 @@ The definition of $\alpha$ in no. 59 sends a homogeneous $m \in M_n$
 to the global section represented locally by $m/1$ after viewing $m$ in
 degree zero of $M(n)$. This is the degree-$n$ component of the canonical
 graded map in the final display below.
+
+No. 67 denotes the target of this graded map by $M^\natural$ and again
+writes $\alpha:M\to M^\natural$. Thus the source's notation is exactly the
+direct sum over all integer twists in the final display, not ordinary global
+sections of one associated sheaf.
 \end{history}
 Let $S$ be a graded ring. Let $M$ be a graded $S$-module.
 Set $X = \text{Proj}(S)$. Assume $X$ is covered by the standard
@@ -2276,6 +2283,97 @@ $D_{+}(f)$ in the covering, the first arrow represents $s$ by $s/1$;
 the degree-$n$ twist of $b_{\mathcal{F}}$ sends this section back to
 $s|_{D_{+}(f)}$. These opens cover $X$, so the composite returns $s$.
 This proves the identity in every degree.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-comparison-proj-isomorphism}
+\begin{reference}
+\cite[Chapter III, \S 3, no. 67, Proposition 9 and Remarks,
+pp. 260--261]{FAC}
+\end{reference}
+\begin{history}
+For $S=K[t_0,\ldots,t_r]$, the cited source writes $M^\natural$ for the
+graded module of twisted global sections and assumes condition (TF), using
+no. 65 to know that $\alpha:M\to M^\natural$ is already an isomorphism in
+all sufficiently large degrees. Proposition 9 characterizes when it is an
+isomorphism in every degree by the two degree-one conditions below and proves
+the result by descending induction. Its first remark observes that the first
+condition alone characterizes injectivity.
+
+The formulation below isolates the exact inputs used in that proof: a finite
+standard-open cover in degree one and eventual bijectivity of the comparison
+map. It therefore applies without imposing the source's polynomial-ring or
+(TF) presentation once those two inputs are known. The second source remark
+packages the two conditions as bijectivity of the degree-zero augmentation
+into its first finite Koszul complex; this is distinct from silently replacing
+that finite-stage group by a local-cohomology group or by a colimit.
+\end{history}
+Let $S$ be a graded ring and set $X=\operatorname{Proj}(S)$. Let
+$f_1,\ldots,f_r\in S_1$ be homogeneous elements such that
+$X=\bigcup_{i=1}^rD_+(f_i)$. Let $M$ be a graded $S$-module. Set
+$$
+N_M=\bigoplus_{n\in\mathbf{Z}}\Gamma(X,\widetilde M(n))
+$$
+and let
+$$
+a_M:M\longrightarrow N_M
+$$
+be the map of Equation
+(\ref{equation-global-sections-more-generally-simplified}). Assume that
+$(a_M)_n$ is an isomorphism for all sufficiently large $n$. Then $a_M$ is
+an isomorphism if and only if the following conditions hold:
+\begin{enumerate}
+\item
+\label{item-comparison-proj-injective}
+If $m\in M$ and $f_i m=0$ for every $i$, then $m=0$.
+\item
+\label{item-comparison-proj-glue}
+For every $n\in\mathbf{Z}$ and elements $m_i\in M_{n+1}$ such that
+$f_jm_i=f_im_j$ for all $i,j$, there exists an $m\in M_n$ such that
+$m_i=f_im$ for every $i$.
+\end{enumerate}
+Moreover, $a_M$ is injective if and only if condition
+(\ref{item-comparison-proj-injective}) holds.
+\end{lemma}
+
+\begin{proof}
+We first verify both conditions for $N_M$. It is enough to work degreewise.
+If $s\in (N_M)_n$ and $f_is=0$ for all $i$, then $s$ restricts to zero on
+$D_+(f_i)$ because $f_i$ trivializes $\mathcal{O}_X(1)$ there. These opens
+cover $X$, hence $s=0$.
+
+Suppose that $s_i\in (N_M)_{n+1}$ and $f_js_i=f_is_j$ for all $i,j$. On
+$D_+(f_i)$ the quotient $s_i/f_i$ is a section of $\widetilde M(n)$. The
+displayed relations show that these sections agree on overlaps, so they glue
+to an $s\in (N_M)_n$. To see that $f_is=s_i$, restrict to $D_+(f_j)$ and
+observe that
+$$
+f_j(f_is-s_i)=f_i(f_js)-f_js_i=f_is_j-f_js_i=0.
+$$
+Since $f_j$ is invertible on $D_+(f_j)$, the desired equality holds there,
+and hence globally. Thus $N_M$ satisfies both conditions. Consequently, if
+$a_M$ is an isomorphism, then $M$ satisfies both of them. If $a_M$ is merely
+injective, the first condition for $N_M$ still shows that the first condition
+holds for $M$.
+
+Conversely, assume condition (\ref{item-comparison-proj-injective}). We prove
+that $(a_M)_n$ is injective by descending induction on $n$, starting in the
+range where it is an isomorphism. If $a_M(m)=0$ for $m\in M_n$, then
+$a_M(f_im)=f_ia_M(m)=0$. The induction hypothesis gives $f_im=0$ for every
+$i$, and condition (\ref{item-comparison-proj-injective}) gives $m=0$. This
+proves both the injectivity assertion and one implication of the final
+statement.
+
+Now assume condition (\ref{item-comparison-proj-glue}) as well. We prove
+surjectivity by the same descending induction. Given $s\in (N_M)_n$, choose
+$m_i\in M_{n+1}$ with $a_M(m_i)=f_is$, using the induction hypothesis. The
+injectivity just proved and the equalities
+$$
+a_M(f_jm_i-f_im_j)=f_jf_is-f_if_js=0
+$$
+show that $f_jm_i=f_im_j$ for all $i,j$. The second condition gives an
+$m\in M_n$ with $m_i=f_im$. Hence $f_i(s-a_M(m))=0$ for every $i$. The first
+condition for $N_M$ gives $s=a_M(m)$, as desired.
 \end{proof}
 
 

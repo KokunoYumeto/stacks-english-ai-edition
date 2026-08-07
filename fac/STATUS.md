@@ -2,18 +2,18 @@
 
 - Frozen surface: 661 source targets through printed page 278.
 - Stage: sequential source review and statement-level Stacks integration.
-- Completed checkpoint: Chapter III, Section 3, no. 66, printed pages 199--260.
-- Reviewed decisions: 392 (124 equivalent, 155 stronger, 53 extensions,
-  20 new-statement decisions, 38 historical references, 2 outside scope).
-- Current Stacks references added: 248 across `topology.tex`, `sheaves.tex`,
+- Completed checkpoint: Chapter III, Section 3, no. 67, printed pages 199--261.
+- Reviewed decisions: 402 (127 equivalent, 155 stronger, 53 extensions,
+  25 new-statement decisions, 40 historical references, 2 outside scope).
+- Current Stacks references added: 252 across `topology.tex`, `sheaves.tex`,
   `modules.tex`, `homology.tex`, `coherent.tex`, `cohomology.tex`,
   `divisors.tex`, `constructions.tex`, `schemes.tex`, `morphisms.tex`,
   `derham.tex`, `algebra.tex`, `properties.tex`, `varieties.tex`,
   `simplicial.tex`, and `more-algebra.tex`.
-- New Stacks theorem/lemma statements: 14, plus the paracompactness and
+- New Stacks theorem/lemma statements: 15, plus the paracompactness and
   locally-constant-sheaf definitions and the graded-conventions remark;
   each new theorem/lemma has a complete proof and no assigned tag.
-- Source/proof issues or convention boundaries: 622 found by direct
+- Source/proof issues or convention boundaries: 651 found by direct
   authority-page and TeX inspection, all resolved and
   retained in `issues.csv`.
 - Existing Stacks defects corrected: 6, comprising the refinement-homotopy
@@ -29,7 +29,7 @@
   completed; every
   affected statement page passed direct 1100 dpi visual inspection. See
   `qa.json`.
-- Historical notes added: 87, preserving the source's operator calculus,
+- Historical notes added: 91, preserving the source's operator calculus,
   image-complex construction, two-covering double complex, and unproved
   cofinal-vanishing question, together with the classical closed-point to
   reduced-scheme bridge, the classical-map to scheme-morphism bridge, and the
@@ -179,6 +179,17 @@
   pages 64--65 and output pages coherent 24, 42, and 50, cohomology 39,
   properties 44, constructions 17, and morphisms 86 passed direct 1100 dpi
   inspection after two serial builds, with an exact hard stop before no. 67
-  on printed page 260 and no high-detail crop needed.
-- Next unit: `fac:III:3:no:67`.
+  on printed page 260 and no high-detail crop needed; no. 67 now identifies
+  the all-integer twisted-section module and its canonical comparison map,
+  and adds the exact common-annihilator and compatible-family criterion for
+  that map to be injective or bijective. The reusable criterion is a new
+  completely proved lemma with no assigned tag; tags 01MT and 0AG7 retain the
+  construction and eventual-recovery inputs, while tag 0913 records only the
+  finite-stage-to-colimit lineage and is not conflated with the source's
+  stage-one notation. Authority physical pages 65--66 and output pages
+  constructions 18, 21, and 22, coherent 37, and more-algebra 74 passed
+  direct 1100 dpi inspection after two serial builds, with an exact hard stop
+  before Section 4 and no. 68 on printed page 261 and no high-detail crop
+  needed.
+- Next unit: `fac:III:4:no:68`.
 - No statement is mapped by lexical similarity alone.
