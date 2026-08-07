@@ -120,3 +120,22 @@ visual fidelity, publication, or ownership. The owner verifies every result.
 - The hardened scaffold validator passes with 9,155 units; 34 statement edges
   across 21 source units; 13 residuals; three correction findings; 29 recorded
   agent runs; and no errors.
+
+### Spark batch A000030--A000036
+
+- Seven read-only Spark shards covered the fourteen numbered units of EGA I
+  1.3.1--1.3.14 in non-overlapping pairs. Exact task IDs runtimes returned
+  findings owner checks dispositions and write claims are in `agent.csv`.
+- Useful results located the compact Stacks core 01HS 01HU 01HV 01I7--01I9
+  01IB--01ID 01PB and 01SA--01SB. The owner rechecked every official tag and
+  direct French locus before admission.
+- Three systematic false-positive classes were rejected: a larger target was
+  repeatedly called partial despite full source coverage; an aggregate unit
+  was called unmatched despite exact split components; and the final shard
+  supplied nonexistent French source paths and overbroad sheafification tags.
+- The relation rule is now explicit in `schema.md`: classify coverage from the
+  source toward the target and reserve partial for an actual source remainder.
+- The slice produced 22 new statement edges and 11 residuals. No printed-source
+  correction and no genuine mathematical gap requiring new exposition was
+  found. EGA-local saturation notation and unlabelled coherence formulas remain
+  visible rather than being forced into invented tags.

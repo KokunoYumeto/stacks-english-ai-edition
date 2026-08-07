@@ -50,6 +50,11 @@ or published here.
   unit-times-image criterion for a spectrum map to be a homeomorphism onto its
   image. The new untagged lemma now supplies the common topology step in the
   quotient and localization proofs.
+- Third statement-level slice: all fourteen numbered units in EGA I
+  1.3.1--1.3.14 now have direct-French dispositions. The cumulative map has 56
+  edges across 34 source units and 24 explicit residuals. This slice required
+  no new Stacks lemma: the apparent remainders are notation or consequences of
+  the affine equivalence and its exact tensor and colimit behavior.
 
 ## State model
 
@@ -96,7 +101,7 @@ append-only.
   the edition task alone decides and mutates canonical source.
 
 The immediate work is sequential statement-level comparison across EGA 0--IV,
-continuing after EGA I 1.2.7 while EGA II is admitted through printed p.19.
+continuing after EGA I 1.3.14 while EGA II is admitted through printed p.19.
 The complete English discovery surface drives provisional candidates only.
 Mathematical Stacks chapter edits occur only after a bounded unit has direct
 French evidence, a reviewed disposition, explicit residual accounting, and

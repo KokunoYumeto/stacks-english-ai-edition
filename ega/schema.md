@@ -57,6 +57,12 @@ be reported as upstream acceptance. Multiple edges may share a source unit;
 `resid.csv` records every known remainder that prevents a misleading
 single-edge completeness claim.
 
+Relations are measured from the source unit toward the target. Extra clauses
+in a target do not make the source only `partial`: use `merged` when Stacks
+absorbs the whole source with neighboring material and `entailed_by_stronger`
+when a genuinely stronger target implies the whole source. Use `partial` only
+when some mathematical part of the source remains uncovered by that edge.
+
 `agent.csv` records the task identity, model/effort when exposed, exact bounded
 scope, status/runtime, returned result, owner verification, accepted or
 rejected disposition, and write claim. Agent output is evidence only; it
