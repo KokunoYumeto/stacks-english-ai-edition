@@ -13269,6 +13269,8 @@ We omit the definition of the multiplication.
 \label{remark-FAC-graded-conventions}
 \begin{reference}
 \cite[Chapter III, \S 2, no. 56, pp. 248--249]{FAC}
+\cite[Chapter III, \S 4, no. 68, definition of the graded Hom module,
+p. 261]{FAC}
 \end{reference}
 \begin{history}
 The cited source introduces these conventions for the standard polynomial
@@ -13281,11 +13283,187 @@ corresponds to a summand $S(-d)$, and the source's graded free modules are
 precisely direct sums of twists $S(n_i)$ (finite direct sums in the finite
 free case). The formulation above works over every nonnegatively graded
 ring, not only a polynomial ring over a field.
+
+No. 68 uses the direct sum of these homogeneous-map groups as its internal
+graded Hom module. It also records the important finiteness boundary: if
+$M$ is finite, every ungraded $S$-linear map $M\to N$ is a finite sum of
+homogeneous maps, so $\text{GrHom}(M,N)$ agrees with $\Hom_S(M,N)$ after
+forgetting the grading. This need not hold when $M$ is not finite.
 \end{history}
 With the conventions above, an $S$-linear map homogeneous of degree $s$ is
 an element of $\text{GrHom}_s(M, M')$. Moreover, a homogeneous basis element
 of degree $d$ determines a graded free summand $S(-d)$.
 \end{remark}
+
+\begin{lemma}
+\label{lemma-graded-free-resolutions}
+\begin{reference}
+\cite[Chapter III, \S 4, no. 68, construction of a graded free
+resolution, p. 261]{FAC}
+\end{reference}
+\begin{history}
+The cited source makes this construction for
+$S=K[t_0,\ldots,t_r]$ and uses degree-zero differentials. The formulation
+below isolates the categorical input and the Noetherian finiteness condition,
+so it applies to every nonnegatively graded ring.
+\end{history}
+Let $S$ be a graded ring. The category of graded $S$-modules and degree-zero
+maps is abelian and has enough projectives. More precisely:
+\begin{enumerate}
+\item every direct sum of twists $S(n)$ is projective,
+\item every graded $S$-module has a resolution by direct sums of twists
+of $S$ with degree-zero differentials,
+\item if $S$ is Noetherian and $M$ is a finite graded $S$-module, then
+the resolution of $M$ can be chosen finite graded free in every degree, and
+\item a degree-zero map of graded modules lifts to a map between any two
+such resolutions, uniquely up to a degree-zero homotopy.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Kernels and cokernels of degree-zero maps are graded and are computed
+degreewise. This proves the assertion about the category being abelian.
+The functor
+$$
+\text{GrHom}_0(S(-d),N)=N_d
+$$
+is exact in $N$. More generally, a degree-zero map from a direct sum of
+twists to a quotient $N\to N'$ lifts after choosing, in the required
+degrees, lifts of the images of the homogeneous basis elements. Thus direct
+sums of twists are projective.
+
+For every homogeneous element $m\in M_d$, take one copy of $S(-d)$ and
+send its degree-$d$ basis element to $m$. The resulting map from a graded
+free module onto $M$ is surjective. Its kernel is graded, so iteration gives
+the resolution in (2). If $S$ is Noetherian and $M$ is finite, we may begin
+with finitely many homogeneous generators. Every successive kernel is a
+finite graded submodule of a finite graded free module, which proves (3).
+
+Finally, the usual comparison argument lifts a map first from the degree-zero
+projective term and then successively from the kernels. Applied to the
+difference of two lifts, the same argument constructs a homotopy one degree
+at a time. Every lift is taken in the category of graded modules, hence has
+degree zero. This proves (4).
+\end{proof}
+
+\begin{definition}
+\label{definition-graded-ext}
+\begin{reference}
+\cite[Chapter III, \S 4, no. 68, definition of the graded Ext modules,
+pp. 261--262]{FAC}
+\end{reference}
+\begin{history}
+The cited source writes $\Hom_S(M,N)$ for $\text{GrHom}(M,N)$ and
+$\Ext^q_S(M,N)$ for the internal graded Ext module defined below. Its
+footnote warns that these conventions differ from ordinary ungraded Hom and
+Ext when the first module is not finite. We retain the prefix Gr to keep
+that distinction visible.
+\end{history}
+Let $S$ be a graded ring and let $M,N$ be graded $S$-modules. Choose a
+graded free resolution $L_\bullet\to M$ as in
+Lemma \ref{lemma-graded-free-resolutions}. For $q\geq 0$ and
+$n\in\mathbf Z$ set
+$$
+\text{GrExt}^q_S(M,N)_n=
+H^q(\text{GrHom}_n(L_\bullet,N))
+$$
+and set
+$$
+\text{GrExt}^q_S(M,N)=
+\bigoplus_{n\in\mathbf Z}\text{GrExt}^q_S(M,N)_n.
+$$
+Multiplication by an element of $S_d$ maps the degree-$n$ cochain complex
+to the degree-$(n+d)$ cochain complex and makes this direct sum a graded
+$S$-module. Part (4) of Lemma \ref{lemma-graded-free-resolutions} shows that
+the construction is functorial and independent, up to canonical
+isomorphism, of the chosen resolution.
+\end{definition}
+
+\begin{lemma}
+\label{lemma-graded-ext-properties}
+\begin{reference}
+\cite[Chapter III, \S 4, no. 68, principal properties and exact
+sequences of graded Ext, pp. 261--262]{FAC}
+\end{reference}
+\begin{history}
+For a polynomial ring in $r+1$ variables over a field, the source combines
+the graded construction with Hilbert's syzygy theorem to obtain vanishing
+above degree $r+1$. The proof below separates the internal grading from the
+ordinary Ext comparison and the global-dimension input. It also records the
+shift signs and the variance of both exact sequences explicitly.
+\end{history}
+Let $S$ be a graded ring and let $M,N$ be graded $S$-modules.
+\begin{enumerate}
+\item We have $\text{GrExt}^0_S(M,N)=\text{GrHom}(M,N)$.
+\item For every $a\in\mathbf Z$ and $q\geq 0$ there are canonical
+isomorphisms
+$$
+\text{GrExt}^q_S(M(a),N)
+\cong \text{GrExt}^q_S(M,N(-a))
+\cong \text{GrExt}^q_S(M,N)(-a).
+$$
+\item A short exact sequence $0\to N\to N'\to N''\to0$ gives a long
+exact sequence of graded $S$-modules
+$$
+\begin{matrix}
+\ldots\to\text{GrExt}^q_S(M,N)\to
+\text{GrExt}^q_S(M,N')\to\text{GrExt}^q_S(M,N'')\\
+\phantom{\ldots}\to\text{GrExt}^{q+1}_S(M,N)\to\ldots.
+\end{matrix}
+$$
+\item A short exact sequence $0\to M\to M'\to M''\to0$ gives a long
+exact sequence of graded $S$-modules
+$$
+\begin{matrix}
+\ldots\to\text{GrExt}^q_S(M'',N)\to
+\text{GrExt}^q_S(M',N)\to\text{GrExt}^q_S(M,N)\\
+\phantom{\ldots}\to\text{GrExt}^{q+1}_S(M'',N)\to\ldots.
+\end{matrix}
+$$
+\item If $S$ is Noetherian and $M$ is finite, then forgetting the grading
+gives canonical isomorphisms
+$$
+\text{GrExt}^q_S(M,N)\longrightarrow\Ext^q_S(M,N).
+$$
+If also $N$ is finite, these are finite $S$-modules.
+\item If $S=K[t_0,\ldots,t_r]$ for a field $K$ and $M$ is finite, then
+$\text{GrExt}^q_S(M,N)=0$ for $q>r+1$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Part (1) follows by applying $\text{GrHom}_n(-,N)$ to the beginning of a
+graded free resolution and taking the kernel, for every $n$.
+
+If $L_\bullet\to M$ is a graded free resolution, then
+$L_\bullet(a)\to M(a)$ is one too, and
+$$
+\text{GrHom}_n(L_i(a),N)=
+\text{GrHom}_{n-a}(L_i,N)=
+\text{GrHom}_n(L_i,N(-a)).
+$$
+These identifications commute with the differentials and prove (2).
+
+For (3), applying $\text{GrHom}_n(L_i,-)$ to the short exact sequence gives
+a short exact sequence for every $i$ and $n$, because $L_i$ is projective in
+the category of graded modules. The long cohomology sequences assemble over
+$n$ and all connecting maps have degree zero. The proof of the reverse long
+exact sequence in Lemma \ref{lemma-reverse-long-exact-seq-ext} applies in
+the same category, using Lemma \ref{lemma-graded-free-resolutions}; this
+proves (4).
+
+Under the hypotheses of (5), choose $L_i$ finite graded free for every $i$.
+Every ungraded map $L_i\to N$ is then a finite sum of homogeneous maps, so
+the natural map of cochain complexes
+$$
+\text{GrHom}(L_\bullet,N)\longrightarrow\Hom_S(L_\bullet,N)
+$$
+is an isomorphism. This proves the comparison. Finiteness follows from
+Lemma \ref{lemma-ext-noetherian}. Finally, a polynomial ring in $r+1$
+variables over a field has global dimension $r+1$ by Proposition
+\ref{proposition-finite-gl-dim-polynomial-ring}. Part (6) follows from the
+comparison and Lemma \ref{lemma-projective-dimension-ext}.
+\end{proof}
 
 \begin{lemma}
 \label{lemma-graded-NAK}
@@ -17625,6 +17803,18 @@ in what sense this is well defined.
 
 \begin{lemma}
 \label{lemma-ext-welldefined}
+\begin{reference}
+\cite[Chapter III, \S 4, no. 68, construction and independence of graded
+Ext, pp. 261--262]{FAC}
+\end{reference}
+\begin{history}
+The cited source applies the same resolution-and-homotopy construction in
+the category of graded modules, using degree-zero differentials and the
+internal direct sum of homogeneous Hom groups. Definition
+\ref{definition-graded-ext} and Lemma
+\ref{lemma-graded-free-resolutions} retain that graded construction; the
+lemma below is its ordinary-module prototype.
+\end{history}
 Let $R$ be a ring. Let $M_1, M_2, N$ be $R$-modules.
 Suppose that $F_{\bullet}$ is a free resolution of the module $M_1$,
 and $G_{\bullet}$ is a free resolution of the module $M_2$.
@@ -17673,6 +17863,16 @@ Hence $H^i(\alpha)$ and $H^i(\beta)$ are inverses of each other.
 
 \begin{lemma}
 \label{lemma-long-exact-seq-ext}
+\begin{reference}
+\cite[Chapter III, \S 4, no. 68, long exact sequence in the second
+graded-module variable, pp. 261--262]{FAC}
+\end{reference}
+\begin{history}
+The cited sequence is the internal graded analogue: it is obtained in every
+homogeneous degree and the connecting maps assemble into degree-zero maps.
+Lemma \ref{lemma-graded-ext-properties} gives that form. The lemma below is
+the underlying ordinary Ext sequence.
+\end{history}
 Let $R$ be a ring. Let $M$ be an $R$-module.
 Let $0 \to N' \to N \to N'' \to 0$ be a
 short exact sequence. Then we get a long exact
@@ -17710,6 +17910,16 @@ the snake lemma applied to this.
 
 \begin{lemma}
 \label{lemma-reverse-long-exact-seq-ext}
+\begin{reference}
+\cite[Chapter III, \S 4, no. 68, long exact sequence in the first
+graded-module variable, p. 262]{FAC}
+\end{reference}
+\begin{history}
+The cited sequence reverses the first short exact sequence because internal
+graded Ext is contravariant in that variable. The same free-resolution
+construction below works with graded free modules and degree-zero maps,
+yielding Lemma \ref{lemma-graded-ext-properties}.
+\end{history}
 Let $R$ be a ring. Let $N$ be an $R$-module.
 Let $0 \to M' \to M \to M'' \to 0$ be a
 short exact sequence. Then we get a long exact
@@ -17794,6 +18004,15 @@ zero map.
 
 \begin{lemma}
 \label{lemma-ext-noetherian}
+\begin{reference}
+\cite[Chapter III, \S 4, no. 68, finiteness of graded Ext, p. 261]{FAC}
+\end{reference}
+\begin{history}
+For the source's polynomial ring and finite graded modules, each term of a
+finite graded free resolution has internal Hom equal to ordinary Hom after
+forgetting the grading. Thus the cited finiteness assertion reduces to this
+lemma; Lemma \ref{lemma-graded-ext-properties} records the comparison.
+\end{history}
 Let $R$ be a Noetherian ring. Let $M$, $N$ be finite $R$-modules.
 Then $\Ext^i_R(M, N)$ is a finite $R$-module for all $i$.
 \end{lemma}
@@ -27796,6 +28015,17 @@ is a chain of primes of length $n$. The lemma follows.
 
 \begin{proposition}
 \label{proposition-finite-gl-dim-polynomial-ring}
+\begin{reference}
+\cite[Chapter III, \S 4, no. 68, Hilbert-syzygy vanishing of graded Ext,
+p. 261]{FAC}
+\end{reference}
+\begin{history}
+The source uses Hilbert's syzygy theorem to conclude that for
+$S=K[t_0,\ldots,t_r]$ and finite $M$, its internal graded
+$\Ext^q_S(M,N)$ vanishes for $q>r+1$. The proposition below supplies the
+global-dimension statement; the internal-to-ordinary comparison is isolated
+in Lemma \ref{lemma-graded-ext-properties}.
+\end{history}
 A polynomial algebra in $n$ variables over a field is a regular ring.
 It has global dimension $n$. All localizations at maximal ideals
 are regular local rings of dimension $n$.

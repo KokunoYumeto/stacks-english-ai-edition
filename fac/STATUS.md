@@ -2,18 +2,19 @@
 
 - Frozen surface: 661 source targets through printed page 278.
 - Stage: sequential source review and statement-level Stacks integration.
-- Completed checkpoint: Chapter III, Section 3, no. 67, printed pages 199--261.
-- Reviewed decisions: 402 (127 equivalent, 155 stronger, 53 extensions,
-  25 new-statement decisions, 40 historical references, 2 outside scope).
-- Current Stacks references added: 252 across `topology.tex`, `sheaves.tex`,
+- Completed checkpoint: Chapter III, Section 4, no. 68, printed pages 199--262.
+- Reviewed decisions: 413 (128 equivalent, 155 stronger, 56 extensions,
+  32 new-statement decisions, 40 historical references, 2 outside scope).
+- Current Stacks references added: 261 across `topology.tex`, `sheaves.tex`,
   `modules.tex`, `homology.tex`, `coherent.tex`, `cohomology.tex`,
   `divisors.tex`, `constructions.tex`, `schemes.tex`, `morphisms.tex`,
   `derham.tex`, `algebra.tex`, `properties.tex`, `varieties.tex`,
   `simplicial.tex`, and `more-algebra.tex`.
-- New Stacks theorem/lemma statements: 15, plus the paracompactness and
-  locally-constant-sheaf definitions and the graded-conventions remark;
+- New Stacks theorem/lemma statements: 17, plus the paracompactness and
+  locally-constant-sheaf definitions, the graded-conventions remark, and
+  the internal graded Ext definition;
   each new theorem/lemma has a complete proof and no assigned tag.
-- Source/proof issues or convention boundaries: 651 found by direct
+- Source/proof issues or convention boundaries: 676 found by direct
   authority-page and TeX inspection, all resolved and
   retained in `issues.csv`.
 - Existing Stacks defects corrected: 6, comprising the refinement-homotopy
@@ -29,7 +30,7 @@
   completed; every
   affected statement page passed direct 1100 dpi visual inspection. See
   `qa.json`.
-- Historical notes added: 91, preserving the source's operator calculus,
+- Historical notes added: 100, preserving the source's operator calculus,
   image-complex construction, two-covering double complex, and unproved
   cofinal-vanishing question, together with the classical closed-point to
   reduced-scheme bridge, the classical-map to scheme-morphism bridge, and the
@@ -190,6 +191,18 @@
   constructions 18, 21, and 22, coherent 37, and more-algebra 74 passed
   direct 1100 dpi inspection after two serial builds, with an exact hard stop
   before Section 4 and no. 68 on printed page 261 and no high-detail crop
-  needed.
-- Next unit: `fac:III:4:no:68`.
+  needed; no. 68 now distinguishes internal graded Hom and Ext from their
+  ordinary ungraded counterparts, preserving the exact nonfinite boundary
+  in the source's footnote. Two new completely proved lemmas establish
+  graded free resolutions and the full internal Ext package, while a new
+  definition records the homogeneous cochain complexes, graded module
+  action, shifts, finiteness, polynomial-ring vanishing, and both long exact
+  sequences. Tags 00JL, 00LT, 00LU, 065P, 08YR, 065R, and 00OQ remain the
+  exact existing inputs and comparison targets; no tag was invented for the
+  new labels. Transcription entry `T0039` remains separate from any source
+  correction. Authority physical pages 66--67 and algebra output pages
+  129--131, 171--172, and 272 passed direct 1100 dpi inspection after two
+  serial builds, with an exact hard stop before no. 69 on printed page 262
+  and no high-detail crop needed.
+- Next unit: `fac:III:4:no:69`.
 - No statement is mapped by lexical similarity alone.
