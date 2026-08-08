@@ -724,3 +724,13 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   distinct existing tags, three local untagged rows, 20 full exact
   equivalences, 39 issues, six correction referrals, and 99 agent records.
   No Stacks chapter TeX changed.
+- Immediate post-push review found that the final product and sum prose at
+  English discovery lines 466--476 and French authority lines 520--530 follows
+  the closed 3.3.10 proof rather than belonging to it. D000103 and I000040
+  therefore move exactly S000331--S000334 and R000165--R000167 from
+  `ega:I.3.3.10:proof` to `ega:I.3.3.10`. S000330 remains the sole proof edge;
+  `ega:I.3.3.10.1` remains an independent labelled-formula unit. This is an
+  attribution correction only: tags, mathematical dispositions, stable edge
+  IDs, residual IDs, row counts, and the six-item correction-referral file do
+  not change. The append-only correction raises the current issue count to 40
+  and the decision count to 103.
