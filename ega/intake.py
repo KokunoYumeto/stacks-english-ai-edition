@@ -76,6 +76,16 @@ def logical_volume_from(path, label=""):
             "source_aligned": "IV"}.get(part, "")
 
 
+def printed_volume_major(volume):
+    """Collapse witness-volume variants to the logical EGA major volume."""
+    if volume.startswith("0"):
+        return "0"
+    for major in ("IV", "III", "II", "I"):
+        if volume.startswith(major):
+            return major
+    return ""
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--manifest", required=True, type=Path)
@@ -141,6 +151,7 @@ def main():
 
     for rel, text in file_text.items():
         rel_path = Path(rel)
+        file_volume = logical_volume_from(rel_path)
         page_volume = ""
         page_number = ""
         env_stack = []
@@ -181,9 +192,36 @@ def main():
                 pending_section = None
             page = PAGE_RE.search(active)
             if page:
-                if page.group(1):
-                    page_volume = page.group(1)
-                page_number = page.group(2)
+                explicit_volume = page.group(1) or ""
+                foreign_volume = (
+                    explicit_volume and file_volume and
+                    printed_volume_major(explicit_volume) != file_volume
+                )
+                body_page_active = (
+                    printed_volume_major(page_volume) == file_volume
+                )
+                statement_frame = next((
+                    frame for frame in reversed(env_stack)
+                    if frame["env"] in STATEMENT_KINDS
+                ), None)
+                if (foreign_volume and body_page_active and
+                        statement_frame is not None):
+                    # Translator-supplied errata can carry a foreign witness
+                    # page inside one semantic statement.  Bind that locator
+                    # retroactively to the whole statement, then restore the
+                    # surrounding body page when its environment closes.
+                    if statement_frame["page_restore"] is None:
+                        statement_frame["page_restore"] = (
+                            page_volume, page_number)
+                    page_volume = explicit_volume
+                    page_number = page.group(2)
+                    printed_page = f"{page_volume}:{page_number}"
+                    for row in units[statement_frame["unit_start"]:]:
+                        row["printed_page"] = printed_page
+                else:
+                    if explicit_volume:
+                        page_volume = explicit_volume
+                    page_number = page.group(2)
 
             section = SECTION_RE.search(active)
             if section:
@@ -194,7 +232,13 @@ def main():
             for begin in BEGIN_RE.finditer(active):
                 env = begin.group(1)
                 number = begin.group(2) or ""
-                frame = {"env": env, "number": number, "primary": ""}
+                frame = {
+                    "env": env,
+                    "number": number,
+                    "primary": "",
+                    "page_restore": None,
+                    "unit_start": len(units),
+                }
                 env_stack.append(frame)
                 if env == "proof":
                     parent = last_statement or current_subsection or current_section
@@ -275,6 +319,9 @@ def main():
                 env = end.group(1)
                 for index in range(len(env_stack) - 1, -1, -1):
                     if env_stack[index]["env"] == env:
+                        for frame in reversed(env_stack[index:]):
+                            if frame["page_restore"] is not None:
+                                page_volume, page_number = frame["page_restore"]
                         del env_stack[index:]
                         break
 

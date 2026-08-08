@@ -630,3 +630,58 @@ visual fidelity, publication, or ownership. The owner verifies every result.
 - Final no-write audit A000091 adversarially checked every new edge, residual,
   decision, issue, agent row, count, target join, authority-pending statement,
   and circularity guard and returned PASS before staging.
+
+### EGA I 3.3.1--3.3.5 review and R184 page-scope repair A000092--A000094
+
+- The first 3.3 intake exposed a deterministic provenance defect rather than a
+  mathematical mapping problem. Discovery unit I.3.2.9 contains an inline
+  EGA II p.221 erratum marker after its label. The old parser left that unit at
+  I:108 and leaked II:221 into subsection 3.3 and units through 3.3.5.
+- Intake now distinguishes a whole appended foreign-witness section from a
+  foreign marker entered from an ordinary body page inside one statement. The
+  latter binds retroactively to the statement and restores the body page at
+  the matching environment end. Exact checks cover both the persistent I.1.8
+  errata section and the isolated I.3.2.9 insertion.
+- The exact frozen R184 tree was replayed rather than the advanced live English
+  tree. Three later English corrections were inverted only in a temporary
+  reconstruction from their producer-authored exact inverses. R184 replay is
+  PASS with 127 files, 7,283,321 bytes, tree SHA-256
+  `3BFB1C5103093481246EF4A6365E08544F6D5E19ACC0EA63E717F3F3643F064D`,
+  9,585 units, and 445 diagrams. Exactly nine printed-page fields changed;
+  every stable ID and every other generated field is unchanged.
+- Direct French F8 admits 3.3.1--3.3.5 across printed pp.108--109. The source
+  `ega1-3-fr.tex` remains 59,766 bytes with SHA-256
+  `DB4F986C9FDC1B66FF2D627C5E9121BCE0490563B7C14415320B5DDD7424B851`.
+  The p.108 ledger/validation identities are
+  `61815DBE2CE8BA37209E8FB59DDAF7C7B718E79061993C8277098D5E8420EC6F`
+  and `C2990F06616057C1051F1CA6B4ED3A68BB04BA9B966E7D05B22738A657394282`;
+  the p.109 identities are
+  `0936AEE282CBEF59C4C613DC3AB891BDEEE7BFDB086DAE6E16521D61DB0F19E1`
+  and `188004628018FCA04FD5FE31A8A8E690908FA57195DE2B6A33042A81CAF1CFCD`.
+- Unit 3.3.1 is only partial. Its slice-category explanation is exactly 001G,
+  but its claim that every non-excluded property is categorical includes the
+  final 3.3.10 assertion that base change preserves sums. In Grp with S the
+  trivial group and nontrivial H mapping to S, base change of the coproduct of
+  two terminal groups is id_H while the coproduct of their base changes in
+  Grp over H is the nonisomorphic fold H free-product H to H. Issue I000038
+  and residual R000137 remain open at the source layer; the append-only
+  referral is `EGA-I-3.3.1-ARBITRARY-CATEGORY-SUM-BASE-CHANGE`. The six-row
+  `reports/findings.jsonl` is 6,469 bytes with SHA-256
+  `EF81768A542B2DC883907C3C61DE4A671CC7A3D981CA649668A49B029F0AA3D6`.
+- Units 3.3.2--3.3.4 are completely covered at categorical or proof level by
+  slice categories, fibre-product uniqueness, functorial limits, and the
+  terminal object in a slice. There is no separate ordinary-product unitor or
+  projection-formula tag. The native 3.3.2 diagram remains an independent
+  stable unit and records first-projection naturality.
+- Unit 3.3.5 is split across 002I, 01JM, 002O, 002E, 002L, and 01JP. The source
+  does not spell out n=0 or n=1; the empty product is S in the slice and the
+  singleton product is X as implicit conventions. Associativity and
+  commutativity are canonical projection-compatible isomorphisms rather than
+  literal equalities or arbitrary identifications.
+- The cumulative scaffold now has 316 statement edges across 115 admitted
+  source units, 150 residuals, 313 official-target rows, 139 distinct existing
+  tags, three local untagged rows, 18 full exact equivalences, 38 issues, six
+  correction referrals, and 95 agent records. No Stacks chapter TeX changed.
+- Final no-write audit A000095 returned PASS on the exact nine-field page
+  migration, all new graph rows and target joins, count reconciliation,
+  authority identities, counterexample, privacy, and deterministic validators.

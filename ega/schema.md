@@ -18,6 +18,13 @@ or source-file role. `printed_page` is an independent witness locator and may
 name another volume when a later erratum supplies text for an earlier volume.
 It must never reclassify the semantic unit.
 
+A foreign-volume page marker that begins an appended errata section remains
+the active witness locator for that section. A foreign-volume marker entered
+from the body page inside one statement is instead statement-scoped: it binds
+retroactively to that whole statement and the enclosing body page is restored
+at the matching environment end. Exact regression rows prevent either form
+from contaminating the other.
+
 Topic IDs use `ega-topic-<slug>`. Local Stacks labels may be recorded as
 evidence, but this branch never writes or claims an official Stacks tag.
 

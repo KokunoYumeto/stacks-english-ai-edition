@@ -64,6 +64,7 @@ for name, field in generated.items():
 if (ROOT / "units.csv").exists() and (ROOT / "files.csv").exists():
     unit_rows = rows("units.csv")
     unit_ids = {row["unit_id"] for row in unit_rows}
+    units_by_id = {row["unit_id"]: row for row in unit_rows}
     file_ids = {row["relative_path"] for row in rows("files.csv")}
     logical_volumes = {"0", "I", "II", "III", "IV"}
     for row in unit_rows:
@@ -78,6 +79,33 @@ if (ROOT / "units.csv").exists() and (ROOT / "files.csv").exists():
         if row["kind"] != "corpus" and row["volume"] not in logical_volumes:
             ERRORS.append(
                 f"invalid logical volume {row['volume']!r} for {row['unit_id']}")
+    page_regressions = {
+        "ega:I.1.8.1": "II:217",
+        "ega:I.1.8.1:proof": "II:218",
+        "ega:I.1.8.2": "II:218",
+        "ega:I.1.8.3": "II:219",
+        "ega:I.1.8.6": "II:219",
+        "ega:I.1.8.7": "II:220",
+        "ega:I.1.8.9": "II:220",
+        "ega:I.1.8.10": "II:221",
+        "ega:I.3.2.9": "II:221",
+        "ega:subsection:I.3.3": "I:108",
+        "ega:I.3.3.1": "I:108",
+        "ega:I.3.3.2": "I:108",
+        "ega:I.3.3.2:diagram:xymatrix:1": "I:108",
+        "ega:I.3.3.3": "I:108",
+        "ega:I.3.3.3:proof": "I:108",
+        "ega:I.3.3.4": "I:108",
+        "ega:I.3.3.5": "I:108",
+    }
+    for unit_id, expected_page in page_regressions.items():
+        row = units_by_id.get(unit_id)
+        if row is None:
+            ERRORS.append(f"missing printed-page regression unit {unit_id}")
+        elif row["printed_page"] != expected_page:
+            ERRORS.append(
+                f"printed-page regression for {unit_id}: "
+                f"expected {expected_page}, got {row['printed_page']}")
 
 intake_path = ROOT / "intake.json"
 if intake_path.exists():
