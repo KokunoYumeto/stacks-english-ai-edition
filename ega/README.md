@@ -111,6 +111,15 @@ or published here.
   false without a closed-image hypothesis and has been referred append-only
   to the canonical edition rather than silently normalized. No Stacks TeX
   change was needed.
+- Twelfth statement-level slice: EGA I 2.5.1--2.5.5 and the native commuting
+  triangle now have direct-French dispositions. The cumulative map has 242
+  edges across 94 source units and 93 explicit residuals. Tags 01JX and 001G
+  give the scheme-over-base and slice-category language; 01JB and 01HI cover
+  gluing and open factorization; 01KT supplies the section definition. The
+  historical change-of-base operation is explicitly distinguished from
+  Cartesian base change. The printed S-morphisme type error in 2.5.5 reuses
+  the canonical producer's existing correction record and is not silently
+  changed or duplicated here. No Stacks TeX change was needed.
 - The intake registry now recognizes all 430 native Xy-pic commands as well
   as 15 tikz-cd environments. Synthetic diagram IDs are deterministic within
   their semantic parent. This repairs an actual pre-Stacks graph omission;
@@ -161,7 +170,8 @@ append-only.
   the edition task alone decides and mutates canonical source.
 
 The immediate work is sequential statement-level comparison across EGA 0--IV,
-continuing after EGA I 2.4.8 while EGA II is admitted through printed p.23.
+continuing after EGA I 2.5.5 at EGA I 3.1 while EGA II is admitted through
+printed p.23.
 The complete English discovery surface drives provisional candidates only.
 Mathematical Stacks chapter edits occur only after a bounded unit has direct
 French evidence, a reviewed disposition, explicit residual accounting, and

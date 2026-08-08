@@ -421,3 +421,51 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   A000076--A000078. No chapter build or visual render is applicable to this
   graph-only slice; pinned-label replay structural validation privacy checks
   and exact remote identity remain the checkpoint gates.
+
+### EGA I 2.5 review A000079--A000081
+
+- Five numbered units and the native scheme-over-base triangle were checked
+  against direct French F8 and the p.103--p.104 diplomatic gates. The
+  cumulative map has 242 edges across 94 admitted source units with 93
+  residuals. No Stacks TeX changed.
+- The admitted French source `ega1-2-fr.tex` is 27,463 bytes with SHA-256
+  `AE6B128092ACBB8C1AFB4899EEA003FB966B6FF6669A264B59FD5F095AF4F029`.
+  The p.103 ledger and R26 validation SHA-256 identities are respectively
+  `B520493D1CA931E46505DACB158597147EAC7DC84B9F53EF5AFAB21771AF13A7`
+  and `E12D1BAFBF55F86BA7DC24349E7439E518A82397C649E51CA3186B13383BB78A`.
+  The p.104 ledger and R27 validation identities are respectively
+  `C997C1D70DD5C6F32E67538657AB7DDE820ADF495BEF7EA8AF9BD3309F74769F`
+  and `D21A97F27507F42FC20848B422599877D5F04F4653E8A799DD1A5266B5FD49EF`.
+- Tag 01JX supplies the exact scheme-over-base structure morphism morphism-
+  over-base and Mor-over-base clauses. Tag 01I1 supplies the equivalent affine
+  target and sheaf-of-A-algebras reformulation. Tag 01JM records the stronger
+  final-object fact with Spec Z identified in its proof and 01RJ gives
+  dominance without adding irreducibility or surjectivity.
+- Tag 001G identifies the category as the slice category Sch over S and gives
+  postcomposition along a base arrow. The source triangle remains a native
+  diagram unit because no identical labelled Stacks diagram exists. Its
+  mathematical equality is exactly 01JX item three; pointwise fibre
+  preservation is recorded only as a consequence and never as a replacement
+  definition for a morphism over S.
+- For 2.5.3 source restriction is composition with the open inclusion 01HF
+  after 01IK ensures the open is a scheme. Tag 01JB glues the underlying local
+  morphisms and uniqueness proves that the result remains over S. Tag 01HI
+  handles factorization through an open target. No finiteness compactness or
+  separation hypothesis is introduced.
+- The heading change of base in 2.5.4 is historical terminology for
+  postcomposition and restriction through an ambient open base. It is not the
+  fibre-product construction in 01JX items five through seven and 01JY was
+  excluded. The automatic S-prime-linearity clause follows by cancelling the
+  open immersion through 01L7 and is not generalized to arbitrary base maps.
+- The p.104 authority prints `Si X est un S-morphisme` in 2.5.5. The
+  diplomatic layer remains unchanged and the graph uses the separately
+  corrected S-prescheme reading already catalogued as
+  `EG-EGA-I-P104-FR-255-SOURCE-TYPO-001`; no duplicate finding was emitted.
+  Tag 01KT gives the section identity while 01JX reconstructs the section set
+  as Mor_S from S to X. EGA's Gamma notation remains explicit migration
+  metadata so it cannot be confused with global functions or cohomology.
+- Three bounded inherited-parent audits were consumed and owner-replayed.
+  Their scopes outputs and no-write claims are recorded in A000079--A000081.
+  No chapter build or visual render is applicable to this graph-only slice;
+  pinned-label replay structural validation privacy checks and exact remote
+  identity remain the checkpoint gates.
