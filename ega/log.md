@@ -566,3 +566,67 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   No chapter build or visual render is applicable to this graph-only slice;
   pinned-label replay, structural validation, privacy checks, and exact remote
   identity remain the checkpoint gates.
+
+### EGA I 3.2.6--3.2.8 review A000088--A000090
+
+- The global existence theorem, its five-step proof, the open-product
+  corollary, and the product-of-sums decomposition were checked against direct
+  French F8 across printed pp.106--108. The cumulative map has 299 edges
+  across 108 admitted source units with 136 residuals. No Stacks TeX changed.
+- The admitted French source `ega1-3-fr.tex` remains 59,766 bytes with SHA-256
+  `DB4F986C9FDC1B66FF2D627C5E9121BCE0490563B7C14415320B5DDD7424B851`;
+  F8 remains 5,784 bytes with SHA-256
+  `2137BF64B9BD210176B58075DBDB58E7C8A5669F9EFAD61410510A01D32D0BC0`.
+  The p.106 ledger/R29 identities are
+  `E6757586AB33B973673E229E307EE9914AF5836EEC815643968DBD8F1C2A8F5D`
+  and `FA89227CD8E5CCBBA1EE733B93BE9C87782A39ADA29234C1F316646C942BBAD1`.
+  The p.107 ledger/R30 identities are
+  `0BBB806A5B6AE6AB72327A3BA47D222AFAD5DFA5C1FFCCFF711CA928660498AF`
+  and `15657B56D2904F07954F47CC0414038EB9C5D1A24CA41E53EB214EBEBE6BC713`.
+  The p.108 ledger/R31 identities are
+  `61815DBE2CE8BA37209E8FB59DDAF7C7B718E79061993C8277098D5E8420EC6F`
+  and `C2990F06616057C1051F1CA6B4ED3A68BB04BA9B966E7D05B22738A657394282`.
+  All validations are PASS/errors empty and record zero scoped authorial
+  corrections, source typos, or unresolved readings.
+- Tag 01JM strictly strengthens Theorem 3.2.6 by proving all finite limits in
+  schemes. Its proof represents the compatible-pair functor and uses 01JJ with
+  affine input 01I4. This is full theorem coverage but an alternative package
+  for EGA's numbered local construction rather than a line-for-line proof.
+- Lemma 3.2.6.1 is the whole-base specialization of 01JR. The same tag must not
+  be cited as a dependency of 01JM because it occurs downstream and assumes
+  existence. Tag 01JS is likewise excluded from existence coverage because it
+  only describes an affine cover of an already-existing product.
+- Lemma 3.2.6.2 has no standalone target. Its exact candidate-cone conclusion
+  follows from 01JP universal arrows, 01JB morphism gluing, and the 01JR open
+  overlap calculation. The condition that every chart is the simultaneous
+  inverse image under p and q is essential; arbitrary product-copy charts do
+  not verify a preassigned cone.
+- Lemma 3.2.6.3 is entailed by unconditional 01JM and its source construction
+  is recovered by 01JJ, canonical fibre-product uniqueness, and 01JB plus
+  01JC. Universality forces both the overlap isomorphisms and their cocycle.
+  Lemma 3.2.6.4 is likewise entailed globally while 01HI and 01JJ retain the
+  synchronized-base-cover argument. Unit 3.2.6.5 is proof closure rather than
+  a second theorem; 01I4 is its exact affine ingredient and the 01JM proof is
+  only partial line-level absorption.
+- The main open-product identification in 3.2.7 is exactly 01JR after renaming
+  its base and factor opens. The pairing compatibility is derived from 01HI
+  and 01JP uniqueness. Both image-containment hypotheses remain mandatory.
+- No single pinned tag states the two-family formula in 3.2.8. Tags 01JR, 01JB,
+  and 01JC give complete derived coverage by decomposing the global product
+  into disjoint open pairwise products. Tag 023X contains only the self-family
+  formula in an unlabelled descent proof and is retained as corroboration rather
+  than an equivalent target. Arbitrary and empty families remain allowed.
+- English discovery unit I.3.2.9 is not a synthetic body paragraph: its own
+  footnote identifies it as a translator augmentation from the EGA II errata
+  on printed p.221. The French producer's p.108 continuation control expressly
+  leaves that insertion pending separate authority replay. Issue I000036 keeps
+  it unpromoted until the exact French erratum witness is admitted.
+- Three bounded inherited-parent audits were consumed and owner-replayed.
+  Their scopes, outputs, rehashes, and no-write claims are recorded in
+  A000088--A000090. No diagram occurs in these units and no chapter build or
+  visual render is applicable to this graph-only slice; pinned-label replay,
+  structural validation, privacy checks, and exact remote identity remain the
+  checkpoint gates.
+- Final no-write audit A000091 adversarially checked every new edge, residual,
+  decision, issue, agent row, count, target join, authority-pending statement,
+  and circularity guard and returned PASS before staging.

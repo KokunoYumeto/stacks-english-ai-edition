@@ -136,6 +136,15 @@ or published here.
   open-base corollary. Product-in-the-slice terminology,
   tensor-versus-direct-ring-product variance, and categorical monicity remain
   explicit. No Stacks TeX change was needed.
+- Fourteenth statement-level slice part two: EGA I 3.2.6--3.2.8 now have
+  direct-French dispositions. The cumulative map has 299 edges across 108
+  source units and 136 explicit residuals. Tag 01JM supplies global existence;
+  01JR gives the open-product identification; 01JJ, 01JB, and 01JC retain the
+  local gluing proof; and the two-family disjoint-sum formula remains a derived
+  scheme-specific result rather than a generic categorical law. The discovery
+  unit 3.2.9 is a translator augmentation citing the EGA II errata and remains
+  fail-closed pending that exact French authority. No Stacks TeX change was
+  needed.
 - The intake registry now recognizes all 430 native Xy-pic commands as well
   as 15 tikz-cd environments. Synthetic diagram IDs are deterministic within
   their semantic parent. This repairs an actual pre-Stacks graph omission;
@@ -186,8 +195,9 @@ append-only.
   the edition task alone decides and mutates canonical source.
 
 The immediate work is sequential statement-level comparison across EGA 0--IV,
-continuing after EGA I 3.2.5 at EGA I 3.2.6 while EGA II is admitted through
-printed p.23.
+continuing in the direct-French body after EGA I 3.2.8 at EGA I 3.3.1 while
+EGA II is admitted through printed p.23. Discovery unit I.3.2.9 remains in a
+separate authority-pending queue for its cited EGA II erratum witness.
 The complete English discovery surface drives provisional candidates only.
 Mathematical Stacks chapter edits occur only after a bounded unit has direct
 French evidence, a reviewed disposition, explicit residual accounting, and
