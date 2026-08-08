@@ -33,6 +33,25 @@ zero-padded `D`, `I`, `F`, `S`, `R`, and `A` prefixes.
 Rows are append-only. A correction names the earlier row in `supersedes`; it
 does not rewrite history.
 
+For `smap.csv` and `resid.csv`, `supersedes` is the final column so legacy
+rows without a serialized trailing field remain byte-stable and are read as
+blank. A successor must point to one strictly earlier row in the same table;
+one row may have at most one direct successor. Validation checks every
+historical row but computes review and residual snapshots from the
+unsuperseded active view. The snapshot records active rows, physical file
+rows, and superseded rows separately. New rows must serialize the final field
+even when blank; legacy rows may omit only that final blank. The validator
+rejects overflow fields and whitespace-normalized identifiers. For a pure
+source-unit attribution correction, every field other than stable row ID,
+source unit, decision, and supersession link remains byte-semantically equal.
+The published legacy prefixes are hash-pinned before successors are read.
+Stable S/R identifiers are contiguous in physical append order, so a newly
+appended low or reused identifier cannot evade the explicit-final-field gate.
+Decision supersession links use the same prior-row and single-successor rules.
+The historical `issues.csv` field is a mixed namespace: a `D` value names the
+linked controlling decision while an `I` value supersedes one strictly prior
+issue and may not branch. Named governance repairs have exact regressions.
+
 ## Authority states
 
 - `english_discovery`: complete English text supports search and candidates.

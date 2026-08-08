@@ -182,9 +182,11 @@ append-only.
 - `tmap.csv`: French-admitted topic-level bridges to existing Stacks sections;
   granularity and non-coverage claims are explicit in every row.
 - `smap.csv`: French-admitted statement and statement-component edges to
-  exact existing labels or explicitly untagged local labels.
+  exact existing labels or explicitly untagged local labels; published
+  corrections append explicit same-table successors instead of rewriting.
 - `resid.csv`: noncoverage, partial coverage, terminology migration,
-  stronger-target, derived, and upstream-pending residuals.
+  stronger-target, derived, and upstream-pending residuals with the same
+  append-only supersession rule.
 - `agent.csv`: exact task IDs, bounded scopes, runtimes when exposed, returned
   findings, owner checks, accepted/rejected dispositions, and write claims.
 - `interface.json`: hash-bound read-only contract with the active French and

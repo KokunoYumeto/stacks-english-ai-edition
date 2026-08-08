@@ -734,3 +734,34 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   IDs, residual IDs, row counts, and the six-item correction-referral file do
   not change. The append-only correction raises the current issue count to 40
   and the decision count to 103.
+- Governance review then established that the first correction mechanism was
+  itself invalid: published S/R rows are append-only, but their tables lacked
+  an explicit supersession field. D000104 and I000041 restore the exact
+  f2195bb forms of S000331--S000334 and R000165--R000167 and append corrected
+  successors S000336--S000339 and R000172--R000174. `smap.csv` now has 339
+  physical rows with 335 active and four superseded; `resid.csv` has 174
+  physical rows with 171 active and three superseded. The validator rejects
+  missing forward or multiply claimed supersessions and calculates all review
+  closure from the active view while still validating historical rows. The
+  append-only physical registers now contain 104 decisions and 41 issues.
+  It also pins the reconstructed legacy prefixes at 144,616 bytes / SHA-256
+  `86DB212E45E51F7F7CB8613E4A205A9A07E68A82E173BBD2C5DD8167E350819C`
+  for S000001--S000335 and 46,075 bytes / SHA-256
+  `704D957786F45FE1F280C3303C59883DC50AAC9809CD2071FBB8C20369147303`
+  for R000001--R000171. Exact row arity and attribution-only field equality
+  are fail-closed regressions. Synthetic unknown-target, forward-reference,
+  whitespace, branching, and valid-chain supersession tests all passed.
+  Contiguous physical S/R ID order closes the low-ID omission bypass, while
+  exact D000104-to-D000103 and I000041-to-I000040 regressions make the
+  governance repair itself non-optional. The legacy issue-link column is
+  validated as an explicit mixed namespace: historical `D` links resolve to
+  decisions and new `I` links obey prior-row nonbranching supersession.
+- Agent records A000100--A000102 preserve the registry/control audit and both
+  disjoint mathematical audits for the next 3.3.11--3.3.15 slice. Their work
+  also supplied the exact supersession invariants and independently confirmed
+  the corrected 3.3.10 attribution. The physical agent register now has 102
+  rows; all three runs were read-only and owner-replayed.
+- Final no-write audit A000103 returned PASS on the restored legacy bytes,
+  explicit successors, mixed issue-link namespace, physical and active counts,
+  row arity, contiguous identifiers, failure cases, and privacy. The agent
+  register now has 103 rows.
