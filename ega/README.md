@@ -96,6 +96,12 @@ or published here.
   permanence locality and componentwise birationality; ordinary closedness is
   kept rigorously separate from closed immersions and universal closedness.
   No new Stacks lemma was needed.
+- Tenth statement-level slice: EGA I 2.3.1--2.3.2 now have direct-French
+  dispositions. The cumulative map has 178 edges across 79 source units and
+  71 explicit residuals. Tags 01JB 01JC and 01IT cover unrestricted scheme
+  gluing and affine reconstruction. Tag 01JE is the exact projective-line
+  inversion example; the nearby doubled-origin example 01JD is explicitly
+  excluded. No new Stacks lemma was needed.
 - The intake registry now recognizes all 430 native Xy-pic commands as well
   as 15 tikz-cd environments. Synthetic diagram IDs are deterministic within
   their semantic parent. This repairs an actual pre-Stacks graph omission;
@@ -146,7 +152,7 @@ append-only.
   the edition task alone decides and mutates canonical source.
 
 The immediate work is sequential statement-level comparison across EGA 0--IV,
-continuing after EGA I 2.2.10 while EGA II is admitted through printed p.23.
+continuing after EGA I 2.3.2 while EGA II is admitted through printed p.23.
 The complete English discovery surface drives provisional candidates only.
 Mathematical Stacks chapter edits occur only after a bounded unit has direct
 French evidence, a reviewed disposition, explicit residual accounting, and

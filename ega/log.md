@@ -340,3 +340,32 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   under E2P23 and F22. Historical §2.2 evidence remains bound to immutable F8.
   No chapter build or render is applicable to this graph-only checkpoint;
   structural validation privacy checks and exact remote identity are mandatory.
+
+### EGA I 2.3 review A000075
+
+- Two numbered units were checked against direct French F8 and the p.101
+  diplomatic gate. The cumulative map has 178 edges across 79 admitted source
+  units with 71 residuals. No source diagram occurs in the bounded section and
+  no Stacks TeX changed.
+- Tags 01JB and 01JC split the general locally ringed gluing construction from
+  the assertion that gluing schemes produces a scheme. Tag 01IT supplies the
+  stronger affine-open basis used to reconstruct every scheme from its affine
+  overlap data. No finiteness quasi-compactness or separatedness was imported.
+- EGA 2.3.2 is exactly the projective-line example 01JE: two affine lines are
+  glued along their principal punctured opens by coordinate inversion global
+  functions are the ground field and the result is not affine. EGA names the
+  inverse overlap direction from Stacks but the gluing datum is identical.
+- The nearby doubled-origin example 01JD was rejected. It uses the identity
+  transition and produces a nonseparated scheme. Confusing it with the source
+  would corrupt both the semantic target and later property dependencies.
+- The forward reference to the later projective-space construction is recorded
+  through 01NF and 01NG as a derived documentary comparison: the pinned text
+  defines Proj projective one-space and its two standard charts but has no
+  separately tagged comparison with the earlier glued object.
+- One exact inherited-parent audit was accepted after owner replay. A parallel
+  adversarial attempt was interrupted after exceeding its bounded utility and
+  returned no evidence; it produced no write and therefore receives no
+  completed-run A-row. Canonical p.101 controls record no source correction.
+- No chapter build or visual render is applicable to this graph-only slice.
+  Pinned-label replay structural validation privacy checks and exact remote
+  identity remain the checkpoint gates.
