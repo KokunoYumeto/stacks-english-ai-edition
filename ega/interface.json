@@ -8,15 +8,15 @@
     "cross_tree_writes": false
   },
   "french_cursor": {
-    "admitted_through": "EGA II printed p.20, completing 2.1.1 and opening 2.1.2 through formulas 2.1.2.1 and 2.1.2.2",
-    "next": "NUMDAM EGA II PDF one-based p.18 / printed p.21, continuation of 2.1.2",
+    "admitted_through": "EGA II printed p.23, continuing 2.2.1",
+    "next": "NUMDAM EGA II PDF one-based p.21 / printed p.24, continuation of 2.2.1",
     "append_state": "remove only the final 10-byte temporary end-env before the next authority append",
-    "manifest": "F19.json",
-    "manifest_sha256": "B1B3A70C9E7AAB2745C476CEC0F0313E123126217A43977FCA8AAE626EC84CAF",
-    "page_gate": "E2P20.json",
-    "page_gate_sha256": "F2B390F4A2796886C3C343AC63C1065CED21F6EAD2C988AB0BFD87CE6037C593",
-    "ledger": "E2P20_FR.jsonl",
-    "ledger_sha256": "0B4ED786EDE87E4ADBE3154EC3DC4FB592B07D7588ADD9C6F10576D7BCB59E6C"
+    "manifest": "F22.json",
+    "manifest_sha256": "8C0A8E6C837C9842D3DE5656AAF73014060109BCC1D67B68FB668C5A40D94EF7",
+    "page_gate": "E2P23.json",
+    "page_gate_sha256": "871F3DD836772820CFD9D7F95A92BB5B76FC5354788791A22DBCBFC8EFCD5B10",
+    "ledger": "E2P23_FR.jsonl",
+    "ledger_sha256": "87FF57FD2169172CA17E88DC3C6A3F82161282E32426ED0F492EE6F1E6DE3789"
   },
   "admitted_french_receipts": [
     {
@@ -32,24 +32,29 @@
     {
       "manifest": "F19.json",
       "manifest_sha256": "B1B3A70C9E7AAB2745C476CEC0F0313E123126217A43977FCA8AAE626EC84CAF",
-      "role": "current direct-authority receipt through EGA II printed p.20"
+      "role": "historical direct-authority receipt through EGA II printed p.20"
+    },
+    {
+      "manifest": "F22.json",
+      "manifest_sha256": "8C0A8E6C837C9842D3DE5656AAF73014060109BCC1D67B68FB668C5A40D94EF7",
+      "role": "current direct-authority receipt through EGA II printed p.23"
     }
   ],
   "english_discovery": {
     "manifest": "R184.json",
     "manifest_sha256": "5C64ECD32FD7C5458D2599D70ED667D2CF06D95517EFFA9C6D6DCEF7626913A0",
-    "ledger": "E2P19_EN.jsonl",
-    "ledger_sha256": "436F290ABCE9D7DF3B9F3D6D8D2526F4C0EC6B2E4A84B21441C8F8C12D971061",
-    "latest_noop_gate": "E2P20_EN.jsonl",
-    "latest_noop_gate_sha256": "9807C8FC2A6679F44E05A74804174024CA1A64B5494C3C46DF6B9A2F27A8D1BB",
-    "role": "R184 remains the exact intake discovery surface; the p20 comparison changed no English source file"
+    "latest_manifest": "R189.json",
+    "latest_manifest_sha256": "224EEF1515654815E24CCB8986834F15444901284CC67EDD29F97067D8217FB4",
+    "latest_noop_gate": "E2P23_EN.jsonl",
+    "latest_noop_gate_sha256": "8C5093293EA94ECAC5BFE0C6CC75D4D8703E1EC71B59C2F701E5B2C259D1FA28",
+    "role": "R184 remains the exact intake discovery surface; R189 and the p23 comparison report an identity no-op with no changed English source file"
   },
   "semantic_notes": {
     "bytes": 399689,
     "sha256": "4B4811B6F24F139020E15CF27D7BFA82C3872F0A549DCFF4F64B28F4454737D6",
     "role": "read-only source evidence requiring schema normalization"
   },
-  "public_checkpoint": "https://zenodo.org/records/21843070",
+  "public_checkpoint": "https://zenodo.org/records/21844642",
   "correction_channel": "reports/findings.jsonl",
   "required_finding_fields": [
     "stable_id",

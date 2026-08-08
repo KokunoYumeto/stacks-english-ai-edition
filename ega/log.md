@@ -301,3 +301,42 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   only the machine-readable comparison graph. Pinned-label replay structural
   validation privacy checks and exact remote identity remain the checkpoint
   gates.
+
+### EGA I 2.2 review A000065--A000074
+
+- Ten numbered units and independently labelled formula 2.2.4.1 were checked
+  against direct French F8. The cumulative map has 168 edges across 77 admitted
+  source units with 67 residuals. No Stacks TeX changed.
+- Tags 01HB and 01IJ identify EGA prescheme morphisms with modern locally
+  ringed scheme morphisms. The induced residue-field injection remains an
+  explicit proof-level consequence of 07BI rather than an invented theorem.
+- Tag 01I1 gives the affine-target Hom bijection for the stronger case of an
+  arbitrary locally ringed source. Its proof contains formula 2.2.4.1 exactly.
+  Tags 01IB 01I7 01BH and 0096 reconstruct the module mapping formula without an
+  affine quasi-compact or quasi-separated hypothesis on the morphism; the
+  Stacks construction does not need the source hypothesis that G is
+  quasi-coherent.
+- Ordinary closedness is the underlying-topological definition 005O. It was
+  not conflated with a closed immersion properness or universal closedness.
+  For composition the ordinary clause of 0515 gives a stronger algebraic-stack
+  target; open and surjective composition use 02V2 and 01S0 while the remaining
+  cancellation clauses stay explicitly derived.
+- Surjectivity and dominance are local for stronger fpqc and fppf target
+  topologies by 02KV and 0H8J. The arbitrary Zariski-cover specialization adds
+  no finiteness condition. Tag 0H8H was excluded because it packages
+  quasi-compactness with dominance.
+- Tags 01RO 0BAB and 01RP give the complete birational package for schemes with
+  finitely many components and no reducedness or integrality assumption. The
+  graph uses the invariant bijection on component generic points; the printed
+  paired indexing is retained as historical formulation rather than silently
+  made ordering-dependent.
+- Eight bounded Spark audits were read consumed and archived. Their useful
+  target evidence was retained; an invented source label a false dense-open
+  isomorphism paraphrase an unrelated topology target and a missed ordinary-
+  closed clause remain append-only in A000065--A000072 and I000019--I000021.
+  Two inherited-parent audits then supplied whole-section source and adversarial
+  checks. Every accepted target was replayed at pinned base a04446e5.
+- The live edition interface advanced independently to EGA II printed p.23
+  under E2P23 and F22. Historical §2.2 evidence remains bound to immutable F8.
+  No chapter build or render is applicable to this graph-only checkpoint;
+  structural validation privacy checks and exact remote identity are mandatory.

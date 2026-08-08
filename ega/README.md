@@ -89,6 +89,13 @@ or published here.
   the rational-function and locally-integral clauses remain split so neither
   fieldhood nor a false stalkwise criterion is introduced. No new Stacks
   lemma was needed.
+- Ninth statement-level slice: EGA I 2.2.1--2.2.10 and numbered formula
+  2.2.4.1 now have direct-French dispositions. The cumulative map has 168
+  edges across 77 source units and 67 explicit residuals. Existing definitions
+  and lemmas cover locally ringed morphisms affine targets module mappings
+  permanence locality and componentwise birationality; ordinary closedness is
+  kept rigorously separate from closed immersions and universal closedness.
+  No new Stacks lemma was needed.
 - The intake registry now recognizes all 430 native Xy-pic commands as well
   as 15 tikz-cd environments. Synthetic diagram IDs are deterministic within
   their semantic parent. This repairs an actual pre-Stacks graph omission;
@@ -139,7 +146,7 @@ append-only.
   the edition task alone decides and mutates canonical source.
 
 The immediate work is sequential statement-level comparison across EGA 0--IV,
-continuing after EGA I 1.7.5 while EGA II is admitted through printed p.20.
+continuing after EGA I 2.2.10 while EGA II is admitted through printed p.23.
 The complete English discovery surface drives provisional candidates only.
 Mathematical Stacks chapter edits occur only after a bounded unit has direct
 French evidence, a reviewed disposition, explicit residual accounting, and
