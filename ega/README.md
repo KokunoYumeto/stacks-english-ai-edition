@@ -82,6 +82,13 @@ or published here.
   01HW 01HB 01I1 and 01I2 exactly split affine recognition and the opposite-
   rings equivalence; 01IG gives a stronger closed-immersion form of the final
   quotient monomorphism. No new Stacks lemma was needed.
+- Eighth statement-level slice: EGA I 2.1.1--2.1.8 now have direct-French
+  dispositions. The cumulative map has 130 edges across 66 source units and
+  51 explicit residuals. Modern scheme terminology exactly absorbs EGA's
+  `prescheme`; sobriety merges the Kolmogorov and generic-point results; and
+  the rational-function and locally-integral clauses remain split so neither
+  fieldhood nor a false stalkwise criterion is introduced. No new Stacks
+  lemma was needed.
 - The intake registry now recognizes all 430 native Xy-pic commands as well
   as 15 tikz-cd environments. Synthetic diagram IDs are deterministic within
   their semantic parent. This repairs an actual pre-Stacks graph omission;

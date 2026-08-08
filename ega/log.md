@@ -273,3 +273,31 @@ visual fidelity, publication, or ownership. The owner verifies every result.
 - No Stacks TeX changed in this slice. A chapter build or visual render would
   therefore test no substantive delta; exact intake replay structural
   validation and remote identity are the applicable gates.
+
+### EGA I 2.1 review A000062--A000064
+
+- Eight numbered units were checked against direct French F8 and the pinned
+  Stacks base. The cumulative statement map now has 130 edges across 66 source
+  units with 51 explicit residuals. No Stacks TeX changed.
+- EGA's historical `prescheme` is exactly the modern unrestricted scheme in
+  01IJ; no separatedness enters. Tags 00A1 and 01HW split the affine-open
+  definition while 01IT exactly states that affine opens form a basis.
+- Tag 01IS deliberately serves twice: it is stronger than the Kolmogorov
+  assertion in 2.1.4 and exactly states the generic-point result in 2.1.5.
+  Reusing one target avoids manufacturing duplicate semantic nodes.
+- For irreducible X the modern rational-function ring is the generic stalk by
+  01RU and the one-component specialization of 01RV. Tag 01RW was excluded:
+  EGA assumes no reducedness and says ring rather than field. The historical
+  notation for the ambient stalk along an irreducible closed subset remains a
+  migration residual because the only nearby tagged uses are narrower.
+- The locally-integral clause is exactly reconstructed from 01OQ instantiated
+  with integral domains and 01OK. It was not weakened to the false criterion
+  that all local rings are domains; the pinned Properties chapter itself
+  records a connected affine counterexample to that shortcut.
+- The proof of 2.1.5 prints X where the referent is Y. Canonical control P98
+  already catalogues and diplomatically preserves the typo. The existing
+  correction record was reused and no duplicate finding was created.
+- No chapter build or visual render is applicable because this slice changes
+  only the machine-readable comparison graph. Pinned-label replay structural
+  validation privacy checks and exact remote identity remain the checkpoint
+  gates.
