@@ -867,3 +867,53 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   and the validator. It included the owner repair of S000382 and explicit
   parent-label and partial-terminology closure in R000233--R000235; it made no
   writes and found no new defect.
+
+## 2026-08-08
+
+- Direct-French review now covers EGA I 3.5.1--3.5.11 and closes subsection
+  3.5; EGA I 3.6.1 is next. The authority is F8
+  `2137BF64B9BD210176B58075DBDB58E7C8A5669F9EFAD61410510A01D32D0BC0`;
+  canonical `ega1-3-fr.tex` is 59,766 bytes with SHA-256
+  `DB4F986C9FDC1B66FF2D627C5E9121BCE0490563B7C14415320B5DDD7424B851`.
+  P114--P117 are PASS and no scoped French source defect or unresolved reading
+  was found.
+- The admitted slice has 21 generated units and 49 new statement/component
+  edges S000395--S000443. Exact full-statement matches are 01S4 for 3.5.4 and
+  3.5.8 and 01S4 with 01S3 for 3.5.11. The remaining claims are explicitly
+  split among 01JX 01KU 01S0 01S1 01RZ 01J9 0H7K 03H5 003B 001O 0CPN 02V1
+  0472 01JP 04VS 04VW and 01I2. R000236--R000271 record every derived,
+  unlabelled, stronger-category, terminology, point-set, and parent-display
+  boundary. No new open mathematical gap and no new correction referral were
+  created.
+- Frozen R184 omits printed-page markers I:115 and I:116 from `ega1-3.tex`.
+  D000121 and I000045 therefore add `pages.csv` rather than altering the
+  frozen discovery tree. Its 18 active L rows are 5,483 bytes with SHA-256
+  `6EED824C60BC56AB07996FDA2D70B962E3225898DA90CEA232006A2A52AF16F7`;
+  P115 gate `8D0C007424BBFAECD5F59CE33A25567EE6923C4A88D461BB87CE86ADA2496E1B`
+  and P116 gate `083D997689E74C8E7610C0894F978E643753D73DCCA4D8BB61B1FBA17A72339A`
+  bind all corrections. Exactly 18 `printed_page` fields changed and every
+  other field and all 9,585 stable IDs remained byte-semantically identical.
+- Two independent full R184 replays reconstructed the 127-file 7,283,321-byte
+  tree at `3BFB1C5103093481246EF4A6365E08544F6D5E19ACC0EA63E717F3F3643F064D`
+  by applying the four recorded live-tree inverses. Both produced byte-identical
+  `files.csv` `A1BB4950FE27D813FD79BCC4604607994D38E3F1E5A2C1D52EC21E01EC5C7E5F`,
+  `units.csv` `E72220BBBC714B20F4386F5CF91695A46CAF194F077430E747F545504C556FBE`,
+  and `intake.json` `DA75F2DBA40E7BB19844B771E084118DAFC67E857B8DEBA8347312DAA3BCD86A`.
+  A deliberately stale raw-page guard applied zero rows and left all units
+  unchanged. The overlay is therefore deterministic and atomic.
+- A000109--A000114 record the control/unit audit, the bounded 3.5.1--3.5.6
+  parent audit and its two exact nested contributions, the 3.5.7--3.5.11
+  audit, and the independent page-overlay design. All contributions were
+  read-only and were owner-replayed before integration. No Stacks chapter TeX
+  changed.
+- The active scaffold now has 439 statement edges across 173 admitted units,
+  436 official-target rows, 166 distinct official tags, three local untagged
+  rows, 26 full exact equivalences, and 268 active residuals. Physical history
+  contains 443 edge rows with four superseded and 271 residual rows with three
+  superseded. There are 133 decisions, 45 issues, six correction referrals,
+  and 114 consumed agent records.
+- A000115 independently audited the complete release diff and returned PASS
+  on all 21 attributions, 49 edges, 36 residuals, 13 decisions, the page issue,
+  all 19 pinned target joins, the 18-row page overlay, deterministic replay,
+  adverse atomicity, append-only history, snapshots, privacy, and validator.
+  It made no writes and found no defect. The consumed agent total is now 115.

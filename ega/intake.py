@@ -4,6 +4,7 @@
 import argparse
 import csv
 import hashlib
+import io
 import json
 import re
 from collections import Counter, defaultdict
@@ -17,6 +18,14 @@ BEGIN_RE = re.compile(r"\\begin\{([^}]+)\}(?:\[([^]]+)\])?")
 END_RE = re.compile(r"\\end\{([^}]+)\}")
 XYMATRIX_RE = re.compile(r"\\xymatrix\b")
 SECTION_LABEL_MAX_GAP = 4
+PAGE_FIELDS = [
+    "locator_id", "unit_id", "parsed_page", "printed_page",
+    "source_receipt", "source_receipt_sha256", "page_gate",
+    "page_gate_sha256", "evidence_id", "decision_id", "notes",
+    "supersedes",
+]
+PAGE_ID_RE = re.compile(r"L\d{6}$")
+PRINTED_PAGE_RE = re.compile(r"(?:0|I|II|III|IV):[^,]+$")
 
 STATEMENT_KINDS = {
     "env": "statement",
@@ -61,6 +70,95 @@ def write_csv(path, fields, data):
         writer.writerows(data)
 
 
+def load_page_evidence(path, errors):
+    """Load and validate append-only authoritative printed-page overrides."""
+    initial_errors = len(errors)
+    if not path.is_file():
+        errors.append(f"missing page evidence: {path.name}")
+        return b"", [], []
+    raw = path.read_bytes()
+    reader = csv.DictReader(io.StringIO(raw.decode("utf-8")))
+    if reader.fieldnames != PAGE_FIELDS:
+        errors.append("unexpected pages.csv header")
+        return raw, [], []
+    rows = list(reader)
+    identifiers = [row.get("locator_id") or "" for row in rows]
+    expected = [f"L{number:06d}" for number in range(1, len(rows) + 1)]
+    if identifiers != expected:
+        errors.append("pages.csv IDs are not contiguous in append order")
+    positions = {identifier: index for index, identifier in enumerate(identifiers)}
+    superseded = set()
+    for index, row in enumerate(rows):
+        if None in row:
+            errors.append(f"extra CSV field in page row {row.get('locator_id')}")
+            continue
+        if any(row.get(field) is None for field in PAGE_FIELDS):
+            errors.append(f"missing CSV field in page row {row.get('locator_id')}")
+            continue
+        identifier = row["locator_id"]
+        if not PAGE_ID_RE.fullmatch(identifier):
+            errors.append(f"invalid page locator ID {identifier!r}")
+        if not PRINTED_PAGE_RE.fullmatch(row["parsed_page"]):
+            errors.append(f"invalid parsed page for {identifier}")
+        if not PRINTED_PAGE_RE.fullmatch(row["printed_page"]):
+            errors.append(f"invalid authoritative page for {identifier}")
+        if row["parsed_page"] == row["printed_page"]:
+            errors.append(f"page evidence does not change {identifier}")
+        for field in (
+                "unit_id", "source_receipt", "source_receipt_sha256",
+                "page_gate", "page_gate_sha256", "evidence_id",
+                "decision_id", "notes"):
+            if not row[field].strip():
+                errors.append(f"blank {field} in page row {identifier}")
+        for field in ("source_receipt_sha256", "page_gate_sha256"):
+            if not re.fullmatch(r"[0-9A-F]{64}", row[field]):
+                errors.append(f"invalid {field} in page row {identifier}")
+        raw_prior = row["supersedes"]
+        prior = raw_prior.strip()
+        if raw_prior != prior:
+            errors.append(f"whitespace in page supersedes for {identifier}")
+        elif not prior:
+            continue
+        elif prior not in positions:
+            errors.append(f"unknown superseded page locator {prior!r}")
+        elif positions[prior] >= index:
+            errors.append(f"non-prior page supersession {identifier} -> {prior}")
+        elif prior in superseded:
+            errors.append(f"multiple page supersessions of {prior}")
+        else:
+            superseded.add(prior)
+    active = [row for row in rows if row["locator_id"] not in superseded]
+    active_units = [row["unit_id"] for row in active]
+    if len(active_units) != len(set(active_units)):
+        errors.append("multiple active page locators for one unit")
+    if len(errors) != initial_errors:
+        return raw, rows, []
+    return raw, rows, active
+
+
+def apply_page_evidence(units, page_rows, errors):
+    """Apply all validated overrides atomically after guarding raw parser output."""
+    units_by_id = {row["unit_id"]: row for row in units}
+    staged = []
+    initial_errors = len(errors)
+    for evidence in page_rows:
+        unit = units_by_id.get(evidence["unit_id"])
+        if unit is None:
+            errors.append(
+                f"page evidence has unknown unit {evidence['unit_id']}")
+        elif unit["printed_page"] != evidence["parsed_page"]:
+            errors.append(
+                f"page guard failed for {evidence['unit_id']}: expected raw "
+                f"{evidence['parsed_page']}, got {unit['printed_page']}")
+        else:
+            staged.append((unit, evidence["printed_page"]))
+    if len(errors) != initial_errors:
+        return 0
+    for unit, printed_page in staged:
+        unit["printed_page"] = printed_page
+    return len(staged)
+
+
 def logical_volume_from(path, label=""):
     """Return the logical EGA volume, independently of the printed witness page.
 
@@ -91,6 +189,9 @@ def main():
     parser.add_argument("--manifest", required=True, type=Path)
     parser.add_argument("--source", required=True, type=Path)
     parser.add_argument("--out", default=Path(__file__).resolve().parent, type=Path)
+    parser.add_argument(
+        "--pages", default=Path(__file__).resolve().parent / "pages.csv",
+        type=Path)
     args = parser.parse_args()
 
     errors = []
@@ -344,6 +445,10 @@ def main():
         kind_counts["volume"] += 1
     units = prefix_units + units
 
+    raw_pages, all_page_rows, active_page_rows = load_page_evidence(
+        args.pages, errors)
+    applied_page_rows = apply_page_evidence(units, active_page_rows, errors)
+
     args.out.mkdir(parents=True, exist_ok=True)
     write_csv(args.out / "files.csv", ["relative_path", "bytes", "sha256", "role"], file_rows)
     unit_fields = ["unit_id", "volume", "kind", "source_number", "source_label",
@@ -352,7 +457,7 @@ def main():
     write_csv(args.out / "units.csv", unit_fields, units)
 
     result = {
-        "schema": "ega-english-discovery-intake-v3",
+        "schema": "ega-english-discovery-intake-v4",
         "status": "PASS" if not errors else "FAIL",
         "errors": errors,
         "manifest": {
@@ -366,6 +471,15 @@ def main():
             "tree_sha256": tree,
         },
         "units": len(units),
+        "page_evidence": {
+            "file": "pages.csv",
+            "bytes": len(raw_pages),
+            "sha256": sha(raw_pages),
+            "physical_rows": len(all_page_rows),
+            "active_rows": len(active_page_rows),
+            "superseded_rows": len(all_page_rows) - len(active_page_rows),
+            "applied_rows": applied_page_rows,
+        },
         "kind_counts": dict(sorted(kind_counts.items())),
         "copied_source_text": False,
     }

@@ -18,6 +18,16 @@ or source-file role. `printed_page` is an independent witness locator and may
 name another volume when a later erratum supplies text for an earlier volume.
 It must never reclassify the semantic unit.
 
+`printed_page` names the first printed page on which the generated unit begins.
+A separately generated diagram child therefore keeps its own first page even
+when its parent statement began earlier. When a frozen discovery witness lacks
+a page marker that direct French authority has sealed, `pages.csv` supplies an
+append-only evidence overlay. Each active `L` row records the raw parsed page,
+the corrected first page, the admitted receipt and page gate, and its decision.
+Intake validates the complete active overlay before applying any row; a stale
+raw-page guard or invalid evidence makes the application atomic and fail-closed.
+The overlay changes neither the frozen manifest bytes nor any stable unit ID.
+
 A foreign-volume page marker that begins an appended errata section remains
 the active witness locator for that section. A foreign-volume marker entered
 from the body page inside one statement is instead statement-scoped: it binds
@@ -28,8 +38,8 @@ from contaminating the other.
 Topic IDs use `ega-topic-<slug>`. Local Stacks labels may be recorded as
 evidence, but this branch never writes or claims an official Stacks tag.
 
-Decision, issue, feedback, statement-edge, residual, and agent-run IDs use
-zero-padded `D`, `I`, `F`, `S`, `R`, and `A` prefixes.
+Decision, issue, feedback, statement-edge, residual, page-locator, and
+agent-run IDs use zero-padded `D`, `I`, `F`, `S`, `R`, `L`, and `A` prefixes.
 Rows are append-only. A correction names the earlier row in `supersedes`; it
 does not rewrite history.
 

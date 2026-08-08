@@ -149,6 +149,13 @@ or published here.
   as 15 tikz-cd environments. Synthetic diagram IDs are deterministic within
   their semantic parent. This repairs an actual pre-Stacks graph omission;
   source prose and diagram artwork remain uncopied.
+- Current statement-level frontier: direct-French review is complete through
+  EGA I 3.5.11. The active graph has 439 edges across 173 generated units and
+  268 residual records; 436 edges resolve to 166 distinct existing official
+  tags and three resolve to explicitly untagged local integrations. Twenty-six
+  edges are exact full-statement equivalences. Four bounded mathematical gaps
+  remain open from earlier slices; subsection 3.5 adds none. The next cursor is
+  EGA I 3.6.1.
 
 ## State model
 
@@ -177,6 +184,9 @@ append-only.
   extraction; it does not copy source prose.
 - `files.csv`, `units.csv`, and `intake.json`: generated exact-file inventory,
   stable unit registry, and fail-closed intake receipt.
+- `pages.csv`: append-only direct-authority page evidence for frozen discovery
+  files whose printed-page markers are absent; raw-page guards make replay
+  atomic and preserve every stable unit ID.
 - `map.py`, `cand.csv`, and `map.json`: lexical candidate generation against
   the exact upstream Stacks snapshot. Candidates are not reviewed mappings.
 - `tmap.csv`: French-admitted topic-level bridges to existing Stacks sections;
@@ -197,7 +207,7 @@ append-only.
   the edition task alone decides and mutates canonical source.
 
 The immediate work is sequential statement-level comparison across EGA 0--IV,
-continuing in the direct-French body after EGA I 3.4.9 at EGA I 3.5.1 while
+continuing in the direct-French body after EGA I 3.5.11 at EGA I 3.6.1 while
 EGA II is admitted through printed p.23. Discovery unit I.3.2.9 remains in a
 separate authority-pending queue for its cited EGA II erratum witness.
 The complete English discovery surface drives provisional candidates only.

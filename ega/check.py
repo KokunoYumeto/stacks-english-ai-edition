@@ -120,6 +120,7 @@ tables = {
     "issues.csv": ("issue_id", re.compile(r"I\d{6}$")),
     "fb.csv": ("feedback_id", re.compile(r"F\d{6}$")),
     "agent.csv": ("run_id", re.compile(r"A\d{6}$")),
+    "pages.csv": ("locator_id", re.compile(r"L\d{6}$")),
 }
 
 counts = {}
@@ -128,6 +129,8 @@ generated = {
     "files.csv": "relative_path",
     "units.csv": "unit_id",
 }
+page_evidence_summary = None
+intake_path = ROOT / "intake.json"
 for name, field in generated.items():
     path = ROOT / name
     if path.exists():
@@ -173,6 +176,29 @@ if (ROOT / "units.csv").exists() and (ROOT / "files.csv").exists():
         "ega:I.3.3.3:proof": "I:108",
         "ega:I.3.3.4": "I:108",
         "ega:I.3.3.5": "I:108",
+        "ega:subsection:I.3.5": "I:114",
+        "ega:I.3.5.1": "I:114",
+        "ega:I.3.5.2": "I:115",
+        "ega:I.3.5.2:proof": "I:115",
+        "ega:I.3.5.3": "I:115",
+        "ega:I.3.5.3:diagram:xymatrix:1": "I:115",
+        "ega:I.3.5.3:proof": "I:115",
+        "ega:I.3.5.4": "I:115",
+        "ega:I.3.5.5": "I:115",
+        "ega:I.3.5.5:diagram:xymatrix:1": "I:115",
+        "ega:I.3.5.6": "I:116",
+        "ega:I.3.5.6:proof": "I:116",
+        "ega:I.3.5.7": "I:116",
+        "ega:I.3.5.7:proof": "I:116",
+        "ega:I.3.5.8": "I:116",
+        "ega:I.3.5.8:proof": "I:116",
+        "ega:I.3.5.9": "I:116",
+        "ega:I.3.5.9:proof": "I:116",
+        "ega:I.3.5.10": "I:116",
+        "ega:I.3.5.10:proof": "I:116",
+        "ega:I.3.5.10:diagram:xymatrix:1": "I:117",
+        "ega:I.3.5.11": "I:117",
+        "ega:subsection:I.3.6": "I:117",
     }
     for unit_id, expected_page in page_regressions.items():
         row = units_by_id.get(unit_id)
@@ -183,7 +209,102 @@ if (ROOT / "units.csv").exists() and (ROOT / "files.csv").exists():
                 f"printed-page regression for {unit_id}: "
                 f"expected {expected_page}, got {row['printed_page']}")
 
-intake_path = ROOT / "intake.json"
+    pages_path = ROOT / "pages.csv"
+    if pages_path.exists():
+        expected_pages_header = [
+            "locator_id", "unit_id", "parsed_page", "printed_page",
+            "source_receipt", "source_receipt_sha256", "page_gate",
+            "page_gate_sha256", "evidence_id", "decision_id", "notes",
+            "supersedes",
+        ]
+        raw_pages = pages_path.read_bytes()
+        page_lines = raw_pages.decode("utf-8").splitlines()
+        if (not page_lines or
+                page_lines[0].split(",") != expected_pages_header):
+            ERRORS.append("unexpected pages.csv header")
+        all_page_rows = rows("pages.csv")
+        page_ids = [row["locator_id"] for row in all_page_rows]
+        if page_ids != [
+                f"L{number:06d}"
+                for number in range(1, len(page_ids) + 1)]:
+            ERRORS.append("pages.csv IDs are not contiguous in append order")
+        active_page_rows, superseded_page_rows = active_rows(
+            all_page_rows, "locator_id", "pages.csv")
+        active_page_units = [row["unit_id"] for row in active_page_rows]
+        if len(active_page_units) != len(set(active_page_units)):
+            ERRORS.append("multiple active page locators for one unit")
+        admitted_page_gates = {
+            (
+                "EGA1_CHAPTER1_P115_VALIDATION_R38.json",
+                "8D0C007424BBFAECD5F59CE33A25567EE6923C4A88D461BB87CE86ADA2496E1B",
+            ): "I:115",
+            (
+                "EGA1_CHAPTER1_P116_VALIDATION_R39.json",
+                "083D997689E74C8E7610C0894F978E643753D73DCCA4D8BB61B1FBA17A72339A",
+            ): "I:116",
+        }
+        for row in all_page_rows:
+            if None in row:
+                ERRORS.append(
+                    f"extra CSV field in page row {row.get('locator_id')}")
+                continue
+            for field in expected_pages_header[:-1]:
+                if not (row.get(field) or "").strip():
+                    ERRORS.append(
+                        f"blank {field} in page row {row['locator_id']}")
+            for field in ("parsed_page", "printed_page"):
+                if not re.fullmatch(
+                        r"(?:0|I|II|III|IV):[^,]+", row[field]):
+                    ERRORS.append(
+                        f"invalid {field} in page row {row['locator_id']}")
+            for field in ("source_receipt_sha256", "page_gate_sha256"):
+                if not re.fullmatch(r"[0-9A-F]{64}", row[field]):
+                    ERRORS.append(
+                        f"invalid {field} in page row {row['locator_id']}")
+            if (row["source_receipt"], row["source_receipt_sha256"]) not in admitted_receipts:
+                ERRORS.append(
+                    f"page row lacks admitted French receipt {row['locator_id']}")
+            gate_page = admitted_page_gates.get(
+                (row["page_gate"], row["page_gate_sha256"]))
+            if gate_page is None:
+                ERRORS.append(
+                    f"page row lacks admitted page gate {row['locator_id']}")
+            elif row["printed_page"] != gate_page:
+                ERRORS.append(
+                    f"page row contradicts its page gate {row['locator_id']}")
+            if row["decision_id"] not in decision_by_id:
+                ERRORS.append(
+                    f"page row has unknown decision {row['locator_id']}")
+        for row in active_page_rows:
+            unit = units_by_id.get(row["unit_id"])
+            if unit is None:
+                ERRORS.append(
+                    f"page row has unknown unit {row['locator_id']}")
+            elif unit["printed_page"] != row["printed_page"]:
+                ERRORS.append(
+                    f"active page evidence not applied for {row['unit_id']}")
+            if row["parsed_page"] == row["printed_page"]:
+                ERRORS.append(
+                    f"page row does not change parsed evidence {row['locator_id']}")
+        page_evidence_summary = {
+            "file": "pages.csv",
+            "bytes": len(raw_pages),
+            "sha256": hashlib.sha256(raw_pages).hexdigest().upper(),
+            "physical_rows": len(all_page_rows),
+            "active_rows": len(active_page_rows),
+            "superseded_rows": len(superseded_page_rows),
+            "applied_rows": len(active_page_rows),
+        }
+        scoped_page_summary = {
+            field: page_evidence_summary[field]
+            for field in ("file", "bytes", "sha256", "active_rows")
+        }
+        if (scope["inputs"]["english_discovery"].get("page_evidence") !=
+                scoped_page_summary):
+            ERRORS.append("scope page-evidence snapshot does not match pages.csv")
+    else:
+        ERRORS.append("missing pages.csv")
+
 if intake_path.exists():
     intake = json.loads(intake_path.read_text(encoding="utf-8"))
     if intake.get("status") != "PASS" or intake.get("errors"):
@@ -192,6 +313,10 @@ if intake_path.exists():
         ERRORS.append("intake tree does not match scope")
     if intake.get("units") != scope["inputs"]["english_discovery"]["discovery_units"]:
         ERRORS.append("intake unit count does not match scope")
+    if intake.get("schema") != "ega-english-discovery-intake-v4":
+        ERRORS.append("intake schema does not include page evidence")
+    if intake.get("page_evidence") != page_evidence_summary:
+        ERRORS.append("intake page-evidence receipt does not match pages.csv")
 
 map_path = ROOT / "map.json"
 if map_path.exists():
