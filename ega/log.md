@@ -685,3 +685,42 @@ visual fidelity, publication, or ownership. The owner verifies every result.
 - Final no-write audit A000095 returned PASS on the exact nine-field page
   migration, all new graph rows and target joins, count reconciliation,
   authority identities, counterexample, privacy, and deterministic validators.
+- Direct-French review now covers EGA I 3.3.6--3.3.10 and leaves 3.3.11 as the
+  next sequential unit. The authority remains `ega1-3-fr.tex`, 59,766 bytes,
+  SHA-256 `DB4F986C9FDC1B66FF2D627C5E9121BCE0490563B7C14415320B5DDD7424B851`,
+  under F8 SHA-256
+  `2137BF64B9BD210176B58075DBDB58E7C8A5669F9EFAD61410510A01D32D0BC0`.
+  Printed-p.109 controls are ledger
+  `0936AEE282CBEF59C4C613DC3AB891BDEEE7BFDB086DAE6E16521D61DB0F19E1`
+  and validation
+  `188004628018FCA04FD5FE31A8A8E690908FA57195DE2B6A33042A81CAF1CFCD`;
+  printed-p.110 controls are ledger
+  `92EBEF4E44D3821B4D2F4320ADFB5A1C9890A63873BC6C7AEB9F74338CB62CEA`
+  and PASS validation
+  `66E00BE78EEB8B6B4E8E470C2DAFEC901274DC24B6E845FBE477BE2DB5034B76`.
+- Unit 3.3.6 is the exact base-change construction 01JX after canonical factor
+  symmetry; its diagram is covered by the stronger cartesian square 01JP.
+  Unit 3.3.7 uses the explicit base-changed morphism from 01JX and derives
+  functor laws from fibre-product uniqueness after representatives are chosen.
+- Unit 3.3.8 is the exact 01JP Hom bijection and identifies postcomposition as
+  left adjoint to pullback. The printed `f` where the construction requires
+  `g` is already catalogued as
+  `EG-EGA-I-P109-FR-338-F-VS-G-SRCTYPO-001`; I000039 reuses that authority
+  record and creates neither a second correction referral nor a source edit.
+- Unit 3.3.9 specializes the stronger fibred-category coherence theorem 02XO.
+  Its proof and formula 3.3.9.1 occur at proof level in 001Y; formula 3.3.9.2
+  is naturality of the pullback comparison. Every equality is only under the
+  specified canonical identifications.
+- Unit 3.3.10 is implied by the stronger right-adjoint limit theorem 0038.
+  The pairing formula is derived from 002L and projection uniqueness. Its
+  scheme coproduct clause is valid through 01JR plus 01JB and 01JC; it is not
+  promoted to an arbitrary-category law. Existing I000038 and R000137 retain
+  the counterexample to the earlier 3.3.1 omnibus claim without duplication.
+- Agent records A000096--A000099 preserve the three disjoint read-only audits
+  and the final adversarial pass. That pass caught and closed a semantic
+  ordinal typo in D000097 which structural validation alone could not detect.
+  The cumulative draft now has 335 statement edges
+  across 127 admitted units, 171 residuals, 332 official-target rows, 142
+  distinct existing tags, three local untagged rows, 20 full exact
+  equivalences, 39 issues, six correction referrals, and 99 agent records.
+  No Stacks chapter TeX changed.
