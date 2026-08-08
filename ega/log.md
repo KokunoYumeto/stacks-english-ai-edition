@@ -469,3 +469,51 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   No chapter build or visual render is applicable to this graph-only slice;
   pinned-label replay structural validation privacy checks and exact remote
   identity remain the checkpoint gates.
+
+### EGA I 3.1 review A000082--A000084
+
+- The single direct-French semantic unit 3.1.1 was checked through its final
+  binary affine sentence on printed p.104. The cumulative map has 253 edges
+  across 95 admitted source units with 100 residuals. No Stacks TeX changed.
+- The admitted French source `ega1-3-fr.tex` is 59,766 bytes with SHA-256
+  `DB4F986C9FDC1B66FF2D627C5E9121BCE0490563B7C14415320B5DDD7424B851`.
+  Its F8 manifest remains 5,784 bytes with SHA-256
+  `2137BF64B9BD210176B58075DBDB58E7C8A5669F9EFAD61410510A01D32D0BC0`.
+  The p.104 ledger is 4,498 bytes with SHA-256
+  `C997C1D70DD5C6F32E67538657AB7DDE820ADF495BEF7EA8AF9BD3309F74769F`;
+  R27 is 8,883 bytes with SHA-256
+  `D21A97F27507F42FC20848B422599877D5F04F4653E8A799DD1A5266B5FD49EF`
+  and PASS/errors empty.
+- Tag 0B1X supplies the arbitrary topological coproduct. Tag 01JB specializes
+  to the source construction by taking every off-diagonal overlap empty; its
+  construction and first mapping property yield the transported components
+  and exact product-of-Hom-sets bijection. Tags 00AL and 00AM retain the sheaf
+  and ring-structure layers and 01JC upgrades the result to a scheme. No
+  finiteness quasi-compactness separation or nonemptiness condition is added.
+- Tag 002J identifies the resulting universal property as a set-indexed
+  coproduct. Applying the 01JB mapping property with target S gives the unique
+  structural map and in fact the coproduct in the slice category Sch over S;
+  01JX records only the scheme-over-S terminology. Tag 04AO records the binary
+  coproduct while retaining the notation migration from EGA sqcup to Stacks
+  amalg.
+- Tag 00ED gives the underlying disjoint-union homeomorphism for Spec of the
+  binary product ring. The ring projections A times B to A and B induce the
+  scheme coprojections in the contravariant direction. The proof of 01I5
+  constructs the canonical locally ringed-space isomorphism and supplies the
+  structure-sheaf layer absent from 00ED alone.
+- The affine formula is deliberately binary. An infinite disjoint union of
+  nonempty affine schemes need not be quasi-compact whereas every affine
+  spectrum is quasi-compact; Spec of an infinite ring product may also have
+  extra ultrafilter primes. Tag 000R was excluded because it only guarantees
+  at-most-countable coproducts inside a chosen universe-controlled category.
+  Tag 01I4 was excluded because it concerns products of schemes and tensor
+  products of rings.
+- The English discovery wrapper contains synthetic label I.3.1 in addition to
+  I.3.1.1 while direct French has only the subsection label and semantic label
+  I.3.1.1. The wrapper alias stays unreviewed and all admitted edges use
+  `ega:I.3.1.1`; stable discovery IDs and authority files remain unchanged.
+- Three bounded inherited-parent audits were consumed and owner-replayed.
+  Their scopes outputs and no-write claims are recorded in A000082--A000084.
+  No chapter build or visual render is applicable to this graph-only slice;
+  pinned-label replay structural validation privacy checks and exact remote
+  identity remain the checkpoint gates.
