@@ -765,3 +765,47 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   explicit successors, mixed issue-link namespace, physical and active counts,
   row arity, contiguous identifiers, failure cases, and privacy. The agent
   register now has 103 rows.
+- Direct-French review now covers EGA I 3.3.11--3.3.15 and closes subsection
+  3.3; EGA I 3.4.1 is next. The p.110 controls remain ledger
+  `92EBEF4E44D3821B4D2F4320ADFB5A1C9890A63873BC6C7AEB9F74338CB62CEA`
+  and validation
+  `66E00BE78EEB8B6B4E8E470C2DAFEC901274DC24B6E845FBE477BE2DB5034B76`.
+  P.111 is bound by ledger
+  `1CEDDC361F0EC9409C888F6D3CF6442E8E671FD9465F06F96244FDF81D3CBA5E`
+  and PASS validation
+  `7FBFDD83E08BC65055A19F18FEB29EED152777414894DBE6A4A6844668AA3AE3`;
+  the latter records direct 1100-dpi inspection and one 5000-dpi formula crop.
+- Unit 3.3.11 is the exact proof-level pullback identity in 01JY; its labelled
+  immersion hypothesis is not imported. The statement proof and native diagram
+  remain separate stable units and every comparison is canonical rather than
+  literal equality.
+- Unit 3.3.12 is split across categorical cancellation fibre-product
+  uniqueness the product-factorization formula 02YC and 01L5. Its printed
+  codomain `Y_(S')` must be `X'_(S')`; I000042 reuses
+  `EG-EGA-I-P111-FR-3312-BASECHANGE-TARGET-Y-VS-XPRIME-SRCTYPO-001` without a
+  second referral or any diplomatic-source edit.
+- Unit 3.3.13 is exactly affine duality plus the affine fibre-product tensor
+  formula. `X tensor_A A'` is retained only as an EGA alias for base change.
+  Unit 3.3.14 is the universal pullback map `(f 1)` and its specialized Hom
+  bijection; Stacks has no separate graph-terminology tag.
+- Unit 3.3.15 is covered by the final object `Spec Z`, affine one-space 01M0,
+  the global-section representation 01JH, affine-target maps 01I1, and sheaf
+  gluing 006T. Its printed scheme arrow is reversed; I000043 reuses
+  `EG-EGA-I-P111-FR-3315-MORPHISM-DIRECTION-SRCTYPO-001` and maps only the
+  corrected `X -> Spec Z[T]` reading.
+- The two French-labelled plain displays in 3.3.12 and 3.3.14 remain explicit
+  parent `source_part` records. R184 leaves them unlabelled; inventing child IDs
+  would violate the English-discovery identity scheme and a generic display
+  parser would add 1,560 unrelated statement children.
+- The active scaffold now has 355 statement edges across 134 admitted units,
+  352 official-target rows, 149 distinct official tags, three local untagged
+  rows, 20 full exact equivalences, and 190 active residuals. Physical history
+  contains 359 edge rows with four superseded and 193 residual rows with three
+  superseded. There are 110 decisions, 43 issues, six correction referrals,
+  and 104 agent records. No Stacks chapter TeX changed.
+- A000104 independently audited the complete release diff against direct French,
+  the P110/P111 controls, and pinned target commit `a04446e5`. It returned PASS
+  on all twenty new edge rows, nineteen residual rows, six decisions, two
+  already-catalogued source-defect issues, target joins, semantic
+  classifications, append-only history, snapshots, privacy, and the validator;
+  it made no writes and found no new defect.
