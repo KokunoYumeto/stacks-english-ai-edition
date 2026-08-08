@@ -369,3 +369,55 @@ visual fidelity, publication, or ownership. The owner verifies every result.
 - No chapter build or visual render is applicable to this graph-only slice.
   Pinned-label replay structural validation privacy checks and exact remote
   identity remain the checkpoint gates.
+
+### EGA I 2.4 review A000076--A000078
+
+- Eight numbered units and the native affine-chart triangle were checked
+  against direct French F8 and the p.101--p.103 diplomatic gates. The
+  cumulative map has 219 edges across 88 admitted source units with 82
+  residuals. No Stacks TeX changed.
+- The exact page-ledger SHA-256 identities are p.101
+  `F7329A53C494396C09C8C6DED894FB40E40254977C66E25172CF50B19A3C297A`;
+  p.102 `7325833EC8890A9A8A0A627E14902F5DD3160A7CD019F880A41ABAB31EA3BD7E`;
+  and p.103 `B520493D1CA931E46505DACB158597147EAC7DC84B9F53EF5AFAB21771AF13A7`.
+  Their R24--R26 validation SHA-256 identities are respectively
+  `2B8A9A673EC9DE56E26E13566CF11568F8DD5F3474A602B95F6F7EDE6410781B`;
+  `8DDC1F5216FE7D1E210C6F6AE57393F677BCDBAE965D948E5890846C59C66CF4`;
+  and `E12D1BAFBF55F86BA7DC24349E7439E518A82397C649E51CA3186B13383BB78A`.
+- Tags 01HW 07BI and 00E9 split the historical local-scheme definition and its
+  unique closed point. Tags 01J6 and 02NA give the canonical local-spectrum
+  morphism in stronger universal form. The source triangle has no identical
+  tagged diagram and remains an exact derived diagram edge.
+- Tags 01J7 and 00E3 separate the generalization image from its induced-
+  topology homeomorphism. Tags 01HV and 02C6 prove the stalk isomorphisms.
+  Tag 01L6 formally states monicity only among schemes; its proof applies
+  verbatim to arbitrary ringed-space test objects and that category difference
+  remains explicit rather than being silently erased.
+- The component and dimension-zero criterion in 2.4.3 is reconstructed from
+  00ET 00ES 00E3 00KE 04MG and locality. No Noetherian or reduced hypothesis
+  is introduced and a zero-dimensional local ring is not strengthened to a
+  field.
+- Tag 01J6 exactly matches the local-source mapping property in 2.4.4. The
+  fixed-field classification in 2.4.6 is exact prose under section tag 01J5;
+  tag 01J9 was excluded because it quotients field-valued points by
+  equivalence and forgets distinct embeddings for fixed K.
+- EGA I 2.4.5 contains a material source error. For
+  `A = k[t]_(t)` and `K = k(t)` the inclusion defines a point of `Spec(A)` at
+  the generic prime rather than the closed point and does not factor through
+  `A/(t)`. The valid local-map clause is mapped; the false unrestricted
+  sentence is an open residual and was referred to the canonical edition in
+  `reports/findings.jsonl` at 4,986 bytes and SHA-256
+  `7AE91F0A80471A3D3CBA63B94DEF6C9A259644E8E1D234DB89632F1061210291`.
+  The edition task acknowledged the queue and owns corrected-layer
+  adjudication; no authority file was mutated here.
+- The quotient and local-spectrum factors of 2.4.7 map separately to 01IG and
+  01L9; the full composite need not be a closed immersion. For 2.4.8 the local
+  triviality argument is 0B8M plus the unique-closed-point open-neighbourhood
+  fact in the proof of 01J6. Tag 02AH supplies an explicit affine
+  counterexample and 0BDA plus 0BCH supply the stronger UFD conclusion;
+  factoriality already entails normality.
+- Three bounded inherited-parent audits were consumed and owner-replayed.
+  Their exact scopes findings corrections and no-write claims are recorded in
+  A000076--A000078. No chapter build or visual render is applicable to this
+  graph-only slice; pinned-label replay structural validation privacy checks
+  and exact remote identity remain the checkpoint gates.

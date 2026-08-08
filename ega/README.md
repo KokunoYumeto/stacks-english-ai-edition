@@ -19,7 +19,7 @@ or published here.
   127 files, 7,283,321 bytes, tree SHA-256
   `3BFB1C5103093481246EF4A6365E08544F6D5E19ACC0EA63E717F3F3643F064D`.
 - French authority: production is active; the current interface snapshot has
-  EGA II printed p.20 sealed and printed p.21 as the next cursor.
+  EGA II printed p.23 sealed and printed p.24 as the next cursor.
 - Existing incremental pre-Stacks notes: 399,689 bytes, SHA-256
   `4B4811B6F24F139020E15CF27D7BFA82C3872F0A549DCFF4F64B28F4454737D6`.
   They are evidence to normalize into the new schema, not a completed
@@ -102,6 +102,15 @@ or published here.
   gluing and affine reconstruction. Tag 01JE is the exact projective-line
   inversion example; the nearby doubled-origin example 01JD is explicitly
   excluded. No new Stacks lemma was needed.
+- Eleventh statement-level slice: EGA I 2.4.1--2.4.8 and the labelled
+  affine-chart diagram now have direct-French dispositions. The cumulative map
+  has 219 edges across 88 source units and 82 explicit residuals. Tags 01J6
+  and 01J7 organize local-spectrum mapping and generalizations; 00E3 and 02C6
+  supply topology and stalks; 0B8M and 0BDA cover invertible modules and the
+  factorial comparison. The unrestricted field-point sentence in 2.4.5 is
+  false without a closed-image hypothesis and has been referred append-only
+  to the canonical edition rather than silently normalized. No Stacks TeX
+  change was needed.
 - The intake registry now recognizes all 430 native Xy-pic commands as well
   as 15 tikz-cd environments. Synthetic diagram IDs are deterministic within
   their semantic parent. This repairs an actual pre-Stacks graph omission;
@@ -152,7 +161,7 @@ append-only.
   the edition task alone decides and mutates canonical source.
 
 The immediate work is sequential statement-level comparison across EGA 0--IV,
-continuing after EGA I 2.3.2 while EGA II is admitted through printed p.23.
+continuing after EGA I 2.4.8 while EGA II is admitted through printed p.23.
 The complete English discovery surface drives provisional candidates only.
 Mathematical Stacks chapter edits occur only after a bounded unit has direct
 French evidence, a reviewed disposition, explicit residual accounting, and
