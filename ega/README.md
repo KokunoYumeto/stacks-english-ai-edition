@@ -197,7 +197,7 @@ append-only.
   the edition task alone decides and mutates canonical source.
 
 The immediate work is sequential statement-level comparison across EGA 0--IV,
-continuing in the direct-French body after EGA I 3.3.15 at EGA I 3.4.1 while
+continuing in the direct-French body after EGA I 3.4.9 at EGA I 3.5.1 while
 EGA II is admitted through printed p.23. Discovery unit I.3.2.9 remains in a
 separate authority-pending queue for its cited EGA II erratum witness.
 The complete English discovery surface drives provisional candidates only.

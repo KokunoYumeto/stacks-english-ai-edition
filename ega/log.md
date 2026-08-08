@@ -809,3 +809,61 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   already-catalogued source-defect issues, target joins, semantic
   classifications, append-only history, snapshots, privacy, and the validator;
   it made no writes and found no new defect.
+- Public checkpoint `6b141b040991fa0583ca8873f9dcdda7bb524e1e` closed
+  EGA I 3.3 through 3.3.15. Local HEAD, fetched fork, `ls-remote`, and the
+  GitHub commit API all returned that commit and tree
+  `ea7b173f1cf3a545ae0fca697f6aed006a3d7a8d`; the post-push worktree was
+  clean.
+- Direct-French review now covers all eighteen generated units in EGA I
+  3.4.1--3.4.9 and closes subsection 3.4; EGA I 3.5.1 is next. Authority is
+  still F8 `2137BF64B9BD210176B58075DBDB58E7C8A5669F9EFAD61410510A01D32D0BC0`.
+  P111 through P114 validation hashes are respectively
+  `7FBFDD83E08BC65055A19F18FEB29EED152777414894DBE6A4A6844668AA3AE3`,
+  `2024E09325ECB75B7398699C954856DA99CC13DB130E242357CF870C31110B9F`,
+  `06D68E902E48B278C0AB683D1992FFE739104AE7B670D55FD316EDF22046FA30`,
+  and `C0575FC4F2215613939BC4657407D123370967A385B83E11229333D005CCFAE1`;
+  every receipt is PASS with direct NUMDAM inspection and no OCR.
+- Units 3.4.1--3.4.4 are the representable point functor and its pointwise
+  product identities in the slice category. They map to 001O, 0020, 001G,
+  001S, 001V, 01I2, and 01JX. Ring-valued covariance is recorded as two
+  contravariance reversals rather than an unexplained change of variance.
+- Unit 3.4.5 maps local spectra to 01J6 and fixed-field points to the exact
+  prose under 01J5. Its historical term `point geometrique` includes every
+  field-valued point; modern 03PO requires an algebraically closed value field.
+  The final `X(K)` is explicitly retained as relative over `Spec K`, since an
+  absolute reading can be false when K has nontrivial endomorphisms.
+- Units 3.4.6--3.4.7 combine the common-extension lemma 0H7K with the product
+  universal property and the exact binary point criterion 0495. The map of
+  underlying sets is only surjective: 0496 supplies a concrete two-point
+  counterexample and 01JT classifies every fibre by primes of the residue-field
+  tensor product.
+- Unit 3.4.8 occurs verbatim in the proof of 01S1 including the arbitrary
+  subset identity and the native Cartesian square. It is set-theoretic and is
+  not a statement about scheme-theoretic images. Unit 3.4.9 is exactly 01JT
+  after migrating Bourbaki composite-extension types to tensor-product primes;
+  01KR, 01L3, and 01I4 supply the proof's base replacement and affine formula.
+- French 3.4.9 calls the induced tensor-product map to `kappa(z)` a
+  `monomorphisme`. It may have a nonzero prime kernel. I000044 reuses
+  `EG-EGA-I-P114-FR-349-TENSOR-MONOMORPHISM-SRCTYPO-001`; diplomatic French is
+  untouched and the mapped mathematical reading is `homomorphisme`. The three
+  French-only plain-display labels remain parent source parts because frozen
+  R184 supplies no corresponding child IDs. Repeated placeholder proof hashes
+  are never used for identity or deduplication.
+- A000105 and its bounded nested contribution A000106 audited 3.4.1--3.4.5;
+  A000107 audited 3.4.6--3.4.9. All work was read-only. The owner replayed all
+  target joins, control hashes, variance and field hypotheses, unit boundaries,
+  terminology, and correction status before integration. No new gap or new
+  correction referral was created.
+- The active scaffold now has 390 statement edges across 152 admitted units,
+  387 official-target rows, 157 distinct official tags, three local untagged
+  rows, 23 full exact equivalences, and 232 active residuals. Physical history
+  contains 394 edge rows with four superseded and 235 residual rows with three
+  superseded. There are 120 decisions, 44 issues, six correction referrals,
+  and 108 agent records. No Stacks chapter TeX changed.
+- A000108 independently audited the complete 3.4 release diff and returned
+  PASS on all eighteen unit attributions, thirty-five edges, forty-two new
+  residual rows, ten decisions, the single already-catalogued P114 issue,
+  agent records, target joins, active snapshots, append-only history, privacy,
+  and the validator. It included the owner repair of S000382 and explicit
+  parent-label and partial-terminology closure in R000233--R000235; it made no
+  writes and found no new defect.
