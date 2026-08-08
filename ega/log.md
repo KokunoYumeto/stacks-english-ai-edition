@@ -517,3 +517,52 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   No chapter build or visual render is applicable to this graph-only slice;
   pinned-label replay structural validation privacy checks and exact remote
   identity remain the checkpoint gates.
+
+### EGA I 3.2.1--3.2.5 review A000085--A000087
+
+- The product definition, affine construction, pairing formula,
+  monomorphic-base comparison, and open-base corollary were checked against
+  direct French F8 across printed pp.104--106. The cumulative map has 274
+  edges across 100 admitted source units with 115 residuals. No Stacks TeX
+  changed.
+- The admitted French source `ega1-3-fr.tex` remains 59,766 bytes with SHA-256
+  `DB4F986C9FDC1B66FF2D627C5E9121BCE0490563B7C14415320B5DDD7424B851`.
+  The p.104 ledger/R27 identities are
+  `C997C1D70DD5C6F32E67538657AB7DDE820ADF495BEF7EA8AF9BD3309F74769F`
+  and `D21A97F27507F42FC20848B422599877D5F04F4653E8A799DD1A5266B5FD49EF`.
+  The p.105 ledger/R28 identities are
+  `4F85769E94A2E8EF7C3B4A6C7A8400D062313CC218BD5C97596C0109C947D8DB`
+  and `E09FD9270B63CA943059DDEDCA557FB420C4C65D60DCF2D46FC68AA51ECCE022`.
+  The p.106 ledger/R29 identities are
+  `E6757586AB33B973673E229E307EE9914AF5836EEC815643968DBD8F1C2A8F5D`
+  and `FA89227CD8E5CCBBA1EE733B93BE9C87782A39ADA29234C1F316646C942BBAD1`.
+  All three validations are PASS/errors empty and record no scoped source
+  correction, ambiguity, or mathematical defect.
+- EGA's product of S-schemes is the categorical product in the slice Sch over
+  S through 001G and 001S and exactly the ordinary scheme fibre product in
+  01JP. The unique isomorphism statement is projection-compatible rather than
+  literal equality. Pairing notation and the map u times_S v are reconstructed
+  from the universal property and general limit functoriality 002L. The source
+  remains definition-only here; existence in 01JM belongs to 3.2.6.
+- Tag 01I4 exactly gives Spec of B tensor_A C and proves the product even among
+  locally ringed spaces. Its canonical projection data reverse the ring maps
+  into the tensor product. Its proof gives the A-algebra Hom bijection; 00CX
+  supplies only the balanced module tensor dependency and is not mislabeled as
+  the full algebra theorem.
+- In 3.2.3 the compatible maps rho and sigma determine tau by tau of b tensor c
+  equal to rho of b times sigma of c. Compatibility on A is essential: two
+  unrelated evaluations of k[t] at zero and one cannot arise from one map out
+  of the tensor product. Tag 01I1 retains the affine morphism contravariance.
+- In 3.2.4 categorical cancellation is exactly 003B. Tag 01L3 turns monicity
+  into an isomorphic diagonal and the 01KR comparison is its base change, so
+  products over S prime and S agree. Neither point injectivity nor
+  separatedness suffices: Frobenius can be point-bijective with a nonreduced
+  self-fibre product and separatedness yields only a closed comparison.
+- For 3.2.5 tag 01HI uniquely factors both structure maps through the open base
+  and 01L7 makes that open immersion monic. This reduces the corollary to the
+  preceding proposition and remains conditional on chosen product objects.
+- Three bounded inherited-parent audits were consumed and owner-replayed.
+  Their scopes, outputs, and no-write claims are recorded in A000085--A000087.
+  No chapter build or visual render is applicable to this graph-only slice;
+  pinned-label replay, structural validation, privacy checks, and exact remote
+  identity remain the checkpoint gates.

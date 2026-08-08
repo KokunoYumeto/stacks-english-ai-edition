@@ -128,6 +128,14 @@ or published here.
   affine formula. The graph explicitly prevents its false extension to
   infinite ring products and leaves the English-only I.3.1 wrapper alias
   unpromoted. No Stacks TeX change was needed.
+- Fourteenth statement-level slice part one: EGA I 3.2.1--3.2.5 now have
+  direct-French dispositions. The cumulative map has 274 edges across 100
+  source units and 115 explicit residuals. Tags 01JP and 01I4 give the exact
+  fibre-product definition and affine tensor construction; 003B, 01L3, and
+  01KR give invariance under a monomorphic base; 01HI and 01L7 give the
+  open-base corollary. Product-in-the-slice terminology,
+  tensor-versus-direct-ring-product variance, and categorical monicity remain
+  explicit. No Stacks TeX change was needed.
 - The intake registry now recognizes all 430 native Xy-pic commands as well
   as 15 tikz-cd environments. Synthetic diagram IDs are deterministic within
   their semantic parent. This repairs an actual pre-Stacks graph omission;
@@ -178,7 +186,7 @@ append-only.
   the edition task alone decides and mutates canonical source.
 
 The immediate work is sequential statement-level comparison across EGA 0--IV,
-continuing after EGA I 3.1.1 at EGA I 3.2.1 while EGA II is admitted through
+continuing after EGA I 3.2.5 at EGA I 3.2.6 while EGA II is admitted through
 printed p.23.
 The complete English discovery surface drives provisional candidates only.
 Mathematical Stacks chapter edits occur only after a bounded unit has direct
