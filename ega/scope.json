@@ -60,19 +60,19 @@
   },
   "statement_review_snapshot": {
     "file": "smap.csv",
-    "statement_edge_rows": 586,
-    "file_rows": 590,
+    "statement_edge_rows": 604,
+    "file_rows": 608,
     "superseded_rows": 4,
-    "source_units": 207,
-    "existing_official_tag_rows": 582,
-    "distinct_existing_official_tags": 211,
+    "source_units": 210,
+    "existing_official_tag_rows": 600,
+    "distinct_existing_official_tags": 213,
     "local_untagged_rows": 4,
-    "full_statement_equivalences": 27
+    "full_statement_equivalences": 28
   },
   "residual_snapshot": {
     "file": "resid.csv",
-    "rows": 370,
-    "file_rows": 373,
+    "rows": 379,
+    "file_rows": 382,
     "superseded_rows": 3,
     "open_gaps": 4,
     "integrated_local_pending_upstream": 4
@@ -89,6 +89,14 @@
     "crop_files": 45,
     "crop_bytes": 13600258
   },
+  "source_error_qa_snapshot": {
+    "file": "reports/qsrc.csv",
+    "bytes": 768,
+    "sha256": "47688723470C409C20B3E0F7F0B0A95937A43BB7793E6FF49053ED5CDC0288EA",
+    "rows": 2,
+    "crop_files": 2,
+    "crop_bytes": 764185
+  },
   "edition_interface": "interface.json",
   "correction_channel": "reports/findings.jsonl",
   "rules": {
@@ -99,6 +107,7 @@
     "feedback": "append_only and independently evidenced",
     "promotion": "direct evidence plus bounded mathematical review",
     "visual_promotion": "one active per-item authority French English V receipt at an effective scale of at least 5000 dpi before mapped diagram or selected intricate-block promotion",
+    "source_error_evidence": "one immutable Q receipt with an active source-error-QA admission and exact authority parent page box crop hash bytes dimensions and effective scale",
     "remote_claims": "a pushed branch is a scaffold checkpoint, not corpus completion"
   }
 }

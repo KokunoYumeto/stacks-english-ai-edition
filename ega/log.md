@@ -1261,3 +1261,77 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   append-only prefixes, snapshots, privacy, and no-TeX-write scope. Both
   returned hard PASS without substituting for the owner's direct mathematical
   or visual judgment.
+
+### EGA I 4.3.1--4.3.2 product and base-change stability
+
+- Direct-French review closes subsection 4.3 and stops before 4.4.1. The
+  governing corrected source remains `ega1-4-fr.tex`, 34,792 bytes, SHA-256
+  `A5F5CDAC81E654E9ABA75BBFEAD24F3010B122452C689B9EBAB5A7711B454EC1`,
+  under F33 SHA-256
+  `2652207F96F697935BC81C5D63B292DE4D956905D69CB92572225E320BB27F4C`.
+  Printed-p.124 R47 is 10,336 bytes SHA-256
+  `49BAFE90DBC08F35258F8C1AB4C3B476971B3B9B5359667B8C9D0564CC4E6A54`;
+  printed-p.125 R48 is 10,341 bytes SHA-256
+  `0B5B2C235F4E2166F5A15F084A4B8FC9592EA7426D2CB663EB916DBDAD9CA1F0`.
+  The three generated units are 4.3.1 and its proof at I:124 continuing onto
+  I:125 plus 4.3.2 at I:125. No page overlay or diagram unit is required.
+- D000163--D000164 admit 18 edges S000591--S000608 and nine residuals
+  R000374--R000382. The active scaffold now has 604 edges across 210 source
+  units and 379 residuals; physical history has 608 edge rows and 382 residual
+  rows. Six hundred active edges resolve to 213 distinct official tags and
+  four remain explicit local untagged integrations. There are 28 exact
+  full-statement equivalences and the four earlier open gaps remain unchanged.
+- For 4.3.1, 01JY supplies each base-changed factor and 02V0 their composition.
+  The open image is the exact inverse-image intersection of 01JR; 01JU gives
+  closed pullbacks and their ideals; and 01IO reduces the general immersion
+  case to the open and closed cases. The historical proof retains 01JS and
+  0FCZ or 01HL for localization, 01I4 and 01I2 for affine tensor products, and
+  01IH plus 01IG for quotient spectra. The closed-set calculation uses 00E5
+  and 00E0. No single target is falsely described as the whole proposition.
+- The affine proof contains a newly exposed author-level notation error.
+  Printed p.125 unmistakably states `ker(rho tensor sigma)=u(b)+v(c)` with
+  ordinary images. For `A=k`, `B=k[x]`, `C=k[y]`, `b=(x)`, and `c=0`, the
+  kernel `(x)` contains `xy` but the ordinary image `u(b)` does not. The correct
+  expression is `Im(b tensor_A C)+Im(B tensor_A c)`, exactly the extension-ideal
+  form EGA 0 I 7.7.7 itself uses and 00DF proves by right exactness. D000162,
+  I000053, R000377, and finding
+  `EGA-I-4.3.1-P125-KERNEL-IMAGE-IDEALS-001` preserve print while referring the
+  correction and R48 supersession to the canon owner.
+- D000165 closes the source-error evidence-provenance gap without rewriting
+  the published 4.2 finding. `reports/qsrc.csv` is 768 bytes with SHA-256
+  `47688723470C409C20B3E0F7F0B0A95937A43BB7793E6FF49053ED5CDC0288EA`.
+  Q000001 binds authority PDF
+  page 122, box `88;572;182;49`, to `reports/qa/423g.png`: 274,034 bytes,
+  SHA-256
+  `AD6EECAD5060C23A5F73C1FC3EF900ED98E4C5426AD522DA6F47FB28773234D5`,
+  dimensions 12,639 by 3,403. Q000002 binds page 124, box
+  `86;335;429;37`, to `reports/qa/431k.png`: 490,151 bytes, SHA-256
+  `9D799B065380ACBEA0217C3E7F50B48EE5367E2A0FF70DA216785FBF7DC811C6`,
+  dimensions 29,792 by 2,571. Both are individual tight grayscale
+  5,000-dpi-equivalent direct-authority receipts; they neither admit the
+  corrections nor substitute for the three-surface V gate.
+- Corollary 4.3.2 is exactly 01JY after the base-change definition 01JX; 01JU
+  strengthens only its closed clause by supplying the pulled-back ideal.
+  Neither immersion hypothesis nor the same-type refinements were weakened.
+  The one three-term equality display in the proof is ordinary rather than a
+  dense array or intricate standalone block and was not promoted into the
+  visual-QA inventory.
+- A000138 independently rehashed F33 R47 R48 and the direct source, enumerated
+  all three units, replayed the pinned target bundle and false near matches,
+  found the kernel error, and confirmed zero graph collisions. That read-only
+  audit changed no authority source, edition source, Stacks chapter TeX,
+  diagram registry, or visual receipt. The owner subsequently added
+  Q000001--Q000002 and their two crop files under the separate source-error
+  evidence gate described above.
+- A000139 inverse-audited all 18 §4.3 edges and nine residuals against the
+  pinned labels and direct French, then adversarially checked the Q schema,
+  active-admission boundary, path uniqueness, append-only extension rule,
+  snapshots, privacy, and duplicate closure. Its successive concrete failures
+  caused the S000608 source-attribution repair and the strict Q-ID-boundary
+  gate; the final live tree returned HARD PASS with no write claim and no
+  visual-content certification.
+- A000140 independently replayed F33, R47, R48, all three source units,
+  D000162--D000165, I000053, S000591--S000608, R000374--R000382, and both Q
+  receipts. It also rerendered each recorded authority page/box and found the
+  committed PNG bytes pixel-identical, while retaining the owner's exclusive
+  visual judgment. Its final release verdict was HARD PASS with no file write.

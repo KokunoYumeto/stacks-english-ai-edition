@@ -187,6 +187,25 @@ or published here.
   4.2.3 prints the induced global map as `Gamma(psi)` although the typed sheaf
   component is `theta`; diplomatic text stays untouched and D000161/I000052
   refer `Gamma(theta)` to the owning corrected French and English layers.
+- EGA I 4.3.1--4.3.2 now has direct-French statement and proof dispositions.
+  The product of two immersions is decomposed into two base changes followed by
+  composition; open and closed pullbacks recover the stated inverse-image
+  intersection; and 4.3.2 is exactly the base-change theorem 01JY. Direct
+  5,000-dpi review found that the historical affine proof writes the kernel as
+  the sum of the plain images `u(b)+v(c)`, which is false without taking the
+  generated extension ideals. D000162/I000053 preserve diplomatic French and
+  refer the correct tensor-extension formula to the corrected French and
+  English layers. The theorem itself and its modern proof are unaffected.
+- D000165 and `../reports/qsrc.csv` make the two direct-authority source-error
+  witnesses exact and replayable. Q000001 binds the earlier p.123
+  `Gamma(psi)` witness at 274,034 bytes, SHA-256
+  `AD6EECAD5060C23A5F73C1FC3EF900ED98E4C5426AD522DA6F47FB28773234D5`,
+  dimensions 12,639 by 3,403. Q000002 binds the p.125 kernel-formula witness
+  at 490,151 bytes, SHA-256
+  `9D799B065380ACBEA0217C3E7F50B48EE5367E2A0FF70DA216785FBF7DC811C6`,
+  dimensions 29,792 by 2,571. Both are individual tight
+  5,000-dpi-equivalent grayscale authority-only receipts. They do not admit
+  either correction and do not replace authority/French/English visual QA.
 - D000153 and I000049 bind the strengthened diagram gate. The deterministic
   inventory contains 445 registered diagrams and 483 intricate-block
   candidates. D000154, I000050, and V000001--V000014 certify the first bounded
@@ -202,12 +221,12 @@ or published here.
   promotion requires its own active V row. Shared, full-page, and grouped crops
   do not qualify.
 - Current statement-level frontier: direct-French review is complete through
-  EGA I 4.2.5. The active graph has 586 edges across 207 generated units and
-  370 residual records; 582 edges resolve to 211 distinct existing official
+  EGA I 4.3.2. The active graph has 604 edges across 210 generated units and
+  379 residual records; 600 edges resolve to 213 distinct existing official
   tags and four resolve to explicitly untagged local integrations. Twenty-six
-  prior exact full-statement equivalences plus 4.2.5 make twenty-seven. Four
-  bounded mathematical gaps remain open from earlier slices; subsection 4.2
-  adds none. The next cursor is EGA I 4.3.1.
+  prior exact full-statement equivalences plus 4.2.5 and 4.3.2 make
+  twenty-eight. Four bounded mathematical gaps remain open from earlier
+  slices; subsection 4.3 adds no Stacks gap. The next cursor is EGA I 4.4.1.
 
 ## State model
 
@@ -266,6 +285,9 @@ append-only.
   records.
 - `../reports/findings.jsonl`: append-only suspected-correction referrals;
   the edition task alone decides and mutates canonical source.
+- `../reports/qsrc.csv` and `../reports/qa`: short flat manifest and immutable
+  direct-authority crops for source-error evidence; these are not edition
+  outputs or three-surface visual certifications.
 
 The immediate work is sequential statement-level comparison across EGA 0--IV,
 continuing in the direct-French body after EGA I 4.1.10 at EGA I 4.2.1 while

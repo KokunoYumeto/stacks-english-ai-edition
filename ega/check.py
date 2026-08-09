@@ -267,6 +267,14 @@ if d154 is None or not (
         "admit_first_individual_authority_french_english_visual_batch" and
         d154.get("state") == "active"):
     ERRORS.append("missing or invalid D000154 visual-QA admission decision")
+d165 = active_decision_by_id.get("D000165")
+if d165 is None or not (
+        d165.get("subject_id") == "ega:source-error-qa" and
+        d165.get("action") ==
+        "admit_exact_authority_crop_receipts_for_4_2_3_and_4_3_1" and
+        d165.get("state") == "active" and
+        d165.get("evidence") == "Q000001 Q000002 in reports/qsrc.csv"):
+    ERRORS.append("missing or invalid D000165 source-error crop admission")
 i49 = issue_by_id.get("I000049")
 if i49 is None or not (
         i49.get("subject_id") == "ega:diagrams" and
@@ -1364,10 +1372,12 @@ findings_path = ROOT.parent / "reports" / "findings.jsonl"
 finding_fields = set(interface.get("required_finding_fields", []))
 finding_ids = set()
 finding_count = 0
+findings_text = ""
 if not findings_path.exists():
     ERRORS.append("missing findings channel")
 else:
-    for number, raw in enumerate(findings_path.read_text(encoding="utf-8").splitlines(), 1):
+    findings_text = findings_path.read_text(encoding="utf-8")
+    for number, raw in enumerate(findings_text.splitlines(), 1):
         if not raw.strip():
             continue
         finding_count += 1
@@ -1384,6 +1394,169 @@ else:
             ERRORS.append(f"duplicate finding stable_id {stable_id}")
         finding_ids.add(stable_id)
 counts["findings.jsonl"] = finding_count
+
+qsrc_path = ROOT.parent / "reports" / "qsrc.csv"
+qsrc_header = [
+    "receipt_id", "finding_id", "decision_id", "admission_id", "pdf_key",
+    "pdf_bytes", "pdf_sha256", "page1", "page_width_pt", "page_height_pt",
+    "box_pt", "dpi", "path", "crop_bytes", "crop_sha256", "width_px",
+    "height_px",
+]
+expected_qsrc = {
+    "Q000001": {
+        "receipt_id": "Q000001",
+        "finding_id": "EGA-I-4.2.3-P123-GAMMA-PSI-TYPE",
+        "decision_id": "D000161",
+        "admission_id": "D000165",
+        "pdf_key": "NUMDAM:EGA_I_PMIHES_1960_4.pdf",
+        "pdf_bytes": "31680717",
+        "pdf_sha256":
+            "9ABA23020217535977E279BDD06A0413F48DA703086865BA4C00766C85DF4AE6",
+        "page1": "122", "page_width_pt": "606", "page_height_pt": "756",
+        "box_pt": "88;572;182;49", "dpi": "5000",
+        "path": "reports/qa/423g.png", "crop_bytes": "274034",
+        "crop_sha256":
+            "AD6EECAD5060C23A5F73C1FC3EF900ED98E4C5426AD522DA6F47FB28773234D5",
+        "width_px": "12639", "height_px": "3403",
+    },
+    "Q000002": {
+        "receipt_id": "Q000002",
+        "finding_id": "EGA-I-4.3.1-P125-KERNEL-IMAGE-IDEALS-001",
+        "decision_id": "D000162",
+        "admission_id": "D000165",
+        "pdf_key": "NUMDAM:EGA_I_PMIHES_1960_4.pdf",
+        "pdf_bytes": "31680717",
+        "pdf_sha256":
+            "9ABA23020217535977E279BDD06A0413F48DA703086865BA4C00766C85DF4AE6",
+        "page1": "124", "page_width_pt": "595", "page_height_pt": "748",
+        "box_pt": "86;335;429;37", "dpi": "5000",
+        "path": "reports/qa/431k.png", "crop_bytes": "490151",
+        "crop_sha256":
+            "9D799B065380ACBEA0217C3E7F50B48EE5367E2A0FF70DA216785FBF7DC811C6",
+        "width_px": "29792", "height_px": "2571",
+    },
+}
+qsrc_rows = []
+qsrc_raw = b""
+if not qsrc_path.is_file() or qsrc_path.is_symlink():
+    ERRORS.append("missing or unsafe source-error QA receipt manifest")
+else:
+    qsrc_raw = qsrc_path.read_bytes()
+    with qsrc_path.open(encoding="utf-8", newline="") as handle:
+        reader = csv.DictReader(handle)
+        if reader.fieldnames != qsrc_header:
+            ERRORS.append("unexpected qsrc.csv header")
+        qsrc_rows = list(reader)
+    qsrc_ids = [row.get("receipt_id", "") for row in qsrc_rows]
+    expected_ids = [f"Q{number:06d}" for number in range(1, len(qsrc_rows) + 1)]
+    if qsrc_ids != expected_ids:
+        ERRORS.append("qsrc.csv IDs are not contiguous in append order")
+    if qsrc_ids[:len(expected_qsrc)] != list(expected_qsrc):
+        ERRORS.append("qsrc.csv immutable baseline prefix is missing")
+    for row in qsrc_rows:
+        receipt_id = row.get("receipt_id", "")
+        if None in row:
+            ERRORS.append(f"extra CSV field in qsrc row {receipt_id}")
+        if any(not (row.get(field) or "").strip() for field in qsrc_header):
+            ERRORS.append(f"blank field in qsrc row {receipt_id}")
+        baseline = expected_qsrc.get(receipt_id)
+        if baseline is not None and row != baseline:
+            ERRORS.append(f"source-error QA manifest mismatch for {receipt_id}")
+
+source_error_qa_root = ROOT.parent / "reports" / "qa"
+manifest_crop_paths = {row.get("path", "") for row in qsrc_rows}
+if len(manifest_crop_paths) != len(qsrc_rows):
+    ERRORS.append("source-error QA evidence reuses a crop path")
+discovered_crop_paths = set()
+if not source_error_qa_root.is_dir() or source_error_qa_root.is_symlink():
+    ERRORS.append("missing or unsafe source-error QA receipt directory")
+else:
+    for path in source_error_qa_root.iterdir():
+        if path.is_symlink() or not path.is_file():
+            ERRORS.append("source-error QA receipts must be flat regular files")
+            continue
+        discovered_crop_paths.add(f"reports/qa/{path.name}")
+if discovered_crop_paths != manifest_crop_paths:
+    ERRORS.append("source-error QA crop set differs from qsrc.csv")
+
+source_error_crop_bytes = 0
+for row in qsrc_rows:
+    receipt_id = row.get("receipt_id", "")
+    try:
+        page1 = int(row["page1"])
+        page_width = float(row["page_width_pt"])
+        page_height = float(row["page_height_pt"])
+        box = tuple(float(value) for value in row["box_pt"].split(";"))
+        dpi = float(row["dpi"])
+        width_px = int(row["width_px"])
+        height_px = int(row["height_px"])
+        crop_bytes_expected = int(row["crop_bytes"])
+    except (KeyError, TypeError, ValueError):
+        ERRORS.append(f"invalid numeric source-error QA row {receipt_id}")
+        continue
+    numeric_values = (page_width, page_height, *box, dpi)
+    if len(box) != 4 or not all(math.isfinite(value) for value in numeric_values):
+        ERRORS.append(f"nonfinite source-error QA geometry for {receipt_id}")
+        continue
+    x, y, width_pt, height_pt = box
+    if (row.get("pdf_key") != "NUMDAM:EGA_I_PMIHES_1960_4.pdf" or
+            row.get("pdf_bytes") != "31680717" or
+            row.get("pdf_sha256") !=
+            "9ABA23020217535977E279BDD06A0413F48DA703086865BA4C00766C85DF4AE6"):
+        ERRORS.append(f"source-error QA parent identity mismatch for {receipt_id}")
+    if (page1 < 1 or page1 > 227 or page_width <= 0 or page_height <= 0 or
+            x < 0 or y < 0 or width_pt <= 0 or height_pt <= 0 or
+            x + width_pt > page_width or y + height_pt > page_height):
+        ERRORS.append(f"out-of-bounds source-error QA geometry for {receipt_id}")
+    effective_dpi = min(
+        width_px * 72 / width_pt, height_px * 72 / height_pt)
+    if dpi < 5000 or effective_dpi < dpi:
+        ERRORS.append(f"below-floor source-error QA crop for {receipt_id}")
+    crop_rel = Path(row["path"])
+    crop_path = ROOT.parent / crop_rel
+    if (crop_rel.parts[:2] != ("reports", "qa") or len(crop_rel.parts) != 3 or
+            not crop_path.is_file() or crop_path.is_symlink() or
+            crop_path.resolve().parent != source_error_qa_root.resolve()):
+        ERRORS.append(f"unsafe source-error QA path for {receipt_id}")
+        continue
+    raw_crop = crop_path.read_bytes()
+    actual_sha = hashlib.sha256(raw_crop).hexdigest().upper()
+    source_error_crop_bytes += len(raw_crop)
+    if len(raw_crop) != crop_bytes_expected:
+        ERRORS.append(f"source-error QA byte mismatch for {receipt_id}")
+    if actual_sha != row["crop_sha256"]:
+        ERRORS.append(f"source-error QA hash mismatch for {receipt_id}")
+    if png_dimensions(raw_crop) != (width_px, height_px):
+        ERRORS.append(f"source-error QA PNG mismatch for {receipt_id}")
+    receipt_pattern = re.compile(
+        rf"(?<![A-Za-z0-9]){re.escape(receipt_id)}(?![A-Za-z0-9])")
+    if (row["finding_id"] not in finding_ids or
+            not receipt_pattern.search(findings_text) or
+            row["path"] not in findings_text or
+            row["crop_sha256"] not in findings_text):
+        ERRORS.append(f"source-error QA finding link mismatch for {receipt_id}")
+    if row["decision_id"] not in decision_by_id:
+        ERRORS.append(f"source-error QA decision link mismatch for {receipt_id}")
+    admission = active_decision_by_id.get(row.get("admission_id", ""))
+    if admission is None or not (
+            admission.get("subject_id") == "ega:source-error-qa" and
+            admission.get("state") == "active" and
+            admission.get("action", "").startswith("admit_") and
+            receipt_pattern.search(admission.get("evidence", ""))):
+        ERRORS.append(f"source-error QA admission mismatch for {receipt_id}")
+counts["qsrc.csv"] = len(qsrc_rows)
+counts["source_error_qa_crops"] = len(discovered_crop_paths)
+counts["source_error_qa_bytes"] = source_error_crop_bytes
+source_error_qa_summary = {
+    "file": "reports/qsrc.csv",
+    "bytes": len(qsrc_raw),
+    "sha256": hashlib.sha256(qsrc_raw).hexdigest().upper(),
+    "rows": len(qsrc_rows),
+    "crop_files": len(discovered_crop_paths),
+    "crop_bytes": source_error_crop_bytes,
+}
+if scope.get("source_error_qa_snapshot") != source_error_qa_summary:
+    ERRORS.append("scope source-error QA snapshot does not match receipts")
 
 private_parts = [
     r"C:" + r"[/\\]" + "Users" + r"[/\\]",

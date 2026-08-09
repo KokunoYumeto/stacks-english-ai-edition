@@ -56,6 +56,22 @@ must be an active append-only visual-QA admission D row rather than reusing the
 first-batch decision by fiat, and every superseding V row must retain the exact
 same stable item ID as its predecessor.
 
+`../reports/qsrc.csv` is the separate append-only source-error crop ledger.
+A `Q` row binds one already-recorded correction finding and its controlling
+decision plus an active source-error-QA admission decision to one tightly
+bounded direct-authority receipt. It records the exact
+authority PDF key, bytes and SHA-256; one-based page and page geometry; top-left
+PDF-point box; effective scale; short flat crop path; and exact PNG bytes,
+SHA-256 and dimensions. These authority-only witnesses prove what the printed
+source says; they do not admit a correction and do not substitute for the
+three-surface `V` gate. Historical Q rows and crop bytes are immutable. A later
+evidence correction appends a new Q row and an append-only finding/decision
+closure rather than overwriting either receipt. Q identifiers are contiguous
+in append order, crop paths are unique, and every later admission must name
+its Q identifier explicitly.
+The nested `reports/.gitattributes` pins `qsrc.csv` to LF so its byte receipt is
+stable across Windows and Unix checkouts.
+
 `printed_page` names the first printed page on which the generated unit begins.
 A separately generated diagram child therefore keeps its own first page even
 when its parent statement began earlier. When a frozen discovery witness lacks
@@ -81,8 +97,8 @@ Topic IDs use `ega-topic-<slug>`. Local Stacks labels may be recorded as
 evidence, but this branch never writes or claims an official Stacks tag.
 
 Decision, issue, feedback, statement-edge, residual, page-locator, visual-QA,
-and agent-run IDs use zero-padded `D`, `I`, `F`, `S`, `R`, `L`, `V`, and `A`
-prefixes.
+source-error-receipt, and agent-run IDs use zero-padded `D`, `I`, `F`, `S`,
+`R`, `L`, `V`, `Q`, and `A` prefixes.
 Rows are append-only. A correction names the earlier row in `supersedes`; it
 does not rewrite history.
 
