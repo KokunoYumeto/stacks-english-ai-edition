@@ -1057,7 +1057,7 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   nonblank guard a blank target and a partly bad multirow application. The
   latter applies zero rows and mutates no unit.
 - The short `r184.py` replay reconstructs the exact 127-file 7,283,321-byte
-  R184 tree from the current four-file English successor using the producer's
+  R184 tree from the current six-file English successor using the producer's
   byte-precise inverses. Two serial no-overwrite reconstructions and full
   intakes independently produced byte-identical `files.csv` at
   `A1BB4950FE27D813FD79BCC4604607994D38E3F1E5A2C1D52EC21E01EC5C7E5F`,
@@ -1386,3 +1386,75 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   added target-specific R000410--R000414 and tightened the repeated-001Y
   derivation. A000146 then replayed those exact repairs and returned HARD PASS
   with zero active semantic duplicates and strict binary scope preserved.
+
+### EGA I 4.5.1--4.5.5 local immersions and permanence
+
+- Direct authority is the 34,792-byte corrected diplomatic
+  `ega1-4-fr.tex`, SHA-256
+  `A5F5CDAC81E654E9ABA75BBFEAD24F3010B122452C689B9EBAB5A7711B454EC1`,
+  admitted by 14,944-byte F33 SHA-256
+  `2652207F96F697935BC81C5D63B292DE4D956905D69CB92572225E320BB27F4C`.
+  The bounded French lines 603--682 are 3,784 UTF-8/LF bytes with SHA-256
+  `253F12D3194BFF1A4374D3F939074404D675B39CDCB5ACED75C609C455791520`.
+  Printed-p.126 R49 is 12,000 bytes SHA-256
+  `98501091AB4641EEAFB20F2FFC7E25225189C2A2784E3EDE0AEA7773F1E19DE9`;
+  printed-p.127 R50 is 11,010 bytes SHA-256
+  `D631DC20C4EF98C822AA61FF29A02176382A23E40077C1D36338FE359E80EA25`.
+- The frozen inventory contains the subsection and seven substantive units:
+  4.5.1 and 4.5.2 begin on I:126 with 4.5.2 crossing the exact page seam;
+  4.5.3--4.5.5 and the two proposition proofs are on I:127. There is no
+  diagram display equation or intricate standalone block and no new V row.
+- D000173--D000177 admit S000645--S000677 and R000415--R000442. Historical
+  local immersion splits over 01HK and 01IO. Historical local isomorphism uses
+  01HE with affine-only 096E. The 4.5.3 recognition clauses use 0FCZ only after
+  the source topology produces full inverse-image charts and use 01IQ for the
+  closed specialization. Proposition 4.5.4 combines 004V 01RJ 01HK and 0FCZ
+  with explicit counterexamples showing that irreducibility dominance
+  injectivity and local immersion are all essential. Proposition 4.5.5 uses
+  02V0 01JR 01JY and 01JX; 096F and 096G remain affine-only while the exact
+  product factorization in the proof of 01KU is retained as unlabelled.
+- R50 already catalogued two source-proof defects and this checkpoint closes
+  their high-detail evidence. Q000003 binds authority PDF page 126 and box
+  `112;365;390;15` to `reports/qa/455c.png`: 180,658 bytes, SHA-256
+  `D9CADDC12DFF68562DA64F2E8FAAE6408B406AB052DACF452F4BB7775E07EB13`,
+  dimensions 27,085 by 1,042. It shows the printed transitivity citation
+  `4.2.4`, whose unique correction is `4.2.5`. Q000004 binds the same parent
+  page and box `82;420;420;44` to `reports/qa/455z.png`: 530,790 bytes,
+  SHA-256
+  `F7942DE4BA93153FE778DE68020331063ACE2CC6EB6F0CB691C36B3DBB6C0E3E`,
+  dimensions 29,168 by 3,057. It shows the proof using `z` and `z'` before
+  choosing them. D000178--D000180 and I000055--I000056 preserve diplomatic
+  print and refer the corrected readings through append-only findings.
+- The live English tree is exact sealed R215: 127 files and 7,283,691 bytes
+  with tree SHA-256
+  `FB74DC982C560AD5E154C8300D93FB0FFA9EE4754342ACE1DC7D9612A1172BB4`.
+  Six files differ from R184. `r184.py` now gates the whole R215 tree before
+  applying the exact producer inverses including four label-side repairs in
+  `ega0-1.tex` and the two-step `ega1-4.tex` correction chain. Two serial
+  no-overwrite runs reconstructed all 127 R184 files and 7,283,321 bytes with
+  exact tree SHA-256
+  `3BFB1C5103093481246EF4A6365E08544F6D5E19ACC0EA63E717F3F3643F064D`
+  without mutating the edition source.
+- `interface.json` and `scope.json` retain R184 and each historical French
+  receipt as claim authority while truthfully exposing sealed R215 and F37T
+  as the latest comparison markers. No unsealed live byte is admitted and no
+  authority source edition source Stacks chapter TeX diagram registry or V
+  receipt is changed by this checkpoint.
+- A000147 replayed 4.5.1--4.5.3 against direct French and pinned 01HK 01IO
+  01HE 096E 0FCZ and 01IQ. It returned HARD PASS with exact relation scopes
+  and zero duplicate semantic keys. A000148 supplied the independent 4.5.4--
+  4.5.5 candidate and source-defect inventory.
+- A000149 correctly HARD-FAILED the first release candidate because the live
+  sealed R215 tree could no longer be reconstructed by the stale five-file
+  script and the new source-error crops were not yet bound. The owner added
+  the sixth exact inverse chain the whole-R215 tree gate current sealed
+  interface markers Q000003--Q000004 and their active admissions rather than
+  suppressing that failure history.
+- A000150 found and closed the remaining aggregate residual link from
+  R000442 to the citation-only decision by binding it to combined admission
+  D000180. It then returned HARD PASS over all 4.5.4--4.5.5 semantic and
+  source-error-QA rows without making a visual-content certification.
+- A000151 independently replayed F33 F37T R49 R50 the sealed R215 tree two
+  serial exact R184 reconstructions both 5000-dpi report receipts every new
+  append-only prefix and the privacy and no-TeX scope. It returned final HARD
+  PASS after the interface wording was made exact.

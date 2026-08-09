@@ -18,10 +18,11 @@ or published here.
   `5C64ECD32FD7C5458D2599D70ED667D2CF06D95517EFFA9C6D6DCEF7626913A0`;
   127 files, 7,283,321 bytes, tree SHA-256
   `3BFB1C5103093481246EF4A6365E08544F6D5E19ACC0EA63E717F3F3643F064D`.
-- French authority: production is active; the current interface snapshot has
-  EGA II printed p.33 sealed and printed p.34 as the next cursor. Receipt F33
-  also repairs the EGA I 4.1.9 diplomatic transcription from `g'` to the
-  directly verified printed `g` without changing the already-correct English.
+- French authority: production is active; the latest sealed interface marker
+  is F37T through EGA II printed p.37, with printed p.38 next. This graph still
+  binds every reviewed EGA I claim to its exact historical page receipt;
+  receipt F33 also repairs 4.1.9 from `g'` to the directly verified printed
+  `g` without changing the already-correct English.
 - Existing incremental pre-Stacks notes: 399,689 bytes, SHA-256
   `4B4811B6F24F139020E15CF27D7BFA82C3872F0A549DCFF4F64B28F4454737D6`.
   They are evidence to normalize into the new schema, not a completed
@@ -254,7 +255,7 @@ append-only.
 - `intake.py`: deterministic manifest verification and metadata-only unit
   extraction; it does not copy source prose.
 - `r184.py`: exact no-overwrite reconstruction of the frozen R184 discovery
-  tree from the current four-file English successor using hash-guarded inverse
+  tree from the sealed six-file R215 English successor using hash-guarded inverse
   operations; it never mutates the edition source.
 - `files.csv`, `units.csv`, and `intake.json`: generated exact-file inventory,
   stable unit registry, and fail-closed intake receipt.
@@ -289,40 +290,45 @@ append-only.
   direct-authority crops for source-error evidence; these are not edition
   outputs or three-surface visual certifications.
 
-### Current reviewed frontier: EGA I 4.4.1--4.4.6
+### Current reviewed frontier: EGA I 4.5.1--4.5.5
 
-The inverse-image subsection through Corollary 4.4.6 is now admitted from
-F33 and direct printed pp.125--126. Thirty-six active edges S000609--S000644
-cover all six statement/proof pairs; residuals R000383--R000414 keep every
-proof-level formula, canonical-representative strictification, stronger
-target, closed-only specialization, and counterexample boundary explicit.
-The active statement graph has 640 edges across 222 source units and 411
-residuals; physical append-only history has 644 edge rows and 414 residual
-rows. Of the active edges, 636 resolve to 216 distinct official tags and four
-remain explicit local untagged integrations. Exact full-statement
-equivalences now number 29.
+The historical local-immersion subsection through Proposition 4.5.5 is now
+admitted from F33 and direct printed pp.126--127. Thirty-three active edges
+S000645--S000677 cover all seven statement/proof units; residuals
+R000415--R000442 keep the missing modern terminology packages, affine-only
+specializations, derived chart arguments, source corrections, and hypothesis
+counterexamples explicit. The active statement graph has 673 edges across
+229 source units and 439 residuals; physical append-only history has 677 edge
+rows and 442 residual rows. Of the active edges, 669 resolve to 220 distinct
+official tags and four remain explicit local untagged integrations. Exact
+full-statement equivalences remain 29.
 
-Tags 01JU, 01S1, 001V, 01JV, 01K0, and 01J3 split Proposition 4.4.1 into
-pullback type, underlying image, factorization, terminology, and closed-point
-fibre clauses. The proof of 001Y contains the exact iterated-pullback identity
-for 4.4.2. Arbitrary locally closed binary meets in 4.4.3--4.4.4 are derived
-from 001Y, 001V, 01JU, 02V0, 01L7, and the unlabelled order prose under 01IM; 0C4I
-is retained only for the closed specialization. Proposition 4.4.5 is exactly
-the pulled-back ideal formula in 01JU, and 4.4.6 combines that formula with
-001V, 01HP, and 01QP in the source ideal-inclusion direction.
+Tags 01HK and 01IO split the source-point definition of local immersion;
+01HE supplies the local open charts for historical local isomorphisms while
+096E remains only its affine ring-map specialization. The global
+characterizations in 4.5.3 use 0FCZ only after the homeomorphism or injectivity
+hypotheses turn source-local charts into full inverse-image charts; 01IQ gives
+the closed-image specialization. Proposition 4.5.4 is a genuinely composite
+004V--01RJ--01HK--0FCZ argument and is not strengthened to an open immersion.
+Proposition 4.5.5 uses 02V0, 01JR, 01JY, and 01JX; affine tags 096F and 096G
+remain partial witnesses and the proof-level two-factor decomposition under
+01KU remains explicitly unlabelled.
 
-Printed p.126 reverses the algebra variance in the proof of 4.4.5: the tensor
-product `A tensor_B (B/K)` requires A to be a B-algebra. I000054 and R000397
-reuse the already authoritative R49 correction
-`EG-EGA-I-P126-FR-445-PRINTED-ALGEBRA-DIRECTION-ERROR-001`; no duplicate
-referral or source mutation was made. The scope contains no diagram and only
-one ordinary binary-meet display, so it adds no visual-QA item and leaves the
-corpus-wide I000049 gate open.
+Printed p.127 contains two already catalogued proof defects. Q000003 confirms
+the transitivity citation `4.2.4`, which must read `4.2.5`; Q000004 confirms
+that `z` and `z'` are used before being introduced. D000178--D000180,
+I000055--I000056, the append-only findings, and individual tight
+5,000-dpi-equivalent receipts `455c.png` and `455z.png` preserve diplomatic
+print while binding the corrected readings. The subsection has no diagram,
+display, equation, or intricate standalone block and therefore creates no V
+item; the corpus-wide I000049 visual gate remains open.
 
 The immediate work is sequential statement-level comparison across EGA 0--IV,
-continuing in the direct-French body after EGA I 4.4.6 at EGA I 4.5.1 while
-EGA II is admitted through printed p.33. Discovery unit I.3.2.9 remains in a
-separate authority-pending queue for its cited EGA II erratum witness.
+continuing in the direct-French body after EGA I 4.5.5 at EGA I 5.1.1. The
+latest sealed French interface marker is F37T through EGA II printed p.37;
+every reviewed EGA I claim remains bound to its own exact historical receipt.
+Discovery unit I.3.2.9 remains in a separate authority-pending queue for its
+cited EGA II erratum witness.
 The complete English discovery surface drives provisional candidates only.
 Mathematical Stacks chapter edits occur only after a bounded unit has direct
 French evidence, a reviewed disposition, explicit residual accounting, and

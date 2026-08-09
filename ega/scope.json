@@ -20,6 +20,9 @@
       "files": 127,
       "bytes": 7283321,
       "tree_sha256": "3BFB1C5103093481246EF4A6365E08544F6D5E19ACC0EA63E717F3F3643F064D",
+      "latest_manifest": "R215.json",
+      "latest_manifest_bytes": 157001,
+      "latest_manifest_sha256": "A16377223837E5C4BFFE094A9C81D3A904B3D33D94671E0210324DD6837FDE94",
       "discovery_units": 9585,
       "page_evidence": {
         "file": "pages.csv",
@@ -30,11 +33,14 @@
       "role": "complete discovery text; not canonical authority"
     },
     "french_authority": {
-      "status": "active page-by-page production",
-      "snapshot": "EGA II printed p.33 sealed; printed p.34 next; F33 includes the EGA I 4.1.9 direct-authority correction",
+      "status": "active page-by-page production; graph claims remain historical-receipt gated",
+      "snapshot": "latest sealed source manifest F37T reaches EGA II printed p.37; this EGA I review remains bound to exact F33 and page receipts",
+      "latest_sealed_manifest": "F37T.json",
+      "latest_sealed_manifest_bytes": 24348,
+      "latest_sealed_manifest_sha256": "93502F5432392DA5C3AE40922C5A59688038F2FA010B13839F987A90D2E1799B",
       "page_gate": "E2P33.json",
       "page_gate_sha256": "DE5FCAA73A0EB63BFAF050769642CADA52330EAB0C543C64E672D57ED870A13F",
-      "role": "diplomatic textual authority and claim-admission gate"
+      "role": "diplomatic textual authority; E2P33 is the historical interface gate while each reviewed EGA I slice carries its later exact receipts"
     },
     "incremental_notes": {
       "bytes": 399689,
@@ -60,19 +66,19 @@
   },
   "statement_review_snapshot": {
     "file": "smap.csv",
-    "statement_edge_rows": 640,
-    "file_rows": 644,
+    "statement_edge_rows": 673,
+    "file_rows": 677,
     "superseded_rows": 4,
-    "source_units": 222,
-    "existing_official_tag_rows": 636,
-    "distinct_existing_official_tags": 216,
+    "source_units": 229,
+    "existing_official_tag_rows": 669,
+    "distinct_existing_official_tags": 220,
     "local_untagged_rows": 4,
     "full_statement_equivalences": 29
   },
   "residual_snapshot": {
     "file": "resid.csv",
-    "rows": 411,
-    "file_rows": 414,
+    "rows": 439,
+    "file_rows": 442,
     "superseded_rows": 3,
     "open_gaps": 4,
     "integrated_local_pending_upstream": 4
@@ -91,11 +97,11 @@
   },
   "source_error_qa_snapshot": {
     "file": "reports/qsrc.csv",
-    "bytes": 768,
-    "sha256": "47688723470C409C20B3E0F7F0B0A95937A43BB7793E6FF49053ED5CDC0288EA",
-    "rows": 2,
-    "crop_files": 2,
-    "crop_bytes": 764185
+    "bytes": 1382,
+    "sha256": "32E300112D4898C0EDDFA67BA99F1A42F4AA8793A1517FA804FC437C8AB5C0D9",
+    "rows": 4,
+    "crop_files": 4,
+    "crop_bytes": 1475633
   },
   "edition_interface": "interface.json",
   "correction_channel": "reports/findings.jsonl",

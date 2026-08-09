@@ -8,8 +8,8 @@
     "cross_tree_writes": false
   },
   "french_cursor": {
-    "admitted_through": "EGA II printed p.33, continuing 2.5.11; F33 also corrects EGA I 4.1.9 from g-prime to printed g",
-    "next": "NUMDAM EGA II PDF one-based p.31 / printed p.34, continuation of 2.5.11",
+    "admitted_through": "historical graph-admission gate through EGA II printed p.33; F33 also corrects EGA I 4.1.9 from g-prime to printed g",
+    "next": "the live producer has advanced beyond this historical gate; see latest_sealed_french",
     "append_state": "remove only the final 10-byte temporary end-env before the next authority append",
     "manifest": "F33.json",
     "manifest_sha256": "2652207F96F697935BC81C5D63B292DE4D956905D69CB92572225E320BB27F4C",
@@ -19,6 +19,14 @@
     "ledger_sha256": "A3A31AEFB278CA2712764D4146D063EE21FEF8ACE69246998C3AD96CA3886448",
     "late_correction_ledger": "P121S.jsonl",
     "late_correction_ledger_sha256": "E78CA53480FC3F577786FCB643E63116A1DEC118EDB99C5629B52D6E5E9B411C"
+  },
+  "latest_sealed_french": {
+    "manifest": "F37T.json",
+    "manifest_bytes": 24348,
+    "manifest_sha256": "93502F5432392DA5C3AE40922C5A59688038F2FA010B13839F987A90D2E1799B",
+    "coverage": "EGA 0 and I plus EGA II through printed p.37, including the latest sealed direct-authority label-side repairs",
+    "next": "NUMDAM EGA II PDF one-based p.35 / printed p.38, continuing 2.6.4 after c'est-à-dire la",
+    "role": "comparison-only live interface marker; individual graph claims remain bound to their exact historical page receipts"
   },
   "admitted_french_receipts": [
     {
@@ -44,15 +52,21 @@
     {
       "manifest": "F33.json",
       "manifest_sha256": "2652207F96F697935BC81C5D63B292DE4D956905D69CB92572225E320BB27F4C",
-      "role": "current receipt through EGA II printed p.33 including the direct-authority EGA I 4.1.9 g-prime correction"
+      "role": "historical graph-admission receipt through EGA II printed p.33 including the direct-authority EGA I 4.1.9 g-prime correction"
+    },
+    {
+      "manifest": "F37T.json",
+      "manifest_sha256": "93502F5432392DA5C3AE40922C5A59688038F2FA010B13839F987A90D2E1799B",
+      "role": "latest sealed French producer manifest through EGA II printed p.37; comparison marker only for claims lacking their own earlier receipt"
     }
   ],
   "english_discovery": {
     "manifest": "R184.json",
     "manifest_sha256": "5C64ECD32FD7C5458D2599D70ED667D2CF06D95517EFFA9C6D6DCEF7626913A0",
-    "latest_manifest": "R201.json",
-    "latest_manifest_sha256": "E5A6180AAA5F8512F3B837D9B6561E9798101AAC9865DB136566D4FFB03564D1",
-    "role": "R184 remains the exact intake discovery surface; R201 is the latest standalone-English successor and already has the printed unprimed g in EGA I 4.1.9"
+    "latest_manifest": "R215.json",
+    "latest_manifest_bytes": 157001,
+    "latest_manifest_sha256": "A16377223837E5C4BFFE094A9C81D3A904B3D33D94671E0210324DD6837FDE94",
+    "role": "R184 remains the exact intake discovery surface; R215 is the latest sealed standalone-English successor and r184.py applies six byte-precise inverse paths without mutating it"
   },
   "semantic_notes": {
     "bytes": 399689,
