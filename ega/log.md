@@ -973,3 +973,60 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   every pinned label and tag the local dependency append-only prefixes exact
   snapshots privacy and graph-only scope. Its sole adverse finding was the
   02V3 hypothesis overclaim which was repaired and re-audited before release.
+- Public checkpoint `d0b21e3f4f5af04c207a72a28681498796e2f573` closed EGA I
+  3.6 through 3.6.5 with tree
+  `de4a42dca6d08987269e611e94ad4fec2730d87b`. Local HEAD fetched fork
+  `ls-remote` and GitHub's commit API all returned that identity and tree.
+  Every one of the seven changed public files was read back from the immutable
+  commit with equal byte length and SHA-256; mismatch count was zero.
+- Direct-French review now covers EGA I 3.7.1--3.7.3 and closes section 3;
+  EGA I 4.1.1 is next. Authority remains F8
+  `2137BF64B9BD210176B58075DBDB58E7C8A5669F9EFAD61410510A01D32D0BC0`
+  and canonical `ega1-3-fr.tex` remains 59,766 bytes with SHA-256
+  `DB4F986C9FDC1B66FF2D627C5E9121BCE0490563B7C14415320B5DDD7424B851`.
+  P118 and P119 gates are PASS at hashes
+  `40CE9BF9A4180940D00ACA2E0A69BA3D3F51CF059F9BFD037D26B4A7D83AEF7A`
+  and `B82C5D63AF34111BBE4D94700582770A36CFF1A005E76C8C088E960421DE83CC`.
+  Their recorded 1100-dpi context derivatives are absent from the current
+  bounded authority root but the exact NUMDAM PDF remains live and rehashed;
+  this creates no source-reading uncertainty.
+- Unit 3.7.1 is the quotient base change 01JX. Historical reduction modulo an
+  ideal is not nilreduction 01J4 and can produce a nonreduced special fibre.
+  Unit 3.7.2 combines 07BI 01K0 and 01JX for local special and generic fibres.
+  The two-point spectrum and open generic singleton are derived from 00KE
+  07BI and 01I3 and require all three local domain dimension-one hypotheses.
+- The generic fibre is the induced open by 01JR. A closed subscheme of that
+  open is a locally closed immersion by 01IO; 01T6 and 01OX make it
+  quasi-compact in the source Noetherian setting. Tags 01R6 and 01R7 give the
+  minimal closed scheme-theoretic image while 01R8 and the proof of 01QV give
+  exact recovery on the generic open. Existence itself does not require
+  Noetherianity and the model is canonical only relative to the chosen
+  immersion and ambient P.
+- Unit 3.7.3 is the valuative criterion 0BX5 specialized to the DVR A. Tag
+  01JP identifies K-points of the generic fibre with compatible maps to X;
+  01KF and 01KZ split existence from uniqueness; and 01W1 plus 01WC covers
+  the proper closed-projective parenthetical. The target strengthens DVR to
+  arbitrary valuation rings but not to arbitrary local domains.
+- I000046 and finding
+  `EGA-I-3.7.3-P119-CONTROL-DIMENSION-ONE-SCOPE` refer a control-level scope
+  overstatement. For A equal `k[x,y]_(x,y)` and X equal projective one-space
+  over A the K-point `[x:y]` has no A-valued extension. Thus the final French
+  sentence removes dimension one only for the model-level assertions about X;
+  it does not generalize the point bijection. Diplomatic French is untouched.
+- D000139--D000141 add 26 edges S000475--S000500 and 22 residuals
+  R000299--R000320. The active graph now has 496 edges across 184 admitted
+  units and 317 residuals; physical history contains 500 edge rows with four
+  superseded and 320 residual rows with three superseded. There are 492
+  official-target rows resolving to 182 distinct tags and four local untagged
+  rows. The four earlier open gaps remain unchanged.
+- A000120 and A000121 preserve the disjoint 3.7.1--3.7.2 semantic audit and
+  the 3.7.3 mathematical plus complete-section control audit. Both were
+  read-only. The owner replayed every accepted target both counterexamples
+  the I:118--I:119 seam and the correction-referral scope. No Stacks chapter
+  TeX changed.
+- A000122 records the independent final release audit. It caught the masked
+  absence of a target-specific strength residual for the 01JP universal
+  property; R000320 now closes that link. The same audit tightened the two
+  counterexample descriptions and then returned hard PASS after replaying all
+  twenty-six edges twenty-two residuals visual authority append-only privacy
+  and graph-only gates.

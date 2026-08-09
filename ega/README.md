@@ -156,13 +156,20 @@ or published here.
   proof-level dependencies. The two French-labelled plain displays remain
   parent components because frozen R184 supplies no child IDs. No new gap or
   Stacks chapter edit was needed.
+- EGA I 3.7.1--3.7.3 now closes section 3. Quotient-base reduction is kept
+  distinct from nilreduction; the generic/special fibre model construction is
+  decomposed into open base change and quasi-compact scheme-theoretic image;
+  and the proper DVR point bijection is identified with the valuative
+  criterion. A p.119 control phrase that could wrongly extend that bijection
+  to higher-dimensional local domains is referred append-only with an exact
+  projective-line counterexample. The French source itself is correct.
 - Current statement-level frontier: direct-French review is complete through
-  EGA I 3.6.5. The active graph has 470 edges across 181 generated units and
-  295 residual records; 466 edges resolve to 170 distinct existing official
+  EGA I 3.7.3. The active graph has 496 edges across 184 generated units and
+  317 residual records; 492 edges resolve to 182 distinct existing official
   tags and four resolve to explicitly untagged local integrations. Twenty-six
   edges are exact full-statement equivalences. Four bounded mathematical gaps
-  remain open from earlier slices; subsection 3.6 adds none. The next cursor is
-  EGA I 3.7.1.
+  remain open from earlier slices; subsection 3.7 adds none. The next cursor is
+  EGA I 4.1.1.
 
 ## State model
 
@@ -214,7 +221,7 @@ append-only.
   the edition task alone decides and mutates canonical source.
 
 The immediate work is sequential statement-level comparison across EGA 0--IV,
-continuing in the direct-French body after EGA I 3.6.5 at EGA I 3.7.1 while
+continuing in the direct-French body after EGA I 3.7.3 at EGA I 4.1.1 while
 EGA II is admitted through printed p.23. Discovery unit I.3.2.9 remains in a
 separate authority-pending queue for its cited EGA II erratum witness.
 The complete English discovery surface drives provisional candidates only.
