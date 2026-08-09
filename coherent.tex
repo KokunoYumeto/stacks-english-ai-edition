@@ -1663,7 +1663,7 @@ $$
 $$
 which shows up in the statement below is zero in degrees
 $\geq -n$, is free on the generator $\frac{1}{T_0 \ldots T_n}$
-in degree $-n - 1$ and is free of rank $(-1)^n\binom{n + d}{d}$ for
+in degree $-n - 1$ and is free of rank $\binom{-d - 1}{n}$ for
 $d \leq -n - 1$.
 
 \begin{lemma}
@@ -1678,6 +1678,7 @@ pp. 255--256]{FAC}
 pp. 258--259]{FAC}
 \cite[Chapter III, \S 4, no. 71, definition of $\Omega$ and the
 free-module case of Proposition 2, pp. 264--265]{FAC}
+\cite[Chapter III, \S 6, no. 80, proof of Proposition 3, p. 275]{FAC}
 \end{reference}
 \begin{history}
 For $r \geq 1$ over a field, the cited FAC observation identifies global
@@ -1712,6 +1713,14 @@ polynomial monomial basis. This is the free-summand calculation underlying
 More on Algebra, Lemma
 \ref{more-algebra-lemma-top-graded-duality-polynomial-ring}; that lemma
 separately handles arbitrary direct sums and free presentations.
+
+No. 80 takes the alternating sum of this calculation and obtains
+$\chi(\mathcal{O}(d)) = \binom{d + n}{n}$ for every integer $d$, where the
+right hand side is the generalized binomial polynomial. For
+$d \leq -n - 1$, the rank of top cohomology is
+$\binom{-d - 1}{n} = (-1)^n\binom{d + n}{n}$. An earlier rank sentence
+instead put the negative integer $d$ in the lower binomial index; the
+corrected expression counts reciprocal monomials directly.
 \end{history}
 Let $R$ be a ring.
 Let $n \geq 0$ be an integer.

@@ -6836,6 +6836,12 @@ as desired.
 
 \begin{lemma}
 \label{lemma-m-regular-globally-generated}
+\begin{history}
+The basis used in the proof must be chosen in
+$H^0(\mathbf{P}^n_k, \mathcal{F}(m))$. An earlier version omitted the
+twist from this group, although the multiplication map and the conclusion
+both use sections of $\mathcal{F}(m)$.
+\end{history}
 Let $k$ be a field. Let $n \geq 0$.
 Let $\mathcal{F}$ be a coherent sheaf on $\mathbf{P}^n_k$.
 If $\mathcal{F}$ is $m$-regular, then $\mathcal{F}(m)$ is
@@ -6847,7 +6853,8 @@ For all $d \gg 0$ the sheaf $\mathcal{F}(d)$ is globally generated.
 This follows for example from the first part of
 Cohomology of Schemes, Lemma \ref{coherent-lemma-coherent-projective}.
 Pick $d \geq m$ such that $\mathcal{F}(d)$ is globally generated.
-Choose a basis $f_1, \ldots, f_r \in H^0(\mathbf{P}^n_k, \mathcal{F})$.
+Choose a basis
+$f_1, \ldots, f_r \in H^0(\mathbf{P}^n_k, \mathcal{F}(m))$.
 By Lemma \ref{lemma-m-regular-multiply} every element
 $f \in H^0(\mathbf{P}^n_k, \mathcal{F}(d))$ can be written as
 $f = \sum P_if_i$ for some $P_i \in k[T_0, \ldots, T_n]$ homogeneous
@@ -6864,12 +6871,25 @@ Lemma \ref{lemma-numerical-polynomial-from-euler}.
 
 \begin{lemma}
 \label{lemma-hilbert-polynomial}
+\begin{reference}
+\cite[Chapter III, \S 6, no. 80, Proposition 3 and proof, p. 275]{FAC}
+\end{reference}
+\begin{history}
+The cited proposition proves the projective-space assertion by resolving a
+finite graded representative by finite graded free modules, sheafifying the
+resolution, applying additivity of Euler characteristics, and using
+$\chi(\mathcal{O}(d)) = \binom{d + n}{n}$ as an identity of numerical
+polynomials for every integer $d$. The proof below instead uses hyperplane
+induction. Both proofs give the degree bound $n$. The later Lemma
+\ref{lemma-numerical-polynomial-from-euler} gives the stronger bound by the
+dimension of the support on an arbitrary proper scheme.
+\end{history}
 Let $k$ be a field. Let $n \geq 0$. Let $\mathcal{F}$ be a coherent sheaf
 on $\mathbf{P}^n_k$. The function
 $$
 d \longmapsto \chi(\mathbf{P}^n_k, \mathcal{F}(d))
 $$
-is a polynomial.
+is a polynomial of degree at most $n$.
 \end{lemma}
 
 \begin{proof}
@@ -6891,16 +6911,32 @@ $$
 $$
 See Remark \ref{remark-exact-sequence-induction-cohomology}.
 Since $H \cong \mathbf{P}^{n - 1}_k$
-by induction the right hand side is a polynomial.
+by induction the right hand side is a polynomial of degree at most $n - 1$.
 The lemma is finished by noting that any function
 $f : \mathbf{Z} \to \mathbf{Z}$ with the property that the map
-$d \mapsto f(d) - f(d - 1)$ is a polynomial, is itself a polynomial.
+$d \mapsto f(d) - f(d - 1)$ is a polynomial of degree at most $n - 1$,
+is itself a polynomial of degree at most $n$.
 We omit the proof of this fact (hint: compare with
 Algebra, Lemma \ref{algebra-lemma-numerical-polynomial}).
 \end{proof}
 
 \begin{definition}
 \label{definition-hilbert-polynomial}
+\begin{reference}
+\cite[Chapter III, \S 6, no. 80, Proposition 4 and the definition of the
+characteristic function, pp. 275--276]{FAC}
+\end{reference}
+\begin{history}
+The cited source begins with a graded module $M$ satisfying its finite-tail
+condition and calls the eventual polynomial $d \mapsto \dim_k M_d$ the
+characteristic function of $M$. Recovery of high graded pieces and vanishing
+of higher cohomology identify it, for all large $d$, with the Euler
+characteristic of the associated sheaf. Equality of the two polynomials then
+extends this identity to every integer $d$; it does not assert equality with
+the actual graded dimensions in low degrees. The definition below takes the
+intrinsic sheaf polynomial as primary and uses the modern term Hilbert
+polynomial.
+\end{history}
 Let $k$ be a field. Let $n \geq 0$. Let $\mathcal{F}$ be a coherent sheaf
 on $\mathbf{P}^n_k$. The function
 $d \mapsto \chi(\mathbf{P}^n_k, \mathcal{F}(d))$ is called the
@@ -6922,6 +6958,16 @@ $$
 
 \begin{lemma}
 \label{lemma-hilbert-polynomial-H0}
+\begin{reference}
+\cite[Chapter III, \S 6, no. 80, Proposition 4, pp. 275--276]{FAC}
+\end{reference}
+\begin{history}
+For an associated sheaf coming from a graded module satisfying the source's
+finite-tail condition, the cited proposition combines eventual recovery of
+$M_d$ with higher-cohomology vanishing. The lemma below states the intrinsic
+sheaf part: the Hilbert polynomial agrees with the dimension of global
+sections only in sufficiently high degree.
+\end{history}
 Let $k$ be a field. Let $n \geq 0$. Let $\mathcal{F}$ be a coherent sheaf
 on $\mathbf{P}^n_k$ with Hilbert polynomial $P \in \mathbf{Q}[t]$.
 Then
@@ -6937,6 +6983,36 @@ of $\mathcal{F}$. See
 Cohomology of Schemes,
 Lemma \ref{coherent-lemma-coherent-projective}.
 \end{proof}
+
+\begin{remark}
+\label{remark-FAC-arithmetic-genus}
+\begin{reference}
+\cite[Chapter III, \S 6, no. 80, Proposition 5 and Remarks 1--3,
+p. 276]{FAC}
+\end{reference}
+\begin{history}
+The cited source applies the preceding polynomial identity to the homogeneous
+coordinate ring of a classical closed projective subvariety, which may be
+reducible, and calls the constant value at zero the arithmetic genus. The
+scheme-theoretic statement below also allows nonreduced closed subschemes.
+Only the value at zero is independent of the embedding; the remaining
+Hilbert polynomial depends on the chosen polarization. The source explicitly
+distinguishes its convention from the classical $p_a$ convention.
+\end{history}
+Let $i : V \to \mathbf{P}^n_k$ be a closed immersion and let $P$ be the
+Hilbert polynomial of $i_*\mathcal{O}_V$. Then
+$$
+P(0) = \chi(\mathbf{P}^n_k, i_*\mathcal{O}_V)
+= \chi(V, \mathcal{O}_V).
+$$
+The last equality follows from Cohomology of Schemes, Lemma
+\ref{coherent-lemma-relative-affine-cohomology}. Thus, over the fixed ground
+field, this value is intrinsic to $V$. The cited source calls it the
+arithmetic genus. If all irreducible components have dimension $p$, its
+comparison with the classical convention is
+$\chi(V, \mathcal{O}_V) = 1 + (-1)^p p_a(V)$; compare Curves, Remark
+\ref{curves-remark-genus-higher-dimension}.
+\end{remark}
 
 
 
