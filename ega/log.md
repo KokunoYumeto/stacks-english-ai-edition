@@ -1335,3 +1335,54 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   receipts. It also rerendered each recorded authority page/box and found the
   committed PNG bytes pixel-identical, while retaining the owner's exclusive
   visual judgment. Its final release verdict was HARD PASS with no file write.
+
+### EGA I 4.4.1--4.4.6 inverse images and binary infima
+
+- Direct authority is the 34,792-byte corrected diplomatic
+  `ega1-4-fr.tex`, SHA-256
+  `A5F5CDAC81E654E9ABA75BBFEAD24F3010B122452C689B9EBAB5A7711B454EC1`,
+  admitted by 14,944-byte F33 SHA-256
+  `2652207F96F697935BC81C5D63B292DE4D956905D69CB92572225E320BB27F4C`.
+  The bounded French lines 498--601 are 4,724 UTF-8/LF bytes with SHA-256
+  `F05DEFC561F2212E6C0E47A25201FF9DDE3332FF7E6BA012E425DC1114017211`.
+  Printed-p.125 R48 is 10,341 bytes SHA-256
+  `0B5B2C235F4E2166F5A15F084A4B8FC9592EA7426D2CB663EB916DBDAD9CA1F0`;
+  printed-p.126 R49 is 12,000 bytes SHA-256
+  `98501091AB4641EEAFB20F2FFC7E25225189C2A2784E3EDE0AEA7773F1E19DE9`.
+- The frozen inventory contains the subsection plus six statement/proof pairs:
+  4.4.1 and its proof first occur on I:125; 4.4.2--4.4.6 and their proofs on
+  I:126. There are no generated diagrams or equation children and no page
+  overlays. The sole standalone display is the ordinary binary-meet equality
+  in 4.4.4; it is not an intricate mathematical block and creates no V row.
+- D000166--D000172 admit S000609--S000644 and R000383--R000414. Proposition
+  4.4.1 splits over 01JU, proof-level 01S1, 001V, 01JV, 01K0, and 01J3.
+  Corollary 4.4.2 uses the exact iterated-pullback identity in the proof of
+  001Y. Corollaries 4.4.3--4.4.4 derive arbitrary locally closed binary meets
+  from 001Y, 001V, 01JU, 02V0, 01L7, and 01IM; 0C4I remains closed-only. Proposition
+  4.4.5 is the exact 01JU ideal formula with 01HQ and 00DF proof dependencies.
+  Corollary 4.4.6 combines 001V, 01JU, 01HP, and 01QP.
+- I000054 and R000397 carry but do not duplicate the official p.126 correction
+  `EG-EGA-I-P126-FR-445-PRINTED-ALGEBRA-DIRECTION-ERROR-001`: line 586 must
+  read A as a B-algebra for `A tensor_B (B/K)`. Diplomatic French remains
+  untouched and the proposition itself is unaffected.
+- A000141 independently audited the direct French target bundle source error
+  counterexamples and collision surface. A000142 independently replayed F33,
+  R48, R49, all six page ledgers, the twelve generated statement/proof units,
+  and the no-diagram/no-intricate classification. Both were read-only and
+  their candidate inventories were accepted only after owner target and
+  authority replay.
+- A000143 rejected an overstrong direct use of 001Y for the 4.4.4 proof and
+  two target-side proof descriptions that had been attributed to the French.
+  After S000633, S000636, S000638, R000407, R000409, and D000166 were repaired,
+  it replayed the live graph and returned HARD PASS without a write or visual
+  certification claim.
+- A000144 independently replayed the complete repaired authority and graph
+  surface including target-specific R000410--R000414. It returned HARD PASS
+  on target joins, append-only history, snapshots, privacy, no-TeX-write scope,
+  and the no-diagram/no-intricate classification without substituting for
+  owner mathematical or visual judgment.
+- A000145 exposed five cases where a stronger or partial edge was mechanically
+  accepted because an unrelated residual shared its source unit. The owner
+  added target-specific R000410--R000414 and tightened the repeated-001Y
+  derivation. A000146 then replayed those exact repairs and returned HARD PASS
+  with zero active semantic duplicates and strict binary scope preserved.

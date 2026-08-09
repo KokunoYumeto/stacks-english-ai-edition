@@ -289,8 +289,38 @@ append-only.
   direct-authority crops for source-error evidence; these are not edition
   outputs or three-surface visual certifications.
 
+### Current reviewed frontier: EGA I 4.4.1--4.4.6
+
+The inverse-image subsection through Corollary 4.4.6 is now admitted from
+F33 and direct printed pp.125--126. Thirty-six active edges S000609--S000644
+cover all six statement/proof pairs; residuals R000383--R000414 keep every
+proof-level formula, canonical-representative strictification, stronger
+target, closed-only specialization, and counterexample boundary explicit.
+The active statement graph has 640 edges across 222 source units and 411
+residuals; physical append-only history has 644 edge rows and 414 residual
+rows. Of the active edges, 636 resolve to 216 distinct official tags and four
+remain explicit local untagged integrations. Exact full-statement
+equivalences now number 29.
+
+Tags 01JU, 01S1, 001V, 01JV, 01K0, and 01J3 split Proposition 4.4.1 into
+pullback type, underlying image, factorization, terminology, and closed-point
+fibre clauses. The proof of 001Y contains the exact iterated-pullback identity
+for 4.4.2. Arbitrary locally closed binary meets in 4.4.3--4.4.4 are derived
+from 001Y, 001V, 01JU, 02V0, 01L7, and the unlabelled order prose under 01IM; 0C4I
+is retained only for the closed specialization. Proposition 4.4.5 is exactly
+the pulled-back ideal formula in 01JU, and 4.4.6 combines that formula with
+001V, 01HP, and 01QP in the source ideal-inclusion direction.
+
+Printed p.126 reverses the algebra variance in the proof of 4.4.5: the tensor
+product `A tensor_B (B/K)` requires A to be a B-algebra. I000054 and R000397
+reuse the already authoritative R49 correction
+`EG-EGA-I-P126-FR-445-PRINTED-ALGEBRA-DIRECTION-ERROR-001`; no duplicate
+referral or source mutation was made. The scope contains no diagram and only
+one ordinary binary-meet display, so it adds no visual-QA item and leaves the
+corpus-wide I000049 gate open.
+
 The immediate work is sequential statement-level comparison across EGA 0--IV,
-continuing in the direct-French body after EGA I 4.1.10 at EGA I 4.2.1 while
+continuing in the direct-French body after EGA I 4.4.6 at EGA I 4.5.1 while
 EGA II is admitted through printed p.33. Discovery unit I.3.2.9 remains in a
 separate authority-pending queue for its cited EGA II erratum witness.
 The complete English discovery surface drives provisional candidates only.
