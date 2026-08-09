@@ -917,3 +917,59 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   all 19 pinned target joins, the 18-row page overlay, deterministic replay,
   adverse atomicity, append-only history, snapshots, privacy, and validator.
   It made no writes and found no defect. The consumed agent total is now 115.
+
+## 2026-08-09
+
+- Direct-French review now covers EGA I 3.6.1--3.6.5 and closes subsection
+  3.6; EGA I 3.7.1 is next. Authority remains F8
+  `2137BF64B9BD210176B58075DBDB58E7C8A5669F9EFAD61410510A01D32D0BC0`;
+  canonical `ega1-3-fr.tex` is 59,766 bytes with SHA-256
+  `DB4F986C9FDC1B66FF2D627C5E9121BCE0490563B7C14415320B5DDD7424B851`.
+  P117 and P118 validation hashes are
+  `F35A37B89CB1DEE40A79D0C4E7AA708A006B608C166B153E241E2FB662A6464E`
+  and `40CE9BF9A4180940D00ACA2E0A69BA3D3F51CF059F9BFD037D26B4A7D83AEF7A`;
+  both are PASS with no scoped French correction or unresolved reading.
+- Unit 3.6.1 splits the topology of the ordinary residue-field fibre in 01K1
+  from the nilpotent thickening comparison in stronger 0BR6. Its affine proof
+  uses 01I4 and 00DK and ends with the already integrated untagged EGA I 1.2.4
+  criterion. Reusing that local dependency adds no new mathematical gap and
+  assigns no official tag.
+- Unit 3.6.2 maps the canonical fibre and general base-change convention to
+  01K0 01K1 and 01JX. Its field-valued point clause is an instance of 01JP
+  only relative to the fixed map through y; an absolute X(K) reading is
+  explicitly excluded. Historical tensor notation and structure transported
+  onto the underlying subset remain terminology and model residuals.
+- Unit 3.6.3 is the proof-level pullback associativity identity in 001Y with
+  01JP for the identity pullback and 01JR plus 01K1 for the induced open
+  fibre. Unit 3.6.4 uses the unrestricted proof-level base-change identity in
+  001Z; 001Y and 02XO preserve its canonical coherence and 01HH supplies the
+  open-neighbourhood specialization. The same displayed identity occurs in
+  the proof of 02V3 but that labelled lemma assumes locally finite type so it
+  is not accepted as the unrestricted target.
+- Unit 3.6.5 is the second local-spectrum square of 01K1. Tag 01J7 identifies
+  its image as the generalization locus; 01I4 00DK and 00E3 give the affine
+  localization model; and 01HV with 02C6 proves that corresponding stalks are
+  unchanged. Tag 0HA1 is deliberately rejected as a near-match because it
+  instead computes the quotient local ring of the residue-field fibre. No
+  scheme isomorphism onto a globally defined subscheme is claimed.
+- The two direct-French labelled displays in 3.6.1 and 3.6.3 remain exact
+  parent source parts because frozen R184 has no formula children. All eight
+  generated units keep their stable IDs and correct I:117--I:118 first-page
+  locators; no page overlay row is needed.
+- D000134--D000138 add 31 statement/component edges S000444--S000474 and 27
+  explicit residual rows R000272--R000298. The active scaffold now has 470
+  edges across 181 admitted units and 295 residuals; physical history has 474
+  edges with four superseded and 298 residuals with three superseded. There
+  are 466 official-target rows resolving to 170 distinct tags plus four local
+  untagged rows. The four earlier open gaps remain unchanged.
+- A000116--A000118 preserve two disjoint mathematical audits and the exact
+  control unit page and duplicate audit. The owner replayed every accepted
+  target and caught both a hypothesis-bearing target overclaim and a
+  report-only false-near-match tag typo before integration. All contributions
+  were read-only. No Stacks chapter TeX changed.
+- A000119 independently audited the repaired complete release diff and
+  returned PASS on F8 P117 P118 all eight generated units both parent-only
+  displays D000134--D000138 S000444--S000474 R000272--R000298 A000116--A000118
+  every pinned label and tag the local dependency append-only prefixes exact
+  snapshots privacy and graph-only scope. Its sole adverse finding was the
+  02V3 hypothesis overclaim which was repaired and re-audited before release.

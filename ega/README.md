@@ -149,13 +149,20 @@ or published here.
   as 15 tikz-cd environments. Synthetic diagram IDs are deterministic within
   their semantic parent. This repairs an actual pre-Stacks graph omission;
   source prose and diagram artwork remain uncopied.
+- EGA I 3.6.1--3.6.5 now has direct-French statement and proof dispositions.
+  Nilpotent thickening is separated from ordinary fibre topology; relative
+  field-valued points are distinguished from absolute points; and fibre
+  transitivity and local-spectrum stalk preservation retain their exact
+  proof-level dependencies. The two French-labelled plain displays remain
+  parent components because frozen R184 supplies no child IDs. No new gap or
+  Stacks chapter edit was needed.
 - Current statement-level frontier: direct-French review is complete through
-  EGA I 3.5.11. The active graph has 439 edges across 173 generated units and
-  268 residual records; 436 edges resolve to 166 distinct existing official
-  tags and three resolve to explicitly untagged local integrations. Twenty-six
+  EGA I 3.6.5. The active graph has 470 edges across 181 generated units and
+  295 residual records; 466 edges resolve to 170 distinct existing official
+  tags and four resolve to explicitly untagged local integrations. Twenty-six
   edges are exact full-statement equivalences. Four bounded mathematical gaps
-  remain open from earlier slices; subsection 3.5 adds none. The next cursor is
-  EGA I 3.6.1.
+  remain open from earlier slices; subsection 3.6 adds none. The next cursor is
+  EGA I 3.7.1.
 
 ## State model
 
@@ -207,7 +214,7 @@ append-only.
   the edition task alone decides and mutates canonical source.
 
 The immediate work is sequential statement-level comparison across EGA 0--IV,
-continuing in the direct-French body after EGA I 3.5.11 at EGA I 3.6.1 while
+continuing in the direct-French body after EGA I 3.6.5 at EGA I 3.7.1 while
 EGA II is admitted through printed p.23. Discovery unit I.3.2.9 remains in a
 separate authority-pending queue for its cited EGA II erratum witness.
 The complete English discovery surface drives provisional candidates only.
