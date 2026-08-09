@@ -2,58 +2,103 @@
   "schema": "fac-checkpoint-qa-v1",
   "date": "2026-08-09",
   "scope": {
-    "start": "fac:I:1:no:1",
-    "end": "fac:III:6:no:81",
-    "printed_pages": "199-277",
-    "units_decided": 606,
-    "decision_rows": 613,
-    "stacks_references_added": 347
+    "start": "fac:introduction",
+    "end": "fac:bib:19",
+    "printed_pages": "197-278",
+    "units_decided": 661,
+    "decision_rows": 668,
+    "stacks_references_added": 356
   },
   "authority": {
     "bytes": 6305726,
     "sha256": "B8C6508249308F5D8BC886B9E6360F1EC4FDC8F0F18EFAA03EE0E36B591551CA",
     "render_dpi": 1100,
-    "physical_pages_inspected": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82],
-    "printed_pages_inspected": [199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277]
+    "physical_pages_inspected": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83],
+    "printed_pages_inspected": [197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278]
   },
   "latest_review": {
-    "unit": "fac:III:6:no:81",
-    "component": "components/079_III_6_81_degree_characteristic_function.tex",
-    "bytes": 6648,
-    "sha256": "74670B6971D0F559327848AD4228DF29B501C02DCC1E76BA09830F0816B1B8AC",
-    "authority_physical_pages": [81, 82],
-    "authority_printed_pages": [276, 277],
+    "unit": "fac:bib:19",
+    "component": "components/080_paris_and_bibliography.tex",
+    "bytes": 3164,
+    "sha256": "B8DC16C1FCB919118372646FD0A702DA1EB30521567F43198979CEC8DF430F89",
+    "authority_physical_pages": [82, 83],
+    "authority_printed_pages": [277, 278],
     "authority_renders": [
-      {"physical_page": 81, "sha256": "DD18F193C4042E961BF6CA593AADF5AEF5504FBA195218C811DE9457EF3CB65E"},
-      {"physical_page": 82, "sha256": "DC9B1C130BB4907A0789DDB9316014BC60E40FD29027C76FF83CB93D74CC0862"}
+      {"physical_page": 82, "sha256": "1B7102B52AD87C8CF831E73FB1F0F23BBDB6E213AD96D12B1FD8C9A42ECFA98F"},
+      {"physical_page": 83, "sha256": "D33DF4DBF368BEA1A342F5BE8D2CA21015C4CE8E6B4B91BBCEC27C26D891AE71"}
+    ],
+    "introduction_replay_renders": [
+      {"physical_page": 2, "sha256": "74A481462D0757BC3D98546B668A5182D2E957D0E20C512F9E41928D9D094EAE"},
+      {"physical_page": 3, "sha256": "E540905B5A72A2E60C752D465D0D932CA18BD7D042A3EB1D72FE6B9663065595"}
     ],
     "high_detail_renders": [],
-    "output_renders": [
-      {"master": "modules.tex", "pdf_page": 5, "sha256": "6AB2B46B9B06986799AC7B5D50B19959777ACF18F79EA4DEA5AA1A9F2ADF8BA4"},
-      {"master": "modules.tex", "pdf_page": 9, "sha256": "42763E242EFF78655F0E51102DBAB7C65EF1834305DA1602B77BF3C894ABA34A"},
-      {"master": "algebra.tex", "pdf_page": 148, "sha256": "E59085B6A51222C02520F1F22BEADB41CBFC569BEC1A95A1D2CD20B7CA00D961"},
-      {"master": "algebra.tex", "pdf_page": 151, "sha256": "5A08B76160F1982780D13FDE301A56990C462AA028A4951BB72B5B65FA5A480B"},
-      {"master": "varieties.tex", "pdf_page": 62, "sha256": "D6DDFA38F1C2F6FB9C9C138D0D514B2831DD41F6A249E68FD80C0CE4588D9F9C"},
-      {"master": "varieties.tex", "pdf_page": 64, "sha256": "EBB11F07A1A4DB8CB51F03755767E23D554ECCA3074C7A6E82012A027377A0CA"},
-      {"master": "varieties.tex", "pdf_page": 65, "sha256": "53397E216AE662651024AFAE48E7B926887E1DA17C5A41751AE5DABB28EFAC3C"},
-      {"master": "varieties.tex", "pdf_page": 67, "sha256": "D3DD1D0F34EA451EC087CCA0F710F2AF5804BAFA98C79FA96DAB89FAAA836C4D"},
-      {"master": "varieties.tex", "pdf_page": 68, "sha256": "6E3A214B4898960D16E29653999761072417FED7E935816D206DFF8BF994BFCA"},
-      {"master": "varieties.tex", "pdf_page": 102, "sha256": "39EE597D48718D2CB0512104D5BB5F8569BCFB23298FB23A0311A0B203489C5E"},
-      {"master": "varieties.tex", "pdf_page": 103, "sha256": "F2FD1FEE9E522593578168618118604BA2BA40BC179652982162D5C3C8C3B5D9"},
-      {"master": "spaces-over-fields.tex", "pdf_page": 29, "sha256": "BC86E046041295AAF32836663E7EF17718056FF338B10EB26C8727A62482CB2D"},
-      {"master": "spaces-over-fields.tex", "pdf_page": 30, "sha256": "E91CBF46E53690357185F11C7653150ADBAA6545035F867F86D03D57E75E9667"},
-      {"master": "algebraization.tex", "pdf_page": 81, "sha256": "6F2DFF629F9FECC583C3B109A52CA3BA2EA6342982CF4C03FDD646468081422C"}
+    "output_renders": [],
+    "bibliography_audit": {
+      "entries": 19,
+      "in_text_occurrences": 92,
+      "all_entries_cited": true,
+      "exact_my_bib_identities": 3,
+      "exact_identities_absent": 16,
+      "false_match_substitutions": 0,
+      "excluded_optional_footnote_numbers": 2
+    },
+    "residual_audit": {
+      "structural_anchors": 18,
+      "embedded_units": 17,
+      "graph_corrections": 21,
+      "active_graph_corrections": 21,
+      "transactional_failure_rollback_test": "PASS",
+      "failed_output_preservation_test": "PASS",
+      "promotion_fault_positions_tested": 3,
+      "interruption_recovery_states_tested": 4,
+      "interrupted_batch_recovery_test": "PASS",
+      "promotion_failure_receipt_test": "PASS",
+      "journal_free_consistent_cleanup_test": "PASS",
+      "journal_loss_split_state_test": "PASS",
+      "journal_free_invalid_receipt_preservation_test": "PASS",
+      "journal_free_missing_receipt_preservation_test": "PASS",
+      "blank_decision_ids_after_repair": 0,
+      "inherited_defaults_after_repair": 0,
+      "review_units_after_repair": 0,
+      "generated_parent_cycles_after_repair": 0,
+      "frozen_units_sha256_unchanged": "52DE29B183CC45EB6461F5180B3A24555722260AF32FFB10F6B8E193C9872F7A",
+      "correction_overlay_sha256": "AAD0CAD024B4181A32D44A59AA33D0CE25A0C546084A009C76DB8F3CBD6C80B4"
+    },
+    "source_visible_non_unit_residuals": [
+      {
+        "component": "components/080_paris_and_bibliography.tex",
+        "line": 7,
+        "text": "Paris",
+        "classification": "terminal_paratext",
+        "result": "RECORDED_OUTSIDE_FROZEN_UNIT_INVENTORY"
+      }
     ],
+    "predecessor_reference_graph": {
+      "residuals": 1376,
+      "structurally_open": 0,
+      "lead_semantic_review_complete": 387,
+      "lead_exact_context_adjudicated": 6,
+      "pending_lead_residual_replay": 983,
+      "demonstrated_false_external_citation_classifications": 2,
+      "targets_pending_final_pdf_replay_status": 661,
+      "edges_pending_final_pdf_replay_status": 596,
+      "residuals_sha256": "6945F141E63873B6BF145ADB854361A9703D6905B88B08AF19B00C102BB047A7",
+      "targets_sha256": "2C11B8BAC3C4B53D0BDED8E50CD74842DDD1428CEC88BF9DA85FC8A5F652868D",
+      "edges_sha256": "0231A8A52A82FEE4EEB7284433EA7456132733F994F31BCD1280A762C3AAB651",
+      "validation_sha256": "6E77D133E84C9635DEE81124CA70D975B1EA18F3EA8E576A6409805E5D453FA1",
+      "claim_boundary": "Partition closure is not full lead semantic replay, and the aggregate build receipt was not propagated to row-level compiled status."
+    },
     "independent_review": {
-      "id": "FAC-INDEPENDENT-REVIEWS-N081-R1",
-      "base": "b3f7e318fc2a9bf268a54d5bf96eb48cf28cc2a8",
+      "id": "FAC-INDEPENDENT-REVIEWS-FINAL-R1",
+      "base": "33513352b39f4dbb984f5138846bf526a25cd5ee",
+      "tree": "6f8a1d2b54c7b5e0ca62fbc5089c593196d9e259",
       "result": "PASS_WITH_ACCEPTED_FINDINGS",
       "reviewers": 3,
       "files_edited": 0,
       "downstream_agents": 0,
-      "accepted_findings": ["I000960", "I000961", "I000962", "I000963", "I000964", "I000965", "I000966", "I000967", "I000968", "I000969", "I000970", "I000971", "I000972", "I000973", "I000974", "I000975", "I000976", "I000977"]
+      "accepted_findings": ["I000981", "I000984", "I000985", "I000986", "I000987", "I000988", "I000989", "I000990", "I000991"]
     },
-    "lead_review": {"id": "FAC-LEAD-REVIEW-N081-R1", "result": "PASS", "findings_closed": ["I000956", "I000957", "I000958", "I000959", "I000960", "I000961", "I000962", "I000963", "I000964", "I000965", "I000966", "I000967", "I000968", "I000969", "I000970", "I000971", "I000972", "I000973", "I000974", "I000975", "I000976", "I000977", "I000978", "I000979", "I000980"]}
+    "lead_review": {"id": "FAC-LEAD-REVIEW-FINAL-R1", "result": "PASS", "findings_closed": ["I000981", "I000982", "I000983", "I000984", "I000985", "I000986", "I000987", "I000988", "I000989", "I000990", "I000991"]}
   },
   "builds": [
     {
@@ -516,14 +561,15 @@
     "fac_citations_resolved": true,
     "undefined_reference_at_edited_lines": 0,
     "overfull_box_at_edited_lines": 0,
-    "note": "The no. 81 state passed repeated direct serial TeX builds for modules.tex, algebra.tex, varieties.tex, spaces-over-fields.tex, and algebraization.tex. Every cross-reference introduced at the checkpoint resolves; the logs contain no fatal diagnostic, undefined reference at an edited line, or edited-line overfull box. Remaining undefined links, citations, and overfull boxes are inherited end-matter or pre-existing chapter warnings outside edited lines. The new untagged Lemma 35.17 states exact Hilbert-polynomial degree equal to support dimension for a nonzero coherent sheaf and handles the zero sheaf separately. Existing general numerical-polynomial lemmas remain upper bounds; their zero branches and both algebraic-space duplicates are repaired. The same boundary repairs tag 0AYT, tag 08AC, tag 08A0's cokernel identification, tag 0B52's grammar, and tag 0F27's formal-triple zero case. Three independent reviews used committed base b3f7e318fc2a9bf268a54d5bf96eb48cf28cc2a8, made zero edits, and spawned zero downstream agents; lead review independently verified and closed every accepted finding. Fourteen output pages across the five affected chapters are unclipped, collision-free, and mathematically complete at direct 1100 dpi-equivalent inspection. Authority physical pp. 81--82 passed direct review with no high-detail crop needed, and the shared final page was stopped exactly before Paris and the bibliography."
+    "note": "The terminal closure changes only FAC comparison, generator, and QA data, so it does not invalidate or require repetition of the already admitted serial chapter builds. The 3164-byte final component matches physical pages 82--83 through article EOF, and direct 1100 dpi-equivalent inspection also replayed physical pages 2--3 so the explicit introduction decision has a complete visual gate. The Paris signature is recorded as terminal paratext outside the frozen unit locator. All nineteen source bibliography entries are cited, only three have exact existing my.bib identities, two optional footnote numbers are excluded from citation counts, and no same-author false match was substituted. Every one of the 661 frozen units now has an explicit decision; an append-only 21-row correction overlay repairs the generated parents for the footnote, affine presentation diagram, and nineteen bibliography entries without changing frozen units.csv. Its set/replace and supersedes schema supports immutable future corrections and reversals while retaining one active terminal per corrected field. Correction application is transactional and generated CSVs are promoted only after the whole validation pass, so rejected rows and cycles preserve the input graph and last known-good outputs. A short recovery journal binds the map, candidate file, and receipt into one recoverable generation across I/O errors or process interruption. Journal-free artifacts are cleaned only when the current receipt independently matches both generated CSV hashes; otherwise recovery evidence is preserved and validation blocks. No generated inheritance, review, candidate, blank-decision, parent-cycle, active-issue, or privacy residual remains in the FAC-to-Stacks map. The predecessor reader reference graph remains separately qualified because 983 structurally adjudicated residuals still await lead semantic replay and all 661 target plus 596 edge rows retain stale pending compiled status."
   },
   "validators": {
     "intake": "PASS",
     "stacks_index": "PASS",
     "mapping": "PASS",
-    "decision_rows": 613,
-    "source_issues": 980,
+    "outputs_promoted": true,
+    "decision_rows": 668,
+    "source_issues": 991,
     "active_source_issues": 0
   },
   "result": "PASS"

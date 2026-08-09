@@ -1,12 +1,14 @@
 # FAC status
 
 - Frozen surface: 661 source targets through printed page 278.
-- Stage: sequential source review and statement-level Stacks integration.
-- Completed checkpoint: Chapter III, Section 6, no. 81, printed pages 199--277.
-- Reviewed source units: 606 through 613 append-only decision rows
-  (186 equivalent, 178 stronger, 83 extensions, 115 new-statement decisions,
-  49 historical references, 2 outside scope).
-- Current Stacks references added: 347 across `topology.tex`, `sheaves.tex`,
+- Stage: complete source review and statement-level Stacks integration;
+  maintenance remains open for later corrections.
+- Completed checkpoint: full FAC article, introduction through terminal
+  bibliography, printed pages 197--278.
+- Reviewed source units: all 661 through 668 append-only decision rows
+  (189 equivalent, 179 stronger, 81 extensions, 118 new-statement decisions,
+  72 historical references, 3 outside scope, and 19 structural anchors).
+- Current distinct active Stacks comparison labels: 356 across `topology.tex`, `sheaves.tex`,
   `modules.tex`, `homology.tex`, `coherent.tex`, `cohomology.tex`,
   `divisors.tex`, `constructions.tex`, `schemes.tex`, `morphisms.tex`,
   `derham.tex`, `algebra.tex`, `properties.tex`, `varieties.tex`,
@@ -17,7 +19,7 @@
   the internal graded Ext and degreewise graded dual definitions, together
   with the dimension-zero complete-intersection remark;
   each new theorem/lemma has a complete proof and no assigned tag.
-- Source/proof issues or convention boundaries: 980 found by direct
+- Source/proof issues or convention boundaries: 991 found by direct
   authority-page and TeX inspection, all resolved and
   retained in `issues.csv`.
 - Source corrections: 7, including the no. 74 repeated resolution index
@@ -515,5 +517,66 @@
   correction was needed; external `FAC-FR-T0044` remains only transcription
   provenance. The cumulative provenance surface is now 124 added history
   blocks and 128 total.
-- Next unit: `fac:bibliography`.
+- The terminal end-matter and global residual audit close the frozen corpus.
+  Component `080_paris_and_bibliography.tex` is 3,164 bytes, SHA-256
+  `B8DC16C1FCB919118372646FD0A702DA1EB30521567F43198979CEC8DF430F89`;
+  it covers physical pp. 82--83 / printed pp. 277--278 through article EOF.
+  The frozen `fac:bibliography` locator begins at the heading on component
+  line 10; the adjacent `Paris` signature on line 7 is recorded as exact
+  terminal paratext outside the 661-unit inventory, not silently folded into
+  the bibliography unit.
+  Direct 1100 dpi-equivalent renders have SHA-256
+  `1B7102B52AD87C8CF831E73FB1F0F23BBDB6E213AD96D12B1FD8C9A42ECFA98F`
+  and
+  `D33DF4DBF368BEA1A342F5BE8D2CA21015C4CE8E6B4B91BBCEC27C26D891AE71`.
+  Physical pp. 2--3 were also replayed at the same scale, with hashes
+  `74A481462D0757BC3D98546B668A5182D2E957D0E20C512F9E41928D9D094EAE`
+  and
+  `E540905B5A72A2E60C752D465D0D932CA18BD7D042A3EB1D72FE6B9663065595`,
+  closing the introduction-to-body seam. All 19 bibliography entries occur
+  in the article, for 92 in-text uses; only items 6, 7, and 14 have exact
+  local `my.bib` identities, and sixteen same-author or nearby records were
+  deliberately not substituted. Two optional footnote numbers, `[3]` and
+  `[4]` in component 039, are excluded from those counts; the predecessor
+  reader reference graph had falsely classified them as external citations.
+  That graph has 1,376 structurally adjudicated residuals but 983 still marked
+  `rule_classified_pending_lead_residual_replay`; its zero-open-residual count
+  proves partition closure, not full lead semantic review. This limitation is
+  retained separately and is not used to certify the direct FAC-to-Stacks
+  unit map. All 661 predecessor target rows and 596 edge rows also retain
+  stale `source_declared_pending_final_pdf_replay` status despite the
+  aggregate three-pass PDF receipt, so row-level compiled status is not
+  claimed. The final residual sweep separates 18 true
+  hierarchy anchors from 17 embedded mathematical, proof, diagram, and
+  terminology units. It maps the latter explicitly and rejects the
+  terminology footnote's false Ext candidates. A 21-row append-only
+  `corr.csv` overlay corrects the generated parents of that footnote, the
+  affine finite-presentation diagram, and all nineteen bibliography entries
+  while preserving the byte-identical frozen `units.csv`; the generator
+  validates contiguous IDs, sequential and distinct old/new values, new
+  parents, action and supersession chains, one active terminal per corrected
+  field, completeness, privacy, and parent cycles. Corrections apply to a
+  working copy and generated CSVs are promoted only after a full PASS, so a
+  rejected ledger preserves both the input graph and last known-good outputs.
+  A short three-target recovery journal binds `map.csv`, `ucand.csv`, and
+  `mcheck.json`; interruption either proves the full new hash set or restores
+  all prior bytes from verified backups before the next validation run.
+  If the journal itself is lost while recovery artifacts remain, cleanup is
+  allowed only when the current receipt independently matches both generated
+  CSV hashes; mixed, stale, invalid, or missing receipts fail closed and keep
+  every target and recovery artifact byte for inspection or restoration.
+  Fault injection at all three promotion positions and restart replay after
+  zero, one, two, and three completed promotions passed without a split state.
+  Three bounded
+  read-only audits used committed HEAD
+  `33513352b39f4dbb984f5138846bf526a25cd5ee`, tree
+  `6f8a1d2b54c7b5e0ca62fbc5089c593196d9e259`, made zero edits, and spawned
+  zero downstream agents; lead review reproduced every accepted finding.
+  Both validators report PASS with empty errors: 661 decided units, 668
+  append-only decisions, zero review or candidate units, zero inherited
+  defaults, and zero active issues. No Stacks TeX or `my.bib` file changes at
+  this terminal checkpoint, so the previously admitted serial builds remain
+  the exact mathematical-output gate.
+- FAC is complete at printed page 278. The next corpus in the durable goal is
+  Tohoku; FAC remains open only for append-only maintenance corrections.
 - No statement is mapped by lexical similarity alone.
