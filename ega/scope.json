@@ -23,17 +23,17 @@
       "discovery_units": 9585,
       "page_evidence": {
         "file": "pages.csv",
-        "bytes": 5483,
-        "sha256": "6EED824C60BC56AB07996FDA2D70B962E3225898DA90CEA232006A2A52AF16F7",
-        "active_rows": 18
+        "bytes": 7187,
+        "sha256": "AB5B556E828E5A170EB4095381460B42F9E9436E8D56F45DEA87AF5323BAC22A",
+        "active_rows": 23
       },
       "role": "complete discovery text; not canonical authority"
     },
     "french_authority": {
       "status": "active page-by-page production",
-      "snapshot": "EGA II printed p.23 sealed; printed p.24 next",
-      "page_gate": "E2P23.json",
-      "page_gate_sha256": "871F3DD836772820CFD9D7F95A92BB5B76FC5354788791A22DBCBFC8EFCD5B10",
+      "snapshot": "EGA II printed p.33 sealed; printed p.34 next; F33 includes the EGA I 4.1.9 direct-authority correction",
+      "page_gate": "E2P33.json",
+      "page_gate_sha256": "DE5FCAA73A0EB63BFAF050769642CADA52330EAB0C543C64E672D57ED870A13F",
       "role": "diplomatic textual authority and claim-admission gate"
     },
     "incremental_notes": {
@@ -60,19 +60,19 @@
   },
   "statement_review_snapshot": {
     "file": "smap.csv",
-    "statement_edge_rows": 496,
-    "file_rows": 500,
+    "statement_edge_rows": 550,
+    "file_rows": 554,
     "superseded_rows": 4,
-    "source_units": 184,
-    "existing_official_tag_rows": 492,
-    "distinct_existing_official_tags": 182,
+    "source_units": 198,
+    "existing_official_tag_rows": 546,
+    "distinct_existing_official_tags": 199,
     "local_untagged_rows": 4,
     "full_statement_equivalences": 26
   },
   "residual_snapshot": {
     "file": "resid.csv",
-    "rows": 317,
-    "file_rows": 320,
+    "rows": 350,
+    "file_rows": 353,
     "superseded_rows": 3,
     "open_gaps": 4,
     "integrated_local_pending_upstream": 4

@@ -98,7 +98,8 @@ def load_page_evidence(path, errors):
         identifier = row["locator_id"]
         if not PAGE_ID_RE.fullmatch(identifier):
             errors.append(f"invalid page locator ID {identifier!r}")
-        if not PRINTED_PAGE_RE.fullmatch(row["parsed_page"]):
+        if (row["parsed_page"] and
+                not PRINTED_PAGE_RE.fullmatch(row["parsed_page"])):
             errors.append(f"invalid parsed page for {identifier}")
         if not PRINTED_PAGE_RE.fullmatch(row["printed_page"]):
             errors.append(f"invalid authoritative page for {identifier}")

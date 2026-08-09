@@ -3,7 +3,10 @@ import csv
 import hashlib
 import json
 import re
+import tempfile
 from pathlib import Path
+
+from intake import PAGE_FIELDS, apply_page_evidence, load_page_evidence
 
 ROOT = Path(__file__).resolve().parent
 ERRORS = []
@@ -39,6 +42,94 @@ def active_rows(data, id_field, table_name):
         else:
             superseded.add(prior)
     return [row for row in data if row[id_field] not in superseded], superseded
+
+
+def check_page_evidence_atomicity():
+    """Exercise blank legacy guards and fail-closed overlay application."""
+    template = {
+        "locator_id": "L000001",
+        "unit_id": "unit:one",
+        "parsed_page": "",
+        "printed_page": "I:119",
+        "source_receipt": "F8.json",
+        "source_receipt_sha256": "A" * 64,
+        "page_gate": "P119.json",
+        "page_gate_sha256": "B" * 64,
+        "evidence_id": "TEST-EVIDENCE-001",
+        "decision_id": "D000001",
+        "notes": "synthetic page-overlay regression",
+        "supersedes": "",
+    }
+
+    with tempfile.TemporaryDirectory() as directory:
+        path = Path(directory) / "pages.csv"
+
+        def write_page_rows(data):
+            with path.open("w", encoding="utf-8", newline="") as handle:
+                writer = csv.DictWriter(
+                    handle, fieldnames=PAGE_FIELDS, lineterminator="\n")
+                writer.writeheader()
+                writer.writerows(data)
+
+        write_page_rows([template])
+        errors = []
+        _, _, active = load_page_evidence(path, errors)
+        if errors or len(active) != 1:
+            ERRORS.append("blank parsed-page guard regression did not load")
+        replay_states = []
+        for _ in range(2):
+            units = [{"unit_id": "unit:one", "printed_page": ""}]
+            apply_errors = []
+            applied = apply_page_evidence(units, active, apply_errors)
+            replay_states.append((applied, apply_errors, units[0]["printed_page"]))
+        if replay_states != [
+                (1, [], "I:119"), (1, [], "I:119")]:
+            ERRORS.append("blank parsed-page guard replay is not deterministic")
+
+        units = [{"unit_id": "unit:one", "printed_page": "I:118"}]
+        apply_errors = []
+        applied = apply_page_evidence(units, active, apply_errors)
+        if applied != 0 or not apply_errors or units[0]["printed_page"] != "I:118":
+            ERRORS.append("blank page guard accepted a nonblank raw locator")
+
+        wrong_guard = dict(template, parsed_page="I:118")
+        write_page_rows([wrong_guard])
+        load_errors = []
+        _, _, wrong_active = load_page_evidence(path, load_errors)
+        units = [{"unit_id": "unit:one", "printed_page": "I:117"}]
+        apply_errors = []
+        applied = apply_page_evidence(units, wrong_active, apply_errors)
+        if (load_errors or applied != 0 or not apply_errors or
+                units[0]["printed_page"] != "I:117"):
+            ERRORS.append("nonblank wrong page guard did not fail closed")
+
+        blank_target = dict(template, printed_page="")
+        write_page_rows([blank_target])
+        load_errors = []
+        _, _, blank_active = load_page_evidence(path, load_errors)
+        if not load_errors or blank_active:
+            ERRORS.append("blank authoritative page was accepted")
+
+        second = dict(
+            template, locator_id="L000002", unit_id="unit:two",
+            parsed_page="I:118", evidence_id="TEST-EVIDENCE-002")
+        write_page_rows([template, second])
+        load_errors = []
+        _, _, two_active = load_page_evidence(path, load_errors)
+        units = [
+            {"unit_id": "unit:one", "printed_page": ""},
+            {"unit_id": "unit:two", "printed_page": "I:117"},
+        ]
+        apply_errors = []
+        applied = apply_page_evidence(units, two_active, apply_errors)
+        if (load_errors or applied != 0 or not apply_errors or units != [
+                {"unit_id": "unit:one", "printed_page": ""},
+                {"unit_id": "unit:two", "printed_page": "I:117"},
+        ]):
+            ERRORS.append("multi-row page failure was not atomic")
+
+
+check_page_evidence_atomicity()
 
 
 scope = json.loads((ROOT / "scope.json").read_text(encoding="utf-8"))
@@ -199,6 +290,11 @@ if (ROOT / "units.csv").exists() and (ROOT / "files.csv").exists():
         "ega:I.3.5.10:diagram:xymatrix:1": "I:117",
         "ega:I.3.5.11": "I:117",
         "ega:subsection:I.3.6": "I:117",
+        "ega:section:I.4": "I:119",
+        "ega:subsection:I.4.1": "I:119",
+        "ega:I.4.1.1": "I:119",
+        "ega:I.4.1.2": "I:119",
+        "ega:I.4.1.2:proof": "I:120",
     }
     for unit_id, expected_page in page_regressions.items():
         row = units_by_id.get(unit_id)
@@ -242,6 +338,14 @@ if (ROOT / "units.csv").exists() and (ROOT / "files.csv").exists():
                 "EGA1_CHAPTER1_P116_VALIDATION_R39.json",
                 "083D997689E74C8E7610C0894F978E643753D73DCCA4D8BB61B1FBA17A72339A",
             ): "I:116",
+            (
+                "EGA1_CHAPTER1_P119_VALIDATION_R42.json",
+                "B82C5D63AF34111BBE4D94700582770A36CFF1A005E76C8C088E960421DE83CC",
+            ): "I:119",
+            (
+                "EGA1_CHAPTER1_P120_VALIDATION_R43.json",
+                "4721AB517C81B0770246C1F1CC1A4FF1C579FB50A0392A767E83DD9B51F5EF20",
+            ): "I:120",
         }
         for row in all_page_rows:
             if None in row:
@@ -249,14 +353,19 @@ if (ROOT / "units.csv").exists() and (ROOT / "files.csv").exists():
                     f"extra CSV field in page row {row.get('locator_id')}")
                 continue
             for field in expected_pages_header[:-1]:
+                if field == "parsed_page":
+                    continue
                 if not (row.get(field) or "").strip():
                     ERRORS.append(
                         f"blank {field} in page row {row['locator_id']}")
-            for field in ("parsed_page", "printed_page"):
-                if not re.fullmatch(
-                        r"(?:0|I|II|III|IV):[^,]+", row[field]):
-                    ERRORS.append(
-                        f"invalid {field} in page row {row['locator_id']}")
+            if (row["parsed_page"] and not re.fullmatch(
+                    r"(?:0|I|II|III|IV):[^,]+", row["parsed_page"])):
+                ERRORS.append(
+                    f"invalid parsed_page in page row {row['locator_id']}")
+            if not re.fullmatch(
+                    r"(?:0|I|II|III|IV):[^,]+", row["printed_page"]):
+                ERRORS.append(
+                    f"invalid printed_page in page row {row['locator_id']}")
             for field in ("source_receipt_sha256", "page_gate_sha256"):
                 if not re.fullmatch(r"[0-9A-F]{64}", row[field]):
                     ERRORS.append(

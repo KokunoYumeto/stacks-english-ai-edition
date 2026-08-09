@@ -1030,3 +1030,103 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   counterexample descriptions and then returned hard PASS after replaying all
   twenty-six edges twenty-two residuals visual authority append-only privacy
   and graph-only gates.
+
+### EGA I 4.1.1--4.1.10 review and blank-locator intake repair A000123--A000125
+
+- Direct-French review now covers all of subsection 4.1 and stops before
+  4.2.1. The original F8 receipt remains historical page evidence. The current
+  semantic authority is F33 at 14,944 bytes and SHA-256
+  `2652207F96F697935BC81C5D63B292DE4D956905D69CB92572225E320BB27F4C`.
+  Its `ega1-4-fr.tex` row is 34,792 bytes with SHA-256
+  `A5F5CDAC81E654E9ABA75BBFEAD24F3010B122452C689B9EBAB5A7711B454EC1`.
+- Direct p.121 inspection exposed one diplomatic transcription error: the
+  canonical text and R44 had `g'=(psi',omega^b)` although the print has
+  unprimed `g` and p.122 consistently concludes `f=j` composed with `g`.
+  The correction was referred without a cross-tree write. The French owner
+  returned P121S at 5,600 bytes / SHA-256
+  `E78CA53480FC3F577786FCB643E63116A1DEC118EDB99C5629B52D6E5E9B411C`
+  and F33 removes only that one prime byte with an exact inverse. The English
+  already had the printed reading and remains unchanged. I000048 and the
+  append-only referral plus closure records preserve the complete history.
+- Frozen R184 has genuinely blank first-page locators for the section 4 and
+  subsection 4.1 headings plus 4.1.1 4.1.2 and the 4.1.2 proof. D000142 and
+  I000047 add L000019--L000023 to bind them respectively to I:119 I:119
+  I:119 I:119 and I:120. The parser now permits an empty `parsed_page` only
+  as an exact guard; `printed_page` remains mandatory. Positive double replay
+  and adverse tests reject a blank guard against a nonblank unit a wrong
+  nonblank guard a blank target and a partly bad multirow application. The
+  latter applies zero rows and mutates no unit.
+- The short `r184.py` replay reconstructs the exact 127-file 7,283,321-byte
+  R184 tree from the current four-file English successor using the producer's
+  byte-precise inverses. Two serial no-overwrite reconstructions and full
+  intakes independently produced byte-identical `files.csv` at
+  `A1BB4950FE27D813FD79BCC4604607994D38E3F1E5A2C1D52EC21E01EC5C7E5F`,
+  `units.csv` at
+  `132E2BC14F9C04C0B71CF5B46588770613509318D1FEEB2EBD20C68E9BB8EAD3`,
+  and `intake.json` at
+  `B5056E38C8716B28B9AD1952C809C5F6B83D19C707E28340ACE495B40D801A45`.
+  All 9,585 IDs and every field except the five intended page locators are
+  unchanged from the public predecessor.
+- D000143--D000152 add S000501--S000554 and R000321--R000353. The slice
+  decomposes quasi-coherent closure into 01BE 01IA 01I7 01IC 01ID and 01LA;
+  closed-subscheme construction and classification into 01AV 01HM 01IN 01IB
+  01IG 01I9 0F2L 01QP and 01QQ; restriction and gluing into 01BG 01JU 01JV 0FCZ
+  00AL 00AM and 00AN; and canonical inclusion containment and factorization into
+  02V0 01IM 01IO 01IQ 0H7H 01L6 01L7 003B 01HI and 01HP.
+- The graph keeps every important boundary explicit. Generic support of a
+  quasi-coherent module is not substituted for quotient-ring support;
+  identity of closed subschemes is identity over X; local ideal kernels must
+  agree on overlaps; scheme monicity is not silently promoted to ringed-space
+  monicity; and set-theoretic image containment cannot replace annihilation of
+  the defining ideal. For example the identity of the dual-number point does
+  not factor through its reduced closed subscheme.
+- The active scaffold now has 550 statement edges across 198 admitted units
+  and 350 residuals. Physical history contains 554 edge rows and 353 residual
+  rows. There are 546 official-target rows resolving to 199 distinct tags and
+  four local untagged rows. Twenty-six exact full-statement equivalences and
+  the four earlier open gaps are unchanged. No Stacks chapter TeX changed.
+- A000123--A000126 preserve two disjoint semantic audits the inverse audit of
+  4.1.6--4.1.10 and the complete control unit page and collision audit. All
+  were read-only. Their findings caused the exact blank-guard repair and the
+  direct-authority referral before any release claim.
+- A000127 then failed the first inverse audit of 4.1.1--4.1.6: affine-only
+  01IC and 01ID had been allowed to carry global source claims the exact
+  unlabelled 01LA enumeration was missing and the ideal-gluing proof lacked
+  the map-gluing and quasi-coherence-locality steps. The repair retargets the
+  global claims to 01LA keeps the affine lemmas only as dependencies adds
+  00AN and records every stronger-target remainder. A000128 independently
+  replayed the repaired graph and returned hard PASS with zero duplicate
+  semantic keys.
+
+### Diagram graph-certification gate D000153 / I000049
+
+- The direct user warning reported a concrete cross-corpus false certification in which
+  insufficient authority detail produced a nonexistent edge and a separate
+  accepted render placed a label on the wrong side. The controlling lesson is
+  graph completeness including absent edges rather than mere legibility.
+- This EGA scaffold has 445 registered native diagram units and earlier mapped
+  slices sometimes record only 1,100-dpi whole-page review. No false EGA edge
+  is inferred from that fact but the earlier evidence is below the new floor.
+  Production after 4.1 therefore stops for a bounded inventory and every
+  already mapped diagram is re-audited from its own tightly bounded
+  direct-authority and final-output crops at no less than 5,000 dpi-equivalent
+  detail. Full-page shared and grouped crops do not qualify.
+- The gate separately checks objects directed edges absent edges direction
+  hook and equality style label text primes bars subscripts geometry and label
+  side then checks the rendered native output. Discovery-only units remain
+  unreviewed rather than receiving retroactive fidelity claims.
+- The threshold addendum applies the same individual 5,000-dpi minimum to
+  intricate standalone mathematical blocks such as dense arrays compatibility
+  chains exact-sequence grids and unusual-symbol constructions.
+- A000129 independently replayed the complete 4.1 release diff after the
+  semantic repairs and the diagram-gate addition. It returned hard PASS on
+  all fifty-four edges thirty-three residual rows F33 and P121S authority five
+  blank-locator overlays exact R184 reconstruction append-only prefixes
+  privacy and graph-only scope. No Stacks chapter TeX or edition authority was
+  written by this checkpoint.
+- The direct threshold addendum arrived after that replay and raised the floor
+  from 3,000 to 5,000 dpi-equivalent detail. D000153 I000049 the schema and
+  README now require individual tightly bounded authority and final-output
+  crops and extend the gate to intricate standalone mathematical blocks. The
+  owner reran the validator syntax target and diff gates after this control-only
+  strengthening; no 4.1 mapping or authority byte changed.

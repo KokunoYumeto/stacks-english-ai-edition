@@ -19,7 +19,9 @@ or published here.
   127 files, 7,283,321 bytes, tree SHA-256
   `3BFB1C5103093481246EF4A6365E08544F6D5E19ACC0EA63E717F3F3643F064D`.
 - French authority: production is active; the current interface snapshot has
-  EGA II printed p.23 sealed and printed p.24 as the next cursor.
+  EGA II printed p.33 sealed and printed p.34 as the next cursor. Receipt F33
+  also repairs the EGA I 4.1.9 diplomatic transcription from `g'` to the
+  directly verified printed `g` without changing the already-correct English.
 - Existing incremental pre-Stacks notes: 399,689 bytes, SHA-256
   `4B4811B6F24F139020E15CF27D7BFA82C3872F0A549DCFF4F64B28F4454737D6`.
   They are evidence to normalize into the new schema, not a completed
@@ -163,13 +165,30 @@ or published here.
   criterion. A p.119 control phrase that could wrongly extend that bijection
   to higher-dimensional local domains is referred append-only with an exact
   projective-line counterexample. The French source itself is correct.
+- EGA I 4.1.1--4.1.10 now has direct-French statement and proof
+  dispositions. Quasi-coherent closure properties match the exact global
+  enumeration under 01LA while retaining the affine proof dependencies;
+  ideal quotients and locally closed subschemes are
+  split into their sheaf and scheme layers; and factorization through a
+  subscheme is separated from set-theoretic image containment. F33 and its
+  P121S superseder correct the one diplomatic error found in this slice:
+  printed p.121 has unprimed `g` throughout the 4.1.9 proof. The English was
+  already correct. Five genuinely blank frozen page locators are now guarded
+  and overlaid append-only; an empty parsed guard is never a wildcard.
+- D000153 and I000049 bind the strengthened diagram gate. All 445 registered
+  diagrams are being inventoried and every diagram already carrying a mapping
+  claim must be rechecked from its own tightly bounded direct-authority and
+  final-output crops at no less than 5,000 dpi-equivalent detail with explicit
+  non-edge verification. Shared or grouped crops do not qualify and intricate
+  standalone mathematical blocks receive the same custom gate. The
+  unreviewed discovery inventory is not silently promoted to diagram fidelity.
 - Current statement-level frontier: direct-French review is complete through
-  EGA I 3.7.3. The active graph has 496 edges across 184 generated units and
-  317 residual records; 492 edges resolve to 182 distinct existing official
+  EGA I 4.1.10. The active graph has 550 edges across 198 generated units and
+  350 residual records; 546 edges resolve to 199 distinct existing official
   tags and four resolve to explicitly untagged local integrations. Twenty-six
   edges are exact full-statement equivalences. Four bounded mathematical gaps
-  remain open from earlier slices; subsection 3.7 adds none. The next cursor is
-  EGA I 4.1.1.
+  remain open from earlier slices; subsection 4.1 adds none. The next cursor is
+  EGA I 4.2.1.
 
 ## State model
 
@@ -196,6 +215,9 @@ append-only.
 - `check.py`: local structural validator.
 - `intake.py`: deterministic manifest verification and metadata-only unit
   extraction; it does not copy source prose.
+- `r184.py`: exact no-overwrite reconstruction of the frozen R184 discovery
+  tree from the current four-file English successor using hash-guarded inverse
+  operations; it never mutates the edition source.
 - `files.csv`, `units.csv`, and `intake.json`: generated exact-file inventory,
   stable unit registry, and fail-closed intake receipt.
 - `pages.csv`: append-only direct-authority page evidence for frozen discovery
@@ -221,8 +243,8 @@ append-only.
   the edition task alone decides and mutates canonical source.
 
 The immediate work is sequential statement-level comparison across EGA 0--IV,
-continuing in the direct-French body after EGA I 3.7.3 at EGA I 4.1.1 while
-EGA II is admitted through printed p.23. Discovery unit I.3.2.9 remains in a
+continuing in the direct-French body after EGA I 4.1.10 at EGA I 4.2.1 while
+EGA II is admitted through printed p.33. Discovery unit I.3.2.9 remains in a
 separate authority-pending queue for its cited EGA II erratum witness.
 The complete English discovery surface drives provisional candidates only.
 Mathematical Stacks chapter edits occur only after a bounded unit has direct

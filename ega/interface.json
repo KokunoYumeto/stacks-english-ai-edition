@@ -8,15 +8,17 @@
     "cross_tree_writes": false
   },
   "french_cursor": {
-    "admitted_through": "EGA II printed p.23, continuing 2.2.1",
-    "next": "NUMDAM EGA II PDF one-based p.21 / printed p.24, continuation of 2.2.1",
+    "admitted_through": "EGA II printed p.33, continuing 2.5.11; F33 also corrects EGA I 4.1.9 from g-prime to printed g",
+    "next": "NUMDAM EGA II PDF one-based p.31 / printed p.34, continuation of 2.5.11",
     "append_state": "remove only the final 10-byte temporary end-env before the next authority append",
-    "manifest": "F22.json",
-    "manifest_sha256": "8C0A8E6C837C9842D3DE5656AAF73014060109BCC1D67B68FB668C5A40D94EF7",
-    "page_gate": "E2P23.json",
-    "page_gate_sha256": "871F3DD836772820CFD9D7F95A92BB5B76FC5354788791A22DBCBFC8EFCD5B10",
-    "ledger": "E2P23_FR.jsonl",
-    "ledger_sha256": "87FF57FD2169172CA17E88DC3C6A3F82161282E32426ED0F492EE6F1E6DE3789"
+    "manifest": "F33.json",
+    "manifest_sha256": "2652207F96F697935BC81C5D63B292DE4D956905D69CB92572225E320BB27F4C",
+    "page_gate": "E2P33.json",
+    "page_gate_sha256": "DE5FCAA73A0EB63BFAF050769642CADA52330EAB0C543C64E672D57ED870A13F",
+    "ledger": "E2P33_FR.jsonl",
+    "ledger_sha256": "A3A31AEFB278CA2712764D4146D063EE21FEF8ACE69246998C3AD96CA3886448",
+    "late_correction_ledger": "P121S.jsonl",
+    "late_correction_ledger_sha256": "E78CA53480FC3F577786FCB643E63116A1DEC118EDB99C5629B52D6E5E9B411C"
   },
   "admitted_french_receipts": [
     {
@@ -37,24 +39,27 @@
     {
       "manifest": "F22.json",
       "manifest_sha256": "8C0A8E6C837C9842D3DE5656AAF73014060109BCC1D67B68FB668C5A40D94EF7",
-      "role": "current direct-authority receipt through EGA II printed p.23"
+      "role": "historical direct-authority receipt through EGA II printed p.23"
+    },
+    {
+      "manifest": "F33.json",
+      "manifest_sha256": "2652207F96F697935BC81C5D63B292DE4D956905D69CB92572225E320BB27F4C",
+      "role": "current receipt through EGA II printed p.33 including the direct-authority EGA I 4.1.9 g-prime correction"
     }
   ],
   "english_discovery": {
     "manifest": "R184.json",
     "manifest_sha256": "5C64ECD32FD7C5458D2599D70ED667D2CF06D95517EFFA9C6D6DCEF7626913A0",
-    "latest_manifest": "R189.json",
-    "latest_manifest_sha256": "224EEF1515654815E24CCB8986834F15444901284CC67EDD29F97067D8217FB4",
-    "latest_noop_gate": "E2P23_EN.jsonl",
-    "latest_noop_gate_sha256": "8C5093293EA94ECAC5BFE0C6CC75D4D8703E1EC71B59C2F701E5B2C259D1FA28",
-    "role": "R184 remains the exact intake discovery surface; R189 and the p23 comparison report an identity no-op with no changed English source file"
+    "latest_manifest": "R201.json",
+    "latest_manifest_sha256": "E5A6180AAA5F8512F3B837D9B6561E9798101AAC9865DB136566D4FFB03564D1",
+    "role": "R184 remains the exact intake discovery surface; R201 is the latest standalone-English successor and already has the printed unprimed g in EGA I 4.1.9"
   },
   "semantic_notes": {
     "bytes": 399689,
     "sha256": "4B4811B6F24F139020E15CF27D7BFA82C3872F0A549DCFF4F64B28F4454737D6",
     "role": "read-only source evidence requiring schema normalization"
   },
-  "public_checkpoint": "https://zenodo.org/records/21847003",
+  "public_checkpoint": "https://zenodo.org/records/21859616",
   "correction_channel": "reports/findings.jsonl",
   "required_finding_fields": [
     "stable_id",

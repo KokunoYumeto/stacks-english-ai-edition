@@ -18,12 +18,30 @@ or source-file role. `printed_page` is an independent witness locator and may
 name another volume when a later erratum supplies text for an earlier volume.
 It must never reclassify the semantic unit.
 
+Every mapped diagram requires its own tightly bounded direct-authority crop
+at no less than 5,000 dpi-equivalent detail and its own tightly bounded
+final-output crop at the same floor; higher detail remains appropriate for
+genuinely ambiguous tiny marks. Full pages shared page crops grouped diagrams
+and grouped output crops do not qualify. Admission separately records all objects all directed edges and
+the absence of non-edges plus direction hook/equality style label text every
+prime bar and subscript geometry and label side. Page legibility or a clean
+render is not graph certification. The final native diagram is rendered and
+checked independently after source-graph admission. Discovery-only diagram
+units remain explicitly unreviewed until this evidence exists.
+The identical per-item gate applies to intricate standalone mathematical
+blocks including dense arrays compatibility chains exact-sequence grids and
+unusual-symbol constructions.
+
 `printed_page` names the first printed page on which the generated unit begins.
 A separately generated diagram child therefore keeps its own first page even
 when its parent statement began earlier. When a frozen discovery witness lacks
 a page marker that direct French authority has sealed, `pages.csv` supplies an
 append-only evidence overlay. Each active `L` row records the raw parsed page,
 the corrected first page, the admitted receipt and page gate, and its decision.
+The raw `parsed_page` guard may be empty only when the frozen unit genuinely
+has no locator; the authoritative `printed_page` must always be nonempty and
+valid. An empty guard never acts as a wildcard and therefore rejects a unit
+whose frozen locator is nonempty.
 Intake validates the complete active overlay before applying any row; a stale
 raw-page guard or invalid evidence makes the application atomic and fail-closed.
 The overlay changes neither the frozen manifest bytes nor any stable unit ID.
