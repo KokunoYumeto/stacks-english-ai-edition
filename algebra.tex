@@ -15380,6 +15380,18 @@ the ideal $J$ is prime which is a contradiction.
 
 \begin{lemma}
 \label{lemma-filter-primes-in-support}
+\begin{reference}
+\cite[Chapter III, \S 6, no. 81, support calculation preceding
+Proposition 6, p. 276]{FAC}
+\end{reference}
+\begin{history}
+The cited source starts from an irredundant homogeneous primary decomposition,
+localizes it on projective standard opens, and writes the support as the union
+of the projective varieties defined by the corresponding primes. The lemma
+below gives the affine module statement using a prime filtration; combined
+with degree-zero localization on $\operatorname{Proj}$ it also accounts for
+the source's irrelevant ``improper'' prime, whose projective variety is empty.
+\end{history}
 Let $R$, $M$, $M_i$, $\mathfrak p_i$ as in
 Lemma \ref{lemma-filter-Noetherian-module}.
 Then $\text{Supp}(M) = \bigcup V(\mathfrak p_i)$
@@ -15716,7 +15728,17 @@ Lemma \ref{lemma-ass}.
 
 \begin{lemma}
 \label{lemma-one-equation-module}
-Let $R$ is a Noetherian local ring, $M$ a finite $R$-module, and
+\begin{reference}
+\cite[Chapter III, \S 6, no. 81, proof of Proposition 6, p. 277]{FAC}
+\end{reference}
+\begin{history}
+The projective hyperplane argument in the cited source chooses a linear form
+outside the relevant primes, so multiplication is injective and intersecting
+the support lowers its positive dimension by one. This is the corresponding
+local module statement. An earlier version of the hypothesis read
+``Let $R$ is''; the grammatical error has been corrected.
+\end{history}
+Let $R$ be a Noetherian local ring, $M$ a finite $R$-module, and
 $f \in \mathfrak m$ an element of the maximal ideal of $R$. Then
 $$
 \dim(\text{Supp}(M/fM)) \leq

@@ -6323,7 +6323,8 @@ we see that $\mathcal{F} = i_*\mathcal{G}$ where $i : Z \to X$ is the inclusion
 of the scheme theoretic support of $\mathcal{F}$ and where $\mathcal{G}$
 is a coherent $\mathcal{O}_Z$-module. By definition of the scheme theoretic
 support the underlying topological space of $Z$ is $\text{Supp}(\mathcal{F})$.
-Since the dimension of $Z$ is $0$, we see $Z$ is affine (Properties, Lemma
+Since the dimension of $Z$ is at most $0$, we see $Z$ is affine (Properties,
+Lemma
 \ref{properties-lemma-locally-Noetherian-dimension-0}).
 Hence $\mathcal{G}$ is globally generated and the higher
 cohomology groups of $\mathcal{G}$ are zero
@@ -6590,6 +6591,18 @@ Constructions, Lemma
 
 \begin{lemma}
 \label{lemma-exact-sequence-induction}
+\begin{reference}
+\cite[Chapter III, \S 6, no. 81, proof of Proposition 6, p. 277]{FAC}
+\end{reference}
+\begin{history}
+The cited proof chooses a homogeneous linear form outside every prime in an
+irredundant primary decomposition except the irrelevant ideal. On each
+standard open this makes multiplication a nonzerodivisor on the module, and
+it gives the same short exact hyperplane sequence as below. The source also
+identifies the quotient support with the hyperplane intersection and uses the
+resulting dimension drop. The proof below replaces primary decomposition by
+the finite set of associated primes on the standard affine cover.
+\end{history}
 Let $k$ be an infinite field. Let $n \geq 1$.
 Let $\mathcal{F}$ be a coherent module on $\mathbf{P}^n_k$.
 Then there exist a nonzero section
@@ -6643,6 +6656,9 @@ the ideal sheaf of $H$ by
 Divisors, Definition \ref{divisors-definition-zero-scheme-s}.
 Hence we obtain $\mathcal{G}$ on $H$ using
 Cohomology of Schemes, Lemma \ref{coherent-lemma-i-star-equivalence}.
+Under this equivalence the cokernel corresponds to $i^*\mathcal{F}$ by
+right exactness of pullback. Thus it is $i_*\mathcal{G}$ for the
+$\mathcal{G} = i^*\mathcal{F}$ occurring in the statement.
 \end{proof}
 
 \begin{remark}
@@ -6657,6 +6673,16 @@ To prove this, just apply the lemma to $\bigoplus \mathcal{F}_i$.
 
 \begin{remark}
 \label{remark-exact-sequence-induction-cohomology}
+\begin{reference}
+\cite[Chapter III, \S 6, no. 81, proof of Proposition 6, p. 277]{FAC}
+\end{reference}
+\begin{history}
+The cited source twists the hyperplane sequence by every integer and applies
+Euler-characteristic additivity to obtain the first-difference formula for
+the Hilbert polynomial. The notation there suppresses the closed-immersion
+pushforward; the sequence below keeps $i_*\mathcal{G}(d)$ explicitly on
+$\mathbf{P}^n_k$ while identifying its cohomology with that on $H$.
+\end{history}
 In the situation of Lemmas \ref{lemma-hyperplane} and
 \ref{lemma-exact-sequence-induction}
 we have $H \cong \mathbf{P}^{n - 1}_k$ with Serre twists
@@ -6873,6 +6899,8 @@ Lemma \ref{lemma-numerical-polynomial-from-euler}.
 \label{lemma-hilbert-polynomial}
 \begin{reference}
 \cite[Chapter III, \S 6, no. 80, Proposition 3 and proof, p. 275]{FAC}
+\cite[Chapter III, \S 6, no. 81, Proposition 6 and Remark 2,
+pp. 276--277]{FAC}
 \end{reference}
 \begin{history}
 The cited proposition proves the projective-space assertion by resolving a
@@ -6883,6 +6911,9 @@ polynomials for every integer $d$. The proof below instead uses hyperplane
 induction. Both proofs give the degree bound $n$. The later Lemma
 \ref{lemma-numerical-polynomial-from-euler} gives the stronger bound by the
 dimension of the support on an arbitrary proper scheme.
+The second citation gives an independent hyperplane proof, identifies the
+first difference with the Hilbert polynomial of the hyperplane restriction,
+and proves the exact support-dimension statement recorded separately below.
 \end{history}
 Let $k$ be a field. Let $n \geq 0$. Let $\mathcal{F}$ be a coherent sheaf
 on $\mathbf{P}^n_k$. The function
@@ -6896,7 +6927,7 @@ is a polynomial of degree at most $n$.
 We prove this by induction on $n$. If $n = 0$, then
 $\mathbf{P}^n_k = \Spec(k)$ and $\mathcal{F}(d) = \mathcal{F}$.
 Hence in this case the function is constant, i.e., a polynomial
-of degree $0$. Assume $n > 0$. By
+of degree at most $0$. Assume $n > 0$. By
 Lemma \ref{lemma-euler-characteristic-extend-base-field}
 we may assume $k$ is infinite. Apply
 Lemma \ref{lemma-exact-sequence-induction}.
@@ -6982,6 +7013,58 @@ This follows from the vanishing of cohomology of high enough twists
 of $\mathcal{F}$. See
 Cohomology of Schemes,
 Lemma \ref{coherent-lemma-coherent-projective}.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-hilbert-polynomial-degree-support}
+\begin{reference}
+\cite[Chapter III, \S 6, no. 81, Proposition 6 and proof,
+pp. 276--277]{FAC}
+\end{reference}
+\begin{history}
+The cited source describes the support by an irredundant homogeneous primary
+decomposition and proves the degree equality by choosing a hyperplane outside
+the relevant primes. The resulting regular multiplication sequence identifies
+the first difference with the Hilbert polynomial of the hyperplane
+restriction, whose support has dimension one less. The source works over its
+infinite ground field and leaves the zero polynomial convention implicit. The
+statement below separates the zero sheaf and uses the modern leading-term and
+ample-positivity results, so it applies over an arbitrary field.
+\end{history}
+Let $k$ be a field. Let $n \geq 0$. Let $\mathcal{F}$ be a coherent sheaf
+on $\mathbf{P}^n_k$ with Hilbert polynomial $P$. If $\mathcal{F} = 0$, then
+$P = 0$. If $\mathcal{F} \not = 0$, then
+$$
+\deg(P) = \dim(\operatorname{Supp}(\mathcal{F})).
+$$
+\end{lemma}
+
+\begin{proof}
+The assertion for the zero sheaf is immediate. Assume $\mathcal{F} \not = 0$
+and set $e = \dim(\operatorname{Supp}(\mathcal{F}))$. If $e = 0$, then
+Lemma \ref{lemma-chi-tensor-finite}, applied to the rank one modules
+$\mathcal{O}(d)$, shows that $P$ is constant with positive value
+$\dim_k H^0(\mathbf{P}^n_k, \mathcal{F})$. Thus $P$ has degree $0$.
+
+Assume $e > 0$. Let $Z_i$ be the irreducible components of
+$\operatorname{Supp}(\mathcal{F})$ of dimension $e$, let $\xi_i$ be their
+generic points, and set
+$$
+m_i = \operatorname{length}_{\mathcal{O}_{\mathbf{P}^n_k, \xi_i}}
+(\mathcal{F}_{\xi_i}).
+$$
+These integers are positive. By
+Lemma \ref{lemma-numerical-polynomial-leading-term}, the difference
+$$
+P(d) - \sum m_i\chi(Z_i, \mathcal{O}_{Z_i}(d))
+$$
+has degree less than $e$. The restriction of $\mathcal{O}(1)$ to every
+$Z_i$ is ample by Properties, Lemma
+\ref{properties-lemma-ample-on-closed}. The discussion following Definition
+\ref{definition-degree} and Lemma \ref{lemma-ample-positive} show that the
+coefficient of $d^e$ in each polynomial
+$\chi(Z_i, \mathcal{O}_{Z_i}(d))$ is positive. Therefore the coefficient of
+$d^e$ in $P$ is positive, and $P$ has degree exactly $e$.
 \end{proof}
 
 \begin{remark}
@@ -10365,10 +10448,21 @@ lemma.
 
 \begin{lemma}
 \label{lemma-numerical-polynomial-from-euler}
+\begin{reference}
+\cite[Chapter III, \S 6, no. 81, Proposition 6, pp. 276--277]{FAC}
+\end{reference}
+\begin{history}
+For twists by $\mathcal{O}(1)$ on projective space, the cited proposition
+proves the sharper equality between degree and support dimension for a
+nonzero sheaf. The lemma below allows arbitrary invertible modules and hence
+only gives an upper bound: the trivial invertible module on a
+positive-dimensional proper scheme already shows why equality would fail.
+The zero sheaf is separated explicitly because its support is empty.
+\end{history}
 Let $k$ be a field. Let $X$ be a proper scheme over $k$. Let $\mathcal{F}$
 be a coherent $\mathcal{O}_X$-module. Let
 $\mathcal{L}_1, \ldots, \mathcal{L}_r$ be invertible $\mathcal{O}_X$-modules.
-The map
+If $\mathcal{F} = 0$, the map below is zero. If $\mathcal{F} \not = 0$, the map
 $$
 (n_1, \ldots, n_r) \longmapsto
 \chi(X, \mathcal{F} \otimes
@@ -10380,6 +10474,8 @@ most the dimension of the support of $\mathcal{F}$.
 \end{lemma}
 
 \begin{proof}
+If $\mathcal{F} = 0$, the assertion is immediate. Thus we may assume
+$\mathcal{F} \not = 0$.
 We prove this by induction on $\dim(\text{Supp}(\mathcal{F}))$.
 If this number is zero, then the function is constant with value
 $\dim_k \Gamma(X, \mathcal{F})$ by Lemma \ref{lemma-chi-tensor-finite}.
@@ -10460,10 +10556,23 @@ support.
 
 \begin{lemma}
 \label{lemma-numerical-polynomial-leading-term}
+\begin{reference}
+\cite[Chapter III, \S 6, no. 81, Proposition 6 and proof,
+pp. 276--277]{FAC}
+\end{reference}
+\begin{history}
+The cited source obtains the degree from a regular hyperplane section. The
+lemma below isolates the top-dimensional contribution by generic lengths;
+it supplies a field-independent route to the same degree equality for
+projective twists. The separate nonzero branch makes the support dimension and
+the strict degree bound unambiguous.
+\end{history}
 Let $k$ be a field. Let $X$ be a proper scheme over $k$. Let
 $\mathcal{F}$ be a coherent $\mathcal{O}_X$-module. Let
 $\mathcal{L}_1, \ldots, \mathcal{L}_r$ be invertible $\mathcal{O}_X$-modules.
-Let $d = \dim(\text{Supp}(\mathcal{F}))$.
+If $\mathcal{F} = 0$, then the corresponding Euler characteristic map is
+zero. If $\mathcal{F} \not = 0$, let
+$d = \dim(\text{Supp}(\mathcal{F}))$.
 Let $Z_i \subset X$ be the irreducible components
 of $\text{Supp}(\mathcal{F})$ of dimension $d$. Let $\xi_i \in Z_i$
 be the generic point and set
@@ -10480,6 +10589,8 @@ is a numerical polynomial in $n_1, \ldots, n_r$ of total degree $< d$.
 \end{lemma}
 
 \begin{proof}
+The assertion for $\mathcal{F} = 0$ is immediate. Thus we may assume
+$\mathcal{F} \not = 0$.
 Consider pairs $(\xi , Z)$ where $Z \subset X$ is an integral
 closed subscheme of dimension $d$ and $\xi$ is its generic point.
 Then the finite $\mathcal{O}_{X, \xi}$-module $\mathcal{F}_\xi$

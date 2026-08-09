@@ -2,22 +2,22 @@
 
 - Frozen surface: 661 source targets through printed page 278.
 - Stage: sequential source review and statement-level Stacks integration.
-- Completed checkpoint: Chapter III, Section 6, no. 80, printed pages 199--276.
-- Reviewed source units: 590 through 597 append-only decision rows
-  (181 equivalent, 173 stronger, 80 extensions, 115 new-statement decisions,
-  46 historical references, 2 outside scope).
-- Current Stacks references added: 337 across `topology.tex`, `sheaves.tex`,
+- Completed checkpoint: Chapter III, Section 6, no. 81, printed pages 199--277.
+- Reviewed source units: 606 through 613 append-only decision rows
+  (186 equivalent, 178 stronger, 83 extensions, 115 new-statement decisions,
+  49 historical references, 2 outside scope).
+- Current Stacks references added: 347 across `topology.tex`, `sheaves.tex`,
   `modules.tex`, `homology.tex`, `coherent.tex`, `cohomology.tex`,
   `divisors.tex`, `constructions.tex`, `schemes.tex`, `morphisms.tex`,
   `derham.tex`, `algebra.tex`, `properties.tex`, `varieties.tex`,
   `simplicial.tex`, `more-algebra.tex`, `dualizing.tex`, `local-cohomology.tex`,
   `duality.tex`, `spaces-over-fields.tex`, and `curves.tex`.
-- New Stacks theorem/lemma statements: 36, plus the paracompactness and
+- New Stacks theorem/lemma statements: 37, plus the paracompactness and
   locally-constant-sheaf definitions, the graded-conventions remark, and
   the internal graded Ext and degreewise graded dual definitions, together
   with the dimension-zero complete-intersection remark;
   each new theorem/lemma has a complete proof and no assigned tag.
-- Source/proof issues or convention boundaries: 955 found by direct
+- Source/proof issues or convention boundaries: 980 found by direct
   authority-page and TeX inspection, all resolved and
   retained in `issues.csv`.
 - Source corrections: 7, including the no. 74 repeated resolution index
@@ -28,7 +28,7 @@
   repeated sign occurrence recorded separately as `C0043` linked to `C0041`,
   and the omitted French subject in no. 80 restored as `C0044` linked to
   external correction `FAC-FR-C0042`.
-- Existing Stacks defects corrected: 20, comprising the refinement-homotopy
+- Existing Stacks defects corrected: 27, comprising the refinement-homotopy
   sign, repeated coefficient sheaves, wrong boundary domain, wrong boundary
   degree, incomplete low-degree citation, and multiplication by a negative
   power before localization in the Proj shift proof, plus the wrong
@@ -41,18 +41,22 @@
   sheaf-Hom base ring in tag `0BQZ`, and the missing word `space` in the
   proper-algebraic-space hypothesis at tag `0DN1`, plus the omitted twist on
   basis sections in tag `08A8` and the invalid negative lower binomial index
-  in the reciprocal-module rank preceding tag `01XT`.
+  in the reciprocal-module rank preceding tag `01XT`, plus the zero-support
+  wording in tag `0AYT`, the missing cokernel identification in tag `08A0`,
+  the zero-polynomial wording in tag `08AC`, the grammar in tag `0B52`, the
+  missing zero branches in tags `0BEM`/`0DN4` and `0BEN`/`0EDE`, and the false
+  zero-support degree bound in tag `0F27`.
 - Validation: `intake.json`, `check.json`, and `mcheck.json` all PASS.
 - Builds: `topology.pdf`, `sheaves.pdf`, `modules.pdf`, `homology.pdf`,
   `coherent.pdf`, `cohomology.pdf`, `divisors.pdf`, `constructions.pdf`,
   `schemes.pdf`, `morphisms.pdf`, `derham.pdf`, `algebra.pdf`,
   `properties.pdf`, `varieties.pdf`, `simplicial.pdf`, `more-algebra.pdf`,
   `dualizing.pdf`, `local-cohomology.pdf`, `duality.pdf`,
-  `spaces-over-fields.pdf`, and `curves.pdf`
+  `spaces-over-fields.pdf`, `curves.pdf`, and `algebraization.pdf`
   completed; every
   affected statement page passed direct 1100 dpi visual inspection. See
   `qa.json`.
-- History blocks: 119 present, of which 115 are added relative to upstream
+- History blocks: 128 present, of which 124 are added relative to upstream
   base `a04446e57ec1fbc252a871afcec7752fb2807b14`, preserving the source's
   operator calculus,
   image-complex construction, two-covering double complex, and unproved
@@ -477,6 +481,39 @@
   resolves, no edited line creates an overfull box, both validators report
   PASS with empty error arrays, and the scope stops exactly before no. 81 on
   printed p. 276. The cumulative provenance surface is now 115 added history
-  blocks and 119 total.
-- Next unit: `fac:III:6:no:81`.
+  blocks and 119 total. No. 81 now closes the body of FAC with the exact
+  support-dimension degree theorem. Tags `01AT` and `01BA` give the stalkwise
+  support definition and closedness, while tags `00L4`, `00L7`, and `01YF`
+  replace the source's homogeneous primary-decomposition machinery by prime
+  filtrations and coherent devissage. The irrelevant homogeneous prime is
+  retained as an affine module possibility and excluded only after passing to
+  projective degree-zero localizations. Tags `08A0` and `0EGK` preserve the
+  regular-hyperplane sequence and first-difference proof, with all associated
+  primes rather than only minimal components and with the quotient written as
+  `i_*i^*F` on the ambient projective space. A new completely proved untagged
+  lemma states that the Hilbert polynomial of a nonzero coherent sheaf has
+  degree exactly the dimension of its support; the zero sheaf is stated
+  separately. Its generic-length and ample-positivity proof works over every
+  field and avoids silently importing the source's infinite-field hyperplane
+  choice into finite fields. Tag `0BEM` remains only an upper bound for
+  arbitrary invertible twists, since the trivial twist on a positive-
+  dimensional proper scheme is a counterexample to equality. Three bounded
+  read-only audits checked all 16 units, both authority pages, the exact target
+  gap, embedded-prime and finite-field counterexamples, zero conventions, and
+  the hard stop against committed base
+  `b3f7e318fc2a9bf268a54d5bf96eb48cf28cc2a8`; all made zero edits and spawned
+  zero downstream agents. Lead review reproduced every accepted finding and
+  propagated seven directly exposed target repairs: tags `0AYT`, `08A0`,
+  `08AC`, and `0B52`, the scheme/algebraic-space pairs `0BEM`/`0DN4` and
+  `0BEN`/`0EDE`, and formal-triple tag `0F27`. Authority physical pp. 81--82
+  and fourteen output pages across Modules, Algebra, Varieties, Algebraic
+  Spaces over Fields, and Algebraic and Formal Geometry passed direct 1100
+  dpi-equivalent inspection after repeated serial builds. Every introduced
+  reference resolves, no edited line creates an overfull box, both validators
+  report PASS with empty errors, and the scope stops exactly after Remark 2 on
+  printed p. 277, before Paris and the bibliography. No new printed-source
+  correction was needed; external `FAC-FR-T0044` remains only transcription
+  provenance. The cumulative provenance surface is now 124 added history
+  blocks and 128 total.
+- Next unit: `fac:bibliography`.
 - No statement is mapped by lexical similarity alone.

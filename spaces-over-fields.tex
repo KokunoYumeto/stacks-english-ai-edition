@@ -2838,7 +2838,7 @@ lemma.
 Let $k$ be a field. Let $X$ be a proper algebraic space over $k$.
 Let $\mathcal{F}$ be a coherent $\mathcal{O}_X$-module. Let
 $\mathcal{L}_1, \ldots, \mathcal{L}_r$ be invertible $\mathcal{O}_X$-modules.
-The map
+If $\mathcal{F} = 0$, the map below is zero. If $\mathcal{F} \not = 0$, the map
 $$
 (n_1, \ldots, n_r) \longmapsto
 \chi(X, \mathcal{F} \otimes
@@ -2850,6 +2850,8 @@ most the dimension of the scheme theoretic support of $\mathcal{F}$.
 \end{lemma}
 
 \begin{proof}
+If $\mathcal{F} = 0$, the assertion is immediate. Thus we may assume
+$\mathcal{F} \not = 0$.
 Let $Z \subset X$ be the scheme theoretic support of $\mathcal{F}$.
 Then $\mathcal{F} = i_*\mathcal{G}$ for some coherent
 $\mathcal{O}_Z$-module $\mathcal{G}$
@@ -3020,7 +3022,9 @@ support.
 Let $k$ be a field. Let $X$ be a proper algebraic space over $k$. Let
 $\mathcal{F}$ be a coherent $\mathcal{O}_X$-module. Let
 $\mathcal{L}_1, \ldots, \mathcal{L}_r$ be invertible $\mathcal{O}_X$-modules.
-Let $d = \dim(\text{Supp}(\mathcal{F}))$.
+If $\mathcal{F} = 0$, then the corresponding Euler characteristic map is
+zero. If $\mathcal{F} \not = 0$, let
+$d = \dim(\text{Supp}(\mathcal{F}))$.
 Let $Z_i \subset X$ be the irreducible components
 of $\text{Supp}(\mathcal{F})$ of dimension $d$. Let $\overline{x}_i$
 be a geometric generic point of $Z_i$ and set
@@ -3038,6 +3042,8 @@ is a numerical polynomial in $n_1, \ldots, n_r$ of total degree $< d$.
 \end{lemma}
 
 \begin{proof}
+The assertion for $\mathcal{F} = 0$ is immediate. Thus we may assume
+$\mathcal{F} \not = 0$.
 We first prove a slightly weaker statement. Namely, say
 $\dim(X) = N$ and let $X_i \subset X$ be the irreducible
 components of dimension $N$. Let $\overline{x}_i$ be a geometric
