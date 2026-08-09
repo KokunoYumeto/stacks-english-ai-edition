@@ -1192,3 +1192,72 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   joins, snapshots, controls, privacy, compile, validator, and diff gates and
   returned hard PASS. It did not substitute for the owner's visual-content
   judgment.
+
+### EGA I 4.2.1--4.2.5 and individual diagram V000015
+
+- Direct-French review advances through 4.2.5 and stops before 4.3.1. The
+  governing corrected source is `ega1-4-fr.tex`, 34,792 bytes, SHA-256
+  `A5F5CDAC81E654E9ABA75BBFEAD24F3010B122452C689B9EBAB5A7711B454EC1`,
+  admitted by F33, 14,944 bytes, SHA-256
+  `2652207F96F697935BC81C5D63B292DE4D956905D69CB92572225E320BB27F4C`.
+  P122/R45, P123/R46, and P124/R47 replay at respectively 10,598, 10,743,
+  and 10,336 bytes with SHA-256 `B188DC15970531829D52CDC27BEC574A7DC056E05C5BCB9814F326657C680B14`,
+  `859AE56FAFA479F12F68B1080E61100CD9B0F2C750DFA9041774516BC3CDF20C`,
+  and `49BAFE90DBC08F35258F8C1AB4C3B476971B3B9B5359667B8C9D0564CC4E6A54`.
+  Nine frozen units have exact I:122--I:124 locators; no page overlay was
+  required.
+- D000155--D000159 admit 36 edges S000555--S000590. D000160 admits the
+  individual visual receipt and D000161 records the later direct-source
+  referral. The slice adds 20 residuals R000354--R000373. The active scaffold
+  now has 586 edges across 207 source units and 370 residuals; physical history
+  has 590 edge rows and 373 residual
+  rows. Of the active edges 582 resolve to 211 distinct official tags and four
+  remain explicit local untagged integrations. There are 27 exact
+  full-statement equivalences and the four earlier bounded open gaps remain.
+- For 4.2.1, 01IO supplies the immersion definition, 01IM the exact unlabelled
+  canonical factorization, 01HH and 01HO its open and closed cases, and 01L7
+  plus 01S4 the mono and radicial consequences. For 4.2.2, 01HE and 0H7H split
+  the open criterion while 00AE and 01QO split the closed one; 01HI and 0FCZ
+  localize the locally closed case. The proof-level map and stalk ingredients
+  remain explicit rather than being promoted to a false single-tag theorem.
+- The printed 4.2.2 proof reverses the prose type of `theta_y^sharp`. I000051
+  binds the existing authority defect
+  `EG-EGA-I-P122-FR-422-THETA-DIRECTION-ERROR-001`; the proposition, the
+  four-edge square, the following argument, and the English correction all use
+  the correct direction from the pulled-back structure sheaf to `O_Y`.
+- Direct 5,000-dpi authority inspection also exposed a previously uncatalogued
+  4.2.3 defect: for `f=(psi,theta)` printed p.123 and the inherited English both
+  write `Gamma(psi)` for the induced global-sections homomorphism. EGA I 1.7.3
+  types that map as `Gamma(theta)`; the same one-point map on `Spec(C)` can
+  underlie both identity and conjugation, so the printed notation is not
+  recoverable from `psi`. I000052 and R000373 keep this canon-owned correction
+  explicit, and finding `EGA-I-4.2.3-P123-GAMMA-PSI-TYPE` was sent to the
+  French/English producer without writing its authority tree.
+- For 4.2.3 the affine closed-immersion criterion is honestly split between
+  01QO, affine duality 01I2, and quotient construction 01IG. For 4.2.4, 01JY
+  supplies necessity, 0FCZ the immersion sufficiency, 02L3 the stronger open
+  descent result, and 02L6 plus 01HL the closed case. The full composition
+  result 4.2.5 is exactly 02V0; 01QS is retained only as its closed subclaim.
+  Counterexamples preserve the affine-target and image-cover boundaries.
+- V000015 individually certifies `ega:I.4.2.2:diagram:xymatrix:1` from the
+  exact NUMDAM authority PDF page 122 box `238;178;128;72`, cumulative French
+  page 84 box `231;198;162;73`, and cumulative English page 314 box
+  `226;603;159;77`. The three grayscale 5,000-dpi crops are respectively
+  177,353, 388,385, and 409,414 bytes with SHA-256
+  `4F7AF7FC771985F3553AE1B310FB7883CCD9BC791B05084961662CE9A0E1444F`,
+  `ED8B2BFD003DD64A2D24B26746E6E5FF91BEC85991C9929F1702F0AD28E37FA2`,
+  and `F7B0885D7BA488272E2B787342592974EF5BA31B8F31C240568E70AA4E26B2FF`.
+  The owner inspected each at original detail: four objects, four ordinary
+  directed edges, all labels and subscripts, commutativity, geometry and label
+  sides match; no hook, equality, reverse, diagonal, or additional edge exists.
+  The corpus-wide I000049 gate remains open.
+- A000133--A000135 independently audited the pinned targets, direct French,
+  controls, generated-unit inventory, diagram graph, false near matches, and
+  collision surface. No authority tree, English or French edition source, or
+  Stacks chapter TeX was written by this graph-and-evidence checkpoint.
+- A000136 inverse-audited every semantic edge and residual after the
+  source-part and hypothesis-boundary repairs. A000137 independently replayed
+  the expanded correction referral, all three parent PDFs and V000015 crops,
+  append-only prefixes, snapshots, privacy, and no-TeX-write scope. Both
+  returned hard PASS without substituting for the owner's direct mathematical
+  or visual judgment.

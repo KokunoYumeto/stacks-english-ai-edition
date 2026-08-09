@@ -175,6 +175,18 @@ or published here.
   printed p.121 has unprimed `g` throughout the 4.1.9 proof. The English was
   already correct. Five genuinely blank frozen page locators are now guarded
   and overlaid append-only; an empty parsed guard is never a wildcard.
+- EGA I 4.2.1--4.2.5 now has direct-French statement proof and diagram
+  dispositions. Immersions are separated from their canonical locally closed
+  factorization; the open and closed criteria are split into topology and
+  stalk or sheaf conditions; and affine closed immersions and local-on-target
+  criteria retain their exact hypothesis boundaries. The printed 4.2.2 proof
+  contains the already catalogued reversal in the prose type of
+  `theta_y^sharp`; the proposition, diagram, continuation, and English
+  correction are mathematically coherent. No Stacks TeX change or new
+  mathematical gap was needed. Direct 5,000-dpi review additionally found that
+  4.2.3 prints the induced global map as `Gamma(psi)` although the typed sheaf
+  component is `theta`; diplomatic text stays untouched and D000161/I000052
+  refer `Gamma(theta)` to the owning corrected French and English layers.
 - D000153 and I000049 bind the strengthened diagram gate. The deterministic
   inventory contains 445 registered diagrams and 483 intricate-block
   candidates. D000154, I000050, and V000001--V000014 certify the first bounded
@@ -183,17 +195,19 @@ or published here.
   tightly bounded crop from direct authority, cumulative French, and cumulative
   English at an effective scale of at least 5,000 dpi, for 42 committed crop
   files. Complete graph or mathematical-chain masks passed and no EGA source or
-  render defect was found. The remaining 433 discovery diagrams and 481
+  render defect was found. D000160 and V000015 separately certify the newly
+  mapped 4.2.2 stalk square on all three surfaces. The remaining 432 discovery
+  diagrams and 481
   unselected block candidates remain explicitly uncertified; each future
   promotion requires its own active V row. Shared, full-page, and grouped crops
   do not qualify.
 - Current statement-level frontier: direct-French review is complete through
-  EGA I 4.1.10. The active graph has 550 edges across 198 generated units and
-  350 residual records; 546 edges resolve to 199 distinct existing official
+  EGA I 4.2.5. The active graph has 586 edges across 207 generated units and
+  370 residual records; 582 edges resolve to 211 distinct existing official
   tags and four resolve to explicitly untagged local integrations. Twenty-six
-  edges are exact full-statement equivalences. Four bounded mathematical gaps
-  remain open from earlier slices; subsection 4.1 adds none. The next cursor is
-  EGA I 4.2.1.
+  prior exact full-statement equivalences plus 4.2.5 make twenty-seven. Four
+  bounded mathematical gaps remain open from earlier slices; subsection 4.2
+  adds none. The next cursor is EGA I 4.3.1.
 
 ## State model
 
