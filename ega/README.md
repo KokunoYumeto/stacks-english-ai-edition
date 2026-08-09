@@ -175,13 +175,18 @@ or published here.
   printed p.121 has unprimed `g` throughout the 4.1.9 proof. The English was
   already correct. Five genuinely blank frozen page locators are now guarded
   and overlaid append-only; an empty parsed guard is never a wildcard.
-- D000153 and I000049 bind the strengthened diagram gate. All 445 registered
-  diagrams are being inventoried and every diagram already carrying a mapping
-  claim must be rechecked from its own tightly bounded direct-authority and
-  final-output crops at no less than 5,000 dpi-equivalent detail with explicit
-  non-edge verification. Shared or grouped crops do not qualify and intricate
-  standalone mathematical blocks receive the same custom gate. The
-  unreviewed discovery inventory is not silently promoted to diagram fidelity.
+- D000153 and I000049 bind the strengthened diagram gate. The deterministic
+  inventory contains 445 registered diagrams and 483 intricate-block
+  candidates. D000154, I000050, and V000001--V000014 certify the first bounded
+  queue: all twelve diagrams already carrying statement-map claims and two
+  exact-sequence blocks at the reviewed frontier. Each item has a separate
+  tightly bounded crop from direct authority, cumulative French, and cumulative
+  English at an effective scale of at least 5,000 dpi, for 42 committed crop
+  files. Complete graph or mathematical-chain masks passed and no EGA source or
+  render defect was found. The remaining 433 discovery diagrams and 481
+  unselected block candidates remain explicitly uncertified; each future
+  promotion requires its own active V row. Shared, full-page, and grouped crops
+  do not qualify.
 - Current statement-level frontier: direct-French review is complete through
   EGA I 4.1.10. The active graph has 550 edges across 198 generated units and
   350 residual records; 546 edges resolve to 199 distinct existing official
@@ -223,6 +228,12 @@ append-only.
 - `pages.csv`: append-only direct-authority page evidence for frozen discovery
   files whose printed-page markers are absent; raw-page guards make replay
   atomic and preserve every stable unit ID.
+- `vqa.csv` and `qa/{a,f,e}`: append-only per-item visual certifications and
+  their separate authority, cumulative-French, and cumulative-English crops.
+  Rows bind exact public parent-PDF keys, bytes, hashes, one-based physical
+  pages, bounded PDF-point boxes, effective scale, comparison mask, and
+  complete normalized signature. Historical V rows and crop bytes are never
+  overwritten when a later correction supersedes them.
 - `map.py`, `cand.csv`, and `map.json`: lexical candidate generation against
   the exact upstream Stacks snapshot. Candidates are not reviewed mappings.
 - `tmap.csv`: French-admitted topic-level bridges to existing Stacks sections;

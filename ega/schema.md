@@ -32,6 +32,30 @@ The identical per-item gate applies to intricate standalone mathematical
 blocks including dense arrays compatibility chains exact-sequence grids and
 unusual-symbol constructions.
 
+`vqa.csv` is the append-only visual-evidence ledger. A `V` row binds one
+stable diagram or selected mathematical-block ID to three separate evidence
+surfaces: direct authority, the cumulative French output, and the cumulative
+English output. These are three surfaces, not three languages. Each surface
+records the exact parent PDF record key, filename-bound byte count and SHA-256,
+one-based physical PDF page, top-left crop box in PDF points, committed
+individual PNG path, PNG bytes and SHA-256, and dpi-equivalent scale. The
+validator recomputes every PNG identity and checks its dimensions against the
+box and scale. It rejects shared paths, grouped crops, pages, stale parent-PDF
+identities, and scales below 5,000 dpi-equivalent. Profiles and masks state the
+required comparison dimensions; normalized signatures record the admitted
+complete graph or mathematical chain and explicitly include absent edges.
+Harmless punctuation differences between output and authority are named rather
+than silently normalized. Discovery units without an active certified `V` row
+remain visually unreviewed.
+The immutable first batch keeps its short `bNN` and `dNN` crop names. Every
+later V row, including a correction that supersedes one of those rows, uses a
+new QA-ID-derived crop path under each surface directory; the historical PNGs
+remain present and hash-checked. Only the active successor participates in
+item, locator, and crop-byte uniqueness and promotion closure. Its decision
+must be an active append-only visual-QA admission D row rather than reusing the
+first-batch decision by fiat, and every superseding V row must retain the exact
+same stable item ID as its predecessor.
+
 `printed_page` names the first printed page on which the generated unit begins.
 A separately generated diagram child therefore keeps its own first page even
 when its parent statement began earlier. When a frozen discovery witness lacks
@@ -56,8 +80,9 @@ from contaminating the other.
 Topic IDs use `ega-topic-<slug>`. Local Stacks labels may be recorded as
 evidence, but this branch never writes or claims an official Stacks tag.
 
-Decision, issue, feedback, statement-edge, residual, page-locator, and
-agent-run IDs use zero-padded `D`, `I`, `F`, `S`, `R`, `L`, and `A` prefixes.
+Decision, issue, feedback, statement-edge, residual, page-locator, visual-QA,
+and agent-run IDs use zero-padded `D`, `I`, `F`, `S`, `R`, `L`, `V`, and `A`
+prefixes.
 Rows are append-only. A correction names the earlier row in `supersedes`; it
 does not rewrite history.
 
@@ -152,4 +177,6 @@ A source unit can modify a Stacks chapter only when it has:
    historical, false, or unsupported);
 3. a reviewed mathematical rationale and dependencies;
 4. append-only issue and correction closure;
-5. bounded build and rendered-page checks for affected output.
+5. an active certified `V` row when the claim involves a diagram or selected
+   intricate standalone mathematical block;
+6. bounded build and rendered-page checks for affected output.

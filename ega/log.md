@@ -1130,3 +1130,65 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   crops and extend the gate to intricate standalone mathematical blocks. The
   owner reran the validator syntax target and diff gates after this control-only
   strengthening; no 4.1 mapping or authority byte changed.
+
+### First individual visual batch D000154 / I000050 / V000001--V000014
+
+- A000130 inventories 445 typed diagram units and 483 deterministic
+  intricate-mathematics candidates. The diagram-ID digest is
+  `92837AD5EDCF2F9EE0BEED3623E4BFC260D9B5977731B11F00D1E98451E00F08`;
+  the intricate-block locator digest is
+  `F9D6156800B48F681A4115B165AA62C2C5812F44A7EC1979412559526C95B4F4`.
+  The first queue consists of every diagram already used by the active
+  statement graph, twelve items, plus two exact-sequence blocks at the reviewed
+  frontier. The remaining 433 diagrams and 481 unselected block candidates
+  retain no visual-certification claim.
+- The three parent surfaces are exact and distinct: NUMDAM authority
+  `EGA_I_PMIHES_1960_4.pdf`, 31,680,717 bytes, SHA-256
+  `9ABA23020217535977E279BDD06A0413F48DA703086865BA4C00766C85DF4AE6`;
+  public cumulative French `zenodo:21859616/00_FR.pdf`, 1,974,323 bytes,
+  SHA-256
+  `1D4332295C2F572B7D555B05E9A5786632BA9DCB9F329CEAF448CAFC2BDEC6C7`;
+  and public cumulative English `zenodo:21859616/00_EN.pdf`, 14,589,396
+  bytes, SHA-256
+  `C70C13635EC53C10A2E1866EAB3BC9CA1B6F6601DCA8B344342DA901A70A0257`.
+  A provisional check against the shorter standalone English EGA I reader was
+  rejected before freeze because the controlling output is the cumulative
+  reader. Every English crop was regenerated from the exact public cumulative
+  byte stream.
+- Full-page 5,000-dpi rendering exceeded practical memory, so every item was
+  rendered by applying the 5,000/72 matrix only to its tight PDF-point clip.
+  This preserves the required effective detail without a heavy page-wide
+  allocation. The owner inspected all 42 crops individually at original
+  detail. Twelve complete directed graphs and two exact sequences passed the
+  object/term, edge, non-edge, direction, style, label, glyph, geometry, and
+  label-side masks. The only differences are recorded English terminal
+  punctuation on the two sequences and one diagram; no source-graph,
+  mathematical, or final-render defect was found.
+- `vqa.csv` is 13,674 bytes with SHA-256
+  `DD25067C21EE816D5243AA55846B667C3A1E075E331FEBB4A568EDD2FD2A81D3`.
+  V000001--V000014 bind 42 unique crop files totalling 12,625,106 bytes to
+  exact filename-qualified record keys, one-based physical pages, top-left
+  PDF-point boxes, crop bytes and hashes, effective scale, masks, signatures,
+  and D000154. I000050 closes only this bounded queue and deliberately does not
+  supersede the open corpus-wide I000049 gate.
+- The validator pins the immutable first-batch prefix while permitting later
+  append-only V successors under new QA-ID-derived paths. It rejects stale or
+  duplicate active items, paths, bytes, locators, symlink/root escapes,
+  unmanifested evidence, malformed or CRC-invalid PNGs, wrong parent records,
+  page overflow, nonfinite boxes, and any effective scale below 5,000 dpi.
+  Future mapped diagrams and selected intricate blocks cannot be promoted
+  without an active certified V row.
+- A000131 independently replayed every parent-PDF identity, page count,
+  one-based locator, CropBox bound, TeX locus, crop byte and hash, PNG structure,
+  effective scale, and nonclipping margin. It returned hard PASS within its
+  read-only locator, integrity, and governance scope; graph and mathematical
+  certification remained the owner's direct responsibility.
+- A000132 then adversarially audited append-only successor semantics and the
+  fail-closed validator. It caused four forward-history repairs: later rows use
+  new QA-ID paths, supersession cannot change the stable item, decisions must
+  be active visual-QA admissions, and active locator uniqueness uses canonical
+  parsed page and box values rather than lexical CSV spellings. After repair it
+  replayed the complete prefix, active-map closure, crop identities, source
+  joins, snapshots, controls, privacy, compile, validator, and diff gates and
+  returned hard PASS. It did not substitute for the owner's visual-content
+  judgment.

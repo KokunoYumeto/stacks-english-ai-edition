@@ -77,6 +77,18 @@
     "open_gaps": 4,
     "integrated_local_pending_upstream": 4
   },
+  "visual_qa_snapshot": {
+    "file": "vqa.csv",
+    "bytes": 13674,
+    "sha256": "DD25067C21EE816D5243AA55846B667C3A1E075E331FEBB4A568EDD2FD2A81D3",
+    "physical_rows": 14,
+    "active_rows": 14,
+    "superseded_rows": 0,
+    "certified_diagrams": 12,
+    "certified_mathblocks": 2,
+    "crop_files": 42,
+    "crop_bytes": 12625106
+  },
   "edition_interface": "interface.json",
   "correction_channel": "reports/findings.jsonl",
   "rules": {
@@ -86,6 +98,7 @@
     "decisions": "append_only with explicit supersession",
     "feedback": "append_only and independently evidenced",
     "promotion": "direct evidence plus bounded mathematical review",
+    "visual_promotion": "one active per-item authority French English V receipt at an effective scale of at least 5000 dpi before mapped diagram or selected intricate-block promotion",
     "remote_claims": "a pushed branch is a scaffold checkpoint, not corpus completion"
   }
 }

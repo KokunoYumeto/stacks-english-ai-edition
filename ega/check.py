@@ -2,8 +2,10 @@
 import csv
 import hashlib
 import json
+import math
 import re
 import tempfile
+import zlib
 from pathlib import Path
 
 from intake import PAGE_FIELDS, apply_page_evidence, load_page_evidence
@@ -42,6 +44,57 @@ def active_rows(data, id_field, table_name):
         else:
             superseded.add(prior)
     return [row for row in data if row[id_field] not in superseded], superseded
+
+
+def png_dimensions(raw):
+    """Return dimensions only for a structurally valid, CRC-clean PNG."""
+    if len(raw) < 45 or raw[:8] != b"\x89PNG\r\n\x1a\n":
+        return None
+    offset = 8
+    width = height = None
+    saw_idat = False
+    first = True
+    while offset < len(raw):
+        if offset + 12 > len(raw):
+            return None
+        length = int.from_bytes(raw[offset:offset + 4], "big")
+        chunk_type = raw[offset + 4:offset + 8]
+        data_start = offset + 8
+        data_end = data_start + length
+        chunk_end = data_end + 4
+        if chunk_end > len(raw):
+            return None
+        chunk_data = raw[data_start:data_end]
+        expected_crc = int.from_bytes(raw[data_end:chunk_end], "big")
+        if zlib.crc32(chunk_type + chunk_data) & 0xFFFFFFFF != expected_crc:
+            return None
+        if first:
+            if chunk_type != b"IHDR" or length != 13:
+                return None
+            width = int.from_bytes(chunk_data[0:4], "big")
+            height = int.from_bytes(chunk_data[4:8], "big")
+            bit_depth = chunk_data[8]
+            colour_type = chunk_data[9]
+            valid_depths = {
+                0: {1, 2, 4, 8, 16}, 2: {8, 16}, 3: {1, 2, 4, 8},
+                4: {8, 16}, 6: {8, 16},
+            }
+            if (width <= 0 or height <= 0 or
+                    bit_depth not in valid_depths.get(colour_type, set()) or
+                    chunk_data[10] != 0 or chunk_data[11] != 0 or
+                    chunk_data[12] not in {0, 1}):
+                return None
+            first = False
+        elif chunk_type == b"IHDR":
+            return None
+        if chunk_type == b"IDAT":
+            saw_idat = True
+        if chunk_type == b"IEND":
+            if length != 0 or not saw_idat or chunk_end != len(raw):
+                return None
+            return width, height
+        offset = chunk_end
+    return None
 
 
 def check_page_evidence_atomicity():
@@ -158,8 +211,12 @@ if current_receipt not in admitted_receipts:
 
 decision_rows = rows("dec.csv")
 issue_rows = rows("issues.csv")
-active_rows(decision_rows, "decision_id", "dec.csv")
+active_decision_rows, superseded_decisions = active_rows(
+    decision_rows, "decision_id", "dec.csv")
 decision_by_id = {row["decision_id"]: row for row in decision_rows}
+active_decision_by_id = {
+    row["decision_id"]: row for row in active_decision_rows
+}
 issue_by_id = {row["issue_id"]: row for row in issue_rows}
 issue_positions = {
     row["issue_id"]: index for index, row in enumerate(issue_rows)
@@ -203,6 +260,39 @@ if i41 is None or not (
         i41.get("status") == "resolved" and
         i41.get("supersedes") == "I000040"):
     ERRORS.append("missing or invalid I000041 append-only repair issue")
+d154 = decision_by_id.get("D000154")
+if d154 is None or not (
+        d154.get("subject_id") == "ega:visual-qa" and
+        d154.get("action") ==
+        "admit_first_individual_authority_french_english_visual_batch" and
+        d154.get("state") == "active"):
+    ERRORS.append("missing or invalid D000154 visual-QA admission decision")
+i49 = issue_by_id.get("I000049")
+if i49 is None or not (
+        i49.get("subject_id") == "ega:diagrams" and
+        i49.get("kind") == "legacy_diagram_certification_below_new_floor" and
+        i49.get("status") == "open" and
+        i49.get("issue_id") not in superseded_issues):
+    ERRORS.append("missing or invalid open corpus-wide visual-QA gate")
+i50 = issue_by_id.get("I000050")
+if i50 is None or not (
+        i50.get("subject_id") == "ega:diagrams" and
+        i50.get("kind") == "initial_mapped_visual_queue_certified" and
+        i50.get("status") == "resolved" and
+        not i50.get("supersedes")):
+    ERRORS.append("missing or invalid bounded visual-QA completion issue")
+a130 = next(
+    (row for row in rows("agent.csv") if row.get("run_id") == "A000130"),
+    None,
+)
+if a130 is None or not (
+        a130.get("task_id") == "/root/ega_i_1111_1115" and
+        a130.get("scope") ==
+        "R184 typed-diagram and intricate-mathematics visual-certification inventory" and
+        a130.get("status") == "completed" and
+        a130.get("disposition") ==
+        "accepted as read-only gate inventory; certification now supplied"):
+    ERRORS.append("missing or invalid A000130 visual inventory audit")
 
 tables = {
     "src.csv": ("source_id", re.compile(r"ega\.[a-z0-9.-]+$")),
@@ -212,6 +302,7 @@ tables = {
     "fb.csv": ("feedback_id", re.compile(r"F\d{6}$")),
     "agent.csv": ("run_id", re.compile(r"A\d{6}$")),
     "pages.csv": ("locator_id", re.compile(r"L\d{6}$")),
+    "vqa.csv": ("qa_id", re.compile(r"V\d{6}$")),
 }
 
 counts = {}
@@ -221,6 +312,8 @@ generated = {
     "units.csv": "unit_id",
 }
 page_evidence_summary = None
+visual_qa_summary = None
+vqa_active_by_item = {}
 intake_path = ROOT / "intake.json"
 for name, field in generated.items():
     path = ROOT / name
@@ -413,6 +506,348 @@ if (ROOT / "units.csv").exists() and (ROOT / "files.csv").exists():
             ERRORS.append("scope page-evidence snapshot does not match pages.csv")
     else:
         ERRORS.append("missing pages.csv")
+
+vqa_path = ROOT / "vqa.csv"
+expected_vqa_header = [
+    "qa_id", "item_id", "item_kind", "source_unit",
+    "a_record", "a_pdf_sha256", "a_pdf_bytes", "a_page1", "a_box_pt", "a_file",
+    "a_bytes", "a_sha256", "a_dpi",
+    "f_record", "f_pdf_sha256", "f_pdf_bytes", "f_page1", "f_box_pt", "f_file",
+    "f_bytes", "f_sha256", "f_dpi",
+    "e_record", "e_pdf_sha256", "e_pdf_bytes", "e_page1", "e_box_pt", "e_file",
+    "e_bytes", "e_sha256", "e_dpi",
+    "profile", "mask", "signature", "difference", "status",
+    "decision_id", "supersedes",
+]
+baseline_vqa_items = {
+    "ega:I.1.3.9:proof:mathblock:1": "b01",
+    "ega:I.1.3.9:proof:mathblock:2": "b02",
+    "ega:I.1.7.3:diagram:xymatrix:1": "d01",
+    "ega:I.2.4.1:diagram:xymatrix:1": "d02",
+    "ega:I.2.5.2:diagram:xymatrix:1": "d03",
+    "ega:I.3.3.2:diagram:xymatrix:1": "d04",
+    "ega:I.3.3.6:diagram:xymatrix:1": "d05",
+    "ega:I.3.3.9:diagram:xymatrix:1": "d06",
+    "ega:I.3.3.11:diagram:xymatrix:1": "d07",
+    "ega:I.3.4.3:diagram:xymatrix:1": "d08",
+    "ega:I.3.4.8:diagram:xymatrix:1": "d09",
+    "ega:I.3.5.3:diagram:xymatrix:1": "d10",
+    "ega:I.3.5.5:diagram:xymatrix:1": "d11",
+    "ega:I.3.5.10:diagram:xymatrix:1": "d12",
+}
+baseline_vqa_ids = {
+    f"V{number:06d}": (item_id, short)
+    for number, (item_id, short) in enumerate(
+        baseline_vqa_items.items(), start=1)
+}
+if not vqa_path.exists():
+    ERRORS.append("missing vqa.csv")
+else:
+    raw_vqa = vqa_path.read_bytes()
+    vqa_lines = raw_vqa.decode("utf-8").splitlines()
+    if not vqa_lines or vqa_lines[0].split(",") != expected_vqa_header:
+        ERRORS.append("unexpected vqa.csv header")
+    all_vqa_rows = rows("vqa.csv")
+    counts["vqa.csv"] = len(all_vqa_rows)
+    vqa_ids = [row["qa_id"] for row in all_vqa_rows]
+    if vqa_ids != [f"V{number:06d}" for number in range(1, len(vqa_ids) + 1)]:
+        ERRORS.append("vqa.csv IDs are not contiguous in append order")
+    for row in all_vqa_rows:
+        if None in row:
+            ERRORS.append(f"extra CSV field in vqa row {row.get('qa_id')}")
+        for field in expected_vqa_header[:-1]:
+            if not (row.get(field) or "").strip():
+                ERRORS.append(f"blank {field} in vqa row {row.get('qa_id')}")
+        if row.get("supersedes") is None:
+            ERRORS.append(
+                f"vqa row lacks explicit supersedes field {row.get('qa_id')}")
+    if len(vqa_lines) >= 15:
+        first_batch = ("\n".join(vqa_lines[:15]) + "\n").encode("utf-8")
+        if (len(first_batch) != 13674 or
+                hashlib.sha256(first_batch).hexdigest().upper() !=
+                "DD25067C21EE816D5243AA55846B667C3A1E075E331FEBB4A568EDD2FD2A81D3"):
+            ERRORS.append("published V000001-V000014 visual-QA prefix changed")
+    else:
+        ERRORS.append("vqa.csv lacks the first fourteen certified rows")
+    active_vqa_rows, superseded_vqa_rows = active_rows(
+        all_vqa_rows, "qa_id", "vqa.csv")
+    vqa_by_id = {row["qa_id"]: row for row in all_vqa_rows}
+    for row in all_vqa_rows:
+        prior_id = (row.get("supersedes") or "").strip()
+        prior = vqa_by_id.get(prior_id)
+        if prior is not None and row["item_id"] != prior["item_id"]:
+            ERRORS.append(
+                f"visual-QA successor changes item {row['qa_id']} -> {prior_id}")
+    active_vqa_ids = {row["qa_id"] for row in active_vqa_rows}
+    active_vqa_items = [row["item_id"] for row in active_vqa_rows]
+    if len(active_vqa_items) != len(set(active_vqa_items)):
+        ERRORS.append("multiple active visual-QA rows for one item")
+    vqa_active_by_item = {row["item_id"]: row for row in active_vqa_rows}
+    missing_baseline = set(baseline_vqa_items) - set(vqa_active_by_item)
+    if missing_baseline:
+        ERRORS.append(
+            f"missing baseline visual-QA items {sorted(missing_baseline)}")
+
+    record_expectations = {
+        "a": (
+            "NUMDAM:EGA_I_PMIHES_1960_4.pdf",
+            "9ABA23020217535977E279BDD06A0413F48DA703086865BA4C00766C85DF4AE6",
+            31680717,
+        ),
+        "f": (
+            "zenodo:21859616/00_FR.pdf",
+            "1D4332295C2F572B7D555B05E9A5786632BA9DCB9F329CEAF448CAFC2BDEC6C7",
+            1974323,
+        ),
+        "e": (
+            "zenodo:21859616/00_EN.pdf",
+            "C70C13635EC53C10A2E1866EAB3BC9CA1B6F6601DCA8B344342DA901A70A0257",
+            14589396,
+        ),
+    }
+    record_page_counts = {"a": 227, "f": 165, "e": 1345}
+    authority_page_geometry = {
+        86: (536, 727),
+        96: (543, 727),
+        100: (538, 725),
+        102: (531, 729),
+        107: (604, 755),
+        108: (608, 758),
+        109: (595, 748),
+        111: (606, 756),
+        113: (603, 754),
+        114: (602, 753),
+        116: (607, 757),
+    }
+    baseline_vqa_pages = {
+        "b01": (86, 60, 284), "b02": (86, 60, 284),
+        "d01": (96, 66, 291), "d02": (100, 69, 297),
+        "d03": (102, 71, 299), "d04": (107, 74, 303),
+        "d05": (108, 74, 303), "d06": (108, 75, 304),
+        "d07": (109, 75, 304), "d08": (111, 77, 306),
+        "d09": (113, 78, 307), "d10": (114, 79, 308),
+        "d11": (114, 79, 309), "d12": (116, 80, 310),
+    }
+    expected_masks = {
+        "diagram": (
+            "diagram-v1",
+            "objects|edges|nonedges|directions|arrow_styles|hooks|equalities|"
+            "labels|primes|bars|subscripts|geometry|label_sides",
+        ),
+        "mathblock": (
+            "mathblock-v1",
+            "terms|order|arrows|zeros|operators|primes|bars|subscripts|"
+            "spacing|line_isolation",
+        ),
+    }
+    allowed_differences = {
+        "none", "english-trailing-comma-only",
+        "english-trailing-period-only",
+    }
+    crop_paths = []
+    active_crop_hashes = []
+    active_crop_locators = []
+    crop_bytes = 0
+    certified_diagrams = 0
+    certified_mathblocks = 0
+    for row in all_vqa_rows:
+        item_id = row["item_id"]
+        baseline_entry = baseline_vqa_ids.get(row["qa_id"])
+        if baseline_entry is not None:
+            expected_item, expected_short = baseline_entry
+            if item_id != expected_item:
+                ERRORS.append(f"visual-QA baseline item mismatch {row['qa_id']}")
+        else:
+            expected_short = row["qa_id"].lower()
+        source = units_by_id.get(row["source_unit"])
+        if source is None:
+            ERRORS.append(f"visual-QA row has unknown source unit {row['qa_id']}")
+        if row["item_kind"] == "diagram":
+            certified_diagrams += row["qa_id"] in active_vqa_ids
+            if source is not None and source["kind"] != "diagram":
+                ERRORS.append(f"visual-QA diagram source is not a diagram {row['qa_id']}")
+            if row["item_id"] != row["source_unit"]:
+                ERRORS.append(f"visual-QA diagram item/source mismatch {row['qa_id']}")
+            if not row["signature"].endswith(
+                    ";ordinary;no-hooks;no-equalities;no-other-edges"):
+                ERRORS.append(f"incomplete diagram graph signature {row['qa_id']}")
+        elif row["item_kind"] == "mathblock":
+            certified_mathblocks += row["qa_id"] in active_vqa_ids
+            suffix = row["item_id"].removeprefix(
+                row["source_unit"] + ":mathblock:")
+            if (not row["item_id"].startswith(
+                    row["source_unit"] + ":mathblock:") or
+                    not suffix.isdigit()):
+                ERRORS.append(f"invalid visual-QA mathblock identity {row['qa_id']}")
+            if source is not None and source["kind"] != "proof":
+                ERRORS.append(f"visual-QA mathblock source is not a proof {row['qa_id']}")
+        else:
+            ERRORS.append(f"invalid visual-QA item kind {row['qa_id']}")
+            continue
+        profile, mask = expected_masks[row["item_kind"]]
+        if row["profile"] != profile or row["mask"] != mask:
+            ERRORS.append(f"wrong visual-QA profile or mask {row['qa_id']}")
+        if row["difference"] not in allowed_differences:
+            ERRORS.append(f"uncontrolled visual-QA difference {row['qa_id']}")
+        if row["status"] != "certified":
+            ERRORS.append(f"non-certified visual-QA row {row['qa_id']}")
+        admission = active_decision_by_id.get(row["decision_id"])
+        if admission is None:
+            ERRORS.append(
+                f"visual-QA row lacks an active decision {row['qa_id']}")
+        elif (admission.get("subject_id") != "ega:visual-qa" or
+                admission.get("state") != "active" or
+                not admission.get("action", "").startswith("admit_")):
+            ERRORS.append(
+                f"visual-QA row cites a non-admission decision {row['qa_id']}")
+        if baseline_entry is not None and row["decision_id"] != "D000154":
+            ERRORS.append(f"visual-QA baseline row has wrong decision {row['qa_id']}")
+
+        if baseline_entry is not None:
+            try:
+                actual_pages = tuple(
+                    int(row[f"{language}_page1"])
+                    for language in ("a", "f", "e")
+                )
+            except ValueError:
+                actual_pages = None
+            if actual_pages != baseline_vqa_pages[expected_short]:
+                ERRORS.append(f"visual-QA baseline page mismatch {row['qa_id']}")
+
+        for language in ("a", "f", "e"):
+            record, pdf_sha, pdf_bytes = record_expectations[language]
+            if (row[f"{language}_record"] != record or
+                    row[f"{language}_pdf_sha256"] != pdf_sha or
+                    row[f"{language}_pdf_bytes"] != str(pdf_bytes)):
+                ERRORS.append(
+                    f"visual-QA record identity mismatch {row['qa_id']} {language}")
+            try:
+                page1 = int(row[f"{language}_page1"])
+                dpi = int(row[f"{language}_dpi"])
+                box = [float(value) for value in row[f"{language}_box_pt"].split(";")]
+            except ValueError:
+                ERRORS.append(
+                    f"invalid visual-QA numeric locator {row['qa_id']} {language}")
+                continue
+            if (page1 <= 0 or page1 > record_page_counts[language] or
+                    dpi < 5000 or len(box) != 4 or
+                    not all(math.isfinite(value) for value in box) or
+                    box[0] < 0 or box[1] < 0 or box[2] <= 0 or box[3] <= 0):
+                ERRORS.append(
+                    f"visual-QA locator below gate {row['qa_id']} {language}")
+                continue
+            if language == "a":
+                geometry = authority_page_geometry.get(page1)
+            elif language == "f":
+                geometry = (595.276, 841.89)
+            else:
+                geometry = (612, 792)
+            if geometry is None:
+                ERRORS.append(
+                    f"unbound visual-QA page geometry {row['qa_id']} {language}")
+                continue
+            if (box[0] + box[2] > geometry[0] + 0.01 or
+                    box[1] + box[3] > geometry[1] + 0.01):
+                ERRORS.append(
+                    f"visual-QA crop leaves page box {row['qa_id']} {language}")
+                continue
+            expected_path = f"qa/{language}/{expected_short}.png"
+            relative_text = row[f"{language}_file"]
+            if relative_text != expected_path:
+                ERRORS.append(
+                    f"visual-QA crop path mismatch {row['qa_id']} {language}")
+            relative = Path(relative_text)
+            if relative.is_absolute() or ".." in relative.parts:
+                ERRORS.append(
+                    f"unsafe visual-QA crop path {row['qa_id']} {language}")
+                continue
+            crop = ROOT / relative
+            crop_paths.append(relative_text)
+            if not crop.is_file():
+                ERRORS.append(
+                    f"missing visual-QA crop {row['qa_id']} {language}")
+                continue
+            expected_crop_root = (ROOT / "qa" / language).resolve()
+            resolved_crop = crop.resolve()
+            try:
+                resolved_crop.relative_to(expected_crop_root)
+            except ValueError:
+                ERRORS.append(
+                    f"visual-QA crop escapes language root {row['qa_id']} {language}")
+                continue
+            if crop.is_symlink():
+                ERRORS.append(
+                    f"visual-QA crop may not be a symlink {row['qa_id']} {language}")
+                continue
+            raw_crop = crop.read_bytes()
+            crop_bytes += len(raw_crop)
+            try:
+                expected_bytes = int(row[f"{language}_bytes"])
+            except ValueError:
+                ERRORS.append(
+                    f"invalid visual-QA byte count {row['qa_id']} {language}")
+                continue
+            if len(raw_crop) != expected_bytes:
+                ERRORS.append(
+                    f"visual-QA crop byte mismatch {row['qa_id']} {language}")
+            if (not re.fullmatch(r"[0-9A-F]{64}", row[f"{language}_sha256"]) or
+                    hashlib.sha256(raw_crop).hexdigest().upper() !=
+                    row[f"{language}_sha256"]):
+                ERRORS.append(
+                    f"visual-QA crop hash mismatch {row['qa_id']} {language}")
+            if row["qa_id"] in active_vqa_ids:
+                active_crop_hashes.append(row[f"{language}_sha256"])
+                active_crop_locators.append((
+                    row[f"{language}_record"], row[f"{language}_pdf_sha256"],
+                    page1, tuple(box),
+                ))
+            dimensions = png_dimensions(raw_crop)
+            if dimensions is None:
+                ERRORS.append(
+                    f"visual-QA crop is not a valid CRC-clean PNG "
+                    f"{row['qa_id']} {language}")
+                continue
+            width, height = dimensions
+            expected_width = box[2] * dpi / 72
+            expected_height = box[3] * dpi / 72
+            if (abs(width - expected_width) > 3 or
+                    abs(height - expected_height) > 3):
+                ERRORS.append(
+                    f"visual-QA crop dimensions contradict box/dpi "
+                    f"{row['qa_id']} {language}")
+            effective_dpi = min(width * 72 / box[2], height * 72 / box[3])
+            if effective_dpi < 5000:
+                ERRORS.append(
+                    f"visual-QA effective scale below 5000 dpi "
+                    f"{row['qa_id']} {language}")
+    if len(crop_paths) != len(set(crop_paths)):
+        ERRORS.append("visual-QA evidence reuses a crop file")
+    if len(active_crop_hashes) != len(set(active_crop_hashes)):
+        ERRORS.append("active visual-QA evidence reuses crop bytes")
+    if len(active_crop_locators) != len(set(active_crop_locators)):
+        ERRORS.append("active visual-QA evidence reuses a source locator")
+    discovered_qa_files = {
+        path.relative_to(ROOT).as_posix()
+        for language in ("a", "f", "e")
+        for path in (ROOT / "qa" / language).rglob("*")
+        if path.is_file()
+    }
+    if discovered_qa_files != set(crop_paths):
+        ERRORS.append("visual-QA directory and manifest file sets differ")
+    visual_qa_summary = {
+        "file": "vqa.csv",
+        "bytes": len(raw_vqa),
+        "sha256": hashlib.sha256(raw_vqa).hexdigest().upper(),
+        "physical_rows": len(all_vqa_rows),
+        "active_rows": len(active_vqa_rows),
+        "superseded_rows": len(superseded_vqa_rows),
+        "certified_diagrams": certified_diagrams,
+        "certified_mathblocks": certified_mathblocks,
+        "crop_files": len(crop_paths),
+        "crop_bytes": crop_bytes,
+    }
+    if scope.get("visual_qa_snapshot") != visual_qa_summary:
+        ERRORS.append("scope visual-QA snapshot does not match vqa.csv and crops")
 
 if intake_path.exists():
     intake = json.loads(intake_path.read_text(encoding="utf-8"))
@@ -623,6 +1058,14 @@ if smap_path.exists():
     ]
     if len(semantic_edge_keys) != len(set(semantic_edge_keys)):
         ERRORS.append("duplicate active semantic edge in smap.csv")
+    mapped_diagram_units = {
+        row["source_unit"] for row in statement_edges
+        if units_by_id.get(row["source_unit"], {}).get("kind") == "diagram"
+    }
+    missing_diagram_qa = mapped_diagram_units - set(vqa_active_by_item)
+    if missing_diagram_qa:
+        ERRORS.append(
+            f"mapped diagrams lack active visual QA {sorted(missing_diagram_qa)}")
 
     unit_ids = {row["unit_id"] for row in rows("units.csv")}
     decision_ids = {row["decision_id"] for row in rows("dec.csv")}
