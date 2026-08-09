@@ -196,6 +196,10 @@ if interface.get("status") != "active" or interface.get("ownership", {}).get("cr
     ERRORS.append("edition interface is not active/read-only")
 if interface.get("english_discovery", {}).get("manifest_sha256") != scope["inputs"]["english_discovery"]["manifest_sha256"]:
     ERRORS.append("edition interface English manifest mismatch")
+for field in ("latest_manifest", "latest_manifest_bytes", "latest_manifest_sha256"):
+    if (interface.get("english_discovery", {}).get(field) !=
+            scope["inputs"]["english_discovery"].get(field)):
+        ERRORS.append(f"edition interface latest English {field} mismatch")
 if interface.get("french_cursor", {}).get("page_gate_sha256") != scope["inputs"]["french_authority"]["page_gate_sha256"]:
     ERRORS.append("edition interface French page-gate mismatch")
 admitted_receipts = {
@@ -396,6 +400,10 @@ if (ROOT / "units.csv").exists() and (ROOT / "files.csv").exists():
         "ega:I.4.1.1": "I:119",
         "ega:I.4.1.2": "I:119",
         "ega:I.4.1.2:proof": "I:120",
+        "ega:section:I.5": "I:127",
+        "ega:subsection:I.5.1": "I:127",
+        "ega:I.5.1.1": "I:127",
+        "ega:I.5.1.1:proof": "I:128",
     }
     for unit_id, expected_page in page_regressions.items():
         row = units_by_id.get(unit_id)
@@ -447,6 +455,14 @@ if (ROOT / "units.csv").exists() and (ROOT / "files.csv").exists():
                 "EGA1_CHAPTER1_P120_VALIDATION_R43.json",
                 "4721AB517C81B0770246C1F1CC1A4FF1C579FB50A0392A767E83DD9B51F5EF20",
             ): "I:120",
+            (
+                "EGA1_CHAPTER1_P127_VALIDATION_R50.json",
+                "D631DC20C4EF98C822AA61FF29A02176382A23E40077C1D36338FE359E80EA25",
+            ): "I:127",
+            (
+                "EGA1_CHAPTER1_P128_VALIDATION_R51.json",
+                "94F833E316F3726489EEF9254871BB55B12EBA691B7BFEAF918F76C285A7DE41",
+            ): "I:128",
         }
         for row in all_page_rows:
             if None in row:

@@ -255,7 +255,7 @@ append-only.
 - `intake.py`: deterministic manifest verification and metadata-only unit
   extraction; it does not copy source prose.
 - `r184.py`: exact no-overwrite reconstruction of the frozen R184 discovery
-  tree from the sealed six-file R215 English successor using hash-guarded inverse
+  tree from the sealed eight-file R219 English successor using hash-guarded inverse
   operations; it never mutates the edition source.
 - `files.csv`, `units.csv`, and `intake.json`: generated exact-file inventory,
   stable unit registry, and fail-closed intake receipt.
@@ -290,41 +290,58 @@ append-only.
   direct-authority crops for source-error evidence; these are not edition
   outputs or three-surface visual certifications.
 
-### Current reviewed frontier: EGA I 4.5.1--4.5.5
+### Current reviewed frontier: EGA I 5.1.1--5.1.4
 
-The historical local-immersion subsection through Proposition 4.5.5 is now
-admitted from F33 and direct printed pp.126--127. Thirty-three active edges
-S000645--S000677 cover all seven statement/proof units; residuals
-R000415--R000442 keep the missing modern terminology packages, affine-only
-specializations, derived chart arguments, source corrections, and hypothesis
-counterexamples explicit. The active statement graph has 673 edges across
-229 source units and 439 residuals; physical append-only history has 677 edge
-rows and 442 residual rows. Of the active edges, 669 resolve to 220 distinct
-official tags and four remain explicit local untagged integrations. Exact
-full-statement equivalences remain 29.
+The opening reduction subsection is admitted from F33 and direct printed
+pp.127--128. Thirty-five active edges S000678--S000714, excluding superseded
+S000689 and S000704, cover seven generated
+statement/proof units and the three ungenerated terminology or consequence
+blocks. Residuals R000443--R000468 keep two genuine labelled-coverage gaps and
+every derived or stronger boundary explicit. The active graph has 708 edges
+across 236 source units and 465 residuals; physical append-only history has
+714 edge rows and 468 residual rows. Of the active edges 704 resolve to 227
+distinct official tags and four remain explicit local untagged integrations.
+Exact full-statement equivalences remain 29 and open gaps increase from four
+to six.
 
-Tags 01HK and 01IO split the source-point definition of local immersion;
-01HE supplies the local open charts for historical local isomorphisms while
-096E remains only its affine ring-map specialization. The global
-characterizations in 4.5.3 use 0FCZ only after the homeomorphism or injectivity
-hypotheses turn source-local charts into full inverse-image charts; 01IQ gives
-the closed-image specialization. Proposition 4.5.4 is a genuinely composite
-004V--01RJ--01HK--0FCZ argument and is not strengthened to an open immersion.
-Proposition 4.5.5 uses 02V0, 01JR, 01JY, and 01JX; affine tags 096F and 096G
-remain partial witnesses and the proof-level two-factor decomposition under
-01KU remains explicitly unlabelled.
+EGA I 5.1.1 exposes both new gaps. The pinned Stacks tree has no labelled
+result packaging the nilradicals of the stalks of an arbitrary quasi-coherent
+algebra into a unique quasi-coherent ideal module and no single tag stating
+that nilradical commutes with localization. Tags 01I7 01LA and 0544 supply the
+affine sheaf locality and easy-extension ingredients only. In particular
+01J3 is not substituted for the general algebra statement: it covers only the
+structure-sheaf reduction specialization.
 
-Printed p.127 contains two already catalogued proof defects. Q000003 confirms
-the transitivity citation `4.2.4`, which must read `4.2.5`; Q000004 confirms
-that `z` and `z'` are used before being introduced. D000178--D000180,
-I000055--I000056, the append-only findings, and individual tight
-5,000-dpi-equivalent receipts `455c.png` and `455z.png` preserve diplomatic
-print while binding the corrected readings. The subsection has no diagram,
-display, equation, or intricate standalone block and therefore creates no V
-item; the corpus-wide I000049 visual gate remains open.
+The inverse audit also corrected two control claims append-only. S000713
+limits 00E0 to the intersection-of-primes identity rather than attributing the
+preceding full-support implication to that tag. S000714 records that the
+paragraph after 5.1.4 uses the already-defined notion of local integrality;
+it does not define the term anew. Q000005 is a tight 5,000-dpi authority-only
+receipt for the newly detected printed cross-reference `2.1.7`, which must
+read `2.1.8`: 2.1.7 concerns open restrictions, whereas 2.1.8 defines
+integral and locally integral schemes. Diplomatic French remains unchanged.
+
+Corollary 5.1.2 and Definition 5.1.3 are the modern reduction package. Tags
+01J3 and 01J4 give the unique reduced full-support structure; 0BR6 gives the
+underlying homeomorphism without an isomorphism claim; and 0356 derives the
+minimality factorization. Proposition 5.1.4 has the exact reduced affine half
+01J2 while its integral half splits through 01ON 00ES 00E0 and 01OK. The
+following locally-integral paragraph keeps its weaker hypothesis that the
+underlying topology is locally Noetherian. Tags 0052 01J0 00ET and 0BX3(3)
+cover the converse; 0568 records failure when that topological hypothesis is
+removed. Neither a locally Noetherian scheme hypothesis nor global
+integrality is silently substituted.
+
+D000181 and L000024--L000027 repair the four genuinely blank frozen locators:
+section I.5 subsection I.5.1 and the 5.1.1 statement are I:127 while its proof
+is I:128. R51's printed `defined Y by` word-order defect remains diplomatic
+and I000057 reuses the already catalogued corrected reading. This slice has no
+diagram display equation or intricate standalone block and therefore creates
+no V row. The first display and diagram occur in 5.1.5 and remain subject to
+the individual three-surface 5,000-dpi gate; corpus-wide I000049 stays open.
 
 The immediate work is sequential statement-level comparison across EGA 0--IV,
-continuing in the direct-French body after EGA I 4.5.5 at EGA I 5.1.1. The
+continuing in the direct-French body at EGA I 5.1.5. The
 latest sealed French interface marker is F37T through EGA II printed p.37;
 every reviewed EGA I claim remains bound to its own exact historical receipt.
 Discovery unit I.3.2.9 remains in a separate authority-pending queue for its

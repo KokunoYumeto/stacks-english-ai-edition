@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reconstruct the exact frozen R184 discovery tree from its known successor."""
+"""Reconstruct the exact frozen R184 discovery tree from sealed R219."""
 
 import argparse
 import hashlib
@@ -12,7 +12,7 @@ MANIFEST_BYTES = 92_445
 MANIFEST_SHA256 = "5C64ECD32FD7C5458D2599D70ED667D2CF06D95517EFFA9C6D6DCEF7626913A0"
 TREE_SHA256 = "3BFB1C5103093481246EF4A6365E08544F6D5E19ACC0EA63E717F3F3643F064D"
 SUCCESSOR_BYTES = 7_283_691
-SUCCESSOR_TREE_SHA256 = "FB74DC982C560AD5E154C8300D93FB0FFA9EE4754342ACE1DC7D9612A1172BB4"
+SUCCESSOR_TREE_SHA256 = "AD9F9A8A17882E5DF5EE4D1CFB1EAC03EBF5E22826B97A98207A2C220D106D22"
 
 
 def sha(data):
@@ -44,6 +44,17 @@ def invert_ega0_1(data):
     return replace_at(
         data, 19_753, b"_", b"^", 33_832,
         "1FEC1B0BF5C558633512545C460F97BEEA7789FC77BBA709AEBB693C5C2113F7",
+    )
+
+
+def invert_ega0_3(data):
+    data = replace_at(
+        data, 22_662, b"_", b"^", 47_181,
+        "BACB39CBD6BBCA7311AB73E970559351E5F317E3C135C0DB49F1BBC9964818E5",
+    )
+    return replace_at(
+        data, 22_224, b"_", b"^", 47_181,
+        "4A999C21EA00458A1C3B5537F17858B6E89FF598357BFF083DC31B05FA0C3A3A",
     )
 
 
@@ -113,6 +124,16 @@ def invert_ega1_4(data):
     )
 
 
+def invert_ega1_5(data):
+    return replace_at(
+        data, 3_384,
+        b"prescheme \\sref{I.2.1.8}, it is necessary",
+        b"prescheme \\sref{I.2.1.7}, it is necessary",
+        47_538,
+        "E4E6D19A7C19B69E61CBBE8792DB0EED1AD6DAA0DD559E61811057F11641651C",
+    )
+
+
 def invert_ega2_2(data):
     data = replace_at(
         data, 52_292,
@@ -143,6 +164,11 @@ INVERSES = {
         "1C856A83AEA956E9E201D12C16D3C43917AD8420BBD64720F53792CAEE741957",
         invert_ega0_1,
     ),
+    "ega0/ega0-3.tex": (
+        47_181,
+        "5CCAEF6A1ADDAC7043D435762145A5A34C6E4E2028E0A7D6688F0D8DCB7295EB",
+        invert_ega0_3,
+    ),
     "ega1/ega1-1.tex": (
         78_943,
         "F32A8DB7385B1730556DB39FE0609B71BA1CC7E340D76BF87B5B9019FBC83764",
@@ -162,6 +188,11 @@ INVERSES = {
         33_820,
         "1BCD0A186CC35721947F0653953BAE387BE1D9EC695733E193970C503AF2DDFA",
         invert_ega1_4,
+    ),
+    "ega1/ega1-5.tex": (
+        47_538,
+        "B344B67200DF1DA5E962BCB8AE5AD7E20224168D55C3E53BD52B5F0311F8EE56",
+        invert_ega1_5,
     ),
     "ega2/ega2-2.tex": (
         103_713,
@@ -199,7 +230,7 @@ def main():
     if (sum(len(data) for data in source_data.values()),
             sha("".join(source_rows).encode("utf-8"))) != (
             SUCCESSOR_BYTES, SUCCESSOR_TREE_SHA256):
-        raise RuntimeError("live source tree is not the sealed R215 successor")
+        raise RuntimeError("live source tree is not the sealed R219 successor")
 
     changed = []
     canonical = []

@@ -1458,3 +1458,119 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   serial exact R184 reconstructions both 5000-dpi report receipts every new
   append-only prefix and the privacy and no-TeX scope. It returned final HARD
   PASS after the interface wording was made exact.
+
+### EGA I 5.1.1--5.1.4 nilradicals reduction and local integrality
+
+- Direct authority is the 50,232-byte F33-bound `ega1-5-fr.tex` at SHA-256
+  `4610C5F9E732D99948AA809ED64C85D236423990C2750A06F0DC7A805D317701`.
+  Lines 1--100 are 4,990 UTF-8/LF bytes at SHA-256
+  `C4C473DFA1FA795033E696AA638D19BF0B7F628B8FFA9030C57A41864AF3FB1A`.
+  F33 is 14,944 bytes at SHA-256
+  `2652207F96F697935BC81C5D63B292DE4D956905D69CB92572225E320BB27F4C`.
+  R50 is 11,010 bytes at SHA-256
+  `D631DC20C4EF98C822AA61FF29A02176382A23E40077C1D36338FE359E80EA25`;
+  R51 is 10,926 bytes at SHA-256
+  `94F833E316F3726489EEF9254871BB55B12EBA691B7BFEAF918F76C285A7DE41`.
+  Both are PASS with empty error arrays.
+- D000181 and L000024--L000027 bind four raw blank locators. Section I.5
+  subsection I.5.1 and the complete 5.1.1 statement begin on I:127; all proof
+  text begins on I:128 despite the frozen `begin{proof}` preceding that page
+  marker. Two deterministic intakes applied all 27 active page rows and were
+  byte-identical: `files.csv` remains
+  `A1BB4950FE27D813FD79BCC4604607994D38E3F1E5A2C1D52EC21E01EC5C7E5F`;
+  `units.csv` is
+  `5E4E7E92155A1B081DC1909198632D75EA39996BE598FC37D578E3C79D91C361`;
+  and `intake.json` is
+  `82B07554EF81287EDC8BA70BAAA465F6991586AB4171C51C8AF69BF0EEBB2677`.
+  All 9,585 stable IDs are preserved and exactly four printed-page fields
+  change.
+- D000182--D000187 admit S000678--S000712 and R000443--R000467. Proposition
+  5.1.1 uses 01I7 01LA and 0544 only as existing ingredients. R000443 and
+  R000444 retain genuine labelled gaps for the arbitrary quasi-coherent
+  algebra nilradical package and the reverse localization equality. They are
+  not collapsed into the structure-sheaf reduction result 01J3.
+- Corollary 5.1.2 and Definition 5.1.3 split over 01IQ 01J3 01J4 0BR6 0356
+  01QQ 01J2 00E0 and 01J0. Proposition 5.1.4 combines 01J2 01ON 00ES 00E0
+  and 01OK. Its following unnumbered paragraph uses 01OQ 01HV 0052 01J0
+  00ET 0BX3 and 01ON while preserving the distinction between locally
+  Noetherian topology and a locally Noetherian scheme. Tag 0568 supplies the
+  failure when the topological hypothesis is removed.
+- I000057 reuses R51's catalogued French `defined Y by` word-order defect as
+  a resolved grammatical issue. The two already-present English repairs on
+  p.128 remain comparison-layer facts and do not alter French authority. The
+  slice contains no diagram display equation grid or intricate standalone
+  block. No V row is created; the next source unit 5.1.5 contains the first
+  display and diagram and remains closed under I000049 until individual
+  authority French and English 5,000-dpi receipts are complete.
+- A000152 independently identified the thirteen 5.1.1--5.1.2 candidate edges
+  and the two real labelled gaps. A000153 independently established the
+  strict 5.1.3--5.1.4 mapping and the topological hypothesis boundaries.
+  A000154 replayed authority controls frozen units and page seams and required
+  the four exact overlays before semantic admission. All three were read-only
+  and made no visual certification.
+
+### EGA I 5.1.1--5.1.4 inverse failures and exact release repairs
+
+- A000155 rejected the initial 5.1.2 mapping because S000689 attributed both
+  the full-support containment and the intersection-of-primes identity to
+  00E0. S000713 preserves the old row and supersedes it with `split` scope:
+  00E0 supplies only the intersection identity. A000158 independently replayed
+  the active successor and returned HARD PASS; the historical failure remains
+  in A000155.
+- A000156 rejected S000704 because the paragraph after 5.1.4 uses a notion
+  defined earlier in 2.1.8 rather than defining local integrality anew.
+  S000714 preserves and supersedes S000704, records the prior-definition
+  dependency, and limits 01OQ to derived affine-neighbourhood coverage.
+- The same audit exposed a new printed cross-reference defect. Proposition
+  5.1.4 visibly cites `2.1.7`, but 2.1.7 concerns open restrictions; 2.1.8 is
+  the definition of integral and locally integral schemes. The owner generated
+  and personally inspected the tight authority-only Q000005 crop at exactly
+  5,000 dpi from printed p.128, point box `90;433;417;32`. The immutable
+  `reports/qa/514r.png` is 377,678 bytes, SHA-256
+  `C00A8CC1A6126220003816FAE76678E00C134CA83D6C8B2F8DF8787976205277`,
+  and 28,959 by 2,223 pixels. D000188--D000189, I000058, R000468, Q000005,
+  and the append-only finding preserve diplomatic print and refer the corrected
+  `2.1.8` reading to the edition owner. This source-error receipt is not a
+  diagram or edition-output visual certification.
+- A000157 then fail-closed the release because the live English comparison
+  tree had advanced from sealed R215 to sealed R218 and because the four new
+  I.5 page locators lacked fixed unit/page regressions. R218 is 127 files and
+  7,283,691 bytes with tree SHA-256
+  `35D0D86A689FCC39F074FD49EE5AE89ED7B5FCBFCF25D3943D26402C06CA0FDE`;
+  its manifest is 166,531 bytes with SHA-256
+  `8B83763939CB804605ED4FDD1FB3A40F7C151F1DF754EE59A491354D2D297C61`.
+  The new seventh inverse path restores the two sealed label-side changes in
+  `ega0/ega0-3.tex`. Two serial no-overwrite runs of the 9,848-byte
+  `r184.py` at SHA-256
+  `E5108DF5AC34A0327E121900E90B62B80410EB2CB7EBA15A7C41C3DD29FCFE5A`
+  each reconstructed exact R184: 127 files, 7,283,321 bytes, tree SHA-256
+  `3BFB1C5103093481246EF4A6365E08544F6D5E19ACC0EA63E717F3F3643F064D`.
+  The checker now joins the interface and scope latest-successor triples and pins section
+  I.5, subsection I.5.1, 5.1.1, and its proof to I:127/I:128 exactly.
+- The final serial replay then observed sealed R219 rather than accepting the
+  now-stale R218 marker. R219 is the edition task's direct propagation of this
+  checkpoint's Q000005 correction: only `ega1/ega1-5.tex` changes, replacing
+  the inherited 2.1.7 reference by 2.1.8. Its manifest is 168,856 bytes at
+  SHA-256
+  `92AED9B4880DBB958004F727DC1185BB48529A78EDC95DB5D3FF94D4316355C5`;
+  the sealed 127-file tree remains 7,283,691 bytes and has SHA-256
+  `AD9F9A8A17882E5DF5EE4D1CFB1EAC03EBF5E22826B97A98207A2C220D106D22`.
+  The 10,274-byte `r184.py` at SHA-256
+  `659EBF52943674465A6775F612FCE6BA41B43D0AEBF3338FD74CD4080765E70E`
+  adds an eighth exact inverse path and fail-closes on the whole R219 tree.
+  Two fresh serial R219-to-R184 reconstructions and intakes each reproduced
+  tracked `files.csv`, `units.csv`, and `intake.json` byte-for-byte. Interface
+  and scope expose R219 while all graph claims remain bound to their exact
+  historical French receipts and frozen R184 discovery IDs.
+- After both append-only semantic repairs the active graph remains 708 edges
+  over 236 source units; physical history is 714 rows with six superseded.
+  Residual history is 468 rows with 465 active and six open gaps. The slice
+  still has no diagram or intricate standalone mathematics block; I000049
+  continues to hard-gate the first display and diagram in 5.1.5.
+- A000159 returned HARD PASS on the S000714 and Q000005 repair chain while
+  preserving A000156 as the historical source-attribution failure. A000160
+  records the second fail-closed successor drift from R218 to R219. A000161
+  then independently replayed R219, both deterministic intakes, every new
+  append-only row, exact page changes, privacy, and the no-TeX/no-V boundary
+  and returned final HARD PASS. No agent wrote files or claimed independent
+  visual-content certification.
