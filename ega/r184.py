@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reconstruct the exact frozen R184 discovery tree from sealed R248."""
+"""Reconstruct the exact frozen R184 discovery tree from sealed R251."""
 
 import argparse
 import hashlib
@@ -11,10 +11,12 @@ from pathlib import Path
 MANIFEST_BYTES = 92_445
 MANIFEST_SHA256 = "5C64ECD32FD7C5458D2599D70ED667D2CF06D95517EFFA9C6D6DCEF7626913A0"
 TREE_SHA256 = "3BFB1C5103093481246EF4A6365E08544F6D5E19ACC0EA63E717F3F3643F064D"
-SUCCESSOR_MANIFEST_BYTES = 58_687
-SUCCESSOR_MANIFEST_SHA256 = "C771CF817202DF1B0BC47C02DBACE0CA8AF0D27608A4E69FB4B5B31A320F6135"
+SUCCESSOR_MANIFEST_BYTES = 25_277
+SUCCESSOR_MANIFEST_SHA256 = "250A00CB2846004B788E542D0AEA0A31CB00AF2B1864ABD8C153116E97087F55"
 SUCCESSOR_BYTES = 7_283_701
-SUCCESSOR_TREE_SHA256 = "DDBF5FF8FD0D3A74ED43A06B3F9011855540BBD9D3F029256822CB68E872EE49"
+SUCCESSOR_TREE_SHA256 = "C32F4904449F6DEDFB6991B569FDD96B8EAD27BE77685E67A52EE0094C896A7E"
+R248_BYTES = 7_283_701
+R248_TREE_SHA256 = "DDBF5FF8FD0D3A74ED43A06B3F9011855540BBD9D3F029256822CB68E872EE49"
 R247_BYTES = 7_283_701
 R247_TREE_SHA256 = "F152BFBC3AC3102DCE41975C27EEB373D01770F325639DF9AD01EFB6AD4F36D8"
 R243_BYTES = 7_283_701
@@ -28,19 +30,19 @@ def sha(data):
 
 
 def read_sealed_successor(source, entries):
-    """Read and validate one complete immutable R248 source snapshot."""
+    """Read and validate one complete immutable R251 source snapshot."""
     source_data = {}
     source_rows = []
     for relative, entry in entries.items():
         data = (source / relative).read_bytes()
         if (len(data), sha(data)) != (entry["bytes"], entry["sha256"]):
-            raise RuntimeError(f"live source differs from sealed R248: {relative}")
+            raise RuntimeError(f"live source differs from sealed R251: {relative}")
         source_data[relative] = data
         source_rows.append(f"{relative}\t{len(data)}\t{sha(data)}\n")
     if (sum(len(data) for data in source_data.values()),
             sha("".join(source_rows).encode("utf-8"))) != (
             SUCCESSOR_BYTES, SUCCESSOR_TREE_SHA256):
-        raise RuntimeError("live source tree is not the sealed R248 successor")
+        raise RuntimeError("live source tree is not the sealed R251 successor")
     return source_data
 
 
@@ -163,6 +165,21 @@ def invert_r248_to_r247_ega1_10(data):
         data, 133_729, b"^", b"_", 143_891,
         "06D95A924F724193D419A6CEA9FC590381D408A3B03D724177BCD61DD238D54A",
     )
+
+
+def invert_r251_to_r248_ega1_5(data):
+    if sha(data[19_655:19_775]) != (
+            "367A45461D46ADCBE6012D2C7D18040301343A1B9B3D0C73E5616790EC639359"):
+        raise RuntimeError("R251 inverse source slice changed at byte 19655")
+    return replace_at(
+        data, 19_712, b"_", b"^", 47_538,
+        "B344B67200DF1DA5E962BCB8AE5AD7E20224168D55C3E53BD52B5F0311F8EE56",
+    )
+
+
+R251_TO_R248_INVERSES = {
+    "ega1/ega1-5.tex": invert_r251_to_r248_ega1_5,
+}
 
 
 R248_TO_R247_INVERSES = {
@@ -378,13 +395,13 @@ def main():
     raw_successor_manifest = args.successor_manifest.read_bytes()
     if (len(raw_successor_manifest), sha(raw_successor_manifest)) != (
             SUCCESSOR_MANIFEST_BYTES, SUCCESSOR_MANIFEST_SHA256):
-        raise RuntimeError("R248 manifest identity changed")
+        raise RuntimeError("R251 manifest identity changed")
     successor_manifest = json.loads(raw_successor_manifest.decode("utf-8"))
     if (successor_manifest.get("file_count"),
             successor_manifest.get("total_bytes"),
             successor_manifest.get("canonical_tree_sha256")) != (
             127, SUCCESSOR_BYTES, SUCCESSOR_TREE_SHA256):
-        raise RuntimeError("R248 manifest summary changed")
+        raise RuntimeError("R251 manifest summary changed")
 
     if args.out.exists():
         raise RuntimeError("output already exists")
@@ -394,19 +411,36 @@ def main():
     for entry in successor_manifest["files"]:
         relative = entry["relative_path"]
         if relative in successor_entries:
-            raise RuntimeError(f"duplicate R248 manifest path: {relative}")
+            raise RuntimeError(f"duplicate R251 manifest path: {relative}")
         successor_entries[relative] = entry
     r184_paths = {entry["relative_path"] for entry in manifest["files"]}
     if set(successor_entries) != r184_paths:
-        raise RuntimeError("R248 and R184 path sets differ")
+        raise RuntimeError("R251 and R184 path sets differ")
     source_data = read_sealed_successor(args.source, successor_entries)
+
+    r251_changed = []
+    r248_data = {}
+    r248_rows = []
+    for entry in manifest["files"]:
+        relative = entry["relative_path"]
+        data = source_data[relative]
+        inverse = R251_TO_R248_INVERSES.get(relative)
+        if inverse is not None:
+            data = inverse(data)
+            r251_changed.append(relative)
+        r248_data[relative] = data
+        r248_rows.append(f"{relative}\t{len(data)}\t{sha(data)}\n")
+    if (sum(len(data) for data in r248_data.values()),
+            sha("".join(r248_rows).encode("utf-8"))) != (
+            R248_BYTES, R248_TREE_SHA256):
+        raise RuntimeError("R251 inverse does not reconstruct sealed R248")
 
     r248_changed = []
     r247_data = {}
     r247_rows = []
     for entry in manifest["files"]:
         relative = entry["relative_path"]
-        data = source_data[relative]
+        data = r248_data[relative]
         inverse = R248_TO_R247_INVERSES.get(relative)
         if inverse is not None:
             data = inverse(data)
@@ -492,14 +526,15 @@ def main():
         "bytes": sum(entry["bytes"] for entry in manifest["files"]),
         "tree_sha256": TREE_SHA256,
         "successor_tree_sha256": SUCCESSOR_TREE_SHA256,
+        "r248_tree_sha256": R248_TREE_SHA256,
         "r247_tree_sha256": R247_TREE_SHA256,
         "r243_tree_sha256": R243_TREE_SHA256,
         "intermediate_tree_sha256": R219_TREE_SHA256,
         "successor_inverted_files": sorted(set(
-            r248_changed + r247_changed + r243_changed)),
+            r251_changed + r248_changed + r247_changed + r243_changed)),
         "r184_inverted_files": changed,
         "inverted_files": sorted(set(
-            r248_changed + r247_changed + r243_changed + changed)),
+            r251_changed + r248_changed + r247_changed + r243_changed + changed)),
         "source_mutated": False,
     }
     print(json.dumps(result, indent=2, sort_keys=True))

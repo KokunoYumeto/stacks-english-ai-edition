@@ -47,6 +47,11 @@ complete graph or mathematical chain and explicitly include absent edges.
 Harmless punctuation differences between output and authority are named rather
 than silently normalized. Discovery units without an active certified `V` row
 remain visually unreviewed.
+At the 5,000-dpi boundary the committed raster must cover the complete declared
+point box: the upper-left pixel is rounded down and the lower-right pixel is
+rounded up. A renderer invocation at nominal 5,000 dpi whose integer envelope
+still measures fractionally below the floor is preserved in `rej.csv`, not
+admitted by rounding the computed scale or weakening the validator.
 The immutable first batch keeps its short `bNN` and `dNN` crop names. Every
 later V row, including a correction that supersedes one of those rows, uses a
 new QA-ID-derived crop path under each surface directory; the historical PNGs

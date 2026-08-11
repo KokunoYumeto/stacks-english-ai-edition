@@ -21,24 +21,24 @@ or published here.
   `5C64ECD32FD7C5458D2599D70ED667D2CF06D95517EFFA9C6D6DCEF7626913A0`;
   127 files, 7,283,321 bytes, tree SHA-256
   `3BFB1C5103093481246EF4A6365E08544F6D5E19ACC0EA63E717F3F3643F064D`.
-- Latest sealed standalone-English comparison source: R248, 58,687-byte
+- Latest sealed standalone-English comparison source: R251, 25,277-byte
   manifest at SHA-256
-  `C771CF817202DF1B0BC47C02DBACE0CA8AF0D27608A4E69FB4B5B31A320F6135`;
+  `250A00CB2846004B788E542D0AEA0A31CB00AF2B1864ABD8C153116E97087F55`;
   127 files, 7,283,701 bytes, tree SHA-256
-  `DDBF5FF8FD0D3A74ED43A06B3F9011855540BBD9D3F029256822CB68E872EE49`.
-  Its sole source change beyond R247 corrects another diagram-label side in
-  `ega1/ega1-10.tex`; both exact inverses are separately tree-gated before all
-  earlier reconstruction layers.
+  `C32F4904449F6DEDFB6991B569FDD96B8EAD27BE77685E67A52EE0094C896A7E`.
+  Its sole source change beyond R248 corrects the EGA I 5.3.7 `Delta_Y`
+  label side in `ega1/ega1-5.tex`; that exact inverse and the R248, R247,
+  R243, and R219 intermediate trees are separately gated before R184.
 - French authority: production is active; the latest sealed interface marker
-  is F37ZI through EGA II printed p.37, with retrospective EGA I diagram
-  closures through printed p.211; printed p.38 remains quarantined. This
+  is F37ZL through EGA II printed p.37, including the retrospective EGA I
+  5.3.7 label-side correction. This
   graph still binds every reviewed EGA I claim to its exact historical page receipt;
   receipt F33 also repairs 4.1.9 from `g'` to the directly verified printed
   `g` without changing the already-correct English.
-  The retrospective closure is fail-closed by D38/DIA38 and its exact
-  Q37BU/Q37BV pre/post-cleanup receipts; Q37BV records two 201-row replays,
-  fingerprint `9962DA981F1D81B207802E13000CA1509252DDB8CF51CC3B5C1B7A7E4F4F7C4E`,
-  and verified absence of the temporary `C:/tmp/EGA-d38` workspace.
+  The retrospective closure is fail-closed by D41R/DIA41R/REF11 and exact
+  Q37CC/Q37CD pre/post-cleanup receipts; Q37CD records two 186-row replays,
+  fingerprint `31379A4907EEA1FCAEE0BFF3F4D3F9E15E8BCB9519CCD03BAAC240532DD1D55D`,
+  and verified absence of the temporary `C:/tmp/EGA-ref11` workspace.
 - Existing incremental pre-Stacks notes: 399,689 bytes, SHA-256
   `4B4811B6F24F139020E15CF27D7BFA82C3872F0A549DCFF4F64B28F4454737D6`.
   They are evidence to normalize into the new schema, not a completed
@@ -271,8 +271,8 @@ append-only.
 - `intake.py`: deterministic manifest verification and metadata-only unit
   extraction; it does not copy source prose.
 - `r184.py`: exact no-overwrite reconstruction of the frozen R184 discovery
-  tree from sealed R248 through 30 hash-guarded inverse operations across 12
-  files, with exact R247, R243, and R219 intermediate gates; it never mutates
+  tree from sealed R251 through 31 hash-guarded inverse operations across 12
+  files, with exact R248, R247, R243, and R219 intermediate gates; it never mutates
   edition source.
 - `files.csv`, `units.csv`, and `intake.json`: generated exact-file inventory,
   stable unit registry, and fail-closed intake receipt.
@@ -310,7 +310,45 @@ append-only.
   direct-authority crops for source-error evidence; these are not edition
   outputs or three-surface visual certifications.
 
-### Current reviewed frontier: EGA I 5.3.1--5.3.4
+### Current reviewed frontier: EGA I 5.3.5--5.3.8
+
+The change-of-base square, its diagonal-base-change specialization, the
+graph-diagonal square, and the monomorphism/diagonal criterion are admitted
+from exact F33 authority and direct printed pp.132--133. S000804--S000816 add
+13 physical rows and supersede S000793, while R000538--R000559 add 22
+target-specific rows and close R000523 and the former visual gap R000552. The
+active graph now has 809 edges across 274 source units and 554 residuals;
+physical append-only history has 816 edge rows and 559 residual rows. Of the
+active edges 799 resolve to 247 distinct official tags and ten remain explicit
+local untagged integrations. There are 36 exact full-statement equivalences,
+six open labelled-coverage gaps, and ten local-pending residuals.
+
+The proof of 01KR contains the exact 5.3.5 cartesian square; 001V supplies its
+universal property. Tags 01KR and 01JX split the 5.3.6 base-change formula.
+Tags 01KR, 01KS, and 001V give the graph-diagonal square in 5.3.7, and 01L3
+with the stronger categorical 08LR gives the exact 5.3.8 monomorphism
+criterion. The previously open categorical-forward residual under 5.3.1 is
+therefore closed without adding another local theorem.
+
+Two printed defects remain diplomatic but mathematically controlled. Q000007
+and the published EGA II errata supply the missing name `g` for the second
+map in 5.3.5. Q000008 records the 5.3.8 proof's false “one element” wording;
+monicity gives “at most one,” with the empty-scheme monomorphism as a bounded
+counterexample to existence. Both authority crops are exact individual
+5,000-dpi receipts and neither changes the diplomatic source.
+
+V000021 certifies the 5.3.5 square on authority, B37AC French, and B233
+English surfaces. V000022 certifies the corrected 5.3.7 square against direct
+authority, B37AD French, and B234 English, including `Delta_Y` below the
+bottom arrow. J000010--J000014 retain clipped, stale-output, and nonfinal
+localizers; J000015--J000016 preserve two visually correct producer crops
+whose integer raster envelopes measured fractionally below the strict
+effective-5,000-dpi floor. The active visual registry now has 22 items
+(18 diagrams and four intricate blocks), 66 accepted crops, and 16 rejected
+or nonfinal crops. Corpus-wide I000049 remains open for discovery items not
+yet individually reviewed.
+
+### Preceding reviewed checkpoint: EGA I 5.3.1--5.3.4
 
 The diagonal definition, pairing identity, product compatibility, and base-
 change compatibility are now admitted from exact F33 authority and direct
@@ -416,24 +454,23 @@ metadata only and preserves the exact 127-file English tree.
 Visual certification is per item and per current surface. V000016 certifies
 the 5.1.5 reduction square. V000017--V000020 certify the 5.1.9 A/A0 block,
 the labelled exact sequence, the ring square, and the scheme square using one
-tight authority, French, and English crop for each item at 5,000 dpi. J000001
---J000009 retain every clipped, adjacent-prose, stale-edition, nonfinal, or
-below-floor candidate. The active visual registry therefore has 20 items
-(16 diagrams and four intricate blocks), 60 accepted crops, and nine rejected
-crops; corpus-wide I000049 remains open for the rest of the discovery corpus.
+tight authority, French, and English crop for each item at 5,000 dpi. Their
+J000001--J000009 rejected lineage remains immutable; the current cumulative
+V/J totals are reported at the reviewed frontier above. Corpus-wide I000049
+remains open for the rest of the discovery corpus.
 
 The validator now fails closed on malformed IDs, wrong parent geometry,
 inactive or mismatched evidence decisions, cross-finding token splicing,
 ledger-prefix mutation, directory nesting, symlinks, and unmanifested crops.
-The current R248-to-R184 reconstruction likewise rereads the complete sealed live
+The current R251-to-R184 reconstruction likewise rereads the complete sealed live
 tree immediately before atomic promotion, closing the reproduced concurrent-
 producer race. Independent mathematical and governance inverse audits both
 returned HARD PASS after the repairs while preserving their earlier failures.
 
-The immediate work continues at direct-French EGA I 5.3.5. The latest sealed
-French interface marker is F37ZI through EGA II printed p.37, while every
-reviewed EGA I claim remains bound to its own historical receipt. The D38
-retrospective interface is closed by DIA38 and sealed cleanup receipt Q37BV;
+The immediate work continues at direct-French EGA I 5.3.9. The latest sealed
+French interface marker is F37ZL through EGA II printed p.37, while every
+reviewed EGA I claim remains bound to its own historical receipt. The D41R
+retrospective interface is closed by DIA41R, REF11, and sealed cleanup receipt Q37CD;
 it is not inferred merely from the current reader PDFs. Discovery
 unit I.3.2.9 remains in a separate authority-pending queue for its cited EGA II
 erratum witness. The complete English surface drives provisional candidates

@@ -328,17 +328,17 @@ if tuple(
         interface.get("english_discovery", {}).get(field)
         for field in ("latest_manifest", "latest_manifest_bytes",
                       "latest_manifest_sha256")) != (
-        "R248.json", 58687,
-        "C771CF817202DF1B0BC47C02DBACE0CA8AF0D27608A4E69FB4B5B31A320F6135",
+        "R251.json", 25277,
+        "250A00CB2846004B788E542D0AEA0A31CB00AF2B1864ABD8C153116E97087F55",
 ):
-    ERRORS.append("latest English interface is not sealed R248")
+    ERRORS.append("latest English interface is not sealed R251")
 if tuple(
         interface.get("latest_sealed_french", {}).get(field)
         for field in ("manifest", "manifest_bytes", "manifest_sha256")) != (
-        "F37ZI.json", 40241,
-        "D8D926E6042DEC361D321269FF9849C25F7A7A469E6EBE1E51B103BCCC18ABBB",
+        "F37ZL.json", 6159,
+        "9356CB6B4F40E72488BB1E4D8E08E34AA0965C8F96B6D880AC190C423DCB8E4C",
 ):
-    ERRORS.append("latest French interface is not sealed F37ZI")
+    ERRORS.append("latest French interface is not sealed F37ZL")
 if tuple(
         scope.get("inputs", {}).get("french_authority", {}).get(field)
         for field in ("latest_sealed_manifest", "latest_sealed_manifest_bytes",
@@ -347,28 +347,35 @@ if tuple(
         for field in ("manifest", "manifest_bytes", "manifest_sha256")):
     ERRORS.append("edition interface latest French manifest mismatch")
 expected_diagram_closure = {
-    "control": "D38.json",
-    "control_bytes": 14072,
+    "control": "D41R.json",
+    "control_bytes": 12948,
     "control_sha256":
-        "85457FA2DA4799DA1D86CBE3BB96050EDD31C8F71CC15053E33649D7F50DFA32",
-    "inventory": "DIA38.json",
-    "inventory_bytes": 114926,
+        "18C5FEF45712CEF7B185AC6FBC58E365299BC3F1CA47CE40E87BDCF653843F6C",
+    "inventory": "DIA41R.json",
+    "inventory_bytes": 123388,
     "inventory_sha256":
-        "72CEEEF2435A785F1034E03860C2AB69EB089FEBF4990F0CAF9397C86A29619C",
-    "pre_cleanup_receipt": "Q37BU.json",
-    "pre_cleanup_receipt_bytes": 12737,
+        "03E085DC630182B4CCB5156E4371E7E5129BB20A7A04777706EAA30C81D0AD94",
+    "referral_control": "REF11.json",
+    "referral_control_bytes": 7169,
+    "referral_control_sha256":
+        "C9C7B3E3A84BFE89715E21412AF7F50E3D65EA2BA9B2C6C7C91E2F41E405206B",
+    "pre_cleanup_receipt": "Q37CC.json",
+    "pre_cleanup_receipt_bytes": 8438,
     "pre_cleanup_receipt_sha256":
-        "1AF4F42283792825FE814E2ABA2CB4129F36B72D49A974351AFF4931F6D7670F",
-    "post_cleanup_receipt": "Q37BV.json",
-    "post_cleanup_receipt_bytes": 5585,
+        "CC128E827E2E72DA5FE3D1ED7BF9FFC377AE0403F40C4DA397C79D2A82F8288E",
+    "post_cleanup_receipt": "Q37CD.json",
+    "post_cleanup_receipt_bytes": 8048,
     "post_cleanup_receipt_sha256":
-        "C5D2FDEF6BDE7235CC3B78AEA1DA81BC70D019078E4F2202A06A064EDDF36707",
-    "temporary_workspace": "C:/tmp/EGA-d38",
+        "89F5F9C53F7691F9A9583B9067F2E7C69A1EF3DAB47E06A407C2F9EE91110C2D",
+    "temporary_workspace": "C:/tmp/EGA-ref11",
     "temporary_workspace_state": "absent",
     "replay_passes": 2,
-    "verified_rows_each": 201,
+    "pre_cleanup_rows_each": 206,
+    "pre_cleanup_state_fingerprint_sha256":
+        "A18D63D552BD648E265D3C6DCC257725DCE8A99154292CF6DA19CD7F7A15B6AD",
+    "post_cleanup_rows_each": 186,
     "state_fingerprint_sha256":
-        "9962DA981F1D81B207802E13000CA1509252DDB8CF51CC3B5C1B7A7E4F4F7C4E",
+        "31379A4907EEA1FCAEE0BFF3F4D3F9E15E8BCB9519CCD03BAAC240532DD1D55D",
 }
 interface_diagram_closure = interface.get(
     "latest_sealed_french", {}).get("retrospective_diagram_closure")
@@ -383,15 +390,15 @@ if interface_diagram_closure != scope_diagram_closure:
 if interface.get("public_checkpoint") != "https://zenodo.org/records/21861666":
     ERRORS.append("public EGA checkpoint is stale")
 expected_readers = {
-    "french": ("B37AC.json",
-               "F6B9E17F3FFD2822CEC50411672CC824ACCB08F07FCD6451A2A377234AC83DAA",
-               2004725,
-               "16789110240CD4ED7255D4E5802E65D1E87CD8BD416DBCE9A9EA32AD8065842F",
+    "french": ("B37AD.json",
+               "B8736E90D2465E36F2DDC00499EFA2234A42B96046B79044370C87D2733A566F",
+               2004722,
+               "8A89494F17D1569D206C7D6456D85E922D61F6E6B0E62F8042AABA23F5358F66",
                168),
-    "english": ("B233.json",
-                "1B2E84AF785461C705100E74A56A76CAE04B3747F7DBE199D56B5212FC6D1AA0",
-                14590635,
-                "C06C6F10634ABDE5BDC6DC652F4D12725800397BE42D503D9ACC96E992B5C0C6",
+    "english": ("B234.json",
+                 "DAC7E77E922D3142B7541142B3501E2E8507EA140A21233D3AD33491369A69BB",
+                 14590653,
+                 "86AC6590F07E0E36B24EE5D4A4125FAF0E191EF968AD4B87254A9C4EEEF5A42A",
                 1346),
 }
 for language, expected in expected_readers.items():
@@ -501,6 +508,36 @@ if i50 is None or not (
         i50.get("status") == "resolved" and
         not i50.get("supersedes")):
     ERRORS.append("missing or invalid bounded visual-QA completion issue")
+d222 = decision_by_id.get("D000222")
+d223 = active_decision_by_id.get("D000223")
+if d222 is None or not (
+        d222.get("subject_id") == "ega:I.5.3.7:diagram:xymatrix:1" and
+        d222.get("action") == "refer_5_3_7_delta_Y_label_side_correction" and
+        d222.get("state") == "active"):
+    ERRORS.append("missing exact D000222 visual-fidelity referral decision")
+if d223 is None or not (
+        d223.get("subject_id") == "ega:visual-qa" and
+        d223.get("action") ==
+        "admit_corrected_5_3_7_individual_authority_french_english_visual_evidence_with_rejected_lineage" and
+        d223.get("evidence") ==
+        "V000022 J000010 J000011 J000012 J000013 J000014 D41R DIA41R REF11 and Q37CD" and
+        d223.get("supersedes") == "D000222"):
+    ERRORS.append("missing exact D000223 corrected visual-QA admission")
+i64 = issue_by_id.get("I000064")
+i65 = issue_by_id.get("I000065")
+if i64 is None or not (
+        i64.get("subject_id") == "ega:I.5.3.7:diagram:xymatrix:1" and
+        i64.get("kind") == "Delta_Y_label_side_mismatch" and
+        i64.get("status") == "referred_to_canon" and
+        i64.get("supersedes") == "D000222" and
+        "I000064" in superseded_issues):
+    ERRORS.append("missing exact I000064 visual-fidelity referral issue")
+if i65 is None or not (
+        i65.get("subject_id") == "ega:I.5.3.7:diagram:xymatrix:1" and
+        i65.get("kind") == "Delta_Y_label_side_mismatch_corrected" and
+        i65.get("status") == "resolved" and
+        i65.get("supersedes") == "I000064"):
+    ERRORS.append("missing exact I000065 visual-fidelity resolution issue")
 a130 = next(
     (row for row in rows("agent.csv") if row.get("run_id") == "A000130"),
     None,
@@ -821,6 +858,7 @@ if not vqa_path.exists():
 else:
     raw_vqa = vqa_path.read_bytes()
     vqa_lines = raw_vqa.decode("utf-8").splitlines()
+    vqa_physical_lines = raw_vqa.splitlines(keepends=True)
     if not vqa_lines or vqa_lines[0].split(",") != expected_vqa_header:
         ERRORS.append("unexpected vqa.csv header")
         all_vqa_rows = []
@@ -830,6 +868,22 @@ else:
         raw_vqa, 21, 19650,
         "3270DB7B13E8DA407937F0D1CEB3086C921D6E644BBC8A45DBEDB29FD08A53EF",
         "V000001-V000020")
+    if len(vqa_physical_lines) <= 21:
+        ERRORS.append("vqa.csv lacks exact V000021 extension row")
+    else:
+        v21_raw = vqa_physical_lines[21]
+        if (len(v21_raw) != 1128 or
+                hashlib.sha256(v21_raw).hexdigest().upper() !=
+                "CB1C15944B128D3DD7F6C3BCC0C23207E14904B9673E03E21559284F7850DDFE"):
+            ERRORS.append("exact V000021 visual-QA row changed")
+    if len(vqa_physical_lines) <= 22:
+        ERRORS.append("vqa.csv lacks exact V000022 extension row")
+    else:
+        v22_raw = vqa_physical_lines[22]
+        if (len(v22_raw) != 1086 or
+                hashlib.sha256(v22_raw).hexdigest().upper() !=
+                "4ED34FDD022EC3E37C8A9F2E0C03FE7042F7759B9AB14DC807CF783281D67B05"):
+            ERRORS.append("exact V000022 visual-QA row changed")
     counts["vqa.csv"] = len(all_vqa_rows)
     vqa_ids = [row["qa_id"] for row in all_vqa_rows]
     vqa_ids_valid = contiguous_ids(
@@ -900,8 +954,36 @@ else:
             14589672,
         ),
     }
+    latest_record_expectations = {
+        "a": legacy_record_expectations["a"],
+        "f": (
+            "sealed:B37AC/EGA_FR.pdf",
+            "16789110240CD4ED7255D4E5802E65D1E87CD8BD416DBCE9A9EA32AD8065842F",
+            2004725,
+        ),
+        "e": (
+            "sealed:B233/EGA_English_Global_0_IV.pdf",
+            "C06C6F10634ABDE5BDC6DC652F4D12725800397BE42D503D9ACC96E992B5C0C6",
+            14590635,
+        ),
+    }
+    corrected_record_expectations = {
+        "a": legacy_record_expectations["a"],
+        "f": (
+            "sealed:B37AD/EGA_FR.pdf",
+            "8A89494F17D1569D206C7D6456D85E922D61F6E6B0E62F8042AABA23F5358F66",
+            2004722,
+        ),
+        "e": (
+            "sealed:B234/EGA_English_Global_0_IV.pdf",
+            "86AC6590F07E0E36B24EE5D4A4125FAF0E191EF968AD4B87254A9C4EEEF5A42A",
+            14590653,
+        ),
+    }
     legacy_page_counts = {"a": 227, "f": 165, "e": 1345}
     current_page_counts = {"a": 227, "f": 168, "e": 1345}
+    latest_page_counts = {"a": 227, "f": 168, "e": 1346}
+    corrected_page_counts = {"a": 227, "f": 168, "e": 1346}
     authority_page_geometry = {
         86: (536, 727),
         96: (543, 727),
@@ -918,6 +1000,8 @@ else:
         128: (595, 748),
         129: (595, 748),
         130: (603, 755),
+        131: (595, 748),
+        132: (595, 748),
     }
     baseline_vqa_pages = {
         "b01": (86, 60, 284), "b02": (86, 60, 284),
@@ -945,6 +1029,7 @@ else:
         "english-trailing-period-only",
         "english-I-for-J-plus-two-line-reflow-and-edition-trailing-period",
         "english-I-for-J-and-french-equation-number-right",
+        "french-equation-number-right-only",
     }
     crop_paths = []
     active_crop_hashes = []
@@ -964,22 +1049,40 @@ else:
         "D000203": (
             "ega:visual-qa", "admit_5_1_5_and_5_1_9_visual_receipts",
             "V000016 V000017 V000018 V000019 V000020 in ega/vqa.csv"),
+        "D000220": (
+            "ega:visual-qa",
+            "admit_5_3_5_individual_authority_french_english_visual_evidence",
+            "V000021 in ega/vqa.csv"),
+        "D000223": (
+            "ega:visual-qa",
+            "admit_corrected_5_3_7_individual_authority_french_english_visual_evidence_with_rejected_lineage",
+            "V000022 J000010 J000011 J000012 J000013 J000014 D41R DIA41R REF11 and Q37CD"),
     }
     vqa_expected_decision_ids = {
         **{f"V{number:06d}": "D000154" for number in range(1, 15)},
         "V000015": "D000160",
         **{f"V{number:06d}": "D000203" for number in range(16, 21)},
+        "V000021": "D000220",
+        "V000022": "D000223",
     }
     for row in all_vqa_rows:
         if not re.fullmatch(r"V\d{6}", row.get("qa_id", "")):
             continue
         item_id = row["item_id"]
-        legacy_parent = int(row["qa_id"][1:]) <= 15
-        record_expectations = (
-            legacy_record_expectations if legacy_parent
-            else current_record_expectations)
-        record_page_counts = (
-            legacy_page_counts if legacy_parent else current_page_counts)
+        qa_number = int(row["qa_id"][1:])
+        legacy_parent = qa_number <= 15
+        if legacy_parent:
+            record_expectations = legacy_record_expectations
+            record_page_counts = legacy_page_counts
+        elif qa_number <= 20:
+            record_expectations = current_record_expectations
+            record_page_counts = current_page_counts
+        elif qa_number == 21:
+            record_expectations = latest_record_expectations
+            record_page_counts = latest_page_counts
+        else:
+            record_expectations = corrected_record_expectations
+            record_page_counts = corrected_page_counts
         baseline_entry = baseline_vqa_ids.get(row["qa_id"])
         if baseline_entry is not None:
             expected_item, expected_short = baseline_entry
@@ -1212,6 +1315,7 @@ if not rejected_path.is_file() or rejected_path.is_symlink():
 else:
     rejected_raw = rejected_path.read_bytes()
     rejected_lines = rejected_raw.decode("utf-8").splitlines()
+    rejected_physical_lines = rejected_raw.splitlines(keepends=True)
     with rejected_path.open(encoding="utf-8", newline="") as handle:
         reader = csv.DictReader(handle)
         if reader.fieldnames != rejected_header:
@@ -1223,6 +1327,31 @@ else:
         rejected_raw, 10, 2964,
         "E19DC3E254373A9647BDF534234C59C6C30A4E634E42C509AAE6C00784018DC0",
         "J000001-J000009")
+    expected_rejected_extensions = {
+        10: (318,
+             "660AA8DD3D767375AB92A3DD86C8FDC0452C07C2A73B06060A091618F0492CF2"),
+        11: (318,
+             "8DFCC9EDEC3DB9BF2F6D831B143389A908AB6D477033CBC1E7FDEAEDB2AB318F"),
+        12: (327,
+             "2347AC8A75DBA7AF91E19D034FE26C44FAC19C49EF267D1215C05037812A1EB0"),
+        13: (338,
+             "596A451571DD7D4A60F47B7DBFC8855CCD7297C9FD43BB532901F6786479F2F6"),
+        14: (348,
+             "4FDE3BB7A9E9DDFFC3B53A4A2064F578E2C837966245DD8BC901BBEB4BF7C22F"),
+        15: (339,
+             "53B43C6AEB4750C7ED0D2FE605B0E81ED461D8E8D012174718090616B81E1C32"),
+        16: (348,
+             "E1ED314B4C815F965D6C46AD2CFB6A2A8A970D375504996CA76049715FB59F91"),
+    }
+    for line_index, (expected_bytes, expected_sha) in (
+            expected_rejected_extensions.items()):
+        if line_index >= len(rejected_physical_lines):
+            ERRORS.append(f"rej.csv lacks exact J0000{line_index} extension row")
+            continue
+        raw_extension = rejected_physical_lines[line_index]
+        if (len(raw_extension) != expected_bytes or
+                hashlib.sha256(raw_extension).hexdigest().upper() != expected_sha):
+            ERRORS.append(f"exact J0000{line_index} rejected row changed")
     rejected_ids = [row.get("reject_id", "") for row in rejected_rows]
     contiguous_ids(rejected_rows, "reject_id", "J", "rej.csv")
     if len(rejected_lines) >= 6:
@@ -1267,12 +1396,25 @@ rejected_record_expectations = {
     "sealed:B231/EGA_English_Global_0_IV.pdf": (
         "e", "51D67907A26151D685B0A496A7B02F43DBC3FFC731D4AA4854F5F4BEBA0ECD88",
         14589672, 1345),
+    "sealed:B37AC/EGA_FR.pdf": (
+        "f", "16789110240CD4ED7255D4E5802E65D1E87CD8BD416DBCE9A9EA32AD8065842F",
+        2004725, 168),
+    "sealed:B233/EGA_English_Global_0_IV.pdf": (
+        "e", "C06C6F10634ABDE5BDC6DC652F4D12725800397BE42D503D9ACC96E992B5C0C6",
+        14590635, 1346),
+    "sealed:B234/EGA_English_Global_0_IV.pdf": (
+        "e", "86AC6590F07E0E36B24EE5D4A4125FAF0E191EF968AD4B87254A9C4EEEF5A42A",
+        14590653, 1346),
 }
 rejected_page_geometries = {
     ("NUMDAM:EGA_I_PMIHES_1960_4.pdf", 128): (595, 748),
     ("NUMDAM:EGA_I_PMIHES_1960_4.pdf", 129): (595, 748),
+    ("NUMDAM:EGA_I_PMIHES_1960_4.pdf", 132): (595, 748),
     ("zenodo:21859616/00_FR.pdf", 88): (595.276, 841.89),
     ("zenodo:21859616/00_EN.pdf", 319): (612, 792),
+    ("sealed:B37AC/EGA_FR.pdf", 90): (595.276, 841.89),
+    ("sealed:B233/EGA_English_Global_0_IV.pdf", 323): (612, 792),
+    ("sealed:B234/EGA_English_Global_0_IV.pdf", 323): (612, 792),
 }
 rejected_crop_bytes = 0
 rejected_crop_hashes = []
@@ -1361,19 +1503,45 @@ if not decision_contract(
         "retain_rejected_5_1_9_locator_candidates",
         "J000006 J000007 J000008 J000009 in ega/rej.csv"):
     ERRORS.append("missing rejected visual-QA evidence decision D000204")
+if not decision_contract(
+        "D000223", "ega:visual-qa",
+        "admit_corrected_5_3_7_individual_authority_french_english_visual_evidence_with_rejected_lineage",
+        "V000022 J000010 J000011 J000012 J000013 J000014 D41R DIA41R REF11 and Q37CD"):
+    ERRORS.append("missing rejected visual-QA lineage decision D000223")
+if not decision_contract(
+        "D000224", "ega:visual-qa",
+        "retain_rejected_V000022_subpixel_floor_rasters",
+        "J000015 J000016 in ega/rej.csv"):
+    ERRORS.append("missing rejected subpixel-floor evidence decision D000224")
 for row in rejected_rows:
     reject_id = row.get("reject_id", "")
     if not re.fullmatch(r"J\d{6}", reject_id):
         continue
-    decision_id = "D000202" if int(reject_id[1:]) <= 5 else "D000204"
-    if int(reject_id[1:]) > 9 or not decision_contract(
+    reject_number = int(reject_id[1:])
+    if reject_number <= 5:
+        decision_id = "D000202"
+    elif reject_number <= 9:
+        decision_id = "D000204"
+    elif reject_number <= 14:
+        decision_id = "D000223"
+    else:
+        decision_id = "D000224"
+    if not decision_contract(
             decision_id, "ega:visual-qa",
             ("retain_rejected_and_nonfinal_5_1_visual_candidates"
              if decision_id == "D000202" else
-             "retain_rejected_5_1_9_locator_candidates"),
+             "retain_rejected_5_1_9_locator_candidates"
+             if decision_id == "D000204" else
+             "admit_corrected_5_3_7_individual_authority_french_english_visual_evidence_with_rejected_lineage"
+             if decision_id == "D000223" else
+             "retain_rejected_V000022_subpixel_floor_rasters"),
             ("J000001-J000005 in ega/rej.csv"
              if decision_id == "D000202" else
-             "J000006 J000007 J000008 J000009 in ega/rej.csv")):
+             "J000006 J000007 J000008 J000009 in ega/rej.csv"
+             if decision_id == "D000204" else
+             "V000022 J000010 J000011 J000012 J000013 J000014 D41R DIA41R REF11 and Q37CD"
+             if decision_id == "D000223" else
+             "J000015 J000016 in ega/rej.csv")):
         ERRORS.append(
             f"rejected visual-QA row lacks exact active decision contract "
             f"{reject_id}")
@@ -1747,6 +1915,23 @@ if residual_path.exists():
         all_residuals, "residual_id", "resid.csv")
     active_residual_ids = {row["residual_id"] for row in residuals}
     residual_by_id = {row["residual_id"]: row for row in all_residuals}
+    r552 = residual_by_id.get("R000552")
+    r559 = residual_by_id.get("R000559")
+    if r552 is None or r559 is None or not (
+            r559.get("source_unit") ==
+            "ega:I.5.3.7:diagram:xymatrix:1" and
+            r559.get("kind") ==
+            "delta_Y_label_side_disagreement_closed_by_corrected_visual_successor" and
+            r559.get("status") == "known_semantic_difference" and
+            r559.get("evidence") ==
+            "V000022 confirms corrected B37AD and B234 now place Delta_Y below exactly as authority while J000012 and J000013 preserve the prior above-label outputs" and
+            r559.get("disposition") ==
+            "Admit V000022 as current and retain the rejected and nonfinal lineage without mapping the diagram as a separate theorem" and
+            r559.get("decision_id") == "D000223" and
+            r559.get("supersedes") == "R000552" and
+            "R000552" not in active_residual_ids and
+            "R000559" in active_residual_ids):
+        ERRORS.append("missing exact active R000559 visual-gap closure")
     attribution_residual_successors = {
         "R000165": "R000172",
         "R000166": "R000173",
@@ -2002,6 +2187,22 @@ else:
         qsrc_raw, 7, 1985,
         "DA7DA9AA605BA3E01B6CB21CAA0FDDAB4D33E6B4A464B629349B0D9FF9AAE05E",
         "Q000001-Q000006")
+    qsrc_physical_lines = qsrc_raw.splitlines(keepends=True)
+    expected_qsrc_extensions = {
+        7: (294,
+            "33987A68A53E7F20EF65E232048195E7314B19372B95EAD3B9119150CCC10B6C"),
+        8: (306,
+            "EFA2FA2BD6769B181CBBCD5166EB6144BC6FA418E332004DC3F82233A69F4A5C"),
+    }
+    for line_index, (expected_bytes, expected_sha) in (
+            expected_qsrc_extensions.items()):
+        if line_index >= len(qsrc_physical_lines):
+            ERRORS.append(f"qsrc.csv lacks exact Q00000{line_index} extension row")
+            continue
+        raw_extension = qsrc_physical_lines[line_index]
+        if (len(raw_extension) != expected_bytes or
+                hashlib.sha256(raw_extension).hexdigest().upper() != expected_sha):
+            ERRORS.append(f"exact Q00000{line_index} source-error row changed")
     qsrc_ids = [row.get("receipt_id", "") for row in qsrc_rows]
     contiguous_ids(qsrc_rows, "receipt_id", "Q", "qsrc.csv")
     if qsrc_ids[:len(expected_qsrc)] != list(expected_qsrc):
@@ -2052,16 +2253,24 @@ q_decision_contracts = {
     "Q000006": (
         "ega:I.5.1.9.2:proof", "carry_official_restriction_Y_to_V_correction",
         "Q000006 and the local splitting sentence introducing the neighbourhood V"),
+    "Q000007": (
+        "ega:I.5.3.5", "carry_official_missing_second_morphism_name_g_correction",
+        "Q000007 EG-EGA-I-P132-FR-535-MISSING-G-001 and EGA II Errata p.221"),
+    "Q000008": (
+        "ega:I.5.3.8:proof", "carry_official_one_element_to_at_most_one_correction",
+        "Q000008 EG-EGA-I-P133-FR-538-ONE-ELEMENT-001 and the empty-to-Spec(k) test"),
 }
 q_expected_decision_ids = {
     "Q000001": "D000161", "Q000002": "D000162",
     "Q000003": "D000178", "Q000004": "D000179",
     "Q000005": "D000188", "Q000006": "D000198",
+    "Q000007": "D000216", "Q000008": "D000219",
 }
 q_expected_admission_ids = {
     "Q000001": "D000165", "Q000002": "D000165",
     "Q000003": "D000180", "Q000004": "D000180",
     "Q000005": "D000189", "Q000006": "D000199",
+    "Q000007": "D000221", "Q000008": "D000221",
 }
 q_admission_contracts = {
     "D000165": (
@@ -2077,10 +2286,15 @@ q_admission_contracts = {
     "D000199": (
         "ega:source-error-qa", "admit_exact_authority_crop_receipt_for_5_1_9_2",
         "Q000006 in reports/qsrc.csv"),
+    "D000221": (
+        "ega:source-error-qa",
+        "admit_exact_authority_crop_receipts_for_5_3_5_and_5_3_8",
+        "Q000007 Q000008 in reports/qsrc.csv"),
 }
 q_authority_page_geometries = {
     122: (606, 756), 124: (595, 748), 126: (595, 748),
-    127: (603, 754), 130: (603, 755),
+    127: (603, 754), 130: (603, 755), 131: (595, 748),
+    132: (595, 748),
 }
 legacy_finding_companions = {
     "Q000001": "EGA-I-4.2.3-P123-GAMMA-PSI-CROP-RECEIPT",

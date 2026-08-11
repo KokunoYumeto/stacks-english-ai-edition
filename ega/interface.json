@@ -21,30 +21,35 @@
     "late_correction_ledger_sha256": "E78CA53480FC3F577786FCB643E63116A1DEC118EDB99C5629B52D6E5E9B411C"
   },
   "latest_sealed_french": {
-    "manifest": "F37ZI.json",
-    "manifest_bytes": 40241,
-    "manifest_sha256": "D8D926E6042DEC361D321269FF9849C25F7A7A469E6EBE1E51B103BCCC18ABBB",
-    "coverage": "EGA 0 and I plus EGA II through printed p.37, including the sealed retrospective EGA I diagram closures through printed p.211",
-    "next": "EGA II printed p.38 remains quarantined; graph claims continue to use their exact historical page receipts",
+    "manifest": "F37ZL.json",
+    "manifest_bytes": 6159,
+    "manifest_sha256": "9356CB6B4F40E72488BB1E4D8E08E34AA0965C8F96B6D880AC190C423DCB8E4C",
+    "coverage": "EGA 0 and I plus EGA II through printed p.37, including the sealed retrospective EGA I diagram closures through printed p.211 and the corrected p.133 Delta_Y label side",
+    "next": "EGA II printed p.38 remains quarantined and the normal diagram cursor remains EGA I printed p.106; graph claims continue to use their exact historical page receipts",
     "role": "comparison-only live interface marker; individual graph claims remain bound to their exact historical page receipts",
     "retrospective_diagram_closure": {
-      "control": "D38.json",
-      "control_bytes": 14072,
-      "control_sha256": "85457FA2DA4799DA1D86CBE3BB96050EDD31C8F71CC15053E33649D7F50DFA32",
-      "inventory": "DIA38.json",
-      "inventory_bytes": 114926,
-      "inventory_sha256": "72CEEEF2435A785F1034E03860C2AB69EB089FEBF4990F0CAF9397C86A29619C",
-      "pre_cleanup_receipt": "Q37BU.json",
-      "pre_cleanup_receipt_bytes": 12737,
-      "pre_cleanup_receipt_sha256": "1AF4F42283792825FE814E2ABA2CB4129F36B72D49A974351AFF4931F6D7670F",
-      "post_cleanup_receipt": "Q37BV.json",
-      "post_cleanup_receipt_bytes": 5585,
-      "post_cleanup_receipt_sha256": "C5D2FDEF6BDE7235CC3B78AEA1DA81BC70D019078E4F2202A06A064EDDF36707",
-      "temporary_workspace": "C:/tmp/EGA-d38",
+      "control": "D41R.json",
+      "control_bytes": 12948,
+      "control_sha256": "18C5FEF45712CEF7B185AC6FBC58E365299BC3F1CA47CE40E87BDCF653843F6C",
+      "inventory": "DIA41R.json",
+      "inventory_bytes": 123388,
+      "inventory_sha256": "03E085DC630182B4CCB5156E4371E7E5129BB20A7A04777706EAA30C81D0AD94",
+      "referral_control": "REF11.json",
+      "referral_control_bytes": 7169,
+      "referral_control_sha256": "C9C7B3E3A84BFE89715E21412AF7F50E3D65EA2BA9B2C6C7C91E2F41E405206B",
+      "pre_cleanup_receipt": "Q37CC.json",
+      "pre_cleanup_receipt_bytes": 8438,
+      "pre_cleanup_receipt_sha256": "CC128E827E2E72DA5FE3D1ED7BF9FFC377AE0403F40C4DA397C79D2A82F8288E",
+      "post_cleanup_receipt": "Q37CD.json",
+      "post_cleanup_receipt_bytes": 8048,
+      "post_cleanup_receipt_sha256": "89F5F9C53F7691F9A9583B9067F2E7C69A1EF3DAB47E06A407C2F9EE91110C2D",
+      "temporary_workspace": "C:/tmp/EGA-ref11",
       "temporary_workspace_state": "absent",
       "replay_passes": 2,
-      "verified_rows_each": 201,
-      "state_fingerprint_sha256": "9962DA981F1D81B207802E13000CA1509252DDB8CF51CC3B5C1B7A7E4F4F7C4E"
+      "pre_cleanup_rows_each": 206,
+      "pre_cleanup_state_fingerprint_sha256": "A18D63D552BD648E265D3C6DCC257725DCE8A99154292CF6DA19CD7F7A15B6AD",
+      "post_cleanup_rows_each": 186,
+      "state_fingerprint_sha256": "31379A4907EEA1FCAEE0BFF3F4D3F9E15E8BCB9519CCD03BAAC240532DD1D55D"
     }
   },
   "admitted_french_receipts": [
@@ -91,16 +96,21 @@
     {
       "manifest": "F37ZI.json",
       "manifest_sha256": "D8D926E6042DEC361D321269FF9849C25F7A7A469E6EBE1E51B103BCCC18ABBB",
-      "role": "latest sealed French producer manifest through EGA II printed p.37 and retrospective EGA I diagram closures through printed p.211; comparison marker only for claims lacking their own earlier receipt"
+      "role": "historical sealed French producer manifest through EGA II printed p.37 and retrospective EGA I diagram closures through printed p.211"
+    },
+    {
+      "manifest": "F37ZL.json",
+      "manifest_sha256": "9356CB6B4F40E72488BB1E4D8E08E34AA0965C8F96B6D880AC190C423DCB8E4C",
+      "role": "latest sealed French producer manifest including the corrected EGA I 5.3.7 Delta_Y label side; comparison marker only for claims lacking their own earlier receipt"
     }
   ],
   "english_discovery": {
     "manifest": "R184.json",
     "manifest_sha256": "5C64ECD32FD7C5458D2599D70ED667D2CF06D95517EFFA9C6D6DCEF7626913A0",
-    "latest_manifest": "R248.json",
-    "latest_manifest_bytes": 58687,
-    "latest_manifest_sha256": "C771CF817202DF1B0BC47C02DBACE0CA8AF0D27608A4E69FB4B5B31A320F6135",
-    "role": "R184 remains the exact intake discovery surface; R248 is the latest sealed standalone-English successor and r184.py applies 30 byte-precise inverse operations across 12 paths without mutating it; the distinct R248-to-R247 and R247-to-R243 inverses are separately tree-gated before the existing R243-to-R219 and R219-to-R184 layers"
+    "latest_manifest": "R251.json",
+    "latest_manifest_bytes": 25277,
+    "latest_manifest_sha256": "250A00CB2846004B788E542D0AEA0A31CB00AF2B1864ABD8C153116E97087F55",
+    "role": "R184 remains the exact intake discovery surface; R251 is the latest sealed standalone-English successor and r184.py applies 31 byte-precise inverse operations across 12 paths without mutating it; the distinct R251-to-R248, R248-to-R247, and R247-to-R243 inverses are separately tree-gated before the existing R243-to-R219 and R219-to-R184 layers"
   },
   "semantic_notes": {
     "bytes": 399689,
@@ -109,19 +119,19 @@
   },
   "sealed_readers": {
     "french": {
-      "receipt": "B37AC.json",
-      "receipt_sha256": "F6B9E17F3FFD2822CEC50411672CC824ACCB08F07FCD6451A2A377234AC83DAA",
+      "receipt": "B37AD.json",
+      "receipt_sha256": "B8736E90D2465E36F2DDC00499EFA2234A42B96046B79044370C87D2733A566F",
       "pdf": "EGA_FR.pdf",
-      "bytes": 2004725,
-      "sha256": "16789110240CD4ED7255D4E5802E65D1E87CD8BD416DBCE9A9EA32AD8065842F",
+      "bytes": 2004722,
+      "sha256": "8A89494F17D1569D206C7D6456D85E922D61F6E6B0E62F8042AABA23F5358F66",
       "pages": 168
     },
     "english": {
-      "receipt": "B233.json",
-      "receipt_sha256": "1B2E84AF785461C705100E74A56A76CAE04B3747F7DBE199D56B5212FC6D1AA0",
+      "receipt": "B234.json",
+      "receipt_sha256": "DAC7E77E922D3142B7541142B3501E2E8507EA140A21233D3AD33491369A69BB",
       "pdf": "EGA_English_Global_0_IV.pdf",
-      "bytes": 14590635,
-      "sha256": "C06C6F10634ABDE5BDC6DC652F4D12725800397BE42D503D9ACC96E992B5C0C6",
+      "bytes": 14590653,
+      "sha256": "86AC6590F07E0E36B24EE5D4A4125FAF0E191EF968AD4B87254A9C4EEEF5A42A",
       "pages": 1346
     }
   },

@@ -1843,3 +1843,72 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   scaffold validators, tag and privacy gates, both serial R248-to-R184 replays,
   and fork readiness all passed. A000191 and A000192 remain preserved as the
   two historical fail-closed release findings that caused the repairs.
+
+### EGA I 5.3.5--5.3.8 fibre squares and monomorphism criterion
+
+- Exact authority remains F33 (14,944 bytes, SHA-256
+  `2652207F96F697935BC81C5D63B292DE4D956905D69CB92572225E320BB27F4C`)
+  with the 50,232-byte diplomatic `ega1-5-fr.tex` at SHA-256
+  `4610C5F9E732D99948AA809ED64C85D236423990C2750A06F0DC7A805D317701`.
+  Its lines 426--495 are 2,557 LF bytes at SHA-256
+  `47C866A2565FC437884317C4B72F33BA5C77304E252B5BE45E28FBE1C7B166D7`.
+  Page controls R55 and R56 are respectively 12,290 bytes /
+  `C97366E68C0A41EF8D55E74D17F01A661A274F7850BB9EE24C897D1F67996C7A`
+  and 11,033 bytes /
+  `025D9BB49D0B2305199EBE54D56822E6CE7E4E38E4AAA93819EC67A560CCB091`.
+- D000214--D000221 admit S000804--S000816 and R000538--R000558. S000809
+  supersedes the earlier partial S000793, and R000556 closes the forward
+  categorical gap R000523. The exact target bundle is 01KR, 001V, 01JX,
+  01KS, 01L3, 08LR, and 003B; no new local theorem was required. A000194
+  independently replayed the direct source, every label/tag join, relation,
+  residual, correction, counterexample, decision, and duplicate key and
+  returned HARD PASS while the visual R000552 gate was still deliberately
+  open.
+- Q000007 binds the printed missing `g` in 5.3.5 to EGA II Errata p.221.
+  Q000008 binds the 5.3.8 proof's printed “one element” to the correct “at
+  most one”; the empty-scheme monomorphism is the exact existence
+  counterexample. Both findings preserve diplomatic French and carry their
+  own individual 5,000-dpi authority receipts under D000216/D000219 and
+  admission D000221.
+- V000021 closes the 5.3.5 diagram against authority, B37AC French, and B233
+  English. The first 5.3.7 authority and B234 crops were visually exact but
+  their integer dimensions measured fractionally below the strict effective
+  5,000-dpi floor. The checker rejected that state. J000015--J000016 preserve
+  those exact rasters and D000224 records the failure; V000022 uses a complete
+  floor/ceiling pixel envelope instead, while J000010--J000014 preserve the
+  clipped, stale-output, and nonfinal lineage. D000222/I000064 record the
+  `Delta_Y` label-side referral; D000223/I000065 and R000559 close it after
+  corrected B37AD/B234 three-surface inspection. No failed artifact was
+  overwritten or silently normalized.
+- The producer closure is F37ZL 6,159 bytes /
+  `9356CB6B4F40E72488BB1E4D8E08E34AA0965C8F96B6D880AC190C423DCB8E4C`,
+  R251 25,277 bytes /
+  `250A00CB2846004B788E542D0AEA0A31CB00AF2B1864ABD8C153116E97087F55`,
+  B37AD 7,129 bytes /
+  `B8736E90D2465E36F2DDC00499EFA2234A42B96046B79044370C87D2733A566F`,
+  and B234 7,753 bytes /
+  `DAC7E77E922D3142B7541142B3501E2E8507EA140A21233D3AD33491369A69BB`.
+  D41R/DIA41R/REF11 are sealed, and Q37CD records two zero-error 186-row
+  post-cleanup replays at fingerprint
+  `31379A4907EEA1FCAEE0BFF3F4D3F9E15E8BCB9519CCD03BAAC240532DD1D55D`
+  with `C:/tmp/EGA-ref11` absent.
+- `r184.py` now applies 31 hash-guarded operations across 12 paths from the
+  exact R251 tree through separately gated R248, R247, R243, and R219 trees to
+  R184. Two fresh serial no-overwrite runs each reconstructed 127 files /
+  7,283,321 bytes / tree
+  `3BFB1C5103093481246EF4A6365E08544F6D5E19ACC0EA63E717F3F3643F064D`.
+  Both intakes returned PASS and reproduced tracked `files.csv`
+  (`A1BB4950FE27D813FD79BCC4604607994D38E3F1E5A2C1D52EC21E01EC5C7E5F`),
+  `units.csv`
+  (`5C73182F07F749F03C0B0F92BBA0D37884873FFF096C93AE2E1A3CDB599EDA4C`),
+  and `intake.json`
+  (`6252CE94351C297E9BBBACA7527FD79688D0F3B2917A0B1F82F3D87D64130C7D`)
+  byte-for-byte without mutating the sealed source.
+- A000195 returned the final semantic HARD PASS after the corrected F33 slice
+  hash and V000022 closure. A000196 then found and closed the only remaining
+  governance weakness by pinning the exact active R000559-to-R000552 visual-gap
+  successor contract; its targeted decision-switch replay now fails closed.
+  A000197 finally replayed the stable 16-modified/15-new-file checkpoint,
+  including both serial R251-to-R184 reconstructions and intakes, append-only
+  prefixes, sealed interfaces, privacy, Python, scaffold, and diff gates, and
+  returned HARD PASS with zero staged or tag-tree changes.
