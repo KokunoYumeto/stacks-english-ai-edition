@@ -4050,7 +4050,7 @@ any category with fibre products).
 \begin{lemma}
 \label{lemma-diagonal-identities}
 \begin{reference}
-\cite[(5.3.1), Proposition 5.3.2, and Corollary 5.3.4]{EGA1}
+\cite[(5.3.1), Proposition 5.3.2, and Corollaries 5.3.4 and 5.3.12]{EGA1}
 \end{reference}
 Let $X$, $Y$, and $T$ be schemes over $S$.
 \begin{enumerate}
@@ -4073,15 +4073,30 @@ isomorphism
 $$
 (X \times_S X)_{S'} \cong X_{S'} \times_{S'} X_{S'}.
 $$
+\item If $f : X \to Y$ is a morphism over $S$ and $S' \to S$ is a
+morphism, then via the canonical isomorphism
+$$
+(X \times_S Y)_{S'} \cong X_{S'} \times_{S'} Y_{S'},
+$$
+the base change of the graph morphism
+$$
+\Gamma_f = (\text{id}_X, f) : X \longrightarrow X \times_S Y
+$$
+is the graph morphism
+$$
+\Gamma_{f_{S'}} = (\text{id}_{X_{S'}}, f_{S'}) :
+X_{S'} \longrightarrow X_{S'} \times_{S'} Y_{S'}.
+$$
 \end{enumerate}
 \end{lemma}
 
 \begin{proof}
-All three assertions follow from the universal property of fibre products.
+All four assertions follow from the universal property of fibre products.
 For (1), the two composites with the projections to $X$ and $Y$ are $f$ and
 $g$. For (2), the four composites with the projections to $X$, $X$, $Y$,
 and $Y$ agree. For (3), both composites with the projections to $X_{S'}$
-are the identity.
+are the identity. For (4), the two composites with the projections to
+$X_{S'}$ and $Y_{S'}$ are $\text{id}_{X_{S'}}$ and $f_{S'}$.
 \end{proof}
 
 \begin{lemma}

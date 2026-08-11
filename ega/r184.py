@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Reconstruct the exact frozen R184 discovery tree from sealed R251."""
+"""Reconstruct the exact frozen R184 discovery tree from sealed R255."""
 
 import argparse
+import base64
 import hashlib
 import json
 import tempfile
@@ -11,10 +12,14 @@ from pathlib import Path
 MANIFEST_BYTES = 92_445
 MANIFEST_SHA256 = "5C64ECD32FD7C5458D2599D70ED667D2CF06D95517EFFA9C6D6DCEF7626913A0"
 TREE_SHA256 = "3BFB1C5103093481246EF4A6365E08544F6D5E19ACC0EA63E717F3F3643F064D"
-SUCCESSOR_MANIFEST_BYTES = 25_277
-SUCCESSOR_MANIFEST_SHA256 = "250A00CB2846004B788E542D0AEA0A31CB00AF2B1864ABD8C153116E97087F55"
-SUCCESSOR_BYTES = 7_283_701
-SUCCESSOR_TREE_SHA256 = "C32F4904449F6DEDFB6991B569FDD96B8EAD27BE77685E67A52EE0094C896A7E"
+SUCCESSOR_MANIFEST_BYTES = 26_255
+SUCCESSOR_MANIFEST_SHA256 = "072A5D6251553188D86A869A9252A6A84A613B7638CAEEDD4C42B3DDD4A7A4E9"
+SUCCESSOR_BYTES = 7_284_367
+SUCCESSOR_TREE_SHA256 = "B6B0A39094F1E7799C8F6C032FC1C38840597CD66075202D11F4926C8668DB4C"
+R255_CITATION_BYTES = 7_284_191
+R255_CITATION_TREE_SHA256 = "4395E86FB39E678A723C6CF43109DB56BFC4FA89A96D980679DCFFC837B0ED91"
+R254_BYTES = 7_283_701
+R254_TREE_SHA256 = "C32F4904449F6DEDFB6991B569FDD96B8EAD27BE77685E67A52EE0094C896A7E"
 R248_BYTES = 7_283_701
 R248_TREE_SHA256 = "DDBF5FF8FD0D3A74ED43A06B3F9011855540BBD9D3F029256822CB68E872EE49"
 R247_BYTES = 7_283_701
@@ -30,19 +35,19 @@ def sha(data):
 
 
 def read_sealed_successor(source, entries):
-    """Read and validate one complete immutable R251 source snapshot."""
+    """Read and validate one complete immutable R255 source snapshot."""
     source_data = {}
     source_rows = []
     for relative, entry in entries.items():
         data = (source / relative).read_bytes()
         if (len(data), sha(data)) != (entry["bytes"], entry["sha256"]):
-            raise RuntimeError(f"live source differs from sealed R251: {relative}")
+            raise RuntimeError(f"live source differs from sealed R255: {relative}")
         source_data[relative] = data
         source_rows.append(f"{relative}\t{len(data)}\t{sha(data)}\n")
     if (sum(len(data) for data in source_data.values()),
             sha("".join(source_rows).encode("utf-8"))) != (
             SUCCESSOR_BYTES, SUCCESSOR_TREE_SHA256):
-        raise RuntimeError("live source tree is not the sealed R251 successor")
+        raise RuntimeError("live source tree is not the sealed R255 successor")
     return source_data
 
 
@@ -167,6 +172,65 @@ def invert_r248_to_r247_ega1_10(data):
     )
 
 
+R255_CITATION_POST = base64.b64decode(
+    "d2UgYXJlIGRvbmUsIGJ5IFxzcmVme0kuNC4yLjV9XGZvb3Rub3Rle1xlbXBoe1tUcmFucy5d"
+    "IFRoZSBGcmVuY2ggc291cmNlIHByaW50cyBcc3JlZntJLjQuMi40fSBoZXJlOyBwdWJsaXNo"
+    "ZWQgRUdBfklJSS4yLCBFcnJhdGEgYW5kIEFkZGVuZGEgKGxpc3R+MiksIGV4cGxpY2l0bHkg"
+    "ZGlyZWN0cyBpdHMgcmVwbGFjZW1lbnQgYnkgXHNyZWZ7SS40LjIuNX0ufX0gKHJlc3AuIFxz"
+    "cmVme0kuNC41LjV9KS4="
+)
+R255_CITATION_PRE = base64.b64decode(
+    "d2UgYXJlIGRvbmUsIGJ5IFxzcmVme0kuNC4yLjR9IChyZXNwLiBcc3JlZntJLjQuNS41fSku"
+)
+R255_PROOF_POST = base64.b64decode(
+    "XGJlZ2lue3Byb29mfQpUaGUgcHJvb2YgcHJpbnRlZCBpbiB0aGUgRnJlbmNoIHNvdXJjZSBp"
+    "cyBpbnN1ZmZpY2llbnQsIGJlY2F1c2UgaXQgZG9lcyBub3QKc2hvdyB0aGF0ICRcRGVsdGFf"
+    "WChYKSQgaXMgbG9jYWxseSBjbG9zZWQgaW4gJFhcdGltZXNfUyBYJC5cZm9vdG5vdGV7XGVt"
+    "cGh7W1RyYW5zLl0gUHVibGlzaGVkIEVHQX5JSUkuMiwgRXJyYXRhIGFuZCBBZGRlbmRhIChs"
+    "aXN0fjIpLCBpdGVtICRcbWF0aHJte0Vycn1fe1xtYXRocm17SUlJfX0sMTAkLCBleHBsaWNp"
+    "dGx5IGlkZW50aWZpZXMgdGhpcyBnYXAgYW5kIGdpdmVzIHRoZSBhZmZpbmUtbG9jYWwgcHJv"
+    "b2YgdHJhbnNsYXRlZCBoZXJlLn19CkZvciBhIGNvcnJlY3QgcHJvb2YsIGl0IHN1ZmZpY2Vz"
+    "IHRvIHVzZSBcc3JlZntJLjQuMi40fVthXToKZm9yIGV2ZXJ5ICR4XGluIFgkIGFuZCBldmVy"
+    "eSBhZmZpbmUgbmVpZ2hib3VyaG9vZCAkVSQgb2YgJHgkIGluICRYJCwKJFVcdGltZXNfUyBV"
+    "JCBpcyBhbiBhZmZpbmUgbmVpZ2hib3VyaG9vZCBvZiAkXERlbHRhX1goeCkkLgpUYWtpbmcg"
+    "YWNjb3VudCBvZiBcc3JlZntJLjUuMy4xNn0gKHdob3NlIHByb29mIHVzZXMgb25seSBEZWZp"
+    "bml0aW9uClxzcmVme0kuNS4zLjEuMX0pLCB3ZSBhcmUgcmVkdWNlZCB0byBwcm92aW5nIFxz"
+    "cmVme0kuNS4zLjl9IHdoZW4KJFM9XFNwZWMoQikkIGFuZCAkWD1cU3BlYyhBKSQgYXJlIGFm"
+    "ZmluZSBzY2hlbWVzLgpJdCBpcyB0aGVuIGNsZWFyIGZyb20gXHNyZWZ7SS41LjMuMS4xfSB0"
+    "aGF0ICRcRGVsdGFfWCQgY29ycmVzcG9uZHMgdG8gdGhlCmNhbm9uaWNhbCBob21vbW9ycGhp"
+    "c20gJEFcb3RpbWVzX0IgQVx0byBBJCB0YWtpbmcgJHhcb3RpbWVzIHkkIHRvICR4eSQuClNp"
+    "bmNlIHRoaXMgaG9tb21vcnBoaXNtIGlzIHN1cmplY3RpdmUsICRcRGVsdGFfWCQgaXMgaW4g"
+    "dGhpcyBjYXNlIGEgY2xvc2VkCmltbWVyc2lvbiBcc3JlZntJLjQuMi4zfSwgd2hpY2ggY29t"
+    "cGxldGVzIHRoZSBwcm9vZi4KXGVuZHtwcm9vZn0="
+)
+R255_PROOF_PRE = base64.b64decode(
+    "XGJlZ2lue3Byb29mfQpJbmRlZWQsIHNpbmNlIHRoZSBjb250aW51b3VzIG1hcHMgJHBfMSQg"
+    "YW5kICRcRGVsdGFfWCQgZnJvbSB0aGUgdW5kZXJseWluZyBzcGFjZXMgYXJlIHN1Y2ggdGhh"
+    "dCAkcF8xXGNpcmNcRGVsdGFfWCQgaXMgdGhlIGlkZW50aXR5LCAkXERlbHRhX1gkIGlzIGEg"
+    "aG9tZW9tb3JwaGlzbSBmcm9tICRYJCB0byAkXERlbHRhX1goWCkkLgpTaW1pbGFybHksIHRo"
+    "ZSBjb21wb3NpdGUgaG9tb21vcnBoaXNtICRcc2h7T31feFx0b1xzaHtPfV97XERlbHRhX1go"
+    "eCl9XHRvXHNoe099X3gkIChjb21wb3NlZCBvZiB0aGUgaG9tb21vcnBoaXNtcyBjb3JyZXNw"
+    "b25kaW5nIHRvICRwXzEkIGFuZCAkXERlbHRhX1gkKSBpcyB0aGUgaWRlbnRpdHksIHdoaWNo"
+    "IG1lYW5zIHRoYXQgdGhlIGhvbW9tb3JwaGlzbSBjb3JyZXNwb25kaW5nIHRvICRcRGVsdGFf"
+    "WCQgaXMgc3VyamVjdGl2ZTsKdGhlIHByb3Bvc2l0aW9uIHRodXMgZm9sbG93cyBmcm9tIFxz"
+    "cmVme0kuNC4yLjJ9LgpcZW5ke3Byb29mfQ=="
+)
+
+
+def invert_r255_citation_ega1_5(data):
+    return replace_at(
+        data, 24_780, R255_CITATION_POST, R255_CITATION_PRE, 48_028,
+        "38C3CB436162FCB60A8D4BEED799EC4416EB767B8E56B5DDA130C954F299E1D2",
+    )
+
+
+def invert_r255_proof_ega1_5(data):
+    return replace_at(
+        data, 21_078, R255_PROOF_POST, R255_PROOF_PRE, 47_538,
+        "18034F9FCF24CDA1D6AD9D05E543DD404A55FF19F33DF5113B963529FCB6B208",
+    )
+
+
 def invert_r251_to_r248_ega1_5(data):
     if sha(data[19_655:19_775]) != (
             "367A45461D46ADCBE6012D2C7D18040301343A1B9B3D0C73E5616790EC639359"):
@@ -175,6 +239,16 @@ def invert_r251_to_r248_ega1_5(data):
         data, 19_712, b"_", b"^", 47_538,
         "B344B67200DF1DA5E962BCB8AE5AD7E20224168D55C3E53BD52B5F0311F8EE56",
     )
+
+
+R255_CITATION_INVERSES = {
+    "ega1/ega1-5.tex": invert_r255_citation_ega1_5,
+}
+
+
+R255_PROOF_INVERSES = {
+    "ega1/ega1-5.tex": invert_r255_proof_ega1_5,
+}
 
 
 R251_TO_R248_INVERSES = {
@@ -395,13 +469,13 @@ def main():
     raw_successor_manifest = args.successor_manifest.read_bytes()
     if (len(raw_successor_manifest), sha(raw_successor_manifest)) != (
             SUCCESSOR_MANIFEST_BYTES, SUCCESSOR_MANIFEST_SHA256):
-        raise RuntimeError("R251 manifest identity changed")
+        raise RuntimeError("R255 manifest identity changed")
     successor_manifest = json.loads(raw_successor_manifest.decode("utf-8"))
     if (successor_manifest.get("file_count"),
             successor_manifest.get("total_bytes"),
             successor_manifest.get("canonical_tree_sha256")) != (
             127, SUCCESSOR_BYTES, SUCCESSOR_TREE_SHA256):
-        raise RuntimeError("R251 manifest summary changed")
+        raise RuntimeError("R255 manifest summary changed")
 
     if args.out.exists():
         raise RuntimeError("output already exists")
@@ -411,29 +485,63 @@ def main():
     for entry in successor_manifest["files"]:
         relative = entry["relative_path"]
         if relative in successor_entries:
-            raise RuntimeError(f"duplicate R251 manifest path: {relative}")
+            raise RuntimeError(f"duplicate R255 manifest path: {relative}")
         successor_entries[relative] = entry
     r184_paths = {entry["relative_path"] for entry in manifest["files"]}
     if set(successor_entries) != r184_paths:
-        raise RuntimeError("R251 and R184 path sets differ")
+        raise RuntimeError("R255 and R184 path sets differ")
     source_data = read_sealed_successor(args.source, successor_entries)
 
-    r251_changed = []
+    citation_changed = []
+    citation_data = {}
+    citation_rows = []
+    for entry in manifest["files"]:
+        relative = entry["relative_path"]
+        data = source_data[relative]
+        inverse = R255_CITATION_INVERSES.get(relative)
+        if inverse is not None:
+            data = inverse(data)
+            citation_changed.append(relative)
+        citation_data[relative] = data
+        citation_rows.append(f"{relative}\t{len(data)}\t{sha(data)}\n")
+    if (sum(len(data) for data in citation_data.values()),
+            sha("".join(citation_rows).encode("utf-8"))) != (
+            R255_CITATION_BYTES, R255_CITATION_TREE_SHA256):
+        raise RuntimeError("R255 citation inverse does not reconstruct its exact intermediate")
+
+    proof_changed = []
+    r254_data = {}
+    r254_rows = []
+    for entry in manifest["files"]:
+        relative = entry["relative_path"]
+        data = citation_data[relative]
+        inverse = R255_PROOF_INVERSES.get(relative)
+        if inverse is not None:
+            data = inverse(data)
+            proof_changed.append(relative)
+        r254_data[relative] = data
+        r254_rows.append(f"{relative}\t{len(data)}\t{sha(data)}\n")
+    if (sum(len(data) for data in r254_data.values()),
+            sha("".join(r254_rows).encode("utf-8"))) != (
+            R254_BYTES, R254_TREE_SHA256):
+        raise RuntimeError("R255 proof inverse does not reconstruct sealed R254/R251")
+
+    r254_changed = []
     r248_data = {}
     r248_rows = []
     for entry in manifest["files"]:
         relative = entry["relative_path"]
-        data = source_data[relative]
+        data = r254_data[relative]
         inverse = R251_TO_R248_INVERSES.get(relative)
         if inverse is not None:
             data = inverse(data)
-            r251_changed.append(relative)
+            r254_changed.append(relative)
         r248_data[relative] = data
         r248_rows.append(f"{relative}\t{len(data)}\t{sha(data)}\n")
     if (sum(len(data) for data in r248_data.values()),
             sha("".join(r248_rows).encode("utf-8"))) != (
             R248_BYTES, R248_TREE_SHA256):
-        raise RuntimeError("R251 inverse does not reconstruct sealed R248")
+        raise RuntimeError("R254/R251 inverse does not reconstruct sealed R248")
 
     r248_changed = []
     r247_data = {}
@@ -526,15 +634,21 @@ def main():
         "bytes": sum(entry["bytes"] for entry in manifest["files"]),
         "tree_sha256": TREE_SHA256,
         "successor_tree_sha256": SUCCESSOR_TREE_SHA256,
+        "r255_citation_tree_sha256": R255_CITATION_TREE_SHA256,
+        "r254_tree_sha256": R254_TREE_SHA256,
         "r248_tree_sha256": R248_TREE_SHA256,
         "r247_tree_sha256": R247_TREE_SHA256,
         "r243_tree_sha256": R243_TREE_SHA256,
         "intermediate_tree_sha256": R219_TREE_SHA256,
         "successor_inverted_files": sorted(set(
-            r251_changed + r248_changed + r247_changed + r243_changed)),
+            citation_changed + proof_changed + r254_changed +
+            r248_changed + r247_changed + r243_changed)),
         "r184_inverted_files": changed,
         "inverted_files": sorted(set(
-            r251_changed + r248_changed + r247_changed + r243_changed + changed)),
+            citation_changed + proof_changed + r254_changed +
+            r248_changed + r247_changed + r243_changed + changed)),
+        "inverse_operations": 33,
+        "inverse_paths": 12,
         "source_mutated": False,
     }
     print(json.dumps(result, indent=2, sort_keys=True))

@@ -178,6 +178,17 @@ or an exact published authority can support a canonical source claim.
 - `upstream_feedback`: upstream comment is recorded and dispositioned.
 - `upstream_accepted`: upstream merged or explicitly accepted the material.
 
+The active production path for local material ends at `remote_checkpoint` in
+the independently maintained Mathematical Commons mirror. The
+`upstream_feedback` and `upstream_accepted` values remain valid only as
+append-only historical vocabulary; they are not active production goals.
+
+The historical residual state `integrated_local_pending_upstream` remains
+valid in superseded rows so its provenance can still be checked. Every active
+untagged local integration uses `integrated_local_mirror`: the statement is
+maintained and verified in the independent mirror and carries no upstream-
+submission implication.
+
 Build success never promotes mathematical review state by itself.
 
 `tmap.csv` records bounded reviewed correspondences. Its granularity and
@@ -225,14 +236,15 @@ that the target already exists upstream.
 
 ## Feedback integration
 
-`fb.csv` records the immutable URL, source, date, affected stable ID, and
-disposition of each upstream comment. Any resulting change receives a new
-decision row. Rejected or deferred feedback remains visible. This lets the
-scaffold absorb maintainer guidance without rekeying the corpus graph.
+`fb.csv` retains the immutable URL, source, date, affected stable ID, and
+disposition of each historical upstream comment. Any resulting change receives
+a new decision row. Rejected or deferred feedback remains visible. This lets
+the scaffold preserve maintainer guidance without rekeying the corpus graph.
 
 ## Promotion gate
 
-A source unit can modify a Stacks chapter only when it has:
+A source unit can modify a Stacks-compatible chapter in the independent mirror
+only when it has:
 
 1. stable source identity and exact authority evidence;
 2. an explicit correspondence state (existing, stronger, weaker, split, gap,

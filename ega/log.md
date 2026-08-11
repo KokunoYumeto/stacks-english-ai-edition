@@ -1912,3 +1912,116 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   including both serial R251-to-R184 reconstructions and intakes, append-only
   prefixes, sealed interfaces, privacy, Python, scaffold, and diff gates, and
   returned HARD PASS with zero staged or tag-tree changes.
+
+### Mathematical Commons local-mirror policy transition
+
+- On 2026-08-11 the user directed that upstream Stacks submission packaging
+  stop after the maintainer stated that AI-assisted contributions would not be
+  accepted for the foreseeable future. This does not stop source transcription,
+  translation, visual QA, semantic mapping, local theorem integration, or the
+  documentation of naturally encountered Stacks defects. The pinned official
+  Stacks tree remains the comparison and dependency authority; the independent
+  Mathematical Commons fork is the production destination.
+- Upstream PRs 198, 199, and 200 were closed, and their three disposable remote
+  branches (`codex/fix-picard-base-change-direction`,
+  `codex/fix-generator-proof-parenthesis`, and
+  `codex/fix-01kr-duplicate-arrow`) were deleted. A fresh readback found no open
+  Stacks PR from the account. The high-throughput Commons branches and all local
+  worktrees, audit evidence, corrections, and corpus history remain intact.
+- D000234 records the independent-mirror policy. R000578--R000588 supersede the
+  eleven formerly active `integrated_local_pending_upstream` residuals without
+  rewriting them; every successor is active `integrated_local_mirror`. The
+  active residual view is 572 rows from 588 physical rows, with 16 superseded,
+  six open gaps, and eleven local-mirror integrations. No active legacy
+  upstream-pending residual remains.
+- The validator pins D000234 and the complete semantic tuple of every old/new
+  residual pair, including source unit, kind, evidence, disposition, status,
+  decision, supersession, and active state. Adverse replays that substituted an
+  upstream-submission disposition or changed a predecessor and successor in
+  tandem both failed closed. The active local statement-unit set and active
+  local-mirror residual-unit set are exactly equal at eleven.
+- A000203 independently enumerated the migration surface and returned HARD
+  PASS. A first inverse audit then exposed the missing independent tuple pins;
+  after repair its exact contradictory-disposition and paired-history tests
+  returned HARD PASS. Historical schema vocabulary remains readable, but the
+  active production path now terminates at a remotely verified Commons
+  checkpoint rather than an upstream-acceptance state.
+
+### EGA I 5.3.9--5.3.14 source-only checkpoint
+
+- Exact authority is F33 (14,944 bytes / SHA-256
+  `2652207F96F697935BC81C5D63B292DE4D956905D69CB92572225E320BB27F4C`)
+  with the direct-French lines 497--594 slice at 4,033 LF bytes / SHA-256
+  `649D95D1023FD47B7C6C0BE6B98D3C0D7BDEEB8582C53988FA5C7982C6D9581E`.
+  Page controls R56 and R57 are 11,033 bytes /
+  `025D9BB49D0B2305199EBE54D56822E6CE7E4E38E4AAA93819EC67A560CCB091`
+  and 12,367 bytes /
+  `AA264ADF86D4AF5B1A1BE075DC5293920009B08E57C8218993865E958BF9EC18`.
+- S000817--S000836 add twenty scoped semantic edges for the diagonal
+  immersion, fibre-product comparison, graph criteria and base change,
+  immersion cancellation, and the pairing criterion. R000560--R000577 retain
+  eighteen proof, terminology, stronger-target, and derived boundaries. The
+  corrected source directions are `X times_S Y -> X times_T Y` and the
+  pullback of `Delta_{S/T}`. Independent compact-versus-full dependency and
+  local-lemma audits found no missing required edge or residual.
+- Q000009 binds the insufficient printed proof of 5.3.9; primary EGA III.2
+  Err_III,10 supplies the missing affine-local closed-image argument. Q000010
+  binds the printed 5.3.13 citation `4.2.4`; the primary list-2 erratum directs
+  replacement by `4.2.5`. Both exact 5,000-dpi authority crops reproduce
+  byte-for-byte and diplomatic French remains unchanged. I000066 and I000067
+  stay `referred_to_canon` at the reader-closure layer.
+- Item four of the local untagged `schemes-lemma-diagonal-identities` records
+  that arbitrary base change carries a graph morphism to the graph of the
+  base-changed map under the canonical product identification. Its proof is
+  the exact two-projection argument. Three isolated Schemes passes produced a
+  50-page PDF of 651,288 bytes / SHA-256
+  `C991E0B6E0D18E23BAE8356B2091CED0626A6B533B3661C0FE5F71CF4792FD39`;
+  changed pages were inspected without a layout defect.
+- The producer source seals are F37ZP 5,886 bytes /
+  `FACB20FE64825D69C092D26F8546EDD0ACCEE2664B5714F17A03AC2F8CA504A5`
+  and R255 26,255 bytes /
+  `072A5D6251553188D86A869A9252A6A84A613B7638CAEEDD4C42B3DDD4A7A4E9`.
+  F37ZP preserves the exact 18-file French tree. R255 changes only
+  `ega1/ega1-5.tex` and has 127 files / 7,284,367 bytes / tree
+  `B6B0A39094F1E7799C8F6C032FC1C38840597CD66075202D11F4926C8668DB4C`.
+  `r184.py` now reverses the 5.3.13 citation first, gates the exact
+  7,284,191-byte intermediate tree, reverses the 5.3.9 proof second, gates the
+  exact R254/R251 tree, and continues through the existing lower layers. The
+  complete replay is 33 exact operations across twelve paths and returns the
+  frozen R184 tree without runtime dependence on temporary producer files.
+- Two fresh serial R255-to-R184 reconstructions each returned 127 files /
+  7,283,321 bytes / tree
+  `3BFB1C5103093481246EF4A6365E08544F6D5E19ACC0EA63E717F3F3643F064D`.
+  Their independent intakes returned PASS and matched tracked `files.csv`
+  (`A1BB4950FE27D813FD79BCC4604607994D38E3F1E5A2C1D52EC21E01EC5C7E5F`),
+  `units.csv`
+  (`5C73182F07F749F03C0B0F92BBA0D37884873FFF096C93AE2E1A3CDB599EDA4C`),
+  and `intake.json`
+  (`6252CE94351C297E9BBBACA7527FD79688D0F3B2917A0B1F82F3D87D64130C7D`)
+  byte-for-byte. Both runs reread the full sealed R255 source immediately
+  before atomic promotion.
+- This is deliberately a source-only successor checkpoint. The last admitted
+  reader interface remains F37ZL/R251 with B37AD/B234 and the
+  D41R/DIA41R/REF11/Q37CC/Q37CD closure. French B37AD remains source-compatible
+  because the French successors are identity-only; English B234 is explicitly
+  predecessor-only because R255 changes bytes and adds a page.
+- B235 43,066 bytes /
+  `BDCBF4BDB3ED548A194ABA75AF684348799610D04B00541FA31517031EFCF052`,
+  RF14, DIA42R, REF14, and q37ckgen are retained only in an exact quarantine
+  object. B235 falsely records zero total bytes for three rejected trees whose
+  listed files sum to 13,522,363, 1,039,408, and 15,953,997 bytes. The cleanup
+  generator pins four stale identities, Q37CK/Q37CL are absent, and
+  `C:/tmp/EGA-ref14` remains present. None of these objects confers reader,
+  closure, visual, or publication admission.
+- A000204 and A000205 independently verified the source seals and rejected the
+  reader closure. A000206 preserves the initial local-mirror contract failure;
+  A000207 records its repaired HARD PASS. A000208 independently proved the
+  citation-first/proof-second inverse order and both whole-tree gates. A000209
+  then made six source/reader/quarantine mutations and every case failed
+  closed. A000210 independently repeated both exact reconstruction/intake runs
+  plus block-order, manifest, tree, no-overwrite, and final-reread drift tests
+  and returned HARD PASS. A000211 independently replayed the French source,
+  both primary errata, all twenty edges and eighteen residuals, both exact
+  5,000-dpi Q crops, the local lemma and current Schemes build, append-only
+  prefixes, mirror-only policy, privacy, and remote-readiness surface and
+  returned the final HARD PASS.

@@ -324,21 +324,47 @@ for field in ("latest_manifest", "latest_manifest_bytes", "latest_manifest_sha25
     if (interface.get("english_discovery", {}).get(field) !=
             scope["inputs"]["english_discovery"].get(field)):
         ERRORS.append(f"edition interface latest English {field} mismatch")
+for field in ("latest_files", "latest_bytes", "latest_tree_sha256",
+              "reader_admitted", "publication"):
+    if (interface.get("english_discovery", {}).get(field) !=
+            scope["inputs"]["english_discovery"].get(field)):
+        ERRORS.append(f"edition interface latest English {field} mismatch")
+if scope["inputs"]["english_discovery"].get("latest_status") != (
+        "sealed_source_only_reader_closure_quarantined"):
+    ERRORS.append("scope latest English source status mismatch")
 if tuple(
         interface.get("english_discovery", {}).get(field)
         for field in ("latest_manifest", "latest_manifest_bytes",
                       "latest_manifest_sha256")) != (
-        "R251.json", 25277,
-        "250A00CB2846004B788E542D0AEA0A31CB00AF2B1864ABD8C153116E97087F55",
+        "R255.json", 26255,
+        "072A5D6251553188D86A869A9252A6A84A613B7638CAEEDD4C42B3DDD4A7A4E9",
 ):
-    ERRORS.append("latest English interface is not sealed R251")
+    ERRORS.append("latest English interface is not sealed source-only R255")
+if tuple(
+        interface.get("english_discovery", {}).get(field)
+        for field in ("latest_files", "latest_bytes", "latest_tree_sha256",
+                      "reader_admitted", "publication")) != (
+        127, 7284367,
+        "B6B0A39094F1E7799C8F6C032FC1C38840597CD66075202D11F4926C8668DB4C",
+        False, False,
+):
+    ERRORS.append("latest English source-only status or tree mismatch")
 if tuple(
         interface.get("latest_sealed_french", {}).get(field)
         for field in ("manifest", "manifest_bytes", "manifest_sha256")) != (
-        "F37ZL.json", 6159,
-        "9356CB6B4F40E72488BB1E4D8E08E34AA0965C8F96B6D880AC190C423DCB8E4C",
+        "F37ZP.json", 5886,
+        "FACB20FE64825D69C092D26F8546EDD0ACCEE2664B5714F17A03AC2F8CA504A5",
 ):
-    ERRORS.append("latest French interface is not sealed F37ZL")
+    ERRORS.append("latest French interface is not sealed source-only F37ZP")
+if tuple(
+        interface.get("latest_sealed_french", {}).get(field)
+        for field in ("files", "bytes", "tree_sha256", "reader_admitted",
+                      "publication")) != (
+        18, 1014921,
+        "344B4DA9876EAC1289DE6C57008B42B953BFBD0DED73A20F26B39581A687F3CB",
+        False, False,
+):
+    ERRORS.append("latest French source-only status or tree mismatch")
 if tuple(
         scope.get("inputs", {}).get("french_authority", {}).get(field)
         for field in ("latest_sealed_manifest", "latest_sealed_manifest_bytes",
@@ -346,6 +372,45 @@ if tuple(
         interface.get("latest_sealed_french", {}).get(field)
         for field in ("manifest", "manifest_bytes", "manifest_sha256")):
     ERRORS.append("edition interface latest French manifest mismatch")
+for interface_field, scope_field in (
+        ("files", "latest_files"), ("bytes", "latest_bytes"),
+        ("tree_sha256", "latest_tree_sha256"),
+        ("reader_admitted", "reader_admitted"),
+        ("publication", "publication")):
+    if (interface.get("latest_sealed_french", {}).get(interface_field) !=
+            scope["inputs"]["french_authority"].get(scope_field)):
+        ERRORS.append(f"edition interface latest French {interface_field} mismatch")
+if scope["inputs"]["french_authority"].get("latest_status") != (
+        "sealed_source_only_reader_closure_quarantined"):
+    ERRORS.append("scope latest French source status mismatch")
+expected_source_successor = {
+    "status": "sealed_source_only_reader_closure_quarantined",
+    "reader_admitted": False,
+    "publication": False,
+    "french": {
+        "manifest": "F37ZP.json", "manifest_bytes": 5886,
+        "manifest_sha256":
+            "FACB20FE64825D69C092D26F8546EDD0ACCEE2664B5714F17A03AC2F8CA504A5",
+        "files": 18, "bytes": 1014921,
+        "tree_sha256":
+            "344B4DA9876EAC1289DE6C57008B42B953BFBD0DED73A20F26B39581A687F3CB",
+        "identity_only_since_last_admitted_reader_source": True,
+    },
+    "english": {
+        "manifest": "R255.json", "manifest_bytes": 26255,
+        "manifest_sha256":
+            "072A5D6251553188D86A869A9252A6A84A613B7638CAEEDD4C42B3DDD4A7A4E9",
+        "files": 127, "bytes": 7284367,
+        "tree_sha256":
+            "B6B0A39094F1E7799C8F6C032FC1C38840597CD66075202D11F4926C8668DB4C",
+        "identity_only_since_last_admitted_reader_source": False,
+    },
+    "role": "latest exact source manifests for local semantic and deterministic-replay use only",
+}
+if interface.get("source_successor") != expected_source_successor:
+    ERRORS.append("edition interface source-successor split mismatch")
+if scope.get("source_successor") != expected_source_successor:
+    ERRORS.append("scope source-successor split mismatch")
 expected_diagram_closure = {
     "control": "D41R.json",
     "control_bytes": 12948,
@@ -377,35 +442,152 @@ expected_diagram_closure = {
     "state_fingerprint_sha256":
         "31379A4907EEA1FCAEE0BFF3F4D3F9E15E8BCB9519CCD03BAAC240532DD1D55D",
 }
-interface_diagram_closure = interface.get(
-    "latest_sealed_french", {}).get("retrospective_diagram_closure")
-scope_diagram_closure = scope.get("inputs", {}).get(
-    "french_authority", {}).get("retrospective_diagram_closure")
+interface_reader_interface = interface.get("last_admitted_reader_interface", {})
+scope_reader_interface = scope.get("last_admitted_reader_interface", {})
+interface_diagram_closure = interface_reader_interface.get("closure")
+scope_diagram_closure = scope_reader_interface.get("closure")
 if interface_diagram_closure != expected_diagram_closure:
-    ERRORS.append("latest French diagram-closure interface mismatch")
+    ERRORS.append("last admitted reader-closure interface mismatch")
 if scope_diagram_closure != expected_diagram_closure:
-    ERRORS.append("latest French diagram-closure scope mismatch")
+    ERRORS.append("last admitted reader-closure scope mismatch")
 if interface_diagram_closure != scope_diagram_closure:
-    ERRORS.append("French diagram-closure interface/scope mismatch")
+    ERRORS.append("reader-closure interface/scope mismatch")
+if interface_reader_interface != scope_reader_interface:
+    ERRORS.append("last admitted reader interface differs from scope")
+if tuple(interface_reader_interface.get(field) for field in (
+        "status", "french_source_manifest", "french_source_manifest_sha256",
+        "english_source_manifest", "english_source_manifest_sha256")) != (
+        "admitted_predecessor_reader_closure", "F37ZL.json",
+        "9356CB6B4F40E72488BB1E4D8E08E34AA0965C8F96B6D880AC190C423DCB8E4C",
+        "R251.json",
+        "250A00CB2846004B788E542D0AEA0A31CB00AF2B1864ABD8C153116E97087F55",
+):
+    ERRORS.append("last admitted reader interface source bindings changed")
+if interface_reader_interface.get("active_referral_issues") != [
+        "I000066", "I000067"]:
+    ERRORS.append("source-only referrals are not retained at reader closure")
 if interface.get("public_checkpoint") != "https://zenodo.org/records/21861666":
     ERRORS.append("public EGA checkpoint is stale")
 expected_readers = {
-    "french": ("B37AD.json",
+    "french": ("B37AD.json", 7129,
                "B8736E90D2465E36F2DDC00499EFA2234A42B96046B79044370C87D2733A566F",
                2004722,
                "8A89494F17D1569D206C7D6456D85E922D61F6E6B0E62F8042AABA23F5358F66",
-               168),
-    "english": ("B234.json",
+               168, "F37ZL.json",
+               "9356CB6B4F40E72488BB1E4D8E08E34AA0965C8F96B6D880AC190C423DCB8E4C",
+               "344B4DA9876EAC1289DE6C57008B42B953BFBD0DED73A20F26B39581A687F3CB",
+               True),
+    "english": ("B234.json", 7753,
                  "DAC7E77E922D3142B7541142B3501E2E8507EA140A21233D3AD33491369A69BB",
                  14590653,
                  "86AC6590F07E0E36B24EE5D4A4125FAF0E191EF968AD4B87254A9C4EEEF5A42A",
-                1346),
+                 1346, "R251.json",
+                 "250A00CB2846004B788E542D0AEA0A31CB00AF2B1864ABD8C153116E97087F55",
+                 "C32F4904449F6DEDFB6991B569FDD96B8EAD27BE77685E67A52EE0094C896A7E",
+                 False),
 }
 for language, expected in expected_readers.items():
     reader = interface.get("sealed_readers", {}).get(language, {})
-    if (reader.get("receipt"), reader.get("receipt_sha256"),
-            reader.get("bytes"), reader.get("sha256"), reader.get("pages")) != expected:
+    if (reader.get("receipt"), reader.get("receipt_bytes"),
+            reader.get("receipt_sha256"), reader.get("bytes"),
+            reader.get("sha256"), reader.get("pages"),
+            reader.get("bound_manifest"),
+            reader.get("bound_manifest_sha256"),
+            reader.get("bound_tree_sha256"),
+            reader.get("current_source_compatible")) != expected:
         ERRORS.append(f"sealed {language} reader interface mismatch")
+expected_quarantine = {
+    "status": "quarantined_external_reader_closure",
+    "admitted": False,
+    "reader_admitted": False,
+    "publication": False,
+    "controls": {
+        "reader": {"name": "B235.json", "bytes": 43066, "sha256":
+                   "BDCBF4BDB3ED548A194ABA75AF684348799610D04B00541FA31517031EFCF052"},
+        "referral_receipt": {"name": "RF14.json", "bytes": 45381,
+                             "sha256":
+                             "5041AB3E49171EFC993B5B059988F3B556D5B668DD58A373A47262F45434D255"},
+        "diagram_inventory": {"name": "DIA42R.json", "bytes": 144781,
+                              "sha256":
+                              "9AED25D5A883A75892568B7F17D754C26FA89F0EC82659E16D4BE63313FE0798"},
+        "closure": {"name": "REF14.json", "bytes": 9198, "sha256":
+                    "A455567EB62F0A560364E4FDA92167C8983ED6E19E3523C09EB9E94980EC6615"},
+        "cleanup_generator": {"name": "q37ckgen.ps1", "bytes": 14642,
+                              "sha256":
+                              "42E9FD3802AA6E538466B3B99733FF2431DB077324F34673A7AD049B35F00F83"},
+    },
+    "candidate_reader": {
+        "files": 7,
+        "bytes": 15982098,
+        "tree_sha256":
+            "CDDB094E4ECF479E620945C620F2AC6DA650EBB06A7F7D376F63AAEE40324C4C",
+        "pdf_bytes": 14593436,
+        "pdf_sha256":
+            "B63C595C6A9740F01212D6D567F181923442B5A4C38E59EBC41D89C558F37197",
+        "pdf_pages": 1347,
+    },
+    "b235_rejected_replay_total_contradictions": [
+        {"record": "literal_output_argument_build_moved_to_b235_r0",
+         "recorded_total_bytes": 0, "listed_file_total_bytes": 13522363},
+        {"record": "failed_wrapper_attempt_b235_r1",
+         "recorded_total_bytes": 0, "listed_file_total_bytes": 1039408},
+        {"record": "one_pass_replay_b235_r2",
+         "recorded_total_bytes": 0, "listed_file_total_bytes": 15953997},
+    ],
+    "q37ckgen_stale_identity_pins": [
+        {"record": "Q37CJ.json", "recorded_bytes": 7830,
+         "recorded_sha256":
+             "81620C1C70A8608EC395A062A05C13BFDC6CE9702E9A525E2BE8C877851F5B81",
+         "actual_bytes": 7830, "actual_sha256":
+             "2E5E25FEB421E4D9987EDB55FBFCA2AFB40C60F9AE67A9B77C5C6DB9D820FEF1"},
+        {"record": "ref14gen.ps1", "recorded_bytes": 13425,
+         "recorded_sha256":
+             "E3E28E18961D2F3B37B822C34698EC6CF101B95FA678ECBC583307385C43E0D0",
+         "actual_bytes": 13425, "actual_sha256":
+             "D39B5FE81B13B56817381F630B3515110F0F5472E96F24DFC52E3129FE5E7260"},
+        {"record": "ref14seal.ps1", "recorded_bytes": 39736,
+         "recorded_sha256":
+             "EBC6D9D6672C0651C168FB90126C2B3D5B12C2BA1BD931FE30535F6E9A4A3772",
+         "actual_bytes": 34143, "actual_sha256":
+             "455671605E4444095AD66B1FC6A0A3F3B31FB26D178C9B604AEBADB03561E808"},
+        {"record": "ref14final.ps1", "recorded_bytes": 14033,
+         "recorded_sha256":
+             "23AE7F853CBA890C6BF0959BC29F2D30814F08A7AEBC1B3F555608E3B0339FF6",
+         "actual_bytes": 11837, "actual_sha256":
+             "32312BC1A585996E419697A816002F3167DDC4F45F56BE1FC56DA84DFC3A568C"},
+    ],
+    "semantic_scaffold": {
+        "postimage_bytes": 556040,
+        "postimage_sha256":
+            "A06EE6F587C97B5003E4B9A2F44D183813922E55211B785500805B99E24570F2",
+        "last_admitted_prefix_bytes": 550780,
+        "last_admitted_prefix_sha256":
+            "4CFF390349293917941915848B04F31092B5921ED2127750F73FC3D94D62E3C9",
+    },
+    "missing_cleanup_receipts": ["Q37CK.json", "Q37CL.json"],
+    "temporary_workspace": "C:/tmp/EGA-ref14",
+    "temporary_workspace_state": "present",
+    "disposition": (
+        "retain as exact adverse evidence and refuse reader closure or publication "
+        "promotion until an append-only corrected producer successor and cleanup "
+        "receipts are independently sealed"),
+}
+interface_quarantine = interface.get("quarantined_external_closure")
+scope_quarantine = scope.get("quarantined_external_closure")
+if interface_quarantine != expected_quarantine:
+    ERRORS.append("external REF14 reader closure is not exactly quarantined")
+if scope_quarantine != expected_quarantine:
+    ERRORS.append("scope external REF14 quarantine mismatch")
+if interface_quarantine != scope_quarantine:
+    ERRORS.append("external REF14 quarantine differs between interface and scope")
+admitted_interface_text = json.dumps({
+    "readers": interface.get("sealed_readers"),
+    "closure": interface.get("last_admitted_reader_interface"),
+}, sort_keys=True)
+for forbidden in ("B235.json", "RF14.json", "DIA42R.json", "REF14.json",
+                  "q37ckgen.ps1"):
+    if forbidden in admitted_interface_text:
+        ERRORS.append(f"quarantined control leaked into admitted interface: {forbidden}")
 if interface.get("french_cursor", {}).get("page_gate_sha256") != scope["inputs"]["french_authority"]["page_gate_sha256"]:
     ERRORS.append("edition interface French page-gate mismatch")
 admitted_receipts = {
@@ -418,6 +600,9 @@ current_receipt = (
 )
 if current_receipt not in admitted_receipts:
     ERRORS.append("current French manifest missing from admitted receipt registry")
+if ("F37ZP.json",
+        "FACB20FE64825D69C092D26F8546EDD0ACCEE2664B5714F17A03AC2F8CA504A5") not in admitted_receipts:
+    ERRORS.append("sealed source-only F37ZP missing from receipt registry")
 
 decision_rows = rows("dec.csv")
 issue_rows = rows("issues.csv")
@@ -523,6 +708,17 @@ if d223 is None or not (
         "V000022 J000010 J000011 J000012 J000013 J000014 D41R DIA41R REF11 and Q37CD" and
         d223.get("supersedes") == "D000222"):
     ERRORS.append("missing exact D000223 corrected visual-QA admission")
+d234 = active_decision_by_id.get("D000234")
+if d234 is None or not (
+        d234.get("subject_id") == "ega:local-mirror" and
+        d234.get("action") ==
+        "adopt_independent_mathematical_commons_mirror_as_local_integration_lane" and
+        d234.get("state") == "active" and
+        d234.get("evidence") == "Direct user policy update 2026-08-11" and
+        not d234.get("supersedes") and
+        d234.get("rationale") ==
+        "Upstream submission work stops while verified local integrations and naturally found corrections remain in the independent mirror"):
+    ERRORS.append("missing exact D000234 local-mirror policy decision")
 i64 = issue_by_id.get("I000064")
 i65 = issue_by_id.get("I000065")
 if i64 is None or not (
@@ -538,6 +734,22 @@ if i65 is None or not (
         i65.get("status") == "resolved" and
         i65.get("supersedes") == "I000064"):
     ERRORS.append("missing exact I000065 visual-fidelity resolution issue")
+i66 = issue_by_id.get("I000066")
+i67 = issue_by_id.get("I000067")
+if i66 is None or not (
+        i66.get("subject_id") == "ega:I.5.3.9:proof" and
+        i66.get("kind") == "printed_proof_omits_local_closedness" and
+        i66.get("status") == "referred_to_canon" and
+        i66.get("supersedes") == "D000226" and
+        "I000066" not in superseded_issues):
+    ERRORS.append("missing active I000066 reader-closure referral")
+if i67 is None or not (
+        i67.get("subject_id") == "ega:I.5.3.13:proof" and
+        i67.get("kind") == "printed_reference_4_2_4_should_be_4_2_5" and
+        i67.get("status") == "referred_to_canon" and
+        i67.get("supersedes") == "D000231" and
+        "I000067" not in superseded_issues):
+    ERRORS.append("missing active I000067 reader-closure referral")
 a130 = next(
     (row for row in rows("agent.csv") if row.get("run_id") == "A000130"),
     None,
@@ -1915,6 +2127,74 @@ if residual_path.exists():
         all_residuals, "residual_id", "resid.csv")
     active_residual_ids = {row["residual_id"] for row in residuals}
     residual_by_id = {row["residual_id"]: row for row in all_residuals}
+    mirror_residual_successors = {
+        "R000008": (
+            "R000578", "ega:I.1.1.15", "new_local_label",
+            "The exact EGA proposition is now a cited local lemma and repairs an implicit inference in more-algebra.tex",
+            "Retain in the Mathematical Commons mirror and keep Algebra and corpus checks active without assigning an official tag"),
+        "R000012": (
+            "R000579", "ega:I.1.2.4", "new_local_label",
+            "The general unit-times-image criterion now unifies the quotient and localization topology arguments",
+            "Retain in the Mathematical Commons mirror and keep Algebra and corpus checks active without assigning an official tag"),
+        "R000025": (
+            "R000580", "ega:I.1.4.1", "new_local_label",
+            "The exact four-way characterization now has one cited local Stacks-style statement with a canonical global-sections strengthening",
+            "Retain in the Mathematical Commons mirror and keep Properties and corpus checks active without assigning an official tag"),
+        "R000276": (
+            "R000581", "ega:I.3.6.1:proof",
+            "existing_local_unit_times_criterion",
+            "The source invokes EGA I 1.2.4 whose exact criterion is the already integrated untagged Algebra lemma",
+            "Reuse the local label inside the Mathematical Commons mirror without opening a duplicate gap or assigning an official tag"),
+        "R000496": (
+            "R000582", "ega:I.5.1.5", "new_local_label",
+            "The local schemes reduction-functorial lemma packages existence uniqueness identity composition and the natural square",
+            "Retain in the Mathematical Commons mirror and keep Schemes and corpus checks active without assigning an official tag"),
+        "R000497": (
+            "R000583", "ega:I.5.1.6", "new_local_label",
+            "The local morphisms reduction-morphism-properties lemma packages the modern permanence clauses it states",
+            "Retain in the Mathematical Commons mirror and keep Morphisms and corpus checks active without assigning an official tag"),
+        "R000498": (
+            "R000584", "ega:I.5.1.7", "new_local_label",
+            "The local morphisms reductions-fibre-product lemma states the canonical comparison and same-space closed inclusion",
+            "Retain in the Mathematical Commons mirror and keep Morphisms and corpus checks active without assigning an official tag"),
+        "R000521": (
+            "R000585", "ega:I.5.3.1.2", "new_local_label",
+            "The local Schemes diagonal-identities lemma packages the pairing formula as a reusable citable statement",
+            "Retain in the Mathematical Commons mirror and keep Schemes and corpus checks active without assigning an official tag"),
+        "R000524": (
+            "R000586", "ega:I.5.3.2", "new_local_label",
+            "The local Schemes diagonal-identities lemma states product compatibility under the canonical interchange isomorphism",
+            "Retain in the Mathematical Commons mirror and keep Schemes and corpus checks active without assigning an official tag"),
+        "R000528": (
+            "R000587", "ega:I.5.3.4", "new_local_label",
+            "The local Schemes diagonal-identities lemma states arbitrary base-change compatibility of the diagonal",
+            "Retain in the Mathematical Commons mirror and keep Schemes and corpus checks active without assigning an official tag"),
+        "R000570": (
+            "R000588", "ega:I.5.3.12", "new_local_label",
+            "Item four of the local Schemes diagonal identities lemma states exact graph compatibility with arbitrary base change",
+            "Retain in the Mathematical Commons mirror and keep Schemes and corpus checks active without assigning an official tag"),
+    }
+    for prior, expected in mirror_residual_successors.items():
+        successor, source_unit, kind, evidence, disposition = expected
+        prior_row = residual_by_id.get(prior)
+        successor_row = residual_by_id.get(successor)
+        if prior_row is None or successor_row is None or not (
+                prior_row.get("status") ==
+                "integrated_local_pending_upstream" and
+                prior_row.get("source_unit") == source_unit and
+                prior_row.get("kind") == kind and
+                prior_row.get("evidence") == evidence and
+                successor_row.get("status") == "integrated_local_mirror" and
+                successor_row.get("decision_id") == "D000234" and
+                successor_row.get("supersedes") == prior and
+                prior not in active_residual_ids and
+                successor in active_residual_ids and
+                successor_row.get("source_unit") == source_unit and
+                successor_row.get("kind") == kind and
+                successor_row.get("evidence") == evidence and
+                successor_row.get("disposition") == disposition):
+            ERRORS.append(
+                f"invalid local-mirror residual supersession {prior} -> {successor}")
     r552 = residual_by_id.get("R000552")
     r559 = residual_by_id.get("R000559")
     if r552 is None or r559 is None or not (
@@ -1967,7 +2247,7 @@ if residual_path.exists():
     allowed_residual_states = {
         "known_semantic_difference", "open_gap", "covered_unlabelled",
         "covered_by_stronger", "covered_derived",
-        "integrated_local_pending_upstream",
+        "integrated_local_pending_upstream", "integrated_local_mirror",
     }
     residual_state_by_unit = {}
     for row in all_residuals:
@@ -1991,13 +2271,21 @@ if residual_path.exists():
             row["source_unit"] for row in statement_edges
             if row["review_state"] == "integrated_local"
         }
-        pending_local_units = {
+        mirror_local_units = {
             row["source_unit"] for row in residuals
+            if row["status"] == "integrated_local_mirror"
+        }
+        active_legacy_pending = {
+            row["residual_id"] for row in residuals
             if row["status"] == "integrated_local_pending_upstream"
         }
-        if local_units != pending_local_units:
+        if active_legacy_pending:
             ERRORS.append(
-                "local statement edges and upstream-pending residuals differ")
+                "active legacy upstream-pending residuals remain "
+                f"{sorted(active_legacy_pending)}")
+        if local_units != mirror_local_units:
+            ERRORS.append(
+                "local statement edges and local-mirror residuals differ")
         for row in statement_edges:
             states = residual_state_by_unit.get(row["source_unit"], set())
             if row["relation"] == "partial" and not (
@@ -2022,8 +2310,8 @@ if residual_path.exists():
         "file_rows": len(all_residuals),
         "superseded_rows": len(superseded_residuals),
         "open_gaps": sum(row["status"] == "open_gap" for row in residuals),
-        "integrated_local_pending_upstream": sum(
-            row["status"] == "integrated_local_pending_upstream"
+        "integrated_local_mirror": sum(
+            row["status"] == "integrated_local_mirror"
             for row in residuals
         ),
     }
@@ -2109,6 +2397,24 @@ else:
         findings_raw, 16, 19629,
         "53C3654734C7902496888FD10707B523EDB554D331FE9598590010C62B359720",
         "first 16 findings")
+    findings_physical_lines = findings_raw.splitlines(keepends=True)
+    expected_finding_extensions = {
+        18: (1742,
+             "05DFBF91C85F1644A496F90501A62F79B65B745A977389B924F2D3889A7269C4"),
+        19: (1406,
+             "4C79825E20CC2E741D8FE35044867EB90921DC48CA1A82372F82C1F11E82051D"),
+    }
+    for line_index, (expected_bytes, expected_sha) in (
+            expected_finding_extensions.items()):
+        if line_index >= len(findings_physical_lines):
+            ERRORS.append(
+                f"findings.jsonl lacks exact published-correction row {line_index + 1}")
+            continue
+        raw_extension = findings_physical_lines[line_index]
+        if (len(raw_extension) != expected_bytes or
+                hashlib.sha256(raw_extension).hexdigest().upper() != expected_sha):
+            ERRORS.append(
+                f"exact published-correction finding row {line_index + 1} changed")
     findings_text = findings_raw.decode("utf-8")
     for number, raw in enumerate(findings_text.splitlines(), 1):
         if not raw.strip():
@@ -2190,9 +2496,13 @@ else:
     qsrc_physical_lines = qsrc_raw.splitlines(keepends=True)
     expected_qsrc_extensions = {
         7: (294,
-            "33987A68A53E7F20EF65E232048195E7314B19372B95EAD3B9119150CCC10B6C"),
+             "33987A68A53E7F20EF65E232048195E7314B19372B95EAD3B9119150CCC10B6C"),
         8: (306,
-            "EFA2FA2BD6769B181CBBCD5166EB6144BC6FA418E332004DC3F82233A69F4A5C"),
+             "EFA2FA2BD6769B181CBBCD5166EB6144BC6FA418E332004DC3F82233A69F4A5C"),
+        9: (307,
+             "D6E6B8A03A2AAB337127FE9BD11F4A13F1F925A172A413D7AAEEEB2C14CE2648"),
+        10: (303,
+              "331EB71CF07075DE77519C536D5FACFA0306550F952B7B6E51C5813F82562964"),
     }
     for line_index, (expected_bytes, expected_sha) in (
             expected_qsrc_extensions.items()):
@@ -2259,18 +2569,26 @@ q_decision_contracts = {
     "Q000008": (
         "ega:I.5.3.8:proof", "carry_official_one_element_to_at_most_one_correction",
         "Q000008 EG-EGA-I-P133-FR-538-ONE-ELEMENT-001 and the empty-to-Spec(k) test"),
+    "Q000009": (
+        "ega:I.5.3.9:proof", "carry_published_local_closedness_proof_correction",
+        "Q000009 and EGA III.2 Errata list 2 Err_III 10"),
+    "Q000010": (
+        "ega:I.5.3.13:proof", "carry_published_4_2_4_to_4_2_5_citation_correction",
+        "Q000010 and EGA III.2 Errata list 2 citation correction"),
 }
 q_expected_decision_ids = {
     "Q000001": "D000161", "Q000002": "D000162",
     "Q000003": "D000178", "Q000004": "D000179",
     "Q000005": "D000188", "Q000006": "D000198",
     "Q000007": "D000216", "Q000008": "D000219",
+    "Q000009": "D000226", "Q000010": "D000231",
 }
 q_expected_admission_ids = {
     "Q000001": "D000165", "Q000002": "D000165",
     "Q000003": "D000180", "Q000004": "D000180",
     "Q000005": "D000189", "Q000006": "D000199",
     "Q000007": "D000221", "Q000008": "D000221",
+    "Q000009": "D000233", "Q000010": "D000233",
 }
 q_admission_contracts = {
     "D000165": (
@@ -2290,11 +2608,15 @@ q_admission_contracts = {
         "ega:source-error-qa",
         "admit_exact_authority_crop_receipts_for_5_3_5_and_5_3_8",
         "Q000007 Q000008 in reports/qsrc.csv"),
+    "D000233": (
+        "ega:source-error-qa",
+        "admit_exact_authority_crop_receipts_for_5_3_9_and_5_3_13_published_corrections",
+        "Q000009 Q000010 in reports/qsrc.csv and primary EGA III.2 Errata list 2"),
 }
 q_authority_page_geometries = {
     122: (606, 756), 124: (595, 748), 126: (595, 748),
     127: (603, 754), 130: (603, 755), 131: (595, 748),
-    132: (595, 748),
+    132: (595, 748), 133: (595, 748),
 }
 legacy_finding_companions = {
     "Q000001": "EGA-I-4.2.3-P123-GAMMA-PSI-CROP-RECEIPT",

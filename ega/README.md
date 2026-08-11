@@ -21,24 +21,38 @@ or published here.
   `5C64ECD32FD7C5458D2599D70ED667D2CF06D95517EFFA9C6D6DCEF7626913A0`;
   127 files, 7,283,321 bytes, tree SHA-256
   `3BFB1C5103093481246EF4A6365E08544F6D5E19ACC0EA63E717F3F3643F064D`.
-- Latest sealed standalone-English comparison source: R251, 25,277-byte
+- Latest sealed standalone-English source-only successor: R255, 26,255-byte
   manifest at SHA-256
-  `250A00CB2846004B788E542D0AEA0A31CB00AF2B1864ABD8C153116E97087F55`;
-  127 files, 7,283,701 bytes, tree SHA-256
-  `C32F4904449F6DEDFB6991B569FDD96B8EAD27BE77685E67A52EE0094C896A7E`.
-  Its sole source change beyond R248 corrects the EGA I 5.3.7 `Delta_Y`
-  label side in `ega1/ega1-5.tex`; that exact inverse and the R248, R247,
-  R243, and R219 intermediate trees are separately gated before R184.
+  `072A5D6251553188D86A869A9252A6A84A613B7638CAEEDD4C42B3DDD4A7A4E9`;
+  127 files, 7,284,367 bytes, tree SHA-256
+  `B6B0A39094F1E7799C8F6C032FC1C38840597CD66075202D11F4926C8668DB4C`.
+  It carries corrected-language versions of the published EGA I 5.3.9 proof
+  and 5.3.13 citation. The citation-first and proof-second inverses separately
+  gate the 7,284,191-byte intermediate and exact R254/R251 tree before the
+  existing R248, R247, R243, and R219 gates. R255 is admitted as source only;
+  no R255 English reader or REF14 closure is admitted.
 - French authority: production is active; the latest sealed interface marker
-  is F37ZL through EGA II printed p.37, including the retrospective EGA I
-  5.3.7 label-side correction. This
+  is source-only F37ZP through EGA II printed p.37. Its 18-file source tree is
+  byte-identical to the F37ZL reader source and records the 5.3.9 and 5.3.13
+  referral semantics. This
   graph still binds every reviewed EGA I claim to its exact historical page receipt;
   receipt F33 also repairs 4.1.9 from `g'` to the directly verified printed
   `g` without changing the already-correct English.
-  The retrospective closure is fail-closed by D41R/DIA41R/REF11 and exact
+  The last admitted reader closure is F37ZL/R251 with B37AD/B234 and is
+  fail-closed by D41R/DIA41R/REF11 and exact
   Q37CC/Q37CD pre/post-cleanup receipts; Q37CD records two 186-row replays,
   fingerprint `31379A4907EEA1FCAEE0BFF3F4D3F9E15E8BCB9519CCD03BAAC240532DD1D55D`,
   and verified absence of the temporary `C:/tmp/EGA-ref11` workspace.
+  French B37AD remains compatible with F37ZP because the French source
+  successor is identity-only. English B234 remains predecessor-only because
+  R255 changes source bytes and pagination.
+- The candidate B235/RF14/DIA42R/REF14 reader closure is explicitly
+  quarantined. B235 records three rejected replay totals as zero although the
+  listed files sum to 13,522,363, 1,039,408, and 15,953,997 bytes, while its
+  cleanup generator pins four stale predecessor/script identities. Q37CK and
+  Q37CL are absent and `C:/tmp/EGA-ref14` remains populated. These objects are
+  retained as adverse evidence and confer no reader, closure, visual, or
+  publication claim.
 - Existing incremental pre-Stacks notes: 399,689 bytes, SHA-256
   `4B4811B6F24F139020E15CF27D7BFA82C3872F0A549DCFF4F64B28F4454737D6`.
   They are evidence to normalize into the new schema, not a completed
@@ -250,13 +264,16 @@ or published here.
 Every source unit and topic advances independently through:
 
 `discovery` -> `candidate` -> `reviewed_existing` or `reviewed_gap` ->
-`integrated_local` -> `built` -> `remote_checkpoint` ->
-`upstream_feedback` -> `upstream_accepted`.
+`integrated_local` -> `built` -> `remote_checkpoint`.
 
-No state is inferred from a successful build alone. No new label is an
-official Stacks tag unless upstream assigns it. Historical source defects,
-English corrections, mapping reversals, and maintainer feedback are recorded
-append-only.
+`remote_checkpoint` is a pushed and remotely verified checkpoint of the
+independent Mathematical Commons mirror. `upstream_feedback` and
+`upstream_accepted` remain schema-valid only for append-only historical
+records; they are not production goals. No state is inferred from a successful
+build alone. A local mirror label is never an official Stacks tag; only tags
+verified in the pinned official tag registry are treated as official.
+Historical source defects, English corrections, mapping reversals, and
+maintainer feedback remain append-only.
 
 ## Files
 
@@ -271,9 +288,9 @@ append-only.
 - `intake.py`: deterministic manifest verification and metadata-only unit
   extraction; it does not copy source prose.
 - `r184.py`: exact no-overwrite reconstruction of the frozen R184 discovery
-  tree from sealed R251 through 31 hash-guarded inverse operations across 12
-  files, with exact R248, R247, R243, and R219 intermediate gates; it never mutates
-  edition source.
+  tree from sealed source-only R255 through 33 hash-guarded inverse operations
+  across 12 files, with exact citation-only R255, R254/R251, R248, R247, R243,
+  and R219 intermediate gates; it never mutates edition source.
 - `files.csv`, `units.csv`, and `intake.json`: generated exact-file inventory,
   stable unit registry, and fail-closed intake receipt.
 - `pages.csv`: append-only direct-authority page evidence for frozen discovery
@@ -296,7 +313,7 @@ append-only.
   exact existing labels or explicitly untagged local labels; published
   corrections append explicit same-table successors instead of rewriting.
 - `resid.csv`: noncoverage, partial coverage, terminology migration,
-  stronger-target, derived, and upstream-pending residuals with the same
+  stronger-target, derived, and local-mirror residuals with the same
   append-only supersession rule.
 - `agent.csv`: exact task IDs, bounded scopes, runtimes when exposed, returned
   findings, owner checks, accepted/rejected dispositions, and write claims.
@@ -310,7 +327,45 @@ append-only.
   direct-authority crops for source-error evidence; these are not edition
   outputs or three-surface visual certifications.
 
-### Current reviewed frontier: EGA I 5.3.5--5.3.8
+### Current reviewed frontier: EGA I 5.3.9--5.3.14
+
+The diagonal-immersion theorem, canonical fibre-product comparison, graph
+criterion, graph base change, immersion cancellation, and pairing criterion
+are admitted from exact F33 authority and direct printed pp.133--134.
+S000817--S000836 add twenty strictly scoped edges. R000560--R000577 record
+the published proof repair, terminology, stronger-target, proof-level, and
+derived remainders. The active graph has 829 edges across 286 source units;
+physical append-only history has 836 edge rows. Of the active edges 818
+resolve to 249 distinct official tags and eleven are explicit local untagged
+integrations. There are 38 exact full-statement equivalences and six open
+labelled-coverage gaps.
+
+Tag 01KJ gives the diagonal immersion. Tag 01KR gives the canonical
+fibre-product comparison and its exact cartesian proof square. Tags 01KS,
+01KT, and 001V cover graph immersions, sections, and the projection
+characterization. Tags 01JX, 002L, and 001V derive graph base change; item
+four of the untagged `schemes-lemma-diagonal-identities` records the exact
+scheme identity and its two-projection proof. Tag 07RK supplies ordinary
+immersion cancellation, with 01KS, 01JY, and 02V0 splitting the historical
+proof and source-local clauses remaining explicit derivations.
+
+Two primary published corrections are carried without altering diplomatic
+French. Q000009 binds the printed 5.3.9 proof, which omits the locally closed
+image step; EGA III.2 Err_III,10 supplies the complete affine-local repair.
+Q000010 binds the printed 5.3.13 citation `4.2.4`, which the same primary
+errata list replaces by `4.2.5`. The standalone English successor incorporates
+both corrections visibly. This six-unit slice has no diagram or selected
+intricate standalone block; the next pending diagram belongs to 5.3.15.
+
+D000234 moves all eleven active untagged integrations into the independent
+Mathematical Commons mirror. R000578--R000588 preserve the eleven former
+upstream-pending rows as superseded history and replace them by active
+`integrated_local_mirror` successors. Residual history now has 572 active and
+588 physical rows, sixteen superseded rows, six open gaps, and eleven active
+local-mirror rows. Official Stacks remains the pinned sync and reference
+source; upstream acceptance and PR submission are not production goals.
+
+### Preceding reviewed checkpoint: EGA I 5.3.5--5.3.8
 
 The change-of-base square, its diagonal-base-change specialization, the
 graph-diagonal square, and the monomorphism/diagonal criterion are admitted
@@ -462,16 +517,18 @@ remains open for the rest of the discovery corpus.
 The validator now fails closed on malformed IDs, wrong parent geometry,
 inactive or mismatched evidence decisions, cross-finding token splicing,
 ledger-prefix mutation, directory nesting, symlinks, and unmanifested crops.
-The current R251-to-R184 reconstruction likewise rereads the complete sealed live
+The current R255-to-R184 reconstruction likewise rereads the complete sealed live
 tree immediately before atomic promotion, closing the reproduced concurrent-
 producer race. Independent mathematical and governance inverse audits both
 returned HARD PASS after the repairs while preserving their earlier failures.
 
-The immediate work continues at direct-French EGA I 5.3.9. The latest sealed
-French interface marker is F37ZL through EGA II printed p.37, while every
-reviewed EGA I claim remains bound to its own historical receipt. The D41R
-retrospective interface is closed by DIA41R, REF11, and sealed cleanup receipt Q37CD;
-it is not inferred merely from the current reader PDFs. Discovery
+The immediate work continues after direct-French EGA I 5.3.14. The latest
+sealed source markers are F37ZP and R255, while every reviewed EGA I claim
+remains bound to its own historical receipt. They are source-only successors:
+the last admitted reader interface remains F37ZL/R251 with B37AD/B234 and its
+D41R/DIA41R/REF11/Q37CD closure. B235/RF14/DIA42R/REF14 remain quarantined
+until their contradictory replay totals and stale cleanup pins receive an
+append-only producer correction and complete cleanup receipts. Discovery
 unit I.3.2.9 remains in a separate authority-pending queue for its cited EGA II
 erratum witness. The complete English surface drives provisional candidates
 only; chapter edits still require direct French evidence, explicit residuals,
