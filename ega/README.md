@@ -1,9 +1,12 @@
 # EGA discovery and integration scaffold
 
 This branch is a public, machine-readable working scaffold for comparing
-*Éléments de géométrie algébrique* (EGA 0--IV) with the current Stacks
-Project. It is **not** a claim that EGA has been fully rewritten in Stacks
-form, accepted upstream, or formally verified.
+*Éléments de géométrie algébrique* (EGA 0--IV) with a pinned Stacks Project
+base. It is maintained as a Mathematics Commons Stacks-compatible extension:
+official Stacks remains a sync source and reference layer, while upstream
+acceptance is not a production gate. It is **not** a claim that EGA has been
+fully rewritten in Stacks form or formally verified, and it implies no
+endorsement by the Stacks Project.
 
 The complete standalone English EGA source is admitted only as discovery
 text. Canonical source claims remain gated by the separately maintained
@@ -18,8 +21,15 @@ or published here.
   `5C64ECD32FD7C5458D2599D70ED667D2CF06D95517EFFA9C6D6DCEF7626913A0`;
   127 files, 7,283,321 bytes, tree SHA-256
   `3BFB1C5103093481246EF4A6365E08544F6D5E19ACC0EA63E717F3F3643F064D`.
+- Latest sealed standalone-English comparison source: R243, 35,095-byte
+  manifest at SHA-256
+  `E8A3C98FA2A8950B74F89A778AB695E7CDFF9AD08966EA0BB9A28A462B46826E`;
+  127 files, 7,283,701 bytes, tree SHA-256
+  `EB6A5465B872682311DD0DA7E6B633071A220C7FB957FCFB601795D5CBA1E39C`.
+  It preserves the exact source tree while correcting R220 operation-span
+  metadata and the formerly stale top-level comparison descriptors.
 - French authority: production is active; the latest sealed interface marker
-  is F37T through EGA II printed p.37, with printed p.38 next. This graph still
+  is F37ZD through EGA II printed p.37; printed p.38 remains quarantined. This graph still
   binds every reviewed EGA I claim to its exact historical page receipt;
   receipt F33 also repairs 4.1.9 from `g'` to the directly verified printed
   `g` without changing the already-correct English.
@@ -255,8 +265,8 @@ append-only.
 - `intake.py`: deterministic manifest verification and metadata-only unit
   extraction; it does not copy source prose.
 - `r184.py`: exact no-overwrite reconstruction of the frozen R184 discovery
-  tree from the sealed eight-file R219 English successor using hash-guarded inverse
-  operations; it never mutates the edition source.
+  tree from sealed R243 through 28 hash-guarded inverse operations across 12
+  files, with an exact R219 intermediate gate; it never mutates edition source.
 - `files.csv`, `units.csv`, and `intake.json`: generated exact-file inventory,
   stable unit registry, and fail-closed intake receipt.
 - `pages.csv`: append-only direct-authority page evidence for frozen discovery
@@ -268,6 +278,9 @@ append-only.
   pages, bounded PDF-point boxes, effective scale, comparison mask, and
   complete normalized signature. Historical V rows and crop bytes are never
   overwritten when a later correction supersedes them.
+- `rej.csv` and `qa/r`: immutable rejected or obsolete visual candidates.
+  Every row names its accepted same-item successor so clipped, overbroad,
+  stale-edition, and below-floor evidence remains auditable after correction.
 - `map.py`, `cand.csv`, and `map.json`: lexical candidate generation against
   the exact upstream Stacks snapshot. Candidates are not reviewed mappings.
 - `tmap.csv`: French-admitted topic-level bridges to existing Stacks sections;
@@ -290,63 +303,68 @@ append-only.
   direct-authority crops for source-error evidence; these are not edition
   outputs or three-surface visual certifications.
 
-### Current reviewed frontier: EGA I 5.1.1--5.1.4
+### Current reviewed frontier: EGA I 5.1.1--5.1.10
 
-The opening reduction subsection is admitted from F33 and direct printed
-pp.127--128. Thirty-five active edges S000678--S000714, excluding superseded
-S000689 and S000704, cover seven generated
-statement/proof units and the three ungenerated terminology or consequence
-blocks. Residuals R000443--R000468 keep two genuine labelled-coverage gaps and
-every derived or stronger boundary explicit. The active graph has 708 edges
-across 236 source units and 465 residuals; physical append-only history has
-714 edge rows and 468 residual rows. Of the active edges 704 resolve to 227
-distinct official tags and four remain explicit local untagged integrations.
-Exact full-statement equivalences remain 29 and open gaps increase from four
-to six.
+The complete opening reduction subsection is now admitted from F33 and direct
+printed pp.127--131. The bounded 5.1.5--5.1.10 source span is direct-French
+lines 101--304: 9,279 UTF-8/LF bytes with SHA-256
+`39A8328C323D5140A47D12437CC78B672CE63931B0AB0A77914C7CE4369804EA`.
+S000715--S000767 add 53 strictly typed edges and R000469--R000498 add 30
+target-specific residuals. The active graph now has 761 edges across 251
+source units and 495 residuals; physical append-only history has 767 edge
+rows and 498 residual rows. Of the active edges 754 resolve to 241 distinct
+official tags and seven remain explicit local untagged integrations. There
+are 31 exact full-statement equivalences and six open labelled-coverage gaps.
 
-EGA I 5.1.1 exposes both new gaps. The pinned Stacks tree has no labelled
-result packaging the nilradicals of the stalks of an arbitrary quasi-coherent
-algebra into a unique quasi-coherent ideal module and no single tag stating
-that nilradical commutes with localization. Tags 01I7 01LA and 0544 supply the
-affine sheaf locality and easy-extension ingredients only. In particular
-01J3 is not substituted for the general algebra statement: it covers only the
-structure-sheaf reduction specialization.
+Reduction functoriality splits through 01J4, 0356, and monomorphism
+uniqueness; the new untagged Schemes lemma packages the exact identity,
+composition, and natural-square statement. Proposition 5.1.6 uses 01RZ,
+01S3--01S4, 0BR6, 054M, 01IO, 01HE, and 01LD; its new Morphisms lemma records
+only the surjective/radicial equivalences and the immersion, closed-immersion,
+and open-immersion forward clauses it actually proves. Proposition 5.1.7
+combines the fibre-product universal property with 01JU and the universal-
+homeomorphism chain; a second local Morphisms lemma gives its exact canonical
+comparison. No local label is presented as an official tag or as accepted by
+the upstream Stacks Project.
 
-The inverse audit also corrected two control claims append-only. S000713
-limits 00E0 to the intersection-of-primes identity rather than attributing the
-preceding full-support implication to that tag. S000714 records that the
-paragraph after 5.1.4 uses the already-defined notion of local integrality;
-it does not define the term anew. Q000005 is a tight 5,000-dpi authority-only
-receipt for the newly detected printed cross-reference `2.1.7`, which must
-read `2.1.8`: 2.1.7 concerns open restrictions, whereas 2.1.8 defines
-integral and locally integral schemes. Diplomatic French remains unchanged.
+Tags 0CB9, 01J3--01J4, 020F, and 035Z separate reduced products from the
+perfect-field boundary. Tags 06AD, 04EX, 05YV, 01IA, 01I1, 05QB, 01XB, and
+0B3A split the finite thickening affineness proof, its exact sequence, its two
+commutative squares, and the independent H1 argument. The local 04EX text now
+correctly says that the relevant object is a closed subscheme of `X'` and
+uses `nth order thickening`, not `nth order thinking`. Tag 0EGG preserves the
+difference between local nilpotence and the source's stronger single global
+nilpotence exponent.
 
-Corollary 5.1.2 and Definition 5.1.3 are the modern reduction package. Tags
-01J3 and 01J4 give the unique reduced full-support structure; 0BR6 gives the
-underlying homeomorphism without an isomorphism claim; and 0356 derives the
-minimality factorization. Proposition 5.1.4 has the exact reduced affine half
-01J2 while its integral half splits through 01ON 00ES 00E0 and 01OK. The
-following locally-integral paragraph keeps its weaker hypothesis that the
-underlying topology is locally Noetherian. Tags 0052 01J0 00ET and 0BX3(3)
-cover the converse; 0568 records failure when that topological hypothesis is
-removed. Neither a locally Noetherian scheme hypothesis nor global
-integrality is silently substituted.
+L000028 corrects the frozen 5.1.9 locator from I:129 to I:130 under exact R53
+evidence. Q000006 is the immutable authority-only source-error receipt for
+the printed 5.1.9.2 restriction `F|Y`, whose uniquely typed local reading is
+`F|V`; the EGA Canon accepted the referral without changing diplomatic French
+or rebuilding either reader. Its corrected interface successor R243 changes
+metadata only and preserves the exact 127-file English tree.
 
-D000181 and L000024--L000027 repair the four genuinely blank frozen locators:
-section I.5 subsection I.5.1 and the 5.1.1 statement are I:127 while its proof
-is I:128. R51's printed `defined Y by` word-order defect remains diplomatic
-and I000057 reuses the already catalogued corrected reading. This slice has no
-diagram display equation or intricate standalone block and therefore creates
-no V row. The first display and diagram occur in 5.1.5 and remain subject to
-the individual three-surface 5,000-dpi gate; corpus-wide I000049 stays open.
+Visual certification is per item and per current surface. V000016 certifies
+the 5.1.5 reduction square. V000017--V000020 certify the 5.1.9 A/A0 block,
+the labelled exact sequence, the ring square, and the scheme square using one
+tight authority, French, and English crop for each item at 5,000 dpi. J000001
+--J000009 retain every clipped, adjacent-prose, stale-edition, nonfinal, or
+below-floor candidate. The active visual registry therefore has 20 items
+(16 diagrams and four intricate blocks), 60 accepted crops, and nine rejected
+crops; corpus-wide I000049 remains open for the rest of the discovery corpus.
 
-The immediate work is sequential statement-level comparison across EGA 0--IV,
-continuing in the direct-French body at EGA I 5.1.5. The
-latest sealed French interface marker is F37T through EGA II printed p.37;
-every reviewed EGA I claim remains bound to its own exact historical receipt.
-Discovery unit I.3.2.9 remains in a separate authority-pending queue for its
-cited EGA II erratum witness.
-The complete English discovery surface drives provisional candidates only.
-Mathematical Stacks chapter edits occur only after a bounded unit has direct
-French evidence, a reviewed disposition, explicit residual accounting, and
-owner verification.
+The validator now fails closed on malformed IDs, wrong parent geometry,
+inactive or mismatched evidence decisions, cross-finding token splicing,
+ledger-prefix mutation, directory nesting, symlinks, and unmanifested crops.
+The R243-to-R184 reconstruction likewise rereads the complete sealed live
+tree immediately before atomic promotion, closing the reproduced concurrent-
+producer race. Independent mathematical and governance inverse audits both
+returned HARD PASS after the repairs while preserving their earlier failures.
+
+The immediate work continues at direct-French EGA I 5.2.1. The latest sealed
+French interface marker is F37ZD through EGA II printed p.37, while every
+reviewed EGA I claim remains bound to its own historical receipt. Discovery
+unit I.3.2.9 remains in a separate authority-pending queue for its cited EGA II
+erratum witness. The complete English surface drives provisional candidates
+only; chapter edits still require direct French evidence, explicit residuals,
+bounded mathematical review, visual evidence when applicable, and owner
+verification.

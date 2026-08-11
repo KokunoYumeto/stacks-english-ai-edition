@@ -19,6 +19,112 @@ def rows(name):
         return list(csv.DictReader(handle))
 
 
+def contiguous_ids(data, field, prefix, table_name):
+    """Validate a zero-padded ledger ID without parsing untrusted text."""
+    pattern = re.compile(rf"{re.escape(prefix)}\d{{6}}$")
+    values = []
+    valid = True
+    for row in data:
+        value = row.get(field, "")
+        if not pattern.fullmatch(value):
+            ERRORS.append(f"malformed {field} {value!r} in {table_name}")
+            valid = False
+        values.append(value)
+    expected = [f"{prefix}{number:06d}" for number in range(1, len(data) + 1)]
+    if valid and values != expected:
+        ERRORS.append(f"{table_name} IDs are not contiguous in append order")
+        valid = False
+    return valid
+
+
+def lf_prefix(raw, line_count):
+    """Return an exact LF-normalized leading line prefix, including final LF."""
+    lines = raw.splitlines()
+    if len(lines) < line_count:
+        return None
+    return b"\n".join(lines[:line_count]) + b"\n"
+
+
+def require_lf_prefix(raw, line_count, expected_bytes, expected_sha, name):
+    prefix = lf_prefix(raw, line_count)
+    if (prefix is None or len(prefix) != expected_bytes or
+            hashlib.sha256(prefix).hexdigest().upper() != expected_sha):
+        ERRORS.append(f"immutable LF prefix changed for {name}")
+
+
+def decision_contract(decision_id, subject, action, evidence):
+    """Require an exact active decision triple, not mere ID existence."""
+    row = active_decision_by_id.get(decision_id)
+    return row is not None and (
+        row.get("subject_id"), row.get("action"), row.get("state"),
+        row.get("evidence"),
+    ) == (subject, action, "active", evidence)
+
+
+def finite_box_within_page(box, page_width, page_height):
+    return (
+        len(box) == 4 and
+        all(math.isfinite(value) for value in (*box, page_width, page_height)) and
+        page_width > 0 and page_height > 0 and
+        box[0] >= 0 and box[1] >= 0 and box[2] > 0 and box[3] > 0 and
+        box[0] + box[2] <= page_width + 0.01 and
+        box[1] + box[3] <= page_height + 0.01
+    )
+
+
+def finding_receipt_link(finding, receipt_id, path, crop_sha256):
+    """Bind all receipt tokens to one named finding object."""
+    if not isinstance(finding, dict):
+        return False
+    evidence = finding.get("evidence")
+    if not isinstance(evidence, str):
+        return False
+    receipt_pattern = re.compile(
+        rf"(?<![A-Za-z0-9]){re.escape(receipt_id)}(?![A-Za-z0-9])")
+    return bool(
+        receipt_pattern.search(evidence) and
+        path in evidence and crop_sha256 in evidence)
+
+
+def check_governance_helper_regressions():
+    """Adverse synthetic checks for the fail-closed helper predicates."""
+    baseline_errors = len(ERRORS)
+    malformed = [{"qa_id": "VX"}]
+    contiguous_ids(malformed, "qa_id", "V", "synthetic-vqa")
+    if len(ERRORS) != baseline_errors + 1:
+        ERRORS.append("malformed-ID adverse check did not fail closed")
+    else:
+        ERRORS.pop()
+    if finite_box_within_page((594, 740, 2, 9), 595, 748):
+        ERRORS.append("page-geometry adverse check accepted an overflow")
+    synthetic_active = {
+        "D999999": {
+            "subject_id": "wrong", "action": "admit_test", "state": "inactive",
+            "evidence": "Q999999",
+        }
+    }
+    prior = globals().get("active_decision_by_id")
+    globals()["active_decision_by_id"] = synthetic_active
+    if decision_contract("D999999", "right", "admit_test", "Q999999"):
+        ERRORS.append("decision adverse check accepted inactive/wrong subject")
+    if prior is None:
+        del globals()["active_decision_by_id"]
+    else:
+        globals()["active_decision_by_id"] = prior
+    split_findings = [
+        {"evidence": "Q999999 and path.png"},
+        {"evidence": "A" * 64},
+    ]
+    if any(finding_receipt_link(
+            finding, "Q999999", "path.png", "A" * 64)
+            for finding in split_findings):
+        ERRORS.append("split/incomplete finding evidence adverse check passed")
+    pinned = b"header\nrow\n"
+    if (lf_prefix(pinned.replace(b"row", b"mut"), 2) ==
+            lf_prefix(pinned, 2)):
+        ERRORS.append("prefix-mutation adverse check did not detect mutation")
+
+
 def active_rows(data, id_field, table_name):
     """Return the unsuperseded view while retaining every historical row."""
     positions = {row[id_field]: index for index, row in enumerate(data)}
@@ -190,6 +296,24 @@ if scope.get("status") != "discovery_scaffold":
     ERRORS.append("scope status must remain discovery_scaffold")
 if scope.get("stacks_upstream") != "a04446e57ec1fbc252a871afcec7752fb2807b14":
     ERRORS.append("unexpected upstream identity")
+expected_governance_prefixes = {
+    "vqa": {"rows": 20, "bytes": 19650, "sha256":
+            "3270DB7B13E8DA407937F0D1CEB3086C921D6E644BBC8A45DBEDB29FD08A53EF"},
+    "rejected_visual_qa": {"rows": 9, "bytes": 2964, "sha256":
+            "E19DC3E254373A9647BDF534234C59C6C30A4E634E42C509AAE6C00784018DC0"},
+    "pages": {"rows": 28, "bytes": 8993, "sha256":
+              "DBF0811447E1BB43EB665DFED9455D0B9019BC76E1B232D7151F4F10C4085699"},
+    "source_error_qa": {"rows": 6, "bytes": 1985, "sha256":
+                        "DA7DA9AA605BA3E01B6CB21CAA0FDDAB4D33E6B4A464B629349B0D9FF9AAE05E"},
+    "decisions": {"rows": 203, "bytes": 49604, "sha256":
+                  "7A4EE746D1168057E05E006D26C357BC43AC50A82AF098B13B49CBC78074AA30"},
+    "issues": {"rows": 61, "bytes": 24019, "sha256":
+               "BE14C470FDDA9D2B596D27E28F305671A0DD5A97E3FCD3F889DC226AA7A06C34"},
+    "findings": {"rows": 16, "bytes": 19629, "sha256":
+                 "53C3654734C7902496888FD10707B523EDB554D331FE9598590010C62B359720"},
+}
+if scope.get("governance_prefixes") != expected_governance_prefixes:
+    ERRORS.append("scope governance-prefix registry mismatch")
 
 interface = json.loads((ROOT / "interface.json").read_text(encoding="utf-8"))
 if interface.get("status") != "active" or interface.get("ownership", {}).get("cross_tree_writes") is not False:
@@ -200,6 +324,36 @@ for field in ("latest_manifest", "latest_manifest_bytes", "latest_manifest_sha25
     if (interface.get("english_discovery", {}).get(field) !=
             scope["inputs"]["english_discovery"].get(field)):
         ERRORS.append(f"edition interface latest English {field} mismatch")
+if tuple(
+        interface.get("english_discovery", {}).get(field)
+        for field in ("latest_manifest", "latest_manifest_bytes",
+                      "latest_manifest_sha256")) != (
+        "R243.json", 35095,
+        "E8A3C98FA2A8950B74F89A778AB695E7CDFF9AD08966EA0BB9A28A462B46826E",
+):
+    ERRORS.append("latest English interface is not sealed R243")
+if tuple(
+        interface.get("latest_sealed_french", {}).get(field)
+        for field in ("manifest", "manifest_bytes", "manifest_sha256")) != (
+        "F37ZD.json", 12616,
+        "497D899A6BFF6CFBA0FF63B02B071CDCCA59A309B67E6E5EC24266C3E24C6B69",
+):
+    ERRORS.append("latest French interface is not sealed F37ZD")
+if interface.get("public_checkpoint") != "https://zenodo.org/records/21861666":
+    ERRORS.append("public EGA checkpoint is stale")
+expected_readers = {
+    "french": ("B37AA.json", 2004716,
+               "EB1ED1685484938ACAB6361D738A27D4F9B009AD4A26D4D31B0082EDE699FD08",
+               168),
+    "english": ("B231.json", 14589672,
+                "51D67907A26151D685B0A496A7B02F43DBC3FFC731D4AA4854F5F4BEBA0ECD88",
+                1345),
+}
+for language, expected in expected_readers.items():
+    reader = interface.get("sealed_readers", {}).get(language, {})
+    if (reader.get("receipt"), reader.get("bytes"), reader.get("sha256"),
+            reader.get("pages")) != expected:
+        ERRORS.append(f"sealed {language} reader interface mismatch")
 if interface.get("french_cursor", {}).get("page_gate_sha256") != scope["inputs"]["french_authority"]["page_gate_sha256"]:
     ERRORS.append("edition interface French page-gate mismatch")
 admitted_receipts = {
@@ -222,6 +376,15 @@ active_decision_by_id = {
     row["decision_id"]: row for row in active_decision_rows
 }
 issue_by_id = {row["issue_id"]: row for row in issue_rows}
+require_lf_prefix(
+    (ROOT / "dec.csv").read_bytes(), 204, 49604,
+    "7A4EE746D1168057E05E006D26C357BC43AC50A82AF098B13B49CBC78074AA30",
+    "D000001-D000203")
+require_lf_prefix(
+    (ROOT / "issues.csv").read_bytes(), 62, 24019,
+    "BE14C470FDDA9D2B596D27E28F305671A0DD5A97E3FCD3F889DC226AA7A06C34",
+    "I000001-I000061")
+check_governance_helper_regressions()
 issue_positions = {
     row["issue_id"]: index for index, row in enumerate(issue_rows)
 }
@@ -404,6 +567,7 @@ if (ROOT / "units.csv").exists() and (ROOT / "files.csv").exists():
         "ega:subsection:I.5.1": "I:127",
         "ega:I.5.1.1": "I:127",
         "ega:I.5.1.1:proof": "I:128",
+        "ega:I.5.1.9": "I:130",
     }
     for unit_id, expected_page in page_regressions.items():
         row = units_by_id.get(unit_id)
@@ -427,12 +591,15 @@ if (ROOT / "units.csv").exists() and (ROOT / "files.csv").exists():
         if (not page_lines or
                 page_lines[0].split(",") != expected_pages_header):
             ERRORS.append("unexpected pages.csv header")
-        all_page_rows = rows("pages.csv")
+            all_page_rows = []
+        else:
+            all_page_rows = rows("pages.csv")
+        require_lf_prefix(
+            raw_pages, 29, 8993,
+            "DBF0811447E1BB43EB665DFED9455D0B9019BC76E1B232D7151F4F10C4085699",
+            "L000001-L000028")
         page_ids = [row["locator_id"] for row in all_page_rows]
-        if page_ids != [
-                f"L{number:06d}"
-                for number in range(1, len(page_ids) + 1)]:
-            ERRORS.append("pages.csv IDs are not contiguous in append order")
+        contiguous_ids(all_page_rows, "locator_id", "L", "pages.csv")
         active_page_rows, superseded_page_rows = active_rows(
             all_page_rows, "locator_id", "pages.csv")
         active_page_units = [row["unit_id"] for row in active_page_rows]
@@ -463,6 +630,31 @@ if (ROOT / "units.csv").exists() and (ROOT / "files.csv").exists():
                 "EGA1_CHAPTER1_P128_VALIDATION_R51.json",
                 "94F833E316F3726489EEF9254871BB55B12EBA691B7BFEAF918F76C285A7DE41",
             ): "I:128",
+            (
+                "EGA1_CHAPTER1_P130_VALIDATION_R53.json",
+                "BDD7227EE137F2B61A57438AB84D3B564131AD214C9A1F8AFD918CE7A2472F8F",
+            ): "I:130",
+        }
+        page_decision_contracts = {
+            "D000121": (
+                "ega:units", "overlay_missing_r184_printed_page_markers",
+                "pages.csv P115 P116"),
+            "D000142": (
+                "ega:subsection:I.4.1",
+                "admit_blank_guard_page_overlay_for_section_start",
+                "F8 P119 P120 L000019-L000023"),
+            "D000181": (
+                "ega:section:I.5", "admit_exact_section5_opening_page_locators",
+                "R50 R51 and their exact French admission rows"),
+            "D000190": (
+                "ega:I.5.1.9", "admit_exact_printed_page_130_locator",
+                "R53 and EG-EGA-I-P130-FR-ADMISSION-001"),
+        }
+        page_expected_decision_ids = {
+            **{f"L{number:06d}": "D000121" for number in range(1, 19)},
+            **{f"L{number:06d}": "D000142" for number in range(19, 24)},
+            **{f"L{number:06d}": "D000181" for number in range(24, 28)},
+            "L000028": "D000190",
         }
         for row in all_page_rows:
             if None in row:
@@ -498,9 +690,13 @@ if (ROOT / "units.csv").exists() and (ROOT / "files.csv").exists():
             elif row["printed_page"] != gate_page:
                 ERRORS.append(
                     f"page row contradicts its page gate {row['locator_id']}")
-            if row["decision_id"] not in decision_by_id:
+            contract = page_decision_contracts.get(row["decision_id"])
+            if (row["decision_id"] != page_expected_decision_ids.get(
+                    row["locator_id"]) or contract is None or
+                    not decision_contract(row["decision_id"], *contract)):
                 ERRORS.append(
-                    f"page row has unknown decision {row['locator_id']}")
+                    f"page row lacks exact active decision contract "
+                    f"{row['locator_id']}")
         for row in active_page_rows:
             unit = units_by_id.get(row["unit_id"])
             if unit is None:
@@ -532,6 +728,8 @@ if (ROOT / "units.csv").exists() and (ROOT / "files.csv").exists():
         ERRORS.append("missing pages.csv")
 
 vqa_path = ROOT / "vqa.csv"
+accepted_vqa_crop_paths = set()
+accepted_vqa_crop_hashes = set()
 expected_vqa_header = [
     "qa_id", "item_id", "item_kind", "source_unit",
     "a_record", "a_pdf_sha256", "a_pdf_bytes", "a_page1", "a_box_pt", "a_file",
@@ -571,11 +769,17 @@ else:
     vqa_lines = raw_vqa.decode("utf-8").splitlines()
     if not vqa_lines or vqa_lines[0].split(",") != expected_vqa_header:
         ERRORS.append("unexpected vqa.csv header")
-    all_vqa_rows = rows("vqa.csv")
+        all_vqa_rows = []
+    else:
+        all_vqa_rows = rows("vqa.csv")
+    require_lf_prefix(
+        raw_vqa, 21, 19650,
+        "3270DB7B13E8DA407937F0D1CEB3086C921D6E644BBC8A45DBEDB29FD08A53EF",
+        "V000001-V000020")
     counts["vqa.csv"] = len(all_vqa_rows)
     vqa_ids = [row["qa_id"] for row in all_vqa_rows]
-    if vqa_ids != [f"V{number:06d}" for number in range(1, len(vqa_ids) + 1)]:
-        ERRORS.append("vqa.csv IDs are not contiguous in append order")
+    vqa_ids_valid = contiguous_ids(
+        all_vqa_rows, "qa_id", "V", "vqa.csv")
     for row in all_vqa_rows:
         if None in row:
             ERRORS.append(f"extra CSV field in vqa row {row.get('qa_id')}")
@@ -612,7 +816,7 @@ else:
         ERRORS.append(
             f"missing baseline visual-QA items {sorted(missing_baseline)}")
 
-    record_expectations = {
+    legacy_record_expectations = {
         "a": (
             "NUMDAM:EGA_I_PMIHES_1960_4.pdf",
             "9ABA23020217535977E279BDD06A0413F48DA703086865BA4C00766C85DF4AE6",
@@ -629,7 +833,21 @@ else:
             14589396,
         ),
     }
-    record_page_counts = {"a": 227, "f": 165, "e": 1345}
+    current_record_expectations = {
+        "a": legacy_record_expectations["a"],
+        "f": (
+            "sealed:B37AA/EGA_FR.pdf",
+            "EB1ED1685484938ACAB6361D738A27D4F9B009AD4A26D4D31B0082EDE699FD08",
+            2004716,
+        ),
+        "e": (
+            "sealed:B231/EGA_English_Global_0_IV.pdf",
+            "51D67907A26151D685B0A496A7B02F43DBC3FFC731D4AA4854F5F4BEBA0ECD88",
+            14589672,
+        ),
+    }
+    legacy_page_counts = {"a": 227, "f": 165, "e": 1345}
+    current_page_counts = {"a": 227, "f": 168, "e": 1345}
     authority_page_geometry = {
         86: (536, 727),
         96: (543, 727),
@@ -643,6 +861,9 @@ else:
         114: (602, 753),
         116: (607, 757),
         122: (606, 756),
+        128: (595, 748),
+        129: (595, 748),
+        130: (603, 755),
     }
     baseline_vqa_pages = {
         "b01": (86, 60, 284), "b02": (86, 60, 284),
@@ -668,6 +889,8 @@ else:
     allowed_differences = {
         "none", "english-trailing-comma-only",
         "english-trailing-period-only",
+        "english-I-for-J-plus-two-line-reflow-and-edition-trailing-period",
+        "english-I-for-J-and-french-equation-number-right",
     }
     crop_paths = []
     active_crop_hashes = []
@@ -675,8 +898,34 @@ else:
     crop_bytes = 0
     certified_diagrams = 0
     certified_mathblocks = 0
+    vqa_decision_contracts = {
+        "D000154": (
+            "ega:visual-qa",
+            "admit_first_individual_authority_french_english_visual_batch",
+            "vqa.csv and 42 individual 5000-dpi-equivalent crop receipts"),
+        "D000160": (
+            "ega:visual-qa",
+            "admit_I_4_2_2_individual_authority_french_english_visual_evidence",
+            "V000015 and three individual 5000-dpi-equivalent crop receipts"),
+        "D000203": (
+            "ega:visual-qa", "admit_5_1_5_and_5_1_9_visual_receipts",
+            "V000016 V000017 V000018 V000019 V000020 in ega/vqa.csv"),
+    }
+    vqa_expected_decision_ids = {
+        **{f"V{number:06d}": "D000154" for number in range(1, 15)},
+        "V000015": "D000160",
+        **{f"V{number:06d}": "D000203" for number in range(16, 21)},
+    }
     for row in all_vqa_rows:
+        if not re.fullmatch(r"V\d{6}", row.get("qa_id", "")):
+            continue
         item_id = row["item_id"]
+        legacy_parent = int(row["qa_id"][1:]) <= 15
+        record_expectations = (
+            legacy_record_expectations if legacy_parent
+            else current_record_expectations)
+        record_page_counts = (
+            legacy_page_counts if legacy_parent else current_page_counts)
         baseline_entry = baseline_vqa_ids.get(row["qa_id"])
         if baseline_entry is not None:
             expected_item, expected_short = baseline_entry
@@ -704,8 +953,17 @@ else:
                     row["source_unit"] + ":mathblock:") or
                     not suffix.isdigit()):
                 ERRORS.append(f"invalid visual-QA mathblock identity {row['qa_id']}")
-            if source is not None and source["kind"] != "proof":
-                ERRORS.append(f"visual-QA mathblock source is not a proof {row['qa_id']}")
+            allowed_mathblock_sources = {
+                "ega:I.1.3.9:proof:mathblock:1": "proof",
+                "ega:I.1.3.9:proof:mathblock:2": "proof",
+                "ega:I.5.1.9:mathblock:1": "proposition",
+                "ega:I.5.1.9.1:mathblock:1": "label",
+            }
+            expected_source_kind = allowed_mathblock_sources.get(row["item_id"])
+            if expected_source_kind is None:
+                ERRORS.append(f"unselected visual-QA mathblock {row['qa_id']}")
+            elif source is not None and source["kind"] != expected_source_kind:
+                ERRORS.append(f"visual-QA mathblock source kind mismatch {row['qa_id']}")
         else:
             ERRORS.append(f"invalid visual-QA item kind {row['qa_id']}")
             continue
@@ -716,15 +974,13 @@ else:
             ERRORS.append(f"uncontrolled visual-QA difference {row['qa_id']}")
         if row["status"] != "certified":
             ERRORS.append(f"non-certified visual-QA row {row['qa_id']}")
-        admission = active_decision_by_id.get(row["decision_id"])
-        if admission is None:
+        contract = vqa_decision_contracts.get(row["decision_id"])
+        if (row["decision_id"] != vqa_expected_decision_ids.get(row["qa_id"]) or
+                contract is None or
+                not decision_contract(row["decision_id"], *contract)):
             ERRORS.append(
-                f"visual-QA row lacks an active decision {row['qa_id']}")
-        elif (admission.get("subject_id") != "ega:visual-qa" or
-                admission.get("state") != "active" or
-                not admission.get("action", "").startswith("admit_")):
-            ERRORS.append(
-                f"visual-QA row cites a non-admission decision {row['qa_id']}")
+                f"visual-QA row lacks exact active decision contract "
+                f"{row['qa_id']}")
         if baseline_entry is not None and row["decision_id"] != "D000154":
             ERRORS.append(f"visual-QA baseline row has wrong decision {row['qa_id']}")
 
@@ -851,14 +1107,28 @@ else:
         ERRORS.append("active visual-QA evidence reuses crop bytes")
     if len(active_crop_locators) != len(set(active_crop_locators)):
         ERRORS.append("active visual-QA evidence reuses a source locator")
-    discovered_qa_files = {
-        path.relative_to(ROOT).as_posix()
-        for language in ("a", "f", "e")
-        for path in (ROOT / "qa" / language).rglob("*")
-        if path.is_file()
-    }
+    discovered_qa_files = set()
+    for language in ("a", "f", "e"):
+        language_root = ROOT / "qa" / language
+        if not language_root.is_dir() or language_root.is_symlink():
+            ERRORS.append(f"missing or unsafe accepted visual-QA directory {language}")
+            continue
+        entries = list(language_root.iterdir())
+        if not entries:
+            ERRORS.append(f"empty accepted visual-QA directory {language}")
+        for path in entries:
+            if path.is_symlink() or not path.is_file():
+                ERRORS.append(
+                    f"accepted visual-QA crops must be flat regular files {language}")
+                continue
+            discovered_qa_files.add(path.relative_to(ROOT).as_posix())
     if discovered_qa_files != set(crop_paths):
         ERRORS.append("visual-QA directory and manifest file sets differ")
+    accepted_vqa_crop_paths = set(crop_paths)
+    accepted_vqa_crop_hashes = {
+        row[f"{language}_sha256"]
+        for row in all_vqa_rows for language in ("a", "f", "e")
+    }
     visual_qa_summary = {
         "file": "vqa.csv",
         "bytes": len(raw_vqa),
@@ -873,6 +1143,196 @@ else:
     }
     if scope.get("visual_qa_snapshot") != visual_qa_summary:
         ERRORS.append("scope visual-QA snapshot does not match vqa.csv and crops")
+
+rejected_path = ROOT / "rej.csv"
+rejected_header = [
+    "reject_id", "item_id", "surface", "record", "pdf_sha256",
+    "pdf_bytes", "page1", "page_width_pt", "page_height_pt", "box_pt",
+    "dpi", "path", "crop_bytes", "crop_sha256", "width_px", "height_px",
+    "outcome", "reason", "successor_qa_id",
+]
+rejected_rows = []
+rejected_raw = b""
+if not rejected_path.is_file() or rejected_path.is_symlink():
+    ERRORS.append("missing or unsafe rejected visual-QA manifest")
+else:
+    rejected_raw = rejected_path.read_bytes()
+    rejected_lines = rejected_raw.decode("utf-8").splitlines()
+    with rejected_path.open(encoding="utf-8", newline="") as handle:
+        reader = csv.DictReader(handle)
+        if reader.fieldnames != rejected_header:
+            ERRORS.append("unexpected rej.csv header")
+            rejected_rows = []
+        else:
+            rejected_rows = list(reader)
+    require_lf_prefix(
+        rejected_raw, 10, 2964,
+        "E19DC3E254373A9647BDF534234C59C6C30A4E634E42C509AAE6C00784018DC0",
+        "J000001-J000009")
+    rejected_ids = [row.get("reject_id", "") for row in rejected_rows]
+    contiguous_ids(rejected_rows, "reject_id", "J", "rej.csv")
+    if len(rejected_lines) >= 6:
+        first_rejected_batch = (
+            "\n".join(rejected_lines[:6]) + "\n").encode("utf-8")
+        if (len(first_rejected_batch) != 1719 or
+                hashlib.sha256(first_rejected_batch).hexdigest().upper() !=
+                "429F6FE6D3308A8EC98B91376BF608C3C7FACD5DE537EAC0810A518DA3BF3A95"):
+            ERRORS.append("initial rejected visual-QA evidence changed")
+    else:
+        ERRORS.append("rej.csv lacks the initial five evidence rows")
+
+rejected_root = ROOT / "qa" / "r"
+rejected_manifest_paths = {row.get("path", "") for row in rejected_rows}
+if len(rejected_manifest_paths) != len(rejected_rows):
+    ERRORS.append("rejected visual-QA evidence reuses a crop path")
+rejected_discovered_paths = set()
+if not rejected_root.is_dir() or rejected_root.is_symlink():
+    ERRORS.append("missing or unsafe rejected visual-QA directory")
+else:
+    for path in rejected_root.iterdir():
+        if path.is_symlink() or not path.is_file():
+            ERRORS.append("rejected visual-QA crops must be flat regular files")
+            continue
+        rejected_discovered_paths.add(f"qa/r/{path.name}")
+if rejected_discovered_paths != rejected_manifest_paths:
+    ERRORS.append("rejected visual-QA crop set differs from rej.csv")
+
+rejected_record_expectations = {
+    "NUMDAM:EGA_I_PMIHES_1960_4.pdf": (
+        "a", "9ABA23020217535977E279BDD06A0413F48DA703086865BA4C00766C85DF4AE6",
+        31680717, 227),
+    "zenodo:21859616/00_FR.pdf": (
+        "f", "1D4332295C2F572B7D555B05E9A5786632BA9DCB9F329CEAF448CAFC2BDEC6C7",
+        1974323, 165),
+    "zenodo:21859616/00_EN.pdf": (
+        "e", "C70C13635EC53C10A2E1866EAB3BC9CA1B6F6601DCA8B344342DA901A70A0257",
+        14589396, 1345),
+    "sealed:B37AA/EGA_FR.pdf": (
+        "f", "EB1ED1685484938ACAB6361D738A27D4F9B009AD4A26D4D31B0082EDE699FD08",
+        2004716, 168),
+    "sealed:B231/EGA_English_Global_0_IV.pdf": (
+        "e", "51D67907A26151D685B0A496A7B02F43DBC3FFC731D4AA4854F5F4BEBA0ECD88",
+        14589672, 1345),
+}
+rejected_page_geometries = {
+    ("NUMDAM:EGA_I_PMIHES_1960_4.pdf", 128): (595, 748),
+    ("NUMDAM:EGA_I_PMIHES_1960_4.pdf", 129): (595, 748),
+    ("zenodo:21859616/00_FR.pdf", 88): (595.276, 841.89),
+    ("zenodo:21859616/00_EN.pdf", 319): (612, 792),
+}
+rejected_crop_bytes = 0
+rejected_crop_hashes = []
+for row in rejected_rows:
+    reject_id = row.get("reject_id", "")
+    if not re.fullmatch(r"J\d{6}", reject_id):
+        continue
+    if None in row or any(not (row.get(field) or "").strip()
+                          for field in rejected_header):
+        ERRORS.append(f"malformed rejected visual-QA row {reject_id}")
+        continue
+    try:
+        page1 = int(row["page1"])
+        page_width = float(row["page_width_pt"])
+        page_height = float(row["page_height_pt"])
+        box = tuple(float(value) for value in row["box_pt"].split(";"))
+        dpi = float(row["dpi"])
+        crop_bytes_expected = int(row["crop_bytes"])
+        width_px = int(row["width_px"])
+        height_px = int(row["height_px"])
+    except (KeyError, TypeError, ValueError):
+        ERRORS.append(f"invalid rejected visual-QA numeric row {reject_id}")
+        continue
+    expected_record = rejected_record_expectations.get(row["record"])
+    if (expected_record is None or row["surface"] != expected_record[0] or
+            row["pdf_sha256"] != expected_record[1] or
+            row["pdf_bytes"] != str(expected_record[2]) or
+            page1 < 1 or page1 > expected_record[3]):
+        ERRORS.append(f"rejected visual-QA parent mismatch {reject_id}")
+    expected_geometry = rejected_page_geometries.get((row["record"], page1))
+    if expected_geometry is None or (
+            abs(page_width - expected_geometry[0]) > 0.01 or
+            abs(page_height - expected_geometry[1]) > 0.01):
+        ERRORS.append(f"rejected visual-QA page geometry mismatch {reject_id}")
+    numeric_values = (page_width, page_height, *box, dpi)
+    if (len(box) != 4 or not all(math.isfinite(value) for value in numeric_values)
+            or page_width <= 0 or page_height <= 0 or box[0] < 0 or box[1] < 0
+            or box[2] <= 0 or box[3] <= 0 or
+            box[0] + box[2] > page_width + 0.01 or
+            box[1] + box[3] > page_height + 0.01):
+        ERRORS.append(f"rejected visual-QA geometry mismatch {reject_id}")
+        continue
+    if row["outcome"] not in {"rejected", "nonfinal"}:
+        ERRORS.append(f"invalid rejected visual-QA outcome {reject_id}")
+    expected_path = f"qa/r/j{int(reject_id[1:])}.png"
+    if row["path"] != expected_path:
+        ERRORS.append(f"rejected visual-QA path mismatch {reject_id}")
+    crop_path = ROOT / row["path"]
+    if (not crop_path.is_file() or crop_path.is_symlink() or
+            crop_path.resolve().parent != rejected_root.resolve()):
+        ERRORS.append(f"unsafe rejected visual-QA crop {reject_id}")
+        continue
+    raw_crop = crop_path.read_bytes()
+    rejected_crop_bytes += len(raw_crop)
+    actual_hash = hashlib.sha256(raw_crop).hexdigest().upper()
+    rejected_crop_hashes.append(actual_hash)
+    if len(raw_crop) != crop_bytes_expected or actual_hash != row["crop_sha256"]:
+        ERRORS.append(f"rejected visual-QA crop identity mismatch {reject_id}")
+    if png_dimensions(raw_crop) != (width_px, height_px):
+        ERRORS.append(f"rejected visual-QA PNG mismatch {reject_id}")
+    effective_dpi = min(width_px * 72 / box[2], height_px * 72 / box[3])
+    if dpi <= 0 or effective_dpi < dpi:
+        ERRORS.append(f"rejected visual-QA crop scale mismatch {reject_id}")
+    if dpi < 5000 and not (
+            row["outcome"] == "rejected" and
+            "below_5000" in row["reason"]):
+        ERRORS.append(f"below-floor rejected crop lacks explicit reason {reject_id}")
+    successor = vqa_by_id.get(row["successor_qa_id"]) if 'vqa_by_id' in locals() else None
+    if (successor is None or successor["item_id"] != row["item_id"] or
+            successor["qa_id"] not in active_vqa_ids):
+        ERRORS.append(f"rejected visual-QA successor mismatch {reject_id}")
+if len(rejected_crop_hashes) != len(set(rejected_crop_hashes)):
+    ERRORS.append("rejected visual-QA evidence reuses crop bytes")
+if rejected_manifest_paths & accepted_vqa_crop_paths:
+    ERRORS.append("rejected and accepted visual-QA evidence reuse paths")
+if set(rejected_crop_hashes) & accepted_vqa_crop_hashes:
+    ERRORS.append("rejected and accepted visual-QA evidence reuse bytes")
+d202 = active_decision_by_id.get("D000202")
+if not decision_contract(
+        "D000202", "ega:visual-qa",
+        "retain_rejected_and_nonfinal_5_1_visual_candidates",
+        "J000001-J000005 in ega/rej.csv"):
+    ERRORS.append("missing rejected visual-QA evidence decision D000202")
+if not decision_contract(
+        "D000204", "ega:visual-qa",
+        "retain_rejected_5_1_9_locator_candidates",
+        "J000006 J000007 J000008 J000009 in ega/rej.csv"):
+    ERRORS.append("missing rejected visual-QA evidence decision D000204")
+for row in rejected_rows:
+    reject_id = row.get("reject_id", "")
+    if not re.fullmatch(r"J\d{6}", reject_id):
+        continue
+    decision_id = "D000202" if int(reject_id[1:]) <= 5 else "D000204"
+    if int(reject_id[1:]) > 9 or not decision_contract(
+            decision_id, "ega:visual-qa",
+            ("retain_rejected_and_nonfinal_5_1_visual_candidates"
+             if decision_id == "D000202" else
+             "retain_rejected_5_1_9_locator_candidates"),
+            ("J000001-J000005 in ega/rej.csv"
+             if decision_id == "D000202" else
+             "J000006 J000007 J000008 J000009 in ega/rej.csv")):
+        ERRORS.append(
+            f"rejected visual-QA row lacks exact active decision contract "
+            f"{reject_id}")
+rejected_visual_summary = {
+    "file": "rej.csv",
+    "bytes": len(rejected_raw),
+    "sha256": hashlib.sha256(rejected_raw).hexdigest().upper(),
+    "rows": len(rejected_rows),
+    "crop_files": len(rejected_discovered_paths),
+    "crop_bytes": rejected_crop_bytes,
+}
+if scope.get("rejected_visual_qa_snapshot") != rejected_visual_summary:
+    ERRORS.append("scope rejected visual-QA snapshot does not match evidence")
 
 if intake_path.exists():
     intake = json.loads(intake_path.read_text(encoding="utf-8"))
@@ -1354,7 +1814,12 @@ if agent_path.exists():
             except ValueError:
                 ERRORS.append(f"non-integer agent duration {row['run_id']}")
         if row["writes"] != "none":
-            ERRORS.append(f"unexpected agent writes {row['run_id']}")
+            write_paths = row["writes"].split("|")
+            if (write_paths != sorted(set(write_paths)) or
+                    any(not re.fullmatch(
+                        r"(?:[A-Za-z0-9_.-]+/)*[A-Za-z0-9_.-]+", path)
+                        for path in write_paths)):
+                ERRORS.append(f"invalid agent writes {row['run_id']}")
         if row["model"] not in {
                 "gpt-5.3-codex-spark", "inherited-parent"}:
             ERRORS.append(f"invalid agent model {row['run_id']}")
@@ -1387,12 +1852,18 @@ for row in rows("topics.csv"):
 findings_path = ROOT.parent / "reports" / "findings.jsonl"
 finding_fields = set(interface.get("required_finding_fields", []))
 finding_ids = set()
+findings_by_id = {}
 finding_count = 0
 findings_text = ""
 if not findings_path.exists():
     ERRORS.append("missing findings channel")
 else:
-    findings_text = findings_path.read_text(encoding="utf-8")
+    findings_raw = findings_path.read_bytes()
+    require_lf_prefix(
+        findings_raw, 16, 19629,
+        "53C3654734C7902496888FD10707B523EDB554D331FE9598590010C62B359720",
+        "first 16 findings")
+    findings_text = findings_raw.decode("utf-8")
     for number, raw in enumerate(findings_text.splitlines(), 1):
         if not raw.strip():
             continue
@@ -1409,6 +1880,7 @@ else:
         if stable_id in finding_ids:
             ERRORS.append(f"duplicate finding stable_id {stable_id}")
         finding_ids.add(stable_id)
+        findings_by_id[stable_id] = finding
 counts["findings.jsonl"] = finding_count
 
 qsrc_path = ROOT.parent / "reports" / "qsrc.csv"
@@ -1462,11 +1934,15 @@ else:
         reader = csv.DictReader(handle)
         if reader.fieldnames != qsrc_header:
             ERRORS.append("unexpected qsrc.csv header")
-        qsrc_rows = list(reader)
+            qsrc_rows = []
+        else:
+            qsrc_rows = list(reader)
+    require_lf_prefix(
+        qsrc_raw, 7, 1985,
+        "DA7DA9AA605BA3E01B6CB21CAA0FDDAB4D33E6B4A464B629349B0D9FF9AAE05E",
+        "Q000001-Q000006")
     qsrc_ids = [row.get("receipt_id", "") for row in qsrc_rows]
-    expected_ids = [f"Q{number:06d}" for number in range(1, len(qsrc_rows) + 1)]
-    if qsrc_ids != expected_ids:
-        ERRORS.append("qsrc.csv IDs are not contiguous in append order")
+    contiguous_ids(qsrc_rows, "receipt_id", "Q", "qsrc.csv")
     if qsrc_ids[:len(expected_qsrc)] != list(expected_qsrc):
         ERRORS.append("qsrc.csv immutable baseline prefix is missing")
     for row in qsrc_rows:
@@ -1496,8 +1972,62 @@ if discovered_crop_paths != manifest_crop_paths:
     ERRORS.append("source-error QA crop set differs from qsrc.csv")
 
 source_error_crop_bytes = 0
+q_decision_contracts = {
+    "Q000001": (
+        "ega:I.4.2.3", "refer_printed_gamma_psi_type_error",
+        "reports/findings.jsonl and direct 5000-dpi-equivalent authority crop"),
+    "Q000002": (
+        "ega:I.4.3.1:proof", "refer_printed_kernel_image_ideal_formula",
+        "Q000002 in reports/qsrc.csv and reports/findings.jsonl"),
+    "Q000003": (
+        "ega:I.4.5.5:proof", "carry_official_transitivity_reference_correction",
+        "R50 Q000003 EG-EGA-I-P127-FR-455-CITATION-ERROR-001"),
+    "Q000004": (
+        "ega:I.4.5.5:proof", "carry_official_missing_product_points_correction",
+        "R50 Q000004 EG-EGA-I-P127-FR-455-UNINTRODUCED-POINTS-001"),
+    "Q000005": (
+        "ega:I.5.1.4", "carry_official_cross_reference_2_1_7_to_2_1_8_correction",
+        "Q000005 and direct comparison of EGA I 2.1.7 with 2.1.8"),
+    "Q000006": (
+        "ega:I.5.1.9.2:proof", "carry_official_restriction_Y_to_V_correction",
+        "Q000006 and the local splitting sentence introducing the neighbourhood V"),
+}
+q_expected_decision_ids = {
+    "Q000001": "D000161", "Q000002": "D000162",
+    "Q000003": "D000178", "Q000004": "D000179",
+    "Q000005": "D000188", "Q000006": "D000198",
+}
+q_expected_admission_ids = {
+    "Q000001": "D000165", "Q000002": "D000165",
+    "Q000003": "D000180", "Q000004": "D000180",
+    "Q000005": "D000189", "Q000006": "D000199",
+}
+q_admission_contracts = {
+    "D000165": (
+        "ega:source-error-qa",
+        "admit_exact_authority_crop_receipts_for_4_2_3_and_4_3_1",
+        "Q000001 Q000002 in reports/qsrc.csv"),
+    "D000180": (
+        "ega:source-error-qa", "admit_exact_authority_crop_receipts_for_4_5_5",
+        "Q000003 Q000004 in reports/qsrc.csv"),
+    "D000189": (
+        "ega:source-error-qa", "admit_exact_authority_crop_receipt_for_5_1_4",
+        "Q000005 in reports/qsrc.csv"),
+    "D000199": (
+        "ega:source-error-qa", "admit_exact_authority_crop_receipt_for_5_1_9_2",
+        "Q000006 in reports/qsrc.csv"),
+}
+q_authority_page_geometries = {
+    122: (606, 756), 124: (595, 748), 126: (595, 748),
+    127: (603, 754), 130: (603, 755),
+}
+legacy_finding_companions = {
+    "Q000001": "EGA-I-4.2.3-P123-GAMMA-PSI-CROP-RECEIPT",
+}
 for row in qsrc_rows:
     receipt_id = row.get("receipt_id", "")
+    if not re.fullmatch(r"Q\d{6}", receipt_id):
+        continue
     try:
         page1 = int(row["page1"])
         page_width = float(row["page_width_pt"])
@@ -1524,6 +2054,11 @@ for row in qsrc_rows:
             x < 0 or y < 0 or width_pt <= 0 or height_pt <= 0 or
             x + width_pt > page_width or y + height_pt > page_height):
         ERRORS.append(f"out-of-bounds source-error QA geometry for {receipt_id}")
+    expected_page_geometry = q_authority_page_geometries.get(page1)
+    if expected_page_geometry is None or (
+            abs(page_width - expected_page_geometry[0]) > 0.01 or
+            abs(page_height - expected_page_geometry[1]) > 0.01):
+        ERRORS.append(f"source-error QA page geometry mismatch for {receipt_id}")
     effective_dpi = min(
         width_px * 72 / width_pt, height_px * 72 / height_pt)
     if dpi < 5000 or effective_dpi < dpi:
@@ -1544,21 +2079,25 @@ for row in qsrc_rows:
         ERRORS.append(f"source-error QA hash mismatch for {receipt_id}")
     if png_dimensions(raw_crop) != (width_px, height_px):
         ERRORS.append(f"source-error QA PNG mismatch for {receipt_id}")
-    receipt_pattern = re.compile(
-        rf"(?<![A-Za-z0-9]){re.escape(receipt_id)}(?![A-Za-z0-9])")
-    if (row["finding_id"] not in finding_ids or
-            not receipt_pattern.search(findings_text) or
-            row["path"] not in findings_text or
-            row["crop_sha256"] not in findings_text):
+    finding = findings_by_id.get(row["finding_id"])
+    companion_id = legacy_finding_companions.get(receipt_id)
+    evidence_finding = (
+        findings_by_id.get(companion_id) if companion_id else finding)
+    if (finding is None or not finding_receipt_link(
+            evidence_finding, receipt_id, row["path"], row["crop_sha256"])):
         ERRORS.append(f"source-error QA finding link mismatch for {receipt_id}")
-    if row["decision_id"] not in decision_by_id:
+    correction_contract = q_decision_contracts.get(receipt_id)
+    if (row["decision_id"] != q_expected_decision_ids.get(receipt_id) or
+            correction_contract is None or
+            not decision_contract(row["decision_id"], *correction_contract)):
         ERRORS.append(f"source-error QA decision link mismatch for {receipt_id}")
-    admission = active_decision_by_id.get(row.get("admission_id", ""))
-    if admission is None or not (
-            admission.get("subject_id") == "ega:source-error-qa" and
-            admission.get("state") == "active" and
-            admission.get("action", "").startswith("admit_") and
-            receipt_pattern.search(admission.get("evidence", ""))):
+    admission_contract = q_admission_contracts.get(row.get("admission_id", ""))
+    if (row["admission_id"] != q_expected_admission_ids.get(receipt_id) or
+            admission_contract is None or
+            not decision_contract(row["admission_id"], *admission_contract) or
+            not re.search(
+                rf"(?<![A-Za-z0-9]){re.escape(receipt_id)}(?![A-Za-z0-9])",
+                admission_contract[2])):
         ERRORS.append(f"source-error QA admission mismatch for {receipt_id}")
 counts["qsrc.csv"] = len(qsrc_rows)
 counts["source_error_qa_crops"] = len(discovered_crop_paths)

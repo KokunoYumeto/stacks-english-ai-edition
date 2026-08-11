@@ -1574,3 +1574,110 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   append-only row, exact page changes, privacy, and the no-TeX/no-V boundary
   and returned final HARD PASS. No agent wrote files or claimed independent
   visual-content certification.
+
+### EGA I 5.1.5--5.1.10 reduction functoriality products and thickenings
+
+- Direct authority remains the 50,232-byte F33-bound `ega1-5-fr.tex` at
+  SHA-256
+  `4610C5F9E732D99948AA809ED64C85D236423990C2750A06F0DC7A805D317701`.
+  Lines 101--304 are 9,279 UTF-8/LF bytes with SHA-256
+  `39A8328C323D5140A47D12437CC78B672CE63931B0AB0A77914C7CE4369804EA`.
+  The exact page controls are R52 for I:129 (10,074 bytes SHA-256
+  `2A69BDB7C8D978A1BC2864A66A738A5C7450A3DE567EB7A67A937817EB1E2902`),
+  R53 for I:130 (10,676 bytes SHA-256
+  `BDD7227EE137F2B61A57438AB84D3B564131AD214C9A1F8AFD918CE7A2472F8F`),
+  and R54 for I:131 (11,936 bytes SHA-256
+  `4B51F8C9B847D1D4A3C8C759CAEE6E09DD1F5EA00D5291E9623A44AF69990AA4`).
+- D000190 and L000028 correct only the frozen `ega:I.5.1.9` locator from
+  I:129 to I:130. The raw locator guard, F33, R53, and evidence
+  `EG-EGA-I-P130-FR-ADMISSION-001` are exact; all 9,585 stable IDs remain
+  unchanged.
+- D000191--D000197 admit S000715--S000767 and R000469--R000498. The 53 new
+  statement edges comprise 50 exact official-label references plus three
+  explicit local untagged labels. The 30 residuals keep all stronger,
+  derived, unlabelled, terminology, counterexample, and upstream-pending
+  differences separate. The active graph is 761 of 767 physical rows over
+  251 source units with six superseded; 754 active edges resolve to 241
+  distinct official tags, seven are local untagged integrations, and 31 are
+  exact full-statement equivalences. Residual history is 495 of 498 active
+  rows with three superseded, six open gaps, and seven local-pending rows.
+- `schemes-lemma-reduction-functorial` cites EGA I 5.1.5 and gives the unique
+  reduction morphism, its natural square, identity, and composition.
+  `morphisms-lemma-reduction-morphism-properties` cites Proposition 5.1.6 and
+  gives surjective and universally-injective reflection plus forward
+  preservation of immersion, closed immersion, and open immersion.
+  `morphisms-lemma-reductions-fibre-product` cites Proposition 5.1.7 and gives
+  the canonical product comparison and its closed universal-homeomorphism
+  map into the unreduced product. No official tag is assigned.
+- The first local proof audit A000162 rejected an unnecessary forward
+  reference, a false target-local argument for arbitrary immersions, and an
+  incomplete two-arrow fibre-product citation. The owner used the earlier
+  closed-subspace uniqueness lemma, proved closed and open cases before
+  factoring a general immersion, and proved both base-change arrows plus
+  their composition. A000163 then returned HARD PASS; fresh two-pass isolated
+  `schemes.tex`, `morphisms.tex`, and `more-morphisms.tex` builds exit zero and
+  the three new labels are present in their chapter aux files.
+- D000200--D000201 and I000060--I000061 record two local 04EX repairs. The
+  fourth thickening condition now says closed subscheme of `X'`, not the
+  tautological repeated `X`, and the explanatory paragraph says `nth order
+  thickening`, not `nth order thinking`. The definitions and downstream
+  mathematics are unchanged.
+- A000166 supplied the deterministic 53-edge and 30-residual decomposition.
+  A000169 independently replayed every direct-French attribution, official
+  file, label, tag, relation, residual, hypothesis boundary, counterexample,
+  and all three local statements and proofs at pinned commit a04446e5. It
+  returned HARD PASS with zero active semantic duplicates and made no visual
+  certification.
+
+### EGA I 5.1 visual evidence source referral and fail-closed governance
+
+- V000016 independently certifies the 5.1.5 reduction square against one
+  tight authority, sealed B37AA French, and sealed B231 English crop at 5,000
+  dpi. V000017--V000020 do the same for the 5.1.9 A/A0 block, labelled exact
+  sequence, ring square, and scheme square. The owner inspected each of the
+  fifteen final crops individually for complete terms, objects, edges,
+  nonedges, directions, styles, labels, subscripts, punctuation, geometry,
+  and label sides. The only edition differences are the recorded English
+  ideal-letter normalization, two-line reflow, trailing punctuation, and
+  French equation-number placement.
+- J000001--J000009 preserve every rejected or nonfinal crop: clipped graph
+  content, adjacent prose, an obsolete English crop, an obsolete French crop,
+  and four below-floor locator candidates. D000202 covers J000001--J000005;
+  append-only D000204 covers J000006--J000009. No rejected path or bytes can
+  satisfy an active V receipt.
+- D000198--D000199, I000059, Q000006, and finding
+  `EGA-I-5.1.9.2-P131-RESTRICTION-Y-V-001` bind the exact printed defect in
+  the 5.1.9.2 proof. The sentence introduces a neighbourhood V but prints
+  `F|Y`; the uniquely typed local splitting is `F|V`. Q000006 binds NUMDAM
+  page 130, box `86;188;425;30`, to `reports/qa/519y.png`: 348,419 bytes,
+  SHA-256
+  `63CA3C2A27119D40DFEB3213A6906BD8072F2FEF8E4E0214576ADEB2DBCD7A3B`,
+  dimensions 29,515 by 2,084 at 5,000 dpi. The EGA Canon accepted the referral
+  under REF10 while preserving diplomatic French; English was already
+  corrected and footnoted, so neither reader was rebuilt or republished.
+- R243 is the exact metadata-only successor that closes the EGA interface:
+  35,095-byte manifest SHA-256
+  `E8A3C98FA2A8950B74F89A778AB695E7CDFF9AD08966EA0BB9A28A462B46826E`,
+  preserving 127 files, 7,283,701 bytes, and tree SHA-256
+  `EB6A5465B872682311DD0DA7E6B633071A220C7FB957FCFB601795D5CBA1E39C`.
+  `r184.py` now applies 28 exact inverse operations across 12 files and
+  validates the complete sealed tree twice, including immediately before
+  atomic promotion. This closes the concurrent producer-drift race reproduced
+  by A000164 without mutating the edition tree.
+- A000167 rejected a superficially green governance snapshot because malformed
+  V/J IDs could crash, page-129 geometry was wrong, J000006--J000009 lacked an
+  exact decision join, source-error tokens could be spliced across findings,
+  and current evidence prefixes were mutable. A000168 materialized the narrow
+  repair: structured failures, exact authority geometry and active evidence
+  contracts, immutable checkpoint prefixes, flat nonsymlink crop trees, an
+  explicit Q000001 companion-finding rule, and adverse mutation regressions.
+  Agent writes are recorded exactly as four repository-relative paths rather
+  than falsely claimed as `none`. The owner reran compilation, the complete
+  checker, and diff-check after inspecting those paths.
+- A000170 then replayed the complete publication surface read-only. It found
+  exactly 21 tracked modifications and 26 intended new evidence files, exact
+  append-only registry prefixes apart from the governed I:129 to I:130 unit
+  locator overlay, unique untagged local labels, green TeX and Python gates,
+  no private paths or secrets, and no remaining release blocker. This audit
+  does not substitute for the owner's visual comparison recorded by V000016
+  through V000020.

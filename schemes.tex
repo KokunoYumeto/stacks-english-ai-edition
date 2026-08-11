@@ -2289,6 +2289,35 @@ Hence $f$ factors through
 $Z$ by Lemma \ref{lemma-characterize-closed-subspace}.
 \end{proof}
 
+\begin{lemma}
+\label{lemma-reduction-functorial}
+\begin{reference}
+\cite[(5.1.5)]{EGA1}
+\end{reference}
+For every morphism of schemes $f : X \to Y$ there is a unique morphism
+$$
+f_{red} : X_{red} \longrightarrow Y_{red}
+$$
+such that the diagram
+$$
+\xymatrix{
+X_{red} \ar[r]^{f_{red}} \ar[d] & Y_{red} \ar[d] \\
+X \ar[r]^f & Y
+}
+$$
+commutes. Moreover, $(\text{id}_X)_{red} = \text{id}_{X_{red}}$ and
+$(g \circ f)_{red} = g_{red} \circ f_{red}$ whenever the composition is
+defined.
+\end{lemma}
+
+\begin{proof}
+The scheme $X_{red}$ is reduced. Hence the composition
+$X_{red} \to X \to Y$ factors through $Y_{red}$ by
+Lemma \ref{lemma-map-into-reduction}. The factorization is unique by
+Lemma \ref{lemma-characterize-closed-subspace}. The two functoriality
+assertions follow from the same uniqueness.
+\end{proof}
+
 
 
 

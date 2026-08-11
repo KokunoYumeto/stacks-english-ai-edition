@@ -102,6 +102,36 @@ source-error-receipt, and agent-run IDs use zero-padded `D`, `I`, `F`, `S`,
 Rows are append-only. A correction names the earlier row in `supersedes`; it
 does not rewrite history.
 
+`rej.csv` retains failed or obsolete per-item visual crops under stable `J`
+identifiers. Every row binds one exact parent PDF page and point box to a
+CRC-clean crop and names the active same-item `V` successor. A below-5000-dpi
+locator artifact is admissible only as `rejected` evidence with an explicit
+below-floor reason; it can never satisfy the active `V` gate. Rejected and
+accepted evidence may share neither a path nor bytes. The validator requires
+manifest-directory closure so later success cannot erase a clipped or
+nonfinal witness from the audit history.
+
+Governance ledgers are parsed fail-closed: an unexpected CSV header yields no
+admitted rows, and `V` and `J` identifiers must pass their exact structured
+zero-padded grammar before any numeric operation. Accepted crop directories,
+like the rejected and source-error directories, must be nonempty flat
+directories containing only regular nonsymlink files. Parent-page dimensions
+are authority metadata, not values a row may declare for itself.
+
+The current complete `V`, `J`, `L`, and `Q` ledgers and the sealed prefixes of
+the decision, issue, and findings ledgers have exact LF-normalized byte and
+SHA-256 pins in `scope.json`. These pins freeze the stated historical rows but
+do not freeze each file: later rows remain append-only successors after the
+pinned prefix. Evidence promotion requires an exact active decision contract
+(subject, action, state, and evidence), and each `Q` receipt must join one
+specific finding object whose own evidence contains that receipt ID, crop
+path, and crop hash; tokens split across findings never satisfy the join.
+The sole immutable legacy exception is `Q000001`: its named original finding
+must remain present, while the separately published append-only companion
+`EGA-I-4.2.3-P123-GAMMA-PSI-CROP-RECEIPT` alone must carry all three exact
+receipt tokens. This explicit two-object lineage cannot be inferred for later
+rows.
+
 For `smap.csv` and `resid.csv`, `supersedes` is the final column so legacy
 rows without a serialized trailing field remain byte-stable and are read as
 blank. A successor must point to one strictly earlier row in the same table;
@@ -169,6 +199,11 @@ when some mathematical part of the source remains uncovered by that edge.
 scope, status/runtime, returned result, owner verification, accepted or
 rejected disposition, and write claim. Agent output is evidence only; it
 cannot promote authority or mathematical review state.
+
+The write claim is either the literal `none` or a sorted pipe-delimited list
+of repository-relative paths actually changed by that bounded task. The owner
+must inspect every claimed path; a write claim never expands task authority or
+substitutes for review of the resulting bytes.
 
 One task path may appear in more than one row when a later follow-up receives
 a genuinely different bounded scope. The task-path and scope pair is unique.

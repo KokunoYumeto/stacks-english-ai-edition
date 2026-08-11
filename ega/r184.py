@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reconstruct the exact frozen R184 discovery tree from sealed R219."""
+"""Reconstruct the exact frozen R184 discovery tree from sealed R243."""
 
 import argparse
 import hashlib
@@ -11,12 +11,33 @@ from pathlib import Path
 MANIFEST_BYTES = 92_445
 MANIFEST_SHA256 = "5C64ECD32FD7C5458D2599D70ED667D2CF06D95517EFFA9C6D6DCEF7626913A0"
 TREE_SHA256 = "3BFB1C5103093481246EF4A6365E08544F6D5E19ACC0EA63E717F3F3643F064D"
-SUCCESSOR_BYTES = 7_283_691
-SUCCESSOR_TREE_SHA256 = "AD9F9A8A17882E5DF5EE4D1CFB1EAC03EBF5E22826B97A98207A2C220D106D22"
+SUCCESSOR_MANIFEST_BYTES = 35_095
+SUCCESSOR_MANIFEST_SHA256 = "E8A3C98FA2A8950B74F89A778AB695E7CDFF9AD08966EA0BB9A28A462B46826E"
+SUCCESSOR_BYTES = 7_283_701
+SUCCESSOR_TREE_SHA256 = "EB6A5465B872682311DD0DA7E6B633071A220C7FB957FCFB601795D5CBA1E39C"
+R219_BYTES = 7_283_691
+R219_TREE_SHA256 = "AD9F9A8A17882E5DF5EE4D1CFB1EAC03EBF5E22826B97A98207A2C220D106D22"
 
 
 def sha(data):
     return hashlib.sha256(data).hexdigest().upper()
+
+
+def read_sealed_successor(source, entries):
+    """Read and validate one complete immutable R243 source snapshot."""
+    source_data = {}
+    source_rows = []
+    for relative, entry in entries.items():
+        data = (source / relative).read_bytes()
+        if (len(data), sha(data)) != (entry["bytes"], entry["sha256"]):
+            raise RuntimeError(f"live source differs from sealed R243: {relative}")
+        source_data[relative] = data
+        source_rows.append(f"{relative}\t{len(data)}\t{sha(data)}\n")
+    if (sum(len(data) for data in source_data.values()),
+            sha("".join(source_rows).encode("utf-8"))) != (
+            SUCCESSOR_BYTES, SUCCESSOR_TREE_SHA256):
+        raise RuntimeError("live source tree is not the sealed R243 successor")
+    return source_data
 
 
 def replace_at(data, offset, postimage, preimage, expected_bytes, expected_sha):
@@ -26,6 +47,114 @@ def replace_at(data, offset, postimage, preimage, expected_bytes, expected_sha):
     if (len(result), sha(result)) != (expected_bytes, expected_sha):
         raise RuntimeError(f"inverse result mismatch at byte {offset}")
     return result
+
+
+def invert_r242_ega0_3(data):
+    data = replace_at(
+        data, 29_092, b"_", b"^", 47_182,
+        "22B69BC82FE0378AB5ED16301CB28AE3CA6B440AB2687BA50A1970AF993A4911",
+    )
+    # R220's descriptive receipt gives stale character-derived offsets. The
+    # exact UTF-8 byte offsets, proved by the predecessor hashes, are 26612
+    # and 26320.
+    data = replace_at(
+        data, 26_612,
+        b"(\\psi_*(\\sh{F}_2))_{\\psi(x)}\\ar[r]_{\\psi_x}",
+        b"(\\psi_*(\\sh{F}_2))_{\\psi(x)}\\ar[r]^{\\psi_x}",
+        47_182,
+        "9D403486024CBCFBAFE3835BEB1A9EDF09CA642A292ACA2E3A7EBB48EBE41353",
+    )
+    return replace_at(
+        data, 26_320,
+        b"neither injective nor surjective",
+        b"neither injective or surjective",
+        47_181,
+        "5CCAEF6A1ADDAC7043D435762145A5A34C6E4E2028E0A7D6688F0D8DCB7295EB",
+    )
+
+
+def invert_r242_ega0_4(data):
+    return replace_at(
+        data, 4_431, b"_", b"^", 33_207,
+        "598BFADD2F888BA48703D8F7182D5D266A54894114CCCF99E57D19E8D572CC23",
+    )
+
+
+def invert_r242_ega0_5(data):
+    return replace_at(
+        data, 29_790, b"^*", b"", 41_622,
+        "CDF520A527EDD63F59558253D0D553856D26AA0D57D430221B6BE93146A8D83B",
+    )
+
+
+def invert_r242_ega0_7(data):
+    return replace_at(
+        data, 27_599,
+        (
+            b"    \\widehat{A}^{\\,p}\\ar[r] &\n"
+            b"    \\widehat{A}^{\\,q}\\ar[r] &\n"
+            b"    \\widehat{M}\\ar[r] &\n"
+            b"    0"
+        ),
+        (
+            b"    \\widehat{A^p}\\ar[r] &\n"
+            b"    \\widehat{A^q}\\ar[r] &\n"
+            b"    \\widehat{M}\\ar[r] &\n"
+            b"    0,"
+        ),
+        75_637,
+        "96983D270206173230D51B70885CB846FD03BB1692D5DFAC03667EE7F4156252",
+    )
+
+
+def invert_r242_ega1_1(data):
+    return replace_at(
+        data, 64_219,
+        b"B_{\\psi(x)}\\ar[r]_{\\theta_x^\\sharp} &",
+        b"B_{\\psi(x)}\\ar[r]^{\\theta_x^\\sharp} &",
+        78_943,
+        "F32A8DB7385B1730556DB39FE0609B71BA1CC7E340D76BF87B5B9019FBC83764",
+    )
+
+
+def invert_r242_ega1_10(data):
+    data = replace_at(
+        data, 48_549, b"_", b"^", 143_891,
+        "998124FF2641FE7022280BEECD17A4CD6491BE55C9E124FA4B2E4FA563A3BFAF",
+    )
+    data = replace_at(
+        data, 47_794, b"_", b"^", 143_891,
+        "E06496832D6D0000F9CD86BE44146B8684B0BB37CE8CAE9B374B5914420BA737",
+    )
+    data = replace_at(
+        data, 33_751, b"_", b"^", 143_891,
+        "A6D326DBFA8D002FBE92B6A451566FAB172B4D70E05DA6DEAE9259F7BDB113EA",
+    )
+    data = replace_at(
+        data, 31_498, b"_", b"^", 143_891,
+        "F6553DA9AD9D42F17DC81A3B56E688FA486CB46AAA3B06D09BDE3F51B98BF101",
+    )
+    data = replace_at(
+        data, 11_257, b"_", b"^", 143_891,
+        "B946F98EC54F976CA6AA16DD525E8CDE2CA36B1C5E2BC71D77C35FBE6CB9D1D4",
+    )
+    return replace_at(
+        data, 9_712,
+        b"\\ar[r]_{\\Gamma(\\theta_{\\mathfrak{D}(g)})}",
+        b"\\ar[r]^{\\Gamma(\\theta_{\\mathfrak{D}(g)})}",
+        143_891,
+        "FCF8334A2C158768B792E2EA4F596762F8AA48B61593227482170DD9EC4654A1",
+    )
+
+
+SUCCESSOR_INVERSES = {
+    "ega0/ega0-3.tex": invert_r242_ega0_3,
+    "ega0/ega0-4.tex": invert_r242_ega0_4,
+    "ega0/ega0-5.tex": invert_r242_ega0_5,
+    "ega0/ega0-7.tex": invert_r242_ega0_7,
+    "ega1/ega1-1.tex": invert_r242_ega1_1,
+    "ega1/ega1-10.tex": invert_r242_ega1_10,
+}
 
 
 def invert_ega0_1(data):
@@ -205,6 +334,7 @@ INVERSES = {
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--manifest", required=True, type=Path)
+    parser.add_argument("--successor-manifest", required=True, type=Path)
     parser.add_argument("--source", required=True, type=Path)
     parser.add_argument("--out", required=True, type=Path)
     args = parser.parse_args()
@@ -216,21 +346,49 @@ def main():
     manifest = json.loads(raw_manifest.decode("utf-8"))
     if manifest.get("file_count") != 127:
         raise RuntimeError("R184 file count changed")
+
+    raw_successor_manifest = args.successor_manifest.read_bytes()
+    if (len(raw_successor_manifest), sha(raw_successor_manifest)) != (
+            SUCCESSOR_MANIFEST_BYTES, SUCCESSOR_MANIFEST_SHA256):
+        raise RuntimeError("R243 manifest identity changed")
+    successor_manifest = json.loads(raw_successor_manifest.decode("utf-8"))
+    if (successor_manifest.get("file_count"),
+            successor_manifest.get("total_bytes"),
+            successor_manifest.get("canonical_tree_sha256")) != (
+            127, SUCCESSOR_BYTES, SUCCESSOR_TREE_SHA256):
+        raise RuntimeError("R243 manifest summary changed")
+
     if args.out.exists():
         raise RuntimeError("output already exists")
     args.out.parent.mkdir(parents=True, exist_ok=True)
 
-    source_data = {}
-    source_rows = []
+    successor_entries = {}
+    for entry in successor_manifest["files"]:
+        relative = entry["relative_path"]
+        if relative in successor_entries:
+            raise RuntimeError(f"duplicate R243 manifest path: {relative}")
+        successor_entries[relative] = entry
+    r184_paths = {entry["relative_path"] for entry in manifest["files"]}
+    if set(successor_entries) != r184_paths:
+        raise RuntimeError("R243 and R184 path sets differ")
+    source_data = read_sealed_successor(args.source, successor_entries)
+
+    successor_changed = []
+    r219_data = {}
+    r219_rows = []
     for entry in manifest["files"]:
         relative = entry["relative_path"]
-        data = (args.source / relative).read_bytes()
-        source_data[relative] = data
-        source_rows.append(f"{relative}\t{len(data)}\t{sha(data)}\n")
-    if (sum(len(data) for data in source_data.values()),
-            sha("".join(source_rows).encode("utf-8"))) != (
-            SUCCESSOR_BYTES, SUCCESSOR_TREE_SHA256):
-        raise RuntimeError("live source tree is not the sealed R219 successor")
+        data = source_data[relative]
+        inverse = SUCCESSOR_INVERSES.get(relative)
+        if inverse is not None:
+            data = inverse(data)
+            successor_changed.append(relative)
+        r219_data[relative] = data
+        r219_rows.append(f"{relative}\t{len(data)}\t{sha(data)}\n")
+    if (sum(len(data) for data in r219_data.values()),
+            sha("".join(r219_rows).encode("utf-8"))) != (
+            R219_BYTES, R219_TREE_SHA256):
+        raise RuntimeError("R243 inverse does not reconstruct sealed R219")
 
     changed = []
     canonical = []
@@ -240,7 +398,7 @@ def main():
         stage.mkdir()
         for entry in manifest["files"]:
             relative = entry["relative_path"]
-            data = source_data[relative]
+            data = r219_data[relative]
             identity = (len(data), sha(data))
             expected = (entry["bytes"], entry["sha256"])
             if identity != expected:
@@ -259,6 +417,10 @@ def main():
         tree = sha("".join(canonical).encode("utf-8"))
         if tree != TREE_SHA256:
             raise RuntimeError("R184 reconstructed tree mismatch")
+        # A producer may advance the shared live tree while reconstruction is
+        # running. Re-read every sealed input immediately before promotion so
+        # a mixed-time snapshot can never be reported as a successful replay.
+        read_sealed_successor(args.source, successor_entries)
         stage.replace(args.out)
 
     result = {
@@ -268,7 +430,10 @@ def main():
         "bytes": sum(entry["bytes"] for entry in manifest["files"]),
         "tree_sha256": TREE_SHA256,
         "successor_tree_sha256": SUCCESSOR_TREE_SHA256,
-        "inverted_files": changed,
+        "intermediate_tree_sha256": R219_TREE_SHA256,
+        "successor_inverted_files": successor_changed,
+        "r184_inverted_files": changed,
+        "inverted_files": sorted(set(successor_changed + changed)),
         "source_mutated": False,
     }
     print(json.dumps(result, indent=2, sort_keys=True))
