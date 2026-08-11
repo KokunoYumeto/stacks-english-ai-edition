@@ -21,20 +21,24 @@ or published here.
   `5C64ECD32FD7C5458D2599D70ED667D2CF06D95517EFFA9C6D6DCEF7626913A0`;
   127 files, 7,283,321 bytes, tree SHA-256
   `3BFB1C5103093481246EF4A6365E08544F6D5E19ACC0EA63E717F3F3643F064D`.
-- Latest sealed standalone-English comparison source: R247, 53,306-byte
+- Latest sealed standalone-English comparison source: R248, 58,687-byte
   manifest at SHA-256
-  `9A3652BA4E9A762DB0F9EA89A2B84FE26CE0DAD0BC97D3B9B3F7343C17CE4DB5`;
+  `C771CF817202DF1B0BC47C02DBACE0CA8AF0D27608A4E69FB4B5B31A320F6135`;
   127 files, 7,283,701 bytes, tree SHA-256
-  `F152BFBC3AC3102DCE41975C27EEB373D01770F325639DF9AD01EFB6AD4F36D8`.
-  Its sole source change beyond R243 corrects one diagram-label side in
-  `ega1/ega1-10.tex`; the exact inverse is separately tree-gated before all
+  `DDBF5FF8FD0D3A74ED43A06B3F9011855540BBD9D3F029256822CB68E872EE49`.
+  Its sole source change beyond R247 corrects another diagram-label side in
+  `ega1/ega1-10.tex`; both exact inverses are separately tree-gated before all
   earlier reconstruction layers.
 - French authority: production is active; the latest sealed interface marker
-  is F37ZH through EGA II printed p.37, with retrospective EGA I diagram
-  closures through printed p.206; printed p.38 remains quarantined. This
+  is F37ZI through EGA II printed p.37, with retrospective EGA I diagram
+  closures through printed p.211; printed p.38 remains quarantined. This
   graph still binds every reviewed EGA I claim to its exact historical page receipt;
   receipt F33 also repairs 4.1.9 from `g'` to the directly verified printed
   `g` without changing the already-correct English.
+  The retrospective closure is fail-closed by D38/DIA38 and its exact
+  Q37BU/Q37BV pre/post-cleanup receipts; Q37BV records two 201-row replays,
+  fingerprint `9962DA981F1D81B207802E13000CA1509252DDB8CF51CC3B5C1B7A7E4F4F7C4E`,
+  and verified absence of the temporary `C:/tmp/EGA-d38` workspace.
 - Existing incremental pre-Stacks notes: 399,689 bytes, SHA-256
   `4B4811B6F24F139020E15CF27D7BFA82C3872F0A549DCFF4F64B28F4454737D6`.
   They are evidence to normalize into the new schema, not a completed
@@ -267,9 +271,9 @@ append-only.
 - `intake.py`: deterministic manifest verification and metadata-only unit
   extraction; it does not copy source prose.
 - `r184.py`: exact no-overwrite reconstruction of the frozen R184 discovery
-  tree from sealed R247 through 29 hash-guarded inverse operations across 12
-  files, with exact R243 and R219 intermediate gates; it never mutates edition
-  source.
+  tree from sealed R248 through 30 hash-guarded inverse operations across 12
+  files, with exact R247, R243, and R219 intermediate gates; it never mutates
+  edition source.
 - `files.csv`, `units.csv`, and `intake.json`: generated exact-file inventory,
   stable unit registry, and fail-closed intake receipt.
 - `pages.csv`: append-only direct-authority page evidence for frozen discovery
@@ -306,17 +310,51 @@ append-only.
   direct-authority crops for source-error evidence; these are not edition
   outputs or three-surface visual certifications.
 
-### Current reviewed frontier: EGA I 5.2.1--5.2.4
+### Current reviewed frontier: EGA I 5.3.1--5.3.4
 
-The four opening results on reduced locally closed subspaces, maps from
+The diagonal definition, pairing identity, product compatibility, and base-
+change compatibility are now admitted from exact F33 authority and direct
+printed p.132. S000789--S000803 add 15 strictly typed edges and
+R000520--R000537 add 18 target-specific residuals. The active graph now has
+797 edges across 266 source units and 534 residuals; physical append-only
+history has 803 edge rows and 537 residual rows. Of the active edges 787
+resolve to 246 distinct official tags and ten remain explicit local untagged
+integrations. There are 35 exact full-statement equivalences and seven open
+labelled-coverage gaps.
+
+Unlabelled prose under 01KH exactly gives the diagonal and its projection
+identities. Official categorical targets 001S, 001V, and 002L derive the
+pairing and product identities; proof-level 02X0 records the product formula
+for algebraic spaces. Proofs under 01KU and 04YR contain stronger base-change
+forms, while 0038 and 001Y supply the already-reviewed pullback-product
+comparison. One untagged Schemes lemma makes the three foundational scheme
+identities directly citable; it receives no official tag or upstream-
+acceptance claim.
+
+The printed French jumps directly from 5.3.2 to 5.3.4. Its stable 5.3.3 row
+is therefore retained only as the non-rendering English navigation anchor
+controlled by R55, with no statement edge, issue, or correction referral.
+The ten frozen rows all lie on I:132. Three ordinary displays remain parent
+or formula units, and the slice has no diagram or intricate standalone block,
+so it adds no V item. The source remark's forward categorical claim through
+5.3.8 remains explicitly open until those later units are reviewed.
+
+Ten visible disposable Spark tasks supplied bounded read-only hash, registry,
+manifest, and label-join checks. Their two canaries and three later malformed
+or incomplete results remain recorded as rejected evidence; every task was
+owner-replayed, archived, and verified absent. The agent ledger records their
+actual `low` effort rather than relabelling it, and the validator now enforces
+model/effort coupling.
+
+The preceding four results on reduced locally closed subspaces, maps from
 reduced schemes, reduced closures of immersions, and comparison of defining
-ideals are now admitted from exact F33 authority and direct printed
-pp.131--132. S000768--S000788 add 21 strictly typed edges and
-R000499--R000519 add 21 target-specific residuals. The active graph now has
+ideals were admitted from exact F33 authority and direct printed pp.131--132.
+At that checkpoint S000768--S000788 added 21 strictly typed edges and
+R000499--R000519 added 21 target-specific residuals. The active graph then had
 782 edges across 259 source units and 516 residuals; physical append-only
-history has 788 edge rows and 519 residual rows. Of the active edges 775
-resolve to 243 distinct official tags and seven remain explicit local
-untagged integrations. There are 32 exact full-statement equivalences and six
+history had 788 edge rows and 519 residual rows. Of those active edges 775
+resolved to 243 distinct official tags and seven remained explicit local
+untagged integrations. There were 32 exact full-statement equivalences and six
 open labelled-coverage gaps.
 
 The unique reduced structure on a locally closed subset splits across 0F2L
@@ -387,14 +425,16 @@ crops; corpus-wide I000049 remains open for the rest of the discovery corpus.
 The validator now fails closed on malformed IDs, wrong parent geometry,
 inactive or mismatched evidence decisions, cross-finding token splicing,
 ledger-prefix mutation, directory nesting, symlinks, and unmanifested crops.
-The current R247-to-R184 reconstruction likewise rereads the complete sealed live
+The current R248-to-R184 reconstruction likewise rereads the complete sealed live
 tree immediately before atomic promotion, closing the reproduced concurrent-
 producer race. Independent mathematical and governance inverse audits both
 returned HARD PASS after the repairs while preserving their earlier failures.
 
-The immediate work continues at direct-French EGA I 5.3.1. The latest sealed
-French interface marker is F37ZH through EGA II printed p.37, while every
-reviewed EGA I claim remains bound to its own historical receipt. Discovery
+The immediate work continues at direct-French EGA I 5.3.5. The latest sealed
+French interface marker is F37ZI through EGA II printed p.37, while every
+reviewed EGA I claim remains bound to its own historical receipt. The D38
+retrospective interface is closed by DIA38 and sealed cleanup receipt Q37BV;
+it is not inferred merely from the current reader PDFs. Discovery
 unit I.3.2.9 remains in a separate authority-pending queue for its cited EGA II
 erratum witness. The complete English surface drives provisional candidates
 only; chapter edits still require direct French evidence, explicit residuals,

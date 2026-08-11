@@ -200,6 +200,12 @@ scope, status/runtime, returned result, owner verification, accepted or
 rejected disposition, and write claim. Agent output is evidence only; it
 cannot promote authority or mathematical review state.
 
+An exposed Spark run records its actual effort as `low`, `medium`, `high`, or
+`xhigh`; it may not use `inherited`. A task run by an inherited parent model
+records both `inherited-parent` and `inherited`. These enums describe observed
+execution provenance and must never be upgraded after the run merely to pass a
+validator.
+
 The write claim is either the literal `none` or a sorted pipe-delimited list
 of repository-relative paths actually changed by that bounded task. The owner
 must inspect every claimed path; a write claim never expands task authority or

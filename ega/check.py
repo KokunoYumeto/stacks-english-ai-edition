@@ -328,17 +328,17 @@ if tuple(
         interface.get("english_discovery", {}).get(field)
         for field in ("latest_manifest", "latest_manifest_bytes",
                       "latest_manifest_sha256")) != (
-        "R247.json", 53306,
-        "9A3652BA4E9A762DB0F9EA89A2B84FE26CE0DAD0BC97D3B9B3F7343C17CE4DB5",
+        "R248.json", 58687,
+        "C771CF817202DF1B0BC47C02DBACE0CA8AF0D27608A4E69FB4B5B31A320F6135",
 ):
-    ERRORS.append("latest English interface is not sealed R247")
+    ERRORS.append("latest English interface is not sealed R248")
 if tuple(
         interface.get("latest_sealed_french", {}).get(field)
         for field in ("manifest", "manifest_bytes", "manifest_sha256")) != (
-        "F37ZH.json", 32680,
-        "F25B7E8EB8FDBE720CA039CA04AA0D249378B254E053008416209DB813CEA1E4",
+        "F37ZI.json", 40241,
+        "D8D926E6042DEC361D321269FF9849C25F7A7A469E6EBE1E51B103BCCC18ABBB",
 ):
-    ERRORS.append("latest French interface is not sealed F37ZH")
+    ERRORS.append("latest French interface is not sealed F37ZI")
 if tuple(
         scope.get("inputs", {}).get("french_authority", {}).get(field)
         for field in ("latest_sealed_manifest", "latest_sealed_manifest_bytes",
@@ -346,19 +346,53 @@ if tuple(
         interface.get("latest_sealed_french", {}).get(field)
         for field in ("manifest", "manifest_bytes", "manifest_sha256")):
     ERRORS.append("edition interface latest French manifest mismatch")
+expected_diagram_closure = {
+    "control": "D38.json",
+    "control_bytes": 14072,
+    "control_sha256":
+        "85457FA2DA4799DA1D86CBE3BB96050EDD31C8F71CC15053E33649D7F50DFA32",
+    "inventory": "DIA38.json",
+    "inventory_bytes": 114926,
+    "inventory_sha256":
+        "72CEEEF2435A785F1034E03860C2AB69EB089FEBF4990F0CAF9397C86A29619C",
+    "pre_cleanup_receipt": "Q37BU.json",
+    "pre_cleanup_receipt_bytes": 12737,
+    "pre_cleanup_receipt_sha256":
+        "1AF4F42283792825FE814E2ABA2CB4129F36B72D49A974351AFF4931F6D7670F",
+    "post_cleanup_receipt": "Q37BV.json",
+    "post_cleanup_receipt_bytes": 5585,
+    "post_cleanup_receipt_sha256":
+        "C5D2FDEF6BDE7235CC3B78AEA1DA81BC70D019078E4F2202A06A064EDDF36707",
+    "temporary_workspace": "C:/tmp/EGA-d38",
+    "temporary_workspace_state": "absent",
+    "replay_passes": 2,
+    "verified_rows_each": 201,
+    "state_fingerprint_sha256":
+        "9962DA981F1D81B207802E13000CA1509252DDB8CF51CC3B5C1B7A7E4F4F7C4E",
+}
+interface_diagram_closure = interface.get(
+    "latest_sealed_french", {}).get("retrospective_diagram_closure")
+scope_diagram_closure = scope.get("inputs", {}).get(
+    "french_authority", {}).get("retrospective_diagram_closure")
+if interface_diagram_closure != expected_diagram_closure:
+    ERRORS.append("latest French diagram-closure interface mismatch")
+if scope_diagram_closure != expected_diagram_closure:
+    ERRORS.append("latest French diagram-closure scope mismatch")
+if interface_diagram_closure != scope_diagram_closure:
+    ERRORS.append("French diagram-closure interface/scope mismatch")
 if interface.get("public_checkpoint") != "https://zenodo.org/records/21861666":
     ERRORS.append("public EGA checkpoint is stale")
 expected_readers = {
-    "french": ("B37AB.json",
-               "248A9B8D320DA982A82DA0EE943A2ED66DE9F8369E5D835C98FF915DCDD4E137",
-               2004713,
-               "D8C3A97F63AEADA81D70C32883DD2D0CF06A3395A53F46FCDAAE91B8FC56AF61",
+    "french": ("B37AC.json",
+               "F6B9E17F3FFD2822CEC50411672CC824ACCB08F07FCD6451A2A377234AC83DAA",
+               2004725,
+               "16789110240CD4ED7255D4E5802E65D1E87CD8BD416DBCE9A9EA32AD8065842F",
                168),
-    "english": ("B232.json",
-                "A55E63B94A391DE79F07E25F48F09D3683119E97431794FFDA4456E9032EDFAC",
-                14589696,
-                "837AAF0D03C9E7BA8E477D5E07D7A424E722CF46035404E0DEECA54D5A9ABD42",
-                1345),
+    "english": ("B233.json",
+                "1B2E84AF785461C705100E74A56A76CAE04B3747F7DBE199D56B5212FC6D1AA0",
+                14590635,
+                "C06C6F10634ABDE5BDC6DC652F4D12725800397BE42D503D9ACC96E992B5C0C6",
+                1346),
 }
 for language, expected in expected_readers.items():
     reader = interface.get("sealed_readers", {}).get(language, {})
@@ -1843,8 +1877,15 @@ if agent_path.exists():
         if row["model"] not in {
                 "gpt-5.3-codex-spark", "inherited-parent"}:
             ERRORS.append(f"invalid agent model {row['run_id']}")
-        if row["thinking"] not in {"xhigh", "inherited"}:
+        if row["thinking"] not in {
+                "low", "medium", "high", "xhigh", "inherited"}:
             ERRORS.append(f"invalid agent effort {row['run_id']}")
+        if (row["model"] == "gpt-5.3-codex-spark" and
+                row["thinking"] == "inherited"):
+            ERRORS.append(f"unexposed Spark effort {row['run_id']}")
+        if (row["model"] == "inherited-parent" and
+                row["thinking"] != "inherited"):
+            ERRORS.append(f"exposed inherited-agent effort {row['run_id']}")
         for field in (
                 "scope", "returned", "owner_check", "disposition"):
             if not row[field].strip():

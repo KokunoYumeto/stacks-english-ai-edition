@@ -1750,3 +1750,96 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   byte-for-byte. A000174 independently
   replayed every layer and current F37ZH, B37AB, and B232 interface identity;
   historical V and J rows remain bound to their immutable B37AA/B231 parents.
+
+### EGA I 5.3.1--5.3.4 diagonal identities
+
+- Direct authority is the 50,232-byte F33-bound `ega1-5-fr.tex` at SHA-256
+  `4610C5F9E732D99948AA809ED64C85D236423990C2750A06F0DC7A805D317701`.
+  F33 is 14,944 bytes at SHA-256
+  `2652207F96F697935BC81C5D63B292DE4D956905D69CB92572225E320BB27F4C`;
+  R55 is 12,290 bytes at SHA-256
+  `C97366E68C0A41EF8D55E74D17F01A661A274F7850BB9EE24C897D1F67996C7A`.
+  Direct-French lines 372--425 are 2,004 UTF-8/LF bytes at SHA-256
+  `FAAB19CF315D64E2F48C3872648C1447FBB72CBFAF1DBFAF581320877F94390F`.
+  Ten frozen statement, subitem, proof, and compatibility-anchor units all
+  lie on I:132. The scope contains three ordinary displays, no diagram, and no
+  intricate standalone mathematics block, so it adds no V receipt.
+- D000210--D000213 admit S000789--S000803 and R000520--R000537. Unlabelled
+  01KH prose supplies the exact diagonal and projection identities. Tags 001S,
+  001V, and 002L provide their categorical derivation; proof-level 02X0 gives
+  the product identity for algebraic spaces; proofs under 01KU and 04YR give
+  stronger base-change forms; and 0038 plus 001Y reuse the D000102 pullback-
+  product bundle. All official labels and tags are bound to pinned commit
+  `a04446e57ec1fbc252a871afcec7752fb2807b14`.
+- The new untagged `schemes-lemma-diagonal-identities` packages exactly three
+  reusable scheme statements: the pairing formula, the diagonal of a product,
+  and compatibility of the diagonal with arbitrary base change. Its proof is
+  the universal-property comparison of the relevant projections. It is
+  `LOCAL_WORKTREE`, receives no official tag, and makes no upstream-acceptance
+  claim.
+- R55 and stable evidence `EG-EGA-I-P132-FR-532-NUMBERING-001` preserve the
+  printed jump from 5.3.2 directly to 5.3.4. `ega:I.5.3.3` is only a
+  non-rendering English navigation anchor; D000212 and R000527 give it no
+  mathematical edge, issue, or source-correction referral. R000523 leaves the
+  source remark's forward claim through 5.3.8 open until those units are
+  reviewed. No bounded source or Stacks mathematical defect was found.
+- A000178--A000187 record ten visible, projectless, disposable Spark tasks.
+  Two schema canaries failed closed; three later tasks were rejected for an
+  underspecified nested path or incorrect tag-line results; the remaining
+  bounded hash, manifest, registry, and locator shards were independently
+  replayed and accepted. Every task was archived and its disappearance was
+  verified. The ledger retains the actual `low` effort, and the checker now
+  accepts exposed `low`, `medium`, `high`, or `xhigh` Spark effort while
+  rejecting inherited Spark effort and exposed effort on inherited agents.
+- A000188 independently closed the direct-French authority, page, unit,
+  formula, visual-classification, and collision surface. A000189 independently
+  closed the target, categorical-scope, local-gap, hypothesis, and numbering
+  audit. The materialized graph has 797 active of 803 physical statement
+  edges over 266 source units and 534 active of 537 physical residuals. There
+  are 787 official rows using 246 distinct tags, ten local rows, 35 exact full-
+  statement equivalences, seven open gaps, and ten local-pending residuals.
+- A000190 adversarially replayed every source part, official label and tag,
+  relation, residual, decision, and the local lemma and returned HARD PASS.
+  A000191 nevertheless rejected release because the live producer had advanced
+  from F37ZH/R247/B37AB/B232 to F37ZI/R248/B37AC/B233. A000192 then rejected
+  the first refreshed interface because D38 was absent and the alleged DIA38
+  was still the byte-identical DIA37 preimage with p.211 pending. Both failures
+  remain append-only evidence; neither was masked by the green local checker.
+- The owner added a distinct R248-to-R247 inverse before the existing layers:
+  at zero-based UTF-8 offset 133,729 of `ega1/ega1-10.tex`, exact postimage
+  `^` is restored to `_`, giving the sealed R247 file SHA-256
+  `06D95A924F724193D419A6CEA9FC590381D408A3B03D724177BCD61DD238D54A`.
+  R248 is a 58,687-byte manifest at SHA-256
+  `C771CF817202DF1B0BC47C02DBACE0CA8AF0D27608A4E69FB4B5B31A320F6135`;
+  its 127 files total 7,283,701 bytes with tree SHA-256
+  `DDBF5FF8FD0D3A74ED43A06B3F9011855540BBD9D3F029256822CB68E872EE49`.
+  The reconstruction now applies 30 operations across 12 paths and separately
+  gates the exact R247, R243, and R219 trees.
+- The producer subsequently sealed D38 (14,072 bytes, SHA-256
+  `85457FA2DA4799DA1D86CBE3BB96050EDD31C8F71CC15053E33649D7F50DFA32`)
+  and a true DIA38 successor (114,926 bytes, SHA-256
+  `72CEEEF2435A785F1034E03860C2AB69EB089FEBF4990F0CAF9397C86A29619C`).
+  They bind F37ZI, R248, B37AC, and B233, close the p.211 diagram, and record
+  39 verified / 45 pending items. The current standalone reader identities are
+  French 2,004,725 bytes / 168 pages / SHA-256
+  `16789110240CD4ED7255D4E5802E65D1E87CD8BD416DBCE9A9EA32AD8065842F`
+  and English 14,590,635 bytes / 1,346 pages / SHA-256
+  `C06C6F10634ABDE5BDC6DC652F4D12725800397BE42D503D9ACC96E992B5C0C6`.
+- Two fresh serial R248-to-R184 reconstructions and intakes each returned PASS
+  and reproduced tracked `files.csv`, `units.csv`, and `intake.json` byte-for-
+  byte. The checkpoint remained fail-closed until the producer sealed the D38
+  temporary-workspace receipts. Q37BU is 12,737 bytes at SHA-256
+  `1AF4F42283792825FE814E2ABA2CB4129F36B72D49A974351AFF4931F6D7670F`;
+  final Q37BV is 5,585 bytes at SHA-256
+  `C5D2FDEF6BDE7235CC3B78AEA1DA81BC70D019078E4F2202A06A064EDDF36707`.
+  Q37BV binds F37ZI/R248/B37AC/B233/D38/DIA38/Q37BU, records two zero-error
+  201-row post-cleanup replays at state fingerprint
+  `9962DA981F1D81B207802E13000CA1509252DDB8CF51CC3B5C1B7A7E4F4F7C4E`,
+  and verifies that `C:/tmp/EGA-d38` is absent without touching permanent
+  accepted or rejected evidence. The external interface-drift gate is closed.
+- A000193 then reran the repaired whole checkpoint from the current sealed
+  surfaces and returned HARD PASS: exact append-only prefixes, the unique local
+  label, all nine official joins, a fresh isolated Schemes build, Python and
+  scaffold validators, tag and privacy gates, both serial R248-to-R184 replays,
+  and fork readiness all passed. A000191 and A000192 remain preserved as the
+  two historical fail-closed release findings that caused the repairs.

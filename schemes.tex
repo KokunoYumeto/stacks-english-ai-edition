@@ -4048,6 +4048,43 @@ $\text{pr}_2 \circ \Delta_{X/S} = \text{id}_X$ (it exists in
 any category with fibre products).
 
 \begin{lemma}
+\label{lemma-diagonal-identities}
+\begin{reference}
+\cite[(5.3.1), Proposition 5.3.2, and Corollary 5.3.4]{EGA1}
+\end{reference}
+Let $X$, $Y$, and $T$ be schemes over $S$.
+\begin{enumerate}
+\item If $f : T \to X$ and $g : T \to Y$ are morphisms over $S$, then
+$$
+(f, g) = (f \times_S g) \circ \Delta_{T/S}.
+$$
+\item Via the canonical isomorphism
+$$
+(X \times_S Y) \times_S (X \times_S Y) \cong
+(X \times_S X) \times_S (Y \times_S Y),
+$$
+we have
+$$
+\Delta_{X \times_S Y/S} = \Delta_{X/S} \times_S \Delta_{Y/S}.
+$$
+\item If $S' \to S$ is a morphism, then the base change of
+$\Delta_{X/S}$ to $S'$ is $\Delta_{X_{S'}/S'}$ via the canonical
+isomorphism
+$$
+(X \times_S X)_{S'} \cong X_{S'} \times_{S'} X_{S'}.
+$$
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+All three assertions follow from the universal property of fibre products.
+For (1), the two composites with the projections to $X$ and $Y$ are $f$ and
+$g$. For (2), the four composites with the projections to $X$, $X$, $Y$,
+and $Y$ agree. For (3), both composites with the projections to $X_{S'}$
+are the identity.
+\end{proof}
+
+\begin{lemma}
 \label{lemma-diagonal-affines-closed}
 The diagonal morphism of a morphism between affines is closed.
 \end{lemma}
