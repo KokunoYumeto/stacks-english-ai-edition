@@ -21,16 +21,18 @@ or published here.
   `5C64ECD32FD7C5458D2599D70ED667D2CF06D95517EFFA9C6D6DCEF7626913A0`;
   127 files, 7,283,321 bytes, tree SHA-256
   `3BFB1C5103093481246EF4A6365E08544F6D5E19ACC0EA63E717F3F3643F064D`.
-- Latest sealed standalone-English comparison source: R243, 35,095-byte
+- Latest sealed standalone-English comparison source: R247, 53,306-byte
   manifest at SHA-256
-  `E8A3C98FA2A8950B74F89A778AB695E7CDFF9AD08966EA0BB9A28A462B46826E`;
+  `9A3652BA4E9A762DB0F9EA89A2B84FE26CE0DAD0BC97D3B9B3F7343C17CE4DB5`;
   127 files, 7,283,701 bytes, tree SHA-256
-  `EB6A5465B872682311DD0DA7E6B633071A220C7FB957FCFB601795D5CBA1E39C`.
-  It preserves the exact source tree while correcting R220 operation-span
-  metadata and the formerly stale top-level comparison descriptors.
+  `F152BFBC3AC3102DCE41975C27EEB373D01770F325639DF9AD01EFB6AD4F36D8`.
+  Its sole source change beyond R243 corrects one diagram-label side in
+  `ega1/ega1-10.tex`; the exact inverse is separately tree-gated before all
+  earlier reconstruction layers.
 - French authority: production is active; the latest sealed interface marker
-  is F37ZD through EGA II printed p.37; printed p.38 remains quarantined. This graph still
-  binds every reviewed EGA I claim to its exact historical page receipt;
+  is F37ZH through EGA II printed p.37, with retrospective EGA I diagram
+  closures through printed p.206; printed p.38 remains quarantined. This
+  graph still binds every reviewed EGA I claim to its exact historical page receipt;
   receipt F33 also repairs 4.1.9 from `g'` to the directly verified printed
   `g` without changing the already-correct English.
 - Existing incremental pre-Stacks notes: 399,689 bytes, SHA-256
@@ -265,8 +267,9 @@ append-only.
 - `intake.py`: deterministic manifest verification and metadata-only unit
   extraction; it does not copy source prose.
 - `r184.py`: exact no-overwrite reconstruction of the frozen R184 discovery
-  tree from sealed R243 through 28 hash-guarded inverse operations across 12
-  files, with an exact R219 intermediate gate; it never mutates edition source.
+  tree from sealed R247 through 29 hash-guarded inverse operations across 12
+  files, with exact R243 and R219 intermediate gates; it never mutates edition
+  source.
 - `files.csv`, `units.csv`, and `intake.json`: generated exact-file inventory,
   stable unit registry, and fail-closed intake receipt.
 - `pages.csv`: append-only direct-authority page evidence for frozen discovery
@@ -303,15 +306,44 @@ append-only.
   direct-authority crops for source-error evidence; these are not edition
   outputs or three-surface visual certifications.
 
-### Current reviewed frontier: EGA I 5.1.1--5.1.10
+### Current reviewed frontier: EGA I 5.2.1--5.2.4
 
-The complete opening reduction subsection is now admitted from F33 and direct
+The four opening results on reduced locally closed subspaces, maps from
+reduced schemes, reduced closures of immersions, and comparison of defining
+ideals are now admitted from exact F33 authority and direct printed
+pp.131--132. S000768--S000788 add 21 strictly typed edges and
+R000499--R000519 add 21 target-specific residuals. The active graph now has
+782 edges across 259 source units and 516 residuals; physical append-only
+history has 788 edge rows and 519 residual rows. Of the active edges 775
+resolve to 243 distinct official tags and seven remain explicit local
+untagged integrations. There are 32 exact full-statement equivalences and six
+open labelled-coverage gaps.
+
+The unique reduced structure on a locally closed subset splits across 0F2L
+and 01J3, with 00E0 and 01J2 absorbing the affine proof. Maps from a reduced
+scheme factor through a closed subscheme by the stronger exact criterion
+0356, with 01JU, proof-level 01S1, 00E0, 01J1, and 001V accounting for the
+historical pullback proof. Tag 03DQ exactly matches the reduced closure of an
+immersion. The ideal-containment result is composite-covered by 0356, 01JU,
+01QP, and 01HP, reusing the already-reviewed 4.4.6 bundle. Counterexamples
+keep locally-closedness, reducedness, and the image-ideal convention explicit;
+no source defect, Stacks defect, genuine labelled gap, or new local TeX was
+found.
+
+L000029 changes only `ega:I.5.2.3:proof` from I:131 to I:132 under exact R55
+evidence while preserving all 9,585 stable unit IDs. The slice contains no
+diagram, display, equation, or intricate standalone mathematics block, so it
+adds no V item. Two historical context-image paths declared by R54/R55 are no
+longer live, but the exact authority PDF and page controls remain available;
+this is provenance attrition rather than a source or mapping defect.
+
+The preceding complete reduction subsection was admitted from F33 and direct
 printed pp.127--131. The bounded 5.1.5--5.1.10 source span is direct-French
 lines 101--304: 9,279 UTF-8/LF bytes with SHA-256
 `39A8328C323D5140A47D12437CC78B672CE63931B0AB0A77914C7CE4369804EA`.
 S000715--S000767 add 53 strictly typed edges and R000469--R000498 add 30
-target-specific residuals. The active graph now has 761 edges across 251
-source units and 495 residuals; physical append-only history has 767 edge
+target-specific residuals. At that checkpoint the active graph had 761 edges
+across 251 source units and 495 residuals; physical append-only history had 767 edge
 rows and 498 residual rows. Of the active edges 754 resolve to 241 distinct
 official tags and seven remain explicit local untagged integrations. There
 are 31 exact full-statement equivalences and six open labelled-coverage gaps.
@@ -355,13 +387,13 @@ crops; corpus-wide I000049 remains open for the rest of the discovery corpus.
 The validator now fails closed on malformed IDs, wrong parent geometry,
 inactive or mismatched evidence decisions, cross-finding token splicing,
 ledger-prefix mutation, directory nesting, symlinks, and unmanifested crops.
-The R243-to-R184 reconstruction likewise rereads the complete sealed live
+The current R247-to-R184 reconstruction likewise rereads the complete sealed live
 tree immediately before atomic promotion, closing the reproduced concurrent-
 producer race. Independent mathematical and governance inverse audits both
 returned HARD PASS after the repairs while preserving their earlier failures.
 
-The immediate work continues at direct-French EGA I 5.2.1. The latest sealed
-French interface marker is F37ZD through EGA II printed p.37, while every
+The immediate work continues at direct-French EGA I 5.3.1. The latest sealed
+French interface marker is F37ZH through EGA II printed p.37, while every
 reviewed EGA I claim remains bound to its own historical receipt. Discovery
 unit I.3.2.9 remains in a separate authority-pending queue for its cited EGA II
 erratum witness. The complete English surface drives provisional candidates

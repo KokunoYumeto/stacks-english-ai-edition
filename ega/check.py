@@ -301,8 +301,8 @@ expected_governance_prefixes = {
             "3270DB7B13E8DA407937F0D1CEB3086C921D6E644BBC8A45DBEDB29FD08A53EF"},
     "rejected_visual_qa": {"rows": 9, "bytes": 2964, "sha256":
             "E19DC3E254373A9647BDF534234C59C6C30A4E634E42C509AAE6C00784018DC0"},
-    "pages": {"rows": 28, "bytes": 8993, "sha256":
-              "DBF0811447E1BB43EB665DFED9455D0B9019BC76E1B232D7151F4F10C4085699"},
+    "pages": {"rows": 29, "bytes": 9362, "sha256":
+              "46EF3EAEDDD98DF1FBABD4BD323C1D45FDF0431FE86E608AE7469A310FFA4E08"},
     "source_error_qa": {"rows": 6, "bytes": 1985, "sha256":
                         "DA7DA9AA605BA3E01B6CB21CAA0FDDAB4D33E6B4A464B629349B0D9FF9AAE05E"},
     "decisions": {"rows": 203, "bytes": 49604, "sha256":
@@ -328,31 +328,42 @@ if tuple(
         interface.get("english_discovery", {}).get(field)
         for field in ("latest_manifest", "latest_manifest_bytes",
                       "latest_manifest_sha256")) != (
-        "R243.json", 35095,
-        "E8A3C98FA2A8950B74F89A778AB695E7CDFF9AD08966EA0BB9A28A462B46826E",
+        "R247.json", 53306,
+        "9A3652BA4E9A762DB0F9EA89A2B84FE26CE0DAD0BC97D3B9B3F7343C17CE4DB5",
 ):
-    ERRORS.append("latest English interface is not sealed R243")
+    ERRORS.append("latest English interface is not sealed R247")
 if tuple(
         interface.get("latest_sealed_french", {}).get(field)
         for field in ("manifest", "manifest_bytes", "manifest_sha256")) != (
-        "F37ZD.json", 12616,
-        "497D899A6BFF6CFBA0FF63B02B071CDCCA59A309B67E6E5EC24266C3E24C6B69",
+        "F37ZH.json", 32680,
+        "F25B7E8EB8FDBE720CA039CA04AA0D249378B254E053008416209DB813CEA1E4",
 ):
-    ERRORS.append("latest French interface is not sealed F37ZD")
+    ERRORS.append("latest French interface is not sealed F37ZH")
+if tuple(
+        scope.get("inputs", {}).get("french_authority", {}).get(field)
+        for field in ("latest_sealed_manifest", "latest_sealed_manifest_bytes",
+                      "latest_sealed_manifest_sha256")) != tuple(
+        interface.get("latest_sealed_french", {}).get(field)
+        for field in ("manifest", "manifest_bytes", "manifest_sha256")):
+    ERRORS.append("edition interface latest French manifest mismatch")
 if interface.get("public_checkpoint") != "https://zenodo.org/records/21861666":
     ERRORS.append("public EGA checkpoint is stale")
 expected_readers = {
-    "french": ("B37AA.json", 2004716,
-               "EB1ED1685484938ACAB6361D738A27D4F9B009AD4A26D4D31B0082EDE699FD08",
+    "french": ("B37AB.json",
+               "248A9B8D320DA982A82DA0EE943A2ED66DE9F8369E5D835C98FF915DCDD4E137",
+               2004713,
+               "D8C3A97F63AEADA81D70C32883DD2D0CF06A3395A53F46FCDAAE91B8FC56AF61",
                168),
-    "english": ("B231.json", 14589672,
-                "51D67907A26151D685B0A496A7B02F43DBC3FFC731D4AA4854F5F4BEBA0ECD88",
+    "english": ("B232.json",
+                "A55E63B94A391DE79F07E25F48F09D3683119E97431794FFDA4456E9032EDFAC",
+                14589696,
+                "837AAF0D03C9E7BA8E477D5E07D7A424E722CF46035404E0DEECA54D5A9ABD42",
                 1345),
 }
 for language, expected in expected_readers.items():
     reader = interface.get("sealed_readers", {}).get(language, {})
-    if (reader.get("receipt"), reader.get("bytes"), reader.get("sha256"),
-            reader.get("pages")) != expected:
+    if (reader.get("receipt"), reader.get("receipt_sha256"),
+            reader.get("bytes"), reader.get("sha256"), reader.get("pages")) != expected:
         ERRORS.append(f"sealed {language} reader interface mismatch")
 if interface.get("french_cursor", {}).get("page_gate_sha256") != scope["inputs"]["french_authority"]["page_gate_sha256"]:
     ERRORS.append("edition interface French page-gate mismatch")
@@ -568,6 +579,7 @@ if (ROOT / "units.csv").exists() and (ROOT / "files.csv").exists():
         "ega:I.5.1.1": "I:127",
         "ega:I.5.1.1:proof": "I:128",
         "ega:I.5.1.9": "I:130",
+        "ega:I.5.2.3:proof": "I:132",
     }
     for unit_id, expected_page in page_regressions.items():
         row = units_by_id.get(unit_id)
@@ -595,9 +607,9 @@ if (ROOT / "units.csv").exists() and (ROOT / "files.csv").exists():
         else:
             all_page_rows = rows("pages.csv")
         require_lf_prefix(
-            raw_pages, 29, 8993,
-            "DBF0811447E1BB43EB665DFED9455D0B9019BC76E1B232D7151F4F10C4085699",
-            "L000001-L000028")
+            raw_pages, 30, 9362,
+            "46EF3EAEDDD98DF1FBABD4BD323C1D45FDF0431FE86E608AE7469A310FFA4E08",
+            "L000001-L000029")
         page_ids = [row["locator_id"] for row in all_page_rows]
         contiguous_ids(all_page_rows, "locator_id", "L", "pages.csv")
         active_page_rows, superseded_page_rows = active_rows(
@@ -634,6 +646,10 @@ if (ROOT / "units.csv").exists() and (ROOT / "files.csv").exists():
                 "EGA1_CHAPTER1_P130_VALIDATION_R53.json",
                 "BDD7227EE137F2B61A57438AB84D3B564131AD214C9A1F8AFD918CE7A2472F8F",
             ): "I:130",
+            (
+                "EGA1_CHAPTER1_P132_VALIDATION_R55.json",
+                "C97366E68C0A41EF8D55E74D17F01A661A274F7850BB9EE24C897D1F67996C7A",
+            ): "I:132",
         }
         page_decision_contracts = {
             "D000121": (
@@ -649,12 +665,16 @@ if (ROOT / "units.csv").exists() and (ROOT / "files.csv").exists():
             "D000190": (
                 "ega:I.5.1.9", "admit_exact_printed_page_130_locator",
                 "R53 and EG-EGA-I-P130-FR-ADMISSION-001"),
+            "D000205": (
+                "ega:I.5.2.3:proof", "admit_exact_printed_page_132_locator",
+                "R55 and EG-EGA-I-P132-FR-523-PROOF-001"),
         }
         page_expected_decision_ids = {
             **{f"L{number:06d}": "D000121" for number in range(1, 19)},
             **{f"L{number:06d}": "D000142" for number in range(19, 24)},
             **{f"L{number:06d}": "D000181" for number in range(24, 28)},
             "L000028": "D000190",
+            "L000029": "D000205",
         }
         for row in all_page_rows:
             if None in row:

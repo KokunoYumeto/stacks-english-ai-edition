@@ -1681,3 +1681,72 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   no private paths or secrets, and no remaining release blocker. This audit
   does not substitute for the owner's visual comparison recorded by V000016
   through V000020.
+
+### EGA I 5.2.1--5.2.4 reduced locally closed subspaces and closures
+
+- Direct authority remains the 50,232-byte F33-bound `ega1-5-fr.tex` at
+  SHA-256
+  `4610C5F9E732D99948AA809ED64C85D236423990C2750A06F0DC7A805D317701`.
+  Exact page controls are R54 for I:131 (11,936 bytes SHA-256
+  `4B51F8C9B847D1D4A3C8C759CAEE6E09DD1F5EA00D5291E9623A44AF69990AA4`)
+  and R55 for I:132 (12,290 bytes SHA-256
+  `C97366E68C0A41EF8D55E74D17F01A661A274F7850BB9EE24C897D1F67996C7A`).
+  Nine frozen units cover 5.2.1--5.2.4 and their proofs. The slice contains no
+  diagram, display, equation, or intricate standalone block. Two context-image
+  paths named by the historical controls are no longer live, but the exact
+  authority PDF and page receipts remain available; this is recorded as QA
+  derivative attrition rather than a source defect.
+- D000205 and L000029 correct only `ega:I.5.2.3:proof` from I:131 to I:132
+  under F33, R55, and evidence `EG-EGA-I-P132-FR-523-PROOF-001`. Both
+  deterministic intakes preserve all 9,585 IDs and change no unit field except
+  that one `printed_page` value.
+- D000206--D000209 admit S000768--S000788 and R000499--R000519. The 21 new
+  statement edges all resolve to existing official labels; the 21 residuals
+  retain every stronger, derived, proof-level, terminology, and counterexample
+  boundary. The active graph is 782 of 788 physical rows over 259 source units
+  with six superseded; 775 edges resolve to 243 distinct official tags and
+  seven remain explicit local integrations. Residual history is 516 of 519
+  active rows with three superseded, six open gaps, and seven local-pending
+  rows. R000517--R000519 bind the distinct extra strength of 01J3, 01QP, and
+  01HP rather than allowing nearby 0356 or composite residuals to mask those
+  targets.
+- The 5.2.1 statement splits exactly across 0F2L and 01J3; 00E0 and 01J2
+  absorb its affine construction. The stronger 0356 criterion covers 5.2.2,
+  with 01JU, proof-level 01S1, 00E0, 01J1, and 001V accounting for its proof.
+  Tag 03DQ exactly matches 5.2.3. The 5.2.4 ideal inclusion is composite-
+  covered by 0356, 01JU, 01QP, and 01HP and reuses the D000172 bundle. No
+  genuine labelled gap, source defect, Stacks defect, or new local TeX was
+  found.
+- A000171 checked authority, page seams, unit inventory, visual classification,
+  and collision surface. A000172 and A000173 independently checked the exact
+  pinned labels, tags, relations, proof dependencies, and essential
+  locally-closedness, reducedness, and image-ideal counterexamples before the
+  rows were materialized.
+- A000175 then rejected the first materialization because the distinct extra
+  strength of 01J3, 01QP, and 01HP was masked by neighbouring 0356 or derived
+  residuals. The owner appended R000517--R000519 without rewriting any prior
+  row. A000176 replayed all 21 edges and 21 residuals and returned HARD PASS;
+  it also found no exact disagreement with the independent sealed zh-Hans EGA
+  I 1.1.14 baseline. A000177 refreshed the complete release audit after that
+  repair and returned HARD PASS.
+- During the release replay the standalone-English producer advanced from
+  R243 to sealed R247. R247 is a 53,306-byte manifest at SHA-256
+  `9A3652BA4E9A762DB0F9EA89A2B84FE26CE0DAD0BC97D3B9B3F7343C17CE4DB5`;
+  its 127 files total 7,283,701 bytes with tree SHA-256
+  `F152BFBC3AC3102DCE41975C27EEB373D01770F325639DF9AD01EFB6AD4F36D8`.
+  The sole source delta beyond R243 is `_` to `^` at byte 78,592 of
+  `ega1/ega1-10.tex` in the inverse direction. The 29-operation replay now
+  gates exact R243 and R219 trees before reconstructing R184 and rereads all
+  live sealed bytes immediately before promotion. The 17,617-byte `r184.py`
+  has SHA-256
+  `B4C2D79409012AEE4FAC0C933949D38A9BCB83C9E2A7F0D638645EEA3713527A`.
+  Two fresh serial no-overwrite reconstructions and intakes each reproduced
+  tracked `files.csv`
+  (`A1BB4950FE27D813FD79BCC4604607994D38E3F1E5A2C1D52EC21E01EC5C7E5F`),
+  `units.csv`
+  (`5C73182F07F749F03C0B0F92BBA0D37884873FFF096C93AE2E1A3CDB599EDA4C`),
+  and `intake.json`
+  (`6252CE94351C297E9BBBACA7527FD79688D0F3B2917A0B1F82F3D87D64130C7D`)
+  byte-for-byte. A000174 independently
+  replayed every layer and current F37ZH, B37AB, and B232 interface identity;
+  historical V and J rows remain bound to their immutable B37AA/B231 parents.

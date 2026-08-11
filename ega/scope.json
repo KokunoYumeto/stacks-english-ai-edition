@@ -20,24 +20,24 @@
       "files": 127,
       "bytes": 7283321,
       "tree_sha256": "3BFB1C5103093481246EF4A6365E08544F6D5E19ACC0EA63E717F3F3643F064D",
-      "latest_manifest": "R243.json",
-      "latest_manifest_bytes": 35095,
-      "latest_manifest_sha256": "E8A3C98FA2A8950B74F89A778AB695E7CDFF9AD08966EA0BB9A28A462B46826E",
+      "latest_manifest": "R247.json",
+      "latest_manifest_bytes": 53306,
+      "latest_manifest_sha256": "9A3652BA4E9A762DB0F9EA89A2B84FE26CE0DAD0BC97D3B9B3F7343C17CE4DB5",
       "discovery_units": 9585,
       "page_evidence": {
         "file": "pages.csv",
-        "bytes": 8993,
-        "sha256": "DBF0811447E1BB43EB665DFED9455D0B9019BC76E1B232D7151F4F10C4085699",
-        "active_rows": 28
+        "bytes": 9362,
+        "sha256": "46EF3EAEDDD98DF1FBABD4BD323C1D45FDF0431FE86E608AE7469A310FFA4E08",
+        "active_rows": 29
       },
       "role": "complete discovery text; not canonical authority"
     },
     "french_authority": {
       "status": "active page-by-page production; graph claims remain historical-receipt gated",
-      "snapshot": "latest sealed source manifest F37ZD reaches EGA II printed p.37; this EGA I review remains bound to exact F33 and page receipts",
-      "latest_sealed_manifest": "F37ZD.json",
-      "latest_sealed_manifest_bytes": 12616,
-      "latest_sealed_manifest_sha256": "497D899A6BFF6CFBA0FF63B02B071CDCCA59A309B67E6E5EC24266C3E24C6B69",
+      "snapshot": "latest sealed source manifest F37ZH reaches EGA II printed p.37 and retrospectively closes EGA I diagrams through printed p.206; this EGA I review remains bound to exact F33 and page receipts",
+      "latest_sealed_manifest": "F37ZH.json",
+      "latest_sealed_manifest_bytes": 32680,
+      "latest_sealed_manifest_sha256": "F25B7E8EB8FDBE720CA039CA04AA0D249378B254E053008416209DB813CEA1E4",
       "page_gate": "E2P33.json",
       "page_gate_sha256": "DE5FCAA73A0EB63BFAF050769642CADA52330EAB0C543C64E672D57ED870A13F",
       "role": "diplomatic textual authority; E2P33 is the historical interface gate while each reviewed EGA I slice carries its later exact receipts"
@@ -66,19 +66,19 @@
   },
   "statement_review_snapshot": {
     "file": "smap.csv",
-    "statement_edge_rows": 761,
-    "file_rows": 767,
+    "statement_edge_rows": 782,
+    "file_rows": 788,
     "superseded_rows": 6,
-    "source_units": 251,
-    "existing_official_tag_rows": 754,
-    "distinct_existing_official_tags": 241,
+    "source_units": 259,
+    "existing_official_tag_rows": 775,
+    "distinct_existing_official_tags": 243,
     "local_untagged_rows": 7,
-    "full_statement_equivalences": 31
+    "full_statement_equivalences": 32
   },
   "residual_snapshot": {
     "file": "resid.csv",
-    "rows": 495,
-    "file_rows": 498,
+    "rows": 516,
+    "file_rows": 519,
     "superseded_rows": 3,
     "open_gaps": 6,
     "integrated_local_pending_upstream": 7
@@ -114,7 +114,7 @@
   "governance_prefixes": {
     "vqa": {"rows": 20, "bytes": 19650, "sha256": "3270DB7B13E8DA407937F0D1CEB3086C921D6E644BBC8A45DBEDB29FD08A53EF"},
     "rejected_visual_qa": {"rows": 9, "bytes": 2964, "sha256": "E19DC3E254373A9647BDF534234C59C6C30A4E634E42C509AAE6C00784018DC0"},
-    "pages": {"rows": 28, "bytes": 8993, "sha256": "DBF0811447E1BB43EB665DFED9455D0B9019BC76E1B232D7151F4F10C4085699"},
+    "pages": {"rows": 29, "bytes": 9362, "sha256": "46EF3EAEDDD98DF1FBABD4BD323C1D45FDF0431FE86E608AE7469A310FFA4E08"},
     "source_error_qa": {"rows": 6, "bytes": 1985, "sha256": "DA7DA9AA605BA3E01B6CB21CAA0FDDAB4D33E6B4A464B629349B0D9FF9AAE05E"},
     "decisions": {"rows": 203, "bytes": 49604, "sha256": "7A4EE746D1168057E05E006D26C357BC43AC50A82AF098B13B49CBC78074AA30"},
     "issues": {"rows": 61, "bytes": 24019, "sha256": "BE14C470FDDA9D2B596D27E28F305671A0DD5A97E3FCD3F889DC226AA7A06C34"},

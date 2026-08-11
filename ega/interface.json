@@ -21,10 +21,10 @@
     "late_correction_ledger_sha256": "E78CA53480FC3F577786FCB643E63116A1DEC118EDB99C5629B52D6E5E9B411C"
   },
   "latest_sealed_french": {
-    "manifest": "F37ZD.json",
-    "manifest_bytes": 12616,
-    "manifest_sha256": "497D899A6BFF6CFBA0FF63B02B071CDCCA59A309B67E6E5EC24266C3E24C6B69",
-    "coverage": "EGA 0 and I plus EGA II through printed p.37, including the sealed EGA I printed-p.192 diagram correction",
+    "manifest": "F37ZH.json",
+    "manifest_bytes": 32680,
+    "manifest_sha256": "F25B7E8EB8FDBE720CA039CA04AA0D249378B254E053008416209DB813CEA1E4",
+    "coverage": "EGA 0 and I plus EGA II through printed p.37, including the sealed retrospective EGA I diagram closures through printed p.206",
     "next": "EGA II printed p.38 remains quarantined; graph claims continue to use their exact historical page receipts",
     "role": "comparison-only live interface marker; individual graph claims remain bound to their exact historical page receipts"
   },
@@ -62,16 +62,21 @@
     {
       "manifest": "F37ZD.json",
       "manifest_sha256": "497D899A6BFF6CFBA0FF63B02B071CDCCA59A309B67E6E5EC24266C3E24C6B69",
+      "role": "historical sealed French producer manifest through EGA II printed p.37"
+    },
+    {
+      "manifest": "F37ZH.json",
+      "manifest_sha256": "F25B7E8EB8FDBE720CA039CA04AA0D249378B254E053008416209DB813CEA1E4",
       "role": "latest sealed French producer manifest through EGA II printed p.37; comparison marker only for claims lacking their own earlier receipt"
     }
   ],
   "english_discovery": {
     "manifest": "R184.json",
     "manifest_sha256": "5C64ECD32FD7C5458D2599D70ED667D2CF06D95517EFFA9C6D6DCEF7626913A0",
-    "latest_manifest": "R243.json",
-    "latest_manifest_bytes": 35095,
-    "latest_manifest_sha256": "E8A3C98FA2A8950B74F89A778AB695E7CDFF9AD08966EA0BB9A28A462B46826E",
-    "role": "R184 remains the exact intake discovery surface; R243 is the latest sealed standalone-English successor and r184.py applies 28 byte-precise inverse operations across 12 paths without mutating it; R243 corrects the R220 byte-span metadata and formerly stale top-level comparison descriptors without changing source bytes"
+    "latest_manifest": "R247.json",
+    "latest_manifest_bytes": 53306,
+    "latest_manifest_sha256": "9A3652BA4E9A762DB0F9EA89A2B84FE26CE0DAD0BC97D3B9B3F7343C17CE4DB5",
+    "role": "R184 remains the exact intake discovery surface; R247 is the latest sealed standalone-English successor and r184.py applies 29 byte-precise inverse operations across 12 paths without mutating it; the distinct R247-to-R243 inverse is tree-gated before the existing R243-to-R219 and R219-to-R184 layers"
   },
   "semantic_notes": {
     "bytes": 399689,
@@ -80,19 +85,19 @@
   },
   "sealed_readers": {
     "french": {
-      "receipt": "B37AA.json",
-      "receipt_sha256": "41AC30E1ACBC461F1D436FD4AA6AA2DC9269C145F26AFD04F1ABE84C21EA3754",
+      "receipt": "B37AB.json",
+      "receipt_sha256": "248A9B8D320DA982A82DA0EE943A2ED66DE9F8369E5D835C98FF915DCDD4E137",
       "pdf": "EGA_FR.pdf",
-      "bytes": 2004716,
-      "sha256": "EB1ED1685484938ACAB6361D738A27D4F9B009AD4A26D4D31B0082EDE699FD08",
+      "bytes": 2004713,
+      "sha256": "D8C3A97F63AEADA81D70C32883DD2D0CF06A3395A53F46FCDAAE91B8FC56AF61",
       "pages": 168
     },
     "english": {
-      "receipt": "B231.json",
-      "receipt_sha256": "8682D6002DEE0D028939D6351503AFACAD90656EDC166EB53ABB02C4D243D156",
+      "receipt": "B232.json",
+      "receipt_sha256": "A55E63B94A391DE79F07E25F48F09D3683119E97431794FFDA4456E9032EDFAC",
       "pdf": "EGA_English_Global_0_IV.pdf",
-      "bytes": 14589672,
-      "sha256": "51D67907A26151D685B0A496A7B02F43DBC3FFC731D4AA4854F5F4BEBA0ECD88",
+      "bytes": 14589696,
+      "sha256": "837AAF0D03C9E7BA8E477D5E07D7A424E722CF46035404E0DEECA54D5A9ABD42",
       "pages": 1345
     }
   },
