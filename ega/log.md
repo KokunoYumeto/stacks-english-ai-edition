@@ -2168,3 +2168,45 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   personal inspection of pages 39--41 found the five-part diagonal lemma and
   its projection proof unclipped and legible, with no changed-line overfull
   box or duplicate-label warning.
+
+### EGA I 5.4.1--5.4.8 semantic checkpoint
+
+- Direct French lines 670--772 on printed pp.135--136 were replayed from the
+  canonical source. The LF-inclusive slice is 4,208 bytes / SHA-256
+  `AE4ED884CE3E0F16B9854CABCBA9D5F184B7AB2EBD8B2B33AC344E43EDAA07BE`.
+  Every new statement edge remains bound to the admitted semantic receipt
+  F33.json, 14,944 bytes / SHA-256
+  `2652207F96F697935BC81C5D63B292DE4D956905D69CB92572225E320BB27F4C`.
+- D000250--D000257, S000853--S000879, and R000617--R000634 admit the eight
+  numbered results and all six proof units without inventing a source unit,
+  official tag, issue, or local theorem. The final statement snapshot is 872
+  active / 879 physical / seven superseded rows across 307 source units, with
+  859 official-tag rows, 252 distinct tags, thirteen local-mirror rows, and
+  forty exact full-statement equivalences. The residual snapshot is 609 active
+  / 634 physical / 25 superseded, with six open gaps and thirteen local-mirror
+  rows.
+- Exact joins are 01KK for separatedness; 01KJ plus 01IQ for the topological
+  diagonal criterion; 01KR and 01KS for comparison and graph clauses; item
+  three of 07RK with 01QR/01QS for cancellation; 01KU, 07RK, and 001V for
+  closed pairings; and 01KT for sections. The generic-point theorem retains
+  the composite 01J5/01KM/004X/0356/001V route and explicitly rejects 01RH as
+  a direct match because a generic point need not be open.
+- The middle converse in 5.4.8 is typed with base Y, structural map p1 on
+  Y times_Z Y, j equal to id_Y, and g equal to Delta_Y_over_Z. The doubled
+  origin, dual-number base, and reducible base counterexamples keep
+  separatedness, reducedness, and irreducibility distinct. No mathematical or
+  source defect was found.
+- The slice contains no registered diagram, equation child, or selected
+  intricate standalone block. It adds no V/J/Q/page row and changes no TeX,
+  PDF, reader, producer source, or publication surface. A000218--A000224
+  record the schema, semantic, producer-frontier, adversarial, and
+  checker-hardening audits.
+- A fresh read-only producer replay found F38L/R276/B37AL/B241/D63/DIA63 and
+  Q37ED/Q37EE byte-coherent at their own payload level, but admission remains
+  closed. Every final inventory from DIA49R3 through DIA63 retains stale
+  top-level aggregate counts 53/31 while its actual and publication-gate
+  totals advance; DIA63 is actually 68/16. D59 onward also records character
+  indexes as UTF-8 byte offsets for the 5.5.12 repair: the declared French and
+  English offsets are 47,778 and 46,893 while the actual marker bytes are
+  48,651 and 46,901. The admitted Commons interface therefore remains D48 and
+  publication stays disabled.

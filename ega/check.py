@@ -422,7 +422,7 @@ scope_raw = (ROOT / "scope.json").read_bytes()
 scope = json.loads(scope_raw.decode("utf-8"))
 if (len(scope_raw) != 14952 or
         hashlib.sha256(scope_raw).hexdigest().upper() !=
-        "D11ABEB0276F79E656D6B93A84CE690C96A94BB0FDB4495FB4680B6B11078141"):
+        "83C24DBA15ADB93E24EC9735CC47F91E758DCAE86E86DD0523CD023812572944"):
     ERRORS.append("final scope manifest identity mismatch")
 if scope.get("status") != "discovery_scaffold":
     ERRORS.append("scope status must remain discovery_scaffold")
@@ -844,10 +844,40 @@ decision_raw = (ROOT / "dec.csv").read_bytes()
 decision_physical_lines = decision_raw.splitlines(keepends=True)
 issue_raw = (ROOT / "issues.csv").read_bytes()
 issue_physical_lines = issue_raw.splitlines(keepends=True)
+expected_decision_header = [
+    "decision_id", "subject_id", "action", "state", "evidence",
+    "supersedes", "rationale",
+]
+expected_issue_header = [
+    "issue_id", "subject_id", "kind", "status", "evidence", "control",
+    "supersedes", "notes",
+]
+if (not decision_physical_lines or
+        decision_physical_lines[0].decode("utf-8").rstrip("\n").split(",") !=
+        expected_decision_header):
+    ERRORS.append("unexpected dec.csv header")
+if (not issue_physical_lines or
+        issue_physical_lines[0].decode("utf-8").rstrip("\n").split(",") !=
+        expected_issue_header):
+    ERRORS.append("unexpected issues.csv header")
+contiguous_ids(decision_rows, "decision_id", "D", "dec.csv")
+contiguous_ids(issue_rows, "issue_id", "I", "issues.csv")
+for table_name, data, expected_header in (
+        ("dec.csv", decision_rows, expected_decision_header),
+        ("issues.csv", issue_rows, expected_issue_header)):
+    for row in data:
+        if None in row or any(row.get(field) is None for field in expected_header):
+            ERRORS.append(
+                f"malformed CSV field count in {table_name} row "
+                f"{row.get(expected_header[0])}")
 require_lf_prefix(
     decision_raw, 204, 49604,
     "7A4EE746D1168057E05E006D26C357BC43AC50A82AF098B13B49CBC78074AA30",
     "D000001-D000203")
+require_lf_prefix(
+    decision_raw, 250, 63402,
+    "E256E3CFFB3B35FBCA7C40CB0BF19959E79FEA5730F2B08FA6FC46284548DBA5",
+    "D000001-D000249")
 for decision_number, expected_bytes, expected_sha in (
         (220, 256,
          "299B6A30547B6CCB18A7855DCAF48134451EB0BB388D60A5F762439D22480E6F"),
@@ -880,18 +910,38 @@ for decision_number, expected_bytes, expected_sha in (
         (248, 344,
          "2F800599BDBF5D7849DC882512D6F0C76CD2A98260DA29AA53B69C47ADB62FF7"),
         (249, 382,
-         "CB13EE6DB819F95800F0F893E517328E6656ABCE01704ABE8C9A6D78DA66D668")):
+         "CB13EE6DB819F95800F0F893E517328E6656ABCE01704ABE8C9A6D78DA66D668"),
+        (250, 261,
+         "3C5579F208B63CBB5A4F8E5112752BA84E99DCCC7B3BB0DEFAFFC01497320623"),
+        (251, 228,
+         "8CAB50F98F1489A552C47B32CDAD26619667644D44274449096FCD7406007924"),
+        (252, 214,
+         "D35194D8CF2B4603CC9A748C693F1DB9811D33BEB32869BC234302028A253862"),
+        (253, 256,
+         "C8F8872E807C69915B3342BACD48A062712D17C98A85CDECD49D05A34834C536"),
+        (254, 228,
+         "C2D54CA3F4A3BEAE896D9F9FC3884DF2FE65AA3CD0C4FDD5C60B695C2EDD320B"),
+        (255, 247,
+         "09031CC9DA73D503B015714C8A9471AFB266465A103B54FAE190CE5700187410"),
+        (256, 241,
+         "FA643950B6E8CD7657E8D1CCBFA7DD2EF37D0A7B2DB0B5B1AF8CE94F41C48449"),
+        (257, 230,
+         "CEA9AE132C3BFBCDBB9CC29B911403456B6EE58FAF1EF77F98CAED1E6DA531DD")):
     require_raw_line(
         decision_physical_lines, decision_number, expected_bytes,
         expected_sha, f"D{decision_number:06d}")
-if (len(decision_raw) != 63402 or
+if (len(decision_raw) != 65307 or
         hashlib.sha256(decision_raw).hexdigest().upper() !=
-        "E256E3CFFB3B35FBCA7C40CB0BF19959E79FEA5730F2B08FA6FC46284548DBA5"):
+        "5255BCFB780A1C29B6284BC1192C229FA64C4AB3A7DD4E97D176A8C86EAC9CAE"):
     ERRORS.append("final decision manifest identity mismatch")
 require_lf_prefix(
     issue_raw, 62, 24019,
     "BE14C470FDDA9D2B596D27E28F305671A0DD5A97E3FCD3F889DC226AA7A06C34",
     "I000001-I000061")
+require_lf_prefix(
+    issue_raw, 88, 34596,
+    "2261AC794FBDFA2C040AE012E93616439C2ABE0203E0BE386CB192EC9E25E15C",
+    "I000001-I000087")
 for issue_number, expected_bytes, expected_sha in (
         (66, 409,
          "3D9344E032DF597EF9DCEA9E30718A34FFDC7E9F89819AE202BBF61B3DAA7970"),
@@ -1351,6 +1401,43 @@ for decision_id, expected in final_d48_decision_contracts.items():
         "subject_id", "action", "evidence", "supersedes")) if row else None
     if actual != expected or row.get("state") != "active":
         ERRORS.append(f"missing exact active final D48 decision {decision_id}")
+
+i54_decision_contracts = {
+    "D000250": (
+        "ega:I.5.4.1",
+        "map_separated_morphisms_and_closed_diagonal_criterion",
+        "01KK 01KJ 01IQ and direct French lines 673-685", ""),
+    "D000251": (
+        "ega:I.5.4.2",
+        "map_closed_comparison_over_a_separated_intermediate_base",
+        "01KR 01JU and direct French lines 687-698", ""),
+    "D000252": (
+        "ega:I.5.4.3", "map_closed_graphs_into_a_separated_target",
+        "01KS 01KR and direct French lines 700-708", ""),
+    "D000253": (
+        "ega:I.5.4.4",
+        "map_closed_immersion_cancellation_through_a_separated_morphism",
+        "07RK 01KS 01QR 01QS and direct French lines 710-718", ""),
+    "D000254": (
+        "ega:I.5.4.5", "map_closed_pairings_with_a_separated_factor",
+        "01KU 07RK 001V and direct French lines 721-730", ""),
+    "D000255": (
+        "ega:I.5.4.6",
+        "map_sections_of_separated_morphisms_as_closed_immersions",
+        "01KT 001V and direct French lines 732-740", ""),
+    "D000256": (
+        "ega:I.5.4.7", "map_generic_point_uniqueness_of_sections",
+        "01J5 01KM 004X 0356 001V and direct French lines 742-756", ""),
+    "D000257": (
+        "ega:I.5.4.8", "map_three_converse_separatedness_tests",
+        "001V 01KK and direct French lines 758-772", ""),
+}
+for decision_id, expected in i54_decision_contracts.items():
+    row = active_decision_by_id.get(decision_id)
+    actual = tuple(row.get(field) for field in (
+        "subject_id", "action", "evidence", "supersedes")) if row else None
+    if actual != expected or row.get("state") != "active":
+        ERRORS.append(f"missing exact active EGA I 5.4 decision {decision_id}")
 
 final_d48_issue_successors = {
     "I000079": ("I000077", "ega:I.5.1.5:diagram:xymatrix:1"),
@@ -3024,6 +3111,10 @@ if smap_path.exists():
             hashlib.sha256(legacy_smap).hexdigest().upper() !=
             "86DB212E45E51F7F7CB8613E4A205A9A07E68A82E173BBD2C5DD8167E350819C"):
         ERRORS.append("published S000001-S000335 prefix changed")
+    require_lf_prefix(
+        smap_raw, 853, 376131,
+        "FC54C4C53A8958F0B33363DB9D8F306D63BE54DD76A65CD42A67838C6B832232",
+        "S000001-S000852")
     expected_current_smap_rows = {
         837: (467,
               "9147254151F1921EA371062B8D3772164AD65E4A9F67FB251836FE5488B7D55E"),
@@ -3063,9 +3154,43 @@ if smap_path.exists():
         require_raw_line(
             smap_physical_lines, line_index, expected_bytes, expected_sha,
             f"S{line_index:06d}")
-    if (len(smap_raw) != 376131 or
+    expected_i54_smap_rows = {
+        853: (447, "E9009F3933AAA927D77623575B10CE7170F0196E286F3065A8AD5FC78CC0EC54"),
+        854: (494, "BB20B1F3DCD797E46B29FC0055787EDB211E70F3498B7862B03BF3B7F93BA53D"),
+        855: (382, "F59D2F0E603E7F237D6294BC20E8A2310DE37FA25E24A896C6BC883571925D79"),
+        856: (425, "138CC9C31CFE6A7BC33CE024692687E51498617DBBA07918484230F6935AC26A"),
+        857: (533, "8F9E709E41F50B950765BF1DDFEEE6E59A6F35B06714CE8D34CDE0EF8CDB1747"),
+        858: (442, "A31410AF68E21DA4B8CF5FDB6F0CE7206B6E7247C2F427490826AAC45671DE69"),
+        859: (409, "043EA006E24586DC7E69AE291F7C3E7AF795B4E142D75B0F5AF00265D6817C10"),
+        860: (515, "A956FDE3DFB1EC3E6FF43BEA95261BBF0A4BBBB01AD37C9F961B7F4B496FE347"),
+        861: (460, "83280104ACC69ABD548A7B8B5D3AF5F06613DECC7B63F4888CBF98765781DE73"),
+        862: (448, "91BCDC6F146425666A57B48577638C548A5127C04CB47A506095CBD9D9ADA27C"),
+        863: (432, "0C8415F1783BAB3F122AF27D8FE0D4CDF9A2F9F6D97B7E28477A902B72D9ABFF"),
+        864: (432, "ED7422A537EEEF838F9E446D3676752150FF674B42411C34F94B3E79D2EA8F96"),
+        865: (443, "5EAEFC812CC6A15A36E0D7E76460DD80F718FD2D5E13FF9E27DA028B4A1917AB"),
+        866: (479, "D4EBC5648C98BBA50B2A916CFF4BBF3605430E34721B63168623674932F64646"),
+        867: (404, "0B5DE6E410D8B8B6F6FD3151AA614D0114409781978120A18372223B4A989D44"),
+        868: (411, "EC02596A74C2804D2F331366E50BA5D44991B09ABD03597F9D104E081176E31D"),
+        869: (481, "8A33F4C837BDF1B8C72EB8C4DDFE0F6F7D507B78B95A1EF8AEAA21447A0A9DBE"),
+        870: (535, "DC5DF6920B211FBBF7EA3C06581E386C8D64CB95A6BE2BAED6DFD425DCE2D9A0"),
+        871: (471, "103EC86C1FF8C72D530C266C12F0E74849B4701E47C5044554B2B523D6027EE0"),
+        872: (479, "7C9FDEA70D7B4530E03CAE2B25882AB50B8471280727A27856D4364529DBA8BC"),
+        873: (507, "15EBBE9CD4498EBF6EBA23BDADA0CA43F6A9B071EB4FA1EFAF8B19F6575EF071"),
+        874: (415, "9B217751EEAEB9854AE68E79EB417965761BA09D7C9D7F49CBD05E6B3EFA4527"),
+        875: (549, "A1EC01004B0964BFAD166A25AA129FB353BB29C7D337256DB500D1FC008D5999"),
+        876: (438, "9462810800B0E534DBB57BDC612E0F4EB2282913532D83C1CBF2B65E063408B9"),
+        877: (448, "01D16BCAC2D7C62FE1C7F8465268BC7740A134258735C74C6ED50CFF7EAA39C7"),
+        878: (674, "34122CD0C87C2DC99DABACCE2143598E80AEB49BA9400862A98000B0D9F9FB2F"),
+        879: (471, "2A7A1C8EDC6BFFA4D2F61ABF2C2259AF3481E4FF686048CECB02D7B4B136DF73"),
+    }
+    for line_index, (expected_bytes, expected_sha) in (
+            expected_i54_smap_rows.items()):
+        require_raw_line(
+            smap_physical_lines, line_index, expected_bytes, expected_sha,
+            f"S{line_index:06d}")
+    if (len(smap_raw) != 388755 or
             hashlib.sha256(smap_raw).hexdigest().upper() !=
-            "FC54C4C53A8958F0B33363DB9D8F306D63BE54DD76A65CD42A67838C6B832232"):
+            "7AC558D68CD8ACCC64912427FE9357C169BB090AEA6A1BD36D4D3ED6384B957C"):
         ERRORS.append("final statement-map manifest identity mismatch")
     edge_ids = [row["edge_id"] for row in all_statement_edges]
     if len(edge_ids) != len(set(edge_ids)):
@@ -3281,6 +3406,10 @@ if residual_path.exists():
             hashlib.sha256(legacy_residuals).hexdigest().upper() !=
             "704D957786F45FE1F280C3303C59883DC50AAC9809CD2071FBB8C20369147303"):
         ERRORS.append("published R000001-R000171 prefix changed")
+    require_lf_prefix(
+        residual_raw, 617, 175658,
+        "08EC43AAD750DEBD3CB74D6780BD350EC660C0F010FB37B40B41B7F342C98273",
+        "R000001-R000616")
     expected_current_residual_rows = {
         589: (285,
               "10AC66C5AEA503803AC29C89DA559D6123B9771D80DB6DCCB3600FD58EE52702"),
@@ -3338,9 +3467,34 @@ if residual_path.exists():
         require_raw_line(
             residual_physical_lines, line_index, expected_bytes, expected_sha,
             f"R{line_index:06d}")
-    if (len(residual_raw) != 175658 or
+    expected_i54_residual_rows = {
+        617: (315, "C1BF6D172F1380F0A949551A3EF80411D356216B182834B34CBCDFEA718CAFF5"),
+        618: (311, "55DF16A8930DA10B4DC5F9BE98A425B926D35936DE9B59C1BB99B5F9371E06AE"),
+        619: (293, "15F8EDC87EB55A3D681754B536E89316411402A2C926000E27AE40244A703CEB"),
+        620: (304, "4E5E9AE4A66853ABC56C7D8B6648C5F9183F1D0E4B80A26B5DC35268655217FA"),
+        621: (243, "B778B24074501720C0257847CB29D9ACFFD2349D9C658C6241C5E33593DFA42D"),
+        622: (250, "51C9C45701EA16B04429D1EC0D5BA992A3C228756247BB0FEC0B8EEED0446B54"),
+        623: (363, "D23403ACEFE8EA8B33612DE780896456ADACB04F51BD39FDED7691EC898A3BCC"),
+        624: (270, "B1810B3BA9DE9626D7A84B97F39F59F63F5563A08653E2D72F11D4D5A6C77B32"),
+        625: (242, "C6E17EE53965B9DEC4834CAA0945AEC5DE7BECDE2DBF09A0179CB3A63CDBBC67"),
+        626: (280, "3B8FCA1A27102B2D431B20DAC95AC642C4A75286D1EB59A4F5EC24E8CDB0B5DD"),
+        627: (293, "92412F5D54485C2A085C0330E86427AC5B32DB8D28BC0DDC2F458D65C6B67FDC"),
+        628: (282, "CCDE1DA3FFA85D328E4280146167A01A5CDB5FAEF2D4830798953087BC6B1B40"),
+        629: (315, "46F09F3F388BFF481C4C57C38BA6CA3FAB3169B25A93E2B965C8FD06BFC04FF2"),
+        630: (292, "06BEF982403C0BA8C76666FA05A9C2A4E628262F8F10AE0B6DD5F15B73B00A06"),
+        631: (293, "890951748C63EB0B9D0DFE87BB59D75890608BE28B628E56A40E6E0F801FF0B9"),
+        632: (302, "561A747FE317062B613BF07EB3D7D7E203900408172E1A544BBD0113643FE3A2"),
+        633: (635, "266F3A567000AB071D78CA264EB85DF66DAC0FD59ADD50856E716E4F072ACF88"),
+        634: (538, "723FE1C0A1FC00A8F263D2BED4FA6899FC2682641A5461A2C7A7DFB4313B681F"),
+    }
+    for line_index, (expected_bytes, expected_sha) in (
+            expected_i54_residual_rows.items()):
+        require_raw_line(
+            residual_physical_lines, line_index, expected_bytes, expected_sha,
+            f"R{line_index:06d}")
+    if (len(residual_raw) != 181479 or
             hashlib.sha256(residual_raw).hexdigest().upper() !=
-            "08EC43AAD750DEBD3CB74D6780BD350EC660C0F010FB37B40B41B7F342C98273"):
+            "D63D2F4CF4A153B41D44A4410B6D288EDE1821D7E7D05F47C6B63C18E3131AF0"):
         ERRORS.append("final residual manifest identity mismatch")
     residual_ids = [row["residual_id"] for row in all_residuals]
     if len(residual_ids) != len(set(residual_ids)):
@@ -3642,7 +3796,46 @@ if residual_path.exists():
 
 agent_path = ROOT / "agent.csv"
 if agent_path.exists():
+    expected_agent_header = [
+        "run_id", "task_id", "model", "thinking", "scope", "status",
+        "duration_ms", "returned", "owner_check", "disposition", "writes",
+    ]
+    agent_raw = agent_path.read_bytes()
+    agent_physical_lines = agent_raw.splitlines(keepends=True)
+    if (not agent_physical_lines or
+            agent_physical_lines[0].decode("utf-8").rstrip("\n").split(",") !=
+            expected_agent_header):
+        ERRORS.append("unexpected agent.csv header")
     agent_rows = rows("agent.csv")
+    contiguous_ids(agent_rows, "run_id", "A", "agent.csv")
+    for row in agent_rows:
+        if None in row or any(
+                row.get(field) is None for field in expected_agent_header):
+            ERRORS.append(
+                f"malformed CSV field count in agent.csv row "
+                f"{row.get('run_id')}")
+    require_lf_prefix(
+        agent_raw, 218, 108700,
+        "DC8466E48F3282E005E324007A0DCB0DB206AE79C72500DB758499B886E8A203",
+        "A000001-A000217")
+    expected_i54_agent_rows = {
+        218: (578, "6A6A341396D4826B96F6535BB22E6BFAF16F30DF5B950946F4E76ED005AD2795"),
+        219: (760, "1375753EF56DDB1365A9EE510D4DF693E159705BF9BBC898818BDDD1FA7C6E6A"),
+        220: (727, "A9AB1600B6B22990DC938E41ED90F83A2774D5349F00E3FE2593ABEDA07C4583"),
+        221: (693, "C657827380FD8F2D0A4F26441D17A8984CE7DD2390BDA44E51051776B84109C1"),
+        222: (667, "3066CE53E83238A05D569D90B8DDBF8C04813CF3CA2A271D42CD3FC8E4D998A4"),
+        223: (687, "D5C1BD786209AA39BDD46ED0AA191D2336AF34829501F66CB927198A4ECAC98D"),
+        224: (654, "6F28AAE481CF47A897AD842FFA7B24AE1B6E0F09B77841FDA6DA05DCB9009F6E"),
+    }
+    for line_index, (expected_bytes, expected_sha) in (
+            expected_i54_agent_rows.items()):
+        require_raw_line(
+            agent_physical_lines, line_index, expected_bytes, expected_sha,
+            f"A{line_index:06d}")
+    if (len(agent_raw) != 113466 or
+            hashlib.sha256(agent_raw).hexdigest().upper() !=
+            "A7824B07289BACE5ECDA6C9860859B46DF25533F73C4C3801E4B52FF5EEA0618"):
+        ERRORS.append("final agent manifest identity mismatch")
     task_scopes = [(row["task_id"], row["scope"]) for row in agent_rows]
     if len(task_scopes) != len(set(task_scopes)):
         ERRORS.append("duplicate task_id/scope in agent.csv")

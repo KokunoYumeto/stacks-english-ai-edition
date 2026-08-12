@@ -249,12 +249,12 @@ or published here.
   promotion requires its own active V row. Shared, full-page, and grouped crops
   do not qualify.
 - Current statement-level frontier: direct-French review is complete through
-  EGA I 4.3.2. The active graph has 604 edges across 210 generated units and
-  379 residual records; 600 edges resolve to 213 distinct existing official
-  tags and four resolve to explicitly untagged local integrations. Twenty-six
-  prior exact full-statement equivalences plus 4.2.5 and 4.3.2 make
-  twenty-eight. Four bounded mathematical gaps remain open from earlier
-  slices; subsection 4.3 adds no Stacks gap. The next cursor is EGA I 4.4.1.
+  EGA I 5.4.8. The active graph has 872 edges across 307 generated units;
+  physical append-only history has 879 rows. Of the active edges 859 resolve
+  to 252 distinct existing official tags and thirteen resolve to explicitly
+  untagged local-mirror integrations. Forty rows are exact full-statement
+  equivalences. Residual history has 609 active and 634 physical rows, with
+  six open labelled-coverage gaps. The next semantic cursor is EGA I 5.5.1.
 
 ## State model
 
@@ -324,7 +324,53 @@ maintainer feedback remain append-only.
   direct-authority crops for source-error evidence; these are not edition
   outputs or three-surface visual certifications.
 
-### Current reviewed frontier: EGA I 5.3.9--5.3.14
+### Current reviewed frontier: EGA I 5.4.1--5.4.8
+
+Separatedness, the closed-diagonal criterion, closed comparison and graph
+morphisms, cancellation of closed immersions, closed pairings, closed
+sections, generic-point uniqueness of sections, and all three converse tests
+are admitted from the exact F33 authority slice on printed pp.135--136.
+Direct French lines 670--772 form 4,208 UTF-8/LF bytes at SHA-256
+`AE4ED884CE3E0F16B9854CABCBA9D5F184B7AB2EBD8B2B33AC344E43EDAA07BE`.
+S000853--S000879 add 27 reviewed-existing edges and R000617--R000634 retain
+every historical-terminology, stronger-target, proof-level, derived, and
+hypothesis boundary. D000250--D000257 bind the eight numbered source units.
+
+Tag 01KK is the exact modern separatedness definition; the source
+closed-image formulation uses both the diagonal immersion 01KJ and the
+closed-image criterion 01IQ. Tags 01KR and 01KS give the stronger comparison
+and graph statements. Item three of 07RK is the exact cancellation theorem,
+with 01QR and 01QS splitting its historical graph proof. The paired-morphism
+corollary is derived from 01KU, 07RK, and 001V; 01KT gives the section result.
+Generic-point uniqueness is deliberately composite: unlabelled point prose
+under 01J5, the closed equalizer 01KM, generic-point density 004X, reduced
+factorization 0356, and fibre-product uniqueness 001V are all retained.
+Tag 01RH is not used directly because it assumes agreement on an open
+subscheme, whereas a generic point need not be open.
+
+The 5.4.8 citation to 5.4.5 is type-correct. Its middle application has base
+`Y`, structural map `p1 : Y times_Z Y -> Y`, `j = id_Y`, and
+`g = Delta_Y_over_Z`; 001V identifies the resulting pairing with the
+diagonal. The first graph-of-identity test and the final section test are the
+same diagonal identification in their respective bases. Counterexample
+residuals keep separatedness, reducedness, and irreducibility explicit.
+
+This slice has no registered diagram, equation child, or selected intricate
+standalone mathematics block, and it requires no local TeX theorem. VQA,
+source-error, page, and chapter-build surfaces are unchanged. The cumulative
+totals are 872 active statement edges, 879 physical edge rows, 307 source
+units, 859 official-tag rows using 252 distinct tags, thirteen local-mirror
+rows, forty exact full-statement equivalences, and 609 active residuals out of
+634 physical rows. Six labelled-coverage gaps remain open.
+
+The admitted edition interface remains the exact D48 tuple
+F37ZW/R261/B37AJ/B239/D48/DIA48T/Q37CY/Q37DB with publication disabled.
+Later producer payloads through D63 remain read-only and fail closed: every
+final inventory DIA49R3--DIA63 retains stale aggregate counts, and D59 onward
+records character indexes as UTF-8 byte offsets. None of those later controls
+changes the Commons interface or the F33 semantic provenance.
+
+### Earlier reviewed checkpoint: EGA I 5.3.9--5.3.14
 
 The diagonal-immersion theorem, canonical fibre-product comparison, graph
 criterion, graph base change, immersion cancellation, and pairing criterion
@@ -519,13 +565,13 @@ tree immediately before atomic promotion, closing the reproduced concurrent-
 producer race. Independent mathematical and governance inverse audits both
 returned HARD PASS after the repairs while preserving their earlier failures.
 
-The immediate work continues after direct-French EGA I 5.3.14. The latest
-sealed source markers are F37ZP and R255, while every reviewed EGA I claim
-remains bound to its own historical receipt. They are source-only successors:
-the last admitted reader interface remains F37ZL/R251 with B37AD/B234 and its
-D41R/DIA41R/REF11/Q37CD closure. B235/RF14/DIA42R/REF14 remain quarantined
-until their contradictory replay totals and stale cleanup pins receive an
-append-only producer correction and complete cleanup receipts. Discovery
+The immediate semantic work continues after direct-French EGA I 5.4.8 at
+EGA I 5.5.1. Every reviewed claim remains bound to its own historical source
+receipt; the new 5.4 rows use F33 rather than a mutable producer frontier.
+The last admitted reader interface is the D48 tuple
+F37ZW/R261/B37AJ/B239/D48/DIA48T/Q37CY/Q37DB. Later D49--D63 producer
+controls remain non-admitted because their inventory aggregates are stale;
+D59 onward also mislabels character indexes as UTF-8 byte offsets. Discovery
 unit I.3.2.9 remains in a separate authority-pending queue for its cited EGA II
 erratum witness. The complete English surface drives provisional candidates
 only; chapter edits still require direct French evidence, explicit residuals,
