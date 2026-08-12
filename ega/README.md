@@ -249,12 +249,12 @@ or published here.
   promotion requires its own active V row. Shared, full-page, and grouped crops
   do not qualify.
 - Current statement-level frontier: direct-French review is complete through
-  EGA I 5.4.8. The active graph has 872 edges across 307 generated units;
-  physical append-only history has 879 rows. Of the active edges 859 resolve
-  to 252 distinct existing official tags and thirteen resolve to explicitly
-  untagged local-mirror integrations. Forty rows are exact full-statement
-  equivalences. Residual history has 609 active and 634 physical rows, with
-  six open labelled-coverage gaps. The next semantic cursor is EGA I 5.5.1.
+  EGA I 5.5.13. The active graph has 979 edges across 333 generated units;
+  physical append-only history has 986 rows. Of the active edges 966 resolve
+  to 269 distinct existing official tags and thirteen resolve to explicitly
+  untagged local-mirror integrations. Forty-two rows are exact full-statement
+  equivalences. Residual history has 670 active and 695 physical rows, with
+  ten open labelled-coverage gaps. The next semantic cursor is EGA I 6.1.1.
 
 ## State model
 
@@ -324,7 +324,51 @@ maintainer feedback remain append-only.
   direct-authority crops for source-error evidence; these are not edition
   outputs or three-surface visual certifications.
 
-### Current reviewed frontier: EGA I 5.4.1--5.4.8
+### Current reviewed frontier: EGA I 5.5.1--5.5.13
+
+The complete separatedness subsection is now reviewed from direct French and
+the exact F33 semantic receipt. D000258--D000271 bind all numbered statements,
+proofs, the labelled identity, and the three registered diagram units;
+D000272--D000276 bind four tight authority-only source-error receipts; and
+D000277 records the exact D48 visual-admission boundary. S000880--S000986 add
+107 reviewed-existing semantic edges. R000635--R000695 retain the theorem
+splits, proof-level routes, essential hypotheses, counterexamples, terminology,
+source defects, and visual gaps without manufacturing a missing official tag.
+
+Three printed references to Proposition 5.5.4 are type-wrong: the affine-open
+target reductions in 5.5.5 and both directions of 5.5.9 uniquely require the
+target-locality Proposition 5.5.5. In 5.5.11 the exceptional fibre of the
+doubled line lies over `(s)`, not the generic prime `(0)`. The doubled-plane
+claim that neither criterion of 5.5.6 holds is also false: its punctured-plane
+overlap is nonaffine, but its global ring is `k[s,t]` and both identity-gluing
+restriction maps have full image, so condition one fails while condition two
+holds. Q000011--Q000014 bind the four exact 5,000-dpi authority crops; the
+source-error manifest is 4,416 bytes at SHA-256
+`91EAAF72648ACDDE00F6D20D014DB60F0071C8BDEDDA2027D2E07FE4C2182086`
+and its fourteen crops total 5,763,117 bytes. Diplomatic French remains
+unchanged. Source-error crops must also contain nonwhite rendered content;
+dimensions and byte hashes alone do not certify a usable authority crop.
+
+The 5.5.4 finite closed-family hypothesis, the asymmetric quantifiers in
+5.5.8--5.5.9, and the historically separated target in 5.5.10 are explicit.
+The arbitrary-property arguments in 5.5.12--5.5.13 are composite coverage:
+01JZ and 001V handle base change and products, 01KS handles graphs, 01J4 and
+0356 handle reductions, and 01L7 supplies separatedness for cancellation. No
+single Stacks tag is claimed to state that meta-theorem.
+
+The five semantic edges for the three registered diagrams remain operational
+mathematical mappings, but their visual promotion is separately fail closed.
+The intricate block at French line 935 has no registered child and is not
+invented. D56--D59 and D65 are useful producer discovery evidence only; the
+admitted Commons interface remains D48, so this checkpoint appends no V or J
+row. The exact active referral set is I000088, I000089, I000091--I000095;
+I000090 is resolved. The cumulative graph has 979 active / 986 physical
+statement rows across 333 source units, 966 official-tag rows using 269 tags,
+thirteen local-mirror rows, and 42 exact full-statement equivalences. Residual
+history has 670 active / 695 physical rows, with ten open gaps and thirteen
+local-mirror rows. The next semantic cursor is EGA I 6.1.1.
+
+### Earlier reviewed checkpoint: EGA I 5.4.1--5.4.8
 
 Separatedness, the closed-diagonal criterion, closed comparison and graph
 morphisms, cancellation of closed immersions, closed pairings, closed
@@ -565,9 +609,10 @@ tree immediately before atomic promotion, closing the reproduced concurrent-
 producer race. Independent mathematical and governance inverse audits both
 returned HARD PASS after the repairs while preserving their earlier failures.
 
-The immediate semantic work continues after direct-French EGA I 5.4.8 at
-EGA I 5.5.1. Every reviewed claim remains bound to its own historical source
-receipt; the new 5.4 rows use F33 rather than a mutable producer frontier.
+The immediate semantic work continues after direct-French EGA I 5.5.13 at
+EGA I 6.1.1. Every reviewed claim remains bound to its own historical source
+receipt; the 5.4 and 5.5 rows use F33 plus direct authority evidence rather
+than a mutable producer frontier.
 The last admitted reader interface is the D48 tuple
 F37ZW/R261/B37AJ/B239/D48/DIA48T/Q37CY/Q37DB. Later D49--D63 producer
 controls remain non-admitted because their inventory aggregates are stale;

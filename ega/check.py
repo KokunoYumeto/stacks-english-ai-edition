@@ -64,6 +64,59 @@ def require_raw_line(physical_lines, line_index, expected_bytes,
         ERRORS.append(f"exact raw row changed for {name}")
 
 
+def strict_lf_bytes(raw):
+    """Accept only a nonempty LF-terminated byte stream with no CR bytes."""
+    return bool(raw) and raw.endswith(b"\n") and b"\r" not in raw
+
+
+def require_strict_lf(raw, name):
+    """Require the append-ledger serialization contract, not normalization."""
+    if not strict_lf_bytes(raw):
+        ERRORS.append(f"{name} is not LF-only with a final LF")
+
+
+def require_raw_block(physical_lines, first_index, last_index,
+                      expected_bytes, expected_sha, name):
+    """Pin an inclusive physical-line block without newline normalization."""
+    if (first_index < 0 or last_index < first_index or
+            last_index >= len(physical_lines)):
+        ERRORS.append(f"missing exact raw block {name}")
+        return
+    raw_block = b"".join(physical_lines[first_index:last_index + 1])
+    if (len(raw_block) != expected_bytes or
+            hashlib.sha256(raw_block).hexdigest().upper() != expected_sha):
+        ERRORS.append(f"exact raw block changed for {name}")
+
+
+def ordered_referrals_exact(actual, expected):
+    """Bind an ordered referral interface, rejecting omissions and reordering."""
+    return isinstance(actual, list) and actual == list(expected)
+
+
+def q_route_exact(receipt_id, decision_id, admission_id,
+                  expected_decisions, expected_admissions):
+    """Bind each source-error receipt to distinct correction and admission IDs."""
+    return (
+        expected_decisions.get(receipt_id) == decision_id and
+        expected_admissions.get(receipt_id) == admission_id
+    )
+
+
+def semantic_visual_referral_exact(missing_items, expected_missing_items,
+                                   physical_vqa_items):
+    """Allow only the named missing-V set and reject hidden physical V rows."""
+    expected = set(expected_missing_items)
+    return (
+        set(missing_items) == expected and
+        expected.isdisjoint(set(physical_vqa_items))
+    )
+
+
+def exact_reader_interface(actual, expected):
+    """Require the complete reader object, including its D48 closure."""
+    return isinstance(actual, dict) and actual == expected
+
+
 def vqa_parent_route(qa_id):
     """Return the closed reader-generation route for a governed V row."""
     if not re.fullmatch(r"V\d{6}", qa_id or ""):
@@ -156,6 +209,74 @@ def finding_receipt_link(finding, receipt_id, path, crop_sha256):
 
 def check_governance_helper_regressions():
     """Adverse synthetic checks for the fail-closed helper predicates."""
+    def synthetic_gray_png(filtered_rows):
+        def chunk(chunk_type, data):
+            return (
+                len(data).to_bytes(4, "big") + chunk_type + data +
+                (zlib.crc32(chunk_type + data) & 0xFFFFFFFF).to_bytes(4, "big")
+            )
+
+        ihdr = (
+            (3).to_bytes(4, "big") +
+            len(filtered_rows).to_bytes(4, "big") +
+            bytes((8, 0, 0, 0, 0))
+        )
+        return (
+            b"\x89PNG\r\n\x1a\n" + chunk(b"IHDR", ihdr) +
+            chunk(b"IDAT", zlib.compress(b"".join(filtered_rows))) +
+            chunk(b"IEND", b"")
+        )
+
+    blank_filter_rows = {
+        0: (b"\x00\xff\xff\xff", b"\x00\xff\xff\xff"),
+        1: (b"\x01\xff\x00\x00", b"\x01\xff\x00\x00"),
+        2: (b"\x02\xff\xff\xff", b"\x02\x00\x00\x00"),
+        3: (b"\x03\xff\x80\x80", b"\x03\x80\x00\x00"),
+        4: (b"\x04\xff\x00\x00", b"\x04\x00\x00\x00"),
+    }
+    blank_pngs = [
+        synthetic_gray_png(rows) for rows in blank_filter_rows.values()
+    ]
+    ink_png = synthetic_gray_png(
+        (blank_filter_rows[0][0], b"\x00\xff\xfe\xff"))
+    damaged_crc = bytearray(blank_pngs[0])
+    damaged_crc[-5] ^= 1
+    if (any(png_has_nonwhite_content(raw) for raw in blank_pngs) or
+            not png_has_nonwhite_content(ink_png) or
+            png_has_nonwhite_content(bytes(damaged_crc)) or
+            png_has_nonwhite_content(blank_pngs[0] + b"trailing")):
+        ERRORS.append("blank/nonblank PNG adverse check failed")
+    if (not strict_lf_bytes(b"header\nrow\n") or
+            strict_lf_bytes(b"header\r\nrow\r\n") or
+            strict_lf_bytes(b"header\nrow")):
+        ERRORS.append("strict-LF adverse check failed")
+    expected_q_decisions = {"Q1": "D1", "Q2": "D2"}
+    expected_q_admissions = {"Q1": "DA", "Q2": "DA"}
+    if (not q_route_exact(
+            "Q1", "D1", "DA", expected_q_decisions,
+            expected_q_admissions) or
+            q_route_exact(
+                "Q1", "D2", "DA", expected_q_decisions,
+                expected_q_admissions)):
+        ERRORS.append("source-error Q-route swap adverse check failed")
+    referrals = ["I1", "I2", "I3"]
+    if (not ordered_referrals_exact(referrals, referrals) or
+            ordered_referrals_exact(referrals[:-1], referrals)):
+        ERRORS.append("ordered-referral omission adverse check failed")
+    missing_visuals = {"diagram:a", "diagram:b", "diagram:c"}
+    if (not semantic_visual_referral_exact(
+            missing_visuals, missing_visuals, set()) or
+            semantic_visual_referral_exact(
+                missing_visuals | {"diagram:unauthorized"},
+                missing_visuals, set()) or
+            semantic_visual_referral_exact(
+                missing_visuals, missing_visuals, {"diagram:a"})):
+        ERRORS.append("missing/injected visual-referral adverse check failed")
+    d48_reader = {"closure": {"control": "D48.json"}}
+    d65_reader = {"closure": {"control": "D65.json"}}
+    if (not exact_reader_interface(d48_reader, d48_reader) or
+            exact_reader_interface(d65_reader, d48_reader)):
+        ERRORS.append("D65 reader-substitution adverse check failed")
     baseline_errors = len(ERRORS)
     malformed = [{"qa_id": "VX"}]
     contiguous_ids(malformed, "qa_id", "V", "synthetic-vqa")
@@ -330,6 +451,180 @@ def png_dimensions(raw):
     return None
 
 
+def png_has_nonwhite_content(raw):
+    """Detect ink by exactly unfiltering 8-bit grayscale or RGB PNG rows."""
+    if len(raw) < 45 or raw[:8] != b"\x89PNG\r\n\x1a\n":
+        return False
+    offset = 8
+    width = height = bit_depth = colour_type = interlace = None
+    compressed_parts = []
+    saw_ihdr = saw_idat = saw_iend = idat_closed = False
+    while offset + 12 <= len(raw):
+        length = int.from_bytes(raw[offset:offset + 4], "big")
+        chunk_type = raw[offset + 4:offset + 8]
+        data_start = offset + 8
+        data_end = data_start + length
+        chunk_end = data_end + 4
+        if chunk_end > len(raw):
+            return False
+        chunk_data = raw[data_start:data_end]
+        expected_crc = int.from_bytes(raw[data_end:chunk_end], "big")
+        if zlib.crc32(chunk_type + chunk_data) & 0xFFFFFFFF != expected_crc:
+            return False
+        if not saw_ihdr:
+            if chunk_type != b"IHDR" or length != 13:
+                return False
+            width = int.from_bytes(chunk_data[0:4], "big")
+            height = int.from_bytes(chunk_data[4:8], "big")
+            bit_depth = chunk_data[8]
+            colour_type = chunk_data[9]
+            if (chunk_data[10] != 0 or chunk_data[11] != 0 or
+                    chunk_data[12] != 0):
+                return False
+            interlace = chunk_data[12]
+            saw_ihdr = True
+        elif chunk_type == b"IHDR":
+            return False
+        elif chunk_type == b"IDAT":
+            if idat_closed:
+                return False
+            saw_idat = True
+            compressed_parts.append(chunk_data)
+        elif chunk_type == b"IEND":
+            if (length != 0 or not saw_idat or
+                    chunk_end != len(raw)):
+                return False
+            saw_iend = True
+            offset = chunk_end
+            break
+        elif saw_idat:
+            idat_closed = True
+        offset = chunk_end
+    channels = {0: 1, 2: 3}.get(colour_type)
+    if (not saw_ihdr or not saw_iend or offset != len(raw) or
+            not width or not height or bit_depth != 8 or interlace != 0 or
+            channels is None or not compressed_parts):
+        return False
+
+    def paeth_predictor(left, up, upper_left):
+        estimate = left + up - upper_left
+        left_distance = abs(estimate - left)
+        up_distance = abs(estimate - up)
+        upper_left_distance = abs(estimate - upper_left)
+        if left_distance <= up_distance and left_distance <= upper_left_distance:
+            return left
+        if up_distance <= upper_left_distance:
+            return up
+        return upper_left
+
+    row_bytes = width * channels
+    stride = row_bytes + 1
+    compressed = b"".join(compressed_parts)
+    decoder = zlib.decompressobj()
+    compressed_offset = 0
+    pending = bytearray()
+    previous = bytearray(row_bytes)
+    has_nonwhite = False
+    for row_index in range(height):
+        while len(pending) < stride:
+            if decoder.unconsumed_tail:
+                source = decoder.unconsumed_tail
+            elif compressed_offset < len(compressed):
+                next_offset = min(compressed_offset + 65536, len(compressed))
+                source = compressed[compressed_offset:next_offset]
+                compressed_offset = next_offset
+            else:
+                return False
+            prior_tail = len(decoder.unconsumed_tail)
+            try:
+                decoded = decoder.decompress(source, stride - len(pending))
+            except zlib.error:
+                return False
+            pending.extend(decoded)
+            if (not decoded and len(decoder.unconsumed_tail) == prior_tail and
+                    prior_tail):
+                return False
+        filter_type = pending[0]
+        encoded = pending[1:stride]
+        del pending[:stride]
+        if filter_type not in {0, 1, 2, 3, 4}:
+            return False
+        reconstructed = bytearray(row_bytes)
+        for index, value in enumerate(encoded):
+            left = reconstructed[index - channels] if index >= channels else 0
+            up = previous[index]
+            upper_left = previous[index - channels] if index >= channels else 0
+            if filter_type == 0:
+                predictor = 0
+            elif filter_type == 1:
+                predictor = left
+            elif filter_type == 2:
+                predictor = up
+            elif filter_type == 3:
+                predictor = (left + up) // 2
+            else:
+                predictor = paeth_predictor(left, up, upper_left)
+            reconstructed[index] = (value + predictor) & 0xFF
+        if any(value != 255 for value in reconstructed):
+            has_nonwhite = True
+        previous = reconstructed
+        if has_nonwhite:
+            expected_remaining = (height - row_index - 1) * stride
+            decoded_remaining = 0
+            while not decoder.eof:
+                if decoder.unconsumed_tail:
+                    source = decoder.unconsumed_tail
+                elif compressed_offset < len(compressed):
+                    next_offset = min(
+                        compressed_offset + 65536, len(compressed))
+                    source = compressed[compressed_offset:next_offset]
+                    compressed_offset = next_offset
+                else:
+                    return False
+                prior_tail = len(decoder.unconsumed_tail)
+                try:
+                    decoded = decoder.decompress(
+                        source,
+                        min(1048576,
+                            expected_remaining - decoded_remaining + 1))
+                except zlib.error:
+                    return False
+                decoded_remaining += len(decoded)
+                if decoded_remaining > expected_remaining:
+                    return False
+                if (not decoded and
+                        len(decoder.unconsumed_tail) == prior_tail and
+                        prior_tail):
+                    return False
+            if (decoded_remaining != expected_remaining or pending or
+                    decoder.unused_data or decoder.unconsumed_tail or
+                    compressed_offset != len(compressed)):
+                return False
+            return True
+    while not decoder.eof:
+        if decoder.unconsumed_tail:
+            source = decoder.unconsumed_tail
+        elif compressed_offset < len(compressed):
+            next_offset = min(compressed_offset + 65536, len(compressed))
+            source = compressed[compressed_offset:next_offset]
+            compressed_offset = next_offset
+        else:
+            return False
+        prior_tail = len(decoder.unconsumed_tail)
+        try:
+            decoded = decoder.decompress(source, 1)
+        except zlib.error:
+            return False
+        if (decoded or
+                (not decoded and len(decoder.unconsumed_tail) == prior_tail and
+                 prior_tail)):
+            return False
+    if (pending or decoder.unused_data or decoder.unconsumed_tail or
+            compressed_offset != len(compressed)):
+        return False
+    return has_nonwhite
+
+
 def check_page_evidence_atomicity():
     """Exercise blank legacy guards and fail-closed overlay application."""
     template = {
@@ -420,9 +715,9 @@ check_page_evidence_atomicity()
 
 scope_raw = (ROOT / "scope.json").read_bytes()
 scope = json.loads(scope_raw.decode("utf-8"))
-if (len(scope_raw) != 14952 or
+if (len(scope_raw) != 15076 or
         hashlib.sha256(scope_raw).hexdigest().upper() !=
-        "83C24DBA15ADB93E24EC9735CC47F91E758DCAE86E86DD0523CD023812572944"):
+        "E4DBCB3413BFB373E397A3B114A4435CA607F60F9B0225D9462C7E0763205449"):
     ERRORS.append("final scope manifest identity mismatch")
 if scope.get("status") != "discovery_scaffold":
     ERRORS.append("scope status must remain discovery_scaffold")
@@ -449,9 +744,9 @@ if scope.get("governance_prefixes") != expected_governance_prefixes:
 
 interface_raw = (ROOT / "interface.json").read_bytes()
 interface = json.loads(interface_raw.decode("utf-8"))
-if (len(interface_raw) != 16435 or
+if (len(interface_raw) != 16558 or
         hashlib.sha256(interface_raw).hexdigest().upper() !=
-        "2E069BABF483EF662D39CA138D5397D871FAABE4C3483B80B2765AE475FE6A6D"):
+        "B5A7405A78BB8AD020B344AFFEBD3AFCB4DF09F995CF610B87FCD20661A6017C"):
     ERRORS.append("final edition interface identity mismatch")
 if interface.get("status") != "active" or interface.get("ownership", {}).get("cross_tree_writes") is not False:
     ERRORS.append("edition interface is not active/read-only")
@@ -625,14 +920,18 @@ expected_reader_interface = {
     "english_source_manifest_sha256":
         "A87DC2EDD0BDA5CE6828A2759095B1F4F3278E993DC5661EBA2E345C33BEEF18",
     "closure": expected_diagram_closure,
-    "active_referral_issues": [],
+    "active_referral_issues": [
+        "I000088", "I000089", "I000091", "I000092", "I000093",
+        "I000094", "I000095",
+    ],
     "role": (
         "current locally admitted D48 source reader diagram closure and cleanup "
         "tuple; publication remains quarantined"),
 }
-if interface_reader_interface != expected_reader_interface:
+if not exact_reader_interface(
+        interface_reader_interface, expected_reader_interface):
     ERRORS.append("edition interface current reader object shape changed")
-if scope_reader_interface != expected_reader_interface:
+if not exact_reader_interface(scope_reader_interface, expected_reader_interface):
     ERRORS.append("scope current reader object shape changed")
 if tuple(interface_reader_interface.get(field) for field in (
         "status", "french_source_manifest", "french_source_manifest_bytes",
@@ -644,7 +943,16 @@ if tuple(interface_reader_interface.get(field) for field in (
         "A87DC2EDD0BDA5CE6828A2759095B1F4F3278E993DC5661EBA2E345C33BEEF18",
 ):
     ERRORS.append("last admitted reader interface source bindings changed")
-if interface_reader_interface.get("active_referral_issues") != []:
+expected_active_referral_issues = [
+    "I000088", "I000089", "I000091", "I000092", "I000093", "I000094",
+    "I000095",
+]
+if (not ordered_referrals_exact(
+        interface_reader_interface.get("active_referral_issues"),
+        expected_active_referral_issues) or
+        not ordered_referrals_exact(
+            scope_reader_interface.get("active_referral_issues"),
+            expected_active_referral_issues)):
     ERRORS.append("current visual referrals are not exact at reader closure")
 if interface.get("public_checkpoint") != "https://zenodo.org/records/21861666":
     ERRORS.append("public EGA checkpoint is stale")
@@ -844,6 +1152,8 @@ decision_raw = (ROOT / "dec.csv").read_bytes()
 decision_physical_lines = decision_raw.splitlines(keepends=True)
 issue_raw = (ROOT / "issues.csv").read_bytes()
 issue_physical_lines = issue_raw.splitlines(keepends=True)
+require_strict_lf(decision_raw, "dec.csv")
+require_strict_lf(issue_raw, "issues.csv")
 expected_decision_header = [
     "decision_id", "subject_id", "action", "state", "evidence",
     "supersedes", "rationale",
@@ -930,9 +1240,17 @@ for decision_number, expected_bytes, expected_sha in (
     require_raw_line(
         decision_physical_lines, decision_number, expected_bytes,
         expected_sha, f"D{decision_number:06d}")
-if (len(decision_raw) != 65307 or
+require_lf_prefix(
+    decision_raw, 258, 65307,
+    "5255BCFB780A1C29B6284BC1192C229FA64C4AB3A7DD4E97D176A8C86EAC9CAE",
+    "D000001-D000257")
+require_raw_block(
+    decision_physical_lines, 258, 277, 5730,
+    "A4AC62EC6485F3653B6A9C76C9D2EE10D5E1141D71C91DC6358B9FAF7D2A727A",
+    "D000258-D000277")
+if (len(decision_raw) != 71037 or
         hashlib.sha256(decision_raw).hexdigest().upper() !=
-        "5255BCFB780A1C29B6284BC1192C229FA64C4AB3A7DD4E97D176A8C86EAC9CAE"):
+        "2D8145E8C658A3FB1573A7E8B5FA27B830A92D83337656331F278EE7E378DF4D"):
     ERRORS.append("final decision manifest identity mismatch")
 require_lf_prefix(
     issue_raw, 62, 24019,
@@ -942,6 +1260,34 @@ require_lf_prefix(
     issue_raw, 88, 34596,
     "2261AC794FBDFA2C040AE012E93616439C2ABE0203E0BE386CB192EC9E25E15C",
     "I000001-I000087")
+require_raw_block(
+    issue_physical_lines, 88, 95, 3290,
+    "54A43687F85FD3C978EA2178D877B79C28BE84B4490549A156885483D2ABC5B7",
+    "I000088-I000095")
+for issue_number, expected_bytes, expected_sha in (
+        (88, 422,
+         "94710DC5E08D2860B8ADC1B3726CB211B6800129A68C11623504597A408A9AC0"),
+        (89, 418,
+         "D77CB3F9DAF8ACD42743DC16AD9336F7FA894FC7D95300A8520FE82DB31618C4"),
+        (90, 391,
+         "310356F0721319D81C3C5CFB8B87F1976931F0D026202D524F9B3C1DB57A01F7"),
+        (91, 409,
+         "6965D362EA5BAB04C83D045FFC9692A3F864C13911E6DD233144C93D28B152A3"),
+        (92, 428,
+         "C20E77C30D8419D232FBD48D8D2C9F9CC9FA08B3D43D171B31F04C51716EBB56"),
+        (93, 430,
+         "565B97FB53B9A834E33A14FE287795E21B54EE33987F0B9D6532B4695603543E"),
+        (94, 412,
+         "D4692B97198B15A16FCA7BA3070099BD8D8FD25BF3D0E82C087FD652C4059D07"),
+        (95, 380,
+         "CEA3B701B137DBE2CA2CD9C3727B57674C70D07687A2BBDDABE4F8F0583C20E9")):
+    require_raw_line(
+        issue_physical_lines, issue_number, expected_bytes, expected_sha,
+        f"I{issue_number:06d}")
+if (len(issue_raw) != 37886 or
+        hashlib.sha256(issue_raw).hexdigest().upper() !=
+        "787C23CF1490792978E0F98A99B981F5D16846CD71EE7DFC77884F81E32210D6"):
+    ERRORS.append("final correction-issue manifest identity mismatch")
 for issue_number, expected_bytes, expected_sha in (
         (66, 409,
          "3D9344E032DF597EF9DCEA9E30718A34FFDC7E9F89819AE202BBF61B3DAA7970"),
@@ -990,10 +1336,10 @@ for issue_number, expected_bytes, expected_sha in (
     require_raw_line(
         issue_physical_lines, issue_number, expected_bytes, expected_sha,
         f"I{issue_number:06d}")
-if (len(issue_raw) != 34596 or
-        hashlib.sha256(issue_raw).hexdigest().upper() !=
-        "2261AC794FBDFA2C040AE012E93616439C2ABE0203E0BE386CB192EC9E25E15C"):
-    ERRORS.append("final correction-issue manifest identity mismatch")
+require_lf_prefix(
+    issue_raw, 88, 34596,
+    "2261AC794FBDFA2C040AE012E93616439C2ABE0203E0BE386CB192EC9E25E15C",
+    "I000001-I000087")
 check_governance_helper_regressions()
 issue_positions = {
     row["issue_id"]: index for index, row in enumerate(issue_rows)
@@ -1024,6 +1370,65 @@ for index, row in enumerate(issue_rows):
     else:
         ERRORS.append(
             f"invalid mixed-namespace issue link {link!r} for {row['issue_id']}")
+
+expected_i55_issue_contracts = {
+    "I000088": (
+        "ega:I.5.5.5:proof",
+        "printed_reference_5_5_4_should_be_5_5_5",
+        "referred_to_canon",
+    ),
+    "I000089": (
+        "ega:I.5.5.9:proof",
+        "two_printed_references_5_5_4_should_be_5_5_5",
+        "referred_to_canon",
+    ),
+    "I000090": (
+        "ega:I.5.5.11",
+        "printed_doubled_origin_fibre_ideal_zero_should_be_s",
+        "resolved",
+    ),
+    "I000091": (
+        "ega:I.5.5.11",
+        "printed_doubled_plane_second_separation_condition_actually_holds",
+        "referred_to_canon",
+    ),
+    "I000092": (
+        "ega:I.5.5.1:diagram:xymatrix:1",
+        "verified_producer_visual_not_admitted_commons_interface",
+        "referred_to_canon",
+    ),
+    "I000093": (
+        "ega:I.5.5.1:diagram:xymatrix:2",
+        "verified_producer_visual_not_admitted_commons_interface",
+        "referred_to_canon",
+    ),
+    "I000094": (
+        "ega:I.5.5.6:proof",
+        "intricate_formula_block_verified_producer_not_admitted_and_unallocated",
+        "referred_to_canon",
+    ),
+    "I000095": (
+        "ega:I.5.5.12:diagram:xymatrix:1",
+        "bottom_f_label_side_not_admissible_at_D48",
+        "referred_to_canon",
+    ),
+}
+for issue_id, expected in expected_i55_issue_contracts.items():
+    row = issue_by_id.get(issue_id)
+    actual = None if row is None else tuple(
+        row.get(field) for field in ("subject_id", "kind", "status"))
+    if (actual != expected or issue_id in superseded_issues or
+            (row.get("supersedes") if row else None)):
+        ERRORS.append(f"missing exact active EGA I 5.5 issue {issue_id}")
+actual_active_referrals = [
+    row["issue_id"] for row in issue_rows
+    if (row["issue_id"] in expected_active_referral_issues and
+        row.get("status") == "referred_to_canon" and
+        row["issue_id"] not in superseded_issues)
+]
+if not ordered_referrals_exact(
+        actual_active_referrals, expected_active_referral_issues):
+    ERRORS.append("active issue referrals do not match the ordered interface")
 d104 = decision_by_id.get("D000104")
 if d104 is None or not (
         d104.get("subject_id") == "ega:scaffold" and
@@ -1439,6 +1844,103 @@ for decision_id, expected in i54_decision_contracts.items():
     if actual != expected or row.get("state") != "active":
         ERRORS.append(f"missing exact active EGA I 5.4 decision {decision_id}")
 
+i55_semantic_decision_contracts = {
+    "D000258": (
+        "ega:I.5.5.1",
+        "map_six_separated_permanence_clauses_reduction_equivalence_and_proof_diagrams",
+        "01L3 01L4 01L7 01KU 01KV 01KR 01KS 01KJ 01IQ 054M 0CEU 0CEV 001V and direct French lines 777-843",
+        ""),
+    "D000259": (
+        "ega:I.5.5.2",
+        "map_restriction_of_separated_morphism_to_every_subscheme",
+        "01L8 01L7 01KU and direct French lines 845-851", ""),
+    "D000260": (
+        "ega:I.5.5.3",
+        "map_projection_from_fibre_product_with_separated_factor",
+        "01KU and direct French lines 853-859", ""),
+    "D000261": (
+        "ega:I.5.5.4",
+        "map_finite_closed_source_decomposition_separatedness_and_integral_reduction",
+        "01J3 0356 01L8 01KV 01KU 01JU 01QR 01QS 01KJ 01IQ 001V 0379 004W 01ON and direct French lines 861-889",
+        ""),
+    "D000262": (
+        "ega:I.5.5.5", "map_zariski_target_locality_of_separatedness",
+        "02KO 02KU 01HL 01JR 01JS 001V and direct French lines 893-918",
+        ""),
+    "D000263": (
+        "ega:I.5.5.6", "map_affine_cover_separatedness_criterion",
+        "01KP 01JQ 01JS 01HL 01QO 01IH 01IG 001V and direct French lines 920-959",
+        ""),
+    "D000264": (
+        "ega:I.5.5.7",
+        "map_affine_schemes_as_separated_with_historical_scheme_terminology",
+        "01KN and direct French lines 961-965", ""),
+    "D000265": (
+        "ega:I.5.5.8",
+        "map_relative_separatedness_over_an_affine_base_iff_absolute_separatedness",
+        "01KV 01KN 01KU 01KP and direct French lines 967-974", ""),
+    "D000266": (
+        "ega:I.5.5.9",
+        "map_base_local_absolute_separatedness_test_and_affine_corollary",
+        "01KU 01KV 02KU 01KN and direct French lines 976-992", ""),
+    "D000267": (
+        "ega:I.5.5.10",
+        "map_affine_intersections_over_a_historically_separated_target",
+        "01SG 01KS 01JQ 01IN 001V and direct French lines 994-1017", ""),
+    "D000268": (
+        "ega:I.5.5.11",
+        "map_separated_and_doubled_origin_examples_with_two_printed_mathematical_corrections",
+        "01KQ 01JD 0FXT 01KP 01OL 01OM 01ON 01IL and direct French lines 1019-1064",
+        ""),
+    "D000269": (
+        "ega:I.5.5.12",
+        "map_arbitrary_property_base_change_cancellation_and_reduction_formalism_componentwise",
+        "01JZ 001V 01KS 01J4 0356 01L7 and direct French lines 1066-1131",
+        ""),
+    "D000270": (
+        "ega:I.5.5.12:diagram:xymatrix:1",
+        "map_semantic_reduction_square_and_refer_visual_admission_beyond_D48",
+        "0356 01J4 plus DIA48T pending evidence and nonadmitted D59 D65 discovery controls",
+        ""),
+    "D000271": (
+        "ega:I.5.5.13",
+        "map_weakened_closed_immersion_and_immersion_composition_hypotheses",
+        "01KS 001V 0356 01J4 01L7 and direct French lines 1133-1149", ""),
+    "D000272": (
+        "ega:I.5.5.5:proof",
+        "carry_printed_5_5_4_to_5_5_5_citation_correction",
+        "Q000011 and direct comparison of EGA I 5.5.4 with 5.5.5", ""),
+    "D000273": (
+        "ega:I.5.5.9:proof",
+        "carry_two_printed_5_5_4_to_5_5_5_citation_corrections",
+        "Q000012 and direct comparison of EGA I 5.5.4 5.5.5 and 5.5.8",
+        ""),
+    "D000274": (
+        "ega:I.5.5.11",
+        "carry_official_doubled_origin_fibre_ideal_zero_to_s_correction",
+        "Q000013 EG-EGA-I-P139-FR-DOUBLED-ORIGIN-IDEAL-ERROR-001 and direct doubled-line fibre computation",
+        ""),
+    "D000275": (
+        "ega:I.5.5.11",
+        "refer_false_doubled_plane_neither_condition_claim",
+        "Q000014 01IL 01KP and direct restriction-ring computation", ""),
+    "D000276": (
+        "ega:source-error-qa",
+        "admit_exact_authority_crop_receipts_for_5_5_5_5_5_9_and_5_5_11",
+        "Q000011 Q000012 Q000013 Q000014 in reports/qsrc.csv", ""),
+    "D000277": (
+        "ega:visual-qa",
+        "refer_5_5_1_diagrams_and_5_5_6_intricate_block_until_admitted_interface_successor",
+        "D56 D57 D58 D65 versus admitted F37ZW R261 B37AJ B239 D48 DIA48T Q37CY Q37DB",
+        ""),
+}
+for decision_id, expected in i55_semantic_decision_contracts.items():
+    row = active_decision_by_id.get(decision_id)
+    actual = tuple(row.get(field) for field in (
+        "subject_id", "action", "evidence", "supersedes")) if row else None
+    if actual != expected or row.get("state") != "active":
+        ERRORS.append(f"missing exact active EGA I 5.5 decision {decision_id}")
+
 final_d48_issue_successors = {
     "I000079": ("I000077", "ega:I.5.1.5:diagram:xymatrix:1"),
     "I000080": ("I000078", "ega:I.5.1.9:diagram:xymatrix:2"),
@@ -1548,6 +2050,7 @@ generated = {
 }
 page_evidence_summary = None
 visual_qa_summary = None
+all_vqa_rows = []
 vqa_active_by_item = {}
 vqa_operational_by_item = {}
 operationally_quarantined_vqa_ids = set()
@@ -3084,6 +3587,7 @@ if smap_path.exists():
         "notes", "supersedes",
     ]
     smap_raw = smap_path.read_bytes()
+    require_strict_lf(smap_raw, "smap.csv")
     smap_lines = smap_raw.decode("utf-8").splitlines()
     smap_physical_lines = smap_raw.splitlines(keepends=True)
     if not smap_lines or smap_lines[0].split(",") != expected_smap_header:
@@ -3188,9 +3692,31 @@ if smap_path.exists():
         require_raw_line(
             smap_physical_lines, line_index, expected_bytes, expected_sha,
             f"S{line_index:06d}")
-    if (len(smap_raw) != 388755 or
+    require_lf_prefix(
+        smap_raw, 880, 388755,
+        "7AC558D68CD8ACCC64912427FE9357C169BB090AEA6A1BD36D4D3ED6384B957C",
+        "S000001-S000879")
+    require_raw_block(
+        smap_physical_lines, 880, 986, 42674,
+        "2036A417B77673D6AF781B2990B25AD8EFEA4FCC17EC5518CAA3BBEF19DD96EC",
+        "S000880-S000986")
+    for line_index, expected_bytes, expected_sha in (
+            (908, 483,
+             "7C000B5B8CA2A6FE456B5724A7D3E56ADC42B3B01502E853A63535C3A5A74C72"),
+            (909, 486,
+             "7FCF3BFE251C4714C7F8CF494FC0E36CA2EB9942ED0221157F690BEDC1024253"),
+            (910, 494,
+             "DCB4C6F8D7B90F23B874785C016D9CEA9F4600A0CBC7D7E58453F394A9AD31C1"),
+            (982, 485,
+             "09402FF2874728E936E12BAEF5C317BF2691DE969709277BCF216BD8BADD2AF2"),
+            (983, 471,
+             "93221A3B1CD7AEB7967CDBF38BC752E38CDA3555390DCA033FF930C17FFB8CEB")):
+        require_raw_line(
+            smap_physical_lines, line_index, expected_bytes, expected_sha,
+            f"S{line_index:06d}")
+    if (len(smap_raw) != 431429 or
             hashlib.sha256(smap_raw).hexdigest().upper() !=
-            "7AC558D68CD8ACCC64912427FE9357C169BB090AEA6A1BD36D4D3ED6384B957C"):
+            "E962164CCA65A2F217AD72B53EDF9298CA6EB3481FD8C92A8646CF5454722719"):
         ERRORS.append("final statement-map manifest identity mismatch")
     edge_ids = [row["edge_id"] for row in all_statement_edges]
     if len(edge_ids) != len(set(edge_ids)):
@@ -3242,12 +3768,42 @@ if smap_path.exists():
         if units_by_id.get(row["source_unit"], {}).get("kind") == "diagram"
     }
     missing_diagram_qa = mapped_diagram_units - set(vqa_operational_by_item)
-    unexpected_missing_diagram_qa = (
-        missing_diagram_qa - operationally_quarantined_vqa_items)
-    if unexpected_missing_diagram_qa:
+    expected_i55_missing_diagram_qa = {
+        "ega:I.5.5.1:diagram:xymatrix:1",
+        "ega:I.5.5.1:diagram:xymatrix:2",
+        "ega:I.5.5.12:diagram:xymatrix:1",
+    }
+    physical_vqa_items = {
+        row.get("item_id") for row in all_vqa_rows if row.get("item_id")
+    }
+    if not semantic_visual_referral_exact(
+            missing_diagram_qa, expected_i55_missing_diagram_qa,
+            physical_vqa_items):
         ERRORS.append(
-            "mapped diagrams lack operational visual QA "
-            f"{sorted(unexpected_missing_diagram_qa)}")
+            "mapped diagrams do not match exact D48 no-V referral set "
+            f"{sorted(missing_diagram_qa)}")
+    i55_semantic_diagram_edges = {
+        "ega:I.5.5.1:diagram:xymatrix:1": {"S000908"},
+        "ega:I.5.5.1:diagram:xymatrix:2": {"S000909", "S000910"},
+        "ega:I.5.5.12:diagram:xymatrix:1": {"S000982", "S000983"},
+    }
+    for source_unit, expected_edge_ids in i55_semantic_diagram_edges.items():
+        actual_edge_ids = {
+            row["edge_id"] for row in statement_edges
+            if row["source_unit"] == source_unit
+        }
+        if actual_edge_ids != expected_edge_ids:
+            ERRORS.append(
+                f"semantic diagram edge set changed for {source_unit}")
+    intricate_producer_item = "DIA:ega1/ega1-5-fr.tex:935"
+    if intricate_producer_item in physical_vqa_items:
+        ERRORS.append("unallocated EGA I 5.5.6 intricate block gained a V row")
+    i556_unit_ids = {
+        unit_id for unit_id in units_by_id
+        if unit_id.startswith("ega:I.5.5.6")
+    }
+    if i556_unit_ids != {"ega:I.5.5.6", "ega:I.5.5.6:proof"}:
+        ERRORS.append("EGA I 5.5.6 unallocated intricate-block unit set changed")
     quarantined_statement_edge_ids = set()
     for row, missing in visual_dependency_gaps(
             statement_edges, vqa_operational_by_item,
@@ -3376,6 +3932,7 @@ if residual_path.exists():
         "disposition", "decision_id", "supersedes",
     ]
     residual_raw = residual_path.read_bytes()
+    require_strict_lf(residual_raw, "resid.csv")
     residual_lines = residual_raw.decode("utf-8").splitlines()
     residual_physical_lines = residual_raw.splitlines(keepends=True)
     if not residual_lines or residual_lines[0].split(",") != expected_resid_header:
@@ -3492,9 +4049,29 @@ if residual_path.exists():
         require_raw_line(
             residual_physical_lines, line_index, expected_bytes, expected_sha,
             f"R{line_index:06d}")
-    if (len(residual_raw) != 181479 or
+    require_lf_prefix(
+        residual_raw, 635, 181479,
+        "D63D2F4CF4A153B41D44A4410B6D288EDE1821D7E7D05F47C6B63C18E3131AF0",
+        "R000001-R000634")
+    require_raw_block(
+        residual_physical_lines, 635, 695, 17394,
+        "C47362FF91A9ADA18D529E306FB51D06A668E895EC6BE799357C151424AABCCE",
+        "R000635-R000695")
+    for line_index, expected_bytes, expected_sha in (
+            (659, 331,
+             "FB2F5BFC541D730FD92B9C2B62E11E968C09302B74750A0EA73B1025ED84DB2E"),
+            (660, 339,
+             "8251FC0221E83CE5F68CC1E7068545FABCCB166CA8A38D74AFE54BA2DC51E29F"),
+            (661, 295,
+             "413C602B48B96C727F469D8AADF655C4DF0CBB01D10F0119B3F26DD1DE38BEAC"),
+            (682, 373,
+             "B0A7BEDF0FFB4D9C0E4475ADFAD2A96B778AF94B0AC2BFF92681705B512BEA14")):
+        require_raw_line(
+            residual_physical_lines, line_index, expected_bytes,
+            expected_sha, f"R{line_index:06d}")
+    if (len(residual_raw) != 198873 or
             hashlib.sha256(residual_raw).hexdigest().upper() !=
-            "D63D2F4CF4A153B41D44A4410B6D288EDE1821D7E7D05F47C6B63C18E3131AF0"):
+            "47F8DBAC64C836AE5DDEED4A3837A5D86238E494F877DF183A04DB4C3BB8FD4F"):
         ERRORS.append("final residual manifest identity mismatch")
     residual_ids = [row["residual_id"] for row in all_residuals]
     if len(residual_ids) != len(set(residual_ids)):
@@ -3506,7 +4083,58 @@ if residual_path.exists():
         all_residuals, "residual_id", "resid.csv")
     active_residual_ids = {row["residual_id"] for row in residuals}
     residual_by_id = {row["residual_id"]: row for row in all_residuals}
-    visual_gap_referral_ids = set()
+    i55_visual_residual_contracts = {
+        "R000659": (
+            "ega:I.5.5.1:diagram:xymatrix:1",
+            "producer_visual_evidence_not_commons_admitted", "open_gap",
+            "D56 passes with exact three-surface crops but the admitted Commons interface stops at D48 and has no operational V row",
+            "Retain the semantic triangle while deferring operational visual promotion to an admitted interface successor",
+            "D000277", ""),
+        "R000660": (
+            "ega:I.5.5.1:diagram:xymatrix:2",
+            "producer_visual_evidence_not_commons_admitted", "open_gap",
+            "D57 passes with exact three-surface crops but the admitted Commons interface stops at D48 and has no operational V row",
+            "Retain the semantic reduction square while deferring operational visual promotion to an admitted interface successor",
+            "D000277", ""),
+        "R000661": (
+            "ega:I.5.5.6:proof",
+            "intricate_formula_visual_evidence_not_commons_admitted",
+            "open_gap",
+            "D58 passes but D65 remains nonadmitted and the selected block has no units.csv child",
+            "Keep parent proof semantics and require explicit item allocation plus an admitted interface before V promotion",
+            "D000277", ""),
+        "R000682": (
+            "ega:I.5.5.12:diagram:xymatrix:1",
+            "reduction_square_semantic_coverage_and_D48_visual_gap",
+            "open_gap",
+            "Tags 0356 and 01J4 derive the semantic square while DIA48T leaves all three visual crops null and the later corrected evidence is not admitted",
+            "Retain S000982 and S000983 but quarantine operational visual promotion; 01L7 is only a later separatedness dependency",
+            "D000270", ""),
+    }
+    for residual_id, expected in i55_visual_residual_contracts.items():
+        row = residual_by_id.get(residual_id)
+        actual = tuple(row.get(field) for field in (
+            "source_unit", "kind", "status", "evidence", "disposition",
+            "decision_id", "supersedes")) if row else None
+        if actual != expected or residual_id not in active_residual_ids:
+            ERRORS.append(
+                f"missing exact active EGA I 5.5 visual residual {residual_id}")
+    i55_issue_residual_links = {
+        "I000092": ("R000659", "D000277"),
+        "I000093": ("R000660", "D000277"),
+        "I000094": ("R000661", "D000277"),
+        "I000095": ("R000682", "D000270"),
+    }
+    for issue_id, (residual_id, decision_id) in (
+            i55_issue_residual_links.items()):
+        issue = issue_by_id.get(issue_id)
+        residual = residual_by_id.get(residual_id)
+        if (issue is None or residual is None or
+                issue.get("subject_id") != residual.get("source_unit") or
+                residual.get("decision_id") != decision_id):
+            ERRORS.append(
+                f"EGA I 5.5 issue/residual referral changed for {issue_id}")
+    visual_gap_referral_ids = set(i55_visual_residual_contracts)
     quarantined_residual_ids = set()
     for row, missing in visual_dependency_gaps(
             residuals, vqa_operational_by_item,
@@ -3801,6 +4429,7 @@ if agent_path.exists():
         "duration_ms", "returned", "owner_check", "disposition", "writes",
     ]
     agent_raw = agent_path.read_bytes()
+    require_strict_lf(agent_raw, "agent.csv")
     agent_physical_lines = agent_raw.splitlines(keepends=True)
     if (not agent_physical_lines or
             agent_physical_lines[0].decode("utf-8").rstrip("\n").split(",") !=
@@ -3832,9 +4461,65 @@ if agent_path.exists():
         require_raw_line(
             agent_physical_lines, line_index, expected_bytes, expected_sha,
             f"A{line_index:06d}")
-    if (len(agent_raw) != 113466 or
+    require_lf_prefix(
+        agent_raw, 225, 113466,
+        "A7824B07289BACE5ECDA6C9860859B46DF25533F73C4C3801E4B52FF5EEA0618",
+        "A000001-A000224")
+    for line_index, expected_bytes, expected_sha in (
+            (225, 661,
+             "38C24A69A7859C00F94041CEAB4A883BF31E51C6A9A2E91264B6621D97BF0926"),
+            (226, 701,
+             "9496C085541169FF6C67405FB545F900BE50873CE51DF85E0FC17506633847AB"),
+            (227, 727,
+             "1E86DCCC9F847241728D297B2F6443DC3D07BB4996DEC64E0255C79F23D95A72"),
+            (228, 747,
+             "C6C28BA8B3E94D1EDC048CCBCE7A21FE9484FBDB6538D9E22EE103AEAA239AD8"),
+            (229, 764,
+             "36DE3789FF3893E97D3DFCB7F36DA20AF738911F789CDC7A6AE536C9E5FDBF4B"),
+            (230, 809,
+             "8B77BDF038DB03785401F8F9A557A19DE6D84E50A702A4E299AD6487C5F4A17A")):
+        require_raw_line(
+            agent_physical_lines, line_index, expected_bytes, expected_sha,
+            f"A{line_index:06d}")
+    a228 = next(
+        (row for row in agent_rows if row.get("run_id") == "A000228"),
+        None,
+    )
+    if a228 is None or tuple(a228.get(field) for field in (
+            "task_id", "scope", "status", "disposition", "writes")) != (
+            "/root/ega_i_55_checker_plan",
+            "EGA I 5.5.1-5.5.13 read-only checker prefix source-QA referral semantic-only diagram line-ending mutation and snapshot plan",
+            "completed",
+            "accepted as final read-only checker plan without repository source visual producer publication or upstream writes",
+            "none"):
+        ERRORS.append("missing exact A000228 checker-planning audit")
+    a229 = next(
+        (row for row in agent_rows if row.get("run_id") == "A000229"),
+        None,
+    )
+    if a229 is None or tuple(a229.get(field) for field in (
+            "task_id", "scope", "status", "disposition", "writes")) != (
+            "/root/ega_i_55_postwrite_math",
+            "EGA I 5.5.1-5.5.13 independent post-write exact-source pinned-tag hypothesis quantifier classification route documentation and final Q-evidence audit",
+            "completed",
+            "accepted as final independent post-write mathematical audit over regenerated exact Q evidence",
+            "none"):
+        ERRORS.append("missing exact A000229 post-write mathematical audit")
+    a230 = next(
+        (row for row in agent_rows if row.get("run_id") == "A000230"),
+        None,
+    )
+    if a230 is None or tuple(a230.get(field) for field in (
+            "task_id", "scope", "status", "disposition", "writes")) != (
+            "/root/ega_i_55_release_audit",
+            "EGA I 5.5.1-5.5.13 independent final live release audit of HEAD e2c31af canonical NUMDAM F33 pinned Stacks a04446e append-only ledgers source-error crops D48 semantic-only boundary privacy and producer isolation",
+            "completed",
+            "accepted as final independent read-only release audit with no producer tree or remote writes",
+            "none"):
+        ERRORS.append("missing exact A000230 final release audit")
+    if (len(agent_raw) != 117875 or
             hashlib.sha256(agent_raw).hexdigest().upper() !=
-            "A7824B07289BACE5ECDA6C9860859B46DF25533F73C4C3801E4B52FF5EEA0618"):
+            "1388CBB3251039D5F8F231274775360D5DDEA457756E853ADCBE6A0AD2DD54E3"):
         ERRORS.append("final agent manifest identity mismatch")
     task_scopes = [(row["task_id"], row["scope"]) for row in agent_rows]
     if len(task_scopes) != len(set(task_scopes)):
@@ -3908,6 +4593,7 @@ if not findings_path.exists():
     ERRORS.append("missing findings channel")
 else:
     findings_raw = findings_path.read_bytes()
+    require_strict_lf(findings_raw, "findings.jsonl")
     require_lf_prefix(
         findings_raw, 16, 19629,
         "53C3654734C7902496888FD10707B523EDB554D331FE9598590010C62B359720",
@@ -3930,6 +4616,30 @@ else:
                 hashlib.sha256(raw_extension).hexdigest().upper() != expected_sha):
             ERRORS.append(
                 f"exact published-correction finding row {line_index + 1} changed")
+    require_lf_prefix(
+        findings_raw, 20, 25375,
+        "52A6FD7CC660F4FF7C088F69906DEB10F5738CF1A563F6E8291CB27F313956BE",
+        "first 20 findings")
+    require_raw_block(
+        findings_physical_lines, 20, 23, 4882,
+        "C23145CCA064F37E71A80A7B3526943DC605EF53A1B7800BAD20BD94AEA323AC",
+        "EGA I 5.5 findings")
+    for line_index, expected_bytes, expected_sha in (
+            (20, 1229,
+             "56685221C8544B8097F6030AC951E10D8C3FC39F10D9707DCB45C9875477A1A8"),
+            (21, 1167,
+             "DB4E6AAEAEC3577BFBBC6D9A954961DFFEBA92D4DD4FA8650B55CCEF493BBF80"),
+            (22, 1232,
+             "C00D6CB2205121D1CAD4BC5C954CF71493BD21ED3C40CC44129D09060CD79496"),
+            (23, 1254,
+             "20CB9C77535574D948ED82557605F16A9077335C4FCDC7B8538929FB4436BD87")):
+        require_raw_line(
+            findings_physical_lines, line_index, expected_bytes,
+            expected_sha, f"finding row {line_index + 1}")
+    if (len(findings_raw) != 30257 or
+            hashlib.sha256(findings_raw).hexdigest().upper() !=
+            "4C36A58A12185977E1836D077058D7C12C9ECA275EE65B72445D7B036C2EADB3"):
+        ERRORS.append("final findings manifest identity mismatch")
     findings_text = findings_raw.decode("utf-8")
     for number, raw in enumerate(findings_text.splitlines(), 1):
         if not raw.strip():
@@ -3997,6 +4707,7 @@ if not qsrc_path.is_file() or qsrc_path.is_symlink():
     ERRORS.append("missing or unsafe source-error QA receipt manifest")
 else:
     qsrc_raw = qsrc_path.read_bytes()
+    require_strict_lf(qsrc_raw, "qsrc.csv")
     with qsrc_path.open(encoding="utf-8", newline="") as handle:
         reader = csv.DictReader(handle)
         if reader.fieldnames != qsrc_header:
@@ -4028,6 +4739,30 @@ else:
         if (len(raw_extension) != expected_bytes or
                 hashlib.sha256(raw_extension).hexdigest().upper() != expected_sha):
             ERRORS.append(f"exact Q00000{line_index} source-error row changed")
+    require_lf_prefix(
+        qsrc_raw, 11, 3195,
+        "82F616FCF166A72202E1C5C1177B569EB84B263829FE2FA5384E21282DE820F0",
+        "Q000001-Q000010")
+    require_raw_block(
+        qsrc_physical_lines, 11, 14, 1221,
+        "E4EFC62C1522EFF8AF8AC358FED20A5D2D2F6DB4A2D43AD868BFD6105E7110FB",
+        "Q000011-Q000014")
+    for line_index, expected_bytes, expected_sha in (
+            (11, 301,
+             "D251E8094959FF1CC2DFC37617F4F8F315549E0E5492D47B60128092769F5E84"),
+            (12, 301,
+             "D50F0B81A2655943CA71013614083C149F0946136CA7033AC5A84C7EFAFE884F"),
+            (13, 307,
+             "60E7CC860628A6B66CB6A886666F7D36AEC686F45E7998F3268FC9B0AD464D38"),
+            (14, 312,
+             "96749795CE70F8B80DF165CCE1CFD758157022992C4400B701AA694630D7A7A5")):
+        require_raw_line(
+            qsrc_physical_lines, line_index, expected_bytes, expected_sha,
+            f"Q{line_index:06d}")
+    if (len(qsrc_raw) != 4416 or
+            hashlib.sha256(qsrc_raw).hexdigest().upper() !=
+            "91EAAF72648ACDDE00F6D20D014DB60F0071C8BDEDDA2027D2E07FE4C2182086"):
+        ERRORS.append("final source-error QA manifest identity mismatch")
     qsrc_ids = [row.get("receipt_id", "") for row in qsrc_rows]
     contiguous_ids(qsrc_rows, "receipt_id", "Q", "qsrc.csv")
     if qsrc_ids[:len(expected_qsrc)] != list(expected_qsrc):
@@ -4090,6 +4825,21 @@ q_decision_contracts = {
     "Q000010": (
         "ega:I.5.3.13:proof", "carry_published_4_2_4_to_4_2_5_citation_correction",
         "Q000010 and EGA III.2 Errata list 2 citation correction"),
+    "Q000011": (
+        "ega:I.5.5.5:proof",
+        "carry_printed_5_5_4_to_5_5_5_citation_correction",
+        "Q000011 and direct comparison of EGA I 5.5.4 with 5.5.5"),
+    "Q000012": (
+        "ega:I.5.5.9:proof",
+        "carry_two_printed_5_5_4_to_5_5_5_citation_corrections",
+        "Q000012 and direct comparison of EGA I 5.5.4 5.5.5 and 5.5.8"),
+    "Q000013": (
+        "ega:I.5.5.11",
+        "carry_official_doubled_origin_fibre_ideal_zero_to_s_correction",
+        "Q000013 EG-EGA-I-P139-FR-DOUBLED-ORIGIN-IDEAL-ERROR-001 and direct doubled-line fibre computation"),
+    "Q000014": (
+        "ega:I.5.5.11", "refer_false_doubled_plane_neither_condition_claim",
+        "Q000014 01IL 01KP and direct restriction-ring computation"),
 }
 q_expected_decision_ids = {
     "Q000001": "D000161", "Q000002": "D000162",
@@ -4097,6 +4847,8 @@ q_expected_decision_ids = {
     "Q000005": "D000188", "Q000006": "D000198",
     "Q000007": "D000216", "Q000008": "D000219",
     "Q000009": "D000226", "Q000010": "D000231",
+    "Q000011": "D000272", "Q000012": "D000273",
+    "Q000013": "D000274", "Q000014": "D000275",
 }
 q_expected_admission_ids = {
     "Q000001": "D000165", "Q000002": "D000165",
@@ -4104,6 +4856,8 @@ q_expected_admission_ids = {
     "Q000005": "D000189", "Q000006": "D000199",
     "Q000007": "D000221", "Q000008": "D000221",
     "Q000009": "D000233", "Q000010": "D000233",
+    "Q000011": "D000276", "Q000012": "D000276",
+    "Q000013": "D000276", "Q000014": "D000276",
 }
 q_admission_contracts = {
     "D000165": (
@@ -4127,11 +4881,16 @@ q_admission_contracts = {
         "ega:source-error-qa",
         "admit_exact_authority_crop_receipts_for_5_3_9_and_5_3_13_published_corrections",
         "Q000009 Q000010 in reports/qsrc.csv and primary EGA III.2 Errata list 2"),
+    "D000276": (
+        "ega:source-error-qa",
+        "admit_exact_authority_crop_receipts_for_5_5_5_5_5_9_and_5_5_11",
+        "Q000011 Q000012 Q000013 Q000014 in reports/qsrc.csv"),
 }
 q_authority_page_geometries = {
     122: (606, 756), 124: (595, 748), 126: (595, 748),
     127: (603, 754), 130: (603, 755), 131: (595, 748),
-    132: (595, 748), 133: (595, 748),
+    132: (595, 748), 133: (595, 748), 137: (595, 748),
+    138: (601, 752),
 }
 legacy_finding_companions = {
     "Q000001": "EGA-I-4.2.3-P123-GAMMA-PSI-CROP-RECEIPT",
@@ -4191,6 +4950,8 @@ for row in qsrc_rows:
         ERRORS.append(f"source-error QA hash mismatch for {receipt_id}")
     if png_dimensions(raw_crop) != (width_px, height_px):
         ERRORS.append(f"source-error QA PNG mismatch for {receipt_id}")
+    if not png_has_nonwhite_content(raw_crop):
+        ERRORS.append(f"source-error QA crop has no visible content for {receipt_id}")
     finding = findings_by_id.get(row["finding_id"])
     companion_id = legacy_finding_companions.get(receipt_id)
     evidence_finding = (
@@ -4199,7 +4960,9 @@ for row in qsrc_rows:
             evidence_finding, receipt_id, row["path"], row["crop_sha256"])):
         ERRORS.append(f"source-error QA finding link mismatch for {receipt_id}")
     correction_contract = q_decision_contracts.get(receipt_id)
-    if (row["decision_id"] != q_expected_decision_ids.get(receipt_id) or
+    if (not q_route_exact(
+            receipt_id, row["decision_id"], row["admission_id"],
+            q_expected_decision_ids, q_expected_admission_ids) or
             correction_contract is None or
             not decision_contract(row["decision_id"], *correction_contract)):
         ERRORS.append(f"source-error QA decision link mismatch for {receipt_id}")

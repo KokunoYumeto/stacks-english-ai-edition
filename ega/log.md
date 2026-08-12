@@ -2210,3 +2210,55 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   English offsets are 47,778 and 46,893 while the actual marker bytes are
   48,651 and 46,901. The admitted Commons interface therefore remains D48 and
   publication stays disabled.
+
+### EGA I 5.5.1--5.5.13 semantic and source-error checkpoint
+
+- Direct-French review now covers the whole separatedness subsection through
+  5.5.13. D000258--D000271, S000880--S000986, and R000635--R000695 bind every
+  actual statement, proof, labelled identity, and registered diagram unit to
+  exact labels at pinned Stacks commit
+  `a04446e57ec1fbc252a871afcec7752fb2807b14`. The final graph contains 979
+  active / 986 physical statement rows across 333 source units, 966 existing-
+  tag rows using 269 distinct official tags, thirteen local-mirror rows, and
+  42 exact full-statement equivalences. Residual history contains 670 active /
+  695 physical rows, 25 superseded rows, ten open gaps, and thirteen active
+  local-mirror rows. The next semantic cursor is EGA I 6.1.1.
+- The theorem audit retains the finite closed-family hypothesis in 5.5.4,
+  separates the two directions and quantifiers in 5.5.8--5.5.9, reads the
+  historical `scheme` target in 5.5.10 as separated, and treats the arbitrary-
+  property package in 5.5.12--5.5.13 as formal composite coverage. Reduction
+  arrows are closed by 01J4, factor through 0356, and are separated for
+  cancellation by 01L7; no one-tag theorem is invented.
+- D000272--D000276, I000088--I000091, Q000011--Q000014, and four new findings
+  preserve three wrong 5.5.4 references and both 5.5.11 mathematical defects.
+  Each wrong reference uniquely requires target-locality Proposition 5.5.5.
+  The doubled-line exceptional fibre is over `(s)`, not `(0)`. For the doubled
+  plane, the punctured overlap is nonaffine but has global ring `k[s,t]` and
+  full identity restriction images, so only the first separation criterion
+  fails. The fourteen-row source-QA manifest is 4,416 bytes / SHA-256
+  `91EAAF72648ACDDE00F6D20D014DB60F0071C8BDEDDA2027D2E07FE4C2182086`;
+  its fourteen immutable authority crops total 5,763,117 bytes. Diplomatic
+  source is unchanged.
+- The first Q000011--Q000014 render attempt was rejected before admission:
+  bundled `pdftoppm` returned correctly sized but pure-white PNGs after a
+  high-resolution allocation failure. The accepted replacements were rendered
+  in grayscale by Poppler `pdftocairo` 24.04.0 (binary SHA-256
+  `433369ECCDC3FDC640A0970075E05221EF954B84119AB6551EEEF5EC10BB8D69`),
+  personally inspected, and checked for nonwhite pixels. `check.py` now rejects
+  blank source-error crops, including dimension- and hash-valid ones.
+- S000908--S000910 and S000982--S000983 remain valid semantic mappings for
+  three diagram units. Their visual status is independently fail closed under
+  I000092, I000093, I000095 and R000659, R000660, R000682. The unallocated
+  intricate block remains under I000094/R000661 without inventing a unit.
+  D56--D59/D65 are nonadmitted producer discovery only; no V or J row is added
+  and the current interface remains F37ZW/R261/B37AJ/B239/D48/DIA48T/Q37CY/
+  Q37DB. The ordered active referral set is exactly I000088, I000089,
+  I000091--I000095; I000090 is resolved.
+- A000225--A000230 record the two bounded semantic audits, the adversarial
+  hypothesis/source-defect audit, the checker-hardening plan, the independent
+  post-write mathematical audit, and the independent final release audit. One
+  redundant provisional residual for the two 5.5.9 citations was removed before
+  sealing, leaving one canonical append-only record. Prefix replay, exact
+  source-QA joins, LF-only files, semantic-only diagram isolation, adversarial
+  mutations, compilation, privacy, diff, and remote verification remain release
+  gates.
