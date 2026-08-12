@@ -2025,3 +2025,146 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   5,000-dpi Q crops, the local lemma and current Schemes build, append-only
   prefixes, mirror-only policy, privacy, and remote-readiness surface and
   returned the final HARD PASS.
+
+### EGA I 5.3.5.1 visual fail-close referral
+
+- On 2026-08-12 a fresh personal exact-5,000-dpi review found that active
+  V000021 had accepted an incorrect bottom-arrow label-side signature. The
+  NUMDAM authority crop on PDF page 131 at `86;574;260;70` places
+  `Delta_{S|T}` below the arrow `S -> S times_T S`; the B37AIR French reader
+  crop on page 90 at `240;410;299;65` and the B238R English reader crop on
+  page 322 at `86;575;275;65` both place it above. The graph, all other labels,
+  directions, geometry, and the already recorded equation-number placement
+  remain unchanged.
+- The exact live source defect is one byte in each language. French
+  `ega1-5-fr.tex:437` has the caret at zero-based byte 19,828 and English
+  `ega1-5.tex:316` has it at byte 18,692; both require `^` to `_`, with the
+  inverse `_` to `^`. No producer source was mutated from this repository.
+- D000242 supersedes D000220 and records the correction referral. I000076 is
+  the active canon issue. R000606 supersedes R000548 as an open visual gap.
+  V000021 remains immutable adverse history but is not an admissible current
+  witness while the issue is active, and all downstream current-reader
+  promotion remains fail closed.
+- The failed current-reader crops are preserved as `qa/r/j31.png` (583,569
+  bytes / SHA-256
+  `2ED884790C7A378F54CECB3BD6B2A8C58EE4F3171825BD472EBDD8E602CCDCFA`)
+  and `qa/r/j32.png` (613,948 bytes / SHA-256
+  `BBAF3173A548DEDA55241CCE3D14FB997D504D33AE122C27DCAF74DAA5342962`).
+  Their J rows are deliberately deferred until a corrected accepted V
+  successor exists. The exact authority crop remains reusable and is not
+  rejected.
+- The canonical French/English producer task was notified with the precise
+  line and byte loci and asked for append-only source manifests, rebuilt
+  readers, direct visual closure, cleanup receipts, and deterministic inverse
+  metadata. This remains Mathematical Commons work only; no upstream Stacks
+  packaging or submission is involved.
+
+### EGA I 5.1.5 and 5.1.9 visual fail-close referrals
+
+- The same bounded exact-5,000-dpi sweep found two earlier bottom-arrow
+  label-side defects. In the 5.1.5 reduction square, NUMDAM page 128 box
+  `258;214;76;64` places the bottom `f` below, while B37AIR French page 88 box
+  `254;126;84;68` and B238R English page 319 box `258;682;96;67` place it
+  above. In the second 5.1.9 square, NUMDAM page 129 box `258;421;70;69`
+  places the leftward bottom `f_0` below, while B37AIR French page 89 box
+  `263;83;69;64` and B238R English page 321 box `273;68;66;67` place it above.
+  Every object, edge, direction, other label, and geometric association agrees.
+- The source repairs are six length-preserving one-byte edits across the three
+  defects. For 5.1.5, French line 127 byte 6,169 and English line 83 byte 5,590
+  require `^` to `_`; only the first occurrence is in scope. For 5.1.9,
+  French line 246 byte 11,369 and English line 169 byte 10,214 require `_` to
+  `^` on the unique leftward `f_0` arrow. Together with the 5.3.5 edits at
+  bytes 19,828 and 18,692, the exact in-memory postimages are French
+  `B4B58D0664ECAC315942727082B2999A23AEB6EF11BDB80B40E9857E37447F04`
+  and English
+  `B5323F253347AFAF0489059C0B6E02C850176473EBD4551DA5AA533F217AF574`.
+  The Commons repository did not mutate either producer source.
+- D000243 and I000077 refer the 5.1.5 defect. D000244 supersedes the mixed
+  D000203 batch and I000078 refers the 5.1.9 defect; V000017--V000019 remain
+  content-correct historical evidence. R000607 and R000608 retain the exact
+  mathematical derivations while replacing R000471 and R000491 with active
+  visual gaps. The mathematical S rows remain present, but visual and
+  current-reader promotion is blocked until repaired readers and fresh
+  downstream certification exist.
+- Failed B37AIR/B238R crops are preserved without premature J ledger rows as
+  `qa/r/j33.png` (249,144 bytes /
+  `4C0DAF5CF1806A8768C9E17BFE8DBAA8C343947D26492405E72AB9B88A8C6809`),
+  `qa/r/j34.png` (270,555 bytes /
+  `34667D72E1A4C055BF21D3E7BEF82A1C47DF3063C692299CB56E726E84752B02`),
+  `qa/r/j35.png` (228,378 bytes /
+  `F8D713DA575E70B5FB90F7764300D53773F0323E9A77FE318C344CDEA1A9776A`),
+  and `qa/r/j36.png` (231,635 bytes /
+  `A0674180FE13DD600251D916200BD537008C19A1CFFB39AE646B3088E1CB16D0`).
+  J000033--J000036 remain reserved until corrected active V successors exist.
+- Independent original-detail review of every V000008--V000025 surface found
+  no fourth defect. The producer was told that the final correction batch is
+  exactly 5.1.5, 5.1.9 diagram 2, and 5.3.5, in addition to the already
+  corrected p.109 `pi''` side. Commons keeps V000008--V000025 operationally
+  quarantined until the canonical producer seals a repaired final lineage.
+
+### D48 final current-reader closure
+
+- The canonical producer subsequently sealed the exact three-repair source
+  manifests F37ZW (13,345 bytes / SHA-256
+  `0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0`)
+  and R261 (32,444 bytes / SHA-256
+  `A87DC2EDD0BDA5CE6828A2759095B1F4F3278E993DC5661EBA2E345C33BEEF18`).
+  Their exact live trees replay as 18 files / 1,014,921 bytes / tree
+  `5A2A1BC407D5B0395C5E0D10103E0813C4EC9EDE37668D4DCA1091D1D280A841`
+  and 127 files / 7,284,367 bytes / tree
+  `3FF379C715F99D2A28F231A54D55996E9CDA27153E5DBBFB14BA6F7F70766CB0`.
+  The three inverse markers in each source restore the exact F37ZUR/R259R
+  trees without changing any other row.
+- B37AJ and B239 seal the corresponding 168-page French and 1,347-page
+  English readers. D48 binds the three repaired diagrams. DIA48T is the
+  admitted 84-item inventory with 53 verified / 31 pending and next cursor
+  `DIA:ega1/ega1-3-fr.tex:699`. Q37CY binds the exact 12-row pre-cleanup tree;
+  Q37DB binds Q37CZ, retains Q37CU/Q37CV as adverse evidence, supersedes the
+  malformed Q37CX correction, proves `C:/tmp/EGA-d48x` absent, and closes the
+  admitted cleanup lineage. Publication remains quarantined.
+- DIA48, DIA48R, DIA48S, Q37CU, Q37CV, Q37CW, and Q37CX remain immutable
+  rejected control history. They contain stale inventory pointers or malformed
+  comma-bound permanent/supersession arrays and are forbidden from every
+  admitted interface field. The interface and scope mirror this exact adverse
+  object rather than erasing the failed attempts.
+- V000027--V000044 are fresh exact-5,000-dpi current-reader successors for
+  every affected or downstream witness. V000027 was independently rerendered
+  from its declared B37AJ/B239 boxes after the checker rejected mismatched
+  raster dimensions: the corrected French crop is 10,000 x 5,333 pixels,
+  407,228 bytes, SHA-256
+  `3AC6EE495DD99E4C23177295382CD58CF9811688488BC74000D94DC18CEDA748`;
+  the English crop is 10,667 x 5,667 pixels, 445,513 bytes, SHA-256
+  `184C73331F676B71E02B23624DA1D492E4BA815CD3659F476CF85FB915D1C15E`.
+  Personal original-detail comparison confirms the complete two-by-three
+  graph, all arrows and labels, and the corrected left-side `pi''` placement.
+  No scale exception was introduced.
+- J000031--J000036 now bind the six predecessor-reader adverse crops to their
+  exact active successors. D000245 admits the full D48 interface; D000246
+  admits the current visual successor set; D000247--D000249 close the three
+  label-side referrals. I000079--I000087 and R000611--R000616 preserve the
+  corresponding append-only issue and residual successor chains.
+- The deterministic R261-to-R184 replay is 41 operations across twelve paths.
+  Both reconstructed outputs contain 127 files / 7,283,321 bytes / tree
+  `3BFB1C5103093481246EF4A6365E08544F6D5E19ACC0EA63E717F3F3643F064D`.
+  All source and intermediate manifest, file, block, tree, ordering,
+  no-overwrite, and final-reread gates remain fail closed.
+- A later D49 producer line is not consumed by this checkpoint. Independent
+  replay found DIA49R3 internally split between 53/31 and 54/30 counts,
+  Q37DA recording zero temporary bytes for a 1,336,647-byte tree, a disconnected
+  cleanup predecessor, and incomplete rejected lineage. D49 therefore confers
+  no source, reader, inventory, cleanup, visual, interface, or publication
+  admission in the Commons mirror.
+- Immediately before staging, two fresh no-overwrite R261-to-R184 runs and two
+  independent intakes again returned byte-identical outputs. Tracked and both
+  regenerated copies of `files.csv` (13,987 bytes /
+  `A1BB4950FE27D813FD79BCC4604607994D38E3F1E5A2C1D52EC21E01EC5C7E5F`),
+  `units.csv` (1,864,094 bytes /
+  `5C73182F07F749F03C0B0F92BBA0D37884873FFF096C93AE2E1A3CDB599EDA4C`),
+  and `intake.json` (1,132 bytes /
+  `6252CE94351C297E9BBBACA7527FD79688D0F3B2917A0B1F82F3D87D64130C7D`)
+  match exactly. A fresh two-pass standalone Schemes build produced a clean
+  50-page 651,424-byte PDF at SHA-256
+  `FC78EE27D50D6C2C53458C53EE642AB089ED29FD0993026DAAA293906C16B336`;
+  personal inspection of pages 39--41 found the five-part diagonal lemma and
+  its projection proof unclipped and legible, with no changed-line overfull
+  box or duplicate-label warning.

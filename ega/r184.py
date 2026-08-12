@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reconstruct the exact frozen R184 discovery tree from sealed R255."""
+"""Reconstruct the exact frozen R184 discovery tree from sealed R261."""
 
 import argparse
 import base64
@@ -12,10 +12,30 @@ from pathlib import Path
 MANIFEST_BYTES = 92_445
 MANIFEST_SHA256 = "5C64ECD32FD7C5458D2599D70ED667D2CF06D95517EFFA9C6D6DCEF7626913A0"
 TREE_SHA256 = "3BFB1C5103093481246EF4A6365E08544F6D5E19ACC0EA63E717F3F3643F064D"
-SUCCESSOR_MANIFEST_BYTES = 26_255
-SUCCESSOR_MANIFEST_SHA256 = "072A5D6251553188D86A869A9252A6A84A613B7638CAEEDD4C42B3DDD4A7A4E9"
+SUCCESSOR_MANIFEST_BYTES = 32_444
+SUCCESSOR_MANIFEST_SHA256 = "A87DC2EDD0BDA5CE6828A2759095B1F4F3278E993DC5661EBA2E345C33BEEF18"
 SUCCESSOR_BYTES = 7_284_367
-SUCCESSOR_TREE_SHA256 = "B6B0A39094F1E7799C8F6C032FC1C38840597CD66075202D11F4926C8668DB4C"
+SUCCESSOR_TREE_SHA256 = "3FF379C715F99D2A28F231A54D55996E9CDA27153E5DBBFB14BA6F7F70766CB0"
+R261_FIRST_TREE_SHA256 = "1C6755598979359FDB92ACF64CB4F3D3DC56CD99E2056EE264ADC22DE60CBBD2"
+R261_SECOND_TREE_SHA256 = "D53A58719F8758E708B6FDF2AA453F274127DFA9F325B59575BFC60354042FB7"
+R260_MANIFEST_BYTES = 27_368
+R260_MANIFEST_SHA256 = "29DEFA6CC187315E1A791D268CC092DD987F36056F6A206DE72973E05D6D8E32"
+R259R_MANIFEST_BYTES = 26_017
+R259R_MANIFEST_SHA256 = "BF8107C5DF86F2CABB18A9FA3107FBD86CE1A6E3431B7609A0C210226E9F221F"
+R259R_BYTES = 7_284_367
+R259R_TREE_SHA256 = "B48C9EE73FE70027FD8E07AFD85EEC144B8BFF0A36374F93049850B7C051665B"
+R258_MANIFEST_BYTES = 35_230
+R258_MANIFEST_SHA256 = "CD1837FDCD422937A8176BA0BC409AF0D4A32EB291BE88086C66D4EA5098C44D"
+R257S_MANIFEST_BYTES = 33_658
+R257S_MANIFEST_SHA256 = "D05F864BF3AB5F75871AD4B2DAE4B6C94EA4977C7532190C0E1D8171CAC28AA3"
+R258_BYTES = 7_284_367
+R258_TREE_SHA256 = "EE22A2E67C7EEA1DF6B8D1D4F0B664ADD6CC22D687FBB4E424FDAD827A19A110"
+R257_FIRST_TREE_SHA256 = "8FBE85608A2DA7C8F1ECA5789B88A62CBFFC34AFDF9386DDAD2FF11A91A9857C"
+R257_SECOND_TREE_SHA256 = "8954AAF3CFA46704F5CF935FBB368936764AB46DBEED16EE79A4EAEFDD66ACE5"
+R256_BYTES = 7_284_367
+R256_TREE_SHA256 = "5B3F237438E9F1BD59E24FB9D19FEB647312D0B17EEFBDEA9913449B546627BA"
+R255_BYTES = 7_284_367
+R255_TREE_SHA256 = "B6B0A39094F1E7799C8F6C032FC1C38840597CD66075202D11F4926C8668DB4C"
 R255_CITATION_BYTES = 7_284_191
 R255_CITATION_TREE_SHA256 = "4395E86FB39E678A723C6CF43109DB56BFC4FA89A96D980679DCFFC837B0ED91"
 R254_BYTES = 7_283_701
@@ -35,20 +55,47 @@ def sha(data):
 
 
 def read_sealed_successor(source, entries):
-    """Read and validate one complete immutable R255 source snapshot."""
+    """Read and validate one complete immutable R261 source snapshot."""
     source_data = {}
     source_rows = []
     for relative, entry in entries.items():
         data = (source / relative).read_bytes()
         if (len(data), sha(data)) != (entry["bytes"], entry["sha256"]):
-            raise RuntimeError(f"live source differs from sealed R255: {relative}")
+            raise RuntimeError(f"live source differs from sealed R261: {relative}")
         source_data[relative] = data
         source_rows.append(f"{relative}\t{len(data)}\t{sha(data)}\n")
     if (sum(len(data) for data in source_data.values()),
             sha("".join(source_rows).encode("utf-8"))) != (
             SUCCESSOR_BYTES, SUCCESSOR_TREE_SHA256):
-        raise RuntimeError("live source tree is not the sealed R255 successor")
+        raise RuntimeError("live source tree is not the sealed R261 successor")
     return source_data
+
+
+def read_intermediate_manifest(path, expected_bytes, expected_sha,
+                               expected_tree, source_data, label):
+    """Gate an exact predecessor manifest and its complete file inventory."""
+    raw = path.read_bytes()
+    if (len(raw), sha(raw)) != (expected_bytes, expected_sha):
+        raise RuntimeError(f"{label} manifest identity changed")
+    manifest = json.loads(raw.decode("utf-8"))
+    if (manifest.get("file_count"), manifest.get("total_bytes"),
+            manifest.get("serialization_bytes"),
+            manifest.get("canonical_tree_sha256")) != (
+            127, R258_BYTES, 12_890, expected_tree):
+        raise RuntimeError(f"{label} manifest summary changed")
+    entries = {}
+    for entry in manifest.get("files", []):
+        relative = entry["relative_path"]
+        if relative in entries:
+            raise RuntimeError(f"duplicate {label} manifest path: {relative}")
+        entries[relative] = entry
+    if set(entries) != set(source_data):
+        raise RuntimeError(f"{label} manifest path set changed")
+    for relative, data in source_data.items():
+        entry = entries[relative]
+        if (len(data), sha(data)) != (entry["bytes"], entry["sha256"]):
+            raise RuntimeError(f"{label} file inventory changed: {relative}")
+    return manifest
 
 
 def replace_at(data, offset, postimage, preimage, expected_bytes, expected_sha):
@@ -58,6 +105,27 @@ def replace_at(data, offset, postimage, preimage, expected_bytes, expected_sha):
     if (len(result), sha(result)) != (expected_bytes, expected_sha):
         raise RuntimeError(f"inverse result mismatch at byte {offset}")
     return result
+
+
+def inverse_layer(entries, source_data, inverses, expected_bytes,
+                  expected_tree, label):
+    changed = []
+    output = {}
+    rows = []
+    for entry in entries:
+        relative = entry["relative_path"]
+        data = source_data[relative]
+        inverse = inverses.get(relative)
+        if inverse is not None:
+            data = inverse(data)
+            changed.append(relative)
+        output[relative] = data
+        rows.append(f"{relative}\t{len(data)}\t{sha(data)}\n")
+    if (sum(len(data) for data in output.values()),
+            sha("".join(rows).encode("utf-8"))) != (
+            expected_bytes, expected_tree):
+        raise RuntimeError(f"{label} does not reconstruct its exact tree")
+    return changed, output
 
 
 def invert_r242_ega0_3(data):
@@ -172,6 +240,103 @@ def invert_r248_to_r247_ega1_10(data):
     )
 
 
+def invert_r261_first_ega1_5(data):
+    if (len(data), sha(data)) != (
+            48_204,
+            "B5323F253347AFAF0489059C0B6E02C850176473EBD4551DA5AA533F217AF574"):
+        raise RuntimeError("R261 ega1-5 postimage file identity changed")
+    return replace_at(
+        data, 18_692, b"_", b"^", 48_204,
+        "C7D7C26C37D7E8FC3B38B9F60A68A37117B6955EF76FE1B667C900A4FEEFB46F",
+    )
+
+
+def invert_r261_second_ega1_5(data):
+    if (len(data), sha(data)) != (
+            48_204,
+            "C7D7C26C37D7E8FC3B38B9F60A68A37117B6955EF76FE1B667C900A4FEEFB46F"):
+        raise RuntimeError("R261 first inverse intermediate changed")
+    return replace_at(
+        data, 10_214, b"^", b"_", 48_204,
+        "9189040BDD957957FE92012B6147950BBF37580556ADA1D5C5BC8A794637C44C",
+    )
+
+
+def invert_r261_third_ega1_5(data):
+    if (len(data), sha(data)) != (
+            48_204,
+            "9189040BDD957957FE92012B6147950BBF37580556ADA1D5C5BC8A794637C44C"):
+        raise RuntimeError("R261 second inverse intermediate changed")
+    return replace_at(
+        data, 5_590, b"_", b"^", 48_204,
+        "813B4929AA5506E41327A3D9185C35A71CD8A86469D2064661E030F0D8D4D3A5",
+    )
+
+
+R259R_DIAGRAM_POST = b"\\ar[d]_{\\pi''}"
+R259R_DIAGRAM_PRE = b"\\ar[d]^{\\pi''}"
+
+
+def invert_r259r_to_r258_ega1_3(data):
+    if (len(data), sha(data)) != (
+            56_998,
+            "1E69D58C1E0E8D076CD885925F87A7F064F8C92B7FE965FB60B0018573022890"):
+        raise RuntimeError("R259R ega1-3 postimage file identity changed")
+    if sha(data[21_590:22_225]) != (
+            "DC01C2B195D933BC34425B7C9E25D364CC99BF6461FDD28EB538FB461E81C019"):
+        raise RuntimeError("R259R diagram witness changed at byte 21590")
+    if data.count(R259R_DIAGRAM_POST) != 1:
+        raise RuntimeError("R259R diagram postimage is not unique")
+    if data.count(R259R_DIAGRAM_PRE) != 0:
+        raise RuntimeError("R258 diagram preimage already occurs in R259R")
+    return replace_at(
+        data, 22_149, R259R_DIAGRAM_POST, R259R_DIAGRAM_PRE, 56_998,
+        "5A080F25CB54435CAE26E078431CF06A145A2CAE862E96613222EB2D860547ED",
+    )
+
+
+def invert_r257_first_ega1_5(data):
+    return replace_at(
+        data, 27_479, b"_", b"^", 48_204,
+        "9C63FBCF2D735CBF2E147FDED4B03C3D76CA3A03CB201D1CA41363E92E6383FE",
+    )
+
+
+def invert_r257_second_ega1_5(data):
+    return replace_at(
+        data, 27_306, b"_", b"^", 48_204,
+        "ED7DB37AA11B95A06C9F993D35FB97B5315A6709856F473C6EFC0864375A3BBA",
+    )
+
+
+def invert_r257_third_ega1_5(data):
+    return replace_at(
+        data, 25_598, b"_", b"^", 48_204,
+        "0D1567EB2CFED2FA0ADDFB055F31CC3E840EC8B46CB6B1DBCA33E3CE8CBF0738",
+    )
+
+
+R256_DIAGRAM_POST = base64.b64decode(
+    "ICBceHltYXRyaXh7CiAgICBYXHRpbWVzIFlcYXJbcl1ee2ZcdGltZXMgMX1cYXJbZF0gJg"
+    "ogICAgWCdcdGltZXMgWVxhcltyXV57ZidcdGltZXMgMX1cYXJbZF0gJgogICAgWCcnXHRp"
+    "bWVzIFlcYXJbZF1cXAogICAgWFxhcltyXV9mICYKICAgIFgnXGFyW3JdX3tmJ30gJgogICAg"
+    "WCcnCiAgfQ=="
+)
+R256_DIAGRAM_PRE = base64.b64decode(
+    "ICBceHltYXRyaXh7CiAgICBYXHRpbWVzIFlcYXJbcl1ee2ZcdGltZXMgMX1cYXJbZF0gJg"
+    "ogICAgWCdcdGltZXMgWVxhcltyXV57ZidcdGltZXMgMX1cYXJbZF0gJgogICAgWCcnXHRp"
+    "bWVzIFlcYXJbZF1cXAogICAgWFxhcltyXV5mICYKICAgIFgnXGFyW3JdXntmJ30gJgogICAg"
+    "WCcnCiAgfQ=="
+)
+
+
+def invert_r256_to_r255_ega1_3(data):
+    return replace_at(
+        data, 17_172, R256_DIAGRAM_POST, R256_DIAGRAM_PRE, 56_998,
+        "3A733719B8D6C768CC2A73FA15C26EF6B1CE580246F738C43F90069A4C749DCC",
+    )
+
+
 R255_CITATION_POST = base64.b64decode(
     "d2UgYXJlIGRvbmUsIGJ5IFxzcmVme0kuNC4yLjV9XGZvb3Rub3Rle1xlbXBoe1tUcmFucy5d"
     "IFRoZSBGcmVuY2ggc291cmNlIHByaW50cyBcc3JlZntJLjQuMi40fSBoZXJlOyBwdWJsaXNo"
@@ -215,6 +380,46 @@ R255_PROOF_PRE = base64.b64decode(
     "WCQgaXMgc3VyamVjdGl2ZTsKdGhlIHByb3Bvc2l0aW9uIHRodXMgZm9sbG93cyBmcm9tIFxz"
     "cmVme0kuNC4yLjJ9LgpcZW5ke3Byb29mfQ=="
 )
+
+
+R257_FIRST_INVERSES = {
+    "ega1/ega1-5.tex": invert_r257_first_ega1_5,
+}
+
+
+R261_FIRST_INVERSES = {
+    "ega1/ega1-5.tex": invert_r261_first_ega1_5,
+}
+
+
+R261_SECOND_INVERSES = {
+    "ega1/ega1-5.tex": invert_r261_second_ega1_5,
+}
+
+
+R261_THIRD_INVERSES = {
+    "ega1/ega1-5.tex": invert_r261_third_ega1_5,
+}
+
+
+R259R_TO_R258_INVERSES = {
+    "ega1/ega1-3.tex": invert_r259r_to_r258_ega1_3,
+}
+
+
+R257_SECOND_INVERSES = {
+    "ega1/ega1-5.tex": invert_r257_second_ega1_5,
+}
+
+
+R257_THIRD_INVERSES = {
+    "ega1/ega1-5.tex": invert_r257_third_ega1_5,
+}
+
+
+R256_TO_R255_INVERSES = {
+    "ega1/ega1-3.tex": invert_r256_to_r255_ega1_3,
+}
 
 
 def invert_r255_citation_ega1_5(data):
@@ -469,13 +674,14 @@ def main():
     raw_successor_manifest = args.successor_manifest.read_bytes()
     if (len(raw_successor_manifest), sha(raw_successor_manifest)) != (
             SUCCESSOR_MANIFEST_BYTES, SUCCESSOR_MANIFEST_SHA256):
-        raise RuntimeError("R255 manifest identity changed")
+        raise RuntimeError("R261 manifest identity changed")
     successor_manifest = json.loads(raw_successor_manifest.decode("utf-8"))
     if (successor_manifest.get("file_count"),
             successor_manifest.get("total_bytes"),
+            successor_manifest.get("serialization_bytes"),
             successor_manifest.get("canonical_tree_sha256")) != (
-            127, SUCCESSOR_BYTES, SUCCESSOR_TREE_SHA256):
-        raise RuntimeError("R255 manifest summary changed")
+            127, SUCCESSOR_BYTES, 12_890, SUCCESSOR_TREE_SHA256):
+        raise RuntimeError("R261 manifest summary changed")
 
     if args.out.exists():
         raise RuntimeError("output already exists")
@@ -485,19 +691,62 @@ def main():
     for entry in successor_manifest["files"]:
         relative = entry["relative_path"]
         if relative in successor_entries:
-            raise RuntimeError(f"duplicate R255 manifest path: {relative}")
+            raise RuntimeError(f"duplicate R261 manifest path: {relative}")
         successor_entries[relative] = entry
     r184_paths = {entry["relative_path"] for entry in manifest["files"]}
     if set(successor_entries) != r184_paths:
-        raise RuntimeError("R255 and R184 path sets differ")
+        raise RuntimeError("R261 and R184 path sets differ")
     source_data = read_sealed_successor(args.source, successor_entries)
+
+    r261_first_changed, r261_first_data = inverse_layer(
+        manifest["files"], source_data, R261_FIRST_INVERSES,
+        SUCCESSOR_BYTES, R261_FIRST_TREE_SHA256, "R261 first label inverse")
+    r261_second_changed, r261_second_data = inverse_layer(
+        manifest["files"], r261_first_data, R261_SECOND_INVERSES,
+        SUCCESSOR_BYTES, R261_SECOND_TREE_SHA256, "R261 second label inverse")
+    r261_third_changed, r260_data = inverse_layer(
+        manifest["files"], r261_second_data, R261_THIRD_INVERSES,
+        R259R_BYTES, R259R_TREE_SHA256, "R261 third label inverse")
+    read_intermediate_manifest(
+        args.successor_manifest.with_name("R260.json"),
+        R260_MANIFEST_BYTES, R260_MANIFEST_SHA256,
+        R259R_TREE_SHA256, r260_data, "R260")
+    read_intermediate_manifest(
+        args.successor_manifest.with_name("R259R.json"),
+        R259R_MANIFEST_BYTES, R259R_MANIFEST_SHA256,
+        R259R_TREE_SHA256, r260_data, "R259R")
+
+    r259r_changed, r258_data = inverse_layer(
+        manifest["files"], r260_data, R259R_TO_R258_INVERSES,
+        R258_BYTES, R258_TREE_SHA256, "R259R inverse")
+    read_intermediate_manifest(
+        args.successor_manifest.with_name("R258.json"),
+        R258_MANIFEST_BYTES, R258_MANIFEST_SHA256,
+        R258_TREE_SHA256, r258_data, "R258")
+    read_intermediate_manifest(
+        args.successor_manifest.with_name("R257S.json"),
+        R257S_MANIFEST_BYTES, R257S_MANIFEST_SHA256,
+        R258_TREE_SHA256, r258_data, "R257S")
+
+    first_changed, first_data = inverse_layer(
+        manifest["files"], r258_data, R257_FIRST_INVERSES,
+        R258_BYTES, R257_FIRST_TREE_SHA256, "R257S first label inverse")
+    second_changed, second_data = inverse_layer(
+        manifest["files"], first_data, R257_SECOND_INVERSES,
+        SUCCESSOR_BYTES, R257_SECOND_TREE_SHA256, "R257S second label inverse")
+    third_changed, r256_data = inverse_layer(
+        manifest["files"], second_data, R257_THIRD_INVERSES,
+        R256_BYTES, R256_TREE_SHA256, "R257S third label inverse")
+    r256_changed, r255_data = inverse_layer(
+        manifest["files"], r256_data, R256_TO_R255_INVERSES,
+        R255_BYTES, R255_TREE_SHA256, "R256 inverse")
 
     citation_changed = []
     citation_data = {}
     citation_rows = []
     for entry in manifest["files"]:
         relative = entry["relative_path"]
-        data = source_data[relative]
+        data = r255_data[relative]
         inverse = R255_CITATION_INVERSES.get(relative)
         if inverse is not None:
             data = inverse(data)
@@ -624,7 +873,27 @@ def main():
         # A producer may advance the shared live tree while reconstruction is
         # running. Re-read every sealed input immediately before promotion so
         # a mixed-time snapshot can never be reported as a successful replay.
+        final_successor_manifest = args.successor_manifest.read_bytes()
+        if (len(final_successor_manifest), sha(final_successor_manifest)) != (
+                SUCCESSOR_MANIFEST_BYTES, SUCCESSOR_MANIFEST_SHA256):
+            raise RuntimeError("R261 manifest changed before promotion")
         read_sealed_successor(args.source, successor_entries)
+        read_intermediate_manifest(
+            args.successor_manifest.with_name("R260.json"),
+            R260_MANIFEST_BYTES, R260_MANIFEST_SHA256,
+            R259R_TREE_SHA256, r260_data, "R260")
+        read_intermediate_manifest(
+            args.successor_manifest.with_name("R259R.json"),
+            R259R_MANIFEST_BYTES, R259R_MANIFEST_SHA256,
+            R259R_TREE_SHA256, r260_data, "R259R")
+        read_intermediate_manifest(
+            args.successor_manifest.with_name("R258.json"),
+            R258_MANIFEST_BYTES, R258_MANIFEST_SHA256,
+            R258_TREE_SHA256, r258_data, "R258")
+        read_intermediate_manifest(
+            args.successor_manifest.with_name("R257S.json"),
+            R257S_MANIFEST_BYTES, R257S_MANIFEST_SHA256,
+            R258_TREE_SHA256, r258_data, "R257S")
         stage.replace(args.out)
 
     result = {
@@ -634,6 +903,14 @@ def main():
         "bytes": sum(entry["bytes"] for entry in manifest["files"]),
         "tree_sha256": TREE_SHA256,
         "successor_tree_sha256": SUCCESSOR_TREE_SHA256,
+        "r261_first_tree_sha256": R261_FIRST_TREE_SHA256,
+        "r261_second_tree_sha256": R261_SECOND_TREE_SHA256,
+        "r260_r259r_tree_sha256": R259R_TREE_SHA256,
+        "r258_tree_sha256": R258_TREE_SHA256,
+        "r257_first_tree_sha256": R257_FIRST_TREE_SHA256,
+        "r257_second_tree_sha256": R257_SECOND_TREE_SHA256,
+        "r256_tree_sha256": R256_TREE_SHA256,
+        "r255_tree_sha256": R255_TREE_SHA256,
         "r255_citation_tree_sha256": R255_CITATION_TREE_SHA256,
         "r254_tree_sha256": R254_TREE_SHA256,
         "r248_tree_sha256": R248_TREE_SHA256,
@@ -641,13 +918,17 @@ def main():
         "r243_tree_sha256": R243_TREE_SHA256,
         "intermediate_tree_sha256": R219_TREE_SHA256,
         "successor_inverted_files": sorted(set(
+            r261_first_changed + r261_second_changed + r261_third_changed +
+            r259r_changed + first_changed + second_changed + third_changed + r256_changed +
             citation_changed + proof_changed + r254_changed +
             r248_changed + r247_changed + r243_changed)),
         "r184_inverted_files": changed,
         "inverted_files": sorted(set(
+            r261_first_changed + r261_second_changed + r261_third_changed +
+            r259r_changed + first_changed + second_changed + third_changed + r256_changed +
             citation_changed + proof_changed + r254_changed +
             r248_changed + r247_changed + r243_changed + changed)),
-        "inverse_operations": 33,
+        "inverse_operations": 41,
         "inverse_paths": 12,
         "source_mutated": False,
     }

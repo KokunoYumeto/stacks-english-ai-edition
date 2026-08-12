@@ -4050,7 +4050,8 @@ any category with fibre products).
 \begin{lemma}
 \label{lemma-diagonal-identities}
 \begin{reference}
-\cite[(5.3.1), Proposition 5.3.2, and Corollaries 5.3.4 and 5.3.12]{EGA1}
+\cite[(5.3.1), Propositions 5.3.2 and 5.3.15, and Corollaries 5.3.4 and
+5.3.12]{EGA1}
 \end{reference}
 Let $X$, $Y$, and $T$ be schemes over $S$.
 \begin{enumerate}
@@ -4087,16 +4088,21 @@ $$
 \Gamma_{f_{S'}} = (\text{id}_{X_{S'}}, f_{S'}) :
 X_{S'} \longrightarrow X_{S'} \times_{S'} Y_{S'}.
 $$
+\item If $f : X \to Y$ is a morphism over $S$, then
+$$
+(f \times_S f) \circ \Delta_{X/S} = \Delta_{Y/S} \circ f.
+$$
 \end{enumerate}
 \end{lemma}
 
 \begin{proof}
-All four assertions follow from the universal property of fibre products.
+All five assertions follow from the universal property of fibre products.
 For (1), the two composites with the projections to $X$ and $Y$ are $f$ and
 $g$. For (2), the four composites with the projections to $X$, $X$, $Y$,
 and $Y$ agree. For (3), both composites with the projections to $X_{S'}$
 are the identity. For (4), the two composites with the projections to
-$X_{S'}$ and $Y_{S'}$ are $\text{id}_{X_{S'}}$ and $f_{S'}$.
+$X_{S'}$ and $Y_{S'}$ are $\text{id}_{X_{S'}}$ and $f_{S'}$. For (5),
+composing either side with either projection to $Y$ gives $f$.
 \end{proof}
 
 \begin{lemma}

@@ -21,40 +21,37 @@ or published here.
   `5C64ECD32FD7C5458D2599D70ED667D2CF06D95517EFFA9C6D6DCEF7626913A0`;
   127 files, 7,283,321 bytes, tree SHA-256
   `3BFB1C5103093481246EF4A6365E08544F6D5E19ACC0EA63E717F3F3643F064D`.
-- Latest sealed standalone-English source-only successor: R255, 26,255-byte
-  manifest at SHA-256
-  `072A5D6251553188D86A869A9252A6A84A613B7638CAEEDD4C42B3DDD4A7A4E9`;
+- Latest admitted standalone-English source and reader successor: R261,
+  32,444-byte manifest at SHA-256
+  `A87DC2EDD0BDA5CE6828A2759095B1F4F3278E993DC5661EBA2E345C33BEEF18`;
   127 files, 7,284,367 bytes, tree SHA-256
-  `B6B0A39094F1E7799C8F6C032FC1C38840597CD66075202D11F4926C8668DB4C`.
-  It carries corrected-language versions of the published EGA I 5.3.9 proof
-  and 5.3.13 citation. The citation-first and proof-second inverses separately
-  gate the 7,284,191-byte intermediate and exact R254/R251 tree before the
-  existing R248, R247, R243, and R219 gates. R255 is admitted as source only;
-  no R255 English reader or REF14 closure is admitted.
+  `3FF379C715F99D2A28F231A54D55996E9CDA27153E5DBBFB14BA6F7F70766CB0`.
+  It includes the three direct-authority lower-label-side repairs in EGA I
+  5.1.5, 5.1.9, and 5.3.5. B239 seals its 1,347-page current reader. The
+  deterministic R261-to-R184 reconstruction applies 41 exact inverse
+  operations across twelve paths, gates every intermediate tree, rereads the
+  sealed source before promotion, and never mutates the producer tree.
 - French authority: production is active; the latest sealed interface marker
-  is source-only F37ZP through EGA II printed p.37. Its 18-file source tree is
-  byte-identical to the F37ZL reader source and records the 5.3.9 and 5.3.13
-  referral semantics. This
+  is F37ZW through EGA II printed p.37, 13,345 bytes at SHA-256
+  `0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0`.
+  Its 18-file source tree is 1,014,921 bytes at tree SHA-256
+  `5A2A1BC407D5B0395C5E0D10103E0813C4EC9EDE37668D4DCA1091D1D280A841`.
+  B37AJ seals its 168-page current reader. This
   graph still binds every reviewed EGA I claim to its exact historical page receipt;
   receipt F33 also repairs 4.1.9 from `g'` to the directly verified printed
   `g` without changing the already-correct English.
-  The last admitted reader closure is F37ZL/R251 with B37AD/B234 and is
-  fail-closed by D41R/DIA41R/REF11 and exact
-  Q37CC/Q37CD pre/post-cleanup receipts; Q37CD records two 186-row replays,
-  fingerprint `31379A4907EEA1FCAEE0BFF3F4D3F9E15E8BCB9519CCD03BAAC240532DD1D55D`,
-  and verified absence of the temporary `C:/tmp/EGA-ref11` workspace.
-  French B37AD remains compatible with F37ZP because the French source
-  successor is identity-only. English B234 remains predecessor-only because
-  R255 changes source bytes and pagination.
-- The candidate B235/RF14/DIA42R/REF14 reader closure is explicitly
-  quarantined. B235 records three rejected replay totals as zero although the
-  listed files sum to 13,522,363, 1,039,408, and 15,953,997 bytes, while its
-  cleanup generator pins four stale predecessor/script identities. Q37CK and
-  Q37CL are absent and `C:/tmp/EGA-ref14` remains populated. These objects are
-  retained as adverse evidence and confer no reader, closure, visual, or
-  publication claim.
-- Existing incremental pre-Stacks notes: 399,689 bytes, SHA-256
-  `4B4811B6F24F139020E15CF27D7BFA82C3872F0A549DCFF4F64B28F4454737D6`.
+  The current admitted closure is F37ZW/R261 with B37AJ/B239, D48,
+  DIA48T, Q37CY, and final cleanup-lineage receipt Q37DB. DIA48T records
+  53 verified and 31 pending visual items with the next cursor at EGA I
+  printed p.112 diagram 1. Publication remains false.
+- All malformed D48 predecessors remain byte-exact adverse history. DIA48,
+  DIA48R, and DIA48S carried stale or contradictory active pointers; Q37CU,
+  Q37CV, Q37CW, and Q37CX carried comma-bound permanent or supersession
+  arrays. The admitted interface accepts only DIA48T and Q37DB and forbids
+  these predecessors from every active field. The older B235/RF14/REF14
+  failure remains separately preserved as superseded adverse history.
+- Existing incremental pre-Stacks notes: 566,253 bytes, SHA-256
+  `799EF17D0D7D98B2B459EA938C0ABE25647BB7018857FF8D83B656725B932196`.
   They are evidence to normalize into the new schema, not a completed
   deliverable or an upstream mapping.
 - Verified discovery inventory: 127 exact source files and 9,585

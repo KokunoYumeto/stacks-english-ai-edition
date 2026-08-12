@@ -52,6 +52,74 @@ def require_lf_prefix(raw, line_count, expected_bytes, expected_sha, name):
         ERRORS.append(f"immutable LF prefix changed for {name}")
 
 
+def require_raw_line(physical_lines, line_index, expected_bytes,
+                     expected_sha, name):
+    """Pin one append-only physical row, including its line terminator."""
+    if line_index >= len(physical_lines):
+        ERRORS.append(f"missing exact raw row {name}")
+        return
+    raw_line = physical_lines[line_index]
+    if (len(raw_line) != expected_bytes or
+            hashlib.sha256(raw_line).hexdigest().upper() != expected_sha):
+        ERRORS.append(f"exact raw row changed for {name}")
+
+
+def vqa_parent_route(qa_id):
+    """Return the closed reader-generation route for a governed V row."""
+    if not re.fullmatch(r"V\d{6}", qa_id or ""):
+        return None
+    number = int(qa_id[1:])
+    if 1 <= number <= 15:
+        return "legacy"
+    if 16 <= number <= 20:
+        return "b37aa_b231"
+    if number == 21:
+        return "b37ac_b233"
+    if number == 22:
+        return "b37ad_b234"
+    if 23 <= number <= 26:
+        return "b37agr_b237r"
+    if 27 <= number <= 44:
+        return "b37aj_b239"
+    return None
+
+
+def visual_dependency_gaps(data, active_items, dependency_map):
+    """Return source rows whose transitive visual witnesses are absent."""
+    gaps = []
+    active = set(active_items)
+    for row in data:
+        required = set(dependency_map.get(row.get("source_unit"), ()))
+        missing = tuple(sorted(required - active))
+        if missing:
+            gaps.append((row, missing))
+    return gaps
+
+
+def operational_vqa_view(active_rows, quarantined_ids):
+    """Exclude exact fail-closed referrals without erasing physical history."""
+    quarantined = set(quarantined_ids)
+    return [row for row in active_rows if row.get("qa_id") not in quarantined]
+
+
+def terminal_successor(start_id, rows_by_id, successor_by_prior, id_field):
+    """Resolve one append-only successor chain, failing on gaps or cycles."""
+    current_id = start_id
+    seen = set()
+    while current_id not in seen:
+        seen.add(current_id)
+        current = rows_by_id.get(current_id)
+        if current is None:
+            return None
+        next_id = successor_by_prior.get(current_id)
+        if next_id is None:
+            return current
+        if current.get(id_field) != current_id:
+            return None
+        current_id = next_id
+    return None
+
+
 def decision_contract(decision_id, subject, action, evidence):
     """Require an exact active decision triple, not mere ID existence."""
     row = active_decision_by_id.get(decision_id)
@@ -123,6 +191,65 @@ def check_governance_helper_regressions():
     if (lf_prefix(pinned.replace(b"row", b"mut"), 2) ==
             lf_prefix(pinned, 2)):
         ERRORS.append("prefix-mutation adverse check did not detect mutation")
+    baseline_errors = len(ERRORS)
+    expected_row = b"row\n"
+    require_raw_line(
+        [b"header\n", b"mut\n"], 1, len(expected_row),
+        hashlib.sha256(expected_row).hexdigest().upper(), "synthetic-row")
+    if len(ERRORS) != baseline_errors + 1:
+        ERRORS.append("raw-row mutation adverse check did not fail closed")
+    else:
+        ERRORS.pop()
+    expected_routes = {
+        "V000001": "legacy", "V000015": "legacy",
+        "V000016": "b37aa_b231", "V000020": "b37aa_b231",
+        "V000021": "b37ac_b233", "V000022": "b37ad_b234",
+        "V000023": "b37agr_b237r", "V000026": "b37agr_b237r",
+        "V000027": "b37aj_b239", "V000044": "b37aj_b239",
+    }
+    if (any(vqa_parent_route(qa_id) != route
+            for qa_id, route in expected_routes.items()) or
+            vqa_parent_route("V000045") is not None or
+            vqa_parent_route("VX") is not None):
+        ERRORS.append("closed V-row parent-route adverse check failed")
+    synthetic_dependencies = {
+        "parent": {"diagram:a"},
+        "proof": {"diagram:a", "diagram:b"},
+    }
+    synthetic_rows = [
+        {"edge_id": "S-parent", "source_unit": "parent"},
+        {"edge_id": "S-proof", "source_unit": "proof"},
+    ]
+    gaps = visual_dependency_gaps(
+        synthetic_rows, {"diagram:a"}, synthetic_dependencies)
+    if (len(gaps) != 1 or gaps[0][0]["edge_id"] != "S-proof" or
+            gaps[0][1] != ("diagram:b",) or
+            visual_dependency_gaps(
+                synthetic_rows, {"diagram:a", "diagram:b"},
+                synthetic_dependencies)):
+        ERRORS.append("transitive parent/proof visual-gate adverse check failed")
+    successor_rows = {
+        "V1": {"qa_id": "V1"}, "V2": {"qa_id": "V2"},
+        "V3": {"qa_id": "V3"},
+    }
+    if terminal_successor(
+            "V1", successor_rows, {"V1": "V2", "V2": "V3"},
+            "qa_id") != successor_rows["V3"]:
+        ERRORS.append("transitive successor-chain adverse check failed")
+    if (terminal_successor(
+            "V1", successor_rows, {"V1": "V2", "V2": "V1"},
+            "qa_id") is not None or
+            terminal_successor(
+                "missing", successor_rows, {}, "qa_id") is not None):
+        ERRORS.append("cyclic/missing successor adverse check did not fail closed")
+    synthetic_vqa = [
+        {"qa_id": "V1", "item_id": "diagram:a"},
+        {"qa_id": "V2", "item_id": "diagram:b"},
+    ]
+    operational = operational_vqa_view(synthetic_vqa, {"V2"})
+    if ([row["qa_id"] for row in operational] != ["V1"] or
+            len(synthetic_vqa) != 2):
+        ERRORS.append("operational visual quarantine adverse check failed")
 
 
 def active_rows(data, id_field, table_name):
@@ -291,7 +418,12 @@ def check_page_evidence_atomicity():
 check_page_evidence_atomicity()
 
 
-scope = json.loads((ROOT / "scope.json").read_text(encoding="utf-8"))
+scope_raw = (ROOT / "scope.json").read_bytes()
+scope = json.loads(scope_raw.decode("utf-8"))
+if (len(scope_raw) != 14952 or
+        hashlib.sha256(scope_raw).hexdigest().upper() !=
+        "D11ABEB0276F79E656D6B93A84CE690C96A94BB0FDB4495FB4680B6B11078141"):
+    ERRORS.append("final scope manifest identity mismatch")
 if scope.get("status") != "discovery_scaffold":
     ERRORS.append("scope status must remain discovery_scaffold")
 if scope.get("stacks_upstream") != "a04446e57ec1fbc252a871afcec7752fb2807b14":
@@ -315,7 +447,12 @@ expected_governance_prefixes = {
 if scope.get("governance_prefixes") != expected_governance_prefixes:
     ERRORS.append("scope governance-prefix registry mismatch")
 
-interface = json.loads((ROOT / "interface.json").read_text(encoding="utf-8"))
+interface_raw = (ROOT / "interface.json").read_bytes()
+interface = json.loads(interface_raw.decode("utf-8"))
+if (len(interface_raw) != 16435 or
+        hashlib.sha256(interface_raw).hexdigest().upper() !=
+        "2E069BABF483EF662D39CA138D5397D871FAABE4C3483B80B2765AE475FE6A6D"):
+    ERRORS.append("final edition interface identity mismatch")
 if interface.get("status") != "active" or interface.get("ownership", {}).get("cross_tree_writes") is not False:
     ERRORS.append("edition interface is not active/read-only")
 if interface.get("english_discovery", {}).get("manifest_sha256") != scope["inputs"]["english_discovery"]["manifest_sha256"]:
@@ -330,41 +467,41 @@ for field in ("latest_files", "latest_bytes", "latest_tree_sha256",
             scope["inputs"]["english_discovery"].get(field)):
         ERRORS.append(f"edition interface latest English {field} mismatch")
 if scope["inputs"]["english_discovery"].get("latest_status") != (
-        "sealed_source_only_reader_closure_quarantined"):
+        "admitted_current_reader_closure"):
     ERRORS.append("scope latest English source status mismatch")
 if tuple(
         interface.get("english_discovery", {}).get(field)
         for field in ("latest_manifest", "latest_manifest_bytes",
                       "latest_manifest_sha256")) != (
-        "R255.json", 26255,
-        "072A5D6251553188D86A869A9252A6A84A613B7638CAEEDD4C42B3DDD4A7A4E9",
+        "R261.json", 32444,
+        "A87DC2EDD0BDA5CE6828A2759095B1F4F3278E993DC5661EBA2E345C33BEEF18",
 ):
-    ERRORS.append("latest English interface is not sealed source-only R255")
+    ERRORS.append("latest English interface is not admitted R261")
 if tuple(
         interface.get("english_discovery", {}).get(field)
         for field in ("latest_files", "latest_bytes", "latest_tree_sha256",
                       "reader_admitted", "publication")) != (
         127, 7284367,
-        "B6B0A39094F1E7799C8F6C032FC1C38840597CD66075202D11F4926C8668DB4C",
-        False, False,
+        "3FF379C715F99D2A28F231A54D55996E9CDA27153E5DBBFB14BA6F7F70766CB0",
+        True, False,
 ):
-    ERRORS.append("latest English source-only status or tree mismatch")
+    ERRORS.append("latest English admitted status or tree mismatch")
 if tuple(
         interface.get("latest_sealed_french", {}).get(field)
         for field in ("manifest", "manifest_bytes", "manifest_sha256")) != (
-        "F37ZP.json", 5886,
-        "FACB20FE64825D69C092D26F8546EDD0ACCEE2664B5714F17A03AC2F8CA504A5",
+        "F37ZW.json", 13345,
+        "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
 ):
-    ERRORS.append("latest French interface is not sealed source-only F37ZP")
+    ERRORS.append("latest French interface is not admitted F37ZW")
 if tuple(
         interface.get("latest_sealed_french", {}).get(field)
         for field in ("files", "bytes", "tree_sha256", "reader_admitted",
                       "publication")) != (
         18, 1014921,
-        "344B4DA9876EAC1289DE6C57008B42B953BFBD0DED73A20F26B39581A687F3CB",
-        False, False,
+        "5A2A1BC407D5B0395C5E0D10103E0813C4EC9EDE37668D4DCA1091D1D280A841",
+        True, False,
 ):
-    ERRORS.append("latest French source-only status or tree mismatch")
+    ERRORS.append("latest French admitted status or tree mismatch")
 if tuple(
         scope.get("inputs", {}).get("french_authority", {}).get(field)
         for field in ("latest_sealed_manifest", "latest_sealed_manifest_bytes",
@@ -381,66 +518,89 @@ for interface_field, scope_field in (
             scope["inputs"]["french_authority"].get(scope_field)):
         ERRORS.append(f"edition interface latest French {interface_field} mismatch")
 if scope["inputs"]["french_authority"].get("latest_status") != (
-        "sealed_source_only_reader_closure_quarantined"):
+        "admitted_current_reader_closure"):
     ERRORS.append("scope latest French source status mismatch")
 expected_source_successor = {
-    "status": "sealed_source_only_reader_closure_quarantined",
-    "reader_admitted": False,
+    "status": "admitted_current_reader_closure",
+    "reader_admitted": True,
     "publication": False,
     "french": {
-        "manifest": "F37ZP.json", "manifest_bytes": 5886,
+        "manifest": "F37ZW.json", "manifest_bytes": 13345,
         "manifest_sha256":
-            "FACB20FE64825D69C092D26F8546EDD0ACCEE2664B5714F17A03AC2F8CA504A5",
+            "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
         "files": 18, "bytes": 1014921,
         "tree_sha256":
-            "344B4DA9876EAC1289DE6C57008B42B953BFBD0DED73A20F26B39581A687F3CB",
-        "identity_only_since_last_admitted_reader_source": True,
-    },
-    "english": {
-        "manifest": "R255.json", "manifest_bytes": 26255,
-        "manifest_sha256":
-            "072A5D6251553188D86A869A9252A6A84A613B7638CAEEDD4C42B3DDD4A7A4E9",
-        "files": 127, "bytes": 7284367,
-        "tree_sha256":
-            "B6B0A39094F1E7799C8F6C032FC1C38840597CD66075202D11F4926C8668DB4C",
+            "5A2A1BC407D5B0395C5E0D10103E0813C4EC9EDE37668D4DCA1091D1D280A841",
         "identity_only_since_last_admitted_reader_source": False,
     },
-    "role": "latest exact source manifests for local semantic and deterministic-replay use only",
+    "english": {
+        "manifest": "R261.json", "manifest_bytes": 32444,
+        "manifest_sha256":
+            "A87DC2EDD0BDA5CE6828A2759095B1F4F3278E993DC5661EBA2E345C33BEEF18",
+        "files": 127, "bytes": 7284367,
+        "tree_sha256":
+            "3FF379C715F99D2A28F231A54D55996E9CDA27153E5DBBFB14BA6F7F70766CB0",
+        "identity_only_since_last_admitted_reader_source": False,
+    },
+    "role": "latest exact source manifests admitted with their current readers and retained as deterministic-replay inputs",
 }
 if interface.get("source_successor") != expected_source_successor:
-    ERRORS.append("edition interface source-successor split mismatch")
+    ERRORS.append("edition interface current source-reader closure mismatch")
 if scope.get("source_successor") != expected_source_successor:
-    ERRORS.append("scope source-successor split mismatch")
+    ERRORS.append("scope current source-reader closure mismatch")
+expected_semantic_notes = (
+    566253,
+    "799EF17D0D7D98B2B459EA938C0ABE25647BB7018857FF8D83B656725B932196",
+)
+if tuple(interface.get("semantic_notes", {}).get(field)
+         for field in ("bytes", "sha256")) != expected_semantic_notes:
+    ERRORS.append("edition interface semantic-notes identity mismatch")
+if tuple(scope.get("inputs", {}).get("incremental_notes", {}).get(field)
+         for field in ("bytes", "sha256")) != expected_semantic_notes:
+    ERRORS.append("scope semantic-notes identity mismatch")
 expected_diagram_closure = {
-    "control": "D41R.json",
-    "control_bytes": 12948,
+    "control": "D48.json",
+    "control_bytes": 10644,
     "control_sha256":
-        "18C5FEF45712CEF7B185AC6FBC58E365299BC3F1CA47CE40E87BDCF653843F6C",
-    "inventory": "DIA41R.json",
-    "inventory_bytes": 123388,
+        "477547191420DBDF0AB405D832A023FD630AD814F495050AA0196402CEF34508",
+    "inventory": "DIA48T.json",
+    "inventory_bytes": 189742,
     "inventory_sha256":
-        "03E085DC630182B4CCB5156E4371E7E5129BB20A7A04777706EAA30C81D0AD94",
-    "referral_control": "REF11.json",
-    "referral_control_bytes": 7169,
-    "referral_control_sha256":
-        "C9C7B3E3A84BFE89715E21412AF7F50E3D65EA2BA9B2C6C7C91E2F41E405206B",
-    "pre_cleanup_receipt": "Q37CC.json",
-    "pre_cleanup_receipt_bytes": 8438,
+        "8DF219213F91498E2442E138ABA9064F0DC29EFE1D33A4CF2D67E9174F268B68",
+    "pre_cleanup_receipt": "Q37CY.json",
+    "pre_cleanup_receipt_bytes": 4183,
     "pre_cleanup_receipt_sha256":
-        "CC128E827E2E72DA5FE3D1ED7BF9FFC377AE0403F40C4DA397C79D2A82F8288E",
-    "post_cleanup_receipt": "Q37CD.json",
-    "post_cleanup_receipt_bytes": 8048,
+        "F6652D4BDA7DBFD83B108616E081CCC646B902A6E625643684D808250DFD5802",
+    "post_cleanup_receipt": "Q37DB.json",
+    "post_cleanup_receipt_bytes": 2201,
     "post_cleanup_receipt_sha256":
-        "89F5F9C53F7691F9A9583B9067F2E7C69A1EF3DAB47E06A407C2F9EE91110C2D",
-    "temporary_workspace": "C:/tmp/EGA-ref11",
+        "6FBA04B450328CD8804323061CCEE49AE44176D4B6FF082C5FE2F34C99C93432",
+    "immediate_post_cleanup_predecessor": "Q37CZ.json",
+    "immediate_post_cleanup_predecessor_bytes": 1789,
+    "immediate_post_cleanup_predecessor_sha256":
+        "A55358D3D857CD28C3125D5E920BB52C54B066EACDC6E97D1A9E29EA7D1CDA29",
+    "superseded_malformed_post_cleanup_receipt": "Q37CX.json",
+    "superseded_malformed_post_cleanup_receipt_bytes": 1683,
+    "superseded_malformed_post_cleanup_receipt_sha256":
+        "E9F209F61A201EB08EB7DA07BC6C2F6C570BA27DDD4505845BEF44EE3B1C7C55",
+    "retained_original_adverse_receipts": [
+        {"name": "Q37CU.json", "bytes": 2607, "sha256":
+         "3238D228FC1689E48D31677DAABC2A8B6B2CA28B8FBBA03BCD1F5CF15C9B362E"},
+        {"name": "Q37CV.json", "bytes": 599, "sha256":
+         "917A757B2B24D0323A7ACAED627E99FBB6D2DC5EB0543DDCD59978396B2CFECA"},
+    ],
+    "temporary_workspace": "C:/tmp/EGA-d48x",
     "temporary_workspace_state": "absent",
-    "replay_passes": 2,
-    "pre_cleanup_rows_each": 206,
-    "pre_cleanup_state_fingerprint_sha256":
-        "A18D63D552BD648E265D3C6DCC257725DCE8A99154292CF6DA19CD7F7A15B6AD",
-    "post_cleanup_rows_each": 186,
-    "state_fingerprint_sha256":
-        "31379A4907EEA1FCAEE0BFF3F4D3F9E15E8BCB9519CCD03BAAC240532DD1D55D",
+    "paused_workspace": "C:/tmp/EGA-d48",
+    "paused_workspace_state_at_receipt": "present",
+    "pre_cleanup_rows": 12,
+    "pre_cleanup_total_bytes": 3630449,
+    "pre_cleanup_serialization_bytes": 988,
+    "pre_cleanup_tree_sha256":
+        "55CB258567C634BBEC3C2482DC3ACBBF42AF9A5D4A61ADF52A5D6C761DCFAACD",
+    "verified_items": 53,
+    "pending_items": 31,
+    "next_item": "DIA:ega1/ega1-3-fr.tex:699",
 }
 interface_reader_interface = interface.get("last_admitted_reader_interface", {})
 scope_reader_interface = scope.get("last_admitted_reader_interface", {})
@@ -454,42 +614,62 @@ if interface_diagram_closure != scope_diagram_closure:
     ERRORS.append("reader-closure interface/scope mismatch")
 if interface_reader_interface != scope_reader_interface:
     ERRORS.append("last admitted reader interface differs from scope")
+expected_reader_interface = {
+    "status": "admitted_current_reader_closure",
+    "french_source_manifest": "F37ZW.json",
+    "french_source_manifest_bytes": 13345,
+    "french_source_manifest_sha256":
+        "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+    "english_source_manifest": "R261.json",
+    "english_source_manifest_bytes": 32444,
+    "english_source_manifest_sha256":
+        "A87DC2EDD0BDA5CE6828A2759095B1F4F3278E993DC5661EBA2E345C33BEEF18",
+    "closure": expected_diagram_closure,
+    "active_referral_issues": [],
+    "role": (
+        "current locally admitted D48 source reader diagram closure and cleanup "
+        "tuple; publication remains quarantined"),
+}
+if interface_reader_interface != expected_reader_interface:
+    ERRORS.append("edition interface current reader object shape changed")
+if scope_reader_interface != expected_reader_interface:
+    ERRORS.append("scope current reader object shape changed")
 if tuple(interface_reader_interface.get(field) for field in (
-        "status", "french_source_manifest", "french_source_manifest_sha256",
-        "english_source_manifest", "english_source_manifest_sha256")) != (
-        "admitted_predecessor_reader_closure", "F37ZL.json",
-        "9356CB6B4F40E72488BB1E4D8E08E34AA0965C8F96B6D880AC190C423DCB8E4C",
-        "R251.json",
-        "250A00CB2846004B788E542D0AEA0A31CB00AF2B1864ABD8C153116E97087F55",
+        "status", "french_source_manifest", "french_source_manifest_bytes",
+        "french_source_manifest_sha256", "english_source_manifest",
+        "english_source_manifest_bytes", "english_source_manifest_sha256")) != (
+        "admitted_current_reader_closure", "F37ZW.json", 13345,
+        "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+        "R261.json", 32444,
+        "A87DC2EDD0BDA5CE6828A2759095B1F4F3278E993DC5661EBA2E345C33BEEF18",
 ):
     ERRORS.append("last admitted reader interface source bindings changed")
-if interface_reader_interface.get("active_referral_issues") != [
-        "I000066", "I000067"]:
-    ERRORS.append("source-only referrals are not retained at reader closure")
+if interface_reader_interface.get("active_referral_issues") != []:
+    ERRORS.append("current visual referrals are not exact at reader closure")
 if interface.get("public_checkpoint") != "https://zenodo.org/records/21861666":
     ERRORS.append("public EGA checkpoint is stale")
 expected_readers = {
-    "french": ("B37AD.json", 7129,
-               "B8736E90D2465E36F2DDC00499EFA2234A42B96046B79044370C87D2733A566F",
-               2004722,
-               "8A89494F17D1569D206C7D6456D85E922D61F6E6B0E62F8042AABA23F5358F66",
-               168, "F37ZL.json",
-               "9356CB6B4F40E72488BB1E4D8E08E34AA0965C8F96B6D880AC190C423DCB8E4C",
-               "344B4DA9876EAC1289DE6C57008B42B953BFBD0DED73A20F26B39581A687F3CB",
+    "french": ("B37AJ.json", 12222,
+               "395FBB06FDFB3254D49931FC00C8AF36DDFAA6DA71D97DCAE2C51797F1905D1A",
+               "EGA_FR.pdf", 2004661,
+               "E41CDDAAA89E35AB794F6CBAC236F5D5522819CAE049FB4DCB910E979D98B77B",
+               168, "F37ZW.json",
+               "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+               "5A2A1BC407D5B0395C5E0D10103E0813C4EC9EDE37668D4DCA1091D1D280A841",
                True),
-    "english": ("B234.json", 7753,
-                 "DAC7E77E922D3142B7541142B3501E2E8507EA140A21233D3AD33491369A69BB",
-                 14590653,
-                 "86AC6590F07E0E36B24EE5D4A4125FAF0E191EF968AD4B87254A9C4EEEF5A42A",
-                 1346, "R251.json",
-                 "250A00CB2846004B788E542D0AEA0A31CB00AF2B1864ABD8C153116E97087F55",
-                 "C32F4904449F6DEDFB6991B569FDD96B8EAD27BE77685E67A52EE0094C896A7E",
-                 False),
+    "english": ("B239.json", 20109,
+                 "54355E7EB685606A26E3DD4A07D530A76E0B55C2E19FB87EC39169719848864D",
+                 "EGA_English_Global_0_IV.pdf", 14593439,
+                 "478379E297F5BA0B4A3726517944C4343944109CDCC122BF8265532330C119F3",
+                 1347, "R261.json",
+                 "A87DC2EDD0BDA5CE6828A2759095B1F4F3278E993DC5661EBA2E345C33BEEF18",
+                 "3FF379C715F99D2A28F231A54D55996E9CDA27153E5DBBFB14BA6F7F70766CB0",
+                 True),
 }
 for language, expected in expected_readers.items():
     reader = interface.get("sealed_readers", {}).get(language, {})
     if (reader.get("receipt"), reader.get("receipt_bytes"),
-            reader.get("receipt_sha256"), reader.get("bytes"),
+            reader.get("receipt_sha256"), reader.get("pdf"), reader.get("bytes"),
             reader.get("sha256"), reader.get("pages"),
             reader.get("bound_manifest"),
             reader.get("bound_manifest_sha256"),
@@ -497,7 +677,9 @@ for language, expected in expected_readers.items():
             reader.get("current_source_compatible")) != expected:
         ERRORS.append(f"sealed {language} reader interface mismatch")
 expected_quarantine = {
-    "status": "quarantined_external_reader_closure",
+    "status": "superseded_rejected_external_reader_closure",
+    "historical_snapshot": True,
+    "superseded_by": "Q37CL then D44 and Q37CN",
     "admitted": False,
     "reader_admitted": False,
     "publication": False,
@@ -568,16 +750,61 @@ expected_quarantine = {
     "temporary_workspace": "C:/tmp/EGA-ref14",
     "temporary_workspace_state": "present",
     "disposition": (
-        "retain as exact adverse evidence and refuse reader closure or publication "
-        "promotion until an append-only corrected producer successor and cleanup "
-        "receipts are independently sealed"),
+        "retain as exact adverse history; corrected REF14R and Q37CL followed by "
+        "the admitted D44 DIA44 Q37CM Q37CN successor without rewriting this "
+        "failed snapshot"),
 }
 interface_quarantine = interface.get("quarantined_external_closure")
 scope_quarantine = scope.get("quarantined_external_closure")
 if interface_quarantine != expected_quarantine:
-    ERRORS.append("external REF14 reader closure is not exactly quarantined")
+    ERRORS.append("external REF14 rejected history changed")
 if scope_quarantine != expected_quarantine:
     ERRORS.append("scope external REF14 quarantine mismatch")
+expected_rejected_d48_history = {
+    "status": "superseded_rejected_control_metadata_history",
+    "admitted": False,
+    "reader_admitted": False,
+    "publication": False,
+    "superseded_by": "DIA48T and Q37DB",
+    "controls": [
+        {"name": "DIA48.json", "bytes": 187882, "sha256":
+         "81ED020FDAACEE69DF64908301752EAED2E09F30477B604DF57176FEE102FD70"},
+        {"name": "DIA48R.json", "bytes": 188541, "sha256":
+         "9D3CF29B1C6A2D641DC5C979B1EB663D82990459468CE7EA79A394CE2551B0F5"},
+        {"name": "DIA48S.json", "bytes": 189345, "sha256":
+         "8AB46CA573E66C5049E775172B304FCFFE9AA14292D58E79F0DB2EF846C2F08D"},
+        {"name": "Q37CU.json", "bytes": 2607, "sha256":
+         "3238D228FC1689E48D31677DAABC2A8B6B2CA28B8FBBA03BCD1F5CF15C9B362E"},
+        {"name": "Q37CV.json", "bytes": 599, "sha256":
+         "917A757B2B24D0323A7ACAED627E99FBB6D2DC5EB0543DDCD59978396B2CFECA"},
+        {"name": "Q37CW.json", "bytes": 4071, "sha256":
+         "4EA9C9D8F856920EE1923DD377780666E45A57808CB6AF7B8EFC35C4A7A38AB6"},
+        {"name": "Q37CX.json", "bytes": 1683, "sha256":
+         "E9F209F61A201EB08EB7DA07BC6C2F6C570BA27DDD4505845BEF44EE3B1C7C55"},
+    ],
+    "defects": [
+        "stale inventory source reader cursor and publication-gate fields",
+        "malformed comma-bound permanent and supersession arrays",
+        "contradictory stale top-level source manifest",
+    ],
+    "disposition": (
+        "retain byte-exact adverse history and forbid every listed control "
+        "from admitted interface fields"),
+}
+if interface.get("rejected_d48_control_history") != expected_rejected_d48_history:
+    ERRORS.append("rejected D48 control history mismatch")
+if scope.get("rejected_d48_control_history") != expected_rejected_d48_history:
+    ERRORS.append("scope rejected D48 control history mismatch")
+admitted_d48_closure = interface.get(
+    "last_admitted_reader_interface", {}).get("closure", {})
+admitted_d48_primary_names = {
+    admitted_d48_closure.get("control"), admitted_d48_closure.get("inventory"),
+    admitted_d48_closure.get("pre_cleanup_receipt"),
+    admitted_d48_closure.get("post_cleanup_receipt"),
+}
+if admitted_d48_primary_names & {
+        control["name"] for control in expected_rejected_d48_history["controls"]}:
+    ERRORS.append("rejected D48 control leaked into admitted interface")
 if interface_quarantine != scope_quarantine:
     ERRORS.append("external REF14 quarantine differs between interface and scope")
 admitted_interface_text = json.dumps({
@@ -600,9 +827,9 @@ current_receipt = (
 )
 if current_receipt not in admitted_receipts:
     ERRORS.append("current French manifest missing from admitted receipt registry")
-if ("F37ZP.json",
-        "FACB20FE64825D69C092D26F8546EDD0ACCEE2664B5714F17A03AC2F8CA504A5") not in admitted_receipts:
-    ERRORS.append("sealed source-only F37ZP missing from receipt registry")
+if ("F37ZW.json",
+        "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0") not in admitted_receipts:
+    ERRORS.append("current admitted F37ZW missing from receipt registry")
 
 decision_rows = rows("dec.csv")
 issue_rows = rows("issues.csv")
@@ -613,14 +840,110 @@ active_decision_by_id = {
     row["decision_id"]: row for row in active_decision_rows
 }
 issue_by_id = {row["issue_id"]: row for row in issue_rows}
+decision_raw = (ROOT / "dec.csv").read_bytes()
+decision_physical_lines = decision_raw.splitlines(keepends=True)
+issue_raw = (ROOT / "issues.csv").read_bytes()
+issue_physical_lines = issue_raw.splitlines(keepends=True)
 require_lf_prefix(
-    (ROOT / "dec.csv").read_bytes(), 204, 49604,
+    decision_raw, 204, 49604,
     "7A4EE746D1168057E05E006D26C357BC43AC50A82AF098B13B49CBC78074AA30",
     "D000001-D000203")
+for decision_number, expected_bytes, expected_sha in (
+        (220, 256,
+         "299B6A30547B6CCB18A7855DCAF48134451EB0BB388D60A5F762439D22480E6F"),
+        (235, 257,
+         "DF956B977D064A630A7ADBA4BC7B8D6AB61BFE7E8610FBD0F4D38D33FBD3B98E"),
+        (236, 278,
+         "7C148B82F777B787261B4DB64536D9447A6AA9AF6CD9F3E829B0A11F878EF5C9"),
+        (237, 241,
+         "E6A029E18CD1A12E482629D4499D0F111D626A6082D1C065FB213019FB50F58C"),
+        (238, 263,
+         "6774AC827889BB38CE9A0B9C49F36C6FBDB410B8AD7257B6E90CA102663EE39D"),
+        (239, 360,
+         "F12F50367678273CE2862584BEF36FA8F283EFFC6D7F6786FF826934DF7227F3"),
+        (240, 386,
+         "DB19327A8712079B28EE8EC179DC206CC0C423469D0583B749A660F72343BC2D"),
+        (241, 317,
+         "58F044335559521D72587084F9FB198B4F914F213B14F7C7803FBE3C891F73DB"),
+        (242, 457,
+         "73EDF25608190101B7D1F176B8283F841628C5381AA08546B0422AE77AC781E9"),
+        (243, 618,
+         "913E77B438A60AC4C41518EB312EB23166B74002BD675759BB838A474A521DAB"),
+        (244, 732,
+         "BEDE6E0938612CCC96A4BD0A69FD7B36ED9AA48095273241CC744FF472238BB7"),
+        (245, 319,
+         "D31EB1CD236FE82DE24AEF0B6941F5BC28C273433C4408358C17BAF125E94519"),
+        (246, 374,
+         "268C851DA3B7C09DBFE40F33056936091E4EE3B9D7DF98F2ED59E9782EA2A8F6"),
+        (247, 324,
+         "665BEB85E4A516B36D00CACD2FE66941C19ED139D811407B91DE8BFB6383AEAE"),
+        (248, 344,
+         "2F800599BDBF5D7849DC882512D6F0C76CD2A98260DA29AA53B69C47ADB62FF7"),
+        (249, 382,
+         "CB13EE6DB819F95800F0F893E517328E6656ABCE01704ABE8C9A6D78DA66D668")):
+    require_raw_line(
+        decision_physical_lines, decision_number, expected_bytes,
+        expected_sha, f"D{decision_number:06d}")
+if (len(decision_raw) != 63402 or
+        hashlib.sha256(decision_raw).hexdigest().upper() !=
+        "E256E3CFFB3B35FBCA7C40CB0BF19959E79FEA5730F2B08FA6FC46284548DBA5"):
+    ERRORS.append("final decision manifest identity mismatch")
 require_lf_prefix(
-    (ROOT / "issues.csv").read_bytes(), 62, 24019,
+    issue_raw, 62, 24019,
     "BE14C470FDDA9D2B596D27E28F305671A0DD5A97E3FCD3F889DC226AA7A06C34",
     "I000001-I000061")
+for issue_number, expected_bytes, expected_sha in (
+        (66, 409,
+         "3D9344E032DF597EF9DCEA9E30718A34FFDC7E9F89819AE202BBF61B3DAA7970"),
+        (67, 385,
+         "708C1D62DFB9AA960E60DB1B092DD4A30CD05D0E94C088CE8BD2B7BE4FF6ABE7"),
+        (68, 384,
+         "351039FEE6265BB6D77ABCA7D7FFF737EF6B0B2E17405F5656571EF40167EB50"),
+        (69, 397,
+         "29E408C1110C668C64672AB7EAAEFF809680C361C2E37D8A1E8A4DBDB65B33B3"),
+        (70, 389,
+         "8F109FEA48EABE4F86E2B9CEFB0D610920D7B21D3AD9A03821CC8857C1AAB298"),
+        (71, 381,
+         "DA6442E18210678C803CD1A81B0DB968333838671C782A95DFBB261C15AA7345"),
+        (72, 395,
+         "BBABB8C6B9C6C3926208680653F56A896A7526F9ED8C5197A2B924A9C82A45EC"),
+        (73, 386,
+         "EE8A73E93DEE00A55C9A4690DF6FFBD4F3FEF87F284455677B20585BC78E7239"),
+        (74, 365,
+         "B3BB6DED636398328A530F93D40D6F12B9312461903FC788CF2440240546CA69"),
+        (75, 365,
+         "52DEA29994B29E43CD061220D4334AC88277DB33317AEA8D1D61D89728E316F8"),
+        (76, 452,
+         "2D5E8658FF8F27DD13CAAC5010FD607B3EC87711484F47B70C996BDFE7D88524"),
+        (77, 541,
+         "2E258890F163E44CBF86B4BC92EA123E0F0DE2A6EF2E43BAAE68A9AD246C3F09"),
+        (78, 555,
+         "B3F90B1E01BE521582CAA9719C69390D62FD469D67C7D603848812AEC2D69126"),
+        (79, 414,
+         "84C110F5306B4A0E76E0813A90A71637F6FC1D592F6581AB4569887689C02F7D"),
+        (80, 427,
+         "B43E5BE58DDFD6A6DC937A3CCE47117295D96E37EA6D52F0926A818839D02BE2"),
+        (81, 388,
+         "9DA1EEAC616172B287BD9EA888DC6CCCFD94AA8112F6F7DEBC4D1568E95CA7A2"),
+        (82, 411,
+         "CDAEC85975CA0F78641274AD4413E3CDD0BD544D61D5936B7949A4AC9BDEA288"),
+        (83, 419,
+         "04DDAD2D33B67F67A48821F2B85C8B5A7CA2DD683772FBC834CB41F14F4FA6EF"),
+        (84, 387,
+         "A706136DD1AE7D48B315C255342AEAD855141433F417D0AD1711A0F20A40FF8B"),
+        (85, 413,
+         "37A83720352AADD4B8D66D9EF5F1555097DC0E8FDBCFD639E4CA41CAB704A7DD"),
+        (86, 379,
+         "1F392B73929BC0469C02C3F40ED316138E555424ADA780D8A57E38E8F4B62225"),
+        (87, 387,
+         "C2F776621F975A41ECCBE538BA5703DA40759F5B5DBFE1EB6A8691B7F05042DD")):
+    require_raw_line(
+        issue_physical_lines, issue_number, expected_bytes, expected_sha,
+        f"I{issue_number:06d}")
+if (len(issue_raw) != 34596 or
+        hashlib.sha256(issue_raw).hexdigest().upper() !=
+        "2261AC794FBDFA2C040AE012E93616439C2ABE0203E0BE386CB192EC9E25E15C"):
+    ERRORS.append("final correction-issue manifest identity mismatch")
 check_governance_helper_regressions()
 issue_positions = {
     row["issue_id"]: index for index, row in enumerate(issue_rows)
@@ -708,6 +1031,157 @@ if d223 is None or not (
         "V000022 J000010 J000011 J000012 J000013 J000014 D41R DIA41R REF11 and Q37CD" and
         d223.get("supersedes") == "D000222"):
     ERRORS.append("missing exact D000223 corrected visual-QA admission")
+d235 = active_decision_by_id.get("D000235")
+d236 = active_decision_by_id.get("D000236")
+d237 = active_decision_by_id.get("D000237")
+if d235 is None or tuple(d235.get(field) for field in (
+        "subject_id", "action", "state", "evidence", "supersedes",
+        "rationale")) != (
+        "ega:I.5.3.15",
+        "map_diagonal_naturality_with_local_exact_identity",
+        "active",
+        "schemes-lemma-diagonal-identities and 001V",
+        "",
+        "Item five of the local lemma is the exact morphism identity and the official fibre-product universal property independently derives it",
+):
+    ERRORS.append("missing exact D000235 diagonal-naturality decision")
+if d236 is None or tuple(d236.get(field) for field in (
+        "subject_id", "action", "state", "evidence", "supersedes",
+        "rationale")) != (
+        "ega:I.5.3.16",
+        "map_subscheme_diagonal_and_underlying_intersection",
+        "active",
+        "D000163 D000225 D000235 01KJ 01JY 02V0 01JR 01JU 01IO and 001V",
+        "",
+        "The source combines diagonal immersion product-immersion image-intersection and naturality facts; no one target is the whole corollary",
+):
+    ERRORS.append("missing exact D000236 subscheme-diagonal decision")
+if d237 is None or tuple(d237.get(field) for field in (
+        "subject_id", "action", "state", "evidence", "supersedes",
+        "rationale")) != (
+        "ega:I.5.3.17",
+        "map_equal_residue_field_maps_to_diagonal_membership",
+        "active",
+        "01J5 01KM 001V and D000235",
+        "",
+        "The point classification identifies the two field-valued maps and the equalizer plus diagonal naturality gives the stated membership",
+):
+    ERRORS.append("missing exact D000237 diagonal-membership decision")
+d238 = decision_by_id.get("D000238")
+if d238 is None or tuple(d238.get(field) for field in (
+        "subject_id", "action", "state", "evidence", "supersedes",
+        "rationale")) != (
+        "ega:edition-interface",
+        "admit_F37ZRS_R257S_B37AGR_B237R_D44_DIA44_and_Q37CN_as_current_reader_closure",
+        "active",
+        "F37ZRS R257S B37AGR B237R D44 DIA44 Q37CM Q37CN and exact R257S-to-R184 replay",
+        "",
+        "The corrected tuple is coherent and publication remains quarantined",
+) or "D000238" not in superseded_decisions:
+    ERRORS.append("missing exact superseded D000238 edition-interface admission")
+d239 = decision_by_id.get("D000239")
+d240 = active_decision_by_id.get("D000240")
+d241 = active_decision_by_id.get("D000241")
+if d239 is None or tuple(d239.get(field) for field in (
+        "subject_id", "action", "state", "evidence", "supersedes",
+        "rationale")) != (
+        "ega:visual-qa",
+        "refer_5_3_15_and_5_3_17_bottom_arrow_label_side_corrections",
+        "active",
+        "Direct exact-5000-dpi comparison in log.md and source loci ega1-5-fr.tex:603 653 661 ega1-5.tex:459 498 508",
+        "",
+        "NUMDAM prints each bottom horizontal arrow label below while both current language outputs place it above so all dependent semantic promotion remains fail closed",
+) or "D000239" not in superseded_decisions or "D000239" in active_decision_by_id:
+    ERRORS.append("missing exact superseded D000239 visual referral")
+if d240 is None or tuple(d240.get(field) for field in (
+        "subject_id", "action", "state", "evidence", "supersedes",
+        "rationale")) != (
+        "ega:visual-qa",
+        "admit_5_3_15_and_5_3_17_exact_current_reader_diagram_evidence",
+        "active",
+        "V000023 V000024 V000025 J000017-J000030 D44 DIA44 and Q37CN in ega/vqa.csv and ega/rej.csv",
+        "D000239",
+        "The corrected current readers and independent exact-5000-dpi crops now match every authority object edge direction label and label side while rejected and predecessor evidence remains append only",
+):
+    ERRORS.append("missing exact D000240 corrected visual-QA admission")
+if d241 is None or tuple(d241.get(field) for field in (
+        "subject_id", "action", "state", "evidence", "supersedes",
+        "rationale")) != (
+        "ega:I.3.3.2:diagram:xymatrix:1",
+        "admit_current_reader_successor_for_p108_lower_arrow_label_sides",
+        "active",
+        "V000026 supersedes V000006 under D44 DIA44 and Q37CN",
+        "",
+        "The current readers now place f and f prime below the two lower arrows exactly as authority while the superseded predecessor witness remains append only",
+):
+    ERRORS.append("missing exact D000241 p108 visual successor admission")
+d203 = decision_by_id.get("D000203")
+d220 = decision_by_id.get("D000220")
+d242 = decision_by_id.get("D000242")
+d243 = decision_by_id.get("D000243")
+d244 = decision_by_id.get("D000244")
+d203_historical_exact = d203 is not None and tuple(
+    d203.get(field) for field in (
+        "subject_id", "action", "state", "evidence", "supersedes",
+        "rationale")) == (
+    "ega:visual-qa",
+    "admit_5_1_5_and_5_1_9_visual_receipts",
+    "active",
+    "V000016 V000017 V000018 V000019 V000020 in ega/vqa.csv",
+    "",
+    "Each selected diagram or intricate block has its own tight authority French and English 5000-dpi receipt and personal graph or symbol comparison",
+) and "D000203" in superseded_decisions and "D000203" not in active_decision_by_id
+d220_historical_exact = d220 is not None and tuple(
+    d220.get(field) for field in (
+        "subject_id", "action", "state", "evidence", "supersedes",
+        "rationale")) == (
+    "ega:visual-qa",
+    "admit_5_3_5_individual_authority_french_english_visual_evidence",
+    "active",
+    "V000021 in ega/vqa.csv",
+    "",
+    "The exact authority B37AC French and B233 English crops agree on every object edge direction style label subscript geometry and label side",
+) and "D000220" in superseded_decisions and "D000220" not in active_decision_by_id
+d242_exact = d242 is not None and tuple(d242.get(field) for field in (
+    "subject_id", "action", "state", "evidence", "supersedes",
+    "rationale")) == (
+    "ega:I.5.3.5:diagram:xymatrix:1",
+    "refer_5_3_5_Delta_S_over_T_bottom_arrow_label_side_correction",
+    "active",
+    "Direct exact-5000-dpi comparison of NUMDAM p131 box 86;574;260;70 against B37AIR p90 box 240;410;299;65 and B238R p322 box 86;575;275;65 plus source loci ega1-5-fr.tex:437 and ega1-5.tex:316",
+    "D000220",
+    "NUMDAM places Delta_{S|T} below while both current outputs place it above so V000021 and every downstream current-reader promotion remain fail closed",
+) and "D000242" in superseded_decisions
+d243_exact = d243 is not None and tuple(d243.get(field) for field in (
+    "subject_id", "action", "state", "evidence", "supersedes",
+    "rationale")) == (
+    "ega:I.5.1.5:diagram:xymatrix:1",
+    "refer_5_1_5_bottom_f_label_side_correction",
+    "active",
+    "Direct exact-5000-dpi comparison of NUMDAM p128 box 258;214;76;64 against B37AIR p88 box 254;126;84;68 and B238R p319 box 258;682;96;67 plus first-occurrence source loci ega1-5-fr.tex:127 zero-based byte 6169 and ega1-5.tex:83 zero-based byte 5590",
+    "",
+    "NUMDAM places the bottom f below while both current outputs place it above so visual and current-reader promotion of V000016 S000718 S000719 S000720 R000471 R000496 R000582 and every downstream accepted witness remain fail closed pending corrected readers and fresh certification",
+) and "D000243" in superseded_decisions
+d244_exact = d244 is not None and tuple(d244.get(field) for field in (
+    "subject_id", "action", "state", "evidence", "supersedes",
+    "rationale")) == (
+    "ega:visual-qa",
+    "refer_5_1_9_diagram_2_bottom_f_0_label_side_correction_and_split_D000203",
+    "active",
+    "Direct exact-5000-dpi comparison of NUMDAM p129 box 258;421;70;69 against B37AIR p89 box 263;83;69;64 and B238R p321 box 273;68;66;67 plus unique source loci ega1-5-fr.tex:246 zero-based byte 11369 and ega1-5.tex:169 zero-based byte 10214; V000017 V000018 V000019 are content-unaffected predecessor evidence",
+    "D000203",
+    "NUMDAM places bottom f_0 below the leftward arrow while both current outputs place it above; D000243 carries the independent V000016 referral so V000020 S000758 S000759 R000491 and every downstream current-reader witness remain fail closed while V000017 V000018 V000019 remain accepted only as historical evidence",
+) and "D000244" in superseded_decisions
+if not d203_historical_exact:
+    ERRORS.append("missing exact superseded D000203 mixed visual admission")
+if not d220_historical_exact:
+    ERRORS.append("missing exact superseded D000220 visual admission")
+if not d242_exact:
+    ERRORS.append("missing exact superseded D000242 5.3.5 visual referral")
+if not d243_exact:
+    ERRORS.append("missing exact superseded D000243 5.1.5 visual referral")
+if not d244_exact:
+    ERRORS.append("missing exact superseded D000244 5.1.9 visual referral")
 d234 = active_decision_by_id.get("D000234")
 if d234 is None or not (
         d234.get("subject_id") == "ega:local-mirror" and
@@ -741,15 +1215,220 @@ if i66 is None or not (
         i66.get("kind") == "printed_proof_omits_local_closedness" and
         i66.get("status") == "referred_to_canon" and
         i66.get("supersedes") == "D000226" and
-        "I000066" not in superseded_issues):
-    ERRORS.append("missing active I000066 reader-closure referral")
+        "I000066" in superseded_issues):
+    ERRORS.append("missing historical I000066 canon-referral provenance")
 if i67 is None or not (
         i67.get("subject_id") == "ega:I.5.3.13:proof" and
         i67.get("kind") == "printed_reference_4_2_4_should_be_4_2_5" and
         i67.get("status") == "referred_to_canon" and
         i67.get("supersedes") == "D000231" and
-        "I000067" not in superseded_issues):
-    ERRORS.append("missing active I000067 reader-closure referral")
+        "I000067" in superseded_issues):
+    ERRORS.append("missing historical I000067 canon-referral provenance")
+i68 = issue_by_id.get("I000068")
+i69 = issue_by_id.get("I000069")
+if i68 is None or tuple(i68.get(field) for field in (
+        "subject_id", "kind", "status", "evidence", "control",
+        "supersedes", "notes")) != (
+        "ega:I.5.3.9:proof",
+        "printed_proof_omits_local_closedness_corrected",
+        "resolved",
+        "RF14R and REF14R preserve the published affine repair and Q37CL closes the corrected metadata chain",
+        "Admit the corrected standalone-English source and reader closure while retaining the diplomatic printed proof",
+        "I000066",
+        "D44 DIA44 and Q37CN carry the corrected proof into the later current reader lineage",
+) or "I000068" not in superseded_issues:
+    ERRORS.append("missing exact superseded I000068 corrected-proof resolution")
+if i69 is None or tuple(i69.get(field) for field in (
+        "subject_id", "kind", "status", "evidence", "control",
+        "supersedes", "notes")) != (
+        "ega:I.5.3.13:proof",
+        "printed_reference_4_2_4_should_be_4_2_5_corrected",
+        "resolved",
+        "RF14R and REF14R preserve the published 4.2.5 correction and Q37CL closes the corrected metadata chain",
+        "Admit the corrected standalone-English source and reader closure while retaining the diplomatic French reference",
+        "I000067",
+        "D44 DIA44 and Q37CN carry the corrected citation into the later current reader lineage",
+) or "I000069" not in superseded_issues:
+    ERRORS.append("missing exact superseded I000069 corrected-citation resolution")
+visual_issue_successors = (
+    ("I000070", "I000073", "ega:I.5.3.15:diagram:xymatrix:1",
+     "Delta_Y_label_side_mismatch"),
+    ("I000071", "I000074", "ega:I.5.3.17:diagram:xymatrix:1",
+     "f_i_label_side_mismatch"),
+    ("I000072", "I000075", "ega:I.5.3.17:diagram:xymatrix:2",
+     "f_1_f_2_label_side_mismatch"),
+)
+for prior_id, successor_id, subject_id, kind in visual_issue_successors:
+    prior = issue_by_id.get(prior_id)
+    successor = issue_by_id.get(successor_id)
+    if prior is None or not (
+            prior.get("subject_id") == subject_id and
+            prior.get("kind") == kind and
+            prior.get("status") == "referred_to_canon" and
+            prior.get("supersedes") == "D000239" and
+            prior_id in superseded_issues):
+        ERRORS.append(f"missing exact historical visual referral {prior_id}")
+    if successor is None or not (
+            successor.get("subject_id") == subject_id and
+            successor.get("kind") == f"{kind}_corrected" and
+            successor.get("status") == "resolved" and
+            successor.get("supersedes") == prior_id and
+            successor_id in superseded_issues):
+        ERRORS.append(f"missing exact superseded visual resolution {successor_id}")
+i76 = issue_by_id.get("I000076")
+i77 = issue_by_id.get("I000077")
+i78 = issue_by_id.get("I000078")
+i76_exact = i76 is not None and tuple(i76.get(field) for field in (
+    "subject_id", "kind", "status", "evidence", "control", "supersedes",
+    "notes")) == (
+    "ega:I.5.3.5:diagram:xymatrix:1",
+    "Delta_S_over_T_label_side_mismatch",
+    "referred_to_canon",
+    "NUMDAM p131 places Delta_{S|T} below while B37AIR French p90 and B238R English p322 place it above",
+    "Preserve V000021 and exact current localizers as adverse history; request one-byte source inverses rebuilt readers and fresh downstream certification",
+    "D000242",
+    "The complete graph and every other object edge direction label geometry and equation tag are unchanged",
+) and "I000076" in superseded_issues
+i77_exact = i77 is not None and tuple(i77.get(field) for field in (
+    "subject_id", "kind", "status", "evidence", "control", "supersedes",
+    "notes")) == (
+    "ega:I.5.1.5:diagram:xymatrix:1",
+    "bottom_f_label_side_mismatch",
+    "referred_to_canon",
+    "NUMDAM p128 places bottom f below while B37AIR French p88 and B238R English p319 place it above",
+    "Preserve V000016 and exact current crops as adverse history; at only the first X\\ar[r]^f occurrence change ^ to _ at French zero-based byte 6169 and English zero-based byte 5590 then rebuild readers and recertify every downstream witness",
+    "D000243",
+    "The complete reduction square and every other object edge direction label geometry and punctuation are unchanged",
+) and "I000077" in superseded_issues
+i78_exact = i78 is not None and tuple(i78.get(field) for field in (
+    "subject_id", "kind", "status", "evidence", "control", "supersedes",
+    "notes")) == (
+    "ega:I.5.1.9:diagram:xymatrix:2",
+    "bottom_f_0_label_side_mismatch",
+    "referred_to_canon",
+    "NUMDAM p129 places bottom f_0 below the leftward arrow while B37AIR French p89 and B238R English p321 place it above",
+    "Preserve V000020 and exact current crops as adverse history; at the unique \\ar[l]_{f_0} occurrence change _ to ^ at French zero-based byte 11369 and English zero-based byte 10214 then rebuild readers and recertify every downstream witness",
+    "D000244",
+    "The complete square and every other object edge direction label geometry and punctuation are unchanged",
+) and "I000078" in superseded_issues
+if not i76_exact:
+    ERRORS.append("missing exact superseded I000076 5.3.5 visual referral")
+if not i77_exact:
+    ERRORS.append("missing exact superseded I000077 5.1.5 visual referral")
+if not i78_exact:
+    ERRORS.append("missing exact superseded I000078 5.1.9 visual referral")
+
+final_d48_decision_contracts = {
+    "D000245": (
+        "ega:edition-interface",
+        "admit_F37ZW_R261_B37AJ_B239_D48_DIA48T_Q37CY_Q37DB_as_current_reader_closure",
+        "F37ZW R261 B37AJ B239 D48 DIA48T Q37CY Q37DB and exact R261-to-R184 replay",
+        "D000238"),
+    "D000246": (
+        "ega:visual-qa",
+        "admit_exact_final_current_reader_successors_V000027_through_V000044",
+        "V000027-V000044 under F37ZW R261 B37AJ B239 D48 DIA48T Q37CY and Q37DB",
+        ""),
+    "D000247": (
+        "ega:I.5.1.5:diagram:xymatrix:1",
+        "admit_corrected_bottom_f_current_reader_successor_with_rejected_lineage",
+        "V000035 J000033 J000034 F37ZW R261 B37AJ B239 D48 DIA48T Q37CY Q37DB",
+        "D000243"),
+    "D000248": (
+        "ega:I.5.1.9:diagram:xymatrix:2",
+        "admit_corrected_bottom_f_0_current_reader_successor_with_rejected_lineage",
+        "V000039 J000035 J000036 F37ZW R261 B37AJ B239 D48 DIA48T Q37CY Q37DB",
+        "D000244"),
+    "D000249": (
+        "ega:I.5.3.5:diagram:xymatrix:1",
+        "admit_corrected_Delta_S_over_T_current_reader_successor_with_rejected_lineage",
+        "V000040 J000031 J000032 F37ZW R261 B37AJ B239 D48 DIA48T Q37CY Q37DB",
+        "D000242"),
+}
+for decision_id, expected in final_d48_decision_contracts.items():
+    row = active_decision_by_id.get(decision_id)
+    actual = tuple(row.get(field) for field in (
+        "subject_id", "action", "evidence", "supersedes")) if row else None
+    if actual != expected or row.get("state") != "active":
+        ERRORS.append(f"missing exact active final D48 decision {decision_id}")
+
+final_d48_issue_successors = {
+    "I000079": ("I000077", "ega:I.5.1.5:diagram:xymatrix:1"),
+    "I000080": ("I000078", "ega:I.5.1.9:diagram:xymatrix:2"),
+    "I000081": ("I000076", "ega:I.5.3.5:diagram:xymatrix:1"),
+    "I000082": ("I000068", "ega:I.5.3.9:proof"),
+    "I000083": ("I000069", "ega:I.5.3.13:proof"),
+    "I000084": ("I000065", "ega:I.5.3.7:diagram:xymatrix:1"),
+    "I000085": ("I000073", "ega:I.5.3.15:diagram:xymatrix:1"),
+    "I000086": ("I000074", "ega:I.5.3.17:diagram:xymatrix:1"),
+    "I000087": ("I000075", "ega:I.5.3.17:diagram:xymatrix:2"),
+}
+for issue_id, (prior_id, subject_id) in final_d48_issue_successors.items():
+    row = issue_by_id.get(issue_id)
+    if row is None or not (
+            row.get("subject_id") == subject_id and
+            row.get("status") == "resolved" and
+            row.get("supersedes") == prior_id and
+            issue_id not in superseded_issues and
+            prior_id in superseded_issues):
+        ERRORS.append(f"missing exact active final D48 issue {issue_id}")
+
+visual_residual_rows = rows("resid.csv") if (ROOT / "resid.csv").is_file() else []
+visual_residual_by_id = {
+    row.get("residual_id"): row for row in visual_residual_rows
+}
+visual_residual_superseded = {
+    row.get("supersedes") for row in visual_residual_rows
+    if row.get("supersedes")
+}
+r606_preflight = visual_residual_by_id.get("R000606")
+r607_preflight = visual_residual_by_id.get("R000607")
+r608_preflight = visual_residual_by_id.get("R000608")
+r606_exact = r606_preflight is not None and tuple(
+    r606_preflight.get(field) for field in (
+        "source_unit", "kind", "status", "evidence", "disposition",
+        "decision_id", "supersedes")) == (
+    "ega:I.5.3.5:diagram:xymatrix:1",
+    "delta_S_over_T_label_side_disagreement_requires_source_repair",
+    "open_gap",
+    "Authority places Delta_{S|T} below while both current language readers place it above; V000021 and R000548 are not valid current visual evidence",
+    "Await exact French and English source corrections rebuilt current readers and fresh direct visual certification",
+    "D000242", "R000548",
+) and "R000606" in visual_residual_superseded
+r607_exact = r607_preflight is not None and tuple(
+    r607_preflight.get(field) for field in (
+        "source_unit", "kind", "status", "evidence", "disposition",
+        "decision_id", "supersedes")) == (
+    "ega:I.5.1.5:diagram:xymatrix:1",
+    "reduction_square_visual_witness_requires_source_repair",
+    "open_gap",
+    "Tags 0356 and 01L7 still derive the reduction square semantically but NUMDAM places bottom f below and both current readers place it above",
+    "Retain S000718-S000720 R000496 and R000582 as mathematical mappings but block their visual and current-reader promotion until source repair rebuild and fresh downstream certification",
+    "D000243", "R000471",
+) and "R000607" in visual_residual_superseded
+r608_exact = r608_preflight is not None and tuple(
+    r608_preflight.get(field) for field in (
+        "source_unit", "kind", "status", "evidence", "disposition",
+        "decision_id", "supersedes")) == (
+    "ega:I.5.1.9:diagram:xymatrix:2",
+    "bottom_f_0_label_side_disagreement_requires_source_repair",
+    "open_gap",
+    "Tags 05YV and 01I1 still derive the scheme square semantically but NUMDAM places bottom f_0 below and both current readers place it above",
+    "Retain S000758 and S000759 as mathematical mappings but block their visual and current-reader promotion until source repair rebuild and fresh downstream certification",
+    "D000244", "R000491",
+) and "R000608" in visual_residual_superseded
+if not r606_exact:
+    ERRORS.append("missing exact superseded R000606 5.3.5 visual gap")
+if not r607_exact:
+    ERRORS.append("missing exact superseded R000607 5.1.5 visual gap")
+if not r608_exact:
+    ERRORS.append("missing exact superseded R000608 5.1.9 visual gap")
+visual_referral_contract_exact = all((
+    d203_historical_exact, d220_historical_exact,
+    d242_exact, d243_exact, d244_exact,
+    i76_exact, i77_exact, i78_exact,
+    r606_exact, r607_exact, r608_exact,
+))
 a130 = next(
     (row for row in rows("agent.csv") if row.get("run_id") == "A000130"),
     None,
@@ -783,6 +1462,9 @@ generated = {
 page_evidence_summary = None
 visual_qa_summary = None
 vqa_active_by_item = {}
+vqa_operational_by_item = {}
+operationally_quarantined_vqa_ids = set()
+operationally_quarantined_vqa_items = set()
 intake_path = ROOT / "intake.json"
 for name, field in generated.items():
     path = ROOT / name
@@ -1033,6 +1715,7 @@ if (ROOT / "units.csv").exists() and (ROOT / "files.csv").exists():
 vqa_path = ROOT / "vqa.csv"
 accepted_vqa_crop_paths = set()
 accepted_vqa_crop_hashes = set()
+vqa_active_by_item = {}
 expected_vqa_header = [
     "qa_id", "item_id", "item_kind", "source_unit",
     "a_record", "a_pdf_sha256", "a_pdf_bytes", "a_page1", "a_box_pt", "a_file",
@@ -1096,6 +1779,43 @@ else:
                 hashlib.sha256(v22_raw).hexdigest().upper() !=
                 "4ED34FDD022EC3E37C8A9F2E0C03FE7042F7759B9AB14DC807CF783281D67B05"):
             ERRORS.append("exact V000022 visual-QA row changed")
+    expected_current_vqa_rows = {
+        23: (1096,
+             "6A0087FA3BA1DAA208EB0ED838ED6EA964D8504754AC9DBB340252EAF09796F6"),
+        24: (1042,
+             "E2E334327B4EB7A6CC19E2A796785ABA6D77FFEFA4599ACBE7BBAA5589F55263"),
+        25: (1094,
+             "4AB6023B8C17599CF979CC6B121DA9142413500605BB74AABF9E2044E5A56B70"),
+        26: (1158,
+             "23D86F405D60EABA2B42284143548095BFC8BF4FD08DBF455BA79E38A9D42C14"),
+        27: (1240, "780A99518ED33DC0C0FBBC648553B2E25D1A72EFEBDAC28223994FF25E4A0396"),
+        28: (1011, "66A0C029DE8367F7E06566949DD4E64C30433B8825BB11CC8CA82AD0BD3FF0F1"),
+        29: (1013, "85CE0323DDBBD7F2AD4F4AAB9F18675323847036528CBED71A8CDABABEAB19AF"),
+        30: (979, "669343540022CC455A2C4BCED9E29F96993979C3AA8925C145D0C6F5C9C48791"),
+        31: (1005, "25F72F79458929702048EEF1E3A9FF52FB42FE9B5AA3B95495ED68CFADD73566"),
+        32: (1009, "2D583807B494849992A1DD5B3A11811108FC305D313A9C744E316D58D68D573D"),
+        33: (982, "5C182426C78FCCA07893D15CCAAD15FE8BEF3A3037390699881547F21EBD9F3E"),
+        34: (1087, "F9C4EA1B865E7C8BC9A96478A09DB9952DC76E1057854204BCB2957C55740C2C"),
+        35: (1041, "81B6BB08C9E882FDD602EC6FB5204E690574E8B039474EE363FCF3FF0BB65E3D"),
+        36: (984, "7BCA0C66EE944D30E3B68D0E68FF3D58C2D73B884BDDDA9AEE8435F08E129DCC"),
+        37: (962, "736F5C76DF191A2DF2AC08D203AB8056807418D7EA09491C1F70E3CCF4BB0CDF"),
+        38: (1021, "986AC97009B0C1FCB8950AA347694E7D49DD9F581D038B1BBA92048391B55222"),
+        39: (1083, "71556D9FED0FA94B5B7872B3291FE64E059473897D59E405F9222E1A56A3BBAB"),
+        40: (1135, "327315603E96947B9743A5D6E815FD10DC4DB99C633A756489A121A1D48F472E"),
+        41: (1093, "C67CB004037E623BAB77CFDCE236571F8EFEDE8E78D98A66F68E14E026803790"),
+        42: (1101, "ED2DD884AC19FB83EACA1F61104539B2346A34664A26228FD6F100B67FAD0317"),
+        43: (1047, "3E62BD1B8445C75B9979D4985692BCF31CED2BB5664EFB37119B22108CB13B9C"),
+        44: (1099, "614AAEE6726C48F7C45E955B2CF98422780BFB91C8946E5692E0A731DF687CFF"),
+    }
+    for line_index, (expected_bytes, expected_sha) in (
+            expected_current_vqa_rows.items()):
+        require_raw_line(
+            vqa_physical_lines, line_index, expected_bytes, expected_sha,
+            f"V{line_index:06d}")
+    if (len(raw_vqa) != 45146 or
+            hashlib.sha256(raw_vqa).hexdigest().upper() !=
+            "E6412AC2F9BEB3ED5E5DAF366E3FBD1B8F1B6770D9ACBAF5445C8274EEA307AA"):
+        ERRORS.append("final accepted visual-QA manifest identity mismatch")
     counts["vqa.csv"] = len(all_vqa_rows)
     vqa_ids = [row["qa_id"] for row in all_vqa_rows]
     vqa_ids_valid = contiguous_ids(
@@ -1120,6 +1840,10 @@ else:
     active_vqa_rows, superseded_vqa_rows = active_rows(
         all_vqa_rows, "qa_id", "vqa.csv")
     vqa_by_id = {row["qa_id"]: row for row in all_vqa_rows}
+    vqa_successor_by_prior = {
+        row["supersedes"]: row["qa_id"]
+        for row in all_vqa_rows if row.get("supersedes")
+    }
     for row in all_vqa_rows:
         prior_id = (row.get("supersedes") or "").strip()
         prior = vqa_by_id.get(prior_id)
@@ -1135,6 +1859,40 @@ else:
     if missing_baseline:
         ERRORS.append(
             f"missing baseline visual-QA items {sorted(missing_baseline)}")
+    operationally_quarantined_vqa_ids = set()
+    operational_vqa_rows = operational_vqa_view(
+        active_vqa_rows, operationally_quarantined_vqa_ids)
+    operational_vqa_ids = {row["qa_id"] for row in operational_vqa_rows}
+    expected_operational_vqa_ids = {
+        "V000001", "V000002", "V000003", "V000004", "V000005",
+        "V000007", "V000026",
+        *{f"V{number:06d}" for number in range(27, 45)},
+    }
+    if operational_vqa_ids != expected_operational_vqa_ids:
+        ERRORS.append("operational visual-QA frontier is not exact")
+    vqa_operational_by_item = {
+        row["item_id"]: row for row in operational_vqa_rows
+    }
+    operationally_quarantined_vqa_items = {
+        row["item_id"] for row in active_vqa_rows
+        if row["qa_id"] in operationally_quarantined_vqa_ids
+    }
+    if operationally_quarantined_vqa_items:
+        ERRORS.append("operational visual quarantine item set changed")
+    counts["operational_vqa_rows"] = len(operational_vqa_rows)
+    counts["quarantined_vqa_rows"] = len(operationally_quarantined_vqa_ids)
+    required_current_vqa = {
+        "ega:I.3.3.2:diagram:xymatrix:1": "V000026",
+        **{
+            row["item_id"]: row["qa_id"] for row in all_vqa_rows
+            if 27 <= int(row["qa_id"][1:]) <= 44
+        },
+    }
+    for item_id, qa_id in required_current_vqa.items():
+        current = vqa_active_by_item.get(item_id)
+        if current is None or current.get("qa_id") != qa_id:
+            ERRORS.append(
+                f"current visual-QA item is not exact successor {item_id} -> {qa_id}")
 
     legacy_record_expectations = {
         "a": (
@@ -1192,10 +1950,38 @@ else:
             14590653,
         ),
     }
+    d44_record_expectations = {
+        "a": legacy_record_expectations["a"],
+        "f": (
+            "sealed:B37AGR/EGA_FR.pdf",
+            "AB17E65FB638E16B9CD95A9F71A55BD2E514C5545A00A8851EBCD5715B10B46C",
+            2004670,
+        ),
+        "e": (
+            "sealed:B237R/EGA_English_Global_0_IV.pdf",
+            "75F8BFBDF127DC5ACBEBEA7C2650F1DA600DE0BBD68266420E9E372E042FFEB6",
+            14593431,
+        ),
+    }
+    d48_record_expectations = {
+        "a": legacy_record_expectations["a"],
+        "f": (
+            "sealed:B37AJ/EGA_FR.pdf",
+            "E41CDDAAA89E35AB794F6CBAC236F5D5522819CAE049FB4DCB910E979D98B77B",
+            2004661,
+        ),
+        "e": (
+            "sealed:B239/EGA_English_Global_0_IV.pdf",
+            "478379E297F5BA0B4A3726517944C4343944109CDCC122BF8265532330C119F3",
+            14593439,
+        ),
+    }
     legacy_page_counts = {"a": 227, "f": 165, "e": 1345}
     current_page_counts = {"a": 227, "f": 168, "e": 1345}
     latest_page_counts = {"a": 227, "f": 168, "e": 1346}
     corrected_page_counts = {"a": 227, "f": 168, "e": 1346}
+    d44_page_counts = {"a": 227, "f": 168, "e": 1347}
+    d48_page_counts = {"a": 227, "f": 168, "e": 1347}
     authority_page_geometry = {
         86: (536, 727),
         96: (543, 727),
@@ -1214,6 +2000,8 @@ else:
         130: (603, 755),
         131: (595, 748),
         132: (595, 748),
+        133: (595, 748),
+        134: (601, 752),
     }
     baseline_vqa_pages = {
         "b01": (86, 60, 284), "b02": (86, 60, 284),
@@ -1269,6 +2057,18 @@ else:
             "ega:visual-qa",
             "admit_corrected_5_3_7_individual_authority_french_english_visual_evidence_with_rejected_lineage",
             "V000022 J000010 J000011 J000012 J000013 J000014 D41R DIA41R REF11 and Q37CD"),
+        "D000240": (
+            "ega:visual-qa",
+            "admit_5_3_15_and_5_3_17_exact_current_reader_diagram_evidence",
+            "V000023 V000024 V000025 J000017-J000030 D44 DIA44 and Q37CN in ega/vqa.csv and ega/rej.csv"),
+        "D000241": (
+            "ega:I.3.3.2:diagram:xymatrix:1",
+            "admit_current_reader_successor_for_p108_lower_arrow_label_sides",
+            "V000026 supersedes V000006 under D44 DIA44 and Q37CN"),
+        "D000246": final_d48_decision_contracts["D000246"][:3],
+        "D000247": final_d48_decision_contracts["D000247"][:3],
+        "D000248": final_d48_decision_contracts["D000248"][:3],
+        "D000249": final_d48_decision_contracts["D000249"][:3],
     }
     vqa_expected_decision_ids = {
         **{f"V{number:06d}": "D000154" for number in range(1, 15)},
@@ -1276,25 +2076,63 @@ else:
         **{f"V{number:06d}": "D000203" for number in range(16, 21)},
         "V000021": "D000220",
         "V000022": "D000223",
+        "V000023": "D000240",
+        "V000024": "D000240",
+        "V000025": "D000240",
+        "V000026": "D000241",
+        **{f"V{number:06d}": "D000246" for number in range(27, 35)},
+        "V000035": "D000247",
+        **{f"V{number:06d}": "D000246" for number in range(36, 39)},
+        "V000039": "D000248",
+        "V000040": "D000249",
+        **{f"V{number:06d}": "D000246" for number in range(41, 45)},
+    }
+    parent_bound_diagram_sources = {
+        "V000023": (
+            "ega:I.5.3.15:diagram:xymatrix:1", "ega:I.5.3.15",
+            "proposition"),
+        "V000024": (
+            "ega:I.5.3.17:diagram:xymatrix:1", "ega:I.5.3.17",
+            "corollary"),
+        "V000025": (
+            "ega:I.5.3.17:diagram:xymatrix:2", "ega:I.5.3.17",
+            "corollary"),
+        "V000042": (
+            "ega:I.5.3.15:diagram:xymatrix:1", "ega:I.5.3.15",
+            "proposition"),
+        "V000043": (
+            "ega:I.5.3.17:diagram:xymatrix:1", "ega:I.5.3.17",
+            "corollary"),
+        "V000044": (
+            "ega:I.5.3.17:diagram:xymatrix:2", "ega:I.5.3.17",
+            "corollary"),
     }
     for row in all_vqa_rows:
         if not re.fullmatch(r"V\d{6}", row.get("qa_id", "")):
             continue
         item_id = row["item_id"]
-        qa_number = int(row["qa_id"][1:])
-        legacy_parent = qa_number <= 15
-        if legacy_parent:
+        route = vqa_parent_route(row["qa_id"])
+        if route == "legacy":
             record_expectations = legacy_record_expectations
             record_page_counts = legacy_page_counts
-        elif qa_number <= 20:
+        elif route == "b37aa_b231":
             record_expectations = current_record_expectations
             record_page_counts = current_page_counts
-        elif qa_number == 21:
+        elif route == "b37ac_b233":
             record_expectations = latest_record_expectations
             record_page_counts = latest_page_counts
-        else:
+        elif route == "b37ad_b234":
             record_expectations = corrected_record_expectations
             record_page_counts = corrected_page_counts
+        elif route == "b37agr_b237r":
+            record_expectations = d44_record_expectations
+            record_page_counts = d44_page_counts
+        elif route == "b37aj_b239":
+            record_expectations = d48_record_expectations
+            record_page_counts = d48_page_counts
+        else:
+            ERRORS.append(f"visual-QA row has no exact parent route {row['qa_id']}")
+            continue
         baseline_entry = baseline_vqa_ids.get(row["qa_id"])
         if baseline_entry is not None:
             expected_item, expected_short = baseline_entry
@@ -1307,10 +2145,25 @@ else:
             ERRORS.append(f"visual-QA row has unknown source unit {row['qa_id']}")
         if row["item_kind"] == "diagram":
             certified_diagrams += row["qa_id"] in active_vqa_ids
-            if source is not None and source["kind"] != "diagram":
-                ERRORS.append(f"visual-QA diagram source is not a diagram {row['qa_id']}")
-            if row["item_id"] != row["source_unit"]:
-                ERRORS.append(f"visual-QA diagram item/source mismatch {row['qa_id']}")
+            parent_binding = parent_bound_diagram_sources.get(row["qa_id"])
+            if parent_binding is None:
+                if source is not None and source["kind"] != "diagram":
+                    ERRORS.append(
+                        f"visual-QA diagram source is not a diagram {row['qa_id']}")
+                if row["item_id"] != row["source_unit"]:
+                    ERRORS.append(
+                        f"visual-QA diagram item/source mismatch {row['qa_id']}")
+            elif (row["item_id"], row["source_unit"],
+                    source.get("kind") if source is not None else None) != (
+                    parent_binding):
+                ERRORS.append(
+                    f"visual-QA parent-bound diagram mismatch {row['qa_id']}")
+            elif (units_by_id.get(row["item_id"], {}).get("kind") !=
+                    "diagram" or
+                    units_by_id[row["item_id"]].get("parent_id") !=
+                    row["source_unit"]):
+                ERRORS.append(
+                    f"visual-QA parent/child unit link mismatch {row['qa_id']}")
             if not row["signature"].endswith(
                     ";ordinary;no-hooks;no-equalities;no-other-edges"):
                 ERRORS.append(f"incomplete diagram graph signature {row['qa_id']}")
@@ -1344,9 +2197,21 @@ else:
         if row["status"] != "certified":
             ERRORS.append(f"non-certified visual-QA row {row['qa_id']}")
         contract = vqa_decision_contracts.get(row["decision_id"])
+        active_contract = bool(
+            contract is not None and
+            decision_contract(row["decision_id"], *contract))
+        historical_referral_contract = bool(
+            visual_referral_contract_exact and (
+                (row["qa_id"] in {
+                    "V000016", "V000017", "V000018", "V000019", "V000020"
+                } and row["decision_id"] == "D000203" and
+                    d203_historical_exact) or
+                (row["qa_id"] == "V000021" and
+                    row["decision_id"] == "D000220" and
+                    d220_historical_exact)))
         if (row["decision_id"] != vqa_expected_decision_ids.get(row["qa_id"]) or
                 contract is None or
-                not decision_contract(row["decision_id"], *contract)):
+                not (active_contract or historical_referral_contract)):
             ERRORS.append(
                 f"visual-QA row lacks exact active decision contract "
                 f"{row['qa_id']}")
@@ -1510,8 +2375,122 @@ else:
         "crop_files": len(crop_paths),
         "crop_bytes": crop_bytes,
     }
+    if tuple(visual_qa_summary[field] for field in (
+            "physical_rows", "active_rows", "superseded_rows",
+            "certified_diagrams", "certified_mathblocks", "crop_files",
+            "crop_bytes")) != (44, 25, 19, 21, 4, 132, 37154185):
+        ERRORS.append("final visual-QA numeric snapshot mismatch")
     if scope.get("visual_qa_snapshot") != visual_qa_summary:
         ERRORS.append("scope visual-QA snapshot does not match vqa.csv and crops")
+
+visual_dependencies_by_source_unit = {
+    "ega:I.3.3.9": {"ega:I.3.3.9:diagram:xymatrix:1"},
+    "ega:I.3.3.9:proof": {"ega:I.3.3.9:diagram:xymatrix:1"},
+    "ega:I.3.3.9:diagram:xymatrix:1": {
+        "ega:I.3.3.9:diagram:xymatrix:1",
+    },
+    "ega:I.3.3.9.1": {"ega:I.3.3.9:diagram:xymatrix:1"},
+    "ega:I.3.3.9.2": {"ega:I.3.3.9:diagram:xymatrix:1"},
+    "ega:I.3.3.11": {"ega:I.3.3.11:diagram:xymatrix:1"},
+    "ega:I.3.3.11:proof": {"ega:I.3.3.11:diagram:xymatrix:1"},
+    "ega:I.3.3.11:diagram:xymatrix:1": {
+        "ega:I.3.3.11:diagram:xymatrix:1",
+    },
+    "ega:I.3.4.3": {"ega:I.3.4.3:diagram:xymatrix:1"},
+    "ega:I.3.4.3.1": {"ega:I.3.4.3:diagram:xymatrix:1"},
+    "ega:I.3.4.3.2": {"ega:I.3.4.3:diagram:xymatrix:1"},
+    "ega:I.3.4.3:diagram:xymatrix:1": {
+        "ega:I.3.4.3:diagram:xymatrix:1",
+    },
+    "ega:I.3.4.8": {"ega:I.3.4.8:diagram:xymatrix:1"},
+    "ega:I.3.4.8:proof": {"ega:I.3.4.8:diagram:xymatrix:1"},
+    "ega:I.3.4.8:diagram:xymatrix:1": {
+        "ega:I.3.4.8:diagram:xymatrix:1",
+    },
+    "ega:I.3.5.3": {"ega:I.3.5.3:diagram:xymatrix:1"},
+    "ega:I.3.5.3:proof": {"ega:I.3.5.3:diagram:xymatrix:1"},
+    "ega:I.3.5.3:diagram:xymatrix:1": {
+        "ega:I.3.5.3:diagram:xymatrix:1",
+    },
+    "ega:I.3.5.5": {"ega:I.3.5.5:diagram:xymatrix:1"},
+    "ega:I.3.5.5:diagram:xymatrix:1": {
+        "ega:I.3.5.5:diagram:xymatrix:1",
+    },
+    "ega:I.3.5.10": {"ega:I.3.5.10:diagram:xymatrix:1"},
+    "ega:I.3.5.10:proof": {"ega:I.3.5.10:diagram:xymatrix:1"},
+    "ega:I.3.5.10:diagram:xymatrix:1": {
+        "ega:I.3.5.10:diagram:xymatrix:1",
+    },
+    "ega:I.4.2.2": {"ega:I.4.2.2:diagram:xymatrix:1"},
+    "ega:I.4.2.2:proof": {"ega:I.4.2.2:diagram:xymatrix:1"},
+    "ega:I.4.2.2:diagram:xymatrix:1": {
+        "ega:I.4.2.2:diagram:xymatrix:1",
+    },
+    "ega:I.5.1.5": {"ega:I.5.1.5:diagram:xymatrix:1"},
+    "ega:I.5.1.5:diagram:xymatrix:1": {
+        "ega:I.5.1.5:diagram:xymatrix:1",
+    },
+    "ega:I.5.1.9": {
+        "ega:I.5.1.9:mathblock:1",
+        "ega:I.5.1.9:diagram:xymatrix:1",
+        "ega:I.5.1.9:diagram:xymatrix:2",
+    },
+    "ega:I.5.1.9.1": {"ega:I.5.1.9.1:mathblock:1"},
+    "ega:I.5.1.9:diagram:xymatrix:1": {
+        "ega:I.5.1.9:diagram:xymatrix:1",
+    },
+    "ega:I.5.1.9:diagram:xymatrix:2": {
+        "ega:I.5.1.9:diagram:xymatrix:2",
+    },
+    "ega:I.5.3.5": {"ega:I.5.3.5:diagram:xymatrix:1"},
+    "ega:I.5.3.5.1": {"ega:I.5.3.5:diagram:xymatrix:1"},
+    "ega:I.5.3.5:diagram:xymatrix:1": {
+        "ega:I.5.3.5:diagram:xymatrix:1",
+    },
+    "ega:I.5.3.5:proof": {"ega:I.5.3.5:diagram:xymatrix:1"},
+    "ega:I.5.3.7": {"ega:I.5.3.7:diagram:xymatrix:1"},
+    "ega:I.5.3.7:diagram:xymatrix:1": {
+        "ega:I.5.3.7:diagram:xymatrix:1",
+    },
+    "ega:I.5.3.7:proof": {"ega:I.5.3.7:diagram:xymatrix:1"},
+    "ega:I.3.3.2:diagram:xymatrix:1": {
+        "ega:I.3.3.2:diagram:xymatrix:1",
+    },
+    "ega:I.5.3.15": {
+        "ega:I.5.3.15:diagram:xymatrix:1",
+    },
+    "ega:I.5.3.15.1": {
+        "ega:I.5.3.15:diagram:xymatrix:1",
+    },
+    "ega:I.5.3.15:diagram:xymatrix:1": {
+        "ega:I.5.3.15:diagram:xymatrix:1",
+    },
+    "ega:I.5.3.15:proof": {
+        "ega:I.5.3.15:diagram:xymatrix:1",
+    },
+    "ega:I.5.3.16": {
+        "ega:I.5.3.15:diagram:xymatrix:1",
+    },
+    "ega:I.5.3.16:proof": {
+        "ega:I.5.3.15:diagram:xymatrix:1",
+    },
+    "ega:I.5.3.17": {
+        "ega:I.5.3.15:diagram:xymatrix:1",
+        "ega:I.5.3.17:diagram:xymatrix:1",
+        "ega:I.5.3.17:diagram:xymatrix:2",
+    },
+    "ega:I.5.3.17:proof": {
+        "ega:I.5.3.15:diagram:xymatrix:1",
+        "ega:I.5.3.17:diagram:xymatrix:1",
+        "ega:I.5.3.17:diagram:xymatrix:2",
+    },
+    "ega:I.5.3.17:diagram:xymatrix:1": {
+        "ega:I.5.3.17:diagram:xymatrix:1",
+    },
+    "ega:I.5.3.17:diagram:xymatrix:2": {
+        "ega:I.5.3.17:diagram:xymatrix:2",
+    },
+}
 
 rejected_path = ROOT / "rej.csv"
 rejected_header = [
@@ -1554,16 +2533,50 @@ else:
              "53B43C6AEB4750C7ED0D2FE605B0E81ED461D8E8D012174718090616B81E1C32"),
         16: (348,
              "E1ED314B4C815F965D6C46AD2CFB6A2A8A970D375504996CA76049715FB59F91"),
+        17: (318,
+             "3355EA349650D927D950116DE6F77CD619EC269B10DC2B30F1136218AB54B85F"),
+        18: (320,
+             "90436F0B83F88C5242FDDE7F1599F518C9BE39A925F04488DE1EB31C5AB6BBB5"),
+        19: (330,
+             "14EECE4DC83D570704F4F1C59D2F0E57F4F113B51804F6DC48E70584A202EFDC"),
+        20: (318,
+             "477839DBA9394ABDC0613644F92E40DA519C21D71E120D5746A792EBBF9F9DF8"),
+        21: (310,
+             "5CE0DECF587F97504D444814F92E614A50E2C27B5E11D847FF965BD8F5BD9B3C"),
+        22: (308,
+             "FC26D4296159E93066BDD163E3A820AAC5CD62FCBFDCFC97585E37722DF81C46"),
+        23: (337,
+             "1796BBD6EFD4765DADCF22FCCA935A341E777FC7775050631B219B058941A36C"),
+        24: (348,
+             "E3898252F2C8451441E763945A83818883901DDCA216888B4CC16478F04D295C"),
+        25: (331,
+             "15516255C9E60A2B1A0FE8C9F7BFF065D3457E0C0567DCDCE8C87CC8B2C2C9CE"),
+        26: (344,
+             "0D40731A38FE458BFE54BC05DCF1E8D13210BA29E401A09D83A116D6166E2B7F"),
+        27: (337,
+             "FC0486535794BBEAC7F90F9F79D9221656405D27949C3D7202A7256AB5FF3CE6"),
+        28: (348,
+             "559F4441E231F51E5C5A35E9B5A34E126359862F820E41EBCA46FD1FBCB55423"),
+        29: (320,
+             "3F1FFF1C6F3F02B405E28EFC00C731722B97D47F6995559E788A086DED7EA7FE"),
+        30: (333,
+             "9FE6B55B070068E9A62C32FE8E3A7837E7856BBD4FBF8EB161438F7CEEAB26D1"),
+        31: (344, "73F5F07241F4739356BB756781EEEE29035A054E5467E7ED491885D70D52E39E"),
+        32: (354, "631850AE0A531D71E078CB47F2DC0262E2A793EECC35A971295ADC6EB52523ED"),
+        33: (329, "184824C07F25DD8DA280D6A426654F5C81F2084CBE14A736646416A66CB2B8C1"),
+        34: (340, "93EFC3AD54B0D9DCDECFD8B69B834E5A9D735B96E31BC1E9A216503A1482B5BD"),
+        35: (330, "AD9DC9E188EB0F29830FE1F2AAB84F597620958DA40BC5D3662C6950463F59AF"),
+        36: (341, "D817B5357876A774870999ED6B409E364B0D947B7CBF648B95464CAA03198F03"),
     }
     for line_index, (expected_bytes, expected_sha) in (
             expected_rejected_extensions.items()):
-        if line_index >= len(rejected_physical_lines):
-            ERRORS.append(f"rej.csv lacks exact J0000{line_index} extension row")
-            continue
-        raw_extension = rejected_physical_lines[line_index]
-        if (len(raw_extension) != expected_bytes or
-                hashlib.sha256(raw_extension).hexdigest().upper() != expected_sha):
-            ERRORS.append(f"exact J0000{line_index} rejected row changed")
+        require_raw_line(
+            rejected_physical_lines, line_index, expected_bytes, expected_sha,
+            f"J{line_index:06d}")
+    if (len(rejected_raw) != 11940 or
+            hashlib.sha256(rejected_raw).hexdigest().upper() !=
+            "4DA0E5332A997A9E9E09609E1BAA7C40A43CC494C7C04A356B89BAA4295A1B39"):
+        ERRORS.append("final rejected visual-QA manifest identity mismatch")
     rejected_ids = [row.get("reject_id", "") for row in rejected_rows]
     contiguous_ids(rejected_rows, "reject_id", "J", "rej.csv")
     if len(rejected_lines) >= 6:
@@ -1581,6 +2594,7 @@ rejected_manifest_paths = {row.get("path", "") for row in rejected_rows}
 if len(rejected_manifest_paths) != len(rejected_rows):
     ERRORS.append("rejected visual-QA evidence reuses a crop path")
 rejected_discovered_paths = set()
+pending_referral_crop_contracts = {}
 if not rejected_root.is_dir() or rejected_root.is_symlink():
     ERRORS.append("missing or unsafe rejected visual-QA directory")
 else:
@@ -1589,7 +2603,20 @@ else:
             ERRORS.append("rejected visual-QA crops must be flat regular files")
             continue
         rejected_discovered_paths.add(f"qa/r/{path.name}")
-if rejected_discovered_paths != rejected_manifest_paths:
+for relative_path, (expected_bytes, expected_sha) in (
+        pending_referral_crop_contracts.items()):
+    pending_path = ROOT / relative_path
+    if (not pending_path.is_file() or pending_path.is_symlink() or
+            pending_path.resolve().parent != rejected_root.resolve()):
+        ERRORS.append(f"missing pending visual-referral crop {relative_path}")
+        continue
+    pending_raw = pending_path.read_bytes()
+    if (len(pending_raw) != expected_bytes or
+            hashlib.sha256(pending_raw).hexdigest().upper() != expected_sha or
+            png_dimensions(pending_raw) is None):
+        ERRORS.append(f"pending visual-referral crop changed {relative_path}")
+if rejected_discovered_paths != (
+        rejected_manifest_paths | set(pending_referral_crop_contracts)):
     ERRORS.append("rejected visual-QA crop set differs from rej.csv")
 
 rejected_record_expectations = {
@@ -1617,16 +2644,45 @@ rejected_record_expectations = {
     "sealed:B234/EGA_English_Global_0_IV.pdf": (
         "e", "86AC6590F07E0E36B24EE5D4A4125FAF0E191EF968AD4B87254A9C4EEEF5A42A",
         14590653, 1346),
+    "sealed:B37AD/EGA_FR.pdf": (
+        "f", "8A89494F17D1569D206C7D6456D85E922D61F6E6B0E62F8042AABA23F5358F66",
+        2004722, 168),
+    "sealed:B235R/EGA_English_Global_0_IV.pdf": (
+        "e", "B63C595C6A9740F01212D6D567F181923442B5A4C38E59EBC41D89C558F37197",
+        14593436, 1347),
+    "sealed:B37AGR/EGA_FR.pdf": (
+        "f", "AB17E65FB638E16B9CD95A9F71A55BD2E514C5545A00A8851EBCD5715B10B46C",
+        2004670, 168),
+    "sealed:B37AIR/EGA_FR.pdf": (
+        "f", "2BF5D0CE3DFAED616ACA5D05205DEE6260C1F59E660BC5635748C5C6AD1C0FD9",
+        2004668, 168),
+    "sealed:B238R/EGA_English_Global_0_IV.pdf": (
+        "e", "4F222EF3B844857980A28620C7B6BA402CAF9434BB8810896876FF97624E0F3D",
+        14593435, 1347),
 }
 rejected_page_geometries = {
     ("NUMDAM:EGA_I_PMIHES_1960_4.pdf", 128): (595, 748),
     ("NUMDAM:EGA_I_PMIHES_1960_4.pdf", 129): (595, 748),
     ("NUMDAM:EGA_I_PMIHES_1960_4.pdf", 132): (595, 748),
+    ("NUMDAM:EGA_I_PMIHES_1960_4.pdf", 133): (595, 748),
+    ("NUMDAM:EGA_I_PMIHES_1960_4.pdf", 134): (601, 752),
     ("zenodo:21859616/00_FR.pdf", 88): (595.276, 841.89),
     ("zenodo:21859616/00_EN.pdf", 319): (612, 792),
     ("sealed:B37AC/EGA_FR.pdf", 90): (595.276, 841.89),
     ("sealed:B233/EGA_English_Global_0_IV.pdf", 323): (612, 792),
     ("sealed:B234/EGA_English_Global_0_IV.pdf", 323): (612, 792),
+    ("sealed:B37AD/EGA_FR.pdf", 91): (595.276, 841.89),
+    ("sealed:B37AD/EGA_FR.pdf", 92): (595.276, 841.89),
+    ("sealed:B235R/EGA_English_Global_0_IV.pdf", 324): (612, 792),
+    ("sealed:B235R/EGA_English_Global_0_IV.pdf", 325): (612, 792),
+    ("sealed:B37AGR/EGA_FR.pdf", 91): (595.276, 841.89),
+    ("sealed:B37AGR/EGA_FR.pdf", 92): (595.276, 841.89),
+    ("sealed:B37AIR/EGA_FR.pdf", 88): (595.276, 841.89),
+    ("sealed:B37AIR/EGA_FR.pdf", 89): (595.276, 841.89),
+    ("sealed:B37AIR/EGA_FR.pdf", 90): (595.276, 841.89),
+    ("sealed:B238R/EGA_English_Global_0_IV.pdf", 319): (612, 792),
+    ("sealed:B238R/EGA_English_Global_0_IV.pdf", 321): (612, 792),
+    ("sealed:B238R/EGA_English_Global_0_IV.pdf", 322): (612, 792),
 }
 rejected_crop_bytes = 0
 rejected_crop_hashes = []
@@ -1694,7 +2750,9 @@ for row in rejected_rows:
             row["outcome"] == "rejected" and
             "below_5000" in row["reason"]):
         ERRORS.append(f"below-floor rejected crop lacks explicit reason {reject_id}")
-    successor = vqa_by_id.get(row["successor_qa_id"]) if 'vqa_by_id' in locals() else None
+    successor = terminal_successor(
+        row["successor_qa_id"], vqa_by_id, vqa_successor_by_prior,
+        "qa_id") if "vqa_by_id" in locals() else None
     if (successor is None or successor["item_id"] != row["item_id"] or
             successor["qa_id"] not in active_vqa_ids):
         ERRORS.append(f"rejected visual-QA successor mismatch {reject_id}")
@@ -1725,6 +2783,11 @@ if not decision_contract(
         "retain_rejected_V000022_subpixel_floor_rasters",
         "J000015 J000016 in ega/rej.csv"):
     ERRORS.append("missing rejected subpixel-floor evidence decision D000224")
+if not decision_contract(
+        "D000240", "ega:visual-qa",
+        "admit_5_3_15_and_5_3_17_exact_current_reader_diagram_evidence",
+        "V000023 V000024 V000025 J000017-J000030 D44 DIA44 and Q37CN in ega/vqa.csv and ega/rej.csv"):
+    ERRORS.append("missing rejected current-reader lineage decision D000240")
 for row in rejected_rows:
     reject_id = row.get("reject_id", "")
     if not re.fullmatch(r"J\d{6}", reject_id):
@@ -1736,8 +2799,26 @@ for row in rejected_rows:
         decision_id = "D000204"
     elif reject_number <= 14:
         decision_id = "D000223"
-    else:
+    elif reject_number <= 16:
         decision_id = "D000224"
+    elif reject_number <= 30:
+        decision_id = "D000240"
+    elif reject_number <= 32:
+        decision_id = "D000249"
+    elif reject_number <= 34:
+        decision_id = "D000247"
+    elif reject_number <= 36:
+        decision_id = "D000248"
+    else:
+        ERRORS.append(f"rejected visual-QA row has no decision route {reject_id}")
+        continue
+    if reject_number > 30:
+        if not decision_contract(
+                decision_id, *final_d48_decision_contracts[decision_id][:3]):
+            ERRORS.append(
+                f"rejected visual-QA row lacks exact final D48 decision "
+                f"contract {reject_id}")
+        continue
     if not decision_contract(
             decision_id, "ega:visual-qa",
             ("retain_rejected_and_nonfinal_5_1_visual_candidates"
@@ -1746,14 +2827,18 @@ for row in rejected_rows:
              if decision_id == "D000204" else
              "admit_corrected_5_3_7_individual_authority_french_english_visual_evidence_with_rejected_lineage"
              if decision_id == "D000223" else
-             "retain_rejected_V000022_subpixel_floor_rasters"),
+             "retain_rejected_V000022_subpixel_floor_rasters"
+             if decision_id == "D000224" else
+             "admit_5_3_15_and_5_3_17_exact_current_reader_diagram_evidence"),
             ("J000001-J000005 in ega/rej.csv"
              if decision_id == "D000202" else
              "J000006 J000007 J000008 J000009 in ega/rej.csv"
              if decision_id == "D000204" else
              "V000022 J000010 J000011 J000012 J000013 J000014 D41R DIA41R REF11 and Q37CD"
              if decision_id == "D000223" else
-             "J000015 J000016 in ega/rej.csv")):
+             "J000015 J000016 in ega/rej.csv"
+             if decision_id == "D000224" else
+             "V000023 V000024 V000025 J000017-J000030 D44 DIA44 and Q37CN in ega/vqa.csv and ega/rej.csv")):
         ERRORS.append(
             f"rejected visual-QA row lacks exact active decision contract "
             f"{reject_id}")
@@ -1762,9 +2847,14 @@ rejected_visual_summary = {
     "bytes": len(rejected_raw),
     "sha256": hashlib.sha256(rejected_raw).hexdigest().upper(),
     "rows": len(rejected_rows),
-    "crop_files": len(rejected_discovered_paths),
+    "crop_files": len(rejected_manifest_paths),
     "crop_bytes": rejected_crop_bytes,
 }
+counts["pending_visual_referral_crops"] = len(
+    pending_referral_crop_contracts)
+if tuple(rejected_visual_summary[field] for field in (
+        "rows", "crop_files", "crop_bytes")) != (36, 36, 7253466):
+    ERRORS.append("final rejected visual-QA numeric snapshot mismatch")
 if scope.get("rejected_visual_qa_snapshot") != rejected_visual_summary:
     ERRORS.append("scope rejected visual-QA snapshot does not match evidence")
 
@@ -1906,7 +2996,9 @@ if smap_path.exists():
         "review_state", "coverage_claim", "evidence", "decision_id",
         "notes", "supersedes",
     ]
-    smap_lines = smap_path.read_text(encoding="utf-8").splitlines()
+    smap_raw = smap_path.read_bytes()
+    smap_lines = smap_raw.decode("utf-8").splitlines()
+    smap_physical_lines = smap_raw.splitlines(keepends=True)
     if not smap_lines or smap_lines[0].split(",") != expected_smap_header:
         ERRORS.append("unexpected smap.csv header")
     all_statement_edges = rows("smap.csv")
@@ -1932,6 +3024,49 @@ if smap_path.exists():
             hashlib.sha256(legacy_smap).hexdigest().upper() !=
             "86DB212E45E51F7F7CB8613E4A205A9A07E68A82E173BBD2C5DD8167E350819C"):
         ERRORS.append("published S000001-S000335 prefix changed")
+    expected_current_smap_rows = {
+        837: (467,
+              "9147254151F1921EA371062B8D3772164AD65E4A9F67FB251836FE5488B7D55E"),
+        838: (420,
+              "35516CFEBE2256E50976859AEBFA3AC650BB519A77F419824829855174D07FF2"),
+        839: (517,
+              "F99411BB4A6F8C6C269E8435B1E5446535A2F4972D43E52FB6616BD1CE36B16E"),
+        840: (439,
+              "237880AAEFAC01F63D4B40AAACDD3F6AC4D4FA7D7DBA6A0759E288D1B762D450"),
+        841: (404,
+              "7F57DE857258EE576D9BB461C1DABC60A7BC4140085131491313AB7815204A34"),
+        842: (460,
+              "FCA13ABCEDEDE83CFD0DAD8BA85E83428BB63AF4561DAE930781ABDD163D7971"),
+        843: (402,
+              "DDC7D10068624328B31A16C04DDFB64EAB2579B8975EB360F0353C67839DB0D5"),
+        844: (481,
+              "67A4959CBC5C045539BCAAB851C7EDA1364F56F998DD6F828DF7A29284DA56EA"),
+        845: (409,
+              "F19BC2BF6BD5816C6D0B0F174A4413BE2EAA5DEAB67E8E40C896C7391B07272A"),
+        846: (416,
+              "FFF3E33FC9E6D28C6DAEF806904B7DC8209BE21F4F7F1693B9C1A7D8445F125E"),
+        847: (431,
+              "C18103166D07FB3C5B61A027ABB1B9B80DFB8CE853A2BF160ED9147B9EE00B5A"),
+        848: (445,
+              "EE1E26A772EBE34A5CB7B5B727E3DC82BAD02A144A8FD8BC80978DEA0F204F98"),
+        849: (441,
+              "97BDB93887FA307809A7CE407AD3F00B307C5DF2E829F5FAFCD99406507B3A40"),
+        850: (444,
+              "EDC0168D7458628B6735D4E949EB2366F3835C749C3750DCA49C41A8A079E948"),
+        851: (496,
+              "A47B05789732056D7707DE28CD6CAC010AC1FEF591A5EDEF35E80ABD10F8A445"),
+        852: (588,
+              "D55EB54896B89E162EB736D2338F977E74D54AD8E4FC36AE3393D30A09CB6C15"),
+    }
+    for line_index, (expected_bytes, expected_sha) in (
+            expected_current_smap_rows.items()):
+        require_raw_line(
+            smap_physical_lines, line_index, expected_bytes, expected_sha,
+            f"S{line_index:06d}")
+    if (len(smap_raw) != 376131 or
+            hashlib.sha256(smap_raw).hexdigest().upper() !=
+            "FC54C4C53A8958F0B33363DB9D8F306D63BE54DD76A65CD42A67838C6B832232"):
+        ERRORS.append("final statement-map manifest identity mismatch")
     edge_ids = [row["edge_id"] for row in all_statement_edges]
     if len(edge_ids) != len(set(edge_ids)):
         ERRORS.append("duplicate edge_id in smap.csv")
@@ -1981,10 +3116,37 @@ if smap_path.exists():
         row["source_unit"] for row in statement_edges
         if units_by_id.get(row["source_unit"], {}).get("kind") == "diagram"
     }
-    missing_diagram_qa = mapped_diagram_units - set(vqa_active_by_item)
-    if missing_diagram_qa:
+    missing_diagram_qa = mapped_diagram_units - set(vqa_operational_by_item)
+    unexpected_missing_diagram_qa = (
+        missing_diagram_qa - operationally_quarantined_vqa_items)
+    if unexpected_missing_diagram_qa:
         ERRORS.append(
-            f"mapped diagrams lack active visual QA {sorted(missing_diagram_qa)}")
+            "mapped diagrams lack operational visual QA "
+            f"{sorted(unexpected_missing_diagram_qa)}")
+    quarantined_statement_edge_ids = set()
+    for row, missing in visual_dependency_gaps(
+            statement_edges, vqa_operational_by_item,
+            visual_dependencies_by_source_unit):
+        if (visual_referral_contract_exact and
+                set(missing) <= operationally_quarantined_vqa_items):
+            quarantined_statement_edge_ids.add(row["edge_id"])
+        else:
+            ERRORS.append(
+                f"statement edge lacks transitive operational visual QA "
+                f"{row['edge_id']} {list(missing)}")
+    operational_statement_edges = [
+        row for row in statement_edges
+        if row["edge_id"] not in quarantined_statement_edge_ids
+    ]
+    if quarantined_statement_edge_ids:
+        ERRORS.append("operational statement quarantine is not empty")
+    if visual_dependency_gaps(
+            operational_statement_edges, vqa_operational_by_item,
+            visual_dependencies_by_source_unit):
+        ERRORS.append("operational statement view retains a visual-QA gap")
+    counts["operational_statement_edges"] = len(operational_statement_edges)
+    counts["quarantined_statement_edges"] = len(
+        quarantined_statement_edge_ids)
 
     unit_ids = {row["unit_id"] for row in rows("units.csv")}
     decision_ids = {row["decision_id"] for row in rows("dec.csv")}
@@ -2088,7 +3250,9 @@ if residual_path.exists():
         "residual_id", "source_unit", "kind", "status", "evidence",
         "disposition", "decision_id", "supersedes",
     ]
-    residual_lines = residual_path.read_text(encoding="utf-8").splitlines()
+    residual_raw = residual_path.read_bytes()
+    residual_lines = residual_raw.decode("utf-8").splitlines()
+    residual_physical_lines = residual_raw.splitlines(keepends=True)
     if not residual_lines or residual_lines[0].split(",") != expected_resid_header:
         ERRORS.append("unexpected resid.csv header")
     all_residuals = rows("resid.csv")
@@ -2117,6 +3281,67 @@ if residual_path.exists():
             hashlib.sha256(legacy_residuals).hexdigest().upper() !=
             "704D957786F45FE1F280C3303C59883DC50AAC9809CD2071FBB8C20369147303"):
         ERRORS.append("published R000001-R000171 prefix changed")
+    expected_current_residual_rows = {
+        589: (285,
+              "10AC66C5AEA503803AC29C89DA559D6123B9771D80DB6DCCB3600FD58EE52702"),
+        590: (267,
+              "9A68AA0E48225AE91470C5ADD5B704EFE1FB2A852EEAC85ED80C79E29E8BB043"),
+        591: (342,
+              "7BABBB92BA8729349FCB040F6B2DCF2225819CF2A87A19C6B67F9AF811C58279"),
+        592: (291,
+              "C845B392CDCCC26498D1981194CF32055C3E5D2949F365C4C50D1789D6793D5D"),
+        593: (243,
+              "79EE55A796FBFDF65E920F5F71187A0D85DDC894697C33F7BB68BA3216977820"),
+        594: (252,
+              "5320CAF77D2DE8D472F22B20743C543BBE0C9F9BBF596656DBEBAB0F0F5DE424"),
+        595: (378,
+              "86C20C8D0294B4B2044B34C8665111627F718BE5C7A3F3CFA00A5D78A1BDC89F"),
+        596: (383,
+              "8445D84807D50DE6359651D191CEE74DF98BED99701908B6F1DC1FDCF8A4D987"),
+        597: (270,
+              "5D235EDFF12AA857518FF2195BB4C00BA3173743888A2EED12C54DA9821AA406"),
+        598: (245,
+              "7909012DB3C332525BA3DF7A43EC18414297B805725D1EFABA3849FBF377E4FD"),
+        599: (299,
+              "9F669C577CCC8BC03161F241275E370200BDE234987AB41B81BB229051153525"),
+        600: (297,
+              "BAF4EAFCE5C65EDF623912EF89B77F0619CD1414FEB1D0D4A1AD88877BE63ABD"),
+        601: (319,
+              "B3AD3A825FC55A8E38B3F4DB2EC3E6B4A0A4C20AC2DBCB5CD6964492F7FDCDF2"),
+        602: (308,
+              "2F847B8A9CC727E30B7B984E0AB9763E79AF49AC38379D3223F226433487C351"),
+        603: (429,
+              "1FFD93C9BA3CFCD036B0661B5278B1B47035544B74B994196C92737BD0323305"),
+        604: (297,
+              "92E42BFA8025463AB504E6673F620D5D3E2DE85175B934636F2256F3DF00EF4B"),
+        605: (346,
+              "D89F30EABC256A86F342A8849242A0BF881D5AAD36D9E803E471AEC75007F8BA"),
+        606: (383,
+              "71CC962824577294F8EAF8AF628D90EF0CA4451214A3BC03A2AC86C408DE7C3C"),
+        607: (441,
+              "5933AB4F0387A16C91559EB4D7A8392F624296B368C4412C011B28204595B5A2"),
+        608: (427,
+              "98C572BE6F65FB8BFC2ED0AE7FA79BF3563D179B22820D3A4B9390C4E432893E"),
+        609: (353,
+              "027F9959A74BC7E1897B80E3687AA58DDE55FFBE2BB027EF84FFEA505AEB2132"),
+        610: (361,
+              "3DC1D2C5C8A290232C1F83C6D7A5405A32CF955BDF0E239F5FB4EA32E4413049"),
+        611: (397, "2FBB864B89D167D4FD8397357BE616751ED494E411FF4F6313E935A6DAC030DC"),
+        612: (405, "24ECCEBD7255D56F0C873DC5C0792F601BDEA7F2ACFF6037BC5089305326388B"),
+        613: (458, "539AF84A9F9F4B28E8DCB63E072FDFA2469C67A1E10B1B0D5A8F738969A2AFBC"),
+        614: (351, "D8264C4EDA5CB47887E6EECF3A8EE51EFA0E382383FBE67C416D97BAD0D583D0"),
+        615: (405, "2623188D609B2EF1B742655E0F658134AFA040906CEACDE97529CEDEC975B46F"),
+        616: (413, "830616D84A4E2D001D301240B4940B13DEF9F49F57B7DC23D0D3DE2F20AFC049"),
+    }
+    for line_index, (expected_bytes, expected_sha) in (
+            expected_current_residual_rows.items()):
+        require_raw_line(
+            residual_physical_lines, line_index, expected_bytes, expected_sha,
+            f"R{line_index:06d}")
+    if (len(residual_raw) != 175658 or
+            hashlib.sha256(residual_raw).hexdigest().upper() !=
+            "08EC43AAD750DEBD3CB74D6780BD350EC660C0F010FB37B40B41B7F342C98273"):
+        ERRORS.append("final residual manifest identity mismatch")
     residual_ids = [row["residual_id"] for row in all_residuals]
     if len(residual_ids) != len(set(residual_ids)):
         ERRORS.append("duplicate residual_id in resid.csv")
@@ -2127,6 +3352,24 @@ if residual_path.exists():
         all_residuals, "residual_id", "resid.csv")
     active_residual_ids = {row["residual_id"] for row in residuals}
     residual_by_id = {row["residual_id"]: row for row in all_residuals}
+    visual_gap_referral_ids = set()
+    quarantined_residual_ids = set()
+    for row, missing in visual_dependency_gaps(
+            residuals, vqa_operational_by_item,
+            visual_dependencies_by_source_unit):
+        if (row["residual_id"] in visual_gap_referral_ids and
+                visual_referral_contract_exact):
+            continue
+        if (visual_referral_contract_exact and
+                set(missing) <= operationally_quarantined_vqa_items):
+            quarantined_residual_ids.add(row["residual_id"])
+        else:
+            ERRORS.append(
+                f"residual lacks transitive operational visual QA "
+                f"{row['residual_id']} {list(missing)}")
+    counts["quarantined_residual_rows"] = len(quarantined_residual_ids)
+    if quarantined_residual_ids:
+        ERRORS.append("operational residual quarantine is not empty")
     mirror_residual_successors = {
         "R000008": (
             "R000578", "ega:I.1.1.15", "new_local_label",
@@ -2195,6 +3438,72 @@ if residual_path.exists():
                 successor_row.get("disposition") == disposition):
             ERRORS.append(
                 f"invalid local-mirror residual supersession {prior} -> {successor}")
+    r589 = residual_by_id.get("R000589")
+    if r589 is None or not (
+            r589.get("source_unit") == "ega:I.5.3.15" and
+            r589.get("kind") == "new_local_label" and
+            r589.get("status") == "integrated_local_mirror" and
+            r589.get("evidence") ==
+            "Item five of the local Schemes diagonal identities lemma states exact naturality of the diagonal" and
+            r589.get("disposition") ==
+            "Retain in the Mathematical Commons mirror and keep Schemes and corpus checks active without assigning an official tag" and
+            r589.get("decision_id") == "D000235" and
+            not r589.get("supersedes") and
+            "R000589" in active_residual_ids):
+        ERRORS.append("missing exact active R000589 local-mirror label")
+    r605 = residual_by_id.get("R000605")
+    if r605 is None or not (
+            r605.get("source_unit") == "ega:I.5.3.17:proof" and
+            r605.get("kind") == "existing_local_diagonal_naturality" and
+            r605.get("status") == "integrated_local_mirror" and
+            r605.get("evidence") ==
+            "Item five of the local Schemes diagonal identities lemma carries the equal field-valued diagonal pair to the diagonal in X times_S X" and
+            r605.get("disposition") ==
+            "Retain in the Mathematical Commons mirror and keep Schemes and corpus checks active without assigning an official tag" and
+            r605.get("decision_id") == "D000237" and
+            not r605.get("supersedes") and
+            "R000605" in active_residual_ids):
+        ERRORS.append("missing exact active R000605 local-mirror proof join")
+    final_visual_residual_successors = {
+        "R000611": ("R000607", "D000247"),
+        "R000612": ("R000608", "D000248"),
+        "R000613": ("R000606", "D000249"),
+        "R000614": ("R000360", "D000246"),
+        "R000615": ("R000559", "D000246"),
+        "R000616": ("R000591", "D000246"),
+    }
+    for residual_id, (prior_id, decision_id) in (
+            final_visual_residual_successors.items()):
+        row = residual_by_id.get(residual_id)
+        if row is None or not (
+                row.get("supersedes") == prior_id and
+                row.get("decision_id") == decision_id and
+                residual_id in active_residual_ids and
+                prior_id in superseded_residuals):
+            ERRORS.append(
+                f"invalid final visual residual successor {residual_id}")
+    r609 = residual_by_id.get("R000609")
+    r610 = residual_by_id.get("R000610")
+    if r609 is None or tuple(r609.get(field) for field in (
+            "source_unit", "kind", "status", "evidence", "disposition",
+            "decision_id", "supersedes")) != (
+            "ega:I.5.1.5",
+            "functorial_reduction_semantic_coverage_separate_from_visual_gap",
+            "covered_derived",
+            "Tag 0356 gives existence and Tag 01L7 gives uniqueness of the reduction factorization while D000243 changes only the bottom f label side",
+            "Retain S000716 and the reduction square semantic derivation independently of the active R000607 visual gap",
+            "D000191", "") or "R000609" not in active_residual_ids:
+        ERRORS.append("missing exact active R000609 semantic-coverage split")
+    if r610 is None or tuple(r610.get(field) for field in (
+            "source_unit", "kind", "status", "evidence", "disposition",
+            "decision_id", "supersedes")) != (
+            "ega:I.5.1.9:diagram:xymatrix:2",
+            "scheme_square_semantic_coverage_separate_from_visual_gap",
+            "covered_derived",
+            "Tags 05YV and 01I1 derive the vertical first-order thickenings and horizontal affine morphisms while D000244 changes only the bottom f_0 label side",
+            "Retain S000758 and S000759 semantic coverage independently of the active R000608 visual gap",
+            "D000195", "") or "R000610" not in active_residual_ids:
+        ERRORS.append("missing exact active R000610 semantic-coverage split")
     r552 = residual_by_id.get("R000552")
     r559 = residual_by_id.get("R000559")
     if r552 is None or r559 is None or not (
@@ -2210,8 +3519,9 @@ if residual_path.exists():
             r559.get("decision_id") == "D000223" and
             r559.get("supersedes") == "R000552" and
             "R000552" not in active_residual_ids and
-            "R000559" in active_residual_ids):
-        ERRORS.append("missing exact active R000559 visual-gap closure")
+            "R000559" not in active_residual_ids and
+            "R000559" in superseded_residuals):
+        ERRORS.append("missing exact superseded R000559 visual-gap closure")
     attribution_residual_successors = {
         "R000165": "R000172",
         "R000166": "R000173",
@@ -2286,8 +3596,20 @@ if residual_path.exists():
         if local_units != mirror_local_units:
             ERRORS.append(
                 "local statement edges and local-mirror residuals differ")
+        derived_edge_residual_routes = {
+            "S000838": ("R000590", "ega:I.5.3.15:proof"),
+            "S000839": ("R000590", "ega:I.5.3.15:proof"),
+        }
         for row in statement_edges:
             states = residual_state_by_unit.get(row["source_unit"], set())
+            routed_residual_id, routed_source_unit = (
+                derived_edge_residual_routes.get(row["edge_id"], (None, None)))
+            routed_residual = residual_by_id.get(routed_residual_id)
+            routed_derived = bool(
+                routed_residual is not None and
+                routed_residual_id in active_residual_ids and
+                routed_residual.get("source_unit") == routed_source_unit and
+                routed_residual.get("status") == "covered_derived")
             if row["relation"] == "partial" and not (
                     {"open_gap", "covered_derived"} & states):
                 ERRORS.append(
@@ -2300,8 +3622,8 @@ if residual_path.exists():
                     "covered_unlabelled" not in states):
                 ERRORS.append(
                     f"unlabelled statement edge lacks residual {row['edge_id']}")
-            if row["coverage_claim"] == "covered_derived" and (
-                    "covered_derived" not in states):
+            if row["coverage_claim"] == "covered_derived" and not (
+                    "covered_derived" in states or routed_derived):
                 ERRORS.append(
                     f"derived statement edge lacks residual {row['edge_id']}")
     actual_residual_snapshot = {
