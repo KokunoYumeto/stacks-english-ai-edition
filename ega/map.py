@@ -2,8 +2,10 @@
 """Generate metadata-only Stacks candidates for the EGA topic scaffold."""
 
 import bisect
+import argparse
 import csv
 import hashlib
+import io
 import json
 import re
 import subprocess
@@ -24,10 +26,6 @@ SPACE_RE = re.compile(r"\s+")
 
 def sha(data):
     return hashlib.sha256(data).hexdigest().upper()
-
-
-def file_sha(path):
-    return sha(path.read_bytes())
 
 
 def brace_arg(text, open_brace):
@@ -117,10 +115,27 @@ def enclosing_text(text, short_label, pos):
     return text[max(0, left):right if right >= 0 else len(text)]
 
 
-def load_tags():
+def git_blob(commit, path):
+    return subprocess.check_output(
+        ["git", "show", f"{commit}:{path}"], cwd=ROOT
+    )
+
+
+def root_tex_paths(commit):
+    output = subprocess.check_output(
+        ["git", "ls-tree", "--name-only", commit], cwd=ROOT, text=True
+    )
+    return sorted(
+        path for path in output.splitlines()
+        if "/" not in path and path.endswith(".tex")
+    )
+
+
+def load_tags(commit):
     tags = {}
     errors = []
-    for number, raw in enumerate((ROOT / "tags" / "tags").read_text(encoding="utf-8").splitlines(), 1):
+    data = git_blob(commit, "tags/tags")
+    for number, raw in enumerate(data.decode("utf-8").splitlines(), 1):
         if not raw or raw.startswith("#"):
             continue
         if "," not in raw:
@@ -130,32 +145,33 @@ def load_tags():
         if full_label in tags:
             errors.append(f"duplicate tag label {full_label}")
         tags[full_label] = tag
-    return tags, errors
+    return tags, errors, data
 
 
-def build_index():
-    tags, errors = load_tags()
+def build_index(commit):
+    tags, errors, tags_data = load_tags(commit)
     warnings = []
     rows = []
     seen = set()
     tex_manifest = []
-    for path in sorted(ROOT.glob("*.tex"), key=lambda item: item.name):
-        data = path.read_bytes()
+    for name in root_tex_paths(commit):
+        data = git_blob(commit, name)
         text = data.decode("utf-8")
-        tex_manifest.append(f"{path.name}\t{len(data)}\t{sha(data)}\n")
+        tex_manifest.append(f"{name}\t{len(data)}\t{sha(data)}\n")
         starts = line_starts(text)
         sections = section_events(text)
         positions = [event["pos"] for event in sections]
         literals = verbatim_ranges(text)
         title_match = TITLE_RE.search(text)
-        chapter = path.stem
+        stem = Path(name).stem
+        chapter = stem
         if title_match:
             chapter = plain(brace_arg(text, title_match.end() - 1)[0], 120)
         for match in LABEL_RE.finditer(text):
             if inside(match.start(), literals):
                 continue
             short = match.group(1)
-            full = f"{path.stem}-{short}"
+            full = f"{stem}-{short}"
             if full in seen:
                 errors.append(f"duplicate TeX full label {full}")
             seen.add(full)
@@ -165,7 +181,7 @@ def build_index():
             rows.append({
                 "tag": tags.get(full, ""),
                 "full_label": full,
-                "file": path.name,
+                "file": name,
                 "line": str(line_at(starts, match.start())),
                 "kind": short.split("-", 1)[0],
                 "short_label": short,
@@ -181,7 +197,8 @@ def build_index():
             errors.append(f"tag points outside chapter TeX: {full}")
     for full in sorted(seen - set(tags)):
         warnings.append(f"TeX label has no official tag: {full}")
-    return rows, errors, warnings, sha("".join(tex_manifest).encode("utf-8"))
+    return (rows, errors, warnings,
+            sha("".join(tex_manifest).encode("utf-8")), sha(tags_data))
 
 
 def load_topics():
@@ -233,21 +250,30 @@ def candidate_rows(index, topics, cap=80):
     return output, counts
 
 
-def write_csv(path, fields, rows):
-    with path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fields, lineterminator="\n")
-        writer.writeheader()
-        writer.writerows(rows)
+def csv_bytes(fields, rows):
+    handle = io.StringIO(newline="")
+    writer = csv.DictWriter(handle, fieldnames=fields, lineterminator="\n")
+    writer.writeheader()
+    writer.writerows(rows)
+    return handle.getvalue().encode("utf-8")
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--check", action="store_true",
+        help="verify generated artifacts without writing them")
+    args = parser.parse_args()
     errors = []
     warnings = []
-    upstream = subprocess.check_output(["git", "rev-parse", "origin/master"], cwd=ROOT, text=True).strip()
     scope = json.loads((OUT / "scope.json").read_text(encoding="utf-8"))
-    if upstream != scope["stacks_upstream"]:
-        errors.append("origin/master differs from scaffold upstream identity")
-    index, index_errors, index_warnings, tex_tree = build_index()
+    upstream = scope["stacks_upstream"]
+    resolved_upstream = subprocess.check_output(
+        ["git", "rev-parse", f"{upstream}^{{commit}}"], cwd=ROOT, text=True
+    ).strip()
+    if resolved_upstream != upstream:
+        errors.append("declared scaffold upstream does not resolve to its exact commit")
+    index, index_errors, index_warnings, tex_tree, tags_sha = build_index(upstream)
     errors.extend(index_errors)
     warnings.extend(index_warnings)
     topics = load_topics()
@@ -255,14 +281,14 @@ def main():
     fields = ["topic_id", "rank", "score", "hit_fields", "official_tag",
               "full_label", "file", "line", "kind", "section_label",
               "text_sha256", "status"]
-    write_csv(OUT / "cand.csv", fields, candidates)
+    candidate_data = csv_bytes(fields, candidates)
     result = {
         "schema": "ega-stacks-candidate-map-v1",
         "status": "PASS" if not errors else "FAIL",
         "errors": errors,
         "warnings": warnings,
         "upstream": upstream,
-        "tags_sha256": file_sha(ROOT / "tags" / "tags"),
+        "tags_sha256": tags_sha,
         "tex_tree_sha256": tex_tree,
         "labels": len(index),
         "official_tag_joins": sum(bool(row["tag"]) for row in index),
@@ -273,10 +299,21 @@ def main():
         "official_tags_assigned_by_scaffold": 0,
         "copied_stacks_prose": False,
     }
-    (OUT / "map.json").write_text(json.dumps(result, indent=2, sort_keys=True) + "\n",
-                                   encoding="utf-8", newline="\n")
+    result_data = (json.dumps(result, indent=2, sort_keys=True) + "\n").encode("utf-8")
+    artifact_errors = []
+    if args.check:
+        for path, expected in (
+                (OUT / "cand.csv", candidate_data),
+                (OUT / "map.json", result_data)):
+            if not path.is_file() or path.read_bytes() != expected:
+                artifact_errors.append(f"generated artifact differs: {path.name}")
+    else:
+        (OUT / "cand.csv").write_bytes(candidate_data)
+        (OUT / "map.json").write_bytes(result_data)
     print(json.dumps(result, indent=2, sort_keys=True))
-    raise SystemExit(1 if errors else 0)
+    for error in artifact_errors:
+        print(error)
+    raise SystemExit(1 if errors or artifact_errors else 0)
 
 
 if __name__ == "__main__":

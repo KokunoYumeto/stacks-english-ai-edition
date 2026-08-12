@@ -2262,3 +2262,46 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   source-QA joins, LF-only files, semantic-only diagram isolation, adversarial
   mutations, compilation, privacy, diff, and remote verification remain release
   gates.
+
+### EGA I 6.1.1--6.1.13 Noetherian and local-topology checkpoint
+
+- Direct-French review covers all thirteen numbered units and nine registered
+  proof units in the subsection. D000278--D000290, S000987--S001066, and
+  R000696--R000741 bind 80 semantic edges and 46 residual contracts to the
+  admitted F33 receipt and pinned Stacks commit
+  `a04446e57ec1fbc252a871afcec7752fb2807b14`. Unnumbered French lines 15--34
+  and 81--83 are explicitly routed as source parts. No formula or diagram child
+  exists and no V, J, or page row is added.
+- The final graph contains 1,059 active / 1,066 physical statement rows across
+  355 source units, 1,046 existing-tag rows using 289 distinct official tags,
+  thirteen local-mirror rows, and 49 exact full-statement equivalences.
+  Residual history contains 716 active / 741 physical rows, 25 superseded rows,
+  ten open gaps, and thirteen active local-mirror rows. M000024 adds one
+  explicitly topical-only bridge from EGA I 6.1 to Stacks section 01OU. The next
+  semantic cursor is EGA I 6.2.1.
+- The 6.1.5 non-Noetherian product warning is fully derived without inventing
+  a tag. For `K=k(x_1,x_2,...)`, 01JQ and 01OW reduce the scheme claim to
+  `K tensor_k K`; 00RW identifies the diagonal conormal module with
+  `Omega_(K/k)`, while 00RX, 00RT, and 031G make that module infinitely
+  generated. The local-component and neighbourhood results retain every
+  finite-component, nonempty, connected, reduced, irreducible, and local
+  Noetherianity hypothesis at its exact proof boundary.
+- Two source findings are admitted append only. In the 6.1.8 proof the claimed
+  complement in all of X is missing intersection with U; the generic point of
+  `Spec(k[t])` with `U=D(t)` is a bounded counterexample. In 6.1.12 the printed
+  integrality criterion omits nonemptiness under EGA's convention. D000291--
+  D000293, I000096--I000097, Q000015--Q000016, and findings 25--26 bind the
+  exact evidence while leaving diplomatic French untouched. The sixteen-row
+  source-QA manifest is 5,012 bytes / SHA-256
+  `167BA57EBD509192C90823DAE4FB9DB928EC2EF35DFC85668293E8298AD9144A`;
+  its sixteen crops total 6,022,269 bytes.
+- Candidate generation no longer reads mutable live Stacks TeX or a CRLF
+  worktree tag registry. `map.py` replays the root TeX and tags blobs at the
+  pinned commit and `--check` verifies the generated outputs without writing.
+  The deterministic snapshot is 21,446 labels, 21,437 tag joins, 36 topics,
+  and 2,749 candidates. The Noetherian topic is split from approximation.
+- A000231--A000235 record the combined schema/provenance plan, the two bounded
+  semantic audits, the independent live post-write audit, and the independent
+  final release audit. The checker, privacy, deterministic-map, compilation,
+  and diff gates all pass before staging; Git and remote replay remain the
+  release gates for this checkpoint.

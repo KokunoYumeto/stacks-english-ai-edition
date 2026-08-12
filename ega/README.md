@@ -249,12 +249,13 @@ or published here.
   promotion requires its own active V row. Shared, full-page, and grouped crops
   do not qualify.
 - Current statement-level frontier: direct-French review is complete through
-  EGA I 5.5.13. The active graph has 979 edges across 333 generated units;
-  physical append-only history has 986 rows. Of the active edges 966 resolve
-  to 269 distinct existing official tags and thirteen resolve to explicitly
-  untagged local-mirror integrations. Forty-two rows are exact full-statement
-  equivalences. Residual history has 670 active and 695 physical rows, with
-  ten open labelled-coverage gaps. The next semantic cursor is EGA I 6.1.1.
+  EGA I 6.1.13. The active graph has 1,059 edges across 355 generated units;
+  physical append-only history has 1,066 rows. Of the active edges 1,046
+  resolve to 289 distinct existing official tags and thirteen resolve to
+  explicitly untagged local-mirror integrations. Forty-nine rows are exact
+  full-statement equivalences. Residual history has 716 active and 741
+  physical rows, with ten open labelled-coverage gaps. The next semantic
+  cursor is EGA I 6.2.1.
 
 ## State model
 
@@ -324,7 +325,56 @@ maintainer feedback remain append-only.
   direct-authority crops for source-error evidence; these are not edition
   outputs or three-surface visual certifications.
 
-### Current reviewed frontier: EGA I 5.5.1--5.5.13
+### Current reviewed frontier: EGA I 6.1.1--6.1.13
+
+The full Noetherian subsection is reviewed against direct French, the admitted
+F33 semantic receipt, and exact labels at pinned Stacks commit
+`a04446e57ec1fbc252a871afcec7752fb2807b14`. D000278--D000290 map the thirteen
+numbered units and all nine registered proof units; S000987--S001066 supply 80
+reviewed semantic edges; and R000696--R000741 retain the theorem splits,
+stronger targets, proof-level derivations, historical terminology, essential
+hypotheses, and bounded counterexamples. The unnumbered coherence, subquotient,
+ideal-sheaf, open-locality, and ascending-chain assertions are explicit
+source-part edges rather than silently omitted prose or invented source units.
+
+The product warning in 6.1.5 has complete derived coverage, not a one-tag match:
+01OW and 01JQ reduce the question to the tensor ring, while 00RW, 00RX, 00RT,
+and 031G show that for `K=k(x_1,x_2,...)` the conormal module of the diagonal
+ideal in `K tensor_k K` is the infinitely generated module of differentials.
+The 6.1.8 result is strictly broader than 04MF and its universal smaller-open
+conclusion remains componentwise derived. The 6.1.10--6.1.13 routes keep local
+Noetherianity exactly where the finite/local-finiteness and coherent-nilradical
+arguments require it.
+
+Two printed defects are referred without changing diplomatic French.
+I000096/D000291 record that the 6.1.8 proof's global-complement aside omits
+intersection with the chosen open `U`; `X=Spec(k[t])`, `U=D(t)`, and the generic
+point give a bounded counterexample. I000097/D000292 record that 6.1.12 omits
+nonemptiness under EGA's convention: the empty scheme satisfies the printed
+right side vacuously but is not integral. Q000015--Q000016 bind exact 5,000-dpi
+NUMDAM crops, and D000293 admits those authority-only receipts. The sixteen-row
+source-error manifest is 5,012 bytes at SHA-256
+`167BA57EBD509192C90823DAE4FB9DB928EC2EF35DFC85668293E8298AD9144A`;
+its sixteen immutable crops total 6,022,269 bytes. The ordered active referral
+set is I000088, I000089, I000091--I000097; I000090 remains resolved.
+
+The cumulative graph has 1,059 active / 1,066 physical statement rows across
+355 source units, 1,046 official-tag rows using 289 tags, thirteen local-mirror
+rows, and 49 exact full-statement equivalences. Residual history has 716 active
+/ 741 physical rows, 25 superseded rows, ten open gaps, and thirteen active
+local-mirror rows. M000024 adds only a subsection-to-section topical bridge to
+01OU; it makes no theorem-equivalence claim. This tranche has no registered
+formula or diagram child and appends no V, J, or page row. The next semantic
+cursor is EGA I 6.2.1.
+
+Candidate generation now reads root TeX files and `tags/tags` from the pinned
+Git commit rather than the mutable Stacks worktree. `python ega/map.py --check`
+deterministically replays 21,446 labels, 21,437 official-tag joins, 36 topics,
+and 2,749 lexical candidates without writing. The dedicated Noetherian topic is
+separate from the approximation topic, so component/local-topology candidates
+are not dominated by Limits terminology.
+
+### Prior reviewed frontier: EGA I 5.5.1--5.5.13
 
 The complete separatedness subsection is now reviewed from direct French and
 the exact F33 semantic receipt. D000258--D000271 bind all numbered statements,
@@ -609,8 +659,8 @@ tree immediately before atomic promotion, closing the reproduced concurrent-
 producer race. Independent mathematical and governance inverse audits both
 returned HARD PASS after the repairs while preserving their earlier failures.
 
-The immediate semantic work continues after direct-French EGA I 5.5.13 at
-EGA I 6.1.1. Every reviewed claim remains bound to its own historical source
+The immediate semantic work continues after direct-French EGA I 6.1.13 at
+EGA I 6.2.1. Every reviewed claim remains bound to its own historical source
 receipt; the 5.4 and 5.5 rows use F33 plus direct authority evidence rather
 than a mutable producer frontier.
 The last admitted reader interface is the D48 tuple
