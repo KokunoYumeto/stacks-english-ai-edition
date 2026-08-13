@@ -1,0 +1,50 @@
+diff --git a/algebra.tex b/algebra.tex
+--- a/algebra.tex
++++ b/algebra.tex
+@@ -3192,15 +3219,10 @@ $S^{-1}\mathfrak p$ in $R$ is equal to $\mathfrak p$,
+ because $R/\mathfrak p \to \overline{S}^{-1}(R/\mathfrak p)$
+ is injective by basic notion (\ref{item-localize-nonzerodivisors}).
+ This proves that the map $\Spec(S^{-1}R) \to \Spec(R)$
+-is bijective onto $D$ with inverse as given.
+-It is continuous by Lemma \ref{lemma-spec-functorial}.
+-Finally, let $D(g) \subset \Spec(S^{-1}R)$ be a standard
+-open. Write $g = h/s$ for some $h\in R$ and $s\in S$.
+-Since $g$ and $h/1$ differ by a unit we have $D(g) =
+-D(h/1)$ in $\Spec(S^{-1}R)$.
+-Hence by Lemma \ref{lemma-spec-functorial} and the bijectivity
+-above the image of $D(g) = D(h/1)$ is $D \cap D(h)$.
+-This proves the map is open as well.
++is bijective onto $D$ with inverse as given. Every element of $S^{-1}R$
++is a unit times the image of an element of $R$. Hence the map is a
++homeomorphism onto its image by
++Lemma \ref{lemma-spec-homeomorphism-onto-image-units}.
+ \end{proof}
+ 
+ \begin{lemma}
+@@ -3242,8 +3264,8 @@ the ideal $\mathfrak p /I \subset R/I$. Using
+ basic notion (\ref{item-isomorphism-theorem}) we see that
+ $(R/I)/(\mathfrak p/I) = R/\mathfrak p$ is a domain
+ and hence $\mathfrak p/I$ is a prime ideal. From this
+-it is immediately clear that the image of $D(f + I)$
+-is $D(f) \cap V(I)$, and hence the map is a homeomorphism.
++and Lemma \ref{lemma-spec-homeomorphism-onto-image-units}, applied to
++the surjection $R \to R/I$, the result follows.
+ \end{proof}
+ 
+ 
+diff --git a/more-algebra.tex b/more-algebra.tex
+--- a/more-algebra.tex
++++ b/more-algebra.tex
+@@ -2340,7 +2340,11 @@ On the other hand, the induced map on spectra is open
+ (see Algebra, Proposition \ref{algebra-proposition-fppf-open} and use
+ previous lemma referenced) and the image
+ contains $V(I)$. Since $I$ is contained in the Jacobson radical of $A$
+-we conclude.
++the image is all of $\Spec(A)$ by
++Algebra, Lemma
++\ref{algebra-lemma-open-containing-vanishing-jacobson-radical}.
++Thus $A \to A'$ is faithfully flat by
++Algebra, Lemma \ref{algebra-lemma-ff-rings}, and we conclude.
+ \end{proof}
+ 
+ \begin{lemma}

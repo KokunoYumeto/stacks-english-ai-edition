@@ -1,0 +1,294 @@
+{
+  "conflicts": [
+    {
+      "kind": "namespace_lease",
+      "sidecar": "https://github.com/KokunoYumeto/mathematics-commons-stacks",
+      "state": "not_yet_allocated"
+    }
+  ],
+  "created_at_utc": "2026-08-12T22:30:00Z",
+  "dependencies": [
+    {
+      "component": "dependent-refactors",
+      "requires": [
+        "spectrum-topology"
+      ]
+    },
+    {
+      "component": "reduction",
+      "order": [
+        "schemes-lemma-reduction-functorial",
+        "morphisms-lemma-reduction-morphism-properties",
+        "morphisms-lemma-reductions-fibre-product"
+      ]
+    }
+  ],
+  "id": "mc-stacks-overlay-ega-integration-v1",
+  "kind": "stacks_source_overlay_prelease_export",
+  "lifecycle_state": "prelease_export_prepared",
+  "namespace": "commons/stacks/overlay/ega/integration/v1",
+  "notes": [
+    "The custody patch is evidence and must not be admitted wholesale.",
+    "No official Stacks tag or upstream acceptance is claimed.",
+    "No translator tree or locale branch was written.",
+    "Rights review is centralized and remains fail-closed.",
+    "This pre-lease export is not a central sidecar candidate and must be rebuilt under a future leased path."
+  ],
+  "package_files": [
+    {
+      "bytes": 57,
+      "path": ".gitattributes",
+      "rights_class": "commons_cc0_control",
+      "sha256": "BFEF3B20DD5B11CC61BED074949CFAE75CF89178B92B553C6A0D5B71A0766FD8"
+    },
+    {
+      "bytes": 3114,
+      "path": "README.md",
+      "rights_class": "commons_cc0_control",
+      "sha256": "414731D861E61743D637D7F8658CC2E92BAAD78F7D7CF5D598FEB2C0A3BA8080"
+    },
+    {
+      "bytes": 20651,
+      "path": "build_candidate.py",
+      "rights_class": "commons_cc0_control",
+      "sha256": "3A7A98AEEA14DE4906A34E113EFAFBB564E58B8E6D4004D0E1C32E08979F3806"
+    },
+    {
+      "bytes": 7759,
+      "path": "evidence/control-files.json",
+      "rights_class": "commons_cc0_control",
+      "sha256": "6BCE7DA63095F6481B8539009853E00E1B95CC9D574F24BB44E67F6AE248E85F"
+    },
+    {
+      "bytes": 45580,
+      "path": "evidence/qa-closure.json",
+      "rights_class": "commons_cc0_control",
+      "sha256": "CB1BF3CBF4A6F0A11B38F2C0193AE7DDEF2AA1BE3A5A8F4E40656D10E1597EB2"
+    },
+    {
+      "bytes": 56123,
+      "path": "evidence/review-rows.json",
+      "rights_class": "mixed_review_required",
+      "sha256": "4315389CAD613D6E7FC2BF60C851C50C08A22AB951C885773A0FA2BDE4CC1646"
+    },
+    {
+      "bytes": 2160,
+      "path": "payload/components/dependent-refactors.patch",
+      "rights_class": "upstream_gfdl_derivative",
+      "sha256": "32F6C0BE46336F5AF04A5F374DA9E715124231D54D5F9A032C8776CDB6BA8136"
+    },
+    {
+      "bytes": 2245,
+      "path": "payload/components/diagonal.patch",
+      "rights_class": "upstream_gfdl_derivative",
+      "sha256": "63FCDBB61156F334E8367DE7536F91F73FF0F866BACF095070AA1BD6B44CB7B2"
+    },
+    {
+      "bytes": 2342,
+      "path": "payload/components/quasi-affine.patch",
+      "rights_class": "upstream_gfdl_derivative",
+      "sha256": "3F94F648D386859E588387AEF14AFF6A3BD69E4AA690B4C6ED846A7C62E0DE13"
+    },
+    {
+      "bytes": 4719,
+      "path": "payload/components/reduction.patch",
+      "rights_class": "upstream_gfdl_derivative",
+      "sha256": "C2ACE1DEF51C9E41435F7E083185A8ECE7A58EA78428A3F6B439E23BF1709C62"
+    },
+    {
+      "bytes": 2182,
+      "path": "payload/components/spectrum-topology.patch",
+      "rights_class": "upstream_gfdl_derivative",
+      "sha256": "F108E64180B088871C819A2F275D5CD17BFB8FC49B6232CF2C7DCD0A27C4D86E"
+    },
+    {
+      "bytes": 1790,
+      "path": "payload/components/unrelated-corrections.patch",
+      "rights_class": "upstream_gfdl_derivative",
+      "sha256": "C05D4264516094123D2317241D7EA3C50612E664277E1BE6CEA1520868B4ED17"
+    },
+    {
+      "bytes": 15777,
+      "path": "payload/custody.patch",
+      "rights_class": "upstream_gfdl_derivative",
+      "sha256": "5FDAA0BE9C3F3D058C5B443D4439306F8E84A10E330D4D432D715309E5802BBF"
+    },
+    {
+      "bytes": 3807,
+      "path": "payload/files.json",
+      "rights_class": "commons_cc0_control",
+      "sha256": "63E2FDA5C179B8D50660E5BA4F4286FE588C4EF9A63FCB57E11F4AD3ACF47C60"
+    },
+    {
+      "bytes": 3544,
+      "path": "payload/operations.json",
+      "rights_class": "commons_cc0_control",
+      "sha256": "CEEC8AD55B1ECA9483D7833E57FA9E176718B3562C87819C15558698A71400ED"
+    },
+    {
+      "bytes": 3563,
+      "path": "payload/stable-ids.json",
+      "rights_class": "commons_cc0_control",
+      "sha256": "3C5C0A944E63F287D6D83BB328FFF7A7F9B8063B4B24BDBBE60781D9187CCB7C"
+    },
+    {
+      "bytes": 902,
+      "path": "rights/rights.json",
+      "rights_class": "commons_cc0_control",
+      "sha256": "C089B4A2E27C8BCA6C07A7435A4F4FDE4837D7CB7B01A4817BD9C1F7F32400F0"
+    },
+    {
+      "bytes": 1552,
+      "path": "schema/candidate.schema.json",
+      "rights_class": "commons_cc0_control",
+      "sha256": "8C3C93310B88827126A5CF028F3CF5B6B912E70B99397DDAB650D13341873A92"
+    },
+    {
+      "bytes": 24120,
+      "path": "validate.py",
+      "rights_class": "commons_cc0_control",
+      "sha256": "0BE00840F9F22C95DFD6809A2EC51C0E4D2D59BD3AFCC71BDFB5FDDD6F8DA30B"
+    }
+  ],
+  "payload": {
+    "base_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "changed_paths": [
+      "algebra.tex",
+      "more-algebra.tex",
+      "more-morphisms.tex",
+      "morphisms.tex",
+      "properties.tex",
+      "schemes.tex"
+    ],
+    "classification": {
+      "dependent_refactors": [
+        "dependent-refactors"
+      ],
+      "formalization_core": [
+        "spectrum-topology",
+        "quasi-affine",
+        "reduction",
+        "diagonal"
+      ],
+      "unrelated_corrections": [
+        "unrelated-corrections"
+      ]
+    },
+    "component_patches": [
+      {
+        "bytes": 2160,
+        "id": "ega-v1:dependent-refactors",
+        "path": "payload/components/dependent-refactors.patch",
+        "sha256": "32F6C0BE46336F5AF04A5F374DA9E715124231D54D5F9A032C8776CDB6BA8136"
+      },
+      {
+        "bytes": 2245,
+        "id": "ega-v1:diagonal",
+        "path": "payload/components/diagonal.patch",
+        "sha256": "63FCDBB61156F334E8367DE7536F91F73FF0F866BACF095070AA1BD6B44CB7B2"
+      },
+      {
+        "bytes": 2342,
+        "id": "ega-v1:quasi-affine",
+        "path": "payload/components/quasi-affine.patch",
+        "sha256": "3F94F648D386859E588387AEF14AFF6A3BD69E4AA690B4C6ED846A7C62E0DE13"
+      },
+      {
+        "bytes": 4719,
+        "id": "ega-v1:reduction",
+        "path": "payload/components/reduction.patch",
+        "sha256": "C2ACE1DEF51C9E41435F7E083185A8ECE7A58EA78428A3F6B439E23BF1709C62"
+      },
+      {
+        "bytes": 2182,
+        "id": "ega-v1:spectrum-topology",
+        "path": "payload/components/spectrum-topology.patch",
+        "sha256": "F108E64180B088871C819A2F275D5CD17BFB8FC49B6232CF2C7DCD0A27C4D86E"
+      },
+      {
+        "bytes": 1790,
+        "id": "ega-v1:unrelated-corrections",
+        "path": "payload/components/unrelated-corrections.patch",
+        "sha256": "C05D4264516094123D2317241D7EA3C50612E664277E1BE6CEA1520868B4ED17"
+      }
+    ],
+    "custody_patch": {
+      "bytes": 15777,
+      "path": "payload/custody.patch",
+      "sha256": "5FDAA0BE9C3F3D058C5B443D4439306F8E84A10E330D4D432D715309E5802BBF"
+    },
+    "files_manifest": "payload/files.json",
+    "format": "git_diff_binary_v1",
+    "operations_manifest": "payload/operations.json",
+    "source_commit": "dc37296a6ed6cc2947ee0c2c9c5d4c88195cb322",
+    "wholesale_merge_permitted": false
+  },
+  "producer": {
+    "id": "stacks-ega-codex-single-writer",
+    "role": "candidate_exporter",
+    "source_task": "019fca5a-bcf8-7813-93dd-1adff100c52d"
+  },
+  "provenance": {
+    "control_closure": "evidence/control-files.json",
+    "corpus_id": "EGA-I",
+    "mapping_edges_count": 13,
+    "no_french_source_prose_copied_into_package_metadata": true,
+    "qa_closure": "evidence/qa-closure.json",
+    "source_corpus_mutated": false,
+    "source_receipt_hashes": [
+      "2137BF64B9BD210176B58075DBDB58E7C8A5669F9EFAD61410510A01D32D0BC0",
+      "2652207F96F697935BC81C5D63B292DE4D956905D69CB92572225E320BB27F4C"
+    ],
+    "source_receipts": [
+      "F33.json",
+      "F8.json"
+    ],
+    "source_units_count": 13,
+    "translator_tree_written": false
+  },
+  "replay": {
+    "admission_command": "python commons-candidates/mc-stacks-overlay-ega-integration-v1/validate.py --admission",
+    "build_command": "python commons-candidates/mc-stacks-overlay-ega-integration-v1/build_candidate.py",
+    "expected_source_tree": "17cb12a27ccc058d0dbd92f08b3a9b38f1af19ca",
+    "state": "source_repository_local_replay_only_sidecar_rebuild_required",
+    "validate_command": "python commons-candidates/mc-stacks-overlay-ega-integration-v1/validate.py"
+  },
+  "review": {
+    "build_state": "passed_with_historical_failure_preserved",
+    "independent_review_state": "performed_for_local_mirror_not_sidecar_admission",
+    "mathematical_state": "hard_pass_integrated_local_mirror",
+    "official_tag_state": "none_assigned",
+    "privacy_state": "passed",
+    "reader_prose_state": "passed",
+    "receipt_path": "evidence/review-rows.json",
+    "source_state": "authority_receipts_bound"
+  },
+  "rights": {
+    "admission_ready": false,
+    "path": "rights/rights.json",
+    "state": "review_required"
+  },
+  "schema": "stacks-ega-prelease-overlay-export/v1",
+  "source_branch": {
+    "content_commit": "dc37296a6ed6cc2947ee0c2c9c5d4c88195cb322",
+    "content_tree": "17cb12a27ccc058d0dbd92f08b3a9b38f1af19ca",
+    "custody_commit": "dc37296a6ed6cc2947ee0c2c9c5d4c88195cb322",
+    "custody_tree": "17cb12a27ccc058d0dbd92f08b3a9b38f1af19ca",
+    "ref": "refs/heads/codex/ega-scaffold",
+    "repository": "https://github.com/KokunoYumeto/stacks-project"
+  },
+  "stable_ids": {
+    "count": 7,
+    "mapping_edges": 13,
+    "path": "payload/stable-ids.json"
+  },
+  "supersedes": [],
+  "upstream": {
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "license_blob_sha1": "71ec2c40b4c76362e1d1e9ece69939e7eb8b0908",
+    "license_sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85",
+    "repository": "https://github.com/stacks/stacks-project",
+    "sidecar_lock_path": "upstream/stacks.lock.json",
+    "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e"
+  }
+}

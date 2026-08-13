@@ -1,0 +1,402 @@
+diff --git a/algebra.tex b/algebra.tex
+index ff4c47a74e8a273a49e6de7272a5c1311617cfc7..dcebe430f2bfb69d9bcf415ac648c556a183cac3 100644
+--- a/algebra.tex
++++ b/algebra.tex
+@@ -3159,6 +3159,33 @@ equals $\Spec(\varphi' \circ \varphi)$. In other
+ words, $\Spec$ is a contravariant functor from the
+ category of rings to the category of topological spaces.
+ 
++\begin{lemma}
++\label{lemma-spec-homeomorphism-onto-image-units}
++\begin{reference}
++\cite[Corollary 1.2.4]{EGA1}
++\end{reference}
++Let $\varphi : R \to S$ be a ring map. Assume that every $g \in S$
++can be written as $g = u\varphi(f)$ for some $f \in R$ and some
++unit $u \in S$. Then
++$$
++\Spec(S) \longrightarrow \Spec(R)
++$$
++is a homeomorphism onto its image.
++\end{lemma}
++
++\begin{proof}
++The map is continuous by Lemma \ref{lemma-spec-functorial}. If
++$\mathfrak q$ and $\mathfrak q'$ have the same inverse image in $R$,
++then the assumption shows that every $g \in S$ is in $\mathfrak q$ if
++and only if it is in $\mathfrak q'$. Thus the map is injective. Finally,
++if $g = u\varphi(f)$ as in the statement, then
++$$
++D(g) = \Spec(\varphi)^{-1}(D(f)).
++$$
++Since the standard opens form a basis, the map is a homeomorphism onto
++its image.
++\end{proof}
++
+ \begin{lemma}
+ \label{lemma-spec-localization}
+ Let $R$ be a ring. Let $S \subset R$ be a multiplicative subset.
+@@ -3192,15 +3219,10 @@ $S^{-1}\mathfrak p$ in $R$ is equal to $\mathfrak p$,
+ because $R/\mathfrak p \to \overline{S}^{-1}(R/\mathfrak p)$
+ is injective by basic notion (\ref{item-localize-nonzerodivisors}).
+ This proves that the map $\Spec(S^{-1}R) \to \Spec(R)$
+-is bijective onto $D$ with inverse as given.
+-It is continuous by Lemma \ref{lemma-spec-functorial}.
+-Finally, let $D(g) \subset \Spec(S^{-1}R)$ be a standard
+-open. Write $g = h/s$ for some $h\in R$ and $s\in S$.
+-Since $g$ and $h/1$ differ by a unit we have $D(g) =
+-D(h/1)$ in $\Spec(S^{-1}R)$.
+-Hence by Lemma \ref{lemma-spec-functorial} and the bijectivity
+-above the image of $D(g) = D(h/1)$ is $D \cap D(h)$.
+-This proves the map is open as well.
++is bijective onto $D$ with inverse as given. Every element of $S^{-1}R$
++is a unit times the image of an element of $R$. Hence the map is a
++homeomorphism onto its image by
++Lemma \ref{lemma-spec-homeomorphism-onto-image-units}.
+ \end{proof}
+ 
+ \begin{lemma}
+@@ -3242,8 +3264,8 @@ the ideal $\mathfrak p /I \subset R/I$. Using
+ basic notion (\ref{item-isomorphism-theorem}) we see that
+ $(R/I)/(\mathfrak p/I) = R/\mathfrak p$ is a domain
+ and hence $\mathfrak p/I$ is a prime ideal. From this
+-it is immediately clear that the image of $D(f + I)$
+-is $D(f) \cap V(I)$, and hence the map is a homeomorphism.
++and Lemma \ref{lemma-spec-homeomorphism-onto-image-units}, applied to
++the surjection $R \to R/I$, the result follows.
+ \end{proof}
+ 
+ 
+@@ -3583,6 +3605,24 @@ of $f \bmod I$. Then $fg = 1 \bmod I$. Hence $fg$ is a unit of $R$
+ by (2) which implies that $f$ is a unit.
+ \end{proof}
+ 
++\begin{lemma}
++\label{lemma-open-containing-vanishing-jacobson-radical}
++\begin{reference}
++\cite[Proposition 1.1.15]{EGA1}
++\end{reference}
++Let $R$ be a ring and let $I \subset R$ be an ideal contained in the
++Jacobson radical of $R$. If $U \subset \Spec(R)$ is an open subset and
++$V(I) \subset U$, then $U = \Spec(R)$.
++\end{lemma}
++
++\begin{proof}
++Suppose that $Z = \Spec(R) \setminus U$ is nonempty. Write $Z = V(J)$
++for an ideal $J \subset R$. Then $J$ is a proper ideal, so it is contained
++in a maximal ideal $\mathfrak m$. Since $I$ is contained in every maximal
++ideal, we have $\mathfrak m \in V(I) \cap V(J)$. This contradicts
++$V(I) \subset U$.
++\end{proof}
++
+ \begin{lemma}
+ \label{lemma-surjective-on-spec-units}
+ Let $\varphi : R \to S$ be a ring map such that the induced map
+diff --git a/more-algebra.tex b/more-algebra.tex
+index 6ff837ac787433d48e0e6e8061e720d93eeb4b05..912214ea85fb0d0c6f32ebd877a68879dd1a7429 100644
+--- a/more-algebra.tex
++++ b/more-algebra.tex
+@@ -2340,7 +2340,11 @@ On the other hand, the induced map on spectra is open
+ (see Algebra, Proposition \ref{algebra-proposition-fppf-open} and use
+ previous lemma referenced) and the image
+ contains $V(I)$. Since $I$ is contained in the Jacobson radical of $A$
+-we conclude.
++the image is all of $\Spec(A)$ by
++Algebra, Lemma
++\ref{algebra-lemma-open-containing-vanishing-jacobson-radical}.
++Thus $A \to A'$ is faithfully flat by
++Algebra, Lemma \ref{algebra-lemma-ff-rings}, and we conclude.
+ \end{proof}
+ 
+ \begin{lemma}
+diff --git a/more-morphisms.tex b/more-morphisms.tex
+index 25241ac7d64069a8072032137618444da34fdf02..fe591b03ec08007bb9134b89e429607e56219ecf 100644
+--- a/more-morphisms.tex
++++ b/more-morphisms.tex
+@@ -47,7 +47,7 @@ if $X$ is a closed subscheme of $X'$ and the quasi-coherent sheaf of ideals
+ $\mathcal{I} \subset \mathcal{O}_{X'}$ defining $X$ is nilpotent, i.e.,
+ there exists an integer $n \geq 0$ such that $\mathcal{I}^{n + 1} = 0$.
+ \item We say a scheme $X'$ is an {\it $n$th order thickening} of a scheme $X$
+-if $X$ is a closed subscheme of $X$ and $\mathcal{I}^{n + 1} = 0$
++if $X$ is a closed subscheme of $X'$ and $\mathcal{I}^{n + 1} = 0$
+ where $\mathcal{I} \subset \mathcal{O}_{X'}$ is the
+ quasi-coherent sheaf of ideals defining $X$.
+ \item Given two thickenings $X \subset X'$ and $Y \subset Y'$ a
+@@ -68,7 +68,7 @@ Let $i_X : X \to X'$ be a thickening. Any local section of the kernel
+ $\mathcal{I} = \Ker(i_X^\sharp)$ is locally nilpotent. This gives
+ some control over the structure sheaf of $\mathcal{O}_{X'}$, but
+ technically the class of finite order thickenings $X \subset X'$
+-is much easier to handle. Namely, if $X'$ is an $n$th order thinking
++is much easier to handle. Namely, if $X'$ is an $n$th order thickening
+ then we have a filtration
+ $$
+ 0 = \mathcal{I}^{n + 1} \subset
+diff --git a/morphisms.tex b/morphisms.tex
+index 28685eaee727e47cd141ec25b19857ef3807eeed..e758916a248573a55732ea629b2310e8fae67e58 100644
+--- a/morphisms.tex
++++ b/morphisms.tex
+@@ -11394,6 +11394,88 @@ is a universal homeomorphism.
+ Omitted.
+ \end{proof}
+ 
++\begin{lemma}
++\label{lemma-reduction-morphism-properties}
++\begin{reference}
++\cite[Proposition 5.1.6]{EGA1}
++\end{reference}
++Let $f : X \to Y$ be a morphism of schemes and let
++$f_{red} : X_{red} \to Y_{red}$ be the morphism of
++Schemes, Lemma \ref{schemes-lemma-reduction-functorial}.
++Then
++\begin{enumerate}
++\item $f$ is surjective if and only if $f_{red}$ is surjective,
++\item $f$ is universally injective if and only if $f_{red}$ is universally
++injective, and
++\item if $f$ is an immersion, a closed immersion, or an open immersion, then
++the same is true of $f_{red}$.
++\end{enumerate}
++\end{lemma}
++
++\begin{proof}
++The reductions have the same underlying spaces as the original schemes, and
++the vertical maps in the defining square induce isomorphisms on residue
++fields. The first assertion follows immediately. The second follows from
++Lemma \ref{lemma-universally-injective}, which characterizes universal
++injectivity by the map on points and the residue field extensions.
++
++Suppose that $f$ is a closed immersion. Reduction does not change the
++underlying topological map. The induced map on stalks for $f_{red}$ is
++obtained from the surjective stalk map for $f$ by dividing source and target
++by their nilradicals, and hence is surjective. The map on structure sheaves
++is therefore surjective by Sheaves, Lemma
++\ref{sheaves-lemma-characterize-epi-mono}. Thus $f_{red}$ is a closed
++immersion by Schemes, Lemma
++\ref{schemes-lemma-characterize-closed-immersions}. If $f$ is an open
++immersion, then its stalk maps are isomorphisms and its image is open; both
++properties remain true after reduction, so $f_{red}$ is an open immersion.
++Finally, factor an immersion as a closed immersion followed by an open
++immersion. Functoriality of reduction and Schemes, Lemma
++\ref{schemes-lemma-composition-immersion} prove the general immersion case.
++\end{proof}
++
++\begin{lemma}
++\label{lemma-reductions-fibre-product}
++\begin{reference}
++\cite[Proposition 5.1.7]{EGA1}
++\end{reference}
++Let $X \to S$ and $Y \to S$ be morphisms of schemes. There is a canonical
++isomorphism
++$$
++X_{red} \times_{S_{red}} Y_{red}
++\longrightarrow
++X_{red} \times_S Y_{red}.
++$$
++Via this isomorphism, the canonical morphism
++$$
++X_{red} \times_{S_{red}} Y_{red} \longrightarrow X \times_S Y
++$$
++is a closed immersion and a universal homeomorphism.
++\end{lemma}
++
++\begin{proof}
++The maps from $X_{red}$ and $Y_{red}$ to $S$ factor through $S_{red}$ by
++Schemes, Lemma \ref{schemes-lemma-reduction-functorial}. Since
++$S_{red} \to S$ is a monomorphism, the two fibre products in the statement
++have the same universal property. This gives the canonical isomorphism.
++
++After replacing the source by $X_{red} \times_S Y_{red}$, the morphism to
++$X \times_S Y$ factors as
++$$
++X_{red} \times_S Y_{red} \longrightarrow
++X \times_S Y_{red} \longrightarrow X \times_S Y.
++$$
++Both arrows are base changes of reduction morphisms, and hence are closed
++immersions by Schemes, Lemma
++\ref{schemes-lemma-fibre-product-immersion}. Their composition is a closed
++immersion by Schemes, Lemma \ref{schemes-lemma-composition-immersion}. Both
++arrows are universal homeomorphisms by Lemmas
++\ref{lemma-reduction-universal-homeomorphism} and
++\ref{lemma-base-change-universal-homeomorphism}; their composition is a
++universal homeomorphism by
++Lemma \ref{lemma-composition-universal-homeomorphism}.
++\end{proof}
++
+ \begin{lemma}
+ \label{lemma-check-closed-infinitesimally}
+ Let $f : X \to S$ and $S' \to S$ be morphisms of schemes.
+diff --git a/properties.tex b/properties.tex
+index 0a0dc2bc3e3b54748a56f8285d1efb89611017ee..82cb2602d43d9ebfe32893397fa1647d7cc50ff3 100644
+--- a/properties.tex
++++ b/properties.tex
+@@ -2429,6 +2429,57 @@ Schemes, Lemma \ref{schemes-lemma-equivalence-quasi-coherent}.
+ Restricting back to $U$ we get the lemma.
+ \end{proof}
+ 
++\begin{lemma}
++\label{lemma-characterize-quasi-coherent-quasi-affine}
++\begin{reference}
++\cite[I, Theorem 1.4.1]{EGA1}
++\end{reference}
++Let $A$ be a ring and let $U \subset \Spec(A)$ be a quasi-compact open
++subscheme. Let $\mathcal{F}$ be an $\mathcal{O}_U$-module and set
++$M = \Gamma(U, \mathcal{F})$. The following are equivalent:
++\begin{enumerate}
++\item $\mathcal{F}$ is quasi-coherent,
++\item there are $f_1, \ldots, f_n \in A$ such that
++$U = \bigcup D(f_i)$ and
++$\mathcal{F}|_{D(f_i)} \cong \widetilde{M_i}$ for some
++$A_{f_i}$-module $M_i$,
++\item there is an $A$-module $N$ such that
++$\mathcal{F} \cong \widetilde N|_U$, and
++\item for every $f \in A$ such that $D(f) \subset U$ the canonical map
++$$
++M_f \longrightarrow \Gamma(D(f), \mathcal{F})
++$$
++is an isomorphism.
++\end{enumerate}
++If these conditions hold, then in (3) one can take $N = M$, and the
++resulting isomorphism is canonical.
++\end{lemma}
++
++\begin{proof}
++The standard opens contained in $U$ form a basis for its topology and,
++as $U$ is quasi-compact, a finite subcollection covers $U$.
++Thus (3) implies (2) by
++Schemes, Lemma \ref{schemes-lemma-widetilde-pullback}, and (2) implies
++(1) because being quasi-coherent is local. Lemma
++\ref{lemma-quasi-coherent-quasi-affine} proves that (1) implies (3),
++with $N = M$ and with the canonical isomorphism asserted above. The same
++lemma, followed by taking sections over $D(f)$, proves that (1) implies
++(4).
++
++Assume (4), and write $j : U \to \Spec(A)$ for the inclusion. By
++Schemes, Lemma \ref{schemes-lemma-compare-constructions}, the identity
++map of $M$ gives a map
++$$
++\widetilde M \longrightarrow j_*\mathcal{F}.
++$$
++After restriction to $U$, this gives a canonical map
++$\widetilde M|_U \to \mathcal{F}$. On a standard open
++$D(f) \subset U$, the induced map on sections is the map in (4).
++Consequently this map is an isomorphism on a basis for the topology of
++$U$, and hence it is an isomorphism. This proves (3) and the final
++assertion.
++\end{proof}
++
+ \begin{lemma}
+ \label{lemma-invert-f-affine}
+ Let $X$ be a scheme. Let $f \in \Gamma(X, \mathcal{O}_X)$.
+@@ -2976,7 +3027,7 @@ such that $\mathcal{H}'|_U = \mathcal{G}$. Thus after
+ replacing $\mathcal{H}$ by $\mathcal{H}'$
+ and $\psi$ by the restriction of $\psi$ to $\mathcal{H}'$
+ we may assume that $\mathcal{H}$ is of finite type.
+-By Lemma \ref{lemma-finite-presentation-module}
++By Lemma \ref{lemma-finite-type-module}
+ we conclude that $\mathcal{H} = \widetilde{N}$ with
+ $N$ a finitely generated $R$-module. Hence there exists a surjection
+ as in the following short exact sequence of
+diff --git a/schemes.tex b/schemes.tex
+index 901e0ea3d2a5370515ca080d0800af674eb05121..57bde18df10696ae8066b135b4927183728d9b88 100644
+--- a/schemes.tex
++++ b/schemes.tex
+@@ -2289,6 +2289,35 @@ Hence $f$ factors through
+ $Z$ by Lemma \ref{lemma-characterize-closed-subspace}.
+ \end{proof}
+ 
++\begin{lemma}
++\label{lemma-reduction-functorial}
++\begin{reference}
++\cite[(5.1.5)]{EGA1}
++\end{reference}
++For every morphism of schemes $f : X \to Y$ there is a unique morphism
++$$
++f_{red} : X_{red} \longrightarrow Y_{red}
++$$
++such that the diagram
++$$
++\xymatrix{
++X_{red} \ar[r]^{f_{red}} \ar[d] & Y_{red} \ar[d] \\
++X \ar[r]^f & Y
++}
++$$
++commutes. Moreover, $(\text{id}_X)_{red} = \text{id}_{X_{red}}$ and
++$(g \circ f)_{red} = g_{red} \circ f_{red}$ whenever the composition is
++defined.
++\end{lemma}
++
++\begin{proof}
++The scheme $X_{red}$ is reduced. Hence the composition
++$X_{red} \to X \to Y$ factors through $Y_{red}$ by
++Lemma \ref{lemma-map-into-reduction}. The factorization is unique by
++Lemma \ref{lemma-characterize-closed-subspace}. The two functoriality
++assertions follow from the same uniqueness.
++\end{proof}
++
+ 
+ 
+ 
+@@ -4018,6 +4047,64 @@ $\text{pr}_1 \circ \Delta_{X/S} = \text{id}_X$ and
+ $\text{pr}_2 \circ \Delta_{X/S} = \text{id}_X$ (it exists in
+ any category with fibre products).
+ 
++\begin{lemma}
++\label{lemma-diagonal-identities}
++\begin{reference}
++\cite[(5.3.1), Propositions 5.3.2 and 5.3.15, and Corollaries 5.3.4 and
++5.3.12]{EGA1}
++\end{reference}
++Let $X$, $Y$, and $T$ be schemes over $S$.
++\begin{enumerate}
++\item If $f : T \to X$ and $g : T \to Y$ are morphisms over $S$, then
++$$
++(f, g) = (f \times_S g) \circ \Delta_{T/S}.
++$$
++\item Via the canonical isomorphism
++$$
++(X \times_S Y) \times_S (X \times_S Y) \cong
++(X \times_S X) \times_S (Y \times_S Y),
++$$
++we have
++$$
++\Delta_{X \times_S Y/S} = \Delta_{X/S} \times_S \Delta_{Y/S}.
++$$
++\item If $S' \to S$ is a morphism, then the base change of
++$\Delta_{X/S}$ to $S'$ is $\Delta_{X_{S'}/S'}$ via the canonical
++isomorphism
++$$
++(X \times_S X)_{S'} \cong X_{S'} \times_{S'} X_{S'}.
++$$
++\item If $f : X \to Y$ is a morphism over $S$ and $S' \to S$ is a
++morphism, then via the canonical isomorphism
++$$
++(X \times_S Y)_{S'} \cong X_{S'} \times_{S'} Y_{S'},
++$$
++the base change of the graph morphism
++$$
++\Gamma_f = (\text{id}_X, f) : X \longrightarrow X \times_S Y
++$$
++is the graph morphism
++$$
++\Gamma_{f_{S'}} = (\text{id}_{X_{S'}}, f_{S'}) :
++X_{S'} \longrightarrow X_{S'} \times_{S'} Y_{S'}.
++$$
++\item If $f : X \to Y$ is a morphism over $S$, then
++$$
++(f \times_S f) \circ \Delta_{X/S} = \Delta_{Y/S} \circ f.
++$$
++\end{enumerate}
++\end{lemma}
++
++\begin{proof}
++All five assertions follow from the universal property of fibre products.
++For (1), the two composites with the projections to $X$ and $Y$ are $f$ and
++$g$. For (2), the four composites with the projections to $X$, $X$, $Y$,
++and $Y$ agree. For (3), both composites with the projections to $X_{S'}$
++are the identity. For (4), the two composites with the projections to
++$X_{S'}$ and $Y_{S'}$ are $\text{id}_{X_{S'}}$ and $f_{S'}$. For (5),
++composing either side with either projection to $Y$ gives $f$.
++\end{proof}
++
+ \begin{lemma}
+ \label{lemma-diagonal-affines-closed}
+ The diagonal morphism of a morphism between affines is closed.
