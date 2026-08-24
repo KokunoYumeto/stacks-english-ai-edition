@@ -1,0 +1,693 @@
+{
+  "schema": "tohoku-stacks-r71-zenodo-publication-receipt-v1",
+  "created_utc": "2026-08-24T21:42:46.210562+00:00",
+  "status": "PASS",
+  "predecessor": {
+    "record_id": 21890525,
+    "doi": "10.5281/zenodo.21890525",
+    "inherited_files": 8
+  },
+  "published": {
+    "record_id": 22087339,
+    "doi": "10.5281/zenodo.22087339",
+    "concept_record_id": 21792220,
+    "concept_doi": "10.5281/zenodo.21792220",
+    "version": "0.68.0 — terminal Tôhoku-to-Stacks r71 formalization",
+    "files": 44
+  },
+  "metadata": {
+    "changed_keys": [
+      "description",
+      "version"
+    ],
+    "stable_keys_verified": [
+      "title",
+      "creators",
+      "contributors",
+      "resource_type",
+      "access_right",
+      "license",
+      "keywords"
+    ]
+  },
+  "inherited_inventory": [
+    {
+      "remote_filename": "README.md",
+      "bytes": 436,
+      "md5": "59DA7DAFF5B4AEA8D7A792B9A32D18FB"
+    },
+    {
+      "remote_filename": "en-p119-221.pdf",
+      "bytes": 1370565,
+      "md5": "AD7F49434475C5104AE6A9938FE95BC0"
+    },
+    {
+      "remote_filename": "en-p119-221.tex",
+      "bytes": 3210,
+      "md5": "BD628AE575F7A8AFA71070A968556B03"
+    },
+    {
+      "remote_filename": "fr-p119-221.pdf",
+      "bytes": 1404473,
+      "md5": "5A9CA6783B47B6CEF676BE516262AEBA"
+    },
+    {
+      "remote_filename": "fr-p119-221.tex",
+      "bytes": 3240,
+      "md5": "967923F506E985C5538C69CE8DAFDB58"
+    },
+    {
+      "remote_filename": "manifest.json",
+      "bytes": 59658,
+      "md5": "513B012FE7307764E515D14C3E32476F"
+    },
+    {
+      "remote_filename": "qa-5000.zip",
+      "bytes": 134981719,
+      "md5": "8C2687E56C7D846B0AE1E0CF7C2CF3A0"
+    },
+    {
+      "remote_filename": "src-p119-221.zip",
+      "bytes": 4652309,
+      "md5": "EA60A7973DEB78F9DE157C48B293D5EE"
+    }
+  ],
+  "release_inventory": [
+    {
+      "local_path": "output/publication/TOHOKU_STACKS_R71_README.md",
+      "remote_filename": "70_TOHOKU_STACKS_R71_README.md",
+      "bytes": 2833,
+      "md5": "9C6CF106BC6C31C775A0DADA62F40E1E",
+      "sha256": "79EE4EA0BB362FA2C5B9FA845EF5FBEB9E27B943F7E38827973C15AE8A2B2909"
+    },
+    {
+      "local_path": "output/publication/TOHOKU_STACKS_R71_MANIFEST.csv",
+      "remote_filename": "71_TOHOKU_STACKS_R71_MANIFEST.csv",
+      "bytes": 5931,
+      "md5": "705676709A707E5540CD6346FF3E12A6",
+      "sha256": "E6A68346D20DABA401093D74B74B36B5D4D87113F41070BB31AAC0C67274D836"
+    },
+    {
+      "local_path": "tohoku_r71/r71-check.json",
+      "remote_filename": "72_TOHOKU_STACKS_R71_terminal_receipt.json",
+      "bytes": 13312,
+      "md5": "C6CBF7B7C65BD2D81AC6AF5E78D5E146",
+      "sha256": "097240D2CE69993FA61E9BA7CB81F47EC0329C23B686D69A6771DE0C9F6A6369"
+    },
+    {
+      "local_path": "tohoku_r71/STATUS.md",
+      "remote_filename": "73_TOHOKU_STACKS_R71_STATUS.md",
+      "bytes": 950,
+      "md5": "44183EEA3CDB145E4117AA80DC0D1402",
+      "sha256": "529747894CF1F22D282F5CA706DB5C0E684B0E56BF7FB5DFE23D466C4D5D1BC2"
+    },
+    {
+      "local_path": "tohoku_r71/cfg.json",
+      "remote_filename": "74_TOHOKU_STACKS_R71_config.json",
+      "bytes": 5151,
+      "md5": "703D368B46239CDB43BE5B34A7BAE304",
+      "sha256": "2C1917E032CAE4B174E89319E4BC860D4CB04967899F1B0679C0527B95E952D7"
+    },
+    {
+      "local_path": "tohoku_r71/intake.json",
+      "remote_filename": "75_TOHOKU_STACKS_R71_intake.json",
+      "bytes": 1578,
+      "md5": "9178E1C0F5E6B1A279FC2996D171561C",
+      "sha256": "7E2B1F451113D57041FB676A4BE85F6C8AE51783FC8A559691AD5D6DCCF9271F"
+    },
+    {
+      "local_path": "tohoku_r71/units.csv",
+      "remote_filename": "76_TOHOKU_STACKS_R71_units.csv",
+      "bytes": 393225,
+      "md5": "A28658A428911531593D68B0441ABDA1",
+      "sha256": "6AAAD1470DDA82604F84D697EC1833FAC4BEE16342FAD8EB415BA17CFB018262"
+    },
+    {
+      "local_path": "tohoku_r71/map.csv",
+      "remote_filename": "77_TOHOKU_STACKS_R71_map.csv",
+      "bytes": 501183,
+      "md5": "1112204448827F5C5076D792967EDEB6",
+      "sha256": "A4BDB33261A9AA950BD23C7046AC5E1FF9959EF6FE23DBA41B369F2EE2E52680"
+    },
+    {
+      "local_path": "tohoku_r71/dec.csv",
+      "remote_filename": "78_TOHOKU_STACKS_R71_decisions.csv",
+      "bytes": 410467,
+      "md5": "BE5C6BFE4EAD48394E161FFDFFD6BD02",
+      "sha256": "9295BCD5D3BCF93376BC4DC6A565B9D515ABD2E608BA2B000B67824DD7943D79"
+    },
+    {
+      "local_path": "tohoku_r71/issues.csv",
+      "remote_filename": "79_TOHOKU_STACKS_R71_source_issues.csv",
+      "bytes": 35465,
+      "md5": "72D053BF025DB6E2F06596458A8A6EA4",
+      "sha256": "E8E7A81AEF7E1509CF05E746D0CA32597F6DDF2B77909195A17F43A32BB43C25"
+    },
+    {
+      "local_path": "tohoku_r71/mcheck.json",
+      "remote_filename": "80_TOHOKU_STACKS_R71_mapping_check.json",
+      "bytes": 73894,
+      "md5": "FCB94C4E6790C649D1663633D245F322",
+      "sha256": "FC7AB928A40AF43EC90BE8B81FD266CE31006615A345AB7915AD096AF9BF9082"
+    },
+    {
+      "local_path": "tohoku_r71/check.json",
+      "remote_filename": "81_TOHOKU_STACKS_R71_check.json",
+      "bytes": 84174,
+      "md5": "033757669A216DF910128DDDA66A4AC1",
+      "sha256": "4ABB22388571D56C410E36811D86EB3EAA2B9AE814C5FEE4F5461F8867C39F61"
+    },
+    {
+      "local_path": "tohoku_r71/stx.csv",
+      "remote_filename": "82_TOHOKU_STACKS_R71_stacks_inventory.csv",
+      "bytes": 5291400,
+      "md5": "5B98A5166CAEB28F1E7FAB928B7804BF",
+      "sha256": "3A27F8EE563AF2521071EC5D1EFE6BF6E8DA1E5B194B98CC0C0D450B6CB00118"
+    },
+    {
+      "local_path": "tohoku_r71/topics.csv",
+      "remote_filename": "83_TOHOKU_STACKS_R71_topics.csv",
+      "bytes": 2453,
+      "md5": "986EEBC28D4B85B108EEE045FAEA5A4F",
+      "sha256": "AA62558CA4292B914D75A63BC4436586D88B754C9D08618DC8E67554C58B6B5C"
+    },
+    {
+      "local_path": "tohoku_r71/tmap.csv",
+      "remote_filename": "84_TOHOKU_STACKS_R71_topic_map.csv",
+      "bytes": 2424,
+      "md5": "A2651D532EC8C2CE9F8B7A291040838D",
+      "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"
+    },
+    {
+      "local_path": "tohoku_r71/tcand.csv",
+      "remote_filename": "85_TOHOKU_STACKS_R71_topic_candidates.csv",
+      "bytes": 489828,
+      "md5": "30DE49F48CB58366290EE52FCCF57F57",
+      "sha256": "EA279CAB0FDF739C87884E0228036A3E0E5ACC3BE3F93F0A22DCB67B40591513"
+    },
+    {
+      "local_path": "tohoku_r71/ucand.csv",
+      "remote_filename": "86_TOHOKU_STACKS_R71_unit_candidates.csv",
+      "bytes": 120,
+      "md5": "42E297B8F07682EF9C3405ED2C974C94",
+      "sha256": "D7D823C01798DC15596F2C67D1177F427A50EE39CDD4F4B6B437FBD56A86D1A4"
+    },
+    {
+      "local_path": "srcmap/build_tohoku_r71.py",
+      "remote_filename": "87_TOHOKU_STACKS_R71_builder.py",
+      "bytes": 41131,
+      "md5": "935E92A89598DF8095F947446912FD8B",
+      "sha256": "F35F2E48924EDEB3C7C48C5A8BF8500BED31134535650ED7C27DD2B88ED7CF75"
+    },
+    {
+      "local_path": "srcmap/tohoku_r71_contract.json",
+      "remote_filename": "88_TOHOKU_STACKS_R71_contract.json",
+      "bytes": 7306,
+      "md5": "180139F4499F25ADDD9F789140185B12",
+      "sha256": "9BCF8AD812879D3040906909627A0BF99CDC5F99204FE8254968DC3638E63219"
+    },
+    {
+      "local_path": "D1029_CHECK.json",
+      "remote_filename": "89_TOHOKU_STACKS_R71_D1029_audit.json",
+      "bytes": 5995,
+      "md5": "40F3F5375646578BD27E72B84961B939",
+      "sha256": "0CAD062C244D2FC3066AE163FF7D137D8B1139337C0144C80E108EB8D0466356"
+    },
+    {
+      "local_path": "output/publication/TOHOKU_R71_SOURCE_REPAIR_CHECK_PUBLIC.json",
+      "remote_filename": "90_TOHOKU_STACKS_R71_D1029_source_repair_public.json",
+      "bytes": 26677,
+      "md5": "23640F5BFECC4F08EE526170212DB96E",
+      "sha256": "B596B09F1927E1373B8D93D3224D1C1343B2E6FDC1CE32528132C7219069BD5B"
+    },
+    {
+      "local_path": "D1030_CHECK.json",
+      "remote_filename": "91_TOHOKU_STACKS_R71_D1030_audit.json",
+      "bytes": 4843,
+      "md5": "FF2A04131B7D1BEBE46D1D32E0EC5D46",
+      "sha256": "6182FBBD43AAF6D05EFA0FE22833D703F7D09694A3708B6B0249B01C7B481514"
+    },
+    {
+      "local_path": "D1031_CHECK.json",
+      "remote_filename": "92_TOHOKU_STACKS_R71_D1031_audit.json",
+      "bytes": 4123,
+      "md5": "4C74A282047EEE5E75E3F41F27F5CB71",
+      "sha256": "6551E7C7912F99143798E0380FB154A0B70D17336CD22F0527C41EB6DF65AD45"
+    },
+    {
+      "local_path": "D1031_FINAL_SCAN_CHECK.json",
+      "remote_filename": "93_TOHOKU_STACKS_R71_final_scan.json",
+      "bytes": 3723,
+      "md5": "08BC4CBD73CCA3B32C6FB0BA6B67760B",
+      "sha256": "74DFE06F44036508CB184FC0792AABED83F3D4184FC008E298CEEBB022FB9FD6"
+    },
+    {
+      "local_path": "tmp/d1029_post_live_independent_review_r1.json",
+      "remote_filename": "94_TOHOKU_STACKS_R71_D1029_independent_review.json",
+      "bytes": 11808,
+      "md5": "5E8E44B6483173E5CAB854A35E9D5736",
+      "sha256": "861F1C59B8091BEF7304E6E6249F3941AA05DECE48BB43B29D4872D5E319910D"
+    },
+    {
+      "local_path": "tmp/d1030_post_live_independent_review_r1.json",
+      "remote_filename": "95_TOHOKU_STACKS_R71_D1030_independent_review.json",
+      "bytes": 7590,
+      "md5": "3B5F7446FC00CF84BA39769DD17B87BC",
+      "sha256": "8C70D8029A5816C17AF91590455F519D623524348CF9DAFD3A078CCFE46D4D15"
+    },
+    {
+      "local_path": "tmp/d1031_post_live_independent_review_r1.json",
+      "remote_filename": "96_TOHOKU_STACKS_R71_D1031_independent_review.json",
+      "bytes": 7042,
+      "md5": "36C8E04AB8FF2030202F8033061002F8",
+      "sha256": "B2D363CEADA81D1B279DD80B9F14FF561EC3B948CEB3FB0DA11A00C1B4D0E0AD"
+    },
+    {
+      "local_path": "tmp/d1031_final_four_gap_batch_design.json",
+      "remote_filename": "97_TOHOKU_STACKS_R71_final_four_design.json",
+      "bytes": 26070,
+      "md5": "96AE930108A4813C8B2CB3333B964F19",
+      "sha256": "37AC8B57BF83C04900BC6350E8EA7CBF235B3EBD39C7096E336DB196901CED04"
+    },
+    {
+      "local_path": "cohomology.tex",
+      "remote_filename": "98_TOHOKU_STACKS_R71_cohomology.tex",
+      "bytes": 948056,
+      "md5": "5F6E1B222BB4A5A8FB7A1C3F85C8580F",
+      "sha256": "028EE1CCEAF173129AA34BC3A407C9D8EE08324F233449E81405D699E58314F9"
+    },
+    {
+      "local_path": "divisors.tex",
+      "remote_filename": "99_TOHOKU_STACKS_R71_divisors.tex",
+      "bytes": 398282,
+      "md5": "F3C6575AD157E268F54EA6D8C3BC7B90",
+      "sha256": "6AFD21925A593A1D302776825ABB176768BDB7E5966982EC04542FAF637AF86C"
+    },
+    {
+      "local_path": "homology.tex",
+      "remote_filename": "100_TOHOKU_STACKS_R71_homology.tex",
+      "bytes": 384334,
+      "md5": "E1E2C1747996B4DD39A904F38B61927A",
+      "sha256": "7520BDAD32E68DB449A671802A5D0B2EFAA6EE4EDEC94206F313AB23AB1B6908"
+    },
+    {
+      "local_path": "cohomology.pdf",
+      "remote_filename": "101_TOHOKU_STACKS_R71_cohomology.pdf",
+      "bytes": 2051229,
+      "md5": "16F36EA9B8517E1B6869019A1DBD850E",
+      "sha256": "146ADB22B666F2069B794535AA360D2F969F5BC0A2521CA7119AEE6AD728FF8D"
+    },
+    {
+      "local_path": "divisors.pdf",
+      "remote_filename": "102_TOHOKU_STACKS_R71_divisors.pdf",
+      "bytes": 1135218,
+      "md5": "EC06DFFD6DCEC183D6BA8385A26E9E69",
+      "sha256": "6B480E31B285358CDFB03BCEADB556F602112F2B43DAD7ACC5504C4DFF666487"
+    },
+    {
+      "local_path": "homology.pdf",
+      "remote_filename": "103_TOHOKU_STACKS_R71_homology.pdf",
+      "bytes": 1086437,
+      "md5": "A853CFF9A236F0C9F894D5CBF05D8326",
+      "sha256": "75AAB417A5EB5E39C3D29A3FEF2DA824A19FC58E0132FA0092C3A47F72D2CE67"
+    },
+    {
+      "local_path": "srcmap/build_tohoku_r71_publication.py",
+      "remote_filename": "104_TOHOKU_STACKS_R71_public_projection_builder.py",
+      "bytes": 3382,
+      "md5": "6A8F83A767FABF90976F16FBFF101652",
+      "sha256": "DB5B7501A105441C78A14B9C725BFC87EC1F463504D517B04AAA51904879CE9F"
+    },
+    {
+      "local_path": "srcmap/publish_tohoku_r71_zenodo.py",
+      "remote_filename": "105_TOHOKU_STACKS_R71_Zenodo_publisher.py",
+      "bytes": 37293,
+      "md5": "1CAB703D7F37892A9121452869B29986",
+      "sha256": "8F463186AFE3DC12E4CBEE9B7C6000C017374571DB6994D089878E035B1960FF"
+    }
+  ],
+  "transfer_actions": [
+    {
+      "remote_filename": "70_TOHOKU_STACKS_R71_README.md",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "71_TOHOKU_STACKS_R71_MANIFEST.csv",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "72_TOHOKU_STACKS_R71_terminal_receipt.json",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "73_TOHOKU_STACKS_R71_STATUS.md",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "74_TOHOKU_STACKS_R71_config.json",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "75_TOHOKU_STACKS_R71_intake.json",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "76_TOHOKU_STACKS_R71_units.csv",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "77_TOHOKU_STACKS_R71_map.csv",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "78_TOHOKU_STACKS_R71_decisions.csv",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "79_TOHOKU_STACKS_R71_source_issues.csv",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "80_TOHOKU_STACKS_R71_mapping_check.json",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "81_TOHOKU_STACKS_R71_check.json",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "82_TOHOKU_STACKS_R71_stacks_inventory.csv",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "83_TOHOKU_STACKS_R71_topics.csv",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "84_TOHOKU_STACKS_R71_topic_map.csv",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "85_TOHOKU_STACKS_R71_topic_candidates.csv",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "86_TOHOKU_STACKS_R71_unit_candidates.csv",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "87_TOHOKU_STACKS_R71_builder.py",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "88_TOHOKU_STACKS_R71_contract.json",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "89_TOHOKU_STACKS_R71_D1029_audit.json",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "90_TOHOKU_STACKS_R71_D1029_source_repair_public.json",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "91_TOHOKU_STACKS_R71_D1030_audit.json",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "92_TOHOKU_STACKS_R71_D1031_audit.json",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "93_TOHOKU_STACKS_R71_final_scan.json",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "94_TOHOKU_STACKS_R71_D1029_independent_review.json",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "95_TOHOKU_STACKS_R71_D1030_independent_review.json",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "96_TOHOKU_STACKS_R71_D1031_independent_review.json",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "97_TOHOKU_STACKS_R71_final_four_design.json",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "98_TOHOKU_STACKS_R71_cohomology.tex",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "99_TOHOKU_STACKS_R71_divisors.tex",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "100_TOHOKU_STACKS_R71_homology.tex",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "101_TOHOKU_STACKS_R71_cohomology.pdf",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "102_TOHOKU_STACKS_R71_divisors.pdf",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "103_TOHOKU_STACKS_R71_homology.pdf",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "104_TOHOKU_STACKS_R71_public_projection_builder.py",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "105_TOHOKU_STACKS_R71_Zenodo_publisher.py",
+      "action": "uploaded"
+    }
+  ],
+  "anonymous_public_readback": [
+    {
+      "remote_filename": "70_TOHOKU_STACKS_R71_README.md",
+      "bytes": 2833,
+      "sha256": "79EE4EA0BB362FA2C5B9FA845EF5FBEB9E27B943F7E38827973C15AE8A2B2909",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "71_TOHOKU_STACKS_R71_MANIFEST.csv",
+      "bytes": 5931,
+      "sha256": "E6A68346D20DABA401093D74B74B36B5D4D87113F41070BB31AAC0C67274D836",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "72_TOHOKU_STACKS_R71_terminal_receipt.json",
+      "bytes": 13312,
+      "sha256": "097240D2CE69993FA61E9BA7CB81F47EC0329C23B686D69A6771DE0C9F6A6369",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "73_TOHOKU_STACKS_R71_STATUS.md",
+      "bytes": 950,
+      "sha256": "529747894CF1F22D282F5CA706DB5C0E684B0E56BF7FB5DFE23D466C4D5D1BC2",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "74_TOHOKU_STACKS_R71_config.json",
+      "bytes": 5151,
+      "sha256": "2C1917E032CAE4B174E89319E4BC860D4CB04967899F1B0679C0527B95E952D7",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "75_TOHOKU_STACKS_R71_intake.json",
+      "bytes": 1578,
+      "sha256": "7E2B1F451113D57041FB676A4BE85F6C8AE51783FC8A559691AD5D6DCCF9271F",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "76_TOHOKU_STACKS_R71_units.csv",
+      "bytes": 393225,
+      "sha256": "6AAAD1470DDA82604F84D697EC1833FAC4BEE16342FAD8EB415BA17CFB018262",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "77_TOHOKU_STACKS_R71_map.csv",
+      "bytes": 501183,
+      "sha256": "A4BDB33261A9AA950BD23C7046AC5E1FF9959EF6FE23DBA41B369F2EE2E52680",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "78_TOHOKU_STACKS_R71_decisions.csv",
+      "bytes": 410467,
+      "sha256": "9295BCD5D3BCF93376BC4DC6A565B9D515ABD2E608BA2B000B67824DD7943D79",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "79_TOHOKU_STACKS_R71_source_issues.csv",
+      "bytes": 35465,
+      "sha256": "E8E7A81AEF7E1509CF05E746D0CA32597F6DDF2B77909195A17F43A32BB43C25",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "80_TOHOKU_STACKS_R71_mapping_check.json",
+      "bytes": 73894,
+      "sha256": "FC7AB928A40AF43EC90BE8B81FD266CE31006615A345AB7915AD096AF9BF9082",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "81_TOHOKU_STACKS_R71_check.json",
+      "bytes": 84174,
+      "sha256": "4ABB22388571D56C410E36811D86EB3EAA2B9AE814C5FEE4F5461F8867C39F61",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "82_TOHOKU_STACKS_R71_stacks_inventory.csv",
+      "bytes": 5291400,
+      "sha256": "3A27F8EE563AF2521071EC5D1EFE6BF6E8DA1E5B194B98CC0C0D450B6CB00118",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "83_TOHOKU_STACKS_R71_topics.csv",
+      "bytes": 2453,
+      "sha256": "AA62558CA4292B914D75A63BC4436586D88B754C9D08618DC8E67554C58B6B5C",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "84_TOHOKU_STACKS_R71_topic_map.csv",
+      "bytes": 2424,
+      "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "85_TOHOKU_STACKS_R71_topic_candidates.csv",
+      "bytes": 489828,
+      "sha256": "EA279CAB0FDF739C87884E0228036A3E0E5ACC3BE3F93F0A22DCB67B40591513",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "86_TOHOKU_STACKS_R71_unit_candidates.csv",
+      "bytes": 120,
+      "sha256": "D7D823C01798DC15596F2C67D1177F427A50EE39CDD4F4B6B437FBD56A86D1A4",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "87_TOHOKU_STACKS_R71_builder.py",
+      "bytes": 41131,
+      "sha256": "F35F2E48924EDEB3C7C48C5A8BF8500BED31134535650ED7C27DD2B88ED7CF75",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "88_TOHOKU_STACKS_R71_contract.json",
+      "bytes": 7306,
+      "sha256": "9BCF8AD812879D3040906909627A0BF99CDC5F99204FE8254968DC3638E63219",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "89_TOHOKU_STACKS_R71_D1029_audit.json",
+      "bytes": 5995,
+      "sha256": "0CAD062C244D2FC3066AE163FF7D137D8B1139337C0144C80E108EB8D0466356",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "90_TOHOKU_STACKS_R71_D1029_source_repair_public.json",
+      "bytes": 26677,
+      "sha256": "B596B09F1927E1373B8D93D3224D1C1343B2E6FDC1CE32528132C7219069BD5B",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "91_TOHOKU_STACKS_R71_D1030_audit.json",
+      "bytes": 4843,
+      "sha256": "6182FBBD43AAF6D05EFA0FE22833D703F7D09694A3708B6B0249B01C7B481514",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "92_TOHOKU_STACKS_R71_D1031_audit.json",
+      "bytes": 4123,
+      "sha256": "6551E7C7912F99143798E0380FB154A0B70D17336CD22F0527C41EB6DF65AD45",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "93_TOHOKU_STACKS_R71_final_scan.json",
+      "bytes": 3723,
+      "sha256": "74DFE06F44036508CB184FC0792AABED83F3D4184FC008E298CEEBB022FB9FD6",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "94_TOHOKU_STACKS_R71_D1029_independent_review.json",
+      "bytes": 11808,
+      "sha256": "861F1C59B8091BEF7304E6E6249F3941AA05DECE48BB43B29D4872D5E319910D",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "95_TOHOKU_STACKS_R71_D1030_independent_review.json",
+      "bytes": 7590,
+      "sha256": "8C70D8029A5816C17AF91590455F519D623524348CF9DAFD3A078CCFE46D4D15",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "96_TOHOKU_STACKS_R71_D1031_independent_review.json",
+      "bytes": 7042,
+      "sha256": "B2D363CEADA81D1B279DD80B9F14FF561EC3B948CEB3FB0DA11A00C1B4D0E0AD",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "97_TOHOKU_STACKS_R71_final_four_design.json",
+      "bytes": 26070,
+      "sha256": "37AC8B57BF83C04900BC6350E8EA7CBF235B3EBD39C7096E336DB196901CED04",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "98_TOHOKU_STACKS_R71_cohomology.tex",
+      "bytes": 948056,
+      "sha256": "028EE1CCEAF173129AA34BC3A407C9D8EE08324F233449E81405D699E58314F9",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "99_TOHOKU_STACKS_R71_divisors.tex",
+      "bytes": 398282,
+      "sha256": "6AFD21925A593A1D302776825ABB176768BDB7E5966982EC04542FAF637AF86C",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "100_TOHOKU_STACKS_R71_homology.tex",
+      "bytes": 384334,
+      "sha256": "7520BDAD32E68DB449A671802A5D0B2EFAA6EE4EDEC94206F313AB23AB1B6908",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "101_TOHOKU_STACKS_R71_cohomology.pdf",
+      "bytes": 2051229,
+      "sha256": "146ADB22B666F2069B794535AA360D2F969F5BC0A2521CA7119AEE6AD728FF8D",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "102_TOHOKU_STACKS_R71_divisors.pdf",
+      "bytes": 1135218,
+      "sha256": "6B480E31B285358CDFB03BCEADB556F602112F2B43DAD7ACC5504C4DFF666487",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "103_TOHOKU_STACKS_R71_homology.pdf",
+      "bytes": 1086437,
+      "sha256": "75AAB417A5EB5E39C3D29A3FEF2DA824A19FC58E0132FA0092C3A47F72D2CE67",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "104_TOHOKU_STACKS_R71_public_projection_builder.py",
+      "bytes": 3382,
+      "sha256": "DB5B7501A105441C78A14B9C725BFC87EC1F463504D517B04AAA51904879CE9F",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "105_TOHOKU_STACKS_R71_Zenodo_publisher.py",
+      "bytes": 37293,
+      "sha256": "8F463186AFE3DC12E4CBEE9B7C6000C017374571DB6994D089878E035B1960FF",
+      "status": "PASS"
+    }
+  ]
+}
