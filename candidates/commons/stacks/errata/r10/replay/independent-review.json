@@ -1,0 +1,94 @@
+{
+  "schema": "mathematics-commons-stacks-errata-independent-review/v1",
+  "candidate_id": "stacks-errata-a04446e-r10",
+  "review_kind": "independent_adverse_replay",
+  "recorded_at_utc": "2026-08-24T20:09:00Z",
+  "result": "PASS",
+  "conclusion": "UNCONDITIONAL PASS",
+  "passed": true,
+  "pass_is_unconditional": true,
+  "pre_review_manifest_sha256": "0BC764823EB3D71277F2414EE520BB59B995BC85A015DE6905975B70397D5F49",
+  "validation_sha256": "61FB1C265BF0CBC697CD08183F9AFF049595338924537640DE32C43B784E991B",
+  "pre_review_gate": {
+    "passed": true,
+    "check_manifest_exit_code": 0,
+    "candidate_manifest": {
+      "path": "candidate.manifest.json",
+      "bytes": 8632,
+      "sha256": "0BC764823EB3D71277F2414EE520BB59B995BC85A015DE6905975B70397D5F49"
+    },
+    "validation": {
+      "path": "builds/validation.json",
+      "bytes": 2391,
+      "sha256": "61FB1C265BF0CBC697CD08183F9AFF049595338924537640DE32C43B784E991B",
+      "passed": true
+    }
+  },
+  "input_nonmutation": {
+    "passed": true,
+    "file_count_excluding_manifest_and_receipt": 42,
+    "note": "The replay read sealed candidate bytes and wrote only this receipt."
+  },
+  "stable_id_recomputation": {
+    "passed": true,
+    "derivation_rule": "ALGEBRA-372..381 map bijectively in producer order to MC-STK-ERR-0715..0724",
+    "unit_count": 10,
+    "operation_count": 11,
+    "first_id": "MC-STK-ERR-0715",
+    "last_id": "MC-STK-ERR-0724"
+  },
+  "scratch_replay": {
+    "passed": true,
+    "apply_order": "descending_start_byte",
+    "operation_count": 11,
+    "authority": {
+      "bytes": 1771230,
+      "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+    },
+    "output": {
+      "bytes": 1771864,
+      "sha256": "03653D1FDF7D1CC6072E8AB9DDA1E5A282E225BF195FD6EF6B48E6ABEF7FE7BD"
+    },
+    "operation_spec_sha256": "C296EDF3762E9E95EAFA9F95176AE0E52035EA23E8847F2770329E30BF0C2859"
+  },
+  "sealed_evidence_verification": {
+    "passed": true,
+    "build_receipt": {
+      "path": "builds/build-receipt.json",
+      "sha256": "75F34814B72F8A84D65AD65B9094CFEFA6DB382D0FB3900D2E69DB2CAA5C354E"
+    },
+    "visual_qa": {
+      "path": "builds/visual-qa.json",
+      "sha256": "B062D063AB9D7C69FE7FE36983C2843695CE25F3AB0B4D633BA5E067C6138947"
+    },
+    "candidate_pdf": {
+      "path": "builds/algebra.pdf",
+      "bytes": 3708776,
+      "sha256": "4C54A876A5635726DC785A24C9408A7CD848C39581E6F900181D6681F9710821",
+      "pages": 466
+    },
+    "authority_pdf": {
+      "path": "builds/algebra.authority.pdf",
+      "bytes": 3708166,
+      "sha256": "C7D408FDB2F6F3646C1E1D325642F9BBA7FA0143ACE91C7774183D605D5E9914",
+      "pages": 466
+    },
+    "private_render_manifest": {
+      "bytes": 101273,
+      "sha256": "48E41B5B36636E95EACC720978B181AEC283B6225780A62B7C72D4C46DFC7DA6",
+      "logical_path": "canon/private_evidence/errata-r10-20260824T1442Z/render-final/render-manifest.json"
+    }
+  },
+  "adverse_observations": [
+    "Standalone candidate and authority builds retain identical cross-chapter unresolved-reference multisets.",
+    "Both PDFs are untagged; this retained accessibility limitation is not misreported as a visual failure.",
+    "All 466 candidate pages and the complete correction-sensitive band were inspected without a visual defect."
+  ],
+  "constraints_observed": {
+    "candidate_inputs_mutated": false,
+    "upstream_contacted": false,
+    "persistent_writes": [
+      "replay/independent-review.json"
+    ]
+  }
+}

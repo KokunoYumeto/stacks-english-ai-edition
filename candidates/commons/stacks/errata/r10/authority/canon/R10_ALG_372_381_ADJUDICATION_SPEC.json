@@ -1,0 +1,176 @@
+{
+  "accepted": [
+    {
+      "class": "zero_localization_outside_n2_domain",
+      "disposition": "Restrict the localization claim to f_i outside the prime and state that the surviving images generate the unit ideal.",
+      "locus": "algebra.tex:45748-45751",
+      "operations": [
+        {
+          "old_text": "$\\mathfrak p \\subset R$ is a prime, then we see each\n$R_{f_i}/\\mathfrak pR_{f_i} = (R/\\mathfrak p)_{f_i}$ is N-2\nand hence we conclude $R/\\mathfrak p$ is N-2 by\nLemma \\ref{lemma-Japanese-local}. This proves (2).",
+          "replacement_text": "$\\mathfrak p \\subset R$ is a prime, then for every $i$ such that\n$f_i \\not \\in \\mathfrak p$ we see\n$R_{f_i}/\\mathfrak pR_{f_i} = (R/\\mathfrak p)_{f_i}$ is N-2.\nThe images of these $f_i$ in $R/\\mathfrak p$ generate the unit ideal, and\nhence we conclude $R/\\mathfrak p$ is N-2 by\nLemma \\ref{lemma-Japanese-local}. This proves (2).",
+          "source_end_line": 45751,
+          "source_start_line": 45748
+        }
+      ],
+      "producer_id": "ALGEBRA-372",
+      "result": "confirmed_definition_domain_error",
+      "stable_id": "MC-STK-ERR-0715"
+    },
+    {
+      "class": "article_agreement",
+      "disposition": "Correct the indefinite article before R-completion-submodule.",
+      "locus": "algebra.tex:45877",
+      "operations": [
+        {
+          "old_text": "is a $R^\\wedge$-submodule",
+          "replacement_text": "is an $R^\\wedge$-submodule",
+          "source_end_line": 45877,
+          "source_start_line": 45877
+        }
+      ],
+      "producer_id": "ALGEBRA-373",
+      "result": "confirmed_grammar_error",
+      "stable_id": "MC-STK-ERR-0716"
+    },
+    {
+      "class": "rescaling_fails_at_closed_prime",
+      "disposition": "Split off the field case and rescale every generator by one fixed element of m outside p.",
+      "locus": "algebra.tex:46042-46051",
+      "operations": [
+        {
+          "old_text": "To prove (1) we have to show that the integral closure of $R/\\mathfrak p$\nis finite over $R/\\mathfrak p$. Choose $x_1, \\ldots, x_n \\in L$",
+          "replacement_text": "To prove (1) we have to show that the integral closure of $R/\\mathfrak p$\nis finite over $R/\\mathfrak p$. If $\\mathfrak p = \\mathfrak m$, then\n$R/\\mathfrak p$ is a field and the assertion is immediate. Thus we may\nassume $\\mathfrak p \\not = \\mathfrak m$ and choose\n$g \\in \\mathfrak m \\setminus \\mathfrak p$. Choose $x_1, \\ldots, x_n \\in L$",
+          "source_end_line": 46043,
+          "source_start_line": 46042
+        },
+        {
+          "old_text": "$a_{i, j} \\in R/\\mathfrak p$. In fact, after further multiplying\nby elements of $\\mathfrak m$, we may assume\n$a_{i, j} \\in \\mathfrak m/\\mathfrak p \\subset R/\\mathfrak p$ for all $i, j$.",
+          "replacement_text": "$a_{i, j} \\in R/\\mathfrak p$. After further replacing each $x_i$\nby $g x_i$, we may assume\n$a_{i, j} \\in \\mathfrak m/\\mathfrak p \\subset R/\\mathfrak p$ for all $i, j$.",
+          "source_end_line": 46051,
+          "source_start_line": 46049
+        }
+      ],
+      "producer_id": "ALGEBRA-374",
+      "result": "confirmed_proof_gap",
+      "stable_id": "MC-STK-ERR-0717"
+    },
+    {
+      "class": "unjustified_normality_restriction",
+      "disposition": "Remove normal from the arbitrary Nagata-domain reduction.",
+      "locus": "algebra.tex:46110",
+      "operations": [
+        {
+          "old_text": "Step 4. Let $R$ be a normal Nagata domain and",
+          "replacement_text": "Step 4. Let $R$ be a Nagata domain and",
+          "source_end_line": 46110,
+          "source_start_line": 46110
+        }
+      ],
+      "producer_id": "ALGEBRA-375",
+      "result": "confirmed_logical_restriction_error",
+      "stable_id": "MC-STK-ERR-0718"
+    },
+    {
+      "class": "missing_subject",
+      "disposition": "Insert the missing subject in the localization reduction.",
+      "locus": "algebra.tex:46143",
+      "operations": [
+        {
+          "old_text": "and $S$ by $S_a$, may assume",
+          "replacement_text": "and $S$ by $S_a$, we may assume",
+          "source_end_line": 46143,
+          "source_start_line": 46143
+        }
+      ],
+      "producer_id": "ALGEBRA-376",
+      "result": "confirmed_grammar_error",
+      "stable_id": "MC-STK-ERR-0719"
+    },
+    {
+      "class": "wrong_polynomial_indeterminate",
+      "disposition": "Use R[X] for the polynomial indeterminate.",
+      "locus": "algebra.tex:46144",
+      "operations": [
+        {
+          "old_text": "in $R[x]$ with",
+          "replacement_text": "in $R[X]$ with",
+          "source_end_line": 46144,
+          "source_start_line": 46144
+        }
+      ],
+      "producer_id": "ALGEBRA-377",
+      "result": "confirmed_notation_error",
+      "stable_id": "MC-STK-ERR-0720"
+    },
+    {
+      "class": "overbroad_maximal_ideal_quantifier",
+      "disposition": "Restrict to maximal ideals of S' lying over the fixed maximal ideal.",
+      "locus": "algebra.tex:46152-46154",
+      "operations": [
+        {
+          "old_text": "Moreover, $S'$ is finite over $S$. If for every maximal ideal\n$\\mathfrak m'$ of $S'$ the local ring $S'_{\\mathfrak m'}$ is\nN-1, then $S'_{\\mathfrak m}$ is N-1 by",
+          "replacement_text": "Moreover, $S'$ is finite over $S$. If for every maximal ideal\n$\\mathfrak m'$ of $S'$ lying over $\\mathfrak m$ the local ring\n$S'_{\\mathfrak m'}$ is N-1, then $S'_{\\mathfrak m}$ is N-1 by",
+          "source_end_line": 46154,
+          "source_start_line": 46152
+        }
+      ],
+      "producer_id": "ALGEBRA-378",
+      "result": "confirmed_quantifier_error",
+      "stable_id": "MC-STK-ERR-0721"
+    },
+    {
+      "class": "missing_zero_branch",
+      "disposition": "Dispose of x=0 before invoking the nonzero-element criterion.",
+      "locus": "algebra.tex:46170",
+      "operations": [
+        {
+          "old_text": "We have to show $S_{\\mathfrak m}$ is N-1.",
+          "replacement_text": "We have to show $S_{\\mathfrak m}$ is N-1. If $x = 0$, then $S = R$\nand there is nothing to prove. Thus we may and do assume $x \\not = 0$.",
+          "source_end_line": 46170,
+          "source_start_line": 46170
+        }
+      ],
+      "producer_id": "ALGEBRA-379",
+      "result": "confirmed_missing_case",
+      "stable_id": "MC-STK-ERR-0722"
+    },
+    {
+      "class": "missing_plus_sign",
+      "disposition": "Insert the missing plus sign after the polynomial ellipsis.",
+      "locus": "algebra.tex:46185",
+      "operations": [
+        {
+          "old_text": "+ \\ldots a_1 X +",
+          "replacement_text": "+ \\ldots + a_1 X +",
+          "source_end_line": 46185,
+          "source_start_line": 46185
+        }
+      ],
+      "producer_id": "ALGEBRA-380",
+      "result": "confirmed_formula_typo",
+      "stable_id": "MC-STK-ERR-0723"
+    },
+    {
+      "class": "unstated_locality_and_topology_agreement",
+      "disposition": "Prove B is local and that its maximal-adic and mB-adic topologies agree before applying the completion lemma.",
+      "locus": "algebra.tex:46280",
+      "operations": [
+        {
+          "old_text": "$B = A[x]/(x^p - a)$ is a domain because $K[x]/(x^p - a)$ is a field.",
+          "replacement_text": "$B = A[x]/(x^p - a)$ is a domain because $K[x]/(x^p - a)$ is a field.\nThe ring $B$ is local because its special fibre\n$B/\\mathfrak mB = \\kappa(\\mathfrak m)[x]/(x^p - \\overline{a})$ has a unique\nprime ideal. Moreover, the maximal-adic and $\\mathfrak mB$-adic topologies\non $B$ agree.",
+          "source_end_line": 46280,
+          "source_start_line": 46280
+        }
+      ],
+      "producer_id": "ALGEBRA-381",
+      "result": "confirmed_proof_gap",
+      "stable_id": "MC-STK-ERR-0724"
+    }
+  ],
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3",
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "candidate_id": "stacks-errata-a04446e-r10",
+  "rejected": [],
+  "schema": "mathematics-commons-stacks-r10-adjudication-spec/v1"
+}
