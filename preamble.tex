@@ -21,9 +21,25 @@
 % We use multicol for the list of chapters between chapters
 \usepackage{multicol}
 
-% This is generally recommended for better output
-\usepackage{lmodern}
-\usepackage[T1]{fontenc}
+% This is generally recommended for better output.  The normal Stacks build
+% remains pdfTeX/T1; localized CJK editions opt into XeTeX by defining
+% \GAGACJKMainFont before loading this preamble.
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage{lmodern}
+  \usepackage[T1]{fontenc}
+\else
+  \usepackage{fontspec}
+  \usepackage{xeCJK}
+  \setmainfont{Latin Modern Roman}
+  \setsansfont{Latin Modern Sans}
+  \setmonofont{Latin Modern Mono}
+  \ifdefined\GAGACJKMainFont
+    \setCJKmainfont{\GAGACJKMainFont}
+  \else
+    \setCJKmainfont{Yu Gothic}
+  \fi
+\fi
 
 % For cross-file-references
 \usepackage{xr-hyper}
@@ -90,6 +106,7 @@
 \externaldocument[models-]{models}
 \externaldocument[functors-]{functors}
 \externaldocument[equiv-]{equiv}
+\externaldocument[gaga-]{gaga}
 \externaldocument[pione-]{pione}
 \externaldocument[etale-cohomology-]{etale-cohomology}
 \externaldocument[proetale-]{proetale}

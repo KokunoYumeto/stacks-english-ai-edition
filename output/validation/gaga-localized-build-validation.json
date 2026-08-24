@@ -1,0 +1,433 @@
+{
+  "schema": "gaga-localized-build-validation-v1",
+  "created_utc": "2026-08-24T19:54:25.306816+00:00",
+  "status": "PASS",
+  "source_validation": {
+    "english_sha256": "BBCCEE29FE3AF084E8435F3E32F8537EE3DDED2558E1A9FCD2940F8664BB5201",
+    "results": [
+      {
+        "chapters": {
+          "bytes": 8820,
+          "path": "output/source/chapters-ja.tex",
+          "sha256": "62A9C3BD27CA840C505D202B57535B3E2D8BBAF2A40A39D746151F1CCE5243B2"
+        },
+        "counts": {
+          "chapter_hyperrefs": 118,
+          "cjk_characters": 14783,
+          "environment_events": 310,
+          "known_english_prose_markers": {
+            "\\bApplications of the comparison theorems\\b": 0,
+            "\\bIt remains\\b": 0,
+            "\\bOther chapters\\b": 0,
+            "\\bThe assertion follows\\b": 0,
+            "\\bThis chapter develops\\b": 0,
+            "\\bThroughout this section\\b": 0,
+            "\\bWe first\\b": 0
+          },
+          "math_segments": 884,
+          "ordered_targets": {
+            "cite": 37,
+            "eqref": 0,
+            "hyperref": 0,
+            "label": 90,
+            "pageref": 0,
+            "ref": 168
+          }
+        },
+        "errors": [],
+        "language": "ja",
+        "source": {
+          "bytes": 85921,
+          "path": "output/source/gaga-ja.tex",
+          "sha256": "E441FF5AFDF7CBD41DA98273BE7BE9615537F5D25D7D05CF436A6AD9B3ED753E"
+        },
+        "status": "PASS"
+      },
+      {
+        "chapters": {
+          "bytes": 7931,
+          "path": "output/source/chapters-zh-cn.tex",
+          "sha256": "8F7530C8EE3DF3E78FC30C90C587C14318FAB66BEA5F20687559F490F8024FDE"
+        },
+        "counts": {
+          "chapter_hyperrefs": 118,
+          "cjk_characters": 10168,
+          "environment_events": 310,
+          "known_english_prose_markers": {
+            "\\bApplications of the comparison theorems\\b": 0,
+            "\\bIt remains\\b": 0,
+            "\\bOther chapters\\b": 0,
+            "\\bThe assertion follows\\b": 0,
+            "\\bThis chapter develops\\b": 0,
+            "\\bThroughout this section\\b": 0,
+            "\\bWe first\\b": 0
+          },
+          "math_segments": 884,
+          "ordered_targets": {
+            "cite": 37,
+            "eqref": 0,
+            "hyperref": 0,
+            "label": 90,
+            "pageref": 0,
+            "ref": 168
+          }
+        },
+        "errors": [],
+        "language": "zh-cn",
+        "source": {
+          "bytes": 73217,
+          "path": "output/source/gaga-zh-cn.tex",
+          "sha256": "25B5CD697A71E3FCD98E66BB0FA97429A378A76759B61D1874EC7321CAA4699D"
+        },
+        "status": "PASS"
+      }
+    ],
+    "schema": "gaga-localized-source-validation-v1",
+    "status": "PASS"
+  },
+  "editions": [
+    {
+      "language": "ja",
+      "status": "PASS",
+      "source": {
+        "path": "output/source/gaga-ja.tex",
+        "bytes": 85921,
+        "sha256": "E441FF5AFDF7CBD41DA98273BE7BE9615537F5D25D7D05CF436A6AD9B3ED753E"
+      },
+      "pdf": {
+        "path": "output/pdf/gaga-japanese.pdf",
+        "bytes": 411303,
+        "sha256": "B244927089C1525AB3DE070701648C1C722C5CD240DB6AA5EF2FA707AB751708"
+      },
+      "pages": 21,
+      "passes_after_bibtex": 2,
+      "fixed_point": {
+        "aux": "2F98CDE6A38A9BA70B42DBF506B4CE950FAA4A00DD1344DB8D1E0897C99E183F",
+        "out": "09EF225E7EDC1083A8BB4D8F67A30A9DE03F4343122C3AC262CE1BEE5B3A28D6",
+        "toc": "8B6FDAAA0E382404379DADE54900AFFA59E053CC6CBABC904FA53E5465E4CCAA"
+      },
+      "log_findings": {
+        "undefined_reference": 0,
+        "undefined_citation": 0,
+        "rerun_required": 0,
+        "fatal_error": 0,
+        "overfull_box": 0,
+        "underfull_box": 0,
+        "missing_character": 0,
+        "bibtex_warning": 0,
+        "bibtex_error": 0
+      },
+      "localized_characters_in_extracted_pdf_text": 7730,
+      "font_inventory": [
+        "name                                 type              encoding         emb sub uni object ID",
+        "------------------------------------ ----------------- ---------------- --- --- --- ---------",
+        "QQAXBZ+YuGothic-Bold                 CID TrueType      Identity-H       yes yes yes      4  0",
+        "KOXQXL+LMRoman10-Bold-Identity-H     CID Type 0C       Identity-H       yes yes yes      6  0",
+        "FSMMHD+LMRoman10-Regular-Identity-H  CID Type 0C       Identity-H       yes yes yes      8  0",
+        "YUORRX+YuGothic-Regular              CID TrueType      Identity-H       yes yes yes     10  0",
+        "AEEPNG+CMMI10                        Type 1C           Builtin          yes yes yes     40  0",
+        "HMWZIU+CMSY10                        Type 1C           Builtin          yes yes no      41  0",
+        "UZOMFM+CMR10                         Type 1C           Builtin          yes yes yes     42  0",
+        "BPMAHH+CMMI7                         Type 1C           Builtin          yes yes yes     43  0",
+        "BOUWQQ+LMRoman10-Italic-Identity-H   CID Type 0C       Identity-H       yes yes yes     44  0",
+        "MFTXME+CMR7                          Type 1C           Builtin          yes yes yes     46  0",
+        "DLTCCL+LMRoman7-Regular-Identity-H   CID Type 0C       Identity-H       yes yes yes     47  0",
+        "UTNBHP+LMRoman7-Bold-Identity-H      CID Type 0C       Identity-H       yes yes yes     52  0",
+        "ALFJHN+CMMI5                         Type 1C           Builtin          yes yes yes     54  0",
+        "DIVBDI+CMSY7                         Type 1C           Builtin          yes yes yes     55  0",
+        "AJELNK+CMSY5                         Type 1C           Builtin          yes yes yes     56  0",
+        "LLKDID+MSAM10                        Type 1C           Builtin          yes yes yes     60  0",
+        "RAUMUK+CMEX10                        Type 1C           Builtin          yes yes no      61  0",
+        "TAPUJW+EUFM10                        Type 1C           Builtin          yes yes yes     73  0",
+        "QJLHPU+CMR5                          Type 1C           Builtin          yes yes yes    100  0",
+        "HMVQSF+EUFM7                         Type 1C           Builtin          yes yes yes    156  0",
+        "DRABNI+LMRoman5-Regular-Identity-H   CID Type 0C       Identity-H       yes yes yes    159  0",
+        "BLPKAS+LMRoman8-Regular-Identity-H   CID Type 0C       Identity-H       yes yes yes    416  0",
+        "PZLXML+LMRoman8-Italic-Identity-H    CID Type 0C       Identity-H       yes yes yes    418  0",
+        "DNIUOI+LMRoman8-Bold-Identity-H      CID Type 0C       Identity-H       yes yes yes    420  0"
+      ],
+      "render_directory": "tmp/pdfs/gaga_japanese_final",
+      "rendered_pages": [
+        {
+          "path": "tmp/pdfs/gaga_japanese_final/page-01.png",
+          "bytes": 248964,
+          "sha256": "238FBCA1CB997FE771877398B4C5D09A5AE0E88E671EBB0052436DC1BFC68CFD"
+        },
+        {
+          "path": "tmp/pdfs/gaga_japanese_final/page-02.png",
+          "bytes": 433878,
+          "sha256": "F25988DC8D5397C5EB305DD9DB2CFD2B4DFD129C4ADCB5FE56B72AC0869F13F3"
+        },
+        {
+          "path": "tmp/pdfs/gaga_japanese_final/page-03.png",
+          "bytes": 374880,
+          "sha256": "3DD6561CAEE691B2CD85086987AAD095104F97E5BB77265378A44A3F6D7E69D4"
+        },
+        {
+          "path": "tmp/pdfs/gaga_japanese_final/page-04.png",
+          "bytes": 460608,
+          "sha256": "927567D34618FCE4F9082059AA85A8A75A5F5588BF55331AADEC0F59DE29CC65"
+        },
+        {
+          "path": "tmp/pdfs/gaga_japanese_final/page-05.png",
+          "bytes": 504173,
+          "sha256": "3CF0B6AE8385B99FE984F26ED937667FD675F781F41FB86CD31233C6CE9DDB78"
+        },
+        {
+          "path": "tmp/pdfs/gaga_japanese_final/page-06.png",
+          "bytes": 416542,
+          "sha256": "F5FF0440BA889AF27DF87C79AF64123880CA5E8725240A8358D13AD8E46566DB"
+        },
+        {
+          "path": "tmp/pdfs/gaga_japanese_final/page-07.png",
+          "bytes": 403441,
+          "sha256": "3178FC70896127E32A41A3B64013A0438AAC5F52E83137C295ADEF21244DA67C"
+        },
+        {
+          "path": "tmp/pdfs/gaga_japanese_final/page-08.png",
+          "bytes": 462163,
+          "sha256": "98A76F65B7EDE7359020660ADC34D3F2927216AC3E598B39043509F21675401D"
+        },
+        {
+          "path": "tmp/pdfs/gaga_japanese_final/page-09.png",
+          "bytes": 387891,
+          "sha256": "26A8B30EBA8A1D85E813984FE09122F797D83BFF3899D2EFE2EE6223DCC41118"
+        },
+        {
+          "path": "tmp/pdfs/gaga_japanese_final/page-10.png",
+          "bytes": 340270,
+          "sha256": "4F02D67554B83A661096B4F8EB0E5EE7650840ADFCB2877D093DFC86036D7C0E"
+        },
+        {
+          "path": "tmp/pdfs/gaga_japanese_final/page-11.png",
+          "bytes": 373391,
+          "sha256": "44781790B6CF4B60A4DBE469DE2176378E7AFE6501A68C1C17105E5D88587D41"
+        },
+        {
+          "path": "tmp/pdfs/gaga_japanese_final/page-12.png",
+          "bytes": 375277,
+          "sha256": "0B1C4C4C8D7F55809782C7EF46C9FF5A26679F8EE7289363E0B8C2063180CD1A"
+        },
+        {
+          "path": "tmp/pdfs/gaga_japanese_final/page-13.png",
+          "bytes": 412533,
+          "sha256": "5BCF553EA42D59C303B9375334073234A442EB9242F872A33297A66430FDAE7D"
+        },
+        {
+          "path": "tmp/pdfs/gaga_japanese_final/page-14.png",
+          "bytes": 416697,
+          "sha256": "0BE8CA13EC649F33D6EB8499163CCA4F6F487A445E6B02C417EF0BD25B3CC8EC"
+        },
+        {
+          "path": "tmp/pdfs/gaga_japanese_final/page-15.png",
+          "bytes": 367874,
+          "sha256": "D6372DFE3E33189A3350CFEBE99FD57589A62AC592B05659681C96C08691802A"
+        },
+        {
+          "path": "tmp/pdfs/gaga_japanese_final/page-16.png",
+          "bytes": 405813,
+          "sha256": "D805325003A588CED48BFA3725BCBFBC7CD93BB06AD4789F45FE7593827D2D22"
+        },
+        {
+          "path": "tmp/pdfs/gaga_japanese_final/page-17.png",
+          "bytes": 420591,
+          "sha256": "175F2FEF94887BDE0F4C22E80D0F4DC1DF2F50C928EB9AB459AB5205D341DC0E"
+        },
+        {
+          "path": "tmp/pdfs/gaga_japanese_final/page-18.png",
+          "bytes": 422617,
+          "sha256": "456B7417624B46A7144539BA1842B939F61E24FEE0CC9EB19E2B21425EAC2AD1"
+        },
+        {
+          "path": "tmp/pdfs/gaga_japanese_final/page-19.png",
+          "bytes": 343220,
+          "sha256": "DECD1819663A35183A457D931C615B8F6560139A049CBE7BC62D71E4AFD7BE49"
+        },
+        {
+          "path": "tmp/pdfs/gaga_japanese_final/page-20.png",
+          "bytes": 359924,
+          "sha256": "7C09A53CF35D189EDBECDAFC38F7944C7D8C7B30A5C65BBF10C835C013EDF449"
+        },
+        {
+          "path": "tmp/pdfs/gaga_japanese_final/page-21.png",
+          "bytes": 27485,
+          "sha256": "DB8FE9338E92CF8857163BBBD197930D0E9965E0FD2D66ABA935CA3A62746869"
+        }
+      ]
+    },
+    {
+      "language": "zh-cn",
+      "status": "PASS",
+      "source": {
+        "path": "output/source/gaga-zh-cn.tex",
+        "bytes": 73217,
+        "sha256": "25B5CD697A71E3FCD98E66BB0FA97429A378A76759B61D1874EC7321CAA4699D"
+      },
+      "pdf": {
+        "path": "output/pdf/gaga-simplified-chinese.pdf",
+        "bytes": 254336,
+        "sha256": "CAA2EE705BF8DF0743C5E65ECBCDD92A516896F99374E398670739D509459387"
+      },
+      "pages": 19,
+      "passes_after_bibtex": 2,
+      "fixed_point": {
+        "aux": "3D94BB78DD90C7B303F4946DAEAD77BE469A246EB2470AF5619011D27528901E",
+        "out": "808E5B31C057943CE1FA789F4238198E23AEEA95D4613944A3F31E2CF1FB8F74",
+        "toc": "8AB175ACB2382C1B328FAEA39D5F4E05242E28282F40B3BE3E0C7615A2DE9894"
+      },
+      "log_findings": {
+        "undefined_reference": 0,
+        "undefined_citation": 0,
+        "rerun_required": 0,
+        "fatal_error": 0,
+        "overfull_box": 0,
+        "underfull_box": 0,
+        "missing_character": 0,
+        "bibtex_warning": 0,
+        "bibtex_error": 0
+      },
+      "localized_characters_in_extracted_pdf_text": 10522,
+      "font_inventory": [
+        "name                                 type              encoding         emb sub uni object ID",
+        "------------------------------------ ----------------- ---------------- --- --- --- ---------",
+        "PXXQGO+SimSun                        CID TrueType      Identity-H       yes yes yes      4  0",
+        "XAKFNR+LMRoman10-Bold-Identity-H     CID Type 0C       Identity-H       yes yes yes      6  0",
+        "MGBMMJ+LMRoman10-Regular-Identity-H  CID Type 0C       Identity-H       yes yes yes      8  0",
+        "EWYRXS+CMMI10                        Type 1C           Builtin          yes yes yes     38  0",
+        "DPRMVX+CMSY10                        Type 1C           Builtin          yes yes no      39  0",
+        "ENPJRL+CMR10                         Type 1C           Builtin          yes yes yes     40  0",
+        "ZDQCBV+CMMI7                         Type 1C           Builtin          yes yes yes     41  0",
+        "YHARPG+LMRoman10-Italic-Identity-H   CID Type 0C       Identity-H       yes yes yes     42  0",
+        "OPSQOW+CMR7                          Type 1C           Builtin          yes yes yes     44  0",
+        "JMVJFA+LMRoman7-Regular-Identity-H   CID Type 0C       Identity-H       yes yes yes     45  0",
+        "HOJZAC+LMRoman7-Bold-Identity-H      CID Type 0C       Identity-H       yes yes yes     50  0",
+        "MERNJJ+CMMI5                         Type 1C           Builtin          yes yes yes     52  0",
+        "YOEGEZ+CMSY7                         Type 1C           Builtin          yes yes yes     53  0",
+        "RJEAOV+CMSY5                         Type 1C           Builtin          yes yes yes     54  0",
+        "FJSYGB+MSAM10                        Type 1C           Builtin          yes yes yes     58  0",
+        "BRWEHH+CMEX10                        Type 1C           Builtin          yes yes no      59  0",
+        "HBMLKC+EUFM10                        Type 1C           Builtin          yes yes yes     71  0",
+        "QRELDQ+CMR5                          Type 1C           Builtin          yes yes yes     95  0",
+        "UOJMHP+EUFM7                         Type 1C           Builtin          yes yes yes    151  0",
+        "RWJUDD+LMRoman5-Regular-Identity-H   CID Type 0C       Identity-H       yes yes yes    154  0",
+        "DORBCU+LMRoman8-Regular-Identity-H   CID Type 0C       Identity-H       yes yes yes    404  0",
+        "PDWDCV+LMRoman8-Italic-Identity-H    CID Type 0C       Identity-H       yes yes yes    406  0",
+        "LGDKTY+LMRoman8-Bold-Identity-H      CID Type 0C       Identity-H       yes yes yes    408  0"
+      ],
+      "render_directory": "tmp/pdfs/gaga_chinese_final",
+      "rendered_pages": [
+        {
+          "path": "tmp/pdfs/gaga_chinese_final/page-01.png",
+          "bytes": 214825,
+          "sha256": "9D0ADB7D894F809911D3F3D929FA9881D4AD3575FB808DD6CA9E42C7265118EA"
+        },
+        {
+          "path": "tmp/pdfs/gaga_chinese_final/page-02.png",
+          "bytes": 421803,
+          "sha256": "0DD7665DD1AD88FC25EBA68872599BD37229F11EEC6B30A774F40FE3B3847C9D"
+        },
+        {
+          "path": "tmp/pdfs/gaga_chinese_final/page-03.png",
+          "bytes": 385231,
+          "sha256": "7EA4E98292A53BBB992FCC0AC1AC26006BC3E32FC27E4FBFBE603601F94EAAFD"
+        },
+        {
+          "path": "tmp/pdfs/gaga_chinese_final/page-04.png",
+          "bytes": 410543,
+          "sha256": "F2439CC7685A248BE853565C03707998EF844F80035630A5CABB0F3907DE987D"
+        },
+        {
+          "path": "tmp/pdfs/gaga_chinese_final/page-05.png",
+          "bytes": 441075,
+          "sha256": "E070EA334A2D2361B5BAD81462F9A9F452C1A7FA09B418627B2E70FBE8EF8AD2"
+        },
+        {
+          "path": "tmp/pdfs/gaga_chinese_final/page-06.png",
+          "bytes": 365886,
+          "sha256": "3FA95B21AEDA60F2F4780ABDF3BF3107C8D9EDE6E772AFCDAF1D1CAF2FF9CFD8"
+        },
+        {
+          "path": "tmp/pdfs/gaga_chinese_final/page-07.png",
+          "bytes": 442181,
+          "sha256": "177D8879E7E5350E276EE141D46A379CC03C93C761C7725DC5DF547170E5C61D"
+        },
+        {
+          "path": "tmp/pdfs/gaga_chinese_final/page-08.png",
+          "bytes": 352259,
+          "sha256": "C0AE18735ACB9E048EAC65607EB064431BDA913C2817C8CA42637D2A47257F15"
+        },
+        {
+          "path": "tmp/pdfs/gaga_chinese_final/page-09.png",
+          "bytes": 271828,
+          "sha256": "8E12B250943557A4DFB7CE28BB3F1AE431A0EEA52BDF1D7ACBC8E285E29725D7"
+        },
+        {
+          "path": "tmp/pdfs/gaga_chinese_final/page-10.png",
+          "bytes": 327159,
+          "sha256": "E175DF7B79D5FA3C4C3A924A539F856D0DAC666A4851A656F708D0005681EC9D"
+        },
+        {
+          "path": "tmp/pdfs/gaga_chinese_final/page-11.png",
+          "bytes": 330557,
+          "sha256": "8FCEB375C221369E57DE201F01583DF8AA03F7740AA3EAA69AA60CD62F4E523D"
+        },
+        {
+          "path": "tmp/pdfs/gaga_chinese_final/page-12.png",
+          "bytes": 359605,
+          "sha256": "F52B7E62021C0672318780A9B49BC90CDA1DB8F83C2BE9F878B40EA831FDA253"
+        },
+        {
+          "path": "tmp/pdfs/gaga_chinese_final/page-13.png",
+          "bytes": 387023,
+          "sha256": "233DF313AF35907DD8B57B7A74023EF1869FD22DF90064FC0AD158DF73F1411A"
+        },
+        {
+          "path": "tmp/pdfs/gaga_chinese_final/page-14.png",
+          "bytes": 319606,
+          "sha256": "34952FEDA082195A6960F0D0D93168F88D9E5D6FD5D1E97F7173406FF77089EC"
+        },
+        {
+          "path": "tmp/pdfs/gaga_chinese_final/page-15.png",
+          "bytes": 467541,
+          "sha256": "2EDD82B116F116A891AB149BB649E6C7A8554523D44327597B6620447183BD5E"
+        },
+        {
+          "path": "tmp/pdfs/gaga_chinese_final/page-16.png",
+          "bytes": 368552,
+          "sha256": "959DC54BE72E427DC604F1874606E256531DB5BE08D0888F7424A89971C5EFCE"
+        },
+        {
+          "path": "tmp/pdfs/gaga_chinese_final/page-17.png",
+          "bytes": 330448,
+          "sha256": "5AFDF69ADD16C3ADF6350676570C31734B1CBE7728BC60D3723441C795A6255F"
+        },
+        {
+          "path": "tmp/pdfs/gaga_chinese_final/page-18.png",
+          "bytes": 349826,
+          "sha256": "4DF60FE285E2E3CDD2E25F9C0BEAE2ACAA44534521F400CDC7170B91E11F911C"
+        },
+        {
+          "path": "tmp/pdfs/gaga_chinese_final/page-19.png",
+          "bytes": 35476,
+          "sha256": "FF812BF958180A2D91F681531631985B06A400E345DCA9046B0AA3FDBF2BD32E"
+        }
+      ]
+    }
+  ],
+  "visual_inspection": {
+    "status": "PASS",
+    "inspected_pages": 40,
+    "editions": {
+      "ja": 21,
+      "zh-cn": 19
+    },
+    "criteria": [
+      "no clipping or overlap",
+      "no missing glyphs",
+      "no broken formulas",
+      "localized headings and theorem captions",
+      "complete title, contents, chapter-index, and bibliography pages"
+    ],
+    "identity_note": "All 21 latest Japanese render hashes equal the inspected render set; all 19 latest Simplified-Chinese render pages were inspected after the caption repair."
+  }
+}

@@ -1,0 +1,1777 @@
+% Candidate standalone chapter for GAGA source units gaga:no:1 through
+% gaga:no:4. This is deliberately the reduced 1956 notion. It does not
+% introduce nonreduced complex analytic spaces.
+
+\def\GAGACJKMainFont{SimSun}
+\input{preamble}
+\renewcommand{\contentsname}{目录}
+\renewcommand{\refname}{参考文献}
+\renewcommand{\proofname}{证明}
+
+\let\theorem\relax
+\let\endtheorem\relax
+\let\proposition\relax
+\let\endproposition\relax
+\let\lemma\relax
+\let\endlemma\relax
+\let\definition\relax
+\let\enddefinition\relax
+\let\remark\relax
+\let\endremark\relax
+\theoremstyle{plain}
+\newtheorem{theorem}[subsection]{定理}
+\newtheorem{proposition}[subsection]{命题}
+\newtheorem{lemma}[subsection]{引理}
+\theoremstyle{definition}
+\newtheorem{definition}[subsection]{定义}
+\theoremstyle{remark}
+\newtheorem{remark}[subsection]{注}
+
+% OK, start here.
+%
+\begin{document}
+
+\raggedbottom
+
+\title{复解析空间与 GAGA}
+
+\maketitle
+
+\phantomsection
+\label{section-phantom}
+
+\tableofcontents
+
+\section{导论}
+\label{section-introduction}
+
+\noindent
+本章建立陈述和证明通常称为 GAGA 的比较定理所需的复解析基础。
+开头各节采用 \cite[\S 1，第 1--4 号，第 3--7 页]{GAGA} 中的约化复解析空间概念。
+这里明确记录这一范围，因为包含于函数层中的结构层不可能有幂零元。
+环化空间与凝聚模的抽象语言分别沿用《层》定义
+\ref{sheaves-definition-ringed-space} 与《模》\ref{modules-section-coherent} 节。
+
+\section{复仿射空间的解析子集}
+\label{section-analytic-subsets}
+
+\begin{definition}
+\label{definition-analytic-subset}
+\begin{reference}
+\cite[\S 1，第 1 号，第 3--4 页]{GAGA}
+\end{reference}
+设 $n \geq 0$，并赋予 $\mathbf C^n$ 通常拓扑。子集
+$U \subset \mathbf C^n$ 称为一个{\it Serre 意义下的解析子集}，如果对每个
+$x \in U$，存在 $x$ 的开邻域 $W$ 以及 $W$ 上的全纯函数
+$f_1, \ldots, f_k$，使得
+$$
+U \cap W = \{z \in W \mid f_1(z)=\ldots=f_k(z)=0\}.
+$$
+
+令 $\mathcal C_U$ 为 $U$ 上所有复值函数芽之层，并令
+$\mathcal O_{\mathbf C^n}$ 为 $\mathbf C^n$ 上的全纯函数层。
+$U$ 上的{\it 全纯函数层}定义为像层
+$$
+\mathcal O_U =
+\mathop{\rm Im}\left(
+\mathcal O_{\mathbf C^n}|_U \longrightarrow \mathcal C_U
+\right).
+$$
+因此，若 $x \in U$ 且 $\mathcal I_{U,x}$ 是
+$\mathcal O_{\mathbf C^n,x}$ 中在 $x$ 附近的 $U$ 上消失的函数芽所成之理想，则
+$$
+\mathcal O_{U,x}=
+\mathcal O_{\mathbf C^n,x}/\mathcal I_{U,x}.
+$$
+\end{definition}
+
+\begin{definition}
+\label{definition-holomorphic-map-analytic-subsets}
+\begin{reference}
+\cite[\S 1，第 1 号，第 3--4 页]{GAGA}
+\end{reference}
+设 $U \subset \mathbf C^r$ 与 $V \subset \mathbf C^s$ 为解析子集。
+映射 $\varphi:U\to V$ 称为{\it 全纯的}，如果它连续，并且对每个
+$x\in U$，与 $\varphi$ 复合把 $\mathcal O_{V,\varphi(x)}$ 中的每个芽
+送到 $\mathcal O_{U,x}$ 中的芽。等价地，$\varphi$ 的 $s$ 个坐标函数
+在 $U$ 上局部地都是 $\mathcal O_U$ 的截面。
+
+双射全纯映射若其逆映射也全纯，则称为{\it 解析同构}。
+\end{definition}
+
+\begin{lemma}
+\label{lemma-analytic-subset-basic-properties}
+设 $U \subset \mathbf C^n$ 与 $U' \subset \mathbf C^{n'}$ 是定义
+\ref{definition-analytic-subset} 意义下的解析子集。
+\begin{enumerate}
+\item 子集 $U$ 局部闭且局部紧。
+\item 茎 $\mathcal O_{U,x}$ 是约化的局部 $\mathbf C$-代数，其剩余同态为在 $x$ 处取值。
+\item 子集 $U\times U'$ 在 $\mathbf C^{n+n'}$ 中解析，其拓扑为积拓扑，
+其结构层由积解析坐标图得到。
+\item 全纯映射的积仍为全纯映射。
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+在 $x\in U$ 附近缩小之后，$U$ 是有限个连续函数的公共零点集，
+因而在 $\mathbf C^n$ 的一个开子集中闭。这证明了 (1)。定义
+\ref{definition-analytic-subset} 中显示的商嵌入 $\mathcal C_{U,x}$，
+而一个函数芽可逆当且仅当它在 $x$ 处的值非零。这证明了 (2)。
+
+在 $(x,x')$ 附近，把 $U$ 与 $U'$ 的局部定义方程合并起来，便得到积的解析性。
+(3) 与 (4) 中其余断言直接由诱导拓扑、定义
+\ref{definition-holomorphic-map-analytic-subsets} 中的坐标判据以及全纯函数的复合得到。
+\end{proof}
+
+
+\section{Serre 复解析空间}
+\label{section-serre-analytic-spaces}
+
+\begin{definition}
+\label{definition-serre-analytic-space}
+\begin{reference}
+\cite[\S 1，第 2 号，第 4--5 页]{GAGA}
+\end{reference}
+一个{\it Serre 意义下的复解析空间}是一个 Hausdorff 拓扑空间 $X$，
+连同一个 $\mathbf C$-代数子层
+$$
+\mathcal O_X \subset \mathcal C_X
+$$
+使得 $X$ 有开覆盖 $X=\bigcup V_i$，其中每个环化空间
+$(V_i,\mathcal O_X|_{V_i})$ 都解析同构于某个 $\mathbf C^{n_i}$ 的解析子集，
+该子集赋有定义 \ref{definition-analytic-subset} 中的层。
+
+此类空间之间的映射称为{\it 全纯的}，如果它连续，并且由复合给出的拉回
+把全纯函数芽送到全纯函数芽。同构是具有全纯逆映射的全纯映射。
+\end{definition}
+
+\begin{remark}[约化范围]
+\label{remark-serre-analytic-spaces-reduced}
+因为 $\mathcal O_X$ 是函数层的子层，所以每个 $\mathcal O_{X,x}$ 都是约化的。
+因此，定义 \ref{definition-serre-analytic-space} 是 Serre 所使用的 1956 年约化概念，
+并不包含带幂零元的解析增厚。以后若扩展到非约化复解析空间，必须另行引入，
+且不得归因于 GAGA 的定义 1。
+\end{remark}
+
+\begin{definition}
+\label{definition-analytic-subspace}
+设 $X$ 为 Serre 复解析空间。子集 $Y\subset X$ 称为一个{\it 解析子空间}，
+如果在每个解析坐标图 $V\to U$ 中，$Y\cap V$ 的像都是 $U$ 的解析子集。
+它带有诱导的解析空间结构。当 $Y$ 在 $X$ 中闭时，称之为{\it 闭解析子空间}。
+\end{definition}
+
+\begin{lemma}
+\label{lemma-serre-analytic-subspaces-products}
+\begin{reference}
+\cite[\S 1，第 2 号，第 5 页]{GAGA}
+\end{reference}
+设 $X$ 与 $X'$ 为 Serre 复解析空间。
+\begin{enumerate}
+\item $X$ 的每个解析子空间均局部闭，并且诱导结构与坐标图的选择无关。
+\item $X\times X'$ 上存在唯一的 Serre 复解析空间结构，使坐标图的积仍是坐标图；
+其拓扑为积拓扑。
+\item Serre 复解析空间与全纯映射构成一个范畴。
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+三个断言关于源空间都是局部的，因而由引理
+\ref{lemma-analytic-subset-basic-properties}、定义结构层的限制映射之相容性，
+以及全纯映射的坐标判据推出。
+\end{proof}
+
+
+\section{解析模与 Oka--Cartan 凝聚性}
+\label{section-analytic-modules}
+
+\begin{definition}
+\label{definition-analytic-module}
+\begin{reference}
+\cite[\S 1，第 3 号，第 5 页]{GAGA}
+\end{reference}
+设 $X$ 为 Serre 复解析空间。$X$ 上的{\it 解析模}是一个
+$\mathcal O_X$-模。如果它在《模》定义 \ref{modules-definition-coherent}
+的意义下凝聚，则称其{\it 凝聚}。
+\end{definition}
+
+\begin{definition}
+\label{definition-vanishing-ideal-analytic-subspace}
+设 $i:Y\to X$ 为闭解析子空间。其{\it 消失理想}
+$\mathcal J_Y\subset\mathcal O_X$ 的茎为
+$$
+(\mathcal J_Y)_x=
+\{f\in\mathcal O_{X,x}\mid f|_Y=0\text{ 邻近 }x\}.
+$$
+存在典范同构
+$$
+\mathcal O_X/\mathcal J_Y \longrightarrow i_*\mathcal O_Y.
+$$
+\end{definition}
+
+\begin{theorem}[Oka--Cartan 凝聚性]
+\label{theorem-oka-cartan-coherence}
+\begin{reference}
+\cite[\S 1，命题 1，第 5--6 页]{GAGA}
+\end{reference}
+设 $X$ 为 Serre 复解析空间。
+\begin{enumerate}
+\item $\mathcal O_X$-模 $\mathcal O_X$ 是凝聚的。
+\item 若 $Y\subset X$ 为闭解析子空间，则其消失理想 $\mathcal J_Y$
+是凝聚 $\mathcal O_X$-模。
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+这里的解析输入是 Oka--Cartan 定理：对开集
+$\Omega\subset\mathbf C^n$，层 $\mathcal O_\Omega$ 以及
+$\Omega$ 中每个闭解析子集的消失理想都是凝聚的。
+
+这些断言关于 $X$ 是局部的。选取一个坐标图并将其缩小，使得
+$X=Z(\mathcal I_X)$ 是开集 $\Omega\subset\mathbf C^n$ 的闭解析子集。
+若 $Y\subset X$ 闭且解析，再次缩小并写成 $Y=Z(\mathcal I_Y)$，其中
+$\mathcal I_X\subset\mathcal I_Y\subset\mathcal O_\Omega$。于是
+$$
+\mathcal O_X=\mathcal O_\Omega/\mathcal I_X,
+\qquad
+\mathcal J_Y=\mathcal I_Y/\mathcal I_X.
+$$
+Oka--Cartan 输入保证 $\mathcal O_\Omega$、$\mathcal I_X$ 与
+$\mathcal I_Y$ 凝聚。《模》引理 \ref{modules-lemma-coherent-abelian}
+与 \ref{modules-lemma-coherent-change-rings} 遂给出 (1) 和 (2)。
+\end{proof}
+
+\begin{remark}[例子]
+\label{remark-examples-coherent-analytic-modules}
+全纯向量丛的全纯截面层是有限局部自由的，因而由定理
+\ref{theorem-oka-cartan-coherence} 凝聚；比较《上同调》引理
+\ref{cohomology-lemma-holomorphic-vector-bundles-locally-free-analytic-modules}。
+Serre 还把 Cartan 研讨班中的自守函数芽层列为凝聚的例子；
+上述基础陈述并不需要这一被引用的解析构造。
+\end{remark}
+
+
+\section{局部解析代数}
+\label{section-local-analytic-algebras}
+
+\begin{lemma}
+\label{lemma-local-analytic-algebra}
+\begin{reference}
+\cite[\S 1，第 4 号，第 6 页]{GAGA}
+\end{reference}
+设 $X$ 为 Serre 复解析空间且 $x\in X$。存在整数 $n\geq 0$ 与根理想
+$\mathfrak a\subset\mathbf C\{z_1,\ldots,z_n\}$，使得
+$$
+\mathcal O_{X,x}\cong
+\mathbf C\{z_1,\ldots,z_n\}/\mathfrak a
+$$
+作为局部 $\mathbf C$-代数同构。其极大理想由在 $x$ 处消失的函数芽组成，
+其剩余域为 $\mathbf C$，并且它是约化且 Noetherian 的。
+\end{lemma}
+
+\begin{proof}
+在 $x$ 处选取解析坐标图，并把其像点平移到原点。定义
+\ref{definition-analytic-subset} 给出所示商。该理想是根理想，
+因为它是在一个集合上消失的函数芽之理想。关于剩余域与约化性的断言也由引理
+\ref{lemma-analytic-subset-basic-properties} 得到。其余解析输入是 Weierstrass 定理：
+$\mathbf C\{z_1,\ldots,z_n\}$ 是 Noetherian 环；于是由《代数》引理
+\ref{algebra-lemma-Noetherian-permanence}，其商也是 Noetherian 的。
+\end{proof}
+
+\begin{lemma}
+\label{lemma-analytic-germ-local-algebra}
+\begin{reference}
+\cite[\S 1，第 4 号，第 6 页]{GAGA}
+\end{reference}
+局部解析 $\mathbf C$-代数 $\mathcal O_{X,x}$ 决定 Serre 复解析空间 $X$
+在 $x$ 处的芽。更精确地，局部解析 $\mathbf C$-代数的同构
+$\mathcal O_{X,x}\cong\mathcal O_{Y,y}$ 反变地由解析芽的同构
+$(X,x)\cong(Y,y)$ 诱导。
+\end{lemma}
+
+\begin{proof}
+把两个局部代数都表示为收敛幂级数环的商。局部同态下坐标芽的像是收敛芽，
+因而定义一个全纯映射芽。关系式迫使其像落在所需的解析芽中。
+对逆代数同态施行同一构造，得到互逆的全纯芽。
+\end{proof}
+
+\begin{lemma}
+\label{lemma-simple-point-regular-local}
+\begin{reference}
+\cite[\S 1，第 4 号，第 6 页]{GAGA}
+\end{reference}
+设 $X$ 为 Serre 复解析空间且 $x\in X$。对 $n\geq 0$，下列条件等价：
+\begin{enumerate}
+\item 芽 $(X,x)$ 同构于 $(\mathbf C^n,0)$；
+\item $\mathcal O_{X,x}\cong\mathbf C\{z_1,\ldots,z_n\}$；
+\item $\mathcal O_{X,x}$ 是维数为 $n$ 的正则局部环，其含义见《代数》定义
+\ref{algebra-definition-regular-local}。
+\end{enumerate}
+这样的 $x$ 称为一个{\it 维数为 $n$ 的单纯点}。若 $X$ 的每一点都是单纯点，
+则称 $X$ 为一个{\it 解析簇}。
+\end{lemma}
+
+\begin{proof}
+(1) 与 (2) 的等价性由引理 \ref{lemma-analytic-germ-local-algebra} 得出。
+(2) $\Rightarrow$ (3) 是收敛幂级数环的标准维数计算。逆命题是正则解析局部代数定理，
+它可由解析逆函数定理证明（等价地，选取
+$\mathfrak m_x/\mathfrak m_x^2$ 的一组基并应用解析隐函数定理）。
+该解析定理是当前基础部分的一项明确外部依赖。
+\end{proof}
+
+\begin{lemma}
+\label{lemma-components-dimension-analytic-space}
+\begin{reference}
+\cite[\S 1，第 4 号，第 6--7 页]{GAGA}
+\end{reference}
+设 $X$ 为 Serre 复解析空间且 $x\in X$。
+\begin{enumerate}
+\item 芽 $(X,x)$ 的不可约分支 $X_i$ 对应于 $\mathcal O_{X,x}$ 的有限多个极小素理想
+$\mathfrak p_i$，并且
+$$
+0=\bigcap_i\mathfrak p_i,
+\qquad
+\mathcal O_{X_i,x}=\mathcal O_{X,x}/\mathfrak p_i.
+$$
+\item $X$ 在 $x$ 处的解析维数（局部拓扑维数的一半）是各 $X_i$ 维数的上确界，
+并等于 $\mathcal O_{X,x}$ 的 Krull 维数。
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+约化性与 Noetherian 性由引理 \ref{lemma-local-analytic-algebra} 给出。
+关于极小素理想有限且交为零的代数断言由《代数》引理
+\ref{algebra-lemma-Noetherian-irreducible-components} 与
+\ref{algebra-lemma-Zariski-topology} 得出。它们与解析分支的对应使用局部解析 Nullstellensatz。
+对 (2)，解析正规化/参数定理断言：解析维数为 $r$ 的不可约解析局部代数
+在 $\mathbf C\{z_1,\ldots,z_r\}$ 上有限。有限整扩张下维数不变，
+遂得其 Krull 维数为 $r$。解析 Nullstellensatz 与局部参数定理是明确的外部依赖；
+仅凭 Stacks 中的代数结果无法提供它们。
+\end{proof}
+
+
+
+
+% Candidate continuation fragment for gaga.tex covering GAGA source units
+% gaga:no:5 through gaga:lemma:3. Insert this fragment immediately before
+% the unique terminal \input{chapters} in the foundation candidate.
+%
+% Convention: throughout this fragment an algebraic variety over C means a
+% reduced separated scheme of finite type over C, not necessarily irreducible.
+
+\section{代数簇的解析化}
+\label{section-analytification}
+
+\noindent
+在本节中，{\it $\mathbf C$ 上的代数簇}指 $\mathbf C$ 上有限型的约化分离概形，
+不要求不可约。它的经典点就是闭点，等价地即其 $\mathbf C$-点。
+这一约定是 \cite[\S 2，第 5 号]{GAGA} 中约定的概形论表述，
+并与第 \ref{section-serre-analytic-spaces} 节的约化解析空间相容。
+
+\begin{lemma}
+\label{lemma-algebraic-charts-analytic}
+设 $U \subset \mathbf C^n$ 与 $U' \subset \mathbf C^{n'}$ 为 Zariski 局部闭约化子集。
+\begin{enumerate}
+\item $\mathbf C^n$ 上的 Zariski 拓扑比通常拓扑粗。
+\item 集合 $U$ 连同其约化诱导结构是 Serre 复解析空间。
+\item 正则映射 $f : U \to U'$ 是全纯的。
+\item 双正则同构 $U \to U'$ 是解析同构。
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Zariski 闭子集是多项式的公共零点集，而多项式连续且全纯。这证明 (1)，
+并在闭子集情形证明 (2)；局部闭子集在其闭包中开，作限制即得一般情形。
+Zariski 开子集上的正则函数局部地是多项式之商 $g/h$，其中 $h$ 不消失，
+故它全纯。逐坐标应用此论证证明 (3)。再将 (3) 应用于 $f$ 与 $f^{-1}$，即得 (4)。
+\end{proof}
+
+\begin{proposition}
+\label{proposition-analytification}
+设 $X$ 为 $\mathbf C$ 上的代数簇。存在唯一的 Serre 复解析空间 $X^{an}$，
+具有如下性质：对每个代数坐标图
+$$
+\varphi : V \longrightarrow U \subset \mathbf C^n
+$$
+（它把 Zariski 开集 $V \subset X$ 映到一个 Zariski 局部闭约化子集上），
+$V$ 在 $X^{an}$ 中开，且 $\varphi$ 是解析同构。
+
+此构造具有函子性。每个态射 $f : X \to Y$ 诱导全纯映射
+$f^{an} : X^{an} \to Y^{an}$，并存在典范的局部环化空间态射
+$$
+a_X : (X^{an}, \mathcal O_{X^{an}}) \longrightarrow
+(X, \mathcal O_X)
+$$
+其点映射把经典点送到相应的闭概形点，而其结构层映射把正则函数送到视作全纯函数的同一函数。
+\end{proposition}
+
+\begin{proof}
+用有限多个代数坐标图 $V_i \to U_i$ 覆盖 $X$，并把 $U_i$ 的解析结构搬到 $V_i$ 上。
+在 $V_i \cap V_j$ 上，过渡映射及其逆映射由引理
+\ref{lemma-algebraic-charts-analytic} 均为全纯；由同一引理，交集在通常拓扑下开。
+余循环条件从代数坐标图继承。因此，由《层》引理
+\ref{sheaves-lemma-glue-sheaves-structures}，这些层与局部环化空间可以粘合。
+
+还需验证 Hausdorff 公理，而不能把它隐藏在“粘合”一词中。
+粘合点集的对角线在每个 $V_i \times V_j$ 中的逆像，
+是交集上代数识别映射的图。因 $X$ 分离，该图 Zariski 闭；
+由引理 \ref{lemma-algebraic-charts-analytic}，它在通常拓扑中也闭。
+这些乘积构成开覆盖，故对角线闭，粘合空间为 Hausdorff。
+唯一性来自这些坐标图覆盖 $X$，并同时决定其拓扑与结构层。
+
+对态射 $f : X \to Y$，其在代数坐标图中的限制由引理
+\ref{lemma-algebraic-charts-analytic} 全纯；它们粘合成 $f^{an}$，并与恒等和复合相容。
+通常拓扑比 Zariski 拓扑细，故 $a_X$ 的底层点映射连续。
+正则函数在坐标图中全纯，并且诱导的茎映射是局部同态。
+这便构造了所断言的局部环化空间态射。
+\end{proof}
+
+\begin{lemma}
+\label{lemma-analytification-properties}
+设 $X$ 与 $Y$ 为 $\mathbf C$ 上的代数簇。
+\begin{enumerate}
+\item 空间 $X^{an}$ 局部紧、第二可数，并且在无穷远处可数。
+\item 存在典范解析同构
+$(X \times_{\mathbf C} Y)^{an} \cong X^{an} \times Y^{an}$。
+\item 若 $Z \subset X$ 是 Zariski 局部闭约化子簇，则 $Z^{an}$ 是
+$X^{an}$ 在 $Z(\mathbf C)$ 上诱导的约化解析子空间。
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+$\mathbf C^n$ 的 Zariski 局部闭子集局部紧、第二可数，并且是可数多个紧子集之并。
+这些性质传递到有限多个开坐标图域之并，从而证明 (1)。代数坐标图之积仍是代数坐标图，
+而复仿射空间子集之积上的通常拓扑就是积拓扑；命题
+\ref{proposition-analytification} 中的唯一性证明 (2)。
+将 $X$ 的坐标图限制到 $Z$ 并应用引理 \ref{lemma-algebraic-charts-analytic}，证明 (3)。
+\end{proof}
+
+\section{解析化的局部代数}
+\label{section-local-comparison}
+
+\noindent
+设 $x \in X(\mathbf C)$。记
+$$
+\theta_x : \mathcal O_{X,x} \longrightarrow \mathcal O_{X^{an},x}
+$$
+为 $a_X$ 诱导的局部同态。两个环都是剩余域为 $\mathbf C$ 的 Noetherian 局部环：
+代数环的情形是标准结论，解析环的情形由引理 \ref{lemma-local-analytic-algebra} 给出。
+
+\begin{proposition}
+\label{proposition-analytification-closed-ideal}
+设 $Z \subset X$ 为 Zariski 局部闭约化子簇，且 $x \in Z(\mathbf C)$。
+用 $x$ 的一个 Zariski 邻域替换 $X$ 后，可将 $Z$ 视为闭子簇。
+若 $\mathcal J_{Z,x} \subset \mathcal O_{X,x}$ 是其代数理想，而
+$\mathcal I_{Z^{an},x} \subset \mathcal O_{X^{an},x}$ 是在 $Z^{an}$ 上消失的全纯函数芽之理想，则
+$$
+\mathcal I_{Z^{an},x} =
+\mathcal J_{Z,x}\mathcal O_{X^{an},x}.
+$$
+从而
+$$
+\mathcal O_{Z^{an},x} \cong
+\mathcal O_{X^{an},x}/
+\mathcal J_{Z,x}\mathcal O_{X^{an},x}.
+$$
+\end{proposition}
+
+\begin{proof}
+先取 $X=\mathbf A^n_{\mathbf C}$，并把 $x$ 平移到原点。令
+$$
+R=\mathbf C[z_1,\ldots,z_n]_{(z_1,\ldots,z_n)},
+\qquad
+H=\mathbf C\{z_1,\ldots,z_n\}.
+$$
+设 $J \subset R$ 为 $Z$ 的根理想。局部解析 Nullstellensatz 断言，
+在 $Z$ 上消失的全纯函数芽之理想为 $\sqrt{JH}$。我们证明 $JH$ 已经是根理想。
+
+Taylor 同态把 $R$ 与 $H$ 的极大理想进完备化都等同于
+$\mathbf C[[z_1,\ldots,z_n]]$。由《代数》引理
+\ref{algebra-lemma-completion-tensor}，完备化在有限模上正合；因此 $H/JH$ 的完备化为
+$$
+\mathbf C[[z_1,\ldots,z_n]]/
+J\mathbf C[[z_1,\ldots,z_n]],
+$$
+这也是 $R/J$ 的完备化。由《代数进阶》命题
+\ref{more-algebra-proposition-ubiquity-excellent}，域 $\mathbf C$ 是优秀的；
+而 $R/J$ 是有限型 $\mathbf C$-代数的局部化，故由《代数进阶》引理
+\ref{more-algebra-lemma-finite-type-over-excellent} 也是优秀的。
+于是由《代数进阶》引理 \ref{more-algebra-lemma-quasi-excellent-nagata}，它是 Nagata 环；
+其完备化由《代数进阶》引理 \ref{more-algebra-lemma-completion-reduced} 约化。
+故 $H/JH$ 的完备化约化。由 Krull 交定理，即《代数》引理
+\ref{algebra-lemma-intersect-powers-ideal-module-zero}，环 $H/JH$ 嵌入其完备化，
+所以 $H/JH$ 约化且 $JH=\sqrt{JH}$。解析 Nullstellensatz 于是给出仿射空间中的所需等式。
+
+对一般的 $X$，在一个代数坐标图中工作，把 $X$ 与 $Z$ 实现为同一仿射空间中的约化局部闭子集。
+对它们的环境理想应用仿射情形并取商，即得两个显示公式。
+\end{proof}
+
+\begin{theorem}
+\label{theorem-analytification-completed-local-rings}
+对 $\mathbf C$ 上每个代数簇 $X$ 及每个 $x \in X(\mathbf C)$，
+局部同态 $\theta_x$ 诱导完备局部环的同构
+$$
+\widehat{\theta}_x :
+\widehat{\mathcal O}_{X,x} \xrightarrow{\ \sim\ }
+\widehat{\mathcal O}_{X^{an},x}.
+$$
+特别地，$\theta_x$ 是单射。
+\end{theorem}
+
+\begin{proof}
+对原点处的仿射空间，该映射为
+$$
+\mathbf C[z_1,\ldots,z_n]_{(z_1,\ldots,z_n)}
+\longrightarrow \mathbf C\{z_1,\ldots,z_n\},
+$$
+两边的极大理想进完备化通过 Taylor 展开与截断都典范地等于
+$\mathbf C[[z_1,\ldots,z_n]]$。若 $X$ 是仿射空间中的局部闭约化子集，命题
+\ref{proposition-analytification-closed-ideal} 把其解析局部环识别为关于扩张代数理想的商。
+《代数》引理 \ref{algebra-lemma-completion-tensor} 所给的有限模上完备化正合性，
+把两个完备化都识别为同一个形式幂级数环之商。该断言是局部的，故坐标图证明一般情形。
+最后，由《代数》引理 \ref{algebra-lemma-intersect-powers-ideal-module-zero}，
+$\mathcal O_{X,x}$ 嵌入其完备化，这证明最后一句。
+\end{proof}
+
+\begin{theorem}
+\label{theorem-analytification-local-faithfully-flat}
+局部同态
+$$
+\theta_x : \mathcal O_{X,x} \longrightarrow \mathcal O_{X^{an},x}
+$$
+忠实平坦。用 Serre 的术语，
+$(\mathcal O_{X,x},\mathcal O_{X^{an},x})$ 是一个平坦对：商
+$\mathcal O_{X^{an},x}/\mathcal O_{X,x}$ 在 $\mathcal O_{X,x}$ 上平坦，
+并且对每个理想 $I \subset \mathcal O_{X,x}$，都有
+$$
+I\mathcal O_{X^{an},x}\cap\mathcal O_{X,x}=I.
+$$
+\end{theorem}
+
+\begin{proof}
+由定理 \ref{theorem-analytification-completed-local-rings}，完备化上的映射是同构，故平坦。
+《代数进阶》引理 \ref{more-algebra-lemma-flat-completion} 蕴含 $\theta_x$ 平坦，
+而《代数》引理 \ref{algebra-lemma-local-flat-ff} 使这个局部平坦映射忠实平坦。
+收缩公式是《代数》引理 \ref{algebra-lemma-faithfully-flat-universally-injective}。
+对正合列 $0\to\mathcal O_{X,x}\to\mathcal O_{X^{an},x}$ 张量之后的普遍单射性表明
+所示商平坦，这恰是平坦对断言。
+\end{proof}
+
+\begin{lemma}
+\label{lemma-analytification-local-dimension}
+对每个 $x \in X(\mathbf C)$，
+$$
+\dim(\mathcal O_{X,x})=\dim(\mathcal O_{X^{an},x}).
+$$
+\end{lemma}
+
+\begin{proof}
+由《代数进阶》引理 \ref{more-algebra-lemma-completion-dimension}，每个环与其完备化维数相同；
+而由定理 \ref{theorem-analytification-completed-local-rings}，两个完备化同构。
+\end{proof}
+
+\begin{lemma}
+\label{lemma-analytification-dimension}
+若 $X$ 不可约且维数为 $r$，则 $X^{an}$ 在每一点的解析维数均为 $r$。
+\end{lemma}
+
+\begin{proof}
+对闭点 $x$，《簇》引理 \ref{varieties-lemma-dimension-locally-algebraic} 的
+\ref{varieties-item-dimension-at-closed-point} 与
+\ref{varieties-item-dimension-irreducible} 两部分给出
+$$
+\dim(\mathcal O_{X,x})=r.
+$$
+依次应用引理 \ref{lemma-analytification-local-dimension} 与
+\ref{lemma-components-dimension-analytic-space}；后者把解析维数识别为解析局部环的 Krull 维数。
+\end{proof}
+
+\section{经典拓扑与 Zariski 拓扑}
+\label{section-classical-zariski-topologies}
+
+\begin{lemma}
+\label{lemma-zariski-dense-open-analytically-dense}
+设 $U \subset X$ 为 Zariski 开且 Zariski 稠密，则 $U^{an}$ 在 $X^{an}$ 中稠密。
+\end{lemma}
+
+\begin{proof}
+赋予 $Z=X\setminus U$ 约化诱导结构。若某点 $x \in X^{an}$ 不在 $U^{an}$ 的闭包中，
+则 $Z^{an}$ 包含 $x$ 的一个解析邻域，因而其在 $x$ 处的局部消失理想为零。
+命题 \ref{proposition-analytification-closed-ideal} 与定理
+\ref{theorem-analytification-completed-local-rings} 中的单射性将给出
+$\mathcal J_{Z,x}=0$。于是 $Z$ 会在 $x$ 的某个非空 Zariski 邻域中与 $X$ 相同，
+这与 $U$ 的 Zariski 稠密性矛盾。
+\end{proof}
+
+\begin{proposition}
+\label{proposition-proper-if-and-only-if-compact-analytification}
+$\mathbf C$ 上的代数簇 $X$ 在 $\mathbf C$ 上真，当且仅当拓扑空间 $X^{an}$ 紧。
+\end{proposition}
+
+\begin{proof}
+应用《极限》引理 \ref{limits-lemma-chow-finite-type} 所给精确形式的 Chow 引理。
+按其后注释所允许的那样把源替换为其约化后，得到真满射 $\pi : U \to X$
+以及浸入 $U \to \mathbf P^n_{\mathbf C}$。令 $Y$ 为 $U$ 在
+$\mathbf P^n_{\mathbf C}$ 中的约化闭包。则 $Y$ 射影，且 $U$ 在 $Y$ 中 Zariski 开且稠密。
+此外，$\pi$ 的图在 $X\times Y$ 中闭：在 $X$ 上，它是真 $X$-概形 $U$
+到分离 $X$-概形 $X\times Y$ 的态射之图。
+
+若 $X$ 真，则 $U$ 在 $\mathbf C$ 上真。它到射影空间的浸入是真态射，故为闭浸入，
+于是 $U=Y$。空间 $Y^{an}$ 是紧 Hausdorff 空间 $\mathbf P^n(\mathbf C)$ 的闭子集，故紧。
+连续满射 $\pi^{an}:Y^{an}\to X^{an}$ 表明 $X^{an}$ 紧。
+
+反之，设 $X^{an}$ 紧。则 $X^{an}\times Y^{an}$ 紧，
+且闭图的解析化由引理 \ref{lemma-analytification-properties} 在此积中闭。
+它到 $Y^{an}$ 的投影为 $U^{an}$，故 $U^{an}$ 紧，从而在 Hausdorff 空间 $Y^{an}$ 中闭。
+由引理 \ref{lemma-zariski-dense-open-analytically-dense}，它又稠密，故 $U^{an}=Y^{an}$。
+于是 $U=Y$，因为有限型 $\mathbf C$-概形的任一非空闭子集都含闭 $\mathbf C$-点。
+现有真射影簇 $Y$ 满射到 $X$；《态射》引理
+\ref{morphisms-lemma-image-proper-is-proper} 蕴含 $X$ 真。
+\end{proof}
+
+\begin{lemma}
+\label{lemma-dense-image-contains-open}
+设 $f : X \to Y$ 为 $\mathbf C$ 上代数簇的态射。若 $f(X)$ 在 $Y$ 中 Zariski 稠密，
+则 $f(X)$ 包含 $Y$ 的一个 Zariski 开稠密子集。
+\end{lemma}
+
+\begin{proof}
+由《态射》引理 \ref{morphisms-lemma-chevalley}，其像可构造。
+由《拓扑》引理 \ref{topology-lemma-dense-in-constructible}，
+稠密可构造子集包含稠密开子集。
+\end{proof}
+
+\begin{proposition}
+\label{proposition-image-closure}
+设 $f : X \to Y$ 为代数簇的态射。$f(X(\mathbf C))$ 在 $Y^{an}$ 中的闭包，
+等于 $f(X)$ 在 $Y$ 中之 Zariski 闭包的经典点集。
+\end{proposition}
+
+\begin{proof}
+令 $T$ 为 $f(X)$ 的约化 Zariski 闭包。对 $X\to T$ 应用引理
+\ref{lemma-dense-image-contains-open}，得到包含于 $f(X)$ 的 Zariski 开稠密子集 $V\subset T$。
+由引理 \ref{lemma-zariski-dense-open-analytically-dense}，$V^{an}$ 在 $T^{an}$ 中稠密，
+故 $T^{an}$ 包含于 $f(X)$ 的解析闭包中。反向包含成立，因为由引理
+\ref{lemma-analytification-properties}，$T^{an}$ 在 $Y^{an}$ 中闭。
+\end{proof}
+
+\section{正则性的一个解析判据}
+\label{section-analytic-regularity}
+
+\begin{proposition}
+\label{proposition-algebraic-graph-holomorphic-regular}
+设 $X$ 与 $Y$ 为代数簇，且 $f : X^{an}\to Y^{an}$ 全纯。
+若其图是某个 Zariski 局部闭约化子簇
+$T\subset X\times_{\mathbf C}Y$ 的经典点集，则 $f$ 由一个态射 $X\to Y$ 诱导。
+\end{proposition}
+
+\begin{proof}
+第一投影 $p:T\to X$ 是态射并在经典点上双射。其逆 $x\mapsto(x,f(x))$ 全纯。
+由引理 \ref{lemma-analytification-properties}，$p^{an}$ 因而是解析同构。
+下方命题 \ref{proposition-analytic-isomorphism-algebraic} 表明 $p$ 是同构。
+所以 $f=\operatorname{pr}_Y\circ p^{-1}$ 正则。
+\end{proof}
+
+\begin{proposition}
+\label{proposition-analytic-isomorphism-algebraic}
+设 $p:T\to X$ 为在经典点上双射的代数簇态射。
+若 $p^{an}:T^{an}\to X^{an}$ 是解析同构，则 $p$ 是同构。
+\end{proposition}
+
+\begin{proof}
+首先，$p$ 在经典点的 Zariski 拓扑上是同胚。事实上，若 $F\subset T$ Zariski 闭，
+则 $F^{an}$ 在 $T^{an}$ 中闭。它在解析同胚下的像在 $X^{an}$ 中闭。
+对 $F\to X$ 应用命题 \ref{proposition-image-closure}，可知此像 Zariski 闭。
+
+由《簇》引理 \ref{varieties-lemma-locally-finite-type-Jacobson}，两个概形均为 Jacobson 概形，
+故其闭子集由闭点决定。从不可约闭子集过渡到其唯一泛点（《概形》引理
+\ref{schemes-lemma-scheme-sober}），把上述同胚唯一地扩张为完整底层概形空间的同胚。
+
+固定 $t\in T(\mathbf C)$ 并令 $x=p(t)$。Zariski 同胚使
+$$
+A=\mathcal O_{X,x}\longrightarrow A'=\mathcal O_{T,t}
+$$
+为单射。解析同构把 $B=\mathcal O_{X^{an},x}$ 与
+$\mathcal O_{T^{an},t}$ 识别。由定理
+\ref{theorem-analytification-local-faithfully-flat}，$A$ 与 $A'$ 都嵌入这个公共环 $B$。
+
+经过 $x$ 的不可约分支对应于经过 $t$ 的分支。把它们的极小素理想分别记为
+$\mathfrak p_i\subset A$ 与 $\mathfrak p'_i\subset A'$，其中
+$\mathfrak p'_i\cap A=\mathfrak p_i$。令
+$$
+K_i=\operatorname{Frac}(A/\mathfrak p_i),
+\qquad
+K'_i=\operatorname{Frac}(A'/\mathfrak p'_i).
+$$
+相应的不可约簇同胚且同维，故 $K'_i/K_i$ 是有限扩张。为证明其次数为一，
+使用《态射》引理 \ref{morphisms-lemma-finite-degree} 与一般平坦性，即《态射》命题
+\ref{morphisms-proposition-generic-flatness}，将目标缩小到一个非空开集，使分支映射有限局部自由。
+因基域特征为零，$K'_i/K_i$ 可分；再次缩小后，映射成为次数
+$[K'_i:K_i]$ 的有限平展映射。每个闭纤维于是由这么多个约化 $\mathbf C$-点组成。
+$p$ 的双射性迫使 $[K'_i:K_i]=1$。
+
+令 $S$ 为 $A$ 中不属于任何极小素理想的元素集，并对 $A'$ 类似地定义 $S'$。
+下方引理 \ref{lemma-total-fractions-reduced} 给出
+$$
+A_S=\prod_iK_i=\prod_iK'_i=A'_{S'}.
+$$
+若 $h\in A'$，在这个公共总分式环中写成 $h=g/s$，其中 $g\in A$ 且 $s\in S$。
+于是 $g=sh\in sB$。忠实平坦性与《代数》引理
+\ref{algebra-lemma-faithfully-flat-universally-injective} 给出
+$sB\cap A=sA$，故对某个 $a\in A$ 有 $g=sa$。于是 $s(h-a)=0$。
+元素 $s$ 不属于约化环 $A'$ 的任何极小素理想，因而由《代数》引理
+\ref{algebra-lemma-reduced-ring-sub-product-fields} 是非零因子。所以 $h=a$，即 $A'=A$。
+
+我们已证明每个闭点处的局部映射都是同构。因此由《平展》引理
+\ref{etale-lemma-characterize-etale-Noetherian}，$p$ 在每个闭点处平展。
+平展轨迹为开集；若其闭补非空，因为 $T$ 是 Jacobson 概形，它会含有闭点。
+所以 $p$ 处处平展。
+
+最后，对 $p$ 在 $T$ 任意一点之约化闭包上的限制重复上述有限次数论证。
+Zariski 同胚把此闭包与其像之闭包识别，而同样的论证表明它们的函数域扩张，
+即两个泛点处的剩余域扩张，次数为一。因此 $p$ 在点上单射且剩余域扩张平凡，
+从而由《态射》引理 \ref{morphisms-lemma-universally-injective} 为根态射。
+由《平展》定理 \ref{etale-theorem-etale-radicial-open}，平展根态射是开浸入。
+因 $p$ 还满射，故它是同构。
+\end{proof}
+
+\begin{lemma}
+\label{lemma-total-fractions-reduced}
+设 $A$ 为具有有限多个极小素理想
+$\mathfrak p_1,\ldots,\mathfrak p_r$ 的约化环。令 $S$ 为不属于任何
+$\mathfrak p_i$ 的元素集，并令 $K_i=\operatorname{Frac}(A/\mathfrak p_i)$。则
+$$
+A_S=\prod_{i=1}^rK_i.
+$$
+\end{lemma}
+
+\begin{proof}
+《代数》引理 \ref{algebra-lemma-reduced-ring-sub-product-fields} 断言，
+$S$ 恰为非零因子集，并且 $A_{\mathfrak p_i}=K_i$。
+于是《代数》引理 \ref{algebra-lemma-total-ring-fractions-no-embedded-points}
+把总分式环 $A_S$ 识别为所示乘积。
+\end{proof}
+
+% External analytic input ledger for this continuation:
+% (1) the local analytic Nullstellensatz, used exactly once in the proof of
+%     Proposition \ref{proposition-analytification-closed-ideal};
+% (2) Taylor expansion and the completion identity
+%     \widehat{\mathbf C\{z_1,...,z_n\}}=\mathbf C[[z_1,...,z_n]], used in
+%     the two local-comparison proofs;
+% (3) compactness and Hausdorffness of complex projective space, used in the
+%     proof of Proposition
+%     \ref{proposition-proper-if-and-only-if-compact-analytification}.
+% Oka--Cartan coherence and Weierstrass Noetherianity were already stated as
+% explicit dependencies in the foundation block; no properness-comparison,
+% identity, normalization, or unmentioned analytic theorem is invoked here.
+
+% Continuation fragment for GAGA source nos. 9--12. Insert after the
+% analytification fragment and before the proof fragment for nos. 13--17.
+
+\section{模的解析化}
+\label{section-analytification-modules}
+
+\begin{definition}
+\label{definition-analytification-module}
+\begin{reference}
+\cite[\S 3，第 9 号，定义 2]{GAGA}
+\end{reference}
+设 $X$ 为 $\mathbf C$ 上的代数簇，并令
+$a_X:X^{\mathrm{an}}\to X$ 为命题 \ref{proposition-analytification}
+给出的典范局部环化空间态射。对 $\mathcal O_X$-模 $\mathcal F$，
+它的{解析化}定义为
+$$
+\mathcal F^{\mathrm{an}}=a_X^*\mathcal F
+=\mathcal O_{X^{\mathrm{an}}}
+\otimes_{a_X^{-1}\mathcal O_X}a_X^{-1}\mathcal F.
+$$
+存在 $a_X^{-1}\mathcal O_X$-模的典范映射
+$$
+\eta_{\mathcal F}:a_X^{-1}\mathcal F\longrightarrow
+\mathcal F^{\mathrm{an}},\qquad s\longmapsto1\otimes s.
+$$
+每个 $\mathcal O_X$-线性映射 $\mathcal F\to\mathcal G$ 函子性地诱导
+$\mathcal O_{X^{\mathrm{an}}}$-线性映射
+$\mathcal F^{\mathrm{an}}\to\mathcal G^{\mathrm{an}}$，并且典范地有
+$\mathcal O_X^{\mathrm{an}}=\mathcal O_{X^{\mathrm{an}}}$。
+\end{definition}
+
+\begin{lemma}
+\label{lemma-analytification-module-stalks}
+设 $x\in X(\mathbf C)=X^{\mathrm{an}}$。存在典范识别
+$$
+(\mathcal F^{\mathrm{an}})_x
+=\mathcal F_x\otimes_{\mathcal O_{X,x}}
+\mathcal O_{X^{\mathrm{an}},x}
+$$
+在此识别下，$(\eta_{\mathcal F})_x$ 为映射 $m\mapsto1\otimes m$。
+\end{lemma}
+
+\begin{proof}
+取茎与逆像及张量积可交换。因为 $x$ 是闭点，
+$(a_X^{-1}\mathcal F)_x=\mathcal F_x$。
+所示识别以及 $\eta_{\mathcal F}$ 的描述直接来自定义
+\ref{definition-analytification-module}。
+\end{proof}
+
+\begin{lemma}
+\label{lemma-analytification-exact-faithful-coherent}
+\begin{reference}
+\cite[\S 3，第 9 号，命题 10]{GAGA}
+\end{reference}
+设 $X$ 为 $\mathbf C$ 上的代数簇。
+\begin{enumerate}
+\item $\mathcal O_X$-模上的函子 $\mathcal F\mapsto\mathcal F^{\mathrm{an}}$ 正合。
+\item 对每个 $\mathcal F$，映射
+$\eta_{\mathcal F}:a_X^{-1}\mathcal F\to\mathcal F^{\mathrm{an}}$ 为单射。
+\item 若 $\mathcal F$ 凝聚，则 $\mathcal F^{\mathrm{an}}$ 是凝聚解析模。
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+引理 \ref{lemma-analytification-module-stalks} 的茎公式与定理
+\ref{theorem-analytification-local-faithfully-flat} 的忠实平坦性证明 (1)；
+比较《模》引理 \ref{modules-lemma-pullback-flat}。同一茎公式与《代数》引理
+\ref{algebra-lemma-faithfully-flat-universally-injective} 证明 (2)。
+
+对 (3)，局部 Noetherian 概形 $X$ 上的凝聚模局部有限表现。
+拉回保持有限表现。由定理 \ref{theorem-oka-cartan-coherence}，
+解析结构层凝聚；故由《模》引理
+\ref{modules-lemma-coherent-structure-sheaf}，有限表现解析模凝聚。
+\end{proof}
+
+\begin{remark}[理想的解析化]
+\label{remark-analytification-ideal-sheaf}
+若 $\mathcal J\subset\mathcal O_X$ 是拟凝聚理想，则正合性把
+$\mathcal J^{\mathrm{an}}$ 识别为 $\mathcal O_{X^{\mathrm{an}}}$ 中由
+$a_X^{-1}\mathcal J$ 的像生成的理想。对约化闭子簇的理想，这也是命题
+\ref{proposition-analytification-closed-ideal}。
+\end{remark}
+
+
+\section{闭浸入与解析化}
+\label{section-analytification-closed-immersions}
+
+\begin{lemma}
+\label{lemma-analytification-pushforward-closed-immersion}
+\begin{reference}
+\cite[\S 3，第 10 号，命题 11]{GAGA}
+\end{reference}
+设 $i:Z\to X$ 为 $\mathbf C$ 上代数簇的闭浸入，且 $\mathcal F$
+为凝聚 $\mathcal O_Z$-模。存在典范同构
+$$
+(i_*\mathcal F)^{\mathrm{an}}
+\longrightarrow i^{\mathrm{an}}_*(\mathcal F^{\mathrm{an}}).
+$$
+\end{lemma}
+
+\begin{proof}
+交换的解析化方块与伴随给出典范映射。两边在 $Z^{\mathrm{an}}$ 外均为零。
+在 $z\in Z(\mathbf C)$ 处，源的茎为
+$$
+\mathcal F_z\otimes_{\mathcal O_{X,z}}
+\mathcal O_{X^{\mathrm{an}},z},
+$$
+而目标的茎为
+$$
+\mathcal F_z\otimes_{\mathcal O_{Z,z}}
+\mathcal O_{Z^{\mathrm{an}},z}.
+$$
+命题 \ref{proposition-analytification-closed-ideal} 给出
+$$
+\mathcal O_{Z^{\mathrm{an}},z}
+=\mathcal O_{Z,z}\otimes_{\mathcal O_{X,z}}
+\mathcal O_{X^{\mathrm{an}},z}.
+$$
+张量积的结合性识别两个茎，而此识别正是典范映射的茎。
+\end{proof}
+
+
+\section{上同调比较映射}
+\label{section-analytification-cohomology-map}
+
+\begin{definition}[上同调比较映射]
+\label{construction-analytification-cohomology-map}
+\begin{reference}
+\cite[\S 3，第 11 号]{GAGA}
+\end{reference}
+设 $\mathcal F$ 为 $\mathcal O_X$-模。$a_X^*$ 的正合性与导出伴随单位给出
+$$
+\mathcal F\longrightarrow Ra_{X,*}a_X^*\mathcal F.
+$$
+应用导出整体截面并使用
+$$
+R\Gamma(X,Ra_{X,*}\mathcal G)
+=R\Gamma(X^{\mathrm{an}},\mathcal G),
+$$
+得到典范映射
+$$
+\epsilon^q_{\mathcal F}:
+H^q(X,\mathcal F)\longrightarrow
+H^q(X^{\mathrm{an}},\mathcal F^{\mathrm{an}}),
+\qquad q\geq0.
+$$
+当 $q=0$ 时，它把截面 $s$ 送到 $1\otimes s$。
+因此，它与 Serre 从 Zariski 覆盖及其解析化所得的映射一致。
+\end{definition}
+
+\begin{lemma}
+\label{lemma-analytification-cohomology-map-functorial}
+映射 $\epsilon^q_{\mathcal F}$ 关于 $\mathcal F$ 自然。
+对每个 $\mathcal O_X$-模短正合列，它们构成从代数长正合上同调序列
+到解析长正合上同调序列的态射。特别地，它们与连接映射可交换。
+\end{lemma}
+
+\begin{proof}
+导出伴随单位是自然变换。因为由引理
+\ref{lemma-analytification-exact-faithful-coherent}，解析化正合，
+所以它把短正合列送到短正合列。相关优三角的自然性给出所断言的长正合序列态射。
+\end{proof}
+
+
+\section{GAGA 比较定理}
+\label{section-gaga-statements}
+
+\begin{theorem}[上同调比较]
+\label{theorem-gaga-cohomology}
+\begin{reference}
+\cite[\S 3，第 12 号，定理 1]{GAGA}
+\end{reference}
+设 $X$ 为 $\mathbf C$ 上的射影代数簇，且 $\mathcal F$ 为凝聚
+$\mathcal O_X$-模。对每个 $q\geq0$，映射
+$$
+\epsilon^q_{\mathcal F}:H^q(X,\mathcal F)
+\longrightarrow H^q(X^{\mathrm{an}},\mathcal F^{\mathrm{an}})
+$$
+是同构。特别地，
+$$
+\Gamma(X,\mathcal F)\longrightarrow
+\Gamma(X^{\mathrm{an}},\mathcal F^{\mathrm{an}})
+$$
+是同构。
+\end{theorem}
+
+\begin{theorem}[全忠实性]
+\label{theorem-gaga-fully-faithful}
+\begin{reference}
+\cite[\S 3，第 12 号，定理 2]{GAGA}
+\end{reference}
+设 $X$ 为 $\mathbf C$ 上的射影代数簇，且 $\mathcal F,\mathcal G$
+为凝聚 $\mathcal O_X$-模。解析化诱导双射
+$$
+\mathop{\rm Hom}\nolimits_{\mathcal O_X}(\mathcal F,\mathcal G)
+\longrightarrow
+\mathop{\rm Hom}\nolimits_{\mathcal O_{X^{\mathrm{an}}}}
+(\mathcal F^{\mathrm{an}},\mathcal G^{\mathrm{an}}).
+$$
+\end{theorem}
+
+\begin{theorem}[本质满性]
+\label{theorem-gaga-essential-surjectivity}
+\begin{reference}
+\cite[\S 3，第 12 号，定理 3]{GAGA}
+\end{reference}
+设 $X$ 为 $\mathbf C$ 上的射影代数簇。每个凝聚
+$\mathcal O_{X^{\mathrm{an}}}$-模 $\mathcal M$ 都同构于某个凝聚
+$\mathcal O_X$-模 $\mathcal F$ 的 $\mathcal F^{\mathrm{an}}$。
+模 $\mathcal F$ 在同构意义下唯一；此外，两个此类解析化之间的每个解析同构
+都由唯一的代数同构诱导。
+\end{theorem}
+
+以下各节给出这三个定理的证明。
+
+\begin{remark}[射影性不可缺少]
+\label{remark-gaga-projectivity-essential}
+对 $X=\mathbf A^1_{\mathbf C}$ 与 $\mathcal F=\mathcal O_X$，
+零次比较映射为
+$$
+\mathbf C[z]\longrightarrow
+\Gamma(\mathbf C,\mathcal O_{\mathbf C}),
+$$
+其目标是整函数环。此映射不满。因此，不能简单删除比较定理中的射影性假设。
+\end{remark}
+
+\begin{remark}[中间逆像层]
+\label{remark-gaga-comparison-factorization}
+比较映射典范地分解为
+$$
+H^q(X,\mathcal F)
+\longrightarrow H^q(X^{\mathrm{an}},a_X^{-1}\mathcal F)
+\longrightarrow H^q(X^{\mathrm{an}},\mathcal F^{\mathrm{an}}).
+$$
+第一个箭头未必是同构。例如，设 $X$ 为不可约射影簇，
+其解析化有某个非零 Betti 数 $b_q$，其中 $q>0$，并令 $K=\mathbf C(X)$。
+层 $K$ 在不可约 Zariski 空间 $X$ 上是松弛层，故 $H^q(X,K)=0$。
+其逆像是 $X^{\mathrm{an}}$ 上取值于 $K$ 的常值层，其 $q$ 次上同调是维数为
+$b_q$ 的 $K$-向量空间。这正是 \cite[\S 3，第 12 号]{GAGA}
+在三个定理之后记录的障碍。
+\end{remark}
+
+% Candidate continuation for GAGA source nos. 13--17.
+% Insert after remark-gaga-comparison-factorization and before the
+% unique terminal \input{chapters} in the standalone gaga.tex candidate.
+% This fragment assumes the analytification functor, its flatness and
+% exactness, the comparison maps on cohomology, and the statements of the
+% three GAGA theorems have already been introduced.
+
+\section{上同调比较定理的证明}
+\label{section-proof-gaga-cohomology}
+
+我们先记录启动并控制证明所用的两个解析输入。特意把它们明确写出：
+两者都不是代数上同调计算的形式推论。
+
+\begin{lemma}[射影空间的解析上同调维数]
+\label{lemma-projective-analytic-cohomological-dimension}
+设 $r \geq 0$，且 $\mathcal A$ 为带解析拓扑的
+$\mathbf P^r(\mathbf C)$ 上的阿贝尔群层。则
+$$
+H^q(\mathbf P^r(\mathbf C),\mathcal A)=0
+\quad\text{当 }q>2r.
+$$
+\end{lemma}
+
+\begin{proof}
+$\mathbf P^r(\mathbf C)$ 的底层空间是实维数 $2r$ 的紧可三角剖分流形。
+我们使用如下拓扑上同调维数定理：覆盖维数为 $d$ 的仿紧 Hausdorff 空间，
+其次数大于 $d$ 的层上同调消失。这个覆盖维数定理是外部拓扑输入；
+当前 Stacks 的《上同调》章节虽定义了上同调维数，却未证明它与覆盖维数的此项比较。
+\end{proof}
+
+\begin{lemma}
+\label{lemma-projective-structure-sheaf-comparison}
+对每个 $r \geq 0$ 与每个 $q \geq 0$，比较映射
+$$
+H^q(\mathbf P^r_{\mathbf C},\mathcal O)
+\longrightarrow
+H^q(\mathbf P^r(\mathbf C),\mathcal O^{\mathrm{an}})
+$$
+是同构。
+\end{lemma}
+
+\begin{proof}
+由《概形上同调》引理
+\ref{coherent-lemma-cohomology-projective-space-over-ring}，左侧的群在 $q=0$
+时为 $\mathbf C$，在 $q>0$ 时为零。在解析一侧，我们使用 Dolbeault 定理以及标准计算
+$$
+H^{0,q}_{\overline\partial}(\mathbf P^r(\mathbf C))=
+\begin{cases}
+\mathbf C & q=0,\\
+0 & q>0.
+\end{cases}
+$$
+这个射影空间的 Dolbeault 计算是本引理中的外部解析输入；见
+\cite[\S 2，第 13 号]{GAGA}。在零次，比较映射把常值代数函数送到同一个常值全纯函数，
+故为 $\mathbf C$ 上的恒等映射。在正次数，两边均消失。
+\end{proof}
+
+\begin{lemma}
+\label{lemma-projective-twist-comparison}
+设 $r \geq 0$ 且 $n \in \mathbf Z$。对每个 $q \geq 0$，比较映射
+$$
+H^q(\mathbf P^r_{\mathbf C},\mathcal O(n))
+\longrightarrow
+H^q(\mathbf P^r(\mathbf C),\mathcal O(n)^{\mathrm{an}})
+$$
+是同构。
+\end{lemma}
+
+\begin{proof}
+对 $r$ 作归纳。$r=0$ 时断言立即成立。设 $r>0$，选取超平面
+$i:E\longrightarrow\mathbf P^r_{\mathbf C}$，并如《簇》引理
+\ref{varieties-lemma-hyperplane} 那样把 $E$ 识别为
+$\mathbf P^{r-1}_{\mathbf C}$。乘以 $E$ 的一个方程，对每个 $n$ 给出短正合列
+$$
+0\longrightarrow\mathcal O(n-1)\longrightarrow\mathcal O(n)
+\longrightarrow i_*\mathcal O_E(n)\longrightarrow0.
+$$
+由引理 \ref{lemma-analytification-exact-faithful-coherent}，解析化正合；
+由引理 \ref{lemma-analytification-pushforward-closed-immersion}，
+它与闭浸入的正向像可交换。因此，此序列及其解析化给出两个长正合上同调序列。
+由引理 \ref{lemma-analytification-cohomology-map-functorial}，
+比较映射构成它们之间的态射。
+
+归纳假设给出 $\mathcal O_E(n)$ 在所有次数的比较同构。
+四引理与五引理（《同调》引理 \ref{homology-lemma-four-lemma} 与
+\ref{homology-lemma-five-lemma}）于是表明：$\mathcal O(n)$ 在每一次数的比较，
+等价于 $\mathcal O(n-1)$ 在每一次数的比较。$n=0$ 的情形是引理
+\ref{lemma-projective-structure-sheaf-comparison}；对 $n$ 向上、向下归纳，
+便对每个整数证明结论。
+\end{proof}
+
+\begin{proof}[定理 \ref{theorem-gaga-cohomology} 的证明]
+设 $X$ 在 $\mathbf C$ 上射影，$\mathcal F$ 凝聚，并选取闭浸入
+$i:X\to\mathbf P^r_{\mathbf C}$。正向像 $i_*\mathcal F$ 凝聚；
+《上同调》引理 \ref{cohomology-lemma-cohomology-and-closed-immersions}
+把其代数与解析上同调分别识别为 $X$ 与 $X^{\mathrm{an}}$ 上对应的上同调。
+引理 \ref{lemma-analytification-pushforward-closed-immersion}
+把 $(i_*\mathcal F)^{\mathrm{an}}$ 与 $i_*\mathcal F^{\mathrm{an}}$
+相容于比较映射地识别。故可设 $X=\mathbf P^r_{\mathbf C}$。
+
+我们对 $q$ 作下降归纳，并同时处理所有凝聚 $\mathcal F$。
+当 $q>2r$ 时，代数群由《概形上同调》引理
+\ref{coherent-lemma-coherent-projective} 消失，而解析群由引理
+\ref{lemma-projective-analytic-cohomological-dimension} 消失。
+
+假设每个凝聚层在次数 $q+1$ 的比较已经成立。由《概形上同调》引理
+\ref{coherent-lemma-coherent-projective}，存在短正合列
+$$
+0\longrightarrow\mathcal R\longrightarrow
+\mathcal L\longrightarrow\mathcal F\longrightarrow0
+$$
+其中 $\mathcal R$ 凝聚，而 $\mathcal L$ 是若干扭层 $\mathcal O(n)$ 的有限直和。
+由引理 \ref{lemma-projective-twist-comparison}，$\mathcal L$ 在每一次数的比较均为同构。
+在长正合列的态射中，对
+$$
+H^q(\mathcal L)\longrightarrow H^q(\mathcal F)
+\longrightarrow H^{q+1}(\mathcal R)\longrightarrow H^{q+1}(\mathcal L)
+$$
+应用四引理，先得到 $\mathcal F$ 在次数 $q$ 的比较映射满射。
+由于这对每个凝聚层均成立，它也适用于 $\mathcal R$。再对
+$$
+H^q(\mathcal R)\longrightarrow H^q(\mathcal L)
+\longrightarrow H^q(\mathcal F)\longrightarrow H^{q+1}(\mathcal R).
+$$
+应用四引理的单射部分，得到 $\mathcal F$ 的比较映射也单射。
+这完成下降归纳与证明。
+\end{proof}
+
+\section{全忠实性的证明}
+\label{section-proof-gaga-fully-faithful}
+
+\begin{lemma}
+\label{lemma-analytification-internal-hom}
+设 $X$ 为 $\mathbf C$ 上的簇，且 $\mathcal F,\mathcal G$ 为凝聚
+$\mathcal O_X$-模。存在典范同构
+$$
+\SheafHom_{\mathcal O_X}(\mathcal F,\mathcal G)^{\mathrm{an}}
+\longrightarrow
+\SheafHom_{\mathcal O_{X^{\mathrm{an}}}}
+(\mathcal F^{\mathrm{an}},\mathcal G^{\mathrm{an}}).
+$$
+\end{lemma}
+
+\begin{proof}
+记 $a_X:X^{\mathrm{an}}\to X$ 为典范局部环化空间态射。
+局部 Noetherian 概形 $X$ 上的凝聚模有限表现，而由定理
+\ref{theorem-analytification-local-faithfully-flat}，$a_X$ 平坦。
+所以，所示映射是《模》引理
+\ref{modules-lemma-pullback-internal-hom} 的平坦拉回内 Hom 同构。
+等价地，在茎上它是《代数进阶》引理
+\ref{more-algebra-lemma-pseudo-coherence-and-base-change-ext} 的平坦基变换同构。
+源的凝聚性来自《概形上同调》引理
+\ref{coherent-lemma-tensor-hom-coherent}；目标的凝聚性也可由《上同调》引理
+\ref{cohomology-lemma-coherent-analytic-sheaf-ext} 的 $q=0$ 情形得到。
+\end{proof}
+
+\begin{proof}[定理 \ref{theorem-gaga-fully-faithful} 的证明]
+令 $\mathcal A=\SheafHom_{\mathcal O_X}(\mathcal F,\mathcal G)$。则
+$$
+\Hom_{\mathcal O_X}(\mathcal F,\mathcal G)
+=H^0(X,\mathcal A).
+$$
+定理 \ref{theorem-gaga-cohomology} 的零次情形与引理
+\ref{lemma-analytification-internal-hom} 给出典范同构
+$$
+H^0(X,\mathcal A)
+\longrightarrow H^0(X^{\mathrm{an}},\mathcal A^{\mathrm{an}})
+\longrightarrow
+\Hom_{\mathcal O_{X^{\mathrm{an}}}}
+(\mathcal F^{\mathrm{an}},\mathcal G^{\mathrm{an}}).
+$$
+按上同调比较映射的构造，它们的复合把 $f$ 送到 $f^{\mathrm{an}}$。
+因此解析化是全忠实的。
+\end{proof}
+
+\section{本质满性：预备与约化}
+\label{section-gaga-essential-surjectivity-preliminaries}
+
+\begin{lemma}
+\label{lemma-coherent-analytic-closed-immersion}
+设 $i:Y\to X$ 为复解析空间的闭浸入，并且其结构层与定义理想都凝聚。
+则 $i_*$ 在模上正合且全忠实，把凝聚 $\mathcal O_Y$-模送到凝聚
+$\mathcal O_X$-模；其本质像恰为被定义理想零化的凝聚模。此外，
+$$
+H^q(Y,\mathcal M)=H^q(X,i_*\mathcal M)
+$$
+对每个 $q\geq0$ 都成立。
+\end{lemma}
+
+\begin{proof}
+正合性、全忠实性以及本质像的描述来自《模》引理
+\ref{modules-lemma-i-star-equivalence}。为验证凝聚性，先把
+$i_*\mathcal M$ 看作 $i_*\mathcal O_Y=\mathcal O_X/\mathcal I$ 上的模。
+将《模》引理 \ref{modules-lemma-i-star-reflects-finite-type} 应用于这个商结构层，
+可把 $Y$ 上的凝聚性识别为 $i_*\mathcal O_Y$ 上的凝聚性。
+再由《模》引理 \ref{modules-lemma-coherent-change-rings}，
+后者等价于 $\mathcal O_X$ 上的凝聚性。上同调等式是《上同调》引理
+\ref{cohomology-lemma-cohomology-and-closed-immersions}。
+\end{proof}
+
+\begin{lemma}
+\label{lemma-gaga-essential-surjectivity-projective-reduction}
+定理 \ref{theorem-gaga-essential-surjectivity} 中的唯一性由定理
+\ref{theorem-gaga-fully-faithful} 推出。对存在性，只需在
+$X=\mathbf P^r_{\mathbf C}$ 时证明该定理。
+\end{lemma}
+
+\begin{proof}
+若 $\mathcal F^{\mathrm{an}}\cong\mathcal G^{\mathrm{an}}$，
+全忠实性把该同构及其逆唯一提升为代数映射。忠实性表明它们的复合为恒等，故唯一性成立。
+
+为作约化，设 $i:Y\to\mathbf P^r_{\mathbf C}$ 为闭浸入，且
+$\mathcal M$ 是 $Y^{\mathrm{an}}$ 上的凝聚模。由引理
+\ref{lemma-coherent-analytic-closed-immersion}，$i_*\mathcal M$ 是
+$\mathbf P^r(\mathbf C)$ 上的凝聚模。假定射影空间上的本质满性，
+选取凝聚代数模 $\mathcal G$，使
+$\mathcal G^{\mathrm{an}}\cong i_*\mathcal M$。
+
+令 $\mathcal I$ 为 $Y$ 的理想。解析化与理想、张量积及像的相容性把
+$(\mathcal I\mathcal G)^{\mathrm{an}}$ 识别为
+$\mathcal I^{\mathrm{an}}\mathcal G^{\mathrm{an}}$；后者为零，
+因为 $i_*\mathcal M$ 被 $\mathcal I^{\mathrm{an}}$ 零化。
+引理 \ref{lemma-analytification-exact-faithful-coherent} 中的正合性与忠实性因此给出
+$\mathcal I\mathcal G=0$。《态射》引理
+\ref{morphisms-lemma-i-star-equivalence} 与《概形上同调》引理
+\ref{coherent-lemma-i-star-equivalence} 给出 $Y$ 上的凝聚代数模
+$\mathcal F$，满足 $i_*\mathcal F=\mathcal G$。最后，引理
+\ref{lemma-analytification-pushforward-closed-immersion} 给出
+$$
+i_*\mathcal F^{\mathrm{an}}
+\cong(i_*\mathcal F)^{\mathrm{an}}
+\cong\mathcal G^{\mathrm{an}}
+\cong i_*\mathcal M.
+$$
+解析闭浸入正向像的全忠实性于是给出
+$\mathcal F^{\mathrm{an}}\cong\mathcal M$。
+\end{proof}
+
+\section{解析扭层与整体生成}
+\label{section-gaga-analytic-twists}
+
+现在固定 $X=\mathbf P^r_{\mathbf C}$，并对 $r$ 作归纳以证明本质满性。
+$r=0$ 的情形是有限维复向量空间与一点上的凝聚模之间的等价。
+
+\begin{definition}
+\label{definition-coherent-analytic-twist}
+对 $X^{\mathrm{an}}$ 上的凝聚解析模 $\mathcal M$ 与
+$n\in\mathbf Z$，令
+$$
+\mathcal M(n)=
+\mathcal M\otimes_{\mathcal O_{X^{\mathrm{an}}}}
+\mathcal O_X(n)^{\mathrm{an}}.
+$$
+它是凝聚的；拉回与张量积的相容性给出典范恒等式
+$$
+\mathcal F^{\mathrm{an}}(n)\cong\mathcal F(n)^{\mathrm{an}}
+$$
+对每个凝聚代数模 $\mathcal F$ 都成立。
+\end{definition}
+
+\begin{lemma}
+\label{lemma-hyperplane-analytic-serre-vanishing}
+设 $E\cong\mathbf P^{r-1}_{\mathbf C}$ 为超平面，且 $\mathcal A$
+为 $E^{\mathrm{an}}$ 上的凝聚解析模。则
+$$
+H^q(E^{\mathrm{an}},\mathcal A(n))=0
+$$
+对每个 $q>0$ 以及所有充分大的 $n$ 都成立。
+\end{lemma}
+
+\begin{proof}
+由本质满性的归纳假设，存在 $E$ 上的凝聚代数模 $\mathcal F$，使
+$\mathcal A\cong\mathcal F^{\mathrm{an}}$。定义
+\ref{definition-coherent-analytic-twist} 与定理
+\ref{theorem-gaga-cohomology} 把所示群识别为 $H^q(E,\mathcal F(n))$。
+由《概形上同调》引理 \ref{coherent-lemma-coherent-projective}，
+后者对 $q>0$ 与充分大的 $n$ 消失。可能非零的次数只有有限多个，
+故可取一个对所有 $q>0$ 均有效的 $n$ 下界。
+\end{proof}
+
+\begin{lemma}
+\label{lemma-projective-analytic-global-generation}
+设 $\mathcal M$ 为 $X^{\mathrm{an}}=\mathbf P^r(\mathbf C)$ 上的凝聚解析模。
+存在整数 $n_0$，使得每个 $n\geq n_0$ 时，$\mathcal M(n)$ 均由整体截面生成。
+\end{lemma}
+
+\begin{proof}
+先作两个初等观察。若整体截面在 $x$ 处生成 $\mathcal M(n)$，
+选取在 $x$ 处非零的齐次坐标 $T_k$。乘以 $T_k^{m-n}$ 把
+$\mathcal M(n)$ 的整体截面送到 $\mathcal M(m)$ 的整体截面，
+并在 $x$ 处的茎上为同构；故在 $x$ 处的生成性对每个 $m\geq n$ 保持。
+在一点处的生成性是开条件：选取有限多个生成该茎的整体截面，
+取有限自由模到该层的赋值映射，并利用余核的凝聚性看出它在该点附近消失。
+由于 $X^{\mathrm{an}}$ 紧，所以只需对每个 $x$ 找到一个在 $x$ 处生成的扭层。
+
+固定 $x$，选取经过它、由线性形式 $t$ 截出的超平面 $i:E\to X$。
+将
+$0\to\mathcal O_X(-1)^{\mathrm{an}}\xrightarrow{t}
+\mathcal O_{X^{\mathrm{an}}}\to i_*\mathcal O_{E^{\mathrm{an}}}\to0$
+与 $\mathcal M$ 张量，得到正合列
+$$
+0\longrightarrow\mathcal C\longrightarrow\mathcal M(-1)
+\xrightarrow{t}\mathcal M\longrightarrow\mathcal B\longrightarrow0,
+$$
+其中 $\mathcal C$ 与 $\mathcal B$ 凝聚。两者均被 $t$ 零化，
+故引理 \ref{lemma-coherent-analytic-closed-immersion}
+把它们视为 $E^{\mathrm{an}}$ 上的凝聚模。
+
+扭转 $n$ 次之后，令 $\mathcal L_n$ 为
+$\mathcal M(n-1)\to\mathcal M(n)$ 的像。我们有短正合列
+$$
+0\to\mathcal C(n)\to\mathcal M(n-1)\to\mathcal L_n\to0,
+\qquad
+0\to\mathcal L_n\to\mathcal M(n)\to\mathcal B(n)\to0.
+$$
+引理 \ref{lemma-hyperplane-analytic-serre-vanishing} 给出：对所有充分大的 $n$，
+$$
+H^2(X^{\mathrm{an}},\mathcal C(n))=0,
+\qquad
+H^1(X^{\mathrm{an}},\mathcal B(n))=0.
+$$
+两个长正合列于是给出
+$$
+\dim H^1(\mathcal M(n-1))
+\geq\dim H^1(\mathcal L_n)
+\geq\dim H^1(\mathcal M(n)).
+$$
+由《上同调》引理
+\ref{cohomology-lemma-compact-complex-analytic-coherent-cohomology-finite-dimensional}，
+这些维数均有限。因此非负整数 $\dim H^1(\mathcal M(n))$ 最终稳定。
+当 $n$ 在稳定范围内时，满射
+$H^1(\mathcal L_n)\to H^1(\mathcal M(n))$ 是同构，长正合列遂给出满射
+$$
+H^0(X^{\mathrm{an}},\mathcal M(n))
+\longrightarrow H^0(X^{\mathrm{an}},\mathcal B(n)).
+$$
+
+由对 $r$ 的归纳，与 $\mathcal B$ 对应的 $E^{\mathrm{an}}$ 上模
+是 $E$ 上某凝聚代数模 $\mathcal G$ 的解析化。对所有充分大的 $n$，
+由《性质》命题 \ref{properties-proposition-characterize-ample}，
+$\mathcal G(n)$ 由整体截面生成。定理 \ref{theorem-gaga-cohomology}
+的零次情形对 $\mathcal B(n)$ 给出同一结论；前述满射把这些生成元提升为
+$\mathcal M(n)$ 的整体截面。
+
+在 $x$ 处，令 $A=\mathcal O_{X^{\mathrm{an}},x}$、
+$M=\mathcal M(n)_x$，并令 $N\subset M$ 为整体截面生成的子模。
+若 $\mathfrak p=(t)\subset A$，则 $\mathcal B(n)_x=M/\mathfrak pM$。
+提升的截面生成此商，故 $M=N+\mathfrak pM$。由于 $\mathfrak p$
+包含于局部环 $A$ 的极大理想，Nakayama 引理（《代数》引理
+\ref{algebra-lemma-NAK}）给出 $M=N$。这提供了在 $x$ 处所需的扭层；
+开头的两个观察与紧性则给出对每一点及每个 $n\geq n_0$ 都有效的同一个 $n_0$。
+\end{proof}
+
+\section{本质满性证明的完成}
+\label{section-completion-gaga-essential-surjectivity}
+
+\begin{proof}[定理 \ref{theorem-gaga-essential-surjectivity} 证明的完成]
+由引理 \ref{lemma-gaga-essential-surjectivity-projective-reduction}，
+只须处理 $X=\mathbf P^r_{\mathbf C}$。设 $\mathcal M$ 是
+$X^{\mathrm{an}}$ 上的凝聚模。引理
+\ref{lemma-projective-analytic-global-generation} 与紧性在扭转后给出有限组整体生成元。
+解除扭转便得到满射
+$$
+\mathcal L_0^{\mathrm{an}}\longrightarrow\mathcal M,
+\qquad
+\mathcal L_0=\mathcal O_X(-n)^{\oplus p}.
+$$
+其核 $\mathcal R$ 由《模》引理 \ref{modules-lemma-coherent-abelian} 凝聚。
+对 $\mathcal R$ 应用同一整体生成论证，得到扭层的有限直和 $\mathcal L_1$
+以及满射 $\mathcal L_1^{\mathrm{an}}\to\mathcal R$。
+与 $\mathcal R$ 的嵌入复合，得到正合列
+$$
+\mathcal L_1^{\mathrm{an}}\xrightarrow{g}
+\mathcal L_0^{\mathrm{an}}\longrightarrow\mathcal M\longrightarrow0.
+$$
+
+定理 \ref{theorem-gaga-fully-faithful} 给出唯一代数映射
+$f:\mathcal L_1\to\mathcal L_0$，满足 $f^{\mathrm{an}}=g$。
+令 $\mathcal F=\mathop{\rm Coker}(f)$。它凝聚，而解析化的正合性给出
+$$
+\mathcal F^{\mathrm{an}}
+=\mathop{\rm Coker}(f^{\mathrm{an}})
+=\mathop{\rm Coker}(g)
+\cong\mathcal M.
+$$
+结合已经证明的约化与唯一性，这就完成了定理
+\ref{theorem-gaga-essential-surjectivity} 的证明。
+\end{proof}
+
+\section{比较定理的应用}
+\label{section-gaga-applications}
+
+\subsection{共轭与 Betti 数}
+\label{subsection-gaga-betti-numbers}
+
+设 $\sigma\in\mathop{\rm Aut}(\mathbf C)$。对 $\mathbf C$ 上的概形 $X$，记
+$$
+X^\sigma=X\times_{\mathop{\rm Spec}(\mathbf C),\sigma}
+\mathop{\rm Spec}(\mathbf C).
+$$
+
+\begin{proposition}
+\label{proposition-conjugate-smooth-projective-betti-numbers}
+\begin{reference}
+\cite[\S 4，第 18 号，命题 12]{GAGA}
+\end{reference}
+设 $X$ 为 $\mathbf C$ 上的光滑射影代数簇。则 $X^{\rm an}$ 与
+$(X^\sigma)^{\rm an}$ 具有相同的 Betti 数。
+\end{proposition}
+
+\begin{proof}
+对 $p,q\geq 0$，平坦基变换给出 $\sigma$-半线性同构
+$$
+H^q(X,\Omega^p_{X/\mathbf C})
+\longrightarrow
+H^q(X^\sigma,\Omega^p_{X^\sigma/\mathbf C});
+$$
+见《概形上同调》引理 \ref{coherent-lemma-flat-base-change-cohomology}。
+特别地，两个向量空间维数相同。对光滑簇，局部坐标给出典范比较
+$$
+(\Omega^p_{X/\mathbf C})^{\rm an}
+\cong \Omega^p_{X^{\rm an}},
+$$
+其中右侧的模为全纯 $p$-形式之模。因此，上同调比较定理
+\ref{theorem-gaga-cohomology} 把这些维数分别识别为
+$$
+h^{p,q}(X^{\rm an})
+\quad\hbox{与}\quad
+h^{p,q}((X^\sigma)^{\rm an}),
+$$
+其中
+$$
+h^{p,q}(M)=\dim_{\mathbf C}H^q(M,\Omega^p_M).
+$$
+最后，光滑射影簇的解析化是紧 K\"ahler 流形。Hodge 分解
+（使用 Dolbeault 解消与 K\"ahler 恒等式）是这里的外部解析输入，它给出
+$$
+b_n(X^{\rm an})=\sum_{p+q=n}h^{p,q}(X^{\rm an})
+$$
+以及 $X^\sigma$ 的类似公式。断言随即成立。
+\end{proof}
+
+\begin{proposition}[推论]
+\label{corollary-number-field-embeddings-betti-numbers}
+\begin{reference}
+\cite[\S 4，第 18 号，命题 12 的推论]{GAGA}
+\end{reference}
+设 $V$ 为域 $K$ 上的光滑射影簇，其中该域是 $\mathbf Q$ 的代数扩张。
+$V\times_{K,\iota}\mathbf C$ 的 Betti 数与嵌入
+$\iota:K\longrightarrow\mathbf C$ 的选择无关。
+\end{proposition}
+
+\begin{proof}
+域嵌入的标准延拓定理表明，$K$ 到 $\mathbf C$ 的任意两个嵌入
+相差 $\mathbf C$ 的一个自同构。应用命题
+\ref{proposition-conjugate-smooth-projective-betti-numbers}。
+\end{proof}
+
+\begin{remark}[历史范围]
+\label{remark-conjugate-varieties-historical}
+Serre 在 \cite[\S 4，第 18 号]{GAGA} 中指出，一对共轭簇未必解析同构
+（椭圆曲线已经提供例子），并在那里询问它们是否必定同胚。
+这一历史问题不是命题 \ref{proposition-conjugate-smooth-projective-betti-numbers} 的输入。
+\end{remark}
+
+
+\subsection{Chow 定理与代数性}
+\label{subsection-gaga-chow}
+
+\begin{theorem}[Chow]
+\label{theorem-chow-closed-analytic-projective}
+\begin{reference}
+\cite[\S 4，第 19 号，命题 13]{GAGA}
+\end{reference}
+设 $X$ 为 $\mathbf C$ 上的射影代数簇。每个闭约化解析子空间
+$Y\subset X^{\rm an}$ 都是 $X$ 的唯一闭约化子概形的解析化。
+\end{theorem}
+
+\begin{proof}
+由定理 \ref{theorem-oka-cartan-coherence}，消失理想
+$\mathcal J_Y\subset\mathcal O_{X^{\rm an}}$ 凝聚。
+由定理 \ref{theorem-gaga-essential-surjectivity}，存在凝聚
+$\mathcal O_X$-模 $\mathcal F$，满足
+$\mathcal F^{\rm an}\cong\mathcal J_Y$。把此同构与到
+$\mathcal O_{X^{\rm an}}$ 的包含复合。全忠实性定理
+\ref{theorem-gaga-fully-faithful} 将该复合代数化为 $\mathcal O_X$-线性映射
+$$
+u:\mathcal F\longrightarrow\mathcal O_X.
+$$
+其像 $\mathcal I$ 是凝聚理想。解析化的正合性与忠实性把
+$\mathcal I^{\rm an}$ 识别为 $\mathcal J_Y$。因此，理想 $\mathcal I$ 是根理想。
+事实上，在每个闭点 $x\in X(\mathbf C)$ 处，若 $a^m\in\mathcal I_x$，
+则 $a$ 在 $\mathcal O_{X^{\rm an},x}$ 中的像属于根理想
+$\mathcal J_{Y,x}=\mathcal I_x\mathcal O_{X^{\rm an},x}$。
+定理 \ref{theorem-analytification-local-faithfully-flat} 中的忠实平坦性
+把这个理想收缩回 $\mathcal I_x$。由于 $X$ 是 Noetherian 且 Jacobson 的，
+所有闭茎处的根性蕴含 $\mathcal I$ 为根理想。因此，由 $\mathcal I$
+定义的闭约化子概形具有解析理想 $\mathcal J_Y$，从而其解析化为 $Y$。
+
+若两个约化闭子概形的解析化都是 $Y$，则它们的理想层在每个解析局部环中的扩张相等。
+忠实平坦性把这些扩张收缩为每个闭点处相等的茎；凝聚性与 Jacobson 性质遂识别两个理想层。
+这证明唯一性。
+\end{proof}
+
+\begin{proposition}
+\label{proposition-compact-analytic-subspace-algebraic}
+\begin{reference}
+\cite[\S 4，第 19 号，命题 14]{GAGA}
+\end{reference}
+设 $X$ 为 $\mathbf C$ 上的代数簇。每个紧闭约化解析子空间
+$Y\subset X^{\rm an}$ 都是代数的：存在唯一闭约化子概形
+$Z\subset X$，满足 $Z^{\rm an}=Y$。
+\end{proposition}
+
+\begin{proof}
+Nagata 紧化与 Chow 引理（《平坦性进阶》定理
+\ref{flat-theorem-nagata} 与《概形的极限》引理
+\ref{limits-lemma-chow-finite-type}）给出开浸入
+$X\subset\overline X$，其中 $\overline X$ 真；并给出真满射
+$p:X'\to\overline X$ 以及浸入 $X'\to\mathbf P^n_{\mathbf C}$。
+用其约化替换 $X'$ 不改变这些性质。所得簇 $X'$ 在 $\mathbf C$ 上真，
+故其浸入为闭浸入且 $X'$ 射影。因为 $Y$ 紧，所以它在 Hausdorff 空间
+$\overline X^{\rm an}$ 中闭。它在 $X^{\rm an}$ 上的解析结构与
+$\overline X^{\rm an}\setminus Y$ 上的空闭解析子空间粘合，
+从而使 $Y$ 成为 $\overline X^{\rm an}$ 的闭约化解析子空间。
+
+约化逆像
+$$
+Y'=\left((X')^{\rm an}\times_{\overline X^{\rm an}}Y\right)_{\rm red}
+$$
+是 $(X')^{\rm an}$ 的闭约化解析子空间。定理
+\ref{theorem-chow-closed-analytic-projective} 把它代数化为闭约化子概形
+$Z'\subset X'$。令 $Z\subset\overline X$ 为 $p(Z')$
+的约化 Zariski 闭包。解析映射把 $(Z')^{\rm an}=Y'$ 映满到 $Y$。
+由于 $Y$ 闭，命题 \ref{proposition-image-closure} 表明 $Z^{\rm an}$
+的经典点集恰为 $Y$。约化闭解析子空间由其底层解析集合决定，故 $Z^{\rm an}=Y$。
+$Z$ 的所有闭点均位于 $X$ 中；Jacobson 性质因此表明 $Z\subset X$。
+
+为证唯一性，若 $Z_1,Z_2\subset X$ 的解析化均为 $Y$，
+则它们的理想茎在每个 $\mathcal O_{X^{\rm an},x}$ 中的扩张相等。
+定理 \ref{theorem-analytification-local-faithfully-flat} 中的忠实平坦性
+把它们收缩为每个闭点处相等的茎。凝聚性与 Jacobson 性质给出 $Z_1=Z_2$。
+\end{proof}
+
+\begin{proposition}
+\label{proposition-holomorphic-map-from-proper-is-regular}
+\begin{reference}
+\cite[\S 4，第 19 号，命题 15]{GAGA}
+\end{reference}
+设 $X$ 为 $\mathbf C$ 上的真代数簇，$Y$ 为 $\mathbf C$ 上的代数簇。
+每个全纯映射
+$$
+f:X^{\rm an}\longrightarrow Y^{\rm an}
+$$
+都是唯一态射 $X\to Y$ 的解析化。
+\end{proposition}
+
+\begin{proof}
+图 $\Gamma_f$ 是 $(X\times_{\mathbf C}Y)^{\rm an}$ 的紧闭解析子空间。
+命题 \ref{proposition-compact-analytic-subspace-algebraic}
+使它成为 $X\times_{\mathbf C}Y$ 的一个闭约化子簇的解析化。
+命题 \ref{proposition-algebraic-graph-holomorphic-regular} 因而定义所需的代数映射。
+为证唯一性，两个候选映射具有经典点相同的闭约化图；这些图相等，因而映射也相等。
+\end{proof}
+
+\begin{proposition}[推论]
+\label{corollary-compact-analytic-space-unique-algebraization}
+\begin{reference}
+\cite[\S 4，第 19 号，命题 15 的推论]{GAGA}
+\end{reference}
+一个紧约化解析空间至多有一个代数簇结构：任意两个代数化之间的解析同构，
+都是唯一代数同构的解析化。
+\end{proposition}
+
+\begin{proof}
+由命题 \ref{proposition-proper-if-and-only-if-compact-analytification}，
+每个代数化都真。分别对解析同构及其逆应用命题
+\ref{proposition-holomorphic-map-from-proper-is-regular}。
+\end{proof}
+
+
+\subsection{代数主丛与解析主丛}
+\label{subsection-gaga-principal-bundles}
+
+\begin{definition}
+\label{definition-principal-bundle-analytification-map}
+\begin{reference}
+\cite[\S 4，第 20 号]{GAGA}
+\end{reference}
+设 $G$ 为 $\mathbf C$ 上的代数群，$X$ 为 $\mathbf C$ 上的代数簇。记
+$$
+H^1_{\rm Zar}(X,G)
+$$
+为 Zariski 局部平凡主 $G$-丛同构类所成的带基点集，并记
+$$
+H^1_{\rm an}(X^{\rm an},G^{\rm an})
+$$
+为全纯局部平凡主 $G^{\rm an}$-丛同构类所成的带基点集。解析化定义映射
+$$
+\varepsilon_G:H^1_{\rm Zar}(X,G)
+\longrightarrow H^1_{\rm an}(X^{\rm an},G^{\rm an}).
+$$
+这是《站点上的上同调》\ref{sites-cohomology-section-h1-torsors} 节中
+一阶上同调的挠子解释。
+\end{definition}
+
+\begin{proposition}
+\label{proposition-principal-bundle-analytification-injective}
+\begin{reference}
+\cite[\S 4，第 20 号，命题 16]{GAGA}
+\end{reference}
+若 $X$ 是 $\mathbf C$ 上的真代数簇，则 $\varepsilon_G$ 单射。
+更精确地，两个代数主 $G$-丛的解析化之间的每个解析同构都是代数的。
+\end{proposition}
+
+\begin{proof}
+对 $X$ 上两个代数主 $G$-丛 $P$ 与 $P'$，伴随丛
+$$
+\mathop{\rm Isom}\nolimits_G(P,P')
+$$
+是 $X$ 上的代数纤维丛，其截面恰为 $G$-等变同构 $P\to P'$。
+一个解析同构给出其解析化的全纯截面。命题
+\ref{proposition-holomorphic-map-from-proper-is-regular} 使该截面代数化。
+\end{proof}
+
+\begin{proposition}
+\label{proposition-additive-principal-bundles-gaga}
+\begin{reference}
+\cite[\S 4，第 20 号，命题 17]{GAGA}
+\end{reference}
+若 $X$ 是 $\mathbf C$ 上的射影代数簇且 $G=\mathbf G_a$，
+则 $\varepsilon_G$ 为双射。
+\end{proposition}
+
+\begin{proof}
+主 $\mathbf G_a$-丛是加法层 $\mathcal O_X$ 下的挠子，
+因而由 $H^1(X,\mathcal O_X)$ 分类；见《上同调》引理
+\ref{cohomology-lemma-torsors-h1}。解析陈述使用
+$H^1(X^{\rm an},\mathcal O_{X^{\rm an}})$。
+定理 \ref{theorem-gaga-cohomology} 的比较同构识别这两个群。
+\end{proof}
+
+\begin{proposition}
+\label{proposition-general-linear-principal-bundles-gaga}
+\begin{reference}
+\cite[\S 4，第 20 号，命题 18]{GAGA}
+\end{reference}
+若 $X$ 是 $\mathbf C$ 上的射影代数簇且
+$G=\mathop{\rm GL}_n$，则 $\varepsilon_G$ 为双射。
+\end{proposition}
+
+\begin{proof}
+主 $\mathop{\rm GL}_n$-丛等价于秩 $n$ 的向量丛。
+设 $\mathcal E$ 是与一个解析向量丛相伴的局部自由凝聚解析模。
+由定理 \ref{theorem-gaga-essential-surjectivity}，它同构于某凝聚
+$\mathcal O_X$-模 $\mathcal F$ 的 $\mathcal F^{\rm an}$。
+对每个闭点 $x\in X(\mathbf C)$，定理
+\ref{theorem-analytification-local-faithfully-flat} 的忠实平坦局部映射使
+$$
+\mathcal F_x\otimes_{\mathcal O_{X,x}}
+\mathcal O_{X^{\rm an},x}
+$$
+成为秩 $n$ 的自由模。有限投射性的忠实平坦下降（《代数》命题
+\ref{algebra-proposition-ffdescent-finite-projectivity}）表明
+$\mathcal F_x$ 有限投射。《代数》定理
+\ref{algebra-theorem-projective-free-over-local-ring} 使它自由，
+而忠实基变换确定其秩为 $n$。由于 $X$ 是 Jacobson 概形且 $\mathcal F$ 凝聚，
+在每个闭点处秩 $n$ 的局部自由性使 $\mathcal F$ 处处为此秩的局部自由模。
+其标架丛将给定解析主丛代数化。单射性由命题
+\ref{proposition-principal-bundle-analytification-injective} 给出。
+\end{proof}
+
+\begin{remark}[线丛与历史表述]
+\label{remark-line-bundles-gaga}
+当 $n=1$ 时，命题 \ref{proposition-general-linear-principal-bundles-gaga}
+就是同构
+$$
+\mathop{\rm Pic}(X)\longrightarrow\mathop{\rm Pic}(X^{\rm an}).
+$$
+Serre 在 \cite[\S 4，第 20 号]{GAGA} 的命题 18 之后，以正规簇上的除子类表述此结论，
+并记录了 Kodaira--Spencer 较早的光滑情形结果。这些历史归属并非这里的附加假设。
+Serre 还指出，命题 18 把 Kodaira 的定理 7 与 8 推广到任意可能带奇点的射影簇，
+但并未继续探讨这些应用。
+\end{remark}
+
+\begin{proposition}[结构群约化的代数化]
+\label{proposition-algebraize-reduction-structure-group}
+\begin{reference}
+\cite[\S 4，第 20 号，命题 19]{GAGA}
+\end{reference}
+设 $H\subset G$ 为 $\mathbf C$ 上的代数群。假设商 $G/H$ 作为代数簇存在，
+并且 $G\to G/H$ 有有理截面。设 $X$ 为 $\mathbf C$ 上的真代数簇，
+且 $P$ 是 $X^{\rm an}$ 上的解析主 $H^{\rm an}$-丛。则 $P$ 可代数化，
+当且仅当其扩张丛
+$$
+P\times^H G
+$$
+可代数化。
+\end{proposition}
+
+\begin{proof}
+$G/H$ 的一个非空开子集上的有理截面，连同其定义域在 $G$ 下的各平移，
+表明 $G\to G/H$ 作为 $H$-丛 Zariski 局部平凡。
+因此，必要性由结构群的扩张立即得到。
+
+反之，选取代数主 $G$-丛 $Q$ 以及解析同构
+$Q^{\rm an}\cong P\times^H G$。构造代数伴随丛
+$$
+E=Q\times^G(G/H).
+$$
+解析约化 $P$ 决定全纯截面 $s:X^{\rm an}\to E^{\rm an}$。
+由命题 \ref{proposition-holomorphic-map-from-proper-is-regular}，
+此截面是代数的。沿 $s$ 拉回主 $H$-丛 $Q\to E$，得到解析化为 $P$
+的代数主 $H$-丛。
+\end{proof}
+
+\begin{definition}
+\label{definition-rational-section-condition}
+\begin{reference}
+\cite[\S 4，第 20 号，条件 (R)]{GAGA}
+\end{reference}
+闭代数子群 $G\subset\mathop{\rm GL}_n$ 称为满足
+\textup{(R)}，如果该商存在并且投影
+$$
+\mathop{\rm GL}_n/G\longleftarrow\mathop{\rm GL}_n
+$$
+具有有理截面。
+\end{definition}
+
+\begin{proposition}
+\label{proposition-rational-section-principal-bundles-gaga}
+\begin{reference}
+\cite[\S 4，第 20 号，命题 20]{GAGA}
+\end{reference}
+设 $G\subset\mathop{\rm GL}_n$ 满足 \textup{(R)}。
+对 $\mathbf C$ 上每个射影代数簇 $X$，映射
+$$
+\varepsilon_G:H^1_{\rm Zar}(X,G)
+\longrightarrow H^1_{\rm an}(X^{\rm an},G^{\rm an})
+$$
+是双射。
+\end{proposition}
+
+\begin{proof}
+给定解析主 $G$-丛 $P$，命题
+\ref{proposition-general-linear-principal-bundles-gaga}
+将 $P\times^G\mathop{\rm GL}_n$ 代数化。再应用命题
+\ref{proposition-algebraize-reduction-structure-group}，取 $H=G$
+且环境群为 $\mathop{\rm GL}_n$，便将 $P$ 代数化。
+单射性由命题 \ref{proposition-principal-bundle-analytification-injective} 给出。
+\end{proof}
+
+\begin{remark}[例子与历史边界]
+\label{remark-rational-section-condition-examples}
+由 Rosenlicht 定理，条件 \textup{(R)} 对可解子群成立；
+对 $\mathop{\rm SL}_n$ 可使用行列式截面；对 $\mathop{\rm Sp}_{2m}$
+可使用有理辛 Gram--Schmidt 过程。Serre 还在
+\cite[\S 4，第 20 号]{GAGA} 中记录了当时尚未解决的单连通半单猜想，
+以及 \textup{(R)} 对维数至少为 $3$ 的幺模正交群不成立；在后一情形，
+他将 $\varepsilon_G$ 的双射性留作开放问题。这些历史观察并未用于命题
+\ref{proposition-rational-section-principal-bundles-gaga}。
+\end{remark}
+
+\input{output/source/chapters-zh-cn}
+
+\bibliography{my}
+\bibliographystyle{amsalpha}
+
+\end{document}

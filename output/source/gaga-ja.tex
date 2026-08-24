@@ -1,0 +1,1814 @@
+% GAGA 原典単位 gaga:no:1 から gaga:no:4 までに対応する独立章候補。
+% ここでは意図的に 1956 年の被約概念を採用し、非被約複素解析空間は導入しない。
+
+\def\GAGACJKMainFont{Yu Gothic}
+\input{preamble}
+
+\renewcommand{\contentsname}{目次}
+\renewcommand{\refname}{参考文献}
+\renewcommand{\proofname}{証明}
+
+\let\theorem\relax
+\let\endtheorem\relax
+\let\proposition\relax
+\let\endproposition\relax
+\let\lemma\relax
+\let\endlemma\relax
+\let\definition\relax
+\let\enddefinition\relax
+\let\remark\relax
+\let\endremark\relax
+\theoremstyle{plain}
+\newtheorem{theorem}[subsection]{定理}
+\newtheorem{proposition}[subsection]{命題}
+\newtheorem{lemma}[subsection]{補題}
+\theoremstyle{definition}
+\newtheorem{definition}[subsection]{定義}
+\theoremstyle{remark}
+\newtheorem{remark}[subsection]{注意}
+
+% OK, start here.
+%
+\begin{document}
+
+\raggedbottom
+
+\title{複素解析空間と GAGA}
+
+\maketitle
+
+\phantomsection
+\label{section-phantom}
+
+\tableofcontents
+
+\section{序論}
+\label{section-introduction}
+
+\noindent
+本章では、通常 GAGA と呼ばれる比較定理を述べ、証明するために必要な
+複素解析的基礎を構築する。最初の各節では
+\cite[\S 1、第1--4項、3--7頁]{GAGA} における被約複素解析空間の概念を用いる。
+関数の層に含まれる構造層には冪零元が存在しないため、この範囲を明示しておく。
+環付き空間および連接加群については、『層』定義
+\ref{sheaves-definition-ringed-space} と『加群の層』第
+\ref{modules-section-coherent} 節の抽象的言語を用いる。
+
+\section{複素アフィン空間の解析的部分集合}
+\label{section-analytic-subsets}
+
+\begin{definition}
+\label{definition-analytic-subset}
+\begin{reference}
+\cite[\S 1、第1項、3--4頁]{GAGA}
+\end{reference}
+$n \geq 0$ とし、$\mathbf C^n$ に通常の位相を入れる。部分集合
+$U \subset \mathbf C^n$ が {\it Serre の意味での解析的部分集合}であるとは、
+任意の $x \in U$ に対し、$x$ の開近傍 $W$ と $W$ 上の正則関数
+$f_1, \ldots, f_k$ が存在して
+$$
+U \cap W = \{z \in W \mid f_1(z)=\ldots=f_k(z)=0\}.
+$$
+
+$\mathcal C_U$ を $U$ 上のすべての複素数値関数の芽の層とし、
+$\mathcal O_{\mathbf C^n}$ を $\mathbf C^n$ 上の正則関数の層とする。
+{\it $U$ 上の正則関数の層}とは、像層
+$$
+\mathcal O_U =
+\mathop{\rm Im}\left(
+\mathcal O_{\mathbf C^n}|_U \longrightarrow \mathcal C_U
+\right).
+$$
+すなわち、$x \in U$ であり、$\mathcal I_{U,x}$ が $x$ の近傍で $U$ 上消える
+$\mathcal O_{\mathbf C^n,x}$ の芽からなるイデアルならば、
+$$
+\mathcal O_{U,x}=
+\mathcal O_{\mathbf C^n,x}/\mathcal I_{U,x}.
+$$
+\end{definition}
+
+\begin{definition}
+\label{definition-holomorphic-map-analytic-subsets}
+\begin{reference}
+\cite[\S 1、第1項、3--4頁]{GAGA}
+\end{reference}
+$U \subset \mathbf C^r$ および $V \subset \mathbf C^s$ を解析的部分集合とする。
+写像 $\varphi:U\to V$ が {\it 正則}であるとは、それが連続であり、任意の
+$x\in U$ に対し、$\varphi$ との合成が $\mathcal O_{V,\varphi(x)}$ の各芽を
+$\mathcal O_{U,x}$ の芽へ送ることをいう。同値な言い方をすれば、$\varphi$ の
+$s$ 個の座標関数は $U$ 上局所的に $\mathcal O_U$ の切断である。
+
+全単射な正則写像で、その逆写像も正則なものを {\it 解析同型}という。
+\end{definition}
+
+\begin{lemma}
+\label{lemma-analytic-subset-basic-properties}
+$U \subset \mathbf C^n$ および $U' \subset \mathbf C^{n'}$ を定義
+\ref{definition-analytic-subset} の意味での解析的部分集合とする。
+\begin{enumerate}
+\item 部分集合 $U$ は局所閉かつ局所コンパクトである。
+\item 茎 $\mathcal O_{U,x}$ は被約局所 $\mathbf C$-代数であり、その剰余準同型は
+$x$ における値の評価である。
+\item 部分集合 $U\times U'$ は $\mathbf C^{n+n'}$ において解析的であり、その位相は
+積位相で、その構造層は積の解析座標から得られるものである。
+\item 正則写像の積は正則である。
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+$x\in U$ の周りで縮小すれば、$U$ は有限個の連続関数の共通零点集合となるので、
+$\mathbf C^n$ のある開集合の中で閉である。これで (1) が従う。定義
+\ref{definition-analytic-subset} に表示した商は $\mathcal C_{U,x}$ に埋め込まれ、
+芽が可逆であることと、その $x$ における値が零でないこととは同値である。
+これで (2) が従う。
+
+$(x,x')$ の近傍で $U$ と $U'$ の局所定義方程式を併記すれば、積の解析性が従う。
+(3) の残りと (4) は、誘導位相、定義
+\ref{definition-holomorphic-map-analytic-subsets} の座標判定法、および正則関数の
+合成から直ちに従う。
+\end{proof}
+
+
+\section{Serre の複素解析空間}
+\label{section-serre-analytic-spaces}
+
+\begin{definition}
+\label{definition-serre-analytic-space}
+\begin{reference}
+\cite[\S 1、第2項、4--5頁]{GAGA}
+\end{reference}
+{\it Serre の意味での複素解析空間}とは、Hausdorff 位相空間 $X$ と
+$\mathbf C$-代数の部分層
+$$
+\mathcal O_X \subset \mathcal C_X
+$$
+の組であって、$X$ が開被覆 $X=\bigcup V_i$ をもち、各環付き空間
+$(V_i,\mathcal O_X|_{V_i})$ が、定義 \ref{definition-analytic-subset} の層を備えた
+ある $\mathbf C^{n_i}$ の解析的部分集合と解析同型になるものをいう。
+
+このような空間の間の写像が {\it 正則}であるとは、それが連続であり、合成による
+引き戻しが正則関数の芽を正則関数の芽へ送ることをいう。同型とは、逆写像も正則な
+正則写像である。
+\end{definition}
+
+\begin{remark}[被約の場合に限ること]
+\label{remark-serre-analytic-spaces-reduced}
+$\mathcal O_X$ は関数の層の部分層なので、各 $\mathcal O_{X,x}$ は被約である。
+したがって定義 \ref{definition-serre-analytic-space} は Serre が用いた 1956 年の
+被約概念であり、冪零元を含む解析的肥厚を含まない。後に非被約複素解析空間へ拡張する
+場合は別途導入しなければならず、それを GAGA の定義1に帰してはならない。
+\end{remark}
+
+\begin{definition}
+\label{definition-analytic-subspace}
+$X$ を Serre の複素解析空間とする。部分集合 $Y\subset X$ が {\it 解析部分空間}
+であるとは、各解析座標 $V\to U$ において $Y\cap V$ の像が $U$ の解析的部分集合に
+なることをいう。このとき誘導される解析空間構造を入れる。$Y$ が $X$ の閉集合ならば、
+これを {\it 閉解析部分空間}という。
+\end{definition}
+
+\begin{lemma}
+\label{lemma-serre-analytic-subspaces-products}
+\begin{reference}
+\cite[\S 1、第2項、5頁]{GAGA}
+\end{reference}
+$X$ と $X'$ を Serre の複素解析空間とする。
+\begin{enumerate}
+\item $X$ の各解析部分空間は局所閉であり、誘導構造は選んだ座標に依存しない。
+\item 座標の積が座標となるような Serre の複素解析空間構造が $X\times X'$ 上に
+一意に存在する。その位相は積位相である。
+\item Serre の複素解析空間と正則写像は圏をなす。
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+三つの主張はいずれも始域上局所的である。したがって、補題
+\ref{lemma-analytic-subset-basic-properties}、構造層を定める制限写像の整合性、
+および正則写像の座標判定法から従う。
+\end{proof}
+
+
+\section{解析加群と岡--Cartan の連接性}
+\label{section-analytic-modules}
+
+\begin{definition}
+\label{definition-analytic-module}
+\begin{reference}
+\cite[\S 1、第3項、5頁]{GAGA}
+\end{reference}
+$X$ を Serre の複素解析空間とする。$X$ 上の {\it 解析加群}とは
+$\mathcal O_X$-加群である。これが {\it 連接}であるとは、『加群の層』定義
+\ref{modules-definition-coherent} の意味で連接であることをいう。
+\end{definition}
+
+\begin{definition}
+\label{definition-vanishing-ideal-analytic-subspace}
+$i:Y\to X$ を閉解析部分空間とする。{\it 消滅イデアル}
+$\mathcal J_Y\subset\mathcal O_X$ の茎は
+$$
+(\mathcal J_Y)_x=
+\{f\in\mathcal O_{X,x}\mid f|_Y=0\text{ が }x\text{ の近傍で成り立つ}\}.
+$$
+標準同型
+$$
+\mathcal O_X/\mathcal J_Y \longrightarrow i_*\mathcal O_Y.
+$$
+が存在する。
+\end{definition}
+
+\begin{theorem}[岡--Cartan の連接性]
+\label{theorem-oka-cartan-coherence}
+\begin{reference}
+\cite[\S 1、命題1、5--6頁]{GAGA}
+\end{reference}
+$X$ を Serre の複素解析空間とする。
+\begin{enumerate}
+\item $\mathcal O_X$-加群 $\mathcal O_X$ は連接である。
+\item $Y\subset X$ が閉解析部分空間ならば、その消滅イデアル
+$\mathcal J_Y$ は連接 $\mathcal O_X$-加群である。
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+解析的入力は岡--Cartan の定理、すなわち開集合 $\Omega\subset\mathbf C^n$ に対し、
+層 $\mathcal O_\Omega$ と $\Omega$ の任意の閉解析的部分集合の消滅イデアルが連接で
+あるという定理である。
+
+主張は $X$ 上局所的である。座標を選んで縮小し、$X=Z(\mathcal I_X)$ が
+開集合 $\Omega\subset\mathbf C^n$ の閉解析的部分集合となるようにする。
+$Y\subset X$ が閉解析的なら、さらに縮小して $Y=Z(\mathcal I_Y)$ と書き、
+$\mathcal I_X\subset\mathcal I_Y\subset\mathcal O_\Omega$ とする。このとき
+$$
+\mathcal O_X=\mathcal O_\Omega/\mathcal I_X,
+\qquad
+\mathcal J_Y=\mathcal I_Y/\mathcal I_X.
+$$
+が成り立つ。岡--Cartan の入力により $\mathcal O_\Omega$、$\mathcal I_X$、
+$\mathcal I_Y$ は連接である。ここで『加群の層』の補題
+\ref{modules-lemma-coherent-abelian} および
+\ref{modules-lemma-coherent-change-rings} から (1)、(2) が従う。
+\end{proof}
+
+\begin{remark}[例]
+\label{remark-examples-coherent-analytic-modules}
+正則ベクトル束の正則切断の層は有限局所自由であり、したがって定理
+\ref{theorem-oka-cartan-coherence} により連接である。『層係数コホモロジー』補題
+\ref{cohomology-lemma-holomorphic-vector-bundles-locally-free-analytic-modules}
+も参照されたい。Serre はさらに Cartan セミナーに由来する保型関数の芽の層を
+連接な例として記しているが、ここで引用した解析的構成は上の基礎的主張には不要である。
+\end{remark}
+
+
+\section{局所解析代数}
+\label{section-local-analytic-algebras}
+
+\begin{lemma}
+\label{lemma-local-analytic-algebra}
+\begin{reference}
+\cite[\S 1、第4項、6頁]{GAGA}
+\end{reference}
+$X$ を Serre の複素解析空間、$x\in X$ とする。ある整数 $n\geq 0$ と根基イデアル
+$\mathfrak a\subset\mathbf C\{z_1,\ldots,z_n\}$ が存在し、局所 $\mathbf C$-代数として
+$$
+\mathcal O_{X,x}\cong
+\mathbf C\{z_1,\ldots,z_n\}/\mathfrak a
+$$
+が成り立つ。その極大イデアルは
+$x$ で消える芽からなり、剰余体は $\mathbf C$ であり、被約かつ Noetherian である。
+\end{lemma}
+
+\begin{proof}
+$x$ における解析座標を選び、その像の点を原点へ平行移動する。定義
+\ref{definition-analytic-subset} から表示した商が得られる。このイデアルは、ある集合上
+消える芽のイデアルなので根基的である。剰余体と被約性に関する主張も補題
+\ref{lemma-analytic-subset-basic-properties} から従う。残る解析的入力は
+$\mathbf C\{z_1,\ldots,z_n\}$ が Noetherian であるという Weierstrass の定理である。
+すると『代数学』補題 \ref{algebra-lemma-Noetherian-permanence} により商も
+Noetherian である。
+\end{proof}
+
+\begin{lemma}
+\label{lemma-analytic-germ-local-algebra}
+\begin{reference}
+\cite[\S 1、第4項、6頁]{GAGA}
+\end{reference}
+局所解析 $\mathbf C$-代数 $\mathcal O_{X,x}$ は、Serre の複素解析空間 $X$ の
+$x$ における芽を決定する。より正確には、局所解析 $\mathbf C$-代数の同型
+$\mathcal O_{X,x}\cong\mathcal O_{Y,y}$ は、解析的芽の同型
+$(X,x)\cong(Y,y)$ により反変的に誘導される。
+\end{lemma}
+
+\begin{proof}
+両方の局所代数を収束冪級数環の商として表示する。局所準同型による座標の芽の像は
+収束する芽なので、正則写像の芽を定める。関係式により、その像は所望の解析的芽に
+含まれる。逆の代数準同型に同じ構成を施すと、互いに逆な正則写像の芽が得られる。
+\end{proof}
+
+\begin{lemma}
+\label{lemma-simple-point-regular-local}
+\begin{reference}
+\cite[\S 1、第4項、6頁]{GAGA}
+\end{reference}
+$X$ を Serre の複素解析空間、$x\in X$ とする。$n\geq 0$ に対し、次は同値である。
+\begin{enumerate}
+\item 芽 $(X,x)$ は $(\mathbf C^n,0)$ と同型である。
+\item $\mathcal O_{X,x}\cong\mathbf C\{z_1,\ldots,z_n\}$ である。
+\item $\mathcal O_{X,x}$ は『代数学』定義
+\ref{algebra-definition-regular-local} の意味で次元 $n$ の正則局所環である。
+\end{enumerate}
+このような $x$ を {\it 次元 $n$ の単純点}という。$X$ のすべての点が単純ならば、
+$X$ を {\it 解析多様体}という。
+\end{lemma}
+
+\begin{proof}
+(1) と (2) の同値性は補題 \ref{lemma-analytic-germ-local-algebra} から従う。
+(2) $\Rightarrow$ (3) は収束冪級数環の標準的な次元計算である。逆向きは正則解析
+局所代数定理であり、解析的逆関数定理から証明される（同値には
+$\mathfrak m_x/\mathfrak m_x^2$ の基底を選び、解析的陰関数定理を適用する）。
+この解析定理は、本基礎部分における明示的な外部依存事項である。
+\end{proof}
+
+\begin{lemma}
+\label{lemma-components-dimension-analytic-space}
+\begin{reference}
+\cite[\S 1、第4項、6--7頁]{GAGA}
+\end{reference}
+$X$ を Serre の複素解析空間、$x\in X$ とする。
+\begin{enumerate}
+\item 芽 $(X,x)$ の既約成分 $X_i$ は $\mathcal O_{X,x}$ の有限個の極小素イデアル
+$\mathfrak p_i$ と対応し、
+$$
+0=\bigcap_i\mathfrak p_i,
+\qquad
+\mathcal O_{X_i,x}=\mathcal O_{X,x}/\mathfrak p_i.
+$$
+\item $x$ における $X$ の解析次元（局所位相次元の半分）は $X_i$ の次元の上限であり、
+$\mathcal O_{X,x}$ の Krull 次元に等しい。
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+被約性と Noetherian 性は補題 \ref{lemma-local-analytic-algebra} による。
+極小素イデアルの有限性と共通部分に関する代数的主張は『代数学』の補題
+\ref{algebra-lemma-Noetherian-irreducible-components} および
+\ref{algebra-lemma-Zariski-topology} から従う。解析的成分との対応には局所解析的
+零点定理を用いる。(2) については、解析的正規化・径数定理により、解析次元 $r$ の
+既約解析局所代数は $\mathbf C\{z_1,\ldots,z_r\}$ 上有限である。有限整拡大の下での
+次元不変性により Krull 次元は $r$ となる。解析的零点定理と局所径数定理は明示的な
+外部依存事項であり、代数的な Stacks の結果だけでは得られない。
+\end{proof}
+
+
+
+
+% GAGA 原典単位 gaga:no:5 から gaga:lemma:3 までを扱う継続断片。
+% 基礎部分候補にただ一つある末尾の \input{chapters} の直前へ挿入する。
+%
+% 約束：この断片では C 上の代数多様体とは C 上有限型の被約分離スキームを意味し、
+% 既約とは限らない。
+
+\section{代数多様体の解析化}
+\label{section-analytification}
+
+\noindent
+本節を通じ、{\it $\mathbf C$ 上の代数多様体}とは $\mathbf C$ 上有限型の被約分離
+スキームを意味し、既約とは限らない。その古典点とは閉点、同値には
+$\mathbf C$-点である。この約束は \cite[\S 2、第5項]{GAGA} の約束をスキーム論的に
+翻訳したものであり、第 \ref{section-serre-analytic-spaces} 節の被約解析空間と
+整合する。
+
+\begin{lemma}
+\label{lemma-algebraic-charts-analytic}
+$U \subset \mathbf C^n$ および $U' \subset \mathbf C^{n'}$ を Zariski 局所閉な
+被約部分集合とする。
+\begin{enumerate}
+\item $\mathbf C^n$ 上の Zariski 位相は通常の位相より粗い。
+\item $U$ は、誘導される被約構造とともに Serre の複素解析空間である。
+\item 正則写像 $f : U \to U'$ は正則である。
+\item 双正則同型 $U \to U'$ は解析同型である。
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Zariski 閉集合は多項式の共通零点集合であり、多項式は連続かつ正則である。
+これで (1) と、閉部分集合の場合の (2) が従う。局所閉部分集合はその閉包の開集合
+なので、制限により一般の場合も従う。Zariski 開集合上の正則関数は局所的に、零に
+ならない多項式 $h$ を分母とする多項式の商 $g/h$ である。したがって正則である。
+これを座標ごとに適用して (3) を得る。(3) を $f$ と $f^{-1}$ に適用して (4) を得る。
+\end{proof}
+
+\begin{proposition}
+\label{proposition-analytification}
+$X$ を $\mathbf C$ 上の代数多様体とする。次の性質をもつ Serre の複素解析空間
+$X^{an}$ が一意に存在する。すなわち、任意の代数座標
+$$
+\varphi : V \longrightarrow U \subset \mathbf C^n
+$$
+で、Zariski 開集合 $V \subset X$ から Zariski 局所閉な被約部分集合へのものに対し、
+$V$ は $X^{an}$ の開集合であり、$\varphi$ は解析同型である。
+
+この構成は関手的である。各射 $f : X \to Y$ は正則写像
+$f^{an} : X^{an} \to Y^{an}$ を誘導し、局所環付き空間の標準射
+$$
+a_X : (X^{an}, \mathcal O_{X^{an}}) \longrightarrow
+(X, \mathcal O_X)
+$$
+が存在する。その点上の写像は古典点を対応するスキームの閉点へ送り、構造層上の
+写像は正則関数を、同じ関数を正則関数とみなしたものへ送る。
+\end{proposition}
+
+\begin{proof}
+$X$ を有限個の代数座標 $V_i \to U_i$ で被覆し、$U_i$ の解析構造を $V_i$ へ
+移す。$V_i \cap V_j$ 上の座標変換とその逆は補題
+\ref{lemma-algebraic-charts-analytic} により正則であり、同じ補題により重なりは通常の
+位相で開である。コサイクル条件は代数座標から受け継がれる。したがって『層』補題
+\ref{sheaves-lemma-glue-sheaves-structures} により、層と局所環付き空間を貼り合わせられる。
+
+「貼り合わせ」という語の中に隠さず、Hausdorff 公理を確認する必要がある。
+貼り合わせた点集合の対角線を各 $V_i \times V_j$ へ逆像すると、重なり上の代数的
+同一視のグラフになる。$X$ は分離的なので、このグラフは Zariski 閉であり、補題
+\ref{lemma-algebraic-charts-analytic} により通常の位相でも閉である。これらの積は
+開被覆をなすから対角線は閉であり、貼り合わせた空間は Hausdorff である。座標が
+$X$ を被覆し、その位相と構造層をともに決定するので一意性も従う。
+
+射 $f : X \to Y$ の代数座標への制限は補題
+\ref{lemma-algebraic-charts-analytic} により正則であり、恒等写像および合成と整合的に
+$f^{an}$ へ貼り合わさる。通常の位相は Zariski 位相より細かいので、$a_X$ の基礎に
+ある点写像は連続である。正則関数は座標内で正則であり、茎上に誘導される写像は
+局所的である。これで主張した局所環付き空間の射が構成される。
+\end{proof}
+
+\begin{lemma}
+\label{lemma-analytification-properties}
+$X$ と $Y$ を $\mathbf C$ 上の代数多様体とする。
+\begin{enumerate}
+\item 空間 $X^{an}$ は局所コンパクト、第二可算、かつ無限遠で可算である。
+\item 標準解析同型
+$(X \times_{\mathbf C} Y)^{an} \cong X^{an} \times Y^{an}$ が存在する。
+\item $Z \subset X$ が Zariski 局所閉な被約部分多様体ならば、$Z^{an}$ は
+$X^{an}$ によって $Z(\mathbf C)$ 上に誘導される被約解析部分空間である。
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+$\mathbf C^n$ の Zariski 局所閉部分集合は局所コンパクトかつ第二可算であり、
+可算個のコンパクト部分集合の和である。同じ性質は有限個の開座標領域の和へ移るので
+(1) が従う。代数座標の積は代数座標であり、複素アフィン空間の部分集合の積上の
+通常の位相は積位相である。命題 \ref{proposition-analytification} の一意性から (2) が
+従う。$X$ の座標を $Z$ へ制限し、補題 \ref{lemma-algebraic-charts-analytic} を用いて
+(3) を得る。
+\end{proof}
+
+\section{解析化の局所代数}
+\label{section-local-comparison}
+
+\noindent
+$x \in X(\mathbf C)$ とする。$a_X$ が誘導する局所準同型を
+$$
+\theta_x : \mathcal O_{X,x} \longrightarrow \mathcal O_{X^{an},x}
+$$
+と書く。両環は剰余体 $\mathbf C$ をもつ Noetherian 局所環である。代数的な環について
+これは標準的であり、解析的な環については補題 \ref{lemma-local-analytic-algebra} による。
+
+\begin{proposition}
+\label{proposition-analytification-closed-ideal}
+$Z \subset X$ を Zariski 局所閉な被約部分多様体、$x \in Z(\mathbf C)$ とする。
+$X$ を $x$ の Zariski 近傍で置き換えて $Z$ を閉とみなす。
+$\mathcal J_{Z,x} \subset \mathcal O_{X,x}$ をその代数的イデアルとし、
+$\mathcal I_{Z^{an},x} \subset \mathcal O_{X^{an},x}$ を $Z^{an}$ 上消える正則関数の
+芽のイデアルとすれば、
+$$
+\mathcal I_{Z^{an},x} =
+\mathcal J_{Z,x}\mathcal O_{X^{an},x}.
+$$
+したがって
+$$
+\mathcal O_{Z^{an},x} \cong
+\mathcal O_{X^{an},x}/
+\mathcal J_{Z,x}\mathcal O_{X^{an},x}.
+$$
+\end{proposition}
+
+\begin{proof}
+まず $X=\mathbf A^n_{\mathbf C}$ とし、$x$ を原点へ平行移動する。次のように置く。
+$$
+R=\mathbf C[z_1,\ldots,z_n]_{(z_1,\ldots,z_n)},
+\qquad
+H=\mathbf C\{z_1,\ldots,z_n\}.
+$$
+$J \subset R$ を $Z$ の根基イデアルとする。局所解析的零点定理によれば、$Z$ 上消える
+正則関数の芽のイデアルは $\sqrt{JH}$ である。$JH$ が既に根基的であることを示す。
+
+Taylor 準同型は $R$ と $H$ の極大イデアル進完備化をともに
+$\mathbf C[[z_1,\ldots,z_n]]$ と同一視する。『代数学』補題
+\ref{algebra-lemma-completion-tensor} により完備化は有限加群上完全なので、$H/JH$ の
+完備化は
+$$
+\mathbf C[[z_1,\ldots,z_n]]/
+J\mathbf C[[z_1,\ldots,z_n]],
+$$
+であり、これは $R/J$ の完備化でもある。体 $\mathbf C$ は『発展代数学』命題
+\ref{more-algebra-proposition-ubiquity-excellent} により優秀であり、$R/J$ は有限型
+$\mathbf C$-代数の局所化なので『発展代数学』補題
+\ref{more-algebra-lemma-finite-type-over-excellent} により優秀である。したがって
+『発展代数学』補題 \ref{more-algebra-lemma-quasi-excellent-nagata} により Nagata であり、
+その完備化は『発展代数学』補題 \ref{more-algebra-lemma-completion-reduced} により被約で
+ある。ゆえに $H/JH$ の完備化は被約である。Krull の共通部分定理、すなわち
+『代数学』補題 \ref{algebra-lemma-intersect-powers-ideal-module-zero} により $H/JH$ は
+その完備化へ埋め込まれるので、$H/JH$ は被約で $JH=\sqrt{JH}$ である。ここで解析的
+零点定理から、アフィン空間における所望の等式が得られる。
+
+一般の $X$ については、$X$ と $Z$ を一つのアフィン空間の被約局所閉部分集合として
+実現する代数座標内で考える。それらの周囲イデアルにアフィンの場合の結果を適用し、
+商を取る。これで表示した二つの式が得られる。
+\end{proof}
+
+\begin{theorem}
+\label{theorem-analytification-completed-local-rings}
+$\mathbf C$ 上の任意の代数多様体 $X$ と任意の $x \in X(\mathbf C)$ に対し、
+局所準同型 $\theta_x$ は次の完備局所環の同型を誘導する。
+$$
+\widehat{\theta}_x :
+\widehat{\mathcal O}_{X,x} \xrightarrow{\ \sim\ }
+\widehat{\mathcal O}_{X^{an},x}.
+$$
+特に $\theta_x$ は単射である。
+\end{theorem}
+
+\begin{proof}
+アフィン空間の原点では写像は
+$$
+\mathbf C[z_1,\ldots,z_n]_{(z_1,\ldots,z_n)}
+\longrightarrow \mathbf C\{z_1,\ldots,z_n\},
+$$
+であり、Taylor 展開と切り捨てにより、両方の極大イデアル進完備化は標準的に
+$\mathbf C[[z_1,\ldots,z_n]]$ となる。アフィン空間内の局所閉な被約 $X$ について、
+命題 \ref{proposition-analytification-closed-ideal} はその解析局所環を、拡大した代数的
+イデアルによる商と同一視する。有限加群上の完備化の完全性、すなわち『代数学』補題
+\ref{algebra-lemma-completion-tensor} により、両完備化は形式冪級数環の同じ商と同一視
+される。主張は局所的なので、座標により一般の場合が従う。最後に『代数学』補題
+\ref{algebra-lemma-intersect-powers-ideal-module-zero} により $\mathcal O_{X,x}$ はその
+完備化へ埋め込まれ、最後の主張が従う。
+\end{proof}
+
+\begin{theorem}
+\label{theorem-analytification-local-faithfully-flat}
+局所準同型
+$$
+\theta_x : \mathcal O_{X,x} \longrightarrow \mathcal O_{X^{an},x}
+$$
+は忠実平坦である。Serre の用語では、
+$(\mathcal O_{X,x},\mathcal O_{X^{an},x})$ は平坦対である。すなわち商
+$\mathcal O_{X^{an},x}/\mathcal O_{X,x}$ は $\mathcal O_{X,x}$ 上平坦であり、
+任意のイデアル $I \subset \mathcal O_{X,x}$ に対し
+$$
+I\mathcal O_{X^{an},x}\cap\mathcal O_{X,x}=I.
+$$
+\end{theorem}
+
+\begin{proof}
+定理 \ref{theorem-analytification-completed-local-rings} により完備化上の写像は同型で
+あり、したがって平坦である。『発展代数学』補題
+\ref{more-algebra-lemma-flat-completion} により $\theta_x$ は平坦で、『代数学』補題
+\ref{algebra-lemma-local-flat-ff} によりこの局所平坦写像は忠実平坦である。縮約公式は
+『代数学』補題 \ref{algebra-lemma-faithfully-flat-universally-injective} である。
+完全列 $0\to\mathcal O_{X,x}\to\mathcal O_{X^{an},x}$ をテンソルした後の普遍単射性に
+より、表示した商が平坦であることが分かる。これはまさに平坦対の主張である。
+\end{proof}
+
+\begin{lemma}
+\label{lemma-analytification-local-dimension}
+任意の $x \in X(\mathbf C)$ に対し、
+$$
+\dim(\mathcal O_{X,x})=\dim(\mathcal O_{X^{an},x}).
+$$
+\end{lemma}
+
+\begin{proof}
+各環は『発展代数学』補題 \ref{more-algebra-lemma-completion-dimension} によりその完備化と
+同じ次元をもち、二つの完備化は定理
+\ref{theorem-analytification-completed-local-rings} により同型である。
+\end{proof}
+
+\begin{lemma}
+\label{lemma-analytification-dimension}
+$X$ が次元 $r$ の既約多様体ならば、$X^{an}$ は各点で解析次元 $r$ をもつ。
+\end{lemma}
+
+\begin{proof}
+閉点 $x$ に対し、『多様体』補題 \ref{varieties-lemma-dimension-locally-algebraic} の
+項 \ref{varieties-item-dimension-at-closed-point} および
+\ref{varieties-item-dimension-irreducible} により
+$$
+\dim(\mathcal O_{X,x})=r.
+$$
+が成り立つ。補題 \ref{lemma-analytification-local-dimension}、続いて解析次元を解析局所環の
+Krull 次元と同一視する補題 \ref{lemma-components-dimension-analytic-space} を適用する。
+\end{proof}
+
+\section{古典位相と Zariski 位相}
+\label{section-classical-zariski-topologies}
+
+\begin{lemma}
+\label{lemma-zariski-dense-open-analytically-dense}
+$U \subset X$ を Zariski 開かつ Zariski 稠密とする。このとき $U^{an}$ は
+$X^{an}$ で稠密である。
+\end{lemma}
+
+\begin{proof}
+$Z=X\setminus U$ に誘導される被約構造を入れる。ある点 $x \in X^{an}$ が
+$U^{an}$ の閉包に含まれないとすれば、$Z^{an}$ は $x$ の解析近傍を含む。そのため
+$x$ における局所消滅イデアルは零となる。命題
+\ref{proposition-analytification-closed-ideal} と定理
+\ref{theorem-analytification-completed-local-rings} の単射性から
+$\mathcal J_{Z,x}=0$ が従う。すると $Z$ は $x$ の空でない Zariski 近傍上で $X$ と
+一致し、$U$ の Zariski 稠密性に反する。
+\end{proof}
+
+\begin{proposition}
+\label{proposition-proper-if-and-only-if-compact-analytification}
+$\mathbf C$ 上の代数多様体 $X$ が $\mathbf C$ 上固有であるための必要十分条件は、
+位相空間 $X^{an}$ がコンパクトであることである。
+\end{proposition}
+
+\begin{proof}
+『スキームの極限』補題 \ref{limits-lemma-chow-finite-type} の精密な形の Chow の補題を
+適用する。そこに続く注意で許されているように始域をその被約化で置き換えると、固有
+全射 $\pi : U \to X$ と埋入 $U \to \mathbf P^n_{\mathbf C}$ が得られる。
+$Y$ を $\mathbf P^n_{\mathbf C}$ における $U$ の被約閉包とする。このとき $Y$ は射影的で、
+$U$ は $Y$ で Zariski 開かつ稠密である。さらに $\pi$ のグラフは $X\times Y$ で閉である。
+実際、$X$ 上でこれは固有 $X$-スキーム $U$ から分離 $X$-スキーム $X\times Y$ への射の
+グラフである。
+
+$X$ が固有なら $U$ は $\mathbf C$ 上固有である。射影空間への埋入は固有、したがって
+閉なので $U=Y$ である。$Y^{an}$ はコンパクト Hausdorff 空間
+$\mathbf P^n(\mathbf C)$ の閉部分集合ゆえコンパクトである。連続全射
+$\pi^{an}:Y^{an}\to X^{an}$ により $X^{an}$ もコンパクトである。
+
+逆に $X^{an}$ がコンパクトとする。このとき $X^{an}\times Y^{an}$ はコンパクトで、
+閉グラフの解析化は補題 \ref{lemma-analytification-properties} によりこの積の閉集合である。
+その $Y^{an}$ への射影は $U^{an}$ なので、$U^{an}$ はコンパクトであり、したがって
+Hausdorff 空間 $Y^{an}$ で閉である。補題
+\ref{lemma-zariski-dense-open-analytically-dense} により稠密でもあるから
+$U^{an}=Y^{an}$ である。有限型 $\mathbf C$-スキームの空でない閉部分集合は閉
+$\mathbf C$-点をもつので $U=Y$ である。いま射影多様体 $Y$ は固有で $X$ へ全射的に
+写るから、『スキームの射』補題 \ref{morphisms-lemma-image-proper-is-proper} により
+$X$ は固有である。
+\end{proof}
+
+\begin{lemma}
+\label{lemma-dense-image-contains-open}
+$f : X \to Y$ を $\mathbf C$ 上の代数多様体の射とする。$f(X)$ が $Y$ で Zariski
+稠密ならば、$f(X)$ は $Y$ の Zariski 開稠密部分集合を含む。
+\end{lemma}
+
+\begin{proof}
+像は『スキームの射』補題 \ref{morphisms-lemma-chevalley} により構成可能である。
+『位相』補題 \ref{topology-lemma-dense-in-constructible} により、稠密な構成可能部分集合は
+稠密開部分集合を含む。
+\end{proof}
+
+\begin{proposition}
+\label{proposition-image-closure}
+$f : X \to Y$ を代数多様体の射とする。$Y^{an}$ における $f(X(\mathbf C))$ の閉包は、
+$Y$ における $f(X)$ の Zariski 閉包の古典点集合である。
+\end{proposition}
+
+\begin{proof}
+$T$ を $f(X)$ の被約 Zariski 閉包とする。補題
+\ref{lemma-dense-image-contains-open} を $X\to T$ に適用すると、$f(X)$ に含まれる
+Zariski 開稠密部分集合 $V\subset T$ が得られる。補題
+\ref{lemma-zariski-dense-open-analytically-dense} により $V^{an}$ は $T^{an}$ で稠密
+なので、$T^{an}$ は $f(X)$ の解析的閉包に含まれる。逆の包含は、補題
+\ref{lemma-analytification-properties} により $T^{an}$ が $Y^{an}$ で閉であることから
+従う。
+\end{proof}
+
+\section{正則性の解析的判定法}
+\label{section-analytic-regularity}
+
+\begin{proposition}
+\label{proposition-algebraic-graph-holomorphic-regular}
+$X$ と $Y$ を代数多様体とし、$f : X^{an}\to Y^{an}$ を正則とする。そのグラフが
+Zariski 局所閉な被約部分多様体 $T\subset X\times_{\mathbf C}Y$ の古典点集合ならば、
+$f$ は射 $X\to Y$ により誘導される。
+\end{proposition}
+
+\begin{proof}
+第一射影 $p:T\to X$ は射であり、古典点上全単射である。その逆
+$x\mapsto(x,f(x))$ は正則である。したがって補題
+\ref{lemma-analytification-properties} により $p^{an}$ は解析同型である。下の命題
+\ref{proposition-analytic-isomorphism-algebraic} により $p$ は同型である。ゆえに
+$f=\operatorname{pr}_Y\circ p^{-1}$ は正則写像である。
+\end{proof}
+
+\begin{proposition}
+\label{proposition-analytic-isomorphism-algebraic}
+$p:T\to X$ を古典点上全単射な代数多様体の射とする。
+$p^{an}:T^{an}\to X^{an}$ が解析同型ならば、$p$ は同型である。
+\end{proposition}
+
+\begin{proof}
+まず $p$ は古典点上の Zariski 位相に関する同相である。実際、$F\subset T$ が
+Zariski 閉なら $F^{an}$ は $T^{an}$ で閉であり、解析同相によるその像は $X^{an}$
+で閉である。命題 \ref{proposition-image-closure} を $F\to X$ に適用すれば、この像は
+Zariski 閉である。
+
+『多様体』補題 \ref{varieties-lemma-locally-finite-type-Jacobson} により両スキームは
+Jacobson である。したがって閉部分集合はその閉点により決まる。既約閉部分集合から
+その一意な生成点へ移ると（『スキーム』補題 \ref{schemes-lemma-scheme-sober}）、
+上の同相はスキームの台空間全体の同相へ一意に拡張される。
+
+$t\in T(\mathbf C)$ を固定し $x=p(t)$ と置く。Zariski 同相により
+$$
+A=\mathcal O_{X,x}\longrightarrow A'=\mathcal O_{T,t}
+$$
+は単射である。解析同型は $B=\mathcal O_{X^{an},x}$ と
+$\mathcal O_{T^{an},t}$ を同一視する。定理
+\ref{theorem-analytification-local-faithfully-flat} により $A$ と $A'$ はともにこの共通環
+$B$ へ埋め込まれる。
+
+$x$ を通る既約成分は $t$ を通る既約成分と対応する。それらの極小素イデアルを
+$\mathfrak p_i\subset A$ および $\mathfrak p'_i\subset A'$ と書き、
+$\mathfrak p'_i\cap A=\mathfrak p_i$ とする。次のように置く。
+$$
+K_i=\operatorname{Frac}(A/\mathfrak p_i),
+\qquad
+K'_i=\operatorname{Frac}(A'/\mathfrak p'_i).
+$$
+対応する既約多様体は同相で同じ次元をもつため、$K'_i/K_i$ は有限拡大である。その次数が
+1 であることを見るため、『スキームの射』補題 \ref{morphisms-lemma-finite-degree} と
+一般平坦性、すなわち『スキームの射』命題
+\ref{morphisms-proposition-generic-flatness} を用いて、成分写像が有限局所自由となるような
+空でない開集合へ終域を縮小する。基礎体の標数は零なので $K'_i/K_i$ は分離的であり、
+もう一度縮小すれば写像は次数 $[K'_i:K_i]$ の有限 étale 写像となる。その各閉ファイバーは
+この個数の被約 $\mathbf C$-点からなる。$p$ の全単射性により $[K'_i:K_i]=1$ である。
+
+$S$ を $A$ における極小素イデアルの和集合の補集合とし、$S'$ も $A'$ について同様に
+定める。下の補題 \ref{lemma-total-fractions-reduced} により
+$$
+A_S=\prod_iK_i=\prod_iK'_i=A'_{S'}.
+$$
+$h\in A'$ なら、この共通全商環で $g\in A$、$s\in S$ を用いて $h=g/s$ と書ける。
+したがって $g=sh\in sB$ である。忠実平坦性と『代数学』補題
+\ref{algebra-lemma-faithfully-flat-universally-injective} により $sB\cap A=sA$ なので、
+ある $a\in A$ に対し $g=sa$ である。ゆえに $s(h-a)=0$ となる。$s$ は被約環 $A'$ の
+どの極小素イデアルにも属さないので、『代数学』補題
+\ref{algebra-lemma-reduced-ring-sub-product-fields} により非零因子である。したがって
+$h=a$、$A'=A$ である。
+
+各閉点で局所写像が同型であることを示した。したがって『Étale 射』補題
+\ref{etale-lemma-characterize-etale-Noetherian} により $p$ は各閉点で étale である。
+étale 軌跡は開であり、その閉補集合が空でなければ、$T$ が Jacobson なので閉点を含む。
+ゆえに $p$ は至る所 étale である。
+
+最後に、$T$ の任意の点の被約閉包への $p$ の制限について、上の有限次数の議論を繰り返す。
+Zariski 同相はこの閉包をその像の閉包と同一視し、同じ議論により、それらの関数体の誘導
+拡大、すなわち二つの生成点における剰余体拡大の次数は1である。したがって $p$ は点上
+単射で剰余体拡大は自明であるから、『スキームの射』補題
+\ref{morphisms-lemma-universally-injective} により根基的である。étale かつ根基的な射は
+『Étale 射』定理 \ref{etale-theorem-etale-radicial-open} により開埋入である。$p$ は全射でも
+あるから同型である。
+\end{proof}
+
+\begin{lemma}
+\label{lemma-total-fractions-reduced}
+$A$ を有限個の極小素イデアル $\mathfrak p_1,\ldots,\mathfrak p_r$ をもつ被約環とする。
+$S$ をどの $\mathfrak p_i$ にも属さない元の集合とし、
+$K_i=\operatorname{Frac}(A/\mathfrak p_i)$ と置く。このとき
+$$
+A_S=\prod_{i=1}^rK_i.
+$$
+\end{lemma}
+
+\begin{proof}
+『代数学』補題 \ref{algebra-lemma-reduced-ring-sub-product-fields} によれば、$S$ は
+ちょうど非零因子の集合であり、$A_{\mathfrak p_i}=K_i$ である。すると『代数学』補題
+\ref{algebra-lemma-total-ring-fractions-no-embedded-points} は全商環 $A_S$ を表示した積と
+同一視する。
+\end{proof}
+
+% External analytic input ledger for this continuation:
+% (1) the local analytic Nullstellensatz, used exactly once in the proof of
+%     Proposition \ref{proposition-analytification-closed-ideal};
+% (2) Taylor expansion and the completion identity
+%     \widehat{\mathbf C\{z_1,...,z_n\}}=\mathbf C[[z_1,...,z_n]], used in
+%     the two local-comparison proofs;
+% (3) compactness and Hausdorffness of complex projective space, used in the
+%     proof of Proposition
+%     \ref{proposition-proper-if-and-only-if-compact-analytification}.
+% Oka--Cartan coherence and Weierstrass Noetherianity were already stated as
+% explicit dependencies in the foundation block; no properness-comparison,
+% identity, normalization, or unmentioned analytic theorem is invoked here.
+
+% Continuation fragment for GAGA source nos. 9--12. Insert after the
+% analytification fragment and before the proof fragment for nos. 13--17.
+
+\section{加群の解析化}
+\label{section-analytification-modules}
+
+\begin{definition}
+\label{definition-analytification-module}
+\begin{reference}
+\cite[\S 3、第9項、定義2]{GAGA}
+\end{reference}
+$X$ を $\mathbf C$ 上の代数多様体とし、$a_X:X^{\mathrm{an}}\to X$ を命題
+\ref{proposition-analytification} の局所環付き空間の標準射とする。
+$\mathcal O_X$-加群 $\mathcal F$ の {解析化}とは
+$$
+\mathcal F^{\mathrm{an}}=a_X^*\mathcal F
+=\mathcal O_{X^{\mathrm{an}}}
+\otimes_{a_X^{-1}\mathcal O_X}a_X^{-1}\mathcal F.
+$$
+$a_X^{-1}\mathcal O_X$-加群の標準写像
+$$
+\eta_{\mathcal F}:a_X^{-1}\mathcal F\longrightarrow
+\mathcal F^{\mathrm{an}},\qquad s\longmapsto1\otimes s.
+$$
+が存在する。各 $\mathcal O_X$-線形写像 $\mathcal F\to\mathcal G$ は関手的に
+$\mathcal O_{X^{\mathrm{an}}}$-線形写像
+$\mathcal F^{\mathrm{an}}\to\mathcal G^{\mathrm{an}}$ を誘導し、標準的に
+$\mathcal O_X^{\mathrm{an}}=\mathcal O_{X^{\mathrm{an}}}$ である。
+\end{definition}
+
+\begin{lemma}
+\label{lemma-analytification-module-stalks}
+$x\in X(\mathbf C)=X^{\mathrm{an}}$ とする。標準的な同一視
+$$
+(\mathcal F^{\mathrm{an}})_x
+=\mathcal F_x\otimes_{\mathcal O_{X,x}}
+\mathcal O_{X^{\mathrm{an}},x}
+$$
+があり、この同一視の下で $(\eta_{\mathcal F})_x$ は写像 $m\mapsto1\otimes m$ である。
+\end{lemma}
+
+\begin{proof}
+茎は逆像およびテンソル積と可換である。$x$ は閉点なので
+$(a_X^{-1}\mathcal F)_x=\mathcal F_x$ である。表示した同一視と
+$\eta_{\mathcal F}$ の記述は定義 \ref{definition-analytification-module} から直ちに従う。
+\end{proof}
+
+\begin{lemma}
+\label{lemma-analytification-exact-faithful-coherent}
+\begin{reference}
+\cite[\S 3、第9項、命題10]{GAGA}
+\end{reference}
+$X$ を $\mathbf C$ 上の代数多様体とする。
+\begin{enumerate}
+\item $\mathcal O_X$-加群上の関手 $\mathcal F\mapsto\mathcal F^{\mathrm{an}}$ は完全である。
+\item 任意の $\mathcal F$ に対し、写像 $\eta_{\mathcal F}:a_X^{-1}\mathcal F\to
+\mathcal F^{\mathrm{an}}$ は単射である。
+\item $\mathcal F$ が連接ならば、$\mathcal F^{\mathrm{an}}$ は連接解析加群である。
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+補題 \ref{lemma-analytification-module-stalks} の茎の公式と、定理
+\ref{theorem-analytification-local-faithfully-flat} の忠実平坦性から (1) が従う。
+『加群の層』補題 \ref{modules-lemma-pullback-flat} も参照されたい。同じ茎の公式と
+『代数学』補題 \ref{algebra-lemma-faithfully-flat-universally-injective} から (2) が従う。
+
+(3) について、局所 Noetherian スキーム $X$ 上の連接加群は局所有限表示である。
+引き戻しは有限表示を保つ。解析的構造層は定理
+\ref{theorem-oka-cartan-coherence} により連接であるから、『加群の層』補題
+\ref{modules-lemma-coherent-structure-sheaf} により有限表示解析加群は連接である。
+\end{proof}
+
+\begin{remark}[イデアルの解析化]
+\label{remark-analytification-ideal-sheaf}
+$\mathcal J\subset\mathcal O_X$ が準連接イデアルならば、完全性により
+$\mathcal J^{\mathrm{an}}$ は $a_X^{-1}\mathcal J$ の像が生成する
+$\mathcal O_{X^{\mathrm{an}}}$ のイデアルと同一視される。被約閉部分多様体のイデアル
+については、これは命題 \ref{proposition-analytification-closed-ideal} でもある。
+\end{remark}
+
+
+\section{閉埋入と解析化}
+\label{section-analytification-closed-immersions}
+
+\begin{lemma}
+\label{lemma-analytification-pushforward-closed-immersion}
+\begin{reference}
+\cite[\S 3、第10項、命題11]{GAGA}
+\end{reference}
+$i:Z\to X$ を $\mathbf C$ 上の代数多様体の閉埋入とし、$\mathcal F$ を連接
+$\mathcal O_Z$-加群とする。標準同型
+$$
+(i_*\mathcal F)^{\mathrm{an}}
+\longrightarrow i^{\mathrm{an}}_*(\mathcal F^{\mathrm{an}}).
+$$
+が存在する。
+\end{lemma}
+
+\begin{proof}
+可換な解析化の正方形と随伴から標準写像が得られる。両辺は $Z^{\mathrm{an}}$ の外で
+消える。$z\in Z(\mathbf C)$ において始域の茎は
+$$
+\mathcal F_z\otimes_{\mathcal O_{X,z}}
+\mathcal O_{X^{\mathrm{an}},z},
+$$
+であり、一方、終域の茎は
+$$
+\mathcal F_z\otimes_{\mathcal O_{Z,z}}
+\mathcal O_{Z^{\mathrm{an}},z}.
+$$
+命題 \ref{proposition-analytification-closed-ideal} により
+$$
+\mathcal O_{Z^{\mathrm{an}},z}
+=\mathcal O_{Z,z}\otimes_{\mathcal O_{X,z}}
+\mathcal O_{X^{\mathrm{an}},z}.
+$$
+テンソル積の結合則により二つの茎は同一視され、この同一視は標準写像の茎である。
+\end{proof}
+
+
+\section{コホモロジー比較写像}
+\label{section-analytification-cohomology-map}
+
+\begin{definition}[コホモロジー比較写像]
+\label{construction-analytification-cohomology-map}
+\begin{reference}
+\cite[\S 3、第11項]{GAGA}
+\end{reference}
+$\mathcal F$ を $\mathcal O_X$-加群とする。$a_X^*$ の完全性と導来随伴の単位から
+$$
+\mathcal F\longrightarrow Ra_{X,*}a_X^*\mathcal F.
+$$
+導来大域切断を適用し、
+$$
+R\Gamma(X,Ra_{X,*}\mathcal G)
+=R\Gamma(X^{\mathrm{an}},\mathcal G),
+$$
+を用いると、標準写像
+$$
+\epsilon^q_{\mathcal F}:
+H^q(X,\mathcal F)\longrightarrow
+H^q(X^{\mathrm{an}},\mathcal F^{\mathrm{an}}),
+\qquad q\geq0.
+$$
+を得る。$q=0$ のとき、これは切断 $s$ を $1\otimes s$ へ送る。したがって Zariski
+被覆とその解析化から得られる Serre の写像と一致する。
+\end{definition}
+
+\begin{lemma}
+\label{lemma-analytification-cohomology-map-functorial}
+写像 $\epsilon^q_{\mathcal F}$ は $\mathcal F$ について自然である。
+$\mathcal O_X$-加群の任意の短完全列に対し、これらは代数的長完全コホモロジー列から
+解析的長完全コホモロジー列への射をなす。特に連結写像と可換である。
+\end{lemma}
+
+\begin{proof}
+導来随伴の単位は自然変換である。補題
+\ref{lemma-analytification-exact-faithful-coherent} により解析化は完全なので、短完全列を
+短完全列へ送る。対応する完全三角形の自然性により、主張した長完全列の射が得られる。
+\end{proof}
+
+
+\section{GAGA 比較定理}
+\label{section-gaga-statements}
+
+\begin{theorem}[コホモロジー比較]
+\label{theorem-gaga-cohomology}
+\begin{reference}
+\cite[\S 3、第12項、定理1]{GAGA}
+\end{reference}
+$X$ を $\mathbf C$ 上の射影代数多様体、$\mathcal F$ を連接
+$\mathcal O_X$-加群とする。任意の $q\geq0$ に対し、写像
+$$
+\epsilon^q_{\mathcal F}:H^q(X,\mathcal F)
+\longrightarrow H^q(X^{\mathrm{an}},\mathcal F^{\mathrm{an}})
+$$
+は同型である。特に
+$$
+\Gamma(X,\mathcal F)\longrightarrow
+\Gamma(X^{\mathrm{an}},\mathcal F^{\mathrm{an}})
+$$
+は同型である。
+\end{theorem}
+
+\begin{theorem}[充満忠実性]
+\label{theorem-gaga-fully-faithful}
+\begin{reference}
+\cite[\S 3、第12項、定理2]{GAGA}
+\end{reference}
+$X$ を $\mathbf C$ 上の射影代数多様体とし、$\mathcal F,\mathcal G$ を連接
+$\mathcal O_X$-加群とする。解析化は次の全単射を誘導する。
+$$
+\mathop{\rm Hom}\nolimits_{\mathcal O_X}(\mathcal F,\mathcal G)
+\longrightarrow
+\mathop{\rm Hom}\nolimits_{\mathcal O_{X^{\mathrm{an}}}}
+(\mathcal F^{\mathrm{an}},\mathcal G^{\mathrm{an}}).
+$$
+\end{theorem}
+
+\begin{theorem}[本質的全射性]
+\label{theorem-gaga-essential-surjectivity}
+\begin{reference}
+\cite[\S 3、第12項、定理3]{GAGA}
+\end{reference}
+$X$ を $\mathbf C$ 上の射影代数多様体とする。任意の連接
+$\mathcal O_{X^{\mathrm{an}}}$-加群 $\mathcal M$ は、ある連接 $\mathcal O_X$-加群
+$\mathcal F$ の $\mathcal F^{\mathrm{an}}$ と同型である。加群 $\mathcal F$ は同型を除いて
+一意であり、さらに、このような二つの解析化の間の任意の解析同型は一意な代数同型から
+誘導される。
+\end{theorem}
+
+これら三定理の証明を以下の各節で与える。
+
+\begin{remark}[射影性の本質性]
+\label{remark-gaga-projectivity-essential}
+$X=\mathbf A^1_{\mathbf C}$、$\mathcal F=\mathcal O_X$ のとき、次数零の比較写像は
+$$
+\mathbf C[z]\longrightarrow
+\Gamma(\mathbf C,\mathcal O_{\mathbf C}),
+$$
+であり、その終域は整関数の環である。これは全射でない。したがって比較定理の射影性の
+仮定は単純に取り除くことができない。
+\end{remark}
+
+\begin{remark}[中間の逆像層]
+\label{remark-gaga-comparison-factorization}
+比較写像は標準的に
+$$
+H^q(X,\mathcal F)
+\longrightarrow H^q(X^{\mathrm{an}},a_X^{-1}\mathcal F)
+\longrightarrow H^q(X^{\mathrm{an}},\mathcal F^{\mathrm{an}}).
+$$
+と分解する。第一の矢印は同型とは限らない。例えば $X$ を、その解析化が $q>0$ に対して
+零でない Betti 数 $b_q$ をもつ既約射影多様体とし、$K=\mathbf C(X)$ と置く。層 $K$ は
+既約 Zariski 空間 $X$ 上フラスクなので $H^q(X,K)=0$ である。その逆像は
+$X^{\mathrm{an}}$ 上の値 $K$ の定数層であり、その次数 $q$ のコホモロジーは次元 $b_q$ の
+$K$-ベクトル空間である。これは \cite[\S 3、第12項]{GAGA} で三定理の後に記された
+障害である。
+\end{remark}
+
+% Candidate continuation for GAGA source nos. 13--17.
+% Insert after remark-gaga-comparison-factorization and before the
+% unique terminal \input{chapters} in the standalone gaga.tex candidate.
+% This fragment assumes the analytification functor, its flatness and
+% exactness, the comparison maps on cohomology, and the statements of the
+% three GAGA theorems have already been introduced.
+
+\section{コホモロジー比較定理の証明}
+\label{section-proof-gaga-cohomology}
+
+まず、証明を開始しその範囲を定めるために用いる二つの解析的入力を記す。
+どちらも代数的コホモロジー計算の形式的帰結ではないため、意図的に明示する。
+
+\begin{lemma}[射影空間の解析的コホモロジー次元]
+\label{lemma-projective-analytic-cohomological-dimension}
+$r \geq 0$ とし、$\mathcal A$ を解析位相を入れた $\mathbf P^r(\mathbf C)$ 上の
+アーベル群の層とする。このとき
+$$
+H^q(\mathbf P^r(\mathbf C),\mathcal A)=0
+\quad\text{（}q>2r\text{ のとき）}.
+$$
+\end{lemma}
+
+\begin{proof}
+$\mathbf P^r(\mathbf C)$ の台空間は次元 $2r$ の三角形分割可能なコンパクト実多様体で
+ある。被覆次元 $d$ のパラコンパクト Hausdorff 空間では次数が $d$ より大きい層
+コホモロジーが消える、という位相的コホモロジー次元定理を用いる。この被覆次元定理は
+外部の位相的入力である。現在の Stacks の『層係数コホモロジー』章はコホモロジー次元を
+定義しているが、被覆次元とのこの比較は証明していない。
+\end{proof}
+
+\begin{lemma}
+\label{lemma-projective-structure-sheaf-comparison}
+任意の $r \geq 0$ と任意の $q \geq 0$ に対し、比較写像
+$$
+H^q(\mathbf P^r_{\mathbf C},\mathcal O)
+\longrightarrow
+H^q(\mathbf P^r(\mathbf C),\mathcal O^{\mathrm{an}})
+$$
+は同型である。
+\end{lemma}
+
+\begin{proof}
+『スキームのコホモロジー』補題
+\ref{coherent-lemma-cohomology-projective-space-over-ring} により、左辺の群は $q=0$ では
+$\mathbf C$、$q>0$ では零である。解析側では Dolbeault の定理と標準計算
+$$
+H^{0,q}_{\overline\partial}(\mathbf P^r(\mathbf C))=
+\begin{cases}
+\mathbf C & q=0,\\
+0 & q>0.
+\end{cases}
+$$
+を用いる。この Dolbeault--射影空間の計算が本補題の外部解析的入力である。
+\cite[\S 2、第13項]{GAGA} を参照されたい。次数零では比較写像は定数代数関数を同じ
+定数正則関数へ送るので、$\mathbf C$ 上の恒等写像である。正次数では両辺とも消える。
+\end{proof}
+
+\begin{lemma}
+\label{lemma-projective-twist-comparison}
+$r \geq 0$、$n \in \mathbf Z$ とする。任意の $q \geq 0$ に対し、比較写像
+$$
+H^q(\mathbf P^r_{\mathbf C},\mathcal O(n))
+\longrightarrow
+H^q(\mathbf P^r(\mathbf C),\mathcal O(n)^{\mathrm{an}})
+$$
+は同型である。
+\end{lemma}
+
+\begin{proof}
+$r$ に関する帰納法で示す。$r=0$ の主張は直ちに従う。$r>0$ とし、超平面
+$i:E\longrightarrow\mathbf P^r_{\mathbf C}$ を選び、『多様体』補題
+\ref{varieties-lemma-hyperplane} のように $E$ を $\mathbf P^{r-1}_{\mathbf C}$ と
+同一視する。$E$ の方程式による乗法から、各 $n$ に対して短完全列
+$$
+0\longrightarrow\mathcal O(n-1)\longrightarrow\mathcal O(n)
+\longrightarrow i_*\mathcal O_E(n)\longrightarrow0.
+$$
+を得る。解析化は補題 \ref{lemma-analytification-exact-faithful-coherent} により完全で、
+補題 \ref{lemma-analytification-pushforward-closed-immersion} により閉埋入の前進像と可換で
+ある。したがって、この列とその解析化は二つの長完全コホモロジー列を与える。補題
+\ref{lemma-analytification-cohomology-map-functorial} により比較写像はそれらの間の射をなす。
+
+帰納法の仮定により $\mathcal O_E(n)$ の比較はすべての次数で同型である。四項補題と
+五項補題（『ホモロジー代数』補題 \ref{homology-lemma-four-lemma} および
+\ref{homology-lemma-five-lemma}）により、全次数における $\mathcal O(n)$ の比較と
+全次数における $\mathcal O(n-1)$ の比較は同値である。$n=0$ の場合は補題
+\ref{lemma-projective-structure-sheaf-comparison} であるから、$n$ に関して上向きおよび
+下向きに帰納して、すべての整数について結果を得る。
+\end{proof}
+
+\begin{proof}[定理 \ref{theorem-gaga-cohomology} の証明]
+$X$ を $\mathbf C$ 上射影的、$\mathcal F$ を連接とし、閉埋入
+$i:X\to\mathbf P^r_{\mathbf C}$ を選ぶ。前進像 $i_*\mathcal F$ は連接であり、
+『層係数コホモロジー』補題
+\ref{cohomology-lemma-cohomology-and-closed-immersions} はその代数的および解析的
+コホモロジーを、それぞれ $X$ および $X^{\mathrm{an}}$ 上の対応するコホモロジーと
+同一視する。補題 \ref{lemma-analytification-pushforward-closed-immersion} は比較写像と
+整合的に $(i_*\mathcal F)^{\mathrm{an}}$ と $i_*\mathcal F^{\mathrm{an}}$ を同一視する。
+したがって $X=\mathbf P^r_{\mathbf C}$ と仮定してよい。
+
+すべての連接 $\mathcal F$ について同時に $q$ に関する下降帰納法を用いる。
+$q>2r$ では、代数的群は『スキームのコホモロジー』補題
+\ref{coherent-lemma-coherent-projective} により消え、解析的群は補題
+\ref{lemma-projective-analytic-cohomological-dimension} により消える。
+
+すべての連接層について次数 $q+1$ で比較が既知とする。『スキームのコホモロジー』補題
+\ref{coherent-lemma-coherent-projective} により短完全列
+$$
+0\longrightarrow\mathcal R\longrightarrow
+\mathcal L\longrightarrow\mathcal F\longrightarrow0
+$$
+が存在し、$\mathcal R$ は連接、$\mathcal L$ は捻り $\mathcal O(n)$ の有限直和である。
+補題 \ref{lemma-projective-twist-comparison} により $\mathcal L$ の比較は全次数で同型で
+ある。長完全列の射において、四項補題を
+$$
+H^q(\mathcal L)\longrightarrow H^q(\mathcal F)
+\longrightarrow H^{q+1}(\mathcal R)\longrightarrow H^{q+1}(\mathcal L)
+$$
+へ適用すると、まず $\mathcal F$ の次数 $q$ の比較写像が全射であると分かる。これは
+すべての連接層について成り立つので $\mathcal R$ にも成り立つ。四項補題の単射部分を
+$$
+H^q(\mathcal R)\longrightarrow H^q(\mathcal L)
+\longrightarrow H^q(\mathcal F)\longrightarrow H^{q+1}(\mathcal R).
+$$
+へ適用する。$\mathcal F$ の比較写像は単射でもある。これで下降帰納法と証明が完了する。
+\end{proof}
+
+\section{充満忠実性の証明}
+\label{section-proof-gaga-fully-faithful}
+
+\begin{lemma}
+\label{lemma-analytification-internal-hom}
+$X$ を $\mathbf C$ 上の多様体とし、$\mathcal F,\mathcal G$ を連接
+$\mathcal O_X$-加群とする。標準同型
+$$
+\SheafHom_{\mathcal O_X}(\mathcal F,\mathcal G)^{\mathrm{an}}
+\longrightarrow
+\SheafHom_{\mathcal O_{X^{\mathrm{an}}}}
+(\mathcal F^{\mathrm{an}},\mathcal G^{\mathrm{an}}).
+$$
+が存在する。
+\end{lemma}
+
+\begin{proof}
+$a_X:X^{\mathrm{an}}\to X$ を局所環付き空間の標準射と書く。局所 Noetherian スキーム
+$X$ 上の連接加群は有限表示であり、定理
+\ref{theorem-analytification-local-faithfully-flat} により $a_X$ は平坦である。したがって
+表示した写像は『加群の層』補題 \ref{modules-lemma-pullback-internal-hom} の平坦引き戻し
+による内部 Hom 同型である。同値には、茎上では『発展代数学』補題
+\ref{more-algebra-lemma-pseudo-coherence-and-base-change-ext} の平坦基底変換同型である。
+始域の連接性は『スキームのコホモロジー』補題
+\ref{coherent-lemma-tensor-hom-coherent} から従い、終域の連接性は
+『層係数コホモロジー』補題 \ref{cohomology-lemma-coherent-analytic-sheaf-ext} の
+$q=0$ の場合でもある。
+\end{proof}
+
+\begin{proof}[定理 \ref{theorem-gaga-fully-faithful} の証明]
+$\mathcal A=\SheafHom_{\mathcal O_X}(\mathcal F,\mathcal G)$ と置く。このとき
+$$
+\Hom_{\mathcal O_X}(\mathcal F,\mathcal G)
+=H^0(X,\mathcal A).
+$$
+定理 \ref{theorem-gaga-cohomology} の次数零の場合と補題
+\ref{lemma-analytification-internal-hom} により標準同型
+$$
+H^0(X,\mathcal A)
+\longrightarrow H^0(X^{\mathrm{an}},\mathcal A^{\mathrm{an}})
+\longrightarrow
+\Hom_{\mathcal O_{X^{\mathrm{an}}}}
+(\mathcal F^{\mathrm{an}},\mathcal G^{\mathrm{an}}).
+$$
+が得られる。コホモロジー比較写像の構成により、それらの合成は $f$ を
+$f^{\mathrm{an}}$ へ送る。したがって解析化は充満忠実である。
+\end{proof}
+
+\section{本質的全射性：準備と帰着}
+\label{section-gaga-essential-surjectivity-preliminaries}
+
+\begin{lemma}
+\label{lemma-coherent-analytic-closed-immersion}
+$i:Y\to X$ を複素解析空間の閉埋入とし、それらの構造層と定義イデアルが連接であるとする。
+このとき $i_*$ は加群上完全かつ充満忠実で、連接 $\mathcal O_Y$-加群を連接
+$\mathcal O_X$-加群へ送り、その本質像は定義イデアルで消去される連接加群からなる。
+さらに、
+$$
+H^q(Y,\mathcal M)=H^q(X,i_*\mathcal M)
+$$
+が任意の $q\geq0$ に対して成り立つ。
+\end{lemma}
+
+\begin{proof}
+完全性、充満忠実性、および本質像の記述は『加群の層』補題
+\ref{modules-lemma-i-star-equivalence} である。連接性を確認するため、まず
+$i_*\mathcal M$ を $i_*\mathcal O_Y=\mathcal O_X/\mathcal I$ 上の加群とみなす。この商構造層に
+『加群の層』補題 \ref{modules-lemma-i-star-reflects-finite-type} を適用すると、$Y$ 上の
+連接性は $i_*\mathcal O_Y$ 上の連接性と同一視される。さらに『加群の層』補題
+\ref{modules-lemma-coherent-change-rings} はこれを $\mathcal O_X$ 上の連接性と同一視する。
+コホモロジーの等式は『層係数コホモロジー』補題
+\ref{cohomology-lemma-cohomology-and-closed-immersions} である。
+\end{proof}
+
+\begin{lemma}
+\label{lemma-gaga-essential-surjectivity-projective-reduction}
+定理 \ref{theorem-gaga-essential-surjectivity} の一意性は定理
+\ref{theorem-gaga-fully-faithful} から従う。存在性については
+$X=\mathbf P^r_{\mathbf C}$ の場合に定理を証明すれば十分である。
+\end{lemma}
+
+\begin{proof}
+$\mathcal F^{\mathrm{an}}\cong\mathcal G^{\mathrm{an}}$ ならば、充満忠実性により同型とその逆は
+一意に代数的写像へ持ち上がる。忠実性によりそれらの合成は恒等写像なので、一意性が従う。
+
+帰着のため、$i:Y\to\mathbf P^r_{\mathbf C}$ を閉埋入、$\mathcal M$ を
+$Y^{\mathrm{an}}$ 上の連接加群とする。補題
+\ref{lemma-coherent-analytic-closed-immersion} により $i_*\mathcal M$ は
+$\mathbf P^r(\mathbf C)$ 上連接である。射影空間上の本質的全射性を仮定し、
+$\mathcal G^{\mathrm{an}}\cong i_*\mathcal M$ を満たす連接代数加群 $\mathcal G$ を選ぶ。
+
+$\mathcal I$ を $Y$ のイデアルとする。解析化とイデアル、テンソル積、像との整合性により、
+$(\mathcal I\mathcal G)^{\mathrm{an}}$ は
+$\mathcal I^{\mathrm{an}}\mathcal G^{\mathrm{an}}$ と同一視される。$i_*\mathcal M$ は
+$\mathcal I^{\mathrm{an}}$ で消去されるので、これは零である。したがって補題
+\ref{lemma-analytification-exact-faithful-coherent} の完全性と忠実性により
+$\mathcal I\mathcal G=0$ である。『スキームの射』補題
+\ref{morphisms-lemma-i-star-equivalence} と『スキームのコホモロジー』補題
+\ref{coherent-lemma-i-star-equivalence} により、$i_*\mathcal F=\mathcal G$ を満たす $Y$ 上の
+連接代数加群 $\mathcal F$ が得られる。最後に補題
+\ref{lemma-analytification-pushforward-closed-immersion} により
+$$
+i_*\mathcal F^{\mathrm{an}}
+\cong(i_*\mathcal F)^{\mathrm{an}}
+\cong\mathcal G^{\mathrm{an}}
+\cong i_*\mathcal M.
+$$
+解析的閉埋入の前進像の充満忠実性から
+$\mathcal F^{\mathrm{an}}\cong\mathcal M$ が従う。
+\end{proof}
+
+\section{解析的捻りと大域生成}
+\label{section-gaga-analytic-twists}
+
+ここから $X=\mathbf P^r_{\mathbf C}$ と固定し、本質的全射性を $r$ に関する帰納法で示す。
+$r=0$ の場合は、有限次元複素ベクトル空間と一点上の連接加群との同値である。
+
+\begin{definition}
+\label{definition-coherent-analytic-twist}
+$X^{\mathrm{an}}$ 上の連接解析加群 $\mathcal M$ と $n\in\mathbf Z$ に対し、
+$$
+\mathcal M(n)=
+\mathcal M\otimes_{\mathcal O_{X^{\mathrm{an}}}}
+\mathcal O_X(n)^{\mathrm{an}}.
+$$
+と置く。これは連接であり、引き戻しとテンソル積との整合性により標準的な同一視
+$$
+\mathcal F^{\mathrm{an}}(n)\cong\mathcal F(n)^{\mathrm{an}}
+$$
+が任意の連接代数加群 $\mathcal F$ に対して成り立つ。
+\end{definition}
+
+\begin{lemma}
+\label{lemma-hyperplane-analytic-serre-vanishing}
+$E\cong\mathbf P^{r-1}_{\mathbf C}$ を超平面とし、$\mathcal A$ を $E^{\mathrm{an}}$ 上の
+連接解析加群とする。このとき
+$$
+H^q(E^{\mathrm{an}},\mathcal A(n))=0
+$$
+が任意の $q>0$ と十分大きいすべての $n$ に対して成り立つ。
+\end{lemma}
+
+\begin{proof}
+本質的全射性に関する帰納法の仮定により、$E$ 上の連接代数加群 $\mathcal F$ で
+$\mathcal A\cong\mathcal F^{\mathrm{an}}$ を満たすものが存在する。定義
+\ref{definition-coherent-analytic-twist} と定理 \ref{theorem-gaga-cohomology} は表示した群を
+$H^q(E,\mathcal F(n))$ と同一視する。後者は『スキームのコホモロジー』補題
+\ref{coherent-lemma-coherent-projective} により $q>0$ かつ $n$ が十分大きいとき消える。
+零でない可能性のある次数は有限個しかないので、$n$ の一つの下限がすべての $q>0$ に
+対して有効である。
+\end{proof}
+
+\begin{lemma}
+\label{lemma-projective-analytic-global-generation}
+$\mathcal M$ を $X^{\mathrm{an}}=\mathbf P^r(\mathbf C)$ 上の連接解析加群とする。
+ある整数 $n_0$ が存在し、任意の $n\geq n_0$ に対して $\mathcal M(n)$ は大域切断で
+生成される。
+\end{lemma}
+
+\begin{proof}
+まず二つの初等的事実を確認する。大域切断が $x$ で $\mathcal M(n)$ を生成するとき、
+$x$ で零でない斉次座標 $T_k$ を選ぶ。$T_k^{m-n}$ による乗法は $\mathcal M(n)$ の
+大域切断を $\mathcal M(m)$ の大域切断へ送り、$x$ の茎上では同型である。したがって
+$x$ での生成性は任意の $m\geq n$ に対して持続する。一点で生成されるという性質は
+開条件である。実際、茎を生成する有限個の大域切断を選び、有限自由加群からの評価写像を
+取り、その余核の連接性を用いれば、それが点の近傍で消えることが分かる。
+$X^{\mathrm{an}}$ はコンパクトなので、結局、各 $x$ に対し $x$ で生成される一つの捻りを
+見つければ十分である。
+
+$x$ を固定し、それを通り一次形式 $t$ で切り出される超平面 $i:E\to X$ を選ぶ。
+$0\to\mathcal O_X(-1)^{\mathrm{an}}\xrightarrow{t}
+\mathcal O_{X^{\mathrm{an}}}\to i_*\mathcal O_{E^{\mathrm{an}}}\to0$
+を $\mathcal M$ とテンソルすると完全列
+$$
+0\longrightarrow\mathcal C\longrightarrow\mathcal M(-1)
+\xrightarrow{t}\mathcal M\longrightarrow\mathcal B\longrightarrow0,
+$$
+を得る。ここで $\mathcal C$ と $\mathcal B$ は連接である。両者は $t$ で消去されるので、
+補題 \ref{lemma-coherent-analytic-closed-immersion} により $E^{\mathrm{an}}$ 上の連接加群と
+みなせる。
+
+$n$ で捻った後、$\mathcal L_n$ を $\mathcal M(n-1)\to\mathcal M(n)$ の像とする。
+短完全列
+$$
+0\to\mathcal C(n)\to\mathcal M(n-1)\to\mathcal L_n\to0,
+\qquad
+0\to\mathcal L_n\to\mathcal M(n)\to\mathcal B(n)\to0.
+$$
+を得る。補題 \ref{lemma-hyperplane-analytic-serre-vanishing} により、十分大きいすべての
+$n$ に対し
+$$
+H^2(X^{\mathrm{an}},\mathcal C(n))=0,
+\qquad
+H^1(X^{\mathrm{an}},\mathcal B(n))=0.
+$$
+である。したがって二つの長完全列から
+$$
+\dim H^1(\mathcal M(n-1))
+\geq\dim H^1(\mathcal L_n)
+\geq\dim H^1(\mathcal M(n)).
+$$
+を得る。『層係数コホモロジー』補題
+\ref{cohomology-lemma-compact-complex-analytic-coherent-cohomology-finite-dimensional}
+により、これらの次元はすべて有限である。したがって非負整数
+$\dim H^1(\mathcal M(n))$ は最終的に安定する。$n$ が安定範囲にあるとき、全射
+$H^1(\mathcal L_n)\to H^1(\mathcal M(n))$ は同型であり、長完全列から全射
+$$
+H^0(X^{\mathrm{an}},\mathcal M(n))
+\longrightarrow H^0(X^{\mathrm{an}},\mathcal B(n)).
+$$
+を得る。
+
+$r$ に関する帰納法により、$\mathcal B$ に対応する $E^{\mathrm{an}}$ 上の加群は、$E$ 上の
+連接代数加群 $\mathcal G$ の解析化である。『スキームの性質』命題
+\ref{properties-proposition-characterize-ample} により、十分大きいすべての $n$ に対して
+$\mathcal G(n)$ は大域切断で生成される。定理 \ref{theorem-gaga-cohomology} の次数零の場合に
+より $\mathcal B(n)$ についても同じことが成り立ち、先の全射によりこれらの生成元は
+$\mathcal M(n)$ の大域切断へ持ち上がる。
+
+$x$ において $A=\mathcal O_{X^{\mathrm{an}},x}$、$M=\mathcal M(n)_x$ と置き、$N\subset M$ を
+大域切断で生成される部分加群とする。$\mathfrak p=(t)\subset A$ とすれば
+$\mathcal B(n)_x=M/\mathfrak pM$ である。持ち上げた切断はこの商を生成するので
+$M=N+\mathfrak pM$ である。$\mathfrak p$ は局所環 $A$ の極大イデアルに含まれるから、
+Nakayama の補題（『代数学』補題 \ref{algebra-lemma-NAK}）により $M=N$ である。
+これで $x$ において必要な捻りが得られた。冒頭の二つの観察とコンパクト性により、すべての
+点とすべての $n\geq n_0$ に対して有効な一つの $n_0$ が得られる。
+\end{proof}
+
+\section{本質的全射性の証明の完結}
+\label{section-completion-gaga-essential-surjectivity}
+
+\begin{proof}[定理
+\ref{theorem-gaga-essential-surjectivity} の証明の完結]
+補題 \ref{lemma-gaga-essential-surjectivity-projective-reduction} により、残るのは
+$X=\mathbf P^r_{\mathbf C}$ の場合である。$\mathcal M$ を $X^{\mathrm{an}}$ 上連接とする。
+補題 \ref{lemma-projective-analytic-global-generation} とコンパクト性により、ある捻りの後に
+有限個の大域生成元が得られる。捻りを戻すと全射
+$$
+\mathcal L_0^{\mathrm{an}}\longrightarrow\mathcal M,
+\qquad
+\mathcal L_0=\mathcal O_X(-n)^{\oplus p}.
+$$
+を得る。その核 $\mathcal R$ は『加群の層』補題
+\ref{modules-lemma-coherent-abelian} により連接である。$\mathcal R$ に同じ大域生成の議論を
+適用し、捻りの有限直和 $\mathcal L_1$ と全射
+$\mathcal L_1^{\mathrm{an}}\to\mathcal R$ を得る。$\mathcal R$ の包含と合成すると完全列
+$$
+\mathcal L_1^{\mathrm{an}}\xrightarrow{g}
+\mathcal L_0^{\mathrm{an}}\longrightarrow\mathcal M\longrightarrow0.
+$$
+
+を得る。定理 \ref{theorem-gaga-fully-faithful} により $f^{\mathrm{an}}=g$ を満たす一意な
+代数的写像 $f:\mathcal L_1\to\mathcal L_0$ が存在する。
+$\mathcal F=\mathop{\rm Coker}(f)$ と置く。これは連接であり、解析化の完全性により
+$$
+\mathcal F^{\mathrm{an}}
+=\mathop{\rm Coker}(f^{\mathrm{an}})
+=\mathop{\rm Coker}(g)
+\cong\mathcal M.
+$$
+既に証明した帰着と一意性と合わせて、これで定理
+\ref{theorem-gaga-essential-surjectivity} の証明が完了する。
+\end{proof}
+
+\section{比較定理の応用}
+\label{section-gaga-applications}
+
+\subsection{共役と Betti 数}
+\label{subsection-gaga-betti-numbers}
+
+$\sigma\in\mathop{\rm Aut}(\mathbf C)$ とする。$\mathbf C$ 上のスキーム $X$ に対し、
+$$
+X^\sigma=X\times_{\mathop{\rm Spec}(\mathbf C),\sigma}
+\mathop{\rm Spec}(\mathbf C).
+$$
+
+\begin{proposition}
+\label{proposition-conjugate-smooth-projective-betti-numbers}
+\begin{reference}
+\cite[\S 4、第18項、命題12]{GAGA}
+\end{reference}
+$X$ を $\mathbf C$ 上の滑らかな射影代数多様体とする。このとき $X^{\rm an}$ と
+$(X^\sigma)^{\rm an}$ は同じ Betti 数をもつ。
+\end{proposition}
+
+\begin{proof}
+$p,q\geq 0$ に対し、平坦基底変換から $\sigma$-半線形同型
+$$
+H^q(X,\Omega^p_{X/\mathbf C})
+\longrightarrow
+H^q(X^\sigma,\Omega^p_{X^\sigma/\mathbf C});
+$$
+を得る。『スキームのコホモロジー』補題
+\ref{coherent-lemma-flat-base-change-cohomology} を参照されたい。特に二つのベクトル空間は
+同じ次元をもつ。滑らかな多様体については、局所座標により標準比較
+$$
+(\Omega^p_{X/\mathbf C})^{\rm an}
+\cong \Omega^p_{X^{\rm an}},
+$$
+を得る。右辺の加群は正則 $p$-形式の加群である。したがってコホモロジー比較定理
+\ref{theorem-gaga-cohomology} はこれらの次元をそれぞれ
+$$
+h^{p,q}(X^{\rm an})
+\quad\hbox{および}\quad
+h^{p,q}((X^\sigma)^{\rm an}),
+$$
+と同一視する。ここで
+$$
+h^{p,q}(M)=\dim_{\mathbf C}H^q(M,\Omega^p_M).
+$$
+最後に、滑らかな射影多様体の解析化はコンパクト K\"ahler である。ここで外部解析的入力
+である Hodge 分解（Dolbeault 分解と K\"ahler 恒等式を用いる）により
+$$
+b_n(X^{\rm an})=\sum_{p+q=n}h^{p,q}(X^{\rm an})
+$$
+および $X^\sigma$ に対する同様の式を得る。主張が従う。
+\end{proof}
+
+\begin{proposition}[系]
+\label{corollary-number-field-embeddings-betti-numbers}
+\begin{reference}
+\cite[\S 4、第18項、命題12の系]{GAGA}
+\end{reference}
+$V$ を $\mathbf Q$ 上代数的な体 $K$ 上の滑らかな射影多様体とする。
+$V\times_{K,\iota}\mathbf C$ の Betti 数は埋め込み
+$\iota:K\longrightarrow\mathbf C$ に依存しない。
+\end{proposition}
+
+\begin{proof}
+体の埋め込みに関する標準拡張定理により、$K$ の $\mathbf C$ への任意の二つの埋め込みは
+$\mathbf C$ の自己同型を違いとしてもつ。命題
+\ref{proposition-conjugate-smooth-projective-betti-numbers} を適用する。
+\end{proof}
+
+\begin{remark}[歴史的範囲]
+\label{remark-conjugate-varieties-historical}
+Serre は \cite[\S 4、第18項]{GAGA} で、共役な一対が解析同型とは限らないこと
+（楕円曲線が既にこれを示す）を指摘し、そのような一対が必ず同相かを問うた。
+この歴史的問題は命題 \ref{proposition-conjugate-smooth-projective-betti-numbers} の
+入力ではない。
+\end{remark}
+
+
+\subsection{Chow の定理と代数性}
+\label{subsection-gaga-chow}
+
+\begin{theorem}[Chow]
+\label{theorem-chow-closed-analytic-projective}
+\begin{reference}
+\cite[\S 4、第19項、命題13]{GAGA}
+\end{reference}
+$X$ を $\mathbf C$ 上の射影代数多様体とする。任意の閉被約解析部分空間
+$Y\subset X^{\rm an}$ は、$X$ の一意な閉被約部分スキームの解析化である。
+\end{theorem}
+
+\begin{proof}
+消滅イデアル $\mathcal J_Y\subset\mathcal O_{X^{\rm an}}$ は定理
+\ref{theorem-oka-cartan-coherence} により連接である。定理
+\ref{theorem-gaga-essential-surjectivity} により、$\mathcal F^{\rm an}\cong\mathcal J_Y$ を
+満たす連接 $\mathcal O_X$-加群 $\mathcal F$ が存在する。この同型と
+$\mathcal O_{X^{\rm an}}$ への包含を合成する。充満忠実性定理
+\ref{theorem-gaga-fully-faithful} はこの合成を $\mathcal O_X$-線形写像
+$$
+u:\mathcal F\longrightarrow\mathcal O_X.
+$$
+へ代数化する。その像 $\mathcal I$ は連接イデアルである。解析化の完全性と忠実性により
+$\mathcal I^{\rm an}$ は $\mathcal J_Y$ と同一視される。したがってイデアル
+$\mathcal I$ は根基的である。実際、任意の閉点 $x\in X(\mathbf C)$ で
+$a^m\in\mathcal I_x$ とすると、$\mathcal O_{X^{\rm an},x}$ における $a$ の像は根基イデアル
+$\mathcal J_{Y,x}=\mathcal I_x\mathcal O_{X^{\rm an},x}$ に属する。定理
+\ref{theorem-analytification-local-faithfully-flat} の忠実平坦性により、このイデアルを
+$\mathcal I_x$ へ縮約できる。$X$ は Noetherian かつ Jacobson なので、すべての閉点の茎での
+根基性から $\mathcal I$ の根基性が従う。したがって $\mathcal I$ が定める閉被約部分スキームの
+解析的イデアルは $\mathcal J_Y$ であり、その解析化は $Y$ である。
+
+二つの被約閉部分スキームの解析化が $Y$ ならば、それらのイデアル層は各解析局所環への
+拡大が等しい。忠実平坦性により、これらの拡大を縮約すると各閉点で等しい茎が得られ、
+連接性と Jacobson 性によりイデアル層は一致する。これで一意性が従う。
+\end{proof}
+
+\begin{proposition}
+\label{proposition-compact-analytic-subspace-algebraic}
+\begin{reference}
+\cite[\S 4、第19項、命題14]{GAGA}
+\end{reference}
+$X$ を $\mathbf C$ 上の代数多様体とする。任意のコンパクトな閉被約解析部分空間
+$Y\subset X^{\rm an}$ は代数的である。すなわち $Z^{\rm an}=Y$ を満たす一意な
+閉被約部分スキーム $Z\subset X$ が存在する。
+\end{proposition}
+
+\begin{proof}
+Nagata コンパクト化と Chow の補題（『平坦性詳論』定理
+\ref{flat-theorem-nagata} および『スキームの極限』補題
+\ref{limits-lemma-chow-finite-type}）により、$\overline X$ が固有である開埋入
+$X\subset\overline X$ と、埋入 $X'\to\mathbf P^n_{\mathbf C}$ を伴う固有全射
+$p:X'\to\overline X$ が得られる。$X'$ をその被約化で置き換えてもこれらの性質は保たれる。
+得られた多様体 $X'$ は $\mathbf C$ 上固有なので、その埋入は閉であり、$X'$ は射影的である。
+$Y$ はコンパクトなので Hausdorff 空間 $\overline X^{\rm an}$ で閉である。
+$X^{\rm an}$ 上のその解析構造は $\overline X^{\rm an}\setminus Y$ 上の空な閉解析部分空間と
+貼り合わさり、$Y$ を $\overline X^{\rm an}$ の閉被約解析部分空間にする。
+
+被約逆像
+$$
+Y'=\left((X')^{\rm an}\times_{\overline X^{\rm an}}Y\right)_{\rm red}
+$$
+は $(X')^{\rm an}$ の閉被約解析部分空間である。定理
+\ref{theorem-chow-closed-analytic-projective} はこれを閉被約部分スキーム $Z'\subset X'$ へ
+代数化する。$Z\subset\overline X$ を $p(Z')$ の被約 Zariski 閉包とする。解析写像は
+$(Z')^{\rm an}=Y'$ を $Y$ 上へ写す。$Y$ は閉なので、命題
+\ref{proposition-image-closure} により $Z^{\rm an}$ の古典点集合はちょうど $Y$ である。
+被約閉解析部分空間はその台となる解析集合で決まるので $Z^{\rm an}=Y$ である。$Z$ の
+すべての閉点は $X$ に含まれ、したがって Jacobson 性により $Z\subset X$ である。
+
+一意性について、$Z_1,Z_2\subset X$ の解析化が $Y$ ならば、それらのイデアルの茎は
+各 $\mathcal O_{X^{\rm an},x}$ への拡大が等しい。定理
+\ref{theorem-analytification-local-faithfully-flat} の忠実平坦性により、それらを縮約すると
+各閉点で等しい茎が得られる。連接性と Jacobson 性から $Z_1=Z_2$ である。
+\end{proof}
+
+\begin{proposition}
+\label{proposition-holomorphic-map-from-proper-is-regular}
+\begin{reference}
+\cite[\S 4、第19項、命題15]{GAGA}
+\end{reference}
+$X$ を $\mathbf C$ 上の固有代数多様体、$Y$ を $\mathbf C$ 上の代数多様体とする。
+任意の正則写像
+$$
+f:X^{\rm an}\longrightarrow Y^{\rm an}
+$$
+は一意な射 $X\to Y$ の解析化である。
+\end{proposition}
+
+\begin{proof}
+グラフ $\Gamma_f$ は $(X\times_{\mathbf C}Y)^{\rm an}$ のコンパクトな閉解析部分空間である。
+命題 \ref{proposition-compact-analytic-subspace-algebraic} により、それは
+$X\times_{\mathbf C}Y$ の閉被約部分多様体の解析化である。したがって命題
+\ref{proposition-algebraic-graph-holomorphic-regular} が所望の代数的写像を定める。
+一意性については、二つの候補写像の閉被約グラフは同じ古典点をもつので、グラフ、従って
+写像も等しい。
+\end{proof}
+
+\begin{proposition}[系]
+\label{corollary-compact-analytic-space-unique-algebraization}
+\begin{reference}
+\cite[\S 4、第19項、命題15の系]{GAGA}
+\end{reference}
+コンパクトな被約解析空間がもつ代数多様体構造は高々一つである。すなわち二つの代数化の
+間の任意の解析同型は、一意な代数同型の解析化である。
+\end{proposition}
+
+\begin{proof}
+命題 \ref{proposition-proper-if-and-only-if-compact-analytification} により、任意の代数化は
+固有である。解析同型とその逆に命題
+\ref{proposition-holomorphic-map-from-proper-is-regular} を適用する。
+\end{proof}
+
+
+\subsection{代数的および解析的主束}
+\label{subsection-gaga-principal-bundles}
+
+\begin{definition}
+\label{definition-principal-bundle-analytification-map}
+\begin{reference}
+\cite[\S 4、第20項]{GAGA}
+\end{reference}
+$G$ を $\mathbf C$ 上の代数群、$X$ を $\mathbf C$ 上の代数多様体とする。
+$$
+H^1_{\rm Zar}(X,G)
+$$
+を Zariski 局所自明な主 $G$-束の同型類からなる点付き集合と書き、
+$$
+H^1_{\rm an}(X^{\rm an},G^{\rm an})
+$$
+を正則局所自明な主 $G^{\rm an}$-束の同型類からなる点付き集合と書く。解析化は写像
+$$
+\varepsilon_G:H^1_{\rm Zar}(X,G)
+\longrightarrow H^1_{\rm an}(X^{\rm an},G^{\rm an}).
+$$
+を定める。これは『サイト上のコホモロジー』第
+\ref{sites-cohomology-section-h1-torsors} 節における一次コホモロジーのトーサー解釈である。
+\end{definition}
+
+\begin{proposition}
+\label{proposition-principal-bundle-analytification-injective}
+\begin{reference}
+\cite[\S 4、第20項、命題16]{GAGA}
+\end{reference}
+$X$ が $\mathbf C$ 上の固有代数多様体ならば $\varepsilon_G$ は単射である。より正確には、
+二つの代数的主 $G$-束の解析化の間の任意の解析同型は代数的である。
+\end{proposition}
+
+\begin{proof}
+$X$ 上の二つの代数的主 $G$-束 $P$ と $P'$ に対し、随伴束
+$$
+\mathop{\rm Isom}\nolimits_G(P,P')
+$$
+は $X$ 上の代数的ファイバー束であり、その切断はちょうど $G$-同変同型
+$P\to P'$ である。解析同型はその解析化の正則切断を与える。命題
+\ref{proposition-holomorphic-map-from-proper-is-regular} により、この切断は代数的である。
+\end{proof}
+
+\begin{proposition}
+\label{proposition-additive-principal-bundles-gaga}
+\begin{reference}
+\cite[\S 4、第20項、命題17]{GAGA}
+\end{reference}
+$X$ が $\mathbf C$ 上の射影代数多様体で $G=\mathbf G_a$ ならば、
+$\varepsilon_G$ は全単射である。
+\end{proposition}
+
+\begin{proof}
+主 $\mathbf G_a$-束は加法層 $\mathcal O_X$ の下のトーサーであり、したがって
+$H^1(X,\mathcal O_X)$ により分類される。『層係数コホモロジー』補題
+\ref{cohomology-lemma-torsors-h1} を参照されたい。解析的主張では
+$H^1(X^{\rm an},\mathcal O_{X^{\rm an}})$ を用いる。定理
+\ref{theorem-gaga-cohomology} の比較同型がこれらの群を同一視する。
+\end{proof}
+
+\begin{proposition}
+\label{proposition-general-linear-principal-bundles-gaga}
+\begin{reference}
+\cite[\S 4、第20項、命題18]{GAGA}
+\end{reference}
+$X$ が $\mathbf C$ 上の射影代数多様体で $G=\mathop{\rm GL}_n$ ならば、
+$\varepsilon_G$ は全単射である。
+\end{proposition}
+
+\begin{proof}
+主 $\mathop{\rm GL}_n$-束は階数 $n$ のベクトル束と同値である。$\mathcal E$ を解析
+ベクトル束に随伴する局所自由連接解析加群とする。定理
+\ref{theorem-gaga-essential-surjectivity} により、それはある連接
+$\mathcal O_X$-加群 $\mathcal F$ の $\mathcal F^{\rm an}$ と同型である。任意の閉点
+$x\in X(\mathbf C)$ に対し、定理
+\ref{theorem-analytification-local-faithfully-flat} の忠実平坦局所写像により
+$$
+\mathcal F_x\otimes_{\mathcal O_{X,x}}
+\mathcal O_{X^{\rm an},x}
+$$
+は階数 $n$ の自由加群である。有限射影性の忠実平坦降下（『代数学』命題
+\ref{algebra-proposition-ffdescent-finite-projectivity}）により $\mathcal F_x$ は有限射影的で
+ある。『代数学』定理 \ref{algebra-theorem-projective-free-over-local-ring} によりこれは自由で、
+忠実な基底変換によりその階数は $n$ である。$X$ は Jacobson で $\mathcal F$ は連接なので、
+各閉点における局所自由性から $\mathcal F$ は至る所階数 $n$ の局所自由加群である。その
+枠束が与えられた解析的主束を代数化する。単射性は命題
+\ref{proposition-principal-bundle-analytification-injective} である。
+\end{proof}
+
+\begin{remark}[直線束と歴史的定式化]
+\label{remark-line-bundles-gaga}
+$n=1$ のとき、命題 \ref{proposition-general-linear-principal-bundles-gaga} は同型
+$$
+\mathop{\rm Pic}(X)\longrightarrow\mathop{\rm Pic}(X^{\rm an}).
+$$
+である。Serre は \cite[\S 4、第20項]{GAGA} の命題18の後の注意で、これを正規多様体上の
+因子類によって表し、Kodaira--Spencer の先行する滑らかな場合の結果を記している。
+これらの歴史的帰属は、ここでの追加仮定ではない。Serre はさらに、命題18が Kodaira の
+定理7および8を、特異点をもち得る任意の射影多様体へ拡張することを指摘しているが、
+それらの応用は追究していない。
+\end{remark}
+
+\begin{proposition}[構造群の簡約の代数化]
+\label{proposition-algebraize-reduction-structure-group}
+\begin{reference}
+\cite[\S 4、第20項、命題19]{GAGA}
+\end{reference}
+$H\subset G$ を $\mathbf C$ 上の代数群とする。商 $G/H$ が代数多様体として存在し、
+$G\to G/H$ が有理切断をもつと仮定する。$X$ を $\mathbf C$ 上の固有代数多様体、
+$P$ を $X^{\rm an}$ 上の解析的主 $H^{\rm an}$-束とする。このとき $P$ が代数化可能で
+あるための必要十分条件は、拡大した束
+$$
+P\times^H G
+$$
+が代数化可能なことである。
+\end{proposition}
+
+\begin{proof}
+$G/H$ の空でない開集合上の有理切断と、その定義域の $G$ による平行移動から、
+$G\to G/H$ は $H$-束として Zariski 局所自明である。したがって必要性は構造群の拡大から
+直ちに従う。
+
+逆に、代数的主 $G$-束 $Q$ と解析同型 $Q^{\rm an}\cong P\times^H G$ を選び、代数的随伴束
+$$
+E=Q\times^G(G/H).
+$$
+を作る。解析的簡約 $P$ は正則切断 $s:X^{\rm an}\to E^{\rm an}$ を定める。命題
+\ref{proposition-holomorphic-map-from-proper-is-regular} により、この切断は代数的である。
+主 $H$-束 $Q\to E$ を $s$ に沿って引き戻すと、その解析化が $P$ である代数的主
+$H$-束が得られる。
+\end{proof}
+
+\begin{definition}
+\label{definition-rational-section-condition}
+\begin{reference}
+\cite[\S 4、第20項、条件 (R)]{GAGA}
+\end{reference}
+閉代数部分群 $G\subset\mathop{\rm GL}_n$ が \textup{(R)} を満たすとは、商が存在し、射影
+$$
+\mathop{\rm GL}_n/G\longleftarrow\mathop{\rm GL}_n
+$$
+が有理切断をもつことをいう。
+\end{definition}
+
+\begin{proposition}
+\label{proposition-rational-section-principal-bundles-gaga}
+\begin{reference}
+\cite[\S 4、第20項、命題20]{GAGA}
+\end{reference}
+$G\subset\mathop{\rm GL}_n$ が \textup{(R)} を満たすとする。$\mathbf C$ 上の任意の射影
+代数多様体 $X$ に対し、写像
+$$
+\varepsilon_G:H^1_{\rm Zar}(X,G)
+\longrightarrow H^1_{\rm an}(X^{\rm an},G^{\rm an})
+$$
+は全単射である。
+\end{proposition}
+
+\begin{proof}
+解析的主 $G$-束 $P$ が与えられたとき、命題
+\ref{proposition-general-linear-principal-bundles-gaga} は
+$P\times^G\mathop{\rm GL}_n$ を代数化する。そこで命題
+\ref{proposition-algebraize-reduction-structure-group} を $H=G$、周囲の群
+$\mathop{\rm GL}_n$ として適用すれば $P$ が代数化される。単射性は命題
+\ref{proposition-principal-bundle-analytification-injective} である。
+\end{proof}
+
+\begin{remark}[例と歴史的境界]
+\label{remark-rational-section-condition-examples}
+Rosenlicht の定理により可解部分群は条件 \textup{(R)} を満たし、
+$\mathop{\rm SL}_n$ は行列式切断により、$\mathop{\rm Sp}_{2m}$ は有理シンプレクティック
+Gram--Schmidt 法によりこれを満たす。Serre は \cite[\S 4、第20項]{GAGA} で、当時未解決
+だった単連結半単純の場合の予想と、次元 $3$ 以上のユニモジュラー直交群では
+\textup{(R)} が成り立たないことも記している。後者の場合、$\varepsilon_G$ の全単射性は
+未解決のままとしている。これらの歴史的所見は命題
+\ref{proposition-rational-section-principal-bundles-gaga} では用いない。
+\end{remark}
+
+\input{output/source/chapters-ja}
+
+\bibliography{my}
+\bibliographystyle{amsalpha}
+
+\end{document}

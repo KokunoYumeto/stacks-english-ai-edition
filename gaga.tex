@@ -1,0 +1,1998 @@
+% Candidate standalone chapter for GAGA source units gaga:no:1 through
+% gaga:no:4. This is deliberately the reduced 1956 notion. It does not
+% introduce nonreduced complex analytic spaces.
+
+\input{preamble}
+
+% OK, start here.
+%
+\begin{document}
+
+\title{Complex Analytic Spaces and GAGA}
+
+\maketitle
+
+\phantomsection
+\label{section-phantom}
+
+\tableofcontents
+
+\section{Introduction}
+\label{section-introduction}
+
+\noindent
+This chapter develops the complex-analytic foundations needed to state and
+prove the comparison theorems usually called GAGA. The initial sections use
+the reduced notion of complex analytic space in
+\cite[\S 1, nos. 1--4, pp. 3--7]{GAGA}. This scope is recorded explicitly
+because a structure sheaf contained in a sheaf of functions has no
+nilpotents. The abstract language of ringed spaces and coherent modules is
+that of Sheaves, Definition \ref{sheaves-definition-ringed-space} and
+Modules, Section \ref{modules-section-coherent}.
+
+\section{Analytic subsets of complex affine space}
+\label{section-analytic-subsets}
+
+\begin{definition}
+\label{definition-analytic-subset}
+\begin{reference}
+\cite[\S 1, no. 1, pp. 3--4]{GAGA}
+\end{reference}
+Let $n \geq 0$ and endow $\mathbf C^n$ with its usual topology. A subset
+$U \subset \mathbf C^n$ is an {\it analytic subset in the sense of Serre}
+if, for every $x \in U$, there are an open neighbourhood $W$ of $x$ and
+holomorphic functions $f_1, \ldots, f_k$ on $W$ such that
+$$
+U \cap W = \{z \in W \mid f_1(z)=\ldots=f_k(z)=0\}.
+$$
+
+Let $\mathcal C_U$ be the sheaf of germs of all complex-valued functions on
+$U$. Let $\mathcal O_{\mathbf C^n}$ be the sheaf of holomorphic functions on
+$\mathbf C^n$. The {\it sheaf of holomorphic functions on $U$} is the image
+sheaf
+$$
+\mathcal O_U =
+\mathop{\rm Im}\left(
+\mathcal O_{\mathbf C^n}|_U \longrightarrow \mathcal C_U
+\right).
+$$
+Thus, if $x \in U$ and $\mathcal I_{U,x}$ is the ideal of germs in
+$\mathcal O_{\mathbf C^n,x}$ which vanish on $U$ near $x$, then
+$$
+\mathcal O_{U,x}=
+\mathcal O_{\mathbf C^n,x}/\mathcal I_{U,x}.
+$$
+\end{definition}
+
+\begin{definition}
+\label{definition-holomorphic-map-analytic-subsets}
+\begin{reference}
+\cite[\S 1, no. 1, pp. 3--4]{GAGA}
+\end{reference}
+Let $U \subset \mathbf C^r$ and $V \subset \mathbf C^s$ be analytic
+subsets. A map $\varphi:U\to V$ is {\it holomorphic} if it is continuous and
+composition with $\varphi$ sends every germ in
+$\mathcal O_{V,\varphi(x)}$ to a germ in $\mathcal O_{U,x}$ for every
+$x\in U$. Equivalently, the $s$ coordinate functions of $\varphi$ are
+sections of $\mathcal O_U$ locally on $U$.
+
+A bijective holomorphic map is an {\it analytic isomorphism} if its inverse
+is holomorphic.
+\end{definition}
+
+\begin{lemma}
+\label{lemma-analytic-subset-basic-properties}
+Let $U \subset \mathbf C^n$ and $U' \subset \mathbf C^{n'}$ be analytic
+subsets in the sense of Definition \ref{definition-analytic-subset}.
+\begin{enumerate}
+\item The subset $U$ is locally closed and locally compact.
+\item The stalk $\mathcal O_{U,x}$ is a reduced local $\mathbf C$-algebra
+whose residue homomorphism is evaluation at $x$.
+\item The subset $U\times U'$ is analytic in $\mathbf C^{n+n'}$, its
+topology is the product topology, and its structure sheaf is the one obtained
+from the product analytic charts.
+\item Products of holomorphic maps are holomorphic.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+After shrinking around $x\in U$, the set $U$ is the common zero locus of
+finitely many continuous functions and hence is closed in an open subset of
+$\mathbf C^n$. This proves (1). The displayed quotient in Definition
+\ref{definition-analytic-subset} embeds into $\mathcal C_{U,x}$, and a germ
+is invertible exactly when its value at $x$ is nonzero. This proves (2).
+
+Near $(x,x')$, concatenate local defining equations for $U$ and $U'$.
+This proves analyticity of the product. The remaining assertions in (3) and
+(4) follow directly from the induced topology, the coordinate criterion in
+Definition \ref{definition-holomorphic-map-analytic-subsets}, and composition
+of holomorphic functions.
+\end{proof}
+
+
+\section{Serre complex analytic spaces}
+\label{section-serre-analytic-spaces}
+
+\begin{definition}
+\label{definition-serre-analytic-space}
+\begin{reference}
+\cite[\S 1, no. 2, pp. 4--5]{GAGA}
+\end{reference}
+A {\it complex analytic space in the sense of Serre} is a Hausdorff
+topological space $X$ together with a subsheaf of $\mathbf C$-algebras
+$$
+\mathcal O_X \subset \mathcal C_X
+$$
+such that $X$ has an open covering $X=\bigcup V_i$ for which every ringed
+space $(V_i,\mathcal O_X|_{V_i})$ is analytically isomorphic to an analytic
+subset of some $\mathbf C^{n_i}$ endowed with the sheaf of Definition
+\ref{definition-analytic-subset}.
+
+A map of such spaces is {\it holomorphic} if it is continuous and pullback
+by composition sends germs of holomorphic functions to germs of holomorphic
+functions. An isomorphism is a holomorphic map with holomorphic inverse.
+\end{definition}
+
+\begin{remark}[Reduced scope]
+\label{remark-serre-analytic-spaces-reduced}
+Because $\mathcal O_X$ is a subsheaf of a sheaf of functions, every
+$\mathcal O_{X,x}$ is reduced. Thus Definition
+\ref{definition-serre-analytic-space} is the reduced 1956 notion used by
+Serre. It does not include nilpotent analytic thickenings. Any later extension
+to nonreduced complex analytic spaces must be introduced separately and must
+not be attributed to GAGA, Definition 1.
+\end{remark}
+
+\begin{definition}
+\label{definition-analytic-subspace}
+Let $X$ be a Serre complex analytic space. A subset $Y\subset X$ is an
+{\it analytic subspace} if, in every analytic chart $V\to U$, the image of
+$Y\cap V$ is an analytic subset of $U$. It has the induced analytic-space
+structure. When $Y$ is closed in $X$, we call it a {\it closed analytic
+subspace}.
+\end{definition}
+
+\begin{lemma}
+\label{lemma-serre-analytic-subspaces-products}
+\begin{reference}
+\cite[\S 1, no. 2, p. 5]{GAGA}
+\end{reference}
+Let $X$ and $X'$ be Serre complex analytic spaces.
+\begin{enumerate}
+\item Every analytic subspace of $X$ is locally closed and the induced
+structure is independent of the chosen charts.
+\item There is a unique Serre complex analytic-space structure on
+$X\times X'$ for which products of charts are charts. Its topology is the
+product topology.
+\item Serre complex analytic spaces and holomorphic maps form a category.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+All three assertions are local on the source spaces. They therefore follow
+from Lemma \ref{lemma-analytic-subset-basic-properties}, compatibility of the
+restriction maps defining the structure sheaves, and the coordinate
+criterion for holomorphic maps.
+\end{proof}
+
+
+\section{Analytic modules and Oka--Cartan coherence}
+\label{section-analytic-modules}
+
+\begin{definition}
+\label{definition-analytic-module}
+\begin{reference}
+\cite[\S 1, no. 3, p. 5]{GAGA}
+\end{reference}
+Let $X$ be a Serre complex analytic space. An {\it analytic module} on $X$
+is an $\mathcal O_X$-module. It is {\it coherent} if it is coherent in the
+sense of Modules, Definition \ref{modules-definition-coherent}.
+\end{definition}
+
+\begin{definition}
+\label{definition-vanishing-ideal-analytic-subspace}
+Let $i:Y\to X$ be a closed analytic subspace. The {\it vanishing ideal}
+$\mathcal J_Y\subset\mathcal O_X$ has stalk
+$$
+(\mathcal J_Y)_x=
+\{f\in\mathcal O_{X,x}\mid f|_Y=0\text{ near }x\}.
+$$
+There is a canonical isomorphism
+$$
+\mathcal O_X/\mathcal J_Y \longrightarrow i_*\mathcal O_Y.
+$$
+\end{definition}
+
+\begin{theorem}[Oka--Cartan coherence]
+\label{theorem-oka-cartan-coherence}
+\begin{reference}
+\cite[\S 1, Proposition 1, pp. 5--6]{GAGA}
+\end{reference}
+Let $X$ be a Serre complex analytic space.
+\begin{enumerate}
+\item The $\mathcal O_X$-module $\mathcal O_X$ is coherent.
+\item If $Y\subset X$ is a closed analytic subspace, then its vanishing
+ideal $\mathcal J_Y$ is a coherent $\mathcal O_X$-module.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+The analytic input is the Oka--Cartan theorem that, for an open subset
+$\Omega\subset\mathbf C^n$, the sheaf $\mathcal O_\Omega$ and the vanishing
+ideal of every closed analytic subset of $\Omega$ are coherent.
+
+The assertions are local on $X$. Choose a chart and shrink it so that
+$X=Z(\mathcal I_X)$ is a closed analytic subset of an open
+$\Omega\subset\mathbf C^n$. If $Y\subset X$ is closed analytic, shrink again
+and write $Y=Z(\mathcal I_Y)$ with
+$\mathcal I_X\subset\mathcal I_Y\subset\mathcal O_\Omega$. Then
+$$
+\mathcal O_X=\mathcal O_\Omega/\mathcal I_X,
+\qquad
+\mathcal J_Y=\mathcal I_Y/\mathcal I_X.
+$$
+The Oka--Cartan input makes $\mathcal O_\Omega$, $\mathcal I_X$, and
+$\mathcal I_Y$ coherent. Modules, Lemmas
+\ref{modules-lemma-coherent-abelian} and
+\ref{modules-lemma-coherent-change-rings} now give (1) and (2).
+\end{proof}
+
+\begin{remark}[Examples]
+\label{remark-examples-coherent-analytic-modules}
+The sheaf of holomorphic sections of a holomorphic vector bundle is finite
+locally free and hence coherent by Theorem
+\ref{theorem-oka-cartan-coherence}; compare Cohomology, Lemma
+\ref{cohomology-lemma-holomorphic-vector-bundles-locally-free-analytic-modules}.
+Serre also records the sheaves of germs of automorphic functions from the
+Cartan seminar as coherent examples; this cited analytic construction is not
+needed for the foundation statements above.
+\end{remark}
+
+
+\section{Local analytic algebras}
+\label{section-local-analytic-algebras}
+
+\begin{lemma}
+\label{lemma-local-analytic-algebra}
+\begin{reference}
+\cite[\S 1, no. 4, p. 6]{GAGA}
+\end{reference}
+Let $X$ be a Serre complex analytic space and $x\in X$. There are an
+integer $n\geq 0$ and a radical ideal
+$\mathfrak a\subset\mathbf C\{z_1,\ldots,z_n\}$ such that
+$$
+\mathcal O_{X,x}\cong
+\mathbf C\{z_1,\ldots,z_n\}/\mathfrak a
+$$
+as local $\mathbf C$-algebras. Its maximal ideal consists of germs vanishing
+at $x$, its residue field is $\mathbf C$, and it is reduced and Noetherian.
+\end{lemma}
+
+\begin{proof}
+Choose an analytic chart at $x$ and translate its image point to the origin.
+Definition \ref{definition-analytic-subset} gives the displayed quotient.
+The ideal is radical because it is the ideal of germs vanishing on a set.
+The residue and reducedness statements also follow from Lemma
+\ref{lemma-analytic-subset-basic-properties}. The remaining analytic input is
+the Weierstrass theorem that
+$\mathbf C\{z_1,\ldots,z_n\}$ is Noetherian; the quotient is then Noetherian
+by Algebra, Lemma \ref{algebra-lemma-Noetherian-permanence}.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-analytic-germ-local-algebra}
+\begin{reference}
+\cite[\S 1, no. 4, p. 6]{GAGA}
+\end{reference}
+The local analytic $\mathbf C$-algebra $\mathcal O_{X,x}$ determines the
+germ of a Serre complex analytic space $X$ at $x$. More precisely, an
+isomorphism of local analytic $\mathbf C$-algebras
+$\mathcal O_{X,x}\cong\mathcal O_{Y,y}$ is induced contravariantly by an
+isomorphism of analytic germs $(X,x)\cong(Y,y)$.
+\end{lemma}
+
+\begin{proof}
+Present both local algebras as quotients of convergent power-series rings.
+Images of the coordinate germs under a local homomorphism are convergent
+germs and hence define a holomorphic map germ. The relations force its image
+to lie in the required analytic germ. Applying the same construction to the
+inverse algebra homomorphism gives inverse holomorphic germs.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-simple-point-regular-local}
+\begin{reference}
+\cite[\S 1, no. 4, p. 6]{GAGA}
+\end{reference}
+Let $X$ be a Serre complex analytic space and $x\in X$. The following are
+equivalent for $n\geq 0$:
+\begin{enumerate}
+\item the germ $(X,x)$ is isomorphic to $(\mathbf C^n,0)$;
+\item $\mathcal O_{X,x}\cong\mathbf C\{z_1,\ldots,z_n\}$;
+\item $\mathcal O_{X,x}$ is a regular local ring of dimension $n$ in the
+sense of Algebra, Definition \ref{algebra-definition-regular-local}.
+\end{enumerate}
+Such an $x$ is a {\it simple point of dimension $n$}. If every point of $X$
+is simple, then $X$ is an {\it analytic variety}.
+\end{lemma}
+
+\begin{proof}
+The equivalence of (1) and (2) follows from Lemma
+\ref{lemma-analytic-germ-local-algebra}. The implication (2) $\Rightarrow$
+(3) is the standard dimension computation for convergent power-series
+rings. The converse is the regular analytic local-algebra theorem, proved
+from the analytic inverse-function theorem (equivalently, by choosing a
+basis of $\mathfrak m_x/\mathfrak m_x^2$ and applying the analytic implicit
+function theorem). This analytic theorem is an explicit external dependency
+of the present foundation block.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-components-dimension-analytic-space}
+\begin{reference}
+\cite[\S 1, no. 4, pp. 6--7]{GAGA}
+\end{reference}
+Let $X$ be a Serre complex analytic space and $x\in X$.
+\begin{enumerate}
+\item The irreducible components $X_i$ of the germ $(X,x)$ correspond to
+the finitely many minimal primes $\mathfrak p_i$ of $\mathcal O_{X,x}$, and
+$$
+0=\bigcap_i\mathfrak p_i,
+\qquad
+\mathcal O_{X_i,x}=\mathcal O_{X,x}/\mathfrak p_i.
+$$
+\item The analytic dimension of $X$ at $x$ (one half of its local topological
+dimension) is the supremum of the dimensions of the $X_i$ and equals the
+Krull dimension of $\mathcal O_{X,x}$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Reducedness and Noetherianity are given by Lemma
+\ref{lemma-local-analytic-algebra}. The algebraic assertion about the
+finiteness and intersection of minimal primes follows from Algebra, Lemmas
+\ref{algebra-lemma-Noetherian-irreducible-components} and
+\ref{algebra-lemma-Zariski-topology}. The correspondence with analytic
+components uses the local analytic Nullstellensatz. For (2), the analytic
+normalization/parameter theorem says that an irreducible analytic local
+algebra of analytic dimension $r$ is finite over
+$\mathbf C\{z_1,\ldots,z_r\}$. Dimension invariance under finite integral
+extensions then gives Krull dimension $r$. The analytic Nullstellensatz and
+local parameter theorem are explicit external dependencies; no algebraic
+Stacks result alone supplies them.
+\end{proof}
+
+
+
+
+% Candidate continuation fragment for gaga.tex covering GAGA source units
+% gaga:no:5 through gaga:lemma:3. Insert this fragment immediately before
+% the unique terminal \input{chapters} in the foundation candidate.
+%
+% Convention: throughout this fragment an algebraic variety over C means a
+% reduced separated scheme of finite type over C, not necessarily irreducible.
+
+\section{Analytification of algebraic varieties}
+\label{section-analytification}
+
+\noindent
+Throughout this section an {\it algebraic variety over $\mathbf C$} means a
+reduced separated scheme of finite type over $\mathbf C$, not necessarily
+irreducible. Its classical points are its closed points, equivalently its
+$\mathbf C$-points. This convention is the scheme-theoretic translation of
+the convention in \cite[\S 2, no. 5]{GAGA} and is compatible with the reduced
+analytic spaces of Section \ref{section-serre-analytic-spaces}.
+
+\begin{lemma}
+\label{lemma-algebraic-charts-analytic}
+Let $U \subset \mathbf C^n$ and $U' \subset \mathbf C^{n'}$ be Zariski locally
+closed reduced subsets.
+\begin{enumerate}
+\item The Zariski topology on $\mathbf C^n$ is coarser than its usual topology.
+\item The set $U$, with its reduced induced structure, is a Serre complex
+analytic space.
+\item A regular map $f : U \to U'$ is holomorphic.
+\item A biregular isomorphism $U \to U'$ is an analytic isomorphism.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+A Zariski closed subset is the common zero set of polynomials, and polynomials
+are continuous and holomorphic. This proves (1) and proves (2) for a closed
+subset; a locally closed subset is open in its closure, and restriction gives
+the general case. A regular function on a Zariski open subset is locally a
+quotient $g/h$ of polynomials with $h$ nonvanishing. Hence it is holomorphic.
+Applying this coordinate by coordinate proves (3). Applying (3) to $f$ and to
+$f^{-1}$ proves (4).
+\end{proof}
+
+\begin{proposition}
+\label{proposition-analytification}
+Let $X$ be an algebraic variety over $\mathbf C$. There is a unique Serre
+complex analytic space $X^{an}$ with the following property: for every
+algebraic chart
+$$
+\varphi : V \longrightarrow U \subset \mathbf C^n
+$$
+from a Zariski open $V \subset X$ onto a Zariski locally closed reduced
+subset, $V$ is open in $X^{an}$ and $\varphi$ is an analytic isomorphism.
+
+The construction is functorial. Every morphism $f : X \to Y$ induces a
+holomorphic map $f^{an} : X^{an} \to Y^{an}$, and there is a canonical
+morphism of locally ringed spaces
+$$
+a_X : (X^{an}, \mathcal O_{X^{an}}) \longrightarrow
+(X, \mathcal O_X)
+$$
+whose map on points sends a classical point to the corresponding closed
+scheme point and whose map on structure sheaves sends a regular function to
+the same function viewed as holomorphic.
+\end{proposition}
+
+\begin{proof}
+Cover $X$ by finitely many algebraic charts $V_i \to U_i$. Transport the
+analytic structure of $U_i$ to $V_i$. On $V_i \cap V_j$ the transition maps
+and their inverses are holomorphic by
+Lemma \ref{lemma-algebraic-charts-analytic}; the overlap is open for the usual
+topology by the same lemma. The cocycle condition is inherited from the
+algebraic charts. The sheaves and the locally ringed spaces therefore glue by
+Sheaves, Lemma \ref{sheaves-lemma-glue-sheaves-structures}.
+
+It remains to check the Hausdorff axiom, rather than hide it in the word
+``glue''. The inverse image of the diagonal of the glued point set in every
+$V_i \times V_j$ is the graph of the algebraic identification on the overlap.
+Since $X$ is separated, this graph is Zariski closed; it is closed in the usual
+topology by Lemma \ref{lemma-algebraic-charts-analytic}. These products form an
+open cover, so the diagonal is closed and the glued space is Hausdorff.
+Uniqueness follows because the charts cover $X$ and determine both its topology
+and its structure sheaf.
+
+For a morphism $f : X \to Y$, its restrictions in algebraic charts are
+holomorphic by Lemma \ref{lemma-algebraic-charts-analytic}; they glue to
+$f^{an}$, compatibly with identities and composition. The usual topology is
+finer than the Zariski topology, so the point map underlying $a_X$ is
+continuous. Regular functions are holomorphic in charts, and the induced maps
+on stalks are local. This constructs the asserted morphism of locally ringed
+spaces.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-analytification-properties}
+Let $X$ and $Y$ be algebraic varieties over $\mathbf C$.
+\begin{enumerate}
+\item The space $X^{an}$ is locally compact, second countable, and countable
+at infinity.
+\item There is a canonical analytic isomorphism
+$(X \times_{\mathbf C} Y)^{an} \cong X^{an} \times Y^{an}$.
+\item If $Z \subset X$ is a Zariski locally closed reduced subvariety, then
+$Z^{an}$ is the reduced analytic subspace induced on $Z(\mathbf C)$ by
+$X^{an}$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+A Zariski locally closed subset of $\mathbf C^n$ is locally compact, second
+countable, and a countable union of compact subsets. The same properties pass
+to a finite union of open chart domains, proving (1). Products of algebraic
+charts are algebraic charts and the usual topology on a product of subsets of
+complex affine spaces is the product topology; uniqueness in
+Proposition \ref{proposition-analytification} proves (2). Restricting charts of
+$X$ to $Z$ and using Lemma \ref{lemma-algebraic-charts-analytic} proves (3).
+\end{proof}
+
+\section{Local algebra of analytification}
+\label{section-local-comparison}
+
+\noindent
+Let $x \in X(\mathbf C)$. We write
+$$
+\theta_x : \mathcal O_{X,x} \longrightarrow \mathcal O_{X^{an},x}
+$$
+for the local homomorphism induced by $a_X$. Both rings are Noetherian local
+rings with residue field $\mathbf C$: this is standard for the algebraic ring,
+and for the analytic ring it is Lemma \ref{lemma-local-analytic-algebra}.
+
+\begin{proposition}
+\label{proposition-analytification-closed-ideal}
+Let $Z \subset X$ be a Zariski locally closed reduced subvariety and let
+$x \in Z(\mathbf C)$. After replacing $X$ by a Zariski neighbourhood of $x$,
+view $Z$ as closed. If $\mathcal J_{Z,x} \subset \mathcal O_{X,x}$ is its
+algebraic ideal and $\mathcal I_{Z^{an},x} \subset
+\mathcal O_{X^{an},x}$ is the ideal of holomorphic germs vanishing on
+$Z^{an}$, then
+$$
+\mathcal I_{Z^{an},x} =
+\mathcal J_{Z,x}\mathcal O_{X^{an},x}.
+$$
+Consequently
+$$
+\mathcal O_{Z^{an},x} \cong
+\mathcal O_{X^{an},x}/
+\mathcal J_{Z,x}\mathcal O_{X^{an},x}.
+$$
+\end{proposition}
+
+\begin{proof}
+First take $X=\mathbf A^n_{\mathbf C}$ and translate $x$ to the origin. Put
+$$
+R=\mathbf C[z_1,\ldots,z_n]_{(z_1,\ldots,z_n)},
+\qquad
+H=\mathbf C\{z_1,\ldots,z_n\}.
+$$
+Let $J \subset R$ be the radical ideal of $Z$. The local analytic
+Nullstellensatz says that the ideal of holomorphic germs vanishing on $Z$ is
+$\sqrt{JH}$. We show that $JH$ is already radical.
+
+The Taylor homomorphisms identify the maximal-adic completions of both $R$ and
+$H$ with $\mathbf C[[z_1,\ldots,z_n]]$. Completion is exact on finite modules
+by Algebra, Lemma \ref{algebra-lemma-completion-tensor}; hence the completion
+of $H/JH$ is
+$$
+\mathbf C[[z_1,\ldots,z_n]]/
+J\mathbf C[[z_1,\ldots,z_n]],
+$$
+which is also the completion of $R/J$. The field $\mathbf C$ is excellent by
+More on Algebra, Proposition
+\ref{more-algebra-proposition-ubiquity-excellent}, and $R/J$, being a
+localization of a finite type $\mathbf C$-algebra, is excellent by More on
+Algebra, Lemma \ref{more-algebra-lemma-finite-type-over-excellent}. It is
+therefore Nagata by More on Algebra, Lemma
+\ref{more-algebra-lemma-quasi-excellent-nagata}. Its
+completion is reduced by More on Algebra, Lemma
+\ref{more-algebra-lemma-completion-reduced}. Thus the completion of $H/JH$ is
+reduced. The ring $H/JH$ injects into its completion by Krull's intersection
+theorem, Algebra, Lemma
+\ref{algebra-lemma-intersect-powers-ideal-module-zero}; hence $H/JH$ is
+reduced and $JH=\sqrt{JH}$. The analytic Nullstellensatz now gives the desired
+equality in affine space.
+
+For general $X$, work in an algebraic chart which realizes $X$ and $Z$ as
+reduced locally closed subsets of one affine space. Apply the affine result to
+their ambient ideals and pass to the quotient. This gives both displayed
+formulas.
+\end{proof}
+
+\begin{theorem}
+\label{theorem-analytification-completed-local-rings}
+For every algebraic variety $X$ over $\mathbf C$ and every
+$x \in X(\mathbf C)$, the local homomorphism $\theta_x$ induces an isomorphism
+of completed local rings
+$$
+\widehat{\theta}_x :
+\widehat{\mathcal O}_{X,x} \xrightarrow{\ \sim\ }
+\widehat{\mathcal O}_{X^{an},x}.
+$$
+In particular, $\theta_x$ is injective.
+\end{theorem}
+
+\begin{proof}
+For affine space at the origin the map is
+$$
+\mathbf C[z_1,\ldots,z_n]_{(z_1,\ldots,z_n)}
+\longrightarrow \mathbf C\{z_1,\ldots,z_n\},
+$$
+and both maximal-adic completions are canonically
+$\mathbf C[[z_1,\ldots,z_n]]$ by Taylor expansion and truncation. For a
+locally closed reduced $X$ in affine space, Proposition
+\ref{proposition-analytification-closed-ideal} identifies its analytic local
+ring with the quotient by the extended algebraic ideal. Exactness of
+completion on finite modules, Algebra, Lemma
+\ref{algebra-lemma-completion-tensor}, identifies both completions with the
+same quotient of the formal power-series ring. The assertion is local, so
+charts prove the general case. Finally, $\mathcal O_{X,x}$ injects into its
+completion by Algebra, Lemma
+\ref{algebra-lemma-intersect-powers-ideal-module-zero}, which proves the last
+sentence.
+\end{proof}
+
+\begin{theorem}
+\label{theorem-analytification-local-faithfully-flat}
+The local homomorphism
+$$
+\theta_x : \mathcal O_{X,x} \longrightarrow \mathcal O_{X^{an},x}
+$$
+is faithfully flat. In Serre's terminology,
+$(\mathcal O_{X,x},\mathcal O_{X^{an},x})$ is a flat pair: the quotient
+$\mathcal O_{X^{an},x}/\mathcal O_{X,x}$ is flat over $\mathcal O_{X,x}$,
+and for every ideal $I \subset \mathcal O_{X,x}$ one has
+$$
+I\mathcal O_{X^{an},x}\cap\mathcal O_{X,x}=I.
+$$
+\end{theorem}
+
+\begin{proof}
+The map on completions is an isomorphism by
+Theorem \ref{theorem-analytification-completed-local-rings}, hence is flat.
+More on Algebra, Lemma \ref{more-algebra-lemma-flat-completion} implies that
+$\theta_x$ is flat, and Algebra, Lemma
+\ref{algebra-lemma-local-flat-ff} makes this local flat map faithfully flat.
+The contraction formula is Algebra, Lemma
+\ref{algebra-lemma-faithfully-flat-universally-injective}. Universal
+injectivity after tensoring the exact sequence
+$0\to\mathcal O_{X,x}\to\mathcal O_{X^{an},x}$ shows that the displayed
+quotient is flat, which is precisely the flat-pair assertion.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-analytification-local-dimension}
+For every $x \in X(\mathbf C)$,
+$$
+\dim(\mathcal O_{X,x})=\dim(\mathcal O_{X^{an},x}).
+$$
+\end{lemma}
+
+\begin{proof}
+Each ring has the same dimension as its completion by More on Algebra, Lemma
+\ref{more-algebra-lemma-completion-dimension}, and the two completions are
+isomorphic by Theorem \ref{theorem-analytification-completed-local-rings}.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-analytification-dimension}
+If $X$ is irreducible of dimension $r$, then $X^{an}$ has analytic dimension
+$r$ at every point.
+\end{lemma}
+
+\begin{proof}
+For a closed point $x$, Varieties, Lemma
+\ref{varieties-lemma-dimension-locally-algebraic}, parts
+\ref{varieties-item-dimension-at-closed-point} and
+\ref{varieties-item-dimension-irreducible}, gives
+$$
+\dim(\mathcal O_{X,x})=r.
+$$
+Apply
+Lemma \ref{lemma-analytification-local-dimension}, followed by
+Lemma \ref{lemma-components-dimension-analytic-space}, which identifies
+analytic dimension with the Krull dimension of the analytic local ring.
+\end{proof}
+
+\section{The classical and Zariski topologies}
+\label{section-classical-zariski-topologies}
+
+\begin{lemma}
+\label{lemma-zariski-dense-open-analytically-dense}
+Let $U \subset X$ be Zariski open and Zariski dense. Then $U^{an}$ is dense
+in $X^{an}$.
+\end{lemma}
+
+\begin{proof}
+Put $Z=X\setminus U$ with its reduced induced structure. If a point
+$x \in X^{an}$ were not in the closure of $U^{an}$, then $Z^{an}$ would
+contain an analytic neighbourhood of $x$. Its local vanishing ideal at $x$
+would therefore be zero. Proposition
+\ref{proposition-analytification-closed-ideal} and the injectivity in
+Theorem \ref{theorem-analytification-completed-local-rings} would give
+$\mathcal J_{Z,x}=0$. Thus $Z$ would agree with $X$ on a nonempty Zariski
+neighbourhood of $x$, contradicting the Zariski density of $U$.
+\end{proof}
+
+\begin{proposition}
+\label{proposition-proper-if-and-only-if-compact-analytification}
+An algebraic variety $X$ over $\mathbf C$ is proper over $\mathbf C$ if and
+only if the topological space $X^{an}$ is compact.
+\end{proposition}
+
+\begin{proof}
+Apply Chow's lemma in the precise form of Limits, Lemma
+\ref{limits-lemma-chow-finite-type}. After replacing the source by its
+reduction as allowed by the following remark there, we obtain a proper
+surjective morphism $\pi : U \to X$ and an immersion
+$U \to \mathbf P^n_{\mathbf C}$. Let $Y$ be the reduced closure of $U$ in
+$\mathbf P^n_{\mathbf C}$. Then $Y$ is projective and $U$ is Zariski open
+and dense in $Y$. Moreover the graph of $\pi$ is closed in $X\times Y$:
+over $X$ it is the graph of a morphism from the proper $X$-scheme $U$ to the
+separated $X$-scheme $X\times Y$.
+
+If $X$ is proper, then $U$ is proper over $\mathbf C$. Its immersion into
+projective space is proper and hence closed, so $U=Y$. The space
+$Y^{an}$ is a closed subset of the compact Hausdorff space
+$\mathbf P^n(\mathbf C)$, hence compact. The continuous surjection
+$\pi^{an}:Y^{an}\to X^{an}$ shows that $X^{an}$ is compact.
+
+Conversely, assume $X^{an}$ compact. Then $X^{an}\times Y^{an}$ is compact,
+and the analytification of the closed graph is closed in this product by
+Lemma \ref{lemma-analytification-properties}. Its projection to $Y^{an}$ is
+$U^{an}$, hence $U^{an}$ is compact and therefore closed in the Hausdorff
+space $Y^{an}$. It is dense by
+Lemma \ref{lemma-zariski-dense-open-analytically-dense}, so $U^{an}=Y^{an}$.
+Thus $U=Y$ because a nonempty closed subset of a finite type
+$\mathbf C$-scheme has a closed $\mathbf C$-point. Now the projective variety
+$Y$ is proper and maps surjectively to $X$; Morphisms, Lemma
+\ref{morphisms-lemma-image-proper-is-proper} implies that $X$ is proper.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-dense-image-contains-open}
+Let $f : X \to Y$ be a morphism of algebraic varieties over $\mathbf C$. If
+$f(X)$ is Zariski dense in $Y$, then $f(X)$ contains a Zariski open dense
+subset of $Y$.
+\end{lemma}
+
+\begin{proof}
+The image is constructible by Morphisms, Lemma
+\ref{morphisms-lemma-chevalley}. A dense constructible subset contains a dense
+open subset by Topology, Lemma
+\ref{topology-lemma-dense-in-constructible}.
+\end{proof}
+
+\begin{proposition}
+\label{proposition-image-closure}
+Let $f : X \to Y$ be a morphism of algebraic varieties. The closure of
+$f(X(\mathbf C))$ in $Y^{an}$ is the set of classical points of the Zariski
+closure of $f(X)$ in $Y$.
+\end{proposition}
+
+\begin{proof}
+Let $T$ be the reduced Zariski closure of $f(X)$. Applying
+Lemma \ref{lemma-dense-image-contains-open} to $X\to T$ gives a Zariski open
+dense $V\subset T$ contained in $f(X)$. By
+Lemma \ref{lemma-zariski-dense-open-analytically-dense}, $V^{an}$ is dense in
+$T^{an}$, so $T^{an}$ is contained in the analytic closure of $f(X)$. The
+opposite inclusion holds because $T^{an}$ is closed in $Y^{an}$ by
+Lemma \ref{lemma-analytification-properties}.
+\end{proof}
+
+\section{An analytic criterion for regularity}
+\label{section-analytic-regularity}
+
+\begin{proposition}
+\label{proposition-algebraic-graph-holomorphic-regular}
+Let $X$ and $Y$ be algebraic varieties and let
+$f : X^{an}\to Y^{an}$ be holomorphic. If its graph is the classical point
+set of a Zariski locally closed reduced subvariety
+$T\subset X\times_{\mathbf C}Y$, then $f$ is induced by a morphism
+$X\to Y$.
+\end{proposition}
+
+\begin{proof}
+The first projection $p:T\to X$ is a morphism and is bijective on classical
+points. Its inverse $x\mapsto(x,f(x))$ is holomorphic. By
+Lemma \ref{lemma-analytification-properties}, $p^{an}$ is therefore an
+analytic isomorphism. Proposition
+\ref{proposition-analytic-isomorphism-algebraic} below shows that $p$ is an
+isomorphism. Hence $f=\operatorname{pr}_Y\circ p^{-1}$ is regular.
+\end{proof}
+
+\begin{proposition}
+\label{proposition-analytic-isomorphism-algebraic}
+Let $p:T\to X$ be a morphism of algebraic varieties which is bijective on
+classical points. If $p^{an}:T^{an}\to X^{an}$ is an analytic isomorphism,
+then $p$ is an isomorphism.
+\end{proposition}
+
+\begin{proof}
+First $p$ is a homeomorphism for the Zariski topology on classical points.
+Indeed, if $F\subset T$ is Zariski closed, then $F^{an}$ is closed in
+$T^{an}$. Its image under the analytic homeomorphism is closed in $X^{an}$.
+By Proposition \ref{proposition-image-closure}, applied to $F\to X$, this
+image is Zariski closed.
+
+Both schemes are Jacobson by Varieties, Lemma
+\ref{varieties-lemma-locally-finite-type-Jacobson}. Hence their closed subsets
+are determined by their closed points. Passing from irreducible closed subsets
+to their unique generic points (Schemes, Lemma
+\ref{schemes-lemma-scheme-sober}) extends the preceding homeomorphism uniquely
+to a homeomorphism of the full underlying scheme spaces.
+
+Fix $t\in T(\mathbf C)$ and put $x=p(t)$. The Zariski homeomorphism makes
+$$
+A=\mathcal O_{X,x}\longrightarrow A'=\mathcal O_{T,t}
+$$
+injective. The analytic isomorphism identifies
+$B=\mathcal O_{X^{an},x}$ with $\mathcal O_{T^{an},t}$. By
+Theorem \ref{theorem-analytification-local-faithfully-flat}, both $A$ and
+$A'$ embed in this common ring $B$.
+
+The irreducible components through $x$ correspond to those through $t$.
+Write their minimal primes as $\mathfrak p_i\subset A$ and
+$\mathfrak p'_i\subset A'$, with
+$\mathfrak p'_i\cap A=\mathfrak p_i$. Put
+$$
+K_i=\operatorname{Frac}(A/\mathfrak p_i),
+\qquad
+K'_i=\operatorname{Frac}(A'/\mathfrak p'_i).
+$$
+The corresponding irreducible varieties are homeomorphic and have the same
+dimension, so $K'_i/K_i$ is a finite extension. To see that its degree is one,
+use Morphisms, Lemma \ref{morphisms-lemma-finite-degree} and generic flatness,
+Morphisms, Proposition \ref{morphisms-proposition-generic-flatness}, to shrink
+the target to a nonempty open over which the component map is finite locally
+free. Since the ground field has characteristic zero, $K'_i/K_i$ is separable;
+after shrinking once more the map is finite etale of degree
+$[K'_i:K_i]$. Every closed fibre then consists of that many reduced
+$\mathbf C$-points. Bijectivity of $p$ forces $[K'_i:K_i]=1$.
+
+Let $S$ be the complement in $A$ of the union of its minimal primes and define
+$S'$ similarly for $A'$. Lemma \ref{lemma-total-fractions-reduced} below gives
+$$
+A_S=\prod_iK_i=\prod_iK'_i=A'_{S'}.
+$$
+If $h\in A'$, write $h=g/s$ in this common total ring of fractions with
+$g\in A$ and $s\in S$. Thus $g=sh\in sB$. Faithful flatness and Algebra,
+Lemma \ref{algebra-lemma-faithfully-flat-universally-injective}, give
+$sB\cap A=sA$, so $g=sa$ for some $a\in A$. Hence $s(h-a)=0$. The element
+$s$ lies in no minimal prime of the reduced ring $A'$, and is therefore a
+nonzerodivisor by Algebra, Lemma
+\ref{algebra-lemma-reduced-ring-sub-product-fields}. Thus $h=a$ and $A'=A$.
+
+We have proved that the local maps are isomorphisms at every closed point.
+Thus $p$ is etale at every closed point by Etale, Lemma
+\ref{etale-lemma-characterize-etale-Noetherian}. The etale locus is open; its
+closed complement, if nonempty, would contain a closed point because $T$ is
+Jacobson. Hence $p$ is etale everywhere.
+
+Finally, repeat the finite-degree argument above for the restriction of $p$ to
+the reduced closure of an arbitrary point of $T$. The Zariski homeomorphism
+identifies this closure with the closure of its image, and the same argument
+shows that the induced extension of their function fields, namely the residue
+field extension at the two generic points, has degree one. Thus $p$ is
+injective on points with trivial residue extensions, hence radicial by
+Morphisms, Lemma \ref{morphisms-lemma-universally-injective}. An etale
+radicial morphism is an open immersion by Etale, Theorem
+\ref{etale-theorem-etale-radicial-open}. Since $p$ is also surjective, it is an
+isomorphism.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-total-fractions-reduced}
+Let $A$ be a reduced ring with finitely many minimal primes
+$\mathfrak p_1,\ldots,\mathfrak p_r$. Let $S$ be the set of elements lying in
+none of the $\mathfrak p_i$ and put
+$K_i=\operatorname{Frac}(A/\mathfrak p_i)$. Then
+$$
+A_S=\prod_{i=1}^rK_i.
+$$
+\end{lemma}
+
+\begin{proof}
+Algebra, Lemma \ref{algebra-lemma-reduced-ring-sub-product-fields} says that
+$S$ is exactly the set of nonzerodivisors and that
+$A_{\mathfrak p_i}=K_i$. Algebra, Lemma
+\ref{algebra-lemma-total-ring-fractions-no-embedded-points} then identifies
+the total ring of fractions $A_S$ with the displayed product.
+\end{proof}
+
+% External analytic input ledger for this continuation:
+% (1) the local analytic Nullstellensatz, used exactly once in the proof of
+%     Proposition \ref{proposition-analytification-closed-ideal};
+% (2) Taylor expansion and the completion identity
+%     \widehat{\mathbf C\{z_1,...,z_n\}}=\mathbf C[[z_1,...,z_n]], used in
+%     the two local-comparison proofs;
+% (3) compactness and Hausdorffness of complex projective space, used in the
+%     proof of Proposition
+%     \ref{proposition-proper-if-and-only-if-compact-analytification}.
+% Oka--Cartan coherence and Weierstrass Noetherianity were already stated as
+% explicit dependencies in the foundation block; no properness-comparison,
+% identity, normalization, or unmentioned analytic theorem is invoked here.
+
+% Continuation fragment for GAGA source nos. 9--12. Insert after the
+% analytification fragment and before the proof fragment for nos. 13--17.
+
+\section{Analytification of modules}
+\label{section-analytification-modules}
+
+\begin{definition}
+\label{definition-analytification-module}
+\begin{reference}
+\cite[\S 3, no. 9, Definition 2]{GAGA}
+\end{reference}
+Let $X$ be an algebraic variety over $\mathbf C$ and let
+$a_X:X^{\mathrm{an}}\to X$ be the canonical morphism of locally ringed
+spaces of Proposition \ref{proposition-analytification}. For an
+$\mathcal O_X$-module $\mathcal F$, its {it analytification} is
+$$
+\mathcal F^{\mathrm{an}}=a_X^*\mathcal F
+=\mathcal O_{X^{\mathrm{an}}}
+\otimes_{a_X^{-1}\mathcal O_X}a_X^{-1}\mathcal F.
+$$
+There is a canonical map of $a_X^{-1}\mathcal O_X$-modules
+$$
+\eta_{\mathcal F}:a_X^{-1}\mathcal F\longrightarrow
+\mathcal F^{\mathrm{an}},\qquad s\longmapsto1\otimes s.
+$$
+Every $\mathcal O_X$-linear map $\mathcal F\to\mathcal G$ induces an
+$\mathcal O_{X^{\mathrm{an}}}$-linear map
+$\mathcal F^{\mathrm{an}}\to\mathcal G^{\mathrm{an}}$, functorially, and
+$\mathcal O_X^{\mathrm{an}}=\mathcal O_{X^{\mathrm{an}}}$ canonically.
+\end{definition}
+
+\begin{lemma}
+\label{lemma-analytification-module-stalks}
+Let $x\in X(\mathbf C)=X^{\mathrm{an}}$. There are canonical identifications
+$$
+(\mathcal F^{\mathrm{an}})_x
+=\mathcal F_x\otimes_{\mathcal O_{X,x}}
+\mathcal O_{X^{\mathrm{an}},x}
+$$
+under which $(\eta_{\mathcal F})_x$ is the map $m\mapsto1\otimes m$.
+\end{lemma}
+
+\begin{proof}
+Stalks commute with inverse image and tensor product. Since $x$ is a closed
+point, $(a_X^{-1}\mathcal F)_x=\mathcal F_x$. The displayed identification
+and the description of $\eta_{\mathcal F}$ follow directly from Definition
+\ref{definition-analytification-module}.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-analytification-exact-faithful-coherent}
+\begin{reference}
+\cite[\S 3, no. 9, Proposition 10]{GAGA}
+\end{reference}
+Let $X$ be an algebraic variety over $\mathbf C$.
+\begin{enumerate}
+\item The functor $\mathcal F\mapsto\mathcal F^{\mathrm{an}}$ on
+$\mathcal O_X$-modules is exact.
+\item The map $\eta_{\mathcal F}:a_X^{-1}\mathcal F\to
+\mathcal F^{\mathrm{an}}$ is injective for every $\mathcal F$.
+\item If $\mathcal F$ is coherent, then $\mathcal F^{\mathrm{an}}$ is a
+coherent analytic module.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+The stalk formula of Lemma \ref{lemma-analytification-module-stalks} and
+faithful flatness in Theorem
+\ref{theorem-analytification-local-faithfully-flat} prove (1); compare
+Modules, Lemma \ref{modules-lemma-pullback-flat}. The same stalk formula and
+Algebra, Lemma
+\ref{algebra-lemma-faithfully-flat-universally-injective} prove (2).
+
+For (3), a coherent module on the locally Noetherian scheme $X$ is locally
+finitely presented. Pullback preserves finite presentations. The analytic
+structure sheaf is coherent by Theorem
+\ref{theorem-oka-cartan-coherence}; hence a finitely presented analytic
+module is coherent by Modules, Lemma
+\ref{modules-lemma-coherent-structure-sheaf}.
+\end{proof}
+
+\begin{remark}[Analytification of an ideal]
+\label{remark-analytification-ideal-sheaf}
+If $\mathcal J\subset\mathcal O_X$ is a quasi-coherent ideal, exactness
+identifies $\mathcal J^{\mathrm{an}}$ with the ideal of
+$\mathcal O_{X^{\mathrm{an}}}$ generated by the image of
+$a_X^{-1}\mathcal J$. For the ideal of a reduced closed subvariety this is
+also Proposition \ref{proposition-analytification-closed-ideal}.
+\end{remark}
+
+
+\section{Closed immersions and analytification}
+\label{section-analytification-closed-immersions}
+
+\begin{lemma}
+\label{lemma-analytification-pushforward-closed-immersion}
+\begin{reference}
+\cite[\S 3, no. 10, Proposition 11]{GAGA}
+\end{reference}
+Let $i:Z\to X$ be a closed immersion of algebraic varieties over
+$\mathbf C$, and let $\mathcal F$ be a coherent $\mathcal O_Z$-module. There
+is a canonical isomorphism
+$$
+(i_*\mathcal F)^{\mathrm{an}}
+\longrightarrow i^{\mathrm{an}}_*(\mathcal F^{\mathrm{an}}).
+$$
+\end{lemma}
+
+\begin{proof}
+The commutative analytification square and adjunction give the canonical
+map. Both sides vanish away from $Z^{\mathrm{an}}$. At
+$z\in Z(\mathbf C)$ the source stalk is
+$$
+\mathcal F_z\otimes_{\mathcal O_{X,z}}
+\mathcal O_{X^{\mathrm{an}},z},
+$$
+whereas the target stalk is
+$$
+\mathcal F_z\otimes_{\mathcal O_{Z,z}}
+\mathcal O_{Z^{\mathrm{an}},z}.
+$$
+Proposition \ref{proposition-analytification-closed-ideal} gives
+$$
+\mathcal O_{Z^{\mathrm{an}},z}
+=\mathcal O_{Z,z}\otimes_{\mathcal O_{X,z}}
+\mathcal O_{X^{\mathrm{an}},z}.
+$$
+Associativity of tensor product identifies the two stalks, and the
+identification is the stalk of the canonical map.
+\end{proof}
+
+
+\section{The cohomology comparison map}
+\label{section-analytification-cohomology-map}
+
+\begin{definition}[Cohomology comparison map]
+\label{construction-analytification-cohomology-map}
+\begin{reference}
+\cite[\S 3, no. 11]{GAGA}
+\end{reference}
+Let $\mathcal F$ be an $\mathcal O_X$-module. Exactness of $a_X^*$ and the
+derived adjunction unit give
+$$
+\mathcal F\longrightarrow Ra_{X,*}a_X^*\mathcal F.
+$$
+After applying derived global sections and using
+$$
+R\Gamma(X,Ra_{X,*}\mathcal G)
+=R\Gamma(X^{\mathrm{an}},\mathcal G),
+$$
+we obtain canonical maps
+$$
+\epsilon^q_{\mathcal F}:
+H^q(X,\mathcal F)\longrightarrow
+H^q(X^{\mathrm{an}},\mathcal F^{\mathrm{an}}),
+\qquad q\geq0.
+$$
+For $q=0$, this sends a section $s$ to $1\otimes s$. Thus it agrees with
+Serre's map obtained from Zariski covers and their analytifications.
+\end{definition}
+
+\begin{lemma}
+\label{lemma-analytification-cohomology-map-functorial}
+The maps $\epsilon^q_{\mathcal F}$ are natural in $\mathcal F$. For every
+short exact sequence of $\mathcal O_X$-modules, they form a morphism from
+the algebraic long exact cohomology sequence to the analytic long exact
+cohomology sequence. In particular, they commute with connecting maps.
+\end{lemma}
+
+\begin{proof}
+The derived adjunction unit is a natural transformation. Because
+analytification is exact by Lemma
+\ref{lemma-analytification-exact-faithful-coherent}, it carries short exact
+sequences to short exact sequences. Naturality of the associated
+distinguished triangles gives the asserted morphism of long exact
+sequences.
+\end{proof}
+
+
+\section{The GAGA comparison theorems}
+\label{section-gaga-statements}
+
+\begin{theorem}[Cohomology comparison]
+\label{theorem-gaga-cohomology}
+\begin{reference}
+\cite[\S 3, no. 12, Theorem 1]{GAGA}
+\end{reference}
+Let $X$ be a projective algebraic variety over $\mathbf C$ and let
+$\mathcal F$ be a coherent $\mathcal O_X$-module. For every $q\geq0$, the
+map
+$$
+\epsilon^q_{\mathcal F}:H^q(X,\mathcal F)
+\longrightarrow H^q(X^{\mathrm{an}},\mathcal F^{\mathrm{an}})
+$$
+is an isomorphism. In particular,
+$$
+\Gamma(X,\mathcal F)\longrightarrow
+\Gamma(X^{\mathrm{an}},\mathcal F^{\mathrm{an}})
+$$
+is an isomorphism.
+\end{theorem}
+
+\begin{theorem}[Full faithfulness]
+\label{theorem-gaga-fully-faithful}
+\begin{reference}
+\cite[\S 3, no. 12, Theorem 2]{GAGA}
+\end{reference}
+Let $X$ be a projective algebraic variety over $\mathbf C$ and let
+$\mathcal F,\mathcal G$ be coherent $\mathcal O_X$-modules. Analytification
+induces a bijection
+$$
+\mathop{\rm Hom}\nolimits_{\mathcal O_X}(\mathcal F,\mathcal G)
+\longrightarrow
+\mathop{\rm Hom}\nolimits_{\mathcal O_{X^{\mathrm{an}}}}
+(\mathcal F^{\mathrm{an}},\mathcal G^{\mathrm{an}}).
+$$
+\end{theorem}
+
+\begin{theorem}[Essential surjectivity]
+\label{theorem-gaga-essential-surjectivity}
+\begin{reference}
+\cite[\S 3, no. 12, Theorem 3]{GAGA}
+\end{reference}
+Let $X$ be a projective algebraic variety over $\mathbf C$. Every coherent
+$\mathcal O_{X^{\mathrm{an}}}$-module $\mathcal M$ is isomorphic to
+$\mathcal F^{\mathrm{an}}$ for a coherent $\mathcal O_X$-module
+$\mathcal F$. The module $\mathcal F$ is unique up to isomorphism; moreover,
+every analytic isomorphism between two such analytifications is induced by
+a unique algebraic isomorphism.
+\end{theorem}
+
+The proofs of these three theorems occupy the following sections.
+
+\begin{remark}[Projectivity is essential]
+\label{remark-gaga-projectivity-essential}
+For $X=\mathbf A^1_{\mathbf C}$ and $\mathcal F=\mathcal O_X$, the
+degree-zero comparison map is
+$$
+\mathbf C[z]\longrightarrow
+\Gamma(\mathbf C,\mathcal O_{\mathbf C}),
+$$
+whose target is the ring of entire functions. It is not surjective. Thus the
+projectivity hypothesis in the comparison theorems cannot simply be
+discarded.
+\end{remark}
+
+\begin{remark}[The intermediate inverse-image sheaf]
+\label{remark-gaga-comparison-factorization}
+The comparison map factors canonically as
+$$
+H^q(X,\mathcal F)
+\longrightarrow H^q(X^{\mathrm{an}},a_X^{-1}\mathcal F)
+\longrightarrow H^q(X^{\mathrm{an}},\mathcal F^{\mathrm{an}}).
+$$
+The first arrow need not be an isomorphism. For example, let $X$ be an
+irreducible projective variety whose analytification has a nonzero Betti
+number $b_q$ with $q>0$, and put $K=\mathbf C(X)$. The sheaf $K$ is flasque
+on the irreducible Zariski space $X$, so $H^q(X,K)=0$. Its inverse image is
+the constant sheaf with value $K$ on $X^{\mathrm{an}}$, whose degree-$q$
+cohomology is a $K$-vector space of dimension $b_q$. This is the obstruction
+recorded after the three theorems in \cite[\S 3, no. 12]{GAGA}.
+\end{remark}
+
+% Candidate continuation for GAGA source nos. 13--17.
+% Insert after remark-gaga-comparison-factorization and before the
+% unique terminal \input{chapters} in the standalone gaga.tex candidate.
+% This fragment assumes the analytification functor, its flatness and
+% exactness, the comparison maps on cohomology, and the statements of the
+% three GAGA theorems have already been introduced.
+
+\section{Proof of the cohomology comparison theorem}
+\label{section-proof-gaga-cohomology}
+
+We first record the two analytic inputs used to start and bound the proof.
+They are deliberately visible: neither is a formal consequence of the
+algebraic cohomology calculation.
+
+\begin{lemma}[Analytic cohomological dimension of projective space]
+\label{lemma-projective-analytic-cohomological-dimension}
+Let $r \geq 0$ and let $\mathcal A$ be a sheaf of abelian groups on
+$\mathbf P^r(\mathbf C)$ with its analytic topology. Then
+$$
+H^q(\mathbf P^r(\mathbf C),\mathcal A)=0
+\quad\text{for }q>2r.
+$$
+\end{lemma}
+
+\begin{proof}
+The underlying space of $\mathbf P^r(\mathbf C)$ is a compact triangulable
+real manifold of dimension $2r$. We use the topological cohomological
+dimension theorem saying that a paracompact Hausdorff space of covering
+dimension $d$ has vanishing sheaf cohomology in degrees greater than $d$.
+This covering-dimension theorem is an external topological input; the
+current Stacks chapter on Cohomology defines cohomological dimension but
+does not prove this comparison with covering dimension.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-projective-structure-sheaf-comparison}
+For every $r \geq 0$ and every $q \geq 0$, the comparison map
+$$
+H^q(\mathbf P^r_{\mathbf C},\mathcal O)
+\longrightarrow
+H^q(\mathbf P^r(\mathbf C),\mathcal O^{\mathrm{an}})
+$$
+is an isomorphism.
+\end{lemma}
+
+\begin{proof}
+By Cohomology of Schemes, Lemma
+\ref{coherent-lemma-cohomology-projective-space-over-ring}, the group on the
+left is $\mathbf C$ for $q=0$ and is zero for $q>0$. On the analytic side we
+use the Dolbeault theorem together with the standard computation
+$$
+H^{0,q}_{\overline\partial}(\mathbf P^r(\mathbf C))=
+\begin{cases}
+\mathbf C & q=0,\\
+0 & q>0.
+\end{cases}
+$$
+This Dolbeault--projective-space calculation is the external analytic input
+in this lemma; see \cite[\S 2, no. 13]{GAGA}. In degree zero the comparison
+map sends a constant algebraic function to the same constant holomorphic
+function, and hence is the identity on $\mathbf C$. In positive degree both
+sides vanish.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-projective-twist-comparison}
+Let $r \geq 0$ and $n \in \mathbf Z$. For every $q \geq 0$, the comparison
+map
+$$
+H^q(\mathbf P^r_{\mathbf C},\mathcal O(n))
+\longrightarrow
+H^q(\mathbf P^r(\mathbf C),\mathcal O(n)^{\mathrm{an}})
+$$
+is an isomorphism.
+\end{lemma}
+
+\begin{proof}
+We argue by induction on $r$. The assertion for $r=0$ is immediate. Suppose
+$r>0$, choose a hyperplane
+$i:E\longrightarrow\mathbf P^r_{\mathbf C}$, and identify $E$ with
+$\mathbf P^{r-1}_{\mathbf C}$ as in Varieties, Lemma
+\ref{varieties-lemma-hyperplane}. Multiplication by an equation of $E$ gives,
+for every $n$, a short exact sequence
+$$
+0\longrightarrow\mathcal O(n-1)\longrightarrow\mathcal O(n)
+\longrightarrow i_*\mathcal O_E(n)\longrightarrow0.
+$$
+Analytification is exact by Lemma
+\ref{lemma-analytification-exact-faithful-coherent} and commutes with the
+closed-immersion pushforward by Lemma
+\ref{lemma-analytification-pushforward-closed-immersion}. Thus this sequence
+and its analytification give two long exact cohomology sequences. The
+comparison maps form a morphism between them by Lemma
+\ref{lemma-analytification-cohomology-map-functorial}.
+
+The induction hypothesis gives the comparison isomorphisms for
+$\mathcal O_E(n)$ in all degrees. The four and five lemmas (Homology, Lemmas
+\ref{homology-lemma-four-lemma} and \ref{homology-lemma-five-lemma}) now show
+that comparison for $\mathcal O(n)$ in every degree is equivalent to
+comparison for $\mathcal O(n-1)$ in every degree. The case $n=0$ is Lemma
+\ref{lemma-projective-structure-sheaf-comparison}; induction upward and
+downward in $n$ proves the result for every integer.
+\end{proof}
+
+\begin{proof}[Proof of Theorem \ref{theorem-gaga-cohomology}]
+Let $X$ be projective over $\mathbf C$, let $\mathcal F$ be coherent, and
+choose a closed immersion $i:X\to\mathbf P^r_{\mathbf C}$. The direct image
+$i_*\mathcal F$ is coherent, and Cohomology, Lemma
+\ref{cohomology-lemma-cohomology-and-closed-immersions} identifies its
+algebraic and analytic cohomology with the corresponding cohomology on $X$
+and $X^{\mathrm{an}}$. Lemma
+\ref{lemma-analytification-pushforward-closed-immersion} identifies
+$(i_*\mathcal F)^{\mathrm{an}}$ with $i_*\mathcal F^{\mathrm{an}}$, compatibly
+with the comparison map. We may therefore assume
+$X=\mathbf P^r_{\mathbf C}$.
+
+We use descending induction on $q$, simultaneously for all coherent
+$\mathcal F$. For $q>2r$, the algebraic group vanishes by Cohomology of
+Schemes, Lemma \ref{coherent-lemma-coherent-projective}, and the analytic
+group vanishes by Lemma
+\ref{lemma-projective-analytic-cohomological-dimension}.
+
+Assume comparison is known in degree $q+1$ for every coherent sheaf. By
+Cohomology of Schemes, Lemma
+\ref{coherent-lemma-coherent-projective}, there is a short exact sequence
+$$
+0\longrightarrow\mathcal R\longrightarrow
+\mathcal L\longrightarrow\mathcal F\longrightarrow0
+$$
+with $\mathcal R$ coherent and $\mathcal L$ a finite direct sum of twists
+$\mathcal O(n)$. Comparison is an isomorphism for $\mathcal L$ in every
+degree by Lemma \ref{lemma-projective-twist-comparison}. In the morphism of
+long exact sequences, the four lemma applied to
+$$
+H^q(\mathcal L)\longrightarrow H^q(\mathcal F)
+\longrightarrow H^{q+1}(\mathcal R)\longrightarrow H^{q+1}(\mathcal L)
+$$
+shows first that the comparison map for $\mathcal F$ in degree $q$ is
+surjective. Since this holds for every coherent sheaf, it holds for
+$\mathcal R$. Apply the injective half of the four lemma to
+$$
+H^q(\mathcal R)\longrightarrow H^q(\mathcal L)
+\longrightarrow H^q(\mathcal F)\longrightarrow H^{q+1}(\mathcal R).
+$$
+The comparison map for $\mathcal F$ is injective as well. This completes
+the descending induction and the proof.
+\end{proof}
+
+\section{Proof of full faithfulness}
+\label{section-proof-gaga-fully-faithful}
+
+\begin{lemma}
+\label{lemma-analytification-internal-hom}
+Let $X$ be a variety over $\mathbf C$ and let $\mathcal F,\mathcal G$ be
+coherent $\mathcal O_X$-modules. There is a canonical isomorphism
+$$
+\SheafHom_{\mathcal O_X}(\mathcal F,\mathcal G)^{\mathrm{an}}
+\longrightarrow
+\SheafHom_{\mathcal O_{X^{\mathrm{an}}}}
+(\mathcal F^{\mathrm{an}},\mathcal G^{\mathrm{an}}).
+$$
+\end{lemma}
+
+\begin{proof}
+Write $a_X:X^{\mathrm{an}}\to X$ for the canonical morphism of locally
+ringed spaces. A coherent module on the locally Noetherian scheme $X$ is
+finitely presented, and $a_X$ is flat by Theorem
+\ref{theorem-analytification-local-faithfully-flat}. The displayed map is
+therefore the flat-pullback internal-Hom isomorphism of Modules, Lemma
+\ref{modules-lemma-pullback-internal-hom}. Equivalently, on a stalk it is
+the flat base-change isomorphism of More on Algebra, Lemma
+\ref{more-algebra-lemma-pseudo-coherence-and-base-change-ext}. Coherence of
+the source follows from Cohomology of Schemes, Lemma
+\ref{coherent-lemma-tensor-hom-coherent}; coherence of the target is also the
+$q=0$ case of Cohomology, Lemma
+\ref{cohomology-lemma-coherent-analytic-sheaf-ext}.
+\end{proof}
+
+\begin{proof}[Proof of Theorem \ref{theorem-gaga-fully-faithful}]
+Put $\mathcal A=\SheafHom_{\mathcal O_X}(\mathcal F,\mathcal G)$. Then
+$$
+\Hom_{\mathcal O_X}(\mathcal F,\mathcal G)
+=H^0(X,\mathcal A).
+$$
+Theorem \ref{theorem-gaga-cohomology} in degree zero and Lemma
+\ref{lemma-analytification-internal-hom} give canonical isomorphisms
+$$
+H^0(X,\mathcal A)
+\longrightarrow H^0(X^{\mathrm{an}},\mathcal A^{\mathrm{an}})
+\longrightarrow
+\Hom_{\mathcal O_{X^{\mathrm{an}}}}
+(\mathcal F^{\mathrm{an}},\mathcal G^{\mathrm{an}}).
+$$
+Their composite sends $f$ to $f^{\mathrm{an}}$ by construction of the
+cohomology comparison map. Hence analytification is fully faithful.
+\end{proof}
+
+\section{Essential surjectivity: preliminaries and reduction}
+\label{section-gaga-essential-surjectivity-preliminaries}
+
+\begin{lemma}
+\label{lemma-coherent-analytic-closed-immersion}
+Let $i:Y\to X$ be a closed immersion of complex analytic spaces whose
+structure sheaves and defining ideal are coherent. Then $i_*$ is exact and
+fully faithful on modules, carries coherent $\mathcal O_Y$-modules to
+coherent $\mathcal O_X$-modules, and its essential image consists of the
+coherent modules annihilated by the defining ideal. Moreover,
+$$
+H^q(Y,\mathcal M)=H^q(X,i_*\mathcal M)
+$$
+for every $q\geq0$.
+\end{lemma}
+
+\begin{proof}
+Exactness, full faithfulness, and the description of the essential image are
+Modules, Lemma \ref{modules-lemma-i-star-equivalence}. To check coherence,
+first regard $i_*\mathcal M$ as a module over
+$i_*\mathcal O_Y=\mathcal O_X/\mathcal I$. Modules, Lemma
+\ref{modules-lemma-i-star-reflects-finite-type}, applied with this quotient
+structure sheaf, identifies coherence on $Y$ with coherence over
+$i_*\mathcal O_Y$. Modules, Lemma
+\ref{modules-lemma-coherent-change-rings} then identifies this with
+coherence over $\mathcal O_X$. The cohomology equality is Cohomology, Lemma
+\ref{cohomology-lemma-cohomology-and-closed-immersions}.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-gaga-essential-surjectivity-projective-reduction}
+Uniqueness in Theorem \ref{theorem-gaga-essential-surjectivity} follows from
+Theorem \ref{theorem-gaga-fully-faithful}. For existence, it is enough to
+prove the theorem when $X=\mathbf P^r_{\mathbf C}$.
+\end{lemma}
+
+\begin{proof}
+If $\mathcal F^{\mathrm{an}}\cong\mathcal G^{\mathrm{an}}$, full faithfulness
+lifts the isomorphism and its inverse uniquely to algebraic maps. Faithfulness
+shows that their composites are the identity, proving uniqueness.
+
+For the reduction, let $i:Y\to\mathbf P^r_{\mathbf C}$ be a closed immersion
+and let $\mathcal M$ be coherent on $Y^{\mathrm{an}}$. By Lemma
+\ref{lemma-coherent-analytic-closed-immersion}, $i_*\mathcal M$ is coherent
+on $\mathbf P^r(\mathbf C)$. Assuming essential surjectivity on projective
+space, choose a coherent algebraic module $\mathcal G$ with
+$\mathcal G^{\mathrm{an}}\cong i_*\mathcal M$.
+
+Let $\mathcal I$ be the ideal of $Y$. Compatibility of analytification with
+ideals, tensor products, and images identifies
+$(\mathcal I\mathcal G)^{\mathrm{an}}$ with
+$\mathcal I^{\mathrm{an}}\mathcal G^{\mathrm{an}}$, which is zero because
+$i_*\mathcal M$ is annihilated by $\mathcal I^{\mathrm{an}}$. Exactness and
+faithfulness in Lemma
+\ref{lemma-analytification-exact-faithful-coherent} therefore give
+$\mathcal I\mathcal G=0$. Morphisms, Lemma
+\ref{morphisms-lemma-i-star-equivalence} and Cohomology of Schemes, Lemma
+\ref{coherent-lemma-i-star-equivalence} give a coherent algebraic
+$\mathcal F$ on $Y$ with $i_*\mathcal F=\mathcal G$. Finally,
+Lemma \ref{lemma-analytification-pushforward-closed-immersion} gives
+$$
+i_*\mathcal F^{\mathrm{an}}
+\cong(i_*\mathcal F)^{\mathrm{an}}
+\cong\mathcal G^{\mathrm{an}}
+\cong i_*\mathcal M.
+$$
+Full faithfulness of analytic closed-immersion pushforward yields
+$\mathcal F^{\mathrm{an}}\cong\mathcal M$.
+\end{proof}
+
+\section{Analytic twists and global generation}
+\label{section-gaga-analytic-twists}
+
+We now fix $X=\mathbf P^r_{\mathbf C}$ and argue by induction on $r$ for
+essential surjectivity. The case $r=0$ is the equivalence between finite
+dimensional complex vector spaces and coherent modules on a point.
+
+\begin{definition}
+\label{definition-coherent-analytic-twist}
+For a coherent analytic module $\mathcal M$ on $X^{\mathrm{an}}$ and
+$n\in\mathbf Z$, set
+$$
+\mathcal M(n)=
+\mathcal M\otimes_{\mathcal O_{X^{\mathrm{an}}}}
+\mathcal O_X(n)^{\mathrm{an}}.
+$$
+This is coherent, and the tensor compatibility of pullback gives the
+canonical identity
+$$
+\mathcal F^{\mathrm{an}}(n)\cong\mathcal F(n)^{\mathrm{an}}
+$$
+for every coherent algebraic $\mathcal F$.
+\end{definition}
+
+\begin{lemma}
+\label{lemma-hyperplane-analytic-serre-vanishing}
+Let $E\cong\mathbf P^{r-1}_{\mathbf C}$ be a hyperplane and let $\mathcal A$
+be a coherent analytic module on $E^{\mathrm{an}}$. Then
+$$
+H^q(E^{\mathrm{an}},\mathcal A(n))=0
+$$
+for every $q>0$ and all sufficiently large $n$.
+\end{lemma}
+
+\begin{proof}
+By the induction hypothesis for essential surjectivity there is a coherent
+algebraic $\mathcal F$ on $E$ with
+$\mathcal A\cong\mathcal F^{\mathrm{an}}$. Definition
+\ref{definition-coherent-analytic-twist} and Theorem
+\ref{theorem-gaga-cohomology} identify the displayed group with
+$H^q(E,\mathcal F(n))$. The latter vanishes for $q>0$ and $n$ sufficiently
+large by Cohomology of Schemes, Lemma
+\ref{coherent-lemma-coherent-projective}. There are only finitely many
+possibly nonzero degrees, so one lower bound on $n$ works for all $q>0$.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-projective-analytic-global-generation}
+Let $\mathcal M$ be a coherent analytic module on
+$X^{\mathrm{an}}=\mathbf P^r(\mathbf C)$. There is an integer $n_0$ such
+that $\mathcal M(n)$ is generated by global sections for every $n\geq n_0$.
+\end{lemma}
+
+\begin{proof}
+We first make two elementary observations. If global sections generate
+$\mathcal M(n)$ at $x$, choose a homogeneous coordinate $T_k$ nonzero at
+$x$. Multiplication by $T_k^{m-n}$ sends global sections of $\mathcal M(n)$
+to global sections of $\mathcal M(m)$ and is an isomorphism on the stalk at
+$x$; generation at $x$ therefore persists for every $m\geq n$. Generation
+at a point is open: choose finitely many global sections generating the
+stalk, take their evaluation map from a finite free module, and use
+coherence of its cokernel to see that it vanishes near the point. Since
+$X^{\mathrm{an}}$ is compact, it is consequently enough to find, for every
+$x$, one twist generated at $x$.
+
+Fix $x$ and choose a hyperplane $i:E\to X$ through it, cut out by a linear
+form $t$. Tensoring
+$0\to\mathcal O_X(-1)^{\mathrm{an}}\xrightarrow{t}
+\mathcal O_{X^{\mathrm{an}}}\to i_*\mathcal O_{E^{\mathrm{an}}}\to0$
+with $\mathcal M$ gives an exact sequence
+$$
+0\longrightarrow\mathcal C\longrightarrow\mathcal M(-1)
+\xrightarrow{t}\mathcal M\longrightarrow\mathcal B\longrightarrow0,
+$$
+where $\mathcal C$ and $\mathcal B$ are coherent. Both are annihilated by
+$t$, so Lemma \ref{lemma-coherent-analytic-closed-immersion} regards them
+as coherent modules on $E^{\mathrm{an}}$.
+
+After twisting by $n$, let $\mathcal L_n$ be the image of
+$\mathcal M(n-1)\to\mathcal M(n)$. We have short exact sequences
+$$
+0\to\mathcal C(n)\to\mathcal M(n-1)\to\mathcal L_n\to0,
+\qquad
+0\to\mathcal L_n\to\mathcal M(n)\to\mathcal B(n)\to0.
+$$
+Lemma \ref{lemma-hyperplane-analytic-serre-vanishing} gives, for all large
+$n$,
+$$
+H^2(X^{\mathrm{an}},\mathcal C(n))=0,
+\qquad
+H^1(X^{\mathrm{an}},\mathcal B(n))=0.
+$$
+The two long exact sequences then give
+$$
+\dim H^1(\mathcal M(n-1))
+\geq\dim H^1(\mathcal L_n)
+\geq\dim H^1(\mathcal M(n)).
+$$
+All these dimensions are finite by Cohomology, Lemma
+\ref{cohomology-lemma-compact-complex-analytic-coherent-cohomology-finite-dimensional}.
+Thus the nonnegative integers $\dim H^1(\mathcal M(n))$ eventually
+stabilize. For $n$ in the stable range, the surjection
+$H^1(\mathcal L_n)\to H^1(\mathcal M(n))$ is an isomorphism, and the long
+exact sequence yields a surjection
+$$
+H^0(X^{\mathrm{an}},\mathcal M(n))
+\longrightarrow H^0(X^{\mathrm{an}},\mathcal B(n)).
+$$
+
+By induction on $r$, the module on $E^{\mathrm{an}}$ corresponding to
+$\mathcal B$ is the analytification of a coherent algebraic module
+$\mathcal G$ on $E$. For all sufficiently large $n$, the module
+$\mathcal G(n)$ is generated by global sections by Properties, Proposition
+\ref{properties-proposition-characterize-ample}. Theorem
+\ref{theorem-gaga-cohomology} in degree zero says the same for
+$\mathcal B(n)$, and the preceding surjection lifts those generators to
+global sections of $\mathcal M(n)$.
+
+At $x$, put $A=\mathcal O_{X^{\mathrm{an}},x}$,
+$M=\mathcal M(n)_x$, and let $N\subset M$ be the submodule generated by
+global sections. If $\mathfrak p=(t)\subset A$, then
+$\mathcal B(n)_x=M/\mathfrak pM$. The lifted sections generate this
+quotient, so $M=N+\mathfrak pM$. Since $\mathfrak p$ lies in the maximal
+ideal of the local ring $A$, Nakayama's lemma (Algebra, Lemma
+\ref{algebra-lemma-NAK}) gives $M=N$. This supplies the required twist at
+$x$; the two opening observations and compactness supply one $n_0$ valid at
+every point and every $n\geq n_0$.
+\end{proof}
+
+\section{Completion of essential surjectivity}
+\label{section-completion-gaga-essential-surjectivity}
+
+\begin{proof}[Completion of the proof of Theorem
+\ref{theorem-gaga-essential-surjectivity}]
+It remains, by Lemma
+\ref{lemma-gaga-essential-surjectivity-projective-reduction}, to treat
+$X=\mathbf P^r_{\mathbf C}$. Let $\mathcal M$ be coherent on
+$X^{\mathrm{an}}$. Lemma
+\ref{lemma-projective-analytic-global-generation} and compactness give a
+finite set of global generators after a twist. Untwisting produces a
+surjection
+$$
+\mathcal L_0^{\mathrm{an}}\longrightarrow\mathcal M,
+\qquad
+\mathcal L_0=\mathcal O_X(-n)^{\oplus p}.
+$$
+Its kernel $\mathcal R$ is coherent by Modules, Lemma
+\ref{modules-lemma-coherent-abelian}. Apply the same global-generation
+argument to $\mathcal R$ to obtain a finite direct sum of twists
+$\mathcal L_1$ and a surjection
+$\mathcal L_1^{\mathrm{an}}\to\mathcal R$. Composing with the inclusion of
+$\mathcal R$ gives an exact sequence
+$$
+\mathcal L_1^{\mathrm{an}}\xrightarrow{g}
+\mathcal L_0^{\mathrm{an}}\longrightarrow\mathcal M\longrightarrow0.
+$$
+
+Theorem \ref{theorem-gaga-fully-faithful} supplies a unique algebraic map
+$f:\mathcal L_1\to\mathcal L_0$ with $f^{\mathrm{an}}=g$. Put
+$\mathcal F=\mathop{\rm Coker}(f)$. This is coherent, and exactness of
+analytification gives
+$$
+\mathcal F^{\mathrm{an}}
+=\mathop{\rm Coker}(f^{\mathrm{an}})
+=\mathop{\rm Coker}(g)
+\cong\mathcal M.
+$$
+Together with the reduction and uniqueness already proved, this completes
+Theorem \ref{theorem-gaga-essential-surjectivity}.
+\end{proof}
+
+\section{Applications of the comparison theorems}
+\label{section-gaga-applications}
+
+\subsection{Conjugation and Betti numbers}
+\label{subsection-gaga-betti-numbers}
+
+Let $\sigma\in\mathop{\rm Aut}(\mathbf C)$. For a scheme $X$ over
+$\mathbf C$, write
+$$
+X^\sigma=X\times_{\mathop{\rm Spec}(\mathbf C),\sigma}
+\mathop{\rm Spec}(\mathbf C).
+$$
+
+\begin{proposition}
+\label{proposition-conjugate-smooth-projective-betti-numbers}
+\begin{reference}
+\cite[\S 4, no. 18, Proposition 12]{GAGA}
+\end{reference}
+Let $X$ be a smooth projective algebraic variety over $\mathbf C$. Then $X^{\rm an}$
+and $(X^\sigma)^{\rm an}$ have the same Betti numbers.
+\end{proposition}
+
+\begin{proof}
+For $p,q\geq 0$, flat base change gives a $\sigma$-semilinear
+isomorphism
+$$
+H^q(X,\Omega^p_{X/\mathbf C})
+\longrightarrow
+H^q(X^\sigma,\Omega^p_{X^\sigma/\mathbf C});
+$$
+see Cohomology of Schemes, Lemma
+\ref{coherent-lemma-flat-base-change-cohomology}. In particular, the two
+vector spaces have the same dimension. For a smooth variety, local
+coordinates give the canonical comparison
+$$
+(\Omega^p_{X/\mathbf C})^{\rm an}
+\cong \Omega^p_{X^{\rm an}},
+$$
+where the module on the right is the module of holomorphic $p$-forms. Thus
+the cohomology comparison theorem \ref{theorem-gaga-cohomology} identifies
+these dimensions with
+$$
+h^{p,q}(X^{\rm an})
+\quad\hbox{and}\quad
+h^{p,q}((X^\sigma)^{\rm an}),
+$$
+respectively, where
+$$
+h^{p,q}(M)=\dim_{\mathbf C}H^q(M,\Omega^p_M).
+$$
+Finally, a smooth projective analytification is compact K\"ahler. Hodge
+decomposition (using the Dolbeault resolution and the K\"ahler identities),
+which is an external analytic input here, gives
+$$
+b_n(X^{\rm an})=\sum_{p+q=n}h^{p,q}(X^{\rm an})
+$$
+and the analogous formula for $X^\sigma$. The assertion follows.
+\end{proof}
+
+\begin{proposition}[Corollary]
+\label{corollary-number-field-embeddings-betti-numbers}
+\begin{reference}
+\cite[\S 4, no. 18, corollary to Proposition 12]{GAGA}
+\end{reference}
+Let $V$ be a smooth projective variety over a field $K$ algebraic over
+$\mathbf Q$. The Betti
+numbers of $V\times_{K,\iota}\mathbf C$ are independent of the embedding
+$\iota:K\longrightarrow\mathbf C$.
+\end{proposition}
+
+\begin{proof}
+The standard extension theorem for field embeddings shows that two
+embeddings of $K$ in $\mathbf C$ differ by an automorphism of $\mathbf C$.
+Apply Proposition
+\ref{proposition-conjugate-smooth-projective-betti-numbers}.
+\end{proof}
+
+\begin{remark}[Historical scope]
+\label{remark-conjugate-varieties-historical}
+Serre observed in \cite[\S 4, no. 18]{GAGA} that a conjugate pair need not be
+analytically isomorphic (elliptic curves already show this), and asked there
+whether such a pair must be homeomorphic. This historical question is not an
+input to Proposition
+\ref{proposition-conjugate-smooth-projective-betti-numbers}.
+\end{remark}
+
+
+\subsection{Chow's theorem and algebraicity}
+\label{subsection-gaga-chow}
+
+\begin{theorem}[Chow]
+\label{theorem-chow-closed-analytic-projective}
+\begin{reference}
+\cite[\S 4, no. 19, Proposition 13]{GAGA}
+\end{reference}
+Let $X$ be a projective algebraic variety over $\mathbf C$. Every closed reduced
+analytic subspace $Y\subset X^{\rm an}$ is the analytification of a unique
+closed reduced subscheme of $X$.
+\end{theorem}
+
+\begin{proof}
+The vanishing ideal $\mathcal J_Y\subset\mathcal O_{X^{\rm an}}$ is
+coherent by Theorem \ref{theorem-oka-cartan-coherence}. By Theorem
+\ref{theorem-gaga-essential-surjectivity}, there is a coherent
+$\mathcal O_X$-module $\mathcal F$ with
+$\mathcal F^{\rm an}\cong\mathcal J_Y$. Compose this isomorphism with the
+inclusion into $\mathcal O_{X^{\rm an}}$. The full-faithfulness theorem
+\ref{theorem-gaga-fully-faithful} algebraizes the composite to an
+$\mathcal O_X$-linear map
+$$
+u:\mathcal F\longrightarrow\mathcal O_X.
+$$
+Its image $\mathcal I$ is a coherent ideal. Exactness and faithfulness of
+analytification identify $\mathcal I^{\rm an}$ with $\mathcal J_Y$. Hence
+the ideal $\mathcal I$ is radical. Indeed, at every closed point
+$x\in X(\mathbf C)$, if $a^m\in\mathcal I_x$, then the image of $a$ in
+$\mathcal O_{X^{\rm an},x}$ belongs to the radical ideal
+$\mathcal J_{Y,x}=\mathcal I_x\mathcal O_{X^{\rm an},x}$. Faithful
+flatness in Theorem \ref{theorem-analytification-local-faithfully-flat}
+contracts this ideal back to $\mathcal I_x$. Since $X$ is Noetherian and
+Jacobson, radicality at all closed stalks implies that $\mathcal I$ is
+radical. The closed reduced subscheme defined by $\mathcal I$ therefore has
+analytic ideal $\mathcal J_Y$, and hence has analytification $Y$.
+
+If two reduced closed subschemes have analytification $Y$, their ideal
+sheaves have equal extensions at every analytic local ring. Faithful
+flatness contracts these extensions to equal stalks at every closed point;
+coherence and the Jacobson property then identify the ideal sheaves. This
+proves uniqueness.
+\end{proof}
+
+\begin{proposition}
+\label{proposition-compact-analytic-subspace-algebraic}
+\begin{reference}
+\cite[\S 4, no. 19, Proposition 14]{GAGA}
+\end{reference}
+Let $X$ be an algebraic variety over $\mathbf C$. Every compact
+closed reduced analytic subspace $Y\subset X^{\rm an}$ is algebraic: there
+is a unique closed reduced subscheme $Z\subset X$ with
+$Z^{\rm an}=Y$.
+\end{proposition}
+
+\begin{proof}
+Nagata compactification and Chow's lemma (More on Flatness, Theorem
+\ref{flat-theorem-nagata} and Limits of Schemes, Lemma
+\ref{limits-lemma-chow-finite-type}) give an open immersion
+$X\subset\overline X$ with $\overline X$ proper and a proper surjection
+$p:X'\to\overline X$ together with an immersion
+$X'\to\mathbf P^n_{\mathbf C}$. Replacing $X'$ by its reduction preserves
+these properties. The resulting variety $X'$ is proper over $\mathbf C$,
+so its immersion is closed and $X'$ is projective. Since $Y$ is compact,
+it is closed in the Hausdorff space $\overline X^{\rm an}$. Its analytic structure on
+$X^{\rm an}$ glues with the empty closed analytic subspace on
+$\overline X^{\rm an}\setminus Y$, and therefore makes $Y$ a closed reduced
+analytic subspace of $\overline X^{\rm an}$.
+
+The reduced inverse image
+$$
+Y'=\left((X')^{\rm an}\times_{\overline X^{\rm an}}Y\right)_{\rm red}
+$$
+is a closed reduced analytic subspace of $(X')^{\rm an}$. Theorem
+\ref{theorem-chow-closed-analytic-projective} algebraizes it to a closed
+reduced subscheme $Z'\subset X'$. Let $Z\subset\overline X$ be the reduced
+Zariski closure of $p(Z')$. The analytic map sends $(Z')^{\rm an}=Y'$ onto
+$Y$. Since $Y$ is closed, Proposition \ref{proposition-image-closure}
+shows that the classical point set of $Z^{\rm an}$ is exactly $Y$.
+Reduced closed analytic subspaces are determined by their underlying
+analytic sets, so $Z^{\rm an}=Y$. All closed points of $Z$ lie in $X$;
+the Jacobson property therefore shows that $Z\subset X$.
+
+For uniqueness, if $Z_1,Z_2\subset X$ have analytification $Y$, their ideal
+stalks have equal extensions to every $\mathcal O_{X^{\rm an},x}$.
+Faithful flatness in Theorem
+\ref{theorem-analytification-local-faithfully-flat} contracts them to equal
+stalks at every closed point. Coherence and the Jacobson property give
+$Z_1=Z_2$.
+\end{proof}
+
+\begin{proposition}
+\label{proposition-holomorphic-map-from-proper-is-regular}
+\begin{reference}
+\cite[\S 4, no. 19, Proposition 15]{GAGA}
+\end{reference}
+Let $X$ be a proper algebraic variety over $\mathbf C$ and let $Y$ be an
+algebraic variety over $\mathbf C$. Every holomorphic map
+$$
+f:X^{\rm an}\longrightarrow Y^{\rm an}
+$$
+is the analytification of a unique morphism $X\to Y$.
+\end{proposition}
+
+\begin{proof}
+The graph $\Gamma_f$ is a compact closed analytic subspace of
+$(X\times_{\mathbf C}Y)^{\rm an}$. Proposition
+\ref{proposition-compact-analytic-subspace-algebraic} makes it the
+analytification of a closed reduced subvariety of $X\times_{\mathbf C}Y$.
+Proposition \ref{proposition-algebraic-graph-holomorphic-regular} therefore
+defines the required algebraic map. For uniqueness, two candidate
+maps have closed reduced graphs with the same classical points; the graphs,
+and hence the maps, are equal.
+\end{proof}
+
+\begin{proposition}[Corollary]
+\label{corollary-compact-analytic-space-unique-algebraization}
+\begin{reference}
+\cite[\S 4, no. 19, corollary to Proposition 15]{GAGA}
+\end{reference}
+A compact reduced analytic space admits at most one algebraic-variety
+structure: any analytic isomorphism between two algebraizations is the
+analytification of a unique algebraic isomorphism.
+\end{proposition}
+
+\begin{proof}
+Every algebraization is proper by Proposition
+\ref{proposition-proper-if-and-only-if-compact-analytification}. Apply
+Proposition \ref{proposition-holomorphic-map-from-proper-is-regular} to the
+analytic isomorphism and to its inverse.
+\end{proof}
+
+
+\subsection{Algebraic and analytic principal bundles}
+\label{subsection-gaga-principal-bundles}
+
+\begin{definition}
+\label{definition-principal-bundle-analytification-map}
+\begin{reference}
+\cite[\S 4, no. 20]{GAGA}
+\end{reference}
+Let $G$ be an algebraic group over $\mathbf C$ and let $X$ be an algebraic
+variety over $\mathbf C$. Write
+$$
+H^1_{\rm Zar}(X,G)
+$$
+for the pointed set of isomorphism classes of Zariski locally trivial
+principal $G$-bundles and
+$$
+H^1_{\rm an}(X^{\rm an},G^{\rm an})
+$$
+for the pointed set of isomorphism classes of holomorphically locally
+trivial principal $G^{\rm an}$-bundles. Analytification defines a map
+$$
+\varepsilon_G:H^1_{\rm Zar}(X,G)
+\longrightarrow H^1_{\rm an}(X^{\rm an},G^{\rm an}).
+$$
+This is the torsor interpretation of first cohomology from Cohomology on
+Sites, Section \ref{sites-cohomology-section-h1-torsors}.
+\end{definition}
+
+\begin{proposition}
+\label{proposition-principal-bundle-analytification-injective}
+\begin{reference}
+\cite[\S 4, no. 20, Proposition 16]{GAGA}
+\end{reference}
+If $X$ is a proper algebraic variety over $\mathbf C$, then $\varepsilon_G$
+is injective. More
+precisely, every analytic isomorphism between the analytifications of two
+algebraic principal $G$-bundles is algebraic.
+\end{proposition}
+
+\begin{proof}
+For two algebraic principal $G$-bundles $P$ and $P'$ on $X$, the associated
+bundle
+$$
+\mathop{\rm Isom}\nolimits_G(P,P')
+$$
+is an algebraic fibre bundle over $X$, and its sections are precisely the
+$G$-equivariant isomorphisms $P\to P'$. An analytic isomorphism gives a
+holomorphic section of its analytification. Proposition
+\ref{proposition-holomorphic-map-from-proper-is-regular} makes the section
+algebraic.
+\end{proof}
+
+\begin{proposition}
+\label{proposition-additive-principal-bundles-gaga}
+\begin{reference}
+\cite[\S 4, no. 20, Proposition 17]{GAGA}
+\end{reference}
+If $X$ is a projective algebraic variety over $\mathbf C$ and
+$G=\mathbf G_a$, then
+$\varepsilon_G$ is bijective.
+\end{proposition}
+
+\begin{proof}
+Principal $\mathbf G_a$-bundles are torsors under the additive sheaf
+$\mathcal O_X$, and hence are classified by $H^1(X,\mathcal O_X)$; see
+Cohomology, Lemma \ref{cohomology-lemma-torsors-h1}. The analytic statement
+uses $H^1(X^{\rm an},\mathcal O_{X^{\rm an}})$. The comparison isomorphism
+of Theorem \ref{theorem-gaga-cohomology} identifies these groups.
+\end{proof}
+
+\begin{proposition}
+\label{proposition-general-linear-principal-bundles-gaga}
+\begin{reference}
+\cite[\S 4, no. 20, Proposition 18]{GAGA}
+\end{reference}
+If $X$ is a projective algebraic variety over $\mathbf C$ and
+$G=\mathop{\rm GL}_n$, then $\varepsilon_G$ is bijective.
+\end{proposition}
+
+\begin{proof}
+Principal $\mathop{\rm GL}_n$-bundles are equivalent to rank $n$ vector
+bundles. Let $\mathcal E$ be the locally free coherent analytic module
+associated with an analytic vector bundle. By Theorem
+\ref{theorem-gaga-essential-surjectivity}, it is isomorphic to
+$\mathcal F^{\rm an}$ for a coherent $\mathcal O_X$-module $\mathcal F$.
+For every closed point $x\in X(\mathbf C)$, the faithfully flat local map
+of Theorem \ref{theorem-analytification-local-faithfully-flat} makes
+$$
+\mathcal F_x\otimes_{\mathcal O_{X,x}}
+\mathcal O_{X^{\rm an},x}
+$$
+free of rank $n$. Faithfully flat descent for finite projectivity (Algebra,
+Proposition \ref{algebra-proposition-ffdescent-finite-projectivity}) shows
+that $\mathcal F_x$ is finite projective. Algebra, Theorem
+\ref{algebra-theorem-projective-free-over-local-ring} makes it free, and
+faithful base change fixes its rank as $n$. Since $X$ is Jacobson and
+$\mathcal F$ is coherent, local freeness at every closed point makes
+$\mathcal F$ locally free of rank $n$ everywhere. Its frame bundle
+algebraizes the given analytic principal bundle. Injectivity is Proposition
+\ref{proposition-principal-bundle-analytification-injective}.
+\end{proof}
+
+\begin{remark}[Line bundles and the historical formulation]
+\label{remark-line-bundles-gaga}
+For $n=1$, Proposition
+\ref{proposition-general-linear-principal-bundles-gaga} is the isomorphism
+$$
+\mathop{\rm Pic}(X)\longrightarrow\mathop{\rm Pic}(X^{\rm an}).
+$$
+Serre's remarks after Proposition 18 in \cite[\S 4, no. 20]{GAGA} express
+this in terms of divisor classes on a normal variety and record the earlier
+smooth result of Kodaira--Spencer. Those historical attributions are not
+additional hypotheses here. Serre also notes that Proposition 18 extends
+Kodaira's Theorems 7 and 8 to arbitrary projective varieties, possibly with
+singularities, without pursuing those applications.
+\end{remark}
+
+\begin{proposition}[Algebraizing a reduction of structure group]
+\label{proposition-algebraize-reduction-structure-group}
+\begin{reference}
+\cite[\S 4, no. 20, Proposition 19]{GAGA}
+\end{reference}
+Let $H\subset G$ be algebraic groups over $\mathbf C$. Assume that the
+quotient $G/H$ exists as an algebraic variety and that
+$G\to G/H$ has a rational section. Let $X$ be a proper algebraic variety
+over $\mathbf C$ and let $P$ be an analytic principal $H^{\rm an}$-bundle
+on $X^{\rm an}$. Then
+$P$ is algebraizable if and only if the extended bundle
+$$
+P\times^H G
+$$
+is algebraizable.
+\end{proposition}
+
+\begin{proof}
+A rational section over a nonempty open of $G/H$, and the translates of
+its domain by $G$, show that $G\to G/H$ is Zariski locally trivial as an
+$H$-bundle.
+Necessity is therefore immediate by extension of structure group.
+
+Conversely, choose an algebraic principal $G$-bundle $Q$ and an analytic
+isomorphism $Q^{\rm an}\cong P\times^H G$. Form the algebraic associated
+bundle
+$$
+E=Q\times^G(G/H).
+$$
+The analytic reduction $P$ determines a holomorphic section
+$s:X^{\rm an}\to E^{\rm an}$. By Proposition
+\ref{proposition-holomorphic-map-from-proper-is-regular}, this section is
+algebraic. Pulling the principal $H$-bundle $Q\to E$ back along $s$ gives an
+algebraic principal $H$-bundle whose analytification is $P$.
+\end{proof}
+
+\begin{definition}
+\label{definition-rational-section-condition}
+\begin{reference}
+\cite[\S 4, no. 20, condition (R)]{GAGA}
+\end{reference}
+A closed algebraic subgroup $G\subset\mathop{\rm GL}_n$ satisfies
+\textup{(R)} if the quotient exists and the projection
+$$
+\mathop{\rm GL}_n/G\longleftarrow\mathop{\rm GL}_n
+$$
+has a rational section.
+\end{definition}
+
+\begin{proposition}
+\label{proposition-rational-section-principal-bundles-gaga}
+\begin{reference}
+\cite[\S 4, no. 20, Proposition 20]{GAGA}
+\end{reference}
+Let $G\subset\mathop{\rm GL}_n$ satisfy \textup{(R)}. For every projective
+algebraic variety $X$ over $\mathbf C$, the map
+$$
+\varepsilon_G:H^1_{\rm Zar}(X,G)
+\longrightarrow H^1_{\rm an}(X^{\rm an},G^{\rm an})
+$$
+is bijective.
+\end{proposition}
+
+\begin{proof}
+Given an analytic principal $G$-bundle $P$, Proposition
+\ref{proposition-general-linear-principal-bundles-gaga} algebraizes
+$P\times^G\mathop{\rm GL}_n$. Proposition
+\ref{proposition-algebraize-reduction-structure-group}, with
+$H=G$ and the ambient group $\mathop{\rm GL}_n$, then algebraizes $P$.
+Injectivity is Proposition
+\ref{proposition-principal-bundle-analytification-injective}.
+\end{proof}
+
+\begin{remark}[Examples and historical boundary]
+\label{remark-rational-section-condition-examples}
+Condition \textup{(R)} holds for solvable subgroups by Rosenlicht's theorem,
+for $\mathop{\rm SL}_n$ via the determinant section, and for
+$\mathop{\rm Sp}_{2m}$ by rational symplectic Gram--Schmidt. Serre also
+records in \cite[\S 4, no. 20]{GAGA} the then-open simply connected
+semisimple conjecture and the failure of \textup{(R)} for the unimodular
+orthogonal group in dimensions at least $3$; in the latter case he leaves
+bijectivity of $\varepsilon_G$ open. These historical observations are not
+used in Proposition
+\ref{proposition-rational-section-principal-bundles-gaga}.
+\end{remark}
+
+\input{chapters}
+
+\bibliography{my}
+\bibliographystyle{amsalpha}
+
+\end{document}
