@@ -1,0 +1,84 @@
+{
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_evidence": [
+    {
+      "bytes": 3154,
+      "path": "authority/canon/R11_ALG_382_385_ADJUDICATION_SPEC.json",
+      "sha256": "92EF3C26C055F21D7858B27866AF64CFE3E777E671A8DC543EC6660D599CB20A"
+    },
+    {
+      "bytes": 3820,
+      "path": "authority/canon/R11_ALG_382_385_INTAKE.json",
+      "sha256": "05F2A421F49D8E79236B0A240521666A69F6DEBB93A580C00EDC097B227389D1"
+    },
+    {
+      "bytes": 833,
+      "path": "authority/canon/R11_ALG_382_385_REVIEW.md",
+      "sha256": "355E3B7F7FD5ECE1DAB47ADB9E713966FDE4953067BB7DA338D1C56D63F2AA77"
+    },
+    {
+      "bytes": 20404,
+      "path": "authority/COPYING",
+      "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"
+    },
+    {
+      "bytes": 364895,
+      "path": "authority/producer/SOURCE_DEFECT_LEDGER.csv",
+      "sha256": "EB78964BE8D50BD25BBBEF72A6F7B0960D925A039CFF04A255334D59F6952A02"
+    },
+    {
+      "bytes": 1771230,
+      "path": "authority/source/algebra.tex",
+      "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+    },
+    {
+      "bytes": 1171,
+      "path": "authority/upstream.lock.json",
+      "sha256": "B195ECC83AB0F32C574A60D1FDBA9B0DA4D35B04E0DF7CB106DC9C0FDAD99C0D"
+    }
+  ],
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "candidate_id": "stacks-errata-a04446e-r11",
+  "expected_producer_ids": [
+    "ALGEBRA-382",
+    "ALGEBRA-383",
+    "ALGEBRA-384",
+    "ALGEBRA-385"
+  ],
+  "expected_unit_ids": [
+    "MC-STK-ERR-0725",
+    "MC-STK-ERR-0726",
+    "MC-STK-ERR-0727",
+    "MC-STK-ERR-0728"
+  ],
+  "lease_id": "stacks-lease-000014-errata-r11",
+  "namespace": "commons/stacks/errata/r11",
+  "operation_count": 5,
+  "private_render_logical_path": "canon/private_evidence/errata-r11-20260824T2026Z/render-final/render-manifest.json",
+  "proof_closure": {
+    "accepted": 4,
+    "operations": 5,
+    "packet_duplicates": 0,
+    "prior_overlay_aliases": 0,
+    "producer_rows": 4,
+    "rejected": 0,
+    "unresolved": 0
+  },
+  "schema": "mathematics-commons-stacks-errata-candidate-config/v1",
+  "source_date_epoch": "1785270512",
+  "stems": {
+    "algebra": {
+      "authority_bytes": 1771230,
+      "authority_sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3",
+      "build_exceptions": {
+        "candidate_only_undefined_reference_targets": {},
+        "candidate_page_delta": 0
+      },
+      "display_delimiter_delta": 0,
+      "ordered_structure_exceptions": {},
+      "payload_bytes": 1771397,
+      "payload_sha256": "829D1D857528E935C6274A9D425E2BB9473E8596BC9327D9AA6936722A9B7588"
+    }
+  },
+  "writer_task": "01a0256d-5693-77c1-96b2-cf37101e0c6c"
+}

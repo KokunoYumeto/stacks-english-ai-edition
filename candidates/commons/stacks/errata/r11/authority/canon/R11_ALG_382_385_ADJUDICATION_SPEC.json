@@ -1,0 +1,80 @@
+{
+  "accepted": [
+    {
+      "class": "zero_module_dimension_case",
+      "disposition": "Add the omitted zero-module case before introducing the finite right-hand-side dimension.",
+      "locus": "algebra.tex:46321",
+      "operations": [
+        {
+          "old_text": "Denote $n$ the right hand side. First assume that $n$ is zero.",
+          "replacement_text": "If $M = 0$ or $N = 0$, then both sides of the formula are infinite,\nand there is nothing to prove. Thus we may assume that $M$ and $N$ are nonzero.\nDenote $n$ the right hand side. First assume that $n$ is zero.",
+          "source_end_line": 46321,
+          "source_start_line": 46321
+        }
+      ],
+      "producer_id": "ALGEBRA-382",
+      "result": "confirmed_missing_case",
+      "stable_id": "MC-STK-ERR-0725"
+    },
+    {
+      "class": "missing_item_punctuation",
+      "disposition": "Add the missing terminal comma to both repeated list items.",
+      "locus": "algebra.tex:46464,46493",
+      "operations": [
+        {
+          "old_text": "\\item $S$ is Noetherian",
+          "replacement_text": "\\item $S$ is Noetherian,",
+          "source_end_line": 46464,
+          "source_start_line": 46464
+        },
+        {
+          "old_text": "\\item $S$ is Noetherian",
+          "replacement_text": "\\item $S$ is Noetherian,",
+          "source_end_line": 46493,
+          "source_start_line": 46493
+        }
+      ],
+      "producer_id": "ALGEBRA-383",
+      "result": "confirmed_grammar_error",
+      "stable_id": "MC-STK-ERR-0726"
+    },
+    {
+      "class": "missing_subring_subject_and_comma",
+      "disposition": "Identify R_0 as a subring and punctuate the introductory clause.",
+      "locus": "algebra.tex:46536",
+      "operations": [
+        {
+          "old_text": "However, since $R_0 \\subset R$ is reduced we see that",
+          "replacement_text": "However, since the subring $R_0 \\subset R$ is reduced, we see that",
+          "source_end_line": 46536,
+          "source_start_line": 46536
+        }
+      ],
+      "producer_id": "ALGEBRA-384",
+      "result": "confirmed_grammar_error",
+      "stable_id": "MC-STK-ERR-0727"
+    },
+    {
+      "class": "incorrect_lemma_application_quantifier",
+      "disposition": "State the lemma application with the correct per-index quantifier.",
+      "locus": "algebra.tex:46623",
+      "operations": [
+        {
+          "old_text": "This follows from Lemma \\ref{lemma-Rk-goes-up} applied for all $(R_k)$",
+          "replacement_text": "This follows by applying Lemma \\ref{lemma-Rk-goes-up} for every $k \\geq 0$",
+          "source_end_line": 46623,
+          "source_start_line": 46623
+        }
+      ],
+      "producer_id": "ALGEBRA-385",
+      "result": "confirmed_proof_exposition_error",
+      "stable_id": "MC-STK-ERR-0728"
+    }
+  ],
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3",
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "candidate_id": "stacks-errata-a04446e-r11",
+  "rejected": [],
+  "schema": "mathematics-commons-stacks-r11-adjudication-spec/v1"
+}
