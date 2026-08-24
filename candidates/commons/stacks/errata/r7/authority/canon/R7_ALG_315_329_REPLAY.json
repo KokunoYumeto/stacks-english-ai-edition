@@ -1,0 +1,130 @@
+{
+  "schema": "stacks-cjk-errata-replay/v1",
+  "recorded_at": "2026-08-24T04:09:15Z",
+  "authority_sha256_recomputed": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3",
+  "authority_bytes_recomputed": 1771230,
+  "authority_physical_lines": 47885,
+  "authority_line_endings": "LF",
+  "producer_ledger_sha256_recomputed": "ECE134C64FCB7091B665DF5CBDB31168386C9812F94EAFC0A034F80EFFB16143",
+  "producer_rows_present_once": 15,
+  "prior_producer_id_matches": 0,
+  "accepted": [
+    {
+      "producer_id": "ALGEBRA-315",
+      "canon_id": "MC-STK-ERR-0660",
+      "locus": "31171-31183",
+      "result": "confirmed_typed",
+      "smallest_correction": "Define p as the inverse image of q in R before the proof forms kappa(p)."
+    },
+    {
+      "producer_id": "ALGEBRA-316",
+      "canon_id": "MC-STK-ERR-0661",
+      "locus": "31187",
+      "result": "confirmed",
+      "smallest_correction": "Replace the undefined overline q by the defined overline fraktur q."
+    },
+    {
+      "producer_id": "ALGEBRA-317",
+      "canon_id": "MC-STK-ERR-0662",
+      "locus": "31203",
+      "result": "confirmed",
+      "smallest_correction": "Insert the missing comma after t_1 in the polynomial-variable list."
+    },
+    {
+      "producer_id": "ALGEBRA-318",
+      "canon_id": "MC-STK-ERR-0663",
+      "locus": "31280-31284",
+      "result": "confirmed_typed",
+      "smallest_correction": "Define q' as S' intersect qS_p rather than saying that a prime of S' lies over a prime of S."
+    },
+    {
+      "producer_id": "ALGEBRA-319",
+      "canon_id": "MC-STK-ERR-0664",
+      "locus": "31295-31297",
+      "result": "confirmed_by_counterexample",
+      "smallest_correction": "Replace the asserted inclusion by an arbitrary quasi-finite k-algebra map."
+    },
+    {
+      "producer_id": "ALGEBRA-320",
+      "canon_id": "MC-STK-ERR-0665",
+      "locus": "31358-31376",
+      "result": "confirmed_typed",
+      "smallest_correction": "Use a fresh N for the unrelated number of presentation generators."
+    },
+    {
+      "producer_id": "ALGEBRA-321",
+      "canon_id": "MC-STK-ERR-0666",
+      "locus": "31381-31397",
+      "result": "confirmed_typed",
+      "smallest_correction": "Replace all three ill-typed dim_q(S/k) expressions by the relative fibre dimension dim_q(S/R)."
+    },
+    {
+      "producer_id": "ALGEBRA-322",
+      "canon_id": "MC-STK-ERR-0667",
+      "locus": "31454-31457",
+      "result": "confirmed_typed",
+      "smallest_correction": "Generate A by the already bound elements x_{ji}."
+    },
+    {
+      "producer_id": "ALGEBRA-323",
+      "canon_id": "MC-STK-ERR-0668",
+      "locus": "31478-31481",
+      "result": "confirmed_typed",
+      "smallest_correction": "Generate J by the already bound elements f_{ji}."
+    },
+    {
+      "producer_id": "ALGEBRA-324",
+      "canon_id": "MC-STK-ERR-0669",
+      "locus": "31658-31659",
+      "result": "confirmed_typed",
+      "smallest_correction": "Localize at the idempotent corresponding to the factor S, not C."
+    },
+    {
+      "producer_id": "ALGEBRA-325",
+      "canon_id": "MC-STK-ERR-0670",
+      "locus": "31684-31693",
+      "result": "confirmed_typed",
+      "smallest_correction": "Replace the three undefined variable counts n by the declared count m."
+    },
+    {
+      "producer_id": "ALGEBRA-326",
+      "canon_id": "MC-STK-ERR-0671",
+      "locus": "31707-31709;31735-31737",
+      "result": "confirmed_editorial_copyedit",
+      "smallest_correction": "Insert is in both parallel finite-presentation hypotheses; this is a grammar and parallelism repair, not a mathematical change."
+    },
+    {
+      "producer_id": "ALGEBRA-327",
+      "canon_id": "MC-STK-ERR-0672",
+      "locus": "31642-31645;31651-31653",
+      "result": "confirmed",
+      "smallest_correction": "State both parallel replacements by replacing the old polynomial ring by the ring with the inverse variable adjoined."
+    },
+    {
+      "producer_id": "ALGEBRA-328",
+      "canon_id": "MC-STK-ERR-0673",
+      "locus": "43650-43656;43683-43698",
+      "result": "confirmed_typed",
+      "smallest_correction": "Name the kernel prime q' and explicitly take its inverse image under the canonical map at line 43683."
+    },
+    {
+      "producer_id": "ALGEBRA-329",
+      "canon_id": "MC-STK-ERR-0674",
+      "locus": "43832",
+      "result": "confirmed",
+      "smallest_correction": "filtered colimit commute -> filtered colimits commute"
+    }
+  ],
+  "summary": {
+    "accepted_units": 15,
+    "accepted_operations": 23,
+    "rejected_claims": 0,
+    "unresolved_candidates": 0,
+    "duplicates": 0,
+    "first_stable_id": "MC-STK-ERR-0660",
+    "last_stable_id": "MC-STK-ERR-0674"
+  },
+  "passed": true,
+  "authority_mutated": false,
+  "translation_targets_mutated": false
+}
