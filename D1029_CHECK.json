@@ -1,0 +1,163 @@
+{
+  "schema": "tohoku-stacks-d1029-check-v1",
+  "formalization_id": "D1029",
+  "status": "STRICT_PASS_SOURCE_REPAIR_R71_MAPPING_AND_I000033_AUTHORIZED",
+  "created_utc": "2026-08-24T08:15:44Z",
+  "errors": [],
+  "selection": {
+    "unit": "tohoku:remark:ext-center-modules",
+    "printed_page": 188,
+    "source_locator": "sem/r18/nodes.csv:825",
+    "predecessor_decision": "D000539",
+    "predecessor_disposition": "existing_weaker",
+    "predecessor_dossier": "tohoku_r70"
+  },
+  "source_correction": {
+    "status": "PASS_FROZEN_SOURCE_REPAIR_CHAIN",
+    "audit": {
+      "path": "D1029_SOURCE_REPAIR_CHECK.json",
+      "bytes": 23296,
+      "sha256": "E996D56A24B4BCF4776CFE9351F2932E66E9B7ACB3B0493C877DEDCD13C63E02"
+    },
+    "production_id": "TOH-P188-COR-002",
+    "source_ledger_id": "TOH-SRC-P188-003",
+    "source_ledger": {
+      "path": "SOURCE_CORRECTIONS.jsonl",
+      "bytes": 213247,
+      "sha256": "F2DE702681CF4150C87FDC9C9051A105E94CBD681219ADC600DB9049B1E1E4B1"
+    },
+    "control": "The diplomatic French preserves the printed Z(Gamma(X,A)) sentence; corrected French and English use Gamma(X,Z_A)."
+  },
+  "frozen_inputs": [
+    {
+      "path": "tmp/d1029_ext_center_actions_candidate.tex",
+      "bytes": 3189,
+      "sha256": "6B6566697F349854C1866661952A7AC5487FAFEB473354D4403E27886B3287FA"
+    },
+    {
+      "path": "tmp/d1029_ext_center_math_source_audit.json",
+      "bytes": 14637,
+      "sha256": "35C3ECBD18B1F06036C58723D0B59E1CAD48BE29890E8E0026C0A99280A3EC64"
+    },
+    {
+      "path": "tmp/d1029_mapping_issue_design.json",
+      "bytes": 26920,
+      "sha256": "288CCE3CC12FCA4E499AA2A758BA8A84F95F9844A54A4B30687769E472FE33CC"
+    },
+    {
+      "path": "tmp/d1029_post_live_independent_review_r1.json",
+      "bytes": 11808,
+      "sha256": "861F1C59B8091BEF7304E6E6249F3941AA05DECE48BB43B29D4872D5E319910D"
+    },
+    {
+      "path": "tmp/d1031_final_four_gap_batch_design.json",
+      "bytes": 26070,
+      "sha256": "37AC8B57BF83C04900BC6350E8EA7CBF235B3EBD39C7096E336DB196901CED04"
+    },
+    {
+      "path": "D1031_FINAL_SCAN_CHECK.json",
+      "bytes": 3723,
+      "sha256": "74DFE06F44036508CB184FC0792AABED83F3D4184FC008E298CEEBB022FB9FD6"
+    }
+  ],
+  "predecessor_receipt": {
+    "path": "tohoku_r70/r70-check.json",
+    "bytes": 13877,
+    "sha256": "1B8EC4673FAFA9472DB78FDA179E7E01FDA9C8C55B74FFFD4C8F109BE207A169",
+    "status": "PASS"
+  },
+  "live_insertion": {
+    "path": "cohomology.tex",
+    "bytes": 948056,
+    "sha256": "028EE1CCEAF173129AA34BC3A407C9D8EE08324F233449E81405D699E58314F9",
+    "candidate_occurrences": 1,
+    "candidate_byte_offset_zero_based": 559012,
+    "candidate_lines": "15191-15267",
+    "label": "lemma-ext-center-actions-left-modules",
+    "label_occurrences": 1,
+    "label_line": 15192,
+    "placement": "PASS_AFTER_EXT_SHEAVES_INTRODUCTION_BEFORE_CONSTANT_SHEAF_EXT_DOUBLE_COMPLEX"
+  },
+  "mathematics": {
+    "status": "STRICT_PASS",
+    "canonical_global_scalar_ring": "Gamma(X,Z_A)",
+    "canonical_sheaf_scalar_ring": "Z_A",
+    "larger_center_guard": "Z(Gamma(X,A))_ONLY_WHEN_THE_CANONICAL_INCLUSION_IS_AN_EQUALITY",
+    "naturality": "CONTRAVARIANT_IN_F_COVARIANT_IN_G",
+    "degree_zero_compatibility": "PASS"
+  },
+  "build": {
+    "command": "mingw32-make cohomology.pdf",
+    "exit_code": 0,
+    "aux": {
+      "path": "cohomology.aux",
+      "bytes": 58856,
+      "sha256": "F05735AE5D9CB1966EE1A4DF4A0C643D3021566286B0F36333C090BF08EFDA50",
+      "number": "45.1",
+      "page": 145,
+      "label_row_sha256_with_lf": "BEEDA515338FFBE523F1B805ADFC6BFBEB9B939A37317C5E1A3FBC1874F2FB92"
+    },
+    "log": {
+      "path": "cohomology.log",
+      "bytes": 48479,
+      "sha256": "327A20C41FA6CF41EA2897F427E0DBB54A6A89E6F2D6B0A3AEFB7C15804E88F5",
+      "errors": 0,
+      "warnings": 0,
+      "undefined_references": 0,
+      "rerun_requests": 0,
+      "candidate_range_box_diagnostics": 0,
+      "box_diagnostic_delta_from_d1028": 0
+    },
+    "pdf": {
+      "path": "cohomology.pdf",
+      "bytes": 2051229,
+      "sha256": "146ADB22B666F2069B794535AA360D2F969F5BC0A2521CA7119AEE6AD728FF8D",
+      "pages": 248,
+      "open": "PASS"
+    }
+  },
+  "visual_qa": {
+    "pages": [144, 145, 146, 147, 148, 246, 247, 248],
+    "render_files": 8,
+    "render_total_bytes": 2969577,
+    "render_aggregate_sha256": "4F935C8CBE5588CDC8702E0D61E3283946053F014A2BD49E2B6D4E76928604FA",
+    "independent_verdict": "STRICT_PASS",
+    "root_readback": "PASS",
+    "clipping": 0,
+    "overlap": 0,
+    "bad_breaks": 0,
+    "missing_glyphs": 0,
+    "malformed_math": 0,
+    "terminal_spillover_defects": 0
+  },
+  "scanner": {
+    "status": "PASS_BYTE_IDENTICAL_ORACLE_AND_REPLAY",
+    "label": "cohomology-lemma-ext-center-actions-left-modules",
+    "text_sha256": "CF4444C677BA519B8901A1503FF8F439762D24540A289DCACD2C074576757DEC",
+    "tag": "",
+    "errors": 0
+  },
+  "mapping_authorization": {
+    "status": "AUTHORIZED_ONLY_IN_ATOMIC_R71_BATCH",
+    "decision_id": "D001063",
+    "unit_id": "tohoku:remark:ext-center-modules",
+    "disposition": "existing_equivalent",
+    "labels": "cohomology-lemma-ext-center-actions-left-modules;modules-lemma-sheaf-hom-left-modules",
+    "tags": "",
+    "supersedes": "D000539",
+    "decision_row_sha256_with_lf": "B963A92A57A9614327923D487A121152FB5C4771AEDC77EC568E8479025AF2EF",
+    "map_row_sha256_with_lf": "C5F4239D4975C7093DE009167755EDEFC1EC92858E2F242DEDD22CDA18F9469D"
+  },
+  "issue_authorization": {
+    "status": "APPEND_EXACTLY_ONCE_ONLY_IN_ATOMIC_R71_BATCH",
+    "issue_id": "I000033",
+    "unit_id": "tohoku:remark:ext-center-modules",
+    "issue_status": "resolved",
+    "kind": "global_ext_center_does_not_restrict_to_local_centers",
+    "resolution_decision": "D001063",
+    "row_bytes_with_lf": 1450,
+    "row_sha256_with_lf": "ABB8BE14713E6ECCCD33F30F2C8A3BE5BB1B1FBEEB1C22EDB73C3813B1327C9B",
+    "control": "Preserve I000032 unchanged; append I000033 only after every r71 gate passes."
+  },
+  "final": "STRICT_PASS_D1029_READY_FOR_ATOMIC_R71"
+}

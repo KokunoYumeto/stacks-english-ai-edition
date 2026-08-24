@@ -1,0 +1,184 @@
+{
+  "schema": "tohoku-r71-transaction-contract-v1",
+  "contract_id": "D1029-D1031-r71-D001063-D001066-I000033-v1",
+  "script": {
+    "path": "srcmap/build_tohoku_r71.py",
+    "bytes": 41131,
+    "sha256": "F35F2E48924EDEB3C7C48C5A8BF8500BED31134535650ED7C27DD2B88ED7CF75"
+  },
+  "engine": {
+    "path": "srcmap/build_tohoku_r70.py",
+    "bytes": 50028,
+    "sha256": "A4AADA6ECFC96AAEA8343A8B420F6871FAF4E97E6C0CCFF7FF0A16D2DF8F11EA"
+  },
+  "predecessor": {
+    "path": "tohoku_r70/r70-check.json",
+    "bytes": 13877,
+    "sha256": "1B8EC4673FAFA9472DB78FDA179E7E01FDA9C8C55B74FFFD4C8F109BE207A169"
+  },
+  "frozen_prerequisites": [
+    {
+      "path": "tmp/d1031_final_four_gap_batch_design.json",
+      "bytes": 26070,
+      "sha256": "37AC8B57BF83C04900BC6350E8EA7CBF235B3EBD39C7096E336DB196901CED04"
+    },
+    {
+      "path": "D1029_SOURCE_REPAIR_CHECK.json",
+      "bytes": 23296,
+      "sha256": "E996D56A24B4BCF4776CFE9351F2932E66E9B7ACB3B0493C877DEDCD13C63E02"
+    },
+    {
+      "path": "tmp/d1029_post_live_independent_review_r1.json",
+      "bytes": 11808,
+      "sha256": "861F1C59B8091BEF7304E6E6249F3941AA05DECE48BB43B29D4872D5E319910D"
+    },
+    {
+      "path": "tmp/d1030_post_live_independent_review_r1.json",
+      "bytes": 7590,
+      "sha256": "8C70D8029A5816C17AF91590455F519D623524348CF9DAFD3A078CCFE46D4D15"
+    },
+    {
+      "path": "tmp/d1031_post_live_independent_review_r1.json",
+      "bytes": 7042,
+      "sha256": "B2D363CEADA81D1B279DD80B9F14FF561EC3B948CEB3FB0DA11A00C1B4D0E0AD"
+    },
+    {
+      "path": "D1029_CHECK.json",
+      "bytes": 5995,
+      "sha256": "0CAD062C244D2FC3066AE163FF7D137D8B1139337C0144C80E108EB8D0466356"
+    },
+    {
+      "path": "D1030_CHECK.json",
+      "bytes": 4843,
+      "sha256": "6182FBBD43AAF6D05EFA0FE22833D703F7D09694A3708B6B0249B01C7B481514"
+    },
+    {
+      "path": "D1031_CHECK.json",
+      "bytes": 4123,
+      "sha256": "6551E7C7912F99143798E0380FB154A0B70D17336CD22F0527C41EB6DF65AD45"
+    },
+    {
+      "path": "D1031_FINAL_SCAN_CHECK.json",
+      "bytes": 3723,
+      "sha256": "74DFE06F44036508CB184FC0792AABED83F3D4184FC008E298CEEBB022FB9FD6"
+    }
+  ],
+  "scanner_probe": {
+    "oracle_path": "tmp/d1031_final_scan_probe_r1",
+    "replay_path": "tmp/d1031_final_scan_probe_replay_r1",
+    "files": {
+      "cfg.json": {"bytes": 5151, "sha256": "2C1917E032CAE4B174E89319E4BC860D4CB04967899F1B0679C0527B95E952D7"},
+      "check.json": {"bytes": 84174, "sha256": "4ABB22388571D56C410E36811D86EB3EAA2B9AE814C5FEE4F5461F8867C39F61"},
+      "stx.csv": {"bytes": 5291400, "sha256": "3A27F8EE563AF2521071EC5D1EFE6BF6E8DA1E5B194B98CC0C0D450B6CB00118"},
+      "tcand.csv": {"bytes": 489828, "sha256": "EA279CAB0FDF739C87884E0228036A3E0E5ACC3BE3F93F0A22DCB67B40591513"},
+      "tmap.csv": {"bytes": 2424, "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"},
+      "topics.csv": {"bytes": 2453, "sha256": "AA62558CA4292B914D75A63BC4436586D88B754C9D08618DC8E67554C58B6B5C"}
+    },
+    "counts": {
+      "labels": 22116,
+      "official_tags_joined": 21437,
+      "tex_files": 119,
+      "topic_candidates": 1287,
+      "topic_coverage": {"direct": 13},
+      "topics": 13,
+      "warnings": 688,
+      "errors": 0
+    },
+    "inventory": {"files": 6, "bytes": 5875430}
+  },
+  "decision_order": [
+    "D001063:tohoku:remark:ext-center-modules",
+    "D001064:tohoku:prop:3.4.1",
+    "D001065:tohoku:section:3.4",
+    "D001066:tohoku:thm:1.10.1:remark:4"
+  ],
+  "decision_append": {
+    "bytes": 3742,
+    "sha256": "53EC78E78D3504FF34D1F76B5AC997C6791810899383327533F4966FF51A4EC7"
+  },
+  "issue_append": {
+    "issue_id": "I000033",
+    "bytes": 1450,
+    "sha256": "ABB8BE14713E6ECCCD33F30F2C8A3BE5BB1B1FBEEB1C22EDB73C3813B1327C9B"
+  },
+  "projected_counts": {
+    "decisions": 1066,
+    "decided_units": 679,
+    "issues": 33,
+    "active_issues": 0,
+    "existing_equivalent": 401,
+    "existing_weaker": 0,
+    "extend_existing": 0,
+    "new_section": 0,
+    "new_statement": 0,
+    "structural_only": 432,
+    "remaining_gap_class_dispositions": 0,
+    "source_repairs_appended": 1,
+    "mapping_closures_appended": 4,
+    "changed_map_rows": 4
+  },
+  "projected_files": {
+    "dec.csv": {"bytes": 410467, "sha256": "9295BCD5D3BCF93376BC4DC6A565B9D515ABD2E608BA2B000B67824DD7943D79"},
+    "issues.csv": {"bytes": 35465, "sha256": "E8E7A81AEF7E1509CF05E746D0CA32597F6DDF2B77909195A17F43A32BB43C25"},
+    "map.csv": {"bytes": 501183, "sha256": "A4BDB33261A9AA950BD23C7046AC5E1FF9959EF6FE23DBA41B369F2EE2E52680"}
+  },
+  "tool_map_normalization": {
+    "raw_map": {"bytes": 501183, "sha256": "C787784A513C959DD538590984F568E988C1F7F383F028CEE6D61EEBC3744083"},
+    "field": "stacks_tags",
+    "deltas": {
+      "tohoku:section:2.3": {
+        "raw": "0157;015A;013I;013K;05TI;05TH;0644;0646;06XQ;06XR;06XV;0149;06XS;01DU",
+        "authorized": "013I;013K;0149;0157;015A;01DU;05TH;05TI;0644;0646;06XQ;06XR;06XS;06XV"
+      },
+      "tohoku:section:2.4": {
+        "raw": "0121;0122;011N;0AMI;012U;012Y;0130;0132;015H;015I;015J;015K;015M;015N;015E;015C;07K7;07K8;010T",
+        "authorized": "010T;011N;0121;0122;012U;012Y;0130;0132;015C;015E;015H;015I;015J;015K;015M;015N;07K7;07K8;0AMI"
+      },
+      "tohoku:section:3.3": {
+        "raw": "09SW;0FKS;09SX;015E;01DG;01DI;006X;0079",
+        "authorized": "006X;0079;015E;01DG;01DI;09SW;09SX;0FKS"
+      },
+      "tohoku:section:3.4": {
+        "raw": "09V1;02FN;0BE0;01X1",
+        "authorized": "01X1;02FN;09V1;0BE0"
+      },
+      "tohoku:section:3.6": {
+        "raw": "02UX;02UZ;01AQ;01B2;0055;0051",
+        "authorized": "0051;0055;01AQ;01B2;02UX;02UZ"
+      }
+    },
+    "rule": "preserve four inherited r70 canonical tag orders and freeze the authorized section 3.4 order; every delta has the same unique tag set"
+  },
+  "map_rows": {
+    "tohoku:remark:ext-center-modules": {
+      "physical_line": 825,
+      "predecessor_row": {"bytes": 475, "sha256": "AF01F68A22C7C6B985B939FD87CE229668445BA0499A1AC906950DEB0DC5C430"},
+      "successor_row": {"bytes": 808, "sha256": "C5F4239D4975C7093DE009167755EDEFC1EC92858E2F242DEDD22CDA18F9469D"}
+    },
+    "tohoku:prop:3.4.1": {
+      "physical_line": 761,
+      "predecessor_row": {"bytes": 375, "sha256": "961D0FF52FD939AD46E48F2FF07B89C55EB790555DFBBA2CF36CA6F10FD6491C"},
+      "successor_row": {"bytes": 767, "sha256": "6342BD3A7384875BFE5E47CC943FD66C48093FC26F450C93CFC89DED73241CDD"}
+    },
+    "tohoku:section:3.4": {
+      "physical_line": 914,
+      "predecessor_row": {"bytes": 464, "sha256": "4BF61AD01B5600B461DA90A8DE4EDB5D82A06987351449C973C8EEC34295460D"},
+      "successor_row": {"bytes": 1768, "sha256": "45891AA20C6B154220B5A322E0D357B5D7DF333E3CC544458ACC4CFC0C54BD60"}
+    },
+    "tohoku:thm:1.10.1:remark:4": {
+      "physical_line": 983,
+      "predecessor_row": {"bytes": 880, "sha256": "5D681E064A508E416961EAA95633DFFF67D68DE2B4815F8704767886F06BBE96"},
+      "successor_row": {"bytes": 945, "sha256": "0D75D0D157C9646D0A5D1C0E747457D916992523F40E1FBC814609726ED10E2D"}
+    }
+  },
+  "target": "tohoku_r71",
+  "transaction": {
+    "source": "tohoku_r70",
+    "stage": "tohoku_r71.__stage__",
+    "no_overwrite": true,
+    "atomic_directory_rename": true,
+    "post_promotion_replay": true,
+    "rollback_on_failed_replay": true,
+    "partial_successor_forbidden": true
+  }
+}

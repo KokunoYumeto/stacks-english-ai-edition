@@ -1,0 +1,105 @@
+{
+  "schema": "tohoku-stacks-final-three-live-scanner-check-v1",
+  "status": "STRICT_PASS_BYTE_IDENTICAL_ORACLE_AND_REPLAY",
+  "created_utc": "2026-08-24T08:15:44Z",
+  "scope": [
+    "D1029",
+    "D1030",
+    "D1031"
+  ],
+  "oracle": "tmp/d1031_final_scan_probe_r1",
+  "replay": "tmp/d1031_final_scan_probe_replay_r1",
+  "counts": {
+    "tex_files": 119,
+    "labels": 22116,
+    "official_tags_joined": 21437,
+    "topics": 13,
+    "topic_candidates": 1287,
+    "direct_topic_coverage": 13,
+    "warnings": 688,
+    "errors": 0
+  },
+  "byte_identical_inventory": [
+    {
+      "file": "cfg.json",
+      "bytes": 5151,
+      "sha256": "2C1917E032CAE4B174E89319E4BC860D4CB04967899F1B0679C0527B95E952D7"
+    },
+    {
+      "file": "check.json",
+      "bytes": 84174,
+      "sha256": "4ABB22388571D56C410E36811D86EB3EAA2B9AE814C5FEE4F5461F8867C39F61"
+    },
+    {
+      "file": "stx.csv",
+      "bytes": 5291400,
+      "sha256": "3A27F8EE563AF2521071EC5D1EFE6BF6E8DA1E5B194B98CC0C0D450B6CB00118"
+    },
+    {
+      "file": "tcand.csv",
+      "bytes": 489828,
+      "sha256": "EA279CAB0FDF739C87884E0228036A3E0E5ACC3BE3F93F0A22DCB67B40591513"
+    },
+    {
+      "file": "tmap.csv",
+      "bytes": 2424,
+      "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"
+    },
+    {
+      "file": "topics.csv",
+      "bytes": 2453,
+      "sha256": "AA62558CA4292B914D75A63BC4436586D88B754C9D08618DC8E67554C58B6B5C"
+    }
+  ],
+  "new_rows": [
+    {
+      "formalization": "D1029",
+      "full_label": "cohomology-lemma-ext-center-actions-left-modules",
+      "file": "cohomology.tex",
+      "source_line": 15192,
+      "tag": "",
+      "text_sha256": "CF4444C677BA519B8901A1503FF8F439762D24540A289DCACD2C074576757DEC",
+      "csv_line": 3531,
+      "row_bytes_with_lf": 226,
+      "row_sha256_with_lf": "490265F4F43F58ACF09A55705465F2868EF64042B2E24F21423B0BB3873A72E6"
+    },
+    {
+      "formalization": "D1030",
+      "full_label": "divisors-lemma-locally-UFD-projective-linear-torsors-lift",
+      "file": "divisors.tex",
+      "source_line": 6869,
+      "tag": "",
+      "text_sha256": "96C11001AE948835FAFC680669F2BF30E3BE9CDDE3861BF2DCF160729DC2A4D1",
+      "csv_line": 6169,
+      "row_bytes_with_lf": 242,
+      "row_sha256_with_lf": "D2EA25BF58D15347830E0D3A8F1E0011DD73E9B396EF8F68B5D8F736E3341ADF"
+    },
+    {
+      "formalization": "D1031",
+      "full_label": "homology-lemma-projective-effacement-opposite-category",
+      "file": "homology.tex",
+      "source_line": 10315,
+      "tag": "",
+      "text_sha256": "814BA8AFE87A3EAB594E8DE6B681E9D2AD38267B0C3954E31BA2F2D579FD9493",
+      "csv_line": 10052,
+      "row_bytes_with_lf": 244,
+      "row_sha256_with_lf": "D887FE44FCC11E8AF82F713C7E407E5D4E4A213F66AF03E4B80C9147A2175504"
+    }
+  ],
+  "expected_warnings": [
+    "TeX label has no official tag in this snapshot: cohomology-lemma-ext-center-actions-left-modules",
+    "TeX label has no official tag in this snapshot: divisors-lemma-locally-UFD-projective-linear-torsors-lift",
+    "TeX label has no official tag in this snapshot: homology-lemma-projective-effacement-opposite-category"
+  ],
+  "delta_from_d1028_probe": {
+    "baseline": "tmp/d1028_scan_probe_r1/stx.csv",
+    "baseline_rows": 22113,
+    "successor_rows": 22116,
+    "added_rows": 3,
+    "removed_rows": 0,
+    "common_row_non_line_field_changes": 0,
+    "common_row_line_number_changes": 330,
+    "interpretation": "Only the three intended labels were added; existing semantic, label, tag, file, kind, section, chapter, and statement-hash fields are preserved. Line shifts are the deterministic consequence of the three bounded insertions."
+  },
+  "authorization": "PASS_FINAL_SCANNER_GATE_FOR_ATOMIC_R71_TRANSACTION"
+}

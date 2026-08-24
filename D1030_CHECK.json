@@ -1,0 +1,139 @@
+{
+  "schema": "tohoku-stacks-d1030-check-v1",
+  "formalization_id": "D1030",
+  "status": "STRICT_PASS_R71_CHILD_AND_PARENT_MAPPING_AUTHORIZED",
+  "created_utc": "2026-08-24T08:15:44Z",
+  "errors": [],
+  "selection": {
+    "child_unit": "tohoku:prop:3.4.1",
+    "parent_unit": "tohoku:section:3.4",
+    "printed_page": 161,
+    "child_predecessor_decision": "D000306",
+    "child_predecessor_disposition": "new_statement",
+    "parent_predecessor_decision": "D000324",
+    "parent_predecessor_disposition": "new_section",
+    "predecessor_dossier": "tohoku_r70"
+  },
+  "frozen_inputs": [
+    {
+      "path": "tmp/d1030_locally_factorial_pgl_lifting_candidate.tex",
+      "bytes": 1894,
+      "sha256": "00D90967292F52FEC998D23AB105A698E934E49A35A11B7806210D9F93A2061E"
+    },
+    {
+      "path": "tmp/d1030_locally_factorial_pgl_lifting_design.json",
+      "bytes": 5668,
+      "sha256": "0A23502F52B25BE644B13473817E8FCA1969DD561BE89437C1B3D2F1461CB776"
+    },
+    {
+      "path": "tmp/d1030_independent_review_r1.json",
+      "bytes": 9132,
+      "sha256": "6E3811EAC77F0036B248DC98421D3CEEE03564B822354E27285C1D141BC5EFF7"
+    },
+    {
+      "path": "tmp/d1030_parent_section_34_review.json",
+      "bytes": 34346,
+      "sha256": "4F22F50999EEDA62CA2FD709FA73A25668765BAF85F8EA782C9FE85670A0C062"
+    },
+    {
+      "path": "tmp/d1030_post_live_independent_review_r1.json",
+      "bytes": 7590,
+      "sha256": "8C70D8029A5816C17AF91590455F519D623524348CF9DAFD3A078CCFE46D4D15"
+    },
+    {
+      "path": "tmp/d1031_final_four_gap_batch_design.json",
+      "bytes": 26070,
+      "sha256": "37AC8B57BF83C04900BC6350E8EA7CBF235B3EBD39C7096E336DB196901CED04"
+    },
+    {
+      "path": "D1031_FINAL_SCAN_CHECK.json",
+      "bytes": 3723,
+      "sha256": "74DFE06F44036508CB184FC0792AABED83F3D4184FC008E298CEEBB022FB9FD6"
+    }
+  ],
+  "predecessor_receipt": {
+    "path": "tohoku_r70/r70-check.json",
+    "bytes": 13877,
+    "sha256": "1B8EC4673FAFA9472DB78FDA179E7E01FDA9C8C55B74FFFD4C8F109BE207A169",
+    "status": "PASS"
+  },
+  "live_insertion": {
+    "path": "divisors.tex",
+    "bytes": 398282,
+    "sha256": "6AFD21925A593A1D302776825ABB176768BDB7E5966982EC04542FAF637AF86C",
+    "candidate_occurrences": 1,
+    "label": "lemma-locally-UFD-projective-linear-torsors-lift",
+    "label_occurrences": 1,
+    "label_line": 6869,
+    "placement": "PASS_AFTER_DIVISOR_RESOLUTION_PROOF_BEFORE_MEROMORPHIC_QUOTIENT_LEMMA"
+  },
+  "build": {
+    "command": "mingw32-make divisors.pdf",
+    "exit_code": 0,
+    "aux": {
+      "path": "divisors.aux",
+      "bytes": 32505,
+      "sha256": "23DC6F62141F7D600615F6673C2849411CCE97A1F4AF0065A3D0805BBDC02AB3",
+      "number": "27.11",
+      "page": 66
+    },
+    "log": {
+      "path": "divisors.log",
+      "bytes": 36901,
+      "sha256": "84F46095D7F49E0FDA6D94CB5A5EE575FBFB91950877D0CFCEF552B702966646",
+      "errors": 0,
+      "warnings": 0,
+      "undefined_references": 0,
+      "rerun_requests": 0,
+      "candidate_range_box_diagnostics": 0
+    },
+    "pdf": {
+      "path": "divisors.pdf",
+      "bytes": 1135218,
+      "sha256": "6B480E31B285358CDFB03BCEADB556F602112F2B43DAD7ACC5504C4DFF666487",
+      "pages": 98,
+      "open": "PASS"
+    }
+  },
+  "visual_qa": {
+    "pages": [65, 66, 67, 68],
+    "independent_verdict": "STRICT_PASS",
+    "root_readback": "PASS",
+    "clipping": 0,
+    "overlap": 0,
+    "bad_breaks": 0,
+    "missing_glyphs": 0,
+    "malformed_math": 0
+  },
+  "scanner": {
+    "status": "PASS_BYTE_IDENTICAL_ORACLE_AND_REPLAY",
+    "label": "divisors-lemma-locally-UFD-projective-linear-torsors-lift",
+    "text_sha256": "96C11001AE948835FAFC680669F2BF30E3BE9CDDE3861BF2DCF160729DC2A4D1",
+    "tag": "",
+    "errors": 0
+  },
+  "mapping_authorization": {
+    "status": "AUTHORIZED_ONLY_IN_ATOMIC_R71_BATCH",
+    "child": {
+      "decision_id": "D001064",
+      "unit_id": "tohoku:prop:3.4.1",
+      "disposition": "existing_equivalent",
+      "labels": "divisors-lemma-locally-UFD-divisor-resolution;divisors-lemma-locally-UFD-projective-linear-torsors-lift",
+      "tags": "",
+      "supersedes": "D000306",
+      "decision_row_sha256_with_lf": "5EB03169EA34EB1D681CB732BE238E1EBC5870E9C57D2EA13D3DF228DD95DEC3",
+      "map_row_sha256_with_lf": "6342BD3A7384875BFE5E47CC943FD66C48093FC26F450C93CFC89DED73241CDD"
+    },
+    "parent": {
+      "decision_id": "D001065",
+      "unit_id": "tohoku:section:3.4",
+      "disposition": "existing_equivalent",
+      "supersedes": "D000324",
+      "decision_row_sha256_with_lf": "7B43CFA343C6750462D202090D73614C915D158AECD28E42881E0D44C43BB7FD",
+      "map_row_sha256_with_lf": "45891AA20C6B154220B5A322E0D357B5D7DF333E3CC544458ACC4CFC0C54BD60",
+      "dependency": "D001064_MUST_IMMEDIATELY_PRECEDE_AND_PASS"
+    },
+    "issue_append": null
+  },
+  "final": "STRICT_PASS_D1030_CHILD_AND_SECTION_3_4_PARENT_READY_FOR_ATOMIC_R71"
+}

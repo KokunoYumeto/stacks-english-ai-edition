@@ -1,0 +1,120 @@
+{
+  "schema": "tohoku-stacks-d1031-check-v1",
+  "formalization_id": "D1031",
+  "status": "STRICT_PASS_R71_MAPPING_AUTHORIZED",
+  "created_utc": "2026-08-24T08:15:44Z",
+  "errors": [],
+  "selection": {
+    "unit": "tohoku:thm:1.10.1:remark:4",
+    "printed_page": 137,
+    "predecessor_decision": "D000730",
+    "predecessor_disposition": "existing_weaker",
+    "predecessor_dossier": "tohoku_r70"
+  },
+  "frozen_inputs": [
+    {
+      "path": "tmp/d1031_projective_effacement_duality_candidate.tex",
+      "bytes": 2165,
+      "sha256": "4E53BD2ED92771A52F78C3010566CF548975E4F7400A19046339EE1445163D5D"
+    },
+    {
+      "path": "tmp/d1031_projective_effacement_duality_design.json",
+      "bytes": 5881,
+      "sha256": "8B1E576D2A777F0FA7A7BA1270D2EEB483F0CFBD16ACE3101BC47E963F18D538"
+    },
+    {
+      "path": "tmp/d1031_independent_review_r2.json",
+      "bytes": 5323,
+      "sha256": "3D1325BC240B9E4B4F0E90426CAD82D36B0C84730E420414B8801263795110C7"
+    },
+    {
+      "path": "tmp/d1031_post_live_independent_review_r1.json",
+      "bytes": 7042,
+      "sha256": "B2D363CEADA81D1B279DD80B9F14FF561EC3B948CEB3FB0DA11A00C1B4D0E0AD"
+    },
+    {
+      "path": "tmp/d1031_final_four_gap_batch_design.json",
+      "bytes": 26070,
+      "sha256": "37AC8B57BF83C04900BC6350E8EA7CBF235B3EBD39C7096E336DB196901CED04"
+    },
+    {
+      "path": "D1031_FINAL_SCAN_CHECK.json",
+      "bytes": 3723,
+      "sha256": "74DFE06F44036508CB184FC0792AABED83F3D4184FC008E298CEEBB022FB9FD6"
+    }
+  ],
+  "predecessor_receipt": {
+    "path": "tohoku_r70/r70-check.json",
+    "bytes": 13877,
+    "sha256": "1B8EC4673FAFA9472DB78FDA179E7E01FDA9C8C55B74FFFD4C8F109BE207A169",
+    "status": "PASS"
+  },
+  "live_insertion": {
+    "path": "homology.tex",
+    "bytes": 384334,
+    "sha256": "7520BDAD32E68DB449A671802A5D0B2EFAA6EE4EDEC94206F313AB23AB1B6908",
+    "candidate_occurrences": 1,
+    "label": "lemma-projective-effacement-opposite-category",
+    "label_occurrences": 1,
+    "label_line": 10315,
+    "placement": "PASS_AFTER_PROJECTIVE_EFFACEMENT_PROOF_BEFORE_PROJECTIVE_CHARACTERIZATION"
+  },
+  "build": {
+    "command": "mingw32-make homology.pdf",
+    "exit_code": 0,
+    "aux": {
+      "path": "homology.aux",
+      "bytes": 29132,
+      "sha256": "323BA831A639224363DBFA30BE162C180A7738E7B6BA72CC75CADCBC8BF1B072",
+      "number": "29.4",
+      "page": 107
+    },
+    "log": {
+      "path": "homology.log",
+      "bytes": 39303,
+      "sha256": "5775DE0E18D045D0D780ED8D7259A854C84F95AC287A5C626AE8B21B6E9B7197",
+      "errors": 0,
+      "warnings": 0,
+      "undefined_references": 0,
+      "rerun_requests": 0,
+      "candidate_range_box_diagnostics": 0
+    },
+    "pdf": {
+      "path": "homology.pdf",
+      "bytes": 1086437,
+      "sha256": "75AAB417A5EB5E39C3D29A3FEF2DA824A19FC58E0132FA0092C3A47F72D2CE67",
+      "pages": 117,
+      "open": "PASS"
+    }
+  },
+  "visual_qa": {
+    "pages": [106, 107, 108, 109],
+    "independent_verdict": "STRICT_PASS",
+    "root_readback": "PASS",
+    "clipping": 0,
+    "overlap": 0,
+    "bad_breaks": 0,
+    "missing_glyphs": 0,
+    "malformed_math": 0
+  },
+  "scanner": {
+    "status": "PASS_BYTE_IDENTICAL_ORACLE_AND_REPLAY",
+    "label": "homology-lemma-projective-effacement-opposite-category",
+    "text_sha256": "814BA8AFE87A3EAB594E8DE6B681E9D2AD38267B0C3954E31BA2F2D579FD9493",
+    "tag": "",
+    "errors": 0
+  },
+  "mapping_authorization": {
+    "status": "AUTHORIZED_ONLY_IN_ATOMIC_R71_BATCH",
+    "decision_id": "D001066",
+    "unit_id": "tohoku:thm:1.10.1:remark:4",
+    "disposition": "existing_equivalent",
+    "labels": "homology-definition-projective;homology-definition-projective-effacement;homology-lemma-projective-effacement;homology-lemma-characterize-projectives;homology-lemma-projective-effacement-opposite-category",
+    "tags": "013B;013C",
+    "supersedes": "D000730",
+    "decision_row_sha256_with_lf": "5B89C642B11079A83C2B1548C05972662A60D461A7C197186F86A8F4CF59A30D",
+    "map_row_sha256_with_lf": "0D75D0D157C9646D0A5D1C0E747457D916992523F40E1FBC814609726ED10E2D",
+    "issue_append": null
+  },
+  "final": "STRICT_PASS_D1031_READY_FOR_ATOMIC_R71"
+}

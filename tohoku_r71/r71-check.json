@@ -1,0 +1,422 @@
+{
+  "deltas": {
+    "corrected_semantic_authority": "sem/r22 for D1029 only",
+    "decisions": 1066,
+    "decisions_appended": [
+      "D001063",
+      "D001064",
+      "D001065",
+      "D001066"
+    ],
+    "errors": [],
+    "issues_appended": [
+      "I000033"
+    ],
+    "map_delta": {
+      "changed_fields": 22,
+      "changed_units": 4,
+      "unchanged_units": 987
+    },
+    "mapping_closures_appended": 4,
+    "mapping_counts": {
+      "active_graph_corrections": 0,
+      "active_source_issues": 0,
+      "candidate_units": 0,
+      "decided_units": 679,
+      "decisions": 1066,
+      "dispositions": {
+        "example_or_remark": 84,
+        "existing_equivalent": 401,
+        "existing_stronger": 41,
+        "historical_reference": 33,
+        "structural_only": 432
+      },
+      "graph_corrections": 0,
+      "review_units": 0,
+      "source_issues": 33,
+      "unit_candidates": 0,
+      "units": 991
+    },
+    "remaining_gap_class_dispositions": 0,
+    "scan_counts": {
+      "errors": 0,
+      "labels": 22116,
+      "official_tags_joined": 21437,
+      "tex_files": 119,
+      "topic_candidates": 1287,
+      "topic_coverage": {
+        "direct": 13
+      },
+      "topics": 13,
+      "warnings": 688
+    },
+    "scanner_payload_change": "THREE_NEW_UNTAGGED_LABELS",
+    "semantic_inventory_generation": "sem/r18",
+    "source_change": "D1029_D1030_D1031_FINAL_LIVE_SURFACE",
+    "source_repairs_appended": 1,
+    "status": "PASS"
+  },
+  "errors": [],
+  "execution": {
+    "contract": {
+      "bytes": 7306,
+      "name": "srcmap/tohoku_r71_contract.json",
+      "sha256": "9BCF8AD812879D3040906909627A0BF99CDC5F99204FE8254968DC3638E63219"
+    },
+    "engine": {
+      "bytes": 50028,
+      "name": "srcmap/build_tohoku_r70.py",
+      "sha256": "A4AADA6ECFC96AAEA8343A8B420F6871FAF4E97E6C0CCFF7FF0A16D2DF8F11EA"
+    },
+    "python": {
+      "bytes": 104264,
+      "name": "python.exe",
+      "sha256": "7679E53FA969789309E81FDAD0D52B8CDA5F83C9ABF7CB31A3C58BF24B31E264"
+    },
+    "script": {
+      "bytes": 41131,
+      "name": "srcmap/build_tohoku_r71.py",
+      "sha256": "F35F2E48924EDEB3C7C48C5A8BF8500BED31134535650ED7C27DD2B88ED7CF75"
+    }
+  },
+  "files": [
+    {
+      "bytes": 950,
+      "name": "STATUS.md",
+      "sha256": "529747894CF1F22D282F5CA706DB5C0E684B0E56BF7FB5DFE23D466C4D5D1BC2"
+    },
+    {
+      "bytes": 5151,
+      "name": "cfg.json",
+      "sha256": "2C1917E032CAE4B174E89319E4BC860D4CB04967899F1B0679C0527B95E952D7"
+    },
+    {
+      "bytes": 84174,
+      "name": "check.json",
+      "sha256": "4ABB22388571D56C410E36811D86EB3EAA2B9AE814C5FEE4F5461F8867C39F61"
+    },
+    {
+      "bytes": 410467,
+      "name": "dec.csv",
+      "sha256": "9295BCD5D3BCF93376BC4DC6A565B9D515ABD2E608BA2B000B67824DD7943D79"
+    },
+    {
+      "bytes": 1578,
+      "name": "intake.json",
+      "sha256": "7E2B1F451113D57041FB676A4BE85F6C8AE51783FC8A559691AD5D6DCCF9271F"
+    },
+    {
+      "bytes": 35465,
+      "name": "issues.csv",
+      "sha256": "E8E7A81AEF7E1509CF05E746D0CA32597F6DDF2B77909195A17F43A32BB43C25"
+    },
+    {
+      "bytes": 501183,
+      "name": "map.csv",
+      "sha256": "A4BDB33261A9AA950BD23C7046AC5E1FF9959EF6FE23DBA41B369F2EE2E52680"
+    },
+    {
+      "bytes": 73894,
+      "name": "mcheck.json",
+      "sha256": "FC7AB928A40AF43EC90BE8B81FD266CE31006615A345AB7915AD096AF9BF9082"
+    },
+    {
+      "bytes": 5291400,
+      "name": "stx.csv",
+      "sha256": "3A27F8EE563AF2521071EC5D1EFE6BF6E8DA1E5B194B98CC0C0D450B6CB00118"
+    },
+    {
+      "bytes": 489828,
+      "name": "tcand.csv",
+      "sha256": "EA279CAB0FDF739C87884E0228036A3E0E5ACC3BE3F93F0A22DCB67B40591513"
+    },
+    {
+      "bytes": 2424,
+      "name": "tmap.csv",
+      "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"
+    },
+    {
+      "bytes": 2453,
+      "name": "topics.csv",
+      "sha256": "AA62558CA4292B914D75A63BC4436586D88B754C9D08618DC8E67554C58B6B5C"
+    },
+    {
+      "bytes": 120,
+      "name": "ucand.csv",
+      "sha256": "D7D823C01798DC15596F2C67D1177F427A50EE39CDD4F4B6B437FBD56A86D1A4"
+    },
+    {
+      "bytes": 393225,
+      "name": "units.csv",
+      "sha256": "6AAAD1470DDA82604F84D697EC1833FAC4BEE16342FAD8EB415BA17CFB018262"
+    }
+  ],
+  "formalization": {
+    "D1029": {
+      "audit": {
+        "bytes": 5995,
+        "name": "D1029_CHECK.json",
+        "sha256": "0CAD062C244D2FC3066AE163FF7D137D8B1139337C0144C80E108EB8D0466356"
+      },
+      "post_live_review": {
+        "bytes": 11808,
+        "name": "tmp/d1029_post_live_independent_review_r1.json",
+        "sha256": "861F1C59B8091BEF7304E6E6249F3941AA05DECE48BB43B29D4872D5E319910D"
+      },
+      "source_repair": {
+        "bytes": 23296,
+        "name": "D1029_SOURCE_REPAIR_CHECK.json",
+        "sha256": "E996D56A24B4BCF4776CFE9351F2932E66E9B7ACB3B0493C877DEDCD13C63E02"
+      }
+    },
+    "D1030": {
+      "audit": {
+        "bytes": 4843,
+        "name": "D1030_CHECK.json",
+        "sha256": "6182FBBD43AAF6D05EFA0FE22833D703F7D09694A3708B6B0249B01C7B481514"
+      },
+      "post_live_review": {
+        "bytes": 7590,
+        "name": "tmp/d1030_post_live_independent_review_r1.json",
+        "sha256": "8C70D8029A5816C17AF91590455F519D623524348CF9DAFD3A078CCFE46D4D15"
+      }
+    },
+    "D1031": {
+      "audit": {
+        "bytes": 4123,
+        "name": "D1031_CHECK.json",
+        "sha256": "6551E7C7912F99143798E0380FB154A0B70D17336CD22F0527C41EB6DF65AD45"
+      },
+      "post_live_review": {
+        "bytes": 7042,
+        "name": "tmp/d1031_post_live_independent_review_r1.json",
+        "sha256": "B2D363CEADA81D1B279DD80B9F14FF561EC3B948CEB3FB0DA11A00C1B4D0E0AD"
+      }
+    },
+    "batch_design": {
+      "bytes": 26070,
+      "name": "tmp/d1031_final_four_gap_batch_design.json",
+      "sha256": "37AC8B57BF83C04900BC6350E8EA7CBF235B3EBD39C7096E336DB196901CED04"
+    },
+    "build_artifacts": [
+      {
+        "bytes": 58856,
+        "name": "cohomology.aux",
+        "sha256": "F05735AE5D9CB1966EE1A4DF4A0C643D3021566286B0F36333C090BF08EFDA50"
+      },
+      {
+        "bytes": 48479,
+        "name": "cohomology.log",
+        "sha256": "327A20C41FA6CF41EA2897F427E0DBB54A6A89E6F2D6B0A3AEFB7C15804E88F5"
+      },
+      {
+        "bytes": 2051229,
+        "name": "cohomology.pdf",
+        "sha256": "146ADB22B666F2069B794535AA360D2F969F5BC0A2521CA7119AEE6AD728FF8D"
+      },
+      {
+        "bytes": 32505,
+        "name": "divisors.aux",
+        "sha256": "23DC6F62141F7D600615F6673C2849411CCE97A1F4AF0065A3D0805BBDC02AB3"
+      },
+      {
+        "bytes": 36901,
+        "name": "divisors.log",
+        "sha256": "84F46095D7F49E0FDA6D94CB5A5EE575FBFB91950877D0CFCEF552B702966646"
+      },
+      {
+        "bytes": 1135218,
+        "name": "divisors.pdf",
+        "sha256": "6B480E31B285358CDFB03BCEADB556F602112F2B43DAD7ACC5504C4DFF666487"
+      },
+      {
+        "bytes": 29132,
+        "name": "homology.aux",
+        "sha256": "323BA831A639224363DBFA30BE162C180A7738E7B6BA72CC75CADCBC8BF1B072"
+      },
+      {
+        "bytes": 39303,
+        "name": "homology.log",
+        "sha256": "5775DE0E18D045D0D780ED8D7259A854C84F95AC287A5C626AE8B21B6E9B7197"
+      },
+      {
+        "bytes": 1086437,
+        "name": "homology.pdf",
+        "sha256": "75AAB417A5EB5E39C3D29A3FEF2DA824A19FC58E0132FA0092C3A47F72D2CE67"
+      }
+    ],
+    "change_class": "four_atomic_mapping_closures_one_resolved_issue_and_bound_external_source_repair",
+    "final_scanner_audit": {
+      "bytes": 3723,
+      "name": "D1031_FINAL_SCAN_CHECK.json",
+      "sha256": "74DFE06F44036508CB184FC0792AABED83F3D4184FC008E298CEEBB022FB9FD6"
+    },
+    "live_sources": [
+      {
+        "bytes": 948056,
+        "name": "cohomology.tex",
+        "sha256": "028EE1CCEAF173129AA34BC3A407C9D8EE08324F233449E81405D699E58314F9"
+      },
+      {
+        "bytes": 398282,
+        "name": "divisors.tex",
+        "sha256": "6AFD21925A593A1D302776825ABB176768BDB7E5966982EC04542FAF637AF86C"
+      },
+      {
+        "bytes": 384334,
+        "name": "homology.tex",
+        "sha256": "7520BDAD32E68DB449A671802A5D0B2EFAA6EE4EDEC94206F313AB23AB1B6908"
+      }
+    ]
+  },
+  "nonclaims": [
+    "The sem/r18 inventory and source locators remain fixed; sem/r22 is bound only as D1029's corrected authority.",
+    "I000033 records the p.188 source error; I000032 and every predecessor issue remain byte-identical.",
+    "No live TeX, PDF, source ledger, cursor, release, publication, DOI, remote freshness, rights, or whole-paper completion is claimed by this mapping transaction."
+  ],
+  "predecessor": {
+    "files": [
+      {
+        "bytes": 984,
+        "name": "tohoku_r70/STATUS.md",
+        "sha256": "4802A347A73F911C6F458C11B27BAE3A18FD1AA4406C9969E15CA225C06E9F0A"
+      },
+      {
+        "bytes": 5151,
+        "name": "tohoku_r70/cfg.json",
+        "sha256": "2C1917E032CAE4B174E89319E4BC860D4CB04967899F1B0679C0527B95E952D7"
+      },
+      {
+        "bytes": 83847,
+        "name": "tohoku_r70/check.json",
+        "sha256": "07C5D80259067698B473D2D9A0B7EE95FCAA10081F8F2258BE73BC83AA7C3258"
+      },
+      {
+        "bytes": 406725,
+        "name": "tohoku_r70/dec.csv",
+        "sha256": "2D8D386A770F9FCF46009647B46B9F05F7AC8B0C91213F83930147CD216F1E15"
+      },
+      {
+        "bytes": 1578,
+        "name": "tohoku_r70/intake.json",
+        "sha256": "7E2B1F451113D57041FB676A4BE85F6C8AE51783FC8A559691AD5D6DCCF9271F"
+      },
+      {
+        "bytes": 34015,
+        "name": "tohoku_r70/issues.csv",
+        "sha256": "2D60F1DB762808C5EFCD62AAB74394D8772C190DCB3150F3F82984DE3B9D7EB1"
+      },
+      {
+        "bytes": 499089,
+        "name": "tohoku_r70/map.csv",
+        "sha256": "FC5B419371E2551296FD3D4A91DB7278C5C4B90D6C06D947A3025E748904F675"
+      },
+      {
+        "bytes": 73645,
+        "name": "tohoku_r70/mcheck.json",
+        "sha256": "3C5F98C966D9B13BFAB856C50ACF4E141E08A26A7A2413C73FE6CE4B316DD32B"
+      },
+      {
+        "bytes": 5290688,
+        "name": "tohoku_r70/stx.csv",
+        "sha256": "86D4B13F8189D71ABC67EB7C40A79EE6F1AC86D564812F120506A2F4321C01DC"
+      },
+      {
+        "bytes": 489828,
+        "name": "tohoku_r70/tcand.csv",
+        "sha256": "6811DEB4478A0EDCEF25B6742920E9DC65878BDAD7436D79D419E0D7CF1B2320"
+      },
+      {
+        "bytes": 2424,
+        "name": "tohoku_r70/tmap.csv",
+        "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"
+      },
+      {
+        "bytes": 2453,
+        "name": "tohoku_r70/topics.csv",
+        "sha256": "AA62558CA4292B914D75A63BC4436586D88B754C9D08618DC8E67554C58B6B5C"
+      },
+      {
+        "bytes": 120,
+        "name": "tohoku_r70/ucand.csv",
+        "sha256": "D7D823C01798DC15596F2C67D1177F427A50EE39CDD4F4B6B437FBD56A86D1A4"
+      },
+      {
+        "bytes": 393225,
+        "name": "tohoku_r70/units.csv",
+        "sha256": "6AAAD1470DDA82604F84D697EC1833FAC4BEE16342FAD8EB415BA17CFB018262"
+      }
+    ],
+    "receipt": {
+      "bytes": 13877,
+      "name": "tohoku_r70/r70-check.json",
+      "sha256": "1B8EC4673FAFA9472DB78FDA179E7E01FDA9C8C55B74FFFD4C8F109BE207A169"
+    }
+  },
+  "scanner_oracle": [
+    {
+      "bytes": 5151,
+      "name": "tmp/d1031_final_scan_probe_r1/cfg.json",
+      "sha256": "2C1917E032CAE4B174E89319E4BC860D4CB04967899F1B0679C0527B95E952D7"
+    },
+    {
+      "bytes": 84174,
+      "name": "tmp/d1031_final_scan_probe_r1/check.json",
+      "sha256": "4ABB22388571D56C410E36811D86EB3EAA2B9AE814C5FEE4F5461F8867C39F61"
+    },
+    {
+      "bytes": 5291400,
+      "name": "tmp/d1031_final_scan_probe_r1/stx.csv",
+      "sha256": "3A27F8EE563AF2521071EC5D1EFE6BF6E8DA1E5B194B98CC0C0D450B6CB00118"
+    },
+    {
+      "bytes": 489828,
+      "name": "tmp/d1031_final_scan_probe_r1/tcand.csv",
+      "sha256": "EA279CAB0FDF739C87884E0228036A3E0E5ACC3BE3F93F0A22DCB67B40591513"
+    },
+    {
+      "bytes": 2424,
+      "name": "tmp/d1031_final_scan_probe_r1/tmap.csv",
+      "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"
+    },
+    {
+      "bytes": 2453,
+      "name": "tmp/d1031_final_scan_probe_r1/topics.csv",
+      "sha256": "AA62558CA4292B914D75A63BC4436586D88B754C9D08618DC8E67554C58B6B5C"
+    }
+  ],
+  "scanner_replay": [
+    {
+      "bytes": 5151,
+      "name": "tmp/d1031_final_scan_probe_replay_r1/cfg.json",
+      "sha256": "2C1917E032CAE4B174E89319E4BC860D4CB04967899F1B0679C0527B95E952D7"
+    },
+    {
+      "bytes": 84174,
+      "name": "tmp/d1031_final_scan_probe_replay_r1/check.json",
+      "sha256": "4ABB22388571D56C410E36811D86EB3EAA2B9AE814C5FEE4F5461F8867C39F61"
+    },
+    {
+      "bytes": 5291400,
+      "name": "tmp/d1031_final_scan_probe_replay_r1/stx.csv",
+      "sha256": "3A27F8EE563AF2521071EC5D1EFE6BF6E8DA1E5B194B98CC0C0D450B6CB00118"
+    },
+    {
+      "bytes": 489828,
+      "name": "tmp/d1031_final_scan_probe_replay_r1/tcand.csv",
+      "sha256": "EA279CAB0FDF739C87884E0228036A3E0E5ACC3BE3F93F0A22DCB67B40591513"
+    },
+    {
+      "bytes": 2424,
+      "name": "tmp/d1031_final_scan_probe_replay_r1/tmap.csv",
+      "sha256": "DEB05561CA297574E3FC54D9E36CB8628A092C280BDFAB53E79C0F198C29C9A1"
+    },
+    {
+      "bytes": 2453,
+      "name": "tmp/d1031_final_scan_probe_replay_r1/topics.csv",
+      "sha256": "AA62558CA4292B914D75A63BC4436586D88B754C9D08618DC8E67554C58B6B5C"
+    }
+  ],
+  "schema": "tohoku-stacks-mapping-successor-r71-v1",
+  "status": "PASS"
+}
