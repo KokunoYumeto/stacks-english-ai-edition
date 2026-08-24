@@ -1,0 +1,134 @@
+{
+  "authority": {
+    "bytes": 1771230,
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "line_endings": "LF-only with terminal LF",
+    "mutated": false,
+    "path": "authority/source/algebra.tex",
+    "physical_lines": 47885,
+    "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+  },
+  "bounded_source": {
+    "bytes": 8074,
+    "end_line": 47091,
+    "physical_lines": 214,
+    "sha256": "D774E1B350A9364A24C384B13B7B12925041BBCC215A803D3DD3909975B12CCD",
+    "start_line": 46878
+  },
+  "closure": {
+    "accepted": 3,
+    "aliases": 0,
+    "expected_stable_ids_after_r10_r11_r12_admission": "MC-STK-ERR-0735..MC-STK-ERR-0737",
+    "operations": 6,
+    "rejected": 0,
+    "unresolved": 0
+  },
+  "corrected_bounded_replay": {
+    "balanced_environments": "13/13",
+    "balanced_unescaped_braces": "86/86",
+    "bytes": 8069,
+    "old_spans_unique_in_declared_lines": true,
+    "operations_nonoverlapping": true,
+    "physical_lines": 214,
+    "sha256": "C1C7D8FB6FF17EC7A087D287068463A62482AF734A2AA1A2CC7704275A529624",
+    "terminal_environment_stack_empty": true
+  },
+  "deduplication": {
+    "overlap": false,
+    "previous_queue_terminal_line": 46877,
+    "public_candidates_checked": "R1..R9",
+    "queued_candidates_checked": "R10..R12"
+  },
+  "external_checkpoint": {
+    "bytes": 5618,
+    "sanitized_for_publication": true,
+    "sha256": "DDB967CBD822A29DB067158A4421DB64F72B36082BA28DF936E063BF2FC20927"
+  },
+  "future_candidate_id": "stacks-errata-a04446e-r13",
+  "mathematical_disposition": {
+    "ALGEBRA-392": "accepted typed defect: A and B are k-algebra domains with fraction fields K and L; the displayed A tensor_K L is not generally defined because the required K-algebra structures do not exist, while A tensor_k L is the geometrically normal localization used by the following identity",
+    "ALGEBRA-393": "accepted English compound-number correction",
+    "ALGEBRA-394": "accepted closed mathematical compound spelling"
+  },
+  "next_executable_action": "Complete and admit R10, R11, and R12 in order. After R12 admission, issue the R13 lease, rehash this producer snapshot and bounded authority slice, and materialize the six accepted operations. Run exact operation replay, structural and isolated-build QA, page-complete visual inspection, independent replay, manifest binding, immutable public byte readback, and separate registry admission before issuing the next lease.",
+  "operations": [
+    {
+      "old_text": "fractions fields",
+      "producer_id": "ALGEBRA-393",
+      "replacement_text": "fraction fields",
+      "source_columns_inclusive": "42-57",
+      "source_end_line": 47011,
+      "source_start_line": 47011
+    },
+    {
+      "old_text": "sub algebras",
+      "producer_id": "ALGEBRA-394",
+      "replacement_text": "subalgebras",
+      "source_columns_inclusive": "5-16",
+      "source_end_line": 47013,
+      "source_start_line": 47013
+    },
+    {
+      "old_text": "sub algebra",
+      "producer_id": "ALGEBRA-394",
+      "replacement_text": "subalgebra",
+      "source_columns_inclusive": "53-63",
+      "source_end_line": 47015,
+      "source_start_line": 47015
+    },
+    {
+      "old_text": "sub algebra",
+      "producer_id": "ALGEBRA-394",
+      "replacement_text": "subalgebra",
+      "source_columns_inclusive": "19-29",
+      "source_end_line": 47016,
+      "source_start_line": 47016
+    },
+    {
+      "old_text": "fractions fields",
+      "producer_id": "ALGEBRA-393",
+      "replacement_text": "fraction fields",
+      "source_columns_inclusive": "42-57",
+      "source_end_line": 47023,
+      "source_start_line": 47023
+    },
+    {
+      "old_text": "$A \\otimes_K L$",
+      "producer_id": "ALGEBRA-392",
+      "replacement_text": "$A \\otimes_k L$",
+      "source_columns_inclusive": "7-21",
+      "source_end_line": 47042,
+      "source_start_line": 47042
+    }
+  ],
+  "predecessor_active_candidate": "stacks-errata-a04446e-r10",
+  "predecessor_queued_candidates": [
+    "stacks-errata-a04446e-r11",
+    "stacks-errata-a04446e-r12"
+  ],
+  "producer_emendation_evidence": {
+    "bytes": 638,
+    "path": "external producer evidence; not imported as canon",
+    "scope": "ALGEBRA-392 only",
+    "sha256": "5CF7103AB926C0310ED6B9E5B6FBEB01A3B878DE014696C0E6AB3F7422F1BAF5"
+  },
+  "producer_snapshot": {
+    "bytes": 369066,
+    "data_rows": 799,
+    "duplicate_ids": 0,
+    "path": "authority/producer/SOURCE_DEFECT_LEDGER.csv",
+    "selected_ids": "ALGEBRA-392..ALGEBRA-394",
+    "selected_rows": 3,
+    "sha256": "D580A489F44E9702A92C9C1FE510657B4ABB4FA1078A7A8014EDA95845A19F12",
+    "transport_note": "This identity supersedes only the double-escaped transport hash in the first packet; IDs and source loci are unchanged."
+  },
+  "recorded_at_utc": "2026-08-24T19:34:56Z",
+  "schema": "stacks-canon-errata-queue-checkpoint/v1",
+  "terminal_condition": "This queue checkpoint is superseded only by a manifest-complete, independently replayed, publicly read-back R13 candidate and its separate overlay-registry admission.",
+  "write_boundaries": {
+    "canonical_translations": "immutable unless separately rebased",
+    "english_authority": "immutable",
+    "materialization": "only after R10, R11, and R12 admission and issuance of the R13 lease",
+    "upstream_contact": "forbidden under the current no-AI-contribution boundary"
+  }
+}
