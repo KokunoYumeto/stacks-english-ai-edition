@@ -1,0 +1,95 @@
+{
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "candidate_id": "stacks-errata-a04446e-r6",
+  "checks": {
+    "authority_evidence": {
+      "files": 12,
+      "passed": true
+    },
+    "chapter_builds": {
+      "chapters": 1,
+      "passed": true,
+      "receipt_sha256": "0EC15FD1ED32EA14FFA8C40F28DD5367CF598957C1625413657BF216CD2DEE1E"
+    },
+    "exact_payloads": {
+      "files": {
+        "algebra": {
+          "authority_bytes": 1771230,
+          "authority_display_delimiters": 2162,
+          "authority_sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3",
+          "display_delimiter_delta": 0,
+          "operation_count": 47,
+          "ordered_structure_exceptions": {
+            "references_added": [
+              {
+                "index_0based": 1785,
+                "payload": "\\ref{lemma-integral-transitive}",
+                "producer_id": "ALGEBRA-309",
+                "stable_id": "MC-STK-ERR-0654"
+              },
+              {
+                "index_0based": 1787,
+                "payload": "\\ref{lemma-integral-transitive}",
+                "producer_id": "ALGEBRA-309",
+                "stable_id": "MC-STK-ERR-0654"
+              }
+            ]
+          },
+          "payload_bytes": 1772436,
+          "payload_display_delimiters": 2162,
+          "payload_sha256": "F1A116C1EDE7E119DB23DAD025B94429802F1419809D0020CD64444A5E0E69A9",
+          "structure": {
+            "citations": {
+              "authority": 45,
+              "payload": 45
+            },
+            "environments": {
+              "authority": 6280,
+              "payload": 6280
+            },
+            "labels": {
+              "authority": 1618,
+              "payload": 1618
+            },
+            "references": {
+              "authority": 3066,
+              "payload": 3068
+            },
+            "sections": {
+              "authority": 168,
+              "payload": 168
+            }
+          },
+          "xymatrix_count": 164
+        }
+      },
+      "passed": true
+    },
+    "lease_ledgers_inventory": {
+      "decisions": 7,
+      "duplicate_aliases": 0,
+      "passed": true,
+      "rejections": 9
+    },
+    "public_hygiene": {
+      "passed": true,
+      "python_caches": 0,
+      "text_files": 40
+    },
+    "unit_closure": {
+      "expected": 39,
+      "manifested": 39,
+      "passed": true
+    },
+    "visual_pdf_qa": {
+      "direct_units": 39,
+      "passed": true,
+      "pdfs": 1,
+      "receipt_sha256": "B8E4E515503EB9E1F3EF2C1FB8ACB2BC3943F4365BD2FCF0DFA2616BA28D925E"
+    }
+  },
+  "generated_at_utc": "2026-08-24T03:00:46Z",
+  "passed": true,
+  "schema": "mathematics-commons-stacks-errata-validation/v1",
+  "verifier_sha256": "0D5A69CA6E29545AD4E9760F3133B4BF747490A30CA09790F90A903246FE5067"
+}

@@ -1,0 +1,205 @@
+{
+  "schema": "mathematics-commons-stacks-independent-review/v1",
+  "candidate_id": "stacks-errata-a04446e-r6",
+  "namespace": "commons/stacks/errata/r6",
+  "lease_id": "stacks-lease-000009-errata-r6",
+  "reviewer_role": "independent adverse replay separate from the producer and registrar",
+  "completed_at_utc": "2026-08-24T03:52:35Z",
+  "verdict": "PASS",
+  "passed": true,
+  "scope": {
+    "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+    "candidate_root": "candidates/commons/stacks/errata/r6",
+    "pre_review_manifest": {
+      "path": "candidate.manifest.json",
+      "bytes": 9544,
+      "sha256": "A5CC4D54686F124AB4C663A817290075D3038E0822B8E0C3470FFDA23B780DB4",
+      "referenced_files": 44,
+      "manifest_checker_passed": true
+    },
+    "candidate_writes": [
+      "replay/independent-review.json"
+    ],
+    "payload_or_authority_mutated": false,
+    "source_map_or_config_mutated_during_final_replay": false,
+    "scripts_or_existing_evidence_mutated_during_final_replay": false,
+    "manifest_or_validation_mutated_during_final_replay": false,
+    "git_used": false,
+    "network_used": false,
+    "upstream_contacted": false
+  },
+  "adverse_replay_history": {
+    "initial_verdict": "conditional FAIL",
+    "initial_manifest_sha256": "8EDB4F1E08B3983F37B4063D9464F7C9C8381085D7D34159F614D3BC0C6F6246",
+    "finding": "Seventeen exact byte operations carried broad producer-locus ranges in operation-level source_start_line/source_end_line fields.",
+    "effect_on_payload": "none",
+    "registrar_repair": "Recomputed operation-level physical line coordinates from the frozen LF-delimited authority bytes in source-map.jsonl and operation-spec.json; added the same deterministic gate to verify.py.",
+    "corrected_source_map": {
+      "path": "source-map.jsonl",
+      "bytes": 51156,
+      "sha256": "9E911476669D7220C0DDF96F8E0A02E2CFC58948AE30397EEEE5E0545C36FEF9"
+    },
+    "corrected_operation_spec": {
+      "path": "operation-spec.json",
+      "bytes": 32277,
+      "sha256": "3F6993F9794805A6E69B41F74DDECB39A6EB27ABDAA155AEFFF29F7B6D658DDD"
+    },
+    "final_coordinate_replay": {
+      "source_start_line_exact": 47,
+      "source_end_line_exact": 47,
+      "source_map_spec_pairs_equal": 47,
+      "remaining_coordinate_exceptions": 0
+    }
+  },
+  "authority_and_payload": {
+    "authority": {
+      "path": "authority/source/algebra.tex",
+      "bytes": 1771230,
+      "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+    },
+    "payload": {
+      "path": "payload/algebra.tex",
+      "bytes": 1772436,
+      "sha256": "F1A116C1EDE7E119DB23DAD025B94429802F1419809D0020CD64444A5E0E69A9"
+    },
+    "net_byte_delta": 1206,
+    "authority_evidence_files": 12,
+    "authority_evidence_hash_mismatches": 0
+  },
+  "exact_replay": {
+    "passed": true,
+    "stable_units": 39,
+    "stable_id_first": "MC-STK-ERR-0621",
+    "stable_id_last": "MC-STK-ERR-0659",
+    "stable_ids_contiguous": true,
+    "operations": 47,
+    "operations_nonoverlapping": true,
+    "old_spans_exact": true,
+    "old_and_replacement_byte_counts_exact": true,
+    "old_and_replacement_hashes_exact": true,
+    "occurrence_counts_exact": true,
+    "operation_line_coordinates_exact": true,
+    "descending_offset_replay_byte_identical_to_payload": true,
+    "independent_replay_output": {
+      "bytes": 1772436,
+      "sha256": "F1A116C1EDE7E119DB23DAD025B94429802F1419809D0020CD64444A5E0E69A9"
+    },
+    "producer_partition": {
+      "scope_first": "ALGEBRA-266",
+      "scope_last": "ALGEBRA-314",
+      "producer_rows": 49,
+      "accepted": 39,
+      "rejected": 9,
+      "unresolved_unapplied": 1,
+      "rejected_ids": [
+        "ALGEBRA-272",
+        "ALGEBRA-280",
+        "ALGEBRA-287",
+        "ALGEBRA-289",
+        "ALGEBRA-292",
+        "ALGEBRA-293",
+        "ALGEBRA-294",
+        "ALGEBRA-295",
+        "ALGEBRA-296"
+      ],
+      "unresolved_id": "ALGEBRA-269",
+      "complete": true
+    }
+  },
+  "fresh_isolated_build": {
+    "passed": true,
+    "fresh_authority_copy_used": true,
+    "fresh_independent_payload_replay_used": true,
+    "candidate": {
+      "pdf": {
+        "path": "builds/algebra.pdf",
+        "bytes": 3709565,
+        "sha256": "71DB06E77996193EDE1BAE6CF0A40907BC9C8159B60EE238DDBA3AD57AE269D5",
+        "pages": 466,
+        "byte_identical_to_producer": true
+      },
+      "fatal_markers": 0,
+      "missing_character_markers": 0,
+      "undefined_citations": 0,
+      "undefined_reference_occurrences": 159,
+      "undefined_reference_unique_targets": 107,
+      "overfull_boxes": 28,
+      "underfull_boxes": 3
+    },
+    "authority": {
+      "pdf": {
+        "path": "builds/algebra.authority.pdf",
+        "bytes": 3708166,
+        "sha256": "C7D408FDB2F6F3646C1E1D325642F9BBA7FA0143ACE91C7774183D605D5E9914",
+        "pages": 466,
+        "byte_identical_to_producer": true
+      },
+      "fatal_markers": 0,
+      "missing_character_markers": 0,
+      "undefined_citations": 0,
+      "undefined_reference_occurrences": 159,
+      "undefined_reference_unique_targets": 107,
+      "overfull_boxes": 28,
+      "underfull_boxes": 3
+    },
+    "candidate_page_delta": 0,
+    "undefined_reference_target_multisets_identical": true
+  },
+  "rendered_evidence": {
+    "passed": true,
+    "build_receipt": {
+      "path": "builds/build-receipt.json",
+      "sha256": "0EC15FD1ED32EA14FFA8C40F28DD5367CF598957C1625413657BF216CD2DEE1E"
+    },
+    "visual_qa": {
+      "path": "builds/visual-qa.json",
+      "sha256": "B8E4E515503EB9E1F3EF2C1FB8ACB2BC3943F4365BD2FCF0DFA2616BA28D925E"
+    },
+    "private_render_manifest": {
+      "bytes": 102984,
+      "sha256": "3DDD76A46B650BE94C106963E655D2544C07972B99C3E32DB6CBABF1FC36DC68"
+    },
+    "full_page_renders": 466,
+    "contact_sheets": 30,
+    "high_resolution_renders": 27,
+    "link_annotations": 3121,
+    "malformed_link_rectangles": 0,
+    "out_of_bounds_link_rectangles": 0,
+    "fonts": 35,
+    "unembedded_fonts": 0,
+    "fonts_without_tounicode": 0,
+    "tagged_pdf": false
+  },
+  "producer_validation": {
+    "path": "builds/validation.json",
+    "sha256": "D6A2C63AB0A0FC53BA9C6B76F762AC46542E1692CB42F727D555FE24EE8309C1",
+    "verifier_sha256": "0D5A69CA6E29545AD4E9760F3133B4BF747490A30CA09790F90A903246FE5067",
+    "passed": true,
+    "passed_groups": [
+      "authority_evidence",
+      "chapter_builds",
+      "exact_payloads",
+      "lease_ledgers_inventory",
+      "public_hygiene",
+      "unit_closure",
+      "visual_pdf_qa"
+    ]
+  },
+  "adverse_evidence": [
+    "ALGEBRA-269 remains excluded: its local-to-global gap is credible, but no unique bounded repair with a proved global bound was established.",
+    "The isolated algebra.tex build retains cross-chapter undefined references; the candidate and frozen authority target multisets are identical.",
+    "Both PDFs remain untagged although all fonts are embedded and carry ToUnicode maps; document-structure accessibility remains a cumulative-edition toolchain limitation.",
+    "The initial independent replay rejected broad operation-level line metadata. The registrar corrected those coordinates without changing authority, payload, or PDF bytes, added a deterministic coordinate gate, rebound the pre-review manifest, and obtained this final unconditional replay PASS.",
+    "French-producer ALGEBRA-315 and later are outside this frozen candidate and require a separate lease and replay.",
+    "This is an independent mechanical, source-binding, proof-evidence, build, and rendered-page review. It is not legal certification, upstream approval, affiliation, or endorsement."
+  ],
+  "post_receipt_rebinding_required": {
+    "required": true,
+    "authorized_actor": "registrar_only",
+    "reason": "The exact pre-review manifest was correctly checked before this receipt existed and therefore records independent_replay as not_performed.",
+    "registrar_next_action": "Add this receipt to candidate.manifest.json, set independent_replay to passed, regenerate builds/validation.json so public-hygiene closure includes the receipt, update the manifest binding for that validation, and rerun complete manifest closure.",
+    "invalidation_rule": "Any change to authority, payload, stable units, source map, configuration, scripts, evidence, or existing build artifacts invalidates this receipt. Only registrar rebinding of candidate.manifest.json and builds/validation.json to this exact receipt is expected."
+  },
+  "verdict_basis": "PASS: the corrected manifest closes; all 39 stable units and 47 exact operations replay the frozen authority to the payload byte-for-byte with exact byte-derived line coordinates; the complete producer partition closes; fresh authority and candidate builds reproduce the sealed 466-page PDFs and matched diagnostics; rendered evidence has no clipping, malformed or out-of-bounds links, missing or unembedded fonts, or ToUnicode gaps; and no candidate mutation occurred during the final replay."
+}

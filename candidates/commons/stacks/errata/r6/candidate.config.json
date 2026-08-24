@@ -1,0 +1,151 @@
+{
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_evidence": [
+    {
+      "bytes": 8495,
+      "path": "authority/canon/DECISION_20260824_R6_ALG_266_313.json",
+      "sha256": "11696983A36AD6544ABFB1ED7922ABE997FC455E87247775C0921861753B78CB"
+    },
+    {
+      "bytes": 1475,
+      "path": "authority/canon/DECISION_20260824_R6_ALG_314.json",
+      "sha256": "F3934656B6524F4D2000DC3DD11A1B0049672DC95C63391E88B08C9E55B0CA80"
+    },
+    {
+      "bytes": 2565,
+      "path": "authority/canon/R6_ALG_266_313_INTAKE.json",
+      "sha256": "8A36B4C826F3081F11F9B0D2E78384F601ECF66B5993B39B2C3DEE431FBAEA1F"
+    },
+    {
+      "bytes": 9491,
+      "path": "authority/canon/R6_ALG_266_313_REPLAY.json",
+      "sha256": "37C1C0E910CF30F4DCD82D32724D8E06E9D180BDEF29608314BBD7387634E01A"
+    },
+    {
+      "bytes": 8588,
+      "path": "authority/canon/R6_ALG_266_313_REVIEW.md",
+      "sha256": "01A2E072C796950BFA3E7612A350A30CE2FB34823AA5EF4DC4E095C6DB341A4C"
+    },
+    {
+      "bytes": 1078,
+      "path": "authority/canon/R6_ALG_314_INTAKE.json",
+      "sha256": "B3CE97574077D577DF9BE5EEB6494AB18D0C09F3B29EA9BA94A01FCE6DCB7DED"
+    },
+    {
+      "bytes": 875,
+      "path": "authority/canon/R6_ALG_314_REPLAY.json",
+      "sha256": "10256B834B5F943315774E249B0206C192FE8D0839EF5CB67687C6AED7A48148"
+    },
+    {
+      "bytes": 1401,
+      "path": "authority/canon/R6_ALG_314_REVIEW.md",
+      "sha256": "43FE9C5CF6F1D205972EA3513715B8BB32C1483BA52FEB29CA4FCAF663D43E9D"
+    },
+    {
+      "bytes": 20404,
+      "path": "authority/COPYING",
+      "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"
+    },
+    {
+      "bytes": 326743,
+      "path": "authority/producer/SOURCE_DEFECT_LEDGER.csv",
+      "sha256": "5D44E8D3B0CEA14832254B60F3A1795EB5D66D8EB184415D0C68911609747A2D"
+    },
+    {
+      "bytes": 1771230,
+      "path": "authority/source/algebra.tex",
+      "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+    },
+    {
+      "bytes": 1171,
+      "path": "authority/upstream.lock.json",
+      "sha256": "B195ECC83AB0F32C574A60D1FDBA9B0DA4D35B04E0DF7CB106DC9C0FDAD99C0D"
+    }
+  ],
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "candidate_id": "stacks-errata-a04446e-r6",
+  "expected_unit_ids": [
+    "MC-STK-ERR-0621",
+    "MC-STK-ERR-0622",
+    "MC-STK-ERR-0623",
+    "MC-STK-ERR-0624",
+    "MC-STK-ERR-0625",
+    "MC-STK-ERR-0626",
+    "MC-STK-ERR-0627",
+    "MC-STK-ERR-0628",
+    "MC-STK-ERR-0629",
+    "MC-STK-ERR-0630",
+    "MC-STK-ERR-0631",
+    "MC-STK-ERR-0632",
+    "MC-STK-ERR-0633",
+    "MC-STK-ERR-0634",
+    "MC-STK-ERR-0635",
+    "MC-STK-ERR-0636",
+    "MC-STK-ERR-0637",
+    "MC-STK-ERR-0638",
+    "MC-STK-ERR-0639",
+    "MC-STK-ERR-0640",
+    "MC-STK-ERR-0641",
+    "MC-STK-ERR-0642",
+    "MC-STK-ERR-0643",
+    "MC-STK-ERR-0644",
+    "MC-STK-ERR-0645",
+    "MC-STK-ERR-0646",
+    "MC-STK-ERR-0647",
+    "MC-STK-ERR-0648",
+    "MC-STK-ERR-0649",
+    "MC-STK-ERR-0650",
+    "MC-STK-ERR-0651",
+    "MC-STK-ERR-0652",
+    "MC-STK-ERR-0653",
+    "MC-STK-ERR-0654",
+    "MC-STK-ERR-0655",
+    "MC-STK-ERR-0656",
+    "MC-STK-ERR-0657",
+    "MC-STK-ERR-0658",
+    "MC-STK-ERR-0659"
+  ],
+  "lease_id": "stacks-lease-000009-errata-r6",
+  "operation_count": 47,
+  "proof_closure": {
+    "accepted": 39,
+    "operations": 47,
+    "packet_duplicates": 0,
+    "prior_overlay_aliases": 0,
+    "producer_rows": 49,
+    "rejected": 9,
+    "unresolved": 1
+  },
+  "schema": "mathematics-commons-stacks-errata-candidate-config/v1",
+  "source_date_epoch": "1785270512",
+  "stems": {
+    "algebra": {
+      "authority_bytes": 1771230,
+      "authority_sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3",
+      "build_exceptions": {
+        "candidate_only_undefined_reference_targets": {},
+        "candidate_page_delta": 0
+      },
+      "display_delimiter_delta": 0,
+      "ordered_structure_exceptions": {
+        "references_added": [
+          {
+            "index_0based": 1785,
+            "payload": "\\ref{lemma-integral-transitive}",
+            "producer_id": "ALGEBRA-309",
+            "stable_id": "MC-STK-ERR-0654"
+          },
+          {
+            "index_0based": 1787,
+            "payload": "\\ref{lemma-integral-transitive}",
+            "producer_id": "ALGEBRA-309",
+            "stable_id": "MC-STK-ERR-0654"
+          }
+        ]
+      },
+      "payload_bytes": 1772436,
+      "payload_sha256": "F1A116C1EDE7E119DB23DAD025B94429802F1419809D0020CD64444A5E0E69A9"
+    }
+  },
+  "writer_task": "01a0256d-5693-77c1-96b2-cf37101e0c6c"
+}

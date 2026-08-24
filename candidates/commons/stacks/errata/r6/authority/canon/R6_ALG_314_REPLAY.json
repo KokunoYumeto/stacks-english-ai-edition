@@ -1,0 +1,26 @@
+{
+  "schema": "stacks-cjk-errata-replay/v1",
+  "recorded_at": "2026-08-24T02:50:18Z",
+  "authority_sha256_recomputed": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3",
+  "authority_bytes_recomputed": 1771230,
+  "producer_ledger_sha256_recomputed": "5D44E8D3B0CEA14832254B60F3A1795EB5D66D8EB184415D0C68911609747A2D",
+  "accepted": [
+    {
+      "producer_id": "ALGEBRA-314",
+      "canon_id": "MC-STK-ERR-0659",
+      "locus": "30965-30984;30991-31007",
+      "result": "confirmed_by_counterexample",
+      "smallest_correction": "After the enumerated hypotheses, assume moreover that B is not a field."
+    }
+  ],
+  "summary": {
+    "accepted_units": 1,
+    "accepted_operations": 1,
+    "rejected_claims": 0,
+    "unresolved_candidates": 0,
+    "duplicates": 0
+  },
+  "passed": true,
+  "authority_mutated": false,
+  "translation_targets_mutated": false
+}

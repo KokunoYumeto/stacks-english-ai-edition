@@ -1,0 +1,43 @@
+{
+  "schema": "stacks-cjk-material-decision/v1",
+  "recorded_utc": "2026-08-24T02:50:18Z",
+  "decision_id": "STACKS-CJK-R6-ALGEBRA-314-20260824",
+  "scope": "Sole canon intake and independent adjudication of French producer row ALGEBRA-314.",
+  "authority": {
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "path": "upstream/src/stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex",
+    "bytes": 1771230,
+    "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3",
+    "mutated": false
+  },
+  "accepted": [
+    {
+      "producer_id": "ALGEBRA-314",
+      "canon_id": "MC-STK-ERR-0659",
+      "classification": "missing_nonfield_hypothesis",
+      "locus": "30965-30984;30991-31007",
+      "operation_count": 1
+    }
+  ],
+  "summary": {
+    "accepted_producer_count": 1,
+    "accepted_pointer_count": 1,
+    "operation_count": 1,
+    "rejected_count": 0,
+    "unresolved_count": 0,
+    "duplicate_count": 0,
+    "canon_id": "MC-STK-ERR-0659",
+    "canon_pointer_total_after_decision": 405,
+    "candidate_written": false,
+    "bytes_materialized": false,
+    "source_mutated": false,
+    "translation_targets_mutated": false,
+    "publication_changed": false
+  },
+  "evidence": [
+    "R6_ALG_314_INTAKE.json",
+    "R6_ALG_314_REPLAY.json",
+    "R6_ALG_314_REVIEW.md"
+  ],
+  "next_action": "Materialize MC-STK-ERR-0659 with the accepted ALGEBRA-266 through ALGEBRA-313 units in the leased English AI errata/r6 candidate."
+}
