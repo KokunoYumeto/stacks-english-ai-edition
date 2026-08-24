@@ -1,0 +1,681 @@
+{
+  "schema": "tohoku-r71-source-repair-public-projection-v1",
+  "status": "PASS",
+  "projection": {
+    "source_name": "D1029_SOURCE_REPAIR_CHECK.json",
+    "source_bytes": 23296,
+    "source_sha256": "E996D56A24B4BCF4776CFE9351F2932E66E9B7ACB3B0493C877DEDCD13C63E02",
+    "transformation": "replace the local home-directory prefix with [LOCAL_HOME]",
+    "strings_transformed": 10,
+    "semantic_fields_removed": 0
+  },
+  "audit": {
+    "schema": "tohoku-d1029-p188-source-repair-chain-check-v1",
+    "formalization_id": "D1029",
+    "finalized_utc": "2026-08-24T09:00:00Z",
+    "status": "PASS_FROZEN_SOURCE_REPAIR_CHAIN",
+    "errors": [],
+    "scope": {
+      "unit_id": "tohoku:remark:ext-center-modules",
+      "printed_page": 188,
+      "authorized_writes": [
+        "production/p188_fix1",
+        "SOURCE_CORRECTIONS.jsonl exact one-row append",
+        "build/v068c3r21",
+        "output/pdf/fr-p119-221-v068c3r21.pdf",
+        "output/pdf/en-p119-221-v068c3r21.pdf",
+        "qa/v68r43",
+        "sem/r22",
+        "[LOCAL_HOME]/Documents/stacks-ftg/tmp/d1029_source_repair_toolchain",
+        "[LOCAL_HOME]/Documents/stacks-ftg/D1029_SOURCE_REPAIR_CHECK.json"
+      ],
+      "live_stacks_tex_edited": false,
+      "tohoku_map_dossier_edited": false,
+      "git_used": false,
+      "network_used": false,
+      "cleanup_or_broad_scan_used": false
+    },
+    "source_identity": {
+      "authority_part": "II",
+      "official_pdf_page": 4,
+      "authority_sha256": "8D632A04EE0FA987B40B721BEE6E64BB3E641D6A1CE02335556213F1564C9A53",
+      "semantic_source": {
+        "path": "sem/r18/nodes.csv",
+        "physical_line": 825,
+        "file_bytes": 585012,
+        "file_sha256": "3A3C9B6C22B0FA5E16466C264205D97CCA6041FF785F555A4C28F9639A50550D",
+        "row_bytes_with_lf": 574,
+        "row_sha256_with_lf": "84E77DF6450E17768A9E0024666A46BB9B5056B61170EB0B30CDBD92336832A4"
+      },
+      "occurrence": {
+        "occurrence_id": "tohoku:occ:p188:o002",
+        "path": "sem/r18/occ.csv",
+        "physical_line": 625,
+        "file_bytes": 515084,
+        "file_sha256": "54E545121F4D108E5C88B7039C39E3814F71F03332592C3F3965BD49B7FACED5",
+        "row_bytes_with_lf": 498,
+        "row_sha256_with_lf": "1E431DD98740D4ECB5DA74508ACE0F3D986ABD93CEC4633449B822A722F4113E",
+        "parity_state": "PASS"
+      },
+      "predecessor_mapping": {
+        "decision_id": "D000539",
+        "disposition": "existing_weaker",
+        "stacks_labels": "cohomology-section-ext;cohomology-section-global-RHom",
+        "map_path": "tohoku_r68/map.csv",
+        "map_physical_line": 825,
+        "map_row_bytes_with_lf": 475,
+        "map_row_sha256_with_lf": "AF01F68A22C7C6B985B939FD87CE229668445BA0499A1AC906950DEB0DC5C430",
+        "mapping_mutated_by_this_chain": false
+      }
+    },
+    "mathematical_correction": {
+      "printed_global_claim": "Ext_A^p(X;F,G) is a module over Z(Gamma(X,A)).",
+      "printed_sheaf_claim": "SheafExt_A^p(F,G) is a module over the center sheaf A^natural.",
+      "defect": "The global claim is false in general for noncommutative ring sheaves: a globally central section need not restrict to a locally central section, already obstructing the asserted action in degree zero.",
+      "correct_global_claim": "Ext_A^p(X;F,G) is canonically a module over Gamma(X,Z_A)=Gamma(X,A^natural).",
+      "correct_sheaf_claim": "SheafExt_A^p(F,G) is canonically a sheaf of Z_A=A^natural-modules.",
+      "specialization_guard": "Replace Gamma(X,Z_A) by Z(Gamma(X,A)) only when the canonical inclusion Gamma(X,Z_A) -> Z(Gamma(X,A)) is an equality.",
+      "diplomatic_policy": "Preserve the printed French claim byte-for-byte; repair corrected French and English only.",
+      "exact_tex_replacements": {
+        "corrected_french": {
+          "from": "sur le centre de $\\Gamma(O)$",
+          "to": "sur $\\Gamma(O^\\natural)$",
+          "count": 1
+        },
+        "english": {
+          "from": "over the center of $\\Gamma(O)$",
+          "to": "over $\\Gamma(O^\\natural)$",
+          "count": 1
+        }
+      }
+    },
+    "formalization_bindings": {
+      "candidate": {
+        "path": "[LOCAL_HOME]/Documents/stacks-ftg/tmp/d1029_ext_center_actions_candidate.tex",
+        "bytes": 3189,
+        "sha256": "6B6566697F349854C1866661952A7AC5487FAFEB473354D4403E27886B3287FA",
+        "target_label": "cohomology-lemma-ext-center-actions-left-modules"
+      },
+      "independent_math_source_audit": {
+        "path": "[LOCAL_HOME]/Documents/stacks-ftg/tmp/d1029_ext_center_math_source_audit.json",
+        "bytes": 14637,
+        "sha256": "35C3ECBD18B1F06036C58723D0B59E1CAD48BE29890E8E0026C0A99280A3EC64",
+        "verdict": "STRICT_PASS"
+      },
+      "d1017_precedent": {
+        "path": "[LOCAL_HOME]/Documents/stacks-ftg/D1017_CHECK.json",
+        "bytes": 14707,
+        "sha256": "28978CA9E62B68FB66934649F023E75F2B17F79EF0C1BD43411D5DA0BBBFCAD8",
+        "scope_boundary": "D1017 repairs the analogous p.185 Hom claim and I000032 remains byte-identical; D1029 uses a separate p.188 lineage and I000033."
+      }
+    },
+    "immutable_predecessor_history": {
+      "production_decision": {
+        "decision_id": "TOH-P188-COR-001",
+        "predecessor_path": "production/p188_r1/decisions.jsonl",
+        "predecessor_file_bytes": 3949,
+        "predecessor_file_sha256": "085F664B32B1EBFA0D08A2BBE9A3215408BAD3778C65DF22FA2A2A11C79600E0",
+        "successor_physical_line": 2,
+        "row_bytes_with_lf": 497,
+        "row_sha256_with_lf": "FC20E82A11B21FCC91F24583BA5E1F0AE2D55F0BC6226B4C97A348CA51481704",
+        "byte_identical": true
+      },
+      "source_ledger_rows": [
+        {
+          "decision_id": "TOH-SRC-P188-001",
+          "physical_line": 215,
+          "row_bytes_with_lf": 495,
+          "row_sha256_with_lf": "E0FE1A8B9EE41A4D8BCBA190B0D9BF7508840A486C9F33D2AD3F880D4CC7A7A4",
+          "byte_identical": true
+        },
+        {
+          "decision_id": "TOH-SRC-P188-002",
+          "physical_line": 216,
+          "row_bytes_with_lf": 515,
+          "row_sha256_with_lf": "2824E87DCF9DF4C0802723BE4AB971C60B939C7C62E67AE253D01556914C267A",
+          "byte_identical": true
+        }
+      ]
+    },
+    "source_admission": {
+      "status": "PASS_COMMITTED_AND_REPLAYED",
+      "successor": "production/p188_fix1",
+      "receipt": {
+        "path": "production/p188_fix1/check.json",
+        "bytes": 4625,
+        "sha256": "52D174E72E44BE1DC5E6EE25A405B8C971EA4434F10BA7753F10CA1491851CF6"
+      },
+      "new_production_decision": {
+        "decision_id": "TOH-P188-COR-002",
+        "physical_line": 8,
+        "row_bytes_with_lf": 651,
+        "row_sha256_with_lf": "C2F4FE4ED7EE537808C803745A19F14005430EED26FD53282720AAC48F8F24EF",
+        "occurrences_as_decision_id": 1
+      },
+      "new_source_ledger_row": {
+        "decision_id": "TOH-SRC-P188-003",
+        "physical_line": 382,
+        "row_bytes_with_lf": 1008,
+        "row_sha256_with_lf": "C26E9127DFFADE8D2A65F0D25382D43FFDF67530870908F504357FA700B3B90F",
+        "occurrences_as_decision_id": 1
+      },
+      "source_ledger": {
+        "path": "SOURCE_CORRECTIONS.jsonl",
+        "preimage_bytes": 212239,
+        "preimage_sha256": "31E8894E57B355383B49BB403FAE65B935C81B4C1DAC65C17B20C3C7A6E70439",
+        "postimage_bytes": 213247,
+        "postimage_sha256": "F2DE702681CF4150C87FDC9C9051A105E94CBD681219ADC600DB9049B1E1E4B1",
+        "predecessor_prefix_exact": true,
+        "appended_rows": 1
+      },
+      "layers": {
+        "diplomatic": {
+          "path": "production/p188_fix1/tex/fr_diplomatic/p188.tex",
+          "bytes": 3890,
+          "sha256": "0C9D3A1133C014C9BB6687580DCFBDE40A87B7FE21E98838BFD820983334D9FF",
+          "target_segment_bytes": 231,
+          "target_segment_sha256": "608C04856144CBD82A6FEF84C82E017DBF8EF2ACDCC899A8B5689C277AAF2BD4",
+          "predecessor_byte_exact": true
+        },
+        "corrected_french": {
+          "path": "production/p188_fix1/tex/fr_corrected/p188.tex",
+          "bytes": 3619,
+          "sha256": "3CD7D1D8D50DD83627B24AC726EB244E09CAF483890071D68940C551A42ED0CC",
+          "target_segment_bytes": 227,
+          "target_segment_sha256": "C7E91C473DEDB70A7164B8C62C715FDB2F86B839AE1745D71E5A76567B493F09"
+        },
+        "english": {
+          "path": "production/p188_fix1/tex/en/p188.tex",
+          "bytes": 3498,
+          "sha256": "A171187600BB72B32FDB4E686D5AC994146BEC8DFC99571F0ACF3C3B1862FA5C",
+          "target_segment_bytes": 225,
+          "target_segment_sha256": "BF13824866DEB2B4DD2D11136943493204F055017CC35D175DD7A68E8E81E092"
+        }
+      },
+      "layer_target_sequence": {
+        "rows": 11,
+        "bytes": 292,
+        "sha256": "E40EF3B4CFA7C7B6F307965D4E4C9B7D2701AE230528FE9480C3AFBEE67AC8DE",
+        "identical_in_all_predecessor_and_successor_layers": true
+      },
+      "delta": "exactly one scalar-ring replacement in corrected French and one in English; diplomatic French, targets.csv, reuse.txt, all LayerTarget IDs, and every unrelated source byte remain unchanged",
+      "replay": {
+        "script": "[LOCAL_HOME]/Documents/stacks-ftg/tmp/d1029_source_repair_toolchain/source_replay.py",
+        "bytes": 6231,
+        "sha256": "41DE6D659C27434BA8F07F84F96898F2159320D8992B7A799241A2668D7EFCAC",
+        "result": "PASS_COMMITTED_AND_REPLAYED"
+      }
+    },
+    "reader_build": {
+      "status": "PASS_COMMITTED_AND_REPLAYED",
+      "predecessor_revision": "v068c3r20",
+      "revision": "v068c3r21",
+      "receipt": {
+        "path": "build/v068c3r21/build.json",
+        "bytes": 21071,
+        "sha256": "EEB4DAE83F5D940681190C24BACC50A9799850A87399D1D36B9E663525B1D6FB"
+      },
+      "staged_source_predecessor": {
+        "rows": 543,
+        "total_file_bytes": 11855949,
+        "manifest_bytes": 62845,
+        "manifest_sha256": "52559D18F2A77C82A3BBAB69E4949C3A17C7DA1593034719F5B72584E9540310"
+      },
+      "staged_source_successor": {
+        "rows": 543,
+        "total_file_bytes": 11855940,
+        "manifest_bytes": 62845,
+        "manifest_sha256": "D1E4FC6CCD14B0F62678A83530EA286B72932742321DE21F7D1557F3B5729EB8"
+      },
+      "revision_surface": {
+        "changed_files": [
+          "en/p188.tex",
+          "fr/p188.tex"
+        ],
+        "changed_file_count": 2,
+        "byte_identical_file_count": 541,
+        "other_staged_source_changes": 0,
+        "diplomatic_p188_byte_identical": true
+      },
+      "pdfs": {
+        "french": {
+          "path": "output/pdf/fr-p119-221-v068c3r21.pdf",
+          "bytes": 1417508,
+          "sha256": "AADC500F836F5E9397160C4E3BEAB1AD354E35742937D495360D41D2E4A7E865",
+          "pages": 94,
+          "strict_pdf_parse": "PASS"
+        },
+        "english": {
+          "path": "output/pdf/en-p119-221-v068c3r21.pdf",
+          "bytes": 1381119,
+          "sha256": "C45350A80D39954A203993B3E6B2FB58532425915BFEC517E99DB01BF08AB39F",
+          "pages": 90,
+          "strict_pdf_parse": "PASS"
+        }
+      },
+      "compile_order": [
+        "fr",
+        "en"
+      ],
+      "passes_per_language": 2,
+      "shell": false
+    },
+    "reader_qa": {
+      "status": "PASS_COMMITTED_AND_REPLAYED",
+      "qa_revision": "v68r43",
+      "structural": {
+        "path": "qa/v68r43/structural.json",
+        "bytes": 4962,
+        "sha256": "1CD7585C165BDCDF2761B3A1EB2A653C66D0A0F57BECF2E395EB2D953E46A7AD"
+      },
+      "check": {
+        "path": "qa/v68r43/check.json",
+        "bytes": 1785,
+        "sha256": "975A0FAA9E32C6F414AAFC7B0ED5405557ED129D0EDAF08D46EBAE6FDD02CB0E"
+      },
+      "visual_attestation": {
+        "path": "[LOCAL_HOME]/Documents/stacks-ftg/tmp/d1029_source_repair_toolchain/r43_visual_attestation.json",
+        "bytes": 2034,
+        "sha256": "716F81D908B5958886E5E6BCDB9DEB84A4351A275B30861F11A12477EB267E06",
+        "status": "PASS"
+      },
+      "changed_physical_content_pages": {
+        "english": [
+          56
+        ],
+        "french": [
+          58
+        ]
+      },
+      "all_other_page_content_streams_byte_identical": true,
+      "ordered_page_geometry_identical": true,
+      "target_and_adjacent_pages_rendered_and_inspected": true,
+      "corrected_scalar_ring_visible": true,
+      "false_scalar_ring_absent_from_corrected_readers": true,
+      "clipping_overlap_or_garbled_glyphs": false
+    },
+    "semantic_successor": {
+      "status": "PASS_COMMITTED_AND_REPLAYED",
+      "revision": "sem/r22",
+      "predecessor": "sem/r21",
+      "manifest": {
+        "path": "sem/r22/manifest.json",
+        "bytes": 14009,
+        "sha256": "7CD8A1CB7C717FA7B99CF9B20F86ACA79A50D31954D7A1B11ED06ABEF52C9BB1"
+      },
+      "validation": {
+        "path": "sem/r22/validation.json",
+        "bytes": 2017,
+        "sha256": "910ADB4FDD56A5CC9602DD74F0E90DF0E1DEDA5E01EB9EE36345A1047845B981"
+      },
+      "delta": {
+        "changed_tables": 3,
+        "changed_existing_fields": 12,
+        "appended_rows": 0,
+        "unchanged_payload_files": 13,
+        "catalog_fields": [
+          "french_reader",
+          "french_sha256",
+          "english_reader",
+          "english_sha256",
+          "version",
+          "page_state"
+        ],
+        "node_fields": [
+          "fr_label",
+          "en_label",
+          "provenance"
+        ],
+        "occurrence_fields": [
+          "decision_path",
+          "fr_sha256",
+          "en_sha256"
+        ],
+        "affected_node_ids": [
+          "tohoku:remark:ext-center-modules"
+        ],
+        "affected_occurrence_ids": [
+          "tohoku:occ:p188:o002"
+        ]
+      },
+      "stable_id_parity": {
+        "node_ids": {
+          "rows": 991,
+          "sequence_bytes": 31477,
+          "sequence_sha256": "29D28919D6E05BBFDFDC22EADCF3BE0E07A52D103AAE7222114894A3D974F4DA",
+          "unique": true,
+          "predecessor_equal": true
+        },
+        "occurrence_ids": {
+          "rows": 1036,
+          "sequence_bytes": 21756,
+          "sequence_sha256": "07AB6AEA84958011311A101270B0543D0E60390177986CBAB28BA66659477F57",
+          "unique": true,
+          "predecessor_equal": true
+        },
+        "edge_ids": {
+          "rows": 1479,
+          "sequence_bytes": 17748,
+          "sequence_sha256": "1EEFF375B4016E1B4F58E61BA77D84B68AA330CD536D8FC7AC2DC10514962137",
+          "unique": true,
+          "predecessor_equal": true
+        }
+      },
+      "corrected_rows": {
+        "catalog": {
+          "physical_line": 2,
+          "row_bytes_with_lf": 536,
+          "row_sha256_with_lf": "ACE97EFF7D0D67B3F28113016B01F2196EA2095865A2B19F716ACFC2F099D406"
+        },
+        "node": {
+          "physical_line": 825,
+          "row_bytes_with_lf": 1113,
+          "row_sha256_with_lf": "B4229038E0339038226A7394F5CE60BA3F52552BEEE564B991482CC786A3169F"
+        },
+        "occurrence": {
+          "physical_line": 625,
+          "row_bytes_with_lf": 500,
+          "row_sha256_with_lf": "A00FBDD0622B133BEBBE6A710882A5640B271E28687950A8339405DECD74E29B",
+          "parity_state": "PASS"
+        }
+      }
+    },
+    "issue_i000033": {
+      "required": true,
+      "issue_id": "I000033",
+      "unit_id": "tohoku:remark:ext-center-modules",
+      "proposal": {
+        "path": "[LOCAL_HOME]/Documents/stacks-ftg/tmp/d1029_source_repair_toolchain/I000033_proposal.json",
+        "bytes": 1375,
+        "sha256": "9638FFE1A46D351900C1BA2CFE6E241ED5DAF644915A38CFBF1F7CDA43D97F46",
+        "status": "active",
+        "dossier_write_state": "PROPOSAL_ONLY_NOT_APPENDED_BY_D1029_SOURCE_REPAIR"
+      },
+      "map_dossier_control": {
+        "path": "[LOCAL_HOME]/Documents/stacks-ftg/tohoku_r68/issues.csv",
+        "bytes": 34015,
+        "sha256": "2D60F1DB762808C5EFCD62AAB74394D8772C190DCB3150F3F82984DE3B9D7EB1",
+        "I000033_occurrences": 0,
+        "I000032_mutated": false
+      },
+      "scope_resolution": "The current source-chain instruction forbids editing any Tohoku map dossier. Therefore I000033 is fully specified, identity-bound, and carried into sem/r22, but must be appended/resolved only by the separately authorized mapping transaction."
+    },
+    "complete_task_owned_inventories": {
+      "algorithm": "relative_path+NUL+decimal_bytes+NUL+uppercase_sha256+LF in ordinal relative-path order",
+      "toolchain": {
+        "root": "[LOCAL_HOME]/Documents/stacks-ftg/tmp/d1029_source_repair_toolchain",
+        "files": 8,
+        "total_file_bytes": 80249,
+        "aggregate_manifest_bytes": 704,
+        "aggregate_sha256": "7219F6B28ED724EF564750D2431BD5D606D04698888831E5F50737122E9138AD",
+        "inventory": [
+          {
+            "path": "I000033_proposal.json",
+            "bytes": 1375,
+            "sha256": "9638FFE1A46D351900C1BA2CFE6E241ED5DAF644915A38CFBF1F7CDA43D97F46"
+          },
+          {
+            "path": "qa_v68r43.py",
+            "bytes": 13633,
+            "sha256": "12B8D809E538B981C3BE7F2E7BFF03BE5B5041F4255656F6F119F76F0F00FC65"
+          },
+          {
+            "path": "r43_visual_attestation.json",
+            "bytes": 2034,
+            "sha256": "716F81D908B5958886E5E6BCDB9DEB84A4351A275B30861F11A12477EB267E06"
+          },
+          {
+            "path": "reader_v068c3r21.py",
+            "bytes": 19601,
+            "sha256": "CAE13BF58D812DDAA73A1BFA3094A2033502BA2BFA37335527AB92A0EC48896B"
+          },
+          {
+            "path": "README.md",
+            "bytes": 537,
+            "sha256": "76AAD870CFFF69F6F1B2866A86B1822968740695CE9202FBC40F991B1ED17DF2"
+          },
+          {
+            "path": "sem_r22.py",
+            "bytes": 21663,
+            "sha256": "AECE08CF3D9E63BBD2ADD14B6A65266516554750E5D1A9207F260A5ECA37B3A2"
+          },
+          {
+            "path": "source_admission.py",
+            "bytes": 15175,
+            "sha256": "36AC1C07D311285065E784C7C9362E8E0F7BE1B89C0846E0131D60801C5EDE3D"
+          },
+          {
+            "path": "source_replay.py",
+            "bytes": 6231,
+            "sha256": "41DE6D659C27434BA8F07F84F96898F2159320D8992B7A799241A2668D7EFCAC"
+          }
+        ]
+      },
+      "production_p188_fix1": {
+        "root": "production/p188_fix1",
+        "files": 7,
+        "total_file_bytes": 20882,
+        "aggregate_manifest_bytes": 605,
+        "aggregate_sha256": "22016B67247AB901ED71935B7B037964EB86BE295DCD7EABFE7DBAB9C5CD9494",
+        "inventory": [
+          {
+            "path": "check.json",
+            "bytes": 4625,
+            "sha256": "52D174E72E44BE1DC5E6EE25A405B8C971EA4434F10BA7753F10CA1491851CF6"
+          },
+          {
+            "path": "decisions.jsonl",
+            "bytes": 4600,
+            "sha256": "DE1B3BB745A6B8FDCC3573F83A272060DB727B87B9A079BA4C0EADCE51951420"
+          },
+          {
+            "path": "reuse.txt",
+            "bytes": 37,
+            "sha256": "700C6F75C12D72DCCCAC7166921B065D504DA06B29EABEF868760767FAFA3207"
+          },
+          {
+            "path": "targets.csv",
+            "bytes": 613,
+            "sha256": "A7378FBB1ABEB836C834668C1E84E18A72D0613F2DA546E809B7293386294E01"
+          },
+          {
+            "path": "tex/en/p188.tex",
+            "bytes": 3498,
+            "sha256": "A171187600BB72B32FDB4E686D5AC994146BEC8DFC99571F0ACF3C3B1862FA5C"
+          },
+          {
+            "path": "tex/fr_corrected/p188.tex",
+            "bytes": 3619,
+            "sha256": "3CD7D1D8D50DD83627B24AC726EB244E09CAF483890071D68940C551A42ED0CC"
+          },
+          {
+            "path": "tex/fr_diplomatic/p188.tex",
+            "bytes": 3890,
+            "sha256": "0C9D3A1133C014C9BB6687580DCFBDE40A87B7FE21E98838BFD820983334D9FF"
+          }
+        ]
+      },
+      "build_v068c3r21": {
+        "root": "build/v068c3r21",
+        "files": 553,
+        "total_file_bytes": 14803765,
+        "aggregate_manifest_bytes": 49604,
+        "aggregate_sha256": "BDBB52C2B3D4E1B5A52388566781C058557173E32C024BEFE0E55D2E80A0F9D3",
+        "staged_source_inventory_is_bound_by_reader_build_receipt": true
+      },
+      "qa_v68r43": {
+        "root": "qa/v68r43",
+        "files": 8,
+        "total_file_bytes": 1997685,
+        "aggregate_manifest_bytes": 719,
+        "aggregate_sha256": "B3321878B21F162F8E6F50F586EEB3705009BB0EE3EF7C832BF9532416A584B9",
+        "inventory": [
+          {
+            "path": "check.json",
+            "bytes": 1785,
+            "sha256": "975A0FAA9E32C6F414AAFC7B0ED5405557ED129D0EDAF08D46EBAE6FDD02CB0E"
+          },
+          {
+            "path": "renders/en-p055.png",
+            "bytes": 353852,
+            "sha256": "4A80B9D894CB63CCAC00791103F47D344B60E75EA60FA9E17C121D630C514255"
+          },
+          {
+            "path": "renders/en-p056.png",
+            "bytes": 314058,
+            "sha256": "D6A8D1ED404E34524BB5B402758E10081329FE8227D477142A7E9A6F76BB8A86"
+          },
+          {
+            "path": "renders/en-p057.png",
+            "bytes": 300511,
+            "sha256": "6055619808E48BEC466F97B2BC527854515453DCEE09AEB0A20112AD0A1BA095"
+          },
+          {
+            "path": "renders/fr-p057.png",
+            "bytes": 387941,
+            "sha256": "378CC60F8CE1D831122525651325743EAB98ABB4C3B8D3BD179A94DA3E4FA1A0"
+          },
+          {
+            "path": "renders/fr-p058.png",
+            "bytes": 322510,
+            "sha256": "BAB35DEE7D79B8FB6E814AB94E0EA5CE47DBDDCC0AE511D1C544A8ADCF01A0FD"
+          },
+          {
+            "path": "renders/fr-p059.png",
+            "bytes": 312066,
+            "sha256": "98E66352A60CC72C32F3576CE11175578D5BCB0BBBAB621E6A8BB46387BF4616"
+          },
+          {
+            "path": "structural.json",
+            "bytes": 4962,
+            "sha256": "1CD7585C165BDCDF2761B3A1EB2A653C66D0A0F57BECF2E395EB2D953E46A7AD"
+          }
+        ]
+      },
+      "sem_r22": {
+        "root": "sem/r22",
+        "files": 18,
+        "total_file_bytes": 2036178,
+        "aggregate_manifest_bytes": 1468,
+        "aggregate_sha256": "D926021C0D705CB0C9FEE68E734B6FDB9572F74D81BCF176F3648008E52DD7F6",
+        "inventory": [
+          {
+            "path": "bib.csv",
+            "bytes": 10422,
+            "sha256": "93F5A934ADDE0CD92BBB21AF70EFD81BA128CCD2EDF51EB19428B83437EC3516"
+          },
+          {
+            "path": "catalog.csv",
+            "bytes": 772,
+            "sha256": "9191FD87F525D171ECE63357C6190080271AF875034A11F31D5EDE41B7C54F07"
+          },
+          {
+            "path": "edges.csv",
+            "bytes": 261660,
+            "sha256": "5B924BF4E9D0E7CAFF51D3C75D0C85045E985AE21152744ABD38929A87E622D5"
+          },
+          {
+            "path": "idmap.csv",
+            "bytes": 473,
+            "sha256": "977D4A8F59A9642D58926DED8BB600079863AE6AF3F1F532806E83A9AB645BEA"
+          },
+          {
+            "path": "manifest.json",
+            "bytes": 14009,
+            "sha256": "7CD8A1CB7C717FA7B99CF9B20F86ACA79A50D31954D7A1B11ED06ABEF52C9BB1"
+          },
+          {
+            "path": "nodes.csv",
+            "bytes": 586955,
+            "sha256": "31B557A6EAA2A59504FF3164A73A0459770D3C6C82AE555582A52F09FAA874E0"
+          },
+          {
+            "path": "objects.csv",
+            "bytes": 106319,
+            "sha256": "82FF34C19C6D17D80DC3A617FD106ED324099CC9D0F2FE752757D0642ED31999"
+          },
+          {
+            "path": "occ.csv",
+            "bytes": 515090,
+            "sha256": "12AE57E0A4E749AFE77FE133BB89A7178AD8AE92145B6EC71FF2EDE5868B07AE"
+          },
+          {
+            "path": "pages.csv",
+            "bytes": 23686,
+            "sha256": "E813C410B0A2AE53B4A787FD6C66A74225021E3A0FE22AD10CA2ED0C29807B0D"
+          },
+          {
+            "path": "README.md",
+            "bytes": 2585,
+            "sha256": "66D4CF92728AF7FF10E82CDFD97AFCD9D26B55CE9FBC985932FFBCD597DD64B4"
+          },
+          {
+            "path": "refdec.csv",
+            "bytes": 2313,
+            "sha256": "6AC5E23C3D4ADA0ABB1427E0533C3033E13B63C28A654A9C7E74A057A045FFA2"
+          },
+          {
+            "path": "refs.csv",
+            "bytes": 161519,
+            "sha256": "2BB0DC3356C0C4B18E82F7C168334D450DF541586EE89F94FB254C3296ACDE3D"
+          },
+          {
+            "path": "resid.csv",
+            "bytes": 6415,
+            "sha256": "DDF53E58E21C7A5BF60C54ADC5EB9EB420B717246F1C69F294BBA5E358A38430"
+          },
+          {
+            "path": "stacks.csv",
+            "bytes": 11777,
+            "sha256": "E13EFA405B525D69BFF38256601E4AF64D22FA3075F3A95AB3DFB78C15CFD060"
+          },
+          {
+            "path": "subjects.csv",
+            "bytes": 2133,
+            "sha256": "A77A81831F752BA21701B150C13C51325E511B2FD5DFC76EED135FE3EDEEB026"
+          },
+          {
+            "path": "terms.csv",
+            "bytes": 325587,
+            "sha256": "6D93CBBD2D6CF3E354FE90DC51605ACD9C7B0932CEF216FB9D606AD97D666E5D"
+          },
+          {
+            "path": "validation.json",
+            "bytes": 2017,
+            "sha256": "910ADB4FDD56A5CC9602DD74F0E90DF0E1DEDA5E01EB9EE36345A1047845B981"
+          },
+          {
+            "path": "xwork.csv",
+            "bytes": 2446,
+            "sha256": "7BC42D7026C34AD8B1A111353E0810378F1DB9D1284BAD4C5C34D509D57B9EBB"
+          }
+        ]
+      }
+    },
+    "deterministic_gates": {
+      "source_preflight": "PASS",
+      "source_commit": "PASS",
+      "source_postimage_replay": "PASS",
+      "reader_preflight": "PASS",
+      "reader_two_pass_compile": "PASS",
+      "reader_strict_pdf_reopen": "PASS",
+      "reader_receipt_replay": "PASS",
+      "structural_pdf_page_stream_parity": "PASS",
+      "rendered_target_and_adjacent_page_inspection": "PASS",
+      "reader_qa_commit_and_replay": "PASS",
+      "semantic_preflight": "PASS",
+      "semantic_commit": "PASS",
+      "semantic_replay": "PASS",
+      "occurrence_parity": "PASS",
+      "stable_id_parity": "PASS",
+      "diplomatic_preservation": "PASS",
+      "predecessor_history_preservation": "PASS"
+    },
+    "remaining_work_outside_this_chain": [
+      "Insert and independently audit the already strict-pass cohomology lemma only in a separately authorized live-TeX transaction.",
+      "Append and resolve I000033 only in the separately authorized no-overwrite Tohoku mapping transaction; do not mutate I000032.",
+      "Replace only predecessor D000539 after the corrected source, live lemma, build, independent-review, and scanner gates are all bound."
+    ],
+    "terminal_conclusion": "The D1029 source-repair successor chain is complete, committed, identity-bound, visually verified, and replayed. The false global scalar ring survives only in diplomatic French. Corrected French, English, the bilingual reader, and sem/r22 use Gamma(X,Z_O)=Gamma(O^natural). No live Stacks TeX or Tohoku mapping dossier was mutated."
+  }
+}
