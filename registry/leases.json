@@ -251,6 +251,34 @@
       "state": "active",
       "supersedes_event_id": "lease-event-000017",
       "writer_contract": "candidates/CONTRACT.md"
+    },
+    {
+      "event_id": "lease-event-000019",
+      "event": "released",
+      "lease_id": "stacks-lease-000011-errata-r8",
+      "namespace": "commons/stacks/errata/r8",
+      "candidate_path": "candidates/commons/stacks/errata/r8",
+      "writer_task": "01a0256d-5693-77c1-96b2-cf37101e0c6c",
+      "upstream_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+      "upstream_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+      "issued_at_utc": "2026-08-24T07:40:44Z",
+      "state": "released",
+      "supersedes_event_id": "lease-event-000018",
+      "writer_contract": "candidates/CONTRACT.md"
+    },
+    {
+      "event_id": "lease-event-000020",
+      "event": "issued",
+      "lease_id": "stacks-lease-000012-errata-r9",
+      "namespace": "commons/stacks/errata/r9",
+      "candidate_path": "candidates/commons/stacks/errata/r9",
+      "writer_task": "01a0256d-5693-77c1-96b2-cf37101e0c6c",
+      "upstream_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+      "upstream_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+      "issued_at_utc": "2026-08-24T07:40:44Z",
+      "state": "active",
+      "supersedes_event_id": "lease-event-000019",
+      "writer_contract": "candidates/CONTRACT.md"
     }
   ]
 }
