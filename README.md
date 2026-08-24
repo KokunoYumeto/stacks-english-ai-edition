@@ -22,13 +22,14 @@ artifacts are not presented as branches or variants of this English edition.
 - Tree: `3feeb703b931a6e7259782c10e7d1575adc83e5e`
 - Upstream licence text: GNU Free Documentation License 1.2, identified by
   [`upstream/stacks.lock.json`](upstream/stacks.lock.json)
-- Registered overlays: **five** (`stacks-errata-a04446e-r1`,
+- Registered overlays: **six** (`stacks-errata-a04446e-r1`,
   `stacks-errata-a04446e-r2`, `stacks-errata-a04446e-r3`,
-  `stacks-errata-a04446e-r4`, and `stacks-errata-a04446e-r5`), each admitted from a manifest-complete
+  `stacks-errata-a04446e-r4`, `stacks-errata-a04446e-r5`, and
+  `stacks-errata-a04446e-r6`), each admitted from a manifest-complete
   candidate after independent replay.
 - Active candidate-namespace leases: **four** (`fac`, `tohoku`, `gaga`,
-  `errata/r6`). The first three are held by task
-  `019fca5a-c29e-7330-acdc-c93f4a3dc9fb`; `errata/r6` is held by canon task
+  `errata/r7`). The first three are held by task
+  `019fca5a-c29e-7330-acdc-c93f4a3dc9fb`; `errata/r7` is held by canon task
   `01a0256d-5693-77c1-96b2-cf37101e0c6c`.
 - Imported historical integration branches: **zero**
 - Generated editions or builds: **zero**
