@@ -1,0 +1,106 @@
+{
+  "accepted": [
+    {
+      "class": "subject_verb_agreement",
+      "disposition": "Use singular agreement for the assumption on one ring map.",
+      "locus": "algebra.tex:46640",
+      "operations": [
+        {
+          "old_text": "words, the assumption on the ring map $R \\to S$ are often weaker than",
+          "replacement_text": "words, the assumption on the ring map $R \\to S$ is often weaker than",
+          "source_end_line": 46640,
+          "source_start_line": 46640
+        }
+      ],
+      "producer_id": "ALGEBRA-386",
+      "result": "confirmed_grammar_error",
+      "stable_id": "MC-STK-ERR-0729"
+    },
+    {
+      "class": "missing_flatness_adjective",
+      "disposition": "Restore flat in the faithfully flat localization claim.",
+      "locus": "algebra.tex:46698",
+      "operations": [
+        {
+          "old_text": "is faithfully over $R_{\\mathfrak p}$ too we may assume that",
+          "replacement_text": "is faithfully flat over $R_{\\mathfrak p}$ too we may assume that",
+          "source_end_line": 46698,
+          "source_start_line": 46698
+        }
+      ],
+      "producer_id": "ALGEBRA-387",
+      "result": "confirmed_missing_word",
+      "stable_id": "MC-STK-ERR-0730"
+    },
+    {
+      "class": "missing_terminal_punctuation",
+      "disposition": "Add the missing full stop after the parenthetical sentence.",
+      "locus": "algebra.tex:46814",
+      "operations": [
+        {
+          "old_text": "(by going down, see Lemma \\ref{lemma-flat-going-down})",
+          "replacement_text": "(by going down, see Lemma \\ref{lemma-flat-going-down}).",
+          "source_end_line": 46814,
+          "source_start_line": 46814
+        }
+      ],
+      "producer_id": "ALGEBRA-388",
+      "result": "confirmed_punctuation_error",
+      "stable_id": "MC-STK-ERR-0731"
+    },
+    {
+      "class": "missing_integral_closure_definition",
+      "disposition": "Define A' as the integral closure of A in Q(A) before using it.",
+      "locus": "algebra.tex:46834",
+      "operations": [
+        {
+          "old_text": "Via this map $A'$ maps into $B'$. This induces a map",
+          "replacement_text": "Let $A'$ be the integral closure of $A$ in $Q(A)$.\nVia this map $A'$ maps into $B'$. This induces a map",
+          "source_end_line": 46834,
+          "source_start_line": 46834
+        }
+      ],
+      "producer_id": "ALGEBRA-389",
+      "result": "confirmed_missing_definition",
+      "stable_id": "MC-STK-ERR-0732"
+    },
+    {
+      "class": "verb_tense_agreement",
+      "disposition": "Use present tense for the simultaneous module-generation conclusion.",
+      "locus": "algebra.tex:46844",
+      "operations": [
+        {
+          "old_text": "the $x_i$ also generated $A'$ as an $A$-module, and we win.",
+          "replacement_text": "the $x_i$ also generate $A'$ as an $A$-module, and we win.",
+          "source_end_line": 46844,
+          "source_start_line": 46844
+        }
+      ],
+      "producer_id": "ALGEBRA-390",
+      "result": "confirmed_grammar_error",
+      "stable_id": "MC-STK-ERR-0733"
+    },
+    {
+      "class": "residue_field_agreement",
+      "disposition": "State separately that each local factor has the same residue field as A.",
+      "locus": "algebra.tex:46856",
+      "operations": [
+        {
+          "old_text": "respectively, and the same residue fields as that of $A$.",
+          "replacement_text": "respectively, and each has the same residue field as $A$.",
+          "source_end_line": 46856,
+          "source_start_line": 46856
+        }
+      ],
+      "producer_id": "ALGEBRA-391",
+      "result": "confirmed_grammar_error",
+      "stable_id": "MC-STK-ERR-0734"
+    }
+  ],
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3",
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "candidate_id": "stacks-errata-a04446e-r12",
+  "rejected": [],
+  "schema": "mathematics-commons-stacks-r12-adjudication-spec/v1"
+}

@@ -1,0 +1,104 @@
+{
+  "authority": {
+    "bytes": 1771230,
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "mutated": false,
+    "path": "authority/source/algebra.tex",
+    "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+  },
+  "bounded_source": {
+    "bytes": 9108,
+    "end_line": 46877,
+    "physical_lines": 245,
+    "sha256": "C3FA6CEC4E66341EAEB881DCBB21766E3DC2884180C825CC7305C793090F8B64",
+    "start_line": 46633
+  },
+  "closure": {
+    "accepted": 6,
+    "aliases": 0,
+    "expected_stable_ids_after_r10_and_r11_admission": "MC-STK-ERR-0729..MC-STK-ERR-0734",
+    "operations": 6,
+    "rejected": 0,
+    "unresolved": 0
+  },
+  "corrected_bounded_replay": {
+    "balanced_braces": "104/104",
+    "balanced_environments": "22/22",
+    "bytes": 9163,
+    "old_spans_unique_in_declared_lines": true,
+    "operations_nonoverlapping": true,
+    "physical_lines": 246,
+    "sha256": "6751813CC533051D19E28D1D72D69959836AF148779D86AE5CCD8E40116FCCAC"
+  },
+  "external_checkpoint": {
+    "bytes": 4675,
+    "sanitized_for_publication": true,
+    "sha256": "ED596BDCC15BD05A624ADFB49C8C05B0D5B8F99BC5522A616AD533853C404D5E"
+  },
+  "future_candidate_id": "stacks-errata-a04446e-r12",
+  "next_executable_action": "Complete, publish, read back, and admit R10; issue and complete R11 from R11_ALG_382_385_QUEUE_CHECKPOINT_20260824.json; after R11 admission issue the R12 lease, rehash the exact producer prefix, and materialize these six accepted units under R12. Run exact operation replay, structural and isolated-build QA, page-complete visual inspection, independent replay, manifest binding, immutable public byte readback, and a separate registry admission before issuing the next lease.",
+  "operations": [
+    {
+      "old_text": "words, the assumption on the ring map $R \\to S$ are often weaker than",
+      "producer_id": "ALGEBRA-386",
+      "replacement_text": "words, the assumption on the ring map $R \\to S$ is often weaker than",
+      "source_end_line": 46640,
+      "source_start_line": 46640
+    },
+    {
+      "old_text": "is faithfully over $R_{\\mathfrak p}$ too we may assume that",
+      "producer_id": "ALGEBRA-387",
+      "replacement_text": "is faithfully flat over $R_{\\mathfrak p}$ too we may assume that",
+      "source_end_line": 46698,
+      "source_start_line": 46698
+    },
+    {
+      "old_text": "(by going down, see Lemma \\ref{lemma-flat-going-down})",
+      "producer_id": "ALGEBRA-388",
+      "replacement_text": "(by going down, see Lemma \\ref{lemma-flat-going-down}).",
+      "source_end_line": 46814,
+      "source_start_line": 46814
+    },
+    {
+      "old_text": "Via this map $A'$ maps into $B'$. This induces a map",
+      "producer_id": "ALGEBRA-389",
+      "replacement_text": "Let $A'$ be the integral closure of $A$ in $Q(A)$.\nVia this map $A'$ maps into $B'$. This induces a map",
+      "source_end_line": 46834,
+      "source_start_line": 46834
+    },
+    {
+      "old_text": "the $x_i$ also generated $A'$ as an $A$-module, and we win.",
+      "producer_id": "ALGEBRA-390",
+      "replacement_text": "the $x_i$ also generate $A'$ as an $A$-module, and we win.",
+      "source_end_line": 46844,
+      "source_start_line": 46844
+    },
+    {
+      "old_text": "respectively, and the same residue fields as that of $A$.",
+      "producer_id": "ALGEBRA-391",
+      "replacement_text": "respectively, and each has the same residue field as $A$.",
+      "source_end_line": 46856,
+      "source_start_line": 46856
+    }
+  ],
+  "predecessor_active_candidate": "stacks-errata-a04446e-r10",
+  "predecessor_queued_candidate": "stacks-errata-a04446e-r11",
+  "producer_snapshot": {
+    "bytes": 367606,
+    "data_rows": 796,
+    "duplicate_ids": 0,
+    "path": "authority/producer/SOURCE_DEFECT_LEDGER.csv",
+    "selected_ids": "ALGEBRA-386..ALGEBRA-391",
+    "selected_rows": 6,
+    "sha256": "830E67D6C53398956C8AD9F223E9D29ADF987F13C6203881E7EC939A234D0137"
+  },
+  "recorded_at_utc": "2026-08-24T16:07:00Z",
+  "schema": "stacks-canon-errata-queue-checkpoint/v1",
+  "terminal_condition": "This queue checkpoint is superseded only by a manifest-complete, independently replayed, publicly read-back R12 candidate and its separate overlay-registry admission.",
+  "write_boundaries": {
+    "canonical_translations": "immutable unless separately rebased",
+    "english_authority": "immutable",
+    "materialization": "only after R10 and R11 admission and issuance of the R12 lease",
+    "upstream_contact": "forbidden under the current no-AI-contribution boundary"
+  }
+}
