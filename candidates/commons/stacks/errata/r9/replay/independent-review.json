@@ -1,0 +1,314 @@
+{
+  "adverse_observations": [
+    {
+      "evidence": "The standalone candidate and authority builds retain the same 223 distinct unresolved cross-chapter reference targets and 275 total occurrences; neither build has an undefined citation.",
+      "severity": "retained_standalone_build_limitation"
+    },
+    {
+      "evidence": "The candidate PDF has four underfull-box warnings while the authority PDF has three. Both have 28 overfull-box warnings. Independent inspection of all 467 candidate pages, including the complete correction-sensitive band at high resolution, found no clipping, overlap, missing glyph, broken diagram, blank or duplicate page, or unreadable content.",
+      "severity": "nonfatal_layout_diagnostic_delta"
+    },
+    {
+      "evidence": "The candidate and authority PDFs are untagged and have no MarkInfo. All 35 fonts in each PDF are embedded, subset, and have ToUnicode maps; all 3119 link rectangles in each PDF are geometrically valid.",
+      "severity": "retained_accessibility_limitation"
+    }
+  ],
+  "authority": {
+    "bytes": 1771230,
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "direct_immutable_upstream_copy_exact": true,
+    "line_endings": "LF",
+    "path": "authority/source/algebra.tex",
+    "physical_lines": 47885,
+    "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3",
+    "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e"
+  },
+  "candidate_id": "stacks-errata-a04446e-r9",
+  "conclusion": "UNCONDITIONAL PASS",
+  "constraints_observed": {
+    "candidate_inputs_mutated": false,
+    "git_used": false,
+    "network_used": false,
+    "persistent_writes": [
+      "replay/independent-review.json"
+    ],
+    "upstream_contacted": false
+  },
+  "input_nonmutation": {
+    "file_count_excluding_this_receipt": 41,
+    "manifest_referenced_nonmanifest_files": 40,
+    "passed": true,
+    "serialization_note": "All candidate files other than this receipt remained byte-identical throughout review; the exact pre-review candidate manifest remained the immutable closure root."
+  },
+  "pass_is_unconditional": true,
+  "passed": true,
+  "pre_review_manifest_sha256": "D9143FA2E8B8F7EF0575ADF10A1D2EC0013276ECD432ADC74BB1310BEC77C317",
+  "validation_sha256": "476F5A7B282752EBA277451F4985BAFA769032E9CC1E1880F114AE0202E1E0C9",
+  "pre_review_gate": {
+    "candidate_manifest": {
+      "bytes": 8523,
+      "observed_sha256": "D9143FA2E8B8F7EF0575ADF10A1D2EC0013276ECD432ADC74BB1310BEC77C317",
+      "path": "candidate.manifest.json",
+      "required_sha256": "D9143FA2E8B8F7EF0575ADF10A1D2EC0013276ECD432ADC74BB1310BEC77C317"
+    },
+    "check_manifest_exit_code": 0,
+    "check_manifest_passed": true,
+    "manifest_references": 40,
+    "passed": true,
+    "validation": {
+      "bytes": 2390,
+      "passed": true,
+      "path": "builds/validation.json",
+      "sha256": "476F5A7B282752EBA277451F4985BAFA769032E9CC1E1880F114AE0202E1E0C9"
+    }
+  },
+  "producer_partition": {
+    "accepted": 29,
+    "accepted_producer_ids": [
+      "ALGEBRA-342",
+      "ALGEBRA-343",
+      "ALGEBRA-345",
+      "ALGEBRA-346",
+      "ALGEBRA-347",
+      "ALGEBRA-348",
+      "ALGEBRA-349",
+      "ALGEBRA-350",
+      "ALGEBRA-351",
+      "ALGEBRA-352",
+      "ALGEBRA-353",
+      "ALGEBRA-354",
+      "ALGEBRA-355",
+      "ALGEBRA-356",
+      "ALGEBRA-357",
+      "ALGEBRA-358",
+      "ALGEBRA-359",
+      "ALGEBRA-360",
+      "ALGEBRA-361",
+      "ALGEBRA-362",
+      "ALGEBRA-363",
+      "ALGEBRA-364",
+      "ALGEBRA-365",
+      "ALGEBRA-366",
+      "ALGEBRA-367",
+      "ALGEBRA-368",
+      "ALGEBRA-369",
+      "ALGEBRA-370",
+      "ALGEBRA-371"
+    ],
+    "closed": true,
+    "ledger": {
+      "bytes": 357209,
+      "data_rows": 776,
+      "duplicate_ids": 0,
+      "path": "authority/producer/SOURCE_DEFECT_LEDGER.csv",
+      "sha256": "B826AE5D4EA998A2B720ECA74E5478D0180BBB5A3D9F412D9391ED8012A70049"
+    },
+    "packet_duplicates": 0,
+    "prior_overlay_aliases": 0,
+    "producer_rows": 30,
+    "range": "ALGEBRA-342..ALGEBRA-371",
+    "rejected": 1,
+    "rejection": {
+      "disposition": "rejected",
+      "id": "ERR-R9-R0001",
+      "producer_id": "ALGEBRA-344",
+      "reason": "In the explicitly informal counterfactual sentence, was is acceptable contemporary usage; were would be optional register polishing rather than a source correction.",
+      "receipt": {
+        "path": "rejections.jsonl",
+        "sha256": "1274F33097452E5FAAFC5EA6B36A9A31BC1BDB17A4FDD6A6A87F40019B54BCF3"
+      }
+    },
+    "rows_present_exactly_once": true,
+    "unresolved": 0
+  },
+  "recorded_at_utc": "2026-08-24T14:30:00Z",
+  "result": "PASS",
+  "review_kind": "independent_adverse_replay",
+  "schema": "mathematics-commons-stacks-errata-independent-review/v1",
+  "scratch_replay": {
+    "all_operation_hash_byte_line_and_occurrence_checks_passed": true,
+    "apply_order": "descending_start_byte",
+    "authority": {
+      "bytes": 1771230,
+      "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+    },
+    "byte_exact_payload_match": true,
+    "nonoverlap": true,
+    "operation_count": 32,
+    "operation_spec": {
+      "sha256": "ED11D1D4BED2B8645E272FB1188E43AE7377670862E0134DA9EAEAAF87FCF6C1"
+    },
+    "output": {
+      "bytes": 1773235,
+      "sha256": "05E06B3067D2372418D8CF4ACFE08D61FE9972FD3A5FCAE89E4549B372F9F660"
+    },
+    "passed": true,
+    "sealed_payload": {
+      "bytes": 1773235,
+      "path": "payload/algebra.tex",
+      "sha256": "05E06B3067D2372418D8CF4ACFE08D61FE9972FD3A5FCAE89E4549B372F9F660"
+    },
+    "source_map": {
+      "operation_records_exact_spec_match": true,
+      "records": 29,
+      "sha256": "48575EFB3F0308AA3CFB2CE89BF907A4D1D7861AA8A6E5EFCD5FC7139B60C630"
+    },
+    "stable_units": {
+      "first_id": "MC-STK-ERR-0686",
+      "last_id": "MC-STK-ERR-0714",
+      "records": 29,
+      "sha256": "79ECEF1DA66C799E4D47B5E25F15784927D9662BF71CDB50E80B12FFDA8C7F8D"
+    },
+    "total_byte_delta": 2005
+  },
+  "sealed_evidence_verification": {
+    "candidate_manifest_closure": {
+      "actual_nonmanifest_files": 40,
+      "hash_failures": 0,
+      "missing": 0,
+      "referenced_files": 40,
+      "unexpected": 0
+    },
+    "build": {
+      "authority": {
+        "diagnostics": {
+          "fatal_markers": 0,
+          "missing_glyph_markers": 0,
+          "overfull_boxes": 28,
+          "pages": 466,
+          "reported_pdf_bytes": 3708166,
+          "undefined_citation_targets": 0,
+          "undefined_reference_occurrences": 275,
+          "undefined_reference_targets": 223,
+          "underfull_boxes": 3
+        },
+        "pdf": {
+          "bytes": 3708166,
+          "path": "builds/algebra.authority.pdf",
+          "sha256": "C7D408FDB2F6F3646C1E1D325642F9BBA7FA0143ACE91C7774183D605D5E9914"
+        }
+      },
+      "candidate": {
+        "diagnostics": {
+          "fatal_markers": 0,
+          "missing_glyph_markers": 0,
+          "overfull_boxes": 28,
+          "pages": 467,
+          "reported_pdf_bytes": 3711957,
+          "undefined_citation_targets": 0,
+          "undefined_reference_occurrences": 275,
+          "undefined_reference_targets": 223,
+          "underfull_boxes": 4
+        },
+        "pdf": {
+          "bytes": 3711957,
+          "path": "builds/algebra.pdf",
+          "sha256": "752AAEA986BEEAE4801119A769F4FF916717BCC1B185F8F235CDCFF5D4E55140"
+        }
+      },
+      "build_execution": {
+        "passed": true,
+        "sha256": "4D2110AD80559908C7A111E899E56ACEA035D3E5B8E1A5A101334DE298683A08"
+      },
+      "build_receipt": {
+        "passed": true,
+        "sha256": "634FA6C5D0901791C0644966DC2BAE81DE1103E7148D82015274AB4194EE639A"
+      },
+      "candidate_page_delta": 1,
+      "undefined_reference_and_citation_multisets_match_authority": true
+    },
+    "formula_diagram_inventory": {
+      "diagram_units": 0,
+      "formula_units": 29,
+      "prose_only_units": 0,
+      "sha256": "D15AEBB4FAD44C24A64F10F2B33EFB6FB12FB42E42E1E39AC1B4AF665146BD41",
+      "unmapped_formula_or_diagram_changes": 0
+    },
+    "passed": true,
+    "private_render_manifest": {
+      "artifact_files_verified": 511,
+      "bytes": 100711,
+      "contact_sheets_verified": 30,
+      "exact_inventory_files_including_manifest": 512,
+      "high_resolution_pages": [
+        1,
+        432,
+        433,
+        434,
+        435,
+        436,
+        437,
+        438,
+        439,
+        440,
+        441,
+        442,
+        443,
+        467
+      ],
+      "high_resolution_renders_verified": 14,
+      "logical_path": "canon/private_evidence/errata-r9-20260824T1410Z/render-final/render-manifest.json",
+      "page_renders_verified": 467,
+      "pdf_binding_sha256": "752AAEA986BEEAE4801119A769F4FF916717BCC1B185F8F235CDCFF5D4E55140",
+      "sha256": "9808518162932F064CBC42D18E5BD1CD15B87C6198DE26B959F824966FED7AD6"
+    },
+    "structural_replay": {
+      "authority": {
+        "citations": 45,
+        "display_delimiters": 2162,
+        "environments": 6280,
+        "labels": 1618,
+        "references": 3066,
+        "sections": 168,
+        "xymatrix": 164
+      },
+      "exact_ordered_sequence_match": true,
+      "payload": {
+        "citations": 45,
+        "display_delimiters": 2162,
+        "environments": 6280,
+        "labels": 1618,
+        "references": 3066,
+        "sections": 168,
+        "xymatrix": 164
+      }
+    },
+    "visual_qa": {
+      "authority": {
+        "font_records": 35,
+        "fonts_without_tounicode": 0,
+        "link_annotations": 3119,
+        "malformed_link_rectangles": 0,
+        "out_of_bounds_link_rectangles": 0,
+        "pages": 466,
+        "unembedded_fonts": 0,
+        "unsubset_fonts": 0
+      },
+      "candidate": {
+        "font_records": 35,
+        "fonts_without_tounicode": 0,
+        "full_pages_inspected": 467,
+        "link_annotations": 3119,
+        "malformed_link_rectangles": 0,
+        "manual_blank_or_duplicate_pages": 0,
+        "manual_broken_diagrams": 0,
+        "manual_clipping": 0,
+        "manual_missing_glyphs": 0,
+        "manual_overlap": 0,
+        "out_of_bounds_link_rectangles": 0,
+        "pages": 467,
+        "unembedded_fonts": 0,
+        "unsubset_fonts": 0
+      },
+      "passed": true
+    }
+  },
+  "stable_id_recomputation": {
+    "derivation_rule": "ascending accepted producer rows ALGEBRA-342..371, excluding rejected ALGEBRA-344, mapped bijectively to contiguous MC-STK-ERR-0686..0714",
+    "first_id": "MC-STK-ERR-0686",
+    "last_id": "MC-STK-ERR-0714",
+    "operation_count": 32,
+    "passed": true,
+    "unit_count": 29
+  }
+}
