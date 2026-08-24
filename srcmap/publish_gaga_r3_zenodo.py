@@ -241,7 +241,7 @@ def upload_file(bucket: str, path: Path, remote: str, token: str) -> dict[str, A
 
 def download_sha256(url: str) -> tuple[int, str]:
     validate_zenodo_url(url)
-    request = urllib.request.Request(url, headers={"Accept": "application/octet-stream"})
+    request = urllib.request.Request(url)
     hasher = hashlib.sha256()
     total = 0
     with ZENODO_OPENER.open(request, timeout=120) as response:
@@ -811,7 +811,14 @@ def verify_public_record(
         download_url = file_row.get("links", {}).get("self") or file_row.get("links", {}).get("download")
         if not download_url:
             raise RuntimeError(f"Public file lacks an anonymous download URL: {remote}")
-        byte_count, sha = download_sha256(download_url)
+        byte_count = -1
+        sha = ""
+        for attempt in range(4):
+            byte_count, sha = download_sha256(download_url)
+            if byte_count == expected["bytes"] and sha == expected["sha256"]:
+                break
+            if attempt < 3:
+                time.sleep(1.0)
         if byte_count != expected["bytes"] or sha != expected["sha256"]:
             raise RuntimeError(f"Anonymous public-byte mismatch: {remote}")
         readbacks.append(

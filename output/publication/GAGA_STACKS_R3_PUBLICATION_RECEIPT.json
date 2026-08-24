@@ -1,0 +1,815 @@
+{
+  "schema": "gaga-stacks-r3-zenodo-publication-receipt-v2",
+  "created_utc": "2026-08-24T20:40:38.773113+00:00",
+  "status": "PASS",
+  "predecessor": {
+    "record_id": 22074492,
+    "doi": "10.5281/zenodo.22074492",
+    "inherited_files": 69
+  },
+  "published": {
+    "record_id": 22086708,
+    "doi": "10.5281/zenodo.22086708",
+    "concept_record_id": 21781322,
+    "concept_doi": "10.5281/zenodo.21781322",
+    "version": "2026-08-24 GAGA R3 Stacks bridge and localized editions",
+    "files": 94
+  },
+  "metadata": {
+    "changed_keys": [
+      "description",
+      "version"
+    ],
+    "stable_keys_verified": [
+      "title",
+      "creators",
+      "contributors",
+      "resource_type",
+      "access_right",
+      "license",
+      "keywords",
+      "related_identifiers",
+      "language",
+      "references"
+    ],
+    "description_appendix_exact": true
+  },
+  "inherited_inventory": [
+    {
+      "remote_filename": "00_GAGA_Complete_Privacy_Clean_Package_20260803.zip",
+      "bytes": 485603,
+      "md5": "FCC5E05B8A91F09EF3BBD62DCB8CD5A4"
+    },
+    {
+      "remote_filename": "01_GAGA_English_reference_v2.pdf",
+      "bytes": 217331,
+      "md5": "76CCF8D9442B8649C413C24E82572CA7"
+    },
+    {
+      "remote_filename": "01a_GAGA_French_Diplomatic.pdf",
+      "bytes": 438985,
+      "md5": "41B65207D64D2B3D9CC6A7E3962ECAA4"
+    },
+    {
+      "remote_filename": "01b_GAGA_French_Corrected.pdf",
+      "bytes": 439032,
+      "md5": "47C6552F38494FD876B420343203AF92"
+    },
+    {
+      "remote_filename": "02_READ_ME_FIRST.md",
+      "bytes": 3311,
+      "md5": "1FABD2865E5EF6F2E4EDE43AA56EFE0C"
+    },
+    {
+      "remote_filename": "03_RIGHTS_AND_PROVENANCE.md",
+      "bytes": 1856,
+      "md5": "5BB5AE5433F61703E7EAC423A695F3E9"
+    },
+    {
+      "remote_filename": "04_ARCHIVE_ACCEPTANCE_AND_PRIVACY_TRANSFORMATION.md",
+      "bytes": 2461,
+      "md5": "73526FCB87AE415CF18B79DB8264B5B3"
+    },
+    {
+      "remote_filename": "05_GAGA_PROJECT_LOGBOOK_PRIVACY_CLEAN.md",
+      "bytes": 42260,
+      "md5": "B6BD2C523EB13AB96B7C8F6B20548C8F"
+    },
+    {
+      "remote_filename": "06_GAGA_EDITORIAL_DECISION_LOGBOOK.md",
+      "bytes": 25979,
+      "md5": "978BC456BAD8581D7AC906688CAFBADE"
+    },
+    {
+      "remote_filename": "07_GAGA_CONTINUATION_RECORD.md",
+      "bytes": 1583,
+      "md5": "B8589C919685FE11AC0EF532C4C94567"
+    },
+    {
+      "remote_filename": "08_GAGA_REVISION_HISTORY.csv",
+      "bytes": 8444,
+      "md5": "E17B26255D4D198701BC26AD0CC40B4C"
+    },
+    {
+      "remote_filename": "09_GAGA_SOURCE_CORRECTION_LEDGER.csv",
+      "bytes": 6645,
+      "md5": "838313FBD468D910FFC3E2B4C3060F7C"
+    },
+    {
+      "remote_filename": "10_GAGA_SOURCE_CORRECTION_APPLICATIONS.csv",
+      "bytes": 11447,
+      "md5": "8F645650D390C898976112A5327655CE"
+    },
+    {
+      "remote_filename": "11_GAGA_TRANSCRIPTION_REPAIR_LEDGER.csv",
+      "bytes": 3519,
+      "md5": "D9712094320F4ABED85F1EB3FEBC70B5"
+    },
+    {
+      "remote_filename": "12_GAGA_ENGLISH_TRANSLATION_LEDGER.csv",
+      "bytes": 3199,
+      "md5": "F36B41328F7A64C5C28321B3B137FE6F"
+    },
+    {
+      "remote_filename": "13_GAGA_English_source_aligned.tex",
+      "bytes": 2176,
+      "md5": "45DCCB1E5C0A11FC5457D4ED1EBA9B3A"
+    },
+    {
+      "remote_filename": "14a_GAGA_English_title_and_introduction.tex",
+      "bytes": 4143,
+      "md5": "857D044FFE3D670881EE5BE817501297"
+    },
+    {
+      "remote_filename": "14b_GAGA_English_analytic_spaces.tex",
+      "bytes": 12471,
+      "md5": "30BBB4A0BFB89A0B67C8464334FABBBB"
+    },
+    {
+      "remote_filename": "14c_GAGA_English_associated_analytic_space.tex",
+      "bytes": 23350,
+      "md5": "274667880998DCBCBD1E86C509C54CA8"
+    },
+    {
+      "remote_filename": "14d_GAGA_English_sheaf_correspondence_nos09_12.tex",
+      "bytes": 11808,
+      "md5": "35DF70A1D6E65143212E1611E0E5594F"
+    },
+    {
+      "remote_filename": "14e_GAGA_English_proofs_theorems1_3_nos13_17.tex",
+      "bytes": 22613,
+      "md5": "1CFEC2C613CA20FD2834626BB7456BAC"
+    },
+    {
+      "remote_filename": "14f_GAGA_English_applications_nos18_20.tex",
+      "bytes": 16586,
+      "md5": "182B038383B462FBD87E3B8BA3B1B55E"
+    },
+    {
+      "remote_filename": "14g_GAGA_English_appendix_nos21_24_bibliography.tex",
+      "bytes": 19146,
+      "md5": "3C708BD88CB428D55D9F6A30A7F3097D"
+    },
+    {
+      "remote_filename": "15_GAGA_French_shared_driver_for_diplomatic_and_corrected.tex",
+      "bytes": 2715,
+      "md5": "44D2F9229CF5CB41035AA02FCE0DA2A0"
+    },
+    {
+      "remote_filename": "16_GAGA_French_diplomatic_body.tex",
+      "bytes": 125157,
+      "md5": "0CFC9FFDAABBE7C9C7BB5E1FAC9DB0DA"
+    },
+    {
+      "remote_filename": "17_GAGA_French_corrected_body.tex",
+      "bytes": 125141,
+      "md5": "2F4A2E54CFA102E9C3383C7C3DD49966"
+    },
+    {
+      "remote_filename": "18_ARCHIVE_PRIVACY_TRANSFORMATIONS.csv",
+      "bytes": 692,
+      "md5": "ED0DA8FE5B1B1338E95020A9023CA87E"
+    },
+    {
+      "remote_filename": "19_ARCHIVE_PRIVACY_VALIDATION.json",
+      "bytes": 1676,
+      "md5": "9780B1D52C3F7BBFF7EDEA1EF8A99416"
+    },
+    {
+      "remote_filename": "20_PRODUCER_PACKAGE_VALIDATION.json",
+      "bytes": 1156,
+      "md5": "7DFE456C3DFE7377003FEB023839D1FB"
+    },
+    {
+      "remote_filename": "21_ZENODO_PAYLOAD_MANIFEST.csv",
+      "bytes": 8254,
+      "md5": "B906ABC72495D0DB5ED195903BAA2A07"
+    },
+    {
+      "remote_filename": "22_PRODUCER_ZENODO_PAYLOAD_MANIFEST_ORIGINAL.csv",
+      "bytes": 7148,
+      "md5": "71A8208CF56DC10E705B4BBFB8C4913F"
+    },
+    {
+      "remote_filename": "23_GAGA_PROVENANCE.csv",
+      "bytes": 1244,
+      "md5": "A46AA615A8E67998626182D98867A467"
+    },
+    {
+      "remote_filename": "24_GAGA_STATUS_SNAPSHOT.md",
+      "bytes": 5748,
+      "md5": "29F14F9B23C9176D67EB83077BB11FBC"
+    },
+    {
+      "remote_filename": "25_BUILD_INSTRUCTIONS.md",
+      "bytes": 777,
+      "md5": "E0A336972C9A225FFB2E902DAC7B1090"
+    },
+    {
+      "remote_filename": "30_05_EVIDENCE_CONTROLS__BIBLIOGRAPHY_LINK_APPLICATION.json",
+      "bytes": 521,
+      "md5": "E7D017E7BCBC5A1576521EBCA561368B"
+    },
+    {
+      "remote_filename": "31_05_EVIDENCE_CONTROLS__ENGLISH_CHECKPOINT_THROUGH_NO12_PDF_VALIDATION.json",
+      "bytes": 1261,
+      "md5": "15885A47BBC1289274D88052C3739156"
+    },
+    {
+      "remote_filename": "32_05_EVIDENCE_CONTROLS__ENGLISH_CHECKPOINT_THROUGH_NO17_PDF_VALIDATION.json",
+      "bytes": 1552,
+      "md5": "9B98A888F0BB230E1586D2F598AFFEE0"
+    },
+    {
+      "remote_filename": "33_05_EVIDENCE_CONTROLS__ENGLISH_CHECKPOINT_THROUGH_NO20_PDF_VALIDATION.json",
+      "bytes": 1348,
+      "md5": "8AC3776E4B08DD370E17E9D7AB09B32E"
+    },
+    {
+      "remote_filename": "34_05_EVIDENCE_CONTROLS__ENGLISH_CHECKPOINT_THROUGH_SECTION2_PDF_VALIDATION.json",
+      "bytes": 837,
+      "md5": "78C555519CEF8F6DCF39A4F909B42C49"
+    },
+    {
+      "remote_filename": "35_05_EVIDENCE_CONTROLS__ENGLISH_COMPLETE_PDF_VALIDATION.json",
+      "bytes": 2227,
+      "md5": "2E7D4BB82EB835BB97BBCC02660B1934"
+    },
+    {
+      "remote_filename": "36_05_EVIDENCE_CONTROLS__FRENCH_LADDER_LAYOUT_REVIEW_PASS.md",
+      "bytes": 1653,
+      "md5": "69AFC38CF7D7E81EA871E0E404C9AA07"
+    },
+    {
+      "remote_filename": "37_05_EVIDENCE_CONTROLS__FRENCH_LAYERS_AFTER_TR005_VALIDATION.json",
+      "bytes": 1775,
+      "md5": "F9E75CF497A7DDB74E075541A86BDF4B"
+    },
+    {
+      "remote_filename": "38_05_EVIDENCE_CONTROLS__FRENCH_LAYOUT_REPAIR_VALIDATION.json",
+      "bytes": 2465,
+      "md5": "A2E7F6F02ABD5558D86D3E95BD9C81B8"
+    },
+    {
+      "remote_filename": "39_05_EVIDENCE_CONTROLS__FROZEN_FIRST_PASS_MANIFEST.csv",
+      "bytes": 1174,
+      "md5": "71B05305B72EF2696DFFD0344840E41D"
+    },
+    {
+      "remote_filename": "40_05_EVIDENCE_CONTROLS__INTERNAL_REFERENCE_LINK_APPLICATION.json",
+      "bytes": 7229,
+      "md5": "E7D5DE29311CF4CEA306E05A6581EA25"
+    },
+    {
+      "remote_filename": "41_05_EVIDENCE_CONTROLS__LAYOUT_VISUAL_REVIEW_PASS.md",
+      "bytes": 2600,
+      "md5": "5F713467BDDA0AFF250F0DD6A5AF03C9"
+    },
+    {
+      "remote_filename": "42_05_EVIDENCE_CONTROLS__PACKAGE_VALIDATION_R1_FAIL.json",
+      "bytes": 2914,
+      "md5": "8F7699DE3AC572F45943601E171DE575"
+    },
+    {
+      "remote_filename": "43_05_EVIDENCE_CONTROLS__PAGE_JOIN_LEDGER.csv",
+      "bytes": 4437,
+      "md5": "93AF64D4802F4F68E193B1A5203A98E0"
+    },
+    {
+      "remote_filename": "44_05_EVIDENCE_CONTROLS__REFERENCE_CANDIDATES.csv",
+      "bytes": 80054,
+      "md5": "13A9FD80B598CE1F8B31903AD62F2EF5"
+    },
+    {
+      "remote_filename": "45_05_EVIDENCE_CONTROLS__REFERENCE_EDGES.csv",
+      "bytes": 38896,
+      "md5": "3D3C42CC786127B8863326F33898E9FE"
+    },
+    {
+      "remote_filename": "46_05_EVIDENCE_CONTROLS__REFERENCE_GRAPH_VALIDATION.json",
+      "bytes": 406,
+      "md5": "814872E46447EA97118A8723731638E0"
+    },
+    {
+      "remote_filename": "47_05_EVIDENCE_CONTROLS__REFERENCE_RESIDUALS.csv",
+      "bytes": 24015,
+      "md5": "2178CF81D8D223E511750E88F425C423"
+    },
+    {
+      "remote_filename": "48_05_EVIDENCE_CONTROLS__REFERENCE_TARGETS.csv",
+      "bytes": 21229,
+      "md5": "621B8599D313C59184E1A1327179FFC5"
+    },
+    {
+      "remote_filename": "49_05_EVIDENCE_CONTROLS__REFERENCE_V2_PDF_VALIDATION.json",
+      "bytes": 3081,
+      "md5": "CF79556A12CCE95E5CC66B1446DFB859"
+    },
+    {
+      "remote_filename": "50_05_EVIDENCE_CONTROLS__TRANSLATION_LINEAGES.csv",
+      "bytes": 1559,
+      "md5": "AB1B4C3EC551006733155A282822733B"
+    },
+    {
+      "remote_filename": "51_05_EVIDENCE_CONTROLS__UNCERTAIN_READING_LEDGER.csv",
+      "bytes": 31379,
+      "md5": "DD36D768B55DF98109CBABFBD0DDE986"
+    },
+    {
+      "remote_filename": "52_06_REPRODUCTION_TOOLS__apply_gaga_bibliography_links.py",
+      "bytes": 2169,
+      "md5": "C04C9AD20E9986F684AE769E494509AD"
+    },
+    {
+      "remote_filename": "53_06_REPRODUCTION_TOOLS__apply_gaga_internal_reference_links.py",
+      "bytes": 5817,
+      "md5": "D6A5E0B4D7B444D699B3B60869158A3A"
+    },
+    {
+      "remote_filename": "54_06_REPRODUCTION_TOOLS__build_and_validate_package.py",
+      "bytes": 11556,
+      "md5": "952956994EE8B19A54D438AB502115E4"
+    },
+    {
+      "remote_filename": "55_06_REPRODUCTION_TOOLS__build_archive_privacy_projection_manifest.py",
+      "bytes": 11267,
+      "md5": "A32FEE2255FE5A0B66133BC690381DCC"
+    },
+    {
+      "remote_filename": "56_06_REPRODUCTION_TOOLS__build_gaga_reference_ledgers.py",
+      "bytes": 14905,
+      "md5": "01D3BD69A3CC04254B7E3679DBA9EB6D"
+    },
+    {
+      "remote_filename": "57_06_REPRODUCTION_TOOLS__restore_gaga_visible_reference_text.py",
+      "bytes": 2175,
+      "md5": "6F8A226D9EF8CA369428A6A2662D2345"
+    },
+    {
+      "remote_filename": "58_06_REPRODUCTION_TOOLS__validate_gaga_french_layout_repair.py",
+      "bytes": 6273,
+      "md5": "EB01241BB5F4A2BE8220123B60E426E3"
+    },
+    {
+      "remote_filename": "59_06_REPRODUCTION_TOOLS__validate_gaga_reference_pdf.py",
+      "bytes": 7967,
+      "md5": "515383F569534E5DACD224AA60B57D7C"
+    },
+    {
+      "remote_filename": "90_WORKFLOW.zip",
+      "bytes": 3233,
+      "md5": "EF50216221B42CE8D1CDD7383B8AC187"
+    },
+    {
+      "remote_filename": "FAC_GAGA_PUBLIC_HEAD_FULL_READBACK_20260824.json",
+      "bytes": 86895,
+      "md5": "5B09E716AD9675EA5890A935B1A20C39"
+    },
+    {
+      "remote_filename": "GAGA_TERMINAL_COMPLETION_AUDIT_20260824.json",
+      "bytes": 26391,
+      "md5": "CAC6D9210C1BE23B360ECAC9EEEE26C3"
+    },
+    {
+      "remote_filename": "GAGA_TERMINAL_PACKAGE_VALIDATION_20260824.json",
+      "bytes": 3582,
+      "md5": "52B6BDD75C8A11C372475EB227ED40D4"
+    },
+    {
+      "remote_filename": "GAGA_TERMINAL_SOURCE_AND_UNCERTAIN_DISPOSITIONS_20260824.json",
+      "bytes": 128156,
+      "md5": "4078182DA24C37441FA8FBCC17E59D59"
+    }
+  ],
+  "release_inventory": [
+    {
+      "local_path": "output/pdf/gaga-english.pdf",
+      "remote_filename": "60_GAGA_Stacks_R3_English.pdf",
+      "bytes": 496076,
+      "md5": "B10E119E7B5405DD32DD867EB452385B",
+      "sha256": "93B61241CF64C402DDA3CB2CCD19909F5030E69244BFE8C455B5A95BC246BEC0"
+    },
+    {
+      "local_path": "output/pdf/gaga-japanese.pdf",
+      "remote_filename": "61_GAGA_Stacks_R3_Japanese.pdf",
+      "bytes": 411303,
+      "md5": "766D22A2DC09015608DCD120BAC0DE08",
+      "sha256": "B244927089C1525AB3DE070701648C1C722C5CD240DB6AA5EF2FA707AB751708"
+    },
+    {
+      "local_path": "output/pdf/gaga-simplified-chinese.pdf",
+      "remote_filename": "62_GAGA_Stacks_R3_Simplified_Chinese.pdf",
+      "bytes": 254336,
+      "md5": "786D7D5A6A532007FAEF457A12CD2EFC",
+      "sha256": "CAA2EE705BF8DF0743C5E65ECBCDD92A516896F99374E398670739D509459387"
+    },
+    {
+      "local_path": "gaga.tex",
+      "remote_filename": "63_GAGA_Stacks_R3_English.tex",
+      "bytes": 79740,
+      "md5": "91043F39ACB93AB064E325327367A3DE",
+      "sha256": "BBCCEE29FE3AF084E8435F3E32F8537EE3DDED2558E1A9FCD2940F8664BB5201"
+    },
+    {
+      "local_path": "output/source/gaga-ja.tex",
+      "remote_filename": "64_GAGA_Stacks_R3_Japanese.tex",
+      "bytes": 85921,
+      "md5": "42604035FE5D0A71D9CC34783233A492",
+      "sha256": "E441FF5AFDF7CBD41DA98273BE7BE9615537F5D25D7D05CF436A6AD9B3ED753E"
+    },
+    {
+      "local_path": "output/source/gaga-zh-cn.tex",
+      "remote_filename": "65_GAGA_Stacks_R3_Simplified_Chinese.tex",
+      "bytes": 73217,
+      "md5": "D70E3CA63DA08E9A91D2D74AF58FAD0F",
+      "sha256": "25B5CD697A71E3FCD98E66BB0FA97429A378A76759B61D1874EC7321CAA4699D"
+    },
+    {
+      "local_path": "output/source/chapters-ja.tex",
+      "remote_filename": "66_GAGA_Stacks_R3_Japanese_chapters.tex",
+      "bytes": 8820,
+      "md5": "CBB644B8BB3FF12790B25146E00B6EEF",
+      "sha256": "62A9C3BD27CA840C505D202B57535B3E2D8BBAF2A40A39D746151F1CCE5243B2"
+    },
+    {
+      "local_path": "output/source/chapters-zh-cn.tex",
+      "remote_filename": "67_GAGA_Stacks_R3_Simplified_Chinese_chapters.tex",
+      "bytes": 7931,
+      "md5": "985DFE06DD762E86B0729B3E390445B7",
+      "sha256": "8F7530C8EE3DF3E78FC30C90C587C14318FAB66BEA5F20687559F490F8024FDE"
+    },
+    {
+      "local_path": "preamble.tex",
+      "remote_filename": "68_GAGA_Stacks_R3_preamble.tex",
+      "bytes": 8807,
+      "md5": "2CB15DF9471DA3E028937ED98C59C7BD",
+      "sha256": "8D6E0CD5B4CD6187E96A0FA289BD1A8C3B185310F22F4AAFAD39BE62ADF1BA65"
+    },
+    {
+      "local_path": "chapters.tex",
+      "remote_filename": "69_GAGA_Stacks_R3_chapters.tex",
+      "bytes": 8735,
+      "md5": "641320ED54AE8D68B07F591E731F8E2F",
+      "sha256": "C79BC934FA6DD52DB2A8AF11EECF3667CC3C682FA30239408679D62C4D49B299"
+    },
+    {
+      "local_path": "my.bib",
+      "remote_filename": "70_GAGA_Stacks_R3_bibliography.bib",
+      "bytes": 220937,
+      "md5": "476B4B25F94E9431B653D5B20F5052BB",
+      "sha256": "953C5DFAEE8F1176A1F154B40B99C751EE206D41F030299E0DE7D9807F5128E8"
+    },
+    {
+      "local_path": "stacks-project.cls",
+      "remote_filename": "71_GAGA_Stacks_R3_class.cls",
+      "bytes": 62060,
+      "md5": "249A47CB416560BD204A8A2BD773573C",
+      "sha256": "33C63548F27DA96BE5B1BBDA435784DB1C514E58B33699F8F80460F4B9F282E7"
+    },
+    {
+      "local_path": "gaga_r3/units.csv",
+      "remote_filename": "72_GAGA_Stacks_R3_units.csv",
+      "bytes": 60100,
+      "md5": "2E14FD52CC9201B70D6543CE33098DEA",
+      "sha256": "8F8DB43D6732A1987ACD9A02BD47E96697CFDC35DFECDF9C6207977B1D515C9B"
+    },
+    {
+      "local_path": "gaga_r3/map.csv",
+      "remote_filename": "73_GAGA_Stacks_R3_map.csv",
+      "bytes": 83111,
+      "md5": "3D118757BE0DE2FB28BFBDF965FF451E",
+      "sha256": "76BCA905ADD4582EAED1AC34DA266DE38608CBDFABE843B736B1D7300E8FE41F"
+    },
+    {
+      "local_path": "gaga_r3/dec.csv",
+      "remote_filename": "74_GAGA_Stacks_R3_decisions.csv",
+      "bytes": 32612,
+      "md5": "BFE4D9F70EEE7E16B657B2E222D4F206",
+      "sha256": "E298D871C257CFA9917EFD8A10048D562877FA551A577E9495C9D00DBECAE23D"
+    },
+    {
+      "local_path": "gaga_r3/issues.csv",
+      "remote_filename": "75_GAGA_Stacks_R3_source_issues.csv",
+      "bytes": 88,
+      "md5": "86FCA9DAA4DDC18B3B3B2A2A6CC5DA9F",
+      "sha256": "30C973E3978577AEBA6DE60B941DC4D88CACE6C3FCC3DDA50F6EB5F43D8BE9F5"
+    },
+    {
+      "local_path": "gaga_r3/mcheck.json",
+      "remote_filename": "76_GAGA_Stacks_R3_mapping_check.json",
+      "bytes": 82907,
+      "md5": "3CCC04890AFE4971DAE9CC99A51F6DF0",
+      "sha256": "D07D28C8D40476BE2BEB0B63997519B25A6A674F8B6C7F8E01533D100E81E6A9"
+    },
+    {
+      "local_path": "gaga_r3/R3_CHECK.json",
+      "remote_filename": "77_GAGA_Stacks_R3_terminal_receipt.json",
+      "bytes": 16536,
+      "md5": "03C692347C10DCA0164EA12852209FC4",
+      "sha256": "8A67743F56BC828558624019B3DA9CD6317F5CE4FFF8B811926023B57344922D"
+    },
+    {
+      "local_path": "srcmap/build_gaga_r3.py",
+      "remote_filename": "78_GAGA_Stacks_R3_builder.py",
+      "bytes": 21729,
+      "md5": "F1A405D458164C27C807F3AD85F6F95B",
+      "sha256": "F3D6C8AD9715182FD398FA6DF777E65DEBE2F0C458CC95342E704FDCE54620D6"
+    },
+    {
+      "local_path": "srcmap/validate_gaga_editions.py",
+      "remote_filename": "79_GAGA_Stacks_R3_edition_validator.py",
+      "bytes": 8918,
+      "md5": "A935D0B659B9022ADE2EEBEC304B76E4",
+      "sha256": "E424B32DB9E09BA74A81DE949FD0A0D7AB92FA91DCA795DAF7D9F6E337A057CE"
+    },
+    {
+      "local_path": "srcmap/build_gaga_localized_editions.py",
+      "remote_filename": "80_GAGA_Stacks_R3_edition_builder.py",
+      "bytes": 10408,
+      "md5": "C3780DBC916BD8D512729E59A7F51B46",
+      "sha256": "1F826B665A538D96070D4B4ECAE0C0DEFB1A617134C83EF5F9DF6E29D4F3C8E2"
+    },
+    {
+      "local_path": "output/validation/gaga-localized-build-validation.json",
+      "remote_filename": "81_GAGA_Stacks_R3_localized_build_validation.json",
+      "bytes": 19449,
+      "md5": "7591F3152DE9A9A95A1314334D1B8B00",
+      "sha256": "35AA616A7BE91B066468FBC7531BBABFDD4FD0030DA3C395C8E8D2E4B72F61D4"
+    },
+    {
+      "local_path": "output/publication/GAGA_STACKS_R3_README.md",
+      "remote_filename": "82_GAGA_Stacks_R3_README.md",
+      "bytes": 3109,
+      "md5": "8CD5DA61DF1D207EA43858F8E52975D5",
+      "sha256": "A968E7DF14DC5D2F3B6753DF9A2CFC8627E40E3EF8AA51946DDD6E7D20314089"
+    },
+    {
+      "local_path": "output/publication/GAGA_STACKS_R3_MANIFEST.csv",
+      "remote_filename": "83_GAGA_Stacks_R3_MANIFEST.csv",
+      "bytes": 3989,
+      "md5": "CF4CDFCC9E83C9D148AE7D49441796A2",
+      "sha256": "3B9FA226968815523443E59744791F4307B8245B99C949D770DE8B88258FB8CA"
+    },
+    {
+      "local_path": "srcmap/publish_gaga_r3_zenodo.py",
+      "remote_filename": "84_GAGA_Stacks_R3_Zenodo_publisher.py",
+      "bytes": 47275,
+      "md5": "B97986D9720C931852EE26BD8FCDDCE4",
+      "sha256": "71B18C907104A993EBA52AD57F157196101426B6FAD01890B2B7E17320D9E0A7"
+    }
+  ],
+  "transfer_actions": [
+    {
+      "remote_filename": "60_GAGA_Stacks_R3_English.pdf",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "61_GAGA_Stacks_R3_Japanese.pdf",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "62_GAGA_Stacks_R3_Simplified_Chinese.pdf",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "63_GAGA_Stacks_R3_English.tex",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "64_GAGA_Stacks_R3_Japanese.tex",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "65_GAGA_Stacks_R3_Simplified_Chinese.tex",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "66_GAGA_Stacks_R3_Japanese_chapters.tex",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "67_GAGA_Stacks_R3_Simplified_Chinese_chapters.tex",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "68_GAGA_Stacks_R3_preamble.tex",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "69_GAGA_Stacks_R3_chapters.tex",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "70_GAGA_Stacks_R3_bibliography.bib",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "71_GAGA_Stacks_R3_class.cls",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "72_GAGA_Stacks_R3_units.csv",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "73_GAGA_Stacks_R3_map.csv",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "74_GAGA_Stacks_R3_decisions.csv",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "75_GAGA_Stacks_R3_source_issues.csv",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "76_GAGA_Stacks_R3_mapping_check.json",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "77_GAGA_Stacks_R3_terminal_receipt.json",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "78_GAGA_Stacks_R3_builder.py",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "79_GAGA_Stacks_R3_edition_validator.py",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "80_GAGA_Stacks_R3_edition_builder.py",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "81_GAGA_Stacks_R3_localized_build_validation.json",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "82_GAGA_Stacks_R3_README.md",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "83_GAGA_Stacks_R3_MANIFEST.csv",
+      "action": "uploaded"
+    },
+    {
+      "remote_filename": "84_GAGA_Stacks_R3_Zenodo_publisher.py",
+      "action": "uploaded"
+    }
+  ],
+  "anonymous_public_readback": [
+    {
+      "remote_filename": "60_GAGA_Stacks_R3_English.pdf",
+      "bytes": 496076,
+      "sha256": "93B61241CF64C402DDA3CB2CCD19909F5030E69244BFE8C455B5A95BC246BEC0",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "61_GAGA_Stacks_R3_Japanese.pdf",
+      "bytes": 411303,
+      "sha256": "B244927089C1525AB3DE070701648C1C722C5CD240DB6AA5EF2FA707AB751708",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "62_GAGA_Stacks_R3_Simplified_Chinese.pdf",
+      "bytes": 254336,
+      "sha256": "CAA2EE705BF8DF0743C5E65ECBCDD92A516896F99374E398670739D509459387",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "63_GAGA_Stacks_R3_English.tex",
+      "bytes": 79740,
+      "sha256": "BBCCEE29FE3AF084E8435F3E32F8537EE3DDED2558E1A9FCD2940F8664BB5201",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "64_GAGA_Stacks_R3_Japanese.tex",
+      "bytes": 85921,
+      "sha256": "E441FF5AFDF7CBD41DA98273BE7BE9615537F5D25D7D05CF436A6AD9B3ED753E",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "65_GAGA_Stacks_R3_Simplified_Chinese.tex",
+      "bytes": 73217,
+      "sha256": "25B5CD697A71E3FCD98E66BB0FA97429A378A76759B61D1874EC7321CAA4699D",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "66_GAGA_Stacks_R3_Japanese_chapters.tex",
+      "bytes": 8820,
+      "sha256": "62A9C3BD27CA840C505D202B57535B3E2D8BBAF2A40A39D746151F1CCE5243B2",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "67_GAGA_Stacks_R3_Simplified_Chinese_chapters.tex",
+      "bytes": 7931,
+      "sha256": "8F7530C8EE3DF3E78FC30C90C587C14318FAB66BEA5F20687559F490F8024FDE",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "68_GAGA_Stacks_R3_preamble.tex",
+      "bytes": 8807,
+      "sha256": "8D6E0CD5B4CD6187E96A0FA289BD1A8C3B185310F22F4AAFAD39BE62ADF1BA65",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "69_GAGA_Stacks_R3_chapters.tex",
+      "bytes": 8735,
+      "sha256": "C79BC934FA6DD52DB2A8AF11EECF3667CC3C682FA30239408679D62C4D49B299",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "70_GAGA_Stacks_R3_bibliography.bib",
+      "bytes": 220937,
+      "sha256": "953C5DFAEE8F1176A1F154B40B99C751EE206D41F030299E0DE7D9807F5128E8",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "71_GAGA_Stacks_R3_class.cls",
+      "bytes": 62060,
+      "sha256": "33C63548F27DA96BE5B1BBDA435784DB1C514E58B33699F8F80460F4B9F282E7",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "72_GAGA_Stacks_R3_units.csv",
+      "bytes": 60100,
+      "sha256": "8F8DB43D6732A1987ACD9A02BD47E96697CFDC35DFECDF9C6207977B1D515C9B",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "73_GAGA_Stacks_R3_map.csv",
+      "bytes": 83111,
+      "sha256": "76BCA905ADD4582EAED1AC34DA266DE38608CBDFABE843B736B1D7300E8FE41F",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "74_GAGA_Stacks_R3_decisions.csv",
+      "bytes": 32612,
+      "sha256": "E298D871C257CFA9917EFD8A10048D562877FA551A577E9495C9D00DBECAE23D",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "75_GAGA_Stacks_R3_source_issues.csv",
+      "bytes": 88,
+      "sha256": "30C973E3978577AEBA6DE60B941DC4D88CACE6C3FCC3DDA50F6EB5F43D8BE9F5",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "76_GAGA_Stacks_R3_mapping_check.json",
+      "bytes": 82907,
+      "sha256": "D07D28C8D40476BE2BEB0B63997519B25A6A674F8B6C7F8E01533D100E81E6A9",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "77_GAGA_Stacks_R3_terminal_receipt.json",
+      "bytes": 16536,
+      "sha256": "8A67743F56BC828558624019B3DA9CD6317F5CE4FFF8B811926023B57344922D",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "78_GAGA_Stacks_R3_builder.py",
+      "bytes": 21729,
+      "sha256": "F3D6C8AD9715182FD398FA6DF777E65DEBE2F0C458CC95342E704FDCE54620D6",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "79_GAGA_Stacks_R3_edition_validator.py",
+      "bytes": 8918,
+      "sha256": "E424B32DB9E09BA74A81DE949FD0A0D7AB92FA91DCA795DAF7D9F6E337A057CE",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "80_GAGA_Stacks_R3_edition_builder.py",
+      "bytes": 10408,
+      "sha256": "1F826B665A538D96070D4B4ECAE0C0DEFB1A617134C83EF5F9DF6E29D4F3C8E2",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "81_GAGA_Stacks_R3_localized_build_validation.json",
+      "bytes": 19449,
+      "sha256": "35AA616A7BE91B066468FBC7531BBABFDD4FD0030DA3C395C8E8D2E4B72F61D4",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "82_GAGA_Stacks_R3_README.md",
+      "bytes": 3109,
+      "sha256": "A968E7DF14DC5D2F3B6753DF9A2CFC8627E40E3EF8AA51946DDD6E7D20314089",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "83_GAGA_Stacks_R3_MANIFEST.csv",
+      "bytes": 3989,
+      "sha256": "3B9FA226968815523443E59744791F4307B8245B99C949D770DE8B88258FB8CA",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "84_GAGA_Stacks_R3_Zenodo_publisher.py",
+      "bytes": 47275,
+      "sha256": "71B18C907104A993EBA52AD57F157196101426B6FAD01890B2B7E17320D9E0A7",
+      "status": "PASS"
+    }
+  ]
+}

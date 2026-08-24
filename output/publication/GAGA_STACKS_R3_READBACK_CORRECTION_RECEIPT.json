@@ -1,0 +1,77 @@
+{
+  "schema": "gaga-r3-readback-correction-receipt-v1",
+  "created_utc": "2026-08-24T21:27:15.331817+00:00",
+  "status": "PASS",
+  "predecessor": {
+    "record_id": 22086708,
+    "doi": "10.5281/zenodo.22086708",
+    "files": 94
+  },
+  "published": {
+    "record_id": 22087259,
+    "doi": "10.5281/zenodo.22087259",
+    "concept_record_id": 21781322,
+    "concept_doi": "10.5281/zenodo.21781322",
+    "version": "2026-08-24 GAGA R3 anonymous readback compatibility correction",
+    "files": 94
+  },
+  "unchanged_files": 92,
+  "metadata": {
+    "changed_keys": [
+      "description",
+      "version"
+    ],
+    "stable_keys_verified": [
+      "title",
+      "creators",
+      "contributors",
+      "resource_type",
+      "access_right",
+      "license",
+      "keywords",
+      "related_identifiers",
+      "language",
+      "references"
+    ]
+  },
+  "replacements": [
+    {
+      "local_path": "output/publication/GAGA_STACKS_R3_MANIFEST.csv",
+      "remote_filename": "83_GAGA_Stacks_R3_MANIFEST.csv",
+      "bytes": 3989,
+      "md5": "D872D0DD6593DC0FF7F5AD8EBCFF5E21",
+      "sha256": "AD594B2F29D2AA45F3FCF96030DA8633824F76678BF7A9E813FADCD941331645"
+    },
+    {
+      "local_path": "srcmap/publish_gaga_r3_zenodo.py",
+      "remote_filename": "84_GAGA_Stacks_R3_Zenodo_publisher.py",
+      "bytes": 47465,
+      "md5": "51A27638238F15539F0C9F2D25809A42",
+      "sha256": "A399A496FAE88A4AF17D1C81375932F1909B6B5F7E5238C59B240470FF29952E"
+    }
+  ],
+  "transfer_actions": [
+    {
+      "remote_filename": "83_GAGA_Stacks_R3_MANIFEST.csv",
+      "action": "replaced"
+    },
+    {
+      "remote_filename": "84_GAGA_Stacks_R3_Zenodo_publisher.py",
+      "action": "replaced"
+    }
+  ],
+  "anonymous_public_readback": [
+    {
+      "remote_filename": "83_GAGA_Stacks_R3_MANIFEST.csv",
+      "bytes": 3989,
+      "sha256": "AD594B2F29D2AA45F3FCF96030DA8633824F76678BF7A9E813FADCD941331645",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "84_GAGA_Stacks_R3_Zenodo_publisher.py",
+      "bytes": 47465,
+      "sha256": "A399A496FAE88A4AF17D1C81375932F1909B6B5F7E5238C59B240470FF29952E",
+      "status": "PASS"
+    }
+  ]
+}
