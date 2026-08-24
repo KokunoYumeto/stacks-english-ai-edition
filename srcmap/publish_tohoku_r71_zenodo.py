@@ -342,7 +342,9 @@ def clone_metadata(
         for key in set(predecessor) | set(baseline)
         if predecessor.get(key) != baseline.get(key)
     }
-    unexpected = sorted(changed - {"doi", "prereserve_doi", "version"})
+    unexpected = sorted(
+        changed - {"doi", "prereserve_doi", "publication_date", "version"}
+    )
     if unexpected:
         raise RuntimeError(f"Tôhoku clone metadata drift: {unexpected}")
     wanted = target_metadata(baseline)
@@ -409,7 +411,13 @@ def load_state(
     if int(state.get("concept_record_id", -1)) != int(CONCEPT_ID):
         raise RuntimeError("Tôhoku release state concept mismatch")
     if state.get("payload") != identities:
-        raise RuntimeError("Current Tôhoku payload differs from the frozen state")
+        if state.get("status") == "intent" and state.get("stage") in {
+            "intent_persisted_before_newversion",
+            "draft_identity_persisted_before_metadata_validation",
+        }:
+            state["_payload_rebind_required"] = True
+        else:
+            raise RuntimeError("Current Tôhoku payload differs from the frozen state")
     if base.inventory_from_rows(state.get("inherited_inventory", [])) != inherited:
         raise RuntimeError("Tôhoku inherited inventory differs from frozen state")
     if state.get("stage") == "draft_validation_failed":
@@ -452,8 +460,18 @@ def adopt_or_create_draft(
         "metadata", {}
     ).get("description"):
         raise RuntimeError("Authenticated and anonymous Tôhoku predecessor disagree")
-    draft = find_concept_draft(token)
+    persisted_candidate = state.get("draft_candidate")
+    draft: dict[str, Any] | None = None
     origin = "adopted_existing"
+    if isinstance(persisted_candidate, dict):
+        candidate_url = persisted_candidate.get("self_url")
+        if not isinstance(candidate_url, str):
+            raise RuntimeError("Persisted Tôhoku draft candidate lacks its self URL")
+        base.validate_zenodo_url(candidate_url, require_api=True)
+        _, draft = base.request_json(candidate_url, token=token)
+        origin = str(persisted_candidate.get("origin", "adopted_existing"))
+    if draft is None:
+        draft = find_concept_draft(token)
     if draft is None:
         _, response = base.request_json(
             f"https://zenodo.org/api/deposit/depositions/{PREDECESSOR_ID}/actions/newversion",
@@ -475,11 +493,6 @@ def adopt_or_create_draft(
         if draft is None:
             raise RuntimeError("Tôhoku new-version action exposed no mutable draft")
         origin = "created_now"
-    current_metadata = copy.deepcopy(draft.get("metadata", {}))
-    original_metadata = clone_metadata(
-        current_metadata, predecessor_deposition.get("metadata", {})
-    )
-    wanted_metadata = target_metadata(original_metadata)
     links = draft.get("links", {})
     action_links = {
         "self_url": links.get("self"),
@@ -492,13 +505,28 @@ def adopt_or_create_draft(
         base.validate_zenodo_url(url, require_api=True)
     state = update_state(
         state,
+        status="intent",
+        stage="draft_identity_persisted_before_metadata_validation",
+        draft_candidate={
+            "record_id": int(draft["id"]),
+            "origin": origin,
+            **action_links,
+        },
+        observed_draft_files=len(draft.get("files", [])),
+    )
+    current_metadata = copy.deepcopy(draft.get("metadata", {}))
+    original_metadata = clone_metadata(
+        current_metadata, predecessor_deposition.get("metadata", {})
+    )
+    wanted_metadata = target_metadata(original_metadata)
+    state = update_state(
+        state,
         status="draft",
         stage="draft_identity_persisted_before_validation",
         draft={"record_id": int(draft["id"]), "origin": origin, **action_links},
         original_metadata=original_metadata,
         target_metadata=wanted_metadata,
         metadata_changed_keys=["description", "version"],
-        observed_draft_files=len(draft.get("files", [])),
     )
     try:
         if int(draft["id"]) == PREDECESSOR_ID:
@@ -695,6 +723,12 @@ def execute(
 ) -> dict[str, Any]:
     if state is None:
         state = create_intent(identities, inherited)
+    if state.pop("_payload_rebind_required", False):
+        state = update_state(
+            state,
+            payload=identities,
+            stage="intent_payload_rebound_before_remote_mutation",
+        )
     if state["status"] in {"published", "verified"}:
         return finalize(
             verify_public(
