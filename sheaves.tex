@@ -190,7 +190,7 @@ $\Mor(\mathcal{H}, \mathcal{F} \times \mathcal{G})
 
 \noindent
 Recall that if $(A, + : A \times A \to A, - : A \to A, 0\in A)$
-is an abelian group, then the zero and the negation maps are
+is an abelian group, then the zero element and the negation map are
 uniquely determined by the addition law. In other words, it
 makes sense to say ``let $(A, +)$ be an abelian group''.
 
@@ -322,7 +322,7 @@ the map of sets $\rho_V^U: \mathcal{F}(U) \to \mathcal{F}(V)$
 is a morphism of algebraic structures.
 \end{enumerate}
 In other words, for every $V \subset U$ open in $X$
-the restriction mappings $\rho^U_V$ is the image
+the restriction mapping $\rho^U_V$ is the image
 $F(\alpha^U_V)$ for some unique morphism
 $\alpha^U_V : A(U) \to A(V)$ in the category $\mathcal{C}$.
 The uniqueness is forced by the condition that $F$ is
@@ -346,12 +346,13 @@ is given by a rule which assigns to every open $U \subset X$
 an object $\mathcal{F}(U)$ of $\mathcal{C}$
 and to each inclusion $V \subset U$
 a morphism $\rho_V^U : \mathcal{F}(U) \to \mathcal{F}(V)$
-in $\mathcal{C}$ such that whenever $W \subset V \subset U$
+in $\mathcal{C}$ such that $\rho_U^U = \text{id}_{\mathcal{F}(U)}$ for every open $U \subset X$, and whenever $W \subset V \subset U$
 we have $\rho_W^U = \rho_W^V \circ \rho_V^U$.
 \item A {\it morphism $\varphi : \mathcal{F} \to \mathcal{G}$
-of presheaves with value in $\mathcal{C}$} is given by a
-morphism $\varphi : \mathcal{F}(U) \to \mathcal{G}(U)$
-in $\mathcal{C}$ compatible with restriction morphisms.
+of presheaves with values in $\mathcal{C}$} is given by
+morphisms $\varphi_U : \mathcal{F}(U) \to \mathcal{G}(U)$
+in $\mathcal{C}$, one for every open $U \subset X$, compatible with
+restriction morphisms.
 \end{enumerate}
 \end{definition}
 
@@ -407,7 +408,7 @@ $$
 such that for every open $U \subset X$ the map
 $\mathcal{O}(U) \times \mathcal{F}(U) \to \mathcal{F}(U)$
 defines the structure of an $\mathcal{O}(U)$-module
-structure on the abelian group $\mathcal{F}(U)$.
+on the abelian group $\mathcal{F}(U)$.
 \item A {\it morphism $\varphi : \mathcal{F} \to \mathcal{G}$
 of presheaves of $\mathcal{O}$-modules} is a morphism of abelian presheaves
 $\varphi : \mathcal{F} \to \mathcal{G}$ such that
@@ -657,7 +658,7 @@ Lemma \ref{lemma-points-exactness}.
 Let $X$ be a topological space. Let $(A_x)_{x \in X}$ be
 a family of sets $A_x$ indexed by points $x \in X$. We are
 going to construct a sheaf of sets $\Pi$ from this data.
-For $U \subset X$ open set
+For every open $U \subset X$
 $$
 \Pi(U) = \prod\nolimits_{x \in U} A_x.
 $$
@@ -934,7 +935,7 @@ is a morphism of presheaves of $\mathcal{O}$-modules.
 \item Given sheaves of $\mathcal{O}$-modules
 $\mathcal{F}$ and $\mathcal{G}$ we denote
 $\Hom_\mathcal{O}(\mathcal{F}, \mathcal{G})$
-the set of morphism of sheaves of $\mathcal{O}$-modules.
+the set of morphisms of sheaves of $\mathcal{O}$-modules.
 \item The category of sheaves of $\mathcal{O}$-modules
 is denoted $\textit{Mod}(\mathcal{O})$.
 \end{enumerate}
@@ -1187,7 +1188,7 @@ Omitted.
 By the very definition, all the morphisms $\mathcal{F}(U)
 \to \mathcal{F}_x$ are morphisms in the category $\mathcal{C}$
 which (after applying the forgetful functor $F$) turn into
-the corresponding maps for the underlying sheaf of sets.
+the corresponding maps for the underlying presheaf of sets.
 As usual we will not distinguish between the morphism
 in $\mathcal{C}$ and the underlying map of sets, which
 is permitted since $F$ is faithful.
@@ -1608,7 +1609,7 @@ The presheaf $\mathcal{F}^{\#}$ is a sheaf.
 It is probably better for the reader to find their own explanation
 of this than to read the proof here. In fact the lemma is true
 for the same reason as why the presheaf of continuous
-function is a sheaf, see Example \ref{example-basic-continuous-maps}
+functions is a sheaf, see Example \ref{example-basic-continuous-maps}
 (and this analogy can be made precise using the ``espace \'etal\'e'').
 
 \medskip\noindent
@@ -1816,7 +1817,7 @@ then $\mathcal{F}^\#$ canonically inherits the structure of abelian sheaf.
 This is quite easy to do by hand, and we leave it to the
 reader to find a good simple argument. The argument we use here,
 which generalizes to presheaves of algebraic structures is the following:
-Lemma \ref{lemma-diagram-fibre-product} show that
+Lemma \ref{lemma-diagram-fibre-product} shows that
 $\mathcal{F}^\#(U)$ is the fibre product of a diagram
 of abelian groups. Thus $\mathcal{F}^\#$ is an abelian
 subgroup as desired.
@@ -1833,7 +1834,7 @@ of abelian groups. This will be used below without further mention.
 \medskip\noindent
 To prove the adjointness property we use the adjointness
 property of sheafification of presheaves of sets. For example
-if $\psi : \mathcal{F} \to i(\mathcal{G})$ is morphism of presheaves
+if $\psi : \mathcal{F} \to i(\mathcal{G})$ is a morphism of presheaves
 then we obtain a morphism of sheaves
 $\psi' : \mathcal{F}^\# \to \mathcal{G}$. What we have to do is to check
 that this is a morphism of abelian sheaves. We may do this
@@ -1917,7 +1918,7 @@ commute and which makes $\mathcal{F}^\#$ into a sheaf
 of $\mathcal{O}^\#$-modules. In addition, if $\mathcal{G}$
 is a sheaf of $\mathcal{O}^\#$-modules, then any morphism
 of presheaves of $\mathcal{O}$-modules $\mathcal{F} \to \mathcal{G}$
-(into the restriction of $\mathcal{G}$ to a $\mathcal{O}$-module)
+(where $\mathcal{G}$ is viewed as an $\mathcal{O}$-module by restriction of scalars)
 factors uniquely as $\mathcal{F} \to \mathcal{F}^\# \to \mathcal{G}$
 where $\mathcal{F}^\# \to \mathcal{G}$ is a morphism of
 $\mathcal{O}^\#$-modules.
@@ -2018,7 +2019,7 @@ because $\mathcal{F}$ is a sheaf.
 Let $X$ be a topological space.
 Let $\mathcal{O} \to \mathcal{O}'$ be a morphism of
 sheaves of rings on $X$.
-Let $\mathcal{F}$ be a sheaf $\mathcal{O}$-modules.
+Let $\mathcal{F}$ be a sheaf of $\mathcal{O}$-modules.
 Let $x \in X$. We have
 $$
 \mathcal{F}_x \otimes_{\mathcal{O}_x} \mathcal{O}'_x
@@ -2166,7 +2167,7 @@ in $\mathcal{G}$, and similarly for the restriction mappings.
 Hence we have defined $f_p$ as a functor.
 
 \medskip\noindent
-A small useful remark is that there exists
+A small useful remark is that for every open $U \subset Y$ there exists
 a canonical map $\mathcal{G}(U) \to f_p\mathcal{G}(f^{-1}(U))$,
 because the system of open neighbourhoods
 of $f(f^{-1}(U))$ contains the element $U$. This is compatible
@@ -2184,7 +2185,7 @@ $f_*\psi \circ i_\mathcal{G} :
 \medskip\noindent
 Another small useful remark is that there exists a
 canonical map $c_\mathcal{F} : f_p f_* \mathcal{F} \to \mathcal{F}$.
-Namely, let $U \subset X$ open.
+Namely, let $U \subset X$ be open.
 For every open neighbourhood $V \supset f(U)$ in $Y$
 there exists a map
 $f_*\mathcal{F}(V) = \mathcal{F}(f^{-1}(V))\to \mathcal{F}(U)$,
@@ -2338,8 +2339,8 @@ and we have $f_*\mathcal{F}(V) = \mathcal{F}(f^{-1}(V))$.
 Thus at least the "data" corresponds exactly to what you need
 for an $f$-map $\xi$ from $\mathcal{G}$ to $\mathcal{F}$.
 To show that the sets (1) and (3) are in bijection we observe that
-$a$ is a map of sheaves if and only if corresponding family of maps $a_V$
-satisfy the condition in Definition \ref{definition-f-map}.
+$a$ is a map of sheaves if and only if the corresponding family of maps $a_V$
+satisfies the condition in Definition \ref{definition-f-map}.
 
 \medskip\noindent
 Recall that $f^{-1}\mathcal{G}$ is the sheafification of $f_p\mathcal{G}$.
@@ -2369,7 +2370,7 @@ as in (4) associates the $f$-map $\xi$ with $\xi_V = \xi_{f^{-1}(V), V}$
 is bijective. To do this, if $\xi$ is a usual $f$-map then we just
 define $\tilde \xi_{U, V}$ to be the composition of
 $\xi_V : \mathcal{G}(V) \to \mathcal{F}(f^{-1}(V))$
-by the restruction map $\mathcal{F}(f^{-1}(V)) \to \mathcal{F}(U)$
+by the restriction map $\mathcal{F}(f^{-1}(V)) \to \mathcal{F}(U)$
 which makes sense exactly because $f(U) \subset V$, i.e.,
 $U \subset f^{-1}(V)$. This finishes the proof.
 \end{proof}
@@ -2386,7 +2387,7 @@ maps of topological spaces. Suppose that $\mathcal{F}$ is
 a sheaf on $X$, $\mathcal{G}$ is a sheaf on $Y$, and
 $\mathcal{H}$ is a sheaf on $Z$.
 Let $\varphi : \mathcal{G} \to \mathcal{F}$ be an $f$-map.
-Let $\psi : \mathcal{H} \to \mathcal{G}$ be an $g$-map.
+Let $\psi : \mathcal{H} \to \mathcal{G}$ be a $g$-map.
 The {\it composition of $\varphi$ and $\psi$} is the
 $(g \circ f)$-map $\varphi \circ \psi$ defined
 by the commutativity of the diagrams
@@ -2446,7 +2447,7 @@ maps of topological spaces. Suppose that $\mathcal{F}$ is
 a sheaf on $X$, $\mathcal{G}$ is a sheaf on $Y$, and
 $\mathcal{H}$ is a sheaf on $Z$.
 Let $\varphi : \mathcal{G} \to \mathcal{F}$ be an $f$-map.
-Let $\psi : \mathcal{H} \to \mathcal{G}$ be an $g$-map.
+Let $\psi : \mathcal{H} \to \mathcal{G}$ be a $g$-map.
 Let $x \in X$ be a point. The map on stalks
 $(\varphi \circ \psi)_x : \mathcal{H}_{g(f(x))}
 \to \mathcal{F}_x$ is the composition
@@ -2502,7 +2503,7 @@ all homomorphisms of abelian groups).
 
 \medskip\noindent
 The assignments $\mathcal{F} \mapsto f_*\mathcal{F}$ and
-$\mathcal{G} \to f_p\mathcal{G}$ are functors on
+$\mathcal{G} \mapsto f_p\mathcal{G}$ are functors on
 the categories of presheaves of abelian groups.
 This is clear, as (for example) a map of abelian presheaves
 $\mathcal{G}_1 \to \mathcal{G}_2$ gives rise to a map of
@@ -2527,7 +2528,6 @@ of Lemma \ref{lemma-pullback-presheaves}
 is a map of abelian presheaves. Hence if
 $\psi : f_p\mathcal{G} \to \mathcal{F}$
 is a map of abelian presheaves, then the corresponding map
-$\mathcal{G} \to f_*\mathcal{F}$ is the map
 $f_*\psi \circ i_\mathcal{G} :
 \mathcal{G} \to f_* f_p \mathcal{G} \to f_* \mathcal{F}$
 is also a map of abelian presheaves. For the other direction
@@ -2540,13 +2540,13 @@ given a map of abelian presheaves $\varphi : \mathcal{G} \to f_*\mathcal{F}$
 the map
 $c_\mathcal{F} \circ f_p\varphi : f_p\mathcal{G} \to \mathcal{F}$
 is a map of abelian presheaves as well. Since these constructions
-$\psi \mapsto f_*\psi$ and $\varphi \mapsto c_\mathcal{F} \circ f_p\varphi$
+$\psi \mapsto f_*\psi \circ i_\mathcal{G}$ and $\varphi \mapsto c_\mathcal{F} \circ f_p\varphi$
 are inverse to each other as constructions on maps of presheaves of sets
 we see they are also inverse to each other on maps of abelian presheaves.
 
 \medskip\noindent
-If $\mathcal{F}$ is an abelian sheaf on $Y$, then $f_*\mathcal{F}$
-is an abelian sheaf on $X$. This is true because of the definition
+If $\mathcal{F}$ is an abelian sheaf on $X$, then $f_*\mathcal{F}$
+is an abelian sheaf on $Y$. This is true because of the definition
 of an abelian sheaf and because this is true for sheaves of sets,
 see Lemma \ref{lemma-pushforward-sheaf}. This defines the functor
 $f_*$ on the category of abelian sheaves.
@@ -2754,7 +2754,7 @@ Omitted.
 \noindent
 The case of sheaves of modules is more complicated.
 The reason is that the natural setting for defining
-the pullback and pushforward functors, is the setting
+the pullback and pushforward functors is the setting
 of ringed spaces, which we will define below. First
 we state a few obvious lemmas.
 
@@ -2775,7 +2775,7 @@ functorial in $\mathcal{F}$.
 \end{lemma}
 
 \begin{proof}
-Let $V \subset Y$ is open. We define the map of the lemma
+Let $V \subset Y$ be open. We define the map of the lemma
 to be the map
 $$
 f_*\mathcal{O}(V) \times f_*\mathcal{F}(V)
@@ -2808,7 +2808,7 @@ This construction is functorial in $\mathcal{G}$.
 \end{lemma}
 
 \begin{proof}
-Let $U \subset X$ is open. We define the map of the lemma
+Let $U \subset X$ be open. We define the map of the lemma
 to be the map
 \begin{eqnarray*}
 f_p\mathcal{O}(U) \times f_p\mathcal{G}(U)
@@ -2872,7 +2872,7 @@ Note that we have
 $$
 \Mor_{\textit{PAb}(X)}(f_p\mathcal{G}, \mathcal{F})
 =
-\Mor_{\textit{PAb}(Y)}(\mathcal{G}, f_*\mathcal{F}).
+\Mor_{\textit{PAb}(Y)}(\mathcal{G}, f_*\mathcal{F})
 $$
 according to Section \ref{section-abelian-presheaves-functorial}.
 So what we have to prove is that under this correspondence, the
@@ -2939,7 +2939,7 @@ The second equality is
 Lemma \ref{lemma-adjoint-push-pull-presheaves-modules}.
 The third equality is given by the equality
 $f_*(\mathcal{F}_{f_pf_*\mathcal{O}}) = f_*\mathcal{F}$
-of abelian sheaves which is $f_*\mathcal{O}$-linear. Namely,
+of abelian presheaves which is $f_*\mathcal{O}$-linear. Namely,
 $\text{id}_{f_*\mathcal{O}}$ corresponds to $c_\mathcal{O}$
 under the adjunction described in the proof of
 Lemma \ref{lemma-pullback-presheaves}
@@ -3026,8 +3026,8 @@ Argue by the equalities
 & = &
 \Mor_{\textit{Mod}(\mathcal{O})}(\mathcal{G}, f_*\mathcal{F}).
 \end{eqnarray*}
-where the second is
-Lemmas \ref{lemma-adjoint-push-pull-presheaves-modules}
+The second equality is
+Lemma \ref{lemma-adjoint-push-pull-presheaves-modules}
 and the first is by Lemma \ref{lemma-sheafification-presheaf-modules}.
 \end{proof}
 
@@ -3062,7 +3062,7 @@ f^{-1}\mathcal{G}, \mathcal{F}_{f^{-1}f_*\mathcal{O}}) \\
 & = &
 \Mor_{\textit{Mod}(f_*\mathcal{O})}(\mathcal{G}, f_*\mathcal{F}).
 \end{eqnarray*}
-which are a combination of
+These equalities are a combination of
 Lemma \ref{lemma-adjointness-tensor-restrict}
 and \ref{lemma-adjoint-push-pull-modules}.
 \end{proof}
@@ -3189,11 +3189,11 @@ be a morphism of ringed spaces.
 \begin{enumerate}
 \item Let $\mathcal{F}$ be a sheaf of $\mathcal{O}_X$-modules.
 We define the {\it pushforward} of $\mathcal{F}$ as the
-sheaf of $\mathcal{O}_Y$-modules which as a sheaf
-of abelian groups equals $f_*\mathcal{F}$ and with
-module structure given by the restriction
+sheaf of $\mathcal{O}_Y$-modules whose underlying sheaf
+of abelian groups is $f_*\mathcal{F}$ and whose
+module structure is obtained by restriction of scalars
 via $f^\sharp : \mathcal{O}_Y \to f_*\mathcal{O}_X$
-of the module structure given
+from the module structure given
 in Lemma \ref{lemma-pushforward-module}.
 \item Let $\mathcal{G}$ be a sheaf of $\mathcal{O}_Y$-modules.
 We define the {\it pullback} $f^*\mathcal{G}$ to be the
@@ -3274,7 +3274,7 @@ argument as in the proof of Lemma \ref{lemma-pullback-composition}.
 \noindent
 Given a morphism of ringed spaces
 $(f, f^\sharp) : (X, \mathcal{O}_X) \to (Y, \mathcal{O}_Y)$,
-and a sheaf of $\mathcal{O}_X$-modules $\mathcal{F}$,
+a sheaf of $\mathcal{O}_X$-modules $\mathcal{F}$, and
 a sheaf of $\mathcal{O}_Y$-modules $\mathcal{G}$ on $Y$,
 the notion of an {\it $f$-map $\varphi : \mathcal{G} \to \mathcal{F}$
 of sheaves of modules} makes sense. We can just define
@@ -3299,7 +3299,7 @@ See above.
 Composition of $f$-maps is defined in exactly the
 same manner as in the case of $f$-maps of sheaves of
 sets. In addition, given an $f$-map $\mathcal{G} \to \mathcal{F}$
-as above, and $x \in X$ the induced map on stalks
+as above and $x \in X$, the induced map on stalks
 $$
 \varphi_x : \mathcal{G}_{f(x)} \longrightarrow \mathcal{F}_x
 $$
@@ -3342,7 +3342,7 @@ for example.
 \label{definition-skyscraper-sheaf}
 Let $X$ be a topological space.
 \begin{enumerate}
-\item Let $x \in X$ be a point. Denote $i_x : \{x\} \to X$ the inclusion map.
+\item Let $x \in X$ be a point. Let $i_x : \{x\} \to X$ be the inclusion map.
 Let $A$ be a set and think of $A$ as a sheaf on the one point space $\{x\}$.
 We call $i_{x, *}A$ the {\it skyscraper sheaf at $x$ with value $A$}.
 \item If in (1) above $A$ is an abelian group then we think of
@@ -3399,7 +3399,7 @@ Omitted.
 
 \begin{lemma}
 \label{lemma-stalk-skyscraper-adjoint}
-Let $X$ be a topological space, and let $x \in X$ a point.
+Let $X$ be a topological space, and let $x \in X$ be a point.
 The functors $\mathcal{F} \mapsto \mathcal{F}_x$ and
 $A \mapsto i_{x, *}A$ are adjoint. In a formula
 $$
@@ -3408,7 +3408,7 @@ $$
 \Mor_{\Sh(X)}(\mathcal{F}, i_{x, *}A).
 $$
 A similar statement holds for the case of
-abelian groups, algebraic structures. In the case of
+abelian groups and algebraic structures. In the case of
 sheaves of modules we have
 $$
 \Hom_{\mathcal{O}_{X, x}}(\mathcal{F}_x, A)
@@ -3579,7 +3579,7 @@ $U$ is quasi-compact and hence by (2) we have injectivity of $\Psi$.
 Let $s$ be an element of the target of $\Psi$.
 By assumption there  exists a finite open covering
 $U = \bigcup_{j = 1, \ldots, m} U_j$, with $U_j \cap U_{j'}$
-quasi-compact for all $j, j' \in J$ and
+quasi-compact for all $1 \leq j, j' \leq m$ and
 for each $j$ an index $i_j \in I$ and $s_j \in \mathcal{F}_{i_j}(U_j)$
 such that $s|_{U_j}$ is the image of $s_j$ for all $j$.
 Since $U_j \cap U_{j'}$ is quasi-compact we can apply (2)
@@ -3648,16 +3648,16 @@ p_i^{-1}\mathcal{G}(p_i^{-1}(U_i))$ is injective.
 Let $s, s'$ be sections of $f_a^{-1}\mathcal{G}$
 over $f_a^{-1}(U_i)$ for some $a : j \to i$. For
 $b : k \to j$ let $Z_k \subset f_{a \circ b}^{-1}(U_i)$
-be the closed subset of points $x$ such that the image of
+be the closed subset of points $x$ such that the images of
 $s$ and $s'$ in the stalk $(f_{a \circ b}^{-1}\mathcal{G})_x$
 are different. If $Z_k$ is nonempty for all $b : k \to j$, then by
 Topology, Lemma \ref{topology-lemma-inverse-limit-spectral-spaces-nonempty}
 we see that $\lim_{b : k \to j} Z_k$ is nonempty too.
 Then for $x \in \lim_{b : k \to j} Z_k \subset X$
 (observe that $\mathcal{I}/j \to \mathcal{I}$ is initial)
-we see that the image of $s$ and $s'$ in the stalk of
+we see that the images of $s$ and $s'$ in the stalk of
 $p_i^{-1}\mathcal{G}$ at $x$ are different too since
-$(p_i^{-1}\mathcal{G})_x = (f_{b \circ a}^{-1}\mathcal{G})_{p_k(x)}$
+$(p_i^{-1}\mathcal{G})_x = (f_{a \circ b}^{-1}\mathcal{G})_{p_k(x)}$
 for all $b : k \to j$ as above. Thus if the images of $s$ and $s'$
 in $p_i^{-1}\mathcal{G}(p_i^{-1}(U_i))$ are the same, then $Z_k$
 is empty for some $b : k \to j$. This proves injectivity.
@@ -3673,7 +3673,7 @@ opens $V_{l, i} \subset X_i$,
 sections $s_{l, i} \in \mathcal{G}(V_{l, i})$
 such that $p_i(W_l) \subset V_{l, i}$ and $p_i^{-1}s_{l, i}|_{W_l} = s|_{W_l}$.
 Because $X$ and $X_i$ are spectral and $p_i^{-1}(U_i)$ is quasi-compact open,
-we may assume $L$ is finite and $W_l$ and $V_{l, i}$ quasi-compact open
+we may assume $L$ is finite and $W_l$ and $V_{l, i}$ are quasi-compact opens
 for all $l$. Then we can apply
 Topology, Lemma \ref{topology-lemma-descend-opens}
 to find $a : j \to i$ and open covering
@@ -3681,7 +3681,7 @@ $f_a^{-1}(U_i) = \bigcup_{l \in L} W_{l, j}$ by quasi-compact
 opens whose pullback to $X$ is the covering
 $p_i^{-1}(U_i) = \bigcup_{l \in L} W_l$
 and such that moreover $W_{l, j} \subset f_a^{-1}(V_{l, i})$.
-Write $s_{l, j}$ the restriction of the pullback of $s_{l, i}$
+Write $s_{l, j}$ for the restriction of the pullback of $s_{l, i}$
 by $f_a$ to $W_{l, j}$. Then we see that $s_{l, j}$ and $s_{l', j}$
 restrict to elements of $(f_a^{-1}\mathcal{G})(W_{l, j} \cap W_{l', j})$
 which pullback to the same element $(p_i^{-1}\mathcal{G})(W_l \cap W_{l'})$,
@@ -3771,7 +3771,7 @@ is a rule which assigns to each $U \in \mathcal{B}$ a set
 $\mathcal{F}(U)$ and to each inclusion $V \subset U$
 of elements of $\mathcal{B}$ a map
 $\rho^U_V : \mathcal{F}(U) \to \mathcal{F}(V)$ such that
-$\rho^U_U = \text{id}_{\mathcal{F}(U)}$ for all $U \in \mathcal{B}$
+$\rho^U_U = \text{id}_{\mathcal{F}(U)}$ for all $U \in \mathcal{B}$ and
 whenever $W \subset V \subset U$ in $\mathcal{B}$ we have
 $\rho^U_W = \rho^V_W \circ \rho ^U_V$.
 \item A {\it morphism $\varphi : \mathcal{F} \to \mathcal{G}$
@@ -3789,9 +3789,9 @@ colimit
 $$
 \mathcal{F}_x = \colim_{U\in \mathcal{B}, x\in U} \mathcal{F}(U).
 $$
-As in the case of the stalk of a presheaf on $X$ this limit is
-directed. The reason is that the collection of $U\in \mathcal{B}$,
-$x \in U$ is a fundamental system of open neighbourhoods of $x$.
+As in the case of the stalk of a presheaf on $X$, this is a
+directed colimit. The reason is that the collection of $U\in \mathcal{B}$,
+$x \in U$ is a directed fundamental system of open neighbourhoods of $x$.
 
 \medskip\noindent
 It is easy to make examples to show that the notion of a presheaf
@@ -3985,7 +3985,7 @@ $U_i \in \mathcal{B}$ such that $(s_x)_{x \in U_i}$ comes from
 certain $\sigma_i \in \mathcal{F}(U_i)$. For every $y \in U_i \cap U_j$
 the sections $\sigma_i$ and $\sigma_j$ agree in the stalk
 $\mathcal{F}_y$. Hence there exists an element $V_{ijy} \in \mathcal{B}$,
-$y \in V_{ijy}$ such that $\sigma_i|_{V_{ijy}} = \sigma_j|_{V_{ijy}}$.
+$y \in V_{ijy} \subset U_i \cap U_j$ such that $\sigma_i|_{V_{ijy}} = \sigma_j|_{V_{ijy}}$.
 Thus the sheaf condition $(**)$ of Definition \ref{definition-sheaf-basis}
 applies to the system of $\sigma_i$ and we obtain a section
 $s \in \mathcal{F}(U)$ with the desired property.
@@ -4049,7 +4049,7 @@ the members of $\mathcal{B}$.
 \end{lemma}
 
 \begin{proof}
-The inverse functor in given in Lemma \ref{lemma-extend-off-basis} above.
+The inverse functor is given in Lemma \ref{lemma-extend-off-basis} above.
 Checking the obvious functorialities is left to the
 reader.
 \end{proof}
@@ -4111,7 +4111,7 @@ Note that Lemmas \ref{lemma-cofinal-systems-coverings},
 property which we have defined in terms of the associated presheaf
 of sets. Hence they generalize without change to the notion
 of a presheaf with values in $\mathcal{C}$. The analogue of
-Lemma \ref{lemma-extend-off-basis} need some care. Here it is.
+Lemma \ref{lemma-extend-off-basis} needs some care. Here it is.
 
 \begin{lemma}
 \label{lemma-extend-off-basis-structures}
@@ -4156,7 +4156,7 @@ $$
 By the usual arguments, see Lemma \ref{lemma-image-contained-in}
 and Example \ref{example-application-lemma-image-contained-in}
 it suffices to show that this construction on underlying
-sets is the same as the definition using $(**)$ above.
+sets is the same as the definition using $(*)$ above.
 Details left to the reader.
 \end{proof}
 
@@ -4188,7 +4188,7 @@ the members of $\mathcal{B}$.
 \end{lemma}
 
 \begin{proof}
-The inverse functor in given in
+The inverse functor is given in
 Lemma \ref{lemma-extend-off-basis-structures} above.
 Checking the obvious functorialities is left to the
 reader.
@@ -4308,7 +4308,7 @@ the members of $\mathcal{B}$.
 \end{lemma}
 
 \begin{proof}
-The inverse functor in given in
+The inverse functor is given in
 Lemma \ref{lemma-extend-off-basis-module} above.
 Checking the obvious functorialities is left to the reader.
 \end{proof}
@@ -4322,7 +4322,7 @@ target given.
 \begin{lemma}
 \label{lemma-f-map-basis-below-structures}
 Let $f : X \to Y$ be a continuous map of topological spaces.
-Let $(\mathcal{C}, F)$ be a type of algebraic structures.
+Let $(\mathcal{C}, F)$ be a type of algebraic structure.
 Let $\mathcal{F}$ be a sheaf with values in $\mathcal{C}$ on $X$.
 Let $\mathcal{G}$ be a sheaf with values in $\mathcal{C}$ on $Y$.
 Let $\mathcal{B}$ be a basis for the topology on $Y$.
@@ -4389,7 +4389,7 @@ for sheaves of algebraic structures above.
 \begin{lemma}
 \label{lemma-f-map-basis-above-and-below-structures}
 Let $f : X \to Y$ be a continuous map of topological spaces.
-Let $(\mathcal{C}, F)$ be a type of algebraic structures.
+Let $(\mathcal{C}, F)$ be a type of algebraic structure.
 Let $\mathcal{F}$ be a sheaf with values in $\mathcal{C}$ on $X$.
 Let $\mathcal{G}$ be a sheaf with values in $\mathcal{C}$ on $Y$.
 Let $\mathcal{B}_Y$ be a basis for the topology on $Y$.
@@ -4417,8 +4417,8 @@ for every pair $(U, V)$ as above.
 \end{lemma}
 
 \begin{proof}
-Let us first proves this for sheaves of sets.
-Fix $V \subset Y$ open. Pick $s \in \mathcal{G}(V)$.
+Let us first prove this for sheaves of sets.
+Fix $V \in \mathcal{B}_Y$. Pick $s \in \mathcal{G}(V)$.
 We are going to construct an element
 $\varphi_V(s) \in \mathcal{F}(f^{-1}V)$.
 We can define a value $\varphi(s)_x$ in the stalk $\mathcal{F}_x$
@@ -4445,7 +4445,7 @@ $V \in \mathcal{B}_Y$. Thus we may apply Lemma
 ``glue'' them to the desired $f$-map.
 
 \medskip\noindent
-Finally, we note that the map of sheaves of sets so constructed
+Finally, we note that the $f$-map of sheaves of sets so constructed
 satisfies the property that the map on stalks
 $$
 \mathcal{G}_{f(x)} \longrightarrow \mathcal{F}_x
@@ -4455,7 +4455,7 @@ $V \in \mathcal{B}_Y$ varies over those elements that
 contain $f(x)$ and $U \in \mathcal{B}_X$ varies over those elements that
 contain $x$. In particular, if $\mathcal{G}$ and $\mathcal{F}$
 are the underlying sheaves of sets of sheaves of algebraic structures,
-then we see that the maps on stalks is a morphism of algebraic
+then we see that the maps on stalks are morphisms of algebraic
 structures. Hence we conclude that the associated map of
 sheaves of underlying sets $f^{-1}\mathcal{G} \to \mathcal{F}$
 satisfies the assumptions of
@@ -4502,7 +4502,7 @@ for every pair $(U, V)$ as above.
 \end{lemma}
 
 \begin{proof}
-Similar to the above and omitted.
+The proof is similar to the one above and is omitted.
 \end{proof}
 
 \section{Open immersions and (pre)sheaves}
@@ -4533,10 +4533,10 @@ $V \mapsto \mathcal{G}(V)$ for $V \subset U$ open.
 \item For any point $u \in U$ and any sheaf $\mathcal{G}$ on $X$
 we have a canonical identification of stalks
 $$
-j^{-1}\mathcal{G}_u = (\mathcal{G}|_U)_u = \mathcal{G}_u.
+(j^{-1}\mathcal{G})_u = (\mathcal{G}|_U)_u = \mathcal{G}_u.
 $$
-\item On the category of presheaves of $U$ we have $j_pj_* = \text{id}$.
-\item On the category of sheaves of $U$ we have $j^{-1}j_* = \text{id}$.
+\item On the category of presheaves on $U$ we have $j_pj_* = \text{id}$.
+\item On the category of sheaves on $U$ we have $j^{-1}j_* = \text{id}$.
 \end{enumerate}
 The same description holds for (pre)sheaves of abelian groups,
 (pre)sheaves of algebraic structures, and (pre)sheaves of modules.
@@ -4544,7 +4544,7 @@ The same description holds for (pre)sheaves of abelian groups,
 
 \begin{proof}
 The colimit in the definition of $j_p\mathcal{G}(V)$
-is over collection of all $W \subset X$ open such that $V \subset W$
+is over the collection of all $W \subset X$ open such that $V \subset W$
 ordered by reverse inclusion.
 Hence this has a largest element, namely $V$. This proves (1).
 And (2) follows because the assignment $V \mapsto \mathcal{G}(V)$
@@ -4552,8 +4552,9 @@ for $V \subset U$ open is clearly a sheaf if $\mathcal{G}$ is a
 sheaf. Assertion (3) follows from (2) since the collection
 of open neighbourhoods of $u$ which are contained in $U$ is cofinal
 in the collection of all open neighbourhoods of $u$ in $X$.
-Parts (4) and (5) follow by computing
-$j^{-1}j_*\mathcal{F}(V) = j_*\mathcal{F}(V) = \mathcal{F}(V)$.
+Part (4) follows by computing
+$j_pj_*\mathcal{F}(V) = j_*\mathcal{F}(V) = \mathcal{F}(V)$,
+and part (5) follows from the same computation with $j^{-1}$.
 
 \medskip\noindent
 The exact same arguments work for (pre)sheaves of abelian groups
@@ -4569,7 +4570,7 @@ Let $j : U \to X$ be the inclusion of an open subset.
 algebraic structures on $X$. The presheaf $j_p\mathcal{G}$ described
 in Lemma \ref{lemma-j-pullback} is called
 the {\it restriction of $\mathcal{G}$ to $U$} and denoted $\mathcal{G}|_U$.
-\item Let $\mathcal{G}$ be a sheaf of sets on $X$, abelian groups or
+\item Let $\mathcal{G}$ be a sheaf of sets, abelian groups, or
 algebraic structures on $X$. The sheaf $j^{-1}\mathcal{G}$ is called
 the {\it restriction of $\mathcal{G}$ to $U$} and denoted $\mathcal{G}|_U$.
 \item If $(X, \mathcal{O})$ is a ringed space, then the pair
@@ -4635,7 +4636,7 @@ bifunctorially in $\mathcal{F}$ and $\mathcal{G}$.
 The stalks of the sheaf $j_!\mathcal{F}$ are described
 as follows
 $$
-j_{!}\mathcal{F}_x =
+(j_{!}\mathcal{F})_x =
 \left\{
 \begin{matrix}
 \emptyset & \text{if} & x \not \in U \\
@@ -4643,8 +4644,8 @@ j_{!}\mathcal{F}_x =
 \end{matrix}
 \right.
 $$
-\item On the category of presheaves of $U$ we have $j_pj_{p!} = \text{id}$.
-\item On the category of sheaves of $U$ we have $j^{-1}j_! = \text{id}$.
+\item On the category of presheaves on $U$ we have $j_pj_{p!} = \text{id}$.
+\item On the category of sheaves on $U$ we have $j^{-1}j_! = \text{id}$.
 \end{enumerate}
 \end{lemma}
 
@@ -4661,18 +4662,18 @@ The identification of stalks is obvious from the
 definition of the extension by the empty set
 and the definition of a stalk.
 Statements (4) and (5) follow by computing the
-value of the sheaf on any open of $U$.
+value of the relevant (pre)sheaf on any open of $U$.
 \end{proof}
 
 \noindent
 Note that if $\mathcal{F}$ is a sheaf
 of abelian groups on $U$, then in general $j_!\mathcal{F}$ as
-defined above, is not a sheaf of abelian groups, for example
+defined above is not a sheaf of abelian groups, for example
 because some of its stalks are empty (hence not abelian groups
 for sure). Thus we need to modify the definition of
 $j_!$ depending on the type of sheaves we consider.
 The reason for choosing the empty set in the definition of the
-extension by the empty set, is that it is the initial object
+extension by the empty set is that it is the initial object
 in the category of sets. Thus in the case of abelian groups
 we use $0$ (and more generally for sheaves with values in
 any abelian category).
@@ -4716,7 +4717,7 @@ with obvious restriction mappings.
 \item Let $(\mathcal{C}, F)$ be a type of algebraic structure
 such that $\mathcal{C}$ has an initial object $e$.
 Let $\mathcal{F}$ be a sheaf of algebraic structures on $U$
-(of the give type). We define the
+(of the given type). We define the
 {\it extension $j_!\mathcal{F}$ of $\mathcal{F}$ by $e$}
 to be the sheafification of the presheaf $j_{p!}\mathcal{F}$
 defined above.
@@ -4741,7 +4742,7 @@ It is true that one can define $j_!$ in the setting of sheaves
 of algebraic structures (see below). However, it depends on the
 type of algebraic structures involved what the resulting
 object is. For example, if $\mathcal{O}$ is a sheaf of rings
-on $U$, then $j_{!, rings}\mathcal{O} \not = j_{!, abelian}\mathcal{O}$
+on $U$, then $j_{!, \mathrm{rings}}\mathcal{O} \not = j_{!, \mathrm{abelian}}\mathcal{O}$
 since the initial object in the category of rings
 is $\mathbf{Z}$ and the initial object in the category
 of abelian groups is $0$. In particular the functor $j_!$
@@ -4773,7 +4774,7 @@ bifunctorially in $\mathcal{F}$ and $\mathcal{G}$.
 The stalks of the sheaf $j_!\mathcal{F}$ are described
 as follows
 $$
-j_{!}\mathcal{F}_x =
+(j_{!}\mathcal{F})_x =
 \left\{
 \begin{matrix}
 0 & \text{if} & x \not \in U \\
@@ -4781,9 +4782,9 @@ j_{!}\mathcal{F}_x =
 \end{matrix}
 \right.
 $$
-\item On the category of abelian presheaves of $U$
+\item On the category of abelian presheaves on $U$
 we have $j_pj_{p!} = \text{id}$.
-\item On the category of abelian sheaves of $U$
+\item On the category of abelian sheaves on $U$
 we have $j^{-1}j_! = \text{id}$.
 \end{enumerate}
 \end{lemma}
@@ -4799,7 +4800,7 @@ Let $j : U \to X$ be the inclusion of an open subset.
 Let $(\mathcal{C}, F)$ be a type of algebraic structure
 such that $\mathcal{C}$ has an initial object $e$.
 Consider the functors of restriction and extension
-by $e$ for (pre)sheaves of algebraic structure defined above.
+by $e$ for (pre)sheaves of algebraic structures defined above.
 \begin{enumerate}
 \item The functor $j_{p!}$ is a left adjoint to the
 restriction functor $j_p$ (see Lemma \ref{lemma-j-pullback}).
@@ -4817,7 +4818,7 @@ bifunctorially in $\mathcal{F}$ and $\mathcal{G}$.
 The stalks of the sheaf $j_!\mathcal{F}$ are described
 as follows
 $$
-j_{!}\mathcal{F}_x =
+(j_{!}\mathcal{F})_x =
 \left\{
 \begin{matrix}
 e & \text{if} & x \not \in U \\
@@ -4860,11 +4861,11 @@ $$
 \Mor_{\textit{Mod}(\mathcal{O}|_U)}(\mathcal{F}, \mathcal{G}|_U)
 $$
 bifunctorially in $\mathcal{F}$ and $\mathcal{G}$.
-\item Let $\mathcal{F}$ be a sheaf of $\mathcal{O}$-modules on $U$.
+\item Let $\mathcal{F}$ be a sheaf of $\mathcal{O}|_U$-modules on $U$.
 The stalks of the sheaf $j_!\mathcal{F}$ are described
 as follows
 $$
-j_{!}\mathcal{F}_x =
+(j_{!}\mathcal{F})_x =
 \left\{
 \begin{matrix}
 0 & \text{if} & x \not \in U \\
@@ -4903,7 +4904,7 @@ $\mathcal{G}_x = \emptyset$ for all $x \in X \setminus U$.
 \end{lemma}
 
 \begin{proof}
-Fully faithfulness follows formally from $j^{-1} j_! = \text{id}$.
+Full faithfulness follows formally from $j^{-1} j_! = \text{id}$.
 We have seen that any sheaf in the image of the functor has
 the property on the stalks mentioned in the lemma. Conversely, suppose
 that $\mathcal{G}$ has the indicated property.
@@ -4973,7 +4974,7 @@ Omitted.
 \label{remark-j-shriek-not-exact}
 Let $j : U \to X$ be an open immersion of topological spaces as above.
 Let $x \in X$, $x \not \in U$. Let $\mathcal{F}$ be a sheaf of sets
-on $U$. Then $j_!\mathcal{F}_x = \emptyset$ by Lemma \ref{lemma-j-shriek}.
+on $U$. Then $(j_!\mathcal{F})_x = \emptyset$ by Lemma \ref{lemma-j-shriek}.
 Hence $j_!$ does not transform a final object of $\Sh(U)$
 into a final object of $\Sh(X)$ unless $U = X$.
 According to our conventions in
@@ -5008,7 +5009,7 @@ Let $i : Z \to X$ be the inclusion of a closed subset $Z$ into $X$.
 Let $\mathcal{F}$ be a sheaf of sets on $Z$.
 The stalks of $i_*\mathcal{F}$ are described as follows
 $$
-i_*\mathcal{F}_x =
+(i_*\mathcal{F})_x =
 \left\{
 \begin{matrix}
 \{*\} & \text{if} & x \not \in Z \\
@@ -5057,7 +5058,7 @@ $\mathcal{G}_x = \{*\}$ for all $x \in X \setminus Z$.
 \end{lemma}
 
 \begin{proof}
-Fully faithfulness follows formally from $i^{-1} i_* = \text{id}$.
+Full faithfulness follows formally from $i^{-1} i_* = \text{id}$.
 We have seen that any sheaf in the image of the functor has
 the property on the stalks mentioned in the lemma. Conversely, suppose
 that $\mathcal{G}$ has the indicated property.
@@ -5114,7 +5115,7 @@ on $Z$. Then $(i_*\mathcal{F})_x = \{ * \}$
 by Lemma \ref{lemma-stalks-closed-pushforward}.
 Hence if $\mathcal{F} = * \amalg *$, where
 $*$ is the singleton sheaf, then
-$i_*\mathcal{F}_x = \{*\} \not = i_*(*)_x \amalg i_*(*)_x$
+$(i_*\mathcal{F})_x = \{*\} \not = i_*(*)_x \amalg i_*(*)_x$
 because the latter is a two point set.
 According to our conventions in
 Categories, Section \ref{categories-section-exact-functor}
@@ -5203,11 +5204,11 @@ since for each $i \in I$ the following holds
 &= ((\varphi_U(s))|_{U \cap U_i})|_{V \cap U_i}\\
 &= ((\varphi_i)_{U \cap U_i}(s|_{U \cap U_i}))|_{V \cap U_i}\\
 &= (\varphi_i)_{V \cap U_i}(s|_{V \cap U_i})\\
-&= \varphi_V(s_{V})|_{V \cap U_i}.
+&= \varphi_V(s|_V)|_{V \cap U_i}.
 \end{align*}
 Furthermore,
 its restriction to each $U_i$ agrees with $\varphi_i$
-since given $U \subset X$ open subset
+since given an open subset $U \subset X$
 and $s \in \mathcal{F}(U \cap U_i)$ then
 \begin{align*}
 \varphi_{U \cap U_i}(s)
@@ -5257,14 +5258,14 @@ $$
 $$
 We will call such a collection of data
 $(\mathcal{F}_i, \varphi_{ij})$
-a {\it glueing data for sheaves of sets with respect to
+a {\it glueing datum for sheaves of sets with respect to
 the covering $X = \bigcup U_i$}.
 
 \begin{lemma}
 \label{lemma-glue-sheaves}
 Let $X$ be a topological space.
 Let $X = \bigcup_{i\in I} U_i$ be an open covering.
-Given any glueing data $(\mathcal{F}_i, \varphi_{ij})$
+Given any glueing datum $(\mathcal{F}_i, \varphi_{ij})$
 for sheaves of sets with respect to the covering $X = \bigcup U_i$
 there exists a sheaf of sets $\mathcal{F}$ on $X$
 together with isomorphisms
@@ -5294,7 +5295,7 @@ s_i \in \mathcal{F}_i(W \cap U_i),
 \varphi_{ij}(s_i|_{W \cap U_i \cap U_j}) = s_j|_{W \cap U_i \cap U_j}
 \}.
 $$
-Restriction mappings for $W' \subset W$ are defined by the restricting
+Restriction mappings for $W' \subset W$ are defined by restricting
 each of the $s_i$ to $W' \cap U_i$. The sheaf condition for $\mathcal{F}$
 follows immediately from the sheaf condition for each of the
 $\mathcal{F}_i$.
@@ -5305,7 +5306,7 @@ isomorphically to $\mathcal{F}_i$. Let $W \subset U_i$.
 In this case the condition in the definition of
 $\mathcal{F}(W)$ implies that $s_j = \varphi_{ij}(s_i|_{W \cap U_j})$.
 And the commutativity of the diagrams in the definition
-of a glueing data assures that we may start with {\it any}
+of a glueing datum assures that we may start with {\it any}
 section $s \in \mathcal{F}_i(W)$ and obtain a compatible
 collection by setting $s_i = s$ and $s_j = \varphi_{ij}(s_i|_{W \cap U_j})$.
 
@@ -5328,7 +5329,7 @@ to a unique sheaf $\mathcal{F}$ on $X$.
 \end{reference}
 Let $X$ be a topological space.
 Let $X = \bigcup U_i$ be an open covering.
-Let $(\mathcal{F}_i, \varphi_{ij})$ be a glueing data
+Let $(\mathcal{F}_i, \varphi_{ij})$ be a glueing datum
 of sheaves of abelian groups, resp.\ sheaves of algebraic structures,
 resp.\ sheaves of $\mathcal{O}$-modules for some sheaf of rings
 $\mathcal{O}$ on $X$. Then the construction in the proof of

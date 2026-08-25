@@ -80,7 +80,7 @@ then $f$ is limit preserving on objects (Criteria for Representability, Section
 \end{lemma}
 
 \begin{proof}
-If for every directed limit $U = \lim U_i$ of affine schemes over $U$,
+If for every directed limit $U = \lim U_i$ of affine schemes over $S$,
 the functor
 $$
 \colim \mathcal{X}_{U_i} \longrightarrow
@@ -205,7 +205,7 @@ the functor
 $$
 X_{y_i} : (\Sch/U_i)^{opp} \to \textit{Sets},\quad
 V/U_i \mapsto
-\{(x, \phi) \mid x \in \Ob(\mathcal{X}_V), \phi : f(x) \to y_i|V\}/\cong
+\{(x, \phi) \mid x \in \Ob(\mathcal{X}_V), \phi : p(x) \to y_i|V\}/\cong
 $$
 is an algebraic space over $U_i$ and the same is true for the
 analogously defined functor $X_{y'_i}$. Since (2) is equivalent to (3)
@@ -437,7 +437,7 @@ Then we obtain a corresponding object of $[U/R]$ over $T_\lambda$
 whose pullback to $T$ is isomorphic to $x$ as desired.
 The proof of fully faithfulness works in exactly the same
 way using the description of morphisms
-in the fibre categories of $[U/T]$ given in
+in the fibre categories of $[U/R]$ given in
 Groupoids in Spaces, Lemma \ref{spaces-groupoids-lemma-quotient-stack-objects}.
 \end{proof}
 
@@ -524,7 +524,7 @@ This section is the analogue of Limits, Section \ref{limits-section-descent}.
 \label{situation-descent}
 Let $Y = \lim_{i \in I} Y_i$ be a limit of a directed
 system of algebraic spaces with affine transition morphisms.
-We assume that $X_i$ is quasi-compact and quasi-separated for all $i \in I$.
+We assume that $Y_i$ is quasi-compact and quasi-separated for all $i \in I$.
 We also choose an element $0 \in I$.
 \end{situation}
 
@@ -699,7 +699,7 @@ Choose a presentation $\mathcal{X} = [U/R]$.
 Denote $(U, R, s, t, c, e, i)$ the corresponding groupoid
 in algebraic spaces over $Y$. We may and do assume $U$ is affine.
 Then $U$, $R$, $R \times_{s, U, t} R$ are quasi-separated
-algebraic spaces of finite type over $Y$. We have two morpisms
+algebraic spaces of finite type over $Y$. We have two morphisms
 $s, t : R \to U$, three morphisms
 $c : R \times_{s, U, t} R \to R$,
 $\text{pr}_1 : R \times_{s, U, t} R \to R$,
@@ -873,12 +873,12 @@ the functoriality applied to the proper morphism
 $(s, t) : R \to U \times_Y U$ (here we use that $\mathcal{X}$ is separated)
 leads to morphisms $R_i \to V_i$ which are proper for
 large enough $i$.
-Composing these morphisms we obtain a proper morphisms
+Composing these morphisms we obtain a proper morphism
 $R_i \to U_i \times_{Y_i} U_i$ for all $i$ large enough.
 The functoriality of the construction of
 Limits of Spaces, Remark
 \ref{spaces-limits-remark-finite-type-gives-well-defined-system}
-shows that this is the morphism is the same as $(s_i, t_i)$
+shows that this morphism is the same as $(s_i, t_i)$
 for large enough $i$ and the proof is complete.
 \end{proof}
 
@@ -909,7 +909,7 @@ V \ar[d] \ar[r]_a & Z' \ar[d]^b \\
 Z \ar[r]^g & Y,
 }
 $$
-and a closed subset $T' \subset |X \times_Y Z'|$ such that
+and a closed subset $T' \subset |\mathcal{X} \times_Y Z'|$ such that
 \begin{enumerate}
 \item $Z'$ is an affine scheme of finite presentation over $Y$,
 \item with $z' = a(z)$ we have $z' \not \in \Im(T' \to |Z'|)$, and
@@ -979,7 +979,7 @@ algebraic stacks. The following are equivalent
 \item $f$ is universally closed,
 \item for every morphism $Z \to \mathcal{Y}$ which is locally of finite
 presentation and where $Z$ is an affine scheme
-the map $|\mathcal{X} \times_Y Z| \to |Z|$ is closed, and
+the map $|\mathcal{X} \times_{\mathcal{Y}} Z| \to |Z|$ is closed, and
 \item there exists a scheme $V$ and a surjective smooth morphism
 $V \to \mathcal{Y}$ such that
 $|\mathbf{A}^n \times (\mathcal{X} \times_\mathcal{Y} V)|
@@ -1051,7 +1051,7 @@ immediately that $z' = a(z)$ is in the closure of the image of $T'$.
 
 \medskip\noindent
 It is clear that (1) implies (3). Let $V \to \mathcal{Y}$ be as in (3).
-If we can show that $\mathcal{X} \times_Y V \to V$ is universally closed,
+If we can show that $\mathcal{X} \times_{\mathcal{Y}} V \to V$ is universally closed,
 then $f$ is universally closed by
 Morphisms of Stacks, Lemma
 \ref{stacks-morphisms-lemma-universally-closed-local}.
@@ -1093,9 +1093,9 @@ of topological spaces whose horizontal arrows are homeomorphisms
 onto locally closed subsets (Properties of Stacks, Lemma
 \ref{stacks-properties-lemma-subspace-induced-topology}).
 Thus every closed subset $T$
-of $|X \times_Y Z|$ is the pullback of a closed subset $T'$ of
-$|\mathbf{A}^n \times Y|$. Since the assumption is that the image
-of $T'$ in $|\mathbf{A}^n \times X|$ is closed we conclude that
+of $|\mathcal{X} \times_Y Z|$ is the pullback of a closed subset $T'$ of
+$|\mathbf{A}^n \times \mathcal{X}|$. Since the assumption is that the image
+of $T'$ in $|\mathbf{A}^n \times Y|$ is closed we conclude that
 the image of $T$ in $|Z|$ is closed as desired.
 \end{proof}
 
