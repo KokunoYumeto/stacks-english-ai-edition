@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/KokunoYumeto/mathematics-commons-stacks/raw/main/schemas/release-manifest.schema.json",
+  "title": "Stacks-derived edition release registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "updated_at_utc", "releases"],
+  "properties": {
+    "$schema": {"type": "string"},
+    "schema": {"const": "mathematics-commons-stacks-release-registry/v1"},
+    "updated_at_utc": {"type": "string", "format": "date-time"},
+    "releases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "locale", "upstream_commit", "overlay_commit", "translation_commit", "composer_commit", "artifact_sha256", "rights_state", "edition_label", "independent_replay"],
+        "properties": {
+          "id": {"type": "string"},
+          "locale": {"type": "string"},
+          "upstream_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+          "overlay_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+          "translation_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+          "composer_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+          "artifact_sha256": {"type": "string", "pattern": "^[0-9A-F]{64}$"},
+          "rights_state": {"type": "string"},
+          "edition_label": {"const": "independently_maintained_ai_produced_no_upstream_endorsement"},
+          "independent_replay": {"enum": ["passed", "failed", "not_performed"]}
+        }
+      }
+    }
+  }
+}
+

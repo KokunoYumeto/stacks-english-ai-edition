@@ -1,0 +1,101 @@
+{
+  "schema": "stacks-canon-errata-intake/v1",
+  "intake_id": "ERRATA-R3-FR-20260822",
+  "observed_at": "2026-08-22T02:44:00+02:00",
+  "revised_at": "2026-08-22T05:01:00+02:00",
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "status": "proof_closed_after_failed_replay_revision_pending_new_independent_replay",
+  "source_packet": {
+    "path": "authority/producer/SOURCE_DEFECT_LEDGER.csv",
+    "bytes": 16262,
+    "sha256": "CD91D317D52D999D5174E945F735D32E831DB9F3DB6B8F121B83EF9D6F260F45",
+    "rows": 34
+  },
+  "authority_files": [
+    {"path":"sets.tex","sha256":"9BCC55E7F11CF36B0665AE549D5BA76BE6A0EDD00F7FCA36A567E367099603F9"},
+    {"path":"topology.tex","sha256":"C6BAC8DCF8AD96DC47416BF34CB45BA4A10B894E40D67D3E1FA68D8EF0D9F872"},
+    {"path":"categories.tex","sha256":"62F7611AF4C3FEEBD041DB4728B42C7112004CFBB9FA5ECB643C6F5D90DB3F25"}
+  ],
+  "packet_candidates": [
+    {"id":"FR-R3-SETS-001","source_id":"SETS-001","locus":"sets.tex:993","claim":"Undefined S_tau should be mathcal S_tau."},
+    {"id":"FR-R3-SETS-002","source_id":"SETS-002","locus":"sets.tex:1027-1031;1083-1089","claim":"The base-change recursion clause and its application require a linked stage-index repair: input Cov_{kappa,f(gamma)} and output stage f(beta(U)+1)."},
+    {"id":"FR-R3-SETS-003","source_id":"SETS-003","locus":"sets.tex:1092-1104","claim":"The site-composition proof uses the wrong alpha/beta indices and omits the required common-stage bound for the outer cover."},
+    {"id":"FR-R3-SETS-004","source_id":"SETS-004","locus":"sets.tex:844-848","claim":"W index order is transposed in the concluding coproduct."},
+    {"id":"FR-R3-TOPOLOGY-001","source_id":"TOPOLOGY-001","locus":"topology.tex:1235","claim":"Graph vertices j,j-prime are incorrectly placed in undefined E instead of V."},
+    {"id":"FR-R3-TOPOLOGY-002","source_id":"TOPOLOGY-002","locus":"topology.tex:1276-1277","claim":"The partial order is written on undefined indexed objects rather than elements Z,Z-prime of A."},
+    {"id":"FR-R3-TOPOLOGY-003","source_id":"TOPOLOGY-003","locus":"topology.tex:2380","claim":"J should be a subset of Ob(mathcal I), not undefined plain I."},
+    {"id":"FR-R3-TOPOLOGY-004","source_id":"TOPOLOGY-004","locus":"topology.tex:1882-1884","claim":"Complements of unions require parentheses."},
+    {"id":"FR-R3-TOPOLOGY-005","source_id":"TOPOLOGY-005","locus":"topology.tex:1946-1947","claim":"The decreasing chain requires the complement of the union."},
+    {"id":"FR-R3-TOPOLOGY-006","source_id":"TOPOLOGY-006","locus":"topology.tex:3124","claim":"The U_K set-builder has an unmatched closing parenthesis."},
+    {"id":"FR-R3-TOPOLOGY-007","source_id":"TOPOLOGY-007","locus":"topology.tex:2649","claim":"The finite-union identity omits its index and grouping."},
+    {"id":"FR-R3-TOPOLOGY-008","source_id":"TOPOLOGY-008","locus":"topology.tex:3775-3776","claim":"The chain is of irreducible closed subsets of Y, not X."},
+    {"id":"FR-R3-TOPOLOGY-009","source_id":"TOPOLOGY-009","locus":"topology.tex:3877-3888","claim":"Specialization direction and codimension sign appear reversed relative to the local definition and preceding lemma."},
+    {"id":"FR-R3-TOPOLOGY-010","source_id":"TOPOLOGY-010","locus":"topology.tex:3910","claim":"In the Noetherian reduction the finite union of irreducible components is closed; the intended warning appears to be not necessarily open."},
+    {"id":"FR-R3-TOPOLOGY-011","source_id":"TOPOLOGY-011","locus":"topology.tex:4103-4109","claim":"Density gives empty interior of the complement, while nowhere density is the later conclusion; the printed proof appears circular."},
+    {"id":"FR-R3-TOPOLOGY-012","source_id":"TOPOLOGY-012","locus":"topology.tex:4576-4591","claim":"Generic points should be chosen from closures of p(Z) and q(Z), not p(X) and q(Y)."},
+    {"id":"FR-R3-TOPOLOGY-013","source_id":"TOPOLOGY-013","locus":"topology.tex:4676-4693","claim":"The map f is into the product of W before Y=f(X) is defined; the printed codomain Y appears premature."},
+    {"id":"FR-R3-TOPOLOGY-014","source_id":"TOPOLOGY-014","locus":"topology.tex:4791-4803","claim":"The quasi-compact inverse limit is formed from the primed constructible-topology spaces, so Z-prime should be lim Z-prime_i rather than lim Z_i."},
+    {"id":"FR-R3-TOPOLOGY-015","source_id":"TOPOLOGY-015","locus":"topology.tex:5058-5065","claim":"The cited compact Hausdorff topology and the topology in which the constructible E_i are closed is the constructible topology, not the spectral topology."},
+    {"id":"FR-R3-TOPOLOGY-016","source_id":"TOPOLOGY-016","locus":"topology.tex:5070-5088","claim":"The inverse-limit assertion requires lim (U_i minus E); the printed ungrouped expression can instead be read as (lim U_i) minus E and fails to state the required inverse system."},
+    {"id":"FR-R3-TOPOLOGY-017","source_id":"TOPOLOGY-017","locus":"topology.tex:5165-5167","claim":"The canonical map X to X-star identifies X with an open subspace of X-star, not with an open subspace of X."},
+    {"id":"FR-R3-TOPOLOGY-018","source_id":"TOPOLOGY-018","locus":"topology.tex:5362-5369","claim":"E must be the complement of U intersect f-inverse(V); the printed ungrouped expression is not the closed set used by the next sentence."},
+    {"id":"FR-R3-TOPOLOGY-019","source_id":"TOPOLOGY-019","locus":"topology.tex:5410-5442","claim":"After the minimal extremally disconnected cover E is constructed inside beta(Y), the uniqueness paragraph must use E rather than reverting to the nonminimal ambient X-prime."},
+    {"id":"FR-R3-TOPOLOGY-020","source_id":"TOPOLOGY-020","locus":"topology.tex:5480-5490","claim":"The lemma contains the literal unfinished item 'add more here.' and an omitted proof; this is confirmed incompleteness, not yet a forced correction."},
+    {"id":"FR-R3-TOPOLOGY-021","source_id":"TOPOLOGY-021","locus":"topology.tex:5507-5522","claim":"The refinement relation is reversed or at minimum referentially ambiguous; the following irreducible-component example requires the finer partition's parts to subdivide the coarser partition's parts."},
+    {"id":"FR-R3-TOPOLOGY-022","source_id":"TOPOLOGY-022","locus":"topology.tex:5820-5824","claim":"The chosen right-coset representatives are paired with the left-coset conjugation formula; two mathematically valid minimal repairs exist and canon choice remains unresolved."},
+    {"id":"FR-R3-TOPOLOGY-023","source_id":"TOPOLOGY-023","locus":"topology.tex:5865-5873","claim":"The diagram takes values in TopGroup, not Top, as required by the very next clause and Hom functor."},
+    {"id":"FR-R3-CATEGORIES-001","source_id":"CATEGORIES-001","locus":"categories.tex:7005-7008","claim":"For f:V to U and g:W to V the typed composite is f after g, not g after f."},
+    {"id":"FR-R3-CATEGORIES-002","source_id":"CATEGORIES-002","locus":"categories.tex:7046-7050","claim":"The pseudo-functor datum alpha index order conflicts with its defining lemma."},
+    {"id":"FR-R3-CATEGORIES-003","source_id":"CATEGORIES-003","locus":"categories.tex:7425-7429","claim":"An isolated plain I subscript S should be calligraphic I subscript S."},
+    {"id":"FR-R3-CATEGORIES-004","source_id":"CATEGORIES-004","locus":"categories.tex:7603-7623","claim":"The constructed typed morphism is d to c after b, while the conclusion reverses the composite."},
+    {"id":"FR-R3-CATEGORIES-005","source_id":"CATEGORIES-005","locus":"categories.tex:9142-9149","claim":"The terminal expression contains a duplicated composition operator."},
+    {"id":"FR-R3-CATEGORIES-006","source_id":"CATEGORIES-006","locus":"categories.tex:9480-9483","claim":"A tensor bifunctor should have categorical product C times C as its domain."},
+    {"id":"FR-R3-CATEGORIES-007","source_id":"CATEGORIES-007","locus":"categories.tex:8840-8847","claim":"The product of slices should be the slice C/(U times V), not the malformed C/U times V."}
+  ],
+  "bounded_locus_recheck_20260822": {
+    "authority_sha256_recomputed": "C6BAC8DCF8AD96DC47416BF34CB45BA4A10B894E40D67D3E1FA68D8EF0D9F872",
+    "exact_loci_present": ["TOPOLOGY-014", "TOPOLOGY-015", "TOPOLOGY-016", "TOPOLOGY-017", "TOPOLOGY-018", "TOPOLOGY-019", "TOPOLOGY-020", "TOPOLOGY-021", "TOPOLOGY-022", "TOPOLOGY-023"],
+    "preliminary_classification": {
+      "TOPOLOGY-014": "direct primed-object mismatch; dependent-lemma proof still required before admission",
+      "TOPOLOGY-015": "direct topology-name mismatch forced by the cited constructible-topology lemma; adverse-reading check still required",
+      "TOPOLOGY-016": "missing grouping that obscures the actual inverse-system claim; classify separately from a false mathematical conclusion",
+      "TOPOLOGY-017": "direct codomain-object mismatch; dependent-construction proof still required before admission",
+      "TOPOLOGY-018": "direct set-grouping defect forced by the closedness and complement steps on the next two lines",
+      "TOPOLOGY-019": "ambient/minimal-cover name reversion; full uniqueness proof must be rewritten consistently with E before admission",
+      "TOPOLOGY-020": "confirmed unfinished source; no smallest forced replacement and therefore not presently admissible as a correction",
+      "TOPOLOGY-021": "standard relation and local example conflict with the printed pronouns; replace with named partitions only after exact orientation proof",
+      "TOPOLOGY-022": "genuine right/left coset mismatch with two equivalent repairs; keep unadmitted until one convention-preserving minimum is selected",
+      "TOPOLOGY-023": "direct category-codomain mismatch forced by the following TopGroup sentence and Hom expression"
+    }
+  },
+  "proof_closure": {
+    "proved_units": 34,
+    "canon_id_range": ["MC-STK-ERR-0029", "MC-STK-ERR-0062"],
+    "proof_dossier": {
+      "path": "ERRATA_R3_PROOFS.md",
+      "bytes": 15879,
+      "sha256": "2DB6FC82A46EE3454A07337AD5F5D0C4E6A61A2381F0F45892B2E4137457897E"
+    },
+    "failed_replay_preserved": {
+      "path": "replay/failed-review-pre-revision.json",
+      "bytes": 96486,
+      "sha256": "B558A16BD22D5E0076EAA724B358B9CC2239488BD6EDA29B281CD0179895ED6F",
+      "verdict": "FAIL",
+      "blocking_units": ["MC-STK-ERR-0030", "MC-STK-ERR-0031"],
+      "response": "The two linked proofs and payload edits were reopened, expanded, and must receive a fresh independent replay; the failed evidence remains immutable."
+    },
+    "independent_latest_six_review": {
+      "path": "R3_TOPOLOGY_018_023_INDEPENDENT_REVIEW.md",
+      "bytes": 2541,
+      "sha256": "E92AB3262E4D5506DBABF36CF5522F8D323ABA3CD379258B6E65D872838B1FB3"
+    },
+    "historical_preliminary_classification_superseded": true,
+    "boundary": "Revised author proof closure authorizes rebuilding only; fresh visual QA, independent replay, public candidate commit, and separate admission remain required."
+  },
+  "proof_gate": [
+    "Reopen every locus and dependent definition against the exact frozen bytes.",
+    "Seek adverse examples and alternative readings; repeated cross-lane reports are not proof.",
+    "Assign canon IDs only after a smallest correction is forced or a bounded ambiguity is explicitly resolved.",
+    "Keep all R3 work out of the frozen R2 payload, manifest, replay, and admission."
+  ]
+}

@@ -1,0 +1,419 @@
+{
+  "schema": "stacks-english-ai-edition/r4-source-mapping-v1",
+  "scope": "Accepted TOPOLOGY-024..040 corrections only",
+  "authority": {
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "path": "upstream/src/stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14/topology.tex",
+    "bytes": 237731,
+    "sha256": "C6BAC8DCF8AD96DC47416BF34CB45BA4A10B894E40D67D3E1FA68D8EF0D9F872",
+    "encoding": "UTF-8",
+    "newline": "LF",
+    "offset_convention": "Zero-based UTF-8 byte offsets into the frozen authority; end_byte_exclusive is half-open."
+  },
+  "evidence": [
+    {
+      "role": "independent_disposition_and_proof",
+      "path": "canon/control/private/R4_TOPOLOGY_024_040_INDEPENDENT_REVIEW.md",
+      "bytes": 26017,
+      "sha256": "2639A94DEAF412346A5A980B8F5AAC553167C80AA69AF62C728F3FAE46DD5F41"
+    },
+    {
+      "role": "producer_observation_ledger_snapshot",
+      "path": "<LOCAL_WORKSPACE>/03_projects/language_management/romance/03_working_translations/stacks_fr_20260821/00_control/SOURCE_DEFECT_LEDGER.csv",
+      "bytes": 83931,
+      "sha256": "95BE5532E3897A2789195478B6B14D31F8A5FF2DA1610C201993F93FD21D22C8"
+    }
+  ],
+  "allocation": {
+    "rule": "Stable IDs are assigned in ascending order of each accepted unit's earliest frozen-source locus; producer IDs are preserved separately.",
+    "stable_id_first": "MC-STK-ERR-0063",
+    "stable_id_last": "MC-STK-ERR-0076",
+    "accepted_unit_count": 14,
+    "operation_count": 15,
+    "rejected_producer_ids_not_mapped": [
+      "TOPOLOGY-037",
+      "TOPOLOGY-038",
+      "TOPOLOGY-040"
+    ]
+  },
+  "application_contract": {
+    "preconditions": [
+      "The input must have exactly the authority byte count and SHA-256 above.",
+      "Each old_text UTF-8 byte sequence must equal the authority bytes at its stated half-open interval.",
+      "Each old_text must have the stated occurrence_count_in_frozen_authority in the complete frozen file.",
+      "All operation intervals must be pairwise nonoverlapping."
+    ],
+    "application_order": "Apply operations in descending start_byte order so frozen-source offsets remain valid.",
+    "postconditions": {
+      "bytes": 237976,
+      "sha256": "3930165144FC253AD47EB55B6E3FD81AD9996D9C4A8FFFB515116988492DCB73",
+      "lf_count": 6027
+    }
+  },
+  "units": [
+    {
+      "stable_id": "MC-STK-ERR-0063",
+      "producer_id": "TOPOLOGY-029",
+      "source_locus": "topology.tex:345-349",
+      "classification": "proof-construction indexing defect",
+      "disposition": "accepted",
+      "proof_rationale": "The basis member is chosen after and for each point x, so it depends on x rather than only on the possibly repeated cover index i_x. Indexing the refinement by U binds every chosen B_x and proves the stated refinement.",
+      "adverse_evidence": "With the one-member cover U_0=R and a basis of bounded rational intervals, every i_x is 0 but no single basis interval B_0 covers R; the printed J={i_x} construction therefore fails.",
+      "operations": [
+        {
+          "operation_id": "MC-STK-ERR-0063-OP1",
+          "source_start_line": 345,
+          "source_end_line": 349,
+          "start_byte": 11890,
+          "end_byte_exclusive": 12210,
+          "occurrence_count_in_frozen_authority": 1,
+          "old_bytes": 320,
+          "old_sha256": "7131A41BE3AF780BFA1EDC0DD257AA9390AA3AFD51F5A7A93A0EAA674313493E",
+          "replacement_bytes": 249,
+          "replacement_sha256": "443C863152990E96FD7470A4BD5EAED0A840EA9B1B4A6820A0D4EAD6AC4EBC18",
+          "old_text": "If $ x \\in U = \\bigcup_{i\\in I} U_i $, there is an $ i_x \\in I $ such that\n$ x \\in U_{i_x} $. Thus we have a $ B_{i_x} \\in \\mathcal{B}$\nverifying $ x \\in B_{i_x} \\subset U_{i_x}$. Set\n$J = \\{i_x | x \\in U\\}$ and for $j = i_x \\in J$ set $V_j = B_{i_x}$.\nThis gives the desired open covering of $U$ by $\\{V_j\\}_{j \\in J}$.",
+          "replacement_text": "For every $x \\in U = \\bigcup_{i \\in I} U_i$, choose $i_x \\in I$ and\n$B_x \\in \\mathcal{B}$ such that $x \\in B_x \\subset U_{i_x}$.\nSet $J = U$ and, for $j = x \\in J$, set $V_j = B_x$.\nThis gives the desired open covering of $U$ by $\\{V_j\\}_{j \\in J}$."
+        }
+      ]
+    },
+    {
+      "stable_id": "MC-STK-ERR-0064",
+      "producer_id": "TOPOLOGY-030",
+      "source_locus": "topology.tex:514-515",
+      "classification": "source/codomain type error",
+      "disposition": "accepted",
+      "proof_rationale": "For f:X to Y, inverse image accepts subsets of Y and returns subsets of X. The complement law is f^{-1}(Y\\E)=X\\f^{-1}(E) for E subset Y.",
+      "adverse_evidence": "The printed identity puts X inside f^{-1}, puts Y on the result side, and quantifies E as a subset of X, reversing all three required types.",
+      "operations": [
+        {
+          "operation_id": "MC-STK-ERR-0064-OP1",
+          "source_start_line": 514,
+          "source_end_line": 515,
+          "start_byte": 17777,
+          "end_byte_exclusive": 17900,
+          "occurrence_count_in_frozen_authority": 1,
+          "old_bytes": 123,
+          "old_sha256": "528BB16A13CA3D76EE9E8DC626FE24697797ECBF6641996BDF6158D759F88DBA",
+          "replacement_bytes": 124,
+          "replacement_sha256": "5DF6CABCFB7494D4E4C114F21B8C1329E3DBAC0D97F550AAD9517084E0F7F57B",
+          "old_text": "Finally, (2) and (3) equivalence follows from $f^{-1}(X\\setminus E) = Y\n\\setminus f^{-1}(E)$ for all subsets $E \\subset X$.",
+          "replacement_text": "Finally, (2) and (3) equivalence follows from $f^{-1}(Y \\setminus E) = X\n\\setminus f^{-1}(E)$ for all subsets $E \\subset Y$."
+        }
+      ]
+    },
+    {
+      "stable_id": "MC-STK-ERR-0065",
+      "producer_id": "TOPOLOGY-024",
+      "source_locus": "topology.tex:1278-1279",
+      "classification": "order-theoretic proof terminology defect",
+      "disposition": "accepted",
+      "proof_rationale": "DCC supplies a minimal member under inclusion, and the contradiction proof uses only the absence of a strictly smaller member of A.",
+      "adverse_evidence": "A finite DCC poset can have incomparable minimal elements and no least element, so 'smallest' is not implied.",
+      "operations": [
+        {
+          "operation_id": "MC-STK-ERR-0065-OP1",
+          "source_start_line": 1279,
+          "source_end_line": 1279,
+          "start_byte": 48728,
+          "end_byte_exclusive": 48751,
+          "occurrence_count_in_frozen_authority": 1,
+          "old_bytes": 23,
+          "old_sha256": "134FEC61E9652F74700C246B521492D26882C2B3AB6675069B8851855299365D",
+          "replacement_bytes": 22,
+          "replacement_sha256": "96FB4B7706AF151C630192EB5CC5766635F9B40E47A649E5C268F988482FCA24",
+          "old_text": "smallest element of $A$",
+          "replacement_text": "minimal element of $A$"
+        }
+      ]
+    },
+    {
+      "stable_id": "MC-STK-ERR-0066",
+      "producer_id": "TOPOLOGY-025",
+      "source_locus": "topology.tex:1297",
+      "classification": "missing mathematical union operator",
+      "disposition": "accepted",
+      "proof_rationale": "The named irreducible components are Z,Z_1,...,Z_n and the next line takes the complement of the union of Z_1,...,Z_n; the displayed finite union therefore requires a final union operator.",
+      "adverse_evidence": "The printed ellipsis followed by Z_n is juxtaposition, not the finite set union used by the proof.",
+      "operations": [
+        {
+          "operation_id": "MC-STK-ERR-0066-OP1",
+          "source_start_line": 1297,
+          "source_end_line": 1297,
+          "start_byte": 49662,
+          "end_byte_exclusive": 49688,
+          "occurrence_count_in_frozen_authority": 1,
+          "old_bytes": 26,
+          "old_sha256": "270C9ADA06634CBC15FAF8672F91B4644D63E2E174FA5D28A0F506087D08B44B",
+          "replacement_bytes": 31,
+          "replacement_sha256": "02B012563FE1FADA7083DD18BEBAF23017E6E9461A588228C56C10297087EA31",
+          "old_text": "Z \\cup Z_1 \\cup \\ldots Z_n",
+          "replacement_text": "Z \\cup Z_1 \\cup \\ldots \\cup Z_n"
+        }
+      ]
+    },
+    {
+      "stable_id": "MC-STK-ERR-0067",
+      "producer_id": "TOPOLOGY-026",
+      "source_locus": "topology.tex:1345-1348",
+      "classification": "missing mathematical union operator",
+      "disposition": "accepted",
+      "proof_rationale": "Distributivity expands G_m intersected with the finite union X_1 union ... union X_n as the finite union of every G_m intersect X_i.",
+      "adverse_evidence": "Without the final union operator the right side concatenates the ellipsis and last term and does not state the equality used for stabilization.",
+      "operations": [
+        {
+          "operation_id": "MC-STK-ERR-0067-OP1",
+          "source_start_line": 1347,
+          "source_end_line": 1347,
+          "start_byte": 51799,
+          "end_byte_exclusive": 51840,
+          "occurrence_count_in_frozen_authority": 1,
+          "old_bytes": 41,
+          "old_sha256": "C8620BBBA14DFEEAD54E102333D11FA6925FA6F810F32AAF2BABFA8B4B3197B4",
+          "replacement_bytes": 46,
+          "replacement_sha256": "768334028FC72D2B2B4BA0ACC0BA3339F715A7AB84D3C609CF3139C5B428B35E",
+          "old_text": "(G_m \\cap X_1) \\cup \\ldots (G_m \\cap X_n)",
+          "replacement_text": "(G_m \\cap X_1) \\cup \\ldots \\cup (G_m \\cap X_n)"
+        }
+      ]
+    },
+    {
+      "stable_id": "MC-STK-ERR-0068",
+      "producer_id": "TOPOLOGY-031",
+      "source_locus": "topology.tex:1847-1853",
+      "classification": "unbound proof index",
+      "disposition": "accepted",
+      "proof_rationale": "The earlier observation that finite intersections of the Z_alpha are again family members proves existence of an index alpha representing Z_alpha' intersect Z_alpha'', but that index must be explicitly chosen before use.",
+      "adverse_evidence": "The printed alpha is new and free; only alpha' and alpha'' have been bound at that point.",
+      "operations": [
+        {
+          "operation_id": "MC-STK-ERR-0068-OP1",
+          "source_start_line": 1851,
+          "source_end_line": 1852,
+          "start_byte": 70086,
+          "end_byte_exclusive": 70190,
+          "occurrence_count_in_frozen_authority": 1,
+          "old_bytes": 104,
+          "old_sha256": "32541B5C2C2474CA66FADDF98D1FA87022FE057B39A4E1F29D10847E14230730",
+          "replacement_bytes": 148,
+          "replacement_sha256": "DC9173D20186B2858764D68094CF7050B160BD44BBE6F77845CEAF76761E2388",
+          "old_text": "Then $Z_\\alpha = Z_{\\alpha'} \\cap Z_{\\alpha''}$ is contained\nin $U \\cup V$ and disjoint from $U \\cap V$.",
+          "replacement_text": "Choose $\\alpha \\in A$ such that\n$Z_\\alpha = Z_{\\alpha'} \\cap Z_{\\alpha''}$. Then $Z_\\alpha$ is contained\nin $U \\cup V$ and disjoint from $U \\cap V$."
+        }
+      ]
+    },
+    {
+      "stable_id": "MC-STK-ERR-0069",
+      "producer_id": "TOPOLOGY-027",
+      "source_locus": "topology.tex:2165-2168",
+      "classification": "missing mathematical intersection operator",
+      "disposition": "accepted",
+      "proof_rationale": "The containment concerns the full (p+1)-fold intersection, as required by both the preceding construction and the lemma statement.",
+      "adverse_evidence": "The printed V_{j_1} followed by an ellipsis lacks the intersection operator and therefore does not denote the required iterated intersection.",
+      "operations": [
+        {
+          "operation_id": "MC-STK-ERR-0069-OP1",
+          "source_start_line": 2167,
+          "source_end_line": 2167,
+          "start_byte": 83626,
+          "end_byte_exclusive": 83653,
+          "occurrence_count_in_frozen_authority": 1,
+          "old_bytes": 27,
+          "old_sha256": "108BB3A868C673A56D210C0BFBC0D5D91F1F5678587154B88ACFADD4315118A7",
+          "replacement_bytes": 32,
+          "replacement_sha256": "DBF774A967C76A8C12656FB9DF45882AA1D303192F4EA986711846DFDEE78DC6",
+          "old_text": "V_{j_1} \\ldots \\cap V_{j_p}",
+          "replacement_text": "V_{j_1} \\cap \\ldots \\cap V_{j_p}"
+        }
+      ]
+    },
+    {
+      "stable_id": "MC-STK-ERR-0070",
+      "producer_id": "TOPOLOGY-032",
+      "source_locus": "topology.tex:2174-2176",
+      "classification": "proof termination overclaim",
+      "disposition": "accepted",
+      "proof_rationale": "The replacement eliminates the selected bad tuple without creating a new one, so N strictly decreases; it can eliminate additional tuples simultaneously, hence termination is after at most the original N repetitions.",
+      "adverse_evidence": "A finite discrete example with two bad tuples sharing the refined first entry makes N fall from 2 to 0 in one replacement, disproving 'decreased by one'.",
+      "operations": [
+        {
+          "operation_id": "MC-STK-ERR-0070-OP1",
+          "source_start_line": 2174,
+          "source_end_line": 2176,
+          "start_byte": 84016,
+          "end_byte_exclusive": 84167,
+          "occurrence_count_in_frozen_authority": 1,
+          "old_bytes": 151,
+          "old_sha256": "966E3A401CC027277C1D47C91C1752F65E61D2591142D437F3112855B8057BED",
+          "replacement_bytes": 182,
+          "replacement_sha256": "E844EACCE45C7B79D0CA64D4D31A2AD21E85D787C81E1A6339C216AF53E16FF1",
+          "old_text": "A simple check shows that $N$ has decreased by one under this replacement.\nRepeating this procedure $N$ times we arrive at the situation where\n$N = 0$.",
+          "replacement_text": "A simple check shows that $N$ has decreased by at least one under this\nreplacement. Repeating this procedure at most the original $N$ times,\nwe arrive at the situation where $N = 0$."
+        }
+      ]
+    },
+    {
+      "stable_id": "MC-STK-ERR-0071",
+      "producer_id": "TOPOLOGY-033",
+      "source_locus": "topology.tex:2487-2523",
+      "classification": "ill-typed inverse-limit compatibility locus",
+      "disposition": "accepted",
+      "proof_rationale": "For every arrow j to k, including endomorphisms, the compatibility locus is the inverse image of the graph under p_{j,k}(x_i)=(x_j,x_k). This is a closed subset and uniformly gives the correct fixed-point condition when j=k.",
+      "adverse_evidence": "When j=k, Gamma_phi has two X_j factors while the ambient product has only one X_j coordinate, so Gamma_phi times the remaining factors is not a subset of the ambient product. Both copied occurrences require repair.",
+      "operations": [
+        {
+          "operation_id": "MC-STK-ERR-0071-OP1",
+          "source_start_line": 2491,
+          "source_end_line": 2496,
+          "start_byte": 97203,
+          "end_byte_exclusive": 97353,
+          "occurrence_count_in_frozen_authority": 1,
+          "old_bytes": 150,
+          "old_sha256": "822F83DD16C411A726E461406EAE7C84C86272FBB4B8642BACC338CE9D0D5128",
+          "replacement_bytes": 218,
+          "replacement_sha256": "D53E6ED671D4F7358FE9F84B10A27F1C2196F713E27F3B5DA6D9A0EEB2436011",
+          "old_text": "It is clear that $\\lim X_i$ is the intersection of the\nclosed subsets\n$$\n\\Gamma_\\varphi \\times \\prod\\nolimits_{l \\not = j, k} X_l\n\\subset \\prod X_i\n$$",
+          "replacement_text": "Let $p_{j,k} : \\prod X_i \\to X_j \\times X_k$ be the continuous map\n$(x_i) \\mapsto (x_j, x_k)$. It is clear that $\\lim X_i$ is the\nintersection of the closed subsets\n$$\np_{j,k}^{-1}(\\Gamma_\\varphi) \\subset \\prod X_i.\n$$"
+        },
+        {
+          "operation_id": "MC-STK-ERR-0071-OP2",
+          "source_start_line": 2518,
+          "source_end_line": 2523,
+          "start_byte": 98004,
+          "end_byte_exclusive": 98280,
+          "occurrence_count_in_frozen_authority": 1,
+          "old_bytes": 276,
+          "old_sha256": "4CAEE1C40D683F764910A44C2D6DD30C55B705C037CD9AF41C2E73DAEDF0E739",
+          "replacement_bytes": 330,
+          "replacement_sha256": "1FC2F5E35147847EAB7C606FFDE6CCA4350043CC152EC75914CD38818DA1B11B",
+          "old_text": "$$\nZ_\\varphi = \\Gamma_\\varphi \\times \\prod\\nolimits_{l \\not = j, k} X_l\n$$\ninside the quasi-compact space $\\prod X_i$ where $\\varphi : j \\to k$\nis a morphism of $\\mathcal{I}$ and $\\Gamma_\\varphi \\subset X_j \\times X_k$\nis the graph of the corresponding morphism $X_j \\to X_k$.",
+          "replacement_text": "$$\nZ_\\varphi = p_{j,k}^{-1}(\\Gamma_\\varphi)\n$$\ninside the quasi-compact space $\\prod X_i$, where\n$p_{j,k} : \\prod X_i \\to X_j \\times X_k$ is the map\n$(x_i) \\mapsto (x_j, x_k)$, $\\varphi : j \\to k$ is a morphism of\n$\\mathcal{I}$, and $\\Gamma_\\varphi \\subset X_j \\times X_k$ is the graph\nof the corresponding morphism $X_j \\to X_k$."
+        }
+      ]
+    },
+    {
+      "stable_id": "MC-STK-ERR-0072",
+      "producer_id": "TOPOLOGY-028",
+      "source_locus": "topology.tex:2916-2919",
+      "classification": "order-theoretic proof terminology defect",
+      "disposition": "accepted",
+      "proof_rationale": "Noetherian DCC supplies a minimal closed member of the counterexample family, and the proof uses only that every proper closed subset is outside that family.",
+      "adverse_evidence": "DCC does not imply that a nonempty family has a least member, so 'smallest' overstates the available order-theoretic conclusion.",
+      "operations": [
+        {
+          "operation_id": "MC-STK-ERR-0072-OP1",
+          "source_start_line": 2918,
+          "source_end_line": 2918,
+          "start_byte": 113239,
+          "end_byte_exclusive": 113273,
+          "occurrence_count_in_frozen_authority": 1,
+          "old_bytes": 34,
+          "old_sha256": "74E8BF2C08626BF8EB992830B92595B514DAEF442341582C5C3FFA208DBD859A",
+          "replacement_bytes": 33,
+          "replacement_sha256": "A05F4C003AFA52D61C897A381E80F8FEF9253B2D59FAF85BBD5B96094F5E1E65",
+          "old_text": "then it has a smallest element $Y$",
+          "replacement_text": "then it has a minimal element $Y$"
+        }
+      ]
+    },
+    {
+      "stable_id": "MC-STK-ERR-0073",
+      "producer_id": "TOPOLOGY-039",
+      "source_locus": "topology.tex:3594-3611",
+      "classification": "directedness proof gap",
+      "disposition": "accepted",
+      "proof_rationale": "Finite unions of point closures are closed, contained in T, directed by inclusion through union of finite index sets, and have union T. This proves the stated directed-union characterization.",
+      "adverse_evidence": "In a two-point discrete space the family of the two point closures has no member containing their union, so the family exhibited by the printed proof need not be directed.",
+      "operations": [
+        {
+          "operation_id": "MC-STK-ERR-0073-OP1",
+          "source_start_line": 3605,
+          "source_end_line": 3607,
+          "start_byte": 138579,
+          "end_byte_exclusive": 138808,
+          "occurrence_count_in_frozen_authority": 1,
+          "old_bytes": 229,
+          "old_sha256": "BC04D9F9691FBBCD58C276C6C85E68A4F3E7C7C9FBE596AD566FD38AFB69AC9A",
+          "replacement_bytes": 349,
+          "replacement_sha256": "10A73D8BEE5C50C2EB2F85AEBACB6498D1F7085BA2B52622B2137ABF8DD2C6AD",
+          "old_text": "Suppose that $T$ is stable under specialization, then for all $y\\in T$ we have\n$\\overline{\\{y\\}} \\subset T$. Thus $T = \\bigcup_{y\\in T} \\overline{\\{y\\}}$\nwhich is an union of closed subsets of $X$. Reciprocally, suppose that $T =",
+          "replacement_text": "Suppose that $T$ is stable under specialization. For every finite subset\n$S \\subset T$ set\n$$\nF_S = \\bigcup_{y \\in S} \\overline{\\{y\\}}.\n$$\nThen $F_S$ is closed and contained in $T$, the family $(F_S)$ is directed\nby inclusion since $F_S \\cup F_{S'} = F_{S \\cup S'}$, and\n$T = \\bigcup_{S \\subset T\\text{ finite}} F_S$.\nReciprocally, suppose that $T ="
+        }
+      ]
+    },
+    {
+      "stable_id": "MC-STK-ERR-0074",
+      "producer_id": "TOPOLOGY-034",
+      "source_locus": "topology.tex:4499-4501",
+      "classification": "unsupported distinctness implication",
+      "disposition": "accepted",
+      "proof_rationale": "The proof produces a common generalization but never proves that it differs from x or y; deleting 'third' makes the statement exactly match the proof.",
+      "adverse_evidence": "For x=y in a one-point spectral space, and for comparable points in the Sierpinski space, a common generalization can equal one of the named points while disjoint neighbourhoods do not exist.",
+      "operations": [
+        {
+          "operation_id": "MC-STK-ERR-0074-OP1",
+          "source_start_line": 4500,
+          "source_end_line": 4500,
+          "start_byte": 174515,
+          "end_byte_exclusive": 174561,
+          "occurrence_count_in_frozen_authority": 1,
+          "old_bytes": 46,
+          "old_sha256": "01992F2854E8E7DF19895584EE2A703C724A50D5DE291BD4F0C9EAE259ED7AB9",
+          "replacement_bytes": 40,
+          "replacement_sha256": "064928FA7F071E885B0B80327813B7C5B85F519FF79B61BB37E11428277E5972",
+          "old_text": "a third point specializing to both $x$ and $y$",
+          "replacement_text": "a point specializing to both $x$ and $y$"
+        }
+      ]
+    },
+    {
+      "stable_id": "MC-STK-ERR-0075",
+      "producer_id": "TOPOLOGY-035",
+      "source_locus": "topology.tex:4530-4538",
+      "classification": "unfinished editorial placeholder",
+      "disposition": "accepted",
+      "proof_rationale": "The proof establishes equivalence only through item (8); deleting the non-proposition placeholder leaves the complete proved list and closes item (8) grammatically.",
+      "adverse_evidence": "The literal text 'add more here.' is neither a mathematical condition nor addressed by the proof.",
+      "operations": [
+        {
+          "operation_id": "MC-STK-ERR-0075-OP1",
+          "source_start_line": 4536,
+          "source_end_line": 4537,
+          "start_byte": 176029,
+          "end_byte_exclusive": 176120,
+          "occurrence_count_in_frozen_authority": 1,
+          "old_bytes": 91,
+          "old_sha256": "070EE6ADFF82B96437428D58C01B499687B44A710C86A1298AD0C581F2AEB156",
+          "replacement_bytes": 66,
+          "replacement_sha256": "ACABAA20C45B0E284410AEDBF47ED784FB2FB10BA91F778DA63E724126B0493B",
+          "old_text": "\\item the constructible topology equals the given topology on $X$, and\n\\item add more here.",
+          "replacement_text": "\\item the constructible topology equals the given topology on $X$."
+        }
+      ]
+    },
+    {
+      "stable_id": "MC-STK-ERR-0076",
+      "producer_id": "TOPOLOGY-036",
+      "source_locus": "topology.tex:5813-5816",
+      "classification": "missing universal quantifier",
+      "disposition": "accepted",
+      "proof_rationale": "For every g in U_t and w in W, the chosen finite subcover gives gw in W and hence f(gw)=t. This two-variable statement is exactly what proves the later intersection is contained in H.",
+      "adverse_evidence": "The printed sentence quantifies w only, leaving g free and failing to state the fact used in the next inclusion.",
+      "operations": [
+        {
+          "operation_id": "MC-STK-ERR-0076-OP1",
+          "source_start_line": 5814,
+          "source_end_line": 5814,
+          "start_byte": 229158,
+          "end_byte_exclusive": 229198,
+          "occurrence_count_in_frozen_authority": 1,
+          "old_bytes": 40,
+          "old_sha256": "501ABB0E0764587E729081EF0003D45942172BCCB081B778137439A8BC282FF8",
+          "replacement_bytes": 56,
+          "replacement_sha256": "161B6625DE654EED8891317A287954703D1F6BE4B71DE53815C463D956A0A70D",
+          "old_text": "such that $f(gw) = t$ for all $w \\in W$.",
+          "replacement_text": "such that $f(gw) = t$ for all $g \\in U_t$ and $w \\in W$."
+        }
+      ]
+    }
+  ]
+}

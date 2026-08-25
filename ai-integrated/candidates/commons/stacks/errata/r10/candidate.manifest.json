@@ -1,0 +1,215 @@
+{
+  "$schema": "../../../../../schemas/candidate-manifest.schema.json",
+  "schema": "mathematics-commons-stacks-candidate-manifest/v1",
+  "candidate_id": "stacks-errata-a04446e-r10",
+  "lease_id": "stacks-lease-000013-errata-r10",
+  "namespace": "commons/stacks/errata/r10",
+  "writer_task": "01a0256d-5693-77c1-96b2-cf37101e0c6c",
+  "upstream": {
+    "lock": "upstream/stacks.lock.json",
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e"
+  },
+  "source_authorities": [
+    {
+      "path": "authority/canon/R10_ALG_372_381_ADJUDICATION_SPEC.json",
+      "sha256": "C4F71F757B11A62A713945CA16F49CC6075BFEA126A3DD539B1C850D630CA058"
+    },
+    {
+      "path": "authority/canon/R10_ALG_372_381_INTAKE.json",
+      "sha256": "712E21D9AA766467D98C5B3D5D67CDB35B99B2C843CB20794891A122E9729B40"
+    },
+    {
+      "path": "authority/canon/R10_ALG_372_381_REVIEW.md",
+      "sha256": "FFA6680C9CB0350AA046DD8760104718B4EF6957A11E68C035B91E307808B8D5"
+    },
+    {
+      "path": "authority/COPYING",
+      "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"
+    },
+    {
+      "path": "authority/producer/SOURCE_DEFECT_LEDGER.csv",
+      "sha256": "7D39EF5F7DF93048D66F39BF23392519B177C7FEF655844FE96D63699B217E5E"
+    },
+    {
+      "path": "authority/source/algebra.tex",
+      "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+    },
+    {
+      "path": "authority/upstream.lock.json",
+      "sha256": "B195ECC83AB0F32C574A60D1FDBA9B0DA4D35B04E0DF7CB106DC9C0FDAD99C0D"
+    }
+  ],
+  "source_closure": {
+    "enumerated": true,
+    "expected_units": 10,
+    "manifested_units": 10,
+    "complete": true
+  },
+  "stable_unit_manifest": {
+    "path": "stable-units.json",
+    "sha256": "7702A5706DBBCDE49DB04420ED9385BFB57C96594554EFB9A259B031849C85B3"
+  },
+  "source_map": {
+    "path": "source-map.jsonl",
+    "sha256": "BAE906322BE42AA312B8B16A2BCA3733C86AF94465F12780A76F83E43D4A04F6"
+  },
+  "decision_ledger": {
+    "path": "decisions.jsonl",
+    "sha256": "F1E0F59BD469F02345E3286E8814765146CA4104BF9336D10A8C72DA60389D47"
+  },
+  "rejection_ledger": {
+    "path": "rejections.jsonl",
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  "formula_diagram_inventory": {
+    "path": "formula-diagram-inventory.json",
+    "sha256": "7D5803209A51DE6C20A85270FF7AA30FF3493091CD5793779809BC9A8343A27A"
+  },
+  "builds": [
+    {
+      "path": ".gitattributes",
+      "sha256": "705FD4D6451A31D36B3DF7DE96F83F30AC976C9B4A6D1E51671D8E2F33E2D0DA"
+    },
+    {
+      "path": "append-highres.py",
+      "sha256": "AF69396221D34B9E101AC4BB0708A0D454FAA5ECE065D0FD1A91B3404701058D"
+    },
+    {
+      "path": "build-adjudication-spec.py",
+      "sha256": "2DA5FCE7D98121FF39E9177DDB654C78AE917AB6D2FA909DCE525311D4965AA8"
+    },
+    {
+      "path": "build-manifest.py",
+      "sha256": "93FCCEE1064E83D588690CB4F1568B04782FC17E56AB86C209213FCF7BECF4A1"
+    },
+    {
+      "path": "build-receipt.py",
+      "sha256": "6AD2D96321E3C3EB0635170BF9692957088BA8BC31BAB66E96F6C885F1350BFC"
+    },
+    {
+      "path": "BUILD.md",
+      "sha256": "5633E760A148E2E92154C60C4F2335CFC0BFA77592A6C36E55F2B297D270A6DF"
+    },
+    {
+      "path": "builds/algebra.authority.bibtex.txt",
+      "sha256": "2AC8211AB78503B72BF64B7015C2E58065FC80EFC13A098A870A9A9CC6498831"
+    },
+    {
+      "path": "builds/algebra.authority.log",
+      "sha256": "6DE768C3C4951D2A8C6BE699A4D124FBD7857A605DABF4409230AF0D276A51AA"
+    },
+    {
+      "path": "builds/algebra.authority.pass3.txt",
+      "sha256": "4C9D1FC25C5F174613DBA31710B7D98B3D8C39182492E55042E609FBF5FB54B3"
+    },
+    {
+      "path": "builds/algebra.authority.pdf",
+      "sha256": "C7D408FDB2F6F3646C1E1D325642F9BBA7FA0143ACE91C7774183D605D5E9914"
+    },
+    {
+      "path": "builds/algebra.bibtex.txt",
+      "sha256": "2AC8211AB78503B72BF64B7015C2E58065FC80EFC13A098A870A9A9CC6498831"
+    },
+    {
+      "path": "builds/algebra.log",
+      "sha256": "2C1DD45DAD3E27610A45DC0D376129BF530CD97FD5660133969AE14936CD884F"
+    },
+    {
+      "path": "builds/algebra.pass3.txt",
+      "sha256": "4D3F4DB817728C7D381DB021E4BBC660EC3603EFC033E89B94DDC966BBF1C132"
+    },
+    {
+      "path": "builds/algebra.pdf",
+      "sha256": "4C54A876A5635726DC785A24C9408A7CD848C39581E6F900181D6681F9710821"
+    },
+    {
+      "path": "builds/build-execution.json",
+      "sha256": "500819A1576E48E60DB1AD4586E77F09C186A6B7A68CC4F5F10BBDD8549AAF98"
+    },
+    {
+      "path": "builds/build-receipt.json",
+      "sha256": "75F34814B72F8A84D65AD65B9094CFEFA6DB382D0FB3900D2E69DB2CAA5C354E"
+    },
+    {
+      "path": "builds/validation.json",
+      "sha256": "61FB1C265BF0CBC697CD08183F9AFF049595338924537640DE32C43B784E991B"
+    },
+    {
+      "path": "builds/visual-qa.json",
+      "sha256": "B062D063AB9D7C69FE7FE36983C2843695CE25F3AB0B4D633BA5E067C6138947"
+    },
+    {
+      "path": "candidate.config.json",
+      "sha256": "E98E18046B98F516BB2575622CC5DDAEF62D1F55C32E37AC5F1899A66386EE9A"
+    },
+    {
+      "path": "check-manifest.py",
+      "sha256": "9D4513D7BBEC9371D20E73E30ABFC2FC2435BA24729C71A0BC3D3DF187826B75"
+    },
+    {
+      "path": "independent-review.py",
+      "sha256": "B4BF801D55D38E375735FF98BE10E6706CE7CE31C103EACD7E37148DBA2209FB"
+    },
+    {
+      "path": "LEASE.json",
+      "sha256": "94A2A4F8F5074C2E6C5FC423E38EF7DFD1BC18B721123B97FC43FB3A86B14174"
+    },
+    {
+      "path": "materialize.py",
+      "sha256": "67AD94EE0DEF62115F2011EAB1E9A52AA65C770A78CD1BBED5B63FBA36E7D1AD"
+    },
+    {
+      "path": "operation-spec.json",
+      "sha256": "C296EDF3762E9E95EAFA9F95176AE0E52035EA23E8847F2770329E30BF0C2859"
+    },
+    {
+      "path": "payload/algebra.tex",
+      "sha256": "03653D1FDF7D1CC6072E8AB9DDA1E5A282E225BF195FD6EF6B48E6ABEF7FE7BD"
+    },
+    {
+      "path": "README.md",
+      "sha256": "0138F4BAF7F5E0CAFA0CAA087D2BFE0FE48BDF080D7B4FA07864305C13D7210D"
+    },
+    {
+      "path": "render-qa.py",
+      "sha256": "AA124B928054D51AC311F8B8B3C6BADB3AB535590DFF422DE6A657B7CD53B8A6"
+    },
+    {
+      "path": "replay/independent-review.json",
+      "sha256": "96110829B2749F92E3882CAB681E4E87FDD68E6434E16DB87B2409091AF4EA16"
+    },
+    {
+      "path": "replay-build.py",
+      "sha256": "EE9BA81EA4EA0652399C2894E5660660603A92DB9EF3A4EF2CE64CCDE5561B33"
+    },
+    {
+      "path": "verify.py",
+      "sha256": "26120C75DA649790CF518E0C219FDC4DB724E6AAEB896D4C0A273510B1F54A8B"
+    },
+    {
+      "path": "visual-qa.py",
+      "sha256": "47ADDF81DF69176C0E66E0568647FA993564884C7826CFDEA36C982982E8264E"
+    }
+  ],
+  "rights_state": "The authority and modified payload retain the Stacks Project GNU Free Documentation License 1.2; metadata and receipts do not relicense upstream content. This is an independently maintained AI-produced English edition with no Stacks Project review, approval, affiliation, or endorsement. Legal certification was not performed.",
+  "review_state": "performed",
+  "independent_replay": "passed",
+  "unresolved_defects": [
+    "The independent replay receipt binds pre-review manifest 0BC764823EB3D71277F2414EE520BB59B995BC85A015DE6905975B70397D5F49 and validation 61FB1C265BF0CBC697CD08183F9AFF049595338924537640DE32C43B784E991B. This final registrar-only rebind adds the replay receipt; no reviewed authority, payload, proof, script, build, PDF, or visual-QA byte changed.",
+    "The isolated algebra.tex candidate retains cross-chapter undefined-reference targets; their multiset matches the frozen authority build exactly.",
+    "The candidate and authority readers each have 466 pages. Every candidate page and the complete correction-sensitive band were inspected without clipping, overlap, missing glyph, broken diagram, blank page, or unreadable content.",
+    "The proof PDFs contain embedded fonts with ToUnicode maps but are untagged; document-structure accessibility remains a cumulative-edition toolchain concern.",
+    "The frozen producer snapshot closes ALGEBRA-372 through ALGEBRA-381: all ten rows are accepted and none is rejected, aliased, or unresolved.",
+    "Canonical translations preserve the frozen authority unless a locale-side emendation is separately bound; this English corrected overlay is not silently copied.",
+    "Overlay admission and English-edition composition are separate transitions; this manifest records candidate closure only."
+  ],
+  "stop_conditions": [
+    "Do not mutate the literal stacks-project master mirror.",
+    "Do not apply these corrections silently to canonical translation source or PDFs.",
+    "Do not contact or submit to the upstream Stacks maintainers under the current no-AI-contribution boundary.",
+    "Do not append an overlay registry record except in a separate admission commit bound to the final manifest hash and a passed independent replay.",
+    "Any change to reviewed authority, payload, proof, build, validation, visual-QA, or replay bytes invalidates the replay and requires a new review."
+  ],
+  "generated_at_utc": "2026-08-24T20:10:00Z"
+}

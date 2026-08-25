@@ -1,0 +1,107 @@
+{
+  "schema": "stacks-canon-errata-intake/v1",
+  "intake_id": "STACKS-ERRATA-R5-SITES-076-117-20260822",
+  "observed_at_utc": "2026-08-22T06:25:00Z",
+  "scope": "French-lane Sites hypotheses SITES-076 through SITES-117, outside frozen R4",
+  "authority": {
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "path": "../../upstream/src/stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14/sites.tex",
+    "bytes": 424197,
+    "sha256": "07AE4690C2D8EB6873837D3D14A37F07408BB14F9E0BE6077ED570C220B1845D"
+  },
+  "producer_evidence": {
+    "path": "<LOCAL_WORKSPACE>/03_projects/language_management/romance/03_working_translations/stacks_fr_20260821/00_control/SOURCE_DEFECT_LEDGER.csv",
+    "live_snapshot_bytes": 100395,
+    "live_snapshot_sha256": "7069FFF6B15A5B0F6A4E11B3D9826D2216FEDBD15F84D1FC1FB57A70813CAD5D",
+    "live_snapshot_rows": 248,
+    "selected_rows": 42,
+    "direct_packet_snapshot_sha256_for_097_through_116": "070F39274BDF68F2555F1915E1C8D3C546633D939842EF6BE3DDF393B076D0E0",
+    "direct_packet_snapshot_sha256_for_117": "B4475EB2FB8916302F352D5354A8F07B83FE500550FCE5E6D7AA73763A79E70B"
+  },
+  "proof_review": {
+    "path": "ERRATA_R5_SITES_076_117_REVIEW.md",
+    "bytes": 9593,
+    "sha256": "A8D19579197A93441AC55EFFA6A9DA307ADE2E5D92909E5BFF56ED6AB4B666BD",
+    "independent_passes": 2,
+    "new_accepted_units": 38,
+    "accepted_operations": 42,
+    "rejected": 3,
+    "prior_overlay_aliases": 1,
+    "packet_level_duplicates": 1,
+    "deferred": 0,
+    "unresolved": 0,
+    "diagnostic_payload_bytes": 424291,
+    "diagnostic_payload_sha256": "9B11C7525C7A23CD8732FDC204E5F62B66892969B08087CE26EC194F85073499"
+  },
+  "accepted_producer_ids": [
+    "SITES-076",
+    "SITES-078",
+    "SITES-079",
+    "SITES-080",
+    "SITES-081",
+    "SITES-082",
+    "SITES-083",
+    "SITES-084",
+    "SITES-086",
+    "SITES-087",
+    "SITES-088",
+    "SITES-089",
+    "SITES-090",
+    "SITES-091",
+    "SITES-092",
+    "SITES-093",
+    "SITES-094",
+    "SITES-096",
+    "SITES-097",
+    "SITES-098",
+    "SITES-099",
+    "SITES-100",
+    "SITES-101",
+    "SITES-102",
+    "SITES-103",
+    "SITES-104",
+    "SITES-105",
+    "SITES-106",
+    "SITES-107",
+    "SITES-108",
+    "SITES-109",
+    "SITES-110",
+    "SITES-111",
+    "SITES-112",
+    "SITES-113",
+    "SITES-114",
+    "SITES-115",
+    "SITES-117"
+  ],
+  "rejected_producer_ids": [
+    "SITES-085",
+    "SITES-095",
+    "SITES-116"
+  ],
+  "aliases": [
+    {
+      "producer_id": "SITES-077",
+      "alias_of": "SITES-047",
+      "admitted_stable_id": "MC-STK-ERR-0189"
+    },
+    {
+      "producer_id": "SITES-097-repeat",
+      "alias_of": "SITES-097",
+      "kind": "duplicate incoming packet"
+    }
+  ],
+  "provisional_stable_id_range": {
+    "first": "MC-STK-ERR-0217",
+    "last": "MC-STK-ERR-0254",
+    "count": 38,
+    "condition": "becomes final only after R4 admission and issuance of the disjoint R5 lease"
+  },
+  "boundary": {
+    "r4_mutated": false,
+    "upstream_mutated": false,
+    "canonical_translations_mutated": false,
+    "upstream_contacted": false,
+    "r5_admitted": false
+  },
+  "next_action": "Complete R4 independent replay, publish its candidate, admit R4 in a separate registry transition, issue the R5 lease, then construct and replay R5 from this proved source-order map."
+}

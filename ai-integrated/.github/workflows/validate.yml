@@ -1,0 +1,86 @@
+name: validate
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate bound state and namespace leases
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          for path in sorted(Path('.').rglob('*.json')):
+              json.loads(path.read_text(encoding='utf-8'))
+
+          lock = json.loads(Path('upstream/stacks.lock.json').read_text(encoding='utf-8'))
+          assert lock['commit'] == 'a04446e57ec1fbc252a871afcec7752fb2807b14'
+          assert lock['tree'] == '3feeb703b931a6e7259782c10e7d1575adc83e5e'
+          assert lock['license']['sha256'] == '4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85'
+          assert lock['endorsement']['claimed'] is False
+
+          overlays = json.loads(Path('registry/overlays.json').read_text(encoding='utf-8'))
+          locales = json.loads(Path('registry/locales.json').read_text(encoding='utf-8'))
+          releases = json.loads(Path('registry/releases.json').read_text(encoding='utf-8'))
+          assert overlays['registered_entries'] == []
+          assert locales['admitted_locales'] == []
+          assert releases['releases'] == []
+
+          leases = json.loads(Path('registry/leases.json').read_text(encoding='utf-8'))
+          assert leases['schema'] == 'mathematics-commons-stacks-lease-registry/v1'
+          assert leases['upstream_lock'] == 'upstream/stacks.lock.json'
+          events = leases['events']
+          assert [e['event_id'] for e in events] == [
+              'lease-event-000001', 'lease-event-000002', 'lease-event-000003'
+          ]
+          assert len({e['event_id'] for e in events}) == len(events)
+          assert len({e['lease_id'] for e in events}) == len(events)
+          assert len({e['namespace'] for e in events}) == len(events)
+          assert len({e['candidate_path'] for e in events}) == len(events)
+          active = [e for e in events if e['state'] == 'active']
+          assert len(active) == 3
+          expected = {
+              'commons/stacks/fac': 'stacks-lease-000001-fac',
+              'commons/stacks/tohoku': 'stacks-lease-000002-tohoku',
+              'commons/stacks/gaga': 'stacks-lease-000003-gaga',
+          }
+          assert {e['namespace']: e['lease_id'] for e in active} == expected
+          for event in active:
+              assert event['event'] == 'issued'
+              assert event['writer_task'] == '019fca5a-c29e-7330-acdc-c93f4a3dc9fb'
+              assert event['upstream_commit'] == lock['commit']
+              assert event['upstream_tree'] == lock['tree']
+              assert event['candidate_path'] == 'candidates/' + event['namespace']
+              pointer_path = Path(event['candidate_path']) / 'LEASE.json'
+              pointer = json.loads(pointer_path.read_text(encoding='utf-8'))
+              for key in ('lease_id', 'namespace', 'writer_task', 'upstream_commit'):
+                  assert pointer[key] == event[key], (pointer_path, key)
+
+          namespaces = sorted(e['namespace'].strip('/') for e in active)
+          for i, left in enumerate(namespaces):
+              for right in namespaces[i + 1:]:
+                  assert not right.startswith(left + '/'), (left, right)
+
+          for manifest_path in sorted(Path('candidates').rglob('candidate.manifest.json')):
+              manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
+              lease = next((e for e in active if e['lease_id'] == manifest['lease_id']), None)
+              assert lease is not None, manifest_path
+              assert manifest['namespace'] == lease['namespace']
+              assert manifest['writer_task'] == lease['writer_task']
+              assert manifest['upstream']['commit'] == lock['commit']
+              assert manifest['upstream']['tree'] == lock['tree']
+              assert manifest['source_closure']['complete'] is True
+              assert manifest['source_closure']['expected_units'] == manifest['source_closure']['manifested_units']
+
+          forbidden = list(Path('.').rglob('*.tex')) + list(Path('.').rglob('*.pdf'))
+          assert not forbidden, f'unexpected upstream or build payload: {forbidden}'
+          print('validated exact Stacks pin, zero admissions, and three namespace leases')
+          PY

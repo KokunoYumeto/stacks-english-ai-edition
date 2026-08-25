@@ -1,0 +1,2283 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(algebra.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-03-20>
+(preamble.tex (stacks-project.cls
+Document Class: stacks-project 
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+For additional information on amsmath, use the `?' option.
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty))
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty)
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty))
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd)
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty)
+) (<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty)
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xy.sty
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xy.tex
+Bootstrap'ing: catcodes, docmode,
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyrecat.tex)
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyidioms.tex)
+
+ Xy-pic version 3.8.9 <2013/10/06>
+ Copyright (c) 1991-2013 by Kristoffer H. Rose <krisrose@tug.org> and others
+ Xy-pic is free software: see the User's Guide for details.
+
+Loading kernel: messages; fonts; allocations: state, direction,
+utility macros; pictures: \xy, positions, objects, decorations;
+kernel objects: directionals, circles, text; options; algorithms: directions,
+edges, connections;  Xy-pic loaded)
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifpdf.sty
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty))
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyall.tex
+ Xy-pic option: All features v.3.8
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xycurve.tex
+ Xy-pic option: Curve and Spline extension v.3.12 curve, circles, loaded)
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyframe.tex
+ Xy-pic option: Frame and Bracket extension v.3.14 loaded)
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xycmtip.tex
+ Xy-pic option: Computer Modern tip extension v.3.7
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xytips.tex
+ Xy-pic option: More Tips extension v.3.11 loaded) loaded)
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyline.tex
+ Xy-pic option: Line styles extension v.3.10 loaded)
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyrotate.tex
+ Xy-pic option: Rotate and Scale extension v.3.8 loaded)
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xycolor.tex
+ Xy-pic option: Colour extension v.3.11 loaded)
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xymatrix.tex
+ Xy-pic option: Matrix feature v.3.14 loaded)
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyarrow.tex
+ Xy-pic option: Arrow and Path feature v.3.9 path, \ar, loaded)
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xygraph.tex
+ Xy-pic option: Graph feature v.3.11 loaded) loaded)
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xypdf.tex
+ Xy-pic option: PDF driver v.1.7 Xy-pic pdf driver: `color' extension support
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xypdf-co.tex
+loaded) Xy-pic pdf driver: `curve' extension support
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xypdf-cu.tex
+loaded) Xy-pic pdf driver: `frame' extension support
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xypdf-fr.tex
+loaded) Xy-pic pdf driver: `line' extension support
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xypdf-li.tex
+loaded) Xy-pic pdf driver: `rotate' extension support
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xypdf-ro.tex
+loaded) loaded))
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xy2cell.tex
+ Xy-pic option: Two-cell feature v.3.7 two-cells, loaded)
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty)
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty)
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd))
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\xr-hyper.sty)
+ (<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty)
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.st
+y)
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefin
+ekeys.sty)
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.
+sty
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty)
+
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmd
+s.sty
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.
+sty)))
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty)
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty)
+
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\getti
+tlestring.sty
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.st
+y)))
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty)
+
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.
+sty)
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def)
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty)
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def)
+(hyperref.cfg)
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty)
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcal
+c.sty)))
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfi
+lecheck.sty
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\unique
+counter.sty)))
+
+Package xr Warning: 
+No file introduction.aux
+LABELS NOT IMPORTED.
+ on input line 37.
+
+
+Package xr Warning: 
+No file conventions.aux
+LABELS NOT IMPORTED.
+ on input line 38.
+
+
+Package xr Warning: 
+No file sets.aux
+LABELS NOT IMPORTED.
+ on input line 39.
+
+
+Package xr Warning: 
+No file categories.aux
+LABELS NOT IMPORTED.
+ on input line 40.
+
+
+Package xr Warning: 
+No file topology.aux
+LABELS NOT IMPORTED.
+ on input line 41.
+
+
+Package xr Warning: 
+No file sheaves.aux
+LABELS NOT IMPORTED.
+ on input line 42.
+
+
+Package xr Warning: 
+No file sites.aux
+LABELS NOT IMPORTED.
+ on input line 43.
+
+
+Package xr Warning: 
+No file stacks.aux
+LABELS NOT IMPORTED.
+ on input line 44.
+
+
+Package xr Warning: 
+No file fields.aux
+LABELS NOT IMPORTED.
+ on input line 45.
+
+
+Package xr Warning: 
+No file brauer.aux
+LABELS NOT IMPORTED.
+ on input line 47.
+
+
+Package xr Warning: 
+No file homology.aux
+LABELS NOT IMPORTED.
+ on input line 48.
+
+
+Package xr Warning: 
+No file derived.aux
+LABELS NOT IMPORTED.
+ on input line 49.
+
+
+Package xr Warning: 
+No file simplicial.aux
+LABELS NOT IMPORTED.
+ on input line 50.
+
+
+Package xr Warning: 
+No file more-algebra.aux
+LABELS NOT IMPORTED.
+ on input line 51.
+
+
+Package xr Warning: 
+No file smoothing.aux
+LABELS NOT IMPORTED.
+ on input line 52.
+
+
+Package xr Warning: 
+No file modules.aux
+LABELS NOT IMPORTED.
+ on input line 53.
+
+
+Package xr Warning: 
+No file sites-modules.aux
+LABELS NOT IMPORTED.
+ on input line 54.
+
+
+Package xr Warning: 
+No file injectives.aux
+LABELS NOT IMPORTED.
+ on input line 55.
+
+
+Package xr Warning: 
+No file cohomology.aux
+LABELS NOT IMPORTED.
+ on input line 56.
+
+
+Package xr Warning: 
+No file sites-cohomology.aux
+LABELS NOT IMPORTED.
+ on input line 57.
+
+
+Package xr Warning: 
+No file dga.aux
+LABELS NOT IMPORTED.
+ on input line 58.
+
+
+Package xr Warning: 
+No file dpa.aux
+LABELS NOT IMPORTED.
+ on input line 59.
+
+
+Package xr Warning: 
+No file sdga.aux
+LABELS NOT IMPORTED.
+ on input line 60.
+
+
+Package xr Warning: 
+No file hypercovering.aux
+LABELS NOT IMPORTED.
+ on input line 61.
+
+
+Package xr Warning: 
+No file schemes.aux
+LABELS NOT IMPORTED.
+ on input line 62.
+
+
+Package xr Warning: 
+No file constructions.aux
+LABELS NOT IMPORTED.
+ on input line 63.
+
+
+Package xr Warning: 
+No file properties.aux
+LABELS NOT IMPORTED.
+ on input line 64.
+
+
+Package xr Warning: 
+No file morphisms.aux
+LABELS NOT IMPORTED.
+ on input line 65.
+
+
+Package xr Warning: 
+No file coherent.aux
+LABELS NOT IMPORTED.
+ on input line 66.
+
+
+Package xr Warning: 
+No file divisors.aux
+LABELS NOT IMPORTED.
+ on input line 67.
+
+
+Package xr Warning: 
+No file limits.aux
+LABELS NOT IMPORTED.
+ on input line 68.
+
+
+Package xr Warning: 
+No file varieties.aux
+LABELS NOT IMPORTED.
+ on input line 69.
+
+
+Package xr Warning: 
+No file topologies.aux
+LABELS NOT IMPORTED.
+ on input line 70.
+
+
+Package xr Warning: 
+No file descent.aux
+LABELS NOT IMPORTED.
+ on input line 71.
+
+
+Package xr Warning: 
+No file perfect.aux
+LABELS NOT IMPORTED.
+ on input line 72.
+
+
+Package xr Warning: 
+No file more-morphisms.aux
+LABELS NOT IMPORTED.
+ on input line 73.
+
+
+Package xr Warning: 
+No file flat.aux
+LABELS NOT IMPORTED.
+ on input line 74.
+
+
+Package xr Warning: 
+No file groupoids.aux
+LABELS NOT IMPORTED.
+ on input line 75.
+
+
+Package xr Warning: 
+No file more-groupoids.aux
+LABELS NOT IMPORTED.
+ on input line 76.
+
+
+Package xr Warning: 
+No file etale.aux
+LABELS NOT IMPORTED.
+ on input line 77.
+
+
+Package xr Warning: 
+No file chow.aux
+LABELS NOT IMPORTED.
+ on input line 78.
+
+
+Package xr Warning: 
+No file intersection.aux
+LABELS NOT IMPORTED.
+ on input line 79.
+
+
+Package xr Warning: 
+No file pic.aux
+LABELS NOT IMPORTED.
+ on input line 80.
+
+
+Package xr Warning: 
+No file weil.aux
+LABELS NOT IMPORTED.
+ on input line 81.
+
+
+Package xr Warning: 
+No file adequate.aux
+LABELS NOT IMPORTED.
+ on input line 82.
+
+
+Package xr Warning: 
+No file dualizing.aux
+LABELS NOT IMPORTED.
+ on input line 83.
+
+
+Package xr Warning: 
+No file duality.aux
+LABELS NOT IMPORTED.
+ on input line 84.
+
+
+Package xr Warning: 
+No file discriminant.aux
+LABELS NOT IMPORTED.
+ on input line 85.
+
+
+Package xr Warning: 
+No file derham.aux
+LABELS NOT IMPORTED.
+ on input line 86.
+
+
+Package xr Warning: 
+No file local-cohomology.aux
+LABELS NOT IMPORTED.
+ on input line 87.
+
+
+Package xr Warning: 
+No file algebraization.aux
+LABELS NOT IMPORTED.
+ on input line 88.
+
+
+Package xr Warning: 
+No file curves.aux
+LABELS NOT IMPORTED.
+ on input line 89.
+
+
+Package xr Warning: 
+No file resolve.aux
+LABELS NOT IMPORTED.
+ on input line 90.
+
+
+Package xr Warning: 
+No file models.aux
+LABELS NOT IMPORTED.
+ on input line 91.
+
+
+Package xr Warning: 
+No file functors.aux
+LABELS NOT IMPORTED.
+ on input line 92.
+
+
+Package xr Warning: 
+No file equiv.aux
+LABELS NOT IMPORTED.
+ on input line 93.
+
+
+Package xr Warning: 
+No file pione.aux
+LABELS NOT IMPORTED.
+ on input line 94.
+
+
+Package xr Warning: 
+No file etale-cohomology.aux
+LABELS NOT IMPORTED.
+ on input line 95.
+
+
+Package xr Warning: 
+No file proetale.aux
+LABELS NOT IMPORTED.
+ on input line 96.
+
+
+Package xr Warning: 
+No file relative-cycles.aux
+LABELS NOT IMPORTED.
+ on input line 97.
+
+
+Package xr Warning: 
+No file more-etale.aux
+LABELS NOT IMPORTED.
+ on input line 98.
+
+
+Package xr Warning: 
+No file trace.aux
+LABELS NOT IMPORTED.
+ on input line 99.
+
+
+Package xr Warning: 
+No file crystalline.aux
+LABELS NOT IMPORTED.
+ on input line 100.
+
+
+Package xr Warning: 
+No file spaces.aux
+LABELS NOT IMPORTED.
+ on input line 101.
+
+
+Package xr Warning: 
+No file spaces-properties.aux
+LABELS NOT IMPORTED.
+ on input line 102.
+
+
+Package xr Warning: 
+No file spaces-morphisms.aux
+LABELS NOT IMPORTED.
+ on input line 103.
+
+
+Package xr Warning: 
+No file decent-spaces.aux
+LABELS NOT IMPORTED.
+ on input line 104.
+
+
+Package xr Warning: 
+No file spaces-cohomology.aux
+LABELS NOT IMPORTED.
+ on input line 105.
+
+
+Package xr Warning: 
+No file spaces-limits.aux
+LABELS NOT IMPORTED.
+ on input line 106.
+
+
+Package xr Warning: 
+No file spaces-divisors.aux
+LABELS NOT IMPORTED.
+ on input line 107.
+
+
+Package xr Warning: 
+No file spaces-over-fields.aux
+LABELS NOT IMPORTED.
+ on input line 108.
+
+
+Package xr Warning: 
+No file spaces-topologies.aux
+LABELS NOT IMPORTED.
+ on input line 109.
+
+
+Package xr Warning: 
+No file spaces-descent.aux
+LABELS NOT IMPORTED.
+ on input line 110.
+
+
+Package xr Warning: 
+No file spaces-perfect.aux
+LABELS NOT IMPORTED.
+ on input line 111.
+
+
+Package xr Warning: 
+No file spaces-more-morphisms.aux
+LABELS NOT IMPORTED.
+ on input line 112.
+
+
+Package xr Warning: 
+No file spaces-flat.aux
+LABELS NOT IMPORTED.
+ on input line 113.
+
+
+Package xr Warning: 
+No file spaces-groupoids.aux
+LABELS NOT IMPORTED.
+ on input line 114.
+
+
+Package xr Warning: 
+No file spaces-more-groupoids.aux
+LABELS NOT IMPORTED.
+ on input line 115.
+
+
+Package xr Warning: 
+No file bootstrap.aux
+LABELS NOT IMPORTED.
+ on input line 116.
+
+
+Package xr Warning: 
+No file spaces-pushouts.aux
+LABELS NOT IMPORTED.
+ on input line 117.
+
+
+Package xr Warning: 
+No file spaces-chow.aux
+LABELS NOT IMPORTED.
+ on input line 118.
+
+
+Package xr Warning: 
+No file groupoids-quotients.aux
+LABELS NOT IMPORTED.
+ on input line 119.
+
+
+Package xr Warning: 
+No file spaces-more-cohomology.aux
+LABELS NOT IMPORTED.
+ on input line 120.
+
+
+Package xr Warning: 
+No file spaces-simplicial.aux
+LABELS NOT IMPORTED.
+ on input line 121.
+
+
+Package xr Warning: 
+No file spaces-duality.aux
+LABELS NOT IMPORTED.
+ on input line 122.
+
+
+Package xr Warning: 
+No file formal-spaces.aux
+LABELS NOT IMPORTED.
+ on input line 123.
+
+
+Package xr Warning: 
+No file restricted.aux
+LABELS NOT IMPORTED.
+ on input line 124.
+
+
+Package xr Warning: 
+No file spaces-resolve.aux
+LABELS NOT IMPORTED.
+ on input line 125.
+
+
+Package xr Warning: 
+No file formal-defos.aux
+LABELS NOT IMPORTED.
+ on input line 126.
+
+
+Package xr Warning: 
+No file defos.aux
+LABELS NOT IMPORTED.
+ on input line 127.
+
+
+Package xr Warning: 
+No file cotangent.aux
+LABELS NOT IMPORTED.
+ on input line 128.
+
+
+Package xr Warning: 
+No file examples-defos.aux
+LABELS NOT IMPORTED.
+ on input line 129.
+
+
+Package xr Warning: 
+No file algebraic.aux
+LABELS NOT IMPORTED.
+ on input line 130.
+
+
+Package xr Warning: 
+No file examples-stacks.aux
+LABELS NOT IMPORTED.
+ on input line 131.
+
+
+Package xr Warning: 
+No file stacks-sheaves.aux
+LABELS NOT IMPORTED.
+ on input line 132.
+
+
+Package xr Warning: 
+No file criteria.aux
+LABELS NOT IMPORTED.
+ on input line 133.
+
+
+Package xr Warning: 
+No file artin.aux
+LABELS NOT IMPORTED.
+ on input line 134.
+
+
+Package xr Warning: 
+No file quot.aux
+LABELS NOT IMPORTED.
+ on input line 135.
+
+
+Package xr Warning: 
+No file stacks-properties.aux
+LABELS NOT IMPORTED.
+ on input line 136.
+
+
+Package xr Warning: 
+No file stacks-morphisms.aux
+LABELS NOT IMPORTED.
+ on input line 137.
+
+
+Package xr Warning: 
+No file stacks-limits.aux
+LABELS NOT IMPORTED.
+ on input line 138.
+
+
+Package xr Warning: 
+No file stacks-cohomology.aux
+LABELS NOT IMPORTED.
+ on input line 139.
+
+
+Package xr Warning: 
+No file stacks-perfect.aux
+LABELS NOT IMPORTED.
+ on input line 140.
+
+
+Package xr Warning: 
+No file stacks-introduction.aux
+LABELS NOT IMPORTED.
+ on input line 141.
+
+
+Package xr Warning: 
+No file stacks-more-morphisms.aux
+LABELS NOT IMPORTED.
+ on input line 142.
+
+
+Package xr Warning: 
+No file stacks-geometry.aux
+LABELS NOT IMPORTED.
+ on input line 143.
+
+
+Package xr Warning: 
+No file moduli.aux
+LABELS NOT IMPORTED.
+ on input line 144.
+
+
+Package xr Warning: 
+No file moduli-curves.aux
+LABELS NOT IMPORTED.
+ on input line 145.
+
+
+Package xr Warning: 
+No file examples.aux
+LABELS NOT IMPORTED.
+ on input line 146.
+
+
+Package xr Warning: 
+No file exercises.aux
+LABELS NOT IMPORTED.
+ on input line 147.
+
+
+Package xr Warning: 
+No file guide.aux
+LABELS NOT IMPORTED.
+ on input line 148.
+
+
+Package xr Warning: 
+No file desirables.aux
+LABELS NOT IMPORTED.
+ on input line 149.
+
+
+Package xr Warning: 
+No file coding.aux
+LABELS NOT IMPORTED.
+ on input line 150.
+
+
+Package xr Warning: 
+No file obsolete.aux
+LABELS NOT IMPORTED.
+ on input line 151.
+
+
+Package xr Warning: 
+No file fdl.aux
+LABELS NOT IMPORTED.
+ on input line 152.
+
+
+Package xr Warning: 
+No file index.aux
+LABELS NOT IMPORTED.
+ on input line 153.
+
+)
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pd
+ftex.def) (algebra.aux)
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd)
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd)
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd)
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd)
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd)
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd)
+(algebra.out) (algebra.out) (algebra.toc [1{<USER_ROOT>/AppData/Local/MiKTe
+X/fonts/map/pdftex/pdftex.map}{<USER_ROOT>/AppData/Local/Programs/MiKTeX/fo
+nts/enc/dvips/lm/lm-ec.enc}]
+Underfull \vbox (badness 10000) has occurred while \output is active [2]
+Underfull \vbox (badness 10000) has occurred while \output is active [3])
+(<USER_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd)
+[4{<USER_ROOT>/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{
+<USER_ROOT>/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}
+{<USER_ROOT>/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc
+}] [5{<USER_ROOT>/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathe
+x.enc}]
+Underfull \vbox (badness 10000) has occurred while \output is active [6]
+
+LaTeX Warning: Reference `homology-section-abelian-categories' on page 7 undefi
+ned on input line 301.
+
+<xymatrix 5x2 365> [7] <xymatrix 5x2 389> <xymatrix 5x2 416> [8] [9] [10]
+
+LaTeX Warning: Reference `categories-section-limits' on page 11 undefined on in
+put line 708.
+
+
+LaTeX Warning: Reference `categories-section-posets-limits' on page 11 undefine
+d on input line 709.
+
+
+LaTeX Warning: Reference `categories-definition-directed-set' on page 11 undefi
+ned on input line 711.
+
+
+LaTeX Warning: Reference `categories-definition-system-over-poset' on page 11 u
+ndefined on input line 730.
+
+
+LaTeX Warning: Reference `categories-section-posets-limits' on page 11 undefine
+d on input line 731.
+
+
+LaTeX Warning: Reference `categories-definition-colimit' on page 11 undefined o
+n input line 732.
+
+
+LaTeX Warning: Reference `categories-lemma-colimits-coproducts-coequalizers' on
+ page 11 undefined on input line 755.
+
+<xymatrix 3x3 276> [11]
+
+LaTeX Warning: Reference `categories-section-directed-colimits' on page 12 unde
+fined on input line 807.
+
+
+LaTeX Warning: Reference `categories-lemma-functorial-colimit' on page 12 undef
+ined on input line 860.
+
+[12] <xymatrix 2x2 168> <xymatrix 2x2 168> <xymatrix 3x1 96> <xymatrix 3x1 96>
+<xymatrix 3x1 96> [13]
+
+LaTeX Warning: Reference `categories-lemma-split-into-directed' on page 14 unde
+fined on input line 1003.
+
+
+LaTeX Warning: Reference `categories-lemma-split-into-directed' on page 14 unde
+fined on input line 1012.
+
+
+LaTeX Warning: Reference `categories-lemma-directed-category-system' on page 14
+ undefined on input line 1015.
+
+[14] <xymatrix 3x2 138> [15]
+
+LaTeX Warning: Reference `fields-example-quotient-field' on page 16 undefined o
+n input line 1238.
+
+[16] [17] [18] <xymatrix 2x2 182> [19]
+Overfull \hbox (30.88521pt too wide) in paragraph at lines 1593--1595
+[]\T1/lmr/m/it/10 for any fil-tered col-imit $\OML/lmm/m/it/10 M \OT1/lmr/m/n/1
+0 = [] \OML/lmm/m/it/10 M[]$ \T1/lmr/m/it/10 of $\OML/lmm/m/it/10 R$\T1/lmr/m/i
+t/10 -modules the map $[] [][]\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 N; M[]\OT1/lmr/
+m/n/10 ) \OMS/lmsy/m/n/10 !
+
+Overfull \hbox (30.88521pt too wide) in paragraph at lines 1663--1665
+[]\T1/lmr/m/it/10 for any fil-tered col-imit $\OML/lmm/m/it/10 M \OT1/lmr/m/n/1
+0 = [] \OML/lmm/m/it/10 M[]$ \T1/lmr/m/it/10 of $\OML/lmm/m/it/10 R$\T1/lmr/m/i
+t/10 -modules the map $[] [][]\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 N; M[]\OT1/lmr/
+m/n/10 ) \OMS/lmsy/m/n/10 !
+[20] <xymatrix 3x2 145> [21] [22]
+Overfull \hbox (7.10506pt too wide) in paragraph at lines 1923--1931
+\T1/lmr/m/n/10 for all $\OML/lmm/m/it/10 a \OMS/lmsy/m/n/10 2 \OML/lmm/m/it/10 
+R$\T1/lmr/m/n/10 , $\OML/lmm/m/it/10 x \OMS/lmsy/m/n/10 2 \OML/lmm/m/it/10 M$\T
+1/lmr/m/n/10 , $\OML/lmm/m/it/10 y \OMS/lmsy/m/n/10 2 \OML/lmm/m/it/10 M$ \T1/l
+mr/m/n/10 and $\OML/lmm/m/it/10 z \OMS/lmsy/m/n/10 2 \OML/lmm/m/it/10 N$\T1/lmr
+/m/n/10 . Con-versely, any $\OML/lmm/m/it/10 f \OMS/lmsy/m/n/10 2 [][]\OT1/lmr/
+m/n/10 (\OML/lmm/m/it/10 M; [][]\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 N; P\OT1/lmr/
+m/n/10 ))$
+
+LaTeX Warning: Reference `categories-lemma-adjoint-exact' on page 23 undefined 
+on input line 1950.
+
+<xymatrix 2x2 182> [23] <xymatrix 4x2 399> [24]
+Overfull \hbox (1.93114pt too wide) in paragraph at lines 2089--2093
+\OML/lmm/m/it/10 S[]R \OMS/lmsy/m/n/10 
+[] \OML/lmm/m/it/10 M$ \T1/lmr/m/it/10 are canon-i-cally iso-mor-phic, and the 
+canon-i-cal iso-mor-phism $\OML/lmm/m/it/10 f \OT1/lmr/m/n/10 : \OML/lmm/m/it/1
+0 S[]R \OMS/lmsy/m/n/10 
+[]
+[25] [26] [27] [28] [29] [30] [31] <xymatrix 2x2 168> <xymatrix 2x2 168>
+Overfull \hbox (5.65349pt too wide) in paragraph at lines 2881--2887
+\T1/lmr/m/n/10 is com-mu-ta-tive where $\OML/lmm/m/it/10 A \OT1/lmr/m/n/10 = (\
+OML/lmm/m/it/10 a[]\OT1/lmr/m/n/10 )$\T1/lmr/m/n/10 . By Lemma []16.1[] the pol
+y-no-mial $\OML/lmm/m/it/10 P\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 t\OT1/lmr/m/n/10
+ ) = [](\OML/lmm/m/it/10 t[][] \OMS/lmsy/m/n/10 ^^@
+[32] <xymatrix 5x2 437> [33] [34] [35] [36] [37] <xymatrix 5x2 484> <xymatrix
+5x3 810> [38] [39] [40] [41] [42]
+
+LaTeX Warning: Reference `topology-lemma-closed-union-connected-components' on 
+page 43 undefined on input line 3985.
+
+
+LaTeX Warning: Reference `topology-lemma-connected-component-intersection' on p
+age 43 undefined on input line 4021.
+
+[43] [44] [45]
+
+LaTeX Warning: Reference `sheaves-section-bases' on page 46 undefined on input 
+line 4299.
+
+[46] <xymatrix 3x2 145> [47] [48]
+
+LaTeX Warning: Reference `topology-definition-irreducible-components' on page 4
+9 undefined on input line 4675.
+
+
+LaTeX Warning: Reference `topology-definition-generic-point' on page 49 undefin
+ed on input line 4702.
+
+
+LaTeX Warning: Reference `topology-definition-spectral-space' on page 49 undefi
+ned on input line 4709.
+
+[49]
+
+LaTeX Warning: Reference `topology-lemma-profinite' on page 50 undefined on inp
+ut line 4796.
+
+
+LaTeX Warning: Reference `topology-lemma-characterize-profinite-spectral' on pa
+ge 50 undefined on input line 4801.
+
+[50] [51] [52] [53] [54] [55]
+
+LaTeX Warning: Reference `topology-section-constructible' on page 56 undefined 
+on input line 5380.
+
+[56]
+
+LaTeX Warning: Reference `topology-lemma-inverse-images-constructibles' on page
+ 57 undefined on input line 5430.
+
+
+LaTeX Warning: Reference `topology-definition-constructible' on page 57 undefin
+ed on input line 5445.
+
+[57] [58] [59] <xymatrix 4x2 374>
+
+LaTeX Warning: Reference `topology-lemma-open-immersion-constructible-inverse-i
+mage' on page 60 undefined on input line 5810.
+
+
+LaTeX Warning: Reference `topology-lemma-generic-point-in-constructible' on pag
+e 60 undefined on input line 5812.
+
+[60] [61] [62]
+
+LaTeX Warning: Reference `topology-definition-noetherian' on page 63 undefined 
+on input line 6123.
+
+
+LaTeX Warning: Reference `topology-lemma-Noetherian' on page 63 undefined on in
+put line 6146.
+
+[63] [64] [65]
+
+Package amsmath Warning: Foreign command \atopwithdelims;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 6433.
+
+[66]
+
+LaTeX Warning: Reference `topology-lemma-Noetherian-quasi-compact' on page 67 u
+ndefined on input line 6496.
+
+[67]
+
+LaTeX Warning: Reference `fields-lemma-subalgebra-algebraic-extension-field' on
+ page 68 undefined on input line 6606.
+
+
+LaTeX Warning: Reference `topology-definition-space-jacobson' on page 68 undefi
+ned on input line 6695.
+
+[68]
+
+LaTeX Warning: Reference `topology-lemma-Noetherian' on page 69 undefined on in
+put line 6805.
+
+[69] <xymatrix 3x2 192>
+
+LaTeX Warning: Reference `fields-lemma-subalgebra-algebraic-extension-field' on
+ page 70 undefined on input line 6867.
+
+[70]
+
+LaTeX Warning: Reference `topology-lemma-jacobson-inherited' on page 71 undefin
+ed on input line 6987.
+
+[71] <xymatrix 2x2 154>
+
+LaTeX Warning: Reference `topology-lemma-jacobson-inherited' on page 72 undefin
+ed on input line 7124.
+
+
+LaTeX Warning: Reference `topology-lemma-jacobson-inherited' on page 72 undefin
+ed on input line 7145.
+
+[72] <xymatrix 2x2 154> <xymatrix 2x2 182>
+
+LaTeX Warning: Reference `topology-lemma-jacobson-equivalent-constructible' on 
+page 73 undefined on input line 7203.
+
+[73] [74] [75] [76] [77] [78] [79] [80] [81] [82] [83]
+
+LaTeX Warning: Reference `fields-section-splitting-fieds' on page 84 undefined 
+on input line 8452.
+
+[84]
+
+LaTeX Warning: Reference `categories-section-exact-functor' on page 85 undefine
+d on input line 8615.
+
+
+LaTeX Warning: Reference `homology-section-functors' on page 85 undefined on in
+put line 8616.
+
+[85] [86] <xymatrix 5x2 382> [87] [88] [89] [90] [91] [92] [93]
+
+LaTeX Warning: Reference `topology-section-specialization' on page 94 undefined
+ on input line 9528.
+
+
+LaTeX Warning: Reference `topology-definition-lift-specializations' on page 94 
+undefined on input line 9594.
+
+[94]
+
+LaTeX Warning: Reference `topology-definition-lift-specializations' on page 95 
+undefined on input line 9597.
+
+
+LaTeX Warning: Reference `topology-lemma-lift-specialization-composition' on pa
+ge 95 undefined on input line 9614.
+
+
+LaTeX Warning: Reference `topology-lemma-closed-open-map-specialization' on pag
+e 95 undefined on input line 9663.
+
+
+LaTeX Warning: Reference `topology-lemma-open-closed-specialization' on page 95
+ undefined on input line 9675.
+
+
+LaTeX Warning: Reference `topology-lemma-lift-specializations-images' on page 9
+5 undefined on input line 9676.
+
+
+LaTeX Warning: Reference `topology-lemma-constructible' on page 95 undefined on
+ input line 9696.
+
+
+LaTeX Warning: Reference `topology-lemma-open-closed-specialization' on page 95
+ undefined on input line 9698.
+
+
+LaTeX Warning: Reference `topology-lemma-constructible-stable-specialization-cl
+osed' on page 95 undefined on input line 9704.
+
+[95]
+
+LaTeX Warning: Reference `topology-lemma-open-closed-specialization' on page 96
+ undefined on input line 9733.
+
+
+LaTeX Warning: Reference `topology-lemma-lift-specializations-images' on page 9
+6 undefined on input line 9734.
+
+<xymatrix 3x2 128> [96] <xymatrix 3x2 264>
+Overfull \hbox (2.9524pt too wide) in paragraph at lines 9935--9938
+[]\T1/lmr/bx/n/10 Lemma 42.2. \T1/lmr/m/it/10 Let $\OML/lmm/m/it/10 K=k$ \T1/lm
+r/m/it/10 be a sep-a-ra-ble field ex-ten-sion. For any subex-ten-sion $\OML/lmm
+/m/it/10 K=K[]=k$
+[97]
+
+LaTeX Warning: Reference `fields-lemma-primitive-element' on page 98 undefined 
+on input line 9958.
+
+<xymatrix 2x2 154>
+
+LaTeX Warning: Reference `fields-lemma-separable-first' on page 98 undefined on
+ input line 9982.
+
+<xymatrix 2x2 154>
+
+LaTeX Warning: Reference `fields-lemma-separable-first' on page 98 undefined on
+ input line 10006.
+
+
+LaTeX Warning: Reference `fields-lemma-pth-root' on page 98 undefined on input 
+line 10013.
+
+<xymatrix 2x5 484> [98] [99] [100]
+
+LaTeX Warning: Reference `fields-lemma-primitive-element' on page 101 undefined
+ on input line 10230.
+
+
+LaTeX Warning: Reference `fields-section-separable-extensions' on page 101 unde
+fined on input line 10233.
+
+
+Overfull \hbox (7.03271pt too wide) in paragraph at lines 10301--10304
+[]\T1/lmr/m/it/10 for ev-ery $\OML/lmm/m/it/10 k$\T1/lmr/m/it/10 -linearly in-d
+e-pen-dent sub-set $\OMS/lmsy/m/n/10 f\OML/lmm/m/it/10 a[]; [] ; a[]\OMS/lmsy/m
+/n/10 g$ \T1/lmr/m/it/10 of $\OML/lmm/m/it/10 K$ \T1/lmr/m/it/10 the set $\OMS/
+lmsy/m/n/10 f\OML/lmm/m/it/10 a[]; [] ; a[]\OMS/lmsy/m/n/10 g$
+[101]
+
+LaTeX Warning: Reference `fields-lemma-transcendence-degree' on page 102 undefi
+ned on input line 10338.
+
+
+Overfull \hbox (7.03271pt too wide) in paragraph at lines 10366--10368
+[]\T1/lmr/m/it/10 for ev-ery $\OML/lmm/m/it/10 k$\T1/lmr/m/it/10 -linearly in-d
+e-pen-dent sub-set $\OMS/lmsy/m/n/10 f\OML/lmm/m/it/10 a[]; [] ; a[]\OMS/lmsy/m
+/n/10 g$ \T1/lmr/m/it/10 of $\OML/lmm/m/it/10 K$ \T1/lmr/m/it/10 the set $\OMS/
+lmsy/m/n/10 f\OML/lmm/m/it/10 a[]; [] ; a[]\OMS/lmsy/m/n/10 g$
+
+LaTeX Warning: Reference `fields-lemma-algebraic-finitely-generated' on page 10
+2 undefined on input line 10396.
+
+[102] <xymatrix 2x2 154> [103] <xymatrix 2x2 154> [104]
+
+LaTeX Warning: Reference `fields-lemma-separable-first' on page 105 undefined o
+n input line 10653.
+
+
+LaTeX Warning: Reference `fields-section-separable-extensions' on page 105 unde
+fined on input line 10665.
+
+
+LaTeX Warning: Reference `fields-lemma-count-embeddings' on page 105 undefined 
+on input line 10668.
+
+[105] [106] [107] <xymatrix 2x2 154> [108]
+
+LaTeX Warning: Reference `topology-lemma-irreducible-on-top' on page 109 undefi
+ned on input line 11102.
+
+[109] [110]
+
+LaTeX Warning: Reference `fields-lemma-primitive-element' on page 111 undefined
+ on input line 11309.
+
+[111]
+
+LaTeX Warning: Reference `fields-lemma-finite-separable-tensor-alg-closed' on p
+age 112 undefined on input line 11409.
+
+
+LaTeX Warning: Reference `fields-lemma-separable-equality' on page 112 undefine
+d on input line 11412.
+
+[112]
+
+LaTeX Warning: Reference `fields-lemma-separable-permanence' on page 113 undefi
+ned on input line 11440.
+
+
+LaTeX Warning: Reference `fields-lemma-algebraic-closure-in-finitely-generated'
+ on page 113 undefined on input line 11442.
+
+
+LaTeX Warning: Reference `topology-lemma-remove-irreducible-connected' on page 
+113 undefined on input line 11517.
+
+[113]
+
+LaTeX Warning: Reference `varieties-lemma-bijection-connected-components' on pa
+ge 114 undefined on input line 11608.
+
+
+LaTeX Warning: Reference `topology-lemma-connected-fibres-connected-components'
+ on page 114 undefined on input line 11647.
+
+[114] [115] [116] [117] [118] [119] [120] [121] [122] [123] [124] [125]
+[126] [127] <xymatrix 3x2 183> [128]
+Overfull \hbox (2.89766pt too wide) detected at line 13246
+[]\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 M; N\OT1/lmr/m/n/10 ) = [][] [][](\OML/lmm/
+m/it/10 M; N\OT1/lmr/m/n/10 )\OML/lmm/m/it/10 ;  [][]\OT1/lmr/m/n/10 (\OML/lmm/
+m/it/10 M; N\OT1/lmr/m/n/10 ) = [][](\OML/lmm/m/it/10 M; N\OT1/lmr/m/n/10 (\OML
+/lmm/m/it/10 n\OT1/lmr/m/n/10 ))\OML/lmm/m/it/10 :
+[129] <xymatrix 3x2 176> [130] [131] [132] [133]
+Overfull \hbox (2.15303pt too wide) in paragraph at lines 13713--13718
+\T1/lmr/m/n/10 Thus we only need the el-e-ments $\OML/lmm/m/it/10 f[]=f[]$ \T1/
+lmr/m/n/10 as well as the el-e-ments $\OML/lmm/m/it/10 f[] [] f[]=f[]$
+[134] [135] [136] [137] [138]
+
+LaTeX Warning: Reference `topology-section-krull-dimension' on page 139 undefin
+ed on input line 14310.
+
+
+LaTeX Warning: Reference `topology-definition-Krull' on page 139 undefined on i
+nput line 14330.
+
+[139]
+
+LaTeX Warning: Reference `topology-lemma-Noetherian' on page 140 undefined on i
+nput line 14372.
+
+[140] [141] [142] [143]
+
+LaTeX Warning: Reference `topology-lemma-Noetherian' on page 144 undefined on i
+nput line 14815.
+
+
+LaTeX Warning: Reference `topology-lemma-finite-jacobson' on page 144 undefined
+ on input line 14818.
+
+
+LaTeX Warning: Reference `topology-lemma-non-jacobson-Noetherian-characterize' 
+on page 144 undefined on input line 14865.
+
+[144] [145] [146] [147] [148] [149] [150] [151] [152] [153] [154] [155]
+[156]
+
+LaTeX Warning: Reference `fields-section-transcendence' on page 157 undefined o
+n input line 16384.
+
+[157] [158] [159] [160] [161]
+Overfull \hbox (25.40205pt too wide) in paragraph at lines 16940--16953
+\T1/lmr/m/n/10 then $\OML/lmm/m/it/10 a[] \OMS/lmsy/m/n/10 2 \OML/lmm/m/it/10 J
+$ \T1/lmr/m/n/10 for all $\OML/lmm/m/it/10 I[]; e$\T1/lmr/m/n/10 . Namely, set 
+$\OML/lmm/m/it/10 J[] \OT1/lmr/m/n/10 = (\OML/lmm/m/it/10 f[]; [] ; f[]\OT1/lmr
+/m/n/10 )$\T1/lmr/m/n/10 . Ob-serve that $[][] \OML/lmm/m/it/10 a[]f[]$
+[162]
+Overfull \hbox (2.20674pt too wide) in paragraph at lines 17016--17024
+[]\T1/lmr/m/n/10 Consider the ker-nel $\OML/lmm/m/it/10 K$ \T1/lmr/m/n/10 of th
+e map ([]69.0.1[]). As $\OML/lmm/m/it/10 M=JM \OMS/lmsy/m/n/10 
+[] \OML/lmm/m/it/10 R=J\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 X[]; [] ; X[]\OT1/lmr/
+m/n/10 ]$
+[163]
+
+LaTeX Warning: Reference `more-algebra-section-koszul-regular' on page 164 unde
+fined on input line 17096.
+
+[164] [165] [166]
+Overfull \hbox (15.7567pt too wide) in paragraph at lines 17378--17383
+\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 IJ\OT1/lmr/m/n/10 )[]$\T1/lmr/m/n/10 , then $
+\OML/lmm/m/it/10 z \OT1/lmr/m/n/10 = [] \OML/lmm/m/it/10 x[]y[]$ \T1/lmr/m/n/10
+ with $\OML/lmm/m/it/10 x[] \OMS/lmsy/m/n/10 2 \OML/lmm/m/it/10 I[]$ \T1/lmr/m/
+n/10 and $\OML/lmm/m/it/10 y[] \OMS/lmsy/m/n/10 2 \OML/lmm/m/it/10 J[]$ \T1/lmr
+/m/n/10 and hence $\OML/lmm/m/it/10 z=\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 ab\OT1/
+lmr/m/n/10 )[] = [](\OML/lmm/m/it/10 x[]=a[]\OT1/lmr/m/n/10 )(\OML/lmm/m/it/10 
+y[]=b[]\OT1/lmr/m/n/10 )$
+[167] <xymatrix 2x2 154> [168] [169] [170] [171] [172] [173] [174]
+
+LaTeX Warning: Reference `categories-definition-product-category' on page 175 u
+ndefined on input line 18278.
+
+<xymatrix 2x2 154>
+Overfull \hbox (18.50969pt too wide) detected at line 18305
+[][]\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 M; N[]\OT1/lmr/m/n/10 ) \OMS/lmsy/m/n/10 
+! [][]\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 M; N\OT1/lmr/m/n/10 ) \OMS/lmsy/m/n/10 
+! [][]\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 M; N[]\OT1/lmr/m/n/10 ) \OMS/lmsy/m/n/1
+0 ! \OML/lmm/m/it/10 M \OMS/lmsy/m/n/10 
+[] \OML/lmm/m/it/10 N[] \OMS/lmsy/m/n/10 ! \OML/lmm/m/it/10 M \OMS/lmsy/m/n/10 
+
+[] \OML/lmm/m/it/10 N \OMS/lmsy/m/n/10 ! \OML/lmm/m/it/10 M \OMS/lmsy/m/n/10 
+[] \OML/lmm/m/it/10 N[] \OMS/lmsy/m/n/10 ! \OT1/lmr/m/n/10 0
+<xymatrix 4x4 804> [175] <xymatrix 5x5 1290> <xymatrix 3x3 174> [176]
+<xymatrix 3x2 264> [177] [178] [179] [180] [181] [182] <xymatrix 5x2 314>
+[183] [184] [185] [186] [187] [188] [189] <xymatrix 2x2 168> [190] <xymatrix
+2x2 161>
+Overfull \hbox (4.81679pt too wide) in paragraph at lines 19819--19821
+[]\T1/lmr/m/it/10 For ev-ery finitely pre-sented $\OML/lmm/m/it/10 R$\T1/lmr/m/
+it/10 -module $\OML/lmm/m/it/10 P$\T1/lmr/m/it/10 , the $\OML/lmm/m/it/10 R$\T1
+/lmr/m/it/10 -module map $[][]\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 P; M[]\OT1/lmr/
+m/n/10 ) \OMS/lmsy/m/n/10 !
+<xymatrix 4x2 340> <xymatrix 5x2 431> [191] <xymatrix 2x2 223> <xymatrix 5x2
+416> <xymatrix 5x2 430> [192]
+
+LaTeX Warning: Reference `more-algebra-lemma-dedekind-torsion-free-flat' on pag
+e 193 undefined on input line 20009.
+
+[193] <xymatrix 3x3 446> [194] <xymatrix 4x2 340> [195] [196] [197] [198]
+<xymatrix 5x5 266> [199] [200]
+
+LaTeX Warning: Reference `categories-definition-directed-set' on page 201 undef
+ined on input line 20706.
+
+
+LaTeX Warning: Reference `categories-definition-directed-system' on page 201 un
+defined on input line 20709.
+
+
+LaTeX Warning: Reference `categories-definition-directed-system' on page 201 un
+defined on input line 20711.
+
+[201]
+
+LaTeX Warning: Reference `homology-section-inverse-systems' on page 202 undefin
+ed on input line 20824.
+
+
+LaTeX Warning: Reference `categories-section-limit-sets' on page 202 undefined 
+on input line 20841.
+
+
+LaTeX Warning: Reference `homology-section-inverse-systems' on page 202 undefin
+ed on input line 20843.
+
+
+LaTeX Warning: Reference `categories-section-limits' on page 202 undefined on i
+nput line 20845.
+
+<xymatrix 5x2 416> [202] <xymatrix 2x2 182> [203] <xymatrix 3x3 243> [204]
+<xymatrix 2x2 223> [205] <xymatrix 2x2 154> [206]
+Overfull \hbox (6.16249pt too wide) in paragraph at lines 21320--21323
+[]\T1/lmr/m/it/10 For ev-ery fam-ily $\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 Q[]\OT1
+/lmr/m/n/10 )[]$ \T1/lmr/m/it/10 of $\OML/lmm/m/it/10 R$\T1/lmr/m/it/10 -module
+s, the canon-i-cal map $\OML/lmm/m/it/10 M \OMS/lmsy/m/n/10 
+[] [] !
+[207] <xymatrix 2x2 161>
+Overfull \hbox (6.16249pt too wide) in paragraph at lines 21363--21366
+[]\T1/lmr/m/it/10 For ev-ery fam-ily $\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 Q[]\OT1
+/lmr/m/n/10 )[]$ \T1/lmr/m/it/10 of $\OML/lmm/m/it/10 R$\T1/lmr/m/it/10 -module
+s, the canon-i-cal map $\OML/lmm/m/it/10 M \OMS/lmsy/m/n/10 
+[] [] !
+<xymatrix 4x2 354> <xymatrix 5x2 417> [208] <xymatrix 3x2 128>
+Overfull \hbox (6.16249pt too wide) in paragraph at lines 21447--21450
+[]\T1/lmr/m/it/10 For ev-ery fam-ily $\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 Q[]\OT1
+/lmr/m/n/10 )[]$ \T1/lmr/m/it/10 of $\OML/lmm/m/it/10 R$\T1/lmr/m/it/10 -module
+s, the canon-i-cal map $\OML/lmm/m/it/10 M \OMS/lmsy/m/n/10 
+[] [] !
+<xymatrix 2x3 278> [209] <xymatrix 2x2 163> <xymatrix 2x2 170> [210] <xymatrix
+5x2 416> <xymatrix 4x2 340> [211] <xymatrix 1x3 82>
+
+LaTeX Warning: Reference `modules-section-coherent' on page 212 undefined on in
+put line 21698.
+
+[212] [213] <xymatrix 2x2 154> [214] <xymatrix 2x2 168> [215] [216] <xymatrix
+2x2 137> [217] [218] <xymatrix 2x2 154> <xymatrix 2x2 154> [219] [220]
+<xymatrix 2x2 154>
+
+LaTeX Warning: Reference `examples-section-completion-not-exact' on page 221 un
+defined on input line 22567.
+
+[221]
+
+LaTeX Warning: Reference `examples-section-noncomplete-completion' on page 222 
+undefined on input line 22641.
+
+[222] [223] [224] <xymatrix 5x2 382> [225]
+Overfull \hbox (3.48128pt too wide) in paragraph at lines 23030--23037
+\T1/lmr/m/n/10 Let $\OML/lmm/m/it/10 f[]; [] ; f[]$ \T1/lmr/m/n/10 be gen-er-a-
+tors of $\OML/lmm/m/it/10 I$\T1/lmr/m/n/10 . Then there is a sur-jec-tion of ri
+ngs $\OML/lmm/m/it/10 R=I\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 T[]; [] ; T[]\OT1/lm
+r/m/n/10 ] \OMS/lmsy/m/n/10 !
+[226] [227] [228] [229] [230] <xymatrix 3x2 264> [231] [232] [233] <xymatrix
+3x2 264> <xymatrix 2x2 154> [234] [235] [236] <xymatrix 2x2 154> [237]
+<xymatrix 2x2 154> [238] [239] <xymatrix 3x2 124> [240] [241] [242] [243]
+[244] [245] [246] [247] [248]
+
+LaTeX Warning: Reference `topology-section-catenary-spaces' on page 249 undefin
+ed on input line 25460.
+
+
+LaTeX Warning: Reference `topology-definition-catenary' on page 249 undefined o
+n input line 25475.
+
+[249] [250]
+
+LaTeX Warning: Reference `topology-lemma-locally-dimension-function' on page 25
+1 undefined on input line 25652.
+
+
+LaTeX Warning: Reference `topology-lemma-dimension-function-catenary' on page 2
+51 undefined on input line 25659.
+
+
+LaTeX Warning: Reference `topology-lemma-dimension-function-catenary' on page 2
+51 undefined on input line 25662.
+
+[251] [252] [253] [254] [255] [256] [257] <xymatrix 5x2 444> [258] <xymatrix
+5x3 723> [259] [260] [261] [262] [263] [264] [265]
+
+LaTeX Warning: Reference `topology-lemma-dimension-specializations-lift' on pag
+e 266 undefined on input line 27330.
+
+[266] [267]
+
+LaTeX Warning: Reference `fields-lemma-transcendence-degree-tower' on page 268 
+undefined on input line 27545.
+
+[268]
+
+LaTeX Warning: Reference `topology-lemma-Noetherian' on page 269 undefined on i
+nput line 27637.
+
+
+LaTeX Warning: Reference `fields-lemma-multiplicativity-degrees' on page 269 un
+defined on input line 27684.
+
+
+LaTeX Warning: Reference `fields-lemma-degree-minimal-polynomial' on page 269 u
+ndefined on input line 27685.
+
+[269]
+
+LaTeX Warning: Reference `topology-definition-Krull' on page 270 undefined on i
+nput line 27784.
+
+[270]
+
+LaTeX Warning: Reference `topology-definition-equidimensional' on page 271 unde
+fined on input line 27876.
+
+[271] [272] [273] [274] <xymatrix 2x2 154> [275] [276] [277] [278]
+
+LaTeX Warning: Reference `topology-lemma-nowhere-dense-local' on page 279 undef
+ined on input line 28719.
+
+[279] [280] [281] [282]
+
+LaTeX Warning: Reference `examples-section-local-completion-nonreduced' on page
+ 283 undefined on input line 29092.
+
+[283] [284] [285] [286] [287] [288] [289] [290] [291] [292] [293] [294]
+<xymatrix 5x2 314> [295] [296] [297] [298] <xymatrix 4x2 306> [299] [300]
+[301]
+
+LaTeX Warning: Reference `topology-definition-Krull' on page 302 undefined on i
+nput line 31147.
+
+[302] [303] [304] [305] [306] [307]
+
+LaTeX Warning: Reference `categories-section-directed-colimits' on page 308 und
+efined on input line 31766.
+
+
+LaTeX Warning: Reference `categories-definition-directed' on page 308 undefined
+ on input line 31790.
+
+
+LaTeX Warning: Reference `categories-section-directed-colimits' on page 308 und
+efined on input line 31804.
+
+
+LaTeX Warning: Reference `categories-section-posets-limits' on page 308 undefin
+ed on input line 31823.
+
+
+LaTeX Warning: Reference `categories-lemma-directed-category-system' on page 30
+8 undefined on input line 31833.
+
+[308]
+
+LaTeX Warning: Reference `categories-lemma-directed-category-system' on page 30
+9 undefined on input line 31848.
+
+[309]
+
+LaTeX Warning: Reference `categories-lemma-cofinal-in-filtered' on page 310 und
+efined on input line 31975.
+
+
+LaTeX Warning: Reference `categories-lemma-cofinal' on page 310 undefined on in
+put line 31979.
+
+[310] [311] [312] <xymatrix 4x2 374> <xymatrix 4x2 374> [313] [314] [315]
+[316] [317] [318] <xymatrix 1x4 141> [319]
+
+LaTeX Warning: Reference `flat-section-introduction' on page 320 undefined on i
+nput line 33116.
+
+[320] <xymatrix 3x2 124> [321] [322] [323] [324] <xymatrix 2x2 154> [325]
+[326] <xymatrix 2x2 182> <xymatrix 2x2 175> <xymatrix 2x3 172>
+
+LaTeX Warning: Reference `categories-section-posets-limits' on page 327 undefin
+ed on input line 33963.
+
+[327] <xymatrix 3x2 264> [328] [329] <xymatrix 2x2 154> [330] [331] [332]
+<xymatrix 2x2 154> <xymatrix 4x2 396> [333] [334]
+
+LaTeX Warning: Reference `categories-lemma-yoneda' on page 335 undefined on inp
+ut line 34767.
+
+[335] <xymatrix 5x4 792> <xymatrix 2x2 154> [336] <xymatrix 4x2 340> [337]
+Overfull \hbox (7.37198pt too wide) detected at line 34993
+[]\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 bb[]b[][]b[] \OMS/lmsy/m/n/10 ^ [] ^ []\OML
+/lmm/m/it/10 b[]\OT1/lmr/m/n/10 ) \OMS/lmsy/m/n/10 ^^@ \OML/lmm/m/it/10 b[]\OT1
+/lmr/m/n/10 (\OML/lmm/m/it/10 b[]b[][]b[] \OMS/lmsy/m/n/10 ^ [] ^ []\OML/lmm/m/
+it/10 b[]\OT1/lmr/m/n/10 ) \OMS/lmsy/m/n/10 ^^@ \OML/lmm/m/it/10 b[][]\OT1/lmr/
+m/n/10 (\OML/lmm/m/it/10 bb[][]b[] \OMS/lmsy/m/n/10 ^ [] ^ []\OML/lmm/m/it/10 b
+[]\OT1/lmr/m/n/10 ) + \OML/lmm/m/it/10 bb[][]\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 
+b[][]b[] \OMS/lmsy/m/n/10 ^ [] ^ []\OML/lmm/m/it/10 b[]\OT1/lmr/m/n/10 )
+[338]
+Overfull \hbox (24.85857pt too wide) detected at line 35082
+[]
+[339]
+
+LaTeX Warning: Reference `cotangent-section-cotangent-ring-map' on page 340 und
+efined on input line 35158.
+
+
+LaTeX Warning: Reference `homology-section-truncations' on page 340 undefined o
+n input line 35172.
+
+
+LaTeX Warning: Reference `cotangent-section-surjections' on page 340 undefined 
+on input line 35173.
+
+<xymatrix 2x2 161> [340] <xymatrix 3x2 278>
+
+LaTeX Warning: Reference `homology-section-complexes' on page 341 undefined on 
+input line 35269.
+
+[341] <xymatrix 2x2 315> <xymatrix 3x2 278> [342]
+
+LaTeX Warning: Reference `more-algebra-lemma-transitive-lci-at-end' on page 343
+ undefined on input line 35409.
+
+<xymatrix 5x2 382>
+Overfull \hbox (10.71317pt too wide) in paragraph at lines 35475--35479
+\T1/lmr/m/n/10 Since $\OML/lmm/m/it/10 N[]$ \T1/lmr/m/n/10 is free, we also see
+ that $[][]\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 H[]; C\OT1/lmr/m/n/10 ) = [][](\OM
+L/lmm/m/it/10 M; C\OT1/lmr/m/n/10 )$\T1/lmr/m/n/10 . Hence if $[][]\OT1/lmr/m/n
+/10 (\OML/lmm/m/it/10 H[]; C\OT1/lmr/m/n/10 ) =
+[343] <xymatrix 2x2 161> [344] <xymatrix 5x2 382> [345]
+
+LaTeX Warning: Reference `dpa-section-lci' on page 346 undefined on input line 
+35812.
+
+[346]
+
+LaTeX Warning: Reference `topology-definition-equidimensional' on page 347 unde
+fined on input line 35846.
+
+[347]
+
+LaTeX Warning: Reference `dpa-section-lci' on page 348 undefined on input line 
+36034.
+
+[348] [349] [350] <xymatrix 2x2 154> [351] <xymatrix 2x2 154> <xymatrix 2x2
+154> [352]
+
+LaTeX Warning: Reference `more-algebra-section-lci' on page 353 undefined on in
+put line 36434.
+
+[353] [354] [355] [356] [357]
+
+LaTeX Warning: Reference `smoothing-proposition-lift-smooth' on page 358 undefi
+ned on input line 37019.
+
+[358] [359] <xymatrix 2x2 154> <xymatrix 4x2 279> [360] [361] [362] [363]
+[364]
+Overfull \hbox (6.67273pt too wide) in paragraph at lines 37726--37729
+[]\T1/lmr/m/n/10 By Lemma []134.8[] we see that $[][] \OMS/lmsy/m/n/10 
+[]\OML/lmm/m/it/10 S[]$ \T1/lmr/m/n/10 is ho-mo-topy equiv-a-lent to $[][]$.
+<xymatrix 2x2 188> [365] <xymatrix 3x2 332> <xymatrix 2x2 188> <xymatrix 2x2
+188> [366] [367] [368]
+Overfull \hbox (9.97577pt too wide) in paragraph at lines 38213--38227
+\T1/lmr/m/n/10 the co-ef-fi-cients of the poly-no-mi-als $\OML/lmm/m/it/10 f[];
+ h[]; a[]; b[]$\T1/lmr/m/n/10 . Set $\OML/lmm/m/it/10 S[] \OT1/lmr/m/n/10 = \OM
+L/lmm/m/it/10 R[]\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 x[]; [] ; x[]\OT1/lmr/m/n/10
+ ]\OML/lmm/m/it/10 =\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 f[]; [] ; f[]\OT1/lmr/m/n
+/10 )$\T1/lmr/m/n/10 ,
+[369] <xymatrix 2x2 188> [370] <xymatrix 3x2 298> <xymatrix 2x2 188> [371]
+<xymatrix 2x2 127> [372] <xymatrix 3x2 264> [373] <xymatrix 3x1 92> <xymatrix
+2x2 127> [374] [375] [376] <xymatrix 2x2 188> [377] <xymatrix 2x2 188> [378]
+[379] [380] [381] [382] <xymatrix 5x2 416> [383] [384] [385] [386] <xymatrix
+3x2 196> [387] [388] [389] [390] <xymatrix 3x2 226> [391] [392] [393] [394]
+<xymatrix 2x2 188> <xymatrix 3x2 332> [395] [396] <xymatrix 2x2 168> <xymatrix
+2x2 161> <xymatrix 3x2 333> [397] <xymatrix 3x2 264> [398] <xymatrix 3x2 264>
+[399] <xymatrix 2x2 188> [400] <xymatrix 2x2 188> <xymatrix 2x2 188> <xymatrix
+2x2 188> [401] [402] [403] [404] [405] <xymatrix 3x2 196> [406] [407] [408]
+[409] [410] [411] [412] [413]
+Overfull \hbox (22.21216pt too wide) in paragraph at lines 42636--42641
+\T1/lmr/m/it/10 rings. Let $\OML/lmm/m/it/10 P[]; [] ; P[] \OMS/lmsy/m/n/10 2 \
+OML/lmm/m/it/10 R\OT1/lmr/m/n/10 [\OML/lmm/m/it/10 x[]; [] ; x[]\OT1/lmr/m/n/10
+ ]$ \T1/lmr/m/it/10 be poly-no-mi-als such that $\OML/lmm/m/it/10 R\OT1/lmr/m/n
+/10 [\OML/lmm/m/it/10 x[]; [] ; x[]\OT1/lmr/m/n/10 ]\OML/lmm/m/it/10 =\OT1/lmr/
+m/n/10 (\OML/lmm/m/it/10 P[]; [] ; P[]\OT1/lmr/m/n/10 )$
+[414] <xymatrix 3x1 96>
+
+LaTeX Warning: Reference `proetale-section-ind-etale' on page 415 undefined on 
+input line 42766.
+
+[415] <xymatrix 2x2 161> [416] <xymatrix 2x2 154>
+
+LaTeX Warning: Reference `categories-lemma-directed-category-system' on page 41
+7 undefined on input line 42932.
+
+[417]
+
+LaTeX Warning: Reference `categories-definition-directed' on page 418 undefined
+ on input line 42994.
+
+
+LaTeX Warning: Reference `categories-definition-directed' on page 418 undefined
+ on input line 42997.
+
+
+LaTeX Warning: Reference `categories-definition-directed' on page 418 undefined
+ on input line 43007.
+
+
+LaTeX Warning: Reference `categories-definition-directed' on page 418 undefined
+ on input line 43029.
+
+[418] <xymatrix 3x2 264>
+
+LaTeX Warning: Reference `more-algebra-section-permanence-henselization' on pag
+e 419 undefined on input line 43153.
+
+[419] <xymatrix 2x2 161> <xymatrix 2x2 161>
+
+LaTeX Warning: Reference `categories-definition-directed' on page 420 undefined
+ on input line 43249.
+
+
+LaTeX Warning: Reference `categories-definition-directed' on page 420 undefined
+ on input line 43252.
+
+
+LaTeX Warning: Reference `categories-definition-directed' on page 420 undefined
+ on input line 43265.
+
+
+LaTeX Warning: Reference `categories-definition-directed' on page 420 undefined
+ on input line 43290.
+
+[420] <xymatrix 2x2 168> <xymatrix 2x2 168> <xymatrix 2x2 168> <xymatrix 2x2
+161> [421]
+
+LaTeX Warning: Reference `categories-definition-directed' on page 422 undefined
+ on input line 43423.
+
+
+LaTeX Warning: Reference `categories-definition-directed' on page 422 undefined
+ on input line 43427.
+
+
+LaTeX Warning: Reference `categories-definition-directed' on page 422 undefined
+ on input line 43458.
+
+
+LaTeX Warning: Reference `categories-definition-directed' on page 422 undefined
+ on input line 43484.
+
+[422] <xymatrix 2x2 168> <xymatrix 2x2 154> [423]
+
+LaTeX Warning: Reference `fields-lemma-separable-first' on page 424 undefined o
+n input line 43639.
+
+<xymatrix 2x2 154> [424] <xymatrix 2x2 154> [425]
+
+LaTeX Warning: Reference `topology-section-krull-dimension' on page 426 undefin
+ed on input line 43893.
+
+[426] [427] [428]
+
+LaTeX Warning: Reference `fields-lemma-pth-root' on page 429 undefined on input
+ line 44224.
+
+[429] [430] [431]
+Overfull \hbox (1.95244pt too wide) in paragraph at lines 44535--44559
+\OML/lmm/m/it/10 k\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 x[]; [] ; x[]\OT1/lmr/m/n/1
+0 )[\OML/lmm/m/it/10 y[]; [] ; y[]\OT1/lmr/m/n/10 ]$\T1/lmr/m/n/10 . Pick in-du
+c-tively poly-no-mi-als $\OML/lmm/m/it/10 P[] \OMS/lmsy/m/n/10 2 \OML/lmm/m/it/
+10 k\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 x[]; [] ; x[]\OT1/lmr/m/n/10 )[\OML/lmm/m
+/it/10 Y[]; [] ; Y[]\OT1/lmr/m/n/10 ]$
+[432] <xymatrix 3x2 251>
+
+LaTeX Warning: Reference `categories-section-posets-limits' on page 433 undefin
+ed on input line 44608.
+
+[433] [434]
+
+LaTeX Warning: Reference `examples-lemma-noncomplete-completion' on page 435 un
+defined on input line 44802.
+
+[435] <xymatrix 2x2 195> [436] <xymatrix 2x2 195>
+Overfull \hbox (6.1227pt too wide) in paragraph at lines 45072--45074
+[]$\OML/lmm/m/it/10 R[]$ \T1/lmr/m/it/10 is ei-ther iso-mor-phic to $\OML/lmm/m
+/it/10 k\OT1/lmr/m/n/10 [[\OML/lmm/m/it/10 X[]; [] ; X[]\OT1/lmr/m/n/10 ]]$ \T1
+/lmr/m/it/10 where $\OML/lmm/m/it/10 k$ \T1/lmr/m/it/10 is a field or $\OT1/lmr
+/m/n/10 ^^C[[\OML/lmm/m/it/10 X[]; [] ; X[]\OT1/lmr/m/n/10 ]]$
+[437] [438]
+
+LaTeX Warning: Reference `fields-definition-trace-pairing' on page 439 undefine
+d on input line 45277.
+
+
+LaTeX Warning: Reference `fields-lemma-separable-trace-pairing' on page 439 und
+efined on input line 45283.
+
+
+LaTeX Warning: Reference `fields-lemma-trace-and-norm-from-minimal-polynomial' 
+on page 439 undefined on input line 45290.
+
+[439] [440]
+
+LaTeX Warning: Reference `fields-lemma-normal-case' on page 441 undefined on in
+put line 45397.
+
+[441] [442]
+
+LaTeX Warning: Reference `fields-lemma-algebraic-closure-in-finitely-generated'
+ on page 443 undefined on input line 45664.
+
+[443] [444] [445] [446] [447] [448] [449]
+Overfull \hbox (21.23273pt too wide) in paragraph at lines 46365--46371
+\T1/lmr/m/n/10 In this case $[]\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 M \OMS/lmsy/m/
+n/10 
+[] \OML/lmm/m/it/10 N\OT1/lmr/m/n/10 ) = [](\OML/lmm/m/it/10 M=fM \OMS/lmsy/m/n
+/10 
+[] \OML/lmm/m/it/10 N\OT1/lmr/m/n/10 ) + 1$ \T1/lmr/m/n/10 and $[]\OT1/lmr/m/n/
+10 (\OML/lmm/m/it/10 M\OT1/lmr/m/n/10 ) = [](\OML/lmm/m/it/10 M=fM\OT1/lmr/m/n/
+10 ) +
+[450] [451] [452] [453] [454]
+
+LaTeX Warning: Reference `examples-section-non-catenary-Noetherian-local' on pa
+ge 455 undefined on input line 46851.
+
+<xymatrix 2x2 154> [455] [456]
+
+LaTeX Warning: Reference `fields-section-algebraic' on page 457 undefined on in
+put line 47072.
+
+<xymatrix 2x2 154>
+
+LaTeX Warning: Reference `more-algebra-proposition-characterization-geometrical
+ly-regular' on page 457 undefined on input line 47161.
+
+[457]
+
+LaTeX Warning: Reference `fields-section-algebraic' on page 458 undefined on in
+put line 47228.
+
+[458] [459] <xymatrix 3x2 264> <xymatrix 2x2 154> [460] [461] [462] <xymatrix
+3x2 124> <xymatrix 2x2 154> [463] (chapters.tex
+
+LaTeX Warning: Hyper reference `introduction-section-phantom' on page 464 undef
+ined on input line 5.
+
+
+LaTeX Warning: Hyper reference `conventions-section-phantom' on page 464 undefi
+ned on input line 6.
+
+
+LaTeX Warning: Hyper reference `sets-section-phantom' on page 464 undefined on 
+input line 7.
+
+
+LaTeX Warning: Hyper reference `categories-section-phantom' on page 464 undefin
+ed on input line 8.
+
+
+LaTeX Warning: Hyper reference `topology-section-phantom' on page 464 undefined
+ on input line 9.
+
+
+LaTeX Warning: Hyper reference `sheaves-section-phantom' on page 464 undefined 
+on input line 10.
+
+
+LaTeX Warning: Hyper reference `sites-section-phantom' on page 464 undefined on
+ input line 11.
+
+
+LaTeX Warning: Hyper reference `stacks-section-phantom' on page 464 undefined o
+n input line 12.
+
+
+LaTeX Warning: Hyper reference `fields-section-phantom' on page 464 undefined o
+n input line 13.
+
+[464]
+
+LaTeX Warning: Hyper reference `brauer-section-phantom' on page 465 undefined o
+n input line 15.
+
+
+LaTeX Warning: Hyper reference `homology-section-phantom' on page 465 undefined
+ on input line 16.
+
+
+LaTeX Warning: Hyper reference `derived-section-phantom' on page 465 undefined 
+on input line 17.
+
+
+LaTeX Warning: Hyper reference `simplicial-section-phantom' on page 465 undefin
+ed on input line 18.
+
+
+LaTeX Warning: Hyper reference `more-algebra-section-phantom' on page 465 undef
+ined on input line 19.
+
+
+LaTeX Warning: Hyper reference `smoothing-section-phantom' on page 465 undefine
+d on input line 20.
+
+
+LaTeX Warning: Hyper reference `modules-section-phantom' on page 465 undefined 
+on input line 21.
+
+
+LaTeX Warning: Hyper reference `sites-modules-section-phantom' on page 465 unde
+fined on input line 22.
+
+
+LaTeX Warning: Hyper reference `injectives-section-phantom' on page 465 undefin
+ed on input line 23.
+
+
+LaTeX Warning: Hyper reference `cohomology-section-phantom' on page 465 undefin
+ed on input line 24.
+
+
+LaTeX Warning: Hyper reference `sites-cohomology-section-phantom' on page 465 u
+ndefined on input line 25.
+
+
+LaTeX Warning: Hyper reference `dga-section-phantom' on page 465 undefined on i
+nput line 26.
+
+
+LaTeX Warning: Hyper reference `dpa-section-phantom' on page 465 undefined on i
+nput line 27.
+
+
+LaTeX Warning: Hyper reference `sdga-section-phantom' on page 465 undefined on 
+input line 28.
+
+
+LaTeX Warning: Hyper reference `hypercovering-section-phantom' on page 465 unde
+fined on input line 29.
+
+
+LaTeX Warning: Hyper reference `schemes-section-phantom' on page 465 undefined 
+on input line 34.
+
+
+LaTeX Warning: Hyper reference `constructions-section-phantom' on page 465 unde
+fined on input line 35.
+
+
+LaTeX Warning: Hyper reference `properties-section-phantom' on page 465 undefin
+ed on input line 36.
+
+
+LaTeX Warning: Hyper reference `morphisms-section-phantom' on page 465 undefine
+d on input line 37.
+
+
+LaTeX Warning: Hyper reference `coherent-section-phantom' on page 465 undefined
+ on input line 38.
+
+
+LaTeX Warning: Hyper reference `divisors-section-phantom' on page 465 undefined
+ on input line 39.
+
+
+LaTeX Warning: Hyper reference `limits-section-phantom' on page 465 undefined o
+n input line 40.
+
+
+LaTeX Warning: Hyper reference `varieties-section-phantom' on page 465 undefine
+d on input line 41.
+
+
+LaTeX Warning: Hyper reference `topologies-section-phantom' on page 465 undefin
+ed on input line 42.
+
+
+LaTeX Warning: Hyper reference `descent-section-phantom' on page 465 undefined 
+on input line 43.
+
+
+LaTeX Warning: Hyper reference `perfect-section-phantom' on page 465 undefined 
+on input line 44.
+
+
+LaTeX Warning: Hyper reference `more-morphisms-section-phantom' on page 465 und
+efined on input line 45.
+
+
+LaTeX Warning: Hyper reference `flat-section-phantom' on page 465 undefined on 
+input line 46.
+
+
+LaTeX Warning: Hyper reference `groupoids-section-phantom' on page 465 undefine
+d on input line 47.
+
+
+LaTeX Warning: Hyper reference `more-groupoids-section-phantom' on page 465 und
+efined on input line 48.
+
+
+LaTeX Warning: Hyper reference `etale-section-phantom' on page 465 undefined on
+ input line 49.
+
+
+LaTeX Warning: Hyper reference `chow-section-phantom' on page 465 undefined on 
+input line 54.
+
+
+LaTeX Warning: Hyper reference `intersection-section-phantom' on page 465 undef
+ined on input line 55.
+
+
+LaTeX Warning: Hyper reference `pic-section-phantom' on page 465 undefined on i
+nput line 56.
+
+
+LaTeX Warning: Hyper reference `weil-section-phantom' on page 465 undefined on 
+input line 57.
+
+
+LaTeX Warning: Hyper reference `adequate-section-phantom' on page 465 undefined
+ on input line 58.
+
+
+LaTeX Warning: Hyper reference `dualizing-section-phantom' on page 465 undefine
+d on input line 59.
+
+
+LaTeX Warning: Hyper reference `duality-section-phantom' on page 465 undefined 
+on input line 60.
+
+
+LaTeX Warning: Hyper reference `discriminant-section-phantom' on page 465 undef
+ined on input line 61.
+
+
+LaTeX Warning: Hyper reference `derham-section-phantom' on page 465 undefined o
+n input line 62.
+
+
+LaTeX Warning: Hyper reference `local-cohomology-section-phantom' on page 465 u
+ndefined on input line 63.
+
+
+LaTeX Warning: Hyper reference `algebraization-section-phantom' on page 465 und
+efined on input line 64.
+
+
+LaTeX Warning: Hyper reference `curves-section-phantom' on page 465 undefined o
+n input line 65.
+
+
+LaTeX Warning: Hyper reference `resolve-section-phantom' on page 465 undefined 
+on input line 66.
+
+
+LaTeX Warning: Hyper reference `models-section-phantom' on page 465 undefined o
+n input line 67.
+
+
+LaTeX Warning: Hyper reference `functors-section-phantom' on page 465 undefined
+ on input line 68.
+
+
+LaTeX Warning: Hyper reference `equiv-section-phantom' on page 465 undefined on
+ input line 69.
+
+
+LaTeX Warning: Hyper reference `pione-section-phantom' on page 465 undefined on
+ input line 70.
+
+
+LaTeX Warning: Hyper reference `etale-cohomology-section-phantom' on page 465 u
+ndefined on input line 71.
+
+
+LaTeX Warning: Hyper reference `crystalline-section-phantom' on page 465 undefi
+ned on input line 72.
+
+
+LaTeX Warning: Hyper reference `proetale-section-phantom' on page 465 undefined
+ on input line 73.
+
+
+LaTeX Warning: Hyper reference `relative-cycles-section-phantom' on page 465 un
+defined on input line 74.
+
+
+LaTeX Warning: Hyper reference `more-etale-section-phantom' on page 465 undefin
+ed on input line 75.
+
+
+LaTeX Warning: Hyper reference `trace-section-phantom' on page 465 undefined on
+ input line 76.
+
+
+LaTeX Warning: Hyper reference `spaces-section-phantom' on page 465 undefined o
+n input line 81.
+
+
+LaTeX Warning: Hyper reference `spaces-properties-section-phantom' on page 465 
+undefined on input line 82.
+
+
+LaTeX Warning: Hyper reference `spaces-morphisms-section-phantom' on page 465 u
+ndefined on input line 83.
+
+
+LaTeX Warning: Hyper reference `decent-spaces-section-phantom' on page 465 unde
+fined on input line 84.
+
+
+LaTeX Warning: Hyper reference `spaces-cohomology-section-phantom' on page 465 
+undefined on input line 85.
+
+
+LaTeX Warning: Hyper reference `spaces-limits-section-phantom' on page 465 unde
+fined on input line 86.
+
+
+LaTeX Warning: Hyper reference `spaces-divisors-section-phantom' on page 465 un
+defined on input line 87.
+
+
+LaTeX Warning: Hyper reference `spaces-over-fields-section-phantom' on page 465
+ undefined on input line 88.
+
+
+LaTeX Warning: Hyper reference `spaces-topologies-section-phantom' on page 465 
+undefined on input line 89.
+
+
+LaTeX Warning: Hyper reference `spaces-descent-section-phantom' on page 465 und
+efined on input line 90.
+
+
+LaTeX Warning: Hyper reference `spaces-perfect-section-phantom' on page 465 und
+efined on input line 91.
+
+
+LaTeX Warning: Hyper reference `spaces-more-morphisms-section-phantom' on page 
+465 undefined on input line 92.
+
+
+LaTeX Warning: Hyper reference `spaces-flat-section-phantom' on page 465 undefi
+ned on input line 93.
+
+
+LaTeX Warning: Hyper reference `spaces-groupoids-section-phantom' on page 465 u
+ndefined on input line 94.
+
+
+LaTeX Warning: Hyper reference `spaces-more-groupoids-section-phantom' on page 
+465 undefined on input line 95.
+
+
+LaTeX Warning: Hyper reference `bootstrap-section-phantom' on page 465 undefine
+d on input line 96.
+
+
+LaTeX Warning: Hyper reference `spaces-pushouts-section-phantom' on page 465 un
+defined on input line 97.
+
+
+LaTeX Warning: Hyper reference `spaces-chow-section-phantom' on page 465 undefi
+ned on input line 102.
+
+
+LaTeX Warning: Hyper reference `groupoids-quotients-section-phantom' on page 46
+5 undefined on input line 103.
+
+
+LaTeX Warning: Hyper reference `spaces-more-cohomology-section-phantom' on page
+ 465 undefined on input line 104.
+
+
+LaTeX Warning: Hyper reference `spaces-simplicial-section-phantom' on page 465 
+undefined on input line 105.
+
+
+LaTeX Warning: Hyper reference `spaces-duality-section-phantom' on page 465 und
+efined on input line 106.
+
+
+LaTeX Warning: Hyper reference `formal-spaces-section-phantom' on page 465 unde
+fined on input line 107.
+
+
+LaTeX Warning: Hyper reference `restricted-section-phantom' on page 465 undefin
+ed on input line 108.
+
+
+LaTeX Warning: Hyper reference `spaces-resolve-section-phantom' on page 465 und
+efined on input line 109.
+
+
+LaTeX Warning: Hyper reference `formal-defos-section-phantom' on page 465 undef
+ined on input line 114.
+
+
+LaTeX Warning: Hyper reference `defos-section-phantom' on page 465 undefined on
+ input line 115.
+
+
+LaTeX Warning: Hyper reference `cotangent-section-phantom' on page 465 undefine
+d on input line 116.
+
+
+LaTeX Warning: Hyper reference `examples-defos-section-phantom' on page 465 und
+efined on input line 117.
+
+
+LaTeX Warning: Hyper reference `algebraic-section-phantom' on page 465 undefine
+d on input line 122.
+
+
+LaTeX Warning: Hyper reference `examples-stacks-section-phantom' on page 465 un
+defined on input line 123.
+
+
+LaTeX Warning: Hyper reference `stacks-sheaves-section-phantom' on page 465 und
+efined on input line 124.
+
+
+LaTeX Warning: Hyper reference `criteria-section-phantom' on page 465 undefined
+ on input line 125.
+
+
+LaTeX Warning: Hyper reference `artin-section-phantom' on page 465 undefined on
+ input line 126.
+
+
+LaTeX Warning: Hyper reference `quot-section-phantom' on page 465 undefined on 
+input line 127.
+
+[465]
+
+LaTeX Warning: Hyper reference `stacks-properties-section-phantom' on page 466 
+undefined on input line 128.
+
+
+LaTeX Warning: Hyper reference `stacks-morphisms-section-phantom' on page 466 u
+ndefined on input line 129.
+
+
+LaTeX Warning: Hyper reference `stacks-limits-section-phantom' on page 466 unde
+fined on input line 130.
+
+
+LaTeX Warning: Hyper reference `stacks-cohomology-section-phantom' on page 466 
+undefined on input line 131.
+
+
+LaTeX Warning: Hyper reference `stacks-perfect-section-phantom' on page 466 und
+efined on input line 132.
+
+
+LaTeX Warning: Hyper reference `stacks-introduction-section-phantom' on page 46
+6 undefined on input line 133.
+
+
+LaTeX Warning: Hyper reference `stacks-more-morphisms-section-phantom' on page 
+466 undefined on input line 134.
+
+
+LaTeX Warning: Hyper reference `stacks-geometry-section-phantom' on page 466 un
+defined on input line 135.
+
+
+LaTeX Warning: Hyper reference `moduli-section-phantom' on page 466 undefined o
+n input line 140.
+
+
+LaTeX Warning: Hyper reference `moduli-curves-section-phantom' on page 466 unde
+fined on input line 141.
+
+
+LaTeX Warning: Hyper reference `examples-section-phantom' on page 466 undefined
+ on input line 146.
+
+
+LaTeX Warning: Hyper reference `exercises-section-phantom' on page 466 undefine
+d on input line 147.
+
+
+LaTeX Warning: Hyper reference `guide-section-phantom' on page 466 undefined on
+ input line 148.
+
+
+LaTeX Warning: Hyper reference `desirables-section-phantom' on page 466 undefin
+ed on input line 149.
+
+
+LaTeX Warning: Hyper reference `coding-section-phantom' on page 466 undefined o
+n input line 150.
+
+
+LaTeX Warning: Hyper reference `obsolete-section-phantom' on page 466 undefined
+ on input line 151.
+
+
+LaTeX Warning: Hyper reference `fdl-section-phantom' on page 466 undefined on i
+nput line 152.
+
+
+LaTeX Warning: Hyper reference `index-section-phantom' on page 466 undefined on
+ input line 153.
+
+) (algebra.bbl) [466] (algebra.aux)
+
+LaTeX Warning: There were undefined references.
+
+ )
+(see the transcript file for additional information)<<USER_ROOT>/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><<USER_ROOT>/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm5.pfb><C
+:/Users/<USER>/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/
+eufm7.pfb><<USER_ROOT>/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
+lmbx10.pfb><<USER_ROOT>/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
+/lmbx7.pfb><<USER_ROOT>/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
+/lmbx8.pfb><<USER_ROOT>/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
+/lmex10.pfb><<USER_ROOT>/AppData/Local/Programs/MiKTeX/fonts/type1/public/l
+m/lmmi10.pfb><<USER_ROOT>/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+lm/lmmi5.pfb><<USER_ROOT>/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+lm/lmmi6.pfb><<USER_ROOT>/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+lm/lmmi7.pfb><<USER_ROOT>/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+lm/lmmi8.pfb><<USER_ROOT>/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+lm/lmr10.pfb><<USER_ROOT>/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+lm/lmr5.pfb><<USER_ROOT>/AppData/Local/Programs/MiKTeX/fonts/type1/public/l
+m/lmr6.pfb><<USER_ROOT>/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
+/lmr7.pfb><<USER_ROOT>/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
+lmr8.pfb><<USER_ROOT>/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/l
+mri10.pfb><<USER_ROOT>/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
+lmri7.pfb><<USER_ROOT>/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
+lmri8.pfb><<USER_ROOT>/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
+lmsy10.pfb><<USER_ROOT>/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
+/lmsy5.pfb><<USER_ROOT>/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
+/lmsy6.pfb><<USER_ROOT>/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
+/lmsy7.pfb><<USER_ROOT>/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
+/lmsy8.pfb><<USER_ROOT>/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/symbols/msam10.pfb><<USER_ROOT>/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/symbols/msbm10.pfb><<USER_ROOT>/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/xypic/xyatip10.pfb><<USER_ROOT>/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/xypic/xybsql10.pfb><<USER_ROOT>/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/xypic/xybtip10.pfb><<USER_ROOT>/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/xypic/xydash10.pfb>
+Output written on algebra.pdf (466 pages, 3708152 bytes).
+Transcript written on algebra.log.

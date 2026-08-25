@@ -1,0 +1,515 @@
+{
+  "schema": "mathematics-commons-stacks-independent-review/v1",
+  "candidate_id": "stacks-errata-a04446e-r5",
+  "namespace": "commons/stacks/errata/r5",
+  "lease_id": "stacks-lease-000008-errata-r5",
+  "reviewer_role": "independent adverse replay separate from the producer and registrar",
+  "completed_at_utc": "2026-08-22T15:08:37Z",
+  "verdict": "PASS",
+  "passed": true,
+  "scope": {
+    "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+    "candidate_root": "candidates/commons/stacks/errata/r5",
+    "fresh_replay_root_label": "R5_INDEPENDENT_REPLAY_0217_0254_B1",
+    "candidate_writes": [
+      "replay/independent-review.json"
+    ],
+    "payload_or_authority_mutated": false,
+    "source_map_or_config_mutated": false,
+    "scripts_or_existing_evidence_mutated": false,
+    "manifest_or_validation_mutated": false,
+    "git_used": false,
+    "network_used": false,
+    "upstream_contacted": false
+  },
+  "pre_review_state": {
+    "manifest": {
+      "path": "candidate.manifest.json",
+      "bytes": 8789,
+      "sha256": "904345A660C6B034719016EB8752EA393FF69D87BF928D24369D8FCB57D2E793"
+    },
+    "manifest_independent_replay": "not_performed",
+    "files_before_receipt": 39,
+    "manifest_closure": {
+      "passed": true,
+      "referenced_files": 38,
+      "unreferenced_files": 0,
+      "missing_files": 0,
+      "hash_mismatches": 0,
+      "checked_before_receipt_existed": true,
+      "last_reconfirmed_at_utc": "2026-08-22T15:08:37Z"
+    },
+    "producer_validation": {
+      "path": "builds/validation.json",
+      "bytes": 2655,
+      "sha256": "0FFEE052FD7190CDB3C227112D732D9DF3171DCF5C94A8C060A000D469A321D1"
+    },
+    "producer_build_execution": {
+      "path": "builds/build-execution.json",
+      "bytes": 6882,
+      "sha256": "42B2FB3C947D66F470247B57C9C0BA46215F5D4650F60247F3DFBD7334645B37"
+    },
+    "producer_build_receipt": {
+      "path": "builds/build-receipt.json",
+      "bytes": 20230,
+      "sha256": "EDC1A699775637CD06D3E32547D56A7AB4C37A71DCE588DD5BE1550BDDCE9DE3"
+    },
+    "producer_visual_qa": {
+      "path": "builds/visual-qa.json",
+      "bytes": 9447,
+      "sha256": "A88BD5C04B0BB4DF5EA3818BE6058BE7F739A535CB50AEA5196E8465ADA1E1E7"
+    }
+  },
+  "tools": {
+    "candidate_scripts": [
+      {
+        "path": "check-manifest.py",
+        "bytes": 6082,
+        "sha256": "9D4513D7BBEC9371D20E73E30ABFC2FC2435BA24729C71A0BC3D3DF187826B75"
+      },
+      {
+        "path": "verify.py",
+        "bytes": 14012,
+        "sha256": "E2E3B77AA834D2F8897C1D75A3EDCDD588FAB338DE0201415EECF20F05F5ECCA"
+      },
+      {
+        "path": "replay-build.py",
+        "bytes": 9764,
+        "sha256": "DA0D24632E2669114C01F3FDCED1927D5A46546B7A66E42B397EE6C503AA3A67"
+      },
+      {
+        "path": "build-receipt.py",
+        "bytes": 7332,
+        "sha256": "F52D4CC93F4C0CC62E01C9398C64E2BF31D82D1920B18C73E962CDAD046CEB14"
+      },
+      {
+        "path": "visual-qa.py",
+        "bytes": 9005,
+        "sha256": "00ABF09B5F005C5AFC3670116A7D7DE7B1E2B4DBBBF9778CC75FF4124BEB1A68"
+      }
+    ],
+    "independent_helpers": [
+      {
+        "label": "independent_source_replay.py",
+        "bytes": 27197,
+        "sha256": "7BD6DD7DE55924F97574BB53A3554C1A204C5EA8A2E681ED3CEF997EA6292F48"
+      },
+      {
+        "label": "independent_build.py",
+        "bytes": 16184,
+        "sha256": "F126B964F8B605A29F12E2F1D685EE72172111768D1F7DF830711F2619E50133"
+      },
+      {
+        "label": "independent_visual.py",
+        "bytes": 12049,
+        "sha256": "7DC3CBADB2EC333CE44447B63004A98B182D044BDF2AA45A017A8A1FBAEAA59F"
+      }
+    ],
+    "toolchain": {
+      "python": "3.13.9 | packaged by Anaconda, Inc. | MSC v.1929 64 bit",
+      "pdflatex": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5)",
+      "bibtex": "MiKTeX-BibTeX 4.2 (MiKTeX 26.5)",
+      "poppler_pdftoppm": "24.04.0",
+      "poppler_pdfinfo": "24.04.0",
+      "poppler_pdffonts": "24.04.0",
+      "pypdf": "6.12.2",
+      "pillow": "12.2.0"
+    }
+  },
+  "authority_and_evidence": {
+    "passed": true,
+    "manifested_authority_evidence_files": 10,
+    "manifested_files_total": 38,
+    "files_with_hash_mismatch": 0,
+    "candidate_authority_file_byte_identical_to_frozen_upstream": true,
+    "family_mapping_matches_source_map": true,
+    "evidence_bindings": 6,
+    "authority_files": [
+      {
+        "path": "authority/canon/EVIDENCE_SOURCE_BINDINGS.json",
+        "bytes": 3412,
+        "sha256": "8C407D4EF10539DAC55A38A1F1E5E6494EA0A682A5B42980014ABEC35920ADFF"
+      },
+      {
+        "path": "authority/canon/mappings/R5_SITES_MAPPING.json",
+        "bytes": 42705,
+        "sha256": "B6BAE4B27D619A6D325BEC8B9F9EE7921C64DD9090B2FFD838B9555C9C4EC363"
+      },
+      {
+        "path": "authority/canon/reviews/ERRATA_R5_CORROBORATION_SITES_100_FRENCH_SLICE_20260822.json",
+        "bytes": 1478,
+        "sha256": "91DD99F792FCC858AED63769099F2C129F35BEE52D66213E656F14964741C531"
+      },
+      {
+        "path": "authority/canon/reviews/ERRATA_R5_DUPLICATE_SITES_100_20260822.json",
+        "bytes": 1377,
+        "sha256": "24E7C0C42BC8BAF76D6E0CD580A02EC388B8B10344E4E9869410A23595626927"
+      },
+      {
+        "path": "authority/canon/reviews/ERRATA_R5_INTAKE_SITES_076_117_20260822.json",
+        "bytes": 3290,
+        "sha256": "24505893E8AE5CDA173DE4E8898CBF61F06DA2EFCD10F4A75CE8B62E0B0235F4"
+      },
+      {
+        "path": "authority/canon/reviews/ERRATA_R5_SITES_076_117_REVIEW.md",
+        "bytes": 9593,
+        "sha256": "A8D19579197A93441AC55EFFA6A9DA307ADE2E5D92909E5BFF56ED6AB4B666BD"
+      },
+      {
+        "path": "authority/COPYING",
+        "bytes": 20404,
+        "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"
+      },
+      {
+        "path": "authority/producer/SOURCE_DEFECT_LEDGER.csv",
+        "bytes": 100424,
+        "sha256": "FE48262F81A6B83C2D361AC2BD3896EC5C279C71314C4BA8E3B083D86E5FD8F1"
+      },
+      {
+        "path": "authority/source/sites.tex",
+        "bytes": 424197,
+        "sha256": "07AE4690C2D8EB6873837D3D14A37F07408BB14F9E0BE6077ED570C220B1845D"
+      },
+      {
+        "path": "authority/upstream.lock.json",
+        "bytes": 1171,
+        "sha256": "B195ECC83AB0F32C574A60D1FDBA9B0DA4D35B04E0DF7CB106DC9C0FDAD99C0D"
+      }
+    ]
+  },
+  "candidate_control_artifacts": {
+    "candidate_config": {
+      "path": "candidate.config.json",
+      "bytes": 4188,
+      "sha256": "E25211A73FF0729341F144A462B9DF648B317482748A4FFE6C159B28E896D84F"
+    },
+    "stable_units": {
+      "path": "stable-units.json",
+      "bytes": 12272,
+      "sha256": "7658414F1CA208223675BCFE9BF291EE169BC7691A7A0B862DEFC8C21E718B54"
+    },
+    "source_map": {
+      "path": "source-map.jsonl",
+      "bytes": 40267,
+      "sha256": "DA0CCE36BA49B14F95715BEC1BB29EAB831EB096F0088E0AFEB7921479971F5E"
+    },
+    "decisions": {
+      "path": "decisions.jsonl",
+      "bytes": 1886,
+      "sha256": "9A1A8E02C9C6287CCC940ED263FB1D3E102F2CDC1BD8551C7E7BC380CBE12987"
+    },
+    "rejections": {
+      "path": "rejections.jsonl",
+      "bytes": 1355,
+      "sha256": "E60B2EF081E8BAA639C5BFD233C39CD2B740DB1EC4F8193CE3E455C18F15C502"
+    },
+    "formula_diagram_inventory": {
+      "path": "formula-diagram-inventory.json",
+      "bytes": 1357,
+      "sha256": "6A170441C43EC0039D02B12DBAC62DF87DA8C13F6817BA31435B9C2BDE91F5CD"
+    }
+  },
+  "exact_replay": {
+    "passed": true,
+    "independent_report": {
+      "label": "source-replay.json",
+      "bytes": 37688,
+      "sha256": "187311DB1755C02EFD0783ABD31733577F19949DC89AC8FA719989B8107D0621"
+    },
+    "stable_units": 38,
+    "stable_id_first": "MC-STK-ERR-0217",
+    "stable_id_last": "MC-STK-ERR-0254",
+    "stable_ids_contiguous": true,
+    "producer_identities_unique": true,
+    "operations": 42,
+    "operation_ids_unique": true,
+    "authority_spans_half_open_and_exact": true,
+    "old_and_replacement_bytes_and_hashes_exact": true,
+    "source_line_bindings_exact": true,
+    "occurrence_counts_exact": true,
+    "overlapping_operations": 0,
+    "descending_operation_replay_byte_identical_to_payload": true,
+    "family_mapping_matches_source_map": true,
+    "adverse_evidence_nonempty_for_every_unit": true,
+    "proof_nonempty_for_every_unit": true,
+    "sites": {
+      "authority_bytes": 424197,
+      "authority_sha256": "07AE4690C2D8EB6873837D3D14A37F07408BB14F9E0BE6077ED570C220B1845D",
+      "payload_bytes": 424291,
+      "payload_sha256": "9B11C7525C7A23CD8732FDC204E5F62B66892969B08087CE26EC194F85073499",
+      "structure": {
+        "labels": {
+          "authority": 332,
+          "payload": 332
+        },
+        "references": {
+          "authority": 660,
+          "payload": 661,
+          "configured_addition_exact": true
+        },
+        "citations": {
+          "authority": 24,
+          "payload": 24
+        },
+        "environment_events": {
+          "authority": 1162,
+          "payload": 1162
+        },
+        "sections": {
+          "authority": 52,
+          "payload": 52
+        },
+        "xymatrix": {
+          "authority": 99,
+          "payload": 99
+        },
+        "display_delimiters": {
+          "authority": 666,
+          "payload": 666
+        },
+        "mapped_exceptions_exact": true
+      }
+    },
+    "formula_inventory": {
+      "classification_independently_recomputed": true,
+      "formula_units": 17,
+      "prose_only_units": 21,
+      "diagram_units": 0,
+      "partition_exact": true,
+      "unmapped_payload_changes": 0
+    }
+  },
+  "excluded_and_adverse_candidates": {
+    "passed": true,
+    "decision_rows": 6,
+    "rejected_hypotheses": 3,
+    "duplicate_aliases": 2,
+    "deferred_or_unresolved_dispositions": 0,
+    "rejected_dispositions": [
+      {
+        "producer_id": "SITES-085",
+        "independent_disposition": "rejected",
+        "reason": "Renaming the bound dummy index V_j to V_i changes neither type nor rendering."
+      },
+      {
+        "producer_id": "SITES-095",
+        "independent_disposition": "rejected",
+        "reason": "The displayed types already force the unique composite; added parentheses are optional clarity."
+      },
+      {
+        "producer_id": "SITES-116",
+        "independent_disposition": "rejected",
+        "reason": "J is fixed immediately before the clause, so Sh(C) is unambiguous contextual shorthand."
+      }
+    ],
+    "duplicate_alias_map": {
+      "SITES-077": "admitted R4 SITES-047 / MC-STK-ERR-0189",
+      "SITES-097-repeat": "MC-STK-ERR-0243"
+    },
+    "rejection_reasons_nonempty_and_source_context_reviewed": true,
+    "rejected_identities_absent_from_applied_units": true,
+    "producer_identity_closure": 43,
+    "producer_identity_closure_exact": true
+  },
+  "fresh_build": {
+    "passed": true,
+    "fresh_candidate_copy_used": true,
+    "fresh_authority_copy_used": true,
+    "fresh_source_copies": 2,
+    "source_date_epoch": "1785270512",
+    "independent_report": {
+      "label": "fresh-build.json",
+      "bytes": 28622,
+      "sha256": "6FD7385D30EF354ED9B556F0E6B8639E6C0AF9AC5AF487401DF1EB2B6188ED1D"
+    },
+    "candidate": {
+      "source": {
+        "bytes": 424291,
+        "sha256": "9B11C7525C7A23CD8732FDC204E5F62B66892969B08087CE26EC194F85073499"
+      },
+      "pdf": {
+        "bytes": 1164224,
+        "sha256": "AB7FC6F427109243EE10C4ADC943319201099D6E63A475D9B5D573E95DD6C8A1",
+        "pages": 113,
+        "byte_identical_to_producer": true
+      },
+      "public_pass3_stdout": {
+        "bytes": 47293,
+        "sha256": "A68D15AB06A62EF2F31C026F38DEB9C6303C2163FB0611C9D3BC47E1FC490025",
+        "byte_identical_to_producer": true
+      },
+      "public_bibtex_stdout": {
+        "bytes": 142,
+        "sha256": "67FDE235FB92D46C5D49F32141022B75BF8DE21A0FD654388AD5AACD7FFD492F",
+        "byte_identical_to_producer": true
+      },
+      "public_log": {
+        "fresh_bytes": 61049,
+        "fresh_sha256": "B0D91FA3B1A6174AFD02BD1C774F71C0EBE13C7B5CB21C1F27F764FFDC2EA115",
+        "producer_bytes": 61049,
+        "producer_sha256": "204EE25CD0B1DB7891D9F3E65EE693262CC733D05A0AAA676BE37F54B89D53FA",
+        "byte_identical_to_producer": false,
+        "diagnostics_identical": true,
+        "difference": "Exactly line 2264 differs: the fresh private path consumes 238344 TeX string characters versus 237804 in the producer build; all other lines are byte-identical."
+      },
+      "diagnostics": {
+        "fatal_errors": 0,
+        "missing_glyphs": 0,
+        "undefined_citations": 0,
+        "undefined_reference_occurrences": 215,
+        "undefined_reference_unique_targets": 173,
+        "overfull_boxes": 3,
+        "underfull_boxes": 0
+      }
+    },
+    "authority": {
+      "source": {
+        "bytes": 424197,
+        "sha256": "07AE4690C2D8EB6873837D3D14A37F07408BB14F9E0BE6077ED570C220B1845D"
+      },
+      "pdf": {
+        "bytes": 1164857,
+        "sha256": "92E1C095FBBEC85C7C0F864D4EFD69A9A99C22D6E602A19BBFC0518056B95368",
+        "pages": 114,
+        "byte_identical_to_producer": true
+      },
+      "public_pass3_stdout": {
+        "bytes": 47324,
+        "sha256": "733281D22B7C87AE7FE5E7AD1AF7EDCCC54FECEA35F7DB1028C46E8237009B29",
+        "byte_identical_to_producer": true
+      },
+      "public_bibtex_stdout": {
+        "bytes": 142,
+        "sha256": "67FDE235FB92D46C5D49F32141022B75BF8DE21A0FD654388AD5AACD7FFD492F",
+        "byte_identical_to_producer": true
+      },
+      "public_log": {
+        "fresh_bytes": 61092,
+        "fresh_sha256": "8B8981719F2041FA4FC02C75228B83E2D44A81C642313D37284D6D06C4587736",
+        "producer_bytes": 61092,
+        "producer_sha256": "498C19BE5FEB363359EDC6B380CDA7DF3C1AC7F4867812DF87029508DEF7C8D6",
+        "byte_identical_to_producer": false,
+        "diagnostics_identical": true,
+        "difference": "Exactly line 2266 differs: the fresh private path consumes 238352 TeX string characters versus 237812 in the producer build; all other lines are byte-identical."
+      },
+      "diagnostics": {
+        "fatal_errors": 0,
+        "missing_glyphs": 0,
+        "undefined_citations": 0,
+        "undefined_reference_occurrences": 214,
+        "undefined_reference_unique_targets": 173,
+        "overfull_boxes": 3,
+        "underfull_boxes": 2
+      }
+    },
+    "comparison_to_producer": {
+      "parsed_diagnostics_match": true,
+      "candidate_and_authority_pdfs_byte_identical": true,
+      "candidate_and_authority_pass3_streams_byte_identical": true,
+      "candidate_and_authority_bibtex_streams_byte_identical": true,
+      "all_eight_raw_command_stdout_streams_match": true,
+      "public_logs_match_after_normalizing_only_the_location_dependent_string_pool_statistic": true,
+      "candidate_only_undefined_reference_targets": {
+        "categories-lemma-functorial-colimit": 1
+      },
+      "undefined_target_multisets_match_configured_authority_delta": true,
+      "candidate_page_delta": -1
+    }
+  },
+  "fresh_visual_review": {
+    "passed": true,
+    "render_manifest": {
+      "label": "visual/render-manifest.json",
+      "bytes": 51926,
+      "sha256": "AE1DDF6D14CF6065E2DB068218C087782D3C979CB913F11625DBF0FB6C1B3266"
+    },
+    "structural_qa": {
+      "label": "visual/structural-qa.json",
+      "bytes": 1799,
+      "sha256": "BA7D08EAADD9908047C003C144669A16D12BDBE5B7FFF94602A0E07B85C46DA4"
+    },
+    "manual_review": {
+      "label": "visual/manual-review.json",
+      "bytes": 3112,
+      "sha256": "F33FDE4D17654869AB733659D4E0D457094DC53FA12548383B3AB3AE787DF52F"
+    },
+    "render_manifest_generation_state": "The render manifest recorded manual_review_pending at generation; the separately hashed manual-review.json discharges that pending step with PASS.",
+    "candidate_pages_rendered": 113,
+    "candidate_pages_manually_inspected": 113,
+    "contact_sheets_rendered_and_inspected": 8,
+    "high_resolution_pages_rendered_and_inspected": 11,
+    "high_resolution_pages": [
+      1,
+      61,
+      65,
+      87,
+      90,
+      94,
+      98,
+      104,
+      108,
+      111,
+      113
+    ],
+    "high_resolution_renders_byte_identical_to_producer_evidence": 11,
+    "findings": {
+      "clipping": 0,
+      "overlap": 0,
+      "blank_pages": 0,
+      "duplicate_pages": 0,
+      "broken_diagrams": 0,
+      "missing_glyphs": 0,
+      "unreadable_content": 0,
+      "warning_loci_outside_printable_area": 0,
+      "malformed_link_rectangles": 0,
+      "out_of_bounds_link_rectangles": 0,
+      "candidate_page_113": "Readable and unclipped continuation of the chapter inventory and bibliography; intentionally less dense than body pages and not blank."
+    },
+    "pdf_structure": {
+      "page_box_points": [
+        0,
+        0,
+        612,
+        792
+      ],
+      "fonts_each": 31,
+      "unembedded_fonts_each": 0,
+      "fonts_without_tounicode_each": 0,
+      "link_annotations_each": 646,
+      "malformed_link_rectangles_each": 0,
+      "out_of_bounds_link_rectangles_each": 0,
+      "duplicate_extracted_text_page_hashes_each": 0,
+      "tagged_pdf": false
+    }
+  },
+  "public_hygiene": {
+    "passed": true,
+    "candidate_files_independently_scanned_before_receipt": 39,
+    "candidate_text_or_code_files_independently_scanned_before_receipt": 36,
+    "absolute_local_path_markers": 0,
+    "username_markers": 0,
+    "symlinks": 0,
+    "python_cache_files": 0,
+    "credential_material_detected": false,
+    "receipt_contains_no_private_absolute_path_or_username": true
+  },
+  "adverse_evidence": [
+    "Standalone sites.tex builds intentionally retain external cross-chapter undefined-reference targets. The candidate has one configured additional occurrence of categories-lemma-functorial-colimit; every other target count matches the frozen authority build, and cumulative composition remains responsible for resolving them.",
+    "Both fresh PDFs are untagged and contain neither StructTreeRoot nor MarkInfo. All 31 fonts are embedded and carry ToUnicode maps, so this is retained as an accessibility-structure limitation rather than a visible-render failure.",
+    "Restoring the missing reference command reflows the corrected candidate from 114 authority pages to 113 candidate pages. Full ordered rendering shows no lost, duplicated, clipped, or unreadable content at the reflow boundary.",
+    "Fresh public TeX logs are not byte-identical to producer logs because the longer private build root changes exactly one location-dependent string-pool usage line in each log. Parsed diagnostics match, normalized logs are exact, and both PDFs, both BibTeX outputs, both pass-3 outputs, and all eight raw command stdout streams are byte-identical to producer evidence.",
+    "The three rejected hypotheses and two duplicate aliases were independently replayed against their frozen source contexts; none warrants an additional payload operation.",
+    "This receipt reviews only frozen R5 MC-STK-ERR-0217..0254. Later French-lane stacks.tex findings and any future R6 are outside its scope.",
+    "This is an independent mechanical, source-binding, proof-evidence, build, and rendered-page review. It is not legal certification, upstream approval, affiliation, or endorsement."
+  ],
+  "post_receipt_rebinding_required": {
+    "required": true,
+    "authorized_actor": "registrar_only",
+    "reason": "The pre-review manifest and producer validation were correctly verified before this receipt existed and therefore still record independent_replay as not_performed.",
+    "registrar_next_action": "Add replay/independent-review.json to candidate.manifest.json with its exact final byte count and SHA-256, set independent_replay to passed, regenerate builds/validation.json against the rebound manifest, update the manifest binding for that regenerated validation, and re-run complete manifest closure.",
+    "expected_intermediate_state": "Until that registrar rebind occurs, the original pre-review manifest intentionally does not close over this newly authorized receipt.",
+    "invalidation_rule": "Any change to authority, payload, stable units, source map, configuration, scripts, evidence, or existing build artifacts invalidates this receipt and requires a fresh independent replay. Only registrar changes to candidate.manifest.json and builds/validation.json that bind this exact receipt are expected."
+  },
+  "verdict_basis": "PASS: the exact required pre-review manifest hash and closure were proved before the receipt existed; all 38 stable units and 42 exact operations replay the frozen authority to the payload byte-for-byte; all authority and evidence hashes close; rejected and duplicate identities are closed and defensible; fresh candidate and authority builds reproduce producer PDFs, BibTeX, pass-3, raw command streams, and diagnostics, with only the documented location-dependent TeX string-pool statistic differing in public logs; all 113 candidate pages and all 11 high-resolution risk pages were rendered and inspected; and no payload drift, visual failure, malformed or out-of-bounds link, font embedding or ToUnicode failure, credential material, private-path leakage, or unrecorded candidate mutation was found."
+}

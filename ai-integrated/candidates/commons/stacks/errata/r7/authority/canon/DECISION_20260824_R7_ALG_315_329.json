@@ -1,0 +1,51 @@
+{
+  "schema": "stacks-cjk-material-decision/v1",
+  "recorded_utc": "2026-08-24T04:09:15Z",
+  "decision_id": "STACKS-CJK-R7-ALGEBRA-315-329-20260824",
+  "scope": "Sole canon intake and independent adjudication of French producer rows ALGEBRA-315 through ALGEBRA-329.",
+  "authority": {
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "path": "upstream/src/stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex",
+    "bytes": 1771230,
+    "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3",
+    "mutated": false
+  },
+  "accepted": [
+    {"producer_id": "ALGEBRA-315", "canon_id": "MC-STK-ERR-0660", "classification": "missing_contraction_definition", "locus": "31171-31183", "operation_count": 1},
+    {"producer_id": "ALGEBRA-316", "canon_id": "MC-STK-ERR-0661", "classification": "malformed_fraktur_identifier", "locus": "31187", "operation_count": 1},
+    {"producer_id": "ALGEBRA-317", "canon_id": "MC-STK-ERR-0662", "classification": "missing_polynomial_variable_separator", "locus": "31203", "operation_count": 1},
+    {"producer_id": "ALGEBRA-318", "canon_id": "MC-STK-ERR-0663", "classification": "ill_typed_lies_over_relation", "locus": "31280-31284", "operation_count": 1},
+    {"producer_id": "ALGEBRA-319", "canon_id": "MC-STK-ERR-0664", "classification": "wrongly_asserted_injectivity", "locus": "31295-31297", "operation_count": 1},
+    {"producer_id": "ALGEBRA-320", "canon_id": "MC-STK-ERR-0665", "classification": "presentation_variable_collision", "locus": "31358-31376", "operation_count": 2},
+    {"producer_id": "ALGEBRA-321", "canon_id": "MC-STK-ERR-0666", "classification": "ill_typed_relative_dimension", "locus": "31381-31397", "operation_count": 3},
+    {"producer_id": "ALGEBRA-322", "canon_id": "MC-STK-ERR-0667", "classification": "transposed_generator_indices", "locus": "31454-31457", "operation_count": 1},
+    {"producer_id": "ALGEBRA-323", "canon_id": "MC-STK-ERR-0668", "classification": "transposed_relation_indices", "locus": "31478-31481", "operation_count": 1},
+    {"producer_id": "ALGEBRA-324", "canon_id": "MC-STK-ERR-0669", "classification": "wrong_product_idempotent", "locus": "31658-31659", "operation_count": 1},
+    {"producer_id": "ALGEBRA-325", "canon_id": "MC-STK-ERR-0670", "classification": "undefined_variable_count", "locus": "31684-31693", "operation_count": 3},
+    {"producer_id": "ALGEBRA-326", "canon_id": "MC-STK-ERR-0671", "classification": "missing_copula_parallelism", "locus": "31707-31709;31735-31737", "operation_count": 2},
+    {"producer_id": "ALGEBRA-327", "canon_id": "MC-STK-ERR-0672", "classification": "malformed_parallel_replacement_clause", "locus": "31642-31645;31651-31653", "operation_count": 2},
+    {"producer_id": "ALGEBRA-328", "canon_id": "MC-STK-ERR-0673", "classification": "unnamed_prime_and_unstated_contraction", "locus": "43650-43656;43683-43698", "operation_count": 2},
+    {"producer_id": "ALGEBRA-329", "canon_id": "MC-STK-ERR-0674", "classification": "subject_verb_agreement", "locus": "43832", "operation_count": 1}
+  ],
+  "summary": {
+    "accepted_producer_count": 15,
+    "accepted_pointer_count": 15,
+    "operation_count": 23,
+    "rejected_count": 0,
+    "unresolved_count": 0,
+    "duplicate_count": 0,
+    "first_canon_id": "MC-STK-ERR-0660",
+    "last_canon_id": "MC-STK-ERR-0674",
+    "candidate_written": false,
+    "bytes_materialized": false,
+    "source_mutated": false,
+    "translation_targets_mutated": false,
+    "publication_changed": false
+  },
+  "evidence": [
+    "R7_ALG_315_329_INTAKE.json",
+    "R7_ALG_315_329_REPLAY.json",
+    "R7_ALG_315_329_REVIEW.md"
+  ],
+  "next_action": "Materialize MC-STK-ERR-0660 through MC-STK-ERR-0674 in the leased English AI errata/r7 candidate."
+}

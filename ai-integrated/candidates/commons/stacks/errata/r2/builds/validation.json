@@ -1,0 +1,159 @@
+{
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "candidate_id": "stacks-errata-a04446e-r2",
+  "checks": {
+    "authority_hashes": {
+      "files": 10,
+      "passed": true
+    },
+    "chapter_builds": {
+      "chapters": 2,
+      "passed": true,
+      "receipt_sha256": "B1DB59C778F4FFDFD94B2E5BE1839107605D11E804920CF1D1C3059D85B69128"
+    },
+    "exact_payloads": {
+      "files": {
+        "brauer.tex": {
+          "authority_bytes": 28201,
+          "authority_sha256": "B2504820D769EBE4E9E33B8ADD78753FB30ACA6E8A7F75C8D54DDA885EDCD682",
+          "display_delimiters": 16,
+          "mapped_replacements": [
+            {
+              "count": 1,
+              "new": "splitting field.",
+              "old": "spitting field."
+            },
+            {
+              "count": 1,
+              "new": "To get a contradiction assume no element of $K$ outside $k$ is separable over $k$.",
+              "old": "To get a contradiction assume no element of $K$ is separable over $k$."
+            }
+          ],
+          "payload_bytes": 28214,
+          "payload_sha256": "7D14F300ED13295728D3BA0B08ABEB5449B93D4E64244FA91680BEA9DA785BBD",
+          "structure": {
+            "citations": 4,
+            "environments": 144,
+            "labels": 43,
+            "references": 51,
+            "sections": 8
+          },
+          "xymatrix_count": 0
+        },
+        "stacks-limits.tex": {
+          "authority_bytes": 42110,
+          "authority_sha256": "F4F5EBF02BB5922A8DFF70EA507ED6F821F992C697D9C9A984B9513C39FEC57A",
+          "display_delimiters": 74,
+          "mapped_replacements": [
+            {
+              "count": 1,
+              "new": "of affine schemes over $S$,\nthe functor",
+              "old": "of affine schemes over $U$,\nthe functor"
+            },
+            {
+              "count": 1,
+              "new": "\\phi : p(x) \\to y_i|V",
+              "old": "\\phi : f(x) \\to y_i|V"
+            },
+            {
+              "count": 1,
+              "new": "fibre categories of $[U/R]$",
+              "old": "fibre categories of $[U/T]$"
+            },
+            {
+              "count": 1,
+              "new": "We assume that $Y_i$ is quasi-compact and quasi-separated",
+              "old": "We assume that $X_i$ is quasi-compact and quasi-separated"
+            },
+            {
+              "count": 1,
+              "new": "two morphisms",
+              "old": "two morpisms"
+            },
+            {
+              "count": 1,
+              "new": "a proper morphism",
+              "old": "a proper morphisms"
+            },
+            {
+              "count": 1,
+              "new": "shows that this morphism is the same as",
+              "old": "shows that this is the morphism is the same as"
+            },
+            {
+              "count": 1,
+              "new": "$T' \\subset |\\mathcal{X} \\times_Y Z'|$",
+              "old": "$T' \\subset |X \\times_Y Z'|$"
+            },
+            {
+              "count": 1,
+              "new": "the map $|\\mathcal{X} \\times_{\\mathcal{Y}} Z| \\to |Z|$ is closed, and",
+              "old": "the map $|\\mathcal{X} \\times_Y Z| \\to |Z|$ is closed, and"
+            },
+            {
+              "count": 1,
+              "new": "$\\mathcal{X} \\times_{\\mathcal{Y}} V \\to V$ is universally closed,",
+              "old": "$\\mathcal{X} \\times_Y V \\to V$ is universally closed,"
+            },
+            {
+              "count": 1,
+              "new": "of $|\\mathcal{X} \\times_Y Z|$ is the pullback",
+              "old": "of $|X \\times_Y Z|$ is the pullback"
+            },
+            {
+              "count": 1,
+              "new": "$|\\mathbf{A}^n \\times \\mathcal{X}|$. Since the assumption",
+              "old": "$|\\mathbf{A}^n \\times Y|$. Since the assumption"
+            },
+            {
+              "count": 1,
+              "new": "of $T'$ in $|\\mathbf{A}^n \\times Y|$ is closed",
+              "old": "of $T'$ in $|\\mathbf{A}^n \\times X|$ is closed"
+            }
+          ],
+          "payload_bytes": 42157,
+          "payload_sha256": "0FBB14083DB31197467F9A638216D3273BAE7520623E99B9ED884B043BF12003",
+          "structure": {
+            "citations": 2,
+            "environments": 90,
+            "labels": 23,
+            "references": 80,
+            "sections": 7
+          },
+          "xymatrix_count": 16
+        }
+      },
+      "passed": true
+    },
+    "jsonl_and_proof_parse": {
+      "jsonl_files": 3,
+      "passed": true,
+      "proved_units": 13
+    },
+    "lease_and_inventory": {
+      "diagram_units": 1,
+      "passed": true,
+      "units": 13
+    },
+    "public_hygiene": {
+      "passed": true,
+      "python_caches": 0,
+      "text_files": 34
+    },
+    "unit_closure": {
+      "expected": 13,
+      "manifested": 13,
+      "passed": true
+    },
+    "visual_pdf_qa": {
+      "direct_units": 13,
+      "passed": true,
+      "pdfs": 2,
+      "receipt_sha256": "7D031AD1552709E03926BA2EC099B51B9741BB53D9A2D986BD319DA970F9A983"
+    }
+  },
+  "generated_at_utc": "2026-08-21T21:21:21Z",
+  "passed": true,
+  "schema": "mathematics-commons-stacks-errata-validation/v1",
+  "verifier_sha256": "88A739931FC4BFA8654C281BBC8C287301896035C08929D9E4C794444979CDAA"
+}

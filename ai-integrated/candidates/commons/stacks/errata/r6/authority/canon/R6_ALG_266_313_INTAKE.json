@@ -1,0 +1,50 @@
+{
+  "schema": "stacks-cjk-errata-intake/v1",
+  "recorded_at": "2026-08-24T04:26:58+02:00",
+  "producer_ids": [
+    "ALGEBRA-266", "ALGEBRA-267", "ALGEBRA-268", "ALGEBRA-269",
+    "ALGEBRA-270", "ALGEBRA-271", "ALGEBRA-272", "ALGEBRA-273",
+    "ALGEBRA-274", "ALGEBRA-275", "ALGEBRA-276", "ALGEBRA-277",
+    "ALGEBRA-278", "ALGEBRA-279", "ALGEBRA-280", "ALGEBRA-281",
+    "ALGEBRA-282", "ALGEBRA-283", "ALGEBRA-284", "ALGEBRA-285",
+    "ALGEBRA-286", "ALGEBRA-287", "ALGEBRA-288", "ALGEBRA-289",
+    "ALGEBRA-290", "ALGEBRA-291", "ALGEBRA-292", "ALGEBRA-293",
+    "ALGEBRA-294", "ALGEBRA-295", "ALGEBRA-296", "ALGEBRA-297",
+    "ALGEBRA-298", "ALGEBRA-299", "ALGEBRA-300", "ALGEBRA-301",
+    "ALGEBRA-302", "ALGEBRA-303", "ALGEBRA-304", "ALGEBRA-305",
+    "ALGEBRA-306", "ALGEBRA-307", "ALGEBRA-308", "ALGEBRA-309",
+    "ALGEBRA-310", "ALGEBRA-311", "ALGEBRA-312", "ALGEBRA-313"
+  ],
+  "source_thread_id": "019f7111-d8de-75f1-8068-7c04db810882",
+  "authority": {
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "path": "upstream/src/stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex",
+    "bytes": 1771230,
+    "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+  },
+  "producer_ledger": {
+    "path": "authority/producer/SOURCE_DEFECT_LEDGER.csv",
+    "bytes": 325787,
+    "sha256": "2FD3CC404135D8853FB87CD1856DD41AF07BAD8247F804201E7CCC922A540C69",
+    "physical_lines": 719,
+    "data_rows": 718,
+    "last_write": "2026-08-24T04:20:42.1466514+02:00",
+    "selected_rows": 48,
+    "selected_unique_ids": 48,
+    "selected_serialization": "PowerShell ConvertTo-Json -Depth 3 -Compress over ordered imported CSV rows ALGEBRA-266..313, UTF-8 no BOM",
+    "selected_serialization_bytes": 31401,
+    "selected_serialization_sha256": "EC2D13B803B99C3B32C15726005E92EDC775B6529D73A37D7CC76F25C5D9DEDE"
+  },
+  "packet_terminal_ledger_identity": {
+    "bytes": 325787,
+    "sha256": "D20AC5FD0013888034346A5BC4F17025549A1E0A5D8AE7EC764B58CFF7963B29",
+    "note": "Identity declared in the terminal ALGEBRA-304..313 handoff. The live producer ledger subsequently retained the same byte count but changed hash while marking rows delivered; the intake binds the recomputed live identity above and all 48 exact rows once."
+  },
+  "scope": "algebra.tex:28879-30955; ALGEBRA-266 through ALGEBRA-313",
+  "deduplication": {
+    "canon_ledgers_searched": ["ERRATA_LEDGER.jsonl", "DECISIONS.jsonl"],
+    "existing_producer_id_matches": 0
+  },
+  "authority_mutated": false,
+  "translation_targets_mutated_by_canon": false
+}

@@ -1,0 +1,307 @@
+{
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "candidate_id": "stacks-errata-a04446e-r3",
+  "checks": {
+    "authority_hashes": {
+      "files": 9,
+      "passed": true
+    },
+    "chapter_builds": {
+      "chapters": 3,
+      "passed": true,
+      "receipt_sha256": "D62C323D31CAE3A54E258B7BF695D14007EF6031C4CACB21C43E3371DA3E32C8"
+    },
+    "exact_payloads": {
+      "files": {
+        "categories.tex": {
+          "authority_bytes": 350957,
+          "authority_sha256": "62F7611AF4C3FEEBD041DB4728B42C7112004CFBB9FA5ECB643C6F5D90DB3F25",
+          "display_delimiters": 622,
+          "mapped_replacements": [
+            {
+              "count": 1,
+              "new": "directly lift $f \\circ g$ to",
+              "old": "directly lift $g \\circ f$ to"
+            },
+            {
+              "count": 1,
+              "new": "\\alpha_{g, f}",
+              "old": "\\alpha_{f, g}"
+            },
+            {
+              "count": 1,
+              "new": "$\\mathcal{I}_\\mathcal{S} \\to \\mathcal{S}",
+              "old": "$I_\\mathcal{S} \\to \\mathcal{S}"
+            },
+            {
+              "count": 1,
+              "new": "$d \\to c \\circ b$. Finally",
+              "old": "$d \\to b \\circ c$. Finally"
+            },
+            {
+              "count": 3,
+              "new": "\\mathcal{C}/(U \\times V)",
+              "old": "\\mathcal{C}/U \\times V"
+            },
+            {
+              "count": 1,
+              "new": "1 \\circ (a \\otimes b) \\circ 1^{-1}",
+              "old": "1 \\circ (a \\otimes b) \\circ \\circ 1^{-1}"
+            },
+            {
+              "count": 1,
+              "new": "$\\otimes : \\mathcal{C} \\times \\mathcal{C} \\to \\mathcal{C}$ is a functor,",
+              "old": "$\\otimes : \\mathcal{C} \\otimes \\mathcal{C} \\to \\mathcal{C}$ is a functor,"
+            }
+          ],
+          "payload_bytes": 350966,
+          "payload_sha256": "124F381C9DD01898B8DBB3969B7771190B64E8B2B9CE73E24E7DD1FB0727E2C1",
+          "structure": {
+            "citations": 13,
+            "environments": 1082,
+            "labels": 317,
+            "references": 294,
+            "sections": 44
+          },
+          "xymatrix_count": 135
+        },
+        "sets.tex": {
+          "authority_bytes": 46628,
+          "authority_sha256": "9BCC55E7F11CF36B0665AE549D5BA76BE6A0EDD00F7FCA36A567E367099603F9",
+          "display_delimiters": 26,
+          "mapped_replacements": [
+            {
+              "count": 1,
+              "new": "\\item If $\\{U_i \\to U\\}_{i\\in I}\n\\in \\text{Cov}(\\mathcal{C})_{\\kappa, f(\\alpha)}$\nand $W \\to U$ is a morphism of $\\mathcal{C}$, then",
+              "old": "\\item If $\\{U_i \\to U\\}_{i\\in I}\n\\in \\text{Cov}(\\mathcal{C})_{\\kappa, \\alpha}$\nand $W \\to U$ is a morphism of $\\mathcal{C}$, then"
+            },
+            {
+              "count": 1,
+              "new": "$\\text{size}(\\coprod_a \\coprod_{i \\in I_a} W_{a, i}) \\leq \\text{size}(X)$",
+              "old": "$\\text{size}(\\coprod_a \\coprod_{i \\in I_a} W_{i, a}) \\leq \\text{size}(X)$"
+            },
+            {
+              "count": 1,
+              "new": "$\\beta_0 = \\sup_{T \\in \\mathcal{S}_\\tau} \\beta(T)$.",
+              "old": "$\\beta_0 = \\sup_{T \\in S_\\tau} \\beta(T)$."
+            },
+            {
+              "count": 1,
+              "new": "$f$ contained in $\\text{Cov}(\\mathcal{C})_{\\kappa, f(\\beta(\\mathcal{U}) + 1)}$",
+              "old": "$f$ contained in $\\text{Cov}(\\mathcal{C})_{\\kappa, f(\\beta + 1)}$"
+            },
+            {
+              "count": 1,
+              "new": "Finally, for the second condition, suppose that $\\{U_i \\to U\\}_{i\\in I}\n\\in \\text{Cov}(\\mathcal{C})_{\\kappa, \\alpha}$\nand for each $i$ we have",
+              "old": "Finally, for the second condition, suppose that $\\{U_i \\to U\\}_{i\\in I}\n\\in \\text{Cov}(\\mathcal{C})_{\\kappa, f(\\alpha)}$\nand for each $i$ we have"
+            },
+            {
+              "count": 1,
+              "new": "$\\mathcal{W}_i = \\{W_{ij} \\to U_i\\}_{j\\in J_i}\n\\in \\text{Cov}(\\mathcal{C})_{\\kappa, \\alpha}$.\nConsider the function",
+              "old": "$\\mathcal{W}_i = \\{W_{ij} \\to U_i\\}_{j\\in J_i}\n\\in \\text{Cov}(\\mathcal{C})_{\\kappa, f(\\alpha)}$.\nConsider the function"
+            },
+            {
+              "count": 1,
+              "new": "of $\\beta_2$ is $> \\kappa \\geq |I|$ the image of this function cannot be a\ncofinal subset. Hence there exists a $\\beta < \\beta_2$ such",
+              "old": "of $\\beta_2$ is $> \\kappa \\geq |I|$ the image of this function cannot be a\ncofinal subset. Hence there exists a $\\beta < \\beta_1$ such"
+            },
+            {
+              "count": 1,
+              "new": "cofinal subset. Hence there exists a $\\beta < \\beta_2$ such\nthat $\\mathcal{W}_i \\in \\text{Cov}_{\\kappa, f(\\beta)}$ for all $i \\in I$.\nAfter increasing $\\beta$ to at least $\\beta(\\mathcal{U})$ if necessary,\nwhich still leaves $\\beta < \\beta_2$, we may also assume that\n$\\mathcal{U} \\in \\text{Cov}_{\\kappa, f(\\beta)}$.\nIt follows that",
+              "old": "cofinal subset. Hence there exists a $\\beta < \\beta_2$ such\nthat $\\mathcal{W}_i \\in \\text{Cov}_{\\kappa, f(\\beta)}$ for all $i \\in I$.\nIt follows that"
+            }
+          ],
+          "payload_bytes": 46831,
+          "payload_sha256": "A4D8072BDFFEEF9B8EF1D058499761DA1E1F31EABC11BB04B8EA37D04B866D41",
+          "structure": {
+            "citations": 12,
+            "environments": 108,
+            "labels": 39,
+            "references": 33,
+            "sections": 12
+          },
+          "xymatrix_count": 0
+        },
+        "topology.tex": {
+          "authority_bytes": 237731,
+          "authority_sha256": "C6BAC8DCF8AD96DC47416BF34CB45BA4A10B894E40D67D3E1FA68D8EF0D9F872",
+          "display_delimiters": 142,
+          "mapped_replacements": [
+            {
+              "count": 1,
+              "new": "$j, j' \\in V$ with maximal distance",
+              "old": "$j, j' \\in E$ with maximal distance"
+            },
+            {
+              "count": 1,
+              "new": "The set $A$ is partially ordered by inclusion: $Z \\leq Z'\n\\Leftrightarrow Z \\subset Z'$ for $Z, Z' \\in A$.",
+              "old": "The set $A$ is partially ordered by inclusion: $\\alpha \\leq \\alpha'\n\\Leftrightarrow Z_{\\alpha} \\subset Z_{\\alpha'}$."
+            },
+            {
+              "count": 1,
+              "new": "$X \\setminus (U \\cup V)$",
+              "old": "$X \\setminus U \\cup V$"
+            },
+            {
+              "count": 1,
+              "new": "$(X \\setminus (U \\cup V)) \\cap Z_\\alpha",
+              "old": "$(X \\setminus U \\cup V) \\cap Z_\\alpha"
+            },
+            {
+              "count": 1,
+              "new": "(X \\setminus (U_{i_1} \\cup U_{i_2}))",
+              "old": "(X \\setminus U_{i_1} \\cup U_{i_2})"
+            },
+            {
+              "count": 1,
+              "new": "$J \\subset \\Ob(\\mathcal{I})$ and opens",
+              "old": "$J \\subset I$ and opens"
+            },
+            {
+              "count": 1,
+              "new": "$E = \\bigcup_{j = 1}^m (E \\cap V_j)$ is a finite union",
+              "old": "$E = \\bigcup E \\cap V_j$ is a finite union"
+            },
+            {
+              "count": 1,
+              "new": "$U_K := \\{J\\subset I \\mid J \\in Z, \\ K\\subset J \\}$.",
+              "old": "$U_K := \\{J\\subset I \\mid J \\in Z, \\ K\\subset J \\})$."
+            },
+            {
+              "count": 1,
+              "new": "of irreducible closed subsets of $Y$. Let $\\xi_e \\in X$ be a point",
+              "old": "of irreducible closed subsets of $X$. Let $\\xi_e \\in X$ be a point"
+            },
+            {
+              "count": 1,
+              "new": "$\\text{codim}(Y, Y') \\leq \\delta(\\xi') - \\delta(\\xi) < \\infty$.",
+              "old": "$\\text{codim}(Y, Y') \\leq \\delta(\\xi) - \\delta(\\xi') < \\infty$."
+            },
+            {
+              "count": 1,
+              "new": "$\\xi_{i + 1} \\leadsto \\xi_i$ is an immediate specialization.\nHence we see that $e = \\delta(\\xi') - \\delta(\\xi)$ as desired.",
+              "old": "$\\xi_i \\leadsto \\xi_{i + 1}$ is an immediate specialization.\nHence we see that $e = \\delta(\\xi) - \\delta(\\xi')$ as desired."
+            },
+            {
+              "count": 1,
+              "new": "(not necessarily open). We claim",
+              "old": "(not necessarily closed). We claim"
+            },
+            {
+              "count": 1,
+              "new": "say $T = T_1 \\cup \\ldots \\cup T_n$, and $T$ has empty interior in $X$.",
+              "old": "say $T = T_1 \\cup \\ldots \\cup T_n$, and $T$ is nowhere dense in $X$."
+            },
+            {
+              "count": 1,
+              "new": "point of the closure of $p(Z)$ and let $y \\in Y$ be the generic",
+              "old": "point of the closure of $p(X)$ and let $y \\in Y$ be the generic"
+            },
+            {
+              "count": 1,
+              "new": "point of the closure of $q(Z)$.",
+              "old": "point of the closure of $q(Y)$."
+            },
+            {
+              "count": 1,
+              "new": "By construction the map $f : X \\to \\prod\\nolimits_U W$ is spectral.",
+              "old": "By construction the map $f : X \\to Y$ is spectral."
+            },
+            {
+              "count": 1,
+              "new": "Thus $Z' = \\lim Z'_i$ is quasi-compact",
+              "old": "Thus $Z' = \\lim Z_i$ is quasi-compact"
+            },
+            {
+              "count": 1,
+              "new": "Using that the constructible topology on $Z$",
+              "old": "Using that the spectral topology on $Z$"
+            },
+            {
+              "count": 1,
+              "new": "$W \\setminus E = \\lim (U_i \\setminus E)$",
+              "old": "$W \\setminus E = \\lim U_i \\setminus E$"
+            },
+            {
+              "count": 1,
+              "new": "identifies $X$ with an open subspace of $X^*$.",
+              "old": "identifies $X$ with an open subspace of $X$."
+            },
+            {
+              "count": 1,
+              "new": "$E = X \\setminus (U \\cap f^{-1}(V))$.",
+              "old": "$E = X \\setminus U \\cap f^{-1}(V)$."
+            },
+            {
+              "count": 1,
+              "new": "we can find a continuous map $g : E \\to X''$ over $X$.\nObserve that $g$ is a closed map (Lemma \\ref{lemma-closed-map}).\nHence $g(E) \\subset X''$ is a closed subset surjecting onto $X$\nand we conclude $g(E) = X''$ by minimality of $X''$.\nOn the other hand, if $T \\subset E$ is a proper closed subset,\nthen $g(T) \\not = X''$ as $T$ does not map onto $X$ by minimality\nof $E$. By Lemma \\ref{lemma-isomorphism} we see that $g$ is an isomorphism.",
+              "old": "we can find a continuous map $g : X' \\to X''$ over $X$.\nObserve that $g$ is a closed map (Lemma \\ref{lemma-closed-map}).\nHence $g(X') \\subset X''$ is a closed subset surjecting onto $X$\nand we conclude $g(X') = X''$ by minimality of $X''$.\nOn the other hand, if $E \\subset X'$ is a proper closed subset,\nthen $g(E) \\not = X''$ as $E$ does not map onto $X$ by minimality\nof $X'$. By Lemma \\ref{lemma-isomorphism} we see that $g$ is an isomorphism."
+            },
+            {
+              "count": 1,
+              "new": "and all $U_j$ and $U_j \\cap U_{j'}$ quasi-compact,\n\\end{enumerate}",
+              "old": "and all $U_j$ and $U_j \\cap U_{j'}$ quasi-compact,\n\\item add more here.\n\\end{enumerate}"
+            },
+            {
+              "count": 1,
+              "new": "Given two partitions $\\mathcal{P}$ and $\\mathcal{Q}$ of $X$, we say\n$\\mathcal{P}$ {\\it refines} $\\mathcal{Q}$ if every part of $\\mathcal{Q}$\nis a union of parts of $\\mathcal{P}$.",
+              "old": "Given two partitions of $X$ we say one {\\it refines} the other if\nthe parts of one are unions of parts of the other."
+            },
+            {
+              "count": 1,
+              "new": "$N = \\bigcap_{i = 1, \\ldots, n} g_i^{-1}Hg_i$",
+              "old": "$N = \\bigcap_{i = 1, \\ldots, n} g_iHg_i^{-1}$"
+            },
+            {
+              "count": 1,
+              "new": "$\\mathcal{I} \\to \\textit{TopGroup}$, $i \\mapsto G_i$",
+              "old": "$\\mathcal{I} \\to \\textit{Top}$, $i \\mapsto G_i$"
+            }
+          ],
+          "payload_bytes": 237823,
+          "payload_sha256": "67115451F19CE981FD591F77E6CA16A4DE64A20C71105D2E5215E41FD8F8EB8D",
+          "structure": {
+            "citations": 20,
+            "environments": 916,
+            "labels": 263,
+            "references": 270,
+            "sections": 29
+          },
+          "xymatrix_count": 3
+        }
+      },
+      "passed": true
+    },
+    "lease_and_inventory": {
+      "diagram_units": 1,
+      "passed": true,
+      "units": 34
+    },
+    "ledgers_and_proof_parse": {
+      "jsonl_files": 2,
+      "passed": true,
+      "producer_source_ids": 34,
+      "proved_units": 34
+    },
+    "public_hygiene": {
+      "passed": true,
+      "python_caches": 0,
+      "text_files": 41
+    },
+    "unit_closure": {
+      "expected": 34,
+      "manifested": 34,
+      "passed": true
+    },
+    "visual_pdf_qa": {
+      "direct_units": 34,
+      "passed": true,
+      "pdfs": 3,
+      "receipt_sha256": "2A5EC193261F2B22E39B71BE6D384039949627B795AAD47277E227F00242890F"
+    }
+  },
+  "generated_at_utc": "2026-08-22T03:47:06Z",
+  "passed": true,
+  "schema": "mathematics-commons-stacks-errata-validation/v1",
+  "verifier_sha256": "D54B5FDA12775C872AEB8F0315DD2E1F7316935CE320553AF00C3A7B6E5FACE4"
+}

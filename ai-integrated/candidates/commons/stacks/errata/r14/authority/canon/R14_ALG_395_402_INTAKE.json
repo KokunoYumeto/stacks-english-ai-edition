@@ -1,0 +1,71 @@
+{
+  "adjudication": {
+    "ALGEBRA-395": "confirmed_mathematical_identity_error",
+    "ALGEBRA-396": "confirmed_grammar_error",
+    "ALGEBRA-397": "confirmed_omitted_words_error",
+    "ALGEBRA-398": "confirmed_mathematical_index_error",
+    "ALGEBRA-399": "confirmed_grammar_error",
+    "ALGEBRA-400": "rejected_not_a_defect",
+    "ALGEBRA-401": "confirmed_mathematical_notation_error",
+    "ALGEBRA-402": "confirmed_mathematical_parenthesization_error"
+  },
+  "authority": {
+    "bytes": 1771230,
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "line_endings": "LF-only with terminal LF",
+    "mutated": false,
+    "path": "authority/source/algebra.tex",
+    "physical_lines": 47885,
+    "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3",
+    "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e"
+  },
+  "bounded_source": {
+    "bytes": 29604,
+    "end_line": 47885,
+    "physical_lines": 794,
+    "sha256": "BE794C1A2E84FC238FE7A57E1E9FAA655F9DF0221D1DD25D6B2A5EFA29597BE8",
+    "start_line": 47092
+  },
+  "candidate_id": "stacks-errata-a04446e-r14",
+  "closure": {
+    "accepted": 7,
+    "aliases": 0,
+    "operations": 7,
+    "producer_rows": 8,
+    "rejected": 1,
+    "stable_ids": "MC-STK-ERR-0738..MC-STK-ERR-0744",
+    "unresolved": 0
+  },
+  "corrected_bounded_replay": {
+    "bytes": 29589,
+    "old_spans_unique_in_declared_lines": true,
+    "operations_nonoverlapping": true,
+    "physical_lines": 794,
+    "sha256": "7EB94D25F8EFC6164B8DE55EF8658DDADE0485FD585314C91C54A2F5253EAC4B"
+  },
+  "deduplication": {
+    "overlap": false,
+    "packet_duplicates": 0,
+    "public_candidates_checked": "R1..R13"
+  },
+  "producer_packet": {
+    "bytes": 1983,
+    "published_sanitized_copy": {
+      "bytes": 1533,
+      "path": "authority/producer/ALGEBRA_395_402_CANON_PACKET_SANITIZED.json",
+      "sha256": "DCF754792A9E3C924F5631CEED0DCAA964352397A222573FDE9A3BEA40938F19"
+    },
+    "selected_ids": "ALGEBRA-395..ALGEBRA-402",
+    "sha256": "2C9697C25000F18F4CD786CBA5E5B9D5CA726D9D4F4246A96915A53DC093E5F0",
+    "source_emendation_manifest_used_as_canon": false,
+    "source_identity": "external named packet, verified before sanitization"
+  },
+  "recorded_at_utc": "2026-08-24T22:10:34Z",
+  "schema": "stacks-canon-errata-intake/v1",
+  "write_boundaries": {
+    "canonical_translations": "immutable",
+    "english_authority": "immutable",
+    "payload_derivation": "directly from frozen authority, never a prior payload",
+    "producer_emendation_manifest": "not trusted or imported as canon"
+  }
+}

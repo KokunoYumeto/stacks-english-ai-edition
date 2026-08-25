@@ -1,0 +1,68 @@
+{
+  "schema": "mathematics-commons-stacks-errata-visual-qa/v1",
+  "candidate_id": "stacks-errata-a04446e-r1",
+  "performed_at_utc": "2026-08-21T20:50:02Z",
+  "method": "Rendered the pages containing every direct correction at 120 dpi and inspected candidate-left/authority-right pairs; separately reopened each complete candidate PDF for page, font, annotation, metadata, and tagging checks.",
+  "tools": {
+    "pdftoppm": "24.04.0",
+    "imagemagick": "7.1.2-22 Q16 x64",
+    "pypdf": "6.12.2"
+  },
+  "pdfs": [
+    {
+      "path": "builds/smoothing.pdf",
+      "bytes": 620609,
+      "sha256": "27FC2DEDD20D3F44206B984C35E2C1C8424D849F98C745C0CFD014CFAB397A15",
+      "pages": 37,
+      "inspected_pages": [4, 6, 8, 9],
+      "covered_units": ["MC-STK-ERR-0001", "MC-STK-ERR-0002", "MC-STK-ERR-0003", "MC-STK-ERR-0005", "MC-STK-ERR-0006"],
+      "fonts": 27,
+      "unembedded_fonts": 0,
+      "fonts_without_tounicode": 0,
+      "link_annotations": 188,
+      "malformed_link_rectangles": 0,
+      "out_of_bounds_link_rectangles": 0
+    },
+    {
+      "path": "builds/crystalline.pdf",
+      "bytes": 852370,
+      "sha256": "E4CCB04FAE96EA7D33B4736A499B7D045ED36BA8923A3A76BAFCE9EAB4884C04",
+      "pages": 61,
+      "inspected_pages": [3, 4],
+      "covered_units": ["MC-STK-ERR-0007"],
+      "fonts": 34,
+      "unembedded_fonts": 0,
+      "fonts_without_tounicode": 0,
+      "link_annotations": 384,
+      "malformed_link_rectangles": 0,
+      "out_of_bounds_link_rectangles": 0
+    },
+    {
+      "path": "builds/spaces-cohomology.pdf",
+      "bytes": 614930,
+      "sha256": "1D7E0664E873CAACC4F5FCCEF85398C9BD5EEC57A1BFF5A1807B7A930385D51F",
+      "pages": 46,
+      "inspected_pages": [4, 5, 6, 7, 10],
+      "covered_units": ["MC-STK-ERR-0009", "MC-STK-ERR-0010", "MC-STK-ERR-0011", "MC-STK-ERR-0012", "MC-STK-ERR-0013", "MC-STK-ERR-0014", "MC-STK-ERR-0015"],
+      "fonts": 24,
+      "unembedded_fonts": 0,
+      "fonts_without_tounicode": 0,
+      "link_annotations": 197,
+      "malformed_link_rectangles": 0,
+      "out_of_bounds_link_rectangles": 0
+    }
+  ],
+  "visual_findings": {
+    "changed_loci_legible": true,
+    "clipped_or_overlapping_content": 0,
+    "out_of_page_content": 0,
+    "unexpected_reflow": 0,
+    "candidate_authority_page_counts_match": true,
+    "private_metadata_markers": 0
+  },
+  "expected_limitations": [
+    "These are isolated chapter proof builds, so unresolved cross-chapter references and visible question-mark placeholders match the authority builds and are not introduced by the candidate.",
+    "The PDFs are untagged; accessibility tagging is a later full-edition toolchain concern, not evidence for or against these bounded source corrections."
+  ],
+  "passed": true
+}

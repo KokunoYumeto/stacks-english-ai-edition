@@ -1,0 +1,76 @@
+{
+  "accepted": [
+    {
+      "class": "incorrect_tensor_base_field",
+      "disposition": "Tensor A and L over the shared base field k, not over the fraction field K.",
+      "locus": "algebra.tex:47042",
+      "operations": [
+        {
+          "old_text": "$A \\otimes_K L$",
+          "replacement_text": "$A \\otimes_k L$",
+          "source_end_line": 47042,
+          "source_start_line": 47042
+        }
+      ],
+      "producer_id": "ALGEBRA-392",
+      "result": "confirmed_mathematical_type_error",
+      "stable_id": "MC-STK-ERR-0735"
+    },
+    {
+      "class": "compound_number_agreement",
+      "disposition": "Use the singular compound fraction fields at both repeated loci.",
+      "locus": "algebra.tex:47011,47023",
+      "operations": [
+        {
+          "old_text": "fractions fields",
+          "replacement_text": "fraction fields",
+          "source_end_line": 47011,
+          "source_start_line": 47011
+        },
+        {
+          "old_text": "fractions fields",
+          "replacement_text": "fraction fields",
+          "source_end_line": 47023,
+          "source_start_line": 47023
+        }
+      ],
+      "producer_id": "ALGEBRA-393",
+      "result": "confirmed_grammar_error",
+      "stable_id": "MC-STK-ERR-0736"
+    },
+    {
+      "class": "closed_compound_spelling",
+      "disposition": "Use the closed compound subalgebra in all three adjacent occurrences.",
+      "locus": "algebra.tex:47013,47015,47016",
+      "operations": [
+        {
+          "old_text": "sub algebras",
+          "replacement_text": "subalgebras",
+          "source_end_line": 47013,
+          "source_start_line": 47013
+        },
+        {
+          "old_text": "sub algebra",
+          "replacement_text": "subalgebra",
+          "source_end_line": 47015,
+          "source_start_line": 47015
+        },
+        {
+          "old_text": "sub algebra",
+          "replacement_text": "subalgebra",
+          "source_end_line": 47016,
+          "source_start_line": 47016
+        }
+      ],
+      "producer_id": "ALGEBRA-394",
+      "result": "confirmed_spelling_error",
+      "stable_id": "MC-STK-ERR-0737"
+    }
+  ],
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3",
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "candidate_id": "stacks-errata-a04446e-r13",
+  "rejected": [],
+  "schema": "mathematics-commons-stacks-r13-adjudication-spec/v1"
+}

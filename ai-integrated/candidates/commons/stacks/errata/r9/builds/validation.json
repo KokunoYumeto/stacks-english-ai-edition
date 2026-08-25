@@ -1,0 +1,81 @@
+{
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "candidate_id": "stacks-errata-a04446e-r9",
+  "checks": {
+    "authority_evidence": {
+      "files": 7,
+      "passed": true
+    },
+    "chapter_builds": {
+      "chapters": 1,
+      "passed": true,
+      "receipt_sha256": "634FA6C5D0901791C0644966DC2BAE81DE1103E7148D82015274AB4194EE639A"
+    },
+    "exact_payloads": {
+      "files": {
+        "algebra": {
+          "authority_bytes": 1771230,
+          "authority_display_delimiters": 2162,
+          "authority_sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3",
+          "display_delimiter_delta": 0,
+          "operation_count": 32,
+          "ordered_structure_exceptions": {},
+          "payload_bytes": 1773235,
+          "payload_display_delimiters": 2162,
+          "payload_sha256": "05E06B3067D2372418D8CF4ACFE08D61FE9972FD3A5FCAE89E4549B372F9F660",
+          "structure": {
+            "citations": {
+              "authority": 45,
+              "payload": 45
+            },
+            "environments": {
+              "authority": 6280,
+              "payload": 6280
+            },
+            "labels": {
+              "authority": 1618,
+              "payload": 1618
+            },
+            "references": {
+              "authority": 3066,
+              "payload": 3066
+            },
+            "sections": {
+              "authority": 168,
+              "payload": 168
+            }
+          },
+          "xymatrix_count": 164
+        }
+      },
+      "passed": true
+    },
+    "lease_ledgers_inventory": {
+      "decisions": 6,
+      "duplicate_aliases": 0,
+      "passed": true,
+      "rejections": 1,
+      "unresolved": 0
+    },
+    "public_hygiene": {
+      "passed": true,
+      "python_caches": 0,
+      "text_files": 37
+    },
+    "unit_closure": {
+      "expected": 29,
+      "manifested": 29,
+      "passed": true
+    },
+    "visual_pdf_qa": {
+      "direct_units": 29,
+      "passed": true,
+      "pdfs": 1,
+      "receipt_sha256": "B517BAB9F2D0199192CD19537F134B1E954B8086AC45289C2A5DEAE35F1E8899"
+    }
+  },
+  "generated_at_utc": "2026-08-24T14:16:45Z",
+  "passed": true,
+  "schema": "mathematics-commons-stacks-errata-validation/v1",
+  "verifier_sha256": "26120C75DA649790CF518E0C219FDC4DB724E6AAEB896D4C0A273510B1F54A8B"
+}

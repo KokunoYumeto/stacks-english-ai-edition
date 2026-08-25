@@ -1,0 +1,1859 @@
+{
+  "schema": "mathematics-commons-stacks-r4-sites-mapping/v1",
+  "source": "sites.tex",
+  "authority_sha256": "07AE4690C2D8EB6873837D3D14A37F07408BB14F9E0BE6077ED570C220B1845D",
+  "unit_count": 69,
+  "units": [
+    {
+      "producer_id": "SITES-012",
+      "stable_id": "MC-STK-ERR-0148",
+      "locus": "253-270",
+      "earliest_line": 267,
+      "class": "undefined_category_identifier",
+      "proof": "The proof defines G'(U) for U in Ob(C), using plain C. The ambient category is mathcal C throughout the lemma and plain C is undefined; line 302 uses Ob(mathcal C) in the same chapter. Independent disposition: canon/control/private/R4_SITES_010_012_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The intended reading remains recoverable and TeX may still compile, but recoverability does not supply the missing, duplicated, or malformed token; the bound independent review found the correction forced.",
+      "operations": [
+        {
+          "old": "\\Ob(C)",
+          "new": "\\Ob(\\mathcal{C})",
+          "expected_count": 1,
+          "source_line": "267",
+          "byte_start_0based": 9625,
+          "byte_end_exclusive": 9631,
+          "old_byte_count": 6,
+          "new_byte_count": 16,
+          "old_utf8_hex": "5C4F62284329",
+          "new_utf8_hex": "5C4F62285C6D61746863616C7B437D29",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-010",
+      "stable_id": "MC-STK-ERR-0149",
+      "locus": "1248-1278",
+      "earliest_line": 1273,
+      "class": "index_binding_type_error",
+      "proof": "The induced morphism f_{jj'} has target U_{alpha(i)} x_U U_{alpha(i')}, although i and i' are not bound in this sentence. The map alpha has domain J; f_{jj'} is induced by f_j and f_{j'}, and the next two formulas use U_{alpha(j)} x_U U_{alpha(j')}. Independent disposition: canon/control/private/R4_SITES_010_012_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The preceding dummy i,i' do not rescue the target because alpha has domain J and f_j,f_j' force alpha(j),alpha(j').",
+      "operations": [
+        {
+          "old": "U_{\\alpha(i)} \\times_U U_{\\alpha(i')}",
+          "new": "U_{\\alpha(j)} \\times_U U_{\\alpha(j')}",
+          "expected_count": 1,
+          "source_line": "1273",
+          "byte_start_0based": 43579,
+          "byte_end_exclusive": 43616,
+          "old_byte_count": 37,
+          "new_byte_count": 37,
+          "old_utf8_hex": "555F7B5C616C7068612869297D205C74696D65735F5520555F7B5C616C706861286927297D",
+          "new_utf8_hex": "555F7B5C616C706861286A297D205C74696D65735F5520555F7B5C616C706861286A27297D",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-029",
+      "stable_id": "MC-STK-ERR-0150",
+      "locus": "1692-1703",
+      "earliest_line": 1702,
+      "class": "transposed_index_error",
+      "proof": "The proof defines sections s_{j,i} and s_{j,i'} but then invokes s_{i,j} and s_{i',j}. The latter index order was never defined and reverses the established covering-index/system-index convention. Independent disposition: canon/control/private/R4_SITES_029_033_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The intended expression may be recoverable from context, but no local declaration, coercion, or convention makes the printed source exact; the bound independent review found no defeating adverse construction.",
+      "operations": [
+        {
+          "old": "$s_{i, j}$ and $s_{i', j}$",
+          "new": "$s_{j, i}$ and $s_{j, i'}$",
+          "expected_count": 1,
+          "source_line": "1702",
+          "byte_start_0based": 57469,
+          "byte_end_exclusive": 57495,
+          "old_byte_count": 26,
+          "new_byte_count": 26,
+          "old_utf8_hex": "24735F7B692C206A7D2420616E642024735F7B69272C206A7D24",
+          "new_utf8_hex": "24735F7B6A2C20697D2420616E642024735F7B6A2C2069277D24",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-030",
+      "stable_id": "MC-STK-ERR-0151",
+      "locus": "1966-1971",
+      "earliest_line": 1970,
+      "class": "quantifier_preposition_error",
+      "proof": "The definition says 'for all coverings of {U_i -> U}'. The displayed family itself is the covering; the extra preposition makes the quantification ungrammatical. Independent disposition: canon/control/private/R4_SITES_029_033_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The intended reading remains recoverable and TeX may still compile, but recoverability does not supply the missing, duplicated, or malformed token; the bound independent review found the correction forced.",
+      "operations": [
+        {
+          "old": "of $\\{U_i \\rightarrow U\\}$",
+          "new": "$\\{U_i \\rightarrow U\\}$",
+          "expected_count": 1,
+          "source_line": "1970",
+          "byte_start_0based": 66314,
+          "byte_end_exclusive": 66340,
+          "old_byte_count": 26,
+          "new_byte_count": 23,
+          "old_utf8_hex": "6F6620245C7B555F69205C72696768746172726F7720555C7D24",
+          "new_utf8_hex": "245C7B555F69205C72696768746172726F7720555C7D24",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-031",
+      "stable_id": "MC-STK-ERR-0152",
+      "locus": "2005-2010",
+      "earliest_line": 2009,
+      "class": "colimit_map_direction_error",
+      "proof": "The proof says s and s' map to the same element of H^0 of the refined covering. Here s,s' are elements of F^+(U), and the construction shows instead that they are images of the same H^0 element; no map F^+(U)->H^0 is defined. Independent disposition: canon/control/private/R4_SITES_029_033_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "No canonical map from the colimit back to a chosen H^0 representative exists; the construction sends one common representative forward.",
+      "operations": [
+        {
+          "old": "$s, s'$ map to the same element of",
+          "new": "$s, s'$ are the images of the same element of",
+          "expected_count": 1,
+          "source_line": "2009",
+          "byte_start_0based": 67772,
+          "byte_end_exclusive": 67806,
+          "old_byte_count": 34,
+          "new_byte_count": 45,
+          "old_utf8_hex": "24732C20732724206D617020746F207468652073616D6520656C656D656E74206F66",
+          "new_utf8_hex": "24732C20732724206172652074686520696D61676573206F66207468652073616D6520656C656D656E74206F66",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-032",
+      "stable_id": "MC-STK-ERR-0153",
+      "locus": "2034-2038",
+      "earliest_line": 2037,
+      "class": "domain_type_error",
+      "proof": "The sheaf property is stated as bijectivity of a map F -> H^0(U,F). For a covering of U the domain is the set of sections F(U), not the presheaf F. Independent disposition: canon/control/private/R4_SITES_029_033_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The intended expression may be recoverable from context, but no local declaration, coercion, or convention makes the printed source exact; the bound independent review found no defeating adverse construction.",
+      "operations": [
+        {
+          "old": "$\\mathcal{F} \\to H^0",
+          "new": "$\\mathcal{F}(U) \\to H^0",
+          "expected_count": 1,
+          "source_line": "2037",
+          "byte_start_0based": 69097,
+          "byte_end_exclusive": 69117,
+          "old_byte_count": 20,
+          "new_byte_count": 23,
+          "old_utf8_hex": "245C6D61746863616C7B467D205C746F20485E30",
+          "new_utf8_hex": "245C6D61746863616C7B467D285529205C746F20485E30",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-033",
+      "stable_id": "MC-STK-ERR-0154",
+      "locus": "2146-2151",
+      "earliest_line": 2149,
+      "class": "functor_notation_error",
+      "proof": "The text calls F -> F^+ a functor commuting with finite limits. An arrow denotes one component/natural morphism, whereas the functor is the assignment F maps to F^+. Independent disposition: canon/control/private/R4_SITES_029_033_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The arrow may denote a natural transformation, but a transformation is not the endofunctor asserted to preserve finite limits.",
+      "operations": [
+        {
+          "old": "$\\mathcal{F} \\to \\mathcal{F}^+$",
+          "new": "$\\mathcal{F} \\mapsto \\mathcal{F}^+$",
+          "expected_count": 1,
+          "source_line": "2149",
+          "byte_start_0based": 72980,
+          "byte_end_exclusive": 73011,
+          "old_byte_count": 31,
+          "new_byte_count": 35,
+          "old_utf8_hex": "245C6D61746863616C7B467D205C746F205C6D61746863616C7B467D5E2B24",
+          "new_utf8_hex": "245C6D61746863616C7B467D205C6D617073746F205C6D61746863616C7B467D5E2B24",
+          "authority_occurrence_count": 4
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-011",
+      "stable_id": "MC-STK-ERR-0155",
+      "locus": "2166-2201",
+      "earliest_line": 2200,
+      "class": "ambient_category_identifier_error",
+      "proof": "The covering {U_{ijk} -> U_i x_U U_j} at line 2200 is said to be of site D. The lemma defines only site C; the cited lemma states the identical covering is of C at line 2168. Independent disposition: canon/control/private/R4_SITES_010_012_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "Other lemmas may use D, but D is unbound in this lemma and the cited covering clause explicitly lies in C.",
+      "operations": [
+        {
+          "old": "of $\\mathcal{D}$",
+          "new": "of $\\mathcal{C}$",
+          "expected_count": 1,
+          "source_line": "2200",
+          "byte_start_0based": 74988,
+          "byte_end_exclusive": 75004,
+          "old_byte_count": 16,
+          "new_byte_count": 16,
+          "old_utf8_hex": "6F6620245C6D61746863616C7B447D24",
+          "new_utf8_hex": "6F6620245C6D61746863616C7B437D24",
+          "authority_occurrence_count": 26
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-013",
+      "stable_id": "MC-STK-ERR-0156",
+      "locus": "2212-2223",
+      "earliest_line": 2221,
+      "class": "proof_circularity_error",
+      "proof": "The proof says the pullbacks of t_i and t_j agree because 'we have the agreement for t_i and t_j'. This is circular: agreement of the t-sections is the conclusion; the known agreement is for their images s_i and s_j, and bijectivity over U_{ijk} then lifts it uniquely. Independent disposition: canon/control/private/R4_SITES_013_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "No earlier agreement of the t-sections exists; that agreement is exactly the conclusion, while agreement of their images s_i,s_j is known.",
+      "operations": [
+        {
+          "old": "for $t_i$ and $t_j$",
+          "new": "for $s_i$ and $s_j$",
+          "expected_count": 1,
+          "source_line": "2221",
+          "byte_start_0based": 75996,
+          "byte_end_exclusive": 76015,
+          "old_byte_count": 19,
+          "new_byte_count": 19,
+          "old_utf8_hex": "666F722024745F692420616E642024745F6A24",
+          "new_utf8_hex": "666F722024735F692420616E642024735F6A24",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-001",
+      "stable_id": "MC-STK-ERR-0157",
+      "locus": "2580-2582",
+      "earliest_line": 2580,
+      "class": "sentence_fragment",
+      "proof": "The lemma begins with the sentence fragment 'In the situation of Lemma ... .'. The prepositional phrase is punctuated as a complete sentence and is disconnected from 'The functor ...'. Independent disposition: canon/control/private/R4_SITES_001_004_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "A source-wide habit of such fragments does not turn this running-prose prepositional phrase into a clause; it has no heading markup or predicate.",
+      "operations": [
+        {
+          "old": "\\ref{lemma-pushforward-sheaf}.\nThe functor",
+          "new": "\\ref{lemma-pushforward-sheaf}, the functor",
+          "expected_count": 1,
+          "source_line": "2580-2581",
+          "byte_start_0based": 88543,
+          "byte_end_exclusive": 88585,
+          "old_byte_count": 42,
+          "new_byte_count": 42,
+          "old_utf8_hex": "5C7265667B6C656D6D612D70757368666F72776172642D73686561667D2E0A5468652066756E63746F72",
+          "new_utf8_hex": "5C7265667B6C656D6D612D70757368666F72776172642D73686561667D2C207468652066756E63746F72",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-002",
+      "stable_id": "MC-STK-ERR-0158",
+      "locus": "2595-2597",
+      "earliest_line": 2595,
+      "class": "sentence_fragment",
+      "proof": "The lemma repeats the sentence fragment 'In the situation of Lemma ... .'. As at lines 2580-2582 the prepositional phrase is not a complete sentence. Independent disposition: canon/control/private/R4_SITES_001_004_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The repeated house-style fragment remains grammatically incomplete; no heading markup or predicate supplies an adverse reading.",
+      "operations": [
+        {
+          "old": "\\ref{lemma-pushforward-sheaf}.\nFor any presheaf",
+          "new": "\\ref{lemma-pushforward-sheaf}, for any presheaf",
+          "expected_count": 1,
+          "source_line": "2595-2596",
+          "byte_start_0based": 88917,
+          "byte_end_exclusive": 88964,
+          "old_byte_count": 47,
+          "new_byte_count": 47,
+          "old_utf8_hex": "5C7265667B6C656D6D612D70757368666F72776172642D73686561667D2E0A466F7220616E79207072657368656166",
+          "new_utf8_hex": "5C7265667B6C656D6D612D70757368666F72776172642D73686561667D2C20666F7220616E79207072657368656166",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-004",
+      "stable_id": "MC-STK-ERR-0159",
+      "locus": "2832-2834",
+      "earliest_line": 2833,
+      "class": "typography_spacing_error",
+      "proof": "There is a space before the comma in '\\\\mathcal{D}$ , and'. The punctuation spacing is inconsistent with the rest of the source. Independent disposition: canon/control/private/R4_SITES_001_004_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The whitespace can be visually subtle under TeX, but there is no grammatical reason for interword space before the comma.",
+      "operations": [
+        {
+          "old": "$\\mathcal{D}$ , and",
+          "new": "$\\mathcal{D}$, and",
+          "expected_count": 1,
+          "source_line": "2833",
+          "byte_start_0based": 98534,
+          "byte_end_exclusive": 98553,
+          "old_byte_count": 19,
+          "new_byte_count": 18,
+          "old_utf8_hex": "245C6D61746863616C7B447D24202C20616E64",
+          "new_utf8_hex": "245C6D61746863616C7B447D242C20616E64",
+          "authority_occurrence_count": 2
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-005",
+      "stable_id": "MC-STK-ERR-0160",
+      "locus": "3354-3360",
+      "earliest_line": 3357,
+      "class": "section_typing_grammar_error",
+      "proof": "The sentence says that id_U 'lifts to a section of s_c of h_{U_{iota(c)}}^#'. The next sentence defines s_c as the section; 'of s_c' makes s_c an object possessing a section and is grammatically and mathematically inconsistent. Independent disposition: canon/control/private/R4_SITES_005_009_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "Reading s_c as an object that has a section fails because s_c is introduced only in the next sentence as the lifted section itself.",
+      "operations": [
+        {
+          "old": "of $s_c$ of",
+          "new": "$s_c$ of",
+          "expected_count": 1,
+          "source_line": "3357",
+          "byte_start_0based": 117741,
+          "byte_end_exclusive": 117752,
+          "old_byte_count": 11,
+          "new_byte_count": 8,
+          "old_utf8_hex": "6F662024735F6324206F66",
+          "new_utf8_hex": "24735F6324206F66",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-006",
+      "stable_id": "MC-STK-ERR-0161",
+      "locus": "3405",
+      "earliest_line": 3405,
+      "class": "spelling_error",
+      "proof": "The sentence begins 'Finite copoducts of sheaves'. The standard categorical noun is 'coproducts'. Independent disposition: canon/control/private/R4_SITES_005_009_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The intended reading remains recoverable and TeX may still compile, but recoverability does not supply the missing, duplicated, or malformed token; the bound independent review found the correction forced.",
+      "operations": [
+        {
+          "old": "copoducts",
+          "new": "coproducts",
+          "expected_count": 1,
+          "source_line": "3405",
+          "byte_start_0based": 119304,
+          "byte_end_exclusive": 119313,
+          "old_byte_count": 9,
+          "new_byte_count": 10,
+          "old_utf8_hex": "636F706F6475637473",
+          "new_utf8_hex": "636F70726F6475637473",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-007",
+      "stable_id": "MC-STK-ERR-0162",
+      "locus": "3460-3474",
+      "earliest_line": 3472,
+      "class": "typed_transition_argument_error",
+      "proof": "After introducing sections s and s' and assuming phi_{ii_a}(s)=phi_{i'i_a}(s'), the conclusion twice uses phi_{i'i''}(s). The second transition morphism has source F_{i'} and must act on s'; using s is ill-typed unless i=i', which is not assumed. Independent disposition: canon/control/private/R4_SITES_005_009_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "No equality i=i', transition, or coercion places s in the domain of the second transition map.",
+      "operations": [
+        {
+          "old": "\\varphi_{i'i''}(s)",
+          "new": "\\varphi_{i'i''}(s')",
+          "expected_count": 1,
+          "source_line": "3472",
+          "byte_start_0based": 121717,
+          "byte_end_exclusive": 121735,
+          "old_byte_count": 18,
+          "new_byte_count": 19,
+          "old_utf8_hex": "5C7661727068695F7B69276927277D287329",
+          "new_utf8_hex": "5C7661727068695F7B69276927277D28732729",
+          "authority_occurrence_count": 2
+        },
+        {
+          "old": "\\varphi_{i'i''}(s)",
+          "new": "\\varphi_{i'i''}(s')",
+          "expected_count": 1,
+          "source_line": "3474",
+          "byte_start_0based": 121806,
+          "byte_end_exclusive": 121824,
+          "old_byte_count": 18,
+          "new_byte_count": 19,
+          "old_utf8_hex": "5C7661727068695F7B69276927277D287329",
+          "new_utf8_hex": "5C7661727068695F7B69276927277D28732729",
+          "authority_occurrence_count": 2
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-008",
+      "stable_id": "MC-STK-ERR-0163",
+      "locus": "3622-3628",
+      "earliest_line": 3626,
+      "class": "duplicated_auxiliary_grammar_error",
+      "proof": "The proof says 'This is done shown in the next paragraph'. The doubled auxiliary is ungrammatical. Independent disposition: canon/control/private/R4_SITES_005_009_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The intended reading remains recoverable and TeX may still compile, but recoverability does not supply the missing, duplicated, or malformed token; the bound independent review found the correction forced.",
+      "operations": [
+        {
+          "old": "This is done shown",
+          "new": "This is shown",
+          "expected_count": 1,
+          "source_line": "3626",
+          "byte_start_0based": 128380,
+          "byte_end_exclusive": 128398,
+          "old_byte_count": 18,
+          "new_byte_count": 13,
+          "old_utf8_hex": "5468697320697320646F6E652073686F776E",
+          "new_utf8_hex": "546869732069732073686F776E",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-009",
+      "stable_id": "MC-STK-ERR-0164",
+      "locus": "3738-3744",
+      "earliest_line": 3741,
+      "class": "preposition_typo",
+      "proof": "The proof says 'Since the cardinality if I x I'. The preposition is a typographical error. Independent disposition: canon/control/private/R4_SITES_005_009_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The intended reading remains recoverable and TeX may still compile, but recoverability does not supply the missing, duplicated, or malformed token; the bound independent review found the correction forced.",
+      "operations": [
+        {
+          "old": "cardinality if",
+          "new": "cardinality of",
+          "expected_count": 1,
+          "source_line": "3741",
+          "byte_start_0based": 133200,
+          "byte_end_exclusive": 133214,
+          "old_byte_count": 14,
+          "new_byte_count": 14,
+          "old_utf8_hex": "63617264696E616C697479206966",
+          "new_utf8_hex": "63617264696E616C697479206F66",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-014",
+      "stable_id": "MC-STK-ERR-0165",
+      "locus": "3883-3886",
+      "earliest_line": 3884,
+      "class": "duplicated_article_error",
+      "proof": "The proof says 'we can pick a a : j -> i'. The indefinite article is duplicated. Independent disposition: canon/control/private/R4_SITES_014_024_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The intended reading remains recoverable and TeX may still compile, but recoverability does not supply the missing, duplicated, or malformed token; the bound independent review found the correction forced.",
+      "operations": [
+        {
+          "old": "pick a $a : j \\to i$",
+          "new": "pick $a : j \\to i$",
+          "expected_count": 1,
+          "source_line": "3884",
+          "byte_start_0based": 139092,
+          "byte_end_exclusive": 139112,
+          "old_byte_count": 20,
+          "new_byte_count": 18,
+          "old_utf8_hex": "7069636B2061202461203A206A205C746F206924",
+          "new_utf8_hex": "7069636B202461203A206A205C746F206924",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-015",
+      "stable_id": "MC-STK-ERR-0166",
+      "locus": "3883-3889",
+      "earliest_line": 3885,
+      "class": "object_domain_type_error",
+      "proof": "The representative V_j is declared to lie in Ob(mathcal C). The notation V_j and the equation V=u_j(V_j), with u_j:mathcal C_j->mathcal C, require V_j to be an object of mathcal C_j. Independent disposition: canon/control/private/R4_SITES_014_024_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The intended expression may be recoverable from context, but no local declaration, coercion, or convention makes the printed source exact; the bound independent review found no defeating adverse construction.",
+      "operations": [
+        {
+          "old": "\\Ob(\\mathcal{C})",
+          "new": "\\Ob(\\mathcal{C}_j)",
+          "expected_count": 1,
+          "source_line": "3885",
+          "byte_start_0based": 139136,
+          "byte_end_exclusive": 139152,
+          "old_byte_count": 16,
+          "new_byte_count": 18,
+          "old_utf8_hex": "5C4F62285C6D61746863616C7B437D29",
+          "new_utf8_hex": "5C4F62285C6D61746863616C7B437D5F6A29",
+          "authority_occurrence_count": 78
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-016",
+      "stable_id": "MC-STK-ERR-0167",
+      "locus": "3888-3896",
+      "earliest_line": 3891,
+      "class": "bound_index_variance_error",
+      "proof": "The independence sentence refers to the choice of b:j->i although the representative was chosen with a:j->i; the next sentence again chooses b:j->i and then applies u_b to a morphism in C_j. In the displayed colimit b has type k->j, so u_b acts on C_j; an arrow b:j->i instead gives u_b:C_i->C_j and cannot act on alpha_j in C_j. Independent disposition: canon/control/private/R4_SITES_014_024_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "Renaming a dummy variable cannot repair the printed form without separately binding b:k->j for the restriction family.",
+      "operations": [
+        {
+          "old": "of $b : j \\to i$",
+          "new": "of $a : j \\to i$",
+          "expected_count": 1,
+          "source_line": "3891",
+          "byte_start_0based": 139346,
+          "byte_end_exclusive": 139362,
+          "old_byte_count": 16,
+          "new_byte_count": 16,
+          "old_utf8_hex": "6F66202462203A206A205C746F206924",
+          "new_utf8_hex": "6F66202461203A206A205C746F206924",
+          "authority_occurrence_count": 1
+        },
+        {
+          "old": "choose $b : j \\to i$",
+          "new": "choose $a : j \\to i$",
+          "expected_count": 1,
+          "source_line": "3893",
+          "byte_start_0based": 139511,
+          "byte_end_exclusive": 139531,
+          "old_byte_count": 20,
+          "new_byte_count": 20,
+          "old_utf8_hex": "63686F6F7365202462203A206A205C746F206924",
+          "new_utf8_hex": "63686F6F7365202461203A206A205C746F206924",
+          "authority_occurrence_count": 1
+        },
+        {
+          "old": "along the morphisms $u_b(\\alpha_j) : u_b(V_j) \\to u_b(V'_j)$. A check",
+          "new": "along the morphisms $u_b(\\alpha_j) : u_b(V_j) \\to u_b(V'_j)$ for\n$b : k \\to j$. A check",
+          "expected_count": 1,
+          "source_line": "3896",
+          "byte_start_0based": 139686,
+          "byte_end_exclusive": 139755,
+          "old_byte_count": 69,
+          "new_byte_count": 87,
+          "old_utf8_hex": "616C6F6E6720746865206D6F72706869736D732024755F62285C616C7068615F6A29203A20755F6228565F6A29205C746F20755F622856275F6A29242E204120636865636B",
+          "new_utf8_hex": "616C6F6E6720746865206D6F72706869736D732024755F62285C616C7068615F6A29203A20755F6228565F6A29205C746F20755F622856275F6A292420666F720A2462203A206B205C746F206A242E204120636865636B",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-017",
+      "stable_id": "MC-STK-ERR-0168",
+      "locus": "3898-3907",
+      "earliest_line": 3905,
+      "class": "ill_typed_composition_error",
+      "proof": "Both colimit terms use f_{b o a}^{-1} for a:j->i and b:k->j. The composition b o a is ill-typed; the Situation fixes c=a o b, and the defining formula at line 3888 correctly uses f_{a o b}^{-1}. Independent disposition: canon/control/private/R4_SITES_014_024_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The intended expression may be recoverable from context, but no local declaration, coercion, or convention makes the printed source exact; the bound independent review found no defeating adverse construction.",
+      "operations": [
+        {
+          "old": "f_{b \\circ a}^{-1}",
+          "new": "f_{a \\circ b}^{-1}",
+          "expected_count": 1,
+          "source_line": "3905",
+          "byte_start_0based": 140165,
+          "byte_end_exclusive": 140183,
+          "old_byte_count": 18,
+          "new_byte_count": 18,
+          "old_utf8_hex": "665F7B62205C6369726320617D5E7B2D317D",
+          "new_utf8_hex": "665F7B61205C6369726320627D5E7B2D317D",
+          "authority_occurrence_count": 2
+        },
+        {
+          "old": "f_{b \\circ a}^{-1}",
+          "new": "f_{a \\circ b}^{-1}",
+          "expected_count": 1,
+          "source_line": "3906",
+          "byte_start_0based": 140219,
+          "byte_end_exclusive": 140237,
+          "old_byte_count": 18,
+          "new_byte_count": 18,
+          "old_utf8_hex": "665F7B62205C6369726320617D5E7B2D317D",
+          "new_utf8_hex": "665F7B61205C6369726320627D5E7B2D317D",
+          "authority_occurrence_count": 2
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-018",
+      "stable_id": "MC-STK-ERR-0169",
+      "locus": "3933-3947",
+      "earliest_line": 3940,
+      "class": "identity_notation_error",
+      "proof": "The identity-indexed map is written varphi_id twice after being defined as varphi_{text{id},text{id},V_i}. Plain id is typeset as a product of variables and does not match the established identity index text{id} in the same paragraph. Independent disposition: canon/control/private/R4_SITES_014_024_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The intended identity component is inferable, but bare id is not the established text-form identity symbol and renders as math letters.",
+      "operations": [
+        {
+          "old": "\\varphi_{id}",
+          "new": "\\varphi_{\\text{id}}",
+          "expected_count": 1,
+          "source_line": "3940",
+          "byte_start_0based": 141793,
+          "byte_end_exclusive": 141805,
+          "old_byte_count": 12,
+          "new_byte_count": 19,
+          "old_utf8_hex": "5C7661727068695F7B69647D",
+          "new_utf8_hex": "5C7661727068695F7B5C746578747B69647D7D",
+          "authority_occurrence_count": 2
+        },
+        {
+          "old": "\\varphi_{id}",
+          "new": "\\varphi_{\\text{id}}",
+          "expected_count": 1,
+          "source_line": "3947",
+          "byte_start_0based": 142115,
+          "byte_end_exclusive": 142127,
+          "old_byte_count": 12,
+          "new_byte_count": 19,
+          "old_utf8_hex": "5C7661727068695F7B69647D",
+          "new_utf8_hex": "5C7661727068695F7B5C746578747B69647D7D",
+          "authority_occurrence_count": 2
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-019",
+      "stable_id": "MC-STK-ERR-0170",
+      "locus": "3954-3961",
+      "earliest_line": 3957,
+      "class": "subject_verb_agreement_error",
+      "proof": "The sentence has plural subject 'the functors f_a^{-1}' with singular verb 'commutes'. Standard subject-verb agreement requires 'commute'. Independent disposition: canon/control/private/R4_SITES_014_024_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The intended reading remains recoverable and TeX may still compile, but recoverability does not supply the missing, duplicated, or malformed token; the bound independent review found the correction forced.",
+      "operations": [
+        {
+          "old": "functors $f_a^{-1}$ commutes",
+          "new": "functors $f_a^{-1}$ commute",
+          "expected_count": 1,
+          "source_line": "3957",
+          "byte_start_0based": 142688,
+          "byte_end_exclusive": 142716,
+          "old_byte_count": 28,
+          "new_byte_count": 27,
+          "old_utf8_hex": "66756E63746F72732024665F615E7B2D317D2420636F6D6D75746573",
+          "new_utf8_hex": "66756E63746F72732024665F615E7B2D317D2420636F6D6D757465",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-020",
+      "stable_id": "MC-STK-ERR-0171",
+      "locus": "3967-3994",
+      "earliest_line": 3987,
+      "class": "sheaf_domain_error",
+      "proof": "The formal colimit at line 3987 evaluates F_i on u_a(X_i). For a:j->i, u_a(X_i) lies in C_j, so F_i on C_i cannot be evaluated there; the lemma statement at line 3980 correctly uses F_j(u_a(X_i)). Independent disposition: canon/control/private/R4_SITES_014_024_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The intended expression may be recoverable from context, but no local declaration, coercion, or convention makes the printed source exact; the bound independent review found no defeating adverse construction.",
+      "operations": [
+        {
+          "old": "\\mathcal{F}_i(u_a(X_i))",
+          "new": "\\mathcal{F}_j(u_a(X_i))",
+          "expected_count": 1,
+          "source_line": "3987",
+          "byte_start_0based": 143857,
+          "byte_end_exclusive": 143880,
+          "old_byte_count": 23,
+          "new_byte_count": 23,
+          "old_utf8_hex": "5C6D61746863616C7B467D5F6928755F6128585F692929",
+          "new_utf8_hex": "5C6D61746863616C7B467D5F6A28755F6128585F692929",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-021",
+      "stable_id": "MC-STK-ERR-0172",
+      "locus": "4011-4025",
+      "earliest_line": 4022,
+      "class": "composition_domain_error",
+      "proof": "The cocycle check takes a:j->i and b:k->i while declaring c=a o b. The composition a o b is defined only when b:k->j, as in the preceding colimit lemma and the governing Situation. Independent disposition: canon/control/private/R4_SITES_014_024_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The intended expression may be recoverable from context, but no local declaration, coercion, or convention makes the printed source exact; the bound independent review found no defeating adverse construction.",
+      "operations": [
+        {
+          "old": "$b : k \\to i$",
+          "new": "$b : k \\to j$",
+          "expected_count": 1,
+          "source_line": "4022",
+          "byte_start_0based": 144948,
+          "byte_end_exclusive": 144961,
+          "old_byte_count": 13,
+          "new_byte_count": 13,
+          "old_utf8_hex": "2462203A206B205C746F206924",
+          "new_utf8_hex": "2462203A206B205C746F206A24",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-022",
+      "stable_id": "MC-STK-ERR-0173",
+      "locus": "3967-4045",
+      "earliest_line": 4028,
+      "class": "undefined_index_category_error",
+      "proof": "Three colimits at lines 4028, 4035 and 4040 are indexed by i in I, but the only index category defined in the Situation is mathcal I and no I is introduced here. Earlier quantified indices use i in Ob(mathcal I); plain I is undefined in this construction. Independent disposition: canon/control/private/R4_SITES_014_024_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The intended expression may be recoverable from context, but no local declaration, coercion, or convention makes the printed source exact; the bound independent review found no defeating adverse construction.",
+      "operations": [
+        {
+          "old": "\\colim_{i \\in I}",
+          "new": "\\colim_{i \\in \\Ob(\\mathcal{I})}",
+          "expected_count": 1,
+          "source_line": "4028",
+          "byte_start_0based": 145186,
+          "byte_end_exclusive": 145202,
+          "old_byte_count": 16,
+          "new_byte_count": 31,
+          "old_utf8_hex": "5C636F6C696D5F7B69205C696E20497D",
+          "new_utf8_hex": "5C636F6C696D5F7B69205C696E205C4F62285C6D61746863616C7B497D297D",
+          "authority_occurrence_count": 3
+        },
+        {
+          "old": "\\colim_{i \\in I}",
+          "new": "\\colim_{i \\in \\Ob(\\mathcal{I})}",
+          "expected_count": 1,
+          "source_line": "4035",
+          "byte_start_0based": 145344,
+          "byte_end_exclusive": 145360,
+          "old_byte_count": 16,
+          "new_byte_count": 31,
+          "old_utf8_hex": "5C636F6C696D5F7B69205C696E20497D",
+          "new_utf8_hex": "5C636F6C696D5F7B69205C696E205C4F62285C6D61746863616C7B497D297D",
+          "authority_occurrence_count": 3
+        },
+        {
+          "old": "\\colim_{i \\in I}",
+          "new": "\\colim_{i \\in \\Ob(\\mathcal{I})}",
+          "expected_count": 1,
+          "source_line": "4040",
+          "byte_start_0based": 145537,
+          "byte_end_exclusive": 145553,
+          "old_byte_count": 16,
+          "new_byte_count": 31,
+          "old_utf8_hex": "5C636F6C696D5F7B69205C696E20497D",
+          "new_utf8_hex": "5C636F6C696D5F7B69205C696E205C4F62285C6D61746863616C7B497D297D",
+          "authority_occurrence_count": 3
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-023",
+      "stable_id": "MC-STK-ERR-0174",
+      "locus": "3997-4045",
+      "earliest_line": 4035,
+      "class": "omitted_functor_and_undefined_sheaf_error",
+      "proof": "The proof twice writes colim f_i^{-1}F_i although no sheaves F_i are defined in this lemma. The lemma statement is F=colim f_i^{-1}f_{i,*}F and the next line evaluates f_{j,*}F; the dropped direct-image factor changes the object and leaves F_i undefined. Independent disposition: canon/control/private/R4_SITES_014_024_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The intended expression may be recoverable from context, but no local declaration, coercion, or convention makes the printed source exact; the bound independent review found no defeating adverse construction.",
+      "operations": [
+        {
+          "old": "f_i^{-1}\\mathcal{F}_i",
+          "new": "f_i^{-1}f_{i, *}\\mathcal{F}",
+          "expected_count": 1,
+          "source_line": "4035",
+          "byte_start_0based": 145361,
+          "byte_end_exclusive": 145382,
+          "old_byte_count": 21,
+          "new_byte_count": 27,
+          "old_utf8_hex": "665F695E7B2D317D5C6D61746863616C7B467D5F69",
+          "new_utf8_hex": "665F695E7B2D317D665F7B692C202A7D5C6D61746863616C7B467D",
+          "authority_occurrence_count": 3
+        },
+        {
+          "old": "f_i^{-1}\\mathcal{F}_i",
+          "new": "f_i^{-1}f_{i, *}\\mathcal{F}",
+          "expected_count": 1,
+          "source_line": "4040",
+          "byte_start_0based": 145554,
+          "byte_end_exclusive": 145575,
+          "old_byte_count": 21,
+          "new_byte_count": 27,
+          "old_utf8_hex": "665F695E7B2D317D5C6D61746863616C7B467D5F69",
+          "new_utf8_hex": "665F695E7B2D317D665F7B692C202A7D5C6D61746863616C7B467D",
+          "authority_occurrence_count": 3
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-024",
+      "stable_id": "MC-STK-ERR-0175",
+      "locus": "4383-4391",
+      "earliest_line": 4388,
+      "class": "sentence_fragment",
+      "proof": "The lemma opens with the standalone fragment 'In the situation of Lemma ... .'. The prepositional phrase is not a complete sentence and is disconnected from the following quantifier. Independent disposition: canon/control/private/R4_SITES_014_024_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "Parallel source fragments establish repetition, not grammatical completeness; the quantifier is the missing main clause.",
+      "operations": [
+        {
+          "old": "\\ref{lemma-exact-cocontinuous}.\nFor any presheaf",
+          "new": "\\ref{lemma-exact-cocontinuous}, for any presheaf",
+          "expected_count": 1,
+          "source_line": "4388-4389",
+          "byte_start_0based": 157066,
+          "byte_end_exclusive": 157114,
+          "old_byte_count": 48,
+          "new_byte_count": 48,
+          "old_utf8_hex": "5C7265667B6C656D6D612D65786163742D636F636F6E74696E756F75737D2E0A466F7220616E79207072657368656166",
+          "new_utf8_hex": "5C7265667B6C656D6D612D65786163742D636F636F6E74696E756F75737D2C20666F7220616E79207072657368656166",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-025",
+      "stable_id": "MC-STK-ERR-0176",
+      "locus": "4477-4483",
+      "earliest_line": 4479,
+      "class": "ambient_object_target_error",
+      "proof": "The family {E_i -> v(u(U))} is called a covering of U in E. U is an object of C, while the displayed family has target v(u(U)), which is the object of E covered by the family. Independent disposition: canon/control/private/R4_SITES_025_028_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "Even if categories shared an underlying object, no identity U=v(u(U)) is declared and the displayed family has target v(u(U)).",
+      "operations": [
+        {
+          "old": "a covering of $U$ in $\\mathcal{E}$",
+          "new": "a covering of $v(u(U))$ in $\\mathcal{E}$",
+          "expected_count": 1,
+          "source_line": "4479",
+          "byte_start_0based": 160341,
+          "byte_end_exclusive": 160375,
+          "old_byte_count": 34,
+          "new_byte_count": 40,
+          "old_utf8_hex": "6120636F766572696E67206F662024552420696E20245C6D61746863616C7B457D24",
+          "new_utf8_hex": "6120636F766572696E67206F662024762875285529292420696E20245C6D61746863616C7B457D24",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-026",
+      "stable_id": "MC-STK-ERR-0177",
+      "locus": "4797-4804",
+      "earliest_line": 4801,
+      "class": "duplicate_subject_error",
+      "proof": "The question reads 'shouldn't any covering of U cap Z it come'. The pronoun 'it' is an extraneous duplicate subject. Independent disposition: canon/control/private/R4_SITES_025_028_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The intended reading remains recoverable and TeX may still compile, but recoverability does not supply the missing, duplicated, or malformed token; the bound independent review found the correction forced.",
+      "operations": [
+        {
+          "old": "it come",
+          "new": "come",
+          "expected_count": 1,
+          "source_line": "4801",
+          "byte_start_0based": 173818,
+          "byte_end_exclusive": 173825,
+          "old_byte_count": 7,
+          "new_byte_count": 4,
+          "old_utf8_hex": "697420636F6D65",
+          "new_utf8_hex": "636F6D65",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-027",
+      "stable_id": "MC-STK-ERR-0178",
+      "locus": "4933-4937",
+      "earliest_line": 4935,
+      "class": "unbound_index_error",
+      "proof": "The image covering {v(V_j) -> v(u(U))} is indexed by i in I. The source covering on the preceding line is indexed by j in J; i and I are unbound in this proof. Independent disposition: canon/control/private/R4_SITES_025_028_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The intended expression may be recoverable from context, but no local declaration, coercion, or convention makes the printed source exact; the bound independent review found no defeating adverse construction.",
+      "operations": [
+        {
+          "old": "_{i \\in I}",
+          "new": "_{j \\in J}",
+          "expected_count": 1,
+          "source_line": "4935",
+          "byte_start_0based": 178886,
+          "byte_end_exclusive": 178896,
+          "old_byte_count": 10,
+          "new_byte_count": 10,
+          "old_utf8_hex": "5F7B69205C696E20497D",
+          "new_utf8_hex": "5F7B6A205C696E204A7D",
+          "authority_occurrence_count": 67
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-028",
+      "stable_id": "MC-STK-ERR-0179",
+      "locus": "4953-4957",
+      "earliest_line": 4956,
+      "class": "terminology_spelling_error",
+      "proof": "The adjective is spelled 'cocontinous'. The defined term throughout the chapter is 'cocontinuous'. Independent disposition: canon/control/private/R4_SITES_025_028_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The intended reading remains recoverable and TeX may still compile, but recoverability does not supply the missing, duplicated, or malformed token; the bound independent review found the correction forced.",
+      "operations": [
+        {
+          "old": "cocontinous",
+          "new": "cocontinuous",
+          "expected_count": 1,
+          "source_line": "4956",
+          "byte_start_0based": 179898,
+          "byte_end_exclusive": 179909,
+          "old_byte_count": 11,
+          "new_byte_count": 12,
+          "old_utf8_hex": "636F636F6E74696E6F7573",
+          "new_utf8_hex": "636F636F6E74696E756F7573",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-035",
+      "stable_id": "MC-STK-ERR-0180",
+      "locus": "5358-5363",
+      "earliest_line": 5360,
+      "class": "missing_copula_error",
+      "proof": "The sentence reads 'where j_{U!}^{PSh} G the presheaf defined by the formula'. The copula is missing, leaving an ungrammatical and incomplete definition. Independent disposition: canon/control/private/R4_SITES_034_039_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The intended reading remains recoverable and TeX may still compile, but recoverability does not supply the missing, duplicated, or malformed token; the bound independent review found the correction forced.",
+      "operations": [
+        {
+          "old": "$j_{U!}^{PSh}\\mathcal{G}$ the presheaf",
+          "new": "$j_{U!}^{PSh}\\mathcal{G}$ is the presheaf",
+          "expected_count": 1,
+          "source_line": "5360",
+          "byte_start_0based": 193564,
+          "byte_end_exclusive": 193602,
+          "old_byte_count": 38,
+          "new_byte_count": 41,
+          "old_utf8_hex": "246A5F7B55217D5E7B5053687D5C6D61746863616C7B477D2420746865207072657368656166",
+          "new_utf8_hex": "246A5F7B55217D5E7B5053687D5C6D61746863616C7B477D2420697320746865207072657368656166",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-036",
+      "stable_id": "MC-STK-ERR-0181",
+      "locus": "5383-5387",
+      "earliest_line": 5385,
+      "class": "duplicated_copula_error",
+      "proof": "The sentence reads 'The value of the presheaf ... is on X is'. The first 'is' is misplaced/duplicated. Independent disposition: canon/control/private/R4_SITES_034_039_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The intended reading remains recoverable and TeX may still compile, but recoverability does not supply the missing, duplicated, or malformed token; the bound independent review found the correction forced.",
+      "operations": [
+        {
+          "old": "$j_{U!}^{PSh}\\mathcal{F}_\\varphi$ is",
+          "new": "$j_{U!}^{PSh}\\mathcal{F}_\\varphi$",
+          "expected_count": 1,
+          "source_line": "5385",
+          "byte_start_0based": 194646,
+          "byte_end_exclusive": 194682,
+          "old_byte_count": 36,
+          "new_byte_count": 33,
+          "old_utf8_hex": "246A5F7B55217D5E7B5053687D5C6D61746863616C7B467D5F5C76617270686924206973",
+          "new_utf8_hex": "246A5F7B55217D5E7B5053687D5C6D61746863616C7B467D5F5C76617270686924",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-037",
+      "stable_id": "MC-STK-ERR-0182",
+      "locus": "5468-5472;5553-5557",
+      "earliest_line": 5555,
+      "class": "reversed_localization_indices_error",
+      "proof": "The relocalization functor is defined as j_{V/U}: C/V -> C/U, but the later inverse-image description writes j^{-1}=j_{U/V}^{-1}. The latter reverses the established source/target indices and names a different, undefined relocalization in this context. Independent disposition: canon/control/private/R4_SITES_034_039_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "Bare j lets a reader guess the intended functor, but the asserted indexed equality names the opposite, wrong-direction localization.",
+      "operations": [
+        {
+          "old": "j_{U/V}^{-1}",
+          "new": "j_{V/U}^{-1}",
+          "expected_count": 1,
+          "source_line": "5555",
+          "byte_start_0based": 200054,
+          "byte_end_exclusive": 200066,
+          "old_byte_count": 12,
+          "new_byte_count": 12,
+          "old_utf8_hex": "6A5F7B552F567D5E7B2D317D",
+          "new_utf8_hex": "6A5F7B562F557D5E7B2D317D",
+          "authority_occurrence_count": 2
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-038",
+      "stable_id": "MC-STK-ERR-0183",
+      "locus": "5597-5602",
+      "earliest_line": 5600,
+      "class": "paired_adjunction_grammar_error",
+      "proof": "The sentence says two functors 'which are right, left adjoint' to j_U^{-1}. The paired order needs an explicit distributive marker; as written it is ungrammatical. Independent disposition: canon/control/private/R4_SITES_034_039_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "Experts can infer the pairwise assignment from order, but inference does not repair the under-coordinated English clause.",
+      "operations": [
+        {
+          "old": "which are right, left adjoint",
+          "new": "which are respectively right and left adjoint",
+          "expected_count": 1,
+          "source_line": "5600",
+          "byte_start_0based": 201292,
+          "byte_end_exclusive": 201321,
+          "old_byte_count": 29,
+          "new_byte_count": 45,
+          "old_utf8_hex": "7768696368206172652072696768742C206C6566742061646A6F696E74",
+          "new_utf8_hex": "77686963682061726520726573706563746976656C7920726967687420616E64206C6566742061646A6F696E74",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-043",
+      "stable_id": "MC-STK-ERR-0184",
+      "locus": "5979-5984",
+      "earliest_line": 5983,
+      "class": "missing_copula_error",
+      "proof": "The construction says 'where restriction along f ... given by'. The copula is missing from the definition. Independent disposition: canon/control/private/R4_SITES_043_047_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The intended reading remains recoverable and TeX may still compile, but recoverability does not supply the missing, duplicated, or malformed token; the bound independent review found the correction forced.",
+      "operations": [
+        {
+          "old": "along $f : V \\to U$ given by",
+          "new": "along $f : V \\to U$ is given by",
+          "expected_count": 1,
+          "source_line": "5983",
+          "byte_start_0based": 213811,
+          "byte_end_exclusive": 213839,
+          "old_byte_count": 28,
+          "new_byte_count": 31,
+          "old_utf8_hex": "616C6F6E67202466203A2056205C746F20552420676976656E206279",
+          "new_utf8_hex": "616C6F6E67202466203A2056205C746F20552420697320676976656E206279",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-044",
+      "stable_id": "MC-STK-ERR-0185",
+      "locus": "6069-6074",
+      "earliest_line": 6072,
+      "class": "comma_splice_error",
+      "proof": "The declaration 'Let (s_i,varphi_i)...' ends with a comma before a new sentence beginning 'This means'. The comma creates a sentence-boundary punctuation error. Independent disposition: canon/control/private/R4_SITES_043_047_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The close relation between the two clauses permits a semicolon, but not the printed comma before a capitalized independent sentence.",
+      "operations": [
+        {
+          "old": "\\prod_i \\mathcal{H}(V_i)$,",
+          "new": "\\prod_i \\mathcal{H}(V_i)$.",
+          "expected_count": 1,
+          "source_line": "6072",
+          "byte_start_0based": 217329,
+          "byte_end_exclusive": 217355,
+          "old_byte_count": 26,
+          "new_byte_count": 26,
+          "old_utf8_hex": "5C70726F645F69205C6D61746863616C7B487D28565F6929242C",
+          "new_utf8_hex": "5C70726F645F69205C6D61746863616C7B487D28565F6929242E",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-040",
+      "stable_id": "MC-STK-ERR-0186",
+      "locus": "6072-6083",
+      "earliest_line": 6077,
+      "class": "composition_order_type_error",
+      "proof": "The restrictions to V_i times_V V_j use pr_1 composed with varphi_i and pr_2 composed with varphi_j, and the compatibility equality repeats those orders. Here pr_1 has codomain V_i and varphi_i has domain V_i, so only varphi_i composed with pr_1 is typed; similarly for j. The displayed source compositions are undefined under the stated convention. Independent disposition: canon/control/private/R4_SITES_040_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "A reversed composition convention is ruled out by the same file's typed p circ psi = varphi example.",
+      "operations": [
+        {
+          "old": "\\text{pr}_1 \\circ \\varphi_i",
+          "new": "\\varphi_i \\circ \\text{pr}_1",
+          "expected_count": 1,
+          "source_line": "6077",
+          "byte_start_0based": 217591,
+          "byte_end_exclusive": 217618,
+          "old_byte_count": 27,
+          "new_byte_count": 27,
+          "old_utf8_hex": "5C746578747B70727D5F31205C63697263205C7661727068695F69",
+          "new_utf8_hex": "5C7661727068695F69205C63697263205C746578747B70727D5F31",
+          "authority_occurrence_count": 2
+        },
+        {
+          "old": "\\text{pr}_2 \\circ \\varphi_j",
+          "new": "\\varphi_j \\circ \\text{pr}_2",
+          "expected_count": 1,
+          "source_line": "6080",
+          "byte_start_0based": 217745,
+          "byte_end_exclusive": 217772,
+          "old_byte_count": 27,
+          "new_byte_count": 27,
+          "old_utf8_hex": "5C746578747B70727D5F32205C63697263205C7661727068695F6A",
+          "new_utf8_hex": "5C7661727068695F6A205C63697263205C746578747B70727D5F32",
+          "authority_occurrence_count": 2
+        },
+        {
+          "old": "\\text{pr}_1 \\circ \\varphi_i",
+          "new": "\\varphi_i \\circ \\text{pr}_1",
+          "expected_count": 1,
+          "source_line": "6083",
+          "byte_start_0based": 217883,
+          "byte_end_exclusive": 217910,
+          "old_byte_count": 27,
+          "new_byte_count": 27,
+          "old_utf8_hex": "5C746578747B70727D5F31205C63697263205C7661727068695F69",
+          "new_utf8_hex": "5C7661727068695F69205C63697263205C746578747B70727D5F31",
+          "authority_occurrence_count": 2
+        },
+        {
+          "old": "\\text{pr}_2 \\circ \\varphi_j",
+          "new": "\\varphi_j \\circ \\text{pr}_2",
+          "expected_count": 1,
+          "source_line": "6083",
+          "byte_start_0based": 217913,
+          "byte_end_exclusive": 217940,
+          "old_byte_count": 27,
+          "new_byte_count": 27,
+          "old_utf8_hex": "5C746578747B70727D5F32205C63697263205C7661727068695F6A",
+          "new_utf8_hex": "5C7661727068695F6A205C63697263205C746578747B70727D5F32",
+          "authority_occurrence_count": 2
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-045",
+      "stable_id": "MC-STK-ERR-0187",
+      "locus": "6168-6174",
+      "earliest_line": 6172,
+      "class": "malformed_nominalization_error",
+      "proof": "The proof uses the phrase 'equivalent to the fully faithfulness'. The standard noun phrase is 'full faithfulness'. Independent disposition: canon/control/private/R4_SITES_043_047_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The intended reading remains recoverable and TeX may still compile, but recoverability does not supply the missing, duplicated, or malformed token; the bound independent review found the correction forced.",
+      "operations": [
+        {
+          "old": "the fully faithfulness",
+          "new": "the full faithfulness",
+          "expected_count": 1,
+          "source_line": "6172",
+          "byte_start_0based": 221197,
+          "byte_end_exclusive": 221219,
+          "old_byte_count": 22,
+          "new_byte_count": 21,
+          "old_utf8_hex": "7468652066756C6C7920666169746866756C6E657373",
+          "new_utf8_hex": "7468652066756C6C20666169746866756C6E657373",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-046",
+      "stable_id": "MC-STK-ERR-0188",
+      "locus": "6536-6545",
+      "earliest_line": 6543,
+      "class": "undefined_object_name_error",
+      "proof": "The functor u':C/U -> D/V sends U'/U to V'/V, but V' is not defined. The commutative square requires the underlying object to be u(U'), and the proof at lines 6562-6575 constructs exactly u(U')/V. Independent disposition: canon/control/private/R4_SITES_043_047_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The intended expression may be recoverable from context, but no local declaration, coercion, or convention makes the printed source exact; the bound independent review found no defeating adverse construction.",
+      "operations": [
+        {
+          "old": "$U'/U \\mapsto V'/V$",
+          "new": "$U'/U \\mapsto u(U')/V$",
+          "expected_count": 1,
+          "source_line": "6543",
+          "byte_start_0based": 232914,
+          "byte_end_exclusive": 232933,
+          "old_byte_count": 19,
+          "new_byte_count": 22,
+          "old_utf8_hex": "2455272F55205C6D617073746F2056272F5624",
+          "new_utf8_hex": "2455272F55205C6D617073746F2075285527292F5624",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-047",
+      "stable_id": "MC-STK-ERR-0189",
+      "locus": "6562-6571",
+      "earliest_line": 6569,
+      "class": "wrong_base_object_error",
+      "proof": "The morphisms phi_i:u(U_i')->V_{alpha(i)} are called morphisms over U'. Both objects lie in D and their displayed structure maps target u(U'); U' lies in C and cannot be their base in D. Independent disposition: canon/control/private/R4_SITES_043_047_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The intended expression may be recoverable from context, but no local declaration, coercion, or convention makes the printed source exact; the bound independent review found no defeating adverse construction.",
+      "operations": [
+        {
+          "old": "over $U'$",
+          "new": "over $u(U')$",
+          "expected_count": 1,
+          "source_line": "6569",
+          "byte_start_0based": 233832,
+          "byte_end_exclusive": 233841,
+          "old_byte_count": 9,
+          "new_byte_count": 12,
+          "old_utf8_hex": "6F7665722024552724",
+          "new_utf8_hex": "6F7665722024752855272924",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-061",
+      "stable_id": "MC-STK-ERR-0190",
+      "locus": "6768-6772",
+      "earliest_line": 6771,
+      "class": "citation_expose_error",
+      "proof": "The citation attributes SGA 4 Proposition 4.9.4 to Expose III. The native French SGA 4 Expose IV facsimile places Proposition 4.9.4 in Expose IV (Topos), page 356. Independent disposition: canon/control/private/R4_SITES_057_064_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "A loose citation reading is defeated by the primary SGA 4 text and a later same-file citation, both locating Proposition 4.9.4 in Expose IV.",
+      "operations": [
+        {
+          "old": "Expos\\'e III",
+          "new": "Expos\\'e IV",
+          "expected_count": 1,
+          "source_line": "6771",
+          "byte_start_0based": 240097,
+          "byte_end_exclusive": 240109,
+          "old_byte_count": 12,
+          "new_byte_count": 11,
+          "old_utf8_hex": "4578706F735C276520494949",
+          "new_utf8_hex": "4578706F735C2765204956",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-057",
+      "stable_id": "MC-STK-ERR-0191",
+      "locus": "6818-6867",
+      "earliest_line": 6866,
+      "class": "distinguished_component_index_error",
+      "proof": "The constructed limit element is said to satisfy s_{(U,psi)}=s. The category's final object and the prescribed distinguished component are explicitly (U,id) at lines 6821-6825; psi is not the distinguished arrow here. Independent disposition: canon/control/private/R4_SITES_057_064_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "Generic psi does not index the distinguished final object; even U with a nonidentity endomorphism is a different component.",
+      "operations": [
+        {
+          "old": "$s_{(U, \\psi)} = s$",
+          "new": "$s_{(U, \\text{id})} = s$",
+          "expected_count": 1,
+          "source_line": "6866",
+          "byte_start_0based": 243856,
+          "byte_end_exclusive": 243875,
+          "old_byte_count": 19,
+          "new_byte_count": 24,
+          "old_utf8_hex": "24735F7B28552C205C707369297D203D207324",
+          "new_utf8_hex": "24735F7B28552C205C746578747B69647D297D203D207324",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-064",
+      "stable_id": "MC-STK-ERR-0192",
+      "locus": "6953-6968",
+      "earliest_line": 6966,
+      "class": "ill_typed_composition_error",
+      "proof": "The final equality says u(c_{ik})=c composed with u(f_{ik}). Here f_{ik}:U''_{ik}->U''_i while c has domain u(U''); these maps are not composable. Since c_{ik}=c_i composed with f_{ik} and u(c_i)=c composed with u(f_i), the covering composite f_i composed with f_{ik} is required. Independent disposition: canon/control/private/R4_SITES_057_064_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The intended expression may be recoverable from context, but no local declaration, coercion, or convention makes the printed source exact; the bound independent review found no defeating adverse construction.",
+      "operations": [
+        {
+          "old": "u(f_{ik})",
+          "new": "u(f_i \\circ f_{ik})",
+          "expected_count": 1,
+          "source_line": "6966",
+          "byte_start_0based": 247902,
+          "byte_end_exclusive": 247911,
+          "old_byte_count": 9,
+          "new_byte_count": 19,
+          "old_utf8_hex": "7528665F7B696B7D29",
+          "new_utf8_hex": "7528665F69205C6369726320665F7B696B7D29",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-065",
+      "stable_id": "MC-STK-ERR-0193",
+      "locus": "7011-7016",
+      "earliest_line": 7013,
+      "class": "extraneous_verb_grammar_error",
+      "proof": "The warning says statements 'may look be a bit confusing'. The verb 'be' is extraneous after 'look'. Independent disposition: canon/control/private/R4_SITES_065_072_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The intended reading remains recoverable and TeX may still compile, but recoverability does not supply the missing, duplicated, or malformed token; the bound independent review found the correction forced.",
+      "operations": [
+        {
+          "old": "may look be a bit confusing",
+          "new": "may look a bit confusing",
+          "expected_count": 1,
+          "source_line": "7013",
+          "byte_start_0based": 249835,
+          "byte_end_exclusive": 249862,
+          "old_byte_count": 27,
+          "new_byte_count": 24,
+          "old_utf8_hex": "6D6179206C6F6F6B20626520612062697420636F6E667573696E67",
+          "new_utf8_hex": "6D6179206C6F6F6B20612062697420636F6E667573696E67",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-062",
+      "stable_id": "MC-STK-ERR-0194",
+      "locus": "7115-7126",
+      "earliest_line": 7119,
+      "class": "inductive_sequence_index_error",
+      "proof": "The displayed increasing sequence repeats C_2: C_1 subset C_2 subset C_2 subset ... The inductive definition immediately below defines C_{n+1}; the third term of the illustrative sequence is C_3. Independent disposition: canon/control/private/R4_SITES_057_064_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The repeated C_2 can denote a redundant inclusion only by defeating the displayed enumeration and the immediately stated recurrence.",
+      "operations": [
+        {
+          "old": "\\mathcal{C}_2 \\subset \\mathcal{C}_2",
+          "new": "\\mathcal{C}_2 \\subset \\mathcal{C}_3",
+          "expected_count": 1,
+          "source_line": "7119",
+          "byte_start_0based": 253651,
+          "byte_end_exclusive": 253686,
+          "old_byte_count": 35,
+          "new_byte_count": 35,
+          "old_utf8_hex": "5C6D61746863616C7B437D5F32205C737562736574205C6D61746863616C7B437D5F32",
+          "new_utf8_hex": "5C6D61746863616C7B437D5F32205C737562736574205C6D61746863616C7B437D5F33",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-066",
+      "stable_id": "MC-STK-ERR-0195",
+      "locus": "7209-7221",
+      "earliest_line": 7213,
+      "class": "sheaf_category_operator_notation_error",
+      "proof": "Four Hom subscripts use Sh(...) without the established control sequence. The sheaf-category notation throughout is the macro Sh, and the unescaped letters render as a product of variables rather than the category symbol. Independent disposition: canon/control/private/R4_SITES_065_072_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "Readers can infer Sh, but bare math letters are not TeX-equivalent to the defined sheaf-category operator and differ from 531 local macro uses.",
+      "operations": [
+        {
+          "old": "\\Mor_{Sh",
+          "new": "\\Mor_{\\Sh",
+          "expected_count": 1,
+          "source_line": "7213",
+          "byte_start_0based": 257246,
+          "byte_end_exclusive": 257254,
+          "old_byte_count": 8,
+          "new_byte_count": 9,
+          "old_utf8_hex": "5C4D6F725F7B5368",
+          "new_utf8_hex": "5C4D6F725F7B5C5368",
+          "authority_occurrence_count": 4
+        },
+        {
+          "old": "\\Mor_{Sh",
+          "new": "\\Mor_{\\Sh",
+          "expected_count": 1,
+          "source_line": "7215",
+          "byte_start_0based": 257315,
+          "byte_end_exclusive": 257323,
+          "old_byte_count": 8,
+          "new_byte_count": 9,
+          "old_utf8_hex": "5C4D6F725F7B5368",
+          "new_utf8_hex": "5C4D6F725F7B5C5368",
+          "authority_occurrence_count": 4
+        },
+        {
+          "old": "\\Mor_{Sh",
+          "new": "\\Mor_{\\Sh",
+          "expected_count": 1,
+          "source_line": "7217",
+          "byte_start_0based": 257381,
+          "byte_end_exclusive": 257389,
+          "old_byte_count": 8,
+          "new_byte_count": 9,
+          "old_utf8_hex": "5C4D6F725F7B5368",
+          "new_utf8_hex": "5C4D6F725F7B5C5368",
+          "authority_occurrence_count": 4
+        },
+        {
+          "old": "\\Mor_{Sh",
+          "new": "\\Mor_{\\Sh",
+          "expected_count": 1,
+          "source_line": "7219",
+          "byte_start_0based": 257437,
+          "byte_end_exclusive": 257445,
+          "old_byte_count": 8,
+          "new_byte_count": 9,
+          "old_utf8_hex": "5C4D6F725F7B5368",
+          "new_utf8_hex": "5C4D6F725F7B5C5368",
+          "authority_occurrence_count": 4
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-067",
+      "stable_id": "MC-STK-ERR-0196",
+      "locus": "7240-7247",
+      "earliest_line": 7244,
+      "class": "number_agreement_error",
+      "proof": "The prose says 'Lemmas' but cites a single lemma-topos-good-site reference. Only one lemma is invoked at this step. Independent disposition: canon/control/private/R4_SITES_065_072_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The intended reading remains recoverable and TeX may still compile, but recoverability does not supply the missing, duplicated, or malformed token; the bound independent review found the correction forced.",
+      "operations": [
+        {
+          "old": "Lemmas",
+          "new": "Lemma",
+          "expected_count": 1,
+          "source_line": "7244",
+          "byte_start_0based": 258514,
+          "byte_end_exclusive": 258520,
+          "old_byte_count": 6,
+          "new_byte_count": 5,
+          "old_utf8_hex": "4C656D6D6173",
+          "new_utf8_hex": "4C656D6D61",
+          "authority_occurrence_count": 20
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-068",
+      "stable_id": "MC-STK-ERR-0197",
+      "locus": "7376-7381",
+      "earliest_line": 7379,
+      "class": "missing_relative_marker_error",
+      "proof": "The sentence says the functor 'is the one associates to' an arrow a sheaf. The relative clause lacks 'that'. Independent disposition: canon/control/private/R4_SITES_065_072_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The intended reading remains recoverable and TeX may still compile, but recoverability does not supply the missing, duplicated, or malformed token; the bound independent review found the correction forced.",
+      "operations": [
+        {
+          "old": "is the one associates to",
+          "new": "is the one that associates to",
+          "expected_count": 1,
+          "source_line": "7379",
+          "byte_start_0based": 262685,
+          "byte_end_exclusive": 262709,
+          "old_byte_count": 24,
+          "new_byte_count": 29,
+          "old_utf8_hex": "697320746865206F6E65206173736F63696174657320746F",
+          "new_utf8_hex": "697320746865206F6E652074686174206173736F63696174657320746F",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-058",
+      "stable_id": "MC-STK-ERR-0198",
+      "locus": "7652-7673",
+      "earliest_line": 7658,
+      "class": "unbound_localization_object_error",
+      "proof": "After defining F=h_{u(V)}, the localization diagram suddenly uses C/U and j_U although U is not defined in the lemma. The intended localization object is u(V); the subsequent comparison also identifies j_F with the representable localization at that object. Independent disposition: canon/control/private/R4_SITES_057_064_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "A variable local to the cited lemma is not bound in this proof; the uniquely intended object is u(V).",
+      "operations": [
+        {
+          "old": "Lemma \\ref{lemma-pullback-representable-sheaf}.\nBy",
+          "new": "Lemma \\ref{lemma-pullback-representable-sheaf}.\nSet $U = u(V)$.\nBy",
+          "expected_count": 1,
+          "source_line": "7658-7659",
+          "byte_start_0based": 272398,
+          "byte_end_exclusive": 272448,
+          "old_byte_count": 50,
+          "new_byte_count": 66,
+          "old_utf8_hex": "4C656D6D61205C7265667B6C656D6D612D70756C6C6261636B2D726570726573656E7461626C652D73686561667D2E0A4279",
+          "new_utf8_hex": "4C656D6D61205C7265667B6C656D6D612D70756C6C6261636B2D726570726573656E7461626C652D73686561667D2E0A536574202455203D2075285629242E0A4279",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-074",
+      "stable_id": "MC-STK-ERR-0199",
+      "locus": "7693-7702",
+      "earliest_line": 7699,
+      "class": "number_agreement_error",
+      "proof": "The proof contrasts a singular choice of morphism of sites with 'the morphisms of sites given to us in the lemma'. The lemma supplies one morphism, and the next sentence compares two choices using 'both cases'. Independent disposition: canon/control/private/R4_SITES_073_075_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The intended reading remains recoverable and TeX may still compile, but recoverability does not supply the missing, duplicated, or malformed token; the bound independent review found the correction forced.",
+      "operations": [
+        {
+          "old": "morphisms of sites given to us",
+          "new": "morphism of sites given to us",
+          "expected_count": 1,
+          "source_line": "7699",
+          "byte_start_0based": 273775,
+          "byte_end_exclusive": 273805,
+          "old_byte_count": 30,
+          "new_byte_count": 29,
+          "old_utf8_hex": "6D6F72706869736D73206F6620736974657320676976656E20746F207573",
+          "new_utf8_hex": "6D6F72706869736D206F6620736974657320676976656E20746F207573",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-059",
+      "stable_id": "MC-STK-ERR-0200",
+      "locus": "7706-7727",
+      "earliest_line": 7725,
+      "class": "slice_codomain_type_error",
+      "proof": "The localized morphism f' is typed with codomain Sh(D)/F. F is a sheaf on C, not D; the preceding square and lemma-localize-morphism-topoi give codomain Sh(D)/G. Independent disposition: canon/control/private/R4_SITES_057_064_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The intended expression may be recoverable from context, but no local declaration, coercion, or convention makes the printed source exact; the bound independent review found no defeating adverse construction.",
+      "operations": [
+        {
+          "old": "\\Sh(\\mathcal{D})/\\mathcal{F}",
+          "new": "\\Sh(\\mathcal{D})/\\mathcal{G}",
+          "expected_count": 1,
+          "source_line": "7725",
+          "byte_start_0based": 274604,
+          "byte_end_exclusive": 274632,
+          "old_byte_count": 28,
+          "new_byte_count": 28,
+          "old_utf8_hex": "5C5368285C6D61746863616C7B447D292F5C6D61746863616C7B467D",
+          "new_utf8_hex": "5C5368285C6D61746863616C7B447D292F5C6D61746863616C7B477D",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-060",
+      "stable_id": "MC-STK-ERR-0201",
+      "locus": "7788-7795",
+      "earliest_line": 7793,
+      "class": "false_representable_equality_error",
+      "proof": "For an arbitrary morphism c:U->u(V), the source states h_U^#=f^{-1}h_V^#. In general f^{-1}h_V^#=h_{u(V)}^#, while h_U^# maps to it via c and need not equal it; the next line correctly defines that induced map. Independent disposition: canon/control/private/R4_SITES_057_064_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "An arbitrary map c induces a map of representables, not an equality; the arrow-category counterexample in the independent review defeats identification.",
+      "operations": [
+        {
+          "old": " = f^{-1}h_V^\\#",
+          "new": "",
+          "expected_count": 1,
+          "source_line": "7793",
+          "byte_start_0based": 276711,
+          "byte_end_exclusive": 276726,
+          "old_byte_count": 15,
+          "new_byte_count": 0,
+          "old_utf8_hex": "203D20665E7B2D317D685F565E5C23",
+          "new_utf8_hex": "",
+          "authority_occurrence_count": 2
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-069",
+      "stable_id": "MC-STK-ERR-0202",
+      "locus": "7926-7936",
+      "earliest_line": 7930,
+      "class": "colimit_element_noun_error",
+      "proof": "Two representatives of an element of (h_U)_p are said to determine the same object. The proof is comparing elements of the colimit, as stated at lines 7927 and 7935. Independent disposition: canon/control/private/R4_SITES_065_072_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "Object can be generic prose, but here it conflicts with the technical indexing-category sense while the colimit definition explicitly says element.",
+      "operations": [
+        {
+          "old": "determine the same object",
+          "new": "determine the same element",
+          "expected_count": 1,
+          "source_line": "7930",
+          "byte_start_0based": 281344,
+          "byte_end_exclusive": 281369,
+          "old_byte_count": 25,
+          "new_byte_count": 26,
+          "old_utf8_hex": "64657465726D696E65207468652073616D65206F626A656374",
+          "new_utf8_hex": "64657465726D696E65207468652073616D6520656C656D656E74",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-070",
+      "stable_id": "MC-STK-ERR-0203",
+      "locus": "7926-7936",
+      "earliest_line": 7933,
+      "class": "equivalence_relation_terminology_error",
+      "proof": "The equivalence relation is said to require 'chains of identities like this'. The preceding relation is induced by morphisms and identifications, not by identity maps. Independent disposition: canon/control/private/R4_SITES_065_072_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "Identity can loosely mean equality, but the generating relation uses arbitrary morphisms; identifications is the exact equivalence-closure term.",
+      "operations": [
+        {
+          "old": "chains of identities like this",
+          "new": "chains of identifications like this",
+          "expected_count": 1,
+          "source_line": "7933",
+          "byte_start_0based": 281500,
+          "byte_end_exclusive": 281530,
+          "old_byte_count": 30,
+          "new_byte_count": 35,
+          "old_utf8_hex": "636861696E73206F66206964656E746974696573206C696B652074686973",
+          "new_utf8_hex": "636861696E73206F66206964656E74696669636174696F6E73206C696B652074686973",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-071",
+      "stable_id": "MC-STK-ERR-0204",
+      "locus": "7957-7962",
+      "earliest_line": 7959,
+      "class": "sentence_fragment",
+      "proof": "The lemma statement ends 'For any functor ... Sets.' and starts a new fragment 'The functor...'. The introductory phrase must be joined to its predicate. Independent disposition: canon/control/private/R4_SITES_065_072_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The phrase is not marked as a heading; the following sentence supplies precisely its missing predicate.",
+      "operations": [
+        {
+          "old": "\\textit{Sets}$.\nThe functor",
+          "new": "\\textit{Sets}$, the functor",
+          "expected_count": 1,
+          "source_line": "7959-7960",
+          "byte_start_0based": 282490,
+          "byte_end_exclusive": 282517,
+          "old_byte_count": 27,
+          "new_byte_count": 27,
+          "old_utf8_hex": "5C7465787469747B536574737D242E0A5468652066756E63746F72",
+          "new_utf8_hex": "5C7465787469747B536574737D242C207468652066756E63746F72",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-072",
+      "stable_id": "MC-STK-ERR-0205",
+      "locus": "8022-8028",
+      "earliest_line": 8025,
+      "class": "missing_predicative_link_error",
+      "proof": "The definition reads 'we define p_*E=u^sE the sheaf described'. The predicative construction lacks 'to be'. Independent disposition: canon/control/private/R4_SITES_065_072_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "A comma could suggest an appositive, but its attachment to an equality is ambiguous; to be is the smallest unambiguous defining link.",
+      "operations": [
+        {
+          "old": "$p_*E = u^sE$ the sheaf",
+          "new": "$p_*E = u^sE$ to be the sheaf",
+          "expected_count": 1,
+          "source_line": "8025",
+          "byte_start_0based": 284965,
+          "byte_end_exclusive": 284988,
+          "old_byte_count": 23,
+          "new_byte_count": 29,
+          "old_utf8_hex": "24705F2A45203D20755E73452420746865207368656166",
+          "new_utf8_hex": "24705F2A45203D20755E73452420746F20626520746865207368656166",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-075",
+      "stable_id": "MC-STK-ERR-0206",
+      "locus": "8042-8048",
+      "earliest_line": 8047,
+      "class": "subject_verb_agreement_error",
+      "proof": "The singular subject 'the pair of functors' takes the plural verb 'define'. The grammatical subject is 'pair'. Independent disposition: canon/control/private/R4_SITES_073_075_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The intended reading remains recoverable and TeX may still compile, but recoverability does not supply the missing, duplicated, or malformed token; the bound independent review found the correction forced.",
+      "operations": [
+        {
+          "old": "above define a morphism",
+          "new": "above defines a morphism",
+          "expected_count": 1,
+          "source_line": "8047",
+          "byte_start_0based": 285590,
+          "byte_end_exclusive": 285613,
+          "old_byte_count": 23,
+          "new_byte_count": 24,
+          "old_utf8_hex": "61626F766520646566696E652061206D6F72706869736D",
+          "new_utf8_hex": "61626F766520646566696E65732061206D6F72706869736D",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-073",
+      "stable_id": "MC-STK-ERR-0207",
+      "locus": "8198-8223",
+      "earliest_line": 8204,
+      "class": "false_coequalizer_preservation_claim",
+      "proof": "The lemma claims p_* commutes with arbitrary coequalizers and says this follows from p_*E(U)=Map(u(U),E). For a fixed set S, Map(S,-) is a right adjoint and need not preserve coequalizers. With a coarsest-topology category having Hom(0,1) of size two, evaluation at 0 is a valid point and p_* at 1 is (-)^2; the coequalizer of the two maps {*}=>{0,1} becomes a singleton before squaring but has three classes after applying (-)^2. Independent disposition: canon/control/private/R4_SITES_073_075_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "Right-adjoint status proves limit preservation, not arbitrary coequalizer preservation; the independently replayed two-arrow chaotic-site example yields three coequalizer classes after p_* versus one before it.",
+      "operations": [
+        {
+          "old": "it commutes with coequalizers, ",
+          "new": "",
+          "expected_count": 1,
+          "source_line": "8204",
+          "byte_start_0based": 291333,
+          "byte_end_exclusive": 291364,
+          "old_byte_count": 31,
+          "new_byte_count": 0,
+          "old_utf8_hex": "697420636F6D6D75746573207769746820636F657175616C697A6572732C20",
+          "new_utf8_hex": "",
+          "authority_occurrence_count": 1
+        },
+        {
+          "old": "transforms\nsurjections into surjections and coequalizers into coequalizers.",
+          "new": "transforms\nsurjections into surjections.",
+          "expected_count": 1,
+          "source_line": "8221-8222",
+          "byte_start_0based": 292114,
+          "byte_end_exclusive": 292189,
+          "old_byte_count": 75,
+          "new_byte_count": 40,
+          "old_utf8_hex": "7472616E73666F726D730A7375726A656374696F6E7320696E746F207375726A656374696F6E7320616E6420636F657175616C697A65727320696E746F20636F657175616C697A6572732E",
+          "new_utf8_hex": "7472616E73666F726D730A7375726A656374696F6E7320696E746F207375726A656374696F6E732E",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-048",
+      "stable_id": "MC-STK-ERR-0208",
+      "locus": "8276-8281",
+      "earliest_line": 8278,
+      "class": "duplicated_article_error",
+      "proof": "The conclusion begins 'Then the the category'. The article is accidentally duplicated. Independent disposition: canon/control/private/R4_SITES_048_056_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The intended reading remains recoverable and TeX may still compile, but recoverability does not supply the missing, duplicated, or malformed token; the bound independent review found the correction forced.",
+      "operations": [
+        {
+          "old": "Then the the category",
+          "new": "Then the category",
+          "expected_count": 1,
+          "source_line": "8278",
+          "byte_start_0based": 293980,
+          "byte_end_exclusive": 294001,
+          "old_byte_count": 21,
+          "new_byte_count": 17,
+          "old_utf8_hex": "5468656E20746865207468652063617465676F7279",
+          "new_utf8_hex": "5468656E207468652063617465676F7279",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-049",
+      "stable_id": "MC-STK-ERR-0209",
+      "locus": "8382-8403",
+      "earliest_line": 8397,
+      "class": "number_agreement_error",
+      "proof": "The functor is said to commute with 'product and fibred products'. The criterion is preservation of finite limits; in this setting the intended pair is the final object/product and fibre products, and the singular bare 'product' is incomplete English. Independent disposition: canon/control/private/R4_SITES_048_056_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "Bare singular product can name an operation informally, but the exact parallel point example says products and fibred products.",
+      "operations": [
+        {
+          "old": "commutes with product and fibred products",
+          "new": "commutes with products and fibred products",
+          "expected_count": 1,
+          "source_line": "8397",
+          "byte_start_0based": 298774,
+          "byte_end_exclusive": 298815,
+          "old_byte_count": 41,
+          "new_byte_count": 42,
+          "old_utf8_hex": "636F6D6D7574657320776974682070726F6475637420616E64206669627265642070726F6475637473",
+          "new_utf8_hex": "636F6D6D7574657320776974682070726F647563747320616E64206669627265642070726F6475637473",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-050",
+      "stable_id": "MC-STK-ERR-0210",
+      "locus": "8490-8500",
+      "earliest_line": 8497,
+      "class": "wrong_condition_number_error",
+      "proof": "After conditions (1) and (2) are checked, the exactness condition is again called Condition (2). Exactness of the stalk functor is condition (3) of Definition definition-point at lines 7901-7902. Independent disposition: canon/control/private/R4_SITES_048_056_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The intended expression may be recoverable from context, but no local declaration, coercion, or convention makes the printed source exact; the bound independent review found no defeating adverse construction.",
+      "operations": [
+        {
+          "old": "Condition (2) holds",
+          "new": "Condition (3) holds",
+          "expected_count": 1,
+          "source_line": "8497",
+          "byte_start_0based": 302685,
+          "byte_end_exclusive": 302704,
+          "old_byte_count": 19,
+          "new_byte_count": 19,
+          "old_utf8_hex": "436F6E646974696F6E2028322920686F6C6473",
+          "new_utf8_hex": "436F6E646974696F6E2028332920686F6C6473",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-051",
+      "stable_id": "MC-STK-ERR-0211",
+      "locus": "8490-8500",
+      "earliest_line": 8498,
+      "class": "topology_name_error",
+      "proof": "The example assumes the chaotic topology but the final sentence calls it discrete. Example example-indiscrete at lines 820-825 defines the same isomorphism-only coverings as the chaotic or indiscrete topology; discrete is the opposite extreme terminology used separately later. Independent disposition: canon/control/private/R4_SITES_048_056_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "Terminology varies externally, but this file explicitly defines the topology as chaotic or indiscrete and opens this example with chaotic.",
+      "operations": [
+        {
+          "old": "the topology is discrete",
+          "new": "the topology is chaotic",
+          "expected_count": 1,
+          "source_line": "8498",
+          "byte_start_0based": 302758,
+          "byte_end_exclusive": 302782,
+          "old_byte_count": 24,
+          "new_byte_count": 23,
+          "old_utf8_hex": "74686520746F706F6C6F6779206973206469736372657465",
+          "new_utf8_hex": "74686520746F706F6C6F6779206973206368616F746963",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-052",
+      "stable_id": "MC-STK-ERR-0212",
+      "locus": "8580-8588",
+      "earliest_line": 8585,
+      "class": "missing_predicate_error",
+      "proof": "The explanation begins 'The first equality since f^{-1}=u_s'. The predicate is missing. Independent disposition: canon/control/private/R4_SITES_048_056_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The intended reading remains recoverable and TeX may still compile, but recoverability does not supply the missing, duplicated, or malformed token; the bound independent review found the correction forced.",
+      "operations": [
+        {
+          "old": "The first equality since",
+          "new": "The first equality holds since",
+          "expected_count": 1,
+          "source_line": "8585",
+          "byte_start_0based": 305739,
+          "byte_end_exclusive": 305763,
+          "old_byte_count": 24,
+          "new_byte_count": 30,
+          "old_utf8_hex": "54686520666972737420657175616C6974792073696E6365",
+          "new_utf8_hex": "54686520666972737420657175616C69747920686F6C64732073696E6365",
+          "authority_occurrence_count": 2
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-053",
+      "stable_id": "MC-STK-ERR-0213",
+      "locus": "8616-8621",
+      "earliest_line": 8618,
+      "class": "unmatched_delimiter_error",
+      "proof": "The display has i_*E(v(u(U)) with one missing closing parenthesis before the equality to Mor. The identical construction at line 8157 reads i_*E(u(U)) = Mor(u(U),E); here the argument is v(u(U)). Independent disposition: canon/control/private/R4_SITES_048_056_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The later Hom-expression parenthesis closes a different expression after an equality sign and cannot balance i_*E evaluation.",
+      "operations": [
+        {
+          "old": "i_*E(v(u(U)) =",
+          "new": "i_*E(v(u(U))) =",
+          "expected_count": 1,
+          "source_line": "8618",
+          "byte_start_0based": 307064,
+          "byte_end_exclusive": 307078,
+          "old_byte_count": 14,
+          "new_byte_count": 15,
+          "old_utf8_hex": "695F2A452876287528552929203D",
+          "new_utf8_hex": "695F2A45287628752855292929203D",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-054",
+      "stable_id": "MC-STK-ERR-0214",
+      "locus": "8620-8625",
+      "earliest_line": 8623,
+      "class": "malformed_formula_reference_prose_error",
+      "proof": "The sentence reads 'this is the same as the formula for which is equal to (v composed u)^pE'. The object after 'formula for' is missing and 'which is equal to' has no antecedent; the displayed Hom formula is precisely the formula for (v composed u)^pE. Independent disposition: canon/control/private/R4_SITES_048_056_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "Inserting a new antecedent could repair the sentence, but is larger and less directly supported than binding formula for to the named functor.",
+      "operations": [
+        {
+          "old": "which is equal to ",
+          "new": "",
+          "expected_count": 1,
+          "source_line": "8623",
+          "byte_start_0based": 307221,
+          "byte_end_exclusive": 307239,
+          "old_byte_count": 18,
+          "new_byte_count": 0,
+          "old_utf8_hex": "776869636820697320657175616C20746F20",
+          "new_utf8_hex": "",
+          "authority_occurrence_count": 2
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-055",
+      "stable_id": "MC-STK-ERR-0215",
+      "locus": "8625-8634",
+      "earliest_line": 8629,
+      "class": "wrong_point_subscript_error",
+      "proof": "The functor right-adjoint to g_*i_* is called the stalk functor F maps to F_q. Here g and i construct the new point p of C; q is the original point of D, so F on C has stalk F_p, not F_q. The following sentence also names p^{-1}. Independent disposition: canon/control/private/R4_SITES_048_056_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "The intended expression may be recoverable from context, but no local declaration, coercion, or convention makes the printed source exact; the bound independent review found no defeating adverse construction.",
+      "operations": [
+        {
+          "old": "\\mathcal{F}_q",
+          "new": "\\mathcal{F}_p",
+          "expected_count": 1,
+          "source_line": "8629",
+          "byte_start_0based": 307456,
+          "byte_end_exclusive": 307469,
+          "old_byte_count": 13,
+          "new_byte_count": 13,
+          "old_utf8_hex": "5C6D61746863616C7B467D5F71",
+          "new_utf8_hex": "5C6D61746863616C7B467D5F70",
+          "authority_occurrence_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "SITES-056",
+      "stable_id": "MC-STK-ERR-0216",
+      "locus": "8795-8809",
+      "earliest_line": 8805,
+      "class": "undefined_localization_morphism_error",
+      "proof": "The proof uses q^{-1} composed with j^{-1}=p^{-1}. The localization morphism throughout the lemma is j_U; no unindexed j is defined here. Independent disposition: canon/control/private/R4_SITES_048_056_INDEPENDENT_REVIEW.md.",
+      "adverse_evidence": "Bare j can be guessed as j_U, but the abbreviation is never declared and every surrounding formula retains U.",
+      "operations": [
+        {
+          "old": "j^{-1}",
+          "new": "j_U^{-1}",
+          "expected_count": 1,
+          "source_line": "8805",
+          "byte_start_0based": 312960,
+          "byte_end_exclusive": 312966,
+          "old_byte_count": 6,
+          "new_byte_count": 8,
+          "old_utf8_hex": "6A5E7B2D317D",
+          "new_utf8_hex": "6A5F555E7B2D317D",
+          "authority_occurrence_count": 26
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,390 @@
+{
+  "adverse_observations": [
+    {
+      "evidence": "The standalone candidate and authority builds each retain the same 223 distinct unresolved cross-chapter reference targets and 275 total occurrences; neither has an undefined citation.",
+      "severity": "retained_standalone_build_limitation"
+    },
+    {
+      "evidence": "The candidate and authority PDFs are untagged and have no MarkInfo. All 35 fonts in each PDF are embedded, subset, and have ToUnicode maps, and every link rectangle is geometrically valid.",
+      "severity": "retained_accessibility_limitation"
+    },
+    {
+      "evidence": "Fresh TeX logs differ from the sealed logs only in the terminal string-memory statistic: candidate 361120 versus 362224 and authority 361112 versus 362216. PDFs, pass-3 stdout, BibTeX stdout, all eight raw command outputs, and complete diagnostic summaries reproduce exactly.",
+      "severity": "nonmaterial_reproducibility_note"
+    },
+    {
+      "evidence": "A later delegation message misspelled one nibble of the already established pre-review manifest hash as ...D19E8AA11.... Direct hashing before and after review proves the immutable manifest is ...D19E9AA11.... The parent explicitly rejected the E8 spelling as an instruction transcription error; no artifact discrepancy exists.",
+      "severity": "instruction_transcription_note"
+    }
+  ],
+  "authority": {
+    "bytes": 1771230,
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "line_endings": "LF",
+    "path": "authority/source/algebra.tex",
+    "physical_lines": 47885,
+    "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3",
+    "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e"
+  },
+  "candidate_id": "stacks-errata-a04446e-r8",
+  "conclusion": "UNCONDITIONAL PASS",
+  "constraints_observed": {
+    "candidate_inputs_mutated": false,
+    "git_used": false,
+    "network_used": false,
+    "persistent_writes": [
+      "replay/independent-review.json"
+    ],
+    "temporary_work_outside_candidate_root_removed": true,
+    "upstream_contacted": false
+  },
+  "fresh_isolated_build": {
+    "authority": {
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "overfull_boxes": 28,
+        "pages": 466,
+        "reported_pdf_bytes": 3708166,
+        "undefined_citation_targets": 0,
+        "undefined_reference_occurrences": 275,
+        "undefined_reference_targets": 223,
+        "underfull_boxes": 3
+      },
+      "diagnostics_exact_sealed_match": true,
+      "fresh_pdf": {
+        "bytes": 3708166,
+        "sha256": "C7D408FDB2F6F3646C1E1D325642F9BBA7FA0143ACE91C7774183D605D5E9914"
+      },
+      "pdf_exact_sealed_match": true,
+      "sealed_pdf": {
+        "bytes": 3708166,
+        "path": "builds/algebra.authority.pdf",
+        "sha256": "C7D408FDB2F6F3646C1E1D325642F9BBA7FA0143ACE91C7774183D605D5E9914"
+      }
+    },
+    "candidate": {
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "overfull_boxes": 28,
+        "pages": 467,
+        "reported_pdf_bytes": 3709896,
+        "undefined_citation_targets": 0,
+        "undefined_reference_occurrences": 275,
+        "undefined_reference_targets": 223,
+        "underfull_boxes": 3
+      },
+      "diagnostics_exact_sealed_match": true,
+      "fresh_pdf": {
+        "bytes": 3709896,
+        "sha256": "BD0870EC1AB42477DA7A3F334D1F3A8600BAEE4FD321DB02132ED4E13B07628C"
+      },
+      "pdf_exact_sealed_match": true,
+      "sealed_pdf": {
+        "bytes": 3709896,
+        "path": "builds/algebra.pdf",
+        "sha256": "BD0870EC1AB42477DA7A3F334D1F3A8600BAEE4FD321DB02132ED4E13B07628C"
+      }
+    },
+    "command_outputs": {
+      "all_eight_raw_receipts_exact_sealed_match": true,
+      "authority_pass3": {
+        "bytes": 68032,
+        "sha256": "4C9D1FC25C5F174613DBA31710B7D98B3D8C39182492E55042E609FBF5FB54B3"
+      },
+      "bibtex_both": {
+        "bytes": 268,
+        "sha256": "2AC8211AB78503B72BF64B7015C2E58065FC80EFC13A098A870A9A9CC6498831"
+      },
+      "candidate_pass3": {
+        "bytes": 68036,
+        "sha256": "63EEB4D669EF409D6C1DC5D700846424AB120B2EA8B493D9B56EFF284408EAAC"
+      }
+    },
+    "fresh_receipts": {
+      "build_execution": {
+        "bytes": 6969,
+        "sha256": "E2B05CFB00EA59901393CD4DAE98BA847046ED7031CD01AD904DF769C3DAA557"
+      },
+      "build_receipt": {
+        "bytes": 25867,
+        "sha256": "DE8059917ACAD7ECBBC56839A8059992A04264F09E1E27D68C6464D89BB23C78"
+      },
+      "variance_from_sealed_is_only_timestamps_execution_hash_and_two_nondiagnostic_log_hashes": true
+    },
+    "passed": true,
+    "scratch_removed": true,
+    "toolchain": {
+      "bibtex": "MiKTeX-BibTeX 4.2 (MiKTeX 26.5)",
+      "pdftex": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5)",
+      "python": "3.13.9",
+      "source_date_epoch": "1785270512"
+    }
+  },
+  "input_nonmutation": {
+    "bytes_excluding_this_receipt": 11817692,
+    "file_count_excluding_this_receipt": 40,
+    "passed": true,
+    "post_review_tree_sha256": "0E36FE4E40ED237A084A813CEF55EF92C2A2AEEDB13389EEE46E3D09EB2E68E6",
+    "pre_review_tree_sha256": "0E36FE4E40ED237A084A813CEF55EF92C2A2AEEDB13389EEE46E3D09EB2E68E6",
+    "serialization": "sorted relative-path NUL byte-count NUL SHA256 LF"
+  },
+  "pass_is_unconditional": true,
+  "passed": true,
+  "pre_review_gate": {
+    "candidate_manifest": {
+      "bytes": 8383,
+      "observed_sha256": "B6C8097BB3C5EF36C1FFB869B1696B867726C33D19E9AA11E48ADED6B294017C",
+      "path": "candidate.manifest.json",
+      "required_sha256": "B6C8097BB3C5EF36C1FFB869B1696B867726C33D19E9AA11E48ADED6B294017C"
+    },
+    "check_manifest_exit_code": 0,
+    "check_manifest_passed": true,
+    "manifest_references": 39,
+    "manifest_referenced_bytes": 11809309,
+    "passed": true,
+    "task_message_e8_variant_rejected_as_non_authoritative_transcription_error": true
+  },
+  "producer_partition": {
+    "accepted": 11,
+    "accepted_producer_ids": [
+      "ALGEBRA-330",
+      "ALGEBRA-331",
+      "ALGEBRA-332",
+      "ALGEBRA-333",
+      "ALGEBRA-334",
+      "ALGEBRA-335",
+      "ALGEBRA-336",
+      "ALGEBRA-337",
+      "ALGEBRA-339",
+      "ALGEBRA-340",
+      "ALGEBRA-341"
+    ],
+    "closed": true,
+    "ledger": {
+      "bytes": 341079,
+      "path": "authority/producer/SOURCE_DEFECT_LEDGER.csv",
+      "sha256": "71C77AD80E68F10107D1295E4DEF985954B315FBAC246F2910AFDECBECE48798"
+    },
+    "packet_duplicates": 0,
+    "prior_overlay_aliases": 0,
+    "producer_rows": 12,
+    "range": "ALGEBRA-330..ALGEBRA-341",
+    "rejected": 1,
+    "rejection": {
+      "disposition": "rejected",
+      "id": "ERR-R8-R0001",
+      "producer_id": "ALGEBRA-338",
+      "reason": "The enumerated clauses grammatically complete the preceding If-then assertion and state that all five claims hold; replacing this with an equivalence predicate changes the logical force.",
+      "receipt": {
+        "bytes": 373,
+        "path": "rejections.jsonl",
+        "sha256": "8B50908237132C59F90DBF6ECCD975A442516F8DE75A36FEDB6C564B728DF0BC"
+      }
+    },
+    "rows_present_exactly_once": true,
+    "unresolved": 0
+  },
+  "recorded_at_utc": "2026-08-24T07:33:15Z",
+  "result": "PASS",
+  "review_kind": "independent_adverse_replay",
+  "schema": "mathematics-commons-stacks-errata-independent-review/v1",
+  "scratch_replay": {
+    "all_operation_hash_byte_line_and_occurrence_checks_passed": true,
+    "apply_order": "descending_start_byte",
+    "authority": {
+      "bytes": 1771230,
+      "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+    },
+    "byte_exact_payload_match": true,
+    "nonoverlap": true,
+    "operation_count": 15,
+    "operation_spec": {
+      "bytes": 11401,
+      "sha256": "62CDCC912BC2EE6BE66854C2B6B814604E2264F0AE05E5C8D78CD0428BAD9A53"
+    },
+    "output": {
+      "bytes": 1771798,
+      "sha256": "B3CCC3CB876B1A7790190F762B9B3B28915CBD03182C43A833EB0D8D3CD698B6"
+    },
+    "passed": true,
+    "sealed_payload": {
+      "bytes": 1771798,
+      "path": "payload/algebra.tex",
+      "sha256": "B3CCC3CB876B1A7790190F762B9B3B28915CBD03182C43A833EB0D8D3CD698B6"
+    },
+    "source_map": {
+      "operation_records_exact_spec_match": true,
+      "records": 11,
+      "sha256": "6CF46A64569961D983805AD20672F66BC2245A71E46CC05E1908FBF5A25C65D6"
+    },
+    "total_byte_delta": 568
+  },
+  "sealed_evidence_verification": {
+    "candidate_manifest_closure": {
+      "actual_nonmanifest_files": 39,
+      "hash_failures": 0,
+      "missing": 0,
+      "referenced_files": 39,
+      "unexpected": 0
+    },
+    "key_receipts": {
+      "build_execution": {
+        "bytes": 6969,
+        "sha256": "4136981EEC051398BBF858C9ADBDBFDF1BE498001EB2E8778C838692E25E1936"
+      },
+      "build_receipt": {
+        "bytes": 25867,
+        "sha256": "47843E51993A430F2ACB308867A73400142CED931AD17EE31806EEBD7A8C527A"
+      },
+      "validation": {
+        "bytes": 2613,
+        "sha256": "5F09B461BEC9A8EC11FECFF8AFA8C5A4CB6A60E50C1456A7BC99EE8D468D7A9D"
+      },
+      "visual_qa": {
+        "bytes": 17674,
+        "sha256": "48E20BEF4A679D35FEDFF2EEC8B2462A2D4E1B22B0DD027B14359D7FF8505D39"
+      }
+    },
+    "passed": true,
+    "private_render_manifest": {
+      "bytes": 99570,
+      "contact_sheets_verified": 30,
+      "exact_inventory_files_verified": 505,
+      "high_resolution_pages": [
+        1,
+        427,
+        428,
+        429,
+        430,
+        431,
+        432,
+        467
+      ],
+      "high_resolution_renders_verified": 8,
+      "inventory_bytes": 118137846,
+      "logical_path": "canon/private_evidence/errata-r8-20260824T0655Z/render-final/render-manifest.json",
+      "page_renders_verified": 467,
+      "pdf_binding_sha256": "BD0870EC1AB42477DA7A3F334D1F3A8600BAEE4FD321DB02132ED4E13B07628C",
+      "sha256": "A0B157ED6C7398516231809A2EBF70758CD2585808784E1F0A56B70C2C330E96"
+    },
+    "validation": {
+      "clean_scratch_rerun_byte_exact_sealed_match": true,
+      "checks_passed": 7,
+      "passed": true,
+      "structure": {
+        "authority": {
+          "citations": 45,
+          "environments": 6280,
+          "labels": 1618,
+          "references": 3066,
+          "sections": 168
+        },
+        "payload": {
+          "citations": 45,
+          "environments": 6280,
+          "labels": 1618,
+          "references": 3067,
+          "sections": 168
+        },
+        "single_reference_addition_matches_configured_exception": true
+      }
+    },
+    "visual_qa": {
+      "authority": {
+        "font_records": 35,
+        "fonts_without_tounicode": 0,
+        "link_annotations": 3119,
+        "malformed_link_rectangles": 0,
+        "out_of_bounds_link_rectangles": 0,
+        "pages": 466,
+        "unembedded_fonts": 0,
+        "unsubset_fonts": 0
+      },
+      "candidate": {
+        "font_records": 35,
+        "fonts_without_tounicode": 0,
+        "full_pages_inspected": 467,
+        "link_annotations": 3120,
+        "malformed_link_rectangles": 0,
+        "manual_blank_or_duplicate_pages": 0,
+        "manual_broken_diagrams": 0,
+        "manual_clipping": 0,
+        "manual_missing_glyphs": 0,
+        "manual_overlap": 0,
+        "out_of_bounds_link_rectangles": 0,
+        "pages": 467,
+        "unembedded_fonts": 0,
+        "unsubset_fonts": 0
+      },
+      "passed": true
+    }
+  },
+  "stable_id_recomputation": {
+    "canonical_mapping_sha256": "F2970E991C74A82B2BCECF724E521EF0FBF8D978D08D6A19C8D66C30637E39EC",
+    "derivation_rule": "ascending accepted producer rows ALGEBRA-330..341, excluding rejected ALGEBRA-338, mapped bijectively to contiguous MC-STK-ERR-0675..0685",
+    "first_id": "MC-STK-ERR-0675",
+    "last_id": "MC-STK-ERR-0685",
+    "operation_count": 15,
+    "passed": true,
+    "unit_count": 11,
+    "units": [
+      {
+        "operations": 1,
+        "producer_id": "ALGEBRA-330",
+        "stable_id": "MC-STK-ERR-0675"
+      },
+      {
+        "operations": 2,
+        "producer_id": "ALGEBRA-331",
+        "stable_id": "MC-STK-ERR-0676"
+      },
+      {
+        "operations": 1,
+        "producer_id": "ALGEBRA-332",
+        "stable_id": "MC-STK-ERR-0677"
+      },
+      {
+        "operations": 1,
+        "producer_id": "ALGEBRA-333",
+        "stable_id": "MC-STK-ERR-0678"
+      },
+      {
+        "operations": 2,
+        "producer_id": "ALGEBRA-334",
+        "stable_id": "MC-STK-ERR-0679"
+      },
+      {
+        "operations": 1,
+        "producer_id": "ALGEBRA-335",
+        "stable_id": "MC-STK-ERR-0680"
+      },
+      {
+        "operations": 1,
+        "producer_id": "ALGEBRA-336",
+        "stable_id": "MC-STK-ERR-0681"
+      },
+      {
+        "operations": 1,
+        "producer_id": "ALGEBRA-337",
+        "stable_id": "MC-STK-ERR-0682"
+      },
+      {
+        "operations": 1,
+        "producer_id": "ALGEBRA-339",
+        "stable_id": "MC-STK-ERR-0683"
+      },
+      {
+        "operations": 1,
+        "producer_id": "ALGEBRA-340",
+        "stable_id": "MC-STK-ERR-0684"
+      },
+      {
+        "operations": 3,
+        "producer_id": "ALGEBRA-341",
+        "stable_id": "MC-STK-ERR-0685"
+      }
+    ]
+  }
+}

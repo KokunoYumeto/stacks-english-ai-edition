@@ -1,0 +1,113 @@
+{
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "candidate_id": "stacks-errata-a04446e-r4",
+  "checks": {
+    "authority_evidence": {
+      "files": 32,
+      "passed": true
+    },
+    "chapter_builds": {
+      "chapters": 3,
+      "passed": true,
+      "receipt_sha256": "9CA55F16037D8A6732DBA4160E45468924F609E5E5F4313F75D8E19D3E7FA5C1"
+    },
+    "exact_payloads": {
+      "files": {
+        "sheaves": {
+          "authority_bytes": 184841,
+          "authority_display_delimiters": 334,
+          "authority_sha256": "AC4F9EDC7DB85E66329806EC9EA42816187A469772844BAEA663E1C9A9F00B38",
+          "display_delimiter_delta": 0,
+          "operation_count": 90,
+          "ordered_structure_exceptions": {},
+          "payload_bytes": 185216,
+          "payload_display_delimiters": 334,
+          "payload_sha256": "4BE9C5E7F7E5DD7E66980439856D1385188AE49CB7236822CD88259534837E51",
+          "structure": {
+            "citations": 1,
+            "environments": 576,
+            "labels": 162,
+            "references": 190,
+            "sections": 33
+          },
+          "xymatrix_count": 22
+        },
+        "sites": {
+          "authority_bytes": 424197,
+          "authority_display_delimiters": 666,
+          "authority_sha256": "07AE4690C2D8EB6873837D3D14A37F07408BB14F9E0BE6077ED570C220B1845D",
+          "display_delimiter_delta": 0,
+          "operation_count": 84,
+          "ordered_structure_exceptions": {
+            "citations": [
+              {
+                "authority": "\\cite[Expos\\'e III, Proposition 4.9.4]{SGA4}",
+                "index_0based": 5,
+                "payload": "\\cite[Expos\\'e IV, Proposition 4.9.4]{SGA4}",
+                "producer_id": "SITES-061",
+                "stable_id": "MC-STK-ERR-0190"
+              }
+            ]
+          },
+          "payload_bytes": 424285,
+          "payload_display_delimiters": 666,
+          "payload_sha256": "42A020E458451BDD9EC704813D50A435DC47F2B6778830AF49FC22FE57308DE4",
+          "structure": {
+            "citations": 24,
+            "environments": 1162,
+            "labels": 332,
+            "references": 660,
+            "sections": 52
+          },
+          "xymatrix_count": 99
+        },
+        "topology": {
+          "authority_bytes": 237731,
+          "authority_display_delimiters": 142,
+          "authority_sha256": "C6BAC8DCF8AD96DC47416BF34CB45BA4A10B894E40D67D3E1FA68D8EF0D9F872",
+          "display_delimiter_delta": 2,
+          "operation_count": 15,
+          "ordered_structure_exceptions": {},
+          "payload_bytes": 237976,
+          "payload_display_delimiters": 144,
+          "payload_sha256": "3930165144FC253AD47EB55B6E3FD81AD9996D9C4A8FFFB515116988492DCB73",
+          "structure": {
+            "citations": 20,
+            "environments": 916,
+            "labels": 263,
+            "references": 270,
+            "sections": 29
+          },
+          "xymatrix_count": 3
+        }
+      },
+      "passed": true
+    },
+    "lease_ledgers_inventory": {
+      "decisions": 6,
+      "duplicate_aliases": 2,
+      "passed": true,
+      "rejections": 16
+    },
+    "public_hygiene": {
+      "passed": true,
+      "python_caches": 0,
+      "text_files": 66
+    },
+    "unit_closure": {
+      "expected": 154,
+      "manifested": 154,
+      "passed": true
+    },
+    "visual_pdf_qa": {
+      "direct_units": 154,
+      "passed": true,
+      "pdfs": 3,
+      "receipt_sha256": "CA484B8F9A1DBE93B1D7D7053BAEB735F9C6A5F9D1CA1B95027B726B2EEF1261"
+    }
+  },
+  "generated_at_utc": "2026-08-22T05:45:57Z",
+  "passed": true,
+  "schema": "mathematics-commons-stacks-errata-validation/v1",
+  "verifier_sha256": "FA9831197BD9BE70034B3712BF7A23B21390A2E711285040D773E50F97BCECF3"
+}

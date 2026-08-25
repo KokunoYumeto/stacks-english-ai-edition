@@ -1,0 +1,29 @@
+{
+  "schema": "mathematics-commons-stacks-producer-evidence-hashes/v1",
+  "observed_at_utc": "2026-08-21T20:05:18Z",
+  "note": "The original part-local ledgers remain in their producer roots. This public candidate records their exact hashes without reproducing local absolute paths.",
+  "ledgers": [
+    {
+      "part": "p03",
+      "relative_path": "p03/control/ERRATA_CANDIDATES.jsonl",
+      "bytes": 4590,
+      "sha256": "1CDCDB94950DDA5730002B3A9C13DA6C6B20A748CD079CB10AE837CDF455D86C",
+      "selected_ids": ["P03-STACKS-E001","P03-STACKS-E002","P03-STACKS-E003","P03-STACKS-E005","P03-STACKS-E006"]
+    },
+    {
+      "part": "p08",
+      "relative_path": "p08/control/ERRATA_CANDIDATES.jsonl",
+      "bytes": 2110,
+      "sha256": "A4A0BBA2238AA1EB193436A98D73831093B7F19BFF05230F56082246977847C8",
+      "selected_ids": ["P08-E001","P08-E002"]
+    },
+    {
+      "part": "p09",
+      "relative_path": "p09/control/ERRATA_CANDIDATES.jsonl",
+      "bytes": 14200,
+      "sha256": "2AAA31C9B02359E31C450F7FB37716CF57A1318A80A4094C981DA523489409E1",
+      "selected_ids": ["P09-ERR-0001","P09-ERR-0002","P09-ERR-0003","P09-ERR-0004","P09-ERR-0005","P09-ERR-0006","P09-ERR-0007"]
+    }
+  ],
+  "rejected_after_canon_proof": ["MC-STK-ERR-0004"]
+}

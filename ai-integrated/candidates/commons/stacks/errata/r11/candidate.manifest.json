@@ -1,0 +1,223 @@
+{
+  "$schema": "../../../../../schemas/candidate-manifest.schema.json",
+  "schema": "mathematics-commons-stacks-candidate-manifest/v1",
+  "candidate_id": "stacks-errata-a04446e-r11",
+  "lease_id": "stacks-lease-000014-errata-r11",
+  "namespace": "commons/stacks/errata/r11",
+  "writer_task": "01a0256d-5693-77c1-96b2-cf37101e0c6c",
+  "upstream": {
+    "lock": "upstream/stacks.lock.json",
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e"
+  },
+  "source_authorities": [
+    {
+      "path": "authority/canon/R11_ALG_382_385_ADJUDICATION_SPEC.json",
+      "sha256": "92EF3C26C055F21D7858B27866AF64CFE3E777E671A8DC543EC6660D599CB20A"
+    },
+    {
+      "path": "authority/canon/R11_ALG_382_385_INTAKE.json",
+      "sha256": "05F2A421F49D8E79236B0A240521666A69F6DEBB93A580C00EDC097B227389D1"
+    },
+    {
+      "path": "authority/canon/R11_ALG_382_385_REVIEW.md",
+      "sha256": "355E3B7F7FD5ECE1DAB47ADB9E713966FDE4953067BB7DA338D1C56D63F2AA77"
+    },
+    {
+      "path": "authority/COPYING",
+      "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"
+    },
+    {
+      "path": "authority/producer/SOURCE_DEFECT_LEDGER.csv",
+      "sha256": "EB78964BE8D50BD25BBBEF72A6F7B0960D925A039CFF04A255334D59F6952A02"
+    },
+    {
+      "path": "authority/source/algebra.tex",
+      "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+    },
+    {
+      "path": "authority/upstream.lock.json",
+      "sha256": "B195ECC83AB0F32C574A60D1FDBA9B0DA4D35B04E0DF7CB106DC9C0FDAD99C0D"
+    }
+  ],
+  "source_closure": {
+    "enumerated": true,
+    "expected_units": 4,
+    "manifested_units": 4,
+    "complete": true
+  },
+  "stable_unit_manifest": {
+    "path": "stable-units.json",
+    "sha256": "13A56D3F6B7E627D7A4D8E949675E2DC5A827DF18CADFFFFDBE2B4567FB98F08"
+  },
+  "source_map": {
+    "path": "source-map.jsonl",
+    "sha256": "3BEE46C9DF156DC57C4C890A4183C1E8123B1562B7DC63EFC6A153F2E3204472"
+  },
+  "decision_ledger": {
+    "path": "decisions.jsonl",
+    "sha256": "1D5C41EEAC8BC32A1231281193E3C62829EFFE8277A3C624FDD7424124796891"
+  },
+  "rejection_ledger": {
+    "path": "rejections.jsonl",
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  "formula_diagram_inventory": {
+    "path": "formula-diagram-inventory.json",
+    "sha256": "889D60A0D487F48E1CBB7E6C182996A61DCE286E586E9A21193677A3DB9F65CA"
+  },
+  "builds": [
+    {
+      "path": ".gitattributes",
+      "sha256": "705FD4D6451A31D36B3DF7DE96F83F30AC976C9B4A6D1E51671D8E2F33E2D0DA"
+    },
+    {
+      "path": "append-highres.py",
+      "sha256": "AF69396221D34B9E101AC4BB0708A0D454FAA5ECE065D0FD1A91B3404701058D"
+    },
+    {
+      "path": "build-adjudication-spec.py",
+      "sha256": "10133ADBE647B34A3CDB6A5FCFE5583BC4245DD69674966F07DE0C38CFAA2A5F"
+    },
+    {
+      "path": "build-manifest.py",
+      "sha256": "BB71C6E516E60C1F2E42EE61DE646DD689797EE93BD92AA0593FA756D5617783"
+    },
+    {
+      "path": "build-receipt.py",
+      "sha256": "6AD2D96321E3C3EB0635170BF9692957088BA8BC31BAB66E96F6C885F1350BFC"
+    },
+    {
+      "path": "BUILD.md",
+      "sha256": "3380F8B76748EC6DF146A248BBBDE831E0D99BAD01E463ACD5D4AA12FDAEAF39"
+    },
+    {
+      "path": "builds/algebra.authority.bibtex.txt",
+      "sha256": "2AC8211AB78503B72BF64B7015C2E58065FC80EFC13A098A870A9A9CC6498831"
+    },
+    {
+      "path": "builds/algebra.authority.log",
+      "sha256": "D5B8DFB7698DB25CD0A447BBEB604120E1F93376D540194F6B626277635FADC7"
+    },
+    {
+      "path": "builds/algebra.authority.pass3.txt",
+      "sha256": "4C9D1FC25C5F174613DBA31710B7D98B3D8C39182492E55042E609FBF5FB54B3"
+    },
+    {
+      "path": "builds/algebra.authority.pdf",
+      "sha256": "C7D408FDB2F6F3646C1E1D325642F9BBA7FA0143ACE91C7774183D605D5E9914"
+    },
+    {
+      "path": "builds/algebra.bibtex.txt",
+      "sha256": "2AC8211AB78503B72BF64B7015C2E58065FC80EFC13A098A870A9A9CC6498831"
+    },
+    {
+      "path": "builds/algebra.log",
+      "sha256": "019A5C3666D3D94B3E76A469087CABC6916081B05C771E8BDD1A57ED66FE64E8"
+    },
+    {
+      "path": "builds/algebra.pass3.txt",
+      "sha256": "62988EE44869F3C8D90D91AF1C5C0B9A55A60534854C38389170A13AB769ECF4"
+    },
+    {
+      "path": "builds/algebra.pdf",
+      "sha256": "2EDD784C7EF2EB0BA014662E47E8FC26F66D3AD161A44C4B552C2C00B204D9CE"
+    },
+    {
+      "path": "builds/build-execution.json",
+      "sha256": "16D307C6C48E5CF067317597751B4A1923D8043D0E546A239398CBDBB9F3070D"
+    },
+    {
+      "path": "builds/build-receipt.json",
+      "sha256": "A7576706A8642091DD69FE3F6E9C4A0449C434CFEBF242BF0693FB732AD73F2C"
+    },
+    {
+      "path": "builds/deterministic-replay.json",
+      "sha256": "79268E780B11492039E3E5595D7EC380CD61CD9BFF8D0DAC806EE3DAF2A521AD"
+    },
+    {
+      "path": "builds/validation.json",
+      "sha256": "7AE17A640C874485C2ABD9875DEBB0502095FF0454C6A207AFBF85E790C5CEEF"
+    },
+    {
+      "path": "builds/visual-qa.json",
+      "sha256": "44A821B44BCD9F8057B49DB59680D110849052FE8350B3EA4ED0C735FF449F9F"
+    },
+    {
+      "path": "candidate.config.json",
+      "sha256": "2FA07A21CB044814A29F72F9A3881193017DFF03977954FFCCF6A9377B7D8FDD"
+    },
+    {
+      "path": "check-manifest.py",
+      "sha256": "9D4513D7BBEC9371D20E73E30ABFC2FC2435BA24729C71A0BC3D3DF187826B75"
+    },
+    {
+      "path": "deterministic-replay.py",
+      "sha256": "8C10C528E7652938877B2976C52CAB4C1221501A62BD523CC509DF87A43B6151"
+    },
+    {
+      "path": "independent-review.py",
+      "sha256": "F499C5B2BA5D4EA0F955944C01E121CFF244E866D0AEFD5AFF8C21BF375DE2DE"
+    },
+    {
+      "path": "LEASE.json",
+      "sha256": "00548E12ADC788BBB77999C6CA247C1BEC7D486F25075540E73324BDC9407A05"
+    },
+    {
+      "path": "materialize.py",
+      "sha256": "CC38D018CD4626BC92A27B048EB32715AFE41CD2E4A931C30755DFD4A3334C1B"
+    },
+    {
+      "path": "operation-spec.json",
+      "sha256": "34BAA5DCF60C8536C4BBA6D72B4543DC257D10C69AD4C4712841258281890FE3"
+    },
+    {
+      "path": "payload/algebra.tex",
+      "sha256": "829D1D857528E935C6274A9D425E2BB9473E8596BC9327D9AA6936722A9B7588"
+    },
+    {
+      "path": "README.md",
+      "sha256": "A8AC4630238B0C62F36FCBBE0F40697117299BBC331C8063247D9EB49182E797"
+    },
+    {
+      "path": "render-qa.py",
+      "sha256": "AA124B928054D51AC311F8B8B3C6BADB3AB535590DFF422DE6A657B7CD53B8A6"
+    },
+    {
+      "path": "replay/independent-review.json",
+      "sha256": "8DC803E02877E611B069CEC9B8AF206EEABBCB2CB7A48653A5BFFA55F224F821"
+    },
+    {
+      "path": "replay-build.py",
+      "sha256": "0BD6069E70C7458DAE8A262DB32031570A2FD0AA3B2F9C5A3A1FA6CD1BB925E1"
+    },
+    {
+      "path": "verify.py",
+      "sha256": "F678F9A8CFDCBD781721A26C08BF0311D73C5FEEFE044FD78D1E341E66E70068"
+    },
+    {
+      "path": "visual-qa.py",
+      "sha256": "F755DDAFB63D2D2389881FA77BF25609B19EF6277654149DD47E260E9C39D884"
+    }
+  ],
+  "rights_state": "The authority and modified payload retain the Stacks Project GNU Free Documentation License 1.2; metadata and receipts do not relicense upstream content. This is an independently maintained AI-produced English edition with no Stacks Project review, approval, affiliation, or endorsement. Legal certification was not performed.",
+  "review_state": "performed",
+  "independent_replay": "passed",
+  "unresolved_defects": [
+    "The independent replay receipt binds pre-review manifest F2432CE93AFF96A3638278D93FF6C2F98C217F039081DF4EBC787512E83F927F and validation 7AE17A640C874485C2ABD9875DEBB0502095FF0454C6A207AFBF85E790C5CEEF. This final registrar-only rebind adds the replay receipt; no reviewed authority, payload, proof, script, build, PDF, or visual-QA byte changed.",
+    "The isolated algebra.tex candidate retains cross-chapter undefined-reference targets; their multiset matches the frozen authority build exactly.",
+    "The sealed chapter readers have page counts candidate 466, authority 466. Every candidate page and the complete correction-sensitive tail were inspected without clipping, overlap, missing glyph, broken diagram, blank page, or unreadable content.",
+    "The proof PDFs contain embedded fonts with ToUnicode maps but are untagged; document-structure accessibility remains a cumulative-edition toolchain concern.",
+    "The frozen producer snapshot closes ALGEBRA-382 through ALGEBRA-385: all 4 rows are accepted and none is rejected, aliased, or unresolved.",
+    "Canonical translations preserve the frozen authority unless a locale-side emendation is separately bound; this English corrected overlay is not silently copied.",
+    "Overlay admission and English-edition composition are separate transitions; this manifest records candidate closure only."
+  ],
+  "stop_conditions": [
+    "Do not mutate the literal stacks-project master mirror.",
+    "Do not apply these corrections silently to canonical translation source or PDFs.",
+    "Do not contact or submit to the upstream Stacks maintainers under the current no-AI-contribution boundary.",
+    "Do not append an overlay registry record except in a separate admission commit bound to the final manifest hash and a passed independent replay.",
+    "Any change to reviewed authority, payload, proof, build, validation, visual-QA, or replay bytes invalidates the replay and requires a new review."
+  ],
+  "generated_at_utc": "2026-08-24T20:48:55Z"
+}

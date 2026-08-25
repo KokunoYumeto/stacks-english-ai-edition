@@ -1,0 +1,581 @@
+{
+  "allocator": {
+    "argv": [
+      "<USER_ROOT>\\miniconda3\\python.exe",
+      "-c",
+      "import json,sys; sys.path.insert(0,'scripts'); from functions import get_tags,get_new_tags; print(json.dumps(get_new_tags('./',get_tags('./'))))"
+    ],
+    "exit_code": 0,
+    "result": [],
+    "stdout_bytes": 4,
+    "stdout_sha256_raw": "A5338D955B09046EC0B16F3A9625B7955C763AAE07DC722E474E6078745F932F"
+  },
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_inputs": {
+    "crystalline.tex": {
+      "bytes": 211808,
+      "path": "crystalline.tex",
+      "sha256": "466C0634A5E8E3899B157A42A4B4BB5F4357199F96708CAF5854F5A92BE58054"
+    },
+    "smoothing.tex": {
+      "bytes": 134660,
+      "path": "smoothing.tex",
+      "sha256": "FD28CF874BB7DAD3C5C5FF03314D1C83701613A8A98730A99B9CA7A4BCFE6068"
+    },
+    "spaces-cohomology.tex": {
+      "bytes": 174423,
+      "path": "spaces-cohomology.tex",
+      "sha256": "63F19991B7B2BCE90B5FB30FCDBB8A3B06CBBFFEC42FA7C413776C29AE4B69C5"
+    },
+    "tags/tags": {
+      "bytes": 969923,
+      "path": "tags/tags",
+      "sha256": "098F77CCE75F8359F1EACB22B7AA0088099B09E5B3FFCAD2DE513CBD1A8A9F1C"
+    }
+  },
+  "authority_phase": {
+    "stems": {
+      "crystalline": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "crystalline.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 85275,
+            "stdout_sha256_raw": "422439394D2EAEC8D4E77CB86D12E22F2985C6708DDBB59C8DC990B9A344AD2D"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "crystalline"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 148,
+            "stdout_sha256_raw": "D45BC72481C8C70A5263B3624F3EB27E9B160C07BDD8CD1D165A03D27D7559D0"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "crystalline.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 52309,
+            "stdout_sha256_raw": "6612C73D5874436B3842E7C28BF59C03068CCD49393DBB3A26121F7E123DA971"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "crystalline.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 51221,
+            "stdout_sha256_raw": "1FF669EAA219B8668269974130AB84E8FC708F8861153C20D72AC684B4441708"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 148,
+            "path": "builds/crystalline.authority.bibtex.txt",
+            "sha256": "D45BC72481C8C70A5263B3624F3EB27E9B160C07BDD8CD1D165A03D27D7559D0"
+          },
+          "log": {
+            "bytes": 64877,
+            "path": "builds/crystalline.authority.log",
+            "sha256": "60A4A07E09F3188C94367FCFA2977903DDC268195311BFDF80772822250957A0"
+          },
+          "pass3_stdout": {
+            "bytes": 50759,
+            "path": "builds/crystalline.authority.pass3.txt",
+            "sha256": "2B417DF1E1425C90BEBD0D65ADF253AA380454C592FA2877FB2D703E75FA0EC1"
+          },
+          "pdf": {
+            "bytes": 852370,
+            "path": "builds/crystalline.authority.pdf",
+            "sha256": "17458285F1D8D371DA7202ACA127702ACC267DA4AEFB4888BC420638B09BABCA"
+          }
+        },
+        "source": {
+          "bytes": 211808,
+          "path": "crystalline.tex",
+          "sha256": "466C0634A5E8E3899B157A42A4B4BB5F4357199F96708CAF5854F5A92BE58054"
+        }
+      },
+      "smoothing": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "smoothing.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 65139,
+            "stdout_sha256_raw": "A6268343B59BF8B6BC3336D8AAC3D32E92D09650A2ED6F72AD3DA77EDB90C720"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "smoothing"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 146,
+            "stdout_sha256_raw": "D6F481B4F0F80167F38C64D2590976150AC424D7410F5C00F28307F9E438AD57"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "smoothing.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 51477,
+            "stdout_sha256_raw": "4B34CEAF57CD6570FC201EF292CA04C248D4300F69BA002C86D493636C73E927"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "smoothing.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 48687,
+            "stdout_sha256_raw": "08796C871D82B46574E51BABE2F7A27154FF6B372A0B176E76EEDF28D1748997"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 146,
+            "path": "builds/smoothing.authority.bibtex.txt",
+            "sha256": "D6F481B4F0F80167F38C64D2590976150AC424D7410F5C00F28307F9E438AD57"
+          },
+          "log": {
+            "bytes": 62145,
+            "path": "builds/smoothing.authority.log",
+            "sha256": "15880EDED24C160F2A639221004903CBE91A3EA9DE0CC5E26EF032B17FE6758A"
+          },
+          "pass3_stdout": {
+            "bytes": 48289,
+            "path": "builds/smoothing.authority.pass3.txt",
+            "sha256": "492D4B918C6F06A5E3035954067242F02392EAEF823180C59E2C1EEF3EA511D6"
+          },
+          "pdf": {
+            "bytes": 620774,
+            "path": "builds/smoothing.authority.pdf",
+            "sha256": "AF05D8663D670B0372FFCA89E557EA2D13C1069816E95959135E88691E80FE4E"
+          }
+        },
+        "source": {
+          "bytes": 134660,
+          "path": "smoothing.tex",
+          "sha256": "FD28CF874BB7DAD3C5C5FF03314D1C83701613A8A98730A99B9CA7A4BCFE6068"
+        }
+      },
+      "spaces-cohomology": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "spaces-cohomology.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 83813,
+            "stdout_sha256_raw": "A36C122B1CAD28CD746B66EB227FBE6A56E2BE62459194B11DAFA728278E9B1E"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "spaces-cohomology"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 154,
+            "stdout_sha256_raw": "D9034A16FDBFA59A34512FF4EC8F42E4CEF0935D60FDF3295E44177FBD4D9457"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "spaces-cohomology.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 66193,
+            "stdout_sha256_raw": "038FA552D3D1DFF6F59C369638AE89D11725E455BC7C38D365CBE09F164405F3"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "spaces-cohomology.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 65921,
+            "stdout_sha256_raw": "238985F38951043580493094C7A428D6B17350D21573B64539C0A7EDFFBB7C21"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 154,
+            "path": "builds/spaces-cohomology.authority.bibtex.txt",
+            "sha256": "D9034A16FDBFA59A34512FF4EC8F42E4CEF0935D60FDF3295E44177FBD4D9457"
+          },
+          "log": {
+            "bytes": 79016,
+            "path": "builds/spaces-cohomology.authority.log",
+            "sha256": "1A9FBC7FEC0A40843812C0967672996ED8B221A1DC59CDBE9AE66B4FA7FEC051"
+          },
+          "pass3_stdout": {
+            "bytes": 65505,
+            "path": "builds/spaces-cohomology.authority.pass3.txt",
+            "sha256": "752317495ADFED15CC2E2BC146BF20AC0E2F4B7A891B2D8B7FF3516CEA9AC7F1"
+          },
+          "pdf": {
+            "bytes": 614995,
+            "path": "builds/spaces-cohomology.authority.pdf",
+            "sha256": "8B7A40311DC1FB07C09ACAAD9ABB3DB26A9231E43FACD9BB7EDEACEC66035E4D"
+          }
+        },
+        "source": {
+          "bytes": 174423,
+          "path": "spaces-cohomology.tex",
+          "sha256": "63F19991B7B2BCE90B5FB30FCDBB8A3B06CBBFFEC42FA7C413776C29AE4B69C5"
+        }
+      }
+    }
+  },
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "candidate_id": "stacks-errata-a04446e-r1",
+  "candidate_inputs": {
+    "crystalline.tex": {
+      "bytes": 211808,
+      "path": "crystalline.tex",
+      "sha256": "EDA38E502E0C6B3743C0FCD769203EAA6186440002A9AD2C97DC6F642B03DEC7"
+    },
+    "smoothing.tex": {
+      "bytes": 134651,
+      "path": "smoothing.tex",
+      "sha256": "9CF7DCF31E447C585E81515C9A8059B37A566998DCAFA77A16AB7CB1D27A0A46"
+    },
+    "spaces-cohomology.tex": {
+      "bytes": 174442,
+      "path": "spaces-cohomology.tex",
+      "sha256": "81438F655CEAB1A2E07CFEEC645A9A7C2447DB983D6BCEFAED6575859B75D196"
+    },
+    "tags/tags": {
+      "bytes": 970352,
+      "path": "tags/tags",
+      "sha256": "C47887DB37D78437C0E7C72BEC0F7840DCA2D36535D1241E1CBCAEF1412DC788"
+    }
+  },
+  "candidate_phase": {
+    "stems": {
+      "crystalline": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "crystalline.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 85275,
+            "stdout_sha256_raw": "CB3B790206EC0245CD4A7D899841C34265DECC9F323113E4736F2ED9AC418A10"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "crystalline"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 148,
+            "stdout_sha256_raw": "D45BC72481C8C70A5263B3624F3EB27E9B160C07BDD8CD1D165A03D27D7559D0"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "crystalline.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 52309,
+            "stdout_sha256_raw": "6612C73D5874436B3842E7C28BF59C03068CCD49393DBB3A26121F7E123DA971"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "crystalline.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 51221,
+            "stdout_sha256_raw": "1FF669EAA219B8668269974130AB84E8FC708F8861153C20D72AC684B4441708"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 148,
+            "path": "builds/crystalline.bibtex.txt",
+            "sha256": "D45BC72481C8C70A5263B3624F3EB27E9B160C07BDD8CD1D165A03D27D7559D0"
+          },
+          "log": {
+            "bytes": 64877,
+            "path": "builds/crystalline.log",
+            "sha256": "60A4A07E09F3188C94367FCFA2977903DDC268195311BFDF80772822250957A0"
+          },
+          "pass3_stdout": {
+            "bytes": 50759,
+            "path": "builds/crystalline.pass3.txt",
+            "sha256": "2B417DF1E1425C90BEBD0D65ADF253AA380454C592FA2877FB2D703E75FA0EC1"
+          },
+          "pdf": {
+            "bytes": 852370,
+            "path": "builds/crystalline.pdf",
+            "sha256": "E4CCB04FAE96EA7D33B4736A499B7D045ED36BA8923A3A76BAFCE9EAB4884C04"
+          }
+        },
+        "source": {
+          "bytes": 211808,
+          "path": "crystalline.tex",
+          "sha256": "EDA38E502E0C6B3743C0FCD769203EAA6186440002A9AD2C97DC6F642B03DEC7"
+        }
+      },
+      "smoothing": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "smoothing.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 65139,
+            "stdout_sha256_raw": "78E6ECD4D7E3D8051433B8091A03AC849D2DA8464E86F1EBD7B0CB4B87149E15"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "smoothing"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 146,
+            "stdout_sha256_raw": "D6F481B4F0F80167F38C64D2590976150AC424D7410F5C00F28307F9E438AD57"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "smoothing.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 51476,
+            "stdout_sha256_raw": "2AA8FEECEDB4CBA2E880BB303CD8B6A9B998ED4CBF239AD8C9B723D4E32A21B0"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "smoothing.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 48687,
+            "stdout_sha256_raw": "16FAC823E488A8CE600E800D6A681F845115910A4F41072FC19AC5273F5F188E"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 146,
+            "path": "builds/smoothing.bibtex.txt",
+            "sha256": "D6F481B4F0F80167F38C64D2590976150AC424D7410F5C00F28307F9E438AD57"
+          },
+          "log": {
+            "bytes": 62145,
+            "path": "builds/smoothing.log",
+            "sha256": "2A2112DF42BBD141E07F267B7FA4F39A4AFC1A2C83A1B62278B808C546D1FDD7"
+          },
+          "pass3_stdout": {
+            "bytes": 48289,
+            "path": "builds/smoothing.pass3.txt",
+            "sha256": "325005208C9047DD7C4B5CE8064FF399F2DA4F7CEA1BDFFB026FDA7F4266F38D"
+          },
+          "pdf": {
+            "bytes": 620609,
+            "path": "builds/smoothing.pdf",
+            "sha256": "27FC2DEDD20D3F44206B984C35E2C1C8424D849F98C745C0CFD014CFAB397A15"
+          }
+        },
+        "source": {
+          "bytes": 134651,
+          "path": "smoothing.tex",
+          "sha256": "9CF7DCF31E447C585E81515C9A8059B37A566998DCAFA77A16AB7CB1D27A0A46"
+        }
+      },
+      "spaces-cohomology": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "spaces-cohomology.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 83813,
+            "stdout_sha256_raw": "4B3B4D99C22F2EF3F0787B4A140EECA792C12C4CE15FA904CFF4A2A4A45063A0"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "spaces-cohomology"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 154,
+            "stdout_sha256_raw": "D9034A16FDBFA59A34512FF4EC8F42E4CEF0935D60FDF3295E44177FBD4D9457"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "spaces-cohomology.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 66193,
+            "stdout_sha256_raw": "F8BD25CAF60F68CB29CD13E29D5AA82ADBE489566BA65834825DB1CA22E7A09E"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "spaces-cohomology.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 65921,
+            "stdout_sha256_raw": "0EF7C30E09C70FBFC6A4AC7DF6C40188FE69796A8B056884768C085FD2370EE2"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 154,
+            "path": "builds/spaces-cohomology.bibtex.txt",
+            "sha256": "D9034A16FDBFA59A34512FF4EC8F42E4CEF0935D60FDF3295E44177FBD4D9457"
+          },
+          "log": {
+            "bytes": 79016,
+            "path": "builds/spaces-cohomology.log",
+            "sha256": "D5E33919CFA6195BC688EF8B2FB2BF334D415B4C7E8A25736B709B9C7215A3AA"
+          },
+          "pass3_stdout": {
+            "bytes": 65505,
+            "path": "builds/spaces-cohomology.pass3.txt",
+            "sha256": "2B4129D5F84040A624AA8DF4E7B9F6376EFD09D4F645478C8B1FDF1D14E2A0D2"
+          },
+          "pdf": {
+            "bytes": 614930,
+            "path": "builds/spaces-cohomology.pdf",
+            "sha256": "1D7E0664E873CAACC4F5FCCEF85398C9BD5EEC57A1BFF5A1807B7A930385D51F"
+          }
+        },
+        "source": {
+          "bytes": 174442,
+          "path": "spaces-cohomology.tex",
+          "sha256": "81438F655CEAB1A2E07CFEEC645A9A7C2447DB983D6BCEFAED6575859B75D196"
+        }
+      }
+    }
+  },
+  "completed_at_utc": "2026-08-21T20:44:44Z",
+  "passed": true,
+  "restored_authority_inputs": {
+    "crystalline.tex": {
+      "bytes": 211808,
+      "path": "crystalline.tex",
+      "sha256": "466C0634A5E8E3899B157A42A4B4BB5F4357199F96708CAF5854F5A92BE58054"
+    },
+    "smoothing.tex": {
+      "bytes": 134660,
+      "path": "smoothing.tex",
+      "sha256": "FD28CF874BB7DAD3C5C5FF03314D1C83701613A8A98730A99B9CA7A4BCFE6068"
+    },
+    "spaces-cohomology.tex": {
+      "bytes": 174423,
+      "path": "spaces-cohomology.tex",
+      "sha256": "63F19991B7B2BCE90B5FB30FCDBB8A3B06CBBFFEC42FA7C413776C29AE4B69C5"
+    },
+    "tags/tags": {
+      "bytes": 969923,
+      "path": "tags/tags",
+      "sha256": "098F77CCE75F8359F1EACB22B7AA0088099B09E5B3FFCAD2DE513CBD1A8A9F1C"
+    }
+  },
+  "schema": "mathematics-commons-stacks-errata-build-execution/v1",
+  "source_date_epoch": "1785270512",
+  "started_at_utc": "2026-08-21T20:43:05Z",
+  "tools": {
+    "bibtex": "MiKTeX-BibTeX 4.2 (MiKTeX 26.5)",
+    "pdflatex": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5)",
+    "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]"
+  },
+  "work_root": "new empty temporary directory outside source and candidate; exact local path retained only in private receipt"
+}

@@ -1,0 +1,555 @@
+{
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_inputs": {
+    "sheaves.tex": {
+      "bytes": 184841,
+      "path": "sheaves.tex",
+      "sha256": "AC4F9EDC7DB85E66329806EC9EA42816187A469772844BAEA663E1C9A9F00B38"
+    },
+    "sites.tex": {
+      "bytes": 424197,
+      "path": "sites.tex",
+      "sha256": "07AE4690C2D8EB6873837D3D14A37F07408BB14F9E0BE6077ED570C220B1845D"
+    },
+    "topology.tex": {
+      "bytes": 237731,
+      "path": "topology.tex",
+      "sha256": "C6BAC8DCF8AD96DC47416BF34CB45BA4A10B894E40D67D3E1FA68D8EF0D9F872"
+    }
+  },
+  "authority_phase": {
+    "stems": {
+      "sheaves": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "sheaves.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 53380,
+            "stdout_sha256_raw": "6E60580FAE44A267E655D112EAC824E4376C090621F4F0E8B4888F1E0ACA5317"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "sheaves"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 144,
+            "stdout_sha256_raw": "93E36BB1DF1ECAA7E0178D9C72C40D0F71B6230BC8C4E08B895722681E035984"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "sheaves.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 36250,
+            "stdout_sha256_raw": "8829F1DF595EE1CD97DFC4F93B692B0FD490C2DEF50577E99DC04EBCC3B69ED8"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "sheaves.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 36053,
+            "stdout_sha256_raw": "C7E24ADFB196804C466A85757D6C42362D39E104604F4BF7AB1A10EFBB6E1D71"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 144,
+            "path": "builds/sheaves.authority.bibtex.txt",
+            "sha256": "93E36BB1DF1ECAA7E0178D9C72C40D0F71B6230BC8C4E08B895722681E035984"
+          },
+          "log": {
+            "bytes": 49911,
+            "path": "builds/sheaves.authority.log",
+            "sha256": "0671BF02F198186E8A6A6FAC052D9E110846C9AF337750581F12242A50A7D6C7"
+          },
+          "pass3_stdout": {
+            "bytes": 35697,
+            "path": "builds/sheaves.authority.pass3.txt",
+            "sha256": "B00A6FEA007E57F8647FAE45A79B78B38A0E13898A7ADACDA8BE0BFE1C47F9CA"
+          },
+          "pdf": {
+            "bytes": 644271,
+            "path": "builds/sheaves.authority.pdf",
+            "sha256": "6ED46B5D7121B736F52BF99768B22EB0CD83083EF693E3C23C4657CAA9130BDD"
+          }
+        },
+        "source": {
+          "bytes": 184841,
+          "path": "sheaves.tex",
+          "sha256": "AC4F9EDC7DB85E66329806EC9EA42816187A469772844BAEA663E1C9A9F00B38"
+        }
+      },
+      "sites": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "sites.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 104459,
+            "stdout_sha256_raw": "887277C05F243883612A4126F78E1CAF6917BC5B2504433139C7FA0AEA967079"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "sites"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 142,
+            "stdout_sha256_raw": "67FDE235FB92D46C5D49F32141022B75BF8DE21A0FD654388AD5AACD7FFD492F"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "sites.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 47969,
+            "stdout_sha256_raw": "5D6C3A4CC13AADA7E009F7E8FCFD76ACA4595992FE3742EF9EA33C53CEDE3194"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "sites.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 46041,
+            "stdout_sha256_raw": "6F835F73F9A2F8676DAEFE76D7F92AE33B314CF02415506D06CB9931D3DA483C"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 142,
+            "path": "builds/sites.authority.bibtex.txt",
+            "sha256": "67FDE235FB92D46C5D49F32141022B75BF8DE21A0FD654388AD5AACD7FFD492F"
+          },
+          "log": {
+            "bytes": 59629,
+            "path": "builds/sites.authority.log",
+            "sha256": "40B38579675F158C6E813B1A8DD2A47642E08962A1009136C1566B45540F7CF5"
+          },
+          "pass3_stdout": {
+            "bytes": 45647,
+            "path": "builds/sites.authority.pass3.txt",
+            "sha256": "313E39E892CF8A297019F7B7812CD2A73AE503CC46192D1B1274A479200F65F9"
+          },
+          "pdf": {
+            "bytes": 1167556,
+            "path": "builds/sites.authority.pdf",
+            "sha256": "C53C463FEA57913C16BB91873F02EDE9062B034C612E339876F79444A21E338A"
+          }
+        },
+        "source": {
+          "bytes": 424197,
+          "path": "sites.tex",
+          "sha256": "07AE4690C2D8EB6873837D3D14A37F07408BB14F9E0BE6077ED570C220B1845D"
+        }
+      },
+      "topology": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "topology.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 64065,
+            "stdout_sha256_raw": "3120A7EAB1593D90142E001074A4971D9757EEB0577921EB748C8E4160899DFB"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "topology"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 145,
+            "stdout_sha256_raw": "8FEFD69AECFB5B8563CE82B1C038CB9D926796AAA327C58EA2EF0395D3DF0C85"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "topology.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 37326,
+            "stdout_sha256_raw": "36AF527D3D23C408C126EF791808BC1EF78D7D46D2B56934A03360E6F58A4EE1"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "topology.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 36066,
+            "stdout_sha256_raw": "540141139CAAA18B154C2F1BABCC4EF565A76C5AD79A84E60201019821E48CC6"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 145,
+            "path": "builds/topology.authority.bibtex.txt",
+            "sha256": "8FEFD69AECFB5B8563CE82B1C038CB9D926796AAA327C58EA2EF0395D3DF0C85"
+          },
+          "log": {
+            "bytes": 49889,
+            "path": "builds/topology.authority.log",
+            "sha256": "EBA0EAE908C6400FFDE29BA04A2CA8A6E8BFE7CCB2C628182760F1CC75900D72"
+          },
+          "pass3_stdout": {
+            "bytes": 35702,
+            "path": "builds/topology.authority.pass3.txt",
+            "sha256": "997741E6383F9F62082C985F593D3211841161D70931EBD0D43DD30B3330DF3E"
+          },
+          "pdf": {
+            "bytes": 776439,
+            "path": "builds/topology.authority.pdf",
+            "sha256": "EBAD65F2C37B77F025724DD62C2F0F391C358BA65FA6F07C111324D589C8BC6E"
+          }
+        },
+        "source": {
+          "bytes": 237731,
+          "path": "topology.tex",
+          "sha256": "C6BAC8DCF8AD96DC47416BF34CB45BA4A10B894E40D67D3E1FA68D8EF0D9F872"
+        }
+      }
+    }
+  },
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "candidate_id": "stacks-errata-a04446e-r4",
+  "candidate_inputs": {
+    "sheaves.tex": {
+      "bytes": 185216,
+      "path": "sheaves.tex",
+      "sha256": "4BE9C5E7F7E5DD7E66980439856D1385188AE49CB7236822CD88259534837E51"
+    },
+    "sites.tex": {
+      "bytes": 424285,
+      "path": "sites.tex",
+      "sha256": "42A020E458451BDD9EC704813D50A435DC47F2B6778830AF49FC22FE57308DE4"
+    },
+    "topology.tex": {
+      "bytes": 237976,
+      "path": "topology.tex",
+      "sha256": "3930165144FC253AD47EB55B6E3FD81AD9996D9C4A8FFFB515116988492DCB73"
+    }
+  },
+  "candidate_phase": {
+    "stems": {
+      "sheaves": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "sheaves.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 53379,
+            "stdout_sha256_raw": "5CB6C7475EC5E09E5050DB432C6A4B4D8B5FBCBC1ED698E1E9D9D0322592BE74"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "sheaves"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 144,
+            "stdout_sha256_raw": "93E36BB1DF1ECAA7E0178D9C72C40D0F71B6230BC8C4E08B895722681E035984"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "sheaves.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 36254,
+            "stdout_sha256_raw": "79666B1562D01A64CD855DD7FA743FB0AF4BD98E979D13F92115776D03D11853"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "sheaves.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 36057,
+            "stdout_sha256_raw": "85C76E4567B2AA6073E06363FC65A23D971E3FF0F523167786A8CE11CD4F694B"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 144,
+            "path": "builds/sheaves.bibtex.txt",
+            "sha256": "93E36BB1DF1ECAA7E0178D9C72C40D0F71B6230BC8C4E08B895722681E035984"
+          },
+          "log": {
+            "bytes": 49915,
+            "path": "builds/sheaves.log",
+            "sha256": "8294D61F168C6CBC27EA6FCD2048A4ED63183E479F15B70BD83CD27BF2DC3809"
+          },
+          "pass3_stdout": {
+            "bytes": 35701,
+            "path": "builds/sheaves.pass3.txt",
+            "sha256": "755074FC6714D64026EF35349A28029B4958B96ECC4A6F18577A0D617AC138CA"
+          },
+          "pdf": {
+            "bytes": 646236,
+            "path": "builds/sheaves.pdf",
+            "sha256": "82735EA8B30BB6F4180C39F08E24B60FB2BF543E9D4748C191A166B82D34EA19"
+          }
+        },
+        "source": {
+          "bytes": 185216,
+          "path": "sheaves.tex",
+          "sha256": "4BE9C5E7F7E5DD7E66980439856D1385188AE49CB7236822CD88259534837E51"
+        }
+      },
+      "sites": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "sites.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 104457,
+            "stdout_sha256_raw": "A6D7D3C606E23897D00B6DD2DEB13B975C3C0558573F898C0034F1B8783688B7"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "sites"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 142,
+            "stdout_sha256_raw": "67FDE235FB92D46C5D49F32141022B75BF8DE21A0FD654388AD5AACD7FFD492F"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "sites.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 47969,
+            "stdout_sha256_raw": "166C56F9405BABCF971A295C5A0234004706B17C9499A0B43D3500551938E8ED"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "sites.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 46041,
+            "stdout_sha256_raw": "52E305E6C47AFC03F1CB810F9AD5E6EE1785CDBC4A2EE2E0D6228BE524DE06B7"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 142,
+            "path": "builds/sites.bibtex.txt",
+            "sha256": "67FDE235FB92D46C5D49F32141022B75BF8DE21A0FD654388AD5AACD7FFD492F"
+          },
+          "log": {
+            "bytes": 59629,
+            "path": "builds/sites.log",
+            "sha256": "8B4AA8C703FCA6E9F496D02FEF280C6A2F82C53B7F8F3BF2A15370C080F0C4BF"
+          },
+          "pass3_stdout": {
+            "bytes": 45647,
+            "path": "builds/sites.pass3.txt",
+            "sha256": "83DED5DCF005059D96FB53F956993061250F1D5BF4350276B041543C1A8025AB"
+          },
+          "pdf": {
+            "bytes": 1167337,
+            "path": "builds/sites.pdf",
+            "sha256": "4408C7EE0E2E611BA63C510D8F445F45987B9643D3CD8A2880DF20C701C1A720"
+          }
+        },
+        "source": {
+          "bytes": 424285,
+          "path": "sites.tex",
+          "sha256": "42A020E458451BDD9EC704813D50A435DC47F2B6778830AF49FC22FE57308DE4"
+        }
+      },
+      "topology": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "topology.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 64072,
+            "stdout_sha256_raw": "1024A4BF329EE23CF61F86DC4D3AE3E5D5F7681813E4E0A2A4C77E5C80D9106C"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "topology"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 145,
+            "stdout_sha256_raw": "8FEFD69AECFB5B8563CE82B1C038CB9D926796AAA327C58EA2EF0395D3DF0C85"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "topology.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 37327,
+            "stdout_sha256_raw": "C3EAB19CE51363772F8BBEE08C7113F493BAE7680AEFD0A1B7F7D0F8F28E2F2C"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "topology.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 36066,
+            "stdout_sha256_raw": "0EDDDA3107F90C6BE9D72F9DBFBE3EA0660739785C29E8C19A2326E0EE1BD515"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 145,
+            "path": "builds/topology.bibtex.txt",
+            "sha256": "8FEFD69AECFB5B8563CE82B1C038CB9D926796AAA327C58EA2EF0395D3DF0C85"
+          },
+          "log": {
+            "bytes": 49889,
+            "path": "builds/topology.log",
+            "sha256": "E4B6693C54271AC446072B5EAEFA9E02FC0B0BA8735C39B500FF5BABC749F358"
+          },
+          "pass3_stdout": {
+            "bytes": 35702,
+            "path": "builds/topology.pass3.txt",
+            "sha256": "C5CF13ABB8442529745CA9161B7A37721D2D70AF538DEA2130E369D0982ABA25"
+          },
+          "pdf": {
+            "bytes": 776502,
+            "path": "builds/topology.pdf",
+            "sha256": "08600BB6D7CD2D01C089B7DE39FA786C21FA3E5D0227D8B24AB26E9F01F59DED"
+          }
+        },
+        "source": {
+          "bytes": 237976,
+          "path": "topology.tex",
+          "sha256": "3930165144FC253AD47EB55B6E3FD81AD9996D9C4A8FFFB515116988492DCB73"
+        }
+      }
+    }
+  },
+  "completed_at_utc": "2026-08-22T05:45:57Z",
+  "passed": true,
+  "restored_authority_inputs": {
+    "sheaves.tex": {
+      "bytes": 184841,
+      "path": "sheaves.tex",
+      "sha256": "AC4F9EDC7DB85E66329806EC9EA42816187A469772844BAEA663E1C9A9F00B38"
+    },
+    "sites.tex": {
+      "bytes": 424197,
+      "path": "sites.tex",
+      "sha256": "07AE4690C2D8EB6873837D3D14A37F07408BB14F9E0BE6077ED570C220B1845D"
+    },
+    "topology.tex": {
+      "bytes": 237731,
+      "path": "topology.tex",
+      "sha256": "C6BAC8DCF8AD96DC47416BF34CB45BA4A10B894E40D67D3E1FA68D8EF0D9F872"
+    }
+  },
+  "schema": "mathematics-commons-stacks-errata-build-execution/v1",
+  "source_date_epoch": "1785270512",
+  "started_at_utc": "2026-08-22T05:45:20Z",
+  "tools": {
+    "bibtex": "MiKTeX-BibTeX 4.2 (MiKTeX 26.5)",
+    "pdflatex": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5)",
+    "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]"
+  },
+  "work_root": "new empty task-local directory outside source and candidate; exact local path retained only in private evidence"
+}

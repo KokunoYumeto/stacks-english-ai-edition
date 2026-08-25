@@ -1,0 +1,372 @@
+{
+  "schema": "mathematics-commons-stacks-errata-candidate-config/v1",
+  "candidate_id": "stacks-errata-a04446e-r4",
+  "lease_id": "stacks-lease-000007-errata-r4",
+  "writer_task": "01a0256d-5693-77c1-96b2-cf37101e0c6c",
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "source_date_epoch": "1785270512",
+  "expected_unit_ids": [
+    "MC-STK-ERR-0063",
+    "MC-STK-ERR-0064",
+    "MC-STK-ERR-0065",
+    "MC-STK-ERR-0066",
+    "MC-STK-ERR-0067",
+    "MC-STK-ERR-0068",
+    "MC-STK-ERR-0069",
+    "MC-STK-ERR-0070",
+    "MC-STK-ERR-0071",
+    "MC-STK-ERR-0072",
+    "MC-STK-ERR-0073",
+    "MC-STK-ERR-0074",
+    "MC-STK-ERR-0075",
+    "MC-STK-ERR-0076",
+    "MC-STK-ERR-0077",
+    "MC-STK-ERR-0078",
+    "MC-STK-ERR-0079",
+    "MC-STK-ERR-0080",
+    "MC-STK-ERR-0081",
+    "MC-STK-ERR-0082",
+    "MC-STK-ERR-0083",
+    "MC-STK-ERR-0084",
+    "MC-STK-ERR-0085",
+    "MC-STK-ERR-0086",
+    "MC-STK-ERR-0087",
+    "MC-STK-ERR-0088",
+    "MC-STK-ERR-0089",
+    "MC-STK-ERR-0090",
+    "MC-STK-ERR-0091",
+    "MC-STK-ERR-0092",
+    "MC-STK-ERR-0093",
+    "MC-STK-ERR-0094",
+    "MC-STK-ERR-0095",
+    "MC-STK-ERR-0096",
+    "MC-STK-ERR-0097",
+    "MC-STK-ERR-0098",
+    "MC-STK-ERR-0099",
+    "MC-STK-ERR-0100",
+    "MC-STK-ERR-0101",
+    "MC-STK-ERR-0102",
+    "MC-STK-ERR-0103",
+    "MC-STK-ERR-0104",
+    "MC-STK-ERR-0105",
+    "MC-STK-ERR-0106",
+    "MC-STK-ERR-0107",
+    "MC-STK-ERR-0108",
+    "MC-STK-ERR-0109",
+    "MC-STK-ERR-0110",
+    "MC-STK-ERR-0111",
+    "MC-STK-ERR-0112",
+    "MC-STK-ERR-0113",
+    "MC-STK-ERR-0114",
+    "MC-STK-ERR-0115",
+    "MC-STK-ERR-0116",
+    "MC-STK-ERR-0117",
+    "MC-STK-ERR-0118",
+    "MC-STK-ERR-0119",
+    "MC-STK-ERR-0120",
+    "MC-STK-ERR-0121",
+    "MC-STK-ERR-0122",
+    "MC-STK-ERR-0123",
+    "MC-STK-ERR-0124",
+    "MC-STK-ERR-0125",
+    "MC-STK-ERR-0126",
+    "MC-STK-ERR-0127",
+    "MC-STK-ERR-0128",
+    "MC-STK-ERR-0129",
+    "MC-STK-ERR-0130",
+    "MC-STK-ERR-0131",
+    "MC-STK-ERR-0132",
+    "MC-STK-ERR-0133",
+    "MC-STK-ERR-0134",
+    "MC-STK-ERR-0135",
+    "MC-STK-ERR-0136",
+    "MC-STK-ERR-0137",
+    "MC-STK-ERR-0138",
+    "MC-STK-ERR-0139",
+    "MC-STK-ERR-0140",
+    "MC-STK-ERR-0141",
+    "MC-STK-ERR-0142",
+    "MC-STK-ERR-0143",
+    "MC-STK-ERR-0144",
+    "MC-STK-ERR-0145",
+    "MC-STK-ERR-0146",
+    "MC-STK-ERR-0147",
+    "MC-STK-ERR-0148",
+    "MC-STK-ERR-0149",
+    "MC-STK-ERR-0150",
+    "MC-STK-ERR-0151",
+    "MC-STK-ERR-0152",
+    "MC-STK-ERR-0153",
+    "MC-STK-ERR-0154",
+    "MC-STK-ERR-0155",
+    "MC-STK-ERR-0156",
+    "MC-STK-ERR-0157",
+    "MC-STK-ERR-0158",
+    "MC-STK-ERR-0159",
+    "MC-STK-ERR-0160",
+    "MC-STK-ERR-0161",
+    "MC-STK-ERR-0162",
+    "MC-STK-ERR-0163",
+    "MC-STK-ERR-0164",
+    "MC-STK-ERR-0165",
+    "MC-STK-ERR-0166",
+    "MC-STK-ERR-0167",
+    "MC-STK-ERR-0168",
+    "MC-STK-ERR-0169",
+    "MC-STK-ERR-0170",
+    "MC-STK-ERR-0171",
+    "MC-STK-ERR-0172",
+    "MC-STK-ERR-0173",
+    "MC-STK-ERR-0174",
+    "MC-STK-ERR-0175",
+    "MC-STK-ERR-0176",
+    "MC-STK-ERR-0177",
+    "MC-STK-ERR-0178",
+    "MC-STK-ERR-0179",
+    "MC-STK-ERR-0180",
+    "MC-STK-ERR-0181",
+    "MC-STK-ERR-0182",
+    "MC-STK-ERR-0183",
+    "MC-STK-ERR-0184",
+    "MC-STK-ERR-0185",
+    "MC-STK-ERR-0186",
+    "MC-STK-ERR-0187",
+    "MC-STK-ERR-0188",
+    "MC-STK-ERR-0189",
+    "MC-STK-ERR-0190",
+    "MC-STK-ERR-0191",
+    "MC-STK-ERR-0192",
+    "MC-STK-ERR-0193",
+    "MC-STK-ERR-0194",
+    "MC-STK-ERR-0195",
+    "MC-STK-ERR-0196",
+    "MC-STK-ERR-0197",
+    "MC-STK-ERR-0198",
+    "MC-STK-ERR-0199",
+    "MC-STK-ERR-0200",
+    "MC-STK-ERR-0201",
+    "MC-STK-ERR-0202",
+    "MC-STK-ERR-0203",
+    "MC-STK-ERR-0204",
+    "MC-STK-ERR-0205",
+    "MC-STK-ERR-0206",
+    "MC-STK-ERR-0207",
+    "MC-STK-ERR-0208",
+    "MC-STK-ERR-0209",
+    "MC-STK-ERR-0210",
+    "MC-STK-ERR-0211",
+    "MC-STK-ERR-0212",
+    "MC-STK-ERR-0213",
+    "MC-STK-ERR-0214",
+    "MC-STK-ERR-0215",
+    "MC-STK-ERR-0216"
+  ],
+  "operation_count": 189,
+  "stems": {
+    "topology": {
+      "authority_sha256": "C6BAC8DCF8AD96DC47416BF34CB45BA4A10B894E40D67D3E1FA68D8EF0D9F872",
+      "payload_sha256": "3930165144FC253AD47EB55B6E3FD81AD9996D9C4A8FFFB515116988492DCB73",
+      "authority_bytes": 237731,
+      "payload_bytes": 237976,
+      "display_delimiter_delta": 2,
+      "ordered_structure_exceptions": {}
+    },
+    "sheaves": {
+      "authority_sha256": "AC4F9EDC7DB85E66329806EC9EA42816187A469772844BAEA663E1C9A9F00B38",
+      "payload_sha256": "4BE9C5E7F7E5DD7E66980439856D1385188AE49CB7236822CD88259534837E51",
+      "authority_bytes": 184841,
+      "payload_bytes": 185216,
+      "display_delimiter_delta": 0,
+      "ordered_structure_exceptions": {}
+    },
+    "sites": {
+      "authority_sha256": "07AE4690C2D8EB6873837D3D14A37F07408BB14F9E0BE6077ED570C220B1845D",
+      "payload_sha256": "42A020E458451BDD9EC704813D50A435DC47F2B6778830AF49FC22FE57308DE4",
+      "authority_bytes": 424197,
+      "payload_bytes": 424285,
+      "display_delimiter_delta": 0,
+      "ordered_structure_exceptions": {
+        "citations": [
+          {
+            "index_0based": 5,
+            "authority": "\\cite[Expos\\'e III, Proposition 4.9.4]{SGA4}",
+            "payload": "\\cite[Expos\\'e IV, Proposition 4.9.4]{SGA4}",
+            "producer_id": "SITES-061",
+            "stable_id": "MC-STK-ERR-0190"
+          }
+        ]
+      }
+    }
+  },
+  "authority_evidence": [
+    {
+      "path": "authority/canon/ERRATA_R4_PROOF_CLOSURE_20260822.json",
+      "bytes": 8378,
+      "sha256": "D54B9F84807B48BD3DA6AA20EDC7A6C9EFE4973256C1E383542C4CBF4A9D068D"
+    },
+    {
+      "path": "authority/canon/EVIDENCE_SOURCE_BINDINGS.json",
+      "bytes": 14891,
+      "sha256": "9E68F85830491877D28FD511E4B7E704980E9DC17924E540404767A7D08B7128"
+    },
+    {
+      "path": "authority/canon/mappings/R4_SHEAVES_MAPPING.json",
+      "bytes": 78923,
+      "sha256": "84081DED9ED4AF08876BB60E4210EE3BDE22E198EA70C491506A8A9E348E3469"
+    },
+    {
+      "path": "authority/canon/mappings/R4_SITES_MAPPING.json",
+      "bytes": 91840,
+      "sha256": "D43CA3D252DF358AB4ADF2DF19634FF6D6976893245D841F55243EEDD1A92198"
+    },
+    {
+      "path": "authority/canon/mappings/R4_TOPOLOGY_MAPPING.json",
+      "bytes": 23653,
+      "sha256": "8D21D0014443991C934236109EB0327370B379D91304D98D77F18C64F8DEC149"
+    },
+    {
+      "path": "authority/canon/reviews/R4_REVIEW_COVERAGE_THROUGH_072.json",
+      "bytes": 24447,
+      "sha256": "9E0DAF03D820236BD8A46896562074CB8F9B23DE60D8C9781839F2894F381D31"
+    },
+    {
+      "path": "authority/canon/reviews/R4_SHEAVES_001_023_INDEPENDENT_REVIEW.md",
+      "bytes": 23346,
+      "sha256": "AF98A564B72ACD516FEE0EDCB99397F913347D98A3846B8782E5AD313F39517F"
+    },
+    {
+      "path": "authority/canon/reviews/R4_SHEAVES_024_051_INDEPENDENT_REVIEW.md",
+      "bytes": 27431,
+      "sha256": "9B0E7CD2AA18ED7AB2DDBB1DF6A495139A02B1F0939AFDB73EA35DF089B9B198"
+    },
+    {
+      "path": "authority/canon/reviews/R4_SHEAVES_052_080_INDEPENDENT_REVIEW.md",
+      "bytes": 27416,
+      "sha256": "A88E29B01CC0280730D958938A189A3BFC7B14F87212160AF8C68BE77275C40F"
+    },
+    {
+      "path": "authority/canon/reviews/R4_SITES_001_004_INDEPENDENT_REVIEW.md",
+      "bytes": 6439,
+      "sha256": "7479F46119A4E095EE1816CE40B644CFC213BDBF170578A30D5F62B5AACA1834"
+    },
+    {
+      "path": "authority/canon/reviews/R4_SITES_005_009_INDEPENDENT_REVIEW.md",
+      "bytes": 7420,
+      "sha256": "5BC9E0E10B446E37F7009C660042D8AC3EA0869A27E66F01932D96B2F4740B00"
+    },
+    {
+      "path": "authority/canon/reviews/R4_SITES_010_012_INDEPENDENT_REVIEW.md",
+      "bytes": 6760,
+      "sha256": "7D9A7271D81C089167CAF9BA94C3813E411C9D750FA163DAC86A9D76F1B7EF8B"
+    },
+    {
+      "path": "authority/canon/reviews/R4_SITES_013_INDEPENDENT_REVIEW.md",
+      "bytes": 3572,
+      "sha256": "7C1986D50ABBAAF6E0E88E70A792EBA9D2ADFDF630986E00410CF31E7CDFCD3C"
+    },
+    {
+      "path": "authority/canon/reviews/R4_SITES_014_024_INDEPENDENT_REVIEW.md",
+      "bytes": 12936,
+      "sha256": "50A02979FCD221B41F68EB612D9D00D853313A779EF13AD06132B4AB1F19E72A"
+    },
+    {
+      "path": "authority/canon/reviews/R4_SITES_025_028_INDEPENDENT_REVIEW.md",
+      "bytes": 5843,
+      "sha256": "9D47F4D513B094E1536D84695EF948D2F2DE6A87E7DB59317FBB545D7C79BD8E"
+    },
+    {
+      "path": "authority/canon/reviews/R4_SITES_029_033_INDEPENDENT_REVIEW.md",
+      "bytes": 6760,
+      "sha256": "3F0B4A822685B11DCCA4F4E88F66BF93A920BFB961FE8DC7D3CD8F013A4A60D4"
+    },
+    {
+      "path": "authority/canon/reviews/R4_SITES_034_039_INDEPENDENT_REVIEW.md",
+      "bytes": 6598,
+      "sha256": "E1D8C8605A45A5C22277C9E938162448D15F7DB7B8E1D8C37015AD4E2002FDEF"
+    },
+    {
+      "path": "authority/canon/reviews/R4_SITES_040_INDEPENDENT_REVIEW.md",
+      "bytes": 5884,
+      "sha256": "5BD3B9CD23B49C2DDAC33141BC268CB748321EC3A20269EF99FBE28101FA6A7B"
+    },
+    {
+      "path": "authority/canon/reviews/R4_SITES_041_042_DEDUP_REVIEW.md",
+      "bytes": 6907,
+      "sha256": "E84F4D4E327452F67060D0ADBAE2626DFCCAD0DFA649B5F9AD04CAEFB85884B8"
+    },
+    {
+      "path": "authority/canon/reviews/R4_SITES_043_047_INDEPENDENT_REVIEW.md",
+      "bytes": 6621,
+      "sha256": "D24E21C3C2D5C4E03DA0E19B822AF7B8E065805618CC2C48E3C6EB5F782A1D5D"
+    },
+    {
+      "path": "authority/canon/reviews/R4_SITES_048_056_INDEPENDENT_REVIEW.md",
+      "bytes": 10987,
+      "sha256": "D98A157FCF799C5B67C8855078E65B5BDF46F7019F314280883F0FC36D74D5FA"
+    },
+    {
+      "path": "authority/canon/reviews/R4_SITES_057_064_INDEPENDENT_REVIEW.md",
+      "bytes": 8978,
+      "sha256": "92C166DC785C51AA790C2654C97042C16858A66AB347F7D7C2AE7A38D2C05AD2"
+    },
+    {
+      "path": "authority/canon/reviews/R4_SITES_065_072_INDEPENDENT_REVIEW.md",
+      "bytes": 9730,
+      "sha256": "F4D3C3EEEC980A3E27675FA4A9C54582FBCEC3D184531DAE967ADD13CAFADB3F"
+    },
+    {
+      "path": "authority/canon/reviews/R4_SITES_073_075_INDEPENDENT_REVIEW.md",
+      "bytes": 6280,
+      "sha256": "ADF2E9FE7E3FAA457D5089AC65C29A730BD9BF4B5EBE5504712D2BEEF042B7EF"
+    },
+    {
+      "path": "authority/canon/reviews/R4_SITES_073_COUNTEREXAMPLE_REPLAY.json",
+      "bytes": 3241,
+      "sha256": "D89F7BF8681A3B356664A978BAE875E08DF6C5589AFA2DD641D1BD896DF6EF7A"
+    },
+    {
+      "path": "authority/canon/reviews/R4_TOPOLOGY_024_040_INDEPENDENT_REVIEW.md",
+      "bytes": 26017,
+      "sha256": "2639A94DEAF412346A5A980B8F5AAC553167C80AA69AF62C728F3FAE46DD5F41"
+    },
+    {
+      "path": "authority/COPYING",
+      "bytes": 20404,
+      "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"
+    },
+    {
+      "path": "authority/producer/SOURCE_DEFECT_LEDGER.csv",
+      "bytes": 83931,
+      "sha256": "95BE5532E3897A2789195478B6B14D31F8A5FF2DA1610C201993F93FD21D22C8"
+    },
+    {
+      "path": "authority/source/sheaves.tex",
+      "bytes": 184841,
+      "sha256": "AC4F9EDC7DB85E66329806EC9EA42816187A469772844BAEA663E1C9A9F00B38"
+    },
+    {
+      "path": "authority/source/sites.tex",
+      "bytes": 424197,
+      "sha256": "07AE4690C2D8EB6873837D3D14A37F07408BB14F9E0BE6077ED570C220B1845D"
+    },
+    {
+      "path": "authority/source/topology.tex",
+      "bytes": 237731,
+      "sha256": "C6BAC8DCF8AD96DC47416BF34CB45BA4A10B894E40D67D3E1FA68D8EF0D9F872"
+    },
+    {
+      "path": "authority/upstream.lock.json",
+      "bytes": 1171,
+      "sha256": "B195ECC83AB0F32C574A60D1FDBA9B0DA4D35B04E0DF7CB106DC9C0FDAD99C0D"
+    }
+  ],
+  "proof_closure": {
+    "producer_rows": 172,
+    "unique_corrections": 170,
+    "accepted": 154,
+    "rejected": 16,
+    "duplicates": 2,
+    "unresolved": 0
+  }
+}

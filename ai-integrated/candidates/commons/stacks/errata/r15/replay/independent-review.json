@@ -1,0 +1,166 @@
+{
+  "schema": "mathematics-commons-stacks-errata-independent-review/v1",
+  "candidate_id": "stacks-errata-a04446e-r15",
+  "review_kind": "independent_adverse_replay",
+  "recorded_at_utc": "2026-08-25T00:33:14Z",
+  "result": "PASS",
+  "conclusion": "UNCONDITIONAL PASS",
+  "passed": true,
+  "pass_is_unconditional": true,
+  "pre_review_manifest_sha256": "2ABEE5954B88DC9293F4B5B0A646898B685BAFC330255CA9A2C3171E39DEA10E",
+  "validation_sha256": "6BDE0F0DFCF53D8B5D1F3F794C3BA3ABE68678B4E03A323B68B48ACBBD9ABF8B",
+  "pre_review_gate": {
+    "passed": true,
+    "check_manifest_exit_code": 0,
+    "candidate_manifest": {
+      "path": "candidate.manifest.json",
+      "bytes": 8632,
+      "sha256": "2ABEE5954B88DC9293F4B5B0A646898B685BAFC330255CA9A2C3171E39DEA10E"
+    },
+    "validation": {
+      "path": "builds/validation.json",
+      "bytes": 2536,
+      "sha256": "6BDE0F0DFCF53D8B5D1F3F794C3BA3ABE68678B4E03A323B68B48ACBBD9ABF8B",
+      "passed": true
+    }
+  },
+  "input_nonmutation": {
+    "passed": true,
+    "file_count_excluding_manifest_and_receipt": 42,
+    "note": "The replay read sealed candidate bytes and wrote only this receipt."
+  },
+  "stable_id_recomputation": {
+    "passed": true,
+    "derivation_rule": "Accepted producer rows map in bounded intake order to consecutive stable IDs; rejected-duplicate rows consume no stable ID.",
+    "explicit_mapping": [
+      {
+        "producer_id": "BRAUER-002",
+        "stable_id": "MC-STK-ERR-0745"
+      },
+      {
+        "producer_id": "BRAUER-003",
+        "stable_id": "MC-STK-ERR-0746"
+      },
+      {
+        "producer_id": "BRAUER-004",
+        "stable_id": "MC-STK-ERR-0747"
+      },
+      {
+        "producer_id": "BRAUER-005",
+        "stable_id": "MC-STK-ERR-0748"
+      },
+      {
+        "producer_id": "BRAUER-006",
+        "stable_id": "MC-STK-ERR-0749"
+      },
+      {
+        "producer_id": "BRAUER-008",
+        "stable_id": "MC-STK-ERR-0750"
+      },
+      {
+        "producer_id": "BRAUER-009",
+        "stable_id": "MC-STK-ERR-0751"
+      },
+      {
+        "producer_id": "BRAUER-010",
+        "stable_id": "MC-STK-ERR-0752"
+      }
+    ],
+    "excluded_producer_ids": [
+      "BRAUER-001",
+      "BRAUER-007"
+    ],
+    "unit_count": 8,
+    "operation_count": 8,
+    "first_id": "MC-STK-ERR-0745",
+    "last_id": "MC-STK-ERR-0752"
+  },
+  "scratch_replay": {
+    "passed": true,
+    "apply_order": "descending_start_byte",
+    "operation_count": 8,
+    "descending_intervals": [
+      [
+        26672,
+        26713
+      ],
+      [
+        24915,
+        24982
+      ],
+      [
+        19882,
+        19940
+      ],
+      [
+        19514,
+        19576
+      ],
+      [
+        17848,
+        18002
+      ],
+      [
+        10259,
+        10286
+      ],
+      [
+        9254,
+        9472
+      ],
+      [
+        1838,
+        1917
+      ]
+    ],
+    "authority": {
+      "bytes": 28201,
+      "sha256": "B2504820D769EBE4E9E33B8ADD78753FB30ACA6E8A7F75C8D54DDA885EDCD682"
+    },
+    "output": {
+      "bytes": 28301,
+      "sha256": "4F06D930FDB41AE6F9F4207DA49C2250A63213CD9A7578807466E3E873484096"
+    },
+    "operation_spec_sha256": "EAAFA622F1430B06689CF65C9690FFCA5B74DD1BED549113BAF10A9971B066BA"
+  },
+  "sealed_evidence_verification": {
+    "passed": true,
+    "build_receipt": {
+      "path": "builds/build-receipt.json",
+      "sha256": "EA683DF290D9BE4D66AB5E3C8C7ED10571447AF2ABABD91EFE7DB13D621CF610"
+    },
+    "visual_qa": {
+      "path": "builds/visual-qa.json",
+      "sha256": "6AEA5903D3EC8D6924F24B44784713FF508BA61CCC99CEBAF39542D99190BC01"
+    },
+    "candidate_pdf": {
+      "path": "builds/brauer.pdf",
+      "bytes": 343526,
+      "sha256": "F3BFD649F2DA5C889B96B5EC5A1EF36980A04E61CD0AB8DE4C4EE5756FFEAA40",
+      "pages": 10
+    },
+    "authority_pdf": {
+      "path": "builds/brauer.authority.pdf",
+      "bytes": 343290,
+      "sha256": "3BB40F4A15DE154631CC14900EECD90F12BD59C71F880BC3E2DEF5FC308E0487",
+      "pages": 10
+    },
+    "private_render_manifest": {
+      "bytes": 4398,
+      "sha256": "F1CB4B1D9608974FD819B783F966BF487FE0D26830163F1F1EAF4E8249759D9A",
+      "logical_path": "canon/private_evidence/errata-r15-20260825T0015Z/render-final/render-manifest.json"
+    }
+  },
+  "adverse_observations": [
+    "Standalone candidate and authority builds retain identical cross-chapter unresolved-reference multisets.",
+    "Both PDFs are untagged; this retained accessibility limitation is not misreported as a visual failure.",
+    "All 10 candidate pages and every correction-sensitive locus were inspected without a visual defect."
+  ],
+  "constraints_observed": {
+    "candidate_inputs_mutated": false,
+    "upstream_contacted": false,
+    "persistent_writes": [
+      "replay/independent-review.json"
+    ]
+  }
+}

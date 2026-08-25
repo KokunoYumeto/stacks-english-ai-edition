@@ -1,0 +1,244 @@
+{
+  "schema": "stacks-english-ai-r4-proof-closure/v1",
+  "closed_at": "2026-08-22T07:10:14+02:00",
+  "queue": "r4",
+  "authority": {
+    "repository": "stacks/stacks-project",
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+    "files": [
+      {
+        "path": "topology.tex",
+        "sha256": "C6BAC8DCF8AD96DC47416BF34CB45BA4A10B894E40D67D3E1FA68D8EF0D9F872"
+      },
+      {
+        "path": "sheaves.tex",
+        "sha256": "AC4F9EDC7DB85E66329806EC9EA42816187A469772844BAEA663E1C9A9F00B38"
+      },
+      {
+        "path": "sites.tex",
+        "bytes": 424197,
+        "lines": 11860,
+        "sha256": "07AE4690C2D8EB6873837D3D14A37F07408BB14F9E0BE6077ED570C220B1845D"
+      }
+    ]
+  },
+  "lease": {
+    "id": "stacks-lease-000007-errata-r4",
+    "namespace": "commons/stacks/errata/r4",
+    "pointer_path": "canon/mathematics-commons-stacks/candidates/commons/stacks/errata/r4/LEASE.json",
+    "pointer_bytes": 448,
+    "pointer_sha256": "E65172F3FF5FC771CB32D5E28D7C4772645BD0C7772EBC70B749A5D2A69F026E",
+    "state": "active"
+  },
+  "producer_evidence": {
+    "lane": "French Stacks",
+    "source_task": "019f7111-d8de-75f1-8068-7c04db810882",
+    "current_ledger_path": "<LOCAL_WORKSPACE>/03_projects/language_management/romance/03_working_translations/stacks_fr_20260821/00_control/SOURCE_DEFECT_LEDGER.csv",
+    "current_ledger_bytes": 83931,
+    "current_ledger_rows": 206,
+    "current_ledger_sha256": "95BE5532E3897A2789195478B6B14D31F8A5FF2DA1610C201993F93FD21D22C8",
+    "binding_method": "each received packet was frozen in an append-only intake against its exact intermediate ledger bytes/hash and prior-prefix identity; live later rows cannot rewrite an earlier intake"
+  },
+  "disposition": {
+    "producer_rows": 172,
+    "unique_correction_identities": 170,
+    "accepted_unique_corrections": 154,
+    "rejected_unique_hypotheses": 16,
+    "duplicate_producer_rows": 2,
+    "deferred": 0,
+    "unresolved": 0,
+    "planned_stable_id_range_if_candidate_replay_passes": "MC-STK-ERR-0063..MC-STK-ERR-0216"
+  },
+  "families": [
+    {
+      "family": "TOPOLOGY",
+      "producer_id_scope": "TOPOLOGY-024..TOPOLOGY-040",
+      "producer_rows": 17,
+      "unique_correction_identities": 17,
+      "accepted": 14,
+      "accepted_id_ranges": [
+        "TOPOLOGY-024..TOPOLOGY-036",
+        "TOPOLOGY-039"
+      ],
+      "rejected": 3,
+      "rejected_ids": [
+        "TOPOLOGY-037",
+        "TOPOLOGY-038",
+        "TOPOLOGY-040"
+      ],
+      "duplicates": 0,
+      "deferred": 0
+    },
+    {
+      "family": "SHEAVES",
+      "producer_id_scope": "SHEAVES-001..SHEAVES-080",
+      "producer_rows": 80,
+      "unique_correction_identities": 80,
+      "accepted": 71,
+      "accepted_id_ranges": [
+        "SHEAVES-002..SHEAVES-014",
+        "SHEAVES-016..SHEAVES-020",
+        "SHEAVES-024..SHEAVES-052",
+        "SHEAVES-054..SHEAVES-055",
+        "SHEAVES-058..SHEAVES-071",
+        "SHEAVES-073..SHEAVES-080"
+      ],
+      "rejected": 9,
+      "rejected_ids": [
+        "SHEAVES-001",
+        "SHEAVES-015",
+        "SHEAVES-021",
+        "SHEAVES-022",
+        "SHEAVES-023",
+        "SHEAVES-053",
+        "SHEAVES-056",
+        "SHEAVES-057",
+        "SHEAVES-072"
+      ],
+      "duplicates": 0,
+      "deferred": 0
+    },
+    {
+      "family": "SITES",
+      "producer_id_scope": "SITES-001..SITES-075",
+      "producer_rows": 75,
+      "unique_correction_identities": 73,
+      "accepted": 69,
+      "accepted_rule": "all SITES-001..075 except the rejected IDs and duplicate aliases listed below",
+      "rejected": 4,
+      "rejected_ids": [
+        "SITES-003",
+        "SITES-034",
+        "SITES-039",
+        "SITES-063"
+      ],
+      "duplicate_aliases": [
+        {
+          "producer_id": "SITES-041",
+          "canonical_existing_id": "SITES-011"
+        },
+        {
+          "producer_id": "SITES-042",
+          "canonical_existing_id": "SITES-013"
+        }
+      ],
+      "duplicates": 2,
+      "deferred": 0
+    }
+  ],
+  "review_artifacts": [
+    {
+      "path": "private/R4_TOPOLOGY_024_040_INDEPENDENT_REVIEW.md",
+      "bytes": 26017,
+      "sha256": "2639A94DEAF412346A5A980B8F5AAC553167C80AA69AF62C728F3FAE46DD5F41"
+    },
+    {
+      "path": "private/R4_SHEAVES_001_023_INDEPENDENT_REVIEW.md",
+      "bytes": 23368,
+      "sha256": "D59ACF2B3B908163F68B91C9A1C0FB5BBDDDE96A542815283591C048DAAE7627"
+    },
+    {
+      "path": "private/R4_SHEAVES_024_051_INDEPENDENT_REVIEW.md",
+      "bytes": 27453,
+      "sha256": "0DD041BE01F1FA06B7BB03BF4E441D5E182899AC88BCF09D61F13FEA1CEBB453"
+    },
+    {
+      "path": "private/R4_SHEAVES_052_080_INDEPENDENT_REVIEW.md",
+      "bytes": 27438,
+      "sha256": "16DEC91974C2CD60DA5B675CB51F5A05AE3363AB702AFB6950FEDA4A6D8FBB8B"
+    },
+    {
+      "path": "private/R4_SITES_001_004_INDEPENDENT_REVIEW.md",
+      "bytes": 6439,
+      "sha256": "7479F46119A4E095EE1816CE40B644CFC213BDBF170578A30D5F62B5AACA1834"
+    },
+    {
+      "path": "private/R4_SITES_005_009_INDEPENDENT_REVIEW.md",
+      "bytes": 7420,
+      "sha256": "5BC9E0E10B446E37F7009C660042D8AC3EA0869A27E66F01932D96B2F4740B00"
+    },
+    {
+      "path": "private/R4_SITES_010_012_INDEPENDENT_REVIEW.md",
+      "bytes": 6760,
+      "sha256": "7D9A7271D81C089167CAF9BA94C3813E411C9D750FA163DAC86A9D76F1B7EF8B"
+    },
+    {
+      "path": "private/R4_SITES_013_INDEPENDENT_REVIEW.md",
+      "bytes": 3572,
+      "sha256": "7C1986D50ABBAAF6E0E88E70A792EBA9D2ADFDF630986E00410CF31E7CDFCD3C"
+    },
+    {
+      "path": "private/R4_SITES_014_024_INDEPENDENT_REVIEW.md",
+      "bytes": 12980,
+      "sha256": "647FCFE10745A05D8A0B86F2F82E12278D7011D004E8680D1AA767F43CE7C692"
+    },
+    {
+      "path": "private/R4_SITES_025_028_INDEPENDENT_REVIEW.md",
+      "bytes": 5909,
+      "sha256": "513BD1586CB5E9AACE5466384AF30F7EE7A94A176CBE0411E346760ED49F2B98"
+    },
+    {
+      "path": "private/R4_SITES_029_033_INDEPENDENT_REVIEW.md",
+      "bytes": 6826,
+      "sha256": "6E10C22D512FA3799E534FCB1DF5EBC32DD3EFB146B7950189657BE126DD1CD5"
+    },
+    {
+      "path": "private/R4_SITES_034_039_INDEPENDENT_REVIEW.md",
+      "bytes": 6664,
+      "sha256": "20776352B0C6EFA02B7DB76078A752DD172694D0F371ED0FC3667FB0CED48BB3"
+    },
+    {
+      "path": "private/R4_SITES_040_INDEPENDENT_REVIEW.md",
+      "bytes": 5950,
+      "sha256": "4DB2115463F9F1C757D20A9DF44201F40EDBEC4BC8BB09F3CFAEF9082BDF2721"
+    },
+    {
+      "path": "private/R4_SITES_041_042_DEDUP_REVIEW.md",
+      "bytes": 6907,
+      "sha256": "E84F4D4E327452F67060D0ADBAE2626DFCCAD0DFA649B5F9AD04CAEFB85884B8"
+    },
+    {
+      "path": "private/R4_SITES_043_047_INDEPENDENT_REVIEW.md",
+      "bytes": 6687,
+      "sha256": "394C0E807CF81B540DEAB6962ECA13D14DF0CF51FAEC37B24DC513CBC920A848"
+    },
+    {
+      "path": "private/R4_SITES_048_056_INDEPENDENT_REVIEW.md",
+      "bytes": 11031,
+      "sha256": "B8B8FBB9A054460573FE575BBB8F2F97679C4AC7A7D73CB96D74040C3F4C04B4"
+    },
+    {
+      "path": "private/R4_SITES_057_064_INDEPENDENT_REVIEW.md",
+      "bytes": 8978,
+      "sha256": "92C166DC785C51AA790C2654C97042C16858A66AB347F7D7C2AE7A38D2C05AD2"
+    },
+    {
+      "path": "private/R4_SITES_065_072_INDEPENDENT_REVIEW.md",
+      "bytes": 9796,
+      "sha256": "12ACB0B9AB15554EEB47BEED4224464F94BF09FFEA54D8363EB29F8FB72D1C4A"
+    },
+    {
+      "path": "private/R4_SITES_073_075_INDEPENDENT_REVIEW.md",
+      "bytes": 6280,
+      "sha256": "ADF2E9FE7E3FAA457D5089AC65C29A730BD9BF4B5EBE5504712D2BEEF042B7EF"
+    }
+  ],
+  "additional_replay_evidence": [
+    {
+      "path": "private/R4_SITES_073_COUNTEREXAMPLE_REPLAY.json",
+      "bytes": 2619,
+      "sha256": "7887AF150D18FCA6B2DF7E6C4C1352D9F0D9442B0C3A7F49AC7D4E3A222F01A8",
+      "role": "direct finite replay, separately reproduced by the independent review"
+    }
+  ],
+  "closure": {
+    "proof_phase_complete": true,
+    "candidate_construction_authorized_by_evidence": true,
+    "overlay_admitted": false,
+    "canonical_translation_changed": false,
+    "frozen_upstream_changed": false,
+    "upstream_contacted": false,
+    "next_action": "Assign stable IDs in family/source order, generate exact corrected payloads and proof/source maps, build authority and candidate chapters, visually inspect changed pages, run an independent manifest replay, then publish the candidate and admit it in separate commits if every gate passes."
+  }
+}

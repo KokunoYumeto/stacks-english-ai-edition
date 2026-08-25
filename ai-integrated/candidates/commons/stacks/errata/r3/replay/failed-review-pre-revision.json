@@ -1,0 +1,2570 @@
+{
+  "adverse_evidence": [
+    {
+      "authority_loci": [
+        "sets.tex:1027-1031",
+        "sets.tex:1073-1089"
+      ],
+      "consequence": "The one-line payload correction is not proof-closed; a linked correction at the recursion or a redesigned ordinal argument is required.",
+      "finding": "Recursion clause (3) sends an input in Cov_{kappa,alpha} to Cov_{kappa,f(alpha+1)}. beta(U) supplies only U in Cov_{kappa,f(beta(U))}. Applying clause (3) at alpha=f(beta(U)) yields f(f(beta(U))+1), not the payload's f(beta(U)+1), and no bound of the former by f(beta2) is proved.",
+      "severity": "blocking",
+      "unit_id": "MC-STK-ERR-0030"
+    },
+    {
+      "authority_loci": [
+        "sets.tex:1019-1026",
+        "sets.tex:1092-1104"
+      ],
+      "consequence": "A beta below beta2 can be chosen after adjoining beta(U) to the bounded set, but the frozen payload and proof dossier omit that necessary step; units 0030 and 0031 must be reopened jointly.",
+      "finding": "Recursion clause (2) requires the outer cover and every inner cover in one Cov_{kappa,f(beta)}. Corrected line 1100 bounds only beta(W_i), never beta(U), before line 1102 invokes the clause.",
+      "severity": "blocking_linked_gap",
+      "unit_id": "MC-STK-ERR-0031"
+    },
+    {
+      "finding": "Deleting the literal scaffold is the recorded non-inventive editorial policy, not a unique mathematical completion, and leaves the preceding item ending with a comma.",
+      "severity": "policy_limited",
+      "unit_id": "MC-STK-ERR-0052"
+    },
+    {
+      "finding": "The inverse-conjugate repair is correct for printed right cosets; changing the coset convention would also work. The decision ledger transparently chooses convention preservation.",
+      "severity": "policy_limited",
+      "unit_id": "MC-STK-ERR-0054"
+    },
+    {
+      "finding": "The intake rows FR-R3-TOPOLOGY-009 through FR-R3-TOPOLOGY-013 omit source_id, though their IDs and loci remain unambiguous and bind to producer/proof evidence.",
+      "severity": "metadata_minor"
+    },
+    {
+      "finding": "Both candidate and authority topology pass-3 logs emit one Label(s) may have changed rerun warning. Their warning sets and PDF bytes match, but the warning is preserved rather than suppressed.",
+      "severity": "build_nonblocking"
+    }
+  ],
+  "authority": {
+    "acquisition": {
+      "archive_bytes": 6601240,
+      "archive_sha256": "4FC59A86F1CE43C7D608224D165CB99E7A13B92D4AE892A65DF9B4BF1C477B6F",
+      "computed_git_tree_sha1": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+      "computed_tree_matches_lock": true,
+      "method": "HTTPS codeload ZIP for the locked commit; no Git operation",
+      "url": "https://codeload.github.com/stacks/stacks-project/zip/a04446e57ec1fbc252a871afcec7752fb2807b14"
+    },
+    "archive_source_checks": [
+      {
+        "byte_identical": true,
+        "bytes": 20404,
+        "candidate_mirror_path": "authority/COPYING",
+        "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85",
+        "upstream_path": "COPYING"
+      },
+      {
+        "byte_identical": true,
+        "bytes": 46628,
+        "candidate_mirror_path": "authority/source/sets.tex",
+        "sha256": "9BCC55E7F11CF36B0665AE549D5BA76BE6A0EDD00F7FCA36A567E367099603F9",
+        "upstream_path": "sets.tex"
+      },
+      {
+        "byte_identical": true,
+        "bytes": 237731,
+        "candidate_mirror_path": "authority/source/topology.tex",
+        "sha256": "C6BAC8DCF8AD96DC47416BF34CB45BA4A10B894E40D67D3E1FA68D8EF0D9F872",
+        "upstream_path": "topology.tex"
+      },
+      {
+        "byte_identical": true,
+        "bytes": 350957,
+        "candidate_mirror_path": "authority/source/categories.tex",
+        "sha256": "62F7611AF4C3FEEBD041DB4728B42C7112004CFBB9FA5ECB643C6F5D90DB3F25",
+        "upstream_path": "categories.tex"
+      }
+    ],
+    "candidate_authority_mirror": {
+      "files": 9,
+      "inventory_sha256": "019A3BA3C3E3708043BDD90F394E04800CC4B64399B623B87A0C48A9FEA989B8",
+      "unchanged_against_pre_review_baseline": true
+    },
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "lock": {
+      "bytes": 1171,
+      "path": "authority/upstream.lock.json",
+      "sha256": "B195ECC83AB0F32C574A60D1FDBA9B0DA4D35B04E0DF7CB106DC9C0FDAD99C0D"
+    },
+    "lock_contains_local_filesystem_root": false,
+    "repository": "https://github.com/stacks/stacks-project",
+    "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e"
+  },
+  "candidate_id": "stacks-errata-a04446e-r3",
+  "conclusions": {
+    "all_34_units_byte_reconstructed": "pass",
+    "all_34_units_mathematically_proof_closed": "fail",
+    "authority_commit_tree_and_mirror": "pass",
+    "blocking_units": [
+      "MC-STK-ERR-0030",
+      "MC-STK-ERR-0031"
+    ],
+    "independent_candidate_and_authority_build_replay": "pass",
+    "pdf_mechanics_and_visual_review": "pass",
+    "pre_manifest_schema_and_hashes": "pass",
+    "recommendation": "Do not admit this R3 overlay. Reopen the linked Sets recursion/site argument, revise the candidate and proof evidence, regenerate the pre-review manifest, and perform a fresh independent replay."
+  },
+  "generated_at_utc": "2026-08-22T02:53:48Z",
+  "independent_replay": {
+    "artifacts": [
+      {
+        "byte_identical": true,
+        "fresh_bytes": 449167,
+        "fresh_sha256": "C3BE31B40B4FCF4AAC519C79510AC0E38BB48935CED2802DE736F3102077193F",
+        "frozen_bytes": 449167,
+        "frozen_sha256": "C3BE31B40B4FCF4AAC519C79510AC0E38BB48935CED2802DE736F3102077193F",
+        "path": "builds/sets.pdf"
+      },
+      {
+        "byte_identical": false,
+        "fresh_bytes": 48220,
+        "fresh_sha256": "72C288BCFC00C1AE41D88A7C3FDAEA38A9DEABBF388AFB93B33E893460453E94",
+        "frozen_bytes": 48220,
+        "frozen_sha256": "659F0B0D24282D6295156BC2852F4ED2A737B0B9B201F86DB71DEBCE848925D3",
+        "normalized_byte_identical": true,
+        "path": "builds/sets.log",
+        "sole_difference_class": "TeX terminal string-pool character counter depends on absolute temporary-path length"
+      },
+      {
+        "byte_identical": true,
+        "fresh_bytes": 33847,
+        "fresh_sha256": "78B15BF9A3DA882BF9BEA54184F37FC7CE61279EAB6FC0DFF4599DF313C4D429",
+        "frozen_bytes": 33847,
+        "frozen_sha256": "78B15BF9A3DA882BF9BEA54184F37FC7CE61279EAB6FC0DFF4599DF313C4D429",
+        "path": "builds/sets.pass3.txt"
+      },
+      {
+        "byte_identical": true,
+        "fresh_bytes": 141,
+        "fresh_sha256": "EC7BFEF49E51B36B4DC1D306A1A9841AF289A981FE1D16B3126E0B3F92230602",
+        "frozen_bytes": 141,
+        "frozen_sha256": "EC7BFEF49E51B36B4DC1D306A1A9841AF289A981FE1D16B3126E0B3F92230602",
+        "path": "builds/sets.bibtex.txt"
+      },
+      {
+        "byte_identical": true,
+        "fresh_bytes": 448973,
+        "fresh_sha256": "7B43FF1D59E1F7FAD25BF9E262D936A586A89F61294188C537FF09251534DE45",
+        "frozen_bytes": 448973,
+        "frozen_sha256": "7B43FF1D59E1F7FAD25BF9E262D936A586A89F61294188C537FF09251534DE45",
+        "path": "builds/sets.authority.pdf"
+      },
+      {
+        "byte_identical": false,
+        "fresh_bytes": 48220,
+        "fresh_sha256": "0A3C47CC4894FFAB81FA3BA2CC266B87D8C68AC4B71F258A55791CECCC9C4A4D",
+        "frozen_bytes": 48220,
+        "frozen_sha256": "DD68177BF6A6F20D09E629C47B67F72F8281549948CB3A5E5B0F5EC8F841DC01",
+        "normalized_byte_identical": true,
+        "path": "builds/sets.authority.log",
+        "sole_difference_class": "TeX terminal string-pool character counter depends on absolute temporary-path length"
+      },
+      {
+        "byte_identical": true,
+        "fresh_bytes": 33847,
+        "fresh_sha256": "3D70D5B56111353ABF40CDDFBC188EC197C8F326F157F62E134B867ABDC8D05D",
+        "frozen_bytes": 33847,
+        "frozen_sha256": "3D70D5B56111353ABF40CDDFBC188EC197C8F326F157F62E134B867ABDC8D05D",
+        "path": "builds/sets.authority.pass3.txt"
+      },
+      {
+        "byte_identical": true,
+        "fresh_bytes": 141,
+        "fresh_sha256": "EC7BFEF49E51B36B4DC1D306A1A9841AF289A981FE1D16B3126E0B3F92230602",
+        "frozen_bytes": 141,
+        "frozen_sha256": "EC7BFEF49E51B36B4DC1D306A1A9841AF289A981FE1D16B3126E0B3F92230602",
+        "path": "builds/sets.authority.bibtex.txt"
+      },
+      {
+        "byte_identical": true,
+        "fresh_bytes": 776739,
+        "fresh_sha256": "12D3AAA2FF48760189757D1E6DC951A18446BD72186A0B056AE7B840D8D152B7",
+        "frozen_bytes": 776739,
+        "frozen_sha256": "12D3AAA2FF48760189757D1E6DC951A18446BD72186A0B056AE7B840D8D152B7",
+        "path": "builds/topology.pdf"
+      },
+      {
+        "byte_identical": false,
+        "fresh_bytes": 49780,
+        "fresh_sha256": "D7A3626D8CB0A2BEDD012960B5F0C105DA6F654F0F95D26753BC936708A845ED",
+        "frozen_bytes": 49780,
+        "frozen_sha256": "83BB0859D524716A4A32BF3D5B6A15AC751C9E09D938A4C11168D8C3E70B4717",
+        "normalized_byte_identical": true,
+        "path": "builds/topology.log",
+        "sole_difference_class": "TeX terminal string-pool character counter depends on absolute temporary-path length"
+      },
+      {
+        "byte_identical": true,
+        "fresh_bytes": 35517,
+        "fresh_sha256": "84862AA55C7A5673408BC1C5E8D407822A58474C7047F2D36DD752CCA7ADD20A",
+        "frozen_bytes": 35517,
+        "frozen_sha256": "84862AA55C7A5673408BC1C5E8D407822A58474C7047F2D36DD752CCA7ADD20A",
+        "path": "builds/topology.pass3.txt"
+      },
+      {
+        "byte_identical": true,
+        "fresh_bytes": 145,
+        "fresh_sha256": "8FEFD69AECFB5B8563CE82B1C038CB9D926796AAA327C58EA2EF0395D3DF0C85",
+        "frozen_bytes": 145,
+        "frozen_sha256": "8FEFD69AECFB5B8563CE82B1C038CB9D926796AAA327C58EA2EF0395D3DF0C85",
+        "path": "builds/topology.bibtex.txt"
+      },
+      {
+        "byte_identical": true,
+        "fresh_bytes": 776629,
+        "fresh_sha256": "C0111D47873DE622732C525D93773636961A1D154B58B1341C02DE7F7FD44BE2",
+        "frozen_bytes": 776629,
+        "frozen_sha256": "C0111D47873DE622732C525D93773636961A1D154B58B1341C02DE7F7FD44BE2",
+        "path": "builds/topology.authority.pdf"
+      },
+      {
+        "byte_identical": false,
+        "fresh_bytes": 49780,
+        "fresh_sha256": "968F28A9A08AACCF7BB153E06EC0CC9FEA7ED10D045FB5BCCE76FD8C977B9BE4",
+        "frozen_bytes": 49780,
+        "frozen_sha256": "1EB74CECD94B29F9068AD8BA0C17ABB27F1831104DC0E28C5298331AA9B86AEC",
+        "normalized_byte_identical": true,
+        "path": "builds/topology.authority.log",
+        "sole_difference_class": "TeX terminal string-pool character counter depends on absolute temporary-path length"
+      },
+      {
+        "byte_identical": true,
+        "fresh_bytes": 35517,
+        "fresh_sha256": "D072250864CA99AE2B7E6D7274F43C09A1725E957550DBD486D10C02CA3B5A40",
+        "frozen_bytes": 35517,
+        "frozen_sha256": "D072250864CA99AE2B7E6D7274F43C09A1725E957550DBD486D10C02CA3B5A40",
+        "path": "builds/topology.authority.pass3.txt"
+      },
+      {
+        "byte_identical": true,
+        "fresh_bytes": 145,
+        "fresh_sha256": "8FEFD69AECFB5B8563CE82B1C038CB9D926796AAA327C58EA2EF0395D3DF0C85",
+        "frozen_bytes": 145,
+        "frozen_sha256": "8FEFD69AECFB5B8563CE82B1C038CB9D926796AAA327C58EA2EF0395D3DF0C85",
+        "path": "builds/topology.authority.bibtex.txt"
+      },
+      {
+        "byte_identical": true,
+        "fresh_bytes": 1051562,
+        "fresh_sha256": "6374342AD1EFD455D14EA4C1B1C67B53CB6805F29736F3CF9B3EDE5958E0E6A6",
+        "frozen_bytes": 1051562,
+        "frozen_sha256": "6374342AD1EFD455D14EA4C1B1C67B53CB6805F29736F3CF9B3EDE5958E0E6A6",
+        "path": "builds/categories.pdf"
+      },
+      {
+        "byte_identical": false,
+        "fresh_bytes": 51670,
+        "fresh_sha256": "D7DD59DEEDE45ECB94E3E7F9A9257BC7ACB0CF69A530E9CF31E41725057C12CC",
+        "frozen_bytes": 51670,
+        "frozen_sha256": "8CA87D931CBCA07F56396B35FE9495D4B083B6E7129AF73957F8789A46FD69FA",
+        "normalized_byte_identical": true,
+        "path": "builds/categories.log",
+        "sole_difference_class": "TeX terminal string-pool character counter depends on absolute temporary-path length"
+      },
+      {
+        "byte_identical": true,
+        "fresh_bytes": 37313,
+        "fresh_sha256": "B2F0AB21CCD285C8B296FC4E60916A14A536BCCC22BC902C672D90E0436FCBE1",
+        "frozen_bytes": 37313,
+        "frozen_sha256": "B2F0AB21CCD285C8B296FC4E60916A14A536BCCC22BC902C672D90E0436FCBE1",
+        "path": "builds/categories.pass3.txt"
+      },
+      {
+        "byte_identical": true,
+        "fresh_bytes": 147,
+        "fresh_sha256": "4C043470CE98C5EFE53DA972DC07669180FAAB4579721E6BFB1025173819711A",
+        "frozen_bytes": 147,
+        "frozen_sha256": "4C043470CE98C5EFE53DA972DC07669180FAAB4579721E6BFB1025173819711A",
+        "path": "builds/categories.bibtex.txt"
+      },
+      {
+        "byte_identical": true,
+        "fresh_bytes": 1051549,
+        "fresh_sha256": "DC246D1C7885AED71F458EFD1DAF7B40D0AC02A24F8D69A5EB5D3CEB4080C6BF",
+        "frozen_bytes": 1051549,
+        "frozen_sha256": "DC246D1C7885AED71F458EFD1DAF7B40D0AC02A24F8D69A5EB5D3CEB4080C6BF",
+        "path": "builds/categories.authority.pdf"
+      },
+      {
+        "byte_identical": false,
+        "fresh_bytes": 51670,
+        "fresh_sha256": "CA7CD947DC65467DA72C2FA6B723FEC17C61B25269DB7976FA6E054FA6079BFD",
+        "frozen_bytes": 51670,
+        "frozen_sha256": "9C9179DD65448D34A6898F0D70C6EA47B4F2E3EBB3917D9A03AA7C5B7BF2730A",
+        "normalized_byte_identical": true,
+        "path": "builds/categories.authority.log",
+        "sole_difference_class": "TeX terminal string-pool character counter depends on absolute temporary-path length"
+      },
+      {
+        "byte_identical": true,
+        "fresh_bytes": 37313,
+        "fresh_sha256": "AA2049E9C4C65A50C86C0E3AF0BAC99E16E6060617FE84B04E69C50992E42215",
+        "frozen_bytes": 37313,
+        "frozen_sha256": "AA2049E9C4C65A50C86C0E3AF0BAC99E16E6060617FE84B04E69C50992E42215",
+        "path": "builds/categories.authority.pass3.txt"
+      },
+      {
+        "byte_identical": true,
+        "fresh_bytes": 147,
+        "fresh_sha256": "4C043470CE98C5EFE53DA972DC07669180FAAB4579721E6BFB1025173819711A",
+        "frozen_bytes": 147,
+        "frozen_sha256": "4C043470CE98C5EFE53DA972DC07669180FAAB4579721E6BFB1025173819711A",
+        "path": "builds/categories.authority.bibtex.txt"
+      }
+    ],
+    "authority_input": "locked codeload archive whose computed Git tree matches the lock",
+    "build_conclusion": "pass",
+    "command_recipe": "pdflatex; bibtex; pdflatex; pdflatex, sequentially for sets, topology, categories; candidate then restored authority",
+    "execution_completed_at_utc": "2026-08-22T02:40:48Z",
+    "execution_started_at_utc": "2026-08-22T02:40:11Z",
+    "logs_normalized_identical_to_frozen": true,
+    "non_log_artifacts_byte_identical_to_frozen": true,
+    "raw_log_difference": "Each of the six logs differs only in TeX's terminal string-pool character count (fresh is 744 lower), caused by the different absolute temporary-path length; all warning, page, PDF, and command-output evidence is otherwise identical.",
+    "replay_build_execution": {
+      "bytes": 18957,
+      "path": "<TEMP_ROOT>/replay-r3/builds/build-execution.json",
+      "sha256": "2615D68ED2B73E4FB5362A6BF260C5CBA7AE3507643F96AA4F4C483105552928"
+    },
+    "replay_build_execution_passed": true,
+    "replay_build_receipt": {
+      "bytes": 22142,
+      "path": "<TEMP_ROOT>/replay-r3/builds/build-receipt.json",
+      "sha256": "A981879F6F653621E856490119F1A93FC8463302B31FD1495F0A180ABCAFE02A"
+    },
+    "replay_build_receipt_passed": true,
+    "replay_validation": {
+      "bytes": 13026,
+      "path": "<TEMP_ROOT>/replay-r3/builds/validation.json",
+      "sha256": "E7A6EEDBD35B02C1210ED22D703CF455A23544A783C0BB75223274E7BA56BBBB"
+    },
+    "replay_validation_passed": true,
+    "runner": {
+      "bytes": 11150,
+      "path": "replay-build.py",
+      "sha256": "AE745BF46E56FE89F4E0A6A197245D5F6A64CF536E4DCDA14C33312A8FCC5256"
+    },
+    "source_date_epoch": "1785270512",
+    "tools": {
+      "bibtex": "MiKTeX-BibTeX 4.2 (MiKTeX 26.5)",
+      "pdflatex": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5)",
+      "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]"
+    },
+    "warning_comparisons": [
+      {
+        "authority": {
+          "fatal_markers": 0,
+          "label_rerun_warnings": 0,
+          "overfull_boxes": [],
+          "pages": 14,
+          "reported_pdf_bytes": 448973,
+          "undefined_citation_multiset_sha256": "44136FA355B3678A1146AD16F7E8649E94FB4FC21FE77E8310C060F61CAAFF8A",
+          "undefined_citation_occurrences": 0,
+          "undefined_citation_targets_distinct": 0,
+          "undefined_reference_multiset_sha256": "D7878AF8D803AC1A26C365690E507A3A3433F5D8E60DB301600F221664DFC31E",
+          "undefined_reference_occurrences": 52,
+          "undefined_reference_targets_distinct": 51,
+          "underfull_boxes": []
+        },
+        "candidate": {
+          "fatal_markers": 0,
+          "label_rerun_warnings": 0,
+          "overfull_boxes": [],
+          "pages": 14,
+          "reported_pdf_bytes": 449167,
+          "undefined_citation_multiset_sha256": "44136FA355B3678A1146AD16F7E8649E94FB4FC21FE77E8310C060F61CAAFF8A",
+          "undefined_citation_occurrences": 0,
+          "undefined_citation_targets_distinct": 0,
+          "undefined_reference_multiset_sha256": "D7878AF8D803AC1A26C365690E507A3A3433F5D8E60DB301600F221664DFC31E",
+          "undefined_reference_occurrences": 52,
+          "undefined_reference_targets_distinct": 51,
+          "underfull_boxes": []
+        },
+        "stem": "sets",
+        "warnings_match_authority": true
+      },
+      {
+        "authority": {
+          "fatal_markers": 0,
+          "label_rerun_warnings": 1,
+          "overfull_boxes": [
+            "Overfull \\vbox (1.06696pt too high) has occurred while \\output is active []",
+            "Overfull \\hbox (1.77599pt too wide) in paragraph at lines 1663--1664",
+            "Overfull \\hbox (5.29736pt too wide) in paragraph at lines 2156--2160",
+            "Overfull \\hbox (2.01527pt too wide) detected at line 3488"
+          ],
+          "pages": 64,
+          "reported_pdf_bytes": 776629,
+          "undefined_citation_multiset_sha256": "44136FA355B3678A1146AD16F7E8649E94FB4FC21FE77E8310C060F61CAAFF8A",
+          "undefined_citation_occurrences": 0,
+          "undefined_citation_targets_distinct": 0,
+          "undefined_reference_multiset_sha256": "B27148D981CC797432E53232D0179DA001F86A35151A993E6124E7A0F412D7CA",
+          "undefined_reference_occurrences": 58,
+          "undefined_reference_targets_distinct": 52,
+          "underfull_boxes": []
+        },
+        "candidate": {
+          "fatal_markers": 0,
+          "label_rerun_warnings": 1,
+          "overfull_boxes": [
+            "Overfull \\vbox (1.06696pt too high) has occurred while \\output is active []",
+            "Overfull \\hbox (1.77599pt too wide) in paragraph at lines 1663--1664",
+            "Overfull \\hbox (5.29736pt too wide) in paragraph at lines 2156--2160",
+            "Overfull \\hbox (2.01527pt too wide) detected at line 3488"
+          ],
+          "pages": 64,
+          "reported_pdf_bytes": 776739,
+          "undefined_citation_multiset_sha256": "44136FA355B3678A1146AD16F7E8649E94FB4FC21FE77E8310C060F61CAAFF8A",
+          "undefined_citation_occurrences": 0,
+          "undefined_citation_targets_distinct": 0,
+          "undefined_reference_multiset_sha256": "B27148D981CC797432E53232D0179DA001F86A35151A993E6124E7A0F412D7CA",
+          "undefined_reference_occurrences": 58,
+          "undefined_reference_targets_distinct": 52,
+          "underfull_boxes": []
+        },
+        "stem": "topology",
+        "warnings_match_authority": true
+      },
+      {
+        "authority": {
+          "fatal_markers": 0,
+          "label_rerun_warnings": 0,
+          "overfull_boxes": [
+            "Overfull \\hbox (1.48561pt too wide) in paragraph at lines 3206--3210",
+            "Overfull \\hbox (2.4673pt too wide) in paragraph at lines 3845--3856",
+            "Overfull \\hbox (10.41138pt too wide) in paragraph at lines 8512--8518",
+            "Overfull \\hbox (4.2795pt too wide) in paragraph at lines 9634--9638"
+          ],
+          "pages": 103,
+          "reported_pdf_bytes": 1051549,
+          "undefined_citation_multiset_sha256": "44136FA355B3678A1146AD16F7E8649E94FB4FC21FE77E8310C060F61CAAFF8A",
+          "undefined_citation_occurrences": 0,
+          "undefined_citation_targets_distinct": 0,
+          "undefined_reference_multiset_sha256": "E16A7E5F8ACEA18FCE3C9F14DA96E453F4DE8D88B51F302CE4EC41929A664A22",
+          "undefined_reference_occurrences": 47,
+          "undefined_reference_targets_distinct": 47,
+          "underfull_boxes": []
+        },
+        "candidate": {
+          "fatal_markers": 0,
+          "label_rerun_warnings": 0,
+          "overfull_boxes": [
+            "Overfull \\hbox (1.48561pt too wide) in paragraph at lines 3206--3210",
+            "Overfull \\hbox (2.4673pt too wide) in paragraph at lines 3845--3856",
+            "Overfull \\hbox (10.41138pt too wide) in paragraph at lines 8512--8518",
+            "Overfull \\hbox (4.2795pt too wide) in paragraph at lines 9634--9638"
+          ],
+          "pages": 103,
+          "reported_pdf_bytes": 1051562,
+          "undefined_citation_multiset_sha256": "44136FA355B3678A1146AD16F7E8649E94FB4FC21FE77E8310C060F61CAAFF8A",
+          "undefined_citation_occurrences": 0,
+          "undefined_citation_targets_distinct": 0,
+          "undefined_reference_multiset_sha256": "E16A7E5F8ACEA18FCE3C9F14DA96E453F4DE8D88B51F302CE4EC41929A664A22",
+          "undefined_reference_occurrences": 47,
+          "undefined_reference_targets_distinct": 47,
+          "underfull_boxes": []
+        },
+        "stem": "categories",
+        "warnings_match_authority": true
+      }
+    ],
+    "work_root": "one new explicit temporary directory outside candidate and authority",
+    "work_root_removed_by_runner": true
+  },
+  "manifest_and_evidence_validation": {
+    "all_manifest_reference_hashes_match": true,
+    "decision_rows": 6,
+    "diagram_units": [
+      "MC-STK-ERR-0062"
+    ],
+    "formula_units": 30,
+    "intake_rows": 34,
+    "intake_rows_missing_source_id": [
+      "FR-R3-TOPOLOGY-009",
+      "FR-R3-TOPOLOGY-010",
+      "FR-R3-TOPOLOGY-011",
+      "FR-R3-TOPOLOGY-012",
+      "FR-R3-TOPOLOGY-013"
+    ],
+    "json_schema_draft": "https://json-schema.org/draft/2020-12/schema",
+    "manifest_reference_count": 52,
+    "manifest_references": [
+      {
+        "bytes": 1171,
+        "expected_sha256": "B195ECC83AB0F32C574A60D1FDBA9B0DA4D35B04E0DF7CB106DC9C0FDAD99C0D",
+        "group": "source_authorities",
+        "match": true,
+        "observed_sha256": "B195ECC83AB0F32C574A60D1FDBA9B0DA4D35B04E0DF7CB106DC9C0FDAD99C0D",
+        "path": "authority/upstream.lock.json"
+      },
+      {
+        "bytes": 20404,
+        "expected_sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85",
+        "group": "source_authorities",
+        "match": true,
+        "observed_sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85",
+        "path": "authority/COPYING"
+      },
+      {
+        "bytes": 46628,
+        "expected_sha256": "9BCC55E7F11CF36B0665AE549D5BA76BE6A0EDD00F7FCA36A567E367099603F9",
+        "group": "source_authorities",
+        "match": true,
+        "observed_sha256": "9BCC55E7F11CF36B0665AE549D5BA76BE6A0EDD00F7FCA36A567E367099603F9",
+        "path": "authority/source/sets.tex"
+      },
+      {
+        "bytes": 237731,
+        "expected_sha256": "C6BAC8DCF8AD96DC47416BF34CB45BA4A10B894E40D67D3E1FA68D8EF0D9F872",
+        "group": "source_authorities",
+        "match": true,
+        "observed_sha256": "C6BAC8DCF8AD96DC47416BF34CB45BA4A10B894E40D67D3E1FA68D8EF0D9F872",
+        "path": "authority/source/topology.tex"
+      },
+      {
+        "bytes": 350957,
+        "expected_sha256": "62F7611AF4C3FEEBD041DB4728B42C7112004CFBB9FA5ECB643C6F5D90DB3F25",
+        "group": "source_authorities",
+        "match": true,
+        "observed_sha256": "62F7611AF4C3FEEBD041DB4728B42C7112004CFBB9FA5ECB643C6F5D90DB3F25",
+        "path": "authority/source/categories.tex"
+      },
+      {
+        "bytes": 10368,
+        "expected_sha256": "34691031CFD0ED9B697983D9121512DA7EB65B83C08EEFD304765A4AF3C585CF",
+        "group": "source_authorities",
+        "match": true,
+        "observed_sha256": "34691031CFD0ED9B697983D9121512DA7EB65B83C08EEFD304765A4AF3C585CF",
+        "path": "authority/canon/ERRATA_R3_INTAKE_FRENCH_20260822.json"
+      },
+      {
+        "bytes": 14711,
+        "expected_sha256": "A2D5F9FFCA78333F39B2B811E6FBF4E01CA0432BE87EDBBB53998B2359B77EF0",
+        "group": "source_authorities",
+        "match": true,
+        "observed_sha256": "A2D5F9FFCA78333F39B2B811E6FBF4E01CA0432BE87EDBBB53998B2359B77EF0",
+        "path": "authority/canon/ERRATA_R3_PROOFS.md"
+      },
+      {
+        "bytes": 2541,
+        "expected_sha256": "E92AB3262E4D5506DBABF36CF5522F8D323ABA3CD379258B6E65D872838B1FB3",
+        "group": "source_authorities",
+        "match": true,
+        "observed_sha256": "E92AB3262E4D5506DBABF36CF5522F8D323ABA3CD379258B6E65D872838B1FB3",
+        "path": "authority/canon/R3_TOPOLOGY_018_023_INDEPENDENT_REVIEW.md"
+      },
+      {
+        "bytes": 16262,
+        "expected_sha256": "CD91D317D52D999D5174E945F735D32E831DB9F3DB6B8F121B83EF9D6F260F45",
+        "group": "source_authorities",
+        "match": true,
+        "observed_sha256": "CD91D317D52D999D5174E945F735D32E831DB9F3DB6B8F121B83EF9D6F260F45",
+        "path": "authority/producer/SOURCE_DEFECT_LEDGER.csv"
+      },
+      {
+        "bytes": 5785,
+        "expected_sha256": "F8485AFAA182B424A81626ABBE46317BA689F3BCFA9788CE3D2760120D91A950",
+        "group": "stable_unit_manifest",
+        "match": true,
+        "observed_sha256": "F8485AFAA182B424A81626ABBE46317BA689F3BCFA9788CE3D2760120D91A950",
+        "path": "stable-units.json"
+      },
+      {
+        "bytes": 11347,
+        "expected_sha256": "63329A6D65FFEF0386C3AC86BE034EF120EB6CB57EAE19F689639A074E991456",
+        "group": "source_map",
+        "match": true,
+        "observed_sha256": "63329A6D65FFEF0386C3AC86BE034EF120EB6CB57EAE19F689639A074E991456",
+        "path": "source-map.jsonl"
+      },
+      {
+        "bytes": 2422,
+        "expected_sha256": "A4A4203A119E450B2C35DD2422A1D51047C8DBA9C2B9D1906BD902C898990B9B",
+        "group": "decision_ledger",
+        "match": true,
+        "observed_sha256": "A4A4203A119E450B2C35DD2422A1D51047C8DBA9C2B9D1906BD902C898990B9B",
+        "path": "decisions.jsonl"
+      },
+      {
+        "bytes": 1614,
+        "expected_sha256": "A8EDC255B231B632EE13F692D1CA146EBC1B16EAA181F0F64CC754A83BBEE52A",
+        "group": "rejection_ledger",
+        "match": true,
+        "observed_sha256": "A8EDC255B231B632EE13F692D1CA146EBC1B16EAA181F0F64CC754A83BBEE52A",
+        "path": "rejections.jsonl"
+      },
+      {
+        "bytes": 1370,
+        "expected_sha256": "3D45CF4D54D7A42B25F2237714C1C70F8CEFCEADC88430EB6C3C989E1042CDEA",
+        "group": "formula_diagram_inventory",
+        "match": true,
+        "observed_sha256": "3D45CF4D54D7A42B25F2237714C1C70F8CEFCEADC88430EB6C3C989E1042CDEA",
+        "path": "formula-diagram-inventory.json"
+      },
+      {
+        "bytes": 8,
+        "expected_sha256": "705FD4D6451A31D36B3DF7DE96F83F30AC976C9B4A6D1E51671D8E2F33E2D0DA",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "705FD4D6451A31D36B3DF7DE96F83F30AC976C9B4A6D1E51671D8E2F33E2D0DA",
+        "path": ".gitattributes"
+      },
+      {
+        "bytes": 1588,
+        "expected_sha256": "1AA827EE330CCB3BD18041C11A28BFFC57B804C66400E85AC277170EE919A0E2",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "1AA827EE330CCB3BD18041C11A28BFFC57B804C66400E85AC277170EE919A0E2",
+        "path": "README.md"
+      },
+      {
+        "bytes": 1399,
+        "expected_sha256": "A6130A63D4F5B4CAD51AAB5600470318575AD28DF4BFA7CC84B7EF66AAC86133",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "A6130A63D4F5B4CAD51AAB5600470318575AD28DF4BFA7CC84B7EF66AAC86133",
+        "path": "BUILD.md"
+      },
+      {
+        "bytes": 448,
+        "expected_sha256": "B862C5607B50ED4213BC0C5544AEFF838B8F5B88C7B06BB21166B26D529B9BF8",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "B862C5607B50ED4213BC0C5544AEFF838B8F5B88C7B06BB21166B26D529B9BF8",
+        "path": "LEASE.json"
+      },
+      {
+        "bytes": 11150,
+        "expected_sha256": "AE745BF46E56FE89F4E0A6A197245D5F6A64CF536E4DCDA14C33312A8FCC5256",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "AE745BF46E56FE89F4E0A6A197245D5F6A64CF536E4DCDA14C33312A8FCC5256",
+        "path": "replay-build.py"
+      },
+      {
+        "bytes": 6837,
+        "expected_sha256": "2F8969B1CA1A990FC8DF4B57BDFD433870AD9AD2A4CC50E1FECC85190250EE74",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "2F8969B1CA1A990FC8DF4B57BDFD433870AD9AD2A4CC50E1FECC85190250EE74",
+        "path": "build-receipt.py"
+      },
+      {
+        "bytes": 19445,
+        "expected_sha256": "B874796EC90CF5162B313FD11D387A524148BE660BDD11F26C827F60E339874F",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "B874796EC90CF5162B313FD11D387A524148BE660BDD11F26C827F60E339874F",
+        "path": "verify.py"
+      },
+      {
+        "bytes": 46645,
+        "expected_sha256": "3F61989A39FB2E9663DD3B881308AEAE68960449F94036478827EFF3855075AC",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "3F61989A39FB2E9663DD3B881308AEAE68960449F94036478827EFF3855075AC",
+        "path": "payload/sets.tex"
+      },
+      {
+        "bytes": 237823,
+        "expected_sha256": "67115451F19CE981FD591F77E6CA16A4DE64A20C71105D2E5215E41FD8F8EB8D",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "67115451F19CE981FD591F77E6CA16A4DE64A20C71105D2E5215E41FD8F8EB8D",
+        "path": "payload/topology.tex"
+      },
+      {
+        "bytes": 350966,
+        "expected_sha256": "124F381C9DD01898B8DBB3969B7771190B64E8B2B9CE73E24E7DD1FB0727E2C1",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "124F381C9DD01898B8DBB3969B7771190B64E8B2B9CE73E24E7DD1FB0727E2C1",
+        "path": "payload/categories.tex"
+      },
+      {
+        "bytes": 18957,
+        "expected_sha256": "D1FB62B384EC552BE92DDE99027AD1FD94DF5C3E2ED81117FE7060593D112820",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "D1FB62B384EC552BE92DDE99027AD1FD94DF5C3E2ED81117FE7060593D112820",
+        "path": "builds/build-execution.json"
+      },
+      {
+        "bytes": 22142,
+        "expected_sha256": "35B63399110823ACB26EB5BDD83A319DF4B35D55EF4DBE77BB8CFF16D8F5427F",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "35B63399110823ACB26EB5BDD83A319DF4B35D55EF4DBE77BB8CFF16D8F5427F",
+        "path": "builds/build-receipt.json"
+      },
+      {
+        "bytes": 13026,
+        "expected_sha256": "5EE5C2B9215079DBFE65C180FD819534B98497CA6E6DB7464140BAE0526F8052",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "5EE5C2B9215079DBFE65C180FD819534B98497CA6E6DB7464140BAE0526F8052",
+        "path": "builds/validation.json"
+      },
+      {
+        "bytes": 8915,
+        "expected_sha256": "2F34B5DA87DE938C1ABBF16B298541B864BF60D562F5359C025D6C755FBB3D4C",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "2F34B5DA87DE938C1ABBF16B298541B864BF60D562F5359C025D6C755FBB3D4C",
+        "path": "builds/visual-qa.json"
+      },
+      {
+        "bytes": 449167,
+        "expected_sha256": "C3BE31B40B4FCF4AAC519C79510AC0E38BB48935CED2802DE736F3102077193F",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "C3BE31B40B4FCF4AAC519C79510AC0E38BB48935CED2802DE736F3102077193F",
+        "path": "builds/sets.pdf"
+      },
+      {
+        "bytes": 48220,
+        "expected_sha256": "659F0B0D24282D6295156BC2852F4ED2A737B0B9B201F86DB71DEBCE848925D3",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "659F0B0D24282D6295156BC2852F4ED2A737B0B9B201F86DB71DEBCE848925D3",
+        "path": "builds/sets.log"
+      },
+      {
+        "bytes": 33847,
+        "expected_sha256": "78B15BF9A3DA882BF9BEA54184F37FC7CE61279EAB6FC0DFF4599DF313C4D429",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "78B15BF9A3DA882BF9BEA54184F37FC7CE61279EAB6FC0DFF4599DF313C4D429",
+        "path": "builds/sets.pass3.txt"
+      },
+      {
+        "bytes": 141,
+        "expected_sha256": "EC7BFEF49E51B36B4DC1D306A1A9841AF289A981FE1D16B3126E0B3F92230602",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "EC7BFEF49E51B36B4DC1D306A1A9841AF289A981FE1D16B3126E0B3F92230602",
+        "path": "builds/sets.bibtex.txt"
+      },
+      {
+        "bytes": 448973,
+        "expected_sha256": "7B43FF1D59E1F7FAD25BF9E262D936A586A89F61294188C537FF09251534DE45",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "7B43FF1D59E1F7FAD25BF9E262D936A586A89F61294188C537FF09251534DE45",
+        "path": "builds/sets.authority.pdf"
+      },
+      {
+        "bytes": 48220,
+        "expected_sha256": "DD68177BF6A6F20D09E629C47B67F72F8281549948CB3A5E5B0F5EC8F841DC01",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "DD68177BF6A6F20D09E629C47B67F72F8281549948CB3A5E5B0F5EC8F841DC01",
+        "path": "builds/sets.authority.log"
+      },
+      {
+        "bytes": 33847,
+        "expected_sha256": "3D70D5B56111353ABF40CDDFBC188EC197C8F326F157F62E134B867ABDC8D05D",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "3D70D5B56111353ABF40CDDFBC188EC197C8F326F157F62E134B867ABDC8D05D",
+        "path": "builds/sets.authority.pass3.txt"
+      },
+      {
+        "bytes": 141,
+        "expected_sha256": "EC7BFEF49E51B36B4DC1D306A1A9841AF289A981FE1D16B3126E0B3F92230602",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "EC7BFEF49E51B36B4DC1D306A1A9841AF289A981FE1D16B3126E0B3F92230602",
+        "path": "builds/sets.authority.bibtex.txt"
+      },
+      {
+        "bytes": 776739,
+        "expected_sha256": "12D3AAA2FF48760189757D1E6DC951A18446BD72186A0B056AE7B840D8D152B7",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "12D3AAA2FF48760189757D1E6DC951A18446BD72186A0B056AE7B840D8D152B7",
+        "path": "builds/topology.pdf"
+      },
+      {
+        "bytes": 49780,
+        "expected_sha256": "83BB0859D524716A4A32BF3D5B6A15AC751C9E09D938A4C11168D8C3E70B4717",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "83BB0859D524716A4A32BF3D5B6A15AC751C9E09D938A4C11168D8C3E70B4717",
+        "path": "builds/topology.log"
+      },
+      {
+        "bytes": 35517,
+        "expected_sha256": "84862AA55C7A5673408BC1C5E8D407822A58474C7047F2D36DD752CCA7ADD20A",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "84862AA55C7A5673408BC1C5E8D407822A58474C7047F2D36DD752CCA7ADD20A",
+        "path": "builds/topology.pass3.txt"
+      },
+      {
+        "bytes": 145,
+        "expected_sha256": "8FEFD69AECFB5B8563CE82B1C038CB9D926796AAA327C58EA2EF0395D3DF0C85",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "8FEFD69AECFB5B8563CE82B1C038CB9D926796AAA327C58EA2EF0395D3DF0C85",
+        "path": "builds/topology.bibtex.txt"
+      },
+      {
+        "bytes": 776629,
+        "expected_sha256": "C0111D47873DE622732C525D93773636961A1D154B58B1341C02DE7F7FD44BE2",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "C0111D47873DE622732C525D93773636961A1D154B58B1341C02DE7F7FD44BE2",
+        "path": "builds/topology.authority.pdf"
+      },
+      {
+        "bytes": 49780,
+        "expected_sha256": "1EB74CECD94B29F9068AD8BA0C17ABB27F1831104DC0E28C5298331AA9B86AEC",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "1EB74CECD94B29F9068AD8BA0C17ABB27F1831104DC0E28C5298331AA9B86AEC",
+        "path": "builds/topology.authority.log"
+      },
+      {
+        "bytes": 35517,
+        "expected_sha256": "D072250864CA99AE2B7E6D7274F43C09A1725E957550DBD486D10C02CA3B5A40",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "D072250864CA99AE2B7E6D7274F43C09A1725E957550DBD486D10C02CA3B5A40",
+        "path": "builds/topology.authority.pass3.txt"
+      },
+      {
+        "bytes": 145,
+        "expected_sha256": "8FEFD69AECFB5B8563CE82B1C038CB9D926796AAA327C58EA2EF0395D3DF0C85",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "8FEFD69AECFB5B8563CE82B1C038CB9D926796AAA327C58EA2EF0395D3DF0C85",
+        "path": "builds/topology.authority.bibtex.txt"
+      },
+      {
+        "bytes": 1051562,
+        "expected_sha256": "6374342AD1EFD455D14EA4C1B1C67B53CB6805F29736F3CF9B3EDE5958E0E6A6",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "6374342AD1EFD455D14EA4C1B1C67B53CB6805F29736F3CF9B3EDE5958E0E6A6",
+        "path": "builds/categories.pdf"
+      },
+      {
+        "bytes": 51670,
+        "expected_sha256": "8CA87D931CBCA07F56396B35FE9495D4B083B6E7129AF73957F8789A46FD69FA",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "8CA87D931CBCA07F56396B35FE9495D4B083B6E7129AF73957F8789A46FD69FA",
+        "path": "builds/categories.log"
+      },
+      {
+        "bytes": 37313,
+        "expected_sha256": "B2F0AB21CCD285C8B296FC4E60916A14A536BCCC22BC902C672D90E0436FCBE1",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "B2F0AB21CCD285C8B296FC4E60916A14A536BCCC22BC902C672D90E0436FCBE1",
+        "path": "builds/categories.pass3.txt"
+      },
+      {
+        "bytes": 147,
+        "expected_sha256": "4C043470CE98C5EFE53DA972DC07669180FAAB4579721E6BFB1025173819711A",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "4C043470CE98C5EFE53DA972DC07669180FAAB4579721E6BFB1025173819711A",
+        "path": "builds/categories.bibtex.txt"
+      },
+      {
+        "bytes": 1051549,
+        "expected_sha256": "DC246D1C7885AED71F458EFD1DAF7B40D0AC02A24F8D69A5EB5D3CEB4080C6BF",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "DC246D1C7885AED71F458EFD1DAF7B40D0AC02A24F8D69A5EB5D3CEB4080C6BF",
+        "path": "builds/categories.authority.pdf"
+      },
+      {
+        "bytes": 51670,
+        "expected_sha256": "9C9179DD65448D34A6898F0D70C6EA47B4F2E3EBB3917D9A03AA7C5B7BF2730A",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "9C9179DD65448D34A6898F0D70C6EA47B4F2E3EBB3917D9A03AA7C5B7BF2730A",
+        "path": "builds/categories.authority.log"
+      },
+      {
+        "bytes": 37313,
+        "expected_sha256": "AA2049E9C4C65A50C86C0E3AF0BAC99E16E6060617FE84B04E69C50992E42215",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "AA2049E9C4C65A50C86C0E3AF0BAC99E16E6060617FE84B04E69C50992E42215",
+        "path": "builds/categories.authority.pass3.txt"
+      },
+      {
+        "bytes": 147,
+        "expected_sha256": "4C043470CE98C5EFE53DA972DC07669180FAAB4579721E6BFB1025173819711A",
+        "group": "builds",
+        "match": true,
+        "observed_sha256": "4C043470CE98C5EFE53DA972DC07669180FAAB4579721E6BFB1025173819711A",
+        "path": "builds/categories.authority.bibtex.txt"
+      }
+    ],
+    "producer_rows": 34,
+    "prose_only_units": 4,
+    "rejection_rows": 5,
+    "schema": {
+      "bytes": 3207,
+      "path": "../../../../../schemas/candidate-manifest.schema.json",
+      "sha256": "C0A948F724DC9E8A283499E00AD20090D379A79548FEAAE597C4065D078467D3"
+    },
+    "schema_valid": true,
+    "source_closure": {
+      "complete": true,
+      "enumerated": true,
+      "expected_units": 34,
+      "manifested_units": 34
+    },
+    "unmapped_formula_or_diagram_changes": 0,
+    "validator": "jsonschema 4.26.0"
+  },
+  "namespace": "commons/stacks/errata/r3",
+  "passed": false,
+  "pdf_and_visual_review": {
+    "existing_all_pages_rendered": true,
+    "existing_covered_units": 34,
+    "existing_pages_inspected": 181,
+    "existing_visual_receipt": {
+      "bytes": 8915,
+      "path": "builds/visual-qa.json",
+      "sha256": "2F34B5DA87DE938C1ABBF16B298541B864BF60D562F5359C025D6C755FBB3D4C"
+    },
+    "existing_visual_receipt_passed": true,
+    "fresh_candidate_authority_mechanics_match": true,
+    "fresh_pdf_mechanics": [
+      {
+        "action_types": {
+          "/GoTo": 49,
+          "/GoToR": 1
+        },
+        "annotations": {
+          "/Link": 50
+        },
+        "bytes": 449167,
+        "empty_extracted_text_pages": [],
+        "encrypted": false,
+        "font_resources": 26,
+        "fonts_missing_tounicode": [],
+        "forms": false,
+        "javascript": false,
+        "malformed_link_rectangles": [],
+        "out_of_bounds_link_rectangles": [],
+        "page_boxes": [
+          {
+            "crop": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          }
+        ],
+        "pages": 14,
+        "path": "sets.pdf",
+        "pdfinfo": {
+          "Encrypted": "no",
+          "Form": "none",
+          "JavaScript": "no",
+          "PDF version": "1.5",
+          "Page size": "612 x 792 pts (letter)",
+          "Pages": "14",
+          "Tagged": "no"
+        },
+        "replacement_glyph_pages": [],
+        "rotations": [
+          0
+        ],
+        "sha256": "C3BE31B40B4FCF4AAC519C79510AC0E38BB48935CED2802DE736F3102077193F",
+        "tagged": false,
+        "unembedded_fonts": []
+      },
+      {
+        "action_types": {
+          "/GoTo": 49,
+          "/GoToR": 1
+        },
+        "annotations": {
+          "/Link": 50
+        },
+        "bytes": 448973,
+        "empty_extracted_text_pages": [],
+        "encrypted": false,
+        "font_resources": 26,
+        "fonts_missing_tounicode": [],
+        "forms": false,
+        "javascript": false,
+        "malformed_link_rectangles": [],
+        "out_of_bounds_link_rectangles": [],
+        "page_boxes": [
+          {
+            "crop": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          }
+        ],
+        "pages": 14,
+        "path": "sets.authority.pdf",
+        "pdfinfo": {
+          "Encrypted": "no",
+          "Form": "none",
+          "JavaScript": "no",
+          "PDF version": "1.5",
+          "Page size": "612 x 792 pts (letter)",
+          "Pages": "14",
+          "Tagged": "no"
+        },
+        "replacement_glyph_pages": [],
+        "rotations": [
+          0
+        ],
+        "sha256": "7B43FF1D59E1F7FAD25BF9E262D936A586A89F61294188C537FF09251534DE45",
+        "tagged": false,
+        "unembedded_fonts": []
+      },
+      {
+        "action_types": {
+          "/GoTo": 303,
+          "/GoToR": 2
+        },
+        "annotations": {
+          "/Link": 305
+        },
+        "bytes": 776739,
+        "empty_extracted_text_pages": [],
+        "encrypted": false,
+        "font_resources": 23,
+        "fonts_missing_tounicode": [],
+        "forms": false,
+        "javascript": false,
+        "malformed_link_rectangles": [],
+        "out_of_bounds_link_rectangles": [],
+        "page_boxes": [
+          {
+            "crop": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          }
+        ],
+        "pages": 64,
+        "path": "topology.pdf",
+        "pdfinfo": {
+          "Encrypted": "no",
+          "Form": "none",
+          "JavaScript": "no",
+          "PDF version": "1.5",
+          "Page size": "612 x 792 pts (letter)",
+          "Pages": "64",
+          "Tagged": "no"
+        },
+        "replacement_glyph_pages": [],
+        "rotations": [
+          0
+        ],
+        "sha256": "12D3AAA2FF48760189757D1E6DC951A18446BD72186A0B056AE7B840D8D152B7",
+        "tagged": false,
+        "unembedded_fonts": []
+      },
+      {
+        "action_types": {
+          "/GoTo": 303,
+          "/GoToR": 2
+        },
+        "annotations": {
+          "/Link": 305
+        },
+        "bytes": 776629,
+        "empty_extracted_text_pages": [],
+        "encrypted": false,
+        "font_resources": 23,
+        "fonts_missing_tounicode": [],
+        "forms": false,
+        "javascript": false,
+        "malformed_link_rectangles": [],
+        "out_of_bounds_link_rectangles": [],
+        "page_boxes": [
+          {
+            "crop": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          }
+        ],
+        "pages": 64,
+        "path": "topology.authority.pdf",
+        "pdfinfo": {
+          "Encrypted": "no",
+          "Form": "none",
+          "JavaScript": "no",
+          "PDF version": "1.5",
+          "Page size": "612 x 792 pts (letter)",
+          "Pages": "64",
+          "Tagged": "no"
+        },
+        "replacement_glyph_pages": [],
+        "rotations": [
+          0
+        ],
+        "sha256": "C0111D47873DE622732C525D93773636961A1D154B58B1341C02DE7F7FD44BE2",
+        "tagged": false,
+        "unembedded_fonts": []
+      },
+      {
+        "action_types": {
+          "/GoTo": 352,
+          "/GoToR": 6
+        },
+        "annotations": {
+          "/Link": 358
+        },
+        "bytes": 1051562,
+        "empty_extracted_text_pages": [],
+        "encrypted": false,
+        "font_resources": 31,
+        "fonts_missing_tounicode": [],
+        "forms": false,
+        "javascript": false,
+        "malformed_link_rectangles": [],
+        "out_of_bounds_link_rectangles": [],
+        "page_boxes": [
+          {
+            "crop": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          }
+        ],
+        "pages": 103,
+        "path": "categories.pdf",
+        "pdfinfo": {
+          "Encrypted": "no",
+          "Form": "none",
+          "JavaScript": "no",
+          "PDF version": "1.5",
+          "Page size": "612 x 792 pts (letter)",
+          "Pages": "103",
+          "Tagged": "no"
+        },
+        "replacement_glyph_pages": [],
+        "rotations": [
+          0
+        ],
+        "sha256": "6374342AD1EFD455D14EA4C1B1C67B53CB6805F29736F3CF9B3EDE5958E0E6A6",
+        "tagged": false,
+        "unembedded_fonts": []
+      },
+      {
+        "action_types": {
+          "/GoTo": 352,
+          "/GoToR": 6
+        },
+        "annotations": {
+          "/Link": 358
+        },
+        "bytes": 1051549,
+        "empty_extracted_text_pages": [],
+        "encrypted": false,
+        "font_resources": 31,
+        "fonts_missing_tounicode": [],
+        "forms": false,
+        "javascript": false,
+        "malformed_link_rectangles": [],
+        "out_of_bounds_link_rectangles": [],
+        "page_boxes": [
+          {
+            "crop": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ]
+          }
+        ],
+        "pages": 103,
+        "path": "categories.authority.pdf",
+        "pdfinfo": {
+          "Encrypted": "no",
+          "Form": "none",
+          "JavaScript": "no",
+          "PDF version": "1.5",
+          "Page size": "612 x 792 pts (letter)",
+          "Pages": "103",
+          "Tagged": "no"
+        },
+        "replacement_glyph_pages": [],
+        "rotations": [
+          0
+        ],
+        "sha256": "DC246D1C7885AED71F458EFD1DAF7B40D0AC02A24F8D69A5EB5D3CEB4080C6BF",
+        "tagged": false,
+        "unembedded_fonts": []
+      }
+    ],
+    "fresh_pdf_mechanics_passed": true,
+    "fresh_pdfs_byte_identical_to_frozen": true,
+    "pdf_conclusion": "pass",
+    "spot_render": {
+      "dpi": 180,
+      "engine": "Poppler pdftoppm",
+      "findings": "No clipping, overlap, missing glyph, broken diagram, or illegible text. The expected red unresolved-reference boxes remain visible in the isolated builds.",
+      "pages": [
+        "sets:12",
+        "topology:23",
+        "topology:56",
+        "categories:89",
+        "categories:92"
+      ],
+      "result": "pass"
+    }
+  },
+  "pre_review_manifest": {
+    "bytes": 8938,
+    "declared_independent_replay": "not_performed",
+    "declared_review_state": "performed",
+    "path": "candidate.manifest.json",
+    "sha256": "5376829EBDA18D03DD9370BB3C1599949685F1A8C92FC87022594EBE962D6292",
+    "unchanged_during_review": true
+  },
+  "review_id": "stacks-errata-a04446e-r3-independent-review-20260822",
+  "reviewer_task": "/root/r3_independent_replay",
+  "schema": "mathematics-commons-stacks-independent-review/v1",
+  "unit_reconstruction": {
+    "all_payload_bytes_reconstructed": true,
+    "expected_units": 34,
+    "files": {
+      "categories.tex": {
+        "authority": {
+          "bytes": 350957,
+          "path": "authority/source/categories.tex",
+          "sha256": "62F7611AF4C3FEEBD041DB4728B42C7112004CFBB9FA5ECB643C6F5D90DB3F25"
+        },
+        "changed_line_regions": 9,
+        "exact_reconstruction_passed": true,
+        "payload": {
+          "bytes": 350966,
+          "path": "payload/categories.tex",
+          "sha256": "124F381C9DD01898B8DBB3969B7771190B64E8B2B9CE73E24E7DD1FB0727E2C1"
+        },
+        "reconstructed_payload_sha256": "124F381C9DD01898B8DBB3969B7771190B64E8B2B9CE73E24E7DD1FB0727E2C1"
+      },
+      "sets.tex": {
+        "authority": {
+          "bytes": 46628,
+          "path": "authority/source/sets.tex",
+          "sha256": "9BCC55E7F11CF36B0665AE549D5BA76BE6A0EDD00F7FCA36A567E367099603F9"
+        },
+        "changed_line_regions": 6,
+        "exact_reconstruction_passed": true,
+        "payload": {
+          "bytes": 46645,
+          "path": "payload/sets.tex",
+          "sha256": "3F61989A39FB2E9663DD3B881308AEAE68960449F94036478827EFF3855075AC"
+        },
+        "reconstructed_payload_sha256": "3F61989A39FB2E9663DD3B881308AEAE68960449F94036478827EFF3855075AC"
+      },
+      "topology.tex": {
+        "authority": {
+          "bytes": 237731,
+          "path": "authority/source/topology.tex",
+          "sha256": "C6BAC8DCF8AD96DC47416BF34CB45BA4A10B894E40D67D3E1FA68D8EF0D9F872"
+        },
+        "changed_line_regions": 26,
+        "exact_reconstruction_passed": true,
+        "payload": {
+          "bytes": 237823,
+          "path": "payload/topology.tex",
+          "sha256": "67115451F19CE981FD591F77E6CA16A4DE64A20C71105D2E5215E41FD8F8EB8D"
+        },
+        "reconstructed_payload_sha256": "67115451F19CE981FD591F77E6CA16A4DE64A20C71105D2E5215E41FD8F8EB8D"
+      }
+    },
+    "reconstructed_units": 34,
+    "review_outcome_counts": {
+      "concern": 3,
+      "fail": 1,
+      "pass": 30
+    },
+    "units": [
+      {
+        "assessment": "The calligraphic S_tau is the sole declared identifier.",
+        "class": "undefined_identifier_error",
+        "declared_change_count": 1,
+        "declared_locus": "993",
+        "exact_diff_regions": [
+          {
+            "authority_lines": [
+              993,
+              993
+            ],
+            "authority_segment_bytes": 42,
+            "authority_segment_sha256": "C171CE8AA2E0FA4BEFAFA41B8E2F0191702F6F03E8638F9A00AA53C589055009",
+            "opcode": "replace",
+            "payload_lines": [
+              993,
+              993
+            ],
+            "payload_segment_bytes": 52,
+            "payload_segment_sha256": "AA10A54F4AEDC93229D15ECD150FEFE659EB382FA1A3BAAF452420AFA5978A22"
+          }
+        ],
+        "intake_row_bound": true,
+        "map_new": "calligraphic S_tau",
+        "map_old": "bare S_tau",
+        "payload_reconstruction_bound": true,
+        "producer_row_bound": true,
+        "producer_source_id": "SETS-001",
+        "proof_dossier_occurrences": 1,
+        "review_outcome": "pass",
+        "source": "sets.tex",
+        "unit_id": "MC-STK-ERR-0029"
+      },
+      {
+        "assessment": "The proposed f(beta(U)+1) bound is not supplied by recursion clause (3), whose input index is alpha rather than f(alpha).",
+        "class": "free_index_error",
+        "declared_change_count": 1,
+        "declared_locus": "1088",
+        "exact_diff_regions": [
+          {
+            "authority_lines": [
+              1088,
+              1088
+            ],
+            "authority_segment_bytes": 66,
+            "authority_segment_sha256": "DE4A3B7DAF85E0E9FAFB368EBA23DEEE62BE5E10E370EE512169A90F0F972371",
+            "opcode": "replace",
+            "payload_lines": [
+              1088,
+              1088
+            ],
+            "payload_segment_bytes": 79,
+            "payload_segment_sha256": "1948ADEFA7EE7387AA55147FADD8C40531571BAD263DE3B9B2CF8B53B781ECED"
+          }
+        ],
+        "intake_row_bound": true,
+        "map_new": "f(beta(U) + 1)",
+        "map_old": "f(beta + 1)",
+        "payload_reconstruction_bound": true,
+        "producer_row_bound": true,
+        "producer_source_id": "SETS-002",
+        "proof_dossier_occurrences": 1,
+        "review_outcome": "fail",
+        "source": "sets.tex",
+        "unit_id": "MC-STK-ERR-0030"
+      },
+      {
+        "assessment": "The three replacements are directionally correct, but the final clause-(2) invocation never also bounds the outer cover by the same f(beta).",
+        "class": "linked_site_axiom_index_error",
+        "declared_change_count": 3,
+        "declared_locus": "1093-1100",
+        "exact_diff_regions": [
+          {
+            "authority_lines": [
+              1093,
+              1093
+            ],
+            "authority_segment_bytes": 49,
+            "authority_segment_sha256": "4EEDF895E1D2D125212B10011C6774E5BB2D411345DB1E82AE062E951CDB8DAD",
+            "opcode": "replace",
+            "payload_lines": [
+              1093,
+              1093
+            ],
+            "payload_segment_bytes": 46,
+            "payload_segment_sha256": "F41BA7497D053F7A3667F2739CFA0048DCA83B915B4846C637767CEA33C6456A"
+          },
+          {
+            "authority_lines": [
+              1096,
+              1096
+            ],
+            "authority_segment_bytes": 50,
+            "authority_segment_sha256": "C21ADB93111B4B556FEBCA5C9B761A6FDCB8755B9B78349E23B1AA0765DC873D",
+            "opcode": "replace",
+            "payload_lines": [
+              1096,
+              1096
+            ],
+            "payload_segment_bytes": 47,
+            "payload_segment_sha256": "C8BD36B321BE70E4FF19BD526F810CCE4B2B356B8C17D0BAEE280733CD350558"
+          },
+          {
+            "authority_lines": [
+              1100,
+              1100
+            ],
+            "authority_segment_bytes": 60,
+            "authority_segment_sha256": "E40997B91FFFB49AC941C39DBB3A17F7A23F9D448B066D3291081BB6BC7C6ECC",
+            "opcode": "replace",
+            "payload_lines": [
+              1100,
+              1100
+            ],
+            "payload_segment_bytes": 60,
+            "payload_segment_sha256": "A5EA015545011C54370CCE7BFEC772889E3A25E01AC6DE85C739636244614D1D"
+          }
+        ],
+        "intake_row_bound": true,
+        "map_new": "two Cov_{kappa,alpha} inputs and beta < beta_2",
+        "map_old": "two Cov_{kappa,f(alpha)} inputs and beta < beta_1",
+        "payload_reconstruction_bound": true,
+        "producer_row_bound": true,
+        "producer_source_id": "SETS-003",
+        "proof_dossier_occurrences": 1,
+        "review_outcome": "concern",
+        "source": "sets.tex",
+        "unit_id": "MC-STK-ERR-0031"
+      },
+      {
+        "assessment": "Only W_{a,i} is defined; the transposition repair is forced.",
+        "class": "transposed_indices_error",
+        "declared_change_count": 1,
+        "declared_locus": "848",
+        "exact_diff_regions": [
+          {
+            "authority_lines": [
+              848,
+              848
+            ],
+            "authority_segment_bytes": 74,
+            "authority_segment_sha256": "E310EB03F6171FD726C297D73FE4B56A960D878195D14BE6C75C87F5DE0E26BF",
+            "opcode": "replace",
+            "payload_lines": [
+              848,
+              848
+            ],
+            "payload_segment_bytes": 74,
+            "payload_segment_sha256": "2F204F48DF9912081FC660113D54A865F639BE12737F13835EFBC465B1EFEFED"
+          }
+        ],
+        "intake_row_bound": true,
+        "map_new": "W_{a,i}",
+        "map_old": "W_{i,a}",
+        "payload_reconstruction_bound": true,
+        "producer_row_bound": true,
+        "producer_source_id": "SETS-004",
+        "proof_dossier_occurrences": 1,
+        "review_outcome": "pass",
+        "source": "sets.tex",
+        "unit_id": "MC-STK-ERR-0032"
+      },
+      {
+        "assessment": "Graph-distance endpoints are vertices in V.",
+        "class": "undefined_vertex_set_error",
+        "declared_change_count": 1,
+        "declared_locus": "1235",
+        "exact_diff_regions": [
+          {
+            "authority_lines": [
+              1235,
+              1235
+            ],
+            "authority_segment_bytes": 73,
+            "authority_segment_sha256": "FB7C836CE6F8EB86B12F0FF90598C10DA849D1F613FD1C0183C0B4BC2EC17DBE",
+            "opcode": "replace",
+            "payload_lines": [
+              1235,
+              1235
+            ],
+            "payload_segment_bytes": 73,
+            "payload_segment_sha256": "3559B17D949063D78562B02AEEEB5E39BB38D0D820836BED33A3C87914D66453"
+          }
+        ],
+        "intake_row_bound": true,
+        "map_new": "diameter endpoints in V",
+        "map_old": "diameter endpoints in E",
+        "payload_reconstruction_bound": true,
+        "producer_row_bound": true,
+        "producer_source_id": "TOPOLOGY-001",
+        "proof_dossier_occurrences": 1,
+        "review_outcome": "pass",
+        "source": "topology.tex",
+        "unit_id": "MC-STK-ERR-0033"
+      },
+      {
+        "assessment": "The ordered objects are elements Z,Z' of A.",
+        "class": "ill_typed_order_definition",
+        "declared_change_count": 1,
+        "declared_locus": "1276-1277",
+        "exact_diff_regions": [
+          {
+            "authority_lines": [
+              1276,
+              1277
+            ],
+            "authority_segment_bytes": 117,
+            "authority_segment_sha256": "98C9E7F07F444DE16569F708F71787141E45EA6D8709E3118DD438386C28F5ED",
+            "opcode": "replace",
+            "payload_lines": [
+              1276,
+              1277
+            ],
+            "payload_segment_bytes": 107,
+            "payload_segment_sha256": "7364A85E049402B246BD622753E0DCD41C2C63A880B0B540C626F110D7DD6657"
+          }
+        ],
+        "intake_row_bound": true,
+        "map_new": "order directly on Z,Z-prime in A",
+        "map_old": "order on undefined alpha-indexed sets",
+        "payload_reconstruction_bound": true,
+        "producer_row_bound": true,
+        "producer_source_id": "TOPOLOGY-002",
+        "proof_dossier_occurrences": 1,
+        "review_outcome": "pass",
+        "source": "topology.tex",
+        "unit_id": "MC-STK-ERR-0034"
+      },
+      {
+        "assessment": "Projection indices are objects of the indexing category.",
+        "class": "indexing_category_object_error",
+        "declared_change_count": 1,
+        "declared_locus": "2380",
+        "exact_diff_regions": [
+          {
+            "authority_lines": [
+              2380,
+              2380
+            ],
+            "authority_segment_bytes": 59,
+            "authority_segment_sha256": "12FAB829A1510698232D4C47302E9C02C362F92C651092E474228D6CFB47D3DD",
+            "opcode": "replace",
+            "payload_lines": [
+              2380,
+              2380
+            ],
+            "payload_segment_bytes": 74,
+            "payload_segment_sha256": "E2CB6EA755B43F8BB43310748E23FBAFD34F7D95CC55FB84A02A15B87E20C1AD"
+          }
+        ],
+        "intake_row_bound": true,
+        "map_new": "J subset Ob(mathcal I)",
+        "map_old": "J subset undefined I",
+        "payload_reconstruction_bound": true,
+        "producer_row_bound": true,
+        "producer_source_id": "TOPOLOGY-003",
+        "proof_dossier_occurrences": 1,
+        "review_outcome": "pass",
+        "source": "topology.tex",
+        "unit_id": "MC-STK-ERR-0035"
+      },
+      {
+        "assessment": "Closedness and disjointness force complementing the full union.",
+        "class": "set_parenthesization_error",
+        "declared_change_count": 2,
+        "declared_locus": "1882-1884",
+        "exact_diff_regions": [
+          {
+            "authority_lines": [
+              1882,
+              1882
+            ],
+            "authority_segment_bytes": 60,
+            "authority_segment_sha256": "2AEDCADA81CD5FB449076C3E488A6A3684547FCEA45C8C1281E9A6C5CC538AD6",
+            "opcode": "replace",
+            "payload_lines": [
+              1882,
+              1882
+            ],
+            "payload_segment_bytes": 62,
+            "payload_segment_sha256": "9081899C381C0F10D6773878D30094931F3A89EBAF9CD7B21F18B9303062C7CE"
+          },
+          {
+            "authority_lines": [
+              1884,
+              1884
+            ],
+            "authority_segment_bytes": 67,
+            "authority_segment_sha256": "2EA5EAD4F23B3003321192D36F4389F7EF01DA34407C67AB968B6671C274D181",
+            "opcode": "replace",
+            "payload_lines": [
+              1884,
+              1884
+            ],
+            "payload_segment_bytes": 69,
+            "payload_segment_sha256": "01263AACCC90C885A62FDFA65712C847CA5C8655A2E2C618A6A46DDC42BD178B"
+          }
+        ],
+        "intake_row_bound": true,
+        "map_new": "two complements X minus (U union V)",
+        "map_old": "two ungrouped X minus U union V spans",
+        "payload_reconstruction_bound": true,
+        "producer_row_bound": true,
+        "producer_source_id": "TOPOLOGY-004",
+        "proof_dossier_occurrences": 1,
+        "review_outcome": "pass",
+        "source": "topology.tex",
+        "unit_id": "MC-STK-ERR-0036"
+      },
+      {
+        "assessment": "The decreasing closed chain forces complementing the finite union.",
+        "class": "set_parenthesization_error",
+        "declared_change_count": 1,
+        "declared_locus": "1946-1947",
+        "exact_diff_regions": [
+          {
+            "authority_lines": [
+              1947,
+              1947
+            ],
+            "authority_segment_bytes": 65,
+            "authority_segment_sha256": "5257771F20ABFE62DD8328BCEF56E43E60B22FDF3C4762003FB6671D392D7556",
+            "opcode": "replace",
+            "payload_lines": [
+              1947,
+              1947
+            ],
+            "payload_segment_bytes": 67,
+            "payload_segment_sha256": "A7C043ACAD160AFEF9E744DA6C4EE2D60DEC74AD7467CA032AE363B9586C436A"
+          }
+        ],
+        "intake_row_bound": true,
+        "map_new": "X minus (U_i1 union U_i2)",
+        "map_old": "X minus U_i1 union U_i2",
+        "payload_reconstruction_bound": true,
+        "producer_row_bound": true,
+        "producer_source_id": "TOPOLOGY-005",
+        "proof_dossier_occurrences": 1,
+        "review_outcome": "pass",
+        "source": "topology.tex",
+        "unit_id": "MC-STK-ERR-0037"
+      },
+      {
+        "assessment": "The closing parenthesis is mechanically unmatched.",
+        "class": "unmatched_delimiter_error",
+        "declared_change_count": 1,
+        "declared_locus": "3124",
+        "exact_diff_regions": [
+          {
+            "authority_lines": [
+              3124,
+              3124
+            ],
+            "authority_segment_bytes": 54,
+            "authority_segment_sha256": "CB8F8C3D191E89A1A22ABE441FF56E882E375585E69B92F5B0DD1A197D138022",
+            "opcode": "replace",
+            "payload_lines": [
+              3124,
+              3124
+            ],
+            "payload_segment_bytes": 53,
+            "payload_segment_sha256": "475C71A8095CA13BF6B1ABA53A1844D305FEADED086461FB81B12BA740A83A6F"
+          }
+        ],
+        "intake_row_bound": true,
+        "map_new": "balanced set-builder",
+        "map_old": "set-builder ending with extra parenthesis",
+        "payload_reconstruction_bound": true,
+        "producer_row_bound": true,
+        "producer_source_id": "TOPOLOGY-006",
+        "proof_dossier_occurrences": 1,
+        "review_outcome": "pass",
+        "source": "topology.tex",
+        "unit_id": "MC-STK-ERR-0038"
+      },
+      {
+        "assessment": "The preceding finite cover forces the explicit indexed union.",
+        "class": "omitted_union_index_error",
+        "declared_change_count": 1,
+        "declared_locus": "2649",
+        "exact_diff_regions": [
+          {
+            "authority_lines": [
+              2649,
+              2649
+            ],
+            "authority_segment_bytes": 51,
+            "authority_segment_sha256": "E0EF6D09B27EF4AA513184C94C0CD89E05D123F334A5823973E77720F1980EB1",
+            "opcode": "replace",
+            "payload_lines": [
+              2649,
+              2649
+            ],
+            "payload_segment_bytes": 63,
+            "payload_segment_sha256": "56BA3FABF34B98FFBB3C659E670B9B22CFCCA9C59C5916EC56CFC353C65C34D4"
+          }
+        ],
+        "intake_row_bound": true,
+        "map_new": "union j=1 to m of (E intersect V_j)",
+        "map_old": "unindexed big union of E intersect V_j",
+        "payload_reconstruction_bound": true,
+        "producer_row_bound": true,
+        "producer_source_id": "TOPOLOGY-007",
+        "proof_dossier_occurrences": 1,
+        "review_outcome": "pass",
+        "source": "topology.tex",
+        "unit_id": "MC-STK-ERR-0039"
+      },
+      {
+        "assessment": "The chain and its generic points live in the target Y.",
+        "class": "domain_codomain_type_error",
+        "declared_change_count": 1,
+        "declared_locus": "3775-3776",
+        "exact_diff_regions": [
+          {
+            "authority_lines": [
+              3776,
+              3776
+            ],
+            "authority_segment_bytes": 67,
+            "authority_segment_sha256": "7E1CA9B51A33AE3EAA9AAE08421CB2653D02B77252BBE9DC904BACA64D59B6AA",
+            "opcode": "replace",
+            "payload_lines": [
+              3776,
+              3776
+            ],
+            "payload_segment_bytes": 67,
+            "payload_segment_sha256": "D501050D847BE022B09B25AF9660E1E2BD5EAF07FC21AD08F0FD43190CF8F506"
+          }
+        ],
+        "intake_row_bound": true,
+        "map_new": "chain called closed subsets of Y",
+        "map_old": "chain called closed subsets of X",
+        "payload_reconstruction_bound": true,
+        "producer_row_bound": true,
+        "producer_source_id": "TOPOLOGY-008",
+        "proof_dossier_occurrences": 1,
+        "review_outcome": "pass",
+        "source": "topology.tex",
+        "unit_id": "MC-STK-ERR-0040"
+      },
+      {
+        "assessment": "The local specialization and dimension conventions force the direction and sign repairs.",
+        "class": "specialization_direction_and_sign_error",
+        "declared_change_count": 3,
+        "declared_locus": "3877-3888",
+        "exact_diff_regions": [
+          {
+            "authority_lines": [
+              3880,
+              3880
+            ],
+            "authority_segment_bytes": 64,
+            "authority_segment_sha256": "C8B4F37772D53EAAA03F113E375BAFF701481F43EA15A89AAEA1B4727B9F8BEF",
+            "opcode": "replace",
+            "payload_lines": [
+              3880,
+              3880
+            ],
+            "payload_segment_bytes": 64,
+            "payload_segment_sha256": "92626DA28A61B794D358A21E7AA15FBC30DF872E51AFA8D70AA360323E010F07"
+          },
+          {
+            "authority_lines": [
+              3887,
+              3888
+            ],
+            "authority_segment_bytes": 124,
+            "authority_segment_sha256": "360D0BB7CE7D36A776E462DCA9317D204C9636AD2968B697E0364BAB7D899AFF",
+            "opcode": "replace",
+            "payload_lines": [
+              3887,
+              3888
+            ],
+            "payload_segment_bytes": 124,
+            "payload_segment_sha256": "C462CB3234A02BD4A66392FAAEF79EDC781CCA258F6A4BF4ECB909634E0E7EC3"
+          }
+        ],
+        "intake_row_bound": true,
+        "map_new": "two corrected delta differences and xi_i+1 specializes to xi_i",
+        "map_old": "two reversed delta differences and xi_i specializes to xi_i+1",
+        "payload_reconstruction_bound": true,
+        "producer_row_bound": true,
+        "producer_source_id": "TOPOLOGY-009",
+        "proof_dossier_occurrences": 1,
+        "review_outcome": "pass",
+        "source": "topology.tex",
+        "unit_id": "MC-STK-ERR-0041"
+      },
+      {
+        "assessment": "The finite component union is closed and a neighbourhood, but need not be open.",
+        "class": "topological_property_word_error",
+        "declared_change_count": 1,
+        "declared_locus": "3910-3911",
+        "exact_diff_regions": [
+          {
+            "authority_lines": [
+              3911,
+              3911
+            ],
+            "authority_segment_bytes": 62,
+            "authority_segment_sha256": "B3C0A016BE9B526425ADE35686912CF69B9EEF9ABBA6DE1EAA033C3E54C69FCE",
+            "opcode": "replace",
+            "payload_lines": [
+              3911,
+              3911
+            ],
+            "payload_segment_bytes": 60,
+            "payload_segment_sha256": "C41773189FE255EAB399CAF80DD90A488EC1F3E5E8D6EFC94A1BFED4E5EF7139"
+          }
+        ],
+        "intake_row_bound": true,
+        "map_new": "not necessarily open",
+        "map_old": "not necessarily closed",
+        "payload_reconstruction_bound": true,
+        "producer_row_bound": true,
+        "producer_source_id": "TOPOLOGY-010",
+        "proof_dossier_occurrences": 1,
+        "review_outcome": "pass",
+        "source": "topology.tex",
+        "unit_id": "MC-STK-ERR-0042"
+      },
+      {
+        "assessment": "Density gives empty interior; the following argument then proves nowhere density.",
+        "class": "proof_circularity_error",
+        "declared_change_count": 1,
+        "declared_locus": "4103-4109",
+        "exact_diff_regions": [
+          {
+            "authority_lines": [
+              4106,
+              4106
+            ],
+            "authority_segment_bytes": 69,
+            "authority_segment_sha256": "41B383BF3970763698D4AA53A5E41D1437B75B0AB73EB6D70B196C4BF515ABE9",
+            "opcode": "replace",
+            "payload_lines": [
+              4106,
+              4106
+            ],
+            "payload_segment_bytes": 71,
+            "payload_segment_sha256": "E929F5B8B6244352D433E241DE979D74D9BAE5F989EACFC2EA6F859AA9BE65E4"
+          }
+        ],
+        "intake_row_bound": true,
+        "map_new": "T has empty interior",
+        "map_old": "T is nowhere dense before proof",
+        "payload_reconstruction_bound": true,
+        "producer_row_bound": true,
+        "producer_source_id": "TOPOLOGY-011",
+        "proof_dossier_occurrences": 1,
+        "review_outcome": "pass",
+        "source": "topology.tex",
+        "unit_id": "MC-STK-ERR-0043"
+      },
+      {
+        "assessment": "The projections are applied to Z; p(X) and q(Y) are ill-typed.",
+        "class": "projection_argument_error",
+        "declared_change_count": 2,
+        "declared_locus": "4576-4590",
+        "exact_diff_regions": [
+          {
+            "authority_lines": [
+              4580,
+              4581
+            ],
+            "authority_segment_bytes": 125,
+            "authority_segment_sha256": "25CA4557A3471D26E209E328358F5A5AC757870EC1F2D5FCAA9083FC7F341C7E",
+            "opcode": "replace",
+            "payload_lines": [
+              4580,
+              4581
+            ],
+            "payload_segment_bytes": 125,
+            "payload_segment_sha256": "7A9602F04543692879384F1F738119B963CFCA28C0CDF7870119753B00BACDA3"
+          }
+        ],
+        "intake_row_bound": true,
+        "map_new": "closures of p(Z) and q(Z)",
+        "map_old": "closures of p(X) and q(Y)",
+        "payload_reconstruction_bound": true,
+        "producer_row_bound": true,
+        "producer_source_id": "TOPOLOGY-012",
+        "proof_dossier_occurrences": 1,
+        "review_outcome": "pass",
+        "source": "topology.tex",
+        "unit_id": "MC-STK-ERR-0044"
+      },
+      {
+        "assessment": "Before Y=f(X) is introduced, the declared codomain is the product.",
+        "class": "premature_undefined_codomain",
+        "declared_change_count": 1,
+        "declared_locus": "4684-4693",
+        "exact_diff_regions": [
+          {
+            "authority_lines": [
+              4686,
+              4686
+            ],
+            "authority_segment_bytes": 54,
+            "authority_segment_sha256": "290482C75B989778061483A5BAE865BF3B9B6636688EE497809632FF11AADD27",
+            "opcode": "replace",
+            "payload_lines": [
+              4686,
+              4686
+            ],
+            "payload_segment_bytes": 71,
+            "payload_segment_sha256": "7425C3CC3D92B7EEA70F23435F9C946403630869DA796D38F5CB1929906291C9"
+          }
+        ],
+        "intake_row_bound": true,
+        "map_new": "f:X to product_U W",
+        "map_old": "f:X to undefined Y",
+        "payload_reconstruction_bound": true,
+        "producer_row_bound": true,
+        "producer_source_id": "TOPOLOGY-013",
+        "proof_dossier_occurrences": 1,
+        "review_outcome": "pass",
+        "source": "topology.tex",
+        "unit_id": "MC-STK-ERR-0045"
+      },
+      {
+        "assessment": "Compactness is applied to the primed constructible-topology system.",
+        "class": "primed_inverse_limit_error",
+        "declared_change_count": 1,
+        "declared_locus": "4791-4803",
+        "exact_diff_regions": [
+          {
+            "authority_lines": [
+              4801,
+              4801
+            ],
+            "authority_segment_bytes": 41,
+            "authority_segment_sha256": "2032A9F8F24CDD604B28DD6B9A52A7FC317D86B77DB3ECDA7E9E90B0C2DA7863",
+            "opcode": "replace",
+            "payload_lines": [
+              4801,
+              4801
+            ],
+            "payload_segment_bytes": 42,
+            "payload_segment_sha256": "8A23DDC060E0E2836900E89CBD6E8167C2BF3C8204C151C9CA768061F643F1C4"
+          }
+        ],
+        "intake_row_bound": true,
+        "map_new": "Z-prime = limit Z-prime_i",
+        "map_old": "Z-prime = limit Z_i",
+        "payload_reconstruction_bound": true,
+        "producer_row_bound": true,
+        "producer_source_id": "TOPOLOGY-014",
+        "proof_dossier_occurrences": 1,
+        "review_outcome": "pass",
+        "source": "topology.tex",
+        "unit_id": "MC-STK-ERR-0046"
+      },
+      {
+        "assessment": "The constructible sets are closed in the cited compact constructible topology.",
+        "class": "topology_name_error",
+        "declared_change_count": 1,
+        "declared_locus": "5058-5065",
+        "exact_diff_regions": [
+          {
+            "authority_lines": [
+              5061,
+              5061
+            ],
+            "authority_segment_bytes": 65,
+            "authority_segment_sha256": "3CB5BCBE1995FC34E000C6558352050393FA248C785981F42F78A8D02961D177",
+            "opcode": "replace",
+            "payload_lines": [
+              5061,
+              5061
+            ],
+            "payload_segment_bytes": 70,
+            "payload_segment_sha256": "64CF496DC9A115CCC8E0F7AAFF752BE1796A7E4C3F2562E26D3603E9E9847592"
+          }
+        ],
+        "intake_row_bound": true,
+        "map_new": "constructible topology",
+        "map_old": "spectral topology in compact-Hausdorff argument",
+        "payload_reconstruction_bound": true,
+        "producer_row_bound": true,
+        "producer_source_id": "TOPOLOGY-015",
+        "proof_dossier_occurrences": 1,
+        "review_outcome": "pass",
+        "source": "topology.tex",
+        "unit_id": "MC-STK-ERR-0047"
+      },
+      {
+        "assessment": "The parentheses identify the inverse system used by the next lemma.",
+        "class": "inverse_limit_parenthesization_error",
+        "declared_change_count": 1,
+        "declared_locus": "5070-5088",
+        "exact_diff_regions": [
+          {
+            "authority_lines": [
+              5086,
+              5086
+            ],
+            "authority_segment_bytes": 76,
+            "authority_segment_sha256": "CBB2E68B8DF3B28A14CB32BA64416D271AEB2682853807F93B8FE99B665C6CF0",
+            "opcode": "replace",
+            "payload_lines": [
+              5086,
+              5086
+            ],
+            "payload_segment_bytes": 78,
+            "payload_segment_sha256": "843F5BDC42D2C132F77DF47539DC6DCC880AF770D2BFD5B15BEC9B1D0A7D60A8"
+          }
+        ],
+        "intake_row_bound": true,
+        "map_new": "limit (U_i minus E)",
+        "map_old": "limit U_i minus E",
+        "payload_reconstruction_bound": true,
+        "producer_row_bound": true,
+        "producer_source_id": "TOPOLOGY-016",
+        "proof_dossier_occurrences": 1,
+        "review_outcome": "pass",
+        "source": "topology.tex",
+        "unit_id": "MC-STK-ERR-0048"
+      },
+      {
+        "assessment": "The embedding has codomain X-star.",
+        "class": "codomain_object_error",
+        "declared_change_count": 1,
+        "declared_locus": "5163-5167",
+        "exact_diff_regions": [
+          {
+            "authority_lines": [
+              5167,
+              5167
+            ],
+            "authority_segment_bytes": 62,
+            "authority_segment_sha256": "7FAC28E07AA4FB2DCDF3C7E351464B79648E5C27A6A3EF739FCF24364E37602D",
+            "opcode": "replace",
+            "payload_lines": [
+              5167,
+              5167
+            ],
+            "payload_segment_bytes": 64,
+            "payload_segment_sha256": "0D7E55F38F8AB1BDF949C06E862EBEEAE855D65586F22BCB90EE47BDFAD0698C"
+          }
+        ],
+        "intake_row_bound": true,
+        "map_new": "open subspace of X-star",
+        "map_old": "open subspace of X",
+        "payload_reconstruction_bound": true,
+        "producer_row_bound": true,
+        "producer_source_id": "TOPOLOGY-017",
+        "proof_dossier_occurrences": 1,
+        "review_outcome": "pass",
+        "source": "topology.tex",
+        "unit_id": "MC-STK-ERR-0049"
+      },
+      {
+        "assessment": "Closedness and the complement step uniquely force complementing the intersection.",
+        "class": "set_parenthesization_error",
+        "declared_change_count": 1,
+        "declared_locus": "5362-5369",
+        "exact_diff_regions": [
+          {
+            "authority_lines": [
+              5364,
+              5364
+            ],
+            "authority_segment_bytes": 68,
+            "authority_segment_sha256": "2654FE390F6EB5391A7AF144C24C734FA902477BAC60A50A60939E04736581D9",
+            "opcode": "replace",
+            "payload_lines": [
+              5364,
+              5364
+            ],
+            "payload_segment_bytes": 70,
+            "payload_segment_sha256": "076FC40326EE28D0D6660F89A71BC1D0B1E255067DC38EBB2BEBE78A6DD3A35E"
+          }
+        ],
+        "intake_row_bound": true,
+        "map_new": "X minus (U intersect inverse-image V)",
+        "map_old": "X minus U intersect inverse-image V",
+        "payload_reconstruction_bound": true,
+        "producer_row_bound": true,
+        "producer_source_id": "TOPOLOGY-018",
+        "proof_dossier_occurrences": 1,
+        "review_outcome": "pass",
+        "source": "topology.tex",
+        "unit_id": "MC-STK-ERR-0050"
+      },
+      {
+        "assessment": "Only the constructed E is minimal and extremally disconnected; the E/T rebinding repairs uniqueness.",
+        "class": "minimal_cover_object_error",
+        "declared_change_count": 1,
+        "declared_locus": "5410-5442",
+        "exact_diff_regions": [
+          {
+            "authority_lines": [
+              5436,
+              5436
+            ],
+            "authority_segment_bytes": 56,
+            "authority_segment_sha256": "A4B23F5F41144B2A87A675489C24D18EB50B41EEAF02A0D6C4EBFDCF5010FF3A",
+            "opcode": "replace",
+            "payload_lines": [
+              5436,
+              5436
+            ],
+            "payload_segment_bytes": 55,
+            "payload_segment_sha256": "2BC28DFC3260DCA64F320E294F2BE7B9B0B28DCBAC37A5A48291995D507A2660"
+          },
+          {
+            "authority_lines": [
+              5438,
+              5442
+            ],
+            "authority_segment_bytes": 326,
+            "authority_segment_sha256": "51D8476DF1460CA1D3A4527FF9EA955816F03D0A97FF36075903A521BC00A305",
+            "opcode": "replace",
+            "payload_lines": [
+              5438,
+              5442
+            ],
+            "payload_segment_bytes": 322,
+            "payload_segment_sha256": "AE0B82AE9B5D26323EC9551F40B55FD63CC117C20EC5092702012F7F6E879BD6"
+          }
+        ],
+        "intake_row_bound": true,
+        "map_new": "uniqueness run on minimal cover E with proper subset T",
+        "map_old": "uniqueness run on ambient X-prime and shadowed E",
+        "payload_reconstruction_bound": true,
+        "producer_row_bound": true,
+        "producer_source_id": "TOPOLOGY-019",
+        "proof_dossier_occurrences": 1,
+        "review_outcome": "pass",
+        "source": "topology.tex",
+        "unit_id": "MC-STK-ERR-0051"
+      },
+      {
+        "assessment": "Deletion is the recorded safest non-inventive scaffold policy, not a mathematically unique completion; item (3) still ends with a comma.",
+        "class": "unfinished_scaffold_error",
+        "declared_change_count": 1,
+        "declared_locus": "5480-5490",
+        "exact_diff_regions": [
+          {
+            "authority_lines": [
+              5484,
+              5484
+            ],
+            "authority_segment_bytes": 21,
+            "authority_segment_sha256": "BF7114CCA3C67CAEE34E047933C6BAC7CD51064B69C0C3B15F47184D753CB355",
+            "opcode": "delete",
+            "payload_lines": [
+              5484,
+              5483
+            ],
+            "payload_segment_bytes": 0,
+            "payload_segment_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+          }
+        ],
+        "intake_row_bound": true,
+        "map_new": "placeholder item removed",
+        "map_old": "literal item add more here",
+        "payload_reconstruction_bound": true,
+        "producer_row_bound": true,
+        "producer_source_id": "TOPOLOGY-020",
+        "proof_dossier_occurrences": 1,
+        "review_outcome": "concern",
+        "source": "topology.tex",
+        "unit_id": "MC-STK-ERR-0052"
+      },
+      {
+        "assessment": "The following X_I example forces the standard refinement direction.",
+        "class": "reversed_definition_error",
+        "declared_change_count": 1,
+        "declared_locus": "5507-5522",
+        "exact_diff_regions": [
+          {
+            "authority_lines": [
+              5512,
+              5513
+            ],
+            "authority_segment_bytes": 117,
+            "authority_segment_sha256": "7D6D318F1FB73E1A17180C32B57A78016DC606B3FF21BCC39501B12D0EFD1CA7",
+            "opcode": "replace",
+            "payload_lines": [
+              5511,
+              5513
+            ],
+            "payload_segment_bytes": 179,
+            "payload_segment_sha256": "369C4E97B0448A846A0E1841F80B8ACFD062D838E37921C98BDD64D3CEF131DF"
+          }
+        ],
+        "intake_row_bound": true,
+        "map_new": "named standard refinement definition",
+        "map_old": "unnamed reversed refinement definition",
+        "payload_reconstruction_bound": true,
+        "producer_row_bound": true,
+        "producer_source_id": "TOPOLOGY-021",
+        "proof_dossier_occurrences": 1,
+        "review_outcome": "pass",
+        "source": "topology.tex",
+        "unit_id": "MC-STK-ERR-0053"
+      },
+      {
+        "assessment": "Inverse conjugates are correct for the printed right cosets; the alternative left-coset repair is excluded only by the recorded convention-preservation policy.",
+        "class": "coset_conjugation_orientation_error",
+        "declared_change_count": 1,
+        "declared_locus": "5820-5824",
+        "exact_diff_regions": [
+          {
+            "authority_lines": [
+              5823,
+              5823
+            ],
+            "authority_segment_bytes": 49,
+            "authority_segment_sha256": "A4AEDEC943EC613A12086F49A389BEF9026E353E909AECA55DFB23F4EA372645",
+            "opcode": "replace",
+            "payload_lines": [
+              5823,
+              5823
+            ],
+            "payload_segment_bytes": 49,
+            "payload_segment_sha256": "1149DB41704EAB04EBC37BD0810885B31E61078EB9AD521B99AB51BBDFCF6435"
+          }
+        ],
+        "intake_row_bound": true,
+        "map_new": "right cosets with g_i^-1 H g_i",
+        "map_old": "right cosets with g_i H g_i^-1",
+        "payload_reconstruction_bound": true,
+        "producer_row_bound": true,
+        "producer_source_id": "TOPOLOGY-022",
+        "proof_dossier_occurrences": 1,
+        "review_outcome": "concern",
+        "source": "topology.tex",
+        "unit_id": "MC-STK-ERR-0054"
+      },
+      {
+        "assessment": "Transition arrows must be topological-group homomorphisms, forcing TopGroup.",
+        "class": "category_codomain_error",
+        "declared_change_count": 1,
+        "declared_locus": "5865-5873",
+        "exact_diff_regions": [
+          {
+            "authority_lines": [
+              5868,
+              5868
+            ],
+            "authority_segment_bytes": 66,
+            "authority_segment_sha256": "550013A8D7B164E9C0275823BF0795EDC7AF4D6E3D49D29D375CCDC50C60FEC6",
+            "opcode": "replace",
+            "payload_lines": [
+              5868,
+              5868
+            ],
+            "payload_segment_bytes": 71,
+            "payload_segment_sha256": "80C4986254DF7C03E6BFB7CDE56FF05FE9E9BAEDF1FB4DD22D3C968AA0DD7390"
+          }
+        ],
+        "intake_row_bound": true,
+        "map_new": "diagram into TopGroup",
+        "map_old": "diagram into Top",
+        "payload_reconstruction_bound": true,
+        "producer_row_bound": true,
+        "producer_source_id": "TOPOLOGY-023",
+        "proof_dossier_occurrences": 1,
+        "review_outcome": "pass",
+        "source": "topology.tex",
+        "unit_id": "MC-STK-ERR-0055"
+      },
+      {
+        "assessment": "Only f after g has the stated source and target.",
+        "class": "composition_order_error",
+        "declared_change_count": 1,
+        "declared_locus": "7005-7008",
+        "exact_diff_regions": [
+          {
+            "authority_lines": [
+              7007,
+              7007
+            ],
+            "authority_segment_bytes": 75,
+            "authority_segment_sha256": "028BF6001D3E520AA3869AC3D519E708312A21D66D4DFC7C065DA917438DFB3C",
+            "opcode": "replace",
+            "payload_lines": [
+              7007,
+              7007
+            ],
+            "payload_segment_bytes": 75,
+            "payload_segment_sha256": "CA2696FFFF56D18E4CE58887C13B8F62454CCDC2A731C6C81BCF220B87887ACC"
+          }
+        ],
+        "intake_row_bound": true,
+        "map_new": "lift f after g",
+        "map_old": "lift g after f",
+        "payload_reconstruction_bound": true,
+        "producer_row_bound": true,
+        "producer_source_id": "CATEGORIES-001",
+        "proof_dossier_occurrences": 1,
+        "review_outcome": "pass",
+        "source": "categories.tex",
+        "unit_id": "MC-STK-ERR-0056"
+      },
+      {
+        "assessment": "The corrected index order matches the defining pseudofunctor lemma.",
+        "class": "pseudofunctor_index_order_error",
+        "declared_change_count": 1,
+        "declared_locus": "7046-7050",
+        "exact_diff_regions": [
+          {
+            "authority_lines": [
+              7048,
+              7048
+            ],
+            "authority_segment_bytes": 68,
+            "authority_segment_sha256": "107F8FC2E4B99C544F77E48EF15CBCC14205D58ED12581997551C9293C3F9F7B",
+            "opcode": "replace",
+            "payload_lines": [
+              7048,
+              7048
+            ],
+            "payload_segment_bytes": 68,
+            "payload_segment_sha256": "6D142CFDC52E8CA38BDDD7EF0F8147E5D99107B00831314153609751E9F99A71"
+          }
+        ],
+        "intake_row_bound": true,
+        "map_new": "alpha_{g,f}",
+        "map_old": "alpha_{f,g}",
+        "payload_reconstruction_bound": true,
+        "producer_row_bound": true,
+        "producer_source_id": "CATEGORIES-002",
+        "proof_dossier_occurrences": 1,
+        "review_outcome": "pass",
+        "source": "categories.tex",
+        "unit_id": "MC-STK-ERR-0057"
+      },
+      {
+        "assessment": "This is an isolated loss of the calligraphic symbol.",
+        "class": "missing_calligraphic_symbol",
+        "declared_change_count": 1,
+        "declared_locus": "7425-7429",
+        "exact_diff_regions": [
+          {
+            "authority_lines": [
+              7427,
+              7427
+            ],
+            "authority_segment_bytes": 31,
+            "authority_segment_sha256": "808288D4662C4486A963108F5A76B25082047C7A132917E6FE37AC537CFCBCD7",
+            "opcode": "replace",
+            "payload_lines": [
+              7427,
+              7427
+            ],
+            "payload_segment_bytes": 41,
+            "payload_segment_sha256": "CA07A0A44FBA2E5A56AF69B5E3ECFAE2C2EC7F7273688D8CDC04E483C024C26B"
+          }
+        ],
+        "intake_row_bound": true,
+        "map_new": "calligraphic I_S",
+        "map_old": "plain I_S",
+        "payload_reconstruction_bound": true,
+        "producer_row_bound": true,
+        "producer_source_id": "CATEGORIES-003",
+        "proof_dossier_occurrences": 1,
+        "review_outcome": "pass",
+        "source": "categories.tex",
+        "unit_id": "MC-STK-ERR-0058"
+      },
+      {
+        "assessment": "Only c after b is typed.",
+        "class": "composition_order_error",
+        "declared_change_count": 1,
+        "declared_locus": "7603-7623",
+        "exact_diff_regions": [
+          {
+            "authority_lines": [
+              7623,
+              7623
+            ],
+            "authority_segment_bytes": 57,
+            "authority_segment_sha256": "4EB3EC00A7957BC50FBD37B39E1F56FE94BF9B7A63E56144B7B0130BDDC24BED",
+            "opcode": "replace",
+            "payload_lines": [
+              7623,
+              7623
+            ],
+            "payload_segment_bytes": 57,
+            "payload_segment_sha256": "D18FD2AA4AE4B60070B085E58E24ED527F3391031174172D141215D4349DFC2E"
+          }
+        ],
+        "intake_row_bound": true,
+        "map_new": "d to c after b",
+        "map_old": "d to b after c",
+        "payload_reconstruction_bound": true,
+        "producer_row_bound": true,
+        "producer_source_id": "CATEGORIES-004",
+        "proof_dossier_occurrences": 1,
+        "review_outcome": "pass",
+        "source": "categories.tex",
+        "unit_id": "MC-STK-ERR-0059"
+      },
+      {
+        "assessment": "The second composition operator is mechanically duplicated.",
+        "class": "duplicated_operator_error",
+        "declared_change_count": 1,
+        "declared_locus": "9142-9149",
+        "exact_diff_regions": [
+          {
+            "authority_lines": [
+              9148,
+              9148
+            ],
+            "authority_segment_bytes": 41,
+            "authority_segment_sha256": "CC018074BF0CBD24DFD7E23C326900865A75059461B987DE29432A7D51C4D2E5",
+            "opcode": "replace",
+            "payload_lines": [
+              9148,
+              9148
+            ],
+            "payload_segment_bytes": 35,
+            "payload_segment_sha256": "57AD1A8F85E94329738AD2DC427EC4A40378219AE974BFBC9B3532135EB6DAA6"
+          }
+        ],
+        "intake_row_bound": true,
+        "map_new": "single composition operator",
+        "map_old": "duplicated composition operator",
+        "payload_reconstruction_bound": true,
+        "producer_row_bound": true,
+        "producer_source_id": "CATEGORIES-005",
+        "proof_dossier_occurrences": 1,
+        "review_outcome": "pass",
+        "source": "categories.tex",
+        "unit_id": "MC-STK-ERR-0060"
+      },
+      {
+        "assessment": "A bifunctor has categorical-product domain.",
+        "class": "bifunctor_domain_error",
+        "declared_change_count": 1,
+        "declared_locus": "9480-9483",
+        "exact_diff_regions": [
+          {
+            "authority_lines": [
+              9482,
+              9482
+            ],
+            "authority_segment_bytes": 74,
+            "authority_segment_sha256": "C40DCEC51BD6B667BAECC3862D566DF7BBCB9BFC7569EB7634425E1B0A7F7897",
+            "opcode": "replace",
+            "payload_lines": [
+              9482,
+              9482
+            ],
+            "payload_segment_bytes": 73,
+            "payload_segment_sha256": "9FF45AF173510934A421DC69186417DD4A844CB6F3CE4D85E0174D68F37383BD"
+          }
+        ],
+        "intake_row_bound": true,
+        "map_new": "categorical product domain C times C",
+        "map_old": "tensor bifunctor domain C tensor C",
+        "payload_reconstruction_bound": true,
+        "producer_row_bound": true,
+        "producer_source_id": "CATEGORIES-006",
+        "proof_dossier_occurrences": 1,
+        "review_outcome": "pass",
+        "source": "categories.tex",
+        "unit_id": "MC-STK-ERR-0061"
+      },
+      {
+        "assessment": "The product of the representables is represented by U times V; all three repairs are linked and typed.",
+        "class": "representable_slice_error",
+        "declared_change_count": 3,
+        "declared_locus": "8840-8852",
+        "exact_diff_regions": [
+          {
+            "authority_lines": [
+              8843,
+              8843
+            ],
+            "authority_segment_bytes": 72,
+            "authority_segment_sha256": "D32D1141F40D7010820A1F855FAF4C065EB063D2213357B8966E2F04D5ECA0EE",
+            "opcode": "replace",
+            "payload_lines": [
+              8843,
+              8843
+            ],
+            "payload_segment_bytes": 74,
+            "payload_segment_sha256": "14189E4E51B09D3B43EB73D5D8148B17FED268A74C6C5B5F909AEF1DCAAD3276"
+          },
+          {
+            "authority_lines": [
+              8847,
+              8847
+            ],
+            "authority_segment_bytes": 25,
+            "authority_segment_sha256": "5AA3C7E4968BC3D854115FE9C2D7BBE15CA4FF464F86ACF58B242452DB03B206",
+            "opcode": "replace",
+            "payload_lines": [
+              8847,
+              8847
+            ],
+            "payload_segment_bytes": 27,
+            "payload_segment_sha256": "B5F9EADF3177E07DAED8A0A4F8E9CF2A267D9DF51E4E1F301FB88A90B2A90DBB"
+          },
+          {
+            "authority_lines": [
+              8852,
+              8852
+            ],
+            "authority_segment_bytes": 42,
+            "authority_segment_sha256": "467115CACEC0FB35C2A68D74A3591F0188DD84491786830328F5B3F741CA0E2A",
+            "opcode": "replace",
+            "payload_lines": [
+              8852,
+              8852
+            ],
+            "payload_segment_bytes": 44,
+            "payload_segment_sha256": "5BA49EFC626C627AEDC3603C9A2732E32C573659BBB61F357C0199AE35E85C0A"
+          }
+        ],
+        "intake_row_bound": true,
+        "map_new": "three C/(U times V) representables",
+        "map_old": "three malformed C/U times V representables",
+        "payload_reconstruction_bound": true,
+        "producer_row_bound": true,
+        "producer_source_id": "CATEGORIES-007",
+        "proof_dossier_occurrences": 1,
+        "review_outcome": "pass",
+        "source": "categories.tex",
+        "unit_id": "MC-STK-ERR-0062"
+      }
+    ]
+  }
+}

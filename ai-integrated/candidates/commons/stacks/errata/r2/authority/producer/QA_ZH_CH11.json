@@ -1,0 +1,113 @@
+{
+  "schema": "stacks-cjk-part-chapter-qa-v1",
+  "timestamp": "2026-08-21T22:34:57.4620263+02:00",
+  "task": "01a025cc-3a91-7301-8336-296875b65315",
+  "unit": "P02-ZH-CH11",
+  "locale": "zh-Hans-CN",
+  "chapter": 11,
+  "authority": {
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "official_pdf_sha256": "5B3A46C20A9CD3C42E7F6746A30B655367DD544AA0AC837626C01E0F44DEB409",
+    "source_path": "upstream/src/stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14/brauer.tex",
+    "source_bytes": 28201,
+    "source_sha256": "B2504820D769EBE4E9E33B8ADD78753FB30ACA6E8A7F75C8D54DDA885EDCD682"
+  },
+  "target": {
+    "path": "p02/zh_hans_cn/tex/brauer.tex",
+    "bytes": 26800,
+    "sha256": "D73BAD0A8E33FFAE419248B1CCC4211D17433B225A977514CBA480777F3006E8",
+    "preamble_path": "p02/zh_hans_cn/tex/preamble.tex",
+    "preamble_bytes": 2005,
+    "preamble_sha256": "3DDDBA336D6F7332A29425745A262D2432548C7CB42886F07514036076550BE6"
+  },
+  "structural_check": {
+    "tool_path": "p02/control/check_tex.ps1",
+    "tool_sha256": "324BBA2A987264AF876D9727590DAC40CE13D8FF229A482DFE5788330221C4AD",
+    "pass": true,
+    "ordered_labels": 43,
+    "ordered_refs": 51,
+    "ordered_citations": 4,
+    "ordered_begin_environments": 72,
+    "ordered_end_environments": 72,
+    "ordered_inputs": 2,
+    "ordered_bibliographies": 1,
+    "ordered_bibliography_styles": 1,
+    "exact_math_span_multiset": 601,
+    "math_span_multiset_pass": true,
+    "math_span_sequence_advisory": "Adjacent inline spans may change order under Chinese grammar; exact count and case-sensitive normalized multiset are invariant."
+  },
+  "build": {
+    "engine": "XeTeX 3.141592653-2.6-0.999998 / MiKTeX 26.5",
+    "replay": [
+      "Set TEXINPUTS to p02/zh_hans_cn/tex followed by the frozen upstream source root.",
+      "Set BIBINPUTS to the frozen upstream source root.",
+      "xelatex -interaction=batchmode -halt-on-error -file-line-error -output-directory=<p02/zh_hans_cn/build/ch11> <p02/zh_hans_cn/tex/brauer.tex>",
+      "bibtex brauer in p02/zh_hans_cn/build/ch11",
+      "Run the same xelatex command twice."
+    ],
+    "pdf_path": "p02/zh_hans_cn/build/ch11/brauer.pdf",
+    "pdf_bytes": 179308,
+    "pdf_sha256": "E1A69D1B352A1E31FA80681A705742CBD73386A55D6B2A1E27BD6AE139AD72A3",
+    "pages": 9,
+    "page_size": "612 x 792 pts (letter)",
+    "log_path": "p02/zh_hans_cn/build/ch11/brauer.log",
+    "log_bytes": 51581,
+    "log_sha256": "FFE1E20DC5C584CFC8598E58A9C987926B26D4216F38A7557A75FCCA23D4C9E1",
+    "bbl_path": "p02/zh_hans_cn/build/ch11/brauer.bbl",
+    "bbl_bytes": 1122,
+    "bbl_sha256": "D2ACEC55D72D4915A76A6E88DC6FFE64F32EFD451CE4911C5206D538997360C9",
+    "errors": 0,
+    "missing_characters": 0,
+    "overfull_boxes": 0,
+    "underfull_boxes": 0,
+    "undefined_references": 0,
+    "undefined_citations": 0
+  },
+  "external_reference_fallbacks": [
+    {
+      "label": "algebra-lemma-integral-over-field",
+      "display": "36.19",
+      "permanent_tag": "00GS",
+      "authority_url": "https://stacks.math.columbia.edu/tag/00GS",
+      "rule": "Used only for isolated builds when the real external AUX label is absent."
+    },
+    {
+      "label": "fields-section-algebraic",
+      "display": "28",
+      "permanent_tag": "037H",
+      "authority_url": "https://stacks.math.columbia.edu/tag/037H",
+      "rule": "Used only for isolated builds when the real external AUX label is absent."
+    }
+  ],
+  "pdf_text_and_fonts": {
+    "fonts_total": 22,
+    "fonts_embedded": 22,
+    "fonts_with_tounicode": 17,
+    "cjk_fonts": [
+      "Noto Serif CJK SC",
+      "Noto Sans CJK SC"
+    ],
+    "extracted_characters": 19323,
+    "extracted_cjk_characters": 3858,
+    "replacement_characters": 0,
+    "double_question_placeholders": 0,
+    "adverse_evidence": "Five legacy Latin Modern math-symbol font subsets lack ToUnicode. Visible formula rendering passed, but symbol-level copy/search is not certified by this receipt."
+  },
+  "visual_check": {
+    "method": "Rendered all 9 pages with Poppler pdftoppm at 120 DPI; inspected the complete 3x3 contact sheet and full-size pages 1, 2, and 7 after the final layout changes.",
+    "pass": true,
+    "findings": [
+      "No clipping, overlap, missing glyph, black box, or off-page content.",
+      "Body text and formulae are legible at the Stacks class measure with Noto Serif CJK SC.",
+      "Chinese theorem, proof, contents, bibliography, figure, and table names render correctly.",
+      "Hyperlink borders are hidden while links remain active.",
+      "The isolated chapter build still imports the shared upstream English 'Other chapters' navigation; localization of that shared canon-owned file is an integration task, not untranslated Chapter 11 prose."
+    ]
+  },
+  "errata_candidates": [
+    "P02-E0001",
+    "P02-E0002"
+  ],
+  "status": "producer_mechanical_pass",
+  "certification": "This receipt establishes bounded structural and render reproducibility only. It is not independent Chinese-language approval or cumulative-edition certification."
+}

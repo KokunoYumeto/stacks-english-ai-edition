@@ -1,0 +1,278 @@
+{
+  "schema": "mathematics-commons-stacks-errata-visual-qa/v1",
+  "candidate_id": "stacks-errata-a04446e-r3",
+  "generated_at_utc": "2026-08-22T03:08:09.9375535Z",
+  "result": "pass",
+  "passed": true,
+  "total_pages_inspected": 181,
+  "method": {
+    "all_pages_rendered": true,
+    "all_pages_render_engine": "Poppler pdftoppm",
+    "all_pages_render_dpi": 180,
+    "contact_sheets_inspected": 12,
+    "contact_sheet_pages_per_sheet": 16,
+    "high_resolution_render_engine": "MuPDF mutool",
+    "high_resolution_render_dpi": 300,
+    "high_resolution_pages_inspected": 38,
+    "revision_method": "All 14 pages of the changed sets PDF were freshly rendered at 180 dpi and inspected, with pages 9-13 freshly inspected at 300 dpi. The topology and categories PDFs reproduced their previously inspected hashes byte-for-byte, so their bound prior render evidence was retained.",
+    "structural_tools": [
+      "pdfinfo",
+      "pdffonts",
+      "pypdf 6.12.2"
+    ],
+    "visual_checks": [
+      "clipping",
+      "overlap",
+      "missing glyphs",
+      "reflow",
+      "headers",
+      "footers",
+      "page numbers",
+      "diagrams",
+      "correction pages",
+      "build-warning risk pages"
+    ],
+    "structural_checks": [
+      "page count and page boxes",
+      "encryption and tagging",
+      "embedded fonts and ToUnicode maps",
+      "annotations and action types",
+      "malformed and out-of-bounds link rectangles",
+      "empty content and extracted-text pages",
+      "replacement glyphs"
+    ]
+  },
+  "build_receipt": {
+    "path": "builds/build-receipt.json",
+    "bytes": 22742,
+    "sha256": "EE79BEF51F799E9F02A2B54480DAB6F5CB10FAA72680EFFFD23CDB934433A183",
+    "passed": true,
+    "candidate_pdf_identities_match": true
+  },
+  "coverage_source": {
+    "path": "source-map.jsonl",
+    "bytes": 11574,
+    "sha256": "65F1CE7CD5C39DF836C059EEB48279A2686A7AE36777914323504B8CA6186F1C",
+    "unit_count": 34
+  },
+  "adverse_evidence": [],
+  "expected_non_adverse_evidence": [
+    "Standalone builds display unresolved cross-chapter references as ?? with red link borders, matching the documented build limitation.",
+    "The PDFs are untagged; this does not affect the visual-rendering gate.",
+    "The freshly rebuilt topology and categories PDFs are byte-identical to their prior visually inspected versions."
+  ],
+  "pdfs": [
+    {
+      "path": "builds/sets.pdf",
+      "sha256": "7FFA758C1F3431B23D2267DA299794F744763CB25ACBFBFBABC24D3CA2D2B44D",
+      "bytes": 449363,
+      "passed": true,
+      "page_count": 14,
+      "pages_visually_inspected": 14,
+      "pdf_version": "1.5",
+      "page_geometry": {
+        "page_size_points": [612, 792],
+        "media_box": [0, 0, 612, 792],
+        "crop_box": [0, 0, 612, 792],
+        "rotations": [0]
+      },
+      "encrypted": false,
+      "tagged": false,
+      "forms": false,
+      "javascript": false,
+      "font_resources": 26,
+      "unembedded_fonts": [],
+      "fonts_missing_tounicode": [],
+      "annotations": {
+        "total": 50,
+        "link": 50,
+        "action_types": {
+          "GoTo": 49,
+          "GoToR": 1
+        }
+      },
+      "malformed_link_rectangles": [],
+      "out_of_bounds_link_rectangles": [],
+      "empty_content_pages": [],
+      "empty_extracted_text_pages": [],
+      "replacement_glyph_pages": [],
+      "render_inspection": {
+        "all_pages_dpi": 180,
+        "all_pages_pixel_size": [1530, 1980],
+        "contact_sheets_inspected": 1,
+        "high_resolution_dpi": 300,
+        "high_resolution_pages_inspected": [9, 10, 11, 12, 13],
+        "correction_pages_inspected": [10, 11, 12],
+        "risk_pages_inspected": []
+      },
+      "visual_findings": {
+        "clipping": false,
+        "overlap": false,
+        "missing_glyphs": false,
+        "reflow_anomalies": false,
+        "headers_footers_page_numbers": "consistent and complete",
+        "diagrams": "crisp and legible",
+        "adverse_evidence": []
+      },
+      "non_adverse_build_warnings": [],
+      "covered_units": [
+        "MC-STK-ERR-0029",
+        "MC-STK-ERR-0030",
+        "MC-STK-ERR-0031",
+        "MC-STK-ERR-0032"
+      ]
+    },
+    {
+      "path": "builds/topology.pdf",
+      "sha256": "12D3AAA2FF48760189757D1E6DC951A18446BD72186A0B056AE7B840D8D152B7",
+      "bytes": 776739,
+      "passed": true,
+      "page_count": 64,
+      "pages_visually_inspected": 64,
+      "pdf_version": "1.5",
+      "page_geometry": {
+        "page_size_points": [612, 792],
+        "media_box": [0, 0, 612, 792],
+        "crop_box": [0, 0, 612, 792],
+        "rotations": [0]
+      },
+      "encrypted": false,
+      "tagged": false,
+      "forms": false,
+      "javascript": false,
+      "font_resources": 23,
+      "unembedded_fonts": [],
+      "fonts_missing_tounicode": [],
+      "annotations": {
+        "total": 305,
+        "link": 305,
+        "action_types": {
+          "GoTo": 303,
+          "GoToR": 2
+        }
+      },
+      "malformed_link_rectangles": [],
+      "out_of_bounds_link_rectangles": [],
+      "empty_content_pages": [],
+      "empty_extracted_text_pages": [],
+      "replacement_glyph_pages": [],
+      "render_inspection": {
+        "all_pages_dpi": 180,
+        "all_pages_pixel_size": [1530, 1980],
+        "contact_sheets_inspected": 4,
+        "high_resolution_dpi": 300,
+        "high_resolution_pages_inspected": [6, 14, 18, 20, 21, 23, 25, 28, 32, 36, 39, 40, 42, 47, 48, 49, 50, 52, 53, 55, 56, 57, 60],
+        "correction_pages_inspected": [14, 20, 21, 25, 28, 32, 39, 40, 42, 47, 48, 49, 52, 53, 55, 56, 60],
+        "risk_pages_inspected": [6, 18, 23, 36]
+      },
+      "visual_findings": {
+        "clipping": false,
+        "overlap": false,
+        "missing_glyphs": false,
+        "reflow_anomalies": false,
+        "headers_footers_page_numbers": "consistent and complete",
+        "diagrams": "crisp and legible",
+        "adverse_evidence": []
+      },
+      "non_adverse_build_warnings": [
+        "Page 6: 1.06696 pt overfull vbox inspected at 300 dpi; no visible clipping or overlap.",
+        "Page 18: 1.77599 pt overfull hbox inspected at 300 dpi; no visible clipping or overlap.",
+        "Page 23: 5.29736 pt overfull hbox inspected at 300 dpi; no visible clipping or overlap.",
+        "Page 36: 2.01527 pt overfull hbox inspected at 300 dpi; no visible clipping or overlap."
+      ],
+      "covered_units": [
+        "MC-STK-ERR-0033",
+        "MC-STK-ERR-0034",
+        "MC-STK-ERR-0035",
+        "MC-STK-ERR-0036",
+        "MC-STK-ERR-0037",
+        "MC-STK-ERR-0038",
+        "MC-STK-ERR-0039",
+        "MC-STK-ERR-0040",
+        "MC-STK-ERR-0041",
+        "MC-STK-ERR-0042",
+        "MC-STK-ERR-0043",
+        "MC-STK-ERR-0044",
+        "MC-STK-ERR-0045",
+        "MC-STK-ERR-0046",
+        "MC-STK-ERR-0047",
+        "MC-STK-ERR-0048",
+        "MC-STK-ERR-0049",
+        "MC-STK-ERR-0050",
+        "MC-STK-ERR-0051",
+        "MC-STK-ERR-0052",
+        "MC-STK-ERR-0053",
+        "MC-STK-ERR-0054",
+        "MC-STK-ERR-0055"
+      ]
+    },
+    {
+      "path": "builds/categories.pdf",
+      "sha256": "6374342AD1EFD455D14EA4C1B1C67B53CB6805F29736F3CF9B3EDE5958E0E6A6",
+      "bytes": 1051562,
+      "passed": true,
+      "page_count": 103,
+      "pages_visually_inspected": 103,
+      "pdf_version": "1.5",
+      "page_geometry": {
+        "page_size_points": [612, 792],
+        "media_box": [0, 0, 612, 792],
+        "crop_box": [0, 0, 612, 792],
+        "rotations": [0]
+      },
+      "encrypted": false,
+      "tagged": false,
+      "forms": false,
+      "javascript": false,
+      "font_resources": 31,
+      "unembedded_fonts": [],
+      "fonts_missing_tounicode": [],
+      "annotations": {
+        "total": 358,
+        "link": 358,
+        "action_types": {
+          "GoTo": 352,
+          "GoToR": 6
+        }
+      },
+      "malformed_link_rectangles": [],
+      "out_of_bounds_link_rectangles": [],
+      "empty_content_pages": [],
+      "empty_extracted_text_pages": [],
+      "replacement_glyph_pages": [],
+      "render_inspection": {
+        "all_pages_dpi": 180,
+        "all_pages_pixel_size": [1530, 1980],
+        "contact_sheets_inspected": 7,
+        "high_resolution_dpi": 300,
+        "high_resolution_pages_inspected": [35, 41, 75, 79, 81, 89, 92, 95, 98, 99],
+        "correction_pages_inspected": [75, 79, 81, 92, 95, 98],
+        "risk_pages_inspected": [35, 41, 89, 99]
+      },
+      "visual_findings": {
+        "clipping": false,
+        "overlap": false,
+        "missing_glyphs": false,
+        "reflow_anomalies": false,
+        "headers_footers_page_numbers": "consistent and complete",
+        "diagrams": "crisp and legible",
+        "adverse_evidence": []
+      },
+      "non_adverse_build_warnings": [
+        "Page 35: 1.48561 pt overfull hbox inspected at 300 dpi; no visible clipping or overlap.",
+        "Page 41: 2.4673 pt overfull hbox inspected at 300 dpi; no visible clipping or overlap.",
+        "Page 89: 10.41138 pt overfull hbox inspected at 300 dpi; no visible clipping or overlap.",
+        "Page 99: 4.2795 pt overfull hbox inspected at 300 dpi; no visible clipping or overlap."
+      ],
+      "covered_units": [
+        "MC-STK-ERR-0056",
+        "MC-STK-ERR-0057",
+        "MC-STK-ERR-0058",
+        "MC-STK-ERR-0059",
+        "MC-STK-ERR-0060",
+        "MC-STK-ERR-0061",
+        "MC-STK-ERR-0062"
+      ]
+    }
+  ]
+}

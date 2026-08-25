@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/KokunoYumeto/mathematics-commons-stacks/raw/main/schemas/overlay-entry.schema.json",
+  "title": "Mathematics Commons Stacks overlay registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "upstream_lock", "namespace_root", "one_writer_per_ancestor_chain", "registered_entries"],
+  "properties": {
+    "$schema": {"type": "string"},
+    "schema": {"const": "mathematics-commons-stacks-overlay-registry/v1"},
+    "upstream_lock": {"const": "upstream/stacks.lock.json"},
+    "namespace_root": {"const": "commons/stacks"},
+    "one_writer_per_ancestor_chain": {"const": true},
+    "registered_entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "namespace", "writer", "source_commit", "source_tree", "manifest_sha256", "stable_ids", "rights_state", "review_receipt", "admitted_at_utc"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$"},
+          "namespace": {"type": "string", "pattern": "^commons/stacks/[a-z0-9][a-z0-9._/-]*$"},
+          "writer": {"type": "string", "minLength": 1},
+          "source_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+          "source_tree": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+          "manifest_sha256": {"type": "string", "pattern": "^[0-9A-F]{64}$"},
+          "stable_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+          "rights_state": {"type": "string", "minLength": 1},
+          "review_receipt": {"type": "string", "minLength": 1},
+          "admitted_at_utc": {"type": "string", "format": "date-time"}
+        }
+      }
+    }
+  }
+}
+

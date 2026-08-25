@@ -1,0 +1,380 @@
+{
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_inputs": {
+    "brauer.tex": {
+      "bytes": 28201,
+      "path": "brauer.tex",
+      "sha256": "B2504820D769EBE4E9E33B8ADD78753FB30ACA6E8A7F75C8D54DDA885EDCD682"
+    },
+    "stacks-limits.tex": {
+      "bytes": 42110,
+      "path": "stacks-limits.tex",
+      "sha256": "F4F5EBF02BB5922A8DFF70EA507ED6F821F992C697D9C9A984B9513C39FEC57A"
+    }
+  },
+  "authority_phase": {
+    "stems": {
+      "brauer": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "brauer.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 38045,
+            "stdout_sha256_raw": "BBD310028AC93936E52ED08D943FA6E7154A46EEE2B80DE2A4E8644443A8D718"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "brauer"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 143,
+            "stdout_sha256_raw": "9AE9600D98A09635E7D6E137B2A6F4EBED9D28A002A4A49798CA2DC3CEEA4C52"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "brauer.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 33318,
+            "stdout_sha256_raw": "C9373C1EFABE141456148F3A9C8B7E148F86F6A52EE590F61526FC2D91BA04AA"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "brauer.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 32736,
+            "stdout_sha256_raw": "E09C68D9806788C669505417C57837AE60EE9EE5B216C9DAD891FB090882FCCE"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 143,
+            "path": "builds/brauer.authority.bibtex.txt",
+            "sha256": "9AE9600D98A09635E7D6E137B2A6F4EBED9D28A002A4A49798CA2DC3CEEA4C52"
+          },
+          "log": {
+            "bytes": 46662,
+            "path": "builds/brauer.authority.log",
+            "sha256": "9BADC1403A6324204CFEAE984DDE1D78679D5FB282433150992AB5E8C393F226"
+          },
+          "pass3_stdout": {
+            "bytes": 32368,
+            "path": "builds/brauer.authority.pass3.txt",
+            "sha256": "14916955624A86F4F63B8773386CD8F97ACE2F18DA4E22CFBB073B209E5B98EB"
+          },
+          "pdf": {
+            "bytes": 343290,
+            "path": "builds/brauer.authority.pdf",
+            "sha256": "3BB40F4A15DE154631CC14900EECD90F12BD59C71F880BC3E2DEF5FC308E0487"
+          }
+        },
+        "source": {
+          "bytes": 28201,
+          "path": "brauer.tex",
+          "sha256": "B2504820D769EBE4E9E33B8ADD78753FB30ACA6E8A7F75C8D54DDA885EDCD682"
+        }
+      },
+      "stacks-limits": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "stacks-limits.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 42631,
+            "stdout_sha256_raw": "8B2B9F7936BC7BBA8D889B86CEDF92D3D740F3E86575B9294D099C57E2DDC675"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "stacks-limits"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 212,
+            "stdout_sha256_raw": "F5DD99B97ADC6FA948CDFF17E74B17D1619FAB37C9F3BBCFF36C9F06A4E9E085"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "stacks-limits.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 41993,
+            "stdout_sha256_raw": "7FB0AC9B4A1BA04BF4CECA338B9470CF5C27C7AE4BDBB6B8327ACC54B86FA9DA"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "stacks-limits.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 41632,
+            "stdout_sha256_raw": "7C3B51AF1DE236DBBE305C98CB26475E5F225A473DE0DB1BBEBB2A1F046C684D"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 212,
+            "path": "builds/stacks-limits.authority.bibtex.txt",
+            "sha256": "F5DD99B97ADC6FA948CDFF17E74B17D1619FAB37C9F3BBCFF36C9F06A4E9E085"
+          },
+          "log": {
+            "bytes": 55318,
+            "path": "builds/stacks-limits.authority.log",
+            "sha256": "636A9925B4B4056471344BBB9DF5EF8FB1B66C0F0FF865152DDD4550B6DC8308"
+          },
+          "pass3_stdout": {
+            "bytes": 41276,
+            "path": "builds/stacks-limits.authority.pass3.txt",
+            "sha256": "8B34C5674AB0F197742D5090D0FA7BBB7CA726A60F9423C61B62840C74ED5F57"
+          },
+          "pdf": {
+            "bytes": 342237,
+            "path": "builds/stacks-limits.authority.pdf",
+            "sha256": "F4C3DECCF47A5B4090268C4CD486CF9C51B5E0D559BB90D101C7F1CC3A2094C7"
+          }
+        },
+        "source": {
+          "bytes": 42110,
+          "path": "stacks-limits.tex",
+          "sha256": "F4F5EBF02BB5922A8DFF70EA507ED6F821F992C697D9C9A984B9513C39FEC57A"
+        }
+      }
+    }
+  },
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "candidate_id": "stacks-errata-a04446e-r2",
+  "candidate_inputs": {
+    "brauer.tex": {
+      "bytes": 28214,
+      "path": "brauer.tex",
+      "sha256": "7D14F300ED13295728D3BA0B08ABEB5449B93D4E64244FA91680BEA9DA785BBD"
+    },
+    "stacks-limits.tex": {
+      "bytes": 42157,
+      "path": "stacks-limits.tex",
+      "sha256": "0FBB14083DB31197467F9A638216D3273BAE7520623E99B9ED884B043BF12003"
+    }
+  },
+  "candidate_phase": {
+    "stems": {
+      "brauer": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "brauer.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 38045,
+            "stdout_sha256_raw": "A77F8EE52C6DC3ECF5E5C0EB4E9C92651831DCF467F8DDC15F014641729FACB8"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "brauer"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 143,
+            "stdout_sha256_raw": "9AE9600D98A09635E7D6E137B2A6F4EBED9D28A002A4A49798CA2DC3CEEA4C52"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "brauer.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 33318,
+            "stdout_sha256_raw": "FDDC4B103FCBCA193E922BEE3356086904C4225829144844EFC78F583752BEC3"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "brauer.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 32736,
+            "stdout_sha256_raw": "C517406CAFC249D98D14CB21ED173E2242B196E94DAF5392B2CF0DBA17A34195"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 143,
+            "path": "builds/brauer.bibtex.txt",
+            "sha256": "9AE9600D98A09635E7D6E137B2A6F4EBED9D28A002A4A49798CA2DC3CEEA4C52"
+          },
+          "log": {
+            "bytes": 46662,
+            "path": "builds/brauer.log",
+            "sha256": "4DDF2CA8184AEB2CBF51A0E4E3F625B2A3FAE7430BDC38B845CE4E0D1A639048"
+          },
+          "pass3_stdout": {
+            "bytes": 32368,
+            "path": "builds/brauer.pass3.txt",
+            "sha256": "A2AE5014F656104271FBEC45BBC74F379942FDD38518F928B5AFFF5AD41DBC35"
+          },
+          "pdf": {
+            "bytes": 343309,
+            "path": "builds/brauer.pdf",
+            "sha256": "11DBAF837AAD0F8AA6BBD6537ADA14E326DFBF166F6B3E98280790F0A0F6CBF4"
+          }
+        },
+        "source": {
+          "bytes": 28214,
+          "path": "brauer.tex",
+          "sha256": "7D14F300ED13295728D3BA0B08ABEB5449B93D4E64244FA91680BEA9DA785BBD"
+        }
+      },
+      "stacks-limits": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "stacks-limits.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 42630,
+            "stdout_sha256_raw": "7092FA0A3F4ED4E292A14DEA019CF2004F23FD218999CE582EBE89ADA94FBF49"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "stacks-limits"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 212,
+            "stdout_sha256_raw": "F5DD99B97ADC6FA948CDFF17E74B17D1619FAB37C9F3BBCFF36C9F06A4E9E085"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "stacks-limits.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 41993,
+            "stdout_sha256_raw": "9C5F674B6E5E8F7FE3DE96D73E55E6C8D460C3016CED67EBA5DB84C3B52A8737"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "stacks-limits.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 41632,
+            "stdout_sha256_raw": "175B1CD12B3FC4B06F37A228A746BEB95A8799DDE8D6E69BE37DB3CD72533EFE"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 212,
+            "path": "builds/stacks-limits.bibtex.txt",
+            "sha256": "F5DD99B97ADC6FA948CDFF17E74B17D1619FAB37C9F3BBCFF36C9F06A4E9E085"
+          },
+          "log": {
+            "bytes": 55318,
+            "path": "builds/stacks-limits.log",
+            "sha256": "3E2B3E66ACD04E2A36A4E1AD0E0561C71EC4D79459154E75A71204E4C99124E3"
+          },
+          "pass3_stdout": {
+            "bytes": 41276,
+            "path": "builds/stacks-limits.pass3.txt",
+            "sha256": "CC4F73114C05E83D1AB73B8956748112A11AA00F9C8EA51396CEC4107B49E4BB"
+          },
+          "pdf": {
+            "bytes": 342171,
+            "path": "builds/stacks-limits.pdf",
+            "sha256": "6A2688A4BBB5C89C4EAF2C6E5B477CD7F1F77095399184F969BEADB56DBBD3A6"
+          }
+        },
+        "source": {
+          "bytes": 42157,
+          "path": "stacks-limits.tex",
+          "sha256": "0FBB14083DB31197467F9A638216D3273BAE7520623E99B9ED884B043BF12003"
+        }
+      }
+    }
+  },
+  "completed_at_utc": "2026-08-21T21:21:21Z",
+  "passed": true,
+  "restored_authority_inputs": {
+    "brauer.tex": {
+      "bytes": 28201,
+      "path": "brauer.tex",
+      "sha256": "B2504820D769EBE4E9E33B8ADD78753FB30ACA6E8A7F75C8D54DDA885EDCD682"
+    },
+    "stacks-limits.tex": {
+      "bytes": 42110,
+      "path": "stacks-limits.tex",
+      "sha256": "F4F5EBF02BB5922A8DFF70EA507ED6F821F992C697D9C9A984B9513C39FEC57A"
+    }
+  },
+  "schema": "mathematics-commons-stacks-errata-build-execution/v1",
+  "source_date_epoch": "1785270512",
+  "started_at_utc": "2026-08-21T21:21:06Z",
+  "tools": {
+    "bibtex": "MiKTeX-BibTeX 4.2 (MiKTeX 26.5)",
+    "pdflatex": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5)",
+    "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]"
+  },
+  "work_root": "new empty temporary directory outside source and candidate; exact local path retained only in private receipt"
+}

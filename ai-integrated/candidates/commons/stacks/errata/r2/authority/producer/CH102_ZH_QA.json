@@ -1,0 +1,126 @@
+{
+  "schema": "stacks-cjk-producer-checkpoint-v1",
+  "receipt_id": "P12-QA-ZH-102-R1",
+  "created_utc": "2026-08-21T20:32:20Z",
+  "status": "producer_mechanical_render_checkpoint_uncertified",
+  "locale": "zh-Hans-CN",
+  "unit": "chapter-102",
+  "authority": {
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "source_path": "upstream/src/stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14/stacks-limits.tex",
+    "source_bytes": 42110,
+    "source_lines": 1115,
+    "source_sha256": "F4F5EBF02BB5922A8DFF70EA507ED6F821F992C697D9C9A984B9513C39FEC57A"
+  },
+  "target": {
+    "path": "p12/zh_hans_cn/stacks-limits.tex",
+    "bytes": 38786,
+    "lines": 1020,
+    "sha256": "B223557ADB24C0CF3B6C745F31CA6B8E95D2D388D71CC9659EF4B55028A24C15",
+    "coverage": "complete rendered prose of Chapter 102, all eight source sections"
+  },
+  "support_files": [
+    {
+      "path": "p12/zh_hans_cn/preamble.tex",
+      "sha256": "1BA529A89D4CFCBEECF8269100994FFF6DD07CEC5A228C39F0FAB96493C15F2B"
+    },
+    {
+      "path": "p12/zh_hans_cn/chapters.tex",
+      "sha256": "312ABD3B24D0DF67C42E5B20F9811CB22F092133C296072EE55FB920D76E68B5"
+    },
+    {
+      "path": "p12/zh_hans_cn/external_refs.tex",
+      "sha256": "B12B701CB6117B35206F14505B1751F7AD26B4A2ED18F1341F3C23CE57307619"
+    },
+    {
+      "path": "p12/control/check_tex_invariants.py",
+      "sha256": "22DA32F116CB341D64A6D91A03A0863543F082A1A82D857F775E799ABA60ED50"
+    },
+    {
+      "path": "p12/control/check_pdf.py",
+      "sha256": "A4B5FAA0E08AB03607F7321B162C0C8381D32BB853210F93A6D2E7B56408B15E"
+    },
+    {
+      "path": "p12/control/ERRATA_CANDIDATES.jsonl",
+      "bytes": 7048,
+      "sha256": "7B0EA21585CAF451E47B6C2AF320836C5FE4D917DF514CD986138DE3307B24AC",
+      "chapter_102_candidate_count": 9
+    }
+  ],
+  "structural_checks": {
+    "checker_exit": 0,
+    "labels": {"source": 23, "target": 23, "same_order": true},
+    "references": {"source": 80, "target": 80, "same_order": true},
+    "citations": {"source": 2, "target": 2, "same_order": true},
+    "begin_environments": {"source": 45, "target": 45, "same_order": true},
+    "end_environments": {"source": 45, "target": 45, "same_order": true},
+    "control_sequences": {"source": 1329, "target": 1329, "same_multiset": true},
+    "dollar_math_spans": {"source": 546, "target": 546, "same_multiset": true},
+    "dollar_characters": {"source": 1166, "target": 1166},
+    "xymatrix": {"source": 16, "target": 16},
+    "open_braces": {"source": 823, "target": 823},
+    "close_braces": {"source": 823, "target": 823},
+    "note": "Inline formula order can move with Chinese syntax; the normalized formula multiset and all structural sequences are invariant."
+  },
+  "external_reference_checks": {
+    "unique_external_references": 55,
+    "fallback_definitions": 55,
+    "missing_fallbacks": 0,
+    "extra_fallbacks": 0,
+    "tag_mismatches_against_frozen_tags": 0,
+    "chapter_list_hyperrefs": {"source": 117, "target": 117, "same_order": true}
+  },
+  "build": {
+    "engine": "MiKTeX-XeTeX 4.18 (MiKTeX 26.5)",
+    "bibliography_engine": "MiKTeX-BibTeX 4.2 (MiKTeX 26.5)",
+    "sequence": ["XeLaTeX", "BibTeX", "XeLaTeX", "XeLaTeX"],
+    "artifact_path": "p12/zh_hans_cn/build/ch102/stacks-limits.pdf",
+    "artifact_bytes": 327842,
+    "artifact_sha256": "9A24B3DAF1DB1262044FFDE70E0C366561C717469A39A54D5436A2E785DD1430",
+    "log_path": "p12/zh_hans_cn/build/ch102/stacks-limits.log",
+    "log_bytes": 57118,
+    "log_sha256": "EB7377D18587355FE5078007F906F21357FF3CFD5F3495EB2051764A9B05E152",
+    "aux_sha256": "146C62BC39FE944782A97BA5AD2E75FA7CFBD1345D9EDC0FC6AAFE4E97369C23",
+    "bbl_sha256": "4F92F613AF3BC84E301D060EB0E24B0393B514FE6EE79B46E1AD6EBBF80AC888",
+    "fatal_errors": 0,
+    "overfull_boxes": 0,
+    "underfull_boxes": 0,
+    "missing_characters": 0,
+    "undefined_citations": 0,
+    "ordinary_undefined_references": 0,
+    "isolated_build_missing_external_aux": 116,
+    "isolated_chapter_list_hyperref_warnings": 116,
+    "bibliography_data_warning": "rydh_approx has no pages field in the frozen bibliography"
+  },
+  "pdf_mechanical_checks": {
+    "pages": 11,
+    "page_size_points": [595.28, 841.89],
+    "page_format": "A4",
+    "fonts_embedded": true,
+    "annotations": 91,
+    "out_of_page_annotations": 0,
+    "tagged_pdf": false,
+    "mark_info": false,
+    "cjk_fonts_have_to_unicode": false,
+    "unresolved_double_question_marks_in_extractable_text": 0
+  },
+  "visual_check": {
+    "rendered_pages": "1-11",
+    "render_resolution": "1191x1684 px at approximately 144 dpi",
+    "inspected_pages": "1-11",
+    "clipping": 0,
+    "overlap": 0,
+    "visible_unresolved_references": 0,
+    "visible_link_rectangles": 0,
+    "geometry": "A4, 160 mm text measure, 26/24 mm inner/outer margins, 24 mm top/bottom",
+    "body_type": "10.95 pt on 16.5 pt leading",
+    "register_observation": "Readable mainland Chinese scientific-book density; dense diagrams and the two-column chapter list remain legible and centered."
+  },
+  "adverse_evidence": [
+    "The isolated chapter build cannot resolve the other 116 chapter-section hyperlink targets; their visible names render without placeholders and the cumulative build is expected to supply those targets.",
+    "The three embedded Fandol CJK fonts lack ToUnicode maps in this XeLaTeX/dvipdfmx candidate, so Chinese copy/search extraction is not reliable.",
+    "The PDF is not tagged and has no MarkInfo; this is disclosed and is not treated as a language or accessibility certification.",
+    "Nine probable English-source defects are retained according to the frozen-source policy and recorded in ERRATA_CANDIDATES.jsonl."
+  ],
+  "certification_boundary": "This is producer-side source-identity, structure, compilation, and page-render evidence only. Chinese-language approval, source-fidelity approval, final cumulative link behavior, accessibility remediation, independent page QA, and publication certification remain with the canon/checking stages."
+}

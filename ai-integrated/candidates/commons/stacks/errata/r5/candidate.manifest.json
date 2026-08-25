@@ -1,0 +1,199 @@
+{
+  "$schema": "../../../../../schemas/candidate-manifest.schema.json",
+  "schema": "mathematics-commons-stacks-candidate-manifest/v1",
+  "candidate_id": "stacks-errata-a04446e-r5",
+  "lease_id": "stacks-lease-000008-errata-r5",
+  "namespace": "commons/stacks/errata/r5",
+  "writer_task": "01a0256d-5693-77c1-96b2-cf37101e0c6c",
+  "upstream": {
+    "lock": "upstream/stacks.lock.json",
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e"
+  },
+  "source_authorities": [
+    {
+      "path": "authority/canon/EVIDENCE_SOURCE_BINDINGS.json",
+      "sha256": "8C407D4EF10539DAC55A38A1F1E5E6494EA0A682A5B42980014ABEC35920ADFF"
+    },
+    {
+      "path": "authority/canon/mappings/R5_SITES_MAPPING.json",
+      "sha256": "B6BAE4B27D619A6D325BEC8B9F9EE7921C64DD9090B2FFD838B9555C9C4EC363"
+    },
+    {
+      "path": "authority/canon/reviews/ERRATA_R5_CORROBORATION_SITES_100_FRENCH_SLICE_20260822.json",
+      "sha256": "91DD99F792FCC858AED63769099F2C129F35BEE52D66213E656F14964741C531"
+    },
+    {
+      "path": "authority/canon/reviews/ERRATA_R5_DUPLICATE_SITES_100_20260822.json",
+      "sha256": "24E7C0C42BC8BAF76D6E0CD580A02EC388B8B10344E4E9869410A23595626927"
+    },
+    {
+      "path": "authority/canon/reviews/ERRATA_R5_INTAKE_SITES_076_117_20260822.json",
+      "sha256": "24505893E8AE5CDA173DE4E8898CBF61F06DA2EFCD10F4A75CE8B62E0B0235F4"
+    },
+    {
+      "path": "authority/canon/reviews/ERRATA_R5_SITES_076_117_REVIEW.md",
+      "sha256": "A8D19579197A93441AC55EFFA6A9DA307ADE2E5D92909E5BFF56ED6AB4B666BD"
+    },
+    {
+      "path": "authority/COPYING",
+      "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"
+    },
+    {
+      "path": "authority/producer/SOURCE_DEFECT_LEDGER.csv",
+      "sha256": "FE48262F81A6B83C2D361AC2BD3896EC5C279C71314C4BA8E3B083D86E5FD8F1"
+    },
+    {
+      "path": "authority/source/sites.tex",
+      "sha256": "07AE4690C2D8EB6873837D3D14A37F07408BB14F9E0BE6077ED570C220B1845D"
+    },
+    {
+      "path": "authority/upstream.lock.json",
+      "sha256": "B195ECC83AB0F32C574A60D1FDBA9B0DA4D35B04E0DF7CB106DC9C0FDAD99C0D"
+    }
+  ],
+  "source_closure": {
+    "enumerated": true,
+    "expected_units": 38,
+    "manifested_units": 38,
+    "complete": true
+  },
+  "stable_unit_manifest": {
+    "path": "stable-units.json",
+    "sha256": "7658414F1CA208223675BCFE9BF291EE169BC7691A7A0B862DEFC8C21E718B54"
+  },
+  "source_map": {
+    "path": "source-map.jsonl",
+    "sha256": "DA0CCE36BA49B14F95715BEC1BB29EAB831EB096F0088E0AFEB7921479971F5E"
+  },
+  "decision_ledger": {
+    "path": "decisions.jsonl",
+    "sha256": "9A1A8E02C9C6287CCC940ED263FB1D3E102F2CDC1BD8551C7E7BC380CBE12987"
+  },
+  "rejection_ledger": {
+    "path": "rejections.jsonl",
+    "sha256": "E60B2EF081E8BAA639C5BFD233C39CD2B740DB1EC4F8193CE3E455C18F15C502"
+  },
+  "formula_diagram_inventory": {
+    "path": "formula-diagram-inventory.json",
+    "sha256": "6A170441C43EC0039D02B12DBAC62DF87DA8C13F6817BA31435B9C2BDE91F5CD"
+  },
+  "builds": [
+    {
+      "path": ".gitattributes",
+      "sha256": "705FD4D6451A31D36B3DF7DE96F83F30AC976C9B4A6D1E51671D8E2F33E2D0DA"
+    },
+    {
+      "path": "build-receipt.py",
+      "sha256": "F52D4CC93F4C0CC62E01C9398C64E2BF31D82D1920B18C73E962CDAD046CEB14"
+    },
+    {
+      "path": "BUILD.md",
+      "sha256": "F4CD68C0A892822547CFB390C03D6DA2BBE3F5437B6F13C2158DC4D73A19E27A"
+    },
+    {
+      "path": "builds/build-execution.json",
+      "sha256": "42B2FB3C947D66F470247B57C9C0BA46215F5D4650F60247F3DFBD7334645B37"
+    },
+    {
+      "path": "builds/build-receipt.json",
+      "sha256": "EDC1A699775637CD06D3E32547D56A7AB4C37A71DCE588DD5BE1550BDDCE9DE3"
+    },
+    {
+      "path": "builds/sites.authority.bibtex.txt",
+      "sha256": "67FDE235FB92D46C5D49F32141022B75BF8DE21A0FD654388AD5AACD7FFD492F"
+    },
+    {
+      "path": "builds/sites.authority.log",
+      "sha256": "498C19BE5FEB363359EDC6B380CDA7DF3C1AC7F4867812DF87029508DEF7C8D6"
+    },
+    {
+      "path": "builds/sites.authority.pass3.txt",
+      "sha256": "733281D22B7C87AE7FE5E7AD1AF7EDCCC54FECEA35F7DB1028C46E8237009B29"
+    },
+    {
+      "path": "builds/sites.authority.pdf",
+      "sha256": "92E1C095FBBEC85C7C0F864D4EFD69A9A99C22D6E602A19BBFC0518056B95368"
+    },
+    {
+      "path": "builds/sites.bibtex.txt",
+      "sha256": "67FDE235FB92D46C5D49F32141022B75BF8DE21A0FD654388AD5AACD7FFD492F"
+    },
+    {
+      "path": "builds/sites.log",
+      "sha256": "204EE25CD0B1DB7891D9F3E65EE693262CC733D05A0AAA676BE37F54B89D53FA"
+    },
+    {
+      "path": "builds/sites.pass3.txt",
+      "sha256": "A68D15AB06A62EF2F31C026F38DEB9C6303C2163FB0611C9D3BC47E1FC490025"
+    },
+    {
+      "path": "builds/sites.pdf",
+      "sha256": "AB7FC6F427109243EE10C4ADC943319201099D6E63A475D9B5D573E95DD6C8A1"
+    },
+    {
+      "path": "builds/validation.json",
+      "sha256": "8B95D4240F25040847DAB093BD5962BCEF861C6645CB4462EE06C5CD6D14283F"
+    },
+    {
+      "path": "builds/visual-qa.json",
+      "sha256": "A88BD5C04B0BB4DF5EA3818BE6058BE7F739A535CB50AEA5196E8465ADA1E1E7"
+    },
+    {
+      "path": "candidate.config.json",
+      "sha256": "E25211A73FF0729341F144A462B9DF648B317482748A4FFE6C159B28E896D84F"
+    },
+    {
+      "path": "check-manifest.py",
+      "sha256": "9D4513D7BBEC9371D20E73E30ABFC2FC2435BA24729C71A0BC3D3DF187826B75"
+    },
+    {
+      "path": "LEASE.json",
+      "sha256": "AC0A5626417BD8ADCAC324157B1E193E3B1BFC1D8CCD67F7C17417DC3CE1119E"
+    },
+    {
+      "path": "payload/sites.tex",
+      "sha256": "9B11C7525C7A23CD8732FDC204E5F62B66892969B08087CE26EC194F85073499"
+    },
+    {
+      "path": "README.md",
+      "sha256": "AD8D6C82DA49264FC7A0A0379DFD8052CE0679FDD4290349113C3A076F7BF2C8"
+    },
+    {
+      "path": "replay/independent-review.json",
+      "sha256": "8CA6ECE20B24931CA170842C73D1E7C77DED11545C2808D8D3C6792EE4A63595"
+    },
+    {
+      "path": "replay-build.py",
+      "sha256": "DA0D24632E2669114C01F3FDCED1927D5A46546B7A66E42B397EE6C503AA3A67"
+    },
+    {
+      "path": "verify.py",
+      "sha256": "E2E3B77AA834D2F8897C1D75A3EDCDD588FAB338DE0201415EECF20F05F5ECCA"
+    },
+    {
+      "path": "visual-qa.py",
+      "sha256": "00ABF09B5F005C5AFC3670116A7D7DE7B1E2B4DBBBF9778CC75FF4124BEB1A68"
+    }
+  ],
+  "rights_state": "The authority and modified payload retain the Stacks Project GNU Free Documentation License 1.2; metadata and receipts do not relicense upstream content. This is an independently maintained AI-produced English edition with no Stacks Project review, approval, affiliation, or endorsement. Legal certification was not performed.",
+  "review_state": "performed",
+  "independent_replay": "passed",
+  "unresolved_defects": [
+    "The independent replay receipt binds the pre-receipt manifest 904345A660C6B034719016EB8752EA393FF69D87BF928D24369D8FCB57D2E793 and validation 0FFEE052FD7190CDB3C227112D732D9DF3171DCF5C94A8C060A000D469A321D1. This final manifest is the expected registrar-only rebind that adds replay/independent-review.json at SHA-256 8CA6ECE20B24931CA170842C73D1E7C77DED11545C2808D8D3C6792EE4A63595; no reviewed authority, payload, proof, script, or existing build byte changed.",
+    "The isolated sites.tex candidate deliberately adds one working cross-chapter reference that remains unresolved without the Categories AUX file; all other undefined-reference target counts match the frozen authority build. Full-corpus composition must resolve them.",
+    "Restoring the missing reference command removes a printed raw label and reflows the corrected sites chapter from 114 authority pages to 113 candidate pages; all 113 candidate pages and eleven risk pages were visually inspected and are readable and unclipped.",
+    "The proof PDFs contain embedded fonts with ToUnicode maps but are untagged; document-structure accessibility remains a cumulative-edition toolchain concern.",
+    "Later French-lane stacks.tex findings are outside this frozen R5 closure and remain queued for a separately proved R6 disposition.",
+    "Canonical Chinese, Japanese, Korean, and French translations preserve the frozen authority unless an explicit locale-side emendation is separately bound; this English corrected overlay is not silently copied.",
+    "Overlay admission and English-edition composition are separate transitions; this manifest records candidate closure only."
+  ],
+  "stop_conditions": [
+    "Do not mutate the literal stacks-project master mirror.",
+    "Do not apply these corrections silently to canonical translation source or PDFs.",
+    "Do not contact or submit to the upstream Stacks maintainers under the current no-AI-contribution boundary.",
+    "Do not append an overlay registry record except in a separate admission commit bound to the final manifest hash and a passed independent replay.",
+    "Any change to reviewed authority, payload, proof, build, validation, visual-QA, or replay bytes invalidates the replay and requires a new review."
+  ],
+  "generated_at_utc": "2026-08-22T15:25:57Z"
+}

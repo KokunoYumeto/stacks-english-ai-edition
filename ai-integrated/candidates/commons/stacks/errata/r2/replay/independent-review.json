@@ -1,0 +1,161 @@
+{
+  "schema": "mathematics-commons-stacks-independent-review/v1",
+  "candidate_id": "stacks-errata-a04446e-r2",
+  "namespace": "commons/stacks/errata/r2",
+  "reviewer_task": "/root/r2_independent_replay",
+  "reviewed_at_utc": "2026-08-22T00:55:05Z",
+  "verdict": "passed",
+  "passed": true,
+  "authority": {
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "tree_declared_consistently": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+    "git_operations_performed": false,
+    "source_root_pre_and_post_replay": {
+      "files": 155,
+      "bytes": 29115909,
+      "sha256_path_size_content_aggregate": "F99EAE469C69E5E38BA707EB034EA926A3A0409BA1B8BDCF7D7F36AAA1994FE2"
+    },
+    "candidate_authority_copies_equal_upstream_bytes": true,
+    "files": {
+      "COPYING": {"bytes": 20404, "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"},
+      "brauer.tex": {"bytes": 28201, "sha256": "B2504820D769EBE4E9E33B8ADD78753FB30ACA6E8A7F75C8D54DDA885EDCD682"},
+      "stacks-limits.tex": {"bytes": 42110, "sha256": "F4F5EBF02BB5922A8DFF70EA507ED6F821F992C697D9C9A984B9513C39FEC57A"}
+    }
+  },
+  "frozen_candidate_binding": {
+    "pre_receipt_inventory": {
+      "files": 45,
+      "bytes": 2029026,
+      "sha256_path_size_content_aggregate": "7AB3587792A1A392E8CF571D575683A0282B71241771AE263E977FE8B617A6F6",
+      "aggregate_algorithm": "SHA-256 over sorted relative-path, NUL, decimal-size, NUL, raw SHA-256 digest tuples"
+    },
+    "candidate_manifest": {"path": "candidate.manifest.json", "bytes": 7833, "sha256": "0ED710DAAE8591A4BF1EA2352674BA0CD4C62C7F7C5972807C8EB3962956A39C"},
+    "manifest_schema": {"path": "schemas/candidate-manifest.schema.json", "bytes": 3207, "sha256": "C0A948F724DC9E8A283499E00AD20090D379A79548FEAAE597C4065D078467D3"},
+    "schema_validation": "passed Draft 2020-12 with format checking",
+    "manifest_hash_references": {"total": 44, "unique": 44, "matched": 44, "missing": 0, "mismatched": 0, "duplicates": 0},
+    "reviewed_artifacts": {
+      "authority/upstream.lock.json": "B195ECC83AB0F32C574A60D1FDBA9B0DA4D35B04E0DF7CB106DC9C0FDAD99C0D",
+      "authority/canon/ERRATA_LEDGER.jsonl": "A1713294427EC2520A313A54F674F324FB90CA4DA58E08F5D0481CFC10737100",
+      "authority/canon/ERRATA_R2_PROOFS.md": "474EF7ED07DBC0F139A528AA7F0FBD2C9C6D37F2B91231C47287F83C94F4CDD4",
+      "stable-units.json": "0D850931A684786F58D8AAFB4B1A84DBE3799B090D17B35234CA090D6B99D893",
+      "source-map.jsonl": "EDF1151985BD1ECD17B088A156C49B6240B4B7C59226A091B7FA13ABD7E1AF03",
+      "decisions.jsonl": "01CE32439E7DD871C3830B1B8B7110148F83CEBE428F60459FFD810EAA3E0AA8",
+      "rejections.jsonl": "2C1A71DCC56CEC42E1E3AF8CDF922C211A482FA19577F6E97738819E5F502898",
+      "formula-diagram-inventory.json": "D8ACCE6AD435119E804915BDDB1ECF90C8CAE94B462ACD08D76F01222E505209",
+      "payload/brauer.tex": "7D14F300ED13295728D3BA0B08ABEB5449B93D4E64244FA91680BEA9DA785BBD",
+      "payload/stacks-limits.tex": "0FBB14083DB31197467F9A638216D3273BAE7520623E99B9ED884B043BF12003",
+      "replay-build.py": "260B5FE24FE989C5536AB6CFBE472E35C0E874DD56B95963FF3275ECC8F7B206",
+      "build-receipt.py": "BB1AB3E0D461F60416DF361C26D13716F468ACCC28DBF1C0E94AED44643F16CF",
+      "verify.py": "88A739931FC4BFA8654C281BBC8C287301896035C08929D9E4C794444979CDAA",
+      "builds/build-execution.json": "FB11AE2D6BF5A597B48E1802195788E65139AB082DD4DE03F31D7928D66C5937",
+      "builds/build-receipt.json": "B1DB59C778F4FFDFD94B2E5BE1839107605D11E804920CF1D1C3059D85B69128",
+      "builds/validation.json": "B5F6D5267B163EBD6F9A32CBE97FE7B34CA276A2D866002E2E130B8E36F1CCE4",
+      "builds/visual-qa.json": "7D031AD1552709E03926BA2EC099B51B9741BB53D9A2D986BD319DA970F9A983",
+      "builds/brauer.log": "4DDF2CA8184AEB2CBF51A0E4E3F625B2A3FAE7430BDC38B845CE4E0D1A639048",
+      "builds/brauer.authority.log": "9BADC1403A6324204CFEAE984DDE1D78679D5FB282433150992AB5E8C393F226",
+      "builds/stacks-limits.log": "3E2B3E66ACD04E2A36A4E1AD0E0561C71EC4D79459154E75A71204E4C99124E3",
+      "builds/stacks-limits.authority.log": "636A9925B4B4056471344BBB9DF5EF8FB1B66C0F0FF865152DDD4550B6DC8308"
+    }
+  },
+  "independent_change_reconstruction": {
+    "stable_unit_count": 13,
+    "actual_line_diff_hunks": 13,
+    "literal_substitutions": 15,
+    "source_map_change_count_total": 15,
+    "unmapped_or_extra_changes": 0,
+    "units": [
+      {"id": "MC-STK-ERR-0016", "source": "brauer.tex", "locus": "711", "literal_edits": 1},
+      {"id": "MC-STK-ERR-0017", "source": "brauer.tex", "locus": "733", "literal_edits": 1},
+      {"id": "MC-STK-ERR-0018", "source": "stacks-limits.tex", "locus": "83", "literal_edits": 1},
+      {"id": "MC-STK-ERR-0019", "source": "stacks-limits.tex", "locus": "208", "literal_edits": 1},
+      {"id": "MC-STK-ERR-0020", "source": "stacks-limits.tex", "locus": "440", "literal_edits": 1},
+      {"id": "MC-STK-ERR-0021", "source": "stacks-limits.tex", "locus": "527", "literal_edits": 1},
+      {"id": "MC-STK-ERR-0022", "source": "stacks-limits.tex", "locus": "702", "literal_edits": 1},
+      {"id": "MC-STK-ERR-0023", "source": "stacks-limits.tex", "locus": "876", "literal_edits": 1},
+      {"id": "MC-STK-ERR-0024", "source": "stacks-limits.tex", "locus": "881", "literal_edits": 1},
+      {"id": "MC-STK-ERR-0025", "source": "stacks-limits.tex", "locus": "912", "literal_edits": 1},
+      {"id": "MC-STK-ERR-0026", "source": "stacks-limits.tex", "locus": "982", "literal_edits": 1},
+      {"id": "MC-STK-ERR-0027", "source": "stacks-limits.tex", "locus": "1054", "literal_edits": 1},
+      {"id": "MC-STK-ERR-0028", "source": "stacks-limits.tex", "locus": "1096-1098", "literal_edits": 3, "linked_unit": true}
+    ],
+    "reconstructed_outputs": {
+      "brauer.tex": {"bytes": 28214, "sha256": "7D14F300ED13295728D3BA0B08ABEB5449B93D4E64244FA91680BEA9DA785BBD", "equals_payload": true},
+      "stacks-limits.tex": {"bytes": 42157, "sha256": "0FBB14083DB31197467F9A638216D3273BAE7520623E99B9ED884B043BF12003", "equals_payload": true}
+    }
+  },
+  "structural_invariants": {
+    "brauer.tex": {"labels": 43, "references": 51, "citations": 4, "environment_events": 144, "sections": 8, "items": 30, "display_delimiters": 16, "xymatrix": 0, "ordered_sequences_equal": true, "balanced_braces": true, "line_count_equal": true},
+    "stacks-limits.tex": {"labels": 23, "references": 80, "citations": 2, "environment_events": 90, "sections": 7, "items": 36, "display_delimiters": 74, "xymatrix": 16, "ordered_sequences_equal": true, "balanced_braces": true, "line_count_equal": true},
+    "formula_prose_partition_exact": true,
+    "diagram_units": ["MC-STK-ERR-0028"],
+    "diagram_source_bytes_changed": false
+  },
+  "fresh_isolated_replay": {
+    "started_at_utc": "2026-08-22T00:50:08Z",
+    "completed_at_utc": "2026-08-22T00:50:33Z",
+    "source_date_epoch": "1785270512",
+    "tools": {"python": "3.13.9", "pdflatex": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5)", "bibtex": "MiKTeX-BibTeX 4.2 (MiKTeX 26.5)"},
+    "method": "Copied the 45-file candidate to a new task-local directory outside R2, copied the complete pinned source root to a new build root, overlaid the two payloads, built candidate and restored-authority phases, then ran build-receipt.py and verify.py only in the disposable copy.",
+    "commands": {"pdflatex": 12, "bibtex": 4, "total": 16, "nonzero_exit_codes": 0},
+    "runner_passed": true,
+    "fresh_build_receipt": {"passed": true, "bytes": 19748, "sha256": "23C41ADB4F0BFBBCD126B29AA066C52941ACA2762540A7BEDB38CC7CE4849160"},
+    "fresh_validation": {"passed": true, "bytes": 5410, "sha256": "BA4BDF22764F778AD7603889E08A671CB185902153660B21EC535DE4B42F4376"},
+    "fresh_build_execution": {"passed": true, "bytes": 13066, "sha256": "2151125AB337A1961BB933969DB700546BE191E060AF186401CE02063A95183F"},
+    "pdfs": {
+      "brauer.candidate": {"pages": 10, "bytes": 343309, "sha256": "11DBAF837AAD0F8AA6BBD6537ADA14E326DFBF166F6B3E98280790F0A0F6CBF4", "byte_identical_to_frozen": true},
+      "brauer.authority": {"pages": 10, "bytes": 343290, "sha256": "3BB40F4A15DE154631CC14900EECD90F12BD59C71F880BC3E2DEF5FC308E0487", "byte_identical_to_frozen": true},
+      "stacks-limits.candidate": {"pages": 13, "bytes": 342171, "sha256": "6A2688A4BBB5C89C4EAF2C6E5B477CD7F1F77095399184F969BEADB56DBBD3A6", "byte_identical_to_frozen": true},
+      "stacks-limits.authority": {"pages": 13, "bytes": 342237, "sha256": "F4C3DECCF47A5B4090268C4CD486CF9C51B5E0D559BB90D101C7F1CC3A2094C7", "byte_identical_to_frozen": true}
+    },
+    "fresh_logs": {
+      "brauer.candidate": {"bytes": 46662, "sha256": "AF89AF61121EC4E59AE5D44C3F59052E49C54FF116DE10898019414AC8B82425"},
+      "brauer.authority": {"bytes": 46662, "sha256": "AB14EBE213CAEF0F6CAEAF0B79DF107EE4BB47B205155EF9C53D78BD143D6E93"},
+      "stacks-limits.candidate": {"bytes": 55318, "sha256": "41F4145B96A126B833729CC77E96D09B3A5DFA3AB374D8D83CC78F87AE480CB8"},
+      "stacks-limits.authority": {"bytes": 55318, "sha256": "D2751B1228933468ABB74C0706CA9748D8E2FD0772A07188A59D2208D7D20CAA"}
+    },
+    "warning_multisets": {
+      "canonicalization": "sorted JSON of exact undefined-reference and undefined-citation Counters",
+      "brauer": {"candidate_equals_authority": true, "sha256": "2ECCBA190EF05B6496E60461F35BBF18A90A9EB5EEBC578B4CB52B8E538ECB9B", "reference_occurrences": 45, "unique_reference_targets": 45, "citation_occurrences": 0},
+      "stacks-limits": {"candidate_equals_authority": true, "sha256": "EF44D57B9967B949DBB20B8BD8FE06B9CA4A07110EA6E5C0C8F90C2B31DC054E", "reference_occurrences": 101, "unique_reference_targets": 89, "citation_occurrences": 0}
+    },
+    "fatal_markers": 0,
+    "overfull_boxes": 0,
+    "underfull_boxes": {"brauer_candidate_and_authority": 0, "stacks_limits_candidate_and_authority": 1},
+    "temporary_copy_removed": true,
+    "isolated_work_root_removed": true
+  },
+  "visual_and_pdf_review": {
+    "frozen_visual_qa_receipt_sha256": "7D031AD1552709E03926BA2EC099B51B9741BB53D9A2D986BD319DA970F9A983",
+    "freshly_rendered_candidate_authority_page_pairs": {
+      "brauer": [7, 8],
+      "stacks-limits": [2, 3, 5, 6, 8, 9, 10, 11, 12]
+    },
+    "all_13_units_covered": true,
+    "visible_findings": {"clipping": 0, "overlap": 0, "missing_glyphs": 0, "unexpected_reflow": 0, "illegible_changed_loci": 0},
+    "mechanical": {
+      "brauer": {"fonts": 20, "unembedded_fonts": 0, "fonts_without_tounicode": 0, "link_annotations": 65, "malformed_or_out_of_bounds_links": 0},
+      "stacks-limits": {"fonts": 21, "unembedded_fonts": 0, "fonts_without_tounicode": 0, "link_annotations": 20, "malformed_or_out_of_bounds_links": 0}
+    }
+  },
+  "rights_boundary_and_hygiene": {
+    "license": "GNU Free Documentation License Version 1.2, November 2002",
+    "license_bytes_equal_upstream": true,
+    "independent_ai_edition_disclaimer_present": true,
+    "upstream_endorsement_claimed": false,
+    "canonical_translation_files_present_or_modified": false,
+    "upstream_source_root_modified": false,
+    "original_r2_files_modified_before_this_receipt": false,
+    "public_files_scanned": 45,
+    "private_absolute_paths_or_usernames_found": 0,
+    "python_caches_or_scratch_files_found": 0,
+    "symlinks_or_reparse_points_found": 0
+  },
+  "adverse_evidence": [
+    "The standalone builds retain unresolved cross-chapter references, but the exact candidate and authority warning Counters are equal for each chapter; no undefined citations were found.",
+    "The stacks-limits candidate and authority logs each contain one underfull box; neither chapter has overfull boxes or fatal markers.",
+    "The fresh sanitized log bytes differ from the frozen logs only in one TeX memory-statistics line per log (string-character usage varies with temporary path length); fresh PDFs, final-pass stdout, BibTeX stdout, page counts, warning Counters, and reported PDF sizes reproduce.",
+    "All four proof PDFs are untagged; this disclosed accessibility limitation is unchanged from the authority builds.",
+    "The manifest remains frozen with independent_replay set to not_performed; this separate receipt records the completed replay and does not silently mutate the manifest or perform overlay admission.",
+    "No Git operation was used; the declared commit and tree identifiers were checked for internal consistency while authority was independently verified by exact source bytes and pre/post source-root fingerprints."
+  ]
+}

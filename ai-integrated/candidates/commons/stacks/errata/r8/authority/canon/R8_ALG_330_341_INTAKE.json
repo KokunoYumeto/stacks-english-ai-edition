@@ -1,0 +1,44 @@
+{
+  "schema": "stacks-cjk-errata-intake/v1",
+  "recorded_at": "2026-08-24T06:51:28Z",
+  "producer_ids": [
+    "ALGEBRA-330",
+    "ALGEBRA-331",
+    "ALGEBRA-332",
+    "ALGEBRA-333",
+    "ALGEBRA-334",
+    "ALGEBRA-335",
+    "ALGEBRA-336",
+    "ALGEBRA-337",
+    "ALGEBRA-338",
+    "ALGEBRA-339",
+    "ALGEBRA-340",
+    "ALGEBRA-341"
+  ],
+  "source_thread_id": "019f7111-d8de-75f1-8068-7c04db810882",
+  "authority": {
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "path": "upstream/src/stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14/algebra.tex",
+    "bytes": 1771230,
+    "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+  },
+  "producer_ledger": {
+    "bytes": 341079,
+    "sha256": "71C77AD80E68F10107D1295E4DEF985954B315FBAC246F2910AFDECBECE48798",
+    "physical_lines": 747,
+    "data_rows": 746,
+    "selected_rows": 12,
+    "selected_serialization": "PowerShell ConvertTo-Json -Depth 5 -Compress over the imported ALGEBRA-330 through ALGEBRA-341 CSV rows, UTF-8 no BOM",
+    "selected_serialization_bytes": 8069,
+    "selected_serialization_sha256": "8597271B222CAC9E61A3D227BA9E8A43044D3DF3F3AF6CFE9C19846CD07668CE"
+  },
+  "local_bounded_ledger": {
+    "path": "p01/evidence/algebra_part_c_source_defects.csv",
+    "bytes": 39291,
+    "sha256": "DA528A8F9DBCAE520DA5BE73FE2D464EA895C80955B34D426452EC7C9EE87A58"
+  },
+  "scope": "algebra.tex:44031-44551; ALGEBRA-330 through ALGEBRA-341 only",
+  "prior_producer_id_matches": 0,
+  "authority_mutated": false,
+  "translation_targets_mutated_by_canon": false
+}

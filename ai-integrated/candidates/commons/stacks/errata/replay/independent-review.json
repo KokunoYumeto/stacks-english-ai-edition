@@ -1,0 +1,216 @@
+{
+  "schema": "mathematics-commons-stacks-independent-review/v1",
+  "review_id": "stacks-errata-a04446e-r1-independent-review-20260821",
+  "reviewer_task_id": "/root/errata_replay",
+  "reviewer_role": "independent bounded replay distinct from candidate writer and registrar",
+  "candidate_id": "stacks-errata-a04446e-r1",
+  "candidate_root": "candidates/commons/stacks/errata",
+  "reviewed_at_utc": "2026-08-21T20:56:59Z",
+  "review_scope": {
+    "network_used": false,
+    "git_used": false,
+    "lean_used": false,
+    "builds_executed": false,
+    "receipt_writers_executed": false,
+    "reason_receipt_writers_not_executed": "The frozen verification programs rewrite deterministic receipts. The review instead independently recomputed their material assertions read-only so that no frozen file other than this report changed.",
+    "bounded_inputs": [
+      "candidate authority, payload, control, proof, build, and QA artifacts",
+      "the exact frozen upstream files named by the authority closure",
+      "the frozen allocator applied read-only to the exact frozen source root"
+    ]
+  },
+  "freeze": {
+    "state": "verified_stable_before_report_write",
+    "invalidation_rule": "Any change to a reviewed hash, payload byte, authority byte, proof dossier, build receipt, or QA receipt invalidates this result and requires a new independent replay.",
+    "checked_evidence": [
+      {"path":"README.md","bytes":1799,"sha256":"4F9864924A7CCDB22EDCE4703C9BAD47E2EC4F3B166042A5F7010CC6F7BA0E49"},
+      {"path":"LEASE.json","bytes":442,"sha256":"6208CB7CBD117FCD62D8F648C1681FD2973CF3E5C778C118091D318D55C88355"},
+      {"path":"BUILD.md","bytes":2772,"sha256":"D3ED0A38DB98517D7276DA099C8AF817AB81A52E3D6F3BD03E2DB1A3FD3672B1"},
+      {"path":"stable-units.json","bytes":2548,"sha256":"F4694DF73A9676EB6B07971EBCA8C96A141DA40B6E7ED8790D8478AA97DA4591"},
+      {"path":"source-map.jsonl","bytes":4564,"sha256":"2C37CF2793840E224303BED8DEFC11C7D86407B153278F4924AC558F239E8A10"},
+      {"path":"decisions.jsonl","bytes":2356,"sha256":"A1DAD5160C214BC9E86CF152A692FD1F3331A1E06800A04D68470F09A87ED3C6"},
+      {"path":"rejections.jsonl","bytes":1514,"sha256":"3018C074ED299727C2D913C73AA2ECEC8C599DAFF477917E9D91EAA6209A4F61"},
+      {"path":"formula-diagram-inventory.json","bytes":823,"sha256":"143252ED78E99EFCE833779AE84B5B5F8A04C7660EA41694328E68CBA82374CA"},
+      {"path":"proofs.md","bytes":7004,"sha256":"6C1360835004231EA115ECF36501566BA3A48743BF1B06B02BB15EDA19AA068E"},
+      {"path":"verify.py","bytes":18107,"sha256":"44F54047CE7642E079226D334E0729F016EFB58552E5AF878911AF5DFB251899"},
+      {"path":"replay-build.py","bytes":12039,"sha256":"2D2F938FACD9A522041FD146EF1E88661B3242934DDA7C02AC07B99F3B2B34DE"},
+      {"path":"build-receipt.py","bytes":7198,"sha256":"68F1A4C6ECCD0DC763B02E5124E36CC684BA9CD572D5B64155367AF77214BFC2"},
+      {"path":"builds/tag-allocator.json","bytes":1270,"sha256":"CA501E77EA54442EB96194E5621B6B2F62F6D06D4EABD1D2EEDD649675A726DA"},
+      {"path":"builds/build-execution.json","bytes":20259,"sha256":"B8A5300A704144079CB700243C99A67134664FCDC4310FEE045B175CFFA8D06E"},
+      {"path":"builds/build-receipt.json","bytes":50413,"sha256":"8B0D259A8E9DE742CAF38FCEA787D93204C210922CD4670B872D1C4A7652F02D"},
+      {"path":"builds/visual-qa.json","bytes":2724,"sha256":"589D24DCDC938FE8DB2B04DEBC66B010A37CEF8DE2DF5F235C482E86F1FABCC3"},
+      {"path":"builds/validation.json","bytes":7051,"sha256":"E4CD2E86AA07942A82AD80B460F032979B7749BF52495F507BEFFEFE65251D9A"},
+      {"path":"authority/upstream.lock.json","bytes":1171,"sha256":"B195ECC83AB0F32C574A60D1FDBA9B0DA4D35B04E0DF7CB106DC9C0FDAD99C0D"},
+      {"path":"authority/COPYING","bytes":20404,"sha256":"4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"},
+      {"path":"authority/ERRATA_LEDGER.jsonl","bytes":14599,"sha256":"23A9DDA3B5419E31A81598FDC95F5DBAAC6B65AF54E1B0EAC80D06ADB107F332"},
+      {"path":"authority/producer-hashes.json","bytes":1251,"sha256":"916A6DC09AB996DEE4CBE213D7EA271E60D6B4B0695C797F0BE58DCCF8894D55"},
+      {"path":"authority/scripts/add_tags.py","bytes":373,"sha256":"0DABED0680C4D0CEAF673CAF145B19ED9A838D936C4E5E1688DE508CC58DEB91"},
+      {"path":"authority/scripts/functions.py","bytes":9059,"sha256":"6E26FB192D0DB45CD533BE8719A26DFF4D353956B9EF615C269491813DFE0382"},
+      {"path":"authority/source/smoothing.tex","bytes":134660,"sha256":"FD28CF874BB7DAD3C5C5FF03314D1C83701613A8A98730A99B9CA7A4BCFE6068"},
+      {"path":"authority/source/crystalline.tex","bytes":211808,"sha256":"466C0634A5E8E3899B157A42A4B4BB5F4357199F96708CAF5854F5A92BE58054"},
+      {"path":"authority/source/spaces-cohomology.tex","bytes":174423,"sha256":"63F19991B7B2BCE90B5FB30FCDBB8A3B06CBBFFEC42FA7C413776C29AE4B69C5"},
+      {"path":"authority/source/topology.tex","bytes":237731,"sha256":"C6BAC8DCF8AD96DC47416BF34CB45BA4A10B894E40D67D3E1FA68D8EF0D9F872"},
+      {"path":"authority/source/more-morphisms.tex","bytes":920705,"sha256":"30F7B685A426BD02518CD30BE6F3D8E03646C3D9C1BB7B247B983C739ECB278F"},
+      {"path":"authority/source/relative-cycles.tex","bytes":121576,"sha256":"F2050896436CD590D25869AFF1B6024C1B49D8A763D08EBBDC747F2815618750"},
+      {"path":"authority/tags/tags","bytes":969923,"sha256":"098F77CCE75F8359F1EACB22B7AA0088099B09E5B3FFCAD2DE513CBD1A8A9F1C"},
+      {"path":"payload/smoothing.tex","bytes":134651,"sha256":"9CF7DCF31E447C585E81515C9A8059B37A566998DCAFA77A16AB7CB1D27A0A46"},
+      {"path":"payload/crystalline.tex","bytes":211808,"sha256":"EDA38E502E0C6B3743C0FCD769203EAA6186440002A9AD2C97DC6F642B03DEC7"},
+      {"path":"payload/spaces-cohomology.tex","bytes":174442,"sha256":"81438F655CEAB1A2E07CFEEC645A9A7C2447DB983D6BCEFAED6575859B75D196"},
+      {"path":"payload/tags/tags","bytes":970352,"sha256":"C47887DB37D78437C0E7C72BEC0F7840DCA2D36535D1241E1CBCAEF1412DC788"}
+    ]
+  },
+  "authority_assessment": {
+    "result": "passed",
+    "repository": "https://github.com/stacks/stacks-project",
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+    "lock_consistent_across_lease_units_execution_and_receipts": true,
+    "authority_files_compared_byte_for_byte_to_frozen_root": 11,
+    "all_authority_file_comparisons_equal": true,
+    "git_object_identity_recomputed": false,
+    "git_object_identity_note": "Git was prohibited for this replay. The review therefore proves the declared lock is internally consistent and that every copied authority file in scope is byte-identical to the separately frozen root; it does not independently recompute the Git tree object."
+  },
+  "closure_assessment": {
+    "result": "passed",
+    "active_unit_count": 14,
+    "active_unit_ids": [
+      "MC-STK-ERR-0001","MC-STK-ERR-0002","MC-STK-ERR-0003","MC-STK-ERR-0005","MC-STK-ERR-0006","MC-STK-ERR-0007","MC-STK-ERR-0008","MC-STK-ERR-0009","MC-STK-ERR-0010","MC-STK-ERR-0011","MC-STK-ERR-0012","MC-STK-ERR-0013","MC-STK-ERR-0014","MC-STK-ERR-0015"
+    ],
+    "stable_units_and_source_map_count_equal": true,
+    "stable_units_and_source_map_order_equal": true,
+    "json_or_jsonl_files_parsed": 14,
+    "json_or_jsonl_parse_failures": 0,
+    "rejected_inherited_unit": "MC-STK-ERR-0004",
+    "rejection_is_append_only_in_candidate_and_canon_ledgers": true
+  },
+  "per_unit_outcomes": [
+    {
+      "unit_id":"MC-STK-ERR-0001","result":"passed","proof_status":"proved","source":"authority/source/smoothing.tex","source_sha256":"FD28CF874BB7DAD3C5C5FF03314D1C83701613A8A98730A99B9CA7A4BCFE6068","locus":"191-221 and 261-275","exact_change":"remove the unused phrase introducing a' from line 264","proof":"The elementary-standard clause introduces a', while the strict-standard clause actually cited by this proof introduces coefficients a_I. The proof assumes strict standardness and never constructs or uses a'. The cited definition therefore does not supply the printed datum, and deleting only that datum restores the exact dependency.","exact_diff_confirmed":true,"semantic_ambiguity":false,"adverse_evidence":[]
+    },
+    {
+      "unit_id":"MC-STK-ERR-0002","result":"passed","proof_status":"proved_by_type_and_counterexample","source":"authority/source/smoothing.tex","source_sha256":"FD28CF874BB7DAD3C5C5FF03314D1C83701613A8A98730A99B9CA7A4BCFE6068","locus":"469-478","exact_change":"replace the lifting ring ending in y_c with the ring ending in y_m","proof":"The chosen presentation and quotient both use all m variables. An arbitrary defining polynomial must be lifted from that ring. For m=2, c=1, and a defining polynomial y_2, no polynomial in the smaller ring R[y_1] can be its lift. The ambient m-variable ring is forced.","exact_diff_confirmed":true,"semantic_ambiguity":false,"adverse_evidence":[]
+    },
+    {
+      "unit_id":"MC-STK-ERR-0003","result":"passed","proof_status":"proved_by_grammar","source":"authority/source/smoothing.tex","source_sha256":"FD28CF874BB7DAD3C5C5FF03314D1C83701613A8A98730A99B9CA7A4BCFE6068","locus":"341-355","exact_change":"insert the singular article before finite type R-algebra map","proof":"The existential construction takes the singular count noun map, which lacks a determiner. Inserting a is required English syntax and changes no mathematical token.","exact_diff_confirmed":true,"semantic_ambiguity":false,"adverse_evidence":[]
+    },
+    {
+      "unit_id":"MC-STK-ERR-0005","result":"passed","proof_status":"proved_by_number_agreement","source":"authority/source/smoothing.tex","source_sha256":"FD28CF874BB7DAD3C5C5FF03314D1C83701613A8A98730A99B9CA7A4BCFE6068","locus":"704-715","exact_change":"replace an enumerations with an enumeration","proof":"One enumeration of the displayed finite set is chosen; the singular article and plural noun are mechanically inconsistent. The singular replacement is forced.","exact_diff_confirmed":true,"semantic_ambiguity":false,"adverse_evidence":[]
+    },
+    {
+      "unit_id":"MC-STK-ERR-0006","result":"passed","proof_status":"proved_by_argument_structure","source":"authority/source/smoothing.tex","source_sha256":"FD28CF874BB7DAD3C5C5FF03314D1C83701613A8A98730A99B9CA7A4BCFE6068","locus":"825-842","exact_change":"insert to after correspond","proof":"The verb correspond takes the preposition to before the counterpart a_i/1. The printed direct-object construction is ill-formed; the inserted preposition supplies the required complement and changes no mathematics.","exact_diff_confirmed":true,"semantic_ambiguity":false,"adverse_evidence":[]
+    },
+    {
+      "unit_id":"MC-STK-ERR-0007","result":"passed","proof_status":"proved_by_sort_contradiction","source":"authority/source/crystalline.tex","source_sha256":"466C0634A5E8E3899B157A42A4B4BB5F4357199F96708CAF5854F5A92BE58054","locus":"183-237","exact_change":"replace t',t in the ideal I with t',t in the index set T","proof":"T indexes f_t and x_t; I is an ideal of B. Elements of I do not index the displayed variables, so the printed quantifier is ill-typed. T is the unique declared index set supporting both terms.","exact_diff_confirmed":true,"semantic_ambiguity":false,"adverse_evidence":[]
+    },
+    {
+      "unit_id":"MC-STK-ERR-0008","result":"passed","proof_status":"proved_by_frozen_allocator_replay","source":"authority/tags/tags and three declared TeX authorities","source_sha256":"098F77CCE75F8359F1EACB22B7AA0088099B09E5B3FFCAD2DE513CBD1A8A9F1C","locus":"nine live full labels","exact_change":"append allocator-issued records 0HB4 through 0HBC","proof":"A read-only execution of the hash-bound frozen allocator against the exact frozen root independently returned exactly the nine declared records and no tenth record. Each local label occurs exactly once in its declared source, none of the full labels occurs in the authority registry, the payload is the unchanged authority prefix plus exactly those records, and all 21,455 noncomment tag codes and labels are globally unique.","exact_diff_confirmed":true,"allocator_before_count":9,"allocator_after_count_from_bound_replay_receipt":0,"semantic_ambiguity":false,"adverse_evidence":[]
+    },
+    {
+      "unit_id":"MC-STK-ERR-0009","result":"passed","proof_status":"proved_by_undefined_object_and_forced_map","source":"authority/source/spaces-cohomology.tex","source_sha256":"63F19991B7B2BCE90B5FB30FCDBB8A3B06CBBFFEC42FA7C413776C29AE4B69C5","locus":"300-323","exact_change":"replace Z to X with X to Y","proof":"The lemma declares only f:X to Y. Its base change retains the names X and Y, and no Z is declared. The finite map needed by the cited finite-morphism result is therefore the base-changed X to Y.","exact_diff_confirmed":true,"semantic_ambiguity":false,"adverse_evidence":[]
+    },
+    {
+      "unit_id":"MC-STK-ERR-0010","result":"passed","proof_status":"proved_by_domain_and_stalk_type","source":"authority/source/spaces-cohomology.tex","source_sha256":"63F19991B7B2BCE90B5FB30FCDBB8A3B06CBBFFEC42FA7C413776C29AE4B69C5","locus":"325-385","exact_change":"replace the tensor base B_xbar with B_ybar","proof":"B and G live on Y and have stalks at ybar; A and F live on X and have stalks at the points xbar_i. The left side already uses B_ybar. B_xbar is undeclared and is based at the wrong space, so B_ybar is uniquely type-correct.","exact_diff_confirmed":true,"semantic_ambiguity":false,"adverse_evidence":[]
+    },
+    {
+      "unit_id":"MC-STK-ERR-0011","result":"passed","proof_status":"proved_by_counterexample_and_dependency","source":"authority/source/spaces-cohomology.tex","source_sha256":"63F19991B7B2BCE90B5FB30FCDBB8A3B06CBBFFEC42FA7C413776C29AE4B69C5","locus":"360-385","exact_change":"replace closed immersion with finite morphism","proof":"The standing map is arbitrary finite and need not be a closed immersion; Spec(k x k) to Spec(k) is a finite counterexample. The immediately cited lemma is precisely the stalk formula for finite morphisms, so the corrected morphism class is forced by the hypothesis and dependency.","exact_diff_confirmed":true,"semantic_ambiguity":false,"adverse_evidence":[]
+    },
+    {
+      "unit_id":"MC-STK-ERR-0012","result":"passed","proof_status":"proved_by_declared_symbol","source":"authority/source/spaces-cohomology.tex","source_sha256":"63F19991B7B2BCE90B5FB30FCDBB8A3B06CBBFFEC42FA7C413776C29AE4B69C5","locus":"544-565","exact_change":"replace h indexed by lower-case u' with h indexed by U'","proof":"The paragraph declares U and U', forms U times_X U', and already writes h indexed by U'. No lower-case u' is declared. The product map therefore requires the declared object U'.","exact_diff_confirmed":true,"semantic_ambiguity":false,"adverse_evidence":[]
+    },
+    {
+      "unit_id":"MC-STK-ERR-0013","result":"passed","proof_status":"proved_by_functor_application","source":"authority/source/spaces-cohomology.tex","source_sha256":"63F19991B7B2BCE90B5FB30FCDBB8A3B06CBBFFEC42FA7C413776C29AE4B69C5","locus":"594-625","exact_change":"replace the sheaf f_! with the sheaf f_!G","proof":"The source first defines f_! as a functor, then fixes G and displays f_!G(V). The sheaf is the functor value f_!G, not the unapplied functor. The next sentence independently uses the same corrected expression.","exact_diff_confirmed":true,"semantic_ambiguity":false,"adverse_evidence":[]
+    },
+    {
+      "unit_id":"MC-STK-ERR-0014","result":"passed","proof_status":"proved_by_delimiter_balance","source":"authority/source/spaces-cohomology.tex","source_sha256":"63F19991B7B2BCE90B5FB30FCDBB8A3B06CBBFFEC42FA7C413776C29AE4B69C5","locus":"1030-1033","exact_change":"remove one extra closing parenthesis","proof":"The parenthesis opening the character argument is already closed immediately after chi_p; the next closing parenthesis has no matching opener. Removing only that character restores the formula without altering the math delimiter or surrounding expression.","exact_diff_confirmed":true,"semantic_ambiguity":false,"adverse_evidence":[]
+    },
+    {
+      "unit_id":"MC-STK-ERR-0015","result":"passed","proof_status":"proved_by_category_dependency","source":"authority/source/spaces-cohomology.tex","source_sha256":"63F19991B7B2BCE90B5FB30FCDBB8A3B06CBBFFEC42FA7C413776C29AE4B69C5","locus":"1026-1037","exact_change":"replace Ab(U_p) with Ab(U_{p, etale})","proof":"The preceding line places the restricted injective in the category of abelian sheaves on the small etale site of U_p. Tensoring by the invertible sheaf is an auto-equivalence of that same category and is used to preserve injectives. The bare space notation does not name the category required by the argument.","exact_diff_confirmed":true,"semantic_ambiguity":false,"adverse_evidence":[]
+    }
+  ],
+  "rejected_unit_review": {
+    "unit_id": "MC-STK-ERR-0004",
+    "result": "correctly_rejected",
+    "reason": "The construction there exists a g that P(g) is grammatical and has the same truth conditions as such that. The proposed change was style normalization, not a proved defect.",
+    "absent_from_stable_units_source_map_payload_and_formula_inventory": true,
+    "retained_append_only_in_decision_rejection_and_canon_ledgers": true
+  },
+  "payload_and_structure_assessment": {
+    "result": "passed",
+    "direct_corrections": 13,
+    "tag_records_added": 9,
+    "changed_lines": {
+      "smoothing.tex": [264,344,475,708,830],
+      "crystalline.tex": [237],
+      "spaces-cohomology.tex": [320,376,384,564,615,1032,1033]
+    },
+    "changes_outside_mapped_replacements": 0,
+    "ordered_structure": {
+      "smoothing.tex":{"labels":97,"references":263,"citations":32,"environment_tokens":274,"sections":14,"all_sequences_equal":true,"display_math_delimiters_equal":true,"intentional_inline_dollar_delta":-2},
+      "crystalline.tex":{"labels":174,"references":457,"citations":10,"environment_tokens":494,"sections":26,"all_sequences_equal":true,"display_math_delimiters_equal":true,"intentional_inline_dollar_delta":0},
+      "spaces-cohomology.tex":{"labels":110,"references":432,"citations":1,"environment_tokens":396,"sections":22,"all_sequences_equal":true,"display_math_delimiters_equal":true,"intentional_inline_dollar_delta":0}
+    }
+  },
+  "build_assessment": {
+    "result": "passed_evidence_replay",
+    "execution_sha256":"B8A5300A704144079CB700243C99A67134664FCDC4310FEE045B175CFFA8D06E",
+    "receipt_sha256":"8B0D259A8E9DE742CAF38FCEA787D93204C210922CD4670B872D1C4A7652F02D",
+    "runner_sha256":"2D2F938FACD9A522041FD146EF1E88661B3242934DDA7C02AC07B99F3B2B34DE",
+    "recipe_sha256":"D3ED0A38DB98517D7276DA099C8AF817AB81A52E3D6F3BD03E2DB1A3FD3672B1",
+    "commands": 24,
+    "nonzero_exit_codes": 0,
+    "all_candidate_and_authority_source_pdf_log_bindings_match": true,
+    "all_27_chapter_artifact_hash_and_byte_claims_match": true,
+    "chapters": [
+      {"stem":"smoothing","candidate_source_sha256":"9CF7DCF31E447C585E81515C9A8059B37A566998DCAFA77A16AB7CB1D27A0A46","candidate_pdf":{"bytes":620609,"sha256":"27FC2DEDD20D3F44206B984C35E2C1C8424D849F98C745C0CFD014CFAB397A15","pages":37},"authority_pdf":{"bytes":620774,"sha256":"AF05D8663D670B0372FFCA89E557EA2D13C1069816E95959135E88691E80FE4E","pages":37},"fatal_markers":0,"undefined_references_candidate":116,"undefined_references_authority":116,"undefined_reference_multisets_equal":true,"undefined_citations_candidate":0,"undefined_citations_authority":0},
+      {"stem":"crystalline","candidate_source_sha256":"EDA38E502E0C6B3743C0FCD769203EAA6186440002A9AD2C97DC6F642B03DEC7","candidate_pdf":{"bytes":852370,"sha256":"E4CCB04FAE96EA7D33B4736A499B7D045ED36BA8923A3A76BAFCE9EAB4884C04","pages":61},"authority_pdf":{"bytes":852370,"sha256":"17458285F1D8D371DA7202ACA127702ACC267DA4AEFB4888BC420638B09BABCA","pages":61},"fatal_markers":0,"undefined_references_candidate":106,"undefined_references_authority":106,"undefined_reference_multisets_equal":true,"undefined_citations_candidate":0,"undefined_citations_authority":0},
+      {"stem":"spaces-cohomology","candidate_source_sha256":"81438F655CEAB1A2E07CFEEC645A9A7C2447DB983D6BCEFAED6575859B75D196","candidate_pdf":{"bytes":614930,"sha256":"1D7E0664E873CAACC4F5FCCEF85398C9BD5EEC57A1BFF5A1807B7A930385D51F","pages":46},"authority_pdf":{"bytes":614995,"sha256":"8B7A40311DC1FB07C09ACAAD9ABB3DB26A9231E43FACD9BB7EDEACEC66035E4D","pages":46},"fatal_markers":0,"undefined_references_candidate":234,"undefined_references_authority":234,"undefined_reference_multisets_equal":true,"undefined_citations_candidate":0,"undefined_citations_authority":0}
+    ],
+    "visual_receipt_sha256":"589D24DCDC938FE8DB2B04DEBC66B010A37CEF8DE2DF5F235C482E86F1FABCC3",
+    "visual_receipt_hash_and_pdf_bindings_match": true,
+    "independent_pdf_checks": {"page_counts_match_receipt":true,"all_fonts_embedded":true,"all_fonts_have_tounicode":true,"link_annotations":769,"malformed_link_rectangles":0,"out_of_bounds_link_rectangles":0,"private_markers_in_pdf_bytes":0,"tagged_pdfs":0},
+    "pixel_visual_review_repeated_by_this_reviewer": false,
+    "pixel_visual_review_note": "The no-write replay scope prohibited generating page images. The existing visual receipt is hash-bound; this reviewer independently checked its PDF hashes, page counts, fonts, link geometry, and metadata/privacy claims in memory."
+  },
+  "rights_and_endorsement_assessment": {
+    "result": "passed_boundary_check",
+    "upstream_license_identity": "GNU Free Documentation License Version 1.2, November 2002",
+    "license_bytes": 20404,
+    "license_sha256":"4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85",
+    "upstream_content_relicensed_as_commons_metadata": false,
+    "no_upstream_endorsement_claimed": true,
+    "canonical_cjk_outputs_kept_separate_from_corrected_payload": true,
+    "legal_certification_performed": false
+  },
+  "public_hygiene_assessment": {
+    "result": "passed",
+    "private_local_path_or_username_markers": 0,
+    "python_cache_directories": 0,
+    "sanitized_public_logs_bound_by_receipts": true
+  },
+  "adverse_evidence": [
+    {"id":"ADV-0001","severity":"resolved","finding":"Inherited MC-STK-ERR-0004 was only an editorial preference, not a proved error.","resolution":"Removed from every active-unit surface and preserved append-only as a rejection."},
+    {"id":"ADV-0002","severity":"expected_limitation","finding":"The three isolated chapter builds retain 116, 106, and 234 unresolved cross-chapter reference warnings respectively.","resolution":"The exact undefined-target multisets match the corresponding authority builds, so these warnings are not candidate regressions."},
+    {"id":"ADV-0003","severity":"scope_limitation","finding":"This reviewer did not recompute the Git tree object or execute the TeX build runner because Git and builds were expressly outside the bounded replay.","resolution":"All authority files in scope match the separately frozen root byte-for-byte, and every build input/output/command receipt was independently hash-checked."},
+    {"id":"ADV-0004","severity":"future_accessibility","finding":"All three isolated chapter PDFs are untagged.","resolution":"This does not bear on the correctness of the bounded source corrections; accessibility tagging remains a full-edition toolchain task."},
+    {"id":"ADV-0005","severity":"admission_condition","finding":"candidate.manifest.json is not present at this replay transition.","resolution":"The registrar must generate and validate the manifest after this review, bind this report, record independent replay as passed, and perform admission in a separate transition. Any other reviewed-byte change requires a new replay."}
+  ],
+  "unresolved_items": [
+    "Generate and schema-validate candidate.manifest.json with the exact reviewed hashes and this replay result.",
+    "Keep overlay admission, composition, and release as separate receipt-bound transitions.",
+    "Do not use these isolated proof PDFs as evidence of a complete cumulative-edition build."
+  ],
+  "outcome": {
+    "proof_obligations_passed": 14,
+    "proof_obligations_failed": 0,
+    "plausible_but_unproved_units_admitted": 0,
+    "rejected_units": 1,
+    "payload_replay": "passed",
+    "build_evidence_replay": "passed",
+    "rights_boundary": "passed",
+    "public_hygiene": "passed",
+    "independent_replay": "passed",
+    "passed": true,
+    "admission_ready": false,
+    "admission_ready_reason": "Independent content replay passed, but the manifest and separate registrar admission transition do not yet exist."
+  }
+}

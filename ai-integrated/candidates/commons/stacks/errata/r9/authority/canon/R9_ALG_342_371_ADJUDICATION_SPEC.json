@@ -1,0 +1,497 @@
+{
+  "accepted": [
+    {
+      "class": "inconsistent_component_order",
+      "disposition": "Normalize the two reversed category-object triples to the declared field-first order.",
+      "locus": "algebra.tex:44590;44607;44617",
+      "operations": [
+        {
+          "old_text": "$((R_i, k_i, \\phi_i), \\psi_{ii'})$ is a system over $I$, see",
+          "replacement_text": "$((k_i, R_i, \\phi_i), \\psi_{ii'})$ is a system over $I$, see",
+          "source_end_line": 44607,
+          "source_start_line": 44607
+        },
+        {
+          "old_text": "$(R', k', \\phi')$ is an",
+          "replacement_text": "$(k', R', \\phi')$ is an",
+          "source_end_line": 44617,
+          "source_start_line": 44617
+        }
+      ],
+      "producer_id": "ALGEBRA-342",
+      "result": "confirmed_notation_error",
+      "stable_id": "MC-STK-ERR-0686"
+    },
+    {
+      "class": "missing_r_algebra_compatibility",
+      "disposition": "Require transition morphisms to be R-algebra maps so the colimit R-structure and flatness claim are defined.",
+      "locus": "algebra.tex:44595-44603",
+      "operations": [
+        {
+          "old_text": "given by ring maps $\\psi : R_1 \\to R_2$ such that",
+          "replacement_text": "given by $R$-algebra maps $\\psi : R_1 \\to R_2$ such that",
+          "source_end_line": 44596,
+          "source_start_line": 44596
+        }
+      ],
+      "producer_id": "ALGEBRA-343",
+      "result": "confirmed_type_and_proof_gap",
+      "stable_id": "MC-STK-ERR-0687"
+    },
+    {
+      "class": "missing_base_field_in_generated_subfield",
+      "disposition": "Define K(x) as the subfield generated over k by the initial segment.",
+      "locus": "algebra.tex:44625-44629",
+      "operations": [
+        {
+          "old_text": "For $x \\in K$ we let $K(x)$ be the subfield of $K$ generated\nby all elements of $K$ which are $\\leq x$.",
+          "replacement_text": "For $x \\in K$ we let $K(x)$ be the subfield of $K$ generated\nover $k$ by all elements of $K$ which are $\\leq x$.",
+          "source_end_line": 44626,
+          "source_start_line": 44625
+        }
+      ],
+      "producer_id": "ALGEBRA-345",
+      "result": "confirmed_definition_gap",
+      "stable_id": "MC-STK-ERR-0688"
+    },
+    {
+      "class": "polynomial_ring_notation_for_field_adjunction",
+      "disposition": "Use field-adjunction parentheses at both loci.",
+      "locus": "algebra.tex:44631;44637",
+      "operations": [
+        {
+          "old_text": "Namely, if $x$ has a predecessor $x'$, then $K(x) = K(x')[x]$",
+          "replacement_text": "Namely, if $x$ has a predecessor $x'$, then $K(x) = K(x')(x)$",
+          "source_end_line": 44631,
+          "source_start_line": 44631
+        },
+        {
+          "old_text": "Since $K(x) = K'(x)[x]$ we see that we can use the construction of the",
+          "replacement_text": "Since $K(x) = K'(x)(x)$ we see that we can use the construction of the",
+          "source_end_line": 44637,
+          "source_start_line": 44637
+        }
+      ],
+      "producer_id": "ALGEBRA-346",
+      "result": "confirmed_notation_error",
+      "stable_id": "MC-STK-ERR-0689"
+    },
+    {
+      "class": "missing_least_element_base_case",
+      "disposition": "Initialize the least-element branch with R'(x)=R and K'(x)=k before using the nonleast limit construction.",
+      "locus": "algebra.tex:44634-44638",
+      "operations": [
+        {
+          "old_text": "If $x$ does not\nhave a predecessor, then we first set\n$R'(x) = \\colim_{x' < x} R(x')$ as in the third paragraph\nof the proof. The residue field of $R'(x)$ is $K'(x) = \\bigcup_{x' < x} K(x')$.",
+          "replacement_text": "If $x$ does not\nhave a predecessor, then we set $R'(x) = R$ and $K'(x) = k$\nif $x$ is the least element. Otherwise, we set\n$R'(x) = \\colim_{x' < x} R(x')$ as in the third paragraph\nof the proof. In this case the residue field of $R'(x)$ is\n$K'(x) = \\bigcup_{x' < x} K(x')$.",
+          "source_end_line": 44636,
+          "source_start_line": 44633
+        }
+      ],
+      "producer_id": "ALGEBRA-347",
+      "result": "confirmed_base_case_gap",
+      "stable_id": "MC-STK-ERR-0690"
+    },
+    {
+      "class": "missing_terminal_colimit",
+      "disposition": "Choose the well-order with a greatest element and identify its constructed ring as the required extension with residue field K.",
+      "locus": "algebra.tex:44624-44639;44652-44656",
+      "operations": [
+        {
+          "old_text": "To get around this problem we choose a well ordering on $K$.",
+          "replacement_text": "To get around this problem we choose a well ordering on $K$ with a greatest\nelement.",
+          "source_end_line": 44624,
+          "source_start_line": 44624
+        },
+        {
+          "old_text": "first paragraph of the proof to produce $R'(x) \\subset R(x)$.\nThis finishes the proof of the lemma.",
+          "replacement_text": "first paragraph of the proof to produce $R'(x) \\subset R(x)$.\nFor the greatest element $x$ of the chosen ordering we have $K(x) = K$.\nThus $R(x)$ is the extension required by the lemma.",
+          "source_end_line": 44639,
+          "source_start_line": 44638
+        }
+      ],
+      "producer_id": "ALGEBRA-348",
+      "result": "confirmed_terminal_construction_gap",
+      "stable_id": "MC-STK-ERR-0691"
+    },
+    {
+      "class": "omitted_locality_descent",
+      "disposition": "Prove locality of the descended finite-etale algebra and every later base change by faithfully flat descent.",
+      "locus": "algebra.tex:44661-44671",
+      "operations": [
+        {
+          "old_text": "there exists an $i$ and a finite \\'etale extension $R_i \\to R_{i, 1}$\nsuch that $R_{\\alpha + 1} = R_\\alpha \\otimes_{R_i} R_{i, 1}$.\nThus $R_{\\alpha + 1} = \\colim_{i' \\geq i} R_{i'} \\otimes_{R_i} R_{i, 1}$\nand the result holds for $\\alpha + 1$. Suppose $\\alpha$ is not a successor",
+          "replacement_text": "there exists an $i$ and a finite \\'etale extension $R_i \\to R_{i, 1}$\nsuch that $R_{\\alpha + 1} = R_\\alpha \\otimes_{R_i} R_{i, 1}$.\nThe map $R_i \\to R_\\alpha$ is flat local, hence faithfully flat. Since\n$R_{\\alpha + 1}$ is the base change of $R_{i, 1}$, faithfully flat\ndescent of locality shows that $R_{i, 1}$ is local. More generally,\nfor every $i' \\geq i$, the map $R_{i'} \\to R_\\alpha$ is flat local,\nhence faithfully flat, and the base change of\n$R_{i'} \\otimes_{R_i} R_{i, 1}$ to $R_\\alpha$ is $R_{\\alpha + 1}$.\nHence all these rings are local, and\n$R_{\\alpha + 1} = \\colim_{i' \\geq i} R_{i'} \\otimes_{R_i} R_{i, 1}$.\nThus the result holds for $\\alpha + 1$. Suppose $\\alpha$ is not a successor",
+          "source_end_line": 44667,
+          "source_start_line": 44664
+        }
+      ],
+      "producer_id": "ALGEBRA-349",
+      "result": "confirmed_proof_gap",
+      "stable_id": "MC-STK-ERR-0692"
+    },
+    {
+      "class": "malformed_logical_coordination",
+      "disposition": "Remove the malformed and after the Since-clause and insert the needed comma.",
+      "locus": "algebra.tex:44669-44671",
+      "operations": [
+        {
+          "old_text": "for some $\\beta < \\alpha$ and we see that $E$ is contained in a finite \\'etale",
+          "replacement_text": "for some $\\beta < \\alpha$, we see that $E$ is contained in a finite \\'etale",
+          "source_end_line": 44670,
+          "source_start_line": 44670
+        }
+      ],
+      "producer_id": "ALGEBRA-350",
+      "result": "confirmed_grammar_error",
+      "stable_id": "MC-STK-ERR-0693"
+    },
+    {
+      "class": "wrong_induction_preposition",
+      "disposition": "Change induction of the degree to induction on the degree.",
+      "locus": "algebra.tex:44685",
+      "operations": [
+        {
+          "old_text": "By induction of the degree of $\\kappa(\\mathfrak p) \\subset L$.",
+          "replacement_text": "By induction on the degree of $\\kappa(\\mathfrak p) \\subset L$.",
+          "source_end_line": 44685,
+          "source_start_line": 44685
+        }
+      ],
+      "producer_id": "ALGEBRA-351",
+      "result": "confirmed_grammar_error",
+      "stable_id": "MC-STK-ERR-0694"
+    },
+    {
+      "class": "nondecreasing_induction_and_grammar",
+      "disposition": "Require a proper nontrivial intermediate field and replace then construction by then constructing.",
+      "locus": "algebra.tex:44687-44691",
+      "operations": [
+        {
+          "old_text": "In general, if there exists a sub extension\n$\\kappa(\\mathfrak p) \\subset L' \\subset L$ then we win by induction\non the degree (by first constructing $R \\subset S'$ corresponding\nto $L'/\\kappa(\\mathfrak p)$ and then construction $S' \\subset S$\ncorresponding to $L/L'$). Thus we may assume that",
+          "replacement_text": "In general, if there exists a sub extension\n$\\kappa(\\mathfrak p) \\subset L' \\subset L$ with both inclusions strict,\nthen we win by induction\non the degree (by first constructing $R \\subset S'$ corresponding\nto $L'/\\kappa(\\mathfrak p)$ and then constructing $S' \\subset S$\ncorresponding to $L/L'$). Thus we may assume that",
+          "source_end_line": 44691,
+          "source_start_line": 44687
+        }
+      ],
+      "producer_id": "ALGEBRA-352",
+      "result": "confirmed_induction_gap_and_grammar_error",
+      "stable_id": "MC-STK-ERR-0695"
+    },
+    {
+      "class": "typographical_error",
+      "disposition": "Correct choicse to choices.",
+      "locus": "algebra.tex:44748",
+      "operations": [
+        {
+          "old_text": "Given these choicse, we let $E_{k + 1} \\subset B$ be the $A$-subalgebra",
+          "replacement_text": "Given these choices, we let $E_{k + 1} \\subset B$ be the $A$-subalgebra",
+          "source_end_line": 44748,
+          "source_start_line": 44748
+        }
+      ],
+      "producer_id": "ALGEBRA-353",
+      "result": "confirmed_typographical_error",
+      "stable_id": "MC-STK-ERR-0696"
+    },
+    {
+      "class": "malformed_cardinality_phrase",
+      "disposition": "Change has at most cardinality to has cardinality at most.",
+      "locus": "algebra.tex:44755-44756",
+      "operations": [
+        {
+          "old_text": "Some set theory (omitted) shows that $E_{k + 1}$ has at most\ncardinality $\\kappa$ (this uses that we inductively know",
+          "replacement_text": "Some set theory (omitted) shows that $E_{k + 1}$ has cardinality\nat most $\\kappa$ (this uses that we inductively know",
+          "source_end_line": 44756,
+          "source_start_line": 44755
+        }
+      ],
+      "producer_id": "ALGEBRA-354",
+      "result": "confirmed_grammar_error",
+      "stable_id": "MC-STK-ERR-0697"
+    },
+    {
+      "class": "zero_ring_counterexample_to_quotient_claim",
+      "disposition": "Restrict the assertion to quotients by proper ideals.",
+      "locus": "algebra.tex:44813",
+      "operations": [
+        {
+          "old_text": "Any quotient of $R$ is also a Noetherian complete local ring.",
+          "replacement_text": "Any quotient of $R$ by a proper ideal is also a Noetherian complete local ring.",
+          "source_end_line": 44813,
+          "source_start_line": 44813
+        }
+      ],
+      "producer_id": "ALGEBRA-355",
+      "result": "confirmed_scope_error",
+      "stable_id": "MC-STK-ERR-0698"
+    },
+    {
+      "class": "malformed_given_then_construction",
+      "disposition": "Delete then from the malformed Given construction.",
+      "locus": "algebra.tex:44814",
+      "operations": [
+        {
+          "old_text": "Given a finite ring map $R \\to S$, then $S$ is a product of",
+          "replacement_text": "Given a finite ring map $R \\to S$, $S$ is a product of",
+          "source_end_line": 44814,
+          "source_start_line": 44814
+        }
+      ],
+      "producer_id": "ALGEBRA-356",
+      "result": "confirmed_grammar_error",
+      "stable_id": "MC-STK-ERR-0699"
+    },
+    {
+      "class": "missing_copula",
+      "disposition": "State explicitly that the uniformizer p is a prime number.",
+      "locus": "algebra.tex:44873-44874",
+      "operations": [
+        {
+          "old_text": "A {\\it Cohen ring} is a complete discrete valuation ring with\nuniformizer $p$ a prime number.",
+          "replacement_text": "A {\\it Cohen ring} is a complete discrete valuation ring whose\nuniformizer $p$ is a prime number.",
+          "source_end_line": 44874,
+          "source_start_line": 44873
+        }
+      ],
+      "producer_id": "ALGEBRA-357",
+      "result": "confirmed_grammar_error",
+      "stable_id": "MC-STK-ERR-0700"
+    },
+    {
+      "class": "ill_typed_arrow_label",
+      "disposition": "Declare the overloaded notation for reduction modulo p^(n-1) followed by phi_(n-1).",
+      "locus": "algebra.tex:44994",
+      "operations": [
+        {
+          "old_text": "for $n = 1$. If $n > 1$, let $\\varphi_{n - 1}$ be given.\nThe ring map $\\mathbf{Z}/p^n\\mathbf{Z} \\to \\Lambda/p^n\\Lambda$",
+          "replacement_text": "for $n = 1$. If $n > 1$, let $\\varphi_{n - 1}$ be given, and also\nwrite $\\varphi_{n - 1}$ for the composite\n$\\Lambda/p^n\\Lambda \\to \\Lambda/p^{n - 1}\\Lambda\n\\xrightarrow{\\varphi_{n - 1}} R/\\mathfrak m^{n - 1}$.\nThe ring map $\\mathbf{Z}/p^n\\mathbf{Z} \\to \\Lambda/p^n\\Lambda$",
+          "source_end_line": 44986,
+          "source_start_line": 44985
+        }
+      ],
+      "producer_id": "ALGEBRA-358",
+      "result": "confirmed_type_error",
+      "stable_id": "MC-STK-ERR-0701"
+    },
+    {
+      "class": "mismatched_adic_ideals",
+      "disposition": "Name the respective source (x_i)-adic and target (y_i)-adic ideals.",
+      "locus": "algebra.tex:45016-45019",
+      "operations": [
+        {
+          "old_text": "Since both sides are $(x_1, \\ldots, x_n)$-adically complete\nthis map is surjective by Lemma \\ref{lemma-completion-generalities}\nas it is surjective modulo $(x_1, \\ldots, x_n)$ by\nconstruction.",
+          "replacement_text": "Since the source and target are complete with respect to the ideals\n$(x_1, \\ldots, x_n)$ and $(y_1, \\ldots, y_n) = \\mathfrak m$,\nrespectively, this map is surjective by\nLemma \\ref{lemma-completion-generalities} as the induced map modulo\nthese respective ideals is surjective by construction.",
+          "source_end_line": 45019,
+          "source_start_line": 45016
+        }
+      ],
+      "producer_id": "ALGEBRA-359",
+      "result": "confirmed_notation_and_proof_gap",
+      "stable_id": "MC-STK-ERR-0702"
+    },
+    {
+      "class": "missing_head_noun",
+      "disposition": "Insert subring before R_0.",
+      "locus": "algebra.tex:45067",
+      "operations": [
+        {
+          "old_text": "Then there exists a $R_0 \\subset R$ with the following properties",
+          "replacement_text": "Then there exists a subring $R_0 \\subset R$ with the following properties",
+          "source_end_line": 45067,
+          "source_start_line": 45067
+        }
+      ],
+      "producer_id": "ALGEBRA-360",
+      "result": "confirmed_grammar_error",
+      "stable_id": "MC-STK-ERR-0703"
+    },
+    {
+      "class": "premature_proof_closure",
+      "disposition": "Replace the premature whole-lemma closure by This proves Case I.",
+      "locus": "algebra.tex:45099-45102",
+      "operations": [
+        {
+          "old_text": "$R_0 \\to R$ is injective (see Lemma \\ref{lemma-integral-dim-up}),\nand the lemma is proved.\n\n\\medskip\\noindent\nCase II: $\\Lambda$ is a Cohen ring. Let $d + 1 = \\dim(R)$.",
+          "replacement_text": "$R_0 \\to R$ is injective (see Lemma \\ref{lemma-integral-dim-up}).\nThis proves Case I.\n\n\\medskip\\noindent\nCase II: $\\Lambda$ is a Cohen ring. Let $d + 1 = \\dim(R)$.",
+          "source_end_line": 45102,
+          "source_start_line": 45098
+        }
+      ],
+      "producer_id": "ALGEBRA-361",
+      "result": "confirmed_proof_structure_error",
+      "stable_id": "MC-STK-ERR-0704"
+    },
+    {
+      "class": "ambiguous_footnote_attachment",
+      "disposition": "Split the finite-generation and Noetherian-completion assertions.",
+      "locus": "algebra.tex:44799-44802",
+      "operations": [
+        {
+          "old_text": "This does not happen when $\\mathfrak m$ is finitely generated, see\nLemma \\ref{lemma-hathat-finitely-generated} in which\ncase the completion is Noetherian, see\nLemma \\ref{lemma-completion-Noetherian}.}.",
+          "replacement_text": "This does not happen when $\\mathfrak m$ is finitely generated; see\nLemma \\ref{lemma-hathat-finitely-generated}. In this\ncase the completion is Noetherian; see\nLemma \\ref{lemma-completion-Noetherian}.}.",
+          "source_end_line": 44802,
+          "source_start_line": 44799
+        }
+      ],
+      "producer_id": "ALGEBRA-362",
+      "result": "confirmed_editorial_ambiguity",
+      "stable_id": "MC-STK-ERR-0705"
+    },
+    {
+      "class": "malformed_invariant_subfield_apposition",
+      "disposition": "Identify L^G as the invariant subfield of L with a grammatical apposition.",
+      "locus": "algebra.tex:45311-45312",
+      "operations": [
+        {
+          "old_text": "with fraction field $K = L^G$ the $G$-invariants in the fraction field\n$L$ of $A$.",
+          "replacement_text": "with fraction field $K = L^G$, the subfield of $G$-invariants in the\nfraction field $L$ of $A$.",
+          "source_end_line": 45312,
+          "source_start_line": 45311
+        }
+      ],
+      "producer_id": "ALGEBRA-363",
+      "result": "confirmed_grammar_error",
+      "stable_id": "MC-STK-ERR-0706"
+    },
+    {
+      "class": "unstated_fraction_field_extension_of_derivation",
+      "disposition": "State that the unique extension of D to the fraction field satisfies D(a) nonzero.",
+      "locus": "algebra.tex:45325-45326",
+      "operations": [
+        {
+          "old_text": "Let $a \\in K$ be an element such that there exists a derivation\n$D : R \\to R$ with $D(a) \\not = 0$. Then the integral closure",
+          "replacement_text": "Let $a \\in K$ be an element such that there exists a derivation\n$D : R \\to R$ whose unique extension to the fraction field satisfies\n$D(a) \\not = 0$. Then the integral closure",
+          "source_end_line": 45326,
+          "source_start_line": 45325
+        }
+      ],
+      "producer_id": "ALGEBRA-364",
+      "result": "confirmed_type_gap",
+      "stable_id": "MC-STK-ERR-0707"
+    },
+    {
+      "class": "omitted_normality_argument",
+      "disposition": "State that the integral difference lies in the fraction field and hence in R by normality.",
+      "locus": "algebra.tex:45364-45366",
+      "operations": [
+        {
+          "old_text": "Hence $D(a)^{i + 1}a_0$ is also in $R$ because it is the\ndifference of $D(a)^{i + 1}y$ and $\\sum_{j > 0} D(a)^{i + 1}a_jx^j$ which\nare integral over $R$ (since $x$ is integral over $R$ as $a \\in R$).",
+          "replacement_text": "Hence $D(a)^{i + 1}a_0$ is also in $R$: it is the\ndifference of $D(a)^{i + 1}y$ and $\\sum_{j > 0} D(a)^{i + 1}a_jx^j$, both\nof which are integral over $R$ (since $x$ is integral over $R$ as\n$a \\in R$). Their difference also lies in the fraction field, so\nnormality shows that it belongs to the ring.",
+          "source_end_line": 45366,
+          "source_start_line": 45364
+        }
+      ],
+      "producer_id": "ALGEBRA-365",
+      "result": "confirmed_proof_gap",
+      "stable_id": "MC-STK-ERR-0708"
+    },
+    {
+      "class": "mis_scoped_purely_inseparable_extension",
+      "disposition": "Quantify the finite purely inseparable field extension and its integral closure unambiguously.",
+      "locus": "algebra.tex:45429-45431",
+      "operations": [
+        {
+          "old_text": "In characteristic $p > 0$ we have to show that the integral\nclosure of $R[x]$ is finite in any finite purely inseparable extension\nof $L/K(x)$ where $K$ is the fraction field of $R$. There",
+          "replacement_text": "In characteristic $p > 0$ we have to show that the integral\nclosure of $R[x]$ in every finite purely inseparable field extension\n$L/K(x)$ is finite, where $K$ is the fraction field of $R$. There",
+          "source_end_line": 45431,
+          "source_start_line": 45429
+        }
+      ],
+      "producer_id": "ALGEBRA-366",
+      "result": "confirmed_scope_error",
+      "stable_id": "MC-STK-ERR-0709"
+    },
+    {
+      "class": "missing_relative_clause",
+      "disposition": "Introduce the integral closure R' with an explicit relative clause.",
+      "locus": "algebra.tex:45435-45437",
+      "operations": [
+        {
+          "old_text": "is equal to $R'[x^{1/q}]$ with $R \\subset R' \\subset L'$ the integral\nclosure of $R$ in $L'$.",
+          "replacement_text": "is equal to $R'[x^{1/q}]$ with $R \\subset R' \\subset L'$, where the middle\nring is the integral closure of $R$ in $L'$.",
+          "source_end_line": 45437,
+          "source_start_line": 45436
+        }
+      ],
+      "producer_id": "ALGEBRA-367",
+      "result": "confirmed_grammar_error",
+      "stable_id": "MC-STK-ERR-0710"
+    },
+    {
+      "class": "wrong_alternative_connective",
+      "disposition": "Join the two Serre-criterion alternatives with or.",
+      "locus": "algebra.tex:45458-45464",
+      "operations": [
+        {
+          "old_text": "\\item Case I: $\\text{depth}(R_{\\mathfrak q}) < 2$\nand $\\dim(R_{\\mathfrak q}) \\geq 2$, and\n\\item Case II: $R_{\\mathfrak q}$ is not regular",
+          "replacement_text": "\\item Case I: $\\text{depth}(R_{\\mathfrak q}) < 2$\nand $\\dim(R_{\\mathfrak q}) \\geq 2$, or\n\\item Case II: $R_{\\mathfrak q}$ is not regular",
+          "source_end_line": 45462,
+          "source_start_line": 45460
+        }
+      ],
+      "producer_id": "ALGEBRA-368",
+      "result": "confirmed_logical_connective_error",
+      "stable_id": "MC-STK-ERR-0711"
+    },
+    {
+      "class": "malformed_denote_construction",
+      "disposition": "Repair the denote construction.",
+      "locus": "algebra.tex:45509",
+      "operations": [
+        {
+          "old_text": "For such a ring $R'$ denote $Z_{R'} \\subset \\Spec(R)$ this image.",
+          "replacement_text": "For such a ring $R'$, denote this image by $Z_{R'} \\subset \\Spec(R)$.",
+          "source_end_line": 45509,
+          "source_start_line": 45509
+        }
+      ],
+      "producer_id": "ALGEBRA-369",
+      "result": "confirmed_grammar_error",
+      "stable_id": "MC-STK-ERR-0712"
+    },
+    {
+      "class": "omitted_contraction_and_normality_localization_argument",
+      "disposition": "Define the contractions and use an intermediate localization to justify the normality equality safely.",
+      "locus": "algebra.tex:45523-45529",
+      "operations": [
+        {
+          "old_text": "Namely, every prime $\\mathfrak p'$ lies over a prime $\\mathfrak p'_i$\nsuch that $(R'_i)_{\\mathfrak p'_i}$ is normal. This implies\nthat $R'_{\\mathfrak p'} = (R'_i)_{\\mathfrak p'_i}$ is normal too.",
+          "replacement_text": "Namely, let $\\mathfrak p' \\in \\Spec(R')$ and set\n$\\mathfrak p = \\mathfrak p' \\cap R$. Choose $i$ such that\n$\\mathfrak p \\not \\in Z_{R'_i}$ and set\n$\\mathfrak p'_i = \\mathfrak p' \\cap R'_i$. Then\n$(R'_i)_{\\mathfrak p'_i}$ is normal. Set\n$T = R'_i \\setminus \\mathfrak p'_i$. The extension\n$R'_i \\subset R'$ is integral, and hence $T^{-1}R'$ is integral over\n$(R'_i)_{\\mathfrak p'_i}$. Both rings are contained in $K$, the fraction\nfield of $(R'_i)_{\\mathfrak p'_i}$, so normality gives\n$T^{-1}R' = (R'_i)_{\\mathfrak p'_i}$. Localizing at $\\mathfrak p'$ gives\n$R'_{\\mathfrak p'} = (R'_i)_{\\mathfrak p'_i}$, which is normal.",
+          "source_end_line": 45529,
+          "source_start_line": 45527
+        }
+      ],
+      "producer_id": "ALGEBRA-370",
+      "result": "confirmed_proof_gap",
+      "stable_id": "MC-STK-ERR-0713"
+    },
+    {
+      "class": "omitted_reduction_after_field_enlargement",
+      "disposition": "Justify reduction from the enlarged purely inseparable field back to the original normalization.",
+      "locus": "algebra.tex:45561-45563",
+      "operations": [
+        {
+          "old_text": "By enlarging $L$ if necessary we may assume there exists\nan element $y \\in L$ such that $y^q = x$.",
+          "replacement_text": "Choose a $q$th root $y$ of $x$ in an algebraic closure of $K$, set\n$\\widetilde L = L(y)$, and let $\\widetilde S$ be the integral closure\nof $R$ in $\\widetilde L$. Then $\\widetilde L/K$ is a finite purely\ninseparable extension and $\\widetilde L^q \\subset K$. Moreover,\n$S = \\widetilde S \\cap L$, so $S$ is an $R$-submodule of $\\widetilde S$.\nThus, if $\\widetilde S$ is finite over $R$, then $S$ is finite over $R$\nbecause $R$ is Noetherian. Replacing $L$ by $\\widetilde L$ and $S$ by\n$\\widetilde S$, we may therefore assume that $y \\in L$ and $y^q = x$.",
+          "source_end_line": 45563,
+          "source_start_line": 45562
+        }
+      ],
+      "producer_id": "ALGEBRA-371",
+      "result": "confirmed_proof_gap",
+      "stable_id": "MC-STK-ERR-0714"
+    }
+  ],
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3",
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "candidate_id": "stacks-errata-a04446e-r9",
+  "rejected": [
+    {
+      "producer_id": "ALGEBRA-344",
+      "reason": "In the explicitly informal counterfactual sentence, was is acceptable contemporary usage; were would be optional register polishing rather than a source correction."
+    }
+  ],
+  "schema": "mathematics-commons-stacks-r9-adjudication-spec/v1"
+}

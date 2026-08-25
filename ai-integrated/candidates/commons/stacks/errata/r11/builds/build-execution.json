@@ -1,0 +1,205 @@
+{
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_inputs": {
+    "algebra.tex": {
+      "bytes": 1771230,
+      "path": "algebra.tex",
+      "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+    }
+  },
+  "authority_phase": {
+    "stems": {
+      "algebra": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "algebra.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 375924,
+            "stdout_sha256_raw": "1C5C1128909DF87A4B34C041CFBB2054484567517F2361C79BBF3F0102D95344"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "algebra"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 268,
+            "stdout_sha256_raw": "2AC8211AB78503B72BF64B7015C2E58065FC80EFC13A098A870A9A9CC6498831"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "algebra.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 71028,
+            "stdout_sha256_raw": "26F19654B1582A893AC410D99484D406659CC31B6EC40946433EDA0DCE37BC6E"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "algebra.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 68454,
+            "stdout_sha256_raw": "23F39508856E4CABEF4E2C91D3AFE3F8565A421A843386F1AF35DE1EDB662E14"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 268,
+            "path": "builds/algebra.authority.bibtex.txt",
+            "sha256": "2AC8211AB78503B72BF64B7015C2E58065FC80EFC13A098A870A9A9CC6498831"
+          },
+          "log": {
+            "bytes": 81607,
+            "path": "builds/algebra.authority.log",
+            "sha256": "D5B8DFB7698DB25CD0A447BBEB604120E1F93376D540194F6B626277635FADC7"
+          },
+          "pass3_stdout": {
+            "bytes": 68032,
+            "path": "builds/algebra.authority.pass3.txt",
+            "sha256": "4C9D1FC25C5F174613DBA31710B7D98B3D8C39182492E55042E609FBF5FB54B3"
+          },
+          "pdf": {
+            "bytes": 3708166,
+            "path": "builds/algebra.authority.pdf",
+            "sha256": "C7D408FDB2F6F3646C1E1D325642F9BBA7FA0143ACE91C7774183D605D5E9914"
+          }
+        },
+        "source": {
+          "bytes": 1771230,
+          "path": "algebra.tex",
+          "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+        }
+      }
+    }
+  },
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "candidate_id": "stacks-errata-a04446e-r11",
+  "candidate_inputs": {
+    "algebra.tex": {
+      "bytes": 1771397,
+      "path": "algebra.tex",
+      "sha256": "829D1D857528E935C6274A9D425E2BB9473E8596BC9327D9AA6936722A9B7588"
+    }
+  },
+  "candidate_phase": {
+    "stems": {
+      "algebra": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "algebra.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 375924,
+            "stdout_sha256_raw": "8502286AC3D8B1686DB8D35F438E0F56010B6A75B09272BEF929180A37305A61"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "algebra"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 268,
+            "stdout_sha256_raw": "2AC8211AB78503B72BF64B7015C2E58065FC80EFC13A098A870A9A9CC6498831"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "algebra.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 71028,
+            "stdout_sha256_raw": "8C2B24DE749D1530E78006F13C81B0ABD82B94DD25334AC8D7D8C275416674B1"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "algebra.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 68454,
+            "stdout_sha256_raw": "704A9A71E7700583C2C5172A56129D0910AF74E44DB147D2B01A2392082E50AA"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 268,
+            "path": "builds/algebra.bibtex.txt",
+            "sha256": "2AC8211AB78503B72BF64B7015C2E58065FC80EFC13A098A870A9A9CC6498831"
+          },
+          "log": {
+            "bytes": 81607,
+            "path": "builds/algebra.log",
+            "sha256": "019A5C3666D3D94B3E76A469087CABC6916081B05C771E8BDD1A57ED66FE64E8"
+          },
+          "pass3_stdout": {
+            "bytes": 68032,
+            "path": "builds/algebra.pass3.txt",
+            "sha256": "62988EE44869F3C8D90D91AF1C5C0B9A55A60534854C38389170A13AB769ECF4"
+          },
+          "pdf": {
+            "bytes": 3708262,
+            "path": "builds/algebra.pdf",
+            "sha256": "2EDD784C7EF2EB0BA014662E47E8FC26F66D3AD161A44C4B552C2C00B204D9CE"
+          }
+        },
+        "source": {
+          "bytes": 1771397,
+          "path": "algebra.tex",
+          "sha256": "829D1D857528E935C6274A9D425E2BB9473E8596BC9327D9AA6936722A9B7588"
+        }
+      }
+    }
+  },
+  "completed_at_utc": "2026-08-24T20:41:26Z",
+  "passed": true,
+  "restored_authority_inputs": {
+    "algebra.tex": {
+      "bytes": 1771230,
+      "path": "algebra.tex",
+      "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+    }
+  },
+  "schema": "mathematics-commons-stacks-errata-build-execution/v1",
+  "source_date_epoch": "1785270512",
+  "started_at_utc": "2026-08-24T20:40:20Z",
+  "tools": {
+    "bibtex": "MiKTeX-BibTeX 4.2 (MiKTeX 26.5)",
+    "pdflatex": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5)",
+    "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]"
+  },
+  "work_root": "new empty task-local directory outside source and candidate; exact local path retained only in private evidence"
+}

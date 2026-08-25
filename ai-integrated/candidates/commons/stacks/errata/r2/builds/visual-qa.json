@@ -1,0 +1,54 @@
+{
+  "schema": "mathematics-commons-stacks-errata-visual-qa/v1",
+  "candidate_id": "stacks-errata-a04446e-r2",
+  "performed_at_utc": "2026-08-22T00:37:16Z",
+  "method": "Rendered every candidate and authority page containing a direct R2 correction at 120 dpi, joined candidate-left/authority-right pairs, visually inspected every pair, then reopened both complete candidate PDFs for page, font, link-annotation, metadata, and tagging checks.",
+  "tools": {
+    "pdftoppm": "24.04.0",
+    "imagemagick": "7.1.2-22 Q16 x64",
+    "pypdf": "6.10.0"
+  },
+  "pdfs": [
+    {
+      "path": "builds/brauer.pdf",
+      "bytes": 343309,
+      "sha256": "11DBAF837AAD0F8AA6BBD6537ADA14E326DFBF166F6B3E98280790F0A0F6CBF4",
+      "pages": 10,
+      "inspected_pages": [7, 8],
+      "covered_units": ["MC-STK-ERR-0016", "MC-STK-ERR-0017"],
+      "fonts": 20,
+      "unembedded_fonts": 0,
+      "fonts_without_tounicode": 0,
+      "link_annotations": 65,
+      "malformed_link_rectangles": 0,
+      "out_of_bounds_link_rectangles": 0
+    },
+    {
+      "path": "builds/stacks-limits.pdf",
+      "bytes": 342171,
+      "sha256": "6A2688A4BBB5C89C4EAF2C6E5B477CD7F1F77095399184F969BEADB56DBBD3A6",
+      "pages": 13,
+      "inspected_pages": [2, 3, 5, 6, 8, 9, 10, 11, 12],
+      "covered_units": ["MC-STK-ERR-0018", "MC-STK-ERR-0019", "MC-STK-ERR-0020", "MC-STK-ERR-0021", "MC-STK-ERR-0022", "MC-STK-ERR-0023", "MC-STK-ERR-0024", "MC-STK-ERR-0025", "MC-STK-ERR-0026", "MC-STK-ERR-0027", "MC-STK-ERR-0028"],
+      "fonts": 21,
+      "unembedded_fonts": 0,
+      "fonts_without_tounicode": 0,
+      "link_annotations": 20,
+      "malformed_link_rectangles": 0,
+      "out_of_bounds_link_rectangles": 0
+    }
+  ],
+  "visual_findings": {
+    "changed_loci_legible": true,
+    "clipped_or_overlapping_content": 0,
+    "out_of_page_content": 0,
+    "unexpected_reflow": 0,
+    "candidate_authority_page_counts_match": true,
+    "private_metadata_markers": 0
+  },
+  "expected_limitations": [
+    "These are isolated chapter proof builds, so unresolved cross-chapter references and visible question-mark placeholders match the authority builds and are not introduced by R2.",
+    "The PDFs are untagged; accessibility tagging remains a full-edition toolchain concern rather than evidence for or against these bounded source corrections."
+  ],
+  "passed": true
+}

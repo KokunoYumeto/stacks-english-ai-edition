@@ -1,0 +1,136 @@
+{
+  "schema": "mathematics-commons-stacks-errata-candidate-config/v1",
+  "candidate_id": "stacks-errata-a04446e-r5",
+  "lease_id": "stacks-lease-000008-errata-r5",
+  "writer_task": "01a0256d-5693-77c1-96b2-cf37101e0c6c",
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "source_date_epoch": "1785270512",
+  "expected_unit_ids": [
+    "MC-STK-ERR-0217",
+    "MC-STK-ERR-0218",
+    "MC-STK-ERR-0219",
+    "MC-STK-ERR-0220",
+    "MC-STK-ERR-0221",
+    "MC-STK-ERR-0222",
+    "MC-STK-ERR-0223",
+    "MC-STK-ERR-0224",
+    "MC-STK-ERR-0225",
+    "MC-STK-ERR-0226",
+    "MC-STK-ERR-0227",
+    "MC-STK-ERR-0228",
+    "MC-STK-ERR-0229",
+    "MC-STK-ERR-0230",
+    "MC-STK-ERR-0231",
+    "MC-STK-ERR-0232",
+    "MC-STK-ERR-0233",
+    "MC-STK-ERR-0234",
+    "MC-STK-ERR-0235",
+    "MC-STK-ERR-0236",
+    "MC-STK-ERR-0237",
+    "MC-STK-ERR-0238",
+    "MC-STK-ERR-0239",
+    "MC-STK-ERR-0240",
+    "MC-STK-ERR-0241",
+    "MC-STK-ERR-0242",
+    "MC-STK-ERR-0243",
+    "MC-STK-ERR-0244",
+    "MC-STK-ERR-0245",
+    "MC-STK-ERR-0246",
+    "MC-STK-ERR-0247",
+    "MC-STK-ERR-0248",
+    "MC-STK-ERR-0249",
+    "MC-STK-ERR-0250",
+    "MC-STK-ERR-0251",
+    "MC-STK-ERR-0252",
+    "MC-STK-ERR-0253",
+    "MC-STK-ERR-0254"
+  ],
+  "operation_count": 42,
+  "stems": {
+    "sites": {
+      "authority_sha256": "07AE4690C2D8EB6873837D3D14A37F07408BB14F9E0BE6077ED570C220B1845D",
+      "payload_sha256": "9B11C7525C7A23CD8732FDC204E5F62B66892969B08087CE26EC194F85073499",
+      "authority_bytes": 424197,
+      "payload_bytes": 424291,
+      "display_delimiter_delta": 0,
+      "ordered_structure_exceptions": {
+        "references_added": [
+          {
+            "index_0based": 649,
+            "payload": "\\ref{categories-lemma-functorial-colimit}",
+            "producer_id": "SITES-100",
+            "stable_id": "MC-STK-ERR-0251"
+          }
+        ]
+      },
+      "build_exceptions": {
+        "candidate_only_undefined_reference_targets": {
+          "categories-lemma-functorial-colimit": 1
+        },
+        "candidate_page_delta": -1
+      }
+    }
+  },
+  "authority_evidence": [
+    {
+      "path": "authority/canon/EVIDENCE_SOURCE_BINDINGS.json",
+      "bytes": 3412,
+      "sha256": "8C407D4EF10539DAC55A38A1F1E5E6494EA0A682A5B42980014ABEC35920ADFF"
+    },
+    {
+      "path": "authority/canon/mappings/R5_SITES_MAPPING.json",
+      "bytes": 42705,
+      "sha256": "B6BAE4B27D619A6D325BEC8B9F9EE7921C64DD9090B2FFD838B9555C9C4EC363"
+    },
+    {
+      "path": "authority/canon/reviews/ERRATA_R5_CORROBORATION_SITES_100_FRENCH_SLICE_20260822.json",
+      "bytes": 1478,
+      "sha256": "91DD99F792FCC858AED63769099F2C129F35BEE52D66213E656F14964741C531"
+    },
+    {
+      "path": "authority/canon/reviews/ERRATA_R5_DUPLICATE_SITES_100_20260822.json",
+      "bytes": 1377,
+      "sha256": "24E7C0C42BC8BAF76D6E0CD580A02EC388B8B10344E4E9869410A23595626927"
+    },
+    {
+      "path": "authority/canon/reviews/ERRATA_R5_INTAKE_SITES_076_117_20260822.json",
+      "bytes": 3290,
+      "sha256": "24505893E8AE5CDA173DE4E8898CBF61F06DA2EFCD10F4A75CE8B62E0B0235F4"
+    },
+    {
+      "path": "authority/canon/reviews/ERRATA_R5_SITES_076_117_REVIEW.md",
+      "bytes": 9593,
+      "sha256": "A8D19579197A93441AC55EFFA6A9DA307ADE2E5D92909E5BFF56ED6AB4B666BD"
+    },
+    {
+      "path": "authority/COPYING",
+      "bytes": 20404,
+      "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"
+    },
+    {
+      "path": "authority/producer/SOURCE_DEFECT_LEDGER.csv",
+      "bytes": 100424,
+      "sha256": "FE48262F81A6B83C2D361AC2BD3896EC5C279C71314C4BA8E3B083D86E5FD8F1"
+    },
+    {
+      "path": "authority/source/sites.tex",
+      "bytes": 424197,
+      "sha256": "07AE4690C2D8EB6873837D3D14A37F07408BB14F9E0BE6077ED570C220B1845D"
+    },
+    {
+      "path": "authority/upstream.lock.json",
+      "bytes": 1171,
+      "sha256": "B195ECC83AB0F32C574A60D1FDBA9B0DA4D35B04E0DF7CB106DC9C0FDAD99C0D"
+    }
+  ],
+  "proof_closure": {
+    "producer_rows": 42,
+    "accepted": 38,
+    "operations": 42,
+    "rejected": 3,
+    "prior_overlay_aliases": 1,
+    "packet_duplicates": 1,
+    "unresolved": 0
+  }
+}

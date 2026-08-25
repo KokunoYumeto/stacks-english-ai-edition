@@ -1,0 +1,193 @@
+{
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "candidate_id": "stacks-errata-a04446e-r1",
+  "checks": {
+    "authority_hashes": {
+      "files": 13,
+      "passed": true
+    },
+    "chapter_builds": {
+      "chapters": 3,
+      "passed": true,
+      "receipt_sha256": "8B0D259A8E9DE742CAF38FCEA787D93204C210922CD4670B872D1C4A7652F02D"
+    },
+    "exact_payloads": {
+      "files": {
+        "crystalline.tex": {
+          "authority_bytes": 211808,
+          "authority_sha256": "466C0634A5E8E3899B157A42A4B4BB5F4357199F96708CAF5854F5A92BE58054",
+          "inline_dollar_delta": 0,
+          "mapped_replacements": [
+            {
+              "count": 1,
+              "new": "$t', t \\in T$.",
+              "old": "$t', t \\in I$."
+            }
+          ],
+          "payload_bytes": 211808,
+          "payload_sha256": "EDA38E502E0C6B3743C0FCD769203EAA6186440002A9AD2C97DC6F642B03DEC7",
+          "structure": {
+            "citations": 10,
+            "environments": 494,
+            "labels": 174,
+            "references": 457,
+            "sections": 26
+          }
+        },
+        "smoothing.tex": {
+          "authority_bytes": 134660,
+          "authority_sha256": "FD28CF874BB7DAD3C5C5FF03314D1C83701613A8A98730A99B9CA7A4BCFE6068",
+          "inline_dollar_delta": -2,
+          "mapped_replacements": [
+            {
+              "count": 1,
+              "new": "let $A = R[x_1, \\ldots, x_n]/(f_1, \\ldots, f_m)$ and $c$",
+              "old": "let $A = R[x_1, \\ldots, x_n]/(f_1, \\ldots, f_m)$, $c$, and $a' \\in A$"
+            },
+            {
+              "count": 1,
+              "new": "There exists a finite type $R$-algebra map $A \\to C$ which has a",
+              "old": "There exists finite type $R$-algebra map $A \\to C$ which has a"
+            },
+            {
+              "count": 1,
+              "new": "$f_1, \\ldots, f_c \\in R[y_1, \\ldots, y_m]$ lifting",
+              "old": "$f_1, \\ldots, f_c \\in R[y_1, \\ldots, y_c]$ lifting"
+            },
+            {
+              "count": 1,
+              "new": "Choose an enumeration $E = \\{a_1, \\ldots, a_n\\}$",
+              "old": "Choose an enumerations $E = \\{a_1, \\ldots, a_n\\}$"
+            },
+            {
+              "count": 1,
+              "new": "correspond to $a_i/1$ where $a_1, \\ldots, a_m \\in A$ are generators of $A$",
+              "old": "correspond $a_i/1$ where $a_1, \\ldots, a_m \\in A$ are generators of $A$"
+            }
+          ],
+          "payload_bytes": 134651,
+          "payload_sha256": "9CF7DCF31E447C585E81515C9A8059B37A566998DCAFA77A16AB7CB1D27A0A46",
+          "structure": {
+            "citations": 32,
+            "environments": 274,
+            "labels": 97,
+            "references": 263,
+            "sections": 14
+          }
+        },
+        "spaces-cohomology.tex": {
+          "authority_bytes": 174423,
+          "authority_sha256": "63F19991B7B2BCE90B5FB30FCDBB8A3B06CBBFFEC42FA7C413776C29AE4B69C5",
+          "inline_dollar_delta": 0,
+          "mapped_replacements": [
+            {
+              "count": 1,
+              "new": "Then $X \\to Y$ is a finite morphism of schemes and the result is",
+              "old": "Then $Z \\to X$ is a finite morphism of schemes and the result is"
+            },
+            {
+              "count": 1,
+              "new": "\\otimes_{\\mathcal{B}_{\\overline{y}}}",
+              "old": "\\otimes_{\\mathcal{B}_{\\overline{x}}}"
+            },
+            {
+              "count": 1,
+              "new": "the behaviour of stalks under pushforward along a finite morphism",
+              "old": "the behaviour of stalks under pushforward along a closed immersion"
+            },
+            {
+              "count": 1,
+              "new": "$h_{U''}^\\# \\to h_U^\\# \\times h_{U'}^\\#$",
+              "old": "$h_{U''}^\\# \\to h_U^\\# \\times h_{u'}^\\#$"
+            },
+            {
+              "count": 1,
+              "new": "the sheaf $f_!\\mathcal{G}$ is the sheafification of the presheaf",
+              "old": "the sheaf $f_!$ is the sheafification of the presheaf"
+            },
+            {
+              "count": 1,
+              "new": "\\mathcal{G} \\otimes_\\mathbf{Z} \\underline{\\mathbf{Z}}(\\chi_p)$",
+              "old": "\\mathcal{G} \\otimes_\\mathbf{Z} \\underline{\\mathbf{Z}}(\\chi_p))$"
+            },
+            {
+              "count": 1,
+              "new": "$\\textit{Ab}(U_{p, \\etale})$",
+              "old": "$\\textit{Ab}(U_p)$"
+            }
+          ],
+          "payload_bytes": 174442,
+          "payload_sha256": "81438F655CEAB1A2E07CFEEC645A9A7C2447DB983D6BCEFAED6575859B75D196",
+          "structure": {
+            "citations": 1,
+            "environments": 396,
+            "labels": 110,
+            "references": 432,
+            "sections": 22
+          }
+        }
+      },
+      "passed": true
+    },
+    "jsonl_and_proof_parse": {
+      "jsonl_files": 3,
+      "passed": true,
+      "proved_units": 14,
+      "rejected_units": 1
+    },
+    "lease_and_inventory": {
+      "diagrams": 0,
+      "passed": true,
+      "units": 14
+    },
+    "permanent_tags": {
+      "appended_records": [
+        "0HB4,topology-lemma-dense-in-constructible",
+        "0HB5,more-morphisms-lemma-weighting-specialization",
+        "0HB6,more-morphisms-lemma-weighting-on-dense-set",
+        "0HB7,relative-cycles-section-weightings",
+        "0HB8,relative-cycles-lemma-weightings-pre",
+        "0HB9,relative-cycles-example-n-must-be-positive-sometimes",
+        "0HBA,relative-cycles-example-Merkurjev",
+        "0HBB,relative-cycles-lemma-flat-pullback-as-action",
+        "0HBC,relative-cycles-lemma-flat-pullback-as-composition"
+      ],
+      "authority_records": 21583,
+      "authority_sha256": "098F77CCE75F8359F1EACB22B7AA0088099B09E5B3FFCAD2DE513CBD1A8A9F1C",
+      "live_source_labels_verified": 9,
+      "passed": true,
+      "payload_records": 21592,
+      "payload_sha256": "C47887DB37D78437C0E7C72BEC0F7840DCA2D36535D1241E1CBCAEF1412DC788",
+      "unique_full_labels": true,
+      "unique_tag_codes": true
+    },
+    "public_hygiene": {
+      "passed": true,
+      "python_caches": 0,
+      "text_files": 27
+    },
+    "tag_allocator_replay": {
+      "after": 0,
+      "before": 9,
+      "passed": true
+    },
+    "unit_closure": {
+      "expected": 14,
+      "manifested": 14,
+      "passed": true,
+      "rejected": [
+        "MC-STK-ERR-0004"
+      ]
+    },
+    "visual_pdf_qa": {
+      "direct_units": 13,
+      "passed": true,
+      "pdfs": 3,
+      "receipt_sha256": "589D24DCDC938FE8DB2B04DEBC66B010A37CEF8DE2DF5F235C482E86F1FABCC3"
+    }
+  },
+  "generated_at_utc": "2026-08-21T20:44:44Z",
+  "passed": true,
+  "schema": "mathematics-commons-stacks-errata-validation/v1",
+  "verifier_sha256": "44F54047CE7642E079226D334E0729F016EFB58552E5AF878911AF5DFB251899"
+}

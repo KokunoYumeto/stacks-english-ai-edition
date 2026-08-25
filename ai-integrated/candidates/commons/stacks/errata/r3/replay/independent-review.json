@@ -1,0 +1,201 @@
+{
+  "schema": "mathematics-commons-stacks-independent-review/v1",
+  "review_id": "stacks-errata-a04446e-r3-fresh-independent-review-20260822-0520",
+  "candidate_id": "stacks-errata-a04446e-r3",
+  "namespace": "commons/stacks/errata/r3",
+  "reviewer_task": "/root/r3_fresh_independent_replay",
+  "generated_at_utc": "2026-08-22T04:04:14Z",
+  "passed": true,
+  "disposition": "fresh_independent_replay_passed_pending_canon_manifest_transition",
+  "pre_review_manifest": {
+    "path": "candidate.manifest.json",
+    "bytes": 9263,
+    "sha256": "F8B30480666B7C5B6BF7D912099B49065531F20F55E5EB20AFAA563A9AA54CB7",
+    "review_state": "performed",
+    "independent_replay": "not_performed",
+    "schema_path": "../../../../../schemas/candidate-manifest.schema.json",
+    "schema_bytes": 3207,
+    "schema_sha256": "C0A948F724DC9E8A283499E00AD20090D379A79548FEAAE597C4065D078467D3",
+    "schema_valid": true,
+    "pre_replay_hash_closure": {
+      "references": 53,
+      "unique_paths": 53,
+      "matching": 53,
+      "passed": true
+    },
+    "post_replay_pre_transition_closure": {
+      "references": 53,
+      "unique_paths": 53,
+      "matching_pre_review_hashes": 44,
+      "explicit_generated_file_transitions": 9,
+      "unexpected_mismatches": 0,
+      "note": "The canon keeper must rebind the nine generated outputs and this receipt before changing the manifest replay state."
+    },
+    "unchanged_during_review": true
+  },
+  "historical_failed_replay": {
+    "path": "replay/failed-review-pre-revision.json",
+    "bytes": 96486,
+    "sha256": "B558A16BD22D5E0076EAA724B358B9CC2239488BD6EDA29B281CD0179895ED6F",
+    "immutable_and_unchanged": true,
+    "role": "Adverse evidence for the pre-revision failure of linked units MC-STK-ERR-0030 and MC-STK-ERR-0031; this passing receipt does not erase or supersede it."
+  },
+  "authority_and_payload": {
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+    "lock": {"path": "authority/upstream.lock.json", "bytes": 1171, "sha256": "B195ECC83AB0F32C574A60D1FDBA9B0DA4D35B04E0DF7CB106DC9C0FDAD99C0D"},
+    "license": {"path": "authority/COPYING", "bytes": 20404, "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"},
+    "files": [
+      {"authority_path": "authority/source/sets.tex", "authority_bytes": 46628, "authority_sha256": "9BCC55E7F11CF36B0665AE549D5BA76BE6A0EDD00F7FCA36A567E367099603F9", "payload_path": "payload/sets.tex", "payload_bytes": 46831, "payload_sha256": "A4D8072BDFFEEF9B8EF1D058499761DA1E1F31EABC11BB04B8EA37D04B866D41"},
+      {"authority_path": "authority/source/topology.tex", "authority_bytes": 237731, "authority_sha256": "C6BAC8DCF8AD96DC47416BF34CB45BA4A10B894E40D67D3E1FA68D8EF0D9F872", "payload_path": "payload/topology.tex", "payload_bytes": 237823, "payload_sha256": "67115451F19CE981FD591F77E6CA16A4DE64A20C71105D2E5215E41FD8F8EB8D"},
+      {"authority_path": "authority/source/categories.tex", "authority_bytes": 350957, "authority_sha256": "62F7611AF4C3FEEBD041DB4728B42C7112004CFBB9FA5ECB643C6F5D90DB3F25", "payload_path": "payload/categories.tex", "payload_bytes": 350966, "payload_sha256": "124F381C9DD01898B8DBB3969B7771190B64E8B2B9CE73E24E7DD1FB0727E2C1"}
+    ],
+    "frozen_upstream_mirrors_match": true,
+    "payloads_unchanged_by_replay": true
+  },
+  "evidence_inputs": [
+    {"path": "source-map.jsonl", "bytes": 11574, "sha256": "65F1CE7CD5C39DF836C059EEB48279A2686A7AE36777914323504B8CA6186F1C"},
+    {"path": "stable-units.json", "bytes": 5903, "sha256": "F29F90BD0D372120E5037926E6C7D554E39E2DF65488768EA710C6C6974F644F"},
+    {"path": "formula-diagram-inventory.json", "bytes": 1559, "sha256": "ECB34F7F8B2A942576C6A256B92E456ECC67798AF7BDD5CD684D08D404A10E60"},
+    {"path": "decisions.jsonl", "bytes": 3516, "sha256": "964AB23B1731EB946B628F00ED9E394580F09CF0D49CA61405C29853A562719E"},
+    {"path": "rejections.jsonl", "bytes": 1614, "sha256": "A8EDC255B231B632EE13F692D1CA146EBC1B16EAA181F0F64CC754A83BBEE52A"},
+    {"path": "authority/canon/ERRATA_R3_INTAKE_FRENCH_20260822.json", "bytes": 11220, "sha256": "1CBD6FC2A3F503AD86F2ADCF480FD04FE22B37B633590ECF6BCEA079D55FF160"},
+    {"path": "authority/canon/ERRATA_R3_PROOFS.md", "bytes": 15879, "sha256": "2DB6FC82A46EE3454A07337AD5F5D0C4E6A61A2381F0F45892B2E4137457897E"},
+    {"path": "authority/canon/R3_TOPOLOGY_018_023_INDEPENDENT_REVIEW.md", "bytes": 2541, "sha256": "E92AB3262E4D5506DBABF36CF5522F8D323ABA3CD379258B6E65D872838B1FB3"},
+    {"path": "authority/producer/SOURCE_DEFECT_LEDGER.csv", "bytes": 16262, "sha256": "CD91D317D52D999D5174E945F735D32E831DB9F3DB6B8F121B83EF9D6F260F45"},
+    {"path": "replay-build.py", "bytes": 11150, "sha256": "A63E4FA0ABEEEDB59CDF0D7119A2CFE549CF4132B23A27F952BE2985DE036A6A"},
+    {"path": "build-receipt.py", "bytes": 7195, "sha256": "1DD044EAF63D4160186293FFEE1501EAA5AC17215CA277B6790865A8E3AA2C83"},
+    {"path": "verify.py", "bytes": 21859, "sha256": "D54B5FDA12775C872AEB8F0315DD2E1F7316935CE320553AF00C3A7B6E5FACE4"}
+  ],
+  "unit_review": {
+    "expected": 34,
+    "reviewed": 34,
+    "payload_reconstruction_exact": true,
+    "verdicts": [
+      {"id": "MC-STK-ERR-0029", "verdict": "pass", "basis": "Only calligraphic S_tau is declared; the bare identifier is undefined."},
+      {"id": "MC-STK-ERR-0030", "verdict": "pass", "basis": "Linked repair proved afresh: clause (3) must accept Cov(kappa,f(gamma)), so applying it at gamma=beta(U) yields the stated base change at f(beta(U)+1). Since beta(U)<beta2 and beta2 is limit, beta(U)+1<beta2; monotonicity gives f(beta(U)+1)<=f(beta2)=alpha. The former free beta and double-f stage are eliminated."},
+      {"id": "MC-STK-ERR-0031", "verdict": "pass", "basis": "Linked repair proved afresh: the site axioms are being checked in Cov(kappa,alpha), not Cov(kappa,f(alpha)). Cofinality bounds every beta(W_i) below beta<beta2; increasing beta to include beta(U) keeps beta<beta2 and puts outer and inner covers in the common Cov(kappa,f(beta)) stage. Clause (2) then lands in Cov(kappa,f(beta+1)) subset Cov(kappa,alpha)."},
+      {"id": "MC-STK-ERR-0032", "verdict": "pass", "basis": "Only W_{a,i} was defined and bounded."},
+      {"id": "MC-STK-ERR-0033", "verdict": "pass", "basis": "Diameter endpoints are vertices in V; E is not the declared vertex set."},
+      {"id": "MC-STK-ERR-0034", "verdict": "pass_with_adjacent_scope_note", "basis": "Ordering Z,Z-prime directly in A is typed. The following source word 'smallest' may deserve a later minimal-versus-least review but is outside this mapped correction."},
+      {"id": "MC-STK-ERR-0035", "verdict": "pass", "basis": "The finite image lies in Ob(mathcal I), not an undefined I."},
+      {"id": "MC-STK-ERR-0036", "verdict": "pass", "basis": "Both sets must be complements of U union V to be closed and disjoint from the stated pieces."},
+      {"id": "MC-STK-ERR-0037", "verdict": "pass", "basis": "The descending chain requires the complement of the union."},
+      {"id": "MC-STK-ERR-0038", "verdict": "pass", "basis": "Deleting the unmatched closing parenthesis balances the set-builder."},
+      {"id": "MC-STK-ERR-0039", "verdict": "pass", "basis": "Finite distributivity gives union_{j=1}^m(E intersect V_j)."},
+      {"id": "MC-STK-ERR-0040", "verdict": "pass", "basis": "The chain and its generic points are in the target Y."},
+      {"id": "MC-STK-ERR-0041", "verdict": "pass", "basis": "For Y subset Y-prime, xi-prime specializes to xi and codimension is delta(xi-prime)-delta(xi), matching the preceding lemma."},
+      {"id": "MC-STK-ERR-0042", "verdict": "pass", "basis": "A finite union of irreducible components in the Noetherian reduction is closed but need not be open."},
+      {"id": "MC-STK-ERR-0043", "verdict": "pass", "basis": "Density gives empty interior; the subsequent finite locally closed argument proves nowhere density."},
+      {"id": "MC-STK-ERR-0044", "verdict": "pass", "basis": "The proof establishes irreducibility of p(Z),q(Z) and later uses exactly their closures."},
+      {"id": "MC-STK-ERR-0045", "verdict": "pass", "basis": "The product is the defined codomain; Y is introduced only later as f(X)."},
+      {"id": "MC-STK-ERR-0046", "verdict": "pass", "basis": "Compactness is applied to the primed constructible-topology system."},
+      {"id": "MC-STK-ERR-0047", "verdict": "pass", "basis": "The cited compact Hausdorff argument and constructible E_i require the constructible topology."},
+      {"id": "MC-STK-ERR-0048", "verdict": "pass", "basis": "The inverse system is formed from U_i minus E, as already stated by the lemma."},
+      {"id": "MC-STK-ERR-0049", "verdict": "pass", "basis": "The canonical map identifies X with an open subspace of the constructed X-star."},
+      {"id": "MC-STK-ERR-0050", "verdict": "pass", "basis": "Only the complement of U intersect inverse-image(V) is closed, excludes p, and supports the contradiction step."},
+      {"id": "MC-STK-ERR-0051", "verdict": "pass", "basis": "Uniqueness must run on the minimal closed cover E, not the nonminimal ambient Stone-Cech cover."},
+      {"id": "MC-STK-ERR-0052", "verdict": "pass_with_policy_limit", "basis": "Deleting the literal item 'add more here.' removes no proposition and invents no mathematical content. It does not complete the theorem: the punctuation after item (3) and the explicit 'Proof. Omitted.' remain, and this review makes no claim to supply the omitted proof."},
+      {"id": "MC-STK-ERR-0053", "verdict": "pass", "basis": "The named P-refines-Q formulation has the standard orientation required by the following irreducible-component example."},
+      {"id": "MC-STK-ERR-0054", "verdict": "pass_with_policy_limit", "basis": "With printed right cosets G=union H g_i, g=h g_i implies g^-1 H g=g_i^-1 H g_i, forcing the inverse conjugates. An independent S4 point-stabilizer calculation produced a right transversal for which the printed intersection has order 2 and is nonnormal, while the corrected intersection is the trivial normal core. Switching to left cosets would be another valid convention, but preserving the printed right-coset convention uniquely selects this payload."},
+      {"id": "MC-STK-ERR-0055", "verdict": "pass", "basis": "Transition maps must be topological-group homomorphisms for the displayed Hom functor, so the diagram is in TopGroup."},
+      {"id": "MC-STK-ERR-0056", "verdict": "pass", "basis": "For g:W->V and f:V->U, only f after g is typed."},
+      {"id": "MC-STK-ERR-0057", "verdict": "pass", "basis": "The defining pseudofunctor comparison is alpha_{g,f}."},
+      {"id": "MC-STK-ERR-0058", "verdict": "pass", "basis": "The inertia category is declared calligraphic throughout."},
+      {"id": "MC-STK-ERR-0059", "verdict": "pass", "basis": "The announced and constructed morphism is d->c after b; b after c is untyped."},
+      {"id": "MC-STK-ERR-0060", "verdict": "pass", "basis": "The doubled composition operator is mechanically spurious."},
+      {"id": "MC-STK-ERR-0061", "verdict": "pass", "basis": "A bifunctor has categorical product domain C times C, also used elsewhere in the chapter."},
+      {"id": "MC-STK-ERR-0062", "verdict": "pass", "basis": "The product of representable slices C/U and C/V is represented by C/(U times V); all three linked occurrences are repaired consistently."}
+    ]
+  },
+  "fresh_replay": {
+    "recipe": "BUILD.md deterministic replay in a new empty external work root, followed by build-receipt.py and verify.py",
+    "started_at_utc": "2026-08-22T03:45:20Z",
+    "completed_at_utc": "2026-08-22T03:47:06Z",
+    "source_date_epoch": 1773635256,
+    "new_empty_work_root_used": true,
+    "work_root_removed_by_runner": true,
+    "private_evidence_root": "withheld from this sanitized public receipt; exact task-local path reported to the canon keeper",
+    "build_execution": {"path": "builds/build-execution.json", "bytes": 18927, "sha256": "36F511352D484C1296E51FE5714585E58AF10E4918A2B6B7A182C6EFDA10C784", "passed": true},
+    "build_receipt": {"path": "builds/build-receipt.json", "bytes": 22742, "sha256": "D62C323D31CAE3A54E258B7BF695D14007EF6031C4CACB21C43E3371DA3E32C8", "passed": true},
+    "validation": {"path": "builds/validation.json", "bytes": 14081, "sha256": "866F4102CC23C4D656E35B0D26EDE4E95274356ED0C0D2155E9EE0236F08F317", "passed": true},
+    "public_pdfs": [
+      {"path": "builds/sets.pdf", "bytes": 449363, "sha256": "7FFA758C1F3431B23D2267DA299794F744763CB25ACBFBFBABC24D3CA2D2B44D", "pages": 14},
+      {"path": "builds/sets.authority.pdf", "bytes": 448973, "sha256": "7B43FF1D59E1F7FAD25BF9E262D936A586A89F61294188C537FF09251534DE45", "pages": 14},
+      {"path": "builds/topology.pdf", "bytes": 776739, "sha256": "12D3AAA2FF48760189757D1E6DC951A18446BD72186A0B056AE7B840D8D152B7", "pages": 64},
+      {"path": "builds/topology.authority.pdf", "bytes": 776629, "sha256": "C0111D47873DE622732C525D93773636961A1D154B58B1341C02DE7F7FD44BE2", "pages": 64},
+      {"path": "builds/categories.pdf", "bytes": 1051562, "sha256": "6374342AD1EFD455D14EA4C1B1C67B53CB6805F29736F3CF9B3EDE5958E0E6A6", "pages": 103},
+      {"path": "builds/categories.authority.pdf", "bytes": 1051549, "sha256": "DC246D1C7885AED71F458EFD1DAF7B40D0AC02A24F8D69A5EB5D3CEB4080C6BF", "pages": 103}
+    ],
+    "all_six_pdf_hashes_match_pre_review_manifest": true,
+    "non_json_non_log_build_outputs_match_pre_review_manifest": true,
+    "candidate_authority_warning_multisets": [
+      {"stem": "sets", "fatal": 0, "overfull_candidate_authority": [0, 0], "underfull_candidate_authority": [0, 0], "undefined_reference_multisets_equal": true, "undefined_reference_occurrences": 52, "undefined_reference_targets": 51, "undefined_citations": 0},
+      {"stem": "topology", "fatal": 0, "overfull_candidate_authority": [4, 4], "underfull_candidate_authority": [0, 0], "undefined_reference_multisets_equal": true, "undefined_reference_occurrences": 58, "undefined_reference_targets": 52, "undefined_citations": 0},
+      {"stem": "categories", "fatal": 0, "overfull_candidate_authority": [4, 4], "underfull_candidate_authority": [0, 0], "undefined_reference_multisets_equal": true, "undefined_reference_occurrences": 47, "undefined_reference_targets": 47, "undefined_citations": 0}
+    ]
+  },
+  "generated_file_transition": {
+    "reason": "The required fresh replay deterministically regenerated nine public evidence files. Exact historical backups do not exist, so the fresh variants are retained and explicitly rebound rather than speculatively reconstructed.",
+    "files": [
+      {"path": "builds/build-execution.json", "prior_sha256": "5BFE364258767447515F784561E9F8A14B27AD5D94B048BF7B7F180939ADD161", "current_bytes": 18927, "current_sha256": "36F511352D484C1296E51FE5714585E58AF10E4918A2B6B7A182C6EFDA10C784", "difference_class": "fresh replay timestamps and current output bindings"},
+      {"path": "builds/build-receipt.json", "prior_sha256": "EE79BEF51F799E9F02A2B54480DAB6F5CB10FAA72680EFFFD23CDB934433A183", "current_bytes": 22742, "current_sha256": "D62C323D31CAE3A54E258B7BF695D14007EF6031C4CACB21C43E3371DA3E32C8", "difference_class": "fresh replay timestamp and current log/execution hash rebinding"},
+      {"path": "builds/validation.json", "prior_sha256": "3E9ACA8F90FCC3CCA33DA010CE560FE2145C57FFD763503F01F0179B205C7BEF", "current_bytes": 14081, "current_sha256": "866F4102CC23C4D656E35B0D26EDE4E95274356ED0C0D2155E9EE0236F08F317", "difference_class": "fresh verification timestamp and current receipt hash rebinding"},
+      {"path": "builds/sets.log", "prior_sha256": "4E7B9F096F90943A71C41FA3C0377535C52DB6DC1261FD914FF2253C691D31C4", "current_bytes": 48220, "current_sha256": "EA72017BF48C51774748AEBA977C41170ECEED1D10DB4A60CA8A97167923BA7F", "prior_string_counter": 208931, "current_string_counter": 210383},
+      {"path": "builds/sets.authority.log", "prior_sha256": "097CC9B1667D7D216D802292175781759CE2DB6464C94BE7B05083C2E58CA9CE", "current_bytes": 48220, "current_sha256": "7C7480DB458B5DD42E16AA707DF3D0658E484F0F0C5416BC25FCA17862193E12", "prior_string_counter": 208931, "current_string_counter": 210383},
+      {"path": "builds/topology.log", "prior_sha256": "793095A58BECC78EE659985DF130F16079B6EFF75C0478C8D1EC040F184F2B16", "current_bytes": 49780, "current_sha256": "D997C458D7B02ECFD870386ECAE2FFC2A5E2DF85B5E1BD597B91CE4FCA5D836F", "prior_string_counter": 231820, "current_string_counter": 233272},
+      {"path": "builds/topology.authority.log", "prior_sha256": "815AACAED2FEF83F0514B57E3ED55C4F821F80816D652A088FD79694D50C595D", "current_bytes": 49780, "current_sha256": "9DE299B97CC5FBC7B9824C2E6DEBF402E61B258E0EC450FE4EF2C9018C032319", "prior_string_counter": 231828, "current_string_counter": 233280},
+      {"path": "builds/categories.log", "prior_sha256": "20B7AE27E3B183549AD420AF58DF98FEF5BC5C8EF82178FC28AA478FDB93D6A3", "current_bytes": 51670, "current_sha256": "DE25481C65EE3BCEC9C88455ACD72C56BDD2F2E72AB9A88B86588AE2BA06EF8A", "prior_string_counter": 248997, "current_string_counter": 250449},
+      {"path": "builds/categories.authority.log", "prior_sha256": "569C24ECE3C1F7418EF300BA279DA60D66086CC60F113327389BD64F8BB3C33D", "current_bytes": 51670, "current_sha256": "ADF0A6C3535872A1665D55796769AF388E0C7F35247DE3B107F890FF9CDCE982", "prior_string_counter": 248997, "current_string_counter": 250449}
+    ],
+    "log_difference_proof": "For each of the six current logs, replacing only the final TeX 'string characters out of' counter and brute-forcing within plus/minus 5000 reproduced the exact prior manifest hash at counter delta -1452. Therefore every other byte in each current log equals its prior manifest-bound variant; the sole change is the temporary-work-path-sensitive TeX memory statistic.",
+    "json_difference_proof": "The three JSON files are generated by the bound replay, receipt, and verifier programs. Their current schemas and passed checks are unchanged in kind; build-execution records the fresh 03:45:20Z-03:47:06Z run, build-receipt binds that execution and the six current logs, and validation binds the current receipt with the 03:47:06Z verification time. No source, payload, PDF, proof, decision, map, or other manifest reference changed.",
+    "other_manifest_references_unchanged": 44,
+    "unexpected_changes": 0
+  },
+  "pdf_review": {
+    "skill_used": "pdf",
+    "all_six_pdfs_structurally_inspected": true,
+    "structural_report": {"private_relative_name": "structural-pdf-audit.json", "bytes": 84855, "sha256": "F59501F33A7BE9F25CCFB02F11C63D78314F41E70F5CDDA61589A694B713C77B", "passed": true},
+    "structural_findings": {"encrypted": false, "fonts_embedded": true, "fonts_have_tounicode": true, "malformed_links": 0, "out_of_bounds_links": 0, "empty_pages": 0, "forms": false, "javascript": false, "tagged": false},
+    "fresh_visual_scope": "All 14 sets candidate pages and all 14 authority pages rendered at 180 dpi; candidate pages 10-14 differ from authority and were all inspected. Candidate pages 9-14 were rendered at 300 dpi, with focused checks on revised proof pages 11-12. No clipping, overlap, missing glyph, broken diagram, blank page, or unreadable reflow was found. Expected isolated-build ?? cross-chapter references remain visible.",
+    "changed_page_contact_sheet": {"private_relative_name": "visual/sets_candidate_changed_pages_contact.png", "bytes": 3263903, "sha256": "BC538AE1C964E91B011B87AE46CE70A5C022A364E0C6A6E34B4D379D34A6431F"},
+    "focused_pages": [
+      {"page": 11, "private_relative_name": "visual/sets_candidate_300dpi_p09_p13/page-11.png", "bytes": 664959, "sha256": "CE72CF38FB3B8D2B343EAFFE7E1695A27195EDB28282130CC442413265526891", "passed": true},
+      {"page": 12, "private_relative_name": "visual/sets_candidate_300dpi_p09_p13/page-12.png", "bytes": 601156, "sha256": "E85BC206620BD019A4990FFB0C0F9FD907FB3FEABCE0D2027DA726D6DD9F5793", "passed": true}
+    ],
+    "topology_categories_visual_basis": "Their four candidate/authority PDFs are byte-identical to the pre-review manifest-bound PDFs covered by builds/visual-qa.json; this fresh review also structurally inspected all four.",
+    "bound_prior_visual_receipt": {"path": "builds/visual-qa.json", "bytes": 9339, "sha256": "2A5EC193261F2B22E39B71BE6D384039949627B795AAD47277E227F00242890F", "passed": true}
+  },
+  "adverse_evidence": [
+    "The historical failed pre-revision replay remains immutable and bound.",
+    "The standalone chapter builds retain expected cross-chapter undefined references, with candidate and authority warning multisets equal.",
+    "All six proof PDFs are untagged; accessibility tagging remains a cumulative-edition toolchain concern.",
+    "MC-STK-ERR-0034 leaves an adjacent minimal-versus-least wording question outside this mapped unit.",
+    "MC-STK-ERR-0052 removes only a literal placeholder; it does not supply the explicitly omitted proof or claim mathematical completion of that source item.",
+    "MC-STK-ERR-0054 is convention-sensitive; the accepted repair is forced only while preserving the source's printed right-coset convention.",
+    "The fresh replay intentionally transitions nine generated evidence files; the pre-review manifest is stale for exactly those nine until the canon keeper rebinds it."
+  ],
+  "mutation_boundary": {
+    "candidate_root_changes_from_fresh_replay": [
+      "the nine generated evidence files listed in generated_file_transition",
+      "this new replay/independent-review.json receipt"
+    ],
+    "all_other_manifest_bound_files_unchanged": true,
+    "translation_sources_or_pdfs_changed": false,
+    "literal_upstream_mirror_changed": false,
+    "upstream_contacted": false,
+    "published": false
+  },
+  "conclusion": {
+    "all_34_corrections_independently_reviewed": true,
+    "linked_0030_0031_proved": true,
+    "adverse_0052_0054_explicit": true,
+    "deterministic_replay_passed": true,
+    "build_receipt_passed": true,
+    "validation_passed": true,
+    "visual_and_structural_review_passed": true,
+    "recommendation": "Canon may perform the separate post-review manifest transition by rebinding the nine generated files and this receipt, setting independent_replay to passed, validating the resulting 54-reference closure, and rerunning verify.",
+    "no_admission_or_publication_performed": true
+  }
+}

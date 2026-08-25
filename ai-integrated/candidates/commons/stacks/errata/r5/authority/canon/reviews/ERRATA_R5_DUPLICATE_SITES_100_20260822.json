@@ -1,0 +1,31 @@
+{
+  "schema": "stacks-canon-errata-dedup-receipt/v1",
+  "observed_at_utc": "2026-08-22T06:30:00Z",
+  "incoming_source": "French Chapter 7 bounded reader-text audit",
+  "incoming_locus": "sites.tex:11503",
+  "authority": {
+    "bytes": 424197,
+    "sha256": "07AE4690C2D8EB6873837D3D14A37F07408BB14F9E0BE6077ED570C220B1845D",
+    "defective_text": "Categories, Lemma {categories-lemma-functorial-colimit}.",
+    "corroborating_correct_locus": "sites.tex:524",
+    "corroborating_text": "by Categories, Lemma \\ref{categories-lemma-functorial-colimit}."
+  },
+  "french_witness": {
+    "path": "<LOCAL_WORKSPACE>/03_projects/language_management/romance/03_working_translations/stacks_fr_20260821/p01/tex/sites.tex",
+    "bytes": 460212,
+    "sha256": "3AF8EEC0A5379C824246DCFC009E6D0A4964CD74CBE89CDBE63A8995376BF601",
+    "locus": "line 11424",
+    "preserved_text": "Categories, lemme {categories-lemma-functorial-colimit}."
+  },
+  "disposition": {
+    "kind": "exact_duplicate_corroboration",
+    "alias_of_producer_id": "SITES-100",
+    "provisional_stable_id": "MC-STK-ERR-0251",
+    "new_unit_created": false,
+    "correction": "Insert \\ref before {categories-lemma-functorial-colimit} at authority line 11503."
+  },
+  "bound_review": {
+    "path": "ERRATA_R5_SITES_076_117_REVIEW.md",
+    "sha256": "A8D19579197A93441AC55EFFA6A9DA307ADE2E5D92909E5BFF56ED6AB4B666BD"
+  }
+}

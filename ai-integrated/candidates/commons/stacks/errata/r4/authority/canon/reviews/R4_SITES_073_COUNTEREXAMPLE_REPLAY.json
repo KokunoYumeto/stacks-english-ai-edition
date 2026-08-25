@@ -1,0 +1,147 @@
+{
+  "schema": "stacks-english-ai-finite-counterexample-replay/v1",
+  "replayed_at": "2026-08-22T06:47:00+02:00",
+  "candidate": "SITES-073",
+  "authority": {
+    "path": "upstream/src/stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14/sites.tex",
+    "bytes": 424197,
+    "sha256": "07AE4690C2D8EB6873837D3D14A37F07408BB14F9E0BE6077ED570C220B1845D",
+    "claim_loci": [
+      8204,
+      8222
+    ],
+    "point_example_locus": "sites.tex:8490-8499",
+    "pushforward_formula_locus": "sites.tex:8213-8220"
+  },
+  "intake": {
+    "path": "canon/control/ERRATA_R4_SUPPLEMENT_SITES_073_20260822.json",
+    "bytes": 2887,
+    "sha256": "0E0050DB4B05AE06D0B0FCE2D54D6F1BE90122F105CFC873998DB75DE065D4FB"
+  },
+  "site": {
+    "objects": [
+      "0",
+      "1"
+    ],
+    "hom_sets": {
+      "Hom(0,0)": [
+        "id_0"
+      ],
+      "Hom(0,1)": [
+        "a",
+        "b"
+      ],
+      "Hom(1,0)": [],
+      "Hom(1,1)": [
+        "id_1"
+      ]
+    },
+    "nonidentity_compositions": [],
+    "topology": "the authority's chaotic topology, whose only covering families are identity coverings",
+    "sheaf_category": "presheaves, so colimits are computed objectwise"
+  },
+  "point": {
+    "representing_object": "0",
+    "functor": "u=Hom(0,-)",
+    "u(0)": [
+      "id_0"
+    ],
+    "u(1)": [
+      "a",
+      "b"
+    ],
+    "validity": "forced by the authority's Example example-indiscrete-points: every representable Hom(U_0,-) on a category with this topology defines a point"
+  },
+  "parallel_pair": {
+    "A": [
+      "*"
+    ],
+    "B": [
+      "0",
+      "1"
+    ],
+    "r(*)": "0",
+    "s(*)": "1",
+    "coequalizer_Q": [
+      "q"
+    ],
+    "coequalizer_map": {
+      "0": "q",
+      "1": "q"
+    }
+  },
+  "evaluation_at_object_1": {
+    "p_*A(1)=Map(u(1),A)": [
+      [
+        "*",
+        "*"
+      ]
+    ],
+    "p_*B(1)=Map(u(1),B)": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1"
+      ],
+      [
+        "1",
+        "0"
+      ],
+      [
+        "1",
+        "1"
+      ]
+    ],
+    "images_of_the_unique_element_under_the_induced_parallel_pair": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "1"
+      ]
+    ],
+    "coequalizer_classes_after_p_*": [
+      [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ]
+      ],
+      [
+        [
+          "0",
+          "1"
+        ]
+      ],
+      [
+        [
+          "1",
+          "0"
+        ]
+      ]
+    ],
+    "cardinality_of_objectwise_coequalizer_after_p_*": 3,
+    "p_*Q(1)=Map(u(1),Q)": [
+      [
+        "q",
+        "q"
+      ]
+    ],
+    "cardinality_of_p_*_of_the_coequalizer": 1
+  },
+  "conclusion": {
+    "comparison_is_bijective": false,
+    "reason": "The objectwise coequalizer after p_* has three elements at object 1, while p_* applied to the coequalizer has one; therefore p_* does not preserve this coequalizer.",
+    "smallest_safe_edit": "Remove the coequalizer-preservation clause from both the lemma statement and its proof; retain all other asserted properties pending their separate evidence."
+  },
+  "boundary": "This is a direct finite replay, not an independent review or overlay admission, and it changes no authority or translation bytes."
+}

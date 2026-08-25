@@ -1,0 +1,699 @@
+{
+  "schema": "stacks-r4-proof-coverage-audit/v1",
+  "audit_date": "2026-08-22",
+  "queue": "r4",
+  "workspace_root": "<LOCAL_WORKSPACE>/03_projects\\language_management\\cjk\\03_working_translations\\stacks_cjk_20260821",
+  "path_semantics": "Every artifact path below is relative to workspace_root.",
+  "scope": {
+    "included": [
+      {
+        "family": "TOPOLOGY",
+        "first_id": "TOPOLOGY-024",
+        "last_id": "TOPOLOGY-040",
+        "endpoints_inclusive": true
+      },
+      {
+        "family": "SHEAVES",
+        "first_id": "SHEAVES-001",
+        "last_id": "SHEAVES-080",
+        "endpoints_inclusive": true
+      },
+      {
+        "family": "SITES",
+        "first_id": "SITES-001",
+        "last_id": "SITES-072",
+        "endpoints_inclusive": true
+      }
+    ],
+    "excluded": {
+      "prior_r3_ids_listed_only_in_base_intake": 34,
+      "sites_rule": "Every SITES ID with numeric suffix 073 or higher is outside scope and is not evidence or a counted row in this audit."
+    }
+  },
+  "identity_and_inspection_method": {
+    "byte_count": "Exact filesystem length in bytes.",
+    "sha256": "SHA-256 recomputed from the live local file bytes.",
+    "intakes": "Each cited JSON intake was read completely and parsed; producer IDs are hypotheses[].producer_id.",
+    "reviews": "Each cited Markdown review was read completely; dispositions and duplicate bindings are taken from its terminal review decision.",
+    "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14"
+  },
+  "disposition_semantics": {
+    "producer_row": "One hypotheses[] entry in a cited intake.",
+    "unique_correction_identity": "Identity is the tuple of frozen authority identity, exact defective occurrence, smallest replacement, and typed or logical reason. A duplicate producer alias does not add another identity.",
+    "accepted": "A nonduplicate producer row independently found to identify a real defect.",
+    "rejected": "A nonduplicate producer row independently found not to require a canon correction.",
+    "duplicate": "A producer row proven to denote an already counted correction identity; it is not counted again as accepted or rejected.",
+    "deferred": "A reviewed producer row whose disposition could not be decided from the admitted evidence.",
+    "pending": "An intake producer row lacking a terminal independent review or duplicate-reconciliation disposition."
+  },
+  "authority_bindings": [
+    {
+      "family": "TOPOLOGY",
+      "path": "upstream\\src\\stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14\\topology.tex",
+      "bytes": 237731,
+      "lines": 6020,
+      "sha256": "C6BAC8DCF8AD96DC47416BF34CB45BA4A10B894E40D67D3E1FA68D8EF0D9F872"
+    },
+    {
+      "family": "SHEAVES",
+      "path": "upstream\\src\\stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14\\sheaves.tex",
+      "bytes": 184841,
+      "lines": 5337,
+      "sha256": "AC4F9EDC7DB85E66329806EC9EA42816187A469772844BAEA663E1C9A9F00B38"
+    },
+    {
+      "family": "SITES",
+      "path": "upstream\\src\\stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14\\sites.tex",
+      "bytes": 424197,
+      "lines": 11860,
+      "sha256": "07AE4690C2D8EB6873837D3D14A37F07408BB14F9E0BE6077ED570C220B1845D"
+    }
+  ],
+  "families": [
+    {
+      "family": "TOPOLOGY",
+      "producer_interval": {
+        "first_id": "TOPOLOGY-024",
+        "last_id": "TOPOLOGY-040",
+        "endpoints_inclusive": true
+      },
+      "coverage": {
+        "producer_ids_contiguous": true,
+        "producer_ids_unique": true,
+        "disposition_sets_pairwise_disjoint": true,
+        "disposition_union_equals_intake_ids": true
+      },
+      "producer_row_counts": {
+        "total": 17,
+        "accepted": 14,
+        "rejected": 3,
+        "duplicate": 0,
+        "deferred": 0,
+        "pending": 0
+      },
+      "unique_correction_identity_counts": {
+        "total": 17,
+        "accepted": 14,
+        "rejected": 3,
+        "deferred": 0,
+        "pending": 0
+      },
+      "accepted_id_intervals": [
+        {
+          "first_id": "TOPOLOGY-024",
+          "last_id": "TOPOLOGY-036",
+          "endpoints_inclusive": true
+        },
+        {
+          "first_id": "TOPOLOGY-039",
+          "last_id": "TOPOLOGY-039",
+          "endpoints_inclusive": true
+        }
+      ],
+      "rejected_ids": [
+        "TOPOLOGY-037",
+        "TOPOLOGY-038",
+        "TOPOLOGY-040"
+      ],
+      "duplicate_aliases": [],
+      "deferred_ids": [],
+      "pending_ids": [],
+      "intake_artifacts": [
+        {
+          "path": "canon\\control\\ERRATA_R4_INTAKE_FRENCH_20260822.json",
+          "bytes": 7392,
+          "lines": 153,
+          "sha256": "DDB2CA1AEBCF130DF35DA62B34864ABBC3DD03CFC312F4FC86C6468101AD9173",
+          "hypothesis_count_in_scope": 17,
+          "first_id": "TOPOLOGY-024",
+          "last_id": "TOPOLOGY-040"
+        }
+      ],
+      "review_artifacts": [
+        {
+          "path": "canon\\control\\private\\R4_TOPOLOGY_024_040_INDEPENDENT_REVIEW.md",
+          "kind": "independent_review",
+          "bytes": 26017,
+          "lines": 460,
+          "sha256": "2639A94DEAF412346A5A980B8F5AAC553167C80AA69AF62C728F3FAE46DD5F41",
+          "first_id": "TOPOLOGY-024",
+          "last_id": "TOPOLOGY-040"
+        }
+      ]
+    },
+    {
+      "family": "SHEAVES",
+      "producer_interval": {
+        "first_id": "SHEAVES-001",
+        "last_id": "SHEAVES-080",
+        "endpoints_inclusive": true
+      },
+      "coverage": {
+        "producer_ids_contiguous": true,
+        "producer_ids_unique": true,
+        "disposition_sets_pairwise_disjoint": true,
+        "disposition_union_equals_intake_ids": true
+      },
+      "producer_row_counts": {
+        "total": 80,
+        "accepted": 71,
+        "rejected": 9,
+        "duplicate": 0,
+        "deferred": 0,
+        "pending": 0
+      },
+      "unique_correction_identity_counts": {
+        "total": 80,
+        "accepted": 71,
+        "rejected": 9,
+        "deferred": 0,
+        "pending": 0
+      },
+      "accepted_id_intervals": [
+        {
+          "first_id": "SHEAVES-002",
+          "last_id": "SHEAVES-014",
+          "endpoints_inclusive": true
+        },
+        {
+          "first_id": "SHEAVES-016",
+          "last_id": "SHEAVES-020",
+          "endpoints_inclusive": true
+        },
+        {
+          "first_id": "SHEAVES-024",
+          "last_id": "SHEAVES-052",
+          "endpoints_inclusive": true
+        },
+        {
+          "first_id": "SHEAVES-054",
+          "last_id": "SHEAVES-055",
+          "endpoints_inclusive": true
+        },
+        {
+          "first_id": "SHEAVES-058",
+          "last_id": "SHEAVES-071",
+          "endpoints_inclusive": true
+        },
+        {
+          "first_id": "SHEAVES-073",
+          "last_id": "SHEAVES-080",
+          "endpoints_inclusive": true
+        }
+      ],
+      "rejected_ids": [
+        "SHEAVES-001",
+        "SHEAVES-015",
+        "SHEAVES-021",
+        "SHEAVES-022",
+        "SHEAVES-023",
+        "SHEAVES-053",
+        "SHEAVES-056",
+        "SHEAVES-057",
+        "SHEAVES-072"
+      ],
+      "duplicate_aliases": [],
+      "deferred_ids": [],
+      "pending_ids": [],
+      "intake_artifacts": [
+        {
+          "path": "canon\\control\\ERRATA_R4_SUPPLEMENT_SHEAVES_20260822.json",
+          "bytes": 2914,
+          "lines": 52,
+          "sha256": "E576BE04353FF5557C8590A1280B3D87FF4714F4A8FEE4D7E91E5A0C3FBCA5B0",
+          "hypothesis_count": 2,
+          "first_id": "SHEAVES-001",
+          "last_id": "SHEAVES-002"
+        },
+        {
+          "path": "canon\\control\\ERRATA_R4_SUPPLEMENT_SHEAVES_003_007_20260822.json",
+          "bytes": 4137,
+          "lines": 76,
+          "sha256": "E6A7DA4D6B37B04B0D14599133ABE0B31D7945338250EE4D6DA76BFCA48BF8F2",
+          "hypothesis_count": 5,
+          "first_id": "SHEAVES-003",
+          "last_id": "SHEAVES-007"
+        },
+        {
+          "path": "canon\\control\\ERRATA_R4_SUPPLEMENT_SHEAVES_008_014_20260822.json",
+          "bytes": 5447,
+          "lines": 91,
+          "sha256": "DF88F9BAE47BC119A628D0A105144B9DA3BCC23062050216A9B107A8874B2C2E",
+          "hypothesis_count": 7,
+          "first_id": "SHEAVES-008",
+          "last_id": "SHEAVES-014"
+        },
+        {
+          "path": "canon\\control\\ERRATA_R4_SUPPLEMENT_SHEAVES_015_023_20260822.json",
+          "bytes": 6156,
+          "lines": 107,
+          "sha256": "70FAA1CD6109166FD25B4A8C4D35E8A60A2D44E32AD2ECE7FC60457DC98D3160",
+          "hypothesis_count": 9,
+          "first_id": "SHEAVES-015",
+          "last_id": "SHEAVES-023"
+        },
+        {
+          "path": "canon\\control\\ERRATA_R4_SUPPLEMENT_SHEAVES_024_045_20260822.json",
+          "bytes": 9848,
+          "lines": 62,
+          "sha256": "AF6BE3060162A8DEEA9343029253750942F766CD51CF4D85024425414126EF86",
+          "hypothesis_count": 22,
+          "first_id": "SHEAVES-024",
+          "last_id": "SHEAVES-045"
+        },
+        {
+          "path": "canon\\control\\ERRATA_R4_SUPPLEMENT_SHEAVES_046_051_20260822.json",
+          "bytes": 4751,
+          "lines": 83,
+          "sha256": "B354547FE7BC37D108253544106D58AABB81AC43A5C6DE110A7C2FD24A54FCF5",
+          "hypothesis_count": 6,
+          "first_id": "SHEAVES-046",
+          "last_id": "SHEAVES-051"
+        },
+        {
+          "path": "canon\\control\\ERRATA_R4_SUPPLEMENT_SHEAVES_052_080_20260822.json",
+          "bytes": 12730,
+          "lines": 82,
+          "sha256": "A09E1CD5CF73E0D67821DD02444C64D25701DD173C72CE680E7CCCB0B165812C",
+          "hypothesis_count": 29,
+          "first_id": "SHEAVES-052",
+          "last_id": "SHEAVES-080"
+        }
+      ],
+      "review_artifacts": [
+        {
+          "path": "canon\\control\\private\\R4_SHEAVES_001_023_INDEPENDENT_REVIEW.md",
+          "kind": "independent_review",
+          "bytes": 23368,
+          "lines": 379,
+          "sha256": "D59ACF2B3B908163F68B91C9A1C0FB5BBDDDE96A542815283591C048DAAE7627",
+          "first_id": "SHEAVES-001",
+          "last_id": "SHEAVES-023"
+        },
+        {
+          "path": "canon\\control\\private\\R4_SHEAVES_024_051_INDEPENDENT_REVIEW.md",
+          "kind": "independent_review",
+          "bytes": 27453,
+          "lines": 521,
+          "sha256": "0DD041BE01F1FA06B7BB03BF4E441D5E182899AC88BCF09D61F13FEA1CEBB453",
+          "first_id": "SHEAVES-024",
+          "last_id": "SHEAVES-051"
+        },
+        {
+          "path": "canon\\control\\private\\R4_SHEAVES_052_080_INDEPENDENT_REVIEW.md",
+          "kind": "independent_review",
+          "bytes": 27438,
+          "lines": 475,
+          "sha256": "16DEC91974C2CD60DA5B675CB51F5A05AE3363AB702AFB6950FEDA4A6D8FBB8B",
+          "first_id": "SHEAVES-052",
+          "last_id": "SHEAVES-080"
+        }
+      ]
+    },
+    {
+      "family": "SITES",
+      "producer_interval": {
+        "first_id": "SITES-001",
+        "last_id": "SITES-072",
+        "endpoints_inclusive": true
+      },
+      "coverage": {
+        "producer_ids_contiguous": true,
+        "producer_ids_unique": true,
+        "disposition_sets_pairwise_disjoint": true,
+        "disposition_union_equals_intake_ids": true
+      },
+      "producer_row_counts": {
+        "total": 72,
+        "accepted": 66,
+        "rejected": 4,
+        "duplicate": 2,
+        "deferred": 0,
+        "pending": 0
+      },
+      "unique_correction_identity_counts": {
+        "total": 70,
+        "accepted": 66,
+        "rejected": 4,
+        "deferred": 0,
+        "pending": 0
+      },
+      "accepted_id_intervals": [
+        {
+          "first_id": "SITES-001",
+          "last_id": "SITES-002",
+          "endpoints_inclusive": true
+        },
+        {
+          "first_id": "SITES-004",
+          "last_id": "SITES-033",
+          "endpoints_inclusive": true
+        },
+        {
+          "first_id": "SITES-035",
+          "last_id": "SITES-038",
+          "endpoints_inclusive": true
+        },
+        {
+          "first_id": "SITES-040",
+          "last_id": "SITES-040",
+          "endpoints_inclusive": true
+        },
+        {
+          "first_id": "SITES-043",
+          "last_id": "SITES-062",
+          "endpoints_inclusive": true
+        },
+        {
+          "first_id": "SITES-064",
+          "last_id": "SITES-072",
+          "endpoints_inclusive": true
+        }
+      ],
+      "rejected_ids": [
+        "SITES-003",
+        "SITES-034",
+        "SITES-039",
+        "SITES-063"
+      ],
+      "duplicate_aliases": [
+        {
+          "producer_id": "SITES-041",
+          "row_disposition": "duplicate",
+          "canonical_correction_id": "SITES-011",
+          "canonical_disposition": "accepted"
+        },
+        {
+          "producer_id": "SITES-042",
+          "row_disposition": "duplicate",
+          "canonical_correction_id": "SITES-013",
+          "canonical_disposition": "accepted"
+        }
+      ],
+      "deferred_ids": [],
+      "pending_ids": [],
+      "intake_artifacts": [
+        {
+          "path": "canon\\control\\ERRATA_R4_SUPPLEMENT_SITES_001_004_20260822.json",
+          "bytes": 3624,
+          "lines": 69,
+          "sha256": "24D9E603AB5E035BD8AFED54F15ADE974130FEC1F26854161BA09562E0A8C541",
+          "hypothesis_count": 4,
+          "first_id": "SITES-001",
+          "last_id": "SITES-004"
+        },
+        {
+          "path": "canon\\control\\ERRATA_R4_SUPPLEMENT_SITES_005_009_20260822.json",
+          "bytes": 4454,
+          "lines": 84,
+          "sha256": "305FCC9DB876A898491A6C60BA83E08B9ABE6C78F136513D34163C4408008E82",
+          "hypothesis_count": 5,
+          "first_id": "SITES-005",
+          "last_id": "SITES-009"
+        },
+        {
+          "path": "canon\\control\\ERRATA_R4_SUPPLEMENT_SITES_010_012_20260822.json",
+          "bytes": 3084,
+          "lines": 61,
+          "sha256": "26C8AF31EB3315E1BC2141CC603997B398568ABDBB6897345F06AF39FE971DF8",
+          "hypothesis_count": 3,
+          "first_id": "SITES-010",
+          "last_id": "SITES-012"
+        },
+        {
+          "path": "canon\\control\\ERRATA_R4_SUPPLEMENT_SITES_013_20260822.json",
+          "bytes": 2548,
+          "lines": 46,
+          "sha256": "D5C4663F9183AE4EC46FF008E582C88220A842A622D1983D182E3C89638A24A9",
+          "hypothesis_count": 1,
+          "first_id": "SITES-013",
+          "last_id": "SITES-013"
+        },
+        {
+          "path": "canon\\control\\ERRATA_R4_SUPPLEMENT_SITES_014_024_20260822.json",
+          "bytes": 6873,
+          "lines": 125,
+          "sha256": "E1E769E7285BFA590CE3198779829F9D522AA7557F010B687355540915BF4995",
+          "hypothesis_count": 11,
+          "first_id": "SITES-014",
+          "last_id": "SITES-024"
+        },
+        {
+          "path": "canon\\control\\ERRATA_R4_SUPPLEMENT_SITES_025_028_20260822.json",
+          "bytes": 3459,
+          "lines": 69,
+          "sha256": "6E0CCE25A4C4D921CEA70875D3C22E204C9649C4F7BD20B56E51B9C430B8FAE5",
+          "hypothesis_count": 4,
+          "first_id": "SITES-025",
+          "last_id": "SITES-028"
+        },
+        {
+          "path": "canon\\control\\ERRATA_R4_SUPPLEMENT_SITES_029_033_20260822.json",
+          "bytes": 4231,
+          "lines": 77,
+          "sha256": "1D69996094C21526691FD1FEC2B547CB852300DEE17A06CFC6C512B3779F0256",
+          "hypothesis_count": 5,
+          "first_id": "SITES-029",
+          "last_id": "SITES-033"
+        },
+        {
+          "path": "canon\\control\\ERRATA_R4_SUPPLEMENT_SITES_034_039_20260822.json",
+          "bytes": 4238,
+          "lines": 85,
+          "sha256": "603D128D491DB35DE9459141EEA481F174EC1BFC7CE18F4C54F74E24973667ED",
+          "hypothesis_count": 6,
+          "first_id": "SITES-034",
+          "last_id": "SITES-039"
+        },
+        {
+          "path": "canon\\control\\ERRATA_R4_SUPPLEMENT_SITES_040_20260822.json",
+          "bytes": 2319,
+          "lines": 45,
+          "sha256": "66AA87B72F024CCB281A4CA123DAB77EE70C5D818CB0A1FD490121298F242A5C",
+          "hypothesis_count": 1,
+          "first_id": "SITES-040",
+          "last_id": "SITES-040"
+        },
+        {
+          "path": "canon\\control\\ERRATA_R4_SUPPLEMENT_SITES_041_042_20260822.json",
+          "bytes": 2843,
+          "lines": 53,
+          "sha256": "F4A87E2F2433FE28A52582D8E61B0827798F83BD2049E9A53383893CB757C9F7",
+          "hypothesis_count": 2,
+          "first_id": "SITES-041",
+          "last_id": "SITES-042"
+        },
+        {
+          "path": "canon\\control\\ERRATA_R4_SUPPLEMENT_SITES_043_047_20260822.json",
+          "bytes": 4219,
+          "lines": 77,
+          "sha256": "4CF58634EA3125494E75C4DB9B4C3CA7456E6295AA357B5FEA42FF9FC6757658",
+          "hypothesis_count": 5,
+          "first_id": "SITES-043",
+          "last_id": "SITES-047"
+        },
+        {
+          "path": "canon\\control\\ERRATA_R4_SUPPLEMENT_SITES_048_056_20260822.json",
+          "bytes": 6543,
+          "lines": 109,
+          "sha256": "DB838FCB2CDCF673392E58861458AAA52504AD00439F7EA55A8CCF07C8B634F2",
+          "hypothesis_count": 9,
+          "first_id": "SITES-048",
+          "last_id": "SITES-056"
+        },
+        {
+          "path": "canon\\control\\ERRATA_R4_SUPPLEMENT_SITES_057_064_20260822.json",
+          "bytes": 5904,
+          "lines": 101,
+          "sha256": "94EF2AEDBF70F27A595139EB965254289E880953D831C6EFD8562C37B5AC3BB3",
+          "hypothesis_count": 8,
+          "first_id": "SITES-057",
+          "last_id": "SITES-064"
+        },
+        {
+          "path": "canon\\control\\ERRATA_R4_SUPPLEMENT_SITES_065_067_20260822.json",
+          "bytes": 3043,
+          "lines": 61,
+          "sha256": "2B4D72C1F06C2717FA02691E5661332ECC979CF28AAF6B35D37DB36B082F6E24",
+          "hypothesis_count": 3,
+          "first_id": "SITES-065",
+          "last_id": "SITES-067"
+        },
+        {
+          "path": "canon\\control\\ERRATA_R4_SUPPLEMENT_SITES_068_072_20260822.json",
+          "bytes": 4092,
+          "lines": 77,
+          "sha256": "0A8282FF73C5A301439013584E8A4F600F78CA6A9089468355069F47C07496EA",
+          "hypothesis_count": 5,
+          "first_id": "SITES-068",
+          "last_id": "SITES-072"
+        }
+      ],
+      "review_artifacts": [
+        {
+          "path": "canon\\control\\private\\R4_SITES_001_004_INDEPENDENT_REVIEW.md",
+          "kind": "independent_review",
+          "bytes": 6439,
+          "lines": 112,
+          "sha256": "7479F46119A4E095EE1816CE40B644CFC213BDBF170578A30D5F62B5AACA1834",
+          "first_id": "SITES-001",
+          "last_id": "SITES-004"
+        },
+        {
+          "path": "canon\\control\\private\\R4_SITES_005_009_INDEPENDENT_REVIEW.md",
+          "kind": "independent_review",
+          "bytes": 7420,
+          "lines": 163,
+          "sha256": "5BC9E0E10B446E37F7009C660042D8AC3EA0869A27E66F01932D96B2F4740B00",
+          "first_id": "SITES-005",
+          "last_id": "SITES-009"
+        },
+        {
+          "path": "canon\\control\\private\\R4_SITES_010_012_INDEPENDENT_REVIEW.md",
+          "kind": "independent_review",
+          "bytes": 6760,
+          "lines": 118,
+          "sha256": "7D9A7271D81C089167CAF9BA94C3813E411C9D750FA163DAC86A9D76F1B7EF8B",
+          "first_id": "SITES-010",
+          "last_id": "SITES-012"
+        },
+        {
+          "path": "canon\\control\\private\\R4_SITES_013_INDEPENDENT_REVIEW.md",
+          "kind": "independent_review",
+          "bytes": 3572,
+          "lines": 93,
+          "sha256": "7C1986D50ABBAAF6E0E88E70A792EBA9D2ADFDF630986E00410CF31E7CDFCD3C",
+          "first_id": "SITES-013",
+          "last_id": "SITES-013"
+        },
+        {
+          "path": "canon\\control\\private\\R4_SITES_014_024_INDEPENDENT_REVIEW.md",
+          "kind": "independent_review",
+          "bytes": 12980,
+          "lines": 178,
+          "sha256": "647FCFE10745A05D8A0B86F2F82E12278D7011D004E8680D1AA767F43CE7C692",
+          "first_id": "SITES-014",
+          "last_id": "SITES-024"
+        },
+        {
+          "path": "canon\\control\\private\\R4_SITES_025_028_INDEPENDENT_REVIEW.md",
+          "kind": "independent_review",
+          "bytes": 5909,
+          "lines": 38,
+          "sha256": "513BD1586CB5E9AACE5466384AF30F7EE7A94A176CBE0411E346760ED49F2B98",
+          "first_id": "SITES-025",
+          "last_id": "SITES-028"
+        },
+        {
+          "path": "canon\\control\\private\\R4_SITES_029_033_INDEPENDENT_REVIEW.md",
+          "kind": "independent_review",
+          "bytes": 6826,
+          "lines": 48,
+          "sha256": "6E10C22D512FA3799E534FCB1DF5EBC32DD3EFB146B7950189657BE126DD1CD5",
+          "first_id": "SITES-029",
+          "last_id": "SITES-033"
+        },
+        {
+          "path": "canon\\control\\private\\R4_SITES_034_039_INDEPENDENT_REVIEW.md",
+          "kind": "independent_review",
+          "bytes": 6664,
+          "lines": 44,
+          "sha256": "20776352B0C6EFA02B7DB76078A752DD172694D0F371ED0FC3667FB0CED48BB3",
+          "first_id": "SITES-034",
+          "last_id": "SITES-039"
+        },
+        {
+          "path": "canon\\control\\private\\R4_SITES_040_INDEPENDENT_REVIEW.md",
+          "kind": "independent_review",
+          "bytes": 5950,
+          "lines": 133,
+          "sha256": "4DB2115463F9F1C757D20A9DF44201F40EDBEC4BC8BB09F3CFAEF9082BDF2721",
+          "first_id": "SITES-040",
+          "last_id": "SITES-040"
+        },
+        {
+          "path": "canon\\control\\private\\R4_SITES_041_042_DEDUP_REVIEW.md",
+          "kind": "duplicate_reconciliation",
+          "bytes": 6907,
+          "lines": 96,
+          "sha256": "E84F4D4E327452F67060D0ADBAE2626DFCCAD0DFA649B5F9AD04CAEFB85884B8",
+          "first_id": "SITES-041",
+          "last_id": "SITES-042"
+        },
+        {
+          "path": "canon\\control\\private\\R4_SITES_043_047_INDEPENDENT_REVIEW.md",
+          "kind": "independent_review",
+          "bytes": 6687,
+          "lines": 45,
+          "sha256": "394C0E807CF81B540DEAB6962ECA13D14DF0CF51FAEC37B24DC513CBC920A848",
+          "first_id": "SITES-043",
+          "last_id": "SITES-047"
+        },
+        {
+          "path": "canon\\control\\private\\R4_SITES_048_056_INDEPENDENT_REVIEW.md",
+          "kind": "independent_review",
+          "bytes": 11031,
+          "lines": 229,
+          "sha256": "B8B8FBB9A054460573FE575BBB8F2F97679C4AC7A7D73CB96D74040C3F4C04B4",
+          "first_id": "SITES-048",
+          "last_id": "SITES-056"
+        },
+        {
+          "path": "canon\\control\\private\\R4_SITES_057_064_INDEPENDENT_REVIEW.md",
+          "kind": "independent_review",
+          "bytes": 8978,
+          "lines": 159,
+          "sha256": "92C166DC785C51AA790C2654C97042C16858A66AB347F7D7C2AE7A38D2C05AD2",
+          "first_id": "SITES-057",
+          "last_id": "SITES-064"
+        },
+        {
+          "path": "canon\\control\\private\\R4_SITES_065_072_INDEPENDENT_REVIEW.md",
+          "kind": "independent_review",
+          "bytes": 9796,
+          "lines": 175,
+          "sha256": "12ACB0B9AB15554EEB47BEED4224464F94BF09FFEA54D8363EB29F8FB72D1C4A",
+          "first_id": "SITES-065",
+          "last_id": "SITES-072"
+        }
+      ]
+    }
+  ],
+  "global_totals": {
+    "producer_rows": 169,
+    "producer_rows_by_disposition": {
+      "accepted": 151,
+      "rejected": 16,
+      "duplicate": 2,
+      "deferred": 0,
+      "pending": 0
+    },
+    "unique_correction_identities": 167,
+    "unique_correction_identities_by_disposition": {
+      "accepted": 151,
+      "rejected": 16,
+      "deferred": 0,
+      "pending": 0
+    },
+    "intake_artifacts": 23,
+    "review_artifacts": 18,
+    "authority_artifacts": 3
+  },
+  "coverage_assertions": {
+    "exact_intake_producer_id_count": 169,
+    "exact_unique_intake_producer_id_count": 169,
+    "repeated_producer_ids_in_intakes": [],
+    "missing_expected_producer_ids": [],
+    "unexpected_producer_ids_in_scope": [],
+    "all_three_family_ranges_contiguous": true,
+    "all_review_partitions_contiguous_and_nonoverlapping": true,
+    "every_in_scope_producer_row_has_exactly_one_disposition": true,
+    "pending_ids": [],
+    "duplicate_reconciliation_applied": true,
+    "duplicate_alias_count": 2,
+    "unique_identity_equation": "167 = 169 producer rows - 2 duplicate aliases",
+    "producer_row_equation": "169 = 151 accepted + 16 rejected + 2 duplicate + 0 deferred + 0 pending",
+    "unique_identity_disposition_equation": "167 = 151 accepted + 16 rejected + 0 deferred + 0 pending",
+    "terminal_statement": "Proof coverage is complete through SITES-072. SITES-073 and every higher SITES ID are outside scope."
+  }
+}

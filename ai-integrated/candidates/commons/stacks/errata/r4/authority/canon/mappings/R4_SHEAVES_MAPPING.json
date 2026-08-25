@@ -1,0 +1,1835 @@
+{
+  "schema": "stacks-ai-errata-machine-mapping-v1",
+  "source": {
+    "repository": "stacks/stacks-project",
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "file": "sheaves.tex",
+    "path": "<LOCAL_WORKSPACE>/03_projects\\language_management\\cjk\\03_working_translations\\stacks_cjk_20260821\\upstream\\src\\stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14\\sheaves.tex",
+    "bytes": 184841,
+    "encoding": "UTF-8",
+    "newline": "LF",
+    "operation_count": 90,
+    "span_count": 90,
+    "stable_id_first": "MC-STK-ERR-0077",
+    "stable_id_last": "MC-STK-ERR-0147",
+    "stable_id_order": "ascending earliest frozen-source line; ties by producer numeric ID",
+    "rejected_producer_ids": [
+      "SHEAVES-001",
+      "SHEAVES-015",
+      "SHEAVES-021",
+      "SHEAVES-022",
+      "SHEAVES-023",
+      "SHEAVES-053",
+      "SHEAVES-056",
+      "SHEAVES-057",
+      "SHEAVES-072"
+    ],
+    "evidence": [
+      {
+        "path": "<LOCAL_WORKSPACE>/03_projects\\language_management\\cjk\\03_working_translations\\stacks_cjk_20260821\\canon\\control\\private\\R4_SHEAVES_001_023_INDEPENDENT_REVIEW.md",
+        "bytes": 23368,
+        "sha256": "D59ACF2B3B908163F68B91C9A1C0FB5BBDDDE96A542815283591C048DAAE7627"
+      },
+      {
+        "path": "<LOCAL_WORKSPACE>/03_projects\\language_management\\cjk\\03_working_translations\\stacks_cjk_20260821\\canon\\control\\private\\R4_SHEAVES_024_051_INDEPENDENT_REVIEW.md",
+        "bytes": 27453,
+        "sha256": "0DD041BE01F1FA06B7BB03BF4E441D5E182899AC88BCF09D61F13FEA1CEBB453"
+      },
+      {
+        "path": "<LOCAL_WORKSPACE>/03_projects\\language_management\\cjk\\03_working_translations\\stacks_cjk_20260821\\canon\\control\\private\\R4_SHEAVES_052_080_INDEPENDENT_REVIEW.md",
+        "bytes": 27438,
+        "sha256": "16DEC91974C2CD60DA5B675CB51F5A05AE3363AB702AFB6950FEDA4A6D8FBB8B"
+      },
+      {
+        "path": "<LOCAL_WORKSPACE>/03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\00_control\\SOURCE_DEFECT_LEDGER.csv",
+        "bytes": 83931,
+        "sha256": "95BE5532E3897A2789195478B6B14D31F8A5FF2DA1610C201993F93FD21D22C8"
+      }
+    ],
+    "application_contract": "Copy the exact frozen authority bytes. For every operation verify old at the recorded UTF-8 half-open byte span, then apply operations in descending byte_start order. No global replacement is permitted.",
+    "reconstructed_target_bytes": 185216,
+    "reconstructed_target_sha256": "4BE9C5E7F7E5DD7E66980439856D1385188AE49CB7236822CD88259534837E51",
+    "validation": {
+      "authority_identity_verified": true,
+      "all_old_spans_matched": true,
+      "all_expected_counts_equal_one": true,
+      "spans_nonoverlapping": true,
+      "payload_reconstruction_verified": true
+    }
+  },
+  "authority_sha256": "AC4F9EDC7DB85E66329806EC9EA42816187A469772844BAEA663E1C9A9F00B38",
+  "unit_count": 71,
+  "units": [
+    {
+      "producer_id": "SHEAVES-002",
+      "stable_id": "MC-STK-ERR-0077",
+      "locus": "192-195",
+      "earliest_line": 193,
+      "class": "typing/prose",
+      "proof": "The display types zero as an element and negation as a map; the plural head misclassifies zero.",
+      "adverse_evidence": "A singleton-domain encoding is possible abstractly but is not used at this locus.",
+      "operations": [
+        {
+          "old": "then the zero and the negation maps are",
+          "new": "then the zero element and the negation map are",
+          "expected_count": 1,
+          "source_line": 193,
+          "source_line_end": 193,
+          "byte_start": 5550,
+          "byte_end_exclusive": 5589,
+          "old_sha256": "54CCB4A45B8F616B2FFA9F8AF945A9454AB733E60EB734E13DD797E2358E30DD",
+          "new_sha256": "4F13E08E39A0FDE2ECA0A38B220934E6AA7ADC6628CAF41A2DBD3CE747B46318"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-008",
+      "stable_id": "MC-STK-ERR-0078",
+      "locus": "320-327",
+      "earliest_line": 325,
+      "class": "agreement/number",
+      "proof": "A fixed inclusion supplies one restriction mapping and one image.",
+      "adverse_evidence": "A collective plural rewrite would require a larger change.",
+      "operations": [
+        {
+          "old": "the restriction mappings $\\rho^U_V$ is the image",
+          "new": "the restriction mapping $\\rho^U_V$ is the image",
+          "expected_count": 1,
+          "source_line": 325,
+          "source_line_end": 325,
+          "byte_start": 10721,
+          "byte_end_exclusive": 10769,
+          "old_sha256": "A3CC9D453BD1FCC87675CAB94202A7BB558E6CE6CEF6230AE90F69AE65F4B66C",
+          "new_sha256": "6EA99BF04D208EDAA6646AD608C03D915C82AE455B7F508D6A138DA178BF08BD"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-009",
+      "stable_id": "MC-STK-ERR-0079",
+      "locus": "339-350",
+      "earliest_line": 349,
+      "class": "substantive definition gap",
+      "proof": "Composition alone permits nonidentity idempotent self-restrictions, so the direct data definition must impose the identity axiom.",
+      "adverse_evidence": "Calling a presheaf a contravariant functor would build identities in, but this passage purports to list the data and axioms directly.",
+      "operations": [
+        {
+          "old": "in $\\mathcal{C}$ such that whenever $W \\subset V \\subset U$",
+          "new": "in $\\mathcal{C}$ such that $\\rho_U^U = \\text{id}_{\\mathcal{F}(U)}$ for every open $U \\subset X$, and whenever $W \\subset V \\subset U$",
+          "expected_count": 1,
+          "source_line": 349,
+          "source_line_end": 349,
+          "byte_start": 11767,
+          "byte_end_exclusive": 11826,
+          "old_sha256": "5461DBD55E999962F2332CA165FEF15E069B5E2351B1F6E417D1EF917B38C525",
+          "new_sha256": "697DD95F55FA9FC16EF983E8D35E61B63A87BD742258E50468ED5DF61CF739DC"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-010",
+      "stable_id": "MC-STK-ERR-0080",
+      "locus": "351-354",
+      "earliest_line": 351,
+      "class": "substantive morphism-data/wording",
+      "proof": "A natural transformation requires a component for every open and compatibility; one free unindexed U is insufficient.",
+      "adverse_evidence": "Suppressing component subscripts is conventional only after the family has been quantified.",
+      "operations": [
+        {
+          "old": "\\item A {\\it morphism $\\varphi : \\mathcal{F} \\to \\mathcal{G}$\nof presheaves with value in $\\mathcal{C}$} is given by a\nmorphism $\\varphi : \\mathcal{F}(U) \\to \\mathcal{G}(U)$\nin $\\mathcal{C}$ compatible with restriction morphisms.",
+          "new": "\\item A {\\it morphism $\\varphi : \\mathcal{F} \\to \\mathcal{G}$\nof presheaves with values in $\\mathcal{C}$} is given by\nmorphisms $\\varphi_U : \\mathcal{F}(U) \\to \\mathcal{G}(U)$\nin $\\mathcal{C}$, one for every open $U \\subset X$, compatible with\nrestriction morphisms.",
+          "expected_count": 1,
+          "source_line": 351,
+          "source_line_end": 354,
+          "byte_start": 11873,
+          "byte_end_exclusive": 12102,
+          "old_sha256": "7CC2DC4A80AF31E2D28F8ED3696EA75B6663F7B97621B103C19F49908C8DD719",
+          "new_sha256": "7A05D85072309DBED100959DACFC3DCD714042E102D8F34A13CB1E4CFAE1E7BD"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-011",
+      "stable_id": "MC-STK-ERR-0081",
+      "locus": "402-410",
+      "earliest_line": 409,
+      "class": "duplicated word",
+      "proof": "The phrase repeats 'structure' in the same syntactic role.",
+      "adverse_evidence": "The sentence is recoverable but lexically defective.",
+      "operations": [
+        {
+          "old": "defines the structure of an $\\mathcal{O}(U)$-module\nstructure on the abelian group $\\mathcal{F}(U)$.",
+          "new": "defines the structure of an $\\mathcal{O}(U)$-module\non the abelian group $\\mathcal{F}(U)$.",
+          "expected_count": 1,
+          "source_line": 409,
+          "source_line_end": 410,
+          "byte_start": 14249,
+          "byte_end_exclusive": 14349,
+          "old_sha256": "6CC649BC4A50463DDF034CA2B1F4850D3DF294FFF1C36EB2062F138E8C5C322F",
+          "new_sha256": "67FC4E6F4AA2420AC5866AB902A05F74328B729D13156C9FA9C74E75CBE381F2"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-012",
+      "stable_id": "MC-STK-ERR-0082",
+      "locus": "596-604",
+      "earliest_line": 601,
+      "class": "missing grammatical relation",
+      "proof": "The bare singular 'open set' lacks a determiner or copula.",
+      "adverse_evidence": "Compressed 'U open' is conventional; 'U open set' is not.",
+      "operations": [
+        {
+          "old": "For $U \\subset X$ open set",
+          "new": "For every open $U \\subset X$",
+          "expected_count": 1,
+          "source_line": 601,
+          "source_line_end": 601,
+          "byte_start": 20511,
+          "byte_end_exclusive": 20537,
+          "old_sha256": "140FADEA440733C4547B01306A75C2052E018FE6557D1700742F1642C9E17A73",
+          "new_sha256": "3414C1171DE6E6C68C86980320FE0AE28FCCA08C4B0311A088746C47CC39A444"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-013",
+      "stable_id": "MC-STK-ERR-0083",
+      "locus": "871-876",
+      "earliest_line": 874,
+      "class": "number",
+      "proof": "A set contains morphisms, requiring the plural count noun.",
+      "adverse_evidence": "The noun is not an adjunct here.",
+      "operations": [
+        {
+          "old": "the set of morphism of sheaves",
+          "new": "the set of morphisms of sheaves",
+          "expected_count": 1,
+          "source_line": 874,
+          "source_line_end": 874,
+          "byte_start": 30294,
+          "byte_end_exclusive": 30324,
+          "old_sha256": "2C6A18FF86AC2D05179C691E41E0F1575CC77039E1AEE6395B999CD1B5262FB7",
+          "new_sha256": "C6D17F24F65A1B599B58779643520D60830082DB0A42987C1DA026DF50CF6307"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-014",
+      "stable_id": "MC-STK-ERR-0084",
+      "locus": "1106-1127",
+      "earliest_line": 1127,
+      "class": "substantive object misclassification",
+      "proof": "The hypotheses provide only a presheaf; allowed examples need not satisfy the sheaf axiom.",
+      "adverse_evidence": "The intended object and stalk maps remain recoverable.",
+      "operations": [
+        {
+          "old": "the corresponding maps for the underlying sheaf of sets.",
+          "new": "the corresponding maps for the underlying presheaf of sets.",
+          "expected_count": 1,
+          "source_line": 1127,
+          "source_line_end": 1127,
+          "byte_start": 39045,
+          "byte_end_exclusive": 39101,
+          "old_sha256": "3482A2FA043F0E0ADBA2CCD73C22D500FACE59368B8E5F69166895E1D882AF50",
+          "new_sha256": "E69A8BA15009465B70B9EB1EEA7370B2C5BA10DB154C5F57A4BFAC1879EFE364"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-003",
+      "stable_id": "MC-STK-ERR-0085",
+      "locus": "1542-1546",
+      "earliest_line": 1544,
+      "class": "grammar",
+      "proof": "The presheaf contains all continuous functions; the singular count noun after 'of' is ungrammatical.",
+      "adverse_evidence": "'Function' can be an adjunct elsewhere, but not in this prepositional phrase.",
+      "operations": [
+        {
+          "old": "presheaf of continuous\nfunction",
+          "new": "presheaf of continuous\nfunctions",
+          "expected_count": 1,
+          "source_line": 1544,
+          "source_line_end": 1545,
+          "byte_start": 52548,
+          "byte_end_exclusive": 52579,
+          "old_sha256": "3180A17433903E76B1ED1E0DBABAC7DEB5717DC2AF9B21D6219BC28391CE8AB5",
+          "new_sha256": "97AD123BE4989486FB85B859D874C5C7E3377D47E40E14CA20B596306DF39E59"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-004",
+      "stable_id": "MC-STK-ERR-0086",
+      "locus": "1747-1753",
+      "earliest_line": 1750,
+      "class": "subject-verb agreement",
+      "proof": "The singular subject 'Lemma ...' requires 'shows'.",
+      "adverse_evidence": "None.",
+      "operations": [
+        {
+          "old": "Lemma \\ref{lemma-diagram-fibre-product} show that",
+          "new": "Lemma \\ref{lemma-diagram-fibre-product} shows that",
+          "expected_count": 1,
+          "source_line": 1750,
+          "source_line_end": 1750,
+          "byte_start": 59891,
+          "byte_end_exclusive": 59940,
+          "old_sha256": "9280EF0AE191A770E76E5498FAFBFA3C8105A8334FE94901214DA4F80448C029",
+          "new_sha256": "D23CB7CBF2505672D5881CE21A7C444079A0FAB7B10AD4928DC101023597E293"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-005",
+      "stable_id": "MC-STK-ERR-0087",
+      "locus": "1765-1769",
+      "earliest_line": 1767,
+      "class": "missing article",
+      "proof": "A singular predicative count noun requires an article.",
+      "adverse_evidence": "Telegraphic headings do not govern this running prose.",
+      "operations": [
+        {
+          "old": "is morphism of presheaves",
+          "new": "is a morphism of presheaves",
+          "expected_count": 1,
+          "source_line": 1767,
+          "source_line_end": 1767,
+          "byte_start": 60647,
+          "byte_end_exclusive": 60672,
+          "old_sha256": "C7A5D952EC4A5B727DAD9053055B10737AB0DFEE016B1939FDE31D4D48AB10E1",
+          "new_sha256": "32045E0F754142FBDA03FD3C265CCF33F681B253B1E40C3EDD6DF4DDC5EEDE3E"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-006",
+      "stable_id": "MC-STK-ERR-0088",
+      "locus": "1847-1854",
+      "earliest_line": 1851,
+      "class": "grammar/mathematical prose",
+      "proof": "The target module is G viewed as an O-module by restriction of scalars; the original article and construction are defective.",
+      "adverse_evidence": "The surrounding types make the intended scalar restriction recoverable.",
+      "operations": [
+        {
+          "old": "(into the restriction of $\\mathcal{G}$ to a $\\mathcal{O}$-module)",
+          "new": "(where $\\mathcal{G}$ is viewed as an $\\mathcal{O}$-module by restriction of scalars)",
+          "expected_count": 1,
+          "source_line": 1851,
+          "source_line_end": 1851,
+          "byte_start": 63483,
+          "byte_end_exclusive": 63548,
+          "old_sha256": "AE24DEE9A2D129C0E878ACA476640386C33D3F2163610BCCB7113F88640B9411",
+          "new_sha256": "7B2F49D8C8A7A43C039CB2EE583A1349F90ACAE3C022C012E3E31C7A3A09AED8"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-007",
+      "stable_id": "MC-STK-ERR-0089",
+      "locus": "1949-1953",
+      "earliest_line": 1952,
+      "class": "missing preposition",
+      "proof": "The established object is a sheaf of O-modules.",
+      "adverse_evidence": "'Module sheaf' would be grammatical only in a different word order.",
+      "operations": [
+        {
+          "old": "a sheaf $\\mathcal{O}$-modules",
+          "new": "a sheaf of $\\mathcal{O}$-modules",
+          "expected_count": 1,
+          "source_line": 1952,
+          "source_line_end": 1952,
+          "byte_start": 66373,
+          "byte_end_exclusive": 66402,
+          "old_sha256": "29FCA9EF623823C85BCB31E6D2C68F3C3369C0DF73060ADF9095CEB9A6429CE2",
+          "new_sha256": "1CE27CC2A3364DC96B8E91CCE2860EED24158202972F3E1F90CDBE1FBEAA6D2B"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-016",
+      "stable_id": "MC-STK-ERR-0090",
+      "locus": "2100-2105",
+      "earliest_line": 2100,
+      "class": "missing quantifier/type binder",
+      "proof": "G(U) requires U open in Y, but the paragraph does not bind the newly switched U.",
+      "adverse_evidence": "The type can be inferred from G(U), but inference does not quantify the free symbol.",
+      "operations": [
+        {
+          "old": "A small useful remark is that there exists\na canonical map $\\mathcal{G}(U) \\to f_p\\mathcal{G}(f^{-1}(U))$,",
+          "new": "A small useful remark is that for every open $U \\subset Y$ there exists\na canonical map $\\mathcal{G}(U) \\to f_p\\mathcal{G}(f^{-1}(U))$,",
+          "expected_count": 1,
+          "source_line": 2100,
+          "source_line_end": 2101,
+          "byte_start": 70529,
+          "byte_end_exclusive": 70635,
+          "old_sha256": "2C1C41BCA3FF49F7AEE661966FA3EA53741AD7885952E9C948CE8A3294C03605",
+          "new_sha256": "30C9AFB4A69D8288F0F0D57F90FDBE29EB963D000D57930F3D694522879E9F12"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-017",
+      "stable_id": "MC-STK-ERR-0091",
+      "locus": "2116-2120",
+      "earliest_line": 2118,
+      "class": "missing copula",
+      "proof": "After 'let', the predicate adjective requires 'be'.",
+      "adverse_evidence": "Postpositive shorthand in a range does not license this finite construction.",
+      "operations": [
+        {
+          "old": "Namely, let $U \\subset X$ open.",
+          "new": "Namely, let $U \\subset X$ be open.",
+          "expected_count": 1,
+          "source_line": 2118,
+          "source_line_end": 2118,
+          "byte_start": 71310,
+          "byte_end_exclusive": 71341,
+          "old_sha256": "6F09364DA519ACF4D8A2A06DF8B9D250C1C77D48012ECD39EEB270DA16C90522",
+          "new_sha256": "3BE816D896835160F18E07E1B602080179C68CE0410D73FD8878091A28AA6003"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-018",
+      "stable_id": "MC-STK-ERR-0092",
+      "locus": "2264-2273",
+      "earliest_line": 2272,
+      "class": "article/agreement",
+      "proof": "The singular head 'family' requires the definite article and singular verb.",
+      "adverse_evidence": "The plural members a_V do not control agreement.",
+      "operations": [
+        {
+          "old": "if and only if corresponding family of maps $a_V$\nsatisfy the condition",
+          "new": "if and only if the corresponding family of maps $a_V$\nsatisfies the condition",
+          "expected_count": 1,
+          "source_line": 2272,
+          "source_line_end": 2273,
+          "byte_start": 76574,
+          "byte_end_exclusive": 76645,
+          "old_sha256": "C71333E90B1730D07892F39529CA34BFC8B7C2D039EF9CC65CD3CBF253A2FA4B",
+          "new_sha256": "CB8B30C5EE2C172C0ABCCFBEF2D9834C21F21345E9A25D93C0A75BD6E217BCD8"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-019",
+      "stable_id": "MC-STK-ERR-0093",
+      "locus": "2298-2305",
+      "earliest_line": 2303,
+      "class": "typographical",
+      "proof": "The map is a restriction map; 'restruction' is a typo.",
+      "adverse_evidence": "None.",
+      "operations": [
+        {
+          "old": "restruction map",
+          "new": "restriction map",
+          "expected_count": 1,
+          "source_line": 2303,
+          "source_line_end": 2303,
+          "byte_start": 78054,
+          "byte_end_exclusive": 78069,
+          "old_sha256": "575BC989A26B99C47A4C5E83A0A09143C318576BA7CA7DA54C5BBFD30B1D1E1C",
+          "new_sha256": "599FD16B10927177EBF691018579E6C700266D41D5EF424D359B93A0F63D3A62"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-020",
+      "stable_id": "MC-STK-ERR-0094",
+      "locus": "2320,2380",
+      "earliest_line": 2320,
+      "class": "article",
+      "proof": "The spoken symbol g begins with a consonant sound, so both occurrences require 'a'.",
+      "adverse_evidence": "Article choice follows pronunciation rather than glyph shape.",
+      "operations": [
+        {
+          "old": "an $g$-map",
+          "new": "a $g$-map",
+          "expected_count": 1,
+          "source_line": 2320,
+          "source_line_end": 2320,
+          "byte_start": 78762,
+          "byte_end_exclusive": 78772,
+          "old_sha256": "29FFEAE74C007F466570540022A80FC699E23661E81A95AB527E4F703FA2A5EA",
+          "new_sha256": "B3118881E0D5544645CFF103CB0A182413E49F162AB0019824FC10BDC3926A49"
+        },
+        {
+          "old": "an $g$-map",
+          "new": "a $g$-map",
+          "expected_count": 1,
+          "source_line": 2380,
+          "source_line_end": 2380,
+          "byte_start": 80534,
+          "byte_end_exclusive": 80544,
+          "old_sha256": "29FFEAE74C007F466570540022A80FC699E23661E81A95AB527E4F703FA2A5EA",
+          "new_sha256": "B3118881E0D5544645CFF103CB0A182413E49F162AB0019824FC10BDC3926A49"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-024",
+      "stable_id": "MC-STK-ERR-0095",
+      "locus": "2435-2437",
+      "earliest_line": 2436,
+      "class": "assignment notation/type",
+      "proof": "The parallel object assignments require mapsto; a right arrow would assert a nonexistent morphism.",
+      "adverse_evidence": "The word 'assignments' makes the intent recoverable but does not type the arrow.",
+      "operations": [
+        {
+          "old": "$\\mathcal{G} \\to f_p\\mathcal{G}$",
+          "new": "$\\mathcal{G} \\mapsto f_p\\mathcal{G}$",
+          "expected_count": 1,
+          "source_line": 2436,
+          "source_line_end": 2436,
+          "byte_start": 82298,
+          "byte_end_exclusive": 82330,
+          "old_sha256": "30803158DA9AF9575077A7F0C1548132E1774F4F9E39DA02BEF349E1EF7CF40A",
+          "new_sha256": "760397B3A484D1A2D52DD2967042A9D974DF31BA3353E59A633DE863729C3F6E"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-025",
+      "stable_id": "MC-STK-ERR-0096",
+      "locus": "2455-2464",
+      "earliest_line": 2460,
+      "class": "grammar/successive predicates",
+      "proof": "The source gives one subject two uncoordinated finite predicates; the displayed composite already supplies its type.",
+      "adverse_evidence": "The mathematical composite itself is correct.",
+      "operations": [
+        {
+          "old": "then the corresponding map\n$\\mathcal{G} \\to f_*\\mathcal{F}$ is the map\n$f_*\\psi \\circ i_\\mathcal{G} :\n\\mathcal{G} \\to f_* f_p \\mathcal{G} \\to f_* \\mathcal{F}$\nis also a map of abelian presheaves.",
+          "new": "then the corresponding map\n$f_*\\psi \\circ i_\\mathcal{G} :\n\\mathcal{G} \\to f_* f_p \\mathcal{G} \\to f_* \\mathcal{F}$\nis also a map of abelian presheaves.",
+          "expected_count": 1,
+          "source_line": 2460,
+          "source_line_end": 2464,
+          "byte_start": 83242,
+          "byte_end_exclusive": 83437,
+          "old_sha256": "BEA4B9C7C441754F0524B31FAFC09D1077A5F377CC42357167066F2F8D065A5E",
+          "new_sha256": "100826046D4F283BF0559CEBD392208A4796E6A81211A9F7165ADD10BEDDF1E0"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-026",
+      "stable_id": "MC-STK-ERR-0097",
+      "locus": "2455-2476",
+      "earliest_line": 2474,
+      "class": "substantive typing",
+      "proof": "f_*psi has source f_*f_pG; precomposition with the unit is required to land in Mor(G,f_*F).",
+      "adverse_evidence": "The full construction earlier in the paragraph is correct, confining the defect to the summary.",
+      "operations": [
+        {
+          "old": "$\\psi \\mapsto f_*\\psi$",
+          "new": "$\\psi \\mapsto f_*\\psi \\circ i_\\mathcal{G}$",
+          "expected_count": 1,
+          "source_line": 2474,
+          "source_line_end": 2474,
+          "byte_start": 83953,
+          "byte_end_exclusive": 83975,
+          "old_sha256": "89928816DE6098B7B1C5DC8326949802454E522A80311408AC3BEF37C4A6A2BA",
+          "new_sha256": "7958EB9284A1211BE42447B0EB65D1889421F1BBC98B7D6BD4B9AF7B8C64228E"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-027",
+      "stable_id": "MC-STK-ERR-0098",
+      "locus": "2479-2483",
+      "earliest_line": 2479,
+      "class": "substantive variance reversal",
+      "proof": "For f:X→Y, F is on X and f_*F is on Y; the source reverses both.",
+      "adverse_evidence": "Surrounding formulas reveal the intended variance.",
+      "operations": [
+        {
+          "old": "If $\\mathcal{F}$ is an abelian sheaf on $Y$, then $f_*\\mathcal{F}$\nis an abelian sheaf on $X$.",
+          "new": "If $\\mathcal{F}$ is an abelian sheaf on $X$, then $f_*\\mathcal{F}$\nis an abelian sheaf on $Y$.",
+          "expected_count": 1,
+          "source_line": 2479,
+          "source_line_end": 2480,
+          "byte_start": 84195,
+          "byte_end_exclusive": 84289,
+          "old_sha256": "2CE702E3F496EF46A512835A93F4619DACF23E39DF218850D5D2A64B8DC9051D",
+          "new_sha256": "72C21BB1594C66B6EC010E448B9768EC8511E3218851F4F20C57642B1C3B5CB9"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-028",
+      "stable_id": "MC-STK-ERR-0099",
+      "locus": "2686-2690",
+      "earliest_line": 2688,
+      "class": "punctuation",
+      "proof": "A comma cannot separate the complete subject from its predicate.",
+      "adverse_evidence": "A rhetorical pause does not license the comma.",
+      "operations": [
+        {
+          "old": "the pullback and pushforward functors, is the setting",
+          "new": "the pullback and pushforward functors is the setting",
+          "expected_count": 1,
+          "source_line": 2688,
+          "source_line_end": 2688,
+          "byte_start": 91476,
+          "byte_end_exclusive": 91529,
+          "old_sha256": "1B22A051AE1FFF033E07D57328EFD7B8C8896E7C0BF8BBE8F295B9C6DBF8EACE",
+          "new_sha256": "A3E7E0909D5D344047B6F4ADB7E0130043FE5B30F9CF40929D39E082819714F4"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-029",
+      "stable_id": "MC-STK-ERR-0100",
+      "locus": "2708-2710",
+      "earliest_line": 2709,
+      "class": "grammar",
+      "proof": "Imperative 'Let' selects 'be', not finite 'is'.",
+      "adverse_evidence": "The intended open subset is recoverable.",
+      "operations": [
+        {
+          "old": "Let $V \\subset Y$ is open.",
+          "new": "Let $V \\subset Y$ be open.",
+          "expected_count": 1,
+          "source_line": 2709,
+          "source_line_end": 2709,
+          "byte_start": 92119,
+          "byte_end_exclusive": 92145,
+          "old_sha256": "2D90F16D1A3823DC4F5AB8C47049007C56D6C2BC4401392DF9BEAEF0FC45B5EF",
+          "new_sha256": "3EA0B90D0FDD92933761D47C3BD8B07BB48F7A1E8FB6C670C02E705C91A5E9D6"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-030",
+      "stable_id": "MC-STK-ERR-0101",
+      "locus": "2741-2743",
+      "earliest_line": 2742,
+      "class": "grammar",
+      "proof": "Imperative 'Let' selects 'be', not finite 'is'.",
+      "adverse_evidence": "The intended open subset is recoverable.",
+      "operations": [
+        {
+          "old": "Let $U \\subset X$ is open.",
+          "new": "Let $U \\subset X$ be open.",
+          "expected_count": 1,
+          "source_line": 2742,
+          "source_line_end": 2742,
+          "byte_start": 93065,
+          "byte_end_exclusive": 93091,
+          "old_sha256": "9EF08B484A4D682D78937161E7EF6FB86098A04C1D4676A29FBB34E6373F7D2D",
+          "new_sha256": "356DD628DEC1925C0620FA944718417C49CBE74149ED5671E17A4F3B45870D7A"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-031",
+      "stable_id": "MC-STK-ERR-0102",
+      "locus": "2802-2809",
+      "earliest_line": 2806,
+      "class": "sentence-boundary punctuation",
+      "proof": "The display-final period makes the following lowercase citation phrase a fragment.",
+      "adverse_evidence": "A lowercase continuation would be valid only without the earlier terminator.",
+      "operations": [
+        {
+          "old": "\\Mor_{\\textit{PAb}(Y)}(\\mathcal{G}, f_*\\mathcal{F}).",
+          "new": "\\Mor_{\\textit{PAb}(Y)}(\\mathcal{G}, f_*\\mathcal{F})",
+          "expected_count": 1,
+          "source_line": 2806,
+          "source_line_end": 2806,
+          "byte_start": 95114,
+          "byte_end_exclusive": 95166,
+          "old_sha256": "18592062868251B251D7FC08895739DDF6FDB2065384BE618DDDC5E51D4CCA03",
+          "new_sha256": "0B9F18171F97887A750FA079E09C3CA67663F659A72B013D5A6A5429B42F6ECD"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-032",
+      "stable_id": "MC-STK-ERR-0103",
+      "locus": "2835-2838,2871-2873",
+      "earliest_line": 2873,
+      "class": "substantive object misclassification",
+      "proof": "The lemma assumes presheaves and all Hom sets are in PMod; allowed inputs need not be sheaves.",
+      "adverse_evidence": "The equality is correct; only the object class is wrong.",
+      "operations": [
+        {
+          "old": "of abelian sheaves which is $f_*\\mathcal{O}$-linear.",
+          "new": "of abelian presheaves which is $f_*\\mathcal{O}$-linear.",
+          "expected_count": 1,
+          "source_line": 2873,
+          "source_line_end": 2873,
+          "byte_start": 97501,
+          "byte_end_exclusive": 97553,
+          "old_sha256": "9ACEF7EB5D75CFC8C972617E0ADBACFEA09DC3A44AA105E17629E8C68221D890",
+          "new_sha256": "47197677BFBBFA79D4089A923B32B1BB975065050F8BD0E6B71796F474C58DE2"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-033",
+      "stable_id": "MC-STK-ERR-0104",
+      "locus": "2952-2962",
+      "earliest_line": 2960,
+      "class": "sentence fragment/reference number",
+      "proof": "Lowercase 'where' follows a completed display, and plural 'Lemmas' introduces one reference.",
+      "adverse_evidence": "Attaching the clause by removing the display period is possible but less local to the defective phrase.",
+      "operations": [
+        {
+          "old": "where the second is\nLemmas \\ref{lemma-adjoint-push-pull-presheaves-modules}",
+          "new": "The second equality is\nLemma \\ref{lemma-adjoint-push-pull-presheaves-modules}",
+          "expected_count": 1,
+          "source_line": 2960,
+          "source_line_end": 2961,
+          "byte_start": 100308,
+          "byte_end_exclusive": 100383,
+          "old_sha256": "444E977A5FC9E2A7093A22CA1895F0CFDCBFE2C7CB229DD34EB273C7F852FA0C",
+          "new_sha256": "841C2183CAE0693BC18508DF224A8E7CFD7A25AE158AACB2783B8803ADAB3A3D"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-034",
+      "stable_id": "MC-STK-ERR-0105",
+      "locus": "2986-2998",
+      "earliest_line": 2996,
+      "class": "sentence fragment",
+      "proof": "Lowercase 'which' starts a fragment after a completed display.",
+      "adverse_evidence": "Deleting the display period would be an alternate repair.",
+      "operations": [
+        {
+          "old": "which are a combination of",
+          "new": "These equalities are a combination of",
+          "expected_count": 1,
+          "source_line": 2996,
+          "source_line_end": 2996,
+          "byte_start": 101504,
+          "byte_end_exclusive": 101530,
+          "old_sha256": "391AD96922112DA0971F14432C25589AF36E5BAF7A3170A115777E01CBD84971",
+          "new_sha256": "23CC5EEDC0D88B3D1738B9818FB346D8574F37A2E009172D1D87811656B45C53"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-035",
+      "stable_id": "MC-STK-ERR-0106",
+      "locus": "3122-3128",
+      "earliest_line": 3123,
+      "class": "grammar/typed module construction",
+      "proof": "The second conjunct lacks a governing verb; parallel clauses must identify the underlying sheaf and restricted scalar structure.",
+      "adverse_evidence": "The intended construction is recoverable from the cited lemma and ring map.",
+      "operations": [
+        {
+          "old": "sheaf of $\\mathcal{O}_Y$-modules which as a sheaf\nof abelian groups equals $f_*\\mathcal{F}$ and with\nmodule structure given by the restriction\nvia $f^\\sharp : \\mathcal{O}_Y \\to f_*\\mathcal{O}_X$\nof the module structure given\nin Lemma \\ref{lemma-pushforward-module}.",
+          "new": "sheaf of $\\mathcal{O}_Y$-modules whose underlying sheaf\nof abelian groups is $f_*\\mathcal{F}$ and whose\nmodule structure is obtained by restriction of scalars\nvia $f^\\sharp : \\mathcal{O}_Y \\to f_*\\mathcal{O}_X$\nfrom the module structure given\nin Lemma \\ref{lemma-pushforward-module}.",
+          "expected_count": 1,
+          "source_line": 3123,
+          "source_line_end": 3128,
+          "byte_start": 106312,
+          "byte_end_exclusive": 106577,
+          "old_sha256": "42E679C871E6A7D3DD32A657AC85BCF139A0E00554DE2D13BB769C89890EF047",
+          "new_sha256": "85B1344237882A369C2C402E60F9144AC29AE22041058964840E681B194E407F"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-036",
+      "stable_id": "MC-STK-ERR-0107",
+      "locus": "3206-3211",
+      "earliest_line": 3206,
+      "class": "grammar/coordination",
+      "proof": "Three governed hypotheses require parallel coordination; the third is otherwise unattached.",
+      "adverse_evidence": "The mathematical types remain clear.",
+      "operations": [
+        {
+          "old": "Given a morphism of ringed spaces\n$(f, f^\\sharp) : (X, \\mathcal{O}_X) \\to (Y, \\mathcal{O}_Y)$,\nand a sheaf of $\\mathcal{O}_X$-modules $\\mathcal{F}$,\na sheaf of $\\mathcal{O}_Y$-modules $\\mathcal{G}$ on $Y$,",
+          "new": "Given a morphism of ringed spaces\n$(f, f^\\sharp) : (X, \\mathcal{O}_X) \\to (Y, \\mathcal{O}_Y)$,\na sheaf of $\\mathcal{O}_X$-modules $\\mathcal{F}$, and\na sheaf of $\\mathcal{O}_Y$-modules $\\mathcal{G}$ on $Y$,",
+          "expected_count": 1,
+          "source_line": 3206,
+          "source_line_end": 3209,
+          "byte_start": 108952,
+          "byte_end_exclusive": 109157,
+          "old_sha256": "6CE4EE7014E6E3CC04D6D44ACFA0D66DD2EEA9C634F9E951A049ED5ADB46E258",
+          "new_sha256": "B6DFD9CD0B6FB33192CA6393520691182688B6F0275A2795AB38CEAF3BCF42AE"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-037",
+      "stable_id": "MC-STK-ERR-0108",
+      "locus": "3230-3236",
+      "earliest_line": 3233,
+      "class": "punctuation",
+      "proof": "The comma must close the introductory data before the main subject, not split its two-item coordination.",
+      "adverse_evidence": "The display and following verb reveal the boundary.",
+      "operations": [
+        {
+          "old": "as above, and $x \\in X$ the induced map on stalks",
+          "new": "as above and $x \\in X$, the induced map on stalks",
+          "expected_count": 1,
+          "source_line": 3233,
+          "source_line_end": 3233,
+          "byte_start": 110152,
+          "byte_end_exclusive": 110201,
+          "old_sha256": "5C27FF1B649A87B76049C32D72C16903995FFD37699B4F938B22A3C98863F944",
+          "new_sha256": "CE5291253A0FD19810288718CDB2320A39D4C731A36510750AD920FF041B8E94"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-038",
+      "stable_id": "MC-STK-ERR-0109",
+      "locus": "3273-3278",
+      "earliest_line": 3276,
+      "class": "missing complement marker",
+      "proof": "The notation-setting clause requires 'Let ... be ...' or 'denote ... by'.",
+      "adverse_evidence": "The compressed house usage is recoverable but not standard grammar.",
+      "operations": [
+        {
+          "old": "Denote $i_x : \\{x\\} \\to X$ the inclusion map.",
+          "new": "Let $i_x : \\{x\\} \\to X$ be the inclusion map.",
+          "expected_count": 1,
+          "source_line": 3276,
+          "source_line_end": 3276,
+          "byte_start": 111500,
+          "byte_end_exclusive": 111545,
+          "old_sha256": "A046F705AB45A76E478FF8C9B4DA387409AEBBADCC372932A202EFDC6C3542FC",
+          "new_sha256": "B2E4349D34700347161D0E3F7DAF5F676F0961D0D6626DB065B8DC1F8D39E8D9"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-039",
+      "stable_id": "MC-STK-ERR-0110",
+      "locus": "3331-3335",
+      "earliest_line": 3333,
+      "class": "missing copula",
+      "proof": "The predicate nominative after 'let' requires 'be'.",
+      "adverse_evidence": "Compact apposition elsewhere does not cure this finite directive.",
+      "operations": [
+        {
+          "old": "let $x \\in X$ a point.",
+          "new": "let $x \\in X$ be a point.",
+          "expected_count": 1,
+          "source_line": 3333,
+          "source_line_end": 3333,
+          "byte_start": 113757,
+          "byte_end_exclusive": 113779,
+          "old_sha256": "9E55D415FA5D04A4B5CA8CCBB6A503823BC16600F0F3979CBEC03AC3BB31932D",
+          "new_sha256": "ED9A2CD97D89E28291F17D57BDDF718F2B17939920C30C374295F23254F5D2B5"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-040",
+      "stable_id": "MC-STK-ERR-0111",
+      "locus": "3341-3343",
+      "earliest_line": 3342,
+      "class": "missing conjunction",
+      "proof": "A two-item list requires a coordinator.",
+      "adverse_evidence": "Punctuation makes the intent recoverable.",
+      "operations": [
+        {
+          "old": "abelian groups, algebraic structures.",
+          "new": "abelian groups and algebraic structures.",
+          "expected_count": 1,
+          "source_line": 3342,
+          "source_line_end": 3342,
+          "byte_start": 114009,
+          "byte_end_exclusive": 114046,
+          "old_sha256": "69224F387D10B76CB4BF05897EA7186B3888521401E73B2ECDD67919A905E50E",
+          "new_sha256": "5CB53D57B65716FC579F0EEF1FC804A8D56134AD2745632D4F1E4A562B275B67"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-041",
+      "stable_id": "MC-STK-ERR-0112",
+      "locus": "3511-3521",
+      "earliest_line": 3513,
+      "class": "substantive free index",
+      "proof": "The proof reindexes the chosen finite cover by 1,…,m, but later quantifies j,j' over undefined J.",
+      "adverse_evidence": "The generic J in the lemma statement suggests the intended identification but does not define it after reindexing.",
+      "operations": [
+        {
+          "old": "quasi-compact for all $j, j' \\in J$ and",
+          "new": "quasi-compact for all $1 \\leq j, j' \\leq m$ and",
+          "expected_count": 1,
+          "source_line": 3513,
+          "source_line_end": 3513,
+          "byte_start": 119795,
+          "byte_end_exclusive": 119834,
+          "old_sha256": "07E74B3FEB10FE931B486700811C5EA8EE92926C2423162AD68A0CC64AC04B62",
+          "new_sha256": "5A887948BB53DD48C0734391EAD3745DF742634FA1DFEB31310393C54B60949A"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-043",
+      "stable_id": "MC-STK-ERR-0113",
+      "locus": "3582-3584,3587-3591",
+      "earliest_line": 3582,
+      "class": "number/agreement",
+      "proof": "Two sections have two images; plural 'are different' requires plural 'images'.",
+      "adverse_evidence": "Ellipsis cannot make the overt singular head agree with the plural verb.",
+      "operations": [
+        {
+          "old": "the image of\n$s$ and $s'$",
+          "new": "the images of\n$s$ and $s'$",
+          "expected_count": 1,
+          "source_line": 3582,
+          "source_line_end": 3583,
+          "byte_start": 122780,
+          "byte_end_exclusive": 122805,
+          "old_sha256": "0B74F116319ADFB9C6588B0F19E7C9B1C661F7CD2837AEAAAD87229F2258B2A8",
+          "new_sha256": "3DC6ECBDCB0A6F9DA9FB0FC086418EB9526F18A5A9B46BFE2D1295F3CCC06E53"
+        },
+        {
+          "old": "the image of $s$ and $s'$",
+          "new": "the images of $s$ and $s'$",
+          "expected_count": 1,
+          "source_line": 3589,
+          "source_line_end": 3589,
+          "byte_start": 123172,
+          "byte_end_exclusive": 123197,
+          "old_sha256": "4FBA3D56AD9E2ECA74F060B35D035005B4AFD90F1C3436A69D52CBA801A32936",
+          "new_sha256": "B1056F30117066D759974C844EB23B714D0BCEDB8D652D77153477B98C62C6CC"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-042",
+      "stable_id": "MC-STK-ERR-0114",
+      "locus": "3587-3592",
+      "earliest_line": 3591,
+      "class": "substantive composition typing",
+      "proof": "For a:j→i and b:k→j, only a∘b is composable; b∘a is undefined.",
+      "adverse_evidence": "The preceding correct formula reveals the intended order.",
+      "operations": [
+        {
+          "old": "(f_{b \\circ a}^{-1}\\mathcal{G})_{p_k(x)}",
+          "new": "(f_{a \\circ b}^{-1}\\mathcal{G})_{p_k(x)}",
+          "expected_count": 1,
+          "source_line": 3591,
+          "source_line_end": 3591,
+          "byte_start": 123294,
+          "byte_end_exclusive": 123334,
+          "old_sha256": "F924ABAC970A8D0471D8189C50FC95264D9CACEC2DDB5C4F1C841A7BE02D64DC",
+          "new_sha256": "E82C648BC5FA0EB22520A9133F68D4D7B8B8E0547788FC1C01F66AB5C2AE1F87"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-044",
+      "stable_id": "MC-STK-ERR-0115",
+      "locus": "3606-3608",
+      "earliest_line": 3607,
+      "class": "missing copula/number",
+      "proof": "The coordinated plural subject needs 'are' and plural 'opens'.",
+      "adverse_evidence": "'Quasi-compact open' is a valid singular noun phrase, not for two named subsets.",
+      "operations": [
+        {
+          "old": "we may assume $L$ is finite and $W_l$ and $V_{l, i}$ quasi-compact open",
+          "new": "we may assume $L$ is finite and $W_l$ and $V_{l, i}$ are quasi-compact opens",
+          "expected_count": 1,
+          "source_line": 3607,
+          "source_line_end": 3607,
+          "byte_start": 124124,
+          "byte_end_exclusive": 124195,
+          "old_sha256": "F4F315A25FC2A4AD571BA38199B0CF2C8B296E889112EC904F68BE967E1DC4A9",
+          "new_sha256": "48F5FDE2F811857913CDB3389CC38CE95C3FF123842068507D40108C99291D15"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-045",
+      "stable_id": "MC-STK-ERR-0116",
+      "locus": "3615-3618",
+      "earliest_line": 3615,
+      "class": "missing complement marker",
+      "proof": "Notation-setting 'write symbol for expression' requires 'for'.",
+      "adverse_evidence": "The intended definition is unambiguous but grammatically incomplete.",
+      "operations": [
+        {
+          "old": "Write $s_{l, j}$ the restriction",
+          "new": "Write $s_{l, j}$ for the restriction",
+          "expected_count": 1,
+          "source_line": 3615,
+          "source_line_end": 3615,
+          "byte_start": 124526,
+          "byte_end_exclusive": 124558,
+          "old_sha256": "88FD4753A9990A9EE44A6AE1534E7823C15CE667FD15FF0DB8FF33A1948A54F5",
+          "new_sha256": "DAFAA48FB344B9B2811EFAB6BBA3FE6C0E45C162D7DF5D242C65DF9ED205BFBC"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-052",
+      "stable_id": "MC-STK-ERR-0117",
+      "locus": "3705-3707",
+      "earliest_line": 3705,
+      "class": "missing conjunction",
+      "proof": "Two complete axiomatic predicates run together without punctuation or conjunction.",
+      "adverse_evidence": "A line break is not grammatical coordination.",
+      "operations": [
+        {
+          "old": "$\\rho^U_U = \\text{id}_{\\mathcal{F}(U)}$ for all $U \\in \\mathcal{B}$\nwhenever $W \\subset V \\subset U$ in $\\mathcal{B}$ we have",
+          "new": "$\\rho^U_U = \\text{id}_{\\mathcal{F}(U)}$ for all $U \\in \\mathcal{B}$ and\nwhenever $W \\subset V \\subset U$ in $\\mathcal{B}$ we have",
+          "expected_count": 1,
+          "source_line": 3705,
+          "source_line_end": 3706,
+          "byte_start": 127223,
+          "byte_end_exclusive": 127348,
+          "old_sha256": "D23C8AA37C890D50E5316A3B44FFD167FE3F2CFE14A9B7158B21108BEB7BB4A6",
+          "new_sha256": "B9A4C293B7D991405BADEF18FDFCEB9CFD842B5433100DDE7BB80CDC9150AD69"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-054",
+      "stable_id": "MC-STK-ERR-0118",
+      "locus": "3718-3725",
+      "earliest_line": 3723,
+      "class": "colimit/directed-system terminology",
+      "proof": "The display is a colimit and directedness belongs to the neighbourhood index system.",
+      "adverse_evidence": "'Direct limit' is older terminology, but the source says neither that nor predicates directedness correctly.",
+      "operations": [
+        {
+          "old": "As in the case of the stalk of a presheaf on $X$ this limit is\ndirected. The reason is that the collection of $U\\in \\mathcal{B}$,\n$x \\in U$ is a fundamental system of open neighbourhoods of $x$.",
+          "new": "As in the case of the stalk of a presheaf on $X$, this is a\ndirected colimit. The reason is that the collection of $U\\in \\mathcal{B}$,\n$x \\in U$ is a directed fundamental system of open neighbourhoods of $x$.",
+          "expected_count": 1,
+          "source_line": 3723,
+          "source_line_end": 3725,
+          "byte_start": 127960,
+          "byte_end_exclusive": 128154,
+          "old_sha256": "39991D7C0C729F18E6EB783B2B6AE3981C9777303EFF42291F4DB3D2961F3F5A",
+          "new_sha256": "E6ED1D4FBE94B5AF1C65D8792CA0A15938A679D8B1FA633626D1DAEEDCB62739"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-055",
+      "stable_id": "MC-STK-ERR-0119",
+      "locus": "3916-3920",
+      "earliest_line": 3919,
+      "class": "substantive undefined restrictions",
+      "proof": "Equality of germs supplies a basis neighbourhood contained in U_i∩U_j; without this containment the displayed restrictions are untyped.",
+      "adverse_evidence": "The missing containment is inferable from the stalk equivalence relation.",
+      "operations": [
+        {
+          "old": "$y \\in V_{ijy}$ such that",
+          "new": "$y \\in V_{ijy} \\subset U_i \\cap U_j$ such that",
+          "expected_count": 1,
+          "source_line": 3919,
+          "source_line_end": 3919,
+          "byte_start": 135943,
+          "byte_end_exclusive": 135968,
+          "old_sha256": "4C7FBD81C7C7C1FACDC283114690A0002B83E17A52C39A55486EA5B1BFB00481",
+          "new_sha256": "169FB6B75315F11E7FE88208658D04F8BB736B1B248C21EC69BB909A419AE809"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-063",
+      "stable_id": "MC-STK-ERR-0120",
+      "locus": "3982-3985,4121-4125,4241-4244",
+      "earliest_line": 3983,
+      "class": "typographical/grammar",
+      "proof": "Singular 'The inverse functor' requires passive 'is given'; 'in given' has no verb.",
+      "adverse_evidence": "None.",
+      "operations": [
+        {
+          "old": "The inverse functor in given",
+          "new": "The inverse functor is given",
+          "expected_count": 1,
+          "source_line": 3983,
+          "source_line_end": 3983,
+          "byte_start": 138233,
+          "byte_end_exclusive": 138261,
+          "old_sha256": "DCCE42510D493C4D488F1F653D6FF9B762DCF13DCB1C6910DB1CF7FBF650F635",
+          "new_sha256": "26D98EF676793B626E3478AA8A7B5C982F1E68CDD371305611816407F3651255"
+        },
+        {
+          "old": "The inverse functor in given",
+          "new": "The inverse functor is given",
+          "expected_count": 1,
+          "source_line": 4122,
+          "source_line_end": 4122,
+          "byte_start": 143465,
+          "byte_end_exclusive": 143493,
+          "old_sha256": "DCCE42510D493C4D488F1F653D6FF9B762DCF13DCB1C6910DB1CF7FBF650F635",
+          "new_sha256": "26D98EF676793B626E3478AA8A7B5C982F1E68CDD371305611816407F3651255"
+        },
+        {
+          "old": "The inverse functor in given",
+          "new": "The inverse functor is given",
+          "expected_count": 1,
+          "source_line": 4242,
+          "source_line_end": 4242,
+          "byte_start": 147898,
+          "byte_end_exclusive": 147926,
+          "old_sha256": "DCCE42510D493C4D488F1F653D6FF9B762DCF13DCB1C6910DB1CF7FBF650F635",
+          "new_sha256": "26D98EF676793B626E3478AA8A7B5C982F1E68CDD371305611816407F3651255"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-064",
+      "stable_id": "MC-STK-ERR-0121",
+      "locus": "4043-4046",
+      "earliest_line": 4044,
+      "class": "subject-verb agreement",
+      "proof": "Singular subject 'The analogue' requires 'needs'.",
+      "adverse_evidence": "The cited lemma lies in an of-phrase and does not pluralize the subject.",
+      "operations": [
+        {
+          "old": "The analogue of\nLemma \\ref{lemma-extend-off-basis} need some care.",
+          "new": "The analogue of\nLemma \\ref{lemma-extend-off-basis} needs some care.",
+          "expected_count": 1,
+          "source_line": 4044,
+          "source_line_end": 4045,
+          "byte_start": 140878,
+          "byte_end_exclusive": 140944,
+          "old_sha256": "C275052EA2EECBDFB8C7C6063004A707FDB8F3997C6360788452462A7921A0CA",
+          "new_sha256": "4335F4868C383764FCFC18903C667AB77F7092EE04196C4D263C78C5D5DFB4B2"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-058",
+      "stable_id": "MC-STK-ERR-0122",
+      "locus": "4087-4090",
+      "earliest_line": 4090,
+      "class": "wrong local condition label",
+      "proof": "The underlying-set construction above is defined by condition (*), while (**) labels the sheaf gluing axiom.",
+      "adverse_evidence": "The extension eventually satisfies (**), but that is not the definition being referenced.",
+      "operations": [
+        {
+          "old": "sets is the same as the definition using $(**)$ above.",
+          "new": "sets is the same as the definition using $(*)$ above.",
+          "expected_count": 1,
+          "source_line": 4090,
+          "source_line_end": 4090,
+          "byte_start": 142566,
+          "byte_end_exclusive": 142620,
+          "old_sha256": "AE9EBF72BA994E5A9B4A842CE807E42CC4CC62C16882E5BD93CAB6240F592E78",
+          "new_sha256": "02A532FBF42573A57BBBD87AE7B80E34D4088C27C718B4F6F9B0179E4C2ABADF"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-059",
+      "stable_id": "MC-STK-ERR-0123",
+      "locus": "4255-4256,4322-4323",
+      "earliest_line": 4256,
+      "class": "defined technical phrase",
+      "proof": "The defined pair is 'a type of algebraic structure' in the singular.",
+      "adverse_evidence": "Generic prose could pluralize structures, but these loci invoke the defined term.",
+      "operations": [
+        {
+          "old": "a type of algebraic structures",
+          "new": "a type of algebraic structure",
+          "expected_count": 1,
+          "source_line": 4256,
+          "source_line_end": 4256,
+          "byte_start": 148403,
+          "byte_end_exclusive": 148433,
+          "old_sha256": "AD73BC287C3E131B32BC4AB784BAD59CBAE8F413E3284C79C54294C818C7B0DB",
+          "new_sha256": "9127981215CB26AED5C2A7A4549ADE11512C4208FA0C08F792850C5DA5BE132B"
+        },
+        {
+          "old": "a type of algebraic structures",
+          "new": "a type of algebraic structure",
+          "expected_count": 1,
+          "source_line": 4323,
+          "source_line_end": 4323,
+          "byte_start": 150752,
+          "byte_end_exclusive": 150782,
+          "old_sha256": "AD73BC287C3E131B32BC4AB784BAD59CBAE8F413E3284C79C54294C818C7B0DB",
+          "new_sha256": "9127981215CB26AED5C2A7A4549ADE11512C4208FA0C08F792850C5DA5BE132B"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-065",
+      "stable_id": "MC-STK-ERR-0124",
+      "locus": "4349-4353",
+      "earliest_line": 4351,
+      "class": "grammar",
+      "proof": "'Let us' selects the bare infinitive 'prove'.",
+      "adverse_evidence": "None.",
+      "operations": [
+        {
+          "old": "Let us first proves this",
+          "new": "Let us first prove this",
+          "expected_count": 1,
+          "source_line": 4351,
+          "source_line_end": 4351,
+          "byte_start": 151676,
+          "byte_end_exclusive": 151700,
+          "old_sha256": "43FB6AC7B1A041356E0945BC9B7C289BADC893129852B8364ED3BADF696D4562",
+          "new_sha256": "BFEFD4D5E338F4A011350A57AE790EB20538C6E631E9B386AADEF28BB507267F"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-060",
+      "stable_id": "MC-STK-ERR-0125",
+      "locus": "4352-4358",
+      "earliest_line": 4352,
+      "class": "substantive component-domain error",
+      "proof": "phi_V^U exists only for V in the basis; the proof evaluates it before extending components to arbitrary opens.",
+      "adverse_evidence": "The later return to V in the basis confirms the intended range.",
+      "operations": [
+        {
+          "old": "Fix $V \\subset Y$ open.",
+          "new": "Fix $V \\in \\mathcal{B}_Y$.",
+          "expected_count": 1,
+          "source_line": 4352,
+          "source_line_end": 4352,
+          "byte_start": 151722,
+          "byte_end_exclusive": 151745,
+          "old_sha256": "39B2A6B77C843B0B84CA2D27D939DE78D9F675C6269BA3D0ADD979523FC73346",
+          "new_sha256": "5F5135BB8F518207F54B44CA01EE21C147E4B83C2062EA5AA5D94CD9845E39A5"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-061",
+      "stable_id": "MC-STK-ERR-0126",
+      "locus": "4375-4380",
+      "earliest_line": 4379,
+      "class": "substantive map-kind/variance error",
+      "proof": "The constructed cross-space object is an f-map, not an ordinary same-space sheaf morphism.",
+      "adverse_evidence": "'Map' can be used generically, but the omitted f changes the Hom type.",
+      "operations": [
+        {
+          "old": "the map of sheaves of sets so constructed",
+          "new": "the $f$-map of sheaves of sets so constructed",
+          "expected_count": 1,
+          "source_line": 4379,
+          "source_line_end": 4379,
+          "byte_start": 152986,
+          "byte_end_exclusive": 153027,
+          "old_sha256": "B58D7E9F70F49F2F30BB614C1BFD061FB20A85AE8A3BA3A0E586878A72A86A8D",
+          "new_sha256": "F6E723F1D5A799B390BC0A1B79EBD34AB035AF4D3570F31286A28FA0875DCCB8"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-062",
+      "stable_id": "MC-STK-ERR-0127",
+      "locus": "4387-4390",
+      "earliest_line": 4389,
+      "class": "number/agreement",
+      "proof": "Plural maps on stalks require plural verb and complement.",
+      "adverse_evidence": "Singularizing the schematic construction would be a larger alternative.",
+      "operations": [
+        {
+          "old": "the maps on stalks is a morphism of algebraic\nstructures.",
+          "new": "the maps on stalks are morphisms of algebraic\nstructures.",
+          "expected_count": 1,
+          "source_line": 4389,
+          "source_line_end": 4390,
+          "byte_start": 153461,
+          "byte_end_exclusive": 153518,
+          "old_sha256": "CAA533F55D5AD494276326FC4E1A4F04D3745DADC972C2EC8D827F1876F4709B",
+          "new_sha256": "FA922D52AA934102818C3DA028DF6791C963D1BA232ECCB3B3EBDA2422B0C9F5"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-066",
+      "stable_id": "MC-STK-ERR-0128",
+      "locus": "4434-4437",
+      "earliest_line": 4436,
+      "class": "sentence fragment",
+      "proof": "The proof note lacks both subject and finite copula.",
+      "adverse_evidence": "Terse proof-note shorthand is intelligible but the written sentence is incomplete.",
+      "operations": [
+        {
+          "old": "Similar to the above and omitted.",
+          "new": "The proof is similar to the one above and is omitted.",
+          "expected_count": 1,
+          "source_line": 4436,
+          "source_line_end": 4436,
+          "byte_start": 155195,
+          "byte_end_exclusive": 155228,
+          "old_sha256": "DEF978FB4B323F41130689E2D4D442AF9A38E843F9B17768CE27644736896AD1",
+          "new_sha256": "511C7607B1F991EE553B4DD2D2BA25210F45C33A3FA6B73F084FE4411B4A1CCF"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-067",
+      "stable_id": "MC-STK-ERR-0129",
+      "locus": "4464-4468",
+      "earliest_line": 4467,
+      "class": "substantive parenthesization/type",
+      "proof": "The intended object is the stalk of the restricted sheaf; the unparenthesized parse applies j^{-1} to a stalk.",
+      "adverse_evidence": "The sentence makes intent recoverable, but the competing standard parse is ill-typed.",
+      "operations": [
+        {
+          "old": "j^{-1}\\mathcal{G}_u",
+          "new": "(j^{-1}\\mathcal{G})_u",
+          "expected_count": 1,
+          "source_line": 4467,
+          "source_line_end": 4467,
+          "byte_start": 156404,
+          "byte_end_exclusive": 156423,
+          "old_sha256": "BCDBAD01CB2AD1AAFBE1DD10A0FB4D4A692B73E2C6CF17D9C0554E4475E0C880",
+          "new_sha256": "51F6E4D50585EA2BEC77905150F1F53E80DE4847CD2E74714DAC435003DAFB44"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-068",
+      "stable_id": "MC-STK-ERR-0130",
+      "locus": "4469-4470,4577-4578,4715-4718",
+      "earliest_line": 4469,
+      "class": "base-space preposition",
+      "proof": "Presheaves and sheaves are on a space; 'of' denotes the value type.",
+      "adverse_evidence": "Surrounding categories reveal U as the base but do not license the preposition.",
+      "operations": [
+        {
+          "old": "On the category of presheaves of $U$",
+          "new": "On the category of presheaves on $U$",
+          "expected_count": 1,
+          "source_line": 4469,
+          "source_line_end": 4469,
+          "byte_start": 156471,
+          "byte_end_exclusive": 156507,
+          "old_sha256": "7509FF75E2404E197C4BF41DD7B3A2B5A545A6D2F620B47DC934A0A22F0CB7D4",
+          "new_sha256": "84DC7220AD151376521600E41FE5FA7EA51CED1C66B56943172BE9AAC406B019"
+        },
+        {
+          "old": "On the category of sheaves of $U$",
+          "new": "On the category of sheaves on $U$",
+          "expected_count": 1,
+          "source_line": 4470,
+          "source_line_end": 4470,
+          "byte_start": 156544,
+          "byte_end_exclusive": 156577,
+          "old_sha256": "ED604DF3D04D0F6A21A7ABC8853AD7C1C06D3809C8A9B721510F3E666AA7BD28",
+          "new_sha256": "180242EED837D3BB0995077AFC45F60BD88C2818862C15F7C1F7BBE6FBF263BB"
+        },
+        {
+          "old": "On the category of presheaves of $U$",
+          "new": "On the category of presheaves on $U$",
+          "expected_count": 1,
+          "source_line": 4577,
+          "source_line_end": 4577,
+          "byte_start": 160432,
+          "byte_end_exclusive": 160468,
+          "old_sha256": "7509FF75E2404E197C4BF41DD7B3A2B5A545A6D2F620B47DC934A0A22F0CB7D4",
+          "new_sha256": "84DC7220AD151376521600E41FE5FA7EA51CED1C66B56943172BE9AAC406B019"
+        },
+        {
+          "old": "On the category of sheaves of $U$",
+          "new": "On the category of sheaves on $U$",
+          "expected_count": 1,
+          "source_line": 4578,
+          "source_line_end": 4578,
+          "byte_start": 160508,
+          "byte_end_exclusive": 160541,
+          "old_sha256": "ED604DF3D04D0F6A21A7ABC8853AD7C1C06D3809C8A9B721510F3E666AA7BD28",
+          "new_sha256": "180242EED837D3BB0995077AFC45F60BD88C2818862C15F7C1F7BBE6FBF263BB"
+        },
+        {
+          "old": "On the category of abelian presheaves of $U$",
+          "new": "On the category of abelian presheaves on $U$",
+          "expected_count": 1,
+          "source_line": 4715,
+          "source_line_end": 4715,
+          "byte_start": 165715,
+          "byte_end_exclusive": 165759,
+          "old_sha256": "BEBFC69737AE92D290707CBC3027460A3AA092CC0478FF4A335586FF4D125B91",
+          "new_sha256": "5BC02FE8988708C574137EECB995C72B6F61C7F35EF7EADB93D907618FF138E4"
+        },
+        {
+          "old": "On the category of abelian sheaves of $U$",
+          "new": "On the category of abelian sheaves on $U$",
+          "expected_count": 1,
+          "source_line": 4717,
+          "source_line_end": 4717,
+          "byte_start": 165799,
+          "byte_end_exclusive": 165840,
+          "old_sha256": "C792239B45D00D5822973692698BCDFBFEAB99272B880A559EEAD4E17A180A9F",
+          "new_sha256": "4DD7E4A06F29E504243ACEBED25FEBA150E733552878514953C0BD40CF3F0282"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-069",
+      "stable_id": "MC-STK-ERR-0131",
+      "locus": "4477-4479",
+      "earliest_line": 4478,
+      "class": "missing definite article",
+      "proof": "The particular singular collection requires 'the'.",
+      "adverse_evidence": "Bare plurals are possible; the source uses a singular count noun.",
+      "operations": [
+        {
+          "old": "is over collection of all $W \\subset X$ open",
+          "new": "is over the collection of all $W \\subset X$ open",
+          "expected_count": 1,
+          "source_line": 4478,
+          "source_line_end": 4478,
+          "byte_start": 156837,
+          "byte_end_exclusive": 156881,
+          "old_sha256": "B5CA1821B4F3DDCE610C9A8DD50277BA79F75B87B4FBF25AFA8A5C133821AC29",
+          "new_sha256": "90BD6ADEEA0124873B9E4E67F198F4600A02F2679CBAB73301AD4D806C7AAAAA"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-070",
+      "stable_id": "MC-STK-ERR-0132",
+      "locus": "4486-4487",
+      "earliest_line": 4486,
+      "class": "substantive presheaf/sheaf functor mismatch",
+      "proof": "Part (4) concerns presheaf inverse image j_p, while part (5) concerns sheaf inverse image j^{-1}; one sheaf calculation cannot type both.",
+      "adverse_evidence": "Parallel section values make the proof idea recoverable.",
+      "operations": [
+        {
+          "old": "Parts (4) and (5) follow by computing\n$j^{-1}j_*\\mathcal{F}(V) = j_*\\mathcal{F}(V) = \\mathcal{F}(V)$.",
+          "new": "Part (4) follows by computing\n$j_pj_*\\mathcal{F}(V) = j_*\\mathcal{F}(V) = \\mathcal{F}(V)$,\nand part (5) follows from the same computation with $j^{-1}$.",
+          "expected_count": 1,
+          "source_line": 4486,
+          "source_line_end": 4487,
+          "byte_start": 157316,
+          "byte_end_exclusive": 157417,
+          "old_sha256": "742DFE94456B95895CB74906CA7CD432113C3CBF61697936710E23B04D2BC108",
+          "new_sha256": "D059B4E62229279536C18A749A612D4527428CED950B5F8DB93C07A68512EC6D"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-071",
+      "stable_id": "MC-STK-ERR-0133",
+      "locus": "4501-4505",
+      "earliest_line": 4503,
+      "class": "coordination/object-kind list",
+      "proof": "Moving 'on X' after all value kinds restores parallel typing.",
+      "adverse_evidence": "Ellipsis makes intent recoverable but the existing modifier attachment is ambiguous.",
+      "operations": [
+        {
+          "old": "Let $\\mathcal{G}$ be a sheaf of sets on $X$, abelian groups or\nalgebraic structures on $X$.",
+          "new": "Let $\\mathcal{G}$ be a sheaf of sets, abelian groups, or\nalgebraic structures on $X$.",
+          "expected_count": 1,
+          "source_line": 4503,
+          "source_line_end": 4504,
+          "byte_start": 157969,
+          "byte_end_exclusive": 158060,
+          "old_sha256": "3B2EA14EBE5AD41F8F2A7CB16FDDBBC9C656F62B8BDBA65D21549236215C9F1B",
+          "new_sha256": "2211B328003E5E33EEB1FE1FA21430AF0E56DC0157D0FACE5BF5251A7B2A5D69"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-073",
+      "stable_id": "MC-STK-ERR-0134",
+      "locus": "4566-4570,4705-4708,4749-4752,4796-4799,4905-4908",
+      "earliest_line": 4569,
+      "class": "substantive parenthesization/type",
+      "proof": "Each expression is the stalk of j_!F; the bare parse applies j_! to a stalk and can be undefined outside U.",
+      "adverse_evidence": "Expert precedence can recover intent, but the alternate visible parse is untypeable.",
+      "operations": [
+        {
+          "old": "j_{!}\\mathcal{F}_x",
+          "new": "(j_{!}\\mathcal{F})_x",
+          "expected_count": 1,
+          "source_line": 4569,
+          "source_line_end": 4569,
+          "byte_start": 160282,
+          "byte_end_exclusive": 160300,
+          "old_sha256": "C1A23747158CDD638BF89CCDB2B7FD7DF0C60D301B605F00D046AE24A37DF295",
+          "new_sha256": "3BB3DC494BF220115A6307E21E2BEA14048D3E2DAFBDCDEB9F0DBCB8CF3F59DF"
+        },
+        {
+          "old": "j_{!}\\mathcal{F}_x",
+          "new": "(j_{!}\\mathcal{F})_x",
+          "expected_count": 1,
+          "source_line": 4707,
+          "source_line_end": 4707,
+          "byte_start": 165573,
+          "byte_end_exclusive": 165591,
+          "old_sha256": "C1A23747158CDD638BF89CCDB2B7FD7DF0C60D301B605F00D046AE24A37DF295",
+          "new_sha256": "3BB3DC494BF220115A6307E21E2BEA14048D3E2DAFBDCDEB9F0DBCB8CF3F59DF"
+        },
+        {
+          "old": "j_{!}\\mathcal{F}_x",
+          "new": "(j_{!}\\mathcal{F})_x",
+          "expected_count": 1,
+          "source_line": 4751,
+          "source_line_end": 4751,
+          "byte_start": 166840,
+          "byte_end_exclusive": 166858,
+          "old_sha256": "C1A23747158CDD638BF89CCDB2B7FD7DF0C60D301B605F00D046AE24A37DF295",
+          "new_sha256": "3BB3DC494BF220115A6307E21E2BEA14048D3E2DAFBDCDEB9F0DBCB8CF3F59DF"
+        },
+        {
+          "old": "j_{!}\\mathcal{F}_x",
+          "new": "(j_{!}\\mathcal{F})_x",
+          "expected_count": 1,
+          "source_line": 4798,
+          "source_line_end": 4798,
+          "byte_start": 168175,
+          "byte_end_exclusive": 168193,
+          "old_sha256": "C1A23747158CDD638BF89CCDB2B7FD7DF0C60D301B605F00D046AE24A37DF295",
+          "new_sha256": "3BB3DC494BF220115A6307E21E2BEA14048D3E2DAFBDCDEB9F0DBCB8CF3F59DF"
+        },
+        {
+          "old": "j_!\\mathcal{F}_x",
+          "new": "(j_!\\mathcal{F})_x",
+          "expected_count": 1,
+          "source_line": 4907,
+          "source_line_end": 4907,
+          "byte_start": 171155,
+          "byte_end_exclusive": 171171,
+          "old_sha256": "04865884BD7EDF2A82F42F5DCFF8397586E4E9951053CFD5B13DDD980E00BE33",
+          "new_sha256": "415D6C1A3A94FCC213392E9F0E762594CE6AFAE9154FE3BB359B4A17175C6F7A"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-074",
+      "stable_id": "MC-STK-ERR-0135",
+      "locus": "4594-4595",
+      "earliest_line": 4595,
+      "class": "presheaf/sheaf object-kind conflation",
+      "proof": "The paired calculations concern one presheaf and one sheaf, so 'the sheaf' is false in the presheaf case.",
+      "adverse_evidence": "The section formula is shared, making the proof idea correct.",
+      "operations": [
+        {
+          "old": "value of the sheaf on any open of $U$.",
+          "new": "value of the relevant (pre)sheaf on any open of $U$.",
+          "expected_count": 1,
+          "source_line": 4595,
+          "source_line_end": 4595,
+          "byte_start": 161156,
+          "byte_end_exclusive": 161194,
+          "old_sha256": "8120E8728335476E6E3488DC6A4382721CC380327EAA2A9C16DA6AAAAD5EA27D",
+          "new_sha256": "F6A00CD27A86B9A4DE929E6F9D633CE96414FCCFB848C7CBA2E7D55D3D938189"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-080",
+      "stable_id": "MC-STK-ERR-0136",
+      "locus": "4599-4601,4605-4606",
+      "earliest_line": 4600,
+      "class": "punctuation",
+      "proof": "A comma cannot separate either full subject from its verb.",
+      "adverse_evidence": "Long subjects may invite a spoken pause but not this grammatical comma.",
+      "operations": [
+        {
+          "old": "$j_!\\mathcal{F}$ as\ndefined above, is not a sheaf",
+          "new": "$j_!\\mathcal{F}$ as\ndefined above is not a sheaf",
+          "expected_count": 1,
+          "source_line": 4600,
+          "source_line_end": 4601,
+          "byte_start": 161298,
+          "byte_end_exclusive": 161347,
+          "old_sha256": "7819B0CC82B8238BA81C46D0EC9D89BFB6C282ACE2FB602E9CA6D7E193F53350",
+          "new_sha256": "C51E579CA94982722EA22407F8F079B638BBE73C48602009A57EB4FD41459A6C"
+        },
+        {
+          "old": "extension by the empty set, is that it is the initial object",
+          "new": "extension by the empty set is that it is the initial object",
+          "expected_count": 1,
+          "source_line": 4606,
+          "source_line_end": 4606,
+          "byte_start": 161609,
+          "byte_end_exclusive": 161669,
+          "old_sha256": "4E7BEE412F42C408BF501FF18DDA8799D9EF0796531B375C935D06926FF43633",
+          "new_sha256": "457C68521454F51A6E8F45D2A1D791ED70013184467D454303FCE51BEC12F9B2"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-075",
+      "stable_id": "MC-STK-ERR-0137",
+      "locus": "4648-4651",
+      "earliest_line": 4650,
+      "class": "typographical",
+      "proof": "The attributive modifier must be the participle 'given'.",
+      "adverse_evidence": "None.",
+      "operations": [
+        {
+          "old": "(of the give type)",
+          "new": "(of the given type)",
+          "expected_count": 1,
+          "source_line": 4650,
+          "source_line_end": 4650,
+          "byte_start": 163179,
+          "byte_end_exclusive": 163197,
+          "old_sha256": "3A2E6D0AFD7FC0AA18090FA1B4C9EC95BDE0BEDCD43E3FA4490343810581D8EF",
+          "new_sha256": "E7A46ACAF3B2B650E791245200B1E2CD4D766BC2B7ECA4AB8CA28B844CC1E9BD"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-076",
+      "stable_id": "MC-STK-ERR-0138",
+      "locus": "4673-4676",
+      "earliest_line": 4675,
+      "class": "semantic-label typesetting",
+      "proof": "Bare word subscripts are products of italic variables rather than semantic labels.",
+      "adverse_evidence": "Readers can infer the labels visually, but the math subscripts remain malformed.",
+      "operations": [
+        {
+          "old": "$j_{!, rings}\\mathcal{O} \\not = j_{!, abelian}\\mathcal{O}$",
+          "new": "$j_{!, \\mathrm{rings}}\\mathcal{O} \\not = j_{!, \\mathrm{abelian}}\\mathcal{O}$",
+          "expected_count": 1,
+          "source_line": 4675,
+          "source_line_end": 4675,
+          "byte_start": 164355,
+          "byte_end_exclusive": 164413,
+          "old_sha256": "8805D574FABAE4D66782B39AA43ECB84BC68D055FA1B131D57D05BBE8291FB71",
+          "new_sha256": "1BD395FDD58798F9C3B6F698F77AB848A94B789A30F49BF818C15C67E6A7583B"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-077",
+      "stable_id": "MC-STK-ERR-0139",
+      "locus": "4731-4734",
+      "earliest_line": 4733,
+      "class": "number/established phrase",
+      "proof": "The established object-kind phrase is '(pre)sheaves of algebraic structures'.",
+      "adverse_evidence": "The singular is correct only in 'a type of algebraic structure', a different head.",
+      "operations": [
+        {
+          "old": "(pre)sheaves of algebraic structure",
+          "new": "(pre)sheaves of algebraic structures",
+          "expected_count": 1,
+          "source_line": 4733,
+          "source_line_end": 4733,
+          "byte_start": 166242,
+          "byte_end_exclusive": 166277,
+          "old_sha256": "EC4F1229A3A388F865015DDF31C133843613B77DA0056A5CAF5E480A009E54E5",
+          "new_sha256": "C1A0B47B045C003BCF9D7038CA8F859E79CABB9E2A95E1EBBDD23F481DD65D9A"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-078",
+      "stable_id": "MC-STK-ERR-0140",
+      "locus": "4773-4806",
+      "earliest_line": 4794,
+      "class": "substantive module-ring mismatch",
+      "proof": "On U the acting ring is O restricted to U, as the surrounding categories repeatedly state.",
+      "adverse_evidence": "Restriction bars are sometimes suppressed, but not in this local statement family.",
+      "operations": [
+        {
+          "old": "Let $\\mathcal{F}$ be a sheaf of $\\mathcal{O}$-modules on $U$.",
+          "new": "Let $\\mathcal{F}$ be a sheaf of $\\mathcal{O}|_U$-modules on $U$.",
+          "expected_count": 1,
+          "source_line": 4794,
+          "source_line_end": 4794,
+          "byte_start": 168044,
+          "byte_end_exclusive": 168105,
+          "old_sha256": "3D97DFD996774E7D17A6BB67EBE615C536FA969ED3E0564988DFB41F87267F4D",
+          "new_sha256": "C5F4CADCEF13D00A09D78B88BAE6361C84CC2811932D0808D3033F938B4302A5"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-079",
+      "stable_id": "MC-STK-ERR-0141",
+      "locus": "4835-4838",
+      "earliest_line": 4837,
+      "class": "wrong part of speech",
+      "proof": "The nominal property is 'full faithfulness'.",
+      "adverse_evidence": "'Fully faithful' remains correct in the adjacent adjectival predicate.",
+      "operations": [
+        {
+          "old": "Fully faithfulness",
+          "new": "Full faithfulness",
+          "expected_count": 1,
+          "source_line": 4837,
+          "source_line_end": 4837,
+          "byte_start": 169137,
+          "byte_end_exclusive": 169155,
+          "old_sha256": "61F58E3DA4DC66FBF47699EEDD01A0848D1787D0799A5A37E8A65A9C943304EC",
+          "new_sha256": "92BDE1E2AD1326FA5F3BBCB8029FAC7989DE9CC6E6187C2853DE517DCB20F5F7"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-046",
+      "stable_id": "MC-STK-ERR-0142",
+      "locus": "4940-4947,5041-5046",
+      "earliest_line": 4942,
+      "class": "substantive parenthesization/type",
+      "proof": "The intended object is the stalk of i_*F; the unparenthesized parse applies i_* to a stalk and is ill-typed.",
+      "adverse_evidence": "Expert precedence can recover intent, but the standard alternate parse is impossible.",
+      "operations": [
+        {
+          "old": "i_*\\mathcal{F}_x",
+          "new": "(i_*\\mathcal{F})_x",
+          "expected_count": 1,
+          "source_line": 4942,
+          "source_line_end": 4942,
+          "byte_start": 172246,
+          "byte_end_exclusive": 172262,
+          "old_sha256": "CFCFCC90014A32678EAE53EB1DF71588187D9957D1604A14F61AE506797E9763",
+          "new_sha256": "248C87126DD89B5F16F8751AA05D34D870B444D130889CA3980F747DEBFE2484"
+        },
+        {
+          "old": "i_*\\mathcal{F}_x",
+          "new": "(i_*\\mathcal{F})_x",
+          "expected_count": 1,
+          "source_line": 5045,
+          "source_line_end": 5045,
+          "byte_start": 175502,
+          "byte_end_exclusive": 175518,
+          "old_sha256": "CFCFCC90014A32678EAE53EB1DF71588187D9957D1604A14F61AE506797E9763",
+          "new_sha256": "248C87126DD89B5F16F8751AA05D34D870B444D130889CA3980F747DEBFE2484"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-047",
+      "stable_id": "MC-STK-ERR-0143",
+      "locus": "4990-4993",
+      "earliest_line": 4991,
+      "class": "wrong part of speech",
+      "proof": "The nominal property is 'full faithfulness'; 'fully' is adverbial.",
+      "adverse_evidence": "'Fully faithful' is correct only in an adjectival predicate.",
+      "operations": [
+        {
+          "old": "Fully faithfulness",
+          "new": "Full faithfulness",
+          "expected_count": 1,
+          "source_line": 4991,
+          "source_line_end": 4991,
+          "byte_start": 173823,
+          "byte_end_exclusive": 173841,
+          "old_sha256": "61F58E3DA4DC66FBF47699EEDD01A0848D1787D0799A5A37E8A65A9C943304EC",
+          "new_sha256": "92BDE1E2AD1326FA5F3BBCB8029FAC7989DE9CC6E6187C2853DE517DCB20F5F7"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-048",
+      "stable_id": "MC-STK-ERR-0144",
+      "locus": "5123-5135",
+      "earliest_line": 5134,
+      "class": "substantive undefined/ill-typed section",
+      "proof": "s_V is undefined and phi_V requires an element of F(V), namely s restricted to V.",
+      "adverse_evidence": "The file consistently uses s|_V and no local definition licenses s_V.",
+      "operations": [
+        {
+          "old": "\\varphi_V(s_{V})|_{V \\cap U_i}",
+          "new": "\\varphi_V(s|_V)|_{V \\cap U_i}",
+          "expected_count": 1,
+          "source_line": 5134,
+          "source_line_end": 5134,
+          "byte_start": 178381,
+          "byte_end_exclusive": 178411,
+          "old_sha256": "5A8D3AC80323717C69289F599DD4749B3E882F00156EAAAF90BC5B8CA0062D1E",
+          "new_sha256": "562A4719D069A679A5F5AB9A3EF9B5A0B9F1AC367F002154A6BBD03CEBDDBBCA"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-049",
+      "stable_id": "MC-STK-ERR-0145",
+      "locus": "5136-5140",
+      "earliest_line": 5138,
+      "class": "missing article/linking syntax",
+      "proof": "The singular count phrase 'open subset' lacks a determiner or copula.",
+      "adverse_evidence": "Postpositive 'U open' shorthand does not license adding bare 'subset'.",
+      "operations": [
+        {
+          "old": "since given $U \\subset X$ open subset",
+          "new": "since given an open subset $U \\subset X$",
+          "expected_count": 1,
+          "source_line": 5138,
+          "source_line_end": 5138,
+          "byte_start": 178493,
+          "byte_end_exclusive": 178530,
+          "old_sha256": "F1F48179B1D14CFAC8D9E49544DFF7C07CC168B86B946EBB20B73BA2DFD8C8F0",
+          "new_sha256": "7B572009D9DE744F5589770DEAA112EF195BF0E147E9D4CD46151FE15A8C6FCB"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-050",
+      "stable_id": "MC-STK-ERR-0146",
+      "locus": "5186-5189,5191-5197,5233-5238,5252-5259",
+      "earliest_line": 5188,
+      "class": "terminology/number",
+      "proof": "One gluing object is a datum; the source repeatedly combines singular articles/quantifiers with plural 'data'.",
+      "adverse_evidence": "Modern mass-noun use cannot license explicit 'a data'.",
+      "operations": [
+        {
+          "old": "a {\\it glueing data for sheaves of sets",
+          "new": "a {\\it glueing datum for sheaves of sets",
+          "expected_count": 1,
+          "source_line": 5188,
+          "source_line_end": 5188,
+          "byte_start": 179907,
+          "byte_end_exclusive": 179946,
+          "old_sha256": "3E0271589989614EBB51D80C6A0A89A3DF674D9A9C29D4C0DC6E3F626A7546FF",
+          "new_sha256": "9E333906738114E5B084EAF20B34C142F1A98C9ED96FA7EE92F47655702442D9"
+        },
+        {
+          "old": "Given any glueing data $(\\mathcal{F}_i, \\varphi_{ij})$",
+          "new": "Given any glueing datum $(\\mathcal{F}_i, \\varphi_{ij})$",
+          "expected_count": 1,
+          "source_line": 5195,
+          "source_line_end": 5195,
+          "byte_start": 180122,
+          "byte_end_exclusive": 180176,
+          "old_sha256": "CE0786AAAF44A897E9D4767E7E23E49A1B77F2DD06AC2C757A7479279D4BCE14",
+          "new_sha256": "3D926AB00CC39A8C8B5D7A153205C20CEC81B05EE95F52786A83722132195061"
+        },
+        {
+          "old": "of a glueing data",
+          "new": "of a glueing datum",
+          "expected_count": 1,
+          "source_line": 5236,
+          "source_line_end": 5236,
+          "byte_start": 181479,
+          "byte_end_exclusive": 181496,
+          "old_sha256": "1D7E35F1EED614279EBA7CE6213C5BAA7EAD87EE68D3B056158D44E3FAF2D079",
+          "new_sha256": "3EF00E8BB4F4027979F9960CE60269B227CD02C175080FBBF6FED10A46C3ED88"
+        },
+        {
+          "old": "be a glueing data",
+          "new": "be a glueing datum",
+          "expected_count": 1,
+          "source_line": 5256,
+          "source_line_end": 5256,
+          "byte_start": 182480,
+          "byte_end_exclusive": 182497,
+          "old_sha256": "B093113E2F831A044049298BBE7E700F8762267EF13FDDA9956F74770486B2A2",
+          "new_sha256": "500DBABFE15E7CEB836707CE0B68217C35341D96293F8241492C48C750CA3847"
+        }
+      ]
+    },
+    {
+      "producer_id": "SHEAVES-051",
+      "stable_id": "MC-STK-ERR-0147",
+      "locus": "5224-5228",
+      "earliest_line": 5225,
+      "class": "spurious article",
+      "proof": "After 'by', the gerund directly introduces the means; 'the' has no head.",
+      "adverse_evidence": "None.",
+      "operations": [
+        {
+          "old": "are defined by the restricting\neach of the $s_i$",
+          "new": "are defined by restricting\neach of the $s_i$",
+          "expected_count": 1,
+          "source_line": 5225,
+          "source_line_end": 5226,
+          "byte_start": 180992,
+          "byte_end_exclusive": 181040,
+          "old_sha256": "AA4CC24A5035CA226D6D2C37913566FA013BFC29DE7BC18531BF527E06AB983D",
+          "new_sha256": "016E29E7526520316788960F2A1A542D10D8C981221F581BC50511F3EB6530E7"
+        }
+      ]
+    }
+  ]
+}

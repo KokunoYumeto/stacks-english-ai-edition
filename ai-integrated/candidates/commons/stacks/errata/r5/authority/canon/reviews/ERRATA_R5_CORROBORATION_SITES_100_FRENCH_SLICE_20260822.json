@@ -1,0 +1,35 @@
+{
+  "schema": "stacks-canon-errata-corroboration-receipt/v1",
+  "observed_at_utc": "2026-08-22T06:51:21Z",
+  "authority": {
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "path": "sites.tex",
+    "bytes": 424197,
+    "sha256": "07AE4690C2D8EB6873837D3D14A37F07408BB14F9E0BE6077ED570C220B1845D",
+    "locus": "line 11503",
+    "defective_text": "Categories, Lemma {categories-lemma-functorial-colimit}."
+  },
+  "french_active_slice": {
+    "path": "<LOCAL_WORKSPACE>/03_projects/language_management/romance/03_working_translations/stacks_fr_20260821/p01/draft/sites.part-q.fr.tex",
+    "bytes": 15132,
+    "sha256": "F513BBE350CB234F119A0C72B6A242B3FE3BD401F63282AAA14487059F9F2D11",
+    "locus": "line 65",
+    "reader_text": "Categories, lemme \\ref{categories-lemma-functorial-colimit}.",
+    "source_identity_preserved_in_producer_evidence": true
+  },
+  "disposition": {
+    "kind": "exact_duplicate_corroboration_with_locale_reader_emendation",
+    "alias_of_producer_id": "SITES-100",
+    "provisional_stable_id": "MC-STK-ERR-0251",
+    "new_unit_created": false,
+    "canon_correction_surface": "Stacks — English AI Edition R5 candidate",
+    "frozen_authority_mutated": false,
+    "cjk_canonical_translation_mutated": false,
+    "upstream_contacted": false
+  },
+  "prior_dedup_receipt": {
+    "path": "ERRATA_R5_DUPLICATE_SITES_100_20260822.json",
+    "bytes": 1399,
+    "sha256": "941E9B1D405A2B4FBDFE34DFE2911DD3F0A8D7FB78471B301214FCA92E43421C"
+  }
+}

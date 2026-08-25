@@ -1,0 +1,506 @@
+{
+  "schema": "mathematics-commons-stacks-independent-review/v1",
+  "candidate_id": "stacks-errata-a04446e-r4",
+  "namespace": "commons/stacks/errata/r4",
+  "lease_id": "stacks-lease-000007-errata-r4",
+  "reviewer_role": "independent adverse replay separate from the producer and registrar",
+  "completed_at_utc": "2026-08-22T06:17:16Z",
+  "verdict": "PASS",
+  "passed": true,
+  "scope": {
+    "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+    "candidate_root": "candidates/commons/stacks/errata/r4",
+    "fresh_replay_root_label": "R4_INDEPENDENT_REPLAY_0063_0216_A1",
+    "candidate_writes": [
+      "replay/independent-review.json"
+    ],
+    "payload_or_authority_mutated": false,
+    "source_map_or_config_mutated": false,
+    "scripts_or_existing_evidence_mutated": false,
+    "git_used": false,
+    "network_used": false,
+    "upstream_contacted": false
+  },
+  "pre_review_state": {
+    "manifest": {
+      "path": "candidate.manifest.json",
+      "bytes": 14820,
+      "sha256": "B1D6C936C6E95BAD1E57BC0DC47876ED8F1B26BE89DE1AC4443BFD1399C3EA9C"
+    },
+    "manifest_independent_replay": "not_performed",
+    "files_before_receipt": 79,
+    "manifest_closure": {
+      "passed": true,
+      "referenced_files": 78,
+      "unreferenced_files": 0,
+      "missing_files": 0,
+      "hash_mismatches": 0,
+      "checked_before_receipt_existed": true
+    },
+    "producer_validation": {
+      "path": "builds/validation.json",
+      "bytes": 3841,
+      "sha256": "29ED18E85D1C93427BDF71A22669E15CBAF69208A18A82FE3B65D16260F992A7"
+    },
+    "producer_build_execution": {
+      "path": "builds/build-execution.json",
+      "bytes": 18914,
+      "sha256": "6DB5ADE57BA8271A640F84F57850BF3166434116D4FBD8787F2BA3BC7AB643E4"
+    },
+    "producer_build_receipt": {
+      "path": "builds/build-receipt.json",
+      "bytes": 24946,
+      "sha256": "9CA55F16037D8A6732DBA4160E45468924F609E5E5F4313F75D8E19D3E7FA5C1"
+    },
+    "producer_visual_qa": {
+      "path": "builds/visual-qa.json",
+      "bytes": 20247,
+      "sha256": "CA484B8F9A1DBE93B1D7D7053BAEB735F9C6A5F9D1CA1B95027B726B2EEF1261"
+    }
+  },
+  "tools": {
+    "candidate_scripts": [
+      {
+        "path": "check-manifest.py",
+        "bytes": 1992,
+        "sha256": "3FD015892F991E1FCA85953C568317955FC0C2C18CABEA64F842CB4CE1FD1A0E"
+      },
+      {
+        "path": "verify.py",
+        "bytes": 13065,
+        "sha256": "FA9831197BD9BE70034B3712BF7A23B21390A2E711285040D773E50F97BCECF3"
+      },
+      {
+        "path": "replay-build.py",
+        "bytes": 9764,
+        "sha256": "7DF4658B20C03353631DC20A39821231AC185790694DF0B394C38D29C7876FD8"
+      },
+      {
+        "path": "build-receipt.py",
+        "bytes": 6311,
+        "sha256": "1015D38B7158E77FDDBF31AA2F7F34256C1BD954868949C98AB727CCADA95F23"
+      },
+      {
+        "path": "visual-qa.py",
+        "bytes": 9238,
+        "sha256": "3036B97167A6180778BAB423B98103F360E64C9FC1180048DCE61850E83BFA45"
+      }
+    ],
+    "independent_helpers": [
+      {
+        "label": "check_fresh_outputs.py",
+        "bytes": 13050,
+        "sha256": "EEC1BAA83872CBBF9C0955F27AB267832D252BE5B9C24020B408845E921EE0B7"
+      },
+      {
+        "label": "make_visual_evidence.py",
+        "bytes": 6184,
+        "sha256": "BF6C0F722A2AB67CB864C0489D5E2B4840ACCB9AA3969F89F0C3D7DBC4E0700A"
+      }
+    ],
+    "toolchain": {
+      "python": "3.13.9 | packaged by Anaconda, Inc. | MSC v.1929 64 bit",
+      "pdflatex": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5)",
+      "bibtex": "MiKTeX-BibTeX 4.2 (MiKTeX 26.5)",
+      "poppler_pdftoppm": "24.04.0",
+      "poppler_pdfinfo": "24.04.0"
+    }
+  },
+  "authority_and_evidence": {
+    "passed": true,
+    "manifested_authority_evidence_files": 32,
+    "files_with_hash_mismatch": 0,
+    "candidate_authority_files_byte_identical_to_frozen_upstream": true,
+    "upstream_lock": {
+      "path": "authority/upstream.lock.json",
+      "bytes": 1171,
+      "sha256": "B195ECC83AB0F32C574A60D1FDBA9B0DA4D35B04E0DF7CB106DC9C0FDAD99C0D"
+    },
+    "license_witness": {
+      "path": "authority/COPYING",
+      "bytes": 20404,
+      "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"
+    },
+    "authority_sources": {
+      "topology": {
+        "bytes": 237731,
+        "sha256": "C6BAC8DCF8AD96DC47416BF34CB45BA4A10B894E40D67D3E1FA68D8EF0D9F872"
+      },
+      "sheaves": {
+        "bytes": 184841,
+        "sha256": "AC4F9EDC7DB85E66329806EC9EA42816187A469772844BAEA663E1C9A9F00B38"
+      },
+      "sites": {
+        "bytes": 424197,
+        "sha256": "07AE4690C2D8EB6873837D3D14A37F07408BB14F9E0BE6077ED570C220B1845D"
+      }
+    }
+  },
+  "candidate_control_artifacts": {
+    "candidate_config": {
+      "bytes": 11621,
+      "sha256": "D5DE86A0BE1F674F489FFF55363F0AF0E7602BC40EA66D3914794020AF9FEAF5"
+    },
+    "stable_units": {
+      "bytes": 49427,
+      "sha256": "6A6DDB05377864E2DCA0AB274D94F911ADF511CA3BACD242D66735B0F11E7B0A"
+    },
+    "source_map": {
+      "bytes": 202417,
+      "sha256": "059EF47079B1E798A9C85DE69E093CDFDC9A792E1F56B0A6C285311A3B5DE3ED"
+    },
+    "decisions": {
+      "bytes": 2246,
+      "sha256": "1149EB42D548B1B17EE2BE0F3A753527932A22BC7B6F8ABC78B7CB651E4CA14B"
+    },
+    "rejections": {
+      "bytes": 5561,
+      "sha256": "3742653846A63F602ABBF4693C1F9916EFB13C15C620042F2755D9ADC596D238"
+    },
+    "formula_diagram_inventory": {
+      "bytes": 4151,
+      "sha256": "29058E9D5B5D2CEC01CBAE9685B5269FF306C84711195354BEBFFF44F4095CAA"
+    }
+  },
+  "exact_replay": {
+    "passed": true,
+    "stable_units": 154,
+    "stable_id_first": "MC-STK-ERR-0063",
+    "stable_id_last": "MC-STK-ERR-0216",
+    "stable_ids_contiguous": true,
+    "producer_identities_unique": true,
+    "operations": 189,
+    "operation_ids_unique": true,
+    "authority_spans_half_open_and_exact": true,
+    "old_and_new_bytes_and_hashes_exact": true,
+    "occurrence_counts_exact": true,
+    "overlapping_operations": 0,
+    "descending_operation_replay_byte_identical_to_payload": true,
+    "family_mapping_files_match_source_map": true,
+    "files": {
+      "topology": {
+        "units": 14,
+        "operations": 15,
+        "authority_bytes": 237731,
+        "authority_sha256": "C6BAC8DCF8AD96DC47416BF34CB45BA4A10B894E40D67D3E1FA68D8EF0D9F872",
+        "payload_bytes": 237976,
+        "payload_sha256": "3930165144FC253AD47EB55B6E3FD81AD9996D9C4A8FFFB515116988492DCB73",
+        "structure": {
+          "labels": 263,
+          "references": 270,
+          "citations": 20,
+          "environment_events": 916,
+          "sections": 29,
+          "xymatrix": 3,
+          "display_delimiter_delta": 2,
+          "mapped_exceptions_exact": true
+        }
+      },
+      "sheaves": {
+        "units": 71,
+        "operations": 90,
+        "authority_bytes": 184841,
+        "authority_sha256": "AC4F9EDC7DB85E66329806EC9EA42816187A469772844BAEA663E1C9A9F00B38",
+        "payload_bytes": 185216,
+        "payload_sha256": "4BE9C5E7F7E5DD7E66980439856D1385188AE49CB7236822CD88259534837E51",
+        "structure": {
+          "labels": 162,
+          "references": 190,
+          "citations": 1,
+          "environment_events": 576,
+          "sections": 33,
+          "xymatrix": 22,
+          "display_delimiter_delta": 0,
+          "mapped_exceptions_exact": true
+        }
+      },
+      "sites": {
+        "units": 69,
+        "operations": 84,
+        "authority_bytes": 424197,
+        "authority_sha256": "07AE4690C2D8EB6873837D3D14A37F07408BB14F9E0BE6077ED570C220B1845D",
+        "payload_bytes": 424285,
+        "payload_sha256": "42A020E458451BDD9EC704813D50A435DC47F2B6778830AF49FC22FE57308DE4",
+        "structure": {
+          "labels": 332,
+          "references": 660,
+          "citations": 24,
+          "environment_events": 1162,
+          "sections": 52,
+          "xymatrix": 99,
+          "display_delimiter_delta": 0,
+          "mapped_exceptions_exact": true,
+          "citation_exception": "SITES-061 changes the SGA4 citation from Expose III to Expose IV exactly as configured."
+        }
+      }
+    },
+    "formula_inventory": {
+      "formula_units": 112,
+      "prose_only_units": 42,
+      "diagram_units": 0,
+      "partition_exact": true,
+      "unmapped_payload_changes": 0
+    }
+  },
+  "excluded_and_adverse_candidates": {
+    "passed": true,
+    "decision_rows": 6,
+    "rejected_hypotheses": 16,
+    "duplicate_aliases": 2,
+    "deferred_or_unresolved_dispositions": 0,
+    "rejected_producer_ids": [
+      "TOPOLOGY-037",
+      "TOPOLOGY-038",
+      "TOPOLOGY-040",
+      "SHEAVES-001",
+      "SHEAVES-015",
+      "SHEAVES-021",
+      "SHEAVES-022",
+      "SHEAVES-023",
+      "SHEAVES-053",
+      "SHEAVES-056",
+      "SHEAVES-057",
+      "SHEAVES-072",
+      "SITES-003",
+      "SITES-034",
+      "SITES-039",
+      "SITES-063"
+    ],
+    "rejection_reasons_nonempty_and_source_context_reviewed": true,
+    "rejected_identities_absent_from_applied_units": true,
+    "duplicate_alias_map": {
+      "SITES-041": "SITES-011",
+      "SITES-042": "SITES-013"
+    },
+    "producer_identity_closure": 172,
+    "producer_identity_closure_exact": true,
+    "sites_073_counterexample_replayed": {
+      "passed": true,
+      "coequalize_then_square_classes": 1,
+      "square_then_coequalize_classes": 3,
+      "conclusion": "The arbitrary-coequalizer-preservation claim is false; the candidate's bounded deletion is justified."
+    }
+  },
+  "fresh_build": {
+    "passed": true,
+    "fresh_candidate_copy_used": true,
+    "fresh_work_root_removed_after_success": true,
+    "execution": {
+      "bytes": 18914,
+      "sha256": "293AD153C812227B89CCF25F70211FFF833DFF062BB6922A337E0257910B07A2"
+    },
+    "receipt": {
+      "bytes": 24946,
+      "sha256": "8DEF78A30EF93924EBBFF079F0D7B503BBCDF369FF6ADD5FBF10D56B4BCC9730"
+    },
+    "structural_qa": {
+      "bytes": 29735,
+      "sha256": "36DBC6215A4D44EE92B47BE0A9037C82D722441DF8AAFE123A74CE25C2D1BDFD"
+    },
+    "pdfs_byte_identical_to_producer": 6,
+    "non_log_build_outputs_byte_identical_to_producer": 18,
+    "public_logs_byte_identical_to_producer": 0,
+    "public_log_difference_disposition": "Expected later build-clock header only; parsed diagnostics match semantically.",
+    "chapters": {
+      "topology": {
+        "candidate_pdf": {
+          "bytes": 776502,
+          "sha256": "08600BB6D7CD2D01C089B7DE39FA786C21FA3E5D0227D8B24AB26E9F01F59DED",
+          "pages": 64
+        },
+        "authority_pdf": {
+          "bytes": 776439,
+          "sha256": "EBAD65F2C37B77F025724DD62C2F0F391C358BA65FA6F07C111324D589C8BC6E",
+          "pages": 64
+        },
+        "candidate_log": {
+          "bytes": 49889,
+          "sha256": "F05845681C7C229D994C5AA749F35C1B304CCDB2D19EBCA75D4E8A3C90E5F5C7"
+        },
+        "authority_log": {
+          "bytes": 49889,
+          "sha256": "5886BEB8FE39C78BF62D8E84DAFB4669E7036EE81B0A4B4B36EB4E540DEF642A"
+        },
+        "candidate_raw_log": {
+          "bytes": 50237,
+          "sha256": "F49836CB518839153F5D87614306D4B13360F0162F94A62ECA092F667A676AC3"
+        },
+        "authority_raw_log": {
+          "bytes": 50237,
+          "sha256": "9DFC07B68DF41166991FD7B44F724304E89FD795BEE4F59369C614031EAB4EC3"
+        },
+        "diagnostics": {
+          "fatal_errors_each": 0,
+          "missing_glyphs_each": 0,
+          "undefined_citations_each": 0,
+          "undefined_reference_occurrences_each": 58,
+          "undefined_reference_unique_targets_each": 52,
+          "undefined_target_multisets_match": true,
+          "overfull_boxes_each": 4,
+          "underfull_boxes_each": 0
+        },
+        "pdf_structure": {
+          "fonts_each": 23,
+          "unembedded_fonts_each": 0,
+          "unsubset_fonts_each": 0,
+          "fonts_without_tounicode_each": 0,
+          "link_annotations_each": 304,
+          "malformed_link_rectangles_each": 0,
+          "out_of_bounds_link_rectangles_each": 0,
+          "page_box_points": [0, 0, 612, 792],
+          "tagged_pdf": false
+        }
+      },
+      "sheaves": {
+        "candidate_pdf": {
+          "bytes": 646236,
+          "sha256": "82735EA8B30BB6F4180C39F08E24B60FB2BF543E9D4748C191A166B82D34EA19",
+          "pages": 54
+        },
+        "authority_pdf": {
+          "bytes": 644271,
+          "sha256": "6ED46B5D7121B736F52BF99768B22EB0CD83083EF693E3C23C4657CAA9130BDD",
+          "pages": 53
+        },
+        "candidate_log": {
+          "bytes": 49915,
+          "sha256": "06DD8DDBC9501187EADF74D5EF7E55CFAC9071EB7C54F1E447A38D63DFDB8A68"
+        },
+        "authority_log": {
+          "bytes": 49911,
+          "sha256": "4EA1DD7FCEE82D81D7519ED68273AAFC54BE9D1795E9065B0C45ED5AEA9A7EC3"
+        },
+        "candidate_raw_log": {
+          "bytes": 50279,
+          "sha256": "94D98D98BF443CA95966B5514467B007C397B4C26010F8E4750CDCE44788C629"
+        },
+        "authority_raw_log": {
+          "bytes": 50275,
+          "sha256": "5E3279BA25B96D6948975E7B7721AF6AA13E3FC6B1AC69E1DA0C445B6D87438F"
+        },
+        "diagnostics": {
+          "fatal_errors_each": 0,
+          "missing_glyphs_each": 0,
+          "undefined_citations_each": 0,
+          "undefined_reference_occurrences_each": 51,
+          "undefined_reference_unique_targets_each": 50,
+          "undefined_target_multisets_match": true,
+          "overfull_boxes_each": 1,
+          "underfull_boxes_each": 1
+        },
+        "pdf_structure": {
+          "fonts_each": 24,
+          "unembedded_fonts_each": 0,
+          "unsubset_fonts_each": 0,
+          "fonts_without_tounicode_each": 0,
+          "link_annotations_each": 207,
+          "malformed_link_rectangles_each": 0,
+          "out_of_bounds_link_rectangles_each": 0,
+          "page_box_points": [0, 0, 612, 792],
+          "tagged_pdf": false
+        }
+      },
+      "sites": {
+        "candidate_pdf": {
+          "bytes": 1167337,
+          "sha256": "4408C7EE0E2E611BA63C510D8F445F45987B9643D3CD8A2880DF20C701C1A720",
+          "pages": 114
+        },
+        "authority_pdf": {
+          "bytes": 1167556,
+          "sha256": "C53C463FEA57913C16BB91873F02EDE9062B034C612E339876F79444A21E338A",
+          "pages": 114
+        },
+        "candidate_log": {
+          "bytes": 59629,
+          "sha256": "462B4C50ABDB212B464F06A6A9B80C5977E13DBB6B1608E8454D65243EBD2D57"
+        },
+        "authority_log": {
+          "bytes": 59629,
+          "sha256": "2B1A37C39D90F5B04D096D8B613DBEF3383CFC63FDC7076AD8DB5D803731850B"
+        },
+        "candidate_raw_log": {
+          "bytes": 60025,
+          "sha256": "E0C8FA8629F0D016F1F0E5C1CB36D8DC2896D893AFD244CE72FACE2FF65B63C2"
+        },
+        "authority_raw_log": {
+          "bytes": 60025,
+          "sha256": "6EC33D9F4838F92AD392F0597CB60FF5B4C9C77295353DFD936CA3119924901E"
+        },
+        "diagnostics": {
+          "fatal_errors_each": 0,
+          "missing_glyphs_each": 0,
+          "undefined_citations_each": 0,
+          "undefined_reference_occurrences_each": 77,
+          "undefined_reference_unique_targets_each": 67,
+          "undefined_target_multisets_match": true,
+          "overfull_boxes_each": 3,
+          "underfull_boxes_each": 2
+        },
+        "pdf_structure": {
+          "fonts_each": 31,
+          "unembedded_fonts_each": 0,
+          "unsubset_fonts_each": 0,
+          "fonts_without_tounicode_each": 0,
+          "link_annotations_each": 660,
+          "malformed_link_rectangles_each": 0,
+          "out_of_bounds_link_rectangles_each": 0,
+          "page_box_points": [0, 0, 612, 792],
+          "tagged_pdf": false
+        }
+      }
+    }
+  },
+  "fresh_visual_review": {
+    "passed": true,
+    "render_manifest": {
+      "bytes": 55380,
+      "sha256": "45C3DDB250206A7E0011FD34604117EBF828455DE689BE58605103066C1CC369"
+    },
+    "candidate_pages_rendered": 232,
+    "candidate_pages_manually_inspected": 232,
+    "contact_sheets_rendered_and_inspected": 16,
+    "high_resolution_pages_rendered_and_inspected": 16,
+    "high_resolution_pages": {
+      "topology": [1, 18, 23, 36, 64],
+      "sheaves": [1, 36, 53, 54],
+      "sites": [1, 13, 50, 79, 89, 113, 114]
+    },
+    "findings": {
+      "clipping": 0,
+      "overlap": 0,
+      "blank_or_duplicate_pages": 0,
+      "broken_diagrams": 0,
+      "missing_glyphs": 0,
+      "unreadable_content": 0,
+      "warning_loci_outside_printable_area": 0,
+      "sheaves_page_54": "One readable, unclipped bibliography entry; intentionally sparse and not blank."
+    }
+  },
+  "public_hygiene": {
+    "passed": true,
+    "candidate_text_or_code_files_independently_scanned": 65,
+    "absolute_local_path_markers": 0,
+    "username_markers": 0,
+    "symlinks": 0,
+    "python_cache_files": 0,
+    "credential_material_detected": false
+  },
+  "adverse_evidence": [
+    "Standalone chapter builds intentionally retain external cross-chapter undefined-reference targets. Candidate and authority occurrence and target multisets are exact matches, but a cumulative build remains responsible for resolving them.",
+    "All six PDFs are untagged and contain neither StructTreeRoot nor MarkInfo. Fonts are embedded, subset, and carry ToUnicode maps, so this is an accessibility-structure limitation rather than a visible-render failure.",
+    "The corrected sheaves payload reflows from 53 authority pages to 54 candidate pages. Full rendering shows the added final page is a readable, unclipped bibliography continuation.",
+    "Fresh public TeX logs are not byte-identical to producer logs because of later build-clock header material. Parsed diagnostics are semantically identical; all six PDFs and all 18 non-log outputs are byte-identical.",
+    "This receipt reviews only frozen R4 MC-STK-ERR-0063..0216. Later candidate families or a future R5 are outside its scope.",
+    "This is an independent mechanical, source-binding, proof-evidence, build, and rendered-page review. It is not legal certification, upstream approval, affiliation, or endorsement."
+  ],
+  "post_receipt_rebinding_required": {
+    "required": true,
+    "reason": "The pre-review manifest and producer validation were correctly verified before this receipt existed and therefore still record independent_replay as not_performed.",
+    "registrar_next_action": "Add replay/independent-review.json to candidate.manifest.json with its final byte count and SHA-256, set independent_replay to passed, then regenerate validation and re-run complete manifest closure.",
+    "expected_intermediate_state": "Until that registrar rebind occurs, the original pre-review manifest intentionally does not close over this newly authorized receipt.",
+    "invalidation_rule": "Any change to authority, payload, stable units, source map, configuration, scripts, evidence, or existing build artifacts invalidates this receipt and requires a fresh independent replay. Registrar-only manifest and validation rebinding to this exact receipt is expected."
+  },
+  "verdict_basis": "PASS: exact manifest/evidence closure was proved before the receipt existed; all 154 stable units and 189 operations replay the frozen authority to the three payloads exactly; rejected and duplicate identities are closed and defensible; fresh authority and candidate builds pass with matching diagnostics; all 232 candidate pages were rendered and manually inspected; and no payload drift, link-bound failure, font embedding/ToUnicode failure, private-path leakage, or unrecorded change was found."
+}

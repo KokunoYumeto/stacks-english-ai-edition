@@ -1,0 +1,192 @@
+{
+  "accepted": [
+    {
+      "disposition": "Restrict the N-2 localization claim to f_i outside the prime and state that the surviving images still generate the unit ideal.",
+      "producer_id": "ALGEBRA-372",
+      "stable_id": "MC-STK-ERR-0715"
+    },
+    {
+      "disposition": "Correct a R-completion-submodule to an R-completion-submodule.",
+      "producer_id": "ALGEBRA-373",
+      "stable_id": "MC-STK-ERR-0716"
+    },
+    {
+      "disposition": "Split off the field case p=m and use one fixed g in m minus p to rescale the field generators.",
+      "producer_id": "ALGEBRA-374",
+      "stable_id": "MC-STK-ERR-0717"
+    },
+    {
+      "disposition": "Remove the unjustified normality restriction from the arbitrary Nagata-domain reduction.",
+      "producer_id": "ALGEBRA-375",
+      "stable_id": "MC-STK-ERR-0718"
+    },
+    {
+      "disposition": "Insert the missing subject we in the replacement clause.",
+      "producer_id": "ALGEBRA-376",
+      "stable_id": "MC-STK-ERR-0719"
+    },
+    {
+      "disposition": "Use R[X] for the polynomial indeterminate rather than R[x], where x is the fixed element.",
+      "producer_id": "ALGEBRA-377",
+      "stable_id": "MC-STK-ERR-0720"
+    },
+    {
+      "disposition": "Restrict the maximal-ideal quantifier to maximal ideals of S' lying over the fixed maximal ideal.",
+      "producer_id": "ALGEBRA-378",
+      "stable_id": "MC-STK-ERR-0721"
+    },
+    {
+      "disposition": "Dispose of x=0 before invoking a criterion requiring x nonzero.",
+      "producer_id": "ALGEBRA-379",
+      "stable_id": "MC-STK-ERR-0722"
+    },
+    {
+      "disposition": "Insert the missing plus sign after the ellipsis in the polynomial.",
+      "producer_id": "ALGEBRA-380",
+      "stable_id": "MC-STK-ERR-0723"
+    },
+    {
+      "disposition": "Prove B is local from its one-prime special fibre and identify the maximal-adic and mB-adic topologies before applying the completion lemma.",
+      "producer_id": "ALGEBRA-381",
+      "stable_id": "MC-STK-ERR-0724"
+    }
+  ],
+  "authority": {
+    "bytes": 1771230,
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "mutated": false,
+    "path": "authority/source/algebra.tex",
+    "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3",
+    "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e"
+  },
+  "bounded_source": {
+    "bytes": 28159,
+    "end_line": 46292,
+    "physical_lines": 678,
+    "sha256": "7EE388DC745953A3E73FA4BE0FAD4E36604DE593AD25EA6A2BE1FEA332783CF7",
+    "start_line": 45615
+  },
+  "candidate_id": "stacks-errata-a04446e-r10",
+  "closure": {
+    "accepted_units": 10,
+    "aliases": 0,
+    "first_stable_id": "MC-STK-ERR-0715",
+    "last_stable_id": "MC-STK-ERR-0724",
+    "operations": 11,
+    "producer_rows": 10,
+    "rejected_units": 0,
+    "unresolved_units": 0
+  },
+  "corrected_bounded_replay": {
+    "bytes": 28793,
+    "old_spans_unique_in_declared_lines": true,
+    "operations_nonoverlapping": true,
+    "sha256": "4CE11C4323AB8CB308310592D1431D42C3B55BF61955B7025B13633E70D436F7"
+  },
+  "external_checkpoint": {
+    "bytes": 9007,
+    "sanitized_for_publication": true,
+    "sha256": "8AF92DA78A8DD02BBB5FD8224DD1DD864AA65D7FFDE0076C663859B95F18EFA0"
+  },
+  "lease_commit": "0bfbae429e9786570d1f5491ce7d649cfc6b92e7",
+  "lease_id": "stacks-lease-000013-errata-r10",
+  "next_executable_action": "Freeze the exact authority and 362823-byte producer prefix under R10; materialize the ten accepted units and eleven ordered operations; validate structural replay and isolated authority/candidate builds; render and inspect every page plus changed bands; obtain independent replay; bind the final manifest; publish and anonymously read back every referenced byte; then admit R10 separately and issue R11.",
+  "operations": [
+    {
+      "old_text": "$\\mathfrak p \\subset R$ is a prime, then we see each\n$R_{f_i}/\\mathfrak pR_{f_i} = (R/\\mathfrak p)_{f_i}$ is N-2\nand hence we conclude $R/\\mathfrak p$ is N-2 by\nLemma \\ref{lemma-Japanese-local}. This proves (2).",
+      "producer_id": "ALGEBRA-372",
+      "replacement_text": "$\\mathfrak p \\subset R$ is a prime, then for every $i$ such that\n$f_i \\not \\in \\mathfrak p$ we see\n$R_{f_i}/\\mathfrak pR_{f_i} = (R/\\mathfrak p)_{f_i}$ is N-2.\nThe images of these $f_i$ in $R/\\mathfrak p$ generate the unit ideal, and\nhence we conclude $R/\\mathfrak p$ is N-2 by\nLemma \\ref{lemma-Japanese-local}. This proves (2).",
+      "source_end_line": 45751,
+      "source_start_line": 45748
+    },
+    {
+      "old_text": "is a $R^\\wedge$-submodule",
+      "producer_id": "ALGEBRA-373",
+      "replacement_text": "is an $R^\\wedge$-submodule",
+      "source_end_line": 45877,
+      "source_start_line": 45877
+    },
+    {
+      "old_text": "To prove (1) we have to show that the integral closure of $R/\\mathfrak p$\nis finite over $R/\\mathfrak p$. Choose $x_1, \\ldots, x_n \\in L$",
+      "producer_id": "ALGEBRA-374",
+      "replacement_text": "To prove (1) we have to show that the integral closure of $R/\\mathfrak p$\nis finite over $R/\\mathfrak p$. If $\\mathfrak p = \\mathfrak m$, then\n$R/\\mathfrak p$ is a field and the assertion is immediate. Thus we may\nassume $\\mathfrak p \\not = \\mathfrak m$ and choose\n$g \\in \\mathfrak m \\setminus \\mathfrak p$. Choose $x_1, \\ldots, x_n \\in L$",
+      "source_end_line": 46043,
+      "source_start_line": 46042
+    },
+    {
+      "old_text": "$a_{i, j} \\in R/\\mathfrak p$. In fact, after further multiplying\nby elements of $\\mathfrak m$, we may assume\n$a_{i, j} \\in \\mathfrak m/\\mathfrak p \\subset R/\\mathfrak p$ for all $i, j$.",
+      "producer_id": "ALGEBRA-374",
+      "replacement_text": "$a_{i, j} \\in R/\\mathfrak p$. After further replacing each $x_i$\nby $g x_i$, we may assume\n$a_{i, j} \\in \\mathfrak m/\\mathfrak p \\subset R/\\mathfrak p$ for all $i, j$.",
+      "source_end_line": 46051,
+      "source_start_line": 46049
+    },
+    {
+      "old_text": "Step 4. Let $R$ be a normal Nagata domain and",
+      "producer_id": "ALGEBRA-375",
+      "replacement_text": "Step 4. Let $R$ be a Nagata domain and",
+      "source_end_line": 46110,
+      "source_start_line": 46110
+    },
+    {
+      "old_text": "and $S$ by $S_a$, may assume",
+      "producer_id": "ALGEBRA-376",
+      "replacement_text": "and $S$ by $S_a$, we may assume",
+      "source_end_line": 46143,
+      "source_start_line": 46143
+    },
+    {
+      "old_text": "in $R[x]$ with",
+      "producer_id": "ALGEBRA-377",
+      "replacement_text": "in $R[X]$ with",
+      "source_end_line": 46144,
+      "source_start_line": 46144
+    },
+    {
+      "old_text": "Moreover, $S'$ is finite over $S$. If for every maximal ideal\n$\\mathfrak m'$ of $S'$ the local ring $S'_{\\mathfrak m'}$ is\nN-1, then $S'_{\\mathfrak m}$ is N-1 by",
+      "producer_id": "ALGEBRA-378",
+      "replacement_text": "Moreover, $S'$ is finite over $S$. If for every maximal ideal\n$\\mathfrak m'$ of $S'$ lying over $\\mathfrak m$ the local ring\n$S'_{\\mathfrak m'}$ is N-1, then $S'_{\\mathfrak m}$ is N-1 by",
+      "source_end_line": 46154,
+      "source_start_line": 46152
+    },
+    {
+      "old_text": "We have to show $S_{\\mathfrak m}$ is N-1.",
+      "producer_id": "ALGEBRA-379",
+      "replacement_text": "We have to show $S_{\\mathfrak m}$ is N-1. If $x = 0$, then $S = R$\nand there is nothing to prove. Thus we may and do assume $x \\not = 0$.",
+      "source_end_line": 46170,
+      "source_start_line": 46170
+    },
+    {
+      "old_text": "+ \\ldots a_1 X +",
+      "producer_id": "ALGEBRA-380",
+      "replacement_text": "+ \\ldots + a_1 X +",
+      "source_end_line": 46185,
+      "source_start_line": 46185
+    },
+    {
+      "old_text": "$B = A[x]/(x^p - a)$ is a domain because $K[x]/(x^p - a)$ is a field.",
+      "producer_id": "ALGEBRA-381",
+      "replacement_text": "$B = A[x]/(x^p - a)$ is a domain because $K[x]/(x^p - a)$ is a field.\nThe ring $B$ is local because its special fibre\n$B/\\mathfrak mB = \\kappa(\\mathfrak m)[x]/(x^p - \\overline{a})$ has a unique\nprime ideal. Moreover, the maximal-adic and $\\mathfrak mB$-adic topologies\non $B$ agree.",
+      "source_end_line": 46280,
+      "source_start_line": 46280
+    }
+  ],
+  "producer_snapshot": {
+    "bytes": 362823,
+    "data_rows": 786,
+    "duplicate_ids": 0,
+    "path": "authority/producer/SOURCE_DEFECT_LEDGER.csv",
+    "prior_r1_r9_matches": 0,
+    "selected_ids": "ALGEBRA-372..ALGEBRA-381",
+    "selected_rows": 10,
+    "sha256": "7D39EF5F7DF93048D66F39BF23392519B177C7FEF655844FE96D63699B217E5E"
+  },
+  "recorded_at_utc": "2026-08-24T14:40:00Z",
+  "schema": "stacks-canon-errata-intake-checkpoint/v1",
+  "terminal_condition": "R10 is complete only after independent replay, public immutable-commit byte readback, separate overlay-registry admission, and issuance of the R11 lease.",
+  "write_boundaries": {
+    "canonical_translations": "immutable unless separately rebased",
+    "editable_candidate": "candidates/commons/stacks/errata/r10 only",
+    "english_authority": "immutable",
+    "upstream_contact": "forbidden under the current no-AI-contribution boundary"
+  }
+}

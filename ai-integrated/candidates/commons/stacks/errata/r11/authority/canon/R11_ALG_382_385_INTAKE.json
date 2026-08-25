@@ -1,0 +1,96 @@
+{
+  "authority": {
+    "bytes": 1771230,
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "mutated": false,
+    "path": "authority/source/algebra.tex",
+    "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+  },
+  "bounded_source": {
+    "bytes": 11480,
+    "end_line": 46632,
+    "physical_lines": 340,
+    "sha256": "E138EFCEA9FE4CF091D0EF024B00EF1E9057528A82A5F7F62130BBF2C9BC2C1D",
+    "start_line": 46293
+  },
+  "closure": {
+    "accepted": 4,
+    "aliases": 0,
+    "expected_stable_ids_after_r10_admission": "MC-STK-ERR-0725..MC-STK-ERR-0728",
+    "operations": 5,
+    "rejected": 0,
+    "unresolved": 0
+  },
+  "corrected_bounded_replay": {
+    "balanced_braces": "189/189",
+    "balanced_environments": "31/31",
+    "bytes": 11647,
+    "old_spans_unique_in_declared_lines": true,
+    "operations_nonoverlapping": true,
+    "physical_lines": 342,
+    "sha256": "CFC3D05798E8ED569BF1CB6989719EA0DF2C7555248043A76F6776B20FF43FD2"
+  },
+  "external_checkpoint": {
+    "bytes": 3960,
+    "sanitized_for_publication": true,
+    "sha256": "C7F758F25DDA65107D7DCDAB2FE7BEE0320D132FFBDC4B83CBE6D064F1F40ECB"
+  },
+  "future_candidate_id": "stacks-errata-a04446e-r11",
+  "next_executable_action": "Complete and admit R10, issue the R11 lease, then rehash the exact producer prefix and materialize these four accepted units under R11.",
+  "operations": [
+    {
+      "old_text": "Denote $n$ the right hand side. First assume that $n$ is zero.",
+      "producer_id": "ALGEBRA-382",
+      "replacement_text": "If $M = 0$ or $N = 0$, then both sides of the formula are infinite,\nand there is nothing to prove. Thus we may assume that $M$ and $N$ are nonzero.\nDenote $n$ the right hand side. First assume that $n$ is zero.",
+      "source_end_line": 46321,
+      "source_start_line": 46321
+    },
+    {
+      "old_text": "\\item $S$ is Noetherian",
+      "producer_id": "ALGEBRA-383",
+      "replacement_text": "\\item $S$ is Noetherian,",
+      "source_end_line": 46464,
+      "source_start_line": 46464
+    },
+    {
+      "old_text": "\\item $S$ is Noetherian",
+      "producer_id": "ALGEBRA-383",
+      "replacement_text": "\\item $S$ is Noetherian,",
+      "source_end_line": 46493,
+      "source_start_line": 46493
+    },
+    {
+      "old_text": "However, since $R_0 \\subset R$ is reduced we see that",
+      "producer_id": "ALGEBRA-384",
+      "replacement_text": "However, since the subring $R_0 \\subset R$ is reduced, we see that",
+      "source_end_line": 46536,
+      "source_start_line": 46536
+    },
+    {
+      "old_text": "This follows from Lemma \\ref{lemma-Rk-goes-up} applied for all $(R_k)$",
+      "producer_id": "ALGEBRA-385",
+      "replacement_text": "This follows by applying Lemma \\ref{lemma-Rk-goes-up} for every $k \\geq 0$",
+      "source_end_line": 46623,
+      "source_start_line": 46623
+    }
+  ],
+  "predecessor_active_candidate": "stacks-errata-a04446e-r10",
+  "producer_snapshot": {
+    "bytes": 364895,
+    "data_rows": 790,
+    "duplicate_ids": 0,
+    "path": "authority/producer/SOURCE_DEFECT_LEDGER.csv",
+    "selected_ids": "ALGEBRA-382..ALGEBRA-385",
+    "selected_rows": 4,
+    "sha256": "EB78964BE8D50BD25BBBEF72A6F7B0960D925A039CFF04A255334D59F6952A02"
+  },
+  "recorded_at_utc": "2026-08-24T14:38:00Z",
+  "schema": "stacks-canon-errata-queue-checkpoint/v1",
+  "terminal_condition": "This queue checkpoint is superseded only by a manifest-complete, independently replayed, publicly read-back R11 candidate and its separate registry admission.",
+  "write_boundaries": {
+    "canonical_translations": "immutable unless separately rebased",
+    "english_authority": "immutable",
+    "materialization": "only after R10 admission and issuance of the R11 lease",
+    "upstream_contact": "forbidden under the current no-AI-contribution boundary"
+  }
+}
