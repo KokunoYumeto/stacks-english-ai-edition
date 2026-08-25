@@ -4097,8 +4097,10 @@ zero unresolved references, rerun notices, overfull boxes, and underfull
 boxes. Visual inspection of pages 65--71 finds no clipping, collision,
 malformed formula, or unreadable text.
 
-The FGA-only review head was normalized separately at
-a7346f6a6a49aa755b1b00ecfacb94ac2dd8d263 so upstream draft PR 196 remains
-FGA-only. The combined branch records that head as an ancestor at
-660cec909417104b3a6448cb837e9829092314d8 without replacing its refreshed
-multi-corpus index and map artifacts.
+The FGA-only fork branch was normalized separately at
+a7346f6a6a49aa755b1b00ecfacb94ac2dd8d263. Current GitHub readback shows
+that upstream PR 196 was closed unmerged on 2026-08-09 and its pull ref remains
+at d3e53496bbd24b82a1d87ce513c913923ebbebb2; it is therefore historical,
+not an active review head. The combined branch records the normalized fork
+head as an ancestor at 660cec909417104b3a6448cb837e9829092314d8 without
+replacing its refreshed multi-corpus index and map artifacts.

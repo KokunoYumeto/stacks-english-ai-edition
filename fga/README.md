@@ -96,7 +96,9 @@ normalization, source identities, and the fixed-point build and visual checks
 for the changed post-merge chapter. `build.csv` preserves the historical
 26-chapter build receipt from the standalone FGA branch. Its PDF hashes are not
 claimed to apply unchanged after the later multi-corpus merge; `audit.json`
-states the two scopes separately. The normalized FGA-only head remains the
-review head for <https://github.com/stacks/stacks-project/pull/196>; the
-combined branch records that head as an ancestor without widening the FGA
-review to unrelated corpora.
+states the two scopes separately. The normalized FGA-only fork branch remains
+separate from the combined edition. Upstream pull request 196 was closed
+unmerged on 2026-08-09, so its GitHub pull ref remains frozen at the older
+FGA head; the current fork branch carries the normalized head. The combined
+branch records that normalized head as an ancestor without mixing unrelated
+corpora into the historical review.
