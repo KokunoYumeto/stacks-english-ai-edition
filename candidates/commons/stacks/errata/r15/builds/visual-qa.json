@@ -1,0 +1,162 @@
+{
+  "adverse_evidence": [
+    "The standalone PDFs are not tagged PDFs and contain no StructTreeRoot or MarkInfo; this is retained as an accessibility limitation rather than misreported as a visual failure.",
+    "Standalone chapter builds intentionally retain cross-chapter unresolved targets; the build receipt proves their target multisets match the frozen authority builds."
+  ],
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "build_receipt": {
+    "bytes": 14516,
+    "path": "builds/build-receipt.json",
+    "sha256": "EA683DF290D9BE4D66AB5E3C8C7ED10571447AF2ABABD91EFE7DB13D621CF610"
+  },
+  "candidate_id": "stacks-errata-a04446e-r15",
+  "generated_at_utc": "2026-08-25T00:33:02Z",
+  "passed": true,
+  "pdfs": [
+    {
+      "authority_control_pdf": {
+        "bytes": 343290,
+        "path": "builds/brauer.authority.pdf",
+        "sha256": "3BB40F4A15DE154631CC14900EECD90F12BD59C71F880BC3E2DEF5FC308E0487"
+      },
+      "authority_link_annotations": 65,
+      "authority_malformed_link_rectangles": 0,
+      "authority_out_of_bounds_link_rectangles": 0,
+      "authority_pages": 10,
+      "bytes": 343526,
+      "contact_sheet_evidence": [
+        {
+          "bytes": 567605,
+          "file": "brauer_01.png",
+          "sha256": "EE6B2EA580887089E8BA8FB39172E8271F1AE4A46FBB7DD59D9F1F2B3BC8FA48"
+        }
+      ],
+      "covered_units": [
+        "MC-STK-ERR-0745",
+        "MC-STK-ERR-0746",
+        "MC-STK-ERR-0747",
+        "MC-STK-ERR-0748",
+        "MC-STK-ERR-0749",
+        "MC-STK-ERR-0750",
+        "MC-STK-ERR-0751",
+        "MC-STK-ERR-0752"
+      ],
+      "font_records": 20,
+      "fonts_without_tounicode": [],
+      "full_page_render_count": 10,
+      "high_resolution_evidence": [
+        {
+          "bytes": 300292,
+          "file": "brauer_p1.png",
+          "page": 1,
+          "sha256": "7038E2754D419E46D83EEE2393EB862213716F7088481121E095706284C985B2"
+        },
+        {
+          "bytes": 411493,
+          "file": "brauer_p2.png",
+          "page": 2,
+          "sha256": "C639135638DC91EB4A603C1F8FADCAC52881EE8E8FA78EC7263020197A7E41DE"
+        },
+        {
+          "bytes": 416316,
+          "file": "brauer_p3.png",
+          "page": 3,
+          "sha256": "2A670DA145DBE1FC3FE0F405A2929E89328A22A8785A8BF3EFA672AE4BC78922"
+        },
+        {
+          "bytes": 425362,
+          "file": "brauer_p4.png",
+          "page": 4,
+          "sha256": "62ECB6ECAB1FC0BB2E7A198EC00C30AF83B582DD6DD500088C02D3937620D2A1"
+        },
+        {
+          "bytes": 441477,
+          "file": "brauer_p5.png",
+          "page": 5,
+          "sha256": "69A1DA49A836EBACA6F17A31117B3C8D111D23586C9DF18FEA80E45EE03CAC32"
+        },
+        {
+          "bytes": 408965,
+          "file": "brauer_p6.png",
+          "page": 6,
+          "sha256": "830586E7C884CADE52AC104787A35B32847092FD43B11DA0EDC3BC61B85327E9"
+        },
+        {
+          "bytes": 429656,
+          "file": "brauer_p7.png",
+          "page": 7,
+          "sha256": "F3FF22DE4314D83B571B04D4313ECFC6194EFCA3ED92DA5EADC488125EC3C01D"
+        },
+        {
+          "bytes": 397850,
+          "file": "brauer_p8.png",
+          "page": 8,
+          "sha256": "D5D7D3FB79555D19E09C107BF17CFB377EB3BA576CE25FC340293DDA7F040398"
+        },
+        {
+          "bytes": 528274,
+          "file": "brauer_p9.png",
+          "page": 9,
+          "sha256": "7333A52E437647A4757EE2F5CD5D72DA1BFE48854E26667E7EFF682770F582AC"
+        },
+        {
+          "bytes": 197659,
+          "file": "brauer_p10.png",
+          "page": 10,
+          "sha256": "0B15DAA14AF52FE78E9D47692C197D4C95B94B2B92FD1ACD55D33FC887FE8AAC"
+        }
+      ],
+      "link_annotations": 65,
+      "malformed_link_rectangles": 0,
+      "manual_findings": {
+        "blank_or_duplicate_pages": 0,
+        "broken_diagrams": 0,
+        "clipping": 0,
+        "missing_glyphs": 0,
+        "overlap": 0,
+        "pages_inspected": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "passed": true,
+        "unreadable_content": 0,
+        "warning_loci_outside_printable_area": 0
+      },
+      "mark_info_present": false,
+      "out_of_bounds_link_rectangles": 0,
+      "page_boxes_points": [
+        [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ]
+      ],
+      "pages": 10,
+      "path": "builds/brauer.pdf",
+      "reflow_note": "Candidate and authority page counts are recorded above; every candidate page was inspected, including all pages directly affected by the 8 mapped Brauer operations.",
+      "sha256": "F3BFD649F2DA5C889B96B5EC5A1EF36980A04E61CD0AB8DE4C4EE5756FFEAA40",
+      "stem": "brauer",
+      "tagged_pdf": false,
+      "unembedded_fonts": [],
+      "unsubset_fonts": []
+    }
+  ],
+  "render_protocol": {
+    "full_page_contact_sheet_review": "All rendered pages manually inspected in ordered 4-by-4 contact sheets",
+    "full_page_render": "Poppler pdftoppm PNG at 96 dpi for every candidate page",
+    "high_resolution_review": "All ten pages, including every correction-sensitive locus, were manually inspected at 180 dpi",
+    "private_render_artifacts_published": false,
+    "private_render_manifest_bytes": 4398,
+    "private_render_manifest_sha256": "F1CB4B1D9608974FD819B783F966BF487FE0D26830163F1F1EAF4E8249759D9A"
+  },
+  "schema": "mathematics-commons-stacks-errata-visual-qa/v1"
+}

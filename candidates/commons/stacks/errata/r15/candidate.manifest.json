@@ -1,0 +1,215 @@
+{
+  "$schema": "../../../../../schemas/candidate-manifest.schema.json",
+  "schema": "mathematics-commons-stacks-candidate-manifest/v1",
+  "candidate_id": "stacks-errata-a04446e-r15",
+  "lease_id": "stacks-lease-000018-errata-r15",
+  "namespace": "commons/stacks/errata/r15",
+  "writer_task": "01a0256d-5693-77c1-96b2-cf37101e0c6c",
+  "upstream": {
+    "lock": "upstream/stacks.lock.json",
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e"
+  },
+  "source_authorities": [
+    {
+      "path": "authority/canon/R15_BRAUER_001_010_ADJUDICATION_SPEC.json",
+      "sha256": "6D88F7924ED71B63C6D3F9D3D818F730566130902A37ED8594CD34D04CF8EB9F"
+    },
+    {
+      "path": "authority/canon/R15_BRAUER_001_010_INTAKE.json",
+      "sha256": "225694CCF6E9AFD9333F5077C1E117D77D05309C79074D8762AF04FBE98BF526"
+    },
+    {
+      "path": "authority/canon/R15_BRAUER_001_010_REVIEW.md",
+      "sha256": "43C54869E9852C40EE8E79E0817F22C46C34C8E236DD32CC20083A4629039265"
+    },
+    {
+      "path": "authority/COPYING",
+      "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"
+    },
+    {
+      "path": "authority/source/brauer.tex",
+      "sha256": "B2504820D769EBE4E9E33B8ADD78753FB30ACA6E8A7F75C8D54DDA885EDCD682"
+    },
+    {
+      "path": "authority/upstream.lock.json",
+      "sha256": "B195ECC83AB0F32C574A60D1FDBA9B0DA4D35B04E0DF7CB106DC9C0FDAD99C0D"
+    }
+  ],
+  "source_closure": {
+    "enumerated": true,
+    "expected_units": 8,
+    "manifested_units": 8,
+    "complete": true
+  },
+  "stable_unit_manifest": {
+    "path": "stable-units.json",
+    "sha256": "25CC1BEE18C64A021611F60013B25C309C1A562AC6A045234B009B35B32D8D21"
+  },
+  "source_map": {
+    "path": "source-map.jsonl",
+    "sha256": "35DC1E62898EC5DCEDEF88D6D6538B0BA496B9C937482922DFF85BEA08481957"
+  },
+  "decision_ledger": {
+    "path": "decisions.jsonl",
+    "sha256": "E8C2FFFAC0B636883B4C152AE6EA1D9E2C6F056A4EB186C02E932B93C1A930FD"
+  },
+  "rejection_ledger": {
+    "path": "rejections.jsonl",
+    "sha256": "24450AF3AE17D3150CBC4DB376CF158081B12334F4C98B69075185820DBD46D1"
+  },
+  "formula_diagram_inventory": {
+    "path": "formula-diagram-inventory.json",
+    "sha256": "2554CFE27ECA4B96F0C91AC1C6D319887D9675F74D553813F960844D2144C322"
+  },
+  "builds": [
+    {
+      "path": ".gitattributes",
+      "sha256": "705FD4D6451A31D36B3DF7DE96F83F30AC976C9B4A6D1E51671D8E2F33E2D0DA"
+    },
+    {
+      "path": "append-highres.py",
+      "sha256": "7A3449612DD1189BBB61FE367F8F6674DD10E5A0AC8CD22F70C3B1118A42D3A3"
+    },
+    {
+      "path": "build-manifest.py",
+      "sha256": "48BB5007AF693BCD574DE9497BA0B023E2689D9048EBB566AFC67952AD4E7A3F"
+    },
+    {
+      "path": "build-receipt.py",
+      "sha256": "6AD2D96321E3C3EB0635170BF9692957088BA8BC31BAB66E96F6C885F1350BFC"
+    },
+    {
+      "path": "BUILD.md",
+      "sha256": "D8F32C6057B60F0AA04CDF0F1FA70463E39A74A0C18F064CE4ED2938FDF89CDE"
+    },
+    {
+      "path": "builds/brauer.authority.bibtex.txt",
+      "sha256": "9AE9600D98A09635E7D6E137B2A6F4EBED9D28A002A4A49798CA2DC3CEEA4C52"
+    },
+    {
+      "path": "builds/brauer.authority.log",
+      "sha256": "C1C869F2686EDCD55C657F90065075F49AB822FBBF034A86929C7EDA3EF83985"
+    },
+    {
+      "path": "builds/brauer.authority.pass3.txt",
+      "sha256": "14916955624A86F4F63B8773386CD8F97ACE2F18DA4E22CFBB073B209E5B98EB"
+    },
+    {
+      "path": "builds/brauer.authority.pdf",
+      "sha256": "3BB40F4A15DE154631CC14900EECD90F12BD59C71F880BC3E2DEF5FC308E0487"
+    },
+    {
+      "path": "builds/brauer.bibtex.txt",
+      "sha256": "9AE9600D98A09635E7D6E137B2A6F4EBED9D28A002A4A49798CA2DC3CEEA4C52"
+    },
+    {
+      "path": "builds/brauer.log",
+      "sha256": "30EE64C30C25A76023B8FCB54ED06DAA32310F3A4C9DE87BC7DCB3513B2FCE81"
+    },
+    {
+      "path": "builds/brauer.pass3.txt",
+      "sha256": "95D4C9E9A1E7F5A4D57C4DE9019BC2937ED60DCB7B7F0EAFA1772A413C7603B5"
+    },
+    {
+      "path": "builds/brauer.pdf",
+      "sha256": "F3BFD649F2DA5C889B96B5EC5A1EF36980A04E61CD0AB8DE4C4EE5756FFEAA40"
+    },
+    {
+      "path": "builds/build-execution.json",
+      "sha256": "739AA6AD90AADC1D27C80AAB04BD935AE05B5880832E015EFC0C1A841AABA06F"
+    },
+    {
+      "path": "builds/build-receipt.json",
+      "sha256": "EA683DF290D9BE4D66AB5E3C8C7ED10571447AF2ABABD91EFE7DB13D621CF610"
+    },
+    {
+      "path": "builds/deterministic-replay.json",
+      "sha256": "DA14FB36B7DFF4FC12C765C4C8691ECA48E9274EE7B80CFAAF9DD9AE8F023C9D"
+    },
+    {
+      "path": "builds/validation.json",
+      "sha256": "6BDE0F0DFCF53D8B5D1F3F794C3BA3ABE68678B4E03A323B68B48ACBBD9ABF8B"
+    },
+    {
+      "path": "builds/visual-qa.json",
+      "sha256": "6AEA5903D3EC8D6924F24B44784713FF508BA61CCC99CEBAF39542D99190BC01"
+    },
+    {
+      "path": "candidate.config.json",
+      "sha256": "201EEBE46754AC75DB8B999F16A14EBB28F468990DE912A55C96601B3C869927"
+    },
+    {
+      "path": "check-manifest.py",
+      "sha256": "9D4513D7BBEC9371D20E73E30ABFC2FC2435BA24729C71A0BC3D3DF187826B75"
+    },
+    {
+      "path": "deterministic-replay.py",
+      "sha256": "3E6A7DFBA533AC7A396FC11166C2181717E35CE601FA4544AD1A4F886ABAE1E1"
+    },
+    {
+      "path": "independent-review.py",
+      "sha256": "20C3059DB54D6277375C2F4732503EAE1996FC5717699F4A7DC8FE72D7DB8B7A"
+    },
+    {
+      "path": "LEASE.json",
+      "sha256": "BBB81A7604DC3C15EAF8DA11731AB59770BED5E19A50A45F0F531B67C9596898"
+    },
+    {
+      "path": "materialize.py",
+      "sha256": "6622C023F6DA79BCB4479AB90C55D9051C9D988197AEB62764DC6448DA3E3FD1"
+    },
+    {
+      "path": "operation-spec.json",
+      "sha256": "EAAFA622F1430B06689CF65C9690FFCA5B74DD1BED549113BAF10A9971B066BA"
+    },
+    {
+      "path": "payload/brauer.tex",
+      "sha256": "4F06D930FDB41AE6F9F4207DA49C2250A63213CD9A7578807466E3E873484096"
+    },
+    {
+      "path": "README.md",
+      "sha256": "C5DB57C57439792DB2C9109F602A709802A83B671E49058CE44E520860F90759"
+    },
+    {
+      "path": "render-qa.py",
+      "sha256": "C2A0E54358DDB920CC141E32C792D891E7C9BBB25C7632AD576CD2A47C73D45E"
+    },
+    {
+      "path": "replay/independent-review.json",
+      "sha256": "627BEA809AC3EDD70DEDED5363E2713BA717938CB0CA0179A08924633077F47E"
+    },
+    {
+      "path": "replay-build.py",
+      "sha256": "AB5ED6FE76E46F69D1085FCA0CCEE61A3C901D9899B7DD8E83CDF83A090D20FD"
+    },
+    {
+      "path": "verify.py",
+      "sha256": "51296C15CEFAB17BFFE91E8CE6549AB2DCAA047276A52F85FB94D787AE07D7A7"
+    },
+    {
+      "path": "visual-qa.py",
+      "sha256": "A048518BF1C531D6F9BCC0BA0C367034FC3493B24655F9AC3DEF19C7BFD0D0F2"
+    }
+  ],
+  "rights_state": "The authority and modified payload retain the Stacks Project GNU Free Documentation License 1.2; metadata and receipts do not relicense upstream content. This is an independently maintained AI-produced English edition with no Stacks Project review, approval, affiliation, or endorsement. Legal certification was not performed.",
+  "review_state": "performed",
+  "independent_replay": "passed",
+  "unresolved_defects": [
+    "The independent replay receipt binds pre-review manifest 2ABEE5954B88DC9293F4B5B0A646898B685BAFC330255CA9A2C3171E39DEA10E and validation 6BDE0F0DFCF53D8B5D1F3F794C3BA3ABE68678B4E03A323B68B48ACBBD9ABF8B. This final registrar-only rebind adds the replay receipt; no reviewed authority, payload, proof, script, build, PDF, or visual-QA byte changed.",
+    "The isolated brauer.tex candidate retains cross-chapter undefined-reference targets; their multiset matches the frozen authority build exactly.",
+    "The sealed chapter readers have page counts candidate 10, authority 10. Every candidate page and every correction-sensitive locus were inspected without clipping, overlap, missing glyph, broken diagram, blank page, or unreadable content.",
+    "The proof PDFs contain embedded fonts with ToUnicode maps but are untagged; document-structure accessibility remains a cumulative-edition toolchain concern.",
+    "The bounded intake closes BRAUER-001 through BRAUER-010: 8 rows are accepted, 2 are rejected duplicates of admitted R2 units, and none is unresolved.",
+    "Canonical translations preserve the frozen authority unless a locale-side emendation is separately bound; this English corrected overlay is not silently copied.",
+    "Overlay admission and English-edition composition are separate transitions; this manifest records candidate closure only."
+  ],
+  "stop_conditions": [
+    "Do not mutate the literal stacks-project master mirror.",
+    "Do not apply these corrections silently to canonical translation source or PDFs.",
+    "Do not contact or submit to the upstream Stacks maintainers under the current no-AI-contribution boundary.",
+    "Do not append an overlay registry record except in a separate admission commit bound to the final manifest hash and a passed independent replay.",
+    "Any change to reviewed authority, payload, proof, build, validation, visual-QA, or replay bytes invalidates the replay and requires a new review."
+  ],
+  "generated_at_utc": "2026-08-25T00:33:14Z"
+}

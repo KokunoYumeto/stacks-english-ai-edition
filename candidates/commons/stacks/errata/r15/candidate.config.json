@@ -1,0 +1,89 @@
+{
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_evidence": [
+    {
+      "bytes": 7391,
+      "path": "authority/canon/R15_BRAUER_001_010_ADJUDICATION_SPEC.json",
+      "sha256": "6D88F7924ED71B63C6D3F9D3D818F730566130902A37ED8594CD34D04CF8EB9F"
+    },
+    {
+      "bytes": 4301,
+      "path": "authority/canon/R15_BRAUER_001_010_INTAKE.json",
+      "sha256": "225694CCF6E9AFD9333F5077C1E117D77D05309C79074D8762AF04FBE98BF526"
+    },
+    {
+      "bytes": 1243,
+      "path": "authority/canon/R15_BRAUER_001_010_REVIEW.md",
+      "sha256": "43C54869E9852C40EE8E79E0817F22C46C34C8E236DD32CC20083A4629039265"
+    },
+    {
+      "bytes": 20404,
+      "path": "authority/COPYING",
+      "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"
+    },
+    {
+      "bytes": 28201,
+      "path": "authority/source/brauer.tex",
+      "sha256": "B2504820D769EBE4E9E33B8ADD78753FB30ACA6E8A7F75C8D54DDA885EDCD682"
+    },
+    {
+      "bytes": 1171,
+      "path": "authority/upstream.lock.json",
+      "sha256": "B195ECC83AB0F32C574A60D1FDBA9B0DA4D35B04E0DF7CB106DC9C0FDAD99C0D"
+    }
+  ],
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "candidate_id": "stacks-errata-a04446e-r15",
+  "expected_producer_ids": [
+    "BRAUER-001",
+    "BRAUER-002",
+    "BRAUER-003",
+    "BRAUER-004",
+    "BRAUER-005",
+    "BRAUER-006",
+    "BRAUER-007",
+    "BRAUER-008",
+    "BRAUER-009",
+    "BRAUER-010"
+  ],
+  "expected_unit_ids": [
+    "MC-STK-ERR-0745",
+    "MC-STK-ERR-0746",
+    "MC-STK-ERR-0747",
+    "MC-STK-ERR-0748",
+    "MC-STK-ERR-0749",
+    "MC-STK-ERR-0750",
+    "MC-STK-ERR-0751",
+    "MC-STK-ERR-0752"
+  ],
+  "lease_id": "stacks-lease-000018-errata-r15",
+  "namespace": "commons/stacks/errata/r15",
+  "operation_count": 8,
+  "private_render_logical_path": "canon/private_evidence/errata-r15-20260825T0015Z/render-final/render-manifest.json",
+  "proof_closure": {
+    "accepted": 8,
+    "operations": 8,
+    "packet_duplicates": 0,
+    "prior_overlay_aliases": 2,
+    "producer_rows": 10,
+    "rejected": 0,
+    "unresolved": 0
+  },
+  "schema": "mathematics-commons-stacks-errata-candidate-config/v1",
+  "source_date_epoch": "1785270512",
+  "stems": {
+    "brauer": {
+      "authority_bytes": 28201,
+      "authority_sha256": "B2504820D769EBE4E9E33B8ADD78753FB30ACA6E8A7F75C8D54DDA885EDCD682",
+      "build_exceptions": {
+        "candidate_only_undefined_reference_targets": {},
+        "candidate_page_delta": 0
+      },
+      "display_delimiter_delta": 0,
+      "ordered_structure_exceptions": {},
+      "payload_bytes": 28301,
+      "payload_sha256": "4F06D930FDB41AE6F9F4207DA49C2250A63213CD9A7578807466E3E873484096"
+    }
+  },
+  "writer_task": "01a0256d-5693-77c1-96b2-cf37101e0c6c"
+}

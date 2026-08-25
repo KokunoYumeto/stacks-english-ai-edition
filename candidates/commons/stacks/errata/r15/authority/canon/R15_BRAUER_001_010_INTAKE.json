@@ -1,0 +1,126 @@
+{
+  "adjudication": {
+    "BRAUER-001": "rejected_duplicate",
+    "BRAUER-002": "confirmed_typed_matrix_corner_error",
+    "BRAUER-003": "confirmed_definition_domain_error",
+    "BRAUER-004": "confirmed_missing_nonzero_hypothesis",
+    "BRAUER-005": "confirmed_automorphism_scope_error",
+    "BRAUER-006": "confirmed_equality_type_error",
+    "BRAUER-007": "rejected_duplicate",
+    "BRAUER-008": "confirmed_grammar_error",
+    "BRAUER-009": "confirmed_punctuation_error",
+    "BRAUER-010": "confirmed_grammar_error"
+  },
+  "allegation_locator_policy": {
+    "adjudication_authorities": [
+      "frozen brauer.tex bytes",
+      "the pinned Stacks definitions and proofs",
+      "all fourteen admitted overlay source maps and rejection ledgers"
+    ],
+    "producer_source_emendations_json": "not opened, imported, or trusted as canon",
+    "shared_producer_ledger": "used only to locate bounded allegations"
+  },
+  "allegation_locators": [
+    {
+      "class": "prior_overlay_duplicate",
+      "locus": "brauer.tex:711; proposition-separable-splitting-field",
+      "producer_id": "BRAUER-001"
+    },
+    {
+      "class": "matrix_corner_coefficient_sets_misidentified",
+      "locus": "brauer.tex:274-276; lemma-matrix-algebras",
+      "producer_id": "BRAUER-002"
+    },
+    {
+      "class": "zero_algebra_inadvertently_simple",
+      "locus": "brauer.tex:63-64; definition-simple",
+      "producer_id": "BRAUER-003"
+    },
+    {
+      "class": "zero_module_counterexample_to_double_centralizer",
+      "locus": "brauer.tex:295-296; lemma-simple-module-unique",
+      "producer_id": "BRAUER-004"
+    },
+    {
+      "class": "automorphism_scope_overbroad",
+      "locus": "brauer.tex:512-514; lemma-automorphism-inner",
+      "producer_id": "BRAUER-005"
+    },
+    {
+      "class": "literal_equality_in_place_of_multiplication_isomorphism",
+      "locus": "brauer.tex:570-579; lemma-when-tensor-is-equal",
+      "producer_id": "BRAUER-006"
+    },
+    {
+      "class": "prior_overlay_duplicate",
+      "locus": "brauer.tex:733; proposition-separable-splitting-field proof",
+      "producer_id": "BRAUER-007"
+    },
+    {
+      "class": "ungrammatical_causal_construction",
+      "locus": "brauer.tex:561; theorem-centralizer proof",
+      "producer_id": "BRAUER-008"
+    },
+    {
+      "class": "spurious_comma_after_then",
+      "locus": "brauer.tex:728; proposition-separable-splitting-field proof",
+      "producer_id": "BRAUER-009"
+    },
+    {
+      "class": "missing_indefinite_article",
+      "locus": "brauer.tex:771; lemma-finite-central-simple-algebra",
+      "producer_id": "BRAUER-010"
+    }
+  ],
+  "authority": {
+    "bytes": 28201,
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "line_endings": "LF-only with terminal LF",
+    "mutated": false,
+    "path": "authority/source/brauer.tex",
+    "physical_lines": 817,
+    "sha256": "B2504820D769EBE4E9E33B8ADD78753FB30ACA6E8A7F75C8D54DDA885EDCD682",
+    "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e"
+  },
+  "bounded_source": {
+    "bytes": 25983,
+    "end_line": 780,
+    "physical_lines": 736,
+    "sha256": "9D694051250DFF8F2DB3BA1AB8C0B42C1D3BD4CD732F2FEE329D671C882454A5",
+    "start_line": 45
+  },
+  "candidate_id": "stacks-errata-a04446e-r15",
+  "closure": {
+    "accepted": 8,
+    "operations": 8,
+    "producer_rows": 10,
+    "rejected": 0,
+    "rejected_duplicate": 2,
+    "stable_ids": "MC-STK-ERR-0745..MC-STK-ERR-0752",
+    "unresolved": 0
+  },
+  "corrected_bounded_replay": {
+    "bytes": 26022,
+    "old_spans_unique_in_declared_lines": true,
+    "operations_nonoverlapping": true,
+    "physical_lines": 736,
+    "sha256": "F9739435B59614C9CDE572DAD70FF7A71899C06E181638989B442258ED775F62"
+  },
+  "deduplication": {
+    "accepted_overlap": false,
+    "duplicate_aliases": {
+      "BRAUER-001": "MC-STK-ERR-0016",
+      "BRAUER-007": "MC-STK-ERR-0017"
+    },
+    "public_candidates_checked": "R1..R14",
+    "registered_entries_checked": 14
+  },
+  "recorded_at_utc": "2026-08-25T00:13:52Z",
+  "schema": "stacks-canon-errata-intake/v1",
+  "write_boundaries": {
+    "canonical_translations": "immutable",
+    "english_authority": "immutable",
+    "payload_derivation": "directly from frozen authority, never a prior payload",
+    "producer_emendation_manifest": "not trusted, opened, or imported as canon"
+  }
+}
