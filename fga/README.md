@@ -96,4 +96,7 @@ normalization, source identities, and the fixed-point build and visual checks
 for the changed post-merge chapter. `build.csv` preserves the historical
 26-chapter build receipt from the standalone FGA branch. Its PDF hashes are not
 claimed to apply unchanged after the later multi-corpus merge; `audit.json`
-states the two scopes separately.
+states the two scopes separately. The normalized FGA-only head remains the
+review head for <https://github.com/stacks/stacks-project/pull/196>; the
+combined branch records that head as an ancestor without widening the FGA
+review to unrelated corpora.

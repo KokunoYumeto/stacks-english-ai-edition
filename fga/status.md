@@ -4070,3 +4070,35 @@ reports OPEN, draft, CLEAN, base master, and head
 readback returns status 200 and contains both the title and head identity.
 The corpus-wide integration, closure audit, remote publication, and upstream
 review-path phases are therefore complete at this checkpoint.
+
+## 2026-08-25 combined-edition merge and notation normalization
+
+The FGA-only branch was merged into the maintained multi-corpus Stacks edition
+at commit 3fffb7b0e015ff76cd56acf346c610f94503a872. The supplement in
+`moduli.tex` was then normalized to the surrounding Stacks source conventions
+at source commit 7c58bfcb867a4b2ab6a9fa7c740f2b7af537cf3a. Pullback uses the
+existing direction `g : Y \to X`; mathematical font arguments are braced;
+Serre's condition is written `$(S_2)$`; new labels are lowercase; mathematical
+operators and relations use neighboring source spacing; and each result states
+the hypotheses it needs.
+
+The combined-tree index and semantic-map validators both pass with empty error
+arrays. They cover 1,253 source units, 1,612 term links, and 579 append-only
+decisions, with zero review units, zero candidate units, and zero unlabeled
+semantic residuals. The combined index contains 21,893 labels across 120 TeX
+files. The nine active source issues remain controlled source defects rather
+than integration gaps.
+
+The rebuilt combined Moduli chapter reaches a fixed point at 83 pages and
+960,325 bytes with SHA-256
+0D6CFC4BC28AF7BCC22DF07AC7ED1F507680777DE1726C3AEF5FA845B329D683.
+Two consecutive fixed-point passes produce the same hash. The final log has
+zero unresolved references, rerun notices, overfull boxes, and underfull
+boxes. Visual inspection of pages 65--71 finds no clipping, collision,
+malformed formula, or unreadable text.
+
+The FGA-only review head was normalized separately at
+a7346f6a6a49aa755b1b00ecfacb94ac2dd8d263 so upstream draft PR 196 remains
+FGA-only. The combined branch records that head as an ancestor at
+660cec909417104b3a6448cb837e9829092314d8 without replacing its refreshed
+multi-corpus index and map artifacts.
