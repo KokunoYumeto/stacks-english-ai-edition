@@ -1,0 +1,343 @@
+{
+  "schema": "mathematics-commons-stacks-errata-independent-review/v1",
+  "candidate_id": "stacks-errata-a04446e-r20",
+  "review_kind": "independent_adverse_replay",
+  "recorded_at_utc": "2026-08-25T19:58:43Z",
+  "result": "PASS",
+  "conclusion": "UNCONDITIONAL PASS",
+  "passed": true,
+  "pass_is_unconditional": true,
+  "pre_review_manifest_sha256": "FB0FBA8F5709FEFC98EC4EF19FFAF09531DB06AEA54B827A1CF5B54511669B55",
+  "validation_sha256": "7ED571EF6D0A7440C412DA3E727530CFA70EBA98010A1DC3E4C198E3B9B2E3A7",
+  "pre_review_gate": {
+    "passed": true,
+    "check_manifest_exit_code": 0,
+    "candidate_manifest": {
+      "path": "candidate.manifest.json",
+      "bytes": 8656,
+      "sha256": "FB0FBA8F5709FEFC98EC4EF19FFAF09531DB06AEA54B827A1CF5B54511669B55"
+    },
+    "validation": {
+      "path": "builds/validation.json",
+      "bytes": 2557,
+      "sha256": "7ED571EF6D0A7440C412DA3E727530CFA70EBA98010A1DC3E4C198E3B9B2E3A7",
+      "passed": true
+    }
+  },
+  "input_nonmutation": {
+    "passed": true,
+    "file_count_excluding_manifest_and_receipt": 42,
+    "note": "The replay read sealed candidate bytes and wrote only this receipt."
+  },
+  "stable_id_recomputation": {
+    "passed": true,
+    "derivation_rule": "Accepted producer rows map in bounded intake order to consecutive stable IDs; rejected-duplicate rows consume no stable ID.",
+    "explicit_mapping": [
+      {
+        "producer_id": "DERIVED-064",
+        "stable_id": "MC-STK-ERR-0875"
+      },
+      {
+        "producer_id": "DERIVED-065",
+        "stable_id": "MC-STK-ERR-0876"
+      },
+      {
+        "producer_id": "DERIVED-066",
+        "stable_id": "MC-STK-ERR-0877"
+      },
+      {
+        "producer_id": "DERIVED-067",
+        "stable_id": "MC-STK-ERR-0878"
+      },
+      {
+        "producer_id": "DERIVED-068",
+        "stable_id": "MC-STK-ERR-0879"
+      },
+      {
+        "producer_id": "DERIVED-069",
+        "stable_id": "MC-STK-ERR-0880"
+      },
+      {
+        "producer_id": "DERIVED-070",
+        "stable_id": "MC-STK-ERR-0881"
+      },
+      {
+        "producer_id": "DERIVED-071",
+        "stable_id": "MC-STK-ERR-0882"
+      },
+      {
+        "producer_id": "DERIVED-072",
+        "stable_id": "MC-STK-ERR-0883"
+      },
+      {
+        "producer_id": "DERIVED-073",
+        "stable_id": "MC-STK-ERR-0884"
+      },
+      {
+        "producer_id": "DERIVED-074",
+        "stable_id": "MC-STK-ERR-0885"
+      },
+      {
+        "producer_id": "DERIVED-075",
+        "stable_id": "MC-STK-ERR-0886"
+      },
+      {
+        "producer_id": "DERIVED-076",
+        "stable_id": "MC-STK-ERR-0887"
+      },
+      {
+        "producer_id": "DERIVED-077",
+        "stable_id": "MC-STK-ERR-0888"
+      },
+      {
+        "producer_id": "DERIVED-078",
+        "stable_id": "MC-STK-ERR-0889"
+      },
+      {
+        "producer_id": "DERIVED-079",
+        "stable_id": "MC-STK-ERR-0890"
+      },
+      {
+        "producer_id": "DERIVED-080",
+        "stable_id": "MC-STK-ERR-0891"
+      },
+      {
+        "producer_id": "DERIVED-081",
+        "stable_id": "MC-STK-ERR-0892"
+      },
+      {
+        "producer_id": "DERIVED-082",
+        "stable_id": "MC-STK-ERR-0893"
+      },
+      {
+        "producer_id": "DERIVED-083",
+        "stable_id": "MC-STK-ERR-0894"
+      },
+      {
+        "producer_id": "DERIVED-084",
+        "stable_id": "MC-STK-ERR-0895"
+      },
+      {
+        "producer_id": "DERIVED-085",
+        "stable_id": "MC-STK-ERR-0896"
+      },
+      {
+        "producer_id": "DERIVED-086",
+        "stable_id": "MC-STK-ERR-0897"
+      },
+      {
+        "producer_id": "DERIVED-087",
+        "stable_id": "MC-STK-ERR-0898"
+      },
+      {
+        "producer_id": "DERIVED-088",
+        "stable_id": "MC-STK-ERR-0899"
+      },
+      {
+        "producer_id": "DERIVED-089",
+        "stable_id": "MC-STK-ERR-0900"
+      },
+      {
+        "producer_id": "DERIVED-090",
+        "stable_id": "MC-STK-ERR-0901"
+      },
+      {
+        "producer_id": "DERIVED-091",
+        "stable_id": "MC-STK-ERR-0902"
+      },
+      {
+        "producer_id": "DERIVED-092",
+        "stable_id": "MC-STK-ERR-0903"
+      }
+    ],
+    "excluded_producer_ids": [],
+    "unit_count": 29,
+    "operation_count": 32,
+    "first_id": "MC-STK-ERR-0875",
+    "last_id": "MC-STK-ERR-0903"
+  },
+  "scratch_replay": {
+    "passed": true,
+    "apply_order": "descending_start_byte",
+    "operation_count": 32,
+    "descending_intervals": [
+      [
+        448291,
+        448344
+      ],
+      [
+        447971,
+        448012
+      ],
+      [
+        438456,
+        438487
+      ],
+      [
+        424611,
+        424679
+      ],
+      [
+        419181,
+        419205
+      ],
+      [
+        415050,
+        415072
+      ],
+      [
+        403816,
+        403835
+      ],
+      [
+        401926,
+        401963
+      ],
+      [
+        401862,
+        401925
+      ],
+      [
+        392491,
+        392530
+      ],
+      [
+        390918,
+        390947
+      ],
+      [
+        388890,
+        388948
+      ],
+      [
+        388256,
+        388286
+      ],
+      [
+        387699,
+        387751
+      ],
+      [
+        387577,
+        387589
+      ],
+      [
+        384987,
+        385017
+      ],
+      [
+        380350,
+        380383
+      ],
+      [
+        375270,
+        375332
+      ],
+      [
+        374489,
+        374553
+      ],
+      [
+        367175,
+        367223
+      ],
+      [
+        362953,
+        362972
+      ],
+      [
+        359790,
+        359837
+      ],
+      [
+        355514,
+        355566
+      ],
+      [
+        354546,
+        354585
+      ],
+      [
+        350289,
+        350343
+      ],
+      [
+        345013,
+        345043
+      ],
+      [
+        340130,
+        340173
+      ],
+      [
+        339830,
+        339870
+      ],
+      [
+        335993,
+        336046
+      ],
+      [
+        333987,
+        334017
+      ],
+      [
+        333931,
+        333961
+      ],
+      [
+        311473,
+        311494
+      ]
+    ],
+    "authority": {
+      "bytes": 449677,
+      "sha256": "EFDA4CB361DD40909D1991161EAE716E58B6CF9E79380971502E1DA12396D402"
+    },
+    "output": {
+      "bytes": 449730,
+      "sha256": "FEEC32EEEEAF1194899A877208077EF7721B53D937048209FEEC4B9B75E376CD"
+    },
+    "operation_spec_sha256": "89AA590DF9D17330775F8EEAB539B68053D9D040B49684A22435D59FEC845FA8"
+  },
+  "sealed_evidence_verification": {
+    "passed": true,
+    "build_receipt": {
+      "path": "builds/build-receipt.json",
+      "sha256": "DC8679469498E90A1EC8BA34E4C3146AAEE3B7E449A3C2A8337981419647E1BF"
+    },
+    "visual_qa": {
+      "path": "builds/visual-qa.json",
+      "sha256": "B7C45B2EA47F1A97DD9BD473EAD7AF968E8843BDB713149F3385463469A1DFA7"
+    },
+    "candidate_pdf": {
+      "path": "builds/derived.pdf",
+      "bytes": 1209869,
+      "sha256": "C21F727F81C8271C70571E0AD63F8B59CD569828D7078FE6FC41037F993F9658",
+      "pages": 129
+    },
+    "authority_pdf": {
+      "path": "builds/derived.authority.pdf",
+      "bytes": 1209823,
+      "sha256": "DE348370E84A9AC62DF2EFBF6CFF7877115FC4FC9D665393A459490E353F53D5",
+      "pages": 129
+    },
+    "private_render_manifest": {
+      "bytes": 51725,
+      "sha256": "C39D45417ADD77A608238D98531038CF91DA9A47532355F75FC285F590E26AAD",
+      "logical_path": "canon/private_evidence/errata-r20-20260825T1600Z/render-final/render-manifest.json"
+    }
+  },
+  "adverse_observations": [
+    "Standalone candidate and authority builds retain identical cross-chapter unresolved-reference multisets.",
+    "Both PDFs are untagged; this retained accessibility limitation is not misreported as a visual failure.",
+    "All 129 candidate pages and every correction-sensitive locus were inspected without a visual defect."
+  ],
+  "constraints_observed": {
+    "candidate_inputs_mutated": false,
+    "upstream_contacted": false,
+    "persistent_writes": [
+      "replay/independent-review.json"
+    ]
+  }
+}
