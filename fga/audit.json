@@ -1,9 +1,16 @@
 {
-  "schema": "fga-stacks-closure-audit-v1",
+  "schema": "fga-stacks-postmerge-audit-v1",
   "status": "PASS",
   "errors": [],
-  "upstream_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
-  "audited_parent_commit": "74fcf4ab03e525a44bc2da81ea014fa5ccbb89ee",
+  "created_utc": "2026-08-25T00:14:31Z",
+  "source_commit": "7c58bfcb867a4b2ab6a9fa7c740f2b7af537cf3a",
+  "merge": {
+    "commit": "3fffb7b0e015ff76cd56acf346c610f94503a872",
+    "maintained_parent": "8688a72e44e2fba55039e38c1c95a2a19b7dce19",
+    "fga_parent": "d3e53496bbd24b82a1d87ce513c913923ebbebb2",
+    "strategy": "no-ff",
+    "status": "PASS"
+  },
   "scope": {
     "items": [
       "149",
@@ -34,62 +41,117 @@
     "source_issues": 65,
     "active_source_issues": 9,
     "review_units": 0,
+    "candidate_units": 0,
     "semantic_residuals_without_labels": 0,
-    "labels": 21748,
-    "case_sensitive_duplicate_labels": 0,
+    "labels": 21893,
     "official_tags_joined": 21437,
+    "tex_files": 120,
     "topics": 71,
-    "topic_candidates": 4317,
+    "topic_candidates": 4324,
     "topic_coverage": {
       "direct": 56,
       "broad": 14,
       "partial": 1,
       "no_direct": 0
+    }
+  },
+  "normalization": {
+    "file": "moduli.tex",
+    "section_label": "section-picard-finiteness-numerical",
+    "status": "PASS",
+    "checks": {
+      "pullback_variable_direction_matches_existing_theorem": "PASS",
+      "math_font_arguments_braced": "PASS",
+      "serre_s2_parenthesized": "PASS",
+      "new_labels_lowercase": "PASS",
+      "math_source_spacing_matches_neighboring_text": "PASS",
+      "result_hypotheses_stated_locally": "PASS",
+      "line_length_at_most_80": "PASS",
+      "duplicate_labels": "PASS"
+    }
+  },
+  "validators": {
+    "index_command": "python fga/mkidx.py",
+    "index_status": "PASS",
+    "index_errors": 0,
+    "map_command": "python fga/mkmap.py units.csv terms.csv",
+    "map_status": "PASS",
+    "map_errors": 0
+  },
+  "source_inputs": {
+    "units.csv": {
+      "bytes": 482292,
+      "sha256": "D5E898D40B5AA51824ADF77EE6BA5E41DDF4FFA7B42E3754FBB91B81BA5F42FB"
     },
-    "changed_tex_chapters": 26,
-    "built_pages": 1935,
-    "built_bytes": 24008919,
+    "terms.csv": {
+      "bytes": 367272,
+      "sha256": "D93D861C338DD62C56624A551A41CBBB216DB302087F47AA7B02CD44546F6622"
+    }
+  },
+  "build": {
+    "scope": "postmerge changed chapter",
+    "tex": "moduli.tex",
+    "pdf": "moduli.pdf",
+    "toolchain": {
+      "pdftex": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5)",
+      "bibtex": "MiKTeX-BibTeX 4.2 (MiKTeX 26.5)",
+      "source_date_epoch": 1787616772
+    },
+    "procedure": [
+      "pdflatex -interaction=nonstopmode -halt-on-error -file-line-error moduli.tex",
+      "bibtex moduli",
+      "repeat pdflatex until references and outlines reach a fixed point"
+    ],
+    "pages": 83,
+    "bytes": 960325,
+    "sha256": "0D6CFC4BC28AF7BCC22DF07AC7ED1F507680777DE1726C3AEF5FA845B329D683",
+    "consecutive_fixed_point_hashes_identical": true,
+    "undefined_references": 0,
+    "rerun_warnings": 0,
+    "overfull_boxes": 0,
+    "underfull_boxes": 0,
+    "visual_pages_checked": [65, 66, 67, 68, 69, 70, 71],
+    "visual_status": "PASS"
+  },
+  "historical_full_fga_build": {
+    "status": "HISTORICAL_PASS",
+    "audited_parent_commit": "74fcf4ab03e525a44bc2da81ea014fa5ccbb89ee",
+    "closure_commit": "9f8ebd00415cbd142a83733284f901f06bddd659",
+    "receipt": "fga/build.csv",
+    "chapters": 26,
+    "pages": 1935,
     "failed_builds": 0,
-    "line_box_warnings_overlapping_changed_hunks": 0,
-    "privacy_hits": 0,
-    "reader_workflow_prose_hits": 0,
-    "invented_official_tags": 0
+    "changed_line_box_overlap": 0,
+    "postmerge_reuse_claimed": false
   },
   "checks": {
-    "source_item_set_exact": "PASS",
     "source_identity_and_count": "PASS",
     "decision_supersession_and_label_resolution": "PASS",
     "source_issue_evidence_and_controls": "PASS",
     "topic_evidence_resolution": "PASS",
     "semantic_residual_closure": "PASS",
-    "case_sensitive_label_uniqueness": "PASS",
     "official_tag_immutability": "PASS",
-    "serial_deterministic_chapter_builds": "PASS",
-    "changed_hunk_line_box_check": "PASS",
-    "bounded_privacy_scan": "PASS",
-    "reader_workflow_prose_scan": "PASS"
-  },
-  "source_sha256": {
-    "units.csv": "D5E898D40B5AA51824ADF77EE6BA5E41DDF4FFA7B42E3754FBB91B81BA5F42FB",
-    "terms.csv": "D93D861C338DD62C56624A551A41CBBB216DB302087F47AA7B02CD44546F6622"
+    "notation_normalization": "PASS",
+    "postmerge_changed_chapter_build": "PASS",
+    "fixed_point_pdf_hash_identity": "PASS",
+    "changed_pages_visual_qa": "PASS"
   },
   "sha256": {
     "fga/build.csv": "BF6EB96FE17DD1E22813750D0FA18A35225CD0276ABA6331CFE07EF697347B3C",
-    "fga/topics.csv": "791377F11D1787DEE97B25299FB72E46FC926A46FDE285A25B59495B57DCDA6C",
-    "fga/dec.csv": "C2CF5BCFBB39D946936A965E556D3BFBABA231660557CDB61EC9C761E990CEFA",
+    "fga/check.json": "AB4F443993F362D523832DE0FC0C8EC576FCE9607F3A61E8DD22D72C133A7320",
+    "fga/dec.csv": "DC7D9E84D6796A6C8A543590A00C1BD175B801A1D2F2A0524C5515A362A586FA",
     "fga/issues.csv": "9C46805184CABC9E375A0DADA3ADD5F0C5B8DED7A247EFF5AB8900B0D2906363",
-    "fga/map.csv": "B5F3BD0F7583D2AEB74CAB43EB645AF1C3408BC1633F259B684B0114FB632665",
-    "fga/stx.csv": "1CFFB30225D9BE4159A9FDFBD22A83286405CD5F2AF4D9C276E4790526F4E6F3",
-    "fga/tcand.csv": "DF408D6822AFD0608D9AF7C129A1A587871637B94240F63B32A738DB9395BEE7",
-    "fga/tmap.csv": "37BF89504F082BE9FD55A345C4C1B6AFB438D850E3D03F776AE2AB2B625094EE",
-    "fga/check.json": "C65242879385F7F9B3984D6A2F746229FF02A59F77B9694CF564A62DD63B1FE7",
-    "fga/mcheck.json": "7632FEA15EF6FB38688B7D4C4256931375ACCFED8FCDA0DE2EF263152F5F97FA",
-    "moduli.tex": "35EEC91273E7F1A44EB27F46248CA1B2F5669206550035118D4BF13DD04EF364",
+    "fga/map.csv": "CA02672A9E2B9AEC5C1A9762492FB679FD3B05D9FB1BC0C7C96E20108DF83895",
+    "fga/mcheck.json": "39FD6A20D3398307527527DEE7008BEBF47FEB42103622006189BB7445B25A8C",
+    "fga/stx.csv": "B02AF4C22708E7F58F55AB205850A8AEB2A85E1BD2998CDD26F92E21833C1565",
+    "fga/tcand.csv": "B7E73C5EDA89E1CFDFB09A68B409ACD42111E6E41DA9A58D703710D26647DD9D",
+    "fga/tmap.csv": "3A02319360216CBC8F6B1D62B5BD22F562105263FAFEA214FE3DCFFB33CE0AAB",
+    "fga/topics.csv": "578A027AB054EB63E1C2CE1DE56DC1C8F654A11399B258F7776CBB06B745CAC9",
+    "moduli.tex": "F757AFCCE1F9FB97CC91E4BED3D5E8D142BA91F9209FC2DD83949A76709F288E",
     "tags/tags": "C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF"
   },
   "bounded_residuals": [
     "Nine active source issues are evidenced false, overbroad, or unsupported source claims with fail-closed controls; they are not unreviewed mapping units.",
-    "Algebraic equivalence remains partial because the connected-Picard and dual-abelian constructions are present but a standalone general theory is outside the exact integrated source claims.",
-    "Raw standalone-build box warnings may occur in unchanged lines; no line-based box warning intersects a branch-added hunk."
+    "fga/build.csv is the historical 26-chapter FGA branch receipt. This audit makes no claim that its PDF hashes apply unchanged after the later multi-corpus merge; the changed postmerge chapter was rebuilt and checked separately above."
   ]
 }
