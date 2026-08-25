@@ -1,61 +1,48 @@
-# Stacks — English AI Edition
+# Errata and integration registry
 
-This repository maintains the independent English AI edition of Stacks: proved
-source errata, exact correction overlays, deterministic composition records,
-build evidence, and release provenance. It is paired with the literal GitHub
-fork at <https://github.com/KokunoYumeto/stacks-project>.
+This directory contains machine-readable provenance, correction overlays,
+candidate contracts, replay evidence, schemas, and release records for the
+[Unofficial AI-Integrated Stacks Project](../README.md). It is part of the
+unified repository, not a separate edition.
 
-The fork's `master` branch remains an exact upstream mirror. This repository
-owns only independently proved AI-edition overlays and deterministic
-composition records. Generated English-edition branches may later be written
-to the fork by a dedicated composer, but translation and source-integration
-tasks do not write those branches directly.
+> [!IMPORTANT]
+> This is independently maintained, AI-produced work. The Stacks Project
+> authors and maintainers have not requested, reviewed, approved, or endorsed
+> this edition or its overlays.
 
-Simplified Chinese, Japanese, and Korean are separate editions. Each receives
-its own GitHub repository and Zenodo concept/version lineage; their release
-artifacts are not presented as branches or variants of this English edition.
+## Bound upstream
 
-## Bound state
-
-- Upstream repository: <https://github.com/stacks/stacks-project>
+- Official upstream repository:
+  <https://github.com/stacks/stacks-project>
 - Commit: `a04446e57ec1fbc252a871afcec7752fb2807b14`
 - Tree: `3feeb703b931a6e7259782c10e7d1575adc83e5e`
-- Upstream licence text: GNU Free Documentation License 1.2, identified by
-  [`upstream/stacks.lock.json`](upstream/stacks.lock.json)
-- Registered overlays: **fifteen** (`stacks-errata-a04446e-r1`,
-  `stacks-errata-a04446e-r2`, `stacks-errata-a04446e-r3`,
-  `stacks-errata-a04446e-r4`, `stacks-errata-a04446e-r5`,
-  `stacks-errata-a04446e-r6`, `stacks-errata-a04446e-r7`,
-  `stacks-errata-a04446e-r8`, `stacks-errata-a04446e-r9`,
-  `stacks-errata-a04446e-r10`, `stacks-errata-a04446e-r11`,
-  `stacks-errata-a04446e-r12`, `stacks-errata-a04446e-r13`,
-  `stacks-errata-a04446e-r14`, and `stacks-errata-a04446e-r15`), each admitted
-  from a manifest-complete candidate
-  after independent replay.
-- Active candidate-namespace leases: **four** (`fac`, `tohoku`, `gaga`,
-  `errata/r16`). The first three are held by task
-  `019fca5a-c29e-7330-acdc-c93f4a3dc9fb`; `errata/r16` is held by canon task
-  `01a0256d-5693-77c1-96b2-cf37101e0c6c`.
-- Imported historical integration branches: **zero**
-- Generated editions or builds: **zero**
+- Upstream lock: [`upstream/stacks.lock.json`](upstream/stacks.lock.json)
+- Upstream license boundary: [`RIGHTS.md`](RIGHTS.md)
 
-Existing mutable FGA, EGA, FAC, Tôhoku, and GAGA branches are deliberately not
-imported. Each must first become a manifest-complete candidate with its own
-stable IDs, provenance, decisions, tests, and review evidence.
+## Live registry state
 
-Namespace leases are reservations, not mathematical or release admission. See
-[`registry/leases.json`](registry/leases.json) and the candidate contract in
-[`candidates/CONTRACT.md`](candidates/CONTRACT.md). A source-integration owner
-may write only its leased candidate path. It may not modify the literal mirror,
-locale trees, the overlay registry, or generated releases.
+- Admitted overlay batches: **15** (`R1` through `R15`).
+- Stable correction IDs in those batches: **385**.
+- Highest stable identifier: `MC-STK-ERR-0752`; identifier gaps are
+  intentional and retained.
+- R16 evidence: preserved as a candidate, not represented as admitted unless
+  the live registry records that transition.
 
-## Edition label
+The authoritative overlay list is
+[`registry/overlays.json`](registry/overlays.json). The integrated root source
+contains the admitted R1–R15 composition; registry admission and source
+composition remain separately testable states.
 
-Every public output must state prominently:
+## Directory map
 
-> Independently maintained, AI-produced Stacks-derived edition. The Stacks
-> Project authors and maintainers have not requested, reviewed, approved, or
-> endorsed this edition.
+| Path | Role |
+| --- | --- |
+| [`registry/`](registry/) | Admitted overlays, namespace leases, locales, and releases |
+| [`candidates/`](candidates/) | Immutable candidates, adjudication, exact source maps, replay, and rejected proposals |
+| [`schemas/`](schemas/) | Machine-readable registry and candidate contracts |
+| [`upstream/`](upstream/) | Pinned upstream identity and license hashes |
+| [`RIGHTS.md`](RIGHTS.md) | Rights and attribution boundary |
 
-“Stacks Project” identifies the upstream source. “English AI Edition” identifies
-this independent edition and does not imply upstream affiliation or endorsement.
+Detailed integration dossiers for FAC, Tôhoku, GAGA, FGA, and EGA remain at
+the repository root so that mathematical source, mapping evidence, and build
+records can be browsed together. See the project [status dashboard](../STATUS.md).
