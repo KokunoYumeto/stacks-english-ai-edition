@@ -631,7 +631,7 @@ the existence of a zero object and direct sums, which are both
 preserved when passing to the opposite category.
 Finally, to see that
 $\mathcal{A}$ is abelian if and only if $\mathcal{A}^{opp}$ is abelian,
-observes that kernels, cokernels, images and coimages in
+observe that kernels, cokernels, images and coimages in
 $\mathcal{A}^{opp}$ correspond to
 cokernels, kernels, coimages and images in $\mathcal{A}$,
 respectively.
@@ -726,7 +726,7 @@ If $\mathcal{A}$ is abelian then we say a complex of the first
 type above is {\it exact at $y$} if $\Im(x \to y) = \Ker(y \to z)$
 and we say a complex of the second kind is {\it exact at $x_i$}
 where $1 < i < n$ if
-$\Im(x_{i - 1} \to x_i) = \Ker(x_i \to x_{i + 1})$. We a
+$\Im(x_{i - 1} \to x_i) = \Ker(x_i \to x_{i + 1})$. We say a
 sequence as above is {\it exact} or is an {\it exact sequence} or is an
 {\it exact complex} if it is a complex and exact at every object (in
 the first case) or exact at $x_i$ for all $1 < i < n$ (in the second case).
@@ -962,7 +962,7 @@ $w$, an epimorphism $k:w\to\Ker(g)$ and a morphism
 $l:w\to x$ with $f\circ l=i\circ k$. It follows 
 $i\circ j\circ p\circ l=f\circ l=i\circ k$. Since $i$ is a 
 monomorphism we see that $j\circ p\circ l=k$ is an epimorphism. 
-So, $j$ is an epimorphisms and thus an isomorphism. This implies (1).
+So, $j$ is an epimorphism and thus an isomorphism. This implies (1).
 \end{proof}
 
 \begin{lemma}
@@ -1104,7 +1104,7 @@ an epimorphism $m : s \to r$ and a morphism $n : s \to p$ with
 $\pi \circ n = d \circ m$. As
 $\pi'' \circ a \circ n = \delta \circ d \circ m = 0$,
 applying Lemma \ref{lemma-check-exactness-fibre-product} to the exact sequence
-$x \xrightarrow{\alpha} u \xrightarrow{p} \Coker(\alpha)$ and
+$x \xrightarrow{\alpha} u \xrightarrow{\pi''} \Coker(\alpha)$ and
 $a \circ n$ yields an object $t$, an epimorphism $\varepsilon : t \to s$ and
 a morphism $\zeta : t \to x$ with
 $a \circ n \circ \varepsilon = \alpha \circ \zeta$.
@@ -1491,7 +1491,7 @@ $\Hom(F(0), C) \to \Hom(F(0), C) \oplus \Hom(F(0), C)$
 is bijective for all $C$ in $\mathcal{B}$. Thus $F(0)$
 is the zero object of $\mathcal{B}$ and $F$ maps the
 zero morphism between any two objects to the zero morphism.
-Similarly holds if (3) holds. It follows that (2) and (3)
+The same holds if (3) holds. It follows that (2) and (3)
 are equivalent because the composition
 $F(A) \oplus F(B) \to F(A \oplus B) \to F(A) \oplus F(B)$
 is given by the matrix
@@ -1527,7 +1527,7 @@ where it follows from the fact that $F$ is a functor and
 transforms zero morphisms into zero morphisms.
 For the triangle on the left, we use that
 $F(A \oplus A) \to F(A) \oplus F(A)$ is an isomorphism
-to see that it suffice to check after composition with
+to see that it suffices to check after composition with
 this map and this check is trivial. Dually for the other triangle.
 Thus going around the bottom is equal to $F(f + g)$ and we conclude.
 \end{proof}
@@ -1565,7 +1565,7 @@ is exact.
 
 \begin{proof}
 If $F$ is left exact, i.e., $F$ commutes with finite limits, then
-$F$ sends products to products, hence $F$ preserved direct sums,
+$F$ sends products to products, hence $F$ preserves direct sums,
 hence $F$ is additive by Lemma \ref{lemma-additive-functor}.
 On the other hand, suppose that for every short exact sequence
 $0 \to A \to B \to C \to 0$ the sequence $0 \to F(A) \to F(B) \to F(C)$
@@ -1713,7 +1713,7 @@ hence transforms kernels (=equalizers) into kernels.
 b\Coker(a(\Ker(\psi) \to A_1))
 & \text{by formula above} \\
 & =
-b\Coker(\Ker(a\psi) \to aA_1))
+b\Coker(\Ker(a\psi) \to aA_1)
 & a\text{ preserves kernels} \\
 & =
 b\Coim(a\psi)
@@ -1782,7 +1782,7 @@ that this is well defined and that composition is bilinear.
 Once this is done it is clear that $Q$ is an additive functor.
 
 \medskip\noindent
-Let us show construction above is well defined.
+Let us show the construction above is well defined.
 An abstract way of saying this is that filtered colimits of
 abelian groups agree with filtered colimits of sets and to use
 Categories,
@@ -1845,7 +1845,7 @@ $$
 Namely, using LMS2 we can first choose
 $s_1 : Y' \to Y_1$, $s_2 : Y' \to Y_2$ in $S$ and
 $a : X' \to Y_1$, $b : X' \to Y_2$ such that
-$a \circ r = s_1 \circ f$ and $b \circ r = s_2 \circ f$.
+$a \circ r = s_1 \circ f$ and $b \circ r = s_2 \circ g$.
 Then using that the category $Y'/S$ is filtered (see
 Categories, Remark \ref{categories-remark-left-localization-morphisms-colimit}),
 we can
@@ -2376,13 +2376,13 @@ K_0(\mathcal{A})
 \longrightarrow
 0
 $$
-with $[A \to B \to C] \mapsto [B] - [A] - [C]$ of $K_0(\mathcal{A})$.
+where the first map sends $[A \to B \to C]$ to $[B] - [A] - [C]$.
 The short exact sequence $0 \to 0 \to 0 \to 0 \to 0$
 leads to the relation $[0] = 0$ in $K_0(\mathcal{A})$.
 There are no set-theoretical issues as all of our categories
 are ``small'' if not mentioned otherwise.
 Some examples of $K$-groups for categories of modules
-over rings where computed in
+over rings were computed in
 Algebra, Section \ref{algebra-section-K-groups}.
 
 \begin{lemma}
@@ -2484,8 +2484,8 @@ $$
 \{B'\} \amalg \{B_i, B''_i; i \in I^-\} \amalg \{B'_i; i \in I^+\}
 $$
 such that $N$ and $\tau(N)$ are isomorphic in $\mathcal{B}$.
-The proof of Lemmas \ref{lemma-serre-subcategory-is-kernel} and
-\ref{lemma-localization-abelian} show that we choose for $i \in I$
+The proofs of Lemmas \ref{lemma-serre-subcategory-is-kernel} and
+\ref{lemma-localization-abelian} show that we can choose for $i \in I$
 a short exact sequence
 $$
 0 \to A_i \to A'_i \to A''_i \to 0
@@ -2735,7 +2735,7 @@ Let $\mathcal{A}, \mathcal{B}$ be abelian categories.
 Let $(F^n, \delta_F)$ and $(G^n, \delta_G)$ be $\delta$-functors
 from $\mathcal{A}$ to $\mathcal{B}$. A {\it morphism of $\delta$-functors
 from $F$ to $G$} is a collection of
-transformation of functors $t^n : F^n \to G^n$, $n \geq 0$ such
+transformations of functors $t^n : F^n \to G^n$, $n \geq 0$ such
 that for every short exact sequence $0 \to A \to B \to C \to 0$
 of $\mathcal{A}$ the diagrams
 $$
@@ -2792,7 +2792,7 @@ a unique morphism of $\delta$-functors $\{t^n\}_{n \geq 0} : F \to G$
 such that $t = t^0$. We construct $t^n$ by induction on $n$.
 For $n = 0$ we set $t^0 = t$.
 Suppose we have already constructed a unique sequence of
-transformation of functors $t^i$ for $i \leq n$ compatible with
+transformations of functors $t^i$ for $i \leq n$ compatible with
 the maps $\delta$ in degrees $\leq n$.
 
 \medskip\noindent
@@ -3326,7 +3326,7 @@ $$
 This works as the kernel of the right vertical map is equal to
 $H^i(C^\bullet)$ and the cokernel of the left vertical map is
 $H^{i + 1}(A^\bullet)$. The exactness of the long sequence is
-the exactnesss in part (2) of Lemma \ref{lemma-snake}.
+the exactness in part (2) of Lemma \ref{lemma-snake}.
 The functoriality is Lemma \ref{lemma-snake-natural}. Compatibility
 with shifts is immediate from the definitions.
 \end{proof}
@@ -3640,7 +3640,7 @@ $$
 H^i(\delta) :
 H^i(C^\bullet) \longrightarrow H^i(A[1]^\bullet) = H^{i + 1}(A^\bullet)
 $$
-which occur in the long exact homology sequence associated
+which occur in the long exact cohomology sequence associated
 to the short exact sequence of cochain complexes by
 Lemma \ref{lemma-long-exact-sequence-cochain}.
 \end{lemma}
@@ -4128,7 +4128,7 @@ we use the ``usual'' isomorphisms
 $$
 U^p \otimes_F (V^q \otimes_F W^r) \to (U^p \otimes_F V^q) \otimes_F W^r
 $$
-of vectors spaces. As unit we use the graded $F$-vector space $\mathbf{1}$
+of vector spaces. As unit we use the graded $F$-vector space $\mathbf{1}$
 which has $F$ in degree $0$ and is zero in other degrees.
 There are two commutativity constraints on $\mathcal{C}$
 which turn $\mathcal{C}$ into a symmetric monoidal category: one involves the
@@ -4154,7 +4154,7 @@ $W^{-n} \times V^n \to F$.
 \end{lemma}
 
 \begin{proof}
-As unit we take
+As unit we take the object $\mathbf{1}$ described above.
 By Categories, Definition \ref{categories-definition-dual} we have
 maps
 $$
@@ -4314,8 +4314,8 @@ $$
 and differential
 $$
 d^n_{\text{Tot}(A^{\bullet, \bullet, \bullet})} =
-\sum\nolimits_{p + q + r = n}
-d_1^{p, q, r} + (-1)^pd_2^{p, q, r} + (-1)^{p + q}d_3^{p, q, r}
+\sum\nolimits_{p + q + r = n}\left(
+d_1^{p, q, r} + (-1)^pd_2^{p, q, r} + (-1)^{p + q}d_3^{p, q, r}\right)
 $$
 With this definition a simple calculation shows that the associated total
 complex is equal to
@@ -4325,7 +4325,7 @@ $$
 \text{Tot}(\text{Tot}_{23}(A^{\bullet, \bullet, \bullet}))
 $$
 In other words, we can either first combine the first two of the variables
-and then combine sum of those with the last, or we can first combine the
+and then combine the sum of those with the last, or we can first combine the
 last two variables and then combine the first with the sum of the last two.
 \end{remark}
 
@@ -4518,7 +4518,7 @@ $$
 $$
 is equal to $\delta'$ where $\gamma$ is as in
 Remark \ref{remark-shift-double-complex}. To see this denote
-$s^{p, q} : C^{p, q} \to B^{\bullet, q}$ and
+$s^{p, q} : C^{p, q} \to B^{p, q}$ and
 $\pi^{p, q} : B^{p, q} \to A^{p, q}$ the components of $s^q$ and $\pi^q$.
 As splittings
 $(s')^n : \text{Tot}^n(C^{\bullet, \bullet}) \to
@@ -4601,7 +4601,7 @@ $$
 $$
 are homotopic maps of complexes. Indeed, let $h = (h^p)$
 be a homotopy between $f$ and $g$. If we denote
-$h^{p, q} : A^{p, q} \to B^{p - 1, q}$ the component in degree $p$ of $h^q$,
+$h^{p, q} : A^{p, q} \to B^{p - 1, q}$ the component in degree $q$ of $h^p$,
 then this means that
 $$
 f^{p, q} - g^{p, q} = d_1^{p - 1, q} \circ h^{p, q} +
@@ -4664,7 +4664,7 @@ when we view double complexes
 as complexes of complexes in the manner given above.
 This on the one hand produces a map
 $$
-\delta : C^{\bullet, \bullet} \longrightarrow A^{\bullet, \bullet}[0, 1]
+\delta : C^{\bullet, \bullet} \longrightarrow A^{\bullet, \bullet}[1, 0]
 $$
 by the procedure in Lemma \ref{lemma-ses-termwise-split-cochain}.
 On the other hand taking $\text{Tot}$ we obtain a complex
@@ -4691,8 +4691,8 @@ $$
 $$
 is equal to $\delta'$ where $\gamma$ is as in
 Remark \ref{remark-shift-double-complex}. To see this denote
-$s^{p, q} : C^{p, q} \to B^{\bullet, q}$ and
-$\pi^{p, q} : B^{p, q} \to A^{p, q}$ the components of $s^q$ and $\pi^q$.
+$s^{p, q} : C^{p, q} \to B^{p, q}$ and
+$\pi^{p, q} : B^{p, q} \to A^{p, q}$ the components of $s^p$ and $\pi^p$.
 As splittings
 $(s')^n : \text{Tot}^n(C^{\bullet, \bullet}) \to
 \text{Tot}^n(B^{\bullet, \bullet})$
@@ -5090,13 +5090,13 @@ are exact.
 \end{lemma}
 
 \begin{proof}
-We have $F^{p + 1}X = X \cap F^{p + 1}A$, hence map
+We have $F^{p + 1}X = X \cap F^{p + 1}A$, hence the map
 $\text{gr}^p(X) \to \text{gr}^p(A)$ is injective. Dually the map
 $\text{gr}^p(A) \to \text{gr}^p(A/X)$ is surjective.
-The kernel of $F^pA/F^{p + 1}A \to A/X + F^{p + 1}A$
-is clearly $F^{p + 1}A + X \cap F^pA/F^{p + 1}A = F^pX/F^{p + 1}X$
+The kernel of the map $F^pA/F^{p + 1}A \to (F^pA + X)/(F^{p + 1}A + X)$
+is $(F^{p + 1}A + (X \cap F^pA))/F^{p + 1}A \cong F^pX/F^{p + 1}X$,
 hence exactness in the middle.
-The two short exact sequence of (2) are special cases of the
+The two short exact sequences of (2) are special cases of the
 short exact sequence of (1).
 \end{proof}
 
@@ -5135,7 +5135,7 @@ Lemma \ref{lemma-ses-gr}
 we see that (4), (5), (6) imply (3) and that (3) implies (4), (5), (6).
 Hence it suffices to show that (3) implies (2).
 Thus we have to show that if $f : A \to B$ is an injective and surjective
-map of finite filtered objects which induces and isomorphism
+map of finite filtered objects which induces an isomorphism
 $\text{gr}(A) \to \text{gr}(B)$, then $f$ induces an isomorphism of
 filtered objects. In other words, we have to show that
 $f(F^pA) = F^pB$ for all $p$.
@@ -5165,7 +5165,7 @@ Let $\mathcal{A}$ be an abelian category. Let $A \to B \to C$ be a complex
 of filtered objects of $\mathcal{A}$. Assume $\alpha : A \to B$ and
 $\beta : B \to C$ are strict morphisms of filtered objects. Then
 $\text{gr}(\Ker(\beta)/\Im(\alpha)) =
-\Ker(\text{gr}(\beta))/\Im(\text{gr}(\alpha)))$.
+\Ker(\text{gr}(\beta))/\Im(\text{gr}(\alpha))$.
 \end{lemma}
 
 \begin{proof}
@@ -5207,7 +5207,7 @@ $C' = C/F^nC$ with induced filtrations. Note that
 $\text{gr}(A) = F^nA \oplus \text{gr}(A')$
 and similarly for $B$ and $C$. The induction hypothesis
 applies to $A' \to B' \to C'$, which implies that
-$A/F^p(A) \to B/F^p(B) \to C/F^p(C)$ is exact for $p \geq n$.
+$A/F^p(A) \to B/F^p(B) \to C/F^p(C)$ is exact for $p \leq n$.
 To conclude the same for $p = n + 1$, i.e., to prove that $A \to B \to C$
 is exact we use the commutative diagram
 $$
