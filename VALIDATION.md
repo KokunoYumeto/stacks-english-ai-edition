@@ -14,8 +14,8 @@ python tools/validate_unified_repository.py
 The gate verifies:
 
 - ancestry of the pinned upstream, source-union, EGA, registry, and cumulative
-  R1–R16 composition heads;
-- 16 admitted registry entries containing exactly 416 stable correction IDs;
+  R1–R17 composition heads;
+- 17 admitted registry entries containing exactly 444 stable correction IDs;
 - exact candidate/source-map joins and presence of every v2 replacement span
   in the live source;
 - the independent `injectives.tex` correction;

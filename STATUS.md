@@ -19,12 +19,12 @@ in each corpus dossier and in the machine-readable registry.
 
 ## Errata state
 
-- Registered and composed: **R1–R16**.
-- Registered batches: **16**.
-- Stable correction IDs represented: **416**. The highest identifier is
-  `MC-STK-ERR-0783`; the sequence contains intentional gaps, so this is not a
-  claim of 783 corrections.
-- R17 is the next leased candidate namespace; it is not an admitted overlay.
+- Registered and composed: **R1–R17**.
+- Registered batches: **17**.
+- Stable correction IDs represented: **444**. The highest identifier is
+  `MC-STK-ERR-0811`; the sequence contains intentional gaps, so this is not a
+  claim of 811 corrections.
+- R18 is the next leased candidate namespace; it is not an admitted overlay.
 - The independent `injectives.tex` parenthesis correction is included in the
   live source and retained in Git history.
 
@@ -36,8 +36,8 @@ proposals remain under
 
 ## Validation state
 
-The repository integrity gate checks the required merge ancestry, all 16
-registry entries and 416 stable IDs, exact replacement text for v2 overlay
+The repository integrity gate checks the required merge ancestry, all 17
+registry entries and 444 stable IDs, exact replacement text for v2 overlay
 operations, the independent source correction, public-document links, JSON
 registries, and unresolved merge markers. See [VALIDATION.md](VALIDATION.md).
 

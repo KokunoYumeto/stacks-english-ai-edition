@@ -17,8 +17,8 @@ ROOT = Path(__file__).resolve().parents[1]
 UPSTREAM = "a04446e57ec1fbc252a871afcec7752fb2807b14"
 SOURCE_UNION = "ad58625f60e6816905ff217d21d91b07b2722fcf"
 EGA_EXPORT = "91df7f1c96bd4973264c29b0e121253a05d1d361"
-REGISTRY_HEAD = "9b73f1917e76dfff296b259f7ed56a9565952170"
-ERRATA_R1_R16 = "8ca593fa03e1271a523fc269d9586b1b81375915"
+REGISTRY_HEAD = "39d8146ca0af49b1d9eaf0742559f64d712bfd8e"
+ERRATA_R1_R17 = "b727797117cba5938dee1f9345ca8fa978d2d2e7"
 
 PUBLIC_MARKDOWN = (
     "README.md",
@@ -109,7 +109,7 @@ def main() -> int:
         (SOURCE_UNION, "FAC/Tohoku/GAGA/FGA source union"),
         (EGA_EXPORT, "EGA export"),
         (REGISTRY_HEAD, "complete registry history"),
-        (ERRATA_R1_R16, "cumulative admitted errata R1-R16"),
+        (ERRATA_R1_R17, "cumulative admitted errata R1-R17"),
     ):
         result = git("merge-base", "--is-ancestor", commit, "HEAD")
         if result.returncode != 0:
@@ -118,8 +118,8 @@ def main() -> int:
     registry_path = ROOT / "ai-integrated/registry/overlays.json"
     registry = json.loads(registry_path.read_text(encoding="utf-8"))
     entries = registry.get("registered_entries", [])
-    if len(entries) != 16:
-        errors.append(f"expected 16 registered overlays, found {len(entries)}")
+    if len(entries) != 17:
+        errors.append(f"expected 17 registered overlays, found {len(entries)}")
 
     registered_ids: list[str] = []
     v2_operations = 0
@@ -210,8 +210,8 @@ def main() -> int:
         active_tags = []
         errors.append(f"could not validate permanent Stacks tags: {exc}")
 
-    if len(registered_ids) != 416:
-        errors.append(f"expected 416 registered stable IDs, found {len(registered_ids)}")
+    if len(registered_ids) != 444:
+        errors.append(f"expected 444 registered stable IDs, found {len(registered_ids)}")
     if len(set(registered_ids)) != len(registered_ids):
         errors.append("registered stable IDs are not unique")
 
