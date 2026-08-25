@@ -1,0 +1,189 @@
+{
+  "schema": "mathematics-commons-stacks-errata-independent-review/v1",
+  "candidate_id": "stacks-errata-a04446e-r21",
+  "review_kind": "independent_adverse_replay",
+  "recorded_at_utc": "2026-08-25T20:56:27Z",
+  "result": "PASS",
+  "conclusion": "UNCONDITIONAL PASS",
+  "passed": true,
+  "pass_is_unconditional": true,
+  "pre_review_manifest_sha256": "C98014EC826F364BD7DEDA6F77BC3FE114B15080EB28D4D5762A1C69429390CC",
+  "validation_sha256": "A8BFACED96ECF447585B3C0B840CCF2DD3A8B224D06B72A0327D8B56713420C3",
+  "pre_review_gate": {
+    "passed": true,
+    "check_manifest_exit_code": 0,
+    "candidate_manifest": {
+      "path": "candidate.manifest.json",
+      "bytes": 9404,
+      "sha256": "C98014EC826F364BD7DEDA6F77BC3FE114B15080EB28D4D5762A1C69429390CC"
+    },
+    "validation": {
+      "path": "builds/validation.json",
+      "bytes": 2555,
+      "sha256": "A8BFACED96ECF447585B3C0B840CCF2DD3A8B224D06B72A0327D8B56713420C3",
+      "passed": true
+    }
+  },
+  "input_nonmutation": {
+    "passed": true,
+    "file_count_excluding_manifest_and_receipt": 44,
+    "note": "The replay read sealed candidate bytes and wrote only this receipt."
+  },
+  "stable_id_recomputation": {
+    "passed": true,
+    "derivation_rule": "Accepted producer rows map in bounded intake order to consecutive stable IDs; rejected allegations consume no stable ID.",
+    "explicit_mapping": [
+      {
+        "producer_id": "SIMPLICIAL-001",
+        "stable_id": "MC-STK-ERR-0904"
+      },
+      {
+        "producer_id": "SIMPLICIAL-002",
+        "stable_id": "MC-STK-ERR-0905"
+      },
+      {
+        "producer_id": "SIMPLICIAL-003",
+        "stable_id": "MC-STK-ERR-0906"
+      },
+      {
+        "producer_id": "SIMPLICIAL-004",
+        "stable_id": "MC-STK-ERR-0907"
+      },
+      {
+        "producer_id": "SIMPLICIAL-005",
+        "stable_id": "MC-STK-ERR-0908"
+      },
+      {
+        "producer_id": "SIMPLICIAL-006",
+        "stable_id": "MC-STK-ERR-0909"
+      },
+      {
+        "producer_id": "CANON-SIMPLICIAL-001",
+        "stable_id": "MC-STK-ERR-0910"
+      },
+      {
+        "producer_id": "SIMPLICIAL-008",
+        "stable_id": "MC-STK-ERR-0911"
+      },
+      {
+        "producer_id": "SIMPLICIAL-009",
+        "stable_id": "MC-STK-ERR-0912"
+      },
+      {
+        "producer_id": "SIMPLICIAL-010",
+        "stable_id": "MC-STK-ERR-0913"
+      },
+      {
+        "producer_id": "SIMPLICIAL-011",
+        "stable_id": "MC-STK-ERR-0914"
+      }
+    ],
+    "excluded_producer_ids": [
+      "SIMPLICIAL-007"
+    ],
+    "unit_count": 11,
+    "operation_count": 11,
+    "first_id": "MC-STK-ERR-0904",
+    "last_id": "MC-STK-ERR-0914"
+  },
+  "scratch_replay": {
+    "passed": true,
+    "apply_order": "descending_start_byte",
+    "operation_count": 11,
+    "descending_intervals": [
+      [
+        88812,
+        88835
+      ],
+      [
+        72767,
+        72786
+      ],
+      [
+        54125,
+        54161
+      ],
+      [
+        53996,
+        54046
+      ],
+      [
+        41025,
+        41057
+      ],
+      [
+        17386,
+        17398
+      ],
+      [
+        17369,
+        17384
+      ],
+      [
+        16826,
+        16863
+      ],
+      [
+        16262,
+        16265
+      ],
+      [
+        15587,
+        15598
+      ],
+      [
+        8994,
+        9005
+      ]
+    ],
+    "authority": {
+      "bytes": 234898,
+      "sha256": "187B4CD4F20696BF35EED843528462780CA04ABBBC597AE1045F8404372FDC56"
+    },
+    "output": {
+      "bytes": 235001,
+      "sha256": "E4FD6748E65633490F8C48D720BEBF7327505DDF25B578868F6739E15BC96E16"
+    },
+    "operation_spec_sha256": "F7A6CCC9412B7C1F3FA65A04EA9C7984ED6572D59ADBC96AD932E4F6DBA1F8B4"
+  },
+  "sealed_evidence_verification": {
+    "passed": true,
+    "build_receipt": {
+      "path": "builds/build-receipt.json",
+      "sha256": "875C6729E2146C423CBAB7631A3F35AE0E987899BCAA66561147911A2F4B27CF"
+    },
+    "visual_qa": {
+      "path": "builds/visual-qa.json",
+      "sha256": "67BCBBEA0AA6A331E11149EE59473E30B8CB47E68D3B6CF8CC63ADA2B7B73DE9"
+    },
+    "candidate_pdf": {
+      "path": "builds/simplicial.pdf",
+      "bytes": 811031,
+      "sha256": "7202ED47CAEF4BFD021B6C0A98B387E544999C63682F932AF024AE06E66E435B",
+      "pages": 71
+    },
+    "authority_pdf": {
+      "path": "builds/simplicial.authority.pdf",
+      "bytes": 810915,
+      "sha256": "0F84344BF4769BE498CF183DCC85DACB7A0D29634AE289BD3DF4E105B517B906",
+      "pages": 71
+    },
+    "private_render_manifest": {
+      "bytes": 16553,
+      "sha256": "6C4D68928EFB69DB62DA2F6855D71BBC0B50D64C9346F4066649E86B76C0C90A",
+      "logical_path": "canon/private_evidence/errata-r21-20260825T2045Z/render-final/render-manifest.json"
+    }
+  },
+  "adverse_observations": [
+    "Standalone candidate and authority builds retain identical cross-chapter unresolved-reference multisets.",
+    "Both PDFs are untagged; this retained accessibility limitation is not misreported as a visual failure.",
+    "All 71 candidate pages and every correction-sensitive locus were inspected without a visual defect."
+  ],
+  "constraints_observed": {
+    "candidate_inputs_mutated": false,
+    "upstream_contacted": false,
+    "persistent_writes": [
+      "replay/independent-review.json"
+    ]
+  }
+}
