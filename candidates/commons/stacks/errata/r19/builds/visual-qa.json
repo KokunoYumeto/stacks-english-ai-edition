@@ -1,0 +1,1201 @@
+{
+  "adverse_evidence": [
+    "The standalone PDFs are not tagged PDFs and contain no StructTreeRoot or MarkInfo; this is retained as an accessibility limitation rather than misreported as a visual failure.",
+    "Standalone chapter builds intentionally retain cross-chapter unresolved targets; the build receipt proves their target multisets match the frozen authority builds."
+  ],
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "build_receipt": {
+    "bytes": 24109,
+    "path": "builds/build-receipt.json",
+    "sha256": "AA46381A299180A31F8B7D5D2A158CFF2A96CFAAF9CCAAF0B0C4463CB6A9B651"
+  },
+  "candidate_id": "stacks-errata-a04446e-r19",
+  "generated_at_utc": "2026-08-25T14:46:37Z",
+  "passed": true,
+  "pdfs": [
+    {
+      "authority_control_pdf": {
+        "bytes": 1209823,
+        "path": "builds/derived.authority.pdf",
+        "sha256": "B102CDF07D79A745F708799CCE443AF4E254363AFBB1A758F94B7CC7DE6EE4CA"
+      },
+      "authority_link_annotations": 622,
+      "authority_malformed_link_rectangles": 0,
+      "authority_out_of_bounds_link_rectangles": 0,
+      "authority_pages": 129,
+      "bytes": 1209374,
+      "contact_sheet_evidence": [
+        {
+          "bytes": 856519,
+          "file": "derived_01.png",
+          "sha256": "27BE7F34B0B5F75AD5A6E77990B0BC7E8CF0BD3C9433C9EBBAC7D6947C18E7ED"
+        },
+        {
+          "bytes": 882636,
+          "file": "derived_02.png",
+          "sha256": "3DCA2DC354ADFB8330684236F8EE3E028C92602605D8DE8A400AC1B8A6C69FCD"
+        },
+        {
+          "bytes": 901945,
+          "file": "derived_03.png",
+          "sha256": "7F78BF2AE55F784C60FD843909BD4EB0D3B1A04136862A9776050E020C77C032"
+        },
+        {
+          "bytes": 934217,
+          "file": "derived_04.png",
+          "sha256": "47854E9C033C7283A484AC897E52A7959E179AD1034605052BF2E0C6DD0F9810"
+        },
+        {
+          "bytes": 862419,
+          "file": "derived_05.png",
+          "sha256": "A512C0A7DEA8455748E494F037F08B297692D73B0DF7EE8BA0B7C5C83348126C"
+        },
+        {
+          "bytes": 852678,
+          "file": "derived_06.png",
+          "sha256": "4B27259767A527321518E1982017138D061F3F35A65025687797B41CAB5F7BD7"
+        },
+        {
+          "bytes": 899493,
+          "file": "derived_07.png",
+          "sha256": "6A4085A19C08E080A4D54B82E6CDDDEB7144A338B280F37663F78117B47EABD5"
+        },
+        {
+          "bytes": 875186,
+          "file": "derived_08.png",
+          "sha256": "E7F45DD569CADE0669203BEC3B2965DF817C34F9DA4D47E2204C460CD45A6C4C"
+        },
+        {
+          "bytes": 53973,
+          "file": "derived_09.png",
+          "sha256": "27D4AF18E6D131712030A8990180D9C24CDE6A3F22AA64B39B964D60F9EAE7B4"
+        }
+      ],
+      "covered_units": [
+        "MC-STK-ERR-0832",
+        "MC-STK-ERR-0833",
+        "MC-STK-ERR-0834",
+        "MC-STK-ERR-0835",
+        "MC-STK-ERR-0836",
+        "MC-STK-ERR-0837",
+        "MC-STK-ERR-0838",
+        "MC-STK-ERR-0839",
+        "MC-STK-ERR-0840",
+        "MC-STK-ERR-0841",
+        "MC-STK-ERR-0842",
+        "MC-STK-ERR-0843",
+        "MC-STK-ERR-0844",
+        "MC-STK-ERR-0845",
+        "MC-STK-ERR-0846",
+        "MC-STK-ERR-0847",
+        "MC-STK-ERR-0848",
+        "MC-STK-ERR-0849",
+        "MC-STK-ERR-0850",
+        "MC-STK-ERR-0851",
+        "MC-STK-ERR-0852",
+        "MC-STK-ERR-0853",
+        "MC-STK-ERR-0854",
+        "MC-STK-ERR-0855",
+        "MC-STK-ERR-0856",
+        "MC-STK-ERR-0857",
+        "MC-STK-ERR-0858",
+        "MC-STK-ERR-0859",
+        "MC-STK-ERR-0860",
+        "MC-STK-ERR-0861",
+        "MC-STK-ERR-0862",
+        "MC-STK-ERR-0863",
+        "MC-STK-ERR-0864",
+        "MC-STK-ERR-0865",
+        "MC-STK-ERR-0866",
+        "MC-STK-ERR-0867",
+        "MC-STK-ERR-0868",
+        "MC-STK-ERR-0869",
+        "MC-STK-ERR-0870",
+        "MC-STK-ERR-0871",
+        "MC-STK-ERR-0872",
+        "MC-STK-ERR-0873",
+        "MC-STK-ERR-0874"
+      ],
+      "font_records": 30,
+      "fonts_without_tounicode": [],
+      "full_page_render_count": 129,
+      "high_resolution_evidence": [
+        {
+          "bytes": 287039,
+          "file": "derived_p1.png",
+          "page": 1,
+          "sha256": "47399E1CA30E270ACAE7519B7B8BE762C518A17302F3178F914C76686004BACE"
+        },
+        {
+          "bytes": 328092,
+          "file": "derived_p2.png",
+          "page": 2,
+          "sha256": "942365D75DE2D3B9473EA9B87556602EBDB6AFD51AD74CC38EE0C07130D53FE5"
+        },
+        {
+          "bytes": 349021,
+          "file": "derived_p3.png",
+          "page": 3,
+          "sha256": "DB86AAE271E96BA8A5678F6613513B19B14443C2835C72AC273ACEC448C12815"
+        },
+        {
+          "bytes": 390755,
+          "file": "derived_p4.png",
+          "page": 4,
+          "sha256": "53D2DE7428F61F921F8F7FD7DCE6281A34BB604CEF8C8ADD1BEAF18592FD7998"
+        },
+        {
+          "bytes": 323667,
+          "file": "derived_p5.png",
+          "page": 5,
+          "sha256": "BE5F9EDE3340F915B40A0290E8ABDD132750E20AFF8081CE3E318A4B555F8A19"
+        },
+        {
+          "bytes": 343836,
+          "file": "derived_p6.png",
+          "page": 6,
+          "sha256": "7AF63DB09FCC960AF1C3A44155087BADCF6AA9B7712FF33790D569FDBDF911C4"
+        },
+        {
+          "bytes": 346049,
+          "file": "derived_p7.png",
+          "page": 7,
+          "sha256": "097E87027AD362C297E3B4FA6E164808F5A594BE396DA221351F3A7548D2CCAE"
+        },
+        {
+          "bytes": 383340,
+          "file": "derived_p8.png",
+          "page": 8,
+          "sha256": "4FE772CEC07BB41CF78A8B4AA828324ADBFF1413F6CF9EEC8DA22718BFC92A6D"
+        },
+        {
+          "bytes": 425000,
+          "file": "derived_p9.png",
+          "page": 9,
+          "sha256": "EC01488A483C5F370E5852CFAB05D60DDE02496C03095CBF2723033DBB9915C9"
+        },
+        {
+          "bytes": 435051,
+          "file": "derived_p10.png",
+          "page": 10,
+          "sha256": "2AA2CF4CCEBA2E910BA086818EF1BB00FAD10CA90AD3FCCD1DCC9F94C706BC10"
+        },
+        {
+          "bytes": 390343,
+          "file": "derived_p11.png",
+          "page": 11,
+          "sha256": "B7221AE3686F54063A582A2526E34E0978AEC9142395349B00116188325A999D"
+        },
+        {
+          "bytes": 277728,
+          "file": "derived_p12.png",
+          "page": 12,
+          "sha256": "EA2C3A07A3FBA6768B46FE769214B5EAD6DB5B88EC6EFAE3F960549F251D6C84"
+        },
+        {
+          "bytes": 384856,
+          "file": "derived_p13.png",
+          "page": 13,
+          "sha256": "8DEE74C417AF97E1CCF9C0CB69895B65DC4015069E14C2B77F39BCA6C101C1B2"
+        },
+        {
+          "bytes": 316765,
+          "file": "derived_p14.png",
+          "page": 14,
+          "sha256": "8000A8F1CE507572AE266C7268B6A834227E9B1A1D50F9E74259A9394D9C6B09"
+        },
+        {
+          "bytes": 348068,
+          "file": "derived_p15.png",
+          "page": 15,
+          "sha256": "9BFDB4B15389626259E5154582B3768CC56FA24F1CB926898900FCAB803BF63F"
+        },
+        {
+          "bytes": 310471,
+          "file": "derived_p16.png",
+          "page": 16,
+          "sha256": "43625C90F7842EEC2B788BD8F68B3992D2F1846A9466DA5723D7455A8AC1975F"
+        },
+        {
+          "bytes": 360487,
+          "file": "derived_p17.png",
+          "page": 17,
+          "sha256": "2B16E0CFDDBFC27450A631F0F482336E765576ED9A969CA388E08A045FC3B44D"
+        },
+        {
+          "bytes": 440069,
+          "file": "derived_p18.png",
+          "page": 18,
+          "sha256": "3676B7FD58EE5F3D28D8B19961C8C0FC962AE4E1DB79B0D44EF1ACBEE2F25C0E"
+        },
+        {
+          "bytes": 478779,
+          "file": "derived_p19.png",
+          "page": 19,
+          "sha256": "671235C3C610B5266F7D5C313A31022A721BB7827AFFF9848466199BA9AEDA8A"
+        },
+        {
+          "bytes": 460364,
+          "file": "derived_p20.png",
+          "page": 20,
+          "sha256": "DE05A7FD376EAA5ACDD7EB882B093F036B079D881306A313B621EA20CBD4DDC7"
+        },
+        {
+          "bytes": 433472,
+          "file": "derived_p21.png",
+          "page": 21,
+          "sha256": "DB4F1EFFE93ED28EDB686BA7EE55E997923CF1541465CBD3F0A0F7A8EC286AE5"
+        },
+        {
+          "bytes": 357849,
+          "file": "derived_p22.png",
+          "page": 22,
+          "sha256": "5C5938E3FA65A96092BB8DE47528594EF878D18195AF345173A871F0B1B75C61"
+        },
+        {
+          "bytes": 274492,
+          "file": "derived_p23.png",
+          "page": 23,
+          "sha256": "F7BBFE8B12B87AB47CECB4B865F04A51673F1E1C1A7C605AFF922CC166080725"
+        },
+        {
+          "bytes": 474502,
+          "file": "derived_p24.png",
+          "page": 24,
+          "sha256": "2DA1E81A90C83395B3638645981341093F7830B53FA2F213FA5722EB15C4868C"
+        },
+        {
+          "bytes": 434151,
+          "file": "derived_p25.png",
+          "page": 25,
+          "sha256": "92106383E3181370AD30FE5E3D6DA425D6AD36F29924BE26472384100683DA1B"
+        },
+        {
+          "bytes": 320777,
+          "file": "derived_p26.png",
+          "page": 26,
+          "sha256": "D8720870BB12D69E3FB1A86B34CF68E15C47BBE8E7675D9B0553AC654FE5A801"
+        },
+        {
+          "bytes": 368011,
+          "file": "derived_p27.png",
+          "page": 27,
+          "sha256": "667E74E31D5CF28C28475761D80AB98942DF18C50788CE6A3304CB8023A9AE2D"
+        },
+        {
+          "bytes": 327509,
+          "file": "derived_p28.png",
+          "page": 28,
+          "sha256": "E20945D255E69633E90B61EE662BF6664CD2E1E1A5F1CB97681F7CE5EFF05981"
+        },
+        {
+          "bytes": 319233,
+          "file": "derived_p29.png",
+          "page": 29,
+          "sha256": "0F4173A73E36C8531A149E9E3261BE3F182D62DA4BFC373F12617442E81C495A"
+        },
+        {
+          "bytes": 255016,
+          "file": "derived_p30.png",
+          "page": 30,
+          "sha256": "A3FC9D905108BDCF450D47539CF0BD68B47943825C5E3E03BF28F85BEFEF9D63"
+        },
+        {
+          "bytes": 306230,
+          "file": "derived_p31.png",
+          "page": 31,
+          "sha256": "64F2B8A783945658CFFD3F2B03B4540CE36DC24311BABF31FCD9A767AC00498D"
+        },
+        {
+          "bytes": 364925,
+          "file": "derived_p32.png",
+          "page": 32,
+          "sha256": "69652CF7C688FABA6C8DE1427009816494141D6C490CE5D99137F7FC260E50BD"
+        },
+        {
+          "bytes": 332400,
+          "file": "derived_p33.png",
+          "page": 33,
+          "sha256": "E7EC08A4C82548900C977A3061D39483CFB2EF801D701BCBACDE0F1DC87AC858"
+        },
+        {
+          "bytes": 369077,
+          "file": "derived_p34.png",
+          "page": 34,
+          "sha256": "0ECCE5786CE51E8ABAF9054C9D2B359DFF2775AAA78DCC48D42474E52AB4C2DF"
+        },
+        {
+          "bytes": 400888,
+          "file": "derived_p35.png",
+          "page": 35,
+          "sha256": "270C46C6095C88883F5DD950385C5E84DA8189614B12BEC9449FA26C7597DA75"
+        },
+        {
+          "bytes": 465215,
+          "file": "derived_p36.png",
+          "page": 36,
+          "sha256": "41A3FA3216FEC3BED651736D7245192E6492C15D7E43D1C2E6BC996AC5507488"
+        },
+        {
+          "bytes": 374773,
+          "file": "derived_p37.png",
+          "page": 37,
+          "sha256": "1C9A4847A2539049178BA478D0AA79D736849FFF7762DBC83796841B4065DB5A"
+        },
+        {
+          "bytes": 351272,
+          "file": "derived_p38.png",
+          "page": 38,
+          "sha256": "56059CCB189FA4C36D6FEAA3AF56F55CDCCEB9BB74E7821687854832D70D9E22"
+        },
+        {
+          "bytes": 439759,
+          "file": "derived_p39.png",
+          "page": 39,
+          "sha256": "468371EFDC2DCBC3E9A4DADD3CB815D7840F12A908179AE09121CE538FC4441F"
+        },
+        {
+          "bytes": 411028,
+          "file": "derived_p40.png",
+          "page": 40,
+          "sha256": "ED42F083910079896B50C201DEDE3C45E5AA370E546BE5296C52B3D868E7890D"
+        },
+        {
+          "bytes": 374521,
+          "file": "derived_p41.png",
+          "page": 41,
+          "sha256": "B2E6D0092B626B05EB2BC34AD2AF8FF7926B3E0630DAAC2CC37C7F2823CE5119"
+        },
+        {
+          "bytes": 321987,
+          "file": "derived_p42.png",
+          "page": 42,
+          "sha256": "EEB057343EF5E9AFEFE7884A1916C26B32D3CCC6D23ABC586A7C528A53E28FF7"
+        },
+        {
+          "bytes": 363540,
+          "file": "derived_p43.png",
+          "page": 43,
+          "sha256": "9889E57FAAF6E0A8BF2468710370D20CCCE6733CA15697B8B89BB305BB81A6CE"
+        },
+        {
+          "bytes": 408630,
+          "file": "derived_p44.png",
+          "page": 44,
+          "sha256": "F0BD9C2D5DE0D974B075D86DB304598B756A3D71CA8FE7DA8A8F49369B25DA7F"
+        },
+        {
+          "bytes": 367381,
+          "file": "derived_p45.png",
+          "page": 45,
+          "sha256": "F7264E4C843AE5EE5EC7E83515454727A79636ACBF286F42BB18C79313447627"
+        },
+        {
+          "bytes": 413518,
+          "file": "derived_p46.png",
+          "page": 46,
+          "sha256": "5D1E3FC762E90BE2AC3AFD725D245EA4ACCFD25297D785AF326D5A22466684C9"
+        },
+        {
+          "bytes": 233248,
+          "file": "derived_p47.png",
+          "page": 47,
+          "sha256": "C6A7224A385684F2FB437BAB967375087C8066535819F08C7941691487256913"
+        },
+        {
+          "bytes": 372781,
+          "file": "derived_p48.png",
+          "page": 48,
+          "sha256": "8E546F4451BA62B3E20048988D66C907B436B924B0E94AD7026DE0116D9A3F8E"
+        },
+        {
+          "bytes": 311953,
+          "file": "derived_p49.png",
+          "page": 49,
+          "sha256": "FB39687B7D40EBF9BD50B8254D596E7F285EF2B6C4D5FA044F866CACF7E16991"
+        },
+        {
+          "bytes": 452718,
+          "file": "derived_p50.png",
+          "page": 50,
+          "sha256": "DD6C11179BC295B8342EC4B2192A5185A113145C6B7C03461BEBDC7846D9EEEF"
+        },
+        {
+          "bytes": 406154,
+          "file": "derived_p51.png",
+          "page": 51,
+          "sha256": "EF43227BF2C45D659E8C967600C04F350A1937D630B493B8F971F4B6CD5B7EA6"
+        },
+        {
+          "bytes": 386241,
+          "file": "derived_p52.png",
+          "page": 52,
+          "sha256": "CE57AA657729FB35817318B0BAA238F3FD1E1FF5412B735BCBECF3790C4CDCD6"
+        },
+        {
+          "bytes": 383189,
+          "file": "derived_p53.png",
+          "page": 53,
+          "sha256": "F03215A808AB0C982082F65DA2C60055951930D066EDF625E061AED84ABD2E06"
+        },
+        {
+          "bytes": 419285,
+          "file": "derived_p54.png",
+          "page": 54,
+          "sha256": "035451DE544889A13CC3864641DD045A6B542D75993FF1D18116D4D94747FAD1"
+        },
+        {
+          "bytes": 364579,
+          "file": "derived_p55.png",
+          "page": 55,
+          "sha256": "2D98B9444E63FE7270BCF1D0016B0E85FD671D2BD56AF956FF5754ADC75FA19D"
+        },
+        {
+          "bytes": 416236,
+          "file": "derived_p56.png",
+          "page": 56,
+          "sha256": "5957A407D19958E880D3387D583A312C1BA7A96B2415C45D4226BF219D61F7A1"
+        },
+        {
+          "bytes": 415600,
+          "file": "derived_p57.png",
+          "page": 57,
+          "sha256": "E24AE0A7841958B46507BDBAB99FB88337A05DF4343AF807B9760D2201326046"
+        },
+        {
+          "bytes": 406547,
+          "file": "derived_p58.png",
+          "page": 58,
+          "sha256": "D97683CEFEE07274A4650B5D7F759854CD0A334D4FCE059EE11B82FA324E3BB4"
+        },
+        {
+          "bytes": 369175,
+          "file": "derived_p59.png",
+          "page": 59,
+          "sha256": "3F176D5D1CFE7C8993DA6AFD7A5D09A2784BCF92DD2C5375E381697E3559E840"
+        },
+        {
+          "bytes": 423349,
+          "file": "derived_p60.png",
+          "page": 60,
+          "sha256": "815456AB988975FC2C692D52B027675954EDAF67911E0BB3DE231B2C0A149621"
+        },
+        {
+          "bytes": 417334,
+          "file": "derived_p61.png",
+          "page": 61,
+          "sha256": "FDA7F27852E4F100AC40A97E47416641F83E937CC444FBC795067F0882B5A687"
+        },
+        {
+          "bytes": 361430,
+          "file": "derived_p62.png",
+          "page": 62,
+          "sha256": "843C910317502C7279381399203D1A7BA02FCC06087CC24FC927A8E1B64AB7E6"
+        },
+        {
+          "bytes": 432285,
+          "file": "derived_p63.png",
+          "page": 63,
+          "sha256": "31AD94AE3978DE008B61AA2EDBC68C4D79F80B6B08997DDB6154EE3181F86FF6"
+        },
+        {
+          "bytes": 356076,
+          "file": "derived_p64.png",
+          "page": 64,
+          "sha256": "46DC5FD3BA4A87C372C2EEDBA3AECEE26E917D7606EECE1265B12A4C49EB98AB"
+        },
+        {
+          "bytes": 279289,
+          "file": "derived_p65.png",
+          "page": 65,
+          "sha256": "37C2F2CAAA02906B66075CAF45E0E8A9F94F06EC1782358DB2E89EFE522BDCDA"
+        },
+        {
+          "bytes": 327666,
+          "file": "derived_p66.png",
+          "page": 66,
+          "sha256": "404C8D14ED26DB1E246EE9EAADDA066D68874AB1AB2F4BE58FEDF9A0080576EC"
+        },
+        {
+          "bytes": 352215,
+          "file": "derived_p67.png",
+          "page": 67,
+          "sha256": "CDA0FA450FF1A3F9780713D96C58FF004FEF140F495737CE0FF932C1BC6C4E9B"
+        },
+        {
+          "bytes": 364901,
+          "file": "derived_p68.png",
+          "page": 68,
+          "sha256": "2CA6A84B82D69E2424E50732FD2D1F352F85E817A8AFC2E67EF41FE6FBE29E20"
+        },
+        {
+          "bytes": 298524,
+          "file": "derived_p69.png",
+          "page": 69,
+          "sha256": "9AA54D23576E190BDF32C1323A698565E5370F235C059FF796E3D6D1F364DE29"
+        },
+        {
+          "bytes": 341167,
+          "file": "derived_p70.png",
+          "page": 70,
+          "sha256": "B487FE2D54F324F88479C4E19C4B0AE2A57FCE74F271D0FAACD743EA30390B86"
+        },
+        {
+          "bytes": 378616,
+          "file": "derived_p71.png",
+          "page": 71,
+          "sha256": "361B53D3D2803831E53AB115940FCB5027196A41FE38E14D52E5CF778FECE7A7"
+        },
+        {
+          "bytes": 379413,
+          "file": "derived_p72.png",
+          "page": 72,
+          "sha256": "67851DF312F1FBD5F39A64276166757BE936B8B85F648CF761E1AE95588C8CA2"
+        },
+        {
+          "bytes": 432628,
+          "file": "derived_p73.png",
+          "page": 73,
+          "sha256": "334426C9BF4A8A7514F722AEFC9A8397BFAB19FCC4AF378ECF9E5593D3B35A0F"
+        },
+        {
+          "bytes": 388403,
+          "file": "derived_p74.png",
+          "page": 74,
+          "sha256": "1C108C1DA3962FB5EEB0849DDE2525442121310535817F97D0A6D0370320D08F"
+        },
+        {
+          "bytes": 342757,
+          "file": "derived_p75.png",
+          "page": 75,
+          "sha256": "C0DF6455FB7584C95F5564D088CFC9B6B599646772C80EF62C145F84996BACAF"
+        },
+        {
+          "bytes": 366940,
+          "file": "derived_p76.png",
+          "page": 76,
+          "sha256": "C9182C02E3FDC88FC8652BD2C8B942BE32302AD906562C2010AC609DDE69EC0A"
+        },
+        {
+          "bytes": 434645,
+          "file": "derived_p77.png",
+          "page": 77,
+          "sha256": "741A7940DEFF38AB66670853200CE92C196561E7921F3226C201762D66B92414"
+        },
+        {
+          "bytes": 321782,
+          "file": "derived_p78.png",
+          "page": 78,
+          "sha256": "996F6EF4B47F0C624EBBBC141998D8D7B05FD554B822A0E0344B211BCB008658"
+        },
+        {
+          "bytes": 425535,
+          "file": "derived_p79.png",
+          "page": 79,
+          "sha256": "CC93F48A073A5102D8F3315DDF9EECAF83EEF39B3669A610FD5245CE9603A6FE"
+        },
+        {
+          "bytes": 357137,
+          "file": "derived_p80.png",
+          "page": 80,
+          "sha256": "8D3F1C222D70819568B710FE3B5CE951E87E293CB11B1B680558E5A2D222D023"
+        },
+        {
+          "bytes": 339716,
+          "file": "derived_p81.png",
+          "page": 81,
+          "sha256": "614C046B1CFEA34E2367AEFEDCB3AD2FBE59463C2F6552A51986E231E84D267C"
+        },
+        {
+          "bytes": 330605,
+          "file": "derived_p82.png",
+          "page": 82,
+          "sha256": "00245E986B7E0ED7ECFA2A83551B135B9969A775E4081E9271C15A97DB5DFD98"
+        },
+        {
+          "bytes": 341742,
+          "file": "derived_p83.png",
+          "page": 83,
+          "sha256": "3571E9DED73298202E938AE5EA786D776E1C70F6E373D7D00567E3287451ABA1"
+        },
+        {
+          "bytes": 390913,
+          "file": "derived_p84.png",
+          "page": 84,
+          "sha256": "2A5F1AC1208A7F8A4C1D4EA9C851C9824D8D50D666C2E8D700D3E410C3EC1610"
+        },
+        {
+          "bytes": 397775,
+          "file": "derived_p85.png",
+          "page": 85,
+          "sha256": "CB103F4325337CEBD857E273FAD44400B65F2B6A91762E9CEE8E449813451A6C"
+        },
+        {
+          "bytes": 382419,
+          "file": "derived_p86.png",
+          "page": 86,
+          "sha256": "95A1C0EB18E1DBAC5D1DA5D643EA0E405C1025D1477E822883B0CA89A7EB931E"
+        },
+        {
+          "bytes": 377153,
+          "file": "derived_p87.png",
+          "page": 87,
+          "sha256": "5640EDC50648CA9EE72EC7021C42D9DC3C124A240258208D07342EE1F8F000CF"
+        },
+        {
+          "bytes": 323578,
+          "file": "derived_p88.png",
+          "page": 88,
+          "sha256": "76E6C2266ACA114BD2B52198CE8E8BF0D20A3D9C532229D85A999F029E713872"
+        },
+        {
+          "bytes": 346917,
+          "file": "derived_p89.png",
+          "page": 89,
+          "sha256": "00355A8B571B7E04F672931314329C3F72FA81DF30A0C09684DFDAD76F4F49C9"
+        },
+        {
+          "bytes": 294482,
+          "file": "derived_p90.png",
+          "page": 90,
+          "sha256": "7A517B4B1B372EA90971947BCB8223DAFDD8A531B51EC767B0515C1BFD0CCD4F"
+        },
+        {
+          "bytes": 385068,
+          "file": "derived_p91.png",
+          "page": 91,
+          "sha256": "0AB8F4E7AFCECBE6EAF831C9CA503FF050EBE0747740E1757F0C8AA24D62E307"
+        },
+        {
+          "bytes": 356852,
+          "file": "derived_p92.png",
+          "page": 92,
+          "sha256": "D069707AA52DED082632314F275D4B24AE0235CA044056ACAD1EFB1BA367DB2B"
+        },
+        {
+          "bytes": 366581,
+          "file": "derived_p93.png",
+          "page": 93,
+          "sha256": "8AF2EB7EA290118C76F1E74987905D8B8395943A12A3E6474941417FBAE419A9"
+        },
+        {
+          "bytes": 331671,
+          "file": "derived_p94.png",
+          "page": 94,
+          "sha256": "9209C7EEDD7C9D814B0EFAB97A23CFE24F41739F99FE9934C2A781C049CB27A2"
+        },
+        {
+          "bytes": 311628,
+          "file": "derived_p95.png",
+          "page": 95,
+          "sha256": "3BD3F09DD0013CFE0C503BF532823EC0010B4BBD574010E4B458568967C8EC66"
+        },
+        {
+          "bytes": 369301,
+          "file": "derived_p96.png",
+          "page": 96,
+          "sha256": "638F6058D6CB4E892F9CF37E3B7D64F053E2EB4653EC9E7A89CFBFF6532B5543"
+        },
+        {
+          "bytes": 354419,
+          "file": "derived_p97.png",
+          "page": 97,
+          "sha256": "6B33B7982D7F20D8DC237BE8D8A4ED11F57E286438EFC980CDB997CF7AC28E46"
+        },
+        {
+          "bytes": 363151,
+          "file": "derived_p98.png",
+          "page": 98,
+          "sha256": "CF7467D80E14183F2CA48C074F0A9EA7626E71D2D2AF4C564D0022055A9EBBF7"
+        },
+        {
+          "bytes": 341731,
+          "file": "derived_p99.png",
+          "page": 99,
+          "sha256": "03BEF902457C7A47031FA8BAEBE060A31136FA2AD3DA5477A961ED00EBC41000"
+        },
+        {
+          "bytes": 371058,
+          "file": "derived_p100.png",
+          "page": 100,
+          "sha256": "01480FE4B9E34D7E223FAD640C6C982DEFED099F69888AC8EF764988389F8470"
+        },
+        {
+          "bytes": 440372,
+          "file": "derived_p101.png",
+          "page": 101,
+          "sha256": "A666A85B4B52BE3878216430D9F12811063E050052067A6AEAFA46E509EC809A"
+        },
+        {
+          "bytes": 376922,
+          "file": "derived_p102.png",
+          "page": 102,
+          "sha256": "7334BAC85530711B5C24F479CA1AC3FD2C95C4164E29BC44C1EEF63FCE7B2BA1"
+        },
+        {
+          "bytes": 334847,
+          "file": "derived_p103.png",
+          "page": 103,
+          "sha256": "DCCE83E82060222DF0352FE34B0A32DAF675F84070D4C26AE881E43913B5B689"
+        },
+        {
+          "bytes": 372770,
+          "file": "derived_p104.png",
+          "page": 104,
+          "sha256": "49696F90B61803C50ED3B3DE6E345AA522645401CB919DD92B52ED83B2A54EE9"
+        },
+        {
+          "bytes": 368722,
+          "file": "derived_p105.png",
+          "page": 105,
+          "sha256": "B25397AC21DE50185F245299583319FD5CB3DB91183011F1013915ADE0658228"
+        },
+        {
+          "bytes": 365870,
+          "file": "derived_p106.png",
+          "page": 106,
+          "sha256": "87C5E55AED2B946DF61C5745F04A97C14DAE5EDC35ACE79BFFB8ABA6619A4D50"
+        },
+        {
+          "bytes": 321494,
+          "file": "derived_p107.png",
+          "page": 107,
+          "sha256": "1CEED4BCD554506862A7F0B00EA6A73D997B846EAA52D470B675635172B495FC"
+        },
+        {
+          "bytes": 451113,
+          "file": "derived_p108.png",
+          "page": 108,
+          "sha256": "CBF2F3AE3481C17CAAA72932E5BA49A9110E95F830CC9197D8BE3CD5D6D1455E"
+        },
+        {
+          "bytes": 317749,
+          "file": "derived_p109.png",
+          "page": 109,
+          "sha256": "BF8D2B1F3131065E81F6733A17B3CDCE13CD61CBFD5B0D11D399CDDF9FF7E71C"
+        },
+        {
+          "bytes": 337929,
+          "file": "derived_p110.png",
+          "page": 110,
+          "sha256": "BC681642E9E754065C883A4CA0827D02592F46C5964BA7082240B0D5EF117FF0"
+        },
+        {
+          "bytes": 429594,
+          "file": "derived_p111.png",
+          "page": 111,
+          "sha256": "59D8919F5A3BA8400B1A84484035CC48864C93CC855754D4D0918010E83B1AC6"
+        },
+        {
+          "bytes": 414588,
+          "file": "derived_p112.png",
+          "page": 112,
+          "sha256": "7201CC45B07FDA24D5DBD613A206DC76298E22AD90B6D449DB0B75A64CE9162B"
+        },
+        {
+          "bytes": 387777,
+          "file": "derived_p113.png",
+          "page": 113,
+          "sha256": "B79E6E85EA3CC4BF7EA7F09CD4CD76EE9773EEBCE91411FF27CD2CAD1D2F7958"
+        },
+        {
+          "bytes": 366637,
+          "file": "derived_p114.png",
+          "page": 114,
+          "sha256": "429A16DA0906A93245E1B205A92D6BC7578EABA23F2F0E9034BADC01B8892CDF"
+        },
+        {
+          "bytes": 370330,
+          "file": "derived_p115.png",
+          "page": 115,
+          "sha256": "1ADF4A420D39D416967F896B94776D8F6F7B72018DFA740A4F395766FEEB68E8"
+        },
+        {
+          "bytes": 336002,
+          "file": "derived_p116.png",
+          "page": 116,
+          "sha256": "585A3B0522EFAFC0469FAB7FBE19E1159105869D4A3097858EF4BBA118EFDBBF"
+        },
+        {
+          "bytes": 386838,
+          "file": "derived_p117.png",
+          "page": 117,
+          "sha256": "27F9CE9A20FC8B578879A51A72C750D5BA737C7C2AC5817C7BE417FCED23DEE4"
+        },
+        {
+          "bytes": 332414,
+          "file": "derived_p118.png",
+          "page": 118,
+          "sha256": "6DF7AD19132E52EE7140849744D96305ED63E3713D3E551A88460FA2F8271AE0"
+        },
+        {
+          "bytes": 306066,
+          "file": "derived_p119.png",
+          "page": 119,
+          "sha256": "802BD29F325A1AAB569FAA9CE1D2CB665A0D6AC313A2646F2E2A9C4F415C7771"
+        },
+        {
+          "bytes": 396546,
+          "file": "derived_p120.png",
+          "page": 120,
+          "sha256": "CAD97DFBB5833919A1B23A728CE7B8386A4A6CE32558DD82DF188D5A1DDB861F"
+        },
+        {
+          "bytes": 346422,
+          "file": "derived_p121.png",
+          "page": 121,
+          "sha256": "A1074B36B145E62D03E3020389640078265A85E2D6A526ADFDBD100B46D15EF6"
+        },
+        {
+          "bytes": 378925,
+          "file": "derived_p122.png",
+          "page": 122,
+          "sha256": "B7DA778F790F3914A1692F86B19A8BC53F8EF5902CFBAC0275DBDB48D3B481E8"
+        },
+        {
+          "bytes": 321152,
+          "file": "derived_p123.png",
+          "page": 123,
+          "sha256": "C9E1AE3644763D5A1E2C02317F3A39117FBD7EB32DF743AD07F34E1832CE031F"
+        },
+        {
+          "bytes": 349232,
+          "file": "derived_p124.png",
+          "page": 124,
+          "sha256": "75C35B3E8906D7FC6DFEA1E9235F910352515E02CACAB7DD403B3D982CED1EB8"
+        },
+        {
+          "bytes": 379662,
+          "file": "derived_p125.png",
+          "page": 125,
+          "sha256": "D1D60CE9CC6F520DBADA3C606E991A12C0413DA484FEB04127E572B7E0C24287"
+        },
+        {
+          "bytes": 353191,
+          "file": "derived_p126.png",
+          "page": 126,
+          "sha256": "0CC7F7000EFFF1914612A2B6C42E2B887CB28DB2F47CA264F539A782CF1E9338"
+        },
+        {
+          "bytes": 397473,
+          "file": "derived_p127.png",
+          "page": 127,
+          "sha256": "0117B8F9C599A87FB2401DB39FD954BC063C139E48B1566FD2CCDB50CF3B41D4"
+        },
+        {
+          "bytes": 517777,
+          "file": "derived_p128.png",
+          "page": 128,
+          "sha256": "514ACC904A4DFE9BF0241F4F407E0D65F6260584FC1B89626C93639371F1F19E"
+        },
+        {
+          "bytes": 341918,
+          "file": "derived_p129.png",
+          "page": 129,
+          "sha256": "A6E1BF59FE5B030A7D2896B4EC85866B5E29A1A1B024203DE27A563C08A22649"
+        }
+      ],
+      "link_annotations": 621,
+      "malformed_link_rectangles": 0,
+      "manual_findings": {
+        "blank_or_duplicate_pages": 0,
+        "broken_diagrams": 0,
+        "clipping": 0,
+        "high_resolution_pages_inspected": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120,
+          121,
+          122,
+          123,
+          124,
+          125,
+          126,
+          127,
+          128,
+          129
+        ],
+        "missing_glyphs": 0,
+        "overlap": 0,
+        "pages_inspected": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120,
+          121,
+          122,
+          123,
+          124,
+          125,
+          126,
+          127,
+          128,
+          129
+        ],
+        "passed": true,
+        "unreadable_content": 0,
+        "warning_loci_outside_printable_area": 0
+      },
+      "mark_info_present": false,
+      "out_of_bounds_link_rectangles": 0,
+      "page_boxes_points": [
+        [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ]
+      ],
+      "pages": 129,
+      "path": "builds/derived.pdf",
+      "reflow_note": "Candidate and authority page counts are recorded above; every candidate page was inspected, including all pages directly affected by the 57 mapped Derived operations.",
+      "sha256": "2B0767C0E75F8EDEBB00D331F0A41026AC871DAB23FAE1D026D341DCF4178AC3",
+      "stem": "derived",
+      "tagged_pdf": false,
+      "unembedded_fonts": [],
+      "unsubset_fonts": []
+    }
+  ],
+  "render_protocol": {
+    "full_page_contact_sheet_review": "All rendered pages manually inspected in ordered 4-by-4 contact sheets",
+    "full_page_render": "Poppler pdftoppm PNG at 96 dpi for every candidate page",
+    "high_resolution_review": "The manifest-bound high-resolution page inventory was generated at 180 dpi; every configured correction-sensitive page was manually inspected at that resolution",
+    "private_render_artifacts_published": false,
+    "private_render_manifest_bytes": 51725,
+    "private_render_manifest_sha256": "8AA31A4FB30A506A255CE67CFD3B30BABD187AB64BE20F73A94CCE38679D3912"
+  },
+  "schema": "mathematics-commons-stacks-errata-visual-qa/v1"
+}

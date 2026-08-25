@@ -1,0 +1,499 @@
+{
+  "schema": "mathematics-commons-stacks-errata-independent-review/v1",
+  "candidate_id": "stacks-errata-a04446e-r19",
+  "review_kind": "independent_adverse_replay",
+  "recorded_at_utc": "2026-08-25T14:50:16Z",
+  "result": "PASS",
+  "conclusion": "UNCONDITIONAL PASS",
+  "passed": true,
+  "pass_is_unconditional": true,
+  "pre_review_manifest_sha256": "BA374EEF17994557C0A303E7D937AADCF3992942AD3138E030D53D83A09F75B3",
+  "validation_sha256": "4D671988D8DF9ECCFAD98F9AFB762C9913B10BCD91526B6BDF641C3DE1CABC8E",
+  "pre_review_gate": {
+    "passed": true,
+    "check_manifest_exit_code": 0,
+    "candidate_manifest": {
+      "path": "candidate.manifest.json",
+      "bytes": 8656,
+      "sha256": "BA374EEF17994557C0A303E7D937AADCF3992942AD3138E030D53D83A09F75B3"
+    },
+    "validation": {
+      "path": "builds/validation.json",
+      "bytes": 2817,
+      "sha256": "4D671988D8DF9ECCFAD98F9AFB762C9913B10BCD91526B6BDF641C3DE1CABC8E",
+      "passed": true
+    }
+  },
+  "input_nonmutation": {
+    "passed": true,
+    "file_count_excluding_manifest_and_receipt": 42,
+    "note": "The replay read sealed candidate bytes and wrote only this receipt."
+  },
+  "stable_id_recomputation": {
+    "passed": true,
+    "derivation_rule": "Accepted producer rows map in bounded intake order to consecutive stable IDs; rejected-duplicate rows consume no stable ID.",
+    "explicit_mapping": [
+      {
+        "producer_id": "DERIVED-021",
+        "stable_id": "MC-STK-ERR-0832"
+      },
+      {
+        "producer_id": "DERIVED-022",
+        "stable_id": "MC-STK-ERR-0833"
+      },
+      {
+        "producer_id": "DERIVED-023",
+        "stable_id": "MC-STK-ERR-0834"
+      },
+      {
+        "producer_id": "DERIVED-024",
+        "stable_id": "MC-STK-ERR-0835"
+      },
+      {
+        "producer_id": "DERIVED-025",
+        "stable_id": "MC-STK-ERR-0836"
+      },
+      {
+        "producer_id": "DERIVED-026",
+        "stable_id": "MC-STK-ERR-0837"
+      },
+      {
+        "producer_id": "DERIVED-027",
+        "stable_id": "MC-STK-ERR-0838"
+      },
+      {
+        "producer_id": "DERIVED-028",
+        "stable_id": "MC-STK-ERR-0839"
+      },
+      {
+        "producer_id": "DERIVED-029",
+        "stable_id": "MC-STK-ERR-0840"
+      },
+      {
+        "producer_id": "DERIVED-030",
+        "stable_id": "MC-STK-ERR-0841"
+      },
+      {
+        "producer_id": "DERIVED-031",
+        "stable_id": "MC-STK-ERR-0842"
+      },
+      {
+        "producer_id": "DERIVED-032",
+        "stable_id": "MC-STK-ERR-0843"
+      },
+      {
+        "producer_id": "DERIVED-033",
+        "stable_id": "MC-STK-ERR-0844"
+      },
+      {
+        "producer_id": "DERIVED-034",
+        "stable_id": "MC-STK-ERR-0845"
+      },
+      {
+        "producer_id": "DERIVED-035",
+        "stable_id": "MC-STK-ERR-0846"
+      },
+      {
+        "producer_id": "DERIVED-036",
+        "stable_id": "MC-STK-ERR-0847"
+      },
+      {
+        "producer_id": "DERIVED-037",
+        "stable_id": "MC-STK-ERR-0848"
+      },
+      {
+        "producer_id": "DERIVED-038",
+        "stable_id": "MC-STK-ERR-0849"
+      },
+      {
+        "producer_id": "DERIVED-039",
+        "stable_id": "MC-STK-ERR-0850"
+      },
+      {
+        "producer_id": "DERIVED-040",
+        "stable_id": "MC-STK-ERR-0851"
+      },
+      {
+        "producer_id": "DERIVED-041",
+        "stable_id": "MC-STK-ERR-0852"
+      },
+      {
+        "producer_id": "DERIVED-042",
+        "stable_id": "MC-STK-ERR-0853"
+      },
+      {
+        "producer_id": "DERIVED-043",
+        "stable_id": "MC-STK-ERR-0854"
+      },
+      {
+        "producer_id": "DERIVED-044",
+        "stable_id": "MC-STK-ERR-0855"
+      },
+      {
+        "producer_id": "DERIVED-045",
+        "stable_id": "MC-STK-ERR-0856"
+      },
+      {
+        "producer_id": "DERIVED-046",
+        "stable_id": "MC-STK-ERR-0857"
+      },
+      {
+        "producer_id": "DERIVED-047",
+        "stable_id": "MC-STK-ERR-0858"
+      },
+      {
+        "producer_id": "DERIVED-048",
+        "stable_id": "MC-STK-ERR-0859"
+      },
+      {
+        "producer_id": "DERIVED-049",
+        "stable_id": "MC-STK-ERR-0860"
+      },
+      {
+        "producer_id": "DERIVED-050",
+        "stable_id": "MC-STK-ERR-0861"
+      },
+      {
+        "producer_id": "DERIVED-051",
+        "stable_id": "MC-STK-ERR-0862"
+      },
+      {
+        "producer_id": "DERIVED-052",
+        "stable_id": "MC-STK-ERR-0863"
+      },
+      {
+        "producer_id": "DERIVED-053",
+        "stable_id": "MC-STK-ERR-0864"
+      },
+      {
+        "producer_id": "DERIVED-054",
+        "stable_id": "MC-STK-ERR-0865"
+      },
+      {
+        "producer_id": "DERIVED-055",
+        "stable_id": "MC-STK-ERR-0866"
+      },
+      {
+        "producer_id": "DERIVED-056",
+        "stable_id": "MC-STK-ERR-0867"
+      },
+      {
+        "producer_id": "DERIVED-057",
+        "stable_id": "MC-STK-ERR-0868"
+      },
+      {
+        "producer_id": "DERIVED-058",
+        "stable_id": "MC-STK-ERR-0869"
+      },
+      {
+        "producer_id": "DERIVED-059",
+        "stable_id": "MC-STK-ERR-0870"
+      },
+      {
+        "producer_id": "DERIVED-060",
+        "stable_id": "MC-STK-ERR-0871"
+      },
+      {
+        "producer_id": "DERIVED-061",
+        "stable_id": "MC-STK-ERR-0872"
+      },
+      {
+        "producer_id": "DERIVED-062",
+        "stable_id": "MC-STK-ERR-0873"
+      },
+      {
+        "producer_id": "DERIVED-063",
+        "stable_id": "MC-STK-ERR-0874"
+      }
+    ],
+    "excluded_producer_ids": [],
+    "unit_count": 43,
+    "operation_count": 57,
+    "first_id": "MC-STK-ERR-0832",
+    "last_id": "MC-STK-ERR-0874"
+  },
+  "scratch_replay": {
+    "passed": true,
+    "apply_order": "descending_start_byte",
+    "operation_count": 57,
+    "descending_intervals": [
+      [
+        306985,
+        307032
+      ],
+      [
+        305614,
+        305653
+      ],
+      [
+        303974,
+        304031
+      ],
+      [
+        303936,
+        303973
+      ],
+      [
+        300559,
+        300595
+      ],
+      [
+        297404,
+        297437
+      ],
+      [
+        294580,
+        294623
+      ],
+      [
+        294534,
+        294577
+      ],
+      [
+        290595,
+        290636
+      ],
+      [
+        287898,
+        287945
+      ],
+      [
+        286264,
+        286292
+      ],
+      [
+        284203,
+        284248
+      ],
+      [
+        283292,
+        283336
+      ],
+      [
+        283165,
+        283192
+      ],
+      [
+        277316,
+        277352
+      ],
+      [
+        277165,
+        277228
+      ],
+      [
+        276783,
+        276813
+      ],
+      [
+        275005,
+        275017
+      ],
+      [
+        274965,
+        274977
+      ],
+      [
+        273989,
+        274030
+      ],
+      [
+        270016,
+        270043
+      ],
+      [
+        269983,
+        269999
+      ],
+      [
+        269647,
+        269676
+      ],
+      [
+        263116,
+        263154
+      ],
+      [
+        261025,
+        261081
+      ],
+      [
+        260959,
+        261024
+      ],
+      [
+        260721,
+        260741
+      ],
+      [
+        260214,
+        260240
+      ],
+      [
+        260165,
+        260210
+      ],
+      [
+        259048,
+        259123
+      ],
+      [
+        252623,
+        252647
+      ],
+      [
+        247390,
+        247435
+      ],
+      [
+        244050,
+        244103
+      ],
+      [
+        244001,
+        244034
+      ],
+      [
+        236849,
+        236875
+      ],
+      [
+        234485,
+        234518
+      ],
+      [
+        233374,
+        233414
+      ],
+      [
+        230118,
+        230158
+      ],
+      [
+        227637,
+        227646
+      ],
+      [
+        227451,
+        227460
+      ],
+      [
+        227334,
+        227343
+      ],
+      [
+        227252,
+        227261
+      ],
+      [
+        227203,
+        227217
+      ],
+      [
+        227172,
+        227181
+      ],
+      [
+        225962,
+        225977
+      ],
+      [
+        222749,
+        222767
+      ],
+      [
+        219334,
+        219362
+      ],
+      [
+        211883,
+        211922
+      ],
+      [
+        210953,
+        211009
+      ],
+      [
+        197603,
+        197621
+      ],
+      [
+        193623,
+        193652
+      ],
+      [
+        193337,
+        193354
+      ],
+      [
+        186273,
+        186303
+      ],
+      [
+        170168,
+        170230
+      ],
+      [
+        170023,
+        170056
+      ],
+      [
+        165390,
+        165417
+      ],
+      [
+        153174,
+        153227
+      ]
+    ],
+    "authority": {
+      "bytes": 449677,
+      "sha256": "EFDA4CB361DD40909D1991161EAE716E58B6CF9E79380971502E1DA12396D402"
+    },
+    "output": {
+      "bytes": 449674,
+      "sha256": "64A9B8C5568B575457AE8E81DB54F39D9590260422EE4BD5710EB743CC6E7C31"
+    },
+    "operation_spec_sha256": "8551341963CDBD68D53E8FACF5E133E96E250E8F76BF72C908A2C53A9DBC6014"
+  },
+  "sealed_evidence_verification": {
+    "passed": true,
+    "build_receipt": {
+      "path": "builds/build-receipt.json",
+      "sha256": "AA46381A299180A31F8B7D5D2A158CFF2A96CFAAF9CCAAF0B0C4463CB6A9B651"
+    },
+    "visual_qa": {
+      "path": "builds/visual-qa.json",
+      "sha256": "A5EAE3080D69AF5033F390344B903D0C221B22D90CA2467F4337680F5F396D9F"
+    },
+    "candidate_pdf": {
+      "path": "builds/derived.pdf",
+      "bytes": 1209374,
+      "sha256": "2B0767C0E75F8EDEBB00D331F0A41026AC871DAB23FAE1D026D341DCF4178AC3",
+      "pages": 129
+    },
+    "authority_pdf": {
+      "path": "builds/derived.authority.pdf",
+      "bytes": 1209823,
+      "sha256": "B102CDF07D79A745F708799CCE443AF4E254363AFBB1A758F94B7CC7DE6EE4CA",
+      "pages": 129
+    },
+    "private_render_manifest": {
+      "bytes": 51725,
+      "sha256": "8AA31A4FB30A506A255CE67CFD3B30BABD187AB64BE20F73A94CCE38679D3912",
+      "logical_path": "canon/private_evidence/errata-r19-20260825T1430Z/render-final/render-manifest.json"
+    }
+  },
+  "adverse_observations": [
+    "Standalone candidate and authority builds retain identical cross-chapter unresolved-reference multisets.",
+    "Both PDFs are untagged; this retained accessibility limitation is not misreported as a visual failure.",
+    "All 129 candidate pages and every correction-sensitive locus were inspected without a visual defect."
+  ],
+  "constraints_observed": {
+    "candidate_inputs_mutated": false,
+    "upstream_contacted": false,
+    "persistent_writes": [
+      "replay/independent-review.json"
+    ]
+  }
+}
