@@ -46705,7 +46705,7 @@ hypotheses are satisfied.
 In this section we start proving some algebraic facts concerning the
 ``descent'' of properties of rings. It turns out that it is often
 ``easier'' to descend properties than it is to ascend them. In other
-words, the assumption on the ring map $R \to S$ are often weaker than
+words, the assumption on the ring map $R \to S$ is often weaker than
 the assumptions in the corresponding lemma of the preceding section.
 However, we warn the reader that the results on descent are often
 useless unless the corresponding ascent can also be shown!
@@ -46763,7 +46763,7 @@ Then $R$ is a normal ring.
 Since $S$ is reduced it follows that $R$ is reduced.
 Let $\mathfrak p$ be a prime of $R$. We have to show that
 $R_{\mathfrak p}$ is a normal domain. Since $S_{\mathfrak p}$
-is faithfully over $R_{\mathfrak p}$ too we may assume that
+is faithfully flat over $R_{\mathfrak p}$ too we may assume that
 $R$ is local with maximal ideal $\mathfrak m$.
 Let $\mathfrak q$ be a prime of $S$ lying over $\mathfrak m$.
 Then we see that $R \to S_{\mathfrak q}$ is faithfully flat
@@ -46879,7 +46879,7 @@ Since $B$ is Noetherian it has only a finite number of minimal
 primes $\mathfrak q_1, \ldots, \mathfrak q_t$ (see
 Lemma \ref{lemma-Noetherian-irreducible-components}).
 As $A \to B$ is flat each of these lies over $(0) \subset A$
-(by going down, see Lemma \ref{lemma-flat-going-down})
+(by going down, see Lemma \ref{lemma-flat-going-down}).
 The total ring of fractions $Q(B)$ is the product of the
 $L_i = \kappa(\mathfrak q_i)$ (Lemmas
 \ref{lemma-total-ring-fractions-no-embedded-points} and
@@ -46899,6 +46899,7 @@ Q(A) \otimes_A B = (A \setminus \{0\})^{-1}A \otimes_A B
 = (A \setminus \{0\})^{-1}B \to Q(B)
 $$
 is injective (we used Lemma \ref{lemma-tensor-localization}).
+Let $A'$ be the integral closure of $A$ in $Q(A)$.
 Via this map $A'$ maps into $B'$. This induces a map
 $$
 A' \otimes_A B \longrightarrow B'
@@ -46909,7 +46910,7 @@ and $B$ is Noetherian we see that $A' \otimes_A B$ is a finite $B$-module.
 Hence there exist finitely many elements $x_i \in A'$ such that
 the elements $x_i \otimes 1$ generate $A' \otimes_A B$ as a $B$-module.
 Finally, by faithful flatness of $A \to B$ we conclude that
-the $x_i$ also generated $A'$ as an $A$-module, and we win.
+the $x_i$ also generate $A'$ as an $A$-module, and we win.
 \end{proof}
 
 \begin{remark}
@@ -46921,7 +46922,7 @@ there is a construction of a finite ring map $A \to B$ with
 $A$ local Noetherian and not universally catenary,
 $B$ semi-local with two maximal ideals $\mathfrak m$, $\mathfrak n$
 with $B_{\mathfrak m}$ and $B_{\mathfrak n}$ regular of dimension $2$ and $1$
-respectively, and the same residue fields as that of $A$.
+respectively, and each has the same residue field as $A$.
 Moreover, $\mathfrak m_A$ generates the maximal ideal in both
 $B_{\mathfrak m}$ and $B_{\mathfrak n}$ (so $A \to B$ is unramified
 as well as finite).
