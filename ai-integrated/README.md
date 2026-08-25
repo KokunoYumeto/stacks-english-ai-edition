@@ -21,15 +21,15 @@ unified repository, not a separate edition.
 
 ## Live registry state
 
-- Admitted overlay batches: **16** (`R1` through `R16`).
-- Stable correction IDs in those batches: **416**.
-- Highest stable identifier: `MC-STK-ERR-0783`; identifier gaps are
+- Admitted overlay batches: **17** (`R1` through `R17`).
+- Stable correction IDs in those batches: **444**.
+- Highest stable identifier: `MC-STK-ERR-0811`; identifier gaps are
   intentional and retained.
-- R17 is the next leased candidate namespace; it is not an admitted overlay.
+- R18 is the next leased candidate namespace; it is not an admitted overlay.
 
 The authoritative overlay list is
 [`registry/overlays.json`](registry/overlays.json). The integrated root source
-contains the admitted R1–R16 composition; registry admission and source
+contains the admitted R1–R17 composition; registry admission and source
 composition remain separately testable states.
 
 ## Directory map

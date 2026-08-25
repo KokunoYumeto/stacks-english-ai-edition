@@ -1,0 +1,205 @@
+{
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_inputs": {
+    "homology.tex": {
+      "bytes": 267354,
+      "path": "homology.tex",
+      "sha256": "483CAF01B4BD164DBC9103D76196E294E00EFE17E706178ECF2DC2C1DEF4ABE0"
+    }
+  },
+  "authority_phase": {
+    "stems": {
+      "homology": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "homology.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 63854,
+            "stdout_sha256_raw": "46A25C54EBF12FA6FA605B40C95A17ADD1BD4DD18FE366F9716BC6D3613D448A"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "homology"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 145,
+            "stdout_sha256_raw": "1F7CA2F6D0F695067D00EB58F2B241F9F234FB2B8464D01DAE9BFCEE3129B4E3"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "homology.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 43009,
+            "stdout_sha256_raw": "C3D8977489054810F36111EC45D8CC669F5132360813115C1BAC15E2968E430D"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "homology.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 42227,
+            "stdout_sha256_raw": "52ACAFE8D0B2116674EDDDB2170FDF90B3419722DE5232644480F1E82D94ADBA"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 145,
+            "path": "builds/homology.authority.bibtex.txt",
+            "sha256": "1F7CA2F6D0F695067D00EB58F2B241F9F234FB2B8464D01DAE9BFCEE3129B4E3"
+          },
+          "log": {
+            "bytes": 55878,
+            "path": "builds/homology.authority.log",
+            "sha256": "4FC82CDAB9C462822BA3B953F32A8464691769F4A64E51950093725F4EBF5D6F"
+          },
+          "pass3_stdout": {
+            "bytes": 41829,
+            "path": "builds/homology.authority.pass3.txt",
+            "sha256": "C2E89A3C1D15A648FEF6042369BCEB6A58C1C0B3681AFFF53FDECC75282AE373"
+          },
+          "pdf": {
+            "bytes": 872973,
+            "path": "builds/homology.authority.pdf",
+            "sha256": "561B756AAF76680F4F3B36B93B0F13D7AE24273547C65FDB28056EF1C21A36D6"
+          }
+        },
+        "source": {
+          "bytes": 267354,
+          "path": "homology.tex",
+          "sha256": "483CAF01B4BD164DBC9103D76196E294E00EFE17E706178ECF2DC2C1DEF4ABE0"
+        }
+      }
+    }
+  },
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "candidate_id": "stacks-errata-a04446e-r17",
+  "candidate_inputs": {
+    "homology.tex": {
+      "bytes": 267597,
+      "path": "homology.tex",
+      "sha256": "AB21BA1C8B75E3CDC7A4E1374260FBA6A82ABE959390C00CCDDB5FC4EA8310EB"
+    }
+  },
+  "candidate_phase": {
+    "stems": {
+      "homology": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "homology.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 63854,
+            "stdout_sha256_raw": "71E9FB2DC3156961A941282B91F9C9B81A91C92D40E8AD15EC00F7877E52FC4A"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "homology"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 145,
+            "stdout_sha256_raw": "1F7CA2F6D0F695067D00EB58F2B241F9F234FB2B8464D01DAE9BFCEE3129B4E3"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "homology.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 43009,
+            "stdout_sha256_raw": "584EDA38BBDA3DDA337700AAD091C07C2E7A1B135CBB12473D623F795F4DA2DA"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "homology.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 42227,
+            "stdout_sha256_raw": "FA75DCD30C6630A905ED0768E333F2072A13B9FA212E65B5ACB15EA0EAA23205"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 145,
+            "path": "builds/homology.bibtex.txt",
+            "sha256": "1F7CA2F6D0F695067D00EB58F2B241F9F234FB2B8464D01DAE9BFCEE3129B4E3"
+          },
+          "log": {
+            "bytes": 55878,
+            "path": "builds/homology.log",
+            "sha256": "968F41CE1758B9AD6C6C2DBDE69C2FDB8BCB82A7AD13DBDFDBD1799EAB6DBF6A"
+          },
+          "pass3_stdout": {
+            "bytes": 41829,
+            "path": "builds/homology.pass3.txt",
+            "sha256": "107A511880F7BB891356AA3C54BA9481C4F11CB7496499BC1C90844CD231A3DB"
+          },
+          "pdf": {
+            "bytes": 873312,
+            "path": "builds/homology.pdf",
+            "sha256": "C9FC02EE8C4EF1D8A954EDB45FA72A7B3235BBC56405DB2E73EB8FF03E3E137D"
+          }
+        },
+        "source": {
+          "bytes": 267597,
+          "path": "homology.tex",
+          "sha256": "AB21BA1C8B75E3CDC7A4E1374260FBA6A82ABE959390C00CCDDB5FC4EA8310EB"
+        }
+      }
+    }
+  },
+  "completed_at_utc": "2026-08-25T02:12:04Z",
+  "passed": true,
+  "restored_authority_inputs": {
+    "homology.tex": {
+      "bytes": 267354,
+      "path": "homology.tex",
+      "sha256": "483CAF01B4BD164DBC9103D76196E294E00EFE17E706178ECF2DC2C1DEF4ABE0"
+    }
+  },
+  "schema": "mathematics-commons-stacks-errata-build-execution/v1",
+  "source_date_epoch": "1785270512",
+  "started_at_utc": "2026-08-25T02:11:44Z",
+  "tools": {
+    "bibtex": "MiKTeX-BibTeX 4.2 (MiKTeX 26.5)",
+    "pdflatex": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5)",
+    "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]"
+  },
+  "work_root": "new empty task-local directory outside source and candidate; exact local path retained only in private evidence"
+}

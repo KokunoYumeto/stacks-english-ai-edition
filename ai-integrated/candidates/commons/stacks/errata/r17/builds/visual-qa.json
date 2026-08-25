@@ -1,0 +1,711 @@
+{
+  "adverse_evidence": [
+    "The standalone PDFs are not tagged PDFs and contain no StructTreeRoot or MarkInfo; this is retained as an accessibility limitation rather than misreported as a visual failure.",
+    "Standalone chapter builds intentionally retain cross-chapter unresolved targets; the build receipt proves their target multisets match the frozen authority builds."
+  ],
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "build_receipt": {
+    "bytes": 17890,
+    "path": "builds/build-receipt.json",
+    "sha256": "E82797C61162E70811A752E1A59C6680B938A86E71AA567A1E00DF9FA2C238D9"
+  },
+  "candidate_id": "stacks-errata-a04446e-r17",
+  "generated_at_utc": "2026-08-25T02:16:55Z",
+  "passed": true,
+  "pdfs": [
+    {
+      "authority_control_pdf": {
+        "bytes": 872973,
+        "path": "builds/homology.authority.pdf",
+        "sha256": "561B756AAF76680F4F3B36B93B0F13D7AE24273547C65FDB28056EF1C21A36D6"
+      },
+      "authority_link_annotations": 248,
+      "authority_malformed_link_rectangles": 0,
+      "authority_out_of_bounds_link_rectangles": 0,
+      "authority_pages": 82,
+      "bytes": 873312,
+      "contact_sheet_evidence": [
+        {
+          "bytes": 790028,
+          "file": "homology_01.png",
+          "sha256": "4EFD96361D9367164AB7D16221EB4C59261D3496A830C5B2756E1F53EA72379A"
+        },
+        {
+          "bytes": 832759,
+          "file": "homology_02.png",
+          "sha256": "3BC70311A680731153A79181955EAC546C53C2B160B72DEF03EB0E1FC6AC2241"
+        },
+        {
+          "bytes": 826224,
+          "file": "homology_03.png",
+          "sha256": "66D726D697C9DDAB864080EF8CFB519AFCEA662D4CD794A5FF7872848131A503"
+        },
+        {
+          "bytes": 863823,
+          "file": "homology_04.png",
+          "sha256": "B925020575CA2092E5FE443481F58B36B0B37CCD88031CDDA78B8CA339479697"
+        },
+        {
+          "bytes": 900192,
+          "file": "homology_05.png",
+          "sha256": "B42701A886EE2B9A37CE3CF6E7895AB48F71C437C8B95F1A1E7C5AF1223C57C1"
+        },
+        {
+          "bytes": 80954,
+          "file": "homology_06.png",
+          "sha256": "B910B7730258145297437A086A0CEEBF5A2C4E11AEFF76882635D7BE1300C2E7"
+        }
+      ],
+      "covered_units": [
+        "MC-STK-ERR-0784",
+        "MC-STK-ERR-0785",
+        "MC-STK-ERR-0786",
+        "MC-STK-ERR-0787",
+        "MC-STK-ERR-0788",
+        "MC-STK-ERR-0789",
+        "MC-STK-ERR-0790",
+        "MC-STK-ERR-0791",
+        "MC-STK-ERR-0792",
+        "MC-STK-ERR-0793",
+        "MC-STK-ERR-0794",
+        "MC-STK-ERR-0795",
+        "MC-STK-ERR-0796",
+        "MC-STK-ERR-0797",
+        "MC-STK-ERR-0798",
+        "MC-STK-ERR-0799",
+        "MC-STK-ERR-0800",
+        "MC-STK-ERR-0801",
+        "MC-STK-ERR-0802",
+        "MC-STK-ERR-0803",
+        "MC-STK-ERR-0804",
+        "MC-STK-ERR-0805",
+        "MC-STK-ERR-0806",
+        "MC-STK-ERR-0807",
+        "MC-STK-ERR-0808",
+        "MC-STK-ERR-0809",
+        "MC-STK-ERR-0810",
+        "MC-STK-ERR-0811"
+      ],
+      "font_records": 28,
+      "fonts_without_tounicode": [],
+      "full_page_render_count": 82,
+      "high_resolution_evidence": [
+        {
+          "bytes": 211184,
+          "file": "homology_p1.png",
+          "page": 1,
+          "sha256": "9EB09A9333692AD4A65FB18F92558A30E4BB2E2696D121AA2BFB9C681974A5F4"
+        },
+        {
+          "bytes": 342938,
+          "file": "homology_p2.png",
+          "page": 2,
+          "sha256": "2145A8D75499C62C83694AF1B486082EA6B2158FCC483D9973BAF8B6025BCB63"
+        },
+        {
+          "bytes": 373093,
+          "file": "homology_p3.png",
+          "page": 3,
+          "sha256": "D7CAFA4D24DFC7E60DBF726FAE24406C8E2FC4C3E236E9600CE4E53C64F7005C"
+        },
+        {
+          "bytes": 415448,
+          "file": "homology_p4.png",
+          "page": 4,
+          "sha256": "9356216EF7FBD02A20446ECBCBE58C29574F603326F6CE210188AB60464206A9"
+        },
+        {
+          "bytes": 404587,
+          "file": "homology_p5.png",
+          "page": 5,
+          "sha256": "8F634F5A9CC368677FA9DF9F0B43B4C297677D7CEB16ABB86625ADDC17E876C0"
+        },
+        {
+          "bytes": 361790,
+          "file": "homology_p6.png",
+          "page": 6,
+          "sha256": "520D06BECE4C48E3AE547EFC07769652F4CA0F523AA0E172ACFCA34652764EB7"
+        },
+        {
+          "bytes": 369521,
+          "file": "homology_p7.png",
+          "page": 7,
+          "sha256": "2DE6659A26E52C1C0E8D0F13EEDDFCC145B5B25CF1D0D4DE7A6571A88FC2EE55"
+        },
+        {
+          "bytes": 377643,
+          "file": "homology_p8.png",
+          "page": 8,
+          "sha256": "0C0F81A8EBC43B2CF777EBCF78103BDD64F03DC8E994FE427DE8A93FAC1AFF0B"
+        },
+        {
+          "bytes": 323117,
+          "file": "homology_p9.png",
+          "page": 9,
+          "sha256": "93C200992AB88CC88CFDF9441081B21B688C5CF9D59368915627993415295BFF"
+        },
+        {
+          "bytes": 331086,
+          "file": "homology_p10.png",
+          "page": 10,
+          "sha256": "DF4C4D6A03170FF1E330F8878C5015F8C7FF753BCC984113A9933F1E00D5DA10"
+        },
+        {
+          "bytes": 326428,
+          "file": "homology_p11.png",
+          "page": 11,
+          "sha256": "65A01BF61DBA0D87A74EF6D547C2332E04980082A6687B63933B04F8EB17DA5A"
+        },
+        {
+          "bytes": 333899,
+          "file": "homology_p12.png",
+          "page": 12,
+          "sha256": "0C43EF774D7FD5EEC92561E1B022F59D5D2923CB160D762B66109C50E599008E"
+        },
+        {
+          "bytes": 213087,
+          "file": "homology_p13.png",
+          "page": 13,
+          "sha256": "DF55ABCAE82138127C91515F8772A0B4F1D920F531F02E6986ACC65CBB59E54D"
+        },
+        {
+          "bytes": 275869,
+          "file": "homology_p14.png",
+          "page": 14,
+          "sha256": "186921E4011E9BF273C3F077FF08957A519C02415B346BE0F76FFD3B5C7C8FFB"
+        },
+        {
+          "bytes": 287671,
+          "file": "homology_p15.png",
+          "page": 15,
+          "sha256": "85879E1E91C2F106FC6579E43524CBEF2D01FD61289D989309025D079B8192B7"
+        },
+        {
+          "bytes": 304526,
+          "file": "homology_p16.png",
+          "page": 16,
+          "sha256": "B5CC98A9EBB9F3626B822DAB28C4387EF27E3ACB587974CEE90122A1765FC303"
+        },
+        {
+          "bytes": 411253,
+          "file": "homology_p17.png",
+          "page": 17,
+          "sha256": "B50FBA62FD07E3AE08228B4DA636D14D03D412C2CD2A468B72C3B53860BB21F5"
+        },
+        {
+          "bytes": 332674,
+          "file": "homology_p18.png",
+          "page": 18,
+          "sha256": "E61F69B782A692939A84F263EE516FC42EB94A25026C7C41BA7B83158E02C98B"
+        },
+        {
+          "bytes": 338871,
+          "file": "homology_p19.png",
+          "page": 19,
+          "sha256": "026D8CFD38212E33B4D5377499852FAE66ABCD2EB546B95F3BF5DF0C59EDE9BD"
+        },
+        {
+          "bytes": 305590,
+          "file": "homology_p20.png",
+          "page": 20,
+          "sha256": "618EF176B03A30771CB4F7966300F6780D518057D6A949D08A3EF9CC3E06A03D"
+        },
+        {
+          "bytes": 421628,
+          "file": "homology_p21.png",
+          "page": 21,
+          "sha256": "3AAED1184BC2B828D9C29C41995F394ED0D7FCD4667913F36C0F36D0D13AFE4D"
+        },
+        {
+          "bytes": 357936,
+          "file": "homology_p22.png",
+          "page": 22,
+          "sha256": "90C7A5C067B4ABA8A054B268C8BC5F7F2D4E2833D453EE618335BC9DE216C01B"
+        },
+        {
+          "bytes": 360167,
+          "file": "homology_p23.png",
+          "page": 23,
+          "sha256": "91AF88D0088D9B8748B26759818517BF642CBDC66F27DA3A54D2F613878749E4"
+        },
+        {
+          "bytes": 417891,
+          "file": "homology_p24.png",
+          "page": 24,
+          "sha256": "B1087B79AEE1E3EE3D840DEB4F560FACE2243D58AEAB3F221D19236103876BAE"
+        },
+        {
+          "bytes": 352067,
+          "file": "homology_p25.png",
+          "page": 25,
+          "sha256": "244C831DC5CB1256D56E43B704A4C1789B2BDA4EA93A396A187697CCB946FFCB"
+        },
+        {
+          "bytes": 361566,
+          "file": "homology_p26.png",
+          "page": 26,
+          "sha256": "FC7E5E784D1E8EC370DBFE9B5A54C7E4E48D65445A81681F86D350426319DD3D"
+        },
+        {
+          "bytes": 316568,
+          "file": "homology_p27.png",
+          "page": 27,
+          "sha256": "B084448B4D786891321C11A7C76FA47B7EDA2372EE420B2A8D07A56072586B3A"
+        },
+        {
+          "bytes": 270318,
+          "file": "homology_p28.png",
+          "page": 28,
+          "sha256": "1A9E71F9DEB2489E1F300F85C2FC0C49B9D3A4F35C584B13BE7E5FD1D92E45FE"
+        },
+        {
+          "bytes": 380287,
+          "file": "homology_p29.png",
+          "page": 29,
+          "sha256": "E7594A72DEF21E3D888935F621C32E231F8F198F97A788749ADDCC04DC518913"
+        },
+        {
+          "bytes": 361621,
+          "file": "homology_p30.png",
+          "page": 30,
+          "sha256": "A2CAF621D5946C8FBA17CB8524A76F9B3A20B4FF235233CC006E70A53604CC75"
+        },
+        {
+          "bytes": 254012,
+          "file": "homology_p31.png",
+          "page": 31,
+          "sha256": "730B053BE85567592F21BE08B58D06A4273025530A1A3340C7C9E94A3FE2EEF6"
+        },
+        {
+          "bytes": 324154,
+          "file": "homology_p32.png",
+          "page": 32,
+          "sha256": "4B7DC152A47DF3E4C222475B0F58D82B5BCD2ABD227763AB33CF7E61F543267B"
+        },
+        {
+          "bytes": 335716,
+          "file": "homology_p33.png",
+          "page": 33,
+          "sha256": "FF91DCA954FED1ECDAD94671695BFFFE134E16B03505B9199381B826C8894757"
+        },
+        {
+          "bytes": 299982,
+          "file": "homology_p34.png",
+          "page": 34,
+          "sha256": "AFBD5DC9E1A95D84766A98D8B20E5FBB516E17B17804348F4975E68817B355FA"
+        },
+        {
+          "bytes": 400154,
+          "file": "homology_p35.png",
+          "page": 35,
+          "sha256": "7545013D253CA05F4E19DE3EB4BB223AAAF78E1E9707957F14ACEAC456671599"
+        },
+        {
+          "bytes": 409942,
+          "file": "homology_p36.png",
+          "page": 36,
+          "sha256": "223184713CAD16552AAC74FFF089C1FDD4FA4C6689572C54471E5316DAE71026"
+        },
+        {
+          "bytes": 342111,
+          "file": "homology_p37.png",
+          "page": 37,
+          "sha256": "0289073B651B089888B0278AD2D9DEB0F8BDE5E6029B7C2362D3755F510FAF3C"
+        },
+        {
+          "bytes": 231933,
+          "file": "homology_p38.png",
+          "page": 38,
+          "sha256": "D8D14A7EA136808F9BDB06EE3DF1AD3E2CEAB36F413626450515CCB5BAC5A0A7"
+        },
+        {
+          "bytes": 288522,
+          "file": "homology_p39.png",
+          "page": 39,
+          "sha256": "C71F94552E3A491333F4CBC0F8A25094964B1EE635B8A055D49035B0BB6A060C"
+        },
+        {
+          "bytes": 430137,
+          "file": "homology_p40.png",
+          "page": 40,
+          "sha256": "C3EC8C7F4DC4CB3A0A4CCD3ABD5D9DDB3F53F0E0645D5C303A0F29CD36EC4A17"
+        },
+        {
+          "bytes": 386054,
+          "file": "homology_p41.png",
+          "page": 41,
+          "sha256": "5AFD8A4D0407DCA43A68393B46B5AA5A20098BCD6F05EB1351D82A23B180139F"
+        },
+        {
+          "bytes": 296417,
+          "file": "homology_p42.png",
+          "page": 42,
+          "sha256": "1619BE1B7C0F9545DCBC2DBF0F9D915C27C6C2A813A77D67208FB9935609696E"
+        },
+        {
+          "bytes": 292744,
+          "file": "homology_p43.png",
+          "page": 43,
+          "sha256": "453D493345D21B9D2FE31902432C7BA596CCC09438BE86ED7FE0C0477CE9C82C"
+        },
+        {
+          "bytes": 302088,
+          "file": "homology_p44.png",
+          "page": 44,
+          "sha256": "DE4DD5949B64AF254D8267F28FBBDB0850975581CE27D87FFB338E778C522A46"
+        },
+        {
+          "bytes": 345037,
+          "file": "homology_p45.png",
+          "page": 45,
+          "sha256": "59CB29637D4A51ED31B736460B91DD3FF55BC250152104E345BA9E817C5D32C1"
+        },
+        {
+          "bytes": 330268,
+          "file": "homology_p46.png",
+          "page": 46,
+          "sha256": "C96B41124AA0D6ACA8C713658E1235AA5119A8EC9E88B6317418EBDAF07B7281"
+        },
+        {
+          "bytes": 357813,
+          "file": "homology_p47.png",
+          "page": 47,
+          "sha256": "22658EF360F63AE45170B36849F88E720A964D3ECDF47B7CFF9457E4EBE71A94"
+        },
+        {
+          "bytes": 424033,
+          "file": "homology_p48.png",
+          "page": 48,
+          "sha256": "45D3B5B71CFE3C142EBBAD274158EB475C43F4ACD738910539210525469C6B48"
+        },
+        {
+          "bytes": 343823,
+          "file": "homology_p49.png",
+          "page": 49,
+          "sha256": "5257210C1034B880C29413F9365B14805D1652F640E754F6730761DC7BB1AAE3"
+        },
+        {
+          "bytes": 282825,
+          "file": "homology_p50.png",
+          "page": 50,
+          "sha256": "DE6004F451BE5345CE234C5E4F79662F01803F9E36241607F8089F8884834965"
+        },
+        {
+          "bytes": 340057,
+          "file": "homology_p51.png",
+          "page": 51,
+          "sha256": "F3FAAC3D520B502E988E42CA7B5DD03C46BCA90986D81183FD251F91A49EE63C"
+        },
+        {
+          "bytes": 392924,
+          "file": "homology_p52.png",
+          "page": 52,
+          "sha256": "873431AF4FD3C22396117D90020AB1CED4D008DDA251CD8C62E7275DF778D3F3"
+        },
+        {
+          "bytes": 387750,
+          "file": "homology_p53.png",
+          "page": 53,
+          "sha256": "775E84F791410FB892D5AABF1148776A5FF76D22B143B868A3E74F76D3FB798D"
+        },
+        {
+          "bytes": 304888,
+          "file": "homology_p54.png",
+          "page": 54,
+          "sha256": "966FA02AC097EE95C8019B84F13B510DAB4270F03BFBD12C69FBAC5E2A9581E4"
+        },
+        {
+          "bytes": 323075,
+          "file": "homology_p55.png",
+          "page": 55,
+          "sha256": "E141F7E937B476E113F2FAA0D66267421692F0BF467ED9117AA87C4120D2321D"
+        },
+        {
+          "bytes": 304557,
+          "file": "homology_p56.png",
+          "page": 56,
+          "sha256": "6A3EFB930927CC7878381DBE30C58CACD172065BF8FA25059C39A45F8E3B869A"
+        },
+        {
+          "bytes": 408325,
+          "file": "homology_p57.png",
+          "page": 57,
+          "sha256": "3DAFEDC6FB5880C700308904F4EFBB7A423C518E38BF0BDEB6085FE0432F0034"
+        },
+        {
+          "bytes": 352301,
+          "file": "homology_p58.png",
+          "page": 58,
+          "sha256": "574EDBBB1B0A7090777FAC1B3C4E6458B0FF55C925345EFD0FF3BE07A0CCDE8B"
+        },
+        {
+          "bytes": 419343,
+          "file": "homology_p59.png",
+          "page": 59,
+          "sha256": "D7455C397205074D298B2DD5D91D171C9A376B9AB6A9F8C09C37154D1B36D032"
+        },
+        {
+          "bytes": 340627,
+          "file": "homology_p60.png",
+          "page": 60,
+          "sha256": "84FBD5CB46A4207565D993014BD4965162AA53DDBF68668B5ABBBF0E18DDB4CC"
+        },
+        {
+          "bytes": 376352,
+          "file": "homology_p61.png",
+          "page": 61,
+          "sha256": "413EAD1528D2577DBEE22F083FCEBDD409663157DE03DA76976FC128750168CC"
+        },
+        {
+          "bytes": 411464,
+          "file": "homology_p62.png",
+          "page": 62,
+          "sha256": "25D63856CCBC2D4F6A908EDC3CB7E2A1C2CD83C5C3E251044200DEA367D6672C"
+        },
+        {
+          "bytes": 356870,
+          "file": "homology_p63.png",
+          "page": 63,
+          "sha256": "A22471DB04F083D8E15AAF1BA1082251DC0A63E6A3AE18DCAD03D7151F646B94"
+        },
+        {
+          "bytes": 436163,
+          "file": "homology_p64.png",
+          "page": 64,
+          "sha256": "D667E77726365CF1504B60602195B7D8EA15CB71C7AC054C32D7767530C70E87"
+        },
+        {
+          "bytes": 461307,
+          "file": "homology_p65.png",
+          "page": 65,
+          "sha256": "3815877443436764A0626C947023A4D9B1EA3F3C1F1A420D61CDAA293FFAA39A"
+        },
+        {
+          "bytes": 375484,
+          "file": "homology_p66.png",
+          "page": 66,
+          "sha256": "68C1EE923CB8FCCE380025750F6DE06B1DCB095F21E91970F14CA3395BDA19D5"
+        },
+        {
+          "bytes": 408527,
+          "file": "homology_p67.png",
+          "page": 67,
+          "sha256": "466DB8B8C11B3AF62C545178D95034CA416C14922955A846ED46ABF45951EB35"
+        },
+        {
+          "bytes": 448573,
+          "file": "homology_p68.png",
+          "page": 68,
+          "sha256": "A8EDF29B738CDFCAF0CC2BC7B9001FFC94FAF0995D8A10D350DE2D1D06D886E9"
+        },
+        {
+          "bytes": 391837,
+          "file": "homology_p69.png",
+          "page": 69,
+          "sha256": "FE976FC9C2329FB830C760D10A79225924B45F4A7F06B19BC74DB80F6F1DC4EE"
+        },
+        {
+          "bytes": 418859,
+          "file": "homology_p70.png",
+          "page": 70,
+          "sha256": "F51FEA83B575A7113E205DE585E27569BFBB7B7A6EF8C7EA891087B90A7CF469"
+        },
+        {
+          "bytes": 375150,
+          "file": "homology_p71.png",
+          "page": 71,
+          "sha256": "D3C5640FF9C049EB8B54746CAB65BBF2E2C4E7DA8E45CE014A0245C4265CA423"
+        },
+        {
+          "bytes": 292829,
+          "file": "homology_p72.png",
+          "page": 72,
+          "sha256": "AA51CCFFD68A638851BBF5D6D23BD7EF03EE2E56E631A903CF434AA15D09BD2A"
+        },
+        {
+          "bytes": 357576,
+          "file": "homology_p73.png",
+          "page": 73,
+          "sha256": "90343F6F59DA4A4753C62D2E5B0500DD8131171EADFACA32C91A81D82185E995"
+        },
+        {
+          "bytes": 409822,
+          "file": "homology_p74.png",
+          "page": 74,
+          "sha256": "BC1D00964B0EE7204AA4F27F2CDFFB77633B1C38F18F42DCBA03FFE839FB6134"
+        },
+        {
+          "bytes": 381448,
+          "file": "homology_p75.png",
+          "page": 75,
+          "sha256": "62F1ABEB28A7DE98D0271B9B76AA722C6F28C51A4E55DF31A5B241720337BFF4"
+        },
+        {
+          "bytes": 447949,
+          "file": "homology_p76.png",
+          "page": 76,
+          "sha256": "125434F7EB791DC5543B32D6A286CC344D04172B34C73BF948D19040E32C4CC6"
+        },
+        {
+          "bytes": 307436,
+          "file": "homology_p77.png",
+          "page": 77,
+          "sha256": "E6DB05AEBEE931ED682A818BF328127D9B152666C4D79A0714F36A9A46BB9B42"
+        },
+        {
+          "bytes": 384111,
+          "file": "homology_p78.png",
+          "page": 78,
+          "sha256": "FEE81B4FFB4E22F3A8336D40A2CC2DB6B0FFC8CF7B8760FFC62B213430FB078A"
+        },
+        {
+          "bytes": 374644,
+          "file": "homology_p79.png",
+          "page": 79,
+          "sha256": "9D4BE826144E32ECAC001D14521BD9F7C2ADD98B3A594E38032A65ADC1EE077B"
+        },
+        {
+          "bytes": 409267,
+          "file": "homology_p80.png",
+          "page": 80,
+          "sha256": "BA4610188D99152C33307CB369DBF770B854BEA1E3D10E39886947B3A0AA8F46"
+        },
+        {
+          "bytes": 511121,
+          "file": "homology_p81.png",
+          "page": 81,
+          "sha256": "258E93BC594E659C854EF352559A6627FDEE5029A0466015FCDC9DD34FF2068C"
+        },
+        {
+          "bytes": 36590,
+          "file": "homology_p82.png",
+          "page": 82,
+          "sha256": "509EC768A9172AC48DF7CE8974BB4B1B3307B74771F48D758E0A6EA0595AF925"
+        }
+      ],
+      "link_annotations": 248,
+      "malformed_link_rectangles": 0,
+      "manual_findings": {
+        "blank_or_duplicate_pages": 0,
+        "broken_diagrams": 0,
+        "clipping": 0,
+        "missing_glyphs": 0,
+        "overlap": 0,
+        "pages_inspected": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82
+        ],
+        "passed": true,
+        "unreadable_content": 0,
+        "warning_loci_outside_printable_area": 0
+      },
+      "mark_info_present": false,
+      "out_of_bounds_link_rectangles": 0,
+      "page_boxes_points": [
+        [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ]
+      ],
+      "pages": 82,
+      "path": "builds/homology.pdf",
+      "reflow_note": "Candidate and authority page counts are recorded above; every candidate page was inspected, including all pages directly affected by the 45 mapped Homology operations.",
+      "sha256": "C9FC02EE8C4EF1D8A954EDB45FA72A7B3235BBC56405DB2E73EB8FF03E3E137D",
+      "stem": "homology",
+      "tagged_pdf": false,
+      "unembedded_fonts": [],
+      "unsubset_fonts": []
+    }
+  ],
+  "render_protocol": {
+    "full_page_contact_sheet_review": "All rendered pages manually inspected in ordered 4-by-4 contact sheets",
+    "full_page_render": "Poppler pdftoppm PNG at 96 dpi for every candidate page",
+    "high_resolution_review": "All 82 pages, including every correction-sensitive locus, were manually inspected at 180 dpi",
+    "private_render_artifacts_published": false,
+    "private_render_manifest_bytes": 33018,
+    "private_render_manifest_sha256": "558D35121E15827E68AE8D6B2485F4F66C8233C6CEEC487C9FB60D46729F9D74"
+  },
+  "schema": "mathematics-commons-stacks-errata-visual-qa/v1"
+}
