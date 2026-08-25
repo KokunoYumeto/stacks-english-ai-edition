@@ -44050,7 +44050,13 @@ we have $R_\mathfrak p = R'_\mathfrak p$ by induction.
 Hence the support of $R'/R$ is $\{\mathfrak m\}$.
 It follows that $R'/R$ is annihilated by a power of $\mathfrak m$
 (Lemma \ref{lemma-Noetherian-power-ideal-kills-module}).
-By Lemma \ref{lemma-hart-serre-loc-thm} this
+If $x \in R$, there is nothing to prove, so assume $x \notin R$.
+Then $R \to R'$ is not an isomorphism and has zero kernel.
+Since $\text{depth}(R) \geq 2$, there is a nonzerodivisor
+$t \in \mathfrak m$ on $R$. As $t$ is invertible in $Q(R)$, it
+is a nonzerodivisor on $R' \subset Q(R)$. Thus $\mathfrak m$ is
+not an associated prime of $R'$, and $R' \not = 0$.
+By~Lemma~\ref{lemma-hart-serre-loc-thm} this
 contradicts the assumption that the depth of $R$ is $\geq 2 = \min(2, d)$
 and the proof is complete.
 \end{proof}
@@ -44081,14 +44087,14 @@ $$
 R = \bigcap\nolimits_{\text{height}(\mathfrak p) = 1} R_{\mathfrak p}
 $$
 \item For any nonzero $x \in K$ the quotient $R/(R \cap xR)$
-has no embedded primes, and all its associates primes have height $1$.
+has no embedded primes, and all its associated primes have height $1$.
 \end{enumerate}
 \end{lemma}
 
 \begin{proof}
 By Lemma \ref{lemma-criterion-normal} we see that $R$ has $(S_2)$.
 Hence for any nonzero element $a \in R$ we see that $R/aR$ has $(S_1)$
-(use Lemma \ref{lemma-depth-in-ses} for example)
+(use Lemma \ref{lemma-depth-in-ses} for example).
 Hence $R/aR$ has no embedded primes
 (Lemma \ref{lemma-criterion-no-embedded-primes}).
 We conclude the associated primes of $R/aR$ are exactly
@@ -44118,7 +44124,7 @@ to $\bigoplus_{e_i > 0} R/\mathfrak p_i^{(e_i)}$, see
 Definition \ref{definition-symbolic-power}.
 By Lemma \ref{lemma-symbolic-power-associated}
 the only associated prime of the module
-$R/\mathfrak p^{(n)}$ is $\mathfrak p$. Hence the set of associate primes
+$R/\mathfrak p^{(n)}$ is $\mathfrak p$. Hence the set of associated primes
 of $R/(R \cap xR)$ is a subset of $\{\mathfrak p_i\}$ and there are
 no inclusion relations among them. This proves (3).
 \end{proof}
@@ -44297,8 +44303,8 @@ In this case there exists an irreducible polynomial
 $G(X_1, \ldots, X_{r + 1}) \in k[X_1, \ldots, X_{r + 1}]$
 such that $G(x_1, \ldots, x_{r + 1}) = 0$ and such that
 $\partial G/\partial X_{r + 1}$ is not identically zero.
-Moreover $K$ is the field of fractions of the domain.
-$S = K[X_1, \ldots, X_{r + 1}]/(G)$.
+Moreover $K$ is the field of fractions of the domain
+$S = k[X_1, \ldots, X_{r + 1}]/(G)$.
 Write
 $$
 G = \sum a_I X^I, \quad X^I = X_1^{i_1}\ldots X_{r + 1}^{i_{r + 1}}.
@@ -44308,7 +44314,7 @@ $$
 \Omega_{S/\mathbf{F}_p}
 =
 \frac{
-S \otimes_k \Omega_k \oplus
+S \otimes_k \Omega_{k/\mathbf{F}_p} \oplus
 \bigoplus\nolimits_{i = 1, \ldots, r + 1} S\text{d}X_i
 }{
 \langle
@@ -44324,7 +44330,7 @@ $$
 \Omega_{K/\mathbf{F}_p}
 =
 \frac{
-K \otimes_k \Omega_k \oplus
+K \otimes_k \Omega_{k/\mathbf{F}_p} \oplus
 \bigoplus\nolimits_{i = 1, \ldots, r + 1} K\text{d}X_i
 }{
 \langle
@@ -44334,7 +44340,7 @@ K \otimes_k \Omega_k \oplus
 $$
 Now, since the polynomial $\partial G/\partial X_{r + 1}$ is not identically
 zero we conclude that the map
-$K \otimes_k \Omega_{k/\mathbf{F}_p} \to \Omega_{S/\mathbf{F}_p}$
+$K \otimes_k \Omega_{k/\mathbf{F}_p} \to \Omega_{K/\mathbf{F}_p}$
 is injective as desired.
 
 \medskip\noindent
@@ -44400,8 +44406,11 @@ a separable extension of $k$.
 
 \begin{proof}
 Assume $K$ is formally smooth over $k$.
+If $k$ has characteristic zero, then $K/k$ is separable.
+Thus we may assume that $k$ has characteristic $p > 0$.
 By Lemma \ref{lemma-ses-formally-smooth} we see that
-$K \otimes_k \Omega_{k/\mathbf{Z}} \to \Omega_{K/\mathbf{Z}}$
+$K \otimes_k \Omega_{k/\mathbf{F}_p} \to
+\Omega_{K/\mathbf{F}_p}$
 is injective. Hence $K$ is separable over $k$ by
 Lemma \ref{lemma-separable-differentials}.
 \end{proof}
@@ -44415,7 +44424,7 @@ $H_1(L_{K/k}) = 0$.
 
 \begin{proof}
 This follows from Proposition \ref{proposition-characterize-formally-smooth}
-and the fact that a vector spaces is free (hence projective).
+and the fact that a vector space is free (hence projective).
 \end{proof}
 
 \begin{lemma}
@@ -44512,7 +44521,8 @@ is injective,
 \begin{proof}
 This is a combination of
 Lemmas \ref{lemma-characterize-separable-field-extensions},
-\ref{lemma-fields-are-formally-smooth}
+\ref{lemma-fields-are-formally-smooth},
+\ref{lemma-characterize-formally-smooth-field-extension},
 \ref{lemma-formally-smooth-implies-separable}, and
 \ref{lemma-separable-differentials}.
 \end{proof}
@@ -44557,11 +44567,11 @@ Say $L = k(x_1, \ldots, x_d)[y_1, \ldots, y_r]$.
 Pick inductively polynomials $P_i \in k(x_1, \ldots, x_d)[Y_1, \ldots, Y_r]$
 such that $P_i = P_i(Y_1, \ldots, Y_i)$ is monic in $Y_i$ over
 $k(x_1, \ldots, x_d)[Y_1, \ldots, Y_{i - 1}]$ and maps to the
-minimum polynomial of $y_i$ in
+minimal polynomial of $y_i$ in
 $k(x_1, \ldots, x_d)[y_1, \ldots, y_{i - 1}][Y_i]$.
-Then it is clear that $P_1, \ldots, P_r$ is a regular sequence
-in $k(x_1, \ldots, x_r)[Y_1, \ldots, Y_r]$ and that
-$L = k(x_1, \ldots, x_r)[Y_1, \ldots, Y_r]/(P_1, \ldots, P_r)$.
+Then it is clear that $P_1, \ldots, P_r$ are a regular sequence
+in $k(x_1, \ldots, x_d)[Y_1, \ldots, Y_r]$ and that
+$L = k(x_1, \ldots, x_d)[Y_1, \ldots, Y_r]/(P_1, \ldots, P_r)$.
 If $h \in k[x_1, \ldots, x_d]$ is a polynomial such that
 $P_i \in k[x_1, \ldots, x_d, 1/h, Y_1, \ldots, Y_r]$, then
 we see that $P_1, \ldots, P_r$ is a regular sequence in
