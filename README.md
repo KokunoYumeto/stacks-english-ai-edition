@@ -22,7 +22,7 @@ artifacts are not presented as branches or variants of this English edition.
 - Tree: `3feeb703b931a6e7259782c10e7d1575adc83e5e`
 - Upstream licence text: GNU Free Documentation License 1.2, identified by
   [`upstream/stacks.lock.json`](upstream/stacks.lock.json)
-- Registered overlays: **eighteen** (`stacks-errata-a04446e-r1`,
+- Registered overlays: **nineteen** (`stacks-errata-a04446e-r1`,
   `stacks-errata-a04446e-r2`, `stacks-errata-a04446e-r3`,
   `stacks-errata-a04446e-r4`, `stacks-errata-a04446e-r5`,
   `stacks-errata-a04446e-r6`, `stacks-errata-a04446e-r7`,
@@ -30,13 +30,13 @@ artifacts are not presented as branches or variants of this English edition.
   `stacks-errata-a04446e-r10`, `stacks-errata-a04446e-r11`,
   `stacks-errata-a04446e-r12`, `stacks-errata-a04446e-r13`,
   `stacks-errata-a04446e-r14`, `stacks-errata-a04446e-r15`,
-  `stacks-errata-a04446e-r16`, `stacks-errata-a04446e-r17`, and
-  `stacks-errata-a04446e-r18`), each admitted
+  `stacks-errata-a04446e-r16`, `stacks-errata-a04446e-r17`,
+  `stacks-errata-a04446e-r18`, and `stacks-errata-a04446e-r19`), each admitted
   from a manifest-complete candidate
   after independent replay.
 - Active candidate-namespace leases: **four** (`fac`, `tohoku`, `gaga`,
-  `errata/r19`). The first three are held by task
-  `019fca5a-c29e-7330-acdc-c93f4a3dc9fb`; `errata/r19` is held by canon task
+  `errata/r20`). The first three are held by task
+  `019fca5a-c29e-7330-acdc-c93f4a3dc9fb`; `errata/r20` is held by canon task
   `01a0256d-5693-77c1-96b2-cf37101e0c6c`.
 - Imported historical integration branches: **zero**
 - Generated editions or builds: **zero**
