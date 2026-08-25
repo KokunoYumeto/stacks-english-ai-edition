@@ -1,0 +1,215 @@
+{
+  "$schema": "../../../../../schemas/candidate-manifest.schema.json",
+  "schema": "mathematics-commons-stacks-candidate-manifest/v1",
+  "candidate_id": "stacks-errata-a04446e-r18",
+  "lease_id": "stacks-lease-000021-errata-r18",
+  "namespace": "commons/stacks/errata/r18",
+  "writer_task": "01a0256d-5693-77c1-96b2-cf37101e0c6c",
+  "upstream": {
+    "lock": "upstream/stacks.lock.json",
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e"
+  },
+  "source_authorities": [
+    {
+      "path": "authority/canon/R18_DERIVED_001_020_ADJUDICATION_SPEC.json",
+      "sha256": "4BE9B687A0F887AA58DBC8A68C402591E6B4264751C032A54BD7121DEB706DA1"
+    },
+    {
+      "path": "authority/canon/R18_DERIVED_001_020_INTAKE.json",
+      "sha256": "8CACF1023E345293C3BBFC86F6EE323A719C2383F9C63B38B8656C489B3A8CA8"
+    },
+    {
+      "path": "authority/canon/R18_DERIVED_001_020_REVIEW.md",
+      "sha256": "656499830196DE3FB9B4983E7BAFE76F447F7A0E3C4562C93176F9FA340A112D"
+    },
+    {
+      "path": "authority/COPYING",
+      "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"
+    },
+    {
+      "path": "authority/source/derived.tex",
+      "sha256": "EFDA4CB361DD40909D1991161EAE716E58B6CF9E79380971502E1DA12396D402"
+    },
+    {
+      "path": "authority/upstream.lock.json",
+      "sha256": "B195ECC83AB0F32C574A60D1FDBA9B0DA4D35B04E0DF7CB106DC9C0FDAD99C0D"
+    }
+  ],
+  "source_closure": {
+    "enumerated": true,
+    "expected_units": 20,
+    "manifested_units": 20,
+    "complete": true
+  },
+  "stable_unit_manifest": {
+    "path": "stable-units.json",
+    "sha256": "64902AE0D59AC53F7D07D6773798AE4CD855ED730FD7A73C968EF043FE870ABF"
+  },
+  "source_map": {
+    "path": "source-map.jsonl",
+    "sha256": "C3FCA50ECF9A6859B20E3754E6DDFD12E38EB658E263959BED625672D3A77928"
+  },
+  "decision_ledger": {
+    "path": "decisions.jsonl",
+    "sha256": "1A02A247B9F42FDFF04DF20E0223C0AD0F463DC173BA3A341BDAF2CC822205C4"
+  },
+  "rejection_ledger": {
+    "path": "rejections.jsonl",
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  "formula_diagram_inventory": {
+    "path": "formula-diagram-inventory.json",
+    "sha256": "D7BF927ED53E83528F434E1B95E560894859ADAE3D767E62B6D375D0038465F6"
+  },
+  "builds": [
+    {
+      "path": ".gitattributes",
+      "sha256": "705FD4D6451A31D36B3DF7DE96F83F30AC976C9B4A6D1E51671D8E2F33E2D0DA"
+    },
+    {
+      "path": "append-highres.py",
+      "sha256": "347FC105FE4353618CBEA03D4DDE6658E6724BB05E0C5144CEFE1F62AF526236"
+    },
+    {
+      "path": "build-manifest.py",
+      "sha256": "AE5CDDC6B22EB17C5518A9575DA08538BDFAF816F2C595E00D3F11B364597D7A"
+    },
+    {
+      "path": "build-receipt.py",
+      "sha256": "6AD2D96321E3C3EB0635170BF9692957088BA8BC31BAB66E96F6C885F1350BFC"
+    },
+    {
+      "path": "BUILD.md",
+      "sha256": "62641C3BCB4F74D712C4CC363538175DEDD0E6BC8C2C25C6F9DF6371B080C4E6"
+    },
+    {
+      "path": "builds/build-execution.json",
+      "sha256": "1756CBCBCFBB441808D2B3E99213D842E07E64376D6871CF87FDFE3B4F450A74"
+    },
+    {
+      "path": "builds/build-receipt.json",
+      "sha256": "2DC27A3D39E5265D73813FCA6F1C1CCA5BEF651585E0FD6E660D398AB638564C"
+    },
+    {
+      "path": "builds/derived.authority.bibtex.txt",
+      "sha256": "7052BCB7790DDB4A5E71E3DCBA199FB7FC100EF9FE06F6F924F333C6EF2C8AE1"
+    },
+    {
+      "path": "builds/derived.authority.log",
+      "sha256": "8DEF85CFB26D762E0087E9797256DA8ADCA157A6030E0D783743D7A23F97185A"
+    },
+    {
+      "path": "builds/derived.authority.pass3.txt",
+      "sha256": "2EEDB71FEEA645DDEC69179266BAEA2F98D023295B20F43F4A53D5064CA8F3AC"
+    },
+    {
+      "path": "builds/derived.authority.pdf",
+      "sha256": "B102CDF07D79A745F708799CCE443AF4E254363AFBB1A758F94B7CC7DE6EE4CA"
+    },
+    {
+      "path": "builds/derived.bibtex.txt",
+      "sha256": "7052BCB7790DDB4A5E71E3DCBA199FB7FC100EF9FE06F6F924F333C6EF2C8AE1"
+    },
+    {
+      "path": "builds/derived.log",
+      "sha256": "277E2CF7CFFC8267E23ABA9EC50680C78938515379C164E10BA19D0BB39FA729"
+    },
+    {
+      "path": "builds/derived.pass3.txt",
+      "sha256": "7FB4B284900E372C6865B0F706A0181F26F38384ACC5937B9561E94362CCA260"
+    },
+    {
+      "path": "builds/derived.pdf",
+      "sha256": "F31F116F6BA1C776814DC8BA77FB104DF1911DB4EA3B2DA557AD776119D5C02F"
+    },
+    {
+      "path": "builds/deterministic-replay.json",
+      "sha256": "6409B30BB9B0E3CAE0FEBE1612166826B3F6DF5D146312CD2F9279C0F31D9F96"
+    },
+    {
+      "path": "builds/validation.json",
+      "sha256": "68C2A529BE0EE6FCA38AB3B6F5C680C8ADC43D34748F6F4DEE4CD1A259DEA9FF"
+    },
+    {
+      "path": "builds/visual-qa.json",
+      "sha256": "D9691571D3B260438CA431BC4B48FBB1CDA74890EB1A21EE15F967BFCB6038A6"
+    },
+    {
+      "path": "candidate.config.json",
+      "sha256": "5075198A90FC50FD483AE0B991FD3F83A91D1587553EC2B19BFB01EF896AD077"
+    },
+    {
+      "path": "check-manifest.py",
+      "sha256": "9D4513D7BBEC9371D20E73E30ABFC2FC2435BA24729C71A0BC3D3DF187826B75"
+    },
+    {
+      "path": "deterministic-replay.py",
+      "sha256": "29ED98596799B431BF1CD9925858ED655DC75453DCFC11D299418A0CAE9A7BB9"
+    },
+    {
+      "path": "independent-review.py",
+      "sha256": "1BB7F9E50102032C17DC2397F893E7A4FAE424D1F889A913A691069101C70960"
+    },
+    {
+      "path": "LEASE.json",
+      "sha256": "D9810A7B76420D1BB4A34790A7D40ED99317FE6F64664A8538ED63128072B137"
+    },
+    {
+      "path": "materialize.py",
+      "sha256": "52F4E466DF7CAEB45CFE91EF102C86F027994925F3CF442E7BCF12533795D1F6"
+    },
+    {
+      "path": "operation-spec.json",
+      "sha256": "DA4B810066C9BCC1A1A5A9484AB1CF485FC4B72884E9B4227FBA45C9F17DD485"
+    },
+    {
+      "path": "payload/derived.tex",
+      "sha256": "7051800AA3B700DD3736F1E9A749EFD90B84F89B287546F5213FBA508C42FB50"
+    },
+    {
+      "path": "README.md",
+      "sha256": "AEA584B137DD95B1B7FAE69AA9832EE6D602B2DDE299CCEFFC049A2CD0044E10"
+    },
+    {
+      "path": "render-qa.py",
+      "sha256": "2035E6FB6D0BB0455EDD1D67CEB07A5CFA438DA2942272591E0A9D4F62B2A0DD"
+    },
+    {
+      "path": "replay/independent-review.json",
+      "sha256": "CA0E1693224C0F727DB23E7057AC21982DC5F5183E8BB25D72C94EC90AD00894"
+    },
+    {
+      "path": "replay-build.py",
+      "sha256": "4702E37531F9FD1471AE03191DA5CEDEB671CE477AC791C0C1D7D58B5FF2C11B"
+    },
+    {
+      "path": "verify.py",
+      "sha256": "51296C15CEFAB17BFFE91E8CE6549AB2DCAA047276A52F85FB94D787AE07D7A7"
+    },
+    {
+      "path": "visual-qa.py",
+      "sha256": "399B859B93F09F10E35AF72561571E0F81DF8A70CEF6315AB307C8D0571EC30A"
+    }
+  ],
+  "rights_state": "The authority and modified payload retain the Stacks Project GNU Free Documentation License 1.2; metadata and receipts do not relicense upstream content. This is an independently maintained AI-produced English edition with no Stacks Project review, approval, affiliation, or endorsement. Legal certification was not performed.",
+  "review_state": "performed",
+  "independent_replay": "passed",
+  "unresolved_defects": [
+    "The independent replay receipt binds pre-review manifest 0D06E3B30CC758571629A9954E3CA86CE444B8F6486DF454948ED851B108AD40 and validation 68C2A529BE0EE6FCA38AB3B6F5C680C8ADC43D34748F6F4DEE4CD1A259DEA9FF. This final registrar-only rebind adds the replay receipt; no reviewed authority, payload, proof, script, build, PDF, or visual-QA byte changed.",
+    "The isolated derived.tex candidate retains cross-chapter undefined-reference targets; their multiset matches the frozen authority build exactly.",
+    "The sealed chapter readers have page counts candidate 129, authority 129. Every candidate page and every correction-sensitive locus were inspected without clipping, overlap, missing glyph, broken diagram, blank page, or unreadable content.",
+    "The proof PDFs contain embedded fonts with ToUnicode maps but are untagged; document-structure accessibility remains a cumulative-edition toolchain concern.",
+    "The bounded intake closes DERIVED-001 through DERIVED-020: 20 rows are accepted, 0 are rejected duplicates of admitted R2 units, and none is unresolved.",
+    "Canonical translations preserve the frozen authority unless a locale-side emendation is separately bound; this English corrected overlay is not silently copied.",
+    "Overlay admission and English-edition composition are separate transitions; this manifest records candidate closure only."
+  ],
+  "stop_conditions": [
+    "Do not mutate the literal stacks-project master mirror.",
+    "Do not apply these corrections silently to canonical translation source or PDFs.",
+    "Do not contact or submit to the upstream Stacks maintainers under the current no-AI-contribution boundary.",
+    "Do not append an overlay registry record except in a separate admission commit bound to the final manifest hash and a passed independent replay.",
+    "Any change to reviewed authority, payload, proof, build, validation, visual-QA, or replay bytes invalidates the replay and requires a new review."
+  ],
+  "generated_at_utc": "2026-08-25T13:16:28Z"
+}

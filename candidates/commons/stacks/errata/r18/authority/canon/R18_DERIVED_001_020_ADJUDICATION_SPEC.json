@@ -1,0 +1,330 @@
+{
+  "schema": "mathematics-commons-stacks-adjudication-spec/v1",
+  "candidate_id": "stacks-errata-a04446e-r18",
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "authority_sha256": "EFDA4CB361DD40909D1991161EAE716E58B6CF9E79380971502E1DA12396D402",
+  "accepted": [
+    {
+      "producer_id": "DERIVED-001",
+      "stable_id": "MC-STK-ERR-0812",
+      "class": "undefined_morphism_symbol",
+      "locus": "derived.tex:1340",
+      "result": "confirmed_wrong_factorization_arrow",
+      "disposition": "Use the triangle arrow u; g is undefined in the proof.",
+      "operations": [
+        {
+          "source_start_line": 1340,
+          "source_end_line": 1340,
+          "old_text": "i \\circ g = a",
+          "replacement_text": "i \\circ u = a"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-002",
+      "stable_id": "MC-STK-ERR-0813",
+      "class": "wrong_shifted_vertical_morphism",
+      "locus": "derived.tex:1423",
+      "result": "confirmed_wrong_shifted_arrow",
+      "disposition": "Use k[1], induced by the displayed vertical map k : X to X''.",
+      "operations": [
+        {
+          "source_start_line": 1423,
+          "source_end_line": 1423,
+          "old_text": "\\ar[d]^{g[1]}",
+          "replacement_text": "\\ar[d]^{k[1]}"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-003",
+      "stable_id": "MC-STK-ERR-0814",
+      "class": "wrong_result_type_reference",
+      "locus": "derived.tex:1445",
+      "result": "confirmed_wrong_result_noun",
+      "disposition": "Refer to the enclosing proposition, not a lemma.",
+      "operations": [
+        {
+          "source_start_line": 1445,
+          "source_end_line": 1445,
+          "old_text": "first statement of the lemma",
+          "replacement_text": "first statement of the proposition"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-004",
+      "stable_id": "MC-STK-ERR-0815",
+      "class": "duplicated_copula",
+      "locus": "derived.tex:1521",
+      "result": "confirmed_duplicated_word",
+      "disposition": "Delete the second occurrence of 'is'.",
+      "operations": [
+        {
+          "source_start_line": 1521,
+          "source_end_line": 1521,
+          "old_text": "Hence $S'$ is is a",
+          "replacement_text": "Hence $S'$ is a"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-005",
+      "stable_id": "MC-STK-ERR-0816",
+      "class": "extraneous_auxiliary",
+      "locus": "derived.tex:2061",
+      "result": "confirmed_grammar_error",
+      "disposition": "Delete the auxiliary 'is' before the finite verb 'follows'.",
+      "operations": [
+        {
+          "source_start_line": 2061,
+          "source_end_line": 2061,
+          "old_text": "It is also",
+          "replacement_text": "It also"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-006",
+      "stable_id": "MC-STK-ERR-0817",
+      "class": "missing_indefinite_article",
+      "locus": "derived.tex:2204",
+      "result": "confirmed_grammar_error",
+      "disposition": "Insert the article before the singular count noun 'multiplicative system'.",
+      "operations": [
+        {
+          "source_start_line": 2204,
+          "source_end_line": 2204,
+          "old_text": "that $S$ is multiplicative system",
+          "replacement_text": "that $S$ is a multiplicative system"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-007",
+      "stable_id": "MC-STK-ERR-0818",
+      "class": "wrong_hom_category_subscript",
+      "locus": "derived.tex:2361",
+      "result": "confirmed_category_typing_error",
+      "disposition": "The representable functor is on D, which contains the triangle and G(C).",
+      "operations": [
+        {
+          "source_start_line": 2361,
+          "source_end_line": 2361,
+          "old_text": "\\Hom_{\\mathcal{D}'}(W, -)",
+          "replacement_text": "\\Hom_{\\mathcal{D}}(W, -)"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-008",
+      "stable_id": "MC-STK-ERR-0819",
+      "class": "wrong_yoneda_test_category",
+      "locus": "derived.tex:2362",
+      "result": "confirmed_category_typing_error",
+      "disposition": "The Yoneda test object W lies in D, not D'.",
+      "operations": [
+        {
+          "source_start_line": 2362,
+          "source_end_line": 2362,
+          "old_text": "$W$ of $\\mathcal{D}'$",
+          "replacement_text": "$W$ of $\\mathcal{D}$"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-009",
+      "stable_id": "MC-STK-ERR-0820",
+      "class": "wrong_hom_category_subscripts",
+      "locus": "derived.tex:2364",
+      "result": "confirmed_category_typing_error",
+      "disposition": "Both Hom sets are computed in D because X and G(C) lie there.",
+      "operations": [
+        {
+          "source_start_line": 2364,
+          "source_end_line": 2364,
+          "old_text": "\\Hom_{\\mathcal{D}'}(W, X) \\to \\Hom_{\\mathcal{D}'}(W, G(C))",
+          "replacement_text": "\\Hom_{\\mathcal{D}}(W, X) \\to \\Hom_{\\mathcal{D}}(W, G(C))"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-010",
+      "stable_id": "MC-STK-ERR-0821",
+      "class": "malformed_definition_clause",
+      "locus": "derived.tex:2424",
+      "result": "confirmed_grammar_error",
+      "disposition": "Use 'We let ... be' for the definition clause.",
+      "operations": [
+        {
+          "source_start_line": 2424,
+          "source_end_line": 2424,
+          "old_text": "We set",
+          "replacement_text": "We let"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-011",
+      "stable_id": "MC-STK-ERR-0822",
+      "class": "subject_verb_disagreement",
+      "locus": "derived.tex:2533",
+      "result": "confirmed_grammar_error",
+      "disposition": "Use the singular verb 'shows'.",
+      "operations": [
+        {
+          "source_start_line": 2533,
+          "source_end_line": 2533,
+          "old_text": "A matrix computation show",
+          "replacement_text": "A matrix computation shows"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-012",
+      "stable_id": "MC-STK-ERR-0823",
+      "class": "number_and_article_error",
+      "locus": "derived.tex:2855",
+      "result": "confirmed_grammar_error",
+      "disposition": "The displayed object is one termwise split exact sequence.",
+      "operations": [
+        {
+          "source_start_line": 2855,
+          "source_end_line": 2855,
+          "old_text": "be termwise split exact sequences as in",
+          "replacement_text": "be a termwise split exact sequence as in"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-013",
+      "stable_id": "MC-STK-ERR-0824",
+      "class": "missing_triangle_arrow",
+      "locus": "derived.tex:3129",
+      "result": "confirmed_incomplete_triangle_tuple",
+      "disposition": "Restore f so the cone triangle is the required sextuple.",
+      "operations": [
+        {
+          "source_start_line": 3129,
+          "source_end_line": 3129,
+          "old_text": "(K^\\bullet, L^\\bullet, C(f), i, p)",
+          "replacement_text": "(K^\\bullet, L^\\bullet, C(f), f, i, p)"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-014",
+      "stable_id": "MC-STK-ERR-0825",
+      "class": "missing_triangle_arrow",
+      "locus": "derived.tex:3130",
+      "result": "confirmed_incomplete_triangle_tuple",
+      "disposition": "Restore tilde f in the corresponding cone-triangle sextuple.",
+      "operations": [
+        {
+          "source_start_line": 3130,
+          "source_end_line": 3130,
+          "old_text": "(K^\\bullet, \\tilde L^\\bullet, C(\\tilde f), \\tilde i, \\tilde p)",
+          "replacement_text": "(K^\\bullet, \\tilde L^\\bullet, C(\\tilde f), \\tilde f, \\tilde i, \\tilde p)"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-015",
+      "stable_id": "MC-STK-ERR-0826",
+      "class": "wrong_indefinite_article",
+      "locus": "derived.tex:3422",
+      "result": "confirmed_grammar_error",
+      "disposition": "Use 'a' before the consonant-initial phrase 'termwise split injection'.",
+      "operations": [
+        {
+          "source_start_line": 3422,
+          "source_end_line": 3422,
+          "old_text": "isomorphic to an termwise split injection",
+          "replacement_text": "isomorphic to a termwise split injection"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-016",
+      "stable_id": "MC-STK-ERR-0827",
+      "class": "unresolved_editorial_placeholder",
+      "locus": "derived.tex:3651",
+      "result": "confirmed_reader_placeholder",
+      "disposition": "Delete the placeholder together with its leading space; the following sentence supplies exact references.",
+      "operations": [
+        {
+          "source_start_line": 3651,
+          "source_end_line": 3651,
+          "old_text": " (insert future reference here)",
+          "replacement_text": ""
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-017",
+      "stable_id": "MC-STK-ERR-0828",
+      "class": "missing_preposition",
+      "locus": "derived.tex:3702",
+      "result": "confirmed_grammar_error",
+      "disposition": "Insert 'by' in the construction 'denote by X the object'.",
+      "operations": [
+        {
+          "source_start_line": 3702,
+          "source_end_line": 3702,
+          "old_text": "We denote $H^0 : D(\\mathcal{A}) \\to \\mathcal{A}$ the unique functor",
+          "replacement_text": "We denote by $H^0 : D(\\mathcal{A}) \\to \\mathcal{A}$ the unique functor"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-018",
+      "stable_id": "MC-STK-ERR-0829",
+      "class": "incomplete_participial_modifier",
+      "locus": "derived.tex:3968",
+      "result": "confirmed_grammar_error",
+      "disposition": "Add 'above' to identify the previously defined functor.",
+      "operations": [
+        {
+          "source_start_line": 3968,
+          "source_end_line": 3968,
+          "old_text": "defined has the natural structure",
+          "replacement_text": "defined above has the natural structure"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-019",
+      "stable_id": "MC-STK-ERR-0830",
+      "class": "article_number_disagreement",
+      "locus": "derived.tex:4056",
+      "result": "confirmed_grammar_error",
+      "disposition": "Use singular 'sequence' for the one displayed short exact sequence.",
+      "operations": [
+        {
+          "source_start_line": 4056,
+          "source_end_line": 4056,
+          "old_text": "be a short exact sequences of complexes",
+          "replacement_text": "be a short exact sequence of complexes"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-020",
+      "stable_id": "MC-STK-ERR-0831",
+      "class": "wrong_noun_number",
+      "locus": "derived.tex:4062",
+      "result": "confirmed_grammar_error",
+      "disposition": "Use singular 'sequence' for the one sequence mapped to a triangle.",
+      "operations": [
+        {
+          "source_start_line": 4062,
+          "source_end_line": 4062,
+          "old_text": "maps the short exact sequences",
+          "replacement_text": "maps the short exact sequence"
+        }
+      ]
+    }
+  ],
+  "rejected": []
+}

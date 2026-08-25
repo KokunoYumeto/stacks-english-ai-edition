@@ -1,0 +1,259 @@
+{
+  "schema": "mathematics-commons-stacks-errata-independent-review/v1",
+  "candidate_id": "stacks-errata-a04446e-r18",
+  "review_kind": "independent_adverse_replay",
+  "recorded_at_utc": "2026-08-25T13:16:28Z",
+  "result": "PASS",
+  "conclusion": "UNCONDITIONAL PASS",
+  "passed": true,
+  "pass_is_unconditional": true,
+  "pre_review_manifest_sha256": "0D06E3B30CC758571629A9954E3CA86CE444B8F6486DF454948ED851B108AD40",
+  "validation_sha256": "68C2A529BE0EE6FCA38AB3B6F5C680C8ADC43D34748F6F4DEE4CD1A259DEA9FF",
+  "pre_review_gate": {
+    "passed": true,
+    "check_manifest_exit_code": 0,
+    "candidate_manifest": {
+      "path": "candidate.manifest.json",
+      "bytes": 8653,
+      "sha256": "0D06E3B30CC758571629A9954E3CA86CE444B8F6486DF454948ED851B108AD40"
+    },
+    "validation": {
+      "path": "builds/validation.json",
+      "bytes": 2557,
+      "sha256": "68C2A529BE0EE6FCA38AB3B6F5C680C8ADC43D34748F6F4DEE4CD1A259DEA9FF",
+      "passed": true
+    }
+  },
+  "input_nonmutation": {
+    "passed": true,
+    "file_count_excluding_manifest_and_receipt": 42,
+    "note": "The replay read sealed candidate bytes and wrote only this receipt."
+  },
+  "stable_id_recomputation": {
+    "passed": true,
+    "derivation_rule": "Accepted producer rows map in bounded intake order to consecutive stable IDs; rejected-duplicate rows consume no stable ID.",
+    "explicit_mapping": [
+      {
+        "producer_id": "DERIVED-001",
+        "stable_id": "MC-STK-ERR-0812"
+      },
+      {
+        "producer_id": "DERIVED-002",
+        "stable_id": "MC-STK-ERR-0813"
+      },
+      {
+        "producer_id": "DERIVED-003",
+        "stable_id": "MC-STK-ERR-0814"
+      },
+      {
+        "producer_id": "DERIVED-004",
+        "stable_id": "MC-STK-ERR-0815"
+      },
+      {
+        "producer_id": "DERIVED-005",
+        "stable_id": "MC-STK-ERR-0816"
+      },
+      {
+        "producer_id": "DERIVED-006",
+        "stable_id": "MC-STK-ERR-0817"
+      },
+      {
+        "producer_id": "DERIVED-007",
+        "stable_id": "MC-STK-ERR-0818"
+      },
+      {
+        "producer_id": "DERIVED-008",
+        "stable_id": "MC-STK-ERR-0819"
+      },
+      {
+        "producer_id": "DERIVED-009",
+        "stable_id": "MC-STK-ERR-0820"
+      },
+      {
+        "producer_id": "DERIVED-010",
+        "stable_id": "MC-STK-ERR-0821"
+      },
+      {
+        "producer_id": "DERIVED-011",
+        "stable_id": "MC-STK-ERR-0822"
+      },
+      {
+        "producer_id": "DERIVED-012",
+        "stable_id": "MC-STK-ERR-0823"
+      },
+      {
+        "producer_id": "DERIVED-013",
+        "stable_id": "MC-STK-ERR-0824"
+      },
+      {
+        "producer_id": "DERIVED-014",
+        "stable_id": "MC-STK-ERR-0825"
+      },
+      {
+        "producer_id": "DERIVED-015",
+        "stable_id": "MC-STK-ERR-0826"
+      },
+      {
+        "producer_id": "DERIVED-016",
+        "stable_id": "MC-STK-ERR-0827"
+      },
+      {
+        "producer_id": "DERIVED-017",
+        "stable_id": "MC-STK-ERR-0828"
+      },
+      {
+        "producer_id": "DERIVED-018",
+        "stable_id": "MC-STK-ERR-0829"
+      },
+      {
+        "producer_id": "DERIVED-019",
+        "stable_id": "MC-STK-ERR-0830"
+      },
+      {
+        "producer_id": "DERIVED-020",
+        "stable_id": "MC-STK-ERR-0831"
+      }
+    ],
+    "excluded_producer_ids": [],
+    "unit_count": 20,
+    "operation_count": 20,
+    "first_id": "MC-STK-ERR-0812",
+    "last_id": "MC-STK-ERR-0831"
+  },
+  "scratch_replay": {
+    "passed": true,
+    "apply_order": "descending_start_byte",
+    "operation_count": 20,
+    "descending_intervals": [
+      [
+        142774,
+        142804
+      ],
+      [
+        142460,
+        142499
+      ],
+      [
+        140169,
+        140202
+      ],
+      [
+        130046,
+        130113
+      ],
+      [
+        127989,
+        128020
+      ],
+      [
+        119624,
+        119665
+      ],
+      [
+        107940,
+        108002
+      ],
+      [
+        107899,
+        107933
+      ],
+      [
+        99514,
+        99553
+      ],
+      [
+        90864,
+        90889
+      ],
+      [
+        87376,
+        87382
+      ],
+      [
+        85670,
+        85728
+      ],
+      [
+        85611,
+        85632
+      ],
+      [
+        85570,
+        85595
+      ],
+      [
+        80358,
+        80391
+      ],
+      [
+        74948,
+        74958
+      ],
+      [
+        52871,
+        52889
+      ],
+      [
+        49205,
+        49233
+      ],
+      [
+        48791,
+        48804
+      ],
+      [
+        45615,
+        45628
+      ]
+    ],
+    "authority": {
+      "bytes": 449677,
+      "sha256": "EFDA4CB361DD40909D1991161EAE716E58B6CF9E79380971502E1DA12396D402"
+    },
+    "output": {
+      "bytes": 449665,
+      "sha256": "7051800AA3B700DD3736F1E9A749EFD90B84F89B287546F5213FBA508C42FB50"
+    },
+    "operation_spec_sha256": "DA4B810066C9BCC1A1A5A9484AB1CF485FC4B72884E9B4227FBA45C9F17DD485"
+  },
+  "sealed_evidence_verification": {
+    "passed": true,
+    "build_receipt": {
+      "path": "builds/build-receipt.json",
+      "sha256": "2DC27A3D39E5265D73813FCA6F1C1CCA5BEF651585E0FD6E660D398AB638564C"
+    },
+    "visual_qa": {
+      "path": "builds/visual-qa.json",
+      "sha256": "D9691571D3B260438CA431BC4B48FBB1CDA74890EB1A21EE15F967BFCB6038A6"
+    },
+    "candidate_pdf": {
+      "path": "builds/derived.pdf",
+      "bytes": 1209725,
+      "sha256": "F31F116F6BA1C776814DC8BA77FB104DF1911DB4EA3B2DA557AD776119D5C02F",
+      "pages": 129
+    },
+    "authority_pdf": {
+      "path": "builds/derived.authority.pdf",
+      "bytes": 1209823,
+      "sha256": "B102CDF07D79A745F708799CCE443AF4E254363AFBB1A758F94B7CC7DE6EE4CA",
+      "pages": 129
+    },
+    "private_render_manifest": {
+      "bytes": 51725,
+      "sha256": "2365644BE0E18CD783FB7D99857041B81C2659518A423DB4064BA40D802EE558",
+      "logical_path": "canon/private_evidence/errata-r18-20260825T0229Z/render-final/render-manifest.json"
+    }
+  },
+  "adverse_observations": [
+    "Standalone candidate and authority builds retain identical cross-chapter unresolved-reference multisets.",
+    "Both PDFs are untagged; this retained accessibility limitation is not misreported as a visual failure.",
+    "All 129 candidate pages and every correction-sensitive locus were inspected without a visual defect."
+  ],
+  "constraints_observed": {
+    "candidate_inputs_mutated": false,
+    "upstream_contacted": false,
+    "persistent_writes": [
+      "replay/independent-review.json"
+    ]
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_evidence": [
+    {
+      "bytes": 11210,
+      "path": "authority/canon/R18_DERIVED_001_020_ADJUDICATION_SPEC.json",
+      "sha256": "4BE9B687A0F887AA58DBC8A68C402591E6B4264751C032A54BD7121DEB706DA1"
+    },
+    {
+      "bytes": 5721,
+      "path": "authority/canon/R18_DERIVED_001_020_INTAKE.json",
+      "sha256": "8CACF1023E345293C3BBFC86F6EE323A719C2383F9C63B38B8656C489B3A8CA8"
+    },
+    {
+      "bytes": 1114,
+      "path": "authority/canon/R18_DERIVED_001_020_REVIEW.md",
+      "sha256": "656499830196DE3FB9B4983E7BAFE76F447F7A0E3C4562C93176F9FA340A112D"
+    },
+    {
+      "bytes": 20404,
+      "path": "authority/COPYING",
+      "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"
+    },
+    {
+      "bytes": 449677,
+      "path": "authority/source/derived.tex",
+      "sha256": "EFDA4CB361DD40909D1991161EAE716E58B6CF9E79380971502E1DA12396D402"
+    },
+    {
+      "bytes": 1171,
+      "path": "authority/upstream.lock.json",
+      "sha256": "B195ECC83AB0F32C574A60D1FDBA9B0DA4D35B04E0DF7CB106DC9C0FDAD99C0D"
+    }
+  ],
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "candidate_id": "stacks-errata-a04446e-r18",
+  "expected_producer_ids": [
+    "DERIVED-001",
+    "DERIVED-002",
+    "DERIVED-003",
+    "DERIVED-004",
+    "DERIVED-005",
+    "DERIVED-006",
+    "DERIVED-007",
+    "DERIVED-008",
+    "DERIVED-009",
+    "DERIVED-010",
+    "DERIVED-011",
+    "DERIVED-012",
+    "DERIVED-013",
+    "DERIVED-014",
+    "DERIVED-015",
+    "DERIVED-016",
+    "DERIVED-017",
+    "DERIVED-018",
+    "DERIVED-019",
+    "DERIVED-020"
+  ],
+  "expected_unit_ids": [
+    "MC-STK-ERR-0812",
+    "MC-STK-ERR-0813",
+    "MC-STK-ERR-0814",
+    "MC-STK-ERR-0815",
+    "MC-STK-ERR-0816",
+    "MC-STK-ERR-0817",
+    "MC-STK-ERR-0818",
+    "MC-STK-ERR-0819",
+    "MC-STK-ERR-0820",
+    "MC-STK-ERR-0821",
+    "MC-STK-ERR-0822",
+    "MC-STK-ERR-0823",
+    "MC-STK-ERR-0824",
+    "MC-STK-ERR-0825",
+    "MC-STK-ERR-0826",
+    "MC-STK-ERR-0827",
+    "MC-STK-ERR-0828",
+    "MC-STK-ERR-0829",
+    "MC-STK-ERR-0830",
+    "MC-STK-ERR-0831"
+  ],
+  "lease_id": "stacks-lease-000021-errata-r18",
+  "namespace": "commons/stacks/errata/r18",
+  "operation_count": 20,
+  "private_render_logical_path": "canon/private_evidence/errata-r18-20260825T0229Z/render-final/render-manifest.json",
+  "proof_closure": {
+    "accepted": 20,
+    "operations": 20,
+    "packet_duplicates": 0,
+    "prior_overlay_aliases": 0,
+    "producer_rows": 20,
+    "rejected": 0,
+    "unresolved": 0
+  },
+  "schema": "mathematics-commons-stacks-errata-candidate-config/v1",
+  "source_date_epoch": "1785270512",
+  "stems": {
+    "derived": {
+      "authority_bytes": 449677,
+      "authority_sha256": "EFDA4CB361DD40909D1991161EAE716E58B6CF9E79380971502E1DA12396D402",
+      "build_exceptions": {
+        "candidate_only_undefined_reference_targets": {},
+        "candidate_page_delta": 0
+      },
+      "display_delimiter_delta": 0,
+      "ordered_structure_exceptions": {},
+      "payload_bytes": 449665,
+      "payload_sha256": "7051800AA3B700DD3736F1E9A749EFD90B84F89B287546F5213FBA508C42FB50"
+    }
+  },
+  "writer_task": "01a0256d-5693-77c1-96b2-cf37101e0c6c"
+}
