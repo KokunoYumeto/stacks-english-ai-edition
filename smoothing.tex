@@ -261,7 +261,7 @@ standard elements in $A$ over $R$.
 \begin{proof}
 Assume $a$ is strictly standard in $A$ over $R$. We claim that
 $A_a$ is smooth over $R$, which proves that $a \in H_{A/R}$. Namely,
-let $A = R[x_1, \ldots, x_n]/(f_1, \ldots, f_m)$, $c$, and $a' \in A$
+let $A = R[x_1, \ldots, x_n]/(f_1, \ldots, f_m)$ and $c$
 be as in Definition \ref{definition-strictly-standard}.
 Write $I = (f_1, \ldots, f_m)$ so that the naive cotangent
 complex of $A$ over $R$ is given by $I/I^2 \to \bigoplus A\text{d}x_i$.
@@ -341,7 +341,7 @@ $R$ is Noetherian, then $C$ is of finite presentation over $R$.
 \begin{lemma}
 \label{lemma-improve-presentation}
 Let $R$ be a ring and let $A$ be a finitely presented $R$-algebra.
-There exists finite type $R$-algebra map $A \to C$ which has a
+There exists a finite type $R$-algebra map $A \to C$ which has a
 retraction with the following two properties
 \begin{enumerate}
 \item for each $a \in A$ such that $R \to A_a$ is a local complete
@@ -472,7 +472,7 @@ By Algebra, Lemma \ref{algebra-lemma-huber} we can assume
 $C_0 = R_0[y_1, \ldots, y_m]/(\overline{f}_1, \ldots, \overline{f}_c)$
 where $\overline{f}_1, \ldots, \overline{f}_c$ maps to a basis of
 $K_0/K_0^2$ over $C_0$. Choose
-$f_1, \ldots, f_c \in R[y_1, \ldots, y_c]$ lifting
+$f_1, \ldots, f_c \in R[y_1, \ldots, y_m]$ lifting
 $\overline{f}_1, \ldots, \overline{f}_c$ and set
 $$
 C = R[y_1, \ldots, y_m]/(f_1, \ldots, f_c)
@@ -705,7 +705,7 @@ $x_1, \ldots, x_n$.
 Choose a presentation $A = R[y_1, \ldots, y_m]/(g_1, \ldots, g_d)$
 such that the image of
 $\det(\partial g_j/\partial y_i)_{i, j = 1, \ldots, d}$
-is invertible in $A$. Choose an enumerations $E = \{a_1, \ldots, a_n\}$
+is invertible in $A$. Choose an enumeration $E = \{a_1, \ldots, a_n\}$
 and choose $h_i \in R[y_1, \ldots, y_m]$ whose image in $A$ is $a_i$.
 Consider the presentation
 $$
@@ -827,7 +827,7 @@ $A_a = R[x_1, \ldots, x_n]/(f_1, \ldots, f_c)$ such that
 $\det(\partial f_j/\partial x_i)_{i, j = 1, \ldots, c}$
 is invertible in $A_a$. We may assume that for some
 $m < n$ the classes of the elements $x_1, \ldots, x_m$
-correspond $a_i/1$ where $a_1, \ldots, a_m \in A$ are generators of $A$
+correspond to $a_i/1$ where $a_1, \ldots, a_m \in A$ are generators of $A$
 over $R$, see Lemma \ref{lemma-standard-smooth-include-generators}.
 After replacing $x_i$ by $a^Nx_i$ for $m < i \leq n$
 we may assume the class of $x_i$ is $a_i/1 \in A_a$ for some

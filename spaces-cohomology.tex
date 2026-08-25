@@ -317,7 +317,7 @@ is the stalk of $f_*\mathcal{F}|_V$ at $\overline{v}$.
 By Properties of Spaces,
 Lemma \ref{spaces-properties-lemma-pushforward-etale-base-change}
 we may replace $Y$ by $V$ and $X$ by $X \times_Y V$.
-Then $Z \to X$ is a finite morphism of schemes and the result is
+Then $X \to Y$ is a finite morphism of schemes and the result is
 \'Etale Cohomology, Proposition
 \ref{etale-cohomology-proposition-finite-higher-direct-image-zero}.
 \end{proof}
@@ -373,7 +373,7 @@ $$
 \right) =
 \bigoplus\nolimits_{i = 1, \ldots, n}
 (\mathcal{G}_{\overline{y}}
-\otimes_{\mathcal{B}_{\overline{x}}}
+\otimes_{\mathcal{B}_{\overline{y}}}
 \mathcal{A}_{\overline{x}_i}) \otimes_{\mathcal{A}_{\overline{x}_i}}
 \mathcal{F}_{\overline{x}_i}
 $$
@@ -381,7 +381,7 @@ which holds true. Here we have used that
 taking tensor products commutes with taking stalks, the
 behaviour of stalks under pullback
 Properties of Spaces, Lemma \ref{spaces-properties-lemma-stalk-pullback}, and
-the behaviour of stalks under pushforward along a closed immersion
+the behaviour of stalks under pushforward along a finite morphism
 Lemma \ref{lemma-stalk-push-finite}.
 \end{proof}
 
@@ -561,7 +561,7 @@ $U'' \to U \times_X U'$ with $U'' \in \mathcal{B}$
 (Properties of Spaces, Lemma
 \ref{spaces-properties-lemma-quasi-compact-affine-cover}).
 In other words, we have morphisms $U'' \to U$ and $U'' \to U'$
-such that the map $h_{U''}^\# \to h_U^\# \times h_{u'}^\#$ is
+such that the map $h_{U''}^\# \to h_U^\# \times h_{U'}^\#$ is
 surjective.
 \end{enumerate}
 For the final statement, observe that the inclusion functor
@@ -612,7 +612,7 @@ sheaves of $\mathcal{O}_X$-modules.
 \medskip\noindent
 As we are going to use this construction below let us recall some of its
 properties. Given an abelian sheaf $\mathcal{G}$ on $U_\etale$
-the sheaf $f_!$ is the sheafification of the presheaf
+the sheaf $f_!\mathcal{G}$ is the sheafification of the presheaf
 $$
 V/X \longmapsto
 f_!\mathcal{G}(V) =
@@ -1029,8 +1029,8 @@ $\textit{Ab}(U_{p, \etale})$, see
 Cohomology on Sites, Lemma \ref{sites-cohomology-lemma-cohomology-of-open}.
 Moreover, the functor
 $\mathcal{G} \mapsto
-\mathcal{G} \otimes_\mathbf{Z} \underline{\mathbf{Z}}(\chi_p))$
-is an auto-equivalence of $\textit{Ab}(U_p)$, whence transforms injective
+\mathcal{G} \otimes_\mathbf{Z} \underline{\mathbf{Z}}(\chi_p)$
+is an auto-equivalence of $\textit{Ab}(U_{p, \etale})$, whence transforms injective
 objects into injective objects and is exact (because
 $\underline{\mathbf{Z}}(\chi_p)$ is an invertible
 $\underline{\mathbf{Z}}$-module). Thus given an injective resolution
