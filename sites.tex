@@ -6508,7 +6508,7 @@ $$
 f^{-1}\mathcal{H} \times_{h_{u(V)}^\#, c} h_U^\# \times_{h_U^\#} h_{U'}^\#
 =
 f^{-1}(\mathcal{H} \times_{h_V^\#} h_{V'}^\#)
-\times_{h_{u(V'), c'}^\#} h_{U'}^\#
+\times_{h_{u(V')}^\#, c'} h_{U'}^\#
 $$
 which is formal using that $f^{-1}h_V^\# = h_{u(V)}^\#$ and
 $f^{-1}h_{V'}^\# = h_{u(V')}^\#$, see
@@ -6816,7 +6816,7 @@ $$
 g^{-1}g_*\mathcal{F}(U) = \lim_{U', u(U') \to u(U)} \mathcal{F}(U')
 $$
 where the morphisms $\psi : u(U') \to u(U)$ need not be of the form
-$u(\alpha)$. The category of such pairs $(U', \psi)$ has a final
+$u(\alpha)$. The category of such pairs $(U', \psi)$ has an
 object, namely $(U, \text{id})$, which gives rise to the map from
 the limit into $\mathcal{F}(U)$. Let $(s_{(U', \psi)})$ be an element
 of the limit. We want to show that $s_{(U', \psi)}$ is uniquely determined
@@ -7049,7 +7049,7 @@ Such a morphism is the same thing as an element of $h_U^\#(U')$.
 Hence (3) and (4) are immediate from the construction of the sheafification.
 Property (5) of Lemma \ref{lemma-equivalence} is
 Lemma \ref{lemma-sheaf-coequalizer-representable}.
-Denote $g : \Sh(\mathcal{C}) \to \Sh(\mathcal{C}')$ the
+Denote by $g : \Sh(\mathcal{C}) \to \Sh(\mathcal{C}')$ the
 equivalence of topoi associated with $v$ by Lemma \ref{lemma-equivalence}.
 
 \medskip\noindent
@@ -9135,7 +9135,7 @@ Lemma \ref{lemma-points-above-point}.
 \begin{lemma}
 \label{lemma-localize-enough}
 Let $\mathcal{C}$ be a site. Let $U$ be an object of $\mathcal{C}$.
-let $\{(p_i, u_i)\}_{i\in I}$ be a family of points of $\mathcal{C}$.
+Let $\{(p_i, u_i)\}_{i\in I}$ be a family of points of $\mathcal{C}$.
 For $x \in u_i(U)$ let $q_{i, x}$ be the point of $\mathcal{C}/U$
 constructed in
 Lemma \ref{lemma-point-localize}.
@@ -9219,7 +9219,7 @@ $$
 (u_p\mathcal{F})_{q_i} =
 \mathcal{F}_{p_i}
 $$
-The first equality since $f^{-1} = u_s$, the second equality
+The first equality holds since $f^{-1} = u_s$, the second equality
 by Lemma \ref{lemma-point-pushforward-sheaf}, and the third
 by Lemma \ref{lemma-point-functor}.
 Hence if $p_i$ is a point, then pulling back by $f$
@@ -9311,7 +9311,7 @@ $$
 \prod\nolimits_k \colim_j \mathcal{F}(V_{j, k})
 $$
 is injective. Hence there exists a $k$ such that $s$ and $s'$
-have distinct image in $\colim_j \mathcal{F}(V_{j, k})$.
+have distinct images in $\colim_j \mathcal{F}(V_{j, k})$.
 Let $J_0 = \{j \in J, j \geq j_0\}$ and $I = J \amalg J_0$.
 We order $I$ so that no element of the second summand
 is smaller than any element of the first, but otherwise
@@ -9319,7 +9319,7 @@ using the ordering on $J$. If $j \in I$ is in the first
 summand then we use $V_j$ and if $j \in I$ is in the second
 summand then we use $V_{j, k}$. We omit the definition
 of the transition maps of the inverse system. By the above
-it follows that $s, s'$ have distinct image in $\mathcal{F}_p$.
+it follows that $s, s'$ have distinct images in $\mathcal{F}_p$.
 Moreover, the restriction of $f'$ to $V_{j, k}$ factors
 through $W_k$ by construction.
 \end{proof}
@@ -9344,7 +9344,7 @@ Let $E$ be the set of pairs $(\{W_k \to W\}, f\in u'(W))$.
 Consider pairs $(E' \subset E, (I, \geq, U_i, f_{ii'}))$
 such that
 \begin{enumerate}
-\item $(I, \geq, U_i, g_{ii'})$ is a refinement of $(J, \geq, V_j, g_{jj'})$,
+\item $(I, \geq, U_i, f_{ii'})$ is a refinement of $(J, \geq, V_j, g_{jj'})$,
 \item $s, s'$ map to distinct elements of $\mathcal{F}_p$, and
 \item for every pair $(\{W_k \to W\}, f\in u'(W)) \in E'$ we have that
 the image of $f$ in $u(W)$ is in the image of one of the $u(W_k)$.
@@ -9413,7 +9413,7 @@ Then $\mathcal{C}$ has enough points.
 We have to show that given any sheaf
 $\mathcal{F}$ on $\mathcal{C}$, any $U \in \Ob(\mathcal{C})$,
 and any distinct sections $s, s' \in \mathcal{F}(U)$, there exists
-a point $p$ such that $s, s'$ have distinct image in
+a point $p$ such that $s, s'$ have distinct images in
 $\mathcal{F}_p$. See Lemma \ref{lemma-enough}.
 Consider the system $(J, \geq, V_j, g_{jj'})$
 with $J = \{1\}$, $V_1 = U$, $g_{11} = \text{id}_U$.
@@ -9438,7 +9438,7 @@ commutes with finite limits).
 Let $\mathcal{C}$ be a site. Let $I$ be a set and for
 $i \in I$ let $U_i$ be an object of $\mathcal{C}$ such that
 \begin{enumerate}
-\item $\coprod h_{U_i}$ surjects onto
+\item $\coprod h_{U_i}^\#$ surjects onto
 the final object of $\Sh(\mathcal{C})$, and
 \item $\mathcal{C}/U_i$ satisfies the hypotheses of
 Proposition \ref{proposition-criterion-points}.
@@ -9528,7 +9528,7 @@ for all $i$.
 \noindent
 The small \'etale site of $\mathbf{A}^1_\mathbf{C}$ does not have
 any weakly contractible objects. On the other hand, the small
-pro-\'etale site of any scheme has enough contractible objects.
+pro-\'etale site of any scheme has enough weakly contractible objects.
 
 
 
@@ -9836,7 +9836,7 @@ injections and surjections.
 \end{lemma}
 
 \begin{proof}
-Let $\alpha : \mathcal{F} \to \mathcal{G}$ be maps of sheaves
+Let $\alpha : \mathcal{F} \to \mathcal{G}$ be a map of sheaves
 on $\mathcal{D}$. By assumption for every object $V$ of $\mathcal{D}$
 we get $\mathcal{F}(V) \subset \prod \mathcal{F}(u(U_i)) =
 \prod f_*\mathcal{F}(U_i)$ by the sheaf condition
@@ -9860,7 +9860,7 @@ We construct a morphism $f : \mathcal{D} \to \mathcal{C}$ satisfying
 the assumptions of Lemma \ref{lemma-cover-from-below}. Namely, let
 $\varphi : G \to H$ be a morphism of finite groups. Consider the sites
 $\mathcal{D} = \mathcal{T}_G$ and $\mathcal{C} = \mathcal{T}_H$ of countable
-$G$-sets and $H$-sets and coverings countable families of jointly
+$G$-sets and $H$-sets , with coverings the countable families of jointly
 surjective maps (Example \ref{example-site-on-group}).
 Let $u : \mathcal{T}_H \to \mathcal{T}_G$ be the functor described
 in Section \ref{section-G-sets-morphisms}
@@ -9944,7 +9944,7 @@ Remark \ref{remark-sheaf-condition-empty-covering}.
 Thus (5) implies (2) and (1) -- (5) are equivalent. The final
 assertion of the lemma follows from Axiom (3) of
 Definition \ref{definition-site}
-applied the empty covering of $U$.
+applied to the empty covering of $U$.
 \end{proof}
 
 \begin{definition}
@@ -10010,7 +10010,7 @@ Write $I = I_1 \amalg I_2$, where
 $$
 I_2 = \{i \in I \mid u(U_i)\text{ is sheaf theoretically empty}\}
 $$
-Then $u(\mathcal{U})' = \{u(U_i) \to u(U)\}_{i \in I_1}$ is still a covering of
+Then $u(\mathcal{U})' = \{u(U_i) \to u(U)\}_{i \in I_1}$ is still a covering of $u(U)$
 because each of the other pieces can be covered by the empty family
 and hence can be dropped by Axiom (2) of
 Definition \ref{definition-site}.
@@ -10037,7 +10037,7 @@ finite connected colimits).
 \begin{proof}
 Let $\mathcal{I}$ be a finite connected index category.
 Let $\mathcal{I} \to \Sh(\mathcal{D})$,
-$i \mapsto \mathcal{G}_i$ by a diagram. We know that the colimit of
+$i \mapsto \mathcal{G}_i$ be a diagram. We know that the colimit of
 this diagram is the sheafification of the colimit in the category of
 presheaves, see
 Lemma \ref{lemma-colimit-sheaves}.
@@ -10052,7 +10052,7 @@ singleton). Hence that lemma gives
 u^s(\colim_i \mathcal{G}_i) & =
 u^s((\colim^{Psh}_i \mathcal{G}_i)^\#) \\
 & = (u^p(\colim^{Psh}_i \mathcal{G}_i))^\# \\
-& = (\colim^{PSh}_i u^p(\mathcal{G}_i))^\# \\
+& = (\colim^{Psh}_i u^p(\mathcal{G}_i))^\# \\
 & = \colim_i u^s(\mathcal{G}_i)
 \end{align*}
 as desired.
@@ -10280,7 +10280,7 @@ the collection of sheaves $\mathcal{G}$ such that
 $j_\mathcal{F}^{-1}\mathcal{G} = *$.
 
 \medskip\noindent
-Let $a, b : \mathcal{G}_1 \to \mathcal{G}_2$ be two morphism of $E$.
+Let $a, b : \mathcal{G}_1 \to \mathcal{G}_2$ be two morphisms of $E$.
 To prove $\iota$ commutes with coequalizers it suffices to show that
 the coequalizer of $a$, $b$ in $\Sh(\mathcal{C})$ lies in $E$.
 This is clear because
@@ -10321,10 +10321,10 @@ $\mathcal{F}$ with values in $\mathcal{A}$ on a space $X$ is a sheaf if and
 only if the associated presheaf of sets is a sheaf. Moreover,
 we worked out the notion of stalk, and given a continuous map
 $f : X \to Y$ we defined adjoint functors pushforward and pullback
-on sheaves of algebraic structures which agrees with pushforward
+on sheaves of algebraic structures which agree with pushforward
 and pullback on the underlying sheaves of sets. In addition extending
 a sheaf of algebraic structures from a basis to all opens
-of a space, works as expected.
+of a space works as expected.
 
 \medskip\noindent
 Part of this material still works in the setting of sites and sheaves.
@@ -10379,7 +10379,7 @@ $f_*\mathcal{F}(U) = \mathcal{F}(uU)$.
 \end{definition}
 
 \noindent
-The problem comes with trying the define the pullback.
+The problem comes with trying to define the pullback.
 The reason is that the colimits defining
 the functor $u_p$ in Section \ref{section-functoriality-PSh}
 may not be filtered. Thus the axioms above are not enough in
@@ -10457,8 +10457,8 @@ to check that $f_*$ and $f^{-1}$ are adjoint as usual.
 
 \medskip\noindent
 In \cite{SGA4} this method is used. They introduce something
-called an ``{\it esp\`ece the structure alg\'ebrique $\ll$d\'efinie
-par limites projectives finie$\gg$}''. For such an esp\`ece you
+called an ``{\it esp\`ece de structure alg\'ebrique $\ll$d\'efinie
+par limites projectives finies$\gg$}''. For such an esp\`ece you
 can use the method described above to define a pair of adjoint
 functors $f^{-1}$ and $f_*$ as above. This clearly works for most
 algebraic structures that one encounters in practice.
@@ -10474,7 +10474,7 @@ Morphisms of topoi preserve algebraic structure.
 \end{slogan}
 Let $\mathcal{C}$, $\mathcal{D}$ be sites.
 Let $f = (f^{-1}, f_*)$ be a morphism of topoi
-from $\Sh(\mathcal{D}) \to \Sh(\mathcal{C})$.
+$\Sh(\mathcal{D}) \to \Sh(\mathcal{C})$.
 The method introduced above gives rise to an adjoint
 pair of functors $(f^{-1}, f_*)$ on sheaves of algebraic structures
 compatible with taking the underlying sheaves of sets
@@ -10540,11 +10540,11 @@ A sheaf of groups is given by a quadruple $(\mathcal{F}, \cdot, 1, i)$
 with suitable axioms.
 
 \medskip\noindent
-A sheaf of monoids is given by a pair $(\mathcal{F}, \cdot)$
-with suitable axiom.
+A sheaf of monoids is given by a triple $(\mathcal{F}, \cdot, 1)$
+with suitable axioms.
 
 \medskip\noindent
-Let $R$ be a ring. An sheaf of $R$-modules is given by
+Let $R$ be a ring. A sheaf of $R$-modules is given by
 a quintuple $(\mathcal{F}, +, 0, i, \{\lambda_r\}_{r \in R})$,
 where the quadruple $(\mathcal{F}, +, 0, i)$ is a sheaf of
 abelian groups as above, and $\lambda_r : \mathcal{F} \to \mathcal{F}$
@@ -10601,7 +10601,7 @@ global section functor as follows.
 \begin{definition}
 \label{definition-global-sections}
 The {\it global sections} of a presheaf of sets $\mathcal{F}$ over a
-site $\mathcal{C}$ is the set
+site $\mathcal{C}$ are the set
 $$
 \Gamma(\mathcal{C}, \mathcal{F}) =
 \Mor_{\textit{PSh}(\mathcal{C})}(*, \mathcal{F})
@@ -10617,7 +10617,7 @@ Here is one way to compute global sections.
 
 \begin{lemma}
 \label{lemma-compute-global-sections}
-Let $\mathcal{C}$ be a site. Let $a, b : V \to U$ be objects of $\mathcal{C}$
+Let $\mathcal{C}$ be a site. Let $a, b : V \to U$ be morphisms of $\mathcal{C}$
 such that
 $$
 \xymatrix{
@@ -10756,7 +10756,7 @@ $$
 \Sh(\mathcal{D})
 }
 $$
-of ringed topoi. Then the base change maps
+of topoi. Then the base change maps
 for the two squares compose to give the base
 change map for the outer rectangle. More precisely,
 the composition
@@ -11268,12 +11268,12 @@ of $\mathcal{C}$, let $S, S'$ be sieves on $U$ such that
 $S \in J(U)$, and such that for every $V \to U$ in $S(V)$
 we have $S' \times_U V \in J(V)$. By definition of $J(U)$
 we can find a covering $\{f_i : U_i \to U\}$ of the site
-such that $S$ the image of $h_{U_i} \to h_U$ is contained
+such that the sieve generated by the $f_i$ is contained
 in $S$. Since each $S'\times_U U_i$ is in $J(U_i)$ we
 see that there are coverings $\{U_{ij} \to U_i\}$ of the
-site such that $h_{U_{ij}} \to h_{U_i}$ is contained
+site such that the image of $h_{U_{ij}} \to h_{U_i}$ is contained
 in $S' \times_U U_i$. By definition of the base change
-this means that $h_{U_{ij}} \to h_U$ is contained
+this means that the image of $h_{U_{ij}} \to h_U$ is contained
 in the subpresheaf $S' \subset h_U$. By axiom (2) for
 sites we see that $\{U_{ij} \to U\}$ is a covering of
 $U$ and we conclude that $S' \in J(U)$ by definition of $J$.
@@ -11288,18 +11288,18 @@ $s_i|_{U_i \times_U U_j} = s_j|_{U_i \times_U U_j}$ for all
 $i, j$. We have to show that there exists a unique section
 $s \in \mathcal{F}(U)$ restricting back to the $s_i$ on the $U_i$.
 Let $S \subset h_U$ be the sieve generated by the $f_i$.
-Note that $S \in J(U)$ by definition. In stead of constructing
+Note that $S \in J(U)$ by definition. Instead of constructing
 $s$, by the sheaf condition in the topology, it suffices
 to construct an element
 $$
 \varphi \in \Mor_{\textit{PSh}(\mathcal{C})}(S, \mathcal{F}).
 $$
-Take $\alpha \in S(T)$ for some object $T \in \mathcal{U}$.
+Take $\alpha \in S(T)$ for some object $T \in \mathcal{C}$.
 This means exactly that $\alpha : T \to U$ is a morphism
 which factors through $f_i$ for some $i\in I$ (and maybe more than $1$).
 Pick such an index $i$ and a factorization $\alpha = f_i \circ \alpha_i$.
 Define $\varphi(\alpha) = \alpha_i^* s_i$. If $i'$, $\alpha
-= f_i \circ \alpha_{i'}'$ is a second choice, then
+= f_{i'} \circ \alpha_{i'}'$ is a second choice, then
 $\alpha_i^* s_i = (\alpha_{i'}')^* s_{i'}$ exactly because of our
 condition $s_i|_{U_i \times_U U_j} = s_j|_{U_i \times_U U_j}$ for all
 $i, j$. Thus $\varphi(\alpha)$ is well defined. We leave it to the reader
@@ -11340,7 +11340,7 @@ $J$ constructed in Lemma \ref{lemma-site-gives-topology} above.
 \noindent
 Let $\mathcal{C}$ be a category.
 Let $\text{Cov}_1(\mathcal{C})$ and $\text{Cov}_2(\mathcal{C})$
-be two coverings defining the structure of a site on $\mathcal{C}$.
+be two sets of coverings defining the structure of a site on $\mathcal{C}$.
 It may very well happen that the topologies defined
 by these are the same. If this happens
 then we say $\text{Cov}_1(\mathcal{C})$ and
@@ -11358,7 +11358,7 @@ different sets of coverings as a tool to study the topology.
 Enlarging the class of coverings.
 Clearly, if $\text{Cov}(\mathcal{C})$
 defines the structure of a site on $\mathcal{C}$ then we may
-add to $\mathcal{C}$ any set of families of morphisms with fixed target
+add to $\text{Cov}(\mathcal{C})$ any set of families of morphisms with fixed target
 tautologically equivalent
 (see Definition \ref{definition-combinatorial-tautological})
 to elements of $\text{Cov}(\mathcal{C})$ without changing the topology.
@@ -11498,7 +11498,7 @@ $$
 Base change $S \mapsto S \times_U V$ induces an order
 preserving map $J(U) \to J(V)$. And the restriction maps
 define a transformation of functors as in
-Categories, Lemma {categories-lemma-functorial-colimit}.
+Categories, Lemma \ref{categories-lemma-functorial-colimit}.
 Hence we get a natural restriction map
 $$
 L\mathcal{F}(U) \longrightarrow L\mathcal{F}(V).
@@ -11593,7 +11593,7 @@ f = \alpha \circ g \nonumber
 By axiom (2) of a topology we see that $S''$ is a covering
 sieve on $U$. By construction we see that $\varphi_1$
 and $\varphi_2$ restrict to the same element of
-$\Mor_{\textit{PSh}(\mathcal{C})}(S'', L\mathcal{F})$
+$\Mor_{\textit{PSh}(\mathcal{C})}(S'', \mathcal{F})$
 as desired.
 
 \medskip\noindent
@@ -11601,7 +11601,7 @@ We sketch the proof of (2). Assume that $\mathcal{F}$ is a
 separated presheaf of sets on $\mathcal{C}$ with respect to
 the topology $J$.
 Let $S$ be a covering sieve of the object $U$ of $\mathcal{C}$.
-Suppose that $\varphi \in \Mor_\mathcal{C}(S, L\mathcal{F})$.
+Suppose that $\varphi \in \Mor_{\textit{PSh}(\mathcal{C})}(S, L\mathcal{F})$.
 We have to find an element $s \in L\mathcal{F}(U)$ restricting
 to $\varphi$. Suppose $V\in \Ob(\mathcal{C})$, and
 $\alpha : V \to U$ in $S(V)$. The value $\varphi(\alpha)
@@ -11621,7 +11621,7 @@ $$
 $$
 We claim this is independent of the
 choice of $V, \alpha, g$.
-Consider a second such choice$ V', \alpha', g'$.
+Consider a second such choice $V', \alpha', g'$.
 The restrictions of $\varphi_{V, \alpha}$ and
 $\varphi_{V', \alpha'}$ to the intersection
 of the following covering sieves on $T$
