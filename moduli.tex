@@ -4393,7 +4393,8 @@ The source also points ahead to its Theorem 3.5 for removal of the reducedness
 hypothesis in Lemma
 \ref{lemma-picard-smooth-prime-to-characteristic-reduced-base} when the
 original family is normal. That stronger normal-family result is not inferred
-from Remark 2.9 and is handled at the Theorem 3.5 source cursor.
+from Remark 2.9; it follows instead from the lifting argument in Theorem
+\ref{theorem-picard-smooth-near-smooth-fibre}.
 \end{remark}
 
 \begin{lemma}[Vanishing of $H^2$ and smoothness of the Picard scheme]
@@ -5866,6 +5867,458 @@ $P^\tau$ is of finite type. It is proper by Theorem
 \ref{theorem-picard-smooth-proper-pieces}, quasi-projective by the classical
 Picard theorem, and hence projective by the same Morphisms lemma.
 \end{proof}
+
+\section{Finiteness and numerical equivalence for Picard spaces}
+\label{section-picard-finiteness-numerical}
+
+\noindent
+The results in this section are the supplement to Expos\'e 236. Unless a
+statement says otherwise, $S$ is Noetherian, the schemes under consideration
+are proper over $S$, and the relevant fppf Picard functors are assumed to be
+represented by schemes. The source observes that stack formulations remove
+this last assumption.
+
+\begin{remark}[Corrections preceding the supplement]
+\label{remark-picard-supplement-corrections}
+\begin{reference}
+\cite[Supplement to Expos\'e 236, p. 303]{FGA}.
+\end{reference}
+The supplement first makes three corrections to the printed expos\'e. In the
+proof of Theorem 2.1(ii), the affine line is replaced by the punctured affine
+line and $X[t]$ by $X[t,t^{-1}]$; these corrections are built into Lemma
+\ref{lemma-pic-normal-laurent-invariance}. In the proof of Proposition 3.1,
+the corrected phrase says that the conclusion follows from the hypothesis;
+the mathematical statement is Groupoids, Lemma
+\ref{groupoids-lemma-reduced-identity-component-no-additive}. None of the
+three erroneous printed forms is used below.
+\end{remark}
+
+\begin{theorem}[Finite-type pullback along a proper surjection]
+\label{theorem-picard-pullback-proper-surjective-finite-type}
+\begin{reference}
+\cite[Supplement to Expos\'e 236, (i), pp. 303 and 307]{FGA}.
+\end{reference}
+Let $g:X\to Y$ be a surjective morphism of proper schemes over $S$. Pullback
+of invertible modules defines a morphism
+$$
+g^*:\Picardfunctor_{Y/S}\longrightarrow\Picardfunctor_{X/S}
+$$
+of finite type. If $S$ is the spectrum of a field, this morphism is affine.
+\end{theorem}
+
+\begin{proof}
+Finite type is local on the target and stable under base change. After an
+fppf base change on $\Picardfunctor_{X/S}$, a Picard class is represented by
+an invertible module on $X$. The nonflat-descent construction in the cited
+source parametrizes its possible antecedents on $Y$ by the finite-presentation
+space of descent data for the two projections from $X\times_YX$ to $X$.
+Only a finiteness assertion is needed: the construction imposes the cocycle
+equalities as finite-presentation conditions and does not require every
+descent datum to be effective. Its resulting parameter spaces give
+finite-type covers of all base changes of the displayed fibre, proving that
+$g^*$ is of finite type. Over a field the same descent-data spaces and their
+equalizers are affine. This is also recorded separately in Theorem
+\ref{theorem-picard-pullback-proper-surjective-affine}.
+\end{proof}
+
+\begin{lemma}[Boundedness detected after proper pullback]
+\label{lemma-picard-proper-pullback-detects-boundedness}
+In the situation of Theorem
+\ref{theorem-picard-pullback-proper-surjective-finite-type}, let $M$ be a
+set of points of $\Picardfunctor_{Y/S}$. Then $M$ is contained in a
+quasi-compact open subscheme if and only if $g^*(M)$ is. Moreover,
+$$
+\Picardfunctor_{Y/S}^{\tau}
+=(g^*)^{-1}(\Picardfunctor_{X/S}^{\tau}).
+$$
+\end{lemma}
+
+\begin{proof}
+A morphism of finite type between locally Noetherian schemes is quasi-compact.
+It therefore sends a set contained in a quasi-compact open to a set contained
+in a quasi-compact open, and the inverse image of a quasi-compact open is
+quasi-compact. This proves the first assertion.
+
+An invertible module is $\tau$-equivalent to zero precisely when the set of
+all its integral tensor powers is bounded. Pullback commutes with tensor
+powers, so the first assertion applied to that cyclic set proves the formula.
+\end{proof}
+
+\begin{lemma}[Mumford boundedness under $S_2$]
+\label{lemma-picard-boundedness-S2-full-polynomial}
+\begin{reference}
+\cite[Supplement to Expos\'e 236, proof comments, p. 306]{FGA}.
+\end{reference}
+Let $X\to S$ be projective and flat with geometrically integral fibres
+satisfying Serre's condition $S_2$, and let $\mathcal H$ be relatively ample.
+A collection of invertible modules on geometric fibres of $X\to S$ is
+bounded if its Hilbert polynomials with respect to $\mathcal H$ range over a
+finite set.
+\end{lemma}
+
+\begin{proof}
+Mumford's argument, inspired by the relative Nakai criterion, gives a
+uniform regularity bound for invertible modules with a fixed Hilbert
+polynomial. The $S_2$ hypothesis is the depth input needed in that argument.
+There are only finitely many polynomials in the statement, so the resulting
+regularity bounds place the modules in finitely many fixed-polynomial Quot
+spaces. This is precisely the restricted criterion isolated in the proof
+comments of the cited source.
+\end{proof}
+
+\begin{theorem}[Restriction to an ample divisor]
+\label{theorem-picard-ample-divisor-restriction-finite-type}
+\begin{reference}
+\cite[Supplement to Expos\'e 236, (ii), pp. 304 and 306--307]{FGA}.
+\end{reference}
+Let $Y\to S$ be projective, let $\mathcal H$ be relatively ample, and let
+$X\subset Y$ be the zero scheme of a section of $\mathcal H$. If every
+irreducible component of every fibre of $Y\to S$ has dimension at least $3$,
+then restriction
+$$
+\Picardfunctor_{Y/S}\longrightarrow\Picardfunctor_{X/S}
+$$
+is of finite type. If $S$ is the spectrum of a field, it is affine.
+\end{theorem}
+
+\begin{proof}
+The finite-type pullback theorem permits the proper modifications used in the
+source to reduce to the case where $Y/S$ is flat with geometrically integral
+normal fibres. Lemma
+\ref{lemma-picard-boundedness-S2-full-polynomial} makes the further reduction
+to the case where $X/S$ has the same properties. Normality supplies $S_2$.
+The dimension hypothesis then gives depth at least $2$ at the closed points
+of the geometric fibres of both $Y$ and $X$. The equivalence criterion for an
+ample divisor identifies the formal restriction data in this depth range,
+and the restricted boundedness criterion makes the remaining parameter
+spaces finite type. This is the proof architecture given on page 306 of the
+cited source; the corresponding formal-neighbourhood setting is described in
+Remark
+\ref{remark-picard-formal-neighbourhoods-lefschetz}.
+Over a field, the parameter spaces in this construction and their
+equalizers are affine, which proves the final assertion.
+\end{proof}
+
+\begin{theorem}[Boundedness for integral projective fibres]
+\label{theorem-picard-boundedness-integral-fibres}
+\begin{reference}
+\cite[Supplement to Expos\'e 236, (iii), pp. 304 and 306]{FGA}.
+\end{reference}
+Let $X\to S$ be projective with integral geometric fibres of dimension $n$,
+and let $\mathcal H$ be relatively ample. For geometric points
+$\overline{s}_i\to S$ and invertible modules $\mathcal M_i$ on
+$X_{\overline{s}_i}$, write
+$$
+\chi(X_{\overline{s}_i},
+\mathcal M_i\otimes\mathcal H_{\overline{s}_i}^{\otimes t})
+=a_{0,i}t^n+a_{1,i}t^{n-1}+a_{2,i}t^{n-2}+\cdots.
+$$
+The collection of the $\mathcal M_i$ is bounded if and only if the numbers
+$a_{1,i}$ and $a_{2,i}$ are bounded. A coefficient whose degree would be
+negative is omitted; thus only $a_{1,i}$ occurs when $n=1$.
+\end{theorem}
+
+\begin{proof}
+In a bounded family the coefficients are locally constant and hence take
+only finitely many values. Conversely, the restricted Mumford criterion of
+Lemma \ref{lemma-picard-boundedness-S2-full-polynomial} proves the assertion
+under the $S_2$ hypothesis once all coefficients have been controlled. The
+intersection estimates in the cited source show that bounds on the first two
+nonleading coefficients provide that control. The finite-type pullback
+theorem and Theorem
+\ref{theorem-picard-ample-divisor-restriction-finite-type} then remove the
+normality and $S_2$ hypotheses by the reduction described on page 306 of the
+source. Uniform regularity places the resulting invertible modules in
+finitely many fixed-polynomial Quot spaces. Since the coefficients of a
+numerical polynomial of degree $n$ have bounded denominators depending only
+on $n$, boundedness of the displayed coefficients is equivalently finiteness
+of their sets of values.
+\end{proof}
+
+\begin{theorem}[Power maps on a Picard space]
+\label{theorem-picard-power-map-finite-type}
+\begin{reference}
+\cite[Supplement to Expos\'e 236, (iv), pp. 304 and 306]{FGA}.
+\end{reference}
+Let $X\to S$ be proper. For every nonzero integer $r$, multiplication by $r$
+on the Picard scheme,
+$$
+[r]:\Picardfunctor_{X/S}\longrightarrow\Picardfunctor_{X/S},
+$$
+is a morphism of finite type.
+\end{theorem}
+
+\begin{proof}
+Changing $r$ to $-r$ only composes with inversion. On the locus where $r$ is
+invertible, the power map is \'etale by Theorem
+\ref{theorem-picard-multiplication-etale}; the finite-type assertion is the
+prime-to-characteristic part of the cited argument. For a prime $p$ dividing
+$r$ in the residue characteristic, the $p$th-power map on invertible modules
+is pullback by the relative Frobenius, a finite surjective radicial
+morphism. Theorem
+\ref{theorem-picard-pullback-proper-surjective-finite-type} applies to that
+pullback. Factoring $r$ into prime powers and working on the finitely many
+corresponding Noetherian strata proves the result.
+\end{proof}
+
+\begin{theorem}[Finiteness of the torsion-component locus]
+\label{theorem-picard-torsion-components-finite-type}
+\begin{reference}
+\cite[Supplement to Expos\'e 236, (v), p. 304]{FGA}.
+\end{reference}
+Let $X\to S$ be proper. Then
+$$
+\Picardfunctor_{X/S}^{\tau}\longrightarrow S
+$$
+is of finite type.
+\end{theorem}
+
+\begin{proof}
+Chow's lemma gives a proper surjection $X'\to X$ with $X'$ projective.
+Theorem \ref{theorem-picard-pullback-proper-surjective-finite-type} and Lemma
+\ref{lemma-picard-proper-pullback-detects-boundedness} reduce the assertion to
+$X'$. Finite proper modifications and ample-divisor sections reduce the
+projective case to geometrically integral fibres. On those fibres a
+$\tau$-equivalent class is numerically trivial, so its first two
+nonleading Hilbert coefficients equal those of the structure sheaf.
+Theorem \ref{theorem-picard-boundedness-integral-fibres} makes the locus
+bounded and hence of finite type. Reversing the finite-type reductions proves
+the theorem for $X$.
+\end{proof}
+
+\begin{theorem}[Uniform N\'eron--Severi bounds]
+\label{theorem-picard-Neron-Severi-uniform-bounds}
+\begin{reference}
+\cite[Supplement to Expos\'e 236, (vi), pp. 304--305]{FGA}.
+\end{reference}
+Let $X\to S$ be a proper morphism, where $S$ is Noetherian. For a geometric
+point $\overline{s}\to S$, let $P_{\overline{s}}$ be the Picard scheme of
+$X_{\overline{s}}$ and set
+$$
+\mathop{\rm NS}(X_{\overline{s}})
+=P_{\overline{s}}(\overline{\kappa(s)})/
+P^0_{\overline{s}}(\overline{\kappa(s)}).
+$$
+These groups are finitely generated. Moreover, there is an integer $N$ such
+that
+$$
+\mathop{\rm rank}\mathop{\rm NS}(X_{\overline{s}})\leq N,
+\qquad
+\#\mathop{\rm NS}(X_{\overline{s}})_{\rm tors}\leq N
+$$
+for every geometric point $\overline{s}\to S$.
+\end{theorem}
+
+\begin{proof}
+We recall the reduction in the cited source. Noetherian induction and
+flattening stratification reduce to finitely many families on which the
+Picard spaces and the required modifications are defined. Theorem
+\ref{theorem-picard-pullback-proper-surjective-finite-type}, applied first to
+finite morphisms, and Theorem
+\ref{theorem-picard-ample-divisor-restriction-finite-type} show that the
+kernels introduced by proper modification and ample-divisor restriction have
+uniformly bounded component groups. Chow's lemma and successive ample
+sections therefore reduce finite generation and uniform boundedness to
+geometrically integral normal fibres of dimension at most $2$.
+
+For surfaces, resolution of singularities and another application of the
+proper-pullback theorem reduce to smooth projective surfaces. The
+N\'eron--Severi theorem and nondegeneracy of the intersection pairing give
+finite generation there, while the Picard--Igusa inequality gives the rank
+bound. The torsion subgroup is the component group of the finite-type locus
+$P^\tau$ from Theorem
+\ref{theorem-picard-torsion-components-finite-type}; hence its order is
+bounded on each of the finitely many strata. Reversing the finite-type
+reductions and taking the maximum over those strata proves both uniform
+bounds.
+\end{proof}
+
+\begin{lemma}[A finite curve test for boundedness]
+\label{lemma-picard-boundedness-finite-curves}
+\begin{reference}
+\cite[Supplement to Expos\'e 236, (vii), p. 305]{FGA}.
+\end{reference}
+Let $X$ be a proper scheme over an algebraically closed field $k$, and let
+$P=\Picardfunctor_{X/k}$. Put
+$$
+r=\mathop{\rm rank}\mathop{\rm NS}(X).
+$$
+There are closed integral curves $C_1,\ldots,C_r$ in $X$ such that, for a set
+$M$ of isomorphism classes of invertible modules on $X$, the following are
+equivalent:
+\begin{enumerate}
+\item $M$ is contained in a quasi-compact open subscheme of $P$;
+\item for every $i$, the integers
+$$
+\deg_{\widetilde C_i}(\mathcal L|_{\widetilde C_i}),
+\qquad \mathcal L\in M,
+$$
+are bounded in absolute value, where $\widetilde C_i\to C_i$ is the
+normalization.
+\end{enumerate}
+If $r=0$, the second condition is empty.
+\end{lemma}
+
+\begin{proof}
+Theorem \ref{theorem-picard-Neron-Severi-uniform-bounds}, over
+$\Spec(k)$, makes $\mathop{\rm NS}(X)$ a finitely generated abelian group.
+The intersection theorem used in its surface reduction says that the degree
+homomorphisms defined by integral curves vanish simultaneously on precisely
+the torsion subgroup. We may therefore choose $r$ curves such that
+$$
+\mathop{\rm NS}(X)/\mathop{\rm NS}(X)_{\rm tors}
+\longrightarrow \mathbf Z^r,\qquad
+[\mathcal L]\longmapsto
+(\deg_{\widetilde C_i}(\mathcal L|_{\widetilde C_i}))_{i=1}^r
+$$
+is injective. Indeed, after tensoring with $\mathbf Q$, choose a basis from
+the curve-degree linear forms on the $r$-dimensional vector space.
+
+Every connected component of $P$ is a translate of the finite-type identity
+component. Consequently $M$ is contained in a quasi-compact open if and only
+if its image in $\mathop{\rm NS}(X)$ is finite. The displayed injection and
+finiteness of the torsion subgroup show that this happens if and only if all
+the displayed degree coordinates are bounded.
+\end{proof}
+
+\begin{theorem}[Numerical criteria for $\tau$-equivalence]
+\label{theorem-picard-tau-numerical-criteria}
+\begin{reference}
+\cite[Supplement to Expos\'e 236, (viii), pp. 305--306]{FGA}.
+\end{reference}
+Let $X$ be a proper scheme over a field $k$, and let $\mathcal L$ be an
+invertible module on $X$. The following are equivalent:
+\begin{enumerate}
+\item[(a)] The class of $\mathcal L$ is in
+$\Picardfunctor_{X/k}^{\tau}$.
+\item[(b)] For every coherent module $\mathcal F$ on $X$,
+$$
+\chi(X,\mathcal F\otimes\mathcal L)=\chi(X,\mathcal F).
+$$
+\item[(b$'$)] The equality in (b) holds for
+$\mathcal F=\mathcal O_Y$, for every closed integral subscheme
+$Y\subset X$ of dimension $1$.
+\item[(c)] For every such $Y$, if $\widetilde Y\to Y$ is the normalization,
+then
+$$
+\deg_{\widetilde Y}(\mathcal L|_{\widetilde Y})=0.
+$$
+\end{enumerate}
+If $X$ is projective and $\mathcal H=\mathcal O_X(1)$ is ample, these
+conditions are also equivalent to
+\begin{enumerate}
+\item[(d)] $\mathcal L^{\otimes m}\otimes\mathcal H$ is ample for every
+$m\in\mathbf Z$.
+\end{enumerate}
+If, in addition, $X$ is integral, they are also equivalent to
+\begin{enumerate}
+\item[(e)] For every $m,n\in\mathbf Z$,
+$$
+\chi(X,\mathcal L^{\otimes m}\otimes\mathcal H^{\otimes n})
+=\chi(X,\mathcal H^{\otimes n}).
+$$
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Condition (a) says exactly that the set of all integral tensor powers of
+$\mathcal L$ is bounded. For a coherent module $\mathcal F$, Varieties,
+Lemma \ref{varieties-lemma-numerical-polynomial-from-euler} says that
+$$
+m\longmapsto
+\chi(X,\mathcal F\otimes\mathcal L^{\otimes m})
+$$
+is a numerical polynomial. Under (a), its values range over a finite set:
+Euler characteristic is locally constant in a proper flat family and the
+powers lie in a quasi-compact part of the Picard scheme. The polynomial is
+therefore constant. Its values at $m=0$ and $m=1$ give (b), and (b) plainly
+implies (b$'$).
+
+For an integral proper curve $Y$, Riemann--Roch and normalization give
+$$
+\chi(Y,\mathcal L|_Y)-\chi(Y,\mathcal O_Y)
+=\deg_{\widetilde Y}(\mathcal L|_{\widetilde Y}).
+$$
+Thus (b$'$) and (c) are equivalent. To prove that (c) implies (a), we may
+extend the ground field to an algebraic closure: both degree zero and
+$\tau$-equivalence are insensitive to this extension. Lemma
+\ref{lemma-picard-boundedness-finite-curves}, applied to the powers of
+$\mathcal L$, then makes that cyclic set bounded.
+
+Suppose now that $X$ is projective. If (d) holds, restriction to the
+normalization of an integral curve gives
+$$
+\deg(\mathcal H|_{\widetilde Y})
++m\deg(\mathcal L|_{\widetilde Y})>0
+$$
+for every $m\in\mathbf Z$, and hence (c). Conversely, under (c) every
+$\mathcal L^{\otimes m}\otimes\mathcal H$ has the same numerical class as
+$\mathcal H$; the numerical criterion for ampleness makes it ample. This
+proves the equivalence with (d).
+
+Condition (b), applied successively with
+$\mathcal F=\mathcal L^{\otimes m}\otimes\mathcal H^{\otimes n}$, gives
+(e). Conversely, (e) says that all powers of $\mathcal L$ have the same
+Hilbert polynomial. The integral field case of the boundedness criterion in
+Theorem \ref{theorem-picard-boundedness-integral-fibres}, with the
+proper-pullback reduction used there after extending the ground field, makes
+the set of powers bounded. This is (a).
+\end{proof}
+
+\begin{theorem}[The torsion-component locus is open and closed]
+\label{theorem-picard-tau-open-closed-integral}
+\begin{reference}
+\cite[Supplement to Expos\'e 236, (ix), p. 306]{FGA}.
+\end{reference}
+Let $X\to S$ be projective and flat with integral geometric fibres, where
+$S$ is Noetherian, and suppose the fppf Picard functor is represented by a
+scheme
+$$
+P=\Picardfunctor_{X/S}.
+$$
+Then $P^\tau$ is open and closed in $P$.
+\end{theorem}
+
+\begin{proof}
+Choose a relatively ample invertible module $\mathcal H$ on $X$. Fppf
+locally on $P$, a Picard class is represented by an invertible module
+$\mathcal L$ on $X\times_SP$. For integers $m,n$, the function on geometric
+points of this cover given by
+$$
+\chi(X_s,\mathcal L_s^{\otimes m}\otimes\mathcal H_s^{\otimes n})
+-\chi(X_s,\mathcal H_s^{\otimes n})
+$$
+is locally constant. Hence its zero locus is open and closed.
+
+We may work on an open and closed component of $S$ on which the fibre
+dimension is a fixed integer $d$. By Varieties, Lemma
+\ref{varieties-lemma-numerical-polynomial-from-euler}, the displayed
+difference is a numerical polynomial in $(m,n)$ of total degree at most
+$d$. It vanishes for all pairs of integers if and only if it vanishes on the
+finite grid
+$$
+0\leq m,n\leq d.
+$$
+Theorem \ref{theorem-picard-tau-numerical-criteria}, condition (e), therefore
+identifies $P^\tau$ on the fppf cover with a finite intersection of open and
+closed loci. This locus descends to an open and closed subscheme of $P$.
+\end{proof}
+
+\begin{remark}[Proof architecture of the supplement]
+\label{remark-picard-supplement-proof-architecture}
+The first three results of the supplement form a dependency chain. Nonflat
+descent proves finite-type proper pullback; Mumford's fixed-polynomial
+criterion under $S_2$ then proves finite-type restriction to an ample
+divisor; those two results remove the normality hypothesis and yield the
+two-coefficient boundedness theorem. Power maps in residue characteristic
+are handled separately by applying proper pullback to Frobenius. The
+N\'eron--Severi theorem and its curve test then turn that boundedness theory
+into the numerical criteria and the relative open-and-closed statement.
+Over a field, the proper-pullback and ample-restriction morphisms are affine,
+as recorded in Theorem
+\ref{theorem-picard-pullback-proper-surjective-finite-type} and the cited
+supplement.
+\end{remark}
 
 \section{Properties of the Picard stack}
 \label{section-picard-stack}

@@ -1,0 +1,95 @@
+{
+  "schema": "fga-stacks-closure-audit-v1",
+  "status": "PASS",
+  "errors": [],
+  "upstream_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "audited_parent_commit": "74fcf4ab03e525a44bc2da81ea014fa5ccbb89ee",
+  "scope": {
+    "items": [
+      "149",
+      "e149",
+      "182",
+      "e182",
+      "190",
+      "e190",
+      "195",
+      "e195",
+      "212",
+      "e212",
+      "221",
+      "e221",
+      "232",
+      "e232",
+      "236",
+      "e236",
+      "com"
+    ],
+    "description": "Eight FGA exposes, eight linked errata, and the 1962 comments"
+  },
+  "counts": {
+    "source_items": 17,
+    "source_units": 1253,
+    "term_links": 1612,
+    "decisions": 579,
+    "source_issues": 65,
+    "active_source_issues": 9,
+    "review_units": 0,
+    "semantic_residuals_without_labels": 0,
+    "labels": 21748,
+    "case_sensitive_duplicate_labels": 0,
+    "official_tags_joined": 21437,
+    "topics": 71,
+    "topic_candidates": 4317,
+    "topic_coverage": {
+      "direct": 56,
+      "broad": 14,
+      "partial": 1,
+      "no_direct": 0
+    },
+    "changed_tex_chapters": 26,
+    "built_pages": 1935,
+    "built_bytes": 24008919,
+    "failed_builds": 0,
+    "line_box_warnings_overlapping_changed_hunks": 0,
+    "privacy_hits": 0,
+    "reader_workflow_prose_hits": 0,
+    "invented_official_tags": 0
+  },
+  "checks": {
+    "source_item_set_exact": "PASS",
+    "source_identity_and_count": "PASS",
+    "decision_supersession_and_label_resolution": "PASS",
+    "source_issue_evidence_and_controls": "PASS",
+    "topic_evidence_resolution": "PASS",
+    "semantic_residual_closure": "PASS",
+    "case_sensitive_label_uniqueness": "PASS",
+    "official_tag_immutability": "PASS",
+    "serial_deterministic_chapter_builds": "PASS",
+    "changed_hunk_line_box_check": "PASS",
+    "bounded_privacy_scan": "PASS",
+    "reader_workflow_prose_scan": "PASS"
+  },
+  "source_sha256": {
+    "units.csv": "D5E898D40B5AA51824ADF77EE6BA5E41DDF4FFA7B42E3754FBB91B81BA5F42FB",
+    "terms.csv": "D93D861C338DD62C56624A551A41CBBB216DB302087F47AA7B02CD44546F6622"
+  },
+  "sha256": {
+    "fga/build.csv": "BF6EB96FE17DD1E22813750D0FA18A35225CD0276ABA6331CFE07EF697347B3C",
+    "fga/topics.csv": "791377F11D1787DEE97B25299FB72E46FC926A46FDE285A25B59495B57DCDA6C",
+    "fga/dec.csv": "C2CF5BCFBB39D946936A965E556D3BFBABA231660557CDB61EC9C761E990CEFA",
+    "fga/issues.csv": "9C46805184CABC9E375A0DADA3ADD5F0C5B8DED7A247EFF5AB8900B0D2906363",
+    "fga/map.csv": "B5F3BD0F7583D2AEB74CAB43EB645AF1C3408BC1633F259B684B0114FB632665",
+    "fga/stx.csv": "1CFFB30225D9BE4159A9FDFBD22A83286405CD5F2AF4D9C276E4790526F4E6F3",
+    "fga/tcand.csv": "DF408D6822AFD0608D9AF7C129A1A587871637B94240F63B32A738DB9395BEE7",
+    "fga/tmap.csv": "37BF89504F082BE9FD55A345C4C1B6AFB438D850E3D03F776AE2AB2B625094EE",
+    "fga/check.json": "C65242879385F7F9B3984D6A2F746229FF02A59F77B9694CF564A62DD63B1FE7",
+    "fga/mcheck.json": "7632FEA15EF6FB38688B7D4C4256931375ACCFED8FCDA0DE2EF263152F5F97FA",
+    "moduli.tex": "35EEC91273E7F1A44EB27F46248CA1B2F5669206550035118D4BF13DD04EF364",
+    "tags/tags": "C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF"
+  },
+  "bounded_residuals": [
+    "Nine active source issues are evidenced false, overbroad, or unsupported source claims with fail-closed controls; they are not unreviewed mapping units.",
+    "Algebraic equivalence remains partial because the connected-Picard and dual-abelian constructions are present but a standalone general theory is outside the exact integrated source claims.",
+    "Raw standalone-build box warnings may occur in unchanged lines; no line-based box warning intersects a branch-added hunk."
+  ]
+}

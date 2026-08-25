@@ -3876,3 +3876,197 @@ and
 03C5A361F1E301984C8F36B317AA6021FC9EACADA75795929C226196F54A7670.
 The next and final sequential source cursor is the linked supplement and
 erratum to Expose 236 on printed pages 303--307.
+
+The first bounded supplement checkpoint now integrates the three corrections
+on printed page 303 and results (i)--(v), together with the proof architecture
+on pages 306--307. Moduli, Section
+moduli-section-picard-finiteness-numerical contains finite-type pullback along
+a proper surjection, boundedness detected after pullback, Mumford's restricted
+fixed-polynomial criterion under S2, finite-type restriction to an ample
+divisor, the two-nonleading-coefficient criterion for integral projective
+fibres, nonzero power maps, and finite type of the torsion-component locus.
+The restricted Mumford lemma is placed before the ample-divisor theorem, and
+the full two-coefficient theorem follows it; this records the noncircular
+dependency order stated in the source's proof comments.
+
+Decision D000573 supersedes reviewed-gap decision D000300 and records this as
+a partial integration through (v). Issue I000065 records and resolves the
+source's unstated low-dimensional reading of coefficient a2: coefficients
+whose displayed degree would be negative are omitted. Results (vi)--(ix),
+including the Neron--Severi bounds, finite curve test, numerical criteria, and
+open-and-closed theorem, remain the active sequential cursor.
+
+The linked six-page authority is 475,371 bytes with SHA-256
+D8FFB36337F12CE15F9E15E917174A4C5EDCBD28C5B0CD9F0A501098DB8BD61B.
+Its first PDF page is the NUMDAM cover, so printed pages 303--307 are PDF
+pages 2--6. Direct serial 1,100-dpi inspection of all five printed pages finds
+the corrections, statements, and proof comments legible and source-aligned;
+their rendered images have SHA-256, in printed-page order,
+C9A3BCA4E77746125C0F9D56F54CD66208DA8C3D46292EF198C13DC37C686B27,
+989FFAF208C042C683B6BF1275684353D010E42F88C508B1BC79D86FD9917DC5,
+3EF8BAC0F34EE670F36337D5B749C31183B0CE9F99D43E4EC688B6A20F9726D7,
+728AA7594B572C64D1F3FF871CFFDB8BA8442D959702F6D24688A5931D120148,
+and
+E055FBB5A5DAC941EB3F0C119606A50A7DEC8CB206ACABB02358A06090C9EC43.
+
+Both semantic validators pass with no errors at 21,743 labels, 21,437
+official-tag joins, 71 controlled topics, 4,309 topic candidates, 573
+append-only decisions, 1,253 source units, 1,612 term links, and 65 source
+issues, of which nine remain active; there are zero review units. The topic,
+decision, issue, map, Stacks-label, topic-candidate, reviewed-topic-map,
+index-validation, and map-validation files have SHA-256
+B5C1F663937D295FB4564884017DF1E3CFF7E38E4AFB4B80E2E80FBE29C9C7D0,
+5375E711BBD5E23552B51163B3A25AE0CF724C289EABECAAFF91FD03462F5E82,
+9C46805184CABC9E375A0DADA3ADD5F0C5B8DED7A247EFF5AB8900B0D2906363,
+DFE7CF6F8E64039CC61FCEB63E46B28C57CD91938220689B292FF2513DD3D825,
+C82454DCA0CAEF5650E2EFFCFDC4C7187CEBA3F6C2CEEF69890988775F717018,
+DC9BA1B53DA03398280C0028A128767C8E39DCE3B33CAE450388FAE1BBD62674,
+26B07300311EE43A59AD8AF5978D2CC3739CB69E1EDB84CFF2DDF74C9E38EA46,
+1686B6F9533EEA28505376A1F2F3B8BC6CA0A0688915EE18781167AAF0BF7D1C,
+and
+41E0F2345668CECF0692948BEF001C5F71DFC6F135BE5705F1E8EDEFF53B5AB9.
+The official tags/tags file remains unmodified at SHA-256
+C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF;
+no official Stacks tag was invented for any new label.
+
+Three reproducible serial TeX passes produce an 80-page Moduli chapter of
+927,454 bytes with SHA-256
+4920BA97828F73A5AA2BA8C18AC3421679453D535C23D91194BA00A02B0EE29A.
+The build has no overfull or underfull box and no unresolved new internal
+reference. Final serial 1,100-dpi inspection of Moduli pages 65--67 finds no
+clipping, collision, malformed formula, unresolved new reference,
+placeholder, or unreadable text; their rendered page images have SHA-256
+15015573476A5794AF38C3578BB7F6806208209D6E663BFAB5CF1CCA89F6B78B,
+5A756DBBBC926208267BEEEA080FC22766FECC6995533817F87A1F6D9EED12A2,
+and
+08BB27014FA031C7E15ACE834A69FF143901B3779B2C5CA5BCE40AB46D97035B.
+
+The linked supplement and erratum to Expose 236 are now integrated through
+the final printed cursor, page 307. Decision D000574 supersedes D000573 and
+records completion of all three corrections and all nine numbered results.
+The completed section adds uniform Neron--Severi finite-generation, rank, and
+torsion bounds; a finite integral-curve test for bounded Picard families;
+equivalent Euler-characteristic, curve-degree, ampleness, and Hilbert-
+polynomial criteria for tau-equivalence; the relative open-and-closed theorem
+for the tau locus; and an explicit summary of the supplement's proof
+architecture. The proper-pullback and ample-divisor restriction statements
+also record the source's field-level affineness assertions. No source remains
+after this cursor within the bounded FGA corpus.
+
+Both semantic validators pass with no errors at 21,748 labels, 21,437
+official-tag joins, 71 controlled topics, 4,317 topic candidates, 574
+append-only decisions, 1,253 source units, 1,612 term links, and 65 source
+issues, of which nine remain active; there are zero review units. Topic
+coverage is 51 direct, three partial, fourteen broad, and three no-direct.
+The topic, decision, issue, map, Stacks-label, topic-candidate, reviewed-topic-
+map, index-validation, and map-validation files have SHA-256
+D69591B2884C9137BBBAA2C7D815499B4EACBBA0BD4980AF3EB678656B4B3A1E,
+E278C361450D358E5F671977F0DAE1BD73594EF7A820043C04BEEBBDF969977D,
+9C46805184CABC9E375A0DADA3ADD5F0C5B8DED7A247EFF5AB8900B0D2906363,
+C5759DD9A94B53D39891585674228E249F9A971B7944B720C39A25538F877469,
+5049151093A6DE256AE7ACCFA21DDD333C91E7AE2E6662B50444C8885853F70A,
+7AE9E48B032E3BD7505D0B78524CABF27EFCD03FCD2C62BD43BA4060002767B1,
+56AC16FFEF0DAF7CF2D35EE786FA93D1202D1EFDDC4ADF6066A9767C69E081D4,
+71B11C82D26A61A603A74E226E58DB4B7195ED91D7A66991B4712E7C1C8E2AA5,
+and
+27B7ABF263C1015F2649909FC40823529421B553305AEE7FDFAE9FDDDEF71B30.
+The official tags/tags file remains unmodified at SHA-256
+C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF;
+no official Stacks tag was invented for any new label.
+
+Three reproducible serial TeX passes produce an 83-page Moduli chapter of
+941,799 bytes with SHA-256
+294D71F6C446F607DCC3AEEEC02E98512AD1F69CAAC856C27264781428F684D2.
+There is no overfull box. The sole underfull vertical box is on page 82, where
+direct inspection confirms ordinary two-column chapter-list and bibliography
+whitespace with no content loss or collision. Existing single-chapter-build
+cross-reference warnings are outside the new section; every new internal
+reference resolves. Final serial 1,100-dpi inspection of Moduli pages 66--70
+and 82 finds no clipping, collision, malformed formula, unresolved new
+reference, placeholder, or unreadable text. Their rendered page images have
+SHA-256, in page order,
+20CEB5F06148A8BBA511E58DFCAAB78FEF97FBCD94CBA822E16499F2BCEDA717,
+6F30AAE7076B9CBEE28D2D39991EFCF9A87DE33E072FECBF012A4A23F7B2E755,
+2E8B0C40BDFAFC2B75EF3CD64BF4F3481EBC07FD5107DDDE34CE4B7BA6DEAEE3,
+D0433DA18315517C490F589EF89D0313CE6A709EBAD8B232981034037B40031A,
+C97A2133E4C2171262F45AECA2400E564C82A618E07232098826F19A709D185B,
+and
+1ED38B2BF38E8704CD0A6E42F3B08BC5E25C7B08FE8B7DF9599D4EF451D72CA1.
+The next phase is the corpus-wide semantic, source, build, and no-invented-tag
+audit, not further source transcription or exposition.
+
+The corpus-wide closure audit now passes. The exact 17-item set contains all
+1,253 source units and 1,612 source term links. Every unit has a controlled
+disposition; there are zero review units and zero nonstructural nonhistorical
+semantic residuals without Stacks labels. The nine active source issues are
+evidenced false, overbroad, or unsupported source claims with explicit
+fail-closed controls, not unreviewed work. The only partial topic is the
+standalone general theory of algebraic equivalence; all other controlled
+topics are classified as 56 direct and fourteen broad, with zero no-direct
+topics.
+
+The audit corrected stale topic classifications for fundamental classes,
+Poincare duality, the Poincare bundle, Albanese constructions, algebraic
+equivalence, and tau-equivalence. Decisions D000575--D000579 supersede the
+stale section-level states for Expose 236, Sections 1--4, without weakening
+the two explicit positive-characteristic boundaries. A workflow phrase that
+had leaked into a mathematical remark was replaced by the exact cross-
+reference to Theorem
+moduli-theorem-picard-smooth-near-smooth-fibre. A bounded scan of every TeX
+addition now finds zero workflow or AI prose, and the deliverable privacy scan
+finds zero private paths.
+
+The index and map validators pass with empty error arrays at 21,748 labels,
+21,437 official-tag joins, 4,317 topic candidates, and 579 append-only
+decisions. The topic, decision, issue, map, Stacks-label, topic-candidate,
+reviewed-topic-map, index-validation, and map-validation files have SHA-256
+791377F11D1787DEE97B25299FB72E46FC926A46FDE285A25B59495B57DCDA6C,
+C2CF5BCFBB39D946936A965E556D3BFBABA231660557CDB61EC9C761E990CEFA,
+9C46805184CABC9E375A0DADA3ADD5F0C5B8DED7A247EFF5AB8900B0D2906363,
+B5F3BD0F7583D2AEB74CAB43EB645AF1C3408BC1633F259B684B0114FB632665,
+1CFFB30225D9BE4159A9FDFBD22A83286405CD5F2AF4D9C276E4790526F4E6F3,
+DF408D6822AFD0608D9AF7C129A1A587871637B94240F63B32A738DB9395BEE7,
+37BF89504F082BE9FD55A345C4C1B6AFB438D850E3D03F776AE2AB2B625094EE,
+C65242879385F7F9B3984D6A2F746229FF02A59F77B9694CF564A62DD63B1FE7,
+and
+7632FEA15EF6FB38688B7D4C4256931375ACCFED8FCDA0DE2EF263152F5F97FA.
+The official tags/tags file is still unmodified at SHA-256
+C5C7017FB5C50B60295B30801CA1B5BAB8F5B379F61B084D8219441938125FCF;
+there are zero invented official tags and zero case-sensitive duplicate
+labels.
+
+All 26 TeX chapters changed by the branch pass three deterministic serial
+builds, totalling 1,935 pages and 24,008,919 PDF bytes. No line-based box
+warning intersects a branch-added TeX hunk. The exact per-chapter build
+receipt is 3,090 bytes with SHA-256
+BF6EB96FE17DD1E22813750D0FA18A35225CD0276ABA6331CFE07EF697347B3C.
+The machine-readable closure receipt is 3,652 bytes with SHA-256
+EA2F18A53EEDC56E57BFE73BB3DFC2CD344522248AF523F2984D7FD35E5AA408.
+
+The rebuilt Moduli chapter is 83 pages and 941,995 bytes with SHA-256
+1FD6166FDC936BEA37CDEB99B844A67EB6E150F62FF17A5AE008E14579867705.
+It has no overfull box and one harmless underfull page-break warning on page
+82. Direct 1,100-dpi inspection of the corrected mathematical cross-reference
+on page 47 and the chapter-list/bibliography break on page 82 finds no
+clipping, collision, malformed formula, workflow prose, or content loss; the
+page images have SHA-256
+C323C343120353465D9F7BCEF3F1BBEF959EA87E627D8EC571D44206F8697CF0
+and
+1ED38B2BF38E8704CD0A6E42F3B08BC5E25C7B08FE8B7DF9599D4EF451D72CA1.
+The remaining work is remote publication of this audited closure and a
+coherent upstream review path.
+
+The audited closure commit
+9f8ebd00415cbd142a83733284f901f06bddd659, with tree
+920a23456a08239c462d63e4499918c5e14af696, was pushed to the existing
+KokunoYumeto fork on branch codex/fga-integration. Remote fetch,
+advertisement, tree comparison, and divergence checks all agree, with
+divergence zero in both directions. Upstream master remains exactly the
+audited baseline a04446e57ec1fbc252a871afcec7752fb2807b14. Draft upstream
+review request stacks/stacks-project#196 is public at
+https://github.com/stacks/stacks-project/pull/196. Authenticated API readback
+reports OPEN, draft, CLEAN, base master, and head
+9f8ebd00415cbd142a83733284f901f06bddd659; an independent public HTTP
+readback returns status 200 and contains both the title and head identity.
+The corpus-wide integration, closure audit, remote publication, and upstream
+review-path phases are therefore complete at this checkpoint.
