@@ -188,6 +188,28 @@ def main() -> int:
         if line not in tag_lines:
             errors.append(f"missing composed R1 tag record: {line}")
 
+    scripts_dir = ROOT / "scripts"
+    sys.path.insert(0, str(scripts_dir))
+    try:
+        from functions import get_new_tags, get_tags
+
+        project_path = f"{ROOT.as_posix()}/"
+        active_tags = get_tags(project_path)
+        unassigned_tags = get_new_tags(project_path, active_tags)
+        if unassigned_tags:
+            errors.append(
+                f"{len(unassigned_tags)} live labels lack permanent Stacks tags"
+            )
+        tag_codes = [row[0] for row in active_tags]
+        tag_labels = [row[1] for row in active_tags]
+        if len(set(tag_codes)) != len(tag_codes):
+            errors.append("active Stacks tag codes are not unique")
+        if len(set(tag_labels)) != len(tag_labels):
+            errors.append("active Stacks tag labels are not unique")
+    except (ImportError, OSError, IndexError, ValueError) as exc:
+        active_tags = []
+        errors.append(f"could not validate permanent Stacks tags: {exc}")
+
     if len(registered_ids) != 416:
         errors.append(f"expected 416 registered stable IDs, found {len(registered_ids)}")
     if len(set(registered_ids)) != len(registered_ids):
@@ -232,6 +254,7 @@ def main() -> int:
     print(f"- exact v2 operations checked: {v2_operations}")
     print(f"- exact R1-R3 replacements checked: {v1_replacements}")
     print(f"- R1 tag additions checked: {tag_additions}")
+    print(f"- active permanent Stacks tags checked: {len(active_tags)}")
     print(f"- public Markdown documents checked: {len(PUBLIC_MARKDOWN)}")
     return 0
 
