@@ -48,10 +48,10 @@ The histories were combined without flattening either input:
 2. EGA scaffold and export history through
    `91df7f1c96bd4973264c29b0e121253a05d1d361` was merged into that source.
 3. The complete registry history through
-   `3d675a851daadef25496196e31bb8f2200ccaec0` was imported without squashing
+   `9b73f1917e76dfff296b259f7ed56a9565952170` was imported without squashing
    under `ai-integrated/`. Its imported tree initially matched the source
    registry tree exactly.
-4. Each admitted errata batch R1–R15 was independently materialized against
+4. Each admitted errata batch R1–R16 was independently materialized against
    the pinned upstream source, composed in registry order, and merged into the
    live TeX tree.
 5. The independent `injectives.tex` correction was carried into the unified

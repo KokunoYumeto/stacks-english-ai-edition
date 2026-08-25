@@ -42,7 +42,7 @@ The pinned upstream baseline is
 | GAGA | Integrated through r3 | All 126 units classified, all 79 substantive units decided, and a validated 22-page English chapter | [r3 status](gaga_r3/STATUS.md) · [chapter source](gaga.tex) |
 | FGA | Integrated and notation-normalized | 1,253 source units and 1,612 term links closed; fixed-point 83-page Moduli build recorded | [Overview](fga/README.md) · [status](fga/status.md) |
 | EGA | Active integration | Direct-French review through EGA I 6.1.13; 1,059 active edges across 355 generated units; next cursor EGA I 6.2.1 | [EGA dossier](ega/README.md) |
-| Errata | Composed into this source tree | 15 admitted batches containing 385 stable correction IDs; R16 remains preserved as a candidate, not silently admitted | [Registry](ai-integrated/registry/overlays.json) · [candidate evidence](ai-integrated/candidates/commons/stacks/errata/) |
+| Errata | Composed into this source tree | 16 admitted batches containing 416 stable correction IDs; R17 is the next candidate namespace, not an admitted overlay | [Registry](ai-integrated/registry/overlays.json) · [candidate evidence](ai-integrated/candidates/commons/stacks/errata/) |
 
 These labels are deliberately precise. “Integrated,” “active,” “admitted,” and
 “candidate” are not interchangeable, and no local label is represented as an
