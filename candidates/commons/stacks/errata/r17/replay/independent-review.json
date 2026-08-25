@@ -1,0 +1,391 @@
+{
+  "schema": "mathematics-commons-stacks-errata-independent-review/v1",
+  "candidate_id": "stacks-errata-a04446e-r17",
+  "review_kind": "independent_adverse_replay",
+  "recorded_at_utc": "2026-08-25T02:19:00Z",
+  "result": "PASS",
+  "conclusion": "UNCONDITIONAL PASS",
+  "passed": true,
+  "pass_is_unconditional": true,
+  "pre_review_manifest_sha256": "A89841F8FAD46BD463E22EFDF713C98B39446C9A9E611D31960A03D9E91CCE5C",
+  "validation_sha256": "13C23CF69F274494A9AACF20FFBF2D46A4FC9BEC7208394019D4B79F9A0ED855",
+  "pre_review_gate": {
+    "passed": true,
+    "check_manifest_exit_code": 0,
+    "candidate_manifest": {
+      "path": "candidate.manifest.json",
+      "bytes": 8667,
+      "sha256": "A89841F8FAD46BD463E22EFDF713C98B39446C9A9E611D31960A03D9E91CCE5C"
+    },
+    "validation": {
+      "path": "builds/validation.json",
+      "bytes": 2553,
+      "sha256": "13C23CF69F274494A9AACF20FFBF2D46A4FC9BEC7208394019D4B79F9A0ED855",
+      "passed": true
+    }
+  },
+  "input_nonmutation": {
+    "passed": true,
+    "file_count_excluding_manifest_and_receipt": 42,
+    "note": "The replay read sealed candidate bytes and wrote only this receipt."
+  },
+  "stable_id_recomputation": {
+    "passed": true,
+    "derivation_rule": "Accepted producer rows map in bounded intake order to consecutive stable IDs; rejected-duplicate rows consume no stable ID.",
+    "explicit_mapping": [
+      {
+        "producer_id": "HOMOLOGY-032",
+        "stable_id": "MC-STK-ERR-0784"
+      },
+      {
+        "producer_id": "HOMOLOGY-033",
+        "stable_id": "MC-STK-ERR-0785"
+      },
+      {
+        "producer_id": "HOMOLOGY-034",
+        "stable_id": "MC-STK-ERR-0786"
+      },
+      {
+        "producer_id": "HOMOLOGY-035",
+        "stable_id": "MC-STK-ERR-0787"
+      },
+      {
+        "producer_id": "HOMOLOGY-036",
+        "stable_id": "MC-STK-ERR-0788"
+      },
+      {
+        "producer_id": "HOMOLOGY-037",
+        "stable_id": "MC-STK-ERR-0789"
+      },
+      {
+        "producer_id": "HOMOLOGY-038",
+        "stable_id": "MC-STK-ERR-0790"
+      },
+      {
+        "producer_id": "HOMOLOGY-039",
+        "stable_id": "MC-STK-ERR-0791"
+      },
+      {
+        "producer_id": "HOMOLOGY-040",
+        "stable_id": "MC-STK-ERR-0792"
+      },
+      {
+        "producer_id": "HOMOLOGY-041",
+        "stable_id": "MC-STK-ERR-0793"
+      },
+      {
+        "producer_id": "HOMOLOGY-042",
+        "stable_id": "MC-STK-ERR-0794"
+      },
+      {
+        "producer_id": "HOMOLOGY-043",
+        "stable_id": "MC-STK-ERR-0795"
+      },
+      {
+        "producer_id": "HOMOLOGY-044",
+        "stable_id": "MC-STK-ERR-0796"
+      },
+      {
+        "producer_id": "HOMOLOGY-045",
+        "stable_id": "MC-STK-ERR-0797"
+      },
+      {
+        "producer_id": "HOMOLOGY-046",
+        "stable_id": "MC-STK-ERR-0798"
+      },
+      {
+        "producer_id": "HOMOLOGY-047",
+        "stable_id": "MC-STK-ERR-0799"
+      },
+      {
+        "producer_id": "HOMOLOGY-048",
+        "stable_id": "MC-STK-ERR-0800"
+      },
+      {
+        "producer_id": "HOMOLOGY-049",
+        "stable_id": "MC-STK-ERR-0801"
+      },
+      {
+        "producer_id": "HOMOLOGY-050",
+        "stable_id": "MC-STK-ERR-0802"
+      },
+      {
+        "producer_id": "HOMOLOGY-051",
+        "stable_id": "MC-STK-ERR-0803"
+      },
+      {
+        "producer_id": "HOMOLOGY-052",
+        "stable_id": "MC-STK-ERR-0804"
+      },
+      {
+        "producer_id": "HOMOLOGY-053",
+        "stable_id": "MC-STK-ERR-0805"
+      },
+      {
+        "producer_id": "HOMOLOGY-054",
+        "stable_id": "MC-STK-ERR-0806"
+      },
+      {
+        "producer_id": "HOMOLOGY-055",
+        "stable_id": "MC-STK-ERR-0807"
+      },
+      {
+        "producer_id": "HOMOLOGY-056",
+        "stable_id": "MC-STK-ERR-0808"
+      },
+      {
+        "producer_id": "HOMOLOGY-057",
+        "stable_id": "MC-STK-ERR-0809"
+      },
+      {
+        "producer_id": "HOMOLOGY-058",
+        "stable_id": "MC-STK-ERR-0810"
+      },
+      {
+        "producer_id": "HOMOLOGY-059",
+        "stable_id": "MC-STK-ERR-0811"
+      }
+    ],
+    "excluded_producer_ids": [],
+    "unit_count": 28,
+    "operation_count": 45,
+    "first_id": "MC-STK-ERR-0784",
+    "last_id": "MC-STK-ERR-0811"
+  },
+  "scratch_replay": {
+    "passed": true,
+    "apply_order": "descending_start_byte",
+    "operation_count": 45,
+    "descending_intervals": [
+      [
+        265191,
+        265225
+      ],
+      [
+        264819,
+        264826
+      ],
+      [
+        263793,
+        263815
+      ],
+      [
+        257818,
+        257834
+      ],
+      [
+        257118,
+        257139
+      ],
+      [
+        254875,
+        254910
+      ],
+      [
+        253868,
+        253898
+      ],
+      [
+        253797,
+        253832
+      ],
+      [
+        253664,
+        253696
+      ],
+      [
+        253528,
+        253559
+      ],
+      [
+        246423,
+        246431
+      ],
+      [
+        242446,
+        242466
+      ],
+      [
+        241893,
+        241913
+      ],
+      [
+        241855,
+        241877
+      ],
+      [
+        238041,
+        238103
+      ],
+      [
+        237980,
+        238040
+      ],
+      [
+        237936,
+        237979
+      ],
+      [
+        237190,
+        237227
+      ],
+      [
+        235539,
+        235615
+      ],
+      [
+        235296,
+        235333
+      ],
+      [
+        232465,
+        232509
+      ],
+      [
+        228279,
+        228348
+      ],
+      [
+        217342,
+        217370
+      ],
+      [
+        217165,
+        217189
+      ],
+      [
+        215352,
+        215372
+      ],
+      [
+        215256,
+        215276
+      ],
+      [
+        214196,
+        214210
+      ],
+      [
+        212332,
+        212368
+      ],
+      [
+        212271,
+        212331
+      ],
+      [
+        211469,
+        211487
+      ],
+      [
+        207725,
+        207752
+      ],
+      [
+        207665,
+        207724
+      ],
+      [
+        201074,
+        201119
+      ],
+      [
+        200533,
+        200574
+      ],
+      [
+        196036,
+        196103
+      ],
+      [
+        190111,
+        190156
+      ],
+      [
+        189721,
+        189762
+      ],
+      [
+        189518,
+        189554
+      ],
+      [
+        189112,
+        189133
+      ],
+      [
+        185509,
+        185576
+      ],
+      [
+        181680,
+        181727
+      ],
+      [
+        181615,
+        181679
+      ],
+      [
+        181586,
+        181614
+      ],
+      [
+        177132,
+        177162
+      ],
+      [
+        176966,
+        177005
+      ]
+    ],
+    "authority": {
+      "bytes": 267354,
+      "sha256": "483CAF01B4BD164DBC9103D76196E294E00EFE17E706178ECF2DC2C1DEF4ABE0"
+    },
+    "output": {
+      "bytes": 267597,
+      "sha256": "AB21BA1C8B75E3CDC7A4E1374260FBA6A82ABE959390C00CCDDB5FC4EA8310EB"
+    },
+    "operation_spec_sha256": "0F8E00D1DC3127EFBE89771AE4AD77951D4983B9E7715893E85CDFD77F6600C7"
+  },
+  "sealed_evidence_verification": {
+    "passed": true,
+    "build_receipt": {
+      "path": "builds/build-receipt.json",
+      "sha256": "E82797C61162E70811A752E1A59C6680B938A86E71AA567A1E00DF9FA2C238D9"
+    },
+    "visual_qa": {
+      "path": "builds/visual-qa.json",
+      "sha256": "10BB1AF2EE4F80C75AE5EB1ED1E8AA4E612800060B657B90699253ACD4876888"
+    },
+    "candidate_pdf": {
+      "path": "builds/homology.pdf",
+      "bytes": 873312,
+      "sha256": "C9FC02EE8C4EF1D8A954EDB45FA72A7B3235BBC56405DB2E73EB8FF03E3E137D",
+      "pages": 82
+    },
+    "authority_pdf": {
+      "path": "builds/homology.authority.pdf",
+      "bytes": 872973,
+      "sha256": "561B756AAF76680F4F3B36B93B0F13D7AE24273547C65FDB28056EF1C21A36D6",
+      "pages": 82
+    },
+    "private_render_manifest": {
+      "bytes": 33018,
+      "sha256": "558D35121E15827E68AE8D6B2485F4F66C8233C6CEEC487C9FB60D46729F9D74",
+      "logical_path": "canon/private_evidence/errata-r17-20260825T0205Z/render-final/render-manifest.json"
+    }
+  },
+  "adverse_observations": [
+    "Standalone candidate and authority builds retain identical cross-chapter unresolved-reference multisets.",
+    "Both PDFs are untagged; this retained accessibility limitation is not misreported as a visual failure.",
+    "All 82 candidate pages and every correction-sensitive locus were inspected without a visual defect."
+  ],
+  "constraints_observed": {
+    "candidate_inputs_mutated": false,
+    "upstream_contacted": false,
+    "persistent_writes": [
+      "replay/independent-review.json"
+    ]
+  }
+}

@@ -1,0 +1,560 @@
+{
+  "schema": "mathematics-commons-stacks-r17-adjudication-spec/v1",
+  "candidate_id": "stacks-errata-a04446e-r17",
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "authority_sha256": "483CAF01B4BD164DBC9103D76196E294E00EFE17E706178ECF2DC2C1DEF4ABE0",
+  "accepted": [
+    {
+      "producer_id": "HOMOLOGY-032",
+      "stable_id": "MC-STK-ERR-0784",
+      "class": "ill_typed_residue_class_representatives",
+      "locus": "homology.tex:5567-5569",
+      "result": "confirmed_residue_class_typing_error",
+      "disposition": "Separate representatives in A from their residue classes in A/alpha A and define d_r on the barred quotient classes.",
+      "operations": [
+        {
+          "source_start_line": 5567,
+          "source_end_line": 5567,
+          "old_text": "given an element $z \\in Z_r$",
+          "replacement_text": "given an element $\\overline{z} \\in Z_r$, choose a representative $z \\in d^{-1}(\\alpha^r A)$"
+        },
+        {
+          "source_start_line": 5568,
+          "source_end_line": 5568,
+          "old_text": "choose an element $y \\in A$ such that $d(z) = \\alpha^r(y)$. Then",
+          "replacement_text": "choose an element $y \\in A$ such that $d(z) = \\alpha^r(y)$, and denote by $\\overline{y}$ its image in $A/\\alpha A$. Then"
+        },
+        {
+          "source_start_line": 5569,
+          "source_end_line": 5569,
+          "old_text": "$d_r(z + B_r + \\alpha A) = y + B_r + \\alpha A$.",
+          "replacement_text": "$d_r(\\overline{z} + B_r) = \\overline{y} + B_r$."
+        }
+      ]
+    },
+    {
+      "producer_id": "HOMOLOGY-033",
+      "stable_id": "MC-STK-ERR-0785",
+      "class": "wrong_filtered_object_symbol",
+      "locus": "homology.tex:5773",
+      "result": "confirmed_filtered_object_symbol_error",
+      "disposition": "Use K, the filtered object, in both terms of the filtration transition map.",
+      "operations": [
+        {
+          "source_start_line": 5773,
+          "source_end_line": 5773,
+          "old_text": "$F^{p + 1}A \\to F^pA$",
+          "replacement_text": "$F^{p + 1}K \\to F^pK$"
+        }
+      ]
+    },
+    {
+      "producer_id": "HOMOLOGY-034",
+      "stable_id": "MC-STK-ERR-0786",
+      "class": "wrong_cohomological_degree",
+      "locus": "homology.tex:6384",
+      "result": "confirmed_cohomological_degree_error",
+      "disposition": "Impose the simplifying vanishing in K^{n+1}, the degree used by the preceding inverse-image condition.",
+      "operations": [
+        {
+          "source_start_line": 6384,
+          "source_end_line": 6384,
+          "old_text": "$F^{p + r}K^n = 0$",
+          "replacement_text": "$F^{p + r}K^{n + 1} = 0$"
+        }
+      ]
+    },
+    {
+      "producer_id": "HOMOLOGY-035",
+      "stable_id": "MC-STK-ERR-0787",
+      "class": "missing_quantifier_and_predicate",
+      "locus": "homology.tex:6399-6400",
+      "result": "confirmed_missing_quantifier_and_incomplete_predicate",
+      "disposition": "Quantify every bidegree and complete the hypothesis that C is a weak Serre subcategory of A.",
+      "operations": [
+        {
+          "source_start_line": 6399,
+          "source_end_line": 6399,
+          "old_text": "$E_r^{p, q} \\in \\mathcal{C}$ for some weak Serre subcategory",
+          "replacement_text": "$E_r^{p, q} \\in \\mathcal{C}$ for all $p, q \\in \\mathbf{Z}$, where"
+        },
+        {
+          "source_start_line": 6400,
+          "source_end_line": 6400,
+          "old_text": "$\\mathcal{C}$ of $\\mathcal{A}$. Then",
+          "replacement_text": "$\\mathcal{C}$ is a weak Serre subcategory of $\\mathcal{A}$. Then"
+        }
+      ]
+    },
+    {
+      "producer_id": "HOMOLOGY-036",
+      "stable_id": "MC-STK-ERR-0788",
+      "class": "wrong_subcategory_class",
+      "locus": "homology.tex:6442",
+      "result": "confirmed_subcategory_class_error",
+      "disposition": "Use the smallest weak Serre subcategory fixed by the statement, not the stronger Serre closure.",
+      "operations": [
+        {
+          "source_start_line": 6442,
+          "source_end_line": 6442,
+          "old_text": "smallest Serre",
+          "replacement_text": "smallest weak Serre"
+        }
+      ]
+    },
+    {
+      "producer_id": "HOMOLOGY-037",
+      "stable_id": "MC-STK-ERR-0789",
+      "class": "wrong_cohomological_index",
+      "locus": "homology.tex:6516-6522",
+      "result": "confirmed_cohomological_index_error",
+      "disposition": "Use degree n in both convergence bounds and the cohomology argument; injectivity is needed on H^n.",
+      "operations": [
+        {
+          "source_start_line": 6516,
+          "source_end_line": 6516,
+          "old_text": "$p - r + 1 < p_1(n - 1)$",
+          "replacement_text": "$p - r + 1 < p_1(n)$"
+        },
+        {
+          "source_start_line": 6522,
+          "source_end_line": 6522,
+          "old_text": "cohomology in degree $n - 1$",
+          "replacement_text": "cohomology in degree $n$"
+        }
+      ]
+    },
+    {
+      "producer_id": "HOMOLOGY-038",
+      "stable_id": "MC-STK-ERR-0790",
+      "class": "wrong_differential_degree",
+      "locus": "homology.tex:6999",
+      "result": "confirmed_differential_degree_error",
+      "disposition": "Apply the differential in degree -n to the element lying in cohomological degree -n.",
+      "operations": [
+        {
+          "source_start_line": 6999,
+          "source_end_line": 6999,
+          "old_text": "$\\Ker(d^{n - 1}_{A_{n - 1}^\\bullet})$",
+          "replacement_text": "$\\Ker(d^{-n}_{A_{n - 1}^\\bullet})$"
+        }
+      ]
+    },
+    {
+      "producer_id": "HOMOLOGY-039",
+      "stable_id": "MC-STK-ERR-0791",
+      "class": "wrong_total_degree_and_target",
+      "locus": "homology.tex:7003",
+      "result": "confirmed_total_degree_and_differential_target_error",
+      "disposition": "Place y in total degree -1 and make its differential equal the chosen cocycle x.",
+      "operations": [
+        {
+          "source_start_line": 7003,
+          "source_end_line": 7003,
+          "old_text": "we find an element $y = (y_i)$ in $T^{n - 1}$ with $d_{T^\\bullet}(y) = \\xi$.",
+          "replacement_text": "we find an element $y = (y_i)$ in $T^{-1}$ with $d_{T^\\bullet}(y) = x$."
+        }
+      ]
+    },
+    {
+      "producer_id": "HOMOLOGY-040",
+      "stable_id": "MC-STK-ERR-0792",
+      "class": "recursive_indexing_error",
+      "locus": "homology.tex:7043",
+      "result": "confirmed_recursive_indexing_error",
+      "disposition": "Use B_{n+1}=A_n for n at least zero, consistently with the declared base B_0=M and the recursive resolution.",
+      "operations": [
+        {
+          "source_start_line": 7043,
+          "source_end_line": 7043,
+          "old_text": "Set $B_n^\\bullet = A_{n + 1}^\\bullet$",
+          "replacement_text": "Set $B_{n + 1}^\\bullet = A_n^\\bullet$ for $n \\geq 0$"
+        }
+      ]
+    },
+    {
+      "producer_id": "HOMOLOGY-041",
+      "stable_id": "MC-STK-ERR-0793",
+      "class": "wrong_total_differential_sign_and_quantifier_placement",
+      "locus": "homology.tex:7060-7062",
+      "result": "confirmed_total_differential_sign_and_sentence_scope_error",
+      "disposition": "Restore the positive sign forced by the total differential and attach the existential qualifier to the equation before its explanation.",
+      "operations": [
+        {
+          "source_start_line": 7060,
+          "source_end_line": 7060,
+          "old_text": "$x_1 - d^0_{A_1^\\bullet}(y_0) = f_2^1(y_1)$",
+          "replacement_text": "$x_1 + d^0_{A_1^\\bullet}(y_0) = f_2^1(y_1)$ for some"
+        },
+        {
+          "source_start_line": 7061,
+          "source_end_line": 7061,
+          "old_text": "because it is mapped to zero by $f_1^1$ as $x$ is a cocycle.",
+          "replacement_text": "$y_1 \\in A_2^1$, because it is mapped to zero by $f_1^1$"
+        },
+        {
+          "source_start_line": 7062,
+          "source_end_line": 7062,
+          "old_text": "for some $y_1 \\in A_2^1$. Continuing, using induction, we find",
+          "replacement_text": "as $x$ is a cocycle. Continuing, using induction, we find"
+        }
+      ]
+    },
+    {
+      "producer_id": "HOMOLOGY-042",
+      "stable_id": "MC-STK-ERR-0794",
+      "class": "ambiguous_ill_typed_colimit_parentheses",
+      "locus": "homology.tex:7538-7571",
+      "result": "confirmed_colimit_scope_error",
+      "disposition": "Parenthesize F direct-sum G under every colimit occurrence so that each expression denotes the colimit of the pointwise direct-sum functor.",
+      "operations": [
+        {
+          "source_start_line": 7538,
+          "source_end_line": 7538,
+          "old_text": "$\\colim_\\mathcal{I} F \\oplus G$",
+          "replacement_text": "$\\colim_\\mathcal{I}(F \\oplus G)$"
+        },
+        {
+          "source_start_line": 7541,
+          "source_end_line": 7541,
+          "old_text": "$\\colim_\\mathcal{I} F \\oplus G =",
+          "replacement_text": "$\\colim_\\mathcal{I}(F \\oplus G) ="
+        },
+        {
+          "source_start_line": 7546,
+          "source_end_line": 7546,
+          "old_text": "$W = \\colim_\\mathcal{I} F \\oplus G$",
+          "replacement_text": "$W = \\colim_\\mathcal{I}(F \\oplus G)$"
+        },
+        {
+          "source_start_line": 7571,
+          "source_end_line": 7571,
+          "old_text": "$W = \\colim_\\mathcal{I} F \\oplus G$",
+          "replacement_text": "$W = \\colim_\\mathcal{I}(F \\oplus G)$"
+        }
+      ]
+    },
+    {
+      "producer_id": "HOMOLOGY-043",
+      "stable_id": "MC-STK-ERR-0795",
+      "class": "undefined_inverse_system_symbol",
+      "locus": "homology.tex:7624",
+      "result": "confirmed_undefined_inverse_system_symbol",
+      "disposition": "Use the declared inverse system M_i; N_i is undefined in this sequence.",
+      "operations": [
+        {
+          "source_start_line": 7624,
+          "source_end_line": 7624,
+          "old_text": "$K_i \\to L_i \\to N_i$",
+          "replacement_text": "$K_i \\to L_i \\to M_i$"
+        }
+      ]
+    },
+    {
+      "producer_id": "HOMOLOGY-044",
+      "stable_id": "MC-STK-ERR-0796",
+      "class": "missing_degree_quantifier",
+      "locus": "homology.tex:7866",
+      "result": "confirmed_missing_degree_quantifier",
+      "disposition": "State termwise surjectivity for every cohomological degree n.",
+      "operations": [
+        {
+          "source_start_line": 7866,
+          "source_end_line": 7866,
+          "old_text": "the map",
+          "replacement_text": "for every $n \\in \\mathbf{Z}$ the map"
+        }
+      ]
+    },
+    {
+      "producer_id": "HOMOLOGY-045",
+      "stable_id": "MC-STK-ERR-0797",
+      "class": "complex_group_type_mismatch",
+      "locus": "homology.tex:7878",
+      "result": "confirmed_complex_group_type_error",
+      "disposition": "Apply acyclicity to the inverse-limit complex K^bullet rather than a fixed-degree abelian group.",
+      "operations": [
+        {
+          "source_start_line": 7878,
+          "source_end_line": 7878,
+          "old_text": "$\\lim_{\\gamma < \\beta} K^n_\\gamma$",
+          "replacement_text": "$\\lim_{\\gamma < \\beta} K^\\bullet_\\gamma$"
+        }
+      ]
+    },
+    {
+      "producer_id": "HOMOLOGY-046",
+      "stable_id": "MC-STK-ERR-0798",
+      "class": "misnamed_sequence",
+      "locus": "homology.tex:7648",
+      "result": "confirmed_construction_name_error",
+      "disposition": "Call the displayed result a sequence of limits, not a system of limits.",
+      "operations": [
+        {
+          "source_start_line": 7648,
+          "source_end_line": 7648,
+          "old_text": "system of limits",
+          "replacement_text": "sequence of limits"
+        }
+      ]
+    },
+    {
+      "producer_id": "HOMOLOGY-047",
+      "stable_id": "MC-STK-ERR-0799",
+      "class": "omitted_auxiliary_verb",
+      "locus": "homology.tex:5427-5430",
+      "result": "confirmed_grammar_error",
+      "disposition": "Restore the auxiliary verb in both passive constructions.",
+      "operations": [
+        {
+          "source_start_line": 5427,
+          "source_end_line": 5427,
+          "old_text": "Let $\\alpha' : A' \\to T^{-1}A'$ induced",
+          "replacement_text": "Let $\\alpha' : A' \\to T^{-1}A'$ be induced"
+        },
+        {
+          "source_start_line": 5430,
+          "source_end_line": 5430,
+          "old_text": "let $g' : A' \\to TSE'$ induced",
+          "replacement_text": "let $g' : A' \\to TSE'$ be induced"
+        }
+      ]
+    },
+    {
+      "producer_id": "HOMOLOGY-048",
+      "stable_id": "MC-STK-ERR-0800",
+      "class": "missing_relative_preposition",
+      "locus": "homology.tex:5680;5977",
+      "result": "confirmed_grammar_error",
+      "disposition": "Insert the relative phrase 'in which' in both repeated category hypotheses.",
+      "operations": [
+        {
+          "source_start_line": 5680,
+          "source_end_line": 5680,
+          "old_text": "which has countable direct sums and countable direct sums are exact",
+          "replacement_text": "which has countable direct sums and in which countable direct sums are exact"
+        },
+        {
+          "source_start_line": 5977,
+          "source_end_line": 5977,
+          "old_text": "which has countable direct sums and countable direct sums are exact",
+          "replacement_text": "which has countable direct sums and in which countable direct sums are exact"
+        }
+      ]
+    },
+    {
+      "producer_id": "HOMOLOGY-049",
+      "stable_id": "MC-STK-ERR-0801",
+      "class": "omitted_complementizer",
+      "locus": "homology.tex:5781",
+      "result": "confirmed_grammar_error",
+      "disposition": "Insert the complementizer required before the finite clause.",
+      "operations": [
+        {
+          "source_start_line": 5781,
+          "source_end_line": 5781,
+          "old_text": "we have $E_r = (E_r^p)$ is an object",
+          "replacement_text": "we have that $E_r = (E_r^p)$ is an object"
+        }
+      ]
+    },
+    {
+      "producer_id": "HOMOLOGY-050",
+      "stable_id": "MC-STK-ERR-0802",
+      "class": "subject_verb_disagreement",
+      "locus": "homology.tex:5786;6088",
+      "result": "confirmed_grammar_error",
+      "disposition": "Use the singular finite verb with the singular subject in both repeated loci.",
+      "operations": [
+        {
+          "source_start_line": 5786,
+          "source_end_line": 5786,
+          "old_text": "the description of the graded pieces hold",
+          "replacement_text": "the description of the graded pieces holds"
+        },
+        {
+          "source_start_line": 6088,
+          "source_end_line": 6088,
+          "old_text": "the description of the graded pieces hold",
+          "replacement_text": "the description of the graded pieces holds"
+        }
+      ]
+    },
+    {
+      "producer_id": "HOMOLOGY-051",
+      "stable_id": "MC-STK-ERR-0803",
+      "class": "wrong_preposition",
+      "locus": "homology.tex:5793;6102",
+      "result": "confirmed_grammar_error",
+      "disposition": "Use the idiom 'in a straightforward manner' at both repeated loci.",
+      "operations": [
+        {
+          "source_start_line": 5793,
+          "source_end_line": 5793,
+          "old_text": "translates into a straightforward manner into",
+          "replacement_text": "translates in a straightforward manner into"
+        },
+        {
+          "source_start_line": 6102,
+          "source_end_line": 6102,
+          "old_text": "translates into a straightforward manner into",
+          "replacement_text": "translates in a straightforward manner into"
+        }
+      ]
+    },
+    {
+      "producer_id": "HOMOLOGY-052",
+      "stable_id": "MC-STK-ERR-0804",
+      "class": "sentence_fragment",
+      "locus": "homology.tex:6293-6294",
+      "result": "confirmed_sentence_boundary_error",
+      "disposition": "Join the introductory phrase to the following let-clause with a comma and lowercase continuation.",
+      "operations": [
+        {
+          "source_start_line": 6293,
+          "source_end_line": 6293,
+          "old_text": "In the situation of Definition \\ref{definition-bounded-ss}.",
+          "replacement_text": "In the situation of Definition \\ref{definition-bounded-ss},"
+        },
+        {
+          "source_start_line": 6294,
+          "source_end_line": 6294,
+          "old_text": "Let $Z_r^{p, q}, B_r^{p, q}",
+          "replacement_text": "let $Z_r^{p, q}, B_r^{p, q}"
+        }
+      ]
+    },
+    {
+      "producer_id": "HOMOLOGY-053",
+      "stable_id": "MC-STK-ERR-0805",
+      "class": "subject_verb_disagreement",
+      "locus": "homology.tex:6468;6470",
+      "result": "confirmed_grammar_error",
+      "disposition": "Use the singular existential verb for each single integer p_0(n) and p_1(n).",
+      "operations": [
+        {
+          "source_start_line": 6468,
+          "source_end_line": 6468,
+          "old_text": "there exist $p_0(n)$",
+          "replacement_text": "there exists $p_0(n)$"
+        },
+        {
+          "source_start_line": 6470,
+          "source_end_line": 6470,
+          "old_text": "there exist $p_1(n)$",
+          "replacement_text": "there exists $p_1(n)$"
+        }
+      ]
+    },
+    {
+      "producer_id": "HOMOLOGY-054",
+      "stable_id": "MC-STK-ERR-0806",
+      "class": "missing_subject_and_wrong_adjective",
+      "locus": "homology.tex:6828",
+      "result": "confirmed_grammar_error",
+      "disposition": "Restore the subject 'we' and use the adjective 'analogous'.",
+      "operations": [
+        {
+          "source_start_line": 6828,
+          "source_end_line": 6828,
+          "old_text": "for which do not (yet) have the analogues results for general abelian",
+          "replacement_text": "for which we do not (yet) have the analogous results for general abelian"
+        }
+      ]
+    },
+    {
+      "producer_id": "HOMOLOGY-055",
+      "stable_id": "MC-STK-ERR-0807",
+      "class": "number_disagreement",
+      "locus": "homology.tex:6924",
+      "result": "confirmed_grammar_error",
+      "disposition": "Use the plural noun for the two images of the two cocycles.",
+      "operations": [
+        {
+          "source_start_line": 6924,
+          "source_end_line": 6924,
+          "old_text": "their image in $H^0(M^\\bullet)$ are the same",
+          "replacement_text": "their images in $H^0(M^\\bullet)$ are the same"
+        }
+      ]
+    },
+    {
+      "producer_id": "HOMOLOGY-056",
+      "stable_id": "MC-STK-ERR-0808",
+      "class": "wrong_article",
+      "locus": "homology.tex:7222-7240",
+      "result": "confirmed_article_error",
+      "disposition": "Use the article 'a' before surjective and projective at all three loci.",
+      "operations": [
+        {
+          "source_start_line": 7222,
+          "source_end_line": 7222,
+          "old_text": "an surjective morphism",
+          "replacement_text": "a surjective morphism"
+        },
+        {
+          "source_start_line": 7223,
+          "source_end_line": 7223,
+          "old_text": "an projective object",
+          "replacement_text": "a projective object"
+        },
+        {
+          "source_start_line": 7240,
+          "source_end_line": 7240,
+          "old_text": "an projective object",
+          "replacement_text": "a projective object"
+        }
+      ]
+    },
+    {
+      "producer_id": "HOMOLOGY-057",
+      "stable_id": "MC-STK-ERR-0809",
+      "class": "capitalization",
+      "locus": "homology.tex:7356",
+      "result": "confirmed_capitalization_error",
+      "disposition": "Lowercase the preposition in the sentence-internal phrase 'as in Lemma'.",
+      "operations": [
+        {
+          "source_start_line": 7356,
+          "source_end_line": 7356,
+          "old_text": "In Lemma",
+          "replacement_text": "in Lemma"
+        }
+      ]
+    },
+    {
+      "producer_id": "HOMOLOGY-058",
+      "stable_id": "MC-STK-ERR-0810",
+      "class": "missing_article",
+      "locus": "homology.tex:7547",
+      "result": "confirmed_article_error",
+      "disposition": "Insert the indefinite article before the singular count noun 'natural transformation'.",
+      "operations": [
+        {
+          "source_start_line": 7547,
+          "source_end_line": 7547,
+          "old_text": "defines natural transformation",
+          "replacement_text": "defines a natural transformation"
+        }
+      ]
+    },
+    {
+      "producer_id": "HOMOLOGY-059",
+      "stable_id": "MC-STK-ERR-0811",
+      "class": "sentence_fragment",
+      "locus": "homology.tex:7832",
+      "result": "confirmed_sentence_fragment",
+      "disposition": "Complete the announcement with the finite verb phrase 'we have'.",
+      "operations": [
+        {
+          "source_start_line": 7832,
+          "source_end_line": 7832,
+          "old_text": "Thus an exact sequence",
+          "replacement_text": "Thus we have an exact sequence"
+        }
+      ]
+    }
+  ],
+  "rejected": []
+}
