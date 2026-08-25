@@ -845,7 +845,7 @@ $W_{a, i} \subset X_i$ such that $U_a = \bigcup_{i \in I_a} f_i(W_{a, i})$.
 Then $\text{size}(W_{a, i}) \leq \text{size}(X)$ by
 Lemma \ref{lemma-bound-finite-type}.
 We conclude that
-$\text{size}(\coprod_a \coprod_{i \in I_a} W_{i, a}) \leq \text{size}(X)$
+$\text{size}(\coprod_a \coprod_{i \in I_a} W_{a, i}) \leq \text{size}(X)$
 by Lemma \ref{lemma-bound-size}.
 \end{proof}
 
@@ -990,7 +990,7 @@ For every element $T \in \mathcal{S}_\tau$, set
 $\beta(T)$ to equal the least ordinal $\beta$ such that
 there exists a $\mathcal{U} \in \text{Cov}(\mathcal{C})_\beta$
 such that $T = \text{Supp}(\mathcal{U})$. Finally, set
-$\beta_0 = \sup_{T \in S_\tau} \beta(T)$.
+$\beta_0 = \sup_{T \in \mathcal{S}_\tau} \beta(T)$.
 At this point it follows that every $\mathcal{U} \in \text{Cov}(\mathcal{C})$
 is combinatorially equivalent to some element
 of $\text{Cov}(\mathcal{C})_{\beta_0}$.
@@ -1025,7 +1025,7 @@ then
 $\{W_{ij} \to U\}_{i \in I, j\in J_i}
 \in \text{Cov}(\mathcal{C})_{\kappa, \beta}$.
 \item If $\{U_i \to U\}_{i\in I}
-\in \text{Cov}(\mathcal{C})_{\kappa, \alpha}$
+\in \text{Cov}(\mathcal{C})_{\kappa, f(\alpha)}$
 and $W \to U$ is a morphism of $\mathcal{C}$, then
 $\{U_i \times_U W \to W \}_{i\in I}
 \in \text{Cov}(\mathcal{C})_{\kappa, \beta}$.
@@ -1085,20 +1085,23 @@ $\mathcal{U} = \{U_i \to U\}_{i \in I}
 \in \text{Cov}(\mathcal{C})_{\kappa, \alpha}$
 we have $\beta(\mathcal{U}) < \beta_2$ and hence
 any base change of $\mathcal{U}$ is by construction of
-$f$ contained in $\text{Cov}(\mathcal{C})_{\kappa, f(\beta + 1)}$
+$f$ contained in $\text{Cov}(\mathcal{C})_{\kappa, f(\beta(\mathcal{U}) + 1)}$
 and hence in $\text{Cov}(\mathcal{C})_{\kappa, \alpha}$.
 
 \medskip\noindent
 Finally, for the second condition, suppose that $\{U_i \to U\}_{i\in I}
-\in \text{Cov}(\mathcal{C})_{\kappa, f(\alpha)}$
+\in \text{Cov}(\mathcal{C})_{\kappa, \alpha}$
 and for each $i$ we have
 $\mathcal{W}_i = \{W_{ij} \to U_i\}_{j\in J_i}
-\in \text{Cov}(\mathcal{C})_{\kappa, f(\alpha)}$.
+\in \text{Cov}(\mathcal{C})_{\kappa, \alpha}$.
 Consider the function
 $I \to \beta_2$, $i \mapsto \beta(\mathcal{W}_i)$. Since the cofinality
 of $\beta_2$ is $> \kappa \geq |I|$ the image of this function cannot be a
-cofinal subset. Hence there exists a $\beta < \beta_1$ such
+cofinal subset. Hence there exists a $\beta < \beta_2$ such
 that $\mathcal{W}_i \in \text{Cov}_{\kappa, f(\beta)}$ for all $i \in I$.
+After increasing $\beta$ to at least $\beta(\mathcal{U})$ if necessary,
+which still leaves $\beta < \beta_2$, we may also assume that
+$\mathcal{U} \in \text{Cov}_{\kappa, f(\beta)}$.
 It follows that the covering $\{W_{ij} \to U\}_{i\in I, j \in J_i}$
 is an element of $\text{Cov}(\mathcal{C})_{\kappa, f(\beta + 1)}
 \subset \text{Cov}(\mathcal{C})_{\kappa, \alpha}$ as desired.

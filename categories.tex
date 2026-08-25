@@ -7004,7 +7004,7 @@ Another way to think about the second condition is the following.
 Suppose that $g : W \to V$ and $f : V \to U$ are morphisms in $\mathcal{C}$.
 Let $x \in \Ob(\mathcal{S}_U)$. By the first condition we can lift
 $f$ to $ \phi : y \to x$ and then we can lift $g$ to $\psi : z \to y$.
-Instead of doing this two step process we can directly lift $g \circ f$ to
+Instead of doing this two step process we can directly lift $f \circ g$ to
 $\gamma : z' \to x$. This gives the solid arrows in the diagram
 \begin{equation}
 \label{equation-fibred-groupoids}
@@ -7045,7 +7045,7 @@ $\mathcal{S}$ is a fibred category over $\mathcal{C}$.
 Moreover, in this case every morphism of $\mathcal{S}$ is
 strongly cartesian. In addition, given $f^\ast x \to x$
 lying over $f$ for all $f: V \to U = p(x)$ the data
-$(U \mapsto \mathcal{S}_U, f \mapsto f^*, \alpha_{f, g}, \alpha_U)$
+$(U \mapsto \mathcal{S}_U, f \mapsto f^*, \alpha_{g, f}, \alpha_U)$
 constructed in Lemma \ref{lemma-fibred}
 defines a pseudo functor from $\mathcal{C}^{opp}$ in to
 the $(2, 1)$-category of groupoids.
@@ -7424,7 +7424,7 @@ so is the inertia fibred category $\mathcal{I}_\mathcal{S} \to \mathcal{C}$.
 Clear from the construction in
 Lemma \ref{lemma-inertia-fibred-category}
 or by using (from the same lemma) that
-$I_\mathcal{S} \to \mathcal{S}
+$\mathcal{I}_\mathcal{S} \to \mathcal{S}
 \times_{\Delta, \mathcal{S} \times_\mathcal{C} \mathcal{S}, \Delta}\mathcal{S}$
 is an equivalence and appealing to
 Lemma \ref{lemma-2-product-fibred-categories}.
@@ -7620,7 +7620,7 @@ $$
 (p(x), b^{-1}(b(x)), g(b(x)), \alpha_x \circ F(\beta_x))
 $$
 is a functorial isomorphism which gives our $2$-morphism
-$d \to b \circ c$. Finally, if the diagram commutes then
+$d \to c \circ b$. Finally, if the diagram commutes then
 $\alpha_x$ is the identity for all $x$ and we see that this
 $2$-morphism is a $2$-morphism in the $2$-category of categories
 over $\mathcal{Y}$.
@@ -8840,16 +8840,16 @@ is representable.
 Suppose the diagonal is representable, and let $U, G$ be given.
 Consider any $V \in \Ob(\mathcal{C})$ and any
 $G' : \mathcal{C}/V \to \mathcal{S}$.
-Note that $\mathcal{C}/U \times \mathcal{C}/V = \mathcal{C}/U \times V$
+Note that $\mathcal{C}/U \times \mathcal{C}/V = \mathcal{C}/(U \times V)$
 is representable. Hence the fibre product
 $$
 \xymatrix{
-(\mathcal{C}/U \times V)
+(\mathcal{C}/(U \times V))
 \times_{(\mathcal{S} \times \mathcal{S})}
 \mathcal{S}
 \ar[r] \ar[d] &
 \mathcal{S} \ar[d] \\
-\mathcal{C}/U \times V \ar[r]^{(G, G')} &
+\mathcal{C}/(U \times V) \ar[r]^{(G, G')} &
 \mathcal{S} \times \mathcal{S}
 }
 $$
@@ -9145,7 +9145,7 @@ a \circ b =
 \circ
 1 \circ (\text{id}_\mathbf{1} \otimes b) \circ 1^{-1}
 =
-1 \circ (a \otimes b) \circ \circ 1^{-1}
+1 \circ (a \otimes b) \circ 1^{-1}
 $$
 and $b \circ a$ evaluates to the same expression. Thus (2) holds.
 To see (4) suppose that $(\mathbf{1}', 1')$ is a second unit.
@@ -9479,7 +9479,7 @@ commutes.
 \label{definition-symmetric-monoidal-category}
 A quadruple $(\mathcal{C}, \otimes, \phi, \psi)$ where
 $\mathcal{C}$ is a category,
-$\otimes : \mathcal{C} \otimes \mathcal{C} \to \mathcal{C}$ is a functor,
+$\otimes : \mathcal{C} \times \mathcal{C} \to \mathcal{C}$ is a functor,
 $\phi$ is an associativity constraint, and
 $\psi$ is a commutativity constraint compatible with $\phi$
 is called a {\it symmetric monoidal category} if there exists
