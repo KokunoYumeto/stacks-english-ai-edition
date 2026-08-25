@@ -3,6 +3,8 @@
 
 from __future__ import annotations
 
+import ast
+import hashlib
 import json
 import re
 import subprocess
@@ -70,6 +72,17 @@ def read_jsonl(path: Path) -> list[dict]:
     return rows
 
 
+def literal_assignment(path: Path, name: str) -> object:
+    tree = ast.parse(path.read_text(encoding="utf-8"), filename=str(path))
+    for node in tree.body:
+        if not isinstance(node, (ast.Assign, ast.AnnAssign)):
+            continue
+        targets = node.targets if isinstance(node, ast.Assign) else [node.target]
+        if any(isinstance(target, ast.Name) and target.id == name for target in targets):
+            return ast.literal_eval(node.value)
+    raise ValueError(f"missing literal assignment {name} in {path.relative_to(ROOT)}")
+
+
 def validate_links(errors: list[str]) -> None:
     link_re = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
     for relative in PUBLIC_MARKDOWN:
@@ -110,11 +123,20 @@ def main() -> int:
 
     registered_ids: list[str] = []
     v2_operations = 0
+    v1_replacements = 0
+    tag_additions = 0
     for entry in entries:
         raw_ids = entry.get("stable_ids", "")
         ids = raw_ids if isinstance(raw_ids, list) else raw_ids.split()
         registered_ids.extend(ids)
         directory = candidate_dir(entry["id"])
+        manifest = directory / "candidate.manifest.json"
+        manifest_hash = hashlib.sha256(manifest.read_bytes()).hexdigest().upper()
+        if manifest_hash != entry.get("manifest_sha256", "").upper():
+            errors.append(f"candidate manifest hash mismatch for {entry['id']}")
+        review = ROOT / "ai-integrated" / entry["review_receipt"]
+        if not review.is_file():
+            errors.append(f"missing independent replay receipt for {entry['id']}")
         source_map = directory / "source-map.jsonl"
         if not source_map.is_file():
             errors.append(f"missing source map: {source_map.relative_to(ROOT)}")
@@ -140,6 +162,31 @@ def main() -> int:
                         f"missing composed replacement {operation['operation_id']} "
                         f"in {row['source']}"
                     )
+
+    for round_number in (1, 2, 3):
+        overlay_id = f"stacks-errata-a04446e-r{round_number}"
+        directory = candidate_dir(overlay_id)
+        replacements = literal_assignment(directory / "verify.py", "REPLACEMENTS")
+        if not isinstance(replacements, dict):
+            errors.append(f"REPLACEMENTS is not a mapping for R{round_number}")
+            continue
+        for source_name, rows in replacements.items():
+            source_text = (ROOT / source_name).read_text(encoding="utf-8")
+            for row in rows:
+                replacement_text = row[1]
+                v1_replacements += 1
+                if replacement_text not in source_text:
+                    errors.append(
+                        f"missing composed R{round_number} replacement in {source_name}: "
+                        f"{replacement_text!r}"
+                    )
+
+    new_tags = literal_assignment(candidate_dir("stacks-errata-a04446e-r1") / "verify.py", "NEW_TAGS")
+    tag_lines = set((ROOT / "tags/tags").read_text(encoding="utf-8").splitlines())
+    for line in new_tags:
+        tag_additions += 1
+        if line not in tag_lines:
+            errors.append(f"missing composed R1 tag record: {line}")
 
     if len(registered_ids) != 385:
         errors.append(f"expected 385 registered stable IDs, found {len(registered_ids)}")
@@ -183,6 +230,8 @@ def main() -> int:
     print(f"- registered overlays: {len(entries)}")
     print(f"- registered stable IDs: {len(registered_ids)}")
     print(f"- exact v2 operations checked: {v2_operations}")
+    print(f"- exact R1-R3 replacements checked: {v1_replacements}")
+    print(f"- R1 tag additions checked: {tag_additions}")
     print(f"- public Markdown documents checked: {len(PUBLIC_MARKDOWN)}")
     return 0
 
