@@ -1,0 +1,78 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-release-receipt/v1",
+  "status": "PRE_PUBLICATION_GATES_PASSED",
+  "updated_utc": "2026-08-25T13:20:00Z",
+  "release": {
+    "repository": "KokunoYumeto/unofficial-ai-integrated-stacks-project",
+    "registry_cutoff": "39d8146ca0af49b1d9eaf0742559f64d712bfd8e",
+    "admitted_errata": "R1-R17",
+    "working_branch": "codex/unify-ai-integrated-stacks",
+    "public_default_branch": null,
+    "public_head": null,
+    "tag": "pre-unification-snapshots-2026-08-25"
+  },
+  "source_gate": {
+    "status": "PASS",
+    "registered_overlays": 17,
+    "registered_stable_ids": 444,
+    "v2_operations": 471,
+    "r1_r3_replacements": 69,
+    "r1_tag_additions": 9,
+    "active_permanent_tags": 21819,
+    "unassigned_live_labels": 0,
+    "manifest_checks": "R4-R17 PASS",
+    "independent_replays": "R1-R17 PASS"
+  },
+  "ega_gate": {
+    "status": "PASS",
+    "operational_statement_edges": 1059,
+    "labels": 21446,
+    "official_tag_joins": 21437,
+    "candidates": 2749
+  },
+  "build_gate": {
+    "status": "PASS",
+    "source_commit": "a8305f6234c805820f232acf892cca2a340d7c47",
+    "source_tree": "527d6f36fcd7a799585bab2730c1b1ef3f11c356",
+    "receipt": "validation/unified-fixed-point-2026-08-25-r17.json",
+    "receipt_sha256": "B07C093D9AE17A87568E62A8776C2592D39D48B54D2E2EE479C18143C89CA705",
+    "chapters": 20,
+    "pages": 2139,
+    "pdf_bytes": 22259512,
+    "global_fixed_point_sweep": 4,
+    "pdfinfo_readable": 20
+  },
+  "preservation": {
+    "status": "VERIFIED_LOCAL",
+    "source_bundle": {
+      "filename": "KokunoYumeto-stacks-project-2026-08-25.bundle",
+      "bytes": 241336664,
+      "sha256": "0DFA9F785757BE07D755DB315947A90ECB18DA4152666CAFEAE4ADDDB47FF74D",
+      "refs": 7,
+      "complete_history": true
+    },
+    "target_bundle": {
+      "filename": "KokunoYumeto-unofficial-ai-integrated-stacks-project-pre-unification-final-2026-08-25.bundle",
+      "bytes": 14610301,
+      "sha256": "B048584F27D4A9482FC9040D4946024F3584FCF71C66DA245D1B879AF912E9A3",
+      "main": "7e765fd094f390ff724e839b853ce8893e636fff",
+      "registry": "39d8146ca0af49b1d9eaf0742559f64d712bfd8e",
+      "complete_history": true
+    },
+    "snapshot_readme_sha256": "799FEC13F396CBB9F47AF738C5445F102012A3FFF0A73F02ACBE82C99A236054",
+    "sha256sums_sha256": "3A6B548D426A5F38B6B7D876A29567F4E042B3DA610322BEE882A81AE2D907AE",
+    "public_release_assets": null
+  },
+  "source_repository": {
+    "repository": "KokunoYumeto/stacks-project",
+    "archive_state": "PENDING_PUBLIC_READBACK",
+    "heads_verified_unchanged": null
+  },
+  "public_readback": {
+    "status": "PENDING",
+    "checked_utc": null,
+    "default_branch": null,
+    "head": null,
+    "release_assets_verified": null
+  }
+}

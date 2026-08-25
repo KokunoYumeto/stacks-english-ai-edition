@@ -18,7 +18,8 @@ machine-readable validation evidence.
 [Browse the source](chapters.tex) ·
 [Errata registry](ai-integrated/registry/overlays.json) ·
 [Validation](VALIDATION.md) ·
-[Current build receipt](validation/unified-build-2026-08-25.json) ·
+[Current build receipt](validation/unified-fixed-point-2026-08-25-r17.json) ·
+[Release receipt](validation/unification-release-2026-08-25.json) ·
 [Provenance and frozen histories](PROVENANCE.md) ·
 [License](COPYING)
 

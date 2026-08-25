@@ -34,10 +34,13 @@ or submodules in either input repository.
 | Original repository | Bundle bytes | SHA-256 |
 | --- | ---: | --- |
 | `KokunoYumeto/stacks-project` | 241,336,664 | `0DFA9F785757BE07D755DB315947A90ECB18DA4152666CAFEAE4ADDDB47FF74D` |
-| `KokunoYumeto/unofficial-ai-integrated-stacks-project` | 13,608,930 | `9D91C3897383D627B564DF47AAD4832CE62F20B72A0C8D9222179AB89520235C` |
+| `KokunoYumeto/unofficial-ai-integrated-stacks-project` | 14,610,301 | `B048584F27D4A9482FC9040D4946024F3584FCF71C66DA245D1B879AF912E9A3` |
 
 The preservation release is
 [`pre-unification-snapshots-2026-08-25`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/pre-unification-snapshots-2026-08-25).
+The exact validation, preservation, publication, and public-readback identities
+are recorded in the machine-readable
+[`release receipt`](validation/unification-release-2026-08-25.json).
 
 ## Unification method
 

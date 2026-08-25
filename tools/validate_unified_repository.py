@@ -19,6 +19,7 @@ SOURCE_UNION = "ad58625f60e6816905ff217d21d91b07b2722fcf"
 EGA_EXPORT = "91df7f1c96bd4973264c29b0e121253a05d1d361"
 REGISTRY_HEAD = "39d8146ca0af49b1d9eaf0742559f64d712bfd8e"
 ERRATA_R1_R17 = "b727797117cba5938dee1f9345ca8fa978d2d2e7"
+BUILD_SOURCE = "a8305f6234c805820f232acf892cca2a340d7c47"
 
 PUBLIC_MARKDOWN = (
     "README.md",
@@ -42,6 +43,8 @@ REQUIRED_PATHS = (
     "ega/smap.csv",
     "ai-integrated/registry/overlays.json",
     "ai-integrated/upstream/stacks.lock.json",
+    "validation/unified-fixed-point-2026-08-25-r17.json",
+    "validation/unification-release-2026-08-25.json",
 )
 
 
@@ -110,6 +113,7 @@ def main() -> int:
         (EGA_EXPORT, "EGA export"),
         (REGISTRY_HEAD, "complete registry history"),
         (ERRATA_R1_R17, "cumulative admitted errata R1-R17"),
+        (BUILD_SOURCE, "fixed-point build source"),
     ):
         result = git("merge-base", "--is-ancestor", commit, "HEAD")
         if result.returncode != 0:
@@ -227,11 +231,28 @@ def main() -> int:
         "ai-integrated/registry/overlays.json",
         "ai-integrated/registry/releases.json",
         "ai-integrated/upstream/stacks.lock.json",
+        "validation/unified-fixed-point-2026-08-25-r17.json",
+        "validation/unification-release-2026-08-25.json",
     ):
         try:
             json.loads((ROOT / relative).read_text(encoding="utf-8"))
         except (OSError, json.JSONDecodeError) as exc:
             errors.append(f"invalid JSON {relative}: {exc}")
+
+    build_receipt = json.loads(
+        (ROOT / "validation/unified-fixed-point-2026-08-25-r17.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    artifacts = build_receipt.get("artifacts", [])
+    if build_receipt.get("status") != "PASS":
+        errors.append("current fixed-point build receipt is not PASS")
+    if build_receipt.get("source", {}).get("commit") != BUILD_SOURCE:
+        errors.append("current fixed-point build receipt has the wrong source commit")
+    if len(artifacts) != 20 or sum(item.get("pages", 0) for item in artifacts) != 2139:
+        errors.append("current fixed-point build inventory is not 20 PDFs / 2,139 pages")
+    if build_receipt.get("build", {}).get("global_fixed_point_sweep") != 4:
+        errors.append("current build receipt does not record fixed point sweep four")
 
     marker_paths = [ROOT / item for item in PUBLIC_MARKDOWN]
     marker_paths.extend(ROOT.glob("*.tex"))

@@ -29,9 +29,12 @@ The same gate runs in
 [`validate.yml`](.github/workflows/validate.yml) with full Git history.
 
 The current unified-tree build result is recorded in
-[`validation/unified-build-2026-08-25.json`](validation/unified-build-2026-08-25.json):
-19 directly affected or headline chapters compiled successfully and reached a
-global PDF fixed point on sweep four.
+[`validation/unified-fixed-point-2026-08-25-r17.json`](validation/unified-fixed-point-2026-08-25-r17.json):
+20 directly affected or headline chapters (2,139 pages) compiled successfully,
+were readable by `pdfinfo`, and reached a global PDF fixed point on sweep four.
+The build is bound to source commit
+`a8305f6234c805820f232acf892cca2a340d7c47`, tree
+`527d6f36fcd7a799585bab2730c1b1ef3f11c356`.
 
 ## Source-specific deterministic evidence
 
