@@ -47280,7 +47280,7 @@ Let $k'/k$ be a finite purely inseparable field extension.
 We can get $k'$ by adjoining finitely many variables to $k$ and
 imposing finitely many polynomial relations. Hence we see that
 there exists an $i$ and a finite purely inseparable field extension
-$k_i'/k_i$ such that $k_i = k \otimes_{k_i} k_i'$.
+$k_i'/k_i$ such that $k' = k \otimes_{k_i} k_i'$.
 Thus $A \otimes_k k' = A \otimes_{k_i} k_i'$ and the lemma is clear.
 \end{proof}
 
@@ -47410,7 +47410,7 @@ In this case we have the following:
 \begin{enumerate}
 \item There exists a finite type $\mathbf{Z}$-algebra $R_0$ and
 a finite type ring map $R_0 \to S_0$ and a finite $S_0$-module $M_0$
-such that $M_0$ is flat over $R_0$, together with a ring maps
+such that $M_0$ is flat over $R_0$, together with ring maps
 $R_0 \to R$ and $S_0 \to S$ and an $S_0$-module map $M_0 \to M$
 such that $S \cong R \otimes_{R_0} S_0$ and $M = S \otimes_{S_0} M_0$.
 \item If $R = \colim_{\lambda \in \Lambda} R_\lambda$ is written
@@ -47460,9 +47460,9 @@ the module $M_\lambda$ is flat over
 $R_\lambda$ at the prime $\mathfrak q_{\lambda}$.
 
 \medskip\noindent
-By Theorem \ref{theorem-openness-flatness} we get an open subset
-$U_\lambda \subset \Spec(S_\lambda)$ such that $M_\lambda$
-flat over $R_\lambda$ at all the primes of $U_\lambda$.
+By Theorem \ref{theorem-openness-flatness}, the set
+$U_\lambda \subset \Spec(S_\lambda)$ of primes at which $M_\lambda$
+is flat over $R_\lambda$ is open.
 Denote $V_\lambda \subset \Spec(S)$ the inverse image of
 $U_\lambda$ under the map $\Spec(S) \to \Spec(S_\lambda)$.
 The argument above shows that for every $\mathfrak q \in \Spec(S)$
@@ -47476,7 +47476,7 @@ $V_{\lambda_0} = \Spec(S)$.
 The complement $\Spec(S_{\lambda_0}) \setminus U_{\lambda_0}$
 is $V(I)$ for some ideal $I \subset S_{\lambda_0}$. As
 $V_{\lambda_0} = \Spec(S)$ we see that $IS = S$.
-Choose $f_1, \ldots, f_r \in I$ and $s_1, \ldots, s_n \in S$ such
+Choose $f_1, \ldots, f_r \in I$ and $s_1, \ldots, s_r \in S$ such
 that $\sum f_i s_i = 1$. Since $\colim S_\lambda = S$, after
 increasing $\lambda_0$ we may assume there exist
 $s_{i, \lambda_0} \in S_{\lambda_0}$ such that
@@ -47554,7 +47554,7 @@ and $B = A \otimes_{A_0} B_0$.
 \end{lemma}
 
 \begin{proof}
-We first prove the lemma with $R$ replaced $\mathbf{Z}$.
+We first prove the lemma with $R$ replaced by $\mathbf{Z}$.
 By Lemma \ref{lemma-flat-finite-presentation-limit-flat}
 there exists a diagram
 $$
@@ -47918,10 +47918,10 @@ $$
 By construction there is a prime ideal $\mathfrak q' \subset S'$
 lying over $\mathfrak p$ and corresponding to $\mathfrak q$ (via
 $S_g \to S'_g$). Also by construction the ring map $R \to S'$ is
-quasi-finite at $\mathfrak q$ as the local ring
+quasi-finite at $\mathfrak q'$ as the local ring
 $$
 S'_{\mathfrak q'}/\mathfrak pS'_{\mathfrak q'} =
-S_{\mathfrak q}/(f_1, \ldots, f_d) + \mathfrak pS_{\mathfrak q} =
+S_{\mathfrak q}/\big((f_1, \ldots, f_d) + \mathfrak pS_{\mathfrak q}\big) =
 \overline{S}_{\mathfrak q}/(\overline{f}_1, \ldots, \overline{f}_d)
 $$
 has dimension zero, see Lemma \ref{lemma-isolated-point-fibre}.
