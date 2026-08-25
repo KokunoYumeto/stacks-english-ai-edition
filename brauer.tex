@@ -60,8 +60,8 @@ basis and exists by Zorn's lemma.
 Let $A$ be a $k$-algebra.
 We say an $A$-module $M$ is {\it simple} if it is nonzero and
 the only $A$-submodules are $0$ and $M$.
-We say $A$ is {\it simple} if the only two-sided ideals of $A$ are
-$0$ and $A$.
+We say $A$ is {\it simple} if it is nonzero and the only two-sided
+ideals of $A$ are $0$ and $A$.
 \end{definition}
 
 \begin{definition}
@@ -272,8 +272,9 @@ two-sided ideal $I$ of $R$.
 
 \begin{proof}
 Part (1) proves itself. If $J \subset R_n$ is a two-sided ideal, then
-$J = \bigoplus e_{ii}Je_{jj}$ and all of the summands $e_{ii}Je_{jj}$ are
-equal to each other and are a two-sided ideal $I$ of $R$. This proves (2).
+$J = \bigoplus e_{ii}Je_{jj}$, and the sets of $(i,j)$-entries occurring
+in $e_{ii}Je_{jj}$ are all equal to a two-sided ideal $I$ of $R$.
+This proves (2).
 Part (3) is clear.
 \end{proof}
 
@@ -292,7 +293,7 @@ $\text{End}_A(M) = K^{op}$.
 is a skew field finite over $k$ acting on the left on $M$, we have
 $A = \text{End}_L(M)$, and the centers of $A$ and $L$ agree.
 Also $[A : k] [L : k] = \dim_k(M)^2$.
-\item For a finite $A$-module $N$ the algebra $B = \text{End}_A(N)$ is a
+\item For a nonzero finite $A$-module $N$ the algebra $B = \text{End}_A(N)$ is a
 matrix algebra over the skew field $L$ of (5). Moreover $\text{End}_B(N) = A$.
 \end{enumerate}
 \end{lemma}
@@ -509,9 +510,9 @@ that $x$ is a solution to our problem.
 
 \begin{lemma}
 \label{lemma-automorphism-inner}
-Let $A$ be a finite central simple $k$-algebra. Any automorphism of $A$ is
-inner. In particular, any automorphism of $\text{Mat}(n \times n, k)$
-is inner.
+Let $A$ be a finite central simple $k$-algebra. Any $k$-algebra
+automorphism of $A$ is inner. In particular, any $k$-algebra automorphism
+of $\text{Mat}(n \times n, k)$ is inner.
 \end{lemma}
 
 \begin{proof}
@@ -558,7 +559,7 @@ $[C : k] = n^2 [K : k]$, and $[A : k] [L : k] = \dim_k(M)^2$ (by
 the lemma again). We conclude that (2) holds.
 
 \medskip\noindent
-Part (3) follows because of (2) applied to $C \subset A$ shows
+Part (3) follows because (2) applied to $C \subset A$ shows
 that $[B : k] = [C' : k]$ where $C'$ is the centralizer of $C$ in $A$
 (and the obvious fact that $B \subset C')$.
 \end{proof}
@@ -567,7 +568,8 @@ that $[B : k] = [C' : k]$ where $C'$ is the centralizer of $C$ in $A$
 \label{lemma-when-tensor-is-equal}
 Let $A$ be a finite central simple algebra over $k$, and let
 $B$ be a simple subalgebra of $A$. If $B$ is a central
-$k$-algebra, then $A = B \otimes_k C$ where $C$ is the (central simple)
+$k$-algebra, then the multiplication map $B \otimes_k C \to A$ is an isomorphism,
+where $C$ is the (central simple)
 centralizer of $B$ in $A$.
 \end{lemma}
 
@@ -725,7 +727,7 @@ subfield of $K'$ separable over $k'$. Thus it suffices to prove, if
 $k \not = K$, that we can find an element $x \in K$, $x \not \in k$
 which is separable over $k$. This statement is clear in characteristic
 zero. Hence we may assume that $k$ has characteristic $p > 0$. If the
-ground field $k$ is finite then, the result is clear as well (because
+ground field $k$ is finite, then the result is clear as well (because
 extensions of finite fields are always separable). Thus we may assume
 that $k$ is an infinite field of positive characteristic.
 
@@ -768,7 +770,7 @@ as follows.
 \label{lemma-finite-central-simple-algebra}
 Let $k$ be a field. For a $k$-algebra $A$ the following are equivalent
 \begin{enumerate}
-\item $A$ is finite central simple $k$-algebra,
+\item $A$ is a finite central simple $k$-algebra,
 \item $A$ is a finite dimensional $k$-vector space, $k$ is the center of $A$,
 and $A$ has no nontrivial two-sided ideal,
 \item there exists $d \geq 1$ such that
