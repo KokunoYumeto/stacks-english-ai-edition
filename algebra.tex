@@ -46384,6 +46384,8 @@ $M$ is a finite $R$-module, and $N$ is a finite $S$-module flat over $R$.
 In the statement and in the proof below, we take the depth of $M$
 as an $R$-module, the depth of $M \otimes_R N$ as an $S$-module, and
 the depth of $N/\mathfrak m_RN$ as an $S/\mathfrak m_RS$-module.
+If $M = 0$ or $N = 0$, then both sides of the formula are infinite,
+and there is nothing to prove. Thus we may assume that $M$ and $N$ are nonzero.
 Denote $n$ the right hand side. First assume that $n$ is zero.
 Then both $\text{depth}(M) = 0$ and
 $\text{depth}(N/\mathfrak m_RN) = 0$.
@@ -46527,7 +46529,7 @@ as desired.
 Let $\varphi : R \to S$ be a ring map. Assume
 \begin{enumerate}
 \item $R$ is Noetherian,
-\item $S$ is Noetherian
+\item $S$ is Noetherian,
 \item $\varphi$ is flat,
 \item the fibre rings $S \otimes_R \kappa(\mathfrak p)$
 have property $(R_k)$, and
@@ -46556,7 +46558,7 @@ Lemma \ref{lemma-flat-over-regular-with-regular-fibre}.
 Let $\varphi : R \to S$ be a ring map. Assume
 \begin{enumerate}
 \item $R$ is Noetherian,
-\item $S$ is Noetherian
+\item $S$ is Noetherian,
 \item $\varphi$ is flat,
 \item the fibre rings $S \otimes_R \kappa(\mathfrak p)$ are reduced,
 \item $R$ is reduced.
@@ -46599,7 +46601,7 @@ Now, if $x \in S$ is an element with $x^2 = 0$,
 then we can enlarge $R_0$ and assume that $x$ comes
 from an element $x_0 \in S_0$. After enlarging
 $R_0$ once more we may assume that $x_0^2 = 0$ in $S_0$.
-However, since $R_0 \subset R$ is reduced we see that
+However, since the subring $R_0 \subset R$ is reduced, we see that
 $S_0$ is reduced and hence $x_0 = 0$ as desired.
 \end{proof}
 
@@ -46686,7 +46688,7 @@ Then $S$ is regular.
 \end{lemma}
 
 \begin{proof}
-This follows from Lemma \ref{lemma-Rk-goes-up} applied for all $(R_k)$
+This follows by applying Lemma \ref{lemma-Rk-goes-up} for every $k \geq 0$
 using Lemma \ref{lemma-characterize-smooth-over-field} to see that the
 hypotheses are satisfied.
 \end{proof}
