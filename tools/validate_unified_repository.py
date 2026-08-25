@@ -254,6 +254,20 @@ def main() -> int:
     if build_receipt.get("build", {}).get("global_fixed_point_sweep") != 4:
         errors.append("current build receipt does not record fixed point sweep four")
 
+    release_receipt = json.loads(
+        (ROOT / "validation/unification-release-2026-08-25.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    if release_receipt.get("status") != "PUBLICATION_COMPLETE":
+        errors.append("unification release receipt is not publication-complete")
+    if release_receipt.get("public_readback", {}).get("status") != "PASS":
+        errors.append("unification release receipt lacks passing public readback")
+    if release_receipt.get("preservation", {}).get("status") != "PUBLIC_READBACK_VERIFIED":
+        errors.append("preservation assets lack public readback verification")
+    if not release_receipt.get("source_repository", {}).get("archived"):
+        errors.append("release receipt does not record the source provenance archive")
+
     marker_paths = [ROOT / item for item in PUBLIC_MARKDOWN]
     marker_paths.extend(ROOT.glob("*.tex"))
     for path in marker_paths:

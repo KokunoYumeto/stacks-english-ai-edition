@@ -23,6 +23,9 @@ mathematical product:
 | [`KokunoYumeto/unofficial-ai-integrated-stacks-project`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project) | Errata candidates, overlay registry, schemas, and replay evidence | `main` and `codex/stacks-cjk-canon` |
 
 The split is now resolved in favor of one integrated public edition.
+The former `stacks-project` fork is retained publicly as a read-only archive;
+its six branch heads were verified unchanged after archival. Active integrated
+development and publication now use this repository's protected `main` branch.
 
 ## Frozen full-history copies
 

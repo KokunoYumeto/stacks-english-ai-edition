@@ -19,13 +19,16 @@ unified repository, not a separate edition.
 - Upstream lock: [`upstream/stacks.lock.json`](upstream/stacks.lock.json)
 - Upstream license boundary: [`RIGHTS.md`](RIGHTS.md)
 
-## Live registry state
+## Integrated registry cutoff
 
 - Admitted overlay batches: **17** (`R1` through `R17`).
 - Stable correction IDs in those batches: **444**.
 - Highest stable identifier: `MC-STK-ERR-0811`; identifier gaps are
   intentional and retained.
-- R18 is the next leased candidate namespace; it is not an admitted overlay.
+- This subtree is bound to registry commit
+  `39d8146ca0af49b1d9eaf0742559f64d712bfd8e`. R18 was the next leased
+  namespace at that cutoff; later registry admissions enter a subsequent
+  source-composition and build cycle.
 
 The authoritative overlay list is
 [`registry/overlays.json`](registry/overlays.json). The integrated root source

@@ -1,14 +1,16 @@
 {
   "schema": "unofficial-ai-integrated-stacks-release-receipt/v1",
-  "status": "PRE_PUBLICATION_GATES_PASSED",
-  "updated_utc": "2026-08-25T13:20:00Z",
+  "status": "PUBLICATION_COMPLETE",
+  "updated_utc": "2026-08-25T13:31:47Z",
   "release": {
     "repository": "KokunoYumeto/unofficial-ai-integrated-stacks-project",
     "registry_cutoff": "39d8146ca0af49b1d9eaf0742559f64d712bfd8e",
     "admitted_errata": "R1-R17",
-    "working_branch": "codex/unify-ai-integrated-stacks",
-    "public_default_branch": null,
-    "public_head": null,
+    "working_branch": "main",
+    "public_default_branch": "main",
+    "published_content_head": "7bb2c8e3503265b4f285703a5aa4bceea526fc7c",
+    "post_cutoff_registry_head_observed": "1e45faed48d880be803e665722eeb94027aad145",
+    "post_cutoff_note": "R18 was admitted after the declared R17 release cutoff and belongs to the next source-composition cycle.",
     "tag": "pre-unification-snapshots-2026-08-25"
   },
   "source_gate": {
@@ -43,7 +45,7 @@
     "pdfinfo_readable": 20
   },
   "preservation": {
-    "status": "VERIFIED_LOCAL",
+    "status": "PUBLIC_READBACK_VERIFIED",
     "source_bundle": {
       "filename": "KokunoYumeto-stacks-project-2026-08-25.bundle",
       "bytes": 241336664,
@@ -61,18 +63,56 @@
     },
     "snapshot_readme_sha256": "799FEC13F396CBB9F47AF738C5445F102012A3FFF0A73F02ACBE82C99A236054",
     "sha256sums_sha256": "3A6B548D426A5F38B6B7D876A29567F4E042B3DA610322BEE882A81AE2D907AE",
-    "public_release_assets": null
+    "public_release_assets": [
+      {
+        "filename": "KokunoYumeto-stacks-project-2026-08-25.bundle",
+        "bytes": 241336664,
+        "sha256": "0DFA9F785757BE07D755DB315947A90ECB18DA4152666CAFEAE4ADDDB47FF74D"
+      },
+      {
+        "filename": "KokunoYumeto-unofficial-ai-integrated-stacks-project-pre-unification-final-2026-08-25.bundle",
+        "bytes": 14610301,
+        "sha256": "B048584F27D4A9482FC9040D4946024F3584FCF71C66DA245D1B879AF912E9A3"
+      },
+      {
+        "filename": "SHA256SUMS.txt",
+        "bytes": 271,
+        "sha256": "3A6B548D426A5F38B6B7D876A29567F4E042B3DA610322BEE882A81AE2D907AE"
+      },
+      {
+        "filename": "README.md",
+        "bytes": 2269,
+        "sha256": "799FEC13F396CBB9F47AF738C5445F102012A3FFF0A73F02ACBE82C99A236054"
+      }
+    ]
   },
   "source_repository": {
     "repository": "KokunoYumeto/stacks-project",
-    "archive_state": "PENDING_PUBLIC_READBACK",
-    "heads_verified_unchanged": null
+    "archive_state": "PUBLIC_READ_ONLY_ARCHIVE",
+    "archived": true,
+    "visibility": "public",
+    "default_branch": "master",
+    "heads_verified_unchanged": true,
+    "public_html_archive_state_verified": true,
+    "heads": {
+      "master": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+      "codex/commons-overlay-ega-export": "91df7f1c96bd4973264c29b0e121253a05d1d361",
+      "codex/ega-scaffold": "dc37296a6ed6cc2947ee0c2c9c5d4c88195cb322",
+      "codex/fac-tohoku-gaga": "ad58625f60e6816905ff217d21d91b07b2722fcf",
+      "codex/fga-integration": "1b422a9e2d36c95f9aaeccd82877760b349d1c39",
+      "codex/unofficial-ai-integrated-stacks-project": "ad58625f60e6816905ff217d21d91b07b2722fcf"
+    }
   },
   "public_readback": {
-    "status": "PENDING",
-    "checked_utc": null,
-    "default_branch": null,
-    "head": null,
-    "release_assets_verified": null
+    "status": "PASS",
+    "checked_utc": "2026-08-25T13:31:47Z",
+    "method": "anonymous Git smart HTTP, raw.githubusercontent.com, public release downloads, and public repository HTML",
+    "default_branch": "main",
+    "published_content_head": "7bb2c8e3503265b4f285703a5aa4bceea526fc7c",
+    "raw_repository_blobs_verified": 7,
+    "preserved_history_refs_verified": 9,
+    "release_assets_verified": 4,
+    "release_asset_bytes_downloaded": 255949505,
+    "release_asset_sha256_verified": true
   }
 }

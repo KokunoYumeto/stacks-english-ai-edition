@@ -24,7 +24,10 @@ in each corpus dossier and in the machine-readable registry.
 - Stable correction IDs represented: **444**. The highest identifier is
   `MC-STK-ERR-0811`; the sequence contains intentional gaps, so this is not a
   claim of 811 corrections.
-- R18 is the next leased candidate namespace; it is not an admitted overlay.
+- Release cutoff: registry commit
+  `39d8146ca0af49b1d9eaf0742559f64d712bfd8e`. R18 was admitted on the intake
+  branch after this cutoff and is assigned to the next source-composition and
+  build cycle; it is not silently represented in this R17 source receipt.
 - The independent `injectives.tex` parenthesis correction is included in the
   live source and retained in Git history.
 
