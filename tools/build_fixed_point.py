@@ -95,7 +95,8 @@ def sha256(path: Path) -> str:
 
 
 def version_line(executable: str, env: dict[str, str], source: Path) -> str:
-    output = run([executable, "--version"], source, env)
+    version_flag = "-v" if executable == "pdfinfo" else "--version"
+    output = run([executable, version_flag], source, env)
     return output.splitlines()[0].strip()
 
 
