@@ -90,10 +90,9 @@ claim from being imported silently.
 
 ## Closure audit
 
-`audit.json` is the corpus-wide closure receipt. It records the exact 17-item
-scope, semantic and topic closure, source identities, privacy and reader-prose
-checks, official-tag immutability, and the bounded residuals that remain
-explicitly fail-closed. `build.csv` records three serial deterministic builds
-of every TeX chapter changed by the FGA branch. Its raw box-warning columns are
-diagnostic; `changed_line_box_overlap` is the fail-closed comparison against
-branch-added TeX hunks.
+`audit.json` is the current notation-normalized closure receipt. It records the
+exact 17-item scope, refreshed semantic and topic closure, notation checks,
+source identities, and the fixed-point build and visual checks for the changed
+chapter. `build.csv` preserves the historical 26-chapter build receipt from
+before notation normalization. Its PDF hashes are not claimed to apply to the
+normalized chapter; `audit.json` states the two scopes separately.

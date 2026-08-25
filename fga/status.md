@@ -4070,3 +4070,28 @@ reports OPEN, draft, CLEAN, base master, and head
 readback returns status 200 and contains both the title and head identity.
 The corpus-wide integration, closure audit, remote publication, and upstream
 review-path phases are therefore complete at this checkpoint.
+
+## 2026-08-25 notation normalization
+
+The FGA supplement in `moduli.tex` is now normalized to the surrounding
+Stacks source conventions. Pullback uses the existing direction
+`g : Y \to X`; mathematical font arguments are braced; Serre's condition is
+written `$(S_2)$`; new labels are lowercase; mathematical operators and
+relations use the neighboring source spacing; and each result states the
+hypotheses it needs. The authoritative topic and decision labels were updated
+with the source labels.
+
+The refreshed index and semantic-map validators both pass with empty error
+arrays. They cover 1,253 source units, 1,612 term links, and 579 append-only
+decisions, with zero review units, zero candidate units, and zero unlabeled
+semantic residuals. The nine active source issues remain explicit controlled
+source defects rather than integration gaps.
+
+The normalized Moduli chapter reaches a fixed point after four PDFLaTeX passes
+and BibTeX. It is 83 pages and 959,768 bytes with SHA-256
+19502374527E2E7E7A8CAF4DBC889F263A0D0FE95D9D7252E331029164EA6F04.
+The final log has zero unresolved references, rerun notices, overfull boxes,
+and underfull boxes. Rendered pages 65--71 are pixel-identical to the checked
+combined-edition build. `audit.json` records the exact validators, toolchain,
+hashes, and the distinction between this current chapter build and the
+historical 26-chapter receipt in `build.csv`.
