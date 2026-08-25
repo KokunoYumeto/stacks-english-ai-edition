@@ -4095,3 +4095,12 @@ and underfull boxes. Rendered pages 65--71 are pixel-identical to the checked
 combined-edition build. `audit.json` records the exact validators, toolchain,
 hashes, and the distinction between this current chapter build and the
 historical 26-chapter receipt in `build.csv`.
+
+## 2026-08-25 GitHub state readback
+
+The normalized content commit
+a7346f6a6a49aa755b1b00ecfacb94ac2dd8d263 is published on the fork branch
+`codex/fga-integration`. Current GitHub readback shows that upstream PR 196 was
+closed unmerged on 2026-08-09 and is not a draft; its pull ref remains frozen at
+d3e53496bbd24b82a1d87ce513c913923ebbebb2. The normalized branch is current,
+but the historical PR is not an active review path.

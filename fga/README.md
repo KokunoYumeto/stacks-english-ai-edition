@@ -96,3 +96,8 @@ source identities, and the fixed-point build and visual checks for the changed
 chapter. `build.csv` preserves the historical 26-chapter build receipt from
 before notation normalization. Its PDF hashes are not claimed to apply to the
 normalized chapter; `audit.json` states the two scopes separately.
+
+The normalized source is published on the fork branch
+`codex/fga-integration`. Upstream pull request 196 was closed unmerged on
+2026-08-09, so its GitHub pull ref remains frozen at the older FGA head rather
+than following the current normalized fork branch.
