@@ -342,10 +342,9 @@ $V_j$ is an element of the basis $\mathcal{B}$.
 \end{lemma}
 
 \begin{proof}
-If $ x \in U = \bigcup_{i\in I} U_i $, there is an $ i_x \in I $ such that
-$ x \in U_{i_x} $. Thus we have a $ B_{i_x} \in \mathcal{B}$
-verifying $ x \in B_{i_x} \subset U_{i_x}$. Set
-$J = \{i_x | x \in U\}$ and for $j = i_x \in J$ set $V_j = B_{i_x}$.
+For every $x \in U = \bigcup_{i \in I} U_i$, choose $i_x \in I$ and
+$B_x \in \mathcal{B}$ such that $x \in B_x \subset U_{i_x}$.
+Set $J = U$ and, for $j = x \in J$, set $V_j = B_x$.
 This gives the desired open covering of $U$ by $\{V_j\}_{j \in J}$.
 \end{proof}
 
@@ -511,8 +510,8 @@ $\mathcal{T}$ is the strongest topology on $Y$ such that $f$ is continuous. It
 proves that (1) and (2) are equivalent.
 
 \medskip\noindent
-Finally, (2) and (3) equivalence follows from $f^{-1}(X\setminus E) = Y
-\setminus f^{-1}(E)$ for all subsets $E \subset X$.
+Finally, (2) and (3) equivalence follows from $f^{-1}(Y \setminus E) = X
+\setminus f^{-1}(E)$ for all subsets $E \subset Y$.
 \end{proof}
 
 \noindent
@@ -1276,7 +1275,7 @@ $A$ is not empty to arrive at a contradiction.
 The set $A$ is partially ordered by inclusion: $Z \leq Z'
 \Leftrightarrow Z \subset Z'$ for $Z, Z' \in A$.
 By the descending chain condition we may find a
-smallest element of $A$, say $Z$. As $Z$ is not a finite
+minimal element of $A$, say $Z$. As $Z$ is not a finite
 union of irreducible components, it is not irreducible.
 Hence we can write $Z = Z' \cup Z''$ and both are strictly smaller
 closed subsets. By construction $Z' = \bigcup Z'_i$ and
@@ -1294,7 +1293,7 @@ Let $Z_1, \ldots, Z_n$ be the other irreducible components
 of $X$. Consider $U = Z \setminus (Z_1\cup\ldots\cup Z_n)$.
 This is not empty since otherwise the irreducible space
 $Z$ would be contained in one of the other $Z_i$.
-Because $X = Z \cup Z_1 \cup \ldots Z_n$ (see Lemma \ref{lemma-irreducible}),
+Because $X = Z \cup Z_1 \cup \ldots \cup Z_n$ (see Lemma \ref{lemma-irreducible}),
 also $U = X \setminus (Z_1\cup\ldots\cup Z_n)$
 and hence open in $X$. Thus $Z$ contains a nonempty
 open of $X$.
@@ -1344,7 +1343,7 @@ such that for all $m \geq m_i$ we have $G_m \cap X_i = G_{m_i} \cap X_i$.
 Let $m_0 = \max_{i = 1, \ldots, n} m_i$. Then clearly
 $$
 F_m = G_m \cap X' = G_m \cap (X_1 \cup \ldots \cup X_n) =
-(G_m \cap X_1) \cup \ldots (G_m \cap X_n)
+(G_m \cap X_1) \cup \ldots \cup (G_m \cap X_n)
 $$
 stabilizes for $m \geq m_0$ and the proof is complete.
 \end{proof}
@@ -1848,7 +1847,8 @@ for some $\alpha' \in A$ we have $U \cap V \cap Z_{\alpha'} = \emptyset$.
 Since $X \setminus (U \cup V)$ is disjoint from $S$
 and closed in $X$ hence quasi-compact, we can use the same lemma
 to see that $Z_{\alpha''} \subset U \cup V$ for some $\alpha'' \in A$.
-Then $Z_\alpha = Z_{\alpha'} \cap Z_{\alpha''}$ is contained
+Choose $\alpha \in A$ such that
+$Z_\alpha = Z_{\alpha'} \cap Z_{\alpha''}$. Then $Z_\alpha$ is contained
 in $U \cup V$ and disjoint from $U \cap V$.
 Hence $Z_\alpha = U \cap Z_\alpha \amalg V \cap Z_\alpha$
 is a decomposition into two open pieces,
@@ -2164,16 +2164,16 @@ V_{j_0} =
 $$
 The first open on the RHS intersects $V_{j_1} \cap \ldots \cap V_{j_p}$
 in the empty set and the other opens $V_{j_0, k}$ of the RHS
-satisfy $V_{j_0, k} \cap V_{j_1} \ldots \cap V_{j_p} \subset
+satisfy $V_{j_0, k} \cap V_{j_1} \cap \ldots \cap V_{j_p} \subset
 W_{\alpha(j_0) \ldots \alpha(j_p), k}$.
 Set $J' = J \amalg K$. For $j \in J$ set $V'_j = V_j$ if $j \not = j_0$
 and set $V'_{j_0} =
 V_{j_0} \setminus (\overline{V_{j_1}} \cap \ldots \cap \overline{V_{j_p}})$.
 For $k \in K$ set $V'_k = V_{j_0, k}$. Finally, the map $\alpha' : J' \to I$
 is given by $\alpha$ on $J$ and maps every element of $K$ to $i_0$.
-A simple check shows that $N$ has decreased by one under this replacement.
-Repeating this procedure $N$ times we arrive at the situation where
-$N = 0$.
+A simple check shows that $N$ has decreased by at least one under this
+replacement. Repeating this procedure at most the original $N$ times,
+we arrive at the situation where $N = 0$.
 
 \medskip\noindent
 To finish the proof we argue by induction on the number $M$ of $(p + 1)$-tuples
@@ -2488,11 +2488,11 @@ If $\varphi : j \to k$ is a morphism of $\mathcal{I}$, then
 let $\Gamma_\varphi \subset X_j \times X_k$ denote the graph
 of the corresponding continuous map $X_j \to X_k$. By
 Lemma \ref{lemma-graph-closed} this graph is closed.
-It is clear that $\lim X_i$ is the intersection of the
-closed subsets
+Let $p_{j,k} : \prod X_i \to X_j \times X_k$ be the continuous map
+$(x_i) \mapsto (x_j, x_k)$. It is clear that $\lim X_i$ is the
+intersection of the closed subsets
 $$
-\Gamma_\varphi \times \prod\nolimits_{l \not = j, k} X_l
-\subset \prod X_i
+p_{j,k}^{-1}(\Gamma_\varphi) \subset \prod X_i.
 $$
 Thus the result follows.
 \end{proof}
@@ -2516,11 +2516,13 @@ In the proof of Lemma \ref{lemma-inverse-limit-quasi-compact}
 we have seen that $X = \lim X_i$ is the intersection of the
 closed subsets
 $$
-Z_\varphi = \Gamma_\varphi \times \prod\nolimits_{l \not = j, k} X_l
+Z_\varphi = p_{j,k}^{-1}(\Gamma_\varphi)
 $$
-inside the quasi-compact space $\prod X_i$ where $\varphi : j \to k$
-is a morphism of $\mathcal{I}$ and $\Gamma_\varphi \subset X_j \times X_k$
-is the graph of the corresponding morphism $X_j \to X_k$. Hence by
+inside the quasi-compact space $\prod X_i$, where
+$p_{j,k} : \prod X_i \to X_j \times X_k$ is the map
+$(x_i) \mapsto (x_j, x_k)$, $\varphi : j \to k$ is a morphism of
+$\mathcal{I}$, and $\Gamma_\varphi \subset X_j \times X_k$ is the graph
+of the corresponding morphism $X_j \to X_k$. Hence by
 Lemma \ref{lemma-intersection-closed-in-quasi-compact}
 it suffices to show any finite intersection of these subsets is nonempty.
 Assume $\varphi_t : j_t \to k_t$, $t = 1, \ldots, n$ is a finite collection
@@ -2915,7 +2917,7 @@ $E \cap Z$ is not dense in $Z$. In this way we see that (1) implies (2).
 \medskip\noindent
 Conversely, assume (2) holds. Consider the set $\mathcal{S}$ of closed
 subsets $Y$ of $X$ such that $E \cap Y$ is not constructible in $Y$.
-If $\mathcal{S} \not = \emptyset$, then it has a smallest element $Y$
+If $\mathcal{S} \not = \emptyset$, then it has a minimal element $Y$
 as $X$ is Noetherian.
 Let $Y = Y_1 \cup \ldots \cup Y_r$ be the decomposition of $Y$ into its
 irreducible components, see
@@ -3602,9 +3604,15 @@ The following are equivalent
 \end{lemma}
 
 \begin{proof}
-Suppose that $T$ is stable under specialization, then for all $y\in T$ we have
-$\overline{\{y\}} \subset T$. Thus $T = \bigcup_{y\in T} \overline{\{y\}}$
-which is an union of closed subsets of $X$. Reciprocally, suppose that $T =
+Suppose that $T$ is stable under specialization. For every finite subset
+$S \subset T$ set
+$$
+F_S = \bigcup_{y \in S} \overline{\{y\}}.
+$$
+Then $F_S$ is closed and contained in $T$, the family $(F_S)$ is directed
+by inclusion since $F_S \cup F_{S'} = F_{S \cup S'}$, and
+$T = \bigcup_{S \subset T\text{ finite}} F_S$.
+Reciprocally, suppose that $T =
 \bigcup_{i\in I}F_i$ where $F_i$ are closed subsets of $X$. If $y\in T$ then
 there exists $i\in I$ such that $y\in F_i$. As $F_i$ is closed, we have
 $\overline{\{y\}} \subset F_i \subset T$, which proves that $T$ is stable under
@@ -4497,7 +4505,7 @@ Hence the complement is closed by (2), i.e., $E'$ is open.
 \begin{lemma}
 \label{lemma-two-points}
 Let $X$ be a spectral space. Let $x, y \in X$. Then either there exists
-a third point specializing to both $x$ and $y$, or there exist disjoint
+a point specializing to both $x$ and $y$, or there exist disjoint
 open neighbourhoods containing $x$ and $y$.
 \end{lemma}
 
@@ -4533,8 +4541,7 @@ Let $X$ be a spectral space. The following are equivalent:
 \item every point of $X$ is closed,
 \item every point of $X$ is the generic point of an irreducible component
 of $X$,
-\item the constructible topology equals the given topology on $X$, and
-\item add more here.
+\item the constructible topology equals the given topology on $X$.
 \end{enumerate}
 \end{lemma}
 
@@ -5811,7 +5818,7 @@ and $w \in U'_w \subset W$ such that $U_wU'_w \subset W$.
 By quasi-compactness we can find $w_1, \ldots, w_n$ such that
 $W = \bigcup U'_{w_i}$. Then
 $U_t = U_{w_1} \cap \ldots \cap U_{w_n}$ is an open neighbourhood
-of $e$ such that $f(gw) = t$ for all $w \in W$.
+of $e$ such that $f(gw) = t$ for all $g \in U_t$ and $w \in W$.
 Since $T$ is finite we see that $\bigcap_{t \in T} U_t \subset H$
 is an open neighbourhood of $e$. Since $H \subset G$ is a subgroup
 it follows that $H$ is open.
