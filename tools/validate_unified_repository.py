@@ -24,6 +24,10 @@ DEFAULT_BUILD_RECEIPT = Path(
 )
 SHA1_RE = re.compile(r"^[0-9a-f]{40}$")
 SHA256_RE = re.compile(r"^[0-9A-Fa-f]{64}$")
+COMPOSITION_MODE = (
+    "authority-bound registry-order projection committed as "
+    "protected-branch-compatible linear history"
+)
 EXPECTED_FIXED_POINT_SUFFIXES = [
     ".aux",
     ".bbl",
@@ -82,6 +86,11 @@ def git_bytes(*args: str) -> subprocess.CompletedProcess[bytes]:
         stderr=subprocess.PIPE,
         check=False,
     )
+
+
+def git_optional(*args: str) -> str | None:
+    result = git(*args)
+    return result.stdout.strip() if result.returncode == 0 else None
 
 
 def sha256_bytes(data: bytes) -> str:
@@ -143,6 +152,49 @@ def require_ancestor(
     result = git("merge-base", "--is-ancestor", ancestor, descendant)
     if result.returncode != 0:
         errors.append(f"missing {label} ancestry: {ancestor} -> {descendant}")
+
+
+def commit_parents(commit: str, errors: list[str], label: str) -> tuple[str, ...]:
+    result = git("rev-list", "--parents", "-n", "1", commit)
+    if result.returncode != 0:
+        errors.append(f"could not read {label} parent list: {commit}")
+        return ()
+    parts = result.stdout.strip().split()
+    if not parts or parts[0] != commit:
+        errors.append(f"invalid {label} parent list: {commit}")
+        return ()
+    return tuple(parts[1:])
+
+
+def require_single_parent(
+    commit: str | None,
+    label: str,
+    errors: list[str],
+    expected: str | None = None,
+) -> None:
+    if commit is None:
+        return
+    parents = commit_parents(commit, errors, label)
+    if len(parents) != 1:
+        errors.append(f"{label} is not a single-parent commit: {commit}")
+    elif expected is not None and parents[0] != expected:
+        errors.append(
+            f"{label} parent mismatch: expected {expected}, found {parents[0]}"
+        )
+
+
+def require_linear_suffix(
+    ancestor: str | None, descendant: str, label: str, errors: list[str]
+) -> None:
+    if ancestor is None:
+        return
+    result = git("rev-list", "--parents", f"{ancestor}..{descendant}")
+    if result.returncode != 0:
+        errors.append(f"could not inspect {label}: {ancestor} -> {descendant}")
+        return
+    for line in result.stdout.splitlines():
+        if len(line.split()) > 2:
+            errors.append(f"{label} contains a merge commit: {line.split()[0]}")
 
 
 def commit_blob(commit: str | None, relative: str, errors: list[str], label: str) -> str | None:
@@ -279,6 +331,8 @@ def main(argv: list[str] | None = None) -> int:
     if not isinstance(composition_authority, dict):
         errors.append("composition receipt lacks authority state")
         composition_authority = {}
+    if composition_state.get("mode") != COMPOSITION_MODE:
+        errors.append("composition receipt has the wrong protected-linear mode")
     if composition_authority.get("commit") != UPSTREAM:
         errors.append("composition receipt changes the pinned upstream authority")
     upstream_tree_result = git("rev-parse", f"{UPSTREAM}^{{tree}}")
@@ -303,7 +357,7 @@ def main(argv: list[str] | None = None) -> int:
     composition_source_tree = require_sha1_identity(
         composition_state.get("source_tree"), "composition source tree", errors
     )
-    require_sha1_identity(
+    materialization_tip = require_sha1_identity(
         composition_state.get("materialization_tip"),
         "composition materialization tip",
         errors,
@@ -333,6 +387,19 @@ def main(argv: list[str] | None = None) -> int:
     )
     require_ancestor(
         registry_import_commit, "HEAD", "registry-import-to-HEAD", errors
+    )
+    require_ancestor(
+        UPSTREAM, registry_import_commit or "HEAD", "authority-to-registry-import", errors
+    )
+    require_single_parent(registry_import_commit, "registry linear import", errors)
+    require_single_parent(
+        composition_source_commit,
+        "composition source",
+        errors,
+        registry_import_commit,
+    )
+    require_linear_suffix(
+        composition_source_commit, "HEAD", "protected publication suffix", errors
     )
     if composition_source_commit is not None:
         require_ancestor(
@@ -374,7 +441,7 @@ def main(argv: list[str] | None = None) -> int:
     else:
         expected_registry_bytes = composition_registry.get("overlays_bytes")
         expected_registry_sha = composition_registry.get("overlays_sha256")
-        if len(registry_bytes) != expected_registry_bytes:
+        if type(expected_registry_bytes) is not int or len(registry_bytes) != expected_registry_bytes:
             errors.append(
                 "overlay registry byte count mismatch: "
                 f"expected {expected_registry_bytes}, found {len(registry_bytes)}"
@@ -407,13 +474,21 @@ def main(argv: list[str] | None = None) -> int:
         )
         if imported_registry_blob != expected_registry_blob:
             errors.append("registry linear-import blob binding mismatch")
+        cutoff_registry_blob = git_optional(
+            "rev-parse", f"{cutoff_commit}:registry/overlays.json"
+        ) if cutoff_commit is not None else None
+        if (
+            cutoff_registry_blob is not None
+            and cutoff_registry_blob != expected_registry_blob
+        ):
+            errors.append("registry cutoff blob binding mismatch")
 
     entries = registry.get("registered_entries", [])
     if not isinstance(entries, list):
         errors.append("overlay registry lacks registered_entries")
         entries = []
     expected_overlays = composition_registry.get("registered_overlays")
-    if len(entries) != expected_overlays:
+    if type(expected_overlays) is not int or len(entries) != expected_overlays:
         errors.append(
             f"expected {expected_overlays} registered overlays, found {len(entries)}"
         )
@@ -422,6 +497,69 @@ def main(argv: list[str] | None = None) -> int:
         or entries[-1].get("id") != composition_registry.get("last_admitted_overlay")
     ):
         errors.append("overlay registry does not end at the composition cutoff")
+
+    previous = composition.get("previous_cutoff")
+    if not isinstance(previous, dict):
+        errors.append("composition receipt lacks previous-cutoff transition evidence")
+        previous = {}
+    previous_registry = require_sha1_identity(
+        previous.get("registry_commit"), "previous registry cutoff", errors
+    )
+    previous_last = previous.get("last_admitted_overlay")
+    previous_derived_blob = require_sha1_identity(
+        previous.get("derived_git_blob"), "previous authority derived blob", errors
+    )
+    if not isinstance(previous_last, str) or not previous_last:
+        errors.append("previous cutoff lacks a last-admitted overlay")
+    if previous.get("derived_equal_to_authority") is not True:
+        errors.append("previous cutoff does not assert authority equality")
+    previous_index = next(
+        (index for index, entry in enumerate(entries)
+         if isinstance(entry, dict) and entry.get("id") == previous_last),
+        None,
+    )
+    if previous_index is None:
+        errors.append("previous cutoff overlay is absent from the imported registry")
+        previous_index = -1
+    new_overlays = composition.get("new_overlays")
+    if not isinstance(new_overlays, list) or not new_overlays:
+        errors.append("composition receipt lacks new-overlay transition evidence")
+        new_overlays = []
+    registry_suffix = entries[previous_index + 1 :] if previous_index >= 0 else []
+    if len(registry_suffix) != len(new_overlays):
+        errors.append("new-overlay transition length does not match registry suffix")
+    for overlay, entry in zip(new_overlays, registry_suffix):
+        if not isinstance(overlay, dict) or not isinstance(entry, dict):
+            errors.append("new-overlay transition contains an invalid entry")
+            continue
+        if overlay.get("id") != entry.get("id"):
+            errors.append("new-overlay transition is not registry ordered")
+        stable_count = overlay.get("stable_ids")
+        operation_count = overlay.get("operations")
+        if type(stable_count) is not int or stable_count < 1:
+            errors.append(f"invalid stable-ID count in transition: {overlay.get('id')!r}")
+        elif stable_count != len(entry.get("stable_ids", [])):
+            errors.append(f"transition stable-ID count mismatch: {overlay.get('id')!r}")
+        if type(operation_count) is not int or operation_count < 1:
+            errors.append(f"invalid operation count in transition: {overlay.get('id')!r}")
+        for key in ("manifest_sha256", "payload_sha256", "review_receipt_sha256"):
+            if not isinstance(overlay.get(key), str) or not SHA256_RE.fullmatch(overlay[key]):
+                errors.append(f"invalid {key} in transition: {overlay.get('id')!r}")
+        materialized = overlay.get("materialized_commit")
+        if not isinstance(materialized, str) or not SHA1_RE.fullmatch(materialized):
+            errors.append(f"invalid materialized commit in transition: {overlay.get('id')!r}")
+        elif git_optional("cat-file", "-e", f"{materialized}^{{commit}}") is not None:
+            require_single_parent(materialized, f"materialized {overlay.get('id')}", errors, UPSTREAM)
+    if registry_suffix and registry_suffix[-1].get("id") != composition_registry.get(
+        "last_admitted_overlay"
+    ):
+        errors.append("new-overlay transition does not end at the admitted cutoff")
+    if previous_registry is not None and cutoff_commit is not None:
+        if (
+            git_optional("cat-file", "-e", f"{previous_registry}^{{commit}}") is not None
+            and git_optional("cat-file", "-e", f"{cutoff_commit}^{{commit}}") is not None
+        ):
+            require_ancestor(previous_registry, cutoff_commit, "previous-to-current registry", errors)
 
     registered_ids: list[str] = []
     v2_operations = 0
@@ -895,6 +1033,22 @@ def main(argv: list[str] | None = None) -> int:
     if not isinstance(affected_sources, dict) or "derived.tex" not in affected_sources:
         errors.append("composition receipt lacks the derived.tex projection")
         affected_sources = {}
+    changed_paths_result = git(
+        "diff",
+        "--name-only",
+        "--diff-filter=ACMRTUXB",
+        f"{registry_import_commit}..{composition_source_commit}",
+    ) if registry_import_commit is not None and composition_source_commit is not None else None
+    changed_paths = (
+        tuple(path for path in changed_paths_result.stdout.splitlines() if path)
+        if changed_paths_result is not None and changed_paths_result.returncode == 0
+        else ()
+    )
+    if tuple(sorted(changed_paths)) != tuple(sorted(affected_sources)):
+        errors.append(
+            "composition source changed-path inventory mismatch: "
+            f"expected {sorted(affected_sources)}, found {sorted(changed_paths)}"
+        )
     affected_stems: list[str] = []
     for relative, evidence in affected_sources.items():
         if not isinstance(relative, str) or not isinstance(evidence, dict):
@@ -910,15 +1064,27 @@ def main(argv: list[str] | None = None) -> int:
         head_blob = commit_blob("HEAD", relative, errors, "HEAD projection")
         projection_sha = evidence.get("projection_sha256")
         projection_blob = evidence.get("projection_git_blob")
+        projection_bytes = evidence.get("projection_bytes")
+        authority_sha = evidence.get("authority_sha256")
+        authority_blob_expected = evidence.get("authority_git_blob")
+        authority_size = evidence.get("authority_bytes")
         if (
             not isinstance(projection_sha, str)
             or not SHA256_RE.fullmatch(projection_sha)
             or not isinstance(projection_blob, str)
             or not SHA1_RE.fullmatch(projection_blob)
+            or type(projection_bytes) is not int
+            or projection_bytes < 1
+            or not isinstance(authority_sha, str)
+            or not SHA256_RE.fullmatch(authority_sha)
+            or not isinstance(authority_blob_expected, str)
+            or not SHA1_RE.fullmatch(authority_blob_expected)
+            or type(authority_size) is not int
+            or authority_size < 1
         ):
             errors.append(f"invalid projection identity for {relative}")
         elif head_bytes is not None and (
-            len(head_bytes) != evidence.get("projection_bytes")
+            len(head_bytes) != projection_bytes
             or sha256_bytes(head_bytes) != projection_sha.upper()
             or git_blob_sha1(head_bytes) != projection_blob.lower()
             or head_blob != projection_blob.lower()
@@ -930,10 +1096,10 @@ def main(argv: list[str] | None = None) -> int:
         authority_bytes = committed_bytes(UPSTREAM, relative, errors, "authority")
         authority_blob = commit_blob(UPSTREAM, relative, errors, "authority")
         if authority_bytes is not None and (
-            len(authority_bytes) != evidence.get("authority_bytes")
+            len(authority_bytes) != authority_size
             or sha256_bytes(authority_bytes)
-            != str(evidence.get("authority_sha256", "")).upper()
-            or authority_blob != str(evidence.get("authority_git_blob", "")).lower()
+            != authority_sha.upper()
+            or authority_blob != authority_blob_expected.lower()
         ):
             errors.append(f"pinned authority identity mismatch for {relative}")
 
@@ -945,6 +1111,26 @@ def main(argv: list[str] | None = None) -> int:
         )
         if isinstance(projection_blob, str) and source_blob != projection_blob.lower():
             errors.append(f"composition source projection mismatch for {relative}")
+        if materialization_tip is not None:
+            materialized_blob = git_optional(
+                "rev-parse", f"{materialization_tip}:{relative}"
+            )
+            if (
+                materialized_blob is not None
+                and isinstance(projection_blob, str)
+                and materialized_blob != projection_blob.lower()
+            ):
+                errors.append(f"materialization projection mismatch for {relative}")
+
+    projection_verifier = composition.get("projection_verifier")
+    if (
+        not isinstance(projection_verifier, dict)
+        or projection_verifier.get("status") != "PASS"
+        or not isinstance(projection_verifier.get("path"), str)
+        or not isinstance(projection_verifier.get("command"), str)
+        or not projection_verifier.get("command")
+    ):
+        errors.append("composition receipt lacks a passing projection-verifier binding")
 
     if any(stem not in required_build_stems for stem in affected_stems):
         errors.append("required build stems omit an affected source")
@@ -971,6 +1157,18 @@ def main(argv: list[str] | None = None) -> int:
         require_ancestor(
             build_source_commit, "HEAD", "build-source-to-HEAD", errors
         )
+        require_linear_suffix(
+            composition_source_commit,
+            build_source_commit,
+            "composition-to-build-source suffix",
+            errors,
+        )
+        require_linear_suffix(
+            build_source_commit,
+            "HEAD",
+            "build-source publication suffix",
+            errors,
+        )
         tree_result = git("rev-parse", f"{build_source_commit}^{{tree}}")
         if tree_result.returncode != 0 or tree_result.stdout.strip() != build_source.get(
             "tree"
@@ -983,6 +1181,14 @@ def main(argv: list[str] | None = None) -> int:
             expected_blob = evidence.get("projection_git_blob")
             if isinstance(expected_blob, str) and blob != expected_blob.lower():
                 errors.append(f"build source projection mismatch for {relative}")
+        build_registry_blob = commit_blob(
+            build_source_commit,
+            overlays_relative,
+            errors,
+            "fixed-point build registry",
+        )
+        if build_registry_blob != expected_registry_blob:
+            errors.append("fixed-point build registry blob mismatch")
 
     builder = build_receipt.get("builder")
     if not isinstance(builder, dict) or builder.get("path") != "tools/build_fixed_point.py":
@@ -1013,8 +1219,19 @@ def main(argv: list[str] | None = None) -> int:
         errors.append("fixed-point build receipt lacks composition binding")
         receipt_composition = {}
     expected_build_binding = {
+        "schema": "unofficial-ai-integrated-stacks-composition/v2",
         "receipt": COMPOSITION_RECEIPT.as_posix(),
+        "receipt_git_blob": (
+            git_blob_sha1(composition_bytes) if composition_bytes is not None else None
+        ),
         "receipt_sha256": composition_sha,
+        "authority_commit": UPSTREAM,
+        "authority_tree": composition_authority.get("tree"),
+        "previous_registry_commit": previous_registry,
+        "previous_last_admitted_overlay": previous_last,
+        "previous_derived_git_blob": previous_derived_blob,
+        "composition_mode": composition_state.get("mode"),
+        "materialization_tip": materialization_tip,
         "composition_source_commit": composition_source_commit,
         "composition_source_tree": composition_source_tree,
         "registry_cutoff_commit": cutoff_commit,
@@ -1030,8 +1247,15 @@ def main(argv: list[str] | None = None) -> int:
         "registered_overlays": len(entries),
         "registered_stable_ids": len(registered_ids),
         "last_admitted_overlay": composition_registry.get("last_admitted_overlay"),
+        "new_overlay_ids": [entry.get("id") for entry in registry_suffix],
+        "new_overlay_materialized_commits": [
+            overlay.get("materialized_commit")
+            for overlay in new_overlays
+            if isinstance(overlay, dict)
+        ],
         "required_build_stems": required_build_stems,
         "affected_source_stems": affected_stems,
+        "affected_source_identities": affected_sources,
     }
     for key, expected in expected_build_binding.items():
         if receipt_composition.get(key) != expected:
