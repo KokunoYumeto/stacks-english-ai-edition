@@ -18,6 +18,7 @@ machine-readable validation evidence.
 [Browse the source](chapters.tex) ·
 [Errata registry](ai-integrated/registry/overlays.json) ·
 [Validation](VALIDATION.md) ·
+[Current build receipt](validation/unified-build-2026-08-25.json) ·
 [Provenance and frozen histories](PROVENANCE.md) ·
 [License](COPYING)
 
@@ -60,6 +61,7 @@ official Stacks tag.
 | [`reports/`](reports/README.md) | Exact source findings and visual evidence |
 | [`ai-integrated/`](ai-integrated/README.md) | Admitted errata, candidates, schemas, provenance, and release records |
 | [`VALIDATION.md`](VALIDATION.md) | Reproducible checks and build guidance |
+| [`validation/`](validation/README.md) | Machine-readable unified-build receipts |
 | [`PROVENANCE.md`](PROVENANCE.md) | Upstream identity, merge architecture, and frozen pre-unification histories |
 
 ## Build

@@ -1,0 +1,77 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-build-receipt/v1",
+  "status": "PASS",
+  "created_utc": "2026-08-25T02:14:07Z",
+  "source": {
+    "commit": "8a1b75c4435d28146881c718e2875084c74e94ce",
+    "tree": "51526bf98b7cf1718525d6c18f347e23ec938d0d",
+    "upstream_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14"
+  },
+  "environment": {
+    "operating_system": "Windows",
+    "python": "3.13.9",
+    "pdftex": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5)",
+    "bibtex": "MiKTeX-BibTeX 4.2 (MiKTeX 26.5)",
+    "source_date_epoch": "1785270512"
+  },
+  "gates": {
+    "unified_repository_validator": {
+      "status": "PASS",
+      "registered_overlays": 15,
+      "registered_stable_ids": 385,
+      "v2_operations": 391,
+      "r1_r3_replacements": 69,
+      "r1_tag_additions": 9
+    },
+    "candidate_verifiers": {
+      "status": "PASS",
+      "passed": 15,
+      "total": 15
+    },
+    "candidate_manifest_checks": {
+      "status": "PASS",
+      "passed": 12,
+      "total": 12,
+      "rounds": "R4-R15"
+    },
+    "ega_scaffold_check": {
+      "status": "PASS",
+      "operational_statement_edges": 1059,
+      "source_units": 355
+    },
+    "ega_map_check": {
+      "status": "PASS",
+      "labels": 21446,
+      "official_tag_joins": 21437,
+      "candidates": 2749
+    },
+    "tex_build": {
+      "status": "PASS",
+      "chapter_count": 19,
+      "global_fixed_point_sweep": 4,
+      "pdfinfo_readable": 19
+    }
+  },
+  "artifacts": [
+    {"stem": "sets", "pages": 14, "bytes": 454071, "sha256": "7BF9FE6F27742D539FF5133EE7BBFA1A75A0FAE67564602C976302E87A8D6DEF"},
+    {"stem": "categories", "pages": 105, "bytes": 1064072, "sha256": "6345AD2549365AD69A219B7441C452E23219D614DBEC14A20D5FF3E27B86543C"},
+    {"stem": "topology", "pages": 66, "bytes": 795632, "sha256": "566AED1FD04136004B0BEA476155BD1EC6BCD3E058E6C7F17FA7FA7CDC1654E0"},
+    {"stem": "sheaves", "pages": 54, "bytes": 655371, "sha256": "1F36A7D43242290207A4E3A9CC3EBF8965508D6B7B73572C6BB36BDA681B89BC"},
+    {"stem": "sites", "pages": 113, "bytes": 1163737, "sha256": "C99D89B82E0E17239773009DCFBF1DD3D5B544B6A1438D6EAAF4151525B2575D"},
+    {"stem": "algebra", "pages": 473, "bytes": 3766890, "sha256": "5D0E3F5756A70C628FDFEFAD329EEAA76D3706CE562BDFDB2F0BAEEEB47B8AA9"},
+    {"stem": "brauer", "pages": 10, "bytes": 346791, "sha256": "DA437D04DE519E2AA225E3F425B024BBB1180623949FC6DCAA2DCD85D69FA08C"},
+    {"stem": "more-algebra", "pages": 406, "bytes": 3338574, "sha256": "6FB334C851C953AF0B817267F62D783C25572EE873AD5324FBAE83E3C5B2FFED"},
+    {"stem": "smoothing", "pages": 37, "bytes": 647503, "sha256": "1685B11BDA5606E36D28DB7B703B08CF4B1E4E9FECD4DA304F6907825F094950"},
+    {"stem": "schemes", "pages": 51, "bytes": 713278, "sha256": "B8A5C751F3F5F352C336695BC302FD0A3E17484F2BE86019D7182972BB122BB8"},
+    {"stem": "properties", "pages": 54, "bytes": 757903, "sha256": "B94E263EFB1E03C89D47EE5E1F5C9037862B86766341424695296AB853392702"},
+    {"stem": "morphisms", "pages": 157, "bytes": 1570918, "sha256": "B417C2A7E1C322D428E6A20AD4F24E9E523E7AE834439BCE0353ADDBF5E4AEB0"},
+    {"stem": "more-morphisms", "pages": 260, "bytes": 2301493, "sha256": "D8F80572052A904C20BD29659F3037194D90F350DD0FB70FAF9AFF0477535B5F"},
+    {"stem": "crystalline", "pages": 61, "bytes": 865206, "sha256": "3F505084FEAA85EF8DE021266E18E24F83EEF148618E9F052CAF5F071BE28D73"},
+    {"stem": "spaces-cohomology", "pages": 47, "bytes": 622253, "sha256": "6087373C1B105A09F3A5393D6E6E74D2AE0C4F90EB97269F058F40D1B122CA3B"},
+    {"stem": "stacks-limits", "pages": 13, "bytes": 345642, "sha256": "37ECF282FB7C9BD6D0A20FBC811E44C6879C0CB5DEA854A21C64974D7DA5063C"},
+    {"stem": "injectives", "pages": 31, "bytes": 561038, "sha256": "78C5120D52B349AE7526F8EE158694B64F93E29B0A0510F39ECF7A11A21B971A"},
+    {"stem": "gaga", "pages": 22, "bytes": 469773, "sha256": "908A0AB7E97194220DB0D76FAB3D562430F965EA675AF1120397A09EB9C4BCEA"},
+    {"stem": "moduli", "pages": 83, "bytes": 894887, "sha256": "F8F7346D687A5A0054D7F12A1CA5426AC8720BB99498C1F13926694A8984411F"}
+  ],
+  "pdfs_committed": false
+}

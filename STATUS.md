@@ -44,3 +44,8 @@ registries, and unresolved merge markers. See [VALIDATION.md](VALIDATION.md).
 
 Per-corpus build and visual receipts remain linked from the detailed dossiers;
 they are not silently generalized beyond their recorded source identity.
+
+The current unified-tree gate additionally built 19 directly affected or
+headline chapters to a global PDF fixed point on sweep four. The exact page,
+byte, and SHA-256 inventory is in the
+[`2026-08-25 build receipt`](validation/unified-build-2026-08-25.json).
