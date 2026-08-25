@@ -1,0 +1,836 @@
+{
+  "schema": "mathematics-commons-stacks-adjudication-spec/v1",
+  "candidate_id": "stacks-errata-a04446e-r19",
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "authority_sha256": "EFDA4CB361DD40909D1991161EAE716E58B6CF9E79380971502E1DA12396D402",
+  "bounded_lines": {
+    "start": 4361,
+    "end": 8603
+  },
+  "accepted_units": 43,
+  "accepted_operations": 57,
+  "stable_id_range": "MC-STK-ERR-0832..MC-STK-ERR-0874",
+  "intake_evidence": [
+    {
+      "path": "canon/control/INTAKE_FR_DERIVED_021_20260825.json",
+      "sha256": "5D196EA79418BEA459A97E1659BFE2CDC9364673AEFFCEDC0444F5FFB6E2188E"
+    },
+    {
+      "path": "canon/control/INTAKE_FR_DERIVED_022_024_20260825.json",
+      "sha256": "43602EBCAB970A60C264AB8F56DE050A2F97CB425D7DFC34297763DC59A88165"
+    },
+    {
+      "path": "canon/control/INTAKE_FR_DERIVED_025_032_20260825.json",
+      "sha256": "AED2EAAD918EA8ED883D0E0BF294D5CC323D5065E018D3994788B1EE65A88D0D"
+    },
+    {
+      "path": "canon/control/INTAKE_FR_DERIVED_033_037_20260825.json",
+      "sha256": "C529FF436DD5277D0627CF6E8BDF0D92EF6F1FD45D95317D8F88BE6D93EC9EC1"
+    },
+    {
+      "path": "canon/control/INTAKE_FR_DERIVED_038_039_20260825.json",
+      "sha256": "5DBCBAB7EE8EC11042F4D1EE191B70BE46FF8543F92E29B4E44B28C8AF474B13"
+    },
+    {
+      "path": "canon/control/INTAKE_FR_DERIVED_040_063_20260825.json",
+      "sha256": "6E704CD23525A8EDDFF8809BC3CF0A6C9778519A9D3731CF1CC20E732C8C22C4"
+    }
+  ],
+  "producer_snapshot": {
+    "path": "p02/evidence/DERIVED_SOURCE_EMENDATIONS.json",
+    "frozen_through": "DERIVED-063",
+    "bytes": 32028,
+    "sha256": "099F9B97A697E22E9283B4CBE9AA56DF481135E12965FBDC7CAFF97CC52C7474",
+    "note": "The live append-only producer file may contain later R20 rows; only exact operations DERIVED-021..063 are admitted here."
+  },
+  "canon_amendments": [
+    {
+      "producer_id": "DERIVED-034",
+      "operation": "line 6328: \\alpha^{n - 1} -> \\alpha^n",
+      "reason": "The degree-n homotopy identity forces alpha^n."
+    },
+    {
+      "producer_id": "DERIVED-037",
+      "operation": "lines 6599-6600: , and\\n\\item add more here. -> .",
+      "reason": "Deleting only the placeholder leaves a dangling conjunction."
+    }
+  ],
+  "accepted": [
+    {
+      "producer_id": "DERIVED-021",
+      "stable_id": "MC-STK-ERR-0832",
+      "class": "stray_noun_phrase",
+      "locus": "derived.tex:4361",
+      "result": "confirmed_stray_noun_phrase",
+      "disposition": "The words 'the statement' have no grammatical role in the sentence.",
+      "operations": [
+        {
+          "source_start_line": 4361,
+          "source_end_line": 4361,
+          "old_text": "For the last one the statement we have to do a little",
+          "replacement_text": "For the last one we have to do a little"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-022",
+      "stable_id": "MC-STK-ERR-0833",
+      "class": "missing_indefinite_article",
+      "locus": "derived.tex:5260",
+      "result": "confirmed_missing_indefinite_article",
+      "disposition": "The singular count noun 'quasi-isomorphism' requires an article.",
+      "operations": [
+        {
+          "source_start_line": 5260,
+          "source_end_line": 5260,
+          "old_text": "there exists quasi-isomorphism",
+          "replacement_text": "there exists a quasi-isomorphism"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-023",
+      "stable_id": "MC-STK-ERR-0834",
+      "class": "singular_plural_disagreement",
+      "locus": "derived.tex:5454",
+      "result": "confirmed_singular_plural_disagreement",
+      "disposition": "The displayed Im(d^0)=Ker(d^1) is a single element of the set under discussion.",
+      "operations": [
+        {
+          "source_start_line": 5454,
+          "source_end_line": 5454,
+          "old_text": "is an elements of",
+          "replacement_text": "is an element of"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-024",
+      "stable_id": "MC-STK-ERR-0835",
+      "class": "wrong_morphism_property",
+      "locus": "derived.tex:5459",
+      "result": "confirmed_wrong_morphism_property",
+      "disposition": "The stated goal at line 5437 is a quasi-isomorphism and the proof establishes cohomology isomorphisms; a resolution may retain nonzero contractible terms, so a chainwise isomorphism does not follow.",
+      "operations": [
+        {
+          "source_start_line": 5459,
+          "source_end_line": 5459,
+          "old_text": "is an isomorphism as desired.",
+          "replacement_text": "is a quasi-isomorphism as desired."
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-025",
+      "stable_id": "MC-STK-ERR-0836",
+      "class": "missing_outer_parenthesis",
+      "locus": "derived.tex:5580",
+      "result": "confirmed_missing_outer_parenthesis",
+      "disposition": "The cohomology expression opens H^i( but closes only RF(; the outer parenthesis is missing.",
+      "operations": [
+        {
+          "source_start_line": 5580,
+          "source_end_line": 5580,
+          "old_text": "$H^i(RF(A[0]) = 0$",
+          "replacement_text": "$H^i(RF(A[0])) = 0$"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-026",
+      "stable_id": "MC-STK-ERR-0837",
+      "class": "missing_copula",
+      "locus": "derived.tex:5922",
+      "result": "confirmed_missing_copula",
+      "disposition": "The let-construction requires the infinitive 'be'.",
+      "operations": [
+        {
+          "source_start_line": 5922,
+          "source_end_line": 5922,
+          "old_text": "We let $D_\\mathcal{B}(\\mathcal{A})$ the full subcategory",
+          "replacement_text": "We let $D_\\mathcal{B}(\\mathcal{A})$ be the full subcategory"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-027",
+      "stable_id": "MC-STK-ERR-0838",
+      "class": "duplicated_noun_phrase",
+      "locus": "derived.tex:5948",
+      "result": "confirmed_duplicated_noun_phrase",
+      "disposition": "Each direct summand is the kernel of an idempotent endomorphism of the object H^n(X \\oplus Y) in the weak Serre subcategory; 'maps between maps of objects' is malformed.",
+      "operations": [
+        {
+          "source_start_line": 5948,
+          "source_end_line": 5948,
+          "old_text": "kernels of maps between maps of objects",
+          "replacement_text": "kernels of maps between objects"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-028",
+      "stable_id": "MC-STK-ERR-0839",
+      "class": "extra_closing_parenthesis",
+      "locus": "derived.tex:6128",
+      "result": "confirmed_extra_closing_parenthesis",
+      "disposition": "The displayed inline expression has one unmatched closing parenthesis.",
+      "operations": [
+        {
+          "source_start_line": 6128,
+          "source_end_line": 6128,
+          "old_text": "$X, Y \\in \\Ob(\\mathcal{A}))$",
+          "replacement_text": "$X, Y \\in \\Ob(\\mathcal{A})$"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-029",
+      "stable_id": "MC-STK-ERR-0840",
+      "class": "wrong_property_name",
+      "locus": "derived.tex:6197",
+      "result": "confirmed_wrong_property_name",
+      "disposition": "The preceding argument has just established faithfulness; fullness is the remaining property to prove.",
+      "operations": [
+        {
+          "source_start_line": 6197,
+          "source_end_line": 6197,
+          "old_text": "Fully faithfulness",
+          "replacement_text": "Fullness"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-030",
+      "stable_id": "MC-STK-ERR-0841",
+      "class": "reversed_index_arrow",
+      "locus": "derived.tex:4727",
+      "result": "confirmed_reversed_index_arrow",
+      "disposition": "The definition of Y/S uses arrows out of Y, the diagram labels s' from Y to Y', and the factorization s''=h composed with s' is typed only in that direction.",
+      "operations": [
+        {
+          "source_start_line": 4727,
+          "source_end_line": 4727,
+          "old_text": "$\\{F(Y')\\}_{s' : Y' \\to Y}$",
+          "replacement_text": "$\\{F(Y')\\}_{s' : Y \\to Y'}$"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-031",
+      "stable_id": "MC-STK-ERR-0842",
+      "class": "undefined_functor",
+      "locus": "derived.tex:4842",
+      "result": "confirmed_undefined_functor",
+      "disposition": "Only F is defined in the standing situation, and the remainder of the proof uses F restricted to Y/S.",
+      "operations": [
+        {
+          "source_start_line": 4842,
+          "source_end_line": 4842,
+          "old_text": "$G|_{Y/S} : Y/S \\to \\mathcal{D}'$",
+          "replacement_text": "$F|_{Y/S} : Y/S \\to \\mathcal{D}'$"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-032",
+      "stable_id": "MC-STK-ERR-0843",
+      "class": "undefined_functor",
+      "locus": "derived.tex:4845",
+      "result": "confirmed_undefined_functor",
+      "disposition": "Only F is defined in the standing situation; lines 4850-4859 confirm the second factor is F restricted to Y/S.",
+      "operations": [
+        {
+          "source_start_line": 4845,
+          "source_end_line": 4845,
+          "old_text": "$G|_{Y/S} \\circ \\text{pr}_2 : X/S \\times Y/S \\to \\mathcal{D}'$",
+          "replacement_text": "$F|_{Y/S} \\circ \\text{pr}_2 : X/S \\times Y/S \\to \\mathcal{D}'$"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-033",
+      "stable_id": "MC-STK-ERR-0844",
+      "class": "undefined_subscripted_object",
+      "locus": "derived.tex:6297",
+      "result": "confirmed_undefined_subscripted_object",
+      "disposition": "A is embedded in I^0 and d^0 has source I^0; the quotient is I^0/A and I_0 is undefined.",
+      "operations": [
+        {
+          "source_start_line": 6297,
+          "source_end_line": 6297,
+          "old_text": "$I_0/A \\to I^1$",
+          "replacement_text": "$I^0/A \\to I^1$"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-034",
+      "stable_id": "MC-STK-ERR-0845",
+      "class": "ill_typed_homotopy_indices",
+      "locus": "derived.tex:6326,6328,6330,6333,6338",
+      "result": "confirmed_ill_typed_homotopy_indices",
+      "disposition": "The degree-n homotopy identity is alpha^n=d_I^{n-1}h^n+h^{n+1}d_K^n. Five printed h^{n-1} indices are ill-typed, and independent replay additionally found that the first expansion term at line 6328 must be alpha^n rather than alpha^{n-1}.",
+      "operations": [
+        {
+          "source_start_line": 6326,
+          "source_end_line": 6326,
+          "old_text": "h^{n - 1}",
+          "replacement_text": "h^n"
+        },
+        {
+          "source_start_line": 6328,
+          "source_end_line": 6328,
+          "old_text": "\\alpha^{n - 1}",
+          "replacement_text": "\\alpha^n"
+        },
+        {
+          "source_start_line": 6328,
+          "source_end_line": 6328,
+          "old_text": "h^{n - 1}",
+          "replacement_text": "h^n"
+        },
+        {
+          "source_start_line": 6330,
+          "source_end_line": 6330,
+          "old_text": "h^{n - 1}",
+          "replacement_text": "h^n"
+        },
+        {
+          "source_start_line": 6333,
+          "source_end_line": 6333,
+          "old_text": "h^{n - 1}",
+          "replacement_text": "h^n"
+        },
+        {
+          "source_start_line": 6338,
+          "source_end_line": 6338,
+          "old_text": "h^{n - 1}",
+          "replacement_text": "h^n"
+        }
+      ],
+      "canon_amendment": "Add the required line-6328 alpha^{n-1} to alpha^n repair; preserve the correctly typed alpha/h occurrences elsewhere."
+    },
+    {
+      "producer_id": "DERIVED-035",
+      "stable_id": "MC-STK-ERR-0846",
+      "class": "missing_complex_bullet",
+      "locus": "derived.tex:6412,6502",
+      "result": "confirmed_missing_complex_bullet",
+      "disposition": "Both invocations of the make-injective lemma have source the complex K^bullet; plain K is undefined.",
+      "operations": [
+        {
+          "source_start_line": 6412,
+          "source_end_line": 6412,
+          "old_text": "$\\tilde \\alpha : K \\to \\tilde L^\\bullet$",
+          "replacement_text": "$\\tilde \\alpha : K^\\bullet \\to \\tilde L^\\bullet$"
+        },
+        {
+          "source_start_line": 6502,
+          "source_end_line": 6502,
+          "old_text": "$\\tilde \\alpha : K \\to \\tilde L^\\bullet$",
+          "replacement_text": "$\\tilde \\alpha : K^\\bullet \\to \\tilde L^\\bullet$"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-036",
+      "stable_id": "MC-STK-ERR-0847",
+      "class": "ill_typed_homotopy_coboundary",
+      "locus": "derived.tex:6532",
+      "result": "confirmed_ill_typed_homotopy_coboundary",
+      "disposition": "The degree-n coboundary is d_I h^n+h^{n+1}d_L; the printed parentheses produce incompatible summand types.",
+      "operations": [
+        {
+          "source_start_line": 6532,
+          "source_end_line": 6532,
+          "old_text": "(d \\circ h^n + h^{n + 1}) \\circ d",
+          "replacement_text": "(d \\circ h^n + h^{n + 1} \\circ d)"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-037",
+      "stable_id": "MC-STK-ERR-0848",
+      "class": "editorial_placeholder_and_dangling_conjunction",
+      "locus": "derived.tex:6599-6600",
+      "result": "confirmed_editorial_placeholder_and_dangling_conjunction",
+      "disposition": "The fourth item is an unresolved authoring placeholder. Deleting it alone would leave the third and final substantive item ending with a dangling ', and', so the exact canon operation also closes that item with a period.",
+      "operations": [
+        {
+          "source_start_line": 6599,
+          "source_end_line": 6600,
+          "old_text": ", and\n\\item add more here.",
+          "replacement_text": "."
+        }
+      ],
+      "canon_amendment": "Replace the producer deletion with one exact two-line operation that absorbs the dangling ', and' and closes the surviving item with a period."
+    },
+    {
+      "producer_id": "DERIVED-038",
+      "stable_id": "MC-STK-ERR-0849",
+      "class": "wrong_bounded_complex_category",
+      "locus": "derived.tex:6844,6845",
+      "result": "confirmed_wrong_bounded_complex_category",
+      "disposition": "The lemma is dual to the bounded-below injective-resolution result. Projective resolutions and all three complexes are bounded above, so both category annotations must be Comp-minus.",
+      "operations": [
+        {
+          "source_start_line": 6844,
+          "source_end_line": 6844,
+          "old_text": "of $\\text{Comp}^{+}(\\mathcal{A})$",
+          "replacement_text": "of $\\text{Comp}^{-}(\\mathcal{A})$"
+        },
+        {
+          "source_start_line": 6845,
+          "source_end_line": 6845,
+          "old_text": "commutative diagram in $\\text{Comp}^{+}(\\mathcal{A})$",
+          "replacement_text": "commutative diagram in $\\text{Comp}^{-}(\\mathcal{A})$"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-039",
+      "stable_id": "MC-STK-ERR-0850",
+      "class": "singular_plural_disagreement",
+      "locus": "derived.tex:6962",
+      "result": "confirmed_singular_plural_disagreement",
+      "disposition": "The singular article and copula require the singular noun 'consequence'.",
+      "operations": [
+        {
+          "source_start_line": 6962,
+          "source_end_line": 6962,
+          "old_text": "Part (2) is a direct consequences of part (1)",
+          "replacement_text": "Part (2) is a direct consequence of part (1)"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-040",
+      "stable_id": "MC-STK-ERR-0851",
+      "class": "indefinite_article",
+      "locus": "derived.tex:7113",
+      "result": "confirmed_indefinite_article",
+      "disposition": "Independent replay confirms the exact bounded correction at 7113.",
+      "operations": [
+        {
+          "source_start_line": 7113,
+          "source_end_line": 7113,
+          "old_text": "There exists a $i \\ll 0$",
+          "replacement_text": "There exists an $i \\ll 0$"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-041",
+      "stable_id": "MC-STK-ERR-0852",
+      "class": "malformed_hypothesis",
+      "locus": "derived.tex:7278",
+      "result": "confirmed_malformed_hypothesis",
+      "disposition": "Independent replay confirms the exact bounded correction at 7278.",
+      "operations": [
+        {
+          "source_start_line": 7278,
+          "source_end_line": 7278,
+          "old_text": "Suppose that $\\mathcal{A}, \\mathcal{B}, \\mathcal{C}$ be abelian categories.",
+          "replacement_text": "Suppose that $\\mathcal{A}, \\mathcal{B}, \\mathcal{C}$ are abelian categories."
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-042",
+      "stable_id": "MC-STK-ERR-0853",
+      "class": "broken_display_sentence",
+      "locus": "derived.tex:7303,7305",
+      "result": "confirmed_broken_display_sentence",
+      "disposition": "Independent replay confirms the exact bounded correction at 7303, 7305.",
+      "operations": [
+        {
+          "source_start_line": 7303,
+          "source_end_line": 7303,
+          "old_text": "t : R(G \\circ F) \\longrightarrow RG \\circ RF.",
+          "replacement_text": "t : R(G \\circ F) \\longrightarrow RG \\circ RF"
+        },
+        {
+          "source_start_line": 7305,
+          "source_end_line": 7305,
+          "old_text": "is isomorphism of functors",
+          "replacement_text": "is an isomorphism of functors"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-043",
+      "stable_id": "MC-STK-ERR-0854",
+      "class": "unmatched_parenthesis",
+      "locus": "derived.tex:7320",
+      "result": "confirmed_unmatched_parenthesis",
+      "disposition": "Independent replay confirms the exact bounded correction at 7320.",
+      "operations": [
+        {
+          "source_start_line": 7320,
+          "source_end_line": 7320,
+          "old_text": "G(F(I^\\bullet))) \\to",
+          "replacement_text": "G(F(I^\\bullet)) \\to"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-044",
+      "stable_id": "MC-STK-ERR-0855",
+      "class": "malformed_assumption_clause",
+      "locus": "derived.tex:7330,7331",
+      "result": "confirmed_malformed_assumption_clause",
+      "disposition": "Independent replay confirms the exact bounded correction at 7330, 7331.",
+      "operations": [
+        {
+          "source_start_line": 7330,
+          "source_end_line": 7330,
+          "old_text": "With assumptions as in Lemma \\ref{lemma-compose-derived-functors}",
+          "replacement_text": "Assume the hypotheses of Lemma \\ref{lemma-compose-derived-functors}"
+        },
+        {
+          "source_start_line": 7331,
+          "source_end_line": 7331,
+          "old_text": "and assuming the equivalent conditions (1) and (2) hold.",
+          "replacement_text": "and that the equivalent conditions (1) and (2) hold."
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-045",
+      "stable_id": "MC-STK-ERR-0856",
+      "class": "ill_typed_composition_and_category",
+      "locus": "derived.tex:7575,7576",
+      "result": "confirmed_ill_typed_composition_and_category",
+      "disposition": "With i:K->I, a:I->J, and i':K->J, the forced identity is i'=a composed with i in K+(A).",
+      "operations": [
+        {
+          "source_start_line": 7575,
+          "source_end_line": 7575,
+          "old_text": "$i' = i \\circ a$",
+          "replacement_text": "$i' = a \\circ i$"
+        },
+        {
+          "source_start_line": 7576,
+          "source_end_line": 7576,
+          "old_text": "$K^{+}(\\mathcal{I})$. Hence",
+          "replacement_text": "$K^{+}(\\mathcal{A})$. Hence"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-046",
+      "stable_id": "MC-STK-ERR-0857",
+      "class": "wrong_noun_form",
+      "locus": "derived.tex:7396",
+      "result": "confirmed_wrong_noun_form",
+      "disposition": "Independent replay confirms the exact bounded correction at 7396.",
+      "operations": [
+        {
+          "source_start_line": 7396,
+          "source_end_line": 7396,
+          "old_text": "Fully faithfulness is a consequence of",
+          "replacement_text": "Full faithfulness is a consequence of"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-047",
+      "stable_id": "MC-STK-ERR-0858",
+      "class": "wrong_functor_name",
+      "locus": "derived.tex:7570",
+      "result": "confirmed_wrong_functor_name",
+      "disposition": "Independent replay confirms the exact bounded correction at 7570.",
+      "operations": [
+        {
+          "source_start_line": 7570,
+          "source_end_line": 7570,
+          "old_text": "any two localization functors",
+          "replacement_text": "any two resolution functors"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-048",
+      "stable_id": "MC-STK-ERR-0859",
+      "class": "wrong_verb",
+      "locus": "derived.tex:7676",
+      "result": "confirmed_wrong_verb",
+      "disposition": "Independent replay confirms the exact bounded correction at 7676.",
+      "operations": [
+        {
+          "source_start_line": 7676,
+          "source_end_line": 7676,
+          "old_text": "rests to show that the construction above",
+          "replacement_text": "remains to show that the construction above"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-049",
+      "stable_id": "MC-STK-ERR-0860",
+      "class": "editorial_placeholder",
+      "locus": "derived.tex:7759",
+      "result": "confirmed_editorial_placeholder",
+      "disposition": "Independent replay confirms the exact bounded correction at 7759.",
+      "operations": [
+        {
+          "source_start_line": 7759,
+          "source_end_line": 7759,
+          "old_text": "\\item Add more here as needed.",
+          "replacement_text": ""
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-050",
+      "stable_id": "MC-STK-ERR-0861",
+      "class": "misplaced_complex_decoration",
+      "locus": "derived.tex:7707,7710",
+      "result": "confirmed_misplaced_complex_decoration",
+      "disposition": "Independent replay confirms the exact bounded correction at 7707, 7710.",
+      "operations": [
+        {
+          "source_start_line": 7707,
+          "source_end_line": 7707,
+          "old_text": "j(K)^\\bullet",
+          "replacement_text": "j(K^\\bullet)"
+        },
+        {
+          "source_start_line": 7710,
+          "source_end_line": 7710,
+          "old_text": "j(L)^\\bullet",
+          "replacement_text": "j(L^\\bullet)"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-051",
+      "stable_id": "MC-STK-ERR-0862",
+      "class": "missing_terminal_punctuation",
+      "locus": "derived.tex:7780",
+      "result": "confirmed_missing_terminal_punctuation",
+      "disposition": "Independent replay confirms the exact bounded correction at 7780.",
+      "operations": [
+        {
+          "source_start_line": 7780,
+          "source_end_line": 7780,
+          "old_text": "Let $\\mathcal{A}$ be an abelian category with enough injectives",
+          "replacement_text": "Let $\\mathcal{A}$ be an abelian category with enough injectives."
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-052",
+      "stable_id": "MC-STK-ERR-0863",
+      "class": "reversed_functor_tuple",
+      "locus": "derived.tex:7782",
+      "result": "confirmed_reversed_functor_tuple",
+      "disposition": "Independent replay confirms the exact bounded correction at 7782.",
+      "operations": [
+        {
+          "source_start_line": 7782,
+          "source_end_line": 7782,
+          "old_text": "Let $(i, j)$ be a resolution functor",
+          "replacement_text": "Let $(j, i)$ be a resolution functor"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-053",
+      "stable_id": "MC-STK-ERR-0864",
+      "class": "undefined_resolution_argument",
+      "locus": "derived.tex:7978",
+      "result": "confirmed_undefined_resolution_argument",
+      "disposition": "Independent replay confirms the exact bounded correction at 7978.",
+      "operations": [
+        {
+          "source_start_line": 7978,
+          "source_end_line": 7978,
+          "old_text": "$A[0] \\to I^\\bullet$ and $C[0] \\to J^\\bullet$",
+          "replacement_text": "$A[0] \\to I^\\bullet$ and $B[0] \\to J^\\bullet$"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-054",
+      "stable_id": "MC-STK-ERR-0865",
+      "class": "wrong_filtered_object_category",
+      "locus": "derived.tex:7946,7948",
+      "result": "confirmed_wrong_filtered_object_category",
+      "disposition": "Independent replay confirms the exact bounded correction at 7946, 7948.",
+      "operations": [
+        {
+          "source_start_line": 7946,
+          "source_end_line": 7946,
+          "old_text": "$\\mathcal{A}$. Denote $d^0$",
+          "replacement_text": "$\\text{Fil}^f(\\mathcal{A})$. Denote $d^0$"
+        },
+        {
+          "source_start_line": 7948,
+          "source_end_line": 7948,
+          "old_text": "a filtered injective object of $\\mathcal{A}$",
+          "replacement_text": "a filtered injective object of $\\text{Fil}^f(\\mathcal{A})$"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-055",
+      "stable_id": "MC-STK-ERR-0866",
+      "class": "wrong_map_source",
+      "locus": "derived.tex:8092",
+      "result": "confirmed_wrong_map_source",
+      "disposition": "Independent replay confirms the exact bounded correction at 8092.",
+      "operations": [
+        {
+          "source_start_line": 8092,
+          "source_end_line": 8092,
+          "old_text": "$b \\oplus c \\circ \\beta : M \\to I^0 \\oplus J^0$",
+          "replacement_text": "$b \\oplus c \\circ \\beta : B \\to I^0 \\oplus J^0$"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-056",
+      "stable_id": "MC-STK-ERR-0867",
+      "class": "missing_preposition",
+      "locus": "derived.tex:8176",
+      "result": "confirmed_missing_preposition",
+      "disposition": "Independent replay confirms the exact bounded correction at 8176.",
+      "operations": [
+        {
+          "source_start_line": 8176,
+          "source_end_line": 8176,
+          "old_text": "Denote $\\text{Tot}(I^{\\bullet, \\bullet})$",
+          "replacement_text": "Denote by $\\text{Tot}(I^{\\bullet, \\bullet})$"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-057",
+      "stable_id": "MC-STK-ERR-0868",
+      "class": "wrong_homotopy_category",
+      "locus": "derived.tex:8288,8289",
+      "result": "confirmed_wrong_homotopy_category",
+      "disposition": "Independent replay confirms the exact bounded correction at 8288, 8289.",
+      "operations": [
+        {
+          "source_start_line": 8288,
+          "source_end_line": 8288,
+          "old_text": "\\Hom_{K(\\mathcal{A})}(L^\\bullet, I^\\bullet)",
+          "replacement_text": "\\Hom_{K(\\text{Fil}^f(\\mathcal{A}))}(L^\\bullet, I^\\bullet)"
+        },
+        {
+          "source_start_line": 8289,
+          "source_end_line": 8289,
+          "old_text": "\\Hom_{K(\\mathcal{A})}(K^\\bullet, I^\\bullet)",
+          "replacement_text": "\\Hom_{K(\\text{Fil}^f(\\mathcal{A}))}(K^\\bullet, I^\\bullet)"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-058",
+      "stable_id": "MC-STK-ERR-0869",
+      "class": "possessive_typography",
+      "locus": "derived.tex:8364",
+      "result": "confirmed_possessive_typography",
+      "disposition": "Independent replay confirms the exact bounded correction at 8364.",
+      "operations": [
+        {
+          "source_start_line": 8364,
+          "source_end_line": 8364,
+          "old_text": "if we use a set worth of diagrams",
+          "replacement_text": "if we use a set's worth of diagrams"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-059",
+      "stable_id": "MC-STK-ERR-0870",
+      "class": "missing_copula",
+      "locus": "derived.tex:8573",
+      "result": "confirmed_missing_copula",
+      "disposition": "Independent replay confirms the exact bounded correction at 8573.",
+      "operations": [
+        {
+          "source_start_line": 8573,
+          "source_end_line": 8573,
+          "old_text": "Note that this stupid in the sense that",
+          "replacement_text": "Note that this is stupid in the sense that"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-060",
+      "stable_id": "MC-STK-ERR-0871",
+      "class": "malformed_idiom",
+      "locus": "derived.tex:8603",
+      "result": "confirmed_malformed_idiom",
+      "disposition": "Independent replay confirms the exact bounded correction at 8603.",
+      "operations": [
+        {
+          "source_start_line": 8603,
+          "source_end_line": 8603,
+          "old_text": "could just have well developed the whole theory",
+          "replacement_text": "could just as well have developed the whole theory"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-061",
+      "stable_id": "MC-STK-ERR-0872",
+      "class": "wrong_singular_plural_reference_noun",
+      "locus": "derived.tex:8447",
+      "result": "confirmed_wrong_singular_plural_reference_noun",
+      "disposition": "Independent replay confirms the exact bounded correction at 8447.",
+      "operations": [
+        {
+          "source_start_line": 8447,
+          "source_end_line": 8447,
+          "old_text": "Lemmas \\ref{lemma-injective-acyclic}",
+          "replacement_text": "Lemma \\ref{lemma-injective-acyclic}"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-062",
+      "stable_id": "MC-STK-ERR-0873",
+      "class": "wrong_spectral_sequence_abutment_and_missing_degreewise_clause",
+      "locus": "derived.tex:8530,8531",
+      "result": "confirmed_wrong_spectral_sequence_abutment_and_missing_degreewise_clause",
+      "disposition": "The spectral sequence converges to the graded object R-star; each degree H^n=R^n receives the induced finite filtration.",
+      "operations": [
+        {
+          "source_start_line": 8530,
+          "source_end_line": 8530,
+          "old_text": "$H^n(T(I^\\bullet)) = R^nT(K^\\bullet)$",
+          "replacement_text": "$H^*(T(I^\\bullet)) = R^*T(K^\\bullet)$"
+        },
+        {
+          "source_start_line": 8531,
+          "source_end_line": 8531,
+          "old_text": "moreover inducing finite filtrations on each of the terms",
+          "replacement_text": "and induces a finite filtration on each $H^n(T(I^\\bullet)) = R^nT(K^\\bullet)$"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-063",
+      "stable_id": "MC-STK-ERR-0874",
+      "class": "wrong_cross_chapter_reference",
+      "locus": "derived.tex:8044",
+      "result": "confirmed_wrong_cross_chapter_reference",
+      "disposition": "The unprefixed label resolves to an unrelated local Derived lemma; the required strictness result is the Homology lemma.",
+      "operations": [
+        {
+          "source_start_line": 8044,
+          "source_end_line": 8044,
+          "old_text": "\\ref{lemma-filtered-acyclic}",
+          "replacement_text": "\\ref{homology-lemma-filtered-acyclic}"
+        }
+      ]
+    }
+  ],
+  "rejected": []
+}

@@ -21,18 +21,17 @@ unified repository, not a separate edition.
 
 ## Integrated registry cutoff
 
-- Admitted overlay batches: **17** (`R1` through `R17`).
-- Stable correction IDs in those batches: **444**.
-- Highest stable identifier: `MC-STK-ERR-0811`; identifier gaps are
+- Admitted overlay batches: **19** (`R1` through `R19`).
+- Stable correction IDs in those batches: **507**.
+- Highest stable identifier: `MC-STK-ERR-0874`; identifier gaps are
   intentional and retained.
 - This subtree is bound to registry commit
-  `39d8146ca0af49b1d9eaf0742559f64d712bfd8e`. R18 was the next leased
-  namespace at that cutoff; later registry admissions enter a subsequent
-  source-composition and build cycle.
+  `24861b306a34991c0da3d803f92d67e206c805da`. R20 was the next leased
+  namespace at that cutoff; later admissions enter a subsequent cycle.
 
 The authoritative overlay list is
 [`registry/overlays.json`](registry/overlays.json). The integrated root source
-contains the admitted R1–R17 composition; registry admission and source
+contains the admitted R1–R19 composition; registry admission and source
 composition remain separately testable states.
 
 ## Directory map

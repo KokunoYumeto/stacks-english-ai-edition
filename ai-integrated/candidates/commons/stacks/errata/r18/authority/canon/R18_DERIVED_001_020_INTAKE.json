@@ -1,0 +1,183 @@
+{
+  "adjudication": {
+    "DERIVED-001": "confirmed_wrong_factorization_arrow",
+    "DERIVED-002": "confirmed_wrong_shifted_arrow",
+    "DERIVED-003": "confirmed_wrong_result_noun",
+    "DERIVED-004": "confirmed_duplicated_word",
+    "DERIVED-005": "confirmed_grammar_error",
+    "DERIVED-006": "confirmed_grammar_error",
+    "DERIVED-007": "confirmed_category_typing_error",
+    "DERIVED-008": "confirmed_category_typing_error",
+    "DERIVED-009": "confirmed_category_typing_error",
+    "DERIVED-010": "confirmed_grammar_error",
+    "DERIVED-011": "confirmed_grammar_error",
+    "DERIVED-012": "confirmed_grammar_error",
+    "DERIVED-013": "confirmed_incomplete_triangle_tuple",
+    "DERIVED-014": "confirmed_incomplete_triangle_tuple",
+    "DERIVED-015": "confirmed_grammar_error",
+    "DERIVED-016": "confirmed_reader_placeholder",
+    "DERIVED-017": "confirmed_grammar_error",
+    "DERIVED-018": "confirmed_grammar_error",
+    "DERIVED-019": "confirmed_grammar_error",
+    "DERIVED-020": "confirmed_grammar_error"
+  },
+  "allegation_locator_policy": {
+    "adjudication_authorities": [
+      "frozen derived.tex bytes",
+      "the pinned Stacks definitions and proofs",
+      "all seventeen admitted overlay source maps and rejection ledgers"
+    ],
+    "producer_source_emendations_json": "pinned as bounded allegation evidence only; every row independently replayed against frozen authority",
+    "shared_producer_ledger": "used only to locate bounded allegations"
+  },
+  "allegation_locators": [
+    {
+      "class": "undefined_morphism_symbol",
+      "locus": "derived.tex:1340",
+      "producer_id": "DERIVED-001"
+    },
+    {
+      "class": "wrong_shifted_vertical_morphism",
+      "locus": "derived.tex:1423",
+      "producer_id": "DERIVED-002"
+    },
+    {
+      "class": "wrong_result_type_reference",
+      "locus": "derived.tex:1445",
+      "producer_id": "DERIVED-003"
+    },
+    {
+      "class": "duplicated_copula",
+      "locus": "derived.tex:1521",
+      "producer_id": "DERIVED-004"
+    },
+    {
+      "class": "extraneous_auxiliary",
+      "locus": "derived.tex:2061",
+      "producer_id": "DERIVED-005"
+    },
+    {
+      "class": "missing_indefinite_article",
+      "locus": "derived.tex:2204",
+      "producer_id": "DERIVED-006"
+    },
+    {
+      "class": "wrong_hom_category_subscript",
+      "locus": "derived.tex:2361",
+      "producer_id": "DERIVED-007"
+    },
+    {
+      "class": "wrong_yoneda_test_category",
+      "locus": "derived.tex:2362",
+      "producer_id": "DERIVED-008"
+    },
+    {
+      "class": "wrong_hom_category_subscripts",
+      "locus": "derived.tex:2364",
+      "producer_id": "DERIVED-009"
+    },
+    {
+      "class": "malformed_definition_clause",
+      "locus": "derived.tex:2424",
+      "producer_id": "DERIVED-010"
+    },
+    {
+      "class": "subject_verb_disagreement",
+      "locus": "derived.tex:2533",
+      "producer_id": "DERIVED-011"
+    },
+    {
+      "class": "number_and_article_error",
+      "locus": "derived.tex:2855",
+      "producer_id": "DERIVED-012"
+    },
+    {
+      "class": "missing_triangle_arrow",
+      "locus": "derived.tex:3129",
+      "producer_id": "DERIVED-013"
+    },
+    {
+      "class": "missing_triangle_arrow",
+      "locus": "derived.tex:3130",
+      "producer_id": "DERIVED-014"
+    },
+    {
+      "class": "wrong_indefinite_article",
+      "locus": "derived.tex:3422",
+      "producer_id": "DERIVED-015"
+    },
+    {
+      "class": "unresolved_editorial_placeholder",
+      "locus": "derived.tex:3651",
+      "producer_id": "DERIVED-016"
+    },
+    {
+      "class": "missing_preposition",
+      "locus": "derived.tex:3702",
+      "producer_id": "DERIVED-017"
+    },
+    {
+      "class": "incomplete_participial_modifier",
+      "locus": "derived.tex:3968",
+      "producer_id": "DERIVED-018"
+    },
+    {
+      "class": "article_number_disagreement",
+      "locus": "derived.tex:4056",
+      "producer_id": "DERIVED-019"
+    },
+    {
+      "class": "wrong_noun_number",
+      "locus": "derived.tex:4062",
+      "producer_id": "DERIVED-020"
+    }
+  ],
+  "authority": {
+    "bytes": 449677,
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "line_endings": "LF-only with terminal LF",
+    "mutated": false,
+    "path": "authority/source/derived.tex",
+    "physical_lines": 12604,
+    "sha256": "EFDA4CB361DD40909D1991161EAE716E58B6CF9E79380971502E1DA12396D402",
+    "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e"
+  },
+  "bounded_source": {
+    "bytes": 97239,
+    "end_line": 4062,
+    "physical_lines": 2723,
+    "sha256": "66672E057CBDA1CC07E5808CC652E42E49CEA2547EB69F529374D9ECF95219F7",
+    "start_line": 1340
+  },
+  "candidate_id": "stacks-errata-a04446e-r18",
+  "closure": {
+    "accepted": 20,
+    "operations": 20,
+    "producer_rows": 20,
+    "rejected": 0,
+    "rejected_duplicate": 0,
+    "stable_ids": "MC-STK-ERR-0812..MC-STK-ERR-0831",
+    "unresolved": 0
+  },
+  "corrected_bounded_replay": {
+    "bytes": 97227,
+    "old_spans_unique_in_declared_lines": true,
+    "operations_nonoverlapping": true,
+    "physical_lines": 2723,
+    "sha256": "9FE4FF51F102208C217CB0F3EBD6C43926B275E5BC85600DF8997A80E50CF071"
+  },
+  "deduplication": {
+    "accepted_overlap": false,
+    "duplicate_aliases": {},
+    "public_candidates_checked": "R1..R17",
+    "registered_entries_checked": 17
+  },
+  "recorded_at_utc": "2026-08-25T02:29:00Z",
+  "schema": "stacks-canon-errata-intake/v1",
+  "write_boundaries": {
+    "canonical_translations": "immutable",
+    "english_authority": "immutable",
+    "payload_derivation": "directly from frozen authority, never a prior payload",
+    "producer_emendation_manifest": "bounded snapshot retained as evidence; independently adjudicated rather than treated as canon"
+  }
+}
