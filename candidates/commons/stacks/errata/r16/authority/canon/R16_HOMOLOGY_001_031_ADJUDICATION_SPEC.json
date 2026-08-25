@@ -1,0 +1,177 @@
+{
+  "schema": "mathematics-commons-stacks-r16-adjudication-spec/v1",
+  "candidate_id": "stacks-errata-a04446e-r16",
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "authority_sha256": "483CAF01B4BD164DBC9103D76196E294E00EFE17E706178ECF2DC2C1DEF4ABE0",
+  "accepted": [
+    {
+      "producer_id": "HOMOLOGY-001", "stable_id": "MC-STK-ERR-0753", "class": "subject_verb_disagreement", "locus": "homology.tex:634",
+      "result": "confirmed_grammar_error", "disposition": "Use the plural finite verb with the first-person plural subject.",
+      "operations": [{"source_start_line": 634, "source_end_line": 634, "old_text": "observes that", "replacement_text": "observe that"}]
+    },
+    {
+      "producer_id": "HOMOLOGY-002", "stable_id": "MC-STK-ERR-0754", "class": "omitted_governing_verb", "locus": "homology.tex:729",
+      "result": "confirmed_grammar_error", "disposition": "Restore the governing verb in the definition.",
+      "operations": [{"source_start_line": 729, "source_end_line": 729, "old_text": "We a", "replacement_text": "We say a"}]
+    },
+    {
+      "producer_id": "HOMOLOGY-003", "stable_id": "MC-STK-ERR-0755", "class": "number_disagreement", "locus": "homology.tex:965",
+      "result": "confirmed_grammar_error", "disposition": "Use the singular noun for the one morphism introduced by a singular article.",
+      "operations": [{"source_start_line": 965, "source_end_line": 965, "old_text": "an epimorphisms", "replacement_text": "an epimorphism"}]
+    },
+    {
+      "producer_id": "HOMOLOGY-004", "stable_id": "MC-STK-ERR-0756", "class": "wrong_morphism_label", "locus": "homology.tex:1107",
+      "result": "confirmed_morphism_label_error", "disposition": "Use the projection pi-double-prime defined for the displayed map to the cokernel; p denotes the pullback object elsewhere in the proof.",
+      "operations": [{"source_start_line": 1107, "source_end_line": 1107, "old_text": "\\xrightarrow{p}", "replacement_text": "\\xrightarrow{\\pi''}"}]
+    },
+    {
+      "producer_id": "HOMOLOGY-005", "stable_id": "MC-STK-ERR-0757", "class": "missing_grammatical_subject", "locus": "homology.tex:1494",
+      "result": "confirmed_grammar_error", "disposition": "Replace the adverbial fragment with a grammatical subject phrase.",
+      "operations": [{"source_start_line": 1494, "source_end_line": 1494, "old_text": "Similarly holds", "replacement_text": "The same holds"}]
+    },
+    {
+      "producer_id": "HOMOLOGY-006", "stable_id": "MC-STK-ERR-0758", "class": "subject_verb_disagreement", "locus": "homology.tex:1530",
+      "result": "confirmed_grammar_error", "disposition": "Use the third-person singular verb.",
+      "operations": [{"source_start_line": 1530, "source_end_line": 1530, "old_text": "it suffice", "replacement_text": "it suffices"}]
+    },
+    {
+      "producer_id": "HOMOLOGY-007", "stable_id": "MC-STK-ERR-0759", "class": "tense_disagreement", "locus": "homology.tex:1568",
+      "result": "confirmed_grammar_error", "disposition": "State the current consequence in the present tense, consistently with the surrounding proof.",
+      "operations": [{"source_start_line": 1568, "source_end_line": 1568, "old_text": "$F$ preserved direct sums", "replacement_text": "$F$ preserves direct sums"}]
+    },
+    {
+      "producer_id": "HOMOLOGY-008", "stable_id": "MC-STK-ERR-0760", "class": "unmatched_closing_parenthesis", "locus": "homology.tex:1716",
+      "result": "confirmed_formula_delimiter_error", "disposition": "Remove the superfluous closing parenthesis from the cokernel expression.",
+      "operations": [{"source_start_line": 1716, "source_end_line": 1716, "old_text": "aA_1))", "replacement_text": "aA_1)"}]
+    },
+    {
+      "producer_id": "HOMOLOGY-009", "stable_id": "MC-STK-ERR-0761", "class": "missing_definite_article", "locus": "homology.tex:1785",
+      "result": "confirmed_grammar_error", "disposition": "Add the article for the specific construction just introduced.",
+      "operations": [{"source_start_line": 1785, "source_end_line": 1785, "old_text": "show construction above", "replacement_text": "show the construction above"}]
+    },
+    {
+      "producer_id": "HOMOLOGY-010", "stable_id": "MC-STK-ERR-0762", "class": "wrong_morphism_in_extension_equation", "locus": "homology.tex:1848",
+      "result": "confirmed_morphism_identity_error", "disposition": "Make b extend g; a already extends f, and the proof then constructs the extension of f+g.",
+      "operations": [{"source_start_line": 1848, "source_end_line": 1848, "old_text": "and $b \\circ r = s_2 \\circ f$.", "replacement_text": "and $b \\circ r = s_2 \\circ g$."}]
+    },
+    {
+      "producer_id": "HOMOLOGY-011", "stable_id": "MC-STK-ERR-0763", "class": "malformed_map_description", "locus": "homology.tex:2359",
+      "result": "confirmed_prose_and_typing_error", "disposition": "State explicitly how the first map in the displayed presentation acts.",
+      "operations": [{"source_start_line": 2359, "source_end_line": 2359, "old_text": "with $[A \\to B \\to C] \\mapsto [B] - [A] - [C]$ of $K_0(\\mathcal{A})$.", "replacement_text": "where the first map sends $[A \\to B \\to C]$ to $[B] - [A] - [C]$."}]
+    },
+    {
+      "producer_id": "HOMOLOGY-012", "stable_id": "MC-STK-ERR-0764", "class": "verb_form_error", "locus": "homology.tex:2365",
+      "result": "confirmed_grammar_error", "disposition": "Use the passive past-tense verb phrase.",
+      "operations": [{"source_start_line": 2365, "source_end_line": 2365, "old_text": "where computed", "replacement_text": "were computed"}]
+    },
+    {
+      "producer_id": "HOMOLOGY-013", "stable_id": "MC-STK-ERR-0765", "class": "number_and_modal_omission", "locus": "homology.tex:2467-2468",
+      "result": "confirmed_grammar_error", "disposition": "Use the plural proofs for two lemmas and restore the modal required by the existence assertion.",
+      "operations": [
+        {"source_start_line": 2467, "source_end_line": 2467, "old_text": "The proof of Lemmas", "replacement_text": "The proofs of Lemmas"},
+        {"source_start_line": 2468, "source_end_line": 2468, "old_text": "show that we choose", "replacement_text": "show that we can choose"}
+      ]
+    },
+    {
+      "producer_id": "HOMOLOGY-014", "stable_id": "MC-STK-ERR-0766", "class": "number_disagreement", "locus": "homology.tex:2679",
+      "result": "confirmed_grammar_error", "disposition": "Use the plural for the collection indexed by degree.",
+      "operations": [{"source_start_line": 2679, "source_end_line": 2679, "old_text": "transformation of functors", "replacement_text": "transformations of functors"}]
+    },
+    {
+      "producer_id": "HOMOLOGY-015", "stable_id": "MC-STK-ERR-0767", "class": "number_disagreement", "locus": "homology.tex:2723",
+      "result": "confirmed_grammar_error", "disposition": "Use the plural for the sequence of degree-indexed transformations.",
+      "operations": [{"source_start_line": 2723, "source_end_line": 2723, "old_text": "transformation of functors", "replacement_text": "transformations of functors"}]
+    },
+    {
+      "producer_id": "HOMOLOGY-016", "stable_id": "MC-STK-ERR-0768", "class": "duplicated_letter", "locus": "homology.tex:3246",
+      "result": "confirmed_typographical_error", "disposition": "Remove the duplicated final letter.",
+      "operations": [{"source_start_line": 3246, "source_end_line": 3246, "old_text": "exactnesss", "replacement_text": "exactness"}]
+    },
+    {
+      "producer_id": "HOMOLOGY-017", "stable_id": "MC-STK-ERR-0769", "class": "homology_cohomology_misnomer", "locus": "homology.tex:3560",
+      "result": "confirmed_construction_name_error", "disposition": "Name the long exact cohomology sequence used for cochain complexes and displayed H^i groups.",
+      "operations": [{"source_start_line": 3560, "source_end_line": 3560, "old_text": "long exact homology sequence", "replacement_text": "long exact cohomology sequence"}]
+    },
+    {
+      "producer_id": "HOMOLOGY-018", "stable_id": "MC-STK-ERR-0770", "class": "compound_noun_number_error", "locus": "homology.tex:4048",
+      "result": "confirmed_grammar_error", "disposition": "Use the attributive singular in the compound noun.",
+      "operations": [{"source_start_line": 4048, "source_end_line": 4048, "old_text": "vectors spaces", "replacement_text": "vector spaces"}]
+    },
+    {
+      "producer_id": "HOMOLOGY-019", "stable_id": "MC-STK-ERR-0771", "class": "unfinished_unit_sentence", "locus": "homology.tex:4074",
+      "result": "confirmed_incomplete_proof_sentence", "disposition": "Complete the sentence by naming the monoidal unit constructed immediately above.",
+      "operations": [{"source_start_line": 4074, "source_end_line": 4074, "old_text": "As unit we take", "replacement_text": "As unit we take the object $\\mathbf{1}$ described above."}]
+    },
+    {
+      "producer_id": "HOMOLOGY-020", "stable_id": "MC-STK-ERR-0772", "class": "summation_scope_error", "locus": "homology.tex:4231-4232",
+      "result": "confirmed_formula_scope_error", "disposition": "Parenthesize the full signed three-term differential so the indexed summation binds every summand.",
+      "operations": [
+        {"source_start_line": 4231, "source_end_line": 4231, "old_text": "\\sum\\nolimits_{p + q + r = n}", "replacement_text": "\\sum\\nolimits_{p + q + r = n}\\left("},
+        {"source_start_line": 4232, "source_end_line": 4232, "old_text": "d_1^{p, q, r} + (-1)^pd_2^{p, q, r} + (-1)^{p + q}d_3^{p, q, r}", "replacement_text": "d_1^{p, q, r} + (-1)^pd_2^{p, q, r} + (-1)^{p + q}d_3^{p, q, r}\\right)"}
+      ]
+    },
+    {
+      "producer_id": "HOMOLOGY-021", "stable_id": "MC-STK-ERR-0773", "class": "missing_definite_article", "locus": "homology.tex:4242",
+      "result": "confirmed_grammar_error", "disposition": "Add the article for the particular totalized sum.",
+      "operations": [{"source_start_line": 4242, "source_end_line": 4242, "old_text": "combine sum of those", "replacement_text": "combine the sum of those"}]
+    },
+    {
+      "producer_id": "HOMOLOGY-022", "stable_id": "MC-STK-ERR-0774", "class": "component_codomain_type_error", "locus": "homology.tex:4435",
+      "result": "confirmed_bidegree_type_error", "disposition": "Give the component s^{p,q} its fixed-bidegree codomain B^{p,q}, not the unspecialized column complex.",
+      "operations": [{"source_start_line": 4435, "source_end_line": 4435, "old_text": "B^{\\bullet, q}", "replacement_text": "B^{p, q}"}]
+    },
+    {
+      "producer_id": "HOMOLOGY-023", "stable_id": "MC-STK-ERR-0775", "class": "homotopy_component_indices_swapped", "locus": "homology.tex:4518",
+      "result": "confirmed_bidegree_index_error", "disposition": "Describe h^{p,q} as the degree-q component of the column-complex homotopy h^p, matching its displayed type.",
+      "operations": [{"source_start_line": 4518, "source_end_line": 4518, "old_text": "the component in degree $p$ of $h^q$", "replacement_text": "the component in degree $q$ of $h^p$"}]
+    },
+    {
+      "producer_id": "HOMOLOGY-024", "stable_id": "MC-STK-ERR-0776", "class": "wrong_double_complex_shift", "locus": "homology.tex:4581",
+      "result": "confirmed_shift_index_error", "disposition": "Shift the first index, consistently with the convention and the later comparison diagram.",
+      "operations": [{"source_start_line": 4581, "source_end_line": 4581, "old_text": "A^{\\bullet, \\bullet}[0, 1]", "replacement_text": "A^{\\bullet, \\bullet}[1, 0]"}]
+    },
+    {
+      "producer_id": "HOMOLOGY-025", "stable_id": "MC-STK-ERR-0777", "class": "splitting_component_indices_swapped", "locus": "homology.tex:4608-4609",
+      "result": "confirmed_bidegree_type_error", "disposition": "Give s^{p,q} codomain B^{p,q} and identify it with the bidegree components of the row-indexed splittings s^p and pi^p.",
+      "operations": [
+        {"source_start_line": 4608, "source_end_line": 4608, "old_text": "B^{\\bullet, q}", "replacement_text": "B^{p, q}"},
+        {"source_start_line": 4609, "source_end_line": 4609, "old_text": "the components of $s^q$ and $\\pi^q$", "replacement_text": "the components of $s^p$ and $\\pi^p$"}
+      ]
+    },
+    {
+      "producer_id": "HOMOLOGY-026", "stable_id": "MC-STK-ERR-0778", "class": "missing_definite_article", "locus": "homology.tex:5007",
+      "result": "confirmed_grammar_error", "disposition": "Add the article for the specific displayed map.",
+      "operations": [{"source_start_line": 5007, "source_end_line": 5007, "old_text": "hence map", "replacement_text": "hence the map"}]
+    },
+    {
+      "producer_id": "HOMOLOGY-027", "stable_id": "MC-STK-ERR-0779", "class": "graded_quotient_kernel_ill_typed", "locus": "homology.tex:5010-5011",
+      "result": "confirmed_quotient_and_kernel_type_error", "disposition": "Use the actual graded quotient target, parenthesize the kernel numerator, quotient by F^{p+1}A, and state the final canonical isomorphism.",
+      "operations": [
+        {"source_start_line": 5010, "source_end_line": 5010, "old_text": "The kernel of $F^pA/F^{p + 1}A \\to A/X + F^{p + 1}A$", "replacement_text": "The kernel of the map $F^pA/F^{p + 1}A \\to (F^pA + X)/(F^{p + 1}A + X)$"},
+        {"source_start_line": 5011, "source_end_line": 5011, "old_text": "is clearly $F^{p + 1}A + X \\cap F^pA/F^{p + 1}A = F^pX/F^{p + 1}X$", "replacement_text": "is $(F^{p + 1}A + (X \\cap F^pA))/F^{p + 1}A \\cong F^pX/F^{p + 1}X$,"}
+      ]
+    },
+    {
+      "producer_id": "HOMOLOGY-028", "stable_id": "MC-STK-ERR-0780", "class": "number_disagreement", "locus": "homology.tex:5013",
+      "result": "confirmed_grammar_error", "disposition": "Use the plural noun after the determiner two.",
+      "operations": [{"source_start_line": 5013, "source_end_line": 5013, "old_text": "The two short exact sequence", "replacement_text": "The two short exact sequences"}]
+    },
+    {
+      "producer_id": "HOMOLOGY-029", "stable_id": "MC-STK-ERR-0781", "class": "article_conjunction_typo", "locus": "homology.tex:5052",
+      "result": "confirmed_typographical_error", "disposition": "Use the indefinite article before isomorphism.",
+      "operations": [{"source_start_line": 5052, "source_end_line": 5052, "old_text": "induces and isomorphism", "replacement_text": "induces an isomorphism"}]
+    },
+    {
+      "producer_id": "HOMOLOGY-030", "stable_id": "MC-STK-ERR-0782", "class": "unmatched_closing_parenthesis", "locus": "homology.tex:5082",
+      "result": "confirmed_formula_delimiter_error", "disposition": "Remove the superfluous closing parenthesis in the image quotient.",
+      "operations": [{"source_start_line": 5082, "source_end_line": 5082, "old_text": "\\Im(\\text{gr}(\\alpha)))", "replacement_text": "\\Im(\\text{gr}(\\alpha))"}]
+    },
+    {
+      "producer_id": "HOMOLOGY-031", "stable_id": "MC-STK-ERR-0783", "class": "reversed_induction_range", "locus": "homology.tex:5124",
+      "result": "confirmed_induction_index_error", "disposition": "Use p at most n for the induction hypothesis on A/F^n; then p=n+1 is the new case.",
+      "operations": [{"source_start_line": 5124, "source_end_line": 5124, "old_text": "p \\geq n", "replacement_text": "p \\leq n"}]
+    }
+  ],
+  "rejected": []
+}
