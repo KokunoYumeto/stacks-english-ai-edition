@@ -1,0 +1,1154 @@
+{
+  "audit_runs": [
+    {
+      "header_sha256": "76B6CAB96D03CF7EDE72F8BC28D769D571D54D77534181635B9717862B09C36D",
+      "id": "A000020",
+      "raw_bytes": 436,
+      "raw_sha256": "BA04DED3D183272F74E79ACF361894796684CCC0EFC2CEE341EF31A3911B36F2",
+      "row": {
+        "disposition": "mathematics accepted; receipt detail rejected",
+        "duration_ms": "78274",
+        "model": "gpt-5.3-codex-spark",
+        "owner_check": "Owner independently checked the proof and edge cases; actual source receipt is F8 and LOCAL_WORKTREE denotes only the target state",
+        "returned": "Lemma and proof are correct including zero-ring and non-Jacobson edge cases; source receipt was described incorrectly as LOCAL_WORKTREE",
+        "run_id": "A000020",
+        "scope": "adversarial mathematics review",
+        "status": "completed",
+        "task_id": "019fddd2-492a-71a3-90e1-1af8df212e5b",
+        "thinking": "xhigh",
+        "writes": "none"
+      }
+    },
+    {
+      "header_sha256": "76B6CAB96D03CF7EDE72F8BC28D769D571D54D77534181635B9717862B09C36D",
+      "id": "A000021",
+      "raw_bytes": 300,
+      "raw_sha256": "7FF2438ACDC297F9F6E935EC882E789B4021C0EEFF0098C4309552E6D4FC9FF3",
+      "row": {
+        "disposition": "accepted",
+        "duration_ms": "103696",
+        "model": "gpt-5.3-codex-spark",
+        "owner_check": "Owner repeated bounded label and phrase searches and checked the nearest radical lemmas",
+        "returned": "No existing exact named Stacks lemma duplicates the Jacobson-neighbourhood statement",
+        "run_id": "A000021",
+        "scope": "bounded duplicate search",
+        "status": "completed",
+        "task_id": "019fddd2-51d4-7061-932b-7baaaa42c15d",
+        "thinking": "xhigh",
+        "writes": "none"
+      }
+    },
+    {
+      "header_sha256": "76B6CAB96D03CF7EDE72F8BC28D769D571D54D77534181635B9717862B09C36D",
+      "id": "A000022",
+      "raw_bytes": 274,
+      "raw_sha256": "AB42E941556CBC3B3424E395D8EC8893FE198C5C61B6A383286D38C71B709A9C",
+      "row": {
+        "disposition": "accepted",
+        "duration_ms": "11440",
+        "model": "gpt-5.3-codex-spark",
+        "owner_check": "Owner inspected the exact diff and surrounding source",
+        "returned": "New algebra and more-algebra lines follow local conventions and remain below 80 columns",
+        "run_id": "A000022",
+        "scope": "Stacks source-convention audit",
+        "status": "completed",
+        "task_id": "019fddd2-5b13-7562-b38f-bc5782a8bd00",
+        "thinking": "xhigh",
+        "writes": "none"
+      }
+    },
+    {
+      "header_sha256": "76B6CAB96D03CF7EDE72F8BC28D769D571D54D77534181635B9717862B09C36D",
+      "id": "A000023",
+      "raw_bytes": 308,
+      "raw_sha256": "76308160E8371DF7383B50E09EE40E37BC420F99899B629FB2F42261F016A023",
+      "row": {
+        "disposition": "accepted",
+        "duration_ms": "46582",
+        "model": "gpt-5.3-codex-spark",
+        "owner_check": "Owner checked every referenced lemma and the logical order in more-algebra.tex",
+        "returned": "Verified etale to flat then open image containing V(I) then surjective spectrum then faithfully flat",
+        "run_id": "A000023",
+        "scope": "use-site implication audit",
+        "status": "completed",
+        "task_id": "019fddd2-641a-7591-9d17-2bf31cd10b29",
+        "thinking": "xhigh",
+        "writes": "none"
+      }
+    },
+    {
+      "header_sha256": "76B6CAB96D03CF7EDE72F8BC28D769D571D54D77534181635B9717862B09C36D",
+      "id": "A000029",
+      "raw_bytes": 400,
+      "raw_sha256": "0251935B172A4D717606C704BFB369697C8C38835740343FEA7854A3E2F6311B",
+      "row": {
+        "disposition": "accepted across two read-only turns",
+        "duration_ms": "not_exposed",
+        "model": "inherited-parent",
+        "owner_check": "Owner reproduced the bounded duplicate search and checked the proof dependency order and two uses",
+        "returned": "Confirmed 1.2.3 is merged into 00E2; found the 1.2.4 gap; then passed the integrated lemma and both uses including degenerate cases",
+        "run_id": "A000029",
+        "scope": "EGA I 1.2.3-1.2.4 mapping and follow-on lemma audit",
+        "status": "completed",
+        "task_id": "/root/ega_i_123_124",
+        "thinking": "inherited",
+        "writes": "none"
+      }
+    },
+    {
+      "header_sha256": "76B6CAB96D03CF7EDE72F8BC28D769D571D54D77534181635B9717862B09C36D",
+      "id": "A000041",
+      "raw_bytes": 336,
+      "raw_sha256": "067767D7632DD9B6BA057DE1032831996BB99314EFB98E9C56143137BCA152D1",
+      "row": {
+        "disposition": "accepted",
+        "duration_ms": "29780",
+        "model": "gpt-5.3-codex-spark",
+        "owner_check": "Owner independently checked the universal mapping property and compiled the affected chapter twice",
+        "returned": "Passed every implication canonical-map construction basis argument and empty or zero-ring edge case",
+        "run_id": "A000041",
+        "scope": "EGA I 1.4.1 local lemma proof audit",
+        "status": "completed",
+        "task_id": "019fde03-2655-77f1-9552-14eeee93b3b6",
+        "thinking": "xhigh",
+        "writes": "none"
+      }
+    },
+    {
+      "header_sha256": "76B6CAB96D03CF7EDE72F8BC28D769D571D54D77534181635B9717862B09C36D",
+      "id": "A000044",
+      "raw_bytes": 303,
+      "raw_sha256": "AD6D80DC174ACAA4EA7A1D55273A15252279C7D122A0D344A33F5A01D224D45D",
+      "row": {
+        "disposition": "accepted",
+        "duration_ms": "24613",
+        "model": "gpt-5.3-codex-spark",
+        "owner_check": "Owner reran diff checks and inspected the surrounding Properties section",
+        "returned": "Passed placement label reference prose notation enumeration dependency order and line length",
+        "run_id": "A000044",
+        "scope": "EGA I 1.4.1 Stacks-convention audit",
+        "status": "completed",
+        "task_id": "019fde03-3fa8-7080-8473-bc0817a6efe8",
+        "thinking": "xhigh",
+        "writes": "none"
+      }
+    },
+    {
+      "header_sha256": "76B6CAB96D03CF7EDE72F8BC28D769D571D54D77534181635B9717862B09C36D",
+      "id": "A000046",
+      "raw_bytes": 353,
+      "raw_sha256": "5EA23F6264CA4291642EF9DE17030F4B71F95C44D624E416B72343A596507EF9",
+      "row": {
+        "disposition": "accepted",
+        "duration_ms": "24787",
+        "model": "gpt-5.3-codex-spark",
+        "owner_check": "Owner ran two serial Properties passes and verified the new local label in properties.aux",
+        "returned": "Confirmed diff check label resolution and absence of fatal TeX errors; remaining warnings are standalone external-reference noise",
+        "run_id": "A000046",
+        "scope": "EGA I 1.4.1 bounded build audit",
+        "status": "completed",
+        "task_id": "019fde03-5926-7260-ac0f-8fe2aa079754",
+        "thinking": "xhigh",
+        "writes": "none"
+      }
+    },
+    {
+      "header_sha256": "76B6CAB96D03CF7EDE72F8BC28D769D571D54D77534181635B9717862B09C36D",
+      "id": "A000162",
+      "raw_bytes": 622,
+      "raw_sha256": "FF7DFAE27AE71119485E15369DDD177F709845C180086CBD342227465168484E",
+      "row": {
+        "disposition": "accepted as useful read-only failure evidence with all three repairs materialized",
+        "duration_ms": "not_exposed",
+        "model": "inherited-parent",
+        "owner_check": "Owner replaced the uniqueness citation separated closed and open cases before general immersion and proved both base-change arrows plus composition before requesting re-audit",
+        "returned": "HARD FAIL on one unnecessary forward reference one false target-local immersion argument and one incomplete two-step fibre-product closed-immersion citation while isolated chapter builds otherwise passed",
+        "run_id": "A000162",
+        "scope": "EGA I 5.1.5-5.1.7 new local Stacks lemma proof and citation audit before repair",
+        "status": "completed",
+        "task_id": "/root/lemma_review",
+        "thinking": "inherited",
+        "writes": "none"
+      }
+    },
+    {
+      "header_sha256": "76B6CAB96D03CF7EDE72F8BC28D769D571D54D77534181635B9717862B09C36D",
+      "id": "A000163",
+      "raw_bytes": 540,
+      "raw_sha256": "3DCA44C155CD1BCB5A0240B075BD5825CE74CD8D1C122829D342EF26F0999505",
+      "row": {
+        "disposition": "accepted as read-only post-repair proof audit",
+        "duration_ms": "not_exposed",
+        "model": "inherited-parent",
+        "owner_check": "Owner independently inspected the repaired statements and proofs and retained the preceding failure as append-only history",
+        "returned": "HARD PASS after replaying all three proof repairs exact EGA1 references line width label uniqueness and fresh isolated schemes morphisms and more-morphisms builds with resolved crosschapter references",
+        "run_id": "A000163",
+        "scope": "EGA I 5.1.5-5.1.7 post-repair local Stacks lemma proof citation and isolated-build audit",
+        "status": "completed",
+        "task_id": "/root/lemma_review",
+        "thinking": "inherited",
+        "writes": "none"
+      }
+    },
+    {
+      "header_sha256": "76B6CAB96D03CF7EDE72F8BC28D769D571D54D77534181635B9717862B09C36D",
+      "id": "A000169",
+      "raw_bytes": 655,
+      "raw_sha256": "239B7B02AC894E5B358A15F5E072F08399CB63F102A625BF21C9E9CCF182F25D",
+      "row": {
+        "disposition": "accepted as read-only mathematical inverse audit",
+        "duration_ms": "not_exposed",
+        "model": "inherited-parent",
+        "owner_check": "Owner independently checked the exact local full-statement scope and structural validator and accepted the audit without treating it as visual certification",
+        "returned": "HARD PASS after replaying S000715-S000767 R000469-R000498 every official file label and tag all source hypotheses stronger and derived boundaries three local statements and proofs counterexamples and the active duplicate surface at pinned a04446e5",
+        "run_id": "A000169",
+        "scope": "EGA I 5.1.5-5.1.10 post-materialization direct-French pinned-target relation residual and local-lemma inverse audit",
+        "status": "completed",
+        "task_id": "/root/semantic_inverse",
+        "thinking": "inherited",
+        "writes": "none"
+      }
+    },
+    {
+      "header_sha256": "76B6CAB96D03CF7EDE72F8BC28D769D571D54D77534181635B9717862B09C36D",
+      "id": "A000170",
+      "raw_bytes": 727,
+      "raw_sha256": "46E0074748A0F8B92F3E6556DD6CCD5BC2801A8C0A30C4EF33E5B4B5EFFD1C47",
+      "row": {
+        "disposition": "accepted as final read-only release audit without independent visual-content certification",
+        "duration_ms": "not_exposed",
+        "model": "inherited-parent",
+        "owner_check": "Owner reran the live sealed-source replay static validators staged-scope inspection and remote publication checks after recording this read-only verdict",
+        "returned": "HARD PASS on the exact twenty-one tracked and twenty-six untracked release files with byte-prefix registries unique untagged local labels green compile checker diff and deterministic R243-to-R184 gates structurally valid V J and Q receipts and zero secret or private-path findings",
+        "run_id": "A000170",
+        "scope": "EGA I 5.1.5-5.1.10 whole-checkpoint publication-scope append-only TeX evidence privacy and remote-readiness audit",
+        "status": "completed",
+        "task_id": "/root/final_release_audit",
+        "thinking": "inherited",
+        "writes": "none"
+      }
+    },
+    {
+      "header_sha256": "76B6CAB96D03CF7EDE72F8BC28D769D571D54D77534181635B9717862B09C36D",
+      "id": "A000189",
+      "raw_bytes": 584,
+      "raw_sha256": "B5B0AA3B7382F870BEF08082E1B0A5F96741DCD4BEAC802BD3BF6F6BFC1FE26D",
+      "row": {
+        "disposition": "accepted as read-only mathematical mapping support without build or publication certification",
+        "duration_ms": "not_exposed",
+        "model": "inherited-parent",
+        "owner_check": "Owner replayed the direct source attribution official joins proof-level scope and the live local lemma before accepting the row plan",
+        "returned": "HARD PASS with exact 01KH 001S 001V 002L 02X0 01KU 04YR 0038 and 001Y targets one warranted local diagonal-identities lemma no hidden hypotheses and no source or Stacks defect",
+        "run_id": "A000189",
+        "scope": "EGA I 5.3.1-5.3.4 pinned-target categorical-scope local-gap hypothesis and numbering audit",
+        "status": "completed",
+        "task_id": "/root/ega_i_531_534_targets",
+        "thinking": "inherited",
+        "writes": "none"
+      }
+    },
+    {
+      "header_sha256": "76B6CAB96D03CF7EDE72F8BC28D769D571D54D77534181635B9717862B09C36D",
+      "id": "A000202",
+      "raw_bytes": 739,
+      "raw_sha256": "86865343337BE14E64B4AB0C8A78B7FE95CC1DCF00502044CAE9DA7F9CA96BAC",
+      "row": {
+        "disposition": "accepted as final read-only local-mirror mathematical review without visual-fidelity or upstream-submission claim",
+        "duration_ms": "not_exposed",
+        "model": "inherited-parent",
+        "owner_check": "Owner independently replayed the local lemma against 01KS the direct French source the isolated Schemes build and the compact semantic rows while reserving the separate local-mirror status migration",
+        "returned": "HARD PASS with exact graph-morphism base-change identity sufficient two-projection proof no hidden hypotheses correct Corollary 5.3.12 citation correct S000819-S000820 directions clean line lengths and no changed-line build warning",
+        "run_id": "A000202",
+        "scope": "EGA I 5.3.12 local graph-base-change lemma mathematical typing citation direction and build audit",
+        "status": "completed",
+        "task_id": "/root/ega_5312_local_lemma_review",
+        "thinking": "inherited",
+        "writes": "none"
+      }
+    },
+    {
+      "header_sha256": "76B6CAB96D03CF7EDE72F8BC28D769D571D54D77534181635B9717862B09C36D",
+      "id": "A000211",
+      "raw_bytes": 793,
+      "raw_sha256": "3B9776AFF2359FDC252E4E6413E252905F7E20702A99E16E3890DC076EEAA25B",
+      "row": {
+        "disposition": "accepted as final read-only semantic and release audit without repository producer publication or upstream writes",
+        "duration_ms": "not_exposed",
+        "model": "inherited-parent",
+        "owner_check": "Owner must append this row then rerun the live checker diff source-manifest build-hash and sealed-replay gates before staging while keeping all upstream packaging disabled",
+        "returned": "HARD PASS on exact F33 lines 497-594 both primary errata twenty S rows eighteen R rows two byte-identical exact-5000-dpi Q crops a mathematically exact item-four projection proof clean current Schemes PDF append-only prefixes mirror-only policy checker diff privacy and remote-state gates",
+        "run_id": "A000211",
+        "scope": "EGA I 5.3.9-5.3.14 semantic source errata target graph local-lemma visual policy append-only build and release-readiness audit",
+        "status": "completed",
+        "task_id": "/root/semantic_release_audit",
+        "thinking": "inherited",
+        "writes": "none"
+      }
+    },
+    {
+      "header_sha256": "76B6CAB96D03CF7EDE72F8BC28D769D571D54D77534181635B9717862B09C36D",
+      "id": "A000217",
+      "raw_bytes": 758,
+      "raw_sha256": "7D20C46AD875603B3E75607090BA5FEA18330800680EB30718C5EDE77FCD5BC1",
+      "row": {
+        "disposition": "accepted as final Commons-only release audit without producer-root cross-tree official-tag or upstream Stacks claims",
+        "duration_ms": "not_exposed",
+        "model": "inherited-parent",
+        "owner_check": "Owner personally inspected the repaired V27 and Schemes pages retained every failed D48 and D49 control as non-admitted history staged only the audited Commons checkpoint and kept upstream packaging disabled",
+        "returned": "HARD PASS on exact F37ZW R261 B37AJ B239 D48 DIA48T Q37CY Q37DB two serial 41-operation R184 reconstructions byte-identical intakes all active V and J evidence clean Schemes pages checker diff privacy and synchronized fork state",
+        "run_id": "A000217",
+        "scope": "D48 Mathematical Commons final source reader semantic visual inverse build privacy append-only and fork-release audit",
+        "status": "completed",
+        "task_id": "/root/final_d48_release",
+        "thinking": "inherited",
+        "writes": "none"
+      }
+    }
+  ],
+  "decisions": [
+    {
+      "header_sha256": "04A85550466DEFA28FC55C3A07CE763585B568AC18E1FBA0F193AFEA71109DFD",
+      "id": "D000015",
+      "raw_bytes": 294,
+      "raw_sha256": "DB87C179CEFF9C7B3C70A350913C272BA5E81BE0B9471A5063179CA129A4D7CC",
+      "row": {
+        "action": "add_named_jacobson_neighbourhood_lemma",
+        "decision_id": "D000015",
+        "evidence": "algebra-lemma-open-containing-vanishing-jacobson-radical",
+        "rationale": "Direct French EGA I Proposition 1.1.15 supplies a reusable fact already invoked without a named target in more-algebra.tex; the local label has no invented official tag",
+        "state": "active",
+        "subject_id": "ega:I.1.1.15",
+        "supersedes": ""
+      }
+    },
+    {
+      "header_sha256": "04A85550466DEFA28FC55C3A07CE763585B568AC18E1FBA0F193AFEA71109DFD",
+      "id": "D000019",
+      "raw_bytes": 233,
+      "raw_sha256": "165C02D7657DD361C27D667C98BF39D4F74F442850401AED9BA2448EB4A6EC12",
+      "row": {
+        "action": "add_unit_times_spectrum_embedding_lemma",
+        "decision_id": "D000019",
+        "evidence": "algebra-lemma-spec-homeomorphism-onto-image-units",
+        "rationale": "The general EGA criterion unifies the quotient and localization embedding arguments and had no named Stacks target",
+        "state": "active",
+        "subject_id": "ega:I.1.2.4",
+        "supersedes": ""
+      }
+    },
+    {
+      "header_sha256": "04A85550466DEFA28FC55C3A07CE763585B568AC18E1FBA0F193AFEA71109DFD",
+      "id": "D000024",
+      "raw_bytes": 299,
+      "raw_sha256": "3845BFB6BDB06273A5032DBDCCA86C4052F3912E088287999BEFEB13C2744090",
+      "row": {
+        "action": "add_quasi_affine_section_characterization",
+        "decision_id": "D000024",
+        "evidence": "properties-lemma-characterize-quasi-coherent-quasi-affine",
+        "rationale": "The ambient-module finite-standard-cover quasi-coherence and localization criteria form a reusable theorem absent as one named target; the local label has no official tag",
+        "state": "active",
+        "subject_id": "ega:I.1.4.1",
+        "supersedes": ""
+      }
+    },
+    {
+      "header_sha256": "04A85550466DEFA28FC55C3A07CE763585B568AC18E1FBA0F193AFEA71109DFD",
+      "id": "D000029",
+      "raw_bytes": 263,
+      "raw_sha256": "E34E1B7DEFC72979432B882904F1E1EFF550E808C2EB4751720B7E686F3AC94D",
+      "row": {
+        "action": "repair_finite_type_citation",
+        "decision_id": "D000029",
+        "evidence": "properties.tex line 3030",
+        "rationale": "The proof has established only finite type and needs finite generation of the affine module so 01PB is the exact criterion while 01PC is inapplicable",
+        "state": "active",
+        "subject_id": "properties-lemma-extend-finite-presentation",
+        "supersedes": ""
+      }
+    },
+    {
+      "header_sha256": "04A85550466DEFA28FC55C3A07CE763585B568AC18E1FBA0F193AFEA71109DFD",
+      "id": "D000134",
+      "raw_bytes": 328,
+      "raw_sha256": "B4CE02143859EEA2629F70A22B61FF0243B13C8B2DD3D36F5BD924206353AC67",
+      "row": {
+        "action": "retain_thickened_fibre_topology_via_nilpotent_base_change",
+        "decision_id": "D000134",
+        "evidence": "01K1 0BR6 01I4 00DK algebra-lemma-spec-homeomorphism-onto-image-units",
+        "rationale": "The residue fibre has the induced topology and nilpotent base change preserves it while the affine source proof ends with the already integrated unit-times-image criterion",
+        "state": "active",
+        "subject_id": "ega:I.3.6.1",
+        "supersedes": ""
+      }
+    },
+    {
+      "header_sha256": "04A85550466DEFA28FC55C3A07CE763585B568AC18E1FBA0F193AFEA71109DFD",
+      "id": "D000191",
+      "raw_bytes": 291,
+      "raw_sha256": "B0507AB9F188F92D73295CD8F2F3E6094D5289856731062E04C68EE35FB9B519",
+      "row": {
+        "action": "integrate_reduction_functoriality_and_existing_dependencies",
+        "decision_id": "D000191",
+        "evidence": "0356 01J4 01L7 and local schemes reduction functorial lemma",
+        "rationale": "The canonical factorization through reduction is functorial and the new local lemma packages the exact square without claiming an upstream tag",
+        "state": "active",
+        "subject_id": "ega:I.5.1.5",
+        "supersedes": ""
+      }
+    },
+    {
+      "header_sha256": "04A85550466DEFA28FC55C3A07CE763585B568AC18E1FBA0F193AFEA71109DFD",
+      "id": "D000192",
+      "raw_bytes": 256,
+      "raw_sha256": "ECF530E4F1AFB9AD3DE8FFA641557142C737202E2F881893B480ECAB636DA517",
+      "row": {
+        "action": "integrate_reduction_morphism_properties_and_existing_dependencies",
+        "decision_id": "D000192",
+        "evidence": "01RZ 01S3 01S4 0BR6 054M 01IO 01HE 01LD and local morphisms lemma",
+        "rationale": "The source permanence list is split across existing targets and one local exact packaging lemma",
+        "state": "active",
+        "subject_id": "ega:I.5.1.6",
+        "supersedes": ""
+      }
+    },
+    {
+      "header_sha256": "04A85550466DEFA28FC55C3A07CE763585B568AC18E1FBA0F193AFEA71109DFD",
+      "id": "D000193",
+      "raw_bytes": 306,
+      "raw_sha256": "F4EBB8744A269F6766776B74460CC5C2BEC41A958A64E67D5154A3D500FA0997",
+      "row": {
+        "action": "integrate_reduction_fibre_product_and_existing_dependencies",
+        "decision_id": "D000193",
+        "evidence": "0356 01L7 003B 08LR 01JM 01JU 054M 0CEU 0CEV and local morphisms lemma",
+        "rationale": "The canonical comparison is an isomorphism by universal properties and reduction closed immersions while the local lemma records the exact package",
+        "state": "active",
+        "subject_id": "ega:I.5.1.7",
+        "supersedes": ""
+      }
+    },
+    {
+      "header_sha256": "04A85550466DEFA28FC55C3A07CE763585B568AC18E1FBA0F193AFEA71109DFD",
+      "id": "D000200",
+      "raw_bytes": 251,
+      "raw_sha256": "13AA4ED77374D7D0D6304780424D0EEC6375B6A4845C29A6A449121C7680EA79",
+      "row": {
+        "action": "correct_closed_subscheme_target_X_to_X_prime",
+        "decision_id": "D000200",
+        "evidence": "direct review of more-morphisms-definition-thickening item four",
+        "rationale": "The filtration concerns a closed subscheme of X prime and the repeated X is a local Stacks wording defect",
+        "state": "active",
+        "subject_id": "more-morphisms:04EX",
+        "supersedes": ""
+      }
+    },
+    {
+      "header_sha256": "04A85550466DEFA28FC55C3A07CE763585B568AC18E1FBA0F193AFEA71109DFD",
+      "id": "D000201",
+      "raw_bytes": 272,
+      "raw_sha256": "5A350E0D1225E71518E59B4482F824D489F4CC1483A9387C4EFACD3BC27C3F15",
+      "row": {
+        "action": "correct_thinking_to_thickening",
+        "decision_id": "D000201",
+        "evidence": "direct review of the unnumbered paragraph following more-morphisms-definition-thickening",
+        "rationale": "The phrase nth order thinking is a typographical defect and the mathematically defined term is nth order thickening",
+        "state": "active",
+        "subject_id": "more-morphisms:04EX",
+        "supersedes": ""
+      }
+    },
+    {
+      "header_sha256": "04A85550466DEFA28FC55C3A07CE763585B568AC18E1FBA0F193AFEA71109DFD",
+      "id": "D000210",
+      "raw_bytes": 256,
+      "raw_sha256": "8E90CBE33168D638486B1F04CE8BBABE099668EBD2E80F598656208A319DBF81",
+      "row": {
+        "action": "map_diagonal_definition_projection_and_pairing_identities",
+        "decision_id": "D000210",
+        "evidence": "01KH 001S 001V and schemes-lemma-diagonal-identities",
+        "rationale": "The exact unlabelled definition and universal-property dependencies combine with one local reusable identity package",
+        "state": "active",
+        "subject_id": "ega:I.5.3.1",
+        "supersedes": ""
+      }
+    },
+    {
+      "header_sha256": "04A85550466DEFA28FC55C3A07CE763585B568AC18E1FBA0F193AFEA71109DFD",
+      "id": "D000211",
+      "raw_bytes": 273,
+      "raw_sha256": "44CB2E5856993F59C4648D98D51EC989C57C8A8FA6B4EBD3E21667EE581ADD30",
+      "row": {
+        "action": "map_product_compatibility_of_diagonals",
+        "decision_id": "D000211",
+        "evidence": "schemes-lemma-diagonal-identities 02X0 001S and 002L",
+        "rationale": "The local scheme lemma makes the exact identity citable while official targets retain its categorical derivation and stronger algebraic-space occurrence",
+        "state": "active",
+        "subject_id": "ega:I.5.3.2",
+        "supersedes": ""
+      }
+    },
+    {
+      "header_sha256": "04A85550466DEFA28FC55C3A07CE763585B568AC18E1FBA0F193AFEA71109DFD",
+      "id": "D000213",
+      "raw_bytes": 246,
+      "raw_sha256": "9FA6D8DD107D9BD986E37FF08F53E41FCA045999C19CC3A62E97B8A6BB477BBB",
+      "row": {
+        "action": "map_base_change_compatibility_of_the_diagonal",
+        "decision_id": "D000213",
+        "evidence": "schemes-lemma-diagonal-identities 01KU 04YR 0038 001Y and D000102",
+        "rationale": "The exact local scheme statement is backed by official proof-level and categorical base-change identities",
+        "state": "active",
+        "subject_id": "ega:I.5.3.4",
+        "supersedes": ""
+      }
+    },
+    {
+      "header_sha256": "04A85550466DEFA28FC55C3A07CE763585B568AC18E1FBA0F193AFEA71109DFD",
+      "id": "D000229",
+      "raw_bytes": 278,
+      "raw_sha256": "5EB7CD3016B8F2B6417560777C44AB31F810595B21EE1A60D7592DBA18C98DBC",
+      "row": {
+        "action": "map_graph_compatibility_with_base_change",
+        "decision_id": "D000229",
+        "evidence": "schemes-lemma-diagonal-identities 01JX 002L 001V 0038 01JP and D000102",
+        "rationale": "The exact local identity makes graph base change citable while official categorical and fibre product dependencies retain its derivation",
+        "state": "active",
+        "subject_id": "ega:I.5.3.12",
+        "supersedes": ""
+      }
+    },
+    {
+      "header_sha256": "04A85550466DEFA28FC55C3A07CE763585B568AC18E1FBA0F193AFEA71109DFD",
+      "id": "D000234",
+      "raw_bytes": 272,
+      "raw_sha256": "2DDE7FC1AF4B6FFC91947B6154650931E6D992690232EF81F3387E431B320AD3",
+      "row": {
+        "action": "adopt_independent_mathematical_commons_mirror_as_local_integration_lane",
+        "decision_id": "D000234",
+        "evidence": "Direct user policy update 2026-08-11",
+        "rationale": "Upstream submission work stops while verified local integrations and naturally found corrections remain in the independent mirror",
+        "state": "active",
+        "subject_id": "ega:local-mirror",
+        "supersedes": ""
+      }
+    },
+    {
+      "header_sha256": "04A85550466DEFA28FC55C3A07CE763585B568AC18E1FBA0F193AFEA71109DFD",
+      "id": "D000235",
+      "raw_bytes": 257,
+      "raw_sha256": "DF956B977D064A630A7ADBA4BC7B8D6AB61BFE7E8610FBD0F4D38D33FBD3B98E",
+      "row": {
+        "action": "map_diagonal_naturality_with_local_exact_identity",
+        "decision_id": "D000235",
+        "evidence": "schemes-lemma-diagonal-identities and 001V",
+        "rationale": "Item five of the local lemma is the exact morphism identity and the official fibre-product universal property independently derives it",
+        "state": "active",
+        "subject_id": "ega:I.5.3.15",
+        "supersedes": ""
+      }
+    },
+    {
+      "header_sha256": "04A85550466DEFA28FC55C3A07CE763585B568AC18E1FBA0F193AFEA71109DFD",
+      "id": "D000237",
+      "raw_bytes": 241,
+      "raw_sha256": "E6A029E18CD1A12E482629D4499D0F111D626A6082D1C065FB213019FB50F58C",
+      "row": {
+        "action": "map_equal_residue_field_maps_to_diagonal_membership",
+        "decision_id": "D000237",
+        "evidence": "01J5 01KM 001V and D000235",
+        "rationale": "The point classification identifies the two field-valued maps and the equalizer plus diagonal naturality gives the stated membership",
+        "state": "active",
+        "subject_id": "ega:I.5.3.17",
+        "supersedes": ""
+      }
+    }
+  ],
+  "issues_for_separate_corrections": [
+    {
+      "header_sha256": "672766BCECE3899B85D0379526173CECCDF64E0DC5E6B490FA81D4EE61742DEE",
+      "id": "I000014",
+      "raw_bytes": 361,
+      "raw_sha256": "78CACC2514294A5460493E0A3131726C31BEDDA4E5FD271B17F0E6C3242AA43A",
+      "row": {
+        "control": "Replace the citation by the exact finite type criterion 01PB and rebuild Properties",
+        "evidence": "The proof establishes a finite type quasi-coherent sheaf but cites 01PC to infer a finitely generated affine module",
+        "issue_id": "I000014",
+        "kind": "wrong_internal_reference",
+        "notes": "Pinned base and current upstream HEAD contain the same miscitation",
+        "status": "resolved",
+        "subject_id": "properties-lemma-extend-finite-presentation",
+        "supersedes": "D000029"
+      }
+    },
+    {
+      "header_sha256": "672766BCECE3899B85D0379526173CECCDF64E0DC5E6B490FA81D4EE61742DEE",
+      "id": "I000060",
+      "raw_bytes": 313,
+      "raw_sha256": "DA36D572C2633A5F06388A6E2C5A795DCD6143673C378B8F2D46D0C1ADF274DE",
+      "row": {
+        "control": "Correct the local Stacks text to closed subscheme of X prime",
+        "evidence": "The fourth equivalent condition says X is a closed subscheme of X although the ambient nilpotent thickening is X prime",
+        "issue_id": "I000060",
+        "kind": "closed_subscheme_target_repeats_X",
+        "notes": "The equivalence and all downstream uses are unchanged",
+        "status": "resolved",
+        "subject_id": "more-morphisms:04EX",
+        "supersedes": "D000200"
+      }
+    },
+    {
+      "header_sha256": "672766BCECE3899B85D0379526173CECCDF64E0DC5E6B490FA81D4EE61742DEE",
+      "id": "I000061",
+      "raw_bytes": 262,
+      "raw_sha256": "3D1D47EE96B4F457DDD166B6C25AD45A375EC2824C24C3D28994BF2ED03C5616",
+      "row": {
+        "control": "Correct the local Stacks text to nth order thickening",
+        "evidence": "The explanatory paragraph says nth order thinking although the defined object is a thickening",
+        "issue_id": "I000061",
+        "kind": "nth_order_thinking_typo",
+        "notes": "The definition and mathematics are unchanged",
+        "status": "resolved",
+        "subject_id": "more-morphisms:04EX",
+        "supersedes": "D000201"
+      }
+    }
+  ],
+  "mapping_edges": [
+    {
+      "header_sha256": "4045CF01348DCEF001257778552BAE3508A614BE39DFD995FDC40DBEDE5DE335",
+      "id": "S000022",
+      "raw_bytes": 409,
+      "raw_sha256": "6FB03C0D68CEDC8A9A639B43F2A9DAA8E01080F8C62AD58EDB0EE9B562BE27D3",
+      "row": {
+        "authority_state": "french_admitted",
+        "coverage_claim": "full_statement",
+        "decision_id": "D000015",
+        "edge_id": "S000022",
+        "evidence": "New cited lemma states exactly that an open containing V(I) is all of Spec(R)",
+        "notes": "No official tag is assigned and upstream acceptance is not claimed",
+        "official_tag": "",
+        "relation": "equivalent",
+        "review_state": "integrated_local",
+        "source_part": "whole proposition",
+        "source_receipt": "F8.json",
+        "source_receipt_sha256": "2137BF64B9BD210176B58075DBDB58E7C8A5669F9EFAD61410510A01D32D0BC0",
+        "source_unit": "ega:I.1.1.15",
+        "stacks_commit": "LOCAL_WORKTREE",
+        "stacks_file": "algebra.tex",
+        "stacks_label": "algebra-lemma-open-containing-vanishing-jacobson-radical",
+        "supersedes": null
+      }
+    },
+    {
+      "header_sha256": "4045CF01348DCEF001257778552BAE3508A614BE39DFD995FDC40DBEDE5DE335",
+      "id": "S000031",
+      "raw_bytes": 405,
+      "raw_sha256": "19975A8A3E3E161078C3C127FABCD46678E329E71B99374BBD3AB084B03452A5",
+      "row": {
+        "authority_state": "french_admitted",
+        "coverage_claim": "full_statement",
+        "decision_id": "D000019",
+        "edge_id": "S000031",
+        "evidence": "The new cited lemma states exactly the general unit-times-image embedding criterion",
+        "notes": "No official tag is assigned and upstream acceptance is not claimed",
+        "official_tag": "",
+        "relation": "equivalent",
+        "review_state": "integrated_local",
+        "source_part": "whole corollary",
+        "source_receipt": "F8.json",
+        "source_receipt_sha256": "2137BF64B9BD210176B58075DBDB58E7C8A5669F9EFAD61410510A01D32D0BC0",
+        "source_unit": "ega:I.1.2.4",
+        "stacks_commit": "LOCAL_WORKTREE",
+        "stacks_file": "algebra.tex",
+        "stacks_label": "algebra-lemma-spec-homeomorphism-onto-image-units",
+        "supersedes": null
+      }
+    },
+    {
+      "header_sha256": "4045CF01348DCEF001257778552BAE3508A614BE39DFD995FDC40DBEDE5DE335",
+      "id": "S000057",
+      "raw_bytes": 527,
+      "raw_sha256": "92A26CA6C4607C23672341661D3E29DEA116ABE5DE788DF301338FF08FFA4BD0",
+      "row": {
+        "authority_state": "french_admitted",
+        "coverage_claim": "full_statement",
+        "decision_id": "D000024",
+        "edge_id": "S000057",
+        "evidence": "The local lemma states the equivalent global-module finite-standard-cover quasi-coherent and localization-map conditions and canonically chooses global sections",
+        "notes": "Local consolidation only; no official tag or upstream-acceptance claim",
+        "official_tag": "",
+        "relation": "equivalent",
+        "review_state": "integrated_local",
+        "source_part": "full four-way quasi-coherent characterization",
+        "source_receipt": "F8.json",
+        "source_receipt_sha256": "2137BF64B9BD210176B58075DBDB58E7C8A5669F9EFAD61410510A01D32D0BC0",
+        "source_unit": "ega:I.1.4.1",
+        "stacks_commit": "LOCAL_WORKTREE",
+        "stacks_file": "properties.tex",
+        "stacks_label": "properties-lemma-characterize-quasi-coherent-quasi-affine",
+        "supersedes": null
+      }
+    },
+    {
+      "header_sha256": "4045CF01348DCEF001257778552BAE3508A614BE39DFD995FDC40DBEDE5DE335",
+      "id": "S000450",
+      "raw_bytes": 495,
+      "raw_sha256": "98EFDEB0A738913EFDFCE3843C6BDA0E555DEF8D39A309695A3EB24A06FCD1BC",
+      "row": {
+        "authority_state": "french_admitted",
+        "coverage_claim": "component",
+        "decision_id": "D000134",
+        "edge_id": "S000450",
+        "evidence": "The already integrated EGA I 1.2.4 lemma is exactly the terminal criterion invoked by this proof",
+        "notes": "Reuse creates no new mathematical gap and assigns no official tag",
+        "official_tag": "",
+        "relation": "equivalent",
+        "review_state": "integrated_local",
+        "source_part": "the unit-times-image criterion makes the affine spectrum map a homeomorphism onto its image",
+        "source_receipt": "F8.json",
+        "source_receipt_sha256": "2137BF64B9BD210176B58075DBDB58E7C8A5669F9EFAD61410510A01D32D0BC0",
+        "source_unit": "ega:I.3.6.1:proof",
+        "stacks_commit": "LOCAL_WORKTREE",
+        "stacks_file": "algebra.tex",
+        "stacks_label": "algebra-lemma-spec-homeomorphism-onto-image-units",
+        "supersedes": ""
+      }
+    },
+    {
+      "header_sha256": "4045CF01348DCEF001257778552BAE3508A614BE39DFD995FDC40DBEDE5DE335",
+      "id": "S000720",
+      "raw_bytes": 461,
+      "raw_sha256": "02FB203A65948636BAD4CA35EE8BD57F2AA9190398CF328D597EC0FA0DE83665",
+      "row": {
+        "authority_state": "french_admitted",
+        "coverage_claim": "full_statement",
+        "decision_id": "D000191",
+        "edge_id": "S000720",
+        "evidence": "The local lemma packages exactly the functorial reduction morphism and its natural square",
+        "notes": "No official tag is assigned and upstream acceptance is not claimed",
+        "official_tag": "",
+        "relation": "equivalent",
+        "review_state": "integrated_local",
+        "source_part": "existence uniqueness identity composition and the commutative reduction square",
+        "source_receipt": "F33.json",
+        "source_receipt_sha256": "2652207F96F697935BC81C5D63B292DE4D956905D69CB92572225E320BB27F4C",
+        "source_unit": "ega:I.5.1.5",
+        "stacks_commit": "LOCAL_WORKTREE",
+        "stacks_file": "schemes.tex",
+        "stacks_label": "schemes-lemma-reduction-functorial",
+        "supersedes": ""
+      }
+    },
+    {
+      "header_sha256": "4045CF01348DCEF001257778552BAE3508A614BE39DFD995FDC40DBEDE5DE335",
+      "id": "S000729",
+      "raw_bytes": 483,
+      "raw_sha256": "EBE607BD9C5AB84AA0C1D3CAFBC1FF585F2ACBB10AE9F400BAD01FCED84A6E3B",
+      "row": {
+        "authority_state": "french_admitted",
+        "coverage_claim": "component",
+        "decision_id": "D000192",
+        "edge_id": "S000729",
+        "evidence": "The local lemma packages the exact modern scheme-level permanence clauses that it states",
+        "notes": "No official tag is assigned and upstream acceptance is not claimed",
+        "official_tag": "",
+        "relation": "split",
+        "review_state": "integrated_local",
+        "source_part": "surjective and radicial reflection plus immersion closed immersion and open immersion preservation",
+        "source_receipt": "F33.json",
+        "source_receipt_sha256": "2652207F96F697935BC81C5D63B292DE4D956905D69CB92572225E320BB27F4C",
+        "source_unit": "ega:I.5.1.6",
+        "stacks_commit": "LOCAL_WORKTREE",
+        "stacks_file": "morphisms.tex",
+        "stacks_label": "morphisms-lemma-reduction-morphism-properties",
+        "supersedes": ""
+      }
+    },
+    {
+      "header_sha256": "4045CF01348DCEF001257778552BAE3508A614BE39DFD995FDC40DBEDE5DE335",
+      "id": "S000739",
+      "raw_bytes": 502,
+      "raw_sha256": "27D3004E95280CA64774552C903495E820208D43A48AC365669CC7133766C8A4",
+      "row": {
+        "authority_state": "french_admitted",
+        "coverage_claim": "full_statement",
+        "decision_id": "D000193",
+        "edge_id": "S000739",
+        "evidence": "The local lemma states the canonical isomorphism and the closed universal-homeomorphism inclusion exactly",
+        "notes": "No official tag is assigned and upstream acceptance is not claimed",
+        "official_tag": "",
+        "relation": "equivalent",
+        "review_state": "integrated_local",
+        "source_part": "canonical comparison of the two products and their same-space closed immersion into X times S Y",
+        "source_receipt": "F33.json",
+        "source_receipt_sha256": "2652207F96F697935BC81C5D63B292DE4D956905D69CB92572225E320BB27F4C",
+        "source_unit": "ega:I.5.1.7",
+        "stacks_commit": "LOCAL_WORKTREE",
+        "stacks_file": "morphisms.tex",
+        "stacks_label": "morphisms-lemma-reductions-fibre-product",
+        "supersedes": ""
+      }
+    },
+    {
+      "header_sha256": "4045CF01348DCEF001257778552BAE3508A614BE39DFD995FDC40DBEDE5DE335",
+      "id": "S000791",
+      "raw_bytes": 454,
+      "raw_sha256": "F1966749F8EDECF1C3A151FE341CD110D4A70C3B3F61D9A24855754F8B1E1954",
+      "row": {
+        "authority_state": "french_admitted",
+        "coverage_claim": "full_statement",
+        "decision_id": "D000210",
+        "edge_id": "S000791",
+        "evidence": "Item one of the local lemma states the exact identity for morphisms over a common base",
+        "notes": "No official tag is assigned and upstream acceptance is not claimed",
+        "official_tag": "",
+        "relation": "equivalent",
+        "review_state": "integrated_local",
+        "source_part": "the pairing of f and g equals their product followed by the diagonal of T",
+        "source_receipt": "F33.json",
+        "source_receipt_sha256": "2652207F96F697935BC81C5D63B292DE4D956905D69CB92572225E320BB27F4C",
+        "source_unit": "ega:I.5.3.1.2",
+        "stacks_commit": "LOCAL_WORKTREE",
+        "stacks_file": "schemes.tex",
+        "stacks_label": "schemes-lemma-diagonal-identities",
+        "supersedes": ""
+      }
+    },
+    {
+      "header_sha256": "4045CF01348DCEF001257778552BAE3508A614BE39DFD995FDC40DBEDE5DE335",
+      "id": "S000794",
+      "raw_bytes": 488,
+      "raw_sha256": "309C50B47480918437DD44A247378E514D99A516190B92D9080395D4684EDE4E",
+      "row": {
+        "authority_state": "french_admitted",
+        "coverage_claim": "full_statement",
+        "decision_id": "D000211",
+        "edge_id": "S000794",
+        "evidence": "Item two of the local lemma states the exact scheme identity with every base made explicit",
+        "notes": "No official tag is assigned and upstream acceptance is not claimed",
+        "official_tag": "",
+        "relation": "equivalent",
+        "review_state": "integrated_local",
+        "source_part": "the diagonal of a product is the product of the two diagonals under the canonical interchange isomorphism",
+        "source_receipt": "F33.json",
+        "source_receipt_sha256": "2652207F96F697935BC81C5D63B292DE4D956905D69CB92572225E320BB27F4C",
+        "source_unit": "ega:I.5.3.2",
+        "stacks_commit": "LOCAL_WORKTREE",
+        "stacks_file": "schemes.tex",
+        "stacks_label": "schemes-lemma-diagonal-identities",
+        "supersedes": ""
+      }
+    },
+    {
+      "header_sha256": "4045CF01348DCEF001257778552BAE3508A614BE39DFD995FDC40DBEDE5DE335",
+      "id": "S000799",
+      "raw_bytes": 455,
+      "raw_sha256": "BA420DB7BEA73CC15FC8E4C58715B7DF8645B893891EF2C9B3AA398D07A91971",
+      "row": {
+        "authority_state": "french_admitted",
+        "coverage_claim": "full_statement",
+        "decision_id": "D000213",
+        "edge_id": "S000799",
+        "evidence": "Item three of the local lemma states the exact canonical base-change identity",
+        "notes": "No official tag is assigned and upstream acceptance is not claimed",
+        "official_tag": "",
+        "relation": "equivalent",
+        "review_state": "integrated_local",
+        "source_part": "arbitrary base change carries the diagonal to the diagonal of the base changed scheme",
+        "source_receipt": "F33.json",
+        "source_receipt_sha256": "2652207F96F697935BC81C5D63B292DE4D956905D69CB92572225E320BB27F4C",
+        "source_unit": "ega:I.5.3.4",
+        "stacks_commit": "LOCAL_WORKTREE",
+        "stacks_file": "schemes.tex",
+        "stacks_label": "schemes-lemma-diagonal-identities",
+        "supersedes": ""
+      }
+    },
+    {
+      "header_sha256": "4045CF01348DCEF001257778552BAE3508A614BE39DFD995FDC40DBEDE5DE335",
+      "id": "S000825",
+      "raw_bytes": 587,
+      "raw_sha256": "9251C2FD9D1D25F2AE4264C31C81C37536FA891FB119CE4394F080A92F1448F2",
+      "row": {
+        "authority_state": "french_admitted",
+        "coverage_claim": "full_statement",
+        "decision_id": "D000229",
+        "edge_id": "S000825",
+        "evidence": "Item four of the local lemma states the exact graph base change identity under the canonical product isomorphism",
+        "notes": "After 01KS the same morphism identity gives the inverse image statement for the associated graph subpreschemes; no official tag or upstream acceptance is claimed",
+        "official_tag": "",
+        "relation": "equivalent",
+        "review_state": "integrated_local",
+        "source_part": "arbitrary base change carries the graph of f to the graph of the base changed morphism",
+        "source_receipt": "F33.json",
+        "source_receipt_sha256": "2652207F96F697935BC81C5D63B292DE4D956905D69CB92572225E320BB27F4C",
+        "source_unit": "ega:I.5.3.12",
+        "stacks_commit": "LOCAL_WORKTREE",
+        "stacks_file": "schemes.tex",
+        "stacks_label": "schemes-lemma-diagonal-identities",
+        "supersedes": ""
+      }
+    },
+    {
+      "header_sha256": "4045CF01348DCEF001257778552BAE3508A614BE39DFD995FDC40DBEDE5DE335",
+      "id": "S000837",
+      "raw_bytes": 467,
+      "raw_sha256": "9147254151F1921EA371062B8D3772164AD65E4A9F67FB251836FE5488B7D55E",
+      "row": {
+        "authority_state": "french_admitted",
+        "coverage_claim": "full_statement",
+        "decision_id": "D000235",
+        "edge_id": "S000837",
+        "evidence": "Item five states the exact naturality identity with every base explicit",
+        "notes": "No official tag is assigned and upstream acceptance is not claimed",
+        "official_tag": "",
+        "relation": "equivalent",
+        "review_state": "integrated_local",
+        "source_part": "for every S morphism f the identity (f times_S f) composed with Delta_X equals Delta_Y composed with f",
+        "source_receipt": "F33.json",
+        "source_receipt_sha256": "2652207F96F697935BC81C5D63B292DE4D956905D69CB92572225E320BB27F4C",
+        "source_unit": "ega:I.5.3.15",
+        "stacks_commit": "LOCAL_WORKTREE",
+        "stacks_file": "schemes.tex",
+        "stacks_label": "schemes-lemma-diagonal-identities",
+        "supersedes": ""
+      }
+    },
+    {
+      "header_sha256": "4045CF01348DCEF001257778552BAE3508A614BE39DFD995FDC40DBEDE5DE335",
+      "id": "S000852",
+      "raw_bytes": 588,
+      "raw_sha256": "D55EB54896B89E162EB736D2338F977E74D54AD8E4FC36AE3393D30A09CB6C15",
+      "row": {
+        "authority_state": "french_admitted",
+        "coverage_claim": "covered_derived",
+        "decision_id": "D000237",
+        "edge_id": "S000852",
+        "evidence": "The individual residue-field squares give the product square by 001V and then D000235 applied to Spec(k(x))->X carries its diagonal into Delta_X/S",
+        "notes": "No official tag is assigned and upstream acceptance is not claimed",
+        "official_tag": "",
+        "relation": "split",
+        "review_state": "integrated_local",
+        "source_part": "the individual residue-field squares give the product square by 001V and then D000235 applied to Spec(k(x))->X carries its diagonal into Delta_X/S",
+        "source_receipt": "F33.json",
+        "source_receipt_sha256": "2652207F96F697935BC81C5D63B292DE4D956905D69CB92572225E320BB27F4C",
+        "source_unit": "ega:I.5.3.17:proof",
+        "stacks_commit": "LOCAL_WORKTREE",
+        "stacks_file": "schemes.tex",
+        "stacks_label": "schemes-lemma-diagonal-identities",
+        "supersedes": ""
+      }
+    }
+  ],
+  "mirror_residuals": [
+    {
+      "header_sha256": "ED4F993D1158CE7E63F53FC32F4C108E3A75FD58B4BC8501A70538C397D19F18",
+      "id": "R000578",
+      "raw_bytes": 302,
+      "raw_sha256": "AF55F279624C0C8F32249F35B400CA43DE62C63E20F77FEE38A99E7315198EA0",
+      "row": {
+        "decision_id": "D000234",
+        "disposition": "Retain in the Mathematical Commons mirror and keep Algebra and corpus checks active without assigning an official tag",
+        "evidence": "The exact EGA proposition is now a cited local lemma and repairs an implicit inference in more-algebra.tex",
+        "kind": "new_local_label",
+        "residual_id": "R000578",
+        "source_unit": "ega:I.1.1.15",
+        "status": "integrated_local_mirror",
+        "supersedes": "R000008"
+      }
+    },
+    {
+      "header_sha256": "ED4F993D1158CE7E63F53FC32F4C108E3A75FD58B4BC8501A70538C397D19F18",
+      "id": "R000579",
+      "raw_bytes": 294,
+      "raw_sha256": "2EC1B47D353F8B2AE97EE96F875BB2BE926340385168BADE771E6726F60166B5",
+      "row": {
+        "decision_id": "D000234",
+        "disposition": "Retain in the Mathematical Commons mirror and keep Algebra and corpus checks active without assigning an official tag",
+        "evidence": "The general unit-times-image criterion now unifies the quotient and localization topology arguments",
+        "kind": "new_local_label",
+        "residual_id": "R000579",
+        "source_unit": "ega:I.1.2.4",
+        "status": "integrated_local_mirror",
+        "supersedes": "R000012"
+      }
+    },
+    {
+      "header_sha256": "ED4F993D1158CE7E63F53FC32F4C108E3A75FD58B4BC8501A70538C397D19F18",
+      "id": "R000580",
+      "raw_bytes": 327,
+      "raw_sha256": "A8D53D964494AC8448FC470E2372DFCD6D108C5A94034EB36F7D62999099C8C7",
+      "row": {
+        "decision_id": "D000234",
+        "disposition": "Retain in the Mathematical Commons mirror and keep Properties and corpus checks active without assigning an official tag",
+        "evidence": "The exact four-way characterization now has one cited local Stacks-style statement with a canonical global-sections strengthening",
+        "kind": "new_local_label",
+        "residual_id": "R000580",
+        "source_unit": "ega:I.1.4.1",
+        "status": "integrated_local_mirror",
+        "supersedes": "R000025"
+      }
+    },
+    {
+      "header_sha256": "ED4F993D1158CE7E63F53FC32F4C108E3A75FD58B4BC8501A70538C397D19F18",
+      "id": "R000581",
+      "raw_bytes": 326,
+      "raw_sha256": "1EACF8CAE5DD63776EF16C9AFE71E842FE8A2B63C7D4DB3F133C54F3A824EF0A",
+      "row": {
+        "decision_id": "D000234",
+        "disposition": "Reuse the local label inside the Mathematical Commons mirror without opening a duplicate gap or assigning an official tag",
+        "evidence": "The source invokes EGA I 1.2.4 whose exact criterion is the already integrated untagged Algebra lemma",
+        "kind": "existing_local_unit_times_criterion",
+        "residual_id": "R000581",
+        "source_unit": "ega:I.3.6.1:proof",
+        "status": "integrated_local_mirror",
+        "supersedes": "R000276"
+      }
+    },
+    {
+      "header_sha256": "ED4F993D1158CE7E63F53FC32F4C108E3A75FD58B4BC8501A70538C397D19F18",
+      "id": "R000582",
+      "raw_bytes": 313,
+      "raw_sha256": "5DA48473FEE118DD7F9A10C4F95FCC26D66792ED87615BD456374A6357943C15",
+      "row": {
+        "decision_id": "D000234",
+        "disposition": "Retain in the Mathematical Commons mirror and keep Schemes and corpus checks active without assigning an official tag",
+        "evidence": "The local schemes reduction-functorial lemma packages existence uniqueness identity composition and the natural square",
+        "kind": "new_local_label",
+        "residual_id": "R000582",
+        "source_unit": "ega:I.5.1.5",
+        "status": "integrated_local_mirror",
+        "supersedes": "R000496"
+      }
+    },
+    {
+      "header_sha256": "ED4F993D1158CE7E63F53FC32F4C108E3A75FD58B4BC8501A70538C397D19F18",
+      "id": "R000583",
+      "raw_bytes": 301,
+      "raw_sha256": "50D892145BDAA220E32EA6EB44A2A2394D986087544755B7DD5BC9AB4818E7DE",
+      "row": {
+        "decision_id": "D000234",
+        "disposition": "Retain in the Mathematical Commons mirror and keep Morphisms and corpus checks active without assigning an official tag",
+        "evidence": "The local morphisms reduction-morphism-properties lemma packages the modern permanence clauses it states",
+        "kind": "new_local_label",
+        "residual_id": "R000583",
+        "source_unit": "ega:I.5.1.6",
+        "status": "integrated_local_mirror",
+        "supersedes": "R000497"
+      }
+    },
+    {
+      "header_sha256": "ED4F993D1158CE7E63F53FC32F4C108E3A75FD58B4BC8501A70538C397D19F18",
+      "id": "R000584",
+      "raw_bytes": 311,
+      "raw_sha256": "F1923C5C8DCC6284808161F907A412748FF548B304CC6C8688260390FEC241AB",
+      "row": {
+        "decision_id": "D000234",
+        "disposition": "Retain in the Mathematical Commons mirror and keep Morphisms and corpus checks active without assigning an official tag",
+        "evidence": "The local morphisms reductions-fibre-product lemma states the canonical comparison and same-space closed inclusion",
+        "kind": "new_local_label",
+        "residual_id": "R000584",
+        "source_unit": "ega:I.5.1.7",
+        "status": "integrated_local_mirror",
+        "supersedes": "R000498"
+      }
+    },
+    {
+      "header_sha256": "ED4F993D1158CE7E63F53FC32F4C108E3A75FD58B4BC8501A70538C397D19F18",
+      "id": "R000585",
+      "raw_bytes": 301,
+      "raw_sha256": "6FFEBFED23828C6A0CBB26EDABB0A8A9D811D457CE7D8E0437C766492B9D3FF3",
+      "row": {
+        "decision_id": "D000234",
+        "disposition": "Retain in the Mathematical Commons mirror and keep Schemes and corpus checks active without assigning an official tag",
+        "evidence": "The local Schemes diagonal-identities lemma packages the pairing formula as a reusable citable statement",
+        "kind": "new_local_label",
+        "residual_id": "R000585",
+        "source_unit": "ega:I.5.3.1.2",
+        "status": "integrated_local_mirror",
+        "supersedes": "R000521"
+      }
+    },
+    {
+      "header_sha256": "ED4F993D1158CE7E63F53FC32F4C108E3A75FD58B4BC8501A70538C397D19F18",
+      "id": "R000586",
+      "raw_bytes": 311,
+      "raw_sha256": "0ECC9D7987EAB621F0B243C3849DA03F64997B93C9E107207146845C8CC6F95E",
+      "row": {
+        "decision_id": "D000234",
+        "disposition": "Retain in the Mathematical Commons mirror and keep Schemes and corpus checks active without assigning an official tag",
+        "evidence": "The local Schemes diagonal-identities lemma states product compatibility under the canonical interchange isomorphism",
+        "kind": "new_local_label",
+        "residual_id": "R000586",
+        "source_unit": "ega:I.5.3.2",
+        "status": "integrated_local_mirror",
+        "supersedes": "R000524"
+      }
+    },
+    {
+      "header_sha256": "ED4F993D1158CE7E63F53FC32F4C108E3A75FD58B4BC8501A70538C397D19F18",
+      "id": "R000587",
+      "raw_bytes": 297,
+      "raw_sha256": "6FC0F773920778E5187762E273750878E496E1D8A929CD2C52CC3ADA36B42899",
+      "row": {
+        "decision_id": "D000234",
+        "disposition": "Retain in the Mathematical Commons mirror and keep Schemes and corpus checks active without assigning an official tag",
+        "evidence": "The local Schemes diagonal-identities lemma states arbitrary base-change compatibility of the diagonal",
+        "kind": "new_local_label",
+        "residual_id": "R000587",
+        "source_unit": "ega:I.5.3.4",
+        "status": "integrated_local_mirror",
+        "supersedes": "R000528"
+      }
+    },
+    {
+      "header_sha256": "ED4F993D1158CE7E63F53FC32F4C108E3A75FD58B4BC8501A70538C397D19F18",
+      "id": "R000588",
+      "raw_bytes": 312,
+      "raw_sha256": "7C8FC6CC48C3CDD69394AA9088C41458BA5056EED3491C3EFBB84045EB1D4587",
+      "row": {
+        "decision_id": "D000234",
+        "disposition": "Retain in the Mathematical Commons mirror and keep Schemes and corpus checks active without assigning an official tag",
+        "evidence": "Item four of the local Schemes diagonal identities lemma states exact graph compatibility with arbitrary base change",
+        "kind": "new_local_label",
+        "residual_id": "R000588",
+        "source_unit": "ega:I.5.3.12",
+        "status": "integrated_local_mirror",
+        "supersedes": "R000570"
+      }
+    },
+    {
+      "header_sha256": "ED4F993D1158CE7E63F53FC32F4C108E3A75FD58B4BC8501A70538C397D19F18",
+      "id": "R000589",
+      "raw_bytes": 285,
+      "raw_sha256": "10AC66C5AEA503803AC29C89DA559D6123B9771D80DB6DCCB3600FD58EE52702",
+      "row": {
+        "decision_id": "D000235",
+        "disposition": "Retain in the Mathematical Commons mirror and keep Schemes and corpus checks active without assigning an official tag",
+        "evidence": "Item five of the local Schemes diagonal identities lemma states exact naturality of the diagonal",
+        "kind": "new_local_label",
+        "residual_id": "R000589",
+        "source_unit": "ega:I.5.3.15",
+        "status": "integrated_local_mirror",
+        "supersedes": ""
+      }
+    },
+    {
+      "header_sha256": "ED4F993D1158CE7E63F53FC32F4C108E3A75FD58B4BC8501A70538C397D19F18",
+      "id": "R000605",
+      "raw_bytes": 346,
+      "raw_sha256": "D89F30EABC256A86F342A8849242A0BF881D5AAD36D9E803E471AEC75007F8BA",
+      "row": {
+        "decision_id": "D000237",
+        "disposition": "Retain in the Mathematical Commons mirror and keep Schemes and corpus checks active without assigning an official tag",
+        "evidence": "Item five of the local Schemes diagonal identities lemma carries the equal field-valued diagonal pair to the diagonal in X times_S X",
+        "kind": "existing_local_diagonal_naturality",
+        "residual_id": "R000605",
+        "source_unit": "ega:I.5.3.17:proof",
+        "status": "integrated_local_mirror",
+        "supersedes": ""
+      }
+    }
+  ],
+  "schema": "mc-stacks-overlay-review-rows/v1",
+  "source_commit": "dc37296a6ed6cc2947ee0c2c9c5d4c88195cb322"
+}

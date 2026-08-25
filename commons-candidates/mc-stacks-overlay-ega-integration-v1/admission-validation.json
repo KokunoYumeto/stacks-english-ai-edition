@@ -1,0 +1,34 @@
+{
+  "admission_blockers": [
+    "APPROVED_RIGHTS_RECEIPT_ABSENT",
+    "CENTRAL_CANDIDATE_MANIFEST_NOT_MATERIALIZED",
+    "INDEPENDENT_SIDECAR_REPLAY_NOT_PERFORMED",
+    "PORTABLE_SIDECAR_REBUILD_NOT_PERFORMED",
+    "SIDECAR_NAMESPACE_LEASE_NOT_ALLOCATED"
+  ],
+  "admission_ready": false,
+  "candidate_id": "mc-stacks-overlay-ega-integration-v1",
+  "checks": {
+    "anchors": true,
+    "components": true,
+    "governance": true,
+    "local_edges": true,
+    "namespace": true,
+    "package_files": true,
+    "patch": true,
+    "privacy": true,
+    "qa_closure": true,
+    "rights": true,
+    "schemas": true
+  },
+  "errors": [],
+  "mode": "admission_negative_preflight",
+  "overall": "FAIL",
+  "package_integrity": "PASS",
+  "schema": "stacks-ega-prelease-export-validation/v1",
+  "validated_at_utc": "2026-08-12T22:30:00Z",
+  "validated_subject": "manifest.json",
+  "validated_subject_bytes": 10282,
+  "validated_subject_sha256": "6D926A173B0A3C991A18243DE6F3CDBCB296D8387DA68E23F5C1DD1AC436DCB9",
+  "validator_sha256": "0BE00840F9F22C95DFD6809A2EC51C0E4D2D59BD3AFCC71BDFB5FDDD6F8DA30B"
+}

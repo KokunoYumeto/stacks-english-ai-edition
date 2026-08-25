@@ -1,0 +1,62 @@
+diff --git a/algebra.tex b/algebra.tex
+--- a/algebra.tex
++++ b/algebra.tex
+@@ -3159,6 +3159,33 @@ equals $\Spec(\varphi' \circ \varphi)$. In other
+ words, $\Spec$ is a contravariant functor from the
+ category of rings to the category of topological spaces.
+ 
++\begin{lemma}
++\label{lemma-spec-homeomorphism-onto-image-units}
++\begin{reference}
++\cite[Corollary 1.2.4]{EGA1}
++\end{reference}
++Let $\varphi : R \to S$ be a ring map. Assume that every $g \in S$
++can be written as $g = u\varphi(f)$ for some $f \in R$ and some
++unit $u \in S$. Then
++$$
++\Spec(S) \longrightarrow \Spec(R)
++$$
++is a homeomorphism onto its image.
++\end{lemma}
++
++\begin{proof}
++The map is continuous by Lemma \ref{lemma-spec-functorial}. If
++$\mathfrak q$ and $\mathfrak q'$ have the same inverse image in $R$,
++then the assumption shows that every $g \in S$ is in $\mathfrak q$ if
++and only if it is in $\mathfrak q'$. Thus the map is injective. Finally,
++if $g = u\varphi(f)$ as in the statement, then
++$$
++D(g) = \Spec(\varphi)^{-1}(D(f)).
++$$
++Since the standard opens form a basis, the map is a homeomorphism onto
++its image.
++\end{proof}
++
+ \begin{lemma}
+ \label{lemma-spec-localization}
+ Let $R$ be a ring. Let $S \subset R$ be a multiplicative subset.
+@@ -3583,6 +3605,24 @@ of $f \bmod I$. Then $fg = 1 \bmod I$. Hence $fg$ is a unit of $R$
+ by (2) which implies that $f$ is a unit.
+ \end{proof}
+ 
++\begin{lemma}
++\label{lemma-open-containing-vanishing-jacobson-radical}
++\begin{reference}
++\cite[Proposition 1.1.15]{EGA1}
++\end{reference}
++Let $R$ be a ring and let $I \subset R$ be an ideal contained in the
++Jacobson radical of $R$. If $U \subset \Spec(R)$ is an open subset and
++$V(I) \subset U$, then $U = \Spec(R)$.
++\end{lemma}
++
++\begin{proof}
++Suppose that $Z = \Spec(R) \setminus U$ is nonempty. Write $Z = V(J)$
++for an ideal $J \subset R$. Then $J$ is a proper ideal, so it is contained
++in a maximal ideal $\mathfrak m$. Since $I$ is contained in every maximal
++ideal, we have $\mathfrak m \in V(I) \cap V(J)$. This contradicts
++$V(I) \subset U$.
++\end{proof}
++
+ \begin{lemma}
+ \label{lemma-surjective-on-spec-units}
+ Let $\varphi : R \to S$ be a ring map such that the induced map

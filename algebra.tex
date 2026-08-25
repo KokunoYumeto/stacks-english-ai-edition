@@ -3169,6 +3169,33 @@ words, $\Spec$ is a contravariant functor from the
 category of rings to the category of topological spaces.
 
 \begin{lemma}
+\label{lemma-spec-homeomorphism-onto-image-units}
+\begin{reference}
+\cite[Corollary 1.2.4]{EGA1}
+\end{reference}
+Let $\varphi : R \to S$ be a ring map. Assume that every $g \in S$
+can be written as $g = u\varphi(f)$ for some $f \in R$ and some
+unit $u \in S$. Then
+$$
+\Spec(S) \longrightarrow \Spec(R)
+$$
+is a homeomorphism onto its image.
+\end{lemma}
+
+\begin{proof}
+The map is continuous by Lemma \ref{lemma-spec-functorial}. If
+$\mathfrak q$ and $\mathfrak q'$ have the same inverse image in $R$,
+then the assumption shows that every $g \in S$ is in $\mathfrak q$ if
+and only if it is in $\mathfrak q'$. Thus the map is injective. Finally,
+if $g = u\varphi(f)$ as in the statement, then
+$$
+D(g) = \Spec(\varphi)^{-1}(D(f)).
+$$
+Since the standard opens form a basis, the map is a homeomorphism onto
+its image.
+\end{proof}
+
+\begin{lemma}
 \label{lemma-spec-localization}
 Let $R$ be a ring. Let $S \subset R$ be a multiplicative subset.
 The map $R \to S^{-1}R$ induces via the functoriality of $\Spec$
@@ -3201,15 +3228,10 @@ $S^{-1}\mathfrak p$ in $R$ is equal to $\mathfrak p$,
 because $R/\mathfrak p \to \overline{S}^{-1}(R/\mathfrak p)$
 is injective by basic notion (\ref{item-localize-nonzerodivisors}).
 This proves that the map $\Spec(S^{-1}R) \to \Spec(R)$
-is bijective onto $D$ with inverse as given.
-It is continuous by Lemma \ref{lemma-spec-functorial}.
-Finally, let $D(g) \subset \Spec(S^{-1}R)$ be a standard
-open. Write $g = h/s$ for some $h\in R$ and $s\in S$.
-Since $g$ and $h/1$ differ by a unit we have $D(g) =
-D(h/1)$ in $\Spec(S^{-1}R)$.
-Hence by Lemma \ref{lemma-spec-functorial} and the bijectivity
-above the image of $D(g) = D(h/1)$ is $D \cap D(h)$.
-This proves the map is open as well.
+is bijective onto $D$ with inverse as given. Every element of $S^{-1}R$
+is a unit times the image of an element of $R$. Hence the map is a
+homeomorphism onto its image by
+Lemma \ref{lemma-spec-homeomorphism-onto-image-units}.
 \end{proof}
 
 \begin{lemma}
@@ -3251,8 +3273,8 @@ the ideal $\mathfrak p /I \subset R/I$. Using
 basic notion (\ref{item-isomorphism-theorem}) we see that
 $(R/I)/(\mathfrak p/I) = R/\mathfrak p$ is a domain
 and hence $\mathfrak p/I$ is a prime ideal. From this
-it is immediately clear that the image of $D(f + I)$
-is $D(f) \cap V(I)$, and hence the map is a homeomorphism.
+and Lemma \ref{lemma-spec-homeomorphism-onto-image-units}, applied to
+the surjection $R \to R/I$, the result follows.
 \end{proof}
 
 
@@ -3600,6 +3622,24 @@ For the final statement let $f \in R$ map to a unit in $R/I$.
 Then we can find $g \in R$ mapping to the multiplicative inverse
 of $f \bmod I$. Then $fg = 1 \bmod I$. Hence $fg$ is a unit of $R$
 by (2) which implies that $f$ is a unit.
+\end{proof}
+
+\begin{lemma}
+\label{lemma-open-containing-vanishing-jacobson-radical}
+\begin{reference}
+\cite[Proposition 1.1.15]{EGA1}
+\end{reference}
+Let $R$ be a ring and let $I \subset R$ be an ideal contained in the
+Jacobson radical of $R$. If $U \subset \Spec(R)$ is an open subset and
+$V(I) \subset U$, then $U = \Spec(R)$.
+\end{lemma}
+
+\begin{proof}
+Suppose that $Z = \Spec(R) \setminus U$ is nonempty. Write $Z = V(J)$
+for an ideal $J \subset R$. Then $J$ is a proper ideal, so it is contained
+in a maximal ideal $\mathfrak m$. Since $I$ is contained in every maximal
+ideal, we have $\mathfrak m \in V(I) \cap V(J)$. This contradicts
+$V(I) \subset U$.
 \end{proof}
 
 \begin{lemma}

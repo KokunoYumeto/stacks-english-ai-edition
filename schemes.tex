@@ -2470,6 +2470,35 @@ Hence $f$ factors through
 $Z$ by Lemma \ref{lemma-characterize-closed-subspace}.
 \end{proof}
 
+\begin{lemma}
+\label{lemma-reduction-functorial}
+\begin{reference}
+\cite[(5.1.5)]{EGA1}
+\end{reference}
+For every morphism of schemes $f : X \to Y$ there is a unique morphism
+$$
+f_{red} : X_{red} \longrightarrow Y_{red}
+$$
+such that the diagram
+$$
+\xymatrix{
+X_{red} \ar[r]^{f_{red}} \ar[d] & Y_{red} \ar[d] \\
+X \ar[r]^f & Y
+}
+$$
+commutes. Moreover, $(\text{id}_X)_{red} = \text{id}_{X_{red}}$ and
+$(g \circ f)_{red} = g_{red} \circ f_{red}$ whenever the composition is
+defined.
+\end{lemma}
+
+\begin{proof}
+The scheme $X_{red}$ is reduced. Hence the composition
+$X_{red} \to X \to Y$ factors through $Y_{red}$ by
+Lemma \ref{lemma-map-into-reduction}. The factorization is unique by
+Lemma \ref{lemma-characterize-closed-subspace}. The two functoriality
+assertions follow from the same uniqueness.
+\end{proof}
+
 
 
 
@@ -4237,6 +4266,64 @@ This is the unique morphism of schemes such that
 $\text{pr}_1 \circ \Delta_{X/S} = \text{id}_X$ and
 $\text{pr}_2 \circ \Delta_{X/S} = \text{id}_X$ (it exists in
 any category with fibre products).
+
+\begin{lemma}
+\label{lemma-diagonal-identities}
+\begin{reference}
+\cite[(5.3.1), Propositions 5.3.2 and 5.3.15, and Corollaries 5.3.4 and
+5.3.12]{EGA1}
+\end{reference}
+Let $X$, $Y$, and $T$ be schemes over $S$.
+\begin{enumerate}
+\item If $f : T \to X$ and $g : T \to Y$ are morphisms over $S$, then
+$$
+(f, g) = (f \times_S g) \circ \Delta_{T/S}.
+$$
+\item Via the canonical isomorphism
+$$
+(X \times_S Y) \times_S (X \times_S Y) \cong
+(X \times_S X) \times_S (Y \times_S Y),
+$$
+we have
+$$
+\Delta_{X \times_S Y/S} = \Delta_{X/S} \times_S \Delta_{Y/S}.
+$$
+\item If $S' \to S$ is a morphism, then the base change of
+$\Delta_{X/S}$ to $S'$ is $\Delta_{X_{S'}/S'}$ via the canonical
+isomorphism
+$$
+(X \times_S X)_{S'} \cong X_{S'} \times_{S'} X_{S'}.
+$$
+\item If $f : X \to Y$ is a morphism over $S$ and $S' \to S$ is a
+morphism, then via the canonical isomorphism
+$$
+(X \times_S Y)_{S'} \cong X_{S'} \times_{S'} Y_{S'},
+$$
+the base change of the graph morphism
+$$
+\Gamma_f = (\text{id}_X, f) : X \longrightarrow X \times_S Y
+$$
+is the graph morphism
+$$
+\Gamma_{f_{S'}} = (\text{id}_{X_{S'}}, f_{S'}) :
+X_{S'} \longrightarrow X_{S'} \times_{S'} Y_{S'}.
+$$
+\item If $f : X \to Y$ is a morphism over $S$, then
+$$
+(f \times_S f) \circ \Delta_{X/S} = \Delta_{Y/S} \circ f.
+$$
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+All five assertions follow from the universal property of fibre products.
+For (1), the two composites with the projections to $X$ and $Y$ are $f$ and
+$g$. For (2), the four composites with the projections to $X$, $X$, $Y$,
+and $Y$ agree. For (3), both composites with the projections to $X_{S'}$
+are the identity. For (4), the two composites with the projections to
+$X_{S'}$ and $Y_{S'}$ are $\text{id}_{X_{S'}}$ and $f_{S'}$. For (5),
+composing either side with either projection to $Y$ gives $f$.
+\end{proof}
 
 \begin{lemma}
 \label{lemma-diagonal-affines-closed}

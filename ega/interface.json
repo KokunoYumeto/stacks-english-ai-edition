@@ -1,0 +1,310 @@
+{
+  "schema": "ega-edition-stacks-readonly-interface-v1",
+  "status": "active",
+  "edition_task": "EGA French Canon and English Recheck",
+  "ownership": {
+    "edition_roots": "edition task only",
+    "stacks_scaffold": "codex/ega-scaffold only",
+    "cross_tree_writes": false
+  },
+  "french_cursor": {
+    "admitted_through": "historical graph-admission gate through EGA II printed p.33; F33 also corrects EGA I 4.1.9 from g-prime to printed g",
+    "next": "the live producer has advanced beyond this historical gate; see latest_sealed_french",
+    "append_state": "remove only the final 10-byte temporary end-env before the next authority append",
+    "manifest": "F33.json",
+    "manifest_sha256": "2652207F96F697935BC81C5D63B292DE4D956905D69CB92572225E320BB27F4C",
+    "page_gate": "E2P33.json",
+    "page_gate_sha256": "DE5FCAA73A0EB63BFAF050769642CADA52330EAB0C543C64E672D57ED870A13F",
+    "ledger": "E2P33_FR.jsonl",
+    "ledger_sha256": "A3A31AEFB278CA2712764D4146D063EE21FEF8ACE69246998C3AD96CA3886448",
+    "late_correction_ledger": "P121S.jsonl",
+    "late_correction_ledger_sha256": "E78CA53480FC3F577786FCB643E63116A1DEC118EDB99C5629B52D6E5E9B411C"
+  },
+  "latest_sealed_french": {
+    "manifest": "F37ZW.json",
+    "manifest_bytes": 13345,
+    "manifest_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+    "files": 18,
+    "bytes": 1014921,
+    "tree_sha256": "5A2A1BC407D5B0395C5E0D10103E0813C4EC9EDE37668D4DCA1091D1D280A841",
+    "coverage": "sealed French source and current reader closure including the three direct-NUMDAM lower-label-side repairs in EGA I 5.1.5 5.1.9 and 5.3.5",
+    "next": "DIA48T advances the normal retrospective diagram cursor to EGA I printed p.112 diagram 1",
+    "role": "latest exact French source manifest admitted with B37AJ D48 DIA48T and Q37DB",
+    "reader_admitted": true,
+    "publication": false
+  },
+  "source_successor": {
+    "status": "admitted_current_reader_closure",
+    "reader_admitted": true,
+    "publication": false,
+    "french": {
+      "manifest": "F37ZW.json",
+      "manifest_bytes": 13345,
+      "manifest_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+      "files": 18,
+      "bytes": 1014921,
+      "tree_sha256": "5A2A1BC407D5B0395C5E0D10103E0813C4EC9EDE37668D4DCA1091D1D280A841",
+      "identity_only_since_last_admitted_reader_source": false
+    },
+    "english": {
+      "manifest": "R261.json",
+      "manifest_bytes": 32444,
+      "manifest_sha256": "A87DC2EDD0BDA5CE6828A2759095B1F4F3278E993DC5661EBA2E345C33BEEF18",
+      "files": 127,
+      "bytes": 7284367,
+      "tree_sha256": "3FF379C715F99D2A28F231A54D55996E9CDA27153E5DBBFB14BA6F7F70766CB0",
+      "identity_only_since_last_admitted_reader_source": false
+    },
+    "role": "latest exact source manifests admitted with their current readers and retained as deterministic-replay inputs"
+  },
+  "admitted_french_receipts": [
+    {
+      "manifest": "F8.json",
+      "manifest_sha256": "2137BF64B9BD210176B58075DBDB58E7C8A5669F9EFAD61410510A01D32D0BC0",
+      "role": "historical direct-authority receipt used by the existing EGA I topic bridges"
+    },
+    {
+      "manifest": "F18.json",
+      "manifest_sha256": "D7D933D809D962E7770DDCB4734A6BFFEBF60C2CC4082DB116E5E6A470015CD3",
+      "role": "historical direct-authority receipt through EGA II printed p.19"
+    },
+    {
+      "manifest": "F19.json",
+      "manifest_sha256": "B1B3A70C9E7AAB2745C476CEC0F0313E123126217A43977FCA8AAE626EC84CAF",
+      "role": "historical direct-authority receipt through EGA II printed p.20"
+    },
+    {
+      "manifest": "F22.json",
+      "manifest_sha256": "8C0A8E6C837C9842D3DE5656AAF73014060109BCC1D67B68FB668C5A40D94EF7",
+      "role": "historical direct-authority receipt through EGA II printed p.23"
+    },
+    {
+      "manifest": "F33.json",
+      "manifest_sha256": "2652207F96F697935BC81C5D63B292DE4D956905D69CB92572225E320BB27F4C",
+      "role": "historical graph-admission receipt through EGA II printed p.33 including the direct-authority EGA I 4.1.9 g-prime correction"
+    },
+    {
+      "manifest": "F37T.json",
+      "manifest_sha256": "93502F5432392DA5C3AE40922C5A59688038F2FA010B13839F987A90D2E1799B",
+      "role": "historical sealed French producer manifest through EGA II printed p.37"
+    },
+    {
+      "manifest": "F37ZD.json",
+      "manifest_sha256": "497D899A6BFF6CFBA0FF63B02B071CDCCA59A309B67E6E5EC24266C3E24C6B69",
+      "role": "historical sealed French producer manifest through EGA II printed p.37"
+    },
+    {
+      "manifest": "F37ZH.json",
+      "manifest_sha256": "F25B7E8EB8FDBE720CA039CA04AA0D249378B254E053008416209DB813CEA1E4",
+      "role": "historical sealed French producer manifest through EGA II printed p.37 and retrospective EGA I diagram closures through printed p.206"
+    },
+    {
+      "manifest": "F37ZI.json",
+      "manifest_sha256": "D8D926E6042DEC361D321269FF9849C25F7A7A469E6EBE1E51B103BCCC18ABBB",
+      "role": "historical sealed French producer manifest through EGA II printed p.37 and retrospective EGA I diagram closures through printed p.211"
+    },
+    {
+      "manifest": "F37ZL.json",
+      "manifest_sha256": "9356CB6B4F40E72488BB1E4D8E08E34AA0965C8F96B6D880AC190C423DCB8E4C",
+      "role": "historical sealed French producer manifest including the corrected EGA I 5.3.7 Delta_Y label side and the last admitted reader closure"
+    },
+    {
+      "manifest": "F37ZP.json",
+      "manifest_sha256": "FACB20FE64825D69C092D26F8546EDD0ACCEE2664B5714F17A03AC2F8CA504A5",
+      "role": "historical French source-only producer manifest before the current diagram-label closure"
+    },
+    {
+      "manifest": "F37ZRS.json",
+      "manifest_sha256": "AE34471782E7171E00AC529A8857B19CCF0DC3F16EA7EB0327365FFCC3BDDC5A",
+      "role": "current admitted French producer manifest with p.108 and 5.3.15/5.3.17 label-side corrections"
+    },
+    {
+      "manifest": "F37ZW.json",
+      "manifest_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+      "role": "current admitted French producer manifest with the three direct-NUMDAM lower-label-side repairs and D48 cleanup closure"
+    }
+  ],
+  "english_discovery": {
+    "manifest": "R184.json",
+    "manifest_sha256": "5C64ECD32FD7C5458D2599D70ED667D2CF06D95517EFFA9C6D6DCEF7626913A0",
+    "latest_manifest": "R261.json",
+    "latest_manifest_bytes": 32444,
+    "latest_manifest_sha256": "A87DC2EDD0BDA5CE6828A2759095B1F4F3278E993DC5661EBA2E345C33BEEF18",
+    "latest_files": 127,
+    "latest_bytes": 7284367,
+    "latest_tree_sha256": "3FF379C715F99D2A28F231A54D55996E9CDA27153E5DBBFB14BA6F7F70766CB0",
+    "role": "R184 remains the exact intake discovery surface; R261 is the current admitted standalone-English source and r184.py applies 41 byte-precise inverse operations across 12 paths without mutating it; the three D48 label-side inverses are tree-gated before the R260 R259R and lower layers",
+    "reader_admitted": true,
+    "publication": false
+  },
+  "semantic_notes": {
+    "bytes": 566253,
+    "sha256": "799EF17D0D7D98B2B459EA938C0ABE25647BB7018857FF8D83B656725B932196",
+    "role": "current read-only semantic record retained through the visual-only D48 corrections"
+  },
+  "sealed_readers": {
+    "french": {
+      "receipt": "B37AJ.json",
+      "receipt_bytes": 12222,
+      "receipt_sha256": "395FBB06FDFB3254D49931FC00C8AF36DDFAA6DA71D97DCAE2C51797F1905D1A",
+      "pdf": "EGA_FR.pdf",
+      "bytes": 2004661,
+      "sha256": "E41CDDAAA89E35AB794F6CBAC236F5D5522819CAE049FB4DCB910E979D98B77B",
+      "pages": 168,
+      "bound_manifest": "F37ZW.json",
+      "bound_manifest_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+      "bound_tree_sha256": "5A2A1BC407D5B0395C5E0D10103E0813C4EC9EDE37668D4DCA1091D1D280A841",
+      "current_source_compatible": true,
+      "role": "current admitted French reader under D48 DIA48T and Q37DB"
+    },
+    "english": {
+      "receipt": "B239.json",
+      "receipt_bytes": 20109,
+      "receipt_sha256": "54355E7EB685606A26E3DD4A07D530A76E0B55C2E19FB87EC39169719848864D",
+      "pdf": "EGA_English_Global_0_IV.pdf",
+      "bytes": 14593439,
+      "sha256": "478379E297F5BA0B4A3726517944C4343944109CDCC122BF8265532330C119F3",
+      "pages": 1347,
+      "bound_manifest": "R261.json",
+      "bound_manifest_sha256": "A87DC2EDD0BDA5CE6828A2759095B1F4F3278E993DC5661EBA2E345C33BEEF18",
+      "bound_tree_sha256": "3FF379C715F99D2A28F231A54D55996E9CDA27153E5DBBFB14BA6F7F70766CB0",
+      "current_source_compatible": true,
+      "role": "current admitted English reader under D48 DIA48T and Q37DB"
+    }
+  },
+  "last_admitted_reader_interface": {
+    "status": "admitted_current_reader_closure",
+    "french_source_manifest": "F37ZW.json",
+    "french_source_manifest_bytes": 13345,
+    "french_source_manifest_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+    "english_source_manifest": "R261.json",
+    "english_source_manifest_bytes": 32444,
+    "english_source_manifest_sha256": "A87DC2EDD0BDA5CE6828A2759095B1F4F3278E993DC5661EBA2E345C33BEEF18",
+    "closure": {
+      "control": "D48.json",
+      "control_bytes": 10644,
+      "control_sha256": "477547191420DBDF0AB405D832A023FD630AD814F495050AA0196402CEF34508",
+      "inventory": "DIA48T.json",
+      "inventory_bytes": 189742,
+      "inventory_sha256": "8DF219213F91498E2442E138ABA9064F0DC29EFE1D33A4CF2D67E9174F268B68",
+      "pre_cleanup_receipt": "Q37CY.json",
+      "pre_cleanup_receipt_bytes": 4183,
+      "pre_cleanup_receipt_sha256": "F6652D4BDA7DBFD83B108616E081CCC646B902A6E625643684D808250DFD5802",
+      "post_cleanup_receipt": "Q37DB.json",
+      "post_cleanup_receipt_bytes": 2201,
+      "post_cleanup_receipt_sha256": "6FBA04B450328CD8804323061CCEE49AE44176D4B6FF082C5FE2F34C99C93432",
+      "immediate_post_cleanup_predecessor": "Q37CZ.json",
+      "immediate_post_cleanup_predecessor_bytes": 1789,
+      "immediate_post_cleanup_predecessor_sha256": "A55358D3D857CD28C3125D5E920BB52C54B066EACDC6E97D1A9E29EA7D1CDA29",
+      "superseded_malformed_post_cleanup_receipt": "Q37CX.json",
+      "superseded_malformed_post_cleanup_receipt_bytes": 1683,
+      "superseded_malformed_post_cleanup_receipt_sha256": "E9F209F61A201EB08EB7DA07BC6C2F6C570BA27DDD4505845BEF44EE3B1C7C55",
+      "retained_original_adverse_receipts": [
+        {"name": "Q37CU.json", "bytes": 2607, "sha256": "3238D228FC1689E48D31677DAABC2A8B6B2CA28B8FBBA03BCD1F5CF15C9B362E"},
+        {"name": "Q37CV.json", "bytes": 599, "sha256": "917A757B2B24D0323A7ACAED627E99FBB6D2DC5EB0543DDCD59978396B2CFECA"}
+      ],
+      "temporary_workspace": "C:/tmp/EGA-d48x",
+      "temporary_workspace_state": "absent",
+      "paused_workspace": "C:/tmp/EGA-d48",
+      "paused_workspace_state_at_receipt": "present",
+      "pre_cleanup_rows": 12,
+      "pre_cleanup_total_bytes": 3630449,
+      "pre_cleanup_serialization_bytes": 988,
+      "pre_cleanup_tree_sha256": "55CB258567C634BBEC3C2482DC3ACBBF42AF9A5D4A61ADF52A5D6C761DCFAACD",
+      "verified_items": 53,
+      "pending_items": 31,
+      "next_item": "DIA:ega1/ega1-3-fr.tex:699"
+    },
+    "active_referral_issues": [
+      "I000088",
+      "I000089",
+      "I000091",
+      "I000092",
+      "I000093",
+      "I000094",
+      "I000095",
+      "I000096",
+      "I000097"
+    ],
+    "role": "current locally admitted D48 source reader diagram closure and cleanup tuple; publication remains quarantined"
+  },
+  "rejected_d48_control_history": {
+    "status": "superseded_rejected_control_metadata_history",
+    "admitted": false,
+    "reader_admitted": false,
+    "publication": false,
+    "superseded_by": "DIA48T and Q37DB",
+    "controls": [
+      {"name": "DIA48.json", "bytes": 187882, "sha256": "81ED020FDAACEE69DF64908301752EAED2E09F30477B604DF57176FEE102FD70"},
+      {"name": "DIA48R.json", "bytes": 188541, "sha256": "9D3CF29B1C6A2D641DC5C979B1EB663D82990459468CE7EA79A394CE2551B0F5"},
+      {"name": "DIA48S.json", "bytes": 189345, "sha256": "8AB46CA573E66C5049E775172B304FCFFE9AA14292D58E79F0DB2EF846C2F08D"},
+      {"name": "Q37CU.json", "bytes": 2607, "sha256": "3238D228FC1689E48D31677DAABC2A8B6B2CA28B8FBBA03BCD1F5CF15C9B362E"},
+      {"name": "Q37CV.json", "bytes": 599, "sha256": "917A757B2B24D0323A7ACAED627E99FBB6D2DC5EB0543DDCD59978396B2CFECA"},
+      {"name": "Q37CW.json", "bytes": 4071, "sha256": "4EA9C9D8F856920EE1923DD377780666E45A57808CB6AF7B8EFC35C4A7A38AB6"},
+      {"name": "Q37CX.json", "bytes": 1683, "sha256": "E9F209F61A201EB08EB7DA07BC6C2F6C570BA27DDD4505845BEF44EE3B1C7C55"}
+    ],
+    "defects": [
+      "stale inventory source reader cursor and publication-gate fields",
+      "malformed comma-bound permanent and supersession arrays",
+      "contradictory stale top-level source manifest"
+    ],
+    "disposition": "retain byte-exact adverse history and forbid every listed control from admitted interface fields"
+  },
+  "quarantined_external_closure": {
+    "status": "superseded_rejected_external_reader_closure",
+    "historical_snapshot": true,
+    "superseded_by": "Q37CL then D44 and Q37CN",
+    "admitted": false,
+    "reader_admitted": false,
+    "publication": false,
+    "controls": {
+      "reader": {"name": "B235.json", "bytes": 43066, "sha256": "BDCBF4BDB3ED548A194ABA75AF684348799610D04B00541FA31517031EFCF052"},
+      "referral_receipt": {"name": "RF14.json", "bytes": 45381, "sha256": "5041AB3E49171EFC993B5B059988F3B556D5B668DD58A373A47262F45434D255"},
+      "diagram_inventory": {"name": "DIA42R.json", "bytes": 144781, "sha256": "9AED25D5A883A75892568B7F17D754C26FA89F0EC82659E16D4BE63313FE0798"},
+      "closure": {"name": "REF14.json", "bytes": 9198, "sha256": "A455567EB62F0A560364E4FDA92167C8983ED6E19E3523C09EB9E94980EC6615"},
+      "cleanup_generator": {"name": "q37ckgen.ps1", "bytes": 14642, "sha256": "42E9FD3802AA6E538466B3B99733FF2431DB077324F34673A7AD049B35F00F83"}
+    },
+    "candidate_reader": {
+      "files": 7,
+      "bytes": 15982098,
+      "tree_sha256": "CDDB094E4ECF479E620945C620F2AC6DA650EBB06A7F7D376F63AAEE40324C4C",
+      "pdf_bytes": 14593436,
+      "pdf_sha256": "B63C595C6A9740F01212D6D567F181923442B5A4C38E59EBC41D89C558F37197",
+      "pdf_pages": 1347
+    },
+    "b235_rejected_replay_total_contradictions": [
+      {"record": "literal_output_argument_build_moved_to_b235_r0", "recorded_total_bytes": 0, "listed_file_total_bytes": 13522363},
+      {"record": "failed_wrapper_attempt_b235_r1", "recorded_total_bytes": 0, "listed_file_total_bytes": 1039408},
+      {"record": "one_pass_replay_b235_r2", "recorded_total_bytes": 0, "listed_file_total_bytes": 15953997}
+    ],
+    "q37ckgen_stale_identity_pins": [
+      {"record": "Q37CJ.json", "recorded_bytes": 7830, "recorded_sha256": "81620C1C70A8608EC395A062A05C13BFDC6CE9702E9A525E2BE8C877851F5B81", "actual_bytes": 7830, "actual_sha256": "2E5E25FEB421E4D9987EDB55FBFCA2AFB40C60F9AE67A9B77C5C6DB9D820FEF1"},
+      {"record": "ref14gen.ps1", "recorded_bytes": 13425, "recorded_sha256": "E3E28E18961D2F3B37B822C34698EC6CF101B95FA678ECBC583307385C43E0D0", "actual_bytes": 13425, "actual_sha256": "D39B5FE81B13B56817381F630B3515110F0F5472E96F24DFC52E3129FE5E7260"},
+      {"record": "ref14seal.ps1", "recorded_bytes": 39736, "recorded_sha256": "EBC6D9D6672C0651C168FB90126C2B3D5B12C2BA1BD931FE30535F6E9A4A3772", "actual_bytes": 34143, "actual_sha256": "455671605E4444095AD66B1FC6A0A3F3B31FB26D178C9B604AEBADB03561E808"},
+      {"record": "ref14final.ps1", "recorded_bytes": 14033, "recorded_sha256": "23AE7F853CBA890C6BF0959BC29F2D30814F08A7AEBC1B3F555608E3B0339FF6", "actual_bytes": 11837, "actual_sha256": "32312BC1A585996E419697A816002F3167DDC4F45F56BE1FC56DA84DFC3A568C"}
+    ],
+    "semantic_scaffold": {
+      "postimage_bytes": 556040,
+      "postimage_sha256": "A06EE6F587C97B5003E4B9A2F44D183813922E55211B785500805B99E24570F2",
+      "last_admitted_prefix_bytes": 550780,
+      "last_admitted_prefix_sha256": "4CFF390349293917941915848B04F31092B5921ED2127750F73FC3D94D62E3C9"
+    },
+    "missing_cleanup_receipts": ["Q37CK.json", "Q37CL.json"],
+    "temporary_workspace": "C:/tmp/EGA-ref14",
+    "temporary_workspace_state": "present",
+    "disposition": "retain as exact adverse history; corrected REF14R and Q37CL followed by the admitted D44 DIA44 Q37CM Q37CN successor without rewriting this failed snapshot"
+  },
+  "public_checkpoint": "https://zenodo.org/records/21861666",
+  "correction_channel": "reports/findings.jsonl",
+  "required_finding_fields": [
+    "stable_id",
+    "ega_locus",
+    "claim",
+    "suspected_error",
+    "authority_locator",
+    "evidence",
+    "proposed_disposition",
+    "reporter",
+    "utc"
+  ]
+}

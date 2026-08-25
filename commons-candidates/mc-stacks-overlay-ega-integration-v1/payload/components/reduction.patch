@@ -1,0 +1,131 @@
+diff --git a/morphisms.tex b/morphisms.tex
+--- a/morphisms.tex
++++ b/morphisms.tex
+@@ -11394,6 +11394,88 @@ is a universal homeomorphism.
+ Omitted.
+ \end{proof}
+ 
++\begin{lemma}
++\label{lemma-reduction-morphism-properties}
++\begin{reference}
++\cite[Proposition 5.1.6]{EGA1}
++\end{reference}
++Let $f : X \to Y$ be a morphism of schemes and let
++$f_{red} : X_{red} \to Y_{red}$ be the morphism of
++Schemes, Lemma \ref{schemes-lemma-reduction-functorial}.
++Then
++\begin{enumerate}
++\item $f$ is surjective if and only if $f_{red}$ is surjective,
++\item $f$ is universally injective if and only if $f_{red}$ is universally
++injective, and
++\item if $f$ is an immersion, a closed immersion, or an open immersion, then
++the same is true of $f_{red}$.
++\end{enumerate}
++\end{lemma}
++
++\begin{proof}
++The reductions have the same underlying spaces as the original schemes, and
++the vertical maps in the defining square induce isomorphisms on residue
++fields. The first assertion follows immediately. The second follows from
++Lemma \ref{lemma-universally-injective}, which characterizes universal
++injectivity by the map on points and the residue field extensions.
++
++Suppose that $f$ is a closed immersion. Reduction does not change the
++underlying topological map. The induced map on stalks for $f_{red}$ is
++obtained from the surjective stalk map for $f$ by dividing source and target
++by their nilradicals, and hence is surjective. The map on structure sheaves
++is therefore surjective by Sheaves, Lemma
++\ref{sheaves-lemma-characterize-epi-mono}. Thus $f_{red}$ is a closed
++immersion by Schemes, Lemma
++\ref{schemes-lemma-characterize-closed-immersions}. If $f$ is an open
++immersion, then its stalk maps are isomorphisms and its image is open; both
++properties remain true after reduction, so $f_{red}$ is an open immersion.
++Finally, factor an immersion as a closed immersion followed by an open
++immersion. Functoriality of reduction and Schemes, Lemma
++\ref{schemes-lemma-composition-immersion} prove the general immersion case.
++\end{proof}
++
++\begin{lemma}
++\label{lemma-reductions-fibre-product}
++\begin{reference}
++\cite[Proposition 5.1.7]{EGA1}
++\end{reference}
++Let $X \to S$ and $Y \to S$ be morphisms of schemes. There is a canonical
++isomorphism
++$$
++X_{red} \times_{S_{red}} Y_{red}
++\longrightarrow
++X_{red} \times_S Y_{red}.
++$$
++Via this isomorphism, the canonical morphism
++$$
++X_{red} \times_{S_{red}} Y_{red} \longrightarrow X \times_S Y
++$$
++is a closed immersion and a universal homeomorphism.
++\end{lemma}
++
++\begin{proof}
++The maps from $X_{red}$ and $Y_{red}$ to $S$ factor through $S_{red}$ by
++Schemes, Lemma \ref{schemes-lemma-reduction-functorial}. Since
++$S_{red} \to S$ is a monomorphism, the two fibre products in the statement
++have the same universal property. This gives the canonical isomorphism.
++
++After replacing the source by $X_{red} \times_S Y_{red}$, the morphism to
++$X \times_S Y$ factors as
++$$
++X_{red} \times_S Y_{red} \longrightarrow
++X \times_S Y_{red} \longrightarrow X \times_S Y.
++$$
++Both arrows are base changes of reduction morphisms, and hence are closed
++immersions by Schemes, Lemma
++\ref{schemes-lemma-fibre-product-immersion}. Their composition is a closed
++immersion by Schemes, Lemma \ref{schemes-lemma-composition-immersion}. Both
++arrows are universal homeomorphisms by Lemmas
++\ref{lemma-reduction-universal-homeomorphism} and
++\ref{lemma-base-change-universal-homeomorphism}; their composition is a
++universal homeomorphism by
++Lemma \ref{lemma-composition-universal-homeomorphism}.
++\end{proof}
++
+ \begin{lemma}
+ \label{lemma-check-closed-infinitesimally}
+ Let $f : X \to S$ and $S' \to S$ be morphisms of schemes.
+diff --git a/schemes.tex b/schemes.tex
+--- a/schemes.tex
++++ b/schemes.tex
+@@ -2289,6 +2289,35 @@ Hence $f$ factors through
+ $Z$ by Lemma \ref{lemma-characterize-closed-subspace}.
+ \end{proof}
+ 
++\begin{lemma}
++\label{lemma-reduction-functorial}
++\begin{reference}
++\cite[(5.1.5)]{EGA1}
++\end{reference}
++For every morphism of schemes $f : X \to Y$ there is a unique morphism
++$$
++f_{red} : X_{red} \longrightarrow Y_{red}
++$$
++such that the diagram
++$$
++\xymatrix{
++X_{red} \ar[r]^{f_{red}} \ar[d] & Y_{red} \ar[d] \\
++X \ar[r]^f & Y
++}
++$$
++commutes. Moreover, $(\text{id}_X)_{red} = \text{id}_{X_{red}}$ and
++$(g \circ f)_{red} = g_{red} \circ f_{red}$ whenever the composition is
++defined.
++\end{lemma}
++
++\begin{proof}
++The scheme $X_{red}$ is reduced. Hence the composition
++$X_{red} \to X \to Y$ factors through $Y_{red}$ by
++Lemma \ref{lemma-map-into-reduction}. The factorization is unique by
++Lemma \ref{lemma-characterize-closed-subspace}. The two functoriality
++assertions follow from the same uniqueness.
++\end{proof}
++
+ 
+ 
+ 
