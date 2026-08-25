@@ -127,6 +127,14 @@ def require_commit(commit: object, label: str, errors: list[str]) -> str | None:
     return commit
 
 
+def require_sha1_identity(value: object, label: str, errors: list[str]) -> str | None:
+    """Validate a provenance identity without requiring its object in this history."""
+    if not isinstance(value, str) or not SHA1_RE.fullmatch(value):
+        errors.append(f"invalid {label} identity: {value!r}")
+        return None
+    return value
+
+
 def require_ancestor(
     ancestor: str | None, descendant: str, label: str, errors: list[str]
 ) -> None:
@@ -255,7 +263,7 @@ def main(argv: list[str] | None = None) -> int:
                     errors.append("fixed-point build receipt is not a JSON object")
 
     composition = load_json_object(composition_path, errors, "composition receipt") or {}
-    if composition.get("schema") != "unofficial-ai-integrated-stacks-composition/v1":
+    if composition.get("schema") != "unofficial-ai-integrated-stacks-composition/v2":
         errors.append("composition receipt schema is invalid")
     if composition.get("status") != "PASS":
         errors.append("composition receipt is not PASS")
@@ -289,22 +297,63 @@ def main(argv: list[str] | None = None) -> int:
         if result.returncode != 0:
             errors.append(f"missing {label} ancestor: {commit}")
 
-    cumulative_commit = require_commit(
-        composition_state.get("cumulative_overlay_commit"),
-        "cumulative overlay",
+    composition_source_commit = require_commit(
+        composition_state.get("source_commit"), "composition source", errors
+    )
+    composition_source_tree = require_sha1_identity(
+        composition_state.get("source_tree"), "composition source tree", errors
+    )
+    require_sha1_identity(
+        composition_state.get("materialization_tip"),
+        "composition materialization tip",
         errors,
     )
-    unified_commit = require_commit(
-        composition_state.get("unified_merge_commit"), "unified merge", errors
+    require_ancestor(
+        composition_source_commit, "HEAD", "composition-source-to-HEAD", errors
     )
-    if unified_commit is not None:
-        require_ancestor(cumulative_commit, unified_commit, "cumulative-to-unified", errors)
-        require_ancestor(unified_commit, "HEAD", "unified-to-HEAD", errors)
+    if composition_source_commit is not None and composition_source_tree is not None:
+        source_tree_result = git(
+            "rev-parse", f"{composition_source_commit}^{{tree}}"
+        )
+        if (
+            source_tree_result.returncode != 0
+            or source_tree_result.stdout.strip() != composition_source_tree
+        ):
+            errors.append("composition source tree identity mismatch")
 
-    cutoff_commit = require_commit(
-        composition_registry.get("cutoff_commit"), "registry cutoff", errors
+    registry_import_commit = require_commit(
+        composition_registry.get("linear_import_commit"),
+        "registry linear import",
+        errors,
     )
-    require_ancestor(cutoff_commit, "HEAD", "registry-cutoff-to-HEAD", errors)
+    registry_import_tree = require_sha1_identity(
+        composition_registry.get("linear_import_tree"),
+        "registry linear import tree",
+        errors,
+    )
+    require_ancestor(
+        registry_import_commit, "HEAD", "registry-import-to-HEAD", errors
+    )
+    if composition_source_commit is not None:
+        require_ancestor(
+            registry_import_commit,
+            composition_source_commit,
+            "registry-import-to-composition-source",
+            errors,
+        )
+    if registry_import_commit is not None and registry_import_tree is not None:
+        import_tree_result = git(
+            "rev-parse", f"{registry_import_commit}^{{tree}}"
+        )
+        if (
+            import_tree_result.returncode != 0
+            or import_tree_result.stdout.strip() != registry_import_tree
+        ):
+            errors.append("registry linear-import tree identity mismatch")
+
+    cutoff_commit = require_sha1_identity(
+        composition_registry.get("cutoff_commit"), "registry cutoff commit", errors
+    )
 
     overlays_relative = composition_registry.get("overlays_path")
     if not isinstance(overlays_relative, str) or not overlays_relative:
@@ -342,19 +391,22 @@ def main(argv: list[str] | None = None) -> int:
             errors.append(f"invalid committed overlay registry: {exc}")
             registry = {}
 
-    if cutoff_commit is not None:
-        cutoff_registry_bytes = committed_bytes(
-            cutoff_commit,
-            "registry/overlays.json",
+    expected_registry_blob = require_sha1_identity(
+        composition_registry.get("overlays_git_blob"),
+        "overlay registry Git blob",
+        errors,
+    )
+    if registry_bytes is not None and expected_registry_blob is not None:
+        if git_blob_sha1(registry_bytes) != expected_registry_blob:
+            errors.append("overlay registry Git blob does not match composition receipt")
+        imported_registry_blob = commit_blob(
+            registry_import_commit,
+            overlays_relative,
             errors,
-            "registry cutoff",
+            "registry linear import",
         )
-        if (
-            registry_bytes is not None
-            and cutoff_registry_bytes is not None
-            and cutoff_registry_bytes != registry_bytes
-        ):
-            errors.append("imported overlay registry differs from the cutoff commit")
+        if imported_registry_blob != expected_registry_blob:
+            errors.append("registry linear-import blob binding mismatch")
 
     entries = registry.get("registered_entries", [])
     if not isinstance(entries, list):
@@ -885,13 +937,14 @@ def main(argv: list[str] | None = None) -> int:
         ):
             errors.append(f"pinned authority identity mismatch for {relative}")
 
-        for commit, label in (
-            (cumulative_commit, "cumulative overlay"),
-            (unified_commit, "unified merge"),
-        ):
-            blob = commit_blob(commit, relative, errors, label)
-            if isinstance(projection_blob, str) and blob != projection_blob.lower():
-                errors.append(f"{label} projection mismatch for {relative}")
+        source_blob = commit_blob(
+            composition_source_commit,
+            relative,
+            errors,
+            "composition source",
+        )
+        if isinstance(projection_blob, str) and source_blob != projection_blob.lower():
+            errors.append(f"composition source projection mismatch for {relative}")
 
     if any(stem not in required_build_stems for stem in affected_stems):
         errors.append("required build stems omit an affected source")
@@ -910,9 +963,9 @@ def main(argv: list[str] | None = None) -> int:
     )
     if build_source_commit is not None:
         require_ancestor(
-            unified_commit,
+            composition_source_commit,
             build_source_commit,
-            "unified-to-build-source",
+            "composition-source-to-build-source",
             errors,
         )
         require_ancestor(
@@ -962,7 +1015,11 @@ def main(argv: list[str] | None = None) -> int:
     expected_build_binding = {
         "receipt": COMPOSITION_RECEIPT.as_posix(),
         "receipt_sha256": composition_sha,
+        "composition_source_commit": composition_source_commit,
+        "composition_source_tree": composition_source_tree,
         "registry_cutoff_commit": cutoff_commit,
+        "registry_import_commit": registry_import_commit,
+        "registry_import_tree": registry_import_tree,
         "registry_overlays_path": overlays_relative,
         "registry_overlays_git_blob": (
             git_blob_sha1(registry_bytes) if registry_bytes is not None else None
@@ -972,7 +1029,6 @@ def main(argv: list[str] | None = None) -> int:
         ).upper(),
         "registered_overlays": len(entries),
         "registered_stable_ids": len(registered_ids),
-        "unified_merge_commit": unified_commit,
         "last_admitted_overlay": composition_registry.get("last_admitted_overlay"),
         "required_build_stems": required_build_stems,
         "affected_source_stems": affected_stems,

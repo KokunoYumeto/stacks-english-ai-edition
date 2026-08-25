@@ -1,5 +1,5 @@
 {
-  "schema": "unofficial-ai-integrated-stacks-composition/v1",
+  "schema": "unofficial-ai-integrated-stacks-composition/v2",
   "status": "PASS",
   "created_utc": "2026-08-25T15:28:16Z",
   "authority": {
@@ -17,6 +17,9 @@
     "overlays_path": "ai-integrated/registry/overlays.json",
     "overlays_bytes": 29549,
     "overlays_sha256": "D4C4BC122E4F2D61D7BE028B21FE4888989B3970D92E33C11289E05034ECF9E6",
+    "overlays_git_blob": "513a55e0a5c5365bbb87c9f71eb7f4921a188a96",
+    "linear_import_commit": "c06400fc323abb62990f37563cc31e9ae93fbf8e",
+    "linear_import_tree": "7c4f81e8e9f470b3ee6224299411c4062752d0bc",
     "registered_overlays": 19,
     "registered_stable_ids": 507,
     "last_admitted_overlay": "stacks-errata-a04446e-r19"
@@ -42,9 +45,10 @@
     }
   ],
   "composition": {
-    "mode": "authority-bound isolated commits, registry-order cumulative cherry-pick, and no-conflict three-way merge",
-    "cumulative_overlay_commit": "19f0bebf3aea5ecc43f8c1e126be37ed16921ac1",
-    "unified_merge_commit": "ea5e1078c181416d3262ea60e54539b3c3c9555c",
+    "mode": "authority-bound registry-order projection committed as protected-branch-compatible linear history",
+    "materialization_tip": "19f0bebf3aea5ecc43f8c1e126be37ed16921ac1",
+    "source_commit": "1f204fb27ff418fd0e75cb35ac8dab5256037f15",
+    "source_tree": "308ef50dd00d742507e2332601793ac8a8e98e00",
     "total_v2_operations": 548,
     "new_operations": 77,
     "r1_r3_replacements": 69,

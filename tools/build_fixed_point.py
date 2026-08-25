@@ -197,11 +197,21 @@ def require_clean_build_tree(source: Path) -> None:
         raise RuntimeError(f"build worktree contains untracked files: {names}")
 
 
-def require_ancestor(source: Path, commit: str, label: str) -> None:
+def require_ancestor(
+    source: Path, commit: str, label: str, descendant: str = "HEAD"
+) -> None:
     if not SHA1_PATTERN.fullmatch(commit):
         raise RuntimeError(f"invalid {label} commit in composition receipt: {commit!r}")
     completed = subprocess.run(
-        ["git", "-C", str(source), "merge-base", "--is-ancestor", commit, "HEAD"],
+        [
+            "git",
+            "-C",
+            str(source),
+            "merge-base",
+            "--is-ancestor",
+            commit,
+            descendant,
+        ],
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
         text=True,
@@ -210,8 +220,8 @@ def require_ancestor(source: Path, commit: str, label: str) -> None:
         check=False,
     )
     if completed.returncode != 0:
-        detail = completed.stderr.strip() or "commit is not an ancestor of HEAD"
-        raise RuntimeError(f"missing {label} ancestry {commit}: {detail}")
+        detail = completed.stderr.strip() or f"commit is not an ancestor of {descendant}"
+        raise RuntimeError(f"missing {label} ancestry {commit} -> {descendant}: {detail}")
 
 
 def require_clean_path(source: Path, relative: str) -> None:
@@ -274,7 +284,7 @@ def load_composition_receipt(
     if not isinstance(receipt, dict):
         raise RuntimeError("composition receipt must contain a JSON object")
     if (
-        receipt.get("schema") != "unofficial-ai-integrated-stacks-composition/v1"
+        receipt.get("schema") != "unofficial-ai-integrated-stacks-composition/v2"
         or receipt.get("status") != "PASS"
     ):
         raise RuntimeError("composition receipt schema or pass state is invalid")
@@ -284,21 +294,50 @@ def load_composition_receipt(
     if not isinstance(registry, dict) or not isinstance(composition, dict):
         raise RuntimeError("composition receipt lacks registry or composition state")
     cutoff = registry.get("cutoff_commit")
-    unified_merge = composition.get("unified_merge_commit")
-    if not isinstance(cutoff, str) or not isinstance(unified_merge, str):
-        raise RuntimeError("composition receipt lacks cutoff or unified merge commit")
-    if not SHA1_PATTERN.fullmatch(cutoff):
-        raise RuntimeError(f"invalid registry cutoff commit: {cutoff!r}")
-    require_ancestor(source, cutoff, "registry cutoff")
-    require_ancestor(source, unified_merge, "unified merge")
+    registry_import_commit = registry.get("linear_import_commit")
+    registry_import_tree = registry.get("linear_import_tree")
+    composition_source_commit = composition.get("source_commit")
+    composition_source_tree = composition.get("source_tree")
+    materialization_tip = composition.get("materialization_tip")
+    commit_identities = {
+        "registry cutoff": cutoff,
+        "registry linear import": registry_import_commit,
+        "composition source": composition_source_commit,
+        "composition materialization tip": materialization_tip,
+    }
+    for label, value in commit_identities.items():
+        if not isinstance(value, str) or not SHA1_PATTERN.fullmatch(value):
+            raise RuntimeError(f"invalid {label} commit identity: {value!r}")
+    tree_identities = {
+        "registry linear import": registry_import_tree,
+        "composition source": composition_source_tree,
+    }
+    for label, value in tree_identities.items():
+        if not isinstance(value, str) or not SHA1_PATTERN.fullmatch(value):
+            raise RuntimeError(f"invalid {label} tree identity: {value!r}")
+    require_ancestor(source, registry_import_commit, "registry linear import")
+    require_ancestor(source, composition_source_commit, "composition source")
+    require_ancestor(
+        source,
+        registry_import_commit,
+        "registry-import-to-composition-source",
+        composition_source_commit,
+    )
+    if git(source, "rev-parse", f"{registry_import_commit}^{{tree}}") != registry_import_tree:
+        raise RuntimeError("registry linear-import tree identity mismatch")
+    if git(source, "rev-parse", f"{composition_source_commit}^{{tree}}") != composition_source_tree:
+        raise RuntimeError("composition source tree identity mismatch")
 
     overlays_relative = registry.get("overlays_path")
     overlays_sha = registry.get("overlays_sha256")
+    expected_overlays_blob = registry.get("overlays_git_blob")
     overlays_bytes = registry.get("overlays_bytes")
     if (
         not isinstance(overlays_relative, str)
         or not isinstance(overlays_sha, str)
         or not SHA256_PATTERN.fullmatch(overlays_sha)
+        or not isinstance(expected_overlays_blob, str)
+        or not SHA1_PATTERN.fullmatch(expected_overlays_blob)
         or not isinstance(overlays_bytes, int)
         or overlays_bytes < 1
     ):
@@ -312,9 +351,14 @@ def load_composition_receipt(
         raise RuntimeError("imported overlay registry is missing")
     require_clean_path(source, overlays_relative)
     overlays_blob = git(source, "rev-parse", f"HEAD:{overlays_relative}")
-    cutoff_overlays_blob = git(source, "rev-parse", f"{cutoff}:registry/overlays.json")
-    if cutoff_overlays_blob != overlays_blob:
-        raise RuntimeError("imported overlay registry differs from the cutoff commit")
+    imported_overlays_blob = git(
+        source, "rev-parse", f"{registry_import_commit}:{overlays_relative}"
+    )
+    if (
+        overlays_blob != expected_overlays_blob
+        or imported_overlays_blob != expected_overlays_blob
+    ):
+        raise RuntimeError("imported overlay registry Git-blob binding mismatch")
     try:
         observed_overlays_bytes = int(git(source, "cat-file", "-s", overlays_blob))
     except ValueError as exc:
@@ -388,8 +432,12 @@ def load_composition_receipt(
             raise RuntimeError(f"composed source is missing: {relative}")
         require_clean_path(source, relative)
         observed_blob = git(source, "rev-parse", f"HEAD:{relative}")
+        source_blob = git(
+            source, "rev-parse", f"{composition_source_commit}:{relative}"
+        )
         if (
             observed_blob != expected_blob
+            or source_blob != expected_blob
             or git_blob_sha256(source, observed_blob) != expected_sha.upper()
         ):
             raise RuntimeError(f"composed source identity mismatch: {relative}")
@@ -407,13 +455,16 @@ def load_composition_receipt(
         # newlines. The clean-path check above proves the parsed worktree copy is
         # the same Git content.
         "receipt_sha256": git_blob_sha256(source, receipt_blob),
+        "composition_source_commit": composition_source_commit,
+        "composition_source_tree": composition_source_tree,
         "registry_cutoff_commit": cutoff,
+        "registry_import_commit": registry_import_commit,
+        "registry_import_tree": registry_import_tree,
         "registry_overlays_path": overlays_relative,
         "registry_overlays_git_blob": overlays_blob,
         "registry_overlays_sha256": overlays_sha.upper(),
         "registered_overlays": len(entries),
         "registered_stable_ids": len(stable_ids),
-        "unified_merge_commit": unified_merge,
         "last_admitted_overlay": registry.get("last_admitted_overlay"),
         "required_build_stems": list(required_stems),
         "affected_source_stems": affected_stems,
