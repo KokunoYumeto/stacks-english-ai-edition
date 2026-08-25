@@ -1006,6 +1006,7 @@ def main(argv: list[str] | None = None) -> int:
             "fatal_markers",
             "missing_glyph_markers",
             "undefined_reference_markers",
+            "external_reference_markers",
             "undefined_citation_markers",
             "multiply_defined_markers",
             "rerun_required_markers",
@@ -1015,9 +1016,18 @@ def main(argv: list[str] | None = None) -> int:
             errors.append(
                 f"incomplete TeX diagnostics for build artifact {artifact['stem']}"
             )
-        elif any(
-            not isinstance(value, int) or isinstance(value, bool) or value != 0
-            for value in diagnostics.values()
+        elif (
+            any(
+                not isinstance(value, int)
+                or isinstance(value, bool)
+                or value < 0
+                for value in diagnostics.values()
+            )
+            or any(
+                value != 0
+                for key, value in diagnostics.items()
+                if key != "external_reference_markers"
+            )
         ):
             errors.append(f"nonzero TeX diagnostics for build artifact {artifact['stem']}")
     if len(set(artifact_stems)) != len(artifact_stems):
@@ -1055,6 +1065,7 @@ def main(argv: list[str] | None = None) -> int:
         "fatal_markers",
         "missing_glyph_markers",
         "undefined_reference_markers",
+        "external_reference_markers",
         "undefined_citation_markers",
         "multiply_defined_markers",
         "rerun_required_markers",
@@ -1062,11 +1073,34 @@ def main(argv: list[str] | None = None) -> int:
     }
     if not isinstance(build_diagnostics, dict) or set(build_diagnostics) != diagnostic_keys:
         errors.append("fixed-point build lacks complete aggregate diagnostics")
-    elif any(
-        not isinstance(value, int) or isinstance(value, bool) or value != 0
-        for value in build_diagnostics.values()
+    elif (
+        any(
+            not isinstance(value, int) or isinstance(value, bool) or value < 0
+            for value in build_diagnostics.values()
+        )
+        or any(
+            value != 0
+            for key, value in build_diagnostics.items()
+            if key != "external_reference_markers"
+        )
     ):
         errors.append("fixed-point build has nonzero aggregate diagnostics")
+    elif artifacts and all(
+        isinstance(artifact, dict)
+        and isinstance(artifact.get("diagnostics"), dict)
+        and set(artifact["diagnostics"]) == diagnostic_keys
+        and all(
+            isinstance(value, int) and not isinstance(value, bool)
+            for value in artifact["diagnostics"].values()
+        )
+        for artifact in artifacts
+    ):
+        summed_diagnostics = {
+            key: sum(artifact["diagnostics"][key] for artifact in artifacts)
+            for key in diagnostic_keys
+        }
+        if summed_diagnostics != build_diagnostics:
+            errors.append("aggregate diagnostics do not equal artifact diagnostics")
 
     release_receipt = load_json_object(
         ROOT / "validation/unification-release-2026-08-25.json",

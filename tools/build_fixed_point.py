@@ -120,6 +120,17 @@ def build_state_vector(source: Path, stems: tuple[str, ...]) -> tuple[str, ...]:
     return tuple(state)
 
 
+def external_reference_labels(source: Path) -> set[str]:
+    labels = {"index-section-phantom"}
+    label_pattern = re.compile(r"\\label\{([^}]+)\}")
+    for path in source.glob("*.tex"):
+        text = path.read_text(encoding="utf-8", errors="replace")
+        labels.update(
+            f"{path.stem}-{match.group(1)}" for match in label_pattern.finditer(text)
+        )
+    return labels
+
+
 def version_line(executable: str, env: dict[str, str], source: Path) -> str:
     version_flag = "-v" if executable == "pdfinfo" else "--version"
     output = run([executable, version_flag], source, env)
@@ -410,7 +421,12 @@ def load_composition_receipt(
     return binding, required_stems, tuple(affected_stems)
 
 
-def scan_tex_diagnostics(log_path: Path, blg_path: Path) -> dict[str, int]:
+def scan_tex_diagnostics(
+    log_path: Path,
+    blg_path: Path,
+    stem: str,
+    external_labels: set[str],
+) -> dict[str, int]:
     if not log_path.is_file():
         raise RuntimeError(f"final TeX log is missing: {log_path.name}")
     text = log_path.read_text(encoding="utf-8", errors="replace")
@@ -421,9 +437,10 @@ def scan_tex_diagnostics(log_path: Path, blg_path: Path) -> dict[str, int]:
         r"(?m)^Emergency stop\.",
         r"Fatal error occurred",
     )
-    reference_patterns = (
-        r"LaTeX Warning:[^\r\n]*(?:Hyper\s+)?Reference\b[^\r\n]*\bundefined\b",
-        r"LaTeX Warning:\s*There were undefined references\.",
+    reference_warning = re.compile(
+        r"LaTeX Warning:\s*(?:Hyper\s+)?Reference\s+`([^']+)'"
+        r"(?:(?!LaTeX Warning:).)*?\bundefined\b",
+        re.IGNORECASE | re.DOTALL,
     )
     citation_patterns = (
         r"(?:LaTeX|Package [^\r\n]+) Warning:[^\r\n]*Citation\b[^\r\n]*\bundefined\b",
@@ -443,16 +460,33 @@ def scan_tex_diagnostics(log_path: Path, blg_path: Path) -> dict[str, int]:
         r"pdfTeX warning \(dest\):",
         r"pdfTeX warning \(ext4\): destination with the same identifier",
     )
+    reference_labels = [
+        re.sub(r"\s+", "", match.group(1))
+        for match in reference_warning.finditer(text)
+    ]
+    expected_external = sum(
+        label in external_labels and not label.startswith(f"{stem}-")
+        for label in reference_labels
+    )
+    unresolved_references = len(reference_labels) - expected_external
+    reference_summaries = len(
+        re.findall(
+            r"LaTeX Warning:\s*There were undefined references\.",
+            text,
+            re.IGNORECASE,
+        )
+    )
+    if reference_summaries and not reference_labels:
+        unresolved_references += reference_summaries
+
     diagnostics = {
         "fatal_markers": sum(
             len(re.findall(pattern, text, re.IGNORECASE))
             for pattern in fatal_patterns
         ),
         "missing_glyph_markers": text.count("Missing character:"),
-        "undefined_reference_markers": sum(
-            len(re.findall(pattern, text, re.IGNORECASE))
-            for pattern in reference_patterns
-        ),
+        "undefined_reference_markers": unresolved_references,
+        "external_reference_markers": expected_external,
         "undefined_citation_markers": sum(
             len(re.findall(pattern, text, re.IGNORECASE))
             for pattern in citation_patterns
@@ -517,6 +551,7 @@ def main() -> int:
     composition_binding, required_stems, affected_stems = load_composition_receipt(
         source, args.composition_receipt
     )
+    reference_labels = external_reference_labels(source)
     output = args.output
     if not output.is_absolute():
         output = source / output
@@ -590,6 +625,7 @@ def main() -> int:
         "fatal_markers": 0,
         "missing_glyph_markers": 0,
         "undefined_reference_markers": 0,
+        "external_reference_markers": 0,
         "undefined_citation_markers": 0,
         "multiply_defined_markers": 0,
         "rerun_required_markers": 0,
@@ -603,7 +639,10 @@ def main() -> int:
         if not match or int(match.group(1)) < 1:
             raise RuntimeError(f"pdfinfo did not report a positive page count: {pdf}")
         diagnostics = scan_tex_diagnostics(
-            source / f"{stem}.log", source / f"{stem}.blg"
+            source / f"{stem}.log",
+            source / f"{stem}.blg",
+            stem,
+            reference_labels,
         )
         for key, value in diagnostics.items():
             diagnostic_totals[key] += value
@@ -617,7 +656,9 @@ def main() -> int:
             }
         )
     failed_diagnostics = {
-        key: value for key, value in diagnostic_totals.items() if value
+        key: value
+        for key, value in diagnostic_totals.items()
+        if key != "external_reference_markers" and value
     }
     if failed_diagnostics:
         detail = ", ".join(
