@@ -1,0 +1,89 @@
+{
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "candidate_id": "stacks-errata-a04446e-r23",
+  "checks": {
+    "authority_evidence": {
+      "files": 6,
+      "passed": true
+    },
+    "chapter_builds": {
+      "chapters": 1,
+      "passed": true,
+      "receipt_sha256": "91575A0FDAD2D20C2D32CBB570ABCCA363464EF4FD93693093490FF16E191E4B"
+    },
+    "deterministic_pdf_replay": {
+      "passed": true,
+      "pdfs": 2,
+      "receipt_sha256": "0C968B72B50E85B0F3DF87DDF5AEE3DEBB77267F2931E625051A228F9C617F60"
+    },
+    "exact_payloads": {
+      "files": {
+        "more-algebra": {
+          "authority_bytes": 1492039,
+          "authority_display_delimiters": 2576,
+          "authority_sha256": "0106554339E8966FE04411B2AE9F9CD856B165849FEEF0C7BC37634819064708",
+          "display_delimiter_delta": 0,
+          "operation_count": 12,
+          "ordered_structure_exceptions": {},
+          "payload_bytes": 1492064,
+          "payload_display_delimiters": 2576,
+          "payload_sha256": "4EE7CB6B4526ECD30B6C796D4264FC72922B3DB367CD05D9575134E53D129C48",
+          "source_line_exceptions": {},
+          "structure": {
+            "citations": {
+              "authority": 89,
+              "payload": 89
+            },
+            "environments": {
+              "authority": 4704,
+              "payload": 4704
+            },
+            "labels": {
+              "authority": 1152,
+              "payload": 1152
+            },
+            "references": {
+              "authority": 3120,
+              "payload": 3120
+            },
+            "sections": {
+              "authority": 129,
+              "payload": 129
+            }
+          },
+          "xymatrix_count": 182
+        }
+      },
+      "passed": true
+    },
+    "lease_ledgers_inventory": {
+      "decisions": 6,
+      "intentionally_absent": 0,
+      "passed": true,
+      "prior_p02_aliases": 10,
+      "rejections": 1,
+      "unresolved": 0
+    },
+    "public_hygiene": {
+      "passed": true,
+      "python_caches": 0,
+      "text_files": 48
+    },
+    "unit_closure": {
+      "accepted_producer_identities": 12,
+      "expected": 10,
+      "manifested": 10,
+      "passed": true
+    },
+    "visual_pdf_qa": {
+      "direct_units": 10,
+      "passed": true,
+      "pdfs": 1,
+      "receipt_sha256": "595D84538324E126913760572AD2759C03CA9DB45A54F1849711B4493CC6B98E"
+    }
+  },
+  "generated_at_utc": "2026-08-26T04:35:32Z",
+  "passed": true,
+  "schema": "mathematics-commons-stacks-errata-validation/v1",
+  "verifier_sha256": "7CA480338A9D59AB54EBFECCCDA05C9C50962B0E060B38AE2071FB263B023FC4"
+}
