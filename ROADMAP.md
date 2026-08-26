@@ -19,6 +19,18 @@ registry, operation, and byte identities are recorded in the
 errata cycles must begin from that receipt and advance strictly in registry
 order; they do not alter the semantic-corpus order below.
 
+The R21 source has passed the primary fixed-point and visual gates at
+tooling/build source `8e9520aa30e0d538e71e787850bac91f5ddb35f9`, tree
+`c63e22c9ec1fef6d5af3820f5f83bd316e51ae62`: 22 readable PDFs, 2,342 pages,
+24,385,554 PDF bytes, global fixed point on sweep four, zero fatal or listed
+serious diagnostics, and visual QA across all 202 review pages plus the
+affected-page superset. The
+[independent linked-worktree rebuild gate](validation/reproducibility-r21.json) is **PASS**:
+both builds use the same commit, tree, builder, and sweep, and all 22 artifact
+identity tuples are exactly equal. Publication and anonymous public readback
+are not yet claimed. Stable receipt filenames remain automation interfaces;
+their JSON scope and exact source identities are authoritative.
+
 ## Recommended order
 
 | Stage | Bounded milestone | Why it comes here |

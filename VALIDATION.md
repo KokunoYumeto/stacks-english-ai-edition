@@ -8,18 +8,25 @@ composition, TeX compilation, and visual evidence are not conflated.
 Run from the repository root:
 
 ```sh
-python tools/validate_unified_repository.py
+python tools/validate_unified_repository.py --pre-publication
 ```
+
+The `--pre-publication` profile skips only the release/public-readback block.
+All composition, registry, build, historical-preservation, and documentation
+checks remain active. After publication evidence exists, omit the flag to run
+the complete gate.
 
 The gate verifies:
 
 - ancestry of the pinned upstream, source-union, EGA, and protected linear
   registry/source history;
-- 19 admitted registry entries containing exactly 507 stable correction IDs;
-- exact candidate/source-map joins and presence of every v2 replacement span
-  in the live source, including the 77 byte-bound R18–R19 operations;
-- the frozen external registry cutoff, imported registry Git blob, source tree,
-  authority tree, and exact changed-path set;
+- 21 admitted registry entries containing exactly 547 stable correction IDs;
+- exact candidate/source-map joins and all 591 v2 operations in the live
+  source, including 43 new R20–R21 operations and the 120-operation bounded
+  R18–R21 replay;
+- the frozen external registry cutoff `13ca6aaa`, imported registry Git blob,
+  source and authority trees, candidate/admission chain, and exact changed-path
+  set (`derived.tex` and `simplicial.tex`);
 - the independent `injectives.tex` correction;
 - required integration dossiers and public documentation;
 - parseability of the live registry JSON files;
@@ -30,24 +37,41 @@ The gate verifies:
 The same gate runs in
 [`validate.yml`](.github/workflows/validate.yml) with full Git history.
 
-The current unified-tree build result is recorded in
-[`validation/unified-fixed-point-2026-08-25-r19.json`](validation/unified-fixed-point-2026-08-25-r19.json):
-all 21 required chapters (2,269 pages; 23,549,238 PDF bytes) compiled
-successfully, were readable by `pdfinfo`, and reached a global PDF fixed point
-on sweep four. The build is bound to source commit
-`400159979d40624724fde62c36a9cbfe582ac6fd`, tree
-`1b4375bc4b2c40503812baa54dcfca577d43a320`. The aggregate diagnostics contain
+The current unified-tree build result is recorded at the automation-stable path
+[`validation/unified-fixed-point-2026-08-25-r19.json`](validation/unified-fixed-point-2026-08-25-r19.json).
+Its JSON scope and source identities, not the compatibility filename, are
+authoritative. All 22 required chapters (2,342 pages; 24,385,554 PDF bytes)
+compiled successfully, were readable by `pdfinfo`, and reached a global PDF
+fixed point on sweep four. The build is bound to tooling/build source commit
+`8e9520aa30e0d538e71e787850bac91f5ddb35f9`, tree
+`c63e22c9ec1fef6d5af3820f5f83bd316e51ae62`. Aggregate diagnostics contain
 zero fatal, missing-glyph, undefined-reference, undefined-citation,
-multiply-defined, rerun, or destination-warning markers; 2,164 standalone
-cross-root references are classified as mechanically resolved external links.
+multiply-defined, rerun-required, or destination-warning markers.
 
-The source composition receipt records the frozen external cutoff
-`24861b306a34991c0da3d803f92d67e206c805da`, the linear registry import
-`c06400fc323abb62990f37563cc31e9ae93fbf8e`, the composition source
-`1f204fb27ff418fd0e75cb35ac8dab5256037f15`, and the exact `derived.tex`
-projection SHA-256 `317B3A8E626BCCB3BC579DAB6AA57F4FDFEF513CA82805B02BCDC8C22FB8C1A1`.
-The corresponding anonymous public readback inventory is preserved in the
-[`R18–R19 release receipt`](validation/errata-r18-r19-release-2026-08-25.json).
+Visual QA passed for all 202 review pages and an affected-page superset. The
+independent linked-worktree rebuild gate also passed: both builds use the same commit,
+tree, builder, and fixed-point sweep four, and all 22
+`{stem, pages, bytes, sha256}` tuples are exactly equal. The
+[second full receipt](validation/reproducibility-second-r21.json) is 19,440
+bytes with SHA-256
+`7DC3A3EEAA932B8804CC826D52FE0892445CE883FE27AF362A873392B7CA171A`.
+The public [reproducibility summary](validation/reproducibility-r21.json) is
+5,977 bytes with SHA-256
+`A28E2D9DF4E333B052FBD1EA884F7585A9D07423B3EB98004B511C2EC8C75687`.
+These results do not claim R21 publication or anonymous public readback.
+
+The [source composition receipt](validation/composition-current.json) records
+the frozen external cutoff
+`13ca6aaaca454f5930c4885c93f427e30cf21959`, linear registry import
+`e3b28d7d7068eb45d3348a57e201c49044826e86`, and composition source
+`ef467614041d569e56a6c1758b8fe74b51d99f4a`. Its exact composed SHA-256
+identities are `66D17FBE6743002D29A78543E46122CD3ED34AA5A5574B14718C1189ACEB456F`
+for `derived.tex` and
+`650ABA33A184CE9945DD70C04D83A3A4CBD6E540426B171E828336855DC97A0B`
+for `simplicial.tex`. The automation-stable
+[publication receipt path](validation/errata-r18-r19-release-2026-08-25.json)
+does not constitute an R21 publication claim until its exact public readback
+and workflow fields are complete.
 
 ## Source-specific deterministic evidence
 

@@ -1,0 +1,138 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-visual-qa/v1",
+  "status": "PASS",
+  "created_utc": "2026-08-26T02:21:32Z",
+  "source": {
+    "commit": "8e9520aa30e0d538e71e787850bac91f5ddb35f9",
+    "tree": "c63e22c9ec1fef6d5af3820f5f83bd316e51ae62"
+  },
+  "build_receipt": {
+    "path": "validation/unified-fixed-point-2026-08-25-r19.json",
+    "bytes": 19440,
+    "sha256": "C0D29F186EDD94997C10B56B7FFA4BF787B278ED593AAF20502A2B7373F0FE8B",
+    "status": "PASS",
+    "global_fixed_point_sweep": 4
+  },
+  "scope": {
+    "affected_chapters": [
+      "derived",
+      "simplicial"
+    ],
+    "full_page_render_count": 202,
+    "full_page_contact_sheet_review_count": 202,
+    "high_resolution_locus_page_count": 37,
+    "high_resolution_locus_pages": {
+      "derived": [
+        87,
+        88,
+        93,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        113,
+        114,
+        115,
+        117,
+        118,
+        119,
+        120,
+        123,
+        124,
+        127
+      ],
+      "simplicial": [
+        4,
+        5,
+        6,
+        7,
+        15,
+        19,
+        25,
+        29
+      ]
+    }
+  },
+  "artifacts": {
+    "derived": {
+      "pdf": "derived.pdf",
+      "bytes": 1242244,
+      "pages": 129,
+      "sha256": "F921C69B97F024F36A0FB055746D6230899B9A8C1193BED327D5186733467604",
+      "encrypted": false,
+      "media_box_points": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      "render_dimensions_pixels": [
+        765,
+        990
+      ],
+      "pages_without_ink": 0,
+      "duplicate_render_hashes": 0
+    },
+    "simplicial": {
+      "pdf": "simplicial.pdf",
+      "bytes": 830637,
+      "pages": 73,
+      "sha256": "F3AADF62B54B8BFAAF4462B3CE7DA4F38B3CD9E12553D18717FC5B634C5D153D",
+      "encrypted": false,
+      "media_box_points": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      "render_dimensions_pixels": [
+        765,
+        990
+      ],
+      "pages_without_ink": 0,
+      "duplicate_render_hashes": 0
+    }
+  },
+  "render_protocol": {
+    "renderer": "Poppler pdftoppm 24.04.0",
+    "full_page_dpi": 90,
+    "full_page_layout": "ordered 4-by-4 contact sheets",
+    "high_resolution_dpi": 180,
+    "high_resolution_selection": "manifest-bound R20 and R21 operation loci mapped through committed TeX labels, plus adjacent boundary pages",
+    "render_intermediates_published": false
+  },
+  "checks": {
+    "all_pages_rendered": true,
+    "all_pages_manually_inspected": true,
+    "all_manifest_bound_locus_pages_inspected_at_high_resolution": true,
+    "page_dimensions_consistent": true,
+    "headers_and_page_numbers_consistent": true,
+    "text_and_formulas_legible": true,
+    "diagrams_intact": true,
+    "clipped_content": 0,
+    "overlapping_content": 0,
+    "blank_pages": 0,
+    "corrupted_pages": 0,
+    "missing_or_unreadable_glyphs": 0,
+    "broken_diagrams": 0,
+    "rejected_simplicial_007_parenthesis_preserved": true
+  },
+  "accessibility": {
+    "struct_tree_root_present": false,
+    "mark_info_present": false,
+    "note": "The standalone chapter PDFs are untagged. This retained accessibility limitation is not a visual-rendering failure."
+  },
+  "conclusion": "All 202 pages of the two affected chapter PDFs and every R20/R21 correction-sensitive locus passed visual inspection without a formatting or rendering defect."
+}

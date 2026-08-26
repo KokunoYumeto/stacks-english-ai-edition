@@ -54,15 +54,17 @@ The histories were combined without flattening either input:
 2. EGA scaffold and export history through
    `91df7f1c96bd4973264c29b0e121253a05d1d361` was merged into that source.
 3. The complete registry content through the frozen external cutoff
-   `24861b306a34991c0da3d803f92d67e206c805da` was transferred byte-for-byte
-   under `ai-integrated/`. The protected public history records that transfer
-   as the linear import `c06400fc323abb62990f37563cc31e9ae93fbf8e`; the
-   external cutoff remains provenance and is not asserted as a `main` ancestor.
-4. Each admitted errata batch R1–R19 was independently materialized against
-   the pinned upstream source and composed in registry order. The cumulative
-   `derived.tex` projection is committed at source `1f204fb27ff418fd0e75cb35ac8dab5256037f15`,
-   a direct linear successor of the registry import; the protected publication
-   suffix contains no merge commits.
+   `13ca6aaaca454f5930c4885c93f427e30cf21959` was transferred byte-for-byte
+   under `ai-integrated/`. The integrated linear history records that transfer
+   as import `e3b28d7d7068eb45d3348a57e201c49044826e86`; the external cutoff
+   remains provenance and is not asserted as a `main` ancestor.
+4. Each admitted errata batch R1–R21 is manifest-bound and composed in registry
+   order. R20 extends the cumulative `derived.tex` projection. R21 is replayed
+   onto the verified cumulative `simplicial.tex`, preserving earlier
+   AI-integrated additions outside its operations. The resulting source is
+   committed at `ef467614041d569e56a6c1758b8fe74b51d99f4a`, tree
+   `b181820f096c3b78b6608429e477aaa8acd614c4`, as a direct linear successor
+   of the registry import.
 5. The independent `injectives.tex` correction was carried into the unified
    source.
 
@@ -70,9 +72,20 @@ The mathematical source therefore stays at the repository root while the
 complete evidence and registry system remains browsable under
 [`ai-integrated/`](ai-integrated/README.md).
 
+The verified R21 build is separately bound to tooling/build source
+`8e9520aa30e0d538e71e787850bac91f5ddb35f9`, tree
+`c63e22c9ec1fef6d5af3820f5f83bd316e51ae62`. It produced 22 readable PDFs
+(2,342 pages; 24,385,554 bytes) at fixed-point sweep four, with zero recorded
+fatal or listed serious diagnostics. Visual QA passed all 202 review pages and
+the affected-page superset. A separate linked-worktree reproduction also passed:
+both builds use the same commit, tree, builder, and sweep, and all 22 artifact
+identity tuples are exactly equal. This remains build provenance, not a
+publication or public-readback claim.
+
 ## Branch preservation
 
 The unified repository retains the pre-unification integration heads as
 clearly named historical branches in addition to the integrated default
 branch. Their presence is provenance, not a claim that they remain competing
-editions. R20 and later registry work remains outside this R19 fixed point.
+editions. The current fixed point ends exactly at R21 cutoff `13ca6aaa`; later
+admissions are outside its scope.

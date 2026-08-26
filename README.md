@@ -18,8 +18,10 @@ machine-readable validation evidence.
 [Browse the source](chapters.tex) ·
 [Errata registry](ai-integrated/registry/overlays.json) ·
 [Validation](VALIDATION.md) ·
-[Current build receipt](validation/unified-fixed-point-2026-08-25-r19.json) ·
-[R18–R19 release receipt](validation/errata-r18-r19-release-2026-08-25.json) ·
+[Current fixed-point build receipt](validation/unified-fixed-point-2026-08-25-r19.json) ·
+[Visual QA: PASS](validation/visual-qa-r21.json) ·
+[Publication receipt (pending)](validation/errata-r18-r19-release-2026-08-25.json) ·
+[Independent reproducibility: PASS](validation/reproducibility-r21.json) ·
 [R17 historical receipt](validation/unification-release-2026-08-25.json) ·
 [Roadmap](ROADMAP.md) ·
 [Provenance and frozen histories](PROVENANCE.md) ·
@@ -45,7 +47,7 @@ The pinned upstream baseline is
 | GAGA | Integrated through r3 | All 126 units classified, all 79 substantive units decided, and a validated 23-page English chapter | [r3 status](gaga_r3/STATUS.md) · [chapter source](gaga.tex) |
 | FGA | Integrated and notation-normalized | 1,253 source units and 1,612 term links closed; fixed-point 83-page Moduli build recorded | [Overview](fga/README.md) · [status](fga/status.md) |
 | EGA | Active integration | Direct-French review through EGA I 6.1.13; 1,059 active edges across 355 generated units; next cursor EGA I 6.2.1 | [EGA dossier](ega/README.md) |
-| Errata | Composed through the frozen R19 cutoff | 19 admitted batches containing 507 stable correction IDs at external cutoff `24861b30`; R20 and later work is excluded from this edition | [Registry](ai-integrated/registry/overlays.json) · [candidate evidence](ai-integrated/candidates/commons/stacks/errata/) |
+| Errata | Composed through the frozen R21 cutoff | 21 admitted batches containing 547 stable correction IDs and 591 exact v2 operations at external cutoff `13ca6aaa`; R20–R21 add 43 operations, while the bounded R18–R21 replay contains 120 | [Registry](ai-integrated/registry/overlays.json) · [candidate evidence](ai-integrated/candidates/commons/stacks/errata/) |
 
 These labels are deliberately precise. “Integrated,” “active,” “admitted,” and
 “candidate” are not interchangeable, and no local label is represented as an
@@ -88,10 +90,23 @@ pdflatex -interaction=nonstopmode -halt-on-error -file-line-error moduli.tex
 Run the fast repository-level integrity gate with:
 
 ```sh
-python tools/validate_unified_repository.py
+python tools/validate_unified_repository.py --pre-publication
 ```
 
-See [VALIDATION.md](VALIDATION.md) for scope, receipts, and interpretation.
+The verified R21 build is bound to tooling/build source
+`8e9520aa30e0d538e71e787850bac91f5ddb35f9`, tree
+`c63e22c9ec1fef6d5af3820f5f83bd316e51ae62`. It produced 22 readable PDFs
+(2,342 pages; 24,385,554 bytes), reached a global fixed point on sweep four,
+and recorded zero fatal, missing-glyph, undefined-reference,
+undefined-citation, multiply-defined, rerun-required, or destination-warning
+diagnostics. Visual QA passed for all 202 review pages and the affected-page
+superset. A separate linked-worktree rebuild also passed from the same commit,
+tree, builder, and sweep; all 22 artifact identity tuples are exactly equal
+between the two builds. No R21 publication or public readback is claimed yet.
+
+The receipt filenames are stable automation interfaces retained for
+compatibility; the JSON schema, source identities, and recorded scope are
+authoritative. See [VALIDATION.md](VALIDATION.md) for details.
 
 ## Attribution and licensing
 

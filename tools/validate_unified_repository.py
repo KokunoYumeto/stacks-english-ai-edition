@@ -23,6 +23,11 @@ COMPOSITION_RECEIPT = Path("validation/composition-current.json")
 DEFAULT_BUILD_RECEIPT = Path(
     "validation/unified-fixed-point-2026-08-25-r19.json"
 )
+VISUAL_QA_RECEIPT = Path("validation/visual-qa-r21.json")
+REPRODUCIBILITY_RECEIPT = Path("validation/reproducibility-r21.json")
+SECOND_REPRODUCIBILITY_RECEIPT = Path(
+    "validation/reproducibility-second-r21.json"
+)
 R18_R19_RELEASE_RECEIPT = Path(
     "validation/errata-r18-r19-release-2026-08-25.json"
 )
@@ -69,6 +74,9 @@ REQUIRED_PATHS = (
     "tools/compose_overlay_projection.py",
     "tools/verify_overlay_projection.py",
     COMPOSITION_RECEIPT.as_posix(),
+    VISUAL_QA_RECEIPT.as_posix(),
+    REPRODUCIBILITY_RECEIPT.as_posix(),
+    SECOND_REPRODUCIBILITY_RECEIPT.as_posix(),
     "validation/unification-release-2026-08-25.json",
 )
 
@@ -233,6 +241,25 @@ def committed_bytes(commit: str, relative: str, errors: list[str], label: str) -
     return result.stdout
 
 
+def load_committed_json_object(
+    relative: Path, errors: list[str], label: str
+) -> tuple[dict, bytes | None]:
+    relative_text = relative.as_posix()
+    require_clean_path(relative_text, errors)
+    data = committed_bytes("HEAD", relative_text, errors, label)
+    if data is None:
+        return {}, None
+    try:
+        value = json.loads(data.decode("utf-8"))
+    except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+        errors.append(f"invalid committed {label} {relative_text}: {exc}")
+        return {}, data
+    if not isinstance(value, dict):
+        errors.append(f"committed {label} is not a JSON object: {relative_text}")
+        return {}, data
+    return value, data
+
+
 def candidate_dir(overlay_id: str) -> Path:
     suffix = overlay_id.rsplit("-r", 1)[1]
     base = ROOT / "ai-integrated/candidates/commons/stacks/errata"
@@ -332,6 +359,18 @@ def main(argv: list[str] | None = None) -> int:
                     build_receipt = parsed_build_receipt
                 else:
                     errors.append("fixed-point build receipt is not a JSON object")
+
+    visual_qa, visual_qa_bytes = load_committed_json_object(
+        VISUAL_QA_RECEIPT, errors, "visual-QA receipt"
+    )
+    reproducibility, reproducibility_bytes = load_committed_json_object(
+        REPRODUCIBILITY_RECEIPT, errors, "reproducibility receipt"
+    )
+    second_build, second_build_bytes = load_committed_json_object(
+        SECOND_REPRODUCIBILITY_RECEIPT,
+        errors,
+        "second fixed-point build receipt",
+    )
 
     composition = load_json_object(composition_path, errors, "composition receipt") or {}
     if composition.get("schema") != "unofficial-ai-integrated-stacks-composition/v3":
@@ -1699,6 +1738,269 @@ def main(argv: list[str] | None = None) -> int:
         if summed_diagnostics != build_diagnostics:
             errors.append("aggregate diagnostics do not equal artifact diagnostics")
 
+    artifact_identities = [
+        {
+            "stem": artifact.get("stem"),
+            "pages": artifact.get("pages"),
+            "bytes": artifact.get("bytes"),
+            "sha256": artifact.get("sha256"),
+        }
+        for artifact in artifacts
+        if isinstance(artifact, dict)
+    ]
+    artifact_by_stem = {
+        artifact["stem"]: artifact
+        for artifact in artifact_identities
+        if isinstance(artifact.get("stem"), str)
+    }
+    expected_source_identity = {
+        "commit": build_source.get("commit"),
+        "tree": build_source.get("tree"),
+    }
+
+    if visual_qa.get("schema") != "unofficial-ai-integrated-stacks-visual-qa/v1":
+        errors.append("visual-QA receipt schema is invalid")
+    if visual_qa.get("status") != "PASS":
+        errors.append("visual-QA receipt is not PASS")
+    if visual_qa.get("source") != expected_source_identity:
+        errors.append("visual-QA source identity does not match the fixed-point build")
+    visual_build = visual_qa.get("build_receipt")
+    expected_visual_build = {
+        "path": build_receipt_relative,
+        "bytes": len(build_receipt_bytes or b""),
+        "sha256": sha256_bytes(build_receipt_bytes or b""),
+        "status": build_receipt.get("status"),
+        "global_fixed_point_sweep": build_state.get("global_fixed_point_sweep"),
+    }
+    if visual_build != expected_visual_build:
+        errors.append("visual-QA build-receipt binding mismatch")
+    visual_scope = visual_qa.get("scope")
+    if not isinstance(visual_scope, dict):
+        errors.append("visual-QA receipt lacks scope")
+        visual_scope = {}
+    if visual_scope.get("affected_chapters") != affected_stems:
+        errors.append("visual-QA affected-chapter scope mismatch")
+    affected_page_total = sum(
+        artifact_by_stem.get(stem, {}).get("pages", 0) for stem in affected_stems
+    )
+    if visual_scope.get("full_page_render_count") != affected_page_total:
+        errors.append("visual-QA full-page render count mismatch")
+    if visual_scope.get("full_page_contact_sheet_review_count") != affected_page_total:
+        errors.append("visual-QA full-page review count mismatch")
+    locus_pages = visual_scope.get("high_resolution_locus_pages")
+    if not isinstance(locus_pages, dict) or set(locus_pages) != set(affected_stems):
+        errors.append("visual-QA high-resolution locus inventory mismatch")
+        locus_pages = {}
+    locus_page_count = 0
+    for stem in affected_stems:
+        pages = locus_pages.get(stem)
+        artifact_pages = artifact_by_stem.get(stem, {}).get("pages")
+        if (
+            not isinstance(pages, list)
+            or not pages
+            or len(pages) != len(set(pages))
+            or pages != sorted(pages)
+            or not isinstance(artifact_pages, int)
+            or any(
+                not isinstance(page, int)
+                or isinstance(page, bool)
+                or page < 1
+                or page > artifact_pages
+                for page in pages
+            )
+        ):
+            errors.append(f"invalid visual-QA high-resolution pages for {stem}")
+        elif isinstance(pages, list):
+            locus_page_count += len(pages)
+    if visual_scope.get("high_resolution_locus_page_count") != locus_page_count:
+        errors.append("visual-QA high-resolution locus count mismatch")
+    visual_artifacts = visual_qa.get("artifacts")
+    if not isinstance(visual_artifacts, dict) or set(visual_artifacts) != set(
+        affected_stems
+    ):
+        errors.append("visual-QA artifact inventory mismatch")
+        visual_artifacts = {}
+    for stem in affected_stems:
+        visual_artifact = visual_artifacts.get(stem)
+        build_artifact = artifact_by_stem.get(stem)
+        if not isinstance(visual_artifact, dict) or not isinstance(
+            build_artifact, dict
+        ):
+            errors.append(f"visual-QA artifact is missing for {stem}")
+            continue
+        for key in ("pages", "bytes", "sha256"):
+            if visual_artifact.get(key) != build_artifact.get(key):
+                errors.append(f"visual-QA artifact identity mismatch for {stem}/{key}")
+        if visual_artifact.get("pdf") != f"{stem}.pdf":
+            errors.append(f"visual-QA PDF filename mismatch for {stem}")
+        if visual_artifact.get("encrypted") is not False:
+            errors.append(f"visual-QA PDF is encrypted or ambiguous for {stem}")
+        if visual_artifact.get("pages_without_ink") != 0:
+            errors.append(f"visual-QA found a page without ink for {stem}")
+        if visual_artifact.get("duplicate_render_hashes") != 0:
+            errors.append(f"visual-QA found duplicate page renders for {stem}")
+    visual_checks = visual_qa.get("checks")
+    if not isinstance(visual_checks, dict):
+        errors.append("visual-QA receipt lacks checks")
+        visual_checks = {}
+    for key in (
+        "all_pages_rendered",
+        "all_pages_manually_inspected",
+        "all_manifest_bound_locus_pages_inspected_at_high_resolution",
+        "page_dimensions_consistent",
+        "headers_and_page_numbers_consistent",
+        "text_and_formulas_legible",
+        "diagrams_intact",
+        "rejected_simplicial_007_parenthesis_preserved",
+    ):
+        if visual_checks.get(key) is not True:
+            errors.append(f"visual-QA check did not pass: {key}")
+    for key in (
+        "clipped_content",
+        "overlapping_content",
+        "blank_pages",
+        "corrupted_pages",
+        "missing_or_unreadable_glyphs",
+        "broken_diagrams",
+    ):
+        if visual_checks.get(key) != 0:
+            errors.append(f"visual-QA defect count is nonzero: {key}")
+    render_protocol = visual_qa.get("render_protocol")
+    if (
+        not isinstance(render_protocol, dict)
+        or "Poppler" not in str(render_protocol.get("renderer", ""))
+        or not isinstance(render_protocol.get("full_page_dpi"), int)
+        or render_protocol.get("full_page_dpi", 0) < 1
+        or not isinstance(render_protocol.get("high_resolution_dpi"), int)
+        or render_protocol.get("high_resolution_dpi", 0) < 1
+        or render_protocol.get("render_intermediates_published") is not False
+    ):
+        errors.append("visual-QA render protocol is incomplete or invalid")
+
+    if reproducibility.get("schema") != (
+        "unofficial-ai-integrated-stacks-clean-build-reproducibility/v1"
+    ):
+        errors.append("reproducibility receipt schema is invalid")
+    if reproducibility.get("status") != "PASS":
+        errors.append("reproducibility receipt is not PASS")
+    reproduction_scope = reproducibility.get("scope")
+    if not isinstance(reproduction_scope, dict):
+        errors.append("reproducibility receipt lacks scope")
+        reproduction_scope = {}
+    expected_reproduction_scope = {
+        "admitted_errata": f"R1-R{len(entries)}",
+        "registry_cutoff_commit": cutoff_commit,
+        "source_commit": build_source.get("commit"),
+        "source_tree": build_source.get("tree"),
+        "composition_receipt": COMPOSITION_RECEIPT.as_posix(),
+        "composition_receipt_sha256": composition_sha,
+    }
+    if reproduction_scope != expected_reproduction_scope:
+        errors.append("reproducibility scope binding mismatch")
+    reproduction_method = reproducibility.get("method")
+    if not isinstance(reproduction_method, dict):
+        errors.append("reproducibility receipt lacks method")
+        reproduction_method = {}
+    for key in ("first_worktree_kind", "second_worktree_kind"):
+        if reproduction_method.get(key) != build_state.get("worktree_kind"):
+            errors.append(f"reproducibility worktree binding mismatch for {key}")
+    for key, expected in (
+        ("builder_path", builder.get("path") if isinstance(builder, dict) else None),
+        ("builder_git_blob", builder.get("git_blob") if isinstance(builder, dict) else None),
+        ("builder_sha256", builder.get("sha256") if isinstance(builder, dict) else None),
+    ):
+        if reproduction_method.get(key) != expected:
+            errors.append(f"reproducibility builder binding mismatch for {key}")
+    if reproducibility.get("environment") != build_receipt.get("environment"):
+        errors.append("reproducibility environment does not match the fixed-point build")
+    reproduction_runs = reproducibility.get("runs")
+    if not isinstance(reproduction_runs, dict):
+        errors.append("reproducibility receipt lacks run identities")
+        reproduction_runs = {}
+    first_run = reproduction_runs.get("first")
+    second_run = reproduction_runs.get("second")
+    expected_first_run = {
+        "receipt": build_receipt_relative,
+        "created_utc": build_receipt.get("created_utc"),
+        "bytes": len(build_receipt_bytes or b""),
+        "sha256": sha256_bytes(build_receipt_bytes or b""),
+        "status": build_receipt.get("status"),
+        "global_fixed_point_sweep": build_state.get("global_fixed_point_sweep"),
+    }
+    if first_run != expected_first_run:
+        errors.append("reproducibility first-run binding mismatch")
+    expected_second_run = {
+        "receipt": SECOND_REPRODUCIBILITY_RECEIPT.as_posix(),
+        "created_utc": second_build.get("created_utc"),
+        "bytes": len(second_build_bytes or b""),
+        "sha256": sha256_bytes(second_build_bytes or b""),
+        "status": second_build.get("status"),
+        "global_fixed_point_sweep": (
+            second_build.get("build", {}).get("global_fixed_point_sweep")
+            if isinstance(second_build.get("build"), dict)
+            else None
+        ),
+    }
+    if second_run != expected_second_run:
+        errors.append("reproducibility second-run binding mismatch")
+    for key in (
+        "schema",
+        "status",
+        "source",
+        "builder",
+        "composition",
+        "environment",
+        "build",
+        "artifacts",
+        "pdfs_committed",
+    ):
+        if second_build.get(key) != build_receipt.get(key):
+            errors.append(f"second fixed-point receipt mismatch for {key}")
+    if second_build.get("created_utc") == build_receipt.get("created_utc"):
+        errors.append("second fixed-point receipt does not identify a later invocation")
+    reproduction_artifacts = reproducibility.get("artifacts")
+    if reproduction_artifacts != artifact_identities:
+        errors.append("reproducibility artifact inventory differs from the build receipt")
+    tuple_lines = [
+        "|".join(
+            (
+                str(artifact.get("stem")),
+                str(artifact.get("pages")),
+                str(artifact.get("bytes")),
+                str(artifact.get("sha256")),
+            )
+        )
+        for artifact in sorted(
+            artifact_identities, key=lambda item: str(item.get("stem"))
+        )
+    ]
+    tuple_set_sha = sha256_bytes((("\n".join(tuple_lines)) + "\n").encode("utf-8"))
+    reproduction_comparison = reproducibility.get("comparison")
+    if not isinstance(reproduction_comparison, dict):
+        errors.append("reproducibility receipt lacks comparison results")
+        reproduction_comparison = {}
+    expected_comparison_scalars = {
+        "chapter_count": len(artifact_identities),
+        "matched_artifact_count": len(artifact_identities),
+        "different_artifact_count": 0,
+        "different_artifacts": [],
+        "total_pages_each_run": sum(
+            int(artifact.get("pages", 0)) for artifact in artifact_identities
+        ),
+        "total_pdf_bytes_each_run": sum(
+            int(artifact.get("bytes", 0)) for artifact in artifact_identities
+        ),
+        "artifact_tuple_set_sha256_each_run": tuple_set_sha,
+        "all_artifact_identities_exactly_equal": True,
+        "source_identity_equal": True,
+        "builder_identity_equal": True,
+        "environment_identity_equal": True,
+        "fixed_point_sweep_equal": True,
+    }
+    for key, expected in expected_comparison_scalars.items():
+        if reproduction_comparison.get(key) != expected:
+            errors.append(f"reproducibility comparison mismatch for {key}")
+
     if not args.pre_publication:
         release_receipt = load_json_object(
             ROOT / R18_R19_RELEASE_RECEIPT,
@@ -1844,6 +2146,8 @@ def main(argv: list[str] | None = None) -> int:
     print(f"- active permanent Stacks tags checked: {len(active_tags)}")
     print(f"- fixed-point build receipt: {display_path(build_receipt_path)}")
     print(f"- required build stems covered: {len(required_build_stems)}")
+    print(f"- visual-QA affected chapters checked: {len(affected_stems)}")
+    print(f"- reproducible PDF identities checked: {len(artifact_identities)}")
     print(f"- public Markdown documents checked: {len(PUBLIC_MARKDOWN)}")
     return 0
 
