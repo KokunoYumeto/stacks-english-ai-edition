@@ -1,0 +1,67 @@
+{
+  "schema": "mathematics-commons-stacks-verdier-build-receipt/v1",
+  "status": "PASS",
+  "passed": true,
+  "created_utc": "2026-08-26T00:57:30Z",
+  "source": {
+    "repository": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project",
+    "commit": "6bdfac7e39a8419dd765b1c78e1b10d7310726f0",
+    "tree": "34429e83aee7ef0718ed302ef9639d33767886fa",
+    "target": "derived.tex",
+    "source_date_epoch": "1787664809"
+  },
+  "environment": {
+    "python": "3.12.13",
+    "pdftex": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5)",
+    "bibtex": "MiKTeX-BibTeX 4.2 (MiKTeX 26.5)",
+    "pdfinfo": "pdfinfo version 24.04.0",
+    "timezone": "UTC"
+  },
+  "strategy": {
+    "name": "bounded-direct-label-provider-fixed-point-with-baseline",
+    "stems": [
+      "sets",
+      "categories",
+      "algebra",
+      "homology",
+      "more-algebra",
+      "injectives",
+      "examples",
+      "derived"
+    ],
+    "stems_count": 8,
+    "fixed_point_vector_suffixes": [
+      ".pdf",
+      ".aux",
+      ".toc",
+      ".out",
+      ".bbl"
+    ],
+    "maximum_sweeps": 6,
+    "unrelated_external_auxiliaries": "held absent and identical between baseline and candidate"
+  },
+  "results": {
+    "baseline_derived_pdf_sha256": "E3EED86BCD91A207DD46B8C1CC2BA7B7D3762E04F25C3C5C8A2A2280B6EC628B",
+    "candidate_derived_pages": 130,
+    "candidate_derived_pdf": {
+      "path": "builds/derived.pdf",
+      "bytes": 1244620,
+      "sha256": "EDB4BED1F5A166B34562B63D44EEEE70C3F421AAFDD91F31C142E1B0EEAEF96A"
+    },
+    "candidate_derived_log": {
+      "path": "builds/derived.log",
+      "bytes": 58648,
+      "sha256": "4344878D12A5622FB8161A7306AAAC9692A8ED6FC35E0583193D52D33A5F9926"
+    },
+    "baseline_derived_log": {
+      "path": "builds/baseline-derived.log",
+      "bytes": 58716,
+      "sha256": "CFE4EEB1CA09CF5D5252C1DF9E8BB0F3EAD5FB2B093AFDCB50B2496513D349FD"
+    },
+    "validation": {
+      "path": "builds/validation.json",
+      "bytes": 1468,
+      "sha256": "255AE7BBCE7C615C36F6D574BE74DB4705ECAF0C08ABACF882E9DA6E2A651EC0"
+    }
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "$schema": "../../../../schemas/candidate-manifest.schema.json",
+  "builds": [
+    {
+      "path": ".gitattributes",
+      "sha256": "FB54B4AACF6E66CBE7B33165C67CEB61F5A7E980F75C7AF1E3ACAE1E00C0503F"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "75526202CE6969F9C4E24207B914464FAD59128DAF76F1636F2F59487E40E140"
+    },
+    {
+      "path": "LEASE.json",
+      "sha256": "2E5A2FEBC61596A6054C7BDB8576EC18ABA977E20C65C0225CCE8857BD1245A3"
+    },
+    {
+      "path": "README.md",
+      "sha256": "00B1AAE80C49E0EA0C8349B7AF5BD9D9039ED0BF55A0E78FD50FE01A79F130F1"
+    },
+    {
+      "path": "build-manifest.py",
+      "sha256": "8C9AEFA7D129985F670584D7A1A613C2924CDB7138C18BD363715A0198654051"
+    },
+    {
+      "path": "build.py",
+      "sha256": "B90CF17522AB215A1C499CD12811EF6EB485623289957EC3EA6A77339678B2C2"
+    },
+    {
+      "path": "builds/baseline-derived.log",
+      "sha256": "CFE4EEB1CA09CF5D5252C1DF9E8BB0F3EAD5FB2B093AFDCB50B2496513D349FD"
+    },
+    {
+      "path": "builds/build-receipt.json",
+      "sha256": "88F838541743D036D9EB3B848593FCE056358675397671D54D8FCD93AD933D94"
+    },
+    {
+      "path": "builds/derived.log",
+      "sha256": "4344878D12A5622FB8161A7306AAAC9692A8ED6FC35E0583193D52D33A5F9926"
+    },
+    {
+      "path": "builds/derived.pdf",
+      "sha256": "EDB4BED1F5A166B34562B63D44EEEE70C3F421AAFDD91F31C142E1B0EEAEF96A"
+    },
+    {
+      "path": "builds/validation.json",
+      "sha256": "255AE7BBCE7C615C36F6D574BE74DB4705ECAF0C08ABACF882E9DA6E2A651EC0"
+    },
+    {
+      "path": "builds/visual-qa.json",
+      "sha256": "97BC160345371BB0F719282B1103A08BE23785B74327534AA17D490459E1A3AD"
+    },
+    {
+      "path": "builds/visual/derived-009.png",
+      "sha256": "EC01488A483C5F370E5852CFAB05D60DDE02496C03095CBF2723033DBB9915C9"
+    },
+    {
+      "path": "builds/visual/derived-010.png",
+      "sha256": "03C0BE53EE7D365AEDCC1E5761E314DA355A10DCE4953BA8C32B1812ECE3B5AB"
+    },
+    {
+      "path": "builds/visual/derived-011.png",
+      "sha256": "B1BC9C107B8A5A8562856751CEEBE570CE6AB93CAE5BF03431C93BE0F6648F5E"
+    },
+    {
+      "path": "candidate.config.json",
+      "sha256": "A05F2B64ADF714C39677AEF575DF741409E70CE5BEE6385DD933C68E8699BAC9"
+    },
+    {
+      "path": "check-manifest.py",
+      "sha256": "0C49E971C826DB485AB5E95375E63CCE03DAA0D33257B5A4D1B5A2834A433143"
+    },
+    {
+      "path": "composition.jsonl",
+      "sha256": "68FC402AB3FC1FBCDA90AAF958C7FC883462A645AB6B37FAB0172CB27FD2BEBC"
+    },
+    {
+      "path": "payload/fragments/derived-functorial-triangles.tex",
+      "sha256": "FCF51C107444D5ED31C32ABC73F19ECC05AAFA5C3FD078CF29B5A743C2A414B1"
+    },
+    {
+      "path": "verify.py",
+      "sha256": "9C694403E18CA89E1CDFAEBAAF863FE86AC68D9B15036892ABF2103964329449"
+    }
+  ],
+  "candidate_id": "stacks-verdier-a04446e-1-2-13-r1",
+  "decision_ledger": {
+    "path": "decisions.jsonl",
+    "sha256": "952389B8D015C1C26AA027DD9CBD68F23FD5B32F8F9537D462B2F48FA674C25F"
+  },
+  "formula_diagram_inventory": {
+    "path": "formula-diagram-inventory.json",
+    "sha256": "616A141631788FBCD4BEFD4897403507FA2B0E07EBE06DBC3E284B8F78D7031D"
+  },
+  "generated_at_utc": "2026-08-26T00:58:30Z",
+  "independent_replay": "not_performed",
+  "lease_id": "stacks-lease-000026-verdier",
+  "namespace": "commons/stacks/verdier",
+  "rejection_ledger": {
+    "path": "rejections.jsonl",
+    "sha256": "5DAB8FBA4C97994F12040FDFD2A8BE2A1413B9B6C6B9F44B0E5B96C8F91A4678"
+  },
+  "review_state": "partial",
+  "rights_state": "Historical-source evidence is limited to locators, hashes, and independent paraphrase. No verbatim source prose is included, no source-work license is asserted or granted by this candidate, and no upstream content is relicensed. The proposed Stacks payload is independently written, subject to GFDL compatibility at composition, and is not reviewed, approved, affiliated with, or endorsed by the Stacks Project.",
+  "schema": "mathematics-commons-stacks-candidate-manifest/v1",
+  "source_authorities": [
+    {
+      "path": "authority/authority.lock.json",
+      "sha256": "FB0F6E30D8FA5297256E662A81821A3725C06571AB8ADCCF680424A7FCCF9242"
+    }
+  ],
+  "source_closure": {
+    "complete": true,
+    "enumerated": true,
+    "expected_units": 12,
+    "manifested_units": 12
+  },
+  "source_map": {
+    "path": "source-map.jsonl",
+    "sha256": "8518A282A89846ED95CC73B1C439960CDEF8979859EAC1344BC0CC9727792F1D"
+  },
+  "stable_unit_manifest": {
+    "path": "stable-units.json",
+    "sha256": "CBFA2FA535F49DDE659CCDE5F65DFCA6755B136932C6250548FDDC421DAE6255"
+  },
+  "stop_conditions": [
+    "Do not mutate the literal Stacks Project mirror or the pinned composition-base preimage.",
+    "Do not copy thesis prose into the candidate; retain only locators, hashes, structural facts, and independently written mathematics.",
+    "Do not claim an official Stacks tag, upstream review, affiliation, approval, or endorsement for the proposed lemma.",
+    "Do not admit or compose this candidate except in a separate hash-bound transition after deterministic build, visual QA, and independent replay gates."
+  ],
+  "unresolved_defects": [
+    "Independent replay has not passed; this manifest records candidate closure, not overlay admission."
+  ],
+  "upstream": {
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "lock": "upstream/stacks.lock.json",
+    "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e"
+  },
+  "writer_task": "019fca5a-c80e-7890-a46b-4948ff443e6d"
+}

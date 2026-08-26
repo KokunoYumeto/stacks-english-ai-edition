@@ -1,0 +1,59 @@
+{
+  "schema": "mathematics-commons-stacks-verdier-visual-qa/v1",
+  "status": "PASS",
+  "passed": true,
+  "reviewed_at_utc": "2026-08-26T00:58:30Z",
+  "pdf": {
+    "path": "builds/derived.pdf",
+    "bytes": 1244620,
+    "sha256": "EDB4BED1F5A166B34562B63D44EEEE70C3F421AAFDD91F31C142E1B0EEAEF96A",
+    "pages": 130
+  },
+  "target": {
+    "proposed_label": "lemma-functorial-triangles-decomposable",
+    "rendered_pdf_page": 10,
+    "printed_lemma_number": "4.15",
+    "text_locator": "functor which sends a distinguished triangle to its first arrow"
+  },
+  "render": {
+    "engine": "pdftoppm 24.04.0",
+    "format": "PNG",
+    "resolution_dpi": 180,
+    "pixel_width": 1530,
+    "pixel_height": 1980,
+    "pages": [
+      {
+        "pdf_page": 9,
+        "path": "builds/visual/derived-009.png",
+        "bytes": 425000,
+        "sha256": "EC01488A483C5F370E5852CFAB05D60DDE02496C03095CBF2723033DBB9915C9"
+      },
+      {
+        "pdf_page": 10,
+        "path": "builds/visual/derived-010.png",
+        "bytes": 426432,
+        "sha256": "03C0BE53EE7D365AEDCC1E5761E314DA355A10DCE4953BA8C32B1812ECE3B5AB"
+      },
+      {
+        "pdf_page": 11,
+        "path": "builds/visual/derived-011.png",
+        "bytes": 433929,
+        "sha256": "B1BC9C107B8A5A8562856751CEEBE570CE6AB93CAE5BF03431C93BE0F6648F5E"
+      }
+    ]
+  },
+  "inspection": {
+    "target_lemma_complete_on_one_page": true,
+    "neighbor_pages_inspected": true,
+    "typography_consistent": true,
+    "equations_legible": true,
+    "margins_and_headers_consistent": true,
+    "page_numbers_present": true,
+    "clipped_content": false,
+    "overlap": false,
+    "broken_glyphs": false,
+    "malformed_links": false,
+    "issues": [],
+    "note": "Colored rectangles are the existing Stacks PDF hyperlink annotation style, not a rendering defect."
+  }
+}
