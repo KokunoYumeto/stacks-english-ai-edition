@@ -22,6 +22,9 @@ COMPOSITION_RECEIPT = Path("validation/composition-current.json")
 DEFAULT_BUILD_RECEIPT = Path(
     "validation/unified-fixed-point-2026-08-25-r19.json"
 )
+R18_R19_RELEASE_RECEIPT = Path(
+    "validation/errata-r18-r19-release-2026-08-25.json"
+)
 SHA1_RE = re.compile(r"^[0-9a-f]{40}$")
 SHA256_RE = re.compile(r"^[0-9A-Fa-f]{64}$")
 COMPOSITION_MODE = (
@@ -65,6 +68,7 @@ REQUIRED_PATHS = (
     "ai-integrated/upstream/stacks.lock.json",
     "tools/verify_overlay_projection.py",
     COMPOSITION_RECEIPT.as_posix(),
+    R18_R19_RELEASE_RECEIPT.as_posix(),
     "validation/unification-release-2026-08-25.json",
 )
 
@@ -287,6 +291,7 @@ def main(argv: list[str] | None = None) -> int:
     composition_path = ROOT / COMPOSITION_RECEIPT
     build_receipt_path = resolve_requested_path(args.build_receipt)
     build_receipt: dict = {}
+    build_receipt_bytes: bytes | None = None
     try:
         build_receipt_relative = build_receipt_path.relative_to(ROOT).as_posix()
     except ValueError:
@@ -1006,6 +1011,7 @@ def main(argv: list[str] | None = None) -> int:
         "ai-integrated/registry/releases.json",
         "ai-integrated/upstream/stacks.lock.json",
         COMPOSITION_RECEIPT.as_posix(),
+        R18_R19_RELEASE_RECEIPT.as_posix(),
         "validation/unification-release-2026-08-25.json",
     ):
         try:
@@ -1383,18 +1389,112 @@ def main(argv: list[str] | None = None) -> int:
             errors.append("aggregate diagnostics do not equal artifact diagnostics")
 
     release_receipt = load_json_object(
-        ROOT / "validation/unification-release-2026-08-25.json",
+        ROOT / R18_R19_RELEASE_RECEIPT,
         errors,
-        "unification release receipt",
+        "R18-R19 release receipt",
     ) or {}
     if release_receipt.get("status") != "PUBLICATION_COMPLETE":
-        errors.append("unification release receipt is not publication-complete")
-    if release_receipt.get("public_readback", {}).get("status") != "PASS":
-        errors.append("unification release receipt lacks passing public readback")
-    if release_receipt.get("preservation", {}).get("status") != "PUBLIC_READBACK_VERIFIED":
-        errors.append("preservation assets lack public readback verification")
-    if not release_receipt.get("source_repository", {}).get("archived"):
-        errors.append("release receipt does not record the source provenance archive")
+        errors.append("R18-R19 release receipt is not publication-complete")
+    release_state = release_receipt.get("release")
+    if not isinstance(release_state, dict):
+        errors.append("R18-R19 release receipt lacks release state")
+        release_state = {}
+    if release_state.get("repository") != "KokunoYumeto/unofficial-ai-integrated-stacks-project":
+        errors.append("R18-R19 release receipt names the wrong repository")
+    if release_state.get("default_branch") != "main":
+        errors.append("R18-R19 release receipt names the wrong default branch")
+    if release_state.get("frozen_registry_cutoff") != cutoff_commit:
+        errors.append("R18-R19 release cutoff binding mismatch")
+    if release_state.get("registered_overlays") != len(entries):
+        errors.append("R18-R19 release overlay-count binding mismatch")
+    if release_state.get("registered_stable_ids") != len(registered_ids):
+        errors.append("R18-R19 release stable-ID binding mismatch")
+    readback = release_receipt.get("public_readback")
+    if not isinstance(readback, dict) or readback.get("status") != "PASS":
+        errors.append("R18-R19 release receipt lacks passing public readback")
+        readback = {}
+    readback_commit = require_commit(
+        readback.get("commit"), "R18-R19 public readback", errors
+    )
+    require_ancestor(readback_commit, "HEAD", "R18-R19 readback-to-current", errors)
+    if readback_commit != release_state.get("published_content_head"):
+        errors.append("R18-R19 readback and published-content heads differ")
+    checked_paths = readback.get("checked_paths")
+    if not isinstance(checked_paths, list) or not checked_paths:
+        errors.append("R18-R19 release receipt lacks checked public paths")
+        checked_paths = []
+    for row in checked_paths:
+        if not isinstance(row, dict) or not isinstance(row.get("path"), str):
+            errors.append("R18-R19 release receipt has an invalid readback row")
+            continue
+        relative = row["path"]
+        if Path(relative).is_absolute() or ".." in Path(relative).parts:
+            errors.append(f"R18-R19 readback path escapes repository: {relative}")
+            continue
+        data = committed_bytes(
+            readback_commit or "HEAD", relative, errors, "R18-R19 public readback"
+        )
+        if data is None:
+            continue
+        expected_sha = row.get("sha256")
+        expected_blob = row.get("git_blob")
+        if (
+            type(row.get("bytes")) is not int
+            or row.get("bytes") != len(data)
+            or not isinstance(expected_sha, str)
+            or not SHA256_RE.fullmatch(expected_sha)
+            or sha256_bytes(data) != expected_sha.upper()
+            or not isinstance(expected_blob, str)
+            or not SHA1_RE.fullmatch(expected_blob)
+            or git_blob_sha1(data) != expected_blob.lower()
+        ):
+            errors.append(f"R18-R19 public readback identity mismatch: {relative}")
+    release_composition = release_receipt.get("composition")
+    if not isinstance(release_composition, dict):
+        errors.append("R18-R19 release receipt lacks composition state")
+        release_composition = {}
+    release_comp_receipt = release_composition.get("receipt")
+    if isinstance(release_comp_receipt, dict):
+        if release_comp_receipt.get("sha256") != composition_sha:
+            errors.append("R18-R19 release composition-receipt hash mismatch")
+    else:
+        errors.append("R18-R19 release receipt lacks composition-receipt identity")
+    release_build = release_receipt.get("build")
+    if not isinstance(release_build, dict):
+        errors.append("R18-R19 release receipt lacks build state")
+        release_build = {}
+    if release_build.get("receipt_sha256") != sha256_bytes(
+        build_receipt_bytes or b""
+    ):
+        errors.append("R18-R19 release build-receipt hash mismatch")
+    if release_build.get("source_commit") != build_source_commit or release_build.get(
+        "source_tree"
+    ) != build_source.get("tree"):
+        errors.append("R18-R19 release build-source identity mismatch")
+    if release_build.get("chapters") != len(artifacts):
+        errors.append("R18-R19 release chapter-count mismatch")
+    if release_build.get("pages") != sum(
+        artifact.get("pages", 0) for artifact in artifacts if isinstance(artifact, dict)
+    ):
+        errors.append("R18-R19 release page-count mismatch")
+    if release_build.get("global_fixed_point_sweep") != build_state.get(
+        "global_fixed_point_sweep"
+    ):
+        errors.append("R18-R19 release fixed-point sweep mismatch")
+
+    historical_receipt = load_json_object(
+        ROOT / "validation/unification-release-2026-08-25.json",
+        errors,
+        "historical unification release receipt",
+    ) or {}
+    if historical_receipt.get("status") != "PUBLICATION_COMPLETE":
+        errors.append("historical unification release receipt is not publication-complete")
+    if historical_receipt.get("public_readback", {}).get("status") != "PASS":
+        errors.append("historical release receipt lacks passing public readback")
+    if historical_receipt.get("preservation", {}).get("status") != "PUBLIC_READBACK_VERIFIED":
+        errors.append("historical preservation assets lack public readback verification")
+    if not historical_receipt.get("source_repository", {}).get("archived"):
+        errors.append("historical receipt does not record the source provenance archive")
 
     marker_paths = [ROOT / item for item in PUBLIC_MARKDOWN]
     marker_paths.extend(ROOT.glob("*.tex"))

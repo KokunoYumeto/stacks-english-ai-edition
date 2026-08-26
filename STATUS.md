@@ -53,3 +53,5 @@ The current unified-tree gate additionally built all 21 required chapters
 (2,269 pages and 23,549,238 PDF bytes) to a global PDF fixed point on sweep
 four. The exact page, byte, SHA-256, and diagnostic inventory is in the
 [`R19 fixed-point build receipt`](validation/unified-fixed-point-2026-08-25-r19.json).
+The public source/readback identities are recorded in the
+[`R18–R19 release receipt`](validation/errata-r18-r19-release-2026-08-25.json).

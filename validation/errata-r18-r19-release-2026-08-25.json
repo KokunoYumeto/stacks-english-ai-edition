@@ -1,0 +1,180 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-r18-r19-release/v1",
+  "status": "PUBLICATION_COMPLETE",
+  "created_utc": "2026-08-26T00:12:47Z",
+  "release": {
+    "repository": "KokunoYumeto/unofficial-ai-integrated-stacks-project",
+    "default_branch": "main",
+    "published_content_head": "301d0fc58a1c66b5fd0868a32e1e8ffc5c84a2cc",
+    "frozen_registry_cutoff": "24861b306a34991c0da3d803f92d67e206c805da",
+    "admitted_errata": "R1-R19",
+    "registered_overlays": 19,
+    "registered_stable_ids": 507,
+    "excluded_work": "R20 and later admissions are outside this fixed point.",
+    "linear_registry_import": "c06400fc323abb62990f37563cc31e9ae93fbf8e",
+    "linear_composition_source": "1f204fb27ff418fd0e75cb35ac8dab5256037f15"
+  },
+  "composition": {
+    "receipt": {
+      "path": "validation/composition-current.json",
+      "bytes": 3602,
+      "sha256": "DC2EF81854FBC21F5CEEC2652E060A095426F6C6ED6978F76AE696F8C89F719F",
+      "git_blob": "baa2e60329c8831e861eb47d13cc77d9e864f389"
+    },
+    "authority": {
+      "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+      "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e"
+    },
+    "registry": {
+      "cutoff_commit": "24861b306a34991c0da3d803f92d67e206c805da",
+      "import_commit": "c06400fc323abb62990f37563cc31e9ae93fbf8e",
+      "import_tree": "7c4f81e8e9f470b3ee6224299411c4062752d0bc",
+      "path": "ai-integrated/registry/overlays.json",
+      "bytes": 29549,
+      "sha256": "D4C4BC122E4F2D61D7BE028B21FE4888989B3970D92E33C11289E05034ECF9E6",
+      "git_blob": "513a55e0a5c5365bbb87c9f71eb7f4921a188a96"
+    },
+    "projection": {
+      "source": "derived.tex",
+      "operations": 77,
+      "bytes": 449662,
+      "sha256": "317B3A8E626BCCB3BC579DAB6AA57F4FDFEF513CA82805B02BCDC8C22FB8C1A1",
+      "git_blob": "44bc02a8aa0fff94dd58aff0694f7e61ecece2a8",
+      "authority_sha256": "EFDA4CB361DD40909D1991161EAE716E58B6CF9E79380971502E1DA12396D402",
+      "verifier": "python tools/verify_overlay_projection.py 18 19 --check-current"
+    },
+    "overlay_evidence": [
+      {
+        "id": "stacks-errata-a04446e-r18",
+        "stable_ids": 20,
+        "operations": 20,
+        "manifest_sha256": "AE6E1177D1AF9954A38502ECA788354DE2091142C736AD49E04ECA2672DEF89D",
+        "payload_sha256": "7051800AA3B700DD3736F1E9A749EFD90B84F89B287546F5213FBA508C42FB50",
+        "review_receipt_sha256": "CA0E1693224C0F727DB23E7057AC21982DC5F5183E8BB25D72C94EC90AD00894"
+      },
+      {
+        "id": "stacks-errata-a04446e-r19",
+        "stable_ids": 43,
+        "operations": 57,
+        "manifest_sha256": "750D76226657AB9BF0E34729992BE91DF58E2268B1D3D7D35B29B8893D6A3A52",
+        "payload_sha256": "64A9B8C5568B575457AE8E81DB54F39D9590260422EE4BD5710EB743CC6E7C31",
+        "review_receipt_sha256": "A8E775B2DDAE2E44B1B615533E516CD4F5EF17A6A511B4EC0F99AA58FAAD7A1C"
+      }
+    ]
+  },
+  "build": {
+    "receipt_path": "validation/unified-fixed-point-2026-08-25-r19.json",
+    "receipt_bytes": 15411,
+    "receipt_sha256": "09EA08B9770593AD35C3204D5011CD443F3040D061FE965278EBB608E10846C7",
+    "source_commit": "400159979d40624724fde62c36a9cbfe582ac6fd",
+    "source_tree": "1b4375bc4b2c40503812baa54dcfca577d43a320",
+    "chapters": 21,
+    "pages": 2269,
+    "pdf_bytes": 23549238,
+    "global_fixed_point_sweep": 4,
+    "diagnostics": {
+      "fatal_markers": 0,
+      "missing_glyph_markers": 0,
+      "undefined_reference_markers": 0,
+      "external_reference_markers": 2164,
+      "undefined_citation_markers": 0,
+      "multiply_defined_markers": 0,
+      "rerun_required_markers": 0,
+      "destination_warning_markers": 0
+    },
+    "gaga_pages": 23,
+    "pdfinfo_readable": 21
+  },
+  "public_readback": {
+    "status": "PASS",
+    "checked_utc": "2026-08-26T00:12:47Z",
+    "method": "anonymous git ls-remote and raw.githubusercontent.com byte readback",
+    "commit": "301d0fc58a1c66b5fd0868a32e1e8ffc5c84a2cc",
+    "checked_paths": [
+      {
+        "path": "derived.tex",
+        "bytes": 449662,
+        "sha256": "317B3A8E626BCCB3BC579DAB6AA57F4FDFEF513CA82805B02BCDC8C22FB8C1A1",
+        "git_blob": "44bc02a8aa0fff94dd58aff0694f7e61ecece2a8"
+      },
+      {
+        "path": "gaga.tex",
+        "bytes": 79674,
+        "sha256": "60B745924E5127A2F67DB63BF877EA5512CFA93143463ACFE4BCF6058298B762",
+        "git_blob": "343d8eb74e4fafc7a876797753500488a8004032"
+      },
+      {
+        "path": "ai-integrated/registry/overlays.json",
+        "bytes": 29549,
+        "sha256": "D4C4BC122E4F2D61D7BE028B21FE4888989B3970D92E33C11289E05034ECF9E6",
+        "git_blob": "513a55e0a5c5365bbb87c9f71eb7f4921a188a96"
+      },
+      {
+        "path": "validation/composition-current.json",
+        "bytes": 3602,
+        "sha256": "DC2EF81854FBC21F5CEEC2652E060A095426F6C6ED6978F76AE696F8C89F719F",
+        "git_blob": "baa2e60329c8831e861eb47d13cc77d9e864f389"
+      },
+      {
+        "path": "validation/unified-fixed-point-2026-08-25-r19.json",
+        "bytes": 15411,
+        "sha256": "09EA08B9770593AD35C3204D5011CD443F3040D061FE965278EBB608E10846C7",
+        "git_blob": "2f3be3bc9857bc4b69d7891debc60d1eb6109113"
+      },
+      {
+        "path": "README.md",
+        "bytes": 5615,
+        "sha256": "83F7A07502E8D963C436AD5EAF3E737FDB0336240028C1961BB82107C1EB2DA6",
+        "git_blob": "415d46b708910f17b579650c62054ee74e6f66db"
+      },
+      {
+        "path": "STATUS.md",
+        "bytes": 3440,
+        "sha256": "937AFF7EB94E59E08A6B8DDF4E9A04A5831C4B5BBFB71FB27A9E52F80C41230E",
+        "git_blob": "b7df725756787e569c8b36dd047c5c5319e3f3b1"
+      },
+      {
+        "path": "VALIDATION.md",
+        "bytes": 3311,
+        "sha256": "18E3D575ED47B1F60AD37C3B651113390A2626E1E887965C95EC57E39BDA57CE",
+        "git_blob": "7f2a6edf8edd9f82f2c412f1868045f21569c8a7"
+      },
+      {
+        "path": "validation/README.md",
+        "bytes": 1066,
+        "sha256": "10C662D25A5CE02666058B4D30C91CEB9A949F59C5759AB0B0E5FCF25F76986D",
+        "git_blob": "84d0672da926351d0203735337b9b799b033771f"
+      },
+      {
+        "path": "PROVENANCE.md",
+        "bytes": 4153,
+        "sha256": "325049160A063677076F5C57808B2921719C1243B02783B649DAAA0F500A1F01",
+        "git_blob": "f2c81f9d607c80222967a0cbf850f1be505b7880"
+      },
+      {
+        "path": "ROADMAP.md",
+        "bytes": 6062,
+        "sha256": "DA6FA24564060D2FC141C12410E44CEF479C45D4B860F713E5587CCD67015320",
+        "git_blob": "ffeb0d704784101300e85638c263f235ad78c2f2"
+      },
+      {
+        "path": "tools/build_fixed_point.py",
+        "bytes": 39610,
+        "sha256": "6A516A063C625B002A38F39E69419F488C4172420471C633E01DD60BEC123FEB",
+        "git_blob": "3e164153807ccaedd2be633132fa8492ed649560"
+      },
+      {
+        "path": "tools/validate_unified_repository.py",
+        "bytes": 64227,
+        "sha256": "E1439337C83049C7E9767367F98CF0A3B1FE8DF4918A15062D7971F52C684869",
+        "git_blob": "17f814cc3106dab82a950791f26e52638c51d825"
+      },
+      {
+        "path": "tools/verify_overlay_projection.py",
+        "bytes": 8104,
+        "sha256": "4134FA38332AF1DCB2C848C234C809DC383B9914AB3F0854F86FE3C8D023ACD5",
+        "git_blob": "ef81b98b253d7fdde4decbb771d641700a175b95"
+      }
+    ]
+  }
+}

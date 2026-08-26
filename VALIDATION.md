@@ -46,6 +46,8 @@ The source composition receipt records the frozen external cutoff
 `c06400fc323abb62990f37563cc31e9ae93fbf8e`, the composition source
 `1f204fb27ff418fd0e75cb35ac8dab5256037f15`, and the exact `derived.tex`
 projection SHA-256 `317B3A8E626BCCB3BC579DAB6AA57F4FDFEF513CA82805B02BCDC8C22FB8C1A1`.
+The corresponding anonymous public readback inventory is preserved in the
+[`R18–R19 release receipt`](validation/errata-r18-r19-release-2026-08-25.json).
 
 ## Source-specific deterministic evidence
 

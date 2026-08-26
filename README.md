@@ -19,7 +19,8 @@ machine-readable validation evidence.
 [Errata registry](ai-integrated/registry/overlays.json) ·
 [Validation](VALIDATION.md) ·
 [Current build receipt](validation/unified-fixed-point-2026-08-25-r19.json) ·
-[Release receipt](validation/unification-release-2026-08-25.json) ·
+[R18–R19 release receipt](validation/errata-r18-r19-release-2026-08-25.json) ·
+[R17 historical receipt](validation/unification-release-2026-08-25.json) ·
 [Roadmap](ROADMAP.md) ·
 [Provenance and frozen histories](PROVENANCE.md) ·
 [License](COPYING)
