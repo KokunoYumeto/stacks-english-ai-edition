@@ -1,0 +1,545 @@
+{
+  "schema": "mathematics-commons-stacks-adjudication-spec/v1",
+  "candidate_id": "stacks-errata-a04446e-r20",
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "authority_sha256": "EFDA4CB361DD40909D1991161EAE716E58B6CF9E79380971502E1DA12396D402",
+  "bounded_lines": {
+    "start": 8739,
+    "end": 12560
+  },
+  "accepted_units": 29,
+  "accepted_operations": 32,
+  "stable_id_range": "MC-STK-ERR-0875..MC-STK-ERR-0903",
+  "intake_evidence": [
+    {
+      "path": "canon/control/INTAKE_FR_DERIVED_064_076_20260825.json",
+      "sha256": "D1A09350685F24829BDF721618509551149E3D4EB9AF5E22BA644C1CFF147E4E"
+    },
+    {
+      "path": "canon/control/INTAKE_FR_DERIVED_077_092_20260825.json",
+      "sha256": "B76158F7845C51217E581413DB73D65BAEE0DE74E3D372F54C54CAC24A02480F"
+    }
+  ],
+  "producer_snapshot": {
+    "path": "p02/evidence/DERIVED_SOURCE_EMENDATIONS.json",
+    "frozen_through": "DERIVED-092",
+    "bytes": 45771,
+    "sha256": "81AA75D21F2EE859B7DFD8A0FBD21B3DB87C4009E4A340B46C855644AED0C247",
+    "note": "The live append-only producer file may contain later rows; only DERIVED-064..092 are admitted here."
+  },
+  "canon_amendments": [
+    {
+      "producer_id": "DERIVED-071",
+      "operation": "line 10681: \\prod\\nolimits_{n\\,:\\\\,p \\geq -n} H^p(K) -> \\prod\\nolimits_{n : p \\geq -n} H^p(K)",
+      "reason": "Use the surrounding Stacks house style for a conditioned product index; mathematical indexing is unchanged."
+    }
+  ],
+  "replay_hazards": [
+    {
+      "producer_id": "DERIVED-065",
+      "constraint": "Map all three preimages to frozen authority byte offsets before applying; apply descending because OP1 creates OP2 text."
+    },
+    {
+      "producer_id": "DERIVED-066",
+      "constraint": "Keep the paired replacements independently line-bound."
+    },
+    {
+      "producer_id": "DERIVED-079",
+      "constraint": "Line/byte-bound because the corrected expression exists elsewhere."
+    },
+    {
+      "producer_id": "DERIVED-082",
+      "constraint": "Line/byte-bound because the corrected expression exists elsewhere."
+    },
+    {
+      "producer_id": "DERIVED-091",
+      "constraint": "Strictly line/byte-bound; its old sentence occurs 91 times globally."
+    }
+  ],
+  "accepted": [
+    {
+      "producer_id": "DERIVED-064",
+      "stable_id": "MC-STK-ERR-0875",
+      "class": "reversed_truncation_inequality",
+      "locus": "derived.tex:8739",
+      "result": "confirmed_reversed_truncation_inequality",
+      "disposition": "After replacing L by its canonical truncation tau_{<=a}L, it vanishes in degrees above a. This upper bound is exactly what makes Y^{i+n} vanish for n < b-a; the printed lower-bound inequality reverses the argument.",
+      "operations": [
+        {
+          "source_start_line": 8739,
+          "source_end_line": 8739,
+          "old_text": "$L^i = 0$ for $i < a$",
+          "replacement_text": "$L^i = 0$ for $i > a$"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-065",
+      "stable_id": "MC-STK-ERR-0876",
+      "class": "reversed_colimit_map_and_malformed_cohomology_map",
+      "locus": "derived.tex:9386,9388,9440",
+      "result": "confirmed_reversed_colimit_map_and_malformed_cohomology_map",
+      "disposition": "The displayed quasi-isomorphism must run from P to Q: the following diagram, the finite-stage comparison maps, and the concluding H^i(F(alpha)) map all run from P to Q. The printed display alone reverses the two colimits. This is the second half of the P-to-Q direction correction required by the proof's diagram and conclusion. The printed formula has unbalanced parentheses and applies H^i directly to alpha although the proof concerns F(alpha). Restoring both missing parentheses and F gives the induced cohomology map used to prove F(alpha) is a quasi-isomorphism.",
+      "operations": [
+        {
+          "source_start_line": 9386,
+          "source_end_line": 9386,
+          "old_text": "\\colim Q_n^\\bullet = Q^\\bullet",
+          "replacement_text": "P^\\bullet = \\colim P_n^\\bullet"
+        },
+        {
+          "source_start_line": 9388,
+          "source_end_line": 9388,
+          "old_text": "P^\\bullet = \\colim P_n^\\bullet",
+          "replacement_text": "Q^\\bullet = \\colim Q_n^\\bullet"
+        },
+        {
+          "source_start_line": 9440,
+          "source_end_line": 9440,
+          "old_text": "$H^i(\\alpha) : H^i(F(P^\\bullet) \\to H^i(F(Q^\\bullet)$",
+          "replacement_text": "$H^i(F(\\alpha)) : H^i(F(P^\\bullet)) \\to H^i(F(Q^\\bullet))$"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-066",
+      "stable_id": "MC-STK-ERR-0877",
+      "class": "wrong_localization_categories",
+      "locus": "derived.tex:9556,9562",
+      "result": "confirmed_wrong_localization_categories",
+      "disposition": "The general lemma has no abelian category B. Its Hom set is in the localization (S')^{-1}D', as displayed in the equality being justified. The general lemma has no abelian category A. Its Hom set is in S^{-1}D, as displayed in the equality being justified.",
+      "operations": [
+        {
+          "source_start_line": 9556,
+          "source_end_line": 9556,
+          "old_text": "$D(\\mathcal{B})$, see Categories, Remark",
+          "replacement_text": "$(S')^{-1}\\mathcal{D}'$, see Categories, Remark"
+        },
+        {
+          "source_start_line": 9562,
+          "source_end_line": 9562,
+          "old_text": "in $D(\\mathcal{A})$, see Categories, Remark",
+          "replacement_text": "in $S^{-1}\\mathcal{D}$, see Categories, Remark"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-067",
+      "stable_id": "MC-STK-ERR-0878",
+      "class": "missing_closing_parenthesis",
+      "locus": "derived.tex:9993",
+      "result": "confirmed_missing_closing_parenthesis",
+      "disposition": "The source omits the closing parenthesis of H^i(RF(tau_{<=a}E)), leaving the displayed morphism malformed.",
+      "operations": [
+        {
+          "source_start_line": 9993,
+          "source_end_line": 9993,
+          "old_text": "$H^i(RF(\\tau_{\\leq a}E) \\to H^i(RF(E))$",
+          "replacement_text": "$H^i(RF(\\tau_{\\leq a}E)) \\to H^i(RF(E))$"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-068",
+      "stable_id": "MC-STK-ERR-0879",
+      "class": "ill_typed_maximum_scope",
+      "locus": "derived.tex:10017",
+      "result": "confirmed_ill_typed_maximum_scope",
+      "disposition": "The maximum must be taken over the union of the singleton {0} with the nonvanishing degrees. The printed parentheses instead form max({0}) union a set, which is ill-typed.",
+      "operations": [
+        {
+          "source_start_line": 10017,
+          "source_end_line": 10017,
+          "old_text": "$d(A) = \\max \\{0\\} \\cup \\{i \\mid R^iF(A) \\not = 0\\}$",
+          "replacement_text": "$d(A) = \\max\\bigl(\\{0\\} \\cup \\{i \\mid R^iF(A) \\not = 0\\}\\bigr)$"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-069",
+      "stable_id": "MC-STK-ERR-0880",
+      "class": "missing_closing_parenthesis",
+      "locus": "derived.tex:10119",
+      "result": "confirmed_missing_closing_parenthesis",
+      "disposition": "The dual statement repeats the same missing closing parenthesis, leaving the cohomology morphism malformed.",
+      "operations": [
+        {
+          "source_start_line": 10119,
+          "source_end_line": 10119,
+          "old_text": "$H^i(LF(\\tau_{\\leq a + n - 1}E) \\to H^i(LF(E))$",
+          "replacement_text": "$H^i(LF(\\tau_{\\leq a + n - 1}E)) \\to H^i(LF(E))$"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-070",
+      "stable_id": "MC-STK-ERR-0881",
+      "class": "ill_typed_naturality_equation",
+      "locus": "derived.tex:10208",
+      "result": "confirmed_ill_typed_naturality_equation",
+      "disposition": "For a morphism of systems a_n: K_n to L_n, the structural square requires a after i_n to equal j_n after a_n. The printed right side j_n alone has domain L_n rather than K_n and is ill-typed.",
+      "operations": [
+        {
+          "source_start_line": 10208,
+          "source_end_line": 10208,
+          "old_text": "$a \\circ i_n = j_n$",
+          "replacement_text": "$a \\circ i_n = j_n \\circ a_n$"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-071",
+      "stable_id": "MC-STK-ERR-0882",
+      "class": "wrong_product_index",
+      "locus": "derived.tex:10681",
+      "result": "confirmed_wrong_product_index",
+      "disposition": "Here p is the fixed cohomological degree and the product ranges over the tower index n for which the truncation has p-th cohomology. The printed subscript incorrectly makes the fixed p look like the product index.",
+      "operations": [
+        {
+          "source_start_line": 10681,
+          "source_end_line": 10681,
+          "old_text": "\\prod\\nolimits_{p \\geq -n} H^p(K)",
+          "replacement_text": "\\prod\\nolimits_{n : p \\geq -n} H^p(K)"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-072",
+      "stable_id": "MC-STK-ERR-0883",
+      "class": "wrong_indefinite_article",
+      "locus": "derived.tex:9709",
+      "result": "confirmed_wrong_indefinite_article",
+      "disposition": "The indefinite article before the consonant sound in complex must be a, not an.",
+      "operations": [
+        {
+          "source_start_line": 9709,
+          "source_end_line": 9709,
+          "old_text": "Let $K^\\bullet$ be an complex.",
+          "replacement_text": "Let $K^\\bullet$ be a complex."
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-073",
+      "stable_id": "MC-STK-ERR-0884",
+      "class": "wrong_indefinite_article",
+      "locus": "derived.tex:9870",
+      "result": "confirmed_wrong_indefinite_article",
+      "disposition": "The indefinite article before acyclic must be an.",
+      "operations": [
+        {
+          "source_start_line": 9870,
+          "source_end_line": 9870,
+          "old_text": "Let $M^\\bullet$ be a acyclic complex of $\\mathcal{B}$.",
+          "replacement_text": "Let $M^\\bullet$ be an acyclic complex of $\\mathcal{B}$."
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-074",
+      "stable_id": "MC-STK-ERR-0885",
+      "class": "subject_verb_agreement",
+      "locus": "derived.tex:10328",
+      "result": "confirmed_subject_verb_agreement",
+      "disposition": "The plural subject countable direct sums requires the plural verb exist.",
+      "operations": [
+        {
+          "source_start_line": 10328,
+          "source_end_line": 10328,
+          "old_text": "Then countable direct sums exists and are exact.",
+          "replacement_text": "Then countable direct sums exist and are exact."
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-075",
+      "stable_id": "MC-STK-ERR-0886",
+      "class": "spelling",
+      "locus": "derived.tex:10541",
+      "result": "confirmed_spelling",
+      "disposition": "Occurrence is misspelled with two r's in the source.",
+      "operations": [
+        {
+          "source_start_line": 10541,
+          "source_end_line": 10541,
+          "old_text": "where each occurence of $f$ denotes a suitable transition map of",
+          "replacement_text": "where each occurrence of $f$ denotes a suitable transition map of"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-076",
+      "stable_id": "MC-STK-ERR-0887",
+      "class": "double_connector",
+      "locus": "derived.tex:10561",
+      "result": "confirmed_double_connector",
+      "disposition": "The source combines and with a relative clause introduced by which, leaving an ungrammatical double connector.",
+      "operations": [
+        {
+          "source_start_line": 10561,
+          "source_end_line": 10561,
+          "old_text": "inverse system of complexes and which in particular determines",
+          "replacement_text": "inverse system of complexes which in particular determines"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-077",
+      "stable_id": "MC-STK-ERR-0888",
+      "class": "subject_verb_agreement",
+      "locus": "derived.tex:10798",
+      "result": "confirmed_subject_verb_agreement",
+      "disposition": "The plural subject objects requires the plural verb consist.",
+      "operations": [
+        {
+          "source_start_line": 10798,
+          "source_end_line": 10798,
+          "old_text": "consists of all objects $F(A)$",
+          "replacement_text": "consist of all objects $F(A)$"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-078",
+      "stable_id": "MC-STK-ERR-0889",
+      "class": "unbound_cohomological_index",
+      "locus": "derived.tex:10872",
+      "result": "confirmed_unbound_cohomological_index",
+      "disposition": "In the base case b-a=0, K has cohomology only in the single degree a. The index i is unbound, while the canonical identification is K isomorphic to H^a(K)[-a].",
+      "operations": [
+        {
+          "source_start_line": 10872,
+          "source_end_line": 10872,
+          "old_text": "$H^i(K)[-a]$",
+          "replacement_text": "$H^a(K)[-a]$"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-079",
+      "stable_id": "MC-STK-ERR-0890",
+      "class": "wrong_canonical_truncation_triangle",
+      "locus": "derived.tex:10876",
+      "result": "confirmed_wrong_canonical_truncation_triangle",
+      "disposition": "The proof is in the derived category and requires the canonical truncation triangle. K^b is a term of a chosen complex and is neither intrinsic nor the required one-degree cohomology object.",
+      "operations": [
+        {
+          "source_start_line": 10876,
+          "source_end_line": 10876,
+          "old_text": "\\tau_{\\leq b - 1}K^\\bullet \\to K^\\bullet \\to K^b[-b]",
+          "replacement_text": "\\tau_{\\leq b - 1}K \\to K \\to H^b(K)[-b]"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-080",
+      "stable_id": "MC-STK-ERR-0891",
+      "class": "false_cohomological_bound",
+      "locus": "derived.tex:10890",
+      "result": "confirmed_false_cohomological_bound",
+      "disposition": "Every shifted generator in E[-m,m] has cohomology in [a-m,b+m], and finite sums, direct summands, and extensions preserve this same interval. Multiplying a and b by the extension length n gives a false bound.",
+      "operations": [
+        {
+          "source_start_line": 10890,
+          "source_end_line": 10890,
+          "old_text": "$i \\not \\in [-m + na, m + nb]$",
+          "replacement_text": "$i \\not \\in [a - m, b + m]$"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-081",
+      "stable_id": "MC-STK-ERR-0892",
+      "class": "missing_preposition",
+      "locus": "derived.tex:10913",
+      "result": "confirmed_missing_preposition",
+      "disposition": "The English construction denote an object the name is missing the required preposition by.",
+      "operations": [
+        {
+          "source_start_line": 10913,
+          "source_end_line": 10913,
+          "old_text": "Denote $\\langle E \\rangle_1$ the strictly full subcategory",
+          "replacement_text": "Denote by $\\langle E \\rangle_1$ the strictly full subcategory"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-082",
+      "stable_id": "MC-STK-ERR-0893",
+      "class": "unmatched_bracket",
+      "locus": "derived.tex:10966",
+      "result": "confirmed_unmatched_bracket",
+      "disposition": "The expression has one unmatched closing square bracket after add(E[-infinity,infinity]).",
+      "operations": [
+        {
+          "source_start_line": 10966,
+          "source_end_line": 10966,
+          "old_text": "smd(add(E[-\\infty, \\infty])])",
+          "replacement_text": "smd(add(E[-\\infty, \\infty]))"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-083",
+      "stable_id": "MC-STK-ERR-0894",
+      "class": "wrong_additive_closure_subject",
+      "locus": "derived.tex:11003",
+      "result": "confirmed_wrong_additive_closure_subject",
+      "disposition": "The proof checks that the strictly full saturated triangulated subcategory D' is stable under the operations used to generate <E>. The printed inclusion for add(D) is generally false and does not express closure of D'.",
+      "operations": [
+        {
+          "source_start_line": 11003,
+          "source_end_line": 11003,
+          "old_text": "$add(\\mathcal{D}) \\subset \\mathcal{D}'$",
+          "replacement_text": "$add(\\mathcal{D}') \\subset \\mathcal{D}'$"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-084",
+      "stable_id": "MC-STK-ERR-0895",
+      "class": "wrong_factorization_object_prime_count",
+      "locus": "derived.tex:11258",
+      "result": "confirmed_wrong_factorization_object_prime_count",
+      "disposition": "The preceding sentence introduces the new factorization object E'''. E'' already denotes the earlier induction object attached to I'', so this occurrence must be E'''.",
+      "operations": [
+        {
+          "source_start_line": 11258,
+          "source_end_line": 11258,
+          "old_text": "$E''$ an object of $\\langle \\bigoplus_{i \\in I'''} E_i \\rangle$",
+          "replacement_text": "$E'''$ an object of $\\langle \\bigoplus_{i \\in I'''} E_i \\rangle$"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-085",
+      "stable_id": "MC-STK-ERR-0896",
+      "class": "wrong_support_index_prime_count",
+      "locus": "derived.tex:11259",
+      "result": "confirmed_wrong_support_index_prime_count",
+      "disposition": "The new object E''' is supported on the newly introduced finite index set I'''. The following union I' union I'' union I''' confirms the required index.",
+      "operations": [
+        {
+          "source_start_line": 11259,
+          "source_end_line": 11259,
+          "old_text": "for some finite subset $I' \\subset I$",
+          "replacement_text": "for some finite subset $I''' \\subset I$"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-086",
+      "stable_id": "MC-STK-ERR-0897",
+      "class": "wrong_result_type_noun",
+      "locus": "derived.tex:11309",
+      "result": "confirmed_wrong_result_type_noun",
+      "disposition": "The enclosing numbered unit is Proposition lemma-compactly-generated-classical-generator, not a lemma.",
+      "operations": [
+        {
+          "source_start_line": 11309,
+          "source_end_line": 11309,
+          "old_text": "the lemma is proven",
+          "replacement_text": "the proposition is proven"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-087",
+      "stable_id": "MC-STK-ERR-0898",
+      "class": "ordinary_colimit_in_place_of_homotopy_colimit",
+      "locus": "derived.tex:11625",
+      "result": "confirmed_ordinary_colimit_in_place_of_homotopy_colimit",
+      "disposition": "The first part of the proof constructs X as the homotopy colimit of the sequence X_n. An ordinary colimit is neither assumed to exist in the triangulated category nor the object constructed there.",
+      "operations": [
+        {
+          "source_start_line": 11625,
+          "source_end_line": 11625,
+          "old_text": "$\\colim X_n = X \\to Y$",
+          "replacement_text": "$\\text{hocolim} X_n = X \\to Y$"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-088",
+      "stable_id": "MC-STK-ERR-0899",
+      "class": "spelling",
+      "locus": "derived.tex:11744",
+      "result": "confirmed_spelling",
+      "disposition": "Subcategories is misspelled.",
+      "operations": [
+        {
+          "source_start_line": 11744,
+          "source_end_line": 11744,
+          "old_text": "triangulated subcagories",
+          "replacement_text": "triangulated subcategories"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-089",
+      "stable_id": "MC-STK-ERR-0900",
+      "class": "spelling",
+      "locus": "derived.tex:11890",
+      "result": "confirmed_spelling",
+      "disposition": "Inclusion is misspelled.",
+      "operations": [
+        {
+          "source_start_line": 11890,
+          "source_end_line": 11890,
+          "old_text": "Since the incusion $\\mathcal{A} \\subset {}^\\perp(\\mathcal{A}^\\perp)$",
+          "replacement_text": "Since the inclusion $\\mathcal{A} \\subset {}^\\perp(\\mathcal{A}^\\perp)$"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-090",
+      "stable_id": "MC-STK-ERR-0901",
+      "class": "wrong_primed_Postnikov_target",
+      "locus": "derived.tex:12278",
+      "result": "confirmed_wrong_primed_Postnikov_target",
+      "disposition": "The second arrow is the structure map of the target Postnikov system and therefore lands in X'_n[n]. The next line and the displayed distinguished triangle both use X'_n[n].",
+      "operations": [
+        {
+          "source_start_line": 12278,
+          "source_end_line": 12278,
+          "old_text": "$Y_n[n] \\to Y'_n[n] \\to X_n[n]$",
+          "replacement_text": "$Y_n[n] \\to Y'_n[n] \\to X'_n[n]$"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-091",
+      "stable_id": "MC-STK-ERR-0902",
+      "class": "missing_let_clause",
+      "locus": "derived.tex:12551",
+      "result": "confirmed_missing_let_clause",
+      "disposition": "The displayed subject A_n to B_n is followed by be but lacks the corresponding Let. Joining its introduction to the preceding sentence supplies the missing construction.",
+      "operations": [
+        {
+          "source_start_line": 12551,
+          "source_end_line": 12551,
+          "old_text": "Let $\\mathcal{A}$ be an abelian category.",
+          "replacement_text": "Let $\\mathcal{A}$ be an abelian category and let"
+        }
+      ]
+    },
+    {
+      "producer_id": "DERIVED-092",
+      "stable_id": "MC-STK-ERR-0903",
+      "class": "subject_verb_agreement",
+      "locus": "derived.tex:12560",
+      "result": "confirmed_subject_verb_agreement",
+      "disposition": "The singular head noun system requires the singular verb defines.",
+      "operations": [
+        {
+          "source_start_line": 12560,
+          "source_end_line": 12560,
+          "old_text": "define an isomorphism of pro-objects of $\\mathcal{A}$",
+          "replacement_text": "defines an isomorphism of pro-objects of $\\mathcal{A}$"
+        }
+      ]
+    }
+  ],
+  "rejected": []
+}

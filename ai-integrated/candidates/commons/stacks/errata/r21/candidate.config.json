@@ -1,0 +1,117 @@
+{
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_evidence": [
+    {
+      "bytes": 8570,
+      "path": "authority/canon/R21_SIMPLICIAL_001_011_ADJUDICATION_SPEC.json",
+      "sha256": "77AAB0AB50264240E11AEE565A18F25C35ED50647154587EF38A0D0DE42FB7C2"
+    },
+    {
+      "bytes": 4596,
+      "path": "authority/canon/R21_SIMPLICIAL_001_011_INTAKE.json",
+      "sha256": "D28D746FF6D3AACD215D29C92E013F80D0090A6978AAE757276DD611869EA07D"
+    },
+    {
+      "bytes": 2201,
+      "path": "authority/canon/R21_SIMPLICIAL_001_011_REVIEW.md",
+      "sha256": "CE208C8206E4A6D6DCD14B30E27825F9753D30F469392451AB4EB4D11928FFAB"
+    },
+    {
+      "bytes": 20404,
+      "path": "authority/COPYING",
+      "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"
+    },
+    {
+      "bytes": 234898,
+      "path": "authority/source/simplicial.tex",
+      "sha256": "187B4CD4F20696BF35EED843528462780CA04ABBBC597AE1045F8404372FDC56"
+    },
+    {
+      "bytes": 1171,
+      "path": "authority/upstream.lock.json",
+      "sha256": "B195ECC83AB0F32C574A60D1FDBA9B0DA4D35B04E0DF7CB106DC9C0FDAD99C0D"
+    }
+  ],
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "candidate_id": "stacks-errata-a04446e-r21",
+  "expected_producer_ids": [
+    "SIMPLICIAL-001",
+    "SIMPLICIAL-002",
+    "SIMPLICIAL-003",
+    "SIMPLICIAL-004",
+    "SIMPLICIAL-005",
+    "SIMPLICIAL-006",
+    "CANON-SIMPLICIAL-001",
+    "SIMPLICIAL-007",
+    "SIMPLICIAL-008",
+    "SIMPLICIAL-009",
+    "SIMPLICIAL-010",
+    "SIMPLICIAL-011"
+  ],
+  "expected_unit_ids": [
+    "MC-STK-ERR-0904",
+    "MC-STK-ERR-0905",
+    "MC-STK-ERR-0906",
+    "MC-STK-ERR-0907",
+    "MC-STK-ERR-0908",
+    "MC-STK-ERR-0909",
+    "MC-STK-ERR-0910",
+    "MC-STK-ERR-0911",
+    "MC-STK-ERR-0912",
+    "MC-STK-ERR-0913",
+    "MC-STK-ERR-0914"
+  ],
+  "lease_id": "stacks-lease-000024-errata-r21",
+  "namespace": "commons/stacks/errata/r21",
+  "operation_count": 11,
+  "private_render_logical_path": "canon/private_evidence/errata-r21-20260825T2045Z/render-final/render-manifest.json",
+  "proof_closure": {
+    "accepted": 11,
+    "operations": 11,
+    "packet_duplicates": 0,
+    "prior_overlay_aliases": 0,
+    "producer_rows": 12,
+    "rejected": 1,
+    "unresolved": 0
+  },
+  "schema": "mathematics-commons-stacks-errata-candidate-config/v1",
+  "source_date_epoch": "1785274200",
+  "stems": {
+    "simplicial": {
+      "authority_bytes": 234898,
+      "authority_sha256": "187B4CD4F20696BF35EED843528462780CA04ABBBC597AE1045F8404372FDC56",
+      "build_exceptions": {
+        "candidate_page_delta": 0
+      },
+      "display_delimiter_delta": 0,
+      "ordered_structure_exceptions": {},
+      "payload_bytes": 235001,
+      "payload_sha256": "E4FD6748E65633490F8C48D720BEBF7327505DDF25B578868F6739E15BC96E16"
+    }
+  },
+  "visual_qa": {
+    "correction_sensitive_pages": {
+      "simplicial": [
+        5,
+        6,
+        7,
+        14,
+        18,
+        24,
+        28
+      ]
+    },
+    "high_resolution_pages": {
+      "simplicial": [
+        5,
+        6,
+        7,
+        14,
+        18,
+        24,
+        28
+      ]
+    }
+  },
+  "writer_task": "01a0256d-5693-77c1-96b2-cf37101e0c6c"
+}

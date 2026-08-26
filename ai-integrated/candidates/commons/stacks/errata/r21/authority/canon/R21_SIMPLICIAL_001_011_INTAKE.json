@@ -1,0 +1,135 @@
+{
+  "adjudication": {
+    "CANON-SIMPLICIAL-001": "confirmed_wrong_cosimplicial_map_source_target",
+    "SIMPLICIAL-001": "confirmed_wrong_simplicial_map_source_target",
+    "SIMPLICIAL-002": "confirmed_undefined_category_symbol",
+    "SIMPLICIAL-003": "confirmed_missing_preposition",
+    "SIMPLICIAL-004": "confirmed_ill_typed_identity_object",
+    "SIMPLICIAL-005": "confirmed_wrong_index_and_missing_terminal_case",
+    "SIMPLICIAL-006": "confirmed_missing_preposition",
+    "SIMPLICIAL-007": "rejected_not_a_defect",
+    "SIMPLICIAL-008": "confirmed_unmatched_closing_parenthesis",
+    "SIMPLICIAL-009": "confirmed_wrong_pullback_operator_for_pushout",
+    "SIMPLICIAL-010": "confirmed_wrong_indefinite_article",
+    "SIMPLICIAL-011": "confirmed_undefined_simplicial_set_symbol"
+  },
+  "allegation_locator_policy": {
+    "adjudication_authorities": [
+      "frozen simplicial.tex bytes",
+      "the pinned Stacks definitions and proofs",
+      "all twenty admitted overlay source maps and rejection ledgers"
+    ],
+    "producer_source_emendations_json": "pinned as bounded allegation evidence only; every row independently replayed against frozen authority",
+    "shared_producer_ledger": "used only to locate bounded allegations"
+  },
+  "allegation_locators": [
+    {
+      "class": "wrong_cosimplicial_map_source_target",
+      "locus": "simplicial.tex:477",
+      "producer_id": "CANON-SIMPLICIAL-001"
+    },
+    {
+      "class": "wrong_simplicial_map_source_target",
+      "locus": "simplicial.tex:277",
+      "producer_id": "SIMPLICIAL-001"
+    },
+    {
+      "class": "undefined_category_symbol",
+      "locus": "simplicial.tex:510",
+      "producer_id": "SIMPLICIAL-002"
+    },
+    {
+      "class": "missing_preposition",
+      "locus": "simplicial.tex:527",
+      "producer_id": "SIMPLICIAL-003"
+    },
+    {
+      "class": "ill_typed_identity_object",
+      "locus": "simplicial.tex:545",
+      "producer_id": "SIMPLICIAL-004"
+    },
+    {
+      "class": "wrong_index_and_missing_terminal_case",
+      "locus": "simplicial.tex:546",
+      "producer_id": "SIMPLICIAL-005"
+    },
+    {
+      "class": "missing_preposition",
+      "locus": "simplicial.tex:1338",
+      "producer_id": "SIMPLICIAL-006"
+    },
+    {
+      "class": "alleged_unmatched_closing_parenthesis",
+      "locus": "simplicial.tex:1716",
+      "producer_id": "SIMPLICIAL-007"
+    },
+    {
+      "class": "unmatched_closing_parenthesis",
+      "locus": "simplicial.tex:1726",
+      "producer_id": "SIMPLICIAL-008"
+    },
+    {
+      "class": "wrong_pullback_operator_for_pushout",
+      "locus": "simplicial.tex:1731",
+      "producer_id": "SIMPLICIAL-009"
+    },
+    {
+      "class": "wrong_indefinite_article",
+      "locus": "simplicial.tex:2301",
+      "producer_id": "SIMPLICIAL-010"
+    },
+    {
+      "class": "undefined_simplicial_set_symbol",
+      "locus": "simplicial.tex:2762",
+      "producer_id": "SIMPLICIAL-011"
+    }
+  ],
+  "authority": {
+    "bytes": 234898,
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "line_endings": "LF-only with terminal LF",
+    "mutated": false,
+    "path": "authority/source/simplicial.tex",
+    "physical_lines": 7007,
+    "sha256": "187B4CD4F20696BF35EED843528462780CA04ABBBC597AE1045F8404372FDC56",
+    "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e"
+  },
+  "bounded_source": {
+    "bytes": 79888,
+    "end_line": 2762,
+    "physical_lines": 2486,
+    "sha256": "649951EF6856C890044A84B7F4E91E4EAF5CBE4481A43756422B0CA5E0D29332",
+    "start_line": 277
+  },
+  "candidate_id": "stacks-errata-a04446e-r21",
+  "closure": {
+    "accepted": 11,
+    "operations": 11,
+    "producer_rows": 12,
+    "rejected": 1,
+    "rejected_duplicate": 0,
+    "stable_ids": "MC-STK-ERR-0904..MC-STK-ERR-0914",
+    "unresolved": 0
+  },
+  "corrected_bounded_replay": {
+    "bytes": 79991,
+    "old_spans_unique_in_declared_lines": true,
+    "operations_nonoverlapping": true,
+    "physical_lines": 2486,
+    "sha256": "EA689115E3E4B4E527FED61BA8EFA915035544A34AAA9A6188927A9935AE71F0"
+  },
+  "deduplication": {
+    "accepted_overlap": false,
+    "duplicate_aliases": {},
+    "public_candidates_checked": "R1..R20",
+    "registered_entries_checked": 20
+  },
+  "recorded_at_utc": "2026-08-25T20:33:58Z",
+  "schema": "stacks-canon-errata-intake/v1",
+  "write_boundaries": {
+    "canonical_translations": "immutable",
+    "english_authority": "immutable",
+    "payload_derivation": "directly from frozen authority, never a prior payload",
+    "producer_emendation_manifest": "bounded snapshot retained as evidence; independently adjudicated rather than treated as canon"
+  }
+}

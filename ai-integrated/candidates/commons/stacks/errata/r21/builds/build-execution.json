@@ -1,0 +1,205 @@
+{
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_inputs": {
+    "simplicial.tex": {
+      "bytes": 234898,
+      "path": "simplicial.tex",
+      "sha256": "187B4CD4F20696BF35EED843528462780CA04ABBBC597AE1045F8404372FDC56"
+    }
+  },
+  "authority_phase": {
+    "stems": {
+      "simplicial": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "simplicial.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 66535,
+            "stdout_sha256_raw": "BDC6AECBCE905525D0846A9A9AF00FB042DD40C1A27A7610287E29047D335930"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "simplicial"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 147,
+            "stdout_sha256_raw": "DD008A6097524E492FE910DAE81B298A9F298E6920CC91744941675A191EC2A5"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "simplicial.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 39641,
+            "stdout_sha256_raw": "CA0988AE68ACAAC68E1F1BB035936F3D673198EC5CCD12E642C18B6B8E7A241A"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "simplicial.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 38796,
+            "stdout_sha256_raw": "E13F148AF79784B9481073555BCC0C2FC84EA01B317E2CF1D359B844C41A2130"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 147,
+            "path": "builds/simplicial.authority.bibtex.txt",
+            "sha256": "DD008A6097524E492FE910DAE81B298A9F298E6920CC91744941675A191EC2A5"
+          },
+          "log": {
+            "bytes": 52512,
+            "path": "builds/simplicial.authority.log",
+            "sha256": "C41793C46FBBD9262599549F0999F9D055CFA71E6033FCB09AAB973354D0E938"
+          },
+          "pass3_stdout": {
+            "bytes": 38402,
+            "path": "builds/simplicial.authority.pass3.txt",
+            "sha256": "5F38713B73353DC94DBD1794978678C8E3E22D386F285A4AD17F0825E0F769F2"
+          },
+          "pdf": {
+            "bytes": 810915,
+            "path": "builds/simplicial.authority.pdf",
+            "sha256": "0F84344BF4769BE498CF183DCC85DACB7A0D29634AE289BD3DF4E105B517B906"
+          }
+        },
+        "source": {
+          "bytes": 234898,
+          "path": "simplicial.tex",
+          "sha256": "187B4CD4F20696BF35EED843528462780CA04ABBBC597AE1045F8404372FDC56"
+        }
+      }
+    }
+  },
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "candidate_id": "stacks-errata-a04446e-r21",
+  "candidate_inputs": {
+    "simplicial.tex": {
+      "bytes": 235001,
+      "path": "simplicial.tex",
+      "sha256": "E4FD6748E65633490F8C48D720BEBF7327505DDF25B578868F6739E15BC96E16"
+    }
+  },
+  "candidate_phase": {
+    "stems": {
+      "simplicial": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "simplicial.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 66535,
+            "stdout_sha256_raw": "00B14E0BF48CE7A99CF4AC6BC7E0D5085620EE0FE37E46F3024D0AC5B62D477F"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "simplicial"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 147,
+            "stdout_sha256_raw": "DD008A6097524E492FE910DAE81B298A9F298E6920CC91744941675A191EC2A5"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "simplicial.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 39641,
+            "stdout_sha256_raw": "886FBE39D1C3AE5EBB3B2AD9A2A51891DB2201DBE03C196F6852272B6CF6B780"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "simplicial.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 38796,
+            "stdout_sha256_raw": "49506B777A4D2981F816E93356C33D0EBCA5E3BB5EFCE2A39C1488B7B6DB5353"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 147,
+            "path": "builds/simplicial.bibtex.txt",
+            "sha256": "DD008A6097524E492FE910DAE81B298A9F298E6920CC91744941675A191EC2A5"
+          },
+          "log": {
+            "bytes": 52512,
+            "path": "builds/simplicial.log",
+            "sha256": "057FB56413E96824109E97AD2622F03051C5912198B4576AF50E12A476EF7EA8"
+          },
+          "pass3_stdout": {
+            "bytes": 38402,
+            "path": "builds/simplicial.pass3.txt",
+            "sha256": "2C99F7CE513922D9E662D4497F157A9AF4DA75ACC5A14EEF40762CFD8B740174"
+          },
+          "pdf": {
+            "bytes": 811031,
+            "path": "builds/simplicial.pdf",
+            "sha256": "7202ED47CAEF4BFD021B6C0A98B387E544999C63682F932AF024AE06E66E435B"
+          }
+        },
+        "source": {
+          "bytes": 235001,
+          "path": "simplicial.tex",
+          "sha256": "E4FD6748E65633490F8C48D720BEBF7327505DDF25B578868F6739E15BC96E16"
+        }
+      }
+    }
+  },
+  "completed_at_utc": "2026-08-25T20:48:53Z",
+  "passed": true,
+  "restored_authority_inputs": {
+    "simplicial.tex": {
+      "bytes": 234898,
+      "path": "simplicial.tex",
+      "sha256": "187B4CD4F20696BF35EED843528462780CA04ABBBC597AE1045F8404372FDC56"
+    }
+  },
+  "schema": "mathematics-commons-stacks-errata-build-execution/v1",
+  "source_date_epoch": "1785274200",
+  "started_at_utc": "2026-08-25T20:48:42Z",
+  "tools": {
+    "bibtex": "MiKTeX-BibTeX 4.2 (MiKTeX 26.5)",
+    "pdflatex": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5)",
+    "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]"
+  },
+  "work_root": "new empty task-local directory outside source and candidate; exact local path retained only in private evidence"
+}

@@ -1,0 +1,165 @@
+{
+  "schema": "mathematics-commons-stacks-adjudication-spec/v1",
+  "candidate_id": "stacks-errata-a04446e-r21",
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "authority_sha256": "187B4CD4F20696BF35EED843528462780CA04ABBBC597AE1045F8404372FDC56",
+  "bounded_lines": {
+    "start": 277,
+    "end": 2762
+  },
+  "accepted_units": 11,
+  "accepted_operations": 11,
+  "stable_id_range": "MC-STK-ERR-0904..MC-STK-ERR-0914",
+  "intake_evidence": [
+    {
+      "path": "canon/control/INTAKE_FR_SIMPLICIAL_001_006_20260825.json",
+      "bytes": 5451,
+      "sha256": "A64DB890AC85D60B22CE2C28E3DA9EC265E5F5BFB849539DF8233D1A65E62F1D"
+    },
+    {
+      "path": "canon/control/INTAKE_FR_SIMPLICIAL_007_011_20260825.json",
+      "bytes": 4174,
+      "sha256": "5C8C8A55BED6D4C4426D86C271817A2E83E074C7D33932914064BC2135C89993"
+    }
+  ],
+  "producer_snapshot": {
+    "path": "p02/evidence/SIMPLICIAL_SOURCE_EMENDATIONS.json",
+    "frozen_through": "SIMPLICIAL-011",
+    "bytes": 4374,
+    "sha256": "A5D33EA013BA4E87EC9D33EA82FDBCBCF877A775BB742A55F0C58FA14CFF3777",
+    "note": "The producer snapshot supplies eleven bounded allegations; one is rejected and the separate canon-origin unit was discovered and proved independently."
+  },
+  "canon_origin_units": [
+    {
+      "producer_id": "CANON-SIMPLICIAL-001",
+      "locus": "simplicial.tex:477",
+      "reason": "The authority itself defines delta_j^2 : U_1 to U_2 at line 428, and the adjacent cosimplicial diagram has the same source and target."
+    }
+  ],
+  "replay_hazards": [
+    {
+      "producer_id": "SIMPLICIAL-004",
+      "constraint": "Bind strictly to line 545; the old identity text also occurs correctly at line 339."
+    },
+    {
+      "producer_id": "SIMPLICIAL-005",
+      "constraint": "Map both adjacent line-545 and line-546 preimages to frozen authority offsets before applying in descending byte order."
+    },
+    {
+      "producer_id": "CANON-SIMPLICIAL-001",
+      "constraint": "Keep separate from SIMPLICIAL-001: the former corrects the dual cosimplicial paragraph at line 477, while the latter corrects the simplicial paragraph at line 277."
+    }
+  ],
+  "accepted": [
+    {
+      "producer_id": "SIMPLICIAL-001",
+      "stable_id": "MC-STK-ERR-0904",
+      "class": "wrong_simplicial_map_source_target",
+      "locus": "simplicial.tex:277",
+      "result": "confirmed_wrong_simplicial_map_source_target",
+      "disposition": "The displayed d_j^2 maps are face maps U_2 to U_1 by the definition at lines 324-325 and the adjacent diagram; U_3 to U_2 is ill-typed.",
+      "operations": [{"source_start_line": 277, "source_end_line": 277, "old_text": "U_3 \\to U_2", "replacement_text": "U_2 \\to U_1"}]
+    },
+    {
+      "producer_id": "SIMPLICIAL-002",
+      "stable_id": "MC-STK-ERR-0905",
+      "class": "undefined_category_symbol",
+      "locus": "simplicial.tex:510",
+      "result": "confirmed_undefined_category_symbol",
+      "disposition": "The standing category is mathcal C throughout the example; plain C is undefined.",
+      "operations": [{"source_start_line": 510, "source_end_line": 510, "old_text": "$C$", "replacement_text": "$\\mathcal{C}$"}]
+    },
+    {
+      "producer_id": "SIMPLICIAL-003",
+      "stable_id": "MC-STK-ERR-0906",
+      "class": "missing_preposition",
+      "locus": "simplicial.tex:527",
+      "result": "confirmed_missing_preposition",
+      "disposition": "The English construction is denote by C[n] the cosimplicial set.",
+      "operations": [{"source_start_line": 527, "source_end_line": 527, "old_text": "we denote $C[n]$ the cosimplicial set", "replacement_text": "we denote by $C[n]$ the cosimplicial set"}]
+    },
+    {
+      "producer_id": "SIMPLICIAL-004",
+      "stable_id": "MC-STK-ERR-0907",
+      "class": "ill_typed_identity_object",
+      "locus": "simplicial.tex:545",
+      "result": "confirmed_ill_typed_identity_object",
+      "disposition": "The composite sigma_i^{n-1} after delta_i^n is an endomorphism of U_{n-1}; its identity cannot be the identity of U_n.",
+      "operations": [{"source_start_line": 545, "source_end_line": 545, "old_text": "\\text{id}_{U_n}", "replacement_text": "\\text{id}_{U_{n - 1}}"}]
+    },
+    {
+      "producer_id": "SIMPLICIAL-005",
+      "stable_id": "MC-STK-ERR-0908",
+      "class": "wrong_index_and_missing_terminal_case",
+      "locus": "simplicial.tex:546",
+      "result": "confirmed_wrong_index_and_missing_terminal_case",
+      "disposition": "The displayed morphism is indexed by i, not j. For i<n the printed retraction applies; the terminal case i=n uses sigma_{n-1}^{n-1} after delta_n^n.",
+      "operations": [{"source_start_line": 546, "source_end_line": 546, "old_text": "for $j < n$.", "replacement_text": "for $i < n$; for $i = n$ use $\\sigma_{n - 1}^{n - 1} \\circ \\delta^n_n = \\text{id}_{U_{n - 1}}$."}]
+    },
+    {
+      "producer_id": "SIMPLICIAL-006",
+      "stable_id": "MC-STK-ERR-0909",
+      "class": "missing_preposition",
+      "locus": "simplicial.tex:1338",
+      "result": "confirmed_missing_preposition",
+      "disposition": "The noun phrase requires of before the category.",
+      "operations": [{"source_start_line": 1338, "source_end_line": 1338, "old_text": "simplicial objects $\\mathcal{C}$", "replacement_text": "simplicial objects of $\\mathcal{C}$"}]
+    },
+    {
+      "producer_id": "CANON-SIMPLICIAL-001",
+      "stable_id": "MC-STK-ERR-0910",
+      "class": "wrong_cosimplicial_map_source_target",
+      "locus": "simplicial.tex:477",
+      "result": "confirmed_wrong_cosimplicial_map_source_target",
+      "disposition": "The displayed delta_j^2 maps are coface maps U_1 to U_2 by line 428 and the adjacent diagram; U_2 to U_3 is ill-typed.",
+      "operations": [{"source_start_line": 477, "source_end_line": 477, "old_text": "U_2 \\to U_3", "replacement_text": "U_1 \\to U_2"}]
+    },
+    {
+      "producer_id": "SIMPLICIAL-008",
+      "stable_id": "MC-STK-ERR-0911",
+      "class": "unmatched_closing_parenthesis",
+      "locus": "simplicial.tex:1726",
+      "result": "confirmed_unmatched_closing_parenthesis",
+      "disposition": "The final Mor term in the aligned equality has one unmatched extra closing parenthesis.",
+      "operations": [{"source_start_line": 1726, "source_end_line": 1726, "old_text": "\\Mor(X \\times \\Delta[n] \\times (V \\amalg_U W), T))", "replacement_text": "\\Mor(X \\times \\Delta[n] \\times (V \\amalg_U W), T)"}]
+    },
+    {
+      "producer_id": "SIMPLICIAL-009",
+      "stable_id": "MC-STK-ERR-0912",
+      "class": "wrong_pullback_operator_for_pushout",
+      "locus": "simplicial.tex:1731",
+      "result": "confirmed_wrong_pullback_operator_for_pushout",
+      "disposition": "Both maps leave the common U term for the V and W terms, and the next line identifies the construction with V amalg_U W; the operator must be a pushout amalgamation, not a fibre product.",
+      "operations": [{"source_start_line": 1731, "source_end_line": 1731, "old_text": "\\times_{X \\times \\Delta[n] \\times U}", "replacement_text": "\\amalg_{X \\times \\Delta[n] \\times U}"}]
+    },
+    {
+      "producer_id": "SIMPLICIAL-010",
+      "stable_id": "MC-STK-ERR-0913",
+      "class": "wrong_indefinite_article",
+      "locus": "simplicial.tex:2301",
+      "result": "confirmed_wrong_indefinite_article",
+      "disposition": "Final begins with a consonant sound, so the required article is a.",
+      "operations": [{"source_start_line": 2301, "source_end_line": 2301, "old_text": "has an final object", "replacement_text": "has a final object"}]
+    },
+    {
+      "producer_id": "SIMPLICIAL-011",
+      "stable_id": "MC-STK-ERR-0914",
+      "class": "undefined_simplicial_set_symbol",
+      "locus": "simplicial.tex:2762",
+      "result": "confirmed_undefined_simplicial_set_symbol",
+      "disposition": "The proof fixes the simplicial set U and quantifies u in U_i; X is undefined in the lemma, so the degree-one edge lies in U_1.",
+      "operations": [{"source_start_line": 2762, "source_end_line": 2762, "old_text": "$i = 1$ and $u \\in X_1$", "replacement_text": "$i = 1$ and $u \\in U_1$"}]
+    }
+  ],
+  "rejected": [
+    {
+      "producer_id": "SIMPLICIAL-007",
+      "class": "alleged_unmatched_closing_parenthesis",
+      "locus": "simplicial.tex:1716",
+      "result": "rejected_not_a_defect",
+      "reason": "The first closing parenthesis ends the third Hom call and the second closes the outer Mor call opened on line 1715. Deleting it would leave the displayed expression unbalanced.",
+      "operations": []
+    }
+  ]
+}

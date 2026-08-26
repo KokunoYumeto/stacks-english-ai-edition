@@ -1,0 +1,65 @@
+{
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "candidate_id": "stacks-errata-a04446e-r21",
+  "checks": {
+    "authority_evidence": {
+      "files": 6,
+      "passed": true
+    },
+    "exact_payloads": {
+      "files": {
+        "simplicial": {
+          "authority_bytes": 234898,
+          "authority_sha256": "187B4CD4F20696BF35EED843528462780CA04ABBBC597AE1045F8404372FDC56",
+          "display_delimiter_delta": 0,
+          "operation_count": 11,
+          "ordered_structure": {
+            "citations": {
+              "authority": 7,
+              "payload": 7
+            },
+            "environments": {
+              "authority": 708,
+              "payload": 708
+            },
+            "labels": {
+              "authority": 200,
+              "payload": 200
+            },
+            "references": {
+              "authority": 298,
+              "payload": 298
+            },
+            "sections": {
+              "authority": 34,
+              "payload": 34
+            }
+          },
+          "payload_bytes": 235001,
+          "payload_sha256": "E4FD6748E65633490F8C48D720BEBF7327505DDF25B578868F6739E15BC96E16",
+          "xymatrix_count": 49
+        }
+      },
+      "passed": true
+    },
+    "lease_ledgers_inventory": {
+      "decisions": 9,
+      "passed": true,
+      "rejections": 1
+    },
+    "public_hygiene": {
+      "passed": true,
+      "python_caches": 0,
+      "text_files": 38
+    },
+    "unit_closure": {
+      "passed": true,
+      "units": 11
+    }
+  },
+  "generated_at_utc": "2026-08-25T20:33:58Z",
+  "passed": true,
+  "schema": "mathematics-commons-stacks-errata-source-validation/v1",
+  "scope": "source_only_no_build_or_render",
+  "verifier_sha256": "8177E8ADC41D44F3D5E639166285F08B7B38481C995B3D0215D7E37E25F64802"
+}
