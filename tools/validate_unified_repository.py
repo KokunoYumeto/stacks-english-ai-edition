@@ -21,7 +21,7 @@ SOURCE_UNION = "ad58625f60e6816905ff217d21d91b07b2722fcf"
 EGA_EXPORT = "91df7f1c96bd4973264c29b0e121253a05d1d361"
 COMPOSITION_RECEIPT = Path("validation/composition-current.json")
 DEFAULT_BUILD_RECEIPT = Path(
-    "validation/unified-fixed-point-2026-08-25-r19.json"
+    "validation/stacks-verdier-a04446e-1-2-13-r1-build-2026-08-26.json"
 )
 VISUAL_QA_RECEIPT = Path("validation/visual-qa-r21.json")
 REPRODUCIBILITY_RECEIPT = Path("validation/reproducibility-r21.json")
@@ -324,6 +324,19 @@ def main(argv: list[str] | None = None) -> int:
         ),
     )
     args = parser.parse_args(argv)
+
+    try:
+        current_composition = json.loads(
+            (ROOT / COMPOSITION_RECEIPT).read_text(encoding="utf-8")
+        )
+    except (OSError, json.JSONDecodeError):
+        current_composition = None
+    if isinstance(current_composition, dict) and current_composition.get("schema") == (
+        "unofficial-ai-integrated-stacks-composition/v4"
+    ):
+        from validate_registered_insertion_release import validate_v4
+
+        return validate_v4(ROOT, args.build_receipt, args.pre_publication)
 
     errors: list[str] = []
     composition_path = ROOT / COMPOSITION_RECEIPT

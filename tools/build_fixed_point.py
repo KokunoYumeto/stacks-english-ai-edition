@@ -9,6 +9,7 @@ import json
 import os
 import platform
 import re
+import shlex
 import shutil
 import subprocess
 import sys
@@ -45,20 +46,17 @@ DEFAULT_COMPOSITION_RECEIPT = Path("validation/composition-current.json")
 STEM_PATTERN = re.compile(r"^[A-Za-z0-9][A-Za-z0-9_-]*$")
 SHA1_PATTERN = re.compile(r"^[0-9a-f]{40}$")
 SHA256_PATTERN = re.compile(r"^[0-9A-Fa-f]{64}$")
-COMPOSITION_SCHEMA = "unofficial-ai-integrated-stacks-composition/v3"
-COMPOSITION_MODE = (
+COMPOSITION_SCHEMA_V3 = "unofficial-ai-integrated-stacks-composition/v3"
+COMPOSITION_SCHEMA_V4 = "unofficial-ai-integrated-stacks-composition/v4"
+COMPOSITION_MODE_V3 = (
     "manifest-bound registry-order replay rebased onto verified cumulative source"
 )
-
-GENERATED_SUFFIXES = (
-    ".aux",
-    ".bbl",
-    ".blg",
-    ".log",
-    ".out",
-    ".pdf",
-    ".toc",
-    ".synctex.gz",
+COMPOSITION_MODE_V4 = "registered insertion rebased through unique unchanged context"
+NAMESPACE_PATTERN = re.compile(
+    r"^[A-Za-z0-9._-]+(?:/[A-Za-z0-9._-]+)*$"
+)
+RELATIVE_PAYLOAD_PATTERN = re.compile(
+    r"^[A-Za-z0-9._-]+(?:/[A-Za-z0-9._-]+)*$"
 )
 
 FIXED_POINT_SUFFIXES = (
@@ -71,6 +69,12 @@ FIXED_POINT_SUFFIXES = (
     ".out",
     ".toc",
     ".pdf",
+)
+
+GENERATED_SUFFIXES = FIXED_POINT_SUFFIXES + (
+    ".blg",
+    ".log",
+    ".synctex.gz",
 )
 
 def run(command: list[str], source: Path, env: dict[str, str]) -> str:
@@ -139,14 +143,27 @@ def build_state_vector(source: Path, stems: tuple[str, ...]) -> tuple[str, ...]:
     return tuple(state)
 
 
-def external_reference_labels(source: Path) -> set[str]:
-    labels = {"index-section-phantom"}
+def external_reference_labels(source: Path) -> dict[str, str]:
+    labels = {"index-section-phantom": "shared-index"}
     label_pattern = re.compile(r"\\label\{([^}]+)\}")
-    for path in source.glob("*.tex"):
-        text = path.read_text(encoding="utf-8", errors="replace")
-        labels.update(
-            f"{path.stem}-{match.group(1)}" for match in label_pattern.finditer(text)
-        )
+    root_sources = [
+        path
+        for path in git(source, "ls-tree", "--name-only", "HEAD").splitlines()
+        if path.endswith(".tex")
+    ]
+    for relative in root_sources:
+        stem = Path(relative).stem
+        path = source / f"{stem}.tex"
+        text = git(source, "show", f"HEAD:{relative}")
+        for match in label_pattern.finditer(text):
+            label = f"{path.stem}-{match.group(1)}"
+            provider = labels.get(label)
+            if provider is not None and provider != path.stem:
+                raise RuntimeError(
+                    f"ambiguous external-reference provider for {label}: "
+                    f"{provider}, {path.stem}"
+                )
+            labels[label] = path.stem
     return labels
 
 
@@ -308,6 +325,65 @@ def validate_stems(raw_stems: object, label: str) -> tuple[str, ...]:
     return stems
 
 
+def require_safe_posix_path(value: object, label: str) -> str:
+    if (
+        not isinstance(value, str)
+        or not RELATIVE_PAYLOAD_PATTERN.fullmatch(value)
+        or any(part in (".", "..") for part in value.split("/"))
+    ):
+        raise RuntimeError(f"invalid {label}: {value!r}")
+    return value
+
+
+def run_bound_verifier(
+    source: Path,
+    binding: object,
+    expected_path: str,
+    expected_arguments: tuple[str, ...],
+    expected_schema: str,
+) -> dict[str, object]:
+    if not isinstance(binding, dict) or binding.get("status") != "PASS":
+        raise RuntimeError(f"invalid verifier binding for {expected_path}")
+    if binding.get("path") != expected_path:
+        raise RuntimeError(f"unexpected verifier path: {binding.get('path')!r}")
+    require_clean_path(source, expected_path)
+    if git_optional(source, "ls-files", "--error-unmatch", "--", expected_path) != expected_path:
+        raise RuntimeError(f"verifier is not tracked: {expected_path}")
+    command = binding.get("command")
+    if not isinstance(command, str):
+        raise RuntimeError(f"missing verifier command for {expected_path}")
+    tokens = shlex.split(command, posix=True)
+    expected_tokens = ("python", expected_path, *expected_arguments)
+    if tuple(tokens) != expected_tokens:
+        raise RuntimeError(
+            f"verifier argument vector mismatch for {expected_path}: {tokens!r}"
+        )
+    completed = subprocess.run(
+        [sys.executable, str(source / expected_path), *expected_arguments],
+        cwd=source,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+        check=False,
+    )
+    if completed.returncode:
+        detail = completed.stderr.strip() or completed.stdout.strip()
+        raise RuntimeError(f"receipt-bound verifier failed: {detail}")
+    try:
+        report = json.loads(completed.stdout)
+    except json.JSONDecodeError as exc:
+        raise RuntimeError(f"receipt-bound verifier returned invalid JSON: {exc}") from exc
+    if (
+        not isinstance(report, dict)
+        or report.get("schema") != expected_schema
+        or report.get("status") != "PASS"
+    ):
+        raise RuntimeError("receipt-bound verifier report schema or status mismatch")
+    return report
+
+
 def positive_int(value: object) -> bool:
     return type(value) is int and value > 0
 
@@ -326,6 +402,66 @@ def require_tree_identity(source: Path, commit: str, tree: object, label: str) -
     if git(source, "rev-parse", f"{commit}^{{tree}}") != tree:
         raise RuntimeError(f"{label} tree identity mismatch")
     return tree
+
+
+def load_bound_registry_json(
+    source: Path,
+    registry: dict[str, object],
+    registry_import_commit: str,
+    cutoff: str,
+    name: str,
+) -> tuple[str, str, str, dict[str, object]]:
+    """Load one registry JSON file after proving all committed copies identical."""
+    relative = registry.get(f"{name}_path")
+    expected_sha = registry.get(f"{name}_sha256")
+    expected_blob = registry.get(f"{name}_git_blob")
+    expected_bytes = registry.get(f"{name}_bytes")
+    if (
+        not isinstance(relative, str)
+        or not isinstance(expected_sha, str)
+        or not SHA256_PATTERN.fullmatch(expected_sha)
+        or not isinstance(expected_blob, str)
+        or not SHA1_PATTERN.fullmatch(expected_blob)
+        or not positive_int(expected_bytes)
+    ):
+        raise RuntimeError(
+            f"composition receipt has invalid {name} registry-file binding"
+        )
+    path = (source / relative).resolve()
+    try:
+        path.relative_to(source)
+    except ValueError as exc:
+        raise RuntimeError(f"registry {name} path escapes the source worktree") from exc
+    if not path.is_file():
+        raise RuntimeError(f"imported registry {name} file is missing")
+    require_clean_path(source, relative)
+    head_blob = git(source, "rev-parse", f"HEAD:{relative}")
+    imported_blob = git(
+        source, "rev-parse", f"{registry_import_commit}:{relative}"
+    )
+    cutoff_blob = git(source, "rev-parse", f"{cutoff}:registry/{name}.json")
+    if (
+        head_blob != expected_blob
+        or imported_blob != expected_blob
+        or cutoff_blob != expected_blob
+    ):
+        raise RuntimeError(f"imported registry {name} Git-blob binding mismatch")
+    try:
+        observed_bytes = int(git(source, "cat-file", "-s", head_blob))
+    except ValueError as exc:
+        raise RuntimeError(f"could not read imported registry {name} size") from exc
+    if (
+        observed_bytes != expected_bytes
+        or git_blob_sha256(source, head_blob) != expected_sha.upper()
+    ):
+        raise RuntimeError(f"imported registry {name} identity mismatch")
+    try:
+        state = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise RuntimeError(f"invalid imported registry {name}: {exc}") from exc
+    if not isinstance(state, dict):
+        raise RuntimeError(f"imported registry {name} must contain a JSON object")
+    return relative, head_blob, expected_sha.upper(), state
 
 
 def load_composition_receipt(
@@ -349,8 +485,13 @@ def load_composition_receipt(
         raise RuntimeError(f"invalid composition receipt {logical_path}: {exc}") from exc
     if not isinstance(receipt, dict):
         raise RuntimeError("composition receipt must contain a JSON object")
-    if receipt.get("schema") != COMPOSITION_SCHEMA or receipt.get("status") != "PASS":
+    composition_schema = receipt.get("schema")
+    if (
+        composition_schema not in (COMPOSITION_SCHEMA_V3, COMPOSITION_SCHEMA_V4)
+        or receipt.get("status") != "PASS"
+    ):
         raise RuntimeError("composition receipt schema or pass state is invalid")
+    is_v4 = composition_schema == COMPOSITION_SCHEMA_V4
 
     authority = receipt.get("authority")
     previous = receipt.get("previous_cutoff")
@@ -366,7 +507,8 @@ def load_composition_receipt(
             "composition receipt lacks authority, previous-cutoff, registry, or "
             "composition state"
         )
-    if composition.get("mode") != COMPOSITION_MODE:
+    expected_mode = COMPOSITION_MODE_V4 if is_v4 else COMPOSITION_MODE_V3
+    if composition.get("mode") != expected_mode:
         raise RuntimeError("composition receipt has an invalid registry-replay mode")
 
     authority_commit = require_commit_object(
@@ -387,6 +529,12 @@ def load_composition_receipt(
     previous_registry = require_commit_object(
         source, previous.get("registry_commit"), "previous registry cutoff"
     )
+    require_tree_identity(
+        source,
+        previous_registry,
+        previous.get("registry_tree"),
+        "previous registry cutoff",
+    )
     previous_last = previous.get("last_admitted_overlay")
     previous_source_blobs = previous.get("source_blobs")
     if (
@@ -401,6 +549,8 @@ def load_composition_receipt(
         source, registry.get("cutoff_commit"), "registry cutoff"
     )
     cutoff_tree = git(source, "rev-parse", f"{cutoff}^{{tree}}")
+    if cutoff_tree != registry.get("cutoff_tree"):
+        raise RuntimeError("registry cutoff tree identity mismatch")
     registry_import_commit = require_commit_object(
         source, registry.get("linear_import_commit"), "registry linear import"
     )
@@ -509,54 +659,23 @@ def load_composition_receipt(
             )
         normalized_previous_sources[relative] = dict(identity)
 
-    overlays_relative = registry.get("overlays_path")
-    overlays_sha = registry.get("overlays_sha256")
-    expected_overlays_blob = registry.get("overlays_git_blob")
-    overlays_bytes = registry.get("overlays_bytes")
-    if (
-        not isinstance(overlays_relative, str)
-        or not isinstance(overlays_sha, str)
-        or not SHA256_PATTERN.fullmatch(overlays_sha)
-        or not isinstance(expected_overlays_blob, str)
-        or not SHA1_PATTERN.fullmatch(expected_overlays_blob)
-        or not positive_int(overlays_bytes)
-    ):
-        raise RuntimeError("composition receipt has invalid registry-file binding")
-    overlays_path = (source / overlays_relative).resolve()
-    try:
-        overlays_path.relative_to(source)
-    except ValueError as exc:
-        raise RuntimeError("registry overlay path escapes the source worktree") from exc
-    if not overlays_path.is_file():
-        raise RuntimeError("imported overlay registry is missing")
-    require_clean_path(source, overlays_relative)
-    overlays_blob = git(source, "rev-parse", f"HEAD:{overlays_relative}")
-    imported_overlays_blob = git(
-        source, "rev-parse", f"{registry_import_commit}:{overlays_relative}"
+    overlays_relative, overlays_blob, overlays_sha, overlays = load_bound_registry_json(
+        source, registry, registry_import_commit, cutoff, "overlays"
     )
-    cutoff_overlays_blob = git(
-        source, "rev-parse", f"{cutoff}:registry/overlays.json"
-    )
-    if (
-        overlays_blob != expected_overlays_blob
-        or imported_overlays_blob != expected_overlays_blob
-        or cutoff_overlays_blob != expected_overlays_blob
-    ):
-        raise RuntimeError("imported overlay registry Git-blob binding mismatch")
-    try:
-        observed_overlays_bytes = int(git(source, "cat-file", "-s", overlays_blob))
-    except ValueError as exc:
-        raise RuntimeError("could not read imported overlay registry size") from exc
-    if (
-        observed_overlays_bytes != overlays_bytes
-        or git_blob_sha256(source, overlays_blob) != overlays_sha.upper()
-    ):
-        raise RuntimeError("imported overlay registry identity mismatch")
-    try:
-        overlays = json.loads(overlays_path.read_text(encoding="utf-8"))
-    except (OSError, json.JSONDecodeError) as exc:
-        raise RuntimeError(f"invalid imported overlay registry: {exc}") from exc
-    entries = overlays.get("registered_entries") if isinstance(overlays, dict) else None
+    leases_relative: str | None = None
+    leases_blob: str | None = None
+    leases_sha: str | None = None
+    lease_events: list[object] = []
+    if is_v4:
+        leases_relative, leases_blob, leases_sha, leases = load_bound_registry_json(
+            source, registry, registry_import_commit, cutoff, "leases"
+        )
+        raw_events = leases.get("events")
+        if not isinstance(raw_events, list) or not raw_events:
+            raise RuntimeError("imported lease registry lacks events")
+        lease_events = raw_events
+
+    entries = overlays.get("registered_entries")
     if not isinstance(entries, list):
         raise RuntimeError("imported overlay registry lacks registered_entries")
     stable_ids: list[str] = []
@@ -594,23 +713,87 @@ def load_composition_receipt(
     if not entries or entries[-1].get("id") != registry.get("last_admitted_overlay"):
         raise RuntimeError("imported overlay registry cutoff entry mismatch")
 
+    previous_overlay_text = git_optional(
+        source, "show", f"{previous_registry}:registry/overlays.json"
+    )
+    try:
+        previous_overlay_registry = (
+            json.loads(previous_overlay_text)
+            if previous_overlay_text is not None
+            else None
+        )
+    except json.JSONDecodeError as exc:
+        raise RuntimeError(f"invalid previous overlay registry: {exc}") from exc
+    previous_entries = (
+        previous_overlay_registry.get("registered_entries")
+        if isinstance(previous_overlay_registry, dict)
+        else None
+    )
+    if not isinstance(previous_entries, list):
+        raise RuntimeError("previous overlay registry lacks registered_entries")
+
+    previous_lease_events: list[object] = []
+    if is_v4:
+        previous_lease_text = git_optional(
+            source, "show", f"{previous_registry}:registry/leases.json"
+        )
+        try:
+            previous_lease_registry = (
+                json.loads(previous_lease_text)
+                if previous_lease_text is not None
+                else None
+            )
+        except json.JSONDecodeError as exc:
+            raise RuntimeError(f"invalid previous lease registry: {exc}") from exc
+        raw_previous_events = (
+            previous_lease_registry.get("events")
+            if isinstance(previous_lease_registry, dict)
+            else None
+        )
+        if not isinstance(raw_previous_events, list):
+            raise RuntimeError("previous lease registry lacks events")
+        previous_lease_events = raw_previous_events
+        event_ids = [
+            event.get("event_id") if isinstance(event, dict) else None
+            for event in lease_events
+        ]
+        expected_event_ids = [f"lease-event-{number:06d}" for number in range(1, len(event_ids) + 1)]
+        if (
+            event_ids != expected_event_ids
+            or len(set(event_ids)) != len(event_ids)
+            or lease_events[: len(previous_lease_events)] != previous_lease_events
+        ):
+            raise RuntimeError(
+                "lease registry event IDs, ordering, or append-only prefix are invalid"
+            )
+
     previous_index = next(
         (index for index, entry in enumerate(entries) if entry.get("id") == previous_last),
         None,
     )
     if previous_index is None:
         raise RuntimeError("previous cutoff overlay is absent from the imported registry")
+    if entries[: previous_index + 1] != previous_entries:
+        raise RuntimeError("overlay registry changed the previous append-only prefix")
     new_overlays = receipt.get("new_overlays")
     if not isinstance(new_overlays, list) or not new_overlays:
         raise RuntimeError("composition receipt lacks new-overlay transition evidence")
+    if is_v4 and len(new_overlays) != 1:
+        raise RuntimeError("v4 registered-insertion build requires exactly one new overlay")
     registry_suffix = entries[previous_index + 1 :]
     if len(registry_suffix) != len(new_overlays):
         raise RuntimeError("new-overlay transition length does not match registry suffix")
+    if is_v4 and len(lease_events) != len(previous_lease_events) + len(new_overlays):
+        raise RuntimeError(
+            "v4 admission did not append exactly one lease-release event per overlay"
+        )
     new_operation_total = 0
     normalized_new_overlays: list[dict[str, object]] = []
     candidate_commits: list[str] = []
     admission_commits: list[str] = []
     expected_registry_parent = previous_registry
+    expected_admission_entries = list(previous_entries)
+    expected_admission_lease_events = list(previous_lease_events)
     for overlay, entry in zip(new_overlays, registry_suffix):
         if not isinstance(overlay, dict) or not isinstance(entry, dict):
             raise RuntimeError("new-overlay transition contains an invalid entry")
@@ -627,7 +810,10 @@ def load_composition_receipt(
         ):
             raise RuntimeError(f"invalid new-overlay counts: {overlay.get('id')!r}")
         new_operation_total += operation_count
-        for key in ("manifest_sha256", "payload_sha256", "review_receipt_sha256"):
+        digest_keys = ["manifest_sha256", "payload_sha256", "review_receipt_sha256"]
+        if is_v4:
+            digest_keys.append("composition_sha256")
+        for key in digest_keys:
             value = overlay.get(key)
             if not isinstance(value, str) or not SHA256_PATTERN.fullmatch(value):
                 raise RuntimeError(f"invalid {key} for {overlay.get('id')!r}")
@@ -647,32 +833,329 @@ def load_composition_receipt(
             overlay.get("admission_commit"),
             f"admission {overlay.get('id')}",
         )
-        require_single_parent(
-            source,
-            candidate,
-            f"candidate {overlay.get('id')}",
-            expected_registry_parent,
-        )
-        require_single_parent(
-            source,
-            admission,
-            f"admission {overlay.get('id')}",
-            candidate,
-        )
         namespace = entry.get("namespace")
-        if not isinstance(namespace, str) or not namespace:
-            raise RuntimeError(f"invalid namespace for {overlay.get('id')!r}")
-        manifest_path = f"candidates/{namespace}/candidate.manifest.json"
-        manifest_blob = git_optional(
-            source, "rev-parse", f"{candidate}:{manifest_path}"
-        )
         if (
-            manifest_blob is None
-            or git_blob_sha256(source, manifest_blob)
-            != overlay["manifest_sha256"].upper()
+            not isinstance(namespace, str)
+            or not NAMESPACE_PATTERN.fullmatch(namespace)
+            or any(part in (".", "..") for part in namespace.split("/"))
         ):
-            raise RuntimeError(
-                f"candidate manifest binding mismatch: {overlay.get('id')!r}"
+            raise RuntimeError(f"invalid namespace for {overlay.get('id')!r}")
+        candidate_path = f"candidates/{namespace}"
+        manifest_path = f"{candidate_path}/candidate.manifest.json"
+        normalized_overlay = dict(overlay)
+
+        if not is_v4:
+            require_single_parent(
+                source,
+                candidate,
+                f"candidate {overlay.get('id')}",
+                expected_registry_parent,
+            )
+            require_single_parent(
+                source,
+                admission,
+                f"admission {overlay.get('id')}",
+                candidate,
+            )
+            manifest_blob = git_optional(
+                source, "rev-parse", f"{candidate}:{manifest_path}"
+            )
+            if (
+                manifest_blob is None
+                or git_blob_sha256(source, manifest_blob)
+                != overlay["manifest_sha256"].upper()
+            ):
+                raise RuntimeError(
+                    f"candidate manifest binding mismatch: {overlay.get('id')!r}"
+                )
+        else:
+            topology = overlay.get("topology")
+            if topology != "independent_candidate_direct_admission":
+                raise RuntimeError(
+                    f"unsupported v4 overlay topology: {topology!r}"
+                )
+            require_single_parent(
+                source,
+                admission,
+                f"admission {overlay.get('id')}",
+                expected_registry_parent,
+            )
+            if (
+                overlay.get("candidate_tree")
+                != git(source, "rev-parse", f"{candidate}^{{tree}}")
+                or overlay.get("admission_tree")
+                != git(source, "rev-parse", f"{admission}^{{tree}}")
+                or overlay.get("admission_parent") != expected_registry_parent
+            ):
+                raise RuntimeError(
+                    f"candidate/admission tree or parent binding mismatch: {overlay.get('id')!r}"
+                )
+            expected_subtree = overlay.get("candidate_subtree")
+            if (
+                not isinstance(expected_subtree, str)
+                or not SHA1_PATTERN.fullmatch(expected_subtree)
+                or git_optional(source, "cat-file", "-t", expected_subtree) != "tree"
+            ):
+                raise RuntimeError(
+                    f"invalid candidate subtree for {overlay.get('id')!r}"
+                )
+            candidate_subtree = git_optional(
+                source, "rev-parse", f"{candidate}:{candidate_path}"
+            )
+            admission_subtree = git_optional(
+                source, "rev-parse", f"{admission}:{candidate_path}"
+            )
+            imported_candidate_path = f"ai-integrated/{candidate_path}"
+            imported_subtree = git_optional(
+                source,
+                "rev-parse",
+                f"{registry_import_commit}:{imported_candidate_path}",
+            )
+            head_subtree = git_optional(
+                source, "rev-parse", f"HEAD:{imported_candidate_path}"
+            )
+            if (
+                candidate_subtree != expected_subtree
+                or admission_subtree != expected_subtree
+                or imported_subtree != expected_subtree
+                or head_subtree != expected_subtree
+            ):
+                raise RuntimeError(
+                    f"candidate subtree binding mismatch: {overlay.get('id')!r}"
+                )
+
+            manifest_blobs = (
+                git_optional(source, "rev-parse", f"{candidate}:{manifest_path}"),
+                git_optional(source, "rev-parse", f"{admission}:{manifest_path}"),
+                git_optional(
+                    source,
+                    "rev-parse",
+                    f"{registry_import_commit}:{imported_candidate_path}/candidate.manifest.json",
+                ),
+                git_optional(
+                    source,
+                    "rev-parse",
+                    f"HEAD:{imported_candidate_path}/candidate.manifest.json",
+                ),
+            )
+            if (
+                manifest_blobs[0] is None
+                or len(set(manifest_blobs)) != 1
+                or git_blob_sha256(source, manifest_blobs[0])
+                != overlay["manifest_sha256"].upper()
+            ):
+                raise RuntimeError(
+                    f"candidate manifest binding mismatch: {overlay.get('id')!r}"
+                )
+            manifest_text = git_optional(source, "show", f"{candidate}:{manifest_path}")
+            try:
+                manifest = json.loads(manifest_text) if manifest_text is not None else None
+            except json.JSONDecodeError as exc:
+                raise RuntimeError(
+                    f"invalid candidate manifest for {overlay.get('id')!r}: {exc}"
+                ) from exc
+            if (
+                not isinstance(manifest, dict)
+                or manifest.get("candidate_id") != overlay.get("id")
+                or manifest.get("namespace") != namespace
+            ):
+                raise RuntimeError(
+                    f"candidate manifest identity mismatch: {overlay.get('id')!r}"
+                )
+            raw_builds = manifest.get("builds")
+            if not isinstance(raw_builds, list):
+                raise RuntimeError(
+                    f"candidate manifest lacks build hashes: {overlay.get('id')!r}"
+                )
+            manifest_builds: dict[str, str] = {}
+            for build in raw_builds:
+                if not isinstance(build, dict):
+                    raise RuntimeError("candidate manifest contains an invalid build entry")
+                build_path = require_safe_posix_path(
+                    build.get("path"), "candidate manifest build path"
+                )
+                build_sha = build.get("sha256")
+                if (
+                    not isinstance(build_sha, str)
+                    or not SHA256_PATTERN.fullmatch(build_sha)
+                    or build_path in manifest_builds
+                ):
+                    raise RuntimeError(
+                        f"invalid candidate build hash: {overlay.get('id')!r}"
+                    )
+                manifest_builds[build_path] = build_sha.upper()
+
+            payload_relative = overlay.get("payload_path")
+            if payload_relative is None:
+                payload_matches = [
+                    path
+                    for path, digest in manifest_builds.items()
+                    if path.startswith("payload/")
+                    and digest == overlay["payload_sha256"].upper()
+                ]
+                if len(payload_matches) != 1:
+                    raise RuntimeError(
+                        f"could not uniquely identify candidate payload: {overlay.get('id')!r}"
+                    )
+                payload_relative = payload_matches[0]
+            payload_relative = require_safe_posix_path(
+                payload_relative, "candidate payload path"
+            )
+            if (
+                not payload_relative.startswith("payload/")
+                or manifest_builds.get(payload_relative)
+                != overlay["payload_sha256"].upper()
+            ):
+                raise RuntimeError(
+                    f"candidate payload manifest binding mismatch: {overlay.get('id')!r}"
+                )
+
+            review_relative = overlay.get("review_receipt_path")
+            if review_relative is None:
+                review_relative = entry.get("review_receipt")
+            if isinstance(review_relative, str) and review_relative.startswith(
+                candidate_path + "/"
+            ):
+                review_relative = review_relative[len(candidate_path) + 1 :]
+            review_relative = require_safe_posix_path(
+                review_relative, "candidate review receipt path"
+            )
+            if manifest_builds.get(review_relative) != overlay[
+                "review_receipt_sha256"
+            ].upper():
+                raise RuntimeError(
+                    f"candidate review receipt manifest binding mismatch: {overlay.get('id')!r}"
+                )
+
+            composition_relative = require_safe_posix_path(
+                overlay.get("composition_path"), "candidate composition path"
+            )
+            if (
+                composition_relative != "composition.jsonl"
+                or manifest_builds.get(composition_relative)
+                != overlay["composition_sha256"].upper()
+            ):
+                raise RuntimeError(
+                    f"candidate composition manifest binding mismatch: {overlay.get('id')!r}"
+                )
+
+            for relative, expected_sha, label in (
+                (payload_relative, overlay["payload_sha256"], "payload"),
+                (
+                    composition_relative,
+                    overlay["composition_sha256"],
+                    "composition contract",
+                ),
+                (
+                    review_relative,
+                    overlay["review_receipt_sha256"],
+                    "review receipt",
+                ),
+            ):
+                candidate_file = f"{candidate_path}/{relative}"
+                imported_file = f"{imported_candidate_path}/{relative}"
+                blobs = (
+                    git_optional(source, "rev-parse", f"{candidate}:{candidate_file}"),
+                    git_optional(source, "rev-parse", f"{admission}:{candidate_file}"),
+                    git_optional(
+                        source,
+                        "rev-parse",
+                        f"{registry_import_commit}:{imported_file}",
+                    ),
+                    git_optional(source, "rev-parse", f"HEAD:{imported_file}"),
+                )
+                if (
+                    blobs[0] is None
+                    or len(set(blobs)) != 1
+                    or git_blob_sha256(source, blobs[0]) != expected_sha.upper()
+                ):
+                    raise RuntimeError(
+                        f"candidate {label} binding mismatch: {overlay.get('id')!r}"
+                    )
+
+            composition_text = git_optional(
+                source,
+                "show",
+                f"{candidate}:{candidate_path}/{composition_relative}",
+            )
+            try:
+                composition_rows = [
+                    json.loads(line)
+                    for line in (composition_text or "").splitlines()
+                    if line.strip()
+                ]
+            except json.JSONDecodeError as exc:
+                raise RuntimeError(
+                    f"invalid registered-insertion contract: {exc}"
+                ) from exc
+            if (
+                len(composition_rows) != operation_count
+                or operation_count != 1
+                or not isinstance(composition_rows[0], dict)
+                or composition_rows[0].get("schema")
+                != "mathematics-commons-stacks-composition-operation/v1"
+                or composition_rows[0].get("operation") != "insert_bytes"
+                or composition_rows[0].get("mode") != "insertion_only"
+            ):
+                raise RuntimeError(
+                    f"invalid registered-insertion operation inventory: {overlay.get('id')!r}"
+                )
+
+            lease_id = manifest.get("lease_id")
+            matching_lease_events = [
+                event
+                for event in lease_events
+                if isinstance(event, dict)
+                and event.get("lease_id") == lease_id
+                and event.get("namespace") == namespace
+            ]
+            if (
+                not isinstance(lease_id, str)
+                or not lease_id
+                or len(matching_lease_events) != 2
+                or matching_lease_events[-1].get("event") != "released"
+                or matching_lease_events[-1].get("state") != "released"
+                or matching_lease_events[-1].get("candidate_path") != candidate_path
+            ):
+                raise RuntimeError(
+                    f"candidate lease is not released at the registry cutoff: {overlay.get('id')!r}"
+                )
+            issued_event, released_event = matching_lease_events
+            if (
+                issued_event.get("event") != "issued"
+                or issued_event.get("state") != "active"
+                or released_event.get("supersedes_event_id")
+                != issued_event.get("event_id")
+                or released_event not in lease_events[len(previous_lease_events) :]
+                or any(
+                    event.get(key) != expected
+                    for event in (issued_event, released_event)
+                    for key, expected in (
+                        ("lease_id", lease_id),
+                        ("namespace", namespace),
+                        ("candidate_path", candidate_path),
+                        ("writer_task", manifest.get("writer_task")),
+                        ("upstream_commit", authority_commit),
+                        ("upstream_tree", authority_tree),
+                        ("writer_contract", "candidates/CONTRACT.md"),
+                    )
+                )
+                or entry.get("writer") != manifest.get("writer_task")
+                or entry.get("source_commit") != authority_commit
+                or entry.get("source_tree") != authority_tree
+            ):
+                raise RuntimeError(
+                    f"candidate lease lifecycle or authority join mismatch: {overlay.get('id')!r}"
+                )
+            expected_admission_lease_events.append(released_event)
+            normalized_overlay.update(
+                {
+                    "candidate_tree": git(source, "rev-parse", f"{candidate}^{{tree}}"),
+                    "candidate_subtree": expected_subtree,
+                    "payload_path": payload_relative,
+                    "review_receipt_path": review_relative,
+                    "lease_event_id": matching_lease_events[-1].get("event_id"),
+                }
             )
         admission_registry = git_optional(
             source, "show", f"{admission}:registry/overlays.json"
@@ -692,17 +1175,39 @@ def load_composition_receipt(
         )
         if (
             not isinstance(admission_entries, list)
-            or not admission_entries
-            or not isinstance(admission_entries[-1], dict)
-            or admission_entries[-1].get("id") != overlay.get("id")
+            or admission_entries != expected_admission_entries + [entry]
         ):
             raise RuntimeError(
-                f"admission commit does not close overlay {overlay.get('id')!r}"
+                f"admission commit is not an exact one-entry append for {overlay.get('id')!r}"
             )
+        expected_admission_entries.append(entry)
+        if is_v4:
+            admission_lease_text = git_optional(
+                source, "show", f"{admission}:registry/leases.json"
+            )
+            try:
+                admission_lease_registry = (
+                    json.loads(admission_lease_text)
+                    if admission_lease_text is not None
+                    else None
+                )
+            except json.JSONDecodeError as exc:
+                raise RuntimeError(
+                    f"invalid admission lease registry for {overlay.get('id')!r}: {exc}"
+                ) from exc
+            admission_lease_events = (
+                admission_lease_registry.get("events")
+                if isinstance(admission_lease_registry, dict)
+                else None
+            )
+            if admission_lease_events != expected_admission_lease_events:
+                raise RuntimeError(
+                    f"admission lease registry is not an exact release append for {overlay.get('id')!r}"
+                )
         expected_registry_parent = admission
         candidate_commits.append(candidate)
         admission_commits.append(admission)
-        normalized_new_overlays.append(dict(overlay))
+        normalized_new_overlays.append(normalized_overlay)
     if new_operation_total != composition.get("new_operations"):
         raise RuntimeError("new-overlay operation total does not match composition receipt")
     if registry_suffix[-1].get("id") != registry.get("last_admitted_overlay"):
@@ -719,21 +1224,89 @@ def load_composition_receipt(
         or not projection_verifier.get("command")
     ):
         raise RuntimeError("composition receipt lacks a passing projection-verifier binding")
+    verifier_reports: dict[str, dict[str, object]] = {}
+    if is_v4:
+        insertion_arguments = (
+            "--overlay-id",
+            str(new_overlays[0].get("id")),
+            "--base-revision",
+            registry_import_commit,
+            "--check-revision",
+            composition_source_commit,
+        )
+        insertion_report = run_bound_verifier(
+            source,
+            projection_verifier,
+            "tools/compose_registered_insertion.py",
+            insertion_arguments,
+            "unofficial-ai-integrated-stacks-registered-insertion-composition/v1",
+        )
+        canonical = insertion_report.get("canonical_composition")
+        affected = composition.get("affected_sources")
+        derived_evidence = (
+            affected.get("derived.tex") if isinstance(affected, dict) else None
+        )
+        if (
+            insertion_report.get("overlay_id") != new_overlays[0].get("id")
+            or insertion_report.get("base_revision") != registry_import_commit
+            or insertion_report.get("check_revision") != composition_source_commit
+            or insertion_report.get("frozen_contract")
+            != composition.get("frozen_contract")
+            or not isinstance(canonical, dict)
+            or not isinstance(derived_evidence, dict)
+            or canonical.get("composed_bytes") != derived_evidence.get("composed_bytes")
+            or canonical.get("composed_sha256") != derived_evidence.get("composed_sha256")
+            or canonical.get("composed_blob") != derived_evidence.get("composed_git_blob")
+            or canonical.get("context_sha256") != derived_evidence.get("context_sha256")
+            or canonical.get("rebased_byte_offset")
+            != derived_evidence.get("rebased_byte_offset")
+            or canonical.get("prefix_unchanged") is not True
+            or canonical.get("suffix_unchanged") is not True
+            or canonical.get("payload_occurrences_after") != 1
+            or canonical.get("label_occurrences_after") != 1
+        ):
+            raise RuntimeError("registered-insertion verifier report does not close composition")
+        errata_arguments = (
+            "--existing-rounds",
+            "18",
+            "19",
+            "--target-rounds",
+            "18",
+            "19",
+            "20",
+            "21",
+            "--base-revision",
+            "e3b28d7d7068eb45d3348a57e201c49044826e86",
+            "--check-revision",
+            "ef467614041d569e56a6c1758b8fe74b51d99f4a",
+        )
+        errata_report = run_bound_verifier(
+            source,
+            receipt.get("errata_projection_verifier"),
+            "tools/compose_overlay_projection.py",
+            errata_arguments,
+            "unofficial-ai-integrated-stacks-overlay-composition/v1",
+        )
+        if (
+            errata_report.get("base_revision") != errata_arguments[-3]
+            or errata_report.get("check_revision") != errata_arguments[-1]
+            or errata_report.get("existing_rounds") != [18, 19]
+            or errata_report.get("target_rounds") != [18, 19, 20, 21]
+            or errata_report.get("operations") != 120
+            or errata_report.get("new_operations") != 43
+        ):
+            raise RuntimeError("historical errata verifier report mismatch")
+        verifier_reports = {
+            "registered_insertion": insertion_report,
+            "historical_errata": errata_report,
+        }
 
     required_stems = validate_stems(
         receipt.get("required_build_stems"), "required_build_stems"
     )
-    missing_profile = [stem for stem in DEFAULT_STEMS if stem not in required_stems]
-    unexpected_profile = [stem for stem in required_stems if stem not in DEFAULT_STEMS]
-    if missing_profile or unexpected_profile:
-        details: list[str] = []
-        if missing_profile:
-            details.append("missing: " + ", ".join(missing_profile))
-        if unexpected_profile:
-            details.append("unexpected: " + ", ".join(unexpected_profile))
+    if required_stems != DEFAULT_STEMS:
         raise RuntimeError(
-            "composition receipt does not exactly match the full build profile; "
-            + "; ".join(details)
+            "composition receipt does not exactly match the ordered full build profile"
         )
 
     affected_sources = composition.get("affected_sources")
@@ -845,7 +1418,7 @@ def load_composition_receipt(
         raise RuntimeError("required_build_stems omits an affected source stem")
 
     binding: dict[str, object] = {
-        "schema": COMPOSITION_SCHEMA,
+        "schema": composition_schema,
         "receipt": logical_path,
         # Bind canonical committed bytes rather than platform-dependent checkout
         # newlines. The clean-path check above proves the parsed worktree copy is
@@ -881,7 +1454,16 @@ def load_composition_receipt(
         "required_build_stems": list(required_stems),
         "affected_source_stems": affected_stems,
         "affected_source_identities": affected_sources,
+        "verifier_reports": verifier_reports,
     }
+    if is_v4:
+        binding.update(
+            {
+                "registry_leases_path": leases_relative,
+                "registry_leases_git_blob": leases_blob,
+                "registry_leases_sha256": leases_sha,
+            }
+        )
     return binding, required_stems, tuple(affected_stems)
 
 
@@ -889,8 +1471,8 @@ def scan_tex_diagnostics(
     log_path: Path,
     blg_path: Path,
     stem: str,
-    external_labels: set[str],
-) -> dict[str, int]:
+    external_labels: dict[str, str],
+) -> tuple[dict[str, int], dict[str, object]]:
     if not log_path.is_file():
         raise RuntimeError(f"final TeX log is missing: {log_path.name}")
     text = log_path.read_text(encoding="utf-8", errors="replace")
@@ -903,7 +1485,7 @@ def scan_tex_diagnostics(
     )
     reference_warning = re.compile(
         r"LaTeX Warning:\s*(?:Hyper\s+)?Reference\s+`([^']+)'"
-        r"(?:(?!LaTeX Warning:).)*?\bundefined\b",
+        r"(?:(?!LaTeX Warning:).)*?u\s*n\s*d\s*e\s*f\s*i\s*n\s*e\s*d",
         re.IGNORECASE | re.DOTALL,
     )
     citation_patterns = (
@@ -928,10 +1510,24 @@ def scan_tex_diagnostics(
         re.sub(r"\s+", "", match.group(1))
         for match in reference_warning.finditer(text)
     ]
-    expected_external = sum(
-        label in external_labels and not label.startswith(f"{stem}-")
-        for label in reference_labels
+    reference_warning_starts = len(
+        re.findall(
+            r"LaTeX Warning:\s*(?:Hyper\s+)?Reference\s+`",
+            text,
+            re.IGNORECASE,
+        )
     )
+    if reference_warning_starts != len(reference_labels):
+        raise RuntimeError(
+            f"could not classify every undefined-reference warning in {log_path.name}: "
+            f"starts={reference_warning_starts}, parsed={len(reference_labels)}"
+        )
+    external_rows = [
+        (label, external_labels[label])
+        for label in reference_labels
+        if label in external_labels and external_labels[label] != stem
+    ]
+    expected_external = len(external_rows)
     unresolved_references = len(reference_labels) - expected_external
     reference_summaries = len(
         re.findall(
@@ -940,6 +1536,10 @@ def scan_tex_diagnostics(
             re.IGNORECASE,
         )
     )
+    if reference_summaries > 1:
+        raise RuntimeError(
+            f"unexpected repeated undefined-reference summaries in {log_path.name}"
+        )
     if reference_summaries and not reference_labels:
         unresolved_references += reference_summaries
 
@@ -968,16 +1568,26 @@ def scan_tex_diagnostics(
             for pattern in destination_patterns
         ),
     }
-    if blg_path.is_file():
-        blg = blg_path.read_text(encoding="utf-8", errors="replace")
-        diagnostics["undefined_citation_markers"] += len(
-            re.findall(
-                r"Warning--I didn't find a database entry for",
-                blg,
-                re.IGNORECASE,
-            )
+    if not blg_path.is_file():
+        raise RuntimeError(f"final BibTeX log is missing: {blg_path.name}")
+    blg = blg_path.read_text(encoding="utf-8", errors="replace")
+    diagnostics["undefined_citation_markers"] += len(
+        re.findall(
+            r"Warning--I didn't find a database entry for",
+            blg,
+            re.IGNORECASE,
         )
-    return diagnostics
+    )
+    external_lines = [f"{stem}|{label}|{provider}" for label, provider in external_rows]
+    external_inventory = {
+        "count": len(external_lines),
+        "sha256": hashlib.sha256(
+            (("\n".join(sorted(external_lines))) + ("\n" if external_lines else "")).encode(
+                "utf-8"
+            )
+        ).hexdigest().upper(),
+    }
+    return diagnostics, external_inventory
 
 
 def main() -> int:
@@ -1015,17 +1625,28 @@ def main() -> int:
     composition_binding, required_stems, affected_stems = load_composition_receipt(
         source, args.composition_receipt
     )
-    reference_labels = external_reference_labels(source)
     output = args.output
     if not output.is_absolute():
         output = source / output
     output = output.resolve()
+    try:
+        output_relative = output.relative_to(source).as_posix()
+    except ValueError as exc:
+        raise RuntimeError("build receipt output must be inside the source worktree") from exc
+    if (
+        Path(output_relative).parent.as_posix() != "validation"
+        or output.suffix.lower() != ".json"
+    ):
+        raise RuntimeError("build receipt output must be a JSON file directly under validation/")
+    if git_optional(source, "ls-files", "--error-unmatch", "--", output_relative) is not None:
+        raise RuntimeError(f"refusing to overwrite tracked build receipt: {output_relative}")
     if args.stems:
         stems = validate_stems(args.stems, "explicit stems")
         selection_mode = "explicit"
     else:
         stems = required_stems
         selection_mode = "composition_receipt"
+    reference_labels = external_reference_labels(source)
     missing_affected = [stem for stem in affected_stems if stem not in stems]
     if missing_affected:
         raise RuntimeError(
@@ -1053,6 +1674,17 @@ def main() -> int:
             artifact = source / f"{stem}{suffix}"
             if artifact.is_file():
                 artifact.unlink()
+    stale_generated = [
+        f"{stem}{suffix}"
+        for stem in stems
+        for suffix in GENERATED_SUFFIXES
+        if (source / f"{stem}{suffix}").exists()
+    ]
+    if stale_generated:
+        raise RuntimeError(
+            "generated TeX inputs survived the clean-build boundary: "
+            + ", ".join(stale_generated[:8])
+        )
 
     latex = [
         "pdflatex",
@@ -1102,7 +1734,7 @@ def main() -> int:
         match = pages_pattern.search(info)
         if not match or int(match.group(1)) < 1:
             raise RuntimeError(f"pdfinfo did not report a positive page count: {pdf}")
-        diagnostics = scan_tex_diagnostics(
+        diagnostics, external_inventory = scan_tex_diagnostics(
             source / f"{stem}.log",
             source / f"{stem}.blg",
             stem,
@@ -1117,6 +1749,7 @@ def main() -> int:
                 "bytes": pdf.stat().st_size,
                 "sha256": sha256(pdf),
                 "diagnostics": diagnostics,
+                "external_references": external_inventory,
             }
         )
     failed_diagnostics = {
@@ -1132,6 +1765,20 @@ def main() -> int:
 
     builder_path = "tools/build_fixed_point.py"
     builder_blob = git(source, "rev-parse", f"HEAD:{builder_path}")
+    tuple_lines = [
+        "|".join(
+            (
+                str(artifact["stem"]),
+                str(artifact["pages"]),
+                str(artifact["bytes"]),
+                str(artifact["sha256"]),
+            )
+        )
+        for artifact in sorted(artifacts, key=lambda item: str(item["stem"]))
+    ]
+    artifact_tuple_set_sha256 = hashlib.sha256(
+        (("\n".join(tuple_lines)) + "\n").encode("utf-8")
+    ).hexdigest().upper()
     receipt = {
         "schema": "unofficial-ai-integrated-stacks-fixed-point-build/v1",
         "status": "PASS" if full_profile else "PASS_PARTIAL",
@@ -1165,6 +1812,7 @@ def main() -> int:
             "global_fixed_point_sweep": fixed_sweep,
             "pdfinfo_readable": len(artifacts),
             "diagnostics": diagnostic_totals,
+            "artifact_tuple_set_sha256": artifact_tuple_set_sha256,
             "worktree_kind": kind,
             "primary_worktree_override": args.allow_primary_worktree,
         },

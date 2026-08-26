@@ -11,6 +11,7 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - name: Check out complete history
         uses: actions/checkout@v4
@@ -23,4 +24,12 @@ jobs:
           python-version: "3.12"
 
       - name: Validate unified source, registry, and documentation
-        run: python tools/validate_unified_repository.py
+        shell: bash
+        run: |
+          if test "${GITHUB_EVENT_NAME}" = push \
+            && test "${GITHUB_REF}" = refs/heads/main \
+            && test -f validation/stacks-verdier-a04446e-1-2-13-r1-release-2026-08-26.json; then
+            python tools/validate_unified_repository.py
+          else
+            python tools/validate_unified_repository.py --pre-publication
+          fi
