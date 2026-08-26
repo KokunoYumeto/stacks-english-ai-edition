@@ -35,5 +35,6 @@ full receipt is 19,440 bytes with SHA-256
 The public [`reproducibility-r21.json`](reproducibility-r21.json) summary is
 5,977 bytes with SHA-256
 `A28E2D9DF4E333B052FBD1EA884F7585A9D07423B3EB98004B511C2EC8C75687`.
-No R21 publication or anonymous public readback is claimed by the build,
-visual, or reproducibility evidence alone.
+The [publication receipt](errata-r18-r19-release-2026-08-25.json) binds these
+gates to public content head `780f48fafbb46dc1057bf8fdcd339693fb44d6bf` and
+records anonymous readback of the decisive public inventory.

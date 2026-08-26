@@ -58,7 +58,9 @@ bytes with SHA-256
 The public [reproducibility summary](validation/reproducibility-r21.json) is
 5,977 bytes with SHA-256
 `A28E2D9DF4E333B052FBD1EA884F7585A9D07423B3EB98004B511C2EC8C75687`.
-These results do not claim R21 publication or anonymous public readback.
+The validated R21 content fixed point was then fast-forwarded to public `main`
+at `780f48fafbb46dc1057bf8fdcd339693fb44d6bf`, and anonymous byte readback of
+the decisive public inventory matched the committed identities exactly.
 
 The [source composition receipt](validation/composition-current.json) records
 the frozen external cutoff
@@ -70,8 +72,8 @@ for `derived.tex` and
 `650ABA33A184CE9945DD70C04D83A3A4CBD6E540426B171E828336855DC97A0B`
 for `simplicial.tex`. The automation-stable
 [publication receipt path](validation/errata-r18-r19-release-2026-08-25.json)
-does not constitute an R21 publication claim until its exact public readback
-and workflow fields are complete.
+records the R21 content head, exact public readback inventory, and the
+successful metadata-head workflow used by the fail-closed validator.
 
 ## Source-specific deterministic evidence
 

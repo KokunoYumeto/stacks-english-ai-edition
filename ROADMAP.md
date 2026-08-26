@@ -27,9 +27,10 @@ serious diagnostics, and visual QA across all 202 review pages plus the
 affected-page superset. The
 [independent linked-worktree rebuild gate](validation/reproducibility-r21.json) is **PASS**:
 both builds use the same commit, tree, builder, and sweep, and all 22 artifact
-identity tuples are exactly equal. Publication and anonymous public readback
-are not yet claimed. Stable receipt filenames remain automation interfaces;
-their JSON scope and exact source identities are authoritative.
+identity tuples are exactly equal. The content fixed point is public at
+`780f48fafbb46dc1057bf8fdcd339693fb44d6bf`, and anonymous byte readback is
+**PASS**. Stable receipt filenames remain automation interfaces; their JSON
+scope and exact source identities are authoritative.
 
 ## Recommended order
 

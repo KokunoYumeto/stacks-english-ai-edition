@@ -79,8 +79,9 @@ The verified R21 build is separately bound to tooling/build source
 fatal or listed serious diagnostics. Visual QA passed all 202 review pages and
 the affected-page superset. A separate linked-worktree reproduction also passed:
 both builds use the same commit, tree, builder, and sweep, and all 22 artifact
-identity tuples are exactly equal. This remains build provenance, not a
-publication or public-readback claim.
+identity tuples are exactly equal. The resulting R21 content fixed point is
+public at `780f48fafbb46dc1057bf8fdcd339693fb44d6bf`; anonymous readback matched
+the recorded public bytes and hashes.
 
 ## Branch preservation
 

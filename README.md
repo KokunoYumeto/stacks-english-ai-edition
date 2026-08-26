@@ -20,7 +20,7 @@ machine-readable validation evidence.
 [Validation](VALIDATION.md) ·
 [Current fixed-point build receipt](validation/unified-fixed-point-2026-08-25-r19.json) ·
 [Visual QA: PASS](validation/visual-qa-r21.json) ·
-[Publication receipt (pending)](validation/errata-r18-r19-release-2026-08-25.json) ·
+[Publication receipt: PASS](validation/errata-r18-r19-release-2026-08-25.json) ·
 [Independent reproducibility: PASS](validation/reproducibility-r21.json) ·
 [R17 historical receipt](validation/unification-release-2026-08-25.json) ·
 [Roadmap](ROADMAP.md) ·
@@ -102,7 +102,9 @@ undefined-citation, multiply-defined, rerun-required, or destination-warning
 diagnostics. Visual QA passed for all 202 review pages and the affected-page
 superset. A separate linked-worktree rebuild also passed from the same commit,
 tree, builder, and sweep; all 22 artifact identity tuples are exactly equal
-between the two builds. No R21 publication or public readback is claimed yet.
+between the two builds. The R21 content fixed point is published at
+`780f48fafbb46dc1057bf8fdcd339693fb44d6bf`, and its decisive public bytes were
+read back anonymously and matched exactly.
 
 The receipt filenames are stable automation interfaces retained for
 compatibility; the JSON schema, source identities, and recorded scope are

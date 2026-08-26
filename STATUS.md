@@ -67,7 +67,9 @@ in the [current fixed-point build receipt](validation/unified-fixed-point-2026-0
 
 The [independent linked-worktree rebuild gate](validation/reproducibility-r21.json) is
 **PASS**. Both builds use the same commit, tree, builder, and fixed-point sweep;
-all 22 `{stem, pages, bytes, sha256}` artifact tuples are exactly equal. R21
-publication and anonymous public readback have not yet been claimed. Stable
-receipt filenames are retained for automation compatibility; their JSON scope
-and source identities are authoritative.
+all 22 `{stem, pages, bytes, sha256}` artifact tuples are exactly equal. The R21
+content fixed point is public at `780f48fafbb46dc1057bf8fdcd339693fb44d6bf`;
+anonymous byte readback is **PASS** for the sources, registry, receipts,
+documentation, tooling, and R20/R21 manifests. Stable receipt filenames are
+retained for automation compatibility; their JSON scope and source identities
+are authoritative.

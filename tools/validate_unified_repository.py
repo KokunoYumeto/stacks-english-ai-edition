@@ -2099,6 +2099,50 @@ def main(argv: list[str] | None = None) -> int:
             "global_fixed_point_sweep"
         ):
             errors.append("R18-R19 release fixed-point sweep mismatch")
+        release_visual = release_receipt.get("visual_qa")
+        expected_release_visual = {
+            "status": "PASS",
+            "receipt_path": VISUAL_QA_RECEIPT.as_posix(),
+            "receipt_bytes": len(visual_qa_bytes or b""),
+            "receipt_sha256": sha256_bytes(visual_qa_bytes or b""),
+            "receipt_git_blob": git_blob_sha1(visual_qa_bytes or b""),
+            "full_page_reviews": visual_scope.get(
+                "full_page_contact_sheet_review_count"
+            ),
+            "high_resolution_locus_pages": visual_scope.get(
+                "high_resolution_locus_page_count"
+            ),
+            "defects": sum(
+                int(visual_checks.get(key, 0))
+                for key in (
+                    "clipped_content",
+                    "overlapping_content",
+                    "blank_pages",
+                    "corrupted_pages",
+                    "missing_or_unreadable_glyphs",
+                    "broken_diagrams",
+                )
+            ),
+        }
+        if release_visual != expected_release_visual:
+            errors.append("R18-R19 release visual-QA binding mismatch")
+        release_reproduction = release_receipt.get("reproducibility")
+        expected_release_reproduction = {
+            "status": "PASS",
+            "summary_path": REPRODUCIBILITY_RECEIPT.as_posix(),
+            "summary_bytes": len(reproducibility_bytes or b""),
+            "summary_sha256": sha256_bytes(reproducibility_bytes or b""),
+            "summary_git_blob": git_blob_sha1(reproducibility_bytes or b""),
+            "second_receipt_path": SECOND_REPRODUCIBILITY_RECEIPT.as_posix(),
+            "second_receipt_bytes": len(second_build_bytes or b""),
+            "second_receipt_sha256": sha256_bytes(second_build_bytes or b""),
+            "second_receipt_git_blob": git_blob_sha1(second_build_bytes or b""),
+            "matched_artifacts": len(artifact_identities),
+            "different_artifacts": 0,
+            "artifact_tuple_set_sha256": tuple_set_sha,
+        }
+        if release_reproduction != expected_release_reproduction:
+            errors.append("R18-R19 release reproducibility binding mismatch")
         workflow = release_receipt.get("workflow")
         if (
             not isinstance(workflow, dict)
