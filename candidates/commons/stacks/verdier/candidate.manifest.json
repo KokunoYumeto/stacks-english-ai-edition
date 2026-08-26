@@ -15,7 +15,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "00B1AAE80C49E0EA0C8349B7AF5BD9D9039ED0BF55A0E78FD50FE01A79F130F1"
+      "sha256": "D71E308FA53B38FF165F1BE5A1608880BAE9FD1410A00378788C0722BF5F9F91"
     },
     {
       "path": "build-manifest.py",
@@ -63,7 +63,7 @@
     },
     {
       "path": "candidate.config.json",
-      "sha256": "A05F2B64ADF714C39677AEF575DF741409E70CE5BEE6385DD933C68E8699BAC9"
+      "sha256": "7929643FBBEB6DB78A1CFCC7E10937EC333712ADCEDE685242B43561C64C7942"
     },
     {
       "path": "check-manifest.py",
@@ -78,6 +78,10 @@
       "sha256": "FCF51C107444D5ED31C32ABC73F19ECC05AAFA5C3FD078CF29B5A743C2A414B1"
     },
     {
+      "path": "replay/independent-review.json",
+      "sha256": "5FE1320F22A25385EB548B4AD6223B1F1C47B77E0A0D275E76EA2E38ABB4B359"
+    },
+    {
       "path": "verify.py",
       "sha256": "9C694403E18CA89E1CDFAEBAAF863FE86AC68D9B15036892ABF2103964329449"
     }
@@ -85,21 +89,21 @@
   "candidate_id": "stacks-verdier-a04446e-1-2-13-r1",
   "decision_ledger": {
     "path": "decisions.jsonl",
-    "sha256": "952389B8D015C1C26AA027DD9CBD68F23FD5B32F8F9537D462B2F48FA674C25F"
+    "sha256": "4C54CC173C981D1825C7740C10FA8B243BADAEC23322044112330EDB0EC550E7"
   },
   "formula_diagram_inventory": {
     "path": "formula-diagram-inventory.json",
-    "sha256": "616A141631788FBCD4BEFD4897403507FA2B0E07EBE06DBC3E284B8F78D7031D"
+    "sha256": "A6AF6528CEBCAF5BDBFB2F50499336BDE855AC8DE11828776503F45E89388CA5"
   },
-  "generated_at_utc": "2026-08-26T00:58:30Z",
-  "independent_replay": "not_performed",
+  "generated_at_utc": "2026-08-26T01:25:26Z",
+  "independent_replay": "passed",
   "lease_id": "stacks-lease-000026-verdier",
   "namespace": "commons/stacks/verdier",
   "rejection_ledger": {
     "path": "rejections.jsonl",
-    "sha256": "5DAB8FBA4C97994F12040FDFD2A8BE2A1413B9B6C6B9F44B0E5B96C8F91A4678"
+    "sha256": "FB82E6963A55090D2F1717C128551F06B8A29D03014A80E6FFD92356FE97B5B0"
   },
-  "review_state": "partial",
+  "review_state": "performed",
   "rights_state": "Historical-source evidence is limited to locators, hashes, and independent paraphrase. No verbatim source prose is included, no source-work license is asserted or granted by this candidate, and no upstream content is relicensed. The proposed Stacks payload is independently written, subject to GFDL compatibility at composition, and is not reviewed, approved, affiliated with, or endorsed by the Stacks Project.",
   "schema": "mathematics-commons-stacks-candidate-manifest/v1",
   "source_authorities": [
@@ -120,7 +124,7 @@
   },
   "stable_unit_manifest": {
     "path": "stable-units.json",
-    "sha256": "CBFA2FA535F49DDE659CCDE5F65DFCA6755B136932C6250548FDDC421DAE6255"
+    "sha256": "3A3EABF273D31568FA90A1396F396FF27473E86CF93266D1136C2DCA30835103"
   },
   "stop_conditions": [
     "Do not mutate the literal Stacks Project mirror or the pinned composition-base preimage.",
@@ -128,9 +132,7 @@
     "Do not claim an official Stacks tag, upstream review, affiliation, approval, or endorsement for the proposed lemma.",
     "Do not admit or compose this candidate except in a separate hash-bound transition after deterministic build, visual QA, and independent replay gates."
   ],
-  "unresolved_defects": [
-    "Independent replay has not passed; this manifest records candidate closure, not overlay admission."
-  ],
+  "unresolved_defects": [],
   "upstream": {
     "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
     "lock": "upstream/stacks.lock.json",

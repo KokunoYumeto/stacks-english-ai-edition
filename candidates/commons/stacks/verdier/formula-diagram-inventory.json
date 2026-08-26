@@ -48,6 +48,17 @@
       "B1BC9C107B8A5A8562856751CEEBE570CE6AB93CAE5BF03431C93BE0F6648F5E"
     ]
   },
+  "independent_review_evidence": {
+    "path": "replay/independent-review.json",
+    "bytes": 14754,
+    "sha256": "5FE1320F22A25385EB548B4AD6223B1F1C47B77E0A0D275E76EA2E38ABB4B359",
+    "status": "PASS",
+    "reviewed_at_utc": "2026-08-26T01:25:26Z",
+    "mathematical_subreview": "PASS",
+    "rendered_pdf_inspection": "PASS",
+    "source_closure": "PASS",
+    "unresolved_defects": 0
+  },
   "unit_count": 12,
   "classified_unit_count": 12,
   "formula_units": [
@@ -149,8 +160,8 @@
   "payload_comparison_state": "fixed_point_build_validation_passed",
   "render_state": "performed_passed",
   "visual_qa_state": "visual_qa_passed",
-  "independent_review_state": "not_performed",
-  "independent_replay": "not_performed",
+  "independent_review_state": "performed",
+  "independent_replay": "passed",
   "admission_state": "not_admitted",
   "unmapped_formula_or_diagram_changes": 0
 }

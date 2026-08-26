@@ -60,9 +60,15 @@ EDB4BED1F5A166B34562B63D44EEEE70C3F421AAFDD91F31C142E1B0EEAEF96A.
 Visual QA passes on the complete printed Lemma 4.15 on PDF page 10 and its two
 neighbor pages, with no reported issue.
 
-The candidate has not been independently reviewed, independently replayed, or
-admitted. It asserts no official Stacks tag, endorsement, or upstream
-acceptance.
+Independent review and replay now pass. The receipt at
+replay/independent-review.json is 14,754 bytes with SHA-256
+5FE1320F22A25385EB548B4AD6223B1F1C47B77E0A0D275E76EA2E38ABB4B359.
+It independently reconstructs the exact insertion, verifies all twelve source
+units and both existing-tag dispositions, checks the proof and its signs,
+confirms the build and rendered pages, and reports zero unresolved defects.
+
+The candidate remains not admitted. The proposed label is not an official
+Stacks tag; there is no upstream endorsement, review, or acceptance.
 
 ## Files
 
@@ -81,3 +87,5 @@ acceptance.
 - composition.jsonl binds the single insertion-only composition operation.
 - builds/build-receipt.json, builds/validation.json, and builds/visual-qa.json
   bind the successful bounded build, mechanical validation, and visual QA.
+- replay/independent-review.json binds the successful independent mathematical
+  review and byte replay.

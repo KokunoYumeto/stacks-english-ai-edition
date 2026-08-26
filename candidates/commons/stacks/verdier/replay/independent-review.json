@@ -1,0 +1,329 @@
+{
+  "schema": "mathematics-commons-stacks-independent-review/v1",
+  "review_id": "stacks-verdier-a04446e-1-2-13-r1-independent-review-20260826",
+  "candidate_id": "stacks-verdier-a04446e-1-2-13-r1",
+  "status": "PASS",
+  "passed": true,
+  "review_state": "performed",
+  "independent_replay": "passed",
+  "reviewed_at_utc": "2026-08-26T01:25:26Z",
+  "reviewer_role": "independent_replay",
+  "reviewer_separation": {
+    "candidate_owner": false,
+    "admitter": false,
+    "reviewed_inputs_mutated": false,
+    "durable_writes": [
+      "replay/independent-review.json"
+    ],
+    "mathematical_subreview": "PASS",
+    "byte_replay": "performed_independently_by_lead",
+    "second_subreview_not_spawned_reason": "agent thread limit reached on both bounded spawn attempts"
+  },
+  "frozen_candidate": {
+    "repository": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project",
+    "candidate_git_path": "candidates/commons/stacks/verdier",
+    "commit": "99d3bee9f4810ca3130ee74f2272c3f6fa9e0438",
+    "tree": "c775e3833ddcb52a32eb6b9cf5b8648dc1bef519",
+    "manifest": {
+      "git_path": "candidates/commons/stacks/verdier/candidate.manifest.json",
+      "commit": "99d3bee9f4810ca3130ee74f2272c3f6fa9e0438",
+      "bytes": 5460,
+      "sha256": "4A8FEA23CE509DA19C37A54CDC70B29AC1384DEA81D11898745CE5596CFA39F0"
+    },
+    "manifest_references": {
+      "count": 26,
+      "verified_from_git_object_bytes": 26,
+      "hash_mismatches": 0
+    }
+  },
+  "authority": {
+    "work": "Verdier, Des categories derivees des categories abeliennes, Asterisque 239",
+    "statement": "Chapter II, Proposition 1.2.13",
+    "printed_pages": [
+      104,
+      105
+    ],
+    "physical_pdf_pages": [
+      121,
+      122
+    ],
+    "public_pdf": {
+      "url": "https://www.numdam.org/item/AST_1996__239__R1_0.pdf",
+      "bytes": 19188423,
+      "pages": 270,
+      "sha256": "6214C252BACEBA5584E3C4AEB564C129851941C1A9250BABAB45B79A3939B0AE"
+    },
+    "public_archive": {
+      "record": 21968574,
+      "doi": "10.5281/zenodo.21968574",
+      "concept_doi": "10.5281/zenodo.21792163",
+      "source_zip_url": "https://zenodo.org/api/records/21968574/files/source.zip/content",
+      "source_zip_bytes": 7364069,
+      "source_zip_sha256": "BD2BDA491AC7B757E8A050A2CA9C3B60B0BEC0392588461CCBB2A43945F416B3"
+    },
+    "hash_bound_evidence": [
+      {
+        "logical_path": "sem/final_four_edition_anchor_map.csv",
+        "bytes": 873203,
+        "sha256": "A9AB660EF7E86ADFD5B517F06D9E50AF1E5C6B785F531E2D20746AF0A42D2927"
+      },
+      {
+        "logical_path": "content/en/p121.tex",
+        "bytes": 3489,
+        "sha256": "35A82652EF49FEAFFA94CE931565DF9ED39EB852E0049DB93467FF3137DA0992"
+      },
+      {
+        "logical_path": "content/en/p122.tex",
+        "bytes": 2750,
+        "sha256": "AA1ED92AA4988DBB08A9A5A02E7A1EF62AF7A84ABE97D66B5ADD9794CEA5651D"
+      }
+    ],
+    "anchor_map_sequences": [
+      1144,
+      1145,
+      1146,
+      1147,
+      1148,
+      1149,
+      1150,
+      1151,
+      1152,
+      1153,
+      1154,
+      1155
+    ]
+  },
+  "upstream_and_composition": {
+    "official_stacks": {
+      "repository": "https://github.com/stacks/stacks-project",
+      "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+      "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e"
+    },
+    "composition_base": {
+      "repository": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project",
+      "commit": "6bdfac7e39a8419dd765b1c78e1b10d7310726f0",
+      "tree": "34429e83aee7ef0718ed302ef9639d33767886fa"
+    },
+    "target": {
+      "target_path": "derived.tex",
+      "git_blob": "f5e0e434239906951879544a74315b8d249a8013",
+      "bytes": 449677,
+      "preimage_sha256": "EFDA4CB361DD40909D1991161EAE716E58B6CF9E79380971502E1DA12396D402"
+    },
+    "operation": {
+      "operation_id": "VDR-STK-COMP-0001",
+      "operation": "insert_bytes",
+      "mode": "insertion_only",
+      "byte_offset": 27437,
+      "context_start_byte": 26795,
+      "context_end_byte_exclusive": 27598,
+      "context_bytes": 803,
+      "context_sha256": "C51A1835EF6B490131498A4F71195A75913DCE687C97309351098F98A9CF7ADC",
+      "before_context_bytes": 642,
+      "before_context_sha256": "0808A71340B275E69F5CDAD34E6167A2AB31A19F9956F3724D6650FD0F093A97",
+      "after_context_bytes": 161,
+      "after_context_sha256": "7B3494C96E4F2B03FAD7334805B9235E4D2216523648992047CA5CF697483CFF"
+    },
+    "payload": {
+      "candidate_path": "payload/fragments/derived-functorial-triangles.tex",
+      "bytes": 2339,
+      "sha256": "FCF51C107444D5ED31C32ABC73F19ECC05AAFA5C3FD078CF29B5A743C2A414B1",
+      "encoding": "UTF-8",
+      "line_endings": "LF",
+      "proposed_label": "lemma-functorial-triangles-decomposable"
+    },
+    "reconstructed_postimage": {
+      "bytes": 452016,
+      "sha256": "9DDB56AA316DE622475050F6838D1DF957110021935823B4C9472931F2C0F106",
+      "prefix_unchanged": true,
+      "suffix_unchanged": true,
+      "payload_exact_at_offset": true,
+      "label_occurrences_in_preimage": 0,
+      "label_occurrences_in_payload": 1,
+      "label_occurrences_in_postimage": 1
+    }
+  },
+  "public_readback": [
+    {
+      "artifact": "frozen_candidate_manifest",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/99d3bee9f4810ca3130ee74f2272c3f6fa9e0438/candidates/commons/stacks/verdier/candidate.manifest.json",
+      "bytes": 5460,
+      "sha256": "4A8FEA23CE509DA19C37A54CDC70B29AC1384DEA81D11898745CE5596CFA39F0",
+      "matches_frozen_git_object": true
+    },
+    {
+      "artifact": "payload",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/99d3bee9f4810ca3130ee74f2272c3f6fa9e0438/candidates/commons/stacks/verdier/payload/fragments/derived-functorial-triangles.tex",
+      "bytes": 2339,
+      "sha256": "FCF51C107444D5ED31C32ABC73F19ECC05AAFA5C3FD078CF29B5A743C2A414B1",
+      "matches_frozen_git_object": true
+    },
+    {
+      "artifact": "derived_pdf",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/99d3bee9f4810ca3130ee74f2272c3f6fa9e0438/candidates/commons/stacks/verdier/builds/derived.pdf",
+      "bytes": 1244620,
+      "sha256": "EDB4BED1F5A166B34562B63D44EEEE70C3F421AAFDD91F31C142E1B0EEAEF96A",
+      "matches_frozen_git_object": true
+    }
+  ],
+  "stable_ids": [
+    "verdier:ast239:1.2.13",
+    "verdier:ast239:1.2.13:formula:triangle-assignment",
+    "verdier:ast239:1.2.13:hypothesis:countable-products-or-coproducts",
+    "verdier:ast239:1.2.13:proof:annihilated-morphism",
+    "verdier:ast239:1.2.13:diagram:arrow-square",
+    "verdier:ast239:1.2.13:diagram:triangle-morphism",
+    "verdier:ast239:1.2.13:claim:zero-target-boundary-isomorphism",
+    "verdier:ast239:1.2.13:construction:alpha",
+    "verdier:ast239:1.2.13:diagram:alpha-lift",
+    "verdier:ast239:1.2.13:claim:kernel-section",
+    "verdier:ast239:1.2.13:claim:projector-kernel",
+    "verdier:ast239:1.2.13:conclusion:decomposable"
+  ],
+  "source_closure": {
+    "passed": true,
+    "unit_count": 12,
+    "unique_unit_count": 12,
+    "source_map_order_matches_stable_units": true,
+    "formula_units": 9,
+    "diagram_units": 3,
+    "authored_payload_units": 10,
+    "duplicate_dispositions": [
+      {
+        "stable_id": "verdier:ast239:1.2.13:claim:projector-kernel",
+        "tag": "05QW",
+        "label": "derived-lemma-projectors-have-images-triangulated"
+      },
+      {
+        "stable_id": "verdier:ast239:1.2.13:conclusion:decomposable",
+        "tag": "05QU",
+        "label": "derived-lemma-when-split"
+      }
+    ],
+    "unresolved_source_units": 0
+  },
+  "rendered_pdf_inspection": {
+    "passed": true,
+    "pdf_pages": 130,
+    "target_pdf_page": 10,
+    "printed_lemma_number": "4.15",
+    "pages_inspected": [
+      9,
+      10,
+      11
+    ],
+    "renders": [
+      {
+        "git_path": "candidates/commons/stacks/verdier/builds/visual/derived-009.png",
+        "bytes": 425000,
+        "sha256": "EC01488A483C5F370E5852CFAB05D60DDE02496C03095CBF2723033DBB9915C9"
+      },
+      {
+        "git_path": "candidates/commons/stacks/verdier/builds/visual/derived-010.png",
+        "bytes": 426432,
+        "sha256": "03C0BE53EE7D365AEDCC1E5761E314DA355A10DCE4953BA8C32B1812ECE3B5AB"
+      },
+      {
+        "git_path": "candidates/commons/stacks/verdier/builds/visual/derived-011.png",
+        "bytes": 433929,
+        "sha256": "B1BC9C107B8A5A8562856751CEEBE570CE6AB93CAE5BF03431C93BE0F6648F5E"
+      }
+    ],
+    "target_complete_on_one_page": true,
+    "typography_consistent": true,
+    "equations_and_signs_legible": true,
+    "margins_headers_and_page_numbers_consistent": true,
+    "clipped_content": false,
+    "overlap": false,
+    "broken_glyphs": false,
+    "reported_issues": []
+  },
+  "check_results": [
+    {
+      "id": "instructions_contract_schema_lease",
+      "passed": true,
+      "evidence": "Current and frozen AGENTS.md, candidates/CONTRACT.md, the Draft 2020-12 candidate schema, candidate lease pointer, active lease-event-000047, frozen manifest, upstream lock, and every manifest-referenced file were read from frozen Git object bytes; schema errors were zero."
+    },
+    {
+      "id": "frozen_identity_and_manifest_closure",
+      "passed": true,
+      "evidence": "The candidate commit resolves to tree c775e3833ddcb52a32eb6b9cf5b8648dc1bef519; all 26 manifest references match their declared uppercase SHA-256 values and the frozen manifest is truthful about the pre-review not_performed state."
+    },
+    {
+      "id": "pre_receipt_validators",
+      "passed": true,
+      "evidence": "The frozen check-manifest.py and verify.py both exited zero before this receipt was written; check-manifest reported 26 references and 12 stable units, and verify reported the active lease, 12 source-map rows, one composition row, and zero public-hygiene defects."
+    },
+    {
+      "id": "authority_and_source_scope",
+      "passed": true,
+      "evidence": "The Numdam PDF public bytes match 19,188,423 bytes and SHA-256 6214C252BACEBA5584E3C4AEB564C129851941C1A9250BABAB45B79A3939B0AE; physical pages 121-122 are printed pages 104-105 and contain exactly Proposition II.1.2.13. The three Zenodo source-evidence files match the authority lock."
+    },
+    {
+      "id": "source_closure_and_dispositions",
+      "passed": true,
+      "evidence": "The stable-unit manifest, source map, anchor map, and formula-diagram inventory agree in order on 12 unique units, sequences 1-12 and 1144-1155, with 10 authored units and exactly two duplicate dispositions to Tags 05QW and 05QU."
+    },
+    {
+      "id": "composition_replay",
+      "passed": true,
+      "evidence": "Independent in-memory reconstruction from raw Git blob f5e0e434239906951879544a74315b8d249a8013 plus the frozen payload at byte offset 27437 produced 452,016 bytes and SHA-256 9DDB56AA316DE622475050F6838D1DF957110021935823B4C9472931F2C0F106 with exact prefix and suffix invariance."
+    },
+    {
+      "id": "label_uniqueness",
+      "passed": true,
+      "evidence": "The exact label definition occurs zero times in the composition preimage, once in the payload, and once in the reconstructed postimage; no conflicting label was found in the pinned composition tree."
+    },
+    {
+      "id": "proof_signs_and_exactness",
+      "passed": true,
+      "evidence": "With d_f=-h_f[-1] and s(v)=-c_v[-1] composed with the inverse of h_W[-1], the last triangle square gives q_f(s(v))=v; domains, codomains, shifts, composition order, and both minus signs agree with the Stacks rotation convention."
+    },
+    {
+      "id": "proof_naturality_yoneda",
+      "passed": true,
+      "evidence": "Functoriality of the section on arrow squares gives contravariant naturality in W. Thus e_f=s_f q_f is an idempotent natural endomorphism of Hom(-,Z_f[-1]); Yoneda yields the corresponding idempotent on Z_f[-1], and its split image represents the kernel functor."
+    },
+    {
+      "id": "proof_karoubian_and_terminal_dependency",
+      "passed": true,
+      "evidence": "Tag 05QW supplies Karoubian splitting under either countable products or countable coproducts. After the split image represents the kernel of arbitrary f, Tag 05QU supplies precisely the projection-coprojection normal form and the existence of a cokernel."
+    },
+    {
+      "id": "novelty_and_dependency_scope",
+      "passed": true,
+      "evidence": "The pinned Stacks tree contains Tags 05QW and 05QU only for the two terminal ingredients; neither states the functorial distinguished-triangle obstruction. Targeted searches found no existing Stacks result with the candidate statement."
+    },
+    {
+      "id": "source_wording_rights_and_endorsement",
+      "passed": true,
+      "evidence": "The French authority pages, hash-bound English evidence pages, and payload were compared. The payload is independently structured and worded, contains no copied source prose, asserts only a proposed local label, and makes no official-tag, upstream-review, affiliation, approval, or endorsement claim."
+    },
+    {
+      "id": "build_and_diagnostics",
+      "passed": true,
+      "evidence": "Frozen build, validation, log, PDF, and visual-QA hashes all match. The bound validation reports a 130-page PDF, identical baseline and candidate diagnostic counts of 49, zero new candidate diagnostics, one exact payload insertion, and unchanged prefix and suffix."
+    },
+    {
+      "id": "rendered_pdf_pages_9_11",
+      "passed": true,
+      "evidence": "The three hash-bound 180-dpi renders were independently inspected. Lemma 4.15 is complete and legible on page 10, neighbor pages are coherent, and there is no clipping, overlap, broken glyph, malformed layout, or unresolved visual defect."
+    },
+    {
+      "id": "public_readback",
+      "passed": true,
+      "evidence": "Anonymous immutable GitHub raw readbacks for the frozen manifest, payload, and derived PDF match frozen Git object bytes in filename, byte count, and SHA-256."
+    },
+    {
+      "id": "public_hygiene_and_credentials",
+      "passed": true,
+      "evidence": "All 23 frozen textual public files and the PDF metadata were checked for absolute user paths and credential patterns. No private path, username, token, password, API key, or credential was found; build logs use the sanitized USERPROFILE placeholder."
+    },
+    {
+      "id": "independent_mathematical_subreview",
+      "passed": true,
+      "evidence": "A separate bounded mathematical reviewer independently returned PASS on source scope, all proof steps and signs, naturality, Yoneda, Karoubian splitting, Tags 05QW and 05QU, novelty, the 12-unit disposition, rights wording, and official-tag restraint."
+    }
+  ],
+  "unresolved_defects": []
+}

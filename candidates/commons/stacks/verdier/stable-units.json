@@ -12,8 +12,16 @@
     "validation_sha256": "255AE7BBCE7C615C36F6D574BE74DB4705ECAF0C08ABACF882E9DA6E2A651EC0",
     "visual_qa_sha256": "97BC160345371BB0F719282B1103A08BE23785B74327534AA17D490459E1A3AD",
     "derived_pdf_sha256": "EDB4BED1F5A166B34562B63D44EEEE70C3F421AAFDD91F31C142E1B0EEAEF96A",
-    "review_state": "not_performed",
-    "independent_replay": "not_performed",
+    "independent_review": {
+      "path": "replay/independent-review.json",
+      "bytes": 14754,
+      "sha256": "5FE1320F22A25385EB548B4AD6223B1F1C47B77E0A0D275E76EA2E38ABB4B359",
+      "status": "PASS",
+      "reviewed_at_utc": "2026-08-26T01:25:26Z",
+      "unresolved_defects": 0
+    },
+    "review_state": "performed",
+    "independent_replay": "passed",
     "admission_state": "not_admitted"
   },
   "unit_count": 12,

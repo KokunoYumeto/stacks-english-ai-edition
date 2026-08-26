@@ -99,6 +99,21 @@
       }
     ]
   },
+  "independent_review_evidence": {
+    "path": "replay/independent-review.json",
+    "bytes": 14754,
+    "sha256": "5FE1320F22A25385EB548B4AD6223B1F1C47B77E0A0D275E76EA2E38ABB4B359",
+    "status": "PASS",
+    "review_id": "stacks-verdier-a04446e-1-2-13-r1-independent-review-20260826",
+    "reviewed_at_utc": "2026-08-26T01:25:26Z",
+    "reviewer_role": "independent_replay",
+    "frozen_candidate_commit": "99d3bee9f4810ca3130ee74f2272c3f6fa9e0438",
+    "frozen_candidate_tree": "c775e3833ddcb52a32eb6b9cf5b8648dc1bef519",
+    "frozen_manifest_sha256": "4A8FEA23CE509DA19C37A54CDC70B29AC1384DEA81D11898745CE5596CFA39F0",
+    "manifest_references_verified": 26,
+    "manifest_hash_mismatches": 0,
+    "unresolved_defects": 0
+  },
   "source_scope": {
     "work": "Astérisque 239",
     "statement": "Proposition 1.2.13",
@@ -152,8 +167,8 @@
   "payload_operation_count": 1,
   "build_state": "validated_pass",
   "visual_qa_state": "visual_qa_passed",
-  "review_state": "not_performed",
-  "independent_replay": "not_performed",
+  "review_state": "performed",
+  "independent_replay": "passed",
   "admission_state": "not_admitted",
   "rights_state": {
     "evidence_mode": "locators_hashes_and_independent_paraphrase_only",
@@ -163,5 +178,5 @@
     "future_payload_requires_independent_wording_and_gfdl_compatibility": true
   },
   "generated_at_utc": "2026-08-25T22:21:04Z",
-  "state_updated_at_utc": "2026-08-26T01:00:05Z"
+  "state_updated_at_utc": "2026-08-26T01:29:01Z"
 }
