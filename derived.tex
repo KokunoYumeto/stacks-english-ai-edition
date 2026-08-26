@@ -821,6 +821,63 @@ Lemma \ref{lemma-when-split}.
 The second statement is dual to the first.
 \end{proof}
 
+\begin{lemma}
+\label{lemma-functorial-triangles-decomposable}
+Let $\mathcal{D}$ be a pre-triangulated category. Let
+$\operatorname{Ar}(\mathcal{D})$ be the category whose objects are morphisms
+of $\mathcal{D}$ and whose morphisms are commutative squares. Let
+$\operatorname{DTri}(\mathcal{D})$ be the category whose objects are
+distinguished triangles and whose morphisms are morphisms of triangles. Let
+$$
+U : \operatorname{DTri}(\mathcal{D}) \longrightarrow
+\operatorname{Ar}(\mathcal{D})
+$$
+be the functor which sends a distinguished triangle to its first arrow.
+Assume $U$ has a section. If $\mathcal{D}$ has countable products or countable
+coproducts, then every morphism of $\mathcal{D}$ is isomorphic to a composition
+$$
+K \oplus Z \longrightarrow Z \longrightarrow Z \oplus Q
+$$
+of a projection and a coprojection. In particular, $\mathcal{D}$ has kernels
+and cokernels.
+\end{lemma}
+
+\begin{proof}
+By Lemma \ref{lemma-projectors-have-images-triangulated}, the category
+$\mathcal{D}$ is Karoubian. Let $T$ be a section of $U$, let $f : X \to Y$,
+and write
+$$
+T(f) = (X, Y, Z_f, f, g_f, h_f).
+$$
+Set $d_f = -h_f[-1] : Z_f[-1] \to X$. Exactness of the sequence obtained from
+this triangle gives a natural epimorphism
+$$
+q_f : \Hom_\mathcal{D}(-, Z_f[-1]) \longrightarrow \mathcal{K}_f,
+\qquad
+\mathcal{K}_f(W) = \{v : W \to X \mid f \circ v = 0\},
+$$
+given by composition with $d_f$.
+
+Write $T(W \to 0) = (W, 0, Z_W, 0, 0, h_W)$. By two rotations and
+Lemma \ref{lemma-third-object-zero}, the map $h_W : Z_W \to W[1]$ is an
+isomorphism. Given $v \in \mathcal{K}_f(W)$, applying $T$ to the commutative
+square $(v, 0) : (W \to 0) \to (X \to Y)$ gives a morphism of triangles
+$(v, 0, c_v)$. Define
+$$
+s_{f,W}(v) = -c_v[-1] \circ h_W[-1]^{-1}.
+$$
+Functoriality of $T$ shows that these maps are natural in $W$. The last square
+in the morphism of triangles gives
+$h_f[-1] \circ c_v[-1] = v \circ h_W[-1]$; hence the chosen signs give
+$q_f \circ s_f = 1_{\mathcal{K}_f}$.
+
+Thus $e_f = s_f \circ q_f$ is an idempotent natural endomorphism of
+$\Hom_\mathcal{D}(-, Z_f[-1])$. By Yoneda it comes from an idempotent
+$e : Z_f[-1] \to Z_f[-1]$. Since $\mathcal{D}$ is Karoubian, $e$ splits, and
+the image of this splitting represents $\mathcal{K}_f$. Thus $f$ has a kernel.
+The conclusion now follows from Lemma \ref{lemma-when-split}.
+\end{proof}
+
 \noindent
 The following lemma makes it slightly easier to prove that a
 pre-triangulated category is triangulated.
