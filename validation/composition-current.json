@@ -1,56 +1,71 @@
 {
-  "schema": "unofficial-ai-integrated-stacks-composition/v2",
+  "schema": "unofficial-ai-integrated-stacks-composition/v3",
   "status": "PASS",
-  "created_utc": "2026-08-25T15:28:16Z",
+  "created_utc": "2026-08-26T01:05:43Z",
   "authority": {
     "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
     "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e"
   },
   "previous_cutoff": {
-    "registry_commit": "39d8146ca0af49b1d9eaf0742559f64d712bfd8e",
-    "last_admitted_overlay": "stacks-errata-a04446e-r17",
-    "derived_git_blob": "f5e0e434239906951879544a74315b8d249a8013",
-    "derived_equal_to_authority": true
+    "public_main_head": "243358c83d9b4341e96d50340e0a77ce419a3821",
+    "public_main_tree": "7608b3343ceb7b4b6eaa0eee9b63036a840e8575",
+    "registry_commit": "24861b306a34991c0da3d803f92d67e206c805da",
+    "last_admitted_overlay": "stacks-errata-a04446e-r19",
+    "source_blobs": {
+      "derived.tex": {
+        "bytes": 449662,
+        "sha256": "317B3A8E626BCCB3BC579DAB6AA57F4FDFEF513CA82805B02BCDC8C22FB8C1A1",
+        "git_blob": "44bc02a8aa0fff94dd58aff0694f7e61ecece2a8"
+      },
+      "simplicial.tex": {
+        "bytes": 239889,
+        "sha256": "9537F65AC08674B030F368F24DEBA62FF6F64B7C9F72EEE6773CA82E6ED2796A",
+        "git_blob": "d7634ff7255eea3a5c6bd6bcc078e63ca5d6493f"
+      }
+    }
   },
   "registry": {
-    "cutoff_commit": "24861b306a34991c0da3d803f92d67e206c805da",
+    "cutoff_commit": "13ca6aaaca454f5930c4885c93f427e30cf21959",
     "overlays_path": "ai-integrated/registry/overlays.json",
-    "overlays_bytes": 29549,
-    "overlays_sha256": "D4C4BC122E4F2D61D7BE028B21FE4888989B3970D92E33C11289E05034ECF9E6",
-    "overlays_git_blob": "513a55e0a5c5365bbb87c9f71eb7f4921a188a96",
-    "linear_import_commit": "c06400fc323abb62990f37563cc31e9ae93fbf8e",
-    "linear_import_tree": "7c4f81e8e9f470b3ee6224299411c4062752d0bc",
-    "registered_overlays": 19,
-    "registered_stable_ids": 507,
-    "last_admitted_overlay": "stacks-errata-a04446e-r19"
+    "overlays_bytes": 32273,
+    "overlays_sha256": "CA6DDDEF9F3B31236B34AA498E9D101903CC206FB50110FE196330C146548BD6",
+    "overlays_git_blob": "6d6656df5e0a88b59109e39ae70c90c76f0019f0",
+    "linear_import_commit": "e3b28d7d7068eb45d3348a57e201c49044826e86",
+    "linear_import_tree": "61ecd6f57787f9dd0deb57e96fa6972dd2e13b49",
+    "registered_overlays": 21,
+    "registered_stable_ids": 547,
+    "last_admitted_overlay": "stacks-errata-a04446e-r21"
   },
   "new_overlays": [
     {
-      "id": "stacks-errata-a04446e-r18",
-      "stable_ids": 20,
-      "operations": 20,
-      "manifest_sha256": "AE6E1177D1AF9954A38502ECA788354DE2091142C736AD49E04ECA2672DEF89D",
-      "payload_sha256": "7051800AA3B700DD3736F1E9A749EFD90B84F89B287546F5213FBA508C42FB50",
-      "review_receipt_sha256": "CA0E1693224C0F727DB23E7057AC21982DC5F5183E8BB25D72C94EC90AD00894",
-      "materialized_commit": "02302422eec151f506e4deadfb78c6d9f2a9bd42"
+      "id": "stacks-errata-a04446e-r20",
+      "stable_ids": 29,
+      "operations": 32,
+      "manifest_sha256": "989E169C8BC648525665FF80623246EA0723B8B44E6749151770F602A6647EE0",
+      "payload_sha256": "FEEC32EEEEAF1194899A877208077EF7721B53D937048209FEEC4B9B75E376CD",
+      "review_receipt_sha256": "C2C88EEA206BFB3CB714372D1E659EBD980EDBB37CD960DD50708645DB4784E3",
+      "candidate_commit": "461e3bb98de7330334ff7fed1846b277457322a3",
+      "admission_commit": "3ab4861c03b9655ba2add5a1c9de3c1c3d388699"
     },
     {
-      "id": "stacks-errata-a04446e-r19",
-      "stable_ids": 43,
-      "operations": 57,
-      "manifest_sha256": "750D76226657AB9BF0E34729992BE91DF58E2268B1D3D7D35B29B8893D6A3A52",
-      "payload_sha256": "64A9B8C5568B575457AE8E81DB54F39D9590260422EE4BD5710EB743CC6E7C31",
-      "review_receipt_sha256": "A8E775B2DDAE2E44B1B615533E516CD4F5EF17A6A511B4EC0F99AA58FAAD7A1C",
-      "materialized_commit": "ab8c96a5b30baa7764783c3e7c16b9c032ae7720"
+      "id": "stacks-errata-a04446e-r21",
+      "stable_ids": 11,
+      "operations": 11,
+      "manifest_sha256": "3D9E649E2EBFB7DDD12E84A98F8E16098462E43199FDA5146E2DAB4B8BEB0233",
+      "payload_sha256": "E4FD6748E65633490F8C48D720BEBF7327505DDF25B578868F6739E15BC96E16",
+      "review_receipt_sha256": "1BCE575401698C72FB62AC1BB3F3BC49F3AF8DEAA7F675E685103DA9A2DF3D58",
+      "candidate_commit": "625d3476af95771514cc183e4a48c02c9d851c0d",
+      "admission_commit": "13ca6aaaca454f5930c4885c93f427e30cf21959"
     }
   ],
   "composition": {
-    "mode": "authority-bound registry-order projection committed as protected-branch-compatible linear history",
-    "materialization_tip": "19f0bebf3aea5ecc43f8c1e126be37ed16921ac1",
-    "source_commit": "1f204fb27ff418fd0e75cb35ac8dab5256037f15",
-    "source_tree": "308ef50dd00d742507e2332601793ac8a8e98e00",
-    "total_v2_operations": 548,
-    "new_operations": 77,
+    "mode": "manifest-bound registry-order replay rebased onto verified cumulative source",
+    "base_commit": "e3b28d7d7068eb45d3348a57e201c49044826e86",
+    "base_tree": "61ecd6f57787f9dd0deb57e96fa6972dd2e13b49",
+    "source_commit": "ef467614041d569e56a6c1758b8fe74b51d99f4a",
+    "source_tree": "b181820f096c3b78b6608429e477aaa8acd614c4",
+    "total_v2_operations": 591,
+    "new_operations": 43,
     "r1_r3_replacements": 69,
     "r1_tag_additions": 9,
     "affected_sources": {
@@ -58,16 +73,39 @@
         "authority_bytes": 449677,
         "authority_sha256": "EFDA4CB361DD40909D1991161EAE716E58B6CF9E79380971502E1DA12396D402",
         "authority_git_blob": "f5e0e434239906951879544a74315b8d249a8013",
-        "projection_bytes": 449662,
-        "projection_sha256": "317B3A8E626BCCB3BC579DAB6AA57F4FDFEF513CA82805B02BCDC8C22FB8C1A1",
-        "projection_git_blob": "44bc02a8aa0fff94dd58aff0694f7e61ecece2a8",
-        "committed_matches_projection": true
+        "before_bytes": 449662,
+        "before_sha256": "317B3A8E626BCCB3BC579DAB6AA57F4FDFEF513CA82805B02BCDC8C22FB8C1A1",
+        "before_git_blob": "44bc02a8aa0fff94dd58aff0694f7e61ecece2a8",
+        "authority_projection_bytes": 449715,
+        "authority_projection_sha256": "66D17FBE6743002D29A78543E46122CD3ED34AA5A5574B14718C1189ACEB456F",
+        "authority_projection_git_blob": "169f569755615217c6eced094127e6f17ce2e3b4",
+        "composition_mode": "direct cumulative projection",
+        "composed_bytes": 449715,
+        "composed_sha256": "66D17FBE6743002D29A78543E46122CD3ED34AA5A5574B14718C1189ACEB456F",
+        "composed_git_blob": "169f569755615217c6eced094127e6f17ce2e3b4",
+        "committed_matches_composition": true
+      },
+      "simplicial.tex": {
+        "authority_bytes": 234898,
+        "authority_sha256": "187B4CD4F20696BF35EED843528462780CA04ABBBC597AE1045F8404372FDC56",
+        "authority_git_blob": "7c8f1587d35975d03fad854588638273cbdcb429",
+        "before_bytes": 239889,
+        "before_sha256": "9537F65AC08674B030F368F24DEBA62FF6F64B7C9F72EEE6773CA82E6ED2796A",
+        "before_git_blob": "d7634ff7255eea3a5c6bd6bcc078e63ca5d6493f",
+        "authority_projection_bytes": 235001,
+        "authority_projection_sha256": "E4FD6748E65633490F8C48D720BEBF7327505DDF25B578868F6739E15BC96E16",
+        "authority_projection_git_blob": "e900e483dff82cf8e7712e74f42f3d26dcf53221",
+        "composition_mode": "new operations rebased through unchanged authority regions while preserving prior AI-integrated additions",
+        "composed_bytes": 239992,
+        "composed_sha256": "650ABA33A184CE9945DD70C04D83A3A4CBD6E540426B171E828336855DC97A0B",
+        "composed_git_blob": "a34120e214b9a840b72889344a0f716ada037c97",
+        "committed_matches_composition": true
       }
     }
   },
   "projection_verifier": {
-    "path": "tools/verify_overlay_projection.py",
-    "command": "python tools/verify_overlay_projection.py 18 19 --check-current",
+    "path": "tools/compose_overlay_projection.py",
+    "command": "python tools/compose_overlay_projection.py --existing-rounds 18 19 --target-rounds 18 19 20 21 --base-revision e3b28d7d7068eb45d3348a57e201c49044826e86 --check-revision ef467614041d569e56a6c1758b8fe74b51d99f4a",
     "status": "PASS"
   },
   "required_build_stems": [
@@ -79,6 +117,7 @@
     "algebra",
     "brauer",
     "derived",
+    "simplicial",
     "homology",
     "more-algebra",
     "smoothing",

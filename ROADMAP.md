@@ -7,6 +7,18 @@ already been integrated. Current admitted coverage is recorded in
 [Project status](STATUS.md), while detailed EGA evidence and its exact semantic
 cursor live in the [EGA integration dossier](ega/README.md).
 
+## Current maintenance baseline
+
+The errata composition baseline is **R1–R21**: 21 admitted batches containing
+547 stable correction IDs, frozen at registry commit
+`13ca6aaaca454f5930c4885c93f427e30cf21959`. R20 is composed into
+`derived.tex`; R21 is operation-replayed onto the cumulative `simplicial.tex`
+so that its earlier AI-integrated additions remain intact. The exact source,
+registry, operation, and byte identities are recorded in the
+[current composition receipt](validation/composition-current.json). Future
+errata cycles must begin from that receipt and advance strictly in registry
+order; they do not alter the semantic-corpus order below.
+
 ## Recommended order
 
 | Stage | Bounded milestone | Why it comes here |

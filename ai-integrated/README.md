@@ -21,18 +21,20 @@ unified repository, not a separate edition.
 
 ## Integrated registry cutoff
 
-- Admitted overlay batches: **19** (`R1` through `R19`).
-- Stable correction IDs in those batches: **507**.
-- Highest stable identifier: `MC-STK-ERR-0874`; identifier gaps are
+- Admitted overlay batches: **21** (`R1` through `R21`).
+- Stable correction IDs in those batches: **547**.
+- Highest stable identifier: `MC-STK-ERR-0914`; identifier gaps are
   intentional and retained.
 - This subtree is bound to registry commit
-  `24861b306a34991c0da3d803f92d67e206c805da`. R20 was the next leased
+  `13ca6aaaca454f5930c4885c93f427e30cf21959`. R22 was the next leased
   namespace at that cutoff; later admissions enter a subsequent cycle.
 
 The authoritative overlay list is
 [`registry/overlays.json`](registry/overlays.json). The integrated root source
-contains the admitted R1–R19 composition; registry admission and source
-composition remain separately testable states.
+contains the admitted R1–R21 composition; registry admission and source
+composition remain separately testable states. R21 is replayed as exact
+manifest-bound operations over the cumulative `simplicial.tex`, preserving
+the independent AI-integrated additions already present there.
 
 ## Directory map
 

@@ -25,6 +25,7 @@ DEFAULT_STEMS = (
     "algebra",
     "brauer",
     "derived",
+    "simplicial",
     "homology",
     "more-algebra",
     "smoothing",
@@ -44,9 +45,9 @@ DEFAULT_COMPOSITION_RECEIPT = Path("validation/composition-current.json")
 STEM_PATTERN = re.compile(r"^[A-Za-z0-9][A-Za-z0-9_-]*$")
 SHA1_PATTERN = re.compile(r"^[0-9a-f]{40}$")
 SHA256_PATTERN = re.compile(r"^[0-9A-Fa-f]{64}$")
+COMPOSITION_SCHEMA = "unofficial-ai-integrated-stacks-composition/v3"
 COMPOSITION_MODE = (
-    "authority-bound registry-order projection committed as "
-    "protected-branch-compatible linear history"
+    "manifest-bound registry-order replay rebased onto verified cumulative source"
 )
 
 GENERATED_SUFFIXES = (
@@ -311,6 +312,22 @@ def positive_int(value: object) -> bool:
     return type(value) is int and value > 0
 
 
+def require_commit_object(source: Path, commit: object, label: str) -> str:
+    if not isinstance(commit, str) or not SHA1_PATTERN.fullmatch(commit):
+        raise RuntimeError(f"invalid {label} commit identity: {commit!r}")
+    if git_optional(source, "cat-file", "-e", f"{commit}^{{commit}}") is None:
+        raise RuntimeError(f"missing {label} commit object: {commit}")
+    return commit
+
+
+def require_tree_identity(source: Path, commit: str, tree: object, label: str) -> str:
+    if not isinstance(tree, str) or not SHA1_PATTERN.fullmatch(tree):
+        raise RuntimeError(f"invalid {label} tree identity: {tree!r}")
+    if git(source, "rev-parse", f"{commit}^{{tree}}") != tree:
+        raise RuntimeError(f"{label} tree identity mismatch")
+    return tree
+
+
 def load_composition_receipt(
     source: Path, requested_path: Path
 ) -> tuple[dict[str, object], tuple[str, ...], tuple[str, ...]]:
@@ -332,76 +349,165 @@ def load_composition_receipt(
         raise RuntimeError(f"invalid composition receipt {logical_path}: {exc}") from exc
     if not isinstance(receipt, dict):
         raise RuntimeError("composition receipt must contain a JSON object")
-    if (
-        receipt.get("schema") != "unofficial-ai-integrated-stacks-composition/v2"
-        or receipt.get("status") != "PASS"
-    ):
+    if receipt.get("schema") != COMPOSITION_SCHEMA or receipt.get("status") != "PASS":
         raise RuntimeError("composition receipt schema or pass state is invalid")
 
     authority = receipt.get("authority")
+    previous = receipt.get("previous_cutoff")
     registry = receipt.get("registry")
     composition = receipt.get("composition")
     if (
         not isinstance(authority, dict)
+        or not isinstance(previous, dict)
         or not isinstance(registry, dict)
         or not isinstance(composition, dict)
     ):
-        raise RuntimeError("composition receipt lacks authority, registry, or composition state")
+        raise RuntimeError(
+            "composition receipt lacks authority, previous-cutoff, registry, or "
+            "composition state"
+        )
     if composition.get("mode") != COMPOSITION_MODE:
-        raise RuntimeError("composition receipt has an invalid protected-linear mode")
+        raise RuntimeError("composition receipt has an invalid registry-replay mode")
 
-    authority_commit = authority.get("commit")
-    authority_tree = authority.get("tree")
-    if (
-        not isinstance(authority_commit, str)
-        or not SHA1_PATTERN.fullmatch(authority_commit)
-        or not isinstance(authority_tree, str)
-        or not SHA1_PATTERN.fullmatch(authority_tree)
-    ):
-        raise RuntimeError("composition receipt has an invalid authority identity")
-    require_ancestor(source, authority_commit, "pinned authority")
-    if git(source, "rev-parse", f"{authority_commit}^{{tree}}") != authority_tree:
-        raise RuntimeError("composition authority tree identity mismatch")
-    cutoff = registry.get("cutoff_commit")
-    registry_import_commit = registry.get("linear_import_commit")
-    registry_import_tree = registry.get("linear_import_tree")
-    composition_source_commit = composition.get("source_commit")
-    composition_source_tree = composition.get("source_tree")
-    materialization_tip = composition.get("materialization_tip")
-    commit_identities = {
-        "registry cutoff": cutoff,
-        "registry linear import": registry_import_commit,
-        "composition source": composition_source_commit,
-        "composition materialization tip": materialization_tip,
-    }
-    for label, value in commit_identities.items():
-        if not isinstance(value, str) or not SHA1_PATTERN.fullmatch(value):
-            raise RuntimeError(f"invalid {label} commit identity: {value!r}")
-    tree_identities = {
-        "registry linear import": registry_import_tree,
-        "composition source": composition_source_tree,
-    }
-    for label, value in tree_identities.items():
-        if not isinstance(value, str) or not SHA1_PATTERN.fullmatch(value):
-            raise RuntimeError(f"invalid {label} tree identity: {value!r}")
-    require_ancestor(source, registry_import_commit, "registry linear import")
-    require_ancestor(source, composition_source_commit, "composition source")
-    require_ancestor(source, authority_commit, "authority-to-registry-import", registry_import_commit)
-    require_single_parent(source, registry_import_commit, "registry linear import")
-    require_single_parent(
-        source, composition_source_commit, "composition source", registry_import_commit
+    authority_commit = require_commit_object(
+        source, authority.get("commit"), "pinned authority"
     )
-    require_linear_suffix(source, composition_source_commit, "HEAD", "protected publication suffix")
-    require_ancestor(
+    authority_tree = require_tree_identity(
+        source, authority_commit, authority.get("tree"), "pinned authority"
+    )
+    previous_public_head = require_commit_object(
+        source, previous.get("public_main_head"), "previous public main"
+    )
+    previous_public_tree = require_tree_identity(
+        source,
+        previous_public_head,
+        previous.get("public_main_tree"),
+        "previous public main",
+    )
+    previous_registry = require_commit_object(
+        source, previous.get("registry_commit"), "previous registry cutoff"
+    )
+    previous_last = previous.get("last_admitted_overlay")
+    previous_source_blobs = previous.get("source_blobs")
+    if (
+        not isinstance(previous_last, str)
+        or not previous_last
+        or not isinstance(previous_source_blobs, dict)
+        or not previous_source_blobs
+    ):
+        raise RuntimeError("invalid previous-cutoff transition evidence")
+
+    cutoff = require_commit_object(
+        source, registry.get("cutoff_commit"), "registry cutoff"
+    )
+    cutoff_tree = git(source, "rev-parse", f"{cutoff}^{{tree}}")
+    registry_import_commit = require_commit_object(
+        source, registry.get("linear_import_commit"), "registry linear import"
+    )
+    registry_import_tree = require_tree_identity(
         source,
         registry_import_commit,
-        "registry-import-to-composition-source",
+        registry.get("linear_import_tree"),
+        "registry linear import",
+    )
+    composition_base_commit = require_commit_object(
+        source, composition.get("base_commit"), "composition base"
+    )
+    composition_base_tree = require_tree_identity(
+        source,
+        composition_base_commit,
+        composition.get("base_tree"),
+        "composition base",
+    )
+    composition_source_commit = require_commit_object(
+        source, composition.get("source_commit"), "composition source"
+    )
+    composition_source_tree = require_tree_identity(
+        source,
+        composition_source_commit,
+        composition.get("source_tree"),
+        "composition source",
+    )
+
+    require_ancestor(source, authority_commit, "pinned authority")
+    require_ancestor(source, previous_public_head, "previous public main")
+    require_ancestor(source, registry_import_commit, "registry linear import")
+    require_ancestor(source, composition_base_commit, "composition base")
+    require_ancestor(source, composition_source_commit, "composition source")
+    require_ancestor(
+        source,
+        authority_commit,
+        "authority-to-composition-base",
+        composition_base_commit,
+    )
+    if (
+        composition_base_commit != registry_import_commit
+        or composition_base_tree != registry_import_tree
+    ):
+        raise RuntimeError(
+            "composition base is not the receipt-bound registry import"
+        )
+    require_single_parent(
+        source,
+        composition_base_commit,
+        "composition base",
+        previous_public_head,
+    )
+    require_single_parent(
+        source,
+        composition_source_commit,
+        "composition source",
+        composition_base_commit,
+    )
+    require_linear_suffix(
+        source, composition_source_commit, "HEAD", "protected publication suffix"
+    )
+    require_ancestor(
+        source,
+        composition_base_commit,
+        "composition-base-to-source",
         composition_source_commit,
     )
-    if git(source, "rev-parse", f"{registry_import_commit}^{{tree}}") != registry_import_tree:
-        raise RuntimeError("registry linear-import tree identity mismatch")
-    if git(source, "rev-parse", f"{composition_source_commit}^{{tree}}") != composition_source_tree:
-        raise RuntimeError("composition source tree identity mismatch")
+
+    normalized_previous_sources: dict[str, dict[str, object]] = {}
+    for relative, identity in previous_source_blobs.items():
+        if not isinstance(relative, str) or not isinstance(identity, dict):
+            raise RuntimeError("invalid previous-cutoff source identity")
+        relative_path = Path(relative)
+        if (
+            relative_path.is_absolute()
+            or len(relative_path.parts) != 1
+            or relative_path.suffix != ".tex"
+            or not STEM_PATTERN.fullmatch(relative_path.stem)
+        ):
+            raise RuntimeError(
+                f"previous-cutoff source is not a root chapter file: {relative!r}"
+            )
+        expected_bytes = identity.get("bytes")
+        expected_sha = identity.get("sha256")
+        expected_blob = identity.get("git_blob")
+        if (
+            not positive_int(expected_bytes)
+            or not isinstance(expected_sha, str)
+            or not SHA256_PATTERN.fullmatch(expected_sha)
+            or not isinstance(expected_blob, str)
+            or not SHA1_PATTERN.fullmatch(expected_blob)
+        ):
+            raise RuntimeError(
+                f"invalid previous-cutoff source identity: {relative}"
+            )
+        observed_blob = git(
+            source, "rev-parse", f"{previous_public_head}:{relative}"
+        )
+        if (
+            observed_blob != expected_blob
+            or int(git(source, "cat-file", "-s", observed_blob)) != expected_bytes
+            or git_blob_sha256(source, observed_blob) != expected_sha.upper()
+        ):
+            raise RuntimeError(
+                f"previous public source identity mismatch: {relative}"
+            )
+        normalized_previous_sources[relative] = dict(identity)
 
     overlays_relative = registry.get("overlays_path")
     overlays_sha = registry.get("overlays_sha256")
@@ -428,16 +534,13 @@ def load_composition_receipt(
     imported_overlays_blob = git(
         source, "rev-parse", f"{registry_import_commit}:{overlays_relative}"
     )
-    cutoff_overlays_blob = git_optional(
+    cutoff_overlays_blob = git(
         source, "rev-parse", f"{cutoff}:registry/overlays.json"
     )
     if (
         overlays_blob != expected_overlays_blob
         or imported_overlays_blob != expected_overlays_blob
-        or (
-            cutoff_overlays_blob is not None
-            and cutoff_overlays_blob != expected_overlays_blob
-        )
+        or cutoff_overlays_blob != expected_overlays_blob
     ):
         raise RuntimeError("imported overlay registry Git-blob binding mismatch")
     try:
@@ -457,14 +560,29 @@ def load_composition_receipt(
     if not isinstance(entries, list):
         raise RuntimeError("imported overlay registry lacks registered_entries")
     stable_ids: list[str] = []
+    stable_ids_by_overlay: dict[str, tuple[str, ...]] = {}
     for entry in entries:
         if not isinstance(entry, dict):
             raise RuntimeError("imported overlay registry contains an invalid entry")
         raw_ids = entry.get("stable_ids")
-        ids = raw_ids if isinstance(raw_ids, list) else raw_ids.split() if isinstance(raw_ids, str) else None
-        if ids is None or not all(isinstance(item, str) for item in ids):
+        ids = (
+            raw_ids
+            if isinstance(raw_ids, list)
+            else raw_ids.split()
+            if isinstance(raw_ids, str)
+            else None
+        )
+        entry_id = entry.get("id")
+        if (
+            not isinstance(entry_id, str)
+            or not entry_id
+            or not ids
+            or not all(isinstance(item, str) and item for item in ids)
+            or entry_id in stable_ids_by_overlay
+        ):
             raise RuntimeError("imported overlay registry contains invalid stable IDs")
         stable_ids.extend(ids)
+        stable_ids_by_overlay[entry_id] = tuple(ids)
     if (
         not positive_int(registry.get("registered_overlays"))
         or not positive_int(registry.get("registered_stable_ids"))
@@ -476,22 +594,6 @@ def load_composition_receipt(
     if not entries or entries[-1].get("id") != registry.get("last_admitted_overlay"):
         raise RuntimeError("imported overlay registry cutoff entry mismatch")
 
-    previous = receipt.get("previous_cutoff")
-    if not isinstance(previous, dict):
-        raise RuntimeError("composition receipt lacks previous-cutoff transition evidence")
-    previous_registry = previous.get("registry_commit")
-    previous_last = previous.get("last_admitted_overlay")
-    previous_derived_blob = previous.get("derived_git_blob")
-    if (
-        not isinstance(previous_registry, str)
-        or not SHA1_PATTERN.fullmatch(previous_registry)
-        or not isinstance(previous_last, str)
-        or not previous_last
-        or not isinstance(previous_derived_blob, str)
-        or not SHA1_PATTERN.fullmatch(previous_derived_blob)
-        or previous.get("derived_equal_to_authority") is not True
-    ):
-        raise RuntimeError("invalid previous-cutoff transition evidence")
     previous_index = next(
         (index for index, entry in enumerate(entries) if entry.get("id") == previous_last),
         None,
@@ -505,7 +607,10 @@ def load_composition_receipt(
     if len(registry_suffix) != len(new_overlays):
         raise RuntimeError("new-overlay transition length does not match registry suffix")
     new_operation_total = 0
-    materialized_commits: list[str] = []
+    normalized_new_overlays: list[dict[str, object]] = []
+    candidate_commits: list[str] = []
+    admission_commits: list[str] = []
+    expected_registry_parent = previous_registry
     for overlay, entry in zip(new_overlays, registry_suffix):
         if not isinstance(overlay, dict) or not isinstance(entry, dict):
             raise RuntimeError("new-overlay transition contains an invalid entry")
@@ -518,7 +623,7 @@ def load_composition_receipt(
             or stable_count < 1
             or type(operation_count) is not int
             or operation_count < 1
-            or stable_count != len(entry.get("stable_ids", []))
+            or stable_count != len(stable_ids_by_overlay[entry["id"]])
         ):
             raise RuntimeError(f"invalid new-overlay counts: {overlay.get('id')!r}")
         new_operation_total += operation_count
@@ -526,22 +631,84 @@ def load_composition_receipt(
             value = overlay.get(key)
             if not isinstance(value, str) or not SHA256_PATTERN.fullmatch(value):
                 raise RuntimeError(f"invalid {key} for {overlay.get('id')!r}")
-        materialized = overlay.get("materialized_commit")
-        if not isinstance(materialized, str) or not SHA1_PATTERN.fullmatch(materialized):
-            raise RuntimeError(f"invalid materialized commit for {overlay.get('id')!r}")
-        materialized_commits.append(materialized)
-        if git_optional(source, "cat-file", "-e", f"{materialized}^{{commit}}") is not None:
-            require_single_parent(source, materialized, f"materialized {overlay.get('id')}", authority_commit)
+        if overlay.get("manifest_sha256").upper() != str(
+            entry.get("manifest_sha256", "")
+        ).upper():
+            raise RuntimeError(
+                f"manifest hash does not match registry entry: {overlay.get('id')!r}"
+            )
+        candidate = require_commit_object(
+            source,
+            overlay.get("candidate_commit"),
+            f"candidate {overlay.get('id')}",
+        )
+        admission = require_commit_object(
+            source,
+            overlay.get("admission_commit"),
+            f"admission {overlay.get('id')}",
+        )
+        require_single_parent(
+            source,
+            candidate,
+            f"candidate {overlay.get('id')}",
+            expected_registry_parent,
+        )
+        require_single_parent(
+            source,
+            admission,
+            f"admission {overlay.get('id')}",
+            candidate,
+        )
+        namespace = entry.get("namespace")
+        if not isinstance(namespace, str) or not namespace:
+            raise RuntimeError(f"invalid namespace for {overlay.get('id')!r}")
+        manifest_path = f"candidates/{namespace}/candidate.manifest.json"
+        manifest_blob = git_optional(
+            source, "rev-parse", f"{candidate}:{manifest_path}"
+        )
+        if (
+            manifest_blob is None
+            or git_blob_sha256(source, manifest_blob)
+            != overlay["manifest_sha256"].upper()
+        ):
+            raise RuntimeError(
+                f"candidate manifest binding mismatch: {overlay.get('id')!r}"
+            )
+        admission_registry = git_optional(
+            source, "show", f"{admission}:registry/overlays.json"
+        )
+        try:
+            admission_state = (
+                json.loads(admission_registry) if admission_registry is not None else None
+            )
+        except json.JSONDecodeError as exc:
+            raise RuntimeError(
+                f"invalid admission registry for {overlay.get('id')!r}: {exc}"
+            ) from exc
+        admission_entries = (
+            admission_state.get("registered_entries")
+            if isinstance(admission_state, dict)
+            else None
+        )
+        if (
+            not isinstance(admission_entries, list)
+            or not admission_entries
+            or not isinstance(admission_entries[-1], dict)
+            or admission_entries[-1].get("id") != overlay.get("id")
+        ):
+            raise RuntimeError(
+                f"admission commit does not close overlay {overlay.get('id')!r}"
+            )
+        expected_registry_parent = admission
+        candidate_commits.append(candidate)
+        admission_commits.append(admission)
+        normalized_new_overlays.append(dict(overlay))
     if new_operation_total != composition.get("new_operations"):
         raise RuntimeError("new-overlay operation total does not match composition receipt")
     if registry_suffix[-1].get("id") != registry.get("last_admitted_overlay"):
         raise RuntimeError("new-overlay transition does not end at the admitted cutoff")
-
-    authority_derived_blob = git_optional(source, "rev-parse", f"{authority_commit}:derived.tex")
-    if authority_derived_blob is None or authority_derived_blob != previous_derived_blob:
-        raise RuntimeError("previous cutoff does not bind the pinned authority derived.tex")
-    if git_optional(source, "cat-file", "-e", f"{previous_registry}^{{commit}}") is not None:
-        require_ancestor(source, previous_registry, "previous registry cutoff", cutoff)
+    if expected_registry_parent != cutoff:
+        raise RuntimeError("new-overlay admission chain does not end at registry cutoff")
 
     projection_verifier = receipt.get("projection_verifier")
     if (
@@ -557,10 +724,16 @@ def load_composition_receipt(
         receipt.get("required_build_stems"), "required_build_stems"
     )
     missing_profile = [stem for stem in DEFAULT_STEMS if stem not in required_stems]
-    if missing_profile:
+    unexpected_profile = [stem for stem in required_stems if stem not in DEFAULT_STEMS]
+    if missing_profile or unexpected_profile:
+        details: list[str] = []
+        if missing_profile:
+            details.append("missing: " + ", ".join(missing_profile))
+        if unexpected_profile:
+            details.append("unexpected: " + ", ".join(unexpected_profile))
         raise RuntimeError(
-            "composition receipt weakens the full build profile; missing: "
-            + ", ".join(missing_profile)
+            "composition receipt does not exactly match the full build profile; "
+            + "; ".join(details)
         )
 
     affected_sources = composition.get("affected_sources")
@@ -594,25 +767,43 @@ def load_composition_receipt(
             or not STEM_PATTERN.fullmatch(relative_path.stem)
         ):
             raise RuntimeError(f"affected source is not a root chapter file: {relative!r}")
-        expected_sha = evidence.get("projection_sha256")
-        expected_blob = evidence.get("projection_git_blob")
+        expected_sha = evidence.get("composed_sha256")
+        expected_blob = evidence.get("composed_git_blob")
+        composed_bytes = evidence.get("composed_bytes")
+        before_sha = evidence.get("before_sha256")
+        before_blob = evidence.get("before_git_blob")
+        before_bytes = evidence.get("before_bytes")
         authority_sha = evidence.get("authority_sha256")
         authority_blob = evidence.get("authority_git_blob")
-        projection_bytes = evidence.get("projection_bytes")
         authority_bytes = evidence.get("authority_bytes")
         if (
             not isinstance(expected_sha, str)
             or not SHA256_PATTERN.fullmatch(expected_sha)
             or not isinstance(expected_blob, str)
             or not SHA1_PATTERN.fullmatch(expected_blob)
+            or not positive_int(composed_bytes)
+            or not isinstance(before_sha, str)
+            or not SHA256_PATTERN.fullmatch(before_sha)
+            or not isinstance(before_blob, str)
+            or not SHA1_PATTERN.fullmatch(before_blob)
+            or not positive_int(before_bytes)
             or not isinstance(authority_sha, str)
             or not SHA256_PATTERN.fullmatch(authority_sha)
             or not isinstance(authority_blob, str)
             or not SHA1_PATTERN.fullmatch(authority_blob)
-            or not positive_int(projection_bytes)
             or not positive_int(authority_bytes)
         ):
-            raise RuntimeError(f"invalid projection identity for {relative}")
+            raise RuntimeError(f"invalid composition identity for {relative}")
+        previous_identity = normalized_previous_sources.get(relative)
+        if (
+            previous_identity is None
+            or before_bytes != previous_identity.get("bytes")
+            or before_sha.upper() != str(previous_identity.get("sha256", "")).upper()
+            or before_blob != previous_identity.get("git_blob")
+        ):
+            raise RuntimeError(
+                f"affected source before identity does not match previous cutoff: {relative}"
+            )
         path = source / relative_path
         if not path.is_file():
             raise RuntimeError(f"composed source is missing: {relative}")
@@ -621,27 +812,31 @@ def load_composition_receipt(
         source_blob = git(
             source, "rev-parse", f"{composition_source_commit}:{relative}"
         )
+        before_source_blob = git(
+            source, "rev-parse", f"{previous_public_head}:{relative}"
+        )
+        base_source_blob = git(
+            source, "rev-parse", f"{composition_base_commit}:{relative}"
+        )
         authority_source_blob = git(source, "rev-parse", f"{authority_commit}:{relative}")
         authority_source_bytes = int(git(source, "cat-file", "-s", authority_source_blob))
-        materialized_source_blob = git_optional(
-            source, "rev-parse", f"{materialization_tip}:{relative}"
-        )
         if (
             observed_blob != expected_blob
             or source_blob != expected_blob
             or git_blob_sha256(source, observed_blob) != expected_sha.upper()
+            or before_source_blob != before_blob
+            or base_source_blob != before_blob
+            or int(git(source, "cat-file", "-s", before_source_blob))
+            != before_bytes
+            or git_blob_sha256(source, before_source_blob) != before_sha.upper()
             or authority_source_blob != authority_blob
             or authority_source_bytes != authority_bytes
             or git_blob_sha256(source, authority_source_blob) != authority_sha.upper()
-            or (
-                materialized_source_blob is not None
-                and materialized_source_blob != expected_blob
-            )
         ):
             raise RuntimeError(f"composed source identity mismatch: {relative}")
-        if int(git(source, "cat-file", "-s", observed_blob)) != projection_bytes:
-            raise RuntimeError(f"projection byte-count mismatch: {relative}")
-        if evidence.get("committed_matches_projection") is not True:
+        if int(git(source, "cat-file", "-s", observed_blob)) != composed_bytes:
+            raise RuntimeError(f"composed byte-count mismatch: {relative}")
+        if evidence.get("committed_matches_composition") is not True:
             raise RuntimeError(f"composition receipt does not close {relative}")
         affected_stems.append(relative_path.stem)
     if len(set(affected_stems)) != len(affected_stems):
@@ -650,7 +845,7 @@ def load_composition_receipt(
         raise RuntimeError("required_build_stems omits an affected source stem")
 
     binding: dict[str, object] = {
-        "schema": "unofficial-ai-integrated-stacks-composition/v2",
+        "schema": COMPOSITION_SCHEMA,
         "receipt": logical_path,
         # Bind canonical committed bytes rather than platform-dependent checkout
         # newlines. The clean-path check above proves the parsed worktree copy is
@@ -659,14 +854,18 @@ def load_composition_receipt(
         "receipt_git_blob": receipt_blob,
         "authority_commit": authority_commit,
         "authority_tree": authority_tree,
+        "previous_public_main_head": previous_public_head,
+        "previous_public_main_tree": previous_public_tree,
         "previous_registry_commit": previous_registry,
         "previous_last_admitted_overlay": previous_last,
-        "previous_derived_git_blob": previous_derived_blob,
+        "previous_source_blobs": normalized_previous_sources,
         "composition_mode": composition.get("mode"),
-        "materialization_tip": materialization_tip,
+        "composition_base_commit": composition_base_commit,
+        "composition_base_tree": composition_base_tree,
         "composition_source_commit": composition_source_commit,
         "composition_source_tree": composition_source_tree,
         "registry_cutoff_commit": cutoff,
+        "registry_cutoff_tree": cutoff_tree,
         "registry_import_commit": registry_import_commit,
         "registry_import_tree": registry_import_tree,
         "registry_overlays_path": overlays_relative,
@@ -675,8 +874,10 @@ def load_composition_receipt(
         "registered_overlays": len(entries),
         "registered_stable_ids": len(stable_ids),
         "last_admitted_overlay": registry.get("last_admitted_overlay"),
+        "new_overlays": normalized_new_overlays,
         "new_overlay_ids": [entry.get("id") for entry in registry_suffix],
-        "new_overlay_materialized_commits": materialized_commits,
+        "new_overlay_candidate_commits": candidate_commits,
+        "new_overlay_admission_commits": admission_commits,
         "required_build_stems": list(required_stems),
         "affected_source_stems": affected_stems,
         "affected_source_identities": affected_sources,
