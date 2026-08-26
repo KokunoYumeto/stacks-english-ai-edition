@@ -274,7 +274,7 @@ $d^1_1 = U(\delta^1_1)$ which are morphisms $U_1 \to U_0$.
 There are two morphisms $s^1_0 = U(\sigma^1_0)$, $s^1_1 = U(\sigma^1_1)$
 which are morphisms $U_1 \to U_2$. Three morphisms
 $d^2_0 = U(\delta^2_0)$, $d^2_1 = U(\delta^2_1)$, $d^2_2 = U(\delta^2_2)$
-which are morphisms $U_3 \to U_2$. And so on.
+which are morphisms $U_2 \to U_1$. And so on.
 
 \medskip\noindent
 Pictorially we think of $U$ as follows:
@@ -474,7 +474,7 @@ $\sigma^1_0 = U(\sigma^1_0)$, $\sigma^1_1 = U(\sigma^1_1)$
 which are morphisms $U_2 \to U_1$. Three morphisms
 $\delta^2_0 = U(\delta^2_0)$, $\delta^2_1 = U(\delta^2_1)$,
 $\delta^2_2 = U(\delta^2_2)$
-which are morphisms $U_2 \to U_3$. And so on.
+which are morphisms $U_1 \to U_2$. And so on.
 
 \medskip\noindent
 Pictorially we think of $U$ as follows:
@@ -507,7 +507,7 @@ all maps are $\text{id}_X$.
 
 \begin{example}
 \label{example-push-outs-simplicial-object}
-Suppose that $X\to Y$ is a morphism of $C$ such that all
+Suppose that $X\to Y$ is a morphism of $\mathcal{C}$ such that all
 the pushouts $Y\amalg_X Y \amalg_X \ldots \amalg_X Y$ exist.
 Then we set $U_n$ equal to the $(n + 1)$-fold pushout,
 and we let $\varphi : [n] \to [m]$ correspond to the map
@@ -524,7 +524,7 @@ The two maps $U_0 = Y \to U_1 = Y \amalg_X Y$ are the two coprojections.
 
 \begin{example}
 \label{example-simplex-cosimplicial-set}
-For every $n \geq 0$ we denote $C[n]$ the cosimplicial set
+For every $n \geq 0$ we denote by $C[n]$ the cosimplicial set
 $$
 \Delta \longrightarrow \textit{Sets},\quad
 [k] \longmapsto \Mor_{\Delta}([n], [k])
@@ -542,8 +542,8 @@ has a left inverse. In particular $\delta^n_i$ is a monomorphism.
 
 \begin{proof}
 This is true because
-$\sigma_i^{n - 1} \circ \delta^n_i = \text{id}_{U_n}$
-for $j < n$.
+$\sigma_i^{n - 1} \circ \delta^n_i = \text{id}_{U_{n - 1}}$
+for $i < n$; for $i = n$ use $\sigma_{n - 1}^{n - 1} \circ \delta^n_n = \text{id}_{U_{n - 1}}$.
 \end{proof}
 
 
@@ -1417,7 +1417,7 @@ used in the construction of $U_n$.
 
 \noindent
 Let $\mathcal{C}$ be a category with finite nonempty
-products. Let $U$, $V$ be simplicial objects $\mathcal{C}$.
+products. Let $U$, $V$ be simplicial objects of $\mathcal{C}$.
 In some cases the functor
 $$
 \text{Simp}(\mathcal{C})^{opp} \longrightarrow \textit{Sets}, \quad
@@ -1805,12 +1805,12 @@ equalities
 \times_{\Mor(X \times \Delta[n] \times U, T)}
 \Mor(X \times \Delta[n] \times W, T) \\
 & =
-\Mor(X \times \Delta[n] \times (V \amalg_U W), T))
+\Mor(X \times \Delta[n] \times (V \amalg_U W), T)
 \end{align*}
 Here we have used the fact that
 $$
 (X \times \Delta[n] \times V)
-\times_{X \times \Delta[n] \times U}
+\amalg_{X \times \Delta[n] \times U}
 (X \times \Delta[n] \times W)
 =
 X \times \Delta[n] \times (V \amalg_U W)
@@ -2380,7 +2380,7 @@ exists and is canonically isomorphic to $U_n$.
 
 \begin{proof}
 This is true because the category $(\Delta/[n])_{\leq m}$
-has an final object in this case, namely the identity
+has a final object in this case, namely the identity
 map $[n] \to [n]$.
 \end{proof}
 
@@ -2841,7 +2841,7 @@ both factor through the map
 $\epsilon^i_{j, j'} : [1] \to [i]$ defined by the rules
 $0 \mapsto j$, $1 \mapsto j'$.
 In other words, it is enough to check the inequalities for
-$i = 1$ and $u \in X_1$. In other words, we have
+$i = 1$ and $u \in U_1$. In other words, we have
 $$
 \Mor(U, \Delta[n])
 =

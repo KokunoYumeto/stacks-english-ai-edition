@@ -8735,7 +8735,7 @@ is a quasi-isomorphism. Hence a morphism $X \to Y[n]$
 in $D(\mathcal{A})$ can be represented as $fs^{-1}$ where
 $s : L^\bullet \to X^\bullet$ is a quasi-isomorphism,
 $f : L^\bullet \to Y^\bullet[n]$ a morphism, and
-$L^i = 0$ for $i < a$. Note that $f$ maps $L^i$ to $Y^{i + n}$.
+$L^i = 0$ for $i > a$. Note that $f$ maps $L^i$ to $Y^{i + n}$.
 Thus $f = 0$ if $n < b - a$ because always either $L^i$ or $Y^{i + n}$ is
 zero. If $n = b - a$, then $f$ corresponds exactly to a morphism
 $H^a(X) \to H^b(Y)$. Part (2) is a special case of (1).
@@ -9382,9 +9382,9 @@ $$
 computes $LF$. To see this, by Lemma \ref{lemma-find-existence-computes},
 it suffices to prove the following claim. Suppose that
 $$
-\colim Q_n^\bullet = Q^\bullet
-\xrightarrow{\ \alpha\ }
 P^\bullet = \colim P_n^\bullet
+\xrightarrow{\ \alpha\ }
+Q^\bullet = \colim Q_n^\bullet
 $$
 is a quasi-isomorphism of complexes, such that each
 $P_n^\bullet$, $Q_n^\bullet$ is a bounded above complex whose terms are
@@ -9436,7 +9436,7 @@ H^i(F(\colim P_n^\bullet)) =
 H^i(\colim F(P_n^\bullet)) = \colim H^i(F(P_n^\bullet))
 $$
 and similarly for $Q^\bullet$ we conclude that
-$H^i(\alpha) : H^i(F(P^\bullet) \to H^i(F(Q^\bullet)$ is an isomorphism
+$H^i(F(\alpha)) : H^i(F(P^\bullet)) \to H^i(F(Q^\bullet))$ is an isomorphism
 and the claim follows.
 \end{proof}
 
@@ -9552,13 +9552,13 @@ $S^{-1}\mathcal{D}$ with value $LG(M)$. Thus we have
 The first equality holds by
 Categories, Lemma \ref{categories-lemma-characterize-essentially-constant-ind}.
 The second equality holds by the definition of morphisms in
-$D(\mathcal{B})$, see Categories, Remark
+$(S')^{-1}\mathcal{D}'$, see Categories, Remark
 \ref{categories-remark-right-localization-morphisms-colimit}.
 The third equality holds by
 Categories, Lemma \ref{categories-lemma-colimits-commute}.
 The fourth equality holds because $F$ and $G$ are adjoint.
 The fifth equality holds by definition of morphism
-in $D(\mathcal{A})$, see Categories, Remark
+in $S^{-1}\mathcal{D}$, see Categories, Remark
 \ref{categories-remark-left-localization-morphisms-colimit}.
 The sixth equality holds by
 Categories, Lemma \ref{categories-lemma-characterize-essentially-constant-pro}.
@@ -9705,7 +9705,7 @@ product of the objects $I_t^\bullet$ in $D(\mathcal{A})$.
 \end{lemma}
 
 \begin{proof}
-Let $K^\bullet$ be an complex. Observe that the complex
+Let $K^\bullet$ be a complex. Observe that the complex
 $$
 C :
 \prod\nolimits_b \Hom(K^{-b}, I^{b - 1}) \to
@@ -9866,7 +9866,7 @@ Then $u$ transforms K-injective complexes into K-injective complexes.
 
 \begin{proof}
 Let $I^\bullet$ be a K-injective complex of $\mathcal{A}$.
-Let $M^\bullet$ be a acyclic complex of $\mathcal{B}$.
+Let $M^\bullet$ be an acyclic complex of $\mathcal{B}$.
 As $v$ is exact we see that $v(M^\bullet)$ is an acyclic complex.
 By adjointness we get
 $$
@@ -9989,7 +9989,7 @@ Then
 consisting of right acyclic objects for $F$,
 \item for $E \in D(\mathcal{A})$
 \begin{enumerate}
-\item $H^i(RF(\tau_{\leq a}E) \to H^i(RF(E))$ is an isomorphism
+\item $H^i(RF(\tau_{\leq a}E)) \to H^i(RF(E))$ is an isomorphism
 for $i \leq a$,
 \item $H^i(RF(E)) \to H^i(RF(\tau_{\geq b - n + 1}E))$ is an isomorphism
 for $i \geq b$,
@@ -10013,7 +10013,7 @@ $m \geq n$.
 \medskip\noindent
 We are going to use Lemma \ref{lemma-replace-resolution} with the function
 $d : \Ob(\mathcal{A}) \to \{0, 1, 2, \ldots \}$ given by
-$d(A) = \max \{0\} \cup \{i \mid R^iF(A) \not = 0\}$.
+$d(A) = \max\bigl(\{0\} \cup \{i \mid R^iF(A) \not = 0\}\bigr)$.
 The first assumption of Lemma \ref{lemma-replace-resolution}
 is our assumption (1). The second assumption of
 Lemma \ref{lemma-replace-resolution} follows from the fact
@@ -10115,7 +10115,7 @@ Then
 consisting of left acyclic objects for $F$,
 \item for $E \in D(\mathcal{A})$
 \begin{enumerate}
-\item $H^i(LF(\tau_{\leq a + n - 1}E) \to H^i(LF(E))$ is an isomorphism
+\item $H^i(LF(\tau_{\leq a + n - 1}E)) \to H^i(LF(E))$ is an isomorphism
 for $i \leq a$,
 \item $H^i(LF(E)) \to H^i(LF(\tau_{\geq b}E))$ is an isomorphism
 for $i \geq b$,
@@ -10204,7 +10204,7 @@ colimit of the first system and let $(L, j_n, d)$ be a derived
 colimit of the second system with notation as in
 Remark \ref{remark-uniqueness-derived-colimit}.
 Then there exists a morphism $a : K \to L$
-such that $a \circ i_n = j_n$ and $d \circ a = (a_n[1]) \circ c$.
+such that $a \circ i_n = j_n \circ a_n$ and $d \circ a = (a_n[1]) \circ c$.
 This follows from TR3 applied to the defining distinguished
 triangles.
 \end{remark}
@@ -10324,7 +10324,7 @@ We omit the verification that $\alpha$ is unique.
 \begin{lemma}
 \label{lemma-compute-colimit}
 Let $\mathcal{A}$ be an abelian category. Assume colimits over $\mathbf{N}$
-exist and are exact. Then countable direct sums exists and are exact.
+exist and are exact. Then countable direct sums exist and are exact.
 Moreover, if $(A_n, f_n)$ is a system over $\mathbf{N}$, then there is
 a short exact sequence
 $$
@@ -10537,7 +10537,7 @@ $$
 a''((k_n)) =
 (a_n(k_{m(n)} + f(k_{m(n) + 1}) + \ldots + f(k_{m(n + 1) - 1})))
 $$
-where each occurence of $f$ denotes a suitable transition map of
+where each occurrence of $f$ denotes a suitable transition map of
 the inverse system $(K_n)$. Then the solid diagram
 $$
 \xymatrix{
@@ -10557,7 +10557,7 @@ More on Algebra, Lemma \ref{more-algebra-lemma-pro-isomorphism-Rlim}.
 \label{remark-map-into-derived-limit-truncations}
 Let $\mathcal{A}$ be an abelian category. Let $K^\bullet$ be a
 complex of $\mathcal{A}$. Then $\tau_{\geq -n}K^\bullet$ is an
-inverse system of complexes and which in particular determines
+inverse system of complexes which in particular determines
 an inverse system in $D(\mathcal{A})$. Let us assume that
 $R\lim \tau_{\geq -n}K^\bullet$ exists. Then the canonical maps
 $c_n : K^\bullet \to \tau_{\geq -n}K^\bullet$ are compatible with the
@@ -10677,7 +10677,7 @@ R\lim\tau_{\geq -n}K \to
 $$
 By Lemma \ref{lemma-products} we have
 $$
-H^p(\prod \tau_{\geq -n}K) = \prod\nolimits_{p \geq -n} H^p(K)
+H^p(\prod \tau_{\geq -n}K) = \prod\nolimits_{n : p \geq -n} H^p(K)
 $$
 It follows in a straightforward manner from the long exact cohomology
 sequence of the displayed distinguished triangle
@@ -10794,7 +10794,7 @@ Immediate from Lemmas \ref{lemma-associativity-star}, \ref{lemma-smd-star}, and
 Let $F : \mathcal{T} \to \mathcal{T}'$ be an exact functor of triangulated
 categories. Given a full subcategory $\mathcal{A}$ of $\mathcal{T}$ we denote
 $F(\mathcal{A})$ the full subcategory of $\mathcal{T}'$ whose objects
-consists of all objects $F(A)$ with $A \in \Ob(\mathcal{A})$. We have
+consist of all objects $F(A)$ with $A \in \Ob(\mathcal{A})$. We have
 $$
 F(\mathcal{A}[a, b]) = F(\mathcal{A})[a, b]
 $$
@@ -10868,11 +10868,11 @@ $smd(add(\mathcal{E}[a, b])^{\star (b - a + 1)})$.
 \begin{proof}
 We will use Lemma \ref{lemma-cone-n} without further mention.
 We will prove (2) which trivially implies (1). We use induction
-on $b - a$. If $b - a = 0$, then $K$ is isomorphic to $H^i(K)[-a]$
+on $b - a$. If $b - a = 0$, then $K$ is isomorphic to $H^a(K)[-a]$
 in $\mathcal{D}$ and the result is immediate. If $b - a > 0$, then
 we consider the distinguished triangle
 $$
-\tau_{\leq b - 1}K^\bullet \to K^\bullet \to K^b[-b]
+\tau_{\leq b - 1}K \to K \to H^b(K)[-b]
 $$
 and we conclude by induction on $b - a$. We omit the proof of (3) and (4).
 \end{proof}
@@ -10886,7 +10886,7 @@ Let $a \leq b$ and $\mathcal{E} \subset \Ob(\mathcal{T})$
 be a subset such that $H^i(E) = 0$ for $E \in \mathcal{E}$
 and $i \not \in [a, b]$.
 Then for $X \in smd(add(\mathcal{E}[-m, m])^{\star n})$
-we have $H^i(X) = 0$ for $i \not \in [-m + na, m + nb]$.
+we have $H^i(X) = 0$ for $i \not \in [a - m, b + m]$.
 \end{lemma}
 
 \begin{proof}
@@ -10909,7 +10909,7 @@ our definition of $add(\mathcal{A})$ is different).
 
 \medskip\noindent
 Let $\mathcal{D}$ be a triangulated category. Let $E$ be an object
-of $\mathcal{D}$. Denote $\langle E \rangle_1$ the strictly full subcategory
+of $\mathcal{D}$. Denote by $\langle E \rangle_1$ the strictly full subcategory
 of $\mathcal{D}$ consisting of objects in $\mathcal{D}$ isomorphic to
 direct summands of finite direct sums
 $$
@@ -10962,7 +10962,7 @@ smd(\langle E \rangle_n \star \langle E \rangle_{n'})$.
 The left equality in the displayed formula follows from
 Lemmas \ref{lemma-associativity-star} and \ref{lemma-smd-star}
 and induction. The middle equality is a matter of notation.
-Since $\langle E \rangle_1 = smd(add(E[-\infty, \infty])])$
+Since $\langle E \rangle_1 = smd(add(E[-\infty, \infty]))$
 and since $E[-\infty, \infty] = \bigcup_{m \geq 1} E[-m, m]$
 we see from Remark \ref{remark-operations-unions} and
 Lemma \ref{lemma-smd-star} that we get the equality on the right.
@@ -10999,7 +10999,7 @@ Finally, let $\mathcal{D}' \subset \mathcal{D}$ be a
 strictly full, saturated, triangulated subcategory of $\mathcal{D}$
 containing $E$. Then
 $\mathcal{D}'[-\infty, \infty] \subset \mathcal{D}'$,
-$add(\mathcal{D}) \subset \mathcal{D}'$,
+$add(\mathcal{D}') \subset \mathcal{D}'$,
 $smd(\mathcal{D}') \subset \mathcal{D}'$, and
 $\mathcal{D}' \star \mathcal{D}' \subset \mathcal{D}'$.
 In other words, all the operations we used to construct
@@ -11254,8 +11254,8 @@ $C \to E \to X_n$ may not equal the given morphism $C \to X_n$, but
 the compositions into $Y_{n - 1}$ are equal. Let $C \to X_{n - 1}$
 be a morphism that lifts the difference. By induction assumption we
 can factor this through a morphism $E''' \to X_{n - 1}$ with
-$E''$ an object of $\langle \bigoplus_{i \in I'''} E_i \rangle$
-for some finite subset $I' \subset I$. Thus we see that we get
+$E'''$ an object of $\langle \bigoplus_{i \in I'''} E_i \rangle$
+for some finite subset $I''' \subset I$. Thus we see that we get
 a solution on considering $E \oplus E''' \to X_n$ because
 $E \oplus E'''$ is an object of
 $\langle \bigoplus_{i \in I' \cup I'' \cup I'''} E_i \rangle$.
@@ -11305,7 +11305,7 @@ find that $X \to \text{hocolim} X_n$ factors through $X_n$ for
 some $n$ (Lemma \ref{lemma-commutes-with-countable-sums}).
 Thus $X$ is a direct summand of $X_n$.
 By Lemma \ref{lemma-factor-through} we see that $X$ is an
-object of $\langle E \rangle$ and the lemma is proven.
+object of $\langle E \rangle$ and the proposition is proven.
 \end{proof}
 
 
@@ -11621,7 +11621,7 @@ $\mathcal{D}' = \mathcal{D}$.
 Let $Y$ be an object of $\mathcal{D}$ and set $H(-) = \Hom_\mathcal{D}(-, Y)$.
 Then $H$ is a cohomological functor which transforms direct sums into products.
 By the construction in the first part of the proof we obtain a morphism
-$\colim X_n = X \to Y$ such that
+$\text{hocolim} X_n = X \to Y$ such that
 $\Hom_\mathcal{D}(E, X) \to \Hom_\mathcal{D}(E, Y)$ is bijective for all
 $E \in \mathcal{E}$. Then assumption (1) tells us that $X \to Y$ is an
 isomorphism! On the other hand, by construction $X_1, X_2, \ldots$
@@ -11740,7 +11740,7 @@ $\mathcal{A} \subset \mathcal{D}$ be a full subcategory invariant
 under all shifts. Then both the right orthogonal $\mathcal{A}^\perp$ and
 the left orthogonal ${}^\perp\mathcal{A}$ of $\mathcal{A}$
 are strictly full, saturated\footnote{Definition \ref{definition-saturated}.},
-triangulated subcagories of $\mathcal{D}$.
+triangulated subcategories of $\mathcal{D}$.
 \end{lemma}
 
 \begin{proof}
@@ -11886,7 +11886,7 @@ subcategory having the same isomorphism classes as $\mathcal{A}$;
 details omitted. Assume $\mathcal{A}$ is strictly full. If we show that
 $\mathcal{A} = {}^\perp(\mathcal{A}^\perp)$, then
 $\mathcal{A}$ will be saturated by Lemma \ref{lemma-orthogonal-triangulated}.
-Since the incusion $\mathcal{A} \subset {}^\perp(\mathcal{A}^\perp)$
+Since the inclusion $\mathcal{A} \subset {}^\perp(\mathcal{A}^\perp)$
 is clear it suffices to prove the other inclusion.
 Let $X$ be an object of ${}^\perp(\mathcal{A}^\perp)$.
 Choose a distinguished triangle $A \to X \to B \to A[1]$
@@ -12274,7 +12274,7 @@ $Y_1[1] \to Y_2[2] \to X_2[2]$ we see that $\Hom(X_2[2], Y'_n[n]) = 0$
 guarantees that the third vertical arrow is unique. And so on.
 
 \medskip\noindent
-Proof of (2). The composition $Y_n[n] \to Y'_n[n] \to X_n[n]$ is
+Proof of (2). The composition $Y_n[n] \to Y'_n[n] \to X'_n[n]$ is
 the same as the composition $Y_n[n] \to X_n[n] \to X'_n[n]$ and hence
 is unique. Then using the distinguished triangle
 $Y'_{n - 1}[n - 1] \to Y'_n[n] \to X'_n[n]$ we see that it suffices
@@ -12547,7 +12547,7 @@ Categories, Remark \ref{categories-remark-pro-category-copresheaves}.
 
 \begin{lemma}
 \label{lemma-pro-isomorphism-bis}
-Let $\mathcal{A}$ be an abelian category.
+Let $\mathcal{A}$ be an abelian category and let
 $$
 A_n \to B_n
 $$
@@ -12556,7 +12556,7 @@ be an inverse system of maps of $D(\mathcal{A})$. Assume
 \item there exist integers $a \leq b$ such that $H^i(A_n) = 0$
 and $H^i(B_n) = 0$ for $i \not \in [a, b]$, and
 \item the inverse system of maps $H^i(A_n) \to H^i(B_n)$ of $\mathcal{A}$
-define an isomorphism of pro-objects of $\mathcal{A}$
+defines an isomorphism of pro-objects of $\mathcal{A}$
 for all $i \in \mathbf{Z}$.
 \end{enumerate}
 Then the maps $A_n \to B_n$
