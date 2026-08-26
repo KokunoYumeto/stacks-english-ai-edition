@@ -1419,6 +1419,10 @@ def main(argv: list[str] | None = None) -> int:
     require_ancestor(readback_commit, "HEAD", "R18-R19 readback-to-current", errors)
     if readback_commit != release_state.get("published_content_head"):
         errors.append("R18-R19 readback and published-content heads differ")
+    metadata_head = require_commit(
+        release_state.get("metadata_head"), "R18-R19 metadata head", errors
+    )
+    require_ancestor(metadata_head, "HEAD", "R18-R19 metadata-to-current", errors)
     checked_paths = readback.get("checked_paths")
     if not isinstance(checked_paths, list) or not checked_paths:
         errors.append("R18-R19 release receipt lacks checked public paths")
@@ -1481,6 +1485,14 @@ def main(argv: list[str] | None = None) -> int:
         "global_fixed_point_sweep"
     ):
         errors.append("R18-R19 release fixed-point sweep mismatch")
+    workflow = release_receipt.get("workflow")
+    if (
+        not isinstance(workflow, dict)
+        or workflow.get("status") != "completed"
+        or workflow.get("conclusion") != "success"
+        or workflow.get("head_sha") != release_state.get("metadata_head")
+    ):
+        errors.append("R18-R19 release receipt lacks a passing exact-head workflow record")
 
     historical_receipt = load_json_object(
         ROOT / "validation/unification-release-2026-08-25.json",
