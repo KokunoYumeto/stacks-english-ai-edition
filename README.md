@@ -18,8 +18,9 @@ machine-readable validation evidence.
 [Browse the source](chapters.tex) ·
 [Errata registry](ai-integrated/registry/overlays.json) ·
 [Validation](VALIDATION.md) ·
-[Current build receipt](validation/unified-fixed-point-2026-08-25-r17.json) ·
+[Current build receipt](validation/unified-fixed-point-2026-08-25-r19.json) ·
 [Release receipt](validation/unification-release-2026-08-25.json) ·
+[Roadmap](ROADMAP.md) ·
 [Provenance and frozen histories](PROVENANCE.md) ·
 [License](COPYING)
 
@@ -40,10 +41,10 @@ The pinned upstream baseline is
 | --- | --- | --- | --- |
 | FAC | Integrated | Complete review of 661 source targets; 37 new theorem or lemma statements; deterministic validators pass | [Status](fac/STATUS.md) |
 | Tôhoku | Integrated through sealed r71 | 1,066 decisions, 679 decided units, and no remaining gap-class dispositions | [r71 status](tohoku_r71/STATUS.md) · [working dossier](tohoku/STATUS.md) |
-| GAGA | Integrated through r3 | All 126 units classified, all 79 substantive units decided, and a validated 22-page English chapter | [r3 status](gaga_r3/STATUS.md) · [chapter source](gaga.tex) |
+| GAGA | Integrated through r3 | All 126 units classified, all 79 substantive units decided, and a validated 23-page English chapter | [r3 status](gaga_r3/STATUS.md) · [chapter source](gaga.tex) |
 | FGA | Integrated and notation-normalized | 1,253 source units and 1,612 term links closed; fixed-point 83-page Moduli build recorded | [Overview](fga/README.md) · [status](fga/status.md) |
 | EGA | Active integration | Direct-French review through EGA I 6.1.13; 1,059 active edges across 355 generated units; next cursor EGA I 6.2.1 | [EGA dossier](ega/README.md) |
-| Errata | Composed through the R17 release cutoff | 17 admitted batches containing 444 stable correction IDs at registry commit `39d8146c`; post-cutoff registry intake is composed in a later source cycle | [Registry](ai-integrated/registry/overlays.json) · [candidate evidence](ai-integrated/candidates/commons/stacks/errata/) |
+| Errata | Composed through the frozen R19 cutoff | 19 admitted batches containing 507 stable correction IDs at external cutoff `24861b30`; R20 and later work is excluded from this edition | [Registry](ai-integrated/registry/overlays.json) · [candidate evidence](ai-integrated/candidates/commons/stacks/errata/) |
 
 These labels are deliberately precise. “Integrated,” “active,” “admitted,” and
 “candidate” are not interchangeable, and no local label is represented as an
@@ -63,7 +64,7 @@ official Stacks tag.
 | [`ai-integrated/`](ai-integrated/README.md) | Admitted errata, candidates, schemas, provenance, and release records |
 | [`VALIDATION.md`](VALIDATION.md) | Reproducible checks and build guidance |
 | [`validation/`](validation/README.md) | Machine-readable unified-build receipts |
-| [`PROVENANCE.md`](PROVENANCE.md) | Upstream identity, merge architecture, and frozen pre-unification histories |
+| [`PROVENANCE.md`](PROVENANCE.md) | Upstream identity, linear publication architecture, and frozen pre-unification histories |
 
 ## Build
 

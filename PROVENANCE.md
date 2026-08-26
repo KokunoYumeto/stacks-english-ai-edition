@@ -53,13 +53,16 @@ The histories were combined without flattening either input:
    supplied the FAC/Tôhoku/GAGA/FGA and notation-normalized Stacks tree.
 2. EGA scaffold and export history through
    `91df7f1c96bd4973264c29b0e121253a05d1d361` was merged into that source.
-3. The complete registry history through
-   `39d8146ca0af49b1d9eaf0742559f64d712bfd8e` was imported without squashing
-   under `ai-integrated/`. Its imported tree initially matched the source
-   registry tree exactly.
-4. Each admitted errata batch R1–R17 was independently materialized against
-   the pinned upstream source, composed in registry order, and merged into the
-   live TeX tree.
+3. The complete registry content through the frozen external cutoff
+   `24861b306a34991c0da3d803f92d67e206c805da` was transferred byte-for-byte
+   under `ai-integrated/`. The protected public history records that transfer
+   as the linear import `c06400fc323abb62990f37563cc31e9ae93fbf8e`; the
+   external cutoff remains provenance and is not asserted as a `main` ancestor.
+4. Each admitted errata batch R1–R19 was independently materialized against
+   the pinned upstream source and composed in registry order. The cumulative
+   `derived.tex` projection is committed at source `1f204fb27ff418fd0e75cb35ac8dab5256037f15`,
+   a direct linear successor of the registry import; the protected publication
+   suffix contains no merge commits.
 5. The independent `injectives.tex` correction was carried into the unified
    source.
 
@@ -72,4 +75,4 @@ complete evidence and registry system remains browsable under
 The unified repository retains the pre-unification integration heads as
 clearly named historical branches in addition to the integrated default
 branch. Their presence is provenance, not a claim that they remain competing
-editions.
+editions. R20 and later registry work remains outside this R19 fixed point.
