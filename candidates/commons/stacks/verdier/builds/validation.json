@@ -1,0 +1,47 @@
+{
+  "schema": "mathematics-commons-stacks-verdier-build-validation/v1",
+  "status": "PASS",
+  "passed": true,
+  "generated_at_utc": "2026-08-26T00:57:30Z",
+  "scope": "bounded baseline-versus-candidate build of derived.tex and its seven direct external-label providers",
+  "stems": [
+    "sets",
+    "categories",
+    "algebra",
+    "homology",
+    "more-algebra",
+    "injectives",
+    "examples",
+    "derived"
+  ],
+  "composition": {
+    "operation_id": "VDR-STK-COMP-0001",
+    "preimage_bytes": 449677,
+    "preimage_sha256": "EFDA4CB361DD40909D1991161EAE716E58B6CF9E79380971502E1DA12396D402",
+    "payload_bytes": 2339,
+    "payload_sha256": "FCF51C107444D5ED31C32ABC73F19ECC05AAFA5C3FD078CF29B5A743C2A414B1",
+    "postimage_bytes": 452016,
+    "postimage_sha256": "9DDB56AA316DE622475050F6838D1DF957110021935823B4C9472931F2C0F106",
+    "prefix_and_suffix_unchanged": true,
+    "payload_inserted_once": true
+  },
+  "fixed_point": {
+    "vector_suffixes": [
+      ".pdf",
+      ".aux",
+      ".toc",
+      ".out",
+      ".bbl"
+    ],
+    "baseline_confirming_sweep": 4,
+    "candidate_confirming_sweep": 3,
+    "baseline_vector_sha256": "4EE213086DF5677DEAE0D8EF854B3C2B4A63DB7B2B813AFA9ABC2C219757C752",
+    "candidate_vector_sha256": "1E659045642B96702B0C423BC68FE0717C2EFB16F1263586FBABE6286CE10BCE"
+  },
+  "diagnostics": {
+    "baseline_count": 49,
+    "candidate_count": 49,
+    "new_candidate_diagnostics": [],
+    "new_candidate_diagnostic_count": 0
+  }
+}

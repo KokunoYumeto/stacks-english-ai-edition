@@ -1,0 +1,248 @@
+{
+  "schema": "mathematics-commons-stacks-verdier-units/v1",
+  "candidate_id": "stacks-verdier-a04446e-1-2-13-r1",
+  "authority_sha256": "6214C252BACEBA5584E3C4AEB564C129851941C1A9250BABAB45B79A3939B0AE",
+  "payload_state": "authored_built_validated",
+  "composition_operation_id": "VDR-STK-COMP-0001",
+  "payload_sha256": "FCF51C107444D5ED31C32ABC73F19ECC05AAFA5C3FD078CF29B5A743C2A414B1",
+  "lifecycle": {
+    "build_state": "validated_pass",
+    "visual_qa_state": "visual_qa_passed",
+    "build_receipt_sha256": "88F838541743D036D9EB3B848593FCE056358675397671D54D8FCD93AD933D94",
+    "validation_sha256": "255AE7BBCE7C615C36F6D574BE74DB4705ECAF0C08ABACF882E9DA6E2A651EC0",
+    "visual_qa_sha256": "97BC160345371BB0F719282B1103A08BE23785B74327534AA17D490459E1A3AD",
+    "derived_pdf_sha256": "EDB4BED1F5A166B34562B63D44EEEE70C3F421AAFDD91F31C142E1B0EEAEF96A",
+    "independent_review": {
+      "path": "replay/independent-review.json",
+      "bytes": 14754,
+      "sha256": "5FE1320F22A25385EB548B4AD6223B1F1C47B77E0A0D275E76EA2E38ABB4B359",
+      "status": "PASS",
+      "reviewed_at_utc": "2026-08-26T01:25:26Z",
+      "unresolved_defects": 0
+    },
+    "review_state": "performed",
+    "independent_replay": "passed",
+    "admission_state": "not_admitted"
+  },
+  "unit_count": 12,
+  "units": [
+    {
+      "id": "verdier:ast239:1.2.13",
+      "type": "proposition",
+      "anchor_id": "ch2-1-2-13",
+      "physical_page": 121,
+      "english_source": "content/en/p121.tex",
+      "english_lines": {
+        "start": 77,
+        "end": 85
+      },
+      "summary": "A functorial distinguished-triangle assignment, together with countable products or countable coproducts, forces every arrow to have a split projection-then-inclusion form.",
+      "target": {
+        "kind": "proposed_new_lemma",
+        "label": "lemma-functorial-triangles-decomposable",
+        "disposition": "authored_candidate_payload"
+      },
+      "status": "mapped_payload_authored_built_validated"
+    },
+    {
+      "id": "verdier:ast239:1.2.13:formula:triangle-assignment",
+      "type": "formula",
+      "anchor_id": "ch2-1-2-13-tr-assignment",
+      "physical_page": 121,
+      "english_source": "content/en/p121.tex",
+      "english_lines": {
+        "start": 86,
+        "end": 91
+      },
+      "summary": "For an arrow f from X to Y, denote the functorially selected triangle by X to Y to T(f) to X shifted by one.",
+      "target": {
+        "kind": "proposed_new_lemma",
+        "label": "lemma-functorial-triangles-decomposable",
+        "disposition": "authored_candidate_payload"
+      },
+      "status": "mapped_payload_authored_built_validated"
+    },
+    {
+      "id": "verdier:ast239:1.2.13:hypothesis:countable-products-or-coproducts",
+      "type": "hypothesis",
+      "anchor_id": "ch2-1-2-13-countability-hypothesis",
+      "physical_page": 122,
+      "english_source": "content/en/p122.tex",
+      "english_lines": {
+        "start": 9,
+        "end": 12
+      },
+      "summary": "Assume that either all countable products or all countable coproducts needed in the triangulated category exist.",
+      "target": {
+        "kind": "proposed_new_lemma",
+        "label": "lemma-functorial-triangles-decomposable",
+        "disposition": "authored_candidate_payload"
+      },
+      "status": "mapped_payload_authored_built_validated"
+    },
+    {
+      "id": "verdier:ast239:1.2.13:proof:annihilated-morphism",
+      "type": "proof_step",
+      "anchor_id": "ch2-1-2-13-proof-morphism",
+      "physical_page": 122,
+      "english_source": "content/en/p122.tex",
+      "english_lines": {
+        "start": 13,
+        "end": 16
+      },
+      "summary": "Fix an arrow v into the source of f whose composite with f is zero, and regard it as a morphism from the arrow W to zero into f.",
+      "target": {
+        "kind": "proposed_new_lemma",
+        "label": "lemma-functorial-triangles-decomposable",
+        "disposition": "authored_candidate_payload"
+      },
+      "status": "mapped_payload_authored_built_validated"
+    },
+    {
+      "id": "verdier:ast239:1.2.13:diagram:arrow-square",
+      "type": "diagram",
+      "anchor_id": "ch2-1-2-13-morphism-square",
+      "physical_page": 122,
+      "english_source": "content/en/p122.tex",
+      "english_lines": {
+        "start": 17,
+        "end": 25
+      },
+      "summary": "The relation f composed with v equals zero gives the commuting square between the arrows W to zero and X to Y.",
+      "target": {
+        "kind": "proposed_new_lemma",
+        "label": "lemma-functorial-triangles-decomposable",
+        "disposition": "authored_candidate_payload"
+      },
+      "status": "mapped_payload_authored_built_validated"
+    },
+    {
+      "id": "verdier:ast239:1.2.13:diagram:triangle-morphism",
+      "type": "diagram",
+      "anchor_id": "ch2-1-2-13-1",
+      "physical_page": 122,
+      "english_source": "content/en/p122.tex",
+      "english_lines": {
+        "start": 26,
+        "end": 45
+      },
+      "summary": "Functoriality sends the arrow square to a morphism from the selected triangle of W to zero into the selected triangle of f.",
+      "target": {
+        "kind": "proposed_new_lemma",
+        "label": "lemma-functorial-triangles-decomposable",
+        "disposition": "authored_candidate_payload"
+      },
+      "status": "mapped_payload_authored_built_validated"
+    },
+    {
+      "id": "verdier:ast239:1.2.13:claim:zero-target-boundary-isomorphism",
+      "type": "claim",
+      "anchor_id": "ch2-1-2-13-bottom-triangle",
+      "physical_page": 122,
+      "english_source": "content/en/p122.tex",
+      "english_lines": {
+        "start": 46,
+        "end": 50
+      },
+      "summary": "In the selected distinguished triangle of the zero-target arrow W to zero, the boundary from its third object to the shift of W is invertible.",
+      "target": {
+        "kind": "proposed_new_lemma",
+        "label": "lemma-functorial-triangles-decomposable",
+        "disposition": "authored_candidate_payload"
+      },
+      "status": "mapped_payload_authored_built_validated"
+    },
+    {
+      "id": "verdier:ast239:1.2.13:construction:alpha",
+      "type": "construction",
+      "anchor_id": "ch2-1-2-13-alpha-definition",
+      "physical_page": 122,
+      "english_source": "content/en/p122.tex",
+      "english_lines": {
+        "start": 51,
+        "end": 57
+      },
+      "summary": "Shift the third component of the triangle morphism and compose it with the shifted inverse boundary to define a map alpha(v) from W to T(f) shifted by minus one.",
+      "target": {
+        "kind": "proposed_new_lemma",
+        "label": "lemma-functorial-triangles-decomposable",
+        "disposition": "authored_candidate_payload"
+      },
+      "status": "mapped_payload_authored_built_validated"
+    },
+    {
+      "id": "verdier:ast239:1.2.13:diagram:alpha-lift",
+      "type": "diagram",
+      "anchor_id": "ch2-1-2-13-alpha-diagram",
+      "physical_page": 122,
+      "english_source": "content/en/p122.tex",
+      "english_lines": {
+        "start": 58,
+        "end": 69
+      },
+      "summary": "The constructed alpha(v) lifts v through the shifted boundary of the selected triangle and its composite with f is zero.",
+      "target": {
+        "kind": "proposed_new_lemma",
+        "label": "lemma-functorial-triangles-decomposable",
+        "disposition": "authored_candidate_payload"
+      },
+      "status": "mapped_payload_authored_built_validated"
+    },
+    {
+      "id": "verdier:ast239:1.2.13:claim:kernel-section",
+      "type": "claim",
+      "anchor_id": "ch2-1-2-13-alpha-section",
+      "physical_page": 122,
+      "english_source": "content/en/p122.tex",
+      "english_lines": {
+        "start": 70,
+        "end": 77
+      },
+      "summary": "Naturality in annihilated arrows makes alpha a section of the canonical transformation from the functor represented by T(f) shifted by minus one onto the kernel functor of f.",
+      "target": {
+        "kind": "proposed_new_lemma",
+        "label": "lemma-functorial-triangles-decomposable",
+        "disposition": "authored_candidate_payload"
+      },
+      "status": "mapped_payload_authored_built_validated"
+    },
+    {
+      "id": "verdier:ast239:1.2.13:claim:projector-kernel",
+      "type": "claim",
+      "anchor_id": "ch2-1-2-13-projector-kernel",
+      "physical_page": 122,
+      "english_source": "content/en/p122.tex",
+      "english_lines": {
+        "start": 78,
+        "end": 81
+      },
+      "summary": "The kernel functor is a retract of a representable functor and hence is controlled by an idempotent on T(f) shifted by minus one; countable products or coproducts split that idempotent.",
+      "target": {
+        "kind": "existing_stacks_result",
+        "tag": "05QW",
+        "label": "derived-lemma-projectors-have-images-triangulated",
+        "disposition": "duplicate_excluded_from_new_payload"
+      },
+      "status": "dispositioned_existing_no_payload"
+    },
+    {
+      "id": "verdier:ast239:1.2.13:conclusion:decomposable",
+      "type": "conclusion",
+      "anchor_id": "ch2-1-2-13-proof-complete",
+      "physical_page": 122,
+      "english_source": "content/en/p122.tex",
+      "english_lines": {
+        "start": 82,
+        "end": 84
+      },
+      "summary": "Representability of the kernel of f puts f into the split projection-then-inclusion normal form.",
+      "target": {
+        "kind": "existing_stacks_result",
+        "tag": "05QU",
+        "label": "derived-lemma-when-split",
+        "disposition": "duplicate_excluded_from_new_payload"
+      },
+      "status": "dispositioned_existing_no_payload"
+    }
+  ]
+}
