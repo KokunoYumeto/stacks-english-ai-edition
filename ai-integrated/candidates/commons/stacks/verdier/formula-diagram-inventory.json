@@ -1,0 +1,167 @@
+{
+  "schema": "mathematics-commons-stacks-verdier-formula-diagram-inventory/v1",
+  "candidate_id": "stacks-verdier-a04446e-1-2-13-r1",
+  "classification": "Every one of the twelve source units is classified exactly once as formula-sensitive or diagram-sensitive; the independently worded fragment is authored, fixed-point-build validated, and visually checked.",
+  "payload": {
+    "path": "payload/fragments/derived-functorial-triangles.tex",
+    "bytes": 2339,
+    "sha256": "FCF51C107444D5ED31C32ABC73F19ECC05AAFA5C3FD078CF29B5A743C2A414B1",
+    "composition_operation_id": "VDR-STK-COMP-0001"
+  },
+  "build_evidence": {
+    "build_receipt": {
+      "path": "builds/build-receipt.json",
+      "bytes": 2046,
+      "sha256": "88F838541743D036D9EB3B848593FCE056358675397671D54D8FCD93AD933D94",
+      "status": "PASS"
+    },
+    "validation": {
+      "path": "builds/validation.json",
+      "bytes": 1468,
+      "sha256": "255AE7BBCE7C615C36F6D574BE74DB4705ECAF0C08ABACF882E9DA6E2A651EC0",
+      "status": "PASS",
+      "new_candidate_diagnostic_count": 0
+    },
+    "visual_qa": {
+      "path": "builds/visual-qa.json",
+      "bytes": 1819,
+      "sha256": "97BC160345371BB0F719282B1103A08BE23785B74327534AA17D490459E1A3AD",
+      "status": "PASS",
+      "rendered_pdf_page": 10,
+      "printed_lemma_number": "4.15",
+      "reported_issue_count": 0
+    },
+    "derived_pdf": {
+      "path": "builds/derived.pdf",
+      "bytes": 1244620,
+      "sha256": "EDB4BED1F5A166B34562B63D44EEEE70C3F421AAFDD91F31C142E1B0EEAEF96A",
+      "pages": 130
+    },
+    "candidate_log": {
+      "path": "builds/derived.log",
+      "bytes": 58648,
+      "sha256": "4344878D12A5622FB8161A7306AAAC9692A8ED6FC35E0583193D52D33A5F9926"
+    },
+    "visual_render_sha256": [
+      "EC01488A483C5F370E5852CFAB05D60DDE02496C03095CBF2723033DBB9915C9",
+      "03C0BE53EE7D365AEDCC1E5761E314DA355A10DCE4953BA8C32B1812ECE3B5AB",
+      "B1BC9C107B8A5A8562856751CEEBE570CE6AB93CAE5BF03431C93BE0F6648F5E"
+    ]
+  },
+  "independent_review_evidence": {
+    "path": "replay/independent-review.json",
+    "bytes": 14754,
+    "sha256": "5FE1320F22A25385EB548B4AD6223B1F1C47B77E0A0D275E76EA2E38ABB4B359",
+    "status": "PASS",
+    "reviewed_at_utc": "2026-08-26T01:25:26Z",
+    "mathematical_subreview": "PASS",
+    "rendered_pdf_inspection": "PASS",
+    "source_closure": "PASS",
+    "unresolved_defects": 0
+  },
+  "unit_count": 12,
+  "classified_unit_count": 12,
+  "formula_units": [
+    {
+      "unit_id": "verdier:ast239:1.2.13",
+      "expected_features": [
+        "arrow-category functor",
+        "distinguished-triangle codomain",
+        "decomposability conclusion"
+      ]
+    },
+    {
+      "unit_id": "verdier:ast239:1.2.13:formula:triangle-assignment",
+      "expected_features": [
+        "selected triangle",
+        "shift by one",
+        "third-object notation",
+        "boundary maps"
+      ]
+    },
+    {
+      "unit_id": "verdier:ast239:1.2.13:hypothesis:countable-products-or-coproducts",
+      "expected_features": [
+        "logical alternative between countable products and coproducts"
+      ]
+    },
+    {
+      "unit_id": "verdier:ast239:1.2.13:proof:annihilated-morphism",
+      "expected_features": [
+        "typed arrow v",
+        "vanishing composite"
+      ]
+    },
+    {
+      "unit_id": "verdier:ast239:1.2.13:claim:zero-target-boundary-isomorphism",
+      "expected_features": [
+        "zero-target selected triangle",
+        "invertible boundary"
+      ]
+    },
+    {
+      "unit_id": "verdier:ast239:1.2.13:construction:alpha",
+      "expected_features": [
+        "shifted third component",
+        "inverse boundary",
+        "composition order",
+        "minus-one shift"
+      ]
+    },
+    {
+      "unit_id": "verdier:ast239:1.2.13:claim:kernel-section",
+      "expected_features": [
+        "natural section",
+        "representable functor",
+        "kernel functor",
+        "variance"
+      ]
+    },
+    {
+      "unit_id": "verdier:ast239:1.2.13:claim:projector-kernel",
+      "expected_features": [
+        "idempotent",
+        "retract",
+        "representability"
+      ]
+    },
+    {
+      "unit_id": "verdier:ast239:1.2.13:conclusion:decomposable",
+      "expected_features": [
+        "kernel representability",
+        "split projection-then-inclusion form"
+      ]
+    }
+  ],
+  "diagram_units": [
+    {
+      "unit_id": "verdier:ast239:1.2.13:diagram:arrow-square",
+      "expected_nodes": 4,
+      "expected_edges": 4,
+      "expected_commutativity": "f_after_v_equals_zero"
+    },
+    {
+      "unit_id": "verdier:ast239:1.2.13:diagram:triangle-morphism",
+      "expected_nodes": 8,
+      "expected_horizontal_edges": 6,
+      "expected_vertical_edges": 4,
+      "source_equation_locator": "1.2.13.1"
+    },
+    {
+      "unit_id": "verdier:ast239:1.2.13:diagram:alpha-lift",
+      "expected_nodes": 4,
+      "expected_edges": 5,
+      "expected_commutativity": "alpha_lifts_v_and_is_annihilated_by_f"
+    }
+  ],
+  "prose_only_units": [],
+  "formula_unit_count": 9,
+  "diagram_unit_count": 3,
+  "payload_comparison_state": "fixed_point_build_validation_passed",
+  "render_state": "performed_passed",
+  "visual_qa_state": "visual_qa_passed",
+  "independent_review_state": "performed",
+  "independent_replay": "passed",
+  "admission_state": "not_admitted",
+  "unmapped_formula_or_diagram_changes": 0
+}

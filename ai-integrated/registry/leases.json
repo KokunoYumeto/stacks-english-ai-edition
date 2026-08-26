@@ -643,6 +643,33 @@
       "state": "active",
       "supersedes_event_id": "lease-event-000045",
       "writer_contract": "candidates/CONTRACT.md"
+    },
+    {
+      "event_id": "lease-event-000047",
+      "event": "issued",
+      "lease_id": "stacks-lease-000026-verdier",
+      "namespace": "commons/stacks/verdier",
+      "candidate_path": "candidates/commons/stacks/verdier",
+      "writer_task": "019fca5a-c80e-7890-a46b-4948ff443e6d",
+      "upstream_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+      "upstream_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+      "issued_at_utc": "2026-08-25T22:06:40Z",
+      "state": "active",
+      "writer_contract": "candidates/CONTRACT.md"
+    },
+    {
+      "event_id": "lease-event-000048",
+      "event": "released",
+      "lease_id": "stacks-lease-000026-verdier",
+      "namespace": "commons/stacks/verdier",
+      "candidate_path": "candidates/commons/stacks/verdier",
+      "writer_task": "019fca5a-c80e-7890-a46b-4948ff443e6d",
+      "upstream_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+      "upstream_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+      "issued_at_utc": "2026-08-26T03:13:02Z",
+      "state": "released",
+      "supersedes_event_id": "lease-event-000047",
+      "writer_contract": "candidates/CONTRACT.md"
     }
   ]
 }
