@@ -69,6 +69,24 @@ def load_json(path: Path) -> dict[str, Any]:
     return value
 
 
+def latest_jsonl_time(path: Path, key: str = "timestamp_utc") -> datetime:
+    times: list[datetime] = []
+    try:
+        lines = path.read_text(encoding="utf-8").splitlines()
+    except (FileNotFoundError, OSError, UnicodeError) as exc:
+        raise BuildManifestError(f"cannot read {display(path)}: {exc}") from exc
+    for line_number, line in enumerate(lines, start=1):
+        require(bool(line), f"{display(path)}:{line_number} is blank")
+        try:
+            row = json.loads(line)
+        except json.JSONDecodeError as exc:
+            raise BuildManifestError(f"cannot parse {display(path)}:{line_number}: {exc}") from exc
+        require(isinstance(row, dict), f"{display(path)}:{line_number} must contain a JSON object")
+        times.append(parse_time(row.get(key), f"{display(path)}:{line_number}.{key}"))
+    require(times, f"{display(path)} contains no timestamped rows")
+    return max(times)
+
+
 def sha256(path: Path) -> str:
     digest = hashlib.sha256()
     with path.open("rb") as stream:
@@ -170,7 +188,7 @@ def review_states(receipts: dict[Path, dict[str, Any]]) -> tuple[str, str, datet
     replay = load_json(replay_path)
     replay_time = receipt_time(replay, replay_path)
     if replay_time is not None:
-        generated = replay_time
+        generated = max(generated, replay_time)
     explicit_review = replay.get("review_state")
     if explicit_review is not None:
         require(explicit_review == "performed", "independent-review receipt must record review_state=performed")
@@ -234,6 +252,12 @@ def main() -> int:
             "stable-unit closure is not exactly 12",
         )
         review_state, replay_state, generated = review_states(receipts)
+        generated = max(
+            generated,
+            parse_time(config.get("state_updated_at_utc"), "candidate.config.json.state_updated_at_utc"),
+            latest_jsonl_time(ROOT / "decisions.jsonl"),
+            latest_jsonl_time(ROOT / "rejections.jsonl"),
+        )
 
         authority_paths = sorted(
             (path for path in (ROOT / "authority").rglob("*") if path.is_file()),
