@@ -20,14 +20,18 @@ The gate verifies:
 
 - ancestry of the pinned upstream, source-union, EGA, and protected linear
   registry/source history;
-- 22 admitted overlays containing exactly 559 stable IDs at Verdier registry
-  cutoff `60f1d97ecbd376ff7a91298d17e1f162b9996c3a`;
+- 24 admitted overlays containing exactly 652 stable IDs at R23 registry cutoff
+  `49fc23ab2f3d94cc98f27bc0f315fb0da6f2c98a`, tree
+  `a67a8529b853da8834502456e8ca75afe71aa78c`;
 - the final immutable Verdier candidate, its 12 stable units, 27 manifest
   references, independent replay, rights boundary, and exact registered
   insertion into `derived.tex`;
-- the preserved historical R1–R21 snapshot: 21 Stacks errata batches, 547
-  correction IDs, all 591 v2 operations, the 120-operation R18–R21 replay, and
-  the prior cutoff `13ca6aaaca454f5930c4885c93f427e30cf21959`;
+- the R1–R23 Stacks errata sequence: 23 batches, 640 correction IDs, all 697 v2
+  operations, and the manifest-bound R22-before-R23 replay of 106 operations
+  affecting only `more-algebra.tex`;
+- preservation of the historical R1–R21 snapshot at prior cutoff
+  `13ca6aaaca454f5930c4885c93f427e30cf21959` and of the separately composed
+  Verdier source;
 - exact authority, context, payload, preimage, postimage, prefix/suffix, label,
   registry Git blob, admission-chain, and changed-path bindings;
 - the independent `injectives.tex` correction;
@@ -40,45 +44,46 @@ The gate verifies:
 The same gate runs in
 [`validate.yml`](.github/workflows/validate.yml) with full Git history.
 
-The current Verdier v4 build result is recorded at
-[`validation/stacks-verdier-a04446e-1-2-13-r1-build-2026-08-26.json`](validation/stacks-verdier-a04446e-1-2-13-r1-build-2026-08-26.json).
-All 22 required chapters (2,343 pages; 24,390,066 PDF bytes) compiled
+The current R22/R23 build result is recorded at
+[`validation/stacks-errata-a04446e-r22-r23-build-2026-08-27.json`](validation/stacks-errata-a04446e-r22-r23-build-2026-08-27.json).
+All 22 required chapters (2,343 pages; 24,389,773 PDF bytes) compiled
 successfully, were readable by `pdfinfo`, and reached a global PDF fixed point
 on sweep four. The build is bound to source commit
-`7ee4b3a46e995e9e36b259bbc9300828c3c6988b`, tree
-`5b3349e5944ecf9d0718c6a31728a457adcd1c69`. Aggregate diagnostics contain
+`1e9771352840bd70224027d13e9b32546838ccd2`, tree
+`4a3b7398f7607b73ee5596d359e5cf7a401c2256`. Aggregate diagnostics contain
 zero fatal, missing-glyph, undefined-reference, undefined-citation,
 multiply-defined, rerun-required, or destination-warning markers.
 
-Visual QA rendered and reviewed all 130 pages of the affected `derived.pdf`;
-pages 9–11 were also inspected individually at 220 DPI around the complete
-page-10 insertion. The current
-[visual receipt](validation/stacks-verdier-a04446e-1-2-13-r1-visual-qa-2026-08-26.json)
+Visual QA rendered and reviewed all 406 pages of the affected
+`more-algebra.pdf`; 63 correction-locus pages were also inspected at high
+resolution. The current
+[visual receipt](validation/stacks-errata-a04446e-r22-r23-visual-qa-2026-08-27.json)
 records zero clipped, overlapping, blank, corrupt, missing-glyph, or
 broken-diagram defects. A second build ran independently in a parallel linked
 worktree. Both runs use the same source, builder, environment, and fixed-point
 sweep, and all 22 `{stem, pages, bytes, sha256}` tuples are exactly equal. See
-the [reproducibility summary](validation/stacks-verdier-a04446e-1-2-13-r1-reproducibility-2026-08-26.json)
-and [second full receipt](validation/stacks-verdier-a04446e-1-2-13-r1-reproducibility-second-2026-08-26.json).
+the [reproducibility summary](validation/stacks-errata-a04446e-r22-r23-reproducibility-2026-08-27.json)
+and [second full receipt](validation/stacks-errata-a04446e-r22-r23-reproducibility-second-2026-08-27.json).
 
 The [source composition receipt](validation/composition-current.json) records
-the Verdier cutoff `60f1d97ecbd376ff7a91298d17e1f162b9996c3a`, linear
-registry import `2b4328c7caf2fc698ab2b0534385c576a74fa7c3`, and exact
-composition source `39d99b0080b1f55e1d924cb73134dca885274e3f`. It binds the
-449,715-byte `derived.tex` preimage
-`66D17FBE6743002D29A78543E46122CD3ED34AA5A5574B14718C1189ACEB456F`,
-the 2,339-byte payload, and the 452,054-byte postimage
-`8B389993D3B364A926C7DCD7AD598E5B8245D8E92BCC5A23646069F9AD617860`.
-The historical R21 composition, build, publication, and readback receipts
-remain preserved and validated against their own immutable source snapshot;
-they are not rebound to the Verdier tree.
+R23 cutoff `49fc23ab2f3d94cc98f27bc0f315fb0da6f2c98a`, linear registry
+import `806ed1d11943f5a66b17b75f9fddccd61f58b62b`, and exact composition
+source `3a1100a79abc76315592711c9f2c86ad21b5f6a9`, tree
+`28980ba358cadddecc67d5013c7a9b624fee6305`. It binds 697 cumulative v2
+operations, including the 106 new R22/R23 operations, to the 1,517,988-byte
+`more-algebra.tex` postimage with SHA-256
+`69CD9E00183C17938EC4DFC1FF1EB33C292DDACF8B64AD054FD666054D2CBE2C`.
+The historical R21 and Verdier composition, build, publication, and readback
+receipts remain preserved and authoritative for their own immutable source
+snapshots; they are not rebound to the R22/R23 tree.
 
-The Verdier content release is public at
+The preceding Verdier content release remains public at
 `4947e4a6d22971ea793e4b4bc2b09d8ab8cc04d0`. The
-[publication receipt](validation/stacks-verdier-a04446e-1-2-13-r1-release-2026-08-26.json)
+[historical publication receipt](validation/stacks-verdier-a04446e-1-2-13-r1-release-2026-08-26.json)
 binds its exact CI run and anonymous raw-byte inventory. Full validation omits
 `--pre-publication` and independently rechecks the public ref, every decisive
-row, and the recorded GitHub Actions run.
+row, and the recorded GitHub Actions run after current publication evidence has
+been added.
 
 ## Source-specific deterministic evidence
 

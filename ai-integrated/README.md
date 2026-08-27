@@ -21,30 +21,33 @@ unified repository, not a separate edition.
 
 ## Integrated registry cutoff
 
-- Current integrated overlays: **22**, containing **559 stable IDs**.
-- Current cutoff: Verdier admission commit
-  `60f1d97ecbd376ff7a91298d17e1f162b9996c3a`.
-- The Stacks errata subset remains **R1–R21**: 21 batches and 547 correction
-  IDs. Its highest identifier is `MC-STK-ERR-0914`; gaps are intentional.
+- Current integrated overlays: **24**, containing **652 stable IDs**.
+- Current cutoff: R23 admission commit
+  `49fc23ab2f3d94cc98f27bc0f315fb0da6f2c98a`, tree
+  `a67a8529b853da8834502456e8ca75afe71aa78c`.
+- The Stacks errata subset is **R1–R23**: 23 batches, 640 correction IDs, and
+  697 exact v2 operations. Its highest identifier is `MC-STK-ERR-1007`; gaps
+  are intentional.
 - The 22nd overlay is `stacks-verdier-a04446e-1-2-13-r1`, an independently
   written historical-source insertion with 12 non-official stable units. It
   claims no official Stacks tag, upstream review, approval, or endorsement.
 
 The authoritative overlay list is
 [`registry/overlays.json`](registry/overlays.json). The integrated root source
-contains the admitted R1–R21 composition followed by the separately composed
-Verdier insertion; registry admission and source composition remain separately
-testable states. R21 is replayed as exact manifest-bound operations over the
-cumulative `simplicial.tex`, preserving the independent AI-integrated additions
-already present there. Verdier is inserted into cumulative `derived.tex` through
-one unique unchanged context with exact prefix/suffix invariance.
+contains the admitted R1–R21 composition, the separately composed Verdier
+insertion, and the R22-before-R23 `more-algebra.tex` composition; registry
+admission and source composition remain separately testable states. R21 is
+replayed as exact manifest-bound operations over cumulative `simplicial.tex`,
+and Verdier is inserted into cumulative `derived.tex` through one unique
+unchanged context with exact prefix/suffix invariance.
 
 R22 (`cec63f082819c0580c43f59790ab441260fe1ccc`, 83 stable units / 94
 operations) and R23 (`49fc23ab2f3d94cc98f27bc0f315fb0da6f2c98a`, 10
-stable units / 12 operations) are later admitted `more-algebra.tex` overlays.
-They remain queued after this cutoff and must be composed in that order by
-manifest operations only; neither payload may replace cumulative source
-wholesale.
+stable units / 12 operations) add 93 IDs and 106 operations affecting only
+`more-algebra.tex`. They are composed in that order from manifest operations;
+neither isolated payload replaces cumulative source wholesale. R24 is the
+active errata intake lease, while `MORE-ALGEBRA-L-001..029` remains unadmitted
+intake evidence.
 
 ## Directory map
 

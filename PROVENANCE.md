@@ -67,6 +67,17 @@ The histories were combined without flattening either input:
    of the registry import.
 5. The independent `injectives.tex` correction was carried into the unified
    source.
+6. The separately admitted Verdier II.1.2.13 contribution was composed through
+   its unique unchanged context in cumulative `derived.tex`, preserving the
+   R1–R21 source and claiming no official Stacks tag or upstream endorsement.
+7. Registry content through R23 cutoff
+   `49fc23ab2f3d94cc98f27bc0f315fb0da6f2c98a`, tree
+   `a67a8529b853da8834502456e8ca75afe71aa78c`, was imported into the linear
+   integrated history at `806ed1d11943f5a66b17b75f9fddccd61f58b62b`.
+   R22 and R23 were then composed in registry order by replaying 106
+   manifest-bound operations onto cumulative `more-algebra.tex`. The resulting
+   source commit is `3a1100a79abc76315592711c9f2c86ad21b5f6a9`, tree
+   `28980ba358cadddecc67d5013c7a9b624fee6305`.
 
 The mathematical source therefore stays at the repository root while the
 complete evidence and registry system remains browsable under
@@ -90,9 +101,19 @@ manifest-bound insertion to cumulative `derived.tex` through a unique unchanged
 803-byte context. Prefix and suffix bytes remain unchanged, and the proposed
 local label occurs exactly once. The candidate and source addition claim no
 official Stacks tag, affiliation, review, approval, or upstream endorsement.
-The current fixed-point build is bound to source
+The historical Verdier fixed-point build is bound to source
 `7ee4b3a46e995e9e36b259bbc9300828c3c6988b`, tree
 `5b3349e5944ecf9d0718c6a31728a457adcd1c69`.
+
+The current R22/R23 fixed-point build is bound to source
+`1e9771352840bd70224027d13e9b32546838ccd2`, tree
+`4a3b7398f7607b73ee5596d359e5cf7a401c2256`. It preserves the Verdier
+`derived.tex`, cumulative R21 `simplicial.tex`, and independent `injectives.tex`
+identities while advancing `more-algebra.tex` through 93 new correction IDs and
+106 operations. Two independent builds produced exactly matching identities
+for all 22 PDFs: 2,343 pages, 24,389,773 bytes, and a global fixed point on
+sweep four. Visual QA covers all 406 pages of `more-algebra.pdf` and 63
+high-resolution correction-locus pages.
 
 ## Branch preservation
 
@@ -100,7 +121,8 @@ The unified repository retains the pre-unification integration heads as
 clearly named historical branches in addition to the integrated default
 branch. Their presence is provenance, not a claim that they remain competing
 editions. The published Verdier content release at
-`4947e4a6d22971ea793e4b4bc2b09d8ab8cc04d0` advances the integrated cutoff to
-22 overlays and 559 stable IDs at `60f1d97e`. Later R22 and R23 admissions affect
-only `more-algebra.tex` and remain queued, in registry order, outside this
-release.
+`4947e4a6d22971ea793e4b4bc2b09d8ab8cc04d0` remains historical evidence for
+the 22-overlay / 559-ID cutoff at `60f1d97e`. The current validated composition
+advances the repository state to 24 overlays and 652 stable IDs at `49fc23ab`;
+R22 and R23 affect only `more-algebra.tex`. R24 remains an active intake lease,
+and the French `MORE-ALGEBRA-L-001..029` packet remains unadmitted.

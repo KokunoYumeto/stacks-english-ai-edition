@@ -19,10 +19,10 @@ machine-readable validation evidence.
 [Errata registry](ai-integrated/registry/overlays.json) ·
 [Validation](VALIDATION.md) ·
 [Current composition receipt](validation/composition-current.json) ·
-[Current fixed-point build: PASS](validation/stacks-verdier-a04446e-1-2-13-r1-build-2026-08-26.json) ·
-[Current visual QA: PASS](validation/stacks-verdier-a04446e-1-2-13-r1-visual-qa-2026-08-26.json) ·
-[Current reproducibility: PASS](validation/stacks-verdier-a04446e-1-2-13-r1-reproducibility-2026-08-26.json) ·
-[Current publication receipt: PASS](validation/stacks-verdier-a04446e-1-2-13-r1-release-2026-08-26.json) ·
+[Current fixed-point build: PASS](validation/stacks-errata-a04446e-r22-r23-build-2026-08-27.json) ·
+[Current visual QA: PASS](validation/stacks-errata-a04446e-r22-r23-visual-qa-2026-08-27.json) ·
+[Current reproducibility: PASS](validation/stacks-errata-a04446e-r22-r23-reproducibility-2026-08-27.json) ·
+[Historical Verdier publication receipt: PASS](validation/stacks-verdier-a04446e-1-2-13-r1-release-2026-08-26.json) ·
 [Historical R21 publication receipt: PASS](validation/errata-r18-r19-release-2026-08-25.json) ·
 [R17 historical receipt](validation/unification-release-2026-08-25.json) ·
 [Roadmap](ROADMAP.md) ·
@@ -49,7 +49,7 @@ The pinned upstream baseline is
 | GAGA | Integrated through r3 | All 126 units classified, all 79 substantive units decided, and a validated 23-page English chapter | [r3 status](gaga_r3/STATUS.md) · [chapter source](gaga.tex) |
 | FGA | Integrated and notation-normalized | 1,253 source units and 1,612 term links closed; fixed-point 83-page Moduli build recorded | [Overview](fga/README.md) · [status](fga/status.md) |
 | EGA | Active integration | Direct-French review through EGA I 6.1.13; 1,059 active edges across 355 generated units; next cursor EGA I 6.2.1 | [EGA dossier](ega/README.md) |
-| Registry and source overlays | Verdier v4 integrated after the frozen R1–R21 Stacks composition | 22 admitted overlays and 559 stable IDs at cutoff `60f1d97e`; the historical Stacks errata component remains 21 batches, 547 IDs, and 591 exact v2 operations through R21 | [Registry](ai-integrated/registry/overlays.json) · [Verdier evidence](ai-integrated/candidates/commons/stacks/verdier/) · [errata evidence](ai-integrated/candidates/commons/stacks/errata/) |
+| Registry and source overlays | R1–R23 errata and Verdier integrated in registry order | 24 admitted overlays and 652 stable IDs at cutoff `49fc23ab`; the Stacks errata component is 23 batches, 640 IDs, and 697 exact v2 operations through R23 | [Registry](ai-integrated/registry/overlays.json) · [Verdier evidence](ai-integrated/candidates/commons/stacks/verdier/) · [errata evidence](ai-integrated/candidates/commons/stacks/errata/) |
 
 These labels are deliberately precise. “Integrated,” “active,” “admitted,” and
 “candidate” are not interchangeable, and no local label is represented as an
@@ -95,22 +95,21 @@ Run the fast repository-level integrity gate with:
 python tools/validate_unified_repository.py --pre-publication
 ```
 
-The current Verdier v4 build is bound to source
-`7ee4b3a46e995e9e36b259bbc9300828c3c6988b`, tree
-`5b3349e5944ecf9d0718c6a31728a457adcd1c69`. It produced 22 readable PDFs
-(2,343 pages; 24,390,066 bytes), reached a global fixed point on sweep four,
+The current R22/R23 build is bound to source
+`1e9771352840bd70224027d13e9b32546838ccd2`, tree
+`4a3b7398f7607b73ee5596d359e5cf7a401c2256`. It produced 22 readable PDFs
+(2,343 pages; 24,389,773 bytes), reached a global fixed point on sweep four,
 and recorded zero fatal, missing-glyph, undefined-reference,
 undefined-citation, multiply-defined, rerun-required, or destination-warning
-diagnostics. All 130 pages of the affected `derived.pdf` were rendered and
-reviewed; pages 9–11 were also inspected at high resolution around the complete
-page-10 insertion. A parallel rebuild in a second linked worktree used the same
-source, builder, environment, and sweep, and all 22 PDF identities were exactly
-equal.
+diagnostics. All 406 pages of the affected `more-algebra.pdf` were rendered and
+reviewed; 63 correction-locus pages were also inspected at high resolution. A
+parallel rebuild in a second linked worktree used the same source, builder,
+environment, and sweep, and all 22 PDF identities were exactly equal.
 
-The validated content release is public at
+The preceding Verdier content release remains public at
 `4947e4a6d22971ea793e4b4bc2b09d8ab8cc04d0`. Its exact source, candidate,
 registry, build, QA, documentation, tooling, and candidate-PDF bytes were read
-back anonymously and are bound in the current publication receipt.
+back anonymously and remain bound in its historical publication receipt.
 
 The preceding R21 Stacks-only fixed point remains historical evidence at
 content head `780f48fafbb46dc1057bf8fdcd339693fb44d6bf`. Its receipts and anonymous

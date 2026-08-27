@@ -1,6 +1,6 @@
 # Integration status
 
-Status date: **2026-08-26**
+Status date: **2026-08-27**
 
 Pinned official upstream: `a04446e57ec1fbc252a871afcec7752fb2807b14`
 
@@ -19,14 +19,14 @@ in each corpus dossier and in the machine-readable registry.
 
 ## Errata state
 
-- Current integrated registry: **22 overlays / 559 stable IDs**, frozen at
-  Verdier admission commit
-  `60f1d97ecbd376ff7a91298d17e1f162b9996c3a`.
-- The Stacks errata component remains **R1–R21**: 21 batches, 547 stable
-  correction IDs, and 591 exact v2 operations. `MC-STK-ERR-0914` is the highest
-  Stacks correction identifier through R21; intentional gaps mean it is not a
-  count of corrections. R20–R21 add 43 operations, while the bounded R18–R21
-  replay contains 120.
+- Current integrated registry: **24 overlays / 652 stable IDs**, frozen at R23
+  admission commit `49fc23ab2f3d94cc98f27bc0f315fb0da6f2c98a`, tree
+  `a67a8529b853da8834502456e8ca75afe71aa78c`.
+- The Stacks errata component is **R1–R23**: 23 batches, 640 stable correction
+  IDs, and 697 exact v2 operations. `MC-STK-ERR-1007` is the highest Stacks
+  correction identifier through R23; intentional gaps mean it is not a count
+  of corrections. R22–R23 add 93 IDs and 106 operations affecting only
+  `more-algebra.tex`.
 - The 22nd overlay is the separately admitted historical-source contribution
   `stacks-verdier-a04446e-1-2-13-r1`, containing 12 non-official stable units.
   It inserts the manifest-bound Lemma 4.15 into cumulative `derived.tex` through
@@ -40,9 +40,13 @@ in each corpus dossier and in the machine-readable registry.
   additions outside its manifest-bound operations.
 - The independent `injectives.tex` parenthesis correction is included in the
   live source and retained in Git history.
-- R22 and R23 are later admitted, source-disjoint-from-Verdier composer inputs
-  for `more-algebra.tex`. They remain queued in registry order and are not
-  included in the current 22-overlay / 559-ID cutoff.
+- R22 and R23 are composed in registry order by replaying their manifest-bound
+  operations onto cumulative `more-algebra.tex`; neither isolated payload
+  replaces the integrated source. The rejected producer `MORE-ALGEBRA-J-006`
+  remains excluded.
+- R24 is the active errata intake lease. The 29-row French
+  `MORE-ALGEBRA-L-001..029` packet remains unadmitted intake evidence and is not
+  part of this composition or fixed point.
 
 The authoritative registry is
 [`ai-integrated/registry/overlays.json`](ai-integrated/registry/overlays.json).
@@ -53,8 +57,8 @@ proposals remain under
 ## Validation state
 
 The repository integrity gate checks the pinned authority, protected linear
-ancestry, all 22 registry entries and 559 stable IDs, the immutable Verdier
-candidate and exact insertion, the historical R1–R21 validator and all 591 v2
+ancestry, all 24 registry entries and 652 stable IDs, the immutable Verdier,
+R22, and R23 candidates, the retained Verdier insertion, all 697 exact v2
 operations, exact manifest/source-map/payload/review joins, the independent
 source correction, public-document links, JSON registries, and unresolved merge
 markers. See [VALIDATION.md](VALIDATION.md).
@@ -62,24 +66,24 @@ markers. See [VALIDATION.md](VALIDATION.md).
 Per-corpus build and visual receipts remain linked from the detailed dossiers;
 they are not silently generalized beyond their recorded source identity.
 
-The current Verdier v4 gate built all 22 required chapters (2,343 pages and
-24,390,066 PDF bytes) to a global PDF fixed point on sweep four. It is bound to
-source `7ee4b3a46e995e9e36b259bbc9300828c3c6988b`, tree
-`5b3349e5944ecf9d0718c6a31728a457adcd1c69`, and records zero fatal,
+The current R22/R23 gate built all 22 required chapters (2,343 pages and
+24,389,773 PDF bytes) to a global PDF fixed point on sweep four. It is bound to
+source `1e9771352840bd70224027d13e9b32546838ccd2`, tree
+`4a3b7398f7607b73ee5596d359e5cf7a401c2256`, and records zero fatal,
 missing-glyph, undefined-reference, undefined-citation, multiply-defined,
 rerun-required, or destination-warning diagnostics. Visual QA passed for all
-130 affected chapter pages and high-resolution pages 9–11. The exact artifact
-inventory is in the [current fixed-point build receipt](validation/stacks-verdier-a04446e-1-2-13-r1-build-2026-08-26.json).
+406 affected `more-algebra.pdf` pages and 63 high-resolution correction-locus
+pages. The exact artifact inventory is in the
+[current fixed-point build receipt](validation/stacks-errata-a04446e-r22-r23-build-2026-08-27.json).
 
-The [parallel linked-worktree reproducibility gate](validation/stacks-verdier-a04446e-1-2-13-r1-reproducibility-2026-08-26.json)
+The [parallel linked-worktree reproducibility gate](validation/stacks-errata-a04446e-r22-r23-reproducibility-2026-08-27.json)
 is **PASS**. Both builds use the same commit, tree, builder, environment, and
 fixed-point sweep; all 22 `{stem, pages, bytes, sha256}` artifact tuples are
-exactly equal. The earlier R21 content fixed point at
-`780f48fafbb46dc1057bf8fdcd339693fb44d6bf` and its successful anonymous
-readback remain preserved as historical evidence for their exact scope.
+exactly equal. The earlier Verdier and R21 fixed points remain preserved as
+historical evidence for their exact source identities and scopes.
 
-The Verdier content release is public at
+The preceding Verdier content release remains public at
 `4947e4a6d22971ea793e4b4bc2b09d8ab8cc04d0`. Exact anonymous readback of 62
 source, registry, candidate, receipt, documentation, tool, and candidate-build
 artifact files is recorded in the
-[current publication receipt](validation/stacks-verdier-a04446e-1-2-13-r1-release-2026-08-26.json).
+[historical Verdier publication receipt](validation/stacks-verdier-a04446e-1-2-13-r1-release-2026-08-26.json).

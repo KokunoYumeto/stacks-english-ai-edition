@@ -39,15 +39,13 @@ The [publication receipt](errata-r18-r19-release-2026-08-25.json) binds these
 gates to public content head `780f48fafbb46dc1057bf8fdcd339693fb44d6bf` and
 records anonymous readback of the decisive public inventory.
 
-## Current Verdier v4 receipts
+## Historical Verdier v4 receipts
 
-The current release advances the integrated registry to 22 overlays
-and 559 stable IDs by adding the independently written
+The Verdier release advanced the integrated registry to 22 overlays and 559
+stable IDs by adding the independently written
 `stacks-verdier-a04446e-1-2-13-r1` overlay after the historical R1–R21
-composition. Its exact evidence is recorded in:
+composition. Its preserved evidence includes:
 
-- [`composition-current.json`](composition-current.json) — admission,
-  candidate, context, payload, preimage/postimage, and prefix/suffix bindings;
 - [`stacks-verdier-a04446e-1-2-13-r1-build-2026-08-26.json`](stacks-verdier-a04446e-1-2-13-r1-build-2026-08-26.json)
   — 22 PDFs, 2,343 pages, 24,390,066 bytes, fixed point at sweep four, and zero
   listed serious diagnostics;
@@ -55,14 +53,39 @@ composition. Its exact evidence is recorded in:
   — all 130 affected pages reviewed, plus pages 9–11 at high resolution;
 - [`stacks-verdier-a04446e-1-2-13-r1-reproducibility-2026-08-26.json`](stacks-verdier-a04446e-1-2-13-r1-reproducibility-2026-08-26.json)
   — exact equality of all 22 artifact identities across two parallel,
-  independent linked-worktree builds.
+  independent linked-worktree builds; and
+- the [Verdier publication receipt](stacks-verdier-a04446e-1-2-13-r1-release-2026-08-26.json),
+  which binds public content head
+  `4947e4a6d22971ea793e4b4bc2b09d8ab8cc04d0` to its passing workflow and
+  anonymous readback inventory.
 
-The historical R21 receipts remain authoritative for their own immutable
-snapshot. They are deliberately not treated as proof for the later Verdier
-source tree.
+The historical R21 and Verdier receipts remain authoritative for their own
+immutable snapshots. They are deliberately not treated as proof for the later
+R22/R23 source tree.
 
-The [Verdier publication receipt](stacks-verdier-a04446e-1-2-13-r1-release-2026-08-26.json)
-binds public content head `4947e4a6d22971ea793e4b4bc2b09d8ab8cc04d0`,
-the passing workflow, and exact anonymous readback identities for the decisive
-source, candidate, registry, evidence, documentation, tooling, and candidate
-build artifacts.
+## Current R22/R23 receipts
+
+The current validated composition advances the registry to 24 overlays and 652
+stable IDs at cutoff `49fc23ab2f3d94cc98f27bc0f315fb0da6f2c98a`. The Stacks
+errata subset is R1–R23: 23 batches, 640 correction IDs, and 697 exact v2
+operations. R22 and R23 contribute 93 IDs and 106 operations affecting only
+`more-algebra.tex`. Current evidence is recorded in:
+
+- [`composition-current.json`](composition-current.json) — cutoff, candidate,
+  manifest, registry-import, operation, source, and preservation bindings;
+- [`stacks-errata-a04446e-r22-r23-build-2026-08-27.json`](stacks-errata-a04446e-r22-r23-build-2026-08-27.json)
+  — source `1e9771352840bd70224027d13e9b32546838ccd2`, tree
+  `4a3b7398f7607b73ee5596d359e5cf7a401c2256`, 22 PDFs, 2,343 pages,
+  24,389,773 bytes, fixed point at sweep four, and zero listed serious
+  diagnostics;
+- [`stacks-errata-a04446e-r22-r23-visual-qa-2026-08-27.json`](stacks-errata-a04446e-r22-r23-visual-qa-2026-08-27.json)
+  — all 406 `more-algebra.pdf` pages reviewed and 63 correction-locus pages
+  inspected at high resolution; and
+- [`stacks-errata-a04446e-r22-r23-reproducibility-2026-08-27.json`](stacks-errata-a04446e-r22-r23-reproducibility-2026-08-27.json)
+  together with the [second full receipt](stacks-errata-a04446e-r22-r23-reproducibility-second-2026-08-27.json)
+  — exact equality of all 22 artifact identities across two independent linked
+  worktree builds.
+
+R24 remains the active errata intake lease, and the French
+`MORE-ALGEBRA-L-001..029` packet remains unadmitted. No later intake is treated
+as part of the current composition or fixed point.

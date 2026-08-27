@@ -1,0 +1,152 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-visual-qa/v1",
+  "status": "PASS",
+  "created_utc": "2026-08-27T17:50:32Z",
+  "source": {
+    "commit": "1e9771352840bd70224027d13e9b32546838ccd2",
+    "tree": "4a3b7398f7607b73ee5596d359e5cf7a401c2256"
+  },
+  "build_receipt": {
+    "path": "validation/stacks-errata-a04446e-r22-r23-build-2026-08-27.json",
+    "bytes": 22685,
+    "sha256": "945136CDDC2A1A38DC051DA3462BBF5E5F6875143B3BB8F52D10566AFDFEE6D8",
+    "status": "PASS",
+    "global_fixed_point_sweep": 4
+  },
+  "scope": {
+    "affected_chapters": [
+      "more-algebra"
+    ],
+    "full_page_render_count": 406,
+    "full_page_contact_sheet_review_count": 406,
+    "high_resolution_locus_page_count": 63,
+    "high_resolution_locus_pages": {
+      "more-algebra": [
+        121,
+        122,
+        123,
+        129,
+        131,
+        136,
+        139,
+        147,
+        160,
+        163,
+        167,
+        168,
+        170,
+        179,
+        181,
+        183,
+        184,
+        189,
+        191,
+        197,
+        206,
+        209,
+        210,
+        212,
+        213,
+        217,
+        221,
+        222,
+        223,
+        225,
+        229,
+        233,
+        236,
+        237,
+        238,
+        240,
+        272,
+        279,
+        280,
+        281,
+        283,
+        285,
+        289,
+        290,
+        291,
+        296,
+        297,
+        298,
+        299,
+        300,
+        301,
+        302,
+        304,
+        306,
+        307,
+        308,
+        318,
+        322,
+        325,
+        327,
+        334,
+        335,
+        336
+      ]
+    }
+  },
+  "artifacts": {
+    "more-algebra": {
+      "pdf": "more-algebra.pdf",
+      "bytes": 3377601,
+      "pages": 406,
+      "sha256": "4834B324E7F4C1112D984A156EE877454973367AFFF6999CAB5F433D4EE5FE3B",
+      "encrypted": false,
+      "media_box_points": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      "render_dimensions_pixels": [
+        816,
+        1056
+      ],
+      "pages_without_ink": 0,
+      "minimum_ink_pixels_below_245": 29287,
+      "duplicate_render_hashes": 0
+    }
+  },
+  "render_protocol": {
+    "renderer": "Poppler pdftoppm 26.05.0",
+    "full_page_dpi": 96,
+    "full_page_layout": "ordered 4-by-4 contact sheets",
+    "contact_sheet_count": 26,
+    "high_resolution_dpi": 180,
+    "high_resolution_selection": "all 106 R22/R23 manifest-bound operation loci mapped through the exact integrated source with SyncTeX; the sorted unique page union was reviewed",
+    "render_intermediates_published": false
+  },
+  "private_render_evidence": {
+    "path": "tmp/pdfs/r22-r23-integrated-visual-qa-20260827/render-manifest.json",
+    "bytes": 142468,
+    "sha256": "9F364C65293B1803E1B588BBFE6783AA251FDF752E3049604E5450243B8BE2C6",
+    "status": "PASS",
+    "operation_loci_mapped": 106,
+    "mapping_failures": 0
+  },
+  "checks": {
+    "all_pages_rendered": true,
+    "all_pages_manually_inspected": true,
+    "all_manifest_bound_locus_pages_inspected_at_high_resolution": true,
+    "page_dimensions_consistent": true,
+    "headers_and_page_numbers_consistent": true,
+    "text_and_formulas_legible": true,
+    "diagrams_intact": true,
+    "clipped_content": 0,
+    "overlapping_content": 0,
+    "blank_pages": 0,
+    "corrupted_pages": 0,
+    "missing_or_unreadable_glyphs": 0,
+    "broken_diagrams": 0,
+    "rejected_simplicial_007_parenthesis_preserved": true
+  },
+  "accessibility": {
+    "struct_tree_root_present": false,
+    "mark_info_present": false,
+    "note": "The standalone chapter PDF is untagged. This retained accessibility limitation is not a visual-rendering failure."
+  },
+  "conclusion": "All 406 pages of the affected more-algebra PDF and all 63 integrated R22/R23 correction-locus pages passed visual inspection without a formatting or rendering defect."
+}

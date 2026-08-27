@@ -9,50 +9,41 @@ cursor live in the [EGA integration dossier](ega/README.md).
 
 ## Current maintenance baseline
 
-The current release baseline contains **22 overlays / 559 stable IDs** at the
-Verdier admission cutoff
-`60f1d97ecbd376ff7a91298d17e1f162b9996c3a`. Its first 21 overlays are the
-historical Stacks errata batches R1–R21: 547 correction IDs and 591 exact v2
-operations at prior cutoff `13ca6aaaca454f5930c4885c93f427e30cf21959`.
-The 22nd overlay, `stacks-verdier-a04446e-1-2-13-r1`, is a separately admitted,
-independently written historical-source contribution. It inserts one
-manifest-bound lemma into cumulative `derived.tex`; no official Stacks tag or
-upstream endorsement is claimed. The exact source, registry, operation, and
-byte identities are recorded in the
+The current validated composition contains **24 overlays / 652 stable IDs** at
+R23 admission cutoff `49fc23ab2f3d94cc98f27bc0f315fb0da6f2c98a`, tree
+`a67a8529b853da8834502456e8ca75afe71aa78c`. Its Stacks errata component is
+R1–R23: 23 batches, 640 correction IDs, and 697 exact v2 operations. The 22nd
+overlay, `stacks-verdier-a04446e-1-2-13-r1`, remains a separately admitted,
+independently written historical-source contribution with 12 non-official
+stable units. It inserts one manifest-bound lemma into cumulative `derived.tex`;
+no official Stacks tag or upstream endorsement is claimed.
+
+R22 and R23 add 93 correction IDs and 106 manifest-bound operations affecting
+only `more-algebra.tex`. Their registry content is composed in order at source
+`3a1100a79abc76315592711c9f2c86ad21b5f6a9`, tree
+`28980ba358cadddecc67d5013c7a9b624fee6305`, without replacing the cumulative
+source wholesale. The exact authority, registry, operation, source, and
+preservation identities are recorded in the
 [current composition receipt](validation/composition-current.json).
 
-The Verdier source passed two independent linked-worktree fixed-point builds at
-source `7ee4b3a46e995e9e36b259bbc9300828c3c6988b`, tree
-`5b3349e5944ecf9d0718c6a31728a457adcd1c69`: 22 readable PDFs, 2,343 pages,
-24,390,066 PDF bytes, global fixed point on sweep four, and zero fatal or listed
-serious diagnostics. All 130 affected `derived.pdf` pages passed visual review,
-with pages 9–11 inspected at high resolution around the page-10 insertion. All
-22 PDF identities match exactly between the two builds. The validated content
-release is public at `4947e4a6d22971ea793e4b4bc2b09d8ab8cc04d0`.
+The composed source passed two linked-worktree fixed-point builds at source
+`1e9771352840bd70224027d13e9b32546838ccd2`, tree
+`4a3b7398f7607b73ee5596d359e5cf7a401c2256`: 22 readable PDFs, 2,343 pages,
+24,389,773 PDF bytes, global fixed point on sweep four, and zero fatal or listed
+serious diagnostics. All 406 affected `more-algebra.pdf` pages passed visual
+review, with 63 correction-locus pages inspected at high resolution. All 22 PDF
+identities match exactly between the two builds. The preceding Verdier content
+release remains preserved as historical evidence for its own exact scope.
 
 ## Queued registry-order maintenance
 
-Later admissions do not move the frozen Verdier release cutoff. They are queued
-for the next source-composition cycle in this exact order:
-
-1. **R22** — `stacks-errata-a04446e-r22`, admission
-   `cec63f082819c0580c43f59790ab441260fe1ccc`: 83 stable units
-   (`MC-STK-ERR-0915`–`0997`) and 94 manifest-bound operations affecting only
-   `more-algebra.tex`; manifest SHA-256
-   `8C519D72AFB3496DD3EB0116EB64FBF3ACF2946A809FED070E4F5D7554A52F8B`.
-2. **R23** — `stacks-errata-a04446e-r23`, admission
-   `49fc23ab2f3d94cc98f27bc0f315fb0da6f2c98a`: 10 stable units
-   (`MC-STK-ERR-0998`–`1007`) and 12 nonoverlapping manifest-bound operations
-   affecting only `more-algebra.tex`; manifest SHA-256
-   `4E8E588698926FD7A47D9CFFB1496CB7305D8EB698C571AD9660FC4C81F80A5C`.
-
-R22 must be composed before R23, and neither isolated payload may overwrite the
-cumulative source wholesale. The rejected producer `MORE-ALGEBRA-J-006` remains
-excluded. A later 29-row French `MORE-ALGEBRA-L` packet was independently
+R24 is the active errata intake lease; no R24 overlay has been admitted or
+composed. A later 29-row French `MORE-ALGEBRA-L` packet was independently
 deduplicated against R22/R23: 27 rows are directly new and admissible; two rows
 form a conditional bundle that also requires the linked `t`→`s` repairs at
 authority lines 38321 and 38325. That packet remains intake evidence, not an
-admitted overlay or part of the current fixed point.
+admitted overlay or part of the current fixed point. The rejected R23 producer
+`MORE-ALGEBRA-J-006` likewise remains excluded from the integrated source.
 
 ## Recommended order
 
