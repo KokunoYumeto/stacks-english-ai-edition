@@ -1,0 +1,75 @@
+{
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "candidate_id": "stacks-errata-a04446e-r24",
+  "checks": {
+    "authority_evidence": {
+      "files": 6,
+      "passed": true
+    },
+    "exact_payload": {
+      "passed": true,
+      "spaces-duality": {
+        "authority_bytes": 80778,
+        "authority_sha256": "B13FFE40A679F3E86EA82972ED7955DD4FBCFD0D98F954936B0E5FBF56F92C7D",
+        "display_delimiter_delta": 0,
+        "operation_count": 57,
+        "ordered_structure": {
+          "citations": {
+            "authority": 5,
+            "payload": 5
+          },
+          "environments": {
+            "authority": 166,
+            "payload": 166
+          },
+          "labels": {
+            "authority": 48,
+            "payload": 48
+          },
+          "references": {
+            "authority": 238,
+            "payload": 238
+          },
+          "sections": {
+            "authority": 10,
+            "payload": 10
+          }
+        },
+        "payload_bytes": 80995,
+        "payload_sha256": "3CFCEF73EB9172CF69082FF07B9D84442DD5E545D8AD22917D5A694BAA57298E",
+        "xymatrix_count": 28
+      }
+    },
+    "lease_ledgers_inventory": {
+      "decisions": 6,
+      "diagram_units": 4,
+      "formula_units": 22,
+      "passed": true,
+      "prose_only_units": 12,
+      "rejections": 0
+    },
+    "public_hygiene": {
+      "passed": true,
+      "python_caches": 0,
+      "text_files": 38
+    },
+    "sealed_intake": {
+      "operations": 57,
+      "passed": true,
+      "spec_sha256": "AE96B2633F7D7DF052C19B75261564C31E127182CFAB448B4E5AAF1B4DE585BC",
+      "units": 38
+    },
+    "unit_closure": {
+      "first_id": "MC-STK-ERR-1008",
+      "last_id": "MC-STK-ERR-1045",
+      "passed": true,
+      "producer_ids": 45,
+      "units": 38
+    }
+  },
+  "generated_at_utc": "2026-08-27T17:53:29Z",
+  "passed": true,
+  "schema": "mathematics-commons-stacks-errata-source-validation/v1",
+  "scope": "source_only_no_build_render_admission_registry_git_or_publication",
+  "verifier_sha256": "76282AE783BC5653E36DD2FBCD6F927A4F8B04A7F5CDCE89427E7EFB441A7AF0"
+}

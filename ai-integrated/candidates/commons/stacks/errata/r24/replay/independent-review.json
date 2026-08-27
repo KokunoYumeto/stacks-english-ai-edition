@@ -1,0 +1,602 @@
+{
+  "schema": "mathematics-commons-stacks-errata-independent-review/v1",
+  "candidate_id": "stacks-errata-a04446e-r24",
+  "review_kind": "independent_adverse_replay",
+  "recorded_at_utc": "2026-08-27T19:05:11Z",
+  "result": "PASS",
+  "conclusion": "UNCONDITIONAL PASS",
+  "passed": true,
+  "pass_is_unconditional": true,
+  "pre_review_manifest_sha256": "216CC1F98F30513B252AB416AC3BE60D46503E48CD85375775B9830B0E3C4AAA",
+  "validation_sha256": "71814E59BD659A36D6DCE221DB08D23E3EA545976DD640DFB3BFAC1E061E1C25",
+  "pre_review_gate": {
+    "passed": true,
+    "check_manifest_exit_code": 0,
+    "candidate_manifest": {
+      "path": "candidate.manifest.json",
+      "bytes": 10795,
+      "sha256": "216CC1F98F30513B252AB416AC3BE60D46503E48CD85375775B9830B0E3C4AAA"
+    },
+    "validation": {
+      "path": "builds/validation.json",
+      "bytes": 2669,
+      "sha256": "71814E59BD659A36D6DCE221DB08D23E3EA545976DD640DFB3BFAC1E061E1C25",
+      "passed": true
+    }
+  },
+  "input_nonmutation": {
+    "passed": true,
+    "file_count_excluding_manifest_and_receipt": 56,
+    "note": "The replay read sealed candidate bytes and wrote only this receipt."
+  },
+  "stable_id_recomputation": {
+    "passed": true,
+    "derivation_rule": "Accepted semantic units map in bounded physical-source order to consecutive stable IDs; linked producer allegations share their semantic unit, while rejected and intentionally absent allegations consume no stable ID.",
+    "explicit_mapping": [
+      {
+        "producer_id": "P10-E0246",
+        "producer_ids": [
+          "P10-E0246"
+        ],
+        "stable_id": "MC-STK-ERR-1008"
+      },
+      {
+        "producer_id": "P10-E0247",
+        "producer_ids": [
+          "P10-E0247"
+        ],
+        "stable_id": "MC-STK-ERR-1009"
+      },
+      {
+        "producer_id": "P10-E0248",
+        "producer_ids": [
+          "P10-E0248"
+        ],
+        "stable_id": "MC-STK-ERR-1010"
+      },
+      {
+        "producer_id": "P10-E0249",
+        "producer_ids": [
+          "P10-E0249"
+        ],
+        "stable_id": "MC-STK-ERR-1011"
+      },
+      {
+        "producer_id": "P10-E0250",
+        "producer_ids": [
+          "P10-E0250"
+        ],
+        "stable_id": "MC-STK-ERR-1012"
+      },
+      {
+        "producer_id": "P10-E0251",
+        "producer_ids": [
+          "P10-E0251"
+        ],
+        "stable_id": "MC-STK-ERR-1013"
+      },
+      {
+        "producer_id": "P10-E0252",
+        "producer_ids": [
+          "P10-E0252"
+        ],
+        "stable_id": "MC-STK-ERR-1014"
+      },
+      {
+        "producer_id": "P10-E0253",
+        "producer_ids": [
+          "P10-E0253"
+        ],
+        "stable_id": "MC-STK-ERR-1015"
+      },
+      {
+        "producer_id": "P10-E0254",
+        "producer_ids": [
+          "P10-E0254"
+        ],
+        "stable_id": "MC-STK-ERR-1016"
+      },
+      {
+        "producer_id": "P10-E0255",
+        "producer_ids": [
+          "P10-E0255",
+          "P10-E0256"
+        ],
+        "stable_id": "MC-STK-ERR-1017"
+      },
+      {
+        "producer_id": "P10-E0257",
+        "producer_ids": [
+          "P10-E0257",
+          "P10-E0258"
+        ],
+        "stable_id": "MC-STK-ERR-1018"
+      },
+      {
+        "producer_id": "P10-E0259",
+        "producer_ids": [
+          "P10-E0259"
+        ],
+        "stable_id": "MC-STK-ERR-1019"
+      },
+      {
+        "producer_id": "P10-E0260",
+        "producer_ids": [
+          "P10-E0260",
+          "P10-E0268"
+        ],
+        "stable_id": "MC-STK-ERR-1020"
+      },
+      {
+        "producer_id": "P10-E0261",
+        "producer_ids": [
+          "P10-E0261"
+        ],
+        "stable_id": "MC-STK-ERR-1021"
+      },
+      {
+        "producer_id": "P10-E0262",
+        "producer_ids": [
+          "P10-E0262"
+        ],
+        "stable_id": "MC-STK-ERR-1022"
+      },
+      {
+        "producer_id": "P10-E0263",
+        "producer_ids": [
+          "P10-E0263"
+        ],
+        "stable_id": "MC-STK-ERR-1023"
+      },
+      {
+        "producer_id": "P10-E0264",
+        "producer_ids": [
+          "P10-E0264"
+        ],
+        "stable_id": "MC-STK-ERR-1024"
+      },
+      {
+        "producer_id": "P10-E0265",
+        "producer_ids": [
+          "P10-E0265",
+          "P10-E0266"
+        ],
+        "stable_id": "MC-STK-ERR-1025"
+      },
+      {
+        "producer_id": "P10-E0267",
+        "producer_ids": [
+          "P10-E0267"
+        ],
+        "stable_id": "MC-STK-ERR-1026"
+      },
+      {
+        "producer_id": "P10-E0269",
+        "producer_ids": [
+          "P10-E0269"
+        ],
+        "stable_id": "MC-STK-ERR-1027"
+      },
+      {
+        "producer_id": "P10-E0270",
+        "producer_ids": [
+          "P10-E0270"
+        ],
+        "stable_id": "MC-STK-ERR-1028"
+      },
+      {
+        "producer_id": "P10-E0271",
+        "producer_ids": [
+          "P10-E0271"
+        ],
+        "stable_id": "MC-STK-ERR-1029"
+      },
+      {
+        "producer_id": "P10-E0272",
+        "producer_ids": [
+          "P10-E0272"
+        ],
+        "stable_id": "MC-STK-ERR-1030"
+      },
+      {
+        "producer_id": "P10-E0274",
+        "producer_ids": [
+          "P10-E0274"
+        ],
+        "stable_id": "MC-STK-ERR-1031"
+      },
+      {
+        "producer_id": "P10-E0273",
+        "producer_ids": [
+          "P10-E0273"
+        ],
+        "stable_id": "MC-STK-ERR-1032"
+      },
+      {
+        "producer_id": "P10-E0275",
+        "producer_ids": [
+          "P10-E0275"
+        ],
+        "stable_id": "MC-STK-ERR-1033"
+      },
+      {
+        "producer_id": "P10-E0276",
+        "producer_ids": [
+          "P10-E0276"
+        ],
+        "stable_id": "MC-STK-ERR-1034"
+      },
+      {
+        "producer_id": "P10-E0277",
+        "producer_ids": [
+          "P10-E0277"
+        ],
+        "stable_id": "MC-STK-ERR-1035"
+      },
+      {
+        "producer_id": "P10-E0278",
+        "producer_ids": [
+          "P10-E0278",
+          "P10-E0281",
+          "P10-E0284"
+        ],
+        "stable_id": "MC-STK-ERR-1036"
+      },
+      {
+        "producer_id": "P10-E0280",
+        "producer_ids": [
+          "P10-E0280"
+        ],
+        "stable_id": "MC-STK-ERR-1037"
+      },
+      {
+        "producer_id": "P10-E0279",
+        "producer_ids": [
+          "P10-E0279"
+        ],
+        "stable_id": "MC-STK-ERR-1038"
+      },
+      {
+        "producer_id": "P10-E0282",
+        "producer_ids": [
+          "P10-E0282"
+        ],
+        "stable_id": "MC-STK-ERR-1039"
+      },
+      {
+        "producer_id": "P10-E0283",
+        "producer_ids": [
+          "P10-E0283"
+        ],
+        "stable_id": "MC-STK-ERR-1040"
+      },
+      {
+        "producer_id": "P10-E0285",
+        "producer_ids": [
+          "P10-E0285",
+          "P10-E0287"
+        ],
+        "stable_id": "MC-STK-ERR-1041"
+      },
+      {
+        "producer_id": "P10-E0286",
+        "producer_ids": [
+          "P10-E0286"
+        ],
+        "stable_id": "MC-STK-ERR-1042"
+      },
+      {
+        "producer_id": "P10-E0288",
+        "producer_ids": [
+          "P10-E0288"
+        ],
+        "stable_id": "MC-STK-ERR-1043"
+      },
+      {
+        "producer_id": "P10-E0289",
+        "producer_ids": [
+          "P10-E0289"
+        ],
+        "stable_id": "MC-STK-ERR-1044"
+      },
+      {
+        "producer_id": "P10-E0637",
+        "producer_ids": [
+          "P10-E0637"
+        ],
+        "stable_id": "MC-STK-ERR-1045"
+      }
+    ],
+    "rejected_producer_ids": [],
+    "intentionally_absent_producer_ids": [],
+    "unit_count": 38,
+    "accepted_producer_identities": 45,
+    "operation_count": 57,
+    "first_id": "MC-STK-ERR-1008",
+    "last_id": "MC-STK-ERR-1045"
+  },
+  "scratch_replay": {
+    "passed": true,
+    "apply_order": "descending_start_byte",
+    "operation_count": 57,
+    "descending_intervals": [
+      [
+        79966,
+        79972
+      ],
+      [
+        78262,
+        78272
+      ],
+      [
+        77527,
+        77563
+      ],
+      [
+        76172,
+        76180
+      ],
+      [
+        76136,
+        76145
+      ],
+      [
+        76084,
+        76105
+      ],
+      [
+        75912,
+        75934
+      ],
+      [
+        75852,
+        75874
+      ],
+      [
+        74740,
+        74756
+      ],
+      [
+        74033,
+        74063
+      ],
+      [
+        72560,
+        72583
+      ],
+      [
+        72389,
+        72424
+      ],
+      [
+        71023,
+        71039
+      ],
+      [
+        70583,
+        70620
+      ],
+      [
+        70448,
+        70489
+      ],
+      [
+        67550,
+        67566
+      ],
+      [
+        63080,
+        63165
+      ],
+      [
+        63022,
+        63040
+      ],
+      [
+        61901,
+        61918
+      ],
+      [
+        61055,
+        61076
+      ],
+      [
+        61011,
+        61046
+      ],
+      [
+        60871,
+        60888
+      ],
+      [
+        59664,
+        59702
+      ],
+      [
+        55029,
+        55042
+      ],
+      [
+        53969,
+        53988
+      ],
+      [
+        53717,
+        53735
+      ],
+      [
+        50829,
+        50853
+      ],
+      [
+        49508,
+        49531
+      ],
+      [
+        47935,
+        47971
+      ],
+      [
+        47225,
+        47249
+      ],
+      [
+        45960,
+        45983
+      ],
+      [
+        43073,
+        43090
+      ],
+      [
+        42898,
+        42915
+      ],
+      [
+        42315,
+        42326
+      ],
+      [
+        41078,
+        41098
+      ],
+      [
+        40535,
+        40546
+      ],
+      [
+        36549,
+        36573
+      ],
+      [
+        36470,
+        36492
+      ],
+      [
+        36386,
+        36408
+      ],
+      [
+        34819,
+        34842
+      ],
+      [
+        33894,
+        33932
+      ],
+      [
+        28554,
+        28573
+      ],
+      [
+        28066,
+        28083
+      ],
+      [
+        23257,
+        23286
+      ],
+      [
+        22845,
+        22872
+      ],
+      [
+        19882,
+        19921
+      ],
+      [
+        17034,
+        17046
+      ],
+      [
+        16895,
+        16917
+      ],
+      [
+        16852,
+        16873
+      ],
+      [
+        16759,
+        16781
+      ],
+      [
+        16097,
+        16109
+      ],
+      [
+        10230,
+        10251
+      ],
+      [
+        8596,
+        8611
+      ],
+      [
+        8466,
+        8484
+      ],
+      [
+        5898,
+        5930
+      ],
+      [
+        5756,
+        5766
+      ],
+      [
+        4717,
+        4743
+      ]
+    ],
+    "authority": {
+      "bytes": 80778,
+      "sha256": "B13FFE40A679F3E86EA82972ED7955DD4FBCFD0D98F954936B0E5FBF56F92C7D"
+    },
+    "output": {
+      "bytes": 80995,
+      "sha256": "3CFCEF73EB9172CF69082FF07B9D84442DD5E545D8AD22917D5A694BAA57298E"
+    },
+    "operation_spec_sha256": "A19F56A8A875081DF5C5AD62036AC8284021EC23550BE281DD3FE0D0273F2D96"
+  },
+  "sealed_evidence_verification": {
+    "passed": true,
+    "build_receipt": {
+      "path": "builds/build-receipt.json",
+      "sha256": "FC0F01B09C24E13ED624EB041D9D2E23A28C924DC27EF6A38D5668B5D615A347"
+    },
+    "visual_qa": {
+      "path": "builds/visual-qa.json",
+      "sha256": "BD8F0342AC43E33FB0E2BE307E2FB9112AF71A22A13CE7D0D7256817339053B6"
+    },
+    "candidate_pdf": {
+      "path": "builds/spaces-duality.pdf",
+      "bytes": 545818,
+      "sha256": "133E4350908AC12FDE9E06C82E28031E79EDEE2C2A69B5D763A829434F444CEC",
+      "pages": 25
+    },
+    "authority_pdf": {
+      "path": "builds/spaces-duality.authority.pdf",
+      "bytes": 545653,
+      "sha256": "E9D76F06B7698CDE5A32F59A5DF5BF3AA88221C90795E75DFF7AF7E611C7CCA6",
+      "pages": 25
+    },
+    "private_render_manifest": {
+      "bytes": 9569,
+      "sha256": "B6D26082876B1362089A22813DEBF60F72D2C31773483F5599F93D8EA85D0AAA",
+      "logical_path": "canon/private_evidence/errata-r24-20260827T190000Z/render"
+    }
+  },
+  "adverse_observations": [
+    "Standalone candidate and authority builds retain identical cross-chapter unresolved-reference multisets.",
+    "Both PDFs are untagged; this retained accessibility limitation is not misreported as a visual failure.",
+    "All 25 candidate pages and every correction-sensitive locus were inspected without a visual defect."
+  ],
+  "constraints_observed": {
+    "candidate_inputs_mutated": false,
+    "upstream_contacted": false,
+    "persistent_writes": [
+      "replay/independent-review.json"
+    ]
+  }
+}
