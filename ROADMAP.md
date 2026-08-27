@@ -27,7 +27,8 @@ source `7ee4b3a46e995e9e36b259bbc9300828c3c6988b`, tree
 24,390,066 PDF bytes, global fixed point on sweep four, and zero fatal or listed
 serious diagnostics. All 130 affected `derived.pdf` pages passed visual review,
 with pages 9–11 inspected at high resolution around the page-10 insertion. All
-22 PDF identities match exactly between the two builds.
+22 PDF identities match exactly between the two builds. The validated content
+release is public at `4947e4a6d22971ea793e4b4bc2b09d8ab8cc04d0`.
 
 ## Queued registry-order maintenance
 

@@ -22,6 +22,7 @@ machine-readable validation evidence.
 [Current fixed-point build: PASS](validation/stacks-verdier-a04446e-1-2-13-r1-build-2026-08-26.json) ·
 [Current visual QA: PASS](validation/stacks-verdier-a04446e-1-2-13-r1-visual-qa-2026-08-26.json) ·
 [Current reproducibility: PASS](validation/stacks-verdier-a04446e-1-2-13-r1-reproducibility-2026-08-26.json) ·
+[Current publication receipt: PASS](validation/stacks-verdier-a04446e-1-2-13-r1-release-2026-08-26.json) ·
 [Historical R21 publication receipt: PASS](validation/errata-r18-r19-release-2026-08-25.json) ·
 [R17 historical receipt](validation/unification-release-2026-08-25.json) ·
 [Roadmap](ROADMAP.md) ·
@@ -105,6 +106,11 @@ reviewed; pages 9–11 were also inspected at high resolution around the complet
 page-10 insertion. A parallel rebuild in a second linked worktree used the same
 source, builder, environment, and sweep, and all 22 PDF identities were exactly
 equal.
+
+The validated content release is public at
+`4947e4a6d22971ea793e4b4bc2b09d8ab8cc04d0`. Its exact source, candidate,
+registry, build, QA, documentation, tooling, and candidate-PDF bytes were read
+back anonymously and are bound in the current publication receipt.
 
 The preceding R21 Stacks-only fixed point remains historical evidence at
 content head `780f48fafbb46dc1057bf8fdcd339693fb44d6bf`. Its receipts and anonymous

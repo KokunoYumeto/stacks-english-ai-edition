@@ -73,6 +73,13 @@ The historical R21 composition, build, publication, and readback receipts
 remain preserved and validated against their own immutable source snapshot;
 they are not rebound to the Verdier tree.
 
+The Verdier content release is public at
+`4947e4a6d22971ea793e4b4bc2b09d8ab8cc04d0`. The
+[publication receipt](validation/stacks-verdier-a04446e-1-2-13-r1-release-2026-08-26.json)
+binds its exact CI run and anonymous raw-byte inventory. Full validation omits
+`--pre-publication` and independently rechecks the public ref, every decisive
+row, and the recorded GitHub Actions run.
+
 ## Source-specific deterministic evidence
 
 Detailed validators and receipts are intentionally kept with the scope they

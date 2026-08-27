@@ -175,8 +175,12 @@ def git(root: Path, *args: str, input_bytes: bytes | None = None) -> bytes:
     return completed.stdout
 
 
-def git_text(root: Path, *args: str) -> str:
-    return git(root, *args).decode("utf-8", errors="strict").strip()
+def git_text(
+    root: Path, *args: str, input_bytes: bytes | None = None
+) -> str:
+    return git(root, *args, input_bytes=input_bytes).decode(
+        "utf-8", errors="strict"
+    ).strip()
 
 
 def git_optional(root: Path, *args: str) -> str | None:

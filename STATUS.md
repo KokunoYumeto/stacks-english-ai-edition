@@ -77,3 +77,9 @@ fixed-point sweep; all 22 `{stem, pages, bytes, sha256}` artifact tuples are
 exactly equal. The earlier R21 content fixed point at
 `780f48fafbb46dc1057bf8fdcd339693fb44d6bf` and its successful anonymous
 readback remain preserved as historical evidence for their exact scope.
+
+The Verdier content release is public at
+`4947e4a6d22971ea793e4b4bc2b09d8ab8cc04d0`. Exact anonymous readback of 62
+source, registry, candidate, receipt, documentation, tool, and candidate-build
+artifact files is recorded in the
+[current publication receipt](validation/stacks-verdier-a04446e-1-2-13-r1-release-2026-08-26.json).

@@ -41,7 +41,7 @@ records anonymous readback of the decisive public inventory.
 
 ## Current Verdier v4 receipts
 
-The current release candidate advances the integrated registry to 22 overlays
+The current release advances the integrated registry to 22 overlays
 and 559 stable IDs by adding the independently written
 `stacks-verdier-a04446e-1-2-13-r1` overlay after the historical R1–R21
 composition. Its exact evidence is recorded in:
@@ -60,3 +60,9 @@ composition. Its exact evidence is recorded in:
 The historical R21 receipts remain authoritative for their own immutable
 snapshot. They are deliberately not treated as proof for the later Verdier
 source tree.
+
+The [Verdier publication receipt](stacks-verdier-a04446e-1-2-13-r1-release-2026-08-26.json)
+binds public content head `4947e4a6d22971ea793e4b4bc2b09d8ab8cc04d0`,
+the passing workflow, and exact anonymous readback identities for the decisive
+source, candidate, registry, evidence, documentation, tooling, and candidate
+build artifacts.

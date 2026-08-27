@@ -99,7 +99,8 @@ The current fixed-point build is bound to source
 The unified repository retains the pre-unification integration heads as
 clearly named historical branches in addition to the integrated default
 branch. Their presence is provenance, not a claim that they remain competing
-editions. The live Verdier release candidate advances the integrated cutoff to
-22 overlays and 559 stable IDs at `60f1d97e`. Later R22 and R23 admissions
-affect only `more-algebra.tex` and remain queued, in registry order, outside
-this release.
+editions. The published Verdier content release at
+`4947e4a6d22971ea793e4b4bc2b09d8ab8cc04d0` advances the integrated cutoff to
+22 overlays and 559 stable IDs at `60f1d97e`. Later R22 and R23 admissions affect
+only `more-algebra.tex` and remain queued, in registry order, outside this
+release.

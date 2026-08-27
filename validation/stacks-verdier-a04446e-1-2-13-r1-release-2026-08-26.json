@@ -1,0 +1,501 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-verdier-release/v1",
+  "status": "PUBLICATION_COMPLETE",
+  "created_utc": "2026-08-27T16:02:49Z",
+  "updated_utc": "2026-08-27T16:02:49Z",
+  "release": {
+    "repository": "KokunoYumeto/unofficial-ai-integrated-stacks-project",
+    "default_branch": "main",
+    "previous_public_main_head": "522951e96168ebc13dfeeca7ce60032f5bcd8938",
+    "registry_cutoff_commit": "60f1d97ecbd376ff7a91298d17e1f162b9996c3a",
+    "overlay": "stacks-verdier-a04446e-1-2-13-r1",
+    "registered_overlays": 22,
+    "registered_stable_ids": 559,
+    "content_head": "4947e4a6d22971ea793e4b4bc2b09d8ab8cc04d0",
+    "content_tree": "54f5f2658c20de69a88826000a9e5f3725f141fe",
+    "metadata_head": "4947e4a6d22971ea793e4b4bc2b09d8ab8cc04d0",
+    "metadata_tree": "54f5f2658c20de69a88826000a9e5f3725f141fe",
+    "excluded_later_admissions": [
+      "stacks-errata-a04446e-r22",
+      "stacks-errata-a04446e-r23"
+    ]
+  },
+  "candidate": {
+    "commit": "ae3a1b76e557a528ad346ac336124ff113d9022f",
+    "tree": "888fab43da3790dfcaf8d792e2b248661514991c",
+    "subtree": "94738667238babcdbd3488c76ea13529fbf24fc4",
+    "manifest_sha256": "1FDC18620B255DDFD59CB967C82AF9F1FA3E75D6ACE748808BF3F18A91913CB7",
+    "stable_units": 12,
+    "manifest_references": 27,
+    "rights_state": "Historical-source evidence is limited to locators, hashes, and independent paraphrase. No verbatim source prose is included, no source-work license is asserted or granted by this candidate, and no upstream content is relicensed. The proposed Stacks payload is independently written, subject to GFDL compatibility at composition, and is not reviewed, approved, affiliated with, or endorsed by the Stacks Project.",
+    "official_stacks_tag_claimed": false,
+    "upstream_endorsement_claimed": false
+  },
+  "composition": {
+    "path": "validation/composition-current.json",
+    "bytes": 6151,
+    "sha256": "EEC873F3A89252C60D99C12FB0A42C665542742BC45110992FB58E6DAAD0468B",
+    "git_blob": "3dcad2db39bbcfe583edd80d0ea3869548ecd58f",
+    "source_commit": "39d99b0080b1f55e1d924cb73134dca885274e3f",
+    "source_tree": "1ebbfee24f79711cef924a87e0fb08dfe70ca4ea"
+  },
+  "build": {
+    "receipt_path": "validation/stacks-verdier-a04446e-1-2-13-r1-build-2026-08-26.json",
+    "receipt_bytes": 29360,
+    "receipt_sha256": "B8756662886F1A0910D2EE49E87A4334C4B4A900A968AEE1596999428A6A7100",
+    "source_commit": "7ee4b3a46e995e9e36b259bbc9300828c3c6988b",
+    "source_tree": "5b3349e5944ecf9d0718c6a31728a457adcd1c69",
+    "chapters": 22,
+    "pages": 2343,
+    "pdf_bytes": 24390066,
+    "global_fixed_point_sweep": 4,
+    "artifact_tuple_set_sha256": "F554EEB9CEFD7A92F65BA17641D7927BB2936251399838A52948718BDB57687E",
+    "diagnostics": {
+      "fatal_markers": 0,
+      "missing_glyph_markers": 0,
+      "undefined_reference_markers": 0,
+      "external_reference_markers": 3585,
+      "undefined_citation_markers": 0,
+      "multiply_defined_markers": 0,
+      "rerun_required_markers": 0,
+      "destination_warning_markers": 0
+    }
+  },
+  "visual_qa": {
+    "status": "PASS",
+    "receipt_path": "validation/stacks-verdier-a04446e-1-2-13-r1-visual-qa-2026-08-26.json",
+    "receipt_bytes": 2651,
+    "receipt_sha256": "F284E0786C87D545F0DA3135F899B0CC28FB057D8BEC5B1FD91E38B632A3F89A",
+    "receipt_git_blob": "8dff38349d775b1214c583e1c8fe5b5689974329",
+    "full_page_reviews": 130,
+    "high_resolution_pages": 3,
+    "defects": 0
+  },
+  "reproducibility": {
+    "status": "PASS",
+    "summary_path": "validation/stacks-verdier-a04446e-1-2-13-r1-reproducibility-2026-08-26.json",
+    "summary_bytes": 17128,
+    "summary_sha256": "D1AB0A9CFE75CC12951970E45ED96A6F7006AD8580FD47EDE9A05D5FED7A23CE",
+    "summary_git_blob": "8d40cf22cd0b203bca0a3f2b4421ecf5994723b8",
+    "second_receipt_path": "validation/stacks-verdier-a04446e-1-2-13-r1-reproducibility-second-2026-08-26.json",
+    "second_receipt_bytes": 29360,
+    "second_receipt_sha256": "2203324EE490823B1E2218762D093AD9CC6E0CC1926F394F6407AABC3BFF84C1",
+    "second_receipt_git_blob": "56e6b65a43afe3d07100829e85c89a15b030a879",
+    "matched_artifacts": 22,
+    "different_artifacts": 0,
+    "artifact_tuple_set_sha256": "F554EEB9CEFD7A92F65BA17641D7927BB2936251399838A52948718BDB57687E"
+  },
+  "public_readback": {
+    "status": "PASS",
+    "checked_utc": "2026-08-27T16:02:49Z",
+    "method": "anonymous git reference inspection and raw.githubusercontent.com HTTPS byte readback",
+    "commit": "4947e4a6d22971ea793e4b4bc2b09d8ab8cc04d0",
+    "checked_file_count": 62,
+    "checked_total_bytes": 5143397,
+    "checked_paths": [
+      {
+        "path": ".github/workflows/validate.yml",
+        "bytes": 902,
+        "sha256": "A471DA013A3633803B669DF27457741261A56B0FAD957D3E77C3D17AFF9B3B8A",
+        "git_blob": "f2f5a9a3f963efcf15225b44988bdcef4c1dae2a"
+      },
+      {
+        "path": "CONTRIBUTING.md",
+        "bytes": 976,
+        "sha256": "4AF5C0F1170DE25DF8B3A91247A2A586F40EE1810573C9A771C50D641C424786",
+        "git_blob": "beb64eaed0ec3f7b5852ca6fbccdcd555013504b"
+      },
+      {
+        "path": "COPYING",
+        "bytes": 20404,
+        "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85",
+        "git_blob": "71ec2c40b4c76362e1d1e9ece69939e7eb8b0908"
+      },
+      {
+        "path": "PROVENANCE.md",
+        "bytes": 5800,
+        "sha256": "5470919168CF309F2F138A27A1EA39670E2B36B4908142653FE41CAB568A04A2",
+        "git_blob": "fd2bfde6d0a8214d704c9732746289fab757cd0a"
+      },
+      {
+        "path": "README.md",
+        "bytes": 7292,
+        "sha256": "931CD8E1B534E079F842FE24CC50A397E0422A7F3A16A42DE06905CAEEB199E0",
+        "git_blob": "71811445ea93d514c4ecd6d9088fb688f52b025d"
+      },
+      {
+        "path": "ROADMAP.md",
+        "bytes": 8672,
+        "sha256": "8C9109B31708D3926E24F2966783F79206925DE24361ECBB32441CA17E30969F",
+        "git_blob": "c3d89762e68b1d7c69ab38a75cf46023eeb56cd4"
+      },
+      {
+        "path": "STATUS.md",
+        "bytes": 5180,
+        "sha256": "1AC81BC46BB00471374C2E8ADA0769AEB5E5973C6122C00D8D74E30FE130036B",
+        "git_blob": "1a587e95c019f517496c625c214971b6526e7b16"
+      },
+      {
+        "path": "VALIDATION.md",
+        "bytes": 4988,
+        "sha256": "1614BF1CBC335FDF92BD8BBE3CE95FA1725769CA9585C1D88E065CFDCEBEF3B1",
+        "git_blob": "dd2c1e44f7a14dbb4b2ef47356f52605858a6a07"
+      },
+      {
+        "path": "ai-integrated/README.md",
+        "bytes": 3068,
+        "sha256": "4A9D1CB989C573D37F2DCB18A5CF856E50058C708990501598AA520DF4256B1F",
+        "git_blob": "158e87dfa781908e66aab7f9e1523335be7eef90"
+      },
+      {
+        "path": "ai-integrated/RIGHTS.md",
+        "bytes": 806,
+        "sha256": "810CACE26A6A4C732BE9B5DD7EDE534B4C8ECF22BE1FF74197AD5B387ADF25FB",
+        "git_blob": "cb45fc64bf258b132a82917bfeda8a9081b5145c"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/verdier/.gitattributes",
+        "bytes": 107,
+        "sha256": "FB54B4AACF6E66CBE7B33165C67CEB61F5A7E980F75C7AF1E3ACAE1E00C0503F",
+        "git_blob": "4cdc97bf6e5554763c25d22b21a23c2d58dd5412"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/verdier/.gitignore",
+        "bytes": 35,
+        "sha256": "75526202CE6969F9C4E24207B914464FAD59128DAF76F1636F2F59487E40E140",
+        "git_blob": "ce083c2e05a719584b4e55c03b961c79df2c355a"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/verdier/LEASE.json",
+        "bytes": 444,
+        "sha256": "2E5A2FEBC61596A6054C7BDB8576EC18ABA977E20C65C0225CCE8857BD1245A3",
+        "git_blob": "82d7ce54812aa82fd6611ca400a0932aeaa5e7eb"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/verdier/README.md",
+        "bytes": 4669,
+        "sha256": "D71E308FA53B38FF165F1BE5A1608880BAE9FD1410A00378788C0722BF5F9F91",
+        "git_blob": "8f60abd82aa1e8ba78b755120c96ef88713c11d1"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/verdier/authority/authority.lock.json",
+        "bytes": 3042,
+        "sha256": "FB0F6E30D8FA5297256E662A81821A3725C06571AB8ADCCF680424A7FCCF9242",
+        "git_blob": "1fd6259693ba216beb35d25bd737b59d5376c197"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/verdier/build-manifest.py",
+        "bytes": 14977,
+        "sha256": "CE7EECFE8DBEF8CF4FDB24145ACC8A5BF9D9F1FC5052FE82AFB41B41E2883C4B",
+        "git_blob": "01242ba3229103b2d353666969ff182e3f7aee82"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/verdier/build.py",
+        "bytes": 18261,
+        "sha256": "B90CF17522AB215A1C499CD12811EF6EB485623289957EC3EA6A77339678B2C2",
+        "git_blob": "42e25d151f6840339b7640f2447033a1856968a1"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/verdier/builds/baseline-derived.log",
+        "bytes": 58716,
+        "sha256": "CFE4EEB1CA09CF5D5252C1DF9E8BB0F3EAD5FB2B093AFDCB50B2496513D349FD",
+        "git_blob": "27ddb4529d6f56256ac29ee43972f033a7401b38"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/verdier/builds/build-receipt.json",
+        "bytes": 2046,
+        "sha256": "88F838541743D036D9EB3B848593FCE056358675397671D54D8FCD93AD933D94",
+        "git_blob": "cc15aab6216092e3b2883ffad1483dc931f489a9"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/verdier/builds/derived.log",
+        "bytes": 58648,
+        "sha256": "4344878D12A5622FB8161A7306AAAC9692A8ED6FC35E0583193D52D33A5F9926",
+        "git_blob": "d375f48939fd9eb34e1f4d6d20089b388018ef54"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/verdier/builds/derived.pdf",
+        "bytes": 1244620,
+        "sha256": "EDB4BED1F5A166B34562B63D44EEEE70C3F421AAFDD91F31C142E1B0EEAEF96A",
+        "git_blob": "a3a7c444e19dde6ea1a55f8933cb76a3841ce738"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/verdier/builds/validation.json",
+        "bytes": 1468,
+        "sha256": "255AE7BBCE7C615C36F6D574BE74DB4705ECAF0C08ABACF882E9DA6E2A651EC0",
+        "git_blob": "66f1d8d3cb6b26d4357cee552d7c4163dddbcaf5"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/verdier/builds/visual-qa.json",
+        "bytes": 1819,
+        "sha256": "97BC160345371BB0F719282B1103A08BE23785B74327534AA17D490459E1A3AD",
+        "git_blob": "a34bebb7dc4c07d5f396ddc48b5606d96bd94e6d"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/verdier/builds/visual/derived-009.png",
+        "bytes": 425000,
+        "sha256": "EC01488A483C5F370E5852CFAB05D60DDE02496C03095CBF2723033DBB9915C9",
+        "git_blob": "f51e4671457c9e49c305e5762098427cb98da0c3"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/verdier/builds/visual/derived-010.png",
+        "bytes": 426432,
+        "sha256": "03C0BE53EE7D365AEDCC1E5761E314DA355A10DCE4953BA8C32B1812ECE3B5AB",
+        "git_blob": "17fcfb0dd3f6b9ff1f50dab0442ec196e579a70c"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/verdier/builds/visual/derived-011.png",
+        "bytes": 433929,
+        "sha256": "B1BC9C107B8A5A8562856751CEEBE570CE6AB93CAE5BF03431C93BE0F6648F5E",
+        "git_blob": "8a9a81eebe0e15561e7bd2c1c6ce9efeeb525cf3"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/verdier/candidate.config.json",
+        "bytes": 6934,
+        "sha256": "7929643FBBEB6DB78A1CFCC7E10937EC333712ADCEDE685242B43561C64C7942",
+        "git_blob": "2ef32c677cc9c3fc2c11514b403473bdd225cfea"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/verdier/candidate.manifest.json",
+        "bytes": 5491,
+        "sha256": "1FDC18620B255DDFD59CB967C82AF9F1FA3E75D6ACE748808BF3F18A91913CB7",
+        "git_blob": "2d592caf7d5cb828f78c19b84d9af54f875e8485"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/verdier/check-manifest.py",
+        "bytes": 14613,
+        "sha256": "0C49E971C826DB485AB5E95375E63CCE03DAA0D33257B5A4D1B5A2834A433143",
+        "git_blob": "3a95b9531d46dd3d017d06c5059c694bbcf8fff1"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/verdier/composition.jsonl",
+        "bytes": 1866,
+        "sha256": "68FC402AB3FC1FBCDA90AAF958C7FC883462A645AB6B37FAB0172CB27FD2BEBC",
+        "git_blob": "dc17bdde0c191f3107a559642537c5a972d3d5f7"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/verdier/decisions.jsonl",
+        "bytes": 5174,
+        "sha256": "4C54CC173C981D1825C7740C10FA8B243BADAEC23322044112330EDB0EC550E7",
+        "git_blob": "e214068290c77651f33de3017a37d483b75444ca"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/verdier/formula-diagram-inventory.json",
+        "bytes": 5322,
+        "sha256": "A6AF6528CEBCAF5BDBFB2F50499336BDE855AC8DE11828776503F45E89388CA5",
+        "git_blob": "17a85faab7d1d3a3d911079036b0a1a1d08a8674"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/verdier/payload/fragments/derived-functorial-triangles.tex",
+        "bytes": 2339,
+        "sha256": "FCF51C107444D5ED31C32ABC73F19ECC05AAFA5C3FD078CF29B5A743C2A414B1",
+        "git_blob": "02ec6caa4fc1d33e4d49d2063b695139acd86b12"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/verdier/rejections.jsonl",
+        "bytes": 4275,
+        "sha256": "FB82E6963A55090D2F1717C128551F06B8A29D03014A80E6FFD92356FE97B5B0",
+        "git_blob": "2f746666a50809ff4b82ca344bea0b62a1ffd7c3"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/verdier/replay/independent-review.json",
+        "bytes": 14754,
+        "sha256": "5FE1320F22A25385EB548B4AD6223B1F1C47B77E0A0D275E76EA2E38ABB4B359",
+        "git_blob": "babf5f6c93d79af8fb2147bdf387d51f17129e19"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/verdier/source-map.jsonl",
+        "bytes": 16405,
+        "sha256": "8518A282A89846ED95CC73B1C439960CDEF8979859EAC1344BC0CC9727792F1D",
+        "git_blob": "ad3196ef42c1448d86654f2edae2f848dab03e29"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/verdier/stable-units.json",
+        "bytes": 9601,
+        "sha256": "3A3EABF273D31568FA90A1396F396FF27473E86CF93266D1136C2DCA30835103",
+        "git_blob": "689b75894f65b45bfdf3a174c82f29023c51853e"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/verdier/verify.py",
+        "bytes": 50524,
+        "sha256": "9C694403E18CA89E1CDFAEBAAF863FE86AC68D9B15036892ABF2103964329449",
+        "git_blob": "36a8925514c15fae97fb10add2d9768d69302712"
+      },
+      {
+        "path": "ai-integrated/registry/leases.json",
+        "bytes": 29289,
+        "sha256": "C033C598B4055B16C55FA3C6BB386F28507FB55F955F135650525C9EB1FA77C0",
+        "git_blob": "7bfa27cec4bb1e47298aa5c8922318dfd3759437"
+      },
+      {
+        "path": "ai-integrated/registry/locales.json",
+        "bytes": 218,
+        "sha256": "3DE3751A87585190431282CC63CB5154FE7A8591387296DF49BDF91E1FAE5DDC",
+        "git_blob": "4b431ec401dd269d96716346974d7ab4cda21470"
+      },
+      {
+        "path": "ai-integrated/registry/overlays.json",
+        "bytes": 33954,
+        "sha256": "4AFBFE06A6740E96D03915269606B42C19145919C58FDA51317C84FD8AA8AB7E",
+        "git_blob": "9a04cb2dced10a184aea9100c900b2b0465c1948"
+      },
+      {
+        "path": "ai-integrated/registry/releases.json",
+        "bytes": 184,
+        "sha256": "7B617733DF24317C755F67EB51461DE695289A22D6953C456082A48E8C9D3BB5",
+        "git_blob": "dd1bdf9c9444e686e6962f77ac8b324d82415c25"
+      },
+      {
+        "path": "ai-integrated/upstream/stacks.lock.json",
+        "bytes": 1171,
+        "sha256": "B195ECC83AB0F32C574A60D1FDBA9B0DA4D35B04E0DF7CB106DC9C0FDAD99C0D",
+        "git_blob": "7ae1f2046140c8ccf0c7299a1f2400f5a34c7ae5"
+      },
+      {
+        "path": "chapters.tex",
+        "bytes": 8589,
+        "sha256": "8C40B11962DD6F7693AEDC158839D78DDD7E82EDF0D6345533F5D79EF3D2BCC8",
+        "git_blob": "ed13cbcc7e71d74f71545da177eee93d73418c27"
+      },
+      {
+        "path": "derived.tex",
+        "bytes": 452054,
+        "sha256": "8B389993D3B364A926C7DCD7AD598E5B8245D8E92BCC5A23646069F9AD617860",
+        "git_blob": "f62f8645b22d39a3dd5998256f3a296bcb677d37"
+      },
+      {
+        "path": "injectives.tex",
+        "bytes": 105119,
+        "sha256": "8528A9CAF5E10D1758C466FE0F62A3746B042DAA88CA647E1879F408458849DF",
+        "git_blob": "a9e1347c67fef52a6d253c22a8f18270eefbbf2e"
+      },
+      {
+        "path": "simplicial.tex",
+        "bytes": 239992,
+        "sha256": "650ABA33A184CE9945DD70C04D83A3A4CBD6E540426B171E828336855DC97A0B",
+        "git_blob": "a34120e214b9a840b72889344a0f716ada037c97"
+      },
+      {
+        "path": "tags/tags",
+        "bytes": 989923,
+        "sha256": "8902B5633D1B74AB5750FD4246D42E0292D844AC4B87135482D07857C478EF3D",
+        "git_blob": "0058ac1926694efa53a6ec2281e8008e66f3a977"
+      },
+      {
+        "path": "tools/build_fixed_point.py",
+        "bytes": 73846,
+        "sha256": "83D476183A1ADE0894A116E136DA16DA0DDBE67C1BC0F58BC3A31C4ED9E38481",
+        "git_blob": "8b94bdf0fdfcc7f78a9fc42d180698ec1c8dcec7"
+      },
+      {
+        "path": "tools/compose_overlay_projection.py",
+        "bytes": 16465,
+        "sha256": "8C0C62CD8055D8D5C07192FEA09DE10FC95C295FB5B467E825410B798572354D",
+        "git_blob": "5922ccb0d98f4a76800a83b3f978f5003fadb1a9"
+      },
+      {
+        "path": "tools/compose_registered_insertion.py",
+        "bytes": 17418,
+        "sha256": "0D3A903844F91D49717E4240D74CC0BA241B2A45DD6EA5A54EA729D1ACEEE17D",
+        "git_blob": "5fdbf67e590690fb4eb7dd7da217bae4c15f7fcf"
+      },
+      {
+        "path": "tools/validate_registered_insertion_release.py",
+        "bytes": 73337,
+        "sha256": "B61544F165A569273FA312DF5FF023D19D75E661E761414E9281274C5510676B",
+        "git_blob": "e395de48cd71fdcb73f968582ecb20badf20709c"
+      },
+      {
+        "path": "tools/validate_unified_repository.py",
+        "bytes": 100104,
+        "sha256": "FCD8F0A4A92A1A851A3B4367704F4E229CD645F409806EA0B7CE1D143E85367D",
+        "git_blob": "26b5c9bf707e5c8aeae5eeed43ad02ca894369dc"
+      },
+      {
+        "path": "tools/verify_overlay_projection.py",
+        "bytes": 8104,
+        "sha256": "4134FA38332AF1DCB2C848C234C809DC383B9914AB3F0854F86FE3C8D023ACD5",
+        "git_blob": "ef81b98b253d7fdde4decbb771d641700a175b95"
+      },
+      {
+        "path": "validation/README.md",
+        "bytes": 3612,
+        "sha256": "B6A9E3340625049D786943614551678FD1B7E56010A42C621686E860039C39F7",
+        "git_blob": "3930d33dce7444ef7b7f1dc038100928b6294774"
+      },
+      {
+        "path": "validation/composition-current.json",
+        "bytes": 6151,
+        "sha256": "EEC873F3A89252C60D99C12FB0A42C665542742BC45110992FB58E6DAAD0468B",
+        "git_blob": "3dcad2db39bbcfe583edd80d0ea3869548ecd58f"
+      },
+      {
+        "path": "validation/errata-r18-r19-release-2026-08-25.json",
+        "bytes": 11030,
+        "sha256": "0F2EA1792B51D3E39C30CA54EC8F3A819D6BE356A59D2BF81A2D1DF9A366F447",
+        "git_blob": "0c60d777e6aa370cdbc4ea29fb9f69b20b8d2868"
+      },
+      {
+        "path": "validation/stacks-verdier-a04446e-1-2-13-r1-build-2026-08-26.json",
+        "bytes": 29360,
+        "sha256": "B8756662886F1A0910D2EE49E87A4334C4B4A900A968AEE1596999428A6A7100",
+        "git_blob": "76b1024ac34cc313b039b461084dddbf71539946"
+      },
+      {
+        "path": "validation/stacks-verdier-a04446e-1-2-13-r1-reproducibility-2026-08-26.json",
+        "bytes": 17128,
+        "sha256": "D1AB0A9CFE75CC12951970E45ED96A6F7006AD8580FD47EDE9A05D5FED7A23CE",
+        "git_blob": "8d40cf22cd0b203bca0a3f2b4421ecf5994723b8"
+      },
+      {
+        "path": "validation/stacks-verdier-a04446e-1-2-13-r1-reproducibility-second-2026-08-26.json",
+        "bytes": 29360,
+        "sha256": "2203324EE490823B1E2218762D093AD9CC6E0CC1926F394F6407AABC3BFF84C1",
+        "git_blob": "56e6b65a43afe3d07100829e85c89a15b030a879"
+      },
+      {
+        "path": "validation/stacks-verdier-a04446e-1-2-13-r1-visual-qa-2026-08-26.json",
+        "bytes": 2651,
+        "sha256": "F284E0786C87D545F0DA3135F899B0CC28FB057D8BEC5B1FD91E38B632A3F89A",
+        "git_blob": "8dff38349d775b1214c583e1c8fe5b5689974329"
+      },
+      {
+        "path": "validation/unification-release-2026-08-25.json",
+        "bytes": 4739,
+        "sha256": "BE81FBB618743E0A051835AF7A87E6C4BC7710E8B971E0E7756AA1DD23250892",
+        "git_blob": "c95f041f72f65b7393aec164418fd5a75d6240f1"
+      }
+    ]
+  },
+  "workflow": {
+    "name": "Unified repository validation",
+    "run_id": 33090692675,
+    "head_sha": "4947e4a6d22971ea793e4b4bc2b09d8ab8cc04d0",
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/actions/runs/33090692675",
+    "role": "successful exact-head workflow for the release-metadata commit"
+  },
+  "content_head_workflow": {
+    "name": "Unified repository validation",
+    "run_id": 33090692675,
+    "head_sha": "4947e4a6d22971ea793e4b4bc2b09d8ab8cc04d0",
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/actions/runs/33090692675",
+    "role": "successful exact-head workflow for the release-metadata commit"
+  },
+  "registry": {
+    "cutoff_tree": "2f1455316ad184bcd88095d60a9372b03ca70828",
+    "overlays_sha256": "4AFBFE06A6740E96D03915269606B42C19145919C58FDA51317C84FD8AA8AB7E",
+    "leases_sha256": "C033C598B4055B16C55FA3C6BB386F28507FB55F955F135650525C9EB1FA77C0"
+  },
+  "fixed_point_artifacts": {
+    "pdfs_committed": false,
+    "artifact_count": 22,
+    "pages": 2343,
+    "bytes": 24390066,
+    "artifact_tuple_set_sha256": "F554EEB9CEFD7A92F65BA17641D7927BB2936251399838A52948718BDB57687E",
+    "public_identity_evidence": "validation/stacks-verdier-a04446e-1-2-13-r1-build-2026-08-26.json"
+  }
+}
