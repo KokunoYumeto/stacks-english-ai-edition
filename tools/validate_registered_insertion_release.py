@@ -1114,8 +1114,8 @@ def validate_qa_and_repro(
     require(
         isinstance(first_created, str)
         and isinstance(second_created, str)
-        and first_created < second_created,
-        "second build does not identify a later invocation",
+        and first_created != second_created,
+        "parallel reproducibility builds do not identify distinct invocations",
     )
 
     visual, visual_raw = load_committed_json(root, VISUAL_PATH, "visual-QA receipt")
@@ -1190,6 +1190,19 @@ def validate_qa_and_repro(
         },
         "reproducibility scope mismatch",
     )
+    method = repro.get("method")
+    require(
+        method
+        == {
+            "execution_model": "parallel_independent_linked_worktrees",
+            "first_worktree_kind": build.get("build", {}).get("worktree_kind"),
+            "second_worktree_kind": second.get("build", {}).get("worktree_kind"),
+            "builder_path": build.get("builder", {}).get("path"),
+            "builder_git_blob": build.get("builder", {}).get("git_blob"),
+            "builder_sha256": build.get("builder", {}).get("sha256"),
+        },
+        "reproducibility method binding mismatch",
+    )
     runs = repro.get("runs")
     require(isinstance(runs, dict), "reproducibility runs are missing")
     for key, path, raw, receipt in (
@@ -1200,6 +1213,7 @@ def validate_qa_and_repro(
         require(
             isinstance(row, dict)
             and row.get("receipt") == path.as_posix()
+            and row.get("created_utc") == receipt.get("created_utc")
             and row.get("bytes") == len(raw)
             and row.get("sha256") == sha256(raw)
             and row.get("status") == "PASS"

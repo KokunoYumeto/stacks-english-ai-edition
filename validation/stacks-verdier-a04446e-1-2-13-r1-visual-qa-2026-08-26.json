@@ -1,0 +1,86 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-visual-qa/v1",
+  "status": "PASS",
+  "created_utc": "2026-08-27T15:55:58Z",
+  "source": {
+    "commit": "7ee4b3a46e995e9e36b259bbc9300828c3c6988b",
+    "tree": "5b3349e5944ecf9d0718c6a31728a457adcd1c69"
+  },
+  "build_receipt": {
+    "path": "validation/stacks-verdier-a04446e-1-2-13-r1-build-2026-08-26.json",
+    "bytes": 29360,
+    "sha256": "B8756662886F1A0910D2EE49E87A4334C4B4A900A968AEE1596999428A6A7100",
+    "status": "PASS",
+    "global_fixed_point_sweep": 4
+  },
+  "scope": {
+    "affected_chapters": [
+      "derived"
+    ],
+    "full_page_render_count": 130,
+    "full_page_contact_sheet_review_count": 130,
+    "high_resolution_locus_pages": {
+      "derived": [
+        9,
+        10,
+        11
+      ]
+    },
+    "high_resolution_locus_page_count": 3,
+    "target_page": 10,
+    "target_label": "lemma-functorial-triangles-decomposable",
+    "transition_labels": [
+      "lemma-projectors-have-images-triangulated",
+      "lemma-easier-axiom-four"
+    ]
+  },
+  "artifacts": {
+    "derived": {
+      "pdf": "derived.pdf",
+      "pages": 130,
+      "bytes": 1246754,
+      "sha256": "790824D853196DD51B4C311A169A0AB5AA9E27344E2A92B4FA32A0F234E5782B",
+      "encrypted": false,
+      "pages_without_ink": 0,
+      "duplicate_render_hashes": 0,
+      "render_dimensions_pixels": [
+        816,
+        1056
+      ],
+      "minimum_ink_pixels_below_245": 31207
+    }
+  },
+  "checks": {
+    "all_pages_rendered": true,
+    "all_pages_manually_inspected": true,
+    "all_manifest_bound_locus_pages_inspected_at_high_resolution": true,
+    "page_dimensions_consistent": true,
+    "headers_and_page_numbers_consistent": true,
+    "text_and_formulas_legible": true,
+    "diagrams_intact": true,
+    "clipped_content": 0,
+    "overlapping_content": 0,
+    "blank_pages": 0,
+    "corrupted_pages": 0,
+    "missing_or_unreadable_glyphs": 0,
+    "broken_diagrams": 0
+  },
+  "render_protocol": {
+    "renderer": "Poppler pdftoppm 24.04.0",
+    "full_page_dpi": 96,
+    "high_resolution_dpi": 220,
+    "full_page_format": "PNG",
+    "contact_sheet_count": 9,
+    "render_intermediates_published": false
+  },
+  "inspection_notes": [
+    "All 130 pages were reviewed across nine numbered contact sheets.",
+    "Pages 9-11 were reviewed individually at 220 DPI; page 10 contains the complete Verdier insertion.",
+    "The insertion follows Lemma 4.14 and precedes Lemma 4.16 without clipping, overlap, broken formulas, or pagination damage."
+  ],
+  "intermediate_analysis": {
+    "published": false,
+    "bytes": 33377,
+    "sha256": "2965F7846C97E852E4B88838F6400BC2D3FE9478D99712055BB661A23ECE1DDA"
+  }
+}

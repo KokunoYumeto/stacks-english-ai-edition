@@ -83,10 +83,23 @@ identity tuples are exactly equal. The resulting R21 content fixed point is
 public at `780f48fafbb46dc1057bf8fdcd339693fb44d6bf`; anonymous readback matched
 the recorded public bytes and hashes.
 
+The next separately admitted contribution is the independently written Verdier
+II.1.2.13 overlay `stacks-verdier-a04446e-1-2-13-r1`, frozen at registry commit
+`60f1d97ecbd376ff7a91298d17e1f162b9996c3a`. It adds one 2,339-byte
+manifest-bound insertion to cumulative `derived.tex` through a unique unchanged
+803-byte context. Prefix and suffix bytes remain unchanged, and the proposed
+local label occurs exactly once. The candidate and source addition claim no
+official Stacks tag, affiliation, review, approval, or upstream endorsement.
+The current fixed-point build is bound to source
+`7ee4b3a46e995e9e36b259bbc9300828c3c6988b`, tree
+`5b3349e5944ecf9d0718c6a31728a457adcd1c69`.
+
 ## Branch preservation
 
 The unified repository retains the pre-unification integration heads as
 clearly named historical branches in addition to the integrated default
 branch. Their presence is provenance, not a claim that they remain competing
-editions. The current fixed point ends exactly at R21 cutoff `13ca6aaa`; later
-admissions are outside its scope.
+editions. The live Verdier release candidate advances the integrated cutoff to
+22 overlays and 559 stable IDs at `60f1d97e`. Later R22 and R23 admissions
+affect only `more-algebra.tex` and remain queued, in registry order, outside
+this release.

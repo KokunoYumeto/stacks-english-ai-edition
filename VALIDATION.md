@@ -20,13 +20,16 @@ The gate verifies:
 
 - ancestry of the pinned upstream, source-union, EGA, and protected linear
   registry/source history;
-- 21 admitted registry entries containing exactly 547 stable correction IDs;
-- exact candidate/source-map joins and all 591 v2 operations in the live
-  source, including 43 new R20–R21 operations and the 120-operation bounded
-  R18–R21 replay;
-- the frozen external registry cutoff `13ca6aaa`, imported registry Git blob,
-  source and authority trees, candidate/admission chain, and exact changed-path
-  set (`derived.tex` and `simplicial.tex`);
+- 22 admitted overlays containing exactly 559 stable IDs at Verdier registry
+  cutoff `60f1d97ecbd376ff7a91298d17e1f162b9996c3a`;
+- the final immutable Verdier candidate, its 12 stable units, 27 manifest
+  references, independent replay, rights boundary, and exact registered
+  insertion into `derived.tex`;
+- the preserved historical R1–R21 snapshot: 21 Stacks errata batches, 547
+  correction IDs, all 591 v2 operations, the 120-operation R18–R21 replay, and
+  the prior cutoff `13ca6aaaca454f5930c4885c93f427e30cf21959`;
+- exact authority, context, payload, preimage, postimage, prefix/suffix, label,
+  registry Git blob, admission-chain, and changed-path bindings;
 - the independent `injectives.tex` correction;
 - required integration dossiers and public documentation;
 - parseability of the live registry JSON files;
@@ -37,43 +40,38 @@ The gate verifies:
 The same gate runs in
 [`validate.yml`](.github/workflows/validate.yml) with full Git history.
 
-The current unified-tree build result is recorded at the automation-stable path
-[`validation/unified-fixed-point-2026-08-25-r19.json`](validation/unified-fixed-point-2026-08-25-r19.json).
-Its JSON scope and source identities, not the compatibility filename, are
-authoritative. All 22 required chapters (2,342 pages; 24,385,554 PDF bytes)
-compiled successfully, were readable by `pdfinfo`, and reached a global PDF
-fixed point on sweep four. The build is bound to tooling/build source commit
-`8e9520aa30e0d538e71e787850bac91f5ddb35f9`, tree
-`c63e22c9ec1fef6d5af3820f5f83bd316e51ae62`. Aggregate diagnostics contain
+The current Verdier v4 build result is recorded at
+[`validation/stacks-verdier-a04446e-1-2-13-r1-build-2026-08-26.json`](validation/stacks-verdier-a04446e-1-2-13-r1-build-2026-08-26.json).
+All 22 required chapters (2,343 pages; 24,390,066 PDF bytes) compiled
+successfully, were readable by `pdfinfo`, and reached a global PDF fixed point
+on sweep four. The build is bound to source commit
+`7ee4b3a46e995e9e36b259bbc9300828c3c6988b`, tree
+`5b3349e5944ecf9d0718c6a31728a457adcd1c69`. Aggregate diagnostics contain
 zero fatal, missing-glyph, undefined-reference, undefined-citation,
 multiply-defined, rerun-required, or destination-warning markers.
 
-Visual QA passed for all 202 review pages and an affected-page superset. The
-independent linked-worktree rebuild gate also passed: both builds use the same commit,
-tree, builder, and fixed-point sweep four, and all 22
-`{stem, pages, bytes, sha256}` tuples are exactly equal. The
-[second full receipt](validation/reproducibility-second-r21.json) is 19,440
-bytes with SHA-256
-`7DC3A3EEAA932B8804CC826D52FE0892445CE883FE27AF362A873392B7CA171A`.
-The public [reproducibility summary](validation/reproducibility-r21.json) is
-5,977 bytes with SHA-256
-`A28E2D9DF4E333B052FBD1EA884F7585A9D07423B3EB98004B511C2EC8C75687`.
-The validated R21 content fixed point was then fast-forwarded to public `main`
-at `780f48fafbb46dc1057bf8fdcd339693fb44d6bf`, and anonymous byte readback of
-the decisive public inventory matched the committed identities exactly.
+Visual QA rendered and reviewed all 130 pages of the affected `derived.pdf`;
+pages 9–11 were also inspected individually at 220 DPI around the complete
+page-10 insertion. The current
+[visual receipt](validation/stacks-verdier-a04446e-1-2-13-r1-visual-qa-2026-08-26.json)
+records zero clipped, overlapping, blank, corrupt, missing-glyph, or
+broken-diagram defects. A second build ran independently in a parallel linked
+worktree. Both runs use the same source, builder, environment, and fixed-point
+sweep, and all 22 `{stem, pages, bytes, sha256}` tuples are exactly equal. See
+the [reproducibility summary](validation/stacks-verdier-a04446e-1-2-13-r1-reproducibility-2026-08-26.json)
+and [second full receipt](validation/stacks-verdier-a04446e-1-2-13-r1-reproducibility-second-2026-08-26.json).
 
 The [source composition receipt](validation/composition-current.json) records
-the frozen external cutoff
-`13ca6aaaca454f5930c4885c93f427e30cf21959`, linear registry import
-`e3b28d7d7068eb45d3348a57e201c49044826e86`, and composition source
-`ef467614041d569e56a6c1758b8fe74b51d99f4a`. Its exact composed SHA-256
-identities are `66D17FBE6743002D29A78543E46122CD3ED34AA5A5574B14718C1189ACEB456F`
-for `derived.tex` and
-`650ABA33A184CE9945DD70C04D83A3A4CBD6E540426B171E828336855DC97A0B`
-for `simplicial.tex`. The automation-stable
-[publication receipt path](validation/errata-r18-r19-release-2026-08-25.json)
-records the R21 content head, exact public readback inventory, and the
-successful metadata-head workflow used by the fail-closed validator.
+the Verdier cutoff `60f1d97ecbd376ff7a91298d17e1f162b9996c3a`, linear
+registry import `2b4328c7caf2fc698ab2b0534385c576a74fa7c3`, and exact
+composition source `39d99b0080b1f55e1d924cb73134dca885274e3f`. It binds the
+449,715-byte `derived.tex` preimage
+`66D17FBE6743002D29A78543E46122CD3ED34AA5A5574B14718C1189ACEB456F`,
+the 2,339-byte payload, and the 452,054-byte postimage
+`8B389993D3B364A926C7DCD7AD598E5B8245D8E92BCC5A23646069F9AD617860`.
+The historical R21 composition, build, publication, and readback receipts
+remain preserved and validated against their own immutable source snapshot;
+they are not rebound to the Verdier tree.
 
 ## Source-specific deterministic evidence
 

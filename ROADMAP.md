@@ -9,28 +9,49 @@ cursor live in the [EGA integration dossier](ega/README.md).
 
 ## Current maintenance baseline
 
-The errata composition baseline is **R1–R21**: 21 admitted batches containing
-547 stable correction IDs, frozen at registry commit
-`13ca6aaaca454f5930c4885c93f427e30cf21959`. R20 is composed into
-`derived.tex`; R21 is operation-replayed onto the cumulative `simplicial.tex`
-so that its earlier AI-integrated additions remain intact. The exact source,
-registry, operation, and byte identities are recorded in the
-[current composition receipt](validation/composition-current.json). Future
-errata cycles must begin from that receipt and advance strictly in registry
-order; they do not alter the semantic-corpus order below.
+The current release baseline contains **22 overlays / 559 stable IDs** at the
+Verdier admission cutoff
+`60f1d97ecbd376ff7a91298d17e1f162b9996c3a`. Its first 21 overlays are the
+historical Stacks errata batches R1–R21: 547 correction IDs and 591 exact v2
+operations at prior cutoff `13ca6aaaca454f5930c4885c93f427e30cf21959`.
+The 22nd overlay, `stacks-verdier-a04446e-1-2-13-r1`, is a separately admitted,
+independently written historical-source contribution. It inserts one
+manifest-bound lemma into cumulative `derived.tex`; no official Stacks tag or
+upstream endorsement is claimed. The exact source, registry, operation, and
+byte identities are recorded in the
+[current composition receipt](validation/composition-current.json).
 
-The R21 source has passed the primary fixed-point and visual gates at
-tooling/build source `8e9520aa30e0d538e71e787850bac91f5ddb35f9`, tree
-`c63e22c9ec1fef6d5af3820f5f83bd316e51ae62`: 22 readable PDFs, 2,342 pages,
-24,385,554 PDF bytes, global fixed point on sweep four, zero fatal or listed
-serious diagnostics, and visual QA across all 202 review pages plus the
-affected-page superset. The
-[independent linked-worktree rebuild gate](validation/reproducibility-r21.json) is **PASS**:
-both builds use the same commit, tree, builder, and sweep, and all 22 artifact
-identity tuples are exactly equal. The content fixed point is public at
-`780f48fafbb46dc1057bf8fdcd339693fb44d6bf`, and anonymous byte readback is
-**PASS**. Stable receipt filenames remain automation interfaces; their JSON
-scope and exact source identities are authoritative.
+The Verdier source passed two independent linked-worktree fixed-point builds at
+source `7ee4b3a46e995e9e36b259bbc9300828c3c6988b`, tree
+`5b3349e5944ecf9d0718c6a31728a457adcd1c69`: 22 readable PDFs, 2,343 pages,
+24,390,066 PDF bytes, global fixed point on sweep four, and zero fatal or listed
+serious diagnostics. All 130 affected `derived.pdf` pages passed visual review,
+with pages 9–11 inspected at high resolution around the page-10 insertion. All
+22 PDF identities match exactly between the two builds.
+
+## Queued registry-order maintenance
+
+Later admissions do not move the frozen Verdier release cutoff. They are queued
+for the next source-composition cycle in this exact order:
+
+1. **R22** — `stacks-errata-a04446e-r22`, admission
+   `cec63f082819c0580c43f59790ab441260fe1ccc`: 83 stable units
+   (`MC-STK-ERR-0915`–`0997`) and 94 manifest-bound operations affecting only
+   `more-algebra.tex`; manifest SHA-256
+   `8C519D72AFB3496DD3EB0116EB64FBF3ACF2946A809FED070E4F5D7554A52F8B`.
+2. **R23** — `stacks-errata-a04446e-r23`, admission
+   `49fc23ab2f3d94cc98f27bc0f315fb0da6f2c98a`: 10 stable units
+   (`MC-STK-ERR-0998`–`1007`) and 12 nonoverlapping manifest-bound operations
+   affecting only `more-algebra.tex`; manifest SHA-256
+   `4E8E588698926FD7A47D9CFFB1496CB7305D8EB698C571AD9660FC4C81F80A5C`.
+
+R22 must be composed before R23, and neither isolated payload may overwrite the
+cumulative source wholesale. The rejected producer `MORE-ALGEBRA-J-006` remains
+excluded. A later 29-row French `MORE-ALGEBRA-L` packet was independently
+deduplicated against R22/R23: 27 rows are directly new and admissible; two rows
+form a conditional bundle that also requires the linked `t`→`s` repairs at
+authority lines 38321 and 38325. That packet remains intake evidence, not an
+admitted overlay or part of the current fixed point.
 
 ## Recommended order
 

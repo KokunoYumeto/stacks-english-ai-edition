@@ -1,6 +1,6 @@
 # Unified-build receipts
 
-The current R21 build gate is recorded at the automation-stable path
+The preserved historical R21 build gate is recorded at the automation-stable path
 [`unified-fixed-point-2026-08-25-r19.json`](unified-fixed-point-2026-08-25-r19.json).
 The historical-looking filename is retained for automation compatibility; its
 JSON schema, composition binding, source commit, and source tree define scope.
@@ -38,3 +38,25 @@ The public [`reproducibility-r21.json`](reproducibility-r21.json) summary is
 The [publication receipt](errata-r18-r19-release-2026-08-25.json) binds these
 gates to public content head `780f48fafbb46dc1057bf8fdcd339693fb44d6bf` and
 records anonymous readback of the decisive public inventory.
+
+## Current Verdier v4 receipts
+
+The current release candidate advances the integrated registry to 22 overlays
+and 559 stable IDs by adding the independently written
+`stacks-verdier-a04446e-1-2-13-r1` overlay after the historical R1–R21
+composition. Its exact evidence is recorded in:
+
+- [`composition-current.json`](composition-current.json) — admission,
+  candidate, context, payload, preimage/postimage, and prefix/suffix bindings;
+- [`stacks-verdier-a04446e-1-2-13-r1-build-2026-08-26.json`](stacks-verdier-a04446e-1-2-13-r1-build-2026-08-26.json)
+  — 22 PDFs, 2,343 pages, 24,390,066 bytes, fixed point at sweep four, and zero
+  listed serious diagnostics;
+- [`stacks-verdier-a04446e-1-2-13-r1-visual-qa-2026-08-26.json`](stacks-verdier-a04446e-1-2-13-r1-visual-qa-2026-08-26.json)
+  — all 130 affected pages reviewed, plus pages 9–11 at high resolution;
+- [`stacks-verdier-a04446e-1-2-13-r1-reproducibility-2026-08-26.json`](stacks-verdier-a04446e-1-2-13-r1-reproducibility-2026-08-26.json)
+  — exact equality of all 22 artifact identities across two parallel,
+  independent linked-worktree builds.
+
+The historical R21 receipts remain authoritative for their own immutable
+snapshot. They are deliberately not treated as proof for the later Verdier
+source tree.

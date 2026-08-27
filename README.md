@@ -18,10 +18,11 @@ machine-readable validation evidence.
 [Browse the source](chapters.tex) ·
 [Errata registry](ai-integrated/registry/overlays.json) ·
 [Validation](VALIDATION.md) ·
-[Current fixed-point build receipt](validation/unified-fixed-point-2026-08-25-r19.json) ·
-[Visual QA: PASS](validation/visual-qa-r21.json) ·
-[Publication receipt: PASS](validation/errata-r18-r19-release-2026-08-25.json) ·
-[Independent reproducibility: PASS](validation/reproducibility-r21.json) ·
+[Current composition receipt](validation/composition-current.json) ·
+[Current fixed-point build: PASS](validation/stacks-verdier-a04446e-1-2-13-r1-build-2026-08-26.json) ·
+[Current visual QA: PASS](validation/stacks-verdier-a04446e-1-2-13-r1-visual-qa-2026-08-26.json) ·
+[Current reproducibility: PASS](validation/stacks-verdier-a04446e-1-2-13-r1-reproducibility-2026-08-26.json) ·
+[Historical R21 publication receipt: PASS](validation/errata-r18-r19-release-2026-08-25.json) ·
 [R17 historical receipt](validation/unification-release-2026-08-25.json) ·
 [Roadmap](ROADMAP.md) ·
 [Provenance and frozen histories](PROVENANCE.md) ·
@@ -47,7 +48,7 @@ The pinned upstream baseline is
 | GAGA | Integrated through r3 | All 126 units classified, all 79 substantive units decided, and a validated 23-page English chapter | [r3 status](gaga_r3/STATUS.md) · [chapter source](gaga.tex) |
 | FGA | Integrated and notation-normalized | 1,253 source units and 1,612 term links closed; fixed-point 83-page Moduli build recorded | [Overview](fga/README.md) · [status](fga/status.md) |
 | EGA | Active integration | Direct-French review through EGA I 6.1.13; 1,059 active edges across 355 generated units; next cursor EGA I 6.2.1 | [EGA dossier](ega/README.md) |
-| Errata | Composed through the frozen R21 cutoff | 21 admitted batches containing 547 stable correction IDs and 591 exact v2 operations at external cutoff `13ca6aaa`; R20–R21 add 43 operations, while the bounded R18–R21 replay contains 120 | [Registry](ai-integrated/registry/overlays.json) · [candidate evidence](ai-integrated/candidates/commons/stacks/errata/) |
+| Registry and source overlays | Verdier v4 integrated after the frozen R1–R21 Stacks composition | 22 admitted overlays and 559 stable IDs at cutoff `60f1d97e`; the historical Stacks errata component remains 21 batches, 547 IDs, and 591 exact v2 operations through R21 | [Registry](ai-integrated/registry/overlays.json) · [Verdier evidence](ai-integrated/candidates/commons/stacks/verdier/) · [errata evidence](ai-integrated/candidates/commons/stacks/errata/) |
 
 These labels are deliberately precise. “Integrated,” “active,” “admitted,” and
 “candidate” are not interchangeable, and no local label is represented as an
@@ -93,18 +94,22 @@ Run the fast repository-level integrity gate with:
 python tools/validate_unified_repository.py --pre-publication
 ```
 
-The verified R21 build is bound to tooling/build source
-`8e9520aa30e0d538e71e787850bac91f5ddb35f9`, tree
-`c63e22c9ec1fef6d5af3820f5f83bd316e51ae62`. It produced 22 readable PDFs
-(2,342 pages; 24,385,554 bytes), reached a global fixed point on sweep four,
+The current Verdier v4 build is bound to source
+`7ee4b3a46e995e9e36b259bbc9300828c3c6988b`, tree
+`5b3349e5944ecf9d0718c6a31728a457adcd1c69`. It produced 22 readable PDFs
+(2,343 pages; 24,390,066 bytes), reached a global fixed point on sweep four,
 and recorded zero fatal, missing-glyph, undefined-reference,
 undefined-citation, multiply-defined, rerun-required, or destination-warning
-diagnostics. Visual QA passed for all 202 review pages and the affected-page
-superset. A separate linked-worktree rebuild also passed from the same commit,
-tree, builder, and sweep; all 22 artifact identity tuples are exactly equal
-between the two builds. The R21 content fixed point is published at
-`780f48fafbb46dc1057bf8fdcd339693fb44d6bf`, and its decisive public bytes were
-read back anonymously and matched exactly.
+diagnostics. All 130 pages of the affected `derived.pdf` were rendered and
+reviewed; pages 9–11 were also inspected at high resolution around the complete
+page-10 insertion. A parallel rebuild in a second linked worktree used the same
+source, builder, environment, and sweep, and all 22 PDF identities were exactly
+equal.
+
+The preceding R21 Stacks-only fixed point remains historical evidence at
+content head `780f48fafbb46dc1057bf8fdcd339693fb44d6bf`. Its receipts and anonymous
+readback remain preserved, but they are not presented as evidence for the later
+Verdier insertion.
 
 The receipt filenames are stable automation interfaces retained for
 compatibility; the JSON schema, source identities, and recorded scope are
