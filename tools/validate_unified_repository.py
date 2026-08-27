@@ -915,6 +915,19 @@ def main(argv: list[str] | None = None) -> int:
                 and target["label"]
             ):
                 proposed_local_labels.add(target["label"])
+        insertion_map = directory / "composition.jsonl"
+        if insertion_map.is_file():
+            for operation in read_jsonl(insertion_map):
+                target = operation.get("target")
+                payload = operation.get("payload")
+                if not isinstance(target, dict) or not isinstance(payload, dict):
+                    continue
+                target_path = target.get("path")
+                proposed_label = payload.get("proposed_label")
+                if isinstance(target_path, str) and isinstance(proposed_label, str):
+                    proposed_local_labels.add(
+                        f"{Path(target_path).stem}-{proposed_label}"
+                    )
         mapped_ids = [row.get("unit_id") for row in rows]
         if mapped_ids != ids:
             errors.append(f"registry/source-map ID mismatch for {overlay_id}")
@@ -925,7 +938,10 @@ def main(argv: list[str] | None = None) -> int:
             for row in rows
         ]
         payload_paths = {value for value in payload_values if isinstance(value, str)}
-        if any(not isinstance(value, str) for value in payload_values):
+        if any(
+            not isinstance(value, str) and bool(row.get("operations"))
+            for row, value in zip(rows, payload_values)
+        ):
             errors.append(f"invalid payload path in source map for {overlay_id}")
         for payload_candidate_relative in sorted(payload_paths):
             payload_path = (directory / payload_candidate_relative).resolve()
