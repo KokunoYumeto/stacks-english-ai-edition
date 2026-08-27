@@ -1,0 +1,426 @@
+{
+  "schema": "mathematics-commons-stacks-r24-adjudication-spec/v1",
+  "candidate_id": "stacks-errata-a04446e-r24",
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "authority_path": "spaces-duality.tex",
+  "authority_bytes": 80778,
+  "authority_sha256": "B13FFE40A679F3E86EA82972ED7955DD4FBCFD0D98F954936B0E5FBF56F92C7D",
+  "producer_source": "p10/control/ERRATA_CANDIDATES.jsonl",
+  "producer_row_count": 45,
+  "accepted_producer_row_count": 45,
+  "rejected_producer_row_count": 0,
+  "semantic_unit_count": 38,
+  "operation_count": 57,
+  "stable_id_range": ["MC-STK-ERR-1008", "MC-STK-ERR-1045"],
+  "deduplication": {
+    "admitted_units_reviewed": 640,
+    "prior_rounds": "root/R1 and R2-R23",
+    "matching_spaces_duality_units": 0,
+    "result": "all_units_new"
+  },
+  "accepted": [
+    {
+      "stable_id": "MC-STK-ERR-1008",
+      "producer_ids": ["P10-E0246"],
+      "class": "extra_closing_parenthesis",
+      "locus": "spaces-duality.tex:134",
+      "operations": [
+        {"producer_id":"P10-E0246","source_start_line":134,"source_end_line":134,"old_text":"\\epsilon^*\\widetilde{L}))$","replacement_text":"\\epsilon^*\\widetilde{L})$"}
+      ],
+      "rationale": "The outer internal-Hom argument has only one opening parenthesis; the parallel formulas close once."
+    },
+    {
+      "stable_id": "MC-STK-ERR-1009",
+      "producer_ids": ["P10-E0247"],
+      "class": "wrong_hom_base_ring",
+      "locus": "spaces-duality.tex:160",
+      "operations": [
+        {"producer_id":"P10-E0247","source_start_line":160,"source_end_line":160,"old_text":"\\Hom_{A_f}","replacement_text":"\\Hom_B"}
+      ],
+      "rationale": "Neither f nor A_f is defined; both arguments are B-modules and the surrounding equality is B-linear."
+    },
+    {
+      "stable_id": "MC-STK-ERR-1010",
+      "producer_ids": ["P10-E0248"],
+      "class": "missing_finite_verb",
+      "locus": "spaces-duality.tex:166",
+      "operations": [
+        {"producer_id":"P10-E0248","source_start_line":166,"source_end_line":166,"old_text":"The penultimate equality because","replacement_text":"The penultimate equality holds because"}
+      ],
+      "rationale": "The equality-justification sentence lacks a finite verb."
+    },
+    {
+      "stable_id": "MC-STK-ERR-1011",
+      "producer_ids": ["P10-E0249"],
+      "class": "undefined_space_subscript",
+      "locus": "spaces-duality.tex:229",
+      "operations": [
+        {"producer_id":"P10-E0249","source_start_line":229,"source_end_line":229,"old_text":"$D(\\mathcal{O}_X)$","replacement_text":"$D(\\mathcal{O})$"}
+      ],
+      "rationale": "The setup is an arbitrary ringed site with structure sheaf O; X is unbound."
+    },
+    {
+      "stable_id": "MC-STK-ERR-1012",
+      "producer_ids": ["P10-E0250"],
+      "class": "duplicated_word",
+      "locus": "spaces-duality.tex:231",
+      "operations": [
+        {"producer_id":"P10-E0250","source_start_line":231,"source_end_line":231,"old_text":"we we have seen","replacement_text":"we have seen"}
+      ],
+      "rationale": "Exact duplicated word."
+    },
+    {
+      "stable_id": "MC-STK-ERR-1013",
+      "producer_ids": ["P10-E0251"],
+      "class": "extraneous_symbol_in_prose",
+      "locus": "spaces-duality.tex:272",
+      "operations": [
+        {"producer_id":"P10-E0251","source_start_line":272,"source_end_line":272,"old_text":"Then $X$ the function","replacement_text":"Then the function"}
+      ],
+      "rationale": "The intervening symbol X is extraneous and destroys the sentence."
+    },
+    {
+      "stable_id": "MC-STK-ERR-1014",
+      "producer_ids": ["P10-E0252"],
+      "class": "wrong_indefinite_article",
+      "locus": "spaces-duality.tex:429",
+      "operations": [
+        {"producer_id":"P10-E0252","source_start_line":429,"source_end_line":429,"old_text":"an bijection","replacement_text":"a bijection"}
+      ],
+      "rationale": "Wrong indefinite article."
+    },
+    {
+      "stable_id": "MC-STK-ERR-1015",
+      "producer_ids": ["P10-E0253"],
+      "class": "missing_finite_verbs",
+      "locus": "spaces-duality.tex:451;453;454;456",
+      "operations": [
+        {"producer_id":"P10-E0253","source_start_line":451,"source_end_line":451,"old_text":"The second equality by","replacement_text":"The second equality holds by"},
+        {"producer_id":"P10-E0253","source_start_line":453,"source_end_line":453,"old_text":"The third equality by","replacement_text":"The third equality holds by"},
+        {"producer_id":"P10-E0253","source_start_line":454,"source_end_line":454,"old_text":"The fourth equality by","replacement_text":"The fourth equality holds by"},
+        {"producer_id":"P10-E0253","source_start_line":456,"source_end_line":456,"old_text":"The fifth by","replacement_text":"The fifth equality holds by"}
+      ],
+      "rationale": "Four consecutive equality justifications lack finite predicates."
+    },
+    {
+      "stable_id": "MC-STK-ERR-1016",
+      "producer_ids": ["P10-E0254"],
+      "class": "ill_typed_internal_hom",
+      "locus": "spaces-duality.tex:529",
+      "operations": [
+        {"producer_id":"P10-E0254","source_start_line":529,"source_end_line":529,"old_text":"R\\SheafHom_{\\mathcal{O}_X}(Rf_*L, a(K))","replacement_text":"R\\SheafHom_{\\mathcal{O}_Y}(Rf_*L, K)"}
+      ],
+      "rationale": "Rf_*L and K live on Y; the frozen expression has both the wrong coefficient sheaf and wrong second argument."
+    },
+    {
+      "stable_id": "MC-STK-ERR-1017",
+      "producer_ids": ["P10-E0255", "P10-E0256"],
+      "class": "repeated_relative_adverb_typo",
+      "locus": "spaces-duality.tex:620;638",
+      "operations": [
+        {"producer_id":"P10-E0255","source_start_line":620,"source_end_line":620,"old_text":"were again the second arrow","replacement_text":"where again the second arrow"},
+        {"producer_id":"P10-E0256","source_start_line":638,"source_end_line":638,"old_text":"(were the arrow pointing left","replacement_text":"(where the arrow pointing left"}
+      ],
+      "rationale": "Two nearby instances of the same copied relative-adverb typo in one construction."
+    },
+    {
+      "stable_id": "MC-STK-ERR-1018",
+      "producer_ids": ["P10-E0257", "P10-E0258"],
+      "class": "missing_pushforward_notation",
+      "locus": "spaces-duality.tex:763;781",
+      "operations": [
+        {"producer_id":"P10-E0257","source_start_line":763,"source_end_line":763,"old_text":"a \\circ b \\circ m","replacement_text":"a \\circ b \\circ m_*"},
+        {"producer_id":"P10-E0258","source_start_line":781,"source_end_line":781,"old_text":"k \\circ a' \\circ b'","replacement_text":"k_* \\circ a' \\circ b'"}
+      ],
+      "rationale": "Both linked composites require the corresponding pushforward functor."
+    },
+    {
+      "stable_id": "MC-STK-ERR-1019",
+      "producer_ids": ["P10-E0259"],
+      "class": "wrong_rectangle_label",
+      "locus": "spaces-duality.tex:928",
+      "operations": [
+        {"producer_id":"P10-E0259","source_start_line":928,"source_end_line":928,"old_text":"\\gamma_{A + C} : k^* \\circ (a \\circ b)","replacement_text":"\\gamma_{B + D} : k^* \\circ (a \\circ b)"}
+      ],
+      "rationale": "The fourth rectangle is B+D, confirmed by the subsequent composition identity."
+    },
+    {
+      "stable_id": "MC-STK-ERR-1020",
+      "producer_ids": ["P10-E0260", "P10-E0268"],
+      "class": "repeated_subject_verb_agreement",
+      "locus": "spaces-duality.tex:951;1260;1350",
+      "operations": [
+        {"producer_id":"P10-E0260","source_start_line":951,"source_end_line":951,"old_text":"transformation is known","replacement_text":"transformation are known"},
+        {"producer_id":"P10-E0268","source_start_line":1260,"source_end_line":1260,"old_text":"transformation is known","replacement_text":"transformation are known"},
+        {"producer_id":"P10-E0268","source_start_line":1350,"source_end_line":1350,"old_text":"transformation is known","replacement_text":"transformation are known"}
+      ],
+      "rationale": "The compound subject is source and target in all three copied instances."
+    },
+    {
+      "stable_id": "MC-STK-ERR-1021",
+      "producer_ids": ["P10-E0261"],
+      "class": "wrong_functor_domain",
+      "locus": "spaces-duality.tex:1010;1012;1014",
+      "operations": [
+        {"producer_id":"P10-E0261","source_start_line":1010,"source_end_line":1010,"old_text":"D_\\QCoh(\\mathcal{O}_X)","replacement_text":"D_\\QCoh(\\mathcal{O}_Y)"},
+        {"producer_id":"P10-E0261","source_start_line":1012,"source_end_line":1012,"old_text":"D_\\QCoh(\\mathcal{O}_X)","replacement_text":"D_\\QCoh(\\mathcal{O}_Y)"},
+        {"producer_id":"P10-E0261","source_start_line":1014,"source_end_line":1014,"old_text":"D_\\QCoh^+(\\mathcal{O}_X)","replacement_text":"D_\\QCoh^+(\\mathcal{O}_Y)"}
+      ],
+      "rationale": "Every K is passed to a, whose domain is the derived category on Y."
+    },
+    {
+      "stable_id": "MC-STK-ERR-1022",
+      "producer_ids": ["P10-E0262"],
+      "class": "spelling_error",
+      "locus": "spaces-duality.tex:1111",
+      "operations": [
+        {"producer_id":"P10-E0262","source_start_line":1111,"source_end_line":1111,"old_text":"in stead of","replacement_text":"instead of"}
+      ],
+      "rationale": "Incorrect two-word spelling of the adverb."
+    },
+    {
+      "stable_id": "MC-STK-ERR-1023",
+      "producer_ids": ["P10-E0263"],
+      "class": "missing_ambient_space_subscript",
+      "locus": "spaces-duality.tex:1124",
+      "operations": [
+        {"producer_id":"P10-E0263","source_start_line":1124,"source_end_line":1124,"old_text":"(f_*M, K) \\otimes A'","replacement_text":"(f_*M, K)_Y \\otimes A'"}
+      ],
+      "rationale": "Both arguments are on Y and every corresponding complex carries the Y subscript."
+    },
+    {
+      "stable_id": "MC-STK-ERR-1024",
+      "producer_ids": ["P10-E0264"],
+      "class": "wrong_primed_adjoint",
+      "locus": "spaces-duality.tex:1150",
+      "operations": [
+        {"producer_id":"P10-E0264","source_start_line":1150,"source_end_line":1150,"old_text":"g'_*a(g^*K)","replacement_text":"g'_*a'(g^*K)"}
+      ],
+      "rationale": "The unprimed adjoint cannot accept the Y'-object g^*K; the right side confirms a'."
+    },
+    {
+      "stable_id": "MC-STK-ERR-1025",
+      "producer_ids": ["P10-E0265", "P10-E0266"],
+      "class": "repeated_wrong_ambient_space",
+      "locus": "spaces-duality.tex:1170;1173",
+      "operations": [
+        {"producer_id":"P10-E0265","source_start_line":1170,"source_end_line":1170,"old_text":"(f_*M, g_*g^*K)_X","replacement_text":"(f_*M, g_*g^*K)_Y"},
+        {"producer_id":"P10-E0266","source_start_line":1173,"source_end_line":1173,"old_text":"(f_*M, g_*g^*K)_X","replacement_text":"(f_*M, g_*g^*K)_Y"}
+      ],
+      "rationale": "Both arguments live on Y in both occurrences."
+    },
+    {
+      "stable_id": "MC-STK-ERR-1026",
+      "producer_ids": ["P10-E0267"],
+      "class": "repeated_missing_preposition",
+      "locus": "spaces-duality.tex:1288;1382",
+      "operations": [
+        {"producer_id":"P10-E0267","source_start_line":1288,"source_end_line":1288,"old_text":"the two squares commute ","replacement_text":"the two squares commute by "},
+        {"producer_id":"P10-E0267","source_start_line":1382,"source_end_line":1382,"old_text":"the two squares commute ","replacement_text":"the two squares commute by "}
+      ],
+      "rationale": "Both parallel proofs omit the preposition introducing the cited reason."
+    },
+    {
+      "stable_id": "MC-STK-ERR-1027",
+      "producer_ids": ["P10-E0269"],
+      "class": "wrong_trace_index",
+      "locus": "spaces-duality.tex:1307",
+      "operations": [
+        {"producer_id":"P10-E0269","source_start_line":1307,"source_end_line":1307,"old_text":"\\text{Tr}_f \\circ \\alpha \\circ \\beta","replacement_text":"\\text{Tr}_{f'} \\circ \\alpha \\circ \\beta"}
+      ],
+      "rationale": "After beta and alpha, the final counit is the primed trace shown in the diagram."
+    },
+    {
+      "stable_id": "MC-STK-ERR-1028",
+      "producer_ids": ["P10-E0270"],
+      "class": "missing_finite_verbs",
+      "locus": "spaces-duality.tex:1468;1473",
+      "operations": [
+        {"producer_id":"P10-E0270","source_start_line":1468,"source_end_line":1468,"old_text":"Second equality by","replacement_text":"The second equality follows from"},
+        {"producer_id":"P10-E0270","source_start_line":1473,"source_end_line":1473,"old_text":"Hence the result by","replacement_text":"Hence the result follows from"}
+      ],
+      "rationale": "Both proof-justification fragments lack finite verbs."
+    },
+    {
+      "stable_id": "MC-STK-ERR-1029",
+      "producer_ids": ["P10-E0271"],
+      "class": "undefined_structure_sheaf",
+      "locus": "spaces-duality.tex:1504",
+      "operations": [
+        {"producer_id":"P10-E0271","source_start_line":1504,"source_end_line":1504,"old_text":"\\mathcal{O}_K","replacement_text":"\\mathcal{O}_Y"}
+      ],
+      "rationale": "K is a derived object, not a space with a structure sheaf; the projection formula requires O_Y."
+    },
+    {
+      "stable_id": "MC-STK-ERR-1030",
+      "producer_ids": ["P10-E0272"],
+      "class": "missing_definition",
+      "locus": "spaces-duality.tex:1630",
+      "operations": [
+        {"producer_id":"P10-E0272","source_start_line":1630,"source_end_line":1631,"old_text":"\\begin{proof}\nFor a perfect object $E$","replacement_text":"\\begin{proof}\nSet $\\omega_{X/Y}^\\bullet = a(\\mathcal{O}_Y)$.\nFor a perfect object $E$"}
+      ],
+      "rationale": "The inserted definition supplies all three otherwise undefined uses of the relative dualizing complex."
+    },
+    {
+      "stable_id": "MC-STK-ERR-1031",
+      "producer_ids": ["P10-E0274"],
+      "class": "ill_typed_pushforward",
+      "locus": "spaces-duality.tex:1662",
+      "operations": [
+        {"producer_id":"P10-E0274","source_start_line":1662,"source_end_line":1662,"old_text":"Rf_*\\mathcal{O}_Y","replacement_text":"Rf_*\\mathcal{O}_X"}
+      ],
+      "rationale": "The morphism f has domain X; nearby formulas confirm the required pushforward of O_X."
+    },
+    {
+      "stable_id": "MC-STK-ERR-1032",
+      "producer_ids": ["P10-E0273"],
+      "class": "missing_finite_verbs",
+      "locus": "spaces-duality.tex:1666;1667",
+      "operations": [
+        {"producer_id":"P10-E0273","source_start_line":1666,"source_end_line":1666,"old_text":"The second equality by construction","replacement_text":"The second equality holds by construction"},
+        {"producer_id":"P10-E0273","source_start_line":1667,"source_end_line":1667,"old_text":"The third equality by","replacement_text":"The third equality holds by"}
+      ],
+      "rationale": "Two consecutive equality justifications lack finite predicates."
+    },
+    {
+      "stable_id": "MC-STK-ERR-1033",
+      "producer_ids": ["P10-E0275"],
+      "class": "missing_closing_parenthesis",
+      "locus": "spaces-duality.tex:1686",
+      "operations": [
+        {"producer_id":"P10-E0275","source_start_line":1686,"source_end_line":1686,"old_text":"a(\\mathcal{O}_Y))","replacement_text":"a(\\mathcal{O}_Y)))"}
+      ],
+      "rationale": "The outer Hom_X opening parenthesis is unmatched."
+    },
+    {
+      "stable_id": "MC-STK-ERR-1034",
+      "producer_ids": ["P10-E0276"],
+      "class": "wrong_dualized_object",
+      "locus": "spaces-duality.tex:1717",
+      "operations": [
+        {"producer_id":"P10-E0276","source_start_line":1717,"source_end_line":1717,"old_text":"$Rf_*E$ is perfect","replacement_text":"$Rf_*E^\\vee$ is perfect"}
+      ],
+      "rationale": "The displayed object being double-dualized is Rf_*E^vee."
+    },
+    {
+      "stable_id": "MC-STK-ERR-1035",
+      "producer_ids": ["P10-E0277"],
+      "class": "missing_terminal_punctuation",
+      "locus": "spaces-duality.tex:1719-1720",
+      "operations": [
+        {"producer_id":"P10-E0277","source_start_line":1719,"source_end_line":1720,"old_text":"\\ref{spaces-perfect-lemma-flat-proper-perfect-direct-image-general}\nThe last equality","replacement_text":"\\ref{spaces-perfect-lemma-flat-proper-perfect-direct-image-general}.\nThe last equality"}
+      ],
+      "rationale": "Two independent equality justifications run together without terminal punctuation."
+    },
+    {
+      "stable_id": "MC-STK-ERR-1036",
+      "producer_ids": ["P10-E0278", "P10-E0281", "P10-E0284"],
+      "class": "repeated_missing_morphism_name",
+      "locus": "spaces-duality.tex:1838;1925;2013",
+      "operations": [
+        {"producer_id":"P10-E0278","source_start_line":1838,"source_end_line":1838,"old_text":"Let $X \\to Y$ be","replacement_text":"Let $f : X \\to Y$ be"},
+        {"producer_id":"P10-E0281","source_start_line":1925,"source_end_line":1925,"old_text":"Let $X \\to Y$ be","replacement_text":"Let $f : X \\to Y$ be"},
+        {"producer_id":"P10-E0284","source_start_line":2013,"source_end_line":2013,"old_text":"Let $X \\to Y$ be","replacement_text":"Let $f : X \\to Y$ be"}
+      ],
+      "rationale": "Each copied lemma header leaves f unbound although the corresponding conclusion or proof uses Rf_*."
+    },
+    {
+      "stable_id": "MC-STK-ERR-1037",
+      "producer_ids": ["P10-E0280"],
+      "class": "missing_terminal_punctuation",
+      "locus": "spaces-duality.tex:1907-1908",
+      "operations": [
+        {"producer_id":"P10-E0280","source_start_line":1907,"source_end_line":1908,"old_text":"\\tau_2|_{Y_{0, i}})$\nWe still have to see","replacement_text":"\\tau_2|_{Y_{0, i}})$.\nWe still have to see"}
+      ],
+      "rationale": "A complete declarative sentence lacks terminal punctuation before the next sentence."
+    },
+    {
+      "stable_id": "MC-STK-ERR-1038",
+      "producer_ids": ["P10-E0279"],
+      "class": "wrong_dualizing_complex_index",
+      "locus": "spaces-duality.tex:1912",
+      "operations": [
+        {"producer_id":"P10-E0279","source_start_line":1912,"source_end_line":1912,"old_text":"Rf_*\\omega_1^\\bullet \\ar[ld]^{\\tau_2}","replacement_text":"Rf_*\\omega_2^\\bullet \\ar[ld]^{\\tau_2}"}
+      ],
+      "rationale": "Rf_*iota maps the first complex to the second, and the outgoing trace is tau_2."
+    },
+    {
+      "stable_id": "MC-STK-ERR-1039",
+      "producer_ids": ["P10-E0282"],
+      "class": "undefined_local_adjoint",
+      "locus": "spaces-duality.tex:1961;1964",
+      "operations": [
+        {"producer_id":"P10-E0282","source_start_line":1961,"source_end_line":1961,"old_text":"of $k_j$ by $f_{i_j}$). Restricting","replacement_text":"of $k_j$ by $f_{i_j}$). Let $a'_j$ denote the right adjoint of $R(f'_j)_*$. Restricting"},
+        {"producer_id":"P10-E0282","source_start_line":1964,"source_end_line":1964,"old_text":"a_j(\\mathcal{O}_{Y'_j})","replacement_text":"a'_j(\\mathcal{O}_{Y'_j})"}
+      ],
+      "rationale": "The local right adjoint for f'_j must be explicitly defined before it is used."
+    },
+    {
+      "stable_id": "MC-STK-ERR-1040",
+      "producer_ids": ["P10-E0283"],
+      "class": "run_on_sentence",
+      "locus": "spaces-duality.tex:1998-1999",
+      "operations": [
+        {"producer_id":"P10-E0283","source_start_line":1998,"source_end_line":1999,"old_text":"$X'' = Y'' \\times_Y X$ the two","replacement_text":"$X'' = Y'' \\times_Y X$. The two"}
+      ],
+      "rationale": "Two independent clauses form a run-on sentence."
+    },
+    {
+      "stable_id": "MC-STK-ERR-1041",
+      "producer_ids": ["P10-E0285", "P10-E0287"],
+      "class": "linked_hypercover_index_errors",
+      "locus": "spaces-duality.tex:2036;2037;2043",
+      "operations": [
+        {"producer_id":"P10-E0285","source_start_line":2036,"source_end_line":2036,"old_text":"Y_{m, \\alpha(\\varphi)}","replacement_text":"Y_{m, \\alpha(\\varphi)(i)}"},
+        {"producer_id":"P10-E0285","source_start_line":2037,"source_end_line":2037,"old_text":"X_{m, \\alpha(\\varphi)}","replacement_text":"X_{m, \\alpha(\\varphi)(i)}"},
+        {"producer_id":"P10-E0287","source_start_line":2043,"source_end_line":2043,"old_text":"g'_{n, i}","replacement_text":"g'_{\\varphi, i}"},
+        {"producer_id":"P10-E0287","source_start_line":2043,"source_end_line":2043,"old_text":"g_{n, i}","replacement_text":"g_{\\varphi, i}"}
+      ],
+      "rationale": "The index map alpha(varphi) must be evaluated at i, and the use-site morphisms must carry the already defined varphi index."
+    },
+    {
+      "stable_id": "MC-STK-ERR-1042",
+      "producer_ids": ["P10-E0286"],
+      "class": "singular_plural_agreement",
+      "locus": "spaces-duality.tex:2040",
+      "operations": [
+        {"producer_id":"P10-E0286","source_start_line":2040,"source_end_line":2040,"old_text":"a unique isomorphisms","replacement_text":"a unique isomorphism"}
+      ],
+      "rationale": "The singular article and quantified datum require a singular noun."
+    },
+    {
+      "stable_id": "MC-STK-ERR-1043",
+      "producer_ids": ["P10-E0288"],
+      "class": "reversed_simplex_category_direction",
+      "locus": "spaces-duality.tex:2072",
+      "operations": [
+        {"producer_id":"P10-E0288","source_start_line":2072,"source_end_line":2072,"old_text":"\\delta_1^1, \\delta_0^1 : [1] \\to [0]","replacement_text":"\\delta_1^1, \\delta_0^1 : [0] \\to [1]"}
+      ],
+      "rationale": "The degree-one coface maps have simplex-category direction [0] to [1]."
+    },
+    {
+      "stable_id": "MC-STK-ERR-1044",
+      "producer_ids": ["P10-E0289"],
+      "class": "duplicated_space",
+      "locus": "spaces-duality.tex:2090",
+      "operations": [
+        {"producer_id":"P10-E0289","source_start_line":2090,"source_end_line":2090,"old_text":"the  proof","replacement_text":"the proof"}
+      ],
+      "rationale": "Exact duplicated ordinary-text space."
+    },
+    {
+      "stable_id": "MC-STK-ERR-1045",
+      "producer_ids": ["P10-E0637"],
+      "class": "wrong_morphism_subscript",
+      "locus": "spaces-duality.tex:2145",
+      "operations": [
+        {"producer_id":"P10-E0637","source_start_line":2145,"source_end_line":2145,"old_text":"$Rf_*$","replacement_text":"$Rf_{0*}$"}
+      ],
+      "rationale": "a_0 acts between the scheme categories for X_0 and Y_0 and is the right adjoint of the pushforward attached to f_0."
+    }
+  ],
+  "rejected": [],
+  "unresolved": [],
+  "result": "accepted_after_independent_frozen_authority_replay"
+}

@@ -1,0 +1,271 @@
+{
+  "$schema": "../../../../../schemas/candidate-manifest.schema.json",
+  "schema": "mathematics-commons-stacks-candidate-manifest/v1",
+  "candidate_id": "stacks-errata-a04446e-r24",
+  "lease_id": "stacks-lease-000028-errata-r24",
+  "namespace": "commons/stacks/errata/r24",
+  "writer_task": "01a0256d-5693-77c1-96b2-cf37101e0c6c",
+  "upstream": {
+    "lock": "upstream/stacks.lock.json",
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e"
+  },
+  "source_authorities": [
+    {
+      "path": "authority/canon/R24_SPACES_DUALITY_ADJUDICATION_SPEC.json",
+      "sha256": "AE96B2633F7D7DF052C19B75261564C31E127182CFAB448B4E5AAF1B4DE585BC"
+    },
+    {
+      "path": "authority/canon/R24_SPACES_DUALITY_INTAKE_VALIDATION.json",
+      "sha256": "0184C3245BF042F6AC8491AA1A913ADC114DE02BA67BAF2CE5B9D357FC269B16"
+    },
+    {
+      "path": "authority/canon/R24_SPACES_DUALITY_REVIEW.md",
+      "sha256": "FF7FF9F62F8EE97016B4874A41E329F2185BD5E0E037CC781F95D45AEE32F23A"
+    },
+    {
+      "path": "authority/COPYING",
+      "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"
+    },
+    {
+      "path": "authority/source/spaces-duality.tex",
+      "sha256": "B13FFE40A679F3E86EA82972ED7955DD4FBCFD0D98F954936B0E5FBF56F92C7D"
+    },
+    {
+      "path": "authority/upstream.lock.json",
+      "sha256": "AD3FEA8C3B3C5967B5AD3A5672029924C2F4964B94001B9B2B5F5729E28AFCF2"
+    }
+  ],
+  "source_closure": {
+    "enumerated": true,
+    "expected_units": 38,
+    "manifested_units": 38,
+    "complete": true
+  },
+  "stable_unit_manifest": {
+    "path": "stable-units.json",
+    "sha256": "630BD3AFA594727B2B97B1103959D51BD6EB8E91FFD5B52BB639C798359DB4CC"
+  },
+  "source_map": {
+    "path": "source-map.jsonl",
+    "sha256": "9EB1B60529ACD1027C976932D7BA455473BD6E50A68D169788AC5FBC20531CD0"
+  },
+  "decision_ledger": {
+    "path": "decisions.jsonl",
+    "sha256": "EC26061E9AB1C2FE52E42AF554508D28C38E42693E2F46CED6C7D980B981DB12"
+  },
+  "rejection_ledger": {
+    "path": "rejections.jsonl",
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  "formula_diagram_inventory": {
+    "path": "formula-diagram-inventory.json",
+    "sha256": "12745B91111D93F207E1DE44E2A77C8F88A81ED442C48E615CACAC43F654CBC8"
+  },
+  "builds": [
+    {
+      "path": ".gitattributes",
+      "sha256": "705FD4D6451A31D36B3DF7DE96F83F30AC976C9B4A6D1E51671D8E2F33E2D0DA"
+    },
+    {
+      "path": "build-manifest.py",
+      "sha256": "081A06AD6A014129087C609F67FA057796F6D220C93BABFF7B081DC3E52F6373"
+    },
+    {
+      "path": "build-receipt.py",
+      "sha256": "6AD2D96321E3C3EB0635170BF9692957088BA8BC31BAB66E96F6C885F1350BFC"
+    },
+    {
+      "path": "BUILD.md",
+      "sha256": "D7F879F0FD830238DE66D80428EC45057CFFC1F87070D8153467810ED35F21F3"
+    },
+    {
+      "path": "builds/build-execution.json",
+      "sha256": "9C6AF591D5B4D3D551941A1BAB3599785C04A32C7197769084ED7BBA12E7280A"
+    },
+    {
+      "path": "builds/build-receipt.json",
+      "sha256": "FC0F01B09C24E13ED624EB041D9D2E23A28C924DC27EF6A38D5668B5D615A347"
+    },
+    {
+      "path": "builds/deterministic-replay.json",
+      "sha256": "EB2D38D59E49524D2450AA45AA0FF93BFDF4042A74E443BBA741B3D6D591E788"
+    },
+    {
+      "path": "builds/source-page-map.json",
+      "sha256": "F1DE8BF851C00295D9D8F32CD4583E33D78C26175BB61B4708B1971A026CF238"
+    },
+    {
+      "path": "builds/spaces-duality.authority.bibtex.txt",
+      "sha256": "87FF9D10B206EFCAA465E46C805DEA0C2DFC33CC48F23EB62175F0E255C14ABA"
+    },
+    {
+      "path": "builds/spaces-duality.authority.log",
+      "sha256": "EB83FE3C98E65CB28D92118A79336B778CDB17936198B078AC8C1726DE688A1D"
+    },
+    {
+      "path": "builds/spaces-duality.authority.pass3.txt",
+      "sha256": "273121B26F629CAF2967D7FCA283C239E58B81ACD88618A617AAC256CA8BA213"
+    },
+    {
+      "path": "builds/spaces-duality.authority.pdf",
+      "sha256": "E9D76F06B7698CDE5A32F59A5DF5BF3AA88221C90795E75DFF7AF7E611C7CCA6"
+    },
+    {
+      "path": "builds/spaces-duality.bibtex.txt",
+      "sha256": "87FF9D10B206EFCAA465E46C805DEA0C2DFC33CC48F23EB62175F0E255C14ABA"
+    },
+    {
+      "path": "builds/spaces-duality.log",
+      "sha256": "D28E295D7C55C4B17683902E67B8BC766E2120707A76EBC164B1155B26369523"
+    },
+    {
+      "path": "builds/spaces-duality.pass3.txt",
+      "sha256": "F7734AF1B20EF888A17895555577BE548EEAC3C87ECC0DDA174200B0495DA5B3"
+    },
+    {
+      "path": "builds/spaces-duality.pdf",
+      "sha256": "133E4350908AC12FDE9E06C82E28031E79EDEE2C2A69B5D763A829434F444CEC"
+    },
+    {
+      "path": "builds/validation.json",
+      "sha256": "71814E59BD659A36D6DCE221DB08D23E3EA545976DD640DFB3BFAC1E061E1C25"
+    },
+    {
+      "path": "builds/visual-qa.json",
+      "sha256": "BD8F0342AC43E33FB0E2BE307E2FB9112AF71A22A13CE7D0D7256817339053B6"
+    },
+    {
+      "path": "candidate.config.input.json",
+      "sha256": "2ECA54D09A3E00F05C069970AE2805CFE9CA8F94FD69B9CAB3982B1130B2353A"
+    },
+    {
+      "path": "candidate.config.json",
+      "sha256": "B96FBF6194CDC7986F70B828D4A330C1053C4DF2601FB0CF1BD5E663CF04A2E0"
+    },
+    {
+      "path": "check-manifest.py",
+      "sha256": "BB4F2145E790464691411EAF6FD0FF5BA21787349F541A6D239925F268E97816"
+    },
+    {
+      "path": "decisions.input.jsonl",
+      "sha256": "EC26061E9AB1C2FE52E42AF554508D28C38E42693E2F46CED6C7D980B981DB12"
+    },
+    {
+      "path": "derive-visual-pages.py",
+      "sha256": "646C663F318DF0DFACC9C35652DB65A6DAB548388C046F8EAF96EA2ECE15B4F8"
+    },
+    {
+      "path": "deterministic-replay.py",
+      "sha256": "C75CA43D9E0CEB6D99AD421D6FC18F904657972E6EF569A4C606ECE6A3EDFEAF"
+    },
+    {
+      "path": "independent-review.py",
+      "sha256": "2C05D8890D698072B328032979005D4E43CCEF92552A5A8AD4DD8EFBFE96706B"
+    },
+    {
+      "path": "INTAKE_VALIDATION.json",
+      "sha256": "0184C3245BF042F6AC8491AA1A913ADC114DE02BA67BAF2CE5B9D357FC269B16"
+    },
+    {
+      "path": "LEASE.json",
+      "sha256": "8FAA8660E578B4069410DDF22FDF6A3942CACDF8E1693B545B939A2A9A32B685"
+    },
+    {
+      "path": "materialize.py",
+      "sha256": "BA3EAC85BE4C67437C4195228E1E948BAE941471BEAA16D586A39D0385E5811C"
+    },
+    {
+      "path": "operation-spec.input.json",
+      "sha256": "125B8E14F23296326CA4FC3F2B2E5509F7E9362D7267D97E682386EB306DF591"
+    },
+    {
+      "path": "operation-spec.json",
+      "sha256": "A19F56A8A875081DF5C5AD62036AC8284021EC23550BE281DD3FE0D0273F2D96"
+    },
+    {
+      "path": "payload/spaces-duality.tex",
+      "sha256": "3CFCEF73EB9172CF69082FF07B9D84442DD5E545D8AD22917D5A694BAA57298E"
+    },
+    {
+      "path": "prepare-inputs.py",
+      "sha256": "077E9B13ECDEC259B1C60908427F50C47EA361943712263DD21DA0CC6B218C60"
+    },
+    {
+      "path": "R24_SPACES_DUALITY_ADJUDICATION_SPEC.input.json",
+      "sha256": "AE96B2633F7D7DF052C19B75261564C31E127182CFAB448B4E5AAF1B4DE585BC"
+    },
+    {
+      "path": "R24_SPACES_DUALITY_ADJUDICATION_SPEC.json",
+      "sha256": "AE96B2633F7D7DF052C19B75261564C31E127182CFAB448B4E5AAF1B4DE585BC"
+    },
+    {
+      "path": "R24_SPACES_DUALITY_REVIEW.md",
+      "sha256": "FF7FF9F62F8EE97016B4874A41E329F2185BD5E0E037CC781F95D45AEE32F23A"
+    },
+    {
+      "path": "README.md",
+      "sha256": "72DBDCFA10AB904B885EBE3B4972645BBDAF7A8E9A810644C9A3D1CC69F5E4CB"
+    },
+    {
+      "path": "rejections.input.jsonl",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "render-qa.py",
+      "sha256": "BDC77187677754D4C48E7652ADFACBDC629BF3BAE04D2215ED73A01C650DFCFC"
+    },
+    {
+      "path": "replay/independent-review.json",
+      "sha256": "3DE71963C0CC3BCDFB0CDF00923944E96456AEAFFD1CC58F79CAF7D1D451F61C"
+    },
+    {
+      "path": "replay-build.py",
+      "sha256": "75BFACD336C1A4BD214DD25A22321CFB666CD30C0BA3C264AA239EC3C51E444F"
+    },
+    {
+      "path": "source-map.input.jsonl",
+      "sha256": "9EB1B60529ACD1027C976932D7BA455473BD6E50A68D169788AC5FBC20531CD0"
+    },
+    {
+      "path": "source-validation.json",
+      "sha256": "8C1632EFA4175BC080A9FB5D86AACD3E383C7C1A941D66C7FE05D6CD31C4F34F"
+    },
+    {
+      "path": "stable-units.input.json",
+      "sha256": "630BD3AFA594727B2B97B1103959D51BD6EB8E91FFD5B52BB639C798359DB4CC"
+    },
+    {
+      "path": "verify-source.py",
+      "sha256": "76282AE783BC5653E36DD2FBCD6F927A4F8B04A7F5CDCE89427E7EFB441A7AF0"
+    },
+    {
+      "path": "verify.py",
+      "sha256": "701EB4C09840EC56F933AA29B445C43E35C3A9C4E9DDF8906B69AA6D03B74C2E"
+    },
+    {
+      "path": "visual-qa.py",
+      "sha256": "19555DC2DB5EAE4162C9DFCD127146161815A3EC3ABBD6F5D6FABA779880E3BB"
+    }
+  ],
+  "rights_state": "The authority and modified payload retain the Stacks Project GNU Free Documentation License 1.2; metadata and receipts do not relicense upstream content. This is an independently maintained AI-produced English edition with no Stacks Project review, approval, affiliation, or endorsement. Legal certification was not performed.",
+  "review_state": "performed",
+  "independent_replay": "passed",
+  "unresolved_defects": [
+    "The independent replay receipt binds pre-review manifest 216CC1F98F30513B252AB416AC3BE60D46503E48CD85375775B9830B0E3C4AAA and validation 71814E59BD659A36D6DCE221DB08D23E3EA545976DD640DFB3BFAC1E061E1C25. This final registrar-only rebind adds the replay receipt; no reviewed authority, payload, proof, script, build, PDF, or visual-QA byte changed.",
+    "The isolated spaces-duality.tex candidate retains cross-chapter undefined-reference targets; their multiset matches the frozen authority build exactly.",
+    "The sealed chapter readers have page counts candidate 25, authority 25. Every candidate page and every correction-sensitive locus were inspected without clipping, overlap, missing glyph, broken diagram, blank page, or unreadable content.",
+    "The proof PDFs contain embedded fonts with ToUnicode maps but are untagged; document-structure accessibility remains a cumulative-edition toolchain concern.",
+    "The bounded intake from P10-E0246 through P10-E0637 assigns 38 semantic units to 45 accepted producer identities; 0 proposal is rejected, 0 producer ID is intentionally absent, 0 prior producer allegation aliases are retained, and none is unresolved.",
+    "Canonical translations preserve the frozen authority unless a locale-side emendation is separately bound; this English corrected overlay is not silently copied.",
+    "Overlay admission and English-edition composition are separate transitions; this manifest records candidate closure only."
+  ],
+  "stop_conditions": [
+    "Do not mutate the literal stacks-project master mirror.",
+    "Do not apply these corrections silently to canonical translation source or PDFs.",
+    "Do not contact or submit to the upstream Stacks maintainers under the current no-AI-contribution boundary.",
+    "Do not append an overlay registry record except in a separate admission commit bound to the final manifest hash and a passed independent replay.",
+    "Any change to reviewed authority, payload, proof, build, validation, visual-QA, or replay bytes invalidates the replay and requires a new review."
+  ],
+  "generated_at_utc": "2026-08-27T19:05:11Z"
+}

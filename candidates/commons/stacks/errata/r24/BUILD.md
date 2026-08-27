@@ -1,0 +1,30 @@
+# Deterministic replay
+
+R24 adjudication and source materialization are complete, and `source-validation.json` records a passing source-only gate. The PDF build, deterministic replay, rendering, visual QA, admission, registry, Git, and publication gates below have not been run.
+
+Use the exact source tree bound by `authority/upstream.lock.json`:
+
+`python replay-build.py --upstream-root FROZEN_SOURCE_ROOT --work-root NEW_ABSENT_TASK_LOCAL_ROOT --private-evidence-root PRIVATE_EVIDENCE_ROOT`
+
+The runner refuses an existing work root, copies the complete frozen tree, verifies authority and payload hashes, fixes `SOURCE_DATE_EPOCH` to the future sealed configuration, builds candidate and authority versions of `spaces-duality.tex`, writes sanitized public evidence under `builds/`, and removes only its marker-bound temporary work root after success. The chapter uses `pdflatex`, `bibtex`, `pdflatex`, `pdflatex`.
+
+Run the build twice in distinct fresh work roots. Preserve the first private build root, let the second run produce the current public `builds/` outputs, and run:
+
+`python deterministic-replay.py --first-private-build-root FIRST_PRIVATE_BUILD_ROOT`
+
+Then run `python build-receipt.py`.
+
+Final PDF page mapping is a build result. The sealed future configuration must contain sorted, unique, in-range lists at:
+
+- `visual_qa.high_resolution_pages.spaces-duality`
+- `visual_qa.correction_sensitive_pages.spaces-duality`
+
+The correction-sensitive list must be a subset of the high-resolution list and must be derived from final R24 source loci and reader pagination. Run `derive-visual-pages.py`, render with `render-qa.py` using exactly the configured high-resolution pages, inspect every ordered contact sheet and configured correction-sensitive page, then run `visual-qa.py --private-render-root PRIVATE_RENDER_ROOT`.
+
+Before independent review, bind the durable sanitized render location as `private_render_logical_path` in the sealed configuration. Run `verify.py`, `build-manifest.py`, and `check-manifest.py`. Independent replay is a later nonmutating gate over the sealed pre-review candidate:
+
+`python independent-review.py --private-render-manifest PRIVATE_RENDER_ROOT/render-manifest.json`
+
+Finally rerun `build-manifest.py` and `check-manifest.py` so the final manifest binds the replay receipt.
+
+The standalone chapter build may retain cross-chapter unresolved references because the cumulative AUX set is absent; candidate and authority warning-target multisets must match apart from explicitly configured, source-grounded exceptions. Registry admission, generated-source composition, and publication remain separate transitions.

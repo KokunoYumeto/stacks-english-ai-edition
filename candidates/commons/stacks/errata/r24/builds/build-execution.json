@@ -1,0 +1,205 @@
+{
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_inputs": {
+    "spaces-duality.tex": {
+      "bytes": 80778,
+      "path": "spaces-duality.tex",
+      "sha256": "B13FFE40A679F3E86EA82972ED7955DD4FBCFD0D98F954936B0E5FBF56F92C7D"
+    }
+  },
+  "authority_phase": {
+    "stems": {
+      "spaces-duality": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "spaces-duality.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 62904,
+            "stdout_sha256_raw": "F950792077F1C65664A9C3A4E0370D77419FDD55899FF47224ADBBB443B6E4CD"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "spaces-duality"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 151,
+            "stdout_sha256_raw": "87FF9D10B206EFCAA465E46C805DEA0C2DFC33CC48F23EB62175F0E255C14ABA"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "spaces-duality.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 53328,
+            "stdout_sha256_raw": "71536384B022912AF22035E24972DDCC798B181FABEA38717F604BD86A815602"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "spaces-duality.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 52712,
+            "stdout_sha256_raw": "87FB13D034EC5563AF6E1DAE8319243B0A982E018ACA0369D8F8E34B99466F02"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 151,
+            "path": "builds/spaces-duality.authority.bibtex.txt",
+            "sha256": "87FF9D10B206EFCAA465E46C805DEA0C2DFC33CC48F23EB62175F0E255C14ABA"
+          },
+          "log": {
+            "bytes": 65992,
+            "path": "builds/spaces-duality.authority.log",
+            "sha256": "EB83FE3C98E65CB28D92118A79336B778CDB17936198B078AC8C1726DE688A1D"
+          },
+          "pass3_stdout": {
+            "bytes": 52306,
+            "path": "builds/spaces-duality.authority.pass3.txt",
+            "sha256": "273121B26F629CAF2967D7FCA283C239E58B81ACD88618A617AAC256CA8BA213"
+          },
+          "pdf": {
+            "bytes": 545653,
+            "path": "builds/spaces-duality.authority.pdf",
+            "sha256": "E9D76F06B7698CDE5A32F59A5DF5BF3AA88221C90795E75DFF7AF7E611C7CCA6"
+          }
+        },
+        "source": {
+          "bytes": 80778,
+          "path": "spaces-duality.tex",
+          "sha256": "B13FFE40A679F3E86EA82972ED7955DD4FBCFD0D98F954936B0E5FBF56F92C7D"
+        }
+      }
+    }
+  },
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "candidate_id": "stacks-errata-a04446e-r24",
+  "candidate_inputs": {
+    "spaces-duality.tex": {
+      "bytes": 80995,
+      "path": "spaces-duality.tex",
+      "sha256": "3CFCEF73EB9172CF69082FF07B9D84442DD5E545D8AD22917D5A694BAA57298E"
+    }
+  },
+  "candidate_phase": {
+    "stems": {
+      "spaces-duality": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "spaces-duality.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 63297,
+            "stdout_sha256_raw": "699B1AA57A1E7A25DBA6B12BC65D1D33D84A373A5C838EC0D13F847970B44474"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "spaces-duality"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 151,
+            "stdout_sha256_raw": "87FF9D10B206EFCAA465E46C805DEA0C2DFC33CC48F23EB62175F0E255C14ABA"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "spaces-duality.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 53565,
+            "stdout_sha256_raw": "EB5E9843527AEFDBFC64F4DB71E3CD87DBEBA40057B2C01CAA4DD1EB1728EE76"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "spaces-duality.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 52949,
+            "stdout_sha256_raw": "B1CE23B95C994CA840ED4C3C5EAE0E21A6806ECE5D2C6C7E8A069D7EB438FF72"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 151,
+            "path": "builds/spaces-duality.bibtex.txt",
+            "sha256": "87FF9D10B206EFCAA465E46C805DEA0C2DFC33CC48F23EB62175F0E255C14ABA"
+          },
+          "log": {
+            "bytes": 66236,
+            "path": "builds/spaces-duality.log",
+            "sha256": "D28E295D7C55C4B17683902E67B8BC766E2120707A76EBC164B1155B26369523"
+          },
+          "pass3_stdout": {
+            "bytes": 52543,
+            "path": "builds/spaces-duality.pass3.txt",
+            "sha256": "F7734AF1B20EF888A17895555577BE548EEAC3C87ECC0DDA174200B0495DA5B3"
+          },
+          "pdf": {
+            "bytes": 545818,
+            "path": "builds/spaces-duality.pdf",
+            "sha256": "133E4350908AC12FDE9E06C82E28031E79EDEE2C2A69B5D763A829434F444CEC"
+          }
+        },
+        "source": {
+          "bytes": 80995,
+          "path": "spaces-duality.tex",
+          "sha256": "3CFCEF73EB9172CF69082FF07B9D84442DD5E545D8AD22917D5A694BAA57298E"
+        }
+      }
+    }
+  },
+  "completed_at_utc": "2026-08-27T18:57:09Z",
+  "passed": true,
+  "restored_authority_inputs": {
+    "spaces-duality.tex": {
+      "bytes": 80778,
+      "path": "spaces-duality.tex",
+      "sha256": "B13FFE40A679F3E86EA82972ED7955DD4FBCFD0D98F954936B0E5FBF56F92C7D"
+    }
+  },
+  "schema": "mathematics-commons-stacks-errata-build-execution/v1",
+  "source_date_epoch": "1787853209",
+  "started_at_utc": "2026-08-27T18:57:01Z",
+  "tools": {
+    "bibtex": "MiKTeX-BibTeX 4.2 (MiKTeX 26.5)",
+    "pdflatex": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5)",
+    "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]"
+  },
+  "work_root": "new empty task-local directory outside source and candidate; exact local path retained only in private evidence"
+}

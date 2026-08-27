@@ -1,0 +1,70 @@
+{
+  "accepted_producer_ids": 45,
+  "adjudication_line_metadata_normalizations": [
+    {
+      "declared_operation_end_line": 1999,
+      "declared_operation_start_line": 1998,
+      "exact_operation_end_line": 1998,
+      "exact_operation_start_line": 1998,
+      "producer_id": "P10-E0283",
+      "rationale": "The frozen semantic-unit locus spans the following sentence line, while the exact old/new replacement preimage is wholly on the first line.",
+      "semantic_unit_locus": "spaces-duality.tex:1998-1999",
+      "stable_id": "MC-STK-ERR-1040"
+    }
+  ],
+  "adjudication_spec_bytes": 22254,
+  "adjudication_spec_sha256": "AE96B2633F7D7DF052C19B75261564C31E127182CFAB448B4E5AAF1B4DE585BC",
+  "authority_bytes": 80778,
+  "authority_sha256": "B13FFE40A679F3E86EA82972ED7955DD4FBCFD0D98F954936B0E5FBF56F92C7D",
+  "bounded_preimages_unique_on_declared_lines": true,
+  "closure": {
+    "accepted_rejected_and_unresolved_disjoint": true,
+    "all_expected_producer_ids_accounted_for_exactly_once": true,
+    "operation_ids_equal_stable_unit_operation_ids": true,
+    "source_map_units_equal_stable_units": true
+  },
+  "exact_operation_line_metadata": true,
+  "merged_producer_groups": [
+    [
+      "P10-E0255",
+      "P10-E0256"
+    ],
+    [
+      "P10-E0257",
+      "P10-E0258"
+    ],
+    [
+      "P10-E0260",
+      "P10-E0268"
+    ],
+    [
+      "P10-E0265",
+      "P10-E0266"
+    ],
+    [
+      "P10-E0278",
+      "P10-E0281",
+      "P10-E0284"
+    ],
+    [
+      "P10-E0285",
+      "P10-E0287"
+    ]
+  ],
+  "operations": 57,
+  "operations_nonoverlapping": true,
+  "payload_preview_bytes": 80995,
+  "payload_preview_sha256": "3CFCEF73EB9172CF69082FF07B9D84442DD5E545D8AD22917D5A694BAA57298E",
+  "prohibited_transitions_executed": [],
+  "r23_predecessor_stable_id_last": "MC-STK-ERR-1007",
+  "r23_touched": false,
+  "rejected_producer_ids": 0,
+  "schema": "mathematics-commons-stacks-r24-intake-validation/v1",
+  "semantic_units": 38,
+  "stable_id_first": "MC-STK-ERR-1008",
+  "stable_id_last": "MC-STK-ERR-1045",
+  "stable_ids_follow_first_physical_source_locus": true,
+  "stable_ids_unique_and_contiguous": true,
+  "status": "PASS",
+  "unresolved": 0
+}
