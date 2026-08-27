@@ -261,6 +261,8 @@ def load_committed_json_object(
 
 
 def candidate_dir(overlay_id: str) -> Path:
+    if overlay_id.startswith("stacks-verdier-"):
+        return ROOT / "ai-integrated/candidates/commons/stacks/verdier"
     suffix = overlay_id.rsplit("-r", 1)[1]
     base = ROOT / "ai-integrated/candidates/commons/stacks/errata"
     return base if suffix == "1" else base / f"r{suffix}"
