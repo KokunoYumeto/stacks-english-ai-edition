@@ -32,7 +32,7 @@ REPRODUCIBILITY_RECEIPT = Path(
 SECOND_REPRODUCIBILITY_RECEIPT = Path(
     "validation/stacks-errata-a04446e-r22-r23-reproducibility-second-2026-08-27.json"
 )
-R18_R19_RELEASE_RECEIPT = Path(
+CURRENT_RELEASE_RECEIPT = Path(
     "validation/stacks-errata-a04446e-r22-r23-release-2026-08-27.json"
 )
 SHA1_RE = re.compile(r"^[0-9a-f]{40}$")
@@ -84,7 +84,7 @@ REQUIRED_PATHS = (
     "validation/unification-release-2026-08-25.json",
 )
 
-PUBLICATION_REQUIRED_PATHS = (R18_R19_RELEASE_RECEIPT.as_posix(),)
+PUBLICATION_REQUIRED_PATHS = (CURRENT_RELEASE_RECEIPT.as_posix(),)
 
 
 def git(*args: str) -> subprocess.CompletedProcess[str]:
@@ -1173,7 +1173,7 @@ def main(argv: list[str] | None = None) -> int:
         "validation/unification-release-2026-08-25.json",
     ]
     if not args.pre_publication:
-        json_paths.append(R18_R19_RELEASE_RECEIPT.as_posix())
+        json_paths.append(CURRENT_RELEASE_RECEIPT.as_posix())
     for relative in json_paths:
         try:
             json.loads((ROOT / relative).read_text(encoding="utf-8"))
@@ -2095,54 +2095,54 @@ def main(argv: list[str] | None = None) -> int:
 
     if not args.pre_publication:
         release_receipt = load_json_object(
-            ROOT / R18_R19_RELEASE_RECEIPT,
+            ROOT / CURRENT_RELEASE_RECEIPT,
             errors,
-            "R18-R19 release receipt",
+            "current release receipt",
         ) or {}
         if release_receipt.get("status") != "PUBLICATION_COMPLETE":
-            errors.append("R18-R19 release receipt is not publication-complete")
+            errors.append("current release receipt is not publication-complete")
         release_state = release_receipt.get("release")
         if not isinstance(release_state, dict):
-            errors.append("R18-R19 release receipt lacks release state")
+            errors.append("current release receipt lacks release state")
             release_state = {}
         if release_state.get("repository") != "KokunoYumeto/unofficial-ai-integrated-stacks-project":
-            errors.append("R18-R19 release receipt names the wrong repository")
+            errors.append("current release receipt names the wrong repository")
         if release_state.get("default_branch") != "main":
-            errors.append("R18-R19 release receipt names the wrong default branch")
+            errors.append("current release receipt names the wrong default branch")
         if release_state.get("frozen_registry_cutoff") != cutoff_commit:
-            errors.append("R18-R19 release cutoff binding mismatch")
+            errors.append("current release cutoff binding mismatch")
         if release_state.get("registered_overlays") != len(entries):
-            errors.append("R18-R19 release overlay-count binding mismatch")
+            errors.append("current release overlay-count binding mismatch")
         if release_state.get("registered_stable_ids") != len(registered_ids):
-            errors.append("R18-R19 release stable-ID binding mismatch")
+            errors.append("current release stable-ID binding mismatch")
         readback = release_receipt.get("public_readback")
         if not isinstance(readback, dict) or readback.get("status") != "PASS":
-            errors.append("R18-R19 release receipt lacks passing public readback")
+            errors.append("current release receipt lacks passing public readback")
             readback = {}
         readback_commit = require_commit(
-            readback.get("commit"), "R18-R19 public readback", errors
+            readback.get("commit"), "current public readback", errors
         )
-        require_ancestor(readback_commit, "HEAD", "R18-R19 readback-to-current", errors)
+        require_ancestor(readback_commit, "HEAD", "public readback-to-current", errors)
         if readback_commit != release_state.get("published_content_head"):
-            errors.append("R18-R19 readback and published-content heads differ")
+            errors.append("readback and published-content heads differ")
         metadata_head = require_commit(
-            release_state.get("metadata_head"), "R18-R19 metadata head", errors
+            release_state.get("metadata_head"), "current metadata head", errors
         )
-        require_ancestor(metadata_head, "HEAD", "R18-R19 metadata-to-current", errors)
+        require_ancestor(metadata_head, "HEAD", "metadata-to-current", errors)
         checked_paths = readback.get("checked_paths")
         if not isinstance(checked_paths, list) or not checked_paths:
-            errors.append("R18-R19 release receipt lacks checked public paths")
+            errors.append("current release receipt lacks checked public paths")
             checked_paths = []
         for row in checked_paths:
             if not isinstance(row, dict) or not isinstance(row.get("path"), str):
-                errors.append("R18-R19 release receipt has an invalid readback row")
+                errors.append("current release receipt has an invalid readback row")
                 continue
             relative = row["path"]
             if Path(relative).is_absolute() or ".." in Path(relative).parts:
-                errors.append(f"R18-R19 readback path escapes repository: {relative}")
+                errors.append(f"readback path escapes repository: {relative}")
                 continue
             data = committed_bytes(
-                readback_commit or "HEAD", relative, errors, "R18-R19 public readback"
+                readback_commit or "HEAD", relative, errors, "current public readback"
             )
             if data is None:
                 continue
@@ -2158,39 +2158,39 @@ def main(argv: list[str] | None = None) -> int:
                 or not SHA1_RE.fullmatch(expected_blob)
                 or git_blob_sha1(data) != expected_blob.lower()
             ):
-                errors.append(f"R18-R19 public readback identity mismatch: {relative}")
+                errors.append(f"public readback identity mismatch: {relative}")
         release_composition = release_receipt.get("composition")
         if not isinstance(release_composition, dict):
-            errors.append("R18-R19 release receipt lacks composition state")
+            errors.append("current release receipt lacks composition state")
             release_composition = {}
         release_comp_receipt = release_composition.get("receipt")
         if isinstance(release_comp_receipt, dict):
             if release_comp_receipt.get("sha256") != composition_sha:
-                errors.append("R18-R19 release composition-receipt hash mismatch")
+                errors.append("current release composition-receipt hash mismatch")
         else:
-            errors.append("R18-R19 release receipt lacks composition-receipt identity")
+            errors.append("current release receipt lacks composition-receipt identity")
         release_build = release_receipt.get("build")
         if not isinstance(release_build, dict):
-            errors.append("R18-R19 release receipt lacks build state")
+            errors.append("current release receipt lacks build state")
             release_build = {}
         if release_build.get("receipt_sha256") != sha256_bytes(
             build_receipt_bytes or b""
         ):
-            errors.append("R18-R19 release build-receipt hash mismatch")
+            errors.append("current release build-receipt hash mismatch")
         if release_build.get("source_commit") != build_source_commit or release_build.get(
             "source_tree"
         ) != build_source.get("tree"):
-            errors.append("R18-R19 release build-source identity mismatch")
+            errors.append("current release build-source identity mismatch")
         if release_build.get("chapters") != len(artifacts):
-            errors.append("R18-R19 release chapter-count mismatch")
+            errors.append("current release chapter-count mismatch")
         if release_build.get("pages") != sum(
             artifact.get("pages", 0) for artifact in artifacts if isinstance(artifact, dict)
         ):
-            errors.append("R18-R19 release page-count mismatch")
+            errors.append("current release page-count mismatch")
         if release_build.get("global_fixed_point_sweep") != build_state.get(
             "global_fixed_point_sweep"
         ):
-            errors.append("R18-R19 release fixed-point sweep mismatch")
+            errors.append("current release fixed-point sweep mismatch")
         release_visual = release_receipt.get("visual_qa")
         expected_release_visual = {
             "status": "PASS",
@@ -2217,7 +2217,7 @@ def main(argv: list[str] | None = None) -> int:
             ),
         }
         if release_visual != expected_release_visual:
-            errors.append("R18-R19 release visual-QA binding mismatch")
+            errors.append("current release visual-QA binding mismatch")
         release_reproduction = release_receipt.get("reproducibility")
         expected_release_reproduction = {
             "status": "PASS",
@@ -2234,7 +2234,7 @@ def main(argv: list[str] | None = None) -> int:
             "artifact_tuple_set_sha256": tuple_set_sha,
         }
         if release_reproduction != expected_release_reproduction:
-            errors.append("R18-R19 release reproducibility binding mismatch")
+            errors.append("current release reproducibility binding mismatch")
         workflow = release_receipt.get("workflow")
         if (
             not isinstance(workflow, dict)
@@ -2242,7 +2242,7 @@ def main(argv: list[str] | None = None) -> int:
             or workflow.get("conclusion") != "success"
             or workflow.get("head_sha") != release_state.get("metadata_head")
         ):
-            errors.append("R18-R19 release receipt lacks a passing exact-head workflow record")
+            errors.append("current release receipt lacks a passing exact-head workflow record")
 
     historical_receipt = load_json_object(
         ROOT / "validation/unification-release-2026-08-25.json",
