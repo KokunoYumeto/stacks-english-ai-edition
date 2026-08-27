@@ -1,0 +1,223 @@
+{
+  "schema": "mathematics-commons-stacks-errata-independent-review/v1",
+  "candidate_id": "stacks-errata-a04446e-r23",
+  "review_kind": "independent_adverse_replay",
+  "recorded_at_utc": "2026-08-26T04:57:22Z",
+  "result": "PASS",
+  "conclusion": "UNCONDITIONAL PASS",
+  "passed": true,
+  "pass_is_unconditional": true,
+  "pre_review_manifest_sha256": "4C0EB815CDCC394C9DC238EE6F3EB683C4BEC1E06B9FD4C77E05507FAC42409F",
+  "validation_sha256": "B60417DB440346CC9F6D376E2DD674FFC1861DBCFA7E0E3A67ADC1C08A04276C",
+  "pre_review_gate": {
+    "passed": true,
+    "check_manifest_exit_code": 0,
+    "candidate_manifest": {
+      "path": "candidate.manifest.json",
+      "bytes": 10901,
+      "sha256": "4C0EB815CDCC394C9DC238EE6F3EB683C4BEC1E06B9FD4C77E05507FAC42409F"
+    },
+    "validation": {
+      "path": "builds/validation.json",
+      "bytes": 2691,
+      "sha256": "B60417DB440346CC9F6D376E2DD674FFC1861DBCFA7E0E3A67ADC1C08A04276C",
+      "passed": true
+    }
+  },
+  "input_nonmutation": {
+    "passed": true,
+    "file_count_excluding_manifest_and_receipt": 54,
+    "note": "The replay read sealed candidate bytes and wrote only this receipt."
+  },
+  "stable_id_recomputation": {
+    "passed": true,
+    "derivation_rule": "Accepted semantic units map in bounded physical-source order to consecutive stable IDs; linked producer allegations share their semantic unit, while rejected and intentionally absent allegations consume no stable ID.",
+    "explicit_mapping": [
+      {
+        "producer_id": "MORE-ALGEBRA-H-001",
+        "producer_ids": [
+          "MORE-ALGEBRA-H-001"
+        ],
+        "stable_id": "MC-STK-ERR-0998"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-J-001",
+        "producer_ids": [
+          "MORE-ALGEBRA-J-001"
+        ],
+        "stable_id": "MC-STK-ERR-0999"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-J-002",
+        "producer_ids": [
+          "MORE-ALGEBRA-J-002"
+        ],
+        "stable_id": "MC-STK-ERR-1000"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-J-003",
+        "producer_ids": [
+          "MORE-ALGEBRA-J-003",
+          "MORE-ALGEBRA-J-004"
+        ],
+        "stable_id": "MC-STK-ERR-1001"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-J-005",
+        "producer_ids": [
+          "MORE-ALGEBRA-J-005"
+        ],
+        "stable_id": "MC-STK-ERR-1002"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-J-007",
+        "producer_ids": [
+          "MORE-ALGEBRA-J-007",
+          "MORE-ALGEBRA-J-008"
+        ],
+        "stable_id": "MC-STK-ERR-1003"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-J-012",
+        "producer_ids": [
+          "MORE-ALGEBRA-J-012"
+        ],
+        "stable_id": "MC-STK-ERR-1004"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-J-009",
+        "producer_ids": [
+          "MORE-ALGEBRA-J-009"
+        ],
+        "stable_id": "MC-STK-ERR-1005"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-J-010",
+        "producer_ids": [
+          "MORE-ALGEBRA-J-010"
+        ],
+        "stable_id": "MC-STK-ERR-1006"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-J-011",
+        "producer_ids": [
+          "MORE-ALGEBRA-J-011"
+        ],
+        "stable_id": "MC-STK-ERR-1007"
+      }
+    ],
+    "rejected_producer_ids": [
+      "MORE-ALGEBRA-J-006"
+    ],
+    "intentionally_absent_producer_ids": [],
+    "unit_count": 10,
+    "accepted_producer_identities": 12,
+    "operation_count": 12,
+    "first_id": "MC-STK-ERR-0998",
+    "last_id": "MC-STK-ERR-1007"
+  },
+  "scratch_replay": {
+    "passed": true,
+    "apply_order": "descending_start_byte",
+    "operation_count": 12,
+    "descending_intervals": [
+      [
+        1241577,
+        1241596
+      ],
+      [
+        1237419,
+        1237431
+      ],
+      [
+        1233096,
+        1233119
+      ],
+      [
+        1202543,
+        1202563
+      ],
+      [
+        1191120,
+        1191137
+      ],
+      [
+        1191051,
+        1191068
+      ],
+      [
+        1180404,
+        1180415
+      ],
+      [
+        1178673,
+        1178716
+      ],
+      [
+        1178613,
+        1178618
+      ],
+      [
+        1177952,
+        1177958
+      ],
+      [
+        1164407,
+        1164420
+      ],
+      [
+        998019,
+        998026
+      ]
+    ],
+    "authority": {
+      "bytes": 1492039,
+      "sha256": "0106554339E8966FE04411B2AE9F9CD856B165849FEEF0C7BC37634819064708"
+    },
+    "output": {
+      "bytes": 1492064,
+      "sha256": "4EE7CB6B4526ECD30B6C796D4264FC72922B3DB367CD05D9575134E53D129C48"
+    },
+    "operation_spec_sha256": "AC2FF915A9FADF81F84E9FAEC2A786ADBBFD691A1251C7A94B8BC49350B53625"
+  },
+  "sealed_evidence_verification": {
+    "passed": true,
+    "build_receipt": {
+      "path": "builds/build-receipt.json",
+      "sha256": "91575A0FDAD2D20C2D32CBB570ABCCA363464EF4FD93693093490FF16E191E4B"
+    },
+    "visual_qa": {
+      "path": "builds/visual-qa.json",
+      "sha256": "595D84538324E126913760572AD2759C03CA9DB45A54F1849711B4493CC6B98E"
+    },
+    "candidate_pdf": {
+      "path": "builds/more-algebra.pdf",
+      "bytes": 3109236,
+      "sha256": "4C30C1452A379E51FB729E155063E0FB5430FF7122A159C364F4E433F802D532",
+      "pages": 401
+    },
+    "authority_pdf": {
+      "path": "builds/more-algebra.authority.pdf",
+      "bytes": 3109314,
+      "sha256": "27349D7D48591CF64F174C2A8B21A5F6CB9E0931F9F165336534FA49A10A252C",
+      "pages": 401
+    },
+    "private_render_manifest": {
+      "bytes": 85974,
+      "sha256": "B103D2FAD86B178106456B388EADD6BF79FA427E361476558BFAC6B994294D89",
+      "logical_path": "canon/private_evidence/errata-r23-20260826T044000Z/render"
+    }
+  },
+  "adverse_observations": [
+    "Standalone candidate and authority builds retain identical cross-chapter unresolved-reference multisets.",
+    "Both PDFs are untagged; this retained accessibility limitation is not misreported as a visual failure.",
+    "All 401 candidate pages and every correction-sensitive locus were inspected without a visual defect."
+  ],
+  "constraints_observed": {
+    "candidate_inputs_mutated": false,
+    "upstream_contacted": false,
+    "persistent_writes": [
+      "replay/independent-review.json"
+    ]
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "candidate_id": "stacks-errata-a04446e-r22",
+  "checks": {
+    "authority_evidence": {
+      "files": 5,
+      "passed": true
+    },
+    "chapter_builds": {
+      "chapters": 1,
+      "passed": true,
+      "receipt_sha256": "E48BC914C0ED7624FEE7F0D726FD72AE9EBFC19753F3E5E90685FF583EF7446A"
+    },
+    "deterministic_pdf_replay": {
+      "passed": true,
+      "pdfs": 2,
+      "receipt_sha256": "749C82CA3CD0B2B22744E1A1CA87F95C4C1E95CB192A3B4582BFAA203EDE38C1"
+    },
+    "exact_payloads": {
+      "files": {
+        "more-algebra": {
+          "authority_bytes": 1492039,
+          "authority_display_delimiters": 2576,
+          "authority_sha256": "0106554339E8966FE04411B2AE9F9CD856B165849FEEF0C7BC37634819064708",
+          "display_delimiter_delta": 0,
+          "operation_count": 94,
+          "ordered_structure_exceptions": {},
+          "payload_bytes": 1492031,
+          "payload_display_delimiters": 2576,
+          "payload_sha256": "7C6237F71A81886DD72B6F85BFF52182D653FB98668B0124DC10C05E93960623",
+          "source_line_exceptions": {
+            "MC-STK-ERR-0942-OP2": {
+              "actual_end_line": 19063,
+              "actual_start_line": 19063,
+              "declared_end_line": 19064,
+              "declared_start_line": 19063,
+              "rationale": "The declared semantic locus continues on line 19064, while the exact replaced byte span ends on line 19063."
+            }
+          },
+          "structure": {
+            "citations": {
+              "authority": 89,
+              "payload": 89
+            },
+            "environments": {
+              "authority": 4704,
+              "payload": 4704
+            },
+            "labels": {
+              "authority": 1152,
+              "payload": 1152
+            },
+            "references": {
+              "authority": 3120,
+              "payload": 3120
+            },
+            "sections": {
+              "authority": 129,
+              "payload": 129
+            }
+          },
+          "xymatrix_count": 182
+        }
+      },
+      "passed": true
+    },
+    "lease_ledgers_inventory": {
+      "decisions": 8,
+      "intentionally_absent": 1,
+      "passed": true,
+      "prior_p02_aliases": 86,
+      "rejections": 1,
+      "unresolved": 0
+    },
+    "public_hygiene": {
+      "passed": true,
+      "python_caches": 0,
+      "text_files": 48
+    },
+    "unit_closure": {
+      "accepted_producer_identities": 89,
+      "expected": 83,
+      "manifested": 83,
+      "passed": true
+    },
+    "visual_pdf_qa": {
+      "direct_units": 83,
+      "passed": true,
+      "pdfs": 1,
+      "receipt_sha256": "7919417EF546DD1CA3D4EDA636DA5CA6ADC853DBC51D120ED21B4FB7D52A4674"
+    }
+  },
+  "generated_at_utc": "2026-08-26T03:46:08Z",
+  "passed": true,
+  "schema": "mathematics-commons-stacks-errata-validation/v1",
+  "verifier_sha256": "7C3130D24B4CA021CB2F13D04FD43DB9B9CCE5DDA51F2A5CEDC3E44AB4E03A2B"
+}

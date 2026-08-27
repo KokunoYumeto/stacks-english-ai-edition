@@ -1,0 +1,1068 @@
+{
+  "schema": "mathematics-commons-stacks-errata-independent-review/v1",
+  "candidate_id": "stacks-errata-a04446e-r22",
+  "review_kind": "independent_adverse_replay",
+  "recorded_at_utc": "2026-08-26T04:20:02Z",
+  "result": "PASS",
+  "conclusion": "UNCONDITIONAL PASS",
+  "passed": true,
+  "pass_is_unconditional": true,
+  "pre_review_manifest_sha256": "D8143C08C510202057F9932C2CEABCE21807880795F9232E9F083D135EE508FF",
+  "validation_sha256": "09087FB0653CB3E4B62A0249FD59E9B548B487068A1F641B0F34516EF653BEB3",
+  "pre_review_gate": {
+    "passed": true,
+    "check_manifest_exit_code": 0,
+    "candidate_manifest": {
+      "path": "candidate.manifest.json",
+      "bytes": 10577,
+      "sha256": "D8143C08C510202057F9932C2CEABCE21807880795F9232E9F083D135EE508FF"
+    },
+    "validation": {
+      "path": "builds/validation.json",
+      "bytes": 3066,
+      "sha256": "09087FB0653CB3E4B62A0249FD59E9B548B487068A1F641B0F34516EF653BEB3",
+      "passed": true
+    }
+  },
+  "input_nonmutation": {
+    "passed": true,
+    "file_count_excluding_manifest_and_receipt": 55,
+    "note": "The replay read sealed candidate bytes and wrote only this receipt."
+  },
+  "stable_id_recomputation": {
+    "passed": true,
+    "derivation_rule": "Accepted semantic units map in bounded physical-source order to consecutive stable IDs; linked producer allegations share their semantic unit, while rejected and intentionally absent allegations consume no stable ID.",
+    "explicit_mapping": [
+      {
+        "producer_id": "MORE-ALGEBRA-001",
+        "producer_ids": [
+          "MORE-ALGEBRA-001"
+        ],
+        "stable_id": "MC-STK-ERR-0915"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-002",
+        "producer_ids": [
+          "MORE-ALGEBRA-002"
+        ],
+        "stable_id": "MC-STK-ERR-0916"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-003",
+        "producer_ids": [
+          "MORE-ALGEBRA-003"
+        ],
+        "stable_id": "MC-STK-ERR-0917"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-004",
+        "producer_ids": [
+          "MORE-ALGEBRA-004"
+        ],
+        "stable_id": "MC-STK-ERR-0918"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-005",
+        "producer_ids": [
+          "MORE-ALGEBRA-005"
+        ],
+        "stable_id": "MC-STK-ERR-0919"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-006",
+        "producer_ids": [
+          "MORE-ALGEBRA-006"
+        ],
+        "stable_id": "MC-STK-ERR-0920"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-007",
+        "producer_ids": [
+          "MORE-ALGEBRA-007"
+        ],
+        "stable_id": "MC-STK-ERR-0921"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-008",
+        "producer_ids": [
+          "MORE-ALGEBRA-008"
+        ],
+        "stable_id": "MC-STK-ERR-0922"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-009",
+        "producer_ids": [
+          "MORE-ALGEBRA-009"
+        ],
+        "stable_id": "MC-STK-ERR-0923"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-010",
+        "producer_ids": [
+          "MORE-ALGEBRA-010"
+        ],
+        "stable_id": "MC-STK-ERR-0924"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-011",
+        "producer_ids": [
+          "MORE-ALGEBRA-011"
+        ],
+        "stable_id": "MC-STK-ERR-0925"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-012",
+        "producer_ids": [
+          "MORE-ALGEBRA-012"
+        ],
+        "stable_id": "MC-STK-ERR-0926"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-013",
+        "producer_ids": [
+          "MORE-ALGEBRA-013"
+        ],
+        "stable_id": "MC-STK-ERR-0927"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-014",
+        "producer_ids": [
+          "MORE-ALGEBRA-014"
+        ],
+        "stable_id": "MC-STK-ERR-0928"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-015",
+        "producer_ids": [
+          "MORE-ALGEBRA-015"
+        ],
+        "stable_id": "MC-STK-ERR-0929"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-016",
+        "producer_ids": [
+          "MORE-ALGEBRA-016"
+        ],
+        "stable_id": "MC-STK-ERR-0930"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-017",
+        "producer_ids": [
+          "MORE-ALGEBRA-017"
+        ],
+        "stable_id": "MC-STK-ERR-0931"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-018",
+        "producer_ids": [
+          "MORE-ALGEBRA-018"
+        ],
+        "stable_id": "MC-STK-ERR-0932"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-F-001",
+        "producer_ids": [
+          "MORE-ALGEBRA-F-001"
+        ],
+        "stable_id": "MC-STK-ERR-0933"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-F-002",
+        "producer_ids": [
+          "MORE-ALGEBRA-F-002"
+        ],
+        "stable_id": "MC-STK-ERR-0934"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-F-003",
+        "producer_ids": [
+          "MORE-ALGEBRA-F-003"
+        ],
+        "stable_id": "MC-STK-ERR-0935"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-F-004",
+        "producer_ids": [
+          "MORE-ALGEBRA-F-004"
+        ],
+        "stable_id": "MC-STK-ERR-0936"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-F-005",
+        "producer_ids": [
+          "MORE-ALGEBRA-F-005"
+        ],
+        "stable_id": "MC-STK-ERR-0937"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-F-006",
+        "producer_ids": [
+          "MORE-ALGEBRA-F-006"
+        ],
+        "stable_id": "MC-STK-ERR-0938"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-F-007",
+        "producer_ids": [
+          "MORE-ALGEBRA-F-007"
+        ],
+        "stable_id": "MC-STK-ERR-0939"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-F-008",
+        "producer_ids": [
+          "MORE-ALGEBRA-F-008"
+        ],
+        "stable_id": "MC-STK-ERR-0940"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-F-009",
+        "producer_ids": [
+          "MORE-ALGEBRA-F-009"
+        ],
+        "stable_id": "MC-STK-ERR-0941"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-F-010",
+        "producer_ids": [
+          "MORE-ALGEBRA-F-010"
+        ],
+        "stable_id": "MC-STK-ERR-0942"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-F-011",
+        "producer_ids": [
+          "MORE-ALGEBRA-F-011"
+        ],
+        "stable_id": "MC-STK-ERR-0943"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-G-001",
+        "producer_ids": [
+          "MORE-ALGEBRA-G-001"
+        ],
+        "stable_id": "MC-STK-ERR-0944"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-G-002",
+        "producer_ids": [
+          "MORE-ALGEBRA-G-002"
+        ],
+        "stable_id": "MC-STK-ERR-0945"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-G-003",
+        "producer_ids": [
+          "MORE-ALGEBRA-G-003"
+        ],
+        "stable_id": "MC-STK-ERR-0946"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-G-004",
+        "producer_ids": [
+          "MORE-ALGEBRA-G-004"
+        ],
+        "stable_id": "MC-STK-ERR-0947"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-G-005",
+        "producer_ids": [
+          "MORE-ALGEBRA-G-005"
+        ],
+        "stable_id": "MC-STK-ERR-0948"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-G-006",
+        "producer_ids": [
+          "MORE-ALGEBRA-G-006"
+        ],
+        "stable_id": "MC-STK-ERR-0949"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-G-007",
+        "producer_ids": [
+          "MORE-ALGEBRA-G-007"
+        ],
+        "stable_id": "MC-STK-ERR-0950"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-G-008",
+        "producer_ids": [
+          "MORE-ALGEBRA-G-008"
+        ],
+        "stable_id": "MC-STK-ERR-0951"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-G-009",
+        "producer_ids": [
+          "MORE-ALGEBRA-G-009"
+        ],
+        "stable_id": "MC-STK-ERR-0952"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-G-010",
+        "producer_ids": [
+          "MORE-ALGEBRA-G-010"
+        ],
+        "stable_id": "MC-STK-ERR-0953"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-G-011",
+        "producer_ids": [
+          "MORE-ALGEBRA-G-011"
+        ],
+        "stable_id": "MC-STK-ERR-0954"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-G-012",
+        "producer_ids": [
+          "MORE-ALGEBRA-G-012"
+        ],
+        "stable_id": "MC-STK-ERR-0955"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-G-013",
+        "producer_ids": [
+          "MORE-ALGEBRA-G-013"
+        ],
+        "stable_id": "MC-STK-ERR-0956"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-G-014",
+        "producer_ids": [
+          "MORE-ALGEBRA-G-014"
+        ],
+        "stable_id": "MC-STK-ERR-0957"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-G-015",
+        "producer_ids": [
+          "MORE-ALGEBRA-G-015"
+        ],
+        "stable_id": "MC-STK-ERR-0958"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-G-016",
+        "producer_ids": [
+          "MORE-ALGEBRA-G-016"
+        ],
+        "stable_id": "MC-STK-ERR-0959"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-G-017",
+        "producer_ids": [
+          "MORE-ALGEBRA-G-017"
+        ],
+        "stable_id": "MC-STK-ERR-0960"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-G-018",
+        "producer_ids": [
+          "MORE-ALGEBRA-G-018"
+        ],
+        "stable_id": "MC-STK-ERR-0961"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-G-019",
+        "producer_ids": [
+          "MORE-ALGEBRA-G-019"
+        ],
+        "stable_id": "MC-STK-ERR-0962"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-G-020",
+        "producer_ids": [
+          "MORE-ALGEBRA-G-020"
+        ],
+        "stable_id": "MC-STK-ERR-0963"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-G-021",
+        "producer_ids": [
+          "MORE-ALGEBRA-G-021"
+        ],
+        "stable_id": "MC-STK-ERR-0964"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-G-022",
+        "producer_ids": [
+          "MORE-ALGEBRA-G-022"
+        ],
+        "stable_id": "MC-STK-ERR-0965"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-G-023",
+        "producer_ids": [
+          "MORE-ALGEBRA-G-023"
+        ],
+        "stable_id": "MC-STK-ERR-0966"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-I-001",
+        "producer_ids": [
+          "MORE-ALGEBRA-I-001"
+        ],
+        "stable_id": "MC-STK-ERR-0967"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-I-002",
+        "producer_ids": [
+          "MORE-ALGEBRA-I-002"
+        ],
+        "stable_id": "MC-STK-ERR-0968"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-I-003",
+        "producer_ids": [
+          "MORE-ALGEBRA-I-003"
+        ],
+        "stable_id": "MC-STK-ERR-0969"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-I-004",
+        "producer_ids": [
+          "MORE-ALGEBRA-I-004"
+        ],
+        "stable_id": "MC-STK-ERR-0970"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-I-005",
+        "producer_ids": [
+          "MORE-ALGEBRA-I-005"
+        ],
+        "stable_id": "MC-STK-ERR-0971"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-I-006",
+        "producer_ids": [
+          "MORE-ALGEBRA-I-006"
+        ],
+        "stable_id": "MC-STK-ERR-0972"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-I-039",
+        "producer_ids": [
+          "MORE-ALGEBRA-I-039"
+        ],
+        "stable_id": "MC-STK-ERR-0973"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-I-007",
+        "producer_ids": [
+          "MORE-ALGEBRA-I-007",
+          "MORE-ALGEBRA-I-008"
+        ],
+        "stable_id": "MC-STK-ERR-0974"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-I-010",
+        "producer_ids": [
+          "MORE-ALGEBRA-I-010"
+        ],
+        "stable_id": "MC-STK-ERR-0975"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-I-011",
+        "producer_ids": [
+          "MORE-ALGEBRA-I-011"
+        ],
+        "stable_id": "MC-STK-ERR-0976"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-I-012",
+        "producer_ids": [
+          "MORE-ALGEBRA-I-012",
+          "MORE-ALGEBRA-I-013"
+        ],
+        "stable_id": "MC-STK-ERR-0977"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-I-014",
+        "producer_ids": [
+          "MORE-ALGEBRA-I-014"
+        ],
+        "stable_id": "MC-STK-ERR-0978"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-I-015",
+        "producer_ids": [
+          "MORE-ALGEBRA-I-015",
+          "MORE-ALGEBRA-I-016"
+        ],
+        "stable_id": "MC-STK-ERR-0979"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-I-017",
+        "producer_ids": [
+          "MORE-ALGEBRA-I-017"
+        ],
+        "stable_id": "MC-STK-ERR-0980"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-I-018",
+        "producer_ids": [
+          "MORE-ALGEBRA-I-018"
+        ],
+        "stable_id": "MC-STK-ERR-0981"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-I-019",
+        "producer_ids": [
+          "MORE-ALGEBRA-I-019"
+        ],
+        "stable_id": "MC-STK-ERR-0982"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-I-020",
+        "producer_ids": [
+          "MORE-ALGEBRA-I-020"
+        ],
+        "stable_id": "MC-STK-ERR-0983"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-I-021",
+        "producer_ids": [
+          "MORE-ALGEBRA-I-021"
+        ],
+        "stable_id": "MC-STK-ERR-0984"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-I-022",
+        "producer_ids": [
+          "MORE-ALGEBRA-I-022"
+        ],
+        "stable_id": "MC-STK-ERR-0985"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-I-023",
+        "producer_ids": [
+          "MORE-ALGEBRA-I-023"
+        ],
+        "stable_id": "MC-STK-ERR-0986"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-I-024",
+        "producer_ids": [
+          "MORE-ALGEBRA-I-024"
+        ],
+        "stable_id": "MC-STK-ERR-0987"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-I-025",
+        "producer_ids": [
+          "MORE-ALGEBRA-I-025"
+        ],
+        "stable_id": "MC-STK-ERR-0988"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-I-026",
+        "producer_ids": [
+          "MORE-ALGEBRA-I-026"
+        ],
+        "stable_id": "MC-STK-ERR-0989"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-I-028",
+        "producer_ids": [
+          "MORE-ALGEBRA-I-028",
+          "MORE-ALGEBRA-I-029",
+          "MORE-ALGEBRA-I-030"
+        ],
+        "stable_id": "MC-STK-ERR-0990"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-I-031",
+        "producer_ids": [
+          "MORE-ALGEBRA-I-031"
+        ],
+        "stable_id": "MC-STK-ERR-0991"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-I-032",
+        "producer_ids": [
+          "MORE-ALGEBRA-I-032"
+        ],
+        "stable_id": "MC-STK-ERR-0992"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-I-033",
+        "producer_ids": [
+          "MORE-ALGEBRA-I-033"
+        ],
+        "stable_id": "MC-STK-ERR-0993"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-I-034",
+        "producer_ids": [
+          "MORE-ALGEBRA-I-034"
+        ],
+        "stable_id": "MC-STK-ERR-0994"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-I-035",
+        "producer_ids": [
+          "MORE-ALGEBRA-I-035"
+        ],
+        "stable_id": "MC-STK-ERR-0995"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-I-036",
+        "producer_ids": [
+          "MORE-ALGEBRA-I-036"
+        ],
+        "stable_id": "MC-STK-ERR-0996"
+      },
+      {
+        "producer_id": "MORE-ALGEBRA-I-037",
+        "producer_ids": [
+          "MORE-ALGEBRA-I-037",
+          "MORE-ALGEBRA-I-038"
+        ],
+        "stable_id": "MC-STK-ERR-0997"
+      }
+    ],
+    "rejected_producer_ids": [
+      "MORE-ALGEBRA-I-027"
+    ],
+    "intentionally_absent_producer_ids": [
+      "MORE-ALGEBRA-I-009"
+    ],
+    "unit_count": 83,
+    "accepted_producer_identities": 89,
+    "operation_count": 94,
+    "first_id": "MC-STK-ERR-0915",
+    "last_id": "MC-STK-ERR-0997"
+  },
+  "scratch_replay": {
+    "passed": true,
+    "apply_order": "descending_start_byte",
+    "operation_count": 94,
+    "descending_intervals": [
+      [
+        1124563,
+        1124587
+      ],
+      [
+        1124443,
+        1124468
+      ],
+      [
+        1123348,
+        1123398
+      ],
+      [
+        1123001,
+        1123053
+      ],
+      [
+        1122869,
+        1122894
+      ],
+      [
+        1122109,
+        1122151
+      ],
+      [
+        1121757,
+        1121773
+      ],
+      [
+        1115487,
+        1115505
+      ],
+      [
+        1110151,
+        1110172
+      ],
+      [
+        1110117,
+        1110134
+      ],
+      [
+        1110079,
+        1110100
+      ],
+      [
+        1103150,
+        1103160
+      ],
+      [
+        1102819,
+        1102845
+      ],
+      [
+        1102306,
+        1102317
+      ],
+      [
+        1102082,
+        1102128
+      ],
+      [
+        1101103,
+        1101158
+      ],
+      [
+        1100660,
+        1100681
+      ],
+      [
+        1098272,
+        1098296
+      ],
+      [
+        1093669,
+        1093685
+      ],
+      [
+        1093029,
+        1093067
+      ],
+      [
+        1087721,
+        1087736
+      ],
+      [
+        1083600,
+        1083637
+      ],
+      [
+        1083546,
+        1083559
+      ],
+      [
+        1063808,
+        1063823
+      ],
+      [
+        1063440,
+        1063502
+      ],
+      [
+        1062961,
+        1062999
+      ],
+      [
+        1062595,
+        1062627
+      ],
+      [
+        1059399,
+        1059439
+      ],
+      [
+        1057125,
+        1057158
+      ],
+      [
+        1057054,
+        1057087
+      ],
+      [
+        1056373,
+        1056384
+      ],
+      [
+        1043477,
+        1043487
+      ],
+      [
+        1035271,
+        1035295
+      ],
+      [
+        1030436,
+        1030469
+      ],
+      [
+        1026114,
+        1026142
+      ],
+      [
+        1022645,
+        1022669
+      ],
+      [
+        1022029,
+        1022040
+      ],
+      [
+        880776,
+        880794
+      ],
+      [
+        873516,
+        873529
+      ],
+      [
+        869795,
+        869807
+      ],
+      [
+        867720,
+        867736
+      ],
+      [
+        865428,
+        865432
+      ],
+      [
+        864557,
+        864570
+      ],
+      [
+        856626,
+        856633
+      ],
+      [
+        856327,
+        856345
+      ],
+      [
+        856182,
+        856200
+      ],
+      [
+        855665,
+        855673
+      ],
+      [
+        841216,
+        841228
+      ],
+      [
+        840827,
+        840845
+      ],
+      [
+        824113,
+        824136
+      ],
+      [
+        816910,
+        816940
+      ],
+      [
+        816788,
+        816818
+      ],
+      [
+        812159,
+        812178
+      ],
+      [
+        810112,
+        810115
+      ],
+      [
+        794566,
+        794576
+      ],
+      [
+        793428,
+        793442
+      ],
+      [
+        793118,
+        793132
+      ],
+      [
+        792954,
+        792959
+      ],
+      [
+        780451,
+        780468
+      ],
+      [
+        777115,
+        777135
+      ],
+      [
+        769852,
+        769877
+      ],
+      [
+        764189,
+        764196
+      ],
+      [
+        764069,
+        764080
+      ],
+      [
+        764010,
+        764017
+      ],
+      [
+        754059,
+        754098
+      ],
+      [
+        713902,
+        713917
+      ],
+      [
+        713875,
+        713894
+      ],
+      [
+        695449,
+        695464
+      ],
+      [
+        688548,
+        688573
+      ],
+      [
+        687500,
+        687518
+      ],
+      [
+        670289,
+        670305
+      ],
+      [
+        669631,
+        669650
+      ],
+      [
+        669432,
+        669438
+      ],
+      [
+        664749,
+        664763
+      ],
+      [
+        658426,
+        658444
+      ],
+      [
+        651269,
+        651272
+      ],
+      [
+        617583,
+        617605
+      ],
+      [
+        608362,
+        608380
+      ],
+      [
+        607767,
+        607778
+      ],
+      [
+        607390,
+        607419
+      ],
+      [
+        607278,
+        607301
+      ],
+      [
+        605152,
+        605191
+      ],
+      [
+        592746,
+        592757
+      ],
+      [
+        591620,
+        591635
+      ],
+      [
+        591239,
+        591250
+      ],
+      [
+        580493,
+        580524
+      ],
+      [
+        531935,
+        531956
+      ],
+      [
+        502079,
+        502112
+      ],
+      [
+        490948,
+        490981
+      ],
+      [
+        467510,
+        467542
+      ],
+      [
+        461146,
+        461159
+      ],
+      [
+        437028,
+        437050
+      ],
+      [
+        430861,
+        430875
+      ],
+      [
+        428781,
+        428812
+      ]
+    ],
+    "authority": {
+      "bytes": 1492039,
+      "sha256": "0106554339E8966FE04411B2AE9F9CD856B165849FEEF0C7BC37634819064708"
+    },
+    "output": {
+      "bytes": 1492031,
+      "sha256": "7C6237F71A81886DD72B6F85BFF52182D653FB98668B0124DC10C05E93960623"
+    },
+    "operation_spec_sha256": "B91126A23954A9A5AFE7133C95E4A30B76568A6C19C4D36D884785FFCF371914"
+  },
+  "sealed_evidence_verification": {
+    "passed": true,
+    "build_receipt": {
+      "path": "builds/build-receipt.json",
+      "sha256": "E48BC914C0ED7624FEE7F0D726FD72AE9EBFC19753F3E5E90685FF583EF7446A"
+    },
+    "visual_qa": {
+      "path": "builds/visual-qa.json",
+      "sha256": "7919417EF546DD1CA3D4EDA636DA5CA6ADC853DBC51D120ED21B4FB7D52A4674"
+    },
+    "candidate_pdf": {
+      "path": "builds/more-algebra.pdf",
+      "bytes": 3108890,
+      "sha256": "9B47224CB45CCD09E59DB7AC682E5EF941FDDA863D54425EA90906F6FB038C0A",
+      "pages": 401
+    },
+    "authority_pdf": {
+      "path": "builds/more-algebra.authority.pdf",
+      "bytes": 3109314,
+      "sha256": "6B452A38E60738693AB57ABCD6022B6E5625C95F168A2DB088B159F3DAD2D93E",
+      "pages": 401
+    },
+    "private_render_manifest": {
+      "bytes": 95334,
+      "sha256": "9CB1A15AFC12C55D44B01707DB247659D2A3A5CCE2C9438DE481D2962421367C",
+      "logical_path": "canon/private_evidence/errata-r22-20260826T034329Z/render"
+    }
+  },
+  "adverse_observations": [
+    "Standalone candidate and authority builds retain identical cross-chapter unresolved-reference multisets.",
+    "Both PDFs are untagged; this retained accessibility limitation is not misreported as a visual failure.",
+    "All 401 candidate pages and every correction-sensitive locus were inspected without a visual defect."
+  ],
+  "constraints_observed": {
+    "candidate_inputs_mutated": false,
+    "upstream_contacted": false,
+    "persistent_writes": [
+      "replay/independent-review.json"
+    ]
+  }
+}
