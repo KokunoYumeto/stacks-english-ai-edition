@@ -1,0 +1,657 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-fixed-point-build/v1",
+  "status": "PASS",
+  "created_utc": "2026-08-27T21:24:29Z",
+  "source": {
+    "commit": "c3bc402b03dea3c5ac92c9e226645b5895a78887",
+    "tree": "626b67a2c32f4b2bc1b8ad7b4586cdb036b25a21"
+  },
+  "builder": {
+    "path": "tools/build_fixed_point.py",
+    "git_blob": "000412090a1aa6ce4022532055aaad9164b51a15",
+    "sha256": "8D610B1EB520F36989D606DAF3B771641E96C201B9DF7ED4D7D087D65152D95D"
+  },
+  "composition": {
+    "schema": "unofficial-ai-integrated-stacks-composition/v3",
+    "receipt": "validation/composition-current.json",
+    "receipt_sha256": "C4E88EB59F45F3C454EF43C0715D8FF64C3B9514F17CDF5190F09859773558AE",
+    "receipt_git_blob": "dc1571661fc41e792ebbafd3d816ded655589390",
+    "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+    "previous_public_main_head": "e42260230a7933cfc99083a5cc214615a1e57996",
+    "previous_public_main_tree": "36e4c98349fcf221951808490fadf576b3ba1ca1",
+    "previous_registry_commit": "49fc23ab2f3d94cc98f27bc0f315fb0da6f2c98a",
+    "previous_last_admitted_overlay": "stacks-errata-a04446e-r23",
+    "previous_source_blobs": {
+      "spaces-duality.tex": {
+        "bytes": 80778,
+        "sha256": "B13FFE40A679F3E86EA82972ED7955DD4FBCFD0D98F954936B0E5FBF56F92C7D",
+        "git_blob": "cb9d29d53adb9a0fa1aab245b8290cdcc4568f4e"
+      }
+    },
+    "composition_mode": "manifest-bound registry-order replay rebased onto verified cumulative source",
+    "composition_base_commit": "0e5c4596d85072fecae6e061bb54bed6979d66c3",
+    "composition_base_tree": "2d2ac46456b901fcf8e09907a5988f57b76ee03c",
+    "composition_source_commit": "10c1c62f371921cdafbaa5e89f438a821a013621",
+    "composition_source_tree": "6ec98b8ee6919070a24130877d4eeb9e1a0e874b",
+    "registry_cutoff_commit": "6df734ecb3bef8f35770819d17a8d3e267b8e07a",
+    "registry_cutoff_tree": "49b8e57e91f0bf04669b2ee93e3586cfb6919088",
+    "registry_import_commit": "0e5c4596d85072fecae6e061bb54bed6979d66c3",
+    "registry_import_tree": "2d2ac46456b901fcf8e09907a5988f57b76ee03c",
+    "registry_overlays_path": "ai-integrated/registry/overlays.json",
+    "registry_overlays_git_blob": "0ffc11e1ff8dafcfecc79f8e5a2917c7672c1e90",
+    "registry_overlays_sha256": "AC6EBA518273FCE912C3F40085F6F6E9895F7020BF205E043A3C86FD9878E9D4",
+    "registered_overlays": 25,
+    "registered_stable_ids": 690,
+    "last_admitted_overlay": "stacks-errata-a04446e-r24",
+    "new_overlays": [
+      {
+        "id": "stacks-errata-a04446e-r24",
+        "topology": "embedded_candidate_direct_admission",
+        "stable_ids": 38,
+        "operations": 57,
+        "manifest_sha256": "8FD22BEE46246A02658726C264E6E442BFA8E14534F501F74218FBC00615332A",
+        "payload_sha256": "3CFCEF73EB9172CF69082FF07B9D84442DD5E545D8AD22917D5A694BAA57298E",
+        "review_receipt_sha256": "3DE71963C0CC3BCDFB0CDF00923944E96456AEAFFD1CC58F79CAF7D1D451F61C",
+        "candidate_commit": "6df734ecb3bef8f35770819d17a8d3e267b8e07a",
+        "candidate_tree": "49b8e57e91f0bf04669b2ee93e3586cfb6919088",
+        "candidate_subtree": "32362b02165884fe6c1aac84db3b4de73ddf3ae1",
+        "admission_commit": "6df734ecb3bef8f35770819d17a8d3e267b8e07a",
+        "admission_tree": "49b8e57e91f0bf04669b2ee93e3586cfb6919088",
+        "admission_parent": "49fc23ab2f3d94cc98f27bc0f315fb0da6f2c98a",
+        "lease_release_event": "lease-event-000053",
+        "successor_lease_event": "lease-event-000054",
+        "payload_path": "payload/spaces-duality.tex",
+        "review_receipt_path": "replay/independent-review.json",
+        "lease_event_id": "lease-event-000053",
+        "successor_lease_event_id": "lease-event-000054"
+      }
+    ],
+    "new_overlay_ids": [
+      "stacks-errata-a04446e-r24"
+    ],
+    "new_overlay_candidate_commits": [
+      "6df734ecb3bef8f35770819d17a8d3e267b8e07a"
+    ],
+    "new_overlay_admission_commits": [
+      "6df734ecb3bef8f35770819d17a8d3e267b8e07a"
+    ],
+    "required_build_stems": [
+      "sets",
+      "categories",
+      "topology",
+      "sheaves",
+      "sites",
+      "algebra",
+      "brauer",
+      "derived",
+      "simplicial",
+      "homology",
+      "more-algebra",
+      "smoothing",
+      "schemes",
+      "properties",
+      "morphisms",
+      "more-morphisms",
+      "crystalline",
+      "spaces-cohomology",
+      "spaces-duality",
+      "stacks-limits",
+      "injectives",
+      "gaga",
+      "moduli"
+    ],
+    "affected_source_stems": [
+      "spaces-duality"
+    ],
+    "affected_source_identities": {
+      "spaces-duality.tex": {
+        "authority_bytes": 80778,
+        "authority_sha256": "B13FFE40A679F3E86EA82972ED7955DD4FBCFD0D98F954936B0E5FBF56F92C7D",
+        "authority_git_blob": "cb9d29d53adb9a0fa1aab245b8290cdcc4568f4e",
+        "before_bytes": 80778,
+        "before_sha256": "B13FFE40A679F3E86EA82972ED7955DD4FBCFD0D98F954936B0E5FBF56F92C7D",
+        "before_git_blob": "cb9d29d53adb9a0fa1aab245b8290cdcc4568f4e",
+        "authority_projection_bytes": 80995,
+        "authority_projection_sha256": "3CFCEF73EB9172CF69082FF07B9D84442DD5E545D8AD22917D5A694BAA57298E",
+        "authority_projection_git_blob": "efbd4b4ba9db377c8a36b0b11f3877bda60a08f7",
+        "composition_mode": "57 manifest-bound exact replacements on the unchanged authority projection",
+        "composed_bytes": 80995,
+        "composed_sha256": "3CFCEF73EB9172CF69082FF07B9D84442DD5E545D8AD22917D5A694BAA57298E",
+        "composed_git_blob": "efbd4b4ba9db377c8a36b0b11f3877bda60a08f7",
+        "committed_matches_composition": true
+      }
+    },
+    "verifier_reports": {},
+    "registry_leases_path": "ai-integrated/registry/leases.json",
+    "registry_leases_git_blob": "a5722eb5aa3aec18dbea3392c9f4e7dbf87ac68b",
+    "registry_leases_sha256": "646D6A4657FB81129835C83A5A6F6A46426E400CE56E3609F74CF4FB5372BC81"
+  },
+  "environment": {
+    "operating_system": "Windows-11-10.0.26200-SP0",
+    "python": "3.13.9",
+    "pdftex": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5)",
+    "bibtex": "MiKTeX-BibTeX 4.2 (MiKTeX 26.5)",
+    "pdfinfo": "pdfinfo version 26.05.0",
+    "source_date_epoch": "1785270512"
+  },
+  "build": {
+    "strategy": "sequential-prime-bibtex-global-state-sweeps",
+    "fixed_point_suffixes": [
+      ".aux",
+      ".bbl",
+      ".idx",
+      ".ind",
+      ".lof",
+      ".lot",
+      ".out",
+      ".toc",
+      ".pdf"
+    ],
+    "stem_selection": "composition_receipt",
+    "stems": [
+      "sets",
+      "categories",
+      "topology",
+      "sheaves",
+      "sites",
+      "algebra",
+      "brauer",
+      "derived",
+      "simplicial",
+      "homology",
+      "more-algebra",
+      "smoothing",
+      "schemes",
+      "properties",
+      "morphisms",
+      "more-morphisms",
+      "crystalline",
+      "spaces-cohomology",
+      "spaces-duality",
+      "stacks-limits",
+      "injectives",
+      "gaga",
+      "moduli"
+    ],
+    "chapter_count": 23,
+    "global_fixed_point_sweep": 4,
+    "pdfinfo_readable": 23,
+    "diagnostics": {
+      "fatal_markers": 0,
+      "missing_glyph_markers": 0,
+      "undefined_reference_markers": 0,
+      "external_reference_markers": 3773,
+      "undefined_citation_markers": 0,
+      "multiply_defined_markers": 0,
+      "rerun_required_markers": 0,
+      "destination_warning_markers": 0
+    },
+    "artifact_tuple_set_sha256": "9F24187F2E87FC3FFF77572E04C07E761DC8A7DB90062268FDC35CFC56B7A2C2",
+    "worktree_kind": "linked",
+    "primary_worktree_override": false
+  },
+  "artifacts": [
+    {
+      "stem": "sets",
+      "pages": 14,
+      "bytes": 456734,
+      "sha256": "EBD74E4A1A23D55520D4553783BDF4D62CAE3A9E498566767A7BCEA2891A997B",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 97,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 97,
+        "sha256": "D4DDF8EF8DBE4A34FCED6509E6B91C796700346BE1EB10C55FD5506600C86232"
+      }
+    },
+    {
+      "stem": "categories",
+      "pages": 105,
+      "bytes": 1065620,
+      "sha256": "A656C37525E2445C6EBABE47D39BDB34370D32C663DDC4D87EF2FEDC9FA6E93F",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 98,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 98,
+        "sha256": "AA1026B2709D2B03CD5263D7899ABF917923E0B412676F122F9A761B57A56446"
+      }
+    },
+    {
+      "stem": "topology",
+      "pages": 66,
+      "bytes": 797181,
+      "sha256": "B266DA69FAA30A90CC6F69AB808B2B64B7B84FDD7C6F590CF3DEBC856DF00B85",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 98,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 98,
+        "sha256": "AD3595B820A9DB79F36DB3B67BABCF950122F4D3A237ABA255B84507915B1780"
+      }
+    },
+    {
+      "stem": "sheaves",
+      "pages": 54,
+      "bytes": 656920,
+      "sha256": "954B369D29C5BA57204731BC78DD22881930B4FF8423BFCB3279EC4D7C274D5A",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 100,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 100,
+        "sha256": "832133E745AF79E1B321AD90C11624E71DCD2DE3CCDF0E1F65327D2CAC81B81D"
+      }
+    },
+    {
+      "stem": "sites",
+      "pages": 113,
+      "bytes": 1165286,
+      "sha256": "8F998AD4730892834E45C91920F67A06AEE82FC195C0E23284A406C714EEC530",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 102,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 102,
+        "sha256": "106898F1002169CC4EE2DC89D8BAD9FB54BC29ED665B02A3853389F8F410AD13"
+      }
+    },
+    {
+      "stem": "algebra",
+      "pages": 473,
+      "bytes": 3769551,
+      "sha256": "660C1B6A0C0388990DC773907AC800E31B603DFB62B313A41FD118524D84FD01",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 141,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 141,
+        "sha256": "4A6E73F5D8A54DFC937E071363D2ACE2825EBDC26BD73E1719B33002F9D6FFF5"
+      }
+    },
+    {
+      "stem": "brauer",
+      "pages": 10,
+      "bytes": 348322,
+      "sha256": "CE3A6062EB26F6F12F048126B153AC75DC62F1FC42274FE69A3EBD212F1D708C",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 96,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 96,
+        "sha256": "87709F47636B4EC5BB5B395E103F0F9D228689BDD5D3FEEDCAA9A2F957FB10F7"
+      }
+    },
+    {
+      "stem": "derived",
+      "pages": 130,
+      "bytes": 1246953,
+      "sha256": "39E566B5978F20B037E145F95DC27BD911F95BAC3F55A20CB19C9B46BCAE6382",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 97,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 97,
+        "sha256": "3431CF765DB1FC727CAABAF6DF573BE1760FDDFF03779B23FC53DFBD6EE42F49"
+      }
+    },
+    {
+      "stem": "simplicial",
+      "pages": 73,
+      "bytes": 830837,
+      "sha256": "A3FCB62A6E986C0FD0FA68B6D232CCA8E05E4808E3E1B6DEC56E50C3C5D05043",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 95,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 95,
+        "sha256": "BC867421F50853613B6D2B3750919F1B6BC75EE0197900A26544059741F735B1"
+      }
+    },
+    {
+      "stem": "homology",
+      "pages": 82,
+      "bytes": 886076,
+      "sha256": "5CE0D59BDC90DBFA27860DA6C0D1648AD37824355531851B58ABA72BDC8DBD62",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 96,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 96,
+        "sha256": "56D1232C6307EB04E73BCD907050124841F25865CB79CF99366430FAC21C96C4"
+      }
+    },
+    {
+      "stem": "more-algebra",
+      "pages": 406,
+      "bytes": 3377800,
+      "sha256": "D968453EAF916D5828F435B807E5043574B0149D7ABFCBEA680E75E1FFA80993",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 162,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 162,
+        "sha256": "E29D87ECA41CE8037406C2C0A4FCC100DA2B47D338757C9A349BC6BD909513C6"
+      }
+    },
+    {
+      "stem": "smoothing",
+      "pages": 37,
+      "bytes": 649048,
+      "sha256": "C82610F12B97E4BA57BCCDA353250104D3649A755A94E4B0E1AD741FC284C13C",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 96,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 96,
+        "sha256": "E9072C135C4652FB3F8B88606FB2BD100B1A73F4E3A93A3620846B450C68A98D"
+      }
+    },
+    {
+      "stem": "schemes",
+      "pages": 51,
+      "bytes": 714822,
+      "sha256": "E393F102D51EB5CAB32BFE4F57DCEFD955739C20A749D9A81472FA81AF1855CC",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 126,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 126,
+        "sha256": "7CA29048FB0D420205A83B2A6A7F5F8B712C37C52BC00CC3C48AD79CFBD8DF78"
+      }
+    },
+    {
+      "stem": "properties",
+      "pages": 54,
+      "bytes": 760241,
+      "sha256": "3AD0F13C9966EB06FDC9BE33612E7A2924B2FE89C16565875A9E8A2001F35647",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 143,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 143,
+        "sha256": "39E497C0E7F0B40F0370361DE61A429E910BA5EF03EA6F736D860F6357C7C22D"
+      }
+    },
+    {
+      "stem": "morphisms",
+      "pages": 157,
+      "bytes": 1572682,
+      "sha256": "A441412F61CC96D346E8D817D33BECC48EFCB5E79D5464CE67DA409E05369753",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 189,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 189,
+        "sha256": "2A27DDA1CF8FBE48701FED0317AF547828FEF1AD914081B852DED054E151BEE1"
+      }
+    },
+    {
+      "stem": "more-morphisms",
+      "pages": 260,
+      "bytes": 2303053,
+      "sha256": "F576D472CE3A22BB3B82F41D99753C964A97B34769396DE97A539B81AE2F95C7",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 599,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 599,
+        "sha256": "BE79C79D1C3CA0D013BE04ABE8574E152608B842300E7A684568CD7E349FABFE"
+      }
+    },
+    {
+      "stem": "crystalline",
+      "pages": 61,
+      "bytes": 868867,
+      "sha256": "7B1A1303FDD113BD4D8EE99EDBBF28C34BD0001CC997C79895EEFA6C9A1FD386",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 156,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 156,
+        "sha256": "3AB5ECDC52BB9309900EA5324A555E0908CDAF7DFD188E7658BAD5A933E245CA"
+      }
+    },
+    {
+      "stem": "spaces-cohomology",
+      "pages": 47,
+      "bytes": 624961,
+      "sha256": "0E310F1E68B9E6C71A3FA3AE2D6EC4D2389752560CD77F2ED3266DED3C091CE0",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 334,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 334,
+        "sha256": "26816EA936E38FBA36A160F67759F872348F45F8B9B268244A77F326219CB4E6"
+      }
+    },
+    {
+      "stem": "spaces-duality",
+      "pages": 25,
+      "bytes": 555209,
+      "sha256": "BCE72B1C585E26A6EFE2EF3C1372491DA64F0F9A0EF9655B3D22DA89F8D3DF66",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 210,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 210,
+        "sha256": "5B63D9F59E88215383FEED220AFEF0F142CA9431C132F9954F15CBA97B652A57"
+      }
+    },
+    {
+      "stem": "stacks-limits",
+      "pages": 13,
+      "bytes": 347172,
+      "sha256": "3451E6748A2E6CA1609671985999633DC8B1B1285C55CCA9DFBCC64C1CF55293",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 164,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 164,
+        "sha256": "52F0ABA85BC088620CC4A6F3554085FF9F6ED6332AA2D746315B8221DB8B020D"
+      }
+    },
+    {
+      "stem": "injectives",
+      "pages": 31,
+      "bytes": 569932,
+      "sha256": "5D363EA537D19C5F1AFB7C484E71FB6BBFEF6BB8F70CBA43EE3AA53EC07D90E2",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 102,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 102,
+        "sha256": "81162AB44EAEF1D10EC70C4AA230D00F24D66CFA4362E99EEDC782209243FF13"
+      }
+    },
+    {
+      "stem": "gaga",
+      "pages": 23,
+      "bytes": 486424,
+      "sha256": "D5FFEAD42F0297DD179F31D989C1D037FE362B2EF897AB54ACE193D5895E8CFC",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 127,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 127,
+        "sha256": "F9C6B9DEABBF97EAA0E6A85C46A39A3A5360A3EB4AFC8975943E7A169B24490E"
+      }
+    },
+    {
+      "stem": "moduli",
+      "pages": 83,
+      "bytes": 895670,
+      "sha256": "BE791A51BB54A1040572B6B9BD6DDC30F0862D20783EE6E3171F2319B5C3ACE0",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 345,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 345,
+        "sha256": "6CC88B93CFD80A0C144CCAB0CE2F6B807657C2276D0DA3BFDD551CF57AFDF425"
+      }
+    }
+  ],
+  "pdfs_committed": false
+}

@@ -1712,6 +1712,53 @@ def main(argv: list[str] | None = None) -> int:
     if not isinstance(receipt_composition, dict):
         errors.append("fixed-point build receipt lacks composition binding")
         receipt_composition = {}
+    expected_build_new_overlays: list[dict[str, object]] = []
+    for overlay in new_overlays:
+        if not isinstance(overlay, dict):
+            continue
+        normalized_overlay: dict[str, object] = dict(overlay)
+        if overlay.get("topology") == EMBEDDED_CANDIDATE_TOPOLOGY:
+            overlay_id = overlay.get("id")
+            entry = entry_by_id.get(overlay_id) if isinstance(overlay_id, str) else None
+            directory = candidate_dir(overlay_id) if isinstance(overlay_id, str) else None
+            rows = read_jsonl(directory / "source-map.jsonl") if directory else []
+            payload_paths = sorted(
+                {
+                    row.get("payload")
+                    for row in rows
+                    if isinstance(row.get("payload"), str)
+                }
+            )
+            if len(payload_paths) != 1:
+                errors.append(
+                    f"cannot normalize embedded-candidate payload path: {overlay_id!r}"
+                )
+            else:
+                normalized_overlay["payload_path"] = payload_paths[0]
+            namespace = entry.get("namespace") if isinstance(entry, dict) else None
+            review_value = entry.get("review_receipt") if isinstance(entry, dict) else None
+            candidate_prefix = (
+                f"candidates/{namespace}/" if isinstance(namespace, str) else None
+            )
+            if (
+                not isinstance(review_value, str)
+                or candidate_prefix is None
+                or not review_value.startswith(candidate_prefix)
+            ):
+                errors.append(
+                    f"cannot normalize embedded-candidate review path: {overlay_id!r}"
+                )
+            else:
+                normalized_overlay["review_receipt_path"] = review_value[
+                    len(candidate_prefix) :
+                ]
+            normalized_overlay["lease_event_id"] = overlay.get(
+                "lease_release_event"
+            )
+            normalized_overlay["successor_lease_event_id"] = overlay.get(
+                "successor_lease_event"
+            )
+        expected_build_new_overlays.append(normalized_overlay)
     expected_build_binding = {
         "schema": "unofficial-ai-integrated-stacks-composition/v3",
         "receipt": COMPOSITION_RECEIPT.as_posix(),
@@ -1745,7 +1792,7 @@ def main(argv: list[str] | None = None) -> int:
         "registered_overlays": len(entries),
         "registered_stable_ids": len(registered_ids),
         "last_admitted_overlay": composition_registry.get("last_admitted_overlay"),
-        "new_overlays": new_overlays,
+        "new_overlays": expected_build_new_overlays,
         "new_overlay_ids": [entry.get("id") for entry in registry_suffix],
         "new_overlay_candidate_commits": [
             overlay.get("candidate_commit")

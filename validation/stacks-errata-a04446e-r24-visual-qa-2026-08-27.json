@@ -1,0 +1,114 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-visual-qa/v1",
+  "status": "PASS",
+  "created_utc": "2026-08-27T22:19:03Z",
+  "source": {
+    "commit": "c3bc402b03dea3c5ac92c9e226645b5895a78887",
+    "tree": "626b67a2c32f4b2bc1b8ad7b4586cdb036b25a21"
+  },
+  "build_receipt": {
+    "path": "validation/stacks-errata-a04446e-r24-build-2026-08-27.json",
+    "bytes": 22518,
+    "sha256": "E5EDC2D251B88C5CAF6B4F9015A8060B5A29C7C6F9A434718675E225A4E4805D",
+    "status": "PASS",
+    "global_fixed_point_sweep": 4
+  },
+  "scope": {
+    "affected_chapters": [
+      "spaces-duality"
+    ],
+    "full_page_render_count": 25,
+    "full_page_contact_sheet_review_count": 25,
+    "high_resolution_locus_page_count": 25,
+    "high_resolution_locus_pages": {
+      "spaces-duality": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ]
+    }
+  },
+  "artifacts": {
+    "spaces-duality": {
+      "pdf": "spaces-duality.pdf",
+      "bytes": 555209,
+      "pages": 25,
+      "sha256": "BCE72B1C585E26A6EFE2EF3C1372491DA64F0F9A0EF9655B3D22DA89F8D3DF66",
+      "encrypted": false,
+      "media_box_points": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      "render_dimensions_pixels": [
+        816,
+        1056
+      ],
+      "pages_without_ink": 0,
+      "minimum_ink_pixels_below_245": 28637,
+      "duplicate_render_hashes": 0
+    }
+  },
+  "render_protocol": {
+    "renderer": "Poppler pdftoppm 26.05.0",
+    "full_page_dpi": 96,
+    "full_page_layout": "ordered 4-by-4 contact sheets",
+    "contact_sheet_count": 2,
+    "high_resolution_dpi": 180,
+    "high_resolution_selection": "all 25 pages of the affected chapter, which necessarily covers every one of the 57 R24 manifest-bound operation loci",
+    "render_intermediates_published": false
+  },
+  "private_render_evidence": {
+    "path": "external/ai-stacks-r24-visual-qa-20260827/render-manifest.json",
+    "bytes": 13881,
+    "sha256": "1DBA3F8E5E00E8BE1B92319CFD18C1A77C8941D3C3118CF4A01A14EC0EC1017A",
+    "status": "PASS",
+    "manifest_bound_operations_covered": 57,
+    "mapping_failures": 0
+  },
+  "checks": {
+    "all_pages_rendered": true,
+    "all_pages_manually_inspected": true,
+    "all_manifest_bound_locus_pages_inspected_at_high_resolution": true,
+    "page_dimensions_consistent": true,
+    "headers_and_page_numbers_consistent": true,
+    "text_and_formulas_legible": true,
+    "diagrams_intact": true,
+    "clipped_content": 0,
+    "overlapping_content": 0,
+    "blank_pages": 0,
+    "corrupted_pages": 0,
+    "missing_or_unreadable_glyphs": 0,
+    "broken_diagrams": 0,
+    "rejected_simplicial_007_parenthesis_preserved": true
+  },
+  "accessibility": {
+    "struct_tree_root_present": false,
+    "mark_info_present": false,
+    "note": "The standalone chapter PDF is untagged. This retained accessibility limitation is not a visual-rendering failure."
+  },
+  "conclusion": "All 25 pages of the affected spaces-duality PDF passed both ordered contact-sheet review and individual 180-DPI inspection without a formatting or rendering defect."
+}

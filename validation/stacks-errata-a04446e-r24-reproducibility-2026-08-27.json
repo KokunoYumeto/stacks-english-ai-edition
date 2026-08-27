@@ -1,0 +1,210 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-clean-build-reproducibility/v1",
+  "status": "PASS",
+  "created_utc": "2026-08-27T21:27:51Z",
+  "source": {
+    "commit": "c3bc402b03dea3c5ac92c9e226645b5895a78887",
+    "tree": "626b67a2c32f4b2bc1b8ad7b4586cdb036b25a21"
+  },
+  "builder": {
+    "path": "tools/build_fixed_point.py",
+    "git_blob": "000412090a1aa6ce4022532055aaad9164b51a15",
+    "sha256": "8D610B1EB520F36989D606DAF3B771641E96C201B9DF7ED4D7D087D65152D95D"
+  },
+  "environment": {
+    "operating_system": "Windows-11-10.0.26200-SP0",
+    "python": "3.13.9",
+    "pdftex": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5)",
+    "bibtex": "MiKTeX-BibTeX 4.2 (MiKTeX 26.5)",
+    "pdfinfo": "pdfinfo version 26.05.0",
+    "source_date_epoch": "1785270512"
+  },
+  "scope": {
+    "admitted_errata": "R1-R24",
+    "registry_cutoff_commit": "6df734ecb3bef8f35770819d17a8d3e267b8e07a",
+    "source_commit": "c3bc402b03dea3c5ac92c9e226645b5895a78887",
+    "source_tree": "626b67a2c32f4b2bc1b8ad7b4586cdb036b25a21",
+    "composition_receipt": "validation/composition-current.json",
+    "composition_receipt_sha256": "C4E88EB59F45F3C454EF43C0715D8FF64C3B9514F17CDF5190F09859773558AE"
+  },
+  "method": {
+    "execution_model": "independent_linked_worktrees",
+    "first_worktree_kind": "linked",
+    "second_worktree_kind": "linked",
+    "builder_path": "tools/build_fixed_point.py",
+    "builder_git_blob": "000412090a1aa6ce4022532055aaad9164b51a15",
+    "builder_sha256": "8D610B1EB520F36989D606DAF3B771641E96C201B9DF7ED4D7D087D65152D95D"
+  },
+  "runs": {
+    "first": {
+      "receipt": "validation/stacks-errata-a04446e-r24-build-2026-08-27.json",
+      "created_utc": "2026-08-27T21:24:29Z",
+      "bytes": 22518,
+      "sha256": "E5EDC2D251B88C5CAF6B4F9015A8060B5A29C7C6F9A434718675E225A4E4805D",
+      "status": "PASS",
+      "global_fixed_point_sweep": 4
+    },
+    "second": {
+      "receipt": "validation/stacks-errata-a04446e-r24-reproducibility-second-2026-08-27.json",
+      "created_utc": "2026-08-27T21:24:28Z",
+      "bytes": 22518,
+      "sha256": "AD50151A3E38B45983EB1065CF966D1CBF66D60D7C80A13B6D2BC3B477834AAD",
+      "status": "PASS",
+      "global_fixed_point_sweep": 4
+    }
+  },
+  "artifacts": [
+    {
+      "stem": "sets",
+      "pages": 14,
+      "bytes": 456734,
+      "sha256": "EBD74E4A1A23D55520D4553783BDF4D62CAE3A9E498566767A7BCEA2891A997B"
+    },
+    {
+      "stem": "categories",
+      "pages": 105,
+      "bytes": 1065620,
+      "sha256": "A656C37525E2445C6EBABE47D39BDB34370D32C663DDC4D87EF2FEDC9FA6E93F"
+    },
+    {
+      "stem": "topology",
+      "pages": 66,
+      "bytes": 797181,
+      "sha256": "B266DA69FAA30A90CC6F69AB808B2B64B7B84FDD7C6F590CF3DEBC856DF00B85"
+    },
+    {
+      "stem": "sheaves",
+      "pages": 54,
+      "bytes": 656920,
+      "sha256": "954B369D29C5BA57204731BC78DD22881930B4FF8423BFCB3279EC4D7C274D5A"
+    },
+    {
+      "stem": "sites",
+      "pages": 113,
+      "bytes": 1165286,
+      "sha256": "8F998AD4730892834E45C91920F67A06AEE82FC195C0E23284A406C714EEC530"
+    },
+    {
+      "stem": "algebra",
+      "pages": 473,
+      "bytes": 3769551,
+      "sha256": "660C1B6A0C0388990DC773907AC800E31B603DFB62B313A41FD118524D84FD01"
+    },
+    {
+      "stem": "brauer",
+      "pages": 10,
+      "bytes": 348322,
+      "sha256": "CE3A6062EB26F6F12F048126B153AC75DC62F1FC42274FE69A3EBD212F1D708C"
+    },
+    {
+      "stem": "derived",
+      "pages": 130,
+      "bytes": 1246953,
+      "sha256": "39E566B5978F20B037E145F95DC27BD911F95BAC3F55A20CB19C9B46BCAE6382"
+    },
+    {
+      "stem": "simplicial",
+      "pages": 73,
+      "bytes": 830837,
+      "sha256": "A3FCB62A6E986C0FD0FA68B6D232CCA8E05E4808E3E1B6DEC56E50C3C5D05043"
+    },
+    {
+      "stem": "homology",
+      "pages": 82,
+      "bytes": 886076,
+      "sha256": "5CE0D59BDC90DBFA27860DA6C0D1648AD37824355531851B58ABA72BDC8DBD62"
+    },
+    {
+      "stem": "more-algebra",
+      "pages": 406,
+      "bytes": 3377800,
+      "sha256": "D968453EAF916D5828F435B807E5043574B0149D7ABFCBEA680E75E1FFA80993"
+    },
+    {
+      "stem": "smoothing",
+      "pages": 37,
+      "bytes": 649048,
+      "sha256": "C82610F12B97E4BA57BCCDA353250104D3649A755A94E4B0E1AD741FC284C13C"
+    },
+    {
+      "stem": "schemes",
+      "pages": 51,
+      "bytes": 714822,
+      "sha256": "E393F102D51EB5CAB32BFE4F57DCEFD955739C20A749D9A81472FA81AF1855CC"
+    },
+    {
+      "stem": "properties",
+      "pages": 54,
+      "bytes": 760241,
+      "sha256": "3AD0F13C9966EB06FDC9BE33612E7A2924B2FE89C16565875A9E8A2001F35647"
+    },
+    {
+      "stem": "morphisms",
+      "pages": 157,
+      "bytes": 1572682,
+      "sha256": "A441412F61CC96D346E8D817D33BECC48EFCB5E79D5464CE67DA409E05369753"
+    },
+    {
+      "stem": "more-morphisms",
+      "pages": 260,
+      "bytes": 2303053,
+      "sha256": "F576D472CE3A22BB3B82F41D99753C964A97B34769396DE97A539B81AE2F95C7"
+    },
+    {
+      "stem": "crystalline",
+      "pages": 61,
+      "bytes": 868867,
+      "sha256": "7B1A1303FDD113BD4D8EE99EDBBF28C34BD0001CC997C79895EEFA6C9A1FD386"
+    },
+    {
+      "stem": "spaces-cohomology",
+      "pages": 47,
+      "bytes": 624961,
+      "sha256": "0E310F1E68B9E6C71A3FA3AE2D6EC4D2389752560CD77F2ED3266DED3C091CE0"
+    },
+    {
+      "stem": "spaces-duality",
+      "pages": 25,
+      "bytes": 555209,
+      "sha256": "BCE72B1C585E26A6EFE2EF3C1372491DA64F0F9A0EF9655B3D22DA89F8D3DF66"
+    },
+    {
+      "stem": "stacks-limits",
+      "pages": 13,
+      "bytes": 347172,
+      "sha256": "3451E6748A2E6CA1609671985999633DC8B1B1285C55CCA9DFBCC64C1CF55293"
+    },
+    {
+      "stem": "injectives",
+      "pages": 31,
+      "bytes": 569932,
+      "sha256": "5D363EA537D19C5F1AFB7C484E71FB6BBFEF6BB8F70CBA43EE3AA53EC07D90E2"
+    },
+    {
+      "stem": "gaga",
+      "pages": 23,
+      "bytes": 486424,
+      "sha256": "D5FFEAD42F0297DD179F31D989C1D037FE362B2EF897AB54ACE193D5895E8CFC"
+    },
+    {
+      "stem": "moduli",
+      "pages": 83,
+      "bytes": 895670,
+      "sha256": "BE791A51BB54A1040572B6B9BD6DDC30F0862D20783EE6E3171F2319B5C3ACE0"
+    }
+  ],
+  "comparison": {
+    "chapter_count": 23,
+    "matched_artifact_count": 23,
+    "different_artifact_count": 0,
+    "different_artifacts": [],
+    "total_pages_each_run": 2368,
+    "total_pdf_bytes_each_run": 24949361,
+    "artifact_tuple_set_sha256_each_run": "9F24187F2E87FC3FFF77572E04C07E761DC8A7DB90062268FDC35CFC56B7A2C2",
+    "all_artifact_identities_exactly_equal": true,
+    "source_identity_equal": true,
+    "builder_identity_equal": true,
+    "environment_identity_equal": true,
+    "fixed_point_sweep_equal": true
+  }
+}
