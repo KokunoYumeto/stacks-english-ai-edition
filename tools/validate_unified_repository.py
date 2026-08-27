@@ -1968,8 +1968,19 @@ def main(argv: list[str] | None = None) -> int:
     if not isinstance(reproduction_scope, dict):
         errors.append("reproducibility receipt lacks scope")
         reproduction_scope = {}
+    errata_rounds = [
+        int(match.group(1))
+        for entry in entries
+        if isinstance(entry, dict)
+        and isinstance(entry.get("id"), str)
+        and (
+            match := re.fullmatch(
+                r"stacks-errata-a04446e-r([1-9][0-9]*)", entry["id"]
+            )
+        )
+    ]
     expected_reproduction_scope = {
-        "admitted_errata": f"R1-R{len(entries)}",
+        "admitted_errata": f"R1-R{max(errata_rounds)}",
         "registry_cutoff_commit": cutoff_commit,
         "source_commit": build_source.get("commit"),
         "source_tree": build_source.get("tree"),
