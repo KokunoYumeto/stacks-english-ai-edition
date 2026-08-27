@@ -74,19 +74,19 @@ markers. See [VALIDATION.md](VALIDATION.md).
 Per-corpus build and visual receipts remain linked from the detailed dossiers;
 they are not silently generalized beyond their recorded source identity.
 
-The current R22/R23 gate built all 22 required chapters (2,343 pages and
-24,389,773 PDF bytes) to a global PDF fixed point on sweep four. It is bound to
-source `1e9771352840bd70224027d13e9b32546838ccd2`, tree
-`4a3b7398f7607b73ee5596d359e5cf7a401c2256`, and records zero fatal,
+The current R24 gate built all 23 required chapters (2,368 pages and
+24,949,361 PDF bytes) to a global PDF fixed point on sweep four. It is bound to
+source `c3bc402b03dea3c5ac92c9e226645b5895a78887`, tree
+`626b67a2c32f4b2bc1b8ad7b4586cdb036b25a21`, and records zero fatal,
 missing-glyph, undefined-reference, undefined-citation, multiply-defined,
-rerun-required, or destination-warning diagnostics. Visual QA passed for all
-406 affected `more-algebra.pdf` pages and 63 high-resolution correction-locus
-pages. The exact artifact inventory is in the
-[current fixed-point build receipt](validation/stacks-errata-a04446e-r22-r23-build-2026-08-27.json).
+rerun-required, or destination-warning diagnostics. Visual QA passed for all 25
+affected `spaces-duality.pdf` pages at both contact-sheet and individual
+high-resolution review. The exact artifact inventory is in the
+[current fixed-point build receipt](validation/stacks-errata-a04446e-r24-build-2026-08-27.json).
 
-The [parallel linked-worktree reproducibility gate](validation/stacks-errata-a04446e-r22-r23-reproducibility-2026-08-27.json)
+The [parallel linked-worktree reproducibility gate](validation/stacks-errata-a04446e-r24-reproducibility-2026-08-27.json)
 is **PASS**. Both builds use the same commit, tree, builder, environment, and
-fixed-point sweep; all 22 `{stem, pages, bytes, sha256}` artifact tuples are
+fixed-point sweep; all 23 `{stem, pages, bytes, sha256}` artifact tuples are
 exactly equal. The earlier Verdier and R21 fixed points remain preserved as
 historical evidence for their exact source identities and scopes.
 

@@ -45,26 +45,26 @@ The gate verifies:
 The same gate runs in
 [`validate.yml`](.github/workflows/validate.yml) with full Git history.
 
-The current R22/R23 build result is recorded at
-[`validation/stacks-errata-a04446e-r22-r23-build-2026-08-27.json`](validation/stacks-errata-a04446e-r22-r23-build-2026-08-27.json).
-All 22 required chapters (2,343 pages; 24,389,773 PDF bytes) compiled
+The current R24 build result is recorded at
+[`validation/stacks-errata-a04446e-r24-build-2026-08-27.json`](validation/stacks-errata-a04446e-r24-build-2026-08-27.json).
+All 23 required chapters (2,368 pages; 24,949,361 PDF bytes) compiled
 successfully, were readable by `pdfinfo`, and reached a global PDF fixed point
 on sweep four. The build is bound to source commit
-`1e9771352840bd70224027d13e9b32546838ccd2`, tree
-`4a3b7398f7607b73ee5596d359e5cf7a401c2256`. Aggregate diagnostics contain
+`c3bc402b03dea3c5ac92c9e226645b5895a78887`, tree
+`626b67a2c32f4b2bc1b8ad7b4586cdb036b25a21`. Aggregate diagnostics contain
 zero fatal, missing-glyph, undefined-reference, undefined-citation,
 multiply-defined, rerun-required, or destination-warning markers.
 
-Visual QA rendered and reviewed all 406 pages of the affected
-`more-algebra.pdf`; 63 correction-locus pages were also inspected at high
-resolution. The current
-[visual receipt](validation/stacks-errata-a04446e-r22-r23-visual-qa-2026-08-27.json)
+Visual QA rendered and reviewed all 25 pages of the affected
+`spaces-duality.pdf` at 96 DPI and inspected every page individually at 180 DPI.
+The current
+[visual receipt](validation/stacks-errata-a04446e-r24-visual-qa-2026-08-27.json)
 records zero clipped, overlapping, blank, corrupt, missing-glyph, or
 broken-diagram defects. A second build ran independently in a parallel linked
 worktree. Both runs use the same source, builder, environment, and fixed-point
-sweep, and all 22 `{stem, pages, bytes, sha256}` tuples are exactly equal. See
-the [reproducibility summary](validation/stacks-errata-a04446e-r22-r23-reproducibility-2026-08-27.json)
-and [second full receipt](validation/stacks-errata-a04446e-r22-r23-reproducibility-second-2026-08-27.json).
+sweep, and all 23 `{stem, pages, bytes, sha256}` tuples are exactly equal. See
+the [reproducibility summary](validation/stacks-errata-a04446e-r24-reproducibility-2026-08-27.json)
+and [second full receipt](validation/stacks-errata-a04446e-r24-reproducibility-second-2026-08-27.json).
 
 The [source composition receipt](validation/composition-current.json) records
 R24 cutoff `6df734ecb3bef8f35770819d17a8d3e267b8e07a`, linear registry
@@ -78,7 +78,7 @@ The historical R22/R23, Verdier, and R21 composition, build, publication, and
 readback receipts remain preserved and authoritative for their own immutable
 source snapshots; they are not rebound to the R24 tree.
 
-The [current publication receipt](validation/stacks-errata-a04446e-r22-r23-release-2026-08-27.json)
+The [historical R22/R23 publication receipt](validation/stacks-errata-a04446e-r22-r23-release-2026-08-27.json)
 binds the public R22/R23 content head
 `3c2b49fe0d20519de4ab06951ac2cb5151b68782`, tree
 `eeb92e6723554f9b8465bee9eac3de58d4a69705`, to its successful exact-head

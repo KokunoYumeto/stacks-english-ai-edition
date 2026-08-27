@@ -91,7 +91,7 @@ operations. R22 and R23 contribute 93 IDs and 106 operations affecting only
 These receipts remain authoritative for their immutable R22/R23 source tree;
 they are not build or publication evidence for the later R24 composition.
 
-## Current R24 composition receipt
+## Current R24 composition and validation receipts
 
 The current validated source composition advances the registry to **25
 overlays / 690 stable IDs** at R24 admission cutoff
@@ -104,11 +104,27 @@ R1–R24: 24 batches, 678 correction IDs, and 754 exact v2 operations. R24 adds
 the imported candidate and registry bytes, exact operation replay, preserved
 R21/Verdier/R22/R23 source identities, and source commit
 `10c1c62f371921cdafbaa5e89f438a821a013621`, tree
-`6ec98b8ee6919070a24130877d4eeb9e1a0e874b`. No R24 full-tree build,
-reproducibility, visual-QA, publication, or public-readback metric is claimed
-here until its corresponding receipt exists.
+`6ec98b8ee6919070a24130877d4eeb9e1a0e874b`.
+
+The current evidence is recorded in:
+
+- [`stacks-errata-a04446e-r24-build-2026-08-27.json`](stacks-errata-a04446e-r24-build-2026-08-27.json)
+  — source `c3bc402b03dea3c5ac92c9e226645b5895a78887`, tree
+  `626b67a2c32f4b2bc1b8ad7b4586cdb036b25a21`, 23 PDFs, 2,368 pages,
+  24,949,361 bytes, fixed point on sweep four, and zero listed serious
+  diagnostics;
+- [`stacks-errata-a04446e-r24-visual-qa-2026-08-27.json`](stacks-errata-a04446e-r24-visual-qa-2026-08-27.json)
+  — all 25 pages of `spaces-duality.pdf` inspected at high resolution with
+  zero recorded rendering defects; and
+- [`stacks-errata-a04446e-r24-reproducibility-2026-08-27.json`](stacks-errata-a04446e-r24-reproducibility-2026-08-27.json)
+  together with the [second full receipt](stacks-errata-a04446e-r24-reproducibility-second-2026-08-27.json)
+  — exact equality of all 23 artifact identities across two independent linked
+  worktree builds.
+
+Publication and public-readback metrics are recorded only after their separate
+release receipt exists.
 
 Successor registry head `53c517215ef542cfc987e2445a07bb23c7b120fb`
 only materializes the active R25 lease. R25 is neither admitted nor composed.
-The French `MORE-ALGEBRA-L-001..029` packet remains unadmitted. No later intake
-is treated as part of the current composition.
+The French `MORE-ALGEBRA-L-001..029` and `SMOOTHING-001..035` packets remain
+unadmitted. No later intake is treated as part of the current composition.

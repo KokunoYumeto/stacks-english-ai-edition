@@ -29,16 +29,14 @@ is commit `10c1c62f371921cdafbaa5e89f438a821a013621`, tree
 operation, source, and preservation identities are recorded in the
 [current composition receipt](validation/composition-current.json).
 
-The preceding R22/R23 source passed two linked-worktree fixed-point builds at source
-`1e9771352840bd70224027d13e9b32546838ccd2`, tree
-`4a3b7398f7607b73ee5596d359e5cf7a401c2256`: 22 readable PDFs, 2,343 pages,
-24,389,773 PDF bytes, global fixed point on sweep four, and zero fatal or listed
-serious diagnostics. All 406 affected `more-algebra.pdf` pages passed visual
-review, with 63 correction-locus pages inspected at high resolution. All 22 PDF
-identities match exactly between the two builds. The preceding Verdier content
-release remains preserved as historical evidence for its own exact scope. These
-historical receipts are not presented as build or publication evidence for the
-later R24 source tree.
+The current R24 source passed two linked-worktree fixed-point builds at source
+`c3bc402b03dea3c5ac92c9e226645b5895a78887`, tree
+`626b67a2c32f4b2bc1b8ad7b4586cdb036b25a21`: 23 readable PDFs, 2,368 pages,
+24,949,361 PDF bytes, global fixed point on sweep four, and zero fatal or listed
+serious diagnostics. All 25 affected `spaces-duality.pdf` pages passed both
+contact-sheet and individual high-resolution review. All 23 PDF identities
+match exactly between the two builds. The earlier R22/R23, Verdier, and R21
+receipts remain preserved as historical evidence for their exact scopes.
 
 The historical R22/R23 content release is public at
 `3c2b49fe0d20519de4ab06951ac2cb5151b68782`, tree
@@ -50,9 +48,9 @@ readback of 138 checked files totaling 25,024,008 bytes pass.
 R24 is admitted and composed into the generated source at
 `10c1c62f371921cdafbaa5e89f438a821a013621`. Successor registry head
 `53c517215ef542cfc987e2445a07bb23c7b120fb` only materializes the active R25
-lease; R25 is neither admitted nor composed. The 29-row French
-`MORE-ALGEBRA-L` packet remains unadmitted intake evidence, not an admitted
-overlay or part of the current composition. The rejected R23 producer
+lease; R25 is neither admitted nor composed. The French
+`MORE-ALGEBRA-L-001..029` and `SMOOTHING-001..035` packets remain unadmitted
+intake evidence, not admitted overlays or part of the current composition. The rejected R23 producer
 `MORE-ALGEBRA-J-006` likewise remains excluded from the integrated source.
 
 ## Recommended order

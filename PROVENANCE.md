@@ -132,6 +132,15 @@ high-resolution correction-locus pages. These receipts remain authoritative
 for that immutable R22/R23 tree and are not build or publication evidence for
 the later R24 source composition.
 
+The current R24 fixed-point build is bound to source
+`c3bc402b03dea3c5ac92c9e226645b5895a78887`, tree
+`626b67a2c32f4b2bc1b8ad7b4586cdb036b25a21`. It preserves every earlier
+composed source identity while advancing `spaces-duality.tex` through 38 new
+correction IDs and 57 operations. Two independent linked-worktree builds
+produced exactly matching identities for all 23 PDFs: 2,368 pages, 24,949,361
+bytes, and a global fixed point on sweep four. Visual QA covers all 25 pages of
+`spaces-duality.pdf` at high resolution.
+
 ## Branch preservation
 
 The unified repository retains the pre-unification integration heads as
@@ -144,5 +153,5 @@ composition advances the repository state to 25 overlays and 690 stable IDs at
 R24 cutoff `6df734ec`; R22 and R23 affect only `more-algebra.tex`, while R24
 affects only `spaces-duality.tex`. Successor head
 `53c517215ef542cfc987e2445a07bb23c7b120fb` only materializes the R25 lease;
-R25 is not admitted or composed. The French `MORE-ALGEBRA-L-001..029` packet
-remains unadmitted.
+R25 is not admitted or composed. The French `MORE-ALGEBRA-L-001..029` and
+`SMOOTHING-001..035` packets remain unadmitted.

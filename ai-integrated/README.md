@@ -54,7 +54,13 @@ Those operations are composed at source commit
 does not replace cumulative source wholesale. Successor registry head
 `53c517215ef542cfc987e2445a07bb23c7b120fb` only materializes the active R25
 lease. R25 is not admitted or composed. `MORE-ALGEBRA-L-001..029` remains
-unadmitted intake evidence.
+unadmitted intake evidence, as does `SMOOTHING-001..035`.
+
+The current R24 fixed-point receipts cover 23 PDFs, 2,368 pages, and 24,949,361
+PDF bytes at source `c3bc402b03dea3c5ac92c9e226645b5895a78887`, tree
+`626b67a2c32f4b2bc1b8ad7b4586cdb036b25a21`. Both linked-worktree builds are
+byte-for-byte reproducible, and all 25 pages of the affected
+`spaces-duality.pdf` passed individual high-resolution inspection.
 
 ## Directory map
 

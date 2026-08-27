@@ -19,10 +19,10 @@ machine-readable validation evidence.
 [Errata registry](ai-integrated/registry/overlays.json) ·
 [Validation](VALIDATION.md) ·
 [Current composition receipt](validation/composition-current.json) ·
-[Current fixed-point build: PASS](validation/stacks-errata-a04446e-r22-r23-build-2026-08-27.json) ·
-[Current visual QA: PASS](validation/stacks-errata-a04446e-r22-r23-visual-qa-2026-08-27.json) ·
-[Current reproducibility: PASS](validation/stacks-errata-a04446e-r22-r23-reproducibility-2026-08-27.json) ·
-[Current R22/R23 publication receipt: PASS](validation/stacks-errata-a04446e-r22-r23-release-2026-08-27.json) ·
+[Current fixed-point build: PASS](validation/stacks-errata-a04446e-r24-build-2026-08-27.json) ·
+[Current visual QA: PASS](validation/stacks-errata-a04446e-r24-visual-qa-2026-08-27.json) ·
+[Current reproducibility: PASS](validation/stacks-errata-a04446e-r24-reproducibility-2026-08-27.json) ·
+[Historical R22/R23 publication receipt: PASS](validation/stacks-errata-a04446e-r22-r23-release-2026-08-27.json) ·
 [Historical Verdier publication receipt: PASS](validation/stacks-verdier-a04446e-1-2-13-r1-release-2026-08-26.json) ·
 [Historical R21 publication receipt: PASS](validation/errata-r18-r19-release-2026-08-25.json) ·
 [R17 historical receipt](validation/unification-release-2026-08-25.json) ·
@@ -100,18 +100,18 @@ Run the fast repository-level integrity gate with:
 python tools/validate_unified_repository.py --pre-publication
 ```
 
-The current R22/R23 build is bound to source
-`1e9771352840bd70224027d13e9b32546838ccd2`, tree
-`4a3b7398f7607b73ee5596d359e5cf7a401c2256`. It produced 22 readable PDFs
-(2,343 pages; 24,389,773 bytes), reached a global fixed point on sweep four,
+The current R24 build is bound to source
+`c3bc402b03dea3c5ac92c9e226645b5895a78887`, tree
+`626b67a2c32f4b2bc1b8ad7b4586cdb036b25a21`. It produced 23 readable PDFs
+(2,368 pages; 24,949,361 bytes), reached a global fixed point on sweep four,
 and recorded zero fatal, missing-glyph, undefined-reference,
 undefined-citation, multiply-defined, rerun-required, or destination-warning
-diagnostics. All 406 pages of the affected `more-algebra.pdf` were rendered and
-reviewed; 63 correction-locus pages were also inspected at high resolution. A
+diagnostics. All 25 pages of the affected `spaces-duality.pdf` were rendered
+and inspected individually at high resolution. A
 parallel rebuild in a second linked worktree used the same source, builder,
-environment, and sweep, and all 22 PDF identities were exactly equal.
+environment, and sweep, and all 23 PDF identities were exactly equal.
 
-The R22/R23 content release is public at
+The preceding R22/R23 content release remains public at
 `3c2b49fe0d20519de4ab06951ac2cb5151b68782`, tree
 `eeb92e6723554f9b8465bee9eac3de58d4a69705`. Its exact-head GitHub Actions
 run passed, and anonymous HTTPS readback matched all 138 checked files
