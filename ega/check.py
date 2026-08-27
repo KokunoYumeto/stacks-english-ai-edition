@@ -862,9 +862,11 @@ if scope.get("governance_prefixes") != expected_governance_prefixes:
 
 interface_raw = (ROOT / "interface.json").read_bytes()
 interface = json.loads(interface_raw.decode("utf-8"))
-if (len(interface_raw) != 16592 or
+publication_raw = (ROOT / "publication-current.json").read_bytes()
+publication = json.loads(publication_raw.decode("utf-8"))
+if (len(interface_raw) != 17685 or
         hashlib.sha256(interface_raw).hexdigest().upper() !=
-        "5C2999402785B273AA2F93E26D08F18EE8684A09E6EEF04733B35D8CEDC64BEA"):
+        "453673867E47E857BAF5BCF90F2E9DAAFDAD85DDABC1F070DD3F44E3D5B48D5D"):
     ERRORS.append("final edition interface identity mismatch")
 if interface.get("status") != "active" or interface.get("ownership", {}).get("cross_tree_writes") is not False:
     ERRORS.append("edition interface is not active/read-only")
@@ -1073,7 +1075,93 @@ if (not ordered_referrals_exact(
             expected_active_referral_issues)):
     ERRORS.append("current visual referrals are not exact at reader closure")
 if interface.get("public_checkpoint") != "https://zenodo.org/records/21861666":
-    ERRORS.append("public EGA checkpoint is stale")
+    ERRORS.append("legacy historical omnibus checkpoint changed")
+if interface.get("publication_receipt") != "publication-current.json":
+    ERRORS.append("current publication receipt pointer changed")
+if interface.get("public_checkpoint_role") != (
+        "legacy historical omnibus checkpoint retained for backward "
+        "compatibility; current language releases are recorded separately "
+        "and this is not an integrated Stacks release"):
+    ERRORS.append("legacy public checkpoint role changed")
+expected_publications = {
+    "french": (
+        "10.5281/zenodo.21921588", "10.5281/zenodo.22134750",
+        "EGA-FR-complete-I-IV4-canon-current-r8-20260828",
+        "https://github.com/KokunoYumeto/ega-fr/releases/tag/ega-fr-2026-08-28-r8"),
+    "english": (
+        "10.5281/zenodo.21921591", "10.5281/zenodo.22134751",
+        "EGA-EN-complete-0-IV4-canon-current-r7-20260828",
+        "https://github.com/KokunoYumeto/ega-en/releases/tag/ega-en-2026-08-28-r7"),
+}
+current_publications = interface.get("current_publications", {})
+for language, expected in expected_publications.items():
+    actual = current_publications.get(language, {})
+    if tuple(actual.get(field) for field in (
+            "concept_doi", "latest_doi", "version", "github_release")) != expected:
+        ERRORS.append(f"current {language} publication binding changed")
+integrated_publication = current_publications.get("integrated_stacks", {})
+if (integrated_publication.get("github_main") !=
+        "2e7128e8a13328b851ed95b05fb7c94940c7bf54" or
+        integrated_publication.get("zenodo_lineage") is not None or
+        integrated_publication.get("state") !=
+        "GitHub source current through R24; no integrated-project Zenodo "
+        "lineage at this checkpoint"):
+    ERRORS.append("integrated Stacks publication state changed")
+if publication.get("schema") != "ega-external-publication-receipt-v1":
+    ERRORS.append("current publication receipt schema changed")
+if publication.get("verification", {}).get("cross_host_result") != "PASS":
+    ERRORS.append("current publication cross-host verification is not PASS")
+receipt_publications = publication.get("current_language_publications", {})
+expected_receipt_totals = {
+    "french": ("10.5281/zenodo.22134750", 5, 19193644),
+    "english": ("10.5281/zenodo.22134751", 5, 13505879),
+}
+expected_publication_assets = {
+    "french": (
+        ("EGA_French_Cumulative_Reader.pdf", 12938033,
+         "9C2B48B178446C4922E0E7B3DEAB52B60A0A972CEEA102987ECB351A15167EFD",
+         "CCE4EC77F3A78C781637370F8720EEFB"),
+        ("EGA_IV4_French_Standalone_Reader.pdf", 2739055,
+         "797BECFBCF949205F186357EEEC1430F886344966F5074866ED0E8B60D8AD414",
+         "512379A5FF4504AB23BC5F53C7230B14"),
+        ("EGA_French_Editable_Sources.zip", 3446102,
+         "647008A1DD7E382F779F8B764AAE1964E4043512BD18033533876BD1D22FC021",
+         "EE807C924DE2998286235B7B8CA89043"),
+        ("EGA_French_Provenance_and_Decisions.zip", 70048,
+         "32FF48640C4D145B29354D8118F9DBD66551F1E5663394DB7CB2B5BBF1DB4017",
+         "47646213ED8F075D35E0925F5A994FCE"),
+        ("SHA256SUMS.txt", 406,
+         "00E3185EF25F2D20B914F67F5391549CA4AA4D169127EE94C20A4AB8DE8344F7",
+         "CADCACE1A32FB17DF6CA196FD1F1F49C"),
+    ),
+    "english": (
+        ("EGA_English_Complete_Linked_Reader.pdf", 9650082,
+         "5B9E9D738BF8B3071B2687168154D294EB588F131FA9867BAD6BB7C33E2C41BB",
+         "0B1BEB95E54FDEEA23DCFB6B99DBDDD8"),
+        ("EGA_IV4_English_Standalone_Reader.pdf", 2053892,
+         "5398EE7F26C0DBAC1B8DDA0D39041B2C9B4094A7D25972BD1D82DD44BA3398FC",
+         "A82114524FE474AA28D22A46E74EC9BA"),
+        ("EGA_English_Editable_Sources.zip", 1737583,
+         "D01EB5EC192203AD64F5379B99368B9AD44D77EAE4F31086DAC2234BC67F8459",
+         "A11988B1FA72C630914CBCB83D16C8B2"),
+        ("EGA_English_Provenance_and_Decisions.zip", 63907,
+         "5D89ECE881639D6DCF057B0554A8D35886AA744685193DBEBE07F9311D4FDD9C",
+         "73978E17BBD72307E4972D44F87D7FB5"),
+        ("SHA256SUMS.txt", 415,
+         "C7BDA1750A2D406EDE5860D40BD869EE372FA89FDA640E59CE236772D305380B",
+         "C978D9F1751100C3113685F108AB2486"),
+    ),
+}
+for language, expected in expected_receipt_totals.items():
+    actual = receipt_publications.get(language, {})
+    if tuple(actual.get(field) for field in ("latest_doi", "files", "bytes")) != expected:
+        ERRORS.append(f"current {language} publication receipt total changed")
+    actual_assets = tuple(
+        tuple(asset.get(field) for field in
+              ("name", "bytes", "sha256", "zenodo_md5"))
+        for asset in actual.get("assets", []))
+    if actual_assets != expected_publication_assets[language]:
+        ERRORS.append(f"current {language} publication asset identity changed")
 expected_readers = {
     "french": ("B37AJ.json", 12222,
                "395FBB06FDFB3254D49931FC00C8AF36DDFAA6DA71D97DCAE2C51797F1905D1A",

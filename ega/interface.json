@@ -295,6 +295,27 @@
     "disposition": "retain as exact adverse history; corrected REF14R and Q37CL followed by the admitted D44 DIA44 Q37CM Q37CN successor without rewriting this failed snapshot"
   },
   "public_checkpoint": "https://zenodo.org/records/21861666",
+  "public_checkpoint_role": "legacy historical omnibus checkpoint retained for backward compatibility; current language releases are recorded separately and this is not an integrated Stacks release",
+  "publication_receipt": "publication-current.json",
+  "current_publications": {
+    "french": {
+      "concept_doi": "10.5281/zenodo.21921588",
+      "latest_doi": "10.5281/zenodo.22134750",
+      "version": "EGA-FR-complete-I-IV4-canon-current-r8-20260828",
+      "github_release": "https://github.com/KokunoYumeto/ega-fr/releases/tag/ega-fr-2026-08-28-r8"
+    },
+    "english": {
+      "concept_doi": "10.5281/zenodo.21921591",
+      "latest_doi": "10.5281/zenodo.22134751",
+      "version": "EGA-EN-complete-0-IV4-canon-current-r7-20260828",
+      "github_release": "https://github.com/KokunoYumeto/ega-en/releases/tag/ega-en-2026-08-28-r7"
+    },
+    "integrated_stacks": {
+      "github_main": "2e7128e8a13328b851ed95b05fb7c94940c7bf54",
+      "zenodo_lineage": null,
+      "state": "GitHub source current through R24; no integrated-project Zenodo lineage at this checkpoint"
+    }
+  },
   "correction_channel": "reports/findings.jsonl",
   "required_finding_fields": [
     "stable_id",

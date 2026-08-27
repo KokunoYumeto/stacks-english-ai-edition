@@ -1,0 +1,111 @@
+{
+  "schema": "ega-external-publication-receipt-v1",
+  "verified_at_utc": "2026-08-27T23:22:00Z",
+  "verification": {
+    "zenodo": "anonymous REST inventory and public file readback",
+    "github": "anonymous REST release inventory and SHA-256 asset digests",
+    "cross_host_result": "PASS"
+  },
+  "historical_omnibus": {
+    "concept_doi": "10.5281/zenodo.20414353",
+    "latest_doi": "10.5281/zenodo.21861666",
+    "version": "EGA-II-p36-R204-C38A",
+    "role": "historical omnibus checkpoint; not the current language-edition release and not an integrated Stacks release"
+  },
+  "current_language_publications": {
+    "french": {
+      "concept_doi": "10.5281/zenodo.21921588",
+      "latest_doi": "10.5281/zenodo.22134750",
+      "zenodo_record": "https://zenodo.org/records/22134750",
+      "version": "EGA-FR-complete-I-IV4-canon-current-r8-20260828",
+      "github_repository": "https://github.com/KokunoYumeto/ega-fr",
+      "github_release": "https://github.com/KokunoYumeto/ega-fr/releases/tag/ega-fr-2026-08-28-r8",
+      "github_commit": "6b38875842e3723b619d4aeeda9ed260a4f94f7c",
+      "files": 5,
+      "bytes": 19193644,
+      "assets": [
+        {
+          "name": "EGA_French_Cumulative_Reader.pdf",
+          "bytes": 12938033,
+          "sha256": "9C2B48B178446C4922E0E7B3DEAB52B60A0A972CEEA102987ECB351A15167EFD",
+          "zenodo_md5": "CCE4EC77F3A78C781637370F8720EEFB"
+        },
+        {
+          "name": "EGA_IV4_French_Standalone_Reader.pdf",
+          "bytes": 2739055,
+          "sha256": "797BECFBCF949205F186357EEEC1430F886344966F5074866ED0E8B60D8AD414",
+          "zenodo_md5": "512379A5FF4504AB23BC5F53C7230B14"
+        },
+        {
+          "name": "EGA_French_Editable_Sources.zip",
+          "bytes": 3446102,
+          "sha256": "647008A1DD7E382F779F8B764AAE1964E4043512BD18033533876BD1D22FC021",
+          "zenodo_md5": "EE807C924DE2998286235B7B8CA89043"
+        },
+        {
+          "name": "EGA_French_Provenance_and_Decisions.zip",
+          "bytes": 70048,
+          "sha256": "32FF48640C4D145B29354D8118F9DBD66551F1E5663394DB7CB2B5BBF1DB4017",
+          "zenodo_md5": "47646213ED8F075D35E0925F5A994FCE"
+        },
+        {
+          "name": "SHA256SUMS.txt",
+          "bytes": 406,
+          "sha256": "00E3185EF25F2D20B914F67F5391549CA4AA4D169127EE94C20A4AB8DE8344F7",
+          "zenodo_md5": "CADCACE1A32FB17DF6CA196FD1F1F49C"
+        }
+      ]
+    },
+    "english": {
+      "concept_doi": "10.5281/zenodo.21921591",
+      "latest_doi": "10.5281/zenodo.22134751",
+      "zenodo_record": "https://zenodo.org/records/22134751",
+      "version": "EGA-EN-complete-0-IV4-canon-current-r7-20260828",
+      "github_repository": "https://github.com/KokunoYumeto/ega-en",
+      "github_release": "https://github.com/KokunoYumeto/ega-en/releases/tag/ega-en-2026-08-28-r7",
+      "github_commit": "94d5c73ac9263b26043ad0551646b824b1030c9b",
+      "files": 5,
+      "bytes": 13505879,
+      "assets": [
+        {
+          "name": "EGA_English_Complete_Linked_Reader.pdf",
+          "bytes": 9650082,
+          "sha256": "5B9E9D738BF8B3071B2687168154D294EB588F131FA9867BAD6BB7C33E2C41BB",
+          "zenodo_md5": "0B1BEB95E54FDEEA23DCFB6B99DBDDD8"
+        },
+        {
+          "name": "EGA_IV4_English_Standalone_Reader.pdf",
+          "bytes": 2053892,
+          "sha256": "5398EE7F26C0DBAC1B8DDA0D39041B2C9B4094A7D25972BD1D82DD44BA3398FC",
+          "zenodo_md5": "A82114524FE474AA28D22A46E74EC9BA"
+        },
+        {
+          "name": "EGA_English_Editable_Sources.zip",
+          "bytes": 1737583,
+          "sha256": "D01EB5EC192203AD64F5379B99368B9AD44D77EAE4F31086DAC2234BC67F8459",
+          "zenodo_md5": "A11988B1FA72C630914CBCB83D16C8B2"
+        },
+        {
+          "name": "EGA_English_Provenance_and_Decisions.zip",
+          "bytes": 63907,
+          "sha256": "5D89ECE881639D6DCF057B0554A8D35886AA744685193DBEBE07F9311D4FDD9C",
+          "zenodo_md5": "73978E17BBD72307E4972D44F87D7FB5"
+        },
+        {
+          "name": "SHA256SUMS.txt",
+          "bytes": 415,
+          "sha256": "C7BDA1750A2D406EDE5860D40BD869EE372FA89FDA640E59CE236772D305380B",
+          "zenodo_md5": "C978D9F1751100C3113685F108AB2486"
+        }
+      ]
+    }
+  },
+  "integrated_stacks_project": {
+    "github_repository": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project",
+    "github_main_at_audit": "2e7128e8a13328b851ed95b05fb7c94940c7bf54",
+    "github_main_ci": "PASS",
+    "github_release_layer": "historical pre-unification release only",
+    "zenodo_lineage": null,
+    "state": "public source current through R24; GitHub release and Zenodo preservation layers not current"
+  }
+}

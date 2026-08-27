@@ -17,6 +17,19 @@ EGA integration manifest enter the repository's root TeX tree.
 
 ## Current snapshot
 
+- Current standalone publications are split by language and anonymously
+  cross-checked against their GitHub releases. The French edition is
+  [Zenodo 22134750](https://doi.org/10.5281/zenodo.22134750) / concept
+  [21921588](https://doi.org/10.5281/zenodo.21921588), version
+  `EGA-FR-complete-I-IV4-canon-current-r8-20260828`; the English edition is
+  [Zenodo 22134751](https://doi.org/10.5281/zenodo.22134751) / concept
+  [21921591](https://doi.org/10.5281/zenodo.21921591), version
+  `EGA-EN-complete-0-IV4-canon-current-r7-20260828`. Their ten public assets
+  are byte-identical across GitHub and Zenodo; exact sizes and hashes are in
+  [`publication-current.json`](publication-current.json). The older omnibus
+  [Zenodo 21861666](https://doi.org/10.5281/zenodo.21861666) is retained as a
+  historical checkpoint, not presented as the current edition or as a release
+  of this integrated Stacks repository.
 - Stacks upstream base: `a04446e57ec1fbc252a871afcec7752fb2807b14`.
 - English discovery manifest: R184, 92,445 bytes, SHA-256
   `5C64ECD32FD7C5458D2599D70ED667D2CF06D95517EFFA9C6D6DCEF7626913A0`;
