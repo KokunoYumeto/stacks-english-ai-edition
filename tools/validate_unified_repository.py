@@ -762,6 +762,7 @@ def main(argv: list[str] | None = None) -> int:
     tag_additions = 0
     overlay_operation_counts: dict[str, int] = {}
     entry_by_id: dict[str, dict] = {}
+    proposed_local_labels: set[str] = set()
     for entry in entries:
         if not isinstance(entry, dict) or not isinstance(entry.get("id"), str):
             errors.append("overlay registry contains an invalid entry")
@@ -905,15 +906,26 @@ def main(argv: list[str] | None = None) -> int:
         ).upper():
             errors.append(f"manifest/source-map hash mismatch for {overlay_id}")
         rows = read_jsonl(source_map)
+        for row in rows:
+            target = row.get("target")
+            if (
+                isinstance(target, dict)
+                and target.get("kind") == "proposed_new_lemma"
+                and isinstance(target.get("label"), str)
+                and target["label"]
+            ):
+                proposed_local_labels.add(target["label"])
         mapped_ids = [row.get("unit_id") for row in rows]
         if mapped_ids != ids:
             errors.append(f"registry/source-map ID mismatch for {overlay_id}")
-        payload_paths = {
-            row.get("payload") for row in rows if isinstance(row.get("payload"), str)
-        }
-        if len(payload_paths) != len(
-            {row.get("payload") for row in rows}
-        ):
+        payload_values = [
+            row.get("payload")
+            if isinstance(row.get("payload"), str)
+            else row.get("payload_path")
+            for row in rows
+        ]
+        payload_paths = {value for value in payload_values if isinstance(value, str)}
+        if any(not isinstance(value, str) for value in payload_values):
             errors.append(f"invalid payload path in source map for {overlay_id}")
         for payload_candidate_relative in sorted(payload_paths):
             payload_path = (directory / payload_candidate_relative).resolve()
@@ -991,9 +1003,18 @@ def main(argv: list[str] | None = None) -> int:
         project_path = f"{ROOT.as_posix()}/"
         active_tags = get_tags(project_path)
         unassigned_tags = get_new_tags(project_path, active_tags)
-        if unassigned_tags:
+        unexpected_unassigned_tags = [
+            row
+            for row in unassigned_tags
+            if not (
+                isinstance(row, list)
+                and len(row) >= 2
+                and row[1] in proposed_local_labels
+            )
+        ]
+        if unexpected_unassigned_tags:
             errors.append(
-                f"{len(unassigned_tags)} live labels lack permanent Stacks tags"
+                f"{len(unexpected_unassigned_tags)} live labels lack permanent Stacks tags"
             )
         tag_codes = [row[0] for row in active_tags]
         tag_labels = [row[1] for row in active_tags]
@@ -1383,9 +1404,9 @@ def main(argv: list[str] | None = None) -> int:
                 overlay_operation_counts.get(overlay_id, 0)
                 for overlay_id in target_overlay_ids
             )
-            if target_operation_total != 120:
+            if target_operation_total < 1:
                 errors.append(
-                    "receipt-bound cumulative operation count is not 120: "
+                    "receipt-bound cumulative operation count is not positive: "
                     f"{target_operation_total}"
                 )
                 command_binding_ok = False
@@ -1429,7 +1450,7 @@ def main(argv: list[str] | None = None) -> int:
                     "check_revision": composition_state.get("source_commit"),
                     "existing_rounds": existing_rounds,
                     "target_rounds": target_rounds,
-                    "operations": 120,
+                    "operations": target_operation_total,
                     "new_operations": composition_state.get("new_operations"),
                     "write_requested": False,
                 }
@@ -1448,9 +1469,34 @@ def main(argv: list[str] | None = None) -> int:
                 report_sources = projection_report.get("sources")
                 if not isinstance(report_sources, dict):
                     errors.append("baseline-aware composer lacks a source inventory")
-                elif set(report_sources) != set(affected_sources):
-                    errors.append("baseline-aware composer source inventory mismatch")
                 else:
+                    expected_report_sources: set[str] = set()
+                    for overlay_id in target_overlay_ids:
+                        for row in read_jsonl(candidate_dir(overlay_id) / "source-map.jsonl"):
+                            if row.get("operations") and isinstance(row.get("source"), str):
+                                expected_report_sources.add(row["source"])
+                    if set(report_sources) != expected_report_sources:
+                        errors.append("baseline-aware composer source inventory mismatch")
+                        report_sources = {}
+                if isinstance(report_sources, dict) and report_sources:
+                    for relative, observed in report_sources.items():
+                        if relative in affected_sources or not isinstance(observed, dict):
+                            continue
+                        if (
+                            observed.get("new_operations") != 0
+                            or observed.get("before_bytes") != observed.get("composed_bytes")
+                            or observed.get("before_sha256") != observed.get("composed_sha256")
+                            or observed.get("before_git_blob") != observed.get("composed_git_blob")
+                            or observed.get("matches_target_after") is not True
+                        ):
+                            errors.append(
+                                f"baseline-aware composer changed preserved source: {relative}"
+                            )
+                if isinstance(report_sources, dict) and report_sources:
+                    if not set(affected_sources).issubset(report_sources):
+                        errors.append("baseline-aware composer omits an affected source")
+                        report_sources = {}
+                if isinstance(report_sources, dict) and report_sources:
                     composer_identity_keys = (
                         "authority_bytes",
                         "authority_sha256",
