@@ -45,9 +45,12 @@ R22 (`cec63f082819c0580c43f59790ab441260fe1ccc`, 83 stable units / 94
 operations) and R23 (`49fc23ab2f3d94cc98f27bc0f315fb0da6f2c98a`, 10
 stable units / 12 operations) add 93 IDs and 106 operations affecting only
 `more-algebra.tex`. They are composed in that order from manifest operations;
-neither isolated payload replaces cumulative source wholesale. R24 is the
-active errata intake lease, while `MORE-ALGEBRA-L-001..029` remains unadmitted
-intake evidence.
+neither isolated payload replaces cumulative source wholesale. The external
+registry lane subsequently admitted R24 at
+`6df734ecb3bef8f35770819d17a8d3e267b8e07a`; its source composition is pending,
+and successor head `53c517215ef542cfc987e2445a07bb23c7b120fb` materializes
+the active R25 lease. `MORE-ALGEBRA-L-001..029` remains unadmitted intake
+evidence.
 
 ## Directory map
 

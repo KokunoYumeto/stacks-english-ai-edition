@@ -124,5 +124,8 @@ editions. The published Verdier content release at
 `4947e4a6d22971ea793e4b4bc2b09d8ab8cc04d0` remains historical evidence for
 the 22-overlay / 559-ID cutoff at `60f1d97e`. The current validated composition
 advances the repository state to 24 overlays and 652 stable IDs at `49fc23ab`;
-R22 and R23 affect only `more-algebra.tex`. R24 remains an active intake lease,
-and the French `MORE-ALGEBRA-L-001..029` packet remains unadmitted.
+R22 and R23 affect only `more-algebra.tex`. The external registry lane later
+admitted R24 at `6df734ecb3bef8f35770819d17a8d3e267b8e07a`, but its generated-source
+composition remains pending; successor head
+`53c517215ef542cfc987e2445a07bb23c7b120fb` materializes the R25 lease. The
+French `MORE-ALGEBRA-L-001..029` packet remains unadmitted.

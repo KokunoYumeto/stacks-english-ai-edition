@@ -84,8 +84,15 @@ operations. R22 and R23 contribute 93 IDs and 106 operations affecting only
 - [`stacks-errata-a04446e-r22-r23-reproducibility-2026-08-27.json`](stacks-errata-a04446e-r22-r23-reproducibility-2026-08-27.json)
   together with the [second full receipt](stacks-errata-a04446e-r22-r23-reproducibility-second-2026-08-27.json)
   — exact equality of all 22 artifact identities across two independent linked
-  worktree builds.
+  worktree builds; and
+- [`stacks-errata-a04446e-r22-r23-release-2026-08-27.json`](stacks-errata-a04446e-r22-r23-release-2026-08-27.json)
+  — public content head `3c2b49fe0d20519de4ab06951ac2cb5151b68782`, successful
+  exact-head CI, and anonymous byte/hash/blob readback of 138 files totaling
+  25,024,008 bytes.
 
-R24 remains the active errata intake lease, and the French
-`MORE-ALGEBRA-L-001..029` packet remains unadmitted. No later intake is treated
-as part of the current composition or fixed point.
+R24 was subsequently admitted in the external registry lane at
+`6df734ecb3bef8f35770819d17a8d3e267b8e07a` and remains pending composition;
+successor head `53c517215ef542cfc987e2445a07bb23c7b120fb` materializes the
+active R25 lease. The French `MORE-ALGEBRA-L-001..029` packet remains
+unadmitted. No later intake is treated as part of the current composition or
+fixed point.

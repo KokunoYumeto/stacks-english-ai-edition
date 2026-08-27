@@ -77,6 +77,13 @@ The historical R21 and Verdier composition, build, publication, and readback
 receipts remain preserved and authoritative for their own immutable source
 snapshots; they are not rebound to the R22/R23 tree.
 
+The [current publication receipt](validation/stacks-errata-a04446e-r22-r23-release-2026-08-27.json)
+binds the public R22/R23 content head
+`3c2b49fe0d20519de4ab06951ac2cb5151b68782`, tree
+`eeb92e6723554f9b8465bee9eac3de58d4a69705`, to its successful exact-head
+workflow. Anonymous HTTPS readback matched 138 checked files totaling
+25,024,008 bytes by filename, byte count, SHA-256, and Git blob.
+
 The preceding Verdier content release remains public at
 `4947e4a6d22971ea793e4b4bc2b09d8ab8cc04d0`. The
 [historical publication receipt](validation/stacks-verdier-a04446e-1-2-13-r1-release-2026-08-26.json)

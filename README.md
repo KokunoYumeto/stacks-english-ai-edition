@@ -22,6 +22,7 @@ machine-readable validation evidence.
 [Current fixed-point build: PASS](validation/stacks-errata-a04446e-r22-r23-build-2026-08-27.json) ·
 [Current visual QA: PASS](validation/stacks-errata-a04446e-r22-r23-visual-qa-2026-08-27.json) ·
 [Current reproducibility: PASS](validation/stacks-errata-a04446e-r22-r23-reproducibility-2026-08-27.json) ·
+[Current R22/R23 publication receipt: PASS](validation/stacks-errata-a04446e-r22-r23-release-2026-08-27.json) ·
 [Historical Verdier publication receipt: PASS](validation/stacks-verdier-a04446e-1-2-13-r1-release-2026-08-26.json) ·
 [Historical R21 publication receipt: PASS](validation/errata-r18-r19-release-2026-08-25.json) ·
 [R17 historical receipt](validation/unification-release-2026-08-25.json) ·
@@ -105,6 +106,12 @@ diagnostics. All 406 pages of the affected `more-algebra.pdf` were rendered and
 reviewed; 63 correction-locus pages were also inspected at high resolution. A
 parallel rebuild in a second linked worktree used the same source, builder,
 environment, and sweep, and all 22 PDF identities were exactly equal.
+
+The R22/R23 content release is public at
+`3c2b49fe0d20519de4ab06951ac2cb5151b68782`, tree
+`eeb92e6723554f9b8465bee9eac3de58d4a69705`. Its exact-head GitHub Actions
+run passed, and anonymous HTTPS readback matched all 138 checked files
+(25,024,008 bytes) by filename, byte count, SHA-256, and Git blob.
 
 The preceding Verdier content release remains public at
 `4947e4a6d22971ea793e4b4bc2b09d8ab8cc04d0`. Its exact source, candidate,

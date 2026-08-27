@@ -35,14 +35,20 @@ review, with 63 correction-locus pages inspected at high resolution. All 22 PDF
 identities match exactly between the two builds. The preceding Verdier content
 release remains preserved as historical evidence for its own exact scope.
 
+The R22/R23 content release is public at
+`3c2b49fe0d20519de4ab06951ac2cb5151b68782`, tree
+`eeb92e6723554f9b8465bee9eac3de58d4a69705`; exact-head CI and anonymous
+readback of 138 checked files totaling 25,024,008 bytes pass.
+
 ## Queued registry-order maintenance
 
-R24 is the active errata intake lease; no R24 overlay has been admitted or
-composed. A later 29-row French `MORE-ALGEBRA-L` packet was independently
-deduplicated against R22/R23: 27 rows are directly new and admissible; two rows
-form a conditional bundle that also requires the linked `t`→`s` repairs at
-authority lines 38321 and 38325. That packet remains intake evidence, not an
-admitted overlay or part of the current fixed point. The rejected R23 producer
+R24 was subsequently admitted in the external registry lane at
+`6df734ecb3bef8f35770819d17a8d3e267b8e07a` and awaits source composition
+after the published R23 fixed point. Successor registry head
+`53c517215ef542cfc987e2445a07bb23c7b120fb` materializes the active R25 lease.
+Neither R24 nor R25 is part of the current generated source. The 29-row French
+`MORE-ALGEBRA-L` packet remains unadmitted intake evidence, not an admitted
+overlay or part of the current fixed point. The rejected R23 producer
 `MORE-ALGEBRA-J-006` likewise remains excluded from the integrated source.
 
 ## Recommended order

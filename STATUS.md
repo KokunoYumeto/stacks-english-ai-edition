@@ -44,9 +44,15 @@ in each corpus dossier and in the machine-readable registry.
   operations onto cumulative `more-algebra.tex`; neither isolated payload
   replaces the integrated source. The rejected producer `MORE-ALGEBRA-J-006`
   remains excluded.
-- R24 is the active errata intake lease. The 29-row French
-  `MORE-ALGEBRA-L-001..029` packet remains unadmitted intake evidence and is not
-  part of this composition or fixed point.
+- The R22/R23 content release is public at
+  `3c2b49fe0d20519de4ab06951ac2cb5151b68782`; exact-head CI passed and
+  anonymous readback matched 138 checked files totaling 25,024,008 bytes.
+- The external registry lane subsequently admitted R24 at
+  `6df734ecb3bef8f35770819d17a8d3e267b8e07a`; R24 source composition remains
+  pending and is not part of this R23 fixed point. Successor registry head
+  `53c517215ef542cfc987e2445a07bb23c7b120fb` materializes the active R25 lease.
+  The 29-row French `MORE-ALGEBRA-L-001..029` packet remains unadmitted intake
+  evidence and is not part of this composition or fixed point.
 
 The authoritative registry is
 [`ai-integrated/registry/overlays.json`](ai-integrated/registry/overlays.json).
