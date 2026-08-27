@@ -22,6 +22,7 @@ machine-readable validation evidence.
 [Current fixed-point build: PASS](validation/stacks-errata-a04446e-r24-build-2026-08-27.json) ·
 [Current visual QA: PASS](validation/stacks-errata-a04446e-r24-visual-qa-2026-08-27.json) ·
 [Current reproducibility: PASS](validation/stacks-errata-a04446e-r24-reproducibility-2026-08-27.json) ·
+[Current R24 publication receipt: PASS](validation/stacks-errata-a04446e-r24-release-2026-08-27.json) ·
 [Historical R22/R23 publication receipt: PASS](validation/stacks-errata-a04446e-r22-r23-release-2026-08-27.json) ·
 [Historical Verdier publication receipt: PASS](validation/stacks-verdier-a04446e-1-2-13-r1-release-2026-08-26.json) ·
 [Historical R21 publication receipt: PASS](validation/errata-r18-r19-release-2026-08-25.json) ·
@@ -110,6 +111,13 @@ diagnostics. All 25 pages of the affected `spaces-duality.pdf` were rendered
 and inspected individually at high resolution. A
 parallel rebuild in a second linked worktree used the same source, builder,
 environment, and sweep, and all 23 PDF identities were exactly equal.
+
+The R24 content release is public at
+`50438757de89ec6e67385084d4a2d578707f5a37`, tree
+`d1d4b9385d0b67fb2e70220bad8c4fe9c2a2fcd5`. Its exact-head content workflow
+passed, and anonymous HTTPS readback matched all 86 checked files (5,155,955
+bytes), including both candidate PDFs, by filename, byte count, SHA-256, and
+Git blob.
 
 The preceding R22/R23 content release remains public at
 `3c2b49fe0d20519de4ab06951ac2cb5151b68782`, tree

@@ -38,6 +38,11 @@ contact-sheet and individual high-resolution review. All 23 PDF identities
 match exactly between the two builds. The earlier R22/R23, Verdier, and R21
 receipts remain preserved as historical evidence for their exact scopes.
 
+The R24 content release is public at
+`50438757de89ec6e67385084d4a2d578707f5a37`, tree
+`d1d4b9385d0b67fb2e70220bad8c4fe9c2a2fcd5`; exact-head CI and anonymous
+readback of 86 checked files totaling 5,155,955 bytes pass.
+
 The historical R22/R23 content release is public at
 `3c2b49fe0d20519de4ab06951ac2cb5151b68782`, tree
 `eeb92e6723554f9b8465bee9eac3de58d4a69705`; exact-head CI and anonymous

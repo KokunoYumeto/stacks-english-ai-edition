@@ -121,8 +121,10 @@ The current evidence is recorded in:
   — exact equality of all 23 artifact identities across two independent linked
   worktree builds.
 
-Publication and public-readback metrics are recorded only after their separate
-release receipt exists.
+The [R24 release receipt](stacks-errata-a04446e-r24-release-2026-08-27.json)
+binds public content head `50438757de89ec6e67385084d4a2d578707f5a37` to
+its passing exact-head workflow and anonymous readback of 86 checked files
+totaling 5,155,955 bytes, including both candidate PDFs.
 
 Successor registry head `53c517215ef542cfc987e2445a07bb23c7b120fb`
 only materializes the active R25 lease. R25 is neither admitted nor composed.

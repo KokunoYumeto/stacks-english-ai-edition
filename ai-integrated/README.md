@@ -61,6 +61,9 @@ PDF bytes at source `c3bc402b03dea3c5ac92c9e226645b5895a78887`, tree
 `626b67a2c32f4b2bc1b8ad7b4586cdb036b25a21`. Both linked-worktree builds are
 byte-for-byte reproducible, and all 25 pages of the affected
 `spaces-duality.pdf` passed individual high-resolution inspection.
+The public R24 content head is
+`50438757de89ec6e67385084d4a2d578707f5a37`; its exact-head workflow and
+anonymous 86-file byte/hash/blob readback pass.
 
 ## Directory map
 

@@ -141,6 +141,13 @@ produced exactly matching identities for all 23 PDFs: 2,368 pages, 24,949,361
 bytes, and a global fixed point on sweep four. Visual QA covers all 25 pages of
 `spaces-duality.pdf` at high resolution.
 
+The R24 content head is public at
+`50438757de89ec6e67385084d4a2d578707f5a37`, tree
+`d1d4b9385d0b67fb2e70220bad8c4fe9c2a2fcd5`. Anonymous readback matched all
+86 checked source, registry, candidate, PDF, tool, documentation, and receipt
+files totaling 5,155,955 bytes; the exact inventory is bound by the
+[R24 release receipt](validation/stacks-errata-a04446e-r24-release-2026-08-27.json).
+
 ## Branch preservation
 
 The unified repository retains the pre-unification integration heads as

@@ -78,8 +78,15 @@ The historical R22/R23, Verdier, and R21 composition, build, publication, and
 readback receipts remain preserved and authoritative for their own immutable
 source snapshots; they are not rebound to the R24 tree.
 
+The [current R24 publication receipt](validation/stacks-errata-a04446e-r24-release-2026-08-27.json)
+binds public content head `50438757de89ec6e67385084d4a2d578707f5a37`, tree
+`d1d4b9385d0b67fb2e70220bad8c4fe9c2a2fcd5`, to its successful exact-head
+workflow. Anonymous HTTPS readback matched 86 checked files totaling 5,155,955
+bytes by filename, byte count, SHA-256, and Git blob, including the two R24
+candidate PDFs.
+
 The [historical R22/R23 publication receipt](validation/stacks-errata-a04446e-r22-r23-release-2026-08-27.json)
-binds the public R22/R23 content head
+binds the preceding public R22/R23 content head
 `3c2b49fe0d20519de4ab06951ac2cb5151b68782`, tree
 `eeb92e6723554f9b8465bee9eac3de58d4a69705`, to its successful exact-head
 workflow. Anonymous HTTPS readback matched 138 checked files totaling
@@ -90,8 +97,7 @@ The preceding Verdier content release remains public at
 [historical publication receipt](validation/stacks-verdier-a04446e-1-2-13-r1-release-2026-08-26.json)
 binds its exact CI run and anonymous raw-byte inventory. Full validation omits
 `--pre-publication` and independently rechecks the public ref, every decisive
-row, and the recorded GitHub Actions run after current publication evidence has
-been added.
+row, and the recorded GitHub Actions run.
 
 ## Source-specific deterministic evidence
 
