@@ -11,22 +11,22 @@ in each corpus dossier and in the machine-readable registry.
 
 | Workstream | Current state | Bounded claim |
 | --- | --- | --- |
-| FAC | Integrated | The full 661-target review is dispositioned. The dossier records 37 new theorem or lemma statements, seven source corrections, 27 corrected Stacks defects, successful validators, builds, and targeted visual inspection. |
-| Tôhoku | Integrated through r71 | The sealed successor records 1,066 decisions, 679 decided units, 33 resolved source issues, and zero remaining gap-class dispositions. This does not convert the dossier's explicit nonclaims into a claim of upstream acceptance or an official release. |
-| GAGA | Integrated through r3 | All 126 source units are classified; all 79 substantive units have reviewed decisions. The 23-page English chapter and deterministic mapping replay pass. The three previously dangling cross-reference targets are closed. |
-| FGA | Integrated and normalized | The combined source contains the normalized FGA chapter and its post-merge dossier. The closure covers 1,253 units, 1,612 term links, and 579 append-only decisions; the recorded fixed-point Moduli build is 83 pages. |
-| EGA | Active | Direct-French semantic review reaches EGA I 6.1.13. The active graph contains 1,059 edges across 355 generated units; the next semantic cursor is EGA I 6.2.1. |
+| FAC | Root source composed; corpus review closed | The full 661-target review is dispositioned. The dossier records 37 independently written theorem or lemma additions, bounded source corrections, successful validators, builds, and targeted visual inspection. |
+| Tôhoku | Dossier-only closure through r71 | The sealed successor records 1,066 decisions, 679 decided units, 33 resolved source issues, and zero remaining gap-class dispositions. It explicitly changed no live TeX, PDF, canonical source, or cursor. |
+| GAGA | Root chapter composed through r3; corpus review closed | All 126 source units are classified and all 79 substantive units have reviewed decisions. The live 23-page English chapter and deterministic mapping replay pass. |
+| FGA | Root additions composed and notation-normalized; corpus review closed | The combined source contains the normalized FGA additions and post-merge dossier. The closure covers 1,253 units, 1,612 term links, and 579 append-only decisions; the recorded fixed-point Moduli build is 83 pages. |
+| EGA | Partial root-source composition; direct-source review active | Selected local additions are present in root TeX. Complete English discovery and diplomatic French edition trees remain separate read-only inputs. Review reaches EGA I 6.1.13 and continues at 6.2.1. |
 
 ## Errata state
 
-- Current integrated registry: **24 overlays / 652 stable IDs**, frozen at R23
-  admission commit `49fc23ab2f3d94cc98f27bc0f315fb0da6f2c98a`, tree
-  `a67a8529b853da8834502456e8ca75afe71aa78c`.
-- The Stacks errata component is **R1–R23**: 23 batches, 640 stable correction
-  IDs, and 697 exact v2 operations. `MC-STK-ERR-1007` is the highest Stacks
-  correction identifier through R23; intentional gaps mean it is not a count
-  of corrections. R22–R23 add 93 IDs and 106 operations affecting only
-  `more-algebra.tex`.
+- Current integrated registry: **25 overlays / 690 stable IDs**, frozen at R24
+  admission commit `6df734ecb3bef8f35770819d17a8d3e267b8e07a`, tree
+  `49b8e57e91f0bf04669b2ee93e3586cfb6919088`.
+- The Stacks errata component is **R1–R24**: 24 batches, 678 stable correction
+  IDs, and 754 exact v2 operations. `MC-STK-ERR-1045` is the highest
+  identifier through R24; intentional gaps mean it is not a count of
+  corrections. R24 adds 38 IDs and 57 operations affecting only
+  `spaces-duality.tex`.
 - The 22nd overlay is the separately admitted historical-source contribution
   `stacks-verdier-a04446e-1-2-13-r1`, containing 12 non-official stable units.
   It inserts the manifest-bound Lemma 4.15 into cumulative `derived.tex` through
@@ -44,15 +44,17 @@ in each corpus dossier and in the machine-readable registry.
   operations onto cumulative `more-algebra.tex`; neither isolated payload
   replaces the integrated source. The rejected producer `MORE-ALGEBRA-J-006`
   remains excluded.
-- The R22/R23 content release is public at
+- R24 is composed by replaying only its 57 manifest-bound operations onto
+  cumulative `spaces-duality.tex`; its isolated payload does not replace the
+  integrated source. The committed 80,995-byte postimage has SHA-256
+  `3CFCEF73EB9172CF69082FF07B9D84442DD5E545D8AD22917D5A694BAA57298E`.
+- Registry successor `53c517215ef542cfc987e2445a07bb23c7b120fb`
+  only materializes the active R25 lease. R25 is not admitted or composed.
+  The French `MORE-ALGEBRA-L-001..029` and `SMOOTHING-001..035` packets
+  remain unadmitted intake evidence and are not part of this fixed point.
+- The preceding R22/R23 content release remains public at
   `3c2b49fe0d20519de4ab06951ac2cb5151b68782`; exact-head CI passed and
   anonymous readback matched 138 checked files totaling 25,024,008 bytes.
-- The external registry lane subsequently admitted R24 at
-  `6df734ecb3bef8f35770819d17a8d3e267b8e07a`; R24 source composition remains
-  pending and is not part of this R23 fixed point. Successor registry head
-  `53c517215ef542cfc987e2445a07bb23c7b120fb` materializes the active R25 lease.
-  The 29-row French `MORE-ALGEBRA-L-001..029` packet remains unadmitted intake
-  evidence and is not part of this composition or fixed point.
 
 The authoritative registry is
 [`ai-integrated/registry/overlays.json`](ai-integrated/registry/overlays.json).
@@ -63,8 +65,8 @@ proposals remain under
 ## Validation state
 
 The repository integrity gate checks the pinned authority, protected linear
-ancestry, all 24 registry entries and 652 stable IDs, the immutable Verdier,
-R22, and R23 candidates, the retained Verdier insertion, all 697 exact v2
+ancestry, all 25 registry entries and 690 stable IDs, the immutable Verdier and
+R22–R24 candidates, the retained Verdier insertion, all 754 exact v2
 operations, exact manifest/source-map/payload/review joins, the independent
 source correction, public-document links, JSON registries, and unresolved merge
 markers. See [VALIDATION.md](VALIDATION.md).

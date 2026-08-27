@@ -19,7 +19,7 @@ mathematical product:
 
 | Repository | Pre-unification role | Captured refs |
 | --- | --- | --- |
-| [`KokunoYumeto/stacks-project`](https://github.com/KokunoYumeto/stacks-project) | Full Stacks source plus FAC, Tôhoku, GAGA, FGA, and EGA source branches | `master` plus five `codex/*` integration branches |
+| [`KokunoYumeto/stacks-project`](https://github.com/KokunoYumeto/stacks-project) | Full Stacks source plus FAC, GAGA, and FGA source branches, the Tôhoku mapping dossier, and the EGA partial-integration scaffold | `master` plus five `codex/*` integration branches |
 | [`KokunoYumeto/unofficial-ai-integrated-stacks-project`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project) | Errata candidates, overlay registry, schemas, and replay evidence | `main` and `codex/stacks-cjk-canon` |
 
 The split is now resolved in favor of one integrated public edition.
@@ -50,9 +50,14 @@ are recorded in the machine-readable
 The histories were combined without flattening either input:
 
 1. The source union at `ad58625f60e6816905ff217d21d91b07b2722fcf`
-   supplied the FAC/Tôhoku/GAGA/FGA and notation-normalized Stacks tree.
+   supplied the FAC, GAGA, and FGA source additions, notation-normalized Stacks
+   tree, and the Tôhoku dossier-only mapping history. The sealed Tôhoku r71
+   successor changes no live TeX.
 2. EGA scaffold and export history through
    `91df7f1c96bd4973264c29b0e121253a05d1d361` was merged into that source.
+   Only bounded local EGA additions are composed into root TeX; the complete
+   English discovery and French diplomatic editions remain separate read-only
+   inputs.
 3. The complete registry content through the frozen external cutoff
    `13ca6aaaca454f5930c4885c93f427e30cf21959` was transferred byte-for-byte
    under `ai-integrated/`. The integrated linear history records that transfer
@@ -78,6 +83,16 @@ The histories were combined without flattening either input:
    manifest-bound operations onto cumulative `more-algebra.tex`. The resulting
    source commit is `3a1100a79abc76315592711c9f2c86ad21b5f6a9`, tree
    `28980ba358cadddecc67d5013c7a9b624fee6305`.
+8. Registry content through the R24 admission cutoff
+   `6df734ecb3bef8f35770819d17a8d3e267b8e07a`, tree
+   `49b8e57e91f0bf04669b2ee93e3586cfb6919088`, together with the successor
+   R25 lease pointer, was imported at
+   `0e5c4596d85072fecae6e061bb54bed6979d66c3`. R24 was then composed by
+   replaying its 57 manifest-bound operations onto cumulative
+   `spaces-duality.tex`. The resulting source commit is
+   `10c1c62f371921cdafbaa5e89f438a821a013621`, tree
+   `6ec98b8ee6919070a24130877d4eeb9e1a0e874b`. R25 remains lease-only and is
+   neither admitted nor composed.
 
 The mathematical source therefore stays at the repository root while the
 complete evidence and registry system remains browsable under
@@ -105,7 +120,7 @@ The historical Verdier fixed-point build is bound to source
 `7ee4b3a46e995e9e36b259bbc9300828c3c6988b`, tree
 `5b3349e5944ecf9d0718c6a31728a457adcd1c69`.
 
-The current R22/R23 fixed-point build is bound to source
+The historical R22/R23 fixed-point build is bound to source
 `1e9771352840bd70224027d13e9b32546838ccd2`, tree
 `4a3b7398f7607b73ee5596d359e5cf7a401c2256`. It preserves the Verdier
 `derived.tex`, cumulative R21 `simplicial.tex`, and independent `injectives.tex`
@@ -113,7 +128,9 @@ identities while advancing `more-algebra.tex` through 93 new correction IDs and
 106 operations. Two independent builds produced exactly matching identities
 for all 22 PDFs: 2,343 pages, 24,389,773 bytes, and a global fixed point on
 sweep four. Visual QA covers all 406 pages of `more-algebra.pdf` and 63
-high-resolution correction-locus pages.
+high-resolution correction-locus pages. These receipts remain authoritative
+for that immutable R22/R23 tree and are not build or publication evidence for
+the later R24 source composition.
 
 ## Branch preservation
 
@@ -122,10 +139,10 @@ clearly named historical branches in addition to the integrated default
 branch. Their presence is provenance, not a claim that they remain competing
 editions. The published Verdier content release at
 `4947e4a6d22971ea793e4b4bc2b09d8ab8cc04d0` remains historical evidence for
-the 22-overlay / 559-ID cutoff at `60f1d97e`. The current validated composition
-advances the repository state to 24 overlays and 652 stable IDs at `49fc23ab`;
-R22 and R23 affect only `more-algebra.tex`. The external registry lane later
-admitted R24 at `6df734ecb3bef8f35770819d17a8d3e267b8e07a`, but its generated-source
-composition remains pending; successor head
-`53c517215ef542cfc987e2445a07bb23c7b120fb` materializes the R25 lease. The
-French `MORE-ALGEBRA-L-001..029` packet remains unadmitted.
+the 22-overlay / 559-ID cutoff at `60f1d97e`. The current validated source
+composition advances the repository state to 25 overlays and 690 stable IDs at
+R24 cutoff `6df734ec`; R22 and R23 affect only `more-algebra.tex`, while R24
+affects only `spaces-duality.tex`. Successor head
+`53c517215ef542cfc987e2445a07bb23c7b120fb` only materializes the R25 lease;
+R25 is not admitted or composed. The French `MORE-ALGEBRA-L-001..029` packet
+remains unadmitted.

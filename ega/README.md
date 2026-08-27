@@ -1,6 +1,6 @@
 # EGA discovery and integration scaffold
 
-This branch is a public, machine-readable working scaffold for comparing
+This directory is a public, machine-readable working scaffold for comparing
 *Éléments de géométrie algébrique* (EGA 0--IV) with a pinned Stacks Project
 base. It is maintained as a Mathematics Commons Stacks-compatible extension:
 official Stacks remains a sync source and reference layer, while upstream
@@ -11,8 +11,9 @@ endorsement by the Stacks Project.
 The complete standalone English EGA source is admitted only as discovery
 text. Canonical source claims remain gated by the separately maintained
 diplomatic French edition and its page-level authority receipts. The edition
-trees are read-only inputs to this branch and are never copied, edited, built,
-or published here.
+trees are read-only inputs to this directory and are never copied, edited, built,
+or published here. Only the bounded local additions explicitly recorded by the
+EGA integration manifest enter the repository's root TeX tree.
 
 ## Current snapshot
 

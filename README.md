@@ -45,16 +45,20 @@ The pinned upstream baseline is
 
 | Area | State | Verified scope | Evidence |
 | --- | --- | --- | --- |
-| FAC | Integrated | Complete review of 661 source targets; 37 new theorem or lemma statements; deterministic validators pass | [Status](fac/STATUS.md) |
-| Tôhoku | Integrated through sealed r71 | 1,066 decisions, 679 decided units, and no remaining gap-class dispositions | [r71 status](tohoku_r71/STATUS.md) · [working dossier](tohoku/STATUS.md) |
-| GAGA | Integrated through r3 | All 126 units classified, all 79 substantive units decided, and a validated 23-page English chapter | [r3 status](gaga_r3/STATUS.md) · [chapter source](gaga.tex) |
-| FGA | Integrated and notation-normalized | 1,253 source units and 1,612 term links closed; fixed-point 83-page Moduli build recorded | [Overview](fga/README.md) · [status](fga/status.md) |
-| EGA | Active integration | Direct-French review through EGA I 6.1.13; 1,059 active edges across 355 generated units; next cursor EGA I 6.2.1 | [EGA dossier](ega/README.md) |
-| Registry and source overlays | R1–R23 errata and Verdier integrated in registry order | 24 admitted overlays and 652 stable IDs at cutoff `49fc23ab`; the Stacks errata component is 23 batches, 640 IDs, and 697 exact v2 operations through R23 | [Registry](ai-integrated/registry/overlays.json) · [Verdier evidence](ai-integrated/candidates/commons/stacks/verdier/) · [errata evidence](ai-integrated/candidates/commons/stacks/errata/) |
+| FAC | Root source composed; corpus review closed | All 661 targets are dispositioned; 37 independently written theorem or lemma additions and bounded corrections are present in the root TeX tree; maintenance remains open | [Status](fac/STATUS.md) |
+| Tôhoku | Dossier-only mapping and adjudication closed through sealed r71 | 1,066 decisions, 679 decided units, and zero remaining gap-class dispositions; r71 explicitly changed no live TeX, PDF, canonical source, or cursor | [Sealed r71 dossier](tohoku_r71/STATUS.md) · [historical working dossier](tohoku/STATUS.md) |
+| GAGA | Root chapter composed through r3; corpus review closed | All 126 units are classified and all 79 substantive units decided; the current unified `gaga.pdf` is 23 pages, while the sealed r3 dossier records its historical 22-page build | [r3 dossier](gaga_r3/STATUS.md) · [live chapter source](gaga.tex) |
+| FGA | Root additions composed and notation-normalized; corpus review closed | All 1,253 units and 1,612 term links are dispositioned; selected independently written additions are in the combined source; the fixed-point Moduli build is 83 pages | [Overview](fga/README.md) · [status](fga/status.md) |
+| EGA | Partial root-source composition; direct-source review active | Selected local additions are present in root TeX; the complete English discovery and diplomatic French editions remain separate read-only inputs; review reaches EGA I 6.1.13 and continues at 6.2.1 | [EGA dossier](ega/README.md) |
+| Errata and Verdier | Root-composed through R24 in registry order | 25 admitted overlays and 690 stable IDs at cutoff `6df734ec`; Stacks errata R1–R24 comprise 24 batches, 678 IDs, and 754 exact v2 operations; Verdier contributes 12 separately admitted units | [Registry](ai-integrated/registry/overlays.json) · [Verdier release](validation/stacks-verdier-a04446e-1-2-13-r1-release-2026-08-26.json) · [errata evidence](ai-integrated/candidates/commons/stacks/errata/) |
 
-These labels are deliberately precise. “Integrated,” “active,” “admitted,” and
-“candidate” are not interchangeable, and no local label is represented as an
-official Stacks tag.
+“Root-composed” means that the live top-level TeX tree changed and participates
+in the unified build. “Dossier-only” means that mappings, decisions, and
+evidence were added without changing live TeX. “Partial” means that only the
+specifically recorded local additions are root-composed. Full translation,
+discovery, or separately maintained editions are not part of this tree unless
+a bounded import and composition receipt explicitly says otherwise. No local
+label is represented as an official Stacks tag.
 
 ## Repository map
 
@@ -62,10 +66,10 @@ official Stacks tag.
 | --- | --- |
 | [`*.tex`](chapters.tex) | The integrated Stacks-derived source tree |
 | [`fac/`](fac/STATUS.md) | FAC statement mapping, source issues, decisions, and validation |
-| [`tohoku/`](tohoku/STATUS.md) and [`tohoku_r71/`](tohoku_r71/STATUS.md) | Tôhoku integration dossiers and sealed closure evidence |
-| [`gaga/`](gaga/STATUS.md) and [`gaga_r3/`](gaga_r3/STATUS.md) | GAGA mapping history and completed r3 evidence |
-| [`fga/`](fga/README.md) | FGA integration, normalization, and build receipts |
-| [`ega/`](ega/README.md) | EGA discovery, source-bound mappings, residuals, and active integration |
+| [`tohoku/`](tohoku/STATUS.md) and [`tohoku_r71/`](tohoku_r71/STATUS.md) | Tôhoku mapping and adjudication dossiers; sealed r71 is dossier-only and made no live-TeX change |
+| [`gaga/`](gaga/STATUS.md) and [`gaga_r3/`](gaga_r3/STATUS.md) | Historical GAGA mapping files and sealed r3 evidence supporting the live root chapter |
+| [`fga/`](fga/README.md) | Closed FGA corpus review, composed additions, notation normalization, and build receipts |
+| [`ega/`](ega/README.md) | Partial root integration, source-bound mappings, residuals, and separate-edition input boundaries |
 | [`reports/`](reports/README.md) | Exact source findings and visual evidence |
 | [`ai-integrated/`](ai-integrated/README.md) | Admitted errata, candidates, schemas, provenance, and release records |
 | [`VALIDATION.md`](VALIDATION.md) | Reproducible checks and build guidance |

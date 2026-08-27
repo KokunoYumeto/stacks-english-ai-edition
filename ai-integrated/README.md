@@ -21,12 +21,12 @@ unified repository, not a separate edition.
 
 ## Integrated registry cutoff
 
-- Current integrated overlays: **24**, containing **652 stable IDs**.
-- Current cutoff: R23 admission commit
-  `49fc23ab2f3d94cc98f27bc0f315fb0da6f2c98a`, tree
-  `a67a8529b853da8834502456e8ca75afe71aa78c`.
-- The Stacks errata subset is **R1–R23**: 23 batches, 640 correction IDs, and
-  697 exact v2 operations. Its highest identifier is `MC-STK-ERR-1007`; gaps
+- Current integrated overlays: **25**, containing **690 stable IDs**.
+- Current cutoff: R24 admission commit
+  `6df734ecb3bef8f35770819d17a8d3e267b8e07a`, tree
+  `49b8e57e91f0bf04669b2ee93e3586cfb6919088`.
+- The Stacks errata subset is **R1–R24**: 24 batches, 678 correction IDs, and
+  754 exact v2 operations. Its highest identifier is `MC-STK-ERR-1045`; gaps
   are intentional.
 - The 22nd overlay is `stacks-verdier-a04446e-1-2-13-r1`, an independently
   written historical-source insertion with 12 non-official stable units. It
@@ -35,22 +35,26 @@ unified repository, not a separate edition.
 The authoritative overlay list is
 [`registry/overlays.json`](registry/overlays.json). The integrated root source
 contains the admitted R1–R21 composition, the separately composed Verdier
-insertion, and the R22-before-R23 `more-algebra.tex` composition; registry
-admission and source composition remain separately testable states. R21 is
-replayed as exact manifest-bound operations over cumulative `simplicial.tex`,
-and Verdier is inserted into cumulative `derived.tex` through one unique
-unchanged context with exact prefix/suffix invariance.
+insertion, the R22-before-R23 `more-algebra.tex` composition, and the R24
+`spaces-duality.tex` composition; registry admission and source composition
+remain separately testable states. R21 is replayed as exact manifest-bound
+operations over cumulative `simplicial.tex`, and Verdier is inserted into
+cumulative `derived.tex` through one unique unchanged context with exact
+prefix/suffix invariance.
 
 R22 (`cec63f082819c0580c43f59790ab441260fe1ccc`, 83 stable units / 94
 operations) and R23 (`49fc23ab2f3d94cc98f27bc0f315fb0da6f2c98a`, 10
 stable units / 12 operations) add 93 IDs and 106 operations affecting only
 `more-algebra.tex`. They are composed in that order from manifest operations;
-neither isolated payload replaces cumulative source wholesale. The external
-registry lane subsequently admitted R24 at
-`6df734ecb3bef8f35770819d17a8d3e267b8e07a`; its source composition is pending,
-and successor head `53c517215ef542cfc987e2445a07bb23c7b120fb` materializes
-the active R25 lease. `MORE-ALGEBRA-L-001..029` remains unadmitted intake
-evidence.
+neither isolated payload replaces cumulative source wholesale. R24 adds 38
+IDs and 57 manifest-bound operations affecting only `spaces-duality.tex`.
+Those operations are composed at source commit
+`10c1c62f371921cdafbaa5e89f438a821a013621`, tree
+`6ec98b8ee6919070a24130877d4eeb9e1a0e874b`; its isolated payload likewise
+does not replace cumulative source wholesale. Successor registry head
+`53c517215ef542cfc987e2445a07bb23c7b120fb` only materializes the active R25
+lease. R25 is not admitted or composed. `MORE-ALGEBRA-L-001..029` remains
+unadmitted intake evidence.
 
 ## Directory map
 
@@ -62,6 +66,10 @@ evidence.
 | [`upstream/`](upstream/) | Pinned upstream identity and license hashes |
 | [`RIGHTS.md`](RIGHTS.md) | Rights and attribution boundary |
 
-Detailed integration dossiers for FAC, Tôhoku, GAGA, FGA, and EGA remain at
-the repository root so that mathematical source, mapping evidence, and build
-records can be browsed together. See the project [status dashboard](../STATUS.md).
+Detailed dossiers for FAC, Tôhoku, GAGA, FGA, and EGA remain at the repository
+root so that mathematical source, mapping evidence, and build records can be
+browsed together. FAC, GAGA, and FGA have root-source additions; the sealed
+Tôhoku r71 result is dossier-only and changes no live TeX; EGA has only bounded
+partial root-source additions, while its complete English discovery and French
+diplomatic editions remain separate read-only inputs. See the project
+[status dashboard](../STATUS.md).

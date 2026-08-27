@@ -36,6 +36,7 @@ DEFAULT_STEMS = (
     "more-morphisms",
     "crystalline",
     "spaces-cohomology",
+    "spaces-duality",
     "stacks-limits",
     "injectives",
     "gaga",
@@ -52,6 +53,7 @@ COMPOSITION_MODE_V3 = (
     "manifest-bound registry-order replay rebased onto verified cumulative source"
 )
 COMPOSITION_MODE_V4 = "registered insertion rebased through unique unchanged context"
+EMBEDDED_CANDIDATE_TOPOLOGY = "embedded_candidate_direct_admission"
 NAMESPACE_PATTERN = re.compile(
     r"^[A-Za-z0-9._-]+(?:/[A-Za-z0-9._-]+)*$"
 )
@@ -492,6 +494,19 @@ def load_composition_receipt(
     ):
         raise RuntimeError("composition receipt schema or pass state is invalid")
     is_v4 = composition_schema == COMPOSITION_SCHEMA_V4
+    raw_new_overlays = receipt.get("new_overlays")
+    has_embedded_candidate = isinstance(raw_new_overlays, list) and any(
+        isinstance(overlay, dict)
+        and overlay.get("topology") == EMBEDDED_CANDIDATE_TOPOLOGY
+        for overlay in raw_new_overlays
+    )
+    if is_v4 and has_embedded_candidate:
+        raise RuntimeError("v4 registered insertions cannot use embedded candidates")
+    if has_embedded_candidate and len(raw_new_overlays) != 1:
+        raise RuntimeError(
+            "embedded-candidate composition requires exactly one new overlay"
+        )
+    uses_bound_leases = is_v4 or has_embedded_candidate
 
     authority = receipt.get("authority")
     previous = receipt.get("previous_cutoff")
@@ -666,7 +681,7 @@ def load_composition_receipt(
     leases_blob: str | None = None
     leases_sha: str | None = None
     lease_events: list[object] = []
-    if is_v4:
+    if uses_bound_leases:
         leases_relative, leases_blob, leases_sha, leases = load_bound_registry_json(
             source, registry, registry_import_commit, cutoff, "leases"
         )
@@ -733,7 +748,7 @@ def load_composition_receipt(
         raise RuntimeError("previous overlay registry lacks registered_entries")
 
     previous_lease_events: list[object] = []
-    if is_v4:
+    if uses_bound_leases:
         previous_lease_text = git_optional(
             source, "show", f"{previous_registry}:registry/leases.json"
         )
@@ -775,7 +790,7 @@ def load_composition_receipt(
         raise RuntimeError("previous cutoff overlay is absent from the imported registry")
     if entries[: previous_index + 1] != previous_entries:
         raise RuntimeError("overlay registry changed the previous append-only prefix")
-    new_overlays = receipt.get("new_overlays")
+    new_overlays = raw_new_overlays
     if not isinstance(new_overlays, list) or not new_overlays:
         raise RuntimeError("composition receipt lacks new-overlay transition evidence")
     if is_v4 and len(new_overlays) != 1:
@@ -844,7 +859,8 @@ def load_composition_receipt(
         manifest_path = f"{candidate_path}/candidate.manifest.json"
         normalized_overlay = dict(overlay)
 
-        if not is_v4:
+        topology = overlay.get("topology")
+        if not is_v4 and topology is None:
             require_single_parent(
                 source,
                 candidate,
@@ -868,6 +884,271 @@ def load_composition_receipt(
                 raise RuntimeError(
                     f"candidate manifest binding mismatch: {overlay.get('id')!r}"
                 )
+        elif not is_v4 and topology == EMBEDDED_CANDIDATE_TOPOLOGY:
+            if candidate != admission:
+                raise RuntimeError(
+                    f"embedded candidate must equal its admission commit: "
+                    f"{overlay.get('id')!r}"
+                )
+            require_single_parent(
+                source,
+                admission,
+                f"admission {overlay.get('id')}",
+                expected_registry_parent,
+            )
+            actual_tree = git(source, "rev-parse", f"{admission}^{{tree}}")
+            if (
+                overlay.get("candidate_tree") != actual_tree
+                or overlay.get("admission_tree") != actual_tree
+                or overlay.get("admission_parent") != expected_registry_parent
+            ):
+                raise RuntimeError(
+                    f"embedded candidate tree or parent binding mismatch: "
+                    f"{overlay.get('id')!r}"
+                )
+
+            expected_subtree = overlay.get("candidate_subtree")
+            if (
+                not isinstance(expected_subtree, str)
+                or not SHA1_PATTERN.fullmatch(expected_subtree)
+                or git_optional(source, "cat-file", "-t", expected_subtree) != "tree"
+            ):
+                raise RuntimeError(
+                    f"invalid embedded candidate subtree: {overlay.get('id')!r}"
+                )
+            imported_candidate_path = f"ai-integrated/{candidate_path}"
+            candidate_subtrees = (
+                git_optional(source, "rev-parse", f"{admission}:{candidate_path}"),
+                git_optional(
+                    source,
+                    "rev-parse",
+                    f"{registry_import_commit}:{imported_candidate_path}",
+                ),
+                git_optional(source, "rev-parse", f"HEAD:{imported_candidate_path}"),
+            )
+            if any(subtree != expected_subtree for subtree in candidate_subtrees):
+                raise RuntimeError(
+                    f"embedded candidate subtree binding mismatch: "
+                    f"{overlay.get('id')!r}"
+                )
+
+            manifest_blobs = (
+                git_optional(source, "rev-parse", f"{admission}:{manifest_path}"),
+                git_optional(
+                    source,
+                    "rev-parse",
+                    f"{registry_import_commit}:{imported_candidate_path}/candidate.manifest.json",
+                ),
+                git_optional(
+                    source,
+                    "rev-parse",
+                    f"HEAD:{imported_candidate_path}/candidate.manifest.json",
+                ),
+            )
+            if (
+                manifest_blobs[0] is None
+                or len(set(manifest_blobs)) != 1
+                or git_blob_sha256(source, manifest_blobs[0])
+                != overlay["manifest_sha256"].upper()
+            ):
+                raise RuntimeError(
+                    f"embedded candidate manifest binding mismatch: "
+                    f"{overlay.get('id')!r}"
+                )
+            manifest_text = git_optional(
+                source, "show", f"{admission}:{manifest_path}"
+            )
+            try:
+                manifest = (
+                    json.loads(manifest_text) if manifest_text is not None else None
+                )
+            except json.JSONDecodeError as exc:
+                raise RuntimeError(
+                    f"invalid embedded candidate manifest for "
+                    f"{overlay.get('id')!r}: {exc}"
+                ) from exc
+            if (
+                not isinstance(manifest, dict)
+                or manifest.get("candidate_id") != overlay.get("id")
+                or manifest.get("namespace") != namespace
+            ):
+                raise RuntimeError(
+                    f"embedded candidate manifest identity mismatch: "
+                    f"{overlay.get('id')!r}"
+                )
+            raw_builds = manifest.get("builds")
+            if not isinstance(raw_builds, list):
+                raise RuntimeError(
+                    f"embedded candidate manifest lacks build hashes: "
+                    f"{overlay.get('id')!r}"
+                )
+            manifest_builds: dict[str, str] = {}
+            for build in raw_builds:
+                if not isinstance(build, dict):
+                    raise RuntimeError(
+                        "embedded candidate manifest contains an invalid build entry"
+                    )
+                build_path = require_safe_posix_path(
+                    build.get("path"), "candidate manifest build path"
+                )
+                build_sha = build.get("sha256")
+                if (
+                    not isinstance(build_sha, str)
+                    or not SHA256_PATTERN.fullmatch(build_sha)
+                    or build_path in manifest_builds
+                ):
+                    raise RuntimeError(
+                        f"invalid embedded candidate build hash: "
+                        f"{overlay.get('id')!r}"
+                    )
+                manifest_builds[build_path] = build_sha.upper()
+
+            payload_matches = [
+                path
+                for path, digest in manifest_builds.items()
+                if path.startswith("payload/")
+                and digest == overlay["payload_sha256"].upper()
+            ]
+            if len(payload_matches) != 1:
+                raise RuntimeError(
+                    f"could not uniquely identify embedded candidate payload: "
+                    f"{overlay.get('id')!r}"
+                )
+            payload_relative = payload_matches[0]
+            review_relative = entry.get("review_receipt")
+            if isinstance(review_relative, str) and review_relative.startswith(
+                candidate_path + "/"
+            ):
+                review_relative = review_relative[len(candidate_path) + 1 :]
+            review_relative = require_safe_posix_path(
+                review_relative, "candidate review receipt path"
+            )
+            if manifest_builds.get(review_relative) != overlay[
+                "review_receipt_sha256"
+            ].upper():
+                raise RuntimeError(
+                    f"embedded candidate review manifest binding mismatch: "
+                    f"{overlay.get('id')!r}"
+                )
+
+            for relative, expected_sha, label in (
+                (payload_relative, overlay["payload_sha256"], "payload"),
+                (
+                    review_relative,
+                    overlay["review_receipt_sha256"],
+                    "review receipt",
+                ),
+            ):
+                candidate_file = f"{candidate_path}/{relative}"
+                imported_file = f"{imported_candidate_path}/{relative}"
+                blobs = (
+                    git_optional(source, "rev-parse", f"{admission}:{candidate_file}"),
+                    git_optional(
+                        source,
+                        "rev-parse",
+                        f"{registry_import_commit}:{imported_file}",
+                    ),
+                    git_optional(source, "rev-parse", f"HEAD:{imported_file}"),
+                )
+                if (
+                    blobs[0] is None
+                    or len(set(blobs)) != 1
+                    or git_blob_sha256(source, blobs[0]) != expected_sha.upper()
+                ):
+                    raise RuntimeError(
+                        f"embedded candidate {label} binding mismatch: "
+                        f"{overlay.get('id')!r}"
+                    )
+
+            lease_suffix = lease_events[len(previous_lease_events) :]
+            if len(lease_suffix) != 2 or not all(
+                isinstance(event, dict) for event in lease_suffix
+            ):
+                raise RuntimeError(
+                    f"embedded admission must append release and successor lease events: "
+                    f"{overlay.get('id')!r}"
+                )
+            released_event, successor_event = lease_suffix
+            if (
+                released_event.get("event_id")
+                != overlay.get("lease_release_event")
+                or successor_event.get("event_id")
+                != overlay.get("successor_lease_event")
+            ):
+                raise RuntimeError(
+                    f"embedded admission lease-event binding mismatch: "
+                    f"{overlay.get('id')!r}"
+                )
+            lease_id = manifest.get("lease_id")
+            matching_lease_events = [
+                event
+                for event in lease_events
+                if isinstance(event, dict)
+                and event.get("lease_id") == lease_id
+                and event.get("namespace") == namespace
+            ]
+            if len(matching_lease_events) != 2:
+                raise RuntimeError(
+                    f"embedded candidate lease lifecycle is incomplete: "
+                    f"{overlay.get('id')!r}"
+                )
+            issued_event, matching_release = matching_lease_events
+            if (
+                matching_release != released_event
+                or issued_event.get("event") != "issued"
+                or issued_event.get("state") != "active"
+                or released_event.get("event") != "released"
+                or released_event.get("state") != "released"
+                or released_event.get("supersedes_event_id")
+                != issued_event.get("event_id")
+                or successor_event.get("event") != "issued"
+                or successor_event.get("state") != "active"
+                or successor_event.get("supersedes_event_id")
+                != released_event.get("event_id")
+                or any(
+                    event.get(key) != expected
+                    for event in (issued_event, released_event)
+                    for key, expected in (
+                        ("lease_id", lease_id),
+                        ("namespace", namespace),
+                        ("candidate_path", candidate_path),
+                        ("writer_task", manifest.get("writer_task")),
+                        ("upstream_commit", authority_commit),
+                        ("upstream_tree", authority_tree),
+                        ("writer_contract", "candidates/CONTRACT.md"),
+                    )
+                )
+                or any(
+                    successor_event.get(key) != expected
+                    for key, expected in (
+                        ("writer_task", manifest.get("writer_task")),
+                        ("upstream_commit", authority_commit),
+                        ("upstream_tree", authority_tree),
+                        ("writer_contract", "candidates/CONTRACT.md"),
+                    )
+                )
+                or entry.get("writer") != manifest.get("writer_task")
+                or entry.get("source_commit") != authority_commit
+                or entry.get("source_tree") != authority_tree
+            ):
+                raise RuntimeError(
+                    f"embedded candidate lease or authority join mismatch: "
+                    f"{overlay.get('id')!r}"
+                )
+            normalized_overlay.update(
+                {
+                    "candidate_tree": actual_tree,
+                    "candidate_subtree": expected_subtree,
+                    "payload_path": payload_relative,
+                    "review_receipt_path": review_relative,
+                    "lease_event_id": released_event.get("event_id"),
+                    "successor_lease_event_id": successor_event.get("event_id"),
+                }
+            )
+        elif not is_v4:
+            raise RuntimeError(
+                f"unsupported v3 overlay topology: {topology!r}"
+            )
         else:
             topology = overlay.get("topology")
             if topology != "independent_candidate_direct_admission":
@@ -1456,7 +1737,7 @@ def load_composition_receipt(
         "affected_source_identities": affected_sources,
         "verifier_reports": verifier_reports,
     }
-    if is_v4:
+    if uses_bound_leases:
         binding.update(
             {
                 "registry_leases_path": leases_relative,

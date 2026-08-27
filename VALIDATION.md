@@ -20,15 +20,16 @@ The gate verifies:
 
 - ancestry of the pinned upstream, source-union, EGA, and protected linear
   registry/source history;
-- 24 admitted overlays containing exactly 652 stable IDs at R23 registry cutoff
-  `49fc23ab2f3d94cc98f27bc0f315fb0da6f2c98a`, tree
-  `a67a8529b853da8834502456e8ca75afe71aa78c`;
+- 25 admitted overlays containing exactly 690 stable IDs at R24 registry cutoff
+  `6df734ecb3bef8f35770819d17a8d3e267b8e07a`, tree
+  `49b8e57e91f0bf04669b2ee93e3586cfb6919088`;
 - the final immutable Verdier candidate, its 12 stable units, 27 manifest
   references, independent replay, rights boundary, and exact registered
   insertion into `derived.tex`;
-- the R1–R23 Stacks errata sequence: 23 batches, 640 correction IDs, all 697 v2
-  operations, and the manifest-bound R22-before-R23 replay of 106 operations
-  affecting only `more-algebra.tex`;
+- the R1–R24 Stacks errata sequence: 24 batches, 678 correction IDs, and all
+  754 v2 operations, including the ordered 106-operation R22/R23 replay in
+  `more-algebra.tex` and the 57-operation R24 replay in
+  `spaces-duality.tex`;
 - preservation of the historical R1–R21 snapshot at prior cutoff
   `13ca6aaaca454f5930c4885c93f427e30cf21959` and of the separately composed
   Verdier source;
@@ -66,16 +67,16 @@ the [reproducibility summary](validation/stacks-errata-a04446e-r22-r23-reproduci
 and [second full receipt](validation/stacks-errata-a04446e-r22-r23-reproducibility-second-2026-08-27.json).
 
 The [source composition receipt](validation/composition-current.json) records
-R23 cutoff `49fc23ab2f3d94cc98f27bc0f315fb0da6f2c98a`, linear registry
-import `806ed1d11943f5a66b17b75f9fddccd61f58b62b`, and exact composition
-source `3a1100a79abc76315592711c9f2c86ad21b5f6a9`, tree
-`28980ba358cadddecc67d5013c7a9b624fee6305`. It binds 697 cumulative v2
-operations, including the 106 new R22/R23 operations, to the 1,517,988-byte
-`more-algebra.tex` postimage with SHA-256
-`69CD9E00183C17938EC4DFC1FF1EB33C292DDACF8B64AD054FD666054D2CBE2C`.
-The historical R21 and Verdier composition, build, publication, and readback
-receipts remain preserved and authoritative for their own immutable source
-snapshots; they are not rebound to the R22/R23 tree.
+R24 cutoff `6df734ecb3bef8f35770819d17a8d3e267b8e07a`, linear registry
+import `0e5c4596d85072fecae6e061bb54bed6979d66c3`, and exact composition
+source `10c1c62f371921cdafbaa5e89f438a821a013621`, tree
+`6ec98b8ee6919070a24130877d4eeb9e1a0e874b`. It binds 754 cumulative
+v2 operations, including the 57 new R24 operations, to the 80,995-byte
+`spaces-duality.tex` postimage with SHA-256
+`3CFCEF73EB9172CF69082FF07B9D84442DD5E545D8AD22917D5A694BAA57298E`.
+The historical R22/R23, Verdier, and R21 composition, build, publication, and
+readback receipts remain preserved and authoritative for their own immutable
+source snapshots; they are not rebound to the R24 tree.
 
 The [current publication receipt](validation/stacks-errata-a04446e-r22-r23-release-2026-08-27.json)
 binds the public R22/R23 content head
@@ -98,10 +99,11 @@ Detailed validators and receipts are intentionally kept with the scope they
 actually prove:
 
 - [FAC status and build evidence](fac/STATUS.md)
-- [Tôhoku r71 closure](tohoku_r71/STATUS.md)
+- [Tôhoku r71 dossier-only closure](tohoku_r71/STATUS.md)
 - [GAGA r3 closure](gaga_r3/STATUS.md)
 - [FGA post-merge audit](fga/audit.json)
-- [EGA checker and active dossier](ega/README.md)
+- [EGA partial root composition and separate-edition inputs](ega/README.md)
+- [Historical Verdier composition and release receipt](validation/stacks-verdier-a04446e-1-2-13-r1-release-2026-08-26.json)
 - [Errata overlay registry](ai-integrated/registry/overlays.json)
 - [Project roadmap and next integration order](ROADMAP.md)
 

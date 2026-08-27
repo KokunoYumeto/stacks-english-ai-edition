@@ -1,95 +1,86 @@
 {
   "schema": "unofficial-ai-integrated-stacks-composition/v3",
   "status": "PASS",
-  "created_utc": "2026-08-27T17:19:34Z",
+  "created_utc": "2026-08-27T21:08:39Z",
   "authority": {
     "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
     "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e"
   },
   "previous_cutoff": {
-    "public_main_head": "f82cf665a4ea6fccb74beac180a2d172546d6c17",
-    "public_main_tree": "179ffee76ee3206f45f36461f008f60378be9f9a",
-    "registry_commit": "60f1d97ecbd376ff7a91298d17e1f162b9996c3a",
-    "registry_tree": "2f1455316ad184bcd88095d60a9372b03ca70828",
-    "last_admitted_overlay": "stacks-verdier-a04446e-1-2-13-r1",
+    "public_main_head": "e42260230a7933cfc99083a5cc214615a1e57996",
+    "public_main_tree": "36e4c98349fcf221951808490fadf576b3ba1ca1",
+    "registry_commit": "49fc23ab2f3d94cc98f27bc0f315fb0da6f2c98a",
+    "registry_tree": "a67a8529b853da8834502456e8ca75afe71aa78c",
+    "last_admitted_overlay": "stacks-errata-a04446e-r23",
     "source_blobs": {
-      "more-algebra.tex": {
-        "bytes": 1517971,
-        "sha256": "576293E90BC318DDF3DA2E380B5BF9862042C6DC229C6EF604EF93E645FE5FB2",
-        "git_blob": "acad4aefc130b00640908ff1a4fe51dbc191e141"
+      "spaces-duality.tex": {
+        "bytes": 80778,
+        "sha256": "B13FFE40A679F3E86EA82972ED7955DD4FBCFD0D98F954936B0E5FBF56F92C7D",
+        "git_blob": "cb9d29d53adb9a0fa1aab245b8290cdcc4568f4e"
       }
     }
   },
   "registry": {
-    "cutoff_commit": "49fc23ab2f3d94cc98f27bc0f315fb0da6f2c98a",
-    "cutoff_tree": "a67a8529b853da8834502456e8ca75afe71aa78c",
+    "cutoff_commit": "6df734ecb3bef8f35770819d17a8d3e267b8e07a",
+    "cutoff_tree": "49b8e57e91f0bf04669b2ee93e3586cfb6919088",
     "overlays_path": "ai-integrated/registry/overlays.json",
-    "overlays_bytes": 38109,
-    "overlays_sha256": "E47BCFD90E3C1334FDED9E5D9E5D4E85F54411C7E865546F253541629492ABC1",
-    "overlays_git_blob": "096de2e9eb1eb3411f3d64344041118d2e4c1830",
+    "overlays_bytes": 39957,
+    "overlays_sha256": "AC6EBA518273FCE912C3F40085F6F6E9895F7020BF205E043A3C86FD9878E9D4",
+    "overlays_git_blob": "0ffc11e1ff8dafcfecc79f8e5a2917c7672c1e90",
     "leases_path": "ai-integrated/registry/leases.json",
-    "leases_bytes": 31745,
-    "leases_sha256": "341214C519043B97D3F2B6EBDCDD53D3D4B6310A66C9AAE02EB9C9348262D641",
-    "leases_git_blob": "2575a52a76baff673b05e4d317515184a05ddabb",
-    "linear_import_commit": "806ed1d11943f5a66b17b75f9fddccd61f58b62b",
-    "linear_import_tree": "46abe6fd89b1567eb7e053b038c2a7aa4689d638",
-    "registered_overlays": 24,
-    "registered_stable_ids": 652,
-    "last_admitted_overlay": "stacks-errata-a04446e-r23"
+    "leases_bytes": 32973,
+    "leases_sha256": "646D6A4657FB81129835C83A5A6F6A46426E400CE56E3609F74CF4FB5372BC81",
+    "leases_git_blob": "a5722eb5aa3aec18dbea3392c9f4e7dbf87ac68b",
+    "linear_import_commit": "0e5c4596d85072fecae6e061bb54bed6979d66c3",
+    "linear_import_tree": "2d2ac46456b901fcf8e09907a5988f57b76ee03c",
+    "registered_overlays": 25,
+    "registered_stable_ids": 690,
+    "last_admitted_overlay": "stacks-errata-a04446e-r24"
   },
   "new_overlays": [
     {
-      "id": "stacks-errata-a04446e-r22",
-      "stable_ids": 83,
-      "operations": 94,
-      "manifest_sha256": "8C519D72AFB3496DD3EB0116EB64FBF3ACF2946A809FED070E4F5D7554A52F8B",
-      "payload_sha256": "7C6237F71A81886DD72B6F85BFF52182D653FB98668B0124DC10C05E93960623",
-      "review_receipt_sha256": "92A8F2DB6C4A587282400084E717427FCC463A3705704CB34DBB51AEF5841234",
-      "candidate_commit": "1d6db9f18bbcf959bb0316b92113a1fce612d377",
-      "candidate_tree": "93771f64e1197d0f681269de3a55987e32c558e8",
-      "candidate_subtree": "aa12d7defe48c8556bebd1adf7918a2a14bd6911",
-      "admission_commit": "cec63f082819c0580c43f59790ab441260fe1ccc",
-      "admission_tree": "044007b5b76cd59bca464b539b6af94f2debf34d"
-    },
-    {
-      "id": "stacks-errata-a04446e-r23",
-      "stable_ids": 10,
-      "operations": 12,
-      "manifest_sha256": "4E8E588698926FD7A47D9CFFB1496CB7305D8EB698C571AD9660FC4C81F80A5C",
-      "payload_sha256": "4EE7CB6B4526ECD30B6C796D4264FC72922B3DB367CD05D9575134E53D129C48",
-      "review_receipt_sha256": "71BB6E50830CA066029062D46D00D28DD7CA5689E959809875E04AC04F28FAFC",
-      "candidate_commit": "4afe5e35919cbbb077d38b96d35896fd2649d978",
-      "candidate_tree": "00253006f006e933a93918d4370c92b826644db7",
-      "candidate_subtree": "3fcc80f94a9e301602782de065d34875a49dc2be",
-      "admission_commit": "49fc23ab2f3d94cc98f27bc0f315fb0da6f2c98a",
-      "admission_tree": "a67a8529b853da8834502456e8ca75afe71aa78c"
+      "id": "stacks-errata-a04446e-r24",
+      "topology": "embedded_candidate_direct_admission",
+      "stable_ids": 38,
+      "operations": 57,
+      "manifest_sha256": "8FD22BEE46246A02658726C264E6E442BFA8E14534F501F74218FBC00615332A",
+      "payload_sha256": "3CFCEF73EB9172CF69082FF07B9D84442DD5E545D8AD22917D5A694BAA57298E",
+      "review_receipt_sha256": "3DE71963C0CC3BCDFB0CDF00923944E96456AEAFFD1CC58F79CAF7D1D451F61C",
+      "candidate_commit": "6df734ecb3bef8f35770819d17a8d3e267b8e07a",
+      "candidate_tree": "49b8e57e91f0bf04669b2ee93e3586cfb6919088",
+      "candidate_subtree": "32362b02165884fe6c1aac84db3b4de73ddf3ae1",
+      "admission_commit": "6df734ecb3bef8f35770819d17a8d3e267b8e07a",
+      "admission_tree": "49b8e57e91f0bf04669b2ee93e3586cfb6919088",
+      "admission_parent": "49fc23ab2f3d94cc98f27bc0f315fb0da6f2c98a",
+      "lease_release_event": "lease-event-000053",
+      "successor_lease_event": "lease-event-000054"
     }
   ],
   "composition": {
     "mode": "manifest-bound registry-order replay rebased onto verified cumulative source",
-    "base_commit": "806ed1d11943f5a66b17b75f9fddccd61f58b62b",
-    "base_tree": "46abe6fd89b1567eb7e053b038c2a7aa4689d638",
-    "source_commit": "3a1100a79abc76315592711c9f2c86ad21b5f6a9",
-    "source_tree": "28980ba358cadddecc67d5013c7a9b624fee6305",
-    "total_v2_operations": 697,
-    "new_operations": 106,
+    "base_commit": "0e5c4596d85072fecae6e061bb54bed6979d66c3",
+    "base_tree": "2d2ac46456b901fcf8e09907a5988f57b76ee03c",
+    "source_commit": "10c1c62f371921cdafbaa5e89f438a821a013621",
+    "source_tree": "6ec98b8ee6919070a24130877d4eeb9e1a0e874b",
+    "total_v2_operations": 754,
+    "new_operations": 57,
     "r1_r3_replacements": 69,
     "r1_tag_additions": 9,
     "affected_sources": {
-      "more-algebra.tex": {
-        "authority_bytes": 1492039,
-        "authority_sha256": "0106554339E8966FE04411B2AE9F9CD856B165849FEEF0C7BC37634819064708",
-        "authority_git_blob": "6ff837ac787433d48e0e6e8061e720d93eeb4b05",
-        "before_bytes": 1517971,
-        "before_sha256": "576293E90BC318DDF3DA2E380B5BF9862042C6DC229C6EF604EF93E645FE5FB2",
-        "before_git_blob": "acad4aefc130b00640908ff1a4fe51dbc191e141",
-        "authority_projection_bytes": 1492056,
-        "authority_projection_sha256": "2A4639B364ACAE5E4556B28B68291165BF3608FBEA35C5D33B07DF6540973A98",
-        "authority_projection_git_blob": "caf19f8188f23901a05037d669883fc807cc899f",
-        "composition_mode": "new operations rebased through unchanged authority regions while preserving prior AI-integrated additions",
-        "composed_bytes": 1517988,
-        "composed_sha256": "69CD9E00183C17938EC4DFC1FF1EB33C292DDACF8B64AD054FD666054D2CBE2C",
-        "composed_git_blob": "d53ee36a9b35cc847aa8ba4806fbb1fb85a55c88",
+      "spaces-duality.tex": {
+        "authority_bytes": 80778,
+        "authority_sha256": "B13FFE40A679F3E86EA82972ED7955DD4FBCFD0D98F954936B0E5FBF56F92C7D",
+        "authority_git_blob": "cb9d29d53adb9a0fa1aab245b8290cdcc4568f4e",
+        "before_bytes": 80778,
+        "before_sha256": "B13FFE40A679F3E86EA82972ED7955DD4FBCFD0D98F954936B0E5FBF56F92C7D",
+        "before_git_blob": "cb9d29d53adb9a0fa1aab245b8290cdcc4568f4e",
+        "authority_projection_bytes": 80995,
+        "authority_projection_sha256": "3CFCEF73EB9172CF69082FF07B9D84442DD5E545D8AD22917D5A694BAA57298E",
+        "authority_projection_git_blob": "efbd4b4ba9db377c8a36b0b11f3877bda60a08f7",
+        "composition_mode": "57 manifest-bound exact replacements on the unchanged authority projection",
+        "composed_bytes": 80995,
+        "composed_sha256": "3CFCEF73EB9172CF69082FF07B9D84442DD5E545D8AD22917D5A694BAA57298E",
+        "composed_git_blob": "efbd4b4ba9db377c8a36b0b11f3877bda60a08f7",
         "committed_matches_composition": true
       }
     }
@@ -105,19 +96,28 @@
       "sha256": "650ABA33A184CE9945DD70C04D83A3A4CBD6E540426B171E828336855DC97A0B",
       "git_blob": "a34120e214b9a840b72889344a0f716ada037c97"
     },
+    "more-algebra.tex": {
+      "bytes": 1517988,
+      "sha256": "69CD9E00183C17938EC4DFC1FF1EB33C292DDACF8B64AD054FD666054D2CBE2C",
+      "git_blob": "d53ee36a9b35cc847aa8ba4806fbb1fb85a55c88"
+    },
     "rejected_producers": ["MORE-ALGEBRA-J-006"],
-    "unadmitted_packets": ["MORE-ALGEBRA-L-001..029"]
+    "unadmitted_packets": [
+      "MORE-ALGEBRA-L-001..029",
+      "SMOOTHING-001..035"
+    ],
+    "r25_state": "lease-only; not admitted or composed"
   },
   "projection_verifier": {
     "path": "tools/compose_overlay_projection.py",
-    "command": "python tools/compose_overlay_projection.py --existing-rounds 18 19 20 21 --target-rounds 18 19 20 21 22 23 --base-revision 806ed1d11943f5a66b17b75f9fddccd61f58b62b --check-revision 3a1100a79abc76315592711c9f2c86ad21b5f6a9",
+    "command": "python tools/compose_overlay_projection.py --existing-rounds 18 19 20 21 22 23 --target-rounds 18 19 20 21 22 23 24 --base-revision 0e5c4596d85072fecae6e061bb54bed6979d66c3 --check-revision 10c1c62f371921cdafbaa5e89f438a821a013621",
     "status": "PASS"
   },
   "required_build_stems": [
     "sets", "categories", "topology", "sheaves", "sites", "algebra",
     "brauer", "derived", "simplicial", "homology", "more-algebra",
     "smoothing", "schemes", "properties", "morphisms", "more-morphisms",
-    "crystalline", "spaces-cohomology", "stacks-limits", "injectives",
-    "gaga", "moduli"
+    "crystalline", "spaces-cohomology", "spaces-duality", "stacks-limits",
+    "injectives", "gaga", "moduli"
   ]
 }

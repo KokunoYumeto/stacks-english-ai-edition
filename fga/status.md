@@ -2,11 +2,12 @@
 
 Snapshot: Stacks commit `a04446e57ec1fbc252a871afcec7752fb2807b14`.
 
-The reproducible intake, topic crosswalk, and statement-level review are
-complete for the bounded FGA corpus.  Every review unit has an append-only
-decision and source problems remain explicit.  Forty-one mathematical
-source patches are implemented and validated; further source integration
-remains in progress.
+The reproducible intake, topic crosswalk, statement-level review, and bounded
+source-integration program are complete for the audited FGA corpus. Every
+review unit has an append-only decision and source problems remain explicit.
+The combined edition contains the closed, notation-normalized additions
+described in the 2026-08-25 section below; maintenance remains open for later
+corrections.
 
 - 119 Stacks TeX files indexed
 - 21,537 labelled TeX objects indexed

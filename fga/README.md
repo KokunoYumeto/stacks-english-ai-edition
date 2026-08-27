@@ -10,7 +10,8 @@ here.  New mathematical prose intended for the Stacks Project will be written
 independently in English and will follow `coding.tex` and
 `documentation/rules`.
 
-The files in this directory are an integration dossier on the working branch.
+The files in this directory are the FGA integration dossier retained in the
+unified edition.
 They are not official Stacks tags and do not assert that upstream has accepted
 any proposed text.
 

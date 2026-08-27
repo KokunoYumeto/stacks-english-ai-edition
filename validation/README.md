@@ -63,16 +63,14 @@ The historical R21 and Verdier receipts remain authoritative for their own
 immutable snapshots. They are deliberately not treated as proof for the later
 R22/R23 source tree.
 
-## Current R22/R23 receipts
+## Historical R22/R23 receipts
 
-The current validated composition advances the registry to 24 overlays and 652
+The R22/R23 validated composition advanced the registry to 24 overlays and 652
 stable IDs at cutoff `49fc23ab2f3d94cc98f27bc0f315fb0da6f2c98a`. The Stacks
 errata subset is R1–R23: 23 batches, 640 correction IDs, and 697 exact v2
 operations. R22 and R23 contribute 93 IDs and 106 operations affecting only
-`more-algebra.tex`. Current evidence is recorded in:
+`more-algebra.tex`. Its historical evidence is recorded in:
 
-- [`composition-current.json`](composition-current.json) — cutoff, candidate,
-  manifest, registry-import, operation, source, and preservation bindings;
 - [`stacks-errata-a04446e-r22-r23-build-2026-08-27.json`](stacks-errata-a04446e-r22-r23-build-2026-08-27.json)
   — source `1e9771352840bd70224027d13e9b32546838ccd2`, tree
   `4a3b7398f7607b73ee5596d359e5cf7a401c2256`, 22 PDFs, 2,343 pages,
@@ -90,9 +88,27 @@ operations. R22 and R23 contribute 93 IDs and 106 operations affecting only
   exact-head CI, and anonymous byte/hash/blob readback of 138 files totaling
   25,024,008 bytes.
 
-R24 was subsequently admitted in the external registry lane at
-`6df734ecb3bef8f35770819d17a8d3e267b8e07a` and remains pending composition;
-successor head `53c517215ef542cfc987e2445a07bb23c7b120fb` materializes the
-active R25 lease. The French `MORE-ALGEBRA-L-001..029` packet remains
-unadmitted. No later intake is treated as part of the current composition or
-fixed point.
+These receipts remain authoritative for their immutable R22/R23 source tree;
+they are not build or publication evidence for the later R24 composition.
+
+## Current R24 composition receipt
+
+The current validated source composition advances the registry to **25
+overlays / 690 stable IDs** at R24 admission cutoff
+`6df734ecb3bef8f35770819d17a8d3e267b8e07a`, tree
+`49b8e57e91f0bf04669b2ee93e3586cfb6919088`. The Stacks errata subset is
+R1–R24: 24 batches, 678 correction IDs, and 754 exact v2 operations. R24 adds
+38 IDs and 57 manifest-bound operations affecting only `spaces-duality.tex`.
+
+[`composition-current.json`](composition-current.json) binds that cutoff,
+the imported candidate and registry bytes, exact operation replay, preserved
+R21/Verdier/R22/R23 source identities, and source commit
+`10c1c62f371921cdafbaa5e89f438a821a013621`, tree
+`6ec98b8ee6919070a24130877d4eeb9e1a0e874b`. No R24 full-tree build,
+reproducibility, visual-QA, publication, or public-readback metric is claimed
+here until its corresponding receipt exists.
+
+Successor registry head `53c517215ef542cfc987e2445a07bb23c7b120fb`
+only materializes the active R25 lease. R25 is neither admitted nor composed.
+The French `MORE-ALGEBRA-L-001..029` packet remains unadmitted. No later intake
+is treated as part of the current composition.

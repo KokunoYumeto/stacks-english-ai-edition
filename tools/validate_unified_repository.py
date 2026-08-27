@@ -21,25 +21,26 @@ SOURCE_UNION = "ad58625f60e6816905ff217d21d91b07b2722fcf"
 EGA_EXPORT = "91df7f1c96bd4973264c29b0e121253a05d1d361"
 COMPOSITION_RECEIPT = Path("validation/composition-current.json")
 DEFAULT_BUILD_RECEIPT = Path(
-    "validation/stacks-errata-a04446e-r22-r23-build-2026-08-27.json"
+    "validation/stacks-errata-a04446e-r24-build-2026-08-27.json"
 )
 VISUAL_QA_RECEIPT = Path(
-    "validation/stacks-errata-a04446e-r22-r23-visual-qa-2026-08-27.json"
+    "validation/stacks-errata-a04446e-r24-visual-qa-2026-08-27.json"
 )
 REPRODUCIBILITY_RECEIPT = Path(
-    "validation/stacks-errata-a04446e-r22-r23-reproducibility-2026-08-27.json"
+    "validation/stacks-errata-a04446e-r24-reproducibility-2026-08-27.json"
 )
 SECOND_REPRODUCIBILITY_RECEIPT = Path(
-    "validation/stacks-errata-a04446e-r22-r23-reproducibility-second-2026-08-27.json"
+    "validation/stacks-errata-a04446e-r24-reproducibility-second-2026-08-27.json"
 )
 CURRENT_RELEASE_RECEIPT = Path(
-    "validation/stacks-errata-a04446e-r22-r23-release-2026-08-27.json"
+    "validation/stacks-errata-a04446e-r24-release-2026-08-27.json"
 )
 SHA1_RE = re.compile(r"^[0-9a-f]{40}$")
 SHA256_RE = re.compile(r"^[0-9A-Fa-f]{64}$")
 COMPOSITION_MODE = (
     "manifest-bound registry-order replay rebased onto verified cumulative source"
 )
+EMBEDDED_CANDIDATE_TOPOLOGY = "embedded_candidate_direct_admission"
 EXPECTED_FIXED_POINT_SUFFIXES = [
     ".aux",
     ".bbl",
@@ -718,34 +719,100 @@ def main(argv: list[str] | None = None) -> int:
             admission_cursor is not None
             and git("cat-file", "-e", f"{admission_cursor}^{{commit}}").returncode == 0
         )
-        if candidate_exists:
-            require_single_parent(
-                candidate_commit,
-                f"candidate {overlay.get('id')}",
-                errors,
-                admission_cursor if cursor_exists else None,
-            )
-            if cursor_exists:
-                require_ancestor(
-                    admission_cursor,
-                    candidate_commit,
-                    f"registry-order-to-candidate {overlay.get('id')}",
-                    errors,
-                )
-        if admission_exists:
-            require_single_parent(
-                admission_commit,
-                f"admission {overlay.get('id')}",
-                errors,
-                candidate_commit if candidate_exists else None,
-            )
+        topology = overlay.get("topology")
+        if topology is None:
             if candidate_exists:
-                require_ancestor(
+                require_single_parent(
                     candidate_commit,
-                    admission_commit,
-                    f"candidate-to-admission {overlay.get('id')}",
+                    f"candidate {overlay.get('id')}",
                     errors,
+                    admission_cursor if cursor_exists else None,
                 )
+                if cursor_exists:
+                    require_ancestor(
+                        admission_cursor,
+                        candidate_commit,
+                        f"registry-order-to-candidate {overlay.get('id')}",
+                        errors,
+                    )
+            if admission_exists:
+                require_single_parent(
+                    admission_commit,
+                    f"admission {overlay.get('id')}",
+                    errors,
+                    candidate_commit if candidate_exists else None,
+                )
+                if candidate_exists:
+                    require_ancestor(
+                        candidate_commit,
+                        admission_commit,
+                        f"candidate-to-admission {overlay.get('id')}",
+                        errors,
+                    )
+        elif topology == EMBEDDED_CANDIDATE_TOPOLOGY:
+            if (
+                not candidate_exists
+                or not admission_exists
+                or candidate_commit != admission_commit
+            ):
+                errors.append(
+                    f"embedded candidate/admission identity mismatch: "
+                    f"{overlay.get('id')!r}"
+                )
+            else:
+                require_single_parent(
+                    admission_commit,
+                    f"admission {overlay.get('id')}",
+                    errors,
+                    admission_cursor if cursor_exists else None,
+                )
+                actual_tree = git_optional("rev-parse", f"{admission_commit}^{{tree}}")
+                if (
+                    overlay.get("candidate_tree") != actual_tree
+                    or overlay.get("admission_tree") != actual_tree
+                    or overlay.get("admission_parent") != admission_cursor
+                ):
+                    errors.append(
+                        f"embedded candidate tree or parent binding mismatch: "
+                        f"{overlay.get('id')!r}"
+                    )
+                expected_subtree = overlay.get("candidate_subtree")
+                namespace = entry.get("namespace")
+                if (
+                    not isinstance(expected_subtree, str)
+                    or not SHA1_RE.fullmatch(expected_subtree)
+                    or git_optional("cat-file", "-t", expected_subtree) != "tree"
+                    or not isinstance(namespace, str)
+                    or not namespace
+                ):
+                    errors.append(
+                        f"invalid embedded candidate subtree binding: "
+                        f"{overlay.get('id')!r}"
+                    )
+                elif registry_import_commit is not None:
+                    candidate_path = f"candidates/{namespace}"
+                    imported_candidate_path = f"ai-integrated/{candidate_path}"
+                    observed_subtrees = (
+                        git_optional(
+                            "rev-parse", f"{admission_commit}:{candidate_path}"
+                        ),
+                        git_optional(
+                            "rev-parse",
+                            f"{registry_import_commit}:{imported_candidate_path}",
+                        ),
+                        git_optional("rev-parse", f"HEAD:{imported_candidate_path}"),
+                    )
+                    if any(
+                        subtree != expected_subtree for subtree in observed_subtrees
+                    ):
+                        errors.append(
+                            f"embedded candidate subtree differs across admission, "
+                            f"import, or HEAD: {overlay.get('id')!r}"
+                        )
+        else:
+            errors.append(
+                f"unsupported v3 overlay topology: {topology!r}"
+            )
         admission_cursor = admission_commit
     if registry_suffix and registry_suffix[-1].get("id") != composition_registry.get(
         "last_admitted_overlay"
