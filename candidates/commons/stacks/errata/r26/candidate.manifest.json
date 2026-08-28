@@ -77,7 +77,7 @@
     },
     {
       "path": "build-manifest.py",
-      "sha256": "C18BC5C0514910DEFB1372E2582C59F1497B77EC3A26D78ADD50360403F563FD"
+      "sha256": "5CA4A761BAEB1F9953CEC806E693B8593D7F6CA813B5E589485C0B5C54B90185"
     },
     {
       "path": "build-receipt.py",
@@ -89,11 +89,11 @@
     },
     {
       "path": "builds/build-execution.json",
-      "sha256": "239544902AA9E58EDF3C606DF36D592FAFF368A0FC9B8D0F2191A2D3D3F63B07"
+      "sha256": "BAF50E4393A0213B1BC107540762A772AB2CEC95C4B7DA1BE28F3AEF609BAB07"
     },
     {
       "path": "builds/build-receipt.json",
-      "sha256": "0D150776CB50BE54C4D7FD7134D6B1D8049F261C2B985A81A3820B3161D49453"
+      "sha256": "F73C2616D8BFF6372601AE4E68B3B9D5E9A80DEE5E2A0AD84BEC8195FE971C79"
     },
     {
       "path": "builds/deterministic-replay.json",
@@ -137,11 +137,11 @@
     },
     {
       "path": "builds/validation.json",
-      "sha256": "BD7FC34983D917C7950997F6287D83E1C103603A1D0306763D11E0AE57EDC05A"
+      "sha256": "D0E8B178E29F7CAB037664BACF6C73254E349AAEBAF98B1B1695C5903E16FAFC"
     },
     {
       "path": "builds/visual-qa.json",
-      "sha256": "9F1EECD0F3BC977D780D15136ADA7AB4F0A14603A6E793F8B96163D074CE9010"
+      "sha256": "D51986624217BC8DB8BD8CCB9AF4D0873FAC6355900556BEB2483AAAA6C7E60D"
     },
     {
       "path": "candidate.config.input.json",
@@ -149,7 +149,7 @@
     },
     {
       "path": "candidate.config.json",
-      "sha256": "2EA0A4CD9FC28F7438A517050CFDF439F70E8FD3144AC23F5C0EB963AF0554A9"
+      "sha256": "61D9A470A424787720540D1C81356E10BB53CF2B84464B4187A47C8B644502A2"
     },
     {
       "path": "check-manifest.py",
@@ -197,7 +197,7 @@
     },
     {
       "path": "prepare-inputs.py",
-      "sha256": "F152D948836D88C4EBEA9BEFBD1DC4104253696793DC9ED3DC82C5F7135FC723"
+      "sha256": "22FEEC66712733B0E5C2C3C5709E0A099DEC0ABAF820E2BC22ADF8A04297375F"
     },
     {
       "path": "R26_SMOOTHING_ADJUDICATION_SPEC.input.json",
@@ -225,7 +225,7 @@
     },
     {
       "path": "replay/independent-review.json",
-      "sha256": "193C666FD2C42B6C149D5ACE3A5D141D091814AA66D7AAE8E804D01DD8BE18CD"
+      "sha256": "EEB22D2DC116C02DF5F9BCF9228A5177FB41672C567D0EC69C6BC08D501FF043"
     },
     {
       "path": "replay-build.py",
@@ -245,7 +245,7 @@
     },
     {
       "path": "source-validation.json",
-      "sha256": "131F093C8BCDE3780F44D92C049D5D11EF61F97198AAC963C48B5E01811BF684"
+      "sha256": "14E9BC00EBE1D443BE764CCC712F9B32BF16A7CC9B14C89507729B1BEC3E0E73"
     },
     {
       "path": "stable-units.input.json",
@@ -268,7 +268,7 @@
   "review_state": "performed",
   "independent_replay": "passed",
   "unresolved_defects": [
-    "The independent replay receipt binds pre-review manifest 1479661167BFAB8D2FA80D87FA869C26EC7E060335DBAE02EF48242FA0BA2F14 and validation BD7FC34983D917C7950997F6287D83E1C103603A1D0306763D11E0AE57EDC05A. This final registrar-only rebind adds the replay receipt; no reviewed authority, payload, proof, script, build, PDF, or visual-QA byte changed.",
+    "The independent replay receipt binds pre-review manifest C5A345AE51792D8BBB9A0A6E765041633E8C56BEAAF42659BC62639D49788F91 and validation D0E8B178E29F7CAB037664BACF6C73254E349AAEBAF98B1B1695C5903E16FAFC. This final registrar-only rebind adds the replay receipt and binds the clarified review-evidence chain plus refreshed deterministic receipts; no authority source, payload, operation specification, PDF, or rendered-page byte changed.",
     "The isolated smoothing.tex candidate retains cross-chapter undefined-reference targets; their multiset matches the frozen authority build exactly.",
     "The sealed chapter readers have page counts candidate 37, authority 37. The hash-bound visual-QA receipt records inspection of every candidate page and every correction-sensitive locus without clipping, overlap, missing glyph, broken diagram, blank page, or unreadable content.",
     "The proof PDFs contain embedded fonts with ToUnicode maps but are untagged; document-structure accessibility remains a cumulative-edition toolchain concern.",
@@ -283,5 +283,5 @@
     "Do not append an overlay registry record except in a separate admission commit bound to the final manifest hash and a passed independent replay.",
     "Any change to reviewed authority, payload, proof, build, validation, visual-QA, or replay bytes invalidates the replay and requires a new review."
   ],
-  "generated_at_utc": "2026-08-28T11:14:47Z"
+  "generated_at_utc": "2026-08-28T11:29:46Z"
 }

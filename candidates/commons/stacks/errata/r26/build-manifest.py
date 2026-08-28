@@ -82,7 +82,8 @@ def main() -> int:
             "The independent replay receipt binds pre-review manifest "
             f"{replay['pre_review_manifest_sha256']} and validation "
             f"{replay['validation_sha256']}. This final registrar-only rebind adds the replay "
-            "receipt; no reviewed authority, payload, proof, script, build, PDF, or visual-QA byte changed."
+            "receipt and binds the clarified review-evidence chain plus refreshed deterministic "
+            "receipts; no authority source, payload, operation specification, PDF, or rendered-page byte changed."
         )
         generated_at = replay["recorded_at_utc"]
     else:
