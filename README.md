@@ -19,9 +19,9 @@ machine-readable validation evidence.
 [Errata registry](ai-integrated/registry/overlays.json) ·
 [Validation](VALIDATION.md) ·
 [Current composition receipt](validation/composition-current.json) ·
-[Current R27 fixed-point build: PASS](validation/stacks-errata-a04446e-r27-build-2026-08-28.json) ·
-[Current R27 visual QA: PASS](validation/stacks-errata-a04446e-r27-visual-qa-2026-08-28.json) ·
-[Current R27 reproducibility: PASS](validation/stacks-errata-a04446e-r27-reproducibility-2026-08-28.json) ·
+[Current R28 fixed-point build: PASS](validation/stacks-errata-a04446e-r28-build-2026-08-28.json) ·
+[Current R28 visual QA: PASS](validation/stacks-errata-a04446e-r28-visual-qa-2026-08-28.json) ·
+[Current R28 reproducibility: PASS](validation/stacks-errata-a04446e-r28-reproducibility-2026-08-28.json) ·
 [Latest published release receipt: R27 PASS](validation/stacks-errata-a04446e-r27-release-2026-08-28.json) ·
 [Latest published preservation release: R27](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r27-2026-08-28) ·
 [Latest published Zenodo version: R27](https://doi.org/10.5281/zenodo.22149250) ·
@@ -54,7 +54,7 @@ The pinned upstream baseline is
 | GAGA | Root chapter composed through r3; corpus review closed | All 126 units are classified and all 79 substantive units decided; the current unified `gaga.pdf` is 23 pages, while the sealed r3 dossier records its historical 22-page build | [r3 dossier](gaga_r3/STATUS.md) · [live chapter source](gaga.tex) |
 | FGA | Root additions composed and notation-normalized; corpus review closed | All 1,253 units and 1,612 term links are dispositioned; selected independently written additions are in the combined source; the fixed-point Moduli build is 83 pages | [Overview](fga/README.md) · [status](fga/status.md) |
 | EGA | Partial root-source composition; direct-source review active | Selected local additions are present in root TeX; the complete English discovery and diplomatic French editions remain separate read-only inputs; review reaches EGA I 6.3.10 and continues at 6.4.1 | [EGA dossier](ega/README.md) |
-| Errata and Verdier | Root-composed, published, and anonymously verified through R27 | The integrated tree contains 28 overlays / 860 stable IDs. Its R1–R27 Stacks errata subset contains 27 batches, 848 correction IDs, and 961 exact v2 operations; R27 contributes 14 IDs and 14 manifest-bound replacements in `modules.tex` | [Registry](ai-integrated/registry/overlays.json) · [R27 release](validation/stacks-errata-a04446e-r27-release-2026-08-28.json) · [errata evidence](ai-integrated/candidates/commons/stacks/errata/) |
+| Errata and Verdier | Root-composed and deterministically validated through R28; public release through R27 | The integrated tree contains 29 overlays / 861 stable IDs. Its R1–R28 Stacks errata subset contains 28 batches, 849 correction IDs, and 962 exact v2 operations; R28 contributes one supersession-aware replacement in `smoothing.tex` | [Registry](ai-integrated/registry/overlays.json) · [R28 build](validation/stacks-errata-a04446e-r28-build-2026-08-28.json) · [errata evidence](ai-integrated/candidates/commons/stacks/errata/) |
 
 “Root-composed” means that the live top-level TeX tree changed and participates
 in the unified build. “Dossier-only” means that mappings, decisions, and
@@ -104,18 +104,24 @@ Run the fast repository-level integrity gate with:
 python tools/validate_unified_repository.py --pre-publication
 ```
 
-The current validated R27 build is bound to source
-`dc849731c9768048b993eb5a9df218118b817f40`, tree
-`b3462d130dedb3b3c0625cab0d7a2d406114e17f`. It produced 25 readable PDFs
-(2,492 pages; 26,609,586 bytes), reached a global fixed point on sweep four,
+The current validated R28 build is bound to source
+`9a68186b09bfd9ac66c51359d94b22074d43ebbf`, tree
+`fa91f3313576065f7ffa8a3c131435e5b764b162`. It produced 25 readable PDFs
+(2,492 pages; 26,612,367 bytes), reached a global fixed point on sweep four,
 and recorded zero fatal, missing-glyph, undefined-reference,
 undefined-citation, multiply-defined, rerun-required, or destination-warning
-diagnostics. All 55 pages of the affected `modules.pdf` were rendered and
-reviewed, including 10 correction-locus pages individually inspected at high
+diagnostics. All 37 pages of the affected `smoothing.pdf` were rendered and
+reviewed, including the correction-locus page 16 individually inspected at high
 resolution. A parallel rebuild in a second linked worktree used the same
 source, builder, environment, and sweep, and all 25 PDF identities were exactly
-equal. The 211,777-byte cumulative `modules.tex` postimage has SHA-256
-`BA34DCC89DCEE1BD5F0B9D3C986B18EE9618F723C10E7C7FD3DBD80E9E0B2300`.
+equal. The 134,835-byte cumulative `smoothing.tex` postimage has SHA-256
+`85A37C95D5591632D11E7BE6775039638B6F5200B44729ABCEA1A644D9F5B056`.
+
+R28 is registry commit `655c8e0e1fe9e7b350244a0ef0230fb6c38e0026`, tree
+`5eddd7d6db54d25eccf09cf21d5d7ab30c3ec1d3`. Its one exact operation,
+`MC-STK-ERR-1216-OP1`, explicitly supersedes R26 operation
+`MC-STK-ERR-1183-OP1`; the last-wins projection was replayed from the exact
+cumulative source and no isolated payload replaced the integrated file.
 
 R27 is public as tag
 [`ai-integrated-stacks-r27-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r27-2026-08-28)

@@ -11,10 +11,10 @@ French diplomatic editions remain separate read-only inputs.
 
 ## Current maintenance baseline
 
-The current validated composition contains **28 overlays / 860 stable IDs** at
-R27 admission cutoff `8c0539a6a7aa001cc6152daee92d5c7a49bf6a93`, tree
-`110a3006fcbb27b94c4170639aab56db507f9a89`. Its Stacks errata component is
-R1–R27: 27 batches, 848 correction IDs, and 961 exact v2 operations. The 22nd
+The current validated composition contains **29 overlays / 861 stable IDs** at
+R28 admission cutoff `655c8e0e1fe9e7b350244a0ef0230fb6c38e0026`, tree
+`5eddd7d6db54d25eccf09cf21d5d7ab30c3ec1d3`. Its Stacks errata component is
+R1–R28: 28 batches, 849 correction IDs, and 962 exact v2 operations. The 22nd
 overlay, `stacks-verdier-a04446e-1-2-13-r1`, remains a separately admitted,
 independently written historical-source contribution with 12 non-official
 stable units. It inserts one manifest-bound lemma into cumulative `derived.tex`;
@@ -24,20 +24,22 @@ R22 and R23 add 93 correction IDs and 106 manifest-bound operations affecting
 only `more-algebra.tex`. R24 adds 38 IDs and 57 operations affecting only
 `spaces-duality.tex`; R25 adds 131 IDs and 154 operations affecting only
 `artin.tex`; R26 adds 25 IDs and 39 operations affecting only `smoothing.tex`;
-R27 adds 14 IDs and 14 operations affecting only `modules.tex`. All are
-composed in registry order without replacing cumulative source wholesale. The
-R27 source composition is commit
-`5a42b7d2a04c4d08be7861ec91306d8be05d631e`, tree
-`ecbad57ee36b4fb290c80cb4d1f83eab50a47460`. The exact authority, registry,
+R27 adds 14 IDs and 14 operations affecting only `modules.tex`. R28 adds one
+operation affecting only `smoothing.tex`, explicitly superseding R26 operation
+`MC-STK-ERR-1183-OP1`. All are composed in registry order without replacing
+cumulative source wholesale. The R28 registry import is
+`1c26a825306ba0d14607e8364b49125ed3de39b5`; source composition is
+`1ed5b9fce0f75dec5ad551d32badd8e99abf058a`, tree
+`28c377be399e04fb75f7568000c62e5cfafa291f`. The exact authority, registry,
 operation, source, and preservation identities are recorded in the
 [current composition receipt](validation/composition-current.json).
 
-The current R27 source passed two linked-worktree fixed-point builds at source
-`dc849731c9768048b993eb5a9df218118b817f40`, tree
-`b3462d130dedb3b3c0625cab0d7a2d406114e17f`: 25 readable PDFs, 2,492 pages,
-26,609,586 PDF bytes, global fixed point on sweep four, and zero fatal or listed
-serious diagnostics. All 55 affected `modules.pdf` pages passed review,
-including 10 correction-locus pages at high resolution. All 25 PDF identities
+The current R28 source passed two linked-worktree fixed-point builds at source
+`9a68186b09bfd9ac66c51359d94b22074d43ebbf`, tree
+`fa91f3313576065f7ffa8a3c131435e5b764b162`: 25 readable PDFs, 2,492 pages,
+26,612,367 PDF bytes, global fixed point on sweep four, and zero fatal or listed
+serious diagnostics. All 37 affected `smoothing.pdf` pages passed review,
+including correction-locus page 16 at high resolution. All 25 PDF identities
 match exactly between the two builds. Earlier R26, R24, R22/R23, Verdier, and R21 receipts
 remain preserved as historical evidence for their exact scopes.
 
@@ -61,14 +63,11 @@ readback of 138 checked files totaling 25,024,008 bytes pass.
 
 ## Registry-order maintenance state
 
-R27 is admitted and composed into the generated source at
-`5a42b7d2a04c4d08be7861ec91306d8be05d631e`. Its 14 stable units and 14 exact
-operations affect only cumulative FAC-expanded `modules.tex`. The lease,
-candidate, and admission chain is bound as
-`1f05772d6f46ab851cdecdf53b70c11ea698cb14` →
-`77fcc9fc2341e72b077224399743f1062e73b228` →
-`8c0539a6a7aa001cc6152daee92d5c7a49bf6a93`; the exact manifest SHA-256 is
-`A4D03B8B47A1005B6DAC8B0EE4B9D0F4361E065E51D324B9634F38B51053DE3C`.
+R28 is admitted at `655c8e0e1fe9e7b350244a0ef0230fb6c38e0026` and
+composed at `1ed5b9fce0f75dec5ad551d32badd8e99abf058a`. Its one exact
+last-wins operation affects cumulative `smoothing.tex` and supersedes
+`MC-STK-ERR-1183-OP1`. Its manifest SHA-256 is
+`FA5448067DBB6FF452AF85C3E2B0EE4B4133723D7C7D958DA74EB7746E194CFA`.
 The rejected R26 producer `SMOOTHING-010` and R23 producer
 `MORE-ALGEBRA-J-006` remain excluded from the integrated source.
 

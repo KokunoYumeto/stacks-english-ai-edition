@@ -21,12 +21,12 @@ unified repository, not a separate edition.
 
 ## Integrated registry cutoff
 
-- Current integrated overlays: **28**, containing **860 stable IDs**.
-- Current cutoff: R27 admission commit
-  `8c0539a6a7aa001cc6152daee92d5c7a49bf6a93`, tree
-  `110a3006fcbb27b94c4170639aab56db507f9a89`.
-- The Stacks errata subset is **R1–R27**: 27 batches, 848 correction IDs, and
-  961 exact v2 operations. Its highest identifier is `MC-STK-ERR-1215`; gaps
+- Current integrated overlays: **29**, containing **861 stable IDs**.
+- Current cutoff: R28 admission commit
+  `655c8e0e1fe9e7b350244a0ef0230fb6c38e0026`, tree
+  `5eddd7d6db54d25eccf09cf21d5d7ab30c3ec1d3`.
+- The Stacks errata subset is **R1–R28**: 28 batches, 849 correction IDs, and
+  962 exact v2 operations. Its highest identifier is `MC-STK-ERR-1216`; gaps
   are intentional.
 - The 22nd overlay is `stacks-verdier-a04446e-1-2-13-r1`, an independently
   written historical-source insertion with 12 non-official stable units. It
@@ -37,7 +37,8 @@ The authoritative overlay list is
 contains the admitted R1–R21 composition, the separately composed Verdier
 insertion, the R22-before-R23 `more-algebra.tex` composition, the R24
 `spaces-duality.tex` composition, the R25 `artin.tex` composition, the R26
-`smoothing.tex` composition, and the R27 `modules.tex` composition;
+`smoothing.tex` composition, the R27 `modules.tex` composition, and the R28
+supersession-aware `smoothing.tex` composition;
 registry admission and source composition remain separately testable states.
 R21 is replayed as exact manifest-bound operations over cumulative
 `simplicial.tex`, and Verdier is inserted into cumulative `derived.tex` through
@@ -47,13 +48,14 @@ R22 and R23 add 93 IDs and 106 operations affecting only `more-algebra.tex`.
 R24 adds 38 IDs and 57 operations affecting only `spaces-duality.tex`. R25 adds
 131 IDs and 154 manifest-bound operations affecting only `artin.tex`. R26 adds
 25 IDs and 39 operations affecting only `smoothing.tex`. R27 adds 14 IDs and
-14 operations affecting only `modules.tex`. Every round is composed in
+14 operations affecting only `modules.tex`. R28 adds one ID and one operation
+affecting only `smoothing.tex`, superseding `MC-STK-ERR-1183-OP1`. Every round is composed in
 registry order from manifest operations; no isolated payload replaces
-cumulative source wholesale. The R27 source composition is commit
-`5a42b7d2a04c4d08be7861ec91306d8be05d631e`, tree
-`ecbad57ee36b4fb290c80cb4d1f83eab50a47460`. Its 211,777-byte `modules.tex`
+cumulative source wholesale. The R28 source composition is commit
+`1ed5b9fce0f75dec5ad551d32badd8e99abf058a`, tree
+`28c377be399e04fb75f7568000c62e5cfafa291f`. Its 134,835-byte `smoothing.tex`
 postimage has SHA-256
-`BA34DCC89DCEE1BD5F0B9D3C986B18EE9618F723C10E7C7FD3DBD80E9E0B2300`.
+`85A37C95D5591632D11E7BE6775039638B6F5200B44729ABCEA1A644D9F5B056`.
 
 R27 is bound by lease `1f05772d6f46ab851cdecdf53b70c11ea698cb14`,
 candidate `77fcc9fc2341e72b077224399743f1062e73b228`, and admission
@@ -63,12 +65,12 @@ candidate `77fcc9fc2341e72b077224399743f1062e73b228`, and admission
 imported at `f3bfc1b987ac9defc1b7811650bac0ec84a01373`. The exact R27 manifest
 SHA-256 is `A4D03B8B47A1005B6DAC8B0EE4B9D0F4361E065E51D324B9634F38B51053DE3C`.
 
-The current R27 fixed-point receipts cover 25 PDFs, 2,492 pages, and 26,609,586
-PDF bytes at source `dc849731c9768048b993eb5a9df218118b817f40`, tree
-`b3462d130dedb3b3c0625cab0d7a2d406114e17f`. Both linked-worktree builds are
-byte-for-byte reproducible. All 55 pages of the affected `modules.pdf` passed
-review, including 10 correction-locus pages inspected individually at high
-resolution. R27 is public as tag
+The current R28 fixed-point receipts cover 25 PDFs, 2,492 pages, and 26,612,367
+PDF bytes at source `9a68186b09bfd9ac66c51359d94b22074d43ebbf`, tree
+`fa91f3313576065f7ffa8a3c131435e5b764b162`. Both linked-worktree builds are
+byte-for-byte reproducible. All 37 pages of the affected `smoothing.pdf` passed
+review, including correction-locus page 16 inspected individually at high
+resolution. R27 remains public as tag
 [`ai-integrated-stacks-r27-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r27-2026-08-28)
 at commit `e624abadfe9e2ac1f311485c44c82d6c53df2df2`, tree
 `a2ba195c47c6cb41dca4e4ee7cb6292372e2e201`, and Zenodo version DOI
