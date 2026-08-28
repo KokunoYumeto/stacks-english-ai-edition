@@ -1165,7 +1165,7 @@ functoriality. The constructions below make the necessary sheafification
 explicit, identify the result with pullback from the one-point ringed space,
 and work for an arbitrary ringed space and ring map.
 \end{history}
-Let $(X, \mathcal{O}_X)$ be ringed space.
+Let $(X, \mathcal{O}_X)$ be a ringed space.
 Let $\alpha : R \to \Gamma(X, \mathcal{O}_X)$ be a ring homomorphism from
 a ring $R$ into the ring of global sections on $X$.
 Let $M$ be an $R$-module.
@@ -1187,7 +1187,7 @@ $$
 \right).
 $$
 Here the map on the component $\mathcal{O}_X$ corresponding to $j \in J$
-given by the section $\sum_i \alpha(r_{ij})$ where the $r_{ij}$
+is given by the section $\sum_i \alpha(r_{ij})$ where the $r_{ij}$
 are the matrix coefficients of the map in the presentation of $M$.
 \item Set $\mathcal{F}_3$ equal to the sheaf associated to the presheaf
 $U \mapsto \mathcal{O}_X(U) \otimes_R M$, where the map
@@ -2298,7 +2298,7 @@ $\Gamma(U, \mathcal{F}) \to \Gamma(U, \mathcal{G})$
 induced by $\varphi$ is surjective. Since both
 $\Gamma(U, \mathcal{F})$ and $\Gamma(U, \mathcal{G})$
 are isomorphic to $\Gamma(U, \mathcal{O}_U)^{\oplus r}$
-as an $\Gamma(U, \mathcal{O}_U)$-module we may
+as a $\Gamma(U, \mathcal{O}_U)$-module we may
 apply Algebra, Lemma \ref{algebra-lemma-fun} to see that
 $\Gamma(U, \mathcal{F}) \to \Gamma(U, \mathcal{G})$
 is injective. This finishes the proof.
@@ -4254,7 +4254,7 @@ we see that (1) holds.
 Assume (1) and (2) hold. Denote
 $\psi : \mathcal{L} \otimes_{\mathcal{O}_X} \mathcal{N} \to \mathcal{O}_X$
 the given isomorphism. Let $x \in X$. Choose an open neighbourhood
-$U$ an integer $n \geq 1$ and sections $s_i \in \mathcal{L}(U)$,
+$U$ of $x$, an integer $n \geq 1$ and sections $s_i \in \mathcal{L}(U)$,
 $t_i \in \mathcal{N}(U)$ such that $\psi(\sum s_i \otimes t_i) = 1$.
 Consider the isomorphisms
 $$
@@ -4343,7 +4343,7 @@ $$
 \SheafHom_{\mathcal{O}_X}(\mathcal{L}, \mathcal{O}_X)
 \longrightarrow \mathcal{O}_X
 $$
-Looking over an open covering trivialization $\mathcal{L}$, we see
+Looking over an open covering trivializing $\mathcal{L}$, we see
 that this map is an isomorphism. Hence $\mathcal{L}$ is invertible
 by Lemma \ref{lemma-invertible}.
 
@@ -4518,7 +4518,7 @@ is a set. The sheaf $\mathcal{F}$ is gotten by glueing $\mathcal{F}_j$,
 see Sheaves, Section
 \ref{sheaves-section-glueing-sheaves}. Note that the collection of
 all glueing data forms a set. The collection of all coverings
-$\mathcal{U} : X = \bigcup_{j \in J} U_i$ where $J \to \mathcal{P}(X)$,
+$\mathcal{U} : X = \bigcup_{j \in J} U_j$ where $J \to \mathcal{P}(X)$,
 $j \mapsto U_j$ is injective forms a set as well. For each covering
 there is a set of maps $r : J \to \mathbf{N}$. Hence the collection
 of all $\mathcal{F}$ forms a set.
@@ -4543,7 +4543,7 @@ corresponding to tensor product.
 \begin{lemma}
 \label{lemma-s-open}
 \begin{slogan}
-A (local) trivialisation of a linebundle
+A (local) trivialisation of a line bundle
 is the same as a (local) nonvanishing section.
 \end{slogan}
 Let $X$ be a ringed space. Assume that each stalk $\mathcal{O}_{X, x}$
@@ -4810,7 +4810,7 @@ $\mathcal{S}(U) \subset \mathcal{O}_X(U)$ is a multiplicative subset.
 \item There is a map of presheaves of rings
 $\mathcal{O}_X \to \mathcal{S}^{-1}\mathcal{O}_X$
 such that every local section of $\mathcal{S}$ maps to an invertible
-section of $\mathcal{O}_X$.
+section of $\mathcal{S}^{-1}\mathcal{O}_X$.
 \item For any homomorphism of presheaves of rings
 $\mathcal{O}_X \to \mathcal{A}$ such that each local section
 of $\mathcal{S}$ maps to an invertible section of $\mathcal{A}$
@@ -5360,7 +5360,7 @@ Let $X$ be a topological space. Let $\varphi : \mathcal{O}_1 \to \mathcal{O}_2$
 be a homomorphism of sheaves of rings on $X$. Let $k \geq 0$ be an integer.
 Let $\mathcal{F}$, $\mathcal{G}$ be sheaves of $\mathcal{O}_2$-modules.
 A {\it differential operator $D : \mathcal{F} \to \mathcal{G}$ of order $k$}
-is an is an $\mathcal{O}_1$-linear map such that for all local sections
+is an $\mathcal{O}_1$-linear map such that for all local sections
 $g$ of $\mathcal{O}_2$ the map $s \mapsto D(gs) - gD(s)$ is a
 differential operator of order $k - 1$. For the base case $k = 0$
 we define a differential operator of order $0$ to be an
@@ -5444,7 +5444,7 @@ where $g_0$ is a local section of $\mathcal{O}_2$ and $m, m'$
 are local sections of $\mathcal{F}$. If $D$ has order $1$, then $L_D$
 annihilates the local sections
 $$
-[m + m' - [m] - [m'],\quad
+[m + m'] - [m] - [m'],\quad
 f[m] - [fm], \quad
 g_0g_1[m] - g_0[g_1m] - g_1[g_0m] + [g_1g_0m]
 $$
@@ -5890,7 +5890,7 @@ is the map for the outer rectangle.
 We can choose a different presentation of $\mathcal{B}$ as a quotient of a
 polynomial algebra over $\mathcal{A}$ and still obtain the same object
 of $D(\mathcal{B})$. To explain this, suppose that $\mathcal{E}$ is
-a sheaves of sets on $X$ and $\alpha : \mathcal{E} \to \mathcal{B}$
+a sheaf of sets on $X$ and $\alpha : \mathcal{E} \to \mathcal{B}$
 a map of sheaves of sets. Then we obtain an $\mathcal{A}$-algebra
 homomorphism $\mathcal{A}[\mathcal{E}] \to \mathcal{B}$. If this map
 is surjective, i.e., if $\alpha(\mathcal{E})$ generates $\mathcal{B}$
@@ -5929,7 +5929,7 @@ Thus we obtain canonical maps of complexes
 $$
 \NL(\alpha_i) \longrightarrow \NL(\alpha)
 $$
-and it suffices to show these maps are quasi-isomorphism. To see this
+and it suffices to show these maps are quasi-isomorphisms. To see this
 it suffices to check on stalks (Lemma \ref{lemma-abelian}). If $x \in X$
 then the stalk of $\NL(\alpha)$ is the complex $\NL(\alpha_x)$ of
 Algebra, Section \ref{algebra-section-netherlander}
@@ -6076,7 +6076,7 @@ Y'' \ar[r] & Y'
 $$
 the composition of $(g')^*c$ and the map
 $c' : (g')^*\NL_{X'/Y'} \to \NL_{X''/Y''}$
-is the map $(g \circ g')^*\NL_{X''/Y''} \to \NL_{X/Y}$.
+is the map $(g \circ g')^*\NL_{X/Y} \to \NL_{X''/Y''}$.
 
 \begin{lemma}
 \label{lemma-exact-sequence-NL-ringed-topoi}
@@ -6102,7 +6102,7 @@ of cohomology sheaves.
 \end{lemma}
 
 \begin{proof}
-Consider the maps of sheaves rings
+Consider the maps of sheaves of rings
 $$
 (g \circ f)^{-1}\mathcal{O}_Z \to f^{-1}\mathcal{O}_Y \to \mathcal{O}_X
 $$
