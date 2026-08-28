@@ -2330,3 +2330,36 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   spans, historical prefixes, snapshot arithmetic, compilation, and the EGA
   validator pass; Git and public readback remain the release gates for this
   checkpoint.
+
+### EGA I 6.3.1--6.3.10 finite-type checkpoint
+
+- Direct-French review covers all eleven numbered statements and 23 registered
+  units in lines 297--558 of `ega1/ega1-6-fr.tex` under admitted F37ZW. The LF
+  slice is 12,633 bytes / SHA-256
+  `E7273071FC9FA1ECB9376619514666E1C129EDCEAFC5F2F7011696470BEA0439`;
+  the full source remains 57,781 bytes / SHA-256
+  `F95D2C43C1074A1CC6485D74E24F02BF8C5F098ADB571AA024B4B499F5CDE3FE`.
+- D000296--D000306, S001077--S001139, R000747--R000763, and
+  I000098--I000101 bind eleven decisions, 63 exact existing-tag edges,
+  seventeen residual dispositions, two resolved source-structure/erratum
+  issues, and two bounded visual referrals. All eleven statements are already
+  exact or derived Stacks results, so no duplicate root TeX is added.
+- The direct published erratum in `ega2/ega2-errata-addenda-fr.tex` lines
+  464--468 is 87 bytes / SHA-256
+  `8B76F577F0B4A5720377739BE82CB482FCD3DD9249F91EE66B9EECDC53318FBE`.
+  It corrects the 6.3.2.1 proof to `D(g_i)\subset W`; the diplomatic French
+  bytes remain unchanged. The second proof unit stays structurally attached to
+  6.3.2.1 but is explicitly routed as the proof of Proposition 6.3.2.
+- Proposition 6.3.10 is a short chain through 01J9, 01JP, 01T4, 01S1, 06EB,
+  and 01TA, with 00FV recording the historical Nullstellensatz route. Tag 06EB
+  strengthens the necessary direction to locally finite type. Its two diagrams
+  have exact semantic edges but no active three-surface crop triples;
+  I000100--I000101 and R000762--R000763 preserve those visual tasks as open
+  residuals without blocking subsequent semantic work.
+- The cumulative statement graph is 1,132 active / 1,139 physical rows across
+  380 source units, with 1,119 existing-tag rows using 314 distinct tags,
+  thirteen local-mirror rows, and 50 full-statement equivalences. Residual
+  history is 738 active / 763 physical rows with 25 superseded rows, twelve
+  open gaps, and thirteen local mirrors. The exact-byte, tag-label-file,
+  source-span, append-order, residual-route, visual-referral, and snapshot
+  checks pass. The next semantic cursor is EGA I 6.4.1.

@@ -1,6 +1,6 @@
 # Integration status
 
-Status date: **2026-08-27**
+Status date: **2026-08-28**
 
 Pinned official upstream: `a04446e57ec1fbc252a871afcec7752fb2807b14`
 
@@ -15,7 +15,7 @@ in each corpus dossier and in the machine-readable registry.
 | Tôhoku | Dossier-only closure through r71 | The sealed successor records 1,066 decisions, 679 decided units, 33 resolved source issues, and zero remaining gap-class dispositions. It explicitly changed no live TeX, PDF, canonical source, or cursor. |
 | GAGA | Root chapter composed through r3; corpus review closed | All 126 source units are classified and all 79 substantive units have reviewed decisions. The live 23-page English chapter and deterministic mapping replay pass. |
 | FGA | Root additions composed and notation-normalized; corpus review closed | The combined source contains the normalized FGA additions and post-merge dossier. The closure covers 1,253 units, 1,612 term links, and 579 append-only decisions; the recorded fixed-point Moduli build is 83 pages. |
-| EGA | Partial root-source composition; direct-source review active | Selected local additions are present in root TeX. Complete English discovery and diplomatic French edition trees remain separate read-only inputs. Review reaches EGA I 6.2.2 and continues at 6.3.1. |
+| EGA | Partial root-source composition; direct-source review active | Selected local additions are present in root TeX. Complete English discovery and diplomatic French edition trees remain separate read-only inputs. Review reaches EGA I 6.3.10 and continues at 6.4.1. |
 
 ## Errata state
 
@@ -48,10 +48,13 @@ in each corpus dossier and in the machine-readable registry.
   cumulative `spaces-duality.tex`; its isolated payload does not replace the
   integrated source. The committed 80,995-byte postimage has SHA-256
   `3CFCEF73EB9172CF69082FF07B9D84442DD5E545D8AD22917D5A694BAA57298E`.
-- Registry successor `53c517215ef542cfc987e2445a07bb23c7b120fb`
-  only materializes the active R25 lease. R25 is not admitted or composed.
-  The French `MORE-ALGEBRA-L-001..029` and `SMOOTHING-001..035` packets
-  remain unadmitted intake evidence and are not part of this fixed point.
+- Public registry branch head `001f36d41504aecfa77201a04fedff16d37b00f0`
+  admits R25 with 131 stable units (`MC-STK-ERR-1046`--`1176`) and 154 exact
+  operations affecting only `artin.tex`. Main still represents the R24 fixed
+  point; R25 remains explicitly awaiting manifest-bound composition, build,
+  import, and public readback. The French `MORE-ALGEBRA-L-001..029` and
+  `SMOOTHING-001..035` packets remain separate intake evidence and are not
+  silently included in this fixed point.
 - The current R24 content release is public at
   `50438757de89ec6e67385084d4a2d578707f5a37`; exact-head CI passed and
   anonymous readback matched 86 checked files totaling 5,155,955 bytes,

@@ -52,17 +52,18 @@ readback of 138 checked files totaling 25,024,008 bytes pass.
 
 R24 is admitted and composed into the generated source at
 `10c1c62f371921cdafbaa5e89f438a821a013621`. Successor registry head
-`53c517215ef542cfc987e2445a07bb23c7b120fb` only materializes the active R25
-lease; R25 is neither admitted nor composed. The French
-`MORE-ALGEBRA-L-001..029` and `SMOOTHING-001..035` packets remain unadmitted
-intake evidence, not admitted overlays or part of the current composition. The rejected R23 producer
+`001f36d41504aecfa77201a04fedff16d37b00f0` admits R25 with 131 stable units
+and 154 exact operations affecting only `artin.tex`; R25 is not yet composed
+into main. The French `MORE-ALGEBRA-L-001..029` and `SMOOTHING-001..035`
+packets remain separate intake evidence, not silently included in the current
+composition. The rejected R23 producer
 `MORE-ALGEBRA-J-006` likewise remains excluded from the integrated source.
 
 ## Recommended order
 
 | Stage | Bounded milestone | Why it comes here |
 | --- | --- | --- |
-| **1. Complete EGA I** | Continue from the completed §6.2 checkpoint through §6.3, then §§6.4–6.6, followed by staged checkpoints through §10. | This continues from the exact existing cursor, preserves statement order, and finishes the language-of-schemes layer before later corpora depend on it. |
+| **1. Complete EGA I** | Continue from the completed §6.3 checkpoint through §§6.4–6.6, followed by staged checkpoints through §10. | This continues from the exact existing cursor, preserves statement order, and finishes the language-of-schemes layer before later corpora depend on it. |
 | **2. Integrate EGA II** | Begin with §1 on affine morphisms; continue through §§2–4 on `Proj`, projective bundles, and ample sheaves; then close §§5–8 on quasi-projective, proper, projective, finite, and quasi-finite morphisms, valuative criteria, blowups, and contractions. | EGA II is the shortest path from scheme language to the global morphism machinery used by EGA III and substantial parts of SGA1. |
 | **3. Integrate the foundations of SGA1** | Treat Exposés I–V first, then the fibred-category bridge in Exposé VI and the descent layer in Exposés VIII–IX. The revised edition contains no Exposé VII. | This yields a coherent foundation in étale, smooth, and flat morphisms, Galois categories, fibred categories, and descent without prematurely taking on the advanced specialization and cohomological material. |
 | **4. Integrate EGA III** | Proceed in source order through coherent cohomology, projective and proper finiteness, formal functions, base change, and existence results. | EGA III can reuse EGA II's projective/proper foundation, the existing FAC, GAGA, and FGA source integrations, and the closed Tôhoku dossier-only mapping. It also supplies leverage for the advanced part of SGA1. |
@@ -71,20 +72,19 @@ intake evidence, not admitted overlays or part of the current composition. The r
 
 ## Immediate milestones
 
-The next semantic cursor is **EGA I §6.3.1**. EGA I §6.2 is complete with its
-two source statements routed to existing Stacks material and no duplicate root
-addition. The next checkpoints remain deliberately small enough to review,
-validate, and publish independently:
+The next semantic cursor is **EGA I §6.4.1**. EGA I §6.3 is complete with all
+eleven statements routed to existing Stacks material and no duplicate root
+addition. Its two diagrams retain explicit visual-evidence residuals without
+blocking source-order semantic work. The next checkpoints remain deliberately
+small enough to review, validate, and publish independently:
 
-1. **EGA I §6.3** — eleven semantic statements in the current discovery
-   inventory, covering the remainder of printed pages 144–147.
-2. **EGA I §§6.4–6.6** — 26 further semantic statements, closing EGA I §6.
-3. **EGA I §§7–10** — advance in source order through separately sealed
+1. **EGA I §§6.4–6.6** — 26 further semantic statements, closing EGA I §6.
+2. **EGA I §§7–10** — advance in source order through separately sealed
    section or subsection checkpoints until EGA I is complete.
-4. **EGA II §1** — seven subsections on affine morphisms, printed pages 5–18.
+3. **EGA II §1** — seven subsections on affine morphisms, printed pages 5–18.
    This is the first post–EGA I checkpoint and lies wholly within the currently
    sealed direct-authority range.
-5. **EGA II §§2–8** — proceed in bounded source-order tranches, beginning with
+4. **EGA II §§2–8** — proceed in bounded source-order tranches, beginning with
    homogeneous spectra and relative `Proj` rather than treating the volume as
    a single release.
 
