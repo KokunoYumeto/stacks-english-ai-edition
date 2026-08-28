@@ -1,0 +1,134 @@
+{
+  "schema": "illusie-stacks-relative-bar-r1-check-v1",
+  "status": "PASS_LOCAL_PENDING_PUBLIC_READBACK",
+  "formalization_id": "ILLUSIE-R1-RELATIVE-BAR",
+  "source": {
+    "work": "Complexe cotangent et deformations II",
+    "locus": "Section 11.4.4, printed pp. 172-173, physical PDF pp. 178-179",
+    "authority": {
+      "bytes": 3525502,
+      "sha256": "3ECAD82EBF13C74AC02CA452CF56FE1330BF5BF6F1CF00D2656AE7118AA44E13"
+    },
+    "lanes": {
+      "p172": {
+        "fr_diplomatic_bytes": 4848,
+        "fr_diplomatic_sha256": "87C9A1A38ABD60E53076EB3751428480B980BD4BC3200ADFE1DCE8E94DC86B21",
+        "fr_corrected_bytes": 4767,
+        "fr_corrected_sha256": "A1AB288A3B4D58CF8F9AA528F270E3A3735E9C72A7D87257DD65C791B7C3AB19",
+        "en_bytes": 4624,
+        "en_sha256": "DF0F9196FCDDF0981FDBC3AA7D7F344D4378F2A7DBE5BC97A62F5B7FBF7B9989",
+        "receipt_bytes": 10977,
+        "receipt_sha256": "D23CBAD0FFE3ECDF0C5AC209FA50ACF55E664F8248F2A833A4325D64353A15F7"
+      },
+      "p173": {
+        "fr_diplomatic_bytes": 5433,
+        "fr_diplomatic_sha256": "E4E06C0309957224FDF824E78C0DB4D0E806551134F15BE0687C046CC46389A8",
+        "fr_corrected_bytes": 5387,
+        "fr_corrected_sha256": "66AC56FAF2D5A470314584D46243423441972D1991578C21A30CBF78F65CE1F2",
+        "en_bytes": 5240,
+        "en_sha256": "43C732C7F8C462DE50C833579901D794092019D4B081400AAB9C306275019FE8",
+        "receipt_bytes": 10777,
+        "receipt_sha256": "8644D65DC425042C00264F4C24244C227513BB6A0151787BC1011FDBB968AF57"
+      }
+    }
+  },
+  "deduplication": {
+    "pinned_upstream_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "existing_general_result": {
+      "tag": "08ND",
+      "label": "simplicial-lemma-standard-simplicial-homotopy",
+      "relation": "strictly_more_general"
+    },
+    "exact_relative_bar_example_present_before_change": false,
+    "disposition": "add_specializing_example_not_duplicate_theorem"
+  },
+  "integration": {
+    "repository": "KokunoYumeto/unofficial-ai-integrated-stacks-project",
+    "base_commit": "e624abadfe9e2ac1f311485c44c82d6c53df2df2",
+    "branch": "codex/illusie-relative-bar-r1",
+    "issue": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/issues/1",
+    "changed_source": "simplicial.tex",
+    "source_preimage": {
+      "bytes": 239992,
+      "git_blob_sha1": "a34120e214b9a840b72889344a0f716ada037c97",
+      "sha256": "650ABA33A184CE9945DD70C04D83A3A4CBD6E540426B171E828336855DC97A0B"
+    },
+    "source_postimage": {
+      "bytes": 241631,
+      "git_blob_sha1": "bcec4895b138415bea4febc348ad4e3e9f519b44",
+      "sha256": "23E8DB6115B5B3465D2C1292D7E6CB244308204C6D1B7EE5F3AC071092D643F9"
+    },
+    "label": "example-relative-bar-resolution",
+    "source_lines": "7125-7162",
+    "rendered_number": "35.9",
+    "rendered_page": 71,
+    "official_tag": "",
+    "excluded_claim": "termwise flatness following the accepted acyclicity statement"
+  },
+  "validation": {
+    "source": {
+      "status": "PASS_RECOMPUTED",
+      "files": 9,
+      "hash_mismatches": 0
+    },
+    "math": {
+      "status": "PASS_INDEPENDENT",
+      "checks": [
+        "extension_restriction_adjunction",
+        "terms_and_left_R_action",
+        "faces_degeneracies_augmentation",
+        "simplicial_homotopy",
+        "associated_and_normalized_acyclicity",
+        "no_projective_or_flat_claim"
+      ],
+      "errors": []
+    },
+    "targeted_build": {
+      "status": "PASS",
+      "command": "pdflatex simplicial.tex; bibtex simplicial; pdflatex simplicial.tex twice",
+      "baseline": {
+        "commit": "e624abadfe9e2ac1f311485c44c82d6c53df2df2",
+        "pdf_bytes": 820763,
+        "pdf_sha256": "C4EED64A986506C4C50C67FD97E0647ACAA55FB8A710C9D559495FBE9972B462",
+        "pages": 73
+      },
+      "postimage": {
+        "pdf_bytes": 823533,
+        "pdf_sha256": "21152FE2BEB725A69152638106B30224325DC29F211D0D29DD7B960E0C4A80B8",
+        "log_bytes": 53104,
+        "log_sha256": "3E4C0C02752FAB353DE20F5F2AC3D04FADF7D4D2ACD003603B5B364507A613A7",
+        "aux_bytes": 20871,
+        "aux_sha256": "9296D1163CDAB4764A47D4D0FA90A0E3AEB6D07B9A92342DB93D83FC513B4A94",
+        "pages": 73
+      },
+      "diagnostic_delta": {
+        "fatal_errors": 0,
+        "undefined_control_sequences": 0,
+        "citation_warnings": 0,
+        "reference_warnings": 0,
+        "hyper_reference_warnings": 0,
+        "overfull_boxes": 0,
+        "underfull_boxes": 0,
+        "rerun_requests": 0
+      }
+    },
+    "visual_qa": {
+      "status": "PASS",
+      "dpi": 180,
+      "pages": [70, 71, 72, 73],
+      "render_sha256": {
+        "70": "890B5A0E68A49A1A1BDDDF929E44256F147C47F3AF9C558396ABAA93D6A399B4",
+        "71": "C68C97B9921388F4C6D850487C1910D81542A360A3F63432F1E416768A2DD11C",
+        "72": "8F65825A8B7A3A365B85B9B1E676D1B8D995063D219AC0A59DC37D9E19EEC185",
+        "73": "B0CCC33D1C3D607EE162BE0EB8D770F3B2E5AA97344A9B54F5DB6AB128ADBDDC"
+      },
+      "clipping": 0,
+      "overlap": 0,
+      "bad_breaks": 0,
+      "missing_glyphs": 0,
+      "broken_math": 0
+    },
+    "repository_gate": "PENDING_GITHUB_ACTIONS",
+    "public_readback": "PENDING"
+  }
+}

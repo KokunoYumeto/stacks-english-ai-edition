@@ -7122,6 +7122,45 @@ $$
 (with obvious notation).
 \end{example}
 
+\begin{example}
+\label{example-relative-bar-resolution}
+\begin{reference}
+\cite[II, Section 11.4.4, pp. 172--173]{cotangent}
+\end{reference}
+\begin{history}
+The cited source calls this the bar resolution relative to $K \to R$.
+Here we record its ordinary commutative-ring specialization. It is the
+extension--restriction instance of the standard resolution above.
+\end{history}
+Let $K \to R$ be a ring map. In
+Situation \ref{situation-adjoint-functors} take
+$$
+\mathcal{A} = \text{Mod}_R,\qquad \mathcal{S} = \text{Mod}_K,
+$$
+let $V : \mathcal{A} \to \mathcal{S}$ be restriction of scalars, and let
+$U : \mathcal{S} \to \mathcal{A}$ be given by
+$U(N) = R \otimes_K N$. For an $R$-module $M$ the resulting augmented
+simplicial $R$-module, denoted $\operatorname{Bar}(R/K, M)$, has terms
+$$
+\operatorname{Bar}_n(R/K, M) =
+R \otimes_K \ldots \otimes_K R \otimes_K M
+$$
+with $n + 1$ factors $R$. On a pure tensor
+$r_0 \otimes \ldots \otimes r_n \otimes m$, the map $d_i$ multiplies
+$r_i$ and $r_{i + 1}$ if $0 \leq i < n$, the map $d_n$ applies the action
+of $r_n$ to $m$, and the map $s_i$ inserts $1$ immediately after $r_i$.
+The augmentation in degree zero is
+$$
+R \otimes_K M \longrightarrow M,\qquad r \otimes m \longmapsto rm.
+$$
+By Lemma \ref{lemma-standard-simplicial-homotopy} the augmentation is a
+homotopy equivalence after restriction to simplicial $K$-modules. Hence
+Lemma \ref{lemma-homotopy-equivalence} shows that its associated augmented
+chain complex is acyclic. The same holds for its normalized augmented chain
+complex by Lemma \ref{lemma-quasi-isomorphism}. Thus both are resolutions of
+$M$ by $R$-modules.
+\end{example}
+
 
 
 
