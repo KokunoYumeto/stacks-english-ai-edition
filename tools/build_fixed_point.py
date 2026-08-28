@@ -31,6 +31,7 @@ DEFAULT_STEMS = (
     "homology",
     "more-algebra",
     "smoothing",
+    "modules",
     "schemes",
     "properties",
     "morphisms",

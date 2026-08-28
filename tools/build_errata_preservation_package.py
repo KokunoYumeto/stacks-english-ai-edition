@@ -44,7 +44,7 @@ LICENSE_ID = "gfdl-1.2-only"
 ZIP_TIMESTAMP = (1980, 1, 1, 0, 0, 0)
 ZIP_COMPRESSION_LEVEL = 9
 HASH_CHUNK_SIZE = 1024 * 1024
-EXPECTED_PDF_COUNT = 24
+EXPECTED_PDF_COUNT = 25
 SOURCE_REDACTION_MANIFEST = "SOURCE_PRIVACY_REDACTION_MANIFEST.json"
 ACCOUNT_REDACTION_REPLACEMENT = b"[LOCAL_ACCOUNT_REDACTED]"
 
@@ -1219,7 +1219,7 @@ verification.
   {source_redacted_members} strict-UTF-8 provenance member(s) were replaced,
   all changes are hash-bound in the embedded `{SOURCE_REDACTION_MANIFEST}`, and
   every unchanged source member remains byte-identical to `git archive`
-- `{pdf_name}` — the 24 validated chapter PDFs
+- `{pdf_name}` — the 25 validated chapter PDFs
 - `{validation_name}` — the supplied build and validation receipts
 - `RELEASE.json` — machine-readable release and archive identities
 - `SHA256SUMS.txt` — SHA-256 inventory for the other five release assets
