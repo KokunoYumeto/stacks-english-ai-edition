@@ -1,0 +1,78 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-publication/v1",
+  "status": "PASS",
+  "verified_at_utc": "2026-08-28T00:04:00Z",
+  "source": {
+    "commit": "9fb327dd32e18f612ece06e213299f869e9fb11d",
+    "tree": "608f8a9de6f641971e1f4c1681ea7729e1f145a5",
+    "official_stacks_baseline": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "last_composed_errata": "stacks-errata-a04446e-r24"
+  },
+  "github": {
+    "repository": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project",
+    "release": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r24-2026-08-28",
+    "tag": "ai-integrated-stacks-r24-2026-08-28",
+    "target": "9fb327dd32e18f612ece06e213299f869e9fb11d",
+    "published_at_utc": "2026-08-27T23:58:00Z",
+    "draft": false,
+    "prerelease": false,
+    "anonymous_readback": "PASS"
+  },
+  "zenodo": {
+    "concept_doi": "10.5281/zenodo.22135180",
+    "version_doi": "10.5281/zenodo.22135181",
+    "record": "https://zenodo.org/records/22135181",
+    "version": "R24-2026-08-28",
+    "created_at": "2026-08-28T02:02:27.149265+02:00",
+    "access_right": "open",
+    "license": "gfdl-1.2-only",
+    "anonymous_readback": "PASS"
+  },
+  "cross_host_identity": "PASS",
+  "assets": [
+    {
+      "name": "README.md",
+      "bytes": 2310,
+      "sha256": "7F50171402B422F81755DD14B570AFA82984B71313116B634FF6FC824331BF95"
+    },
+    {
+      "name": "RELEASE.json",
+      "bytes": 2761,
+      "sha256": "E951BFE4D5538D832AA6B93B2741606D3D736D1D01DA5213C9B07AA025D166FA"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 529,
+      "sha256": "57C85E55D663D5D91733604AE3503F2F529BB6DD41C1289E6F323EA102E0F0E8"
+    },
+    {
+      "name": "unofficial-ai-integrated-stacks-project-r24-pdfs.zip",
+      "bytes": 18654439,
+      "sha256": "8A906F454AEF4358281AC386428206B9136609AADF4EB583211EB829A4445DC2"
+    },
+    {
+      "name": "unofficial-ai-integrated-stacks-project-r24-source-9fb327dd.zip",
+      "bytes": 150605100,
+      "sha256": "370C88D213D1C2D49E7B7EFA9492180A4472B96922A47E0E25A3B4127EBEC3B4"
+    },
+    {
+      "name": "unofficial-ai-integrated-stacks-project-r24-validation.zip",
+      "bytes": 29824,
+      "sha256": "6DD33822F01743D637F86A66FBD8B33BC66046957DD55C62075710ADFBD7F022"
+    }
+  ],
+  "checks": {
+    "asset_count": 6,
+    "github_http_downloads": 6,
+    "zenodo_http_downloads": 6,
+    "github_sha256_matches": 6,
+    "zenodo_sha256_matches": 6,
+    "public_access": true,
+    "source_archive_listing": "PASS",
+    "pdf_archive_listing_and_member_hashes": "PASS",
+    "validation_archive_listing": "PASS",
+    "main_ci_run": 33127392602,
+    "main_ci_conclusion": "success"
+  },
+  "scope_note": "This preserves the integrated R24 checkpoint. EGA integration is partial through EGA I 6.1.13 and resumes at 6.2.1; neither complete EGA integration nor formal verification is claimed."
+}

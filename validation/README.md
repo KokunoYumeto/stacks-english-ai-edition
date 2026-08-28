@@ -126,6 +126,13 @@ binds public content head `50438757de89ec6e67385084d4a2d578707f5a37` to
 its passing exact-head workflow and anonymous readback of 86 checked files
 totaling 5,155,955 bytes, including both candidate PDFs.
 
+The subsequent
+[`ai-integrated-stacks-r24-publication-2026-08-28.json`](ai-integrated-stacks-r24-publication-2026-08-28.json)
+preserves that validated R24 state as one six-asset package on both GitHub and
+Zenodo. It records concept DOI `10.5281/zenodo.22135180`, version DOI
+`10.5281/zenodo.22135181`, exact public downloads, and byte/SHA-256 equality
+across both hosts.
+
 Successor registry head `53c517215ef542cfc987e2445a07bb23c7b120fb`
 only materializes the active R25 lease. R25 is neither admitted nor composed.
 The French `MORE-ALGEBRA-L-001..029` and `SMOOTHING-001..035` packets remain

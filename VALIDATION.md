@@ -85,6 +85,15 @@ workflow. Anonymous HTTPS readback matched 86 checked files totaling 5,155,955
 bytes by filename, byte count, SHA-256, and Git blob, including the two R24
 candidate PDFs.
 
+The [cross-host preservation receipt](validation/ai-integrated-stacks-r24-publication-2026-08-28.json)
+binds the exact six-file R24 package to the
+[GitHub release](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r24-2026-08-28)
+and [Zenodo record 22135181](https://doi.org/10.5281/zenodo.22135181), concept
+DOI [`10.5281/zenodo.22135180`](https://doi.org/10.5281/zenodo.22135180).
+Anonymous downloads from both hosts matched all filenames, byte counts, and
+SHA-256 values. This is a preservation checkpoint for R24, not evidence that
+the active EGA I--IV integration program is complete.
+
 The [historical R22/R23 publication receipt](validation/stacks-errata-a04446e-r22-r23-release-2026-08-27.json)
 binds the preceding public R22/R23 content head
 `3c2b49fe0d20519de4ab06951ac2cb5151b68782`, tree

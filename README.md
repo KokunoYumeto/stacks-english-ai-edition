@@ -23,6 +23,9 @@ machine-readable validation evidence.
 [Current visual QA: PASS](validation/stacks-errata-a04446e-r24-visual-qa-2026-08-27.json) ·
 [Current reproducibility: PASS](validation/stacks-errata-a04446e-r24-reproducibility-2026-08-27.json) ·
 [Current R24 publication receipt: PASS](validation/stacks-errata-a04446e-r24-release-2026-08-27.json) ·
+[Current preservation release](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r24-2026-08-28) ·
+[Zenodo DOI 10.5281/zenodo.22135181](https://doi.org/10.5281/zenodo.22135181) ·
+[Cross-host publication receipt: PASS](validation/ai-integrated-stacks-r24-publication-2026-08-28.json) ·
 [Historical R22/R23 publication receipt: PASS](validation/stacks-errata-a04446e-r22-r23-release-2026-08-27.json) ·
 [Historical Verdier publication receipt: PASS](validation/stacks-verdier-a04446e-1-2-13-r1-release-2026-08-26.json) ·
 [Historical R21 publication receipt: PASS](validation/errata-r18-r19-release-2026-08-25.json) ·
@@ -118,6 +121,15 @@ The R24 content release is public at
 passed, and anonymous HTTPS readback matched all 86 checked files (5,155,955
 bytes), including both candidate PDFs, by filename, byte count, SHA-256, and
 Git blob.
+
+The same validated R24 state is preserved as a downloadable source, PDF, and
+evidence release on
+[GitHub](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r24-2026-08-28)
+and [Zenodo](https://doi.org/10.5281/zenodo.22135181), under concept DOI
+[`10.5281/zenodo.22135180`](https://doi.org/10.5281/zenodo.22135180). Anonymous
+readback matched all six assets across both hosts by filename, byte count, and
+SHA-256. The source archive is bound to public commit `9fb327dd32e18f612ece06e213299f869e9fb11d`;
+the EGA program remains explicitly partial and continues at EGA I 6.2.1.
 
 The preceding R22/R23 content release remains public at
 `3c2b49fe0d20519de4ab06951ac2cb5151b68782`, tree

@@ -864,9 +864,9 @@ interface_raw = (ROOT / "interface.json").read_bytes()
 interface = json.loads(interface_raw.decode("utf-8"))
 publication_raw = (ROOT / "publication-current.json").read_bytes()
 publication = json.loads(publication_raw.decode("utf-8"))
-if (len(interface_raw) != 17685 or
+if (len(interface_raw) != 17986 or
         hashlib.sha256(interface_raw).hexdigest().upper() !=
-        "453673867E47E857BAF5BCF90F2E9DAAFDAD85DDABC1F070DD3F44E3D5B48D5D"):
+        "DFA4A7E9848A52E76E5CE9C801E886A255B6F9D6F939B3054C60D419071341B9"):
     ERRORS.append("final edition interface identity mismatch")
 if interface.get("status") != "active" or interface.get("ownership", {}).get("cross_tree_writes") is not False:
     ERRORS.append("edition interface is not active/read-only")
@@ -1100,12 +1100,20 @@ for language, expected in expected_publications.items():
             "concept_doi", "latest_doi", "version", "github_release")) != expected:
         ERRORS.append(f"current {language} publication binding changed")
 integrated_publication = current_publications.get("integrated_stacks", {})
-if (integrated_publication.get("github_main") !=
+if (integrated_publication.get("composition_main_at_audit") !=
         "2e7128e8a13328b851ed95b05fb7c94940c7bf54" or
-        integrated_publication.get("zenodo_lineage") is not None or
+        integrated_publication.get("release_source_commit") !=
+        "9fb327dd32e18f612ece06e213299f869e9fb11d" or
+        integrated_publication.get("github_release") !=
+        "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/"
+        "releases/tag/ai-integrated-stacks-r24-2026-08-28" or
+        integrated_publication.get("zenodo_concept_doi") !=
+        "10.5281/zenodo.22135180" or
+        integrated_publication.get("zenodo_version_doi") !=
+        "10.5281/zenodo.22135181" or
         integrated_publication.get("state") !=
-        "GitHub source current through R24; no integrated-project Zenodo "
-        "lineage at this checkpoint"):
+        "R24 source, PDF, and validation assets public and cross-host "
+        "byte-verified"):
     ERRORS.append("integrated Stacks publication state changed")
 if publication.get("schema") != "ega-external-publication-receipt-v1":
     ERRORS.append("current publication receipt schema changed")
