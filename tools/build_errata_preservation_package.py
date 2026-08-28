@@ -3,9 +3,12 @@
 
 The release directory follows the six-asset R25 layout: README.md,
 RELEASE.json, SHA256SUMS.txt, and deterministic source, PDF, and validation
-ZIP archives.  The source ZIP is produced by ``git archive``.  The other ZIPs
-use fixed metadata, ordering, and compression settings.  Every archive is
-reopened and its member identities are checked before any output is staged.
+ZIP archives.  The source ZIP is a commit-bound projection of ``git archive``:
+the live local account token is replaced in textual members, every replacement
+is bound by an embedded manifest, and every other source member remains
+byte-identical.  The other ZIPs use fixed metadata, ordering, and compression
+settings.  Every archive is reopened and its member identities are checked
+before any output is staged.
 
 Only basenames, repository-relative archive member names, public identifiers,
 byte counts, and cryptographic hashes enter generated public metadata.  Local
@@ -22,6 +25,7 @@ import os
 from pathlib import Path, PurePosixPath
 import re
 import shutil
+import stat
 import subprocess
 import sys
 import tempfile
@@ -41,6 +45,8 @@ ZIP_TIMESTAMP = (1980, 1, 1, 0, 0, 0)
 ZIP_COMPRESSION_LEVEL = 9
 HASH_CHUNK_SIZE = 1024 * 1024
 EXPECTED_PDF_COUNT = 24
+SOURCE_REDACTION_MANIFEST = "SOURCE_PRIVACY_REDACTION_MANIFEST.json"
+ACCOUNT_REDACTION_REPLACEMENT = b"[LOCAL_ACCOUNT_REDACTED]"
 
 # A preservation package may be cut from a commit later than the commit used
 # for the fixed-point build, because validation and release receipts follow the
@@ -162,6 +168,131 @@ def local_account_token() -> bytes | None:
     return token.encode("utf-8", errors="ignore").lower() or None
 
 
+def redact_account_token(data: bytes, account_token: bytes) -> tuple[bytes, int]:
+    """Replace every case-insensitive account-token occurrence deterministically."""
+
+    if not account_token:
+        raise PackageError("local account token is unavailable")
+    lowered = data.lower()
+    cursor = 0
+    pieces: list[bytes] = []
+    replacements = 0
+    while True:
+        index = lowered.find(account_token, cursor)
+        if index < 0:
+            pieces.append(data[cursor:])
+            break
+        pieces.append(data[cursor:index])
+        pieces.append(ACCOUNT_REDACTION_REPLACEMENT)
+        cursor = index + len(account_token)
+        replacements += 1
+    return b"".join(pieces), replacements
+
+
+def account_token_variants(account_token: bytes | None) -> tuple[bytes, ...]:
+    if not account_token:
+        return ()
+    variants = [account_token]
+    try:
+        decoded = account_token.decode("utf-8")
+    except UnicodeDecodeError:
+        return tuple(variants)
+    for encoding in ("utf-16-le", "utf-16-be"):
+        candidate = decoded.encode(encoding)
+        if candidate not in variants:
+            variants.append(candidate)
+    return tuple(variants)
+
+
+def account_token_occurs(data: bytes, account_token: bytes | None) -> bool:
+    lowered = data.lower()
+    return any(variant in lowered for variant in account_token_variants(account_token))
+
+
+def git_tree_modes(repository: Path, commit: str) -> dict[str, str]:
+    try:
+        completed = subprocess.run(
+            [
+                "git",
+                "-C",
+                os.fspath(repository),
+                "ls-tree",
+                "-r",
+                "-z",
+                commit,
+            ],
+            check=False,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+        )
+    except OSError as exc:
+        raise PackageError("git is unavailable") from exc
+    if completed.returncode:
+        raise PackageError("could not enumerate the bound Git tree")
+    modes: dict[str, str] = {}
+    for record in (item for item in completed.stdout.split(b"\x00") if item):
+        try:
+            metadata, encoded_path = record.split(b"\t", 1)
+            mode, object_type, _object_id = metadata.decode("ascii").split(" ", 2)
+            resolved_path = encoded_path.decode("utf-8")
+        except (UnicodeDecodeError, ValueError) as exc:
+            raise PackageError("Git tree entry metadata is malformed") from exc
+        if object_type != "blob" or mode not in {"100644", "100755", "120000"}:
+            raise PackageError("Git tree contains an unsupported source entry")
+        if resolved_path in modes:
+            raise PackageError("Git tree contains a duplicate source path")
+        modes[resolved_path] = mode
+    if not modes:
+        raise PackageError("bound Git tree is empty")
+    return modes
+
+
+def validate_redactable_source_text(
+    info: zipfile.ZipInfo,
+    data: bytes,
+    *,
+    git_mode: str,
+) -> None:
+    mode = (info.external_attr >> 16) & 0xFFFF
+    if git_mode not in {"100644", "100755"} or (
+        mode and not stat.S_ISREG(mode)
+    ):
+        raise PackageError(
+            f"non-regular source member {info.filename!r} contains the local "
+            "account token"
+        )
+    if b"\x00" in data:
+        raise PackageError(
+            f"binary source member {info.filename!r} contains the local account token"
+        )
+    try:
+        data.decode("utf-8", errors="strict")
+    except UnicodeDecodeError as exc:
+        raise PackageError(
+            f"non-UTF-8 source member {info.filename!r} contains the local "
+            "account token"
+        ) from exc
+
+
+def strip_zip64_extra(extra: bytes) -> bytes:
+    """Remove only ZIP64 size metadata after a member payload length changes."""
+
+    cursor = 0
+    pieces: list[bytes] = []
+    while cursor < len(extra):
+        if cursor + 4 > len(extra):
+            raise PackageError("source ZIP contains malformed extra-field metadata")
+        field_id = int.from_bytes(extra[cursor : cursor + 2], "little")
+        field_size = int.from_bytes(extra[cursor + 2 : cursor + 4], "little")
+        end = cursor + 4 + field_size
+        if end > len(extra):
+            raise PackageError("source ZIP contains malformed extra-field metadata")
+        if field_id != 0x0001:
+            pieces.append(extra[cursor:end])
+        cursor = end
+    return b"".join(pieces)
+
+
 def assert_no_local_path_bytes(
     data: bytes,
     *,
@@ -172,7 +303,7 @@ def assert_no_local_path_bytes(
         raise PackageError(
             f"public text {public_name!r} contains a local absolute path"
         )
-    if account_token is not None and account_token in data.lower():
+    if account_token_occurs(data, account_token):
         raise PackageError(
             f"public text {public_name!r} contains a local account name"
         )
@@ -186,7 +317,7 @@ def assert_no_local_account_bytes(
 ) -> None:
     """Reject the live account name while allowing already-redacted provenance."""
 
-    if account_token is not None and account_token in data.lower():
+    if account_token_occurs(data, account_token):
         raise PackageError(
             f"public text {public_name!r} contains a local account name"
         )
@@ -385,6 +516,316 @@ def build_git_archive(
         raise PackageError("git archive failed")
 
 
+def projected_zip_info(
+    *,
+    name: str,
+    source: zipfile.ZipInfo | None = None,
+    directory: bool = False,
+    payload_changed: bool = False,
+    git_mode: str | None = None,
+) -> zipfile.ZipInfo:
+    date_time = source.date_time if source is not None else ZIP_TIMESTAMP
+    info = zipfile.ZipInfo(name, date_time=date_time)
+    info.create_system = 3
+    if source is not None:
+        info.create_version = source.create_version
+        info.extract_version = source.extract_version
+        info.reserved = source.reserved
+        info.volume = source.volume
+    info.compress_type = (
+        source.compress_type
+        if source is not None
+        else (zipfile.ZIP_STORED if directory else zipfile.ZIP_DEFLATED)
+    )
+    if directory:
+        public_mode = 0o40755
+    elif git_mode is None:
+        public_mode = 0o100644
+    elif git_mode in {"100644", "100755", "120000"}:
+        public_mode = int(git_mode, 8)
+    else:
+        raise PackageError("source member has an unsupported Git mode")
+    info.external_attr = public_mode << 16
+    info.internal_attr = source.internal_attr if source is not None else 0
+    info.extra = (
+        strip_zip64_extra(source.extra)
+        if source is not None and payload_changed
+        else (source.extra if source is not None else b"")
+    )
+    info.comment = source.comment if source is not None else b""
+    if hasattr(info, "compress_level"):
+        info.compress_level = ZIP_COMPRESSION_LEVEL
+    else:  # Python 3.11 and earlier use the private storage name.
+        info._compresslevel = ZIP_COMPRESSION_LEVEL
+    return info
+
+
+def member_contains_account_token(
+    archive: zipfile.ZipFile,
+    info: zipfile.ZipInfo,
+    account_token: bytes,
+) -> bool:
+    tail = b""
+    variants = account_token_variants(account_token)
+    tail_length = max(max((len(item) for item in variants), default=1) - 1, 0)
+    with archive.open(info, mode="r") as handle:
+        for chunk in iter(lambda: handle.read(HASH_CHUNK_SIZE), b""):
+            scan = tail + chunk
+            if any(variant in scan.lower() for variant in variants):
+                return True
+            tail = scan[-tail_length:] if tail_length else b""
+    return False
+
+
+def build_sanitized_git_archive(
+    repository: Path,
+    commit: str,
+    tree: str,
+    prefix: str,
+    output: Path,
+    *,
+    account_token: bytes | None,
+) -> tuple[dict[str, Any], dict[str, Mapping[str, Any]], dict[str, Any]]:
+    """Build a complete deterministic source projection with declared redactions."""
+
+    if account_token is None:
+        raise PackageError(
+            "cannot derive a local account token for fail-closed source sanitization"
+        )
+    if output.exists():
+        raise PackageError("source archive output already exists")
+    manifest_name = f"{prefix}{SOURCE_REDACTION_MANIFEST}"
+    safe_member_name(manifest_name, directory_allowed=False)
+    raw_output = output.with_name(f".{output.name}.git-archive")
+    if raw_output.exists():
+        raise PackageError("private git-archive scratch output already exists")
+
+    transformed: dict[str, bytes] = {}
+    redactions: list[dict[str, Any]] = []
+    try:
+        build_git_archive(repository, commit, prefix, raw_output)
+        raw_identity = file_identity(raw_output, name="private-git-archive.zip")
+        raw_check = inspect_zip(raw_output, required_prefix=prefix)
+        tree_modes = git_tree_modes(repository, commit)
+        expected_files: dict[str, Mapping[str, Any]] = {
+            str(item["name"]): item for item in raw_check["members"]
+        }
+        archive_modes: dict[str, str] = {}
+        for item in raw_check["members"]:
+            archive_name = str(item["name"])
+            relative_name = archive_name[len(prefix) :]
+            if not relative_name or archive_name != f"{prefix}{relative_name}":
+                raise PackageError("source member is outside the declared prefix")
+            mode = tree_modes.get(relative_name)
+            if mode is None:
+                raise PackageError("source member is absent from the bound Git tree")
+            archive_modes[archive_name] = mode
+
+        with zipfile.ZipFile(raw_output, mode="r") as source_archive:
+            assert_no_local_account_bytes(
+                source_archive.comment,
+                public_name="source ZIP archive comment",
+                account_token=account_token,
+            )
+            infos = source_archive.infolist()
+            names = [info.filename for info in infos]
+            if manifest_name.casefold() in {name.casefold() for name in names}:
+                raise PackageError("source tree collides with the redaction manifest")
+            for info in infos:
+                for metadata_name, metadata in (
+                    ("member name", info.filename.encode("utf-8")),
+                    ("member comment", info.comment),
+                    ("member extra field", info.extra),
+                ):
+                    assert_no_local_account_bytes(
+                        metadata,
+                        public_name=f"source ZIP {metadata_name}",
+                        account_token=account_token,
+                    )
+                if info.is_dir() or not member_contains_account_token(
+                    source_archive, info, account_token
+                ):
+                    continue
+                original = source_archive.read(info)
+                validate_redactable_source_text(
+                    info,
+                    original,
+                    git_mode=archive_modes[info.filename],
+                )
+                if any(
+                    variant in original.lower()
+                    for variant in account_token_variants(account_token)[1:]
+                ):
+                    raise PackageError(
+                        f"encoded account token in source member {info.filename!r} "
+                        "cannot be safely redacted"
+                    )
+                public, count = redact_account_token(original, account_token)
+                if count <= 0 or account_token_occurs(public, account_token):
+                    raise PackageError("source-member account redaction failed")
+                transformed[info.filename] = public
+                public_identity = {
+                    "name": info.filename,
+                    "bytes": len(public),
+                    "sha256": sha256_bytes(public),
+                }
+                expected_files[info.filename] = public_identity
+                redactions.append(
+                    {
+                        "name": info.filename,
+                        "occurrences": count,
+                        "original_bytes": len(original),
+                        "original_sha256": sha256_bytes(original),
+                        "public_bytes": len(public),
+                        "public_sha256": public_identity["sha256"],
+                    }
+                )
+
+            redactions.sort(key=lambda item: str(item["name"]))
+            projection_manifest = {
+                "schema": "unofficial-ai-integrated-stacks-source-projection/v1",
+                "source": {"commit": commit, "tree": tree},
+                "archive_prefix": prefix,
+                "policy": (
+                    "Complete commit-bound git-archive projection. The live local "
+                    "account token is replaced by [LOCAL_ACCOUNT_REDACTED] in strict "
+                    "UTF-8 regular-file members; names, metadata, binary members, "
+                    "and alternate encodings must contain zero occurrences."
+                ),
+                "private_git_archive": {
+                    "bytes": raw_identity["bytes"],
+                    "sha256": raw_identity["sha256"],
+                    "entry_count": raw_check["entry_count"],
+                    "file_count": raw_check["file_count"],
+                    "member_tuple_set_sha256": raw_check[
+                        "member_tuple_set_sha256"
+                    ],
+                },
+                "public_projection": {
+                    "added_manifest_member": manifest_name,
+                    "redacted_member_count": len(redactions),
+                    "replacement_count": sum(
+                        int(item["occurrences"]) for item in redactions
+                    ),
+                    "unchanged_file_count": raw_check["file_count"]
+                    - len(redactions),
+                },
+                "redactions": redactions,
+                "checks": {
+                    "source_commit_and_tree_bound": True,
+                    "source_member_order_preserved": True,
+                    "source_member_timestamps_preserved": True,
+                    "source_member_modes_reconstructed_from_git_tree": True,
+                    "member_names_changed": 0,
+                    "binary_members_redacted": 0,
+                    "account_token_value_recorded": False,
+                    "all_changes_declared": True,
+                },
+            }
+            manifest_data = json_bytes(projection_manifest)
+            assert_no_local_path_bytes(
+                manifest_data,
+                public_name=SOURCE_REDACTION_MANIFEST,
+                account_token=account_token,
+            )
+            expected_files[manifest_name] = {
+                "name": manifest_name,
+                "bytes": len(manifest_data),
+                "sha256": sha256_bytes(manifest_data),
+            }
+
+            try:
+                with zipfile.ZipFile(
+                    output,
+                    mode="x",
+                    compression=zipfile.ZIP_DEFLATED,
+                    compresslevel=ZIP_COMPRESSION_LEVEL,
+                    allowZip64=True,
+                    strict_timestamps=True,
+                ) as public_archive:
+                    public_archive.comment = source_archive.comment
+                    for source_info in infos:
+                        output_info = projected_zip_info(
+                            name=source_info.filename,
+                            source=source_info,
+                            directory=source_info.is_dir(),
+                            payload_changed=source_info.filename in transformed,
+                            git_mode=(
+                                None
+                                if source_info.is_dir()
+                                else archive_modes[source_info.filename]
+                            ),
+                        )
+                        if source_info.is_dir():
+                            public_archive.writestr(output_info, b"")
+                            continue
+                        member_data = transformed.get(source_info.filename)
+                        if member_data is None:
+                            member_data = source_archive.read(source_info)
+                        public_archive.writestr(output_info, member_data)
+                    manifest_info = projected_zip_info(
+                        name=manifest_name,
+                        directory=False,
+                    )
+                    public_archive.writestr(manifest_info, manifest_data)
+            except (OSError, zipfile.BadZipFile) as exc:
+                raise PackageError(
+                    "could not create deterministic sanitized source ZIP"
+                ) from exc
+
+        source_check = inspect_zip(
+            output,
+            expected_files=expected_files,
+            required_prefix=prefix,
+            scan_public_text=True,
+            allow_redacted_provenance_paths=True,
+            account_token=account_token,
+        )
+        if source_check["entry_count"] != raw_check["entry_count"] + 1:
+            raise PackageError("source projection has an unexpected entry count")
+        with zipfile.ZipFile(raw_output, mode="r") as original_archive, zipfile.ZipFile(
+            output, mode="r"
+        ) as public_archive:
+            if original_archive.comment != public_archive.comment:
+                raise PackageError("source projection did not preserve archive metadata")
+            original_infos = original_archive.infolist()
+            public_infos = public_archive.infolist()
+            if [item.filename for item in public_infos[:-1]] != [
+                item.filename for item in original_infos
+            ] or public_infos[-1].filename != manifest_name:
+                raise PackageError("source projection did not preserve member order")
+            for original_info, public_info in zip(original_infos, public_infos[:-1]):
+                expected_extra = (
+                    strip_zip64_extra(original_info.extra)
+                    if original_info.filename in transformed
+                    else original_info.extra
+                )
+                expected_mode = (
+                    0o40755
+                    if original_info.is_dir()
+                    else int(archive_modes[original_info.filename], 8)
+                )
+                if (
+                    public_info.create_system != 3
+                    or public_info.external_attr != expected_mode << 16
+                    or original_info.internal_attr != public_info.internal_attr
+                    or original_info.date_time != public_info.date_time
+                    or original_info.create_version != public_info.create_version
+                    or original_info.extract_version != public_info.extract_version
+                    or original_info.comment != public_info.comment
+                    or expected_extra != public_info.extra
+                ):
+                    raise PackageError(
+                        "source projection did not preserve declared source metadata"
+                    )
+        return projection_manifest, expected_files, source_check
+    finally:
+        try:
+            raw_output.unlink(missing_ok=True)
+        except OSError:
+            pass
+
+
 def deterministic_zip(
     output: Path,
     members: Sequence[tuple[str, Path]],
@@ -441,6 +882,12 @@ def inspect_zip(
     members: list[dict[str, Any]] = []
     try:
         with zipfile.ZipFile(path, mode="r") as archive:
+            if scan_public_text:
+                assert_no_local_account_bytes(
+                    archive.comment,
+                    public_name=f"archive {path.name!r} comment",
+                    account_token=account_token,
+                )
             infos = archive.infolist()
             names = [info.filename for info in infos]
             if len(names) != len(set(names)) or len(names) != len(
@@ -450,16 +897,22 @@ def inspect_zip(
             for info in infos:
                 safe_member_name(info.filename, directory_allowed=True)
                 if scan_public_text:
-                    scanner = (
-                        assert_no_local_account_bytes
-                        if allow_redacted_provenance_paths
-                        else assert_no_local_path_bytes
-                    )
-                    scanner(
-                        info.filename.encode("utf-8"),
-                        public_name="archive member name",
-                        account_token=account_token,
-                    )
+                    for metadata_name, metadata in (
+                        ("member name", info.filename.encode("utf-8")),
+                        ("member comment", info.comment),
+                        ("member extra field", info.extra),
+                    ):
+                        assert_no_local_account_bytes(
+                            metadata,
+                            public_name=f"archive {metadata_name}",
+                            account_token=account_token,
+                        )
+                    if not allow_redacted_provenance_paths:
+                        assert_no_local_path_bytes(
+                            info.filename.encode("utf-8"),
+                            public_name="archive member name",
+                            account_token=None,
+                        )
                 if required_prefix is not None and not info.filename.startswith(
                     required_prefix
                 ):
@@ -471,23 +924,39 @@ def inspect_zip(
                 if info.is_dir():
                     continue
                 digest = hashlib.sha256()
-                scanner_tail = b""
+                account_tail = b""
+                path_tail = b""
+                token_variants = account_token_variants(account_token)
+                account_tail_length = max(
+                    max((len(item) for item in token_variants), default=1) - 1,
+                    0,
+                )
                 with archive.open(info, mode="r") as handle:
                     for chunk in iter(lambda: handle.read(HASH_CHUNK_SIZE), b""):
                         digest.update(chunk)
-                        if scan_public_text and is_public_text_member(info.filename):
-                            scan = scanner_tail + chunk
-                            scanner = (
-                                assert_no_local_account_bytes
-                                if allow_redacted_provenance_paths
-                                else assert_no_local_path_bytes
-                            )
-                            scanner(
-                                scan,
+                        if scan_public_text:
+                            account_scan = account_tail + chunk
+                            assert_no_local_account_bytes(
+                                account_scan,
                                 public_name=info.filename,
                                 account_token=account_token,
                             )
-                            scanner_tail = scan[-512:]
+                            account_tail = (
+                                account_scan[-account_tail_length:]
+                                if account_tail_length
+                                else b""
+                            )
+                            if (
+                                is_public_text_member(info.filename)
+                                and not allow_redacted_provenance_paths
+                            ):
+                                path_scan = path_tail + chunk
+                                assert_no_local_path_bytes(
+                                    path_scan,
+                                    public_name=info.filename,
+                                    account_token=None,
+                                )
+                                path_tail = path_scan[-512:]
                 members.append(
                     {
                         "name": info.filename,
@@ -709,6 +1178,8 @@ def build_readme(
     artifacts: Sequence[Mapping[str, Any]],
     receipt_names: Sequence[str],
     official_baseline: str | None,
+    source_redacted_members: int,
+    source_redaction_count: int,
 ) -> bytes:
     pages = sum(int(item["pages"]) for item in artifacts)
     pdf_bytes = sum(int(item["bytes"]) for item in artifacts)
@@ -743,10 +1214,11 @@ verification.
 
 ## Files
 
-- `{source_name}` — deterministic complete Git source snapshot; historical
-  provenance records may retain path-shaped strings whose live account name
-  was already redacted, and the archive is checked to contain no live local
-  account name
+- `{source_name}` — deterministic complete source projection of the bound Git
+  commit; {source_redaction_count} live-account-token occurrence(s) in
+  {source_redacted_members} strict-UTF-8 provenance member(s) were replaced,
+  all changes are hash-bound in the embedded `{SOURCE_REDACTION_MANIFEST}`, and
+  every unchanged source member remains byte-identical to `git archive`
 - `{pdf_name}` — the 24 validated chapter PDFs
 - `{validation_name}` — the supplied build and validation receipts
 - `RELEASE.json` — machine-readable release and archive identities
@@ -810,6 +1282,7 @@ def prepare_release(
     validation_zip_identity: Mapping[str, Any],
     readme_identity: Mapping[str, Any],
     source_check: Mapping[str, Any],
+    source_projection: Mapping[str, Any],
     pdf_check: Mapping[str, Any],
     validation_check: Mapping[str, Any],
 ) -> dict[str, Any]:
@@ -832,7 +1305,7 @@ def prepare_release(
     pages = sum(int(item["pages"]) for item in artifacts)
     pdf_bytes = sum(int(item["bytes"]) for item in artifacts)
     return {
-        "schema": "unofficial-ai-integrated-stacks-preservation-package/v1",
+        "schema": "unofficial-ai-integrated-stacks-preservation-package/v2",
         "release": release_id,
         "created_utc": created_utc,
         "title": f"{PROJECT_TITLE} — validated {display_label} checkpoint",
@@ -872,9 +1345,22 @@ def prepare_release(
                 "reopen_and_listing": "PASS",
                 "local_account_name_scan": "PASS",
                 "provenance_path_policy": (
-                    "exact Git snapshot; already-account-redacted path-shaped "
-                    "provenance strings may remain"
+                    "complete commit-bound privacy-sanitized Git projection; "
+                    "already-redacted path-shaped provenance strings may remain"
                 ),
+                "privacy_redaction_manifest": source_projection[
+                    "public_projection"
+                ]["added_manifest_member"],
+                "redacted_member_count": source_projection["public_projection"][
+                    "redacted_member_count"
+                ],
+                "replacement_count": source_projection["public_projection"][
+                    "replacement_count"
+                ],
+                "private_git_archive_member_tuple_set_sha256": source_projection[
+                    "private_git_archive"
+                ]["member_tuple_set_sha256"],
+                "unchanged_source_members_byte_identical": True,
             },
             "pdfs": {
                 "name": pdf_zip_identity["name"],
@@ -1128,11 +1614,15 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
         source_zip = temporary / source_name
         pdf_zip = temporary / pdf_name
         validation_zip = temporary / validation_name
-        build_git_archive(
-            repository,
-            commit,
-            f"{PROJECT_SLUG}-{label}/",
-            source_zip,
+        source_projection, source_expectations, source_check = (
+            build_sanitized_git_archive(
+                repository,
+                commit,
+                tree,
+                f"{PROJECT_SLUG}-{label}/",
+                source_zip,
+                account_token=account_token,
+            )
         )
         deterministic_zip(
             pdf_zip,
@@ -1145,6 +1635,7 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
 
         source_check = inspect_zip(
             source_zip,
+            expected_files=source_expectations,
             required_prefix=f"{PROJECT_SLUG}-{label}/",
             scan_public_text=True,
             allow_redacted_provenance_paths=True,
@@ -1183,6 +1674,12 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
             artifacts=artifacts,
             receipt_names=[str(item["name"]) for item in receipt_inputs],
             official_baseline=official_baseline,
+            source_redacted_members=source_projection["public_projection"][
+                "redacted_member_count"
+            ],
+            source_redaction_count=source_projection["public_projection"][
+                "replacement_count"
+            ],
         )
         assert_no_local_path_bytes(
             readme_data,
@@ -1210,6 +1707,7 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
             validation_zip_identity=validation_identity,
             readme_identity=readme_identity,
             source_check=source_check,
+            source_projection=source_projection,
             pdf_check=pdf_check,
             validation_check=validation_check,
         )
@@ -1255,7 +1753,7 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
         )
         package_receipt_value = {
             "schema": (
-                "unofficial-ai-integrated-stacks-preservation-package-build/v1"
+                "unofficial-ai-integrated-stacks-preservation-package-build/v2"
             ),
             "status": "PASS",
             "created_utc": created_utc,
@@ -1273,6 +1771,19 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
                     "member_tuple_set_sha256": source_check[
                         "member_tuple_set_sha256"
                     ],
+                    "privacy_redaction_manifest": source_projection[
+                        "public_projection"
+                    ]["added_manifest_member"],
+                    "redacted_member_count": source_projection[
+                        "public_projection"
+                    ]["redacted_member_count"],
+                    "replacement_count": source_projection["public_projection"][
+                        "replacement_count"
+                    ],
+                    "private_git_archive": source_projection[
+                        "private_git_archive"
+                    ],
+                    "redactions": source_projection["redactions"],
                 },
                 "pdfs": {
                     "name": pdf_name,
@@ -1295,14 +1806,16 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
             },
             "checks": {
                 "release_asset_count": 6,
-                "source_git_archive_reopen_and_listing": "PASS",
+                "source_projection_reopen_and_listing": "PASS",
                 "pdf_listing_and_member_hashes": "PASS",
                 "validation_listing_and_member_hashes": "PASS",
                 "checksum_inventory": "PASS",
                 "release_metadata_and_validation_local_absolute_paths_absent": True,
                 "public_text_local_account_names_absent": True,
                 "source_archive_local_account_names_absent": True,
-                "source_archive_is_exact_git_snapshot": True,
+                "source_archive_is_commit_bound_sanitized_projection": True,
+                "source_archive_differs_only_by_declared_redactions_and_manifest": True,
+                "source_archive_unchanged_members_byte_identical": True,
                 "source_archive_account_redacted_provenance_paths_allowed": True,
                 "package_receipt_is_release_asset": False,
                 "release_commit_descends_from_build_source": True,
