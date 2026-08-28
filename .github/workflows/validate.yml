@@ -88,7 +88,7 @@ jobs:
           ]
           assert len(all_stable_ids) == len(set(all_stable_ids))
           r26 = entries[-1]
-          assert r26['manifest_sha256'] == 'B21F37C4C5635262D5E4AB28DDA1C0CACE9BDCC1E373914ECF3C29A813303953'
+          assert r26['manifest_sha256'] == 'DF06FE7FD1F0A01E342D2C4FB55B9060904BBC5010CC02F2F6BF70E1FDEEB218'
           assert r26['stable_ids'] == [
               f'MC-STK-ERR-{number:04d}' for number in range(1177, 1202)
           ]
