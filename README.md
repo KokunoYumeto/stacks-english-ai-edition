@@ -53,7 +53,7 @@ The pinned upstream baseline is
 | Tôhoku | Dossier-only mapping and adjudication closed through sealed r71 | 1,066 decisions, 679 decided units, and zero remaining gap-class dispositions; r71 explicitly changed no live TeX, PDF, canonical source, or cursor | [Sealed r71 dossier](tohoku_r71/STATUS.md) · [historical working dossier](tohoku/STATUS.md) |
 | GAGA | Root chapter composed through r3; corpus review closed | All 126 units are classified and all 79 substantive units decided; the current unified `gaga.pdf` is 23 pages, while the sealed r3 dossier records its historical 22-page build | [r3 dossier](gaga_r3/STATUS.md) · [live chapter source](gaga.tex) |
 | FGA | Root additions composed and notation-normalized; corpus review closed | All 1,253 units and 1,612 term links are dispositioned; selected independently written additions are in the combined source; the fixed-point Moduli build is 83 pages | [Overview](fga/README.md) · [status](fga/status.md) |
-| EGA | Partial root-source composition; direct-source review active | Selected local additions are present in root TeX; the complete English discovery and diplomatic French editions remain separate read-only inputs; review reaches EGA I 6.1.13 and continues at 6.2.1 | [EGA dossier](ega/README.md) |
+| EGA | Partial root-source composition; direct-source review active | Selected local additions are present in root TeX; the complete English discovery and diplomatic French editions remain separate read-only inputs; review reaches EGA I 6.2.2 and continues at 6.3.1 | [EGA dossier](ega/README.md) |
 | Errata and Verdier | Root-composed through R24 in registry order | 25 admitted overlays and 690 stable IDs at cutoff `6df734ec`; Stacks errata R1–R24 comprise 24 batches, 678 IDs, and 754 exact v2 operations; Verdier contributes 12 separately admitted units | [Registry](ai-integrated/registry/overlays.json) · [Verdier release](validation/stacks-verdier-a04446e-1-2-13-r1-release-2026-08-26.json) · [errata evidence](ai-integrated/candidates/commons/stacks/errata/) |
 
 “Root-composed” means that the live top-level TeX tree changed and participates
@@ -129,7 +129,7 @@ and [Zenodo](https://doi.org/10.5281/zenodo.22135181), under concept DOI
 [`10.5281/zenodo.22135180`](https://doi.org/10.5281/zenodo.22135180). Anonymous
 readback matched all six assets across both hosts by filename, byte count, and
 SHA-256. The source archive is bound to public commit `9fb327dd32e18f612ece06e213299f869e9fb11d`;
-the EGA program remains explicitly partial and continues at EGA I 6.2.1.
+the EGA program remains explicitly partial and continues at EGA I 6.3.1.
 
 The preceding R22/R23 content release remains public at
 `3c2b49fe0d20519de4ab06951ac2cb5151b68782`, tree

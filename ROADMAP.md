@@ -62,7 +62,7 @@ intake evidence, not admitted overlays or part of the current composition. The r
 
 | Stage | Bounded milestone | Why it comes here |
 | --- | --- | --- |
-| **1. Complete EGA I** | Review EGA I §§6.2–6.3, then §§6.4–6.6, followed by staged checkpoints through §10. | This continues from the exact existing cursor, preserves statement order, and finishes the language-of-schemes layer before later corpora depend on it. |
+| **1. Complete EGA I** | Continue from the completed §6.2 checkpoint through §6.3, then §§6.4–6.6, followed by staged checkpoints through §10. | This continues from the exact existing cursor, preserves statement order, and finishes the language-of-schemes layer before later corpora depend on it. |
 | **2. Integrate EGA II** | Begin with §1 on affine morphisms; continue through §§2–4 on `Proj`, projective bundles, and ample sheaves; then close §§5–8 on quasi-projective, proper, projective, finite, and quasi-finite morphisms, valuative criteria, blowups, and contractions. | EGA II is the shortest path from scheme language to the global morphism machinery used by EGA III and substantial parts of SGA1. |
 | **3. Integrate the foundations of SGA1** | Treat Exposés I–V first, then the fibred-category bridge in Exposé VI and the descent layer in Exposés VIII–IX. The revised edition contains no Exposé VII. | This yields a coherent foundation in étale, smooth, and flat morphisms, Galois categories, fibred categories, and descent without prematurely taking on the advanced specialization and cohomological material. |
 | **4. Integrate EGA III** | Proceed in source order through coherent cohomology, projective and proper finiteness, formal functions, base change, and existence results. | EGA III can reuse EGA II's projective/proper foundation, the existing FAC, GAGA, and FGA source integrations, and the closed Tôhoku dossier-only mapping. It also supplies leverage for the advanced part of SGA1. |
@@ -71,11 +71,13 @@ intake evidence, not admitted overlays or part of the current composition. The r
 
 ## Immediate milestones
 
-The next semantic cursor is **EGA I §6.2.1**. The first two checkpoints are
-deliberately small enough to review, validate, and publish independently:
+The next semantic cursor is **EGA I §6.3.1**. EGA I §6.2 is complete with its
+two source statements routed to existing Stacks material and no duplicate root
+addition. The next checkpoints remain deliberately small enough to review,
+validate, and publish independently:
 
-1. **EGA I §§6.2–6.3** — 13 semantic statements in the current discovery
-   inventory: two in §6.2 and eleven in §6.3, covering printed pages 143–147.
+1. **EGA I §6.3** — eleven semantic statements in the current discovery
+   inventory, covering the remainder of printed pages 144–147.
 2. **EGA I §§6.4–6.6** — 26 further semantic statements, closing EGA I §6.
 3. **EGA I §§7–10** — advance in source order through separately sealed
    section or subsection checkpoints until EGA I is complete.

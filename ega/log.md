@@ -2305,3 +2305,28 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   final release audit. The checker, privacy, deterministic-map, compilation,
   and diff gates all pass before staging; Git and remote replay remain the
   release gates for this checkpoint.
+
+### EGA I 6.2.1--6.2.2 Artinian-prescheme checkpoint
+
+- Direct-French review covers the definition, proposition, and registered proof
+  unit in lines 259--295 of `ega1/ega1-6-fr.tex` under admitted F33. The exact
+  LF slice is 1,676 bytes / SHA-256
+  `B101BC3925470AC6FC0746653A7900BC29AD2CBE769570D78425BF6E5347FB66`;
+  the full source remains 57,781 bytes / SHA-256
+  `F95D2C43C1074A1CC6485D74E24F02BF8C5F098ADB571AA024B4B499F5CDE3FE`.
+- D000294--D000295, S001067--S001076, and R000742--R000746 bind two
+  decisions, ten exact existing-tag edges, and five residual dispositions.
+  01HW plus 00J5 gives the compound definition. The proposition splits across
+  00KJ, 00JB, 01OV, 01IS, 04MT, 0AAX, 02O0, and 01I5. No root TeX addition is
+  nonduplicative, and no formula or diagram child exists.
+- The cumulative statement graph is 1,069 active / 1,076 physical rows across
+  358 source units, with 1,056 existing-tag rows using 295 distinct tags,
+  thirteen local-mirror rows, and 49 full-statement equivalences. Residual
+  history is 721 active / 746 physical rows with 25 superseded rows, ten open
+  gaps, and thirteen local mirrors. No V, J, page, issue, or source-QA row was
+  added. The next semantic cursor is EGA I 6.3.1.
+- A000236--A000237 record the bounded mathematical and schema audits. Exact
+  pinned joins, semantic-triple uniqueness, strict-LF serialization, source
+  spans, historical prefixes, snapshot arithmetic, compilation, and the EGA
+  validator pass; Git and public readback remain the release gates for this
+  checkpoint.

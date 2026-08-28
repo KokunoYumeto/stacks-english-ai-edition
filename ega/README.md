@@ -263,13 +263,13 @@ EGA integration manifest enter the repository's root TeX tree.
   promotion requires its own active V row. Shared, full-page, and grouped crops
   do not qualify.
 - Current statement-level frontier: direct-French review is complete through
-  EGA I 6.1.13. The active graph has 1,059 edges across 355 generated units;
-  physical append-only history has 1,066 rows. Of the active edges 1,046
-  resolve to 289 distinct existing official tags and thirteen resolve to
+  EGA I 6.2.2. The active graph has 1,069 edges across 358 generated units;
+  physical append-only history has 1,076 rows. Of the active edges 1,056
+  resolve to 295 distinct existing official tags and thirteen resolve to
   explicitly untagged local-mirror integrations. Forty-nine rows are exact
-  full-statement equivalences. Residual history has 716 active and 741
+  full-statement equivalences. Residual history has 721 active and 746
   physical rows, with ten open labelled-coverage gaps. The next semantic
-  cursor is EGA I 6.2.1.
+  cursor is EGA I 6.3.1.
 
 ## State model
 
@@ -339,7 +339,32 @@ maintainer feedback remain append-only.
   direct-authority crops for source-error evidence; these are not edition
   outputs or three-surface visual certifications.
 
-### Current reviewed frontier: EGA I 6.1.1--6.1.13
+### Current reviewed frontier: EGA I 6.2.1--6.2.2
+
+The Artinian-prescheme subsection is reviewed against direct French lines
+259--295 in the admitted F33 source and exact labels at pinned Stacks commit
+`a04446e57ec1fbc252a871afcec7752fb2807b14`. D000294--D000295 bind its
+definition and proposition; S001067--S001076 route all three registered source
+units through ten exact tag-label-file joins; and R000742--R000746 retain the
+compound terminology, split proof, two necessary-hypothesis counterexamples,
+and the elementary quasi-compact-discrete finiteness step.
+
+The definition is exactly 01HW plus 00J5. The three-way Artinian / Noetherian
+discrete / Noetherian T1 equivalence is a theorem chain rather than a one-tag
+match: 00KJ and 00JB give the affine ring statements; 01OV supplies local
+Noetherianity and quasi-compactness; 01IS and 04MT turn T1 into dimension zero;
+0AAX decomposes a locally Noetherian dimension-zero scheme; and 02O0 with 01I5
+supplies affineness and the finite product description. Neither source unit has
+a formula or diagram child. No new root TeX label is warranted and no V, J,
+page, issue, or source-error row is added.
+
+The cumulative graph has 1,069 active / 1,076 physical statement rows across
+358 source units, 1,056 official-tag rows using 295 tags, thirteen local-mirror
+rows, and 49 exact full-statement equivalences. Residual history has 721 active
+/ 746 physical rows, 25 superseded rows, ten open gaps, and thirteen active
+local-mirror rows. The next semantic cursor is EGA I 6.3.1.
+
+### Prior reviewed frontier: EGA I 6.1.1--6.1.13
 
 The full Noetherian subsection is reviewed against direct French, the admitted
 F33 semantic receipt, and exact labels at pinned Stacks commit
@@ -372,14 +397,14 @@ source-error manifest is 5,012 bytes at SHA-256
 its sixteen immutable crops total 6,022,269 bytes. The ordered active referral
 set is I000088, I000089, I000091--I000097; I000090 remains resolved.
 
-The cumulative graph has 1,059 active / 1,066 physical statement rows across
-355 source units, 1,046 official-tag rows using 289 tags, thirteen local-mirror
-rows, and 49 exact full-statement equivalences. Residual history has 716 active
-/ 741 physical rows, 25 superseded rows, ten open gaps, and thirteen active
+The cumulative graph now has 1,069 active / 1,076 physical statement rows across
+358 source units, 1,056 official-tag rows using 295 tags, thirteen local-mirror
+rows, and 49 exact full-statement equivalences. Residual history now has 721 active
+/ 746 physical rows, 25 superseded rows, ten open gaps, and thirteen active
 local-mirror rows. M000024 adds only a subsection-to-section topical bridge to
 01OU; it makes no theorem-equivalence claim. This tranche has no registered
 formula or diagram child and appends no V, J, or page row. The next semantic
-cursor is EGA I 6.2.1.
+cursor after the successor §6.2 checkpoint is EGA I 6.3.1.
 
 Candidate generation now reads root TeX files and `tags/tags` from the pinned
 Git commit rather than the mutable Stacks worktree. `python ega/map.py --check`
@@ -673,8 +698,8 @@ tree immediately before atomic promotion, closing the reproduced concurrent-
 producer race. Independent mathematical and governance inverse audits both
 returned HARD PASS after the repairs while preserving their earlier failures.
 
-The immediate semantic work continues after direct-French EGA I 6.1.13 at
-EGA I 6.2.1. Every reviewed claim remains bound to its own historical source
+The immediate semantic work continues after direct-French EGA I 6.2.2 at
+EGA I 6.3.1. Every reviewed claim remains bound to its own historical source
 receipt; the 5.4 and 5.5 rows use F33 plus direct authority evidence rather
 than a mutable producer frontier.
 The last admitted reader interface is the D48 tuple
