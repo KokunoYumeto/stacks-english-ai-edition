@@ -25,7 +25,7 @@ functors by algebraic spaces. As references we suggest the papers
 \cite{ArtinI}, \cite{ArtinII}, \cite{ArtinVersal}.
 
 \medskip\noindent
-Some of the notation, conventions, and terminology in this chapter is awkward
+Some of the notation, conventions, and terminology in this chapter are awkward
 and may seem backwards to the more experienced reader. This is intentional.
 Please see Quot, Section \ref{quot-section-conventions} for an
 explanation.
@@ -101,7 +101,7 @@ for example Formal Deformation Theory, Lemma
 These formal objects are effective by assumption.
 Effective formal objects can be ``approximated'' by objects $x$ over
 finite type $S$-schemes $U$, see Lemma \ref{lemma-approximate}.
-This approximation uses the local rings of $S$ are G-rings and
+This approximation uses that the local rings of $S$ are G-rings and
 that $\mathcal{X}$ is limit preserving; it is perhaps the most difficult
 part of the proof relying as it does on general N\'eron desingularization to
 approximate formal solutions of algebraic equations over a Noetherian local
@@ -153,7 +153,7 @@ schemes over $S$.
 In the final section of this chapter as an application of Artin's axioms
 we prove Artin's theorem on the existence of contractions, see
 Section \ref{section-contractions}. The theorem says roughly that given an
-algebraic space $X'$ separated of finite type over $S$,
+algebraic space $X'$ separated and of finite type over $S$,
 a closed subset $T' \subset |X'|$, and a formal modification
 $$
 \mathfrak{f} : X'_{/T'} \longrightarrow \mathfrak{X}
@@ -167,7 +167,7 @@ and moreover $f$ is an isomorphism over $X \setminus T$. The proof proceeds
 by defining a functor $F$ on the category of locally Noetherian schemes
 over $S$ and proving Artin's axioms for $F$. Amusingly, in this
 application of Artin's axioms, openness of versality is not the hardest
-thing to prove, instead the proof that $F$ is limit preserving requires
+thing to prove; instead the proof that $F$ is limit preserving requires
 a lot of work and preliminary results.
 
 
@@ -253,7 +253,7 @@ corresponds to a morphism $x' \to x$ of $\mathcal{X}$, hence a morphism
 $p(x' \to x) : \Spec(A') \to \Spec(A)$ which in turn corresponds to a
 ring map $A \to A'$. As $\mathcal{X}$ is a category
 over the category of schemes over $S$ we see that $A \to A'$ is
-$\Lambda$-algebra homomorphism. Thus we obtain a functor
+a $\Lambda$-algebra homomorphism. Thus we obtain a functor
 \begin{equation}
 \label{equation-predeformation-category}
 p : \mathcal{F} = \mathcal{F}_{\mathcal{X}, k, x_0}
@@ -283,7 +283,7 @@ of $\mathcal{X}$ are groupoids. Let $A \to A'$ be a morphism of
 $\mathcal{C}_\Lambda$ and let $x_0 \to x$ be an object of $\mathcal{F}(A)$.
 Because $\mathcal{X}$ is fibred in groupoids, we can find a morphism
 $x' \to x$ lying over $\Spec(A') \to \Spec(A)$. Since the composition
-$A \to A' \to k$ is equal the given map $A \to k$ we see (by uniqueness
+$A \to A' \to k$ is equal to the given map $A \to k$ we see (by uniqueness
 of pullbacks up to isomorphism) that the pullback via $\Spec(k) \to \Spec(A')$
 of $x'$ is $x_0$, i.e., that there exists a morphism $x_0 \to x'$
 lying over $\Spec(k) \to \Spec(A')$ compatible with
@@ -303,7 +303,7 @@ the identity.
 \noindent
 Let $S$ be a locally Noetherian base scheme. Let
 $F : \mathcal{X} \to \mathcal{Y}$ be a $1$-morphism between categories
-fibred in groupoids over $(\Sch/S)_{fppf}$. Let $k$ is a field
+fibred in groupoids over $(\Sch/S)_{fppf}$. Let $k$ be a field
 of finite type over $S$. Let $x_0$ be an object of $\mathcal{X}$ lying
 over $\Spec(k)$. Set $y_0 = F(x_0)$ which is an object of $\mathcal{Y}$
 lying over $\Spec(k)$. Then $F$ induces a functor
@@ -391,7 +391,7 @@ any base scheme.
 
 \medskip\noindent
 The following lemma is also correct when $Y$, $X'$, $X$, $Y'$ are
-algebraic spaces, see (insert future reference here).
+algebraic spaces.
 
 \begin{lemma}
 \label{lemma-pushout}
@@ -419,8 +419,8 @@ is an equivalence of categories.
 \end{lemma}
 
 \begin{proof}
-Let $y'$ be an object of left hand side. The sheaf
-$\mathit{Isom}(y', y')$ on the category of schemes over $Y'$
+Let $y'_1, y'_2$ be objects of the left hand side. The sheaf
+$\mathit{Isom}(y'_1, y'_2)$ on the category of schemes over $Y'$
 is representable by an algebraic space $I$ over $Y'$, see
 Algebraic Stacks, Lemma \ref{algebraic-lemma-representable-diagonal}.
 We conclude that the functor of the lemma is fully faithful as
@@ -569,20 +569,20 @@ this becomes
 \end{equation}
 We are given that each of the functors
 $$
-\mathcal{X}_{Y'} \to \mathcal{X}_Y \times_{\mathcal{Y}_Y} \mathcal{Z}_Y,
+\mathcal{X}_{Y'} \to \mathcal{X}_Y \times_{\mathcal{X}_X} \mathcal{X}_{X'},
 \quad
-\mathcal{Y}_{Y'} \to \mathcal{X}_X \times_{\mathcal{Y}_X} \mathcal{Z}_X,
+\mathcal{Y}_{Y'} \to \mathcal{Y}_Y \times_{\mathcal{Y}_X} \mathcal{Y}_{X'},
 \quad
 \mathcal{Z}_{Y'} \to
-\mathcal{X}_{X'} \times_{\mathcal{Y}_{X'}} \mathcal{Z}_{X'}
+\mathcal{Z}_Y \times_{\mathcal{Z}_X} \mathcal{Z}_{X'}
 $$
 are equivalences. An object of the right hand side of
 (\ref{equation-RS-fibre-product}) is a system
 $$
 ((x_Y, z_Y, \phi_Y), (x_{X'}, z_{X'}, \phi_{X'}), (\alpha, \beta)).
 $$
-Then $(x_Y, x_{Y'}, \alpha)$ is isomorphic to the image of an object
-$x_{Y'}$ in $\mathcal{X}_{Y'}$ and $(z_Y, z_{Y'}, \beta)$ is isomorphic
+Then $(x_Y, x_{X'}, \alpha)$ is isomorphic to the image of an object
+$x_{Y'}$ in $\mathcal{X}_{Y'}$ and $(z_Y, z_{X'}, \beta)$ is isomorphic
 to the image of an object $z_{Y'}$ of $\mathcal{Z}_{Y'}$. The pair of
 morphisms $(\phi_Y, \phi_{X'})$ corresponds to a morphism $\psi$
 between the images of $x_{Y'}$ and $z_{Y'}$ in $\mathcal{Y}_{Y'}$.
@@ -687,8 +687,8 @@ introduced in Formal Deformation Theory, Situation
 Let $S$ be a locally Noetherian scheme. Let $\mathcal{X}$ be a category
 fibred in groupoids over $(\Sch/S)_{fppf}$. Let $k$ be a
 field of finite type over $S$ and let $l/k$ be a finite extension.
-Let $x_0$ be an object of $\mathcal{F}$ lying over $\Spec(k)$.
-Denote $x_{l, 0}$ the restriction of $x_0$ to $\Spec(l)$.
+Let $x_0$ be an object of $\mathcal{X}$ lying over $\Spec(k)$.
+Denote by $x_{l, 0}$ the restriction of $x_0$ to $\Spec(l)$.
 Then there is a canonical functor
 $$
 (\mathcal{F}_{\mathcal{X}, k , x_0})_{l/k}
@@ -712,7 +712,7 @@ $$
 see Formal Deformation Theory, Situation
 \ref{formal-defos-situation-change-of-fields}. Thus an object of this
 is a morphism $x_0 \to x$ of $\mathcal{X}$ lying over the morphism
-$\Spec(k) \to \Spec(B \times_l k)$. Choosing pullback functor for $\mathcal{X}$
+$\Spec(k) \to \Spec(B \times_l k)$. Choosing a pullback functor for $\mathcal{X}$
 we can associate to $x_0 \to x$ the morphism $x_{l, 0} \to x_B$
 where $x_B$ is the restriction of $x$ to $\Spec(B)$ (via the morphism
 $\Spec(B) \to \Spec(B \times_l k)$ coming from $B \times_l k \subset B$).
@@ -884,8 +884,8 @@ Algebraic Stacks, Lemma \ref{algebraic-lemma-2-fibre-product-general}.
 Also, $\mathcal{R}$ is representable by an algebraic space $R$
 smooth over $U$ (via either projection, see
 Algebraic Stacks, Lemma \ref{algebraic-lemma-stack-presentation}).
-Hence, choose an scheme $U'$ and a surjective \'etale morphism
-$U' \to R$ we see that $U'$ is smooth over $U$, hence locally of
+Choose a scheme $U'$ and a surjective \'etale morphism
+$U' \to R$. Then $U'$ is smooth over $U$, hence locally of
 finite type over $S$. As $(\Sch/U')_{fppf} \to \mathcal{R}$ is
 surjective and smooth, we have reduced the question to the case
 of tangent spaces.
@@ -929,7 +929,7 @@ T\mathcal{F}_{\mathcal{U}, l, u_0}
 \varphi \bmod \epsilon = \varphi_0\}
 $$
 An element of the right hand side is determined by its values on
-$f_1, \ldots, f_n$ hence the dimension is at most $n$ and we win.
+$f_1, \ldots, f_n$; hence the dimension is at most $n$ and we win.
 Some details omitted.
 \end{proof}
 
@@ -941,7 +941,7 @@ fibred in groupoids over $(\Sch/S)_{fppf}$. Assume $\mathcal{X}$,
 $\mathcal{Y}$, $\mathcal{Z}$ satisfy (RS).
 Let $k$ be a field of finite type over $S$ and let $w_0$ be an object of
 $\mathcal{W} = \mathcal{X} \times_\mathcal{Y} \mathcal{Z}$ over $k$.
-Denote $x_0, y_0, z_0$ the objects of $\mathcal{X}, \mathcal{Y}, \mathcal{Z}$
+Denote by $x_0, y_0, z_0$ the objects of $\mathcal{X}, \mathcal{Y}, \mathcal{Z}$
 you get from $w_0$. Then there is a $6$-term exact sequence
 $$
 \xymatrix{
@@ -992,8 +992,8 @@ $p : \mathcal{X} \to (\Sch/S)_{fppf}$ be a category fibred in groupoids.
 of a Noetherian complete local $S$-algebra $R$, objects $\xi_n$ of
 $\mathcal{X}$ lying over $\Spec(R/\mathfrak m_R^n)$, and morphisms
 $f_n : \xi_n \to \xi_{n + 1}$ of $\mathcal{X}$ lying over
-$\Spec(R/\mathfrak m^n) \to \Spec(R/\mathfrak m^{n + 1})$
-such that $R/\mathfrak m$ is a field of finite type over $S$.
+$\Spec(R/\mathfrak m_R^n) \to \Spec(R/\mathfrak m_R^{n + 1})$
+such that $R/\mathfrak m_R$ is a field of finite type over $S$.
 \item A {\it morphism of formal objects}
 $a : \xi = (R, \xi_n, f_n) \to \eta = (T, \eta_n, g_n)$
 is given by morphisms $a_n : \xi_n \to \eta_n$ such that for every $n$
@@ -1053,8 +1053,8 @@ $\Spec(R/\mathfrak m^n) \to \Spec(R/\mathfrak m^{n + 1})$ is a first order
 thickening of affine schemes over $S$. Hence the assumption on $F$ means
 that we can successively lift $\xi_1$ to objects $\xi_2, \xi_3, \ldots$
 of $\mathcal{X}$ endowed with compatible isomorphisms
-$\eta_n|_{\Spec(R/\mathfrak m^{n - 1})} \cong \eta_{n - 1}$
-and $F(\eta_n) \cong \xi_n$.
+$\xi_n|_{\Spec(R/\mathfrak m^{n - 1})} \cong \xi_{n - 1}$
+and $F(\xi_n) \cong \eta_n$.
 \end{proof}
 
 \noindent
@@ -1139,7 +1139,7 @@ proof below that they form stacks for a certain topology on this
 category.
 
 \medskip\noindent
-We first prove fully faithfulness. Let $R$ be a Noetherian complete
+We first prove full faithfulness. Let $R$ be a Noetherian complete
 local $S$-algebra with $k = R/\mathfrak m$ of finite type over $S$.
 Let $x, x'$ be objects of $\mathcal{X}$ over $R$. As $\mathcal{X}$ is
 an algebraic stack $\mathit{Isom}(x, x')$ is representable by an
@@ -1193,7 +1193,7 @@ $$
 Composing with the projection morphisms $V_n \to U$ we obtain a compatible
 system of morphisms $u'_n : \Spec(R'/(\mathfrak m')^n) \to U$.
 By Case I the family $(u'_n)$ comes from a unique
-morphism $u' : \Spec(R') \to U$. Denote $x'$ the object of $\mathcal{X}$
+morphism $u' : \Spec(R') \to U$. Denote by $x'$ the object of $\mathcal{X}$
 over $\Spec(R')$ we get by applying the $1$-morphism $f$ to $u'$.
 By construction, there exists a morphism of formal objects
 $$
@@ -1203,9 +1203,9 @@ $$
 (R, \xi_n, f_n)
 $$
 lying over $\Spec(R') \to \Spec(R)$. Note that $R' \otimes_R R'$ is a finite
-product of spectra of Noetherian complete local rings to which our current
-discussion applies. Denote $p_0, p_1 : \Spec(R' \otimes_R R') \to \Spec(R')$
-the two projections. By the fully faithfulness shown above there exists
+product of Noetherian complete local rings to which our current
+discussion applies. Denote by $p_0, p_1 : \Spec(R' \otimes_R R') \to \Spec(R')$
+the two projections. By the full faithfulness shown above there exists
 a canonical isomorphism $\varphi : p_0^*x' \to p_1^*x'$ because we have
 such isomorphisms over
 $\Spec((R' \otimes_R R')/\mathfrak m^n(R' \otimes_R R'))$.
@@ -1213,7 +1213,7 @@ We omit the proof that the isomorphism $\varphi$ satisfies the cocycle
 condition (see Stacks, Definition \ref{stacks-definition-descent-data}).
 Since $\{\Spec(R') \to \Spec(R)\}$ is an fppf covering we conclude
 that $x'$ descends to an object $x$ of $\mathcal{X}$ over $\Spec(R)$.
-We omit the proof that $x_n$ is the restriction of $x$ to
+We omit the proof that $\xi_n$ is the restriction of $x$ to
 $\Spec(R/\mathfrak m^n)$.
 \end{proof}
 
@@ -1312,7 +1312,7 @@ map $C \to R$. Set $\mathfrak m_C = C \cap \mathfrak m_R$.
 
 \medskip\noindent
 Choose a $\Lambda$-algebra surjection $\Lambda[x_1, \ldots, x_s] \to k$
-and denote $\mathfrak m'$ the kernel.
+and denote by $\mathfrak m'$ the kernel.
 By the universal property of polynomial rings we may lift this
 to a $\Lambda$-algebra map $\Lambda[x_1, \ldots, x_s] \to R$.
 We add some variables (i.e., we increase $s$ a bit) mapping to generators
@@ -1365,7 +1365,7 @@ $$
 \Lambda[x_1, \ldots, x_s]_{\mathfrak m'} \to B,
 $$
 a maximal ideal $\mathfrak m_B$ of $B$ lying over $\mathfrak m'$, and
-elements $a'_i, b'_i, c'_{ij}, k'_{ij} \in B'$ such that
+elements $a'_i, b'_i, c'_{ij}, k'_{ij} \in B$ such that
 \begin{enumerate}
 \item $\kappa(\mathfrak m') = \kappa(\mathfrak m_B)$ which implies
 that $\Lambda[x_1, \ldots, x_s]_{\mathfrak m'} \subset B_{\mathfrak m_B}
@@ -1376,7 +1376,7 @@ $\mathfrak m_B$, see remark preceding Smoothing Ring Maps, Theorem
 (\mathfrak m')^N P$, and
 \item $f_j(a'_1, \ldots, a'_u) = \sum c'_{ji} b'_i$ and $\sum k'_{ij}b'_j = 0$.
 \end{enumerate}
-Set $A = B/(b'_1, \ldots, b'_r)$ and denote $\mathfrak m_A$ the
+Set $A = B/(b'_1, \ldots, b'_r)$ and denote by $\mathfrak m_A$ the
 image of $\mathfrak m_B$ in $A$. (Note that $A$ is essentially of finite
 type over $\Lambda$; at the end of the proof we will show how to obtain
 an $A$ which is of finite type over $\Lambda$.) There is a ring map
@@ -1419,9 +1419,9 @@ $\mathfrak m_A \subset A$ with $B$ \'etale over
 $\Lambda[x_1, \ldots, x_s]_{\mathfrak m'}$. Hence $A$ is of finite
 type over the Noetherian ring $\Lambda[x_1, \ldots, x_s]_{\mathfrak m'}$.
 Thus we can write $A = (A_0)_{\mathfrak m'}$ for some finite type
-$\Lambda[x_1, \ldots, x_n]$ algebra $A_0$. Then
+$\Lambda[x_1, \ldots, x_s]$ algebra $A_0$. Then
 $A = \colim (A_0)_f$ where
-$f \in \Lambda[x_1, \ldots, x_n] \setminus \mathfrak m'$, see
+$f \in \Lambda[x_1, \ldots, x_s] \setminus \mathfrak m'$, see
 Algebra, Lemma \ref{algebra-lemma-localization-colimit}.
 Because $p : \mathcal{X} \to (\Sch/S)_{fppf}$ is limit preserving on
 objects, we see that
@@ -1492,14 +1492,15 @@ is $\mathcal{X} \times_\mathcal{Y} \mathcal{Z}$.
 \begin{proof}
 This is formal. Proof of (1). Let $T = \lim_{i \in I} T_i$ be the directed
 limit of affine schemes $T_i$ over $S$. We will prove that the functor
-$\colim \mathcal{X}_{T_i} \to \mathcal{X}_T$ is essentially surjective.
+$\colim (\mathcal{X} \times_\mathcal{Y} \mathcal{Z})_{T_i} \to
+(\mathcal{X} \times_\mathcal{Y} \mathcal{Z})_T$ is essentially surjective.
 Recall that an object of the fibre product over $T$ is a quadruple
 $(T, x, z, \alpha)$ where $x$ is an object of $\mathcal{X}$ lying over $T$,
 $z$ is an object of $\mathcal{Z}$ lying over $T$, and
 $\alpha : p(x) \to q(z)$ is a morphism in the fibre category of
 $\mathcal{Y}$ over $T$. By assumption on $\mathcal{X}$ and $\mathcal{Z}$
 we can find an $i$ and objects $x_i$ and $z_i$ over $T_i$ such that
-$x_i|_T \cong T$ and $z_i|_T \cong z$. Then $\alpha$ corresponds to
+$x_i|_T \cong x$ and $z_i|_T \cong z$. Then $\alpha$ corresponds to
 an isomorphism $p(x_i)|_T \to q(z_i)|_T$ which comes from an isomorphism
 $\alpha_{i'} : p(x_i)|_{T_{i'}} \to q(z_i)|_{T_{i'}}$ by our assumption on
 $\mathcal{Y}$. After replacing $i$ by $i'$, $x_i$ by $x_i|_{T_{i'}}$, and
@@ -1508,8 +1509,8 @@ is an object of the fibre product over $T_i$ which restricts to
 an object isomorphic to $(T, x, z, \alpha)$ over $T$ as desired.
 
 \medskip\noindent
-We omit the arguments showing that $\colim \mathcal{X}_{T_i} \to \mathcal{X}_T$
-is fully faithful in (2).
+We omit the arguments showing that $\colim (\mathcal{X} \times_\mathcal{Y} \mathcal{Z})_{T_i} \to
+(\mathcal{X} \times_\mathcal{Y} \mathcal{Z})_T$ is fully faithful in (2).
 \end{proof}
 
 \begin{lemma}
@@ -1548,7 +1549,7 @@ Then $\Delta$ is locally of finite type.
 \begin{proof}
 We apply Criteria for Representability, Lemma
 \ref{criteria-lemma-check-property-limit-preserving}.
-Let $V$ be an affine scheme $V$ locally of finite presentation over $S$
+Let $V$ be an affine scheme locally of finite presentation over $S$
 and let $\theta$ be an object of $\mathcal{X} \times \mathcal{X}$
 over $V$. Let $F_\theta$ be an algebraic space representing
 $\mathcal{X} \times_{\Delta, \mathcal{X} \times \mathcal{X}, \theta}
@@ -1649,7 +1650,7 @@ Set $k = \kappa(u_0)$.
 Note that the composition $\Spec(k) \to S$ is also of finite type,
 see Morphisms, Lemma \ref{morphisms-lemma-composition-finite-type}.
 Let $p : \mathcal{X} \to (\Sch/S)_{fppf}$ be a category fibred in groupoids.
-Let $x$ be an object of $\mathcal{X}$ which lies over $U$. Denote $x_0$
+Let $x$ be an object of $\mathcal{X}$ which lies over $U$. Denote by $x_0$
 the pullback of $x$ by $u_0$. By the $2$-Yoneda lemma $x$ corresponds
 to a $1$-morphism
 $$
@@ -1684,8 +1685,7 @@ $\mathcal{X}$.
 
 \begin{lemma}
 \label{lemma-versality-matches}
-With notation as in Definition \ref{definition-versal}.
-Let $R = \mathcal{O}_{U, u_0}^\wedge$.
+With notation as in Definition \ref{definition-versal}, let $R = \mathcal{O}_{U, u_0}^\wedge$.
 Let $\xi$ be the formal object of $\mathcal{X}$
 over $R$ associated to $x|_{\Spec(R)}$, see (\ref{equation-approximation}).
 Then
@@ -1759,8 +1759,8 @@ extensions.
 \label{lemma-versal-change-of-field}
 Let $S$, $\mathcal{X}$, $U$, $x$, $u_0$ be as in
 Definition \ref{definition-versal}. Let $l$ be a field and let
-$u_{l, 0} : \Spec(l) \to U$ be a morphism with image $u_0$ such that
-$l/k = \kappa(u_0)$ is finite. Set $x_{l, 0} = x_0|_{\Spec(l)}$.
+$u_{l, 0} : \Spec(l) \to U$ be a morphism with image $u_0$, where
+$k = \kappa(u_0)$ and $l/k$ is finite. Set $x_{l, 0} = x_0|_{\Spec(l)}$.
 If $\mathcal{X}$ satisfies (RS) and $x$ is versal at $u_0$, then
 $$
 \mathcal{F}_{(\Sch/U)_{fppf}, l, u_{l, 0}}
@@ -1830,7 +1830,7 @@ Morphisms of Spaces, Definition
 \ref{spaces-morphisms-definition-finite-type-point}.
 Then $W$ is locally of finite type over $S$ and
 $w_0$ is a finite type point of $W$.
-Let $l = \kappa(z_0)$. Denote $z_{l, 0}$, $v_{l, 0}$,
+Let $l = \kappa(z_0)$. Denote by $z_{l, 0}$, $v_{l, 0}$,
 $u_{l, 0}$, and $x_{l, 0}$ the objects of
 $\mathcal{Z}$, $(\Sch/V)_{fppf}$, $(\Sch/U)_{fppf}$,
 and $\mathcal{X}$ over $\Spec(l)$ obtained by pullback to $\Spec(l) = w_0$.
@@ -1950,7 +1950,7 @@ F(T) =
 \end{matrix}
 \right.
 $$
-Let $\mathcal{X} = \mathcal{S}_F$ is the category fibred in sets associated
+Let $\mathcal{X} = \mathcal{S}_F$ be the category fibred in sets associated
 to $F$, see Algebraic Stacks, Section \ref{algebraic-section-split}.
 Then $\mathcal{X} \to (\Sch/S)_{fppf}$ is limit preserving on objects and
 there exists an effective, versal formal object $\xi$ over $R$.
@@ -1977,7 +1977,7 @@ above, then a system of equations which has a solution in $R$ has a
 solution in the henselization of $\Lambda_{\mathfrak m}$.
 In other words, the approximation property holds for
 $\Lambda_{\mathfrak m}^h$. This implies that $\Lambda_{\mathfrak m}^h$
-is a G-ring (insert future reference here; see also discussion in
+is a G-ring (see also discussion in
 Smoothing Ring Maps, Section \ref{smoothing-section-introduction})
 which in turn implies that $\Lambda_{\mathfrak m}$ is a G-ring.
 \end{example}
@@ -2104,7 +2104,7 @@ $\mathcal{X} \times_\mathcal{Y} \mathcal{Z} \to \mathcal{Z}$.
 \end{lemma}
 
 \begin{proof}
-Follows immediately from
+This follows immediately from
 Lemma \ref{lemma-fibre-product-deformation-categories}
 and
 Formal Deformation Theory, Lemma
@@ -2114,14 +2114,14 @@ Formal Deformation Theory, Lemma
 \begin{lemma}
 \label{lemma-smooth-smooth}
 Let $S$ be a locally Noetherian scheme. Let $f : \mathcal{X} \to \mathcal{Y}$
-be a $1$-morphisms of categories fibred in groupoids over $(\Sch/S)_{fppf}$.
+be a $1$-morphism of categories fibred in groupoids over $(\Sch/S)_{fppf}$.
 If $f$ is formally smooth on objects, then $f$ satisfies
 (\ref{equation-smooth}). If $f$ is representable by algebraic spaces
 and smooth, then $f$ satisfies (\ref{equation-smooth}).
 \end{lemma}
 
 \begin{proof}
-A reformulation of Lemma \ref{lemma-formally-smooth-on-deformation-categories}.
+This is a reformulation of Lemma \ref{lemma-formally-smooth-on-deformation-categories}.
 \end{proof}
 
 \begin{lemma}
@@ -2148,7 +2148,7 @@ arguments of the proof are essentially bookkeeping.
 \medskip\noindent
 Let $V$ be a scheme over $S$ and let $y$ be an object of $\mathcal{Y}$ over
 $V$. Let $Z$ be an algebraic space representing the $2$-fibre product
-$\mathcal{Z} = \mathcal{X} \times_{f, \mathcal{X}, y} (\Sch/V)_{fppf}$.
+$\mathcal{Z} = \mathcal{X} \times_{f, \mathcal{Y}, y} (\Sch/V)_{fppf}$.
 We have to show that the projection morphism $Z \to V$ is smooth, see
 Algebraic Stacks, Definition
 \ref{algebraic-definition-relative-representable-property}.
@@ -2253,7 +2253,7 @@ Here are the axioms we will consider on $\mathcal{X}$.
 following: the supremum of all the cardinalities
 $|\Ob(\mathcal{X}_{\Spec(k)})/\cong|$ and
 $|\text{Arrows}(\mathcal{X}_{\Spec(k)})|$ where $k$ runs over the finite
-type fields over $S$ is $\leq$ than the size of some
+type fields over $S$ is $\leq$ the size of some
 object of $(\Sch/S)_{fppf}$.} to be ignored by
 readers who are not interested in set theoretical issues,
 \item[{[0]}] $\mathcal{X}$ is a stack in groupoids for the \'etale topology,
@@ -2285,7 +2285,7 @@ openness of versality.
 
 \noindent
 Let $S$ be a scheme. Let $F : (\Sch/S)_{fppf}^{opp} \to \textit{Sets}$ be a
-functor. Denote $\mathcal{X} = \mathcal{S}_F$ the category fibred in sets
+functor. Denote by $\mathcal{X} = \mathcal{S}_F$ the category fibred in sets
 associated to $F$, see Algebraic Stacks, Section \ref{algebraic-section-split}.
 In this section we provide a translation between the material above
 as it applies to $\mathcal{X}$, to statements about $F$.
@@ -2303,7 +2303,7 @@ A \longmapsto \{x \in F(\Spec(A)) \mid x|_{\Spec(k)} = x_0 \}.
 $$
 Recall that we do not distinguish between
 categories cofibred in sets over $\mathcal{C}_\Lambda$
-and functor $\mathcal{C}_\Lambda \to \textit{Sets}$,
+and functors $\mathcal{C}_\Lambda \to \textit{Sets}$,
 see Formal Deformation Theory, Remarks
 \ref{formal-defos-remarks-cofibered-groupoids}
 (\ref{formal-defos-item-convention-cofibered-sets}).
@@ -2390,7 +2390,7 @@ Here are the axioms we will consider on $F$.
 \item[{[-1]}]  a set theoretic condition\footnote{The condition is the
 following: the supremum of all the cardinalities
 $|F(\Spec(k))|$ where $k$ runs over the finite
-type fields over $S$ is $\leq$ than the size of some
+type fields over $S$ is $\leq$ the size of some
 object of $(\Sch/S)_{fppf}$.} to be ignored by
 readers who are not interested in set theoretical issues,
 \item[{[0]}] $F$ is a sheaf for the \'etale topology,
@@ -2457,7 +2457,7 @@ it suffices to show that the image of $U \times_F V \to V$ contains all
 finite type points of $V$, see
 Morphisms, Lemma \ref{morphisms-lemma-enough-finite-type-points}.
 Let $v_0 \in V$ be a finite type point. Then $k = \kappa(v_0)$ is
-a finite type field over $S$. Denote $x_0$ the composition
+a finite type field over $S$. Denote by $x_0$ the composition
 $\Spec(k) \xrightarrow{v_0} V \to F$. Then
 $(u_{k, x_0}, v_0) : \Spec(k) \to U \times_F V$ is a point mapping to
 $v_0$ and we win.
@@ -2556,7 +2556,7 @@ open. Hence it suffices to show that the image of $W \to V$ contains all
 finite type points of $V$, see
 Morphisms, Lemma \ref{morphisms-lemma-enough-finite-type-points}.
 Let $v_0 \in V$ be a finite type point. Then $k = \kappa(v_0)$ is
-a finite type field over $S$. Denote $x_0 = y|_{\Spec(k)}$
+a finite type field over $S$. Set $x_0 = y|_{\Spec(k)}$,
 the pullback of $y$ by $v_0$. Then $(u_{k, x_0}, v_0)$ will give
 a morphism $\Spec(k) \to W$ whose composition with $W \to V$
 is $v_0$ and we win.
@@ -2744,7 +2744,7 @@ of $\mathcal{X}$ lying over $U \to T$ satisfying
 $$
 0 \to \kappa(u) \to \mathcal{O}_T \to \mathcal{O}_U \to 0
 $$
-\item there does {\bf not} exist a pair $(W, \alpha)$
+\item there does {\bf not} exist a pair $(W, \beta)$
 consisting of an open neighbourhood $W \subset T$ of $u$
 and a morphism $\beta : y|_W \to x$ such that the composition
 $$
@@ -2844,7 +2844,7 @@ we see that $x_B \to x$ lies over a morphism $\Spec(B) \to U$
 which factors through $\Spec(\mathcal{O}_{U, u}/\mathfrak m_u^m)$
 for some $m \geq n$. In other words, $x_B \to x$ factors
 through $\xi_m$ giving a map $x_B \to \xi_m$.
-The compatibility condition on the morphism $\alpha$
+The compatibility condition on the morphism $\beta$
 in condition (3) translates into the condition that
 $$
 \xymatrix{
@@ -2903,7 +2903,7 @@ U \ar[rd] \ar[rdd] \ar[rrd] \\
 & U \ar[r] & S
 }
 $$
-The morphism $i : U \to Z$ comes the isomorphism $x \to x'|_U$.
+The morphism $i : U \to Z$ comes from the isomorphism $x \to x'|_U$.
 Let $z_0 = i(u_0) \in Z$. By Lemma \ref{lemma-base-change-versal}
 we see that $Z \to U'$ is smooth at $z_0$. After replacing $U$ by an
 affine open neighbourhood of $u_0$, replacing $U'$ by the corresponding
@@ -2961,7 +2961,7 @@ Let $S$ be a locally Noetherian scheme. Let $\mathcal{X}$ be a category
 fibred in groupoids over $(\Sch/S)_{fppf}$ having (RS*).
 Let $x$ be an object of
 $\mathcal{X}$ over an affine scheme $U$ of finite type over $S$.
-Let $u_n \in U$, $n \geq 1$ be a finite type points such that
+Let $u_n \in U$, $n \geq 1$ be finite type points such that
 (a) there are no specializations $u_n \leadsto u_m$ for $n \not = m$, and
 (b) $x$ is not versal at $u_n$ for all $n$. Then there exist morphisms
 $$
@@ -3008,7 +3008,7 @@ such that
 $$
 0 \to \kappa(u_n) \to \mathcal{O}_{T_n} \to \mathcal{O}_U \to 0
 $$
-\item there does {\bf not} exist a pair $(W, \alpha)$
+\item there does {\bf not} exist a pair $(W, \beta)$
 consisting of an open neighbourhood $W \subset T_n$ of $u_n$
 and a morphism $\beta : y_n|_W \to x$ such that the composition
 $$
@@ -3131,7 +3131,7 @@ U \ar[rd] \ar[rdd] \ar[rrd] \\
 & U \ar[r] & S
 }
 $$
-The morphism $i : U \to Z$ comes the isomorphism $x \to \xi'|_U$.
+The morphism $i : U \to Z$ comes from the isomorphism $x \to \xi'|_U$.
 Let $z_0 = i(u_0) \in Z$. By Lemma \ref{lemma-base-change-versal}
 we see that $Z \to U'$ is smooth at $z_0$. After replacing $U$ by an
 affine open neighbourhood of $u_0$, replacing $U'$ by the corresponding
@@ -3169,7 +3169,7 @@ This contradiction finishes the proof.
 \begin{remark}
 \label{remark-trade-openness-versality-diagonal-with-strong-effectiveness}
 There is a way to deduce openness of versality of the diagonal
-of an category fibred in groupoids from a strong formal effectiveness
+of a category fibred in groupoids from a strong formal effectiveness
 axiom.
 Let $S$ be a locally Noetherian scheme. Let $\mathcal{X}$ be a category fibred
 in groupoids over $(\Sch/S)_{fppf}$. Assume
@@ -3253,7 +3253,7 @@ Formal Deformation Theory, Remark
 \ref{formal-defos-remark-infaut-lifting-equalities}.
 
 \medskip\noindent
-If $M$ is an $A$-module we denote $A[M]$ the $A$-algebra whose underlying
+If $M$ is an $A$-module we denote by $A[M]$ the $A$-algebra whose underlying
 $A$-module is $A \oplus M$ and whose multiplication is given by
 $(a, m) \cdot (a', m') = (aa', am' + a'm)$. When $M = A$ this is the ring
 of dual numbers over $A$, which we denote $A[\epsilon]$ as is customary.
@@ -3415,7 +3415,7 @@ is always nonempty as it is a group.
 Assumptions and notation as in Lemma \ref{lemma-properties-lift-RS-star}.
 Suppose $A \to B$ is a ring map and $y = x|_{\Spec(B)}$.
 Let $M \in \text{Mod}_A$, $N \in \text{Mod}_B$
-and let $M \to N$ an $A$-linear map. Then there are canonical maps
+and let $M \to N$ be an $A$-linear map. Then there are canonical maps
 $\text{Inf}_x(M) \to \text{Inf}_y(N)$ and
 $T_x(M) \to T_y(N)$ simply because there is a pullback functor
 $$
@@ -3496,7 +3496,7 @@ is a notion of a {\it short exact sequence}
 $$
 (x, A_1' \to A) \to (x, A_2' \to A) \to (x, A_3' \to A)
 $$
-of deformation situations: we ask the corresponding maps between
+of deformation situations: we ask that the corresponding maps between
 the kernels $I_i = \Ker(A_i' \to A)$ give a short exact sequence
 $$
 0 \to I_3 \to I_2 \to I_1 \to 0
@@ -3514,8 +3514,8 @@ fibred in groupoids over $(\Sch/S)_{fppf}$. Assume $\mathcal{X}$,
 $\mathcal{Y}$, $\mathcal{Z}$ satisfy (RS*).
 Let $A$ be an $S$-algebra and let $w$ be an object of
 $\mathcal{W} = \mathcal{X} \times_\mathcal{Y} \mathcal{Z}$ over $A$.
-Denote $x, y, z$ the objects of $\mathcal{X}, \mathcal{Y}, \mathcal{Z}$
-you get from $w$. For any $A$-module $M$ there is a $6$-term exact sequence
+Denote by $x, y, z$ the objects of $\mathcal{X}, \mathcal{Y}, \mathcal{Z}$
+obtained from $w$. For any $A$-module $M$ there is a $6$-term exact sequence
 $$
 \xymatrix{
 0 \ar[r] &
@@ -3637,7 +3637,7 @@ $$
 Pulling back $\alpha$ along the corresponding morphism
 $\Spec(B[\Omega_{B/A}]) \to \Spec(B)$ we obtain a
 morphism $\alpha_{can}$ between the pullbacks of $x$ and $y$ over
-$B[\Omega_{B/A}]$. On the other hand, we can pullback $\alpha$
+$B[\Omega_{B/A}]$. On the other hand, we can pull back $\alpha$
 by the morphism $\Spec(B[\Omega_{B/A}]) \to \Spec(B)$ corresponding
 to the injection of $B$ into the first summand of $B[\Omega_{B/A}]$.
 By the discussion of Remark \ref{remark-automorphisms}
@@ -3680,7 +3680,7 @@ $$
 of {\it obstruction modules},
 \item for $(x, A)$ as in (1), a ring map $A \to B$,
 $M \in \text{Mod}_A$, $N \in \text{Mod}_B$, and an $A$-linear
-map $M \to N$ an induced $A$-linear map $\mathcal{O}_x(M) \to \mathcal{O}_y(N)$
+map $M \to N$ there is an induced $A$-linear map $\mathcal{O}_x(M) \to \mathcal{O}_y(N)$
 where $y = x|_{\Spec(B)}$, and
 \item for every deformation situation $(x, A' \to A)$ an
 {\it obstruction} element
@@ -3704,7 +3704,7 @@ for every deformation situation $(x, A' \to A)$.
 \end{definition}
 
 \noindent
-This last condition explains the terminology. The module $\mathcal{O}_x(A')$
+This last condition explains the terminology. The module $\mathcal{O}_x(I)$
 is called the {\it obstruction module}. The element $o_x(A')$ is the
 {\it obstruction}.
 Most obstruction theories have additional properties, and in order to
@@ -3726,7 +3726,7 @@ Olsson and Starr \cite{olsson-starr}, and
 Lieblich \cite{lieblich-complexes} (random order of references).
 Moreover, for particular categories fibred in groupoids, often
 authors develop a little bit of theory adapted to the problem at hand.
-We will develop this theory later (insert future reference here).
+We will develop this theory later.
 
 \begin{lemma}
 \label{lemma-get-openness-obstruction-theory}
@@ -3763,11 +3763,11 @@ Lemma \ref{lemma-SGE-implies-openness-versality}.
 Let $(\xi_n)$ and $(R_n)$ be as in Remark \ref{remark-strong-effectiveness}
 such that $\Ker(R_m \to R_n)$ is an ideal of square zero
 for all $m \geq n$. Set $A = R_1$ and $x = \xi_1$.
-Denote $M_n = \Ker(R_n \to R_1)$.
+Set $M_n = \Ker(R_n \to R_1)$.
 Then $M_n$ is an $A$-module. Set $R = \lim R_n$.
 Let
 $$
-\tilde R = \{(r_1, r_2, r_3 \ldots) \in \prod R_n
+\tilde R = \{(r_1, r_2, r_3, \ldots) \in \prod R_n
 \text{ such that all have the same image in }A\}
 $$
 Then $\tilde R \to A$ is surjective with kernel $M = \prod M_n$.
@@ -3791,7 +3791,7 @@ Since we have the lifts $\xi_n$ we see that $o_x(\tilde R)$
 maps to zero in $\mathcal{O}_x(M_n)$. By assumption (5)(b)
 we see that $o_x(\tilde R) = 0$. Choose a lift $\tilde \xi$
 of $x$ to $\Spec(\tilde R)$. Let $\tilde \xi_n$ be the
-restriction of $\tilde \xi$ to $\Spec(R_n)$. There exists
+restriction of $\tilde \xi$ to $\Spec(R_n)$. There exist
 elements $t_n \in T_x(M_n)$ such that
 $t_n \cdot \tilde \xi_n = \xi_n$ by
 Lemma \ref{lemma-properties-lift-RS-star} part (2)(b).
@@ -3831,7 +3831,7 @@ $\mathcal{X}$ has an obstruction theory. Namely,
 $x \in H^0(W_A, \mathcal{F}_A)$ we set
 $\mathcal{O}_x(M) = H^1(W_A, \mathcal{F}_A \otimes_A M)$,
 \item given a deformation situation $(x, A' \to A)$ we let
-$o_x(A') \in \mathcal{O}_x(A)$ be the image of $x$ under the boundary map
+$o_x(A') \in \mathcal{O}_x(I)$ be the image of $x$ under the boundary map
 $$
 H^0(W_A, \mathcal{F}_A) \longrightarrow H^1(W_A, \mathcal{F}_A \otimes_A I)
 $$
@@ -3859,12 +3859,12 @@ J/J^2
 \bigoplus\nolimits_{i = 1, \ldots, n} R\text{d}x_i,
 $$
 see Algebra, Lemma \ref{algebra-lemma-NL-homotopy}.
-Consider a deformation situation $(x, A' \to A)$. Denote $I$ the kernel of
+Consider a deformation situation $(x, A' \to A)$. Denote by $I$ the kernel of
 $A' \to A$. The object $x$ corresponds to $(a_1, \ldots, a_n)$
 with $a_i \in A$ such that $f(a_1, \ldots, a_n) = 0$ in $A$ for all $f \in J$.
 Set
 \begin{align*}
-\mathcal{O}_x(A')
+\mathcal{O}_x(I)
 & =
 \Hom_R(J/J^2, I)/\Hom_R(R^{\oplus n}, I) \\
 & =
@@ -3944,7 +3944,7 @@ and compute both sides.
 \label{lemma-construct-essential-surjection}
 Let $\Lambda \to A \to k$ be finite type ring maps of Noetherian rings with
 $k = \kappa(\mathfrak p)$ for some prime $\mathfrak p$ of $A$. Let
-$\xi : E \to \NL_{A/\Lambda}$ be morphism of $D^{-}(A)$ such that
+$\xi : E \to \NL_{A/\Lambda}$ be a morphism of $D^{-}(A)$ such that
 $H^{-1}(\xi \otimes^{\mathbf{L}} k)$ is not surjective.
 Then there exists a surjection $A' \to A$ of $\Lambda$-algebras
 such that
@@ -3963,7 +3963,7 @@ $E \otimes_A A_f \to \NL_{A_f/\Lambda}$, see
 Algebra, Lemma \ref{algebra-lemma-localize-NL}.
 Then we can set $A' = A'' \times_{A_f} A$ and get a solution.
 Namely, it is clear that $A' \to A$ satisfies (a) because
-$\Ker(A' \to A) = \Ker(A'' \to A) = I$. Pick
+$\Ker(A' \to A) = \Ker(A'' \to A_f) = I$. Pick
 $f'' \in A''$ lifting $f$. Then the localization of $A'$ at
 $(f'', f)$ is isomorphic to $A''$
 (for example by
@@ -4051,7 +4051,7 @@ if $u_0$ is a closed point.
 Let $\mathfrak p = \Ker(A \to k)$ be the prime corresponding to $u_0$.
 
 \medskip\noindent
-Assume that $x$ versal at $u_0$ and that $u_0$ is a closed point of $U$.
+Assume that $x$ is versal at $u_0$ and that $u_0$ is a closed point of $U$.
 If $H^{-1}(\xi \otimes_A^{\mathbf{L}} k)$ is not surjective, then
 let $A' \to A$ be an extension with kernel $I$ as in
 Lemma \ref{lemma-construct-essential-surjection}.
@@ -4060,7 +4060,7 @@ hence that $A'$ is a finite type $\Lambda$-algebra (this fails if
 $u_0$ is not closed). In particular $A'$ is Noetherian.
 By property (c) for $A'$ and (i) for $\xi$ we see that $x$ lifts to
 an object $x'$ over $A'$.
-Let $\mathfrak p' \subset A'$ be kernel of the surjective map to $k$.
+Let $\mathfrak p' \subset A'$ be the kernel of the surjective map to $k$.
 By Artin-Rees (Algebra, Lemma \ref{algebra-lemma-Artin-Rees})
 there exists an $n > 1$ such that $(\mathfrak p')^n \cap I = 0$.
 Then we see that
@@ -4082,16 +4082,16 @@ $H^{-1}(\xi \otimes_A^{\mathbf{L}} k)$
 is surjective.
 
 \medskip\noindent
-Assume that $x$ versal at $u_0$. By Lemma \ref{lemma-compute-ext-into-field}
+Assume that $x$ is versal at $u_0$. By Lemma \ref{lemma-compute-ext-into-field}
 the map $H^0(\xi \otimes_A^{\mathbf{L}} k)$ is dual to the map
-$\Ext^0_A(\NL_{A/\Lambda}, k) \to \text{Ext}^0_A(E, k)$. Note that
+$\Ext^0_A(\NL_{A/\Lambda}, k) \to \Ext^0_A(E, k)$. Note that
 $$
 \Ext^0_A(\NL_{A/\Lambda}, k) = \text{Der}_\Lambda(A, k)
 \quad\text{and}\quad
 T_x(k) = \Ext^0_A(E, k)
 $$
 Condition (ii) assures us the map
-$\Ext^0_A(\NL_{A/\Lambda}, k) \to \text{Ext}^0_A(E, k)$
+$\Ext^0_A(\NL_{A/\Lambda}, k) \to \Ext^0_A(E, k)$
 sends a tangent vector $\theta$ to $U$ at $u_0$ to the corresponding
 infinitesimal deformation of $x_0$, see Remark \ref{remark-canonical-element}.
 Hence if $x$ is versal, then this map is surjective, see
@@ -4106,7 +4106,7 @@ H^{-1}(\NL_{A/\Lambda} \otimes_A^\mathbf{L} k)$
 is surjective and
 $H^0(E \otimes_A^\mathbf{L} k) \to
 H^0(\NL_{A/\Lambda} \otimes_A^\mathbf{L} k)$
-injective. Set $R = A_\mathfrak p^\wedge$ and let $\eta$ be the
+is injective. Set $R = A_\mathfrak p^\wedge$ and let $\eta$ be the
 formal object over $R$ associated to $x|_{\Spec(R)}$.
 The map $d\underline{\eta}$ on tangent spaces is surjective
 because it is identified with the dual of the injective map
@@ -4199,7 +4199,7 @@ given by the following data
 for every $S$-algebra $A$ such that $\Spec(A) \to S$
 maps into an affine open $\Spec(\Lambda) \subset S$ and every object $x$
 of $\mathcal{X}$ over $\Spec(A)$ we are given an object $E_x \in D^-(A)$
-and a map $\xi_x : E \to \NL_{A/\Lambda}$,
+and a map $\xi_x : E_x \to \NL_{A/\Lambda}$,
 \item
 \label{item-inf}
 given $(x, A)$ as in (\ref{item-map}) there are transformations of
@@ -4244,7 +4244,7 @@ Remark \ref{remark-canonical-element},
 given a deformation situation $(x, A' \to A)$ with $I = \Ker(A' \to A)$
 the composition $E_x \to \NL_{A/\Lambda} \to \NL_{A/A'}$ is zero in
 $$
-\Hom_A(E_x, \NL_{A/\Lambda}) = \Ext^0_A(E_x, \NL_{A/A'}) =
+\Hom_A(E_x, \NL_{A/A'}) = \Ext^0_A(E_x, \NL_{A/A'}) =
 \Ext^1_A(E_x, I)
 $$
 if and only if $x$ lifts to $A'$.
@@ -4280,7 +4280,7 @@ $$
 because $A[k] = A \times_k k[k]$ and $B[k] = B \times_k k[k]$.
 Hence the properties of a naive obstruction theory imply that the
 functoriality map $E_x \to E_y$ induces bijections
-$\Ext^i_A(E_x, k) \to \text{Ext}^i_B(E_y, k)$
+$\Ext^i_A(E_x, k) \to \Ext^i_B(E_y, k)$
 for $i = -1, 0$. By Lemma \ref{lemma-compute-ext-into-field} our maps
 $H^i(E_x \otimes_A^{\mathbf{L}} k) \to H^i(E_y \otimes_B^{\mathbf{L}} k)$,
 $i = 0, 1$ induce isomorphisms on dual vector spaces hence are isomorphisms.
@@ -4289,7 +4289,7 @@ $i = 0, 1$ induce isomorphisms on dual vector spaces hence are isomorphisms.
 \begin{lemma}
 \label{lemma-naive-obstruction-theory-gives-openness}
 Let $S$ be a locally Noetherian scheme. Let
-$p : \mathcal{X} \to (\Sch/S)_{fppf}^{opp}$ be a category fibred in groupoids.
+$p : \mathcal{X} \to (\Sch/S)_{fppf}$ be a category fibred in groupoids.
 Assume that $\mathcal{X}$ satisfies (RS*)
 and that $\mathcal{X}$ has a naive obstruction theory.
 Then openness of versality holds for $\mathcal{X}$ provided the
@@ -4397,7 +4397,7 @@ $H^1(K^\bullet \otimes_A^\mathbf{L} \Omega_{A/\Lambda})$.
 
 \begin{lemma}
 \label{lemma-dual-obstruction}
-In Situation \ref{situation-dual}. Assume furthermore that
+In Situation \ref{situation-dual}, assume furthermore that
 \begin{enumerate}
 \item[(iv)] given a short exact sequence of deformation situations
 as in Remark \ref{remark-short-exact-sequence-thickenings} and
@@ -4422,7 +4422,7 @@ $T_x(-) \to H^1(K^\bullet \otimes_A^\mathbf{L} -)$.
 \end{lemma}
 
 \begin{proof}
-Choose a $\alpha : \Lambda[x_1, \ldots, x_n] \to A$ with kernel $J$.
+Choose an $\alpha : \Lambda[x_1, \ldots, x_n] \to A$ with kernel $J$.
 Write $P = \Lambda[x_1, \ldots, x_n]$. In the rest of this proof we work with
 $$
 \NL(\alpha) = (J/J^2 \longrightarrow \bigoplus A \text{d}x_i)
@@ -4440,7 +4440,7 @@ $$
 where $J/J^2$ is embedded diagonally. Note that $C \to A$ is a surjection
 with kernel $\bigoplus A\text{d}x_i$. Moreover there is a section
 $A \to C$ to $C \to A$ given by mapping the class of $f \in P$ to the class
-of $(f, \text{d}f)$ in the pushout. For later use, denote $x_C$ the
+of $(f, \text{d}f)$ in the pushout. For later use, denote by $x_C$ the
 pullback of $x$ along the corresponding morphism $\Spec(C) \to \Spec(A)$.
 Thus we see that $o_x(C) = 0$.
 We conclude that $o_x(P/J^2)$ maps to zero in
@@ -4515,7 +4515,7 @@ differentials of $K^\bullet$.) Let $E \in D^{-}(A)$ denote the
 object represented by the complex $E^\bullet[-1]$.
 Let $\xi \in H^1(\text{Tot}(K^\bullet \otimes_A \NL_{A/\Lambda}))$
 be the element constructed in Lemma \ref{lemma-dual-obstruction}
-and denote $\xi : E = E^\bullet[-1] \to \NL_{A/\Lambda}$ the corresponding
+and denote by $\xi : E = E^\bullet[-1] \to \NL_{A/\Lambda}$ the corresponding
 map (loc.cit.). We claim that the pair $(E, \xi)$ satisfies all the
 assumptions of Lemma \ref{lemma-openness} which finishes the proof.
 
@@ -4555,7 +4555,7 @@ we choose a category $\Sch_\alpha$ of schemes containing
 $S$ such that we obtain big sites $(\Sch/S)_{Zar}$,
 $(\Sch/S)_\etale$, $(\Sch/S)_{smooth}$, $(\Sch/S)_{syntomic}$,
 and $(\Sch/S)_{fppf}$ all with the same underlying
-category $\Sch_\alpha/S$. Denote
+category $\Sch_\alpha/S$. Denote by
 $$
 \textit{Noetherian}_\alpha \subset \Sch_\alpha
 $$
@@ -4671,7 +4671,7 @@ representable by algebraic spaces.
 Let $\tau \in \{Zariski, \etale, smooth, syntomic, fppf\}$.
 Let $F', G' : (\Sch/S)_\tau^{opp} \to \textit{Sets}$ be limit preserving
 and sheaves. Let $a' : F' \to G'$ be a transformation of functors.
-Denote $a : F \to G$ the restriction of $a' : F' \to G'$ to
+Denote by $a : F \to G$ the restriction of $a' : F' \to G'$ to
 $(\textit{Noetherian}/S)_\tau$. The following are equivalent
 \begin{enumerate}
 \item $a'$ is representable (as a transformation of functors, see
@@ -4692,7 +4692,7 @@ the transformation $a'$ is limit preserving\footnote{This
 makes sense even if $\tau \not = fppf$ as the underlying
 category of $(\Sch/S)_\tau$ equals the underlying category
 of $(\Sch/S)_{fppf}$ and the statement doesn't refer to the topology.}.
-Take $\xi : V \to G$ as in (2). Denote $V' = V$ but viewed as an
+Take $\xi : V \to G$ as in (2). Set $V' = V$, viewed as an
 object of $(\Sch/S)_\tau$. Since $G$ is the restriction of
 $G'$ to $(\textit{Noetherian}/S)_\tau$ we see that
 $\xi \in G(V)$ corresponds to $\xi' \in G'(V')$.
@@ -4726,7 +4726,7 @@ mentioned in Constructions, Lemma
 \ref{constructions-lemma-relative-glueing}.
 Hence we can glue the schemes $X_W$ to a scheme $X$ over $T$.
 Compatibility of the glueing maps with the maps
-$X_W \to F'$ provide us with a map $X \to F'$.
+$X_W \to F'$ provides us with a map $X \to F'$.
 The resulting map $X \to F' \times_{G'} T$ is an
 isomorphism as we may check this locally on $T$ (as source
 and target of this arrow are sheaves for the Zariski topology).
@@ -4739,11 +4739,11 @@ is representable by a scheme.
 We may write $W = \lim V'_i$ as a directed limit of affine
 schemes $V'_i$ of finite presentation over $U$, see
 Algebra, Lemma \ref{algebra-lemma-ring-colimit-fp}.
-Since $V'_i$ is of finite type over an Noetherian scheme,
+Since $V'_i$ is of finite type over a Noetherian scheme,
 we see that $V'_i$ is a Noetherian scheme.
-Denote $V_i = V'_i$ but viewed as an object of
+Set $V_i = V'_i$, viewed as an object of
 $(\textit{Noetherian}/S)_\tau$. As $G'$
-is limit preserving can choose an $i$ and a map
+is limit preserving, we can choose an $i$ and a map
 $V'_i \to G'$ such that $W \to G'$ is the composition
 $W \to V'_i \to G'$. Since $G$ is the restriction of $G'$
 to $(\textit{Noetherian}/S)_\tau$ the morphism $V'_i \to G'$
@@ -4760,9 +4760,9 @@ Limits, Remark \ref{limits-remark-limit-preserving} which
 tells us that the functor of points of $V'_i$ is limit preserving.
 By Lemma \ref{lemma-representable-limit-preserving}
 we conclude that $X_i$ is locally of finite presentation over $S$.
-Denote $X'_i = X_i$ but viewed as an object of
+Set $X'_i = X_i$, viewed as an object of
 $(\Sch/S)_\tau$. Then we see that $F' \times_{G'} V'_i$
-and the functors of points $h_{X'_i}$ are both extensions
+and the functor of points $h_{X'_i}$ are both extensions
 of $h_{X_i} : (\textit{Noetherian}/S)_\tau^{opp} \to \textit{Sets}$
 to limit preserving sheaves on $(\Sch/S)_\tau$.
 By the equivalence of categories of Lemma \ref{lemma-canonical-extension}
@@ -4802,7 +4802,7 @@ objects of $(\textit{Noetherian}/S)_\etale$.
 
 \medskip\noindent
 Axiom [0]. This is the axiom that $F$ is a sheaf
-on $(\textit{Noetherian}/S)_\etale^{opp}$, i.e., satisfies
+on $(\textit{Noetherian}/S)_\etale$, i.e., satisfies
 the sheaf condition for \'etale coverings.
 
 \medskip\noindent
@@ -4835,7 +4835,7 @@ and hence are obtained by evaluating at objects of the category
 $(\textit{Noetherian}/S)_\etale$.
 
 \medskip\noindent
-Axiom [4]. This is axiom that the every formal object is effective.
+Axiom [4]. This is the axiom that every formal object is effective.
 Looking at the discussion in
 Sections \ref{section-formal-objects} and \ref{section-axioms-functors}
 we see that this involves evaluating our functor at Noetherian schemes
@@ -4874,7 +4874,7 @@ whose restriction to $(\textit{Noetherian}/S)_\etale$ is $F$
 Recall that the sites $(\Sch/S)_{fppf}$ and $(\Sch/S)_\etale$ have the same
 underlying category, see discussion in Section \ref{section-noetherian}.
 Similarly the sites $(\textit{Noetherian}/S)_\etale$ and
-$(\textit{Noetherian}/S)_{fppf}$ have the same underlying categories.
+$(\textit{Noetherian}/S)_{fppf}$ have the same underlying category.
 By axioms [0] and [1] the functor $F$ is a sheaf and
 limit preserving.
 Let $F' : (\Sch/S)_\etale^{opp} \to \textit{Sets}$
@@ -5004,7 +5004,7 @@ $$
 of formal algebraic spaces. We will think
 of $V \setminus Z$ as an open subspace of $V'$ without further mention.
 The compatibility condition is that there should be a
-morphism $x' : V' \to X'$ restricting to $u'$ and $\hat x$
+morphism $x' : V' \to X'$ restricting to $u'$ and $\hat x'$
 over $V \setminus Z \subset V'$ and $V'_{/Z}$.
 In other words, such that the diagram
 $$
@@ -5030,7 +5030,7 @@ between $u'$ and $\hat x$}''.
 In Situation \ref{situation-contractions} let $V$ be a locally Noetherian
 scheme over $S$. Let $(Z, u', \hat x)$ be a triple satisfying (1), (2), and
 (3) above. We want to explain a way to think about the compatibility
-condition (4). It will not be mathematically precise as we are going use
+condition (4). It will not be mathematically precise as we are going to use
 a fictitious category $\textit{An}_S$ of analytic spaces over $S$
 and a fictitious analytification functor
 $$
@@ -5049,7 +5049,7 @@ For example if $Y = \text{Spf}(k[[t]])$ over $S = \Spec(k)$, then $Y^{an}$
 should be thought of as an open unit disc. If $Y = \Spec(k)$, then $Y^{an}$
 is a single point. The category $\textit{An}_S$ should have open and
 closed immersions and we should be able to take the open complement
-of a closed. Given $Y$ the morphism $Y_{red} \to Y$ should induces a
+of a closed. Given $Y$ the morphism $Y_{red} \to Y$ should induce a
 closed immersion $Y_{red}^{an} \to Y^{an}$. We set
 $Y^{rig} = Y^{an} \setminus Y_{red}^{an}$ equal to its open complement.
 If $Y$ is an algebraic space and if $Z \subset Y$ is closed, then
@@ -5069,7 +5069,7 @@ $$
 (X'_{/T'})^{rig} \ar[rr]^{can} & & (X' \setminus T')^{an}
 }
 $$
-commutes. This makes sense as $g^{rig} : (X'_{T'})^{rig} \to W^{rig}$
+commutes. This makes sense as $g^{rig} : (X'_{/T'})^{rig} \to W^{rig}$
 is an isomorphism and $U' = X' \setminus T'$. Finally, under some assumptions
 of faithfulness of the analytification functor, this requirement will
 be equivalent to the compatibility condition formulated above.
@@ -5083,7 +5083,7 @@ rather than asking for the existence of a certain commutative diagram.
 In Situation \ref{situation-contractions} the rule $F$ that sends
 a locally Noetherian scheme $V$ over $S$ to the set of triples
 $(Z, u', \hat x)$ satisfying the compatibility condition and which sends a
-a morphism $\varphi : V_2 \to V_1$ of locally Noetherian schemes over $S$
+morphism $\varphi : V_2 \to V_1$ of locally Noetherian schemes over $S$
 to the map
 $$
 F(\varphi) : F(V_1) \longrightarrow F(V_2)
@@ -5131,7 +5131,7 @@ $x$ to $V \setminus Z$,
 $x_{/Z} : V_{/Z} \to X_{/T}$ with the isomorphism $a : X_{/T} \to W$.
 \end{enumerate}
 This triple satisfies the compatibility condition because we
-can take $V' = V \times_{x, X} X'$, we can take $\hat x'$
+can take $V' = V \times_{x, X} X'$, we can take $\hat x'$ to be
 the completion of the projection $x' : V' \to X'$.
 
 \medskip\noindent
@@ -5178,10 +5178,10 @@ for the triple $X'' \to X$, $\hat x'$, $x'$ witnessing the compatibility
 between $u'$ and $\hat x$ the morphism $x' : X'' \to X'$ is an isomorphism
 and this will produce $f : X' \to X$ by inverting $x'$. Finally, we already
 have $T \subset |X|$ and the reader may show that $\hat x$ is an isomorphism
-which can served as the last ingredient namely $a$.
+which can serve as the last ingredient namely $a$.
 
 \medskip\noindent
-Denote $h_X(-) = \Mor_S(-, X)$ the functor of
+Denote by $h_X(-) = \Mor_S(-, X)$ the functor of
 points of $X$ restricted to the category
 $(\textit{Noetherian}/S)_\etale$ of Section \ref{section-noetherian}.
 By Limits of Spaces, Remark \ref{spaces-limits-remark-limit-preserving}
@@ -5197,10 +5197,10 @@ Then we get an element $(Z, u', \hat x)$ in $F(V)$ as follows
 \item $u' : V \setminus Z \to U'$ is the restriction of
 $\tilde x$ to $V \setminus Z$,
 \item $\hat x : V_{/Z} \to W$ is the composition of
-$x_{/Z} : V_{/Z} \to X'_{/T'}$ with $g : X'_{/T'} \to W$.
+$\tilde x_{/Z} : V_{/Z} \to X'_{/T'}$ with $g : X'_{/T'} \to W$.
 \end{enumerate}
 This triple satisfies the compatibility condition: first we always
-obtain $V' \to V$ and $\hat x' : V'_{/Z'} \to X'_{/T'}$ for free
+obtain $V' \to V$ and $\hat x' : V'_{/Z} \to X'_{/T'}$ for free
 (see discussion preceding Lemma \ref{lemma-functor}).
 Then we just define $x' : V' \to X'$ to be the composition
 of $V' \to V$ and the morphism $\tilde x : V \to X'$.
@@ -5214,7 +5214,7 @@ then $(Z, u', \hat x)$ pulled back to $F(V')$ corresponds to
 $\xi \circ \varphi$.
 The closed subset $T \subset |X|$ is just defined as the closed
 subset such that $\xi : V \to X$ for $\xi = (Z, u', \hat x)$
-pulls $T$ back to $Z$
+pulls $T$ back to $Z$.
 
 \medskip\noindent
 Consider Noetherian schemes $V$ over $S$ and a morphism
@@ -5233,8 +5233,7 @@ We omit the proof of conditions (1), (2), and (3).
 
 \begin{remark}
 \label{remark-diagonal}
-In Situation \ref{situation-contractions}.
-Let $V$ be a locally Noetherian scheme over $S$.
+In Situation \ref{situation-contractions}, let $V$ be a locally Noetherian scheme over $S$.
 Let $(Z_i, u'_i, \hat x_i) \in F(V)$ for $i = 1, 2$. Let $V'_i \to V$,
 $\hat x'_i$ and $x'_i$ witness the compatibility between $u'_i$ and
 $\hat x_i$ for $i = 1, 2$.
@@ -5275,7 +5274,7 @@ $$
 is cartesian. In particular, the morphism $E'_{/Z} \to E_W$
 is a formal modification as the base change of $g$,
 \item $E'$, $(E' \to V)^{-1}Z$, and $E'_{/Z} \to E_W$
-is a triple as in Situation \ref{situation-contractions}
+form a triple as in Situation \ref{situation-contractions}
 with base scheme the locally Noetherian scheme $V$,
 \item given a morphism $\varphi : A \to V$
 of locally Noetherian schemes, the following are equivalent
@@ -5339,7 +5338,7 @@ Recall that $A' = H^0(X', \mathcal{O})$ is a finite $A$-algebra
 whose formation commutes with flat base change
 (Cohomology of Spaces, Lemmas
 \ref{spaces-cohomology-lemma-proper-over-affine-cohomology-finite} and
-\ref{spaces-cohomology-lemma-flat-base-change-cohomology}). Denote
+\ref{spaces-cohomology-lemma-flat-base-change-cohomology}). Set
 $J'' = \Ker(A \to A')$\footnote{Contrary to what the reader
 may expect, the ideals $J$ and $J''$ won't agree in general.}.
 We have $J_i = J''A[1/f_i]$ as follows
@@ -5428,7 +5427,7 @@ arguments on limits and \'etale localization. We urge the reader to skip ahead
 to the last part of the proof where something interesting happens.
 
 \medskip\noindent
-Let $V = \lim_{\lambda \in \Lambda} V_i$ be a directed limit of schemes
+Let $V = \lim_{\lambda \in \Lambda} V_\lambda$ be a directed limit of schemes
 over $S$ with $V$ and $V_\lambda$ Noetherian and with affine transition
 morphisms. See Limits, Section \ref{limits-section-limits} for material on
 limits of schemes. We will prove that $\colim F(V_\lambda) \to F(V)$
@@ -5446,14 +5445,14 @@ $\xi_{\lambda, 2} = (Z_{\lambda, 2}, u'_{\lambda, 2}, \hat x_{\lambda, 2})$.
 \medskip\noindent
 Proof of injectivity: agreement of $Z_{\lambda, i}$.
 Since $Z_{\lambda, 1}$ and $Z_{\lambda, 2}$ restrict to the same closed
-subset of $V$, we may after increasing $i$ assume
+subset of $V$, we may after increasing $\lambda$ assume
 $Z_{\lambda, 1} = Z_{\lambda, 2}$, see
 Limits, Lemma \ref{limits-lemma-inverse-limit-top} and
 Topology, Lemma \ref{topology-lemma-describe-limits}.
 Let us denote the common value $Z_\lambda \subset V_\lambda$, for
 $\mu \geq \lambda$
 denote $Z_\mu \subset V_\mu$ the inverse image in $V_\mu$ and
-and denote $Z$ the inverse image in $V$. We will use below that
+denote $Z$ the inverse image in $V$. We will use below that
 $Z = \lim_{\mu \geq \lambda} Z_\mu$ as schemes if we view $Z$
 and $Z_\mu$ as reduced closed subschemes.
 
@@ -5479,7 +5478,7 @@ increasing $\lambda$.
 
 \medskip\noindent
 Proof of injectivity: agreement of $\hat x_{\lambda, i}|_{Z_\lambda}$.
-Consider the morpisms
+Consider the morphisms
 $\hat x_{\lambda, 1}|_{Z_\lambda}, \hat x_{\lambda, 2}|_{Z_\lambda} :
 Z_\lambda \to W_{red}$.
 These morphisms restrict to the same morphism $Z \to W_{red}$.
@@ -5545,10 +5544,10 @@ sheaf property of $F$ in Lemma \ref{lemma-sheaf}, the problem
 is local on $V$ in the \'etale topology. More precisely, let $v \in V$.
 We claim it suffices to find an \'etale morphism
 $(\tilde V, \tilde v) \to (V, v)$ and some
-$\lambda$, some an \'etale morphism $\tilde V_\lambda \to V_\lambda$,
+$\lambda$, an \'etale morphism $\tilde V_\lambda \to V_\lambda$,
 and some element $\tilde \xi_\lambda \in F(\tilde V_\lambda)$ such that
 $\tilde V = \tilde V_\lambda \times_{V_\lambda} V$
-and $\xi|_U = \tilde \xi_\lambda|_U$. We omit a detailed proof of
+and $\xi|_{\tilde V} = \tilde \xi_\lambda|_{\tilde V}$. We omit a detailed proof of
 this claim\footnote{To prove this
 one assembles a collection of the morphisms $\tilde V \to V$
 into a finite \'etale covering and shows that the corresponding morphisms
@@ -5602,7 +5601,7 @@ We claim that we can reduce this to the case where $W$ is an
 affine formal scheme; we urge the reader to skip this argument\footnote{Artin's
 approach to the proof of this lemma is to work around this and
 consequently he can avoid proving the injectivity first. Namely, Artin
-consistently works with a finite affine \'etale coverings of all spaces
+consistently works with finite affine \'etale coverings of all spaces
 in sight keeping track of the maps between them during the proof.
 In hindsight that might be preferable to what we do here.}.
 Namely, we can choose an \'etale morphism
@@ -5624,18 +5623,18 @@ there exists a morphism $\tilde X' \to X'$ of algebraic spaces
 which is locally of finite type, is an isomorphism over $U'$, and
 such that $\tilde X'_{/T'} \to X'_{/T'}$ is isomorphic to $p$.
 By Algebraization of Formal Spaces, Lemma \ref{restricted-lemma-output-etale}
-the morphism $\tilde X' \to X'$ is \'etale. Denote
-$\tilde T' \subset |\tilde X'|$ the inverse image of $T'$.
-Denote $\tilde U' \subset \tilde X'$ the complementary open subspace.
-Denote $\tilde g' : \tilde X'_{/\tilde T'} \to \tilde W$
-the formal modification which is the base change of $g$ by
+the morphism $\tilde X' \to X'$ is \'etale. Let
+$\tilde T' \subset |\tilde X'|$ denote the inverse image of $T'$.
+Let $\tilde U' \subset \tilde X'$ denote the complementary open subspace.
+Let $\tilde g : \tilde X'_{/\tilde T'} \to \tilde W$
+denote the formal modification which is the base change of $g$ by
 $\tilde W \to W$. Then we see that
 $$
 \tilde X',\ \tilde T',\ \tilde U',\ \tilde W,
 \ \tilde g : \tilde X'_{/\tilde T'} \to \tilde W
 $$
 is another example of Situation \ref{situation-contractions}.
-Denote $\tilde F$ the functor constructed from this triple.
+Let $\tilde F$ denote the functor constructed from this triple.
 There is a transformation of functors
 $$
 \tilde F \longrightarrow F
@@ -5649,7 +5648,7 @@ By the same theorem as used above, there exists a morphism
 $\tilde V \to V$ of algebraic spaces which is locally of finite type,
 is an isomorphism over $V \setminus Z$ and such that
 $\tilde V_{/Z} \to V_{/Z}$ is isomorphic to $q$.
-Denote $\tilde Z \subset \tilde V$ the inverse image of $Z$.
+Let $\tilde Z \subset \tilde V$ denote the inverse image of $Z$.
 By Algebraization of Formal Spaces, Lemmas
 \ref{restricted-lemma-output-etale} and \ref{restricted-lemma-output-separated}
 the morphism $\tilde V \to V$ is \'etale and separated.
@@ -5674,8 +5673,8 @@ $$
 $$
 We omit proving the compatibility condition; hints: if $V' \to V$, $\hat x'$,
 and $x'$ witness the compatibility between $u'$ and $\hat x$, then one
-sets $\tilde V' = V' \times_V \tilde V$ which comes with morphsms
-$\tilde{\hat x}'$ and $\tilde x'$ and show this works.
+sets $\tilde V' = V' \times_V \tilde V$ which comes with morphisms
+$\tilde{\hat x}'$ and $\tilde x'$ and shows this works.
 The image of $\tilde \xi$ under the transformation $\tilde F \to F$
 is the restriction of $\xi$ to $\tilde V$.
 
@@ -5751,8 +5750,8 @@ restriction of $x'_\lambda$.
 Proof of surjectivity: algebra.
 Write $W = \text{Spf}(B)$, $V = \Spec(A)$, and
 for $\mu \geq \lambda$ write $V_\mu = \Spec(A_\mu)$.
-Denote $I_\mu \subset A_\mu$ and $I \subset A$
-the ideals cutting out $Z_\mu$ and $Z$.
+Let $I_\mu \subset A_\mu$ and $I \subset A$
+denote the ideals cutting out $Z_\mu$ and $Z$.
 Then $I_\lambda A_\mu = I_\mu$ and $I_\lambda A = I$.
 The morphism $\hat x$ determines and is determined by a
 continuous ring map
@@ -5794,7 +5793,7 @@ $a \in I$, resp.\ $a \in I_\mu$ the maps $A_a \to C_a$,
 resp.\ $(A_\mu)_a \to (C_\mu)_a$ are isomorphisms by flat base change
 (Cohomology of Spaces, Lemma
 \ref{spaces-cohomology-lemma-flat-base-change-cohomology}).
-Hence the kernel and cokernel of $A \to C$ is supported
+Hence the kernel and cokernel of $A \to C$ are supported
 on $V(I)$ and similarly for $A_\mu \to C_\mu$.
 We conclude the kernel and cokernel of $A \to C$
 are annihilated by a power of $I$ and the kernel and cokernel of
@@ -5803,9 +5802,8 @@ Algebra, Lemma \ref{algebra-lemma-Noetherian-power-ideal-kills-module}.
 
 \medskip\noindent
 Proof of surjectivity: algebra, more ring maps.
-Denote $Z_n \subset V$ the $n$th infinitesimal
-neighbourhood of $Z$ and denote $Z_{\mu, n} \subset V_\mu$
-the $n$th infinitesimal neighbourhood of $Z_\mu$.
+Let $Z_n \subset V$ and $Z_{\mu, n} \subset V_\mu$ denote
+the respective $n$th infinitesimal neighbourhoods of $Z$ and $Z_\mu$.
 By the theorem on formal functions
 (Cohomology of Spaces, Theorem
 \ref{spaces-cohomology-theorem-formal-functions})
@@ -5816,7 +5814,7 @@ C^\wedge = \lim_n H^0(V' \times_V Z_n, \mathcal{O})
 C_\mu^\wedge =
 \lim_n H^0(V'_\mu \times_{V_\mu} Z_{\mu, n}, \mathcal{O})
 $$
-where $C^\wedge$ and $C_\mu^\wedge$ are the completion with
+where $C^\wedge$ and $C_\mu^\wedge$ are the completions with
 respect to $I$ and $I_\mu$.
 Combining the completion of the morphism
 $x'_\mu : V'_\mu \to X'$ with the morphism $g : X'_{/T'} \to W$ we obtain
@@ -5831,7 +5829,7 @@ $C_\mu^\wedge$ above we obtain a continuous ring homomorphism
 $$
 (g \circ x'_{\mu, /Z_\mu})^\sharp : B \longrightarrow C_\mu^\wedge
 $$
-The fact that $V' \to V$, $\hat x'$, $x'$ witnesses the compatibility
+The fact that $V' \to V$, $\hat x'$, $x'$ witness the compatibility
 between $u'$ and $\hat x$ implies the
 commutativity of the following diagram
 $$
@@ -5879,7 +5877,7 @@ $$
 (g \circ x'_{\mu, /Z_\mu})^\sharp(b_n)
 \text{ in }\Coker(A_\mu \to C_\mu)
 $$
-The image of these elements in $\Coker(\alpha)$ are zero
+The image of these elements in $\Coker(A \to C)$ are zero
 by the commutativity of the square above. Since
 $\Coker(A \to C) = \colim \Coker(A_\mu \to C_\mu)$ and these
 cokernels are equal to their completions
@@ -5888,7 +5886,7 @@ images are all zero. This means that the continuous
 homomorphism $(g \circ x'_{\mu, /Z_\mu})^\sharp$ has image contained
 in $\Im(A_\mu \to C_\mu)$.
 Choose elements $a_{\mu, j} \in (A_\mu)^\wedge$ mapping to
-$(g \circ x'_{\mu, /Z_\mu})^\sharp(b_1)$ in $(C_\mu)^\wedge$.
+$(g \circ x'_{\mu, /Z_\mu})^\sharp(b_j)$ in $(C_\mu)^\wedge$.
 Then $a_{\mu, j} \in A_\mu^\wedge$ and $(\hat x)^\sharp(b_j) \in A^\wedge$
 map to the same element of $C^\wedge$ by the commutativity of the
 square above. Since
@@ -5965,7 +5963,7 @@ Recall that the condition only involves the evaluation $F(V)$ of the functor
 $F$ on schemes $V$ over $S$ which are spectra of Artinian local rings
 and the restriction maps $F(V_2) \to F(V_1)$ for morphisms $V_1 \to V_2$
 of schemes over $S$ which are spectra of Artinian local rings.
-Thus let $V/S$ be the spetruim of an Artinian local ring.
+Thus let $V/S$ be the spectrum of an Artinian local ring.
 If $\xi = (Z, u', \hat x) \in F(V)$ then either $Z = \emptyset$
 or $Z = V$ (set theoretically). In the first case we see that
 $\hat x$ is a morphism from the empty formal algebraic space
@@ -6103,9 +6101,9 @@ we obtain a morphism
 $$
 x' : V' \to X'
 $$
-over $S$ recovering the morphisms displayed above. Then finally
-setting $u' : V \setminus Z \to X'$ the restriction of $x'$ to
-$V \setminus Z \subset V'$ gives the third component of our
+over $S$ recovering the morphisms displayed above. Finally,
+set $u' : V \setminus Z \to U'$ to be the restriction of $x'$ to
+$V \setminus Z \subset V'$; this gives the second component of our
 desired element $(Z, u', \hat x) \in F(V)$.
 \end{proof}
 
@@ -6132,9 +6130,9 @@ Bootstrap, Definition \ref{bootstrap-definition-property-transformation}.
 \medskip\noindent
 Write $W = \colim W_n$ as in Formal Spaces, Lemma
 \ref{formal-spaces-lemma-structure-locally-noetherian}.
-Set $V_n = V_{/Z} \times_{\hat x, W} W_n$.
+Set $V_n = V_{/Z} \times_{g, W} W_n$.
 Then $V_n$ is a closed subscheme with underlying set $Z$.
-Smoothness of $V \to W$ is equivalent to the smoothness
+Smoothness of $g : V_{/Z} \to W$ is equivalent to the smoothness
 of all the morphisms $V_n \to W_n$ (this holds because any morphism
 $T \to W$ with $T$ a quasi-compact scheme factors through
 $W_n$ for some $n$). We know that the morphism $V_n \to W_n$
@@ -6192,7 +6190,7 @@ B_n = B/\mathfrak b^n \to A^\wedge/\mathfrak b^n A^\wedge = A_n
 $$
 is smooth at $\mathfrak m$ for all $n$. By the discussion above
 we may and do assume that $B_1 \to A_1$ is a smooth ring map.
-Denote $\mathfrak m_1 \subset A_1$ the maximal ideal corresponding
+Let $\mathfrak m_1 \subset A_1$ denote the maximal ideal corresponding
 to $\mathfrak m$. Since smoothness implies flatness, we see that:
 for all $n \geq 1$ the map
 $$
@@ -6212,7 +6210,7 @@ $$
 A' = \bigoplus\nolimits_{n \geq 0}
 \mathfrak b^nA^\wedge/\mathfrak b^{n + 1}A^\wedge
 $$
-which is a a finite type graded algebra over the Noetherian ring $A_1$.
+which is a finite type graded algebra over the Noetherian ring $A_1$.
 Consider the homomorphism of graded $A_1$-algebras
 $$
 \Psi : B' \otimes_{B_1} A_1 \longrightarrow A'
@@ -6226,7 +6224,7 @@ $A_1$ (and correspondingly $A$) by a principal localization
 we may assume $\Psi$ is an isomorphism. (This is the key step of the proof.)
 Then working backwards we see that $B_n \to A_n$ is flat, see
 Algebra, Lemma \ref{algebra-lemma-what-does-it-mean-again}.
-Hence $A_n \to B_n$ is smooth (as a flat ring map with smooth
+Hence $B_n \to A_n$ is smooth (as a flat ring map with smooth
 fibres, see Algebra, Lemma \ref{algebra-lemma-flat-fibre-smooth})
 and the proof is complete.
 \end{proof}
@@ -6251,7 +6249,7 @@ and the morphism $u' : V \to X'$ is versal at $v_0$.
 By More on Morphisms of Spaces, Lemma
 \ref{spaces-more-morphisms-lemma-lifting-along-artinian-at-point}
 this means that $u' : V \to X'$ is smooth at $v_0$.
-Since the set of a points where a morphism is smooth is open,
+Since the set of points where a morphism is smooth is open,
 we can after shrinking $V$ assume $u'$ is smooth.
 Then the same lemma tells us that $\xi$ is versal at every
 point as desired.
@@ -6334,7 +6332,7 @@ are separated over $S$ in two places. First, the proof uses this in showing
 $\Delta : F \to F \times F$ is representable by algebraic spaces.
 This use of the assumption can be entirely avoided by proving
 that $\Delta$ is representable by applying the theorem in the
-separated case to the triples
+separated case to the triple
 $E'$, $(E' \to V)^{-1}Z$, and $E'_{/Z} \to E_W$
 found in Remark \ref{remark-diagonal} (this is the usual bootstrap
 procedure for the diagonal). Thus the proof of
