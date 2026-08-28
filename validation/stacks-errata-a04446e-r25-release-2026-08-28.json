@@ -1,0 +1,640 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-errata-release/v1",
+  "status": "PUBLICATION_COMPLETE",
+  "created_utc": "2026-08-28T11:38:13Z",
+  "updated_utc": "2026-08-28T11:38:13Z",
+  "release": {
+    "repository": "KokunoYumeto/unofficial-ai-integrated-stacks-project",
+    "default_branch": "main",
+    "previous_public_main_head": "67a19ae2eda6b546dd71eaf49df73632ef739407",
+    "frozen_registry_cutoff": "001f36d41504aecfa77201a04fedff16d37b00f0",
+    "frozen_registry_tree": "f8e3a8ea8d7e95190b3cb4d21eb701a6709f90c7",
+    "registered_overlays": 26,
+    "registered_stable_ids": 821,
+    "published_content_head": "fb3e4cb4d834c4e28d84b6df41466ad8aaa71b42",
+    "content_tree": "406a1c289c2d45f901de4356bd6e8d0ced48a661",
+    "metadata_head": "fb3e4cb4d834c4e28d84b6df41466ad8aaa71b42",
+    "metadata_tree": "406a1c289c2d45f901de4356bd6e8d0ced48a661",
+    "admitted_and_composed": [
+      "stacks-errata-a04446e-r25"
+    ],
+    "excluded": {
+      "active_registry_lease": {
+        "round": "R26",
+        "registry_head": "51005d9a9244e36f4024c7cd26996b78e0a25dcd"
+      },
+      "unadmitted_intake_packets": [
+        "MORE-ALGEBRA-L-001..029",
+        "SMOOTHING-001..035"
+      ]
+    }
+  },
+  "overlays": [
+    {
+      "overlay_id": "stacks-errata-a04446e-r25",
+      "admission_commit": "001f36d41504aecfa77201a04fedff16d37b00f0",
+      "stable_ids": 131,
+      "operations": 154,
+      "affected_source": "artin.tex",
+      "manifest": {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/candidate.manifest.json",
+        "bytes": 11403,
+        "sha256": "61B60F23DBD27C4E0FE42F68AB0C3E1F6E0950C232E6E241A48FCBD91CA25FC1",
+        "git_blob": "ed806d669fc2418fe5245cbd0f905028d98d3bf7"
+      },
+      "payload": {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/payload/artin.tex",
+        "bytes": 254488,
+        "sha256": "F196752E6D872B3B888E57C7183B326287F1A241286991C075E4896996FD185B",
+        "git_blob": "9a2acf0351493bec9b05f9e6650cb14de1ec561f"
+      },
+      "independent_review": {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/replay/independent-review.json",
+        "bytes": 31041,
+        "sha256": "2FE3B0A646EADB4842C2A0992FED6F4C5E5235A2BD6C9E8D1882246277D7A70C",
+        "git_blob": "e80eaa7b98e83d6319fe082664dffce1d0deb84f"
+      }
+    }
+  ],
+  "composition": {
+    "receipt": {
+      "path": "validation/composition-current.json",
+      "bytes": 6074,
+      "sha256": "6AAA3F8F4292659B4FF38ADB1100CEDB2178AB1370F0534631F716A54BC266ED",
+      "git_blob": "1baf8a74f8073757386d647145605a047ef87652"
+    },
+    "registry_import_commit": "fb12027d697fce54f2f0d5fd1454f1e5069dd937",
+    "source_commit": "63dfd5f1499bea1916f64256056a5a37bcfb8f9a",
+    "source_tree": "7ab863452c932dd5ef230f65abdfa5bdcd6b5771",
+    "cumulative_v2_operations": 908,
+    "new_stable_ids": 131,
+    "new_operations": 154,
+    "order": [
+      "stacks-errata-a04446e-r25"
+    ],
+    "composed_source": {
+      "path": "artin.tex",
+      "bytes": 254488,
+      "sha256": "F196752E6D872B3B888E57C7183B326287F1A241286991C075E4896996FD185B",
+      "git_blob": "9a2acf0351493bec9b05f9e6650cb14de1ec561f"
+    }
+  },
+  "build": {
+    "receipt_path": "validation/stacks-errata-a04446e-r25-build-2026-08-28.json",
+    "receipt_bytes": 22470,
+    "receipt_sha256": "B27538CB85CA2D885AF3141866C55F27EE6523F1EF5F0A6DDE72C2FA7B95B36B",
+    "receipt_git_blob": "0efd228949ca1e0161d3d136f031d501a7af1952",
+    "source_commit": "a13d609ba9b146eac0a72f593bcf8aff5c5a6a33",
+    "source_tree": "fbf8d6341b22298d05fdc1f72d547907bc164077",
+    "chapters": 24,
+    "pages": 2437,
+    "pdf_bytes": 25862634,
+    "global_fixed_point_sweep": 4,
+    "artifact_tuple_set_sha256": "B894798242CB53B18A1BFD613D5E8870D704A572F8A17B413E2437FDDA67930B",
+    "diagnostics": {
+      "fatal_markers": 0,
+      "missing_glyph_markers": 0,
+      "undefined_reference_markers": 0,
+      "external_reference_markers": 4026,
+      "undefined_citation_markers": 0,
+      "multiply_defined_markers": 0,
+      "rerun_required_markers": 0,
+      "destination_warning_markers": 0
+    }
+  },
+  "visual_qa": {
+    "status": "PASS",
+    "receipt_path": "validation/stacks-errata-a04446e-r25-visual-qa-2026-08-28.json",
+    "receipt_bytes": 4098,
+    "receipt_sha256": "215B7246A6F097431C7C3835E5327FD8CAE53CD072FCF4DAC9102B7153F5AD13",
+    "receipt_git_blob": "375a63feb5d5d223f80ea9fcf3fef5ab2445f831",
+    "full_page_reviews": 69,
+    "high_resolution_locus_pages": 63,
+    "defects": 0
+  },
+  "reproducibility": {
+    "status": "PASS",
+    "summary_path": "validation/stacks-errata-a04446e-r25-reproducibility-2026-08-28.json",
+    "summary_bytes": 6715,
+    "summary_sha256": "15B9F6D2CC85407E2B19078936672D80CAF1B1D63C10D94856E1E8B0C4A43F7D",
+    "summary_git_blob": "b3bf793ac1752f3d79c51ee5d83cffe1c6a42750",
+    "second_receipt_path": "validation/stacks-errata-a04446e-r25-reproducibility-second-2026-08-28.json",
+    "second_receipt_bytes": 22470,
+    "second_receipt_sha256": "B92BF6284ECFEFF38882A0BDE710AD0059768DC46C7BB38A4B43C7DFFBF26132",
+    "second_receipt_git_blob": "49089dc9ca4ee6a827215484415130a715479824",
+    "matched_artifacts": 24,
+    "different_artifacts": 0,
+    "artifact_tuple_set_sha256": "B894798242CB53B18A1BFD613D5E8870D704A572F8A17B413E2437FDDA67930B"
+  },
+  "public_readback": {
+    "status": "PASS",
+    "checked_utc": "2026-08-28T11:38:13Z",
+    "method": "anonymous raw.githubusercontent.com HTTPS byte readback, with byte count, SHA-256, and Git-blob comparison",
+    "commit": "fb3e4cb4d834c4e28d84b6df41466ad8aaa71b42",
+    "changed_path_count": 78,
+    "checked_file_count": 78,
+    "checked_total_bytes": 4746502,
+    "checked_paths": [
+      {
+        "path": ".github/workflows/validate.yml",
+        "bytes": 895,
+        "sha256": "FC42D2D9197E778230F92DFFCA299F5C4D873C36FA922A726F064FA2A12FCA86",
+        "git_blob": "5c07f073ab55194b821578087db2499851ff0bf3"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/.gitattributes",
+        "bytes": 8,
+        "sha256": "705FD4D6451A31D36B3DF7DE96F83F30AC976C9B4A6D1E51671D8E2F33E2D0DA",
+        "git_blob": "fa1385d99a319b43c06f5309d1aae9fdd3adea46"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/authority/canon/P11_ARTIN_ERRATA_R25.jsonl",
+        "bytes": 111348,
+        "sha256": "DA9BC0D8FA6CC73AC40BD8CAC7911BE7770CC8F0A823BC4491C55A6C97443F8A",
+        "git_blob": "8058373963a8ea8286d67010d96ea778eef5b128"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/authority/canon/R25_ARTIN_ADJUDICATION_SPEC.json",
+        "bytes": 85031,
+        "sha256": "0E9B1F0C60A774F440FB243D27BF930F4A5757289DD39A76E50BDEF2551B68FC",
+        "git_blob": "61319933de42e7a4b0bacec8cd07219fe923b5f7"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/authority/canon/R25_ARTIN_INTAKE_VALIDATION.json",
+        "bytes": 1775,
+        "sha256": "F45EBC5D3D0E598919216204D332B3D78398A06359A2639D0DC45646369926F0",
+        "git_blob": "34c48d694beb853c488833b1c910098cc77b56a8"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/authority/canon/R25_ARTIN_REVIEW.md",
+        "bytes": 1595,
+        "sha256": "7CFFA4387F63F1DA4F6B83AA3BFFF0178565876A98E0CDE6374B004921B551CD",
+        "git_blob": "2df74d117c64f2f14fbd5917a83cde42331a4e81"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/authority/COPYING",
+        "bytes": 20404,
+        "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85",
+        "git_blob": "71ec2c40b4c76362e1d1e9ece69939e7eb8b0908"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/authority/source/artin.tex",
+        "bytes": 254362,
+        "sha256": "EBA90A897B08EEBFF451E80925D13381B1A7F6AB883A34118733CD24CF061F47",
+        "git_blob": "6fae4e533840c1b1c26738c14c8073138820afbb"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/authority/upstream.lock.json",
+        "bytes": 408,
+        "sha256": "609B516FA3AFD7C9969C6173D53AD5F6562A239F3E77FA80EAD3C741723FA870",
+        "git_blob": "2ca5e746b5cc96d38fd64a70a0a43e7ba06be688"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/build-manifest.py",
+        "bytes": 8035,
+        "sha256": "3CB392EC807AE2454FC37D86C9162B936BB5341E11B303841F84A52BD03BCD15",
+        "git_blob": "a6be5878583529e3360b8d25a92a33986e06bb36"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/build-receipt.py",
+        "bytes": 8272,
+        "sha256": "C475B577D10672DC83DB45939A6826CDDBBB370CC8F52DB21F2D40EA9A896835",
+        "git_blob": "16579222dc1236417558220e56fe189d208d6125"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/BUILD.md",
+        "bytes": 3537,
+        "sha256": "0986AD65F7199B34ED7790C4C734AD2414C9D026B790F192821EB891E1D87578",
+        "git_blob": "22d65d5174c3b0829f49246ed177b8736c841cb2"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/builds/artin.authority.bibtex.txt",
+        "bytes": 142,
+        "sha256": "063080B9A38202CC04C9DCC5C6ADC009EBDBE50BDC8C6F7FA0930030F5F388EC",
+        "git_blob": "6e1159cdc556e82ed535ba5535408ee9a8d051fa"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/builds/artin.authority.log",
+        "bytes": 79740,
+        "sha256": "1E66622817D2FE96051F9B8D96DBD3AB63D7390D4BFE40DEF12F7C9D05C129B4",
+        "git_blob": "8e6287dea0b5261f5bb96b598d65c00c66694f69"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/builds/artin.authority.pass3.txt",
+        "bytes": 66503,
+        "sha256": "3F06EBCF852774126DDBDC1E208E357D266D909FD0163C96A648B207A46DBA18",
+        "git_blob": "3bf5d8dde9080f309ec9dabfde4c8e1e813e6bfd"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/builds/artin.authority.pdf",
+        "bytes": 886649,
+        "sha256": "7438DC8CA4276CE1D06E6ED11FE88722850C5970B85BC9F988A1E97EDAAD5381",
+        "git_blob": "0b8ca5792ab99e7ff7b3b145675652e35378cc37"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/builds/artin.bibtex.txt",
+        "bytes": 142,
+        "sha256": "063080B9A38202CC04C9DCC5C6ADC009EBDBE50BDC8C6F7FA0930030F5F388EC",
+        "git_blob": "6e1159cdc556e82ed535ba5535408ee9a8d051fa"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/builds/artin.log",
+        "bytes": 79740,
+        "sha256": "D46514A1430157AADC83F6EDA040CE25772825DF0C6AA32F65C18236E6343F23",
+        "git_blob": "7ec9f6c97de508d43e5d3bad25f29835a811955e"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/builds/artin.pass3.txt",
+        "bytes": 66503,
+        "sha256": "A4706A2A3876CEED863756F27C32D6DD47BE71B5E586B47EBC9581B364A4B4ED",
+        "git_blob": "ce7b1bbd6150f17bfe429d722177eae182b46989"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/builds/artin.pdf",
+        "bytes": 887024,
+        "sha256": "13C555CDE88BDFCFC2D5E55686CB8DA6BB44852D1FF5010DDF9EB2074ACC6D8E",
+        "git_blob": "6cd72bb87db44301e5afe28d6fa6fe9ddb96366a"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/builds/build-execution.json",
+        "bytes": 6909,
+        "sha256": "2BAB0F1F4D0781DFA848B96ACC9F27CE846A73FACE6C1D1109111A0236EE9E68",
+        "git_blob": "a13550860b6003adee50a2b870cb7532247a1a6a"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/builds/build-receipt.json",
+        "bytes": 36665,
+        "sha256": "8E5A10CD7EF7B06E043D97A289F725FCAF777737086CE4CB53C367BD223067DA",
+        "git_blob": "adc3c37085bc2665864ac6106a54eca32f972595"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/builds/deterministic-replay.json",
+        "bytes": 1015,
+        "sha256": "8DADE7F30CAF5E60E3E129FAAA19F879FF1800507F00889FC48838B6E500D02E",
+        "git_blob": "4de4b87051f84f087ed6ac47e22a1d27716a0fe1"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/builds/source-page-map.json",
+        "bytes": 39171,
+        "sha256": "467AE5AF792915E3832C83C6E308F497677B97B75F064BA120D5E7C8F68DB643",
+        "git_blob": "f9b11138a366a811503b460697d3247a0c1c9adb"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/builds/validation.json",
+        "bytes": 2873,
+        "sha256": "A457B9604E87C9A79B066737335D0206368F9F9993FD5B5752C0AC019FDD97EA",
+        "git_blob": "0d1e70c1aa0ad7997aab80311b2a4d958abc3a0d"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/builds/visual-qa.json",
+        "bytes": 22202,
+        "sha256": "8AAF3A1F1BB67D4D1BB83DE8484D049A660C3B0C1264B3841D0B4C4B6BAA777F",
+        "git_blob": "facd8786299a905a8067e8e62e0afa8803889c67"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/candidate.config.input.json",
+        "bytes": 9381,
+        "sha256": "94E1EE3919CBD2B25C93F1FA599AD32B793FDB8BD7D0591EAAE9F51BCA778C96",
+        "git_blob": "e285046417df90d3df0fad68be8f99f6cd4b5266"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/candidate.config.json",
+        "bytes": 12411,
+        "sha256": "C6275CB9CA4C0331B3426E305E4B6ABD589F8DA83E9705691BD58348CE12AC6C",
+        "git_blob": "4290c7f96ee31e75129dbd6fd7329e60470df7ea"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/candidate.manifest.json",
+        "bytes": 11403,
+        "sha256": "61B60F23DBD27C4E0FE42F68AB0C3E1F6E0950C232E6E241A48FCBD91CA25FC1",
+        "git_blob": "ed806d669fc2418fe5245cbd0f905028d98d3bf7"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/check-manifest.py",
+        "bytes": 7115,
+        "sha256": "FF858E21390BF46217BC231051B8389657A51D5FBDCD8ECD0F248756F6ADA89D",
+        "git_blob": "41ea9fb1ff37210a0f297b310b90b69e71f57d8d"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/decisions.input.jsonl",
+        "bytes": 2348,
+        "sha256": "DA7A710B4AC7EF931117ED081227A02CBF5C1AEBDAB71140C6CF8D814935D55D",
+        "git_blob": "c116979428a5c836508121dcea8e2f90777a28d1"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/decisions.jsonl",
+        "bytes": 2348,
+        "sha256": "DA7A710B4AC7EF931117ED081227A02CBF5C1AEBDAB71140C6CF8D814935D55D",
+        "git_blob": "c116979428a5c836508121dcea8e2f90777a28d1"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/derive-visual-pages.py",
+        "bytes": 5277,
+        "sha256": "DC72F52D3AB8114FA71EA0B06CFB751448A73564F89FB3B6BB3DA74FABD2C925",
+        "git_blob": "4afcfd6170296eb2973f18c2bec3848470a1178d"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/deterministic-replay.py",
+        "bytes": 2124,
+        "sha256": "3B55E889B1D66BC2694EF7443D6303CE35256BD50DCEC7A1CD6BA913F6B2C602",
+        "git_blob": "a09b2c5ff2d5fe51e252699082056c5169679e27"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/formula-diagram-inventory.json",
+        "bytes": 3439,
+        "sha256": "EEE9A146B2E5A47A5BB90454B05C57EFC04BE903C387044CE57C63D7BA15DC5C",
+        "git_blob": "f80adfa2856604dacc9807786fdaa8ad74fd0332"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/independent-review.py",
+        "bytes": 11358,
+        "sha256": "AA08AD9DB8B5B9EA7A88CBE4301CAEC8479D5DB56E37C7CD43D083ED44BE5F59",
+        "git_blob": "7747869c14cd33f6e70fb6a77b61782c964e36e3"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/INTAKE_VALIDATION.json",
+        "bytes": 1775,
+        "sha256": "F45EBC5D3D0E598919216204D332B3D78398A06359A2639D0DC45646369926F0",
+        "git_blob": "34c48d694beb853c488833b1c910098cc77b56a8"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/materialize.py",
+        "bytes": 11623,
+        "sha256": "E5E9D0B622249958BFF0DC54AB03004E40CD5425F52F1C1ADD9C227A4B5FF17E",
+        "git_blob": "06c15fdc8b2f2bcdb5def63a5433ce0f2827acaf"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/operation-spec.input.json",
+        "bytes": 113600,
+        "sha256": "30ACB508312DB4D0A06EC61FF43A2649649869C475C3BB3A81DB15C5DBED83EB",
+        "git_blob": "13b604444c7cf1c46e3a244e2daf11102e2c72dc"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/operation-spec.json",
+        "bytes": 113668,
+        "sha256": "DE82ADC8963BB1768FD05025A929C51674188225BF1E856D35FB9B90E10764BB",
+        "git_blob": "9a700e9c1b9b9bc9d63b3d4959e2e9e199b9c269"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/P11_ARTIN_ERRATA_R25.input.jsonl",
+        "bytes": 111348,
+        "sha256": "DA9BC0D8FA6CC73AC40BD8CAC7911BE7770CC8F0A823BC4491C55A6C97443F8A",
+        "git_blob": "8058373963a8ea8286d67010d96ea778eef5b128"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/payload/artin.tex",
+        "bytes": 254488,
+        "sha256": "F196752E6D872B3B888E57C7183B326287F1A241286991C075E4896996FD185B",
+        "git_blob": "9a2acf0351493bec9b05f9e6650cb14de1ec561f"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/prepare-inputs.py",
+        "bytes": 40783,
+        "sha256": "3942EEBAFB551F97BB8D808A6A24155128AFC3309B28E2952B2EFE08A7B660C8",
+        "git_blob": "484e021eb2a9fed80cd49d11545933d7862e2025"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/R25_ARTIN_ADJUDICATION_SPEC.input.json",
+        "bytes": 85031,
+        "sha256": "0E9B1F0C60A774F440FB243D27BF930F4A5757289DD39A76E50BDEF2551B68FC",
+        "git_blob": "61319933de42e7a4b0bacec8cd07219fe923b5f7"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/R25_ARTIN_ADJUDICATION_SPEC.json",
+        "bytes": 85031,
+        "sha256": "0E9B1F0C60A774F440FB243D27BF930F4A5757289DD39A76E50BDEF2551B68FC",
+        "git_blob": "61319933de42e7a4b0bacec8cd07219fe923b5f7"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/R25_ARTIN_REVIEW.md",
+        "bytes": 1595,
+        "sha256": "7CFFA4387F63F1DA4F6B83AA3BFFF0178565876A98E0CDE6374B004921B551CD",
+        "git_blob": "2df74d117c64f2f14fbd5917a83cde42331a4e81"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/README.md",
+        "bytes": 1704,
+        "sha256": "2BA2B6722870E543A248003D41B7441789903564FC6BACC44D6E3C5E1429D2FF",
+        "git_blob": "0c05e635919d33656e98e5706ed5dfe52e3f49ad"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/rejections.input.jsonl",
+        "bytes": 2719,
+        "sha256": "061479CAD69D63F5B5C78EAB768BFD2380B36E9D13810F2F2E3B477A945B5D92",
+        "git_blob": "d8be8a95e2c8a3593453ea8b15a4d4eafaab0ca2"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/rejections.jsonl",
+        "bytes": 2719,
+        "sha256": "061479CAD69D63F5B5C78EAB768BFD2380B36E9D13810F2F2E3B477A945B5D92",
+        "git_blob": "d8be8a95e2c8a3593453ea8b15a4d4eafaab0ca2"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/render-qa.py",
+        "bytes": 6131,
+        "sha256": "21BC9088A956788C74C57E6FC209D4EFBA26E966B03071511A827CDB32BD695F",
+        "git_blob": "a600730a85c4be729733f6d8cfa4612942cbc4d9"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/replay-build.py",
+        "bytes": 10564,
+        "sha256": "44985DDC1ABCD7C225C58F0511FD226BC6B881DAC77B93B89B69A996C6BC23B9",
+        "git_blob": "32b411fed4d6c564b030fe682c4a044dcbed794c"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/replay/independent-review.json",
+        "bytes": 31041,
+        "sha256": "2FE3B0A646EADB4842C2A0992FED6F4C5E5235A2BD6C9E8D1882246277D7A70C",
+        "git_blob": "e80eaa7b98e83d6319fe082664dffce1d0deb84f"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/source-map.input.jsonl",
+        "bytes": 160807,
+        "sha256": "732B029137E6A921FA23AF21A81A0BCD99E42E040E700FCAD41AA1AD76132686",
+        "git_blob": "bcab0aa8b12e323e71bb2c45feb0ccfc86c7385e"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/source-map.jsonl",
+        "bytes": 160807,
+        "sha256": "732B029137E6A921FA23AF21A81A0BCD99E42E040E700FCAD41AA1AD76132686",
+        "git_blob": "bcab0aa8b12e323e71bb2c45feb0ccfc86c7385e"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/source-validation.json",
+        "bytes": 2507,
+        "sha256": "51E1933184B519DB0AC17238425394DDE7D00E8FF18958D5A913F4DF0A3BA89D",
+        "git_blob": "af458c7f0bc89f571f873634292ea0e29fc8f150"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/stable-units.input.json",
+        "bytes": 52255,
+        "sha256": "F189B5AE2AA33E3E424C758B86984E0301B5383810C9DC2041B2D4ED7115C1B8",
+        "git_blob": "0a1183986c6b0a54eb183a75226c90be5ba52dc7"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/stable-units.json",
+        "bytes": 52255,
+        "sha256": "F189B5AE2AA33E3E424C758B86984E0301B5383810C9DC2041B2D4ED7115C1B8",
+        "git_blob": "0a1183986c6b0a54eb183a75226c90be5ba52dc7"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/verify-source.py",
+        "bytes": 16510,
+        "sha256": "01BB35ABFF354C3D20EB7992E510215442A281A0EC34ED50332B3563F46D60E3",
+        "git_blob": "ed8e601c8415fd7e8c39b392958a7270be3b973b"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/verify.py",
+        "bytes": 27434,
+        "sha256": "A559D871A948BEEF5E9EEF9F61D9C3C2C93E6BB29E7D72CC12AE541A130E398F",
+        "git_blob": "9a1f335638f39031390dd46a231421738a4a3682"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r25/visual-qa.py",
+        "bytes": 12551,
+        "sha256": "6349D3CB5E7D69797B7BDD13E40525309E685C083A76CBEC1A6E2DBF86574EAF",
+        "git_blob": "6eb6046a8ca19c6e85f3de9c69dc90cd65a58abf"
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r26/LEASE.json",
+        "bytes": 450,
+        "sha256": "8F8285F9D1B2AAC5B5B1C2D09FFB381DE08C98907E65FF6237478DF9B404222E",
+        "git_blob": "3c73528da4e0f220151c42cde907f7bc071063de"
+      },
+      {
+        "path": "ai-integrated/README.md",
+        "bytes": 4304,
+        "sha256": "587283545664823B3F2E8E33FBF0E139D7C3F1D7A77DBC7EA4F182A5E4C51711",
+        "git_blob": "146d0ae3ffe5944aa6d3727fffe82c76fcf3ad4b"
+      },
+      {
+        "path": "ai-integrated/registry/leases.json",
+        "bytes": 34201,
+        "sha256": "EF333358FCBC8490DC5FB39DB298BD91AE9D710044885FE41B4BCB627D35D6FC",
+        "git_blob": "691b70571fe549254c96177f7867697ebe03a111"
+      },
+      {
+        "path": "ai-integrated/registry/overlays.json",
+        "bytes": 44316,
+        "sha256": "7A457BB9AA62E96C9AB1C7B8624ED1BAB6F43630795DBE23380DF25FBF33521D",
+        "git_blob": "ad42042846c6e3bdd84aff2142769e4f5a3d7366"
+      },
+      {
+        "path": "artin.tex",
+        "bytes": 254488,
+        "sha256": "F196752E6D872B3B888E57C7183B326287F1A241286991C075E4896996FD185B",
+        "git_blob": "9a2acf0351493bec9b05f9e6650cb14de1ec561f"
+      },
+      {
+        "path": "PROVENANCE.md",
+        "bytes": 9391,
+        "sha256": "98C959507277792B7BBD9E769BD308728B4B44475AF36E752207C87159822171",
+        "git_blob": "732ff84d94df0f36168054c9fdcbb10f57153a3a"
+      },
+      {
+        "path": "README.md",
+        "bytes": 10796,
+        "sha256": "CE82AB67F9FB2950288D66D3B7836A84E2C64335880FE8E5E914A9426E0CF810",
+        "git_blob": "8253516ca4148ce3f8716588708553789be334c2"
+      },
+      {
+        "path": "ROADMAP.md",
+        "bytes": 9112,
+        "sha256": "DA381C4079187AF35E1FFFA267D082017647CC00A02C47FFEAE89D8CF5228396",
+        "git_blob": "11d68d29a700af962cee7fdc243b73cdb3b956ca"
+      },
+      {
+        "path": "STATUS.md",
+        "bytes": 7143,
+        "sha256": "5C2F5DCAC534F67A8A20D0771922814FA6B20F8090032CB25B7948D440CB3FF9",
+        "git_blob": "f8a5270d759bab8527a211455266f8f8bdad853d"
+      },
+      {
+        "path": "tools/build_fixed_point.py",
+        "bytes": 87172,
+        "sha256": "09E56454FACC96573509B26A0FB7F21A9DD0BDA80A93402A7EEE312841B62704",
+        "git_blob": "c5d3eef18216b0173adb0218e37f58c54cd97789"
+      },
+      {
+        "path": "tools/validate_unified_repository.py",
+        "bytes": 109338,
+        "sha256": "4EEE855E165A9DE8F975E24B5027491D58D6A39057102D9B601FF6A49934FA60",
+        "git_blob": "a179b3287511e39b3c9c7fed6a30883faf3c6388"
+      },
+      {
+        "path": "VALIDATION.md",
+        "bytes": 7199,
+        "sha256": "6DD7F9F4CB81484728ACC9820813EC5B97FC24D65621A36FA516F782CABBE952",
+        "git_blob": "0edf476cc0b694c71f68e5a3d5b3ac09251d843d"
+      },
+      {
+        "path": "validation/composition-current.json",
+        "bytes": 6074,
+        "sha256": "6AAA3F8F4292659B4FF38ADB1100CEDB2178AB1370F0534631F716A54BC266ED",
+        "git_blob": "1baf8a74f8073757386d647145605a047ef87652"
+      },
+      {
+        "path": "validation/README.md",
+        "bytes": 9667,
+        "sha256": "BA9D92468F5C3D64DAC994FAAE7E91335B033DE411364AB30A9AE09D7E0B6101",
+        "git_blob": "bf5859cf136434a9d74ebc7f9964f9ee6c49d4c4"
+      },
+      {
+        "path": "validation/stacks-errata-a04446e-r25-build-2026-08-28.json",
+        "bytes": 22470,
+        "sha256": "B27538CB85CA2D885AF3141866C55F27EE6523F1EF5F0A6DDE72C2FA7B95B36B",
+        "git_blob": "0efd228949ca1e0161d3d136f031d501a7af1952"
+      },
+      {
+        "path": "validation/stacks-errata-a04446e-r25-reproducibility-2026-08-28.json",
+        "bytes": 6715,
+        "sha256": "15B9F6D2CC85407E2B19078936672D80CAF1B1D63C10D94856E1E8B0C4A43F7D",
+        "git_blob": "b3bf793ac1752f3d79c51ee5d83cffe1c6a42750"
+      },
+      {
+        "path": "validation/stacks-errata-a04446e-r25-reproducibility-second-2026-08-28.json",
+        "bytes": 22470,
+        "sha256": "B92BF6284ECFEFF38882A0BDE710AD0059768DC46C7BB38A4B43C7DFFBF26132",
+        "git_blob": "49089dc9ca4ee6a827215484415130a715479824"
+      },
+      {
+        "path": "validation/stacks-errata-a04446e-r25-visual-qa-2026-08-28.json",
+        "bytes": 4098,
+        "sha256": "215B7246A6F097431C7C3835E5327FD8CAE53CD072FCF4DAC9102B7153F5AD13",
+        "git_blob": "375a63feb5d5d223f80ea9fcf3fef5ab2445f831"
+      }
+    ]
+  },
+  "workflow": {
+    "name": "Unified repository validation",
+    "run_id": 33167619337,
+    "head_sha": "fb3e4cb4d834c4e28d84b6df41466ad8aaa71b42",
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/actions/runs/33167619337",
+    "role": "successful exact-head workflow for the public R25 content and validation metadata head"
+  },
+  "registry": {
+    "overlays": {
+      "path": "ai-integrated/registry/overlays.json",
+      "bytes": 44316,
+      "sha256": "7A457BB9AA62E96C9AB1C7B8624ED1BAB6F43630795DBE23380DF25FBF33521D",
+      "git_blob": "ad42042846c6e3bdd84aff2142769e4f5a3d7366"
+    },
+    "leases": {
+      "path": "ai-integrated/registry/leases.json",
+      "bytes": 34201,
+      "sha256": "EF333358FCBC8490DC5FB39DB298BD91AE9D710044885FE41B4BCB627D35D6FC",
+      "git_blob": "691b70571fe549254c96177f7867697ebe03a111"
+    }
+  },
+  "fixed_point_artifacts": {
+    "pdfs_committed": false,
+    "artifact_count": 24,
+    "pages": 2437,
+    "bytes": 25862634,
+    "artifact_tuple_set_sha256": "B894798242CB53B18A1BFD613D5E8870D704A572F8A17B413E2437FDDA67930B",
+    "public_identity_evidence": "validation/stacks-errata-a04446e-r25-build-2026-08-28.json"
+  },
+  "scope_note": "This release composes and validates admitted errata through R25. EGA integration remains explicitly partial and resumes at EGA I section 6.4.1; neither complete EGA integration nor formal verification is claimed."
+}
