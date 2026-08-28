@@ -1,0 +1,93 @@
+{
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "candidate_id": "stacks-errata-a04446e-r25",
+  "checks": {
+    "authority_evidence": {
+      "files": 7,
+      "passed": true
+    },
+    "exact_payload": {
+      "artin": {
+        "authority_bytes": 254362,
+        "authority_sha256": "EBA90A897B08EEBFF451E80925D13381B1A7F6AB883A34118733CD24CF061F47",
+        "display_delimiter_delta": 0,
+        "operation_count": 154,
+        "ordered_structure": {
+          "citations": {
+            "authority": 14,
+            "payload": 14
+          },
+          "environments": {
+            "authority": 510,
+            "payload": 510
+          },
+          "labels": {
+            "authority": 140,
+            "payload": 140
+          },
+          "references": {
+            "authority": 551,
+            "payload": 551
+          },
+          "sections": {
+            "authority": 27,
+            "payload": 27
+          }
+        },
+        "payload_bytes": 254488,
+        "payload_sha256": "F196752E6D872B3B888E57C7183B326287F1A241286991C075E4896996FD185B",
+        "xymatrix_count": 43
+      },
+      "passed": true
+    },
+    "lease_ledgers_inventory": {
+      "decisions": 6,
+      "diagram_units": 0,
+      "formula_units": 99,
+      "passed": true,
+      "prose_only_units": 32,
+      "rejections": 3
+    },
+    "public_hygiene": {
+      "passed": true,
+      "python_caches": 0,
+      "text_files": 50
+    },
+    "required_refinements": {
+      "passed": true,
+      "producer_ids": [
+        "P11-E0208",
+        "P11-E0210",
+        "P11-E0211",
+        "P11-E0240",
+        "P11-E0265",
+        "P11-E0317",
+        "P11-E0320",
+        "P11-E0329",
+        "P11-E0333",
+        "P11-E0334"
+      ],
+      "required_operations": 13
+    },
+    "sealed_intake": {
+      "operations": 154,
+      "passed": true,
+      "producer_rows": 140,
+      "spec_sha256": "0E9B1F0C60A774F440FB243D27BF930F4A5757289DD39A76E50BDEF2551B68FC",
+      "units": 131
+    },
+    "unit_closure": {
+      "accepted_producer_ids": 137,
+      "first_id": "MC-STK-ERR-1046",
+      "last_id": "MC-STK-ERR-1176",
+      "passed": true,
+      "rejected_producer_ids": 3,
+      "units": 131
+    }
+  },
+  "generated_at_utc": "2026-08-27T21:34:00Z",
+  "passed": true,
+  "schema": "mathematics-commons-stacks-errata-source-validation/v1",
+  "scope": "source_only_no_build_render_admission_registry_git_or_publication",
+  "verifier_sha256": "01BB35ABFF354C3D20EB7992E510215442A281A0EC34ED50332B3563F46D60E3"
+}

@@ -1,0 +1,63 @@
+{
+  "accepted_producer_ids": 137,
+  "adjudication_spec_bytes": 85031,
+  "adjudication_spec_sha256": "0E9B1F0C60A774F440FB243D27BF930F4A5757289DD39A76E50BDEF2551B68FC",
+  "authority_bytes": 254362,
+  "authority_sha256": "EBA90A897B08EEBFF451E80925D13381B1A7F6AB883A34118733CD24CF061F47",
+  "bounded_preimages_unique_on_declared_lines": true,
+  "closure": {
+    "accepted_rejected_and_unresolved_disjoint": true,
+    "all_140_producer_ids_accounted_for_exactly_once": true,
+    "operation_ids_equal_stable_unit_operation_ids": true,
+    "source_map_units_equal_stable_units": true
+  },
+  "merged_producer_groups": [
+    [
+      "P11-E0222",
+      "P11-E0226"
+    ],
+    [
+      "P11-E0245",
+      "P11-E0248"
+    ],
+    [
+      "P11-E0251",
+      "P11-E0252"
+    ],
+    [
+      "P11-E0274",
+      "P11-E0276"
+    ],
+    [
+      "P11-E0312",
+      "P11-E0313"
+    ],
+    [
+      "P11-E0333",
+      "P11-E0334"
+    ]
+  ],
+  "operations": 154,
+  "operations_nonoverlapping": true,
+  "payload_preview_bytes": 254488,
+  "payload_preview_sha256": "F196752E6D872B3B888E57C7183B326287F1A241286991C075E4896996FD185B",
+  "producer_ledger_bytes": 111348,
+  "producer_ledger_sha256": "DA9BC0D8FA6CC73AC40BD8CAC7911BE7770CC8F0A823BC4491C55A6C97443F8A",
+  "prohibited_transitions_executed": [],
+  "r24_predecessor_stable_id_last": "MC-STK-ERR-1045",
+  "r24_touched": false,
+  "rejected_ids": [
+    "P11-E0202",
+    "P11-E0215",
+    "P11-E0217"
+  ],
+  "rejected_producer_ids": 3,
+  "schema": "mathematics-commons-stacks-r25-intake-validation/v1",
+  "semantic_units": 131,
+  "stable_id_first": "MC-STK-ERR-1046",
+  "stable_id_last": "MC-STK-ERR-1176",
+  "stable_ids_follow_first_physical_source_locus": true,
+  "stable_ids_unique_and_contiguous": true,
+  "status": "PASS",
+  "unresolved": 0
+}

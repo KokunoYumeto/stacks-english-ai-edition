@@ -1,0 +1,205 @@
+{
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_inputs": {
+    "artin.tex": {
+      "bytes": 254362,
+      "path": "artin.tex",
+      "sha256": "EBA90A897B08EEBFF451E80925D13381B1A7F6AB883A34118733CD24CF061F47"
+    }
+  },
+  "authority_phase": {
+    "stems": {
+      "artin": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "artin.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 96738,
+            "stdout_sha256_raw": "0DEF3D3D6127281FA23A3FE7E4F136208FDAC3CBB011316C8D0F7F5DBA38919A"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "artin"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 142,
+            "stdout_sha256_raw": "063080B9A38202CC04C9DCC5C6ADC009EBDBE50BDC8C6F7FA0930030F5F388EC"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "artin.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 68126,
+            "stdout_sha256_raw": "21127F58AA35516FA64763C28D952CCE1FD673AB9E08A2EBF2BE2017855A6E44"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "artin.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 66927,
+            "stdout_sha256_raw": "9BF2095C992D88A71D00E412557A47CABF6652D3A2FDCF4066C18C41FEFD79E4"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 142,
+            "path": "builds/artin.authority.bibtex.txt",
+            "sha256": "063080B9A38202CC04C9DCC5C6ADC009EBDBE50BDC8C6F7FA0930030F5F388EC"
+          },
+          "log": {
+            "bytes": 79740,
+            "path": "builds/artin.authority.log",
+            "sha256": "1E66622817D2FE96051F9B8D96DBD3AB63D7390D4BFE40DEF12F7C9D05C129B4"
+          },
+          "pass3_stdout": {
+            "bytes": 66503,
+            "path": "builds/artin.authority.pass3.txt",
+            "sha256": "3F06EBCF852774126DDBDC1E208E357D266D909FD0163C96A648B207A46DBA18"
+          },
+          "pdf": {
+            "bytes": 886649,
+            "path": "builds/artin.authority.pdf",
+            "sha256": "7438DC8CA4276CE1D06E6ED11FE88722850C5970B85BC9F988A1E97EDAAD5381"
+          }
+        },
+        "source": {
+          "bytes": 254362,
+          "path": "artin.tex",
+          "sha256": "EBA90A897B08EEBFF451E80925D13381B1A7F6AB883A34118733CD24CF061F47"
+        }
+      }
+    }
+  },
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "candidate_id": "stacks-errata-a04446e-r25",
+  "candidate_inputs": {
+    "artin.tex": {
+      "bytes": 254488,
+      "path": "artin.tex",
+      "sha256": "F196752E6D872B3B888E57C7183B326287F1A241286991C075E4896996FD185B"
+    }
+  },
+  "candidate_phase": {
+    "stems": {
+      "artin": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "artin.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 96660,
+            "stdout_sha256_raw": "C5239BC1634340DD602FD84FF7862B0B53EE52ADF7FA3D88B8A8D8672923AF1F"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "artin"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 142,
+            "stdout_sha256_raw": "063080B9A38202CC04C9DCC5C6ADC009EBDBE50BDC8C6F7FA0930030F5F388EC"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "artin.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 68126,
+            "stdout_sha256_raw": "CC65A7E974909DB2C726045CFF642CA1836DAAB306EF051F0E340BB9FBC7BB26"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "artin.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 66927,
+            "stdout_sha256_raw": "3F5F60A66244CA9CE10F0E8606E2F1FE2383BEBB32540567F0A077958D2207D2"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 142,
+            "path": "builds/artin.bibtex.txt",
+            "sha256": "063080B9A38202CC04C9DCC5C6ADC009EBDBE50BDC8C6F7FA0930030F5F388EC"
+          },
+          "log": {
+            "bytes": 79740,
+            "path": "builds/artin.log",
+            "sha256": "D46514A1430157AADC83F6EDA040CE25772825DF0C6AA32F65C18236E6343F23"
+          },
+          "pass3_stdout": {
+            "bytes": 66503,
+            "path": "builds/artin.pass3.txt",
+            "sha256": "A4706A2A3876CEED863756F27C32D6DD47BE71B5E586B47EBC9581B364A4B4ED"
+          },
+          "pdf": {
+            "bytes": 887024,
+            "path": "builds/artin.pdf",
+            "sha256": "13C555CDE88BDFCFC2D5E55686CB8DA6BB44852D1FF5010DDF9EB2074ACC6D8E"
+          }
+        },
+        "source": {
+          "bytes": 254488,
+          "path": "artin.tex",
+          "sha256": "F196752E6D872B3B888E57C7183B326287F1A241286991C075E4896996FD185B"
+        }
+      }
+    }
+  },
+  "completed_at_utc": "2026-08-28T00:20:02Z",
+  "passed": true,
+  "restored_authority_inputs": {
+    "artin.tex": {
+      "bytes": 254362,
+      "path": "artin.tex",
+      "sha256": "EBA90A897B08EEBFF451E80925D13381B1A7F6AB883A34118733CD24CF061F47"
+    }
+  },
+  "schema": "mathematics-commons-stacks-errata-build-execution/v1",
+  "source_date_epoch": "1787866440",
+  "started_at_utc": "2026-08-28T00:19:52Z",
+  "tools": {
+    "bibtex": "MiKTeX-BibTeX 4.2 (MiKTeX 26.5)",
+    "pdflatex": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5)",
+    "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]"
+  },
+  "work_root": "new empty task-local directory outside source and candidate; exact local path retained only in private evidence"
+}
