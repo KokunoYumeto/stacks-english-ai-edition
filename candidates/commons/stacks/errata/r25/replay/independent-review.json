@@ -1,0 +1,1644 @@
+{
+  "schema": "mathematics-commons-stacks-errata-independent-review/v1",
+  "candidate_id": "stacks-errata-a04446e-r25",
+  "review_kind": "independent_adverse_replay",
+  "recorded_at_utc": "2026-08-28T00:30:57Z",
+  "result": "PASS",
+  "conclusion": "UNCONDITIONAL PASS",
+  "passed": true,
+  "pass_is_unconditional": true,
+  "pre_review_manifest_sha256": "424FCFBE0384CEB891FB609981C27743C55F070C03A9FA321117BDC08968AAE3",
+  "validation_sha256": "A457B9604E87C9A79B066737335D0206368F9F9993FD5B5752C0AC019FDD97EA",
+  "pre_review_gate": {
+    "passed": true,
+    "check_manifest_exit_code": 0,
+    "candidate_manifest": {
+      "path": "candidate.manifest.json",
+      "bytes": 10989,
+      "sha256": "424FCFBE0384CEB891FB609981C27743C55F070C03A9FA321117BDC08968AAE3"
+    },
+    "validation": {
+      "path": "builds/validation.json",
+      "bytes": 2873,
+      "sha256": "A457B9604E87C9A79B066737335D0206368F9F9993FD5B5752C0AC019FDD97EA",
+      "passed": true
+    }
+  },
+  "input_nonmutation": {
+    "passed": true,
+    "file_count_excluding_manifest_and_receipt": 58,
+    "note": "The replay read sealed candidate bytes and wrote only this receipt."
+  },
+  "stable_id_recomputation": {
+    "passed": true,
+    "derivation_rule": "Accepted semantic units map in bounded physical-source order to consecutive stable IDs; linked producer allegations share their semantic unit, while rejected and intentionally absent allegations consume no stable ID.",
+    "explicit_mapping": [
+      {
+        "producer_id": "P11-E0200",
+        "producer_ids": [
+          "P11-E0200"
+        ],
+        "stable_id": "MC-STK-ERR-1046"
+      },
+      {
+        "producer_id": "P11-E0201",
+        "producer_ids": [
+          "P11-E0201"
+        ],
+        "stable_id": "MC-STK-ERR-1047"
+      },
+      {
+        "producer_id": "P11-E0203",
+        "producer_ids": [
+          "P11-E0203"
+        ],
+        "stable_id": "MC-STK-ERR-1048"
+      },
+      {
+        "producer_id": "P11-E0204",
+        "producer_ids": [
+          "P11-E0204"
+        ],
+        "stable_id": "MC-STK-ERR-1049"
+      },
+      {
+        "producer_id": "P11-E0205",
+        "producer_ids": [
+          "P11-E0205"
+        ],
+        "stable_id": "MC-STK-ERR-1050"
+      },
+      {
+        "producer_id": "P11-E0206",
+        "producer_ids": [
+          "P11-E0206"
+        ],
+        "stable_id": "MC-STK-ERR-1051"
+      },
+      {
+        "producer_id": "P11-E0207",
+        "producer_ids": [
+          "P11-E0207"
+        ],
+        "stable_id": "MC-STK-ERR-1052"
+      },
+      {
+        "producer_id": "P11-E0208",
+        "producer_ids": [
+          "P11-E0208"
+        ],
+        "stable_id": "MC-STK-ERR-1053"
+      },
+      {
+        "producer_id": "P11-E0209",
+        "producer_ids": [
+          "P11-E0209"
+        ],
+        "stable_id": "MC-STK-ERR-1054"
+      },
+      {
+        "producer_id": "P11-E0210",
+        "producer_ids": [
+          "P11-E0210"
+        ],
+        "stable_id": "MC-STK-ERR-1055"
+      },
+      {
+        "producer_id": "P11-E0211",
+        "producer_ids": [
+          "P11-E0211"
+        ],
+        "stable_id": "MC-STK-ERR-1056"
+      },
+      {
+        "producer_id": "P11-E0212",
+        "producer_ids": [
+          "P11-E0212"
+        ],
+        "stable_id": "MC-STK-ERR-1057"
+      },
+      {
+        "producer_id": "P11-E0213",
+        "producer_ids": [
+          "P11-E0213"
+        ],
+        "stable_id": "MC-STK-ERR-1058"
+      },
+      {
+        "producer_id": "P11-E0214",
+        "producer_ids": [
+          "P11-E0214"
+        ],
+        "stable_id": "MC-STK-ERR-1059"
+      },
+      {
+        "producer_id": "P11-E0216",
+        "producer_ids": [
+          "P11-E0216"
+        ],
+        "stable_id": "MC-STK-ERR-1060"
+      },
+      {
+        "producer_id": "P11-E0218",
+        "producer_ids": [
+          "P11-E0218"
+        ],
+        "stable_id": "MC-STK-ERR-1061"
+      },
+      {
+        "producer_id": "P11-E0219",
+        "producer_ids": [
+          "P11-E0219"
+        ],
+        "stable_id": "MC-STK-ERR-1062"
+      },
+      {
+        "producer_id": "P11-E0220",
+        "producer_ids": [
+          "P11-E0220"
+        ],
+        "stable_id": "MC-STK-ERR-1063"
+      },
+      {
+        "producer_id": "P11-E0221",
+        "producer_ids": [
+          "P11-E0221"
+        ],
+        "stable_id": "MC-STK-ERR-1064"
+      },
+      {
+        "producer_id": "P11-E0222",
+        "producer_ids": [
+          "P11-E0222",
+          "P11-E0226"
+        ],
+        "stable_id": "MC-STK-ERR-1065"
+      },
+      {
+        "producer_id": "P11-E0223",
+        "producer_ids": [
+          "P11-E0223"
+        ],
+        "stable_id": "MC-STK-ERR-1066"
+      },
+      {
+        "producer_id": "P11-E0224",
+        "producer_ids": [
+          "P11-E0224"
+        ],
+        "stable_id": "MC-STK-ERR-1067"
+      },
+      {
+        "producer_id": "P11-E0225",
+        "producer_ids": [
+          "P11-E0225"
+        ],
+        "stable_id": "MC-STK-ERR-1068"
+      },
+      {
+        "producer_id": "P11-E0227",
+        "producer_ids": [
+          "P11-E0227"
+        ],
+        "stable_id": "MC-STK-ERR-1069"
+      },
+      {
+        "producer_id": "P11-E0228",
+        "producer_ids": [
+          "P11-E0228"
+        ],
+        "stable_id": "MC-STK-ERR-1070"
+      },
+      {
+        "producer_id": "P11-E0229",
+        "producer_ids": [
+          "P11-E0229"
+        ],
+        "stable_id": "MC-STK-ERR-1071"
+      },
+      {
+        "producer_id": "P11-E0230",
+        "producer_ids": [
+          "P11-E0230"
+        ],
+        "stable_id": "MC-STK-ERR-1072"
+      },
+      {
+        "producer_id": "P11-E0231",
+        "producer_ids": [
+          "P11-E0231"
+        ],
+        "stable_id": "MC-STK-ERR-1073"
+      },
+      {
+        "producer_id": "P11-E0233",
+        "producer_ids": [
+          "P11-E0233"
+        ],
+        "stable_id": "MC-STK-ERR-1074"
+      },
+      {
+        "producer_id": "P11-E0232",
+        "producer_ids": [
+          "P11-E0232"
+        ],
+        "stable_id": "MC-STK-ERR-1075"
+      },
+      {
+        "producer_id": "P11-E0234",
+        "producer_ids": [
+          "P11-E0234"
+        ],
+        "stable_id": "MC-STK-ERR-1076"
+      },
+      {
+        "producer_id": "P11-E0235",
+        "producer_ids": [
+          "P11-E0235"
+        ],
+        "stable_id": "MC-STK-ERR-1077"
+      },
+      {
+        "producer_id": "P11-E0236",
+        "producer_ids": [
+          "P11-E0236"
+        ],
+        "stable_id": "MC-STK-ERR-1078"
+      },
+      {
+        "producer_id": "P11-E0237",
+        "producer_ids": [
+          "P11-E0237"
+        ],
+        "stable_id": "MC-STK-ERR-1079"
+      },
+      {
+        "producer_id": "P11-E0238",
+        "producer_ids": [
+          "P11-E0238"
+        ],
+        "stable_id": "MC-STK-ERR-1080"
+      },
+      {
+        "producer_id": "P11-E0239",
+        "producer_ids": [
+          "P11-E0239"
+        ],
+        "stable_id": "MC-STK-ERR-1081"
+      },
+      {
+        "producer_id": "P11-E0240",
+        "producer_ids": [
+          "P11-E0240"
+        ],
+        "stable_id": "MC-STK-ERR-1082"
+      },
+      {
+        "producer_id": "P11-E0241",
+        "producer_ids": [
+          "P11-E0241"
+        ],
+        "stable_id": "MC-STK-ERR-1083"
+      },
+      {
+        "producer_id": "P11-E0242",
+        "producer_ids": [
+          "P11-E0242"
+        ],
+        "stable_id": "MC-STK-ERR-1084"
+      },
+      {
+        "producer_id": "P11-E0243",
+        "producer_ids": [
+          "P11-E0243"
+        ],
+        "stable_id": "MC-STK-ERR-1085"
+      },
+      {
+        "producer_id": "P11-E0244",
+        "producer_ids": [
+          "P11-E0244"
+        ],
+        "stable_id": "MC-STK-ERR-1086"
+      },
+      {
+        "producer_id": "P11-E0245",
+        "producer_ids": [
+          "P11-E0245",
+          "P11-E0248"
+        ],
+        "stable_id": "MC-STK-ERR-1087"
+      },
+      {
+        "producer_id": "P11-E0246",
+        "producer_ids": [
+          "P11-E0246"
+        ],
+        "stable_id": "MC-STK-ERR-1088"
+      },
+      {
+        "producer_id": "P11-E0247",
+        "producer_ids": [
+          "P11-E0247"
+        ],
+        "stable_id": "MC-STK-ERR-1089"
+      },
+      {
+        "producer_id": "P11-E0249",
+        "producer_ids": [
+          "P11-E0249"
+        ],
+        "stable_id": "MC-STK-ERR-1090"
+      },
+      {
+        "producer_id": "P11-E0250",
+        "producer_ids": [
+          "P11-E0250"
+        ],
+        "stable_id": "MC-STK-ERR-1091"
+      },
+      {
+        "producer_id": "P11-E0251",
+        "producer_ids": [
+          "P11-E0251",
+          "P11-E0252"
+        ],
+        "stable_id": "MC-STK-ERR-1092"
+      },
+      {
+        "producer_id": "P11-E0253",
+        "producer_ids": [
+          "P11-E0253"
+        ],
+        "stable_id": "MC-STK-ERR-1093"
+      },
+      {
+        "producer_id": "P11-E0254",
+        "producer_ids": [
+          "P11-E0254"
+        ],
+        "stable_id": "MC-STK-ERR-1094"
+      },
+      {
+        "producer_id": "P11-E0255",
+        "producer_ids": [
+          "P11-E0255"
+        ],
+        "stable_id": "MC-STK-ERR-1095"
+      },
+      {
+        "producer_id": "P11-E0256",
+        "producer_ids": [
+          "P11-E0256"
+        ],
+        "stable_id": "MC-STK-ERR-1096"
+      },
+      {
+        "producer_id": "P11-E0257",
+        "producer_ids": [
+          "P11-E0257"
+        ],
+        "stable_id": "MC-STK-ERR-1097"
+      },
+      {
+        "producer_id": "P11-E0258",
+        "producer_ids": [
+          "P11-E0258"
+        ],
+        "stable_id": "MC-STK-ERR-1098"
+      },
+      {
+        "producer_id": "P11-E0259",
+        "producer_ids": [
+          "P11-E0259"
+        ],
+        "stable_id": "MC-STK-ERR-1099"
+      },
+      {
+        "producer_id": "P11-E0260",
+        "producer_ids": [
+          "P11-E0260"
+        ],
+        "stable_id": "MC-STK-ERR-1100"
+      },
+      {
+        "producer_id": "P11-E0261",
+        "producer_ids": [
+          "P11-E0261"
+        ],
+        "stable_id": "MC-STK-ERR-1101"
+      },
+      {
+        "producer_id": "P11-E0262",
+        "producer_ids": [
+          "P11-E0262"
+        ],
+        "stable_id": "MC-STK-ERR-1102"
+      },
+      {
+        "producer_id": "P11-E0263",
+        "producer_ids": [
+          "P11-E0263"
+        ],
+        "stable_id": "MC-STK-ERR-1103"
+      },
+      {
+        "producer_id": "P11-E0264",
+        "producer_ids": [
+          "P11-E0264"
+        ],
+        "stable_id": "MC-STK-ERR-1104"
+      },
+      {
+        "producer_id": "P11-E0265",
+        "producer_ids": [
+          "P11-E0265"
+        ],
+        "stable_id": "MC-STK-ERR-1105"
+      },
+      {
+        "producer_id": "P11-E0266",
+        "producer_ids": [
+          "P11-E0266"
+        ],
+        "stable_id": "MC-STK-ERR-1106"
+      },
+      {
+        "producer_id": "P11-E0270",
+        "producer_ids": [
+          "P11-E0270"
+        ],
+        "stable_id": "MC-STK-ERR-1107"
+      },
+      {
+        "producer_id": "P11-E0271",
+        "producer_ids": [
+          "P11-E0271"
+        ],
+        "stable_id": "MC-STK-ERR-1108"
+      },
+      {
+        "producer_id": "P11-E0267",
+        "producer_ids": [
+          "P11-E0267"
+        ],
+        "stable_id": "MC-STK-ERR-1109"
+      },
+      {
+        "producer_id": "P11-E0268",
+        "producer_ids": [
+          "P11-E0268"
+        ],
+        "stable_id": "MC-STK-ERR-1110"
+      },
+      {
+        "producer_id": "P11-E0269",
+        "producer_ids": [
+          "P11-E0269"
+        ],
+        "stable_id": "MC-STK-ERR-1111"
+      },
+      {
+        "producer_id": "P11-E0272",
+        "producer_ids": [
+          "P11-E0272"
+        ],
+        "stable_id": "MC-STK-ERR-1112"
+      },
+      {
+        "producer_id": "P11-E0273",
+        "producer_ids": [
+          "P11-E0273"
+        ],
+        "stable_id": "MC-STK-ERR-1113"
+      },
+      {
+        "producer_id": "P11-E0274",
+        "producer_ids": [
+          "P11-E0274",
+          "P11-E0276"
+        ],
+        "stable_id": "MC-STK-ERR-1114"
+      },
+      {
+        "producer_id": "P11-E0275",
+        "producer_ids": [
+          "P11-E0275"
+        ],
+        "stable_id": "MC-STK-ERR-1115"
+      },
+      {
+        "producer_id": "P11-E0280",
+        "producer_ids": [
+          "P11-E0280"
+        ],
+        "stable_id": "MC-STK-ERR-1116"
+      },
+      {
+        "producer_id": "P11-E0277",
+        "producer_ids": [
+          "P11-E0277"
+        ],
+        "stable_id": "MC-STK-ERR-1117"
+      },
+      {
+        "producer_id": "P11-E0278",
+        "producer_ids": [
+          "P11-E0278"
+        ],
+        "stable_id": "MC-STK-ERR-1118"
+      },
+      {
+        "producer_id": "P11-E0279",
+        "producer_ids": [
+          "P11-E0279"
+        ],
+        "stable_id": "MC-STK-ERR-1119"
+      },
+      {
+        "producer_id": "P11-E0281",
+        "producer_ids": [
+          "P11-E0281"
+        ],
+        "stable_id": "MC-STK-ERR-1120"
+      },
+      {
+        "producer_id": "P11-E0285",
+        "producer_ids": [
+          "P11-E0285"
+        ],
+        "stable_id": "MC-STK-ERR-1121"
+      },
+      {
+        "producer_id": "P11-E0282",
+        "producer_ids": [
+          "P11-E0282"
+        ],
+        "stable_id": "MC-STK-ERR-1122"
+      },
+      {
+        "producer_id": "P11-E0283",
+        "producer_ids": [
+          "P11-E0283"
+        ],
+        "stable_id": "MC-STK-ERR-1123"
+      },
+      {
+        "producer_id": "P11-E0284",
+        "producer_ids": [
+          "P11-E0284"
+        ],
+        "stable_id": "MC-STK-ERR-1124"
+      },
+      {
+        "producer_id": "P11-E0286",
+        "producer_ids": [
+          "P11-E0286"
+        ],
+        "stable_id": "MC-STK-ERR-1125"
+      },
+      {
+        "producer_id": "P11-E0287",
+        "producer_ids": [
+          "P11-E0287"
+        ],
+        "stable_id": "MC-STK-ERR-1126"
+      },
+      {
+        "producer_id": "P11-E0288",
+        "producer_ids": [
+          "P11-E0288"
+        ],
+        "stable_id": "MC-STK-ERR-1127"
+      },
+      {
+        "producer_id": "P11-E0289",
+        "producer_ids": [
+          "P11-E0289"
+        ],
+        "stable_id": "MC-STK-ERR-1128"
+      },
+      {
+        "producer_id": "P11-E0290",
+        "producer_ids": [
+          "P11-E0290"
+        ],
+        "stable_id": "MC-STK-ERR-1129"
+      },
+      {
+        "producer_id": "P11-E0291",
+        "producer_ids": [
+          "P11-E0291"
+        ],
+        "stable_id": "MC-STK-ERR-1130"
+      },
+      {
+        "producer_id": "P11-E0292",
+        "producer_ids": [
+          "P11-E0292"
+        ],
+        "stable_id": "MC-STK-ERR-1131"
+      },
+      {
+        "producer_id": "P11-E0293",
+        "producer_ids": [
+          "P11-E0293"
+        ],
+        "stable_id": "MC-STK-ERR-1132"
+      },
+      {
+        "producer_id": "P11-E0294",
+        "producer_ids": [
+          "P11-E0294"
+        ],
+        "stable_id": "MC-STK-ERR-1133"
+      },
+      {
+        "producer_id": "P11-E0295",
+        "producer_ids": [
+          "P11-E0295"
+        ],
+        "stable_id": "MC-STK-ERR-1134"
+      },
+      {
+        "producer_id": "P11-E0296",
+        "producer_ids": [
+          "P11-E0296"
+        ],
+        "stable_id": "MC-STK-ERR-1135"
+      },
+      {
+        "producer_id": "P11-E0297",
+        "producer_ids": [
+          "P11-E0297"
+        ],
+        "stable_id": "MC-STK-ERR-1136"
+      },
+      {
+        "producer_id": "P11-E0298",
+        "producer_ids": [
+          "P11-E0298"
+        ],
+        "stable_id": "MC-STK-ERR-1137"
+      },
+      {
+        "producer_id": "P11-E0299",
+        "producer_ids": [
+          "P11-E0299"
+        ],
+        "stable_id": "MC-STK-ERR-1138"
+      },
+      {
+        "producer_id": "P11-E0300",
+        "producer_ids": [
+          "P11-E0300"
+        ],
+        "stable_id": "MC-STK-ERR-1139"
+      },
+      {
+        "producer_id": "P11-E0301",
+        "producer_ids": [
+          "P11-E0301"
+        ],
+        "stable_id": "MC-STK-ERR-1140"
+      },
+      {
+        "producer_id": "P11-E0302",
+        "producer_ids": [
+          "P11-E0302"
+        ],
+        "stable_id": "MC-STK-ERR-1141"
+      },
+      {
+        "producer_id": "P11-E0303",
+        "producer_ids": [
+          "P11-E0303"
+        ],
+        "stable_id": "MC-STK-ERR-1142"
+      },
+      {
+        "producer_id": "P11-E0304",
+        "producer_ids": [
+          "P11-E0304"
+        ],
+        "stable_id": "MC-STK-ERR-1143"
+      },
+      {
+        "producer_id": "P11-E0305",
+        "producer_ids": [
+          "P11-E0305"
+        ],
+        "stable_id": "MC-STK-ERR-1144"
+      },
+      {
+        "producer_id": "P11-E0306",
+        "producer_ids": [
+          "P11-E0306"
+        ],
+        "stable_id": "MC-STK-ERR-1145"
+      },
+      {
+        "producer_id": "P11-E0307",
+        "producer_ids": [
+          "P11-E0307"
+        ],
+        "stable_id": "MC-STK-ERR-1146"
+      },
+      {
+        "producer_id": "P11-E0308",
+        "producer_ids": [
+          "P11-E0308"
+        ],
+        "stable_id": "MC-STK-ERR-1147"
+      },
+      {
+        "producer_id": "P11-E0309",
+        "producer_ids": [
+          "P11-E0309"
+        ],
+        "stable_id": "MC-STK-ERR-1148"
+      },
+      {
+        "producer_id": "P11-E0310",
+        "producer_ids": [
+          "P11-E0310"
+        ],
+        "stable_id": "MC-STK-ERR-1149"
+      },
+      {
+        "producer_id": "P11-E0311",
+        "producer_ids": [
+          "P11-E0311"
+        ],
+        "stable_id": "MC-STK-ERR-1150"
+      },
+      {
+        "producer_id": "P11-E0312",
+        "producer_ids": [
+          "P11-E0312",
+          "P11-E0313"
+        ],
+        "stable_id": "MC-STK-ERR-1151"
+      },
+      {
+        "producer_id": "P11-E0314",
+        "producer_ids": [
+          "P11-E0314"
+        ],
+        "stable_id": "MC-STK-ERR-1152"
+      },
+      {
+        "producer_id": "P11-E0315",
+        "producer_ids": [
+          "P11-E0315"
+        ],
+        "stable_id": "MC-STK-ERR-1153"
+      },
+      {
+        "producer_id": "P11-E0316",
+        "producer_ids": [
+          "P11-E0316"
+        ],
+        "stable_id": "MC-STK-ERR-1154"
+      },
+      {
+        "producer_id": "P11-E0317",
+        "producer_ids": [
+          "P11-E0317"
+        ],
+        "stable_id": "MC-STK-ERR-1155"
+      },
+      {
+        "producer_id": "P11-E0318",
+        "producer_ids": [
+          "P11-E0318"
+        ],
+        "stable_id": "MC-STK-ERR-1156"
+      },
+      {
+        "producer_id": "P11-E0319",
+        "producer_ids": [
+          "P11-E0319"
+        ],
+        "stable_id": "MC-STK-ERR-1157"
+      },
+      {
+        "producer_id": "P11-E0320",
+        "producer_ids": [
+          "P11-E0320"
+        ],
+        "stable_id": "MC-STK-ERR-1158"
+      },
+      {
+        "producer_id": "P11-E0321",
+        "producer_ids": [
+          "P11-E0321"
+        ],
+        "stable_id": "MC-STK-ERR-1159"
+      },
+      {
+        "producer_id": "P11-E0322",
+        "producer_ids": [
+          "P11-E0322"
+        ],
+        "stable_id": "MC-STK-ERR-1160"
+      },
+      {
+        "producer_id": "P11-E0323",
+        "producer_ids": [
+          "P11-E0323"
+        ],
+        "stable_id": "MC-STK-ERR-1161"
+      },
+      {
+        "producer_id": "P11-E0324",
+        "producer_ids": [
+          "P11-E0324"
+        ],
+        "stable_id": "MC-STK-ERR-1162"
+      },
+      {
+        "producer_id": "P11-E0325",
+        "producer_ids": [
+          "P11-E0325"
+        ],
+        "stable_id": "MC-STK-ERR-1163"
+      },
+      {
+        "producer_id": "P11-E0326",
+        "producer_ids": [
+          "P11-E0326"
+        ],
+        "stable_id": "MC-STK-ERR-1164"
+      },
+      {
+        "producer_id": "P11-E0327",
+        "producer_ids": [
+          "P11-E0327"
+        ],
+        "stable_id": "MC-STK-ERR-1165"
+      },
+      {
+        "producer_id": "P11-E0328",
+        "producer_ids": [
+          "P11-E0328"
+        ],
+        "stable_id": "MC-STK-ERR-1166"
+      },
+      {
+        "producer_id": "P11-E0329",
+        "producer_ids": [
+          "P11-E0329"
+        ],
+        "stable_id": "MC-STK-ERR-1167"
+      },
+      {
+        "producer_id": "P11-E0330",
+        "producer_ids": [
+          "P11-E0330"
+        ],
+        "stable_id": "MC-STK-ERR-1168"
+      },
+      {
+        "producer_id": "P11-E0331",
+        "producer_ids": [
+          "P11-E0331"
+        ],
+        "stable_id": "MC-STK-ERR-1169"
+      },
+      {
+        "producer_id": "P11-E0332",
+        "producer_ids": [
+          "P11-E0332"
+        ],
+        "stable_id": "MC-STK-ERR-1170"
+      },
+      {
+        "producer_id": "P11-E0333",
+        "producer_ids": [
+          "P11-E0333",
+          "P11-E0334"
+        ],
+        "stable_id": "MC-STK-ERR-1171"
+      },
+      {
+        "producer_id": "P11-E0335",
+        "producer_ids": [
+          "P11-E0335"
+        ],
+        "stable_id": "MC-STK-ERR-1172"
+      },
+      {
+        "producer_id": "P11-E0336",
+        "producer_ids": [
+          "P11-E0336"
+        ],
+        "stable_id": "MC-STK-ERR-1173"
+      },
+      {
+        "producer_id": "P11-E0337",
+        "producer_ids": [
+          "P11-E0337"
+        ],
+        "stable_id": "MC-STK-ERR-1174"
+      },
+      {
+        "producer_id": "P11-E0338",
+        "producer_ids": [
+          "P11-E0338"
+        ],
+        "stable_id": "MC-STK-ERR-1175"
+      },
+      {
+        "producer_id": "P11-E0339",
+        "producer_ids": [
+          "P11-E0339"
+        ],
+        "stable_id": "MC-STK-ERR-1176"
+      }
+    ],
+    "rejected_producer_ids": [
+      "P11-E0202",
+      "P11-E0215",
+      "P11-E0217"
+    ],
+    "intentionally_absent_producer_ids": [],
+    "unit_count": 131,
+    "accepted_producer_identities": 137,
+    "operation_count": 154,
+    "first_id": "MC-STK-ERR-1046",
+    "last_id": "MC-STK-ERR-1176"
+  },
+  "scratch_replay": {
+    "passed": true,
+    "apply_order": "descending_start_byte",
+    "operation_count": 154,
+    "descending_intervals": [
+      [
+        253420,
+        253449
+      ],
+      [
+        249471,
+        249490
+      ],
+      [
+        248439,
+        248468
+      ],
+      [
+        247719,
+        247743
+      ],
+      [
+        247022,
+        247074
+      ],
+      [
+        244111,
+        244134
+      ],
+      [
+        244028,
+        244046
+      ],
+      [
+        242818,
+        242997
+      ],
+      [
+        237299,
+        237307
+      ],
+      [
+        233779,
+        233785
+      ],
+      [
+        233307,
+        233323
+      ],
+      [
+        231643,
+        231680
+      ],
+      [
+        231170,
+        231193
+      ],
+      [
+        230702,
+        230857
+      ],
+      [
+        230295,
+        230340
+      ],
+      [
+        228607,
+        228664
+      ],
+      [
+        225221,
+        225240
+      ],
+      [
+        225178,
+        225186
+      ],
+      [
+        224063,
+        224115
+      ],
+      [
+        223500,
+        223529
+      ],
+      [
+        223243,
+        223266
+      ],
+      [
+        223193,
+        223205
+      ],
+      [
+        223186,
+        223193
+      ],
+      [
+        223116,
+        223170
+      ],
+      [
+        223050,
+        223106
+      ],
+      [
+        222016,
+        222054
+      ],
+      [
+        219228,
+        219260
+      ],
+      [
+        219042,
+        219066
+      ],
+      [
+        215920,
+        215928
+      ],
+      [
+        214772,
+        214790
+      ],
+      [
+        214453,
+        214473
+      ],
+      [
+        213664,
+        213667
+      ],
+      [
+        210437,
+        210453
+      ],
+      [
+        207763,
+        207792
+      ],
+      [
+        206304,
+        206354
+      ],
+      [
+        205585,
+        205606
+      ],
+      [
+        204911,
+        204919
+      ],
+      [
+        204737,
+        204746
+      ],
+      [
+        203868,
+        203910
+      ],
+      [
+        203797,
+        203816
+      ],
+      [
+        201616,
+        201652
+      ],
+      [
+        199663,
+        199682
+      ],
+      [
+        198965,
+        198980
+      ],
+      [
+        198060,
+        198076
+      ],
+      [
+        197415,
+        197431
+      ],
+      [
+        196518,
+        196530
+      ],
+      [
+        191637,
+        191672
+      ],
+      [
+        189843,
+        189885
+      ],
+      [
+        188470,
+        188508
+      ],
+      [
+        187033,
+        187070
+      ],
+      [
+        186930,
+        186963
+      ],
+      [
+        185990,
+        186028
+      ],
+      [
+        185911,
+        185944
+      ],
+      [
+        185841,
+        185866
+      ],
+      [
+        185173,
+        185241
+      ],
+      [
+        183473,
+        183502
+      ],
+      [
+        182456,
+        182492
+      ],
+      [
+        177544,
+        177576
+      ],
+      [
+        175989,
+        176006
+      ],
+      [
+        172516,
+        172532
+      ],
+      [
+        171726,
+        171742
+      ],
+      [
+        170748,
+        170806
+      ],
+      [
+        166302,
+        166323
+      ],
+      [
+        165910,
+        165932
+      ],
+      [
+        164716,
+        164744
+      ],
+      [
+        163254,
+        163274
+      ],
+      [
+        159241,
+        159331
+      ],
+      [
+        158644,
+        158664
+      ],
+      [
+        158436,
+        158456
+      ],
+      [
+        158262,
+        158284
+      ],
+      [
+        157352,
+        157383
+      ],
+      [
+        156791,
+        156813
+      ],
+      [
+        153255,
+        153270
+      ],
+      [
+        152476,
+        152501
+      ],
+      [
+        149499,
+        149516
+      ],
+      [
+        149313,
+        149334
+      ],
+      [
+        148238,
+        148268
+      ],
+      [
+        146500,
+        146521
+      ],
+      [
+        145510,
+        145532
+      ],
+      [
+        145407,
+        145420
+      ],
+      [
+        143979,
+        144044
+      ],
+      [
+        142888,
+        142907
+      ],
+      [
+        142027,
+        142069
+      ],
+      [
+        140524,
+        140548
+      ],
+      [
+        135731,
+        135747
+      ],
+      [
+        135659,
+        135687
+      ],
+      [
+        134961,
+        135010
+      ],
+      [
+        132012,
+        132047
+      ],
+      [
+        126387,
+        126419
+      ],
+      [
+        123191,
+        123205
+      ],
+      [
+        121591,
+        121612
+      ],
+      [
+        116423,
+        116443
+      ],
+      [
+        114877,
+        114900
+      ],
+      [
+        112555,
+        112576
+      ],
+      [
+        110408,
+        110425
+      ],
+      [
+        107528,
+        107548
+      ],
+      [
+        100654,
+        100742
+      ],
+      [
+        96867,
+        96895
+      ],
+      [
+        93855,
+        93869
+      ],
+      [
+        90069,
+        90101
+      ],
+      [
+        89262,
+        89311
+      ],
+      [
+        88301,
+        88315
+      ],
+      [
+        84004,
+        84030
+      ],
+      [
+        82915,
+        82939
+      ],
+      [
+        82632,
+        82647
+      ],
+      [
+        82335,
+        82359
+      ],
+      [
+        77619,
+        77672
+      ],
+      [
+        76005,
+        76054
+      ],
+      [
+        71386,
+        71455
+      ],
+      [
+        68943,
+        69000
+      ],
+      [
+        66491,
+        66553
+      ],
+      [
+        65362,
+        65387
+      ],
+      [
+        61844,
+        61872
+      ],
+      [
+        60310,
+        60380
+      ],
+      [
+        59772,
+        59788
+      ],
+      [
+        59298,
+        59369
+      ],
+      [
+        56612,
+        56637
+      ],
+      [
+        56531,
+        56556
+      ],
+      [
+        54620,
+        54646
+      ],
+      [
+        54000,
+        54037
+      ],
+      [
+        51964,
+        51996
+      ],
+      [
+        47686,
+        47691
+      ],
+      [
+        47184,
+        47202
+      ],
+      [
+        47099,
+        47115
+      ],
+      [
+        47004,
+        47057
+      ],
+      [
+        46640,
+        46662
+      ],
+      [
+        44193,
+        44211
+      ],
+      [
+        40931,
+        40954
+      ],
+      [
+        40867,
+        40926
+      ],
+      [
+        38363,
+        38377
+      ],
+      [
+        38330,
+        38349
+      ],
+      [
+        38303,
+        38316
+      ],
+      [
+        36525,
+        36559
+      ],
+      [
+        35969,
+        35993
+      ],
+      [
+        34208,
+        34230
+      ],
+      [
+        34145,
+        34168
+      ],
+      [
+        27781,
+        27806
+      ],
+      [
+        26991,
+        27024
+      ],
+      [
+        26944,
+        26967
+      ],
+      [
+        22733,
+        22755
+      ],
+      [
+        22634,
+        22657
+      ],
+      [
+        22392,
+        22451
+      ],
+      [
+        22313,
+        22363
+      ],
+      [
+        22234,
+        22284
+      ],
+      [
+        16897,
+        16920
+      ],
+      [
+        16846,
+        16886
+      ],
+      [
+        16144,
+        16197
+      ],
+      [
+        13232,
+        13250
+      ],
+      [
+        12228,
+        12250
+      ],
+      [
+        10913,
+        10943
+      ],
+      [
+        7637,
+        7660
+      ],
+      [
+        6895,
+        6928
+      ],
+      [
+        4123,
+        4162
+      ],
+      [
+        462,
+        500
+      ]
+    ],
+    "authority": {
+      "bytes": 254362,
+      "sha256": "EBA90A897B08EEBFF451E80925D13381B1A7F6AB883A34118733CD24CF061F47"
+    },
+    "output": {
+      "bytes": 254488,
+      "sha256": "F196752E6D872B3B888E57C7183B326287F1A241286991C075E4896996FD185B"
+    },
+    "operation_spec_sha256": "DE82ADC8963BB1768FD05025A929C51674188225BF1E856D35FB9B90E10764BB"
+  },
+  "sealed_evidence_verification": {
+    "passed": true,
+    "build_receipt": {
+      "path": "builds/build-receipt.json",
+      "sha256": "8E5A10CD7EF7B06E043D97A289F725FCAF777737086CE4CB53C367BD223067DA"
+    },
+    "visual_qa": {
+      "path": "builds/visual-qa.json",
+      "sha256": "8AAF3A1F1BB67D4D1BB83DE8484D049A660C3B0C1264B3841D0B4C4B6BAA777F"
+    },
+    "candidate_pdf": {
+      "path": "builds/artin.pdf",
+      "bytes": 887024,
+      "sha256": "13C555CDE88BDFCFC2D5E55686CB8DA6BB44852D1FF5010DDF9EB2074ACC6D8E",
+      "pages": 69
+    },
+    "authority_pdf": {
+      "path": "builds/artin.authority.pdf",
+      "bytes": 886649,
+      "sha256": "7438DC8CA4276CE1D06E6ED11FE88722850C5970B85BC9F988A1E97EDAAD5381",
+      "pages": 69
+    },
+    "private_render_manifest": {
+      "bytes": 26501,
+      "sha256": "06D6B5CB0E5E1580113F4E09BD296B25BA7BC37DB396B5C2BB59AA736EC3860F",
+      "logical_path": "canon/private_evidence/errata-r25-20260828T002300Z/render"
+    }
+  },
+  "adverse_observations": [
+    "Standalone candidate and authority builds retain identical cross-chapter unresolved-reference multisets.",
+    "Both PDFs are untagged; this retained accessibility limitation is not misreported as a visual failure.",
+    "The hash-bound visual-QA receipt records inspection of all 69 candidate pages and every correction-sensitive locus without a visual defect."
+  ],
+  "constraints_observed": {
+    "candidate_inputs_mutated": false,
+    "upstream_contacted": false,
+    "persistent_writes": [
+      "replay/independent-review.json"
+    ]
+  }
+}
