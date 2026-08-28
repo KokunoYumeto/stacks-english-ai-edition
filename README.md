@@ -39,8 +39,10 @@ artifacts are not presented as branches or variants of this English edition.
   `stacks-verdier-a04446e-1-2-13-r1`), each admitted
   from a manifest-complete candidate
   after independent replay.
-- Active candidate-namespace leases: **three** (`fac`, `tohoku`, `gaga`).
-  All three are held by task `019fca5a-c29e-7330-acdc-c93f4a3dc9fb`.
+- Active candidate-namespace leases: **four** (`fac`, `tohoku`, `gaga`,
+  `errata/r26`). The first three are held by task
+  `019fca5a-c29e-7330-acdc-c93f4a3dc9fb`; `errata/r26` is held by canon task
+  `01a0256d-5693-77c1-96b2-cf37101e0c6c`.
 - Imported historical integration branches on this registry branch: **zero**
 - Generated English edition: public `main`, maintained by the dedicated
   composer from admitted overlays; registry admission does not itself imply

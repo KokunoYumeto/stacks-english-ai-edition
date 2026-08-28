@@ -103,9 +103,9 @@ jobs:
           assert leases['schema'] == 'mathematics-commons-stacks-lease-registry/v1'
           assert leases['upstream_lock'] == 'upstream/stacks.lock.json'
           events = leases['events']
-          assert len(events) == 55
+          assert len(events) == 56
           assert [event['event_id'] for event in events] == [
-              f'lease-event-{number:06d}' for number in range(1, 56)
+              f'lease-event-{number:06d}' for number in range(1, 57)
           ]
 
           event_by_id = {}
@@ -136,16 +136,23 @@ jobs:
               event_by_id[event['event_id']] = event
               latest_by_lease[event['lease_id']] = event
 
-          assert len(issued_by_lease) == 29
+          assert len(issued_by_lease) == 30
           active = [event for event in latest_by_lease.values() if event['state'] == 'active']
           expected_active = {
               'commons/stacks/fac': 'stacks-lease-000001-fac',
               'commons/stacks/tohoku': 'stacks-lease-000002-tohoku',
               'commons/stacks/gaga': 'stacks-lease-000003-gaga',
+              'commons/stacks/errata/r26': 'stacks-lease-000030-errata-r26',
           }
           assert {event['namespace']: event['lease_id'] for event in active} == expected_active
+          expected_active_writers = {
+              'commons/stacks/fac': '019fca5a-c29e-7330-acdc-c93f4a3dc9fb',
+              'commons/stacks/tohoku': '019fca5a-c29e-7330-acdc-c93f4a3dc9fb',
+              'commons/stacks/gaga': '019fca5a-c29e-7330-acdc-c93f4a3dc9fb',
+              'commons/stacks/errata/r26': '01a0256d-5693-77c1-96b2-cf37101e0c6c',
+          }
           for event in active:
-              assert event['writer_task'] == '019fca5a-c29e-7330-acdc-c93f4a3dc9fb'
+              assert event['writer_task'] == expected_active_writers[event['namespace']]
               pointer_path = ROOT / event['candidate_path'] / 'LEASE.json'
               pointer = json.loads(pointer_path.read_text(encoding='utf-8'))
               for key in ('lease_id', 'namespace', 'writer_task', 'upstream_commit'):
@@ -241,7 +248,10 @@ jobs:
                   directories[:] = [
                       directory
                       for directory in directories
-                      if not (current_path / directory / 'candidate.manifest.json').exists()
+                      if not (
+                          (current_path / directory / 'candidate.manifest.json').exists()
+                          or (current_path / directory / 'LEASE.json').exists()
+                      )
                   ]
                   for filename in filenames:
                       actual_owned.add(
@@ -263,7 +273,7 @@ jobs:
                   assert CANDIDATES in path.resolve().parents, path
 
           print(
-              'validated exact Stacks pin, 26 admitted overlays, 55 lease events, '
+              'validated exact Stacks pin, 26 admitted overlays, 56 lease events, '
               '26 manifest/hash closures, 821 globally unique stable IDs, and R25'
           )
           PY
