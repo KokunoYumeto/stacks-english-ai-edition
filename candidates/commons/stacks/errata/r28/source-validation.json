@@ -1,0 +1,89 @@
+{
+  "candidate_id": "stacks-errata-a04446e-r28",
+  "checks": {
+    "composition_projection_replay": {
+      "base_bytes": 134830,
+      "base_sha256": "85251479BB7D35D73CD5691C194D33B3ADC1BF245BCC248643D969DBBA0E7928",
+      "output_bytes": 134835,
+      "output_sha256": "85A37C95D5591632D11E7BE6775039638B6F5200B44729ABCEA1A644D9F5B056",
+      "preimage_count": 1
+    },
+    "official_projection_replay": {
+      "authority_bytes": 134660,
+      "authority_sha256": "FD28CF874BB7DAD3C5C5FF03314D1C83701613A8A98730A99B9CA7A4BCFE6068",
+      "output_bytes": 134672,
+      "output_sha256": "7C475ABEFC3CF2F3F2534F0CA69B8D8BB726BF88195CB50FE849DF99B7D0CD4A",
+      "preimage_count": 1
+    },
+    "predecessor_binding": {
+      "manifest_sha256": "1A045F9452501725CAF45996FD19C633D594E0C3D57AA745780C3C06FB031085",
+      "source_map_sha256": "46C29F2D0DFDC1081FFFDA61757DFCEB4E3036881A9D2D272B5ED9D67626B9BF",
+      "unit_id": "MC-STK-ERR-1183"
+    },
+    "structure": {
+      "composition_base": {
+        "begins": 137,
+        "cites": 32,
+        "close_braces": 1605,
+        "control_words": 5220,
+        "display_delimiters": 252,
+        "ends": 137,
+        "inputs": 2,
+        "items": 95,
+        "labels": 97,
+        "open_braces": 1605,
+        "refs": 263,
+        "xymatrix": 11
+      },
+      "composition_projection": {
+        "begins": 137,
+        "cites": 32,
+        "close_braces": 1605,
+        "control_words": 5220,
+        "display_delimiters": 252,
+        "ends": 137,
+        "inputs": 2,
+        "items": 95,
+        "labels": 97,
+        "open_braces": 1605,
+        "refs": 263,
+        "xymatrix": 11
+      },
+      "official": {
+        "begins": 137,
+        "cites": 32,
+        "close_braces": 1600,
+        "control_words": 5218,
+        "display_delimiters": 252,
+        "ends": 137,
+        "inputs": 2,
+        "items": 95,
+        "labels": 97,
+        "open_braces": 1600,
+        "refs": 263,
+        "xymatrix": 11
+      },
+      "payload": {
+        "begins": 137,
+        "cites": 32,
+        "close_braces": 1600,
+        "control_words": 5218,
+        "display_delimiters": 252,
+        "ends": 137,
+        "inputs": 2,
+        "items": 95,
+        "labels": 97,
+        "open_braces": 1600,
+        "refs": 263,
+        "xymatrix": 11
+      }
+    },
+    "supersession": {
+      "new_unit_id": "MC-STK-ERR-1216",
+      "passed": true,
+      "prior_unit_id": "MC-STK-ERR-1183"
+    }
+  },
+  "passed": true,
+  "schema": "mathematics-commons-stacks-r28-source-validation/v1"
+}

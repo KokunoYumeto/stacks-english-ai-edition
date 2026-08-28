@@ -1,0 +1,142 @@
+{
+  "adverse_evidence": [
+    "The standalone PDFs are not tagged PDFs and contain no StructTreeRoot or MarkInfo; this is retained as an accessibility limitation rather than misreported as a visual failure.",
+    "Standalone chapter builds intentionally retain cross-chapter unresolved targets; the build receipt proves their target multisets match the frozen authority builds."
+  ],
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "build_receipt": {
+    "bytes": 24089,
+    "path": "builds/build-receipt.json",
+    "sha256": "4929CF5DAFA2E72A7480B6EB8C330E385ED6B95CC1F7C6391ECF57BECFF9F1FC"
+  },
+  "candidate_id": "stacks-errata-a04446e-r28",
+  "generated_at_utc": "2026-08-28T20:01:11Z",
+  "passed": true,
+  "pdfs": [
+    {
+      "authority_control_pdf": {
+        "bytes": 620774,
+        "path": "builds/smoothing.authority.pdf",
+        "sha256": "6B480159BF5BFA27E793F18F76A158D204EE1FD93E9270B8D667F1C7048B98B6"
+      },
+      "authority_link_annotations": 188,
+      "authority_malformed_link_rectangles": 0,
+      "authority_out_of_bounds_link_rectangles": 0,
+      "authority_pages": 37,
+      "bytes": 620772,
+      "contact_sheet_evidence": [
+        {
+          "bytes": 908741,
+          "file": "smoothing_01.png",
+          "sha256": "06DE8105944A475C5779951F9AB20F846F29500D7B40C683A4DA7256544A7007"
+        },
+        {
+          "bytes": 926152,
+          "file": "smoothing_02.png",
+          "sha256": "BF50BAE58D665487CE13AF63589795F2A94172F442FEC8EB512D16F5025AE7F9"
+        },
+        {
+          "bytes": 255603,
+          "file": "smoothing_03.png",
+          "sha256": "5322D90308F0970DEF2F96A9F11EE446E7AB78758F18BD2275667C2957C59D25"
+        }
+      ],
+      "covered_units": [
+        "MC-STK-ERR-1216"
+      ],
+      "font_records": 27,
+      "fonts_without_tounicode": [],
+      "full_page_render_count": 37,
+      "high_resolution_evidence": [
+        {
+          "bytes": 356764,
+          "file": "smoothing_p16.png",
+          "page": 16,
+          "sha256": "44274EEF1BE6E514DAAC2CE4072FAE7CD45C88998DD840A4DDF8C1E9C3FD05EF"
+        }
+      ],
+      "link_annotations": 188,
+      "malformed_link_rectangles": 0,
+      "manual_findings": {
+        "blank_or_duplicate_pages": 0,
+        "broken_diagrams": 0,
+        "clipping": 0,
+        "high_resolution_pages_inspected": [
+          16
+        ],
+        "missing_glyphs": 0,
+        "overlap": 0,
+        "pages_inspected": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37
+        ],
+        "passed": true,
+        "unreadable_content": 0,
+        "warning_loci_outside_printable_area": 0
+      },
+      "mark_info_present": false,
+      "out_of_bounds_link_rectangles": 0,
+      "page_boxes_points": [
+        [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ]
+      ],
+      "pages": 37,
+      "path": "builds/smoothing.pdf",
+      "reflow_note": "Candidate and authority page counts are recorded above; every candidate page was inspected, including all pages directly affected by the 1 mapped smoothing.tex operations.",
+      "sha256": "E35425F1699CCCB50A165F1A008F8B658103E7D5C847DBC4AD9CE0CE5C3EAF80",
+      "stem": "smoothing",
+      "tagged_pdf": false,
+      "unembedded_fonts": [],
+      "unsubset_fonts": []
+    }
+  ],
+  "render_protocol": {
+    "full_page_contact_sheet_review": "All rendered pages manually inspected in ordered 4-by-4 contact sheets",
+    "full_page_render": "Poppler pdftoppm PNG at 96 dpi for every candidate page",
+    "high_resolution_review": "The manifest-bound high-resolution page inventory was generated at 180 dpi; every configured correction-sensitive page was manually inspected at that resolution",
+    "manual_review_attested": true,
+    "private_render_artifacts_published": false,
+    "private_render_manifest_bytes": 8388,
+    "private_render_manifest_sha256": "A945F68BBAC4B1467FDFB29E8D4FF5774A877D58421C19948BE74AFB49930BC1"
+  },
+  "schema": "mathematics-commons-stacks-errata-visual-qa/v1"
+}

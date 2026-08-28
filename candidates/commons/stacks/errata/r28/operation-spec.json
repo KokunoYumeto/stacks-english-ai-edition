@@ -1,0 +1,48 @@
+{
+  "authority_bytes": 134660,
+  "authority_sha256": "FD28CF874BB7DAD3C5C5FF03314D1C83701613A8A98730A99B9CA7A4BCFE6068",
+  "candidate_id": "stacks-errata-a04446e-r28",
+  "composition_base_bytes": 134830,
+  "composition_base_sha256": "85251479BB7D35D73CD5691C194D33B3ADC1BF245BCC248643D969DBBA0E7928",
+  "composition_operation": {
+    "base_blob": "ea0c59e134220971957a0a019e57663d0102cd07",
+    "base_commit": "f8e6c227aa3dc89256427f3b64a2ad330d5ff221",
+    "base_end_byte_exclusive": 56575,
+    "base_occurrence_count": 1,
+    "base_old_bytes": 15,
+    "base_old_sha256": "DB0FD995F578CDBBFB9C660958A647DC328A4E1A420F50B247E4EC271310B54E",
+    "base_old_text": "$(a_k)^N + b_k$",
+    "base_sha256": "85251479BB7D35D73CD5691C194D33B3ADC1BF245BCC248643D969DBBA0E7928",
+    "base_start_byte": 56560,
+    "base_tree": "94112e11f45252b9f9ce01783103e0b925f0cc0d",
+    "output_bytes": 134835,
+    "output_sha256": "85A37C95D5591632D11E7BE6775039638B6F5200B44729ABCEA1A644D9F5B056",
+    "replacement_bytes": 20,
+    "replacement_sha256": "F73C2082A79DEAEA58F7DEDB494D6B133D85C84784F695EE7E9B10A8FE1C816E",
+    "replacement_text": "$a_k((a_k)^N + b_k)$"
+  },
+  "operation_count": 1,
+  "operations": [
+    {
+      "end_byte_exclusive": 56557,
+      "occurrence_count_in_frozen_authority": 1,
+      "old_bytes": 8,
+      "old_sha256": "B715DE6FF59840888572DA95BB2409C65E99D4CF9B644F9F5CC2B0C8BE4542CA",
+      "old_text": "$a_kb_k$",
+      "operation_id": "MC-STK-ERR-1216-OP1",
+      "operation_index": 1,
+      "producer_id": "SMOOTHING-026",
+      "producer_operation_id": "SMOOTHING-026",
+      "replacement_bytes": 20,
+      "replacement_sha256": "F73C2082A79DEAEA58F7DEDB494D6B133D85C84784F695EE7E9B10A8FE1C816E",
+      "replacement_text": "$a_k((a_k)^N + b_k)$",
+      "semantic_unit_producer_id": "SMOOTHING-026",
+      "source_end_line": 1481,
+      "source_start_line": 1481,
+      "stable_id": "MC-STK-ERR-1216",
+      "start_byte": 56549,
+      "supersedes_operation_id": "MC-STK-ERR-1183-OP1"
+    }
+  ],
+  "schema": "mathematics-commons-stacks-errata-operation-spec/v1"
+}

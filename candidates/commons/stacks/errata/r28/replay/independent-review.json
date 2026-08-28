@@ -1,0 +1,96 @@
+{
+  "candidate_id": "stacks-errata-a04446e-r28",
+  "composition_rule": {
+    "base_blob": "ea0c59e134220971957a0a019e57663d0102cd07",
+    "base_commit": "f8e6c227aa3dc89256427f3b64a2ad330d5ff221",
+    "copy_isolated_payload_wholesale": false,
+    "old_occurrence_count": 1,
+    "old_text": "$(a_k)^N + b_k$",
+    "replacement_text": "$a_k((a_k)^N + b_k)$"
+  },
+  "manifest_closure": {
+    "evidence_files": 52,
+    "passed": true
+  },
+  "mathematical_adverse_review": {
+    "corrected_argument": {
+      "ambient_localization": "inverting d inverts both a and c=a^N+b",
+      "annihilating_unit": "c/a^N",
+      "cover_conclusion": "d mod Ibar = a^(N+1), hence D(d)=D(a) on Spec(Cbar)",
+      "module_conclusion": "M_d=0",
+      "new_element": "d=a(a^N+b)",
+      "passed": true
+    },
+    "counterexample": {
+      "I": "(x)",
+      "I_k": "(a(a+x)x)",
+      "I_k_localized": "(a)",
+      "I_localized": "unit ideal",
+      "N": 1,
+      "ambient_ring": "k[a,x]",
+      "b": "x",
+      "c": "a+x",
+      "localization_prime": "(a)",
+      "r26_conclusion_false": true
+    }
+  },
+  "pass_is_unconditional": true,
+  "passed": true,
+  "pre_review_manifest_sha256": "90A38F9772B6E62CDCBB2EE58558C786A13D20E34B6B2DAA557254B2C0357C11",
+  "predecessor_replay": {
+    "manifest_sha256": "1A045F9452501725CAF45996FD19C633D594E0C3D57AA745780C3C06FB031085",
+    "operation_id": "MC-STK-ERR-1183-OP1",
+    "overlay_id": "stacks-errata-a04446e-r26",
+    "passed": true,
+    "source_map_sha256": "46C29F2D0DFDC1081FFFDA61757DFCEB4E3036881A9D2D272B5ED9D67626B9BF",
+    "unit_id": "MC-STK-ERR-1183"
+  },
+  "recorded_at_utc": "2026-08-28T20:04:43Z",
+  "result": "PASS",
+  "schema": "mathematics-commons-stacks-errata-independent-review/v1",
+  "sealed_evidence_verification": {
+    "deterministic_replay": {
+      "passed": true,
+      "sha256": "FE84931DE871F22B8B3CAC2DA05E3DE664885FD20842701B112E9529AA61A6EB"
+    },
+    "private_render_manifest": {
+      "bytes": 8388,
+      "full_page_count": 37,
+      "high_resolution_pages": [
+        16
+      ],
+      "private_path_published": false,
+      "sha256": "A945F68BBAC4B1467FDFB29E8D4FF5774A877D58421C19948BE74AFB49930BC1"
+    },
+    "validation": {
+      "passed": true,
+      "sha256": "2924D3F604D28055F058D787DBEAB1A64579E00010BDCF136D222ECA5C662E00"
+    },
+    "visual_qa": {
+      "passed": true,
+      "sha256": "1AC17BF9223AA51B4EB8662413494091817A67B19B2C3FB3A5C9EAD796DE5C19"
+    }
+  },
+  "source_replay": {
+    "composition_base": {
+      "bytes": 134830,
+      "sha256": "85251479BB7D35D73CD5691C194D33B3ADC1BF245BCC248643D969DBBA0E7928"
+    },
+    "composition_projection": {
+      "bytes": 134835,
+      "sha256": "85A37C95D5591632D11E7BE6775039638B6F5200B44729ABCEA1A644D9F5B056"
+    },
+    "official_authority": {
+      "bytes": 134660,
+      "sha256": "FD28CF874BB7DAD3C5C5FF03314D1C83701613A8A98730A99B9CA7A4BCFE6068"
+    },
+    "operation_count": 1,
+    "passed": true,
+    "standalone_payload": {
+      "bytes": 134672,
+      "sha256": "7C475ABEFC3CF2F3F2534F0CA69B8D8BB726BF88195CB50FE849DF99B7D0CD4A"
+    }
+  },
+  "unresolved": [],
+  "validation_sha256": "2924D3F604D28055F058D787DBEAB1A64579E00010BDCF136D222ECA5C662E00"
+}

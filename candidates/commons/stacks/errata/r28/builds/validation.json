@@ -1,0 +1,47 @@
+{
+  "candidate_id": "stacks-errata-a04446e-r28",
+  "checks": {
+    "build_receipt": {
+      "bytes": 24089,
+      "path": "builds/build-receipt.json",
+      "sha256": "4929CF5DAFA2E72A7480B6EB8C330E385ED6B95CC1F7C6391ECF57BECFF9F1FC"
+    },
+    "composition_projection": {
+      "bytes": 134835,
+      "path": "composition-projection/smoothing.tex",
+      "sha256": "85A37C95D5591632D11E7BE6775039638B6F5200B44729ABCEA1A644D9F5B056"
+    },
+    "deterministic_replay": {
+      "bytes": 1031,
+      "path": "builds/deterministic-replay.json",
+      "sha256": "FE84931DE871F22B8B3CAC2DA05E3DE664885FD20842701B112E9529AA61A6EB"
+    },
+    "operation_count": 1,
+    "pdf_pages": 37,
+    "public_hygiene": {
+      "forbidden_hits": [],
+      "passed": true
+    },
+    "source_page_map": {
+      "bytes": 1238,
+      "path": "builds/source-page-map.json",
+      "sha256": "F6C4B85A6BFBCE6326A20645DCD75AEF9E18829E45B4163AAD38CE66ABFC6896"
+    },
+    "source_validation": {
+      "bytes": 2525,
+      "path": "source-validation.json",
+      "sha256": "3F3BD32B61AE51AA85C2ACF3F62AF95EE21ABCD1F0A32E723531FAD274B01DE2"
+    },
+    "stable_ids": [
+      "MC-STK-ERR-1216"
+    ],
+    "supersedes_unit_id": "MC-STK-ERR-1183",
+    "visual_qa": {
+      "bytes": 4584,
+      "path": "builds/visual-qa.json",
+      "sha256": "1AC17BF9223AA51B4EB8662413494091817A67B19B2C3FB3A5C9EAD796DE5C19"
+    }
+  },
+  "passed": true,
+  "schema": "mathematics-commons-stacks-r28-validation/v1"
+}
