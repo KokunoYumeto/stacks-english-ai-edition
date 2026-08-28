@@ -1,0 +1,64 @@
+{
+  "accepted_producer_ids": 31,
+  "adjudication_spec_bytes": 22538,
+  "adjudication_spec_sha256": "F6B96F9407047A525A387E2B0BF3D4B49A378B74E8DCD3B6B6EA825D9B3BD261",
+  "authority_bytes": 134660,
+  "authority_sha256": "FD28CF874BB7DAD3C5C5FF03314D1C83701613A8A98730A99B9CA7A4BCFE6068",
+  "bounded_preimages_unique_on_declared_lines": true,
+  "closure": {
+    "accepted_rejected_and_unresolved_disjoint": true,
+    "all_35_producer_ids_accounted_for_as_new_alias_or_rejected": true,
+    "operation_ids_equal_stable_unit_operation_ids": true,
+    "source_map_units_equal_stable_units": true
+  },
+  "independent_additional_operation": "SMOOTHING-022B at smoothing.tex:1170",
+  "merged_producer_groups": [
+    [
+      "SMOOTHING-005",
+      "SMOOTHING-031"
+    ],
+    [
+      "SMOOTHING-008",
+      "SMOOTHING-012",
+      "SMOOTHING-013",
+      "SMOOTHING-014"
+    ],
+    [
+      "SMOOTHING-016",
+      "SMOOTHING-018"
+    ],
+    [
+      "SMOOTHING-017",
+      "SMOOTHING-019"
+    ]
+  ],
+  "operations": 39,
+  "operations_nonoverlapping": true,
+  "payload_preview_bytes": 134839,
+  "payload_preview_sha256": "D5C5F0A6099ED011122BC90E836F8563E4F1496A30700CEBC1928E37812B08F0",
+  "prior_alias_producer_ids": 3,
+  "prior_aliases": {
+    "SMOOTHING-002": "MC-STK-ERR-0002",
+    "SMOOTHING-003": "MC-STK-ERR-0005",
+    "SMOOTHING-004": "MC-STK-ERR-0006"
+  },
+  "producer_emendations_bytes": 14346,
+  "producer_emendations_sha256": "992AC09EF5F3F344739390F7369984A894171C12F0218611F616E2B292C8E398",
+  "producer_ledger_bytes": 13069,
+  "producer_ledger_sha256": "7E8204DF53B8D8704400149E38DB2C263103956A9AA7F5E9797081EA1A8E2A9E",
+  "prohibited_transitions_executed": [],
+  "r25_predecessor_stable_id_last": "MC-STK-ERR-1176",
+  "r25_touched": false,
+  "rejected_ids": [
+    "SMOOTHING-010"
+  ],
+  "rejected_producer_ids": 1,
+  "schema": "mathematics-commons-stacks-r26-intake-validation/v1",
+  "semantic_units": 25,
+  "stable_id_first": "MC-STK-ERR-1177",
+  "stable_id_last": "MC-STK-ERR-1201",
+  "stable_ids_follow_first_physical_source_locus": true,
+  "stable_ids_unique_and_contiguous": true,
+  "status": "PASS",
+  "unresolved": 0
+}

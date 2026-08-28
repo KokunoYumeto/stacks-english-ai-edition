@@ -1,0 +1,264 @@
+{
+  "adverse_evidence": [
+    "The standalone PDFs are not tagged PDFs and contain no StructTreeRoot or MarkInfo; this is retained as an accessibility limitation rather than misreported as a visual failure.",
+    "Standalone chapter builds intentionally retain cross-chapter unresolved targets; the build receipt proves their target multisets match the frozen authority builds."
+  ],
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "build_receipt": {
+    "bytes": 24089,
+    "path": "builds/build-receipt.json",
+    "sha256": "F73C2616D8BFF6372601AE4E68B3B9D5E9A80DEE5E2A0AD84BEC8195FE971C79"
+  },
+  "candidate_id": "stacks-errata-a04446e-r26",
+  "generated_at_utc": "2026-08-28T11:27:17Z",
+  "passed": true,
+  "pdfs": [
+    {
+      "authority_control_pdf": {
+        "bytes": 620774,
+        "path": "builds/smoothing.authority.pdf",
+        "sha256": "EC3AD0C055FF60172127C2F53D5AF449243790F1B5F780BB74C1985EC4DF15CF"
+      },
+      "authority_link_annotations": 188,
+      "authority_malformed_link_rectangles": 0,
+      "authority_out_of_bounds_link_rectangles": 0,
+      "authority_pages": 37,
+      "bytes": 621161,
+      "contact_sheet_evidence": [
+        {
+          "bytes": 908756,
+          "file": "smoothing_01.png",
+          "sha256": "0C061F168AC62FFC427E6FF9B9FCA934E51F7559E16DA6ABF36BFCE2B0BA37C0"
+        },
+        {
+          "bytes": 927691,
+          "file": "smoothing_02.png",
+          "sha256": "CB6465D6E8100D6C129B80B7EA97BD0AC205E97DC52A9BB3F6D16CDBA1AD3BBE"
+        },
+        {
+          "bytes": 256574,
+          "file": "smoothing_03.png",
+          "sha256": "FDA4DCE7E258E617D17C4F9768AC9FA4C268C4A284AC713BE49A5187ED7CBD6E"
+        }
+      ],
+      "covered_units": [
+        "MC-STK-ERR-1177",
+        "MC-STK-ERR-1178",
+        "MC-STK-ERR-1179",
+        "MC-STK-ERR-1180",
+        "MC-STK-ERR-1181",
+        "MC-STK-ERR-1182",
+        "MC-STK-ERR-1183",
+        "MC-STK-ERR-1184",
+        "MC-STK-ERR-1185",
+        "MC-STK-ERR-1186",
+        "MC-STK-ERR-1187",
+        "MC-STK-ERR-1188",
+        "MC-STK-ERR-1189",
+        "MC-STK-ERR-1190",
+        "MC-STK-ERR-1191",
+        "MC-STK-ERR-1192",
+        "MC-STK-ERR-1193",
+        "MC-STK-ERR-1194",
+        "MC-STK-ERR-1195",
+        "MC-STK-ERR-1196",
+        "MC-STK-ERR-1197",
+        "MC-STK-ERR-1198",
+        "MC-STK-ERR-1199",
+        "MC-STK-ERR-1200",
+        "MC-STK-ERR-1201"
+      ],
+      "font_records": 27,
+      "fonts_without_tounicode": [],
+      "full_page_render_count": 37,
+      "high_resolution_evidence": [
+        {
+          "bytes": 414389,
+          "file": "smoothing_p5.png",
+          "page": 5,
+          "sha256": "8D8AB772696F5CF27C52D0AB663E86FA1E5DDE20E5EB17AA355B101D67CA49CA"
+        },
+        {
+          "bytes": 441525,
+          "file": "smoothing_p11.png",
+          "page": 11,
+          "sha256": "871847EE0154A73978DF155D260D6039BB2C1E335706DE06B48604FFA58D47C7"
+        },
+        {
+          "bytes": 410822,
+          "file": "smoothing_p13.png",
+          "page": 13,
+          "sha256": "092E450F15D6836C4BE02BA7F63B879F3591F5C74732BBB17E86B40024B90255"
+        },
+        {
+          "bytes": 368488,
+          "file": "smoothing_p14.png",
+          "page": 14,
+          "sha256": "5F0E5705AD24E635ECAB2EE363EBA37DAB704A0F6A884FE29124662F315ACB25"
+        },
+        {
+          "bytes": 357471,
+          "file": "smoothing_p16.png",
+          "page": 16,
+          "sha256": "0B4EE9D05594FEE272817D2FF4205B0AF3E318D97DA3AE52DAFCD13ED99E9C99"
+        },
+        {
+          "bytes": 428119,
+          "file": "smoothing_p21.png",
+          "page": 21,
+          "sha256": "ADCA49722F1567FABF5C9F04B0BFE20D1E871F9C9D29C1750C776CF299DC27F5"
+        },
+        {
+          "bytes": 381460,
+          "file": "smoothing_p24.png",
+          "page": 24,
+          "sha256": "61C24E1F8653B7874F9FDF25ADCAA4DAE27BA6BDEFE07360BF0B605639560782"
+        },
+        {
+          "bytes": 380148,
+          "file": "smoothing_p25.png",
+          "page": 25,
+          "sha256": "9F92697F207724FD6B70479064B1D8302C91692D47E231CB89EDD539EE4A6AB2"
+        },
+        {
+          "bytes": 455051,
+          "file": "smoothing_p26.png",
+          "page": 26,
+          "sha256": "F8E22D567B69A5C739ABC9C9E826E7CAF638E0D32E75649FD576B06397674C71"
+        },
+        {
+          "bytes": 356122,
+          "file": "smoothing_p28.png",
+          "page": 28,
+          "sha256": "D35C4450F3E6F4D512124848EFAF5DFBE10AF8005CD22DDB1247E9F75076F524"
+        },
+        {
+          "bytes": 382989,
+          "file": "smoothing_p29.png",
+          "page": 29,
+          "sha256": "E12302F8D0C58D71CA07838EACEB52E6C04A3C38FBAD730A32F250BD5DB53128"
+        },
+        {
+          "bytes": 447869,
+          "file": "smoothing_p30.png",
+          "page": 30,
+          "sha256": "44EF3A3A86BBF3394E88B6046FF0395051EF71E0444A7C966C26F422A5D47543"
+        },
+        {
+          "bytes": 367069,
+          "file": "smoothing_p32.png",
+          "page": 32,
+          "sha256": "DFE04EEFD0428CC4E63079080B5C28F129EB6A0EF209A291F3825BBE0A3BC782"
+        },
+        {
+          "bytes": 408388,
+          "file": "smoothing_p33.png",
+          "page": 33,
+          "sha256": "C45235F88E3CD626BC5EC0031C00ABAB17EC1C506C02EDF21B85A5B923E0661C"
+        },
+        {
+          "bytes": 404783,
+          "file": "smoothing_p34.png",
+          "page": 34,
+          "sha256": "11508916A889B1230ADE2AB2A1D7D1FC8CB9E4D3261856530D6654C54F0A3192"
+        }
+      ],
+      "link_annotations": 188,
+      "malformed_link_rectangles": 0,
+      "manual_findings": {
+        "blank_or_duplicate_pages": 0,
+        "broken_diagrams": 0,
+        "clipping": 0,
+        "high_resolution_pages_inspected": [
+          5,
+          11,
+          13,
+          14,
+          16,
+          21,
+          24,
+          25,
+          26,
+          28,
+          29,
+          30,
+          32,
+          33,
+          34
+        ],
+        "missing_glyphs": 0,
+        "overlap": 0,
+        "pages_inspected": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37
+        ],
+        "passed": true,
+        "unreadable_content": 0,
+        "warning_loci_outside_printable_area": 0
+      },
+      "mark_info_present": false,
+      "out_of_bounds_link_rectangles": 0,
+      "page_boxes_points": [
+        [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ]
+      ],
+      "pages": 37,
+      "path": "builds/smoothing.pdf",
+      "reflow_note": "Candidate and authority page counts are recorded above; every candidate page was inspected, including all pages directly affected by the 39 mapped smoothing.tex operations.",
+      "sha256": "7D870990F28511C5DECF3F8DF60E5E99959DED2C177DEDC64D8B9170B0E9E013",
+      "stem": "smoothing",
+      "tagged_pdf": false,
+      "unembedded_fonts": [],
+      "unsubset_fonts": []
+    }
+  ],
+  "render_protocol": {
+    "full_page_contact_sheet_review": "All rendered pages manually inspected in ordered 4-by-4 contact sheets",
+    "full_page_render": "Poppler pdftoppm PNG at 96 dpi for every candidate page",
+    "high_resolution_review": "The manifest-bound high-resolution page inventory was generated at 180 dpi; every configured correction-sensitive page was manually inspected at that resolution",
+    "manual_review_attested": true,
+    "private_render_artifacts_published": false,
+    "private_render_manifest_bytes": 11046,
+    "private_render_manifest_sha256": "F10B5A6CDA8A6BF7A75400F869D4ED9616008A49387D7A02EDA0ACB5891D1204"
+  },
+  "schema": "mathematics-commons-stacks-errata-visual-qa/v1"
+}

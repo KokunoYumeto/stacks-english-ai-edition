@@ -1,0 +1,677 @@
+{
+  "accepted": [
+    {
+      "class": "source_defect_correction",
+      "locus": "smoothing.tex:378",
+      "operations": [
+        {
+          "old_text": "there is a short exact sequence",
+          "producer_id": "SMOOTHING-001",
+          "producer_operation_id": "SMOOTHING-001",
+          "replacement_text": "there is an exact sequence",
+          "source_end_line": 378,
+          "source_start_line": 378
+        }
+      ],
+      "producer_ids": [
+        "SMOOTHING-001"
+      ],
+      "rationale": "The text calls the sequence at 381 a short exact sequence.",
+      "stable_id": "MC-STK-ERR-1177"
+    },
+    {
+      "class": "source_defect_correction",
+      "locus": "smoothing.tex:991-994",
+      "operations": [
+        {
+          "old_text": "(I/I^2)_\\mathfrak p",
+          "producer_id": "SMOOTHING-021",
+          "producer_operation_id": "SMOOTHING-021A",
+          "replacement_text": "(I/I^2)_{\\mathfrak p'}",
+          "source_end_line": 991,
+          "source_start_line": 991
+        },
+        {
+          "old_text": "at $\\mathfrak p$",
+          "producer_id": "SMOOTHING-021",
+          "producer_operation_id": "SMOOTHING-021B",
+          "replacement_text": "at $\\mathfrak p'$",
+          "source_end_line": 992,
+          "source_start_line": 992
+        },
+        {
+          "old_text": "\\NL_{A'/R})_\\mathfrak p",
+          "producer_id": "SMOOTHING-021",
+          "producer_operation_id": "SMOOTHING-021C",
+          "replacement_text": "\\NL_{A'/R})_{\\mathfrak p'}",
+          "source_end_line": 993,
+          "source_start_line": 993
+        },
+        {
+          "old_text": "\\Omega_{A'/R, \\mathfrak p}",
+          "producer_id": "SMOOTHING-021",
+          "producer_operation_id": "SMOOTHING-021D",
+          "replacement_text": "\\Omega_{A'/R, \\mathfrak p'}",
+          "source_end_line": 994,
+          "source_start_line": 994
+        }
+      ],
+      "producer_ids": [
+        "SMOOTHING-021"
+      ],
+      "rationale": "The localizations of A' are indexed by p rather than p'.",
+      "stable_id": "MC-STK-ERR-1178"
+    },
+    {
+      "class": "source_defect_correction",
+      "locus": "smoothing.tex:1163-1170",
+      "operations": [
+        {
+          "old_text": "\\mathfrak p B_\\mathfrak p/\\mathfrak p^2 B_\\mathfrak p",
+          "producer_id": "SMOOTHING-022",
+          "producer_operation_id": "SMOOTHING-022",
+          "replacement_text": "\\mathfrak p_B B_{\\mathfrak p_B}/\\mathfrak p_B^2 B_{\\mathfrak p_B}",
+          "source_end_line": 1163,
+          "source_start_line": 1163
+        },
+        {
+          "old_text": "$g_j \\in \\mathfrak p^2$",
+          "producer_id": "SMOOTHING-022",
+          "producer_operation_id": "SMOOTHING-022B",
+          "replacement_text": "$g_j \\in \\mathfrak p_B^2$",
+          "source_end_line": 1170,
+          "source_start_line": 1170
+        }
+      ],
+      "producer_ids": [
+        "SMOOTHING-022"
+      ],
+      "rationale": "The conormal term is localized at plain p in B.",
+      "stable_id": "MC-STK-ERR-1179"
+    },
+    {
+      "class": "source_defect_correction",
+      "locus": "smoothing.tex:1167",
+      "operations": [
+        {
+          "old_text": "over $k$",
+          "producer_id": "SMOOTHING-023",
+          "producer_operation_id": "SMOOTHING-023",
+          "replacement_text": "over $R/\\pi R$",
+          "source_end_line": 1167,
+          "source_start_line": 1167
+        }
+      ],
+      "producer_ids": [
+        "SMOOTHING-023"
+      ],
+      "rationale": "The residue field kappa(p) is said to be separable over undefined k.",
+      "stable_id": "MC-STK-ERR-1180"
+    },
+    {
+      "class": "source_defect_correction",
+      "locus": "smoothing.tex:1206",
+      "operations": [
+        {
+          "old_text": "$A$ is separable",
+          "producer_id": "SMOOTHING-024",
+          "producer_operation_id": "SMOOTHING-024",
+          "replacement_text": "$K$ is separable",
+          "source_end_line": 1206,
+          "source_start_line": 1206
+        }
+      ],
+      "producer_ids": [
+        "SMOOTHING-024"
+      ],
+      "rationale": "The domain A is called separable over the fraction field of R.",
+      "stable_id": "MC-STK-ERR-1181"
+    },
+    {
+      "class": "source_defect_correction",
+      "locus": "smoothing.tex:1333",
+      "operations": [
+        {
+          "old_text": "kills of $h_n$",
+          "producer_id": "SMOOTHING-025",
+          "producer_operation_id": "SMOOTHING-025",
+          "replacement_text": "kills $h_n$",
+          "source_end_line": 1333,
+          "source_start_line": 1333
+        }
+      ],
+      "producer_ids": [
+        "SMOOTHING-025"
+      ],
+      "rationale": "The phrase reads 'kills of h_n'.",
+      "stable_id": "MC-STK-ERR-1182"
+    },
+    {
+      "class": "source_defect_correction",
+      "locus": "smoothing.tex:1481",
+      "operations": [
+        {
+          "old_text": "$a_kb_k$",
+          "producer_id": "SMOOTHING-026",
+          "producer_operation_id": "SMOOTHING-026",
+          "replacement_text": "$(a_k)^N + b_k$",
+          "source_end_line": 1481,
+          "source_start_line": 1481
+        }
+      ],
+      "producer_ids": [
+        "SMOOTHING-026"
+      ],
+      "rationale": "The proof replaces a_k by a_k b_k.",
+      "stable_id": "MC-STK-ERR-1183"
+    },
+    {
+      "class": "source_defect_correction",
+      "locus": "smoothing.tex:1491",
+      "operations": [
+        {
+          "old_text": "h_{i, \\ell}^j, g_{i, \\ell}",
+          "producer_id": "SMOOTHING-027",
+          "producer_operation_id": "SMOOTHING-027",
+          "replacement_text": "h_{k, \\ell}^j, g_{k, \\ell}",
+          "source_end_line": 1491,
+          "source_start_line": 1491
+        }
+      ],
+      "producer_ids": [
+        "SMOOTHING-027"
+      ],
+      "rationale": "The coefficients are indexed h_{i,l}^j and g_{i,l}.",
+      "stable_id": "MC-STK-ERR-1184"
+    },
+    {
+      "class": "source_defect_correction",
+      "locus": "smoothing.tex:1976",
+      "operations": [
+        {
+          "old_text": "(f_1, \\ldots, x_c)",
+          "producer_id": "SMOOTHING-028",
+          "producer_operation_id": "SMOOTHING-028",
+          "replacement_text": "(f_1, \\ldots, f_c)",
+          "source_end_line": 1976,
+          "source_start_line": 1976
+        }
+      ],
+      "producer_ids": [
+        "SMOOTHING-028"
+      ],
+      "rationale": "The quotient ideal ends with x_c.",
+      "stable_id": "MC-STK-ERR-1185"
+    },
+    {
+      "class": "source_defect_correction",
+      "locus": "smoothing.tex:2268-2271",
+      "operations": [
+        {
+          "old_text": "C[y_1, \\ldots, y_r, z, z^{-1}]",
+          "producer_id": "SMOOTHING-029",
+          "producer_operation_id": "SMOOTHING-029A",
+          "replacement_text": "C[z, z^{-1}, t_{ij}]",
+          "source_end_line": 2268,
+          "source_start_line": 2268
+        },
+        {
+          "old_text": "and hence is smooth. On the other hand,",
+          "producer_id": "SMOOTHING-029",
+          "producer_operation_id": "SMOOTHING-029B",
+          "replacement_text": "as a C-algebra. Choose $c \\in H_{C/R}$ whose image in $\\Lambda$ is not in $\\mathfrak q$. Then $B_{zc}$ is smooth over $R$. On the other hand,",
+          "source_end_line": 2269,
+          "source_start_line": 2269
+        },
+        {
+          "old_text": "$z$ and $a_\\ell y_\\ell$",
+          "producer_id": "SMOOTHING-029",
+          "producer_operation_id": "SMOOTHING-029C",
+          "replacement_text": "$zc$ and $a_\\ell y_\\ell$",
+          "source_end_line": 2271,
+          "source_start_line": 2271
+        }
+      ],
+      "producer_ids": [
+        "SMOOTHING-029"
+      ],
+      "rationale": "After inverting z the source retains y_i and omits the free t_ij variables, then concludes smoothness over R directly.",
+      "stable_id": "MC-STK-ERR-1186"
+    },
+    {
+      "class": "source_defect_correction",
+      "locus": "smoothing.tex:2308-2311",
+      "operations": [
+        {
+          "old_text": "positive integers",
+          "producer_id": "SMOOTHING-030",
+          "producer_operation_id": "SMOOTHING-030A",
+          "replacement_text": "positive integers.",
+          "source_end_line": 2308,
+          "source_start_line": 2308
+        },
+        {
+          "old_text": "Then there exists an $n > 0$ and",
+          "producer_id": "SMOOTHING-030",
+          "producer_operation_id": "SMOOTHING-030B",
+          "replacement_text": "Then there exist",
+          "source_end_line": 2311,
+          "source_start_line": 2311
+        }
+      ],
+      "producer_ids": [
+        "SMOOTHING-030"
+      ],
+      "rationale": "The hypotheses introduce n and e without final punctuation, then the conclusion redeclares existence of n.",
+      "stable_id": "MC-STK-ERR-1187"
+    },
+    {
+      "class": "source_defect_correction",
+      "locus": "smoothing.tex:2370-2693",
+      "operations": [
+        {
+          "old_text": "H_{A/R}",
+          "producer_id": "SMOOTHING-005",
+          "producer_operation_id": "SMOOTHING-005",
+          "replacement_text": "H_{A/k}",
+          "source_end_line": 2693,
+          "source_start_line": 2693
+        },
+        {
+          "old_text": "H_{A/R}",
+          "producer_id": "SMOOTHING-031",
+          "producer_operation_id": "SMOOTHING-031",
+          "replacement_text": "H_{A/k}",
+          "source_end_line": 2370,
+          "source_start_line": 2370
+        }
+      ],
+      "producer_ids": [
+        "SMOOTHING-005",
+        "SMOOTHING-031"
+      ],
+      "rationale": "The generators are said to generate H_{A/R}. The generators are taken from H_{A/R} immediately after R=k[x_1,...,x_d] is introduced.",
+      "stable_id": "MC-STK-ERR-1188"
+    },
+    {
+      "class": "source_defect_correction",
+      "locus": "smoothing.tex:2374",
+      "operations": [
+        {
+          "old_text": "smooth over $R$ it is",
+          "producer_id": "SMOOTHING-032",
+          "producer_operation_id": "SMOOTHING-032",
+          "replacement_text": "smooth over $R$ because it is",
+          "source_end_line": 2374,
+          "source_start_line": 2374
+        }
+      ],
+      "producer_ids": [
+        "SMOOTHING-032"
+      ],
+      "rationale": "The sentence joins 'smooth over R' directly to 'it is a polynomial algebra' without punctuation or connective.",
+      "stable_id": "MC-STK-ERR-1189"
+    },
+    {
+      "class": "source_defect_correction",
+      "locus": "smoothing.tex:2379",
+      "operations": [
+        {
+          "old_text": "diagram above",
+          "producer_id": "SMOOTHING-033",
+          "producer_operation_id": "SMOOTHING-033",
+          "replacement_text": "diagram below",
+          "source_end_line": 2379,
+          "source_start_line": 2379
+        }
+      ],
+      "producer_ids": [
+        "SMOOTHING-033"
+      ],
+      "rationale": "The prose refers to the diagram above.",
+      "stable_id": "MC-STK-ERR-1190"
+    },
+    {
+      "class": "source_defect_correction",
+      "locus": "smoothing.tex:2387",
+      "operations": [
+        {
+          "old_text": "$\\pi_{ij} \\in \\Lambda$",
+          "producer_id": "SMOOTHING-034",
+          "producer_operation_id": "SMOOTHING-034",
+          "replacement_text": "$\\lambda_{ij} \\in \\Lambda$",
+          "source_end_line": 2387,
+          "source_start_line": 2387
+        }
+      ],
+      "producer_ids": [
+        "SMOOTHING-034"
+      ],
+      "rationale": "The coefficients are called pi_{ij} after the displayed sum uses lambda_{ij}.",
+      "stable_id": "MC-STK-ERR-1191"
+    },
+    {
+      "class": "source_defect_correction",
+      "locus": "smoothing.tex:2492",
+      "operations": [
+        {
+          "old_text": "F[x_1, \\ldots, x_d]",
+          "producer_id": "SMOOTHING-035",
+          "producer_operation_id": "SMOOTHING-035",
+          "replacement_text": "F'[x_1, \\ldots, x_d]",
+          "source_end_line": 2492,
+          "source_start_line": 2492
+        }
+      ],
+      "producer_ids": [
+        "SMOOTHING-035"
+      ],
+      "rationale": "The induction step defines A over F although only F' has been chosen at this stage.",
+      "stable_id": "MC-STK-ERR-1192"
+    },
+    {
+      "class": "source_defect_correction",
+      "locus": "smoothing.tex:2737",
+      "operations": [
+        {
+          "old_text": "t_1, \\ldots, t_m",
+          "producer_id": "SMOOTHING-006",
+          "producer_operation_id": "SMOOTHING-006",
+          "replacement_text": "t_1, \\ldots, t_d",
+          "source_end_line": 2737,
+          "source_start_line": 2737
+        }
+      ],
+      "producer_ids": [
+        "SMOOTHING-006"
+      ],
+      "rationale": "R is defined with variables t_1 through t_m.",
+      "stable_id": "MC-STK-ERR-1193"
+    },
+    {
+      "class": "source_defect_correction",
+      "locus": "smoothing.tex:2873",
+      "operations": [
+        {
+          "old_text": "A_{a_i}",
+          "producer_id": "SMOOTHING-007",
+          "producer_operation_id": "SMOOTHING-007",
+          "replacement_text": "A_{a_j}",
+          "source_end_line": 2873,
+          "source_start_line": 2873
+        }
+      ],
+      "producer_ids": [
+        "SMOOTHING-007"
+      ],
+      "rationale": "The sentence starts with A_{a_i} but immediately reasons with B_{a_j} over A_{a_j}.",
+      "stable_id": "MC-STK-ERR-1194"
+    },
+    {
+      "class": "source_defect_correction",
+      "locus": "smoothing.tex:2880-3002",
+      "operations": [
+        {
+          "old_text": "x_n",
+          "producer_id": "SMOOTHING-008",
+          "producer_operation_id": "SMOOTHING-008",
+          "replacement_text": "x_d",
+          "source_end_line": 2880,
+          "source_start_line": 2880
+        },
+        {
+          "old_text": "x_n",
+          "producer_id": "SMOOTHING-012",
+          "producer_operation_id": "SMOOTHING-012",
+          "replacement_text": "x_d",
+          "source_end_line": 2999,
+          "source_start_line": 2999
+        },
+        {
+          "old_text": "x_n",
+          "producer_id": "SMOOTHING-013",
+          "producer_operation_id": "SMOOTHING-013",
+          "replacement_text": "x_d",
+          "source_end_line": 3000,
+          "source_start_line": 3000
+        },
+        {
+          "old_text": "x_n",
+          "producer_id": "SMOOTHING-014",
+          "producer_operation_id": "SMOOTHING-014",
+          "replacement_text": "x_d",
+          "source_end_line": 3002,
+          "source_start_line": 3002
+        }
+      ],
+      "producer_ids": [
+        "SMOOTHING-008",
+        "SMOOTHING-012",
+        "SMOOTHING-013",
+        "SMOOTHING-014"
+      ],
+      "rationale": "The polynomial base is written k[x_1,...,x_n]. The base of H_B is written k[x_1,...,x_n]. The base of H_C is written k[x_1,...,x_n]. The tensor product uses k[x_1,...,x_n].",
+      "stable_id": "MC-STK-ERR-1195"
+    },
+    {
+      "class": "source_defect_correction",
+      "locus": "smoothing.tex:2893-2894",
+      "operations": [
+        {
+          "old_text": "\\in \\Lambda",
+          "producer_id": "SMOOTHING-009",
+          "producer_operation_id": "SMOOTHING-009A",
+          "replacement_text": "\\in \\mathfrak p",
+          "source_end_line": 2893,
+          "source_start_line": 2893
+        },
+        {
+          "old_text": "\\Lambda_\\mathfrak q",
+          "producer_id": "SMOOTHING-009",
+          "producer_operation_id": "SMOOTHING-009B",
+          "replacement_text": "k[y_1, \\ldots, y_m]_\\mathfrak p",
+          "source_end_line": 2894,
+          "source_start_line": 2894
+        }
+      ],
+      "producer_ids": [
+        "SMOOTHING-009"
+      ],
+      "rationale": "The proof chooses pi_1,...,pi_d in Lambda mapping to parameters of Lambda_q.",
+      "stable_id": "MC-STK-ERR-1196"
+    },
+    {
+      "class": "source_defect_correction",
+      "locus": "smoothing.tex:2990",
+      "operations": [
+        {
+          "old_text": "and we conclude",
+          "producer_id": "SMOOTHING-011",
+          "producer_operation_id": "SMOOTHING-011",
+          "replacement_text": "we conclude",
+          "source_end_line": 2990,
+          "source_start_line": 2990
+        }
+      ],
+      "producer_ids": [
+        "SMOOTHING-011"
+      ],
+      "rationale": "The sentence reads 'Setting ... and we conclude'.",
+      "stable_id": "MC-STK-ERR-1197"
+    },
+    {
+      "class": "source_defect_correction",
+      "locus": "smoothing.tex:3054",
+      "operations": [
+        {
+          "old_text": "of (\\ref{item-fifth-resolve}",
+          "producer_id": "SMOOTHING-015",
+          "producer_operation_id": "SMOOTHING-015",
+          "replacement_text": "of (\\ref{item-fifth-resolve})",
+          "source_end_line": 3054,
+          "source_start_line": 3054
+        }
+      ],
+      "producer_ids": [
+        "SMOOTHING-015"
+      ],
+      "rationale": "The parenthetical reference 'of (ref{item-fifth-resolve}' is not closed.",
+      "stable_id": "MC-STK-ERR-1198"
+    },
+    {
+      "class": "source_defect_correction",
+      "locus": "smoothing.tex:3187-3266",
+      "operations": [
+        {
+          "old_text": "d_{n, l}",
+          "producer_id": "SMOOTHING-016",
+          "producer_operation_id": "SMOOTHING-016",
+          "replacement_text": "d_l",
+          "source_end_line": 3187,
+          "source_start_line": 3187
+        },
+        {
+          "old_text": "d_{n, l}",
+          "producer_id": "SMOOTHING-018",
+          "producer_operation_id": "SMOOTHING-018",
+          "replacement_text": "d_l",
+          "source_end_line": 3266,
+          "source_start_line": 3266
+        }
+      ],
+      "producer_ids": [
+        "SMOOTHING-016",
+        "SMOOTHING-018"
+      ],
+      "rationale": "The last summand uses d_{n,l}. The repeated last summand uses d_{n,l}.",
+      "stable_id": "MC-STK-ERR-1199"
+    },
+    {
+      "class": "source_defect_correction",
+      "locus": "smoothing.tex:3191-3270",
+      "operations": [
+        {
+          "old_text": "Suppose that we can show that $g_j$ as a solution $(b_{i, l})$ in $R$.",
+          "producer_id": "SMOOTHING-017",
+          "producer_operation_id": "SMOOTHING-017",
+          "replacement_text": "Suppose that we can show that the system of equations $g_j = 0$ has a solution $(b_{i, l})$ in $R$.",
+          "source_end_line": 3191,
+          "source_start_line": 3191
+        },
+        {
+          "old_text": "Suppose that we can show that $g_j$ as a solution $(b_{i, l})$ in $R'$",
+          "producer_id": "SMOOTHING-019",
+          "producer_operation_id": "SMOOTHING-019",
+          "replacement_text": "Suppose that we can show that the system of equations $g_j = 0$ has a solution $(b_{i, l})$ in $R'$",
+          "source_end_line": 3270,
+          "source_start_line": 3270
+        }
+      ],
+      "producer_ids": [
+        "SMOOTHING-017",
+        "SMOOTHING-019"
+      ],
+      "rationale": "The sentence says 'g_j as a solution'. The repeated sentence says 'g_j as a solution'.",
+      "stable_id": "MC-STK-ERR-1200"
+    },
+    {
+      "class": "source_defect_correction",
+      "locus": "smoothing.tex:3425",
+      "operations": [
+        {
+          "old_text": "A \\to P",
+          "producer_id": "SMOOTHING-020",
+          "producer_operation_id": "SMOOTHING-020",
+          "replacement_text": "A \\to B",
+          "source_end_line": 3425,
+          "source_start_line": 3425
+        }
+      ],
+      "producer_ids": [
+        "SMOOTHING-020"
+      ],
+      "rationale": "The factorization A -> B -> A^completion is followed by 'A -> P smooth'.",
+      "stable_id": "MC-STK-ERR-1201"
+    }
+  ],
+  "accepted_producer_row_count": 31,
+  "authority_bytes": 134660,
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_path": "smoothing.tex",
+  "authority_sha256": "FD28CF874BB7DAD3C5C5FF03314D1C83701613A8A98730A99B9CA7A4BCFE6068",
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "candidate_id": "stacks-errata-a04446e-r26",
+  "deduplication": {
+    "admitted_units_reviewed": 809,
+    "matching_smoothing_units": 3,
+    "prior_rounds": "root/R1 and R2-R25",
+    "prior_smoothing_units_reviewed": 5,
+    "result": "accepted_units_new; three exact R1 duplicates aliased; one grammatical false positive rejected"
+  },
+  "operation_count": 39,
+  "prior_alias_producer_row_count": 3,
+  "prior_aliases": [
+    {
+      "producer_id": "SMOOTHING-002",
+      "result": "exact_duplicate_of_admitted_r1_unit",
+      "stable_id": "MC-STK-ERR-0002"
+    },
+    {
+      "producer_id": "SMOOTHING-003",
+      "result": "exact_duplicate_of_admitted_r1_unit",
+      "stable_id": "MC-STK-ERR-0005"
+    },
+    {
+      "producer_id": "SMOOTHING-004",
+      "result": "exact_duplicate_of_admitted_r1_unit",
+      "stable_id": "MC-STK-ERR-0006"
+    }
+  ],
+  "producer_emendations_bytes": 14346,
+  "producer_emendations_sanitized_bytes": 14144,
+  "producer_emendations_sanitized_sha256": "216E43AE663F86828DE2E00131645B5778E10189DCD26F7D8C6204C6D0B12793",
+  "producer_emendations_sha256": "992AC09EF5F3F344739390F7369984A894171C12F0218611F616E2B292C8E398",
+  "producer_ledger_bytes": 13069,
+  "producer_ledger_sha256": "7E8204DF53B8D8704400149E38DB2C263103956A9AA7F5E9797081EA1A8E2A9E",
+  "producer_row_count": 35,
+  "producer_sources": [
+    "SMOOTHING_SOURCE_DEFECT_LEDGER.input.csv",
+    "SMOOTHING_SOURCE_EMENDATIONS.input.json"
+  ],
+  "rejected": [
+    {
+      "class": "grammatical_original_not_source_defect",
+      "locus": "smoothing.tex:2958-2959",
+      "prior_aliases": [],
+      "producer_id": "SMOOTHING-010",
+      "producer_ids": [
+        "SMOOTHING-010"
+      ],
+      "proposed_operation": {
+        "applied": false,
+        "end_byte_exclusive": 114851,
+        "old_bytes": 12,
+        "old_sha256": "1ACC812ADF45465C8862EB23D143C55B2D68A53DDF5C5A14F5467CBFED234F90",
+        "old_text": "this trivial",
+        "replacement_bytes": 15,
+        "replacement_sha256": "351FDA53E5AD353E26C8A1F8134EB189F7A6A784D0BD8A9BA6DAB006CDD1D75C",
+        "replacement_text": "this is trivial",
+        "source_end_line": 2958,
+        "source_start_line": 2958,
+        "start_byte": 114839
+      },
+      "rationale": "The noun phrase 'this trivial but key observation' is the grammatical subject of 'will ensure'; adding 'is' would make the sentence malformed.",
+      "result": "rejected_after_independent_authority_review",
+      "schema": "mathematics-commons-stacks-errata-rejection/v1",
+      "source": "smoothing.tex"
+    }
+  ],
+  "rejected_producer_row_count": 1,
+  "schema": "mathematics-commons-stacks-r26-adjudication-spec/v1",
+  "semantic_unit_count": 25,
+  "stable_id_range": [
+    "MC-STK-ERR-1177",
+    "MC-STK-ERR-1201"
+  ],
+  "unresolved": []
+}
