@@ -720,6 +720,22 @@ def main(argv: list[str] | None = None) -> int:
             candidate_commit is not None
             and git("cat-file", "-e", f"{candidate_commit}^{{commit}}").returncode == 0
         )
+        candidate_chain_raw = overlay.get("candidate_commits")
+        if candidate_chain_raw is None:
+            candidate_chain = [candidate_commit] if candidate_commit is not None else []
+        elif (
+            isinstance(candidate_chain_raw, list)
+            and candidate_chain_raw
+            and all(isinstance(item, str) and SHA1_RE.fullmatch(item) for item in candidate_chain_raw)
+            and candidate_commit is not None
+            and candidate_chain_raw[-1] == candidate_commit
+        ):
+            candidate_chain = candidate_chain_raw
+        else:
+            errors.append(
+                f"invalid candidate commit chain: {overlay.get('id')!r}"
+            )
+            candidate_chain = [candidate_commit] if candidate_commit is not None else []
         admission_exists = (
             admission_commit is not None
             and git("cat-file", "-e", f"{admission_commit}^{{commit}}").returncode == 0
@@ -773,17 +789,20 @@ def main(argv: list[str] | None = None) -> int:
                     errors,
                     admission_cursor if cursor_exists else None,
                 )
-                require_single_parent(
-                    candidate_commit,
-                    f"candidate {overlay.get('id')}",
-                    errors,
-                    intake_commit,
-                )
+                candidate_parent = intake_commit
+                for index, candidate_chain_commit in enumerate(candidate_chain, start=1):
+                    require_single_parent(
+                        candidate_chain_commit,
+                        f"candidate {overlay.get('id')} chain {index}",
+                        errors,
+                        candidate_parent,
+                    )
+                    candidate_parent = candidate_chain_commit
                 require_single_parent(
                     admission_commit,
                     f"admission {overlay.get('id')}",
                     errors,
-                    candidate_commit,
+                    candidate_parent,
                 )
                 actual_intake_tree = git_optional(
                     "rev-parse", f"{intake_commit}^{{tree}}"

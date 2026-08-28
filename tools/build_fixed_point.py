@@ -869,6 +869,30 @@ def load_composition_receipt(
             overlay.get("candidate_commit"),
             f"candidate {overlay.get('id')}",
         )
+        candidate_chain_raw = overlay.get("candidate_commits")
+        if candidate_chain_raw is None:
+            candidate_chain = [candidate]
+        elif (
+            isinstance(candidate_chain_raw, list)
+            and candidate_chain_raw
+            and all(
+                isinstance(item, str) and SHA1_PATTERN.fullmatch(item)
+                for item in candidate_chain_raw
+            )
+            and candidate_chain_raw[-1] == candidate
+        ):
+            candidate_chain = [
+                require_commit_object(
+                    source,
+                    item,
+                    f"candidate {overlay.get('id')} chain",
+                )
+                for item in candidate_chain_raw
+            ]
+        else:
+            raise RuntimeError(
+                f"invalid candidate commit chain: {overlay.get('id')!r}"
+            )
         admission = require_commit_object(
             source,
             overlay.get("admission_commit"),
@@ -920,17 +944,20 @@ def load_composition_receipt(
                 f"intake {overlay.get('id')}",
                 expected_registry_parent,
             )
-            require_single_parent(
-                source,
-                candidate,
-                f"candidate {overlay.get('id')}",
-                intake,
-            )
+            candidate_parent = intake
+            for index, candidate_chain_commit in enumerate(candidate_chain, start=1):
+                require_single_parent(
+                    source,
+                    candidate_chain_commit,
+                    f"candidate {overlay.get('id')} chain {index}",
+                    candidate_parent,
+                )
+                candidate_parent = candidate_chain_commit
             require_single_parent(
                 source,
                 admission,
                 f"admission {overlay.get('id')}",
-                candidate,
+                candidate_parent,
             )
             actual_intake_tree = git(source, "rev-parse", f"{intake}^{{tree}}")
             actual_candidate_tree = git(
