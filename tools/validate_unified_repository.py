@@ -908,6 +908,20 @@ def main(argv: list[str] | None = None) -> int:
     overlay_operation_counts: dict[str, int] = {}
     entry_by_id: dict[str, dict] = {}
     proposed_local_labels: set[str] = set()
+    superseded_operation_ids: set[str] = set()
+    for registry_entry in entries:
+        if not isinstance(registry_entry, dict) or not isinstance(
+            registry_entry.get("id"), str
+        ):
+            continue
+        registry_source_map = candidate_dir(registry_entry["id"]) / "source-map.jsonl"
+        if not registry_source_map.is_file():
+            continue
+        for registry_row in read_jsonl(registry_source_map):
+            for registry_operation in registry_row.get("operations", []):
+                predecessor_id = registry_operation.get("supersedes_operation_id")
+                if isinstance(predecessor_id, str) and predecessor_id:
+                    superseded_operation_ids.add(predecessor_id)
     for entry in entries:
         if not isinstance(entry, dict) or not isinstance(entry.get("id"), str):
             errors.append("overlay registry contains an invalid entry")
@@ -1122,7 +1136,10 @@ def main(argv: list[str] | None = None) -> int:
                 v2_operations += 1
                 overlay_operations += 1
                 replacement = operation["replacement_text"]
-                if replacement not in source_text:
+                if (
+                    operation["operation_id"] not in superseded_operation_ids
+                    and replacement not in source_text
+                ):
                     errors.append(
                         f"missing composed replacement {operation['operation_id']} "
                         f"in {row['source']}"
