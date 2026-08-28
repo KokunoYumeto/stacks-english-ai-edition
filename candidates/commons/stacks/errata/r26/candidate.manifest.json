@@ -1,0 +1,287 @@
+{
+  "$schema": "../../../../../schemas/candidate-manifest.schema.json",
+  "schema": "mathematics-commons-stacks-candidate-manifest/v1",
+  "candidate_id": "stacks-errata-a04446e-r26",
+  "lease_id": "stacks-lease-000030-errata-r26",
+  "namespace": "commons/stacks/errata/r26",
+  "writer_task": "01a0256d-5693-77c1-96b2-cf37101e0c6c",
+  "upstream": {
+    "lock": "upstream/stacks.lock.json",
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e"
+  },
+  "source_authorities": [
+    {
+      "path": "authority/canon/R26_SMOOTHING_ADJUDICATION_SPEC.json",
+      "sha256": "F6B96F9407047A525A387E2B0BF3D4B49A378B74E8DCD3B6B6EA825D9B3BD261"
+    },
+    {
+      "path": "authority/canon/R26_SMOOTHING_INTAKE_VALIDATION.json",
+      "sha256": "96244E795EFD9B492A958B4105CC4B161B4BCBD4FC473FA3D9D685B336D838BE"
+    },
+    {
+      "path": "authority/canon/R26_SMOOTHING_REVIEW.md",
+      "sha256": "D2C7AD56DE94F990A71F1B9C2DA68DCF01BDCDA44A9FB6914607547D76C4CEBE"
+    },
+    {
+      "path": "authority/canon/SMOOTHING_SOURCE_DEFECT_LEDGER.csv",
+      "sha256": "7E8204DF53B8D8704400149E38DB2C263103956A9AA7F5E9797081EA1A8E2A9E"
+    },
+    {
+      "path": "authority/canon/SMOOTHING_SOURCE_EMENDATIONS.json",
+      "sha256": "216E43AE663F86828DE2E00131645B5778E10189DCD26F7D8C6204C6D0B12793"
+    },
+    {
+      "path": "authority/COPYING",
+      "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"
+    },
+    {
+      "path": "authority/source/smoothing.tex",
+      "sha256": "FD28CF874BB7DAD3C5C5FF03314D1C83701613A8A98730A99B9CA7A4BCFE6068"
+    },
+    {
+      "path": "authority/upstream.lock.json",
+      "sha256": "DEA0183484C3E8EF0EECE5220AE7CE649E765D3A7CA46BE8EEC98EB738B549F9"
+    }
+  ],
+  "source_closure": {
+    "enumerated": true,
+    "expected_units": 25,
+    "manifested_units": 25,
+    "complete": true
+  },
+  "stable_unit_manifest": {
+    "path": "stable-units.json",
+    "sha256": "9653F6E3DE8FA4A3E745B00250CFEAAB9D63D9884A0FBA296C8AF1A8C96F1DF5"
+  },
+  "source_map": {
+    "path": "source-map.jsonl",
+    "sha256": "46C29F2D0DFDC1081FFFDA61757DFCEB4E3036881A9D2D272B5ED9D67626B9BF"
+  },
+  "decision_ledger": {
+    "path": "decisions.jsonl",
+    "sha256": "46BA688CD4052C613A205CE1EE01C7E11C1B6D89809A85572DC5BF838F2F4F0B"
+  },
+  "rejection_ledger": {
+    "path": "rejections.jsonl",
+    "sha256": "98604DB523490869E5C6CBC18CE4A7113A11A0F236D3BB4FEA386CE34AED367E"
+  },
+  "formula_diagram_inventory": {
+    "path": "formula-diagram-inventory.json",
+    "sha256": "2B1A7C005D925647863379139008588B1754AE1531E4D7E08140CCEF7995C876"
+  },
+  "builds": [
+    {
+      "path": ".gitattributes",
+      "sha256": "705FD4D6451A31D36B3DF7DE96F83F30AC976C9B4A6D1E51671D8E2F33E2D0DA"
+    },
+    {
+      "path": "build-manifest.py",
+      "sha256": "C18BC5C0514910DEFB1372E2582C59F1497B77EC3A26D78ADD50360403F563FD"
+    },
+    {
+      "path": "build-receipt.py",
+      "sha256": "2B3A4E189D69313538FEAD1D27ECF5ECC12B4E87A4A6BFFE2F0A374D6AE2C70A"
+    },
+    {
+      "path": "BUILD.md",
+      "sha256": "532D25259EF0141E5D5083BA5E3D0539F423CDC9CC93EEFF0B1ABAFC4E8D13C8"
+    },
+    {
+      "path": "builds/build-execution.json",
+      "sha256": "239544902AA9E58EDF3C606DF36D592FAFF368A0FC9B8D0F2191A2D3D3F63B07"
+    },
+    {
+      "path": "builds/build-receipt.json",
+      "sha256": "0D150776CB50BE54C4D7FD7134D6B1D8049F261C2B985A81A3820B3161D49453"
+    },
+    {
+      "path": "builds/deterministic-replay.json",
+      "sha256": "F9E677295E5F90A97E236CF3089F5B5CC1A83093D7E221A79EC13803C34981CB"
+    },
+    {
+      "path": "builds/smoothing.authority.bibtex.txt",
+      "sha256": "D6F481B4F0F80167F38C64D2590976150AC424D7410F5C00F28307F9E438AD57"
+    },
+    {
+      "path": "builds/smoothing.authority.log",
+      "sha256": "ED16546AE84BD03021370A7FA1920A0131644A493FDB981C50512435BBE8AE23"
+    },
+    {
+      "path": "builds/smoothing.authority.pass3.txt",
+      "sha256": "F49189003FE4F1F80B0C0E392E6CF6854E6EF44EA80BE4B63DEEC0ED984F1E25"
+    },
+    {
+      "path": "builds/smoothing.authority.pdf",
+      "sha256": "EC3AD0C055FF60172127C2F53D5AF449243790F1B5F780BB74C1985EC4DF15CF"
+    },
+    {
+      "path": "builds/smoothing.bibtex.txt",
+      "sha256": "D6F481B4F0F80167F38C64D2590976150AC424D7410F5C00F28307F9E438AD57"
+    },
+    {
+      "path": "builds/smoothing.log",
+      "sha256": "7A8EE696413DF1441EA7353EA0A385438C31AA2AA46445A8D812E7726B59F913"
+    },
+    {
+      "path": "builds/smoothing.pass3.txt",
+      "sha256": "53D7384ABDC2B4E198FF44682EEAF3503A499B3429643F5E890DA15310C36C2D"
+    },
+    {
+      "path": "builds/smoothing.pdf",
+      "sha256": "7D870990F28511C5DECF3F8DF60E5E99959DED2C177DEDC64D8B9170B0E9E013"
+    },
+    {
+      "path": "builds/source-page-map.json",
+      "sha256": "27316E8D935696824B04AF91884F575B5064AECCAB0FAC8E597D9FA83B0B4F56"
+    },
+    {
+      "path": "builds/validation.json",
+      "sha256": "BD7FC34983D917C7950997F6287D83E1C103603A1D0306763D11E0AE57EDC05A"
+    },
+    {
+      "path": "builds/visual-qa.json",
+      "sha256": "9F1EECD0F3BC977D780D15136ADA7AB4F0A14603A6E793F8B96163D074CE9010"
+    },
+    {
+      "path": "candidate.config.input.json",
+      "sha256": "3012BF7B5F6ECE365F211B1EA9D3E12B9DA54354C16744D460F16D7389395962"
+    },
+    {
+      "path": "candidate.config.json",
+      "sha256": "2EA0A4CD9FC28F7438A517050CFDF439F70E8FD3144AC23F5C0EB963AF0554A9"
+    },
+    {
+      "path": "check-manifest.py",
+      "sha256": "85C71A8D01AA6E5B590A995ADB6F6EE8770ECB6AB74F64D10DC7CE3327228813"
+    },
+    {
+      "path": "decisions.input.jsonl",
+      "sha256": "46BA688CD4052C613A205CE1EE01C7E11C1B6D89809A85572DC5BF838F2F4F0B"
+    },
+    {
+      "path": "derive-visual-pages.py",
+      "sha256": "32B3C9C9CACCE1CAE60298314246DAAC473D8ECE36DA6102720B77083647A1D1"
+    },
+    {
+      "path": "deterministic-replay.py",
+      "sha256": "7C1F0047036BC0D170268F16C5AB4A6B0AAC365596D69C00CC28B6BF844B98D1"
+    },
+    {
+      "path": "independent-review.py",
+      "sha256": "B1D16F235C5998C8B5AE045EFCC2895E2B8609531479AA8C9951867E24712941"
+    },
+    {
+      "path": "INTAKE_VALIDATION.json",
+      "sha256": "96244E795EFD9B492A958B4105CC4B161B4BCBD4FC473FA3D9D685B336D838BE"
+    },
+    {
+      "path": "LEASE.json",
+      "sha256": "8F8285F9D1B2AAC5B5B1C2D09FFB381DE08C98907E65FF6237478DF9B404222E"
+    },
+    {
+      "path": "materialize.py",
+      "sha256": "85261DB7CAD02980F762C6E448C986A198E0C72AFB5A8F1A958B9CAD9DF42A04"
+    },
+    {
+      "path": "operation-spec.input.json",
+      "sha256": "997024537CBDB04173399D4F7C50DD865DCAC113C87EA7DC7923BD3FE0E85486"
+    },
+    {
+      "path": "operation-spec.json",
+      "sha256": "2DEB1FAA28E5C1C29CED0203F6EF4F8151097382D0633FB55D695653D6B2370D"
+    },
+    {
+      "path": "payload/smoothing.tex",
+      "sha256": "D5C5F0A6099ED011122BC90E836F8563E4F1496A30700CEBC1928E37812B08F0"
+    },
+    {
+      "path": "prepare-inputs.py",
+      "sha256": "F152D948836D88C4EBEA9BEFBD1DC4104253696793DC9ED3DC82C5F7135FC723"
+    },
+    {
+      "path": "R26_SMOOTHING_ADJUDICATION_SPEC.input.json",
+      "sha256": "F6B96F9407047A525A387E2B0BF3D4B49A378B74E8DCD3B6B6EA825D9B3BD261"
+    },
+    {
+      "path": "R26_SMOOTHING_ADJUDICATION_SPEC.json",
+      "sha256": "F6B96F9407047A525A387E2B0BF3D4B49A378B74E8DCD3B6B6EA825D9B3BD261"
+    },
+    {
+      "path": "R26_SMOOTHING_REVIEW.md",
+      "sha256": "D2C7AD56DE94F990A71F1B9C2DA68DCF01BDCDA44A9FB6914607547D76C4CEBE"
+    },
+    {
+      "path": "README.md",
+      "sha256": "6F5124C75AC3C91F179350582F9DBCF955792ECF98C69C5CE3F251DC76C14153"
+    },
+    {
+      "path": "rejections.input.jsonl",
+      "sha256": "98604DB523490869E5C6CBC18CE4A7113A11A0F236D3BB4FEA386CE34AED367E"
+    },
+    {
+      "path": "render-qa.py",
+      "sha256": "704D644357FE5905058B5E584F23B8F452BBC15591649DE1D145C227706EDFB6"
+    },
+    {
+      "path": "replay/independent-review.json",
+      "sha256": "626F86BF80EDDB3001DA54A536B7A2EDD52A9BFFFA8B7FCCB6D7F8A466FC9F44"
+    },
+    {
+      "path": "replay-build.py",
+      "sha256": "818C6907DD6206D2354B70531528939512A8BA0E6713BCAC53B251D2BB84DD1E"
+    },
+    {
+      "path": "SMOOTHING_SOURCE_DEFECT_LEDGER.input.csv",
+      "sha256": "7E8204DF53B8D8704400149E38DB2C263103956A9AA7F5E9797081EA1A8E2A9E"
+    },
+    {
+      "path": "SMOOTHING_SOURCE_EMENDATIONS.input.json",
+      "sha256": "216E43AE663F86828DE2E00131645B5778E10189DCD26F7D8C6204C6D0B12793"
+    },
+    {
+      "path": "source-map.input.jsonl",
+      "sha256": "46C29F2D0DFDC1081FFFDA61757DFCEB4E3036881A9D2D272B5ED9D67626B9BF"
+    },
+    {
+      "path": "source-validation.json",
+      "sha256": "131F093C8BCDE3780F44D92C049D5D11EF61F97198AAC963C48B5E01811BF684"
+    },
+    {
+      "path": "stable-units.input.json",
+      "sha256": "9653F6E3DE8FA4A3E745B00250CFEAAB9D63D9884A0FBA296C8AF1A8C96F1DF5"
+    },
+    {
+      "path": "verify-source.py",
+      "sha256": "01F8BEAB075B2D0E9590B257A2E2A55584C9ABCD70A6BE3B5D608045C5DA07EB"
+    },
+    {
+      "path": "verify.py",
+      "sha256": "390794FE40E9DD7AD5A8BCF17F923D29A53494AE7B3EDD49B955E3F333B6BD99"
+    },
+    {
+      "path": "visual-qa.py",
+      "sha256": "F14D5D1CC4D863D07CCDDB8418D794AB0AEA765B53C7BA238B6F15F6E0BEF88C"
+    }
+  ],
+  "rights_state": "The authority and modified payload retain the Stacks Project GNU Free Documentation License 1.2; metadata and receipts do not relicense upstream content. This is an independently maintained AI-produced English edition with no Stacks Project review, approval, affiliation, or endorsement. Legal certification was not performed.",
+  "review_state": "performed",
+  "independent_replay": "passed",
+  "unresolved_defects": [
+    "The independent replay receipt binds pre-review manifest F712E0F486767EDF29675808AD919DE57A71D8FDA42AE895D7BD955F684D9BD7 and validation BD7FC34983D917C7950997F6287D83E1C103603A1D0306763D11E0AE57EDC05A. This final registrar-only rebind adds the replay receipt; no reviewed authority, payload, proof, script, build, PDF, or visual-QA byte changed.",
+    "The isolated smoothing.tex candidate retains cross-chapter undefined-reference targets; their multiset matches the frozen authority build exactly.",
+    "The sealed chapter readers have page counts candidate 37, authority 37. The hash-bound visual-QA receipt records inspection of every candidate page and every correction-sensitive locus without clipping, overlap, missing glyph, broken diagram, blank page, or unreadable content.",
+    "The proof PDFs contain embedded fonts with ToUnicode maps but are untagged; document-structure accessibility remains a cumulative-edition toolchain concern.",
+    "The bounded intake from SMOOTHING-001 through SMOOTHING-035 assigns 25 semantic units to 31 accepted producer identities; 1 producer identity is rejected, 0 are intentionally absent, 3 prior producer allegation aliases are retained, and none is unresolved.",
+    "Canonical translations preserve the frozen authority unless a locale-side emendation is separately bound; this English corrected overlay is not silently copied.",
+    "Overlay admission and English-edition composition are separate transitions; this manifest records candidate closure only."
+  ],
+  "stop_conditions": [
+    "Do not mutate the literal stacks-project master mirror.",
+    "Do not apply these corrections silently to canonical translation source or PDFs.",
+    "Do not contact or submit to the upstream Stacks maintainers under the current no-AI-contribution boundary.",
+    "Do not append an overlay registry record except in a separate admission commit bound to the final manifest hash and a passed independent replay.",
+    "Any change to reviewed authority, payload, proof, build, validation, visual-QA, or replay bytes invalidates the replay and requires a new review."
+  ],
+  "generated_at_utc": "2026-08-28T11:09:42Z"
+}

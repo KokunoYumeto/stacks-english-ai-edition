@@ -1,0 +1,87 @@
+{
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "candidate_id": "stacks-errata-a04446e-r26",
+  "checks": {
+    "authority_evidence": {
+      "files": 8,
+      "passed": true
+    },
+    "exact_payload": {
+      "passed": true,
+      "smoothing": {
+        "authority_bytes": 134660,
+        "authority_sha256": "FD28CF874BB7DAD3C5C5FF03314D1C83701613A8A98730A99B9CA7A4BCFE6068",
+        "display_delimiter_delta": 0,
+        "operation_count": 39,
+        "ordered_structure": {
+          "citations": {
+            "authority": 32,
+            "payload": 32
+          },
+          "environments": {
+            "authority": 274,
+            "payload": 274
+          },
+          "labels": {
+            "authority": 97,
+            "payload": 97
+          },
+          "references": {
+            "authority": 263,
+            "payload": 263
+          },
+          "sections": {
+            "authority": 14,
+            "payload": 14
+          }
+        },
+        "payload_bytes": 134839,
+        "payload_sha256": "D5C5F0A6099ED011122BC90E836F8563E4F1496A30700CEBC1928E37812B08F0",
+        "xymatrix_count": 11
+      }
+    },
+    "lease_ledgers_inventory": {
+      "decisions": 6,
+      "diagram_units": 0,
+      "formula_units": 22,
+      "passed": true,
+      "prose_only_units": 3,
+      "rejections": 1
+    },
+    "public_hygiene": {
+      "passed": true,
+      "python_caches": 0,
+      "text_files": 41
+    },
+    "required_refinements": {
+      "passed": true,
+      "producer_ids": [
+        "SMOOTHING-017",
+        "SMOOTHING-019",
+        "SMOOTHING-022",
+        "SMOOTHING-023"
+      ],
+      "required_operations": 4
+    },
+    "sealed_intake": {
+      "operations": 39,
+      "passed": true,
+      "producer_rows": 35,
+      "spec_sha256": "F6B96F9407047A525A387E2B0BF3D4B49A378B74E8DCD3B6B6EA825D9B3BD261",
+      "units": 25
+    },
+    "unit_closure": {
+      "accepted_producer_ids": 31,
+      "first_id": "MC-STK-ERR-1177",
+      "last_id": "MC-STK-ERR-1201",
+      "passed": true,
+      "rejected_producer_ids": 1,
+      "units": 25
+    }
+  },
+  "generated_at_utc": "2026-08-28T10:45:00Z",
+  "passed": true,
+  "schema": "mathematics-commons-stacks-errata-source-validation/v1",
+  "scope": "source_only_no_build_render_admission_registry_git_or_publication",
+  "verifier_sha256": "01F8BEAB075B2D0E9590B257A2E2A55584C9ABCD70A6BE3B5D608045C5DA07EB"
+}

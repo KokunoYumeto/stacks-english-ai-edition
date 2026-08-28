@@ -1,0 +1,374 @@
+{
+  "authority_bytes": 134660,
+  "authority_mutated": false,
+  "authority_path": "smoothing.tex",
+  "authority_sha256": "FD28CF874BB7DAD3C5C5FF03314D1C83701613A8A98730A99B9CA7A4BCFE6068",
+  "effective_document_bytes": 134785,
+  "effective_document_sha256": "3562686D4274950DB1903523568CC17F1106978A9D450E717477D70EA624E6C9",
+  "emendation_count": 42,
+  "emendations": [
+    {
+      "id": "SMOOTHING-001",
+      "line": 378,
+      "new": "there is an exact sequence",
+      "old": "there is a short exact sequence",
+      "rationale": "The displayed sequence has no initial zero, and lines 411-413 obtain exactness on the left only under an additional hypothesis.",
+      "status": "confirmed_pending_canon_intake-source_emendation_applied_in_target"
+    },
+    {
+      "id": "SMOOTHING-002",
+      "line": 475,
+      "new": "R[y_1, \\ldots, y_m]",
+      "old": "R[y_1, \\ldots, y_c]",
+      "rationale": "The presentation and quotient use y_1 through y_m; c counts equations, not polynomial variables.",
+      "status": "confirmed_pending_canon_intake-source_emendation_applied_in_target"
+    },
+    {
+      "id": "SMOOTHING-003",
+      "line": 708,
+      "new": "Choose an enumeration",
+      "old": "Choose an enumerations",
+      "rationale": "A single enumeration of E is chosen.",
+      "status": "confirmed_pending_canon_intake-target_prose_translated_idiomatically"
+    },
+    {
+      "id": "SMOOTHING-004",
+      "line": 830,
+      "new": "correspond to $a_i/1$",
+      "old": "correspond $a_i/1$",
+      "rationale": "The English verb requires the preposition to.",
+      "status": "confirmed_pending_canon_intake-target_prose_translated_idiomatically"
+    },
+    {
+      "id": "SMOOTHING-021A",
+      "line": 991,
+      "new": "(I/I^2)_{\\mathfrak p'}",
+      "old": "(I/I^2)_\\mathfrak p",
+      "rationale": "This is a localization of the A'-module at the prime p' of A'.",
+      "status": "confirmed_pending_canon_intake-source_emendation_applied_in_target"
+    },
+    {
+      "id": "SMOOTHING-021B",
+      "line": 992,
+      "new": "at $\\mathfrak p'$",
+      "old": "at $\\mathfrak p$",
+      "rationale": "The middle map is localized in A' at p'.",
+      "status": "confirmed_pending_canon_intake-source_emendation_applied_in_target"
+    },
+    {
+      "id": "SMOOTHING-021C",
+      "line": 993,
+      "new": "\\NL_{A'/R})_{\\mathfrak p'}",
+      "old": "\\NL_{A'/R})_\\mathfrak p",
+      "rationale": "The cotangent complex of A' is localized at p'.",
+      "status": "confirmed_pending_canon_intake-source_emendation_applied_in_target"
+    },
+    {
+      "id": "SMOOTHING-021D",
+      "line": 994,
+      "new": "\\Omega_{A'/R, \\mathfrak p'}",
+      "old": "\\Omega_{A'/R, \\mathfrak p}",
+      "rationale": "The differential module of A' is localized at p'.",
+      "status": "confirmed_pending_canon_intake-source_emendation_applied_in_target"
+    },
+    {
+      "id": "SMOOTHING-022",
+      "line": 1163,
+      "new": "\\mathfrak p_B B_{\\mathfrak p_B}/\\mathfrak p_B^2 B_{\\mathfrak p_B}",
+      "old": "\\mathfrak p B_\\mathfrak p/\\mathfrak p^2 B_\\mathfrak p",
+      "rationale": "The conormal term belongs to B at its prime p_B.",
+      "status": "confirmed_pending_canon_intake-source_emendation_applied_in_target"
+    },
+    {
+      "id": "SMOOTHING-023",
+      "line": 1167,
+      "new": "over $\\kappa$",
+      "old": "over $k$",
+      "rationale": "k is undefined; kappa=R/pi R is the base field defined in this proof.",
+      "status": "confirmed_pending_canon_intake-source_emendation_applied_in_target"
+    },
+    {
+      "id": "SMOOTHING-024",
+      "line": 1206,
+      "new": "$K$ is separable",
+      "old": "$A$ is separable",
+      "rationale": "K is the fraction field of A and is the field extension used by generic smoothness.",
+      "status": "confirmed_pending_canon_intake-source_emendation_applied_in_target"
+    },
+    {
+      "id": "SMOOTHING-025",
+      "line": 1333,
+      "new": "kills $h_n$",
+      "old": "kills of $h_n$",
+      "rationale": "The preposition is spurious.",
+      "status": "confirmed_pending_canon_intake-target_prose_translated_idiomatically"
+    },
+    {
+      "id": "SMOOTHING-026",
+      "line": 1481,
+      "new": "$(a_k)^N + b_k$",
+      "old": "$a_kb_k$",
+      "rationale": "This is the numerator of 1+b'_k; a_k b_k maps to zero in C.",
+      "status": "confirmed_pending_canon_intake-source_emendation_applied_in_target"
+    },
+    {
+      "id": "SMOOTHING-027",
+      "line": 1491,
+      "new": "h_{k, \\ell}^j, g_{k, \\ell}",
+      "old": "h_{i, \\ell}^j, g_{i, \\ell}",
+      "rationale": "The construction and the following formula are indexed by k.",
+      "status": "confirmed_pending_canon_intake-source_emendation_applied_in_target"
+    },
+    {
+      "id": "SMOOTHING-028",
+      "line": 1976,
+      "new": "(f_1, \\ldots, f_c)",
+      "old": "(f_1, \\ldots, x_c)",
+      "rationale": "The quotient ideal is generated by the equations f_1 through f_c.",
+      "status": "confirmed_pending_canon_intake-source_emendation_applied_in_target"
+    },
+    {
+      "id": "SMOOTHING-029A",
+      "line": 2268,
+      "new": "C[z, z^{-1}, t_{ij}]",
+      "old": "C[y_1, \\ldots, y_r, z, z^{-1}]",
+      "rationale": "After z is inverted the relations zy_i force y_i=0 and the variables t_ij remain free.",
+      "status": "confirmed_pending_canon_intake-source_emendation_applied_in_target"
+    },
+    {
+      "id": "SMOOTHING-029B",
+      "line": 2269,
+      "new": "as a C-algebra. Choose $c \\in H_{C/R}$ whose image in $\\Lambda$ is not in $\\mathfrak q$. Then $B_{zc}$ is smooth over $R$. On the other hand,",
+      "old": "and hence is smooth. On the other hand,",
+      "rationale": "C need not be smooth over R, but h_C not contained in q supplies such c and then B_zc is smooth.",
+      "status": "confirmed_pending_canon_intake-source_emendation_applied_in_target"
+    },
+    {
+      "id": "SMOOTHING-029C",
+      "line": 2271,
+      "new": "$zc$ and $a_\\ell y_\\ell$",
+      "old": "$z$ and $a_\\ell y_\\ell$",
+      "rationale": "The verified smooth localization is B_zc, while B_{a_l y_l} is smooth by composition.",
+      "status": "confirmed_pending_canon_intake-source_emendation_applied_in_target"
+    },
+    {
+      "id": "SMOOTHING-030A",
+      "line": 2308,
+      "new": "positive integers.",
+      "old": "positive integers",
+      "rationale": "The hypothesis sentence lacks terminal punctuation.",
+      "status": "confirmed_pending_canon_intake-target_prose_translated_idiomatically"
+    },
+    {
+      "id": "SMOOTHING-030B",
+      "line": 2311,
+      "new": "Then there exist",
+      "old": "Then there exists an $n > 0$ and",
+      "rationale": "n is already a given hypothesis and the conclusion only chooses the pi_i.",
+      "status": "confirmed_pending_canon_intake-source_emendation_applied_in_target"
+    },
+    {
+      "id": "SMOOTHING-031",
+      "line": 2370,
+      "new": "H_{A/k}",
+      "old": "H_{A/R}",
+      "rationale": "There is no R-to-A map; the active base of A is k.",
+      "status": "confirmed_pending_canon_intake-source_emendation_applied_in_target"
+    },
+    {
+      "id": "SMOOTHING-032",
+      "line": 2374,
+      "new": "smooth over $R$ because it is",
+      "old": "smooth over $R$ it is",
+      "rationale": "The explanatory connective is missing.",
+      "status": "confirmed_pending_canon_intake-target_prose_translated_idiomatically"
+    },
+    {
+      "id": "SMOOTHING-033",
+      "line": 2379,
+      "new": "diagram below",
+      "old": "diagram above",
+      "rationale": "The diagram occurs at lines 2391-2395.",
+      "status": "confirmed_pending_canon_intake-target_prose_translated_idiomatically"
+    },
+    {
+      "id": "SMOOTHING-034",
+      "line": 2387,
+      "new": "$\\lambda_{ij} \\in \\Lambda$",
+      "old": "$\\pi_{ij} \\in \\Lambda$",
+      "rationale": "The displayed sum and the next map use lambda_ij; pi_ij is undefined.",
+      "status": "confirmed_pending_canon_intake-source_emendation_applied_in_target"
+    },
+    {
+      "id": "SMOOTHING-035",
+      "line": 2492,
+      "new": "F'[x_1, \\ldots, x_d]",
+      "old": "F[x_1, \\ldots, x_d]",
+      "rationale": "The induction step has introduced only F' at this point; F is chosen later in the proof, while A must map onto A' built from F'.",
+      "status": "confirmed_pending_canon_intake-source_emendation_applied_in_target"
+    },
+    {
+      "id": "SMOOTHING-005",
+      "line": 2693,
+      "new": "H_{A/k}",
+      "old": "H_{A/R}",
+      "rationale": "R is undefined in this situation; the argument consistently uses H_{A/k}.",
+      "status": "confirmed_pending_canon_intake-source_emendation_applied_in_target"
+    },
+    {
+      "id": "SMOOTHING-006",
+      "line": 2737,
+      "new": "t_1, \\ldots, t_d",
+      "old": "t_1, \\ldots, t_m",
+      "rationale": "The t variables and gamma_i are indexed by 1 through d; m indexes the y variables.",
+      "status": "confirmed_pending_canon_intake-source_emendation_applied_in_target"
+    },
+    {
+      "id": "SMOOTHING-007",
+      "line": 2873,
+      "new": "A_{a_j}",
+      "old": "A_{a_i}",
+      "rationale": "The a_j are the generators of H_{A/k}; i indexes the x variables.",
+      "status": "confirmed_pending_canon_intake-source_emendation_applied_in_target"
+    },
+    {
+      "id": "SMOOTHING-008",
+      "line": 2880,
+      "new": "x_d",
+      "old": "x_n",
+      "rationale": "The polynomial base has exactly x_1 through x_d.",
+      "status": "confirmed_pending_canon_intake-source_emendation_applied_in_target"
+    },
+    {
+      "id": "SMOOTHING-009A",
+      "line": 2893,
+      "new": "\\in \\mathfrak p",
+      "old": "\\in \\Lambda",
+      "rationale": "The step chooses parameters in the prime of the base polynomial ring.",
+      "status": "confirmed_pending_canon_intake-source_emendation_applied_in_target"
+    },
+    {
+      "id": "SMOOTHING-009B",
+      "line": 2894,
+      "new": "k[y_1, \\ldots, y_m]_\\mathfrak p",
+      "old": "\\Lambda_\\mathfrak q",
+      "rationale": "The regular parameter system belongs to the source local ring used in the following regular-sequence argument.",
+      "status": "confirmed_pending_canon_intake-source_emendation_applied_in_target"
+    },
+    {
+      "id": "SMOOTHING-010",
+      "line": 2958,
+      "new": "this is trivial",
+      "old": "this trivial",
+      "rationale": "The English copula is missing.",
+      "status": "confirmed_pending_canon_intake-target_prose_translated_idiomatically"
+    },
+    {
+      "id": "SMOOTHING-011",
+      "line": 2990,
+      "new": "we conclude",
+      "old": "and we conclude",
+      "rationale": "The participial setting clause attaches directly to the conclusion.",
+      "status": "confirmed_pending_canon_intake-target_prose_translated_idiomatically"
+    },
+    {
+      "id": "SMOOTHING-012",
+      "line": 2999,
+      "new": "x_d",
+      "old": "x_n",
+      "rationale": "B is a k[x_1,...,x_d]-algebra.",
+      "status": "confirmed_pending_canon_intake-source_emendation_applied_in_target"
+    },
+    {
+      "id": "SMOOTHING-013",
+      "line": 3000,
+      "new": "x_d",
+      "old": "x_n",
+      "rationale": "C is a k[x_1,...,x_d]-algebra.",
+      "status": "confirmed_pending_canon_intake-source_emendation_applied_in_target"
+    },
+    {
+      "id": "SMOOTHING-014",
+      "line": 3002,
+      "new": "x_d",
+      "old": "x_n",
+      "rationale": "The tensor product uses the same x_1 through x_d base as the displayed situation.",
+      "status": "confirmed_pending_canon_intake-source_emendation_applied_in_target"
+    },
+    {
+      "id": "SMOOTHING-015",
+      "line": 3054,
+      "new": "of (\\ref{item-fifth-resolve})",
+      "old": "of (\\ref{item-fifth-resolve}",
+      "rationale": "The parenthetical reference is not closed.",
+      "status": "confirmed_pending_canon_intake-target_prose_translated_idiomatically"
+    },
+    {
+      "id": "SMOOTHING-016",
+      "line": 3187,
+      "new": "d_l",
+      "old": "d_{n, l}",
+      "rationale": "Only d_1 through d_M were defined.",
+      "status": "confirmed_pending_canon_intake-source_emendation_applied_in_target"
+    },
+    {
+      "id": "SMOOTHING-017",
+      "line": 3191,
+      "new": "$g_j$ has a solution",
+      "old": "$g_j$ as a solution",
+      "rationale": "The assertion concerns existence of a solution.",
+      "status": "confirmed_pending_canon_intake-target_prose_translated_idiomatically"
+    },
+    {
+      "id": "SMOOTHING-018",
+      "line": 3266,
+      "new": "d_l",
+      "old": "d_{n, l}",
+      "rationale": "Only d_l is defined in the repeated construction.",
+      "status": "confirmed_pending_canon_intake-source_emendation_applied_in_target"
+    },
+    {
+      "id": "SMOOTHING-019",
+      "line": 3270,
+      "new": "$g_j$ has a solution",
+      "old": "$g_j$ as a solution",
+      "rationale": "The assertion concerns existence of a solution in R'.",
+      "status": "confirmed_pending_canon_intake-target_prose_translated_idiomatically"
+    },
+    {
+      "id": "SMOOTHING-020",
+      "line": 3425,
+      "new": "A \\to B",
+      "old": "A \\to P",
+      "rationale": "P is undefined; B is the middle algebra in the displayed factorization and in the following maps.",
+      "status": "confirmed_pending_canon_intake-source_emendation_applied_in_target"
+    }
+  ],
+  "schema": "stacks-fr-source-emendations-v1",
+  "support_ledgers": [
+    {
+      "bytes": 1563,
+      "operations": 4,
+      "path": "p03/evidence/SMOOTHING_A_SOURCE_EMENDATIONS.json",
+      "sha256": "701F022BB7F7A4DEB06441602638B03198731F5B81390EC145F0E89E0969A54A"
+    },
+    {
+      "bytes": 2890,
+      "operations": 10,
+      "path": "p03/evidence/SMOOTHING_B_SOURCE_EMENDATIONS.json",
+      "sha256": "CA05DCAFB424E656E2CF7F8A51630D18AA1B0F6211520FC891C088D496D2DDDF"
+    },
+    {
+      "bytes": 3084,
+      "operations": 10,
+      "path": "p03/evidence/SMOOTHING_C_SOURCE_EMENDATIONS.json",
+      "sha256": "709B0A7F40CD3F0F959902F910A7A398AA6FFFB5DEA58AECC2347583A2B808E9"
+    },
+    {
+      "bytes": 4770,
+      "operations": 18,
+      "path": "p03/evidence/SMOOTHING_D_SOURCE_EMENDATIONS.json",
+      "sha256": "B9EB64125343F4E45C8715CD813AA05981D7C7A2D37ADA983BFF5CA96E73AD98"
+    }
+  ]
+}
