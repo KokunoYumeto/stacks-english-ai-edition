@@ -19,12 +19,12 @@ machine-readable validation evidence.
 [Errata registry](ai-integrated/registry/overlays.json) ·
 [Validation](VALIDATION.md) ·
 [Current composition receipt](validation/composition-current.json) ·
-[Current fixed-point build: PASS](validation/stacks-errata-a04446e-r26-build-2026-08-28.json) ·
-[Current visual QA: PASS](validation/stacks-errata-a04446e-r26-visual-qa-2026-08-28.json) ·
-[Current reproducibility: PASS](validation/stacks-errata-a04446e-r26-reproducibility-2026-08-28.json) ·
-[Current published R26 content receipt: PASS](validation/stacks-errata-a04446e-r26-release-2026-08-28.json) ·
-[Current preservation release: R26](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r26-2026-08-28) ·
-[Current Zenodo version: R26](https://doi.org/10.5281/zenodo.22146844) ·
+[Current R27 fixed-point build: PASS](validation/stacks-errata-a04446e-r27-build-2026-08-28.json) ·
+[Current R27 visual QA: PASS](validation/stacks-errata-a04446e-r27-visual-qa-2026-08-28.json) ·
+[Current R27 reproducibility: PASS](validation/stacks-errata-a04446e-r27-reproducibility-2026-08-28.json) ·
+[Latest published content receipt: R26 PASS](validation/stacks-errata-a04446e-r26-release-2026-08-28.json) ·
+[Latest published preservation release: R26](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r26-2026-08-28) ·
+[Latest published Zenodo version: R26](https://doi.org/10.5281/zenodo.22146844) ·
 [R26 cross-host publication receipt: PASS](validation/ai-integrated-stacks-r26-publication-2026-08-28.json) ·
 [Historical R24 publication receipt: PASS](validation/ai-integrated-stacks-r24-publication-2026-08-28.json) ·
 [Historical R22/R23 publication receipt: PASS](validation/stacks-errata-a04446e-r22-r23-release-2026-08-27.json) ·
@@ -55,7 +55,7 @@ The pinned upstream baseline is
 | GAGA | Root chapter composed through r3; corpus review closed | All 126 units are classified and all 79 substantive units decided; the current unified `gaga.pdf` is 23 pages, while the sealed r3 dossier records its historical 22-page build | [r3 dossier](gaga_r3/STATUS.md) · [live chapter source](gaga.tex) |
 | FGA | Root additions composed and notation-normalized; corpus review closed | All 1,253 units and 1,612 term links are dispositioned; selected independently written additions are in the combined source; the fixed-point Moduli build is 83 pages | [Overview](fga/README.md) · [status](fga/status.md) |
 | EGA | Partial root-source composition; direct-source review active | Selected local additions are present in root TeX; the complete English discovery and diplomatic French editions remain separate read-only inputs; review reaches EGA I 6.3.10 and continues at 6.4.1 | [EGA dossier](ega/README.md) |
-| Errata and Verdier | Root-composed through R26 | Main contains 27 overlays / 846 stable IDs. Its R1–R26 Stacks errata subset contains 26 batches, 834 correction IDs, and 947 exact v2 operations; R26 contributes 25 IDs and 39 manifest-bound replacements in `smoothing.tex` | [Registry](ai-integrated/registry/overlays.json) · [Verdier release](validation/stacks-verdier-a04446e-1-2-13-r1-release-2026-08-26.json) · [errata evidence](ai-integrated/candidates/commons/stacks/errata/) |
+| Errata and Verdier | Root-composed through R27; validated pre-publication | The integrated tree contains 28 overlays / 860 stable IDs. Its R1–R27 Stacks errata subset contains 27 batches, 848 correction IDs, and 961 exact v2 operations; R27 contributes 14 IDs and 14 manifest-bound replacements in `modules.tex` | [Registry](ai-integrated/registry/overlays.json) · [Verdier release](validation/stacks-verdier-a04446e-1-2-13-r1-release-2026-08-26.json) · [errata evidence](ai-integrated/candidates/commons/stacks/errata/) |
 
 “Root-composed” means that the live top-level TeX tree changed and participates
 in the unified build. “Dossier-only” means that mappings, decisions, and
@@ -105,21 +105,28 @@ Run the fast repository-level integrity gate with:
 python tools/validate_unified_repository.py --pre-publication
 ```
 
-The current R26 build is bound to source
-`c90a50300dcec156e9ea5fe0c8802c8e36bde81e`, tree
-`651fff448fa41a4e7c38970eec169328002ac4f6`. It produced 24 readable PDFs
-(2,437 pages; 25,862,999 bytes), reached a global fixed point on sweep four,
+The current validated R27 build is bound to source
+`dc849731c9768048b993eb5a9df218118b817f40`, tree
+`b3462d130dedb3b3c0625cab0d7a2d406114e17f`. It produced 25 readable PDFs
+(2,492 pages; 26,609,586 bytes), reached a global fixed point on sweep four,
 and recorded zero fatal, missing-glyph, undefined-reference,
 undefined-citation, multiply-defined, rerun-required, or destination-warning
-diagnostics. All 37 pages of the affected `smoothing.pdf` were rendered and
-reviewed, including 15 correction-locus pages individually inspected at high
+diagnostics. All 55 pages of the affected `modules.pdf` were rendered and
+reviewed, including 10 correction-locus pages individually inspected at high
 resolution. A parallel rebuild in a second linked worktree used the same
-source, builder, environment, and sweep, and all 24 PDF identities were exactly
-equal. The 134,830-byte cumulative `smoothing.tex` postimage has SHA-256
-`85251479BB7D35D73CD5691C194D33B3ADC1BF245BCC248643D969DBBA0E7928`.
+source, builder, environment, and sweep, and all 25 PDF identities were exactly
+equal. The 211,777-byte cumulative `modules.tex` postimage has SHA-256
+`BA34DCC89DCEE1BD5F0B9D3C986B18EE9618F723C10E7C7FD3DBD80E9E0B2300`.
 
-The validated R26 state is public as a downloadable source, PDF, and evidence
-release on
+R27 is validated locally and is in the pre-publication stage. It is not yet
+described as a GitHub release or Zenodo version. Its registry cutoff is
+`8c0539a6a7aa001cc6152daee92d5c7a49bf6a93`, tree
+`110a3006fcbb27b94c4170639aab56db507f9a89`; its manifest-bound composition is
+commit `5a42b7d2a04c4d08be7861ec91306d8be05d631e`, tree
+`ecbad57ee36b4fb290c80cb4d1f83eab50a47460`.
+
+R26 remains the latest published state, available as a downloadable source,
+PDF, and evidence release on
 [GitHub](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r26-2026-08-28)
 and [Zenodo](https://doi.org/10.5281/zenodo.22146844), under concept DOI
 [`10.5281/zenodo.22135180`](https://doi.org/10.5281/zenodo.22135180). The tag is

@@ -11,10 +11,10 @@ French diplomatic editions remain separate read-only inputs.
 
 ## Current maintenance baseline
 
-The current validated composition contains **27 overlays / 846 stable IDs** at
-R26 admission cutoff `a7c4a3c52b9a32e96e0f4b98f9579369026d9e1b`, tree
-`93af84d65d7b250fe0f4d660782ccf330b9e4743`. Its Stacks errata component is
-R1–R26: 26 batches, 834 correction IDs, and 947 exact v2 operations. The 22nd
+The current validated composition contains **28 overlays / 860 stable IDs** at
+R27 admission cutoff `8c0539a6a7aa001cc6152daee92d5c7a49bf6a93`, tree
+`110a3006fcbb27b94c4170639aab56db507f9a89`. Its Stacks errata component is
+R1–R27: 27 batches, 848 correction IDs, and 961 exact v2 operations. The 22nd
 overlay, `stacks-verdier-a04446e-1-2-13-r1`, remains a separately admitted,
 independently written historical-source contribution with 12 non-official
 stable units. It inserts one manifest-bound lemma into cumulative `derived.tex`;
@@ -23,24 +23,26 @@ no official Stacks tag or upstream endorsement is claimed.
 R22 and R23 add 93 correction IDs and 106 manifest-bound operations affecting
 only `more-algebra.tex`. R24 adds 38 IDs and 57 operations affecting only
 `spaces-duality.tex`; R25 adds 131 IDs and 154 operations affecting only
-`artin.tex`; R26 adds 25 IDs and 39 operations affecting only `smoothing.tex`.
-All are composed in registry order without replacing cumulative source
-wholesale. The R26 source composition is commit
-`47c6b78e476e5644f5a7d0ca2ce4816b144a2411`, tree
-`cbad56973a9e594743b596a5fd0fa291b490ae26`. The exact authority, registry,
+`artin.tex`; R26 adds 25 IDs and 39 operations affecting only `smoothing.tex`;
+R27 adds 14 IDs and 14 operations affecting only `modules.tex`. All are
+composed in registry order without replacing cumulative source wholesale. The
+R27 source composition is commit
+`5a42b7d2a04c4d08be7861ec91306d8be05d631e`, tree
+`ecbad57ee36b4fb290c80cb4d1f83eab50a47460`. The exact authority, registry,
 operation, source, and preservation identities are recorded in the
 [current composition receipt](validation/composition-current.json).
 
-The current R26 source passed two linked-worktree fixed-point builds at source
-`c90a50300dcec156e9ea5fe0c8802c8e36bde81e`, tree
-`651fff448fa41a4e7c38970eec169328002ac4f6`: 24 readable PDFs, 2,437 pages,
-25,862,999 PDF bytes, global fixed point on sweep four, and zero fatal or listed
-serious diagnostics. All 37 affected `smoothing.pdf` pages passed review,
-including 15 correction-locus pages at high resolution. All 24 PDF identities match
-exactly between the two builds. Earlier R24, R22/R23, Verdier, and R21 receipts
+The current R27 source passed two linked-worktree fixed-point builds at source
+`dc849731c9768048b993eb5a9df218118b817f40`, tree
+`b3462d130dedb3b3c0625cab0d7a2d406114e17f`: 25 readable PDFs, 2,492 pages,
+26,609,586 PDF bytes, global fixed point on sweep four, and zero fatal or listed
+serious diagnostics. All 55 affected `modules.pdf` pages passed review,
+including 10 correction-locus pages at high resolution. All 25 PDF identities
+match exactly between the two builds. Earlier R26, R24, R22/R23, Verdier, and R21 receipts
 remain preserved as historical evidence for their exact scopes.
 
-The current R26 preservation release is public at tag commit
+R27 is validated and pre-publication; no R27 GitHub release or Zenodo version
+is claimed yet. R26 remains the latest published preservation release at tag commit
 `7720e2fd3080c39b02275e34c67421ea9cff31d8`, tree
 `cc3b7a21d57d07d70db1323487d125a2f69f98c8`; exact-head CI passes. Its
 six-asset preservation package is byte-identical on GitHub and Zenodo version
@@ -57,13 +59,16 @@ readback of 138 checked files totaling 25,024,008 bytes pass.
 
 ## Registry-order maintenance state
 
-R26 is admitted and composed into the generated source at
-`47c6b78e476e5644f5a7d0ca2ce4816b144a2411`. Its 25 stable units and 39 exact
-operations affect only `smoothing.tex`. The adjudication accepted 31 producer
-identities, aliased `SMOOTHING-002/003/004` to existing R1 corrections,
-rejected `SMOOTHING-010`, and merged four repeated semantic groups. The rejected
-R23 producer `MORE-ALGEBRA-J-006` likewise remains excluded from the integrated
-source.
+R27 is admitted and composed into the generated source at
+`5a42b7d2a04c4d08be7861ec91306d8be05d631e`. Its 14 stable units and 14 exact
+operations affect only cumulative FAC-expanded `modules.tex`. The lease,
+candidate, and admission chain is bound as
+`1f05772d6f46ab851cdecdf53b70c11ea698cb14` →
+`77fcc9fc2341e72b077224399743f1062e73b228` →
+`8c0539a6a7aa001cc6152daee92d5c7a49bf6a93`; the exact manifest SHA-256 is
+`A4D03B8B47A1005B6DAC8B0EE4B9D0F4361E065E51D324B9634F38B51053DE3C`.
+The rejected R26 producer `SMOOTHING-010` and R23 producer
+`MORE-ALGEBRA-J-006` remain excluded from the integrated source.
 
 ## Recommended order
 

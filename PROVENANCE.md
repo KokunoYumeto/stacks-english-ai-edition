@@ -105,6 +105,16 @@ The histories were combined without flattening either input:
    `smoothing.tex`. The resulting source commit is
    `47c6b78e476e5644f5a7d0ca2ce4816b144a2411`, tree
    `cbad56973a9e594743b596a5fd0fa291b490ae26`.
+10. R27 used an append-only leased-candidate topology after the R26 cutoff:
+    lease `1f05772d6f46ab851cdecdf53b70c11ea698cb14`, candidate
+    `77fcc9fc2341e72b077224399743f1062e73b228`, and admission
+    `8c0539a6a7aa001cc6152daee92d5c7a49bf6a93`, tree
+    `110a3006fcbb27b94c4170639aab56db507f9a89`. The admitted registry was
+    imported linearly at `f3bfc1b987ac9defc1b7811650bac0ec84a01373`, then
+    its 14 manifest-bound operations were replayed onto cumulative FAC-expanded
+    `modules.tex`. The resulting source commit is
+    `5a42b7d2a04c4d08be7861ec91306d8be05d631e`, tree
+    `ecbad57ee36b4fb290c80cb4d1f83eab50a47460`.
 
 The mathematical source therefore stays at the repository root while the
 complete evidence and registry system remains browsable under
@@ -144,16 +154,17 @@ high-resolution correction-locus pages. These receipts remain authoritative
 for that immutable R22/R23 tree and are not build or publication evidence for
 the later R24 source composition.
 
-The current R26 fixed-point build is bound to source
-`c90a50300dcec156e9ea5fe0c8802c8e36bde81e`, tree
-`651fff448fa41a4e7c38970eec169328002ac4f6`. It preserves every earlier
-composed source identity while advancing `smoothing.tex` through 25 new
-correction IDs and 39 operations. Two independent linked-worktree builds
-produced exactly matching identities for all 24 PDFs: 2,437 pages, 25,862,999
-bytes, and a global fixed point on sweep four. Visual QA covers all 37 pages of
-`smoothing.pdf`, including 15 correction-locus pages at high resolution.
+The current validated R27 fixed-point build is bound to source
+`dc849731c9768048b993eb5a9df218118b817f40`, tree
+`b3462d130dedb3b3c0625cab0d7a2d406114e17f`. It preserves every earlier
+composed source identity while advancing `modules.tex` through 14 new
+correction IDs and 14 operations. Two independent linked-worktree builds
+produced exactly matching identities for all 25 PDFs: 2,492 pages, 26,609,586
+bytes, and a global fixed point on sweep four. Visual QA covers all 55 pages of
+`modules.pdf`, including 10 correction-locus pages at high resolution. R27 is
+validated pre-publication; this paragraph does not claim a public R27 release.
 
-The R26 preservation tag is public at commit
+R26 remains the latest published preservation tag at commit
 `7720e2fd3080c39b02275e34c67421ea9cff31d8`, tree
 `cc3b7a21d57d07d70db1323487d125a2f69f98c8`, after a successful exact-head
 workflow. The source, 24 PDFs, and validation evidence are preserved as six
@@ -175,7 +186,8 @@ branch. Their presence is provenance, not a claim that they remain competing
 editions. The published Verdier content release at
 `4947e4a6d22971ea793e4b4bc2b09d8ab8cc04d0` remains historical evidence for
 the 22-overlay / 559-ID cutoff at `60f1d97e`. The current validated source
-composition advances the repository state to 27 overlays and 846 stable IDs at
-R26 cutoff `a7c4a3c5`; R22 and R23 affect only `more-algebra.tex`, R24 affects
-only `spaces-duality.tex`, R25 affects only `artin.tex`, and R26 affects only
-`smoothing.tex`.
+composition advances the validated repository state to 28 overlays and 860
+stable IDs at R27 cutoff `8c0539a6`; R22 and R23 affect only
+`more-algebra.tex`, R24 affects only `spaces-duality.tex`, R25 affects only
+`artin.tex`, R26 affects only `smoothing.tex`, and R27 affects only
+`modules.tex`.

@@ -20,16 +20,17 @@ The gate verifies:
 
 - ancestry of the pinned upstream, source-union, EGA, and protected linear
   registry/source history;
-- 27 admitted overlays containing exactly 846 stable IDs at R26 registry cutoff
-  `a7c4a3c52b9a32e96e0f4b98f9579369026d9e1b`, tree
-  `93af84d65d7b250fe0f4d660782ccf330b9e4743`;
+- 28 admitted overlays containing exactly 860 stable IDs at R27 registry cutoff
+  `8c0539a6a7aa001cc6152daee92d5c7a49bf6a93`, tree
+  `110a3006fcbb27b94c4170639aab56db507f9a89`;
 - the final immutable Verdier candidate, its 12 stable units, 27 manifest
   references, independent replay, rights boundary, and exact registered
   insertion into `derived.tex`;
-- the R1–R26 Stacks errata sequence: 26 batches, 834 correction IDs, and all
-  947 v2 operations, including the ordered R22/R23 replay, the 57-operation R24
+- the R1–R27 Stacks errata sequence: 27 batches, 848 correction IDs, and all
+  961 v2 operations, including the ordered R22/R23 replay, the 57-operation R24
   replay in `spaces-duality.tex`, the 154-operation R25 replay in `artin.tex`,
-  and the 39-operation R26 replay in `smoothing.tex`;
+  the 39-operation R26 replay in `smoothing.tex`, and the 14-operation R27
+  replay in `modules.tex`;
 - preservation of the historical R1–R21 snapshot at prior cutoff
   `13ca6aaaca454f5930c4885c93f427e30cf21959` and of the separately composed
   Verdier source;
@@ -45,49 +46,53 @@ The gate verifies:
 The same gate runs in
 [`validate.yml`](.github/workflows/validate.yml) with full Git history.
 
-The current R26 build result is recorded at
-[`validation/stacks-errata-a04446e-r26-build-2026-08-28.json`](validation/stacks-errata-a04446e-r26-build-2026-08-28.json).
-All 24 required chapters (2,437 pages; 25,862,999 PDF bytes) compiled
+The current R27 build result is recorded at
+[`validation/stacks-errata-a04446e-r27-build-2026-08-28.json`](validation/stacks-errata-a04446e-r27-build-2026-08-28.json).
+All 25 required chapters (2,492 pages; 26,609,586 PDF bytes) compiled
 successfully, were readable by `pdfinfo`, and reached a global PDF fixed point
 on sweep four. The build is bound to source commit
-`c90a50300dcec156e9ea5fe0c8802c8e36bde81e`, tree
-`651fff448fa41a4e7c38970eec169328002ac4f6`. Aggregate diagnostics contain
+`dc849731c9768048b993eb5a9df218118b817f40`, tree
+`b3462d130dedb3b3c0625cab0d7a2d406114e17f`. Aggregate diagnostics contain
 zero fatal, missing-glyph, undefined-reference, undefined-citation,
 multiply-defined, rerun-required, or destination-warning markers.
 
-Visual QA rendered and reviewed all 37 pages of the affected `smoothing.pdf` at
-96 DPI and inspected all 15 correction-locus pages individually at 180 DPI.
+Visual QA rendered and reviewed all 55 pages of the affected `modules.pdf` at
+96 DPI and inspected all 10 correction-locus pages individually at 180 DPI.
 The current
-[visual receipt](validation/stacks-errata-a04446e-r26-visual-qa-2026-08-28.json)
+[visual receipt](validation/stacks-errata-a04446e-r27-visual-qa-2026-08-28.json)
 records zero clipped, overlapping, blank, corrupt, missing-glyph, or
 broken-diagram defects. A second build ran independently in a parallel linked
 worktree. Both runs use the same source, builder, environment, and fixed-point
-sweep, and all 24 `{stem, pages, bytes, sha256}` tuples are exactly equal. See
-the [reproducibility summary](validation/stacks-errata-a04446e-r26-reproducibility-2026-08-28.json)
-and [second full receipt](validation/stacks-errata-a04446e-r26-reproducibility-second-2026-08-28.json).
+sweep, and all 25 `{stem, pages, bytes, sha256}` tuples are exactly equal. See
+the [reproducibility summary](validation/stacks-errata-a04446e-r27-reproducibility-2026-08-28.json)
+and [second full receipt](validation/stacks-errata-a04446e-r27-reproducibility-second-2026-08-28.json).
 
 The [source composition receipt](validation/composition-current.json) records
-R26 cutoff `a7c4a3c52b9a32e96e0f4b98f9579369026d9e1b`, tree
-`93af84d65d7b250fe0f4d660782ccf330b9e4743`, candidate commit
-`d1f8c1b4654e8d63ea6380dfb5d2e256a6982121`, linear registry import
-`ca00b6023be95e0e928d5c0380e24011756bb0ef`, and exact composition source
-`47c6b78e476e5644f5a7d0ca2ce4816b144a2411`, tree
-`cbad56973a9e594743b596a5fd0fa291b490ae26`. It binds 947 cumulative v2
-operations, including the 39 new R26 operations, to the 134,830-byte
-`smoothing.tex` postimage with SHA-256
-`85251479BB7D35D73CD5691C194D33B3ADC1BF245BCC248643D969DBBA0E7928`.
+R27 cutoff `8c0539a6a7aa001cc6152daee92d5c7a49bf6a93`, tree
+`110a3006fcbb27b94c4170639aab56db507f9a89`, leased intake commit
+`1f05772d6f46ab851cdecdf53b70c11ea698cb14`, candidate commit
+`77fcc9fc2341e72b077224399743f1062e73b228`, linear registry import
+`f3bfc1b987ac9defc1b7811650bac0ec84a01373`, and exact composition source
+`5a42b7d2a04c4d08be7861ec91306d8be05d631e`, tree
+`ecbad57ee36b4fb290c80cb4d1f83eab50a47460`. It binds 961 cumulative v2
+operations, including the 14 new R27 operations, to the 211,777-byte
+`modules.tex` postimage with SHA-256
+`BA34DCC89DCEE1BD5F0B9D3C986B18EE9618F723C10E7C7FD3DBD80E9E0B2300`.
 Historical R24, R22/R23, Verdier, and R21 receipts remain preserved and
 authoritative for their immutable source snapshots; they are not rebound to the
-R26 tree.
+R27 tree.
 
-R26 adjudication accepted 31 producer identities, resolved
-`SMOOTHING-002/003/004` as aliases of existing R1 corrections, rejected
-`SMOOTHING-010`, and merged four repeated semantic groups before materializing
-25 new stable units. The candidate tree is
-`aca634a2dc857f97f6deb52cf4da5ba0792d6d23` with candidate subtree
-`cc94b817fabf54d21c4914e5b7ebf8f168bac807`.
+R27 admitted 14 stable units with 14 exact operations. Its manifest SHA-256 is
+`A4D03B8B47A1005B6DAC8B0EE4B9D0F4361E065E51D324B9634F38B51053DE3C`,
+payload SHA-256 is
+`59C250D528258DCB8B2EB88234CA88AB48C1F5AB073EEA4618703F96BED4CE6B`,
+and review-receipt SHA-256 is
+`8D62F79E9E6CB44A0FD4E69B9D7D64CF41DDDD77DB0D2660436906078AB68C56`.
+The candidate tree is `6183d66d4f907b7b83f1b69dc799dcfe92a0f4d0` with candidate
+subtree `fe8a24fb2c4e0279a22d9839364fb3ffd12367d8`.
 
-The [current R26 release receipt](validation/stacks-errata-a04446e-r26-release-2026-08-28.json)
+R27 is validated pre-publication and has no claimed R27 GitHub release or Zenodo
+version at this stage. The [latest published R26 release receipt](validation/stacks-errata-a04446e-r26-release-2026-08-28.json)
 binds the validated content composition and build evidence. The public release
 tag resolves to commit `7720e2fd3080c39b02275e34c67421ea9cff31d8`, tree
 `cc3b7a21d57d07d70db1323487d125a2f69f98c8`, whose exact-head workflow passed.

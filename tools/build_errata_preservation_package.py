@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build a deterministic, path-sanitized errata preservation package.
 
-The release directory follows the six-asset R25 layout: README.md,
+The release directory follows the six-asset preservation layout: README.md,
 RELEASE.json, SHA256SUMS.txt, and deterministic source, PDF, and validation
 ZIP archives.  The source ZIP is a commit-bound projection of ``git archive``:
 the live local account token is replaced in textual members, every replacement
@@ -1433,7 +1433,7 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         "--build-receipt",
         type=Path,
         required=True,
-        help="fixed-point build receipt describing the 24 PDF identities",
+        help=f"fixed-point build receipt describing the {EXPECTED_PDF_COUNT} PDF identities",
     )
     parser.add_argument(
         "--validation-receipt",
@@ -1455,7 +1455,7 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         "--build-output-root",
         type=Path,
         required=True,
-        help="directory whose top level contains exactly the 24 receipt-bound PDFs",
+        help=f"directory whose top level contains exactly the {EXPECTED_PDF_COUNT} receipt-bound PDFs",
     )
     parser.add_argument(
         "--staging-dir",
