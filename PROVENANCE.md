@@ -83,16 +83,15 @@ The histories were combined without flattening either input:
    manifest-bound operations onto cumulative `more-algebra.tex`. The resulting
    source commit is `3a1100a79abc76315592711c9f2c86ad21b5f6a9`, tree
    `28980ba358cadddecc67d5013c7a9b624fee6305`.
-8. Registry content through the R24 admission cutoff
-   `6df734ecb3bef8f35770819d17a8d3e267b8e07a`, tree
-   `49b8e57e91f0bf04669b2ee93e3586cfb6919088`, together with the successor
-   R25 lease pointer, was imported at
-   `0e5c4596d85072fecae6e061bb54bed6979d66c3`. R24 was then composed by
-   replaying its 57 manifest-bound operations onto cumulative
-   `spaces-duality.tex`. The resulting source commit is
-   `10c1c62f371921cdafbaa5e89f438a821a013621`, tree
-   `6ec98b8ee6919070a24130877d4eeb9e1a0e874b`. R25 remains lease-only and is
-   neither admitted nor composed.
+8. Registry content through the R25 admission cutoff
+   `001f36d41504aecfa77201a04fedff16d37b00f0`, tree
+   `f8e3a8ea8d7e95190b3cb4d21eb701a6709f90c7`, together with the successor
+   R26 lease pointer, was imported at
+   `fb12027d697fce54f2f0d5fd1454f1e5069dd937`. R25 was then composed by
+   replaying its 154 manifest-bound operations onto cumulative `artin.tex`.
+   The resulting source commit is
+   `63dfd5f1499bea1916f64256056a5a37bcfb8f9a`, tree
+   `7ab863452c932dd5ef230f65abdfa5bdcd6b5771`.
 
 The mathematical source therefore stays at the repository root while the
 complete evidence and registry system remains browsable under
@@ -132,14 +131,14 @@ high-resolution correction-locus pages. These receipts remain authoritative
 for that immutable R22/R23 tree and are not build or publication evidence for
 the later R24 source composition.
 
-The current R24 fixed-point build is bound to source
-`c3bc402b03dea3c5ac92c9e226645b5895a78887`, tree
-`626b67a2c32f4b2bc1b8ad7b4586cdb036b25a21`. It preserves every earlier
-composed source identity while advancing `spaces-duality.tex` through 38 new
-correction IDs and 57 operations. Two independent linked-worktree builds
-produced exactly matching identities for all 23 PDFs: 2,368 pages, 24,949,361
-bytes, and a global fixed point on sweep four. Visual QA covers all 25 pages of
-`spaces-duality.pdf` at high resolution.
+The current R25 fixed-point build is bound to source
+`a13d609ba9b146eac0a72f593bcf8aff5c5a6a33`, tree
+`fbf8d6341b22298d05fdc1f72d547907bc164077`. It preserves every earlier
+composed source identity while advancing `artin.tex` through 131 new correction
+IDs and 154 operations. Two independent linked-worktree builds produced
+exactly matching identities for all 24 PDFs: 2,437 pages, 25,862,634 bytes, and
+a global fixed point on sweep four. Visual QA covers all 69 pages of
+`artin.pdf`, including all 63 correction-locus pages at high resolution.
 
 The R24 content head is public at
 `50438757de89ec6e67385084d4a2d578707f5a37`, tree
@@ -156,9 +155,8 @@ branch. Their presence is provenance, not a claim that they remain competing
 editions. The published Verdier content release at
 `4947e4a6d22971ea793e4b4bc2b09d8ab8cc04d0` remains historical evidence for
 the 22-overlay / 559-ID cutoff at `60f1d97e`. The current validated source
-composition advances the repository state to 25 overlays and 690 stable IDs at
-R24 cutoff `6df734ec`; R22 and R23 affect only `more-algebra.tex`, while R24
-affects only `spaces-duality.tex`. Successor head
-`53c517215ef542cfc987e2445a07bb23c7b120fb` only materializes the R25 lease;
-R25 is not admitted or composed. The French `MORE-ALGEBRA-L-001..029` and
-`SMOOTHING-001..035` packets remain unadmitted.
+composition advances the repository state to 26 overlays and 821 stable IDs at
+R25 cutoff `001f36d4`; R22 and R23 affect only `more-algebra.tex`, R24 affects
+only `spaces-duality.tex`, and R25 affects only `artin.tex`. The French
+`MORE-ALGEBRA-L-001..029` and `SMOOTHING-001..035` packets remain separate
+intake evidence and are not part of this fixed point.

@@ -91,7 +91,7 @@ operations. R22 and R23 contribute 93 IDs and 106 operations affecting only
 These receipts remain authoritative for their immutable R22/R23 source tree;
 they are not build or publication evidence for the later R24 composition.
 
-## Current R24 composition and validation receipts
+## Historical R24 composition and validation receipts
 
 The current validated source composition advances the registry to **25
 overlays / 690 stable IDs** at R24 admission cutoff
@@ -133,7 +133,36 @@ Zenodo. It records concept DOI `10.5281/zenodo.22135180`, version DOI
 `10.5281/zenodo.22135181`, exact public downloads, and byte/SHA-256 equality
 across both hosts.
 
-Successor registry head `53c517215ef542cfc987e2445a07bb23c7b120fb`
-only materializes the active R25 lease. R25 is neither admitted nor composed.
+## Current R25 composition and validation receipts
+
+The current validated source composition advances the registry to **26
+overlays / 821 stable IDs** at R25 admission cutoff
+`001f36d41504aecfa77201a04fedff16d37b00f0`, tree
+`f8e3a8ea8d7e95190b3cb4d21eb701a6709f90c7`. The Stacks errata subset is
+R1–R25: 25 batches, 809 correction IDs, and 908 exact v2 operations. R25 adds
+131 IDs and 154 manifest-bound operations affecting only `artin.tex`.
+
+[`composition-current.json`](composition-current.json) binds that cutoff,
+the imported candidate and registry bytes, exact operation replay, preserved
+earlier source identities, and source commit
+`63dfd5f1499bea1916f64256056a5a37bcfb8f9a`, tree
+`7ab863452c932dd5ef230f65abdfa5bdcd6b5771`.
+
+The current evidence is recorded in:
+
+- [`stacks-errata-a04446e-r25-build-2026-08-28.json`](stacks-errata-a04446e-r25-build-2026-08-28.json)
+  — source `a13d609ba9b146eac0a72f593bcf8aff5c5a6a33`, tree
+  `fbf8d6341b22298d05fdc1f72d547907bc164077`, 24 PDFs, 2,437 pages,
+  25,862,634 bytes, fixed point on sweep four, and zero listed serious
+  diagnostics;
+- [`stacks-errata-a04446e-r25-visual-qa-2026-08-28.json`](stacks-errata-a04446e-r25-visual-qa-2026-08-28.json)
+  — all 69 pages of `artin.pdf` reviewed and all 63 correction-locus pages
+  inspected at high resolution with zero recorded rendering defects; and
+- [`stacks-errata-a04446e-r25-reproducibility-2026-08-28.json`](stacks-errata-a04446e-r25-reproducibility-2026-08-28.json)
+  together with the [second full receipt](stacks-errata-a04446e-r25-reproducibility-second-2026-08-28.json)
+  — exact equality of all 24 artifact identities across two independent linked
+  worktree builds.
+
 The French `MORE-ALGEBRA-L-001..029` and `SMOOTHING-001..035` packets remain
-unadmitted. No later intake is treated as part of the current composition.
+separate intake evidence. The active EGA I–IV integration program remains
+incomplete and resumes at EGA I §6.4.1.

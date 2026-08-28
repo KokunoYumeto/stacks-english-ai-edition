@@ -19,13 +19,13 @@ machine-readable validation evidence.
 [Errata registry](ai-integrated/registry/overlays.json) ·
 [Validation](VALIDATION.md) ·
 [Current composition receipt](validation/composition-current.json) ·
-[Current fixed-point build: PASS](validation/stacks-errata-a04446e-r24-build-2026-08-27.json) ·
-[Current visual QA: PASS](validation/stacks-errata-a04446e-r24-visual-qa-2026-08-27.json) ·
-[Current reproducibility: PASS](validation/stacks-errata-a04446e-r24-reproducibility-2026-08-27.json) ·
-[Current R24 publication receipt: PASS](validation/stacks-errata-a04446e-r24-release-2026-08-27.json) ·
-[Current preservation release](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r24-2026-08-28) ·
-[Zenodo DOI 10.5281/zenodo.22135181](https://doi.org/10.5281/zenodo.22135181) ·
-[Cross-host publication receipt: PASS](validation/ai-integrated-stacks-r24-publication-2026-08-28.json) ·
+[Current fixed-point build: PASS](validation/stacks-errata-a04446e-r25-build-2026-08-28.json) ·
+[Current visual QA: PASS](validation/stacks-errata-a04446e-r25-visual-qa-2026-08-28.json) ·
+[Current reproducibility: PASS](validation/stacks-errata-a04446e-r25-reproducibility-2026-08-28.json) ·
+[Latest published R24 content receipt: PASS](validation/stacks-errata-a04446e-r24-release-2026-08-27.json) ·
+[Latest preservation release: R24](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r24-2026-08-28) ·
+[Latest Zenodo version: R24](https://doi.org/10.5281/zenodo.22135181) ·
+[R24 cross-host publication receipt: PASS](validation/ai-integrated-stacks-r24-publication-2026-08-28.json) ·
 [Historical R22/R23 publication receipt: PASS](validation/stacks-errata-a04446e-r22-r23-release-2026-08-27.json) ·
 [Historical Verdier publication receipt: PASS](validation/stacks-verdier-a04446e-1-2-13-r1-release-2026-08-26.json) ·
 [Historical R21 publication receipt: PASS](validation/errata-r18-r19-release-2026-08-25.json) ·
@@ -54,7 +54,7 @@ The pinned upstream baseline is
 | GAGA | Root chapter composed through r3; corpus review closed | All 126 units are classified and all 79 substantive units decided; the current unified `gaga.pdf` is 23 pages, while the sealed r3 dossier records its historical 22-page build | [r3 dossier](gaga_r3/STATUS.md) · [live chapter source](gaga.tex) |
 | FGA | Root additions composed and notation-normalized; corpus review closed | All 1,253 units and 1,612 term links are dispositioned; selected independently written additions are in the combined source; the fixed-point Moduli build is 83 pages | [Overview](fga/README.md) · [status](fga/status.md) |
 | EGA | Partial root-source composition; direct-source review active | Selected local additions are present in root TeX; the complete English discovery and diplomatic French editions remain separate read-only inputs; review reaches EGA I 6.3.10 and continues at 6.4.1 | [EGA dossier](ega/README.md) |
-| Errata and Verdier | Root-composed through R24; R25 admitted externally for composition | Main contains 25 overlays / 690 stable IDs through R24. Public registry head `001f36d` additionally admits R25 with 131 IDs and 154 exact operations on `artin.tex`; those bytes are not claimed as composed until the next fixed-point gate | [Registry](ai-integrated/registry/overlays.json) · [Verdier release](validation/stacks-verdier-a04446e-1-2-13-r1-release-2026-08-26.json) · [errata evidence](ai-integrated/candidates/commons/stacks/errata/) |
+| Errata and Verdier | Root-composed through R25 | Main contains 26 overlays / 821 stable IDs. Its R1–R25 Stacks errata subset contains 25 batches, 809 correction IDs, and 908 exact v2 operations; R25 contributes 131 IDs and 154 manifest-bound replacements in `artin.tex` | [Registry](ai-integrated/registry/overlays.json) · [Verdier release](validation/stacks-verdier-a04446e-1-2-13-r1-release-2026-08-26.json) · [errata evidence](ai-integrated/candidates/commons/stacks/errata/) |
 
 “Root-composed” means that the live top-level TeX tree changed and participates
 in the unified build. “Dossier-only” means that mappings, decisions, and
@@ -104,34 +104,36 @@ Run the fast repository-level integrity gate with:
 python tools/validate_unified_repository.py --pre-publication
 ```
 
-The current R24 build is bound to source
-`c3bc402b03dea3c5ac92c9e226645b5895a78887`, tree
-`626b67a2c32f4b2bc1b8ad7b4586cdb036b25a21`. It produced 23 readable PDFs
-(2,368 pages; 24,949,361 bytes), reached a global fixed point on sweep four,
+The current R25 build is bound to source
+`a13d609ba9b146eac0a72f593bcf8aff5c5a6a33`, tree
+`fbf8d6341b22298d05fdc1f72d547907bc164077`. It produced 24 readable PDFs
+(2,437 pages; 25,862,634 bytes), reached a global fixed point on sweep four,
 and recorded zero fatal, missing-glyph, undefined-reference,
 undefined-citation, multiply-defined, rerun-required, or destination-warning
-diagnostics. All 25 pages of the affected `spaces-duality.pdf` were rendered
-and inspected individually at high resolution. A
-parallel rebuild in a second linked worktree used the same source, builder,
-environment, and sweep, and all 23 PDF identities were exactly equal.
+diagnostics. All 69 pages of the affected `artin.pdf` were rendered and
+reviewed, including 63 correction-locus pages individually inspected at high
+resolution. A parallel rebuild in a second linked worktree used the same
+source, builder, environment, and sweep, and all 24 PDF identities were exactly
+equal.
 
-The R24 content release is public at
+The preceding R24 content release is public at
 `50438757de89ec6e67385084d4a2d578707f5a37`, tree
 `d1d4b9385d0b67fb2e70220bad8c4fe9c2a2fcd5`. Its exact-head content workflow
 passed, and anonymous HTTPS readback matched all 86 checked files (5,155,955
 bytes), including both candidate PDFs, by filename, byte count, SHA-256, and
 Git blob.
 
-The same validated R24 state is preserved as a downloadable source, PDF, and
+That preceding validated R24 state is preserved as a downloadable source, PDF, and
 evidence release on
 [GitHub](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r24-2026-08-28)
 and [Zenodo](https://doi.org/10.5281/zenodo.22135181), under concept DOI
 [`10.5281/zenodo.22135180`](https://doi.org/10.5281/zenodo.22135180). Anonymous
 readback matched all six assets across both hosts by filename, byte count, and
 SHA-256. The source archive is bound to public commit `9fb327dd32e18f612ece06e213299f869e9fb11d`;
-the EGA program remains explicitly partial and continues at EGA I 6.4.1.
-Registry R25 is admitted but is not represented by this R24 preservation
-release until its manifest-bound `artin.tex` composition passes the full gate.
+the EGA program remains explicitly partial and continues at EGA I §6.4.1.
+R25 has passed local composition, fixed-point, reproducibility, and visual
+gates; the R24 links above remain the latest public preservation checkpoint
+until the R25 public transaction and anonymous readback complete.
 
 The preceding R22/R23 content release remains public at
 `3c2b49fe0d20519de4ab06951ac2cb5151b68782`, tree

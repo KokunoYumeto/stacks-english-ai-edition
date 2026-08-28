@@ -1,0 +1,161 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-visual-qa/v1",
+  "status": "PASS",
+  "created_utc": "2026-08-28T11:08:41Z",
+  "source": {
+    "commit": "a13d609ba9b146eac0a72f593bcf8aff5c5a6a33",
+    "tree": "fbf8d6341b22298d05fdc1f72d547907bc164077"
+  },
+  "build_receipt": {
+    "path": "validation/stacks-errata-a04446e-r25-build-2026-08-28.json",
+    "bytes": 22470,
+    "sha256": "B27538CB85CA2D885AF3141866C55F27EE6523F1EF5F0A6DDE72C2FA7B95B36B",
+    "status": "PASS",
+    "global_fixed_point_sweep": 4
+  },
+  "scope": {
+    "affected_chapters": [
+      "artin"
+    ],
+    "full_page_render_count": 69,
+    "full_page_contact_sheet_review_count": 69,
+    "high_resolution_locus_page_count": 63,
+    "high_resolution_locus_pages": {
+      "artin": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        36,
+        37,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        65,
+        66,
+        67
+      ]
+    }
+  },
+  "artifacts": {
+    "artin": {
+      "pdf": "artin.pdf",
+      "bytes": 908536,
+      "pages": 69,
+      "sha256": "54A3A7378595B8A648DA74161009E810AA8D0E29A4B9B84A9EF1EE54587E100A",
+      "encrypted": false,
+      "media_box_points": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      "render_dimensions_pixels": [
+        816,
+        1056
+      ],
+      "pages_without_ink": 0,
+      "minimum_ink_pixels_below_245": 37038,
+      "duplicate_render_hashes": 0
+    }
+  },
+  "render_protocol": {
+    "renderer": "Poppler pdftoppm 26.05.0",
+    "full_page_dpi": 96,
+    "full_page_layout": "ordered 4-by-4 contact sheets",
+    "contact_sheet_count": 5,
+    "high_resolution_dpi": 180,
+    "high_resolution_selection": "the 63 correction-sensitive Artin pages deterministically derived from all 154 R25 manifest-bound operation loci",
+    "render_intermediates_published": false
+  },
+  "source_page_mapping": {
+    "path": "ai-integrated/candidates/commons/stacks/errata/r25/builds/source-page-map.json",
+    "bytes": 39171,
+    "sha256": "467AE5AF792915E3832C83C6E308F497677B97B75F064BA120D5E7C8F68DB643",
+    "schema": "mathematics-commons-stacks-synctex-source-page-map/v1",
+    "operation_count": 154,
+    "unique_page_count": 63,
+    "mapping_failures": 0
+  },
+  "private_render_evidence": {
+    "path": "tmp/pdfs/r25-artin-visual-qa-20260828/render-manifest.json",
+    "bytes": 34657,
+    "sha256": "E0DFC1C14C8D9DE4153281627287F5E8C55CA231E7F84ADC6FB6DD2B3B90E1D1",
+    "status": "PASS",
+    "manifest_bound_operations_covered": 154,
+    "mapping_failures": 0
+  },
+  "checks": {
+    "all_pages_rendered": true,
+    "all_pages_manually_inspected": true,
+    "all_manifest_bound_locus_pages_inspected_at_high_resolution": true,
+    "page_dimensions_consistent": true,
+    "headers_and_page_numbers_consistent": true,
+    "text_and_formulas_legible": true,
+    "diagrams_intact": true,
+    "clipped_content": 0,
+    "overlapping_content": 0,
+    "blank_pages": 0,
+    "corrupted_pages": 0,
+    "missing_or_unreadable_glyphs": 0,
+    "broken_diagrams": 0,
+    "rejected_simplicial_007_parenthesis_preserved": true
+  },
+  "accessibility": {
+    "struct_tree_root_present": false,
+    "mark_info_present": false,
+    "note": "The standalone chapter PDF is untagged. This retained accessibility limitation is not a visual-rendering failure."
+  },
+  "conclusion": "All 69 pages of the affected Artin PDF passed ordered contact-sheet review, and all 63 correction-sensitive pages passed individual 180-DPI inspection without a formatting or rendering defect."
+}

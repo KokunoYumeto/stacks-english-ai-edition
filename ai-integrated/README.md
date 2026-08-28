@@ -21,12 +21,12 @@ unified repository, not a separate edition.
 
 ## Integrated registry cutoff
 
-- Current integrated overlays: **25**, containing **690 stable IDs**.
-- Current cutoff: R24 admission commit
-  `6df734ecb3bef8f35770819d17a8d3e267b8e07a`, tree
-  `49b8e57e91f0bf04669b2ee93e3586cfb6919088`.
-- The Stacks errata subset is **R1–R24**: 24 batches, 678 correction IDs, and
-  754 exact v2 operations. Its highest identifier is `MC-STK-ERR-1045`; gaps
+- Current integrated overlays: **26**, containing **821 stable IDs**.
+- Current cutoff: R25 admission commit
+  `001f36d41504aecfa77201a04fedff16d37b00f0`, tree
+  `f8e3a8ea8d7e95190b3cb4d21eb701a6709f90c7`.
+- The Stacks errata subset is **R1–R25**: 25 batches, 809 correction IDs, and
+  908 exact v2 operations. Its highest identifier is `MC-STK-ERR-1176`; gaps
   are intentional.
 - The 22nd overlay is `stacks-verdier-a04446e-1-2-13-r1`, an independently
   written historical-source insertion with 12 non-official stable units. It
@@ -35,35 +35,33 @@ unified repository, not a separate edition.
 The authoritative overlay list is
 [`registry/overlays.json`](registry/overlays.json). The integrated root source
 contains the admitted R1–R21 composition, the separately composed Verdier
-insertion, the R22-before-R23 `more-algebra.tex` composition, and the R24
-`spaces-duality.tex` composition; registry admission and source composition
-remain separately testable states. R21 is replayed as exact manifest-bound
-operations over cumulative `simplicial.tex`, and Verdier is inserted into
-cumulative `derived.tex` through one unique unchanged context with exact
-prefix/suffix invariance.
+insertion, the R22-before-R23 `more-algebra.tex` composition, the R24
+`spaces-duality.tex` composition, and the R25 `artin.tex` composition;
+registry admission and source composition remain separately testable states.
+R21 is replayed as exact manifest-bound operations over cumulative
+`simplicial.tex`, and Verdier is inserted into cumulative `derived.tex` through
+one unique unchanged context with exact prefix/suffix invariance.
 
-R22 (`cec63f082819c0580c43f59790ab441260fe1ccc`, 83 stable units / 94
-operations) and R23 (`49fc23ab2f3d94cc98f27bc0f315fb0da6f2c98a`, 10
-stable units / 12 operations) add 93 IDs and 106 operations affecting only
-`more-algebra.tex`. They are composed in that order from manifest operations;
-neither isolated payload replaces cumulative source wholesale. R24 adds 38
-IDs and 57 manifest-bound operations affecting only `spaces-duality.tex`.
-Those operations are composed at source commit
-`10c1c62f371921cdafbaa5e89f438a821a013621`, tree
-`6ec98b8ee6919070a24130877d4eeb9e1a0e874b`; its isolated payload likewise
-does not replace cumulative source wholesale. Successor registry head
-`53c517215ef542cfc987e2445a07bb23c7b120fb` only materializes the active R25
-lease. R25 is not admitted or composed. `MORE-ALGEBRA-L-001..029` remains
-unadmitted intake evidence, as does `SMOOTHING-001..035`.
+R22 and R23 add 93 IDs and 106 operations affecting only `more-algebra.tex`.
+R24 adds 38 IDs and 57 operations affecting only `spaces-duality.tex`. R25 adds
+131 IDs and 154 manifest-bound operations affecting only `artin.tex`. Every
+round is composed in registry order from manifest operations; no isolated
+payload replaces cumulative source wholesale. The R25 source composition is
+commit `63dfd5f1499bea1916f64256056a5a37bcfb8f9a`, tree
+`7ab863452c932dd5ef230f65abdfa5bdcd6b5771`. Its 254,488-byte `artin.tex`
+postimage has SHA-256
+`F196752E6D872B3B888E57C7183B326287F1A241286991C075E4896996FD185B`.
+`MORE-ALGEBRA-L-001..029` and `SMOOTHING-001..035` remain separate intake
+evidence.
 
-The current R24 fixed-point receipts cover 23 PDFs, 2,368 pages, and 24,949,361
-PDF bytes at source `c3bc402b03dea3c5ac92c9e226645b5895a78887`, tree
-`626b67a2c32f4b2bc1b8ad7b4586cdb036b25a21`. Both linked-worktree builds are
-byte-for-byte reproducible, and all 25 pages of the affected
-`spaces-duality.pdf` passed individual high-resolution inspection.
-The public R24 content head is
-`50438757de89ec6e67385084d4a2d578707f5a37`; its exact-head workflow and
-anonymous 86-file byte/hash/blob readback pass.
+The current R25 fixed-point receipts cover 24 PDFs, 2,437 pages, and 25,862,634
+PDF bytes at source `a13d609ba9b146eac0a72f593bcf8aff5c5a6a33`, tree
+`fbf8d6341b22298d05fdc1f72d547907bc164077`. Both linked-worktree builds are
+byte-for-byte reproducible. All 69 pages of the affected `artin.pdf` passed
+review, including 63 correction-locus pages inspected individually at high
+resolution. The preceding public R24 content head remains
+`50438757de89ec6e67385084d4a2d578707f5a37` until the R25 publication
+transaction and anonymous readback complete.
 
 ## Directory map
 

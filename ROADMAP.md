@@ -11,34 +11,35 @@ French diplomatic editions remain separate read-only inputs.
 
 ## Current maintenance baseline
 
-The current validated composition contains **25 overlays / 690 stable IDs** at
-R24 admission cutoff `6df734ecb3bef8f35770819d17a8d3e267b8e07a`, tree
-`49b8e57e91f0bf04669b2ee93e3586cfb6919088`. Its Stacks errata component is
-R1–R24: 24 batches, 678 correction IDs, and 754 exact v2 operations. The 22nd
+The current validated composition contains **26 overlays / 821 stable IDs** at
+R25 admission cutoff `001f36d41504aecfa77201a04fedff16d37b00f0`, tree
+`f8e3a8ea8d7e95190b3cb4d21eb701a6709f90c7`. Its Stacks errata component is
+R1–R25: 25 batches, 809 correction IDs, and 908 exact v2 operations. The 22nd
 overlay, `stacks-verdier-a04446e-1-2-13-r1`, remains a separately admitted,
 independently written historical-source contribution with 12 non-official
 stable units. It inserts one manifest-bound lemma into cumulative `derived.tex`;
 no official Stacks tag or upstream endorsement is claimed.
 
 R22 and R23 add 93 correction IDs and 106 manifest-bound operations affecting
-only `more-algebra.tex`. R24 adds 38 correction IDs and 57 manifest-bound
-operations affecting only `spaces-duality.tex`. All are composed in registry
-order without replacing cumulative source wholesale. The R24 source composition
-is commit `10c1c62f371921cdafbaa5e89f438a821a013621`, tree
-`6ec98b8ee6919070a24130877d4eeb9e1a0e874b`. The exact authority, registry,
+only `more-algebra.tex`. R24 adds 38 IDs and 57 operations affecting only
+`spaces-duality.tex`; R25 adds 131 IDs and 154 operations affecting only
+`artin.tex`. All are composed in registry order without replacing cumulative
+source wholesale. The R25 source composition is commit
+`63dfd5f1499bea1916f64256056a5a37bcfb8f9a`, tree
+`7ab863452c932dd5ef230f65abdfa5bdcd6b5771`. The exact authority, registry,
 operation, source, and preservation identities are recorded in the
 [current composition receipt](validation/composition-current.json).
 
-The current R24 source passed two linked-worktree fixed-point builds at source
-`c3bc402b03dea3c5ac92c9e226645b5895a78887`, tree
-`626b67a2c32f4b2bc1b8ad7b4586cdb036b25a21`: 23 readable PDFs, 2,368 pages,
-24,949,361 PDF bytes, global fixed point on sweep four, and zero fatal or listed
-serious diagnostics. All 25 affected `spaces-duality.pdf` pages passed both
-contact-sheet and individual high-resolution review. All 23 PDF identities
-match exactly between the two builds. The earlier R22/R23, Verdier, and R21
-receipts remain preserved as historical evidence for their exact scopes.
+The current R25 source passed two linked-worktree fixed-point builds at source
+`a13d609ba9b146eac0a72f593bcf8aff5c5a6a33`, tree
+`fbf8d6341b22298d05fdc1f72d547907bc164077`: 24 readable PDFs, 2,437 pages,
+25,862,634 PDF bytes, global fixed point on sweep four, and zero fatal or listed
+serious diagnostics. All 69 affected `artin.pdf` pages passed review, including
+63 correction-locus pages at high resolution. All 24 PDF identities match
+exactly between the two builds. Earlier R24, R22/R23, Verdier, and R21 receipts
+remain preserved as historical evidence for their exact scopes.
 
-The R24 content release is public at
+The preceding R24 content release is public at
 `50438757de89ec6e67385084d4a2d578707f5a37`, tree
 `d1d4b9385d0b67fb2e70220bad8c4fe9c2a2fcd5`; exact-head CI and anonymous
 readback of 86 checked files totaling 5,155,955 bytes pass.
@@ -50,20 +51,18 @@ readback of 138 checked files totaling 25,024,008 bytes pass.
 
 ## Registry-order maintenance state
 
-R24 is admitted and composed into the generated source at
-`10c1c62f371921cdafbaa5e89f438a821a013621`. Successor registry head
-`001f36d41504aecfa77201a04fedff16d37b00f0` admits R25 with 131 stable units
-and 154 exact operations affecting only `artin.tex`; R25 is not yet composed
-into main. The French `MORE-ALGEBRA-L-001..029` and `SMOOTHING-001..035`
-packets remain separate intake evidence, not silently included in the current
-composition. The rejected R23 producer
+R25 is admitted and composed into the generated source at
+`63dfd5f1499bea1916f64256056a5a37bcfb8f9a`. Its 131 stable units and 154 exact
+operations affect only `artin.tex`. The French `MORE-ALGEBRA-L-001..029` and
+`SMOOTHING-001..035` packets remain separate intake evidence, not silently
+included in the current composition. The rejected R23 producer
 `MORE-ALGEBRA-J-006` likewise remains excluded from the integrated source.
 
 ## Recommended order
 
 | Stage | Bounded milestone | Why it comes here |
 | --- | --- | --- |
-| **1. Complete EGA I** | Continue from the completed §6.3 checkpoint through §§6.4–6.6, followed by staged checkpoints through §10. | This continues from the exact existing cursor, preserves statement order, and finishes the language-of-schemes layer before later corpora depend on it. |
+| **1. Complete EGA I** | Continue at EGA I §6.4.1 through §§6.4–6.6, followed by staged checkpoints through §10. | This continues from the exact existing cursor, preserves statement order, and finishes the language-of-schemes layer before later corpora depend on it. |
 | **2. Integrate EGA II** | Begin with §1 on affine morphisms; continue through §§2–4 on `Proj`, projective bundles, and ample sheaves; then close §§5–8 on quasi-projective, proper, projective, finite, and quasi-finite morphisms, valuative criteria, blowups, and contractions. | EGA II is the shortest path from scheme language to the global morphism machinery used by EGA III and substantial parts of SGA1. |
 | **3. Integrate the foundations of SGA1** | Treat Exposés I–V first, then the fibred-category bridge in Exposé VI and the descent layer in Exposés VIII–IX. The revised edition contains no Exposé VII. | This yields a coherent foundation in étale, smooth, and flat morphisms, Galois categories, fibred categories, and descent without prematurely taking on the advanced specialization and cohomological material. |
 | **4. Integrate EGA III** | Proceed in source order through coherent cohomology, projective and proper finiteness, formal functions, base change, and existence results. | EGA III can reuse EGA II's projective/proper foundation, the existing FAC, GAGA, and FGA source integrations, and the closed Tôhoku dossier-only mapping. It also supplies leverage for the advanced part of SGA1. |

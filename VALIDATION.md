@@ -20,16 +20,16 @@ The gate verifies:
 
 - ancestry of the pinned upstream, source-union, EGA, and protected linear
   registry/source history;
-- 25 admitted overlays containing exactly 690 stable IDs at R24 registry cutoff
-  `6df734ecb3bef8f35770819d17a8d3e267b8e07a`, tree
-  `49b8e57e91f0bf04669b2ee93e3586cfb6919088`;
+- 26 admitted overlays containing exactly 821 stable IDs at R25 registry cutoff
+  `001f36d41504aecfa77201a04fedff16d37b00f0`, tree
+  `f8e3a8ea8d7e95190b3cb4d21eb701a6709f90c7`;
 - the final immutable Verdier candidate, its 12 stable units, 27 manifest
   references, independent replay, rights boundary, and exact registered
   insertion into `derived.tex`;
-- the R1–R24 Stacks errata sequence: 24 batches, 678 correction IDs, and all
-  754 v2 operations, including the ordered 106-operation R22/R23 replay in
-  `more-algebra.tex` and the 57-operation R24 replay in
-  `spaces-duality.tex`;
+- the R1–R25 Stacks errata sequence: 25 batches, 809 correction IDs, and all
+  908 v2 operations, including the ordered R22/R23 replay, the 57-operation R24
+  replay in `spaces-duality.tex`, and the 154-operation R25 replay in
+  `artin.tex`;
 - preservation of the historical R1–R21 snapshot at prior cutoff
   `13ca6aaaca454f5930c4885c93f427e30cf21959` and of the separately composed
   Verdier source;
@@ -45,40 +45,40 @@ The gate verifies:
 The same gate runs in
 [`validate.yml`](.github/workflows/validate.yml) with full Git history.
 
-The current R24 build result is recorded at
-[`validation/stacks-errata-a04446e-r24-build-2026-08-27.json`](validation/stacks-errata-a04446e-r24-build-2026-08-27.json).
-All 23 required chapters (2,368 pages; 24,949,361 PDF bytes) compiled
+The current R25 build result is recorded at
+[`validation/stacks-errata-a04446e-r25-build-2026-08-28.json`](validation/stacks-errata-a04446e-r25-build-2026-08-28.json).
+All 24 required chapters (2,437 pages; 25,862,634 PDF bytes) compiled
 successfully, were readable by `pdfinfo`, and reached a global PDF fixed point
 on sweep four. The build is bound to source commit
-`c3bc402b03dea3c5ac92c9e226645b5895a78887`, tree
-`626b67a2c32f4b2bc1b8ad7b4586cdb036b25a21`. Aggregate diagnostics contain
+`a13d609ba9b146eac0a72f593bcf8aff5c5a6a33`, tree
+`fbf8d6341b22298d05fdc1f72d547907bc164077`. Aggregate diagnostics contain
 zero fatal, missing-glyph, undefined-reference, undefined-citation,
 multiply-defined, rerun-required, or destination-warning markers.
 
-Visual QA rendered and reviewed all 25 pages of the affected
-`spaces-duality.pdf` at 96 DPI and inspected every page individually at 180 DPI.
+Visual QA rendered and reviewed all 69 pages of the affected `artin.pdf` at
+96 DPI and inspected all 63 correction-locus pages individually at 180 DPI.
 The current
-[visual receipt](validation/stacks-errata-a04446e-r24-visual-qa-2026-08-27.json)
+[visual receipt](validation/stacks-errata-a04446e-r25-visual-qa-2026-08-28.json)
 records zero clipped, overlapping, blank, corrupt, missing-glyph, or
 broken-diagram defects. A second build ran independently in a parallel linked
 worktree. Both runs use the same source, builder, environment, and fixed-point
-sweep, and all 23 `{stem, pages, bytes, sha256}` tuples are exactly equal. See
-the [reproducibility summary](validation/stacks-errata-a04446e-r24-reproducibility-2026-08-27.json)
-and [second full receipt](validation/stacks-errata-a04446e-r24-reproducibility-second-2026-08-27.json).
+sweep, and all 24 `{stem, pages, bytes, sha256}` tuples are exactly equal. See
+the [reproducibility summary](validation/stacks-errata-a04446e-r25-reproducibility-2026-08-28.json)
+and [second full receipt](validation/stacks-errata-a04446e-r25-reproducibility-second-2026-08-28.json).
 
 The [source composition receipt](validation/composition-current.json) records
-R24 cutoff `6df734ecb3bef8f35770819d17a8d3e267b8e07a`, linear registry
-import `0e5c4596d85072fecae6e061bb54bed6979d66c3`, and exact composition
-source `10c1c62f371921cdafbaa5e89f438a821a013621`, tree
-`6ec98b8ee6919070a24130877d4eeb9e1a0e874b`. It binds 754 cumulative
-v2 operations, including the 57 new R24 operations, to the 80,995-byte
-`spaces-duality.tex` postimage with SHA-256
-`3CFCEF73EB9172CF69082FF07B9D84442DD5E545D8AD22917D5A694BAA57298E`.
-The historical R22/R23, Verdier, and R21 composition, build, publication, and
-readback receipts remain preserved and authoritative for their own immutable
-source snapshots; they are not rebound to the R24 tree.
+R25 cutoff `001f36d41504aecfa77201a04fedff16d37b00f0`, linear registry
+import `fb12027d697fce54f2f0d5fd1454f1e5069dd937`, and exact composition
+source `63dfd5f1499bea1916f64256056a5a37bcfb8f9a`, tree
+`7ab863452c932dd5ef230f65abdfa5bdcd6b5771`. It binds 908 cumulative
+v2 operations, including the 154 new R25 operations, to the 254,488-byte
+`artin.tex` postimage with SHA-256
+`F196752E6D872B3B888E57C7183B326287F1A241286991C075E4896996FD185B`.
+Historical R24, R22/R23, Verdier, and R21 receipts remain preserved and
+authoritative for their immutable source snapshots; they are not rebound to the
+R25 tree.
 
-The [current R24 publication receipt](validation/stacks-errata-a04446e-r24-release-2026-08-27.json)
+The [latest public R24 publication receipt](validation/stacks-errata-a04446e-r24-release-2026-08-27.json)
 binds public content head `50438757de89ec6e67385084d4a2d578707f5a37`, tree
 `d1d4b9385d0b67fb2e70220bad8c4fe9c2a2fcd5`, to its successful exact-head
 workflow. Anonymous HTTPS readback matched 86 checked files totaling 5,155,955
@@ -91,7 +91,7 @@ binds the exact six-file R24 package to the
 and [Zenodo record 22135181](https://doi.org/10.5281/zenodo.22135181), concept
 DOI [`10.5281/zenodo.22135180`](https://doi.org/10.5281/zenodo.22135180).
 Anonymous downloads from both hosts matched all filenames, byte counts, and
-SHA-256 values. This is a preservation checkpoint for R24, not evidence that
+SHA-256 values. This is the preceding preservation checkpoint for R24, not evidence that
 the active EGA I--IV integration program is complete.
 
 The [historical R22/R23 publication receipt](validation/stacks-errata-a04446e-r22-r23-release-2026-08-27.json)
