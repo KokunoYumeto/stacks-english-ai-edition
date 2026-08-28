@@ -1,0 +1,308 @@
+{
+  "accepted": [
+    {
+      "class": "source_defect_correction",
+      "locus": "modules.tex:1131",
+      "operations": [
+        {
+          "old_text": "be ringed space.",
+          "producer_id": "MODULES-012",
+          "producer_operation_id": "MODULES-012",
+          "replacement_text": "be a ringed space.",
+          "source_end_line": 1131,
+          "source_start_line": 1131
+        }
+      ],
+      "producer_ids": [
+        "MODULES-012"
+      ],
+      "rationale": "Prose-only normalization; see disposition.",
+      "stable_id": "MC-STK-ERR-1202"
+    },
+    {
+      "class": "source_defect_correction",
+      "locus": "modules.tex:1152-1153",
+      "operations": [
+        {
+          "old_text": "corresponding to $j \\in J$\ngiven by",
+          "producer_id": "MODULES-013",
+          "producer_operation_id": "MODULES-013",
+          "replacement_text": "corresponding to $j \\in J$\nis given by",
+          "source_end_line": 1153,
+          "source_start_line": 1152
+        }
+      ],
+      "producer_ids": [
+        "MODULES-013"
+      ],
+      "rationale": "Prose-only normalization; see disposition.",
+      "stable_id": "MC-STK-ERR-1203"
+    },
+    {
+      "class": "source_defect_correction",
+      "locus": "modules.tex:2169",
+      "operations": [
+        {
+          "old_text": "as an $\\Gamma(U, \\mathcal{O}_U)$-module",
+          "producer_id": "MODULES-014",
+          "producer_operation_id": "MODULES-014",
+          "replacement_text": "as a $\\Gamma(U, \\mathcal{O}_U)$-module",
+          "source_end_line": 2169,
+          "source_start_line": 2169
+        }
+      ],
+      "producer_ids": [
+        "MODULES-014"
+      ],
+      "rationale": "The pronunciation-governed article before Gamma is 'a'. The narrower repair preserves the singular module phrase and changes no mathematical content.",
+      "stable_id": "MC-STK-ERR-1204"
+    },
+    {
+      "class": "source_defect_correction",
+      "locus": "modules.tex:4093",
+      "operations": [
+        {
+          "old_text": "$U$ an integer",
+          "producer_id": "MODULES-008",
+          "producer_operation_id": "MODULES-008",
+          "replacement_text": "$U$ of $x$, an integer",
+          "source_end_line": 4093,
+          "source_start_line": 4093
+        }
+      ],
+      "producer_ids": [
+        "MODULES-008"
+      ],
+      "rationale": "The neighbourhood lacks the phrase identifying it as a neighbourhood of x, and the following noun phrase lacks a separator.",
+      "stable_id": "MC-STK-ERR-1205"
+    },
+    {
+      "class": "source_defect_correction",
+      "locus": "modules.tex:4182",
+      "operations": [
+        {
+          "old_text": "Looking over an open covering trivialization $\\mathcal{L}$",
+          "producer_id": "MODULES-009",
+          "producer_operation_id": "MODULES-009",
+          "replacement_text": "Looking over an open covering trivializing $\\mathcal{L}$",
+          "source_end_line": 4182,
+          "source_start_line": 4182
+        }
+      ],
+      "producer_ids": [
+        "MODULES-009"
+      ],
+      "rationale": "The participial phrase is ungrammatical: the covering trivializes the module.",
+      "stable_id": "MC-STK-ERR-1206"
+    },
+    {
+      "class": "source_defect_correction",
+      "locus": "modules.tex:4337",
+      "operations": [
+        {
+          "old_text": "U_i",
+          "producer_id": "MODULES-010",
+          "producer_operation_id": "MODULES-010",
+          "replacement_text": "U_j",
+          "source_end_line": 4337,
+          "source_start_line": 4337
+        }
+      ],
+      "producer_ids": [
+        "MODULES-010"
+      ],
+      "rationale": "The bound index is j but the summand is written U_i; the following map also uses U_j.",
+      "stable_id": "MC-STK-ERR-1207"
+    },
+    {
+      "class": "source_defect_correction",
+      "locus": "modules.tex:4362",
+      "operations": [
+        {
+          "old_text": "linebundle",
+          "producer_id": "MODULES-011",
+          "producer_operation_id": "MODULES-011",
+          "replacement_text": "line bundle",
+          "source_end_line": 4362,
+          "source_start_line": 4362
+        }
+      ],
+      "producer_ids": [
+        "MODULES-011"
+      ],
+      "rationale": "The standard English compound is two words.",
+      "stable_id": "MC-STK-ERR-1208"
+    },
+    {
+      "class": "source_defect_correction",
+      "locus": "modules.tex:4629",
+      "operations": [
+        {
+          "old_text": "section of $\\mathcal{O}_X$.",
+          "producer_id": "MODULES-001",
+          "producer_operation_id": "MODULES-001",
+          "replacement_text": "section of $\\mathcal{S}^{-1}\\mathcal{O}_X$.",
+          "source_end_line": 4629,
+          "source_start_line": 4629
+        }
+      ],
+      "producer_ids": [
+        "MODULES-001"
+      ],
+      "rationale": "The localization map lands in $\\mathcal{S}^{-1}\\mathcal{O}_X$; the source codomain contradicts the construction.",
+      "stable_id": "MC-STK-ERR-1209"
+    },
+    {
+      "class": "source_defect_correction",
+      "locus": "modules.tex:5179",
+      "operations": [
+        {
+          "old_text": "is an is an $\\mathcal{O}_1$-linear map",
+          "producer_id": "MODULES-002",
+          "producer_operation_id": "MODULES-002",
+          "replacement_text": "is an $\\mathcal{O}_1$-linear map",
+          "source_end_line": 5179,
+          "source_start_line": 5179
+        }
+      ],
+      "producer_ids": [
+        "MODULES-002"
+      ],
+      "rationale": "Duplicated words.",
+      "stable_id": "MC-STK-ERR-1210"
+    },
+    {
+      "class": "source_defect_correction",
+      "locus": "modules.tex:5263",
+      "operations": [
+        {
+          "old_text": "[m + m' - [m] - [m'],",
+          "producer_id": "MODULES-003",
+          "producer_operation_id": "MODULES-003",
+          "replacement_text": "[m + m'] - [m] - [m'],",
+          "source_end_line": 5263,
+          "source_start_line": 5263
+        }
+      ],
+      "producer_ids": [
+        "MODULES-003"
+      ],
+      "rationale": "Missing closing bracket makes the additivity relation malformed.",
+      "stable_id": "MC-STK-ERR-1211"
+    },
+    {
+      "class": "source_defect_correction",
+      "locus": "modules.tex:5709",
+      "operations": [
+        {
+          "old_text": "a sheaves of sets",
+          "producer_id": "MODULES-004",
+          "producer_operation_id": "MODULES-004",
+          "replacement_text": "a sheaf of sets",
+          "source_end_line": 5709,
+          "source_start_line": 5709
+        }
+      ],
+      "producer_ids": [
+        "MODULES-004"
+      ],
+      "rationale": "Number-agreement error; intended singular sheaf.",
+      "stable_id": "MC-STK-ERR-1212"
+    },
+    {
+      "class": "source_defect_correction",
+      "locus": "modules.tex:5748",
+      "operations": [
+        {
+          "old_text": "these maps are quasi-isomorphism",
+          "producer_id": "MODULES-005",
+          "producer_operation_id": "MODULES-005",
+          "replacement_text": "these maps are quasi-isomorphisms",
+          "source_end_line": 5748,
+          "source_start_line": 5748
+        }
+      ],
+      "producer_ids": [
+        "MODULES-005"
+      ],
+      "rationale": "Plural predicate requires quasi-isomorphisms.",
+      "stable_id": "MC-STK-ERR-1213"
+    },
+    {
+      "class": "source_defect_correction",
+      "locus": "modules.tex:5895",
+      "operations": [
+        {
+          "old_text": "$(g \\circ g')^*\\NL_{X''/Y''} \\to \\NL_{X/Y}$",
+          "producer_id": "MODULES-006",
+          "producer_operation_id": "MODULES-006",
+          "replacement_text": "$(g \\circ g')^*\\NL_{X/Y} \\to \\NL_{X''/Y''}$",
+          "source_end_line": 5895,
+          "source_start_line": 5895
+        }
+      ],
+      "producer_ids": [
+        "MODULES-006"
+      ],
+      "rationale": "The displayed composite functoriality has source and target complexes reversed.",
+      "stable_id": "MC-STK-ERR-1214"
+    },
+    {
+      "class": "source_defect_correction",
+      "locus": "modules.tex:5921",
+      "operations": [
+        {
+          "old_text": "maps of sheaves rings",
+          "producer_id": "MODULES-007",
+          "producer_operation_id": "MODULES-007",
+          "replacement_text": "maps of sheaves of rings",
+          "source_end_line": 5921,
+          "source_start_line": 5921
+        }
+      ],
+      "producer_ids": [
+        "MODULES-007"
+      ],
+      "rationale": "Missing preposition: maps of sheaves of rings.",
+      "stable_id": "MC-STK-ERR-1215"
+    }
+  ],
+  "accepted_producer_row_count": 14,
+  "authority_bytes": 204133,
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_path": "modules.tex",
+  "authority_sha256": "7BD3E9E096717EF6FD458492D8AD91FC9FFE428CFD7DD80E386FAE377BB7CB0D",
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "candidate_id": "stacks-errata-a04446e-r27",
+  "deduplication": {
+    "admitted_stacks_errata_operations_reviewed": 947,
+    "admitted_stacks_errata_units_reviewed": 834,
+    "matching_modules_units": 0,
+    "prior_modules_units_reviewed": 0,
+    "prior_rounds": "R1-R26",
+    "result": "all 14 units are new; no aliases, rejects, or unresolved proposals"
+  },
+  "operation_count": 14,
+  "prior_alias_producer_row_count": 0,
+  "prior_aliases": [],
+  "producer_emendations_bytes": 3247,
+  "producer_emendations_sanitized_bytes": 3247,
+  "producer_emendations_sanitized_sha256": "420A2629924B044E083170E1DDD28D3518E51A3E784BA8B236478F176220161A",
+  "producer_emendations_sha256": "420A2629924B044E083170E1DDD28D3518E51A3E784BA8B236478F176220161A",
+  "producer_ledger_bytes": 5335,
+  "producer_ledger_sha256": "FD2098057D005F93EE17480643CF8D177D791AD68F2C219F8EFFAC0983A5B7F8",
+  "producer_row_count": 14,
+  "producer_sources": [
+    "MODULES_SOURCE_DEFECT_LEDGER.input.csv",
+    "MODULES_SOURCE_EMENDATIONS.input.json"
+  ],
+  "rejected": [],
+  "rejected_producer_row_count": 0,
+  "schema": "mathematics-commons-stacks-r27-adjudication-spec/v1",
+  "semantic_unit_count": 14,
+  "stable_id_range": [
+    "MC-STK-ERR-1202",
+    "MC-STK-ERR-1215"
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,90 @@
+{
+  "schema": "stacks-fr-source-emendations-v1",
+  "authority_sha256": "7BD3E9E096717EF6FD458492D8AD91FC9FFE428CFD7DD80E386FAE377BB7CB0D",
+  "source_file": "modules.tex",
+  "chapter": 17,
+  "inputs": [
+    {
+      "path": "p03/evidence/MODULES_A_SOURCE_EMENDATIONS.json",
+      "bytes": 223,
+      "sha256": "1B0C593B523D30EFAE277052AD113AC06EDB24AC9B6B1E3C42F904D9E17655D1",
+      "operations": 0
+    },
+    {
+      "path": "p03/evidence/MODULES_B_SOURCE_EMENDATIONS.json",
+      "bytes": 226,
+      "sha256": "293EFAB58B4C7D4653A3FEC07429FEA9D22A4EC703400CCF6AAC49B385C160FE",
+      "operations": 0
+    },
+    {
+      "path": "p03/evidence/MODULES_C_SOURCE_EMENDATIONS.json",
+      "bytes": 1436,
+      "sha256": "26263C5B82C3D8EAEDDBC4BE8740A6EB7E175B9F3CE496170554E48524A30B77",
+      "operations": 4
+    },
+    {
+      "path": "p03/evidence/MODULES_D_SOURCE_EMENDATIONS.json",
+      "bytes": 1318,
+      "sha256": "7C65C0D7803BFF2069819A9035C204E5356FE8F3422FA84521A79FE5E2C0CC2A",
+      "operations": 3
+    }
+  ],
+  "emendations": [
+    {
+      "id": "MODULES-008",
+      "line": 4093,
+      "old": "$U$ an integer",
+      "new": "$U$ of $x$, an integer",
+      "rationale": "Restore the missing point qualified by the open neighbourhood and separate the coordinated choices.",
+      "status": "accepted-source-defect"
+    },
+    {
+      "id": "MODULES-009",
+      "line": 4182,
+      "old": "Looking over an open covering trivialization $\\mathcal{L}$",
+      "new": "Looking over an open covering trivializing $\\mathcal{L}$",
+      "rationale": "Repair the ungrammatical participial phrase without changing mathematical content.",
+      "status": "accepted-source-defect"
+    },
+    {
+      "id": "MODULES-010",
+      "line": 4337,
+      "old": "U_i",
+      "new": "U_j",
+      "rationale": "Use the bound covering index j consistently with the union and the following map.",
+      "status": "accepted-source-defect"
+    },
+    {
+      "id": "MODULES-011",
+      "line": 4362,
+      "old": "linebundle",
+      "new": "line bundle",
+      "rationale": "Normalize the standard English compound.",
+      "status": "accepted-source-defect"
+    },
+    {
+      "id": "MODULES-001",
+      "line": 4629,
+      "old": "section of $\\mathcal{O}_X$.",
+      "new": "section of $\\mathcal{S}^{-1}\\mathcal{O}_X$.",
+      "rationale": "The universal localization map lands in the localized presheaf; a section of S need not already be invertible in O_X.",
+      "status": "confirmed_source_error_emended_in_french"
+    },
+    {
+      "id": "MODULES-003",
+      "line": 5263,
+      "old": "[m + m' - [m] - [m'],",
+      "new": "[m + m'] - [m] - [m'],",
+      "rationale": "The additivity relation has a missing closing bracket after m'; the printed expression is unbalanced.",
+      "status": "confirmed_source_error_emended_in_french"
+    },
+    {
+      "id": "MODULES-006",
+      "line": 5895,
+      "old": "$(g \\circ g')^*\\NL_{X''/Y''} \\to \\NL_{X/Y}$",
+      "new": "$(g \\circ g')^*\\NL_{X/Y} \\to \\NL_{X''/Y''}$",
+      "rationale": "Functoriality for the composite base-change diagram must pull back the original X/Y complex to X''/Y'', not reverse source and target.",
+      "status": "confirmed_source_error_emended_in_french"
+    }
+  ]
+}
