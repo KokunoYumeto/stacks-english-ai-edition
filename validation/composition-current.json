@@ -1,82 +1,82 @@
 {
   "schema": "unofficial-ai-integrated-stacks-composition/v3",
   "status": "PASS",
-  "created_utc": "2026-08-28T15:57:13Z",
+  "created_utc": "2026-08-28T20:25:31Z",
   "authority": {
     "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
     "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e"
   },
   "previous_cutoff": {
-    "public_main_head": "648596b406d126cf8c977d1c01ac862c73148302",
-    "public_main_tree": "72e481d3036e5e5412d1663a0b53cf5879750d14",
-    "registry_commit": "a7c4a3c52b9a32e96e0f4b98f9579369026d9e1b",
-    "registry_tree": "93af84d65d7b250fe0f4d660782ccf330b9e4743",
-    "last_admitted_overlay": "stacks-errata-a04446e-r26",
+    "public_main_head": "f8e6c227aa3dc89256427f3b64a2ad330d5ff221",
+    "public_main_tree": "94112e11f45252b9f9ce01783103e0b925f0cc0d",
+    "registry_commit": "8c0539a6a7aa001cc6152daee92d5c7a49bf6a93",
+    "registry_tree": "110a3006fcbb27b94c4170639aab56db507f9a89",
+    "last_admitted_overlay": "stacks-errata-a04446e-r27",
     "source_blobs": {
-      "modules.tex": {
-        "bytes": 211753,
-        "sha256": "A66238E4CE1AE098B2CD02A4013460DF9E60103C34F8A5A88C4F33C83D83865C",
-        "git_blob": "13450fd656e74d211d17d55c0e289033c6642f54"
+      "smoothing.tex": {
+        "bytes": 134830,
+        "sha256": "85251479BB7D35D73CD5691C194D33B3ADC1BF245BCC248643D969DBBA0E7928",
+        "git_blob": "ea0c59e134220971957a0a019e57663d0102cd07"
       }
     }
   },
   "registry": {
-    "cutoff_commit": "8c0539a6a7aa001cc6152daee92d5c7a49bf6a93",
-    "cutoff_tree": "110a3006fcbb27b94c4170639aab56db507f9a89",
+    "cutoff_commit": "655c8e0e1fe9e7b350244a0ef0230fb6c38e0026",
+    "cutoff_tree": "5eddd7d6db54d25eccf09cf21d5d7ab30c3ec1d3",
     "overlays_path": "ai-integrated/registry/overlays.json",
-    "overlays_bytes": 47013,
-    "overlays_sha256": "2B72AC95449DAE9EDF9119863749BEFF3DEDB779623ED8E449F9F89CDAE8697A",
-    "overlays_git_blob": "4ed7a25ae626daf71239cac7cfbc6f0a89806459",
-    "linear_import_commit": "f3bfc1b987ac9defc1b7811650bac0ec84a01373",
-    "linear_import_tree": "a9009a0fe924dfc2ba1ef62724564b5b34be1ad8",
-    "registered_overlays": 28,
-    "registered_stable_ids": 860,
-    "last_admitted_overlay": "stacks-errata-a04446e-r27"
+    "overlays_bytes": 48023,
+    "overlays_sha256": "F52C0F8A76A7941EA18B0C99333BBD8878F23039A81B35B2E234A7AF8888E4F6",
+    "overlays_git_blob": "2dd5b2c8e8805efbbc5ad5ff68ad705139ef197b",
+    "linear_import_commit": "1c26a825306ba0d14607e8364b49125ed3de39b5",
+    "linear_import_tree": "7740d5b6614c2a43980f2e0c5e9a5c4315069c38",
+    "registered_overlays": 29,
+    "registered_stable_ids": 861,
+    "last_admitted_overlay": "stacks-errata-a04446e-r28"
   },
   "new_overlays": [
     {
-      "id": "stacks-errata-a04446e-r27",
-      "stable_ids": 14,
-      "operations": 14,
-      "manifest_sha256": "A4D03B8B47A1005B6DAC8B0EE4B9D0F4361E065E51D324B9634F38B51053DE3C",
-      "payload_sha256": "59C250D528258DCB8B2EB88234CA88AB48C1F5AB073EEA4618703F96BED4CE6B",
-      "review_receipt_sha256": "8D62F79E9E6CB44A0FD4E69B9D7D64CF41DDDD77DB0D2660436906078AB68C56",
+      "id": "stacks-errata-a04446e-r28",
+      "stable_ids": 1,
+      "operations": 1,
+      "manifest_sha256": "FA5448067DBB6FF452AF85C3E2B0EE4B4133723D7C7D958DA74EB7746E194CFA",
+      "payload_sha256": "7C475ABEFC3CF2F3F2534F0CA69B8D8BB726BF88195CB50FE849DF99B7D0CD4A",
+      "review_receipt_sha256": "2E15F87CD859883219C81AB56A2DCB7D00F0C84B619615533BEF62805C5C0EA0",
       "topology": "leased_candidate_then_admission",
-      "intake_commit": "1f05772d6f46ab851cdecdf53b70c11ea698cb14",
-      "intake_tree": "85a2773ac3a094064ba36f5d62571e8359e92569",
-      "intake_parent": "a7c4a3c52b9a32e96e0f4b98f9579369026d9e1b",
-      "candidate_commit": "77fcc9fc2341e72b077224399743f1062e73b228",
-      "candidate_tree": "6183d66d4f907b7b83f1b69dc799dcfe92a0f4d0",
-      "candidate_subtree": "fe8a24fb2c4e0279a22d9839364fb3ffd12367d8",
-      "admission_commit": "8c0539a6a7aa001cc6152daee92d5c7a49bf6a93",
-      "admission_tree": "110a3006fcbb27b94c4170639aab56db507f9a89"
+      "intake_commit": "9924276f64447fc2047816b38f7e9675f25114a9",
+      "intake_tree": "c9c9079dc94eabcc1c789405714cd68fa9d03d08",
+      "intake_parent": "8c0539a6a7aa001cc6152daee92d5c7a49bf6a93",
+      "candidate_commit": "0c5a6f52ba4230607dac865ee9aaeb1d29e298a7",
+      "candidate_tree": "1eb252e2bf41e8c5647ffae73805e1e17c66725f",
+      "candidate_subtree": "aea3ce3f96310eedaa1e62de713cff77ce05225e",
+      "admission_commit": "655c8e0e1fe9e7b350244a0ef0230fb6c38e0026",
+      "admission_tree": "5eddd7d6db54d25eccf09cf21d5d7ab30c3ec1d3"
     }
   ],
   "composition": {
     "mode": "manifest-bound registry-order replay rebased onto verified cumulative source",
-    "base_commit": "f3bfc1b987ac9defc1b7811650bac0ec84a01373",
-    "base_tree": "a9009a0fe924dfc2ba1ef62724564b5b34be1ad8",
-    "source_commit": "5a42b7d2a04c4d08be7861ec91306d8be05d631e",
-    "source_tree": "ecbad57ee36b4fb290c80cb4d1f83eab50a47460",
-    "total_v2_operations": 961,
-    "new_operations": 14,
+    "base_commit": "1c26a825306ba0d14607e8364b49125ed3de39b5",
+    "base_tree": "7740d5b6614c2a43980f2e0c5e9a5c4315069c38",
+    "source_commit": "1ed5b9fce0f75dec5ad551d32badd8e99abf058a",
+    "source_tree": "28c377be399e04fb75f7568000c62e5cfafa291f",
+    "total_v2_operations": 962,
+    "new_operations": 1,
     "r1_r3_replacements": 69,
     "r1_tag_additions": 9,
     "affected_sources": {
-      "modules.tex": {
-        "authority_bytes": 204133,
-        "authority_sha256": "7BD3E9E096717EF6FD458492D8AD91FC9FFE428CFD7DD80E386FAE377BB7CB0D",
-        "authority_git_blob": "a2a37c72e7495f518bf3f87783963219e56cd4f5",
-        "before_bytes": 211753,
-        "before_sha256": "A66238E4CE1AE098B2CD02A4013460DF9E60103C34F8A5A88C4F33C83D83865C",
-        "before_git_blob": "13450fd656e74d211d17d55c0e289033c6642f54",
-        "authority_projection_bytes": 204157,
-        "authority_projection_sha256": "59C250D528258DCB8B2EB88234CA88AB48C1F5AB073EEA4618703F96BED4CE6B",
-        "authority_projection_git_blob": "c2fa948ffae4be7cf3bc6108732afd3f87a3abe5",
-        "composition_mode": "14 manifest-bound exact replacements layered on the verified cumulative FAC-expanded source",
-        "composed_bytes": 211777,
-        "composed_sha256": "BA34DCC89DCEE1BD5F0B9D3C986B18EE9618F723C10E7C7FD3DBD80E9E0B2300",
-        "composed_git_blob": "cdd258216a09be811c166bcbfd23705bbe679415",
+      "smoothing.tex": {
+        "authority_bytes": 134660,
+        "authority_sha256": "FD28CF874BB7DAD3C5C5FF03314D1C83701613A8A98730A99B9CA7A4BCFE6068",
+        "authority_git_blob": "15555086443374f866c585b176e0511622717bec",
+        "before_bytes": 134830,
+        "before_sha256": "85251479BB7D35D73CD5691C194D33B3ADC1BF245BCC248643D969DBBA0E7928",
+        "before_git_blob": "ea0c59e134220971957a0a019e57663d0102cd07",
+        "authority_projection_bytes": 134844,
+        "authority_projection_sha256": "56BCB1679B32F367ED4D58665600A2B09617B88227FE2E9F27186C546384CECE",
+        "authority_projection_git_blob": "4d4b2da8e3b9a05ada9061b7562bccb64819bddf",
+        "composition_mode": "one manifest-bound last-wins supersession applied to the exact R27-plus-Illusie cumulative source",
+        "composed_bytes": 134835,
+        "composed_sha256": "85A37C95D5591632D11E7BE6775039638B6F5200B44729ABCEA1A644D9F5B056",
+        "composed_git_blob": "8c1d7b7080ae6bd7e0f211d1dc33b39f9811ccfb",
         "committed_matches_composition": true
       }
     }
@@ -97,15 +97,15 @@
       "sha256": "BA34DCC89DCEE1BD5F0B9D3C986B18EE9618F723C10E7C7FD3DBD80E9E0B2300",
       "git_blob": "cdd258216a09be811c166bcbfd23705bbe679415"
     },
-    "simplicial.tex": {
-      "bytes": 239992,
-      "sha256": "650ABA33A184CE9945DD70C04D83A3A4CBD6E540426B171E828336855DC97A0B",
-      "git_blob": "a34120e214b9a840b72889344a0f716ada037c97"
-    },
     "more-algebra.tex": {
       "bytes": 1517988,
       "sha256": "69CD9E00183C17938EC4DFC1FF1EB33C292DDACF8B64AD054FD666054D2CBE2C",
       "git_blob": "d53ee36a9b35cc847aa8ba4806fbb1fb85a55c88"
+    },
+    "simplicial.tex": {
+      "bytes": 241631,
+      "sha256": "23E8DB6115B5B3465D2C1292D7E6CB244308204C6D1B7EE5F3AC071092D643F9",
+      "git_blob": "bcec4895b138415bea4febc348ad4e3e9f519b44"
     },
     "spaces-duality.tex": {
       "bytes": 80995,
@@ -118,7 +118,7 @@
       "SMOOTHING-010"
     ],
     "unadmitted_packets": [],
-    "r28_state": "no later admitted overlay imported at this receipt"
+    "r29_state": "no later admitted overlay imported at this receipt"
   },
   "known_admitted_metadata_defects": [
     {
@@ -130,7 +130,7 @@
   ],
   "projection_verifier": {
     "path": "tools/compose_overlay_projection.py",
-    "command": "python tools/compose_overlay_projection.py --existing-rounds 18 19 20 21 22 23 24 25 26 --target-rounds 18 19 20 21 22 23 24 25 26 27 --base-revision f3bfc1b987ac9defc1b7811650bac0ec84a01373 --check-revision 5a42b7d2a04c4d08be7861ec91306d8be05d631e",
+    "command": "python tools/compose_overlay_projection.py --existing-rounds 18 19 20 21 22 23 24 25 26 27 --target-rounds 18 19 20 21 22 23 24 25 26 27 28 --base-revision 1c26a825306ba0d14607e8364b49125ed3de39b5 --check-revision 1ed5b9fce0f75dec5ad551d32badd8e99abf058a",
     "status": "PASS"
   },
   "required_build_stems": [

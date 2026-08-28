@@ -171,6 +171,11 @@ def collect_projection(rounds: list[int]) -> tuple[dict[str, bytes], dict[str, l
             for operation in row.get("operations", []):
                 enriched = dict(operation)
                 enriched["round"] = round_number
+                enriched["candidate_directory"] = directory.relative_to(ROOT).as_posix()
+                if row.get("composition_base") is not None:
+                    enriched["composition_base"] = row["composition_base"]
+                if row.get("composition_projection") is not None:
+                    enriched["composition_projection"] = row["composition_projection"]
                 grouped[source].append(enriched)
                 per_source[source].append(enriched)
 
@@ -198,6 +203,48 @@ def collect_projection(rounds: list[int]) -> tuple[dict[str, bytes], dict[str, l
         )
 
     return authorities, grouped, round_reports
+
+
+def resolve_supersessions(operations: list[dict]) -> tuple[list[dict], set[str]]:
+    """Return the active last-wins operation set and superseded IDs.
+
+    Superseding operations are append-only registry events.  They do not mutate
+    their predecessor records; instead, their ``supersedes_operation_id`` field
+    removes the earlier operation from the effective authority projection.
+    """
+    by_id: dict[str, dict] = {}
+    superseded: set[str] = set()
+    for operation in sorted(
+        operations,
+        key=lambda item: (item["round"], item["start_byte"], item["operation_id"]),
+    ):
+        operation_id = operation["operation_id"]
+        if operation_id in by_id:
+            raise ValueError(f"duplicate operation ID: {operation_id}")
+        predecessor_id = operation.get("supersedes_operation_id")
+        if predecessor_id is not None:
+            predecessor = by_id.get(predecessor_id)
+            if predecessor is None:
+                raise ValueError(
+                    f"superseding operation has no earlier predecessor: "
+                    f"{operation_id} -> {predecessor_id}"
+                )
+            if predecessor["round"] >= operation["round"]:
+                raise ValueError(
+                    f"superseding operation is not later than its predecessor: "
+                    f"{operation_id} -> {predecessor_id}"
+                )
+            if (
+                predecessor["end_byte_exclusive"] <= operation["start_byte"]
+                or operation["end_byte_exclusive"] <= predecessor["start_byte"]
+            ):
+                raise ValueError(
+                    f"superseding operation does not overlap its predecessor: "
+                    f"{operation_id} -> {predecessor_id}"
+                )
+            superseded.add(predecessor_id)
+        by_id[operation_id] = operation
+    return [operation for operation in by_id.values() if operation["operation_id"] not in superseded], superseded
 
 
 def main() -> int:
@@ -236,8 +283,13 @@ def main() -> int:
     prepared: dict[str, dict] = {}
 
     for source, operations in grouped.items():
-        ordered = sorted(operations, key=lambda item: item["start_byte"])
-        for left, right in zip(ordered, ordered[1:]):
+        ordered = sorted(
+            operations,
+            key=lambda item: (item["round"], item["start_byte"], item["operation_id"]),
+        )
+        active, superseded_ids = resolve_supersessions(ordered)
+        active_by_offset = sorted(active, key=lambda item: item["start_byte"])
+        for left, right in zip(active_by_offset, active_by_offset[1:]):
             if left["end_byte_exclusive"] > right["start_byte"]:
                 raise ValueError(
                     "cross-overlay authority overlap: "
@@ -250,8 +302,12 @@ def main() -> int:
         new_operations = [
             operation for operation in ordered if operation["round"] not in existing_set
         ]
-        previous = apply_operations(authorities[source], previous_operations)
-        authority_projection = apply_operations(authorities[source], ordered)
+        previous_active, _ = resolve_supersessions(previous_operations)
+        previous = apply_operations(
+            authorities[source],
+            sorted(previous_active, key=lambda item: item["start_byte"]),
+        )
+        authority_projection = apply_operations(authorities[source], active_by_offset)
         source_path = ROOT / source
         current = git_blob(args.base_revision, source)
         current_blob = git_blob_id(current)
@@ -267,8 +323,108 @@ def main() -> int:
             )
         previous_blob = git_blob_id(previous)
         authority_projection_blob = git_blob_id(authority_projection)
-        rebased = rebase_operations(authorities[source], current, new_operations)
-        projection = apply_operations(current, rebased)
+        new_supersessions = [
+            operation
+            for operation in new_operations
+            if operation.get("supersedes_operation_id") is not None
+        ]
+        if current_blob == previous_blob:
+            # The checked cumulative source is the exact effective projection of
+            # the prior rounds.  Recompute it from the immutable authority using
+            # the active last-wins target operation set.  This is the canonical
+            # path for an append-only superseding correction such as R28.
+            rebased = []
+            projection = authority_projection
+        else:
+            if new_supersessions:
+                # A cumulative generated source can contain admitted edits from
+                # rounds outside this projection sequence. A superseding round
+                # therefore carries an exact cumulative composition base and
+                # projection. Verify those immutable artifacts and prove that
+                # the projection changes only the predecessor's postimage into
+                # the new postimage; never copy an isolated payload wholesale.
+                if len(new_operations) != 1 or len(new_supersessions) != 1:
+                    raise ValueError(
+                        "superseding cumulative composition must contain exactly "
+                        f"one new operation for {source}"
+                    )
+                operation = new_supersessions[0]
+                composition_base_path = operation.get("composition_base")
+                composition_projection_path = operation.get(
+                    "composition_projection"
+                )
+                if not composition_base_path or not composition_projection_path:
+                    raise ValueError(
+                        f"superseding operation lacks bound composition artifacts: {source}"
+                    )
+                candidate_root = ROOT / operation["candidate_directory"]
+                composition_base = (
+                    candidate_root / composition_base_path
+                ).read_bytes()
+                direct_projection = (
+                    candidate_root / composition_projection_path
+                ).read_bytes()
+                if composition_base != current:
+                    raise ValueError(
+                        f"bound cumulative composition base mismatch: {source}"
+                    )
+                predecessor_id = operation["supersedes_operation_id"]
+                predecessor = next(
+                    (
+                        candidate
+                        for candidate in ordered
+                        if candidate["operation_id"] == predecessor_id
+                    ),
+                    None,
+                )
+                if predecessor is None:
+                    raise ValueError(
+                        f"superseded predecessor not found: {predecessor_id}"
+                    )
+                prior_postimage = predecessor["replacement_text"].encode("utf-8")
+                new_postimage = operation["replacement_text"].encode("utf-8")
+                if composition_base.count(prior_postimage) != 1:
+                    raise ValueError(
+                        "bound cumulative base does not contain exactly one "
+                        f"predecessor postimage: {predecessor_id}"
+                    )
+                mapped_start = composition_base.index(prior_postimage)
+                mapped_end = mapped_start + len(prior_postimage)
+                expected_projection = (
+                    composition_base[:mapped_start]
+                    + new_postimage
+                    + composition_base[mapped_end:]
+                )
+                if direct_projection != expected_projection:
+                    raise ValueError(
+                        f"bound superseding projection is not the exact last-wins edit: {source}"
+                    )
+                mapped = dict(operation)
+                mapped["authority_start_byte"] = operation["start_byte"]
+                mapped["authority_end_byte_exclusive"] = operation[
+                    "end_byte_exclusive"
+                ]
+                mapped["start_byte"] = mapped_start
+                mapped["end_byte_exclusive"] = mapped_end
+                mapped["old_text"] = predecessor["replacement_text"]
+                rebased = [mapped]
+                projection = direct_projection
+            else:
+                new_active_ids = {
+                    operation["operation_id"]
+                    for operation in active
+                    if operation["round"] not in existing_set
+                }
+                rebased = rebase_operations(
+                    authorities[source],
+                    current,
+                    [
+                        operation
+                        for operation in new_operations
+                        if operation["operation_id"] in new_active_ids
+                    ],
+                )
+                projection = apply_operations(current, rebased)
         projection_blob = git_blob_id(projection)
         if current_blob == previous_blob and projection != authority_projection:
             raise ValueError(f"direct projection and rebased composition differ: {source}")
@@ -287,6 +443,7 @@ def main() -> int:
             "operations": ordered,
             "new_operations": new_operations,
             "rebased_operations": rebased,
+            "superseded_operation_ids": sorted(superseded_ids),
         }
 
     temporary_paths: dict[str, Path] = {}
@@ -334,6 +491,7 @@ def main() -> int:
                 ),
                 "target_operations": len(item["operations"]),
                 "new_operations": len(item["new_operations"]),
+                "superseded_operations": len(item["superseded_operation_ids"]),
                 "before_worktree_bytes": (
                     len(item["current_worktree"])
                     if item["current_worktree"] is not None
