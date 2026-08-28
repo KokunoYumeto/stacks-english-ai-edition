@@ -256,8 +256,10 @@ def main() -> int:
     }]
     write_jsonl(ROOT / "source-map.jsonl", source_map)
     stable = {
+        "authority_commit": UPSTREAM_COMMIT,
         "candidate_id": CANDIDATE_ID,
-        "schema": "mathematics-commons-stacks-stable-unit-manifest/v1",
+        "schema": "mathematics-commons-stacks-errata-units/v1",
+        "unit_count": 1,
         "units": [{
             "class": "source_defect_correction_supersession",
             "id": NEW_UNIT,

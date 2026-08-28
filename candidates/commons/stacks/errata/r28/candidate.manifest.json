@@ -48,7 +48,7 @@
   },
   "stable_unit_manifest": {
     "path": "stable-units.json",
-    "sha256": "C8943F2D397592FA1C6943E4882D0A3C803F4F3DA5B6F2C9C36B8C9210DEE9F7"
+    "sha256": "9B4B5F7EF3FCE786D365FB0E19A576054D5E5523EA43CDDB2B3FFE457C8703D6"
   },
   "source_map": {
     "path": "source-map.jsonl",
@@ -181,7 +181,7 @@
     },
     {
       "path": "prepare-inputs.py",
-      "sha256": "3924F668E5AD43CBE414C3BC2209EC5F3DC23378903D82E9E2D13666866CF988"
+      "sha256": "A893E34285DBF968A1C3B93E1D28C07CCA68094D50FE534D712E99956CF121CC"
     },
     {
       "path": "R28_PREDECESSOR_BINDING.json",
@@ -205,7 +205,7 @@
     },
     {
       "path": "replay/independent-review.json",
-      "sha256": "F01763C1AD5BD30C617E1FCEF3B99A702BEF8CC36C9D12C80F94B1921CEE34AB"
+      "sha256": "2E15F87CD859883219C81AB56A2DCB7D00F0C84B619615533BEF62805C5C0EA0"
     },
     {
       "path": "replay-build.py",
@@ -232,7 +232,7 @@
   "review_state": "performed",
   "independent_replay": "passed",
   "unresolved_defects": [
-    "Independent replay passed against the pre-review manifest CDBCCC0AF1AA74DA0E7C3E71DBF4D047BD29DA95CE2061FFF11FAB411DC89DB0; this final manifest rebind adds only the replay receipt.",
+    "Independent replay passed against the pre-review manifest 589F7CEBB56263BB2A5120E28008644E67711F46AA6D926C5CDDC40B272D3B9C; this final manifest rebind adds only the replay receipt.",
     "R28 supersedes the mathematical replacement in MC-STK-ERR-1183 while retaining R26 byte-for-byte as historical provenance.",
     "The isolated smoothing.tex reader retains the same cross-chapter undefined-reference target multiset as the frozen authority reader.",
     "Three inherited overfull-box diagnostics and one inherited underfull-box diagnostic remain; all 37 candidate pages and correction-sensitive page 16 were visually inspected with no clipping, overlap, broken diagram, blank page, missing glyph, or unreadable content.",
@@ -248,5 +248,5 @@
     "Do not contact or submit to upstream Stacks maintainers under the current no-AI-contribution boundary.",
     "Do not admit R28 except in a separate registry commit bound to this final manifest and passed replay receipt."
   ],
-  "generated_at_utc": "2026-08-28T20:05:37Z"
+  "generated_at_utc": "2026-08-28T20:06:18Z"
 }
