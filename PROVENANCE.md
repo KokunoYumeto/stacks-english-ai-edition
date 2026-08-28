@@ -153,19 +153,19 @@ produced exactly matching identities for all 24 PDFs: 2,437 pages, 25,862,999
 bytes, and a global fixed point on sweep four. Visual QA covers all 37 pages of
 `smoothing.pdf`, including 15 correction-locus pages at high resolution.
 
-The R25 content head is public at
-`fb3e4cb4d834c4e28d84b6df41466ad8aaa71b42`, tree
-`406a1c289c2d45f901de4356bd6e8d0ced48a661`. Anonymous readback matched all
-78 R25-changed source, registry, candidate, tool, documentation, and receipt
-paths totaling 4,746,502 bytes; the exact inventory is bound by the
-[R25 release receipt](validation/stacks-errata-a04446e-r25-release-2026-08-28.json).
-The source, 24 PDFs, and validation evidence are preserved as six
+The R26 preservation tag is public at commit
+`7720e2fd3080c39b02275e34c67421ea9cff31d8`, tree
+`cc3b7a21d57d07d70db1323487d125a2f69f98c8`, after a successful exact-head
+workflow. The source, 24 PDFs, and validation evidence are preserved as six
 byte-identical assets on GitHub and Zenodo version DOI
-`10.5281/zenodo.22143740`, as recorded by the
-[cross-host receipt](validation/ai-integrated-stacks-r25-publication-2026-08-28.json).
-Before R26 publication, public `main` is the later R25 preservation head
-`795313c42799161a69eb2c3d2ae3fa4b40279dfd`, tree
-`c2bf5e701c4e3b94d4124049aea1a36b41353ce1`.
+`10.5281/zenodo.22146844`, under concept DOI
+`10.5281/zenodo.22135180`, as recorded by the
+[cross-host receipt](validation/ai-integrated-stacks-r26-publication-2026-08-28.json).
+Anonymous readback matched 172,480,328 bytes on each host across all 12
+downloads. The deterministic source projection binds its exact Git preimage,
+retains every unchanged payload byte-for-byte, and records six privacy
+replacements in four historical build-provenance files in an embedded manifest.
+R25 remains publicly preserved as the preceding immutable version.
 
 ## Branch preservation
 

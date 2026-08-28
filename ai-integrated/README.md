@@ -67,13 +67,14 @@ PDF bytes at source `c90a50300dcec156e9ea5fe0c8802c8e36bde81e`, tree
 `651fff448fa41a4e7c38970eec169328002ac4f6`. Both linked-worktree builds are
 byte-for-byte reproducible. All 37 pages of the affected `smoothing.pdf` passed
 review, including 15 correction-locus pages inspected individually at high
-resolution. Before R26 publication, the public R25 content head remains
-`fb3e4cb4d834c4e28d84b6df41466ad8aaa71b42`; exact-head CI and anonymous
-readback pass. The six-asset R25 preservation package is public and
-byte-identical on GitHub and Zenodo version DOI `10.5281/zenodo.22143740` under
-concept DOI `10.5281/zenodo.22135180`. Public `main` is the later R25
-preservation head `795313c42799161a69eb2c3d2ae3fa4b40279dfd`, tree
-`c2bf5e701c4e3b94d4124049aea1a36b41353ce1`.
+resolution. The six-asset R26 preservation package is public and byte-identical
+on GitHub and Zenodo version DOI `10.5281/zenodo.22146844` under concept DOI
+`10.5281/zenodo.22135180`. Its tag resolves to commit
+`7720e2fd3080c39b02275e34c67421ea9cff31d8`, tree
+`cc3b7a21d57d07d70db1323487d125a2f69f98c8`; exact-head CI and anonymous
+readback of all six assets from both hosts pass with zero mismatches. The source
+projection’s embedded manifest binds six privacy replacements in four
+historical provenance files while preserving every unchanged source payload.
 
 ## Directory map
 

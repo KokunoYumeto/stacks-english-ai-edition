@@ -40,15 +40,15 @@ including 15 correction-locus pages at high resolution. All 24 PDF identities ma
 exactly between the two builds. Earlier R24, R22/R23, Verdier, and R21 receipts
 remain preserved as historical evidence for their exact scopes.
 
-Before R26 publication, the current R25 preservation release remains public at
-`fb3e4cb4d834c4e28d84b6df41466ad8aaa71b42`, tree
-`406a1c289c2d45f901de4356bd6e8d0ced48a661`; exact-head CI and anonymous
-readback of 78 R25-changed paths totaling 4,746,502 bytes pass. Its six-asset
-preservation package is byte-identical on GitHub and Zenodo version DOI
-`10.5281/zenodo.22143740` under concept DOI `10.5281/zenodo.22135180`. Public
-`main` is the later R25 preservation head
-`795313c42799161a69eb2c3d2ae3fa4b40279dfd`, tree
-`c2bf5e701c4e3b94d4124049aea1a36b41353ce1`.
+The current R26 preservation release is public at tag commit
+`7720e2fd3080c39b02275e34c67421ea9cff31d8`, tree
+`cc3b7a21d57d07d70db1323487d125a2f69f98c8`; exact-head CI passes. Its
+six-asset preservation package is byte-identical on GitHub and Zenodo version
+DOI `10.5281/zenodo.22146844` under concept DOI
+`10.5281/zenodo.22135180`: 172,480,328 bytes per host, 12 successful anonymous
+downloads, and zero mismatches. The commit-bound source projection contains
+2,169 entries and a hash-bound manifest for six privacy replacements in four
+historical provenance files.
 
 The historical R22/R23 content release is public at
 `3c2b49fe0d20519de4ab06951ac2cb5151b68782`, tree

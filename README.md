@@ -22,10 +22,10 @@ machine-readable validation evidence.
 [Current fixed-point build: PASS](validation/stacks-errata-a04446e-r26-build-2026-08-28.json) ·
 [Current visual QA: PASS](validation/stacks-errata-a04446e-r26-visual-qa-2026-08-28.json) ·
 [Current reproducibility: PASS](validation/stacks-errata-a04446e-r26-reproducibility-2026-08-28.json) ·
-[Current published R25 content receipt: PASS](validation/stacks-errata-a04446e-r25-release-2026-08-28.json) ·
-[Current preservation release: R25](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r25-2026-08-28) ·
-[Current Zenodo version: R25](https://doi.org/10.5281/zenodo.22143740) ·
-[R25 cross-host publication receipt: PASS](validation/ai-integrated-stacks-r25-publication-2026-08-28.json) ·
+[Current published R26 content receipt: PASS](validation/stacks-errata-a04446e-r26-release-2026-08-28.json) ·
+[Current preservation release: R26](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r26-2026-08-28) ·
+[Current Zenodo version: R26](https://doi.org/10.5281/zenodo.22146844) ·
+[R26 cross-host publication receipt: PASS](validation/ai-integrated-stacks-r26-publication-2026-08-28.json) ·
 [Historical R24 publication receipt: PASS](validation/ai-integrated-stacks-r24-publication-2026-08-28.json) ·
 [Historical R22/R23 publication receipt: PASS](validation/stacks-errata-a04446e-r22-r23-release-2026-08-27.json) ·
 [Historical Verdier publication receipt: PASS](validation/stacks-verdier-a04446e-1-2-13-r1-release-2026-08-26.json) ·
@@ -118,28 +118,24 @@ source, builder, environment, and sweep, and all 24 PDF identities were exactly
 equal. The 134,830-byte cumulative `smoothing.tex` postimage has SHA-256
 `85251479BB7D35D73CD5691C194D33B3ADC1BF245BCC248643D969DBBA0E7928`.
 
-The R25 content release is public at
-`fb3e4cb4d834c4e28d84b6df41466ad8aaa71b42`, tree
-`406a1c289c2d45f901de4356bd6e8d0ced48a661`. Its exact-head workflow passed,
-and anonymous HTTPS readback matched all 78 R25-changed paths totaling 4,746,502
-bytes by filename, byte count, SHA-256, and Git blob.
-
-That validated R25 state is preserved as a downloadable source, PDF, and
-evidence release on
-[GitHub](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r25-2026-08-28)
-and [Zenodo](https://doi.org/10.5281/zenodo.22143740), under concept DOI
-[`10.5281/zenodo.22135180`](https://doi.org/10.5281/zenodo.22135180). Anonymous
-readback matched all six assets and 171,723,585 bytes across both hosts by
-filename, byte count, and SHA-256. The source archive is bound to public commit
-`5cc39c1f2ce585f5d41c026ab14b025404fcba69`, tree
-`6058663639e5f03ccf923e11c65eb7c03c448da0`. Before R26 publication, public
-`main` is the later R25 preservation head
-`795313c42799161a69eb2c3d2ae3fa4b40279dfd`, tree
-`c2bf5e701c4e3b94d4124049aea1a36b41353ce1`. The EGA program remains explicitly
-partial and continues at EGA I §6.4.1. R26 has passed local composition,
-fixed-point, reproducibility, and visual gates; R25 remains the latest public
-and cross-host preservation release until R26 publication and anonymous
-readback complete.
+The validated R26 state is public as a downloadable source, PDF, and evidence
+release on
+[GitHub](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r26-2026-08-28)
+and [Zenodo](https://doi.org/10.5281/zenodo.22146844), under concept DOI
+[`10.5281/zenodo.22135180`](https://doi.org/10.5281/zenodo.22135180). The tag is
+bound to public commit `7720e2fd3080c39b02275e34c67421ea9cff31d8`, tree
+`cc3b7a21d57d07d70db1323487d125a2f69f98c8`; its exact-head workflow passed.
+Anonymous readback matched all six assets and 172,480,328 bytes on each host by
+filename, byte count, and SHA-256, for 12 successful downloads and zero
+mismatches. The 153,134,447-byte source archive contains a complete
+commit-bound projection, 2,169 entries, and an embedded manifest binding six
+privacy replacements in four historical provenance files; every unchanged
+source member is byte-identical to the bound Git archive. The exact cross-host
+evidence is in the
+[R26 publication receipt](validation/ai-integrated-stacks-r26-publication-2026-08-28.json).
+The EGA integration program in this repository remains explicitly partial and
+continues at EGA I §6.4.1. R25 remains preserved as the preceding immutable
+version in the same GitHub and Zenodo lineages.
 
 The preceding R22/R23 content release remains public at
 `3c2b49fe0d20519de4ab06951ac2cb5151b68782`, tree

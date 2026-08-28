@@ -170,9 +170,8 @@ records the byte-identical six-asset GitHub and Zenodo release: 171,723,585
 bytes, concept DOI `10.5281/zenodo.22135180`, and version DOI
 `10.5281/zenodo.22143740`.
 
-Before R26 publication, public `main` is the later R25 preservation head
-`795313c42799161a69eb2c3d2ae3fa4b40279dfd`, tree
-`c2bf5e701c4e3b94d4124049aea1a36b41353ce1`.
+R25 remains publicly preserved as an immutable historical version in the same
+GitHub release and Zenodo concept lineages.
 
 ## Current R26 composition and validation receipts
 
@@ -208,6 +207,19 @@ The current evidence is recorded in:
   together with the [second full receipt](stacks-errata-a04446e-r26-reproducibility-second-2026-08-28.json)
   — exact equality of all 24 artifact identities across two independent linked
   worktree builds.
+
+The
+[`ai-integrated-stacks-r26-publication-2026-08-28.json`](ai-integrated-stacks-r26-publication-2026-08-28.json)
+receipt binds the public R26 tag at commit
+`7720e2fd3080c39b02275e34c67421ea9cff31d8`, tree
+`cc3b7a21d57d07d70db1323487d125a2f69f98c8`, to the exact six-asset
+[GitHub release](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r26-2026-08-28)
+and [Zenodo version DOI `10.5281/zenodo.22146844`](https://doi.org/10.5281/zenodo.22146844)
+under concept DOI `10.5281/zenodo.22135180`. Anonymous readback matched all
+172,480,328 bytes on each host by filename, byte count, and SHA-256; all three
+downloaded ZIPs passed CRC and member replay. The source projection records six
+privacy replacements in four historical provenance files and preserves all
+unchanged source payloads byte-for-byte.
 
 R26 adjudication accepted 31 producer identities, aliased
 `SMOOTHING-002/003/004` to existing R1 corrections, rejected
