@@ -22,10 +22,9 @@ machine-readable validation evidence.
 [Current R27 fixed-point build: PASS](validation/stacks-errata-a04446e-r27-build-2026-08-28.json) ·
 [Current R27 visual QA: PASS](validation/stacks-errata-a04446e-r27-visual-qa-2026-08-28.json) ·
 [Current R27 reproducibility: PASS](validation/stacks-errata-a04446e-r27-reproducibility-2026-08-28.json) ·
-[Latest published content receipt: R26 PASS](validation/stacks-errata-a04446e-r26-release-2026-08-28.json) ·
-[Latest published preservation release: R26](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r26-2026-08-28) ·
-[Latest published Zenodo version: R26](https://doi.org/10.5281/zenodo.22146844) ·
-[R26 cross-host publication receipt: PASS](validation/ai-integrated-stacks-r26-publication-2026-08-28.json) ·
+[Latest published release receipt: R27 PASS](validation/stacks-errata-a04446e-r27-release-2026-08-28.json) ·
+[Latest published preservation release: R27](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r27-2026-08-28) ·
+[Latest published Zenodo version: R27](https://doi.org/10.5281/zenodo.22149250) ·
 [Historical R24 publication receipt: PASS](validation/ai-integrated-stacks-r24-publication-2026-08-28.json) ·
 [Historical R22/R23 publication receipt: PASS](validation/stacks-errata-a04446e-r22-r23-release-2026-08-27.json) ·
 [Historical Verdier publication receipt: PASS](validation/stacks-verdier-a04446e-1-2-13-r1-release-2026-08-26.json) ·
@@ -55,7 +54,7 @@ The pinned upstream baseline is
 | GAGA | Root chapter composed through r3; corpus review closed | All 126 units are classified and all 79 substantive units decided; the current unified `gaga.pdf` is 23 pages, while the sealed r3 dossier records its historical 22-page build | [r3 dossier](gaga_r3/STATUS.md) · [live chapter source](gaga.tex) |
 | FGA | Root additions composed and notation-normalized; corpus review closed | All 1,253 units and 1,612 term links are dispositioned; selected independently written additions are in the combined source; the fixed-point Moduli build is 83 pages | [Overview](fga/README.md) · [status](fga/status.md) |
 | EGA | Partial root-source composition; direct-source review active | Selected local additions are present in root TeX; the complete English discovery and diplomatic French editions remain separate read-only inputs; review reaches EGA I 6.3.10 and continues at 6.4.1 | [EGA dossier](ega/README.md) |
-| Errata and Verdier | Root-composed through R27; validated pre-publication | The integrated tree contains 28 overlays / 860 stable IDs. Its R1–R27 Stacks errata subset contains 27 batches, 848 correction IDs, and 961 exact v2 operations; R27 contributes 14 IDs and 14 manifest-bound replacements in `modules.tex` | [Registry](ai-integrated/registry/overlays.json) · [Verdier release](validation/stacks-verdier-a04446e-1-2-13-r1-release-2026-08-26.json) · [errata evidence](ai-integrated/candidates/commons/stacks/errata/) |
+| Errata and Verdier | Root-composed, published, and anonymously verified through R27 | The integrated tree contains 28 overlays / 860 stable IDs. Its R1–R27 Stacks errata subset contains 27 batches, 848 correction IDs, and 961 exact v2 operations; R27 contributes 14 IDs and 14 manifest-bound replacements in `modules.tex` | [Registry](ai-integrated/registry/overlays.json) · [R27 release](validation/stacks-errata-a04446e-r27-release-2026-08-28.json) · [errata evidence](ai-integrated/candidates/commons/stacks/errata/) |
 
 “Root-composed” means that the live top-level TeX tree changed and participates
 in the unified build. “Dossier-only” means that mappings, decisions, and
@@ -118,31 +117,25 @@ source, builder, environment, and sweep, and all 25 PDF identities were exactly
 equal. The 211,777-byte cumulative `modules.tex` postimage has SHA-256
 `BA34DCC89DCEE1BD5F0B9D3C986B18EE9618F723C10E7C7FD3DBD80E9E0B2300`.
 
-R27 is validated locally and is in the pre-publication stage. It is not yet
-described as a GitHub release or Zenodo version. Its registry cutoff is
-`8c0539a6a7aa001cc6152daee92d5c7a49bf6a93`, tree
-`110a3006fcbb27b94c4170639aab56db507f9a89`; its manifest-bound composition is
-commit `5a42b7d2a04c4d08be7861ec91306d8be05d631e`, tree
-`ecbad57ee36b4fb290c80cb4d1f83eab50a47460`.
-
-R26 remains the latest published state, available as a downloadable source,
-PDF, and evidence release on
-[GitHub](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r26-2026-08-28)
-and [Zenodo](https://doi.org/10.5281/zenodo.22146844), under concept DOI
-[`10.5281/zenodo.22135180`](https://doi.org/10.5281/zenodo.22135180). The tag is
-bound to public commit `7720e2fd3080c39b02275e34c67421ea9cff31d8`, tree
-`cc3b7a21d57d07d70db1323487d125a2f69f98c8`; its exact-head workflow passed.
-Anonymous readback matched all six assets and 172,480,328 bytes on each host by
-filename, byte count, and SHA-256, for 12 successful downloads and zero
-mismatches. The 153,134,447-byte source archive contains a complete
-commit-bound projection, 2,169 entries, and an embedded manifest binding six
-privacy replacements in four historical provenance files; every unchanged
-source member is byte-identical to the bound Git archive. The exact cross-host
-evidence is in the
-[R26 publication receipt](validation/ai-integrated-stacks-r26-publication-2026-08-28.json).
+R27 is public as tag
+[`ai-integrated-stacks-r27-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r27-2026-08-28)
+at commit `e624abadfe9e2ac1f311485c44c82d6c53df2df2`, tree
+`a2ba195c47c6cb41dca4e4ee7cb6292372e2e201`, and as Zenodo version DOI
+[`10.5281/zenodo.22149250`](https://doi.org/10.5281/zenodo.22149250) under
+concept DOI [`10.5281/zenodo.22135180`](https://doi.org/10.5281/zenodo.22135180).
+GitHub Actions run `33198300432`, attempt 2, completed successfully. Anonymous
+readback matched the six assets and 174,411,900 bytes on each host by filename,
+byte count, and SHA-256: 12 exact downloads and zero mismatches. The
+154,505,160-byte source archive contains 2,245 entries. The exact publication
+and public-byte evidence is in the
+[R27 release receipt](validation/stacks-errata-a04446e-r27-release-2026-08-28.json).
+Its registry cutoff remains `8c0539a6a7aa001cc6152daee92d5c7a49bf6a93`,
+tree `110a3006fcbb27b94c4170639aab56db507f9a89`; its manifest-bound
+composition is commit `5a42b7d2a04c4d08be7861ec91306d8be05d631e`, tree
+`ecbad57ee36b4fb290c80cb4d1f83eab50a47460`. R26 remains preserved as the
+preceding immutable historical version in the same GitHub and Zenodo lineages.
 The EGA integration program in this repository remains explicitly partial and
-continues at EGA I §6.4.1. R25 remains preserved as the preceding immutable
-version in the same GitHub and Zenodo lineages.
+continues at EGA I §6.4.1.
 
 The preceding R22/R23 content release remains public at
 `3c2b49fe0d20519de4ab06951ac2cb5151b68782`, tree

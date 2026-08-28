@@ -161,22 +161,21 @@ composed source identity while advancing `modules.tex` through 14 new
 correction IDs and 14 operations. Two independent linked-worktree builds
 produced exactly matching identities for all 25 PDFs: 2,492 pages, 26,609,586
 bytes, and a global fixed point on sweep four. Visual QA covers all 55 pages of
-`modules.pdf`, including 10 correction-locus pages at high resolution. R27 is
-validated pre-publication; this paragraph does not claim a public R27 release.
+`modules.pdf`, including 10 correction-locus pages at high resolution.
 
-R26 remains the latest published preservation tag at commit
-`7720e2fd3080c39b02275e34c67421ea9cff31d8`, tree
-`cc3b7a21d57d07d70db1323487d125a2f69f98c8`, after a successful exact-head
-workflow. The source, 24 PDFs, and validation evidence are preserved as six
-byte-identical assets on GitHub and Zenodo version DOI
-`10.5281/zenodo.22146844`, under concept DOI
-`10.5281/zenodo.22135180`, as recorded by the
-[cross-host receipt](validation/ai-integrated-stacks-r26-publication-2026-08-28.json).
-Anonymous readback matched 172,480,328 bytes on each host across all 12
-downloads. The deterministic source projection binds its exact Git preimage,
-retains every unchanged payload byte-for-byte, and records six privacy
-replacements in four historical build-provenance files in an embedded manifest.
-R25 remains publicly preserved as the preceding immutable version.
+R27 is the current published preservation tag
+[`ai-integrated-stacks-r27-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r27-2026-08-28)
+at commit `e624abadfe9e2ac1f311485c44c82d6c53df2df2`, tree
+`a2ba195c47c6cb41dca4e4ee7cb6292372e2e201`. Exact-head workflow run
+`33198300432`, attempt 2, completed successfully. The source, 25 PDFs, and
+validation evidence are preserved as six byte-identical assets on GitHub and
+Zenodo version DOI [`10.5281/zenodo.22149250`](https://doi.org/10.5281/zenodo.22149250),
+under concept DOI `10.5281/zenodo.22135180`, as recorded by the
+[R27 release receipt](validation/stacks-errata-a04446e-r27-release-2026-08-28.json).
+Anonymous readback matched 174,411,900 bytes on each host across all 12
+downloads with zero mismatches. The 154,505,160-byte deterministic source
+archive contains 2,245 entries and binds its exact Git preimage. R26 remains
+publicly preserved as the preceding immutable historical version.
 
 ## Branch preservation
 

@@ -68,16 +68,17 @@ PDF bytes at source `dc849731c9768048b993eb5a9df218118b817f40`, tree
 `b3462d130dedb3b3c0625cab0d7a2d406114e17f`. Both linked-worktree builds are
 byte-for-byte reproducible. All 55 pages of the affected `modules.pdf` passed
 review, including 10 correction-locus pages inspected individually at high
-resolution. R27 is validated pre-publication and no R27 GitHub release or
-Zenodo version is claimed yet. The six-asset R26 preservation package remains
-the latest published package and is public and byte-identical
-on GitHub and Zenodo version DOI `10.5281/zenodo.22146844` under concept DOI
-`10.5281/zenodo.22135180`. Its tag resolves to commit
-`7720e2fd3080c39b02275e34c67421ea9cff31d8`, tree
-`cc3b7a21d57d07d70db1323487d125a2f69f98c8`; exact-head CI and anonymous
-readback of all six assets from both hosts pass with zero mismatches. The source
-projection’s embedded manifest binds six privacy replacements in four
-historical provenance files while preserving every unchanged source payload.
+resolution. R27 is public as tag
+[`ai-integrated-stacks-r27-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r27-2026-08-28)
+at commit `e624abadfe9e2ac1f311485c44c82d6c53df2df2`, tree
+`a2ba195c47c6cb41dca4e4ee7cb6292372e2e201`, and Zenodo version DOI
+[`10.5281/zenodo.22149250`](https://doi.org/10.5281/zenodo.22149250) under
+concept DOI `10.5281/zenodo.22135180`. Workflow run `33198300432`, attempt 2,
+passed. The six-asset package totals 174,411,900 bytes on each host; all 12
+anonymous downloads matched by filename, byte count, and SHA-256 with zero
+mismatches. The 154,505,160-byte source archive contains 2,245 entries. See the
+[R27 release receipt](../validation/stacks-errata-a04446e-r27-release-2026-08-28.json).
+R26 is the preceding immutable historical release.
 
 ## Directory map
 

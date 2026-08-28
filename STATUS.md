@@ -77,16 +77,16 @@ in each corpus dossier and in the machine-readable registry.
   `8c0539a6a7aa001cc6152daee92d5c7a49bf6a93`, linear import
   `f3bfc1b987ac9defc1b7811650bac0ec84a01373`, and composition
   `5a42b7d2a04c4d08be7861ec91306d8be05d631e`.
-- R27 is validated and pre-publication; no R27 GitHub release or Zenodo version
-  is claimed here. R26 remains the latest published preservation release at tag commit
-  `7720e2fd3080c39b02275e34c67421ea9cff31d8`, tree
-  `cc3b7a21d57d07d70db1323487d125a2f69f98c8`; exact-head CI passed. Its
-  six assets total 172,480,328 bytes on each of GitHub and Zenodo, at version
-  DOI `10.5281/zenodo.22146844` under concept DOI
-  `10.5281/zenodo.22135180`. Anonymous readback matched all 12 downloads by
-  filename, byte count, and SHA-256, with zero mismatches. The source projection
-  records six privacy replacements in four historical provenance files and
-  preserves every unchanged source payload byte-exactly.
+- R27 is published at tag
+  [`ai-integrated-stacks-r27-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r27-2026-08-28),
+  commit `e624abadfe9e2ac1f311485c44c82d6c53df2df2`, tree
+  `a2ba195c47c6cb41dca4e4ee7cb6292372e2e201`, and Zenodo version DOI
+  [`10.5281/zenodo.22149250`](https://doi.org/10.5281/zenodo.22149250) under
+  concept DOI `10.5281/zenodo.22135180`. Workflow run `33198300432`, attempt 2,
+  passed. Its six assets total 174,411,900 bytes on each host; anonymous
+  readback matched all 12 downloads by filename, byte count, and SHA-256 with
+  zero mismatches. The 154,505,160-byte source archive contains 2,245 entries.
+  R26 is the preceding immutable historical release.
 - The preceding R22/R23 content release remains public at
   `3c2b49fe0d20519de4ab06951ac2cb5151b68782`; exact-head CI passed and
   anonymous readback matched 138 checked files totaling 25,024,008 bytes.
@@ -125,11 +125,11 @@ fixed-point sweep; all 25 `{stem, pages, bytes, sha256}` artifact tuples are
 exactly equal. Earlier R24, R22/R23, Verdier, and R21 receipts remain preserved
 as historical evidence for their exact source identities and scopes.
 
-The [latest published R26 release receipt](validation/stacks-errata-a04446e-r26-release-2026-08-28.json)
-binds the content composition and exact-head validation evidence. The
-[cross-host receipt](validation/ai-integrated-stacks-r26-publication-2026-08-28.json)
-binds the identical public six-file package on GitHub and Zenodo, including
-anonymous SHA-256 readback and ZIP replay.
+The [current R27 publication receipt](validation/stacks-errata-a04446e-r27-release-2026-08-28.json)
+binds the public commit and tree, successful exact-head workflow, identical
+six-file package on GitHub and Zenodo, anonymous SHA-256 readback, and archive
+member replay. The earlier R26 receipts remain historical evidence for the
+preceding immutable version.
 
 The preceding Verdier content release remains public at
 `4947e4a6d22971ea793e4b4bc2b09d8ab8cc04d0`. Exact anonymous readback of 62

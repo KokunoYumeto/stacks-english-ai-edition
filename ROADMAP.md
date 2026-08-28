@@ -41,16 +41,18 @@ including 10 correction-locus pages at high resolution. All 25 PDF identities
 match exactly between the two builds. Earlier R26, R24, R22/R23, Verdier, and R21 receipts
 remain preserved as historical evidence for their exact scopes.
 
-R27 is validated and pre-publication; no R27 GitHub release or Zenodo version
-is claimed yet. R26 remains the latest published preservation release at tag commit
-`7720e2fd3080c39b02275e34c67421ea9cff31d8`, tree
-`cc3b7a21d57d07d70db1323487d125a2f69f98c8`; exact-head CI passes. Its
-six-asset preservation package is byte-identical on GitHub and Zenodo version
-DOI `10.5281/zenodo.22146844` under concept DOI
-`10.5281/zenodo.22135180`: 172,480,328 bytes per host, 12 successful anonymous
-downloads, and zero mismatches. The commit-bound source projection contains
-2,169 entries and a hash-bound manifest for six privacy replacements in four
-historical provenance files.
+R27 is published as tag
+[`ai-integrated-stacks-r27-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r27-2026-08-28)
+at commit `e624abadfe9e2ac1f311485c44c82d6c53df2df2`, tree
+`a2ba195c47c6cb41dca4e4ee7cb6292372e2e201`, and as Zenodo version DOI
+[`10.5281/zenodo.22149250`](https://doi.org/10.5281/zenodo.22149250) under
+concept DOI `10.5281/zenodo.22135180`. Exact-head workflow run `33198300432`,
+attempt 2, passed. The six-asset package is byte-identical on both hosts:
+174,411,900 bytes per host, 12 successful anonymous downloads, and zero
+mismatches. The commit-bound source archive is 154,505,160 bytes and contains
+2,245 entries. The
+[R27 release receipt](validation/stacks-errata-a04446e-r27-release-2026-08-28.json)
+binds the transaction and readback. R26 is the preceding historical release.
 
 The historical R22/R23 content release is public at
 `3c2b49fe0d20519de4ab06951ac2cb5151b68782`, tree

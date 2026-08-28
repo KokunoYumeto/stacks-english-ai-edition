@@ -173,9 +173,9 @@ bytes, concept DOI `10.5281/zenodo.22135180`, and version DOI
 R25 remains publicly preserved as an immutable historical version in the same
 GitHub release and Zenodo concept lineages.
 
-## Current R26 composition and validation receipts
+## Historical R26 composition and validation receipts
 
-The current validated source composition advances the registry to **27
+The historical R26 source composition advanced the registry to **27
 overlays / 846 stable IDs** at R26 admission cutoff
 `a7c4a3c52b9a32e96e0f4b98f9579369026d9e1b`, tree
 `93af84d65d7b250fe0f4d660782ccf330b9e4743`. The Stacks errata subset is
@@ -183,8 +183,8 @@ R1–R26: 26 batches, 834 correction IDs, and 947 exact v2 operations. R26 adds
 25 IDs and 39 manifest-bound operations affecting only `smoothing.tex`; its
 highest stable identifier is `MC-STK-ERR-1201`.
 
-[`composition-current.json`](composition-current.json) binds final candidate
-commit `d1f8c1b4654e8d63ea6380dfb5d2e256a6982121`, tree
+The historical R26 evidence binds final candidate commit
+`d1f8c1b4654e8d63ea6380dfb5d2e256a6982121`, tree
 `aca634a2dc857f97f6deb52cf4da5ba0792d6d23`, candidate subtree
 `cc94b817fabf54d21c4914e5b7ebf8f168bac807`, registry import
 `ca00b6023be95e0e928d5c0380e24011756bb0ef`, and source composition commit
@@ -193,7 +193,7 @@ commit `d1f8c1b4654e8d63ea6380dfb5d2e256a6982121`, tree
 `smoothing.tex` has SHA-256
 `85251479BB7D35D73CD5691C194D33B3ADC1BF245BCC248643D969DBBA0E7928`.
 
-The current evidence is recorded in:
+The preserved R26 evidence is recorded in:
 
 - [`stacks-errata-a04446e-r26-build-2026-08-28.json`](stacks-errata-a04446e-r26-build-2026-08-28.json)
   — source `c90a50300dcec156e9ea5fe0c8802c8e36bde81e`, tree
@@ -227,3 +227,46 @@ R26 adjudication accepted 31 producer identities, aliased
 `008+012+013+014`, `016+018`, and `017+019` before materializing 25 new stable
 units. The active EGA I–IV integration program remains incomplete and resumes
 at EGA I §6.4.1.
+
+## Current R27 composition, validation, and publication receipts
+
+R27 advances the integrated registry to **28 overlays / 860 stable IDs** at
+admission commit `8c0539a6a7aa001cc6152daee92d5c7a49bf6a93`, tree
+`110a3006fcbb27b94c4170639aab56db507f9a89`. Its R1–R27 Stacks errata subset
+contains 27 batches, 848 correction IDs, and 961 exact v2 operations. R27 adds
+14 stable IDs and 14 manifest-bound operations affecting only cumulative
+`modules.tex`.
+
+[`composition-current.json`](composition-current.json) binds lease
+`1f05772d6f46ab851cdecdf53b70c11ea698cb14`, candidate
+`77fcc9fc2341e72b077224399743f1062e73b228`, admission
+`8c0539a6a7aa001cc6152daee92d5c7a49bf6a93`, registry import
+`f3bfc1b987ac9defc1b7811650bac0ec84a01373`, and source composition
+`5a42b7d2a04c4d08be7861ec91306d8be05d631e`. The 211,777-byte
+`modules.tex` postimage has SHA-256
+`BA34DCC89DCEE1BD5F0B9D3C986B18EE9618F723C10E7C7FD3DBD80E9E0B2300`.
+
+The R27 deterministic evidence is recorded in:
+
+- [`stacks-errata-a04446e-r27-build-2026-08-28.json`](stacks-errata-a04446e-r27-build-2026-08-28.json)
+  — 25 PDFs, 2,492 pages, 26,609,586 PDF bytes, fixed point on sweep four,
+  and zero listed serious diagnostics;
+- [`stacks-errata-a04446e-r27-visual-qa-2026-08-28.json`](stacks-errata-a04446e-r27-visual-qa-2026-08-28.json)
+  — all 55 pages of `modules.pdf` reviewed and all 10 correction-locus pages
+  inspected at high resolution with zero recorded rendering defects; and
+- [`stacks-errata-a04446e-r27-reproducibility-2026-08-28.json`](stacks-errata-a04446e-r27-reproducibility-2026-08-28.json)
+  together with the [second full receipt](stacks-errata-a04446e-r27-reproducibility-second-2026-08-28.json)
+  — exact equality of all 25 artifact identities across two linked-worktree
+  builds.
+
+The [R27 release receipt](stacks-errata-a04446e-r27-release-2026-08-28.json)
+binds public tag
+[`ai-integrated-stacks-r27-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r27-2026-08-28)
+at commit `e624abadfe9e2ac1f311485c44c82d6c53df2df2`, tree
+`a2ba195c47c6cb41dca4e4ee7cb6292372e2e201`, successful workflow run
+`33198300432` attempt 2, and [Zenodo version DOI
+`10.5281/zenodo.22149250`](https://doi.org/10.5281/zenodo.22149250) under concept
+DOI `10.5281/zenodo.22135180`. The six assets total 174,411,900 bytes on each
+host. All 12 anonymous downloads matched by filename, byte count, and SHA-256
+with zero mismatches. The source archive is 154,505,160 bytes and contains
+2,245 entries. R26 remains the preceding immutable historical release.

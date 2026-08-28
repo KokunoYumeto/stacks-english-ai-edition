@@ -91,24 +91,21 @@ and review-receipt SHA-256 is
 The candidate tree is `6183d66d4f907b7b83f1b69dc799dcfe92a0f4d0` with candidate
 subtree `fe8a24fb2c4e0279a22d9839364fb3ffd12367d8`.
 
-R27 is validated pre-publication and has no claimed R27 GitHub release or Zenodo
-version at this stage. The [latest published R26 release receipt](validation/stacks-errata-a04446e-r26-release-2026-08-28.json)
-binds the validated content composition and build evidence. The public release
-tag resolves to commit `7720e2fd3080c39b02275e34c67421ea9cff31d8`, tree
-`cc3b7a21d57d07d70db1323487d125a2f69f98c8`, whose exact-head workflow passed.
-
-The [cross-host preservation receipt](validation/ai-integrated-stacks-r26-publication-2026-08-28.json)
-binds the exact six-file R26 package to the
-[GitHub release](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r26-2026-08-28)
-and [Zenodo record 22146844](https://doi.org/10.5281/zenodo.22146844), concept
+The [R27 release receipt](validation/stacks-errata-a04446e-r27-release-2026-08-28.json)
+binds the published tag
+[`ai-integrated-stacks-r27-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r27-2026-08-28)
+to commit `e624abadfe9e2ac1f311485c44c82d6c53df2df2`, tree
+`a2ba195c47c6cb41dca4e4ee7cb6292372e2e201`, successful GitHub Actions run
+`33198300432` attempt 2, and [Zenodo version DOI
+`10.5281/zenodo.22149250`](https://doi.org/10.5281/zenodo.22149250) under concept
 DOI [`10.5281/zenodo.22135180`](https://doi.org/10.5281/zenodo.22135180).
-Anonymous downloads from both hosts matched all six filenames and 172,480,328
-bytes per host by byte count and SHA-256. All three downloaded ZIPs passed CRC
-and member replay. The source projection contains 2,169 entries and records six
-privacy replacements in four historical provenance files, with every unchanged
-payload byte-identical to the bound Git archive. This preserves R26; it is not
-evidence that the active EGA I--IV integration program is complete. Earlier
-R25 and R24 receipts remain historical evidence for their exact versions.
+Anonymous downloads from both hosts matched all six filenames and 174,411,900
+bytes per host by byte count and SHA-256: 12 exact downloads and zero
+mismatches. The 154,505,160-byte source archive contains 2,245 entries. The
+receipt also binds archive-member replay and the 25-PDF, 2,492-page,
+26,609,586-byte build inventory. R26, R25, and R24 remain historical evidence
+for their exact immutable versions; this R27 release is not evidence that the
+active EGA I--IV integration program is complete.
 
 The [historical R22/R23 publication receipt](validation/stacks-errata-a04446e-r22-r23-release-2026-08-27.json)
 binds the preceding public R22/R23 content head
