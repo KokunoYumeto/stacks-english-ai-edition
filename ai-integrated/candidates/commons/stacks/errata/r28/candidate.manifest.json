@@ -1,0 +1,252 @@
+{
+  "$schema": "../../../../../schemas/candidate-manifest.schema.json",
+  "schema": "mathematics-commons-stacks-candidate-manifest/v1",
+  "candidate_id": "stacks-errata-a04446e-r28",
+  "lease_id": "stacks-lease-000032-errata-r28",
+  "namespace": "commons/stacks/errata/r28",
+  "writer_task": "01a0256d-5693-77c1-96b2-cf37101e0c6c",
+  "upstream": {
+    "lock": "upstream/stacks.lock.json",
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e"
+  },
+  "source_authorities": [
+    {
+      "path": "authority/canon/INTAKE_VALIDATION.json",
+      "sha256": "E33F1BBB360020237BC897613AA24E122E5C7BE0EFCE5D17C9BE4CD03FEC9EE4"
+    },
+    {
+      "path": "authority/canon/R28_PREDECESSOR_BINDING.json",
+      "sha256": "7A4E2CA5370EB72ADDBF3536B1AE54D45D5A1CAE7E8B90C2A790EC8AC6C54C98"
+    },
+    {
+      "path": "authority/canon/R28_SMOOTHING_SUPERSESSION_SPEC.json",
+      "sha256": "17DDE0E7F4AC21DE89AA9CD0C1304139AAC6080D7E61C8F78AB893138989B5F3"
+    },
+    {
+      "path": "authority/composition-base/smoothing.tex",
+      "sha256": "85251479BB7D35D73CD5691C194D33B3ADC1BF245BCC248643D969DBBA0E7928"
+    },
+    {
+      "path": "authority/COPYING",
+      "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"
+    },
+    {
+      "path": "authority/source/smoothing.tex",
+      "sha256": "FD28CF874BB7DAD3C5C5FF03314D1C83701613A8A98730A99B9CA7A4BCFE6068"
+    },
+    {
+      "path": "authority/upstream.lock.json",
+      "sha256": "DEA0183484C3E8EF0EECE5220AE7CE649E765D3A7CA46BE8EEC98EB738B549F9"
+    }
+  ],
+  "source_closure": {
+    "enumerated": true,
+    "expected_units": 1,
+    "manifested_units": 1,
+    "complete": true
+  },
+  "stable_unit_manifest": {
+    "path": "stable-units.json",
+    "sha256": "9B4B5F7EF3FCE786D365FB0E19A576054D5E5523EA43CDDB2B3FFE457C8703D6"
+  },
+  "source_map": {
+    "path": "source-map.jsonl",
+    "sha256": "7D878BB15EEBB6BAC417026613B719A5BCDBBDC9FE299654A9E7FAA7DF74198B"
+  },
+  "decision_ledger": {
+    "path": "decisions.jsonl",
+    "sha256": "BAC33ADCA7A4FA6EA0E4A73B8AF65E2A5A316B8C84373D0D4D6005C7DDA47289"
+  },
+  "rejection_ledger": {
+    "path": "rejections.jsonl",
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  "formula_diagram_inventory": {
+    "path": "formula-diagram-inventory.json",
+    "sha256": "7764B6AA65B91C8269D8E547B50CCCBE94AFC8742F70C0D194AFDD495B233D9B"
+  },
+  "builds": [
+    {
+      "path": ".gitattributes",
+      "sha256": "705FD4D6451A31D36B3DF7DE96F83F30AC976C9B4A6D1E51671D8E2F33E2D0DA"
+    },
+    {
+      "path": "build-manifest.py",
+      "sha256": "355D133750F0ED8C6A091093D84EFFDE51C92F8F40FEDDD8A1CF63C4005A6323"
+    },
+    {
+      "path": "build-receipt.py",
+      "sha256": "0276A1A81986AF7D2D981DBB8509C02B9B39C9C6EB46D2A019CA71BB7FB811E1"
+    },
+    {
+      "path": "BUILD.md",
+      "sha256": "A533AAF5B12AAE757C65325CDFD2B0580971AA1D3D01716C63B02FE1D1107A98"
+    },
+    {
+      "path": "builds/build-execution.json",
+      "sha256": "5E392202B5EACDFCA3A18D9F9893ECB3043C10F63EFA7877616F92D66F45CE25"
+    },
+    {
+      "path": "builds/build-receipt.json",
+      "sha256": "4929CF5DAFA2E72A7480B6EB8C330E385ED6B95CC1F7C6391ECF57BECFF9F1FC"
+    },
+    {
+      "path": "builds/deterministic-replay.json",
+      "sha256": "FE84931DE871F22B8B3CAC2DA05E3DE664885FD20842701B112E9529AA61A6EB"
+    },
+    {
+      "path": "builds/smoothing.authority.bibtex.txt",
+      "sha256": "D6F481B4F0F80167F38C64D2590976150AC424D7410F5C00F28307F9E438AD57"
+    },
+    {
+      "path": "builds/smoothing.authority.log",
+      "sha256": "5BAA8737CFC66A04A5E7006CA30E5988CD45911368B7EAF4D173E0E8DAD60846"
+    },
+    {
+      "path": "builds/smoothing.authority.pass3.txt",
+      "sha256": "F49189003FE4F1F80B0C0E392E6CF6854E6EF44EA80BE4B63DEEC0ED984F1E25"
+    },
+    {
+      "path": "builds/smoothing.authority.pdf",
+      "sha256": "6B480159BF5BFA27E793F18F76A158D204EE1FD93E9270B8D667F1C7048B98B6"
+    },
+    {
+      "path": "builds/smoothing.bibtex.txt",
+      "sha256": "D6F481B4F0F80167F38C64D2590976150AC424D7410F5C00F28307F9E438AD57"
+    },
+    {
+      "path": "builds/smoothing.log",
+      "sha256": "C8B90FB8022ED2C82CF1791EDE3AC74061B029C622063B491E7E1A6D0DE8170F"
+    },
+    {
+      "path": "builds/smoothing.pass3.txt",
+      "sha256": "3538ED6AD029E85AD710F13D9D9F2A380F73E027712C1F5DB337E1BC91B56935"
+    },
+    {
+      "path": "builds/smoothing.pdf",
+      "sha256": "E35425F1699CCCB50A165F1A008F8B658103E7D5C847DBC4AD9CE0CE5C3EAF80"
+    },
+    {
+      "path": "builds/source-page-map.json",
+      "sha256": "F6C4B85A6BFBCE6326A20645DCD75AEF9E18829E45B4163AAD38CE66ABFC6896"
+    },
+    {
+      "path": "builds/validation.json",
+      "sha256": "2924D3F604D28055F058D787DBEAB1A64579E00010BDCF136D222ECA5C662E00"
+    },
+    {
+      "path": "builds/visual-qa.json",
+      "sha256": "1AC17BF9223AA51B4EB8662413494091817A67B19B2C3FB3A5C9EAD796DE5C19"
+    },
+    {
+      "path": "candidate.config.json",
+      "sha256": "F96B2372DABCB196861FFCE4EAA3089C66F8217DE70FC003D8AB300B38394E32"
+    },
+    {
+      "path": "check-manifest.py",
+      "sha256": "4DFF86119E97FBC1BE4598E8C7C8FFDAD2D37E558E0F19574F1E30B0B39DD7EA"
+    },
+    {
+      "path": "composition-projection/smoothing.tex",
+      "sha256": "85A37C95D5591632D11E7BE6775039638B6F5200B44729ABCEA1A644D9F5B056"
+    },
+    {
+      "path": "derive-visual-pages.py",
+      "sha256": "C0C6D4C1022955FC233D2C29C91AF3312568ED1B24F0DFADB73C422CECF4E045"
+    },
+    {
+      "path": "deterministic-replay.py",
+      "sha256": "AA6738C929DF9396741FF4E8B22F9E344C5BCBEBF9C16A1F9A176185BA053698"
+    },
+    {
+      "path": "independent-review.py",
+      "sha256": "4E8B184B0BD8862460EE12FD42396552E530FD48A3E5E79C07B760258EFE60AC"
+    },
+    {
+      "path": "INTAKE_VALIDATION.json",
+      "sha256": "E33F1BBB360020237BC897613AA24E122E5C7BE0EFCE5D17C9BE4CD03FEC9EE4"
+    },
+    {
+      "path": "LEASE.json",
+      "sha256": "62992E6C46FAFEC694CA7239846BBAC78418938CE58527592772B6AE84EC8C06"
+    },
+    {
+      "path": "operation-spec.json",
+      "sha256": "4C00B1A55F8C990018583DCB397BF865526757334A57308AE83B73A720F0084C"
+    },
+    {
+      "path": "payload/smoothing.tex",
+      "sha256": "7C475ABEFC3CF2F3F2534F0CA69B8D8BB726BF88195CB50FE849DF99B7D0CD4A"
+    },
+    {
+      "path": "prepare-inputs.py",
+      "sha256": "A893E34285DBF968A1C3B93E1D28C07CCA68094D50FE534D712E99956CF121CC"
+    },
+    {
+      "path": "R28_PREDECESSOR_BINDING.json",
+      "sha256": "7A4E2CA5370EB72ADDBF3536B1AE54D45D5A1CAE7E8B90C2A790EC8AC6C54C98"
+    },
+    {
+      "path": "R28_SMOOTHING_PROOF.md",
+      "sha256": "7DA65436281DF12F572943E2A7FF2EE9F5A0C66058B642DCDF9ED416B91EBE65"
+    },
+    {
+      "path": "R28_SMOOTHING_SUPERSESSION_SPEC.json",
+      "sha256": "17DDE0E7F4AC21DE89AA9CD0C1304139AAC6080D7E61C8F78AB893138989B5F3"
+    },
+    {
+      "path": "README.md",
+      "sha256": "D5F313620E91BF1F4D2C5570B497CE3C19D9FCEAE11C1DD1EF851A8C373E6395"
+    },
+    {
+      "path": "render-qa.py",
+      "sha256": "5CAB1CFDFA3BDFA9CB1B51FA548E0A445E012B124BF010F82DB4CEDFAC410F79"
+    },
+    {
+      "path": "replay/independent-review.json",
+      "sha256": "2E15F87CD859883219C81AB56A2DCB7D00F0C84B619615533BEF62805C5C0EA0"
+    },
+    {
+      "path": "replay-build.py",
+      "sha256": "E678B6F1E14F5397BCF9E3C9DB01685531A3F36DB51718C4C54805ED00BB3AA1"
+    },
+    {
+      "path": "source-validation.json",
+      "sha256": "3F3BD32B61AE51AA85C2ACF3F62AF95EE21ABCD1F0A32E723531FAD274B01DE2"
+    },
+    {
+      "path": "verify-source.py",
+      "sha256": "48549157F230BD2BD28545489639C8F44FA93E62CFEE91ABEF137B77BC66C8FF"
+    },
+    {
+      "path": "verify.py",
+      "sha256": "DF55400E5B9D9574C594AE89F34F6C0D5CA18E0BE5B972F084F7B7E079363081"
+    },
+    {
+      "path": "visual-qa.py",
+      "sha256": "7A8A7D25C0732D17E85A9C5911DB00C5B6994F3A4F0FC23A07B1B61BCA449460"
+    }
+  ],
+  "rights_state": "The official authority, public cumulative composition base, standalone payload, and composition projection retain the Stacks Project GNU Free Documentation License 1.2; metadata and receipts do not relicense upstream content. This is an independently maintained AI-produced English correction with no Stacks Project review, approval, affiliation, or endorsement. Legal certification was not performed.",
+  "review_state": "performed",
+  "independent_replay": "passed",
+  "unresolved_defects": [
+    "Independent replay passed against the pre-review manifest 589F7CEBB56263BB2A5120E28008644E67711F46AA6D926C5CDDC40B272D3B9C; this final manifest rebind adds only the replay receipt.",
+    "R28 supersedes the mathematical replacement in MC-STK-ERR-1183 while retaining R26 byte-for-byte as historical provenance.",
+    "The isolated smoothing.tex reader retains the same cross-chapter undefined-reference target multiset as the frozen authority reader.",
+    "Three inherited overfull-box diagnostics and one inherited underfull-box diagnostic remain; all 37 candidate pages and correction-sensitive page 16 were visually inspected with no clipping, overlap, broken diagram, blank page, missing glyph, or unreadable content.",
+    "The standalone PDF is untagged; its fonts are embedded and have ToUnicode maps.",
+    "Cumulative composition must apply only the exact superseding fragment against public commit f8e6c227aa3dc89256427f3b64a2ad330d5ff221; the isolated payload must not be copied wholesale.",
+    "Canonical translations preserve their own frozen authority/emendation contracts and are not silently changed by this English corrected overlay."
+  ],
+  "stop_conditions": [
+    "Do not mutate the literal stacks-project master mirror or the admitted R26 candidate.",
+    "Do not reuse stable ID MC-STK-ERR-1183; compose MC-STK-ERR-1216 as its explicit last-wins supersession.",
+    "Do not copy the isolated R28 payload wholesale into the cumulative English edition.",
+    "Do not apply this correction silently to canonical translation source or PDFs.",
+    "Do not contact or submit to upstream Stacks maintainers under the current no-AI-contribution boundary.",
+    "Do not admit R28 except in a separate registry commit bound to this final manifest and passed replay receipt."
+  ],
+  "generated_at_utc": "2026-08-28T20:06:18Z"
+}

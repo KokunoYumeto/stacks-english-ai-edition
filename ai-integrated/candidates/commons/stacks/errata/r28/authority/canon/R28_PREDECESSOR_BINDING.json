@@ -1,0 +1,43 @@
+{
+  "candidate_id": "stacks-errata-a04446e-r28",
+  "composition_base": {
+    "blob": "ea0c59e134220971957a0a019e57663d0102cd07",
+    "bytes": 134830,
+    "commit": "f8e6c227aa3dc89256427f3b64a2ad330d5ff221",
+    "path": "authority/composition-base/smoothing.tex",
+    "sha256": "85251479BB7D35D73CD5691C194D33B3ADC1BF245BCC248643D969DBBA0E7928",
+    "tree": "94112e11f45252b9f9ce01783103e0b925f0cc0d"
+  },
+  "predecessor": {
+    "manifest_sha256": "1A045F9452501725CAF45996FD19C633D594E0C3D57AA745780C3C06FB031085",
+    "operation_id": "MC-STK-ERR-1183-OP1",
+    "overlay_id": "stacks-errata-a04446e-r26",
+    "replacement_sha256": "DB0FD995F578CDBBFB9C660958A647DC328A4E1A420F50B247E4EC271310B54E",
+    "replacement_text": "$(a_k)^N + b_k$",
+    "source_map_sha256": "46C29F2D0DFDC1081FFFDA61757DFCEB4E3036881A9D2D272B5ED9D67626B9BF",
+    "unit_id": "MC-STK-ERR-1183"
+  },
+  "projection": {
+    "bytes": 134835,
+    "path": "composition-projection/smoothing.tex",
+    "sha256": "85A37C95D5591632D11E7BE6775039638B6F5200B44729ABCEA1A644D9F5B056"
+  },
+  "schema": "mathematics-commons-stacks-errata-predecessor-binding/v1",
+  "superseding_operation": {
+    "base_blob": "ea0c59e134220971957a0a019e57663d0102cd07",
+    "base_commit": "f8e6c227aa3dc89256427f3b64a2ad330d5ff221",
+    "base_end_byte_exclusive": 56575,
+    "base_occurrence_count": 1,
+    "base_old_bytes": 15,
+    "base_old_sha256": "DB0FD995F578CDBBFB9C660958A647DC328A4E1A420F50B247E4EC271310B54E",
+    "base_old_text": "$(a_k)^N + b_k$",
+    "base_sha256": "85251479BB7D35D73CD5691C194D33B3ADC1BF245BCC248643D969DBBA0E7928",
+    "base_start_byte": 56560,
+    "base_tree": "94112e11f45252b9f9ce01783103e0b925f0cc0d",
+    "output_bytes": 134835,
+    "output_sha256": "85A37C95D5591632D11E7BE6775039638B6F5200B44729ABCEA1A644D9F5B056",
+    "replacement_bytes": 20,
+    "replacement_sha256": "F73C2082A79DEAEA58F7DEDB494D6B133D85C84784F695EE7E9B10A8FE1C816E",
+    "replacement_text": "$a_k((a_k)^N + b_k)$"
+  }
+}
