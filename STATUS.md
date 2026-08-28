@@ -55,10 +55,12 @@ in each corpus dossier and in the machine-readable registry.
   tree `7ab863452c932dd5ef230f65abdfa5bdcd6b5771`.
 - The French `MORE-ALGEBRA-L-001..029` and `SMOOTHING-001..035` packets remain
   separate intake evidence and are not silently included in this fixed point.
-- The preceding R24 content release is public at
-  `50438757de89ec6e67385084d4a2d578707f5a37`; exact-head CI passed and
-  anonymous readback matched 86 checked files totaling 5,155,955 bytes,
-  including both candidate PDFs.
+- The current R25 content release is public at
+  `fb3e4cb4d834c4e28d84b6df41466ad8aaa71b42`; exact-head CI passed and
+  anonymous readback matched 78 R25-changed paths totaling 4,746,502 bytes.
+  The six-asset GitHub/Zenodo preservation package contains 171,723,585
+  cross-host byte-identical public bytes at version DOI
+  `10.5281/zenodo.22143740`.
 - The preceding R22/R23 content release remains public at
   `3c2b49fe0d20519de4ab06951ac2cb5151b68782`; exact-head CI passed and
   anonymous readback matched 138 checked files totaling 25,024,008 bytes.
@@ -97,9 +99,11 @@ fixed-point sweep; all 24 `{stem, pages, bytes, sha256}` artifact tuples are
 exactly equal. Earlier R24, R22/R23, Verdier, and R21 receipts remain preserved
 as historical evidence for their exact source identities and scopes.
 
-The [latest public R24 publication receipt](validation/stacks-errata-a04446e-r24-release-2026-08-27.json)
+The [current R25 release receipt](validation/stacks-errata-a04446e-r25-release-2026-08-28.json)
 binds the public content head, exact-head workflow, and anonymous byte/hash/blob
-readback inventory.
+readback inventory. The
+[cross-host receipt](validation/ai-integrated-stacks-r25-publication-2026-08-28.json)
+binds the identical six-file package on GitHub and Zenodo.
 
 The preceding Verdier content release remains public at
 `4947e4a6d22971ea793e4b4bc2b09d8ab8cc04d0`. Exact anonymous readback of 62

@@ -78,21 +78,21 @@ Historical R24, R22/R23, Verdier, and R21 receipts remain preserved and
 authoritative for their immutable source snapshots; they are not rebound to the
 R25 tree.
 
-The [latest public R24 publication receipt](validation/stacks-errata-a04446e-r24-release-2026-08-27.json)
-binds public content head `50438757de89ec6e67385084d4a2d578707f5a37`, tree
-`d1d4b9385d0b67fb2e70220bad8c4fe9c2a2fcd5`, to its successful exact-head
-workflow. Anonymous HTTPS readback matched 86 checked files totaling 5,155,955
-bytes by filename, byte count, SHA-256, and Git blob, including the two R24
-candidate PDFs.
+The [current public R25 release receipt](validation/stacks-errata-a04446e-r25-release-2026-08-28.json)
+binds public content head `fb3e4cb4d834c4e28d84b6df41466ad8aaa71b42`,
+tree `406a1c289c2d45f901de4356bd6e8d0ced48a661`, to its successful exact-head
+workflow. Anonymous HTTPS readback matched 78 R25-changed paths totaling
+4,746,502 bytes by filename, byte count, SHA-256, and Git blob.
 
-The [cross-host preservation receipt](validation/ai-integrated-stacks-r24-publication-2026-08-28.json)
-binds the exact six-file R24 package to the
-[GitHub release](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r24-2026-08-28)
-and [Zenodo record 22135181](https://doi.org/10.5281/zenodo.22135181), concept
+The [cross-host preservation receipt](validation/ai-integrated-stacks-r25-publication-2026-08-28.json)
+binds the exact six-file R25 package to the
+[GitHub release](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r25-2026-08-28)
+and [Zenodo record 22143740](https://doi.org/10.5281/zenodo.22143740), concept
 DOI [`10.5281/zenodo.22135180`](https://doi.org/10.5281/zenodo.22135180).
-Anonymous downloads from both hosts matched all filenames, byte counts, and
-SHA-256 values. This is the preceding preservation checkpoint for R24, not evidence that
-the active EGA I--IV integration program is complete.
+Anonymous downloads from both hosts matched all six filenames and 171,723,585
+bytes by byte count and SHA-256. This preserves R25; it is not evidence that the
+active EGA I--IV integration program is complete. The R24 receipts remain
+historical evidence for their exact source and package identities.
 
 The [historical R22/R23 publication receipt](validation/stacks-errata-a04446e-r22-r23-release-2026-08-27.json)
 binds the preceding public R22/R23 content head

@@ -22,10 +22,11 @@ machine-readable validation evidence.
 [Current fixed-point build: PASS](validation/stacks-errata-a04446e-r25-build-2026-08-28.json) ·
 [Current visual QA: PASS](validation/stacks-errata-a04446e-r25-visual-qa-2026-08-28.json) ·
 [Current reproducibility: PASS](validation/stacks-errata-a04446e-r25-reproducibility-2026-08-28.json) ·
-[Latest published R24 content receipt: PASS](validation/stacks-errata-a04446e-r24-release-2026-08-27.json) ·
-[Latest preservation release: R24](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r24-2026-08-28) ·
-[Latest Zenodo version: R24](https://doi.org/10.5281/zenodo.22135181) ·
-[R24 cross-host publication receipt: PASS](validation/ai-integrated-stacks-r24-publication-2026-08-28.json) ·
+[Current published R25 content receipt: PASS](validation/stacks-errata-a04446e-r25-release-2026-08-28.json) ·
+[Current preservation release: R25](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r25-2026-08-28) ·
+[Current Zenodo version: R25](https://doi.org/10.5281/zenodo.22143740) ·
+[R25 cross-host publication receipt: PASS](validation/ai-integrated-stacks-r25-publication-2026-08-28.json) ·
+[Historical R24 publication receipt: PASS](validation/ai-integrated-stacks-r24-publication-2026-08-28.json) ·
 [Historical R22/R23 publication receipt: PASS](validation/stacks-errata-a04446e-r22-r23-release-2026-08-27.json) ·
 [Historical Verdier publication receipt: PASS](validation/stacks-verdier-a04446e-1-2-13-r1-release-2026-08-26.json) ·
 [Historical R21 publication receipt: PASS](validation/errata-r18-r19-release-2026-08-25.json) ·
@@ -116,24 +117,22 @@ resolution. A parallel rebuild in a second linked worktree used the same
 source, builder, environment, and sweep, and all 24 PDF identities were exactly
 equal.
 
-The preceding R24 content release is public at
-`50438757de89ec6e67385084d4a2d578707f5a37`, tree
-`d1d4b9385d0b67fb2e70220bad8c4fe9c2a2fcd5`. Its exact-head content workflow
-passed, and anonymous HTTPS readback matched all 86 checked files (5,155,955
-bytes), including both candidate PDFs, by filename, byte count, SHA-256, and
-Git blob.
+The R25 content release is public at
+`fb3e4cb4d834c4e28d84b6df41466ad8aaa71b42`, tree
+`406a1c289c2d45f901de4356bd6e8d0ced48a661`. Its exact-head workflow passed,
+and anonymous HTTPS readback matched all 78 R25-changed paths totaling 4,746,502
+bytes by filename, byte count, SHA-256, and Git blob.
 
-That preceding validated R24 state is preserved as a downloadable source, PDF, and
+That validated R25 state is preserved as a downloadable source, PDF, and
 evidence release on
-[GitHub](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r24-2026-08-28)
-and [Zenodo](https://doi.org/10.5281/zenodo.22135181), under concept DOI
+[GitHub](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r25-2026-08-28)
+and [Zenodo](https://doi.org/10.5281/zenodo.22143740), under concept DOI
 [`10.5281/zenodo.22135180`](https://doi.org/10.5281/zenodo.22135180). Anonymous
-readback matched all six assets across both hosts by filename, byte count, and
-SHA-256. The source archive is bound to public commit `9fb327dd32e18f612ece06e213299f869e9fb11d`;
-the EGA program remains explicitly partial and continues at EGA I §6.4.1.
-R25 has passed local composition, fixed-point, reproducibility, and visual
-gates; the R24 links above remain the latest public preservation checkpoint
-until the R25 public transaction and anonymous readback complete.
+readback matched all six assets and 171,723,585 bytes across both hosts by
+filename, byte count, and SHA-256. The source archive is bound to public commit
+`5cc39c1f2ce585f5d41c026ab14b025404fcba69`, tree
+`6058663639e5f03ccf923e11c65eb7c03c448da0`. The EGA program remains
+explicitly partial and continues at EGA I §6.4.1.
 
 The preceding R22/R23 content release remains public at
 `3c2b49fe0d20519de4ab06951ac2cb5151b68782`, tree

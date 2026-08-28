@@ -39,10 +39,12 @@ serious diagnostics. All 69 affected `artin.pdf` pages passed review, including
 exactly between the two builds. Earlier R24, R22/R23, Verdier, and R21 receipts
 remain preserved as historical evidence for their exact scopes.
 
-The preceding R24 content release is public at
-`50438757de89ec6e67385084d4a2d578707f5a37`, tree
-`d1d4b9385d0b67fb2e70220bad8c4fe9c2a2fcd5`; exact-head CI and anonymous
-readback of 86 checked files totaling 5,155,955 bytes pass.
+The current R25 content release is public at
+`fb3e4cb4d834c4e28d84b6df41466ad8aaa71b42`, tree
+`406a1c289c2d45f901de4356bd6e8d0ced48a661`; exact-head CI and anonymous
+readback of 78 R25-changed paths totaling 4,746,502 bytes pass. Its six-asset
+preservation package is byte-identical on GitHub and Zenodo version DOI
+`10.5281/zenodo.22143740` under the existing concept DOI.
 
 The historical R22/R23 content release is public at
 `3c2b49fe0d20519de4ab06951ac2cb5151b68782`, tree

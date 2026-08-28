@@ -163,6 +163,15 @@ The current evidence is recorded in:
   — exact equality of all 24 artifact identities across two independent linked
   worktree builds.
 
+The [R25 release receipt](stacks-errata-a04446e-r25-release-2026-08-28.json)
+binds public content head `fb3e4cb4d834c4e28d84b6df41466ad8aaa71b42`
+to its passing exact-head workflow and anonymous readback of 78 R25-changed
+paths totaling 4,746,502 bytes. The subsequent
+[`ai-integrated-stacks-r25-publication-2026-08-28.json`](ai-integrated-stacks-r25-publication-2026-08-28.json)
+records the byte-identical six-asset GitHub and Zenodo release: 171,723,585
+bytes, concept DOI `10.5281/zenodo.22135180`, and version DOI
+`10.5281/zenodo.22143740`.
+
 The French `MORE-ALGEBRA-L-001..029` and `SMOOTHING-001..035` packets remain
 separate intake evidence. The active EGA I–IV integration program remains
 incomplete and resumes at EGA I §6.4.1.

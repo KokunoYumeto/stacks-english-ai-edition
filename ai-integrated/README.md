@@ -59,9 +59,10 @@ PDF bytes at source `a13d609ba9b146eac0a72f593bcf8aff5c5a6a33`, tree
 `fbf8d6341b22298d05fdc1f72d547907bc164077`. Both linked-worktree builds are
 byte-for-byte reproducible. All 69 pages of the affected `artin.pdf` passed
 review, including 63 correction-locus pages inspected individually at high
-resolution. The preceding public R24 content head remains
-`50438757de89ec6e67385084d4a2d578707f5a37` until the R25 publication
-transaction and anonymous readback complete.
+resolution. The public R25 content head is
+`fb3e4cb4d834c4e28d84b6df41466ad8aaa71b42`; exact-head CI and anonymous
+readback pass. The six-asset R25 preservation package is public and
+byte-identical on GitHub and Zenodo version DOI `10.5281/zenodo.22143740`.
 
 ## Directory map
 

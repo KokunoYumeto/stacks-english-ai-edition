@@ -140,12 +140,16 @@ exactly matching identities for all 24 PDFs: 2,437 pages, 25,862,634 bytes, and
 a global fixed point on sweep four. Visual QA covers all 69 pages of
 `artin.pdf`, including all 63 correction-locus pages at high resolution.
 
-The R24 content head is public at
-`50438757de89ec6e67385084d4a2d578707f5a37`, tree
-`d1d4b9385d0b67fb2e70220bad8c4fe9c2a2fcd5`. Anonymous readback matched all
-86 checked source, registry, candidate, PDF, tool, documentation, and receipt
-files totaling 5,155,955 bytes; the exact inventory is bound by the
-[R24 release receipt](validation/stacks-errata-a04446e-r24-release-2026-08-27.json).
+The R25 content head is public at
+`fb3e4cb4d834c4e28d84b6df41466ad8aaa71b42`, tree
+`406a1c289c2d45f901de4356bd6e8d0ced48a661`. Anonymous readback matched all
+78 R25-changed source, registry, candidate, tool, documentation, and receipt
+paths totaling 4,746,502 bytes; the exact inventory is bound by the
+[R25 release receipt](validation/stacks-errata-a04446e-r25-release-2026-08-28.json).
+The source, 24 PDFs, and validation evidence are preserved as six
+byte-identical assets on GitHub and Zenodo version DOI
+`10.5281/zenodo.22143740`, as recorded by the
+[cross-host receipt](validation/ai-integrated-stacks-r25-publication-2026-08-28.json).
 
 ## Branch preservation
 
