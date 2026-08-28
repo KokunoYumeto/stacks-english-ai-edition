@@ -178,6 +178,20 @@ def assert_no_local_path_bytes(
         )
 
 
+def assert_no_local_account_bytes(
+    data: bytes,
+    *,
+    public_name: str,
+    account_token: bytes | None,
+) -> None:
+    """Reject the live account name while allowing already-redacted provenance."""
+
+    if account_token is not None and account_token in data.lower():
+        raise PackageError(
+            f"public text {public_name!r} contains a local account name"
+        )
+
+
 def is_public_text_member(name: str) -> bool:
     normalized = name[:-1] if name.endswith("/") else name
     return PurePosixPath(normalized).suffix.lower() in TEXT_SUFFIXES
@@ -421,6 +435,7 @@ def inspect_zip(
     expected_files: Mapping[str, Mapping[str, Any]] | None = None,
     required_prefix: str | None = None,
     scan_public_text: bool = False,
+    allow_redacted_provenance_paths: bool = False,
     account_token: bytes | None = None,
 ) -> dict[str, Any]:
     members: list[dict[str, Any]] = []
@@ -435,7 +450,12 @@ def inspect_zip(
             for info in infos:
                 safe_member_name(info.filename, directory_allowed=True)
                 if scan_public_text:
-                    assert_no_local_path_bytes(
+                    scanner = (
+                        assert_no_local_account_bytes
+                        if allow_redacted_provenance_paths
+                        else assert_no_local_path_bytes
+                    )
+                    scanner(
                         info.filename.encode("utf-8"),
                         public_name="archive member name",
                         account_token=account_token,
@@ -457,7 +477,12 @@ def inspect_zip(
                         digest.update(chunk)
                         if scan_public_text and is_public_text_member(info.filename):
                             scan = scanner_tail + chunk
-                            assert_no_local_path_bytes(
+                            scanner = (
+                                assert_no_local_account_bytes
+                                if allow_redacted_provenance_paths
+                                else assert_no_local_path_bytes
+                            )
+                            scanner(
                                 scan,
                                 public_name=info.filename,
                                 account_token=account_token,
@@ -718,7 +743,10 @@ verification.
 
 ## Files
 
-- `{source_name}` — deterministic complete Git source snapshot
+- `{source_name}` — deterministic complete Git source snapshot; historical
+  provenance records may retain path-shaped strings whose live account name
+  was already redacted, and the archive is checked to contain no live local
+  account name
 - `{pdf_name}` — the 24 validated chapter PDFs
 - `{validation_name}` — the supplied build and validation receipts
 - `RELEASE.json` — machine-readable release and archive identities
@@ -842,6 +870,11 @@ def prepare_release(
                     "member_tuple_set_sha256"
                 ],
                 "reopen_and_listing": "PASS",
+                "local_account_name_scan": "PASS",
+                "provenance_path_policy": (
+                    "exact Git snapshot; already-account-redacted path-shaped "
+                    "provenance strings may remain"
+                ),
             },
             "pdfs": {
                 "name": pdf_zip_identity["name"],
@@ -1114,6 +1147,7 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
             source_zip,
             required_prefix=f"{PROJECT_SLUG}-{label}/",
             scan_public_text=True,
+            allow_redacted_provenance_paths=True,
             account_token=account_token,
         )
         artifact_expectations = {
@@ -1265,8 +1299,11 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
                 "pdf_listing_and_member_hashes": "PASS",
                 "validation_listing_and_member_hashes": "PASS",
                 "checksum_inventory": "PASS",
-                "public_text_local_absolute_paths_absent": True,
+                "release_metadata_and_validation_local_absolute_paths_absent": True,
                 "public_text_local_account_names_absent": True,
+                "source_archive_local_account_names_absent": True,
+                "source_archive_is_exact_git_snapshot": True,
+                "source_archive_account_redacted_provenance_paths_allowed": True,
                 "package_receipt_is_release_asset": False,
                 "release_commit_descends_from_build_source": True,
                 "build_relevant_intervening_changes": 0,
