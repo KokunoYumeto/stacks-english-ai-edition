@@ -1,0 +1,95 @@
+{
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "candidate_id": "stacks-errata-a04446e-r27",
+  "checks": {
+    "authority_evidence": {
+      "files": 8,
+      "passed": true
+    },
+    "chapter_builds": {
+      "chapters": 1,
+      "passed": true,
+      "receipt_sha256": "A0B934FFDA128A6B365165D4DEB3ED32562CA8924D90AAF2D6F29AB5DF04B5F7"
+    },
+    "deterministic_pdf_replay": {
+      "passed": true,
+      "pdfs": 2,
+      "receipt_sha256": "A1EBF06C9183AA280766D041FFCDE9B40F9389F63295A8898277F9D4B00A9358"
+    },
+    "exact_payloads": {
+      "files": {
+        "modules": {
+          "authority_bytes": 204133,
+          "authority_display_delimiters": 420,
+          "authority_sha256": "7BD3E9E096717EF6FD458492D8AD91FC9FFE428CFD7DD80E386FAE377BB7CB0D",
+          "display_delimiter_delta": 0,
+          "operation_count": 14,
+          "ordered_structure_exceptions": {},
+          "payload_bytes": 204157,
+          "payload_display_delimiters": 420,
+          "payload_sha256": "59C250D528258DCB8B2EB88234CA88AB48C1F5AB073EEA4618703F96BED4CE6B",
+          "source_line_exceptions": {},
+          "structure": {
+            "citations": {
+              "authority": 4,
+              "payload": 4
+            },
+            "environments": {
+              "authority": 652,
+              "payload": 652
+            },
+            "labels": {
+              "authority": 200,
+              "payload": 200
+            },
+            "references": {
+              "authority": 295,
+              "payload": 295
+            },
+            "sections": {
+              "authority": 31,
+              "payload": 31
+            }
+          },
+          "xymatrix_count": 28
+        }
+      },
+      "passed": true
+    },
+    "lease_ledgers_inventory": {
+      "decisions": 4,
+      "intentionally_absent": 0,
+      "passed": true,
+      "prior_aliases": 0,
+      "rejections": 0,
+      "unresolved": 0
+    },
+    "public_hygiene": {
+      "passed": true,
+      "python_caches": 0,
+      "text_files": 56
+    },
+    "source_page_map": {
+      "operations": 14,
+      "passed": true,
+      "receipt_sha256": "35C7B82DCDF992286A7ED8BC32419AEF7CEF346D2732EFEC2A441F516717005B",
+      "unique_pages": 10
+    },
+    "unit_closure": {
+      "accepted_producer_identities": 14,
+      "expected": 14,
+      "manifested": 14,
+      "passed": true
+    },
+    "visual_pdf_qa": {
+      "direct_units": 14,
+      "passed": true,
+      "pdfs": 1,
+      "receipt_sha256": "D3F6A55E68EB4268D203B8A4E822B2D261A142E6DB930A35204A61DDF942F5E9"
+    }
+  },
+  "generated_at_utc": "2026-08-28T15:38:32Z",
+  "passed": true,
+  "schema": "mathematics-commons-stacks-errata-validation/v1",
+  "verifier_sha256": "A5B32DBBF2EBF7F300046B0C3B5E2C00D40A0928FBE57D2E9AA07B51F520B9C2"
+}

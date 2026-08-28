@@ -1,0 +1,240 @@
+{
+  "adverse_evidence": [
+    "The standalone PDFs are not tagged PDFs and contain no StructTreeRoot or MarkInfo; this is retained as an accessibility limitation rather than misreported as a visual failure.",
+    "Standalone chapter builds intentionally retain cross-chapter unresolved targets; the build receipt proves their target multisets match the frozen authority builds."
+  ],
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "build_receipt": {
+    "bytes": 24627,
+    "path": "builds/build-receipt.json",
+    "sha256": "A0B934FFDA128A6B365165D4DEB3ED32562CA8924D90AAF2D6F29AB5DF04B5F7"
+  },
+  "candidate_id": "stacks-errata-a04446e-r27",
+  "generated_at_utc": "2026-08-28T15:43:12Z",
+  "passed": true,
+  "pdfs": [
+    {
+      "authority_control_pdf": {
+        "bytes": 686260,
+        "path": "builds/modules.authority.pdf",
+        "sha256": "E2C42E70878CBF30A970C376CAA677C789AEC8C61E6B82791318825A0C20647B"
+      },
+      "authority_link_annotations": 207,
+      "authority_malformed_link_rectangles": 0,
+      "authority_out_of_bounds_link_rectangles": 0,
+      "authority_pages": 54,
+      "bytes": 686291,
+      "contact_sheet_evidence": [
+        {
+          "bytes": 901727,
+          "file": "modules_01.png",
+          "sha256": "D942D3D8779FAFB965B38DE1E36D56D29B17F6267B2065BCC8ECF4DF000C4F9D"
+        },
+        {
+          "bytes": 882293,
+          "file": "modules_02.png",
+          "sha256": "A62E4A6033D59FB2ECD67BFBF63894578041E849DAAFA5D5CFCA6BAE70E95C50"
+        },
+        {
+          "bytes": 874856,
+          "file": "modules_03.png",
+          "sha256": "FEE948A6ACFFBE8452215B0D605458F98F695DA3553DFEC887D91D4EEF81E8D2"
+        },
+        {
+          "bytes": 290349,
+          "file": "modules_04.png",
+          "sha256": "C37F0FB39FA945E19193564B83B0494271290872BDAC38EEB52D58214FF8A0A3"
+        }
+      ],
+      "covered_units": [
+        "MC-STK-ERR-1202",
+        "MC-STK-ERR-1203",
+        "MC-STK-ERR-1204",
+        "MC-STK-ERR-1205",
+        "MC-STK-ERR-1206",
+        "MC-STK-ERR-1207",
+        "MC-STK-ERR-1208",
+        "MC-STK-ERR-1209",
+        "MC-STK-ERR-1210",
+        "MC-STK-ERR-1211",
+        "MC-STK-ERR-1212",
+        "MC-STK-ERR-1213",
+        "MC-STK-ERR-1214",
+        "MC-STK-ERR-1215"
+      ],
+      "font_records": 26,
+      "fonts_without_tounicode": [],
+      "full_page_render_count": 54,
+      "high_resolution_evidence": [
+        {
+          "bytes": 393388,
+          "file": "modules_p11.png",
+          "page": 11,
+          "sha256": "8934706ED409F507F8C7FC413478DC0568C897663C9E4DA7E97D294D449F264D"
+        },
+        {
+          "bytes": 392906,
+          "file": "modules_p20.png",
+          "page": 20,
+          "sha256": "C886E28E09A62FE878428C12B4A0245DCC65B71AB4B99CD5971DDF20703D9FDA"
+        },
+        {
+          "bytes": 401926,
+          "file": "modules_p35.png",
+          "page": 35,
+          "sha256": "BDBC89781405D0518435FA613A0284FA9A79DC5929433C54BA4E2226F1D21FAD"
+        },
+        {
+          "bytes": 399557,
+          "file": "modules_p36.png",
+          "page": 36,
+          "sha256": "57ADEB21511AC7449DCBA281F500F4CE2528ABA19DF0F4D976C35778B29489B3"
+        },
+        {
+          "bytes": 438944,
+          "file": "modules_p38.png",
+          "page": 38,
+          "sha256": "69BA958B0B535A4697C9EB75BF818BDA17BD1066CE2B777ECB98AC1B0B2F402C"
+        },
+        {
+          "bytes": 408868,
+          "file": "modules_p40.png",
+          "page": 40,
+          "sha256": "5A482BA5B2E35FB2AD29EC01249D85FAC4111C015DF9AF4B7CBF060643490626"
+        },
+        {
+          "bytes": 369093,
+          "file": "modules_p46.png",
+          "page": 46,
+          "sha256": "9A34DFFE6DE4D3C37B2309CAF02DAE052EF71DDC83F4C38C1E7ACC9989C293BC"
+        },
+        {
+          "bytes": 316292,
+          "file": "modules_p50.png",
+          "page": 50,
+          "sha256": "4A78978028966BFEDAD5F60D62392DC401C566BE070DD0AF37D0937AA7413308"
+        },
+        {
+          "bytes": 401453,
+          "file": "modules_p51.png",
+          "page": 51,
+          "sha256": "0416090716A37C367417B64E0F8DC2178D44EBB8878871D1586805FE5BA51113"
+        },
+        {
+          "bytes": 218272,
+          "file": "modules_p52.png",
+          "page": 52,
+          "sha256": "59354652E291418AC414974AE80C79D9715727D96FB12B86E58AE3C11DF76176"
+        }
+      ],
+      "link_annotations": 207,
+      "malformed_link_rectangles": 0,
+      "manual_findings": {
+        "blank_or_duplicate_pages": 0,
+        "broken_diagrams": 0,
+        "clipping": 0,
+        "high_resolution_pages_inspected": [
+          11,
+          20,
+          35,
+          36,
+          38,
+          40,
+          46,
+          50,
+          51,
+          52
+        ],
+        "missing_glyphs": 0,
+        "overlap": 0,
+        "pages_inspected": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54
+        ],
+        "passed": true,
+        "unreadable_content": 0,
+        "warning_loci_outside_printable_area": 0
+      },
+      "mark_info_present": false,
+      "out_of_bounds_link_rectangles": 0,
+      "page_boxes_points": [
+        [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ]
+      ],
+      "pages": 54,
+      "path": "builds/modules.pdf",
+      "reflow_note": "Candidate and authority page counts are recorded above; every candidate page was inspected, including all pages directly affected by the 14 mapped modules.tex operations.",
+      "sha256": "E3DF31BC4D6E89F7DDF9ACC98733FA41F43AD4632F64BF425FDE8EA1446C84A2",
+      "stem": "modules",
+      "tagged_pdf": false,
+      "unembedded_fonts": [],
+      "unsubset_fonts": []
+    }
+  ],
+  "render_protocol": {
+    "full_page_contact_sheet_review": "All rendered pages manually inspected in ordered 4-by-4 contact sheets",
+    "full_page_render": "Poppler pdftoppm PNG at 96 dpi for every candidate page",
+    "high_resolution_review": "The manifest-bound high-resolution page inventory was generated at 180 dpi; every configured correction-sensitive page was manually inspected at that resolution",
+    "manual_review_attested": true,
+    "private_render_artifacts_published": false,
+    "private_render_manifest_bytes": 13578,
+    "private_render_manifest_sha256": "CDCA6F2B82E3749E32538FC52D1A24A2F210C4EE1D8775176F99FC0ACA1E3A6B"
+  },
+  "schema": "mathematics-commons-stacks-errata-visual-qa/v1"
+}
