@@ -41,6 +41,7 @@ COMPOSITION_MODE = (
     "manifest-bound registry-order replay rebased onto verified cumulative source"
 )
 EMBEDDED_CANDIDATE_TOPOLOGY = "embedded_candidate_direct_admission"
+LEASED_CANDIDATE_TOPOLOGY = "leased_candidate_then_admission"
 EXPECTED_FIXED_POINT_SUFFIXES = [
     ".aux",
     ".bbl",
@@ -697,6 +698,14 @@ def main(argv: list[str] | None = None) -> int:
         for key in ("manifest_sha256", "payload_sha256", "review_receipt_sha256"):
             if not isinstance(overlay.get(key), str) or not SHA256_RE.fullmatch(overlay[key]):
                 errors.append(f"invalid {key} in transition: {overlay.get('id')!r}")
+        topology = overlay.get("topology")
+        intake_commit = None
+        if topology == LEASED_CANDIDATE_TOPOLOGY:
+            intake_commit = require_sha1_identity(
+                overlay.get("intake_commit"),
+                f"intake {overlay.get('id')}",
+                errors,
+            )
         candidate_commit = require_sha1_identity(
             overlay.get("candidate_commit"),
             f"candidate {overlay.get('id')}",
@@ -719,7 +728,10 @@ def main(argv: list[str] | None = None) -> int:
             admission_cursor is not None
             and git("cat-file", "-e", f"{admission_cursor}^{{commit}}").returncode == 0
         )
-        topology = overlay.get("topology")
+        intake_exists = (
+            intake_commit is not None
+            and git("cat-file", "-e", f"{intake_commit}^{{commit}}").returncode == 0
+        )
         if topology is None:
             if candidate_exists:
                 require_single_parent(
@@ -748,6 +760,49 @@ def main(argv: list[str] | None = None) -> int:
                         admission_commit,
                         f"candidate-to-admission {overlay.get('id')}",
                         errors,
+                    )
+        elif topology == LEASED_CANDIDATE_TOPOLOGY:
+            if not intake_exists or not candidate_exists or not admission_exists:
+                errors.append(
+                    f"leased candidate chain is incomplete: {overlay.get('id')!r}"
+                )
+            else:
+                require_single_parent(
+                    intake_commit,
+                    f"intake {overlay.get('id')}",
+                    errors,
+                    admission_cursor if cursor_exists else None,
+                )
+                require_single_parent(
+                    candidate_commit,
+                    f"candidate {overlay.get('id')}",
+                    errors,
+                    intake_commit,
+                )
+                require_single_parent(
+                    admission_commit,
+                    f"admission {overlay.get('id')}",
+                    errors,
+                    candidate_commit,
+                )
+                actual_intake_tree = git_optional(
+                    "rev-parse", f"{intake_commit}^{{tree}}"
+                )
+                actual_candidate_tree = git_optional(
+                    "rev-parse", f"{candidate_commit}^{{tree}}"
+                )
+                actual_admission_tree = git_optional(
+                    "rev-parse", f"{admission_commit}^{{tree}}"
+                )
+                if (
+                    overlay.get("intake_parent") != admission_cursor
+                    or overlay.get("intake_tree") != actual_intake_tree
+                    or overlay.get("candidate_tree") != actual_candidate_tree
+                    or overlay.get("admission_tree") != actual_admission_tree
+                ):
+                    errors.append(
+                        f"leased candidate tree or parent binding mismatch: "
+                        f"{overlay.get('id')!r}"
                     )
         elif topology == EMBEDDED_CANDIDATE_TOPOLOGY:
             if (
@@ -1798,6 +1853,11 @@ def main(argv: list[str] | None = None) -> int:
             overlay.get("candidate_commit")
             for overlay in new_overlays
             if isinstance(overlay, dict)
+        ],
+        "new_overlay_intake_commits": [
+            overlay.get("intake_commit")
+            for overlay in new_overlays
+            if isinstance(overlay, dict) and overlay.get("intake_commit") is not None
         ],
         "new_overlay_admission_commits": [
             overlay.get("admission_commit")

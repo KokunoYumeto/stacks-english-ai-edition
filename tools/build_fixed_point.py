@@ -56,6 +56,7 @@ COMPOSITION_MODE_V3 = (
 )
 COMPOSITION_MODE_V4 = "registered insertion rebased through unique unchanged context"
 EMBEDDED_CANDIDATE_TOPOLOGY = "embedded_candidate_direct_admission"
+LEASED_CANDIDATE_TOPOLOGY = "leased_candidate_then_admission"
 NAMESPACE_PATTERN = re.compile(
     r"^[A-Za-z0-9._-]+(?:/[A-Za-z0-9._-]+)*$"
 )
@@ -820,6 +821,7 @@ def load_composition_receipt(
         )
     new_operation_total = 0
     normalized_new_overlays: list[dict[str, object]] = []
+    intake_commits: list[str] = []
     candidate_commits: list[str] = []
     admission_commits: list[str] = []
     expected_registry_parent = previous_registry
@@ -854,6 +856,14 @@ def load_composition_receipt(
             raise RuntimeError(
                 f"manifest hash does not match registry entry: {overlay.get('id')!r}"
             )
+        topology = overlay.get("topology")
+        intake = None
+        if topology == LEASED_CANDIDATE_TOPOLOGY:
+            intake = require_commit_object(
+                source,
+                overlay.get("intake_commit"),
+                f"intake {overlay.get('id')}",
+            )
         candidate = require_commit_object(
             source,
             overlay.get("candidate_commit"),
@@ -875,7 +885,6 @@ def load_composition_receipt(
         manifest_path = f"{candidate_path}/candidate.manifest.json"
         normalized_overlay = dict(overlay)
 
-        topology = overlay.get("topology")
         if not is_v4 and topology is None:
             require_single_parent(
                 source,
@@ -900,6 +909,59 @@ def load_composition_receipt(
                 raise RuntimeError(
                     f"candidate manifest binding mismatch: {overlay.get('id')!r}"
                 )
+        elif not is_v4 and topology == LEASED_CANDIDATE_TOPOLOGY:
+            if intake is None:
+                raise RuntimeError(
+                    f"leased candidate lacks intake commit: {overlay.get('id')!r}"
+                )
+            require_single_parent(
+                source,
+                intake,
+                f"intake {overlay.get('id')}",
+                expected_registry_parent,
+            )
+            require_single_parent(
+                source,
+                candidate,
+                f"candidate {overlay.get('id')}",
+                intake,
+            )
+            require_single_parent(
+                source,
+                admission,
+                f"admission {overlay.get('id')}",
+                candidate,
+            )
+            actual_intake_tree = git(source, "rev-parse", f"{intake}^{{tree}}")
+            actual_candidate_tree = git(
+                source, "rev-parse", f"{candidate}^{{tree}}"
+            )
+            actual_admission_tree = git(
+                source, "rev-parse", f"{admission}^{{tree}}"
+            )
+            if (
+                overlay.get("intake_parent") != expected_registry_parent
+                or overlay.get("intake_tree") != actual_intake_tree
+                or overlay.get("candidate_tree") != actual_candidate_tree
+                or overlay.get("admission_tree") != actual_admission_tree
+            ):
+                raise RuntimeError(
+                    f"leased candidate tree or parent binding mismatch: "
+                    f"{overlay.get('id')!r}"
+                )
+            manifest_blob = git_optional(
+                source, "rev-parse", f"{candidate}:{manifest_path}"
+            )
+            if (
+                manifest_blob is None
+                or git_blob_sha256(source, manifest_blob)
+                != overlay["manifest_sha256"].upper()
+            ):
+                raise RuntimeError(
+                    f"leased candidate manifest binding mismatch: "
+                    f"{overlay.get('id')!r}"
+                )
+            intake_commits.append(intake)
         elif not is_v4 and topology == EMBEDDED_CANDIDATE_TOPOLOGY:
             if candidate != admission:
                 raise RuntimeError(
@@ -1747,6 +1809,7 @@ def load_composition_receipt(
         "new_overlays": normalized_new_overlays,
         "new_overlay_ids": [entry.get("id") for entry in registry_suffix],
         "new_overlay_candidate_commits": candidate_commits,
+        "new_overlay_intake_commits": intake_commits,
         "new_overlay_admission_commits": admission_commits,
         "required_build_stems": list(required_stems),
         "affected_source_stems": affected_stems,
