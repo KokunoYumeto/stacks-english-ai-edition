@@ -1,6 +1,6 @@
 {
   "schema": "illusie-stacks-relative-bar-r1-check-v1",
-  "status": "PASS_LOCAL_PENDING_PUBLIC_READBACK",
+  "status": "PASS_PUBLIC",
   "formalization_id": "ILLUSIE-R1-RELATIVE-BAR",
   "source": {
     "work": "Complexe cotangent et deformations II",
@@ -129,7 +129,47 @@
       "missing_glyphs": 0,
       "broken_math": 0
     },
-    "repository_gate": "PENDING_GITHUB_ACTIONS",
-    "public_readback": "PENDING"
+    "repository_gate": {
+      "status": "PASS",
+      "content_commit": "a48a138adb1e7f7aa7b08496cff7a88e7e36fade",
+      "run_id": 33199547528,
+      "url": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/actions/runs/33199547528"
+    },
+    "public_readback": {
+      "status": "PASS",
+      "checked_utc": "2026-08-28T18:30:59Z",
+      "content_commit": "a48a138adb1e7f7aa7b08496cff7a88e7e36fade",
+      "repository": {
+        "private": false,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public"
+      },
+      "files": [
+        {
+          "path": "simplicial.tex",
+          "bytes": 241631,
+          "sha256": "23E8DB6115B5B3465D2C1292D7E6CB244308204C6D1B7EE5F3AC071092D643F9"
+        },
+        {
+          "path": "illusie_r1/STATUS.md",
+          "bytes": 1575,
+          "sha256": "733A255912B48996AF8AB6ACD8E210C45DA50B226EAA628EB7C107010068815E"
+        },
+        {
+          "path": "illusie_r1/check.json",
+          "bytes": 5210,
+          "sha256": "1067B8B7F469E8B48C7197BF33CAC5E8CBC9EBF5ED0FA58664C8C6C4BB5A2B14"
+        },
+        {
+          "path": "tools/validate_unified_repository.py",
+          "bytes": 114399,
+          "sha256": "9590032D339E0F7FD36885E480D88FDE55FE513C7C9F0BD65BA9A07E89CFCB7E"
+        }
+      ],
+      "download_failures": 0,
+      "byte_mismatches": 0,
+      "hash_mismatches": 0
+    }
   }
 }
