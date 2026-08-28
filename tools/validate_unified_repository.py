@@ -1137,6 +1137,49 @@ def main(argv: list[str] | None = None) -> int:
         if line not in tag_lines:
             errors.append(f"missing composed R1 tag record: {line}")
 
+    illusie_check_path = ROOT / "illusie_r1/check.json"
+    if illusie_check_path.is_file():
+        illusie_check = load_json_object(
+            illusie_check_path, errors, "Illusie r1 check"
+        )
+        if illusie_check is not None:
+            integration = illusie_check.get("integration")
+            if not isinstance(integration, dict):
+                errors.append("Illusie r1 check lacks integration data")
+            else:
+                source_name = integration.get("changed_source")
+                proposed_label = integration.get("label")
+                effective_label = integration.get("effective_label")
+                official_tag = integration.get("official_tag")
+                if not isinstance(source_name, str) or not source_name.endswith(".tex"):
+                    errors.append("Illusie r1 check has an invalid source path")
+                elif not isinstance(proposed_label, str) or not proposed_label:
+                    errors.append("Illusie r1 check has an invalid proposed label")
+                else:
+                    expected_effective_label = (
+                        f"{Path(source_name).stem}-{proposed_label}"
+                    )
+                    if effective_label != expected_effective_label:
+                        errors.append("Illusie r1 effective label mismatch")
+                    else:
+                        proposed_local_labels.add(effective_label)
+                    source_bytes = committed_bytes(
+                        "HEAD", source_name, errors, "Illusie r1 source"
+                    )
+                    postimage = integration.get("source_postimage")
+                    if not isinstance(postimage, dict):
+                        errors.append("Illusie r1 check lacks a source postimage")
+                    elif source_bytes is not None:
+                        if len(source_bytes) != postimage.get("bytes"):
+                            errors.append("Illusie r1 source byte-count mismatch")
+                        if sha256_bytes(source_bytes) != postimage.get("sha256"):
+                            errors.append("Illusie r1 source hash mismatch")
+                        marker = f"\\label{{{proposed_label}}}".encode("utf-8")
+                        if source_bytes.count(marker) != 1:
+                            errors.append("Illusie r1 source label is not unique")
+                if official_tag != "":
+                    errors.append("Illusie r1 must not claim an official tag")
+
     scripts_dir = ROOT / "scripts"
     sys.path.insert(0, str(scripts_dir))
     try:
