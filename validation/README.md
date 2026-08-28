@@ -93,17 +93,16 @@ they are not build or publication evidence for the later R24 composition.
 
 ## Historical R24 composition and validation receipts
 
-The current validated source composition advances the registry to **25
+The historical validated source composition advanced the registry to **25
 overlays / 690 stable IDs** at R24 admission cutoff
 `6df734ecb3bef8f35770819d17a8d3e267b8e07a`, tree
 `49b8e57e91f0bf04669b2ee93e3586cfb6919088`. The Stacks errata subset is
 R1–R24: 24 batches, 678 correction IDs, and 754 exact v2 operations. R24 adds
 38 IDs and 57 manifest-bound operations affecting only `spaces-duality.tex`.
 
-[`composition-current.json`](composition-current.json) binds that cutoff,
-the imported candidate and registry bytes, exact operation replay, preserved
-R21/Verdier/R22/R23 source identities, and source commit
-`10c1c62f371921cdafbaa5e89f438a821a013621`, tree
+The preserved R24 build and release receipts bind that cutoff, imported
+candidate and registry bytes, exact operation replay, earlier source identities,
+and source commit `10c1c62f371921cdafbaa5e89f438a821a013621`, tree
 `6ec98b8ee6919070a24130877d4eeb9e1a0e874b`.
 
 The current evidence is recorded in:
@@ -133,19 +132,18 @@ Zenodo. It records concept DOI `10.5281/zenodo.22135180`, version DOI
 `10.5281/zenodo.22135181`, exact public downloads, and byte/SHA-256 equality
 across both hosts.
 
-## Current R25 composition and validation receipts
+## Historical R25 composition and validation receipts
 
-The current validated source composition advances the registry to **26
+The historical R25 composition advanced the registry to **26
 overlays / 821 stable IDs** at R25 admission cutoff
 `001f36d41504aecfa77201a04fedff16d37b00f0`, tree
 `f8e3a8ea8d7e95190b3cb4d21eb701a6709f90c7`. The Stacks errata subset is
 R1–R25: 25 batches, 809 correction IDs, and 908 exact v2 operations. R25 adds
 131 IDs and 154 manifest-bound operations affecting only `artin.tex`.
 
-[`composition-current.json`](composition-current.json) binds that cutoff,
-the imported candidate and registry bytes, exact operation replay, preserved
-earlier source identities, and source commit
-`63dfd5f1499bea1916f64256056a5a37bcfb8f9a`, tree
+The preserved R25 build and release receipts bind that cutoff, imported
+candidate and registry bytes, exact operation replay, earlier source identities,
+and source commit `63dfd5f1499bea1916f64256056a5a37bcfb8f9a`, tree
 `7ab863452c932dd5ef230f65abdfa5bdcd6b5771`.
 
 The current evidence is recorded in:
@@ -172,6 +170,48 @@ records the byte-identical six-asset GitHub and Zenodo release: 171,723,585
 bytes, concept DOI `10.5281/zenodo.22135180`, and version DOI
 `10.5281/zenodo.22143740`.
 
-The French `MORE-ALGEBRA-L-001..029` and `SMOOTHING-001..035` packets remain
-separate intake evidence. The active EGA I–IV integration program remains
-incomplete and resumes at EGA I §6.4.1.
+Before R26 publication, public `main` is the later R25 preservation head
+`795313c42799161a69eb2c3d2ae3fa4b40279dfd`, tree
+`c2bf5e701c4e3b94d4124049aea1a36b41353ce1`.
+
+## Current R26 composition and validation receipts
+
+The current validated source composition advances the registry to **27
+overlays / 846 stable IDs** at R26 admission cutoff
+`a7c4a3c52b9a32e96e0f4b98f9579369026d9e1b`, tree
+`93af84d65d7b250fe0f4d660782ccf330b9e4743`. The Stacks errata subset is
+R1–R26: 26 batches, 834 correction IDs, and 947 exact v2 operations. R26 adds
+25 IDs and 39 manifest-bound operations affecting only `smoothing.tex`; its
+highest stable identifier is `MC-STK-ERR-1201`.
+
+[`composition-current.json`](composition-current.json) binds final candidate
+commit `d1f8c1b4654e8d63ea6380dfb5d2e256a6982121`, tree
+`aca634a2dc857f97f6deb52cf4da5ba0792d6d23`, candidate subtree
+`cc94b817fabf54d21c4914e5b7ebf8f168bac807`, registry import
+`ca00b6023be95e0e928d5c0380e24011756bb0ef`, and source composition commit
+`47c6b78e476e5644f5a7d0ca2ce4816b144a2411`, tree
+`cbad56973a9e594743b596a5fd0fa291b490ae26`. The cumulative 134,830-byte
+`smoothing.tex` has SHA-256
+`85251479BB7D35D73CD5691C194D33B3ADC1BF245BCC248643D969DBBA0E7928`.
+
+The current evidence is recorded in:
+
+- [`stacks-errata-a04446e-r26-build-2026-08-28.json`](stacks-errata-a04446e-r26-build-2026-08-28.json)
+  — source `c90a50300dcec156e9ea5fe0c8802c8e36bde81e`, tree
+  `651fff448fa41a4e7c38970eec169328002ac4f6`, 24 PDFs, 2,437 pages,
+  25,862,999 bytes, fixed point on sweep four, and zero listed serious
+  diagnostics;
+- [`stacks-errata-a04446e-r26-visual-qa-2026-08-28.json`](stacks-errata-a04446e-r26-visual-qa-2026-08-28.json)
+  — all 37 pages of `smoothing.pdf` reviewed and all 15 correction-locus pages
+  inspected at high resolution with zero recorded rendering defects; and
+- [`stacks-errata-a04446e-r26-reproducibility-2026-08-28.json`](stacks-errata-a04446e-r26-reproducibility-2026-08-28.json)
+  together with the [second full receipt](stacks-errata-a04446e-r26-reproducibility-second-2026-08-28.json)
+  — exact equality of all 24 artifact identities across two independent linked
+  worktree builds.
+
+R26 adjudication accepted 31 producer identities, aliased
+`SMOOTHING-002/003/004` to existing R1 corrections, rejected
+`SMOOTHING-010`, and merged the repeated semantic groups `005+031`,
+`008+012+013+014`, `016+018`, and `017+019` before materializing 25 new stable
+units. The active EGA I–IV integration program remains incomplete and resumes
+at EGA I §6.4.1.

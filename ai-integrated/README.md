@@ -21,12 +21,12 @@ unified repository, not a separate edition.
 
 ## Integrated registry cutoff
 
-- Current integrated overlays: **26**, containing **821 stable IDs**.
-- Current cutoff: R25 admission commit
-  `001f36d41504aecfa77201a04fedff16d37b00f0`, tree
-  `f8e3a8ea8d7e95190b3cb4d21eb701a6709f90c7`.
-- The Stacks errata subset is **R1–R25**: 25 batches, 809 correction IDs, and
-  908 exact v2 operations. Its highest identifier is `MC-STK-ERR-1176`; gaps
+- Current integrated overlays: **27**, containing **846 stable IDs**.
+- Current cutoff: R26 admission commit
+  `a7c4a3c52b9a32e96e0f4b98f9579369026d9e1b`, tree
+  `93af84d65d7b250fe0f4d660782ccf330b9e4743`.
+- The Stacks errata subset is **R1–R26**: 26 batches, 834 correction IDs, and
+  947 exact v2 operations. Its highest identifier is `MC-STK-ERR-1201`; gaps
   are intentional.
 - The 22nd overlay is `stacks-verdier-a04446e-1-2-13-r1`, an independently
   written historical-source insertion with 12 non-official stable units. It
@@ -36,7 +36,8 @@ The authoritative overlay list is
 [`registry/overlays.json`](registry/overlays.json). The integrated root source
 contains the admitted R1–R21 composition, the separately composed Verdier
 insertion, the R22-before-R23 `more-algebra.tex` composition, the R24
-`spaces-duality.tex` composition, and the R25 `artin.tex` composition;
+`spaces-duality.tex` composition, the R25 `artin.tex` composition, and the R26
+`smoothing.tex` composition;
 registry admission and source composition remain separately testable states.
 R21 is replayed as exact manifest-bound operations over cumulative
 `simplicial.tex`, and Verdier is inserted into cumulative `derived.tex` through
@@ -44,25 +45,35 @@ one unique unchanged context with exact prefix/suffix invariance.
 
 R22 and R23 add 93 IDs and 106 operations affecting only `more-algebra.tex`.
 R24 adds 38 IDs and 57 operations affecting only `spaces-duality.tex`. R25 adds
-131 IDs and 154 manifest-bound operations affecting only `artin.tex`. Every
-round is composed in registry order from manifest operations; no isolated
-payload replaces cumulative source wholesale. The R25 source composition is
-commit `63dfd5f1499bea1916f64256056a5a37bcfb8f9a`, tree
-`7ab863452c932dd5ef230f65abdfa5bdcd6b5771`. Its 254,488-byte `artin.tex`
+131 IDs and 154 manifest-bound operations affecting only `artin.tex`. R26 adds
+25 IDs and 39 operations affecting only `smoothing.tex`. Every round is
+composed in registry order from manifest operations; no isolated payload
+replaces cumulative source wholesale. The R26 source composition is commit
+`47c6b78e476e5644f5a7d0ca2ce4816b144a2411`, tree
+`cbad56973a9e594743b596a5fd0fa291b490ae26`. Its 134,830-byte `smoothing.tex`
 postimage has SHA-256
-`F196752E6D872B3B888E57C7183B326287F1A241286991C075E4896996FD185B`.
-`MORE-ALGEBRA-L-001..029` and `SMOOTHING-001..035` remain separate intake
-evidence.
+`85251479BB7D35D73CD5691C194D33B3ADC1BF245BCC248643D969DBBA0E7928`.
 
-The current R25 fixed-point receipts cover 24 PDFs, 2,437 pages, and 25,862,634
-PDF bytes at source `a13d609ba9b146eac0a72f593bcf8aff5c5a6a33`, tree
-`fbf8d6341b22298d05fdc1f72d547907bc164077`. Both linked-worktree builds are
-byte-for-byte reproducible. All 69 pages of the affected `artin.pdf` passed
-review, including 63 correction-locus pages inspected individually at high
-resolution. The public R25 content head is
+R26 candidate commit `d1f8c1b4654e8d63ea6380dfb5d2e256a6982121` has tree
+`aca634a2dc857f97f6deb52cf4da5ba0792d6d23` and candidate subtree
+`cc94b817fabf54d21c4914e5b7ebf8f168bac807`; the admitted registry was
+imported at `ca00b6023be95e0e928d5c0380e24011756bb0ef`. Adjudication accepted 31
+producer identities, aliased `SMOOTHING-002/003/004` to their R1 antecedents,
+rejected `SMOOTHING-010`, and merged four repeated semantic groups before
+materializing 25 new stable units.
+
+The current R26 fixed-point receipts cover 24 PDFs, 2,437 pages, and 25,862,999
+PDF bytes at source `c90a50300dcec156e9ea5fe0c8802c8e36bde81e`, tree
+`651fff448fa41a4e7c38970eec169328002ac4f6`. Both linked-worktree builds are
+byte-for-byte reproducible. All 37 pages of the affected `smoothing.pdf` passed
+review, including 15 correction-locus pages inspected individually at high
+resolution. Before R26 publication, the public R25 content head remains
 `fb3e4cb4d834c4e28d84b6df41466ad8aaa71b42`; exact-head CI and anonymous
 readback pass. The six-asset R25 preservation package is public and
-byte-identical on GitHub and Zenodo version DOI `10.5281/zenodo.22143740`.
+byte-identical on GitHub and Zenodo version DOI `10.5281/zenodo.22143740` under
+concept DOI `10.5281/zenodo.22135180`. Public `main` is the later R25
+preservation head `795313c42799161a69eb2c3d2ae3fa4b40279dfd`, tree
+`c2bf5e701c4e3b94d4124049aea1a36b41353ce1`.
 
 ## Directory map
 

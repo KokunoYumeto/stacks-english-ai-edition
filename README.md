@@ -19,9 +19,9 @@ machine-readable validation evidence.
 [Errata registry](ai-integrated/registry/overlays.json) ·
 [Validation](VALIDATION.md) ·
 [Current composition receipt](validation/composition-current.json) ·
-[Current fixed-point build: PASS](validation/stacks-errata-a04446e-r25-build-2026-08-28.json) ·
-[Current visual QA: PASS](validation/stacks-errata-a04446e-r25-visual-qa-2026-08-28.json) ·
-[Current reproducibility: PASS](validation/stacks-errata-a04446e-r25-reproducibility-2026-08-28.json) ·
+[Current fixed-point build: PASS](validation/stacks-errata-a04446e-r26-build-2026-08-28.json) ·
+[Current visual QA: PASS](validation/stacks-errata-a04446e-r26-visual-qa-2026-08-28.json) ·
+[Current reproducibility: PASS](validation/stacks-errata-a04446e-r26-reproducibility-2026-08-28.json) ·
 [Current published R25 content receipt: PASS](validation/stacks-errata-a04446e-r25-release-2026-08-28.json) ·
 [Current preservation release: R25](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r25-2026-08-28) ·
 [Current Zenodo version: R25](https://doi.org/10.5281/zenodo.22143740) ·
@@ -55,7 +55,7 @@ The pinned upstream baseline is
 | GAGA | Root chapter composed through r3; corpus review closed | All 126 units are classified and all 79 substantive units decided; the current unified `gaga.pdf` is 23 pages, while the sealed r3 dossier records its historical 22-page build | [r3 dossier](gaga_r3/STATUS.md) · [live chapter source](gaga.tex) |
 | FGA | Root additions composed and notation-normalized; corpus review closed | All 1,253 units and 1,612 term links are dispositioned; selected independently written additions are in the combined source; the fixed-point Moduli build is 83 pages | [Overview](fga/README.md) · [status](fga/status.md) |
 | EGA | Partial root-source composition; direct-source review active | Selected local additions are present in root TeX; the complete English discovery and diplomatic French editions remain separate read-only inputs; review reaches EGA I 6.3.10 and continues at 6.4.1 | [EGA dossier](ega/README.md) |
-| Errata and Verdier | Root-composed through R25 | Main contains 26 overlays / 821 stable IDs. Its R1–R25 Stacks errata subset contains 25 batches, 809 correction IDs, and 908 exact v2 operations; R25 contributes 131 IDs and 154 manifest-bound replacements in `artin.tex` | [Registry](ai-integrated/registry/overlays.json) · [Verdier release](validation/stacks-verdier-a04446e-1-2-13-r1-release-2026-08-26.json) · [errata evidence](ai-integrated/candidates/commons/stacks/errata/) |
+| Errata and Verdier | Root-composed through R26 | Main contains 27 overlays / 846 stable IDs. Its R1–R26 Stacks errata subset contains 26 batches, 834 correction IDs, and 947 exact v2 operations; R26 contributes 25 IDs and 39 manifest-bound replacements in `smoothing.tex` | [Registry](ai-integrated/registry/overlays.json) · [Verdier release](validation/stacks-verdier-a04446e-1-2-13-r1-release-2026-08-26.json) · [errata evidence](ai-integrated/candidates/commons/stacks/errata/) |
 
 “Root-composed” means that the live top-level TeX tree changed and participates
 in the unified build. “Dossier-only” means that mappings, decisions, and
@@ -105,17 +105,18 @@ Run the fast repository-level integrity gate with:
 python tools/validate_unified_repository.py --pre-publication
 ```
 
-The current R25 build is bound to source
-`a13d609ba9b146eac0a72f593bcf8aff5c5a6a33`, tree
-`fbf8d6341b22298d05fdc1f72d547907bc164077`. It produced 24 readable PDFs
-(2,437 pages; 25,862,634 bytes), reached a global fixed point on sweep four,
+The current R26 build is bound to source
+`c90a50300dcec156e9ea5fe0c8802c8e36bde81e`, tree
+`651fff448fa41a4e7c38970eec169328002ac4f6`. It produced 24 readable PDFs
+(2,437 pages; 25,862,999 bytes), reached a global fixed point on sweep four,
 and recorded zero fatal, missing-glyph, undefined-reference,
 undefined-citation, multiply-defined, rerun-required, or destination-warning
-diagnostics. All 69 pages of the affected `artin.pdf` were rendered and
-reviewed, including 63 correction-locus pages individually inspected at high
+diagnostics. All 37 pages of the affected `smoothing.pdf` were rendered and
+reviewed, including 15 correction-locus pages individually inspected at high
 resolution. A parallel rebuild in a second linked worktree used the same
 source, builder, environment, and sweep, and all 24 PDF identities were exactly
-equal.
+equal. The 134,830-byte cumulative `smoothing.tex` postimage has SHA-256
+`85251479BB7D35D73CD5691C194D33B3ADC1BF245BCC248643D969DBBA0E7928`.
 
 The R25 content release is public at
 `fb3e4cb4d834c4e28d84b6df41466ad8aaa71b42`, tree
@@ -131,8 +132,14 @@ and [Zenodo](https://doi.org/10.5281/zenodo.22143740), under concept DOI
 readback matched all six assets and 171,723,585 bytes across both hosts by
 filename, byte count, and SHA-256. The source archive is bound to public commit
 `5cc39c1f2ce585f5d41c026ab14b025404fcba69`, tree
-`6058663639e5f03ccf923e11c65eb7c03c448da0`. The EGA program remains
-explicitly partial and continues at EGA I §6.4.1.
+`6058663639e5f03ccf923e11c65eb7c03c448da0`. Before R26 publication, public
+`main` is the later R25 preservation head
+`795313c42799161a69eb2c3d2ae3fa4b40279dfd`, tree
+`c2bf5e701c4e3b94d4124049aea1a36b41353ce1`. The EGA program remains explicitly
+partial and continues at EGA I §6.4.1. R26 has passed local composition,
+fixed-point, reproducibility, and visual gates; R25 remains the latest public
+and cross-host preservation release until R26 publication and anonymous
+readback complete.
 
 The preceding R22/R23 content release remains public at
 `3c2b49fe0d20519de4ab06951ac2cb5151b68782`, tree

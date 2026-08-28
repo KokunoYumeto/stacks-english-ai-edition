@@ -19,13 +19,13 @@ in each corpus dossier and in the machine-readable registry.
 
 ## Errata state
 
-- Current integrated registry: **26 overlays / 821 stable IDs**, frozen at R25
-  admission commit `001f36d41504aecfa77201a04fedff16d37b00f0`, tree
-  `f8e3a8ea8d7e95190b3cb4d21eb701a6709f90c7`.
-- The Stacks errata component is **R1–R25**: 25 batches, 809 stable correction
-  IDs, and 908 exact v2 operations. `MC-STK-ERR-1176` is the highest identifier
-  through R25; intentional gaps mean it is not a count of corrections. R25
-  adds 131 IDs and 154 operations affecting only `artin.tex`.
+- Current integrated registry: **27 overlays / 846 stable IDs**, frozen at R26
+  admission commit `a7c4a3c52b9a32e96e0f4b98f9579369026d9e1b`, tree
+  `93af84d65d7b250fe0f4d660782ccf330b9e4743`.
+- The Stacks errata component is **R1–R26**: 26 batches, 834 stable correction
+  IDs, and 947 exact v2 operations. `MC-STK-ERR-1201` is the highest identifier
+  through R26; intentional gaps mean it is not a count of corrections. R26
+  adds 25 IDs and 39 operations affecting only `smoothing.tex`.
 - The 22nd overlay is the separately admitted historical-source contribution
   `stacks-verdier-a04446e-1-2-13-r1`, containing 12 non-official stable units.
   It inserts the manifest-bound Lemma 4.15 into cumulative `derived.tex` through
@@ -53,14 +53,29 @@ in each corpus dossier and in the machine-readable registry.
   `F196752E6D872B3B888E57C7183B326287F1A241286991C075E4896996FD185B`.
   The composition is commit `63dfd5f1499bea1916f64256056a5a37bcfb8f9a`,
   tree `7ab863452c932dd5ef230f65abdfa5bdcd6b5771`.
-- The French `MORE-ALGEBRA-L-001..029` and `SMOOTHING-001..035` packets remain
-  separate intake evidence and are not silently included in this fixed point.
+- R26 is composed by replaying only its 39 manifest-bound operations onto
+  cumulative `smoothing.tex`; its isolated payload does not replace the
+  integrated source. The committed 134,830-byte postimage has SHA-256
+  `85251479BB7D35D73CD5691C194D33B3ADC1BF245BCC248643D969DBBA0E7928`.
+  Candidate commit `d1f8c1b4654e8d63ea6380dfb5d2e256a6982121` has tree
+  `aca634a2dc857f97f6deb52cf4da5ba0792d6d23` and candidate subtree
+  `cc94b817fabf54d21c4914e5b7ebf8f168bac807`; registry import
+  `ca00b6023be95e0e928d5c0380e24011756bb0ef` precedes composition commit
+  `47c6b78e476e5644f5a7d0ca2ce4816b144a2411`, tree
+  `cbad56973a9e594743b596a5fd0fa291b490ae26`.
+- R26 adjudication accepted 31 producer identities, aliased
+  `SMOOTHING-002/003/004` to their existing R1 corrections, rejected
+  `SMOOTHING-010`, and merged four repeated semantic groups before
+  materializing 25 new stable units.
 - The current R25 content release is public at
   `fb3e4cb4d834c4e28d84b6df41466ad8aaa71b42`; exact-head CI passed and
   anonymous readback matched 78 R25-changed paths totaling 4,746,502 bytes.
   The six-asset GitHub/Zenodo preservation package contains 171,723,585
   cross-host byte-identical public bytes at version DOI
-  `10.5281/zenodo.22143740`.
+  `10.5281/zenodo.22143740` under concept DOI `10.5281/zenodo.22135180`.
+  Public `main` is the later R25 preservation head
+  `795313c42799161a69eb2c3d2ae3fa4b40279dfd`, tree
+  `c2bf5e701c4e3b94d4124049aea1a36b41353ce1`.
 - The preceding R22/R23 content release remains public at
   `3c2b49fe0d20519de4ab06951ac2cb5151b68782`; exact-head CI passed and
   anonymous readback matched 138 checked files totaling 25,024,008 bytes.
@@ -74,8 +89,8 @@ proposals remain under
 ## Validation state
 
 The repository integrity gate checks the pinned authority, protected linear
-ancestry, all 26 registry entries and 821 stable IDs, the immutable Verdier and
-R22–R25 candidates, the retained Verdier insertion, all 908 exact v2
+ancestry, all 27 registry entries and 846 stable IDs, the immutable Verdier and
+R22–R26 candidates, the retained Verdier insertion, all 947 exact v2
 operations, exact manifest/source-map/payload/review joins, the independent
 source correction, public-document links, JSON registries, and unresolved merge
 markers. See [VALIDATION.md](VALIDATION.md).
@@ -83,17 +98,17 @@ markers. See [VALIDATION.md](VALIDATION.md).
 Per-corpus build and visual receipts remain linked from the detailed dossiers;
 they are not silently generalized beyond their recorded source identity.
 
-The current R25 gate built all 24 required chapters (2,437 pages and
-25,862,634 PDF bytes) to a global PDF fixed point on sweep four. It is bound to
-source `a13d609ba9b146eac0a72f593bcf8aff5c5a6a33`, tree
-`fbf8d6341b22298d05fdc1f72d547907bc164077`, and records zero fatal,
+The current R26 gate built all 24 required chapters (2,437 pages and
+25,862,999 PDF bytes) to a global PDF fixed point on sweep four. It is bound to
+source `c90a50300dcec156e9ea5fe0c8802c8e36bde81e`, tree
+`651fff448fa41a4e7c38970eec169328002ac4f6`, and records zero fatal,
 missing-glyph, undefined-reference, undefined-citation, multiply-defined,
-rerun-required, or destination-warning diagnostics. Visual QA passed for all 69
-affected `artin.pdf` pages, including individual high-resolution review of all
-63 correction-locus pages. The exact artifact inventory is in the
-[current fixed-point build receipt](validation/stacks-errata-a04446e-r25-build-2026-08-28.json).
+rerun-required, or destination-warning diagnostics. Visual QA passed for all 37
+affected `smoothing.pdf` pages, including individual high-resolution review of
+15 correction-locus pages. The exact artifact inventory is in the
+[current fixed-point build receipt](validation/stacks-errata-a04446e-r26-build-2026-08-28.json).
 
-The [parallel linked-worktree reproducibility gate](validation/stacks-errata-a04446e-r25-reproducibility-2026-08-28.json)
+The [parallel linked-worktree reproducibility gate](validation/stacks-errata-a04446e-r26-reproducibility-2026-08-28.json)
 is **PASS**. Both builds use the same commit, tree, builder, environment, and
 fixed-point sweep; all 24 `{stem, pages, bytes, sha256}` artifact tuples are
 exactly equal. Earlier R24, R22/R23, Verdier, and R21 receipts remain preserved

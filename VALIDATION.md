@@ -20,16 +20,16 @@ The gate verifies:
 
 - ancestry of the pinned upstream, source-union, EGA, and protected linear
   registry/source history;
-- 26 admitted overlays containing exactly 821 stable IDs at R25 registry cutoff
-  `001f36d41504aecfa77201a04fedff16d37b00f0`, tree
-  `f8e3a8ea8d7e95190b3cb4d21eb701a6709f90c7`;
+- 27 admitted overlays containing exactly 846 stable IDs at R26 registry cutoff
+  `a7c4a3c52b9a32e96e0f4b98f9579369026d9e1b`, tree
+  `93af84d65d7b250fe0f4d660782ccf330b9e4743`;
 - the final immutable Verdier candidate, its 12 stable units, 27 manifest
   references, independent replay, rights boundary, and exact registered
   insertion into `derived.tex`;
-- the R1–R25 Stacks errata sequence: 25 batches, 809 correction IDs, and all
-  908 v2 operations, including the ordered R22/R23 replay, the 57-operation R24
-  replay in `spaces-duality.tex`, and the 154-operation R25 replay in
-  `artin.tex`;
+- the R1–R26 Stacks errata sequence: 26 batches, 834 correction IDs, and all
+  947 v2 operations, including the ordered R22/R23 replay, the 57-operation R24
+  replay in `spaces-duality.tex`, the 154-operation R25 replay in `artin.tex`,
+  and the 39-operation R26 replay in `smoothing.tex`;
 - preservation of the historical R1–R21 snapshot at prior cutoff
   `13ca6aaaca454f5930c4885c93f427e30cf21959` and of the separately composed
   Verdier source;
@@ -45,44 +45,56 @@ The gate verifies:
 The same gate runs in
 [`validate.yml`](.github/workflows/validate.yml) with full Git history.
 
-The current R25 build result is recorded at
-[`validation/stacks-errata-a04446e-r25-build-2026-08-28.json`](validation/stacks-errata-a04446e-r25-build-2026-08-28.json).
-All 24 required chapters (2,437 pages; 25,862,634 PDF bytes) compiled
+The current R26 build result is recorded at
+[`validation/stacks-errata-a04446e-r26-build-2026-08-28.json`](validation/stacks-errata-a04446e-r26-build-2026-08-28.json).
+All 24 required chapters (2,437 pages; 25,862,999 PDF bytes) compiled
 successfully, were readable by `pdfinfo`, and reached a global PDF fixed point
 on sweep four. The build is bound to source commit
-`a13d609ba9b146eac0a72f593bcf8aff5c5a6a33`, tree
-`fbf8d6341b22298d05fdc1f72d547907bc164077`. Aggregate diagnostics contain
+`c90a50300dcec156e9ea5fe0c8802c8e36bde81e`, tree
+`651fff448fa41a4e7c38970eec169328002ac4f6`. Aggregate diagnostics contain
 zero fatal, missing-glyph, undefined-reference, undefined-citation,
 multiply-defined, rerun-required, or destination-warning markers.
 
-Visual QA rendered and reviewed all 69 pages of the affected `artin.pdf` at
-96 DPI and inspected all 63 correction-locus pages individually at 180 DPI.
+Visual QA rendered and reviewed all 37 pages of the affected `smoothing.pdf` at
+96 DPI and inspected all 15 correction-locus pages individually at 180 DPI.
 The current
-[visual receipt](validation/stacks-errata-a04446e-r25-visual-qa-2026-08-28.json)
+[visual receipt](validation/stacks-errata-a04446e-r26-visual-qa-2026-08-28.json)
 records zero clipped, overlapping, blank, corrupt, missing-glyph, or
 broken-diagram defects. A second build ran independently in a parallel linked
 worktree. Both runs use the same source, builder, environment, and fixed-point
 sweep, and all 24 `{stem, pages, bytes, sha256}` tuples are exactly equal. See
-the [reproducibility summary](validation/stacks-errata-a04446e-r25-reproducibility-2026-08-28.json)
-and [second full receipt](validation/stacks-errata-a04446e-r25-reproducibility-second-2026-08-28.json).
+the [reproducibility summary](validation/stacks-errata-a04446e-r26-reproducibility-2026-08-28.json)
+and [second full receipt](validation/stacks-errata-a04446e-r26-reproducibility-second-2026-08-28.json).
 
 The [source composition receipt](validation/composition-current.json) records
-R25 cutoff `001f36d41504aecfa77201a04fedff16d37b00f0`, linear registry
-import `fb12027d697fce54f2f0d5fd1454f1e5069dd937`, and exact composition
-source `63dfd5f1499bea1916f64256056a5a37bcfb8f9a`, tree
-`7ab863452c932dd5ef230f65abdfa5bdcd6b5771`. It binds 908 cumulative
-v2 operations, including the 154 new R25 operations, to the 254,488-byte
-`artin.tex` postimage with SHA-256
-`F196752E6D872B3B888E57C7183B326287F1A241286991C075E4896996FD185B`.
+R26 cutoff `a7c4a3c52b9a32e96e0f4b98f9579369026d9e1b`, tree
+`93af84d65d7b250fe0f4d660782ccf330b9e4743`, candidate commit
+`d1f8c1b4654e8d63ea6380dfb5d2e256a6982121`, linear registry import
+`ca00b6023be95e0e928d5c0380e24011756bb0ef`, and exact composition source
+`47c6b78e476e5644f5a7d0ca2ce4816b144a2411`, tree
+`cbad56973a9e594743b596a5fd0fa291b490ae26`. It binds 947 cumulative v2
+operations, including the 39 new R26 operations, to the 134,830-byte
+`smoothing.tex` postimage with SHA-256
+`85251479BB7D35D73CD5691C194D33B3ADC1BF245BCC248643D969DBBA0E7928`.
 Historical R24, R22/R23, Verdier, and R21 receipts remain preserved and
 authoritative for their immutable source snapshots; they are not rebound to the
-R25 tree.
+R26 tree.
+
+R26 adjudication accepted 31 producer identities, resolved
+`SMOOTHING-002/003/004` as aliases of existing R1 corrections, rejected
+`SMOOTHING-010`, and merged four repeated semantic groups before materializing
+25 new stable units. The candidate tree is
+`aca634a2dc857f97f6deb52cf4da5ba0792d6d23` with candidate subtree
+`cc94b817fabf54d21c4914e5b7ebf8f168bac807`.
 
 The [current public R25 release receipt](validation/stacks-errata-a04446e-r25-release-2026-08-28.json)
 binds public content head `fb3e4cb4d834c4e28d84b6df41466ad8aaa71b42`,
 tree `406a1c289c2d45f901de4356bd6e8d0ced48a661`, to its successful exact-head
 workflow. Anonymous HTTPS readback matched 78 R25-changed paths totaling
-4,746,502 bytes by filename, byte count, SHA-256, and Git blob.
+4,746,502 bytes by filename, byte count, SHA-256, and Git blob. Before R26
+publication, public `main` is the later R25 preservation head
+`795313c42799161a69eb2c3d2ae3fa4b40279dfd`, tree
+`c2bf5e701c4e3b94d4124049aea1a36b41353ce1`.
 
 The [cross-host preservation receipt](validation/ai-integrated-stacks-r25-publication-2026-08-28.json)
 binds the exact six-file R25 package to the

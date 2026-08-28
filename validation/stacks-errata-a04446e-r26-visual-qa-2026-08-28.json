@@ -1,0 +1,113 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-visual-qa/v1",
+  "status": "PASS",
+  "created_utc": "2026-08-28T13:38:50Z",
+  "source": {
+    "commit": "c90a50300dcec156e9ea5fe0c8802c8e36bde81e",
+    "tree": "651fff448fa41a4e7c38970eec169328002ac4f6"
+  },
+  "build_receipt": {
+    "path": "validation/stacks-errata-a04446e-r26-build-2026-08-28.json",
+    "bytes": 22492,
+    "sha256": "7B391C98152E9F16C5A5512301E6FF1A51C212FDCA8AFEE8E20EDC20E2C8FF31",
+    "status": "PASS",
+    "global_fixed_point_sweep": 4
+  },
+  "scope": {
+    "affected_chapters": [
+      "smoothing"
+    ],
+    "full_page_render_count": 37,
+    "full_page_contact_sheet_review_count": 37,
+    "high_resolution_locus_page_count": 15,
+    "high_resolution_locus_pages": {
+      "smoothing": [
+        5,
+        11,
+        13,
+        14,
+        16,
+        21,
+        24,
+        25,
+        26,
+        28,
+        29,
+        30,
+        32,
+        33,
+        34
+      ]
+    }
+  },
+  "artifacts": {
+    "smoothing": {
+      "pdf": "smoothing.pdf",
+      "bytes": 649603,
+      "pages": 37,
+      "sha256": "B573D3ADABC668AFAAF2D9F783D285B80EE036191CD3150EE9CA8739FEE5F86B",
+      "encrypted": false,
+      "media_box_points": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      "render_dimensions_pixels": [
+        816,
+        1056
+      ],
+      "pages_without_ink": 0,
+      "minimum_ink_pixels_below_245": 10170,
+      "duplicate_render_hashes": 0
+    }
+  },
+  "render_protocol": {
+    "renderer": "Poppler pdftoppm 26.05.0",
+    "full_page_dpi": 96,
+    "full_page_layout": "ordered 4-by-4 contact sheets",
+    "contact_sheet_count": 3,
+    "high_resolution_dpi": 180,
+    "high_resolution_selection": "the 15 correction-sensitive Smoothing pages deterministically derived from all 39 R26 manifest-bound operation loci",
+    "render_intermediates_published": false
+  },
+  "source_page_mapping": {
+    "path": "ai-integrated/candidates/commons/stacks/errata/r26/builds/source-page-map.json",
+    "bytes": 10570,
+    "sha256": "27316E8D935696824B04AF91884F575B5064AECCAB0FAC8E597D9FA83B0B4F56",
+    "schema": "mathematics-commons-stacks-synctex-source-page-map/v1",
+    "operation_count": 39,
+    "unique_page_count": 15,
+    "mapping_failures": 0
+  },
+  "render_evidence": {
+    "path": "validation/stacks-errata-a04446e-r26-smoothing-render-manifest-2026-08-28.json",
+    "bytes": 15709,
+    "sha256": "AEF68EB18EC08C5B6C3056AFE4A8F2C7180E044B097E41CDD12D40A80C505596",
+    "status": "PASS",
+    "manifest_bound_operations_covered": 39,
+    "mapping_failures": 0
+  },
+  "checks": {
+    "all_pages_rendered": true,
+    "all_pages_manually_inspected": true,
+    "all_manifest_bound_locus_pages_inspected_at_high_resolution": true,
+    "page_dimensions_consistent": true,
+    "headers_and_page_numbers_consistent": true,
+    "text_and_formulas_legible": true,
+    "diagrams_intact": true,
+    "clipped_content": 0,
+    "overlapping_content": 0,
+    "blank_pages": 0,
+    "corrupted_pages": 0,
+    "missing_or_unreadable_glyphs": 0,
+    "broken_diagrams": 0,
+    "rejected_simplicial_007_parenthesis_preserved": true
+  },
+  "accessibility": {
+    "struct_tree_root_present": false,
+    "mark_info_present": false,
+    "note": "The standalone chapter PDF is untagged. This retained accessibility limitation is not a visual-rendering failure."
+  },
+  "conclusion": "All 37 pages of the affected Smoothing PDF passed ordered contact-sheet review, and all 15 correction-sensitive pages passed individual 180-DPI inspection without a formatting or rendering defect."
+}

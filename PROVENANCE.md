@@ -92,6 +92,19 @@ The histories were combined without flattening either input:
    The resulting source commit is
    `63dfd5f1499bea1916f64256056a5a37bcfb8f9a`, tree
    `7ab863452c932dd5ef230f65abdfa5bdcd6b5771`.
+9. The final R26 candidate was frozen at
+   `d1f8c1b4654e8d63ea6380dfb5d2e256a6982121`, tree
+   `aca634a2dc857f97f6deb52cf4da5ba0792d6d23`, with candidate subtree
+   `cc94b817fabf54d21c4914e5b7ebf8f168bac807`. Admission cutoff
+   `a7c4a3c52b9a32e96e0f4b98f9579369026d9e1b`, tree
+   `93af84d65d7b250fe0f4d660782ccf330b9e4743`, was imported over public R25
+   preservation head `795313c42799161a69eb2c3d2ae3fa4b40279dfd`, tree
+   `c2bf5e701c4e3b94d4124049aea1a36b41353ce1`, at
+   `ca00b6023be95e0e928d5c0380e24011756bb0ef`. R26 was then composed by
+   replaying only its 39 manifest-bound operations onto cumulative
+   `smoothing.tex`. The resulting source commit is
+   `47c6b78e476e5644f5a7d0ca2ce4816b144a2411`, tree
+   `cbad56973a9e594743b596a5fd0fa291b490ae26`.
 
 The mathematical source therefore stays at the repository root while the
 complete evidence and registry system remains browsable under
@@ -131,14 +144,14 @@ high-resolution correction-locus pages. These receipts remain authoritative
 for that immutable R22/R23 tree and are not build or publication evidence for
 the later R24 source composition.
 
-The current R25 fixed-point build is bound to source
-`a13d609ba9b146eac0a72f593bcf8aff5c5a6a33`, tree
-`fbf8d6341b22298d05fdc1f72d547907bc164077`. It preserves every earlier
-composed source identity while advancing `artin.tex` through 131 new correction
-IDs and 154 operations. Two independent linked-worktree builds produced
-exactly matching identities for all 24 PDFs: 2,437 pages, 25,862,634 bytes, and
-a global fixed point on sweep four. Visual QA covers all 69 pages of
-`artin.pdf`, including all 63 correction-locus pages at high resolution.
+The current R26 fixed-point build is bound to source
+`c90a50300dcec156e9ea5fe0c8802c8e36bde81e`, tree
+`651fff448fa41a4e7c38970eec169328002ac4f6`. It preserves every earlier
+composed source identity while advancing `smoothing.tex` through 25 new
+correction IDs and 39 operations. Two independent linked-worktree builds
+produced exactly matching identities for all 24 PDFs: 2,437 pages, 25,862,999
+bytes, and a global fixed point on sweep four. Visual QA covers all 37 pages of
+`smoothing.pdf`, including 15 correction-locus pages at high resolution.
 
 The R25 content head is public at
 `fb3e4cb4d834c4e28d84b6df41466ad8aaa71b42`, tree
@@ -150,6 +163,9 @@ The source, 24 PDFs, and validation evidence are preserved as six
 byte-identical assets on GitHub and Zenodo version DOI
 `10.5281/zenodo.22143740`, as recorded by the
 [cross-host receipt](validation/ai-integrated-stacks-r25-publication-2026-08-28.json).
+Before R26 publication, public `main` is the later R25 preservation head
+`795313c42799161a69eb2c3d2ae3fa4b40279dfd`, tree
+`c2bf5e701c4e3b94d4124049aea1a36b41353ce1`.
 
 ## Branch preservation
 
@@ -159,8 +175,7 @@ branch. Their presence is provenance, not a claim that they remain competing
 editions. The published Verdier content release at
 `4947e4a6d22971ea793e4b4bc2b09d8ab8cc04d0` remains historical evidence for
 the 22-overlay / 559-ID cutoff at `60f1d97e`. The current validated source
-composition advances the repository state to 26 overlays and 821 stable IDs at
-R25 cutoff `001f36d4`; R22 and R23 affect only `more-algebra.tex`, R24 affects
-only `spaces-duality.tex`, and R25 affects only `artin.tex`. The French
-`MORE-ALGEBRA-L-001..029` and `SMOOTHING-001..035` packets remain separate
-intake evidence and are not part of this fixed point.
+composition advances the repository state to 27 overlays and 846 stable IDs at
+R26 cutoff `a7c4a3c5`; R22 and R23 affect only `more-algebra.tex`, R24 affects
+only `spaces-duality.tex`, R25 affects only `artin.tex`, and R26 affects only
+`smoothing.tex`.

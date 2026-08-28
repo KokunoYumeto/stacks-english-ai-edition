@@ -11,10 +11,10 @@ French diplomatic editions remain separate read-only inputs.
 
 ## Current maintenance baseline
 
-The current validated composition contains **26 overlays / 821 stable IDs** at
-R25 admission cutoff `001f36d41504aecfa77201a04fedff16d37b00f0`, tree
-`f8e3a8ea8d7e95190b3cb4d21eb701a6709f90c7`. Its Stacks errata component is
-R1–R25: 25 batches, 809 correction IDs, and 908 exact v2 operations. The 22nd
+The current validated composition contains **27 overlays / 846 stable IDs** at
+R26 admission cutoff `a7c4a3c52b9a32e96e0f4b98f9579369026d9e1b`, tree
+`93af84d65d7b250fe0f4d660782ccf330b9e4743`. Its Stacks errata component is
+R1–R26: 26 batches, 834 correction IDs, and 947 exact v2 operations. The 22nd
 overlay, `stacks-verdier-a04446e-1-2-13-r1`, remains a separately admitted,
 independently written historical-source contribution with 12 non-official
 stable units. It inserts one manifest-bound lemma into cumulative `derived.tex`;
@@ -23,28 +23,32 @@ no official Stacks tag or upstream endorsement is claimed.
 R22 and R23 add 93 correction IDs and 106 manifest-bound operations affecting
 only `more-algebra.tex`. R24 adds 38 IDs and 57 operations affecting only
 `spaces-duality.tex`; R25 adds 131 IDs and 154 operations affecting only
-`artin.tex`. All are composed in registry order without replacing cumulative
-source wholesale. The R25 source composition is commit
-`63dfd5f1499bea1916f64256056a5a37bcfb8f9a`, tree
-`7ab863452c932dd5ef230f65abdfa5bdcd6b5771`. The exact authority, registry,
+`artin.tex`; R26 adds 25 IDs and 39 operations affecting only `smoothing.tex`.
+All are composed in registry order without replacing cumulative source
+wholesale. The R26 source composition is commit
+`47c6b78e476e5644f5a7d0ca2ce4816b144a2411`, tree
+`cbad56973a9e594743b596a5fd0fa291b490ae26`. The exact authority, registry,
 operation, source, and preservation identities are recorded in the
 [current composition receipt](validation/composition-current.json).
 
-The current R25 source passed two linked-worktree fixed-point builds at source
-`a13d609ba9b146eac0a72f593bcf8aff5c5a6a33`, tree
-`fbf8d6341b22298d05fdc1f72d547907bc164077`: 24 readable PDFs, 2,437 pages,
-25,862,634 PDF bytes, global fixed point on sweep four, and zero fatal or listed
-serious diagnostics. All 69 affected `artin.pdf` pages passed review, including
-63 correction-locus pages at high resolution. All 24 PDF identities match
+The current R26 source passed two linked-worktree fixed-point builds at source
+`c90a50300dcec156e9ea5fe0c8802c8e36bde81e`, tree
+`651fff448fa41a4e7c38970eec169328002ac4f6`: 24 readable PDFs, 2,437 pages,
+25,862,999 PDF bytes, global fixed point on sweep four, and zero fatal or listed
+serious diagnostics. All 37 affected `smoothing.pdf` pages passed review,
+including 15 correction-locus pages at high resolution. All 24 PDF identities match
 exactly between the two builds. Earlier R24, R22/R23, Verdier, and R21 receipts
 remain preserved as historical evidence for their exact scopes.
 
-The current R25 content release is public at
+Before R26 publication, the current R25 preservation release remains public at
 `fb3e4cb4d834c4e28d84b6df41466ad8aaa71b42`, tree
 `406a1c289c2d45f901de4356bd6e8d0ced48a661`; exact-head CI and anonymous
 readback of 78 R25-changed paths totaling 4,746,502 bytes pass. Its six-asset
 preservation package is byte-identical on GitHub and Zenodo version DOI
-`10.5281/zenodo.22143740` under the existing concept DOI.
+`10.5281/zenodo.22143740` under concept DOI `10.5281/zenodo.22135180`. Public
+`main` is the later R25 preservation head
+`795313c42799161a69eb2c3d2ae3fa4b40279dfd`, tree
+`c2bf5e701c4e3b94d4124049aea1a36b41353ce1`.
 
 The historical R22/R23 content release is public at
 `3c2b49fe0d20519de4ab06951ac2cb5151b68782`, tree
@@ -53,12 +57,13 @@ readback of 138 checked files totaling 25,024,008 bytes pass.
 
 ## Registry-order maintenance state
 
-R25 is admitted and composed into the generated source at
-`63dfd5f1499bea1916f64256056a5a37bcfb8f9a`. Its 131 stable units and 154 exact
-operations affect only `artin.tex`. The French `MORE-ALGEBRA-L-001..029` and
-`SMOOTHING-001..035` packets remain separate intake evidence, not silently
-included in the current composition. The rejected R23 producer
-`MORE-ALGEBRA-J-006` likewise remains excluded from the integrated source.
+R26 is admitted and composed into the generated source at
+`47c6b78e476e5644f5a7d0ca2ce4816b144a2411`. Its 25 stable units and 39 exact
+operations affect only `smoothing.tex`. The adjudication accepted 31 producer
+identities, aliased `SMOOTHING-002/003/004` to existing R1 corrections,
+rejected `SMOOTHING-010`, and merged four repeated semantic groups. The rejected
+R23 producer `MORE-ALGEBRA-J-006` likewise remains excluded from the integrated
+source.
 
 ## Recommended order
 
