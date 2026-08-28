@@ -24,6 +24,7 @@ DEFAULT_STEMS = (
     "sheaves",
     "sites",
     "algebra",
+    "artin",
     "brauer",
     "derived",
     "simplicial",
@@ -193,46 +194,60 @@ def worktree_kind(source: Path) -> str:
     return "primary" if git_dir == common_dir else "linked"
 
 
-def require_clean_build_tree(source: Path) -> None:
-    tracked = subprocess.run(
-        ["git", "-C", str(source), "status", "--porcelain=v1", "--untracked-files=no"],
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-        text=True,
-        encoding="utf-8",
-        errors="replace",
-        check=False,
-    )
-    if tracked.returncode != 0:
-        raise RuntimeError(
-            "could not verify tracked build inputs: " + tracked.stderr.strip()
-        )
-    if tracked.stdout.strip():
-        raise RuntimeError("tracked build tree is not clean at HEAD")
+def require_clean_build_tree(
+    source: Path, stems: tuple[str, ...], composition_receipt: Path
+) -> None:
+    """Verify only the bounded root inputs that can affect this build."""
+    receipt_path = composition_receipt
+    if not receipt_path.is_absolute():
+        receipt_path = source / receipt_path
+    receipt_path = receipt_path.resolve()
+    try:
+        receipt_relative = receipt_path.relative_to(source).as_posix()
+    except ValueError as exc:
+        raise RuntimeError("composition receipt must be inside the source worktree") from exc
 
-    untracked = subprocess.run(
-        [
-            "git",
-            "-C",
-            str(source),
-            "ls-files",
-            "--others",
-            "--exclude-standard",
-        ],
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-        text=True,
-        encoding="utf-8",
-        errors="replace",
-        check=False,
+    critical_paths = {
+        "tools/build_fixed_point.py",
+        receipt_relative,
+        "preamble.tex",
+        "chapters.tex",
+        "my.bib",
+        *(f"{stem}.tex" for stem in stems),
+    }
+    shared_suffixes = {".bst", ".cfg", ".cls", ".def", ".sty"}
+    root_files = tuple(path for path in source.iterdir() if path.is_file())
+    critical_paths.update(
+        path.name for path in root_files if path.suffix.lower() in shared_suffixes
     )
-    if untracked.returncode != 0:
-        raise RuntimeError(
-            "could not inspect untracked build inputs: " + untracked.stderr.strip()
+
+    for relative in sorted(critical_paths):
+        tracked = subprocess.run(
+            ["git", "-C", str(source), "ls-files", "--error-unmatch", "--", relative],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+            check=False,
         )
-    if untracked.stdout.strip():
-        names = ", ".join(untracked.stdout.splitlines()[:8])
-        raise RuntimeError(f"build worktree contains untracked files: {names}")
+        if tracked.returncode != 0:
+            raise RuntimeError(f"build-critical path is not tracked: {relative}")
+        require_clean_path(source, relative)
+
+    selected = set(stems)
+    for path in root_files:
+        matched_suffix = next(
+            (suffix for suffix in GENERATED_SUFFIXES if path.name.endswith(suffix)),
+            None,
+        )
+        if matched_suffix is None:
+            continue
+        stem = path.name[: -len(matched_suffix)]
+        if stem not in selected:
+            raise RuntimeError(
+                f"unselected root generated file could contaminate the build: {path.name}"
+            )
 
 
 def require_ancestor(
@@ -1902,7 +1917,6 @@ def main() -> int:
             "refusing to mutate generated files in the primary worktree; "
             "use a linked disposable worktree or pass --allow-primary-worktree explicitly"
         )
-    require_clean_build_tree(source)
     composition_binding, required_stems, affected_stems = load_composition_receipt(
         source, args.composition_receipt
     )
@@ -1927,6 +1941,7 @@ def main() -> int:
     else:
         stems = required_stems
         selection_mode = "composition_receipt"
+    require_clean_build_tree(source, stems, args.composition_receipt)
     reference_labels = external_reference_labels(source)
     missing_affected = [stem for stem in affected_stems if stem not in stems]
     if missing_affected:
