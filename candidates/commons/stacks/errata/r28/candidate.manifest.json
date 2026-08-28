@@ -205,7 +205,7 @@
     },
     {
       "path": "replay/independent-review.json",
-      "sha256": "ACA9D63DB23D9007DB6A93410AD37E34363A9FFAD0BBD1EF8E598054D6DE08CD"
+      "sha256": "F01763C1AD5BD30C617E1FCEF3B99A702BEF8CC36C9D12C80F94B1921CEE34AB"
     },
     {
       "path": "replay-build.py",
@@ -214,10 +214,6 @@
     {
       "path": "source-validation.json",
       "sha256": "3F3BD32B61AE51AA85C2ACF3F62AF95EE21ABCD1F0A32E723531FAD274B01DE2"
-    },
-    {
-      "path": "texput.log",
-      "sha256": "5004892D8CA2F2E37E8B0E5025B69C75B952252674F0A031DD5D08F10D8D085D"
     },
     {
       "path": "verify-source.py",
@@ -236,7 +232,7 @@
   "review_state": "performed",
   "independent_replay": "passed",
   "unresolved_defects": [
-    "Independent replay passed against the pre-review manifest 90A38F9772B6E62CDCBB2EE58558C786A13D20E34B6B2DAA557254B2C0357C11; this final manifest rebind adds only the replay receipt.",
+    "Independent replay passed against the pre-review manifest CDBCCC0AF1AA74DA0E7C3E71DBF4D047BD29DA95CE2061FFF11FAB411DC89DB0; this final manifest rebind adds only the replay receipt.",
     "R28 supersedes the mathematical replacement in MC-STK-ERR-1183 while retaining R26 byte-for-byte as historical provenance.",
     "The isolated smoothing.tex reader retains the same cross-chapter undefined-reference target multiset as the frozen authority reader.",
     "Three inherited overfull-box diagnostics and one inherited underfull-box diagnostic remain; all 37 candidate pages and correction-sensitive page 16 were visually inspected with no clipping, overlap, broken diagram, blank page, missing glyph, or unreadable content.",
@@ -252,5 +248,5 @@
     "Do not contact or submit to upstream Stacks maintainers under the current no-AI-contribution boundary.",
     "Do not admit R28 except in a separate registry commit bound to this final manifest and passed replay receipt."
   ],
-  "generated_at_utc": "2026-08-28T20:04:43Z"
+  "generated_at_utc": "2026-08-28T20:05:37Z"
 }
