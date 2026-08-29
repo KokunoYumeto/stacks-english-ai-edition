@@ -66,9 +66,9 @@ natural map
 \end{equation}
 because if one is given a map $A \to B_\beta$ for some $\beta$, one
 naturally gets a map from $A$  into the colimit by composing with
-$B_\beta \to \colim_{\beta \in \alpha} B_\alpha$.
+$B_\beta \to \colim_{\beta \in \alpha} B_\beta$.
 Note that the left colimit is one of sets! In general, (\ref{equation-compare})
-is neither injective or surjective.
+is neither injective nor surjective.
 
 \begin{example}
 \label{example-not-surjective}
@@ -107,7 +107,7 @@ Nonetheless, if we map out of a finite set then
 
 \begin{lemma}
 \label{lemma-out-of-finite}
-Suppose that, in (\ref{equation-compare}), $\mathcal{C}$ is the category
+If, in (\ref{equation-compare}), $\mathcal{C}$ is the category
 of sets and $A$ is a {\it finite set}, then the map is a bijection.
 \end{lemma}
 
@@ -169,7 +169,7 @@ $\alpha$.
 \begin{proposition}
 \label{proposition-modules-are-small}
 Let $R$ be a ring. Let $M$ be an $R$-module.
-Let $\kappa$ the cardinality of the set of submodules of $M$.
+Let $\kappa$ be the cardinality of the set of submodules of $M$.
 If $\alpha$ is an ordinal whose cofinality is bigger than $\kappa$,
 then $M$ is $\alpha$-small with respect to injections.
 \end{proposition}
@@ -443,7 +443,7 @@ In fact it has functorial injective embeddings.
 \end{lemma}
 
 \begin{proof}
-For an abelian group $A$ we denote $j : A \to J(A)$ the functorial
+For an abelian group $A$ we denote by $j : A \to J(A)$ the functorial
 injective embedding constructed in
 More on Algebra, Section \ref{more-algebra-section-injectives-modules}.
 Let $\mathcal{F}$ be an abelian sheaf on $X$.
@@ -503,7 +503,7 @@ has enough injectives. In fact it has functorial injective embeddings.
 \end{lemma}
 
 \begin{proof}
-For any ring $R$ and any $R$-module $M$ we denote
+For any ring $R$ and any $R$-module $M$ we denote by
 $j : M \to J_R(M)$ the functorial
 injective embedding constructed in
 More on Algebra, Section \ref{more-algebra-section-injectives-modules}.
@@ -672,7 +672,7 @@ Let $\mathcal{C}$ be a site. In this section we prove that there are
 enough injectives for abelian sheaves on $\mathcal{C}$.
 
 \medskip\noindent
-Denote
+Denote by
 $i : \textit{Ab}(\mathcal{C}) \longrightarrow \textit{PAb}(\mathcal{C})$
 the forgetful functor from abelian sheaves to abelian presheaves.
 Let
@@ -738,7 +738,7 @@ the following lemma.
 
 \begin{lemma}
 \label{lemma-map-into-smaller}
-Suppose that $\mathcal{G}_i$, $i\in I$ is set of abelian sheaves
+Suppose that the $\mathcal{G}_i$, $i\in I$, form a set of abelian sheaves
 on $\mathcal{C}$. There exists an ordinal $\beta$ such that
 for any sheaf $\mathcal{F}$, any $i\in I$, and any map
 $\varphi : \mathcal{G}_i \to J_\beta(\mathcal{F})$ there exists an
@@ -778,7 +778,7 @@ Sets, Proposition \ref{sets-proposition-exist-ordinals-large-cofinality}.
 \end{proof}
 
 \noindent
-Recall that for an object $X$ of $\mathcal{C}$ we denote $\mathbf{Z}_X$
+Recall that for an object $X$ of $\mathcal{C}$ we denote by $\mathbf{Z}_X$
 the presheaf of abelian groups $\Gamma(U, \mathbf{Z}_X) =
 \oplus_{U \to X} \mathbf{Z}$, see
 Modules on Sites, Section \ref{sites-modules-section-free-abelian-presheaf}.
@@ -910,7 +910,7 @@ $$
 \SheafHom(\mathcal{F}, \mathcal{J})
 $$
 with its natural $\mathcal{O}$-module structure.
-Insert here future reference to internal hom.
+See Modules on Sites, Section \ref{sites-modules-section-internal-hom}.
 We will also need
 a canonical flat resolution of a sheaf of $\mathcal{O}$-modules.
 This we can do as follows: For any $\mathcal{O}$-module
@@ -933,7 +933,7 @@ The functor $\mathcal{F} \mapsto \mathcal{F}^\vee$ is exact.
 \end{lemma}
 
 \begin{proof}
-This because $\mathcal{J}$ is an injective abelian sheaf.
+This is because $\mathcal{J}$ is an injective abelian sheaf.
 \end{proof}
 
 \noindent
@@ -957,7 +957,7 @@ $\mathcal{O}$-modules it corresponds to via adjunction.
 Let $\mathcal{I}$ be the kernel of this map. There exists
 a nonzero map $\mathcal{F} \supset j_{U!}\mathcal{O}_U/\mathcal{I}
 \to \mathcal{J}$ which does not annihilate $s$. As $\mathcal{J}$ is
-an injective $\mathcal{O}$-module, this extends to a map
+an injective abelian sheaf, the underlying map extends to a map
 $\varphi : \mathcal{F} \to \mathcal{J}$.
 Then $ev(s)(\varphi) = \varphi(s) \not = 0$ which is what we had to prove.
 \end{proof}
@@ -970,8 +970,8 @@ $$
 (\mathcal{F}^\vee)^\vee \longrightarrow (F(\mathcal{F}^\vee))^\vee.
 $$
 Set $J(\mathcal{F}) = (F(\mathcal{F}^\vee))^\vee$.
-The composition of $ev$ with this
-the displayed map gives
+The composition of $ev$ with the displayed
+map gives
 $\mathcal{F} \to J(\mathcal{F})$ functorially in $\mathcal{F}$.
 
 \begin{lemma}
@@ -1228,10 +1228,10 @@ and an admissible monomorphism,
 \item admissible monomorphisms are stable under composition,
 \item admissible epimorphisms are stable under composition,
 \item the push-out of an admissible monomorphism $i : A \to B$ via
-any morphism $A \to A'$ exist and the induced morphism $i' : A' \to B'$
+any morphism $A \to A'$ exists and the induced morphism $i' : A' \to B'$
 is an admissible monomorphism, and
 \item the base change of an admissible epimorphism $p : B \to C$ via
-any morphism $C' \to C$ exist and the induced morphism $p' : B' \to C'$
+any morphism $C' \to C$ exists and the induced morphism $p' : B' \to C'$
 is an admissible epimorphism.
 \end{enumerate}
 Given such a structure let $\mathcal{C} = (\mathcal{A}, \text{Cov})$
@@ -1491,7 +1491,7 @@ $$
 U \to \Im(\psi) \xrightarrow{\varphi''} I
 $$
 Since $\varphi'$ and $\varphi''$ agree on $N = A' \cap \Im(\psi)$
-we see that combined the define a morphism $A' + \Im(\psi) \to I$
+we see that together they define a morphism $A' + \Im(\psi) \to I$
 contradicting the assumed maximality of $A'$.
 \end{proof}
 
@@ -1603,7 +1603,7 @@ where $M_i^\bullet$ is bounded above, acyclic, and $|M_i^n| \leq \kappa$.
 \end{lemma}
 
 \begin{proof}
-Choose a generator $U$ of $\mathcal{A}$. Denote $c$ the function of
+Choose a generator $U$ of $\mathcal{A}$. Denote by $c$ the function of
 Lemma \ref{lemma-surjection-bounded-size}.
 Set $\kappa = \sup \{c^n(|U|), n = 1, 2, 3, \ldots\}$.
 Let $n \in \mathbf{Z}$ and let $\psi : U \to M^n$ be a morphism.
@@ -1641,7 +1641,7 @@ Suppose that $I^\bullet$ is a complex such that
 such that $|M^n| \leq \kappa$
 we have $\Hom_{K(\mathcal{A})}(M^\bullet, I^\bullet) = 0$.
 \end{enumerate}
-Then $I^\bullet$ is an $K$-injective complex.
+Then $I^\bullet$ is a $K$-injective complex.
 \end{lemma}
 
 \begin{proof}
@@ -1660,7 +1660,7 @@ as in Lemma \ref{lemma-acyclic-quotient-complexes-bounded-size}.
 Finally, we let $K_\alpha^\bullet \subset M^\bullet$
 be the inverse image of $N_\alpha^\bullet$.
 \item If $\alpha$ is a limit ordinal we set
-$K_\beta^\bullet = \colim K_\alpha^\bullet$.
+$K_\alpha^\bullet = \colim_{\beta < \alpha} K_\beta^\bullet$.
 \end{enumerate}
 It is clear that $M^\bullet = K_\alpha^\bullet$ for a suitably large
 ordinal $\alpha$. We will prove that
@@ -1708,7 +1708,7 @@ Let $(K_i^\bullet)_{i \in I}$ be a set of acyclic complexes.
 There exists a functor $M^\bullet \mapsto \mathbf{M}^\bullet(M^\bullet)$
 and a natural transformation
 $j_{M^\bullet} : M^\bullet \to \mathbf{M}^\bullet(M^\bullet)$
-such
+such that
 \begin{enumerate}
 \item $j_{M^\bullet}$ is a (termwise) injective quasi-isomorphism, and
 \item for every $i \in I$ and $w : K_i^\bullet \to M^\bullet$
@@ -1755,9 +1755,9 @@ is an injective object of $\mathcal{A}$.
 \end{lemma}
 
 \begin{proof}
-Choose a functorial injective embeddings $i_M : M \to I(M)$, see
+Choose functorial injective embeddings $i_M : M \to I(M)$, see
 Theorem \ref{theorem-injective-embedding-grothendieck}.
-For every complex $M^\bullet$ denote $J^\bullet(M^\bullet)$ the complex
+For every complex $M^\bullet$ denote by $J^\bullet(M^\bullet)$ the complex
 with terms $J^n(M^\bullet) = I(M^n) \oplus I(M^{n + 1})$ and differential
 $$
 d_{J^\bullet(M^\bullet)} =
@@ -1791,7 +1791,7 @@ $$
 \left(
 \begin{matrix}
 - d^{n - 1}_{Q^\bullet(M^\bullet)} & - v^n_{M^\bullet} \\
-0 & d^n_{J^\bullet(M)}
+0 & d^n_{J^\bullet(M^\bullet)}
 \end{matrix}
 \right)
 $$
@@ -1830,9 +1830,9 @@ such that every bounded above acyclic complex $K^\bullet$
 such that $|K^n| \leq \kappa$ is isomorphic to $K_i^\bullet$ for some
 $i \in I$. This is possible by
 Lemma \ref{lemma-set-iso-classes-bounded-size}.
-Denote $\mathbf{M}^\bullet(-)$ the functor constructed in
+Denote by $\mathbf{M}^\bullet(-)$ the functor constructed in
 Lemma \ref{lemma-functorial-homotopies}.
-Denote $\mathbf{N}^\bullet(-)$ the functor constructed in
+Denote by $\mathbf{N}^\bullet(-)$ the functor constructed in
 Lemma \ref{lemma-functorial-injective}.
 Both of these functors come with injective transformations
 $\text{id} \to \mathbf{M}$ and $\text{id} \to \mathbf{N}$.
@@ -1866,7 +1866,7 @@ Lemma \ref{lemma-characterize-injective}.
 Suppose that $M \subset U$ and $\varphi : M \to \mathbf{T}^n_\alpha(M^\bullet)$
 is a morphism for some $n \in \mathbf{Z}$. By
 Proposition \ref{proposition-objects-are-small}
-we see that $\varphi$ factor through
+we see that $\varphi$ factors through
 $\mathbf{T}^n_{\alpha'}(M^\bullet)$ for some $\alpha' < \alpha$.
 In particular, by the construction of the functor
 $\mathbf{N}^\bullet(-)$ we see that $\varphi$ factors through
@@ -1879,8 +1879,8 @@ be a morphism of complexes where $K^\bullet$ is a bounded above acyclic
 complex such that $|K^n| \leq \kappa$. Then $K^\bullet \cong K_i^\bullet$
 for some $i \in I$. Moreover, by
 Proposition \ref{proposition-objects-are-small}
-once again we see that $w$ factor through
-$\mathbf{T}^n_{\alpha'}(M^\bullet)$ for some $\alpha' < \alpha$.
+once again we see that $w$ factors through
+$\mathbf{T}_{\alpha'}(M^\bullet)$ for some $\alpha' < \alpha$.
 In particular, by the construction of the functor
 $\mathbf{M}^\bullet(-)$ we see that $w$ is homotopic to zero.
 This finishes the proof.
@@ -1917,7 +1917,7 @@ of colimits.
 \medskip\noindent
 Assume that $F$ commutes with colimits. Then $F(M \oplus N) = F(M) \times F(N)$
 and we can use this to define a group structure on $F(M)$. Hence we get
-$F : \mathcal{A} \to \textit{Ab}$ which is additive and right exact, i.e.,
+$F : \mathcal{A}^{opp} \to \textit{Ab}$ which is additive and right exact, i.e.,
 transforms a short exact sequence $0 \to K \to L \to M \to 0$ into an exact
 sequence $F(K) \leftarrow F(L) \leftarrow F(M) \leftarrow 0$ (compare with
 Homology, Section \ref{homology-section-functors}).
@@ -1953,7 +1953,7 @@ $$
 which maps the summand corresponding to $\varphi$ to the summand
 corresponding to $s_\varphi$ by the identity map on $U$. Then $s_{univ}$
 maps to $(s_\varphi)_\varphi$ by construction.
-in other words the right square in the diagram
+In other words the right square in the diagram
 $$
 \xymatrix{
 A' \ar[r] &
@@ -2146,7 +2146,7 @@ I^{p, \bullet} \ar[l]_{\alpha^{p p'}}
 }
 \quad\text{for }p' \leq p
 $$
-such that $\alpha^p \circ \alpha^{p' p} = \alpha^{p'}$
+such that $\alpha^{p'} \circ \alpha^{p p'} = \alpha^p$
 and $\alpha^{p'p''} \circ \alpha^{pp'} = \alpha^{pp''}$.
 The problem is that the maps $\alpha^p : I^{p, \bullet} \to I^\bullet$
 need not be injective. For each $p$ we choose an injection
@@ -2203,7 +2203,7 @@ I^\bullet \times \prod\nolimits_{p' \leq p} J^{p', \bullet}
 \times \prod\nolimits_{p' > p} J^{p', \bullet}
 $$
 This complex is isomorphic to the complex
-$I^{p, \bullet} \times \prod_{p' > p} J^{p, \bullet}$
+$I^{p, \bullet} \times \prod_{p' > p} J^{p', \bullet}$
 as $\alpha^{pp} = \text{id}$ and $t^p$ is injective.
 Hence $F^pJ^\bullet$ is quasi-isomorphic to $I^{p, \bullet}$ (argue
 as above). We have $j(F^pK^\bullet) \subset F^pJ^\bullet$ because
@@ -2211,7 +2211,7 @@ of the commutativity of the diagram above. The corresponding
 map of complexes $F^pK^\bullet \to F^pJ^\bullet$ is a quasi-isomorphism
 by what we just said. Finally, to see that
 $F^{p + 1}J^\bullet \subset F^pJ^\bullet$
-use that $\alpha^{p + 1p} \circ \alpha^{pp'} = \alpha^{p + 1p'}$
+use that $\alpha^{pp'} \circ \alpha^{p + 1p} = \alpha^{p + 1p'}$
 and the commutativity of the first displayed diagram
 in the first paragraph of the proof.
 
@@ -2244,8 +2244,8 @@ $F^pK^\bullet/F^{p'}K^\bullet \to F^pJ^\bullet/F^{p'}J^\bullet$.
 Let $\mathcal{A}$ be a Grothendieck abelian category.
 Let $K^\bullet$ be a filtered complex of $\mathcal{A}$, see
 Homology, Definition \ref{homology-definition-filtered-complex}.
-For ease of notation denote $K$, $F^pK$, $\text{gr}^pK$ the
-object of $D(\mathcal{A})$ represented by $K^\bullet$,
+For ease of notation denote by $K$, $F^pK$, $\text{gr}^pK$ the
+objects of $D(\mathcal{A})$ represented by $K^\bullet$,
 $F^pK^\bullet$, $\text{gr}^pK^\bullet$. Let $M \in D(\mathcal{A})$.
 Using Lemma \ref{lemma-K-injective-embedding-filtration}
 we can construct a spectral sequence $(E_r, d_r)_{r \geq 1}$
@@ -2313,8 +2313,8 @@ Let $\mathcal{A}$ be a Grothendieck abelian category. Let
 $K \in D(\mathcal{A})$. Let $M^\bullet$ be a filtered complex of
 $\mathcal{A}$, see Homology, Definition
 \ref{homology-definition-filtered-complex}.
-For ease of notation denote $M$, $M/F^pM$, $\text{gr}^pM$ the
-object of $D(\mathcal{A})$ represented by $M^\bullet$,
+For ease of notation denote by $M$, $M/F^pM$, $\text{gr}^pM$ the
+objects of $D(\mathcal{A})$ represented by $M^\bullet$,
 $M^\bullet/F^pM^\bullet$, $\text{gr}^pM^\bullet$.
 Dually to Remark \ref{remark-ext-into-filtered-complex}
 we can construct a spectral sequence $(E_r, d_r)_{r \geq 1}$
@@ -2407,7 +2407,7 @@ representing $E^0 \to E$.
 For $i > 0$ we inductively represent $E^i \to E^{i - 1}$
 by a map of complexes
 $\delta : G^{i, \bullet} \to G^{i - 1, \bullet}$
-and we set $\varphi^i = \delta \circ \varphi^{i - 1}$.
+and we set $\varphi^i = \varphi^{i - 1} \circ \delta$.
 For $i < 0$ we inductively represent $E^{i + 1} \to E^i$
 by a termwise injective map of complexes
 $\delta : G^{i + 1, \bullet} \to G^{i, \bullet}$
@@ -2557,7 +2557,7 @@ Categories, Theorem \ref{categories-theorem-adjoint-functor}.
 Observe that $G : \mathcal{A} \to \text{Mod}_R$ is left exact and sends
 products to products. Hence $G$ commutes with limits. To check the set
 theoretical condition in the theorem, suppose that $M$ is an object of
-$\text{Mod}_R$. Choose a suitably large cardinal $\kappa$ and denote $E$
+$\text{Mod}_R$. Choose a suitably large cardinal $\kappa$ and denote by $E$
 a set of objects of $\mathcal{A}$ such that every object $A$ with
 $|A| \leq \kappa$ is isomorphic to an element of $E$. This is possible
 by Lemma \ref{lemma-set-iso-classes-bounded-size}. Set
@@ -2575,7 +2575,7 @@ contains $\Im(f)$ and we get $f' : M \to G(A')$ factoring $f$.
 On the other hand, the object $A'$ is
 the quotient of a direct sum of at most $|M|$ copies of $U$.
 Hence if $\kappa = |\bigoplus_{|M|} U|$, then we see that $(A', f')$
-is isomorphic to an element $(A_i, f_i)$ of $E$ and we conclude that $f$
+is isomorphic to an element $(A_i, f_i)$ of $I$ and we conclude that $f$
 factors as $M \xrightarrow{f_i} G(A_i) \to G(A)$ as desired.
 
 \medskip\noindent
@@ -2783,7 +2783,7 @@ For $A$ in $D(\mathcal{A})$ we obtain
 \begin{align*}
 H(A)
 & =
-H(F(RG(A)) \\
+H(F(RG(A))) \\
 & =
 \Hom(RG(A), L) \\
 & \to
