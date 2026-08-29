@@ -908,6 +908,7 @@ def main(argv: list[str] | None = None) -> int:
     overlay_operation_counts: dict[str, int] = {}
     entry_by_id: dict[str, dict] = {}
     proposed_local_labels: set[str] = set()
+    illusie_local_labels: set[str] = set()
     superseded_operation_ids: set[str] = set()
     for registry_entry in entries:
         if not isinstance(registry_entry, dict) or not isinstance(
@@ -1201,6 +1202,7 @@ def main(argv: list[str] | None = None) -> int:
                 errors.append(f"{illusie_name} effective label mismatch")
             else:
                 proposed_local_labels.add(effective_label)
+                illusie_local_labels.add(effective_label)
             source_bytes = committed_bytes(
                 "HEAD", source_name, errors, f"{illusie_name} source"
             )
@@ -1241,6 +1243,12 @@ def main(argv: list[str] | None = None) -> int:
             )
         tag_codes = [row[0] for row in active_tags]
         tag_labels = [row[1] for row in active_tags]
+        tagged_illusie_local_labels = set(tag_labels) & illusie_local_labels
+        if tagged_illusie_local_labels:
+            errors.append(
+                "Illusie local labels must not have permanent Stacks tags: "
+                + ", ".join(sorted(tagged_illusie_local_labels))
+            )
         if len(set(tag_codes)) != len(tag_codes):
             errors.append("active Stacks tag codes are not unique")
         if len(set(tag_labels)) != len(tag_labels):
