@@ -674,6 +674,20 @@ def validate_ega_semantic_checkpoint_receipt(
         raise PackageError("checkpoint receipt has an invalid content_commit")
     base_commit, base_tree, _ = resolve_commit(repository, requested_base)
     content_commit, content_tree, _ = resolve_commit(repository, requested_content)
+    declared_base_tree = receipt.get("base_tree")
+    declared_content_tree = receipt.get("content_tree")
+    if (
+        not isinstance(declared_base_tree, str)
+        or declared_base_tree.casefold() != base_tree.casefold()
+    ):
+        raise PackageError("checkpoint receipt base_tree does not match base_commit")
+    if (
+        not isinstance(declared_content_tree, str)
+        or declared_content_tree.casefold() != content_tree.casefold()
+    ):
+        raise PackageError(
+            "checkpoint receipt content_tree does not match content_commit"
+        )
     merge_base = git_output(repository, "merge-base", base_commit, content_commit)
     if merge_base.lower() != base_commit:
         raise PackageError(
