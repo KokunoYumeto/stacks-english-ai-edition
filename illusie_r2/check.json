@@ -1,6 +1,6 @@
 {
   "schema": "illusie-stacks-derived-hom-r2-check-v1",
-  "status": "CANDIDATE_REVIEWED_BUILD_PENDING",
+  "status": "PASS_WITH_CONTROLLED_EXTERNAL_AUX_LIMITATION",
   "formalization_id": "ILLUSIE-R2-TWO-PRESENTATIONS-DERIVED-HOM",
   "source": {
     "work": "Complexe cotangent et deformations II",
@@ -88,6 +88,7 @@
     "effective_label": "dga-example-two-presentations-derived-hom",
     "official_tag": "",
     "source_lines": "5468-5509",
+    "candidate_head": "69075367f9a9ca89a382db74652f9d09d550ec30",
     "write_boundary": [
       "dga.tex",
       "illusie_r2/**",
@@ -115,14 +116,117 @@
       "errors": []
     },
     "targeted_build": {
-      "status": "PENDING_SHARED_TEX_LANE",
+      "status": "PASS_WITH_CONTROLLED_EXTERNAL_AUX_LIMITATION",
+      "engine": "pdflatex plus bibtex followed by resolving pdflatex passes",
+      "source_date_epoch": 1788002918,
+      "source_worktree_sha256": "A28580638E1BAA9FA241F31CDB01836A21FB4905995F1C04E353F2A0C168C6E1",
+      "source_canonical_git_blob_sha1": "13cdac8bc08ee225c9816c82a0071683362f3266",
+      "fixed_point_passes": [3, 4],
+      "fixed_point_aux_state_sha256": "C64116CEEE2BD441919A2CF8BF0EE16F152B8F12F36DDBC47255E1577FCCAEA3",
+      "pdf": {
+        "pages": 78,
+        "bytes": 856674,
+        "sha256": "7093392FA18BB735CFACB05D4AEF4027A6FF0AF97D3F487B6BFA21730E54F234"
+      },
+      "log": {
+        "bytes": 53732,
+        "sha256": "96FBAC90276420ADFEE250E12005B7DAE17FD299CADEDCC7BD1EB73DD5EF128B"
+      },
+      "dga_aux": {
+        "bytes": 20421,
+        "sha256": "8912B7B7C9F76DB68F75354645B6BED47C0AA0617C44FA1679AEDD8E3A3E0874"
+      },
+      "dependency_aux": [
+        {
+          "file": "sets.aux",
+          "bytes": 4731,
+          "sha256": "7C009A25AD58F1CD97DCACE995222521BDD68D8E1FD392CDF2D47AC60E699F3E"
+        },
+        {
+          "file": "algebra.aux",
+          "bytes": 147967,
+          "sha256": "0A922848F8881D77695D01D6D3AF4B38352D170F502B966A48C10E3DA7F8D250"
+        },
+        {
+          "file": "homology.aux",
+          "bytes": 23001,
+          "sha256": "A1EFCF0AF0E6C010712DBAEF7BF82D5595833562FE22AC4910B1F673A28632EA"
+        },
+        {
+          "file": "derived.aux",
+          "bytes": 33100,
+          "sha256": "24D9613448802199545F733C18C9CB37B64EA1813769B71BFE23BBE6989DE057"
+        },
+        {
+          "file": "more-algebra.aux",
+          "bytes": 108356,
+          "sha256": "22935BCC2F1D364EB06C06D0DC34E016E9357795D81AB86FB70D614610FA121D"
+        }
+      ],
+      "diagnostics": {
+        "fatal_errors": 0,
+        "undefined_citations": 0,
+        "rerun_requests": 0,
+        "missing_glyphs": 0,
+        "duplicate_destinations": 0,
+        "raster_fonts": 0,
+        "embedded_subset_fonts": 26,
+        "candidate_target_question_marks": 0,
+        "candidate_target_replacement_characters": 0,
+        "candidate_target_nul_characters": 0
+      },
+      "controlled_external_aux_limitation": {
+        "predependency_missing_xr_notices": 117,
+        "predependency_same_line_undefined_references": 99,
+        "final_residual_undefined_references": 6,
+        "candidate_caused": 0,
+        "source_lines": [219, 3641, 3643, 5526, 6054, 6326],
+        "disposition": "all six are unchanged pre-existing source references outside the candidate diff"
+      },
       "processes_signalled": 0
     },
     "visual_qa": {
-      "status": "PENDING_TARGETED_BUILD"
+      "status": "PASS",
+      "rendered_pages": [57, 58, 59],
+      "candidate_pdf_page": 58,
+      "candidate_rendered_number": "Example 33.7",
+      "checks": [
+        "no clipping or overlap",
+        "both algebra arrows visible",
+        "both isomorphism markers visible",
+        "derived tensors and subscripts intact",
+        "Hom groups and alpha inverse intact",
+        "candidate page identical to the predependency fixed-point render"
+      ],
+      "renders": [
+        {
+          "file": "current-57.png",
+          "dpi": 300,
+          "bytes": 625938,
+          "sha256": "B5B9C5DC518F2BBE2C245E52B74815651645F444F851E9643F691921BFCE652D"
+        },
+        {
+          "file": "current-58.png",
+          "dpi": 300,
+          "bytes": 538458,
+          "sha256": "3943900205797734D41DB44B05FA5B19D84BA3471E85F2AEFD1136EB35C17976"
+        },
+        {
+          "file": "current-59.png",
+          "dpi": 300,
+          "bytes": 535808,
+          "sha256": "3C7D5A81FAAA34E207DC260B2DE76D5FF855D882CB62AEAD450393E674A706E9"
+        },
+        {
+          "file": "current-p58-example-crop-600dpi.png",
+          "dpi": 600,
+          "bytes": 489682,
+          "sha256": "176E2CE020A294B100C4CDB703D67B6530207DC1B79B8F415540EF9143EEF58B"
+        }
+      ]
     },
     "repository_gate": {
-      "status": "PASS_LOCAL_PREPUBLICATION",
+      "status": "PASS_LOCAL_AND_EXACT_HEAD_CI",
       "registered_overlays": 29,
       "registered_stable_ids": 861,
       "exact_v2_operations": 962,
@@ -133,7 +237,19 @@
         "url": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/actions/runs/33250402429",
         "error": "1 live label lacks permanent Stacks tags"
       },
-      "remedy_applied": "the existing Illusie local-label validator now verifies r1 and r2 check.json without assigning an official tag"
+      "remedy_applied": "the existing Illusie local-label validator now verifies r1 and r2 check.json without assigning an official tag and fails closed if either local label enters the permanent-tag registry",
+      "corrected_branch_run": {
+        "status": "PASS",
+        "head": "3555ae85675797bf468b7ce0626fd385332d7c41",
+        "run_id": 33250836402,
+        "url": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/actions/runs/33250836402"
+      },
+      "fail_closed_branch_run": {
+        "status": "PASS",
+        "head": "69075367f9a9ca89a382db74652f9d09d550ec30",
+        "run_id": 33251208909,
+        "url": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/actions/runs/33251208909"
+      }
     }
   },
   "adverse_evidence": [

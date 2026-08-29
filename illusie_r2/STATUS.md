@@ -47,7 +47,31 @@ endorsement.
   `tools/validate_unified_repository.py`. EGA, FAC, Tôhoku, GAGA,
   `illusie_r1`, and every other root source are read-only.
 
-The candidate must pass an independent mathematical and deduplication replay,
-a targeted serial fixed-point `dga.tex` build, affected-page visual QA,
-repository validation, exact-head CI, integration on public `main`, and
-anonymous public byte/hash readback. `check.json` will bind those results.
+The bounded candidate has passed independent mathematical and deduplication
+replay. A guarded serial `pdflatex`/BibTeX build reached an AUX-state fixed
+point on passes 3 and 4 and produced a reference-complete 78-page PDF of
+856,674 bytes (SHA-256
+`7093392FA18BB735CFACB05D4AEF4027A6FF0AF97D3F487B6BFA21730E54F234`).
+The final log has no fatal error, undefined citation, rerun request, missing
+glyph, duplicate destination, or raster font. Six residual cross-reference
+warnings are exact unchanged pre-existing source lines outside the candidate
+diff; the candidate itself contains no unresolved marker or damaged character.
+
+Pages 57--59 were rendered at 300 dpi and the new Example 33.7 was also
+inspected in a 600-dpi crop. The arrows, isomorphism markers, derived tensors,
+indices, Hom groups, and inverse comparison are sharp and complete, without
+clipping or overlap. The candidate page is byte-identical to its
+predependency fixed-point render.
+
+The generalized validator now verifies both Illusie local-label receipts and
+fails closed if either local label is assigned a permanent Stacks tag. Local
+validation passes at 29 overlays, 861 stable IDs, 962 exact v2 operations, and
+21,819 permanent tags. Exact-head CI passes at candidate commit
+`69075367f9a9ca89a382db74652f9d09d550ec30` in run
+https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/actions/runs/33251208909.
+No TeX process was signalled or interrupted.
+
+`check.json` binds the complete source, mathematical, build, visual, and CI
+receipts. Public-`main` integration and anonymous public byte/hash readback are
+the remaining publication transactions; no repository, release, DOI, or
+download access is restricted while they run.
