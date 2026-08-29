@@ -1,0 +1,229 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-ega-source-topology/v1",
+  "status": "PASS",
+  "serialization_line_endings": "LF",
+  "created_utc": "2026-08-29T12:16:56Z",
+  "scope": {
+    "subsection": "EGA I §6.5",
+    "title": "Détermination locale d'un morphisme",
+    "source_order_predecessor": "EGA I §6.4.13",
+    "source_order_successor": "EGA I §6.6.1",
+    "ledger_ids_allocated": false,
+    "root_source_changed": false
+  },
+  "authority": {
+    "receipt": "F37ZW.json",
+    "receipt_bytes": 13345,
+    "receipt_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+    "public_repository": "https://github.com/KokunoYumeto/ega-fr",
+    "public_commit": "6b38875842e3723b619d4aeeda9ed260a4f94f7c",
+    "path": "source/ega1/ega1-6-fr.tex",
+    "logical_path": "ega1/ega1-6-fr.tex",
+    "raw_url": "https://raw.githubusercontent.com/KokunoYumeto/ega-fr/6b38875842e3723b619d4aeeda9ed260a4f94f7c/source/ega1/ega1-6-fr.tex",
+    "bytes": 57781,
+    "sha256": "F95D2C43C1074A1CC6485D74E24F02BF8C5F098ADB571AA024B4B499F5CDE3FE",
+    "line_endings": "LF",
+    "lf_bytes": 1206,
+    "cr_bytes": 0,
+    "physical_lines_including_final_unterminated_line": 1207,
+    "exact_against_existing_F37ZW_binding": true
+  },
+  "subsection_slice": {
+    "lf_line_start": 771,
+    "lf_line_end": 997,
+    "bytes": 10558,
+    "sha256": "19AFD56970D53962C0385E595D5FEC4FAFC82EF9185DD3B8FC46C7508C13B632",
+    "next_subsection_line": 998,
+    "next_subsection_label": "subsection:I.6.6-fr",
+    "boundary_result": "PASS"
+  },
+  "registered_topology": {
+    "units_csv": {
+      "path": "ega/units.csv",
+      "bytes": 1864094,
+      "sha256": "5C73182F07F749F03C0B0F92BBA0D37884873FFF096C93AE2E1A3CDB599EDA4C"
+    },
+    "registered_units": 14,
+    "numbered_statements": 5,
+    "proof_units": 5,
+    "label_units": 2,
+    "diagram_units": 1,
+    "subsection_units": 1,
+    "rows": [
+      {
+        "unit_id": "ega:subsection:I.6.5",
+        "kind": "subsection",
+        "parent_id": "ega:section:I.6",
+        "lf_line_start": 771,
+        "lf_line_end": 771,
+        "bytes": 51,
+        "sha256": "0C2D4EB9A052EA28C16945A65E74DD92D4928FD92E063FE028C60B31DA090532"
+      },
+      {
+        "unit_id": "ega:I.6.5",
+        "kind": "label",
+        "parent_id": "ega:subsection:I.6.5",
+        "lf_line_start": 772,
+        "lf_line_end": 772,
+        "bytes": 28,
+        "sha256": "80809CC81083697FCEA387E60725B5FC1AA5DACA0C15BDCE8185A83EE00B9472"
+      },
+      {
+        "unit_id": "ega:I.6.5.1",
+        "kind": "proposition",
+        "parent_id": "ega:subsection:I.6.5",
+        "lf_line_start": 774,
+        "lf_line_end": 791,
+        "bytes": 910,
+        "sha256": "7E2D3F34B0741C885F4798C8F3E3D40C6D42BA64F6E7F4E7A51F2FB045CD8A56"
+      },
+      {
+        "unit_id": "ega:I.6.5.1:proof",
+        "kind": "proof",
+        "parent_id": "ega:I.6.5.1",
+        "lf_line_start": 793,
+        "lf_line_end": 864,
+        "bytes": 4044,
+        "sha256": "D96602C80C77B5B2F820FF59DBA0507BD339D0B98821A15B9B4B1AFF8D206A6E"
+      },
+      {
+        "unit_id": "ega:I.6.5.1.1",
+        "kind": "label",
+        "parent_id": "ega:subsection:I.6.5",
+        "lf_line_start": 858,
+        "lf_line_end": 858,
+        "bytes": 40,
+        "sha256": "4998575B34ECC1A2A695DD9AE8E117BA40D7A5D80527DB73C78667D31D0BDD87"
+      },
+      {
+        "unit_id": "ega:I.6.5.1:diagram:xymatrix:1",
+        "kind": "diagram",
+        "parent_id": "ega:I.6.5.1",
+        "lf_line_start": 853,
+        "lf_line_end": 859,
+        "bytes": 169,
+        "sha256": "7A68BEC64489366C277EF516938541BBC5A6D4E43115096B6DBAF036904A8CE3"
+      },
+      {
+        "unit_id": "ega:I.6.5.2",
+        "kind": "corollary",
+        "parent_id": "ega:subsection:I.6.5",
+        "lf_line_start": 866,
+        "lf_line_end": 870,
+        "bytes": 212,
+        "sha256": "E2A1934E7E529F7BBB866D4DDBF6A378CF92795A91BEA76E04E1CCF74E7010B0"
+      },
+      {
+        "unit_id": "ega:I.6.5.2:proof",
+        "kind": "proof",
+        "parent_id": "ega:I.6.5.2",
+        "lf_line_start": 872,
+        "lf_line_end": 872,
+        "bytes": 49,
+        "sha256": "DF843CA7783336EF4867F86C9672434990419DFFB7A96BCEA56B4BC04AEC2543"
+      },
+      {
+        "unit_id": "ega:I.6.5.3",
+        "kind": "corollary",
+        "parent_id": "ega:subsection:I.6.5",
+        "lf_line_start": 874,
+        "lf_line_end": 880,
+        "bytes": 315,
+        "sha256": "FEF0877815E6F82B9C4CEA99E6F1286E8A663F1FF34E77023D6C946665BA6065"
+      },
+      {
+        "unit_id": "ega:I.6.5.3:proof",
+        "kind": "proof",
+        "parent_id": "ega:I.6.5.3",
+        "lf_line_start": 882,
+        "lf_line_end": 884,
+        "bytes": 187,
+        "sha256": "AA5AE2D1135EEF2CAF0D3789B31D716C0DC5CED47A234CD4CA96FFF4C4205908"
+      },
+      {
+        "unit_id": "ega:I.6.5.4",
+        "kind": "proposition",
+        "parent_id": "ega:subsection:I.6.5",
+        "lf_line_start": 886,
+        "lf_line_end": 899,
+        "bytes": 609,
+        "sha256": "5A41DEA6BE2AB079D5F1B84233D1875F71487974BD290E3090E10B8D31E0DA81"
+      },
+      {
+        "unit_id": "ega:I.6.5.4:proof",
+        "kind": "proof",
+        "parent_id": "ega:I.6.5.4",
+        "lf_line_start": 901,
+        "lf_line_end": 973,
+        "bytes": 3070,
+        "sha256": "8106AC8AE8A2ACB2F3D55567528BF77B7DD3A4408E04220B6331C0634A8463D4"
+      },
+      {
+        "unit_id": "ega:I.6.5.5",
+        "kind": "corollary",
+        "parent_id": "ega:subsection:I.6.5",
+        "lf_line_start": 975,
+        "lf_line_end": 991,
+        "bytes": 874,
+        "sha256": "18EA461481D596D42A5981A2F98AF931F3129AD6C470DA20FC95A424EBE86618"
+      },
+      {
+        "unit_id": "ega:I.6.5.5:proof",
+        "kind": "proof",
+        "parent_id": "ega:I.6.5.5",
+        "lf_line_start": 993,
+        "lf_line_end": 996,
+        "bytes": 198,
+        "sha256": "985D6171E726F0CEA51CC36698512B90D31CBFBE3088D0ED8FCA9323B862B279"
+      }
+    ]
+  },
+  "topology_notes": [
+    "The existing discovery parser registers the labeled display I.6.5.1.1 and its xymatrix as separate overlapping units; this is intentional and must not be collapsed during semantic mapping.",
+    "The subsection has five numbered statements and five proof units. Proposition 6.5.1 contains two clauses but remains one statement unit; clause-level semantic edges may split without inventing source units.",
+    "The French source does not use explicit proof environments. Each proof row is therefore pinned to an independently verified LF line and byte span rather than inferred from a begin/end marker.",
+    "All five proof rows share the same English discovery anchor SHA-256 82254B9E768243B5017CBAD6CED2F94B3CD370427A4F5C0A0B9DF1FC9DD5C778, so that anchor is not a unique proof locator.",
+    "The labeled diagram has deliberate nested spans: the full display is LF 853-859, the xymatrix body is LF 854-857, and the tag/label is LF 858.",
+    "The proof of 6.5.4 treats clause (ii) before clause (i); semantic review must follow the proof rather than assume clause order.",
+    "There are eleven display blocks in the subsection. Only the diagram at LF 853-859 is registered separately; ten unlabeled displays remain embedded in their parent proof spans at LF 820-825, 834-837, 924-927, 929-933, 937-939, 943-945, 947-949, 953-957, 959-961, and 963-965.",
+    "Proof spans cross oldpage markers at LF 842 and LF 922. These page-boundary markers are source content and remain within the pinned proof spans.",
+    "LF 997 is a trailing blank line and belongs to no registered unit.",
+    "No visual status is assigned by this topology receipt. The labeled diagram requires a separate semantic and visual disposition during the 6.5.1 review block."
+  ],
+  "first_review_block": {
+    "scope": "EGA I §6.5.1",
+    "lf_line_start": 771,
+    "lf_line_end": 864,
+    "bytes": 5035,
+    "sha256": "9DBE145F16C99F8DA039D0961D4EA123AB3D7437E1848CF04F68C7C37A3D8C25",
+    "registered_units": [
+      "ega:subsection:I.6.5",
+      "ega:I.6.5",
+      "ega:I.6.5.1",
+      "ega:I.6.5.1:proof",
+      "ega:I.6.5.1.1",
+      "ega:I.6.5.1:diagram:xymatrix:1"
+    ],
+    "semantic_core": {
+      "lf_line_start": 774,
+      "lf_line_end": 864,
+      "bytes": 4955,
+      "sha256": "EEC814858C37A15FDDB1098D9DFC6AB5D42E0CDDCDFA6E2F2C55D048764B0CB2",
+      "registered_units": [
+        "ega:I.6.5.1",
+        "ega:I.6.5.1:proof",
+        "ega:I.6.5.1.1",
+        "ega:I.6.5.1:diagram:xymatrix:1"
+      ]
+    },
+    "reason": "This is the smallest source-closed block: it includes the subsection heading and label anchors plus the two-clause proposition, its constructive proof, and the labeled commutative diagram before corollaries 6.5.2 and 6.5.3 reuse the construction."
+  },
+  "gate": {
+    "authority_identity": "PASS",
+    "subsection_boundaries": "PASS",
+    "registered_unit_join": "PASS",
+    "duplicate_unit_ids": 0,
+    "ledger_allocation_allowed": false,
+    "next_action": "Independently map the four registered units in EGA I §6.5.1 to exact pinned Stacks tags/labels and record hypothesis-preserving residuals before allocating append-only ledger rows."
+  }
+}

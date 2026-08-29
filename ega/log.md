@@ -2396,3 +2396,34 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   record the exact French unit audit the semantic fixed point the independent
   mathematical audit and the fail-closed checker plan. The next semantic
   cursor is EGA I 6.5.1.
+
+### EGA I 6.5.1 local determination and realization checkpoint
+
+- The full §6.5 source topology is sealed against public French commit
+  `6b38875842e3723b619d4aeeda9ed260a4f94f7c`: lines 771--997 are 10,558
+  bytes / SHA-256
+  `19AFD56970D53962C0385E595D5FEC4FAFC82EF9185DD3B8FC46C7508C13B632`.
+  The first source-closed tranche includes the subsection anchors and complete
+  Proposition 6.5.1 proof label and diagram at lines 771--864: 5,035 bytes /
+  SHA-256 `9DBE145F16C99F8DA039D0961D4EA123AB3D7437E1848CF04F68C7C37A3D8C25`.
+- D000320 and S001196--S001205 record ten existing-target edges. `01T1` and
+  `0BX6(1)(a)` stronger-cover clause (i). `01TX(2)` and `0BX6(2)(a)` exactly
+  derive clause (ii). `00FP`, `00QO`, `00CR`, and the proof of `0BX6` retain
+  the explicit finite-relation and localization construction; its unnumbered
+  square is the same diagram as EGA 6.5.1.1. No nonduplicative root TeX or PDF
+  change is warranted.
+- Independent counterexamples verify that local finite type is substantive in
+  clause (i) and finite presentation is substantive in clause (ii). The EGA
+  locally Noetherian hypothesis is precisely the route from finite type to
+  finite presentation and is not silently discarded.
+- I000102 and R000786 record the printed French line-862 `Y` where `X` is
+  forced by `D(hg)=Spec(B_hg)`. The diplomatic authority is unchanged; the
+  English discovery already says the morphism is from the neighbourhood to
+  `Y` and needs no repair. R000787--R000793 preserve every strength, composite,
+  proof, diagram, source-label, and hypothesis-boundary disposition.
+- V000045 and D000321 bind the localization-lifting square to three dedicated
+  grayscale crops at an effective scale of at least 5,000 dpi: direct authority
+  page 150, public historical French page 102, and public historical English
+  page 337. Each crop is complete, nonblank, and independently inspected.
+  A000245--A000249 record the topology, mapping, hypothesis, defect, and visual
+  audits. The next semantic cursor is EGA I 6.5.2.

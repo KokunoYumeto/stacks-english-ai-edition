@@ -271,13 +271,13 @@ EGA integration manifest enter the repository's root TeX tree.
   promotion requires its own active V row. Shared, full-page, and grouped crops
   do not qualify.
 - Current statement-level frontier: direct-French review is complete through
-  EGA I 6.4.13. The active graph has 1,188 edges across 400 generated units;
-  physical append-only history has 1,195 rows. Of the active edges 1,175
-  resolve to 337 distinct existing official tags and thirteen resolve to
-  explicitly untagged local-mirror integrations. Fifty-six rows are exact
-  full-statement equivalences. Residual history has 760 active and 785
+  EGA I 6.5.1. The active graph has 1,198 edges across 404 generated units;
+  physical append-only history has 1,205 rows. Of the active edges 1,185
+  resolve to 342 distinct existing official tags and thirteen resolve to
+  explicitly untagged local-mirror integrations. Fifty-seven rows are exact
+  full-statement equivalences. Residual history has 768 active and 793
   physical rows, with twelve open labelled-coverage gaps. The next semantic
-  cursor is EGA I 6.5.1.
+  cursor is EGA I 6.5.2.
 
 ## State model
 
@@ -347,7 +347,44 @@ maintainer feedback remain append-only.
   direct-authority crops for source-error evidence; these are not edition
   outputs or three-surface visual certifications.
 
-### Current reviewed frontier: EGA I 6.4.1--6.4.13
+### Current reviewed frontier: EGA I 6.5.1
+
+The local determination and realization proposition is reviewed against the
+source-closed direct-French block at lines 771--864 in admitted F37ZW and exact
+labels at pinned Stacks commit
+`a04446e57ec1fbc252a871afcec7752fb2807b14`. The block is 5,035 bytes at
+SHA-256 `9DBE145F16C99F8DA039D0961D4EA123AB3D7437E1848CF04F68C7C37A3D8C25`;
+its four-unit semantic core at lines 774--864 is 4,955 bytes at SHA-256
+`EEC814858C37A15FDDB1098D9DFC6AB5D42E0CDDCDFA6E2F2C55D048764B0CB2`.
+The exact fourteen-unit topology of all §6.5 is separately sealed in
+[`../validation/ega-i-6.5-source-topology-2026-08-29.json`](../validation/ega-i-6.5-source-topology-2026-08-29.json).
+
+D000320 and S001196--S001205 record the fixed point. Clause (i) is
+stronger-covered by `01T1` followed by `0BX6(1)(a)`, which requires only local
+finite type. Clause (ii) is exactly the composite `01TX(2)` followed by
+`0BX6(2)(a)`. The proof-level rows retain `00FP`, `00QO`, and `00CR`; the proof
+of `0BX6` contains the same finite-generator and finite-relation localization
+argument. The numbered EGA square is the same unnumbered square embedded in
+that proof. Adding a root theorem or a second diagram would therefore be
+duplicative.
+
+R000786--R000793 preserve the stronger target, two-tag composite, explicit
+historical denominator construction, unnumbered target square, and both
+counterexample-tested hypothesis boundaries. I000102 records the unique
+printed defect at French line 862: because `hg` lies in the coordinate ring
+`B` of `X`, `D(hg)` is a neighbourhood in `X`, not in `Y`. Diplomatic French
+is unchanged; the public English discovery already has the correct wording.
+The cumulative graph has 1,198 active / 1,205 physical statement rows across
+404 source units, 1,185 official-tag rows using 342 tags, thirteen local rows,
+and 57 exact full-statement equivalences. Residual history has 768 active / 793
+physical rows, 25 superseded rows, twelve open gaps, and thirteen local rows.
+V000045 and D000321 bind the historical square to three independently checked
+5,000-dpi crops: direct authority page 150, public French page 102, and public
+English page 337. A000245--A000249 record the topology, mapping, hypothesis,
+defect, and visual audits.
+The next semantic cursor is EGA I 6.5.2.
+
+### Prior reviewed frontier: EGA I 6.4.1--6.4.13
 
 The algebraic-scheme and geometric-point subsection is reviewed against direct
 French lines 560--769 in admitted F37ZW and exact labels at pinned Stacks
@@ -759,8 +796,8 @@ tree immediately before atomic promotion, closing the reproduced concurrent-
 producer race. Independent mathematical and governance inverse audits both
 returned HARD PASS after the repairs while preserving their earlier failures.
 
-The immediate semantic work continues after direct-French EGA I 6.4.13 at
-EGA I 6.5.1. Every reviewed claim remains bound to its own historical source
+The immediate semantic work continues after direct-French EGA I 6.5.1 at
+EGA I 6.5.2. Every reviewed claim remains bound to its own historical source
 receipt; the 5.4 and 5.5 rows use F33 plus direct authority evidence rather
 than a mutable producer frontier.
 The last admitted reader interface is the D48 tuple
