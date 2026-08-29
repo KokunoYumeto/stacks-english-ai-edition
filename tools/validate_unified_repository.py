@@ -793,17 +793,38 @@ def main(argv: list[str] | None = None) -> int:
                             f"missing transport repair commit object: {repair_commit}"
                         )
                     else:
-                        require_single_parent(
-                            repair_commit,
-                            f"transport repair {overlay.get('id')}",
-                            errors,
-                            admission_commit,
-                        )
+                        repair_parent = repair.get("parent")
+                        intervening = repair.get("intervening_admission_commit")
+                        if intervening is None:
+                            require_single_parent(
+                                repair_commit,
+                                f"transport repair {overlay.get('id')}",
+                                errors,
+                                admission_commit,
+                            )
+                        else:
+                            intervening_commit = require_sha1_identity(
+                                intervening,
+                                f"intervening admission before transport repair {overlay.get('id')}",
+                                errors,
+                            )
+                            require_single_parent(
+                                repair_commit,
+                                f"post-admission transport repair {overlay.get('id')}",
+                                errors,
+                                intervening_commit,
+                            )
+                            require_ancestor(
+                                admission_commit,
+                                repair_commit,
+                                f"admission-to-transport-repair {overlay.get('id')}",
+                                errors,
+                            )
                         actual_repair_tree = git_optional(
                             "rev-parse", f"{repair_commit}^{{tree}}"
                         )
                         if (
-                            repair.get("parent") != admission_commit
+                            repair_parent != git_optional("rev-parse", f"{repair_commit}^")
                             or repair.get("tree") != actual_repair_tree
                         ):
                             errors.append(
@@ -1077,7 +1098,16 @@ def main(argv: list[str] | None = None) -> int:
     ):
         errors.append("new-overlay transition does not end at the admitted cutoff")
     if new_overlays and admission_cursor != cutoff_commit:
-        errors.append("final admission commit is not the registry cutoff commit")
+        successor = composition_registry.get("post_admission_successor")
+        if successor != cutoff_commit:
+            errors.append("final admission commit is not the registry cutoff commit")
+        elif cutoff_commit is not None:
+            require_single_parent(
+                cutoff_commit,
+                "post-admission registry successor",
+                errors,
+                admission_cursor,
+            )
     if previous_registry is not None and cutoff_commit is not None:
         if (
             git_optional("cat-file", "-e", f"{previous_registry}^{{commit}}") is not None
@@ -1512,7 +1542,42 @@ def main(argv: list[str] | None = None) -> int:
                 if isinstance(row.get("payload"), str)
             }
         )
-        if len(overlay_payloads) != 1:
+        declared_payloads = overlay.get("payloads")
+        if declared_payloads is not None:
+            if not isinstance(declared_payloads, list) or not declared_payloads:
+                errors.append(f"invalid composition payload inventory for {overlay_id}")
+                declared_payloads = []
+            normalized_payloads = {
+                row.get("path"): str(row.get("sha256", "")).upper()
+                for row in declared_payloads
+                if isinstance(row, dict)
+                and isinstance(row.get("path"), str)
+                and isinstance(row.get("sha256"), str)
+                and SHA256_RE.fullmatch(row["sha256"])
+            }
+            if set(normalized_payloads) != set(overlay_payloads):
+                errors.append(
+                    f"composition payload inventory mismatch for {overlay_id}"
+                )
+            for payload_name in overlay_payloads:
+                payload = (directory / payload_name).resolve()
+                try:
+                    payload.relative_to(directory.resolve())
+                    payload_relative = payload.relative_to(ROOT).as_posix()
+                except ValueError:
+                    errors.append(f"composition payload escapes candidate for {overlay_id}")
+                    continue
+                require_clean_path(payload_relative, errors)
+                payload_bytes = committed_bytes(
+                    "HEAD", payload_relative, errors, "payload"
+                )
+                if payload_bytes is not None and sha256_bytes(payload_bytes) != normalized_payloads.get(
+                    payload_name, ""
+                ):
+                    errors.append(
+                        f"composition payload binding mismatch for {overlay_id}/{payload_name}"
+                    )
+        elif len(overlay_payloads) != 1:
             errors.append(
                 f"composition receipt requires one bound payload for {overlay_id}, "
                 f"found {len(overlay_payloads)}"

@@ -24,6 +24,7 @@ DEFAULT_STEMS = (
     "sheaves",
     "sites",
     "algebra",
+    "fields",
     "artin",
     "brauer",
     "derived",
@@ -951,15 +952,35 @@ def load_composition_receipt(
                 repair.get("commit"),
                 f"transport repair {overlay.get('id')}",
             )
-            require_single_parent(
-                source,
-                repair_commit,
-                f"transport repair {overlay.get('id')}",
-                admission,
-            )
+            repair_parent = repair.get("parent")
+            if repair.get("intervening_admission_commit") is None:
+                require_single_parent(
+                    source,
+                    repair_commit,
+                    f"transport repair {overlay.get('id')}",
+                    admission,
+                )
+            else:
+                intervening = require_commit_object(
+                    source,
+                    repair.get("intervening_admission_commit"),
+                    f"intervening admission before transport repair {overlay.get('id')}",
+                )
+                require_single_parent(
+                    source,
+                    repair_commit,
+                    f"post-admission transport repair {overlay.get('id')}",
+                    intervening,
+                )
+                require_ancestor(
+                    source,
+                    admission,
+                    f"admission-to-transport-repair {overlay.get('id')}",
+                    repair_commit,
+                )
             actual_repair_tree = git(source, "rev-parse", f"{repair_commit}^{{tree}}")
             if (
-                repair.get("parent") != admission
+                repair_parent != git(source, "rev-parse", f"{repair_commit}^")
                 or repair.get("tree") != actual_repair_tree
             ):
                 raise RuntimeError(
@@ -1385,6 +1406,54 @@ def load_composition_receipt(
                         f"embedded candidate {label} binding mismatch: "
                         f"{overlay.get('id')!r}"
                     )
+
+            payload_inventory = overlay.get("payloads")
+            if payload_inventory is not None:
+                if not isinstance(payload_inventory, list) or not payload_inventory:
+                    raise RuntimeError(
+                        f"invalid embedded candidate payload inventory: {overlay.get('id')!r}"
+                    )
+                seen_payloads: set[str] = set()
+                for payload_row in payload_inventory:
+                    if not isinstance(payload_row, dict):
+                        raise RuntimeError(
+                            f"invalid embedded payload row: {overlay.get('id')!r}"
+                        )
+                    relative = require_safe_posix_path(
+                        payload_row.get("path"), "candidate payload inventory path"
+                    )
+                    expected_sha = payload_row.get("sha256")
+                    if (
+                        relative in seen_payloads
+                        or not relative.startswith("payload/")
+                        or not isinstance(expected_sha, str)
+                        or not SHA256_PATTERN.fullmatch(expected_sha)
+                        or manifest_builds.get(relative) != expected_sha.upper()
+                    ):
+                        raise RuntimeError(
+                            f"invalid embedded payload inventory binding: {overlay.get('id')!r}"
+                        )
+                    seen_payloads.add(relative)
+                    candidate_file = f"{candidate_path}/{relative}"
+                    imported_file = f"{imported_candidate_path}/{relative}"
+                    blobs = (
+                        git_optional(source, "rev-parse", f"{admission}:{candidate_file}"),
+                        git_optional(
+                            source,
+                            "rev-parse",
+                            f"{registry_import_commit}:{imported_file}",
+                        ),
+                        git_optional(source, "rev-parse", f"HEAD:{imported_file}"),
+                    )
+                    if (
+                        blobs[0] is None
+                        or len(set(blobs)) != 1
+                        or git_blob_sha256(source, blobs[0]) != expected_sha.upper()
+                    ):
+                        raise RuntimeError(
+                            f"embedded candidate payload inventory mismatch: "
+                            f"{overlay.get('id')!r}/{relative}"
+                        )
 
             lease_id = manifest.get("lease_id")
             matching_lease_events = [
@@ -1826,7 +1895,11 @@ def load_composition_receipt(
             raise RuntimeError(
                 f"admission commit is not an exact one-entry append for {overlay.get('id')!r}"
             )
-        expected_admission_entries.append(entry)
+        # A later append-only transport successor may rebind this entry's
+        # manifest after one or more following admissions.  Subsequent
+        # admission commits therefore retain the pre-repair entry until that
+        # successor, while the final imported registry contains ``entry``.
+        expected_admission_entries.append(admission_entry_for_commit)
         if is_v4:
             admission_lease_text = git_optional(
                 source, "show", f"{admission}:registry/leases.json"
@@ -1859,7 +1932,15 @@ def load_composition_receipt(
     if registry_suffix[-1].get("id") != registry.get("last_admitted_overlay"):
         raise RuntimeError("new-overlay transition does not end at the admitted cutoff")
     if expected_registry_parent != cutoff:
-        raise RuntimeError("new-overlay admission chain does not end at registry cutoff")
+        successor = registry.get("post_admission_successor")
+        if successor != cutoff:
+            raise RuntimeError("new-overlay admission chain does not end at registry cutoff")
+        require_single_parent(
+            source,
+            cutoff,
+            "post-admission registry successor",
+            expected_registry_parent,
+        )
 
     projection_verifier = receipt.get("projection_verifier")
     if (
