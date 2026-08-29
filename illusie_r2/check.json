@@ -1,0 +1,160 @@
+{
+  "schema": "illusie-stacks-derived-hom-r2-check-v1",
+  "status": "CANDIDATE_REVIEWED_BUILD_PENDING",
+  "formalization_id": "ILLUSIE-R2-TWO-PRESENTATIONS-DERIVED-HOM",
+  "source": {
+    "work": "Complexe cotangent et deformations II",
+    "locus": "Section 11.5.1, equation (11.5.1.7), printed p. 175, physical PDF p. 181",
+    "authority": {
+      "bytes": 3525502,
+      "sha256": "3ECAD82EBF13C74AC02CA452CF56FE1330BF5BF6F1CF00D2656AE7118AA44E13"
+    },
+    "fr_corrected": {
+      "bytes": 5009,
+      "sha256": "6510B883F35E9D3E509B91A030F6E8D4BCD0AFB2A1ED1CEFE6E8F7978B107DF2",
+      "formula_lines": "45-50"
+    },
+    "english": {
+      "bytes": 4943,
+      "sha256": "BBE1F78C5B41FE022EFD9932CF40DC0C6EEE14760C5A1B3A4F12E9963B831F7A",
+      "formula_lines": "45-50"
+    },
+    "receipt": {
+      "bytes": 12700,
+      "sha256": "B72C0C1228B7B9671F212A11C625E97C19CCF8695688D2E598FEF0350C407039",
+      "status": "HARD_PASS",
+      "files": 17,
+      "manifest_bytes": 3348020
+    },
+    "superseded": {
+      "english_sha256": "36B3E0B01C18ED44F585BBD431595272F9DEBDA652764216119653B292C2F409",
+      "receipt_sha256": "8E6B495B0F8F54E2F7AB8B5F3487E1B89C950DD5B0902733EA1C4BD2FABDA6A2",
+      "admissible_evidence": false
+    },
+    "excluded": [
+      "Proposition 11.5.2.4",
+      "adjacent semantic units",
+      "later pages"
+    ]
+  },
+  "deduplication": {
+    "pinned_upstream_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "pinned_upstream_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+    "existing_results": [
+      {
+        "tag": "09LT",
+        "local_label": "dga-lemma-tensor-hom-adjoint",
+        "role": "extension-restriction tensor-Hom adjunction"
+      },
+      {
+        "tag": "0BYX",
+        "local_label": "dga-example-map-hom-tensor",
+        "role": "restriction of scalars identified by evaluation at one"
+      },
+      {
+        "tag": "0BYV",
+        "local_label": "dga-lemma-functoriality-derived-restriction",
+        "role": "adjacent functoriality infrastructure, not a duplicate"
+      },
+      {
+        "tag": "0CS5",
+        "local_label": "dga-lemma-derived-restriction-exts",
+        "role": "adjacent Ext interpretation, not a duplicate"
+      }
+    ],
+    "exact_two_presentation_example_present_before_change": false,
+    "disposition": "add_source_bound_example_not_duplicate_theorem",
+    "independent_review": "PASS"
+  },
+  "integration": {
+    "repository": "KokunoYumeto/unofficial-ai-integrated-stacks-project",
+    "base_commit": "4cf4242c1daf5cc49e092a0d347246fc501bb257",
+    "base_tree": "d5464f63f28477975749115050fe4750f49d56b3",
+    "branch": "codex/illusie-derived-hom-r2",
+    "issue": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/issues/2",
+    "initial_content_commit": "6bd83079d8eb26e29d6fee1609d1f9f7be2a16ed",
+    "changed_source": "dga.tex",
+    "source_preimage": {
+      "bytes": 252179,
+      "git_blob_sha1": "5fbc45f9adfef1dbb0e567e2213bffb2228c6b26",
+      "sha256": "74D8EFFC5693C38A1E408591FCAF5F62017C125AD636768D943DC22C55403409"
+    },
+    "source_postimage": {
+      "bytes": 253806,
+      "git_blob_sha1": "13cdac8bc08ee225c9816c82a0071683362f3266",
+      "sha256": "2DBB23D26F8344707F3D3F1FDA14DC271D106EC754F6322BB99C10CBF634ACA5"
+    },
+    "label": "example-two-presentations-derived-hom",
+    "effective_label": "dga-example-two-presentations-derived-hom",
+    "official_tag": "",
+    "source_lines": "5468-5509",
+    "write_boundary": [
+      "dga.tex",
+      "illusie_r2/**",
+      "tools/validate_unified_repository.py (only local-label validation generalization)"
+    ]
+  },
+  "validation": {
+    "source_and_deduplication": {
+      "status": "PASS_INDEPENDENT",
+      "source_hash_mismatches": 0,
+      "duplicate_formulations_found": 0,
+      "scope_leaks": 0
+    },
+    "math": {
+      "status": "PASS_INDEPENDENT",
+      "checks": [
+        "right-module handedness",
+        "derived base change on both presentations",
+        "right-adjoint identification by evaluation at one",
+        "contravariant precomposition with alpha inverse",
+        "shift compatibility",
+        "functoriality in the common target module",
+        "exact Illusie specialization"
+      ],
+      "errors": []
+    },
+    "targeted_build": {
+      "status": "PENDING_SHARED_TEX_LANE",
+      "processes_signalled": 0
+    },
+    "visual_qa": {
+      "status": "PENDING_TARGETED_BUILD"
+    },
+    "repository_gate": {
+      "status": "PASS_LOCAL_PREPUBLICATION",
+      "registered_overlays": 29,
+      "registered_stable_ids": 861,
+      "exact_v2_operations": 962,
+      "active_permanent_tags": 21819,
+      "initial_branch_run": {
+        "status": "FAIL_LOCAL_LABEL_NOT_YET_REGISTERED",
+        "run_id": 33250402429,
+        "url": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/actions/runs/33250402429",
+        "error": "1 live label lacks permanent Stacks tags"
+      },
+      "remedy_applied": "the existing Illusie local-label validator now verifies r1 and r2 check.json without assigning an official tag"
+    }
+  },
+  "adverse_evidence": [
+    {
+      "scope": "pre-existing dga example-map-hom-tensor",
+      "finding": "the displayed extension functor omits the derived symbol and the prose calls RHom a left rather than right adjoint",
+      "candidate_dependency": false,
+      "disposition": "recorded_out_of_scope_not_silently_repaired"
+    },
+    {
+      "scope": "pre-existing dga lemma-tensor-with-compact-fully-faithful proof",
+      "finding": "the proof again calls RHom a left rather than right adjoint",
+      "candidate_dependency": false,
+      "disposition": "recorded_out_of_scope_not_silently_repaired"
+    }
+  ],
+  "public_access": {
+    "repository_visibility": "public",
+    "issue_http_status": 200,
+    "branch_public": true,
+    "release_r28_http_status": 200,
+    "access_restrictions_changed": false
+  }
+}
