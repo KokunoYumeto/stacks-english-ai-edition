@@ -2,7 +2,7 @@
   "schema": "unofficial-ai-integrated-stacks-errata-release/v1",
   "status": "PUBLICATION_COMPLETE",
   "created_utc": "2026-08-29T21:36:52Z",
-  "updated_utc": "2026-08-29T21:36:52Z",
+  "updated_utc": "2026-08-29T21:49:00Z",
   "release": {
     "repository": "KokunoYumeto/unofficial-ai-integrated-stacks-project",
     "default_branch": "main",
@@ -13,8 +13,8 @@
     "registered_stable_ids": 931,
     "published_content_head": "e3def48650c66c0d65978a04f67dea88bd8b42ac",
     "content_tree": "62bee382516e4a06df6746c5aa61a54b2fe6622f",
-    "metadata_head": "e3def48650c66c0d65978a04f67dea88bd8b42ac",
-    "metadata_tree": "62bee382516e4a06df6746c5aa61a54b2fe6622f",
+    "metadata_head": "2d3ece14647844d6cf528c1ab6121c3844b55e20",
+    "metadata_tree": "27d1b4729b1efbfa571e80f9e911f3a7d7b0e827",
     "tag": "ai-integrated-stacks-r30-2026-08-29",
     "registry_provenance_tag": "registry-stacks-errata-r30-2026-08-29",
     "admitted_and_composed": [
@@ -269,15 +269,97 @@
       }
     ]
   },
+  "metadata_readback": {
+    "status": "PASS",
+    "checked_utc": "2026-08-29T21:49:00Z",
+    "method": "anonymous raw.githubusercontent.com HTTPS byte readback; exact byte, SHA-256, and Git-blob comparison for every path changed by the publication-metadata commit",
+    "commit": "2d3ece14647844d6cf528c1ab6121c3844b55e20",
+    "tree": "27d1b4729b1efbfa571e80f9e911f3a7d7b0e827",
+    "checked_file_count": 10,
+    "checked_total_bytes": 129037,
+    "byte_or_hash_mismatches": 0,
+    "checked_paths": [
+      {
+        "path": "PROVENANCE.md",
+        "bytes": 15601,
+        "sha256": "FF49792DDA380B74A0D51B1F1DA8D89D14582E2223950772F659D79A3EACCBC5",
+        "git_blob": "77a49a5d856972ed376ef0863da37240ea16b062",
+        "match": true
+      },
+      {
+        "path": "README.md",
+        "bytes": 14851,
+        "sha256": "87C1E68B91B07EC50DE4ABD0CC40AABF630A066C76F814E66E33C55BC0B2C009",
+        "git_blob": "0b6a51950c11debdccb48fd2448bd07fca294723",
+        "match": true
+      },
+      {
+        "path": "ROADMAP.md",
+        "bytes": 12580,
+        "sha256": "06FD73E35D84603A0E02C347C5841D4D3ACD46DA526DBF5607B6671D20B4D614",
+        "git_blob": "4010a028a2a01d7ffe1d853f9ca2f7813ef545eb",
+        "match": true
+      },
+      {
+        "path": "STATUS.md",
+        "bytes": 12670,
+        "sha256": "6B4E8EAEEFC9ADAF177C12D0596AD03913C15161C9A54569608E4406F2A2C2E6",
+        "git_blob": "ff9d8ba2000e6cd31d1526e4858165ab725e27bb",
+        "match": true
+      },
+      {
+        "path": "VALIDATION.md",
+        "bytes": 10456,
+        "sha256": "724452FC2C0D2A84E2811AE9D5E634639D09487BF3E62FAC484B215AA83D41C0",
+        "git_blob": "40d7108fd9b32255e7b44a2242e18ed34a248c0a",
+        "match": true
+      },
+      {
+        "path": "ai-integrated/README.md",
+        "bytes": 6413,
+        "sha256": "D241488B5D4CD87529DAA6FA269D2974ACB2E897ACE3E6031C41887FA7BDD47D",
+        "git_blob": "4f01edf6625bbe8627fb2a8ec1c47dfae0b8887c",
+        "match": true
+      },
+      {
+        "path": "validation/README.md",
+        "bytes": 22132,
+        "sha256": "FEC9210FEACA38A263DFE3D449D0178A46530415DDC3DEE3531DEC19BF49A5B0",
+        "git_blob": "1d21dbed535c31d947a76c9e7d13b6e2e6ac1f77",
+        "match": true
+      },
+      {
+        "path": "validation/stacks-errata-a04446e-r30-package-2026-08-29.json",
+        "bytes": 12439,
+        "sha256": "58CE41EF30C5E62070172E01B4112E3882F62C818A4EB73580E82143C5F61996",
+        "git_blob": "ef0363d49293a160807002c7a96a93ca6d49e908",
+        "match": true
+      },
+      {
+        "path": "validation/stacks-errata-a04446e-r30-release-2026-08-29.json",
+        "bytes": 16262,
+        "sha256": "64359BBEE0DDBA16EF15EDB58A46B940CF45FF42A350D19706C5B58AB650031D",
+        "git_blob": "908fec7ceb665a1be578a08ec7a415aa246c034b",
+        "match": true
+      },
+      {
+        "path": "validation/stacks-errata-a04446e-r30-zenodo-publication-2026-08-29.json",
+        "bytes": 5633,
+        "sha256": "907B5E5A8573689D07C3D4DD4F7782DDE51CEEBFC62B6834EB5776F2E65EE02F",
+        "git_blob": "e8f27387b5efb52efd4e46e930a8c1e5498b9ec8",
+        "match": true
+      }
+    ]
+  },
   "workflow": {
     "name": "Unified repository validation",
-    "run_id": 33276129775,
+    "run_id": 33276980837,
     "attempt": 1,
-    "head_sha": "e3def48650c66c0d65978a04f67dea88bd8b42ac",
+    "head_sha": "2d3ece14647844d6cf528c1ab6121c3844b55e20",
     "status": "completed",
     "conclusion": "success",
-    "url": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/actions/runs/33276129775",
-    "role": "successful exact-head pre-publication workflow for the public R30 content head"
+    "url": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/actions/runs/33276980837",
+    "role": "successful exact-head workflow for the public R30 publication-metadata head"
   },
   "preservation": {
     "status": "PUBLIC_READBACK_VERIFIED",
