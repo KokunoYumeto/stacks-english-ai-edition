@@ -1,0 +1,51 @@
+{
+  "schema": "stacks-r29-sites-modules-regeneration-receipt/v1",
+  "candidate_id": "stacks-errata-a04446e-r29",
+  "authority": {
+    "path": "authority/source/sites-modules.tex",
+    "bytes": 312143,
+    "sha256": "B7CD92AFF9DF33F05EEAB72C4B55E8AA33F3AEBD947FC53160E87CA80DFFB245",
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14"
+  },
+  "accepted_units": 30,
+  "accepted_operations": 31,
+  "rejected_units": [
+    "SITES-MODULES-CH18-005",
+    "SITES-MODULES-CH18-019",
+    "SITES-MODULES-CH18-030"
+  ],
+  "stable_id_range": ["MC-STK-ERR-1217", "MC-STK-ERR-1246"],
+  "payload": {
+    "path": "payload/sites-modules.tex",
+    "bytes": 312179,
+    "sha256": "B097799584BD00B3D8046F62A0A56FCFE045516FD04D130C2A4C547CE3BB6C19"
+  },
+  "operation_spec": {
+    "path": "operation-spec.json",
+    "bytes": 39214,
+    "sha256": "F6E95AB1F73F33D31BAC9899CA401867562003D921364D9C84E15046B278FF3D"
+  },
+  "stable_units": {
+    "path": "stable-units.json",
+    "bytes": 15281,
+    "sha256": "A14EFA336AC20023FC7C078BAD15798AB658C063C06573E48319623E94EE584D"
+  },
+  "source_map": {
+    "path": "source-map.jsonl",
+    "bytes": 59096,
+    "sha256": "D88A0FFE5A568CAAA8BD26A7332D1500FCC6C46D23A21369DE020D6720417F9A"
+  },
+  "source_replay": {
+    "passed": true,
+    "command": "python verify-source.py",
+    "authority_intervals_exact": true,
+    "nonoverlap": true,
+    "descending_replay_equals_payload": true
+  },
+  "generator": {
+    "path": "regenerate_r29_final.py",
+    "bytes": 30923,
+    "sha256": "8240B666D2D580DBDA7CE3B9980A96F5521D4261B8017D6C64297E6919ECC452"
+  },
+  "scope_note": "Source-only candidate regeneration; no registry, public repository, generated-source branch, or producer file was mutated. Build/PDF/visual review are not claimed by this receipt."
+}

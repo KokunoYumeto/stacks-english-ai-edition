@@ -1,0 +1,143 @@
+{
+  "$schema": "../../schemas/candidate-manifest.schema.json",
+  "accepted": 30,
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_evidence": [
+    {
+      "bytes": 20404,
+      "path": "authority/COPYING",
+      "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"
+    },
+    {
+      "bytes": 312143,
+      "path": "authority/source/sites-modules.tex",
+      "sha256": "B7CD92AFF9DF33F05EEAB72C4B55E8AA33F3AEBD947FC53160E87CA80DFFB245"
+    },
+    {
+      "bytes": 428,
+      "path": "authority/upstream.lock.json",
+      "sha256": "B289572B921D7304CB36D2D6BB965169C6482615880BC88F0BC8FBB9A8E82C16"
+    },
+    {
+      "bytes": 6524,
+      "path": "authority/canon/R29_SITES_MODULES_INDEPENDENT_ADJUDICATION_20260829.json",
+      "sha256": "9CD150B5B6BDFEA1E24171B2A1A6130658C1EF5CCCB0FA972035DB7AF8FBB320"
+    },
+    {
+      "bytes": 39563,
+      "path": "authority/canon/R29_SITES_MODULES_OPERATION_DRAFT_20260829.json",
+      "sha256": "475DA8BD90CAD54B2AE33352060458FAAC01C0CBA29588B032034968671EABA6"
+    },
+    {
+      "bytes": 4422,
+      "path": "authority/canon/R29_SITES_MODULES_PRODUCER_ID_CROSSWALK_DRAFT_20260829.json",
+      "sha256": "06C4DE31FE0AEEA4F23E482A870C9716B0D554CC434831A52FE295DA510883D0"
+    }
+  ],
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "candidate_id": "stacks-errata-a04446e-r29",
+  "expected_producer_aliases": [
+    "R29-INDEPENDENT-LINE-376",
+    "SITES-MODULES-A-001",
+    "SITES-MODULES-A-002",
+    "SITES-MODULES-A-003",
+    "SITES-MODULES-B-D002",
+    "SITES-MODULES-B-D004",
+    "SITES-MODULES-B-D005",
+    "SITES-MODULES-B-D006",
+    "SITES-MODULES-B-D001",
+    "SITES-MODULES-B-D007",
+    "SITES-MODULES-C-D004",
+    "SITES-MODULES-C-D005",
+    "SITES-MODULES-C-D006",
+    "SITES-MODULES-C-D007",
+    "SITES-MODULES-C-D001",
+    "SITES-MODULES-C-D002",
+    "SITES-MODULES-C-D003",
+    "SITES-MODULES-C-D008",
+    "SITES-MODULES-C-D009",
+    "SITES-MODULES-C-D010",
+    "SITES-MODULES-C-D011",
+    "SITES-MODULES-C-D013",
+    "SITES-MODULES-D-001",
+    "SITES-MODULES-D-002",
+    "SITES-MODULES-D-003",
+    "SITES-MODULES-D-004",
+    "SITES-MODULES-D-005",
+    "SITES-MODULES-D-006",
+    "SITES-MODULES-D-008",
+    "SITES-MODULES-D-009"
+  ],
+  "expected_unit_ids": [
+    "MC-STK-ERR-1217",
+    "MC-STK-ERR-1218",
+    "MC-STK-ERR-1219",
+    "MC-STK-ERR-1220",
+    "MC-STK-ERR-1221",
+    "MC-STK-ERR-1222",
+    "MC-STK-ERR-1223",
+    "MC-STK-ERR-1224",
+    "MC-STK-ERR-1225",
+    "MC-STK-ERR-1226",
+    "MC-STK-ERR-1227",
+    "MC-STK-ERR-1228",
+    "MC-STK-ERR-1229",
+    "MC-STK-ERR-1230",
+    "MC-STK-ERR-1231",
+    "MC-STK-ERR-1232",
+    "MC-STK-ERR-1233",
+    "MC-STK-ERR-1234",
+    "MC-STK-ERR-1235",
+    "MC-STK-ERR-1236",
+    "MC-STK-ERR-1237",
+    "MC-STK-ERR-1238",
+    "MC-STK-ERR-1239",
+    "MC-STK-ERR-1240",
+    "MC-STK-ERR-1241",
+    "MC-STK-ERR-1242",
+    "MC-STK-ERR-1243",
+    "MC-STK-ERR-1244",
+    "MC-STK-ERR-1245",
+    "MC-STK-ERR-1246"
+  ],
+  "lease_id": "stacks-lease-000033-errata-r29",
+  "lease_status": "prospective_identifier_only_not_issued_or_registered",
+  "namespace": "commons/stacks/errata/r29",
+  "operation_count": 31,
+  "proof_closure": {
+    "accepted": 30,
+    "operations": 31,
+    "rejected": 3,
+    "unresolved": 0
+  },
+  "rejected": 3,
+  "schema": "mathematics-commons-stacks-errata-candidate-config/v1",
+  "source_date_epoch": "1788012044",
+  "stems": {
+    "sites-modules": {
+      "authority_bytes": 312143,
+      "authority_sha256": "B7CD92AFF9DF33F05EEAB72C4B55E8AA33F3AEBD947FC53160E87CA80DFFB245",
+      "build_exceptions": {},
+      "display_delimiter_delta": 0,
+      "ordered_structure_exceptions": {},
+      "payload_bytes": 312179,
+      "payload_sha256": "B097799584BD00B3D8046F62A0A56FCFE045516FD04D130C2A4C547CE3BB6C19",
+      "source_line_exceptions": {}
+    }
+  },
+  "unresolved": 0,
+  "visual_qa": {
+    "source_page_map": {
+      "path": "builds/source-page-map.json",
+      "bytes": 8724,
+      "sha256": "539B84D8441717739D93603E0D72A82CFE888FBDA37C2F3859A3B7ECDE2A8F6E"
+    },
+    "correction_sensitive_pages": {
+      "sites-modules": [5, 16, 17, 19, 21, 23, 26, 27, 37, 42, 43, 50, 51, 55, 57, 60, 61, 65, 69, 70, 71, 78]
+    },
+    "high_resolution_pages": {
+      "sites-modules": [5, 16, 17, 19, 21, 23, 26, 27, 37, 42, 43, 50, 51, 55, 57, 60, 61, 65, 69, 70, 71, 78]
+    }
+  },
+  "writer_task": "01a0256d-5693-77c1-96b2-cf37101e0c6c"
+}

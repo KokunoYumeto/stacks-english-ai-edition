@@ -1,0 +1,94 @@
+{
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "candidate_id": "stacks-errata-a04446e-r29",
+  "checks": {
+    "authority_evidence": {
+      "files": 6,
+      "passed": true
+    },
+    "chapter_builds": {
+      "chapters": 1,
+      "passed": true,
+      "receipt_sha256": "577ACC28F0018308DDDE206433C6D9577AC77B93CC2C475B467F27AC28210D64"
+    },
+    "deterministic_pdf_replay": {
+      "passed": true,
+      "pdfs": 2,
+      "receipt_sha256": "A182AC4823F331E3347D0EC820C57D5261CCD701AF1C5148E8C9862BC1268CCC"
+    },
+    "exact_payloads": {
+      "files": {
+        "sites-modules": {
+          "authority_bytes": 312143,
+          "authority_display_delimiters": 626,
+          "authority_sha256": "B7CD92AFF9DF33F05EEAB72C4B55E8AA33F3AEBD947FC53160E87CA80DFFB245",
+          "display_delimiter_delta": 0,
+          "operation_count": 31,
+          "payload_bytes": 312179,
+          "payload_display_delimiters": 626,
+          "payload_sha256": "B097799584BD00B3D8046F62A0A56FCFE045516FD04D130C2A4C547CE3BB6C19",
+          "structure": {
+            "citations": {
+              "authority": 6,
+              "payload": 6
+            },
+            "environments": {
+              "authority": 892,
+              "payload": 892
+            },
+            "labels": {
+              "authority": 247,
+              "payload": 247
+            },
+            "references": {
+              "authority": 518,
+              "payload": 518
+            },
+            "sections": {
+              "authority": 45,
+              "payload": 45
+            }
+          },
+          "xymatrix_count": 52
+        }
+      },
+      "passed": true
+    },
+    "lease_ledgers_inventory": {
+      "decisions": 6,
+      "passed": true,
+      "prospective_lease_pointer": true,
+      "rejections": 3,
+      "unresolved": 0
+    },
+    "public_hygiene": {
+      "passed": true,
+      "python_caches": 0,
+      "text_files": 49
+    },
+    "source_page_map": {
+      "operations": 31,
+      "passed": true,
+      "receipt_sha256": "539B84D8441717739D93603E0D72A82CFE888FBDA37C2F3859A3B7ECDE2A8F6E",
+      "unique_pages": 22
+    },
+    "unit_closure": {
+      "expected": 30,
+      "manifested": 30,
+      "passed": true,
+      "producer_aliases": 30,
+      "raw_id_rows": 30,
+      "raw_id_strings_unique": 27
+    },
+    "visual_pdf_qa": {
+      "direct_units": 30,
+      "passed": true,
+      "pdfs": 1,
+      "receipt_sha256": "92DEF358EFD079D9C7C4CE691F609BD11FCC4A34C0D1BCEB5011D8B7BF3F2DE8"
+    }
+  },
+  "generated_at_utc": "2026-08-29T15:26:05Z",
+  "passed": true,
+  "schema": "mathematics-commons-stacks-errata-validation/v1",
+  "verifier_sha256": "54B42ECD99091177F42E231289C9AFE79D70DA4CBE8132ABA1FD52EE90161A26"
+}
