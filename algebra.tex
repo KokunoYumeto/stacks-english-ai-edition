@@ -519,7 +519,7 @@ $M$, since the $R$-module structure is induced by the image of $R$ in $S$.
 Let $R \to S$ be a ring map.
 \begin{enumerate}
 \item We say $R \to S$ is of {\it finite type}, or that {\it $S$ is a finite
-type $R$-algebra} if there exist an $n \in \mathbf{N}$ and an surjection
+type $R$-algebra} if there exist an $n \in \mathbf{N}$ and a surjection
 of $R$-algebras $R[x_1, \ldots, x_n] \to S$.
 \item We say $R \to S$ is of {\it finite presentation} if there
 exist integers $n, m \in \mathbf{N}$ and polynomials
@@ -969,7 +969,7 @@ $m$ by $\mu_{ij}(m)$ we see that we may assume $m \in \Ker(\psi_i)$.
 This shows that the map $\colim_i H_i \to H$ is surjective.
 
 \medskip\noindent
-Suppose that $h_i \in H_i$ has image zero on $H$. Since
+Suppose that $h_i \in H_i$ has image zero in $H$. Since
 $H_i = \Ker(\psi_i)/\Im(\varphi_i)$ we may represent
 $h_i$ by an element $m \in \Ker(\psi_i) \subset M_i$.
 The assumption on the vanishing of $h_i$ in $H$ means that
@@ -1146,12 +1146,12 @@ $$
 \exists u\in S \text{ such that } (mt-ns)u = 0
 $$
 This is clearly an equivalence relation. Denote by $m/s$ (or
-$\frac{m}{s}$) be the equivalence class of $(m, s)$ and $S^{-1}M$ be
-the set of all equivalence classes. Define the addition and scalar
-multiplication as follows
+$\frac{m}{s}$) the equivalence class of $(m, s)$ and by $S^{-1}M$
+the set of all equivalence classes. For $a \in A$, $m, n \in M$, and $s, t \in S$, define addition and scalar
+multiplication by
 $$
 m/s + n/t = (mt + ns)/st,\quad
-m/s\cdot n/t = mn/st
+(a/s)\cdot(m/t) = am/st
 $$
 It is clear that this makes $S^{-1}M$ an $S^{-1}A$-module.
 
@@ -1169,7 +1169,7 @@ property.
 
 \begin{lemma}
 \label{lemma-universal-property-localization-module}
-Let $R$ be a ring. Let $S \subset R$ a multiplicative subset. Let $M$, $N$
+Let $R$ be a ring. Let $S \subset R$ be a multiplicative subset. Let $M$, $N$
 be $R$-modules. Assume all the elements of $S$ act as automorphisms on $N$.
 Then the canonical map
 $$
@@ -1184,7 +1184,7 @@ Injectivity: Let $\alpha \in \Hom_R(S^{-1}M, N)$ and take an arbitrary
 element $m/s \in S^{-1}M$. Then, since $s \cdot \alpha(m/s) = \alpha(m/1)$,
 we have $ \alpha(m/s) =s^{-1}(\alpha (m/1))$, so $\alpha$ is completely
 determined by what it does on the image of $M$ in $S^{-1}M$.
-Surjectivity: Let $\beta : M \rightarrow N$ be a given R-linear map.
+Surjectivity: Let $\beta : M \rightarrow N$ be a given $R$-linear map.
 We need to show that it can be "extended" to $S^{-1}M$. Define a map of
 sets
 $$
@@ -1305,7 +1305,7 @@ isomorphic to $(SS')^{-1}M$.
 \end{proposition}
 
 \begin{proof}
-Note that given a $A$-module M, we have not proved any
+Note that given an $A$-module $M$, we have not proved any
 universal property for $S^{-1}M$. Hence we cannot reason
 as in the preceding proof; we have to construct the isomorphism explicitly.
 
@@ -1319,12 +1319,12 @@ x/ss'\\
 t = ss'
 \end{align*}
 We have to check that these homomorphisms are well-defined, that is,
-independent the choice of the fraction. This is easily checked and it is also
+independent of the choice of the fraction. This is easily checked and it is also
 straightforward to show that they are inverse to each other.
 \end{proof}
 
 \noindent
-If $u : M \to N$ is an $A$ homomorphism, then the localization indeed
+If $u : M \to N$ is an $A$-module homomorphism, then the localization indeed
 induces a well-defined $S^{-1}A$ homomorphism $S^{-1}u : S^{-1}M \to
 S^{-1}N$ which sends $x/s$ to $u(x)/s$. It is immediately checked that
 this construction is functorial, so that $S^{-1}$
@@ -1381,7 +1381,7 @@ The corollary then follows.
 \end{proof}
 
 \noindent
-If, in the preceding Corollary, we take $N = I$ and $M = A$ for an ideal $I$ of
+If, in the preceding Lemma, we take $N = I$ and $M = A$ for an ideal $I$ of
 $A$, we see that $S^{-1}A/S^{-1}I \simeq S^{-1}(A/I)$ as $A$-modules. The next
 proposition shows that they are isomorphic as rings.
 
@@ -1777,10 +1777,10 @@ generating sets $\{x \otimes y : x\in M, y\in N\}$.
 Suppose there is another pair $(T', g')$ satisfying the same properties.
 Then there is a unique $j : T \to T'$ and
 also $j' : T' \to T$ such that $g' = j\circ g$, $g = j'\circ g'$.
-But then both the maps $(j\circ j') \circ g$ and $g$
-satisfies the universal properties, so by uniqueness they are equal,
+But then both the maps $(j'\circ j) \circ g$ and $g$
+satisfy the universal properties, so by uniqueness they are equal,
 and hence $j'\circ j$ is identity on $T$.
-Similarly $(j'\circ j) \circ g' = g'$ and $j\circ j'$ is identity on $T'$.
+Similarly $(j\circ j') \circ g' = g'$ and $j\circ j'$ is identity on $T'$.
 So $j$ is an isomorphism.
 \end{proof}
 
@@ -1814,7 +1814,7 @@ one can prove that:
 \begin{lemma}
 \label{lemma-multilinear}
 Let $M_1, \ldots, M_r$ be $R$-modules. Then there exists a pair $(T, g)$
-consisting of an $R$-module T and an $R$-multilinear mapping
+consisting of an $R$-module $T$ and an $R$-multilinear mapping
 $g : M_1\times \ldots \times M_r \to T$ with the universal
 property: For any $R$-multilinear mapping
 $f : M_1\times \ldots \times M_r \to P$ there exists a unique $R$-module
@@ -1907,7 +1907,7 @@ Thus $M \otimes_A N$ becomes an $(A, B)$-bimodule. Similarly for
 $N \otimes_B P$, and thus for
 $(M \otimes_A N)\otimes_B P$ and $M \otimes_A(N \otimes_B P)$. By
 Lemma \ref{lemma-transitive}, these two
-modules are isomorphic as both as $A$-module and $B$-module via the same
+modules are isomorphic both as $A$-modules and as $B$-modules via the same
 mapping.
 \end{proof}
 
@@ -2065,7 +2065,7 @@ Therefore the induced map is the zero map while $\mathbf{Z} \otimes N\neq 0$.
 For $R$-modules $N$, if the
 functor $-\otimes_R N$ is exact, i.e. tensoring
 with $N$ preserves all exact
-sequences, then $N$ is said to be {\it flat} $R$-module.
+sequences, then $N$ is said to be a {\it flat} $R$-module.
 We will discuss this later in Section \ref{section-flat}.
 \end{remark}
 
@@ -2617,7 +2617,7 @@ After reordering we may assume $x \not \in \mathfrak p_i$ for $i < s$
 and $x \in \mathfrak p_i$ for $i \geq s$. If $s = r + 1$ then we are done.
 If not, then we can find $y \in I$ with $y \not \in \mathfrak p_s$.
 Choose $f \in \bigcap_{i < s} \mathfrak p_i$ with $f \not \in \mathfrak p_s$.
-Then $x + fy$ is not contained in $\mathfrak p_1, \ldots, \mathfrak p_s$.
+Then $x + fy$ does not belong to any of $\mathfrak p_1, \ldots, \mathfrak p_s$.
 Thus we win by induction on $s$.
 \end{proof}
 
@@ -2742,12 +2742,12 @@ $1, \ldots, \hat j, \ldots, m, i$.
 \end{lemma}
 
 \begin{proof}
-Since the adjugate has the property $A_1B = B A_1 = f$ the first block
+Since the adjugate has the property $A_1B = B A_1 = fI_m$ the first block
 of the expression for $AB$ is correct. Note that
 $$
 c_{ij} = \sum\nolimits_k a_{ik}b_{kj} = \sum (-1)^{j + k}a_{ik} \det(A_1^{jk})
 $$
-where $A_1^{ij}$ means $A_1$ with the $j$th row and $k$th column removed.
+where $A_1^{jk}$ means $A_1$ with the $j$th row and $k$th column removed.
 This last expression is the row expansion of the determinant of the matrix
 in the statement of the lemma.
 \end{proof}
@@ -2873,7 +2873,7 @@ Let $M$ be a finite $R$-module.
 Let $\varphi : M \to M$ be an endomorphism such
 that $\varphi(M) \subset IM$.
 Then there exists a monic polynomial
-$P = t^n + a_1 t^{n - 1} + \ldots + a_n \in R[T]$
+$P = T^n + a_1 T^{n - 1} + \ldots + a_n \in R[T]$
 such that $a_j \in I^j$ and $P(\varphi) = 0$ as an endomorphism of $M$.
 \end{lemma}
 
@@ -2916,7 +2916,7 @@ We conclude that
 $(1 + a_1 + \ldots + a_n)\text{id}_M = 0$ with $a_j \in I$.
 Write $a_j = b_j(x)x$ for some $b_j(x) \in R[x]$.
 Translating back into $\varphi$ we see that
-$\text{id}_M = -(\sum_{j = 1, \ldots, n} b_j(\varphi)) \varphi$, and hence
+$\text{id}_M = -(\sum_{j = 1}^{n} b_j(\varphi)) \varphi$, and hence
 $\varphi$ is invertible.
 \end{proof}
 
@@ -3039,8 +3039,8 @@ We address each part in the corresponding item below.
 ordered by inclusion and is non-empty, since $(0) \in \mathfrak{A}$ is a proper
 ideal. Let $A$ be a totally ordered subset of $\mathfrak A$.
 Then $\bigcup_{I \in A} I$ is in
-fact an ideal. Since 1 $\notin I$ for all $I \in A$, the union does not contain
-1 and thus is proper. Hence $\bigcup_{I \in A} I$ is in $\mathfrak{A}$ and is
+fact an ideal. Since $1 \notin I$ for all $I \in A$, the union does not contain
+$1$ and thus is proper. Hence $\bigcup_{I \in A} I$ is in $\mathfrak{A}$ and is
 an upper bound for the set $A$. Thus by Zorn's lemma $\mathfrak{A}$ has a
 maximal element, which is the sought-after maximal ideal.
 \item Since $R$ is nonzero, it contains a maximal ideal which is a prime ideal.
@@ -3081,7 +3081,7 @@ see this, apply (2) to the ring $R/I$) which is therefore prime.
 \item If $\mathfrak{p} \in V(I) \cup V(J)$, then $I \subset \mathfrak{p}$ or $J
 \subset \mathfrak{p}$ which means that $I \cap J \subset \mathfrak{p}$. Now if
 $I \cap J \subset \mathfrak{p}$, then $IJ \subset \mathfrak{p}$ and hence
-either $I$ of $J$ is in $\mathfrak{p}$, since $\mathfrak{p}$ is prime.
+either $I \subset \mathfrak{p}$ or $J \subset \mathfrak{p}$, since $\mathfrak{p}$ is prime.
 \item $\mathfrak{p} \in \bigcap_{a \in A} V(I_a) \Leftrightarrow
 I_a \subset \mathfrak{p}, \forall a \in A \Leftrightarrow
 \mathfrak{p} \in V(\bigcup_{a\in A} I_a)$
@@ -3212,7 +3212,7 @@ by $\mathfrak p \mapsto S^{-1}\mathfrak p = \mathfrak p(S^{-1}R)$.
 
 \begin{proof}
 Denote the right hand side of the arrow of the lemma by $D$.
-Choose a prime $\mathfrak p' \subset S^{-1}R$ and let $\mathfrak p$
+Choose a prime $\mathfrak p' \subset S^{-1}R$ and let $\mathfrak p$ be
 the inverse image of $\mathfrak p'$ in $R$. Since $\mathfrak p'$
 does not contain $1$ we see that $\mathfrak p$ does not contain
 any element of $S$. Hence $\mathfrak p \in D$ and we see that
@@ -3335,7 +3335,7 @@ The intersection of two standard opens is quasi-compact
 as $D(f) \cap D(g) = D(fg)$. Given any two quasi-compact opens
 $U, V \subset X$ we may write $U = D(f_1) \cup \ldots \cup D(f_n)$
 and $V = D(g_1) \cup \ldots \cup D(g_m)$. Then
-$U \cap V = \bigcup D(f_ig_j)$ which is quasi-compact.
+$U \cap V = \bigcup_{1 \leq i \leq n,\ 1 \leq j \leq m} D(f_i g_j)$ which is quasi-compact.
 \end{proof}
 
 
@@ -3426,7 +3426,7 @@ Hence $R$ has at least two maximal ideals. Conversely,
 if $\mathfrak m'$ is another maximal ideal, then choose
 $x \in \mathfrak m'$, $x \not \in \mathfrak m$. Clearly
 $x$ is not a unit. This proves the equivalence of (1) and (3).
-The equivalence (1) and (2) is tautological.
+The equivalence of (1) and (2) is tautological.
 If $R$ is local then (4) holds since $x$ is either in $\mathfrak m$
 or not. If (4) holds, and $\mathfrak m$, $\mathfrak m'$ are distinct
 maximal ideals then we may choose $x \in R$ such that
@@ -3573,7 +3573,7 @@ F_{\overline{\mathfrak q}}
 $$
 Namely, there is an obvious ring map
 $F \to S_\mathfrak q \otimes_{R_\mathfrak p} \kappa(\mathfrak p)$
-which is easily seen to be isomorphic to $F \to F_{\overline{\mathfrak q}}$.
+which, under the displayed isomorphism, identifies with $F \to F_{\overline{\mathfrak q}}$.
 The second isomorphism follows from the fact that $\kappa(\mathfrak p)$
 is the quotient of $R_\mathfrak p$ by $\mathfrak pR_\mathfrak p$.
 \end{remark}
@@ -3736,7 +3736,7 @@ $i$ satisfies $\sum_j a_{ij} y_j = 0$).
 This implies that $f$ annihilates $M$.
 
 \medskip\noindent
-By Lemma \ref{lemma-contained-in-radical} an element of $1 + \text{rad}(R)$ is
+By Lemma \ref{lemma-contained-in-radical} an element of $1 + \text{rad}(R)$ is an
 invertible element of $R$. Hence we see that (\ref{item-nakayama}) implies
 (2). We obtain (3) by applying (1) to $M/N$ which is finite as $N'$ is finite.
 We obtain (4) by applying (2) to $M/N$ which is finite as $N'$ is finite.
@@ -3781,7 +3781,7 @@ This in turn means there exist $t_i \in S$ such that
 $t_isy_i = \sum t_ia'_{ij}x_j$ in $M$. Thus if $t \in S$
 is the product of the $t_i$, then we
 see that $y_i$ is in the $R_{st}$-submodule generated by $x_1, \ldots, x_r$
-of $M_{st}$. Hence $x_1, \ldots, x_r$ generates $M_{st}$.
+of $M_{st}$. Hence $x_1, \ldots, x_r$ generate $M_{st}$.
 
 \medskip\noindent
 General case. By the special case, we can find an $s \in S$
@@ -3958,7 +3958,7 @@ and $e_2 \not \in \mathfrak p$, or conversely.
 Write $e_i' = 1 - e_i$. If $e_1 \not = e_2$, then
 $0 \not = e_1 - e_2  = e_1(e_2 + e_2') - (e_1 + e_1')e_2
 = e_1 e_2' - e_1' e_2$. Hence either the idempotent
-$e_1 e_2' \not = 0$ or $e_1' e_2 \not = 0$. An idempotent
+$e_1 e_2' \not = 0$ or $e_1' e_2 \not = 0$. A nonzero idempotent
 is not nilpotent, and hence we find a prime
 $\mathfrak p$ such that either $e_1e_2' \not \in \mathfrak p$
 or $e_1'e_2 \not \in \mathfrak p$, by Lemma \ref{lemma-Zariski-topology}.
@@ -4076,7 +4076,7 @@ $0$ or $1$ in $R/I$.
 \begin{proof}
 Let $\mathfrak p$ be a prime of $R$. By
 Lemma \ref{lemma-topology-spec}
-we have see that the hypotheses of
+we see that the hypotheses of
 Topology, Lemma \ref{topology-lemma-connected-component-intersection}
 are satisfied for the topological space $\Spec(R)$.
 Hence the connected component of $\mathfrak p$ in $\Spec(R)$
@@ -4411,7 +4411,7 @@ proof is complete.
 
 \begin{lemma}
 \label{lemma-standard-covering}
-Let $R$ be a ring, and let $f_1, f_2, \ldots f_n\in R$ generate
+Let $R$ be a ring, and let $f_1, f_2, \ldots, f_n \in R$ generate
 the unit ideal in $R$.
 Then the following sequence is exact:
 $$
@@ -4612,7 +4612,7 @@ is not nilpotent, then $D(x) \not = \emptyset$, see
 Lemma \ref{lemma-Zariski-topology}. This contradicts
 the minimality of $\mathfrak p$. If $R$ is reduced,
 then ${\mathfrak p}R_{\mathfrak p} = 0$ and
-hence it is a field.
+hence $R_{\mathfrak p}$ is a field.
 \end{proof}
 
 \begin{lemma}
@@ -4680,7 +4680,7 @@ $R_{\mathfrak q_1} \times \ldots \times R_{\mathfrak q_t}$.
 
 \begin{proof}
 There are natural maps $Q(R) \to R_{\mathfrak q_i}$ since
-any nonzerodivisor is contained in $R \setminus \mathfrak q_i$.
+any nonzerodivisor lies in $R \setminus \mathfrak q_i$.
 Hence a natural map
 $Q(R) \to R_{\mathfrak q_1} \times \ldots \times R_{\mathfrak q_t}$.
 For any nonminimal prime $\mathfrak p \subset R$ we see that
@@ -4826,8 +4826,7 @@ The following are equivalent
 \item there are no nontrivial inclusions between its prime ideals,
 \item every prime ideal is a maximal ideal,
 \item every prime ideal is minimal,
-\item every standard open $D(f) \subset X$ is closed, and
-\item add more here.
+\item every standard open $D(f) \subset X$ is closed.
 \end{enumerate}
 \end{lemma}
 
@@ -4933,7 +4932,7 @@ with minimal degree, then it will also be irreducible in $\mathbf{Z}[x]$.
 Hence, in this case $\mathfrak p = (q, f_q)$ where $f_q$ is an irreducible
 polynomial in $\mathbf{Z}[x]$ that is irreducible when viewed
 in $(\mathbf{Z}/(q) [x])$. Now, assume that $\phi^{-1}(\mathfrak p) = (0)$.
-In this case, $\mathfrak p$ must be generated by nonconstant polynomials
+In this case, if $\mathfrak p = (0)$ there is nothing more to prove. Otherwise, $\mathfrak p$ contains nonconstant polynomials
 which, since $\mathfrak p$ is prime, may be assumed to be irreducible in
 $\mathbf{Z}[x]$.  By Gauss' lemma, these polynomials are also irreducible
 in $\mathbf{Q}[x]$.  Since $\mathbf{Q}[x]$ is a Euclidean domain, if there
@@ -4960,10 +4959,10 @@ that are not associates, then $(f, g) \cap k[x] \neq 0$. To do this,
 it is enough to show that $f$ and $g$ are relatively prime when
 viewed in $k(x)[y]$. In this case, $k(x)[y]$ is a Euclidean domain,
 so by applying the Euclidean algorithm and clearing denominators, we
-obtain $p = af + bg$ for $p, a, b \in k[x]$. Thus, assume this is not
+obtain $p = af + bg$ for $0 \ne p \in k[x]$ and $a, b \in k[x, y]$. Thus, assume this is not
 the case, that is, that some nonunit $h \in k(x)[y]$ divides both
 $f$ and $g$. Then, by Gauss's lemma, for some $a, b \in k(x)$ we
-have $ah | f$ and $bh | g$ for $ah, bh \in k[x]$. By
+have $ah | f$ and $bh | g$ for $ah, bh \in k[x, y]$. By
 irreducibility, $ah = f$ and
 $bh = g$ (since $h \notin k(x)$). So, back in $k(x)[y]$, $f, g $
 are associates, as $\frac{a}{b} g = f$. Since
@@ -5014,10 +5013,10 @@ $f\in R$ as a $\mathbf{Q}$-coefficient polynomial in $A(z) = z^2-z$
 and $B(z) = z^3-z^2$. Note the relation $zA(z) = B(z)$. Let
 $a = f(0) = f(1)$. Then $z(z-1)$ must divide $f(z)-a$, so we can write
 $f(z) = z(z-1)g(z)+a = A(z)g(z)+a$.  If $\deg(g) < 2$, then
-$h(z) = c_1z + c_0$ and $f(z) = A(z)(c_1z + c_0)+a = c_1B(z)+c_0A(z)+a$, so we
+$g(z) = c_1z + c_0$ and $f(z) = A(z)(c_1z + c_0)+a = c_1B(z)+c_0A(z)+a$, so we
 are done.  If $\deg(g)\geq 2$, then by the polynomial division
 algorithm, we can write $g(z) = A(z)h(z)+b_1z + b_0$
-($\deg(h)\leq\deg(g)-2$), so $f(z) = A(z)^2h(z)+b_1B(z)+b_0A(z)$.
+($\deg(h)\leq\deg(g)-2$), so $f(z) = A(z)^2h(z)+b_1B(z)+b_0A(z)+a$.
 Applying division to $h(z)$ and iterating, we obtain an expression
 for $f(z)$ as a polynomial in $A(z)$ and $B(z)$; hence $\varphi$ is
 surjective.
@@ -5037,7 +5036,7 @@ $$
 R\subset R_a\subset\mathbf{Q}[z, \frac{1}{z-a}], \quad
 R\subset\mathbf{Q}[z]\subset\mathbf{Q}[z, \frac{1}{z-a}].
 $$
-Recall (Lemma \ref{lemma-spec-localization}) that for a ring T and a
+Recall (Lemma \ref{lemma-spec-localization}) that for a ring $T$ and a
 multiplicative subset $S\subset T$, the ring map $T \to S^{-1}T$
 induces a map on spectra $\Spec(S^{-1}T) \to \Spec(T)$
 which is a homeomorphism onto the subset
@@ -5046,7 +5045,7 @@ $$
 \subset \Spec(T).
 $$
 When $S = \{ 1, f, f^2, \ldots\}$ for some $f\in T$, this is
-the open set $D(f)\subset T$.  We now verify a corresponding
+the open set $D(f)\subset \Spec(T)$.  We now verify a corresponding
 property for the ring map $R \to R_a$: we will show that the map
 $\theta : \Spec(R_a) \to \Spec(R)$ induced by inclusion
 $R\subset R_a$ is a homeomorphism onto an open subset of
@@ -5105,7 +5104,7 @@ Depending on whether $z^2 + z + 2a-2$ is irreducible or not over
 $\mathbf{Q}$, this former distinguished open set has complement
 equal to one or two closed points along with the closed point
 $\mathfrak{m}_a$. Furthermore, the ideal in $R_a$ generated by the
-elements $(z^2 + z + 2a-a)(z-a)$ and $(z-1 + a)(z-a)$ is all of $R_a$, so
+elements $(z^2 + z + 2a-2)(z-a)$ and $(z-1 + a)(z-a)$ is all of $R_a$, so
 these two distinguished open sets cover $\Spec(R_a)$. Hence in
 order to show that $\theta$ is a homeomorphism onto
 $\Spec(R)-\{\mathfrak{m}_a\}$, it suffices to show
@@ -5117,8 +5116,8 @@ if and only if $a = 0$ or $a = 1$, both of which do not occur.
 Despite this homeomorphism which mimics the behavior of a
 localization at an element of $R$, while
 $\mathbf{Q}[z, \frac{1}{z-a}]$ is the localization of $\mathbf{Q}[z]$
-at the maximal ideal $(z-a)$, the ring $R_a$ is {\it not} a
-localization of $R$: Any localization $S^{-1}R$ results in more
+at the element $z-a$, the ring $R_a$ is {\it not} a
+localization of $R$: Any proper localization $S^{-1}R$ results in more
 units than the original ring $R$.  The units of $R$ are
 $\mathbf{Q}^\times$, the units of $\mathbf{Q}$.  In fact, it is
 easy to see that the units of $R_a$ are $\mathbf{Q}^*$.
@@ -5135,8 +5134,8 @@ $a\neq 1/2$ in a few places: (1) In order to be able to talk about
 the kernel of $\text{ev}_{1-a}$ on $R_a$, which ensures that
 $\mathfrak{m}_{1-a}$ is a point of $R_a$ (i.e., that $R_a$ is
 missing just one point of $R$). (2) At the end in order to conclude
-that $(z-a)^{k + \ell}$ can only be in $R$ for $k = \ell = 0$; indeed, if
-$a = 1/2$, then this is in $R$ as long as $k + \ell$ is even. Hence
+that $(z-a)^n$ can belong to $R_a$ only for $n = 0$; indeed, if
+$a = 1/2$, then it belongs to $R_a$ whenever $n$ is even. Hence
 there would indeed be more units in $R_a$ than in $R$, and $R_a$
 could possibly be a localization of $R$.
 \end{example}
@@ -5337,7 +5336,7 @@ Example \ref{example-oka-family-principal} and
 Proposition \ref{proposition-oka}.
 For the second, suppose that there exists an ideal $I \subset R$
 which is not principal. The union of a totally ordered chain
-$\left\{I_\alpha\right\}$ of ideals that not principal is not principal;
+$\left\{I_\alpha\right\}$ of ideals that are not principal is not principal;
 indeed, if $I = \bigcup I_\alpha$ were generated by
 $a$, then $a$ would belong to some $I_\alpha $ and $a$ would generate it.
 By Zorn's lemma, there is an ideal maximal with respect to not being
@@ -5391,7 +5390,7 @@ be generated by countably many elements.
 Comment by Lukas Heger of November 12, 2020.
 \end{reference}
 Let $R$ be a ring and $X = \Spec(R)$. Since closed subsets of $X$ correspond to
-radical ideas of $R$ (Lemma \ref{lemma-Zariski-topology}) we see that $X$ is a
+radical ideals of $R$ (Lemma \ref{lemma-Zariski-topology}) we see that $X$ is a
 Noetherian topological space if and only if we have ACC for radical ideals.
 This holds if and only if every radical ideal is the radical of a finitely
 generated ideal (details omitted). Let
@@ -17011,7 +17010,7 @@ which means that all the associated primes of $M'$ are not embedded.
 
 \medskip\noindent
 Let $f$ be an element contained in all $\mathfrak p_i$.
-Then $D(f) \cap \text{supp}(K) = 0$. Hence $M_f = M'_f$
+Then $D(f) \cap \text{supp}(K) = \emptyset$. Hence $M_f = M'_f$
 because $K_f = 0$.
 \end{proof}
 
@@ -18937,7 +18936,7 @@ of double complexes with the properties above.
 \end{lemma}
 
 \begin{proof}
-We will show that $H_i(R(A)_\bullet))$
+We will show that $H_i(R(A)_\bullet)$
 and $H_i(U(A)_\bullet)$ are canonically
 isomorphic to a third group. Namely
 $$
@@ -19165,7 +19164,7 @@ Then $\text{Tor}_p^R(M, N)$ is a finite $R$-module for all $p$.
 
 \begin{proof}
 This holds because $\text{Tor}_p^R(M, N)$ is computed as the
-cohomology groups of a complex $F_\bullet \otimes_R N$
+homology groups of a complex $F_\bullet \otimes_R N$
 with each $F_n$ a finite free $R$-module, see
 Lemma \ref{lemma-resolution-by-finite-free}.
 \end{proof}
@@ -20070,7 +20069,7 @@ which is easily seen to be an isomorphism.
 Openness of $W$ and (2)(a) for $D(f) \subset W$ follow from
 Lemma \ref{lemma-map-between-finite}. Since $P_{2, f}$ is projective
 over $R_f$ we see that $\varphi_f : P_{1, f} \to P_{2, f}$ has a section
-and it follows that $\Ker(\varphi)_f$ is a direct summand of $P_{2, f}$.
+and it follows that $\Ker(\varphi)_f$ is a direct summand of $P_{1, f}$.
 Therefore $\Ker(\varphi)_f$ is finite projective. Thus (2)(b) holds as well.
 
 \medskip\noindent
@@ -21689,13 +21688,13 @@ Denote $f_{ii'} : M_i \to M_{i'}$ and $g_{jj'} : N_j \to N_{j'}$ the
 transition maps. Then $M_i \otimes_R N_j$ is a finitely presented
 $R$-module (see
 Lemma \ref{lemma-tensor-finiteness}),
-and $M \otimes_R N = \colim_{(i, j) \in I \times J} M_i \otimes_R M_j$.
+and $M \otimes_R N = \colim_{(i, j) \in I \times J} M_i \otimes_R N_j$.
 Pick $(i, j) \in I \times J$. By the definition of a Mittag-Leffler module
 we have
 Proposition \ref{proposition-ML-characterization} (3)
 for both systems. In other words there exist $i' \geq i$ and $j' \geq j$
 such that for every choice of $i'' \geq i$ and $j'' \geq j$ there exist
-maps $a : M_{i''} \to M_{i'}$ and $b : M_{j''} \to M_{j'}$ such that
+maps $a : M_{i''} \to M_{i'}$ and $b : N_{j''} \to N_{j'}$ such that
 $f_{ii'} = a \circ f_{ii''}$ and $g_{jj'} = b \circ g_{jj''}$.
 Then it is clear that
 $a \otimes b : M_{i''} \otimes_R N_{j''} \to M_{i'} \otimes_R N_{j'}$
@@ -22301,7 +22300,7 @@ is finite.
 To prove that  $\Coker(\varphi)$ is coherent, let $E \subset \Coker(\varphi)$
 be a finite submodule, and let $E'$ be its inverse image in $M$.
 From the exact
-sequence $0 \to \Im(\varphi) \to E' \to E \to 0$ and since $\Ker(\varphi)$
+sequence $0 \to \Im(\varphi) \to E' \to E \to 0$ and since $\Im(\varphi)$
 is finite we conclude by Lemma \ref{lemma-extension} that $E' \subset M$ is
 finite,
 hence finitely presented because $M$ is coherent. The same exact sequence
@@ -22481,14 +22480,14 @@ Since the $Q_j$ are decreasing and $Q \subset Q_j$ for all $j \geq i$, to show
 that the $Q_j$ stabilize to $Q$ it suffices to find a $j \geq i$ such that $Q_j
 \subset Q$.  As an element of
 $$
-\Hom_R(M_i, R) \otimes_R M = \colim_{j \in J}
+\Hom_R(M_i, R) \otimes_R M = \colim_{j \in I}
 (\Hom_R(M_i, R) \otimes_R
 M_j),
 $$
 $f_i$ is the colimit of $f_{ij}$ for $j \geq i$, and $f_i$ also lies in the
 submodule
 $$
-\colim_{j \in J} (Q \otimes_R M_j) \subset \colim_{j \in J}
+\colim_{j \in I} (Q \otimes_R M_j) \subset \colim_{j \in I}
 (\Hom_R(M_i, R)
 \otimes_R M_j).
 $$
@@ -22612,13 +22611,13 @@ since $M$ is Mittag-Leffler, for each $i \in I'_{0}$ we can choose $j \in I$
 such that $j \geq i$ and $f_{ij}: M_i \to M_j$ factors through
 $f_{ik}: M_i \to M_k$ for all $k \geq i$  (condition (3) of Proposition
 \ref{proposition-ML-characterization}); let $I'_1$ be the union of $I'_0$ with
-all of these $j$.  Since $I'_1$ is a countable, we can enlarge it to a
+all of these $j$.  Since $I'_1$ is a countable set, we can enlarge it to a
 countable directed set $I'_{2} \subset I$.  Now we can apply the same procedure
 to $I'_{2}$ as we did to $I'_{0}$ to get a new countable set $I'_{3} \subset
 I$.  Then we enlarge $I'_{3}$ to a countable directed set $I'_{4}$.  Continuing
 in this way---adding in a $j$ as in Proposition
 \ref{proposition-ML-characterization} (3) for each $ i \in I'_{\ell}$ if $\ell$
-is odd and enlarging $I'_{\ell}$ to a directed set if $\ell$ is even---we get a
+is even and enlarging $I'_{\ell}$ to a directed set if $\ell$ is odd---we get a
 sequence of subsets $I'_{\ell} \subset I$ for $\ell \geq 0$.  The union $I' =
 \bigcup I'_{\ell}$ satisfies:
 \begin{enumerate}
@@ -23036,7 +23035,7 @@ a direct sum of some $Q_i$, the same is true of $(M/M_{\alpha}) \otimes_R
 S$.   By Lemma \ref{lemma-adapted-submodule}, we can find a countably generated
 $R$-submodule $P$ of $M/M_{\alpha}$ containing the image of $x$ in
 $M/M_{\alpha}$ and such that $P \otimes_R S$ (which equals $\Im(P
-\otimes_R S \to M \otimes_R S)$ since $S$ is flat over $R$) is a
+\otimes_R S \to (M/M_{\alpha}) \otimes_R S)$ since $S$ is flat over $R$) is a
 direct sum of some $Q_i$. Since $M \otimes_R S = \bigoplus_{i \in I} Q_i$
 is projective and projectivity passes to direct summands, $P \otimes_R S$ is
 also projective.  Thus by Lemma \ref{lemma-ffdescent-countable-projectivity},
@@ -23052,11 +23051,11 @@ Transfinite induction on $M$ (using the fact that we constructed
 $M_{\alpha + 1}$ to contain the smallest $x \in M$ not contained in
 $M_{\alpha}$) shows that
 each $x \in M$ is contained in some $M_{\alpha}$.  Thus, there is some large
-enough ordinal $S$ satisfying: for each $x \in M$ there is $\alpha \in S$ such
-that $x \in M_{\alpha}$.  This means $(M_{\alpha})_{\alpha \in S}$ satisfies
+enough ordinal $\gamma$ satisfying: for each $x \in M$ there is $\alpha \in \gamma$ such
+that $x \in M_{\alpha}$.  This means $(M_{\alpha})_{\alpha \in \gamma}$ satisfies
 property (1) of a Kaplansky d\'evissage of $M$.  The other properties are clear
 by construction.  We conclude
-$M = \bigoplus_{\alpha + 1 \in S} M_{\alpha + 1}/M_{\alpha}$.
+$M = \bigoplus_{\alpha + 1 \in \gamma} M_{\alpha + 1}/M_{\alpha}$.
 Since each $M_{\alpha + 1}/M_{\alpha}$ is projective
 by construction, $M$ is projective.
 \end{proof}
@@ -24232,7 +24231,7 @@ As $M/IM$ is flat over $R/I$ we conclude that
 $$
 0 \to K \otimes_{R/I} M/IM \to
 (\bigoplus\nolimits_{i \in I} R/I) \otimes_{R/I} M/IM \to
-N \otimes_{R/} M/IM \to 0
+N \otimes_{R/I} M/IM \to 0
 $$
 is exact. Combining this with the above we conclude that
 $\text{Tor}_1^R(N, M) = 0$ for any $R$-module $N$ annihilated by $I$.
@@ -24461,7 +24460,7 @@ F_1'/I'F_1' \ar[r] &
 F_0'/I'F_0'
 }
 $$
-clearly induces a surjection on cohomology we win.
+clearly induces a surjection on homology we win.
 \end{proof}
 
 \begin{lemma}
@@ -24770,7 +24769,7 @@ Lemma \ref{lemma-local-flat-ff}.
 We are going to use the criterion of
 Lemma \ref{lemma-flat} (\ref{item-f-ideal})
 to show that $M$ is flat.
-Let $I \subset R$ be an ideal. If $I \otimes_R M \to M$ has a kernel,
+Let $I \subset R$ be an ideal. If $I \otimes_R M \to M$ has a nonzero kernel,
 so does $(I \otimes_R M) \otimes_S S' \to M \otimes_S S' = M'$.
 Note that $I \otimes_R R' = IR'$ as $R \to R'$ is flat, and that
 $$
@@ -25042,13 +25041,13 @@ Lemma \ref{lemma-lift-flatness}.
 Second proof: By
 Lemma \ref{lemma-artinian-finite-length}
 we may write $R = \prod R_i$ as a finite product of local Artinian
-rings. This induces similar product decompositions for both $R$ and $S$.
+rings. This induces similar product decompositions for both $M$ and $S$.
 Hence we reduce to the case where $R$ is local Artinian (details omitted).
 
 \medskip\noindent
 Assume that $R \to S$, $M$ are as in the lemma satisfying (1), (2), and (3)
 and in addition that $R$ is local with maximal ideal $\mathfrak m$.
-Let $A$ be a set and $x_\alpha \in A$ be elements such that
+Let $A$ be a set and $x_\alpha \in M$ be elements such that
 $\overline{x}_\alpha$ forms a basis for $M/\mathfrak mM$
 over $R/\mathfrak m$. By
 Nakayama's Lemma \ref{lemma-NAK}
@@ -25103,7 +25102,7 @@ the above this means both maps in
 $$
 I \otimes_R M \to IS \otimes_S M \to M
 $$
-are injective. Hence $\text{Tor}_1^S(IS, M) = 0$ (see
+are injective. Hence $\text{Tor}_1^S(S/IS, M) = 0$ (see
 Remark \ref{remark-Tor-ring-mod-ideal})
 and we conclude that $M$ is a flat $S$-module by
 Lemma \ref{lemma-what-does-it-mean}.
@@ -32554,7 +32553,7 @@ Thus $\nu$ is a morphism in $\mathcal{I}$ equalizing $\sigma$ and $\tau$
 as desired.
 
 \medskip\noindent
-The fact that our index category is cofiltered means that we may
+The fact that our index category is filtered means that we may
 compute the value of $B = \colim_{A' \to A} A'$ in the category of sets
 (some details omitted; compare with the discussion in
 Categories, Section \ref{categories-section-directed-colimits}).
@@ -32577,7 +32576,7 @@ These morphisms have to satisfy the rule that
 $R_\lambda \to R_\mu \to R_\nu$ is equal to the map
 $R_\lambda \to R_\nu$ for all $\lambda \leq \mu \leq \nu$.
 See Categories, Section \ref{categories-section-posets-limits}.
-We will often assume that $(I, \leq)$ is {\it directed},
+We will often assume that $(\Lambda, \leq)$ is {\it directed},
 which means that $\Lambda$ is nonempty and
 given $\lambda, \mu \in \Lambda$
 there exists a $\nu \in \Lambda$ with $\lambda \leq \nu$ and $\mu \leq \nu$.
@@ -32773,7 +32772,7 @@ To prove (1) assume $u$ is as in (1) and
 let $x_1, \ldots, x_m \in M$ be generators. Since
 $N \otimes_A R = \colim_i N \otimes_A R_i$
 we may pick an $i \in I$ such that $u(x_j) \otimes 1 = u'(x_j) \otimes 1$
-in $M \otimes_A R_i$, $j = 1, \ldots, m$.
+in $N \otimes_A R_i$, $j = 1, \ldots, m$.
 For such an $i$ we have
 $u \otimes 1 = u' \otimes 1 : M \otimes_A R_i \to N \otimes_A R_i$.
 
@@ -32789,7 +32788,7 @@ is surjective.
 \medskip\noindent
 To prove (3) let $y_1, \ldots, y_m \in N$ be generators. Let
 $K = \Ker(A^{\oplus m} \to N)$ where the map is given by
-the rule $(a_1, \ldots, a_m) \mapsto \sum a_j x_j$. Let $k_1, \ldots, k_t$
+the rule $(a_1, \ldots, a_m) \mapsto \sum a_j y_j$. Let $k_1, \ldots, k_t$
 be generators for $K$. Say $k_s = (k_{s1}, \ldots, k_{sm})$.
 Since $M \otimes_A R = \colim_i M \otimes_A R_i$
 we may pick an $i \in I$ and $z_j \in M \otimes_A R_i$, $j = 1, \ldots, m$
@@ -32809,8 +32808,8 @@ Let $v : N \otimes_A R \to M \otimes_A R$ be an inverse to
 $u \otimes 1$. Apply part (3) to get a map
 $v_i : N \otimes_A R_i \to M \otimes_A R_i$ for some $i$.
 Apply part (1) to see that, after increasing $i$ we have
-$v_i \circ (u \otimes 1) = \text{id}_{M \otimes_R R_i}$ and
-$(u \otimes 1) \circ v_i = \text{id}_{N \otimes_R R_i}$.
+$v_i \circ (u \otimes 1) = \text{id}_{M \otimes_A R_i}$ and
+$(u \otimes 1) \circ v_i = \text{id}_{N \otimes_A R_i}$.
 \end{proof}
 
 \begin{lemma}
@@ -32887,9 +32886,9 @@ is an isomorphism.
 \begin{proof}
 To prove (1) assume $u$ is as in (1) and
 let $x_1, \ldots, x_m \in B$ be generators. Since
-$B \otimes_A R = \colim_i B \otimes_A R_i$
+$C \otimes_A R = \colim_i C \otimes_A R_i$
 we may pick an $i \in I$ such that $u(x_j) \otimes 1 = u'(x_j) \otimes 1$
-in $B \otimes_A R_i$, $j = 1, \ldots, m$.
+in $C \otimes_A R_i$, $j = 1, \ldots, m$.
 For such an $i$ we have
 $u \otimes 1 = u' \otimes 1 : B \otimes_A R_i \to C \otimes_A R_i$.
 
@@ -32904,8 +32903,8 @@ is surjective.
 
 \medskip\noindent
 To prove (3) let $c_1, \ldots, c_m \in C$ be generators. Let
-$K = \Ker(A[x_1, \ldots, x_m] \to N)$ where the map is given by
-the rule $x_j \mapsto \sum c_j$. Let $f_1, \ldots, f_t$
+$K = \Ker(A[x_1, \ldots, x_m] \to C)$ where the map is given by
+the rule $x_j \mapsto c_j$. Let $f_1, \ldots, f_t$
 be generators for $K$ as an ideal in $A[x_1, \ldots, x_m]$.
 We think of $f_j = f_j(x_1, \ldots, x_m)$ as a polynomial.
 Since $B \otimes_A R = \colim_i B \otimes_A R_i$
@@ -32915,7 +32914,7 @@ We want to use the $z_j$ to define a map
 $v_i : C \otimes_A R_i \to B \otimes_A R_i$.
 Since $K \otimes_A R_i \to R_i[x_1, \ldots, x_m] \to C \otimes_A R_i \to 0$
 is a presentation, it suffices to check that
-$\xi_s = f_j(z_1, \ldots, z_m)$ is
+$\xi_s = f_s(z_1, \ldots, z_m)$ is
 zero in $B \otimes_A R_i$ for each $s = 1, \ldots, t$. This may not
 be the case, but since the image of $\xi_s$ in $B \otimes_A R$ is zero
 we see that it will be the case after increasing $i$ a bit.
@@ -32923,11 +32922,11 @@ we see that it will be the case after increasing $i$ a bit.
 \medskip\noindent
 To prove (4) assume $u \otimes 1$ is an isomorphism, that
 $B$ is a finite type $A$-algebra, and that $C$ is a finitely presented
-$A$-algebra. Let $v : B \otimes_A R \to C \otimes_A R$ be an inverse to
+$A$-algebra. Let $v : C \otimes_A R \to B \otimes_A R$ be an inverse to
 $u \otimes 1$. Let $v_i : C \otimes_A R_i \to B \otimes_A R_i$ be as
 in part (3). Apply part (1) to see that, after increasing $i$ we have
-$v_i \circ (u \otimes 1) = \text{id}_{B \otimes_R R_i}$ and
-$(u \otimes 1) \circ v_i = \text{id}_{C \otimes_R R_i}$.
+$v_i \circ (u \otimes 1) = \text{id}_{B \otimes_A R_i}$ and
+$(u \otimes 1) \circ v_i = \text{id}_{C \otimes_A R_i}$.
 \end{proof}
 
 \begin{lemma}
@@ -32950,8 +32949,8 @@ such that $\varphi = \varphi_\mu \otimes 1_R$.
 \item Given a $\lambda \in \Lambda$, finitely presented
 $R_\lambda$-algebras $A_\lambda, B_\lambda$, and $R_\lambda$-algebra maps
 $\varphi_\lambda, \psi_\lambda : A_\lambda \to B_\lambda$
-such that $\varphi \otimes 1_R = \psi \otimes 1_R$, then
-$\varphi \otimes 1_{R_\mu} = \psi \otimes 1_{R_\mu}$ for some
+such that $\varphi_\lambda \otimes 1_R = \psi_\lambda \otimes 1_R$, then
+$\varphi_\lambda \otimes 1_{R_\mu} = \psi_\lambda \otimes 1_{R_\mu}$ for some
 $\mu \geq \lambda$.
 \end{enumerate}
 \end{lemma}
@@ -33285,7 +33284,7 @@ to the $\mathbf{Z}$-subalgebra of $R$ generated by $E$ and
 $S_\lambda \subset S$ equal to the $\mathbf{Z}$-subalgebra generated by
 $F$ and the image of $E$ in $S$. It is clear that $R = \colim R_\lambda$.
 We have $S = \colim S_\lambda$ as every element of $S$ is integral
-over $S$. The ring maps $R_\lambda \to S_\lambda$ are finite by
+over $R$. The ring maps $R_\lambda \to S_\lambda$ are finite by
 Lemma \ref{lemma-characterize-finite-in-terms-of-integral} and the fact that
 $S_\lambda$ is generated over $R_\lambda$ by the elements of
 $F$ which are integral over $R_\lambda$ by our condition on the
@@ -37127,7 +37126,7 @@ be a commutative square of local rings. Assume
 \item $R$ and $\overline{S} = S/\mathfrak m_R S$ are regular local rings,
 \item $A = R/I$ and $B = S/J$ for some ideals $I$, $J$,
 \item $J \subset S$ and
-$\overline{J} = J/\mathfrak m_R \cap J \subset \overline{S}$
+$\overline{J} = J/(\mathfrak m_R S \cap J) \subset \overline{S}$
 are generated by regular sequences, and
 \item $A \to B$ and $R \to S$ are flat.
 \end{enumerate}
@@ -37144,8 +37143,8 @@ Note that $\overline{c} = \dim(\overline{S}) - \dim(\overline{B})$,
 see Lemma \ref{lemma-ci-well-defined}.
 By Lemma \ref{lemma-grothendieck-regular-sequence}
 the ring $S/(f_1, \ldots, f_{\overline{c}})$ is flat
-over $R$. Hence $S/(f_1, \ldots, f_{\overline{c}}) + IS$ is flat over $A$.
-The map $S/(f_1, \ldots, f_{\overline{c}}) + IS \to B$ is therefore a
+over $R$. Hence $S/((f_1, \ldots, f_{\overline{c}}) + IS)$ is flat over $A$.
+The map $S/((f_1, \ldots, f_{\overline{c}}) + IS) \to B$ is therefore a
 surjection of finite $S/IS$-modules flat over $A$ which
 is an isomorphism modulo $\mathfrak m_A$, and hence an
 isomorphism by Lemma \ref{lemma-mod-injective}. In other words,
@@ -37754,15 +37753,15 @@ $\dim(S') \leq n - c + m - d$ as desired.
 
 \medskip\noindent
 We will reduce part (1) to part (2). Assume $R \to S$ and $S \to S'$
-are syntomic. Let $\mathfrak q' \subset S$ be a prime ideal lying
+are syntomic. Let $\mathfrak q' \subset S'$ be a prime ideal lying
 over $\mathfrak q \subset S$. By Lemma \ref{lemma-syntomic}
 there exists a $g' \in S'$, $g' \not \in \mathfrak q'$ such that
 $S \to S'_{g'}$ is a relative global complete intersection.
 Similarly, we find $g \in S$, $g \not \in \mathfrak q$ such that
 $R \to S_g$ is a relative global complete intersection.
 By Lemma \ref{lemma-base-change-relative-global-complete-intersection}
-the ring map $S_g \to S_{gg'}$ is a relative global complete intersection.
-By part (2) we see that $R \to S_{gg'}$ is a relative global
+the ring map $S_g \to S'_{gg'}$ is a relative global complete intersection.
+By part (2) we see that $R \to S'_{gg'}$ is a relative global
 complete intersection and $gg' \not \in \mathfrak q'$.
 Since $\mathfrak q'$ was arbitrary
 combining Lemmas \ref{lemma-syntomic} and \ref{lemma-local-syntomic}
@@ -37780,7 +37779,7 @@ Let $R$ be a ring and let $I \subset R$ be an ideal.
 Let $R/I \to \overline{S}$ be a syntomic map.
 Then there exists elements $\overline{g}_i \in \overline{S}$
 which generate the unit ideal of $\overline{S}$
-such that each $\overline{S}_{g_i} \cong S_i/IS_i$
+such that each $\overline{S}_{\overline{g}_i} \cong S_i/IS_i$
 for some relative global complete intersection $S_i$
 over $R$.
 \end{lemma}
@@ -37789,7 +37788,7 @@ over $R$.
 By Lemma \ref{lemma-syntomic} we find a collection of elements
 $\overline{g}_i \in \overline{S}$
 which generate the unit ideal of $\overline{S}$
-such that each $\overline{S}_{g_i}$ is a relative
+such that each $\overline{S}_{\overline{g}_i}$ is a relative
 global complete intersection over $R/I$.
 Hence we may assume that $\overline{S}$ is a
 relative global complete intersection.
@@ -38519,7 +38518,7 @@ Let $R$ be a ring and let $I \subset R$ be an ideal.
 Let $R/I \to \overline{S}$ be a smooth ring map.
 Then there exists elements $\overline{g}_i \in \overline{S}$
 which generate the unit ideal of $\overline{S}$
-such that each $\overline{S}_{g_i} \cong S_i/IS_i$
+such that each $\overline{S}_{\overline{g}_i} \cong S_i/IS_i$
 for some (standard) smooth ring $S_i$ over $R$.
 \end{lemma}
 
@@ -38527,7 +38526,7 @@ for some (standard) smooth ring $S_i$ over $R$.
 By Lemma \ref{lemma-smooth-syntomic} we find a collection of elements
 $\overline{g}_i \in \overline{S}$
 which generate the unit ideal of $\overline{S}$
-such that each $\overline{S}_{g_i}$ is standard smooth over $R/I$.
+such that each $\overline{S}_{\overline{g}_i}$ is standard smooth over $R/I$.
 Hence we may assume that $\overline{S}$ is standard smooth
 over $R/I$. Write
 $\overline{S} =
@@ -38698,7 +38697,7 @@ in the middle term of the exact sequence.
 We claim that $s : \lambda \mapsto x_\lambda - f_\lambda \mod J^2$
 is an $R$-algebra homomorphism $s : S \to P/J^2$.
 To prove this we will repeatedly use that if $h \in J$ and
-$\text{d}h = 0$ in $\Omega_{P/R} \otimes_R S$, then $h \in J^2$.
+$\text{d}h = 0$ in $\Omega_{P/R} \otimes_P S$, then $h \in J^2$.
 Let $\lambda, \mu \in S$.
 Then $\sigma(\text{d}\lambda + \text{d}\mu - \text{d}(\lambda + \mu)) = 0$.
 This implies
@@ -38710,7 +38709,7 @@ which means that $x_\lambda + x_\mu - x_{\lambda + \mu}
 - f_\lambda - f_\mu + f_{\lambda + \mu} \in J^2$, which in turn
 means that $s(\lambda) + s(\mu) = s(\lambda + \mu)$.
 Similarly, we have
-$\sigma(\lambda \text{d}\mu + \mu \text{d}\lambda - \text{d}\lambda \mu) = 0$
+$\sigma(\lambda \text{d}\mu + \mu \text{d}\lambda - \text{d}(\lambda\mu)) = 0$
 which implies that
 $$
 \mu(\text{d}x_\lambda - \text{d}f_\lambda) +
@@ -38773,7 +38772,7 @@ applied to the canonical surjection $R[S] \to S$
 Assume (4) and let's prove (6). Consider the sequence of
 Lemma \ref{lemma-exact-sequence-NL}
 associated to the ring maps $R \to P \to S$. By the implication
-(1) $\Rightarrow$ (6) proved above we see that $\NL_{P/R} \otimes_R S$
+(1) $\Rightarrow$ (6) proved above we see that $\NL_{P/R} \otimes_P S$
 is quasi-isomorphic to $\Omega_{P/R} \otimes_P S$ placed in degree $0$.
 Hence $H_1(\NL_{P/R} \otimes_P S) = 0$. Since $P \to S$ is surjective we
 see that $\NL_{S/P}$ is homotopy equivalent to $J/J^2$ placed in degree $1$
@@ -38891,7 +38890,7 @@ For each $t \in T$ choose an element $f_t \in J$ which maps
 to $\sigma(\text{d}x_t)$ in $J/(IJ + J^2)$. This determines a
 unique $S$-module map
 $$
-\tilde \sigma : \Omega_{P/R} \otimes_R S
+\tilde \sigma : \Omega_{P/R} \otimes_P S
 = \bigoplus S\text{d}x_t \longrightarrow J/J^2
 $$
 with the property that $\tilde\sigma(\text{d}x_t) = f_t$.
@@ -39325,7 +39324,7 @@ J/\mathfrak m''J \to \mathfrak m''/(\mathfrak m'')^2
 $$
 shows that $\dim( \mathfrak m'/(\mathfrak m')^2 ) = d$.
 Since $S'_{\mathfrak m'}$ surjects onto $S_{\mathfrak m}$
-we see that $\dim(S_{\mathfrak m'}) \geq d$. Hence by
+we see that $\dim(S'_{\mathfrak m'}) \geq d$. Hence by
 the discussion preceding Definition \ref{definition-regular-local}
 we conclude that $S'_{\mathfrak m'}$ is
 regular of dimension $d$ as well. Because $S'$ was cut out
@@ -39338,7 +39337,7 @@ is a surjection of Noetherian local domains of the same
 dimension and hence an isomorphism. Hence $S' \to S$ is surjective
 with finitely generated kernel and becomes an isomorphism
 after localizing at $\mathfrak m'$. Thus we can find $g' \in S'$,
-$g \not \in \mathfrak m'$ such that $S'_{g'} \to S_{g'}$
+$g' \not \in \mathfrak m'$ such that $S'_{g'} \to S_{g'}$
 is an isomorphism. All in all we conclude that
 after replacing $S$ by a principal localization we may
 assume that $S$ is a global complete intersection.
@@ -39633,9 +39632,9 @@ $$
 whose module of differentials is free but is clearly not smooth, and
 the ring map ($p > 2$)
 $$
-\mathbf{F}_p(t) \to \mathbf{F}_p(t)[x, y]/(x^p + y^2 + \alpha)
+\mathbf{F}_p(t) \to \mathbf{F}_p(t)[x, y]/(x^p + y^2 + t)
 $$
-which is not smooth at the prime $\mathfrak q = (y, x^p + \alpha)$
+which is not smooth at the prime $\mathfrak q = (y, x^p + t)$
 but is regular.
 \end{example}
 
@@ -39658,7 +39657,7 @@ Then $K \to S \otimes_R K$ is smooth
 field extension $K'/K$ the ring map $K' \to S \otimes_R K'$
 is smooth as well. Hence $S \otimes_R K'$ is a regular ring
 by Lemma \ref{lemma-characterize-smooth-over-field}, in particular reduced.
-It follows that $S \otimes_R K$ is a geometrically reduced over $K$.
+It follows that $S \otimes_R K$ is geometrically reduced over $K$.
 Hence $L$ is geometrically reduced over $K$, see
 Lemma \ref{lemma-geometrically-reduced-permanence}.
 Hence $L/K$ is separable by
@@ -39765,7 +39764,7 @@ By Lemma \ref{lemma-differential-mod-power-ideal} we have
 $$
 S \otimes_{S'} \Omega_{S'/R} =
 S \otimes_{R[x_1, \ldots, x_n]} \Omega_{R[x_1, \ldots, x_n]/R} =
-\bigoplus\nolimits_{j = 1}^m S\text{d}x_j.
+\bigoplus\nolimits_{j = 1}^n S\text{d}x_j.
 $$
 Thus the map
 $$
@@ -39862,7 +39861,7 @@ S_{\mathfrak q}/\mathfrak q^{N - c}S_{\mathfrak q}
 I_{\mathfrak q'}/I_{\mathfrak q'}^2
 $$
 for all $N \geq c$
-(these tensor product are just a fancy way of dividing by
+(these tensor products are just a fancy way of dividing by
 $\mathfrak q^{N - c}$). We may of course assume $c \geq 1$.
 By Lemma \ref{lemma-differential-mod-power-ideal} we see that
 $$
@@ -39946,7 +39945,7 @@ then the following are equivalent
 \item $S$ is smooth over $k$ in a neighbourhood of $\mathfrak m$,
 \item $S_{\mathfrak m}$ is a regular local ring,
 \item $\dim(S_{\mathfrak m}) =
-\dim_{\kappa(m)} \Omega_{S/k} \otimes_S \kappa(\mathfrak m)$.
+\dim_{\kappa(\mathfrak m)} \Omega_{S/k} \otimes_S \kappa(\mathfrak m)$.
 \end{enumerate}
 see Lemma \ref{lemma-characterize-smooth-kbar}.
 \item If $S$ is of finite type over a field $k$, and
@@ -40193,7 +40192,7 @@ Let $R \to S$ be a ring map.
 Let $\mathfrak q \subset S$ be a prime lying over $\mathfrak p$ in $R$.
 If $S/R$ is \'etale at $\mathfrak q$ then
 \begin{enumerate}
-\item we have $\mathfrak p S_{\mathfrak q} = \mathfrak qS_{\mathfrak q}$
+\item $\mathfrak p S_{\mathfrak q} = \mathfrak qS_{\mathfrak q}$
 is the maximal ideal of the local ring $S_{\mathfrak q}$, and
 \item the field extension $\kappa(\mathfrak q)/\kappa(\mathfrak p)$
 is finite separable.
@@ -40217,7 +40216,7 @@ An \'etale ring map is quasi-finite.
 Let $R \to S$ be an \'etale ring map. By definition $R \to S$ is of finite type.
 For any prime $\mathfrak p \subset R$ the fibre ring
 $S \otimes_R \kappa(\mathfrak p)$ is \'etale over $\kappa(\mathfrak p)$
-and hence a finite products of fields finite separable over
+and hence a finite product of fields finite separable over
 $\kappa(\mathfrak p)$, in particular finite over $\kappa(\mathfrak p)$.
 Thus $R \to S$ is quasi-finite by Lemma \ref{lemma-quasi-finite}.
 \end{proof}
@@ -40249,7 +40248,7 @@ $S_{\mathfrak q}/\mathfrak pS_{\mathfrak q}
 \cong \kappa(\mathfrak q)$.
 By Lemma \ref{lemma-flat-fibre-smooth}
 there exists a $g \in S$, $g \not \in \mathfrak q$
-such that $R \to S_g$ is smooth. Replace $S$ by $S_g$ again we may
+such that $R \to S_g$ is smooth. Replacing $S$ by $S_g$ again, we may
 assume that $R \to S$ is smooth. By
 Lemma \ref{lemma-smooth-syntomic} we may even assume that
 $R \to S$ is standard smooth, say $S = R[x_1, \ldots, x_n]/(f_1, \ldots, f_c)$.
@@ -40289,7 +40288,7 @@ being \'etale is local (see Lemma \ref{lemma-etale}) we win.
 \begin{lemma}
 \label{lemma-surjective-flat-finitely-presented}
 Let $\varphi : R \to S$ be a ring map. If $R \to S$ is surjective, flat and
-finitely presented then there exist an idempotent $e \in R$ such that
+finitely presented then there exists an idempotent $e \in R$ such that
 $S = R_e$.
 \end{lemma}
 
@@ -40497,7 +40496,7 @@ does not map to zero in $\kappa(\mathfrak p)$ under the displayed map.
 We conclude that $R \to R'$ is \'etale at $\mathfrak p'$.
 In fact a solution to the problem posed in the lemma is
 the ring map $R \to R'[1/\Delta]$ and the prime
-$\mathfrak p' R'[1/\Delta]$. Because $\text{Res}_x(f, g)$ is
+$\mathfrak p' R'[1/\Delta]$. Because $\text{Res}_x(g, h)$ is
 invertible in this ring the Sylvester matrix is invertible over
 $R'[1/\Delta]$ and hence $1 = a g +  b h$ for some $a, b \in R'[1/\Delta][x]$
 see Example \ref{example-factor-polynomials-etale}.
