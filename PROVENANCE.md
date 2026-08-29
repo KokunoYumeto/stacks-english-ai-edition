@@ -123,6 +123,19 @@ The histories were combined without flattening either input:
     `28c377be399e04fb75f7568000c62e5cfafa291f`. Its one active last-wins
     operation supersedes `MC-STK-ERR-1183-OP1` and changes only
     `smoothing.tex`; the isolated payload remains evidence only.
+12. R29 was admitted at `8b70e94d7d9a1f28041445e52df03bffd2980435`;
+    its reviewed CRLF artifacts and rebound manifest were preserved by the
+    append-only transport repair at R30 cutoff
+    `256846d6a4193f21cd6e1af675dc09e6950aa3d6`, tree
+    `9a4f0ba1bd342cde5bf3f8f36a2d68cd7792aef3`. R30 was directly admitted at
+    that cutoff. The registry was imported linearly at
+    `6df0e967030bcf818f3c49584fa5e9a992278d75`, then R29's 31 and R30's 40
+    manifest-bound operations were replayed onto cumulative
+    `sites-modules.tex` and `injectives.tex`. Exact source composition is
+    `3e57820736a5a57ddb1c9fbaaf2206e455b5ee31`, tree
+    `c4ce1faf96257fe11c0123ca649c9c020982aa33`; validation and build policy are
+    bound by successor `c521604343534f94c7a59086c94b99712eb1d754`, tree
+    `4fe26c45da3edc493b8406824f90db06ef3df28c`.
 
 The mathematical source therefore stays at the repository root while the
 complete evidence and registry system remains browsable under
@@ -162,14 +175,15 @@ high-resolution correction-locus pages. These receipts remain authoritative
 for that immutable R22/R23 tree and are not build or publication evidence for
 the later R24 source composition.
 
-The current validated R28 fixed-point build is bound to source
-`9a68186b09bfd9ac66c51359d94b22074d43ebbf`, tree
-`fa91f3313576065f7ffa8a3c131435e5b764b162`. It preserves every earlier
-composed source identity while advancing `smoothing.tex` through one
-supersession-aware operation. Two independent linked-worktree builds produced
-exactly matching identities for all 25 PDFs: 2,492 pages, 26,612,367 bytes,
-and a global fixed point on sweep four. Visual QA covers all 37 pages of
-`smoothing.pdf`, including correction-locus page 16 at high resolution.
+The current validated R30 fixed-point build is bound to source
+`c521604343534f94c7a59086c94b99712eb1d754`, tree
+`4fe26c45da3edc493b8406824f90db06ef3df28c`. It preserves every earlier
+composed source identity while advancing `sites-modules.tex` and
+`injectives.tex` through the 71 R29/R30 operations. Two independent
+linked-worktree builds produced exactly matching identities for all 26 PDFs:
+2,572 pages, 27,531,529 bytes, and a global fixed point on sweep four. Visual
+QA covers all 111 affected pages, including all 42 correction-locus pages at
+high resolution.
 
 R28 is the current published preservation tag
 [`ai-integrated-stacks-r28-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r28-2026-08-28)
@@ -217,8 +231,9 @@ branch. Their presence is provenance, not a claim that they remain competing
 editions. The published Verdier content release at
 `4947e4a6d22971ea793e4b4bc2b09d8ab8cc04d0` remains historical evidence for
 the 22-overlay / 559-ID cutoff at `60f1d97e`. The current validated source
-composition advances the validated repository state to 29 overlays and 861
-stable IDs at R28 cutoff `655c8e0e`; R22 and R23 affect only
+composition advances the validated repository state to 31 overlays and 931
+stable IDs at R30 cutoff `256846d6`; R22 and R23 affect only
 `more-algebra.tex`, R24 affects only `spaces-duality.tex`, R25 affects only
 `artin.tex`, R26 and R28 affect only `smoothing.tex`, and R27 affects only
-`modules.tex`.
+`modules.tex`; R29 affects only `sites-modules.tex`, and R30 affects only
+`injectives.tex`.

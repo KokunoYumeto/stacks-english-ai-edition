@@ -19,9 +19,9 @@ machine-readable validation evidence.
 [Errata registry](ai-integrated/registry/overlays.json) ·
 [Validation](VALIDATION.md) ·
 [Current composition receipt](validation/composition-current.json) ·
-[Current R28 fixed-point build: PASS](validation/stacks-errata-a04446e-r28-build-2026-08-28.json) ·
-[Current R28 visual QA: PASS](validation/stacks-errata-a04446e-r28-visual-qa-2026-08-28.json) ·
-[Current R28 reproducibility: PASS](validation/stacks-errata-a04446e-r28-reproducibility-2026-08-28.json) ·
+[Current R30 fixed-point build: PASS](validation/stacks-errata-a04446e-r30-build-2026-08-29.json) ·
+[Current R30 visual QA: PASS](validation/stacks-errata-a04446e-r30-visual-qa-2026-08-29.json) ·
+[Current R30 reproducibility: PASS](validation/stacks-errata-a04446e-r30-reproducibility-2026-08-29.json) ·
 [Latest errata release receipt: R28 PASS](validation/stacks-errata-a04446e-r28-release-2026-08-28.json) ·
 [Latest errata preservation release: R28](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r28-2026-08-28) ·
 [Latest errata Zenodo version: R28](https://doi.org/10.5281/zenodo.22150671) ·
@@ -57,7 +57,7 @@ The pinned upstream baseline is
 | GAGA | Root chapter composed through r3; corpus review closed | All 126 units are classified and all 79 substantive units decided; the current unified `gaga.pdf` is 23 pages, while the sealed r3 dossier records its historical 22-page build | [r3 dossier](gaga_r3/STATUS.md) · [live chapter source](gaga.tex) |
 | FGA | Root additions composed and notation-normalized; corpus review closed | All 1,253 units and 1,612 term links are dispositioned; selected independently written additions are in the combined source; the fixed-point Moduli build is 83 pages | [Overview](fga/README.md) · [status](fga/status.md) |
 | EGA | Partial root-source composition; direct-source review active | Selected local additions are present in root TeX; the complete English discovery and diplomatic French editions remain separate read-only inputs; review is complete through EGA I §6.4.13 and continues at §6.5.1 | [EGA dossier](ega/README.md) |
-| Errata and Verdier | Root-composed, deterministically validated, and publicly released through R28 | The integrated tree contains 29 overlays / 861 stable IDs. Its R1–R28 Stacks errata subset contains 28 batches, 849 correction IDs, and 962 exact v2 operations; R28 contributes one supersession-aware replacement in `smoothing.tex` | [Registry](ai-integrated/registry/overlays.json) · [R28 build](validation/stacks-errata-a04446e-r28-build-2026-08-28.json) · [errata evidence](ai-integrated/candidates/commons/stacks/errata/) |
+| Errata and Verdier | Root-composed and deterministically validated through R30; publicly preserved through R28 | The integrated tree contains 31 overlays / 931 stable IDs. Its R1–R30 Stacks errata subset contains 30 batches, 919 correction IDs, and 1,033 exact v2 operations; R29 updates `sites-modules.tex` and R30 updates `injectives.tex` | [Registry](ai-integrated/registry/overlays.json) · [R30 build](validation/stacks-errata-a04446e-r30-build-2026-08-29.json) · [errata evidence](ai-integrated/candidates/commons/stacks/errata/) |
 
 “Root-composed” means that the live top-level TeX tree changed and participates
 in the unified build. “Dossier-only” means that mappings, decisions, and
@@ -107,24 +107,30 @@ Run the fast repository-level integrity gate with:
 python tools/validate_unified_repository.py --pre-publication
 ```
 
-The current validated R28 build is bound to source
-`9a68186b09bfd9ac66c51359d94b22074d43ebbf`, tree
-`fa91f3313576065f7ffa8a3c131435e5b764b162`. It produced 25 readable PDFs
-(2,492 pages; 26,612,367 bytes), reached a global fixed point on sweep four,
+The current validated R30 build is bound to source
+`c521604343534f94c7a59086c94b99712eb1d754`, tree
+`4fe26c45da3edc493b8406824f90db06ef3df28c`. It produced 26 readable PDFs
+(2,572 pages; 27,531,529 bytes), reached a global fixed point on sweep four,
 and recorded zero fatal, missing-glyph, undefined-reference,
 undefined-citation, multiply-defined, rerun-required, or destination-warning
-diagnostics. All 37 pages of the affected `smoothing.pdf` were rendered and
-reviewed, including the correction-locus page 16 individually inspected at high
-resolution. A parallel rebuild in a second linked worktree used the same
-source, builder, environment, and sweep, and all 25 PDF identities were exactly
-equal. The 134,835-byte cumulative `smoothing.tex` postimage has SHA-256
-`85A37C95D5591632D11E7BE6775039638B6F5200B44729ABCEA1A644D9F5B056`.
+diagnostics. All 111 pages of the affected `sites-modules.pdf` and
+`injectives.pdf` were rendered and reviewed; all 42 unique correction-locus
+pages were also inspected individually at 180 DPI. A second linked-worktree
+build used the same source, builder, environment, and sweep, and all 26 PDF
+identities were exactly equal.
 
-R28 is registry commit `655c8e0e1fe9e7b350244a0ef0230fb6c38e0026`, tree
-`5eddd7d6db54d25eccf09cf21d5d7ab30c3ec1d3`. Its one exact operation,
-`MC-STK-ERR-1216-OP1`, explicitly supersedes R26 operation
-`MC-STK-ERR-1183-OP1`; the last-wins projection was replayed from the exact
-cumulative source and no isolated payload replaced the integrated file.
+R29 and R30 use registry cutoff
+`256846d6a4193f21cd6e1af675dc09e6950aa3d6`, tree
+`9a4f0ba1bd342cde5bf3f8f36a2d68cd7792aef3`, imported linearly at
+`6df0e967030bcf818f3c49584fa5e9a992278d75`. Exact manifest-bound source
+composition is commit `3e57820736a5a57ddb1c9fbaaf2206e455b5ee31`, tree
+`c4ce1faf96257fe11c0123ca649c9c020982aa33`; the later `c5216043` commit
+binds validation and build policy. R29's 31 operations produce the 312,179-byte
+`sites-modules.tex` postimage with SHA-256
+`B097799584BD00B3D8046F62A0A56FCFE045516FD04D130C2A4C547CE3BB6C19`.
+R30's 40 operations produce the 105,225-byte `injectives.tex` postimage with
+SHA-256 `BDC721593BE0B491334C707B371A2EECD1787787903A71E059721BDB66C5AC04`.
+No isolated payload replaced either cumulative source.
 
 R28 is the current public preservation release at tag
 [`ai-integrated-stacks-r28-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r28-2026-08-28)

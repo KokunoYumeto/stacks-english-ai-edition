@@ -1,0 +1,180 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-visual-qa/v1",
+  "status": "PASS",
+  "created_utc": "2026-08-29T21:06:04Z",
+  "source": {
+    "commit": "c521604343534f94c7a59086c94b99712eb1d754",
+    "tree": "4fe26c45da3edc493b8406824f90db06ef3df28c"
+  },
+  "build_receipt": {
+    "path": "validation/stacks-errata-a04446e-r30-build-2026-08-29.json",
+    "bytes": 33871,
+    "sha256": "248AF407236C8C1F6C22C76530C6B85CF4A11177214203E2A21BB5CA019302F8",
+    "status": "PASS",
+    "global_fixed_point_sweep": 4
+  },
+  "scope": {
+    "affected_chapters": [
+      "sites-modules",
+      "injectives"
+    ],
+    "full_page_render_count": 111,
+    "full_page_contact_sheet_review_count": 111,
+    "high_resolution_locus_page_count": 42,
+    "high_resolution_locus_pages": {
+      "sites-modules": [
+        5,
+        16,
+        17,
+        19,
+        21,
+        23,
+        26,
+        27,
+        37,
+        42,
+        43,
+        50,
+        51,
+        55,
+        57,
+        60,
+        61,
+        65,
+        69,
+        70,
+        71,
+        78
+      ],
+      "injectives": [
+        2,
+        3,
+        6,
+        8,
+        9,
+        10,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        22,
+        23,
+        24,
+        25,
+        26,
+        28
+      ]
+    }
+  },
+  "artifacts": {
+    "sites-modules": {
+      "pdf": "sites-modules.pdf",
+      "bytes": 910616,
+      "pages": 80,
+      "sha256": "C0ACDAC9F0EA48AC934CD809A2CE2D4CC21AC437F7C4469440AB1A0D6784C40B",
+      "encrypted": false,
+      "media_box_points": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      "render_dimensions_pixels": [
+        816,
+        1056
+      ],
+      "pages_without_ink": 0,
+      "minimum_ink_pixels_below_245": 27830,
+      "duplicate_render_hashes": 0
+    },
+    "injectives": {
+      "pdf": "injectives.pdf",
+      "bytes": 571417,
+      "pages": 31,
+      "sha256": "74BAEB83A4B4B12BC3B9DC9C5760D9FCDB07E639DE333046A81585901588D67A",
+      "encrypted": false,
+      "media_box_points": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      "render_dimensions_pixels": [
+        816,
+        1056
+      ],
+      "pages_without_ink": 0,
+      "minimum_ink_pixels_below_245": 24625,
+      "duplicate_render_hashes": 0
+    }
+  },
+  "render_protocol": {
+    "renderer": "Poppler pdftoppm 26.05.0",
+    "full_page_dpi": 96,
+    "full_page_layout": "ordered 4-by-4 contact sheets",
+    "contact_sheet_count": 7,
+    "high_resolution_dpi": 180,
+    "high_resolution_selection": "all unique pages mapped from the 71 manifest-bound R29 and R30 operation loci; both cumulative sources equal their admitted payload postimages byte-for-byte",
+    "render_intermediates_published": false
+  },
+  "source_page_mapping": {
+    "sites-modules": {
+      "path": "ai-integrated/candidates/commons/stacks/errata/r29/builds/source-page-map.json",
+      "bytes": 8724,
+      "sha256": "539B84D8441717739D93603E0D72A82CFE888FBDA37C2F3859A3B7ECDE2A8F6E",
+      "operation_count": 31,
+      "unique_page_count": 22,
+      "cumulative_source_equals_admitted_payload": true
+    },
+    "injectives": {
+      "path": "ai-integrated/candidates/commons/stacks/errata/r30/builds/source-page-map.json",
+      "bytes": 11015,
+      "sha256": "C5873BB77AE9723632A7557897615A8B9B390A62CA0F0F9752CFBCD8A458F4D3",
+      "operation_count": 40,
+      "unique_page_count": 20,
+      "cumulative_source_equals_admitted_payload": true
+    },
+    "operation_count": 71,
+    "mapping_failures": 0
+  },
+  "private_render_evidence": {
+    "published": false,
+    "sites_modules_manifest": {
+      "bytes": 30569,
+      "sha256": "871C2324E39F207CA108B52CF3AF10BE9C9A1C7EFA96284277015F1F01D8BBA6"
+    },
+    "injectives_manifest": {
+      "bytes": 14641,
+      "sha256": "DB392E5CBF3FE92EC37F0145AA25669AAB07ED999847D5650D0BAAF1B1A512B3"
+    }
+  },
+  "checks": {
+    "all_pages_rendered": true,
+    "all_pages_manually_inspected": true,
+    "all_manifest_bound_locus_pages_inspected_at_high_resolution": true,
+    "page_dimensions_consistent": true,
+    "headers_and_page_numbers_consistent": true,
+    "text_and_formulas_legible": true,
+    "diagrams_intact": true,
+    "clipped_content": 0,
+    "overlapping_content": 0,
+    "blank_pages": 0,
+    "corrupted_pages": 0,
+    "missing_or_unreadable_glyphs": 0,
+    "broken_diagrams": 0,
+    "r29_sites_modules_correction_loci_legible": true,
+    "r30_injectives_correction_loci_legible": true,
+    "r30_configured_external_target_exception_preserved": true,
+    "rejected_simplicial_007_parenthesis_preserved": true
+  },
+  "accessibility": {
+    "struct_tree_root_present": false,
+    "mark_info_present": false,
+    "note": "The standalone chapter PDFs are untagged. This retained accessibility limitation is not a visual-rendering failure."
+  },
+  "conclusion": "All 111 pages of the cumulative Modules on Sites and Injectives PDFs passed ordered contact-sheet review. All 42 unique manifest-bound correction-sensitive pages passed individual 180-DPI inspection with legible text, formulas, and diagrams and no clipping, overlap, blank page, corrupt render, or unreadable glyph."
+}

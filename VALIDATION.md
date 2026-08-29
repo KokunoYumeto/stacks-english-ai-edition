@@ -20,18 +20,19 @@ The gate verifies:
 
 - ancestry of the pinned upstream, source-union, EGA, and protected linear
   registry/source history;
-- 29 admitted overlays containing exactly 861 stable IDs at R28 registry cutoff
-  `655c8e0e1fe9e7b350244a0ef0230fb6c38e0026`, tree
-  `5eddd7d6db54d25eccf09cf21d5d7ab30c3ec1d3`;
+- 31 admitted overlays containing exactly 931 stable IDs at R30 registry cutoff
+  `256846d6a4193f21cd6e1af675dc09e6950aa3d6`, tree
+  `9a4f0ba1bd342cde5bf3f8f36a2d68cd7792aef3`;
 - the final immutable Verdier candidate, its 12 stable units, 27 manifest
   references, independent replay, rights boundary, and exact registered
   insertion into `derived.tex`;
-- the R1–R28 Stacks errata sequence: 28 batches, 849 correction IDs, and all
-  962 v2 operations, including the ordered R22/R23 replay, the 57-operation R24
+- the R1–R30 Stacks errata sequence: 30 batches, 919 correction IDs, and all
+  1,033 v2 operations, including the ordered R22/R23 replay, the 57-operation R24
   replay in `spaces-duality.tex`, the 154-operation R25 replay in `artin.tex`,
   the 39-operation R26 replay in `smoothing.tex`, the 14-operation R27 replay
-  in `modules.tex`, and the one-operation supersession-aware R28 replay in
-  `smoothing.tex`;
+  in `modules.tex`, the one-operation supersession-aware R28 replay in
+  `smoothing.tex`, the 31-operation R29 replay in `sites-modules.tex`, and the
+  40-operation R30 replay in `injectives.tex`;
 - preservation of the historical R1–R21 snapshot at prior cutoff
   `13ca6aaaca454f5930c4885c93f427e30cf21959` and of the separately composed
   Verdier source;
@@ -47,44 +48,46 @@ The gate verifies:
 The same gate runs in
 [`validate.yml`](.github/workflows/validate.yml) with full Git history.
 
-The current R28 build result is recorded at
-[`validation/stacks-errata-a04446e-r28-build-2026-08-28.json`](validation/stacks-errata-a04446e-r28-build-2026-08-28.json).
-All 25 required chapters (2,492 pages; 26,612,367 PDF bytes) compiled
+The current R30 build result is recorded at
+[`validation/stacks-errata-a04446e-r30-build-2026-08-29.json`](validation/stacks-errata-a04446e-r30-build-2026-08-29.json).
+All 26 required chapters (2,572 pages; 27,531,529 PDF bytes) compiled
 successfully, were readable by `pdfinfo`, and reached a global PDF fixed point
 on sweep four. The build is bound to source commit
-`9a68186b09bfd9ac66c51359d94b22074d43ebbf`, tree
-`fa91f3313576065f7ffa8a3c131435e5b764b162`. Aggregate diagnostics contain
+`c521604343534f94c7a59086c94b99712eb1d754`, tree
+`4fe26c45da3edc493b8406824f90db06ef3df28c`. Aggregate diagnostics contain
 zero fatal, missing-glyph, undefined-reference, undefined-citation,
 multiply-defined, rerun-required, or destination-warning markers.
 
-Visual QA rendered and reviewed all 37 pages of the affected `smoothing.pdf` at
-96 DPI and inspected correction-locus page 16 individually at 180 DPI.
+Visual QA rendered and reviewed all 111 pages of the affected
+`sites-modules.pdf` and `injectives.pdf` at 96 DPI and inspected all 42 unique
+correction-locus pages individually at 180 DPI.
 The current
-[visual receipt](validation/stacks-errata-a04446e-r28-visual-qa-2026-08-28.json)
+[visual receipt](validation/stacks-errata-a04446e-r30-visual-qa-2026-08-29.json)
 records zero clipped, overlapping, blank, corrupt, missing-glyph, or
 broken-diagram defects. A second build ran independently in a parallel linked
 worktree. Both runs use the same source, builder, environment, and fixed-point
-sweep, and all 25 `{stem, pages, bytes, sha256}` tuples are exactly equal. See
-the [reproducibility summary](validation/stacks-errata-a04446e-r28-reproducibility-2026-08-28.json)
-and [second full receipt](validation/stacks-errata-a04446e-r28-reproducibility-second-2026-08-28.json).
+sweep, and all 26 `{stem, pages, bytes, sha256}` tuples are exactly equal. See
+the [reproducibility summary](validation/stacks-errata-a04446e-r30-reproducibility-2026-08-29.json)
+and [second full receipt](validation/stacks-errata-a04446e-r30-reproducibility-second-2026-08-29.json).
 
 The [source composition receipt](validation/composition-current.json) records
-R28 cutoff `655c8e0e1fe9e7b350244a0ef0230fb6c38e0026`, tree
-`5eddd7d6db54d25eccf09cf21d5d7ab30c3ec1d3`, linear registry import
-`1c26a825306ba0d14607e8364b49125ed3de39b5`, and exact composition source
-`1ed5b9fce0f75dec5ad551d32badd8e99abf058a`, tree
-`28c377be399e04fb75f7568000c62e5cfafa291f`. It binds 962 cumulative v2
-operations, including the new supersession-aware R28 operation, to the
-134,835-byte `smoothing.tex` postimage with SHA-256
-`85A37C95D5591632D11E7BE6775039638B6F5200B44729ABCEA1A644D9F5B056`.
+R30 cutoff `256846d6a4193f21cd6e1af675dc09e6950aa3d6`, tree
+`9a4f0ba1bd342cde5bf3f8f36a2d68cd7792aef3`, linear registry import
+`6df0e967030bcf818f3c49584fa5e9a992278d75`, and exact composition source
+`3e57820736a5a57ddb1c9fbaaf2206e455b5ee31`, tree
+`c4ce1faf96257fe11c0123ca649c9c020982aa33`. It binds 1,033 cumulative v2
+operations. R29 yields 312,179-byte `sites-modules.tex` with SHA-256
+`B097799584BD00B3D8046F62A0A56FCFE045516FD04D130C2A4C547CE3BB6C19`;
+R30 yields 105,225-byte `injectives.tex` with SHA-256
+`BDC721593BE0B491334C707B371A2EECD1787787903A71E059721BDB66C5AC04`.
 Historical R24, R22/R23, Verdier, and R21 receipts remain preserved and
 authoritative for their immutable source snapshots; they are not rebound to the
-R28 tree.
+R30 tree.
 
-R28 admitted one stable unit with one exact operation. Its manifest SHA-256 is
-`FA5448067DBB6FF452AF85C3E2B0EE4B4133723D7C7D958DA74EB7746E194CFA`
-and review-receipt SHA-256 is
-`2E15F87CD859883219C81AB56A2DCB7D00F0C84B619615533BEF62805C5C0EA0`.
+R29's repaired final manifest SHA-256 is
+`52920239C887757CE937267C5505AD98980464329BC6BBBD62086ED4E1D98CE5`;
+R30's manifest SHA-256 is
+`C903DFCA06DA4063782BB88B2F2AC5FCF56352CF948CF03382D77F1A54A48C9E`.
 
 The [R28 release receipt](validation/stacks-errata-a04446e-r28-release-2026-08-28.json)
 binds the current published tag

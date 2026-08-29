@@ -44,7 +44,6 @@ LICENSE_ID = "gfdl-1.2-only"
 ZIP_TIMESTAMP = (1980, 1, 1, 0, 0, 0)
 ZIP_COMPRESSION_LEVEL = 9
 HASH_CHUNK_SIZE = 1024 * 1024
-EXPECTED_PDF_COUNT = 25
 SOURCE_REDACTION_MANIFEST = "SOURCE_PRIVACY_REDACTION_MANIFEST.json"
 ACCOUNT_REDACTION_REPLACEMENT = b"[LOCAL_ACCOUNT_REDACTED]"
 ERRATA_PROFILE = "errata"
@@ -72,7 +71,9 @@ NON_BUILD_RELEVANT_POST_BUILD_PATHS = frozenset(
         "PROVENANCE.md",
         "ai-integrated/README.md",
         "validation/README.md",
+        ".github/workflows/validate.yml",
         "tools/build_errata_preservation_package.py",
+        "tools/validate_unified_repository.py",
     }
 )
 NON_BUILD_RELEVANT_POST_BUILD_PREFIXES = ("validation/",)
@@ -572,7 +573,7 @@ def validate_build_critical_blob_equivalence(
             raise PackageError(f"build-critical path is not a Git blob: {path}")
         if build_blob != release_blob:
             raise PackageError(
-                f"build-critical Git blob changed after the R28 build: {path}"
+                f"build-critical Git blob changed after the bound fixed-point build: {path}"
             )
         identities.append({"path": path, "git_blob": build_blob})
 
@@ -1464,10 +1465,31 @@ def validate_build_artifacts(
 ) -> list[dict[str, Any]]:
     if build_receipt.get("status") != "PASS":
         raise PackageError("build receipt status is not PASS")
+
+    build = build_receipt.get("build")
+    if not isinstance(build, Mapping):
+        raise PackageError("build receipt is missing its build profile")
+    raw_stems = build.get("stems")
+    if not isinstance(raw_stems, list) or not raw_stems:
+        raise PackageError("build receipt must bind a nonempty ordered stem profile")
+    expected_stems: list[str] = []
+    expected_stems_casefold: set[str] = set()
+    for stem in raw_stems:
+        if (
+            not isinstance(stem, str)
+            or not SAFE_LABEL_RE.fullmatch(stem)
+            or stem in {".", ".."}
+            or stem.casefold() in expected_stems_casefold
+        ):
+            raise PackageError("build receipt has an invalid or duplicate profile stem")
+        expected_stems.append(stem)
+        expected_stems_casefold.add(stem.casefold())
+    expected_pdf_count = len(expected_stems)
+
     raw_artifacts = build_receipt.get("artifacts")
-    if not isinstance(raw_artifacts, list) or len(raw_artifacts) != EXPECTED_PDF_COUNT:
+    if not isinstance(raw_artifacts, list) or len(raw_artifacts) != expected_pdf_count:
         raise PackageError(
-            f"build receipt must describe exactly {EXPECTED_PDF_COUNT} PDF artifacts"
+            "build receipt artifact count does not match its ordered stem profile"
         )
     if not build_output_root.is_dir():
         raise PackageError("build-output root is missing")
@@ -1522,6 +1544,12 @@ def validate_build_artifacts(
             }
         )
 
+    observed_stems = [str(item["stem"]) for item in observed]
+    if observed_stems != expected_stems:
+        raise PackageError(
+            "build receipt artifacts do not match its ordered stem profile"
+        )
+
     direct_pdfs = {
         item.name.casefold()
         for item in build_output_root.glob("*.pdf")
@@ -1533,28 +1561,26 @@ def validate_build_artifacts(
             "build-output root PDF listing does not exactly match the build receipt"
         )
 
-    build = build_receipt.get("build")
-    if isinstance(build, dict):
-        chapter_count = build.get("chapter_count")
-        if chapter_count is not None and chapter_count != EXPECTED_PDF_COUNT:
-            raise PackageError("build receipt chapter count is inconsistent")
-        tuple_lines = [
-            "|".join(
-                (
-                    str(item["stem"]),
-                    str(item["pages"]),
-                    str(item["bytes"]),
-                    str(item["sha256"]),
-                )
+    chapter_count = build.get("chapter_count")
+    if chapter_count != expected_pdf_count:
+        raise PackageError("build receipt chapter count is inconsistent")
+    tuple_lines = [
+        "|".join(
+            (
+                str(item["stem"]),
+                str(item["pages"]),
+                str(item["bytes"]),
+                str(item["sha256"]),
             )
-            for item in sorted(observed, key=lambda value: str(value["stem"]))
-        ]
-        tuple_digest = sha256_bytes(
-            (("\n".join(tuple_lines)) + "\n").encode("utf-8")
         )
-        recorded_digest = build.get("artifact_tuple_set_sha256")
-        if recorded_digest is not None and str(recorded_digest).upper() != tuple_digest:
-            raise PackageError("build receipt artifact tuple digest is inconsistent")
+        for item in sorted(observed, key=lambda value: str(value["stem"]))
+    ]
+    tuple_digest = sha256_bytes(
+        (("\n".join(tuple_lines)) + "\n").encode("utf-8")
+    )
+    recorded_digest = build.get("artifact_tuple_set_sha256")
+    if recorded_digest is not None and str(recorded_digest).upper() != tuple_digest:
+        raise PackageError("build receipt artifact tuple digest is inconsistent")
     return sorted(observed, key=lambda item: str(item["name"]))
 
 
@@ -1699,7 +1725,8 @@ approval, or official Stacks tags for local additions.
   {source_redacted_members} strict-UTF-8 provenance member(s) were replaced,
   all changes are hash-bound in the embedded `{SOURCE_REDACTION_MANIFEST}`, and
   every unchanged source member remains byte-identical to `git archive`
-- `{pdf_name}` — the 25 validated chapter PDFs
+- `{pdf_name}` — the {len(artifacts)} validated chapter PDFs in the exact
+  ordered profile bound by the fixed-point build receipt
 - `{validation_name}` — the supplied build and validation receipts
 - `RELEASE.json` — machine-readable release and archive identities
 - `SHA256SUMS.txt` — SHA-256 inventory for the other five release assets
@@ -1966,7 +1993,10 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         "--build-receipt",
         type=Path,
         required=True,
-        help=f"fixed-point build receipt describing the {EXPECTED_PDF_COUNT} PDF identities",
+        help=(
+            "fixed-point build receipt binding the exact ordered PDF stem "
+            "profile and artifact identities"
+        ),
     )
     parser.add_argument(
         "--validation-receipt",
@@ -1988,7 +2018,10 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         "--build-output-root",
         type=Path,
         required=True,
-        help=f"directory whose top level contains exactly the {EXPECTED_PDF_COUNT} receipt-bound PDFs",
+        help=(
+            "directory whose top level contains exactly the ordered PDF "
+            "profile bound by the build receipt"
+        ),
     )
     parser.add_argument(
         "--staging-dir",

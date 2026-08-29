@@ -1,0 +1,876 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-fixed-point-build/v1",
+  "status": "PASS",
+  "created_utc": "2026-08-29T21:01:37Z",
+  "source": {
+    "commit": "c521604343534f94c7a59086c94b99712eb1d754",
+    "tree": "4fe26c45da3edc493b8406824f90db06ef3df28c"
+  },
+  "builder": {
+    "path": "tools/build_fixed_point.py",
+    "git_blob": "2d7847293609be41afb1ee37d815b3f86a0a72fb",
+    "sha256": "B97793F081F0A49B2FE9137580B3F1444DB5504ADBD21C0DD6F59FC757F1CC18"
+  },
+  "composition": {
+    "schema": "unofficial-ai-integrated-stacks-composition/v3",
+    "receipt": "validation/composition-current.json",
+    "receipt_sha256": "A9E9C0B91A24325A5E8BEDD6D989B649D6339FA554430D75F28F788067EAF69F",
+    "receipt_git_blob": "f09d0dd07cd50b68377ec2d742e6d7fe26e9868b",
+    "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+    "previous_public_main_head": "9fc959d7d80724be8d8a678a509d2a458ba64a20",
+    "previous_public_main_tree": "5fce07f9e6cadec2a5d330e9b6b0715516ec78ec",
+    "previous_registry_commit": "655c8e0e1fe9e7b350244a0ef0230fb6c38e0026",
+    "previous_last_admitted_overlay": "stacks-errata-a04446e-r28",
+    "previous_source_blobs": {
+      "sites-modules.tex": {
+        "bytes": 312143,
+        "sha256": "B7CD92AFF9DF33F05EEAB72C4B55E8AA33F3AEBD947FC53160E87CA80DFFB245",
+        "git_blob": "52010bf9285ca0374d007a6190a5c491a7df18e6"
+      },
+      "injectives.tex": {
+        "bytes": 105119,
+        "sha256": "8528A9CAF5E10D1758C466FE0F62A3746B042DAA88CA647E1879F408458849DF",
+        "git_blob": "a9e1347c67fef52a6d253c22a8f18270eefbbf2e"
+      }
+    },
+    "composition_mode": "manifest-bound registry-order replay rebased onto verified cumulative source",
+    "composition_base_commit": "6df0e967030bcf818f3c49584fa5e9a992278d75",
+    "composition_base_tree": "6f36162dbb2a033bf320738262448b6625df75c5",
+    "composition_source_commit": "3e57820736a5a57ddb1c9fbaaf2206e455b5ee31",
+    "composition_source_tree": "c4ce1faf96257fe11c0123ca649c9c020982aa33",
+    "registry_cutoff_commit": "256846d6a4193f21cd6e1af675dc09e6950aa3d6",
+    "registry_cutoff_tree": "9a4f0ba1bd342cde5bf3f8f36a2d68cd7792aef3",
+    "registry_import_commit": "6df0e967030bcf818f3c49584fa5e9a992278d75",
+    "registry_import_tree": "6f36162dbb2a033bf320738262448b6625df75c5",
+    "registry_overlays_path": "ai-integrated/registry/overlays.json",
+    "registry_overlays_git_blob": "0b5800badb9684c85282663d928c6e9c3c738e2b",
+    "registry_overlays_sha256": "A329A117D739952EB8D6A080046116DFCFBB0ABC252C784A5F05052907C05E22",
+    "registered_overlays": 31,
+    "registered_stable_ids": 931,
+    "last_admitted_overlay": "stacks-errata-a04446e-r30",
+    "new_overlays": [
+      {
+        "id": "stacks-errata-a04446e-r29",
+        "stable_ids": 30,
+        "operations": 31,
+        "manifest_sha256": "52920239C887757CE937267C5505AD98980464329BC6BBBD62086ED4E1D98CE5",
+        "payload_sha256": "B097799584BD00B3D8046F62A0A56FCFE045516FD04D130C2A4C547CE3BB6C19",
+        "review_receipt_sha256": "52B6E03A66DE532697B8660248D1564DAB633964B4604F6C3142DC01FEF3050F",
+        "topology": "repaired_candidate_then_admission",
+        "candidate_commit": "8b70e94d7d9a1f28041445e52df03bffd2980435",
+        "candidate_commits": [
+          "8b70e94d7d9a1f28041445e52df03bffd2980435"
+        ],
+        "candidate_tree": "dac95201804da6a12a9a61ad5f308fbdfa72ffcf",
+        "candidate_subtree": "fe284ad6c458acde9d7f695268db422130b1b7f8",
+        "admission_commit": "8b70e94d7d9a1f28041445e52df03bffd2980435",
+        "admission_tree": "dac95201804da6a12a9a61ad5f308fbdfa72ffcf",
+        "admission_parent": "655c8e0e1fe9e7b350244a0ef0230fb6c38e0026",
+        "transport_repair": {
+          "commit": "256846d6a4193f21cd6e1af675dc09e6950aa3d6",
+          "parent": "8b70e94d7d9a1f28041445e52df03bffd2980435",
+          "tree": "9a4f0ba1bd342cde5bf3f8f36a2d68cd7792aef3",
+          "lease_id": "stacks-lease-000033-errata-r29",
+          "manifest_sha256_before": "E6B7731F3D07F9CE7AB89E7BD969330BE2EE662C679CCFAAEA37D874B51F6A85",
+          "manifest_sha256_after": "52920239C887757CE937267C5505AD98980464329BC6BBBD62086ED4E1D98CE5",
+          "registry_manifest_sha256_before": "E6B7731F3D07F9CE7AB89E7BD969330BE2EE662C679CCFAAEA37D874B51F6A85",
+          "candidate_subtree_after": "fe284ad6c458acde9d7f695268db422130b1b7f8",
+          "paths": [
+            {
+              "path": "candidates/commons/stacks/errata/r29/.gitattributes",
+              "before_git_blob": "a467b0c249e852ccf0bb8a1579823684d04ce670",
+              "after_git_blob": "735bb462b39cff76213e3323c7244b96be8f598e",
+              "before_sha256": "C475EF2313DF8E575EA7AB407795B9B8F0A5FB8E44DBB2C0D34A0D138E86D515",
+              "after_sha256": "850B11FB5931490CD1CE5EC62D144AC03CD32559516FC17FDCB7531B47864E65",
+              "before_bytes": 74,
+              "after_bytes": 201
+            },
+            {
+              "path": "candidates/commons/stacks/errata/r29/builds/build-execution.json",
+              "before_git_blob": "15bd006f9aa0dd49fe5ab81b93e848934ec5172e",
+              "after_git_blob": "19426df318eb208048132954d3cde3b0b21d1d5b",
+              "before_sha256": "E91ACCD07FF49C9FF758EDA04A4CEF3E4DA086DBFF1EABE03652352C3FAB78DB",
+              "after_sha256": "79BF2D4A50A37B2EB456A19F6CA46D464342143078FF45D5847009D02C149C42",
+              "before_bytes": 6912,
+              "after_bytes": 7117
+            },
+            {
+              "path": "candidates/commons/stacks/errata/r29/builds/build-receipt.json",
+              "before_git_blob": "59a3a6b9e72682f0c6517c13b3c54e443ee46fff",
+              "after_git_blob": "22b44e112aab0929286f0bf28c167031d9abec5e",
+              "before_sha256": "C4EBCBC9EF979D2C161341E8A2AE868213795E910F41481576E1B83ABE9DA581",
+              "after_sha256": "577ACC28F0018308DDDE206433C6D9577AC77B93CC2C475B467F27AC28210D64",
+              "before_bytes": 28612,
+              "after_bytes": 29245
+            },
+            {
+              "path": "candidates/commons/stacks/errata/r29/builds/validation.json",
+              "before_git_blob": "42ca812f9d94e66a401be5cde257e1abfe9f8b57",
+              "after_git_blob": "a3bf96c0211e85a6011b4e6da71444119f2189f6",
+              "before_sha256": "0F586CBE98DD63EB8B5D383C7B000FA0DF611AF36E8A9BE92C6A5C1BD114D583",
+              "after_sha256": "EA85A332DBEF3CDD323D7D8FC9908D1AD3F0460D24843A8A2ACBDAE83AD26C84",
+              "before_bytes": 2722,
+              "after_bytes": 2816
+            },
+            {
+              "path": "candidates/commons/stacks/errata/r29/builds/visual-qa.json",
+              "before_git_blob": "ef952abce8c7c545afac1a47f01584d3112d322b",
+              "after_git_blob": "5e77d25b8868579ff648becbbec08cfea403dc7c",
+              "before_sha256": "9D542F79D32275491B1B60C64498FF238140DB4C7CF29D4C49417272D7CBE132",
+              "after_sha256": "92DEF358EFD079D9C7C4CE691F609BD11FCC4A34C0D1BCEB5011D8B7BF3F2DE8",
+              "before_bytes": 10706,
+              "after_bytes": 11077
+            },
+            {
+              "path": "candidates/commons/stacks/errata/r29/candidate.manifest.json",
+              "before_git_blob": "6c22759fe0ec6914d8368828db0c28a138f263bb",
+              "after_git_blob": "66579ec28eb83ae33a2518c082791b9db665829f",
+              "before_sha256": "E6B7731F3D07F9CE7AB89E7BD969330BE2EE662C679CCFAAEA37D874B51F6A85",
+              "after_sha256": "52920239C887757CE937267C5505AD98980464329BC6BBBD62086ED4E1D98CE5",
+              "before_bytes": 10972,
+              "after_bytes": 10972
+            },
+            {
+              "path": "candidates/commons/stacks/errata/r29/independent-review.py",
+              "before_git_blob": "980f47e13f43601f0ebdb114628cc052c01364c4",
+              "after_git_blob": "cb3d6b8a08dd8cedd50a26dc15098fe2bc5a8e2e",
+              "before_sha256": "11EC23CA6A7BCD0AF7EC5C75CB701AFCB2FA8DE3FD698A177CD0C49B432A0AF3",
+              "after_sha256": "8B9279D50E938A8591D6B2ACDB76F6B311E56280A33B563EE7B9D322D339985A",
+              "before_bytes": 12277,
+              "after_bytes": 12571
+            },
+            {
+              "path": "candidates/commons/stacks/errata/r29/replay/independent-review.json",
+              "before_git_blob": "6ad6cf9a4864ab0f3c69afe3765f1bee25973c62",
+              "after_git_blob": "d489da85f20555b5d97142825dbecd031a51d622",
+              "before_sha256": "61E054C53278F7DF4E04491C9CFC4509E4D9110CD472E4356B66B29A5B3A025C",
+              "after_sha256": "52B6E03A66DE532697B8660248D1564DAB633964B4604F6C3142DC01FEF3050F",
+              "before_bytes": 12849,
+              "after_bytes": 13135
+            }
+          ]
+        },
+        "lease_release_event": "lease-event-000063",
+        "successor_lease_event": "lease-event-000064",
+        "lease_event_id": "lease-event-000063",
+        "successor_lease_event_id": "lease-event-000064"
+      },
+      {
+        "id": "stacks-errata-a04446e-r30",
+        "stable_ids": 40,
+        "operations": 40,
+        "manifest_sha256": "C903DFCA06DA4063782BB88B2F2AC5FCF56352CF948CF03382D77F1A54A48C9E",
+        "payload_sha256": "BDC721593BE0B491334C707B371A2EECD1787787903A71E059721BDB66C5AC04",
+        "review_receipt_sha256": "082FF5BDB58B61EAC3281CE7AACF936392199F2724DE4E0147B44645FCBBC797",
+        "topology": "embedded_candidate_direct_admission",
+        "candidate_commit": "256846d6a4193f21cd6e1af675dc09e6950aa3d6",
+        "candidate_tree": "9a4f0ba1bd342cde5bf3f8f36a2d68cd7792aef3",
+        "candidate_subtree": "4bdef5690e2ac0347b54e64260d2f0e110c62b50",
+        "admission_commit": "256846d6a4193f21cd6e1af675dc09e6950aa3d6",
+        "admission_tree": "9a4f0ba1bd342cde5bf3f8f36a2d68cd7792aef3",
+        "admission_parent": "8b70e94d7d9a1f28041445e52df03bffd2980435",
+        "lease_release_event": "lease-event-000065",
+        "payload_path": "payload/injectives.tex",
+        "review_receipt_path": "replay/independent-review.json",
+        "lease_event_id": "lease-event-000065",
+        "successor_lease_event_id": null
+      }
+    ],
+    "new_overlay_ids": [
+      "stacks-errata-a04446e-r29",
+      "stacks-errata-a04446e-r30"
+    ],
+    "new_overlay_candidate_commits": [
+      "8b70e94d7d9a1f28041445e52df03bffd2980435",
+      "256846d6a4193f21cd6e1af675dc09e6950aa3d6"
+    ],
+    "new_overlay_intake_commits": [],
+    "new_overlay_admission_commits": [
+      "8b70e94d7d9a1f28041445e52df03bffd2980435",
+      "256846d6a4193f21cd6e1af675dc09e6950aa3d6"
+    ],
+    "required_build_stems": [
+      "sets",
+      "categories",
+      "topology",
+      "sheaves",
+      "sites",
+      "algebra",
+      "artin",
+      "brauer",
+      "derived",
+      "simplicial",
+      "homology",
+      "more-algebra",
+      "smoothing",
+      "modules",
+      "sites-modules",
+      "schemes",
+      "properties",
+      "morphisms",
+      "more-morphisms",
+      "crystalline",
+      "spaces-cohomology",
+      "spaces-duality",
+      "stacks-limits",
+      "injectives",
+      "gaga",
+      "moduli"
+    ],
+    "affected_source_stems": [
+      "sites-modules",
+      "injectives"
+    ],
+    "affected_source_identities": {
+      "sites-modules.tex": {
+        "authority_bytes": 312143,
+        "authority_projection_bytes": 312179,
+        "authority_projection_git_blob": "1f8e228e9de91105787cc541bdaef281a04eb13e",
+        "authority_projection_sha256": "B097799584BD00B3D8046F62A0A56FCFE045516FD04D130C2A4C547CE3BB6C19",
+        "authority_sha256": "B7CD92AFF9DF33F05EEAB72C4B55E8AA33F3AEBD947FC53160E87CA80DFFB245",
+        "before_bytes": 312143,
+        "before_git_blob": "52010bf9285ca0374d007a6190a5c491a7df18e6",
+        "before_sha256": "B7CD92AFF9DF33F05EEAB72C4B55E8AA33F3AEBD947FC53160E87CA80DFFB245",
+        "before_state": "exact_existing_overlay_projection",
+        "before_worktree_bytes": null,
+        "before_worktree_sha256": null,
+        "composed_bytes": 312179,
+        "composed_git_blob": "1f8e228e9de91105787cc541bdaef281a04eb13e",
+        "composed_sha256": "B097799584BD00B3D8046F62A0A56FCFE045516FD04D130C2A4C547CE3BB6C19",
+        "existing_operations": 0,
+        "matches_target_after": true,
+        "new_operations": 31,
+        "preapplied_operation_ids": [],
+        "superseded_operations": 0,
+        "target_operations": 31,
+        "written": false,
+        "composition_mode": "31 manifest-bound exact replacements rebased onto the verified cumulative source",
+        "committed_matches_composition": true,
+        "authority_git_blob": "52010bf9285ca0374d007a6190a5c491a7df18e6"
+      },
+      "injectives.tex": {
+        "authority_bytes": 105120,
+        "authority_projection_bytes": 105225,
+        "authority_projection_git_blob": "abe50c79d998f134cc07293aa9bd673d3367abb3",
+        "authority_projection_sha256": "BDC721593BE0B491334C707B371A2EECD1787787903A71E059721BDB66C5AC04",
+        "authority_sha256": "B1367E48800C53D72C495D386EEF2D4D6C400652F9D00E69F664F17418D26520",
+        "before_bytes": 105119,
+        "before_git_blob": "a9e1347c67fef52a6d253c22a8f18270eefbbf2e",
+        "before_sha256": "8528A9CAF5E10D1758C466FE0F62A3746B042DAA88CA647E1879F408458849DF",
+        "before_state": "verified_committed_cumulative_source",
+        "before_worktree_bytes": null,
+        "before_worktree_sha256": null,
+        "composed_bytes": 105225,
+        "composed_git_blob": "abe50c79d998f134cc07293aa9bd673d3367abb3",
+        "composed_sha256": "BDC721593BE0B491334C707B371A2EECD1787787903A71E059721BDB66C5AC04",
+        "existing_operations": 0,
+        "matches_target_after": true,
+        "new_operations": 40,
+        "preapplied_operation_ids": [
+          "MC-STK-ERR-1262-OP1"
+        ],
+        "superseded_operations": 0,
+        "target_operations": 40,
+        "written": false,
+        "composition_mode": "40 manifest-bound exact replacements rebased onto the verified cumulative source; MC-STK-ERR-1262-OP1 was already present and was preserved",
+        "committed_matches_composition": true,
+        "authority_git_blob": "1b24742e19f449924ce23323bea49b0d0f029758"
+      }
+    },
+    "verifier_reports": {},
+    "registry_leases_path": "ai-integrated/registry/leases.json",
+    "registry_leases_git_blob": "03c27b973ae2ba79be5a1745fe9aaf8ec266ce47",
+    "registry_leases_sha256": "C3838DDCB76542549D33385EFFE8C9C05A810DC4BE981E4750926D4097ED910F"
+  },
+  "environment": {
+    "operating_system": "Windows-11-10.0.26200-SP0",
+    "python": "3.13.9",
+    "pdftex": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5)",
+    "bibtex": "MiKTeX-BibTeX 4.2 (MiKTeX 26.5)",
+    "pdfinfo": "pdfinfo version 26.05.0",
+    "source_date_epoch": "1785270512"
+  },
+  "build": {
+    "strategy": "sequential-prime-bibtex-global-state-sweeps",
+    "fixed_point_suffixes": [
+      ".aux",
+      ".bbl",
+      ".idx",
+      ".ind",
+      ".lof",
+      ".lot",
+      ".out",
+      ".toc",
+      ".pdf"
+    ],
+    "stem_selection": "composition_receipt",
+    "stems": [
+      "sets",
+      "categories",
+      "topology",
+      "sheaves",
+      "sites",
+      "algebra",
+      "artin",
+      "brauer",
+      "derived",
+      "simplicial",
+      "homology",
+      "more-algebra",
+      "smoothing",
+      "modules",
+      "sites-modules",
+      "schemes",
+      "properties",
+      "morphisms",
+      "more-morphisms",
+      "crystalline",
+      "spaces-cohomology",
+      "spaces-duality",
+      "stacks-limits",
+      "injectives",
+      "gaga",
+      "moduli"
+    ],
+    "chapter_count": 26,
+    "global_fixed_point_sweep": 4,
+    "pdfinfo_readable": 26,
+    "diagnostics": {
+      "fatal_markers": 0,
+      "missing_glyph_markers": 0,
+      "undefined_reference_markers": 0,
+      "external_reference_markers": 4036,
+      "undefined_citation_markers": 0,
+      "multiply_defined_markers": 0,
+      "rerun_required_markers": 0,
+      "destination_warning_markers": 0
+    },
+    "artifact_tuple_set_sha256": "4899D5FA96CE63A95DB419FEC861826A00E68A3D748D06459B2E73EE718A2C9B",
+    "worktree_kind": "linked",
+    "primary_worktree_override": false
+  },
+  "artifacts": [
+    {
+      "stem": "sets",
+      "pages": 14,
+      "bytes": 457308,
+      "sha256": "97EEDD6EBD753D2CC35C4969BD8A9ED6BAB8652A5AB5EDD6583C028624BD5EAB",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 94,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 94,
+        "sha256": "210CE98936CBFC7B5EB60362B9A96149883FC4650D84469090550362E72234B8"
+      }
+    },
+    {
+      "stem": "categories",
+      "pages": 105,
+      "bytes": 1066202,
+      "sha256": "F3861D4DCB8CDC9DD09B030D046AA02EFC30CE86A7F58862CF167BDD1C6FFE54",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 95,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 95,
+        "sha256": "37FCA1B8E18AC76DFBC109F652F52DEB4BA76A9A921ADEE363D1D1BB56B7C482"
+      }
+    },
+    {
+      "stem": "topology",
+      "pages": 66,
+      "bytes": 797763,
+      "sha256": "3C5426BA8F6A1E9A8B68602084AD368470FEEA18BBC80EF47EEF3E5CF6563A53",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 95,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 95,
+        "sha256": "60BB5ED2C7F58BBC282B2BEA99092F44FA1DBEB104AF5C8A7E6D75E5B6021B23"
+      }
+    },
+    {
+      "stem": "sheaves",
+      "pages": 54,
+      "bytes": 658269,
+      "sha256": "68698E33A19E88DE6177533C1ADC6F2423C3781E91A2C8DE45C283BF47EE8D12",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 92,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 92,
+        "sha256": "369A296428010042497DA90FE1F3034C3DBB69CCEC5880F8B0688D970935A379"
+      }
+    },
+    {
+      "stem": "sites",
+      "pages": 113,
+      "bytes": 1166643,
+      "sha256": "A018A1362ABBF379BD539D8EC4FA2FC6B578ABD45FE480C02C7E7B75CD4F1498",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 95,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 95,
+        "sha256": "D198669E9E9DF5630EBE6F1028D490896434C5E57A29A06584B7A545E1D7A76B"
+      }
+    },
+    {
+      "stem": "algebra",
+      "pages": 473,
+      "bytes": 3770314,
+      "sha256": "A0F40CF70780649B97B90A5296AE317208F407442C7BAF4BBFDDA600115C3478",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 137,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 137,
+        "sha256": "0D638C15FEDB2081E55B50720DEB01C497533ACD4D984F84D99DDB5C05CED686"
+      }
+    },
+    {
+      "stem": "artin",
+      "pages": 69,
+      "bytes": 908927,
+      "sha256": "9DA67CC8484CB95145F2813AD2FD9E6A71414743129BD9DEBFEC31A5434B3660",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 276,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 276,
+        "sha256": "B84A4FB1127A8F9F102D2F2F2900BCEEE51D644F0F97B8A51C03C374541A6F16"
+      }
+    },
+    {
+      "stem": "brauer",
+      "pages": 10,
+      "bytes": 348893,
+      "sha256": "E3CE8C00254F383EE6A1450169532921CC73D14D4DEE7CD358C687229E84DAEC",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 93,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 93,
+        "sha256": "4FCCEAFA5289D851B2FEAEFDE8667D01149370E52DA4687DE28EE20217F639BC"
+      }
+    },
+    {
+      "stem": "derived",
+      "pages": 130,
+      "bytes": 1247535,
+      "sha256": "1C9F9E18FDC27C03C802C36BD14C36A97CC4211237C20EFAD28C72F062C07235",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 94,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 94,
+        "sha256": "EE72319019C038714FD1491DBB9275B6D005C116AA4144269B3EF188885709AB"
+      }
+    },
+    {
+      "stem": "simplicial",
+      "pages": 73,
+      "bytes": 834182,
+      "sha256": "67A44CCAC41E94DD62134EDB7494E91E0EAE3CD64B536497DFD964BD6FA1DD92",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 92,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 92,
+        "sha256": "4432476E28D49C8AD048B4F6B3E59A316222D2ACE3BC0AEC04384F742BD66A47"
+      }
+    },
+    {
+      "stem": "homology",
+      "pages": 82,
+      "bytes": 886658,
+      "sha256": "470ED47FCE2226BEEC70FE9D39135179C3EDFAE0AA6CF5BCD6FDAB2E4AC532B1",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 93,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 93,
+        "sha256": "2E77A43EE00B994C67DE99EA86766CC2677A426AFBA0D3FAA6F1DA1DA7264F0C"
+      }
+    },
+    {
+      "stem": "more-algebra",
+      "pages": 406,
+      "bytes": 3378382,
+      "sha256": "CBA1F2166E204601B85FDD68EB239E6CEE738FF18BC4E41A86CC1F8E22D2FD71",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 159,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 159,
+        "sha256": "6E16E216C9239471F505CAA650DE7B6B44FF2933BD2D8594ED9EBEC5B8728F3A"
+      }
+    },
+    {
+      "stem": "smoothing",
+      "pages": 37,
+      "bytes": 650010,
+      "sha256": "39CCCB41061EEBB993ED8FED7B4216FD38A1C301BB29E99FAAB6FC14E33E74C0",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 93,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 93,
+        "sha256": "7A85C65C1A369992871A40D32EFCD6AB55245594DB847249A0839C8E97044BC1"
+      }
+    },
+    {
+      "stem": "modules",
+      "pages": 55,
+      "bytes": 721363,
+      "sha256": "7B3BCCF3369D3BC24AEC2E0C3C6CD4670DA8F81B99B1E9675AEFC679EC7212C4",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 93,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 93,
+        "sha256": "9A96178760E423DC568D1DA66253FF4B1AB07F35BBE4F5A0FE9035A3D87701FB"
+      }
+    },
+    {
+      "stem": "sites-modules",
+      "pages": 80,
+      "bytes": 910616,
+      "sha256": "C0ACDAC9F0EA48AC934CD809A2CE2D4CC21AC437F7C4469440AB1A0D6784C40B",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 92,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 92,
+        "sha256": "E97238F8A6E9B0C58B957AEDD8BBA872152B63583B02C95A6B8C730760AB7FAA"
+      }
+    },
+    {
+      "stem": "schemes",
+      "pages": 51,
+      "bytes": 721241,
+      "sha256": "0217BFF00055786B97ADE79C78AC67289DAF1D0FC4C34E57D262B9CFBEE9B159",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 93,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 93,
+        "sha256": "3426E4A2F57BD6DF423D16C94634E5FA3E252342BC10EDD0831FF898A871090F"
+      }
+    },
+    {
+      "stem": "properties",
+      "pages": 54,
+      "bytes": 765122,
+      "sha256": "278AC64F55C4D83600A79A6C6C6631C0831043B9645B9F7BB8ED93A3A1F17863",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 118,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 118,
+        "sha256": "4E27541F687642047BE3C0405C383D293452AB73E9167EA79139DDFC88890DB4"
+      }
+    },
+    {
+      "stem": "morphisms",
+      "pages": 157,
+      "bytes": 1577629,
+      "sha256": "D295075B0F3251E3D7E2D9B38B8A1B9BB2164AC096B2AE2EE3FBD2E56AFA482D",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 163,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 163,
+        "sha256": "E51072F46BC2144604C992019E6331629BB39116C6A3508C834D9E132811EA39"
+      }
+    },
+    {
+      "stem": "more-morphisms",
+      "pages": 260,
+      "bytes": 2306924,
+      "sha256": "43B96BEB86C58C3E2523C276F4D1F713F0A5294135C6E414C4D20DE2C774670D",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 579,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 579,
+        "sha256": "E0A781FDEC2B0E9AC4C3DEB8CBB19C91DB7136B99E1A5489DA7BC3CECDCDCC2D"
+      }
+    },
+    {
+      "stem": "crystalline",
+      "pages": 61,
+      "bytes": 870034,
+      "sha256": "EF67E54EA69088617A9FD8C7A6D83F4CF588C18D4962C7B436736C2CB88ECE0B",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 150,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 150,
+        "sha256": "BE7524C98A35D51D2A18F92004120424003827A6033DFEC0213560FDC7A96941"
+      }
+    },
+    {
+      "stem": "spaces-cohomology",
+      "pages": 47,
+      "bytes": 626638,
+      "sha256": "41EC553878EE403C3AD5C2D9563C4F16CB7C674D57F6E5BC1A143C5E37C25A14",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 325,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 325,
+        "sha256": "7DF18DF44E1CD8F0C993160174191EA685D6A520DB29045D0C1C83CBF8196B3A"
+      }
+    },
+    {
+      "stem": "spaces-duality",
+      "pages": 25,
+      "bytes": 555784,
+      "sha256": "0C0B9396124749B28816FC697C3A7755CEBD2F7B65FC896F1BD72B11CBC82E74",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 207,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 207,
+        "sha256": "F699D0C508BE8A91EF19B74BA56C1ADE42A3D9EEB0A8B1DE38E222888DF364BB"
+      }
+    },
+    {
+      "stem": "stacks-limits",
+      "pages": 13,
+      "bytes": 348113,
+      "sha256": "DE83729AA957F776A1C2E5BD2A0EF969557B2489E34EF879DD2F5C39D288C359",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 159,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 159,
+        "sha256": "19885E66A628C0194A4BC55C16E501AAC1C424C6AAD97154540BF5716FCDCBF8"
+      }
+    },
+    {
+      "stem": "injectives",
+      "pages": 31,
+      "bytes": 571417,
+      "sha256": "74BAEB83A4B4B12BC3B9DC9C5760D9FCDB07E639DE333046A81585901588D67A",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 95,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 95,
+        "sha256": "2A2D6E046D3339F57C680A285EC4F59AB77C8C10EFD14F862456C0AEBDA0F57F"
+      }
+    },
+    {
+      "stem": "gaga",
+      "pages": 23,
+      "bytes": 489096,
+      "sha256": "A5F7735C2BA7F565C9BFEC44A0FFEA5B684FDCC990080E463D87EB2E36008D3D",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 113,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 113,
+        "sha256": "6887BDBB77474B26B5F9367E793DCDEB413343F5D6DEEA2F133C1ED9E923E114"
+      }
+    },
+    {
+      "stem": "moduli",
+      "pages": 83,
+      "bytes": 896466,
+      "sha256": "F2B1D328357E83404381E1F8C537756A55678A315530C0EF15C113EF5805D1AC",
+      "diagnostics": {
+        "fatal_markers": 0,
+        "missing_glyph_markers": 0,
+        "undefined_reference_markers": 0,
+        "external_reference_markers": 341,
+        "undefined_citation_markers": 0,
+        "multiply_defined_markers": 0,
+        "rerun_required_markers": 0,
+        "destination_warning_markers": 0
+      },
+      "external_references": {
+        "count": 341,
+        "sha256": "AEA95409AB20ADE76BA49F56CD92106DD1713AC77226894D42B40CCF2235526E"
+      }
+    }
+  ],
+  "pdfs_committed": false
+}

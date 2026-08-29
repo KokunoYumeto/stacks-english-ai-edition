@@ -271,7 +271,7 @@ host. All 12 anonymous downloads matched by filename, byte count, and SHA-256
 with zero mismatches. The source archive is 154,505,160 bytes and contains
 2,245 entries. R26 remains the preceding immutable historical release.
 
-## Current R28 composition, validation, and publication receipts
+## Historical R28 composition, validation, and publication receipts
 
 R28 advances the integrated registry to **29 overlays / 861 stable IDs** at
 admission commit `655c8e0e1fe9e7b350244a0ef0230fb6c38e0026`, tree
@@ -306,6 +306,39 @@ DOI `10.5281/zenodo.22135180`. The six assets total 174,673,433 bytes on each
 host. All 12 anonymous downloads matched by filename, byte count, and SHA-256
 with zero mismatches. The source archive is 154,766,484 bytes and contains
 2,312 entries. R27 remains the preceding immutable historical release.
+
+## Current R29/R30 composition and validation receipts
+
+R29 and R30 advance the integrated registry to **31 overlays / 931 stable
+IDs** at cutoff `256846d6a4193f21cd6e1af675dc09e6950aa3d6`, tree
+`9a4f0ba1bd342cde5bf3f8f36a2d68cd7792aef3`. The R1–R30 Stacks errata
+subset contains 30 batches, 919 correction IDs, and 1,033 exact v2 operations.
+The registry import is `6df0e967030bcf818f3c49584fa5e9a992278d75`; exact
+source composition is `3e57820736a5a57ddb1c9fbaaf2206e455b5ee31`, tree
+`c4ce1faf96257fe11c0123ca649c9c020982aa33`. Validation and build policy are
+bound by successor `c521604343534f94c7a59086c94b99712eb1d754`, tree
+`4fe26c45da3edc493b8406824f90db06ef3df28c`.
+
+The current deterministic evidence is:
+
+- [`stacks-errata-a04446e-r30-build-2026-08-29.json`](stacks-errata-a04446e-r30-build-2026-08-29.json)
+  — 26 PDFs, 2,572 pages, 27,531,529 PDF bytes, fixed point on sweep four,
+  and zero listed serious diagnostics;
+- [`stacks-errata-a04446e-r30-visual-qa-2026-08-29.json`](stacks-errata-a04446e-r30-visual-qa-2026-08-29.json)
+  — all 111 affected pages reviewed and all 42 unique manifest-bound locus
+  pages inspected at 180 DPI, with zero recorded rendering defects; and
+- [`stacks-errata-a04446e-r30-reproducibility-2026-08-29.json`](stacks-errata-a04446e-r30-reproducibility-2026-08-29.json)
+  together with the [second full receipt](stacks-errata-a04446e-r30-reproducibility-second-2026-08-29.json)
+  — exact equality of all 26 artifact identities across two linked-worktree
+  builds.
+
+R29 contributes 31 operations to `sites-modules.tex`; R30 contributes 40 to
+`injectives.tex`. The cumulative postimages are respectively 312,179 bytes /
+SHA-256 `B097799584BD00B3D8046F62A0A56FCFE045516FD04D130C2A4C547CE3BB6C19`
+and 105,225 bytes / SHA-256
+`BDC721593BE0B491334C707B371A2EECD1787787903A71E059721BDB66C5AC04`.
+R28 remains the latest public errata preservation release until the R30
+publication transaction and anonymous readback are complete.
 
 ## Current EGA I §6.4 semantic publication receipt
 

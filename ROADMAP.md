@@ -11,10 +11,10 @@ French diplomatic editions remain separate read-only inputs.
 
 ## Current maintenance baseline
 
-The current validated composition contains **29 overlays / 861 stable IDs** at
-R28 admission cutoff `655c8e0e1fe9e7b350244a0ef0230fb6c38e0026`, tree
-`5eddd7d6db54d25eccf09cf21d5d7ab30c3ec1d3`. Its Stacks errata component is
-R1–R28: 28 batches, 849 correction IDs, and 962 exact v2 operations. The 22nd
+The current validated composition contains **31 overlays / 931 stable IDs** at
+R30 admission cutoff `256846d6a4193f21cd6e1af675dc09e6950aa3d6`, tree
+`9a4f0ba1bd342cde5bf3f8f36a2d68cd7792aef3`. Its Stacks errata component is
+R1–R30: 30 batches, 919 correction IDs, and 1,033 exact v2 operations. The 22nd
 overlay, `stacks-verdier-a04446e-1-2-13-r1`, remains a separately admitted,
 independently written historical-source contribution with 12 non-official
 stable units. It inserts one manifest-bound lemma into cumulative `derived.tex`;
@@ -26,20 +26,23 @@ only `more-algebra.tex`. R24 adds 38 IDs and 57 operations affecting only
 `artin.tex`; R26 adds 25 IDs and 39 operations affecting only `smoothing.tex`;
 R27 adds 14 IDs and 14 operations affecting only `modules.tex`. R28 adds one
 operation affecting only `smoothing.tex`, explicitly superseding R26 operation
-`MC-STK-ERR-1183-OP1`. All are composed in registry order without replacing
-cumulative source wholesale. The R28 registry import is
-`1c26a825306ba0d14607e8364b49125ed3de39b5`; source composition is
-`1ed5b9fce0f75dec5ad551d32badd8e99abf058a`, tree
-`28c377be399e04fb75f7568000c62e5cfafa291f`. The exact authority, registry,
+`MC-STK-ERR-1183-OP1`. R29 adds 30 IDs and 31 operations affecting only
+`sites-modules.tex`; R30 adds 40 IDs and 40 operations affecting only
+`injectives.tex`. All are composed in registry order without replacing
+cumulative source wholesale. The R29/R30 registry import is
+`6df0e967030bcf818f3c49584fa5e9a992278d75`; source composition is
+`3e57820736a5a57ddb1c9fbaaf2206e455b5ee31`, tree
+`c4ce1faf96257fe11c0123ca649c9c020982aa33`, followed by validation binding
+`c521604343534f94c7a59086c94b99712eb1d754`. The exact authority, registry,
 operation, source, and preservation identities are recorded in the
 [current composition receipt](validation/composition-current.json).
 
-The current R28 source passed two linked-worktree fixed-point builds at source
-`9a68186b09bfd9ac66c51359d94b22074d43ebbf`, tree
-`fa91f3313576065f7ffa8a3c131435e5b764b162`: 25 readable PDFs, 2,492 pages,
-26,612,367 PDF bytes, global fixed point on sweep four, and zero fatal or listed
-serious diagnostics. All 37 affected `smoothing.pdf` pages passed review,
-including correction-locus page 16 at high resolution. All 25 PDF identities
+The current R30 source passed two linked-worktree fixed-point builds at source
+`c521604343534f94c7a59086c94b99712eb1d754`, tree
+`4fe26c45da3edc493b8406824f90db06ef3df28c`: 26 readable PDFs, 2,572 pages,
+27,531,529 PDF bytes, global fixed point on sweep four, and zero fatal or listed
+serious diagnostics. All 111 affected `sites-modules.pdf` and `injectives.pdf`
+pages passed review, with all 42 correction-locus pages at 180 DPI. All 26 PDF identities
 match exactly between the two builds. Earlier R26, R24, R22/R23, Verdier, and R21 receipts
 remain preserved as historical evidence for their exact scopes.
 
@@ -76,11 +79,14 @@ readback of 138 checked files totaling 25,024,008 bytes pass.
 
 ## Registry-order maintenance state
 
-R28 is admitted at `655c8e0e1fe9e7b350244a0ef0230fb6c38e0026` and
-composed at `1ed5b9fce0f75dec5ad551d32badd8e99abf058a`. Its one exact
-last-wins operation affects cumulative `smoothing.tex` and supersedes
-`MC-STK-ERR-1183-OP1`. Its manifest SHA-256 is
-`FA5448067DBB6FF452AF85C3E2B0EE4B4133723D7C7D958DA74EB7746E194CFA`.
+R29 is admitted at `8b70e94d7d9a1f28041445e52df03bffd2980435` and its
+append-only transport repair is preserved at the R30 cutoff `256846d6…`.
+R30 is directly admitted at that same cutoff. Their cumulative source
+composition is `3e57820736a5a57ddb1c9fbaaf2206e455b5ee31`; its 71 exact
+operations affect only `sites-modules.tex` and `injectives.tex`. R29's final
+manifest SHA-256 is
+`52920239C887757CE937267C5505AD98980464329BC6BBBD62086ED4E1D98CE5`;
+R30's is `C903DFCA06DA4063782BB88B2F2AC5FCF56352CF948CF03382D77F1A54A48C9E`.
 The rejected R26 producer `SMOOTHING-010` and R23 producer
 `MORE-ALGEBRA-J-006` remain excluded from the integrated source.
 

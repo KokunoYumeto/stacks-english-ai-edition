@@ -21,19 +21,19 @@ SOURCE_UNION = "ad58625f60e6816905ff217d21d91b07b2722fcf"
 EGA_EXPORT = "91df7f1c96bd4973264c29b0e121253a05d1d361"
 COMPOSITION_RECEIPT = Path("validation/composition-current.json")
 DEFAULT_BUILD_RECEIPT = Path(
-    "validation/stacks-errata-a04446e-r28-build-2026-08-28.json"
+    "validation/stacks-errata-a04446e-r30-build-2026-08-29.json"
 )
 VISUAL_QA_RECEIPT = Path(
-    "validation/stacks-errata-a04446e-r28-visual-qa-2026-08-28.json"
+    "validation/stacks-errata-a04446e-r30-visual-qa-2026-08-29.json"
 )
 REPRODUCIBILITY_RECEIPT = Path(
-    "validation/stacks-errata-a04446e-r28-reproducibility-2026-08-28.json"
+    "validation/stacks-errata-a04446e-r30-reproducibility-2026-08-29.json"
 )
 SECOND_REPRODUCIBILITY_RECEIPT = Path(
-    "validation/stacks-errata-a04446e-r28-reproducibility-second-2026-08-28.json"
+    "validation/stacks-errata-a04446e-r30-reproducibility-second-2026-08-29.json"
 )
 CURRENT_RELEASE_RECEIPT = Path(
-    "validation/stacks-errata-a04446e-r28-release-2026-08-28.json"
+    "validation/stacks-errata-a04446e-r30-release-2026-08-29.json"
 )
 SHA1_RE = re.compile(r"^[0-9a-f]{40}$")
 SHA256_RE = re.compile(r"^[0-9A-Fa-f]{64}$")
