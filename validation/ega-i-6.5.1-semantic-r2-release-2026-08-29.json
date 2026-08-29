@@ -1,0 +1,90 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-ega-semantic-release-receipt/v1",
+  "status": "PASS",
+  "created_utc": "2026-08-29T20:35:00Z",
+  "scope": {
+    "closed": "EGA I §6.5.1",
+    "continuation": "EGA I §6.5.2",
+    "semantic_statement_edges": 10,
+    "residual_dispositions": 8,
+    "root_tex_pdf_changed": false,
+    "new_errata_round": false
+  },
+  "source": {
+    "repository": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project",
+    "official_stacks_baseline": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "base_commit": "dd9c00c9f0e7da5eda565093e8bf27e1c35b5582",
+    "base_tree": "3e0fc5892d4a99be05010e54e4f1623ba0a15fcc",
+    "content_commit": "37cabeaab0393278105b22bdea8032ba5eb147ba",
+    "content_tree": "1ac53cbcbcc6ea623e8a5284ecbc031508fb2ac3",
+    "release_source_commit": "f1001ae60be552b5c6d7217dc6d051429dc14843",
+    "release_source_tree": "35e05ce6a01a4e861fded869c1b954cc32dac6b4",
+    "checkpoint_receipt": {
+      "path": "validation/ega-i-6.5.1-semantic-checkpoint-2026-08-29.json",
+      "bytes": 7616,
+      "sha256": "513075B2BD5AF72FEE459A9B8D78A06A36E45381FAB3D88D2A0D08DCBE706883"
+    },
+    "package_receipt": {
+      "path": "validation/ega-i-6.5.1-semantic-r2-package-2026-08-29.json",
+      "bytes": 22987,
+      "sha256": "C2DB30F51A9B4E9BD62E56975DBC33A61E8CB589ED65151C31C8D0F0B0F5692A"
+    },
+    "package_rebuild_receipt": {
+      "path": "validation/ega-i-6.5.1-semantic-r2-package-second-2026-08-29.json",
+      "bytes": 22987,
+      "sha256": "C2DB30F51A9B4E9BD62E56975DBC33A61E8CB589ED65151C31C8D0F0B0F5692A"
+    }
+  },
+  "github": {
+    "default_branch": "main",
+    "public_head_after_receipt_commit": "48f90ee6a61ecc3e5df8d233595e422fcd7ee128",
+    "receipt_commit_tree": "a56dd28113a9a731f40b7dc1fed0321130ed3143",
+    "exact_head_workflow": {
+      "run_id": 33268055434,
+      "head_sha": "48f90ee6a61ecc3e5df8d233595e422fcd7ee128",
+      "conclusion": "success"
+    },
+    "tag": "ega-i-6.5.1-semantic-r2-2026-08-29",
+    "tag_object": "0632a875df6617a657d45ce6a6c67515b6722eaa",
+    "peeled_target": "f1001ae60be552b5c6d7217dc6d051429dc14843",
+    "release_node_id": "RE_kwDOT2rpnc4Wl_JP",
+    "release_url": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.5.1-semantic-r2-2026-08-29",
+    "release_is_public": true,
+    "asset_count": 6,
+    "asset_bytes": 175134470,
+    "anonymous_readback": "PASS",
+    "preliminary_release_preserved_and_marked_superseded": true
+  },
+  "zenodo": {
+    "concept_doi": "10.5281/zenodo.22135180",
+    "predecessor_doi": "10.5281/zenodo.22161051",
+    "version_doi": "10.5281/zenodo.22164798",
+    "record_id": 22164798,
+    "version": "EGA-I-6.5.1-semantic-r2-2026-08-29",
+    "record_url": "https://zenodo.org/records/22164798",
+    "access_right": "open",
+    "asset_count": 6,
+    "asset_bytes": 175134470,
+    "anonymous_cross_host_downloads": 12,
+    "anonymous_readback": "PASS",
+    "publication_receipt": {
+      "path": "validation/ega-i-6.5.1-semantic-r2-zenodo-publication-receipt-2026-08-29.json",
+      "bytes": 5804,
+      "sha256": "A8C88AD80AA63431700EA91147811D1DCB72C0CE4F84175E3D80FF5F92F6B34C"
+    },
+    "state": {
+      "path": "validation/ega-i-6.5.1-semantic-r2-zenodo-state-2026-08-29.json",
+      "bytes": 8686,
+      "sha256": "D13F72010A4CE11BB7E69BB5AC98FF18B6321DE855DDAF4EDA3971DB12D0AAAE"
+    }
+  },
+  "validation": {
+    "local_package_double_build": "PASS",
+    "zip_reopen_and_member_hashes": "PASS",
+    "source_archive_commit_binding": "PASS",
+    "unified_repository_validator": "PASS",
+    "checkpoint_tree_and_scope_binding": "PASS",
+    "public_asset_readback": "PASS"
+  },
+  "next_semantic_cursor": "EGA I §6.5.2"
+}
