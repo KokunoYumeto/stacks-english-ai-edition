@@ -279,10 +279,12 @@ admission commit `655c8e0e1fe9e7b350244a0ef0230fb6c38e0026`, tree
 contains 28 batches, 849 correction IDs, and 962 exact v2 operations. R28 adds
 one supersession-aware replacement affecting cumulative `smoothing.tex`.
 
-[`composition-current.json`](composition-current.json) binds the R28 registry
-cutoff and source composition to the cumulative 962-operation projection.
+At the historical R28 checkpoint,
+[`composition-current.json`](composition-current.json) bound the R28 registry
+cutoff and source composition to the cumulative 962-operation projection; its
+live successor now binds R30.
 
-The current deterministic evidence is recorded in:
+The historical R28 deterministic evidence is recorded in:
 
 - [`stacks-errata-a04446e-r28-build-2026-08-28.json`](stacks-errata-a04446e-r28-build-2026-08-28.json)
   — 25 PDFs, 2,492 pages, 26,612,367 PDF bytes, fixed point on sweep four,
@@ -296,7 +298,7 @@ The current deterministic evidence is recorded in:
   builds.
 
 The [R28 release receipt](stacks-errata-a04446e-r28-release-2026-08-28.json)
-binds current public tag
+binds the historical public tag
 [`ai-integrated-stacks-r28-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r28-2026-08-28)
 at commit `efa46473cf8a73646ef1b6e32354e63ce20fd172`, tree
 `fe139f1aedc35f02dbd10e5471ecb3c7fbed62e1`, successful workflow run
@@ -307,7 +309,7 @@ host. All 12 anonymous downloads matched by filename, byte count, and SHA-256
 with zero mismatches. The source archive is 154,766,484 bytes and contains
 2,312 entries. R27 remains the preceding immutable historical release.
 
-## Current R29/R30 composition and validation receipts
+## Current R29/R30 composition, validation, and publication receipts
 
 R29 and R30 advance the integrated registry to **31 overlays / 931 stable
 IDs** at cutoff `256846d6a4193f21cd6e1af675dc09e6950aa3d6`, tree
@@ -337,8 +339,19 @@ R29 contributes 31 operations to `sites-modules.tex`; R30 contributes 40 to
 SHA-256 `B097799584BD00B3D8046F62A0A56FCFE045516FD04D130C2A4C547CE3BB6C19`
 and 105,225 bytes / SHA-256
 `BDC721593BE0B491334C707B371A2EECD1787787903A71E059721BDB66C5AC04`.
-R28 remains the latest public errata preservation release until the R30
-publication transaction and anonymous readback are complete.
+
+The [R30 release receipt](stacks-errata-a04446e-r30-release-2026-08-29.json)
+binds the current public errata preservation checkpoint at source head
+`e3def48650c66c0d65978a04f67dea88bd8b42ac`, tree
+`62bee382516e4a06df6746c5aa61a54b2fe6622f`, and GitHub tag
+[`ai-integrated-stacks-r30-2026-08-29`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r30-2026-08-29).
+Zenodo version DOI
+[`10.5281/zenodo.22166456`](https://doi.org/10.5281/zenodo.22166456) is in the
+existing `10.5281/zenodo.22135180` concept lineage. The same six assets total
+178,510,756 bytes on each host; all 12 anonymous downloads matched by filename,
+byte count, and SHA-256, and all three ZIPs passed reopen and complete-listing
+checks. The package preserves 26 PDFs, 2,572 pages, and 27,531,529 PDF bytes.
+R28 remains the preceding immutable historical errata release.
 
 ## Current EGA I §6.4 semantic publication receipt
 
@@ -352,7 +365,7 @@ exact-head workflow `33250683600`, and Zenodo version DOI
 [`10.5281/zenodo.22161051`](https://doi.org/10.5281/zenodo.22161051) under concept
 DOI `10.5281/zenodo.22135180`. Six assets totaling 174,783,585 bytes per host
 matched across 12 public downloads, and all three ZIP member replays passed.
-The checkpoint changes no root TeX or PDF; R28 remains the latest errata
+The checkpoint changes no root TeX or PDF; R30 remains the latest errata
 release.
 
 The follow-on

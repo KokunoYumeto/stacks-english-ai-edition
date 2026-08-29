@@ -1,0 +1,388 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-errata-release/v1",
+  "status": "PUBLICATION_COMPLETE",
+  "created_utc": "2026-08-29T21:36:52Z",
+  "updated_utc": "2026-08-29T21:36:52Z",
+  "release": {
+    "repository": "KokunoYumeto/unofficial-ai-integrated-stacks-project",
+    "default_branch": "main",
+    "previous_public_main_head": "9fc959d7d80724be8d8a678a509d2a458ba64a20",
+    "frozen_registry_cutoff": "256846d6a4193f21cd6e1af675dc09e6950aa3d6",
+    "frozen_registry_tree": "9a4f0ba1bd342cde5bf3f8f36a2d68cd7792aef3",
+    "registered_overlays": 31,
+    "registered_stable_ids": 931,
+    "published_content_head": "e3def48650c66c0d65978a04f67dea88bd8b42ac",
+    "content_tree": "62bee382516e4a06df6746c5aa61a54b2fe6622f",
+    "metadata_head": "e3def48650c66c0d65978a04f67dea88bd8b42ac",
+    "metadata_tree": "62bee382516e4a06df6746c5aa61a54b2fe6622f",
+    "tag": "ai-integrated-stacks-r30-2026-08-29",
+    "registry_provenance_tag": "registry-stacks-errata-r30-2026-08-29",
+    "admitted_and_composed": [
+      "stacks-errata-a04446e-r29",
+      "stacks-errata-a04446e-r30"
+    ]
+  },
+  "overlays": [
+    {
+      "overlay_id": "stacks-errata-a04446e-r29",
+      "admission_commit": "8b70e94d7d9a1f28041445e52df03bffd2980435",
+      "stable_ids": 30,
+      "operations": 31,
+      "affected_source": "sites-modules.tex",
+      "manifest": {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r29/candidate.manifest.json",
+        "bytes": 10972,
+        "sha256": "52920239C887757CE937267C5505AD98980464329BC6BBBD62086ED4E1D98CE5",
+        "git_blob": "66579ec28eb83ae33a2518c082791b9db665829f"
+      },
+      "independent_review": {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r29/replay/independent-review.json",
+        "bytes": 13135,
+        "sha256": "52B6E03A66DE532697B8660248D1564DAB633964B4604F6C3142DC01FEF3050F",
+        "git_blob": "d489da85f20555b5d97142825dbecd031a51d622"
+      },
+      "composed_source": {
+        "path": "sites-modules.tex",
+        "bytes": 312179,
+        "sha256": "B097799584BD00B3D8046F62A0A56FCFE045516FD04D130C2A4C547CE3BB6C19",
+        "git_blob": "1f8e228e9de91105787cc541bdaef281a04eb13e"
+      }
+    },
+    {
+      "overlay_id": "stacks-errata-a04446e-r30",
+      "admission_commit": "256846d6a4193f21cd6e1af675dc09e6950aa3d6",
+      "stable_ids": 40,
+      "operations": 40,
+      "affected_source": "injectives.tex",
+      "manifest": {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r30/candidate.manifest.json",
+        "bytes": 10598,
+        "sha256": "C903DFCA06DA4063782BB88B2F2AC5FCF56352CF948CF03382D77F1A54A48C9E",
+        "git_blob": "6b04d79771718697f5fa1421b85bf0808f915ae4"
+      },
+      "independent_review": {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r30/replay/independent-review.json",
+        "bytes": 12963,
+        "sha256": "082FF5BDB58B61EAC3281CE7AACF936392199F2724DE4E0147B44645FCBBC797",
+        "git_blob": "5e7246bfeca0fc077282b28d4eb7e645515368d0"
+      },
+      "composed_source": {
+        "path": "injectives.tex",
+        "bytes": 105225,
+        "sha256": "BDC721593BE0B491334C707B371A2EECD1787787903A71E059721BDB66C5AC04",
+        "git_blob": "abe50c79d998f134cc07293aa9bd673d3367abb3"
+      }
+    }
+  ],
+  "composition": {
+    "receipt": {
+      "path": "validation/composition-current.json",
+      "bytes": 15009,
+      "sha256": "A9E9C0B91A24325A5E8BEDD6D989B649D6339FA554430D75F28F788067EAF69F",
+      "git_blob": "f09d0dd07cd50b68377ec2d742e6d7fe26e9868b"
+    },
+    "registry_import_commit": "6df0e967030bcf818f3c49584fa5e9a992278d75",
+    "source_commit": "3e57820736a5a57ddb1c9fbaaf2206e455b5ee31",
+    "source_tree": "c4ce1faf96257fe11c0123ca649c9c020982aa33",
+    "cumulative_v2_operations": 1033,
+    "new_stable_ids": 70,
+    "new_operations": 71,
+    "order": [
+      "stacks-errata-a04446e-r29",
+      "stacks-errata-a04446e-r30"
+    ],
+    "mode": "manifest-bound registry-order replay; isolated payloads were not copied wholesale"
+  },
+  "build": {
+    "receipt_path": "validation/stacks-errata-a04446e-r30-build-2026-08-29.json",
+    "receipt_bytes": 32995,
+    "receipt_sha256": "47A4225F0608328412520A7C47F02FCDADE2C7E25AEB47BBA5AB023768AD46F0",
+    "receipt_git_blob": "283abbb7ea17837d0996e99e69824f104777bd3e",
+    "source_commit": "c521604343534f94c7a59086c94b99712eb1d754",
+    "source_tree": "4fe26c45da3edc493b8406824f90db06ef3df28c",
+    "chapters": 26,
+    "pages": 2572,
+    "pdf_bytes": 27531529,
+    "global_fixed_point_sweep": 4,
+    "artifact_tuple_set_sha256": "4899D5FA96CE63A95DB419FEC861826A00E68A3D748D06459B2E73EE718A2C9B"
+  },
+  "visual_qa": {
+    "status": "PASS",
+    "receipt_path": "validation/stacks-errata-a04446e-r30-visual-qa-2026-08-29.json",
+    "receipt_bytes": 5189,
+    "receipt_sha256": "CF248187AC25E9757C43E4B4E3D0356D3E944F6F42760261AEF32A2E966CDC30",
+    "receipt_git_blob": "dda5cf2ab82665896c527cabd5c7496be33cc940",
+    "full_page_reviews": 111,
+    "high_resolution_locus_pages": 42,
+    "defects": 0
+  },
+  "reproducibility": {
+    "status": "PASS",
+    "summary_path": "validation/stacks-errata-a04446e-r30-reproducibility-2026-08-29.json",
+    "summary_bytes": 7047,
+    "summary_sha256": "4FB885BA57AD19B115E0527C277B91E24DDBC621EE05B1DF07FEA2BD2F01D2AA",
+    "summary_git_blob": "92c16fd23553b32024d5802bae02d33f0473f77d",
+    "second_receipt_path": "validation/stacks-errata-a04446e-r30-reproducibility-second-2026-08-29.json",
+    "second_receipt_bytes": 32995,
+    "second_receipt_sha256": "6B0E4784F39F109CCC4FD3055A9FA72C566B3ACCE02EE636F23E89CF2283030B",
+    "second_receipt_git_blob": "6bc08fdd1e13fd9cbb4ffcb0b59de487fd14dfd0",
+    "matched_artifacts": 26,
+    "different_artifacts": 0,
+    "artifact_tuple_set_sha256": "4899D5FA96CE63A95DB419FEC861826A00E68A3D748D06459B2E73EE718A2C9B"
+  },
+  "public_readback": {
+    "status": "PASS",
+    "checked_utc": "2026-08-29T21:42:00Z",
+    "method": "anonymous raw.githubusercontent.com HTTPS byte readback of all 128 changed paths plus direct public GitHub release and Zenodo downloads; exact byte, SHA-256, Git-blob, ZIP reopen, CRC, complete-listing, and member-hash checks",
+    "commit": "e3def48650c66c0d65978a04f67dea88bd8b42ac",
+    "changed_path_readback_count": 128,
+    "changed_path_readback_bytes": 6031208,
+    "changed_path_mismatches": 0,
+    "changed_public_bytes_local_account_name_absent": true,
+    "checked_paths_kind": "release-critical subset of the complete 128-path anonymous readback",
+    "checked_paths": [
+      {
+        "path": ".github/workflows/validate.yml",
+        "bytes": 895,
+        "sha256": "209DE61DE48F9BDA0C709593486065B1E6F88D365BF8A295BF1DED4A2DB684F8",
+        "git_blob": "a9b271b8af743480e9d7981569eb2de4cbc91783",
+        "match": true
+      },
+      {
+        "path": "ai-integrated/registry/overlays.json",
+        "bytes": 51729,
+        "sha256": "A329A117D739952EB8D6A080046116DFCFBB0ABC252C784A5F05052907C05E22",
+        "git_blob": "0b5800badb9684c85282663d928c6e9c3c738e2b",
+        "match": true
+      },
+      {
+        "path": "ai-integrated/registry/leases.json",
+        "bytes": 39729,
+        "sha256": "C3838DDCB76542549D33385EFFE8C9C05A810DC4BE981E4750926D4097ED910F",
+        "git_blob": "03c27b973ae2ba79be5a1745fe9aaf8ec266ce47",
+        "match": true
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r29/candidate.manifest.json",
+        "bytes": 10972,
+        "sha256": "52920239C887757CE937267C5505AD98980464329BC6BBBD62086ED4E1D98CE5",
+        "git_blob": "66579ec28eb83ae33a2518c082791b9db665829f",
+        "match": true
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r29/replay/independent-review.json",
+        "bytes": 13135,
+        "sha256": "52B6E03A66DE532697B8660248D1564DAB633964B4604F6C3142DC01FEF3050F",
+        "git_blob": "d489da85f20555b5d97142825dbecd031a51d622",
+        "match": true
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r30/candidate.manifest.json",
+        "bytes": 10598,
+        "sha256": "C903DFCA06DA4063782BB88B2F2AC5FCF56352CF948CF03382D77F1A54A48C9E",
+        "git_blob": "6b04d79771718697f5fa1421b85bf0808f915ae4",
+        "match": true
+      },
+      {
+        "path": "ai-integrated/candidates/commons/stacks/errata/r30/replay/independent-review.json",
+        "bytes": 12963,
+        "sha256": "082FF5BDB58B61EAC3281CE7AACF936392199F2724DE4E0147B44645FCBBC797",
+        "git_blob": "5e7246bfeca0fc077282b28d4eb7e645515368d0",
+        "match": true
+      },
+      {
+        "path": "sites-modules.tex",
+        "bytes": 312179,
+        "sha256": "B097799584BD00B3D8046F62A0A56FCFE045516FD04D130C2A4C547CE3BB6C19",
+        "git_blob": "1f8e228e9de91105787cc541bdaef281a04eb13e",
+        "match": true
+      },
+      {
+        "path": "injectives.tex",
+        "bytes": 105225,
+        "sha256": "BDC721593BE0B491334C707B371A2EECD1787787903A71E059721BDB66C5AC04",
+        "git_blob": "abe50c79d998f134cc07293aa9bd673d3367abb3",
+        "match": true
+      },
+      {
+        "path": "tools/build_fixed_point.py",
+        "bytes": 102961,
+        "sha256": "B97793F081F0A49B2FE9137580B3F1444DB5504ADBD21C0DD6F59FC757F1CC18",
+        "git_blob": "2d7847293609be41afb1ee37d815b3f86a0a72fb",
+        "match": true
+      },
+      {
+        "path": "tools/build_errata_preservation_package.py",
+        "bytes": 98397,
+        "sha256": "6971A81B19751B0068442CA8F6ACA4B5C03F7898AB37F1340A9737E7245D67EE",
+        "git_blob": "e4b587e646736ee31b462dfc01cb1180a613133e",
+        "match": true
+      },
+      {
+        "path": "tools/compose_overlay_projection.py",
+        "bytes": 28487,
+        "sha256": "1AC12661BCA0CF33331A525532D6A5F3C96851BE34A71610F967735913861A3D",
+        "git_blob": "1875daa489d2ef6b70cc51191f01552fcb96f56e",
+        "match": true
+      },
+      {
+        "path": "tools/validate_unified_repository.py",
+        "bytes": 127417,
+        "sha256": "A8EF253626301DFE04EE9795B69AB2590AC07215510527CA4C38D10626DF2CAF",
+        "git_blob": "05dbeeb34321a930d3e04dcc9b076100b1815424",
+        "match": true
+      },
+      {
+        "path": "validation/composition-current.json",
+        "bytes": 15009,
+        "sha256": "A9E9C0B91A24325A5E8BEDD6D989B649D6339FA554430D75F28F788067EAF69F",
+        "git_blob": "f09d0dd07cd50b68377ec2d742e6d7fe26e9868b",
+        "match": true
+      },
+      {
+        "path": "validation/stacks-errata-a04446e-r30-build-2026-08-29.json",
+        "bytes": 32995,
+        "sha256": "47A4225F0608328412520A7C47F02FCDADE2C7E25AEB47BBA5AB023768AD46F0",
+        "git_blob": "283abbb7ea17837d0996e99e69824f104777bd3e",
+        "match": true
+      },
+      {
+        "path": "validation/stacks-errata-a04446e-r30-reproducibility-2026-08-29.json",
+        "bytes": 7047,
+        "sha256": "4FB885BA57AD19B115E0527C277B91E24DDBC621EE05B1DF07FEA2BD2F01D2AA",
+        "git_blob": "92c16fd23553b32024d5802bae02d33f0473f77d",
+        "match": true
+      },
+      {
+        "path": "validation/stacks-errata-a04446e-r30-reproducibility-second-2026-08-29.json",
+        "bytes": 32995,
+        "sha256": "6B0E4784F39F109CCC4FD3055A9FA72C566B3ACCE02EE636F23E89CF2283030B",
+        "git_blob": "6bc08fdd1e13fd9cbb4ffcb0b59de487fd14dfd0",
+        "match": true
+      },
+      {
+        "path": "validation/stacks-errata-a04446e-r30-visual-qa-2026-08-29.json",
+        "bytes": 5189,
+        "sha256": "CF248187AC25E9757C43E4B4E3D0356D3E944F6F42760261AEF32A2E966CDC30",
+        "git_blob": "dda5cf2ab82665896c527cabd5c7496be33cc940",
+        "match": true
+      }
+    ]
+  },
+  "workflow": {
+    "name": "Unified repository validation",
+    "run_id": 33276129775,
+    "attempt": 1,
+    "head_sha": "e3def48650c66c0d65978a04f67dea88bd8b42ac",
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/actions/runs/33276129775",
+    "role": "successful exact-head pre-publication workflow for the public R30 content head"
+  },
+  "preservation": {
+    "status": "PUBLIC_READBACK_VERIFIED",
+    "package_receipt": {
+      "path": "validation/stacks-errata-a04446e-r30-package-2026-08-29.json",
+      "bytes": 12439,
+      "sha256": "58CE41EF30C5E62070172E01B4112E3882F62C818A4EB73580E82143C5F61996",
+      "git_blob": "ef0363d49293a160807002c7a96a93ca6d49e908",
+      "status": "PASS"
+    },
+    "github": {
+      "repository_public": true,
+      "release_id": 379106804,
+      "release_url": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r30-2026-08-29",
+      "tag": "ai-integrated-stacks-r30-2026-08-29",
+      "tag_commit": "e3def48650c66c0d65978a04f67dea88bd8b42ac",
+      "draft": false,
+      "prerelease": false,
+      "asset_count": 6
+    },
+    "zenodo": {
+      "record_id": 22166456,
+      "record_url": "https://zenodo.org/records/22166456",
+      "doi": "10.5281/zenodo.22166456",
+      "concept_doi": "10.5281/zenodo.22135180",
+      "access_right": "open",
+      "file_count": 6,
+      "publication_receipt": {
+        "path": "validation/stacks-errata-a04446e-r30-zenodo-publication-2026-08-29.json",
+        "bytes": 5633,
+        "sha256": "907B5E5A8573689D07C3D4DD4F7782DDE51CEEBFC62B6834EB5776F2E65EE02F",
+        "git_blob": "e8f27387b5efb52efd4e46e930a8c1e5498b9ec8"
+      }
+    },
+    "asset_count_each_host": 6,
+    "asset_bytes_each_host": 178510756,
+    "anonymous_downloads": 12,
+    "byte_or_hash_mismatches": 0,
+    "zip_reopen_failures": 0,
+    "source_archive_entries": 2461,
+    "source_archive_files": 2167,
+    "pdf_archive_entries": 26,
+    "validation_archive_entries": 5,
+    "github_zenodo_asset_parity": true,
+    "assets": [
+      {
+        "name": "README.md",
+        "bytes": 2692,
+        "sha256": "133EE8A8CB684622E829EACBD26D60B8BA4900FA2E339AEEF3E28C5BB0CEFE49"
+      },
+      {
+        "name": "RELEASE.json",
+        "bytes": 12178,
+        "sha256": "EDD873D3ECB4FA929CBB8248B928E11D1B0C2B1ED5F3623A145F04372E86F7C7"
+      },
+      {
+        "name": "SHA256SUMS.txt",
+        "bytes": 529,
+        "sha256": "E83A38F0E9BD322FC326D0E373A5BEA724EF965749E915AF4601E83F698DBA5A"
+      },
+      {
+        "name": "unofficial-ai-integrated-stacks-project-r30-pdfs.zip",
+        "bytes": 20547972,
+        "sha256": "1340A1735BDF6736C77E97A83E7A5223022CAB658A623400F445486BAD72ABE5",
+        "entries": 26,
+        "uncompressed_bytes": 27531529
+      },
+      {
+        "name": "unofficial-ai-integrated-stacks-project-r30-source-e3def486.zip",
+        "bytes": 157921564,
+        "sha256": "1135B6EE6474DB63D1F0F010262F381FEFC2BDFCBD65E3A4F9CFE7768BC7371B",
+        "entries": 2461,
+        "files": 2167,
+        "member_tuple_set_sha256": "BF8A0EA1DDBD380CD920827BC5D026FA93EDBC1253F35CEB83672DFF2935A587"
+      },
+      {
+        "name": "unofficial-ai-integrated-stacks-project-r30-validation.zip",
+        "bytes": 25821,
+        "sha256": "F722F62194670B44BF720C1C887DBD38B61DFAD0C0759B4C28F30B95AF96FA1E",
+        "entries": 5,
+        "member_tuple_set_sha256": "DD1B9486E7D5F56941C42C4714CF706A1B1D779E9709281B49E436BA7A906DBE"
+      }
+    ]
+  },
+  "registry": {
+    "overlays": {
+      "path": "ai-integrated/registry/overlays.json",
+      "bytes": 51729,
+      "sha256": "A329A117D739952EB8D6A080046116DFCFBB0ABC252C784A5F05052907C05E22",
+      "git_blob": "0b5800badb9684c85282663d928c6e9c3c738e2b"
+    },
+    "leases": {
+      "path": "ai-integrated/registry/leases.json",
+      "bytes": 39729,
+      "sha256": "C3838DDCB76542549D33385EFFE8C9C05A810DC4BE981E4750926D4097ED910F",
+      "git_blob": "03c27b973ae2ba79be5a1745fe9aaf8ec266ce47"
+    }
+  },
+  "fixed_point_artifacts": {
+    "pdfs_committed": false,
+    "artifact_count": 26,
+    "pages": 2572,
+    "bytes": 27531529,
+    "artifact_tuple_set_sha256": "4899D5FA96CE63A95DB419FEC861826A00E68A3D748D06459B2E73EE718A2C9B",
+    "public_identity_evidence": "validation/stacks-errata-a04446e-r30-build-2026-08-29.json"
+  },
+  "scope_note": "This release composes and validates admitted Stacks errata through R30. R31 and R32 are not composed by this release. The repository's EGA integration remains explicitly partial and is not claimed complete; formal verification is not claimed."
+}

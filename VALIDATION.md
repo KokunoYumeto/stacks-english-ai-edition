@@ -89,8 +89,21 @@ R29's repaired final manifest SHA-256 is
 R30's manifest SHA-256 is
 `C903DFCA06DA4063782BB88B2F2AC5FCF56352CF948CF03382D77F1A54A48C9E`.
 
-The [R28 release receipt](validation/stacks-errata-a04446e-r28-release-2026-08-28.json)
-binds the current published tag
+The [R30 release receipt](validation/stacks-errata-a04446e-r30-release-2026-08-29.json)
+binds the current public errata preservation checkpoint at source head
+`e3def48650c66c0d65978a04f67dea88bd8b42ac`, tree
+`62bee382516e4a06df6746c5aa61a54b2fe6622f`, and tag
+[`ai-integrated-stacks-r30-2026-08-29`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r30-2026-08-29).
+Its six assets total 178,510,756 bytes on each of GitHub and Zenodo, and all 12
+anonymous downloads matched by filename, byte count, and SHA-256. The Zenodo
+version DOI is
+[`10.5281/zenodo.22166456`](https://doi.org/10.5281/zenodo.22166456) under
+concept DOI [`10.5281/zenodo.22135180`](https://doi.org/10.5281/zenodo.22135180).
+Archive replay passed, and the preservation package binds 26 PDFs, 2,572 pages,
+and 27,531,529 PDF bytes.
+
+The historical [R28 release receipt](validation/stacks-errata-a04446e-r28-release-2026-08-28.json)
+binds the preceding published tag
 [`ai-integrated-stacks-r28-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r28-2026-08-28)
 to commit `efa46473cf8a73646ef1b6e32354e63ce20fd172`, tree
 `fe139f1aedc35f02dbd10e5471ecb3c7fbed62e1`, successful GitHub Actions run
@@ -126,7 +139,7 @@ successful exact-head workflow `33250683600`, and Zenodo version DOI
 [`10.5281/zenodo.22161051`](https://doi.org/10.5281/zenodo.22161051) under the
 existing concept DOI. All six assets and 174,783,585 bytes per host matched in
 12 public downloads; archive-member replay passed. The source mapping and
-residual evidence introduce no root TeX or PDF change, so R28 remains the latest
+residual evidence introduce no root TeX or PDF change, so R30 remains the latest
 errata release.
 
 The [historical R22/R23 publication receipt](validation/stacks-errata-a04446e-r22-r23-release-2026-08-27.json)

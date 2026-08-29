@@ -1,0 +1,332 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-preservation-package-build/v2",
+  "status": "PASS",
+  "created_utc": "2026-08-29T21:27:38Z",
+  "release": "R30-2026-08-29",
+  "source": {
+    "commit": "e3def48650c66c0d65978a04f67dea88bd8b42ac",
+    "tree": "62bee382516e4a06df6746c5aa61a54b2fe6622f"
+  },
+  "release_source_binding": {
+    "status": "PASS",
+    "build_commit": "c521604343534f94c7a59086c94b99712eb1d754",
+    "build_tree": "4fe26c45da3edc493b8406824f90db06ef3df28c",
+    "release_commit": "e3def48650c66c0d65978a04f67dea88bd8b42ac",
+    "release_tree": "62bee382516e4a06df6746c5aa61a54b2fe6622f",
+    "release_descends_from_build": true,
+    "intervening_changed_path_count": 14,
+    "intervening_changed_paths": [
+      ".github/workflows/validate.yml",
+      "PROVENANCE.md",
+      "README.md",
+      "ROADMAP.md",
+      "STATUS.md",
+      "VALIDATION.md",
+      "ai-integrated/README.md",
+      "tools/build_errata_preservation_package.py",
+      "tools/validate_unified_repository.py",
+      "validation/README.md",
+      "validation/stacks-errata-a04446e-r30-build-2026-08-29.json",
+      "validation/stacks-errata-a04446e-r30-reproducibility-2026-08-29.json",
+      "validation/stacks-errata-a04446e-r30-reproducibility-second-2026-08-29.json",
+      "validation/stacks-errata-a04446e-r30-visual-qa-2026-08-29.json"
+    ],
+    "build_relevant_intervening_changes": 0
+  },
+  "release_assets": [
+    {
+      "name": "README.md",
+      "bytes": 2692,
+      "sha256": "133EE8A8CB684622E829EACBD26D60B8BA4900FA2E339AEEF3E28C5BB0CEFE49"
+    },
+    {
+      "name": "RELEASE.json",
+      "bytes": 12178,
+      "sha256": "EDD873D3ECB4FA929CBB8248B928E11D1B0C2B1ED5F3623A145F04372E86F7C7"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 529,
+      "sha256": "E83A38F0E9BD322FC326D0E373A5BEA724EF965749E915AF4601E83F698DBA5A"
+    },
+    {
+      "name": "unofficial-ai-integrated-stacks-project-r30-pdfs.zip",
+      "bytes": 20547972,
+      "sha256": "1340A1735BDF6736C77E97A83E7A5223022CAB658A623400F445486BAD72ABE5"
+    },
+    {
+      "name": "unofficial-ai-integrated-stacks-project-r30-source-e3def486.zip",
+      "bytes": 157921564,
+      "sha256": "1135B6EE6474DB63D1F0F010262F381FEFC2BDFCBD65E3A4F9CFE7768BC7371B"
+    },
+    {
+      "name": "unofficial-ai-integrated-stacks-project-r30-validation.zip",
+      "bytes": 25821,
+      "sha256": "F722F62194670B44BF720C1C887DBD38B61DFAD0C0759B4C28F30B95AF96FA1E"
+    }
+  ],
+  "archives": {
+    "source": {
+      "name": "unofficial-ai-integrated-stacks-project-r30-source-e3def486.zip",
+      "entry_count": 2461,
+      "file_count": 2167,
+      "member_tuple_set_sha256": "BF8A0EA1DDBD380CD920827BC5D026FA93EDBC1253F35CEB83672DFF2935A587",
+      "privacy_redaction_manifest": "unofficial-ai-integrated-stacks-project-r30/SOURCE_PRIVACY_REDACTION_MANIFEST.json",
+      "redacted_member_count": 4,
+      "replacement_count": 6,
+      "private_git_archive": {
+        "bytes": 158642389,
+        "sha256": "D40159257424FB79EC39BC034AF0D6F2B56EC3F2D3B151F60FED20B38344A54F",
+        "entry_count": 2460,
+        "file_count": 2166,
+        "member_tuple_set_sha256": "A5058820A03576B4978D5C6E838B8D363E5BC032BE59608EE62DE8E724C4FE62"
+      },
+      "redactions": [
+        {
+          "name": "unofficial-ai-integrated-stacks-project-r30/ai-integrated/candidates/commons/stacks/errata/r14/builds/algebra.authority.log",
+          "occurrences": 2,
+          "original_bytes": 81607,
+          "original_sha256": "2AAF21A6E857F539C97BE1583922682E132715C453576B591D4170930407860B",
+          "public_bytes": 81643,
+          "public_sha256": "9E95F2DA33F4BFA03DFA6C95FA6F66D3CB7A8A9AC14E3BB175D6B88CD7BBD05C"
+        },
+        {
+          "name": "unofficial-ai-integrated-stacks-project-r30/ai-integrated/candidates/commons/stacks/errata/r14/builds/algebra.authority.pass3.txt",
+          "occurrences": 1,
+          "original_bytes": 68036,
+          "original_sha256": "E6B86077FCE4DB872CCD61240F5184176CBD3B5CF20DD675B7D21B815F90007D",
+          "public_bytes": 68054,
+          "public_sha256": "BBAEBE33DA1395D291F61F7DB9999277E6593938D74093306AAFE3B2E61F6388"
+        },
+        {
+          "name": "unofficial-ai-integrated-stacks-project-r30/ai-integrated/candidates/commons/stacks/errata/r14/builds/algebra.log",
+          "occurrences": 2,
+          "original_bytes": 81607,
+          "original_sha256": "47217D164CAE0F2FD9EFBD6643A79A7FD38C89E2B7921C01001A714AB4622CFA",
+          "public_bytes": 81643,
+          "public_sha256": "975504B2FE7ECE18506BDD537E2370F8D46A97D60246083FEBD197226E154687"
+        },
+        {
+          "name": "unofficial-ai-integrated-stacks-project-r30/ai-integrated/candidates/commons/stacks/errata/r14/builds/algebra.pass3.txt",
+          "occurrences": 1,
+          "original_bytes": 68036,
+          "original_sha256": "6BBC8C87DFCB4BD0487B14A330283D0E43972FCB1FA0F0D6526986524B30F91C",
+          "public_bytes": 68054,
+          "public_sha256": "1C23DB7E2877CAADF47ADE267A1F9C2038EBF8FB7BB5F71E2F8082890BBAD77B"
+        }
+      ]
+    },
+    "pdfs": {
+      "name": "unofficial-ai-integrated-stacks-project-r30-pdfs.zip",
+      "member_count": 26,
+      "member_tuple_set_sha256": "FE7D671FA68A7B607D6792B3B6F55865113EC2705D7B3EEBEC926FF9F68845DB",
+      "members": [
+        {
+          "name": "algebra.pdf",
+          "pages": 473,
+          "bytes": 3770314,
+          "sha256": "A0F40CF70780649B97B90A5296AE317208F407442C7BAF4BBFDDA600115C3478"
+        },
+        {
+          "name": "artin.pdf",
+          "pages": 69,
+          "bytes": 908927,
+          "sha256": "9DA67CC8484CB95145F2813AD2FD9E6A71414743129BD9DEBFEC31A5434B3660"
+        },
+        {
+          "name": "brauer.pdf",
+          "pages": 10,
+          "bytes": 348893,
+          "sha256": "E3CE8C00254F383EE6A1450169532921CC73D14D4DEE7CD358C687229E84DAEC"
+        },
+        {
+          "name": "categories.pdf",
+          "pages": 105,
+          "bytes": 1066202,
+          "sha256": "F3861D4DCB8CDC9DD09B030D046AA02EFC30CE86A7F58862CF167BDD1C6FFE54"
+        },
+        {
+          "name": "crystalline.pdf",
+          "pages": 61,
+          "bytes": 870034,
+          "sha256": "EF67E54EA69088617A9FD8C7A6D83F4CF588C18D4962C7B436736C2CB88ECE0B"
+        },
+        {
+          "name": "derived.pdf",
+          "pages": 130,
+          "bytes": 1247535,
+          "sha256": "1C9F9E18FDC27C03C802C36BD14C36A97CC4211237C20EFAD28C72F062C07235"
+        },
+        {
+          "name": "gaga.pdf",
+          "pages": 23,
+          "bytes": 489096,
+          "sha256": "A5F7735C2BA7F565C9BFEC44A0FFEA5B684FDCC990080E463D87EB2E36008D3D"
+        },
+        {
+          "name": "homology.pdf",
+          "pages": 82,
+          "bytes": 886658,
+          "sha256": "470ED47FCE2226BEEC70FE9D39135179C3EDFAE0AA6CF5BCD6FDAB2E4AC532B1"
+        },
+        {
+          "name": "injectives.pdf",
+          "pages": 31,
+          "bytes": 571417,
+          "sha256": "74BAEB83A4B4B12BC3B9DC9C5760D9FCDB07E639DE333046A81585901588D67A"
+        },
+        {
+          "name": "modules.pdf",
+          "pages": 55,
+          "bytes": 721363,
+          "sha256": "7B3BCCF3369D3BC24AEC2E0C3C6CD4670DA8F81B99B1E9675AEFC679EC7212C4"
+        },
+        {
+          "name": "moduli.pdf",
+          "pages": 83,
+          "bytes": 896466,
+          "sha256": "F2B1D328357E83404381E1F8C537756A55678A315530C0EF15C113EF5805D1AC"
+        },
+        {
+          "name": "more-algebra.pdf",
+          "pages": 406,
+          "bytes": 3378382,
+          "sha256": "CBA1F2166E204601B85FDD68EB239E6CEE738FF18BC4E41A86CC1F8E22D2FD71"
+        },
+        {
+          "name": "more-morphisms.pdf",
+          "pages": 260,
+          "bytes": 2306924,
+          "sha256": "43B96BEB86C58C3E2523C276F4D1F713F0A5294135C6E414C4D20DE2C774670D"
+        },
+        {
+          "name": "morphisms.pdf",
+          "pages": 157,
+          "bytes": 1577629,
+          "sha256": "D295075B0F3251E3D7E2D9B38B8A1B9BB2164AC096B2AE2EE3FBD2E56AFA482D"
+        },
+        {
+          "name": "properties.pdf",
+          "pages": 54,
+          "bytes": 765122,
+          "sha256": "278AC64F55C4D83600A79A6C6C6631C0831043B9645B9F7BB8ED93A3A1F17863"
+        },
+        {
+          "name": "schemes.pdf",
+          "pages": 51,
+          "bytes": 721241,
+          "sha256": "0217BFF00055786B97ADE79C78AC67289DAF1D0FC4C34E57D262B9CFBEE9B159"
+        },
+        {
+          "name": "sets.pdf",
+          "pages": 14,
+          "bytes": 457308,
+          "sha256": "97EEDD6EBD753D2CC35C4969BD8A9ED6BAB8652A5AB5EDD6583C028624BD5EAB"
+        },
+        {
+          "name": "sheaves.pdf",
+          "pages": 54,
+          "bytes": 658269,
+          "sha256": "68698E33A19E88DE6177533C1ADC6F2423C3781E91A2C8DE45C283BF47EE8D12"
+        },
+        {
+          "name": "simplicial.pdf",
+          "pages": 73,
+          "bytes": 834182,
+          "sha256": "67A44CCAC41E94DD62134EDB7494E91E0EAE3CD64B536497DFD964BD6FA1DD92"
+        },
+        {
+          "name": "sites-modules.pdf",
+          "pages": 80,
+          "bytes": 910616,
+          "sha256": "C0ACDAC9F0EA48AC934CD809A2CE2D4CC21AC437F7C4469440AB1A0D6784C40B"
+        },
+        {
+          "name": "sites.pdf",
+          "pages": 113,
+          "bytes": 1166643,
+          "sha256": "A018A1362ABBF379BD539D8EC4FA2FC6B578ABD45FE480C02C7E7B75CD4F1498"
+        },
+        {
+          "name": "smoothing.pdf",
+          "pages": 37,
+          "bytes": 650010,
+          "sha256": "39CCCB41061EEBB993ED8FED7B4216FD38A1C301BB29E99FAAB6FC14E33E74C0"
+        },
+        {
+          "name": "spaces-cohomology.pdf",
+          "pages": 47,
+          "bytes": 626638,
+          "sha256": "41EC553878EE403C3AD5C2D9563C4F16CB7C674D57F6E5BC1A143C5E37C25A14"
+        },
+        {
+          "name": "spaces-duality.pdf",
+          "pages": 25,
+          "bytes": 555784,
+          "sha256": "0C0B9396124749B28816FC697C3A7755CEBD2F7B65FC896F1BD72B11CBC82E74"
+        },
+        {
+          "name": "stacks-limits.pdf",
+          "pages": 13,
+          "bytes": 348113,
+          "sha256": "DE83729AA957F776A1C2E5BD2A0EF969557B2489E34EF879DD2F5C39D288C359"
+        },
+        {
+          "name": "topology.pdf",
+          "pages": 66,
+          "bytes": 797763,
+          "sha256": "3C5426BA8F6A1E9A8B68602084AD368470FEEA18BBC80EF47EEF3E5CF6563A53"
+        }
+      ]
+    },
+    "validation": {
+      "name": "unofficial-ai-integrated-stacks-project-r30-validation.zip",
+      "member_count": 5,
+      "member_tuple_set_sha256": "DD1B9486E7D5F56941C42C4714CF706A1B1D779E9709281B49E436BA7A906DBE",
+      "members": [
+        {
+          "name": "composition-current.json",
+          "bytes": 15009,
+          "sha256": "A9E9C0B91A24325A5E8BEDD6D989B649D6339FA554430D75F28F788067EAF69F"
+        },
+        {
+          "name": "stacks-errata-a04446e-r30-build-2026-08-29.json",
+          "bytes": 33871,
+          "sha256": "248AF407236C8C1F6C22C76530C6B85CF4A11177214203E2A21BB5CA019302F8"
+        },
+        {
+          "name": "stacks-errata-a04446e-r30-reproducibility-2026-08-29.json",
+          "bytes": 7271,
+          "sha256": "5D685481E7343FA080F60C45B3826ECB35E239C9C705B293EC1680EAFF315530"
+        },
+        {
+          "name": "stacks-errata-a04446e-r30-reproducibility-second-2026-08-29.json",
+          "bytes": 33871,
+          "sha256": "83603B4D1AD0E13C43BEFF222A00F5A0DA5727F24FAB79AC8EAF2F50B093E232"
+        },
+        {
+          "name": "stacks-errata-a04446e-r30-visual-qa-2026-08-29.json",
+          "bytes": 5189,
+          "sha256": "CF248187AC25E9757C43E4B4E3D0356D3E944F6F42760261AEF32A2E966CDC30"
+        }
+      ]
+    }
+  },
+  "checks": {
+    "release_asset_count": 6,
+    "source_projection_reopen_and_listing": "PASS",
+    "pdf_listing_and_member_hashes": "PASS",
+    "validation_listing_and_member_hashes": "PASS",
+    "checksum_inventory": "PASS",
+    "release_metadata_and_validation_local_absolute_paths_absent": true,
+    "public_text_local_account_names_absent": true,
+    "source_archive_local_account_names_absent": true,
+    "source_archive_is_commit_bound_sanitized_projection": true,
+    "source_archive_differs_only_by_declared_redactions_and_manifest": true,
+    "source_archive_unchanged_members_byte_identical": true,
+    "source_archive_account_redacted_provenance_paths_allowed": true,
+    "package_receipt_is_release_asset": false,
+    "release_commit_descends_from_build_source": true,
+    "build_relevant_intervening_changes": 0
+  }
+}

@@ -22,7 +22,8 @@ and routed without changing root TeX or any PDF. GitHub tag
 [`ega-i-6.4-semantic-2026-08-29`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.4-semantic-2026-08-29)
 and Zenodo version DOI [`10.5281/zenodo.22161051`](https://doi.org/10.5281/zenodo.22161051)
 preserve six byte-matched assets totaling 174,783,585 bytes per host. R28 remains
-the latest errata release; the next EGA cursor is §6.5.1.
+historically preserved, while R30 is the latest errata release; the next EGA
+cursor is §6.5.1.
 
 ## Errata state
 
@@ -103,7 +104,18 @@ the latest errata release; the next EGA cursor is §6.5.1.
   `3e57820736a5a57ddb1c9fbaaf2206e455b5ee31`, tree
   `c4ce1faf96257fe11c0123ca649c9c020982aa33`, followed by validation binding
   `c521604343534f94c7a59086c94b99712eb1d754`.
-- R28 is the current public preservation release at tag
+- R30 is the current public errata preservation checkpoint at source head
+  `e3def48650c66c0d65978a04f67dea88bd8b42ac`, tree
+  `62bee382516e4a06df6746c5aa61a54b2fe6622f`, and tag
+  [`ai-integrated-stacks-r30-2026-08-29`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r30-2026-08-29).
+  Its six assets total 178,510,756 bytes on each of GitHub and Zenodo; all 12
+  anonymous downloads matched by filename, byte count, and SHA-256. The Zenodo
+  version DOI is
+  [`10.5281/zenodo.22166456`](https://doi.org/10.5281/zenodo.22166456) under
+  concept DOI `10.5281/zenodo.22135180`. The package binds 26 PDFs, 2,572
+  pages, and 27,531,529 PDF bytes. See the
+  [R30 release receipt](validation/stacks-errata-a04446e-r30-release-2026-08-29.json).
+- R28 remains publicly preserved as the preceding historical release at tag
   [`ai-integrated-stacks-r28-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r28-2026-08-28),
   commit `efa46473cf8a73646ef1b6e32354e63ce20fd172`, tree
   `fe139f1aedc35f02dbd10e5471ecb3c7fbed62e1`, and Zenodo version DOI
@@ -112,7 +124,7 @@ the latest errata release; the next EGA cursor is §6.5.1.
   passed. Its six assets total 174,673,433 bytes on each host; anonymous
   readback matched all 12 downloads by filename, byte count, and SHA-256 with
   zero mismatches. The 154,766,484-byte source archive contains 2,312 entries.
-- R27 remains published as the preceding historical tag
+- R27 remains published as an earlier historical tag
   [`ai-integrated-stacks-r27-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r27-2026-08-28),
   commit `e624abadfe9e2ac1f311485c44c82d6c53df2df2`, tree
   `a2ba195c47c6cb41dca4e4ee7cb6292372e2e201`, and Zenodo version DOI
@@ -160,11 +172,11 @@ fixed-point sweep; all 26 `{stem, pages, bytes, sha256}` artifact tuples are
 exactly equal. Earlier R24, R22/R23, Verdier, and R21 receipts remain preserved
 as historical evidence for their exact source identities and scopes.
 
-The [latest public R28 publication receipt](validation/stacks-errata-a04446e-r28-release-2026-08-28.json)
+The [latest public R30 publication receipt](validation/stacks-errata-a04446e-r30-release-2026-08-29.json)
 binds the public commit and tree, successful exact-head workflow, identical
 six-file package on GitHub and Zenodo, anonymous SHA-256 readback, and archive
-member replay. The R27 receipt remains historical evidence for the preceding
-immutable version.
+member replay. The R28 and R27 receipts remain historical evidence for their
+preceding immutable versions.
 
 The preceding Verdier content release remains public at
 `4947e4a6d22971ea793e4b4bc2b09d8ab8cc04d0`. Exact anonymous readback of 62

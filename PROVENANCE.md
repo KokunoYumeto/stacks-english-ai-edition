@@ -135,7 +135,10 @@ The histories were combined without flattening either input:
     `3e57820736a5a57ddb1c9fbaaf2206e455b5ee31`, tree
     `c4ce1faf96257fe11c0123ca649c9c020982aa33`; validation and build policy are
     bound by successor `c521604343534f94c7a59086c94b99712eb1d754`, tree
-    `4fe26c45da3edc493b8406824f90db06ef3df28c`.
+    `4fe26c45da3edc493b8406824f90db06ef3df28c`. The public R30 preservation
+    checkpoint is projected from source head
+    `e3def48650c66c0d65978a04f67dea88bd8b42ac`, tree
+    `62bee382516e4a06df6746c5aa61a54b2fe6622f`.
 
 The mathematical source therefore stays at the repository root while the
 complete evidence and registry system remains browsable under
@@ -185,7 +188,20 @@ linked-worktree builds produced exactly matching identities for all 26 PDFs:
 QA covers all 111 affected pages, including all 42 correction-locus pages at
 high resolution.
 
-R28 is the current published preservation tag
+R30 is the current public errata preservation checkpoint at source head
+`e3def48650c66c0d65978a04f67dea88bd8b42ac`, tree
+`62bee382516e4a06df6746c5aa61a54b2fe6622f`, and tag
+[`ai-integrated-stacks-r30-2026-08-29`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r30-2026-08-29).
+Its source, 26 PDFs, and validation evidence are preserved as six
+byte-identical assets on GitHub and Zenodo version DOI
+[`10.5281/zenodo.22166456`](https://doi.org/10.5281/zenodo.22166456), under
+concept DOI `10.5281/zenodo.22135180`, as recorded by the
+[R30 release receipt](validation/stacks-errata-a04446e-r30-release-2026-08-29.json).
+Anonymous readback matched all 178,510,756 bytes on each host across 12
+downloads with zero mismatches; the preserved PDF inventory contains 26
+artifacts, 2,572 pages, and 27,531,529 bytes.
+
+R28 remains publicly preserved as the preceding historical tag
 [`ai-integrated-stacks-r28-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r28-2026-08-28)
 at commit `efa46473cf8a73646ef1b6e32354e63ce20fd172`, tree
 `fe139f1aedc35f02dbd10e5471ecb3c7fbed62e1`. Exact-head workflow run
@@ -221,7 +237,7 @@ under the existing concept DOI `10.5281/zenodo.22135180`. The six-asset package
 is byte-identical across GitHub and Zenodo, totals 174,783,585 bytes per host,
 and is recorded by the
 [semantic release receipt](validation/ega-i-6.4-semantic-release-2026-08-29.json).
-It changes no root TeX or PDF, and R28 remains the latest errata release.
+It changes no root TeX or PDF, and R30 remains the latest errata release.
 
 ## Branch preservation
 

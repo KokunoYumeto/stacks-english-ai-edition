@@ -77,13 +77,20 @@ PDF bytes at source `c521604343534f94c7a59086c94b99712eb1d754`, tree
 `4fe26c45da3edc493b8406824f90db06ef3df28c`. Both linked-worktree builds are
 byte-for-byte reproducible. All 111 pages of affected `sites-modules.pdf` and
 `injectives.pdf` passed review, including all 42 correction-locus pages
-inspected individually at high resolution. R28 remains the latest public
-errata release at tag
-[`ai-integrated-stacks-r28-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r28-2026-08-28)
-and Zenodo version DOI
-[`10.5281/zenodo.22150671`](https://doi.org/10.5281/zenodo.22150671) until the
-R30 publication transaction completes. See the
-[historical R28 release receipt](../validation/stacks-errata-a04446e-r28-release-2026-08-28.json).
+inspected individually at high resolution. R30 is the latest public errata
+preservation checkpoint at source head
+`e3def48650c66c0d65978a04f67dea88bd8b42ac`, tree
+`62bee382516e4a06df6746c5aa61a54b2fe6622f`, and tag
+[`ai-integrated-stacks-r30-2026-08-29`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r30-2026-08-29).
+The six assets total 178,510,756 bytes on each host; all 12 anonymous GitHub and
+Zenodo downloads matched by filename, byte count, and SHA-256. Zenodo version
+DOI [`10.5281/zenodo.22166456`](https://doi.org/10.5281/zenodo.22166456) remains
+under concept DOI [`10.5281/zenodo.22135180`](https://doi.org/10.5281/zenodo.22135180).
+The release preserves the exact 26-PDF, 2,572-page, 27,531,529-byte build
+inventory. See the
+[R30 release receipt](../validation/stacks-errata-a04446e-r30-release-2026-08-29.json).
+R28 remains available as the
+[preceding historical release](../validation/stacks-errata-a04446e-r28-release-2026-08-28.json).
 
 ## Directory map
 

@@ -46,7 +46,20 @@ pages passed review, with all 42 correction-locus pages at 180 DPI. All 26 PDF i
 match exactly between the two builds. Earlier R26, R24, R22/R23, Verdier, and R21 receipts
 remain preserved as historical evidence for their exact scopes.
 
-R28 is the current public preservation release at tag
+R30 is the current public errata preservation checkpoint at source head
+`e3def48650c66c0d65978a04f67dea88bd8b42ac`, tree
+`62bee382516e4a06df6746c5aa61a54b2fe6622f`, and tag
+[`ai-integrated-stacks-r30-2026-08-29`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r30-2026-08-29).
+Its six-asset package totals 178,510,756 bytes on each of GitHub and Zenodo;
+all 12 anonymous downloads matched by filename, byte count, and SHA-256. The
+Zenodo version DOI is
+[`10.5281/zenodo.22166456`](https://doi.org/10.5281/zenodo.22166456) under
+concept DOI `10.5281/zenodo.22135180`. The package preserves 26 PDFs, 2,572
+pages, and 27,531,529 PDF bytes. The
+[R30 release receipt](validation/stacks-errata-a04446e-r30-release-2026-08-29.json)
+binds the transaction and readback.
+
+R28 remains published as the preceding historical release at tag
 [`ai-integrated-stacks-r28-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r28-2026-08-28)
 at commit `efa46473cf8a73646ef1b6e32354e63ce20fd172`, tree
 `fe139f1aedc35f02dbd10e5471ecb3c7fbed62e1`, and as Zenodo version DOI
@@ -59,7 +72,7 @@ mismatches. The commit-bound source archive is 154,766,484 bytes and contains
 [R28 release receipt](validation/stacks-errata-a04446e-r28-release-2026-08-28.json)
 binds the transaction and readback.
 
-R27 remains published as the preceding historical tag
+R27 remains published as an earlier historical tag
 [`ai-integrated-stacks-r27-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r27-2026-08-28)
 at commit `e624abadfe9e2ac1f311485c44c82d6c53df2df2`, tree
 `a2ba195c47c6cb41dca4e4ee7cb6292372e2e201`, and as Zenodo version DOI

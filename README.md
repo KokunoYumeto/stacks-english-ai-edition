@@ -22,12 +22,13 @@ machine-readable validation evidence.
 [Current R30 fixed-point build: PASS](validation/stacks-errata-a04446e-r30-build-2026-08-29.json) ·
 [Current R30 visual QA: PASS](validation/stacks-errata-a04446e-r30-visual-qa-2026-08-29.json) ·
 [Current R30 reproducibility: PASS](validation/stacks-errata-a04446e-r30-reproducibility-2026-08-29.json) ·
-[Latest errata release receipt: R28 PASS](validation/stacks-errata-a04446e-r28-release-2026-08-28.json) ·
-[Latest errata preservation release: R28](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r28-2026-08-28) ·
-[Latest errata Zenodo version: R28](https://doi.org/10.5281/zenodo.22150671) ·
+[Latest errata release receipt: R30 PASS](validation/stacks-errata-a04446e-r30-release-2026-08-29.json) ·
+[Latest errata preservation release: R30](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r30-2026-08-29) ·
+[Latest errata Zenodo version: R30](https://doi.org/10.5281/zenodo.22166456) ·
 [Latest EGA semantic checkpoint receipt: PASS](validation/ega-i-6.4-semantic-release-2026-08-29.json) ·
 [Latest EGA semantic GitHub release: I §6.4](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.4-semantic-2026-08-29) ·
 [Latest EGA semantic Zenodo version: I §6.4](https://doi.org/10.5281/zenodo.22161051) ·
+[Historical R28 release receipt: PASS](validation/stacks-errata-a04446e-r28-release-2026-08-28.json) ·
 [Historical R24 publication receipt: PASS](validation/ai-integrated-stacks-r24-publication-2026-08-28.json) ·
 [Historical R22/R23 publication receipt: PASS](validation/stacks-errata-a04446e-r22-r23-release-2026-08-27.json) ·
 [Historical Verdier publication receipt: PASS](validation/stacks-verdier-a04446e-1-2-13-r1-release-2026-08-26.json) ·
@@ -57,7 +58,7 @@ The pinned upstream baseline is
 | GAGA | Root chapter composed through r3; corpus review closed | All 126 units are classified and all 79 substantive units decided; the current unified `gaga.pdf` is 23 pages, while the sealed r3 dossier records its historical 22-page build | [r3 dossier](gaga_r3/STATUS.md) · [live chapter source](gaga.tex) |
 | FGA | Root additions composed and notation-normalized; corpus review closed | All 1,253 units and 1,612 term links are dispositioned; selected independently written additions are in the combined source; the fixed-point Moduli build is 83 pages | [Overview](fga/README.md) · [status](fga/status.md) |
 | EGA | Partial root-source composition; direct-source review active | Selected local additions are present in root TeX; the complete English discovery and diplomatic French editions remain separate read-only inputs; review is complete through EGA I §6.4.13 and continues at §6.5.1 | [EGA dossier](ega/README.md) |
-| Errata and Verdier | Root-composed and deterministically validated through R30; publicly preserved through R28 | The integrated tree contains 31 overlays / 931 stable IDs. Its R1–R30 Stacks errata subset contains 30 batches, 919 correction IDs, and 1,033 exact v2 operations; R29 updates `sites-modules.tex` and R30 updates `injectives.tex` | [Registry](ai-integrated/registry/overlays.json) · [R30 build](validation/stacks-errata-a04446e-r30-build-2026-08-29.json) · [errata evidence](ai-integrated/candidates/commons/stacks/errata/) |
+| Errata and Verdier | Root-composed, deterministically validated, and publicly preserved through R30 | The integrated tree contains 31 overlays / 931 stable IDs. Its R1–R30 Stacks errata subset contains 30 batches, 919 correction IDs, and 1,033 exact v2 operations; R29 updates `sites-modules.tex` and R30 updates `injectives.tex` | [Registry](ai-integrated/registry/overlays.json) · [R30 build](validation/stacks-errata-a04446e-r30-build-2026-08-29.json) · [R30 release](validation/stacks-errata-a04446e-r30-release-2026-08-29.json) · [errata evidence](ai-integrated/candidates/commons/stacks/errata/) |
 
 “Root-composed” means that the live top-level TeX tree changed and participates
 in the unified build. “Dossier-only” means that mappings, decisions, and
@@ -132,7 +133,21 @@ R30's 40 operations produce the 105,225-byte `injectives.tex` postimage with
 SHA-256 `BDC721593BE0B491334C707B371A2EECD1787787903A71E059721BDB66C5AC04`.
 No isolated payload replaced either cumulative source.
 
-R28 is the current public preservation release at tag
+R30 is the current public errata preservation checkpoint at source head
+`e3def48650c66c0d65978a04f67dea88bd8b42ac`, tree
+`62bee382516e4a06df6746c5aa61a54b2fe6622f`, and tag
+[`ai-integrated-stacks-r30-2026-08-29`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r30-2026-08-29).
+The same six assets total 178,510,756 bytes on each host and are preserved as
+Zenodo version DOI
+[`10.5281/zenodo.22166456`](https://doi.org/10.5281/zenodo.22166456) under
+concept DOI [`10.5281/zenodo.22135180`](https://doi.org/10.5281/zenodo.22135180).
+Anonymous readback matched all 12 GitHub and Zenodo downloads by filename,
+byte count, and SHA-256, and all three downloaded ZIPs reopened with their
+complete listings intact. The package contains the exact 26-PDF, 2,572-page,
+27,531,529-byte build inventory. See the
+[R30 release receipt](validation/stacks-errata-a04446e-r30-release-2026-08-29.json).
+
+R28 remains publicly preserved as a historical release at tag
 [`ai-integrated-stacks-r28-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r28-2026-08-28)
 at commit `efa46473cf8a73646ef1b6e32354e63ce20fd172`, tree
 `fe139f1aedc35f02dbd10e5471ecb3c7fbed62e1`, and as Zenodo version DOI
@@ -169,7 +184,7 @@ content commit `00adeb291487d04070b75bd0fd87759e3c43d3d3`, and Zenodo version
 DOI [`10.5281/zenodo.22161051`](https://doi.org/10.5281/zenodo.22161051) in the
 existing concept lineage. Its six assets total 174,783,585 bytes per host and
 passed 12-file cross-host readback. This semantic-only checkpoint changes no
-root TeX or PDF; R28 remains the latest errata release.
+root TeX or PDF; R30 remains the latest errata release.
 
 The preceding R22/R23 content release remains public at
 `3c2b49fe0d20519de4ab06951ac2cb5151b68782`, tree
