@@ -5465,6 +5465,49 @@ since $N_A = N \otimes_B {}_BB_A = N \otimes_B^\mathbf{L} {}_BB_A$
 where ${}_BB_A$ is $B$ viewed as a differential graded $(B, A)$-bimodule.
 \end{example}
 
+\begin{example}
+\label{example-two-presentations-derived-hom}
+\begin{reference}
+\cite[II, Section 11.5.1, Equation (11.5.1.7), p. 175]{cotangent}
+\end{reference}
+\begin{history}
+The cited formula compares two computations of a derived Hom after a common
+base change. The following records the induced comparison on shifted Hom
+groups; the specialized stable-normalization notation of the source is not
+needed for this formal consequence.
+\end{history}
+Let $R$ be a ring. Let $(A, \text{d})$, $(A', \text{d})$, and
+$(B, \text{d})$ be differential graded $R$-algebras, and let
+$$
+(A, \text{d}) \longrightarrow (B, \text{d})
+\quad\text{and}\quad
+(A', \text{d}) \longrightarrow (B, \text{d})
+$$
+be homomorphisms. Let $P$ be an object of $D(A, \text{d})$, let $Q$ be
+an object of $D(A', \text{d})$, and suppose we are given an isomorphism
+$$
+\alpha : P \otimes_A^\mathbf{L} B
+\xrightarrow{\ \sim\ } Q \otimes_{A'}^\mathbf{L} B
+$$
+in $D(B, \text{d})$. For every $N$ in $D(B, \text{d})$ and every
+$i \in \mathbf{Z}$ this gives an isomorphism
+$$
+\Hom_{D(A, \text{d})}(P, N_A[i])
+\xrightarrow{\ \sim\ }
+\Hom_{D(A', \text{d})}(Q, N_{A'}[i]).
+$$
+Indeed, apply Lemma \ref{lemma-tensor-hom-adjoint} to each algebra map, using
+evaluation at $1$ to identify the two resulting right adjoints with restriction
+of scalars. The source and target are then identified with
+$$
+\Hom_{D(B, \text{d})}(P \otimes_A^\mathbf{L} B, N[i])
+\quad\text{and}\quad
+\Hom_{D(B, \text{d})}(Q \otimes_{A'}^\mathbf{L} B, N[i]),
+$$
+respectively, and the desired map is composition with $\alpha^{-1}$.
+It is functorial in $N$ and compatible with shifts.
+\end{example}
+
 \begin{lemma}
 \label{lemma-tensor-with-compact-fully-faithful}
 With notation and assumptions as in Lemma \ref{lemma-tensor-hom-adjoint}.
