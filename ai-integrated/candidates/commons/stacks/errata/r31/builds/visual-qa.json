@@ -1,0 +1,195 @@
+{
+  "adverse_evidence": [
+    "The standalone PDFs are not tagged PDFs and contain no StructTreeRoot or MarkInfo; this is retained as an accessibility limitation rather than misreported as a visual failure.",
+    "The standalone candidate retains exactly the frozen authority's cross-chapter unresolved-reference and citation multisets; the reopened prose correction introduces no reference-target delta."
+  ],
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "build_receipt": {
+    "bytes": 29427,
+    "path": "builds/build-receipt.json",
+    "sha256": "D6DE0BC3345CFB64341D6FB8E5325F113A34C47C700F7DEE1962B7295F1BEF3D"
+  },
+  "candidate_id": "stacks-errata-a04446e-r31",
+  "generated_at_utc": "2026-08-29T18:42:30Z",
+  "passed": true,
+  "pdfs": [
+    {
+      "authority_control_pdf": {
+        "bytes": 864893,
+        "path": "builds/sites-modules.authority.pdf",
+        "sha256": "153AB67D3D8DFC3DB96A708F395CEA58B4E6BDD1BD41CF7794BCEAA221E5EE75"
+      },
+      "authority_link_annotations": 364,
+      "authority_malformed_link_rectangles": 0,
+      "authority_out_of_bounds_link_rectangles": 0,
+      "authority_pages": 80,
+      "bytes": 864916,
+      "contact_sheet_evidence": [
+        {
+          "bytes": 829029,
+          "file": "sites-modules_01.png",
+          "sha256": "48D5C3DDB9CCF4B5CAED355CE9401C33A22761D6002634D7E5FD1BC4AAF38374"
+        },
+        {
+          "bytes": 879223,
+          "file": "sites-modules_02.png",
+          "sha256": "3906B9D731F85A8DD0FE9EA2C8C2D6D9BD5F6C7723C93715B58550D5DCC11513"
+        },
+        {
+          "bytes": 844255,
+          "file": "sites-modules_03.png",
+          "sha256": "B789132466D9FE4D03C8EE5D06D40702DCA7EC8AA787CE4DDFECB627575B4402"
+        },
+        {
+          "bytes": 895315,
+          "file": "sites-modules_04.png",
+          "sha256": "9AC47AF291B5D41CA68BA035944486806934311ABC2F66687AFD16FB9BC22F1D"
+        },
+        {
+          "bytes": 861927,
+          "file": "sites-modules_05.png",
+          "sha256": "9A6B6B818AF00485C2E518E33031DB493B510790152CC126AB0D7BB8338C99B9"
+        }
+      ],
+      "covered_units": [
+        "MC-STK-ERR-1287"
+      ],
+      "font_records": 28,
+      "fonts_without_tounicode": [],
+      "full_page_render_count": 80,
+      "high_resolution_evidence": [
+        {
+          "bytes": 391614,
+          "file": "sites-modules_p71.png",
+          "page": 71,
+          "sha256": "12BB8747FA243D57D16AC537EF1CD6B6D33F7C75AD71CE1C0F5CEFC9597FD036"
+        }
+      ],
+      "link_annotations": 364,
+      "malformed_link_rectangles": 0,
+      "manual_findings": {
+        "blank_or_duplicate_pages": 0,
+        "broken_diagrams": 0,
+        "clipping": 0,
+        "high_resolution_pages_inspected": [
+          71
+        ],
+        "missing_glyphs": 0,
+        "overlap": 0,
+        "pages_inspected": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80
+        ],
+        "passed": true,
+        "unreadable_content": 0,
+        "warning_loci_outside_printable_area": 0
+      },
+      "mark_info_present": false,
+      "out_of_bounds_link_rectangles": 0,
+      "page_boxes_points": [
+        [
+          0.0,
+          0.0,
+          612.0,
+          792.0
+        ]
+      ],
+      "pages": 80,
+      "path": "builds/sites-modules.pdf",
+      "reflow_note": "Candidate and authority page counts are recorded above; every candidate page was inspected, including all pages directly affected by the 1 mapped sites-modules.tex operations.",
+      "sha256": "71B14B23BAA92CF97181685130777BC8B43A9AD6B25290483350AFC4E6E8CD72",
+      "stem": "sites-modules",
+      "tagged_pdf": false,
+      "unembedded_fonts": [],
+      "unsubset_fonts": []
+    }
+  ],
+  "render_protocol": {
+    "full_page_contact_sheet_review": "All rendered pages manually inspected in ordered 4-by-4 contact sheets",
+    "full_page_render": "Poppler pdftoppm PNG at 96 dpi for every candidate page",
+    "high_resolution_review": "The SyncTeX-derived correction-sensitive page inventory was rendered at 180 dpi and manually inspected",
+    "manual_review_attested": true,
+    "private_render_artifacts_published": false,
+    "private_render_manifest_bytes": 17198,
+    "private_render_manifest_sha256": "89F5143B2677E1E22F6DC33CAE59980BADB2A567C79F61C18DD0AA621ED384B3"
+  },
+  "schema": "mathematics-commons-stacks-errata-visual-qa/v1"
+}

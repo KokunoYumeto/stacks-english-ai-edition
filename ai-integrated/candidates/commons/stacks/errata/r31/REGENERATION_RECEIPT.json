@@ -1,0 +1,35 @@
+{
+  "accepted_units": 1,
+  "authority": {
+    "bytes": 312143,
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "path": "authority/source/sites-modules.tex",
+    "sha256": "B7CD92AFF9DF33F05EEAB72C4B55E8AA33F3AEBD947FC53160E87CA80DFFB245",
+    "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e"
+  },
+  "authority_bytes_mutated": false,
+  "candidate_id": "stacks-errata-a04446e-r31",
+  "excluded_duplicate_operations": 18,
+  "generated_at_utc": "2026-08-29T00:00:00Z",
+  "operation_count": 1,
+  "producer_handoff": {
+    "original_bytes": 2365,
+    "original_sha256": "118E9BBDFF36FB6C609E49611FEFBCD3469E044AB292444AC283504FAC34FD3B",
+    "public_copy": "producer/SITES_MODULES_CANON_HANDOFF.json",
+    "public_copy_bytes": 2232,
+    "public_copy_sha256": "80F53F5B96BD5C38894567647E621D9D049B260A4F04F0A30AB78A722DBCDA1D",
+    "sanitization": "Absolute local authority path removed from the public evidence copy; authority commit, source identity, byte count, and hash are retained above."
+  },
+  "payload": {
+    "bytes": 312133,
+    "path": "payload/sites-modules.tex",
+    "sha256": "1B43CA0988A0EA3E53407B1A2596919A5E47B84B1347DC1EAB13AE77E0065A27"
+  },
+  "reopened_prior_rejection": "SITES-MODULES-CH18-030",
+  "schema": "stacks-r31-sites-modules-regeneration/v1",
+  "source_packet": {
+    "bytes": 1330,
+    "path": "producer/SITES_MODULES_D_SOURCE_EMENDATIONS.json",
+    "sha256": "048104FCC94F539D4A59EAEBCF0A096F8C36E6C4939C9CC4AF3D8D08819CFB1D"
+  }
+}

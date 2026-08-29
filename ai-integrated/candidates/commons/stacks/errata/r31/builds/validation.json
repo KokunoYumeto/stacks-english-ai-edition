@@ -1,0 +1,99 @@
+{
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "candidate_id": "stacks-errata-a04446e-r31",
+  "checks": {
+    "authority_evidence": {
+      "files": 8,
+      "passed": true
+    },
+    "chapter_builds": {
+      "chapters": 1,
+      "passed": true,
+      "receipt_sha256": "D6DE0BC3345CFB64341D6FB8E5325F113A34C47C700F7DEE1962B7295F1BEF3D"
+    },
+    "deterministic_pdf_replay": {
+      "passed": true,
+      "pdfs": 2,
+      "receipt_sha256": "1573A35F68826DB94675EB40AFEC9F6FE0A4BF3E2DD4ED2799C89724B9332D8E"
+    },
+    "exact_payloads": {
+      "files": {
+        "sites-modules": {
+          "authority_bytes": 312143,
+          "authority_display_delimiters": 626,
+          "authority_sha256": "B7CD92AFF9DF33F05EEAB72C4B55E8AA33F3AEBD947FC53160E87CA80DFFB245",
+          "display_delimiter_delta": 0,
+          "operation_count": 1,
+          "payload_bytes": 312133,
+          "payload_display_delimiters": 626,
+          "payload_sha256": "1B43CA0988A0EA3E53407B1A2596919A5E47B84B1347DC1EAB13AE77E0065A27",
+          "structure": {
+            "citations": {
+              "authority": 6,
+              "candidate_only": [],
+              "payload": 6
+            },
+            "environments": {
+              "authority": 892,
+              "candidate_only": [],
+              "payload": 892
+            },
+            "labels": {
+              "authority": 247,
+              "candidate_only": [],
+              "payload": 247
+            },
+            "references": {
+              "authority": 518,
+              "candidate_only": [],
+              "payload": 518
+            },
+            "sections": {
+              "authority": 45,
+              "candidate_only": [],
+              "payload": 45
+            }
+          },
+          "xymatrix_count": 52
+        }
+      },
+      "passed": true
+    },
+    "lease_ledgers_inventory": {
+      "decisions": 5,
+      "passed": true,
+      "prospective_lease_pointer": true,
+      "rejections": 0,
+      "unresolved": 0
+    },
+    "public_hygiene": {
+      "passed": true,
+      "python_caches": 0,
+      "text_files": 53
+    },
+    "source_page_map": {
+      "operations": 1,
+      "passed": true,
+      "receipt_sha256": "F8CDDFD497501A70340D0FDF132630DD662E55FFE1338A2E271CDB76C3E90765",
+      "unique_pages": 1
+    },
+    "unit_closure": {
+      "expected": 1,
+      "manifested": 1,
+      "operation_ids": 1,
+      "operation_ids_unique": 1,
+      "passed": true,
+      "producer_aliases": 1
+    },
+    "visual_pdf_qa": {
+      "direct_units": 1,
+      "passed": true,
+      "pdfs": 1,
+      "receipt_sha256": "1D87E7C45BF927DF8923464C5FD6E37913321A5CFB1C45B309ACEF26EAE86870"
+    }
+  },
+  "generated_at_utc": "2026-08-29T18:42:04Z",
+  "passed": true,
+  "schema": "mathematics-commons-stacks-errata-validation/v1",
+  "verifier_sha256": "DC4F1CE38965E26616020479D6C958F3792BACF1969A8F0D7234B2965665BBAD"
+}

@@ -1,0 +1,190 @@
+{
+  "schema": "stacks-fr-source-emendations-v1",
+  "authority_sha256": "87E07F0373DC60CFC284E2F19078BC9BC7AB0B89C40EEF83941F6C38C765C549",
+  "emendations": [
+    {
+      "id": "FIELDS-006",
+      "line": 1081,
+      "old": "constant term",
+      "new": "leading coefficient",
+      "rationale": "In the factorization P=c product_i(x-alpha_i), c is the leading coefficient, not the constant term.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "FIELDS-007",
+      "line": 1081,
+      "old": "$\\alpha_1, \\ldots, \\alpha_n \\in k$",
+      "new": "$\\alpha_1, \\ldots, \\alpha_n \\in K$",
+      "rationale": "The surrounding paragraph fixes an algebraically closed field K and works in K[x]; lowercase k is not defined there.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "FIELDS-031",
+      "line": 1473,
+      "old": "for some,",
+      "new": "for some $i$,",
+      "rationale": "The quantified index is omitted; the induction argument drops a coefficient lambda_i that vanishes for some i.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "FIELDS-040",
+      "line": 1548,
+      "old": "has a kernel.",
+      "new": "has a nonzero kernel.",
+      "rationale": "Every linear map has a kernel; noninvertibility between equal finite dimensions implies that the kernel is nonzero.",
+      "status": "accepted_provisional_r6_MC-STK-ERR-0344_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "FIELDS-033",
+      "line": 1646,
+      "old": "Say the characteristic of $k$ is $p$. Choose",
+      "new": "If the characteristic is zero, both extensions are trivial and there is nothing to prove. Hence suppose that the characteristic of $k$ is a prime $p$. Choose",
+      "rationale": "Purely inseparable identity extensions are allowed in characteristic zero; the p-power argument applies only in positive characteristic.",
+      "status": "accepted_provisional_r6_MC-STK-ERR-0338_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "FIELDS-026",
+      "line": 1658,
+      "old": "Let $p$ be the characteristic of $k$.",
+      "new": "Let $p$ be the characteristic of $k$. If it is zero, the assertion is immediate because every purely inseparable element then lies in the base field. Hence assume it is positive.",
+      "rationale": "The proof otherwise uses p-powers when p=0; in characteristic zero all purely inseparable elements already lie in the base field.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "FIELDS-041A",
+      "line": 1731,
+      "old": "The integer $[E_{sep} : F]$",
+      "new": "The degree $[E_{sep} : F]$",
+      "rationale": "For an arbitrary algebraic extension the degree can be an infinite cardinal, as line 1746 explicitly notes.",
+      "status": "accepted_provisional_r6_MC-STK-ERR-0345_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "FIELDS-041B",
+      "line": 1733,
+      "old": "The integer $[E : E_{sep}]$",
+      "new": "The degree $[E : E_{sep}]$",
+      "rationale": "For an arbitrary algebraic extension the degree can be an infinite cardinal, as line 1746 explicitly notes.",
+      "status": "accepted_provisional_r6_MC-STK-ERR-0345_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "FIELDS-039",
+      "line": 1758,
+      "old": "a unique map $K \\to \\overline{F}$",
+      "new": "a unique $F$-embedding $K \\to \\overline{F}$",
+      "rationale": "The lemma counts Mor_F(K,overline F); the uniqueness is among embeddings fixing F, not among arbitrary set maps.",
+      "status": "accepted_provisional_r6_MC-STK-ERR-0343_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "FIELDS-034",
+      "line": 2367,
+      "old": "we get for a $K$-algebra map",
+      "new": "we get a $K$-algebra map",
+      "rationale": "The word 'for' is stray; the following display is the regular-representation K-algebra map itself.",
+      "status": "accepted_provisional_r6_MC-STK-ERR-0339_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "FIELDS-025",
+      "line": 2576,
+      "old": "$L/k$",
+      "new": "$L/K$",
+      "rationale": "The standing extension, minimal polynomial, and algebraic closure in lines 2563-2578 are all over uppercase K; lowercase k is a source typo.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "FIELDS-036",
+      "line": 2574,
+      "old": "maps $\\alpha : L \\to L$",
+      "new": "map $\\alpha : L \\to L$",
+      "rationale": "The text names one linear map alpha:L->L, so the singular noun is required.",
+      "status": "accepted_provisional_r6_MC-STK-ERR-0341_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "FIELDS-027",
+      "line": 2777,
+      "old": "over $K$",
+      "new": "over $K^G$",
+      "rationale": "Since K=K^G(alpha), the degree bounded by |G| is the degree of alpha over the fixed field K^G, not over K.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "FIELDS-032",
+      "line": 2779,
+      "old": "$K^G(\\alpha) = L$",
+      "new": "$K^G(\\alpha) = K$",
+      "rationale": "The preceding primitive-element equality is K=K^G(alpha), and G acts faithfully on K; L was only an auxiliary subfield in the earlier case.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "FIELDS-028",
+      "line": 3098,
+      "old": "$U_S(g) = \\{g' \\in G \\mid g'(s) = g(s)\\}$",
+      "new": "$U_S(g) = \\{g' \\in G \\mid g'(s) = g(s)\\text{ for all }s \\in S\\}$",
+      "rationale": "The set-builder otherwise leaves s free; the basic open neighbourhood requires agreement on every element of S.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "FIELDS-029A",
+      "line": 3305,
+      "old": "c = (\\prod\\nolimits_{i = 1, \\ldots, d} \\zeta_i) \\alpha^d",
+      "new": "c = (-1)^d(\\prod\\nolimits_{i = 1, \\ldots, d} \\zeta_i) \\alpha^d",
+      "rationale": "The constant term of the product of d factors (x-zeta_i alpha) contains (-1)^d.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "FIELDS-035",
+      "line": 3219,
+      "old": "Let $a \\in K$.",
+      "new": "Let $a \\in K^*$.",
+      "rationale": "The displayed homomorphism sends sigma to sigma(b)/b and is undefined when a=0 forces b=0.",
+      "status": "accepted_provisional_r6_MC-STK-ERR-0340_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "FIELDS-029B",
+      "line": 3309,
+      "old": "$\\alpha^d = \\zeta^{-1}c \\in L'$",
+      "new": "$\\alpha^d = (-1)^d\\zeta^{-1}c \\in L'$",
+      "rationale": "The inference must propagate the restored (-1)^d factor from the constant-term identity.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "FIELDS-030",
+      "line": 3674,
+      "old": "\\item $E = E_{sep} \\otimes_F E_{insep}$.",
+      "new": "\\item the multiplication map $E_{sep} \\otimes_F E_{insep} \\longrightarrow E$ is an isomorphism.",
+      "rationale": "The tensor product is canonically isomorphic to E via multiplication; it is not literally the same object as the ambient field.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "FIELDS-037",
+      "line": 3639,
+      "old": "composition depends on",
+      "new": "compositum depends on",
+      "rationale": "The paragraph has just defined the field-theoretic compositum and uses that noun again in the following lines; 'composition' is a typo.",
+      "status": "accepted_provisional_r6_MC-STK-ERR-0342_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "FIELDS-012",
+      "line": 732,
+      "old": "product and quotient of $\\alpha$ and $\\beta$.",
+      "new": "product and, when $\\beta \\neq 0$, the quotient $\\alpha/\\beta$.",
+      "rationale": "Division by beta is undefined when beta is zero; subfield closure requires quotient closure only for a nonzero denominator.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "FIELDS-021",
+      "line": 1853,
+      "old": "$M/E_i/F$, $i \\in I$ be subextensions with",
+      "new": "$M/E_i/F$, $i \\in I$ be a nonempty collection of subextensions with",
+      "rationale": "For an empty index set the displayed intersection has no stated ambient-set convention and need not denote the asserted normal subextension.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "FIELDS-023",
+      "line": 2240,
+      "old": "The conditions imply that",
+      "new": "If $A$ is trivial there is nothing to prove. Suppose from now on that $A$ is nontrivial. The conditions imply that",
+      "rationale": "The invariant-factor decomposition has r=0 for the trivial group; the subsequent argument that r=1 applies only in the nontrivial case.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    }
+  ]
+}

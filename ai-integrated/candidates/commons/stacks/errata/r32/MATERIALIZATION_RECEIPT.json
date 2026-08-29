@@ -1,0 +1,196 @@
+{
+  "candidate_id": "stacks-errata-a04446e-r32",
+  "constraints": {
+    "authority_bytes_mutated": false,
+    "generated_source_composed": false,
+    "generated_source_pushed": false,
+    "registry_admission_recorded_here": false
+  },
+  "excluded": [
+    "Rejected ALGEBRA-007 is not present.",
+    "No new semantic adjudication is claimed.",
+    "No generated Stacks source branch was composed or pushed."
+  ],
+  "generator": {
+    "path": "regenerate_r32.py",
+    "sha256": "EAC3DB3CF76970CDBC73F4237F13B1AF7DF86A945C931CB1B7C5EF066940ACD0"
+  },
+  "independent_review": {
+    "path": "replay/independent-review.json",
+    "sha256": "0152368F81690A5AF8E185D2DEBABCD0FDC7D14E078024C409469208830BFFB8"
+  },
+  "operations": {
+    "apply_order": "descending_start_byte_per_source",
+    "count": 125,
+    "operation_spec": {
+      "path": "operation-spec.json",
+      "sha256": "5A59BBA91E2B6B29D03A3CCB91A3F16BA641925BEB2CCE688D8650274081495B"
+    }
+  },
+  "passed": true,
+  "recorded_at_utc": "2026-08-29T20:50:00Z",
+  "registry_pre_admission": {
+    "bytes": 52664,
+    "last_overlay": "stacks-errata-a04446e-r31",
+    "passed": true,
+    "path": "registry/overlays.json",
+    "r32_absent": true,
+    "sha256": "3BD8D9134C8436E8397CC2BF46456B6891B40B9A11C51C8E0D42293781377709",
+    "stable_id_collisions": 0
+  },
+  "result": "PASS",
+  "schema": "mathematics-commons-stacks-errata-materialization-receipt/v1",
+  "scope": "materialization_of_prior_accepted_unmaterialized_units",
+  "source_map": {
+    "path": "source-map.jsonl",
+    "sha256": "C3F08D65103C47ACFD503933114321611D8C1A2A9993F966AA5F03B155AA6F22"
+  },
+  "source_validation": {
+    "path": "source-validation.json",
+    "sha256": "C1579C02DF0146C9F06EC324AFCC914FA3E268720C4BFEB9A2EB53BA5A476997"
+  },
+  "stable_unit_manifest": {
+    "path": "stable-units.json",
+    "sha256": "2402F62A6BDB520549F0A3F129D46BF2B66F815948E35499DB885346F3094EA3"
+  },
+  "stable_units": {
+    "count": 103,
+    "historical_ranges": [
+      "MC-STK-ERR-0338..MC-STK-ERR-0345",
+      "MC-STK-ERR-0396",
+      "MC-STK-ERR-0399..MC-STK-ERR-0492"
+    ],
+    "ids": [
+      "MC-STK-ERR-0338",
+      "MC-STK-ERR-0339",
+      "MC-STK-ERR-0340",
+      "MC-STK-ERR-0341",
+      "MC-STK-ERR-0342",
+      "MC-STK-ERR-0343",
+      "MC-STK-ERR-0344",
+      "MC-STK-ERR-0345",
+      "MC-STK-ERR-0396",
+      "MC-STK-ERR-0399",
+      "MC-STK-ERR-0400",
+      "MC-STK-ERR-0401",
+      "MC-STK-ERR-0402",
+      "MC-STK-ERR-0403",
+      "MC-STK-ERR-0404",
+      "MC-STK-ERR-0405",
+      "MC-STK-ERR-0406",
+      "MC-STK-ERR-0407",
+      "MC-STK-ERR-0408",
+      "MC-STK-ERR-0409",
+      "MC-STK-ERR-0410",
+      "MC-STK-ERR-0411",
+      "MC-STK-ERR-0412",
+      "MC-STK-ERR-0413",
+      "MC-STK-ERR-0414",
+      "MC-STK-ERR-0415",
+      "MC-STK-ERR-0416",
+      "MC-STK-ERR-0417",
+      "MC-STK-ERR-0418",
+      "MC-STK-ERR-0419",
+      "MC-STK-ERR-0420",
+      "MC-STK-ERR-0421",
+      "MC-STK-ERR-0422",
+      "MC-STK-ERR-0423",
+      "MC-STK-ERR-0424",
+      "MC-STK-ERR-0425",
+      "MC-STK-ERR-0426",
+      "MC-STK-ERR-0427",
+      "MC-STK-ERR-0428",
+      "MC-STK-ERR-0429",
+      "MC-STK-ERR-0430",
+      "MC-STK-ERR-0431",
+      "MC-STK-ERR-0432",
+      "MC-STK-ERR-0433",
+      "MC-STK-ERR-0434",
+      "MC-STK-ERR-0435",
+      "MC-STK-ERR-0436",
+      "MC-STK-ERR-0437",
+      "MC-STK-ERR-0438",
+      "MC-STK-ERR-0439",
+      "MC-STK-ERR-0440",
+      "MC-STK-ERR-0441",
+      "MC-STK-ERR-0442",
+      "MC-STK-ERR-0443",
+      "MC-STK-ERR-0444",
+      "MC-STK-ERR-0445",
+      "MC-STK-ERR-0446",
+      "MC-STK-ERR-0447",
+      "MC-STK-ERR-0448",
+      "MC-STK-ERR-0449",
+      "MC-STK-ERR-0450",
+      "MC-STK-ERR-0451",
+      "MC-STK-ERR-0452",
+      "MC-STK-ERR-0453",
+      "MC-STK-ERR-0454",
+      "MC-STK-ERR-0455",
+      "MC-STK-ERR-0456",
+      "MC-STK-ERR-0457",
+      "MC-STK-ERR-0458",
+      "MC-STK-ERR-0459",
+      "MC-STK-ERR-0460",
+      "MC-STK-ERR-0461",
+      "MC-STK-ERR-0462",
+      "MC-STK-ERR-0463",
+      "MC-STK-ERR-0464",
+      "MC-STK-ERR-0465",
+      "MC-STK-ERR-0466",
+      "MC-STK-ERR-0467",
+      "MC-STK-ERR-0468",
+      "MC-STK-ERR-0469",
+      "MC-STK-ERR-0470",
+      "MC-STK-ERR-0471",
+      "MC-STK-ERR-0472",
+      "MC-STK-ERR-0473",
+      "MC-STK-ERR-0474",
+      "MC-STK-ERR-0475",
+      "MC-STK-ERR-0476",
+      "MC-STK-ERR-0477",
+      "MC-STK-ERR-0478",
+      "MC-STK-ERR-0479",
+      "MC-STK-ERR-0480",
+      "MC-STK-ERR-0481",
+      "MC-STK-ERR-0482",
+      "MC-STK-ERR-0483",
+      "MC-STK-ERR-0484",
+      "MC-STK-ERR-0485",
+      "MC-STK-ERR-0486",
+      "MC-STK-ERR-0487",
+      "MC-STK-ERR-0488",
+      "MC-STK-ERR-0489",
+      "MC-STK-ERR-0490",
+      "MC-STK-ERR-0491",
+      "MC-STK-ERR-0492"
+    ]
+  },
+  "stems": {
+    "algebra.tex": {
+      "authority_bytes": 1771230,
+      "authority_sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3",
+      "operations": 115,
+      "payload_bytes": 1771567,
+      "payload_sha256": "7A873060EBEB4CC91D30B973B94D1427C7DFD3D71532247F8AFADF2842E902A1"
+    },
+    "categories.tex": {
+      "authority_bytes": 350957,
+      "authority_sha256": "62F7611AF4C3FEEBD041DB4728B42C7112004CFBB9FA5ECB643C6F5D90DB3F25",
+      "operations": 1,
+      "payload_bytes": 350945,
+      "payload_sha256": "DCDD502B5EF1644C2DD218013B3A405310977D520DE8D6100BAB9E484C076C9C"
+    },
+    "fields.tex": {
+      "authority_bytes": 144442,
+      "authority_sha256": "87E07F0373DC60CFC284E2F19078BC9BC7AB0B89C40EEF83941F6C38C765C549",
+      "operations": 9,
+      "payload_bytes": 144567,
+      "payload_sha256": "0B263DFE4E10EAAE84A317703CA5DE47CED45AAD67518726B06CAF340DD4D0FA"
+    }
+  },
+  "verifier": {
+    "path": "verify_r32.py",
+    "sha256": "7ACE9ABFBAFEBED6E3916E2B28E3A717C91BD550E7FD68172F3FFCE02B9EC887"
+  }
+}

@@ -1,0 +1,462 @@
+{
+  "schema": "stacks-fr-source-emendations-v1",
+  "authority_sha256": "62F7611AF4C3FEEBD041DB4728B42C7112004CFBB9FA5ECB643C6F5D90DB3F25",
+  "emendations": [
+    {
+      "id": "CATEGORIES-001",
+      "line": 7007,
+      "old": "$g \\circ f$",
+      "new": "$f \\circ g$",
+      "rationale": "For g:W->V and f:V->U the typed composite W->U is f composed with g.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-002",
+      "line": 7048,
+      "old": "\\alpha_{f, g}",
+      "new": "\\alpha_{g, f}",
+      "rationale": "The defining pseudofunctor datum is alpha_{g,f}:(f composed g)^* -> g^* composed f^*.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-003",
+      "line": 7427,
+      "old": "$I_\\mathcal{S} \\to \\mathcal{S}",
+      "new": "$\\mathcal{I}_\\mathcal{S} \\to \\mathcal{S}",
+      "rationale": "The inertia category is defined and used throughout as mathcal{I}_mathcal{S}.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-004",
+      "line": 7623,
+      "old": "$d \\to b \\circ c$",
+      "new": "$d \\to c \\circ b$",
+      "rationale": "The preceding construction defines c composed with b; b composed with c is ill-typed.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-005",
+      "line": 9148,
+      "old": "1 \\circ (a \\otimes b) \\circ \\circ 1^{-1}",
+      "new": "1 \\circ (a \\otimes b) \\circ 1^{-1}",
+      "rationale": "The duplicated composition operator is syntactically meaningless.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-006",
+      "line": 9482,
+      "old": "$\\otimes : \\mathcal{C} \\otimes \\mathcal{C} \\to \\mathcal{C}$",
+      "new": "$\\otimes : \\mathcal{C} \\times \\mathcal{C} \\to \\mathcal{C}$",
+      "rationale": "The tensor bifunctor is defined on the categorical product C times C.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-007A",
+      "line": 8843,
+      "old": "$\\mathcal{C}/U \\times \\mathcal{C}/V = \\mathcal{C}/U \\times V$",
+      "new": "$\\mathcal{C}/U \\times \\mathcal{C}/V = \\mathcal{C}/(U \\times V)$",
+      "rationale": "The product of the representable slice categories is represented by U times V.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-007B",
+      "line": 8847,
+      "old": "(\\mathcal{C}/U \\times V)",
+      "new": "(\\mathcal{C}/(U \\times V))",
+      "rationale": "The fibre-product diagram must use the corrected representable slice category.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-007C",
+      "line": 8852,
+      "old": "\\mathcal{C}/U \\times V \\ar[r]^{(G, G')}",
+      "new": "\\mathcal{C}/(U \\times V) \\ar[r]^{(G, G')}",
+      "rationale": "The lower-left object must agree with the corrected representable slice category.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-013",
+      "line": 3072,
+      "old": "X_{m(n, n')} \\ar[rr] \\ar[d]",
+      "new": "X_{m(n', n)} \\ar[rr] \\ar[d]",
+      "rationale": "Only m(n',n) is defined for n' >= n and it is chosen to dominate m(n') and m(n).",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-014",
+      "line": 3076,
+      "old": "$\\max_{k, l \\leq n}\\{m(n, k), m(k, l)\\}$",
+      "new": "$\\max_{l \\leq k \\leq n}\\{m(n, k), m(k, l)\\}$",
+      "rationale": "The source has chosen m(k,l) only when k >= l; the unrestricted rectangular range invokes undefined terms.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-015",
+      "line": 3094,
+      "old": "two pairs $(m_1, a_1)$ and $(m_1, a_2)$",
+      "new": "two pairs $(m_1, a_1)$ and $(m_2, a_2)$",
+      "rationale": "The next line compares a common refinement m' with both m_1 and m_2, so the second representative must carry m_2.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-016A",
+      "line": 6615,
+      "old": "$g \\circ h = p(\\psi)$",
+      "new": "$g \\circ h = p'(\\psi)$",
+      "rationale": "The displayed fibre product is formed in C/U; both sides of the compatibility equality must be morphisms there.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-016B",
+      "line": 6618,
+      "old": "$p'(\\psi') : W/U \\to V/U$",
+      "new": "$p'(\\psi') : W/U \\to V'/U$",
+      "rationale": "Since psi':z->x', its image under p' has codomain p'(x')=V'/U.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-016C",
+      "line": 6619,
+      "old": "map $W \\to V$ is $h$",
+      "new": "map $W \\to V'$ is the underlying map of $h$",
+      "rationale": "The slice morphism h:W/U->V'/U has underlying map W->V'.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-016D",
+      "line": 6628,
+      "old": "with $p(\\varphi) = g$. By the same argument as above it follows",
+      "new": "with $p(\\varphi)$ equal to the underlying map of $g$. By the same argument as above it follows",
+      "rationale": "The functor p lands in C while g is a morphism in C/U; equality is meaningful only after forgetting to the underlying map.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-025",
+      "line": 9043,
+      "old": "r_{Z \\otimes \\mathbf{1}} \\otimes \\text{id}_\\mathbf{1} \\otimes \\text{id}_Y",
+      "new": "r_{Z \\otimes \\mathbf{1}} \\otimes \\text{id}_\\mathbf{1} \\otimes \\text{id}_W",
+      "rationale": "After setting Y=1 tensor W, the right-hand composite must end with id_W; id_Y introduces an extra tensor factor and gives the wrong domain.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-026",
+      "line": 7188,
+      "old": "\\ar@{}[u]^{above}",
+      "new": "\\ar@{}[u]^{\\text{above}}",
+      "rationale": "The empty xymatrix arrow is only a positioning device for reader-facing prose; without \\text, 'above' is incorrectly typeset as a mathematical product-like identifier.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-027",
+      "line": 6618,
+      "old": "$p(\\psi') = h$",
+      "new": "$p(\\psi')$ equal to the underlying map of $h$",
+      "rationale": "The functor p lands in C while h is a morphism of the slice C/U; strong cartesianness uses the underlying map W->V', after which p'(psi')=h is proved in the slice.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-028A",
+      "line": 6837,
+      "old": "I_{\\mathcal{S}/\\mathcal{S}'}",
+      "new": "\\mathcal{I}_{\\mathcal{S}/\\mathcal{S}'}",
+      "rationale": "The displayed functor has the relative inertia category defined at lines 6778-6786 as its source.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-028B",
+      "line": 6854,
+      "old": "I_{\\mathcal{S}/\\mathcal{S}'}",
+      "new": "\\mathcal{I}_{\\mathcal{S}/\\mathcal{S}'}",
+      "rationale": "The quasi-inverse displayed functor has the relative inertia category as its target.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-028C",
+      "line": 6861,
+      "old": "I_{\\mathcal{S}/\\mathcal{S}'}",
+      "new": "\\mathcal{I}_{\\mathcal{S}/\\mathcal{S}'}",
+      "rationale": "The endofunctor induced by the equivalence and quasi-inverse acts on that same relative inertia category.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-029A",
+      "line": 3148,
+      "old": "\\item there exists an $i$ in $\\mathcal{I}$ and a morphism $X \\to M_i$",
+      "new": "\\item there exist an object $X$ of $\\mathcal{C}$, an $i$ in $\\mathcal{I}$, and a morphism $X \\to M_i$",
+      "rationale": "Condition (4) is an independent enumerated assertion; unlike conditions (2) and (3), it otherwise has no binder for X.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-029B",
+      "line": 3210,
+      "old": "\\item there exists an $i$ in $\\mathcal{I}$ and a morphism $M_i \\to X$",
+      "new": "\\item there exist an object $X$ of $\\mathcal{C}$, an $i$ in $\\mathcal{I}$, and a morphism $M_i \\to X$",
+      "rationale": "The dual condition (4) likewise needs its own existential binder for X to be a closed assertion.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-035",
+      "line": 8039,
+      "old": "x \\in \\Ob(F(U))",
+      "new": "x \\in F(U)",
+      "rationale": "The presheaf F is set-valued, so F(U) is a set rather than a category; it is the underlying set of the discrete fibre category constructed here.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-042A",
+      "line": 1225,
+      "old": "\\item $f$ is a monomorphism if and only if $X$ is the fibre",
+      "new": "\\item $f$ is a monomorphism if and only if the diagonal",
+      "rationale": "The criterion depends on the canonical diagonal map rather than an unspecified object identification.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-042B",
+      "line": 1226,
+      "old": "product $X \\times_Y X$, and",
+      "new": "$X \\to X \\times_Y X$ is an isomorphism, and",
+      "rationale": "A morphism is monic exactly when its canonical diagonal is an isomorphism.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-042C",
+      "line": 1227,
+      "old": "\\item $f$ is an epimorphism if and only if $Y$ is the pushout",
+      "new": "\\item $f$ is an epimorphism if and only if the codiagonal",
+      "rationale": "The dual criterion depends on the canonical codiagonal map.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-042D",
+      "line": 1228,
+      "old": "$Y \\amalg_X Y$.",
+      "new": "$Y \\amalg_X Y \\to Y$ is an isomorphism.",
+      "rationale": "A morphism is epic exactly when the canonical codiagonal from the pushout is an isomorphism.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-042E",
+      "line": 1247,
+      "old": "Suppose that $X \\times_Y X \\cong X $. The diagram",
+      "new": "Suppose that the diagonal $X \\to X \\times_Y X$ is an isomorphism. The diagram",
+      "rationale": "An abstract isomorphism of the objects is insufficient; the proof needs the canonical diagonal to identify the projections with the identities.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-042F",
+      "line": 1263,
+      "old": "pushout $Y\\amalg_X Y = Y$.",
+      "new": "codiagonal $Y\\amalg_X Y \\to Y$.",
+      "rationale": "The dual proof uses the canonical codiagonal rather than a bare object equality.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-043",
+      "line": 5220,
+      "old": "$x, y \\in \\Ob(C)$",
+      "new": "$x, y \\in \\Ob(\\mathcal{C})$",
+      "rationale": "The named 2-category and the adjacent Hom category both use mathcal C; plain C is undefined here.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-044",
+      "line": 5258,
+      "old": "$x\\in \\Ob(A)$",
+      "new": "$x\\in \\Ob(\\mathcal{A})$",
+      "rationale": "The pseudofunctor source category is mathcal A throughout the definition; plain A is undefined.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-045",
+      "line": 5437,
+      "old": "(w', \\alpha', \\beta', \\phi')$",
+      "new": "(w', a', b', \\phi')$",
+      "rationale": "Objects have components (w,a,b,phi); alpha' and beta' are components of the 1-morphism whose target is being named.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-046A",
+      "line": 1946,
+      "old": "$qy_i : W \\to M(F(y_i))$ and $qz_i : W \\to M(F(z_i))$",
+      "new": "$q_{y_i} : W \\to M(F(y_i))$ and $q_{z_i} : W \\to M(F(z_i))$",
+      "rationale": "These are cone components indexed by the objects y_i and z_i of the index category.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-046B",
+      "line": 1953,
+      "old": "$qy_i = qz_i$",
+      "new": "$q_{y_i} = q_{z_i}$",
+      "rationale": "The equality compares the two indexed cone components.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-046C",
+      "line": 1955,
+      "old": "$q_{s(j)} = qy_{s(j)}$ and $q_{t(j)} = qz_{t(j)}$",
+      "new": "$q_{s(j)} = q_{y_{s(j)}}$ and $q_{t(j)} = q_{z_{t(j)}}$",
+      "rationale": "The compatibility statement must retain the object indices y_{s(j)} and z_{t(j)} as subscripts of q.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-047",
+      "line": 5934,
+      "old": "\\mathcal{C} \\ar[r]^-{\\Delta_{\\mathcal{C}/\\mathcal{D}}} \\ar[r] &",
+      "new": "\\mathcal{C} \\ar[r]^-{\\Delta_{\\mathcal{C}/\\mathcal{D}}} &",
+      "rationale": "The 2-fibre-product square has one horizontal diagonal functor; the second arrow command duplicates that edge.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-048A",
+      "line": 5741,
+      "old": "via $\\alpha_X$",
+      "new": "via $\\beta_X$",
+      "rationale": "The natural transformation beta:M composed H -> F composed L is indexed by X and identifies M(H(X)) with F(L(X)).",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-048B",
+      "line": 5742,
+      "old": "via $\\beta_Y$",
+      "new": "via $\\alpha_Y$",
+      "rationale": "The natural transformation alpha:G composed K -> M composed I is indexed by Y and identifies M(I(Y)) with G(K(Y)).",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-049",
+      "line": 2388,
+      "old": "$i = i_0, i_1, \\ldots, i_n = i'$",
+      "new": "$i = i_0, i_1, \\ldots, i_{2n} = i'$",
+      "rationale": "The displayed zigzag and the element family run through all indices i_0 to i_{2n}; the induction parameter n counts two-arrow spans.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-050",
+      "line": 3528,
+      "old": "u(X) \\xrightarrow{u(\\eta_X)} u(v(u(X))",
+      "new": "u(X) \\xrightarrow{u(\\eta_X)} u(v(u(X)))",
+      "rationale": "Applying u to the unit target v(u(X)) gives u(v(u(X))); the outer function application is missing its closing parenthesis.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-051",
+      "line": 3817,
+      "old": "$Y = \\colim_{j \\in J} Y_i$",
+      "new": "$Y = \\colim_{j \\in J} Y_j$",
+      "rationale": "The second filtered-colimit diagram is indexed by j in J; the following sentence and square use Y_j, while i indexes the independent presentation of X.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-052",
+      "line": 852,
+      "old": "uniqueness of delta.",
+      "new": "uniqueness of $\\delta$.",
+      "rationale": "The sentence refers to the previously constructed morphism delta; the immediately following sentence typesets the same mathematical identifier as $\\delta$.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-053",
+      "line": 2012,
+      "old": "$M'(f) = M(f) \\circ \\text{pr}_1$",
+      "new": "$M'(f') = M(f) \\circ \\text{pr}_1$",
+      "rationale": "The morphism in the source category of M' is f', while f is its corresponding morphism in I and is the argument of M on the right-hand side.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-055",
+      "line": 2801,
+      "old": "generated subcategory of $\\mathcal{I}$ which has $i_\\infty$ as",
+      "new": "generated subcategory of $\\mathcal{I}\\times\\omega$ which has $i_\\infty$ as",
+      "rationale": "The preceding construction defines F and F+ entirely inside I times omega, and the reduction then uses the cofinal projection from I times omega to I.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-056",
+      "line": 7831,
+      "old": "to the category of groupoids, see",
+      "new": "to the $2$-category of groupoids, see",
+      "rationale": "The cited definition supplies functorial coherence into a 2-category, used explicitly below, and the same datum is restated correctly at lines 7884-7885.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-057A",
+      "line": 7988,
+      "old": "is the sub $2$-category of the category of categories fibred in groupoids",
+      "new": "is the sub $2$-category of the $2$-category of categories fibred in groupoids",
+      "rationale": "The cited ambient construction is explicitly a 2-category with 1- and 2-morphisms; the stated sub-2-category is taken inside it.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-057B",
+      "line": 8189,
+      "old": "is the sub $2$-category of the category of categories fibred in groupoids",
+      "new": "is the sub $2$-category of the $2$-category of categories fibred in groupoids",
+      "rationale": "This is the setoid analogue of CATEGORIES-057A and cites the same ambient 2-category; its 1- and 2-morphisms must remain present.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-058",
+      "line": 8449,
+      "old": "For the second, suppose that $j' : \\mathcal{S} \\to \\mathcal{C}/X'$ is",
+      "new": "For the second, suppose that $(X', j')$ is",
+      "rationale": "The pair uniquely determined in the lemma is (X,j); the second pair is (X',j'), while j' alone is only its equivalence component.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-059",
+      "line": 5529,
+      "old": "a final object in the category of 2-commutative diagrams",
+      "new": "a final object in the $2$-category of $2$-commutative diagrams",
+      "rationale": "The construction immediately above is a 2-category and the cited final-object definition uses the (2,1)-categorical universal property including 2-morphisms.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-060",
+      "line": 1997,
+      "old": "\\ldots x_n",
+      "new": "\\ldots, x_n",
+      "rationale": "The displayed finite object list is comma-separated; the final ellipsis requires the same delimiter before x_n.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-061A",
+      "line": 5635,
+      "old": "from $(W, a, b, t)$ to",
+      "new": "from $(\\mathcal{W}, a, b, t)$ to",
+      "rationale": "The first component is the category mathcal W, the common domain of a and b; plain W denotes an individual object of that category.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-061B",
+      "line": 5641,
+      "old": "(W, a, b, t) \\to",
+      "new": "(\\mathcal{W}, a, b, t) \\to",
+      "rationale": "The second comparison morphism has the same source object of the 2-category, whose category component is mathcal W.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-064",
+      "line": 2850,
+      "old": "finite directed set $(I, \\geq)$",
+      "new": "finite directed set $(I, \\leq)$",
+      "rationale": "Under the chapter's convention arrows follow the relation less-than-or-equal; a finite directed poset then has a greatest terminal object whose value computes the colimit.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-065",
+      "line": 661,
+      "old": "amalgamated sum",
+      "new": "sum",
+      "rationale": "The definition is the binary coproduct with no common source; standard terminology reserves amalgamated sum for the later pushout construction. The canon accepted this precision edit as MC-STK-ERR-0396.",
+      "status": "accepted_as_MC-STK-ERR-0396_and_emended_in_french_target"
+    },
+    {
+      "id": "CATEGORIES-066",
+      "line": 385,
+      "old": "F\\circ j(\\phi)",
+      "new": "F(j(\\phi))",
+      "rationale": "The vertical arrow is the image under F of the morphism j(phi), exactly as characterized by F(varphi)=phi' in the construction above.",
+      "status": "reported_to_cjk1_2026-08-22_and_emended_in_french_target"
+    }
+  ]
+}

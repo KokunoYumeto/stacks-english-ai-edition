@@ -1,0 +1,142 @@
+{
+  "$schema": "../../../../../schemas/candidate-manifest.schema.json",
+  "builds": [
+    {
+      "path": "candidate.config.json",
+      "sha256": "4916BA692F76347C3C1D0A9133399880C9F26D5CFC9CF7CED40AE90CDB444AF2"
+    },
+    {
+      "path": "LEASE.json",
+      "sha256": "731ED2DE95F7AE2FD7C9646E918029A80A01CAA0D5C115205E9B12A7086F9E01"
+    },
+    {
+      "path": "operation-spec.json",
+      "sha256": "5A59BBA91E2B6B29D03A3CCB91A3F16BA641925BEB2CCE688D8650274081495B"
+    },
+    {
+      "path": "payload/fields.tex",
+      "sha256": "0B263DFE4E10EAAE84A317703CA5DE47CED45AAD67518726B06CAF340DD4D0FA"
+    },
+    {
+      "path": "payload/categories.tex",
+      "sha256": "DCDD502B5EF1644C2DD218013B3A405310977D520DE8D6100BAB9E484C076C9C"
+    },
+    {
+      "path": "payload/algebra.tex",
+      "sha256": "7A873060EBEB4CC91D30B973B94D1427C7DFD3D71532247F8AFADF2842E902A1"
+    },
+    {
+      "path": "source-validation.json",
+      "sha256": "C1579C02DF0146C9F06EC324AFCC914FA3E268720C4BFEB9A2EB53BA5A476997"
+    },
+    {
+      "path": "regenerate_r32.py",
+      "sha256": "EAC3DB3CF76970CDBC73F4237F13B1AF7DF86A945C931CB1B7C5EF066940ACD0"
+    },
+    {
+      "path": "verify_r32.py",
+      "sha256": "7ACE9ABFBAFEBED6E3916E2B28E3A717C91BD550E7FD68172F3FFCE02B9EC887"
+    },
+    {
+      "path": "build_manifest.py",
+      "sha256": "4317E9CA83F294B3742A6C03CA328794E76BCD303788BBA5BACABAEB44EF5A01"
+    },
+    {
+      "path": "check-manifest.py",
+      "sha256": "CA4A9053E7E4B1B7FCC62CD10DB23D22F1929B157D00E56BF38034ED9C5E0411"
+    },
+    {
+      "path": "replay/independent-review.json",
+      "sha256": "0152368F81690A5AF8E185D2DEBABCD0FDC7D14E078024C409469208830BFFB8"
+    },
+    {
+      "path": "MATERIALIZATION_RECEIPT.json",
+      "sha256": "CBB4949E214D5589513D019A2D0AFE27FB9EBDA2CB7BFA7674D94AF65B5FB2A1"
+    }
+  ],
+  "candidate_id": "stacks-errata-a04446e-r32",
+  "decision_ledger": {
+    "path": "decisions.jsonl",
+    "sha256": "270D4C27442A038B01AC3340539B18B57EB26075F25EB37A0CC0E7B412DCDA48"
+  },
+  "formula_diagram_inventory": {
+    "path": "formula-diagram-inventory.json",
+    "sha256": "7B625D614EC7ADE8340B377BF5A08F820C753021A5E8D050429B26B95B51EE14"
+  },
+  "generated_at_utc": "2026-08-29T20:50:00Z",
+  "independent_replay": "passed",
+  "lease_id": "stacks-lease-000036-errata-r32",
+  "namespace": "commons/stacks/errata/r32",
+  "rejection_ledger": {
+    "path": "rejections.jsonl",
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  "review_state": "performed",
+  "rights_state": "The authority and modified payload retain the Stacks Project GNU Free Documentation License 1.2; metadata and receipts do not relicense upstream content. This is an independently maintained AI-produced English correction overlay with no Stacks Project review, approval, affiliation, or endorsement. Legal certification was not performed.",
+  "schema": "mathematics-commons-stacks-candidate-manifest/v1",
+  "source_authorities": [
+    {
+      "path": "authority/COPYING",
+      "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"
+    },
+    {
+      "path": "authority/upstream.lock.json",
+      "sha256": "B195ECC83AB0F32C574A60D1FDBA9B0DA4D35B04E0DF7CB106DC9C0FDAD99C0D"
+    },
+    {
+      "path": "authority/source/fields.tex",
+      "sha256": "87E07F0373DC60CFC284E2F19078BC9BC7AB0B89C40EEF83941F6C38C765C549"
+    },
+    {
+      "path": "authority/source/categories.tex",
+      "sha256": "62F7611AF4C3FEEBD041DB4728B42C7112004CFBB9FA5ECB643C6F5D90DB3F25"
+    },
+    {
+      "path": "authority/source/algebra.tex",
+      "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+    },
+    {
+      "path": "authority/producer/accepted-unmaterialized.csv",
+      "sha256": "6824C515BD53CF28DE262765744C4DB8520B7118CCD252854240355B679A857B"
+    },
+    {
+      "path": "authority/producer/FIELDS_SOURCE_EMENDATIONS.json",
+      "sha256": "7F98C64A2400709FF47C569FDCC52B779EAC31B118DA589D3551CB1A02A6C80D"
+    },
+    {
+      "path": "authority/producer/CATEGORIES_SOURCE_EMENDATIONS.json",
+      "sha256": "182AA927D5AA988FAEF42744C720F03E38BDBB0007BBD9721E034F186C291357"
+    }
+  ],
+  "source_closure": {
+    "complete": true,
+    "enumerated": true,
+    "expected_units": 103,
+    "manifested_units": 103
+  },
+  "source_map": {
+    "path": "source-map.jsonl",
+    "sha256": "C3F08D65103C47ACFD503933114321611D8C1A2A9993F966AA5F03B155AA6F22"
+  },
+  "stable_unit_manifest": {
+    "path": "stable-units.json",
+    "sha256": "2402F62A6BDB520549F0A3F129D46BF2B66F815948E35499DB885346F3094EA3"
+  },
+  "stop_conditions": [
+    "Do not mutate the literal stacks-project master mirror.",
+    "Do not apply these corrections silently to canonical translation source or PDFs.",
+    "Do not compose or push the generated Stacks source branch from this registry materialization lane.",
+    "Any change to reviewed authority, stable units, operation specification, payload, or independent replay bytes invalidates this manifest and requires a fresh deterministic replay."
+  ],
+  "unresolved_defects": [
+    "R32 closes a registry materialization gap for 103 already-accepted historical stable IDs; it performs no new adjudication and preserves their nonconsecutive numbering.",
+    "Cumulative English-source composition and affected-chapter build validation are intentionally outside this overlay transaction and remain assigned to the separate composer.",
+    "Canonical translations preserve their pinned authority unless a locale-side emendation is separately bound; this corrected English overlay is not silently copied into them."
+  ],
+  "upstream": {
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "lock": "upstream/stacks.lock.json",
+    "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e"
+  },
+  "writer_task": "01a0256d-5693-77c1-96b2-cf37101e0c6c"
+}
