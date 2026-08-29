@@ -2086,6 +2086,13 @@ def main(argv: list[str] | None = None) -> int:
             normalized_overlay["successor_lease_event_id"] = overlay.get(
                 "successor_lease_event"
             )
+        elif overlay.get("topology") == REPAIRED_CANDIDATE_TOPOLOGY:
+            normalized_overlay["lease_event_id"] = overlay.get(
+                "lease_release_event"
+            )
+            normalized_overlay["successor_lease_event_id"] = overlay.get(
+                "successor_lease_event"
+            )
         expected_build_new_overlays.append(normalized_overlay)
     expected_build_binding = {
         "schema": "unofficial-ai-integrated-stacks-composition/v3",
