@@ -105,6 +105,7 @@ EGA_SEMANTIC_PUBLICATION_METADATA_PATHS = frozenset(
         "PROVENANCE.md",
         "validation/README.md",
         "tools/build_errata_preservation_package.py",
+        "tools/publish_ega_semantic_zenodo.py",
     }
 )
 
