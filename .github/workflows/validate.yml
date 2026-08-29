@@ -67,19 +67,19 @@ jobs:
           entries = overlays['registered_entries']
           assert overlays['schema'] == 'mathematics-commons-stacks-overlay-registry/v1'
           assert overlays['upstream_lock'] == 'upstream/stacks.lock.json'
-          assert len(entries) == 31
+          assert len(entries) == 32
           assert len({entry['id'] for entry in entries}) == len(entries)
           assert len({entry['namespace'] for entry in entries}) == len(entries)
           assert len({entry['manifest_sha256'] for entry in entries}) == len(entries)
 
           errata_entries = [entry for entry in entries if entry['id'].startswith('stacks-errata-')]
           assert [entry['id'] for entry in errata_entries] == [
-              f'stacks-errata-a04446e-r{round_number}' for round_number in range(1, 31)
+              f'stacks-errata-a04446e-r{round_number}' for round_number in range(1, 32)
           ]
           assert [entry['id'] for entry in entries if not entry['id'].startswith('stacks-errata-')] == [
               'stacks-verdier-a04446e-1-2-13-r1'
           ]
-          assert entries[-1]['id'] == 'stacks-errata-a04446e-r30'
+          assert entries[-1]['id'] == 'stacks-errata-a04446e-r31'
 
           all_stable_ids = [
               stable_id
@@ -87,11 +87,11 @@ jobs:
               for stable_id in entry['stable_ids']
           ]
           assert len(all_stable_ids) == len(set(all_stable_ids))
-          assert len(all_stable_ids) == 931
-          r30 = entries[-1]
-          assert r30['manifest_sha256'] == 'C903DFCA06DA4063782BB88B2F2AC5FCF56352CF948CF03382D77F1A54A48C9E'
-          assert r30['stable_ids'] == [
-              f'MC-STK-ERR-{number:04d}' for number in range(1247, 1287)
+          assert len(all_stable_ids) == 932
+          r31 = entries[-1]
+          assert r31['manifest_sha256'] == '2110CA17E1D0426A7C23F921099C9165578FED46C45E808BF3C9E580B92295E9'
+          assert r31['stable_ids'] == [
+              'MC-STK-ERR-1287'
           ]
 
           locales = json.loads((ROOT / 'registry/locales.json').read_text(encoding='utf-8'))
@@ -103,9 +103,9 @@ jobs:
           assert leases['schema'] == 'mathematics-commons-stacks-lease-registry/v1'
           assert leases['upstream_lock'] == 'upstream/stacks.lock.json'
           events = leases['events']
-          assert len(events) == 65
+          assert len(events) == 67
           assert [event['event_id'] for event in events] == [
-              f'lease-event-{number:06d}' for number in range(1, 66)
+              f'lease-event-{number:06d}' for number in range(1, 68)
           ]
 
           event_by_id = {}
@@ -136,7 +136,7 @@ jobs:
               event_by_id[event['event_id']] = event
               latest_by_lease[event['lease_id']] = event
 
-          assert len(issued_by_lease) == 34
+          assert len(issued_by_lease) == 35
           active = [event for event in latest_by_lease.values() if event['state'] == 'active']
           expected_active = {
               'commons/stacks/fac': 'stacks-lease-000001-fac',
@@ -162,7 +162,7 @@ jobs:
                   assert not right.startswith(left + '/'), (left, right)
 
           manifests = sorted(CANDIDATES.glob('commons/stacks/**/candidate.manifest.json'))
-          assert len(manifests) == len(entries) == 31
+          assert len(manifests) == len(entries) == 32
           overlay_by_id = {entry['id']: entry for entry in entries}
           observed_candidates = set()
           observed_supersessions = []
@@ -278,7 +278,7 @@ jobs:
                   assert CANDIDATES in path.resolve().parents, path
 
           print(
-              'validated exact Stacks pin, 31 admitted overlays, 65 lease events, '
-              '31 manifest/hash closures, 931 globally unique stable IDs, and R30'
+              'validated exact Stacks pin, 32 admitted overlays, 67 lease events, '
+              '32 manifest/hash closures, 932 globally unique stable IDs, and R31'
           )
           PY

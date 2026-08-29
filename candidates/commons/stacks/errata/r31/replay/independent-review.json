@@ -1,0 +1,114 @@
+{
+  "schema": "mathematics-commons-stacks-errata-independent-review/v1",
+  "candidate_id": "stacks-errata-a04446e-r31",
+  "review_kind": "independent_adverse_replay",
+  "recorded_at_utc": "2026-08-29T18:45:22Z",
+  "result": "PASS",
+  "conclusion": "UNCONDITIONAL PASS",
+  "passed": true,
+  "pass_is_unconditional": true,
+  "pre_review_manifest_sha256": "99E62E97CE09C64062217744E4B3ADA299F34E18B95CC2590DC626A071499BC6",
+  "validation_sha256": "CB0B5D363615785A7C3440FAACC1ACC5B333B7D9396D0449E7B3E902D72894FE",
+  "pre_review_gate": {
+    "passed": true,
+    "check_manifest_exit_code": 0,
+    "candidate_manifest": {
+      "path": "candidate.manifest.json",
+      "bytes": 11256,
+      "sha256": "99E62E97CE09C64062217744E4B3ADA299F34E18B95CC2590DC626A071499BC6"
+    },
+    "validation": {
+      "path": "builds/validation.json",
+      "bytes": 2993,
+      "sha256": "CB0B5D363615785A7C3440FAACC1ACC5B333B7D9396D0449E7B3E902D72894FE",
+      "passed": true
+    }
+  },
+  "input_nonmutation": {
+    "passed": true,
+    "file_count_excluding_manifest_and_receipt": 57,
+    "note": "The replay read sealed candidate bytes and wrote only this receipt."
+  },
+  "stable_id_recomputation": {
+    "passed": true,
+    "derivation_rule": "Accepted semantic units map in first physical-source-locus order to consecutive stable IDs. Collision-free chapter aliases preserve each raw producer identity together with its lease.",
+    "explicit_mapping": [
+      {
+        "producer_alias": "R31-REOPEN-SITES-MODULES-CH18-030",
+        "operation_ids": [
+          "MC-STK-ERR-1287-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1287"
+      }
+    ],
+    "unit_count": 1,
+    "producer_alias_count": 1,
+    "operation_id_count": 1,
+    "operation_ids_unique": 1,
+    "operation_count": 1,
+    "first_id": "MC-STK-ERR-1287",
+    "last_id": "MC-STK-ERR-1287"
+  },
+  "scratch_replay": {
+    "passed": true,
+    "apply_order": "descending_start_byte",
+    "operation_count": 1,
+    "descending_intervals": [
+      [
+        283189,
+        283233
+      ]
+    ],
+    "authority": {
+      "bytes": 312143,
+      "sha256": "B7CD92AFF9DF33F05EEAB72C4B55E8AA33F3AEBD947FC53160E87CA80DFFB245"
+    },
+    "output": {
+      "bytes": 312133,
+      "sha256": "1B43CA0988A0EA3E53407B1A2596919A5E47B84B1347DC1EAB13AE77E0065A27"
+    },
+    "operation_spec_sha256": "F9D70111FD14EB9C55D4745B204A7F531C6B375A6F4E9F917B617017CE6C71A6"
+  },
+  "sealed_evidence_verification": {
+    "passed": true,
+    "build_receipt": {
+      "path": "builds/build-receipt.json",
+      "sha256": "D6DE0BC3345CFB64341D6FB8E5325F113A34C47C700F7DEE1962B7295F1BEF3D"
+    },
+    "visual_qa": {
+      "path": "builds/visual-qa.json",
+      "sha256": "1D87E7C45BF927DF8923464C5FD6E37913321A5CFB1C45B309ACEF26EAE86870"
+    },
+    "candidate_pdf": {
+      "path": "builds/sites-modules.pdf",
+      "bytes": 864916,
+      "sha256": "71B14B23BAA92CF97181685130777BC8B43A9AD6B25290483350AFC4E6E8CD72",
+      "pages": 80
+    },
+    "authority_pdf": {
+      "path": "builds/sites-modules.authority.pdf",
+      "bytes": 864893,
+      "sha256": "153AB67D3D8DFC3DB96A708F395CEA58B4E6BDD1BD41CF7794BCEAA221E5EE75",
+      "pages": 80
+    },
+    "private_render_manifest": {
+      "bytes": 17198,
+      "sha256": "89F5143B2677E1E22F6DC33CAE59980BADB2A567C79F61C18DD0AA621ED384B3",
+      "logical_path": "canon/private_evidence/errata-r31-20260829/render"
+    }
+  },
+  "adverse_observations": [
+    "The standalone candidate retains the authority's cross-chapter unresolved-reference multiset; the one admitted line-7967 localized-topos correction introduces no other reference or citation delta.",
+    "Both PDFs are untagged; this retained accessibility limitation is not misreported as a visual failure.",
+    "The hash-bound visual-QA receipt records inspection of all 80 candidate pages and every correction-sensitive locus without a visual defect.",
+    "The prospective lease pointer remains candidate-local until a separate append-only registry admission transaction."
+  ],
+  "constraints_observed": {
+    "candidate_inputs_mutated": false,
+    "registry_or_git_state_mutated": false,
+    "upstream_contacted": false,
+    "persistent_writes": [
+      "replay/independent-review.json"
+    ]
+  }
+}

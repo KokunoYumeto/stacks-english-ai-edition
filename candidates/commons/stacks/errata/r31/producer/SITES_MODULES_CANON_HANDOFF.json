@@ -1,0 +1,56 @@
+{
+  "schema": "stacks-fr-canon-handoff-v1",
+  "chapter": 18,
+  "source_file": "sites-modules.tex",
+  "authority": {
+    "path": "upstream/src/stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14/sites-modules.tex",
+    "bytes": 312143,
+    "sha256": "B7CD92AFF9DF33F05EEAB72C4B55E8AA33F3AEBD947FC53160E87CA80DFFB245",
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14"
+  },
+  "french_target": {
+    "path": "p03/tex/sites-modules.tex",
+    "bytes": 330111,
+    "sha256": "671D5D92A3E65C964A920299D152753A2D8D31581A23A0D6F9B5AAA74F731E9F"
+  },
+  "evidence": {
+    "defect_ledger": {
+      "path": "p03/evidence/SITES_MODULES_SOURCE_DEFECT_LEDGER.csv",
+      "bytes": 16074,
+      "sha256": "FDF34C77B9D3E0DDA9201E11A426DBAEDE4A2E8F7364005774CBA8829B4CBCEA"
+    },
+    "id_crosswalk": {
+      "path": "p03/evidence/SITES_MODULES_DEFECT_ID_CROSSWALK.csv",
+      "bytes": 14002,
+      "sha256": "53C79E0E82EA64DF28B9EE389B617B8818CF77A6C30BBD79748C9A8EF36A7024"
+    },
+    "source_emendations": {
+      "path": "p03/evidence/SITES_MODULES_SOURCE_EMENDATIONS.json",
+      "bytes": 23354,
+      "sha256": "1C4ADF2E0EB192410C2E7A15468060922F4FFF2E5335EF639FDFF4C59C5828B5"
+    },
+    "terminology_ledger": {
+      "path": "p03/evidence/SITES_MODULES_TERMINOLOGY_LEDGER.csv",
+      "bytes": 29587,
+      "sha256": "B6B9597D218D7976B42E3DED230B84088DC404030BA7710A00D41A481201FF69"
+    },
+    "whole_invariants": {
+      "path": "p03/evidence/SITES_MODULES_WHOLE_INVARIANTS.json",
+      "bytes": 21294,
+      "sha256": "9C9C1E82AA9E072D7EF352BD671BEF4C9D5602F7EF1133AF2EC1FD2F33704360"
+    }
+  },
+  "counts": {
+    "defect_rows": 32,
+    "crosswalk_rows": 51,
+    "emendation_operations": 19,
+    "layout_adjustment_operations": 11,
+    "effective_source_transform_operations": 30,
+    "terminology_rows": 128
+  },
+  "routing": {
+    "errata_task": "019fca5a-c29e-7330-acdc-c93f4a3dc9fb",
+    "cumulative_task": "01a0256d-5693-77c1-96b2-cf37101e0c6c"
+  },
+  "caveat": "Candidate defects and the 19 reportable source-emendation operations are producer evidence for independent canon adjudication; 11 separately identified target-layout operations are excluded from errata intake. The pinned English authority bytes are unchanged."
+}

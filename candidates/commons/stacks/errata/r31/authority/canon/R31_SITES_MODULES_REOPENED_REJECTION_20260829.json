@@ -1,0 +1,38 @@
+{
+  "authority": {
+    "bytes": 312143,
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "path": "authority/source/sites-modules.tex",
+    "sha256": "B7CD92AFF9DF33F05EEAB72C4B55E8AA33F3AEBD947FC53160E87CA80DFFB245",
+    "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e"
+  },
+  "authority_bytes_mutated": false,
+  "candidate_id": "stacks-errata-a04446e-r31",
+  "current": {
+    "producer_alias": "R31-REOPEN-SITES-MODULES-CH18-030",
+    "raw_producer_id": "SITES-MODULES-CH18-030",
+    "reason": "Independent context lines 7862-7972 establish Sh(C/U) as the localized source topos; the prior rejection's final sentence conflicts with its own item (3) and proof.",
+    "source_line": 7967,
+    "stable_id": "MC-STK-ERR-1287",
+    "status": "reopened_and_admitted"
+  },
+  "excluded_duplicate_note": "All other reportable operations in the current handoff match R29 accepted operation old/new hashes and are excluded from this round.",
+  "excluded_duplicate_operations": 18,
+  "prior_round": {
+    "operation_draft_sha256": "475DA8BD90CAD54B2AE33352060458FAAC01C0CBA29588B032034968671EABA6",
+    "rejection_path": "authority/canon/R29_rejections.jsonl",
+    "rejection_record": {
+      "authority_sha256": "B7CD92AFF9DF33F05EEAB72C4B55E8AA33F3AEBD947FC53160E87CA80DFFB245",
+      "id": "SITES-MODULES-CH18-030",
+      "locus": "sites-modules.tex:7967",
+      "producer_evidence": "p03/evidence/SITES_MODULES_DEFECT_ID_CROSSWALK.csv",
+      "rationale": "Final canon adjudication rejects CH18-030; no source operation is admitted.",
+      "schema": "mathematics-commons-stacks-candidate-rejection/v1",
+      "stable_id": null,
+      "status": "rejected"
+    },
+    "rejection_sha256": "D121570067B90B8EA7CA52ADB4602BDE7471ED12674A2BB49789D885B5E41CFF",
+    "round": "R29"
+  },
+  "schema": "stacks-r31-sites-modules-reopened-rejection/v1"
+}

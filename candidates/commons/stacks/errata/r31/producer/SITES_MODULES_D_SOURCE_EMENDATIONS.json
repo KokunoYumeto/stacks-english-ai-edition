@@ -1,0 +1,33 @@
+{
+  "schema": "stacks-fr-source-emendations-v1",
+  "authority_sha256": "B7CD92AFF9DF33F05EEAB72C4B55E8AA33F3AEBD947FC53160E87CA80DFFB245",
+  "source_file": "sites-modules.tex",
+  "chapter": 18,
+  "lease": "D",
+  "emendations": [
+    {
+      "id": "SITES-MODULES-005",
+      "line": 7308,
+      "old": "$B_i \\circ (f''_1, \\ldots, f''_n)|_{V_i} = 0$.",
+      "new": "$B''_i \\circ (f''_1, \\ldots, f''_n)|_{V_i} = 0$.",
+      "rationale": "The factorization just defined B''_i; B_i is introduced only on the following line after pullback to U_i.",
+      "status": "confirmed_source_error_emended_in_french"
+    },
+    {
+      "id": "SITES-MODULES-006",
+      "line": 7802,
+      "old": "(\\Sh(\\mathcal{C}, \\mathcal{O})",
+      "new": "(\\Sh(\\mathcal{C}), \\mathcal{O})",
+      "rationale": "The source misplaces the closing parenthesis of Sh(C), yielding a malformed ringed-topos pair.",
+      "status": "confirmed_source_error_emended_in_french"
+    },
+    {
+      "id": "SITES-MODULES-007",
+      "line": 7967,
+      "old": "$\\Sh(\\mathcal{C})/\\mathcal{F}$, see proof of",
+      "new": "$\\Sh(\\mathcal{C}/U)$, see proof of",
+      "rationale": "Part (3) localizes the site at U and no sheaf F is defined there; the relevant source topos is Sh(C/U).",
+      "status": "confirmed_source_error_emended_in_french"
+    }
+  ]
+}
