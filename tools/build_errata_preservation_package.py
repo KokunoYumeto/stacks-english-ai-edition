@@ -52,8 +52,10 @@ EGA_SEMANTIC_PROFILE = "ega-semantic"
 EGA_SEMANTIC_RECEIPT_SCHEMA = (
     "unofficial-ai-integrated-stacks-ega-semantic-checkpoint/v1"
 )
-EGA_SEMANTIC_CLOSED_SCOPE = "EGA I §6.4"
-EGA_SEMANTIC_CONTINUATION = "EGA I §6.5.1"
+EGA_SCOPE_RE = re.compile(
+    r"EGA (?P<volume>0|I|II|III|IV) §(?P<section>\d+(?:\.\d+)*)\Z"
+)
+EGA_VOLUME_ORDER = {"0": 0, "I": 1, "II": 2, "III": 3, "IV": 4}
 BUILD_SHARED_SUFFIXES = frozenset({".bst", ".cfg", ".cls", ".def", ".sty"})
 
 # A preservation package may be cut from a commit later than the commit used
@@ -85,11 +87,13 @@ EGA_SEMANTIC_PATHS = frozenset(
         "ega/agent.csv",
         "ega/check.py",
         "ega/dec.csv",
+        "ega/issues.csv",
         "ega/log.md",
         "ega/map.py",
         "ega/resid.csv",
         "ega/scope.json",
         "ega/smap.csv",
+        "ega/vqa.csv",
     }
 )
 EGA_SEMANTIC_PUBLICATION_METADATA_PATHS = frozenset(
@@ -603,6 +607,8 @@ def validate_ega_semantic_path(path: str) -> None:
     allowed = (
         path in EGA_SEMANTIC_PATHS
         or path in EGA_SEMANTIC_PUBLICATION_METADATA_PATHS
+        or path == "validation/.gitattributes"
+        or re.fullmatch(r"ega/qa/[aef]/v\d{6}\.png", path) is not None
         or (
             path.startswith("validation/")
             and len(pure.parts) == 2
@@ -613,6 +619,16 @@ def validate_ega_semantic_path(path: str) -> None:
         raise PackageError(
             f"EGA semantic checkpoint declares a path outside its profile: {path}"
         )
+
+
+def ega_scope_order(value: str) -> tuple[int, tuple[int, ...]]:
+    match = EGA_SCOPE_RE.fullmatch(value)
+    if match is None:
+        raise PackageError(f"invalid EGA scope: {value}")
+    return (
+        EGA_VOLUME_ORDER[match.group("volume")],
+        tuple(int(part) for part in match.group("section").split(".")),
+    )
 
 
 def validate_ega_semantic_checkpoint_receipt(
@@ -628,10 +644,23 @@ def validate_ega_semantic_checkpoint_receipt(
     scope = receipt.get("scope")
     if not isinstance(scope, Mapping):
         raise PackageError("checkpoint receipt lacks its EGA semantic scope")
-    if scope.get("closed") != EGA_SEMANTIC_CLOSED_SCOPE:
-        raise PackageError("checkpoint receipt does not close EGA I §6.4")
-    if scope.get("continuation") != EGA_SEMANTIC_CONTINUATION:
-        raise PackageError("checkpoint receipt does not continue at EGA I §6.5.1")
+    closed_scope = scope.get("closed")
+    continuation = scope.get("continuation")
+    if not isinstance(closed_scope, str) or EGA_SCOPE_RE.fullmatch(
+        closed_scope
+    ) is None:
+        raise PackageError("checkpoint receipt has an invalid closed EGA scope")
+    if not isinstance(continuation, str) or EGA_SCOPE_RE.fullmatch(
+        continuation
+    ) is None:
+        raise PackageError("checkpoint receipt has an invalid EGA continuation")
+    if ega_scope_order(continuation) <= ega_scope_order(closed_scope):
+        raise PackageError("checkpoint continuation must advance beyond closed scope")
+    if tuple(scope.get(field) for field in (
+        "semantic_only", "new_errata_round", "root_tex_changed",
+        "root_pdf_changed",
+    )) != (True, False, False, False):
+        raise PackageError("checkpoint semantic/root-source scope flags changed")
 
     requested_base = receipt.get("base_commit")
     requested_content = receipt.get("content_commit")
@@ -645,15 +674,37 @@ def validate_ega_semantic_checkpoint_receipt(
         raise PackageError("checkpoint receipt has an invalid content_commit")
     base_commit, base_tree, _ = resolve_commit(repository, requested_base)
     content_commit, content_tree, _ = resolve_commit(repository, requested_content)
-    if content_commit != release_commit:
-        raise PackageError(
-            "checkpoint receipt content_commit is not the packaged source commit"
-        )
     merge_base = git_output(repository, "merge-base", base_commit, content_commit)
     if merge_base.lower() != base_commit:
         raise PackageError(
             "checkpoint receipt content_commit does not descend from base_commit"
         )
+    release_after_content_paths: list[str] = []
+    if content_commit != release_commit:
+        content_release_base = git_output(
+            repository, "merge-base", content_commit, release_commit
+        )
+        if content_release_base.lower() != content_commit.lower():
+            raise PackageError(
+                "packaged source commit does not descend from checkpoint content"
+            )
+        release_after_content_paths = git_changed_paths(
+            repository, content_commit, release_commit
+        )
+        disallowed_release_paths = [
+            path for path in release_after_content_paths
+            if path not in EGA_SEMANTIC_PUBLICATION_METADATA_PATHS
+            and not (
+                path.startswith("validation/")
+                and PurePosixPath(path).suffix.casefold()
+                in {".json", ".md", ".txt"}
+            )
+        ]
+        if disallowed_release_paths:
+            raise PackageError(
+                "post-content semantic release commit changes a non-metadata path: "
+                + ", ".join(disallowed_release_paths[:5])
+            )
 
     raw_items = receipt.get("changed_paths")
     if not isinstance(raw_items, list) or not raw_items:
@@ -728,9 +779,12 @@ def validate_ega_semantic_checkpoint_receipt(
         "base_tree": base_tree,
         "content_commit": content_commit,
         "content_tree": content_tree,
+        "release_commit": release_commit,
+        "release_tree": resolve_commit(repository, release_commit)[1],
+        "release_after_content_paths": release_after_content_paths,
         "scope": {
-            "closed": EGA_SEMANTIC_CLOSED_SCOPE,
-            "continuation": EGA_SEMANTIC_CONTINUATION,
+            "closed": closed_scope,
+            "continuation": continuation,
         },
         "changed_path_count": len(declared),
         "changed_paths": declared,
@@ -1552,6 +1606,7 @@ def build_readme(
     official_baseline: str | None,
     source_redacted_members: int,
     source_redaction_count: int,
+    semantic_scope: Mapping[str, Any] | None = None,
 ) -> bytes:
     pages = sum(int(item["pages"]) for item in artifacts)
     pdf_bytes = sum(int(item["bytes"]) for item in artifacts)
@@ -1563,9 +1618,15 @@ def build_readme(
     )
     receipts = ", ".join(f"`{name}`" for name in receipt_names)
     if profile == EGA_SEMANTIC_PROFILE:
-        heading = f"{PROJECT_TITLE} — EGA I §6.4 semantic checkpoint"
+        if not isinstance(semantic_scope, Mapping):
+            raise PackageError("EGA semantic README lacks checkpoint scope")
+        closed_scope = semantic_scope.get("closed")
+        continuation = semantic_scope.get("continuation")
+        if not isinstance(closed_scope, str) or not isinstance(continuation, str):
+            raise PackageError("EGA semantic README has invalid checkpoint scope")
+        heading = f"{PROJECT_TITLE} — {closed_scope} semantic checkpoint"
         opening = (
-            "This preservation release captures the validated EGA I §6.4 "
+            f"This preservation release captures the validated {closed_scope} "
             "semantic-integration checkpoint of the\n"
             f"[{PROJECT_TITLE}]({PROJECT_URL}) at source commit `{commit}` "
             f"(tree `{tree}`)."
@@ -1577,9 +1638,9 @@ def build_readme(
             "changed"
         )
         scope_note = (
-            "The EGA I §6.4 semantic integration slice is closed. The EGA "
-            "integration program remains incomplete and continues at EGA I "
-            "§6.5.1. This release does not claim complete EGA integration or "
+            f"The {closed_scope} semantic integration slice is closed. The EGA "
+            "integration program remains incomplete and continues at "
+            f"{continuation}. This release does not claim complete EGA integration or "
             "machine-formal verification."
         )
     else:
@@ -1716,6 +1777,7 @@ def prepare_release(
             "schema": checkpoint.get("schema"),
             "base_commit": checkpoint.get("base_commit"),
             "content_commit": checkpoint.get("content_commit"),
+            "release_commit": checkpoint.get("release_commit"),
             "scope": checkpoint.get("scope"),
             "changed_path_count": checkpoint.get("changed_path_count"),
             "git_diff_exact": checkpoint.get("git_diff_exact"),
@@ -1726,10 +1788,17 @@ def prepare_release(
         schema = (
             "unofficial-ai-integrated-stacks-ega-semantic-preservation-package/v1"
         )
-        title = f"{PROJECT_TITLE} — EGA I §6.4 semantic checkpoint"
+        checkpoint_scope = checkpoint.get("scope")
+        if not isinstance(checkpoint_scope, Mapping):
+            raise PackageError("EGA semantic package lacks checkpoint scope")
+        closed_scope = checkpoint_scope.get("closed")
+        continuation = checkpoint_scope.get("continuation")
+        if not isinstance(closed_scope, str) or not isinstance(continuation, str):
+            raise PackageError("EGA semantic package has invalid checkpoint scope")
+        title = f"{PROJECT_TITLE} — {closed_scope} semantic checkpoint"
         scope_note = (
-            "EGA I §6.4 semantic integration is closed; the incomplete EGA "
-            "integration program continues at EGA I §6.5.1. Complete EGA "
+            f"{closed_scope} semantic integration is closed; the incomplete EGA "
+            f"integration program continues at {continuation}. Complete EGA "
             "integration and formal verification are not claimed."
         )
     else:
@@ -2042,6 +2111,14 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
         profile=profile,
         checkpoint_receipt=checkpoint_receipt,
     )
+    semantic_scope_value: Mapping[str, Any] | None = None
+    if profile == EGA_SEMANTIC_PROFILE:
+        semantic_checkpoint = source_binding.get("ega_semantic_checkpoint")
+        if not isinstance(semantic_checkpoint, Mapping):
+            raise PackageError("EGA semantic source binding lacks checkpoint")
+        semantic_scope_value = semantic_checkpoint.get("scope")
+        if not isinstance(semantic_scope_value, Mapping):
+            raise PackageError("EGA semantic source binding lacks scope")
     build_receipt_identity = next(
         item
         for item in receipt_inputs
@@ -2146,6 +2223,7 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
             source_redaction_count=source_projection["public_projection"][
                 "replacement_count"
             ],
+            semantic_scope=semantic_scope_value,
         )
         assert_no_local_path_bytes(
             readme_data,
@@ -2295,10 +2373,7 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
         }
         if profile == EGA_SEMANTIC_PROFILE:
             package_receipt_value["profile"] = EGA_SEMANTIC_PROFILE
-            package_receipt_value["scope"] = {
-                "closed": EGA_SEMANTIC_CLOSED_SCOPE,
-                "continuation": EGA_SEMANTIC_CONTINUATION,
-            }
+            package_receipt_value["scope"] = dict(semantic_scope_value or {})
         package_receipt_data = json_bytes(package_receipt_value)
         assert_no_local_path_bytes(
             package_receipt_data,
@@ -2356,8 +2431,8 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
         }
         if profile == EGA_SEMANTIC_PROFILE:
             result["profile"] = EGA_SEMANTIC_PROFILE
-            result["scope_closed"] = EGA_SEMANTIC_CLOSED_SCOPE
-            result["continuation"] = EGA_SEMANTIC_CONTINUATION
+            result["scope_closed"] = semantic_scope_value["closed"]
+            result["continuation"] = semantic_scope_value["continuation"]
         return result
     except Exception:
         if external_receipt_written:
