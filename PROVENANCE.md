@@ -171,7 +171,20 @@ exactly matching identities for all 25 PDFs: 2,492 pages, 26,612,367 bytes,
 and a global fixed point on sweep four. Visual QA covers all 37 pages of
 `smoothing.pdf`, including correction-locus page 16 at high resolution.
 
-R27 is the current published preservation tag
+R28 is the current published preservation tag
+[`ai-integrated-stacks-r28-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r28-2026-08-28)
+at commit `efa46473cf8a73646ef1b6e32354e63ce20fd172`, tree
+`fe139f1aedc35f02dbd10e5471ecb3c7fbed62e1`. Exact-head workflow run
+`33212304694`, attempt 1, completed successfully. The source, 25 PDFs, and
+validation evidence are preserved as six byte-identical assets on GitHub and
+Zenodo version DOI [`10.5281/zenodo.22150671`](https://doi.org/10.5281/zenodo.22150671),
+under concept DOI `10.5281/zenodo.22135180`, as recorded by the
+[R28 release receipt](validation/stacks-errata-a04446e-r28-release-2026-08-28.json).
+Anonymous readback matched 174,673,433 bytes on each host across all 12
+downloads with zero mismatches. The 154,766,484-byte deterministic source
+archive contains 2,312 entries and binds its exact Git preimage.
+
+R27 remains publicly preserved as the preceding historical tag
 [`ai-integrated-stacks-r27-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r27-2026-08-28)
 at commit `e624abadfe9e2ac1f311485c44c82d6c53df2df2`, tree
 `a2ba195c47c6cb41dca4e4ee7cb6292372e2e201`. Exact-head workflow run
@@ -184,6 +197,10 @@ Anonymous readback matched 174,411,900 bytes on each host across all 12
 downloads with zero mismatches. The 154,505,160-byte deterministic source
 archive contains 2,245 entries and binds its exact Git preimage. R26 remains
 publicly preserved as the preceding immutable historical version.
+
+The current local, prepublication EGA semantic checkpoint extends the
+source-bound review through EGA I §6.4.13 and sets §6.5.1 as the next cursor.
+It changes no root TeX or PDF and has no public tag or DOI yet.
 
 ## Branch preservation
 

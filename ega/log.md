@@ -2363,3 +2363,36 @@ visual fidelity, publication, or ownership. The owner verifies every result.
   open gaps, and thirteen local mirrors. The exact-byte, tag-label-file,
   source-span, append-order, residual-route, visual-referral, and snapshot
   checks pass. The next semantic cursor is EGA I 6.4.1.
+
+### EGA I 6.4.1--6.4.13 algebraic-scheme and geometric-point checkpoint
+
+- Direct-French review covers all thirteen numbered statements and seven proof
+  units in lines 560--769 of `ega1/ega1-6-fr.tex` under the full-file F37ZW
+  seal. The LF slice is 9,133 bytes / SHA-256
+  `08472BEBAB933ECBE3ECE35452C2EE21BFF9BB7A27D36B572BFD93DF049E1865`;
+  the full source remains 57,781 bytes / SHA-256
+  `F95D2C43C1074A1CC6485D74E24F02BF8C5F098ADB571AA024B4B499F5CDE3FE`.
+  The subsection and label anchors plus the twenty mathematical units form an
+  exact 22-row registered projection. No formula or diagram child is present.
+- D000307--D000319 and S001140--S001195 bind thirteen decisions and 56
+  existing-tag edges to 36 distinct pinned tag-label-file targets. The final
+  residual block R000764--R000785 contains 22 explicit strength terminology
+  unlabelled-proof and derived-package dispositions. Every mathematical unit
+  is routed and every partial stronger unlabelled or derived edge has a
+  same-unit residual state. No new open gap is introduced.
+- The modern targets already cover the mathematical content. Tags 06LG and
+  01KK separate historical prescheme/scheme terminology; 06LH and 0ALW cover
+  the zero-dimensional Artinian package; 03J3 with 0H9W and 0H9X covers finite
+  scheme degree and its two formulas; 0F38--0F39 cover geometric point counts
+  and base change. The fixed-large-field criterion uses 0487 only as a partial
+  comparison and preserves the 01T1 01T2 030F 09GU 01J9 chain. Its unrestricted
+  successor uses Chevalley with the explicit 01TX dependency and the Jacobson
+  closed-point chain. No nonduplicative root TeX addition was justified.
+- The cumulative statement graph is 1,188 active / 1,195 physical rows across
+  400 source units with 1,175 existing-tag rows using 337 distinct official
+  tags thirteen local-mirror rows and 56 exact full-statement equivalences.
+  Residual history is 760 active / 785 physical rows with 25 superseded rows
+  twelve pre-existing open gaps and thirteen local mirrors. A000238--A000241
+  record the exact French unit audit the semantic fixed point the independent
+  mathematical audit and the fail-closed checker plan. The next semantic
+  cursor is EGA I 6.5.1.

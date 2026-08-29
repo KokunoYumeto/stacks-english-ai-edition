@@ -263,13 +263,13 @@ EGA integration manifest enter the repository's root TeX tree.
   promotion requires its own active V row. Shared, full-page, and grouped crops
   do not qualify.
 - Current statement-level frontier: direct-French review is complete through
-  EGA I 6.3.10. The active graph has 1,132 edges across 380 generated units;
-  physical append-only history has 1,139 rows. Of the active edges 1,119
-  resolve to 314 distinct existing official tags and thirteen resolve to
-  explicitly untagged local-mirror integrations. Fifty rows are exact
-  full-statement equivalences. Residual history has 738 active and 763
+  EGA I 6.4.13. The active graph has 1,188 edges across 400 generated units;
+  physical append-only history has 1,195 rows. Of the active edges 1,175
+  resolve to 337 distinct existing official tags and thirteen resolve to
+  explicitly untagged local-mirror integrations. Fifty-six rows are exact
+  full-statement equivalences. Residual history has 760 active and 785
   physical rows, with twelve open labelled-coverage gaps. The next semantic
-  cursor is EGA I 6.4.1.
+  cursor is EGA I 6.5.1.
 
 ## State model
 
@@ -339,7 +339,31 @@ maintainer feedback remain append-only.
   direct-authority crops for source-error evidence; these are not edition
   outputs or three-surface visual certifications.
 
-### Current reviewed frontier: EGA I 6.3.1--6.3.10
+### Current reviewed frontier: EGA I 6.4.1--6.4.13
+
+The algebraic-scheme and geometric-point subsection is reviewed against direct
+French lines 560--769 in admitted F37ZW and exact labels at pinned Stacks
+commit `a04446e57ec1fbc252a871afcec7752fb2807b14`. D000307--D000319 bind all
+thirteen numbered statements; S001140--S001195 route twenty mathematical units
+through 56 exact existing-tag edges and 36 distinct tag-label-file joins; and
+R000764--R000785 preserve every stronger-target partial-target terminology
+migration unlabelled proof step and derived theorem package.
+
+All thirteen statements are already exact Stacks results short composites or
+expository consequences of existing results, so no duplicate root TeX addition
+is warranted. The fixed-large-field criterion deliberately preserves its
+one-fixed-field quantifier and uses 0487 only as a partial comparison together
+with 01T1 01T2 030F 09GU and 01J9. The unrestricted successor retains the
+explicit 01TX dependency and the Jacobson closed-point chain. No formula or
+diagram child unit is present and no new visual task is required.
+
+The cumulative graph has 1,188 active / 1,195 physical statement rows across
+400 source units, 1,175 official-tag rows using 337 tags, thirteen local-mirror
+rows, and 56 exact full-statement equivalences. Residual history has 760 active
+/ 785 physical rows, 25 superseded rows, twelve open gaps, and thirteen active
+local-mirror rows. The next semantic cursor is EGA I 6.5.1.
+
+### Prior reviewed frontier: EGA I 6.3.1--6.3.10
 
 The finite-type subsection is reviewed against direct French lines 297--558
 in admitted F37ZW and exact labels at pinned Stacks commit
@@ -727,8 +751,8 @@ tree immediately before atomic promotion, closing the reproduced concurrent-
 producer race. Independent mathematical and governance inverse audits both
 returned HARD PASS after the repairs while preserving their earlier failures.
 
-The immediate semantic work continues after direct-French EGA I 6.3.10 at
-EGA I 6.4.1. Every reviewed claim remains bound to its own historical source
+The immediate semantic work continues after direct-French EGA I 6.4.13 at
+EGA I 6.5.1. Every reviewed claim remains bound to its own historical source
 receipt; the 5.4 and 5.5 rows use F33 plus direct authority evidence rather
 than a mutable producer frontier.
 The last admitted reader interface is the D48 tuple

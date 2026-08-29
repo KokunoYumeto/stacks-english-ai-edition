@@ -1,6 +1,6 @@
 # Integration status
 
-Status date: **2026-08-28**
+Status date: **2026-08-29**
 
 Pinned official upstream: `a04446e57ec1fbc252a871afcec7752fb2807b14`
 
@@ -15,7 +15,11 @@ in each corpus dossier and in the machine-readable registry.
 | Tôhoku | Dossier-only closure through r71 | The sealed successor records 1,066 decisions, 679 decided units, 33 resolved source issues, and zero remaining gap-class dispositions. It explicitly changed no live TeX, PDF, canonical source, or cursor. |
 | GAGA | Root chapter composed through r3; corpus review closed | All 126 source units are classified and all 79 substantive units have reviewed decisions. The live 23-page English chapter and deterministic mapping replay pass. |
 | FGA | Root additions composed and notation-normalized; corpus review closed | The combined source contains the normalized FGA additions and post-merge dossier. The closure covers 1,253 units, 1,612 term links, and 579 append-only decisions; the recorded fixed-point Moduli build is 83 pages. |
-| EGA | Partial root-source composition; direct-source review active | Selected local additions are present in root TeX. Complete English discovery and diplomatic French edition trees remain separate read-only inputs. Review reaches EGA I 6.3.10 and continues at 6.4.1. |
+| EGA | Partial root-source composition; direct-source review active | Selected local additions are present in root TeX. Complete English discovery and diplomatic French edition trees remain separate read-only inputs. Review is complete through EGA I §6.4.13 and continues at §6.5.1. |
+
+The current EGA semantic checkpoint is local and prepublication: §6.4.1–§6.4.13
+were source-bound and routed without changing root TeX or any PDF. It has no
+public tag or DOI yet.
 
 ## Errata state
 
@@ -84,7 +88,16 @@ in each corpus dossier and in the machine-readable registry.
   and the source composition is `1ed5b9fce0f75dec5ad551d32badd8e99abf058a`,
   tree `28c377be399e04fb75f7568000c62e5cfafa291f`. The 134,835-byte postimage
   has SHA-256 `85A37C95D5591632D11E7BE6775039638B6F5200B44729ABCEA1A644D9F5B056`.
-- R27 is published at tag
+- R28 is the current public preservation release at tag
+  [`ai-integrated-stacks-r28-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r28-2026-08-28),
+  commit `efa46473cf8a73646ef1b6e32354e63ce20fd172`, tree
+  `fe139f1aedc35f02dbd10e5471ecb3c7fbed62e1`, and Zenodo version DOI
+  [`10.5281/zenodo.22150671`](https://doi.org/10.5281/zenodo.22150671) under
+  concept DOI `10.5281/zenodo.22135180`. Workflow run `33212304694`, attempt 1,
+  passed. Its six assets total 174,673,433 bytes on each host; anonymous
+  readback matched all 12 downloads by filename, byte count, and SHA-256 with
+  zero mismatches. The 154,766,484-byte source archive contains 2,312 entries.
+- R27 remains published as the preceding historical tag
   [`ai-integrated-stacks-r27-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r27-2026-08-28),
   commit `e624abadfe9e2ac1f311485c44c82d6c53df2df2`, tree
   `a2ba195c47c6cb41dca4e4ee7cb6292372e2e201`, and Zenodo version DOI
@@ -132,11 +145,11 @@ fixed-point sweep; all 25 `{stem, pages, bytes, sha256}` artifact tuples are
 exactly equal. Earlier R24, R22/R23, Verdier, and R21 receipts remain preserved
 as historical evidence for their exact source identities and scopes.
 
-The [current R27 publication receipt](validation/stacks-errata-a04446e-r27-release-2026-08-28.json)
+The [current R28 publication receipt](validation/stacks-errata-a04446e-r28-release-2026-08-28.json)
 binds the public commit and tree, successful exact-head workflow, identical
 six-file package on GitHub and Zenodo, anonymous SHA-256 readback, and archive
-member replay. The earlier R26 receipts remain historical evidence for the
-preceding immutable version.
+member replay. The R27 receipt remains historical evidence for the preceding
+immutable version.
 
 The preceding Verdier content release remains public at
 `4947e4a6d22971ea793e4b4bc2b09d8ab8cc04d0`. Exact anonymous readback of 62

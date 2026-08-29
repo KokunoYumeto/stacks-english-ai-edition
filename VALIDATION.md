@@ -79,15 +79,27 @@ operations, including the new supersession-aware R28 operation, to the
 `85A37C95D5591632D11E7BE6775039638B6F5200B44729ABCEA1A644D9F5B056`.
 Historical R24, R22/R23, Verdier, and R21 receipts remain preserved and
 authoritative for their immutable source snapshots; they are not rebound to the
-R27 tree.
+R28 tree.
 
 R28 admitted one stable unit with one exact operation. Its manifest SHA-256 is
 `FA5448067DBB6FF452AF85C3E2B0EE4B4133723D7C7D958DA74EB7746E194CFA`
 and review-receipt SHA-256 is
 `2E15F87CD859883219C81AB56A2DCB7D00F0C84B619615533BEF62805C5C0EA0`.
 
-The [R27 release receipt](validation/stacks-errata-a04446e-r27-release-2026-08-28.json)
-binds the published tag
+The [R28 release receipt](validation/stacks-errata-a04446e-r28-release-2026-08-28.json)
+binds the current published tag
+[`ai-integrated-stacks-r28-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r28-2026-08-28)
+to commit `efa46473cf8a73646ef1b6e32354e63ce20fd172`, tree
+`fe139f1aedc35f02dbd10e5471ecb3c7fbed62e1`, successful GitHub Actions run
+`33212304694` attempt 1, and [Zenodo version DOI
+`10.5281/zenodo.22150671`](https://doi.org/10.5281/zenodo.22150671) under concept
+DOI [`10.5281/zenodo.22135180`](https://doi.org/10.5281/zenodo.22135180).
+Anonymous downloads from both hosts matched all six filenames and 174,673,433
+bytes per host by byte count and SHA-256: 12 exact downloads and zero
+mismatches. The 154,766,484-byte source archive contains 2,312 entries.
+
+The historical [R27 release receipt](validation/stacks-errata-a04446e-r27-release-2026-08-28.json)
+binds the preceding published tag
 [`ai-integrated-stacks-r27-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r27-2026-08-28)
 to commit `e624abadfe9e2ac1f311485c44c82d6c53df2df2`, tree
 `a2ba195c47c6cb41dca4e4ee7cb6292372e2e201`, successful GitHub Actions run
@@ -99,8 +111,13 @@ bytes per host by byte count and SHA-256: 12 exact downloads and zero
 mismatches. The 154,505,160-byte source archive contains 2,245 entries. The
 receipt also binds archive-member replay and the 25-PDF, 2,492-page,
 26,609,586-byte build inventory. R26, R25, and R24 remain historical evidence
-for their exact immutable versions; this R27 release is not evidence that the
-active EGA I--IV integration program is complete.
+for their exact immutable versions; this historical R27 release is not evidence
+that the active EGA I--IV integration program is complete.
+
+The current local, prepublication EGA semantic checkpoint covers EGA I through
+§6.4.13 and advances the next cursor to §6.5.1. Its source mapping and residual
+evidence introduce no root TeX or PDF change, and no public tag or DOI is claimed
+for this checkpoint yet.
 
 The [historical R22/R23 publication receipt](validation/stacks-errata-a04446e-r22-r23-release-2026-08-27.json)
 binds the preceding public R22/R23 content head

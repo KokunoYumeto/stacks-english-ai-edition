@@ -47,6 +47,14 @@ HASH_CHUNK_SIZE = 1024 * 1024
 EXPECTED_PDF_COUNT = 25
 SOURCE_REDACTION_MANIFEST = "SOURCE_PRIVACY_REDACTION_MANIFEST.json"
 ACCOUNT_REDACTION_REPLACEMENT = b"[LOCAL_ACCOUNT_REDACTED]"
+ERRATA_PROFILE = "errata"
+EGA_SEMANTIC_PROFILE = "ega-semantic"
+EGA_SEMANTIC_RECEIPT_SCHEMA = (
+    "unofficial-ai-integrated-stacks-ega-semantic-checkpoint/v1"
+)
+EGA_SEMANTIC_CLOSED_SCOPE = "EGA I §6.4"
+EGA_SEMANTIC_CONTINUATION = "EGA I §6.5.1"
+BUILD_SHARED_SUFFIXES = frozenset({".bst", ".cfg", ".cls", ".def", ".sty"})
 
 # A preservation package may be cut from a commit later than the commit used
 # for the fixed-point build, because validation and release receipts follow the
@@ -66,6 +74,35 @@ NON_BUILD_RELEVANT_POST_BUILD_PATHS = frozenset(
     }
 )
 NON_BUILD_RELEVANT_POST_BUILD_PREFIXES = ("validation/",)
+
+# The semantic-checkpoint profile can preserve semantic-index and publication
+# metadata without turning that narrow exception into a general post-build
+# source allowlist. Every changed path must also be named, hash-bound, and
+# blob-bound by the checkpoint receipt.
+EGA_SEMANTIC_PATHS = frozenset(
+    {
+        "ega/README.md",
+        "ega/agent.csv",
+        "ega/check.py",
+        "ega/dec.csv",
+        "ega/log.md",
+        "ega/map.py",
+        "ega/resid.csv",
+        "ega/scope.json",
+        "ega/smap.csv",
+    }
+)
+EGA_SEMANTIC_PUBLICATION_METADATA_PATHS = frozenset(
+    {
+        "README.md",
+        "STATUS.md",
+        "VALIDATION.md",
+        "ROADMAP.md",
+        "PROVENANCE.md",
+        "validation/README.md",
+        "tools/build_errata_preservation_package.py",
+    }
+)
 
 SAFE_LABEL_RE = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]{0,127}\Z")
 HEX_SHA_RE = re.compile(r"[0-9A-Fa-f]{7,64}\Z")
@@ -365,6 +402,22 @@ def git_output(repository: Path, *arguments: str) -> str:
     return completed.stdout.strip()
 
 
+def git_bytes(repository: Path, *arguments: str) -> bytes:
+    command = ["git", "-C", os.fspath(repository), *arguments]
+    try:
+        completed = subprocess.run(
+            command,
+            check=False,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+        )
+    except OSError as exc:
+        raise PackageError("git is unavailable") from exc
+    if completed.returncode:
+        raise PackageError(f"git {arguments[0]} failed")
+    return completed.stdout
+
+
 def resolve_commit(repository: Path, requested: str) -> tuple[str, str, str]:
     if not HEX_SHA_RE.fullmatch(requested):
         raise PackageError("source commit must be a hexadecimal Git object ID")
@@ -390,12 +443,309 @@ def resolve_commit(repository: Path, requested: str) -> tuple[str, str, str]:
     return commit.lower(), tree.lower(), created_utc
 
 
+def git_changed_paths(repository: Path, base: str, content: str) -> list[str]:
+    raw = git_bytes(
+        repository,
+        "diff",
+        "--name-only",
+        "-z",
+        "--no-renames",
+        "--diff-filter=ACDMRTUXB",
+        f"{base}..{content}",
+        "--",
+    )
+    try:
+        paths = [item.decode("utf-8") for item in raw.split(b"\x00") if item]
+    except UnicodeDecodeError as exc:
+        raise PackageError("Git changed-path inventory is not UTF-8") from exc
+    if len(paths) != len(set(paths)):
+        raise PackageError("Git changed-path inventory contains duplicates")
+    return sorted(paths)
+
+
+def git_blob_identity(repository: Path, commit: str, path: str) -> dict[str, Any]:
+    object_id = git_output(repository, "rev-parse", "--verify", f"{commit}:{path}")
+    if not FULL_SHA_RE.fullmatch(object_id):
+        raise PackageError(f"Git returned an invalid blob identity for {path!r}")
+    if git_output(repository, "cat-file", "-t", object_id) != "blob":
+        raise PackageError(f"checkpoint path {path!r} is not a regular Git blob")
+    data = git_bytes(repository, "cat-file", "blob", object_id)
+    return {
+        "path": path,
+        "bytes": len(data),
+        "sha256": sha256_bytes(data),
+        "git_blob": object_id.lower(),
+    }
+
+
+def validate_build_critical_blob_equivalence(
+    repository: Path,
+    *,
+    build_commit: str,
+    release_commit: str,
+    build_receipt: Mapping[str, Any],
+) -> dict[str, Any]:
+    """Prove the exact bounded inputs used by the fixed-point builder agree.
+
+    A validated build may have been recorded on a linked validation branch and
+    later imported into the protected publication lineage. In that case commit
+    ancestry alone is neither necessary nor sufficient evidence. The builder's
+    own bounded clean-tree contract identifies the complete relevant input set;
+    this function requires every one of those Git blobs to be identical.
+    """
+
+    builder = build_receipt.get("builder")
+    composition = build_receipt.get("composition")
+    build = build_receipt.get("build")
+    if not isinstance(builder, Mapping) or not isinstance(composition, Mapping):
+        raise PackageError("build receipt lacks builder or composition evidence")
+    if not isinstance(build, Mapping):
+        raise PackageError("build receipt lacks its bounded build profile")
+    builder_path = builder.get("path")
+    composition_path = composition.get("receipt")
+    raw_stems = build.get("stems")
+    if builder_path != "tools/build_fixed_point.py":
+        raise PackageError("build receipt uses an unexpected fixed-point builder")
+    if not isinstance(composition_path, str) or not composition_path:
+        raise PackageError("build receipt lacks its composition receipt path")
+    if (
+        not isinstance(raw_stems, list)
+        or not raw_stems
+        or any(
+            not isinstance(stem, str)
+            or not re.fullmatch(r"[a-z0-9][a-z0-9-]*", stem)
+            for stem in raw_stems
+        )
+        or len(raw_stems) != len(set(raw_stems))
+    ):
+        raise PackageError("build receipt has an invalid stem inventory")
+
+    critical_paths = {
+        builder_path,
+        composition_path,
+        "preamble.tex",
+        "chapters.tex",
+        "my.bib",
+        *(f"{stem}.tex" for stem in raw_stems),
+    }
+    for commit in (build_commit, release_commit):
+        raw_names = git_bytes(
+            repository, "ls-tree", "-z", "--name-only", commit
+        )
+        try:
+            root_names = [
+                item.decode("utf-8")
+                for item in raw_names.split(b"\x00")
+                if item
+            ]
+        except UnicodeDecodeError as exc:
+            raise PackageError("Git root-file inventory is not UTF-8") from exc
+        critical_paths.update(
+            name
+            for name in root_names
+            if PurePosixPath(name).suffix.casefold() in BUILD_SHARED_SUFFIXES
+        )
+
+    identities: list[dict[str, str]] = []
+    for path in sorted(critical_paths):
+        safe_member_name(path, directory_allowed=False)
+        try:
+            build_blob = git_output(
+                repository, "rev-parse", "--verify", f"{build_commit}:{path}"
+            ).lower()
+            release_blob = git_output(
+                repository, "rev-parse", "--verify", f"{release_commit}:{path}"
+            ).lower()
+        except PackageError as exc:
+            raise PackageError(
+                f"build-critical path is absent from one source tree: {path}"
+            ) from exc
+        if (
+            git_output(repository, "cat-file", "-t", build_blob) != "blob"
+            or git_output(repository, "cat-file", "-t", release_blob) != "blob"
+        ):
+            raise PackageError(f"build-critical path is not a Git blob: {path}")
+        if build_blob != release_blob:
+            raise PackageError(
+                f"build-critical Git blob changed after the R28 build: {path}"
+            )
+        identities.append({"path": path, "git_blob": build_blob})
+
+    return {
+        "status": "PASS",
+        "path_count": len(identities),
+        "paths": identities,
+        "tuple_sha256": sha256_bytes(json_bytes(identities)),
+        "different_paths": [],
+    }
+
+
+def validate_ega_semantic_path(path: str) -> None:
+    safe_member_name(path, directory_allowed=False)
+    if ":" in path:
+        raise PackageError("checkpoint receipt contains a colon-qualified path")
+    pure = PurePosixPath(path)
+    lowered_parts = tuple(part.casefold() for part in pure.parts)
+    if len(pure.parts) == 1 and pure.suffix.casefold() in {".tex", ".pdf"}:
+        raise PackageError(
+            "EGA semantic checkpoint changes a root-level TeX or PDF path"
+        )
+    if (
+        "registry" in lowered_parts
+        or re.search(
+            r"(?:^|[/_.-])(?:lease|leases|composition)(?=$|[/_.-])",
+            path.casefold(),
+        )
+    ):
+        raise PackageError(
+            "EGA semantic checkpoint changes registry, lease, or composition state"
+        )
+    allowed = (
+        path in EGA_SEMANTIC_PATHS
+        or path in EGA_SEMANTIC_PUBLICATION_METADATA_PATHS
+        or (
+            path.startswith("validation/")
+            and len(pure.parts) == 2
+            and pure.suffix.casefold() in {".json", ".md", ".txt"}
+        )
+    )
+    if not allowed:
+        raise PackageError(
+            f"EGA semantic checkpoint declares a path outside its profile: {path}"
+        )
+
+
+def validate_ega_semantic_checkpoint_receipt(
+    repository: Path,
+    receipt: Mapping[str, Any],
+    *,
+    release_commit: str,
+) -> dict[str, Any]:
+    if receipt.get("schema") != EGA_SEMANTIC_RECEIPT_SCHEMA:
+        raise PackageError("checkpoint receipt has an unsupported schema")
+    if receipt.get("status") != "PASS":
+        raise PackageError("checkpoint receipt status is not PASS")
+    scope = receipt.get("scope")
+    if not isinstance(scope, Mapping):
+        raise PackageError("checkpoint receipt lacks its EGA semantic scope")
+    if scope.get("closed") != EGA_SEMANTIC_CLOSED_SCOPE:
+        raise PackageError("checkpoint receipt does not close EGA I §6.4")
+    if scope.get("continuation") != EGA_SEMANTIC_CONTINUATION:
+        raise PackageError("checkpoint receipt does not continue at EGA I §6.5.1")
+
+    requested_base = receipt.get("base_commit")
+    requested_content = receipt.get("content_commit")
+    if not isinstance(requested_base, str) or not FULL_SHA_RE.fullmatch(
+        requested_base
+    ):
+        raise PackageError("checkpoint receipt has an invalid base_commit")
+    if not isinstance(requested_content, str) or not FULL_SHA_RE.fullmatch(
+        requested_content
+    ):
+        raise PackageError("checkpoint receipt has an invalid content_commit")
+    base_commit, base_tree, _ = resolve_commit(repository, requested_base)
+    content_commit, content_tree, _ = resolve_commit(repository, requested_content)
+    if content_commit != release_commit:
+        raise PackageError(
+            "checkpoint receipt content_commit is not the packaged source commit"
+        )
+    merge_base = git_output(repository, "merge-base", base_commit, content_commit)
+    if merge_base.lower() != base_commit:
+        raise PackageError(
+            "checkpoint receipt content_commit does not descend from base_commit"
+        )
+
+    raw_items = receipt.get("changed_paths")
+    if not isinstance(raw_items, list) or not raw_items:
+        raise PackageError("checkpoint receipt changed_paths must be a nonempty list")
+    declared: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for raw_item in raw_items:
+        if not isinstance(raw_item, Mapping):
+            raise PackageError("checkpoint receipt has a malformed changed-path item")
+        if set(raw_item) != {"path", "bytes", "sha256", "git_blob"}:
+            raise PackageError(
+                "checkpoint changed-path items require only path/bytes/sha256/git_blob"
+            )
+        path = raw_item.get("path")
+        expected_bytes = raw_item.get("bytes")
+        expected_sha = raw_item.get("sha256")
+        expected_blob = raw_item.get("git_blob")
+        if not isinstance(path, str) or not path:
+            raise PackageError("checkpoint receipt has an invalid changed path")
+        validate_ega_semantic_path(path)
+        if path in seen:
+            raise PackageError("checkpoint receipt contains duplicate changed paths")
+        seen.add(path)
+        if not isinstance(expected_bytes, int) or expected_bytes < 0:
+            raise PackageError(f"checkpoint path {path!r} has an invalid byte count")
+        if not isinstance(expected_sha, str) or not re.fullmatch(
+            r"[0-9A-Fa-f]{64}", expected_sha
+        ):
+            raise PackageError(f"checkpoint path {path!r} has an invalid SHA-256")
+        if not isinstance(expected_blob, str) or not FULL_SHA_RE.fullmatch(
+            expected_blob
+        ):
+            raise PackageError(f"checkpoint path {path!r} has an invalid Git blob")
+        try:
+            observed = git_blob_identity(repository, content_commit, path)
+        except PackageError as exc:
+            raise PackageError(
+                f"checkpoint path {path!r} is absent from content_commit"
+            ) from exc
+        if (
+            expected_bytes != observed["bytes"]
+            or expected_sha.upper() != observed["sha256"]
+            or expected_blob.lower() != observed["git_blob"]
+        ):
+            raise PackageError(
+                f"checkpoint path {path!r} does not match its receipt identity"
+            )
+        declared.append(observed)
+
+    if [str(item["path"]) for item in declared] != sorted(seen):
+        raise PackageError("checkpoint changed_paths must be sorted by path")
+    changed_paths = git_changed_paths(repository, base_commit, content_commit)
+    if changed_paths != sorted(seen):
+        missing = sorted(set(changed_paths) - seen)
+        extra = sorted(seen - set(changed_paths))
+        detail = "; ".join(
+            item
+            for item in (
+                f"undeclared={','.join(missing[:5])}" if missing else "",
+                f"not_changed={','.join(extra[:5])}" if extra else "",
+            )
+            if item
+        )
+        raise PackageError(
+            "checkpoint receipt changed_paths does not exactly match Git diff"
+            + (f": {detail}" if detail else "")
+        )
+    return {
+        "status": "PASS",
+        "schema": EGA_SEMANTIC_RECEIPT_SCHEMA,
+        "base_commit": base_commit,
+        "base_tree": base_tree,
+        "content_commit": content_commit,
+        "content_tree": content_tree,
+        "scope": {
+            "closed": EGA_SEMANTIC_CLOSED_SCOPE,
+            "continuation": EGA_SEMANTIC_CONTINUATION,
+        },
+        "changed_path_count": len(declared),
+        "changed_paths": declared,
+        "git_diff_exact": True,
+    }
+
+
 def validate_release_source_binding(
     repository: Path,
     *,
     release_commit: str,
     release_tree: str,
     build_receipt: Mapping[str, Any],
+    profile: str = ERRATA_PROFILE,
+    checkpoint_receipt: Mapping[str, Any] | None = None,
 ) -> dict[str, Any]:
     """Bind a later release commit to the exact source used by the PDF build."""
 
@@ -419,27 +769,48 @@ def validate_release_source_binding(
     if build_tree.lower() != requested_build_tree.lower():
         raise PackageError("build receipt source tree does not match Git")
 
-    merge_base = git_output(
-        repository, "merge-base", build_commit, release_commit
-    )
+    merge_base = git_output(repository, "merge-base", build_commit, release_commit)
+    changed_paths = git_changed_paths(repository, build_commit, release_commit)
+    if profile == EGA_SEMANTIC_PROFILE:
+        if checkpoint_receipt is None:
+            raise PackageError("EGA semantic profile requires a checkpoint receipt")
+        checkpoint = validate_ega_semantic_checkpoint_receipt(
+            repository,
+            checkpoint_receipt,
+            release_commit=release_commit,
+        )
+        critical_equivalence = validate_build_critical_blob_equivalence(
+            repository,
+            build_commit=build_commit,
+            release_commit=release_commit,
+            build_receipt=build_receipt,
+        )
+        release_descends_from_build = merge_base.lower() == build_commit.lower()
+        return {
+            "status": "PASS",
+            "build_commit": build_commit,
+            "build_tree": build_tree,
+            "release_commit": release_commit,
+            "release_tree": release_tree,
+            "release_descends_from_build": release_descends_from_build,
+            "build_source_relation": (
+                "ancestor"
+                if release_descends_from_build
+                else "divergent_validation_branch_with_identical_build_critical_blobs"
+            ),
+            "intervening_changed_path_count": len(changed_paths),
+            "intervening_changed_paths": changed_paths,
+            "build_relevant_intervening_changes": 0,
+            "build_critical_equivalence": critical_equivalence,
+            "profile": EGA_SEMANTIC_PROFILE,
+            "ega_semantic_checkpoint": checkpoint,
+        }
+    if profile != ERRATA_PROFILE:
+        raise PackageError("unsupported preservation-package profile")
     if merge_base.lower() != build_commit.lower():
         raise PackageError(
             "release commit is not a descendant of the build source commit"
         )
-
-    changed_output = git_output(
-        repository,
-        "diff",
-        "--name-only",
-        "--diff-filter=ACDMRTUXB",
-        f"{build_commit}..{release_commit}",
-        "--",
-    )
-    changed_paths = [
-        line.replace("\\", "/")
-        for line in changed_output.splitlines()
-        if line.strip()
-    ]
     disallowed = [
         path
         for path in changed_paths
@@ -1169,6 +1540,7 @@ def receipt_members(
 
 def build_readme(
     *,
+    profile: str,
     display_label: str,
     commit: str,
     tree: str,
@@ -1190,10 +1562,43 @@ def build_readme(
         else "The source archive records the exact official Stacks baseline. "
     )
     receipts = ", ".join(f"`{name}`" for name in receipt_names)
-    text = f"""# {PROJECT_TITLE} — {display_label} validated checkpoint
+    if profile == EGA_SEMANTIC_PROFILE:
+        heading = f"{PROJECT_TITLE} — EGA I §6.4 semantic checkpoint"
+        opening = (
+            "This preservation release captures the validated EGA I §6.4 "
+            "semantic-integration checkpoint of the\n"
+            f"[{PROJECT_TITLE}]({PROJECT_URL}) at source commit `{commit}` "
+            f"(tree `{tree}`)."
+        )
+        profile_validation = (
+            "- the receipt-declared semantic changed-path inventory matched "
+            "the exact Git diff and every byte/SHA-256/Git-blob identity\n"
+            "- no root-level TeX/PDF, registry, lease, or composition state "
+            "changed"
+        )
+        scope_note = (
+            "The EGA I §6.4 semantic integration slice is closed. The EGA "
+            "integration program remains incomplete and continues at EGA I "
+            "§6.5.1. This release does not claim complete EGA integration or "
+            "machine-formal verification."
+        )
+    else:
+        heading = f"{PROJECT_TITLE} — {display_label} validated checkpoint"
+        opening = (
+            f"This preservation release captures the validated {display_label} "
+            "fixed point of the\n"
+            f"[{PROJECT_TITLE}]({PROJECT_URL}) at source commit `{commit}` "
+            f"(tree `{tree}`)."
+        )
+        profile_validation = ""
+        scope_note = (
+            "The EGA integration program remains incomplete and resumes at "
+            "EGA I section\n6.4.1. This release does not claim complete EGA "
+            "integration or machine-formal\nverification."
+        )
+    text = f"""# {heading}
 
-This preservation release captures the validated {display_label} fixed point of the
-[{PROJECT_TITLE}]({PROJECT_URL}) at source commit `{commit}` (tree `{tree}`).
+{opening}
 
 The project is an unofficial, AI-written integration built on the original
 Stacks Project. It does not claim upstream endorsement, affiliation, review,
@@ -1207,10 +1612,9 @@ approval, or official Stacks tags for local additions.
 - every PDF byte count and SHA-256 matched the build receipt
 - every ZIP was reopened and its complete listing and member hashes validated
 - validation receipts preserved: {receipts}
+{profile_validation}
 
-The EGA integration program remains incomplete and resumes at EGA I section
-6.4.1. This release does not claim complete EGA integration or machine-formal
-verification.
+{scope_note}
 
 ## Files
 
@@ -1266,6 +1670,7 @@ def public_file_member(item: Mapping[str, Any]) -> dict[str, Any]:
 
 def prepare_release(
     *,
+    profile: str,
     label: str,
     display_label: str,
     release_id: str,
@@ -1302,13 +1707,44 @@ def prepare_release(
         "affected_source_stems": composition.get("affected_source_stems"),
     }
     integration = {key: value for key, value in integration.items() if value is not None}
+    if profile == EGA_SEMANTIC_PROFILE:
+        checkpoint = source_binding.get("ega_semantic_checkpoint")
+        if not isinstance(checkpoint, Mapping):
+            raise PackageError("EGA semantic source binding lacks checkpoint evidence")
+        integration["profile"] = EGA_SEMANTIC_PROFILE
+        integration["ega_semantic_checkpoint"] = {
+            "schema": checkpoint.get("schema"),
+            "base_commit": checkpoint.get("base_commit"),
+            "content_commit": checkpoint.get("content_commit"),
+            "scope": checkpoint.get("scope"),
+            "changed_path_count": checkpoint.get("changed_path_count"),
+            "git_diff_exact": checkpoint.get("git_diff_exact"),
+        }
     pages = sum(int(item["pages"]) for item in artifacts)
     pdf_bytes = sum(int(item["bytes"]) for item in artifacts)
+    if profile == EGA_SEMANTIC_PROFILE:
+        schema = (
+            "unofficial-ai-integrated-stacks-ega-semantic-preservation-package/v1"
+        )
+        title = f"{PROJECT_TITLE} — EGA I §6.4 semantic checkpoint"
+        scope_note = (
+            "EGA I §6.4 semantic integration is closed; the incomplete EGA "
+            "integration program continues at EGA I §6.5.1. Complete EGA "
+            "integration and formal verification are not claimed."
+        )
+    else:
+        schema = "unofficial-ai-integrated-stacks-preservation-package/v2"
+        title = f"{PROJECT_TITLE} — validated {display_label} checkpoint"
+        scope_note = (
+            "EGA integration remains partial and resumes at EGA I section "
+            "6.4.1; complete EGA integration and formal verification are not "
+            "claimed."
+        )
     return {
-        "schema": "unofficial-ai-integrated-stacks-preservation-package/v2",
+        "schema": schema,
         "release": release_id,
         "created_utc": created_utc,
-        "title": f"{PROJECT_TITLE} — validated {display_label} checkpoint",
+        "title": title,
         "source": {
             "repository": PROJECT_URL,
             "commit": commit,
@@ -1395,11 +1831,7 @@ def prepare_release(
             public_file_member(pdf_zip_identity),
             public_file_member(validation_zip_identity),
         ],
-        "scope_note": (
-            "EGA integration remains partial and resumes at EGA I section "
-            "6.4.1; complete EGA integration and formal verification are not "
-            "claimed."
-        ),
+        "scope_note": scope_note,
     }
 
 
@@ -1416,6 +1848,23 @@ def write_new(path: Path, data: bytes, *, role: str) -> None:
 
 def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--profile",
+        choices=(ERRATA_PROFILE, EGA_SEMANTIC_PROFILE),
+        default=ERRATA_PROFILE,
+        help=(
+            "package policy profile (default: errata); ega-semantic requires "
+            "an exact changed-path checkpoint receipt"
+        ),
+    )
+    parser.add_argument(
+        "--checkpoint-receipt",
+        type=Path,
+        help=(
+            "EGA semantic checkpoint JSON binding its base/content commits, "
+            "scope, and exact changed-path blob identities"
+        ),
+    )
     parser.add_argument(
         "--source-commit",
         required=True,
@@ -1496,6 +1945,10 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     args = parser.parse_args(argv)
     if args.receipt_in_staging and args.package_receipt is not None:
         parser.error("--receipt-in-staging and --package-receipt are mutually exclusive")
+    if args.profile == EGA_SEMANTIC_PROFILE and args.checkpoint_receipt is None:
+        parser.error("--profile ega-semantic requires --checkpoint-receipt")
+    if args.profile == ERRATA_PROFILE and args.checkpoint_receipt is not None:
+        parser.error("--checkpoint-receipt is only valid with --profile ega-semantic")
     return args
 
 
@@ -1524,6 +1977,7 @@ def verify_checksum_inventory(
 
 
 def run(args: argparse.Namespace) -> dict[str, Any]:
+    profile = args.profile
     label = args.version_label
     if not SAFE_LABEL_RE.fullmatch(label) or label in {".", ".."}:
         raise PackageError("version label contains unsafe characters")
@@ -1562,9 +2016,18 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
     )
     release_id = f"{display_label}-{created_utc[:10]}"
 
+    checkpoint_receipt: dict[str, Any] | None = None
+    validation_receipt_paths = list(args.validation_receipts or [])
+    if profile == EGA_SEMANTIC_PROFILE:
+        _checkpoint_raw, checkpoint_receipt = load_json_receipt(
+            args.checkpoint_receipt,
+            role="EGA semantic checkpoint receipt",
+            account_token=account_token,
+        )
+        validation_receipt_paths.append(args.checkpoint_receipt)
     build_receipt, receipt_inputs = receipt_members(
         args.build_receipt,
-        args.validation_receipts,
+        validation_receipt_paths,
         account_token=account_token,
     )
     artifacts = validate_build_artifacts(
@@ -1576,6 +2039,8 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
         release_commit=commit,
         release_tree=tree,
         build_receipt=build_receipt,
+        profile=profile,
+        checkpoint_receipt=checkpoint_receipt,
     )
     build_receipt_identity = next(
         item
@@ -1665,6 +2130,7 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
         if not isinstance(official_baseline, str):
             official_baseline = None
         readme_data = build_readme(
+            profile=profile,
             display_label=display_label,
             commit=commit,
             tree=tree,
@@ -1691,6 +2157,7 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
         readme_identity = file_identity(readme_path)
 
         release_value = prepare_release(
+            profile=profile,
             label=label,
             display_label=display_label,
             release_id=release_id,
@@ -1751,10 +2218,14 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
             ],
             key=lambda value: str(value["name"]),
         )
+        package_receipt_schema = (
+            "unofficial-ai-integrated-stacks-ega-semantic-"
+            "preservation-package-build/v1"
+            if profile == EGA_SEMANTIC_PROFILE
+            else "unofficial-ai-integrated-stacks-preservation-package-build/v2"
+        )
         package_receipt_value = {
-            "schema": (
-                "unofficial-ai-integrated-stacks-preservation-package-build/v2"
-            ),
+            "schema": package_receipt_schema,
             "status": "PASS",
             "created_utc": created_utc,
             "release": release_id,
@@ -1822,6 +2293,12 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
                 "build_relevant_intervening_changes": 0,
             },
         }
+        if profile == EGA_SEMANTIC_PROFILE:
+            package_receipt_value["profile"] = EGA_SEMANTIC_PROFILE
+            package_receipt_value["scope"] = {
+                "closed": EGA_SEMANTIC_CLOSED_SCOPE,
+                "continuation": EGA_SEMANTIC_CONTINUATION,
+            }
         package_receipt_data = json_bytes(package_receipt_value)
         assert_no_local_path_bytes(
             package_receipt_data,
@@ -1864,7 +2341,7 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
             write_new(receipt_path, package_receipt_data, role="package receipt")
             external_receipt_written = True
 
-        return {
+        result = {
             "status": "PASS",
             "release": release_id,
             "source_commit": commit,
@@ -1877,6 +2354,11 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
                 "inside staging" if receipt_inside_staging else "outside staging"
             ),
         }
+        if profile == EGA_SEMANTIC_PROFILE:
+            result["profile"] = EGA_SEMANTIC_PROFILE
+            result["scope_closed"] = EGA_SEMANTIC_CLOSED_SCOPE
+            result["continuation"] = EGA_SEMANTIC_CONTINUATION
+        return result
     except Exception:
         if external_receipt_written:
             try:

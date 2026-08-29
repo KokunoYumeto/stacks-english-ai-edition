@@ -43,7 +43,20 @@ including correction-locus page 16 at high resolution. All 25 PDF identities
 match exactly between the two builds. Earlier R26, R24, R22/R23, Verdier, and R21 receipts
 remain preserved as historical evidence for their exact scopes.
 
-R27 is published as tag
+R28 is the current public preservation release at tag
+[`ai-integrated-stacks-r28-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r28-2026-08-28)
+at commit `efa46473cf8a73646ef1b6e32354e63ce20fd172`, tree
+`fe139f1aedc35f02dbd10e5471ecb3c7fbed62e1`, and as Zenodo version DOI
+[`10.5281/zenodo.22150671`](https://doi.org/10.5281/zenodo.22150671) under
+concept DOI `10.5281/zenodo.22135180`. Exact-head workflow run `33212304694`,
+attempt 1, passed. The six-asset package is byte-identical on both hosts:
+174,673,433 bytes per host, 12 successful anonymous downloads, and zero
+mismatches. The commit-bound source archive is 154,766,484 bytes and contains
+2,312 entries. The
+[R28 release receipt](validation/stacks-errata-a04446e-r28-release-2026-08-28.json)
+binds the transaction and readback.
+
+R27 remains published as the preceding historical tag
 [`ai-integrated-stacks-r27-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r27-2026-08-28)
 at commit `e624abadfe9e2ac1f311485c44c82d6c53df2df2`, tree
 `a2ba195c47c6cb41dca4e4ee7cb6292372e2e201`, and as Zenodo version DOI
@@ -75,7 +88,7 @@ The rejected R26 producer `SMOOTHING-010` and R23 producer
 
 | Stage | Bounded milestone | Why it comes here |
 | --- | --- | --- |
-| **1. Complete EGA I** | Continue at EGA I §6.4.1 through §§6.4–6.6, followed by staged checkpoints through §10. | This continues from the exact existing cursor, preserves statement order, and finishes the language-of-schemes layer before later corpora depend on it. |
+| **1. Complete EGA I** | Continue at EGA I §6.5.1 through §§6.5–6.6, followed by staged checkpoints through §10. | This continues from the exact existing cursor, preserves statement order, and finishes the language-of-schemes layer before later corpora depend on it. |
 | **2. Integrate EGA II** | Begin with §1 on affine morphisms; continue through §§2–4 on `Proj`, projective bundles, and ample sheaves; then close §§5–8 on quasi-projective, proper, projective, finite, and quasi-finite morphisms, valuative criteria, blowups, and contractions. | EGA II is the shortest path from scheme language to the global morphism machinery used by EGA III and substantial parts of SGA1. |
 | **3. Integrate the foundations of SGA1** | Treat Exposés I–V first, then the fibred-category bridge in Exposé VI and the descent layer in Exposés VIII–IX. The revised edition contains no Exposé VII. | This yields a coherent foundation in étale, smooth, and flat morphisms, Galois categories, fibred categories, and descent without prematurely taking on the advanced specialization and cohomological material. |
 | **4. Integrate EGA III** | Proceed in source order through coherent cohomology, projective and proper finiteness, formal functions, base change, and existence results. | EGA III can reuse EGA II's projective/proper foundation, the existing FAC, GAGA, and FGA source integrations, and the closed Tôhoku dossier-only mapping. It also supplies leverage for the advanced part of SGA1. |
@@ -84,13 +97,13 @@ The rejected R26 producer `SMOOTHING-010` and R23 producer
 
 ## Immediate milestones
 
-The next semantic cursor is **EGA I §6.4.1**. EGA I §6.3 is complete with all
-eleven statements routed to existing Stacks material and no duplicate root
-addition. Its two diagrams retain explicit visual-evidence residuals without
-blocking source-order semantic work. The next checkpoints remain deliberately
-small enough to review, validate, and publish independently:
+The next semantic cursor is **EGA I §6.5.1**. EGA I §6.4 is complete through
+§6.4.13: all 20 mathematical units are source-bound and routed, with no
+duplicate root addition and no root TeX or PDF change. This checkpoint remains
+local and prepublication, with no public tag or DOI yet. The next checkpoints
+remain deliberately small enough to review, validate, and publish independently:
 
-1. **EGA I §§6.4–6.6** — 26 further semantic statements, closing EGA I §6.
+1. **EGA I §§6.5–6.6** — continue in source order and close EGA I §6.
 2. **EGA I §§7–10** — advance in source order through separately sealed
    section or subsection checkpoints until EGA I is complete.
 3. **EGA II §1** — seven subsections on affine morphisms, printed pages 5–18.

@@ -22,9 +22,9 @@ machine-readable validation evidence.
 [Current R28 fixed-point build: PASS](validation/stacks-errata-a04446e-r28-build-2026-08-28.json) ·
 [Current R28 visual QA: PASS](validation/stacks-errata-a04446e-r28-visual-qa-2026-08-28.json) ·
 [Current R28 reproducibility: PASS](validation/stacks-errata-a04446e-r28-reproducibility-2026-08-28.json) ·
-[Latest published release receipt: R27 PASS](validation/stacks-errata-a04446e-r27-release-2026-08-28.json) ·
-[Latest published preservation release: R27](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r27-2026-08-28) ·
-[Latest published Zenodo version: R27](https://doi.org/10.5281/zenodo.22149250) ·
+[Latest published release receipt: R28 PASS](validation/stacks-errata-a04446e-r28-release-2026-08-28.json) ·
+[Latest published preservation release: R28](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r28-2026-08-28) ·
+[Latest published Zenodo version: R28](https://doi.org/10.5281/zenodo.22150671) ·
 [Historical R24 publication receipt: PASS](validation/ai-integrated-stacks-r24-publication-2026-08-28.json) ·
 [Historical R22/R23 publication receipt: PASS](validation/stacks-errata-a04446e-r22-r23-release-2026-08-27.json) ·
 [Historical Verdier publication receipt: PASS](validation/stacks-verdier-a04446e-1-2-13-r1-release-2026-08-26.json) ·
@@ -53,8 +53,8 @@ The pinned upstream baseline is
 | Tôhoku | Dossier-only mapping and adjudication closed through sealed r71 | 1,066 decisions, 679 decided units, and zero remaining gap-class dispositions; r71 explicitly changed no live TeX, PDF, canonical source, or cursor | [Sealed r71 dossier](tohoku_r71/STATUS.md) · [historical working dossier](tohoku/STATUS.md) |
 | GAGA | Root chapter composed through r3; corpus review closed | All 126 units are classified and all 79 substantive units decided; the current unified `gaga.pdf` is 23 pages, while the sealed r3 dossier records its historical 22-page build | [r3 dossier](gaga_r3/STATUS.md) · [live chapter source](gaga.tex) |
 | FGA | Root additions composed and notation-normalized; corpus review closed | All 1,253 units and 1,612 term links are dispositioned; selected independently written additions are in the combined source; the fixed-point Moduli build is 83 pages | [Overview](fga/README.md) · [status](fga/status.md) |
-| EGA | Partial root-source composition; direct-source review active | Selected local additions are present in root TeX; the complete English discovery and diplomatic French editions remain separate read-only inputs; review reaches EGA I 6.3.10 and continues at 6.4.1 | [EGA dossier](ega/README.md) |
-| Errata and Verdier | Root-composed and deterministically validated through R28; public release through R27 | The integrated tree contains 29 overlays / 861 stable IDs. Its R1–R28 Stacks errata subset contains 28 batches, 849 correction IDs, and 962 exact v2 operations; R28 contributes one supersession-aware replacement in `smoothing.tex` | [Registry](ai-integrated/registry/overlays.json) · [R28 build](validation/stacks-errata-a04446e-r28-build-2026-08-28.json) · [errata evidence](ai-integrated/candidates/commons/stacks/errata/) |
+| EGA | Partial root-source composition; direct-source review active | Selected local additions are present in root TeX; the complete English discovery and diplomatic French editions remain separate read-only inputs; review is complete through EGA I §6.4.13 and continues at §6.5.1 | [EGA dossier](ega/README.md) |
+| Errata and Verdier | Root-composed, deterministically validated, and publicly released through R28 | The integrated tree contains 29 overlays / 861 stable IDs. Its R1–R28 Stacks errata subset contains 28 batches, 849 correction IDs, and 962 exact v2 operations; R28 contributes one supersession-aware replacement in `smoothing.tex` | [Registry](ai-integrated/registry/overlays.json) · [R28 build](validation/stacks-errata-a04446e-r28-build-2026-08-28.json) · [errata evidence](ai-integrated/candidates/commons/stacks/errata/) |
 
 “Root-composed” means that the live top-level TeX tree changed and participates
 in the unified build. “Dossier-only” means that mappings, decisions, and
@@ -123,7 +123,20 @@ R28 is registry commit `655c8e0e1fe9e7b350244a0ef0230fb6c38e0026`, tree
 `MC-STK-ERR-1183-OP1`; the last-wins projection was replayed from the exact
 cumulative source and no isolated payload replaced the integrated file.
 
-R27 is public as tag
+R28 is the current public preservation release at tag
+[`ai-integrated-stacks-r28-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r28-2026-08-28)
+at commit `efa46473cf8a73646ef1b6e32354e63ce20fd172`, tree
+`fe139f1aedc35f02dbd10e5471ecb3c7fbed62e1`, and as Zenodo version DOI
+[`10.5281/zenodo.22150671`](https://doi.org/10.5281/zenodo.22150671) under
+concept DOI [`10.5281/zenodo.22135180`](https://doi.org/10.5281/zenodo.22135180).
+GitHub Actions run `33212304694`, attempt 1, completed successfully. Anonymous
+readback matched the six assets and 174,673,433 bytes on each host by filename,
+byte count, and SHA-256: 12 exact downloads and zero mismatches. The
+154,766,484-byte source archive contains 2,312 entries. The exact publication
+and public-byte evidence is in the
+[R28 release receipt](validation/stacks-errata-a04446e-r28-release-2026-08-28.json).
+
+R27 remains public as the preceding historical tag
 [`ai-integrated-stacks-r27-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r27-2026-08-28)
 at commit `e624abadfe9e2ac1f311485c44c82d6c53df2df2`, tree
 `a2ba195c47c6cb41dca4e4ee7cb6292372e2e201`, and as Zenodo version DOI
@@ -140,8 +153,9 @@ tree `110a3006fcbb27b94c4170639aab56db507f9a89`; its manifest-bound
 composition is commit `5a42b7d2a04c4d08be7861ec91306d8be05d631e`, tree
 `ecbad57ee36b4fb290c80cb4d1f83eab50a47460`. R26 remains preserved as the
 preceding immutable historical version in the same GitHub and Zenodo lineages.
-The EGA integration program in this repository remains explicitly partial and
-continues at EGA I §6.4.1.
+The local, prepublication EGA semantic checkpoint now covers EGA I through
+§6.4.13 and advances the next cursor to §6.5.1. This checkpoint changes no root
+TeX or PDF and has no public tag or DOI yet.
 
 The preceding R22/R23 content release remains public at
 `3c2b49fe0d20519de4ab06951ac2cb5151b68782`, tree

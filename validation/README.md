@@ -225,10 +225,10 @@ R26 adjudication accepted 31 producer identities, aliased
 `SMOOTHING-002/003/004` to existing R1 corrections, rejected
 `SMOOTHING-010`, and merged the repeated semantic groups `005+031`,
 `008+012+013+014`, `016+018`, and `017+019` before materializing 25 new stable
-units. The active EGA I–IV integration program remains incomplete and resumes
-at EGA I §6.4.1.
+units. The active EGA I–IV integration program remains incomplete; its local
+semantic review now reaches EGA I §6.4.13 and resumes at §6.5.1.
 
-## Current R27 composition, validation, and publication receipts
+## Historical R27 composition, validation, and publication receipts
 
 R27 advances the integrated registry to **28 overlays / 860 stable IDs** at
 admission commit `8c0539a6a7aa001cc6152daee92d5c7a49bf6a93`, tree
@@ -237,7 +237,7 @@ contains 27 batches, 848 correction IDs, and 961 exact v2 operations. R27 adds
 14 stable IDs and 14 manifest-bound operations affecting only cumulative
 `modules.tex`.
 
-[`composition-current.json`](composition-current.json) binds lease
+The preserved R27 release evidence binds lease
 `1f05772d6f46ab851cdecdf53b70c11ea698cb14`, candidate
 `77fcc9fc2341e72b077224399743f1062e73b228`, admission
 `8c0539a6a7aa001cc6152daee92d5c7a49bf6a93`, registry import
@@ -270,3 +270,43 @@ DOI `10.5281/zenodo.22135180`. The six assets total 174,411,900 bytes on each
 host. All 12 anonymous downloads matched by filename, byte count, and SHA-256
 with zero mismatches. The source archive is 154,505,160 bytes and contains
 2,245 entries. R26 remains the preceding immutable historical release.
+
+## Current R28 composition, validation, and publication receipts
+
+R28 advances the integrated registry to **29 overlays / 861 stable IDs** at
+admission commit `655c8e0e1fe9e7b350244a0ef0230fb6c38e0026`, tree
+`5eddd7d6db54d25eccf09cf21d5d7ab30c3ec1d3`. Its R1–R28 Stacks errata subset
+contains 28 batches, 849 correction IDs, and 962 exact v2 operations. R28 adds
+one supersession-aware replacement affecting cumulative `smoothing.tex`.
+
+[`composition-current.json`](composition-current.json) binds the R28 registry
+cutoff and source composition to the cumulative 962-operation projection.
+
+The current deterministic evidence is recorded in:
+
+- [`stacks-errata-a04446e-r28-build-2026-08-28.json`](stacks-errata-a04446e-r28-build-2026-08-28.json)
+  — 25 PDFs, 2,492 pages, 26,612,367 PDF bytes, fixed point on sweep four,
+  and zero listed serious diagnostics;
+- [`stacks-errata-a04446e-r28-visual-qa-2026-08-28.json`](stacks-errata-a04446e-r28-visual-qa-2026-08-28.json)
+  — all 37 pages of `smoothing.pdf` reviewed, with correction-locus page 16
+  inspected at high resolution and zero recorded rendering defects; and
+- [`stacks-errata-a04446e-r28-reproducibility-2026-08-28.json`](stacks-errata-a04446e-r28-reproducibility-2026-08-28.json)
+  together with the [second full receipt](stacks-errata-a04446e-r28-reproducibility-second-2026-08-28.json)
+  — exact equality of all 25 artifact identities across two linked-worktree
+  builds.
+
+The [R28 release receipt](stacks-errata-a04446e-r28-release-2026-08-28.json)
+binds current public tag
+[`ai-integrated-stacks-r28-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r28-2026-08-28)
+at commit `efa46473cf8a73646ef1b6e32354e63ce20fd172`, tree
+`fe139f1aedc35f02dbd10e5471ecb3c7fbed62e1`, successful workflow run
+`33212304694` attempt 1, and [Zenodo version DOI
+`10.5281/zenodo.22150671`](https://doi.org/10.5281/zenodo.22150671) under concept
+DOI `10.5281/zenodo.22135180`. The six assets total 174,673,433 bytes on each
+host. All 12 anonymous downloads matched by filename, byte count, and SHA-256
+with zero mismatches. The source archive is 154,766,484 bytes and contains
+2,312 entries. R27 remains the preceding immutable historical release.
+
+The local, prepublication EGA semantic checkpoint covers EGA I through
+§6.4.13 and sets §6.5.1 as the next cursor. It changes no root TeX or PDF and
+has no public tag or DOI yet.
