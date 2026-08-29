@@ -1694,9 +1694,10 @@ def build_readme(
         )
         profile_validation = ""
         scope_note = (
-            "The EGA integration program remains incomplete and resumes at "
-            "EGA I section\n6.4.1. This release does not claim complete EGA "
-            "integration or machine-formal\nverification."
+            "The EGA integration program remains incomplete; its exact live "
+            "continuation cursor is recorded in the repository's EGA dossier. "
+            "This release does not claim complete EGA integration or "
+            "machine-formal verification."
         )
     text = f"""# {heading}
 
@@ -1847,9 +1848,9 @@ def prepare_release(
         schema = "unofficial-ai-integrated-stacks-preservation-package/v2"
         title = f"{PROJECT_TITLE} — validated {display_label} checkpoint"
         scope_note = (
-            "EGA integration remains partial and resumes at EGA I section "
-            "6.4.1; complete EGA integration and formal verification are not "
-            "claimed."
+            "EGA integration remains partial; its exact live continuation cursor "
+            "is recorded in the repository's EGA dossier. Complete EGA "
+            "integration and formal verification are not claimed."
         )
     return {
         "schema": schema,
