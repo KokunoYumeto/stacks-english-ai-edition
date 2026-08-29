@@ -1,0 +1,181 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-ega-semantic-metadata-readback/v1",
+  "status": "PASS",
+  "created_utc": "2026-08-29T12:04:50Z",
+  "subject": {
+    "commit": "d678db08605997ede2bd9925305d0550d2928e25",
+    "tree": "33e23d574cc15942f9bab3dfa4fa6ab955a7653f",
+    "parent": "00adeb291487d04070b75bd0fd87759e3c43d3d3",
+    "parent_is_semantic_content_commit": true,
+    "linear_fast_forward": true,
+    "changed_paths": 14,
+    "changed_bytes_read_back": 641315
+  },
+  "semantic_publication": {
+    "content_commit": "00adeb291487d04070b75bd0fd87759e3c43d3d3",
+    "content_tree": "f6f736a132ed4734bea932e28401bb32ccdcf535",
+    "github_tag": "ega-i-6.4-semantic-2026-08-29",
+    "github_tag_object": "da6b06b71cc4da1be775af5c1f88999620008d2f",
+    "github_tag_peeled_target": "00adeb291487d04070b75bd0fd87759e3c43d3d3",
+    "github_release_id": 378967018,
+    "zenodo_version_doi": "10.5281/zenodo.22161051",
+    "zenodo_concept_doi": "10.5281/zenodo.22135180",
+    "assets": 6,
+    "bytes_per_host": 174783585,
+    "publication_assets_changed_by_metadata_commit": false
+  },
+  "validation": {
+    "ega_checker": {
+      "result": "PASS",
+      "agent_rows": 244,
+      "decisions": 319,
+      "statement_edges_physical": 1195,
+      "statement_edges_operational": 1188,
+      "residual_rows": 785,
+      "errors": []
+    },
+    "unified_repository_validator": {
+      "mode": "pre-publication",
+      "result": "PASS",
+      "registered_overlays": 29,
+      "registered_stable_ids": 861,
+      "exact_v2_operations": 962,
+      "reproducible_pdf_identities": 25
+    },
+    "github_workflow": {
+      "run_id": 33251561369,
+      "head_sha": "d678db08605997ede2bd9925305d0550d2928e25",
+      "name": "Unified repository validation",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at_utc": "2026-08-29T12:03:25Z",
+      "completed_at_utc": "2026-08-29T12:04:04Z",
+      "url": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/actions/runs/33251561369"
+    }
+  },
+  "anonymous_public_readback": {
+    "main": "d678db08605997ede2bd9925305d0550d2928e25",
+    "main_result": "PASS",
+    "method": "anonymous git ls-remote plus raw.githubusercontent.com byte readback and Git-blob reconstruction",
+    "files": [
+      {
+        "path": "README.md",
+        "bytes": 13430,
+        "sha256": "DEA3D6CE89E2D9E1E434EF04E878666C37A9B3304D0130E7FDBAD5C3A49D3CA3",
+        "git_blob": "bb6d805a72bb2832b4bda523fabd6be63f1651ec",
+        "result": "PASS"
+      },
+      {
+        "path": "STATUS.md",
+        "bytes": 11014,
+        "sha256": "1CD637D8D0788512631E7A373C571C40F1B3A8413347BBBFC4CDF91D43404DE4",
+        "git_blob": "e992b0feb61da255b2da339a27610d2c32e9e594",
+        "result": "PASS"
+      },
+      {
+        "path": "VALIDATION.md",
+        "bytes": 9412,
+        "sha256": "D81AF25C590184BDF77D5DCC779D4BE081DF796C6BF1959E68C7F8064B5ACBDF",
+        "git_blob": "430a4773533cf02f57df030786c595b08ba25517",
+        "result": "PASS"
+      },
+      {
+        "path": "ROADMAP.md",
+        "bytes": 11307,
+        "sha256": "FB5AF1089F0C8D0FE89EF3E23E0636298B0FC8457C9455DF29515594E27769BF",
+        "git_blob": "96df76c22ff41fb71b0284e799018ca1c1a2d2f2",
+        "result": "PASS"
+      },
+      {
+        "path": "PROVENANCE.md",
+        "bytes": 13615,
+        "sha256": "4D0DC6B9797D85F158BED6FC5B7B52B9DBFE23461BC56AE6F1303873C7432685",
+        "git_blob": "cd3f68c6fe2ebf7a0d374abefff839bb01be9aa2",
+        "result": "PASS"
+      },
+      {
+        "path": "validation/README.md",
+        "bytes": 19049,
+        "sha256": "6C7239B0CB5F3CAB128EA5EEA3074786D891B84A1F761BE38020541DA2CDCEFC",
+        "git_blob": "50bb4539e8267200ec7e80f353481cd90da6aca9",
+        "result": "PASS"
+      },
+      {
+        "path": "ega/README.md",
+        "bytes": 49979,
+        "sha256": "4CD7A0EACDD3EBADF8F8B290847E7764649F25CD49FDE60BDCA35C7CCB665A4D",
+        "git_blob": "55b3ef197e5a2454c04bc1f708a33fe52a31e5bb",
+        "result": "PASS"
+      },
+      {
+        "path": "ega/agent.csv",
+        "bytes": 127573,
+        "sha256": "30CAA6FF936F794B23A566808A66BA1593642E112BC29A7795925C81A149330C",
+        "git_blob": "e5d7b9e2b86f4a136c99c9c133106f4236a4d820",
+        "result": "PASS"
+      },
+      {
+        "path": "ega/check.py",
+        "bytes": 322457,
+        "sha256": "511AF4823B908AA1D6E1633DE0F57E18BC347DC0A2D1F4070994F12821D3E4B1",
+        "git_blob": "3a06ae36c97bd1b8de1deb45af0d6bd7c63b6304",
+        "result": "PASS"
+      },
+      {
+        "path": "ega/interface.json",
+        "bytes": 19234,
+        "sha256": "4D1D65D09A633DA28F22E0FD0148F566529CF73F094E21036D56143F1B162DA6",
+        "git_blob": "a109197e5e0cbc38e5bfe66d1fc788fd9a3ea696",
+        "result": "PASS"
+      },
+      {
+        "path": "ega/publication-current.json",
+        "bytes": 6217,
+        "sha256": "F04F64AFE640C799454909CF255EF16D27A37717D608DC9A747A45F25E8C55C8",
+        "git_blob": "1d7c5a97cf2b67db4ba34dd591d2c7b78824a0d5",
+        "result": "PASS"
+      },
+      {
+        "path": "validation/ega-i-6.4-semantic-checkpoint-2026-08-29.json",
+        "bytes": 7580,
+        "sha256": "4C8E7116DFBD16CEEDD72371CB144C10DCD09B9E4A9A75AB3EC32F951FD4ABD1",
+        "git_blob": "7f1e1667fb01059a45cb9558cfc9fda979695fdb",
+        "result": "PASS"
+      },
+      {
+        "path": "validation/ega-i-6.4-semantic-package-2026-08-29.json",
+        "bytes": 21620,
+        "sha256": "650C1A7672DC3312F4CB8FD5573D0D5305F52F44F5A6D86C51484A09F9883A55",
+        "git_blob": "c5d8a1ff1ebd2008bc0e8d97b6930f3c28d44f91",
+        "result": "PASS"
+      },
+      {
+        "path": "validation/ega-i-6.4-semantic-release-2026-08-29.json",
+        "bytes": 8828,
+        "sha256": "7834987C90D485BC9F988FDF2B5703B5C2D9355206F14268AE178001C27F902B",
+        "git_blob": "5555440f155505357d6a962bc0f50ef444189d0a",
+        "result": "PASS"
+      }
+    ],
+    "file_count": 14,
+    "bytes": 641315,
+    "mismatches": 0,
+    "result": "PASS"
+  },
+  "invariance": {
+    "root_tex_diff": [],
+    "root_pdf_diff": [],
+    "registry_blob": "2dd5b2c8e8805efbbc5ad5ff68ad705139ef197b",
+    "leases_blob": "9583355d7aa80943cf849ce9ab8ce9cc847a0b6c",
+    "composition_current_blob": "27e32711ff1329b159f91dd8bac6c5319ecc3251",
+    "registry_changed": false,
+    "leases_changed": false,
+    "composition_current_changed": false
+  },
+  "terminal": {
+    "metadata_seal_public_and_verified": true,
+    "ega_program_complete": false,
+    "next_action": "Advance the durable cursor and begin EGA I §6.5.1 in source order."
+  }
+}

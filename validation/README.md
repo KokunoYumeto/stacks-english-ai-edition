@@ -321,3 +321,8 @@ DOI `10.5281/zenodo.22135180`. Six assets totaling 174,783,585 bytes per host
 matched across 12 public downloads, and all three ZIP member replays passed.
 The checkpoint changes no root TeX or PDF; R28 remains the latest errata
 release.
+
+The follow-on
+[`ega-i-6.4-semantic-metadata-readback-2026-08-29.json`](ega-i-6.4-semantic-metadata-readback-2026-08-29.json)
+receipt binds the public metadata seal, its exact-head workflow, and anonymous
+raw-byte readback of every changed path.
