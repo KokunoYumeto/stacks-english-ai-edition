@@ -246,6 +246,7 @@ def main() -> int:
             },
         },
         "adverse_observations": [
+            "This append-only transport rebind preserves the four originally reviewed CRLF JSON receipts byte-for-byte and adds candidate-local binary attributes for those exact paths so Git cannot silently normalize them again; the R31 and R32 admission commits remain immutable in Git history.",
             "The standalone candidate retains the authority's cross-chapter unresolved-reference multiset; the one admitted line-7967 localized-topos correction introduces no other reference or citation delta.",
             "Both PDFs are untagged; this retained accessibility limitation is not misreported as a visual failure.",
             f"The hash-bound visual-QA receipt records inspection of all {expected_candidate_pages} candidate pages and every correction-sensitive locus without a visual defect.",
@@ -253,7 +254,7 @@ def main() -> int:
         ],
         "constraints_observed": {
             "candidate_inputs_mutated": False,
-            "registry_or_git_state_mutated": False,
+            "registry_or_git_state_mutated": True,
             "upstream_contacted": False,
             "persistent_writes": ["replay/independent-review.json"],
         },

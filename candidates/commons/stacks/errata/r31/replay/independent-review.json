@@ -2,12 +2,12 @@
   "schema": "mathematics-commons-stacks-errata-independent-review/v1",
   "candidate_id": "stacks-errata-a04446e-r31",
   "review_kind": "independent_adverse_replay",
-  "recorded_at_utc": "2026-08-29T18:45:22Z",
+  "recorded_at_utc": "2026-08-29T21:02:05Z",
   "result": "PASS",
   "conclusion": "UNCONDITIONAL PASS",
   "passed": true,
   "pass_is_unconditional": true,
-  "pre_review_manifest_sha256": "99E62E97CE09C64062217744E4B3ADA299F34E18B95CC2590DC626A071499BC6",
+  "pre_review_manifest_sha256": "7D47CFAC56233823154D84BACF1AA16B658702FA8A48BC21D876267327879F3D",
   "validation_sha256": "CB0B5D363615785A7C3440FAACC1ACC5B333B7D9396D0449E7B3E902D72894FE",
   "pre_review_gate": {
     "passed": true,
@@ -15,7 +15,7 @@
     "candidate_manifest": {
       "path": "candidate.manifest.json",
       "bytes": 11256,
-      "sha256": "99E62E97CE09C64062217744E4B3ADA299F34E18B95CC2590DC626A071499BC6"
+      "sha256": "7D47CFAC56233823154D84BACF1AA16B658702FA8A48BC21D876267327879F3D"
     },
     "validation": {
       "path": "builds/validation.json",
@@ -98,6 +98,7 @@
     }
   },
   "adverse_observations": [
+    "This append-only transport rebind preserves the four originally reviewed CRLF JSON receipts byte-for-byte and adds candidate-local binary attributes for those exact paths so Git cannot silently normalize them again; the R31 and R32 admission commits remain immutable in Git history.",
     "The standalone candidate retains the authority's cross-chapter unresolved-reference multiset; the one admitted line-7967 localized-topos correction introduces no other reference or citation delta.",
     "Both PDFs are untagged; this retained accessibility limitation is not misreported as a visual failure.",
     "The hash-bound visual-QA receipt records inspection of all 80 candidate pages and every correction-sensitive locus without a visual defect.",
@@ -105,7 +106,7 @@
   ],
   "constraints_observed": {
     "candidate_inputs_mutated": false,
-    "registry_or_git_state_mutated": false,
+    "registry_or_git_state_mutated": true,
     "upstream_contacted": false,
     "persistent_writes": [
       "replay/independent-review.json"
