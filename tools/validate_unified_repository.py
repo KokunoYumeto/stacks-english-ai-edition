@@ -42,6 +42,7 @@ COMPOSITION_MODE = (
 )
 EMBEDDED_CANDIDATE_TOPOLOGY = "embedded_candidate_direct_admission"
 LEASED_CANDIDATE_TOPOLOGY = "leased_candidate_then_admission"
+REPAIRED_CANDIDATE_TOPOLOGY = "repaired_candidate_then_admission"
 EXPECTED_FIXED_POINT_SUFFIXES = [
     ".aux",
     ".bbl",
@@ -748,7 +749,190 @@ def main(argv: list[str] | None = None) -> int:
             intake_commit is not None
             and git("cat-file", "-e", f"{intake_commit}^{{commit}}").returncode == 0
         )
-        if topology is None:
+        if topology == REPAIRED_CANDIDATE_TOPOLOGY:
+            # R29's original admission (8b70e94d) is retained as the
+            # candidate/registry append.  Commit 256846d6 is the subsequent
+            # registrar-only repair that rebinds its manifest/evidence while
+            # admitting R30.  Validate that narrow transport delta explicitly.
+            repair = overlay.get("transport_repair")
+            if not isinstance(repair, dict):
+                errors.append(
+                    f"repaired candidate lacks transport-repair evidence: {overlay.get('id')!r}"
+                )
+            elif candidate_exists and admission_exists:
+                if candidate_commit != admission_commit:
+                    errors.append(
+                        f"repaired candidate admission must equal original candidate: {overlay.get('id')!r}"
+                    )
+                require_single_parent(
+                    candidate_commit,
+                    f"candidate {overlay.get('id')}",
+                    errors,
+                    admission_cursor if cursor_exists else None,
+                )
+                actual_candidate_tree = git_optional(
+                    "rev-parse", f"{candidate_commit}^{{tree}}"
+                )
+                if (
+                    overlay.get("candidate_tree") != actual_candidate_tree
+                    or overlay.get("admission_tree") != actual_candidate_tree
+                    or overlay.get("admission_parent") != admission_cursor
+                ):
+                    errors.append(
+                        f"repaired candidate tree or parent binding mismatch: {overlay.get('id')!r}"
+                    )
+                repair_commit = require_sha1_identity(
+                    repair.get("commit"),
+                    f"transport repair {overlay.get('id')}",
+                    errors,
+                )
+                if repair_commit is not None:
+                    repair_exists = git("cat-file", "-e", f"{repair_commit}^{{commit}}").returncode == 0
+                    if not repair_exists:
+                        errors.append(
+                            f"missing transport repair commit object: {repair_commit}"
+                        )
+                    else:
+                        require_single_parent(
+                            repair_commit,
+                            f"transport repair {overlay.get('id')}",
+                            errors,
+                            admission_commit,
+                        )
+                        actual_repair_tree = git_optional(
+                            "rev-parse", f"{repair_commit}^{{tree}}"
+                        )
+                        if (
+                            repair.get("parent") != admission_commit
+                            or repair.get("tree") != actual_repair_tree
+                        ):
+                            errors.append(
+                                f"transport repair tree or parent binding mismatch: {overlay.get('id')!r}"
+                            )
+                        before_manifest_sha = repair.get("manifest_sha256_before")
+                        if (
+                            not isinstance(before_manifest_sha, str)
+                            or not SHA256_RE.fullmatch(before_manifest_sha)
+                        ):
+                            errors.append(
+                                f"transport repair pre-rebind manifest hash is invalid: {overlay.get('id')!r}"
+                            )
+                        candidate_manifest = committed_bytes(
+                            candidate_commit,
+                            f"candidates/{entry.get('namespace')}/candidate.manifest.json",
+                            errors,
+                            "candidate manifest",
+                        )
+                        repaired_manifest = committed_bytes(
+                            repair_commit,
+                            f"candidates/{entry.get('namespace')}/candidate.manifest.json",
+                            errors,
+                            "repaired candidate manifest",
+                        )
+                        if (
+                            candidate_manifest is not None
+                            and isinstance(before_manifest_sha, str)
+                            and sha256_bytes(candidate_manifest) != before_manifest_sha.upper()
+                        ):
+                            errors.append(
+                                f"transport repair candidate manifest mismatch: {overlay.get('id')!r}"
+                            )
+                        if (
+                            repaired_manifest is not None
+                            and sha256_bytes(repaired_manifest)
+                            != str(overlay.get("manifest_sha256", "")).upper()
+                        ):
+                            errors.append(
+                                f"transport repair final manifest mismatch: {overlay.get('id')!r}"
+                            )
+                        expected_subtree = overlay.get("candidate_subtree")
+                        namespace = entry.get("namespace")
+                        candidate_path = (
+                            f"candidates/{namespace}" if isinstance(namespace, str) else ""
+                        )
+                        repaired_subtree = (
+                            git_optional("rev-parse", f"{repair_commit}:{candidate_path}")
+                            if candidate_path
+                            else None
+                        )
+                        imported_subtree = (
+                            git_optional(
+                                "rev-parse",
+                                f"{registry_import_commit}:ai-integrated/{candidate_path}",
+                            )
+                            if candidate_path and registry_import_commit is not None
+                            else None
+                        )
+                        head_subtree = (
+                            git_optional("rev-parse", f"HEAD:ai-integrated/{candidate_path}")
+                            if candidate_path
+                            else None
+                        )
+                        if (
+                            not isinstance(expected_subtree, str)
+                            or not SHA1_RE.fullmatch(expected_subtree)
+                            or repaired_subtree != expected_subtree
+                            or imported_subtree != expected_subtree
+                            or head_subtree != expected_subtree
+                        ):
+                            errors.append(
+                                f"transport-repaired candidate subtree mismatch: {overlay.get('id')!r}"
+                            )
+                        repair_paths = repair.get("paths")
+                        declared_paths: set[str] = set()
+                        if not isinstance(repair_paths, list) or not repair_paths:
+                            errors.append(
+                                f"transport repair path inventory is missing: {overlay.get('id')!r}"
+                            )
+                        else:
+                            for item in repair_paths:
+                                if not isinstance(item, dict) or not isinstance(item.get("path"), str):
+                                    errors.append(
+                                        f"transport repair path row is invalid: {overlay.get('id')!r}"
+                                    )
+                                    continue
+                                path = item["path"]
+                                if path in declared_paths or not path.startswith(candidate_path + "/"):
+                                    errors.append(
+                                        f"transport repair path is duplicate or out of scope: {overlay.get('id')!r}"
+                                    )
+                                    continue
+                                declared_paths.add(path)
+                                before_blob = commit_blob(admission_commit, path, errors, "transport repair preimage")
+                                after_blob = commit_blob(repair_commit, path, errors, "transport repair postimage")
+                                before_bytes = committed_bytes(admission_commit, path, errors, "transport repair preimage")
+                                after_bytes = committed_bytes(repair_commit, path, errors, "transport repair postimage")
+                                if (
+                                    before_blob != item.get("before_git_blob")
+                                    or after_blob != item.get("after_git_blob")
+                                    or before_bytes is None
+                                    or after_bytes is None
+                                    or sha256_bytes(before_bytes) != str(item.get("before_sha256", "")).upper()
+                                    or sha256_bytes(after_bytes) != str(item.get("after_sha256", "")).upper()
+                                ):
+                                    errors.append(
+                                        f"transport repair path hash mismatch: {overlay.get('id')!r}/{path}"
+                                    )
+                            changed = git(
+                                "diff",
+                                "--name-only",
+                                "--diff-filter=ACMRTUXB",
+                                f"{admission_commit}..{repair_commit}",
+                                "--",
+                                candidate_path,
+                            )
+                            changed_paths = tuple(
+                                path for path in changed.stdout.splitlines() if path
+                            ) if changed.returncode == 0 else ()
+                            if tuple(sorted(changed_paths)) != tuple(sorted(declared_paths)):
+                                errors.append(
+                                    f"transport repair changed-path inventory mismatch: {overlay.get('id')!r}"
+                                )
+                        if repair.get("registry_manifest_sha256_before") != before_manifest_sha:
+                            errors.append(
+                                f"transport repair registry rebind hash mismatch: {overlay.get('id')!r}"
+                            )
+        elif topology is None:
             if candidate_exists:
                 require_single_parent(
                     candidate_commit,

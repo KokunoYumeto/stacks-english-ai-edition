@@ -32,6 +32,7 @@ DEFAULT_STEMS = (
     "more-algebra",
     "smoothing",
     "modules",
+    "sites-modules",
     "schemes",
     "properties",
     "morphisms",
@@ -57,6 +58,7 @@ COMPOSITION_MODE_V3 = (
 COMPOSITION_MODE_V4 = "registered insertion rebased through unique unchanged context"
 EMBEDDED_CANDIDATE_TOPOLOGY = "embedded_candidate_direct_admission"
 LEASED_CANDIDATE_TOPOLOGY = "leased_candidate_then_admission"
+REPAIRED_CANDIDATE_TOPOLOGY = "repaired_candidate_then_admission"
 NAMESPACE_PATTERN = re.compile(
     r"^[A-Za-z0-9._-]+(?:/[A-Za-z0-9._-]+)*$"
 )
@@ -517,11 +519,16 @@ def load_composition_receipt(
         and overlay.get("topology") == EMBEDDED_CANDIDATE_TOPOLOGY
         for overlay in raw_new_overlays
     )
+    has_repaired_candidate = isinstance(raw_new_overlays, list) and any(
+        isinstance(overlay, dict)
+        and overlay.get("topology") == REPAIRED_CANDIDATE_TOPOLOGY
+        for overlay in raw_new_overlays
+    )
     if is_v4 and has_embedded_candidate:
         raise RuntimeError("v4 registered insertions cannot use embedded candidates")
     # A v3 transition may append multiple direct-admission candidates.  Each
     # overlay is validated independently in registry order below.
-    uses_bound_leases = is_v4 or has_embedded_candidate
+    uses_bound_leases = is_v4 or has_embedded_candidate or has_repaired_candidate
 
     authority = receipt.get("authority")
     previous = receipt.get("previous_cutoff")
@@ -906,8 +913,224 @@ def load_composition_receipt(
         candidate_path = f"candidates/{namespace}"
         manifest_path = f"{candidate_path}/candidate.manifest.json"
         normalized_overlay = dict(overlay)
+        admission_entry_for_commit = entry
 
-        if not is_v4 and topology is None:
+        if not is_v4 and topology == REPAIRED_CANDIDATE_TOPOLOGY:
+            # R29 was admitted at 8b70e94d with a provisional manifest.  The
+            # following R30 admission commit (256846d6) is the append-only
+            # registrar repair that rebinds those bytes before adding R30.
+            # Keep that transport repair explicit and local; never treat the
+            # repaired payload as a source projection input.
+            repair = overlay.get("transport_repair")
+            if not isinstance(repair, dict):
+                raise RuntimeError(
+                    f"repaired candidate lacks transport-repair evidence: {overlay.get('id')!r}"
+                )
+            if admission != candidate:
+                raise RuntimeError(
+                    f"repaired candidate admission must equal the original candidate: {overlay.get('id')!r}"
+                )
+            require_single_parent(
+                source,
+                candidate,
+                f"candidate {overlay.get('id')}",
+                expected_registry_parent,
+            )
+            actual_candidate_tree = git(source, "rev-parse", f"{candidate}^{{tree}}")
+            if (
+                overlay.get("candidate_tree") != actual_candidate_tree
+                or overlay.get("admission_tree") != actual_candidate_tree
+                or overlay.get("admission_parent") != expected_registry_parent
+            ):
+                raise RuntimeError(
+                    f"repaired candidate tree or parent binding mismatch: {overlay.get('id')!r}"
+                )
+
+            repair_commit = require_commit_object(
+                source,
+                repair.get("commit"),
+                f"transport repair {overlay.get('id')}",
+            )
+            require_single_parent(
+                source,
+                repair_commit,
+                f"transport repair {overlay.get('id')}",
+                admission,
+            )
+            actual_repair_tree = git(source, "rev-parse", f"{repair_commit}^{{tree}}")
+            if (
+                repair.get("parent") != admission
+                or repair.get("tree") != actual_repair_tree
+            ):
+                raise RuntimeError(
+                    f"transport repair tree or parent binding mismatch: {overlay.get('id')!r}"
+                )
+
+            before_manifest_sha = repair.get("manifest_sha256_before")
+            if (
+                not isinstance(before_manifest_sha, str)
+                or not SHA256_PATTERN.fullmatch(before_manifest_sha)
+            ):
+                raise RuntimeError(
+                    f"transport repair lacks a valid pre-rebind manifest hash: {overlay.get('id')!r}"
+                )
+            candidate_manifest_blob = git_optional(
+                source, "rev-parse", f"{candidate}:{manifest_path}"
+            )
+            repaired_manifest_blob = git_optional(
+                source, "rev-parse", f"{repair_commit}:{manifest_path}"
+            )
+            if (
+                candidate_manifest_blob is None
+                or git_blob_sha256(source, candidate_manifest_blob)
+                != before_manifest_sha.upper()
+                or repaired_manifest_blob is None
+                or git_blob_sha256(source, repaired_manifest_blob)
+                != overlay["manifest_sha256"].upper()
+            ):
+                raise RuntimeError(
+                    f"transport repair manifest binding mismatch: {overlay.get('id')!r}"
+                )
+
+            expected_subtree = overlay.get("candidate_subtree")
+            repaired_subtree = git_optional(
+                source, "rev-parse", f"{repair_commit}:{candidate_path}"
+            )
+            imported_candidate_path = f"ai-integrated/{candidate_path}"
+            imported_subtree = git_optional(
+                source,
+                "rev-parse",
+                f"{registry_import_commit}:{imported_candidate_path}",
+            )
+            head_subtree = git_optional(
+                source, "rev-parse", f"HEAD:{imported_candidate_path}"
+            )
+            if (
+                not isinstance(expected_subtree, str)
+                or not SHA1_PATTERN.fullmatch(expected_subtree)
+                or repaired_subtree != expected_subtree
+                or imported_subtree != expected_subtree
+                or head_subtree != expected_subtree
+            ):
+                raise RuntimeError(
+                    f"transport-repaired candidate subtree binding mismatch: {overlay.get('id')!r}"
+                )
+
+            repair_paths = repair.get("paths")
+            if not isinstance(repair_paths, list) or not repair_paths:
+                raise RuntimeError(
+                    f"transport repair lacks an explicit path inventory: {overlay.get('id')!r}"
+                )
+            declared_paths: set[str] = set()
+            for item in repair_paths:
+                if not isinstance(item, dict) or not isinstance(item.get("path"), str):
+                    raise RuntimeError(
+                        f"transport repair contains an invalid path row: {overlay.get('id')!r}"
+                    )
+                path = item["path"]
+                if path in declared_paths or not path.startswith(candidate_path + "/"):
+                    raise RuntimeError(
+                        f"transport repair path is duplicate or out of scope: {overlay.get('id')!r}"
+                    )
+                declared_paths.add(path)
+                before_blob = git_optional(source, "rev-parse", f"{admission}:{path}")
+                after_blob = git_optional(source, "rev-parse", f"{repair_commit}:{path}")
+                if (
+                    before_blob != item.get("before_git_blob")
+                    or after_blob != item.get("after_git_blob")
+                    or before_blob is None
+                    or after_blob is None
+                    or git_blob_sha256(source, before_blob)
+                    != str(item.get("before_sha256", "")).upper()
+                    or git_blob_sha256(source, after_blob)
+                    != str(item.get("after_sha256", "")).upper()
+                ):
+                    raise RuntimeError(
+                        f"transport repair path hash mismatch: {overlay.get('id')!r}/{path}"
+                    )
+            changed_paths = tuple(
+                path
+                for path in git(
+                    source,
+                    "diff",
+                    "--name-only",
+                    "--diff-filter=ACMRTUXB",
+                    f"{admission}..{repair_commit}",
+                    "--",
+                    candidate_path,
+                ).splitlines()
+                if path
+            )
+            if tuple(sorted(changed_paths)) != tuple(sorted(declared_paths)):
+                raise RuntimeError(
+                    f"transport repair changed-path inventory mismatch: {overlay.get('id')!r}"
+                )
+
+            admission_entry_for_commit = dict(entry)
+            admission_entry_for_commit["manifest_sha256"] = before_manifest_sha
+            if repair.get("registry_manifest_sha256_before") != before_manifest_sha:
+                raise RuntimeError(
+                    f"transport repair registry rebind hash mismatch: {overlay.get('id')!r}"
+                )
+            if uses_bound_leases:
+                lease_id = repair.get("lease_id")
+                matching_lease_events = [
+                    event
+                    for event in lease_events
+                    if isinstance(event, dict)
+                    and event.get("lease_id") == lease_id
+                    and event.get("namespace") == namespace
+                ]
+                if (
+                    not isinstance(lease_id, str)
+                    or len(matching_lease_events) != 2
+                    or matching_lease_events[0].get("event") != "issued"
+                    or matching_lease_events[1].get("event") != "released"
+                    or matching_lease_events[0].get("state") != "active"
+                    or matching_lease_events[1].get("state") != "released"
+                    or matching_lease_events[1].get("supersedes_event_id")
+                    != matching_lease_events[0].get("event_id")
+                ):
+                    raise RuntimeError(
+                        f"transport-repaired candidate lease lifecycle is incomplete: {overlay.get('id')!r}"
+                    )
+                released_event = matching_lease_events[1]
+                expected_release = overlay.get("lease_release_event")
+                if expected_release is not None and expected_release != released_event.get("event_id"):
+                    raise RuntimeError(
+                        f"transport-repaired candidate release binding mismatch: {overlay.get('id')!r}"
+                    )
+                successor_event = next(
+                    (
+                        event
+                        for event in lease_events
+                        if isinstance(event, dict)
+                        and event.get("event") == "issued"
+                        and event.get("state") == "active"
+                        and event.get("supersedes_event_id") == released_event.get("event_id")
+                    ),
+                    None,
+                )
+                expected_successor = overlay.get("successor_lease_event")
+                if expected_successor is not None and (
+                    successor_event is None
+                    or expected_successor != successor_event.get("event_id")
+                ):
+                    raise RuntimeError(
+                        f"transport-repaired candidate successor binding mismatch: {overlay.get('id')!r}"
+                    )
+                normalized_overlay["lease_event_id"] = released_event.get("event_id")
+                normalized_overlay["successor_lease_event_id"] = (
+                    successor_event.get("event_id") if successor_event is not None else None
+                )
+            normalized_overlay.update(
+                {
+                    "candidate_tree": actual_candidate_tree,
+                    "admission_tree": actual_candidate_tree,
+                    "candidate_subtree": expected_subtree,
+                }
+            )
+        elif not is_v4 and topology is None:
             require_single_parent(
                 source,
                 candidate,
@@ -1598,7 +1821,7 @@ def load_composition_receipt(
         )
         if (
             not isinstance(admission_entries, list)
-            or admission_entries != expected_admission_entries + [entry]
+            or admission_entries != expected_admission_entries + [admission_entry_for_commit]
         ):
             raise RuntimeError(
                 f"admission commit is not an exact one-entry append for {overlay.get('id')!r}"
