@@ -42,8 +42,10 @@ endorsement.
 - Base: public `main` commit
   `4cf4242c1daf5cc49e092a0d347246fc501bb257`, tree
   `d5464f63f28477975749115050fe4750f49d56b3`.
-- Write boundary: `dga.tex` and new `illusie_r2/**` only. EGA, FAC, Tôhoku,
-  GAGA, `illusie_r1`, and every other root source are read-only.
+- Write boundary: `dga.tex`, new `illusie_r2/**`, and only the minimal
+  `r1`/`r2` local-label generalization in
+  `tools/validate_unified_repository.py`. EGA, FAC, Tôhoku, GAGA,
+  `illusie_r1`, and every other root source are read-only.
 
 The candidate must pass an independent mathematical and deduplication replay,
 a targeted serial fixed-point `dga.tex` build, affected-page visual QA,
