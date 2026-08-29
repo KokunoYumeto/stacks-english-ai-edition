@@ -1,0 +1,247 @@
+{
+  "$schema": "../../../../../schemas/candidate-manifest.schema.json",
+  "schema": "mathematics-commons-stacks-candidate-manifest/v1",
+  "candidate_id": "stacks-errata-a04446e-r30",
+  "lease_id": "stacks-lease-000034-errata-r30",
+  "namespace": "commons/stacks/errata/r30",
+  "writer_task": "01a0256d-5693-77c1-96b2-cf37101e0c6c",
+  "upstream": {
+    "lock": "upstream/stacks.lock.json",
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e"
+  },
+  "source_authorities": [
+    {
+      "path": "authority/canon/R30_INJECTIVES_SANITIZED_HANDOFF.json",
+      "sha256": "9C4E2B84DC031791B2B1ED6686ACB9685BF33C55039B6CA5A68CFFE21B69D050"
+    },
+    {
+      "path": "authority/COPYING",
+      "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"
+    },
+    {
+      "path": "authority/source/injectives.tex",
+      "sha256": "B1367E48800C53D72C495D386EEF2D4D6C400652F9D00E69F664F17418D26520"
+    },
+    {
+      "path": "authority/upstream.lock.json",
+      "sha256": "C3520E022A495E74F722534ACEC3B47EC8E95195ED8F35B97C5177D8B3CD7E38"
+    }
+  ],
+  "source_closure": {
+    "enumerated": true,
+    "expected_units": 40,
+    "manifested_units": 40,
+    "complete": true
+  },
+  "stable_unit_manifest": {
+    "path": "stable-units.json",
+    "sha256": "138D72ECC148DA18FF8F5F2248B0EA82944108DFBDE67CD8E81E888B87F31EFE"
+  },
+  "source_map": {
+    "path": "source-map.jsonl",
+    "sha256": "C74B4FF40E3D51A9030782F598DF04FDCAD5AEBED2CE21EE9BA751FEA6675854"
+  },
+  "decision_ledger": {
+    "path": "decisions.jsonl",
+    "sha256": "165E6D93A0452F7BA76BE65017DCC1EE410983DAADF25F500A77A70896F3398C"
+  },
+  "rejection_ledger": {
+    "path": "rejections.jsonl",
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  "formula_diagram_inventory": {
+    "path": "formula-diagram-inventory.json",
+    "sha256": "E35C0022B3FE5C697EE19ADF22E1679F0E2D85EB87D84B1F6BE9BFB08229DAD6"
+  },
+  "builds": [
+    {
+      "path": "build-manifest.py",
+      "sha256": "3DB6E7BC6A63C174CCBD272E05B0BAF40D2DA0C31309FE6C86B08FADD2D9CA50"
+    },
+    {
+      "path": "build-receipt.py",
+      "sha256": "A408E867B1CDE7B84AA5D7F6B555540AA56BD3055FE4A41B23E37CC76D1C5E88"
+    },
+    {
+      "path": "BUILD.md",
+      "sha256": "06C3B2754250CB030CDF708DCC28A08B060F48ABEFC942550826D411E261CFC4"
+    },
+    {
+      "path": "builds/build-execution.json",
+      "sha256": "BA85FA1ACBEC33E90129DF2ED6DA9BE9E3462278D42FD8D837E049F9BEB6AE2F"
+    },
+    {
+      "path": "builds/build-receipt.json",
+      "sha256": "C934F0FD5F99AD676F57F84F310B17329A36398E03690C780024967F7099EE32"
+    },
+    {
+      "path": "builds/deterministic-replay.json",
+      "sha256": "156A00080A76557F3CAD2BAEA6AC46FC165C5510F828084D315B4CF927015DF2"
+    },
+    {
+      "path": "builds/injectives.authority.bibtex.txt",
+      "sha256": "95EF2B7E2D006B986D57D7BD52F3E665BEC415CD2044FB616DD6AC92D4F7922F"
+    },
+    {
+      "path": "builds/injectives.authority.log",
+      "sha256": "67C79B793034984B1F963C52C674D710094C53B0397BB193C41EB32389D7FDE8"
+    },
+    {
+      "path": "builds/injectives.authority.pass3.txt",
+      "sha256": "8A8E4F9EF8E6EAA7BE3A436B4DA325ABE7B82B648404B7FA5BFABB47E367F949"
+    },
+    {
+      "path": "builds/injectives.authority.pdf",
+      "sha256": "C3291DF829E84FB96263DB08D58504931F32D1C24219773882E7FA40A0A0F541"
+    },
+    {
+      "path": "builds/injectives.bibtex.txt",
+      "sha256": "95EF2B7E2D006B986D57D7BD52F3E665BEC415CD2044FB616DD6AC92D4F7922F"
+    },
+    {
+      "path": "builds/injectives.log",
+      "sha256": "2547744BD9C2EACBCB5A0B08FDAFA3F4B82EDA1E04A135A329AF098802D71D3B"
+    },
+    {
+      "path": "builds/injectives.pass3.txt",
+      "sha256": "327F1890F78EC376B447A1FC6D054D04881B14582736A576CD7D6119A3409F9D"
+    },
+    {
+      "path": "builds/injectives.pdf",
+      "sha256": "DC2D03995E73A6A75FC68577A9792E8A60D8912E2B4E983E8803DFBB75E73A2E"
+    },
+    {
+      "path": "builds/source-page-map.json",
+      "sha256": "C5873BB77AE9723632A7557897615A8B9B390A62CA0F0F9752CFBCD8A458F4D3"
+    },
+    {
+      "path": "builds/validation.json",
+      "sha256": "5F320EB359F209A01DFC024ADC992058CA3C7F529CF2BA36741A866E89EDF721"
+    },
+    {
+      "path": "builds/visual-qa.json",
+      "sha256": "3DF40A07725B9E5B736B9E641D4C1DC2DA810BCD4B46E0F47C1D6E43A7E92679"
+    },
+    {
+      "path": "candidate.config.json",
+      "sha256": "B8ABC09D2D07D3F36B1709C5F8EFBF3FC2007949FA9687B56876F4524C340B94"
+    },
+    {
+      "path": "check-manifest.py",
+      "sha256": "569878BA63190020045D05D394D743D7BDA253DD3A76D47A1A837D498BE5A31D"
+    },
+    {
+      "path": "derive-visual-pages.py",
+      "sha256": "AEBCACF8B1F0AD0DF0F6A53250A06BD275C8D7414C42F3A0ADEC7684B9755C1E"
+    },
+    {
+      "path": "deterministic-replay.py",
+      "sha256": "A165AD580D746A19EE4F41DD820E164A2D8FFC55B2036DF48F6B302914B4E835"
+    },
+    {
+      "path": "independent-review.py",
+      "sha256": "C51B1064A19856AB330B0E3314D1D7D13D4AE0861932103385E45DE97F689BC3"
+    },
+    {
+      "path": "INTAKE_VALIDATION.json",
+      "sha256": "483BB068740F81F5B8C68966877098CF82FBF93394B0C208F1DFEDF210031CC3"
+    },
+    {
+      "path": "LEASE.json",
+      "sha256": "725C7F074D34FF6321C65F0BAC6E3DAF9D0C83D07686B97C8C701D52977C632F"
+    },
+    {
+      "path": "operation-spec.json",
+      "sha256": "53E7FEFF2423BAEE25B9D27A6EB61D016FC835E138C98585A71C0B66E71EDEB0"
+    },
+    {
+      "path": "payload/injectives.tex",
+      "sha256": "BDC721593BE0B491334C707B371A2EECD1787787903A71E059721BDB66C5AC04"
+    },
+    {
+      "path": "producer/INJECTIVES_ID_CROSSWALK.csv",
+      "sha256": "FC9DAC489A332EDBD9154C2FB18DD3F60F50CB63CC9F4DBCE09C7F3FCA8A4525"
+    },
+    {
+      "path": "producer/INJECTIVES_LANGUAGE_QA.json",
+      "sha256": "D8825C399CE0592959476BD60BFD331EDF6E9507EB3196FEF20F2E9ABD36624B"
+    },
+    {
+      "path": "producer/INJECTIVES_SOURCE_DEFECT_LEDGER.csv",
+      "sha256": "B2BC602A205175DDCE6EB04F8774C16159DFA3B9FCAAB560E80CC7CA7CA1F15B"
+    },
+    {
+      "path": "producer/INJECTIVES_SOURCE_EMENDATIONS.json",
+      "sha256": "9581ED3B67658CF110DBF525C28AC0DA867C59EC8FE9278E89366CCAF1FC5DA0"
+    },
+    {
+      "path": "README.md",
+      "sha256": "8112AD27827C037362B68B0F09B8D2B4653B2F35683D75F0790D87957CBA1144"
+    },
+    {
+      "path": "regenerate_r30.py",
+      "sha256": "3EC8B11E7BBFC1DCDBF61E32390F679603A0091B701364AE5625A6F91ECC9912"
+    },
+    {
+      "path": "REGENERATION_RECEIPT.json",
+      "sha256": "BA84337BFE39E7C18E267C947DD799DB4091ED4E3354743E3AD3AED3DF002032"
+    },
+    {
+      "path": "render-qa.py",
+      "sha256": "425D2860E7F6DDA5A6511C545B34BE8F9389462D1B74BEBD897A7DC045E72B58"
+    },
+    {
+      "path": "replay/independent-review.json",
+      "sha256": "082FF5BDB58B61EAC3281CE7AACF936392199F2724DE4E0147B44645FCBBC797"
+    },
+    {
+      "path": "replay-build.py",
+      "sha256": "AA865A4CB6FC69906E68436D854A21FDA4873BC705EBB61AA010EA291C281D4C"
+    },
+    {
+      "path": "schemas/candidate-manifest.schema.json",
+      "sha256": "7009897EA9512D67B752701C4AC6BAD6715EF41A02041618A3BC607719F24924"
+    },
+    {
+      "path": "source-validation.json",
+      "sha256": "7094D022169396019632EFAA14A8F6E0428BE522DA3008DBD16F272FC9F75376"
+    },
+    {
+      "path": "synctex-build.py",
+      "sha256": "3CA2A8F4232639EF82B26CB2C5F86FFF7907B036226E2AC937B1225B2F3C2E91"
+    },
+    {
+      "path": "verify-source.py",
+      "sha256": "809E41CA838D9666F8B07324F87667084F19871430AA923C1B4FCFC56F260D01"
+    },
+    {
+      "path": "verify.py",
+      "sha256": "3F6EBCDE22D5329697A2A194BE0586F17520ADA727031C5D7461C37B74EF65F6"
+    },
+    {
+      "path": "visual-qa.py",
+      "sha256": "DDFB8CC5F7B84D4B22A40E70B08B0623A6E1899683A876124923CCD987C2722D"
+    }
+  ],
+  "rights_state": "The authority and modified payload retain the Stacks Project GNU Free Documentation License 1.2; metadata and receipts do not relicense upstream content. This is an independently maintained AI-produced English edition with no Stacks Project review, approval, affiliation, or endorsement. Legal certification was not performed.",
+  "review_state": "performed",
+  "independent_replay": "passed",
+  "unresolved_defects": [
+    "The independent replay receipt binds pre-review manifest 2D0B7D89129E35E6F72233004EE26E73F87F3736037801BB17F02AC2256AB056 and validation 5F320EB359F209A01DFC024ADC992058CA3C7F529CF2BA36741A866E89EDF721. This final registrar-only rebind adds the independent receipt; no authority source, payload, operation specification, PDF, or rendered-page byte changed.",
+    "The isolated injectives.tex candidate retains the frozen authority's cross-chapter undefined-reference targets and adds exactly one configured candidate-only target, sites-modules-section-internal-hom, introduced by accepted unit INJECTIVES-CH19-D005; the build gate proves there is no other reference or citation delta.",
+    "The sealed chapter readers have page counts candidate 31, authority 31. The hash-bound visual-QA receipt records inspection of every candidate page and every correction-sensitive locus without clipping, overlap, missing glyph, broken diagram, blank page, or unreadable content.",
+    "The proof PDFs contain embedded fonts with ToUnicode maps but are untagged; document-structure accessibility remains a cumulative-edition toolchain concern.",
+    "The bounded intake assigns 40 collision-free aliases to 40 accepted semantic units and 40 exact operations. All 28 producer defect rows were independently admitted, and 12 additional source defects were established directly from the same frozen authority; no unit remains rejected or unresolved.",
+    "Canonical translations preserve the frozen authority unless a locale-side emendation is separately bound; this English corrected overlay is not silently copied.",
+    "Overlay admission and English-edition composition are separate transitions; this manifest records candidate closure only."
+  ],
+  "stop_conditions": [
+    "Do not mutate the literal stacks-project master mirror.",
+    "Do not apply these corrections silently to canonical translation source or PDFs.",
+    "Do not contact or submit to the upstream Stacks maintainers under the current no-AI-contribution boundary.",
+    "Do not append an overlay registry record except in a separate admission commit bound to the final manifest hash and a passed independent replay.",
+    "Any change to reviewed authority, payload, proof, build, validation, visual-QA, or replay bytes invalidates the replay and requires a new review."
+  ],
+  "generated_at_utc": "2026-08-29T17:38:23Z"
+}

@@ -1,0 +1,164 @@
+{
+  "schema": "mathematics-commons-stacks-errata-candidate-config/v1",
+  "candidate_id": "stacks-errata-a04446e-r30",
+  "namespace": "commons/stacks/errata/r30",
+  "lease_id": "stacks-lease-000034-errata-r30",
+  "lease_status": "prospective_identifier_only_not_issued_or_registered",
+  "writer_task": "01a0256d-5693-77c1-96b2-cf37101e0c6c",
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "source_date_epoch": "1787961600",
+  "accepted": 40,
+  "rejected": 0,
+  "unresolved": 0,
+  "operation_count": 40,
+  "proof_closure": {
+    "accepted": 40,
+    "operations": 40,
+    "rejected": 0,
+    "unresolved": 0
+  },
+  "expected_unit_ids": [
+    "MC-STK-ERR-1247",
+    "MC-STK-ERR-1248",
+    "MC-STK-ERR-1249",
+    "MC-STK-ERR-1250",
+    "MC-STK-ERR-1251",
+    "MC-STK-ERR-1252",
+    "MC-STK-ERR-1253",
+    "MC-STK-ERR-1254",
+    "MC-STK-ERR-1255",
+    "MC-STK-ERR-1256",
+    "MC-STK-ERR-1257",
+    "MC-STK-ERR-1258",
+    "MC-STK-ERR-1259",
+    "MC-STK-ERR-1260",
+    "MC-STK-ERR-1261",
+    "MC-STK-ERR-1262",
+    "MC-STK-ERR-1263",
+    "MC-STK-ERR-1264",
+    "MC-STK-ERR-1265",
+    "MC-STK-ERR-1266",
+    "MC-STK-ERR-1267",
+    "MC-STK-ERR-1268",
+    "MC-STK-ERR-1269",
+    "MC-STK-ERR-1270",
+    "MC-STK-ERR-1271",
+    "MC-STK-ERR-1272",
+    "MC-STK-ERR-1273",
+    "MC-STK-ERR-1274",
+    "MC-STK-ERR-1275",
+    "MC-STK-ERR-1276",
+    "MC-STK-ERR-1277",
+    "MC-STK-ERR-1278",
+    "MC-STK-ERR-1279",
+    "MC-STK-ERR-1280",
+    "MC-STK-ERR-1281",
+    "MC-STK-ERR-1282",
+    "MC-STK-ERR-1283",
+    "MC-STK-ERR-1284",
+    "MC-STK-ERR-1285",
+    "MC-STK-ERR-1286"
+  ],
+  "expected_producer_aliases": [
+    "INJECTIVES-CH19-D001",
+    "INJECTIVES-CH19-D002",
+    "R30-INDEPENDENT-001",
+    "INJECTIVES-CH19-D003",
+    "R30-INDEPENDENT-002",
+    "R30-INDEPENDENT-003",
+    "R30-INDEPENDENT-004",
+    "INJECTIVES-CH19-D004",
+    "R30-INDEPENDENT-005",
+    "INJECTIVES-CH19-D005",
+    "INJECTIVES-CH19-D006",
+    "INJECTIVES-CH19-D007",
+    "INJECTIVES-CH19-D008",
+    "INJECTIVES-CH19-D009",
+    "INJECTIVES-CH19-D010",
+    "INJECTIVES-CH19-D011",
+    "INJECTIVES-CH19-D012",
+    "R30-INDEPENDENT-006",
+    "INJECTIVES-CH19-D013",
+    "INJECTIVES-CH19-D014",
+    "INJECTIVES-CH19-D015",
+    "INJECTIVES-CH19-D016",
+    "R30-INDEPENDENT-007",
+    "INJECTIVES-CH19-D017",
+    "R30-INDEPENDENT-008",
+    "R30-INDEPENDENT-009",
+    "INJECTIVES-CH19-D018",
+    "INJECTIVES-CH19-D019",
+    "INJECTIVES-CH19-D020",
+    "INJECTIVES-CH19-D021",
+    "INJECTIVES-CH19-D022",
+    "INJECTIVES-CH19-D023",
+    "INJECTIVES-CH19-D024",
+    "INJECTIVES-CH19-D025",
+    "R30-INDEPENDENT-010",
+    "R30-INDEPENDENT-011",
+    "INJECTIVES-CH19-D026",
+    "R30-INDEPENDENT-012",
+    "INJECTIVES-CH19-D027",
+    "INJECTIVES-CH19-D028"
+  ],
+  "authority_evidence": [
+    {
+      "path": "authority/COPYING",
+      "bytes": 20404,
+      "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"
+    },
+    {
+      "path": "authority/source/injectives.tex",
+      "bytes": 105120,
+      "sha256": "B1367E48800C53D72C495D386EEF2D4D6C400652F9D00E69F664F17418D26520"
+    },
+    {
+      "path": "authority/upstream.lock.json",
+      "bytes": 425,
+      "sha256": "C3520E022A495E74F722534ACEC3B47EC8E95195ED8F35B97C5177D8B3CD7E38"
+    },
+    {
+      "path": "authority/canon/R30_INJECTIVES_SANITIZED_HANDOFF.json",
+      "bytes": 1886,
+      "sha256": "9C4E2B84DC031791B2B1ED6686ACB9685BF33C55039B6CA5A68CFFE21B69D050"
+    }
+  ],
+  "stems": {
+    "injectives": {
+      "authority_bytes": 105120,
+      "authority_sha256": "B1367E48800C53D72C495D386EEF2D4D6C400652F9D00E69F664F17418D26520",
+      "payload_bytes": 105225,
+      "payload_sha256": "BDC721593BE0B491334C707B371A2EECD1787787903A71E059721BDB66C5AC04",
+      "build_exceptions": {
+        "candidate_only_undefined_reference_targets": {
+          "sites-modules-section-internal-hom": 1
+        },
+        "candidate_page_delta": 0
+      },
+      "display_delimiter_delta": 0,
+      "ordered_structure_exceptions": {
+        "references": {
+          "candidate_only": [
+            "\\ref{sites-modules-section-internal-hom}"
+          ]
+        }
+      },
+      "source_line_exceptions": {}
+    }
+  },
+  "visual_qa": {
+    "source_page_map_path": "builds/source-page-map.json",
+    "mapping_strategy": "synctex_every_operation_source_line",
+    "correction_sensitive_pages_strategy": "all_unique_mapped_operation_pages",
+    "high_resolution_pages_strategy": "all_correction_sensitive_pages",
+    "full_page_dpi": 96,
+    "high_resolution_dpi": 180,
+    "contact_sheet_page_capacity": 16
+  },
+  "admission_state": "not_admitted",
+  "build_state": "not_run",
+  "manifest_state": "not_created",
+  "review_state": "not_run",
+  "prospective_post_r30_stable_total": 931
+}

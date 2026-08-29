@@ -1,0 +1,101 @@
+{
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "candidate_id": "stacks-errata-a04446e-r30",
+  "checks": {
+    "authority_evidence": {
+      "files": 4,
+      "passed": true
+    },
+    "chapter_builds": {
+      "chapters": 1,
+      "passed": true,
+      "receipt_sha256": "C934F0FD5F99AD676F57F84F310B17329A36398E03690C780024967F7099EE32"
+    },
+    "deterministic_pdf_replay": {
+      "passed": true,
+      "pdfs": 2,
+      "receipt_sha256": "156A00080A76557F3CAD2BAEA6AC46FC165C5510F828084D315B4CF927015DF2"
+    },
+    "exact_payloads": {
+      "files": {
+        "injectives": {
+          "authority_bytes": 105120,
+          "authority_display_delimiters": 212,
+          "authority_sha256": "B1367E48800C53D72C495D386EEF2D4D6C400652F9D00E69F664F17418D26520",
+          "display_delimiter_delta": 0,
+          "operation_count": 40,
+          "payload_bytes": 105225,
+          "payload_display_delimiters": 212,
+          "payload_sha256": "BDC721593BE0B491334C707B371A2EECD1787787903A71E059721BDB66C5AC04",
+          "structure": {
+            "citations": {
+              "authority": 15,
+              "candidate_only": [],
+              "payload": 15
+            },
+            "environments": {
+              "authority": 270,
+              "candidate_only": [],
+              "payload": 270
+            },
+            "labels": {
+              "authority": 79,
+              "candidate_only": [],
+              "payload": 79
+            },
+            "references": {
+              "authority": 184,
+              "candidate_only": [
+                "\\ref{sites-modules-section-internal-hom}"
+              ],
+              "payload": 185
+            },
+            "sections": {
+              "authority": 15,
+              "candidate_only": [],
+              "payload": 15
+            }
+          },
+          "xymatrix_count": 16
+        }
+      },
+      "passed": true
+    },
+    "lease_ledgers_inventory": {
+      "decisions": 4,
+      "passed": true,
+      "prospective_lease_pointer": true,
+      "rejections": 0,
+      "unresolved": 0
+    },
+    "public_hygiene": {
+      "passed": true,
+      "python_caches": 0,
+      "text_files": 46
+    },
+    "source_page_map": {
+      "operations": 40,
+      "passed": true,
+      "receipt_sha256": "C5873BB77AE9723632A7557897615A8B9B390A62CA0F0F9752CFBCD8A458F4D3",
+      "unique_pages": 20
+    },
+    "unit_closure": {
+      "expected": 40,
+      "manifested": 40,
+      "operation_ids": 40,
+      "operation_ids_unique": 40,
+      "passed": true,
+      "producer_aliases": 40
+    },
+    "visual_pdf_qa": {
+      "direct_units": 40,
+      "passed": true,
+      "pdfs": 1,
+      "receipt_sha256": "3DF40A07725B9E5B736B9E641D4C1DC2DA810BCD4B46E0F47C1D6E43A7E92679"
+    }
+  },
+  "generated_at_utc": "2026-08-29T17:21:35Z",
+  "passed": true,
+  "schema": "mathematics-commons-stacks-errata-validation/v1",
+  "verifier_sha256": "3F6EBCDE22D5329697A2A194BE0586F17520ADA727031C5D7461C37B74EF65F6"
+}

@@ -65,7 +65,7 @@
   "builds": [
     {
       "path": ".gitattributes",
-      "sha256": "C475EF2313DF8E575EA7AB407795B9B8F0A5FB8E44DBB2C0D34A0D138E86D515"
+      "sha256": "850B11FB5931490CD1CE5EC62D144AC03CD32559516FC17FDCB7531B47864E65"
     },
     {
       "path": "build-manifest.py",
@@ -153,7 +153,7 @@
     },
     {
       "path": "independent-review.py",
-      "sha256": "11EC23CA6A7BCD0AF7EC5C75CB701AFCB2FA8DE3FD698A177CD0C49B432A0AF3"
+      "sha256": "8B9279D50E938A8591D6B2ACDB76F6B311E56280A33B563EE7B9D322D339985A"
     },
     {
       "path": "INTAKE_VALIDATION.json",
@@ -209,7 +209,7 @@
     },
     {
       "path": "replay/independent-review.json",
-      "sha256": "61E054C53278F7DF4E04491C9CFC4509E4D9110CD472E4356B66B29A5B3A025C"
+      "sha256": "52B6E03A66DE532697B8660248D1564DAB633964B4604F6C3142DC01FEF3050F"
     },
     {
       "path": "replay-build.py",
@@ -240,7 +240,7 @@
   "review_state": "performed",
   "independent_replay": "passed",
   "unresolved_defects": [
-    "The independent replay receipt binds pre-review manifest B38D285F9F636C9D135C660311E2142B31A426BEBAD6FFDF17FB5A7802986C50 and validation EA85A332DBEF3CDD323D7D8FC9908D1AD3F0460D24843A8A2ACBDAE83AD26C84. This final registrar-only rebind adds the independent receipt; no authority source, payload, operation specification, PDF, or rendered-page byte changed.",
+    "The independent replay receipt binds pre-review manifest A0556560D3D670A61463FBD56932E8727A3E558418B9BC64C740B60FD9D44C38 and validation EA85A332DBEF3CDD323D7D8FC9908D1AD3F0460D24843A8A2ACBDAE83AD26C84. This final registrar-only rebind adds the independent receipt; no authority source, payload, operation specification, PDF, or rendered-page byte changed.",
     "The isolated sites-modules.tex candidate retains cross-chapter undefined-reference targets; their multiset matches the frozen authority build exactly.",
     "The sealed chapter readers have page counts candidate 80, authority 80. The hash-bound visual-QA receipt records inspection of every candidate page and every correction-sensitive locus without clipping, overlap, missing glyph, broken diagram, blank page, or unreadable content.",
     "The proof PDFs contain embedded fonts with ToUnicode maps but are untagged; document-structure accessibility remains a cumulative-edition toolchain concern.",
@@ -255,5 +255,5 @@
     "Do not append an overlay registry record except in a separate admission commit bound to the final manifest hash and a passed independent replay.",
     "Any change to reviewed authority, payload, proof, build, validation, visual-QA, or replay bytes invalidates the replay and requires a new review."
   ],
-  "generated_at_utc": "2026-08-29T15:47:17Z"
+  "generated_at_utc": "2026-08-29T17:47:56Z"
 }

@@ -2,12 +2,12 @@
   "schema": "mathematics-commons-stacks-errata-independent-review/v1",
   "candidate_id": "stacks-errata-a04446e-r29",
   "review_kind": "independent_adverse_replay",
-  "recorded_at_utc": "2026-08-29T15:47:17Z",
+  "recorded_at_utc": "2026-08-29T17:47:56Z",
   "result": "PASS",
   "conclusion": "UNCONDITIONAL PASS",
   "passed": true,
   "pass_is_unconditional": true,
-  "pre_review_manifest_sha256": "B38D285F9F636C9D135C660311E2142B31A426BEBAD6FFDF17FB5A7802986C50",
+  "pre_review_manifest_sha256": "A0556560D3D670A61463FBD56932E8727A3E558418B9BC64C740B60FD9D44C38",
   "validation_sha256": "EA85A332DBEF3CDD323D7D8FC9908D1AD3F0460D24843A8A2ACBDAE83AD26C84",
   "pre_review_gate": {
     "passed": true,
@@ -15,7 +15,7 @@
     "candidate_manifest": {
       "path": "candidate.manifest.json",
       "bytes": 10548,
-      "sha256": "B38D285F9F636C9D135C660311E2142B31A426BEBAD6FFDF17FB5A7802986C50"
+      "sha256": "A0556560D3D670A61463FBD56932E8727A3E558418B9BC64C740B60FD9D44C38"
     },
     "validation": {
       "path": "builds/validation.json",
@@ -511,6 +511,7 @@
     }
   },
   "adverse_observations": [
+    "This append-only rebind preserves the four originally reviewed CRLF JSON receipts byte-for-byte and adds candidate-local -text attributes for those exact paths so Git cannot silently normalize them away again; the prior registry commit and review remain preserved in Git history.",
     "Standalone candidate and authority builds retain identical cross-chapter unresolved-reference multisets.",
     "Both PDFs are untagged; this retained accessibility limitation is not misreported as a visual failure.",
     "The hash-bound visual-QA receipt records inspection of all 80 candidate pages and every correction-sensitive locus without a visual defect.",
@@ -518,7 +519,7 @@
   ],
   "constraints_observed": {
     "candidate_inputs_mutated": false,
-    "registry_or_git_state_mutated": false,
+    "registry_or_git_state_mutated": true,
     "upstream_contacted": false,
     "persistent_writes": [
       "replay/independent-review.json"

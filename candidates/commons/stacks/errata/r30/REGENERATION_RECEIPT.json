@@ -1,0 +1,72 @@
+{
+  "schema": "ai_stacks_r30_injectives_candidate_regeneration_receipt/v1",
+  "status": "SOURCE_REPLAY_PASS",
+  "scope": "prospective R30 injectives.tex candidate only",
+  "authority": {
+    "path": "authority/source/injectives.tex",
+    "bytes": 105120,
+    "sha256": "B1367E48800C53D72C495D386EEF2D4D6C400652F9D00E69F664F17418D26520"
+  },
+  "adjudication": {
+    "accepted_units": 40,
+    "exact_operations": 40,
+    "rejected_units": 0,
+    "first_stable_id": "MC-STK-ERR-1247",
+    "last_stable_id": "MC-STK-ERR-1286",
+    "prospective_stable_total": 931
+  },
+  "materialized_payload": {
+    "path": "payload/injectives.tex",
+    "bytes": 105225,
+    "sha256": "BDC721593BE0B491334C707B371A2EECD1787787903A71E059721BDB66C5AC04"
+  },
+  "derived_heads": [
+    {
+      "path": "operation-spec.json",
+      "bytes": 34533,
+      "sha256": "53E7FEFF2423BAEE25B9D27A6EB61D016FC835E138C98585A71C0B66E71EDEB0"
+    },
+    {
+      "path": "stable-units.json",
+      "bytes": 14711,
+      "sha256": "138D72ECC148DA18FF8F5F2248B0EA82944108DFBDE67CD8E81E888B87F31EFE"
+    },
+    {
+      "path": "source-map.jsonl",
+      "bytes": 54631,
+      "sha256": "C74B4FF40E3D51A9030782F598DF04FDCAD5AEBED2CE21EE9BA751FEA6675854"
+    },
+    {
+      "path": "candidate.config.json",
+      "bytes": 2052,
+      "sha256": "580A13610760C5ACEE2DEA272813F05E43867364EF62767740772A05A716C3D5"
+    },
+    {
+      "path": "source-validation.json",
+      "bytes": 591,
+      "sha256": "7094D022169396019632EFAA14A8F6E0428BE522DA3008DBD16F272FC9F75376"
+    },
+    {
+      "path": "INTAKE_VALIDATION.json",
+      "bytes": 495,
+      "sha256": "483BB068740F81F5B8C68966877098CF82FBF93394B0C208F1DFEDF210031CC3"
+    }
+  ],
+  "verification": {
+    "all_exact_preimages_match_once": true,
+    "operations_nonoverlapping": true,
+    "descending_replay_equals_payload": true,
+    "authority_lines_over_80_chars": 0,
+    "payload_lines_over_80_chars": 0,
+    "d007_wrap_preserved": true,
+    "d008_wrap_preserved": true
+  },
+  "excluded_gates": {
+    "build_run": false,
+    "candidate_manifest_created": false,
+    "independent_review_run": false,
+    "registry_admission_performed": false,
+    "generated_source_mutated": false,
+    "public_destination_mutated": false
+  }
+}

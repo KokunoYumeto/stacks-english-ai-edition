@@ -14,10 +14,10 @@ from pypdf import PdfReader
 
 ROOT = Path(__file__).resolve().parent
 CONFIG = json.loads((ROOT / "candidate.config.json").read_text(encoding="utf-8"))
-STEM = "sites-modules"
-PRIVATE_RENDER_LOGICAL_PATH = "canon/private_evidence/errata-r29-20260829/render"
+STEM = "injectives"
+PRIVATE_RENDER_LOGICAL_PATH = "canon/private_evidence/errata-r30-20260829/render"
 if tuple(CONFIG["stems"]) != (STEM,):
-    raise AssertionError("R29 independent replay requires the single configured sites-modules stem")
+    raise AssertionError("R30 independent replay requires the single configured injectives stem")
 
 
 def utc_now() -> str:
@@ -89,7 +89,7 @@ def replay_payload() -> dict:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Perform the independent adverse replay for sealed R29 evidence.")
+    parser = argparse.ArgumentParser(description="Perform the independent adverse replay for sealed R30 evidence.")
     parser.add_argument("--private-render-manifest", type=Path, required=True)
     args = parser.parse_args()
     pre_manifest_path = ROOT / "candidate.manifest.json"
@@ -126,14 +126,17 @@ def main() -> int:
     unit_ids = [row["id"] for row in units]
     producer_aliases = [row["producer_id"] for row in units]
     source_map_aliases = [row["producer_id"] for row in source_map]
-    raw_id_rows = [raw for row in units for raw in row["raw_producer_ids"]]
+    operation_ids = [operation_id for row in units for operation_id in row["operation_ids"]]
+    source_map_operation_ids = [operation["operation_id"] for row in source_map for operation in row["operations"]]
     if (
         unit_ids != CONFIG["expected_unit_ids"]
         or producer_aliases != CONFIG["expected_producer_aliases"]
         or source_map_aliases != producer_aliases
         or len(producer_aliases) != len(set(producer_aliases))
         or len(units) != CONFIG["proof_closure"]["accepted"]
-        or len(raw_id_rows) != len(units)
+        or operation_ids != source_map_operation_ids
+        or len(operation_ids) != CONFIG["operation_count"]
+        or len(operation_ids) != len(set(operation_ids))
         or CONFIG["proof_closure"]["rejected"] != CONFIG["rejected"]
         or CONFIG["proof_closure"]["unresolved"] != 0
         or len(load_jsonl(ROOT / "rejections.jsonl")) != CONFIG["rejected"]
@@ -150,13 +153,20 @@ def main() -> int:
 
     render_manifest = load_json(args.private_render_manifest)
     render_pdf = render_manifest.get("pdfs", {}).get(STEM, {})
-    configured_high_res = CONFIG.get("visual_qa", {}).get("high_resolution_pages", {}).get(STEM)
+    source_page_map = load_json(ROOT / CONFIG["visual_qa"]["source_page_map_path"])
+    configured_high_res = source_page_map.get("unique_pages")
     if (
         render_manifest.get("schema") != "mathematics-commons-stacks-private-render-manifest/v1"
+        or source_page_map.get("schema") != "mathematics-commons-stacks-synctex-source-page-map/v1"
+        or source_page_map.get("candidate_id") != CONFIG["candidate_id"]
+        or source_page_map.get("stem") != STEM
+        or source_page_map.get("operation_spec", {}).get("sha256") != sha256(ROOT / "operation-spec.json")
+        or len(source_page_map.get("operations", [])) != CONFIG["operation_count"]
+        or not configured_high_res
         or render_pdf.get("pdf_sha256") != sha256(candidate_pdf)
         or [row.get("page") for row in render_pdf.get("renders", [])] != list(range(1, expected_candidate_pages + 1))
         or len(render_manifest.get("contact_sheets", [])) != math.ceil(expected_candidate_pages / 16)
-        or render_manifest.get("high_resolution", {}).get("dpi") != 180
+        or render_manifest.get("high_resolution", {}).get("dpi") != CONFIG["visual_qa"]["high_resolution_dpi"]
         or [row.get("page") for row in render_manifest.get("high_resolution", {}).get("renders", [])] != configured_high_res
         or visual.get("render_protocol", {}).get("private_render_manifest_sha256") != sha256(args.private_render_manifest)
         or visual.get("render_protocol", {}).get("private_render_manifest_bytes") != args.private_render_manifest.stat().st_size
@@ -203,16 +213,15 @@ def main() -> int:
             "explicit_mapping": [
                 {
                     "producer_alias": row["producer_id"],
-                    "producer_ids": row["producer_ids"],
-                    "raw_producer_ids": row["raw_producer_ids"],
+                    "operation_ids": row["operation_ids"],
                     "stable_id": row["id"],
                 }
                 for row in units
             ],
             "unit_count": len(unit_ids),
             "producer_alias_count": len(producer_aliases),
-            "raw_producer_identity_rows": len(raw_id_rows),
-            "raw_producer_id_strings_unique": len(set(raw_id_rows)),
+            "operation_id_count": len(operation_ids),
+            "operation_ids_unique": len(set(operation_ids)),
             "operation_count": CONFIG["operation_count"],
             "first_id": unit_ids[0],
             "last_id": unit_ids[-1],
@@ -237,15 +246,14 @@ def main() -> int:
             },
         },
         "adverse_observations": [
-            "This append-only rebind preserves the four originally reviewed CRLF JSON receipts byte-for-byte and adds candidate-local -text attributes for those exact paths so Git cannot silently normalize them away again; the prior registry commit and review remain preserved in Git history.",
-            "Standalone candidate and authority builds retain identical cross-chapter unresolved-reference multisets.",
+            "The standalone candidate retains the authority's cross-chapter unresolved-reference multiset and adds exactly one configured candidate-only target, sites-modules-section-internal-hom, introduced by accepted unit INJECTIVES-CH19-D005; the build receipt proves there is no other reference or citation delta.",
             "Both PDFs are untagged; this retained accessibility limitation is not misreported as a visual failure.",
             f"The hash-bound visual-QA receipt records inspection of all {expected_candidate_pages} candidate pages and every correction-sensitive locus without a visual defect.",
             "The prospective lease pointer remains candidate-local until a separate append-only registry admission transaction.",
         ],
         "constraints_observed": {
             "candidate_inputs_mutated": False,
-            "registry_or_git_state_mutated": True,
+            "registry_or_git_state_mutated": False,
             "upstream_contacted": False,
             "persistent_writes": ["replay/independent-review.json"],
         },

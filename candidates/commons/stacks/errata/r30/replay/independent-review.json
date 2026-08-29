@@ -1,0 +1,543 @@
+{
+  "schema": "mathematics-commons-stacks-errata-independent-review/v1",
+  "candidate_id": "stacks-errata-a04446e-r30",
+  "review_kind": "independent_adverse_replay",
+  "recorded_at_utc": "2026-08-29T17:38:23Z",
+  "result": "PASS",
+  "conclusion": "UNCONDITIONAL PASS",
+  "passed": true,
+  "pass_is_unconditional": true,
+  "pre_review_manifest_sha256": "2D0B7D89129E35E6F72233004EE26E73F87F3736037801BB17F02AC2256AB056",
+  "validation_sha256": "5F320EB359F209A01DFC024ADC992058CA3C7F529CF2BA36741A866E89EDF721",
+  "pre_review_gate": {
+    "passed": true,
+    "check_manifest_exit_code": 0,
+    "candidate_manifest": {
+      "path": "candidate.manifest.json",
+      "bytes": 10174,
+      "sha256": "2D0B7D89129E35E6F72233004EE26E73F87F3736037801BB17F02AC2256AB056"
+    },
+    "validation": {
+      "path": "builds/validation.json",
+      "bytes": 3076,
+      "sha256": "5F320EB359F209A01DFC024ADC992058CA3C7F529CF2BA36741A866E89EDF721",
+      "passed": true
+    }
+  },
+  "input_nonmutation": {
+    "passed": true,
+    "file_count_excluding_manifest_and_receipt": 50,
+    "note": "The replay read sealed candidate bytes and wrote only this receipt."
+  },
+  "stable_id_recomputation": {
+    "passed": true,
+    "derivation_rule": "Accepted semantic units map in first physical-source-locus order to consecutive stable IDs. Collision-free chapter aliases preserve each raw producer identity together with its lease.",
+    "explicit_mapping": [
+      {
+        "producer_alias": "INJECTIVES-CH19-D001",
+        "operation_ids": [
+          "MC-STK-ERR-1247-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1247"
+      },
+      {
+        "producer_alias": "INJECTIVES-CH19-D002",
+        "operation_ids": [
+          "MC-STK-ERR-1248-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1248"
+      },
+      {
+        "producer_alias": "R30-INDEPENDENT-001",
+        "operation_ids": [
+          "MC-STK-ERR-1249-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1249"
+      },
+      {
+        "producer_alias": "INJECTIVES-CH19-D003",
+        "operation_ids": [
+          "MC-STK-ERR-1250-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1250"
+      },
+      {
+        "producer_alias": "R30-INDEPENDENT-002",
+        "operation_ids": [
+          "MC-STK-ERR-1251-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1251"
+      },
+      {
+        "producer_alias": "R30-INDEPENDENT-003",
+        "operation_ids": [
+          "MC-STK-ERR-1252-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1252"
+      },
+      {
+        "producer_alias": "R30-INDEPENDENT-004",
+        "operation_ids": [
+          "MC-STK-ERR-1253-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1253"
+      },
+      {
+        "producer_alias": "INJECTIVES-CH19-D004",
+        "operation_ids": [
+          "MC-STK-ERR-1254-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1254"
+      },
+      {
+        "producer_alias": "R30-INDEPENDENT-005",
+        "operation_ids": [
+          "MC-STK-ERR-1255-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1255"
+      },
+      {
+        "producer_alias": "INJECTIVES-CH19-D005",
+        "operation_ids": [
+          "MC-STK-ERR-1256-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1256"
+      },
+      {
+        "producer_alias": "INJECTIVES-CH19-D006",
+        "operation_ids": [
+          "MC-STK-ERR-1257-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1257"
+      },
+      {
+        "producer_alias": "INJECTIVES-CH19-D007",
+        "operation_ids": [
+          "MC-STK-ERR-1258-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1258"
+      },
+      {
+        "producer_alias": "INJECTIVES-CH19-D008",
+        "operation_ids": [
+          "MC-STK-ERR-1259-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1259"
+      },
+      {
+        "producer_alias": "INJECTIVES-CH19-D009",
+        "operation_ids": [
+          "MC-STK-ERR-1260-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1260"
+      },
+      {
+        "producer_alias": "INJECTIVES-CH19-D010",
+        "operation_ids": [
+          "MC-STK-ERR-1261-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1261"
+      },
+      {
+        "producer_alias": "INJECTIVES-CH19-D011",
+        "operation_ids": [
+          "MC-STK-ERR-1262-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1262"
+      },
+      {
+        "producer_alias": "INJECTIVES-CH19-D012",
+        "operation_ids": [
+          "MC-STK-ERR-1263-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1263"
+      },
+      {
+        "producer_alias": "R30-INDEPENDENT-006",
+        "operation_ids": [
+          "MC-STK-ERR-1264-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1264"
+      },
+      {
+        "producer_alias": "INJECTIVES-CH19-D013",
+        "operation_ids": [
+          "MC-STK-ERR-1265-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1265"
+      },
+      {
+        "producer_alias": "INJECTIVES-CH19-D014",
+        "operation_ids": [
+          "MC-STK-ERR-1266-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1266"
+      },
+      {
+        "producer_alias": "INJECTIVES-CH19-D015",
+        "operation_ids": [
+          "MC-STK-ERR-1267-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1267"
+      },
+      {
+        "producer_alias": "INJECTIVES-CH19-D016",
+        "operation_ids": [
+          "MC-STK-ERR-1268-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1268"
+      },
+      {
+        "producer_alias": "R30-INDEPENDENT-007",
+        "operation_ids": [
+          "MC-STK-ERR-1269-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1269"
+      },
+      {
+        "producer_alias": "INJECTIVES-CH19-D017",
+        "operation_ids": [
+          "MC-STK-ERR-1270-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1270"
+      },
+      {
+        "producer_alias": "R30-INDEPENDENT-008",
+        "operation_ids": [
+          "MC-STK-ERR-1271-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1271"
+      },
+      {
+        "producer_alias": "R30-INDEPENDENT-009",
+        "operation_ids": [
+          "MC-STK-ERR-1272-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1272"
+      },
+      {
+        "producer_alias": "INJECTIVES-CH19-D018",
+        "operation_ids": [
+          "MC-STK-ERR-1273-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1273"
+      },
+      {
+        "producer_alias": "INJECTIVES-CH19-D019",
+        "operation_ids": [
+          "MC-STK-ERR-1274-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1274"
+      },
+      {
+        "producer_alias": "INJECTIVES-CH19-D020",
+        "operation_ids": [
+          "MC-STK-ERR-1275-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1275"
+      },
+      {
+        "producer_alias": "INJECTIVES-CH19-D021",
+        "operation_ids": [
+          "MC-STK-ERR-1276-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1276"
+      },
+      {
+        "producer_alias": "INJECTIVES-CH19-D022",
+        "operation_ids": [
+          "MC-STK-ERR-1277-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1277"
+      },
+      {
+        "producer_alias": "INJECTIVES-CH19-D023",
+        "operation_ids": [
+          "MC-STK-ERR-1278-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1278"
+      },
+      {
+        "producer_alias": "INJECTIVES-CH19-D024",
+        "operation_ids": [
+          "MC-STK-ERR-1279-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1279"
+      },
+      {
+        "producer_alias": "INJECTIVES-CH19-D025",
+        "operation_ids": [
+          "MC-STK-ERR-1280-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1280"
+      },
+      {
+        "producer_alias": "R30-INDEPENDENT-010",
+        "operation_ids": [
+          "MC-STK-ERR-1281-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1281"
+      },
+      {
+        "producer_alias": "R30-INDEPENDENT-011",
+        "operation_ids": [
+          "MC-STK-ERR-1282-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1282"
+      },
+      {
+        "producer_alias": "INJECTIVES-CH19-D026",
+        "operation_ids": [
+          "MC-STK-ERR-1283-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1283"
+      },
+      {
+        "producer_alias": "R30-INDEPENDENT-012",
+        "operation_ids": [
+          "MC-STK-ERR-1284-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1284"
+      },
+      {
+        "producer_alias": "INJECTIVES-CH19-D027",
+        "operation_ids": [
+          "MC-STK-ERR-1285-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1285"
+      },
+      {
+        "producer_alias": "INJECTIVES-CH19-D028",
+        "operation_ids": [
+          "MC-STK-ERR-1286-OP1"
+        ],
+        "stable_id": "MC-STK-ERR-1286"
+      }
+    ],
+    "unit_count": 40,
+    "producer_alias_count": 40,
+    "operation_id_count": 40,
+    "operation_ids_unique": 40,
+    "operation_count": 40,
+    "first_id": "MC-STK-ERR-1247",
+    "last_id": "MC-STK-ERR-1286"
+  },
+  "scratch_replay": {
+    "passed": true,
+    "apply_order": "descending_start_byte",
+    "operation_count": 40,
+    "descending_intervals": [
+      [
+        103640,
+        103653
+      ],
+      [
+        95919,
+        95949
+      ],
+      [
+        95042,
+        95069
+      ],
+      [
+        89242,
+        89284
+      ],
+      [
+        85645,
+        85789
+      ],
+      [
+        82983,
+        83115
+      ],
+      [
+        81264,
+        81319
+      ],
+      [
+        80796,
+        80849
+      ],
+      [
+        78587,
+        78631
+      ],
+      [
+        71419,
+        71450
+      ],
+      [
+        69944,
+        69977
+      ],
+      [
+        68895,
+        68930
+      ],
+      [
+        68876,
+        68894
+      ],
+      [
+        68251,
+        68275
+      ],
+      [
+        66829,
+        66871
+      ],
+      [
+        66730,
+        66772
+      ],
+      [
+        65212,
+        65230
+      ],
+      [
+        64288,
+        64329
+      ],
+      [
+        64144,
+        64177
+      ],
+      [
+        62334,
+        62356
+      ],
+      [
+        60322,
+        60366
+      ],
+      [
+        59464,
+        59488
+      ],
+      [
+        57737,
+        57763
+      ],
+      [
+        53965,
+        53995
+      ],
+      [
+        49433,
+        49438
+      ],
+      [
+        44413,
+        44505
+      ],
+      [
+        44239,
+        44329
+      ],
+      [
+        34857,
+        34914
+      ],
+      [
+        34363,
+        34439
+      ],
+      [
+        33438,
+        33495
+      ],
+      [
+        32684,
+        32729
+      ],
+      [
+        27507,
+        27562
+      ],
+      [
+        26057,
+        26121
+      ],
+      [
+        23380,
+        23481
+      ],
+      [
+        18158,
+        18201
+      ],
+      [
+        16285,
+        16326
+      ],
+      [
+        6847,
+        6875
+      ],
+      [
+        3961,
+        4077
+      ],
+      [
+        2374,
+        2405
+      ],
+      [
+        2242,
+        2288
+      ]
+    ],
+    "authority": {
+      "bytes": 105120,
+      "sha256": "B1367E48800C53D72C495D386EEF2D4D6C400652F9D00E69F664F17418D26520"
+    },
+    "output": {
+      "bytes": 105225,
+      "sha256": "BDC721593BE0B491334C707B371A2EECD1787787903A71E059721BDB66C5AC04"
+    },
+    "operation_spec_sha256": "53E7FEFF2423BAEE25B9D27A6EB61D016FC835E138C98585A71C0B66E71EDEB0"
+  },
+  "sealed_evidence_verification": {
+    "passed": true,
+    "build_receipt": {
+      "path": "builds/build-receipt.json",
+      "sha256": "C934F0FD5F99AD676F57F84F310B17329A36398E03690C780024967F7099EE32"
+    },
+    "visual_qa": {
+      "path": "builds/visual-qa.json",
+      "sha256": "3DF40A07725B9E5B736B9E641D4C1DC2DA810BCD4B46E0F47C1D6E43A7E92679"
+    },
+    "candidate_pdf": {
+      "path": "builds/injectives.pdf",
+      "bytes": 547812,
+      "sha256": "DC2D03995E73A6A75FC68577A9792E8A60D8912E2B4E983E8803DFBB75E73A2E",
+      "pages": 31
+    },
+    "authority_pdf": {
+      "path": "builds/injectives.authority.pdf",
+      "bytes": 547832,
+      "sha256": "C3291DF829E84FB96263DB08D58504931F32D1C24219773882E7FA40A0A0F541",
+      "pages": 31
+    },
+    "private_render_manifest": {
+      "bytes": 10658,
+      "sha256": "A02DE16CEBDE2F25F15DBB86E00FFCEC4918C18A48D051211756CE86642C7275",
+      "logical_path": "canon/private_evidence/errata-r30-20260829/render"
+    }
+  },
+  "adverse_observations": [
+    "The standalone candidate retains the authority's cross-chapter unresolved-reference multiset and adds exactly one configured candidate-only target, sites-modules-section-internal-hom, introduced by accepted unit INJECTIVES-CH19-D005; the build receipt proves there is no other reference or citation delta.",
+    "Both PDFs are untagged; this retained accessibility limitation is not misreported as a visual failure.",
+    "The hash-bound visual-QA receipt records inspection of all 31 candidate pages and every correction-sensitive locus without a visual defect.",
+    "The prospective lease pointer remains candidate-local until a separate append-only registry admission transaction."
+  ],
+  "constraints_observed": {
+    "candidate_inputs_mutated": false,
+    "registry_or_git_state_mutated": false,
+    "upstream_contacted": false,
+    "persistent_writes": [
+      "replay/independent-review.json"
+    ]
+  }
+}
