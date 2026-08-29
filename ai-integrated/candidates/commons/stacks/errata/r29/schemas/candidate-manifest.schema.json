@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/KokunoYumeto/mathematics-commons-stacks/raw/main/schemas/candidate-manifest.schema.json",
+  "title": "Manifest-complete Stacks overlay candidate",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "candidate_id", "lease_id", "namespace", "writer_task", "upstream", "source_authorities", "source_closure", "stable_unit_manifest", "source_map", "decision_ledger", "rejection_ledger", "formula_diagram_inventory", "builds", "rights_state", "review_state", "independent_replay", "unresolved_defects", "stop_conditions", "generated_at_utc"],
+  "properties": {
+    "$schema": {"type": "string"},
+    "schema": {"const": "mathematics-commons-stacks-candidate-manifest/v1"},
+    "candidate_id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$"},
+    "lease_id": {"type": "string", "pattern": "^stacks-lease-[0-9]{6}-[a-z0-9-]+$"},
+    "namespace": {"type": "string", "pattern": "^commons/stacks/[a-z0-9][a-z0-9/-]*$"},
+    "writer_task": {"type": "string", "pattern": "^[0-9a-f-]{36}$"},
+    "upstream": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["lock", "commit", "tree"],
+      "properties": {
+        "lock": {"const": "upstream/stacks.lock.json"},
+        "commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "tree": {"type": "string", "pattern": "^[0-9a-f]{40}$"}
+      }
+    },
+    "source_authorities": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/hashedEvidence"}},
+    "source_closure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["enumerated", "expected_units", "manifested_units", "complete"],
+      "properties": {
+        "enumerated": {"const": true},
+        "expected_units": {"type": "integer", "minimum": 1},
+        "manifested_units": {"type": "integer", "minimum": 1},
+        "complete": {"const": true}
+      }
+    },
+    "stable_unit_manifest": {"$ref": "#/$defs/hashedEvidence"},
+    "source_map": {"$ref": "#/$defs/hashedEvidence"},
+    "decision_ledger": {"$ref": "#/$defs/hashedEvidence"},
+    "rejection_ledger": {"$ref": "#/$defs/hashedEvidence"},
+    "formula_diagram_inventory": {"$ref": "#/$defs/hashedEvidence"},
+    "builds": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/hashedEvidence"}},
+    "rights_state": {"type": "string", "minLength": 1},
+    "review_state": {"enum": ["not_performed", "partial", "performed"]},
+    "independent_replay": {"enum": ["not_performed", "passed", "failed"]},
+    "unresolved_defects": {"type": "array", "items": {"type": "string"}},
+    "stop_conditions": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "generated_at_utc": {"type": "string", "format": "date-time"}
+  },
+  "$defs": {
+    "hashedEvidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[0-9A-F]{64}$"},
+        "source_url": {"type": "string"},
+        "accessed_at_utc": {"type": "string", "format": "date-time"}
+      }
+    }
+  }
+}

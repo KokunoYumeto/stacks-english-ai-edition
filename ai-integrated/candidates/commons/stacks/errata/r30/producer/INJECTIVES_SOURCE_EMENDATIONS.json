@@ -1,0 +1,145 @@
+{
+  "schema": "stacks-fr-source-emendations-v1",
+  "authority_sha256": "B1367E48800C53D72C495D386EEF2D4D6C400652F9D00E69F664F17418D26520",
+  "source_file": "injectives.tex",
+  "chapter": 19,
+  "source_line_range": {
+    "start": 1,
+    "end": 2843
+  },
+  "operation_count": 11,
+  "emendations": [
+    {
+      "id": "INJECTIVES-CH19-OP001",
+      "source_defect_id": "INJECTIVES-CH19-D011",
+      "lease": "C",
+      "local_id": "INJECTIVES-C-D001",
+      "line": 1371,
+      "old": "\\phi)",
+      "new": "\\phi",
+      "rationale": "The closing parenthesis is unmatched and intrudes between the morphism and its defining predicate.",
+      "status": "confirmed_source_error_emended_in_french",
+      "operation_sha256": "C26B5B7433E224DE2926370599E5075D1F7FCE7E4341FE7CFCCDA5F2D3C005AC"
+    },
+    {
+      "id": "INJECTIVES-CH19-OP002",
+      "source_defect_id": "INJECTIVES-CH19-D014",
+      "lease": "C",
+      "local_id": "INJECTIVES-C-D004",
+      "line": 1663,
+      "old": "$K_\\beta^\\bullet = \\colim K_\\alpha^\\bullet$.",
+      "new": "$K_\\alpha^\\bullet = \\colim_{\\beta < \\alpha} K_\\beta^\\bullet$.",
+      "rationale": "At a limit ordinal alpha, the construction must define K_alpha as the colimit of the preceding K_beta; the printed variables are reversed and the indexing condition is omitted.",
+      "status": "confirmed_source_error_emended_in_french",
+      "operation_sha256": "E3BE24B94E2D5292A8CC0B769FD3BB37479EC47ABB97CC04C31F9426843189AA"
+    },
+    {
+      "id": "INJECTIVES-CH19-OP003",
+      "source_defect_id": "INJECTIVES-CH19-D017",
+      "lease": "C",
+      "local_id": "INJECTIVES-C-D007",
+      "line": 1794,
+      "old": "d^n_{J^\\bullet(M)}",
+      "new": "d^n_{J^\\bullet(M^\\bullet)}",
+      "rationale": "The complex was defined as J^bullet(M^bullet), and every adjacent occurrence has the complex M^bullet as its argument.",
+      "status": "confirmed_source_error_emended_in_french",
+      "operation_sha256": "BBB8DC2F03CBA6273ABFB307A592E1E45F678D0AF09CBC9BC8CF76BDEF93EF18"
+    },
+    {
+      "id": "INJECTIVES-CH19-OP004",
+      "source_defect_id": "INJECTIVES-CH19-D020",
+      "lease": "C",
+      "local_id": "INJECTIVES-C-D010",
+      "line": 1883,
+      "old": "$\\mathbf{T}^n_{\\alpha'}(M^\\bullet)$",
+      "new": "$\\mathbf{T}_{\\alpha'}(M^\\bullet)$",
+      "rationale": "The map w is a morphism of complexes, so it factors through the whole complex T_{alpha'}(M^bullet), not through a single degree n object.",
+      "status": "confirmed_source_error_emended_in_french",
+      "operation_sha256": "11AF34B6A4B47AE8AA5C118DDCAF657B968BCF98371D15424E6303F5A80F93B1"
+    },
+    {
+      "id": "INJECTIVES-CH19-OP005",
+      "source_defect_id": "INJECTIVES-CH19-D021",
+      "lease": "C",
+      "local_id": "INJECTIVES-C-D011",
+      "line": 1920,
+      "old": "$F : \\mathcal{A} \\to \\textit{Ab}$",
+      "new": "$F : \\mathcal{A}^{opp} \\to \\textit{Ab}$",
+      "rationale": "F was introduced as a contravariant set-valued functor and the displayed exact sequence still has contravariant orientation; the superscript opp was inadvertently dropped.",
+      "status": "confirmed_source_error_emended_in_french",
+      "operation_sha256": "43760530284DD4975C9253A6832233852AADCC485321116CAB39529B88BF15A7"
+    },
+    {
+      "id": "INJECTIVES-CH19-OP006",
+      "source_defect_id": "INJECTIVES-CH19-D023",
+      "lease": "D",
+      "local_id": "INJECTIVES-D-001",
+      "line": 2149,
+      "old": "$\\alpha^p \\circ \\alpha^{p' p} = \\alpha^{p'}$",
+      "new": "$\\alpha^{p'} \\circ \\alpha^{p p'} = \\alpha^p$",
+      "rationale": "The diagram defines alpha^{p p'}: I^p -> I^{p'} and alpha^{p'}: I^{p'} -> I; the printed composite is undefined and reverses the required compatibility.",
+      "status": "confirmed_source_error_emended_in_french",
+      "operation_sha256": "936988565B3A222DEDA76FAEC71535C324EE406F46281B03B5F13464817E8A42"
+    },
+    {
+      "id": "INJECTIVES-CH19-OP007",
+      "source_defect_id": "INJECTIVES-CH19-D024",
+      "lease": "D",
+      "local_id": "INJECTIVES-D-002",
+      "line": 2206,
+      "old": "$I^{p, \\bullet} \\times \\prod_{p' > p} J^{p, \\bullet}$",
+      "new": "$I^{p, \\bullet} \\times \\prod_{p' > p} J^{p', \\bullet}$",
+      "rationale": "The product was defined over the varying complexes J^{p',bullet}; the constant J^{p,bullet} contradicts the preceding construction.",
+      "status": "confirmed_source_error_emended_in_french",
+      "operation_sha256": "D84553507B130A572F0609237060EF24F2588F39D4889E09435C42C629614319"
+    },
+    {
+      "id": "INJECTIVES-CH19-OP008",
+      "source_defect_id": "INJECTIVES-CH19-D025",
+      "lease": "D",
+      "local_id": "INJECTIVES-D-003",
+      "line": 2214,
+      "old": "$\\alpha^{p + 1p} \\circ \\alpha^{pp'} = \\alpha^{p + 1p'}$",
+      "new": "$\\alpha^{pp'} \\circ \\alpha^{p + 1p} = \\alpha^{p + 1p'}$",
+      "rationale": "The source and target objects force I^{p+1} -> I^p -> I^{p'}; the printed order is not composable.",
+      "status": "confirmed_source_error_emended_in_french",
+      "operation_sha256": "3C005C035258C60E2103E1456CB1CC5DEE501390793EEE13BDC22D72D9EF5CA5"
+    },
+    {
+      "id": "INJECTIVES-CH19-OP009",
+      "source_defect_id": "INJECTIVES-CH19-D026",
+      "lease": "D",
+      "local_id": "INJECTIVES-D-004",
+      "line": 2410,
+      "old": "$\\varphi^i = \\delta \\circ \\varphi^{i - 1}$",
+      "new": "$\\varphi^i = \\varphi^{i - 1} \\circ \\delta$",
+      "rationale": "Here delta maps G^i to G^{i-1} and varphi^{i-1} maps G^{i-1} to I; only the corrected order is typed.",
+      "status": "confirmed_source_error_emended_in_french",
+      "operation_sha256": "CEF38467B1D23A57AD7C52DAC1E1C29880F2853D7B4E4A6DC9691004B1C48047"
+    },
+    {
+      "id": "INJECTIVES-CH19-OP010",
+      "source_defect_id": "INJECTIVES-CH19-D027",
+      "lease": "D",
+      "local_id": "INJECTIVES-D-005",
+      "line": 2578,
+      "old": "an element $(A_i, f_i)$ of $E$",
+      "new": "an element $(A_i, f_i)$ of $I$",
+      "rationale": "E is the set of objects A, whereas I was explicitly defined as the set of pairs (A_i,f_i).",
+      "status": "confirmed_source_error_emended_in_french",
+      "operation_sha256": "029F8C87547033C82E4B49570F3FFE5E37FF6009A4083671D1886D8ED236DF36"
+    },
+    {
+      "id": "INJECTIVES-CH19-OP011",
+      "source_defect_id": "INJECTIVES-CH19-D028",
+      "lease": "D",
+      "local_id": "INJECTIVES-D-006",
+      "line": 2786,
+      "old": "H(F(RG(A)) \\\\",
+      "new": "H(F(RG(A))) \\\\",
+      "rationale": "The displayed expression is missing the closing parenthesis of H; the next equality and F o RG = id identify the intended term.",
+      "status": "confirmed_source_error_emended_in_french",
+      "operation_sha256": "764BEA9FA8EC3DA1E1ACDBCB121651F1F58A075865FCAD9972932141007D811F"
+    }
+  ]
+}

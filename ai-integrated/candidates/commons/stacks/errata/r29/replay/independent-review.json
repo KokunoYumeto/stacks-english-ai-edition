@@ -1,0 +1,528 @@
+{
+  "schema": "mathematics-commons-stacks-errata-independent-review/v1",
+  "candidate_id": "stacks-errata-a04446e-r29",
+  "review_kind": "independent_adverse_replay",
+  "recorded_at_utc": "2026-08-29T17:47:56Z",
+  "result": "PASS",
+  "conclusion": "UNCONDITIONAL PASS",
+  "passed": true,
+  "pass_is_unconditional": true,
+  "pre_review_manifest_sha256": "A0556560D3D670A61463FBD56932E8727A3E558418B9BC64C740B60FD9D44C38",
+  "validation_sha256": "EA85A332DBEF3CDD323D7D8FC9908D1AD3F0460D24843A8A2ACBDAE83AD26C84",
+  "pre_review_gate": {
+    "passed": true,
+    "check_manifest_exit_code": 0,
+    "candidate_manifest": {
+      "path": "candidate.manifest.json",
+      "bytes": 10548,
+      "sha256": "A0556560D3D670A61463FBD56932E8727A3E558418B9BC64C740B60FD9D44C38"
+    },
+    "validation": {
+      "path": "builds/validation.json",
+      "bytes": 2816,
+      "sha256": "EA85A332DBEF3CDD323D7D8FC9908D1AD3F0460D24843A8A2ACBDAE83AD26C84",
+      "passed": true
+    }
+  },
+  "input_nonmutation": {
+    "passed": true,
+    "file_count_excluding_manifest_and_receipt": 53,
+    "note": "The replay read sealed candidate bytes and wrote only this receipt."
+  },
+  "stable_id_recomputation": {
+    "passed": true,
+    "derivation_rule": "Accepted semantic units map in first physical-source-locus order to consecutive stable IDs. Collision-free chapter aliases preserve each raw producer identity together with its lease.",
+    "explicit_mapping": [
+      {
+        "producer_alias": "R29-INDEPENDENT-LINE-376",
+        "producer_ids": [
+          "R29-INDEPENDENT-LINE-376"
+        ],
+        "raw_producer_ids": [
+          "R29-INDEPENDENT-LINE-376"
+        ],
+        "stable_id": "MC-STK-ERR-1217"
+      },
+      {
+        "producer_alias": "SITES-MODULES-A-001",
+        "producer_ids": [
+          "SITES-MODULES-A-001"
+        ],
+        "raw_producer_ids": [
+          "SITES-MODULES-001"
+        ],
+        "stable_id": "MC-STK-ERR-1218"
+      },
+      {
+        "producer_alias": "SITES-MODULES-A-002",
+        "producer_ids": [
+          "SITES-MODULES-A-002"
+        ],
+        "raw_producer_ids": [
+          "SITES-MODULES-002"
+        ],
+        "stable_id": "MC-STK-ERR-1219"
+      },
+      {
+        "producer_alias": "SITES-MODULES-A-003",
+        "producer_ids": [
+          "SITES-MODULES-A-003"
+        ],
+        "raw_producer_ids": [
+          "SITES-MODULES-003"
+        ],
+        "stable_id": "MC-STK-ERR-1220"
+      },
+      {
+        "producer_alias": "SITES-MODULES-B-D002",
+        "producer_ids": [
+          "SITES-MODULES-B-D002"
+        ],
+        "raw_producer_ids": [
+          "SITES-MODULES-B-D002"
+        ],
+        "stable_id": "MC-STK-ERR-1221"
+      },
+      {
+        "producer_alias": "SITES-MODULES-B-D004",
+        "producer_ids": [
+          "SITES-MODULES-B-D004"
+        ],
+        "raw_producer_ids": [
+          "SITES-MODULES-B-D004"
+        ],
+        "stable_id": "MC-STK-ERR-1222"
+      },
+      {
+        "producer_alias": "SITES-MODULES-B-D005",
+        "producer_ids": [
+          "SITES-MODULES-B-D005"
+        ],
+        "raw_producer_ids": [
+          "SITES-MODULES-B-D005"
+        ],
+        "stable_id": "MC-STK-ERR-1223"
+      },
+      {
+        "producer_alias": "SITES-MODULES-B-D006",
+        "producer_ids": [
+          "SITES-MODULES-B-D006"
+        ],
+        "raw_producer_ids": [
+          "SITES-MODULES-B-D006"
+        ],
+        "stable_id": "MC-STK-ERR-1224"
+      },
+      {
+        "producer_alias": "SITES-MODULES-B-D001",
+        "producer_ids": [
+          "SITES-MODULES-B-D001"
+        ],
+        "raw_producer_ids": [
+          "SITES-MODULES-B-D001"
+        ],
+        "stable_id": "MC-STK-ERR-1225"
+      },
+      {
+        "producer_alias": "SITES-MODULES-B-D007",
+        "producer_ids": [
+          "SITES-MODULES-B-D007"
+        ],
+        "raw_producer_ids": [
+          "SITES-MODULES-B-D007"
+        ],
+        "stable_id": "MC-STK-ERR-1226"
+      },
+      {
+        "producer_alias": "SITES-MODULES-C-D004",
+        "producer_ids": [
+          "SITES-MODULES-C-D004"
+        ],
+        "raw_producer_ids": [
+          "SITES-MODULES-C-D004"
+        ],
+        "stable_id": "MC-STK-ERR-1227"
+      },
+      {
+        "producer_alias": "SITES-MODULES-C-D005",
+        "producer_ids": [
+          "SITES-MODULES-C-D005"
+        ],
+        "raw_producer_ids": [
+          "SITES-MODULES-C-D005"
+        ],
+        "stable_id": "MC-STK-ERR-1228"
+      },
+      {
+        "producer_alias": "SITES-MODULES-C-D006",
+        "producer_ids": [
+          "SITES-MODULES-C-D006"
+        ],
+        "raw_producer_ids": [
+          "SITES-MODULES-C-D006"
+        ],
+        "stable_id": "MC-STK-ERR-1229"
+      },
+      {
+        "producer_alias": "SITES-MODULES-C-D007",
+        "producer_ids": [
+          "SITES-MODULES-C-D007"
+        ],
+        "raw_producer_ids": [
+          "SITES-MODULES-C-D007"
+        ],
+        "stable_id": "MC-STK-ERR-1230"
+      },
+      {
+        "producer_alias": "SITES-MODULES-C-D001",
+        "producer_ids": [
+          "SITES-MODULES-C-D001"
+        ],
+        "raw_producer_ids": [
+          "SITES-MODULES-C-D001"
+        ],
+        "stable_id": "MC-STK-ERR-1231"
+      },
+      {
+        "producer_alias": "SITES-MODULES-C-D002",
+        "producer_ids": [
+          "SITES-MODULES-C-D002"
+        ],
+        "raw_producer_ids": [
+          "SITES-MODULES-C-D002"
+        ],
+        "stable_id": "MC-STK-ERR-1232"
+      },
+      {
+        "producer_alias": "SITES-MODULES-C-D003",
+        "producer_ids": [
+          "SITES-MODULES-C-D003"
+        ],
+        "raw_producer_ids": [
+          "SITES-MODULES-C-D003"
+        ],
+        "stable_id": "MC-STK-ERR-1233"
+      },
+      {
+        "producer_alias": "SITES-MODULES-C-D008",
+        "producer_ids": [
+          "SITES-MODULES-C-D008"
+        ],
+        "raw_producer_ids": [
+          "SITES-MODULES-C-D008"
+        ],
+        "stable_id": "MC-STK-ERR-1234"
+      },
+      {
+        "producer_alias": "SITES-MODULES-C-D009",
+        "producer_ids": [
+          "SITES-MODULES-C-D009"
+        ],
+        "raw_producer_ids": [
+          "SITES-MODULES-C-D009"
+        ],
+        "stable_id": "MC-STK-ERR-1235"
+      },
+      {
+        "producer_alias": "SITES-MODULES-C-D010",
+        "producer_ids": [
+          "SITES-MODULES-C-D010"
+        ],
+        "raw_producer_ids": [
+          "SITES-MODULES-C-D010"
+        ],
+        "stable_id": "MC-STK-ERR-1236"
+      },
+      {
+        "producer_alias": "SITES-MODULES-C-D011",
+        "producer_ids": [
+          "SITES-MODULES-C-D011"
+        ],
+        "raw_producer_ids": [
+          "SITES-MODULES-C-D011"
+        ],
+        "stable_id": "MC-STK-ERR-1237"
+      },
+      {
+        "producer_alias": "SITES-MODULES-C-D013",
+        "producer_ids": [
+          "SITES-MODULES-C-D013"
+        ],
+        "raw_producer_ids": [
+          "SITES-MODULES-C-D013"
+        ],
+        "stable_id": "MC-STK-ERR-1238"
+      },
+      {
+        "producer_alias": "SITES-MODULES-D-001",
+        "producer_ids": [
+          "SITES-MODULES-D-001"
+        ],
+        "raw_producer_ids": [
+          "SITES-MODULES-001"
+        ],
+        "stable_id": "MC-STK-ERR-1239"
+      },
+      {
+        "producer_alias": "SITES-MODULES-D-002",
+        "producer_ids": [
+          "SITES-MODULES-D-002"
+        ],
+        "raw_producer_ids": [
+          "SITES-MODULES-002"
+        ],
+        "stable_id": "MC-STK-ERR-1240"
+      },
+      {
+        "producer_alias": "SITES-MODULES-D-003",
+        "producer_ids": [
+          "SITES-MODULES-D-003"
+        ],
+        "raw_producer_ids": [
+          "SITES-MODULES-003"
+        ],
+        "stable_id": "MC-STK-ERR-1241"
+      },
+      {
+        "producer_alias": "SITES-MODULES-D-004",
+        "producer_ids": [
+          "SITES-MODULES-D-004"
+        ],
+        "raw_producer_ids": [
+          "SITES-MODULES-004"
+        ],
+        "stable_id": "MC-STK-ERR-1242"
+      },
+      {
+        "producer_alias": "SITES-MODULES-D-005",
+        "producer_ids": [
+          "SITES-MODULES-D-005"
+        ],
+        "raw_producer_ids": [
+          "SITES-MODULES-005"
+        ],
+        "stable_id": "MC-STK-ERR-1243"
+      },
+      {
+        "producer_alias": "SITES-MODULES-D-006",
+        "producer_ids": [
+          "SITES-MODULES-D-006"
+        ],
+        "raw_producer_ids": [
+          "SITES-MODULES-006"
+        ],
+        "stable_id": "MC-STK-ERR-1244"
+      },
+      {
+        "producer_alias": "SITES-MODULES-D-008",
+        "producer_ids": [
+          "SITES-MODULES-D-008"
+        ],
+        "raw_producer_ids": [
+          "SITES-MODULES-008"
+        ],
+        "stable_id": "MC-STK-ERR-1245"
+      },
+      {
+        "producer_alias": "SITES-MODULES-D-009",
+        "producer_ids": [
+          "SITES-MODULES-D-009"
+        ],
+        "raw_producer_ids": [
+          "SITES-MODULES-009"
+        ],
+        "stable_id": "MC-STK-ERR-1246"
+      }
+    ],
+    "unit_count": 30,
+    "producer_alias_count": 30,
+    "raw_producer_identity_rows": 30,
+    "raw_producer_id_strings_unique": 27,
+    "operation_count": 31,
+    "first_id": "MC-STK-ERR-1217",
+    "last_id": "MC-STK-ERR-1246"
+  },
+  "scratch_replay": {
+    "passed": true,
+    "apply_order": "descending_start_byte",
+    "operation_count": 31,
+    "descending_intervals": [
+      [
+        311543,
+        311568
+      ],
+      [
+        285408,
+        285444
+      ],
+      [
+        278217,
+        278247
+      ],
+      [
+        260260,
+        260306
+      ],
+      [
+        259482,
+        259518
+      ],
+      [
+        241423,
+        241443
+      ],
+      [
+        237049,
+        237066
+      ],
+      [
+        225434,
+        225472
+      ],
+      [
+        224043,
+        224080
+      ],
+      [
+        220068,
+        220105
+      ],
+      [
+        220021,
+        220056
+      ],
+      [
+        219947,
+        219982
+      ],
+      [
+        218067,
+        218122
+      ],
+      [
+        199346,
+        199371
+      ],
+      [
+        199187,
+        199222
+      ],
+      [
+        197720,
+        197744
+      ],
+      [
+        164439,
+        164473
+      ],
+      [
+        164308,
+        164355
+      ],
+      [
+        164050,
+        164068
+      ],
+      [
+        160622,
+        160669
+      ],
+      [
+        143020,
+        143069
+      ],
+      [
+        99819,
+        99859
+      ],
+      [
+        97213,
+        97272
+      ],
+      [
+        95704,
+        95730
+      ],
+      [
+        84638,
+        84677
+      ],
+      [
+        78610,
+        78678
+      ],
+      [
+        67700,
+        67765
+      ],
+      [
+        67625,
+        67687
+      ],
+      [
+        58734,
+        58775
+      ],
+      [
+        55584,
+        55596
+      ],
+      [
+        13736,
+        13790
+      ]
+    ],
+    "authority": {
+      "bytes": 312143,
+      "sha256": "B7CD92AFF9DF33F05EEAB72C4B55E8AA33F3AEBD947FC53160E87CA80DFFB245"
+    },
+    "output": {
+      "bytes": 312179,
+      "sha256": "B097799584BD00B3D8046F62A0A56FCFE045516FD04D130C2A4C547CE3BB6C19"
+    },
+    "operation_spec_sha256": "0E50039CA568836365D345A532F9F488D90D5CEA782CB282E4E075DD281A49CA"
+  },
+  "sealed_evidence_verification": {
+    "passed": true,
+    "build_receipt": {
+      "path": "builds/build-receipt.json",
+      "sha256": "577ACC28F0018308DDDE206433C6D9577AC77B93CC2C475B467F27AC28210D64"
+    },
+    "visual_qa": {
+      "path": "builds/visual-qa.json",
+      "sha256": "92DEF358EFD079D9C7C4CE691F609BD11FCC4A34C0D1BCEB5011D8B7BF3F2DE8"
+    },
+    "candidate_pdf": {
+      "path": "builds/sites-modules.pdf",
+      "bytes": 864837,
+      "sha256": "6A88995960C610E0E37D43E817A7AC45218D1CB013E46462FD7AF72EEE1009D7",
+      "pages": 80
+    },
+    "authority_pdf": {
+      "path": "builds/sites-modules.authority.pdf",
+      "bytes": 864893,
+      "sha256": "F554D207FBCF6E07ADD197777421F7B1B294DD2ACC2B5DF91050CC8575CE0DF4",
+      "pages": 80
+    },
+    "private_render_manifest": {
+      "bytes": 21270,
+      "sha256": "B5EDE0F0EE44D33822B93BBCAE5EE002244F06B1878D362C142B78B0588CB36C",
+      "logical_path": "canon/private_evidence/errata-r29-20260829/render"
+    }
+  },
+  "adverse_observations": [
+    "This append-only rebind preserves the four originally reviewed CRLF JSON receipts byte-for-byte and adds candidate-local -text attributes for those exact paths so Git cannot silently normalize them away again; the prior registry commit and review remain preserved in Git history.",
+    "Standalone candidate and authority builds retain identical cross-chapter unresolved-reference multisets.",
+    "Both PDFs are untagged; this retained accessibility limitation is not misreported as a visual failure.",
+    "The hash-bound visual-QA receipt records inspection of all 80 candidate pages and every correction-sensitive locus without a visual defect.",
+    "The prospective lease pointer remains candidate-local until a separate append-only registry admission transaction."
+  ],
+  "constraints_observed": {
+    "candidate_inputs_mutated": false,
+    "registry_or_git_state_mutated": true,
+    "upstream_contacted": false,
+    "persistent_writes": [
+      "replay/independent-review.json"
+    ]
+  }
+}

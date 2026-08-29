@@ -1,0 +1,205 @@
+{
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_inputs": {
+    "injectives.tex": {
+      "bytes": 105120,
+      "path": "injectives.tex",
+      "sha256": "B1367E48800C53D72C495D386EEF2D4D6C400652F9D00E69F664F17418D26520"
+    }
+  },
+  "authority_phase": {
+    "stems": {
+      "injectives": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "injectives.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 55088,
+            "stdout_sha256_raw": "C3909E3D34E39AAFCA0254549329E68BE1204234CA737C38672609E80307B5EB"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "injectives"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 147,
+            "stdout_sha256_raw": "95EF2B7E2D006B986D57D7BD52F3E665BEC415CD2044FB616DD6AC92D4F7922F"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "injectives.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 45964,
+            "stdout_sha256_raw": "78CB22F1A62B8B3BC63E635031F8FC63B035FA8B9CAD5251061138D3333C72FE"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "injectives.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 44654,
+            "stdout_sha256_raw": "A4435A6B18B08E60C1A7E85A740BCB312262A770234B285F815ADDBCE48BEA92"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 147,
+            "path": "builds/injectives.authority.bibtex.txt",
+            "sha256": "95EF2B7E2D006B986D57D7BD52F3E665BEC415CD2044FB616DD6AC92D4F7922F"
+          },
+          "log": {
+            "bytes": 58248,
+            "path": "builds/injectives.authority.log",
+            "sha256": "67C79B793034984B1F963C52C674D710094C53B0397BB193C41EB32389D7FDE8"
+          },
+          "pass3_stdout": {
+            "bytes": 44256,
+            "path": "builds/injectives.authority.pass3.txt",
+            "sha256": "8A8E4F9EF8E6EAA7BE3A436B4DA325ABE7B82B648404B7FA5BFABB47E367F949"
+          },
+          "pdf": {
+            "bytes": 547832,
+            "path": "builds/injectives.authority.pdf",
+            "sha256": "C3291DF829E84FB96263DB08D58504931F32D1C24219773882E7FA40A0A0F541"
+          }
+        },
+        "source": {
+          "bytes": 105120,
+          "path": "injectives.tex",
+          "sha256": "B1367E48800C53D72C495D386EEF2D4D6C400652F9D00E69F664F17418D26520"
+        }
+      }
+    }
+  },
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "candidate_id": "stacks-errata-a04446e-r30",
+  "candidate_inputs": {
+    "injectives.tex": {
+      "bytes": 105225,
+      "path": "injectives.tex",
+      "sha256": "BDC721593BE0B491334C707B371A2EECD1787787903A71E059721BDB66C5AC04"
+    }
+  },
+  "candidate_phase": {
+    "stems": {
+      "injectives": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "injectives.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 55196,
+            "stdout_sha256_raw": "FA8C4DB8345522531935882C018AE29F240758826D7DD2F808E83C887E2C4124"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "injectives"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 147,
+            "stdout_sha256_raw": "95EF2B7E2D006B986D57D7BD52F3E665BEC415CD2044FB616DD6AC92D4F7922F"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "injectives.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 46073,
+            "stdout_sha256_raw": "7C874858F3B3E765890C58F9C3CAF38C9480F1205D146417E6E65B38FCFD864E"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "injectives.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 44763,
+            "stdout_sha256_raw": "BAD537C1BC1F99F8AE2FB0BE9EA0FCE20DD4F13EDCDA4DE74BED24EF9123F568"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 147,
+            "path": "builds/injectives.bibtex.txt",
+            "sha256": "95EF2B7E2D006B986D57D7BD52F3E665BEC415CD2044FB616DD6AC92D4F7922F"
+          },
+          "log": {
+            "bytes": 58353,
+            "path": "builds/injectives.log",
+            "sha256": "2547744BD9C2EACBCB5A0B08FDAFA3F4B82EDA1E04A135A329AF098802D71D3B"
+          },
+          "pass3_stdout": {
+            "bytes": 44365,
+            "path": "builds/injectives.pass3.txt",
+            "sha256": "327F1890F78EC376B447A1FC6D054D04881B14582736A576CD7D6119A3409F9D"
+          },
+          "pdf": {
+            "bytes": 547812,
+            "path": "builds/injectives.pdf",
+            "sha256": "DC2D03995E73A6A75FC68577A9792E8A60D8912E2B4E983E8803DFBB75E73A2E"
+          }
+        },
+        "source": {
+          "bytes": 105225,
+          "path": "injectives.tex",
+          "sha256": "BDC721593BE0B491334C707B371A2EECD1787787903A71E059721BDB66C5AC04"
+        }
+      }
+    }
+  },
+  "completed_at_utc": "2026-08-29T17:21:35Z",
+  "passed": true,
+  "restored_authority_inputs": {
+    "injectives.tex": {
+      "bytes": 105120,
+      "path": "injectives.tex",
+      "sha256": "B1367E48800C53D72C495D386EEF2D4D6C400652F9D00E69F664F17418D26520"
+    }
+  },
+  "schema": "mathematics-commons-stacks-errata-build-execution/v1",
+  "source_date_epoch": "1787961600",
+  "started_at_utc": "2026-08-29T17:21:21Z",
+  "tools": {
+    "bibtex": "MiKTeX-BibTeX 4.2 (MiKTeX 26.5)",
+    "pdflatex": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5)",
+    "python": "3.12.13 (main, Aug  7 2026, 02:26:41) [MSC v.1944 64 bit (AMD64)]"
+  },
+  "work_root": "new empty task-local directory outside source and candidate; exact local path retained only in private evidence"
+}

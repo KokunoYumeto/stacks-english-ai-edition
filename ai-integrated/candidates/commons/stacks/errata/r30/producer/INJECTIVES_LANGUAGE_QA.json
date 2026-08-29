@@ -1,0 +1,24 @@
+{
+  "schema": "stacks-fr-language-qa-v1",
+  "chapter": 19,
+  "target": {
+    "path": "p03/tex/injectives.tex",
+    "bytes": 113143,
+    "sha256": "D5E5FCCC7A8F83167A4E68F2FEE48C99A2215DFF53E9C45048AE29FE32F33B49"
+  },
+  "utf8": true,
+  "nfc": true,
+  "patterns": {
+    "mechanical_let": "\\bLaissez\\b",
+    "mechanical_fly": "\\bla mouche\\b",
+    "commutes_calque": "\\b(?:navettes?|se déplace) avec\\b",
+    "denoted_calque": "\\bIl est dénoté\\b",
+    "gender_sheaf": "\\b(?:une|la) faisceau\\b",
+    "broken_hold_syntax": "\\bsuppose(?:r)?\\b[^\\n]{0,80}\\btenir\\b",
+    "english_sentence_words": "(?i)\\b(?:we have|we see|it follows|it suffices|there exists|if and only if|is called|is denoted|let us|given that|proof omitted)\\b",
+    "mojibake": "(?:\\uFFFD|Ã|Â|â€|â€™)"
+  },
+  "finding_count": 0,
+  "findings": [],
+  "status": "PASS"
+}

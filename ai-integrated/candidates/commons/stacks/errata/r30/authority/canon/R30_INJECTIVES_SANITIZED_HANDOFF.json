@@ -1,0 +1,57 @@
+{
+  "authority": {
+    "bytes": 105120,
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "path": "authority/source/injectives.tex",
+    "sha256": "B1367E48800C53D72C495D386EEF2D4D6C400652F9D00E69F664F17418D26520"
+  },
+  "candidate_adjudication": {
+    "accepted_operations": 40,
+    "accepted_units": 40,
+    "rejected": 0,
+    "stable_id_range": [
+      "MC-STK-ERR-1247",
+      "MC-STK-ERR-1286"
+    ]
+  },
+  "chapter": 19,
+  "original_handoff_identity": {
+    "original_bytes": 2761,
+    "original_path": "p03/evidence/INJECTIVES_CANON_HANDOFF.json",
+    "original_sha256": "63212E779580E867942489D40AF52A918DB16C7134CE804CDCA93729F0F63F78"
+  },
+  "producer_counts": {
+    "crosswalk_rows": 120,
+    "defect_rows": 28,
+    "source_emendation_operations": 11
+  },
+  "producer_evidence": {
+    "INJECTIVES_ID_CROSSWALK.csv": {
+      "bytes": 19315,
+      "path": "producer/INJECTIVES_ID_CROSSWALK.csv",
+      "sha256": "FC9DAC489A332EDBD9154C2FB18DD3F60F50CB63CC9F4DBCE09C7F3FCA8A4525"
+    },
+    "INJECTIVES_LANGUAGE_QA.json": {
+      "bytes": 859,
+      "path": "producer/INJECTIVES_LANGUAGE_QA.json",
+      "sha256": "D8825C399CE0592959476BD60BFD331EDF6E9507EB3196FEF20F2E9ABD36624B"
+    },
+    "INJECTIVES_SOURCE_DEFECT_LEDGER.csv": {
+      "bytes": 10934,
+      "path": "producer/INJECTIVES_SOURCE_DEFECT_LEDGER.csv",
+      "sha256": "B2BC602A205175DDCE6EB04F8774C16159DFA3B9FCAAB560E80CC7CA7CA1F15B"
+    },
+    "INJECTIVES_SOURCE_EMENDATIONS.json": {
+      "bytes": 6813,
+      "path": "producer/INJECTIVES_SOURCE_EMENDATIONS.json",
+      "sha256": "9581ED3B67658CF110DBF525C28AC0DA867C59EC8FE9278E89366CCAF1FC5DA0"
+    }
+  },
+  "sanitization": {
+    "original_identity_preserved": true,
+    "private_paths_removed": true,
+    "raw_handoff_not_copied": true
+  },
+  "schema": "stacks-r30-injectives-sanitized-producer-handoff/v1",
+  "source_file": "injectives.tex"
+}

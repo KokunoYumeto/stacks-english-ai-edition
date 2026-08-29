@@ -11,6 +11,7 @@ operations, never copied from a payload wholesale.
 from __future__ import annotations
 
 import argparse
+import bisect
 import difflib
 import json
 import os
@@ -59,9 +60,21 @@ def byte_offsets(lines: list[bytes]) -> list[int]:
 
 
 def rebase_operations(
-    authority: bytes, current: bytes, operations: list[dict]
+    authority: bytes,
+    current: bytes,
+    operations: list[dict],
+    preapplied_operations: list[dict] | None = None,
 ) -> list[dict]:
-    """Map authority-bound operations through unchanged line blocks in current."""
+    """Map authority-bound operations through unchanged line blocks in current.
+
+    A cumulative source can already contain one of the newly admitted edits when
+    a repair landed directly on the public branch before its overlay admission.
+    Such an operation is accepted only when a single same-sized ``replace``
+    opcode is *exactly* the manifest-bound old-to-new byte substitution.  Any
+    other changed block, line-count drift, ambiguous occurrence, or unrelated
+    byte is still rejected.  Accepted pre-applied operations are omitted from
+    the rebased edit list because their replacement is already present.
+    """
     authority_lines = authority.splitlines(keepends=True)
     current_lines = current.splitlines(keepends=True)
     authority_offsets = byte_offsets(authority_lines)
@@ -69,6 +82,7 @@ def rebase_operations(
     matcher = difflib.SequenceMatcher(
         None, authority_lines, current_lines, autojunk=False
     )
+    opcodes = matcher.get_opcodes()
     regions: list[tuple[int, int, int, int]] = []
     for block in matcher.get_matching_blocks():
         if not block.size:
@@ -81,6 +95,65 @@ def rebase_operations(
             raise ValueError("line matcher returned a non-identical byte region")
         regions.append((authority_start, authority_end, current_start, current_end))
 
+    def exact_preapplied(operation: dict) -> bool:
+        """Prove one operation is already present as its exact byte edit."""
+
+        start = operation["start_byte"]
+        end = operation["end_byte_exclusive"]
+        old = operation["old_text"].encode("utf-8")
+        replacement = operation["replacement_text"].encode("utf-8")
+        if not old or not replacement:
+            return False
+
+        # Locate the authority lines containing the manifest interval.  The
+        # declared source range is part of the candidate's bound evidence and
+        # prevents a coincidental replacement elsewhere from being accepted.
+        authority_line_start = bisect.bisect_right(authority_offsets, start) - 1
+        authority_line_end = bisect.bisect_left(authority_offsets, end)
+        if authority_line_start < 0 or authority_line_end <= authority_line_start:
+            return False
+        if operation.get("source_start_line") != authority_line_start + 1:
+            return False
+        if operation.get("source_end_line") != authority_line_end:
+            return False
+
+        changed_blocks = [
+            (tag, a_start, a_end, c_start, c_end)
+            for tag, a_start, a_end, c_start, c_end in opcodes
+            if tag != "equal"
+            and a_start <= authority_line_start
+            and authority_line_end <= a_end
+        ]
+        if len(changed_blocks) != 1:
+            return False
+        tag, a_start, a_end, c_start, c_end = changed_blocks[0]
+        # A pre-applied edit cannot hide an insertion/deletion or a line
+        # reordering.  Requiring one-for-one replacement lines keeps the proof
+        # local and deterministic.
+        if tag != "replace" or (a_end - a_start) != (c_end - c_start):
+            return False
+
+        authority_block_start = authority_offsets[a_start]
+        authority_block_end = authority_offsets[a_end]
+        current_block_start = current_offsets[c_start]
+        current_block_end = current_offsets[c_end]
+        authority_block = authority[authority_block_start:authority_block_end]
+        current_block = current[current_block_start:current_block_end]
+        relative_start = start - authority_block_start
+        relative_end = end - authority_block_start
+        if relative_start < 0 or relative_end > len(authority_block):
+            return False
+        if authority_block[relative_start:relative_end] != old:
+            return False
+        if authority_block.count(old) != 1:
+            return False
+        expected = (
+            authority_block[:relative_start]
+            + replacement
+            + authority_block[relative_end:]
+        )
+        return current_block == expected
+
     rebased: list[dict] = []
     for operation in operations:
         start = operation["start_byte"]
@@ -91,6 +164,10 @@ def rebase_operations(
             if region[0] <= start and end <= region[1]
         ]
         if len(matches) != 1:
+            if exact_preapplied(operation):
+                if preapplied_operations is not None:
+                    preapplied_operations.append(dict(operation))
+                continue
             raise ValueError(
                 "operation does not map through exactly one unchanged region: "
                 f"{operation['operation_id']}"
@@ -103,6 +180,10 @@ def rebase_operations(
         mapped["end_byte_exclusive"] = current_start + (end - authority_start)
         old = operation["old_text"].encode("utf-8")
         if current[mapped["start_byte"] : mapped["end_byte_exclusive"]] != old:
+            if exact_preapplied(operation):
+                if preapplied_operations is not None:
+                    preapplied_operations.append(dict(operation))
+                continue
             raise ValueError(f"rebased preimage mismatch: {operation['operation_id']}")
         rebased.append(mapped)
 
@@ -328,6 +409,7 @@ def main() -> int:
             for operation in new_operations
             if operation.get("supersedes_operation_id") is not None
         ]
+        preapplied_operations: list[dict] = []
         if current_blob == previous_blob:
             # The checked cumulative source is the exact effective projection of
             # the prior rounds.  Recompute it from the immutable authority using
@@ -423,6 +505,7 @@ def main() -> int:
                         for operation in new_operations
                         if operation["operation_id"] in new_active_ids
                     ],
+                    preapplied_operations,
                 )
                 projection = apply_operations(current, rebased)
         projection_blob = git_blob_id(projection)
@@ -443,6 +526,7 @@ def main() -> int:
             "operations": ordered,
             "new_operations": new_operations,
             "rebased_operations": rebased,
+            "preapplied_operations": preapplied_operations,
             "superseded_operation_ids": sorted(superseded_ids),
         }
 
@@ -516,6 +600,10 @@ def main() -> int:
                 "composed_bytes": len(item["projection"]),
                 "composed_sha256": sha256(item["projection"]),
                 "composed_git_blob": item["projection_blob"],
+                "preapplied_operation_ids": [
+                    operation["operation_id"]
+                    for operation in item["preapplied_operations"]
+                ],
                 "written": args.write
                 and item["current_blob"] != item["projection_blob"],
                 "matches_target_after": current_after_blob == item["projection_blob"],
@@ -538,6 +626,11 @@ def main() -> int:
             operation["round"] not in existing_set
             for item in prepared.values()
             for operation in item["operations"]
+        ),
+        "preapplied_operation_ids": sorted(
+            operation["operation_id"]
+            for item in prepared.values()
+            for operation in item["preapplied_operations"]
         ),
         "overlays": round_reports,
         "sources": source_reports,

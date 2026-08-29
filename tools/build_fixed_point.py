@@ -519,10 +519,8 @@ def load_composition_receipt(
     )
     if is_v4 and has_embedded_candidate:
         raise RuntimeError("v4 registered insertions cannot use embedded candidates")
-    if has_embedded_candidate and len(raw_new_overlays) != 1:
-        raise RuntimeError(
-            "embedded-candidate composition requires exactly one new overlay"
-        )
+    # A v3 transition may append multiple direct-admission candidates.  Each
+    # overlay is validated independently in registry order below.
     uses_bound_leases = is_v4 or has_embedded_candidate
 
     authority = receipt.get("authority")
@@ -1165,25 +1163,6 @@ def load_composition_receipt(
                         f"{overlay.get('id')!r}"
                     )
 
-            lease_suffix = lease_events[len(previous_lease_events) :]
-            if len(lease_suffix) != 2 or not all(
-                isinstance(event, dict) for event in lease_suffix
-            ):
-                raise RuntimeError(
-                    f"embedded admission must append release and successor lease events: "
-                    f"{overlay.get('id')!r}"
-                )
-            released_event, successor_event = lease_suffix
-            if (
-                released_event.get("event_id")
-                != overlay.get("lease_release_event")
-                or successor_event.get("event_id")
-                != overlay.get("successor_lease_event")
-            ):
-                raise RuntimeError(
-                    f"embedded admission lease-event binding mismatch: "
-                    f"{overlay.get('id')!r}"
-                )
             lease_id = manifest.get("lease_id")
             matching_lease_events = [
                 event
@@ -1192,25 +1171,76 @@ def load_composition_receipt(
                 and event.get("lease_id") == lease_id
                 and event.get("namespace") == namespace
             ]
-            if len(matching_lease_events) != 2:
+            if (
+                not isinstance(lease_id, str)
+                or not lease_id
+                or len(matching_lease_events) != 2
+                or matching_lease_events[0].get("event") != "issued"
+                or matching_lease_events[0].get("state") != "active"
+                or matching_lease_events[1].get("event") != "released"
+                or matching_lease_events[1].get("state") != "released"
+            ):
                 raise RuntimeError(
                     f"embedded candidate lease lifecycle is incomplete: "
                     f"{overlay.get('id')!r}"
                 )
-            issued_event, matching_release = matching_lease_events
+            issued_event, released_event = matching_lease_events
+            if released_event.get("supersedes_event_id") != issued_event.get(
+                "event_id"
+            ):
+                raise RuntimeError(
+                    f"embedded candidate lease lifecycle is not an issued/released pair: "
+                    f"{overlay.get('id')!r}"
+                )
+            release_index = next(
+                (
+                    index
+                    for index, event in enumerate(lease_events)
+                    if event == released_event
+                ),
+                None,
+            )
+            if release_index is None or release_index < len(previous_lease_events):
+                raise RuntimeError(
+                    f"embedded admission did not append the lease release event: "
+                    f"{overlay.get('id')!r}"
+                )
+            successor_event = next(
+                (
+                    event
+                    for event in lease_events[release_index + 1 :]
+                    if isinstance(event, dict)
+                    and event.get("event") == "issued"
+                    and event.get("state") == "active"
+                    and event.get("supersedes_event_id")
+                    == released_event.get("event_id")
+                ),
+                None,
+            )
+            expected_release_event = overlay.get("lease_release_event")
+            if expected_release_event is not None and expected_release_event != released_event.get(
+                "event_id"
+            ):
+                raise RuntimeError(
+                    f"embedded admission lease-release binding mismatch: "
+                    f"{overlay.get('id')!r}"
+                )
+            expected_successor_event = overlay.get("successor_lease_event")
+            if expected_successor_event is not None and (
+                successor_event is None
+                or expected_successor_event != successor_event.get("event_id")
+            ):
+                raise RuntimeError(
+                    f"embedded admission successor-lease binding mismatch: "
+                    f"{overlay.get('id')!r}"
+                )
+            if expected_successor_event is None and successor_event is not None:
+                raise RuntimeError(
+                    f"embedded admission successor-lease binding is missing: "
+                    f"{overlay.get('id')!r}"
+                )
             if (
-                matching_release != released_event
-                or issued_event.get("event") != "issued"
-                or issued_event.get("state") != "active"
-                or released_event.get("event") != "released"
-                or released_event.get("state") != "released"
-                or released_event.get("supersedes_event_id")
-                != issued_event.get("event_id")
-                or successor_event.get("event") != "issued"
-                or successor_event.get("state") != "active"
-                or successor_event.get("supersedes_event_id")
-                != released_event.get("event_id")
-                or any(
+                any(
                     event.get(key) != expected
                     for event in (issued_event, released_event)
                     for key, expected in (
@@ -1223,13 +1253,16 @@ def load_composition_receipt(
                         ("writer_contract", "candidates/CONTRACT.md"),
                     )
                 )
-                or any(
-                    successor_event.get(key) != expected
-                    for key, expected in (
-                        ("writer_task", manifest.get("writer_task")),
-                        ("upstream_commit", authority_commit),
-                        ("upstream_tree", authority_tree),
-                        ("writer_contract", "candidates/CONTRACT.md"),
+                or (
+                    successor_event is not None
+                    and any(
+                        successor_event.get(key) != expected
+                        for key, expected in (
+                            ("writer_task", manifest.get("writer_task")),
+                            ("upstream_commit", authority_commit),
+                            ("upstream_tree", authority_tree),
+                            ("writer_contract", "candidates/CONTRACT.md"),
+                        )
                     )
                 )
                 or entry.get("writer") != manifest.get("writer_task")
@@ -1247,7 +1280,11 @@ def load_composition_receipt(
                     "payload_path": payload_relative,
                     "review_receipt_path": review_relative,
                     "lease_event_id": released_event.get("event_id"),
-                    "successor_lease_event_id": successor_event.get("event_id"),
+                    "successor_lease_event_id": (
+                        successor_event.get("event_id")
+                        if successor_event is not None
+                        else None
+                    ),
                 }
             )
         elif not is_v4:
