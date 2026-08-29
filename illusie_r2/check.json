@@ -1,6 +1,6 @@
 {
   "schema": "illusie-stacks-derived-hom-r2-check-v1",
-  "status": "PASS_WITH_CONTROLLED_EXTERNAL_AUX_LIMITATION",
+  "status": "PASS_PUBLIC_WITH_CONTROLLED_EXTERNAL_AUX_LIMITATION",
   "formalization_id": "ILLUSIE-R2-TWO-PRESENTATIONS-DERIVED-HOM",
   "source": {
     "work": "Complexe cotangent et deformations II",
@@ -89,6 +89,15 @@
     "official_tag": "",
     "source_lines": "5468-5509",
     "candidate_head": "69075367f9a9ca89a382db74652f9d09d550ec30",
+    "linear_integration": {
+      "base_main_commit": "6b07162c47bf933b19060f4e3e499c43584dc60b",
+      "base_main_tree": "5f4abb6965cae1a9b4889295711fb4ac5b1e51f5",
+      "integration_branch": "codex/illusie-derived-hom-r2-integration",
+      "content_commit": "0db46a5d942ce510f61fdb989a8887bcdeda1226",
+      "content_tree": "9593e37707d8dce0ab3d7e43fcfaab5a967f9677",
+      "merge_commits": 0,
+      "force_pushes": 0
+    },
     "write_boundary": [
       "dga.tex",
       "illusie_r2/**",
@@ -249,7 +258,60 @@
         "head": "69075367f9a9ca89a382db74652f9d09d550ec30",
         "run_id": 33251208909,
         "url": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/actions/runs/33251208909"
+      },
+      "linear_integration_branch_run": {
+        "status": "PASS",
+        "head": "0db46a5d942ce510f61fdb989a8887bcdeda1226",
+        "run_id": 33252137477,
+        "url": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/actions/runs/33252137477"
+      },
+      "public_main_run": {
+        "status": "PASS",
+        "head": "0db46a5d942ce510f61fdb989a8887bcdeda1226",
+        "run_id": 33252173483,
+        "url": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/actions/runs/33252173483"
       }
+    },
+    "public_readback": {
+      "status": "PASS",
+      "checked_utc": "2026-08-29T12:20:33Z",
+      "content_commit": "0db46a5d942ce510f61fdb989a8887bcdeda1226",
+      "content_tree": "9593e37707d8dce0ab3d7e43fcfaab5a967f9677",
+      "repository": {
+        "private": false,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "repository_http_status": 200,
+        "issue_http_status": 200,
+        "raw_source_http_status": 200
+      },
+      "files": [
+        {
+          "path": "dga.tex",
+          "bytes": 253806,
+          "sha256": "2DBB23D26F8344707F3D3F1FDA14DC271D106EC754F6322BB99C10CBF634ACA5"
+        },
+        {
+          "path": "illusie_r2/STATUS.md",
+          "bytes": 4062,
+          "sha256": "E1DDF0C6FD90643C2084BC6E56EAEA8ED8538714ECDC0CED9A222368520BBF08"
+        },
+        {
+          "path": "illusie_r2/check.json",
+          "bytes": 10403,
+          "sha256": "353E24941E6CD6CFC128478D2F7F470585474A9DF0924E29577317E9F790EB94"
+        },
+        {
+          "path": "tools/validate_unified_repository.py",
+          "bytes": 116591,
+          "sha256": "22D8FF92F23890514999C2C93BA919982C6D19AD027D39EECEB056E01A801DA0"
+        }
+      ],
+      "download_failures": 0,
+      "byte_mismatches": 0,
+      "hash_mismatches": 0,
+      "access_restrictions_changed": false
     }
   },
   "adverse_evidence": [

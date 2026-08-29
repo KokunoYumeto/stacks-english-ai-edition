@@ -72,6 +72,13 @@ https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/actions/
 No TeX process was signalled or interrupted.
 
 `check.json` binds the complete source, mathematical, build, visual, and CI
-receipts. Public-`main` integration and anonymous public byte/hash readback are
-the remaining publication transactions; no repository, release, DOI, or
-download access is restricted while they run.
+receipts. The four bounded commits were replayed linearly on the then-current
+public `main`, preserving the concurrent EGA integration, and fast-forwarded
+without a force push. Exact-main CI passed at content commit
+`0db46a5d942ce510f61fdb989a8887bcdeda1226` in run
+https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/actions/runs/33252173483.
+
+Anonymous readback returned HTTP 200 for the repository, issue, and raw source,
+and reproduced every changed content file by byte count and SHA-256. The
+repository is public, enabled, and unarchived. No repository, release, DOI, or
+download access was restricted or reduced.
