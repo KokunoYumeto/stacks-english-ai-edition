@@ -17,9 +17,12 @@ in each corpus dossier and in the machine-readable registry.
 | FGA | Root additions composed and notation-normalized; corpus review closed | The combined source contains the normalized FGA additions and post-merge dossier. The closure covers 1,253 units, 1,612 term links, and 579 append-only decisions; the recorded fixed-point Moduli build is 83 pages. |
 | EGA | Partial root-source composition; direct-source review active | Selected local additions are present in root TeX. Complete English discovery and diplomatic French edition trees remain separate read-only inputs. Review is complete through EGA I §6.4.13 and continues at §6.5.1. |
 
-The current EGA semantic checkpoint is local and prepublication: §6.4.1–§6.4.13
-were source-bound and routed without changing root TeX or any PDF. It has no
-public tag or DOI yet.
+The current EGA semantic checkpoint is public: §6.4.1–§6.4.13 were source-bound
+and routed without changing root TeX or any PDF. GitHub tag
+[`ega-i-6.4-semantic-2026-08-29`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.4-semantic-2026-08-29)
+and Zenodo version DOI [`10.5281/zenodo.22161051`](https://doi.org/10.5281/zenodo.22161051)
+preserve six byte-matched assets totaling 174,783,585 bytes per host. R28 remains
+the latest errata release; the next EGA cursor is §6.5.1.
 
 ## Errata state
 

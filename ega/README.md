@@ -30,6 +30,14 @@ EGA integration manifest enter the repository's root TeX tree.
   [Zenodo 21861666](https://doi.org/10.5281/zenodo.21861666) is retained as a
   historical checkpoint, not presented as the current edition or as a release
   of this integrated Stacks repository.
+- The integrated repository's current EGA semantic checkpoint covers EGA I
+  through §6.4.13 and is public at GitHub tag
+  [`ega-i-6.4-semantic-2026-08-29`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.4-semantic-2026-08-29)
+  and Zenodo version DOI
+  [`10.5281/zenodo.22161051`](https://doi.org/10.5281/zenodo.22161051) under the
+  existing integrated-project concept. Its six assets are byte-matched across
+  both hosts; it changes no root TeX or PDF, and R28 remains the latest errata
+  release. The next semantic cursor is EGA I §6.5.1.
 - Stacks upstream base: `a04446e57ec1fbc252a871afcec7752fb2807b14`.
 - English discovery manifest: R184, 92,445 bytes, SHA-256
   `5C64ECD32FD7C5458D2599D70ED667D2CF06D95517EFFA9C6D6DCEF7626913A0`;

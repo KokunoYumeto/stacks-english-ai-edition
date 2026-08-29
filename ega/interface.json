@@ -311,12 +311,34 @@
       "github_release": "https://github.com/KokunoYumeto/ega-en/releases/tag/ega-en-2026-08-28-r7"
     },
     "integrated_stacks": {
-      "composition_main_at_audit": "2e7128e8a13328b851ed95b05fb7c94940c7bf54",
-      "release_source_commit": "9fb327dd32e18f612ece06e213299f869e9fb11d",
-      "github_release": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r24-2026-08-28",
-      "zenodo_concept_doi": "10.5281/zenodo.22135180",
-      "zenodo_version_doi": "10.5281/zenodo.22135181",
-      "state": "R24 source, PDF, and validation assets public and cross-host byte-verified"
+      "repository": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project",
+      "main_at_semantic_release": "00adeb291487d04070b75bd0fd87759e3c43d3d3",
+      "latest_errata_release": {
+        "round": "R28",
+        "release_source_commit": "efa46473cf8a73646ef1b6e32354e63ce20fd172",
+        "release_source_tree": "fe139f1aedc35f02dbd10e5471ecb3c7fbed62e1",
+        "github_release": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r28-2026-08-28",
+        "zenodo_concept_doi": "10.5281/zenodo.22135180",
+        "zenodo_version_doi": "10.5281/zenodo.22150671",
+        "publication_receipt": "../validation/stacks-errata-a04446e-r28-release-2026-08-28.json"
+      },
+      "latest_ega_semantic_checkpoint": {
+        "scope": "EGA I §6.4.1–§6.4.13",
+        "continuation": "EGA I §6.5.1",
+        "content_commit": "00adeb291487d04070b75bd0fd87759e3c43d3d3",
+        "content_tree": "f6f736a132ed4734bea932e28401bb32ccdcf535",
+        "github_tag": "ega-i-6.4-semantic-2026-08-29",
+        "github_tag_object": "da6b06b71cc4da1be775af5c1f88999620008d2f",
+        "github_release": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.4-semantic-2026-08-29",
+        "github_workflow_run": 33250683600,
+        "zenodo_concept_doi": "10.5281/zenodo.22135180",
+        "zenodo_version_doi": "10.5281/zenodo.22161051",
+        "files": 6,
+        "bytes_per_host": 174783585,
+        "root_tex_pdf_changed": false,
+        "publication_receipt": "../validation/ega-i-6.4-semantic-release-2026-08-29.json"
+      },
+      "state": "R28 remains the latest errata release; EGA I §6.4 is the latest public semantic checkpoint"
     }
   },
   "correction_channel": "reports/findings.jsonl",

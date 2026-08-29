@@ -1,0 +1,203 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-ega-semantic-checkpoint/v1",
+  "status": "PASS",
+  "created_utc": "2026-08-29T11:26:43Z",
+  "repository": "KokunoYumeto/unofficial-ai-integrated-stacks-project",
+  "base_commit": "4cf4242c1daf5cc49e092a0d347246fc501bb257",
+  "base_tree": "d5464f63f28477975749115050fe4750f49d56b3",
+  "content_commit": "00adeb291487d04070b75bd0fd87759e3c43d3d3",
+  "content_tree": "f6f736a132ed4734bea932e28401bb32ccdcf535",
+  "scope": {
+    "closed": "EGA I §6.4",
+    "continuation": "EGA I §6.5.1",
+    "semantic_only": true,
+    "new_errata_round": false,
+    "root_tex_changed": false,
+    "root_pdf_changed": false
+  },
+  "authority": {
+    "official_stacks_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "french_receipt": "F37ZW.json",
+    "french_receipt_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+    "french_path": "ega1/ega1-6-fr.tex",
+    "french_lf_lines": "560-769",
+    "french_slice_bytes": 9133,
+    "french_slice_sha256": "08472BEBAB933ECBE3ECE35452C2EE21BFF9BB7A27D36B572BFD93DF049E1865"
+  },
+  "semantic_fixed_point": {
+    "decisions": "D000307-D000319",
+    "decision_count": 13,
+    "statement_edges": "S001140-S001195",
+    "statement_edge_count": 56,
+    "mathematical_units": 20,
+    "registered_units": 22,
+    "distinct_tag_label_file_targets": 36,
+    "residuals": "R000764-R000785",
+    "residual_count": 22,
+    "agent_audits": "A000238-A000243",
+    "root_source_disposition": "All thirteen statements are exact Stacks results, short composites, stronger-target consequences, or expository conclusions; no nonduplicative root TeX addition is warranted."
+  },
+  "changed_paths": [
+    {
+      "path": "PROVENANCE.md",
+      "bytes": 13016,
+      "sha256": "F4CD68F43F68087E609F6E7B5982131824B8C8713AF4634F6C52462038F233ED",
+      "git_blob": "f2ac3ec678aba8029430fe2a37d40387fec1da9e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 12617,
+      "sha256": "416EB3DD79D8239E0E0D6C477910851D52AFCBD83A882621DAE08FDCFE9847E7",
+      "git_blob": "4a34cb18fa1e107dc3a0df9d593d1f11f261cc57"
+    },
+    {
+      "path": "ROADMAP.md",
+      "bytes": 10989,
+      "sha256": "F56A27144B900A949ADA85577978227400F833F830F376BBA3D4ECF86E9A0E56",
+      "git_blob": "b903753f4749cb6dcfefb1e2ee567654f0d81d6d"
+    },
+    {
+      "path": "STATUS.md",
+      "bytes": 10671,
+      "sha256": "EAF5D276B3EF10F9E2EF9DE95F327959E6161F13541A65332CB73EAA042B4210",
+      "git_blob": "fa65dad3b6caed313a59ba351c9c66492184d50d"
+    },
+    {
+      "path": "VALIDATION.md",
+      "bytes": 8845,
+      "sha256": "74542FDF8CDB328DC96831270BF9DA8583D7E6802F13F953B81D43B6F0CB2C7D",
+      "git_blob": "a77b5441de20c502770c1187de26734eed61aeaf"
+    },
+    {
+      "path": "ega/README.md",
+      "bytes": 49388,
+      "sha256": "5EB5F28FF70BAF1CD5539952A00E59DD585171E10E3C1A7D1C0D84352733B1AB",
+      "git_blob": "512bd2530853ab54ca09aecda4b76b8d5c96cf9e"
+    },
+    {
+      "path": "ega/agent.csv",
+      "bytes": 126914,
+      "sha256": "7BF1824C4098B9FFA22CAF5343575FE43C3306AA2E45E670BFF767C6B55B7115",
+      "git_blob": "0947aec1cad899f155661d0e01e57cd7d1f6391a"
+    },
+    {
+      "path": "ega/check.py",
+      "bytes": 316467,
+      "sha256": "64A36DE563DB1AA3743A453D566909C551E0C8BAC82757A1C2ACDB2923487E19",
+      "git_blob": "13f2287bcaa386951ed2847cd710660ac91b46a1"
+    },
+    {
+      "path": "ega/dec.csv",
+      "bytes": 83874,
+      "sha256": "D3C557C146433DF5736800DFEA75549B993AC45919FE51EB5BC0790A5A945A13",
+      "git_blob": "e5d175f7cec084124722fb7536e24aef038d22ab"
+    },
+    {
+      "path": "ega/log.md",
+      "bytes": 156945,
+      "sha256": "CD444E55A7A40618A8A1FFCA46805C8CC022D5A7052EB7FD398AE0C92765BD43",
+      "git_blob": "6caa25bf0bd1f15d5d430e524ca6aee08cda9f8c"
+    },
+    {
+      "path": "ega/resid.csv",
+      "bytes": 224931,
+      "sha256": "C3A89BD996F1A023DEC1742633C3567C1F18190F8F0B1DB9133E8133859993C4",
+      "git_blob": "d85d2a4d8bacc23397ed7250dbb8bfc910f37c09"
+    },
+    {
+      "path": "ega/scope.json",
+      "bytes": 17515,
+      "sha256": "A6243E2B3F84B423E5F30D17E81BD6D555CECB39FD59A1C7444517F7EEB90A22",
+      "git_blob": "29f7f53500ea77c38c8c2a89f5cd71942070665c"
+    },
+    {
+      "path": "ega/smap.csv",
+      "bytes": 519320,
+      "sha256": "44135BA64068189E193E7F5A5B651B28E22D082E6C73D44BEFC321AD3CDE3789",
+      "git_blob": "8f39e68d3e77605e5588244b0d7497d5fafd366f"
+    },
+    {
+      "path": "tools/build_errata_preservation_package.py",
+      "bytes": 92761,
+      "sha256": "1138605CA170A50506560FE97152F444C0EE40A229794B9C047621D67CAD7DB9",
+      "git_blob": "2a7708d6c37ac22ca25fd65517515c45fba69fb6"
+    },
+    {
+      "path": "validation/README.md",
+      "bytes": 18349,
+      "sha256": "6AAC7214CB7EDC77F75926460E33CACD110A72A58BB8C79DECEAE7F407D3364B",
+      "git_blob": "7ae3ee931eb3f338db65e77a1ff8c39c86e33d27"
+    }
+  ],
+  "invariance": {
+    "root_tex_changed_paths": [],
+    "root_pdf_changed_paths": [],
+    "registry_overlays": {
+      "path": "ai-integrated/registry/overlays.json",
+      "bytes": 48023,
+      "sha256": "F52C0F8A76A7941EA18B0C99333BBD8878F23039A81B35B2E234A7AF8888E4F6",
+      "git_blob": "2dd5b2c8e8805efbbc5ad5ff68ad705139ef197b"
+    },
+    "registry_leases": {
+      "path": "ai-integrated/registry/leases.json",
+      "bytes": 37273,
+      "sha256": "DE503D07C935EE13392680FBADEE849B1942133106DF0EEFCB290291C1514AB3",
+      "git_blob": "9583355d7aa80943cf849ce9ab8ce9cc847a0b6c"
+    },
+    "composition_current": {
+      "path": "validation/composition-current.json",
+      "bytes": 6936,
+      "sha256": "25AAEAAD0F884D06B25151E6A6B99696C86A1935DAB7B2D04DADF408547EF47A",
+      "git_blob": "27e32711ff1329b159f91dd8bac6c5319ecc3251"
+    }
+  },
+  "validation": {
+    "ega_check": {
+      "command": "python ega/check.py",
+      "status": "PASS",
+      "errors": 0,
+      "active_statement_edges": 1188,
+      "residual_rows": 785
+    },
+    "unified_repository": {
+      "command": "python tools/validate_unified_repository.py --pre-publication",
+      "status": "PASS",
+      "registered_overlays": 29,
+      "registered_stable_ids": 861,
+      "exact_v2_operations": 962,
+      "reproducible_pdf_identities": 25
+    },
+    "independent_final_audit": {
+      "agent_row": "A000243",
+      "status": "HARD_PASS",
+      "semantic_package_positive_replays": 1,
+      "semantic_package_forbidden_path_rejections": 10,
+      "semantic_package_tamper_rejections": 4
+    }
+  },
+  "binary_provenance": {
+    "latest_errata_round": "stacks-errata-a04446e-r28",
+    "r28_release_receipt": {
+      "path": "validation/stacks-errata-a04446e-r28-release-2026-08-28.json",
+      "bytes": 30625,
+      "sha256": "80F1673D9F63977F3BCEC4B4D58F945EC9D6DCE610FE222195F7F7CFE822074D",
+      "git_blob": "14db424368ad0921ffd8909adee9286f80f5ebc3"
+    },
+    "r28_build_receipt": {
+      "path": "validation/stacks-errata-a04446e-r28-build-2026-08-28.json",
+      "bytes": 23732,
+      "sha256": "973ADE5AB7CBAC234C103A364A5FCBE73ED3E58CC9FDF89E9218BA435B2DC662",
+      "git_blob": "3150e2276e61b3d768dc36649aa554c83a4bc9f3"
+    },
+    "pdf_archive": {
+      "source_release_tag": "ai-integrated-stacks-r28-2026-08-28",
+      "source_name": "unofficial-ai-integrated-stacks-project-r28-pdfs.zip",
+      "bytes": 19871203,
+      "sha256": "591BB2CBF913164055E6D0539B11BA98768CB92D07314E57A0C55C0ADF5AE48A",
+      "entries": 25,
+      "uncompressed_bytes": 26612367,
+      "artifact_tuple_set_sha256": "78EFD6E4C704493B33353599FD2A8E9CF886B5E0C7C30FFF860D4DB3B717787F",
+      "anonymous_download": "PASS"
+    }
+  }
+}

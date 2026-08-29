@@ -307,6 +307,17 @@ host. All 12 anonymous downloads matched by filename, byte count, and SHA-256
 with zero mismatches. The source archive is 154,766,484 bytes and contains
 2,312 entries. R27 remains the preceding immutable historical release.
 
-The local, prepublication EGA semantic checkpoint covers EGA I through
-§6.4.13 and sets §6.5.1 as the next cursor. It changes no root TeX or PDF and
-has no public tag or DOI yet.
+## Current EGA I §6.4 semantic publication receipt
+
+The current public EGA semantic checkpoint covers EGA I through §6.4.13 and
+sets §6.5.1 as the next cursor. The
+[`ega-i-6.4-semantic-release-2026-08-29.json`](ega-i-6.4-semantic-release-2026-08-29.json)
+receipt binds content commit `00adeb291487d04070b75bd0fd87759e3c43d3d3`,
+annotated GitHub tag
+[`ega-i-6.4-semantic-2026-08-29`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.4-semantic-2026-08-29),
+exact-head workflow `33250683600`, and Zenodo version DOI
+[`10.5281/zenodo.22161051`](https://doi.org/10.5281/zenodo.22161051) under concept
+DOI `10.5281/zenodo.22135180`. Six assets totaling 174,783,585 bytes per host
+matched across 12 public downloads, and all three ZIP member replays passed.
+The checkpoint changes no root TeX or PDF; R28 remains the latest errata
+release.

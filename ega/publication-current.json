@@ -1,9 +1,9 @@
 {
   "schema": "ega-external-publication-receipt-v1",
-  "verified_at_utc": "2026-08-27T23:22:00Z",
+  "verified_at_utc": "2026-08-29T11:52:40Z",
   "verification": {
-    "zenodo": "anonymous REST inventory and public file readback",
-    "github": "anonymous REST release inventory and SHA-256 asset digests",
+    "zenodo": "anonymous REST inventory and six-file public readback",
+    "github": "authenticated release inventory plus anonymous tag and six-file public readback",
     "cross_host_result": "PASS"
   },
   "historical_omnibus": {
@@ -102,13 +102,37 @@
   },
   "integrated_stacks_project": {
     "github_repository": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project",
-    "github_main_at_audit": "2e7128e8a13328b851ed95b05fb7c94940c7bf54",
+    "github_main_at_semantic_release": "00adeb291487d04070b75bd0fd87759e3c43d3d3",
     "github_main_ci": "PASS",
-    "github_release": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r24-2026-08-28",
-    "release_source_commit": "9fb327dd32e18f612ece06e213299f869e9fb11d",
-    "zenodo_concept_doi": "10.5281/zenodo.22135180",
-    "zenodo_version_doi": "10.5281/zenodo.22135181",
-    "publication_receipt": "../validation/ai-integrated-stacks-r24-publication-2026-08-28.json",
-    "state": "R24 source, PDF, and validation assets public and cross-host byte-verified"
+    "latest_errata_release": {
+      "round": "R28",
+      "github_release": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r28-2026-08-28",
+      "release_source_commit": "efa46473cf8a73646ef1b6e32354e63ce20fd172",
+      "release_source_tree": "fe139f1aedc35f02dbd10e5471ecb3c7fbed62e1",
+      "zenodo_concept_doi": "10.5281/zenodo.22135180",
+      "zenodo_version_doi": "10.5281/zenodo.22150671",
+      "publication_receipt": "../validation/stacks-errata-a04446e-r28-release-2026-08-28.json",
+      "files": 6,
+      "bytes_per_host": 174673433,
+      "state": "R28 source, PDF, and validation assets public and cross-host byte-verified"
+    },
+    "latest_ega_semantic_checkpoint": {
+      "scope": "EGA I §6.4.1–§6.4.13",
+      "continuation": "EGA I §6.5.1",
+      "content_commit": "00adeb291487d04070b75bd0fd87759e3c43d3d3",
+      "content_tree": "f6f736a132ed4734bea932e28401bb32ccdcf535",
+      "github_tag": "ega-i-6.4-semantic-2026-08-29",
+      "github_tag_object": "da6b06b71cc4da1be775af5c1f88999620008d2f",
+      "github_release": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.4-semantic-2026-08-29",
+      "github_workflow_run": 33250683600,
+      "zenodo_concept_doi": "10.5281/zenodo.22135180",
+      "zenodo_version_doi": "10.5281/zenodo.22161051",
+      "version": "EGA-I-6.4-semantic-2026-08-29",
+      "publication_receipt": "../validation/ega-i-6.4-semantic-release-2026-08-29.json",
+      "files": 6,
+      "bytes_per_host": 174783585,
+      "root_tex_pdf_changed": false,
+      "state": "EGA I §6.4 semantic evidence public and cross-host byte-verified; R28 binaries reused unchanged"
+    }
   }
 }

@@ -22,9 +22,12 @@ machine-readable validation evidence.
 [Current R28 fixed-point build: PASS](validation/stacks-errata-a04446e-r28-build-2026-08-28.json) ·
 [Current R28 visual QA: PASS](validation/stacks-errata-a04446e-r28-visual-qa-2026-08-28.json) ·
 [Current R28 reproducibility: PASS](validation/stacks-errata-a04446e-r28-reproducibility-2026-08-28.json) ·
-[Latest published release receipt: R28 PASS](validation/stacks-errata-a04446e-r28-release-2026-08-28.json) ·
-[Latest published preservation release: R28](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r28-2026-08-28) ·
-[Latest published Zenodo version: R28](https://doi.org/10.5281/zenodo.22150671) ·
+[Latest errata release receipt: R28 PASS](validation/stacks-errata-a04446e-r28-release-2026-08-28.json) ·
+[Latest errata preservation release: R28](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r28-2026-08-28) ·
+[Latest errata Zenodo version: R28](https://doi.org/10.5281/zenodo.22150671) ·
+[Latest EGA semantic checkpoint receipt: PASS](validation/ega-i-6.4-semantic-release-2026-08-29.json) ·
+[Latest EGA semantic GitHub release: I §6.4](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.4-semantic-2026-08-29) ·
+[Latest EGA semantic Zenodo version: I §6.4](https://doi.org/10.5281/zenodo.22161051) ·
 [Historical R24 publication receipt: PASS](validation/ai-integrated-stacks-r24-publication-2026-08-28.json) ·
 [Historical R22/R23 publication receipt: PASS](validation/stacks-errata-a04446e-r22-r23-release-2026-08-27.json) ·
 [Historical Verdier publication receipt: PASS](validation/stacks-verdier-a04446e-1-2-13-r1-release-2026-08-26.json) ·
@@ -153,9 +156,14 @@ tree `110a3006fcbb27b94c4170639aab56db507f9a89`; its manifest-bound
 composition is commit `5a42b7d2a04c4d08be7861ec91306d8be05d631e`, tree
 `ecbad57ee36b4fb290c80cb4d1f83eab50a47460`. R26 remains preserved as the
 preceding immutable historical version in the same GitHub and Zenodo lineages.
-The local, prepublication EGA semantic checkpoint now covers EGA I through
-§6.4.13 and advances the next cursor to §6.5.1. This checkpoint changes no root
-TeX or PDF and has no public tag or DOI yet.
+The current public EGA semantic checkpoint covers EGA I through §6.4.13 and
+advances the next cursor to §6.5.1. It is preserved at GitHub tag
+[`ega-i-6.4-semantic-2026-08-29`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.4-semantic-2026-08-29),
+content commit `00adeb291487d04070b75bd0fd87759e3c43d3d3`, and Zenodo version
+DOI [`10.5281/zenodo.22161051`](https://doi.org/10.5281/zenodo.22161051) in the
+existing concept lineage. Its six assets total 174,783,585 bytes per host and
+passed 12-file cross-host readback. This semantic-only checkpoint changes no
+root TeX or PDF; R28 remains the latest errata release.
 
 The preceding R22/R23 content release remains public at
 `3c2b49fe0d20519de4ab06951ac2cb5151b68782`, tree

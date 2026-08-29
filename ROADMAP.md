@@ -99,9 +99,14 @@ The rejected R26 producer `SMOOTHING-010` and R23 producer
 
 The next semantic cursor is **EGA I §6.5.1**. EGA I §6.4 is complete through
 §6.4.13: all 20 mathematical units are source-bound and routed, with no
-duplicate root addition and no root TeX or PDF change. This checkpoint remains
-local and prepublication, with no public tag or DOI yet. The next checkpoints
-remain deliberately small enough to review, validate, and publish independently:
+duplicate root addition and no root TeX or PDF change. The checkpoint is public
+at GitHub tag
+[`ega-i-6.4-semantic-2026-08-29`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.4-semantic-2026-08-29)
+and Zenodo version DOI [`10.5281/zenodo.22161051`](https://doi.org/10.5281/zenodo.22161051),
+with the exact transaction in the
+[semantic release receipt](validation/ega-i-6.4-semantic-release-2026-08-29.json).
+The next checkpoints remain deliberately small enough to review, validate, and
+publish independently:
 
 1. **EGA I §§6.5–6.6** — continue in source order and close EGA I §6.
 2. **EGA I §§7–10** — advance in source order through separately sealed

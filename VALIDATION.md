@@ -114,10 +114,17 @@ receipt also binds archive-member replay and the 25-PDF, 2,492-page,
 for their exact immutable versions; this historical R27 release is not evidence
 that the active EGA I--IV integration program is complete.
 
-The current local, prepublication EGA semantic checkpoint covers EGA I through
-§6.4.13 and advances the next cursor to §6.5.1. Its source mapping and residual
-evidence introduce no root TeX or PDF change, and no public tag or DOI is claimed
-for this checkpoint yet.
+The current public EGA semantic checkpoint covers EGA I through §6.4.13 and
+advances the next cursor to §6.5.1. The
+[semantic release receipt](validation/ega-i-6.4-semantic-release-2026-08-29.json)
+binds content commit `00adeb291487d04070b75bd0fd87759e3c43d3d3`, annotated GitHub tag
+[`ega-i-6.4-semantic-2026-08-29`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.4-semantic-2026-08-29),
+successful exact-head workflow `33250683600`, and Zenodo version DOI
+[`10.5281/zenodo.22161051`](https://doi.org/10.5281/zenodo.22161051) under the
+existing concept DOI. All six assets and 174,783,585 bytes per host matched in
+12 public downloads; archive-member replay passed. The source mapping and
+residual evidence introduce no root TeX or PDF change, so R28 remains the latest
+errata release.
 
 The [historical R22/R23 publication receipt](validation/stacks-errata-a04446e-r22-r23-release-2026-08-27.json)
 binds the preceding public R22/R23 content head

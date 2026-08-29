@@ -1,0 +1,213 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-ega-semantic-release-receipt/v1",
+  "status": "PASS",
+  "created_utc": "2026-08-29T11:52:40Z",
+  "updated_utc": "2026-08-29T11:52:40Z",
+  "scope": {
+    "closed": "EGA I §6.4.1–§6.4.13",
+    "continuation": "EGA I §6.5.1",
+    "semantic_units": 20,
+    "mapping_edges": 56,
+    "decisions": 13,
+    "residuals": 22,
+    "distinct_stacks_targets": 36,
+    "root_tex_pdf_changed": false,
+    "new_errata_round": false
+  },
+  "source": {
+    "repository": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project",
+    "base_commit": "4cf4242c1daf5cc49e092a0d347246fc501bb257",
+    "base_tree": "d5464f63f28477975749115050fe4750f49d56b3",
+    "content_commit": "00adeb291487d04070b75bd0fd87759e3c43d3d3",
+    "content_tree": "f6f736a132ed4734bea932e28401bb32ccdcf535",
+    "changed_path_count": 15,
+    "checkpoint_receipt": {
+      "path": "validation/ega-i-6.4-semantic-checkpoint-2026-08-29.json",
+      "bytes": 7580,
+      "sha256": "4C8E7116DFBD16CEEDD72371CB144C10DCD09B9E4A9A75AB3EC32F951FD4ABD1"
+    },
+    "package_receipt": {
+      "path": "validation/ega-i-6.4-semantic-package-2026-08-29.json",
+      "bytes": 21620,
+      "sha256": "650C1A7672DC3312F4CB8FD5573D0D5305F52F44F5A6D86C51484A09F9883A55"
+    },
+    "r28_release_receipt_at_content_commit": {
+      "path": "validation/stacks-errata-a04446e-r28-release-2026-08-28.json",
+      "bytes": 31353,
+      "sha256": "D1F644CAB8B54B12F051FA4702522B38167A151560BCA973955BA805F2865DE3",
+      "git_blob": "14db424368ad0921ffd8909adee9286f80f5ebc3"
+    }
+  },
+  "github": {
+    "tag": "ega-i-6.4-semantic-2026-08-29",
+    "tag_object": "da6b06b71cc4da1be775af5c1f88999620008d2f",
+    "peeled_target": "00adeb291487d04070b75bd0fd87759e3c43d3d3",
+    "release_id": 378967018,
+    "release_node_id": "RE_kwDOT2rpnc4WlpPq",
+    "release_url": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.4-semantic-2026-08-29",
+    "release_name": "EGA I §6.4 semantic checkpoint — R28 binaries unchanged",
+    "created_at_utc": "2026-08-29T11:41:58Z",
+    "published_at_utc": "2026-08-29T11:42:40Z",
+    "draft": false,
+    "prerelease": false,
+    "workflow": {
+      "run_id": 33250683600,
+      "head_sha": "00adeb291487d04070b75bd0fd87759e3c43d3d3",
+      "name": "Unified repository validation",
+      "event": "push",
+      "conclusion": "success",
+      "url": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/actions/runs/33250683600"
+    }
+  },
+  "zenodo": {
+    "record_id": 22161051,
+    "version_doi": "10.5281/zenodo.22161051",
+    "concept_doi": "10.5281/zenodo.22135180",
+    "record_url": "https://zenodo.org/records/22161051",
+    "version": "EGA-I-6.4-semantic-2026-08-29",
+    "title": "Unofficial AI-Integrated Stacks Project — EGA I §6.4 semantic checkpoint",
+    "access_right": "open",
+    "created_at": "2026-08-29T13:45:15.386533+02:00",
+    "published_at": "2026-08-29T13:45:15.70415+02:00",
+    "concept_lineage_reused": true,
+    "duplicate_concept_created": false
+  },
+  "assets": [
+    {
+      "name": "README.md",
+      "bytes": 3063,
+      "sha256": "682BBFB111FE3B8EC4202722BEFF56C738F07ADD5AFBC026E66370233B5F3816",
+      "github_asset_id": 535149756,
+      "zenodo_md5": "EC9C7B6ABD8094D526177901DC765940"
+    },
+    {
+      "name": "RELEASE.json",
+      "bytes": 22578,
+      "sha256": "6886CE8DD8276EE7205860737CA2CF1DE63B088D06C3B6D96768C9B2B6B4AD2E",
+      "github_asset_id": 535149758,
+      "zenodo_md5": "D41E6C642E8EB958E66D0CBA80DA3543"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 574,
+      "sha256": "3FFB843DFC2A79A2067308636A1DA2223C3D04848C44A95634610782A199D0E6",
+      "github_asset_id": 535149760,
+      "zenodo_md5": "E6D53F35991F1B8B616F9B97FDD31AE7"
+    },
+    {
+      "name": "unofficial-ai-integrated-stacks-project-ega-i-6.4-semantic-pdfs.zip",
+      "bytes": 19871203,
+      "sha256": "591BB2CBF913164055E6D0539B11BA98768CB92D07314E57A0C55C0ADF5AE48A",
+      "github_asset_id": 535149759,
+      "zenodo_md5": "B79BA59485F478D706379A44F05E8598"
+    },
+    {
+      "name": "unofficial-ai-integrated-stacks-project-ega-i-6.4-semantic-source-00adeb29.zip",
+      "bytes": 154862303,
+      "sha256": "AE2FC399290217A5029787FD4D730415D9B1245B479ED11DAF21948D71E4D98F",
+      "github_asset_id": 535149757,
+      "zenodo_md5": "89F4D525BF4DD81515326C4945A06488"
+    },
+    {
+      "name": "unofficial-ai-integrated-stacks-project-ega-i-6.4-semantic-validation.zip",
+      "bytes": 23864,
+      "sha256": "DFE2E248A31D348CDB96DE23D46218FE75300F166EECF8CC4A91F1E61E400176",
+      "github_asset_id": 535149771,
+      "zenodo_md5": "B39390623BF885B28CE8EF8105269817"
+    }
+  ],
+  "public_readback": {
+    "github": {
+      "inventory": "authenticated release inventory with server-side SHA-256 digests",
+      "public_access": "anonymous tag ls-remote, release-page access, and six direct asset downloads",
+      "downloads": 6,
+      "bytes": 174783585,
+      "mismatches": 0,
+      "result": "PASS"
+    },
+    "zenodo": {
+      "inventory": "anonymous REST record inventory",
+      "public_access": "open record and six anonymous file downloads",
+      "downloads": 6,
+      "bytes": 174783585,
+      "mismatches": 0,
+      "result": "PASS"
+    },
+    "cross_host": {
+      "downloads": 12,
+      "bytes_per_host": 174783585,
+      "same_filename_byte_sha256_inventory": true,
+      "mismatches": 0,
+      "result": "PASS"
+    }
+  },
+  "archive_replay": {
+    "local_github_zenodo": "PASS",
+    "crc": "PASS",
+    "safe_paths": "PASS",
+    "member_bytes": "PASS",
+    "pdfs": {
+      "members": 25,
+      "uncompressed_bytes": 26612367,
+      "package_member_tuple_set_sha256": "BB078FB54CC6C9AA7988D86510592F4F354D9EA4930EE985EA8E6033200AD17F",
+      "cross_copy_replay_tuple_sha256": "A1263EB9EA637955DA37FC67F2FE8631B1BF1CFC678183B2CFC6D3BA855A801E"
+    },
+    "source": {
+      "entries": 2313,
+      "package_member_tuple_set_sha256": "34753437742D035FDE6BB3235510AC5B67BEC48763638486DC9C1C98420C0C7E",
+      "cross_copy_replay_tuple_sha256": "A68CA47C93832492539135F5505EB9404DF1567ECEA7C77D6880F5AEE4F73B51"
+    },
+    "validation": {
+      "members": 7,
+      "package_member_tuple_set_sha256": "7753D6EE00555F5F90857DFD697AB03C952C71C79B6BFA9E06789819CE014D3D",
+      "cross_copy_replay_tuple_sha256": "D64934F634FA05FB8522C440F9B24B8E40CD8B8BF60E450243702AF539DE9357"
+    }
+  },
+  "invariance": {
+    "root_tex_changed": false,
+    "root_pdf_changed": false,
+    "build_critical_paths_checked": 33,
+    "build_critical_blob_equivalence": "PASS",
+    "registry_changed": false,
+    "leases_changed": false,
+    "composition_current_changed": false,
+    "registry_blob_at_content_commit": "2dd5b2c8e8805efbbc5ad5ff68ad705139ef197b",
+    "leases_blob_at_content_commit": "9583355d7aa80943cf849ce9ab8ce9cc847a0b6c",
+    "composition_current_blob_at_content_commit": "27e32711ff1329b159f91dd8bac6c5319ecc3251",
+    "r28_pdf_archive_reused_byte_identically": true
+  },
+  "lineage_context": {
+    "latest_errata_release": {
+      "round": "R28",
+      "tag": "ai-integrated-stacks-r28-2026-08-28",
+      "content_commit": "efa46473cf8a73646ef1b6e32354e63ce20fd172",
+      "zenodo_version_doi": "10.5281/zenodo.22150671",
+      "current_repository_receipt": {
+        "bytes": 31353,
+        "sha256": "D1F644CAB8B54B12F051FA4702522B38167A151560BCA973955BA805F2865DE3",
+        "git_blob": "14db424368ad0921ffd8909adee9286f80f5ebc3"
+      },
+      "published_checkpoint_receipt_stale_identity_correction": {
+        "recorded_bytes": 30625,
+        "recorded_sha256": "80F1673D9F63977F3BCEC4B4D58F945EC9D6DCE610FE222195F7F7CFE822074D",
+        "recorded_git_blob": "14db424368ad0921ffd8909adee9286f80f5ebc3",
+        "disposition": "The published semantic checkpoint receipt carries the pre-normalization byte/hash tuple beside the post-normalization Git blob. The package receipt proves the intervening metadata-only normalization and zero build-relevant change; this release receipt records the corrected current tuple without altering the immutable released asset."
+      }
+    },
+    "r27_addendum": {
+      "immutable_release_commit": "e624abadfe9e2ac1f311485c44c82d6c53df2df2",
+      "receipt_blob": "580d31984cc90b5f9f68b4c92b14b41cea410538",
+      "later_linear_main": "f8e6c227aa3dc89256427f3b64a2ad330d5ff221",
+      "later_exact_head_workflow": 33199848924,
+      "later_exact_head_workflow_result": "PASS",
+      "later_main_is_ancestor_of_semantic_content_commit": true,
+      "r27_bytes_or_release_identity_changed": false
+    }
+  },
+  "terminal": {
+    "publication_and_cross_host_readback": "PASS",
+    "semantic_checkpoint_complete": true,
+    "ega_program_complete": false,
+    "next_action": "Begin bounded direct-source mapping at EGA I §6.5.1."
+  }
+}

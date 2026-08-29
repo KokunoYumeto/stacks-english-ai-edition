@@ -933,10 +933,43 @@ interface_raw = (ROOT / "interface.json").read_bytes()
 interface = json.loads(interface_raw.decode("utf-8"))
 publication_raw = (ROOT / "publication-current.json").read_bytes()
 publication = json.loads(publication_raw.decode("utf-8"))
-if (len(interface_raw) != 17986 or
+semantic_checkpoint_raw = (
+    ROOT.parent / "validation" /
+    "ega-i-6.4-semantic-checkpoint-2026-08-29.json").read_bytes()
+semantic_package_raw = (
+    ROOT.parent / "validation" /
+    "ega-i-6.4-semantic-package-2026-08-29.json").read_bytes()
+semantic_release_raw = (
+    ROOT.parent / "validation" /
+    "ega-i-6.4-semantic-release-2026-08-29.json").read_bytes()
+semantic_release = json.loads(semantic_release_raw.decode("utf-8"))
+if (len(interface_raw) != 19234 or
         hashlib.sha256(interface_raw).hexdigest().upper() !=
-        "DFA4A7E9848A52E76E5CE9C801E886A255B6F9D6F939B3054C60D419071341B9"):
+        "4D1D65D09A633DA28F22E0FD0148F566529CF73F094E21036D56143F1B162DA6"):
     ERRORS.append("final edition interface identity mismatch")
+if (len(publication_raw) != 6217 or
+        hashlib.sha256(publication_raw).hexdigest().upper() !=
+        "F04F64AFE640C799454909CF255EF16D27A37717D608DC9A747A45F25E8C55C8"):
+    ERRORS.append("final external publication receipt identity mismatch")
+if (len(semantic_checkpoint_raw) != 7580 or
+        hashlib.sha256(semantic_checkpoint_raw).hexdigest().upper() !=
+        "4C8E7116DFBD16CEEDD72371CB144C10DCD09B9E4A9A75AB3EC32F951FD4ABD1"):
+    ERRORS.append("EGA I 6.4 semantic checkpoint receipt identity mismatch")
+if (len(semantic_package_raw) != 21620 or
+        hashlib.sha256(semantic_package_raw).hexdigest().upper() !=
+        "650C1A7672DC3312F4CB8FD5573D0D5305F52F44F5A6D86C51484A09F9883A55"):
+    ERRORS.append("EGA I 6.4 semantic package receipt identity mismatch")
+if (len(semantic_release_raw) != 8828 or
+        hashlib.sha256(semantic_release_raw).hexdigest().upper() !=
+        "7834987C90D485BC9F988FDF2B5703B5C2D9355206F14268AE178001C27F902B"):
+    ERRORS.append("EGA I 6.4 semantic release receipt identity mismatch")
+if (semantic_release.get("schema") !=
+        "unofficial-ai-integrated-stacks-ega-semantic-release-receipt/v1" or
+        semantic_release.get("status") != "PASS" or
+        semantic_release.get("terminal", {}).get("ega_program_complete") is not False or
+        semantic_release.get("terminal", {}).get("next_action") !=
+        "Begin bounded direct-source mapping at EGA I §6.5.1."):
+    ERRORS.append("EGA I 6.4 semantic release terminal contract changed")
 if interface.get("status") != "active" or interface.get("ownership", {}).get("cross_tree_writes") is not False:
     ERRORS.append("edition interface is not active/read-only")
 if interface.get("english_discovery", {}).get("manifest_sha256") != scope["inputs"]["english_discovery"]["manifest_sha256"]:
@@ -1169,25 +1202,113 @@ for language, expected in expected_publications.items():
             "concept_doi", "latest_doi", "version", "github_release")) != expected:
         ERRORS.append(f"current {language} publication binding changed")
 integrated_publication = current_publications.get("integrated_stacks", {})
-if (integrated_publication.get("composition_main_at_audit") !=
-        "2e7128e8a13328b851ed95b05fb7c94940c7bf54" or
-        integrated_publication.get("release_source_commit") !=
-        "9fb327dd32e18f612ece06e213299f869e9fb11d" or
-        integrated_publication.get("github_release") !=
-        "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/"
-        "releases/tag/ai-integrated-stacks-r24-2026-08-28" or
-        integrated_publication.get("zenodo_concept_doi") !=
-        "10.5281/zenodo.22135180" or
-        integrated_publication.get("zenodo_version_doi") !=
-        "10.5281/zenodo.22135181" or
-        integrated_publication.get("state") !=
-        "R24 source, PDF, and validation assets public and cross-host "
-        "byte-verified"):
+expected_integrated_publication = {
+    "repository": (
+        "https://github.com/KokunoYumeto/"
+        "unofficial-ai-integrated-stacks-project"),
+    "main_at_semantic_release":
+        "00adeb291487d04070b75bd0fd87759e3c43d3d3",
+    "latest_errata_release": {
+        "round": "R28",
+        "release_source_commit":
+            "efa46473cf8a73646ef1b6e32354e63ce20fd172",
+        "release_source_tree":
+            "fe139f1aedc35f02dbd10e5471ecb3c7fbed62e1",
+        "github_release": (
+            "https://github.com/KokunoYumeto/"
+            "unofficial-ai-integrated-stacks-project/releases/tag/"
+            "ai-integrated-stacks-r28-2026-08-28"),
+        "zenodo_concept_doi": "10.5281/zenodo.22135180",
+        "zenodo_version_doi": "10.5281/zenodo.22150671",
+        "publication_receipt": (
+            "../validation/"
+            "stacks-errata-a04446e-r28-release-2026-08-28.json"),
+    },
+    "latest_ega_semantic_checkpoint": {
+        "scope": "EGA I §6.4.1–§6.4.13",
+        "continuation": "EGA I §6.5.1",
+        "content_commit": "00adeb291487d04070b75bd0fd87759e3c43d3d3",
+        "content_tree": "f6f736a132ed4734bea932e28401bb32ccdcf535",
+        "github_tag": "ega-i-6.4-semantic-2026-08-29",
+        "github_tag_object": "da6b06b71cc4da1be775af5c1f88999620008d2f",
+        "github_release": (
+            "https://github.com/KokunoYumeto/"
+            "unofficial-ai-integrated-stacks-project/releases/tag/"
+            "ega-i-6.4-semantic-2026-08-29"),
+        "github_workflow_run": 33250683600,
+        "zenodo_concept_doi": "10.5281/zenodo.22135180",
+        "zenodo_version_doi": "10.5281/zenodo.22161051",
+        "files": 6,
+        "bytes_per_host": 174783585,
+        "root_tex_pdf_changed": False,
+        "publication_receipt": (
+            "../validation/ega-i-6.4-semantic-release-2026-08-29.json"),
+    },
+    "state": (
+        "R28 remains the latest errata release; EGA I §6.4 is the latest "
+        "public semantic checkpoint"),
+}
+if integrated_publication != expected_integrated_publication:
     ERRORS.append("integrated Stacks publication state changed")
 if publication.get("schema") != "ega-external-publication-receipt-v1":
     ERRORS.append("current publication receipt schema changed")
 if publication.get("verification", {}).get("cross_host_result") != "PASS":
     ERRORS.append("current publication cross-host verification is not PASS")
+expected_integrated_receipt = {
+    "github_repository": (
+        "https://github.com/KokunoYumeto/"
+        "unofficial-ai-integrated-stacks-project"),
+    "github_main_at_semantic_release":
+        "00adeb291487d04070b75bd0fd87759e3c43d3d3",
+    "github_main_ci": "PASS",
+    "latest_errata_release": {
+        "round": "R28",
+        "github_release": (
+            "https://github.com/KokunoYumeto/"
+            "unofficial-ai-integrated-stacks-project/releases/tag/"
+            "ai-integrated-stacks-r28-2026-08-28"),
+        "release_source_commit":
+            "efa46473cf8a73646ef1b6e32354e63ce20fd172",
+        "release_source_tree":
+            "fe139f1aedc35f02dbd10e5471ecb3c7fbed62e1",
+        "zenodo_concept_doi": "10.5281/zenodo.22135180",
+        "zenodo_version_doi": "10.5281/zenodo.22150671",
+        "publication_receipt": (
+            "../validation/"
+            "stacks-errata-a04446e-r28-release-2026-08-28.json"),
+        "files": 6,
+        "bytes_per_host": 174673433,
+        "state": (
+            "R28 source, PDF, and validation assets public and cross-host "
+            "byte-verified"),
+    },
+    "latest_ega_semantic_checkpoint": {
+        "scope": "EGA I §6.4.1–§6.4.13",
+        "continuation": "EGA I §6.5.1",
+        "content_commit": "00adeb291487d04070b75bd0fd87759e3c43d3d3",
+        "content_tree": "f6f736a132ed4734bea932e28401bb32ccdcf535",
+        "github_tag": "ega-i-6.4-semantic-2026-08-29",
+        "github_tag_object": "da6b06b71cc4da1be775af5c1f88999620008d2f",
+        "github_release": (
+            "https://github.com/KokunoYumeto/"
+            "unofficial-ai-integrated-stacks-project/releases/tag/"
+            "ega-i-6.4-semantic-2026-08-29"),
+        "github_workflow_run": 33250683600,
+        "zenodo_concept_doi": "10.5281/zenodo.22135180",
+        "zenodo_version_doi": "10.5281/zenodo.22161051",
+        "version": "EGA-I-6.4-semantic-2026-08-29",
+        "publication_receipt": (
+            "../validation/ega-i-6.4-semantic-release-2026-08-29.json"),
+        "files": 6,
+        "bytes_per_host": 174783585,
+        "root_tex_pdf_changed": False,
+        "state": (
+            "EGA I §6.4 semantic evidence public and cross-host "
+            "byte-verified; R28 binaries reused unchanged"),
+    },
+}
+if publication.get("integrated_stacks_project") != expected_integrated_receipt:
+    ERRORS.append("external integrated Stacks publication receipt changed")
 receipt_publications = publication.get("current_language_publications", {})
 expected_receipt_totals = {
     "french": ("10.5281/zenodo.22134750", 5, 19193644),
@@ -5898,6 +6019,11 @@ if agent_path.exists():
             "EGA I 6.4 final read-only precommit audit of exact changed paths checker unified validator root TeX PDF registry lease composition documentation and semantic packaging fail-close",
             "accepted as final independent read-only precommit audit without repository source authority publication staging remote or filesystem writes",
             "none"),
+        "A000244": (
+            "/root/ega64_publication_preflight",
+            "EGA I 6.4 public release exact-head asset R28 lineage and metadata-seal preflight",
+            "accepted as final bounded read-only publication preflight without repository source authority release mutation or filesystem writes",
+            "none"),
     }
     for run_id, expected in i64_audit_contracts.items():
         row = next(
@@ -5907,9 +6033,9 @@ if agent_path.exists():
             "task_id", "scope", "disposition", "writes")) if row else None
         if actual != expected or not row or row.get("status") != "completed":
             ERRORS.append(f"missing exact EGA I 6.4 agent audit {run_id}")
-    if (len(agent_raw) != 126914 or
+    if (len(agent_raw) != 127573 or
             hashlib.sha256(agent_raw).hexdigest().upper() !=
-            "7BF1824C4098B9FFA22CAF5343575FE43C3306AA2E45E670BFF767C6B55B7115"):
+            "30CAA6FF936F794B23A566808A66BA1593642E112BC29A7795925C81A149330C"):
         ERRORS.append("final agent manifest identity mismatch")
     task_scopes = [(row["task_id"], row["scope"]) for row in agent_rows]
     if len(task_scopes) != len(set(task_scopes)):

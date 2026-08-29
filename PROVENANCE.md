@@ -198,9 +198,16 @@ downloads with zero mismatches. The 154,505,160-byte deterministic source
 archive contains 2,245 entries and binds its exact Git preimage. R26 remains
 publicly preserved as the preceding immutable historical version.
 
-The current local, prepublication EGA semantic checkpoint extends the
-source-bound review through EGA I §6.4.13 and sets §6.5.1 as the next cursor.
-It changes no root TeX or PDF and has no public tag or DOI yet.
+The current public EGA semantic checkpoint extends the source-bound review
+through EGA I §6.4.13 and sets §6.5.1 as the next cursor. It is bound to content
+commit `00adeb291487d04070b75bd0fd87759e3c43d3d3` by annotated GitHub tag
+[`ega-i-6.4-semantic-2026-08-29`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.4-semantic-2026-08-29)
+and Zenodo version DOI [`10.5281/zenodo.22161051`](https://doi.org/10.5281/zenodo.22161051)
+under the existing concept DOI `10.5281/zenodo.22135180`. The six-asset package
+is byte-identical across GitHub and Zenodo, totals 174,783,585 bytes per host,
+and is recorded by the
+[semantic release receipt](validation/ega-i-6.4-semantic-release-2026-08-29.json).
+It changes no root TeX or PDF, and R28 remains the latest errata release.
 
 ## Branch preservation
 
