@@ -1,0 +1,346 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-ega-semantic-checkpoint/v1",
+  "status": "PASS",
+  "created_utc": "2026-08-29T21:22:51Z",
+  "resealed_utc": "2026-08-30T01:48:23.988423+00:00",
+  "repository": "KokunoYumeto/unofficial-ai-integrated-stacks-project",
+  "branch": "codex/ega-i-6-5-2-6-5-4-r32-20260830",
+  "worktree": "worktrees/unofficial-ai-stacks-ega-652-654-r32-20260830",
+  "base_commit": "bb2da26d7f66e5abf52a1788c8b1f3257f037057",
+  "base_tree": "72b9963323aafec7df3fb81b3ab0e283744cd6c5",
+  "content_commit": "74e53239649047974a7b9b8907eba2eb966ae184",
+  "content_tree": "72bb2d1edb249316aedb067a73ca65a55e1b6bd7",
+  "scope": {
+    "closed": "EGA I §6.5.2",
+    "continuation": "EGA I §6.5.3",
+    "semantic_only": true,
+    "new_errata_round": false,
+    "root_tex_changed": false,
+    "root_pdf_changed": false,
+    "visual_qa_changed": false,
+    "registry_changed": false,
+    "publication_performed": false
+  },
+  "authority": {
+    "official_stacks_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "french": {
+      "repository": "https://github.com/KokunoYumeto/ega-fr",
+      "commit": "6b38875842e3723b619d4aeeda9ed260a4f94f7c",
+      "receipt": "F37ZW.json",
+      "receipt_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+      "path": "ega1/ega1-6-fr.tex",
+      "full_bytes": 57781,
+      "full_sha256": "F95D2C43C1074A1CC6485D74E24F02BF8C5F098ADB571AA024B4B499F5CDE3FE",
+      "lf_lines": "866-872",
+      "slice_bytes": 262,
+      "slice_sha256": "57F2283518535657A691085C5F0233BD529D4BB6436F66C1F1C759021909A0D2",
+      "statement_lf_lines": "866-870",
+      "statement_bytes": 212,
+      "statement_sha256": "E2A1934E7E529F7BBB866D4DDBF6A378CF92795A91BEA76E04E1CCF74E7010B0",
+      "proof_lf_lines": "872-872",
+      "proof_bytes": 49,
+      "proof_sha256": "DF843CA7783336EF4867F86C9672434990419DFFB7A96BCEA56B4BC04AEC2543"
+    },
+    "english": {
+      "repository": "https://github.com/KokunoYumeto/ega-en",
+      "commit": "94d5c73ac9263b26043ad0551646b824b1030c9b",
+      "path": "ega1/ega1-6-en.tex",
+      "full_bytes": 55021,
+      "full_sha256": "990DF9E209D804AAC103CE3B23C5F5F2307CD57B87C3A6F4F6E699AA9227C9FD",
+      "lf_lines": "635-642",
+      "slice_bytes": 277,
+      "slice_sha256": "AD40C3A01AADB8C3EC4D6CC20B450A1D1687FE857DA1A4846A69952ECC479F66",
+      "statement_lf_lines": "635-638",
+      "statement_bytes": 206,
+      "statement_sha256": "80AAF2551DF231A31EBEAD7967205354EB05A8A8739BA9C85FEFE294CA790E07",
+      "proof_lf_lines": "640-642",
+      "proof_bytes": 70,
+      "proof_sha256": "EDFD8CC7652F7E2F407FDEE8F2910F81962E03CCED8CAFEC58B7714BAB118B4F"
+    },
+    "topology_receipt": {
+      "path": "validation/ega-i-6.5-source-topology-2026-08-29.json",
+      "bytes": 9126,
+      "sha256": "676DBF139A54082E60138E3A15F3D784038629440A1C43B381B1701507BF6847",
+      "git_blob": "c9400b024bc1cdb73fbb4341dfe8b90e6e0f3692"
+    }
+  },
+  "registered_source_units": [
+    {
+      "unit_id": "ega:I.6.5.2",
+      "kind": "corollary",
+      "parent_id": "ega:subsection:I.6.5",
+      "lf_lines": "866-870",
+      "bytes": 212,
+      "sha256": "E2A1934E7E529F7BBB866D4DDBF6A378CF92795A91BEA76E04E1CCF74E7010B0"
+    },
+    {
+      "unit_id": "ega:I.6.5.2:proof",
+      "kind": "proof",
+      "parent_id": "ega:I.6.5.2",
+      "lf_lines": "872-872",
+      "bytes": 49,
+      "sha256": "DF843CA7783336EF4867F86C9672434990419DFFB7A96BCEA56B4BC04AEC2543"
+    }
+  ],
+  "semantic_fixed_point": {
+    "decision": "D000322",
+    "statement_edges": "S001206-S001211",
+    "statement_edge_count": 6,
+    "residuals": "R000794-R000797",
+    "residual_count": 4,
+    "agent_audit": "A000250",
+    "issues": [],
+    "visual_qa": [],
+    "quantifier_guard": "The finite-type realization is existential after shrinking inside the 0BX6 realization neighbourhood to an affine neighbourhood of x; it is not asserted for every realization neighbourhood.",
+    "finite_type_route": [
+      "0BX6",
+      "01T6",
+      "01T8",
+      "01P0",
+      "01T1"
+    ],
+    "literal_6_3_6_dependency_route": {
+      "decision": "D000301",
+      "statement_edges": "S001114-S001120",
+      "residual": "R000755",
+      "tags": [
+        "01KT",
+        "01T4",
+        "01T5",
+        "01P0",
+        "01OX",
+        "01T3"
+      ]
+    },
+    "stronger_6_3_9_cross_route": {
+      "decision": "D000304",
+      "statement_edges": "S001127-S001130",
+      "residual": "R000757"
+    },
+    "root_source_disposition": "Existing Stacks results cover the corollary after the preserved existential affine shrink and cover its literal 6.3.6 citation through the already mapped graph-factorization route; no duplicate root TeX, PDF, or visual artifact is warranted."
+  },
+  "changed_paths": [
+    {
+      "path": "ega/agent.csv",
+      "bytes": 130861,
+      "sha256": "3EF37AA369A1B5AE91B5E21031D9F3B24B905B62C4EB8E8A7BE47C8D8C0D85CD",
+      "git_blob": "fb42a0fea07324905cb2c064111aa42e02ceec07"
+    },
+    {
+      "path": "ega/check.py",
+      "bytes": 347087,
+      "sha256": "840F23A0F2FC496C9079F84CDECB61277EA3A9EC669830B63E4955B2D5C797A5",
+      "git_blob": "edd65053186492d2398412e5d845957173e48bcb"
+    },
+    {
+      "path": "ega/dec.csv",
+      "bytes": 85148,
+      "sha256": "6687EB8454114CE4364405F399E5C14B7BFAF503D0E0635F7369BC815E641A84",
+      "git_blob": "f4fa3514ba44540dd00a27f920a05ef448bbc47c"
+    },
+    {
+      "path": "ega/resid.csv",
+      "bytes": 228978,
+      "sha256": "039A636071FF13B5D0EB2CB7090B936805463CE6254097F2CF23A262141EA7AD",
+      "git_blob": "7843f4c17ec1a48dadf9687b244da70c7ab17130"
+    },
+    {
+      "path": "ega/scope.json",
+      "bytes": 19054,
+      "sha256": "FBAE252298524ED4685077AF209E7130D93D313A04D51B151B080F25A43A7055",
+      "git_blob": "8a0a09b9df29454dc684917bf5423ee249163c81"
+    },
+    {
+      "path": "ega/smap.csv",
+      "bytes": 526900,
+      "sha256": "6643D8C16A9AD639B248B8AF9AE308AE6531471792C74EB8AB59DB323C46A9A4",
+      "git_blob": "8927f2b4111c5aeb7c2a718be803fb1f1a1a98cb"
+    }
+  ],
+  "invariance": {
+    "root_tex_changed_paths": [],
+    "root_pdf_changed_paths": [],
+    "visual_qa_changed_paths": [],
+    "issues_changed_paths": [],
+    "registry_changed_paths": [],
+    "ega_units": {
+      "path": "ega/units.csv",
+      "bytes": 1864094,
+      "sha256": "5C73182F07F749F03C0B0F92BBA0D37884873FFF096C93AE2E1A3CDB599EDA4C",
+      "git_blob": "a2e8dd78b446d69c4f87d98917a8da1b00962d17"
+    },
+    "ega_vqa": {
+      "path": "ega/vqa.csv",
+      "bytes": 46201,
+      "sha256": "9623D533ACA4B12758F74A86CA8F8DF70530F443C20C16C22C1D201F0AA162E8",
+      "git_blob": "3440f59635c5874044b080c90a2f82dae43ee0dc"
+    },
+    "ega_issues": {
+      "path": "ega/issues.csv",
+      "bytes": 40840,
+      "sha256": "26D9CE8557DE8A11E142AF7303410D0D43E07BFBA7FCDBE4C3A2F30F0FFD4267",
+      "git_blob": "519b1d7579b8fa1bb0cdbbd43c6e7f6125cab9db"
+    },
+    "registry_overlays": {
+      "path": "ai-integrated/registry/overlays.json",
+      "bytes": 56353,
+      "sha256": "BB386A08B91DFE7065CDA250162756A74D2DCFDC2BF2540E90F11918B3F32A06",
+      "git_blob": "be5d6c66da25973806ff73b9640c6f458f094dec"
+    },
+    "registry_leases": {
+      "path": "ai-integrated/registry/leases.json",
+      "bytes": 42185,
+      "sha256": "59A13A5BF99321785AD8F32E642173462BF36449853BA9FDB4551615D5E2B2F6",
+      "git_blob": "7dfb0a58e7215db20ee569f92328efb49ae9cb82"
+    },
+    "composition_current": {
+      "path": "validation/composition-current.json",
+      "bytes": 19202,
+      "sha256": "DB0F71A9FB6876A64D4D6078F08721DF6C25C93443A56945D3450DB3BA406416",
+      "git_blob": "ce3f8f76bc5e619f7ddaef2401df895a12d1e432"
+    },
+    "r32_build_receipt": {
+      "path": "validation/stacks-errata-a04446e-r32-build-2026-08-30.json",
+      "bytes": 37388,
+      "sha256": "75884847F2E1E3D947DCDDC3ACC201388A21629C563496F6902EBED8747A7D3E",
+      "git_blob": "1d039845a0eec54a55f9f6f18bafe76a8691488d"
+    },
+    "r32_release_receipt": {
+      "path": "validation/stacks-errata-a04446e-r32-release-2026-08-30.json",
+      "bytes": 50472,
+      "sha256": "E6B58701753A6239A3E7C0B4C228CD31199195B5C31AD40140AB70814EB5F2BF",
+      "git_blob": "7001b167921b1455a697a162c279d3178aa51f7a"
+    }
+  },
+  "validation": {
+    "python_compile": {
+      "command": "python -B -m py_compile ega/check.py",
+      "status": "PASS"
+    },
+    "ega_check": {
+      "command": "python -B ega/check.py",
+      "status": "PASS",
+      "errors": 0,
+      "agent_rows": 250,
+      "decision_rows": 322,
+      "operational_statement_edges": 1204,
+      "statement_map_rows": 1211,
+      "residual_rows": 797,
+      "quarantined_rows": 0
+    },
+    "git_diff_check": {
+      "command": "git diff --check bb2da26d7f66e5abf52a1788c8b1f3257f037057..74e53239649047974a7b9b8907eba2eb966ae184 -- exact six EGA paths",
+      "status": "PASS"
+    },
+    "unified_repository": {
+      "command": "python -B tools/validate_unified_repository.py --pre-publication",
+      "full_command": "python -B tools/validate_unified_repository.py",
+      "validated_at_combined_content_commit": "9886e83dcbeb13cd31269b38cc81451d59bfa67c",
+      "status": "PASS",
+      "exit_code": 0,
+      "registered_overlays": 33,
+      "registered_stable_ids": 1035,
+      "exact_v2_operations_checked": 1159,
+      "exact_r1_r3_replacements_checked": 69,
+      "r1_tag_additions_checked": 9,
+      "active_permanent_stacks_tags_checked": 21819,
+      "fixed_point_build_receipt": {
+        "path": "validation/stacks-errata-a04446e-r32-build-2026-08-30.json",
+        "bytes": 37388,
+        "sha256": "75884847F2E1E3D947DCDDC3ACC201388A21629C563496F6902EBED8747A7D3E",
+        "git_blob": "1d039845a0eec54a55f9f6f18bafe76a8691488d"
+      },
+      "required_build_stems_covered": 27,
+      "visual_qa_affected_chapters_checked": 4,
+      "reproducible_pdf_identities_checked": 27,
+      "public_markdown_documents_checked": 7
+    }
+  },
+  "rebase_completion": {
+    "status": "PASS",
+    "public_base_commit": "bb2da26d7f66e5abf52a1788c8b1f3257f037057",
+    "public_base_tree": "72b9963323aafec7df3fb81b3ab0e283744cd6c5",
+    "origin_main_readback": "bb2da26d7f66e5abf52a1788c8b1f3257f037057",
+    "origin_exact_head_ci_run": 33285886598,
+    "origin_exact_head_ci_status": "PASS",
+    "original_semantic_content_commit": "d4661695862d400b43414894f884a839875d7d83",
+    "rebased_semantic_content_commit": "74e53239649047974a7b9b8907eba2eb966ae184",
+    "rebased_semantic_content_tree": "72bb2d1edb249316aedb067a73ca65a55e1b6bd7",
+    "changed_paths": [
+      "ega/agent.csv",
+      "ega/check.py",
+      "ega/dec.csv",
+      "ega/resid.csv",
+      "ega/scope.json",
+      "ega/smap.csv"
+    ],
+    "root_source_changed": false,
+    "registry_changed": false,
+    "direct_path_conflict": false,
+    "semantic_conflict": false,
+    "target_blocks_reverified": 0,
+    "exact_target_blocks_preserved": 0,
+    "semantic_drift": false
+  },
+  "publication": {
+    "push": false,
+    "release": false,
+    "zenodo": false,
+    "reason": "This individual receipt is sealed before the combined EGA I 6.5.2--6.5.4 public preservation transaction."
+  },
+  "cumulative_r32_targets": {
+    "status": "PASS",
+    "audit_scope": "all six labelled Stacks environments cited by the EGA I 6.5.2 semantic route",
+    "cumulative_commit": "74e53239649047974a7b9b8907eba2eb966ae184",
+    "r32_root_source_equal_to_r30_for_cited_files": true,
+    "semantic_drift": false,
+    "files": {
+      "morphisms.tex": {
+        "bytes": 593209,
+        "sha256": "51CFCB7402D0E84AAD95BDB6DD8840552F6F635FC20709521FD4AB895DF05242",
+        "git_blob": "a573bdd92d39290a7ab441fa7a1227a946434276",
+        "blocks": [
+          {"tag": "0BX6", "cumulative_lf_lines": "10359-10387", "bytes": 1242, "sha256": "40F14AB79E275DF004ED7011D8EF1A2F488B6469A610EB8C7C8E45BCADB721B1", "exact_official_bytes": true},
+          {"tag": "01T6", "cumulative_lf_lines": "2773-2778", "bytes": 194, "sha256": "5E0245909E4C15BB4076AC7FAA3A9E062AA9D37702E3484BF099F37EF3FCA563", "exact_official_bytes": true},
+          {"tag": "01T8", "cumulative_lf_lines": "2802-2807", "bytes": 211, "sha256": "3FCD15E70DC904DA3A0D6856496D597235201CAFD864213E5D161698B06580B8", "exact_official_bytes": true},
+          {"tag": "01T1", "cumulative_lf_lines": "2665-2679", "bytes": 605, "sha256": "0242EA65DE1ECAE9AFFD222BFAA5F5283F374B2D8DAAB8134009592AEAB070A2", "exact_official_bytes": true},
+          {"tag": "01T3", "cumulative_lf_lines": "2719-2723", "bytes": 204, "sha256": "F6A257AAA0F7E2F652AF0FEEC3CDF0640300BAF5807B8672FA479326A321F6B2", "exact_official_bytes": true}
+        ]
+      },
+      "properties.tex": {
+        "bytes": 213401,
+        "sha256": "2F8BE43BE8DA39DF575581181F8A28AAA077266464947157E70838462E8291FA",
+        "git_blob": "592135cd811050b9ee2b18a3400912b4d4664622",
+        "blocks": [
+          {"tag": "01P0", "cumulative_lf_lines": "535-539", "bytes": 158, "sha256": "2B67C0239ABC236A787579CA6E4F9D1B79C913BF88D36DB98A8D77060204E592", "exact_official_bytes": true}
+        ]
+      }
+    }
+  },
+  "post_r32_rebase": {
+    "status": "PASS",
+    "public_base_commit": "bb2da26d7f66e5abf52a1788c8b1f3257f037057",
+    "public_base_tree": "72b9963323aafec7df3fb81b3ab0e283744cd6c5",
+    "origin_main_readback": "bb2da26d7f66e5abf52a1788c8b1f3257f037057",
+    "origin_exact_head_ci_run": 33285886598,
+    "origin_exact_head_ci_status": "PASS",
+    "original_semantic_content_commit": "d4661695862d400b43414894f884a839875d7d83",
+    "rebased_semantic_content_commit": "74e53239649047974a7b9b8907eba2eb966ae184",
+    "rebased_semantic_content_tree": "72bb2d1edb249316aedb067a73ca65a55e1b6bd7",
+    "changed_paths": [
+      "ega/agent.csv",
+      "ega/check.py",
+      "ega/dec.csv",
+      "ega/resid.csv",
+      "ega/scope.json",
+      "ega/smap.csv"
+    ],
+    "root_source_changed": false,
+    "registry_changed": false,
+    "direct_path_conflict": false,
+    "semantic_conflict": false,
+    "target_blocks_reverified": 6,
+    "exact_target_blocks_preserved": 6,
+    "semantic_drift": false
+  }
+}
