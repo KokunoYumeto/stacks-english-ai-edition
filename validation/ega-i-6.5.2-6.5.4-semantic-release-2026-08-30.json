@@ -1,0 +1,161 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-ega-semantic-release-receipt/v1",
+  "status": "PASS",
+  "created_utc": "2026-08-30T02:01:51.6651993Z",
+  "scope": {
+    "closed": "EGA I §6.5.4",
+    "included_sections": ["EGA I §6.5.2", "EGA I §6.5.3", "EGA I §6.5.4"],
+    "continuation": "EGA I §6.5.5",
+    "semantic_decisions": 3,
+    "semantic_statement_edges": 22,
+    "residual_dispositions": 16,
+    "root_tex_pdf_changed": false,
+    "visual_qa_changed": false,
+    "issues_changed": false,
+    "registry_changed": false,
+    "new_errata_round": false,
+    "new_canon_correction": false
+  },
+  "source": {
+    "repository": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project",
+    "official_stacks_baseline": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "public_r32_base_commit": "bb2da26d7f66e5abf52a1788c8b1f3257f037057",
+    "public_r32_base_tree": "72b9963323aafec7df3fb81b3ab0e283744cd6c5",
+    "semantic_commits": [
+      {
+        "scope": "EGA I §6.5.2",
+        "commit": "74e53239649047974a7b9b8907eba2eb966ae184",
+        "tree": "72bb2d1edb249316aedb067a73ca65a55e1b6bd7"
+      },
+      {
+        "scope": "EGA I §6.5.3",
+        "commit": "cf11f1ac839a2e09d663fa5dd6aa53f834f773e7",
+        "tree": "9557744742775952b391e9bce2db169a3e6d43dc"
+      },
+      {
+        "scope": "EGA I §6.5.4",
+        "commit": "9886e83dcbeb13cd31269b38cc81451d59bfa67c",
+        "tree": "e97e73c2e550b463d447c6ed64534698019f3ffa"
+      }
+    ],
+    "release_source_commit": "6d9ade0395bd17df089f63760ced82ccf13717c7",
+    "release_source_tree": "9197700c61e07f6ffe933c885937a24d2bab7c12",
+    "prepublication_metadata_commit": "289a2252420916e467a1fffc80035537745d6aff",
+    "prepublication_metadata_tree": "dba5032717267a9237c988652594a1583663c996",
+    "checkpoint_receipts": [
+      {
+        "path": "validation/ega-i-6.5.2-semantic-checkpoint-2026-08-30.json",
+        "bytes": 14007,
+        "sha256": "44F0C01D26E6682E2764EB8891BDFAC86ED5B4126A489F16938E5977D10A68A4"
+      },
+      {
+        "path": "validation/ega-i-6.5.3-semantic-checkpoint-2026-08-30.json",
+        "bytes": 20189,
+        "sha256": "0953C8894ADF7CA8F104BAE7900FA774E0C1D013A5A7041B6070B5E70B29CD10"
+      },
+      {
+        "path": "validation/ega-i-6.5.4-semantic-checkpoint-2026-08-30.json",
+        "bytes": 24969,
+        "sha256": "9F146B0410D2D7CA567F1D28D11541CF2AC8124AF7B808976CC5F36F3D64A3BF"
+      },
+      {
+        "path": "validation/ega-i-6.5.2-6.5.4-semantic-checkpoint-2026-08-30.json",
+        "bytes": 33908,
+        "sha256": "AEE9C1D7DC49FDD587054B66314418D78936DC46C263FA164EAB404504F2138F"
+      }
+    ],
+    "package_receipt": {
+      "path": "validation/ega-i-6.5.2-6.5.4-semantic-package-2026-08-30.json",
+      "bytes": 22044,
+      "sha256": "ACF2D6EF6626D8A6554CB1D59CC6DFB9F158EC28F63915EFCE2B44F443307CD9"
+    },
+    "package_rebuild_receipt": {
+      "path": "validation/ega-i-6.5.2-6.5.4-semantic-package-second-2026-08-30.json",
+      "bytes": 22044,
+      "sha256": "ACF2D6EF6626D8A6554CB1D59CC6DFB9F158EC28F63915EFCE2B44F443307CD9"
+    }
+  },
+  "target_drift_audit": {
+    "status": "PASS",
+    "changed_ega_paths": [
+      "ega/agent.csv",
+      "ega/check.py",
+      "ega/dec.csv",
+      "ega/resid.csv",
+      "ega/scope.json",
+      "ega/smap.csv"
+    ],
+    "bound_target_blocks": 21,
+    "r32_algebra_operations_overlapping_00CO_injection_00CP_00CR": 0,
+    "exact_mathematical_target_blocks": 21,
+    "nonmathematical_fac_reference_insertions": ["01IG", "01IO"],
+    "semantic_drift": false,
+    "semantic_conflicts": 0,
+    "root_source_repair_required": false
+  },
+  "github": {
+    "default_branch": "main",
+    "public_prepublication_head": "289a2252420916e467a1fffc80035537745d6aff",
+    "tag": "ega-i-6.5.2-6.5.4-semantic-2026-08-30",
+    "tag_object": "83d68b6c955d7a38519e037f20854d7d183ddc4b",
+    "peeled_target": "6d9ade0395bd17df089f63760ced82ccf13717c7",
+    "release_id": 379154980,
+    "release_url": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.5.2-6.5.4-semantic-2026-08-30",
+    "release_is_public": true,
+    "release_is_draft": false,
+    "release_is_prerelease": false,
+    "asset_count": 6,
+    "asset_bytes": 181916760,
+    "anonymous_readback": "PASS"
+  },
+  "zenodo": {
+    "concept_doi": "10.5281/zenodo.22135180",
+    "predecessor_doi": "10.5281/zenodo.22167418",
+    "version_doi": "10.5281/zenodo.22167946",
+    "record_id": 22167946,
+    "version": "EGA-I-6.5.2-6.5.4-semantic-2026-08-30",
+    "record_url": "https://zenodo.org/records/22167946",
+    "access_right": "open",
+    "asset_count": 6,
+    "asset_bytes": 181916760,
+    "anonymous_readback": "PASS",
+    "publication_receipt": {
+      "path": "validation/ega-i-6.5.2-6.5.4-semantic-zenodo-publication-receipt-2026-08-30.json",
+      "bytes": 6485,
+      "sha256": "77AAAB3774F9604B427F5816465DE254DABB9CFC77CA91085FAD36255A6795B9"
+    },
+    "state": {
+      "path": "validation/ega-i-6.5.2-6.5.4-semantic-zenodo-state-2026-08-30.json",
+      "bytes": 8898,
+      "sha256": "232797D8B0B0B8B3A91DB46B5B37860BEC59B91A29B911AE3F5DCF6A930633B8"
+    }
+  },
+  "public_assets_readback": {
+    "path": "validation/ega-i-6.5.2-6.5.4-semantic-public-assets-readback-2026-08-30.json",
+    "bytes": 1562725,
+    "sha256": "4B9EF53ED6C2407E84F9D320203BD7A620BA3344EDBFF736E2D6568BD608B292",
+    "anonymous_downloads": 12,
+    "downloaded_bytes": 363833520,
+    "all_asset_identities_equal": true,
+    "all_six_zip_instances_reopened": true,
+    "all_zip_crc_checks": "PASS",
+    "all_zip_member_tuple_sets_equal_by_filename": true
+  },
+  "validation": {
+    "python_compile": "PASS",
+    "ega_checker": "PASS",
+    "scoped_git_diff": "PASS",
+    "unified_repository_prepublication": "PASS",
+    "unified_repository_full": "PASS",
+    "registered_overlays": 33,
+    "registered_stable_ids": 1035,
+    "exact_v2_operations_checked": 1159,
+    "reproducible_pdf_identities_checked": 27,
+    "local_package_double_build": "PASS",
+    "zip_reopen_and_member_hashes": "PASS",
+    "source_archive_commit_binding": "PASS",
+    "checkpoint_tree_and_scope_binding": "PASS",
+    "public_asset_readback": "PASS"
+  },
+  "next_semantic_cursor": "EGA I §6.5.5"
+}
