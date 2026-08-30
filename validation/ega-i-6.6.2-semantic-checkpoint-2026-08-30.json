@@ -1,0 +1,429 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-ega-semantic-checkpoint/v1",
+  "status": "PASS",
+  "created_utc": "2026-08-30T11:03:40Z",
+  "repository": "KokunoYumeto/unofficial-ai-integrated-stacks-project",
+  "branch": "codex/ega-i-6-5-5-6-6-2-r32-20260830",
+  "worktree": "worktrees/unofficial-ai-stacks-ega-655-662-public-20260830",
+  "base_commit": "47875cc2bf05b134c3118f2d71fa1a8b51b57b12",
+  "base_tree": "4294168edc3e80298d5395bc505ecc36988c5be8",
+  "content_commit": "c5d3bcd197f0da7ac1c87d23f353e1816afa8bb2",
+  "content_tree": "bffc1ed31013c14e6e01ef2a67d547c6db5df2f8",
+  "scope": {
+    "closed": "EGA I §6.6.2",
+    "continuation": "EGA I §6.6.3",
+    "next_french_lf_line": 1046,
+    "next_english_lf_line": 739,
+    "semantic_only": true,
+    "new_errata_round": false,
+    "new_canon_correction_admitted": false,
+    "proposed_canon_correction": "I000103",
+    "proposed_canon_correction_state": "ROUTED_PENDING_SUCCESSOR_ADJUDICATION",
+    "canon_keeper_successor_contacted": true,
+    "canon_keeper_successor": "01a047ab-fc94-7120-af1d-5701ba37aacd",
+    "root_tex_changed": false,
+    "root_pdf_changed": false,
+    "visual_qa_changed": false,
+    "issues_changed": false,
+    "authority_changed": false,
+    "registry_changed": false,
+    "publication_performed": false
+  },
+  "authority": {
+    "official_stacks_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "french": {
+      "repository": "https://github.com/KokunoYumeto/ega-fr",
+      "commit": "6b38875842e3723b619d4aeeda9ed260a4f94f7c",
+      "receipt": "F37ZW.json",
+      "receipt_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+      "path": "source/ega1/ega1-6-fr.tex",
+      "verification_route": "exact anonymous raw-commit byte readback",
+      "full_bytes": 57781,
+      "full_sha256": "F95D2C43C1074A1CC6485D74E24F02BF8C5F098ADB571AA024B4B499F5CDE3FE",
+      "lf_lines": "1026-1044",
+      "slice_bytes": 865,
+      "slice_sha256": "FA028DDA3B0D5E54600F39FB694179A512411FC36BF7838467BA7BBDA7304007",
+      "definition_lf_lines": "1026-1035",
+      "definition_bytes": 471,
+      "definition_sha256": "B7606C2421A1E10C2AC8311A18F2C92476DA8533135938FC88C3E77B7B4A267A",
+      "restriction_lf_lines": "1037-1040",
+      "restriction_bytes": 236,
+      "restriction_sha256": "3A955C5DAB00632CBF3E32F782B0E2DDB70DB057B1163CE1564B951E2298D0EA",
+      "noetherian_lf_lines": "1042-1044",
+      "noetherian_bytes": 156,
+      "noetherian_sha256": "FAE680BBB303A42779B63CDC24871D00673C75F7335AF887FDEA86474683C807"
+    },
+    "english": {
+      "repository": "https://github.com/KokunoYumeto/ega-en",
+      "commit": "94d5c73ac9263b26043ad0551646b824b1030c9b",
+      "receipt": "R261.json",
+      "receipt_sha256": "A87DC2EDD0BDA5CE6828A2759095B1F4F3278E993DC5661EBA2E345C33BEEF18",
+      "path": "source/ega1/ega1-6.tex",
+      "verification_route": "exact anonymous raw-commit byte readback",
+      "full_bytes": 55021,
+      "full_sha256": "990DF9E209D804AAC103CE3B23C5F5F2307CD57B87C3A6F4F6E699AA9227C9FD",
+      "lf_lines": "727-737",
+      "slice_bytes": 815,
+      "slice_sha256": "5C12A7E5BC6407CEDEE088B99A01F27158B966496E7759C487178F89252F9291",
+      "definition_lf_lines": "727-733",
+      "definition_bytes": 469,
+      "definition_sha256": "AEE21E9B5A45E0E85456730B1395F5A0D8674AB9FCF42E1366F3CE3DECC25BED",
+      "restriction_lf_line": 735,
+      "restriction_bytes": 224,
+      "restriction_sha256": "9860911A1F1BF9B04B4DFB34DD79E5A33CAD642A138E81302CAD472D35134AD3",
+      "noetherian_lf_line": 737,
+      "noetherian_bytes": 120,
+      "noetherian_sha256": "4BB02ACD2FF3178550300E84E1811A7406BEF8D73DA17DF9ED780C7A9D0B6D7D"
+    }
+  },
+  "proposed_source_correction": {
+    "proposed_issue_id": "I000103",
+    "state": "ROUTED_PENDING_SUCCESSOR_ADJUDICATION",
+    "successor_task": "01a047ab-fc94-7120-af1d-5701ba37aacd",
+    "french_lf_line": 1030,
+    "printed": "$V\\supset f(U)$ de $y$ tels que la",
+    "printed_line_including_lf_bytes": 35,
+    "printed_line_including_lf_sha256": "A3F1CA10218F6D6AADB85053624BE51EBE0E1EC319403BF205988E0303EC478E",
+    "proposed": "$V\\supset f(U)$ de $f(x)$ tels que la",
+    "proposed_line_including_lf_bytes": 38,
+    "proposed_line_including_lf_sha256": "83F1B59854CCA76465D1F1868949EDE94C0D3733B905247CC84FB5ADF84E7697",
+    "exact_preimage_matches": 1,
+    "prospective_full_bytes": 57784,
+    "prospective_full_sha256": "F62919C4CAA7D7FDA64E307C5DFCC2FDCAFB43AA04FC59CF3F9EC4BCFF1FFB4C",
+    "adverse_evidence": "The French definition quantifies x and fixes f:X→Y but never binds y; the corresponding English authority explicitly says f(x), and V must be a target neighbourhood of the image of x.",
+    "authority_mutated": false,
+    "issue_ledger_mutated": false,
+    "admission_asserted": false
+  },
+  "registered_source_units": [
+    {
+      "unit_id": "ega:I.6.6.2",
+      "kind": "definition",
+      "parent_id": "ega:subsection:I.6.6",
+      "english_source_file": "ega1/ega1-6.tex",
+      "english_line": 728,
+      "anchor_sha256": "EB992F12780A6C5771E4BD5F374B7191B38877CADBAFE8978EB1C4802BFA417C"
+    }
+  ],
+  "pinned_stacks_targets": {
+    "morphisms.tex": {
+      "full_bytes": 587157,
+      "full_sha256": "3350FD2C4E3ABC78A4AE3BCDB32694C70A5765E500C308C7EA7D239F5A3E3B69",
+      "git_blob": "28685eaee727e47cd141ec25b19857ef3807eeed",
+      "blocks": [
+        {
+          "name": "01T1 finite-type-at-a-point and locally-finite-type definitions",
+          "lf_lines": "2656-2670",
+          "bytes": 605,
+          "sha256": "0242EA65DE1ECAE9AFFD222BFAA5F5283F374B2D8DAAB8134009592AEAB070A2"
+        },
+        {
+          "name": "01T2 local finite-type characterization and restriction permanence",
+          "lf_lines": "2672-2708",
+          "bytes": 1698,
+          "sha256": "1F32AD25552A59822C15FA5A976CF424D02F225DE88E431826713807B0F382F8"
+        },
+        {
+          "name": "01T6 Noetherian permanence",
+          "lf_lines": "2764-2777",
+          "bytes": 496,
+          "sha256": "159D1426DEE1BB0BDBD5105AB973624E078E5941F0C75D60D8931349EEC62F3F"
+        }
+      ]
+    }
+  },
+  "semantic_fixed_point": {
+    "decision": "D000327",
+    "statement_edges": "S001242-S001245",
+    "statement_edge_count": 4,
+    "residuals": "R000820-R000822",
+    "residual_count": 3,
+    "agent_audit": "A000255",
+    "issues_admitted": [],
+    "proposed_issue": "I000103",
+    "existing_cross_routes": {
+      "finite_type_definition": {
+        "statement_edge": "S001242",
+        "terminal_tag": "01T1"
+      },
+      "local_characterization": {
+        "statement_edges": [
+          "S001243",
+          "S001244"
+        ],
+        "terminal_tag": "01T2"
+      },
+      "noetherian_permanence": {
+        "statement_edge": "S001245",
+        "terminal_tag": "01T6"
+      }
+    },
+    "proof_chain": "After the pending source correction is read provisionally as f(x), 01T1 gives the pointwise finite-type definition and 01T2 identifies it with finite-type restrictions on neighbourhoods and proves permanence under arbitrary compatible open restrictions. The locally Noetherian branch of 01T6 is exactly the final consequence. These are existing Stacks results, so no new root theorem is justified.",
+    "root_source_disposition": "No nonduplicative root theorem was found. The one French source defect is routed as proposed I000103 for independent successor adjudication; it is not locally admitted, and no authority, issue, TeX, PDF, visual-QA, registry, or public bytes were changed."
+  },
+  "residual_guards": [
+    {
+      "id": "R000820",
+      "guard": "Keep the unbound-y defect as a known semantic difference routed to the successor; do not treat the provisional f(x) reading as a mutated or admitted authority."
+    },
+    {
+      "id": "R000821",
+      "guard": "Preserve both 01T1 and 01T2 because the historical neighbourhood formulation is a composite of the modern pointwise definition and its open-local characterization."
+    },
+    {
+      "id": "R000822",
+      "guard": "Use the stronger restriction clause of 01T2 and only the local branch of 01T6; do not silently upgrade finite type to finite presentation."
+    }
+  ],
+  "append_contract": {
+    "exact_ids": {
+      "decision": [
+        "D000327"
+      ],
+      "statement_edges": [
+        "S001242",
+        "S001243",
+        "S001244",
+        "S001245"
+      ],
+      "residuals": [
+        "R000820",
+        "R000821",
+        "R000822"
+      ],
+      "agent_audit": [
+        "A000255"
+      ],
+      "issues": []
+    },
+    "raw_bindings": {
+      "D000327": {
+        "bytes": 588,
+        "sha256": "25439A0E5AFA83587B7A537141F727F5F1972D85D4AD2BC053933987E4DEF675"
+      },
+      "S001242-S001245": {
+        "bytes": 2253,
+        "sha256": "B69E4E7A38AAEFD34935D29F038163B0F2E426355CC13D3BEECDBD53BA011ED7"
+      },
+      "R000820-R000822": {
+        "bytes": 1143,
+        "sha256": "A6F6FDDD34C764110D7E172C1E2A3D2977AACB4A9EA918FF29E93DA159040786"
+      },
+      "A000255": {
+        "bytes": 737,
+        "sha256": "6199FF5F4BB647F262EB01F2A89FEEDA0ED1F3089053BC864336D1A635130E45"
+      }
+    },
+    "expected_post_append_counts": {
+      "agent_rows": 255,
+      "decision_rows": 327,
+      "operational_statement_edges": 1238,
+      "statement_map_file_rows": 1245,
+      "statement_source_units": 414,
+      "existing_official_tag_rows": 1225,
+      "distinct_existing_official_tags": 347,
+      "local_untagged_rows": 13,
+      "full_statement_equivalences": 60,
+      "active_residual_rows": 797,
+      "residual_file_rows": 822,
+      "superseded_residual_rows": 25,
+      "open_gaps": 12,
+      "integrated_local_mirror_rows": 13,
+      "issue_rows": 102,
+      "visual_qa_file_rows": 45,
+      "operational_visual_qa_rows": 26,
+      "quarantined_rows": 0
+    },
+    "checker_changes": [
+      "Require the exact French 6.6.2 slice, the immutable F37ZW source identity, and the pending-only source-correction route.",
+      "Reject local admission of I000103 and require authority_mutated=false and issue_ledger_mutated=false.",
+      "Require the registered English definition discovery row and anchor.",
+      "Require exact D000327, S001242-S001245, R000820-R000822, and A000255 raw blocks and final ledger identities.",
+      "Read exact 01T1, 01T2, and 01T6 blocks from immutable a04446e blobs and fail closed on byte or SHA drift.",
+      "Require the semantic-only no-visual boundary and the EGA I 6.6.3 continuation."
+    ],
+    "continuation": "EGA I §6.6.3"
+  },
+  "changed_paths": [
+    {
+      "path": "ega/agent.csv",
+      "bytes": 134164,
+      "sha256": "D3646016E7307BC465557793D617A10C81E33DC59D9C1427A3A734BEF599F277",
+      "git_blob": "86cdbd12386f3b56fce27541b51d26ebde49bf95"
+    },
+    {
+      "path": "ega/check.py",
+      "bytes": 401067,
+      "sha256": "5DF7AA8DBA3A9AFA9BAAF6F7437AD8C0EC3F2364505A435987AE584E5CDBEB15",
+      "git_blob": "79dec134e4abd10c92d24a32051ec3d1e7d1312e"
+    },
+    {
+      "path": "ega/dec.csv",
+      "bytes": 87613,
+      "sha256": "ABBF136AEC1C510136082F458ED6C89B7341E67989C7801AC9DF4DEC713324E3",
+      "git_blob": "186f2fe0e12cc0f99c7dead81cf3fd92069a4e14"
+    },
+    {
+      "path": "ega/resid.csv",
+      "bytes": 237306,
+      "sha256": "5F3E70CAD391D8C17305EFF97DE155EC24DB607AEC27EAE4DF571241887A2F48",
+      "git_blob": "9b49991c87ef567209a3bdd5001f0e56edbd2b92"
+    },
+    {
+      "path": "ega/scope.json",
+      "bytes": 24093,
+      "sha256": "D3B049799186243EB69F068A450E521FE2303C2D0DC2778C003BADB29971500F",
+      "git_blob": "7ec1b74dc2d9a63d93910dcfc3e2d7b15dea63f4"
+    },
+    {
+      "path": "ega/smap.csv",
+      "bytes": 545246,
+      "sha256": "55C3292AB70087E0EBD000C5ED6989FD88AC5C35D46331D0C9CB053402C4B12B",
+      "git_blob": "588e7464dba69c77083c37b70cce7609a0588475"
+    }
+  ],
+  "invariance": {
+    "root_tex_changed_paths": [],
+    "root_pdf_changed_paths": [],
+    "visual_qa_changed_paths": [],
+    "issues_changed_paths": [],
+    "authority_changed_paths": [],
+    "registry_changed_paths": [],
+    "ega_units": {
+      "path": "ega/units.csv",
+      "bytes": 1864094,
+      "sha256": "5C73182F07F749F03C0B0F92BBA0D37884873FFF096C93AE2E1A3CDB599EDA4C",
+      "git_blob": "a2e8dd78b446d69c4f87d98917a8da1b00962d17"
+    },
+    "ega_vqa": {
+      "path": "ega/vqa.csv",
+      "bytes": 46201,
+      "sha256": "9623D533ACA4B12758F74A86CA8F8DF70530F443C20C16C22C1D201F0AA162E8",
+      "git_blob": "3440f59635c5874044b080c90a2f82dae43ee0dc"
+    },
+    "ega_issues": {
+      "path": "ega/issues.csv",
+      "bytes": 40840,
+      "sha256": "26D9CE8557DE8A11E142AF7303410D0D43E07BFBA7FCDBE4C3A2F30F0FFD4267",
+      "git_blob": "519b1d7579b8fa1bb0cdbbd43c6e7f6125cab9db"
+    },
+    "registry_overlays": {
+      "path": "ai-integrated/registry/overlays.json",
+      "bytes": 56353,
+      "sha256": "BB386A08B91DFE7065CDA250162756A74D2DCFDC2BF2540E90F11918B3F32A06",
+      "git_blob": "be5d6c66da25973806ff73b9640c6f458f094dec"
+    },
+    "registry_leases": {
+      "path": "ai-integrated/registry/leases.json",
+      "bytes": 42185,
+      "sha256": "59A13A5BF99321785AD8F32E642173462BF36449853BA9FDB4551615D5E2B2F6",
+      "git_blob": "7dfb0a58e7215db20ee569f92328efb49ae9cb82"
+    },
+    "composition_current": {
+      "path": "validation/composition-current.json",
+      "bytes": 19202,
+      "sha256": "DB0F71A9FB6876A64D4D6078F08721DF6C25C93443A56945D3450DB3BA406416",
+      "git_blob": "ce3f8f76bc5e619f7ddaef2401df895a12d1e432"
+    },
+    "r32_build_receipt": {
+      "path": "validation/stacks-errata-a04446e-r32-build-2026-08-30.json",
+      "bytes": 37388,
+      "sha256": "75884847F2E1E3D947DCDDC3ACC201388A21629C563496F6902EBED8747A7D3E",
+      "git_blob": "1d039845a0eec54a55f9f6f18bafe76a8691488d"
+    },
+    "r32_release_receipt": {
+      "path": "validation/stacks-errata-a04446e-r32-release-2026-08-30.json",
+      "bytes": 50472,
+      "sha256": "E6B58701753A6239A3E7C0B4C228CD31199195B5C31AD40140AB70814EB5F2BF",
+      "git_blob": "7001b167921b1455a697a162c279d3178aa51f7a"
+    }
+  },
+  "validation": {
+    "primary_source_audit": {
+      "status": "PASS",
+      "french_full_and_slice_hashes_exact": true,
+      "english_full_and_slice_hashes_exact": true,
+      "printed_line_hash_exact": true,
+      "proposed_line_hash_exact": true,
+      "prospective_full_hash_exact": true,
+      "exact_preimage_matches": 1
+    },
+    "semantic_target_audit": {
+      "status": "PASS",
+      "targets": [
+        "01T1",
+        "01T2",
+        "01T6"
+      ],
+      "pinned_target_blocks_exact": 3,
+      "mapping_disposition": "complete_existing_coverage_with_one_pending_source_correction"
+    },
+    "python_compile": {
+      "command": "python -B -c \"from pathlib import Path; compile(Path('ega/check.py').read_text(encoding='utf-8'), 'ega/check.py', 'exec')\"",
+      "status": "PASS"
+    },
+    "ega_check": {
+      "command": "python -B ega/check.py",
+      "status": "PASS",
+      "errors": 0,
+      "agent_rows": 255,
+      "decision_rows": 327,
+      "operational_statement_edges": 1238,
+      "statement_map_rows": 1245,
+      "residual_rows": 822,
+      "issue_rows": 102,
+      "quarantined_rows": 0
+    },
+    "git_diff_check": {
+      "command": "git diff --check 47875cc2bf05b134c3118f2d71fa1a8b51b57b12..c5d3bcd197f0da7ac1c87d23f353e1816afa8bb2 -- exact six EGA paths",
+      "status": "PASS"
+    },
+    "unified_repository": {
+      "command": "python -B tools/validate_unified_repository.py",
+      "status": "PASS",
+      "exit_code": 0,
+      "registered_overlays": 33,
+      "registered_stable_ids": 1035,
+      "exact_v2_operations_checked": 1159,
+      "exact_r1_r3_replacements_checked": 69,
+      "r1_tag_additions_checked": 9,
+      "active_permanent_stacks_tags_checked": 21819,
+      "fixed_point_build_receipt": {
+        "path": "validation/stacks-errata-a04446e-r32-build-2026-08-30.json",
+        "bytes": 37388,
+        "sha256": "75884847F2E1E3D947DCDDC3ACC201388A21629C563496F6902EBED8747A7D3E",
+        "git_blob": "1d039845a0eec54a55f9f6f18bafe76a8691488d"
+      },
+      "required_build_stems_covered": 27,
+      "visual_qa_affected_chapters_checked": 4,
+      "reproducible_pdf_identities_checked": 27,
+      "public_markdown_documents_checked": 7,
+      "full_command": "python -B tools/validate_unified_repository.py",
+      "validated_at_content_commit": "c5d3bcd197f0da7ac1c87d23f353e1816afa8bb2"
+    }
+  },
+  "publication": {
+    "push": false,
+    "release": false,
+    "zenodo": false,
+    "reason": "This rebound individual checkpoint is sealed inside the fixed EGA I §6.5.5–§6.6.2 public batch immediately before its authorized preservation transaction."
+  },
+  "post_r32_rebase": {
+    "status": "PASS",
+    "public_base_commit": "07d48789594324dd1ee58d1c00aa16778e79e513",
+    "public_base_tree": "575dfe0b6076532db75e3809244452291aa8cbe9",
+    "origin_main_readback": "07d48789594324dd1ee58d1c00aa16778e79e513",
+    "original_semantic_content_commit": "aeb33eab4a0b681662e19944c3cbd80c2cd25494",
+    "rebased_base_commit": "47875cc2bf05b134c3118f2d71fa1a8b51b57b12",
+    "rebased_content_commit": "c5d3bcd197f0da7ac1c87d23f353e1816afa8bb2",
+    "rebased_content_tree": "bffc1ed31013c14e6e01ef2a67d547c6db5df2f8",
+    "root_source_changed": false,
+    "root_pdf_changed": false,
+    "authority_changed": false,
+    "registry_changed": false,
+    "direct_path_conflict": false,
+    "semantic_conflict": false,
+    "semantic_drift": false
+  }
+}
+

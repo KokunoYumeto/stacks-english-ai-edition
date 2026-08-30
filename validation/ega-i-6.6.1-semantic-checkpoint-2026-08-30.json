@@ -1,0 +1,389 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-ega-semantic-checkpoint/v1",
+  "status": "PASS",
+  "created_utc": "2026-08-30T11:03:40Z",
+  "repository": "KokunoYumeto/unofficial-ai-integrated-stacks-project",
+  "branch": "codex/ega-i-6-5-5-6-6-2-r32-20260830",
+  "worktree": "worktrees/unofficial-ai-stacks-ega-655-662-public-20260830",
+  "base_commit": "2982d1d87698a11a00331c57ff954cfcee3fc1ce",
+  "base_tree": "9e6ae99040080e7d543aaa65fb14e87159c8b19d",
+  "content_commit": "47875cc2bf05b134c3118f2d71fa1a8b51b57b12",
+  "content_tree": "4294168edc3e80298d5395bc505ecc36988c5be8",
+  "scope": {
+    "closed": "EGA I §6.6.1",
+    "continuation": "EGA I §6.6.2",
+    "semantic_only": true,
+    "new_errata_round": false,
+    "new_canon_correction": false,
+    "canon_keeper_successor_contacted": false,
+    "canon_keeper_successor": "01a047ab-fc94-7120-af1d-5701ba37aacd",
+    "root_tex_changed": false,
+    "root_pdf_changed": false,
+    "visual_qa_changed": false,
+    "issues_changed": false,
+    "registry_changed": false,
+    "publication_performed": false
+  },
+  "authority": {
+    "official_stacks_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "french": {
+      "repository": "https://github.com/KokunoYumeto/ega-fr",
+      "commit": "6b38875842e3723b619d4aeeda9ed260a4f94f7c",
+      "receipt": "F37ZW.json",
+      "receipt_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+      "path": "source/ega1/ega1-6-fr.tex",
+      "verification_route": "exact anonymous raw-commit byte readback",
+      "full_bytes": 57781,
+      "full_sha256": "F95D2C43C1074A1CC6485D74E24F02BF8C5F098ADB571AA024B4B499F5CDE3FE",
+      "lf_lines": "998-1024",
+      "slice_bytes": 1431,
+      "slice_sha256": "5C8CDC02B98888C42016E37E28B124326F15B581D16EF1AFA8C5A6962CB46A00",
+      "statement_lf_lines": "1001-1024",
+      "statement_bytes": 1324,
+      "statement_sha256": "6765571D18DB985C4288888FC1C6C65C222C30E59965173EBAE9A7A7E1862862"
+    },
+    "english": {
+      "repository": "https://github.com/KokunoYumeto/ega-en",
+      "commit": "94d5c73ac9263b26043ad0551646b824b1030c9b",
+      "path": "source/ega1/ega1-6.tex",
+      "verification_route": "exact anonymous raw-commit byte readback",
+      "full_bytes": 55021,
+      "full_sha256": "990DF9E209D804AAC103CE3B23C5F5F2307CD57B87C3A6F4F6E699AA9227C9FD",
+      "lf_lines": "711-725",
+      "slice_bytes": 1399,
+      "slice_sha256": "94338254BD0D2DCB3A26E9FD7FC3852B0F43E57164DE7C64DDA49F08B6E918D6",
+      "statement_lf_lines": "714-725",
+      "statement_bytes": 1299,
+      "statement_sha256": "FA08E82A113C1F919851471AAD1324A4554E32163821489CD19BDCE22599FB16"
+    }
+  },
+  "registered_source_units": [
+    {
+      "unit_id": "ega:subsection:I.6.6",
+      "kind": "subsection",
+      "parent_id": "ega:section:I.6",
+      "english_source_file": "ega1/ega1-6.tex",
+      "english_line": 712,
+      "anchor_sha256": "596F8F3794B1241FDFD0CE8E32BE0D3263A1DB80EB4BB549399D68BF4167741E"
+    },
+    {
+      "unit_id": "ega:I.6.6.1",
+      "kind": "definition",
+      "parent_id": "ega:subsection:I.6.6",
+      "english_source_file": "ega1/ega1-6.tex",
+      "english_line": 715,
+      "anchor_sha256": "DD290BFCD243AB42A7522ED3C915B15B20AF7CF0C91F8CB61F1ACB4048929F30"
+    }
+  ],
+  "pinned_stacks_targets": {
+    "schemes.tex": {
+      "full_bytes": 174402,
+      "full_sha256": "08475A01CF0DDF69734FD7EBC0D14D3831148C25A2EF82AAAFDB65666F8FCE47",
+      "git_blob": "901e0ea3d2a5370515ca080d0800af674eb05121",
+      "blocks": [
+        {
+          "name": "01K3 quasi-compact morphism definition",
+          "lf_lines": "3575-3581",
+          "bytes": 249,
+          "sha256": "CEC2963E3676DC4C23BD326DFF53E73B3B559626B6EF5F4689B016DFD07DF9E6"
+        },
+        {
+          "name": "01K4 affine detection and finite-union proof",
+          "lf_lines": "3583-3623",
+          "bytes": 1916,
+          "sha256": "630E7070C9CCD5BDE3E84ED6B1E8E2EAF15D17825433D4A08C075067B5C515F4"
+        }
+      ]
+    },
+    "morphisms.tex": {
+      "full_bytes": 587157,
+      "full_sha256": "3350FD2C4E3ABC78A4AE3BCDB32694C70A5765E500C308C7EA7D239F5A3E3B69",
+      "git_blob": "28685eaee727e47cd141ec25b19857ef3807eeed",
+      "blocks": [
+        {
+          "name": "01SG affine permanence statement",
+          "lf_lines": "2023-2040",
+          "bytes": 602,
+          "sha256": "D35E37A9BE4108DEE745BDB812683E2171C31A4BCB83BC38AB0EBA9E43C10168"
+        }
+      ]
+    }
+  },
+  "semantic_fixed_point": {
+    "decision": "D000326",
+    "statement_edges": "S001235-S001241",
+    "statement_edge_count": 7,
+    "residuals": "R000816-R000819",
+    "residual_count": 4,
+    "agent_audit": "A000254",
+    "issues": [],
+    "visual_qa": [],
+    "existing_cross_routes": {
+      "affine_intersections": {
+        "decision": "D000267",
+        "statement_edge": "S000957",
+        "terminal_tag": "01SG"
+      },
+      "quasi_compact_definition": {
+        "statement_edge": "S001235",
+        "terminal_tag": "01K3"
+      },
+      "affine_detection_and_locality": {
+        "statement_edges": "S001236-S001237 S001239-S001241",
+        "terminal_tag": "01K4"
+      }
+    },
+    "proof_chain": "Tag 01K3 is the exact modern form of the source definition. A quasi-compact open is a finite union of members of any quasi-compact open basis so basiswise inverse-image testing is equivalent to the definition; 01K4 states and proves the affine-basis specialization and the finite-affine-union form. For the affine-target example D000267 and item four of 01SG make every affine-chart inverse image affine and 01K4 concludes. Restriction to an open target and descent from an arbitrary target open cover are the two directions of 01K4 after affine refinement.",
+    "root_source_disposition": "All clauses are exact existing Stacks coverage or short source-order consequences of it. No genuinely nonduplicative theorem and no canon correction was found; no root TeX theorem PDF visual artifact issue registry mutation or canon-keeper message is warranted."
+  },
+  "residual_guards": [
+    {
+      "id": "R000816",
+      "guard": "Keep the arbitrary quasi-compact-basis argument as a derivation from the exact definition and the finite-union proof rather than inventing an official tag."
+    },
+    {
+      "id": "R000817",
+      "guard": "Treat the finite-affine-union parenthetical as proof-level coverage already embedded in 01K4."
+    },
+    {
+      "id": "R000818",
+      "guard": "Reuse D000267 and the stronger 01SG affine-permanence route for the affine-target example."
+    },
+    {
+      "id": "R000819",
+      "guard": "Preserve restriction and arbitrary-cover locality as distinct source clauses over the single 01K4 characterization."
+    }
+  ],
+  "append_contract": {
+    "exact_ids": {
+      "decision": [
+        "D000326"
+      ],
+      "statement_edges": [
+        "S001235",
+        "S001236",
+        "S001237",
+        "S001238",
+        "S001239",
+        "S001240",
+        "S001241"
+      ],
+      "residuals": [
+        "R000816",
+        "R000817",
+        "R000818",
+        "R000819"
+      ],
+      "agent_audit": [
+        "A000254"
+      ]
+    },
+    "raw_bindings": {
+      "D000326": {
+        "bytes": 410,
+        "sha256": "5A763CFE186055A02C3C80BAB6CBF860F0ADA3AB59C3CD1DCF304A7009FF5AFF"
+      },
+      "S001235-S001241": {
+        "bytes": 3644,
+        "sha256": "282B416A937064324E2EAE538CE972771014825E945830E84A5E72097ACE832E"
+      },
+      "R000816-R000819": {
+        "bytes": 1285,
+        "sha256": "DBAC8F856B73524BFD64A3D4B3CF022550D131E4580BC4E9E00975EB123B03D2"
+      },
+      "A000254": {
+        "bytes": 622,
+        "sha256": "9FAA2F74E394B5520E5927B8BB9413DE56563FB627FC8135289AE1B44C7DF788"
+      }
+    },
+    "expected_post_append_counts": {
+      "agent_rows": 254,
+      "decision_rows": 326,
+      "operational_statement_edges": 1234,
+      "statement_map_file_rows": 1241,
+      "statement_source_units": 413,
+      "existing_official_tag_rows": 1221,
+      "distinct_existing_official_tags": 347,
+      "local_untagged_rows": 13,
+      "full_statement_equivalences": 58,
+      "active_residual_rows": 794,
+      "residual_file_rows": 819,
+      "superseded_residual_rows": 25,
+      "open_gaps": 12,
+      "integrated_local_mirror_rows": 13,
+      "issue_rows": 102,
+      "visual_qa_file_rows": 45,
+      "operational_visual_qa_rows": 26,
+      "quarantined_rows": 0
+    },
+    "checker_changes": [
+      "Require the exact French 6.6.1 slice and its immutable F37ZW source identity.",
+      "Require the registered English subsection and definition discovery rows and anchors.",
+      "Require exact D000326 S001235-S001241 R000816-R000819 and A000254 raw blocks and final ledger identities.",
+      "Read exact 01K3 01K4 and 01SG blocks from immutable a04446e blobs and fail closed on byte or SHA drift.",
+      "Require the semantic-only no-visual boundary and the EGA I 6.6.2 continuation."
+    ],
+    "continuation": "EGA I §6.6.2"
+  },
+  "changed_paths": [
+    {
+      "path": "ega/agent.csv",
+      "bytes": 133427,
+      "sha256": "FCF9646117AD09F321A5E6D34F64A8233112B43E6FEBF808987389D0354C89D8",
+      "git_blob": "9a3d5cae71aa9105327c4644fc27585041f4fdd4"
+    },
+    {
+      "path": "ega/check.py",
+      "bytes": 390813,
+      "sha256": "E0EABEC60190766983AD6FDBDAE36834805BBCE8F33DA5F03B81D0A5FFC84BD8",
+      "git_blob": "eac23db3d36cbeef315d4861a732d0fba8ffd05a"
+    },
+    {
+      "path": "ega/dec.csv",
+      "bytes": 87025,
+      "sha256": "1202EC26FBCC82A36BA43205166FA36756A1329D91BA5EDD6A6C191290883840",
+      "git_blob": "669788929262026e90601344819f81bd74273ce9"
+    },
+    {
+      "path": "ega/resid.csv",
+      "bytes": 236163,
+      "sha256": "96BBAD2B42C937A91D9B1903871AB867A69FEB5BF86754F2824F50DB71D89A2D",
+      "git_blob": "da2d80d2e0dd874a1e1b3455346714b97a0712d0"
+    },
+    {
+      "path": "ega/scope.json",
+      "bytes": 22288,
+      "sha256": "F811AEC30393986CE95D15CF5B439F1443D04CAEF74C29197317BB968D74C547",
+      "git_blob": "bdd60c05bd63d32b34f497ae5631aec3992d03c1"
+    },
+    {
+      "path": "ega/smap.csv",
+      "bytes": 542993,
+      "sha256": "AD72226DBCEB54BF6D9663B9DD58BE8EC8FE0FF8FF35EF2C4DBACBAB802719DD",
+      "git_blob": "e7051dd3e97226430f2c2c16c4e755a97fc2d7bf"
+    }
+  ],
+  "invariance": {
+    "root_tex_changed_paths": [],
+    "root_pdf_changed_paths": [],
+    "visual_qa_changed_paths": [],
+    "issues_changed_paths": [],
+    "registry_changed_paths": [],
+    "ega_units": {
+      "path": "ega/units.csv",
+      "bytes": 1864094,
+      "sha256": "5C73182F07F749F03C0B0F92BBA0D37884873FFF096C93AE2E1A3CDB599EDA4C",
+      "git_blob": "a2e8dd78b446d69c4f87d98917a8da1b00962d17"
+    },
+    "ega_vqa": {
+      "path": "ega/vqa.csv",
+      "bytes": 46201,
+      "sha256": "9623D533ACA4B12758F74A86CA8F8DF70530F443C20C16C22C1D201F0AA162E8",
+      "git_blob": "3440f59635c5874044b080c90a2f82dae43ee0dc"
+    },
+    "ega_issues": {
+      "path": "ega/issues.csv",
+      "bytes": 40840,
+      "sha256": "26D9CE8557DE8A11E142AF7303410D0D43E07BFBA7FCDBE4C3A2F30F0FFD4267",
+      "git_blob": "519b1d7579b8fa1bb0cdbbd43c6e7f6125cab9db"
+    },
+    "registry_overlays": {
+      "path": "ai-integrated/registry/overlays.json",
+      "bytes": 56353,
+      "sha256": "BB386A08B91DFE7065CDA250162756A74D2DCFDC2BF2540E90F11918B3F32A06",
+      "git_blob": "be5d6c66da25973806ff73b9640c6f458f094dec"
+    },
+    "registry_leases": {
+      "path": "ai-integrated/registry/leases.json",
+      "bytes": 42185,
+      "sha256": "59A13A5BF99321785AD8F32E642173462BF36449853BA9FDB4551615D5E2B2F6",
+      "git_blob": "7dfb0a58e7215db20ee569f92328efb49ae9cb82"
+    },
+    "composition_current": {
+      "path": "validation/composition-current.json",
+      "bytes": 19202,
+      "sha256": "DB0F71A9FB6876A64D4D6078F08721DF6C25C93443A56945D3450DB3BA406416",
+      "git_blob": "ce3f8f76bc5e619f7ddaef2401df895a12d1e432"
+    },
+    "r32_build_receipt": {
+      "path": "validation/stacks-errata-a04446e-r32-build-2026-08-30.json",
+      "bytes": 37388,
+      "sha256": "75884847F2E1E3D947DCDDC3ACC201388A21629C563496F6902EBED8747A7D3E",
+      "git_blob": "1d039845a0eec54a55f9f6f18bafe76a8691488d"
+    },
+    "r32_release_receipt": {
+      "path": "validation/stacks-errata-a04446e-r32-release-2026-08-30.json",
+      "bytes": 50472,
+      "sha256": "E6B58701753A6239A3E7C0B4C228CD31199195B5C31AD40140AB70814EB5F2BF",
+      "git_blob": "7001b167921b1455a697a162c279d3178aa51f7a"
+    }
+  },
+  "validation": {
+    "python_compile": {
+      "command": "python -B -c \"from pathlib import Path; compile(Path('ega/check.py').read_text(encoding='utf-8'), 'ega/check.py', 'exec')\"",
+      "status": "PASS"
+    },
+    "ega_check": {
+      "command": "python -B ega/check.py",
+      "status": "PASS",
+      "errors": 0,
+      "agent_rows": 254,
+      "decision_rows": 326,
+      "operational_statement_edges": 1234,
+      "statement_map_rows": 1241,
+      "residual_rows": 819,
+      "quarantined_rows": 0
+    },
+    "git_diff_check": {
+      "command": "git diff --check 2982d1d87698a11a00331c57ff954cfcee3fc1ce..47875cc2bf05b134c3118f2d71fa1a8b51b57b12 -- exact six EGA paths",
+      "status": "PASS"
+    },
+    "unified_repository": {
+      "command": "python -B tools/validate_unified_repository.py",
+      "status": "PASS",
+      "exit_code": 0,
+      "registered_overlays": 33,
+      "registered_stable_ids": 1035,
+      "exact_v2_operations_checked": 1159,
+      "exact_r1_r3_replacements_checked": 69,
+      "r1_tag_additions_checked": 9,
+      "active_permanent_stacks_tags_checked": 21819,
+      "fixed_point_build_receipt": {
+        "path": "validation/stacks-errata-a04446e-r32-build-2026-08-30.json",
+        "bytes": 37388,
+        "sha256": "75884847F2E1E3D947DCDDC3ACC201388A21629C563496F6902EBED8747A7D3E",
+        "git_blob": "1d039845a0eec54a55f9f6f18bafe76a8691488d"
+      },
+      "required_build_stems_covered": 27,
+      "visual_qa_affected_chapters_checked": 4,
+      "reproducible_pdf_identities_checked": 27,
+      "public_markdown_documents_checked": 7,
+      "full_command": "python -B tools/validate_unified_repository.py",
+      "validated_at_content_commit": "47875cc2bf05b134c3118f2d71fa1a8b51b57b12"
+    }
+  },
+  "publication": {
+    "push": false,
+    "release": false,
+    "zenodo": false,
+    "reason": "This rebound individual checkpoint is sealed inside the fixed EGA I §6.5.5–§6.6.2 public batch immediately before its authorized preservation transaction."
+  },
+  "post_r32_rebase": {
+    "status": "PASS",
+    "public_base_commit": "07d48789594324dd1ee58d1c00aa16778e79e513",
+    "public_base_tree": "575dfe0b6076532db75e3809244452291aa8cbe9",
+    "origin_main_readback": "07d48789594324dd1ee58d1c00aa16778e79e513",
+    "original_semantic_content_commit": "3687865456787f74688daf1b5d6faabcc77dd3e1",
+    "rebased_base_commit": "2982d1d87698a11a00331c57ff954cfcee3fc1ce",
+    "rebased_content_commit": "47875cc2bf05b134c3118f2d71fa1a8b51b57b12",
+    "rebased_content_tree": "4294168edc3e80298d5395bc505ecc36988c5be8",
+    "root_source_changed": false,
+    "root_pdf_changed": false,
+    "authority_changed": false,
+    "registry_changed": false,
+    "direct_path_conflict": false,
+    "semantic_conflict": false,
+    "semantic_drift": false
+  }
+}
+
