@@ -16,6 +16,8 @@ machine-readable validation evidence.
 
 [Current status](STATUS.md) ·
 [Browse the source](chapters.tex) ·
+[Changes from Upstream](CHANGES_FROM_UPSTREAM.md) ·
+[Offline change browser](ai-integrated/changes/index.html) ·
 [Errata registry](ai-integrated/registry/overlays.json) ·
 [Validation](VALIDATION.md) ·
 [Current composition receipt](validation/composition-current.json) ·
@@ -25,9 +27,9 @@ machine-readable validation evidence.
 [Latest errata release receipt: R32 PASS](validation/stacks-errata-a04446e-r32-release-2026-08-30.json) ·
 [Latest errata preservation release: R32](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r32-2026-08-30) ·
 [Latest errata Zenodo version: R32](https://doi.org/10.5281/zenodo.22167418) ·
-[Latest EGA semantic checkpoint receipt: PASS](validation/ega-i-6.4-semantic-release-2026-08-29.json) ·
-[Latest EGA semantic GitHub release: I §6.4](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.4-semantic-2026-08-29) ·
-[Latest EGA semantic Zenodo version: I §6.4](https://doi.org/10.5281/zenodo.22161051) ·
+[Latest EGA semantic checkpoint receipt: PASS](validation/ega-i-6.6.3-semantic-checkpoint-2026-08-30.json) ·
+[Latest EGA semantic GitHub release: I §6.6.3](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.6.3-semantic-2026-08-30) ·
+[Latest EGA semantic Zenodo version: I §6.6.3](https://doi.org/10.5281/zenodo.22177421) ·
 [Historical R28 release receipt: PASS](validation/stacks-errata-a04446e-r28-release-2026-08-28.json) ·
 [Historical R24 publication receipt: PASS](validation/ai-integrated-stacks-r24-publication-2026-08-28.json) ·
 [Historical R22/R23 publication receipt: PASS](validation/stacks-errata-a04446e-r22-r23-release-2026-08-27.json) ·
@@ -49,6 +51,18 @@ one versioned tree. The evidence registry is part of this repository under
 The pinned upstream baseline is
 [`a04446e57ec1fbc252a871afcec7752fb2807b14`](https://github.com/stacks/stacks-project/commit/a04446e57ec1fbc252a871afcec7752fb2807b14).
 
+## See exactly what changed
+
+[`CHANGES_FROM_UPSTREAM.md`](CHANGES_FROM_UPSTREAM.md) is the readable,
+clickable correction index. The self-contained
+[`ai-integrated/changes/index.html`](ai-integrated/changes/index.html) adds
+offline full-text, chapter, overlay, and evidence-fidelity filters. Every
+entry places the pinned original beside the integrated replacement and links
+to the immutable upstream source, cumulative source, admitted manifest,
+source map, stable unit, and independent review. The mathematical TeX remains
+unmarked; the comparison is a generated sidecar that fails closed on evidence
+or replay drift.
+
 ## Integration dashboard
 
 | Area | State | Verified scope | Evidence |
@@ -57,7 +71,7 @@ The pinned upstream baseline is
 | Tôhoku | Dossier-only mapping and adjudication closed through sealed r71 | 1,066 decisions, 679 decided units, and zero remaining gap-class dispositions; r71 explicitly changed no live TeX, PDF, canonical source, or cursor | [Sealed r71 dossier](tohoku_r71/STATUS.md) · [historical working dossier](tohoku/STATUS.md) |
 | GAGA | Root chapter composed through r3; corpus review closed | All 126 units are classified and all 79 substantive units decided; the current unified `gaga.pdf` is 23 pages, while the sealed r3 dossier records its historical 22-page build | [r3 dossier](gaga_r3/STATUS.md) · [live chapter source](gaga.tex) |
 | FGA | Root additions composed and notation-normalized; corpus review closed | All 1,253 units and 1,612 term links are dispositioned; selected independently written additions are in the combined source; the fixed-point Moduli build is 83 pages | [Overview](fga/README.md) · [status](fga/status.md) |
-| EGA | Partial root-source composition; direct-source review active | Selected local additions are present in root TeX; the complete English discovery and diplomatic French editions remain separate read-only inputs; review is complete through EGA I §6.4.13 and continues at §6.5.1 | [EGA dossier](ega/README.md) |
+| EGA | Partial root-source composition; direct-source review active | Selected local additions are present in root TeX; the complete English discovery and diplomatic French editions remain separate read-only inputs; review is public through EGA I §6.6.3 and continues at §6.6.4 | [EGA dossier](ega/README.md) |
 | Errata and Verdier | Root-composed and deterministically validated through R32 | The integrated tree contains 33 overlays / 1,035 stable IDs. Its R1–R32 Stacks errata subset contains 32 batches, 1,023 correction IDs, and 1,159 exact v2 operations; R31 updates `sites-modules.tex` and R32 updates `fields.tex`, `categories.tex`, and `algebra.tex` | [Registry](ai-integrated/registry/overlays.json) · [R32 build](validation/stacks-errata-a04446e-r32-build-2026-08-30.json) · [errata evidence](ai-integrated/candidates/commons/stacks/errata/) |
 
 “Root-composed” means that the live top-level TeX tree changed and participates
@@ -80,6 +94,7 @@ label is represented as an official Stacks tag.
 | [`ega/`](ega/README.md) | Partial root integration, source-bound mappings, residuals, and separate-edition input boundaries |
 | [`reports/`](reports/README.md) | Exact source findings and visual evidence |
 | [`ai-integrated/`](ai-integrated/README.md) | Admitted errata, candidates, schemas, provenance, and release records |
+| [`CHANGES_FROM_UPSTREAM.md`](CHANGES_FROM_UPSTREAM.md) and [`ai-integrated/changes/index.html`](ai-integrated/changes/index.html) | Generated pinned-original versus integrated correction views |
 | [`VALIDATION.md`](VALIDATION.md) | Reproducible checks and build guidance |
 | [`validation/`](validation/README.md) | Machine-readable unified-build receipts |
 | [`PROVENANCE.md`](PROVENANCE.md) | Upstream identity, linear publication architecture, and frozen pre-unification histories |
@@ -177,12 +192,12 @@ tree `110a3006fcbb27b94c4170639aab56db507f9a89`; its manifest-bound
 composition is commit `5a42b7d2a04c4d08be7861ec91306d8be05d631e`, tree
 `ecbad57ee36b4fb290c80cb4d1f83eab50a47460`. R26 remains preserved as the
 preceding immutable historical version in the same GitHub and Zenodo lineages.
-The current public EGA semantic checkpoint covers EGA I through §6.4.13 and
-advances the next cursor to §6.5.1. It is preserved at GitHub tag
-[`ega-i-6.4-semantic-2026-08-29`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.4-semantic-2026-08-29),
-content commit `00adeb291487d04070b75bd0fd87759e3c43d3d3`, and Zenodo version
-DOI [`10.5281/zenodo.22161051`](https://doi.org/10.5281/zenodo.22161051) in the
-existing concept lineage. Its six assets total 174,783,585 bytes per host and
+The current public EGA semantic checkpoint covers EGA I through §6.6.3 and
+advances the next cursor to §6.6.4. It is preserved at GitHub tag
+[`ega-i-6.6.3-semantic-2026-08-30`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.6.3-semantic-2026-08-30),
+content commit `f1b8d56b5f3c9999010455a38a289bce76735070`, and Zenodo version
+DOI [`10.5281/zenodo.22177421`](https://doi.org/10.5281/zenodo.22177421) in the
+existing concept lineage. Its six assets total 182,415,449 bytes per host and
 passed 12-file cross-host readback. This semantic-only checkpoint changes no
 root TeX or PDF; R32 remains the latest errata release.
 

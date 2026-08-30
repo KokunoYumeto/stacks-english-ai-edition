@@ -1,0 +1,1421 @@
+{
+  "coverage": {
+    "affected_source_path_count": 22,
+    "displayed_change_hunk_count": 1227,
+    "hash_bound_reconstructed_legacy_hunk_count": 68,
+    "manifest_bound_exact_operation_count": 1159,
+    "missing_stable_ids": [],
+    "stable_unit_count": 1023,
+    "unbound_display_rows": []
+  },
+  "generator": {
+    "bytes": 57392,
+    "check_command": "python tools/generate_changes_from_upstream.py --check",
+    "path": "tools/generate_changes_from_upstream.py",
+    "sha256": "6A1E28EF77E3A0E1C65F3C8379C12B49446E4AFF8056E1813DD09F90551B8974",
+    "test_command": "python -m unittest tests.test_changes_from_upstream"
+  },
+  "input_closure": [
+    {
+      "bytes": 211808,
+      "path": "ai-integrated/candidates/commons/stacks/errata/authority/source/crystalline.tex",
+      "sha256": "466C0634A5E8E3899B157A42A4B4BB5F4357199F96708CAF5854F5A92BE58054"
+    },
+    {
+      "bytes": 134660,
+      "path": "ai-integrated/candidates/commons/stacks/errata/authority/source/smoothing.tex",
+      "sha256": "FD28CF874BB7DAD3C5C5FF03314D1C83701613A8A98730A99B9CA7A4BCFE6068"
+    },
+    {
+      "bytes": 174423,
+      "path": "ai-integrated/candidates/commons/stacks/errata/authority/source/spaces-cohomology.tex",
+      "sha256": "63F19991B7B2BCE90B5FB30FCDBB8A3B06CBBFFEC42FA7C413776C29AE4B69C5"
+    },
+    {
+      "bytes": 969923,
+      "path": "ai-integrated/candidates/commons/stacks/errata/authority/tags/tags",
+      "sha256": "098F77CCE75F8359F1EACB22B7AA0088099B09E5B3FFCAD2DE513CBD1A8A9F1C"
+    },
+    {
+      "bytes": 9635,
+      "path": "ai-integrated/candidates/commons/stacks/errata/candidate.manifest.json",
+      "sha256": "0715131E7A35EDC65A18183B3A6422A45D4A0AD3319DA20F9D761C58DE0F086D"
+    },
+    {
+      "bytes": 2356,
+      "path": "ai-integrated/candidates/commons/stacks/errata/decisions.jsonl",
+      "sha256": "A1DAD5160C214BC9E86CF152A692FD1F3331A1E06800A04D68470F09A87ED3C6"
+    },
+    {
+      "bytes": 211808,
+      "path": "ai-integrated/candidates/commons/stacks/errata/payload/crystalline.tex",
+      "sha256": "EDA38E502E0C6B3743C0FCD769203EAA6186440002A9AD2C97DC6F642B03DEC7"
+    },
+    {
+      "bytes": 134651,
+      "path": "ai-integrated/candidates/commons/stacks/errata/payload/smoothing.tex",
+      "sha256": "9CF7DCF31E447C585E81515C9A8059B37A566998DCAFA77A16AB7CB1D27A0A46"
+    },
+    {
+      "bytes": 174442,
+      "path": "ai-integrated/candidates/commons/stacks/errata/payload/spaces-cohomology.tex",
+      "sha256": "81438F655CEAB1A2E07CFEEC645A9A7C2447DB983D6BCEFAED6575859B75D196"
+    },
+    {
+      "bytes": 970352,
+      "path": "ai-integrated/candidates/commons/stacks/errata/payload/tags/tags",
+      "sha256": "C47887DB37D78437C0E7C72BEC0F7840DCA2D36535D1241E1CBCAEF1412DC788"
+    },
+    {
+      "bytes": 9046,
+      "path": "ai-integrated/candidates/commons/stacks/errata/r10/candidate.manifest.json",
+      "sha256": "87262D85EF338C7B8C5993C15837B0B9F6CEE037205AA712B3D6FB437AA578CF"
+    },
+    {
+      "bytes": 9342,
+      "path": "ai-integrated/candidates/commons/stacks/errata/r11/candidate.manifest.json",
+      "sha256": "469A40B39D2A7ABADC53538F06EEDB02F8B25FFFC6437F0717D1993CB67D3208"
+    },
+    {
+      "bytes": 9342,
+      "path": "ai-integrated/candidates/commons/stacks/errata/r12/candidate.manifest.json",
+      "sha256": "C6A69DBE1C60AE6C2BC457C954CB472DA838F5F663EEEC7411B4E5FCF5B95C0B"
+    },
+    {
+      "bytes": 9342,
+      "path": "ai-integrated/candidates/commons/stacks/errata/r13/candidate.manifest.json",
+      "sha256": "50B4BBF95FC66F85C96AC300DC2C699BE8AA86F8C3154CDA19E45F151C353F58"
+    },
+    {
+      "bytes": 9360,
+      "path": "ai-integrated/candidates/commons/stacks/errata/r14/candidate.manifest.json",
+      "sha256": "D0A347A9396108A8C08BB827EE1024A6BAFAA7CAC90E7B629221CC5C9B32DFBC"
+    },
+    {
+      "bytes": 9046,
+      "path": "ai-integrated/candidates/commons/stacks/errata/r15/candidate.manifest.json",
+      "sha256": "B11DC8B2C5645AF3C6D02B89B9A7E27410041237EB0E64B5EC65EA59465CB08F"
+    },
+    {
+      "bytes": 9081,
+      "path": "ai-integrated/candidates/commons/stacks/errata/r16/candidate.manifest.json",
+      "sha256": "74E1C1198739E89C2EC8B3AAAE8A51999ED9F0A6844DDB8A24C3B5A89D82D873"
+    },
+    {
+      "bytes": 9081,
+      "path": "ai-integrated/candidates/commons/stacks/errata/r17/candidate.manifest.json",
+      "sha256": "4A4394AE302F519F68110E5FBF01B13ECC03943051E88E3B7EC2B0F2F290261F"
+    },
+    {
+      "bytes": 9067,
+      "path": "ai-integrated/candidates/commons/stacks/errata/r18/candidate.manifest.json",
+      "sha256": "AE6E1177D1AF9954A38502ECA788354DE2091142C736AD49E04ECA2672DEF89D"
+    },
+    {
+      "bytes": 9070,
+      "path": "ai-integrated/candidates/commons/stacks/errata/r19/candidate.manifest.json",
+      "sha256": "750D76226657AB9BF0E34729992BE91DF58E2268B1D3D7D35B29B8893D6A3A52"
+    },
+    {
+      "bytes": 7949,
+      "path": "ai-integrated/candidates/commons/stacks/errata/r2/candidate.manifest.json",
+      "sha256": "449C8515B1DA6F1334DB524F75D819926996DA4FCFE2C50B362EB25C5CA8473B"
+    },
+    {
+      "bytes": 9070,
+      "path": "ai-integrated/candidates/commons/stacks/errata/r20/candidate.manifest.json",
+      "sha256": "989E169C8BC648525665FF80623246EA0723B8B44E6749151770F602A6647EE0"
+    },
+    {
+      "bytes": 9404,
+      "path": "ai-integrated/candidates/commons/stacks/errata/r21/candidate.manifest.json",
+      "sha256": "3D9E649E2EBFB7DDD12E84A98F8E16098462E43199FDA5146E2DAB4B8BEB0233"
+    },
+    {
+      "bytes": 10991,
+      "path": "ai-integrated/candidates/commons/stacks/errata/r22/candidate.manifest.json",
+      "sha256": "8C519D72AFB3496DD3EB0116EB64FBF3ACF2946A809FED070E4F5D7554A52F8B"
+    },
+    {
+      "bytes": 10901,
+      "path": "ai-integrated/candidates/commons/stacks/errata/r23/candidate.manifest.json",
+      "sha256": "4E8E588698926FD7A47D9CFFB1496CB7305D8EB698C571AD9660FC4C81F80A5C"
+    },
+    {
+      "bytes": 11209,
+      "path": "ai-integrated/candidates/commons/stacks/errata/r24/candidate.manifest.json",
+      "sha256": "8FD22BEE46246A02658726C264E6E442BFA8E14534F501F74218FBC00615332A"
+    },
+    {
+      "bytes": 11403,
+      "path": "ai-integrated/candidates/commons/stacks/errata/r25/candidate.manifest.json",
+      "sha256": "61B60F23DBD27C4E0FE42F68AB0C3E1F6E0950C232E6E241A48FCBD91CA25FC1"
+    },
+    {
+      "bytes": 11893,
+      "path": "ai-integrated/candidates/commons/stacks/errata/r26/candidate.manifest.json",
+      "sha256": "1A045F9452501725CAF45996FD19C633D594E0C3D57AA745780C3C06FB031085"
+    },
+    {
+      "bytes": 11850,
+      "path": "ai-integrated/candidates/commons/stacks/errata/r27/candidate.manifest.json",
+      "sha256": "A4D03B8B47A1005B6DAC8B0EE4B9D0F4361E065E51D324B9634F38B51053DE3C"
+    },
+    {
+      "bytes": 10251,
+      "path": "ai-integrated/candidates/commons/stacks/errata/r28/candidate.manifest.json",
+      "sha256": "FA5448067DBB6FF452AF85C3E2B0EE4B4133723D7C7D958DA74EB7746E194CFA"
+    },
+    {
+      "bytes": 10972,
+      "path": "ai-integrated/candidates/commons/stacks/errata/r29/candidate.manifest.json",
+      "sha256": "52920239C887757CE937267C5505AD98980464329BC6BBBD62086ED4E1D98CE5"
+    },
+    {
+      "bytes": 9865,
+      "path": "ai-integrated/candidates/commons/stacks/errata/r3/candidate.manifest.json",
+      "sha256": "8C5E9C380E2FDEE90F4A41C809E0DF88D65F4934B83AD2162748C13747B96EAB"
+    },
+    {
+      "bytes": 10598,
+      "path": "ai-integrated/candidates/commons/stacks/errata/r30/candidate.manifest.json",
+      "sha256": "C903DFCA06DA4063782BB88B2F2AC5FCF56352CF948CF03382D77F1A54A48C9E"
+    },
+    {
+      "bytes": 11680,
+      "path": "ai-integrated/candidates/commons/stacks/errata/r31/candidate.manifest.json",
+      "sha256": "0A8ADFB87FDC9BB87EF98B4AF1A34ECE965D68991DF0006B9F5326BD1EFC3657"
+    },
+    {
+      "bytes": 5845,
+      "path": "ai-integrated/candidates/commons/stacks/errata/r32/candidate.manifest.json",
+      "sha256": "9B38EAF1B99E9DAF5E7553E6B0278961A2FD0E63FBFDB7AE81FBA6163E827D7F"
+    },
+    {
+      "bytes": 15448,
+      "path": "ai-integrated/candidates/commons/stacks/errata/r4/candidate.manifest.json",
+      "sha256": "23689FD1C97501468D8E137BB89D149187241F65382A838958CF8DB855FF2465"
+    },
+    {
+      "bytes": 9173,
+      "path": "ai-integrated/candidates/commons/stacks/errata/r5/candidate.manifest.json",
+      "sha256": "8130F186D839507DF1868D469892517E38E0A3D4C92126670A8CD53FAE777A0A"
+    },
+    {
+      "bytes": 10166,
+      "path": "ai-integrated/candidates/commons/stacks/errata/r6/candidate.manifest.json",
+      "sha256": "0573E0230065780BE1AA7E73114735428C290A45E1E1CD14401E7358764DE050"
+    },
+    {
+      "bytes": 9133,
+      "path": "ai-integrated/candidates/commons/stacks/errata/r7/candidate.manifest.json",
+      "sha256": "FBE74AB2CD8EA5838C6554E85B6CCAFCFFA82B38A178B3E2B43AE0D510E6EA9B"
+    },
+    {
+      "bytes": 9174,
+      "path": "ai-integrated/candidates/commons/stacks/errata/r8/candidate.manifest.json",
+      "sha256": "C8D0E21D4D4773196D25C32F30B606EFCAC79F932CFCD251E1B96F02C02EEC68"
+    },
+    {
+      "bytes": 9108,
+      "path": "ai-integrated/candidates/commons/stacks/errata/r9/candidate.manifest.json",
+      "sha256": "6FD34E3A6451440B7F8C5802A760B795F31EF8605AD5C5C2FD2DF14D25AC3F68"
+    },
+    {
+      "bytes": 24308,
+      "path": "ai-integrated/candidates/commons/stacks/errata/replay/independent-review.json",
+      "sha256": "32A3C581306E121D5CCE551B3021B99328AC766B69D6C88EF460F609EAA615E6"
+    },
+    {
+      "bytes": 4564,
+      "path": "ai-integrated/candidates/commons/stacks/errata/source-map.jsonl",
+      "sha256": "2C37CF2793840E224303BED8DEFC11C7D86407B153278F4924AC558F239E8A10"
+    },
+    {
+      "bytes": 2548,
+      "path": "ai-integrated/candidates/commons/stacks/errata/stable-units.json",
+      "sha256": "F4694DF73A9676EB6B07971EBCA8C96A141DA40B6E7ED8790D8478AA97DA4591"
+    },
+    {
+      "bytes": 56353,
+      "path": "ai-integrated/registry/overlays.json",
+      "sha256": "BB386A08B91DFE7065CDA250162756A74D2DCFDC2BF2540E90F11918B3F32A06"
+    },
+    {
+      "bytes": 1771230,
+      "path": "candidates/commons/stacks/errata/r10/authority/source/algebra.tex",
+      "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+    },
+    {
+      "bytes": 1962,
+      "path": "candidates/commons/stacks/errata/r10/decisions.jsonl",
+      "sha256": "F1E0F59BD469F02345E3286E8814765146CA4104BF9336D10A8C72DA60389D47"
+    },
+    {
+      "bytes": 9286,
+      "path": "candidates/commons/stacks/errata/r10/operation-spec.json",
+      "sha256": "C296EDF3762E9E95EAFA9F95176AE0E52035EA23E8847F2770329E30BF0C2859"
+    },
+    {
+      "bytes": 1771864,
+      "path": "candidates/commons/stacks/errata/r10/payload/algebra.tex",
+      "sha256": "03653D1FDF7D1CC6072E8AB9DDA1E5A282E225BF195FD6EF6B48E6ABEF7FE7BD"
+    },
+    {
+      "bytes": 3464,
+      "path": "candidates/commons/stacks/errata/r10/replay/independent-review.json",
+      "sha256": "96110829B2749F92E3882CAB681E4E87FDD68E6434E16DB87B2409091AF4EA16"
+    },
+    {
+      "bytes": 13949,
+      "path": "candidates/commons/stacks/errata/r10/source-map.jsonl",
+      "sha256": "BAE906322BE42AA312B8B16A2BCA3733C86AF94465F12780A76F83E43D4A04F6"
+    },
+    {
+      "bytes": 3444,
+      "path": "candidates/commons/stacks/errata/r10/stable-units.json",
+      "sha256": "7702A5706DBBCDE49DB04420ED9385BFB57C96594554EFB9A259B031849C85B3"
+    },
+    {
+      "bytes": 1771230,
+      "path": "candidates/commons/stacks/errata/r11/authority/source/algebra.tex",
+      "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+    },
+    {
+      "bytes": 1964,
+      "path": "candidates/commons/stacks/errata/r11/decisions.jsonl",
+      "sha256": "1D5C41EEAC8BC32A1231281193E3C62829EFFE8277A3C624FDD7424124796891"
+    },
+    {
+      "bytes": 3814,
+      "path": "candidates/commons/stacks/errata/r11/operation-spec.json",
+      "sha256": "34BAA5DCF60C8536C4BBA6D72B4543DC257D10C69AD4C4712841258281890FE3"
+    },
+    {
+      "bytes": 1771397,
+      "path": "candidates/commons/stacks/errata/r11/payload/algebra.tex",
+      "sha256": "829D1D857528E935C6274A9D425E2BB9473E8596BC9327D9AA6936722A9B7588"
+    },
+    {
+      "bytes": 3747,
+      "path": "candidates/commons/stacks/errata/r11/replay/independent-review.json",
+      "sha256": "8DC803E02877E611B069CEC9B8AF206EEABBCB2CB7A48653A5BFFA55F224F821"
+    },
+    {
+      "bytes": 5436,
+      "path": "candidates/commons/stacks/errata/r11/source-map.jsonl",
+      "sha256": "3BEE46C9DF156DC57C4C890A4183C1E8123B1562B7DC63EFC6A153F2E3204472"
+    },
+    {
+      "bytes": 1505,
+      "path": "candidates/commons/stacks/errata/r11/stable-units.json",
+      "sha256": "13A56D3F6B7E627D7A4D8E949675E2DC5A827DF18CADFFFFDBE2B4567FB98F08"
+    },
+    {
+      "bytes": 1771230,
+      "path": "candidates/commons/stacks/errata/r12/authority/source/algebra.tex",
+      "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+    },
+    {
+      "bytes": 1962,
+      "path": "candidates/commons/stacks/errata/r12/decisions.jsonl",
+      "sha256": "2478CBBAF80CA026678C72AF52435BD8E59BB1B14BA0327865D319F4B9BBC406"
+    },
+    {
+      "bytes": 4521,
+      "path": "candidates/commons/stacks/errata/r12/operation-spec.json",
+      "sha256": "4B30F55F7D2AC9BE7C7AABED464FC5383C5F9DA8D8FFC14862E9504178E8B826"
+    },
+    {
+      "bytes": 1771285,
+      "path": "candidates/commons/stacks/errata/r12/payload/algebra.tex",
+      "sha256": "53868246C1A69B87129A4364DF17F0A3DEA3FE5447EA1BBE44F7C30330CBEDE9"
+    },
+    {
+      "bytes": 3797,
+      "path": "candidates/commons/stacks/errata/r12/replay/independent-review.json",
+      "sha256": "4726B8C6472E7BE45B0C89B3AC3F0CBF51C93900A1999CD1C12C895D41B44937"
+    },
+    {
+      "bytes": 7240,
+      "path": "candidates/commons/stacks/errata/r12/source-map.jsonl",
+      "sha256": "F8D99C9CD6A4FD275F9D3B4495A2B9E03898B6038B6CFB0C36B6333F1ADDDA96"
+    },
+    {
+      "bytes": 2093,
+      "path": "candidates/commons/stacks/errata/r12/stable-units.json",
+      "sha256": "C3DC5CB033E46344CD377B6C74655F799C015F10CDB4677D96E1FFCA68FB7D1B"
+    },
+    {
+      "bytes": 1771230,
+      "path": "candidates/commons/stacks/errata/r13/authority/source/algebra.tex",
+      "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+    },
+    {
+      "bytes": 1966,
+      "path": "candidates/commons/stacks/errata/r13/decisions.jsonl",
+      "sha256": "422774F62AA3BD1D863A895903F5B8D9726968147AA4D763CE417302B9EE7825"
+    },
+    {
+      "bytes": 3917,
+      "path": "candidates/commons/stacks/errata/r13/operation-spec.json",
+      "sha256": "99DBF97767003E0B5E6196A2B964C8CCC6E5DAD91FE3F322725F25173D643A5E"
+    },
+    {
+      "bytes": 1771225,
+      "path": "candidates/commons/stacks/errata/r13/payload/algebra.tex",
+      "sha256": "F88AC20D415999CF8AD8434876B52E543A9E7893690B43FD3AAB4284E53EBFB7"
+    },
+    {
+      "bytes": 3797,
+      "path": "candidates/commons/stacks/errata/r13/replay/independent-review.json",
+      "sha256": "6801C81A7E0B324976C6ECFE0AF2D7FC85792EFC1D5663136781F18E8C728A6A"
+    },
+    {
+      "bytes": 4708,
+      "path": "candidates/commons/stacks/errata/r13/source-map.jsonl",
+      "sha256": "7B902BE604EE288032F5625046175211C06C157CF302A0895D94828D203CC81F"
+    },
+    {
+      "bytes": 1238,
+      "path": "candidates/commons/stacks/errata/r13/stable-units.json",
+      "sha256": "6FB041E132A0052C7B6BEBFFFBFB89E2E3E688582DC7FE700E14D06D613B2361"
+    },
+    {
+      "bytes": 1771230,
+      "path": "candidates/commons/stacks/errata/r14/authority/source/algebra.tex",
+      "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+    },
+    {
+      "bytes": 2641,
+      "path": "candidates/commons/stacks/errata/r14/decisions.jsonl",
+      "sha256": "1B61BBFD7DF2331EB9EEBC96E14F221788534B3B1871805E80726223A3C884A1"
+    },
+    {
+      "bytes": 5165,
+      "path": "candidates/commons/stacks/errata/r14/operation-spec.json",
+      "sha256": "2EF817989EE0A015514FF8660518B3587EE7232C8D308B97CC04455EAD06D251"
+    },
+    {
+      "bytes": 1771215,
+      "path": "candidates/commons/stacks/errata/r14/payload/algebra.tex",
+      "sha256": "D03E8DCD44A11F77B60D2A39DA46ACC4AC6415E54A4790395504ABA7D0A3685E"
+    },
+    {
+      "bytes": 4625,
+      "path": "candidates/commons/stacks/errata/r14/replay/independent-review.json",
+      "sha256": "A0DD69A1BF24B5B32C93BDC85F52212A3EB3B4D9B8158637FDEAEF534237989D"
+    },
+    {
+      "bytes": 8538,
+      "path": "candidates/commons/stacks/errata/r14/source-map.jsonl",
+      "sha256": "969649F7B3ACC4B991B8E8C8B0FB9B4303E1B655EF41974AA2EDCCC64B4ABB1F"
+    },
+    {
+      "bytes": 2428,
+      "path": "candidates/commons/stacks/errata/r14/stable-units.json",
+      "sha256": "DC11FBC6E4FFBF1C107335E24362D7DCD270927E76B8CEAF50E1CEE7C29930F3"
+    },
+    {
+      "bytes": 28201,
+      "path": "candidates/commons/stacks/errata/r15/authority/source/brauer.tex",
+      "sha256": "B2504820D769EBE4E9E33B8ADD78753FB30ACA6E8A7F75C8D54DDA885EDCD682"
+    },
+    {
+      "bytes": 2711,
+      "path": "candidates/commons/stacks/errata/r15/decisions.jsonl",
+      "sha256": "E8C2FFFAC0B636883B4C152AE6EA1D9E2C6F056A4EB186C02E932B93C1A930FD"
+    },
+    {
+      "bytes": 6396,
+      "path": "candidates/commons/stacks/errata/r15/operation-spec.json",
+      "sha256": "EAAFA622F1430B06689CF65C9690FFCA5B74DD1BED549113BAF10A9971B066BA"
+    },
+    {
+      "bytes": 28301,
+      "path": "candidates/commons/stacks/errata/r15/payload/brauer.tex",
+      "sha256": "4F06D930FDB41AE6F9F4207DA49C2250A63213CD9A7578807466E3E873484096"
+    },
+    {
+      "bytes": 4743,
+      "path": "candidates/commons/stacks/errata/r15/replay/independent-review.json",
+      "sha256": "627BEA809AC3EDD70DEDED5363E2713BA717938CB0CA0179A08924633077F47E"
+    },
+    {
+      "bytes": 11026,
+      "path": "candidates/commons/stacks/errata/r15/source-map.jsonl",
+      "sha256": "35DC1E62898EC5DCEDEF88D6D6538B0BA496B9C937482922DFF85BEA08481957"
+    },
+    {
+      "bytes": 3026,
+      "path": "candidates/commons/stacks/errata/r15/stable-units.json",
+      "sha256": "25CC1BEE18C64A021611F60013B25C309C1A562AC6A045234B009B35B32D8D21"
+    },
+    {
+      "bytes": 267354,
+      "path": "candidates/commons/stacks/errata/r16/authority/source/homology.tex",
+      "sha256": "483CAF01B4BD164DBC9103D76196E294E00EFE17E706178ECF2DC2C1DEF4ABE0"
+    },
+    {
+      "bytes": 2793,
+      "path": "candidates/commons/stacks/errata/r16/decisions.jsonl",
+      "sha256": "F6A020AD2D154E5AD3044360F192B503F6E5489A4242AA2C1C2387A4FDA936C3"
+    },
+    {
+      "bytes": 22376,
+      "path": "candidates/commons/stacks/errata/r16/operation-spec.json",
+      "sha256": "8AEE6C2C0EF1B5930C333B70CF6250209693A23A65DD6B9025F56614CA88CB54"
+    },
+    {
+      "bytes": 267434,
+      "path": "candidates/commons/stacks/errata/r16/payload/homology.tex",
+      "sha256": "1AE48BC765984B0A364EB1D6DC093EDDFA8B8DCF5A146D0FAA4DAAA902C77907"
+    },
+    {
+      "bytes": 8194,
+      "path": "candidates/commons/stacks/errata/r16/replay/independent-review.json",
+      "sha256": "A9E3BE26FC523DA7FF666AF6652D0911397412E958A6CDF72AECE6D887F08F55"
+    },
+    {
+      "bytes": 37953,
+      "path": "candidates/commons/stacks/errata/r16/source-map.jsonl",
+      "sha256": "7554A2DAFBF451AB024BD94DBD84B1CE43EAE0831B81D6F30FD56A7B3002197E"
+    },
+    {
+      "bytes": 10338,
+      "path": "candidates/commons/stacks/errata/r16/stable-units.json",
+      "sha256": "194F27113E7C742E2052D3F1DC5AA5A72423179315D58A4473A4479220264F6E"
+    },
+    {
+      "bytes": 267354,
+      "path": "candidates/commons/stacks/errata/r17/authority/source/homology.tex",
+      "sha256": "483CAF01B4BD164DBC9103D76196E294E00EFE17E706178ECF2DC2C1DEF4ABE0"
+    },
+    {
+      "bytes": 2791,
+      "path": "candidates/commons/stacks/errata/r17/decisions.jsonl",
+      "sha256": "C6C04D20924AD4BD970C78206DFD5FA1D37CAA3C493D46A6668F98DB53AFF11C"
+    },
+    {
+      "bytes": 30049,
+      "path": "candidates/commons/stacks/errata/r17/operation-spec.json",
+      "sha256": "0F8E00D1DC3127EFBE89771AE4AD77951D4983B9E7715893E85CDFD77F6600C7"
+    },
+    {
+      "bytes": 267597,
+      "path": "candidates/commons/stacks/errata/r17/payload/homology.tex",
+      "sha256": "AB21BA1C8B75E3CDC7A4E1374260FBA6A82ABE959390C00CCDDB5FC4EA8310EB"
+    },
+    {
+      "bytes": 8421,
+      "path": "candidates/commons/stacks/errata/r17/replay/independent-review.json",
+      "sha256": "A5D2207A4E0D121300F742DDF98758E546577AAD8A60F1455350830ED3E6DA0E"
+    },
+    {
+      "bytes": 42369,
+      "path": "candidates/commons/stacks/errata/r17/source-map.jsonl",
+      "sha256": "C15F3261AB716721364C8CB359213B6C14137EF090F25ABCDC3EDDEC82CAB2EA"
+    },
+    {
+      "bytes": 9836,
+      "path": "candidates/commons/stacks/errata/r17/stable-units.json",
+      "sha256": "A48A7DB097B1F660DD7FE1DFCF7953665DB51BE8409460751A4AFC09B2206F03"
+    },
+    {
+      "bytes": 449677,
+      "path": "candidates/commons/stacks/errata/r18/authority/source/derived.tex",
+      "sha256": "EFDA4CB361DD40909D1991161EAE716E58B6CF9E79380971502E1DA12396D402"
+    },
+    {
+      "bytes": 3052,
+      "path": "candidates/commons/stacks/errata/r18/decisions.jsonl",
+      "sha256": "1A02A247B9F42FDFF04DF20E0223C0AD0F463DC173BA3A341BDAF2CC822205C4"
+    },
+    {
+      "bytes": 13124,
+      "path": "candidates/commons/stacks/errata/r18/operation-spec.json",
+      "sha256": "DA4B810066C9BCC1A1A5A9484AB1CF485FC4B72884E9B4227FBA45C9F17DD485"
+    },
+    {
+      "bytes": 449665,
+      "path": "candidates/commons/stacks/errata/r18/payload/derived.tex",
+      "sha256": "7051800AA3B700DD3736F1E9A749EFD90B84F89B287546F5213FBA508C42FB50"
+    },
+    {
+      "bytes": 6420,
+      "path": "candidates/commons/stacks/errata/r18/replay/independent-review.json",
+      "sha256": "CA0E1693224C0F727DB23E7057AC21982DC5F5183E8BB25D72C94EC90AD00894"
+    },
+    {
+      "bytes": 23111,
+      "path": "candidates/commons/stacks/errata/r18/source-map.jsonl",
+      "sha256": "C3FCA50ECF9A6859B20E3754E6DDFD12E38EB658E263959BED625672D3A77928"
+    },
+    {
+      "bytes": 6563,
+      "path": "candidates/commons/stacks/errata/r18/stable-units.json",
+      "sha256": "64902AE0D59AC53F7D07D6773798AE4CD855ED730FD7A73C968EF043FE870ABF"
+    },
+    {
+      "bytes": 449677,
+      "path": "candidates/commons/stacks/errata/r19/authority/source/derived.tex",
+      "sha256": "EFDA4CB361DD40909D1991161EAE716E58B6CF9E79380971502E1DA12396D402"
+    },
+    {
+      "bytes": 3072,
+      "path": "candidates/commons/stacks/errata/r19/decisions.jsonl",
+      "sha256": "76E12FB37DCA891B4D396AAA0978B785CB3747A1E872A7649F7B02B8B5AE143C"
+    },
+    {
+      "bytes": 37381,
+      "path": "candidates/commons/stacks/errata/r19/operation-spec.json",
+      "sha256": "8551341963CDBD68D53E8FACF5E133E96E250E8F76BF72C908A2C53A9DBC6014"
+    },
+    {
+      "bytes": 449674,
+      "path": "candidates/commons/stacks/errata/r19/payload/derived.tex",
+      "sha256": "64A9B8C5568B575457AE8E81DB54F39D9590260422EE4BD5710EB743CC6E7C31"
+    },
+    {
+      "bytes": 10382,
+      "path": "candidates/commons/stacks/errata/r19/replay/independent-review.json",
+      "sha256": "A8E775B2DDAE2E44B1B615533E516CD4F5EF17A6A511B4EC0F99AA58FAAD7A1C"
+    },
+    {
+      "bytes": 58662,
+      "path": "candidates/commons/stacks/errata/r19/source-map.jsonl",
+      "sha256": "889242FB816EB167AE0C7EC1B06ABEEC0E0E6B7510B866C96ABDF66677D4C861"
+    },
+    {
+      "bytes": 14394,
+      "path": "candidates/commons/stacks/errata/r19/stable-units.json",
+      "sha256": "1B808564726DA1FBD8DAC62409CE46822173C4CAC275B5F66E03B2C866A2CF0D"
+    },
+    {
+      "bytes": 28201,
+      "path": "candidates/commons/stacks/errata/r2/authority/source/brauer.tex",
+      "sha256": "B2504820D769EBE4E9E33B8ADD78753FB30ACA6E8A7F75C8D54DDA885EDCD682"
+    },
+    {
+      "bytes": 42110,
+      "path": "candidates/commons/stacks/errata/r2/authority/source/stacks-limits.tex",
+      "sha256": "F4F5EBF02BB5922A8DFF70EA507ED6F821F992C697D9C9A984B9513C39FEC57A"
+    },
+    {
+      "bytes": 1732,
+      "path": "candidates/commons/stacks/errata/r2/decisions.jsonl",
+      "sha256": "01CE32439E7DD871C3830B1B8B7110148F83CEBE428F60459FFD810EAA3E0AA8"
+    },
+    {
+      "bytes": 28214,
+      "path": "candidates/commons/stacks/errata/r2/payload/brauer.tex",
+      "sha256": "7D14F300ED13295728D3BA0B08ABEB5449B93D4E64244FA91680BEA9DA785BBD"
+    },
+    {
+      "bytes": 42157,
+      "path": "candidates/commons/stacks/errata/r2/payload/stacks-limits.tex",
+      "sha256": "0FBB14083DB31197467F9A638216D3273BAE7520623E99B9ED884B043BF12003"
+    },
+    {
+      "bytes": 12392,
+      "path": "candidates/commons/stacks/errata/r2/replay/independent-review.json",
+      "sha256": "0E9B384EE4D2BD7DE4A171148B98976AA604893C76997DF29512EBEB15297141"
+    },
+    {
+      "bytes": 4481,
+      "path": "candidates/commons/stacks/errata/r2/source-map.jsonl",
+      "sha256": "EDF1151985BD1ECD17B088A156C49B6240B4B7C59226A091B7FA13ABD7E1AF03"
+    },
+    {
+      "bytes": 2310,
+      "path": "candidates/commons/stacks/errata/r2/stable-units.json",
+      "sha256": "0D850931A684786F58D8AAFB4B1A84DBE3799B090D17B35234CA090D6B99D893"
+    },
+    {
+      "bytes": 449677,
+      "path": "candidates/commons/stacks/errata/r20/authority/source/derived.tex",
+      "sha256": "EFDA4CB361DD40909D1991161EAE716E58B6CF9E79380971502E1DA12396D402"
+    },
+    {
+      "bytes": 3044,
+      "path": "candidates/commons/stacks/errata/r20/decisions.jsonl",
+      "sha256": "7A5FFFFE103DD26BB6D26E2F905D390A0001808407DF49E9FFC4E7FC031AAE40"
+    },
+    {
+      "bytes": 21616,
+      "path": "candidates/commons/stacks/errata/r20/operation-spec.json",
+      "sha256": "89AA590DF9D17330775F8EEAB539B68053D9D040B49684A22435D59FEC845FA8"
+    },
+    {
+      "bytes": 449730,
+      "path": "candidates/commons/stacks/errata/r20/payload/derived.tex",
+      "sha256": "FEEC32EEEEAF1194899A877208077EF7721B53D937048209FEEC4B9B75E376CD"
+    },
+    {
+      "bytes": 7866,
+      "path": "candidates/commons/stacks/errata/r20/replay/independent-review.json",
+      "sha256": "C2C88EEA206BFB3CB714372D1E659EBD980EDBB37CD960DD50708645DB4784E3"
+    },
+    {
+      "bytes": 38559,
+      "path": "candidates/commons/stacks/errata/r20/source-map.jsonl",
+      "sha256": "2BDA7679D04A1591FC2AA9FD5C05851052E8DC455E6A991EDC6B9547B50EF8EF"
+    },
+    {
+      "bytes": 9573,
+      "path": "candidates/commons/stacks/errata/r20/stable-units.json",
+      "sha256": "65A18B84A984640509778389BBBDA9667B1B80366E82D8BAFC48600A42693945"
+    },
+    {
+      "bytes": 234898,
+      "path": "candidates/commons/stacks/errata/r21/authority/source/simplicial.tex",
+      "sha256": "187B4CD4F20696BF35EED843528462780CA04ABBBC597AE1045F8404372FDC56"
+    },
+    {
+      "bytes": 3266,
+      "path": "candidates/commons/stacks/errata/r21/decisions.jsonl",
+      "sha256": "177ED17A8D3DAABEBF6ED13B7F63577C02230C3CEF2EA86AC4DF8886AF7204A7"
+    },
+    {
+      "bytes": 7276,
+      "path": "candidates/commons/stacks/errata/r21/operation-spec.json",
+      "sha256": "F7A6CCC9412B7C1F3FA65A04EA9C7984ED6572D59ADBC96AD932E4F6DBA1F8B4"
+    },
+    {
+      "bytes": 235001,
+      "path": "candidates/commons/stacks/errata/r21/payload/simplicial.tex",
+      "sha256": "E4FD6748E65633490F8C48D720BEBF7327505DDF25B578868F6739E15BC96E16"
+    },
+    {
+      "bytes": 5207,
+      "path": "candidates/commons/stacks/errata/r21/replay/independent-review.json",
+      "sha256": "1BCE575401698C72FB62AC1BB3F3BC49F3AF8DEAA7F675E685103DA9A2DF3D58"
+    },
+    {
+      "bytes": 13478,
+      "path": "candidates/commons/stacks/errata/r21/source-map.jsonl",
+      "sha256": "F730CFFE36D96AB75222302B16C99FDF182A39CCA2EEFFB12BD4E91818D7082B"
+    },
+    {
+      "bytes": 3855,
+      "path": "candidates/commons/stacks/errata/r21/stable-units.json",
+      "sha256": "F6935760E681C1FF544C84ACB5FE6CCAA75D27169D390C893120CDAF326AD115"
+    },
+    {
+      "bytes": 1492039,
+      "path": "candidates/commons/stacks/errata/r22/authority/source/more-algebra.tex",
+      "sha256": "0106554339E8966FE04411B2AE9F9CD856B165849FEEF0C7BC37634819064708"
+    },
+    {
+      "bytes": 3105,
+      "path": "candidates/commons/stacks/errata/r22/decisions.jsonl",
+      "sha256": "AB75C36A44DC8164F9407A5451D158D545D8E507C20E3563CC45CAE9B90F782C"
+    },
+    {
+      "bytes": 69497,
+      "path": "candidates/commons/stacks/errata/r22/operation-spec.json",
+      "sha256": "B91126A23954A9A5AFE7133C95E4A30B76568A6C19C4D36D884785FFCF371914"
+    },
+    {
+      "bytes": 1492031,
+      "path": "candidates/commons/stacks/errata/r22/payload/more-algebra.tex",
+      "sha256": "7C6237F71A81886DD72B6F85BFF52182D653FB98668B0124DC10C05E93960623"
+    },
+    {
+      "bytes": 22567,
+      "path": "candidates/commons/stacks/errata/r22/replay/independent-review.json",
+      "sha256": "92A8F2DB6C4A587282400084E717427FCC463A3705704CB34DBB51AEF5841234"
+    },
+    {
+      "bytes": 101455,
+      "path": "candidates/commons/stacks/errata/r22/source-map.jsonl",
+      "sha256": "3BF2CE58A57262729F8BC35182FC59224F778A354D8B751BF7595DDF2464D2FC"
+    },
+    {
+      "bytes": 41554,
+      "path": "candidates/commons/stacks/errata/r22/stable-units.json",
+      "sha256": "0FC62E9D452704FEFA449F714F2770140F69AF73A4E91085E19C769C3A86BCA3"
+    },
+    {
+      "bytes": 1492039,
+      "path": "candidates/commons/stacks/errata/r23/authority/source/more-algebra.tex",
+      "sha256": "0106554339E8966FE04411B2AE9F9CD856B165849FEEF0C7BC37634819064708"
+    },
+    {
+      "bytes": 2326,
+      "path": "candidates/commons/stacks/errata/r23/decisions.jsonl",
+      "sha256": "F2FE760A53F25F31456EEA27C0D2772B3F972D9DCE7FC0C2E94DD120C807A1DD"
+    },
+    {
+      "bytes": 9004,
+      "path": "candidates/commons/stacks/errata/r23/operation-spec.json",
+      "sha256": "AC2FF915A9FADF81F84E9FAEC2A786ADBBFD691A1251C7A94B8BC49350B53625"
+    },
+    {
+      "bytes": 1492064,
+      "path": "candidates/commons/stacks/errata/r23/payload/more-algebra.tex",
+      "sha256": "4EE7CB6B4526ECD30B6C796D4264FC72922B3DB367CD05D9575134E53D129C48"
+    },
+    {
+      "bytes": 6154,
+      "path": "candidates/commons/stacks/errata/r23/replay/independent-review.json",
+      "sha256": "71BB6E50830CA066029062D46D00D28DD7CA5689E959809875E04AC04F28FAFC"
+    },
+    {
+      "bytes": 12537,
+      "path": "candidates/commons/stacks/errata/r23/source-map.jsonl",
+      "sha256": "39CD61D37155AEFF3BD0F0CA86A54F2A655576A47357CE461B80D1668B776898"
+    },
+    {
+      "bytes": 3884,
+      "path": "candidates/commons/stacks/errata/r23/stable-units.json",
+      "sha256": "56D40FDF8EAAE073698263285920808AAB0C17F817902FC4C8C657A82B03392B"
+    },
+    {
+      "bytes": 80778,
+      "path": "candidates/commons/stacks/errata/r24/authority/source/spaces-duality.tex",
+      "sha256": "B13FFE40A679F3E86EA82972ED7955DD4FBCFD0D98F954936B0E5FBF56F92C7D"
+    },
+    {
+      "bytes": 2238,
+      "path": "candidates/commons/stacks/errata/r24/decisions.jsonl",
+      "sha256": "EC26061E9AB1C2FE52E42AF554508D28C38E42693E2F46CED6C7D980B981DB12"
+    },
+    {
+      "bytes": 41328,
+      "path": "candidates/commons/stacks/errata/r24/operation-spec.json",
+      "sha256": "A19F56A8A875081DF5C5AD62036AC8284021EC23550BE281DD3FE0D0273F2D96"
+    },
+    {
+      "bytes": 80995,
+      "path": "candidates/commons/stacks/errata/r24/payload/spaces-duality.tex",
+      "sha256": "3CFCEF73EB9172CF69082FF07B9D84442DD5E545D8AD22917D5A694BAA57298E"
+    },
+    {
+      "bytes": 12275,
+      "path": "candidates/commons/stacks/errata/r24/replay/independent-review.json",
+      "sha256": "3DE71963C0CC3BCDFB0CDF00923944E96456AEAFFD1CC58F79CAF7D1D451F61C"
+    },
+    {
+      "bytes": 53471,
+      "path": "candidates/commons/stacks/errata/r24/source-map.jsonl",
+      "sha256": "9EB1B60529ACD1027C976932D7BA455473BD6E50A68D169788AC5FBC20531CD0"
+    },
+    {
+      "bytes": 16970,
+      "path": "candidates/commons/stacks/errata/r24/stable-units.json",
+      "sha256": "630BD3AFA594727B2B97B1103959D51BD6EB8E91FFD5B52BB639C798359DB4CC"
+    },
+    {
+      "bytes": 254362,
+      "path": "candidates/commons/stacks/errata/r25/authority/source/artin.tex",
+      "sha256": "EBA90A897B08EEBFF451E80925D13381B1A7F6AB883A34118733CD24CF061F47"
+    },
+    {
+      "bytes": 2348,
+      "path": "candidates/commons/stacks/errata/r25/decisions.jsonl",
+      "sha256": "DA7A710B4AC7EF931117ED081227A02CBF5C1AEBDAB71140C6CF8D814935D55D"
+    },
+    {
+      "bytes": 113668,
+      "path": "candidates/commons/stacks/errata/r25/operation-spec.json",
+      "sha256": "DE82ADC8963BB1768FD05025A929C51674188225BF1E856D35FB9B90E10764BB"
+    },
+    {
+      "bytes": 254488,
+      "path": "candidates/commons/stacks/errata/r25/payload/artin.tex",
+      "sha256": "F196752E6D872B3B888E57C7183B326287F1A241286991C075E4896996FD185B"
+    },
+    {
+      "bytes": 31041,
+      "path": "candidates/commons/stacks/errata/r25/replay/independent-review.json",
+      "sha256": "2FE3B0A646EADB4842C2A0992FED6F4C5E5235A2BD6C9E8D1882246277D7A70C"
+    },
+    {
+      "bytes": 160807,
+      "path": "candidates/commons/stacks/errata/r25/source-map.jsonl",
+      "sha256": "732B029137E6A921FA23AF21A81A0BCD99E42E040E700FCAD41AA1AD76132686"
+    },
+    {
+      "bytes": 52255,
+      "path": "candidates/commons/stacks/errata/r25/stable-units.json",
+      "sha256": "F189B5AE2AA33E3E424C758B86984E0301B5383810C9DC2041B2D4ED7115C1B8"
+    },
+    {
+      "bytes": 134660,
+      "path": "candidates/commons/stacks/errata/r26/authority/source/smoothing.tex",
+      "sha256": "FD28CF874BB7DAD3C5C5FF03314D1C83701613A8A98730A99B9CA7A4BCFE6068"
+    },
+    {
+      "bytes": 2224,
+      "path": "candidates/commons/stacks/errata/r26/decisions.jsonl",
+      "sha256": "46BA688CD4052C613A205CE1EE01C7E11C1B6D89809A85572DC5BF838F2F4F0B"
+    },
+    {
+      "bytes": 30390,
+      "path": "candidates/commons/stacks/errata/r26/operation-spec.json",
+      "sha256": "2DEB1FAA28E5C1C29CED0203F6EF4F8151097382D0633FB55D695653D6B2370D"
+    },
+    {
+      "bytes": 134839,
+      "path": "candidates/commons/stacks/errata/r26/payload/smoothing.tex",
+      "sha256": "D5C5F0A6099ED011122BC90E836F8563E4F1496A30700CEBC1928E37812B08F0"
+    },
+    {
+      "bytes": 9787,
+      "path": "candidates/commons/stacks/errata/r26/replay/independent-review.json",
+      "sha256": "EEB22D2DC116C02DF5F9BCF9228A5177FB41672C567D0EC69C6BC08D501FF043"
+    },
+    {
+      "bytes": 36769,
+      "path": "candidates/commons/stacks/errata/r26/source-map.jsonl",
+      "sha256": "46C29F2D0DFDC1081FFFDA61757DFCEB4E3036881A9D2D272B5ED9D67626B9BF"
+    },
+    {
+      "bytes": 11040,
+      "path": "candidates/commons/stacks/errata/r26/stable-units.json",
+      "sha256": "9653F6E3DE8FA4A3E745B00250CFEAAB9D63D9884A0FBA296C8AF1A8C96F1DF5"
+    },
+    {
+      "bytes": 204133,
+      "path": "candidates/commons/stacks/errata/r27/authority/source/modules.tex",
+      "sha256": "7BD3E9E096717EF6FD458492D8AD91FC9FFE428CFD7DD80E386FAE377BB7CB0D"
+    },
+    {
+      "bytes": 1313,
+      "path": "candidates/commons/stacks/errata/r27/decisions.jsonl",
+      "sha256": "781EFE43BFC76E2369137B57833D76F177D1503D683F91FB9B0F056F32918CB6"
+    },
+    {
+      "bytes": 11145,
+      "path": "candidates/commons/stacks/errata/r27/operation-spec.json",
+      "sha256": "B04FC4D1EDC8E69D5F30086EAA3DD5D15222B61F66047EDA9631C292CAF14F9C"
+    },
+    {
+      "bytes": 204157,
+      "path": "candidates/commons/stacks/errata/r27/payload/modules.tex",
+      "sha256": "59C250D528258DCB8B2EB88234CA88AB48C1F5AB073EEA4618703F96BED4CE6B"
+    },
+    {
+      "bytes": 6629,
+      "path": "candidates/commons/stacks/errata/r27/replay/independent-review.json",
+      "sha256": "8D62F79E9E6CB44A0FD4E69B9D7D64CF41DDDD77DB0D2660436906078AB68C56"
+    },
+    {
+      "bytes": 16739,
+      "path": "candidates/commons/stacks/errata/r27/source-map.jsonl",
+      "sha256": "63FEA7A31C3A687A66847FE2AA2A675B3E4B6099390FEF01975B07C4B36C0F2A"
+    },
+    {
+      "bytes": 5769,
+      "path": "candidates/commons/stacks/errata/r27/stable-units.json",
+      "sha256": "E8A76D39648A05C7A07B4842D45A9A272213FB328492931D22D258CFE60ABDEE"
+    },
+    {
+      "bytes": 134660,
+      "path": "candidates/commons/stacks/errata/r28/authority/source/smoothing.tex",
+      "sha256": "FD28CF874BB7DAD3C5C5FF03314D1C83701613A8A98730A99B9CA7A4BCFE6068"
+    },
+    {
+      "bytes": 1425,
+      "path": "candidates/commons/stacks/errata/r28/decisions.jsonl",
+      "sha256": "BAC33ADCA7A4FA6EA0E4A73B8AF65E2A5A316B8C84373D0D4D6005C7DDA47289"
+    },
+    {
+      "bytes": 2074,
+      "path": "candidates/commons/stacks/errata/r28/operation-spec.json",
+      "sha256": "4C00B1A55F8C990018583DCB397BF865526757334A57308AE83B73A720F0084C"
+    },
+    {
+      "bytes": 134672,
+      "path": "candidates/commons/stacks/errata/r28/payload/smoothing.tex",
+      "sha256": "7C475ABEFC3CF2F3F2534F0CA69B8D8BB726BF88195CB50FE849DF99B7D0CD4A"
+    },
+    {
+      "bytes": 3184,
+      "path": "candidates/commons/stacks/errata/r28/replay/independent-review.json",
+      "sha256": "2E15F87CD859883219C81AB56A2DCB7D00F0C84B619615533BEF62805C5C0EA0"
+    },
+    {
+      "bytes": 1770,
+      "path": "candidates/commons/stacks/errata/r28/source-map.jsonl",
+      "sha256": "7D878BB15EEBB6BAC417026613B719A5BCDBBDC9FE299654A9E7FAA7DF74198B"
+    },
+    {
+      "bytes": 903,
+      "path": "candidates/commons/stacks/errata/r28/stable-units.json",
+      "sha256": "9B4B5F7EF3FCE786D365FB0E19A576054D5E5523EA43CDDB2B3FFE457C8703D6"
+    },
+    {
+      "bytes": 312143,
+      "path": "candidates/commons/stacks/errata/r29/authority/source/sites-modules.tex",
+      "sha256": "B7CD92AFF9DF33F05EEAB72C4B55E8AA33F3AEBD947FC53160E87CA80DFFB245"
+    },
+    {
+      "bytes": 2296,
+      "path": "candidates/commons/stacks/errata/r29/decisions.jsonl",
+      "sha256": "A0AE1C4AD0431C529A9293C8683233FECE15795001E1365E2BFFE047F6AAFE03"
+    },
+    {
+      "bytes": 39214,
+      "path": "candidates/commons/stacks/errata/r29/operation-spec.json",
+      "sha256": "0E50039CA568836365D345A532F9F488D90D5CEA782CB282E4E075DD281A49CA"
+    },
+    {
+      "bytes": 312179,
+      "path": "candidates/commons/stacks/errata/r29/payload/sites-modules.tex",
+      "sha256": "B097799584BD00B3D8046F62A0A56FCFE045516FD04D130C2A4C547CE3BB6C19"
+    },
+    {
+      "bytes": 13135,
+      "path": "candidates/commons/stacks/errata/r29/replay/independent-review.json",
+      "sha256": "52B6E03A66DE532697B8660248D1564DAB633964B4604F6C3142DC01FEF3050F"
+    },
+    {
+      "bytes": 59096,
+      "path": "candidates/commons/stacks/errata/r29/source-map.jsonl",
+      "sha256": "5BCB5BB05EDA04ED69EEE939FD23EC0678928248E31AE018670287C008733799"
+    },
+    {
+      "bytes": 15281,
+      "path": "candidates/commons/stacks/errata/r29/stable-units.json",
+      "sha256": "A14EFA336AC20023FC7C078BAD15798AB658C063C06573E48319623E94EE584D"
+    },
+    {
+      "bytes": 350957,
+      "path": "candidates/commons/stacks/errata/r3/authority/source/categories.tex",
+      "sha256": "62F7611AF4C3FEEBD041DB4728B42C7112004CFBB9FA5ECB643C6F5D90DB3F25"
+    },
+    {
+      "bytes": 46628,
+      "path": "candidates/commons/stacks/errata/r3/authority/source/sets.tex",
+      "sha256": "9BCC55E7F11CF36B0665AE549D5BA76BE6A0EDD00F7FCA36A567E367099603F9"
+    },
+    {
+      "bytes": 237731,
+      "path": "candidates/commons/stacks/errata/r3/authority/source/topology.tex",
+      "sha256": "C6BAC8DCF8AD96DC47416BF34CB45BA4A10B894E40D67D3E1FA68D8EF0D9F872"
+    },
+    {
+      "bytes": 3516,
+      "path": "candidates/commons/stacks/errata/r3/decisions.jsonl",
+      "sha256": "964AB23B1731EB946B628F00ED9E394580F09CF0D49CA61405C29853A562719E"
+    },
+    {
+      "bytes": 350966,
+      "path": "candidates/commons/stacks/errata/r3/payload/categories.tex",
+      "sha256": "124F381C9DD01898B8DBB3969B7771190B64E8B2B9CE73E24E7DD1FB0727E2C1"
+    },
+    {
+      "bytes": 46831,
+      "path": "candidates/commons/stacks/errata/r3/payload/sets.tex",
+      "sha256": "A4D8072BDFFEEF9B8EF1D058499761DA1E1F31EABC11BB04B8EA37D04B866D41"
+    },
+    {
+      "bytes": 237823,
+      "path": "candidates/commons/stacks/errata/r3/payload/topology.tex",
+      "sha256": "67115451F19CE981FD591F77E6CA16A4DE64A20C71105D2E5215E41FD8F8EB8D"
+    },
+    {
+      "bytes": 22227,
+      "path": "candidates/commons/stacks/errata/r3/replay/independent-review.json",
+      "sha256": "6438F665BF977F460FD9A5F13747D1076C0388C84ABCB27EAC19D319043DE6CC"
+    },
+    {
+      "bytes": 11574,
+      "path": "candidates/commons/stacks/errata/r3/source-map.jsonl",
+      "sha256": "65F1CE7CD5C39DF836C059EEB48279A2686A7AE36777914323504B8CA6186F1C"
+    },
+    {
+      "bytes": 5903,
+      "path": "candidates/commons/stacks/errata/r3/stable-units.json",
+      "sha256": "F29F90BD0D372120E5037926E6C7D554E39E2DF65488768EA710C6C6974F644F"
+    },
+    {
+      "bytes": 105120,
+      "path": "candidates/commons/stacks/errata/r30/authority/source/injectives.tex",
+      "sha256": "B1367E48800C53D72C495D386EEF2D4D6C400652F9D00E69F664F17418D26520"
+    },
+    {
+      "bytes": 1335,
+      "path": "candidates/commons/stacks/errata/r30/decisions.jsonl",
+      "sha256": "165E6D93A0452F7BA76BE65017DCC1EE410983DAADF25F500A77A70896F3398C"
+    },
+    {
+      "bytes": 34533,
+      "path": "candidates/commons/stacks/errata/r30/operation-spec.json",
+      "sha256": "53E7FEFF2423BAEE25B9D27A6EB61D016FC835E138C98585A71C0B66E71EDEB0"
+    },
+    {
+      "bytes": 105225,
+      "path": "candidates/commons/stacks/errata/r30/payload/injectives.tex",
+      "sha256": "BDC721593BE0B491334C707B371A2EECD1787787903A71E059721BDB66C5AC04"
+    },
+    {
+      "bytes": 12963,
+      "path": "candidates/commons/stacks/errata/r30/replay/independent-review.json",
+      "sha256": "082FF5BDB58B61EAC3281CE7AACF936392199F2724DE4E0147B44645FCBBC797"
+    },
+    {
+      "bytes": 54631,
+      "path": "candidates/commons/stacks/errata/r30/source-map.jsonl",
+      "sha256": "C74B4FF40E3D51A9030782F598DF04FDCAD5AEBED2CE21EE9BA751FEA6675854"
+    },
+    {
+      "bytes": 14711,
+      "path": "candidates/commons/stacks/errata/r30/stable-units.json",
+      "sha256": "138D72ECC148DA18FF8F5F2248B0EA82944108DFBDE67CD8E81E888B87F31EFE"
+    },
+    {
+      "bytes": 312143,
+      "path": "candidates/commons/stacks/errata/r31/authority/source/sites-modules.tex",
+      "sha256": "B7CD92AFF9DF33F05EEAB72C4B55E8AA33F3AEBD947FC53160E87CA80DFFB245"
+    },
+    {
+      "bytes": 1965,
+      "path": "candidates/commons/stacks/errata/r31/decisions.jsonl",
+      "sha256": "57B4DF381F7029F702FF951E43A34AD11529D3C2D1F8F98CDA48AAF7C95B6B13"
+    },
+    {
+      "bytes": 1703,
+      "path": "candidates/commons/stacks/errata/r31/operation-spec.json",
+      "sha256": "F9D70111FD14EB9C55D4745B204A7F531C6B375A6F4E9F917B617017CE6C71A6"
+    },
+    {
+      "bytes": 312133,
+      "path": "candidates/commons/stacks/errata/r31/payload/sites-modules.tex",
+      "sha256": "1B43CA0988A0EA3E53407B1A2596919A5E47B84B1347DC1EAB13AE77E0065A27"
+    },
+    {
+      "bytes": 4518,
+      "path": "candidates/commons/stacks/errata/r31/replay/independent-review.json",
+      "sha256": "251ADCD56BA164FFAFB0E5993CFB89C2956A74E65AC23ED75F39684082437E58"
+    },
+    {
+      "bytes": 2345,
+      "path": "candidates/commons/stacks/errata/r31/source-map.jsonl",
+      "sha256": "97FA0D3600B9BE9A1EE54E0A5956FE70266FD27A1D891C0DF3CF69CDEED8B018"
+    },
+    {
+      "bytes": 695,
+      "path": "candidates/commons/stacks/errata/r31/stable-units.json",
+      "sha256": "8E458B0AAAA51421ECEAD66815BF3E125CEAA80594BA7F9121D9030BF976363C"
+    },
+    {
+      "bytes": 1771230,
+      "path": "candidates/commons/stacks/errata/r32/authority/source/algebra.tex",
+      "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+    },
+    {
+      "bytes": 350957,
+      "path": "candidates/commons/stacks/errata/r32/authority/source/categories.tex",
+      "sha256": "62F7611AF4C3FEEBD041DB4728B42C7112004CFBB9FA5ECB643C6F5D90DB3F25"
+    },
+    {
+      "bytes": 144442,
+      "path": "candidates/commons/stacks/errata/r32/authority/source/fields.tex",
+      "sha256": "87E07F0373DC60CFC284E2F19078BC9BC7AB0B89C40EEF83941F6C38C765C549"
+    },
+    {
+      "bytes": 1308,
+      "path": "candidates/commons/stacks/errata/r32/decisions.jsonl",
+      "sha256": "270D4C27442A038B01AC3340539B18B57EB26075F25EB37A0CC0E7B412DCDA48"
+    },
+    {
+      "bytes": 130565,
+      "path": "candidates/commons/stacks/errata/r32/operation-spec.json",
+      "sha256": "5A59BBA91E2B6B29D03A3CCB91A3F16BA641925BEB2CCE688D8650274081495B"
+    },
+    {
+      "bytes": 1771567,
+      "path": "candidates/commons/stacks/errata/r32/payload/algebra.tex",
+      "sha256": "7A873060EBEB4CC91D30B973B94D1427C7DFD3D71532247F8AFADF2842E902A1"
+    },
+    {
+      "bytes": 350945,
+      "path": "candidates/commons/stacks/errata/r32/payload/categories.tex",
+      "sha256": "DCDD502B5EF1644C2DD218013B3A405310977D520DE8D6100BAB9E484C076C9C"
+    },
+    {
+      "bytes": 144567,
+      "path": "candidates/commons/stacks/errata/r32/payload/fields.tex",
+      "sha256": "0B263DFE4E10EAAE84A317703CA5DE47CED45AAD67518726B06CAF340DD4D0FA"
+    },
+    {
+      "bytes": 6007,
+      "path": "candidates/commons/stacks/errata/r32/replay/independent-review.json",
+      "sha256": "0152368F81690A5AF8E185D2DEBABCD0FDC7D14E078024C409469208830BFFB8"
+    },
+    {
+      "bytes": 176790,
+      "path": "candidates/commons/stacks/errata/r32/source-map.jsonl",
+      "sha256": "C3F08D65103C47ACFD503933114321611D8C1A2A9993F966AA5F03B155AA6F22"
+    },
+    {
+      "bytes": 37373,
+      "path": "candidates/commons/stacks/errata/r32/stable-units.json",
+      "sha256": "2402F62A6BDB520549F0A3F129D46BF2B66F815948E35499DB885346F3094EA3"
+    },
+    {
+      "bytes": 184841,
+      "path": "candidates/commons/stacks/errata/r4/authority/source/sheaves.tex",
+      "sha256": "AC4F9EDC7DB85E66329806EC9EA42816187A469772844BAEA663E1C9A9F00B38"
+    },
+    {
+      "bytes": 424197,
+      "path": "candidates/commons/stacks/errata/r4/authority/source/sites.tex",
+      "sha256": "07AE4690C2D8EB6873837D3D14A37F07408BB14F9E0BE6077ED570C220B1845D"
+    },
+    {
+      "bytes": 237731,
+      "path": "candidates/commons/stacks/errata/r4/authority/source/topology.tex",
+      "sha256": "C6BAC8DCF8AD96DC47416BF34CB45BA4A10B894E40D67D3E1FA68D8EF0D9F872"
+    },
+    {
+      "bytes": 2246,
+      "path": "candidates/commons/stacks/errata/r4/decisions.jsonl",
+      "sha256": "1149EB42D548B1B17EE2BE0F3A753527932A22BC7B6F8ABC78B7CB651E4CA14B"
+    },
+    {
+      "bytes": 185216,
+      "path": "candidates/commons/stacks/errata/r4/payload/sheaves.tex",
+      "sha256": "4BE9C5E7F7E5DD7E66980439856D1385188AE49CB7236822CD88259534837E51"
+    },
+    {
+      "bytes": 424285,
+      "path": "candidates/commons/stacks/errata/r4/payload/sites.tex",
+      "sha256": "42A020E458451BDD9EC704813D50A435DC47F2B6778830AF49FC22FE57308DE4"
+    },
+    {
+      "bytes": 237976,
+      "path": "candidates/commons/stacks/errata/r4/payload/topology.tex",
+      "sha256": "3930165144FC253AD47EB55B6E3FD81AD9996D9C4A8FFFB515116988492DCB73"
+    },
+    {
+      "bytes": 19412,
+      "path": "candidates/commons/stacks/errata/r4/replay/independent-review.json",
+      "sha256": "41803AC574F3D7F85C1B0CDF99386BF3ACC9D18E4D500AD3A7CB6CF3EAABC3CD"
+    },
+    {
+      "bytes": 202417,
+      "path": "candidates/commons/stacks/errata/r4/source-map.jsonl",
+      "sha256": "059EF47079B1E798A9C85DE69E093CDFDC9A792E1F56B0A6C285311A3B5DE3ED"
+    },
+    {
+      "bytes": 49427,
+      "path": "candidates/commons/stacks/errata/r4/stable-units.json",
+      "sha256": "6A6DDB05377864E2DCA0AB274D94F911ADF511CA3BACD242D66735B0F11E7B0A"
+    },
+    {
+      "bytes": 424197,
+      "path": "candidates/commons/stacks/errata/r5/authority/source/sites.tex",
+      "sha256": "07AE4690C2D8EB6873837D3D14A37F07408BB14F9E0BE6077ED570C220B1845D"
+    },
+    {
+      "bytes": 1886,
+      "path": "candidates/commons/stacks/errata/r5/decisions.jsonl",
+      "sha256": "9A1A8E02C9C6287CCC940ED263FB1D3E102F2CDC1BD8551C7E7BC380CBE12987"
+    },
+    {
+      "bytes": 424291,
+      "path": "candidates/commons/stacks/errata/r5/payload/sites.tex",
+      "sha256": "9B11C7525C7A23CD8732FDC204E5F62B66892969B08087CE26EC194F85073499"
+    },
+    {
+      "bytes": 21082,
+      "path": "candidates/commons/stacks/errata/r5/replay/independent-review.json",
+      "sha256": "8CA6ECE20B24931CA170842C73D1E7C77DED11545C2808D8D3C6792EE4A63595"
+    },
+    {
+      "bytes": 40267,
+      "path": "candidates/commons/stacks/errata/r5/source-map.jsonl",
+      "sha256": "DA0CCE36BA49B14F95715BEC1BB29EAB831EB096F0088E0AFEB7921479971F5E"
+    },
+    {
+      "bytes": 12272,
+      "path": "candidates/commons/stacks/errata/r5/stable-units.json",
+      "sha256": "7658414F1CA208223675BCFE9BF291EE169BC7691A7A0B862DEFC8C21E718B54"
+    },
+    {
+      "bytes": 1771230,
+      "path": "candidates/commons/stacks/errata/r6/authority/source/algebra.tex",
+      "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+    },
+    {
+      "bytes": 2220,
+      "path": "candidates/commons/stacks/errata/r6/decisions.jsonl",
+      "sha256": "EAC6FD2D522736963D512C5DE3301435A4ECDEBAA2BE06D710912EA77B23CB00"
+    },
+    {
+      "bytes": 32277,
+      "path": "candidates/commons/stacks/errata/r6/operation-spec.json",
+      "sha256": "3F6993F9794805A6E69B41F74DDECB39A6EB27ABDAA155AEFFF29F7B6D658DDD"
+    },
+    {
+      "bytes": 1772436,
+      "path": "candidates/commons/stacks/errata/r6/payload/algebra.tex",
+      "sha256": "F1A116C1EDE7E119DB23DAD025B94429802F1419809D0020CD64444A5E0E69A9"
+    },
+    {
+      "bytes": 9019,
+      "path": "candidates/commons/stacks/errata/r6/replay/independent-review.json",
+      "sha256": "F1BAB5B9F4663DAE6B90110B45D824D16F205D12F54E242D50F0BD777323E653"
+    },
+    {
+      "bytes": 51156,
+      "path": "candidates/commons/stacks/errata/r6/source-map.jsonl",
+      "sha256": "9E911476669D7220C0DDF96F8E0A02E2CFC58948AE30397EEEE5E0545C36FEF9"
+    },
+    {
+      "bytes": 13258,
+      "path": "candidates/commons/stacks/errata/r6/stable-units.json",
+      "sha256": "A9CD3A593F31EC1879FA0C111F55A738FD35150B016481E494F947AB5FE81560"
+    },
+    {
+      "bytes": 1771230,
+      "path": "candidates/commons/stacks/errata/r7/authority/source/algebra.tex",
+      "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+    },
+    {
+      "bytes": 1874,
+      "path": "candidates/commons/stacks/errata/r7/decisions.jsonl",
+      "sha256": "5F43687F49C802409EE9D8E1828EECCDB874D86CB088D9B51B04AB8D118FEBC0"
+    },
+    {
+      "bytes": 14423,
+      "path": "candidates/commons/stacks/errata/r7/operation-spec.json",
+      "sha256": "B69B60EBA1B40F361699183194AF2A099251C05AC792C1B4F5B70B76439B6964"
+    },
+    {
+      "bytes": 1771471,
+      "path": "candidates/commons/stacks/errata/r7/payload/algebra.tex",
+      "sha256": "5EDC2F8A8F7CDBB072AF2B3211D7988EA83A8F9686BBD4C45B09FCCB0F157FA2"
+    },
+    {
+      "bytes": 52975,
+      "path": "candidates/commons/stacks/errata/r7/replay/independent-review.json",
+      "sha256": "0BF927600CE395DE24CB2B730552B6374B3265FE80AD5CEB7844A5E23E1C9C88"
+    },
+    {
+      "bytes": 21839,
+      "path": "candidates/commons/stacks/errata/r7/source-map.jsonl",
+      "sha256": "EC6B1AFC32DD8FDFAFEE741BB19918E018F8C1C86AA572973072A5FFF1CB79E1"
+    },
+    {
+      "bytes": 5396,
+      "path": "candidates/commons/stacks/errata/r7/stable-units.json",
+      "sha256": "B1E9C82C10D9803B7FB3BE4C533B2833340670309BAC2E10B5EFDCB3CB5F4C04"
+    },
+    {
+      "bytes": 1771230,
+      "path": "candidates/commons/stacks/errata/r8/authority/source/algebra.tex",
+      "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+    },
+    {
+      "bytes": 2333,
+      "path": "candidates/commons/stacks/errata/r8/decisions.jsonl",
+      "sha256": "D0BCF20BBB92DD9D2E31CDC250C6CF49E78BC1CA811886933F2D6C69440B8AA7"
+    },
+    {
+      "bytes": 11401,
+      "path": "candidates/commons/stacks/errata/r8/operation-spec.json",
+      "sha256": "62CDCC912BC2EE6BE66854C2B6B814604E2264F0AE05E5C8D78CD0428BAD9A53"
+    },
+    {
+      "bytes": 1771798,
+      "path": "candidates/commons/stacks/errata/r8/payload/algebra.tex",
+      "sha256": "B3CCC3CB876B1A7790190F762B9B3B28915CBD03182C43A833EB0D8D3CD698B6"
+    },
+    {
+      "bytes": 13047,
+      "path": "candidates/commons/stacks/errata/r8/replay/independent-review.json",
+      "sha256": "7F349E256D71182F5FD57D56F0633BE0A36154C1474E673C47C6672348092631"
+    },
+    {
+      "bytes": 17379,
+      "path": "candidates/commons/stacks/errata/r8/source-map.jsonl",
+      "sha256": "6CF46A64569961D983805AD20672F66BC2245A71E46CC05E1908FBF5A25C65D6"
+    },
+    {
+      "bytes": 3935,
+      "path": "candidates/commons/stacks/errata/r8/stable-units.json",
+      "sha256": "492F163FC980059BA7E475A6FAC503FFF9ABAE4C677BB70E297798300C0AE760"
+    },
+    {
+      "bytes": 1771230,
+      "path": "candidates/commons/stacks/errata/r9/authority/source/algebra.tex",
+      "sha256": "FA8BB92E58A4F78A2BD01B3B6A4A87DE0A0D279F5DD90641B574DD5FBFFFA4F3"
+    },
+    {
+      "bytes": 1995,
+      "path": "candidates/commons/stacks/errata/r9/decisions.jsonl",
+      "sha256": "D2D31854290F9132C6F12A3735C185A8971C03D0F9F2D59E8C259B5FABA32B1A"
+    },
+    {
+      "bytes": 28832,
+      "path": "candidates/commons/stacks/errata/r9/operation-spec.json",
+      "sha256": "ED11D1D4BED2B8645E272FB1188E43AE7377670862E0134DA9EAEAAF87FCF6C1"
+    },
+    {
+      "bytes": 1773235,
+      "path": "candidates/commons/stacks/errata/r9/payload/algebra.tex",
+      "sha256": "05E06B3067D2372418D8CF4ACFE08D61FE9972FD3A5FCAE89E4549B372F9F660"
+    },
+    {
+      "bytes": 10531,
+      "path": "candidates/commons/stacks/errata/r9/replay/independent-review.json",
+      "sha256": "B80495B6B84EECB044B230EE87CB19908A8B455317072DDE9054493DB1CDA579"
+    },
+    {
+      "bytes": 43046,
+      "path": "candidates/commons/stacks/errata/r9/source-map.jsonl",
+      "sha256": "48575EFB3F0308AA3CFB2CE89BF907A4D1D7861AA8A6E5EFCD5FC7139B60C630"
+    },
+    {
+      "bytes": 9881,
+      "path": "candidates/commons/stacks/errata/r9/stable-units.json",
+      "sha256": "79ECEF1DA66C799E4D47B5E25F15784927D9662BF71CDB50E80B12FFDA8C7F8D"
+    }
+  ],
+  "official_upstream": {
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "repository": "https://github.com/stacks/stacks-project"
+  },
+  "outputs": [
+    {
+      "bytes": 1703952,
+      "path": "CHANGES_FROM_UPSTREAM.md",
+      "sha256": "01F7716E0162D10BCB934FFE2DD39D834177C2456DA9825FD25FD074497C591F"
+    },
+    {
+      "bytes": 2815967,
+      "path": "ai-integrated/changes/index.html",
+      "sha256": "7E18DEF0BA1DF4BBD1B3F3D6768DE1A9FE3B46CA96562E7E577523B498C18C71"
+    }
+  ],
+  "privacy": {
+    "absolute_local_paths_in_receipt": false,
+    "credentials_in_receipt": false
+  },
+  "registry": {
+    "errata_overlay_count": 32,
+    "excluded_non_errata_overlays": [
+      "stacks-verdier-a04446e-1-2-13-r1"
+    ],
+    "path": "ai-integrated/registry/overlays.json",
+    "sha256": "BB386A08B91DFE7065CDA250162756A74D2DCFDC2BF2540E90F11918B3F32A06"
+  },
+  "schema": "unofficial-ai-integrated-stacks-changes-from-upstream-validation/v1",
+  "scope": "reader-facing admitted Stacks errata comparison; mathematical TeX unchanged",
+  "state": "PASS",
+  "validation": {
+    "deterministic_regeneration": "PASS",
+    "exact_operation_to_payload_replay": "PASS",
+    "exact_utf8_preimage_and_hash_checks": "PASS",
+    "legacy_authority_payload_reconstruction": "PASS",
+    "manifest_evidence_hash_bindings": "PASS",
+    "offline_html_dependencies": "PASS",
+    "registry_manifest_hash_bindings": "PASS",
+    "registry_stable_id_closure": "PASS"
+  }
+}

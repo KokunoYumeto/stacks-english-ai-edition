@@ -15,17 +15,22 @@ in each corpus dossier and in the machine-readable registry.
 | Tôhoku | Dossier-only closure through r71 | The sealed successor records 1,066 decisions, 679 decided units, 33 resolved source issues, and zero remaining gap-class dispositions. It explicitly changed no live TeX, PDF, canonical source, or cursor. |
 | GAGA | Root chapter composed through r3; corpus review closed | All 126 source units are classified and all 79 substantive units have reviewed decisions. The live 23-page English chapter and deterministic mapping replay pass. |
 | FGA | Root additions composed and notation-normalized; corpus review closed | The combined source contains the normalized FGA additions and post-merge dossier. The closure covers 1,253 units, 1,612 term links, and 579 append-only decisions; the recorded fixed-point Moduli build is 83 pages. |
-| EGA | Partial root-source composition; direct-source review active | Selected local additions are present in root TeX. Complete English discovery and diplomatic French edition trees remain separate read-only inputs. Review is complete through EGA I §6.4.13 and continues at §6.5.1. |
+| EGA | Partial root-source composition; direct-source review active | Selected local additions are present in root TeX. Complete English discovery and diplomatic French edition trees remain separate read-only inputs. Review is public through EGA I §6.6.3 and continues at §6.6.4. |
 
-The current EGA semantic checkpoint is public: §6.4.1–§6.4.13 were source-bound
-and routed without changing root TeX or any PDF. GitHub tag
-[`ega-i-6.4-semantic-2026-08-29`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.4-semantic-2026-08-29)
-and Zenodo version DOI [`10.5281/zenodo.22161051`](https://doi.org/10.5281/zenodo.22161051)
-preserve six byte-matched assets totaling 174,783,585 bytes per host. R28 remains
-historically preserved, while R32 is the latest errata release; the next EGA
-cursor is §6.5.1.
+The current EGA semantic checkpoint is public through §6.6.3 and is
+source-bound without changing root TeX or any PDF. GitHub tag
+[`ega-i-6.6.3-semantic-2026-08-30`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.6.3-semantic-2026-08-30)
+and Zenodo version DOI [`10.5281/zenodo.22177421`](https://doi.org/10.5281/zenodo.22177421)
+preserve six byte-matched assets totaling 182,415,449 bytes per host. R32 is
+the latest errata release; the next EGA cursor is §6.6.4.
 
 ## Errata state
+
+The generated [`Changes from Upstream`](CHANGES_FROM_UPSTREAM.md) index and
+self-contained [`offline change browser`](ai-integrated/changes/index.html)
+place the pinned original and integrated replacement side by side for all
+1,023 admitted errata IDs, with direct evidence links and no annotations in
+the mathematical TeX.
 
 R31 and R32 are composed and validated in registry order. The live registry has
 **33 overlays / 1,035 stable IDs** and the cumulative v2 replay contains **1,159
