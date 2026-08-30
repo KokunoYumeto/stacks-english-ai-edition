@@ -1,0 +1,111 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-visual-qa/v1",
+  "status": "PASS",
+  "created_utc": "2026-08-30T23:29:58Z",
+  "source": {
+    "commit": "1c90a67eb42de28884be05abd8fb58f781aed7db",
+    "tree": "3c292f9a4b94162ede69d2633b1272b057a498c3"
+  },
+  "build_receipt": {
+    "path": "validation/stacks-errata-a04446e-r33-build-2026-08-30.json",
+    "bytes": 26609,
+    "sha256": "CA2D54EE97EC921DA50A5FF22D4CAFE416B9BA4077773032604361E87FDB39C2",
+    "status": "PASS",
+    "global_fixed_point_sweep": 4
+  },
+  "scope": {
+    "affected_chapters": [
+      "spaces-morphisms"
+    ],
+    "full_page_render_count": 116,
+    "full_page_contact_sheet_review_count": 116,
+    "high_resolution_locus_page_count": 5,
+    "high_resolution_locus_pages": {
+      "spaces-morphisms": [
+        105,
+        106,
+        107,
+        108,
+        109
+      ]
+    }
+  },
+  "artifacts": {
+    "spaces-morphisms": {
+      "pdf": "spaces-morphisms.pdf",
+      "bytes": 1129136,
+      "pages": 116,
+      "sha256": "62BF384D8106E77D0018FE7AAB4DA7C83CC66B823DA3F06DBE2FD9AA1CD51B5A",
+      "encrypted": false,
+      "media_box_points": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      "render_dimensions_pixels": [
+        816,
+        1056
+      ],
+      "pages_without_ink": 0,
+      "minimum_ink_pixels_below_245": 35325,
+      "duplicate_render_hashes": 0
+    }
+  },
+  "render_protocol": {
+    "renderer": "Poppler pdftoppm 26.05.0",
+    "full_page_dpi": 96,
+    "full_page_layout": "ordered 4-by-4 contact sheets",
+    "contact_sheet_count": 8,
+    "high_resolution_dpi": 180,
+    "high_resolution_selection": "all five unique pages mapped from the seven manifest-bound R33 operation loci",
+    "render_intermediates_published": false
+  },
+  "source_page_mapping": {
+    "path": "validation/stacks-errata-a04446e-r33-source-page-map-2026-08-30.json",
+    "bytes": 4484,
+    "sha256": "501D361D2CB6B3C725014DAD9E8E2EC93A69EFD0F148A244F5CFB80B363C3049",
+    "operation_count": 7,
+    "mapping_failures": 0
+  },
+  "private_render_evidence": {
+    "published": false,
+    "manifests": {
+      "spaces-morphisms": {
+        "bytes": 39028,
+        "sha256": "D037AB86D092420EAA52D9217D24416E917E54B6BA3B4293DF28ABC9F7FF1BB8"
+      }
+    }
+  },
+  "checks": {
+    "all_pages_rendered": true,
+    "all_pages_manually_inspected": true,
+    "all_manifest_bound_locus_pages_inspected_at_high_resolution": true,
+    "page_dimensions_consistent": true,
+    "headers_and_page_numbers_consistent": true,
+    "text_and_formulas_legible": true,
+    "diagrams_intact": true,
+    "clipped_content": 0,
+    "overlapping_content": 0,
+    "blank_pages": 0,
+    "corrupted_pages": 0,
+    "missing_or_unreadable_glyphs": 0,
+    "broken_diagrams": 0,
+    "r33_spaces_morphisms_correction_loci_legible": true,
+    "r33_codimension_target_correction_visible": true,
+    "r33_normalization_variables_correction_visible": true,
+    "r33_declarative_clause_correction_visible": true,
+    "r33_spelling_correction_visible": true,
+    "r33_named_morphism_correction_visible": true,
+    "r33_quotient_grouping_correction_visible": true,
+    "r33_introductory_comma_correction_visible": true,
+    "five_duplicate_locale_aliases_not_applied_twice": true,
+    "rejected_simplicial_007_parenthesis_preserved": true
+  },
+  "accessibility": {
+    "struct_tree_root_present": false,
+    "mark_info_present": false,
+    "note": "The standalone chapter PDF is untagged; this retained accessibility limitation is not a visual-rendering failure."
+  },
+  "conclusion": "All 116 pages of the affected cumulative spaces-morphisms PDF passed ordered contact-sheet review. All five unique manifest-bound correction-sensitive pages passed 180-DPI inspection with all seven corrected passages legible and no clipping, overlap, blank page, corrupt render, unreadable glyph, or broken diagram."
+}
