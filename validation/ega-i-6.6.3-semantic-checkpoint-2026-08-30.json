@@ -1,0 +1,189 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-ega-semantic-checkpoint/v1",
+  "status": "PASS",
+  "created_utc": "2026-08-30T13:32:03Z",
+  "repository": "KokunoYumeto/unofficial-ai-integrated-stacks-project",
+  "branch": "codex/ega-i-6-6-3-public-20260830",
+  "worktree": "worktrees/unofficial-ai-stacks-ega-663-public-20260830",
+  "base_commit": "4ef4ed5101b6140326c41d731ca6fb020c2c49f2",
+  "base_tree": "019fa23f06c1d4eb86924ddb9faa9b302927da25",
+  "initial_content_commit": "3a606e4aa777c2e1f351fa1db3dec9999a540ae3",
+  "initial_content_tree": "8cd6d5351966c66bf0ca9846ad912149c72a2b75",
+  "content_commit": "85024a5e3456cadc79c6cde67bf1fcbbc09c48cb",
+  "content_tree": "2e5654859b2409da2b05f3a84d24c5862bf1c8ab",
+  "scope": {
+    "closed": "EGA I §6.6.3",
+    "continuation": "EGA I §6.6.4",
+    "semantic_only": true,
+    "new_errata_round": false,
+    "new_canon_correction_admitted": false,
+    "proposed_canon_correction": "I000104",
+    "proposed_canon_correction_state": "ROUTED_PENDING_SUCCESSOR_ADJUDICATION",
+    "canon_keeper_successor_contacted": true,
+    "canon_keeper_successor": "01a047ab-fc94-7120-af1d-5701ba37aacd",
+    "root_tex_changed": false,
+    "root_pdf_changed": false,
+    "visual_qa_changed": false,
+    "issues_changed": false,
+    "authority_changed": false,
+    "registry_changed": false,
+    "publication_performed": false
+  },
+  "authority": {
+    "official_stacks_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "french": {
+      "repository": "https://github.com/KokunoYumeto/ega-fr",
+      "commit": "6b38875842e3723b619d4aeeda9ed260a4f94f7c",
+      "git_blob": "d59978afc71847092f86ce730c7b6142cac10991",
+      "receipt": "F37ZW.json",
+      "receipt_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+      "path": "source/ega1/ega1-6-fr.tex",
+      "full_bytes": 57781,
+      "full_sha256": "F95D2C43C1074A1CC6485D74E24F02BF8C5F098ADB571AA024B4B499F5CDE3FE",
+      "lf_lines": "1046-1065",
+      "slice_bytes": 1130,
+      "slice_sha256": "341C2E3766648A399DC7506A5B45E6FBE7BABC71BF2D01913389A04F4D2382B9",
+      "statement_lf_lines": "1046-1050",
+      "statement_bytes": 189,
+      "statement_sha256": "2DBE116E81F3AF688D81600F901D7073A834C6536169D298AF3352A4C62367F5",
+      "proof_lf_lines": "1052-1065",
+      "proof_bytes": 940,
+      "proof_sha256": "3DC9A2694BCEBE18578D71F4F74DBA781DEDC36F59FDD7CD52836B25D52DDC52"
+    },
+    "english": {
+      "repository": "https://github.com/KokunoYumeto/ega-en",
+      "commit": "94d5c73ac9263b26043ad0551646b824b1030c9b",
+      "git_blob": "f5739c913ae89bad1505cf966d7573caba819e60",
+      "path": "source/ega1/ega1-6.tex",
+      "full_bytes": 55021,
+      "full_sha256": "990DF9E209D804AAC103CE3B23C5F5F2307CD57B87C3A6F4F6E699AA9227C9FD",
+      "lf_lines": "739-751",
+      "slice_bytes": 1323,
+      "slice_sha256": "BE19FEBCCA3FB57254BB653B19FB0CCA9B47BC2A186A3A34AE0843040F8BC659",
+      "statement_lf_lines": "739-742",
+      "statement_bytes": 194,
+      "statement_sha256": "85207B14084B1E78564CE0C91006294707C7F3D477AD158973E3896518D171D5",
+      "proof_lf_lines": "744-751",
+      "proof_bytes": 1128,
+      "proof_sha256": "F2EEAD839F8FE60777768A86A48CF45516DDF04A4C74FFC0361C44402AA2C9C2"
+    }
+  },
+  "proposed_source_correction": {
+    "proposed_issue_id": "I000104",
+    "state": "ROUTED_PENDING_SUCCESSOR_ADJUDICATION",
+    "successor_task": "01a047ab-fc94-7120-af1d-5701ba37aacd",
+    "french_lf_line": 1060,
+    "printed_line_bytes": 77,
+    "printed_line_sha256": "7A40F7F188C3926A9A05041FBF428B786111EECC2A2E55FA3DDE3152BFEBDF01",
+    "preimage_occurrences": 1,
+    "preimage_zero_based_byte_offset": 49608,
+    "adverse_evidence": "W_1(x) is contained in W(x), U, and Y, while x lies in X and y=f(x) lies in Y; therefore it cannot be a neighbourhood of x.",
+    "minimal_correction": "de $x$ to de $y$",
+    "corrected_line_bytes": 77,
+    "corrected_line_sha256": "32E024C62FDA6DA87473253A36DF29CD8FC942C315E91649DE8C8AA2AD84AC75",
+    "corrected_proof_bytes": 940,
+    "corrected_proof_sha256": "22E12301E8284EC5E36F22DD2C6A9C6C5815BE7DC063D4CACF35CC94367CF866",
+    "corrected_slice_bytes": 1130,
+    "corrected_slice_sha256": "C642F82D3514332DA3ADAF718578B950E3AB18A4597F2C2F4A0F19F2C6423900",
+    "prospective_full_bytes": 57781,
+    "prospective_full_sha256": "56B778FF148644E9953A5E87D9420C715C2F4F90E84AFD7389B80206AED87038",
+    "independent_english_line": {
+      "lf_line": 748,
+      "bytes": 431,
+      "sha256": "B8BB162C96189E3FAF5405E67DE6A40938E5AA253C4FA41101D2FEE2C238130D",
+      "footnote_bytes": 152,
+      "footnote_sha256": "C94D6622F99453E3A52CB2360524D0091CDFF3D991B7A3C2F00AA4CF123B1D34"
+    },
+    "bounded_dedup": "NO_MATCH_IN_ISSUES_DEC_SMAP_RESID_REJ_LOG_OR_REPORTS_FINDINGS",
+    "authority_mutated": false,
+    "issues_ledger_mutated": false
+  },
+  "pinned_stacks_targets": {
+    "morphisms_tex": {
+      "git_blob": "a573bdd92d39290a7ab441fa7a1227a946434276",
+      "bytes": 593209,
+      "sha256": "51CFCB7402D0E84AAD95BDB6DD8840552F6F635FC20709521FD4AB895DF05242",
+      "blocks": [
+        {"tag": "01T1", "lf_lines": "2665-2679", "bytes": 605, "sha256": "0242EA65DE1ECAE9AFFD222BFAA5F5283F374B2D8DAAB8134009592AEAB070A2", "role": "EXACT_THEOREM"},
+        {"tag": "01T2", "lf_lines": "2681-2717", "bytes": 1698, "sha256": "1F32AD25552A59822C15FA5A976CF424D02F225DE88E431826713807B0F382F8", "role": "PROOF_COMPONENT_STRONGER"},
+        {"tag": "01T3", "lf_lines": "2719-2738", "bytes": 854, "sha256": "6EF30E1751EA14FB21D66B33AC512ECCE5BC0ADCD8CB46AE43286B5FA85F1C03", "role": "PROOF_COMPONENT"}
+      ]
+    },
+    "schemes_tex": {
+      "git_blob": "67c046e5769aa7dba6ec3956bc70c1064d652d82",
+      "bytes": 188756,
+      "sha256": "3D4162B83C39F85372EB43195961630D97CC981E10DA486B01514F23C85E54E4",
+      "blocks": [
+        {"tag": "01K3", "lf_lines": "3824-3830", "bytes": 249, "sha256": "CEC2963E3676DC4C23BD326DFF53E73B3B559626B6EF5F4689B016DFD07DF9E6", "role": "FINITE_SUBCOVER_COMPONENT"},
+        {"tag": "01K4", "lf_lines": "3832-3872", "bytes": 1916, "sha256": "630E7070C9CCD5BDE3E84ED6B1E8E2EAF15D17825433D4A08C075067B5C515F4", "role": "AFFINE_TARGET_COMPONENT_STRONGER"}
+      ]
+    }
+  },
+  "semantic_fixed_point": {
+    "decision": "D000328",
+    "statement_edges": "S001246-S001249",
+    "statement_edge_count": 4,
+    "residuals": "R000823-R000825",
+    "residual_count": 3,
+    "agent_audit": "A000256",
+    "issues_admitted": [],
+    "proposed_issue": "I000104",
+    "root_source_disposition": "01T1 is the exact modern theorem. Tags 01T2, 01T3, 01K3, and 01K4 recover the historical proof componentwise. No nonduplicative root theorem is justified."
+  },
+  "append_contract": {
+    "raw_bindings": {
+      "D000328": {"bytes": 541, "sha256": "E86E92E31B12B193DC3B36A057FC3EB6A3A549CF81979AAF699742C8F4D268D8"},
+      "S001246-S001249": {"bytes": 2171, "sha256": "E16285A7BDA2CEEA3EA71EA53C0C45A0210D6CDA42100B3C2AAB15AEA7787EAC"},
+      "R000823-R000825": {"bytes": 1082, "sha256": "0D3F5CB9B91810AF816DC3A5D671B69D34951D99CC326A4A1F0BDB3136339F69"},
+      "A000256": {"bytes": 731, "sha256": "D2FB7D046A0E87EA80E02CCB205C47352FB038B33C22BF779BFE89715D5B7DDC"}
+    },
+    "expected_post_append_counts": {
+      "agent_rows": 256,
+      "decision_rows": 328,
+      "operational_statement_edges": 1242,
+      "statement_map_file_rows": 1249,
+      "residual_file_rows": 825,
+      "issue_rows": 102,
+      "quarantined_rows": 0
+    }
+  },
+  "changed_paths": [
+    {"path": "ega/agent.csv", "bytes": 134895, "sha256": "6B46CED2A8F82A74CF44BCDF3A8BB84E64543A343C37A63DF1F69E898AC429DD", "git_blob": "70290dc7bd40589e79f1d1611abd76aa8ab333d2"},
+    {"path": "ega/check.py", "bytes": 411617, "sha256": "5876A587B652A87B1771495FC0A667BE783C25D8051A41885764135D8A74C3DA", "git_blob": "4bfa226c365931d94b26af1ac3ef34c0d1ca3370"},
+    {"path": "ega/dec.csv", "bytes": 88154, "sha256": "EB8ABC33A7E16F8F4EEBC0F537EC84BE7EDDBDDD8B3CE12B2FDA9FC7AA70703E", "git_blob": "79f54e5a8c22fa884204dac188587889e91a75ff"},
+    {"path": "ega/resid.csv", "bytes": 238388, "sha256": "DAE6F852E2B0B4BD622BD3C7C235E5F7FBA139D42011CD3BDF6FB4CD82E18458", "git_blob": "73698e681e014e8ab633f470ce3897399a03c3a4"},
+    {"path": "ega/scope.json", "bytes": 25667, "sha256": "357ECC4839BF7A685A926D8AF56A5BC796E808533EB7892A5A7B8FA6A7344637", "git_blob": "d22a77edc27eaa809229cf6c836148afd32e8901"},
+    {"path": "ega/smap.csv", "bytes": 547417, "sha256": "C33EADB6F06627A15FC4CE1CCCFE7E4CC8A4AADE2077D44BEFBC358B0055307C", "git_blob": "9b60762f3852e7f47b313672f2a42f86358db070"}
+  ],
+  "invariance": {
+    "diff_paths_exactly_equal_changed_paths": true,
+    "root_tex_changed_paths": [],
+    "root_pdf_changed_paths": [],
+    "visual_qa_changed_paths": [],
+    "registry_changed_paths": [],
+    "ega_issues": {"bytes": 40840, "sha256": "26D9CE8557DE8A11E142AF7303410D0D43E07BFBA7FCDBE4C3A2F30F0FFD4267", "git_blob": "519b1d7579b8fa1bb0cdbbd43c6e7f6125cab9db"},
+    "ega_units": {"bytes": 1864094, "sha256": "5C73182F07F749F03C0B0F92BBA0D37884873FFF096C93AE2E1A3CDB599EDA4C", "git_blob": "a2e8dd78b446d69c4f87d98917a8da1b00962d17"},
+    "ega_vqa": {"bytes": 46201, "sha256": "9623D533ACA4B12758F74A86CA8F8DF70530F443C20C16C22C1D201F0AA162E8", "git_blob": "3440f59635c5874044b080c90a2f82dae43ee0dc"},
+    "registry_overlays": {"bytes": 56353, "sha256": "BB386A08B91DFE7065CDA250162756A74D2DCFDC2BF2540E90F11918B3F32A06", "git_blob": "be5d6c66da25973806ff73b9640c6f458f094dec"},
+    "registry_leases": {"bytes": 42185, "sha256": "59A13A5BF99321785AD8F32E642173462BF36449853BA9FDB4551615D5E2B2F6", "git_blob": "7dfb0a58e7215db20ee569f92328efb49ae9cb82"},
+    "composition_current": {"bytes": 19202, "sha256": "DB0F71A9FB6876A64D4D6078F08721DF6C25C93443A56945D3450DB3BA406416", "git_blob": "ce3f8f76bc5e619f7ddaef2401df895a12d1e432"}
+  },
+  "validation": {
+    "python_compile": {"status": "PASS", "command": "python -B -m py_compile ega/check.py"},
+    "ega_check": {"status": "PASS", "errors": 0, "agent_rows": 256, "decision_rows": 328, "operational_statement_edges": 1242, "statement_map_rows": 1249, "residual_rows": 825, "issue_rows": 102, "quarantined_rows": 0},
+    "git_diff_check": {"status": "PASS", "scope": "base through content over the exact six changed EGA paths"},
+    "unified_repository": {"status": "PASS", "command": "python -B tools/validate_unified_repository.py --pre-publication", "registered_overlays": 33, "registered_stable_ids": 1035, "exact_v2_operations_checked": 1159, "required_build_stems_covered": 27, "reproducible_pdf_identities_checked": 27}
+  },
+  "public_lineage_observed_at_seal": {
+    "main_commit": "4ef4ed5101b6140326c41d731ca6fb020c2c49f2",
+    "main_tree": "019fa23f06c1d4eb86924ddb9faa9b302927da25",
+    "subject": "Record EGA I 6.6.2 public publication readback",
+    "relationship_to_local_checkpoint": "exact public base; the EGA I 6.6.3 semantic content was replayed onto this lineage before receipt generation"
+  },
+  "publication": {
+    "push": false,
+    "release": false,
+    "zenodo": false,
+    "reason": "The semantic content is rebased and receipt-sealed on the exact public lineage; publication follows after this receipt commit and exact validation."
+  }
+}
