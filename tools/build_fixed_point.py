@@ -38,6 +38,7 @@ DEFAULT_STEMS = (
     "properties",
     "morphisms",
     "more-morphisms",
+    "spaces-morphisms",
     "crystalline",
     "spaces-cohomology",
     "spaces-duality",
