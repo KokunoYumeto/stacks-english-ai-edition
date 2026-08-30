@@ -247,6 +247,39 @@
         "prospective_full_bytes": 57784,
         "prospective_full_sha256": "F62919C4CAA7D7FDA64E307C5DFCC2FDCAFB43AA04FC59CF3F9EC4BCFF1FFB4C"
       }
+    },
+    "ega:I.6.6.3": {
+      "receipt": "F37ZW.json",
+      "receipt_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+      "path": "ega1/ega1-6-fr.tex",
+      "full_bytes": 57781,
+      "full_sha256": "F95D2C43C1074A1CC6485D74E24F02BF8C5F098ADB571AA024B4B499F5CDE3FE",
+      "lf_line_start": 1046,
+      "lf_line_end": 1065,
+      "slice_bytes": 1130,
+      "slice_sha256": "341C2E3766648A399DC7506A5B45E6FBE7BABC71BF2D01913389A04F4D2382B9",
+      "statement_lf_line_start": 1046,
+      "statement_lf_line_end": 1050,
+      "statement_bytes": 189,
+      "statement_sha256": "2DBE116E81F3AF688D81600F901D7073A834C6536169D298AF3352A4C62367F5",
+      "proof_lf_line_start": 1052,
+      "proof_lf_line_end": 1065,
+      "proof_bytes": 940,
+      "proof_sha256": "3DC9A2694BCEBE18578D71F4F74DBA781DEDC36F59FDD7CD52836B25D52DDC52",
+      "source_correction": {
+        "state": "ROUTED_PENDING_SUCCESSOR_ADJUDICATION",
+        "proposed_issue_id": "I000104",
+        "successor_task": "01a047ab-fc94-7120-af1d-5701ba37aacd",
+        "authority_mutated": false,
+        "issue_ledger_mutated": false,
+        "lf_line": 1060,
+        "printed_line_bytes": 77,
+        "printed_line_sha256": "7A40F7F188C3926A9A05041FBF428B786111EECC2A2E55FA3DDE3152BFEBDF01",
+        "corrected_line_bytes": 82,
+        "corrected_line_sha256": "4A7F14C5B89A5C2477926BAD2CB0300C4C579BC9DF01E2800F1767C5ECA7146B",
+        "prospective_full_bytes": 57786,
+        "prospective_full_sha256": "6D47DE276252B7BB136C54549CCE6EE5641643550D2400B3AC33E35F7C00F27C"
+      }
     }
   },
   "reviewed_errata_slices": {
@@ -426,19 +459,19 @@
   },
   "statement_review_snapshot": {
     "file": "smap.csv",
-    "statement_edge_rows": 1238,
-    "file_rows": 1245,
+    "statement_edge_rows": 1242,
+    "file_rows": 1249,
     "superseded_rows": 7,
-    "source_units": 414,
-    "existing_official_tag_rows": 1225,
+    "source_units": 416,
+    "existing_official_tag_rows": 1229,
     "distinct_existing_official_tags": 347,
     "local_untagged_rows": 13,
-    "full_statement_equivalences": 60
+    "full_statement_equivalences": 61
   },
   "residual_snapshot": {
     "file": "resid.csv",
-    "rows": 797,
-    "file_rows": 822,
+    "rows": 800,
+    "file_rows": 825,
     "superseded_rows": 25,
     "open_gaps": 12,
     "integrated_local_mirror": 13
