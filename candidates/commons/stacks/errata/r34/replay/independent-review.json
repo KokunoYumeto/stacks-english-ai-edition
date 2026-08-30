@@ -1,0 +1,96 @@
+{
+  "adverse_observations": [
+    "SITES-COHOMOLOGY-004 has a normalized prose preimage that occurs at three authority loci; only lines 11066-11067 are defective, so the operation is locator-bound and must never be applied globally.",
+    "SITES-COHOMOLOGY-008 has a corrected rationale: the unsubscripted initial S is defined earlier, but using it here fails to make S_{n+1} contain S_n and breaks the announced increasing chain.",
+    "SITES-COHOMOLOGY-011 has analogous K-expressions that are legitimate where K is bound; the accepted two-occurrence replacement is confined to lines 11601-11602 in the paragraph that fixes M.",
+    "The live sites-cohomology producer ledger has a later append-only suffix. R34 binds only the exact 5756-byte header-plus-001-through-011 prefix and excludes every later row.",
+    "R34 is registrar-only; downstream generated-source composition and publication are excluded from this candidate."
+  ],
+  "candidate_id": "stacks-errata-a04446e-r34",
+  "closure_checks": {
+    "authority_files": 2,
+    "manifest_references_before_review_rebind": 23,
+    "operation_ids_unique": 14,
+    "passed": true,
+    "payload_files": 2,
+    "source_map_rows": 14,
+    "stable_ids_unique": 14
+  },
+  "conclusion": "UNCONDITIONAL PASS",
+  "constraints_observed": {
+    "generated_source_composed": false,
+    "generated_source_pushed": false,
+    "later_producer_suffix_admitted": false,
+    "locale_targets_mutated": false,
+    "registry_mutated_by_review": false,
+    "upstream_authority_mutated": false
+  },
+  "deduplication": {
+    "accepted_new_units": [
+      "COHOMOLOGY-CH20-D001",
+      "COHOMOLOGY-CH20-D002",
+      "COHOMOLOGY-CH20-D003",
+      "SITES-COHOMOLOGY-001",
+      "SITES-COHOMOLOGY-002",
+      "SITES-COHOMOLOGY-003",
+      "SITES-COHOMOLOGY-004",
+      "SITES-COHOMOLOGY-005",
+      "SITES-COHOMOLOGY-006",
+      "SITES-COHOMOLOGY-007",
+      "SITES-COHOMOLOGY-008",
+      "SITES-COHOMOLOGY-009",
+      "SITES-COHOMOLOGY-010",
+      "SITES-COHOMOLOGY-011"
+    ],
+    "operation_aliases": {
+      "COHOMOLOGY-CH20-D003": [
+        "COHOMOLOGY-CH20-OP001"
+      ]
+    },
+    "passed": true,
+    "registry_pre_admission_head": "stacks-errata-a04446e-r33",
+    "semantic_units": 14,
+    "stable_id_collisions": 0
+  },
+  "independent_review_tasks": [
+    {
+      "assigned_scope": "cohomology.tex D001-D003",
+      "result": "3 admitted, 0 rejected",
+      "task": "/root/cohomology_ch20_audit"
+    },
+    {
+      "assigned_scope": "sites-cohomology.tex 001-006",
+      "result": "6 admitted, 0 rejected",
+      "task": "/root/sites_cohomology_audit_a"
+    },
+    {
+      "assigned_scope": "sites-cohomology.tex 007-011",
+      "result": "5 admitted, 0 rejected",
+      "task": "/root/sites_cohomology_audit_b"
+    }
+  ],
+  "input_bindings": {
+    "cohomology_authority_sha256": "FA9747D0082AFBF8B09244DCC6C260F8A122E5E3B4A3C69E2273506D76E18A42",
+    "cohomology_ledger_sha256": "7AA50ACD644F21BE569022B10D30790271B4EB36572D1B594B7FBED61B9455CC",
+    "sites_cohomology_authority_sha256": "5B335CE2C7208A128B3C744B8828D93508063F41A4FABBCE2E921F890928895C",
+    "sites_cohomology_packet_prefix_bytes": 5756,
+    "sites_cohomology_packet_prefix_sha256": "73CEE46DD7AD6C334FD7E584A0F8279B0BD5670F98CD3BC4EFE5ED1CF88CFD2B"
+  },
+  "pass_is_unconditional": true,
+  "passed": true,
+  "pre_review_manifest_sha256": "FA46B628FEBDF7A09C81EDE7F44F9B8A9C7D1EF394E7750E0BB70588428BF245",
+  "recorded_at_utc": "2026-08-30T14:29:47Z",
+  "result": "PASS",
+  "review_kind": "three_way_independent_exact_preimage_context_deduplication_and_payload_review",
+  "schema": "mathematics-commons-stacks-errata-independent-review/v1",
+  "scratch_replay": {
+    "apply_order": "descending_start_byte_per_source",
+    "operations": 14,
+    "passed": true,
+    "payload_sha256": {
+      "cohomology.tex": "DD44456392FE64B181B6DC67CA99865E40B7D69F667C998DE6706520B5DE661D",
+      "sites-cohomology.tex": "66A32CD69EF1CCA8FF31B2E6568396FF11D96B9DC52FB87E7EF9B18B2306330C"
+    },
+    "stable_units": 14
+  }
+}
