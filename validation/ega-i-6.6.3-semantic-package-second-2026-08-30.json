@@ -1,0 +1,592 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-ega-semantic-preservation-package-build/v1",
+  "status": "PASS",
+  "created_utc": "2026-08-30T13:37:04Z",
+  "release": "ega-i-6.6.3-semantic-2026-08-30",
+  "source": {
+    "commit": "f1b8d56b5f3c9999010455a38a289bce76735070",
+    "tree": "8d2e7b4f3c84d825f39b673387e0266e09573b96"
+  },
+  "release_source_binding": {
+    "status": "PASS",
+    "build_commit": "e2c25bc25c6a650f6f4eb4069b4749fdc558163c",
+    "build_tree": "6a5a81badb3916956fd4c48378e842c5bde9ed49",
+    "release_commit": "f1b8d56b5f3c9999010455a38a289bce76735070",
+    "release_tree": "8d2e7b4f3c84d825f39b673387e0266e09573b96",
+    "release_descends_from_build": true,
+    "build_source_relation": "ancestor",
+    "intervening_changed_path_count": 46,
+    "intervening_changed_paths": [
+      "PROVENANCE.md",
+      "README.md",
+      "ROADMAP.md",
+      "STATUS.md",
+      "VALIDATION.md",
+      "ai-integrated/README.md",
+      "ega/agent.csv",
+      "ega/check.py",
+      "ega/dec.csv",
+      "ega/resid.csv",
+      "ega/scope.json",
+      "ega/smap.csv",
+      "tools/map_r32_synctex_pages.py",
+      "tools/publish_ega_semantic_zenodo.py",
+      "tools/validate_unified_repository.py",
+      "tools/write_r32_visual_qa_receipt.py",
+      "validation/README.md",
+      "validation/ega-i-6.5.2-6.5.4-semantic-checkpoint-2026-08-30.json",
+      "validation/ega-i-6.5.2-6.5.4-semantic-metadata-readback-2026-08-30.json",
+      "validation/ega-i-6.5.2-6.5.4-semantic-package-2026-08-30.json",
+      "validation/ega-i-6.5.2-6.5.4-semantic-package-second-2026-08-30.json",
+      "validation/ega-i-6.5.2-6.5.4-semantic-public-assets-readback-2026-08-30.json",
+      "validation/ega-i-6.5.2-6.5.4-semantic-release-2026-08-30.json",
+      "validation/ega-i-6.5.2-6.5.4-semantic-zenodo-publication-receipt-2026-08-30.json",
+      "validation/ega-i-6.5.2-6.5.4-semantic-zenodo-state-2026-08-30.json",
+      "validation/ega-i-6.5.2-semantic-checkpoint-2026-08-30.json",
+      "validation/ega-i-6.5.3-semantic-checkpoint-2026-08-30.json",
+      "validation/ega-i-6.5.4-semantic-checkpoint-2026-08-30.json",
+      "validation/ega-i-6.5.5-6.6.2-semantic-checkpoint-2026-08-30.json",
+      "validation/ega-i-6.5.5-6.6.2-semantic-package-2026-08-30.json",
+      "validation/ega-i-6.5.5-6.6.2-semantic-package-second-2026-08-30.json",
+      "validation/ega-i-6.5.5-6.6.2-semantic-public-assets-readback-2026-08-30.json",
+      "validation/ega-i-6.5.5-6.6.2-semantic-zenodo-publication-receipt-2026-08-30.json",
+      "validation/ega-i-6.5.5-6.6.2-semantic-zenodo-state-2026-08-30.json",
+      "validation/ega-i-6.5.5-semantic-checkpoint-2026-08-30.json",
+      "validation/ega-i-6.6.1-semantic-checkpoint-2026-08-30.json",
+      "validation/ega-i-6.6.2-semantic-checkpoint-2026-08-30.json",
+      "validation/ega-i-6.6.3-semantic-checkpoint-2026-08-30.json",
+      "validation/stacks-errata-a04446e-r32-build-2026-08-30.json",
+      "validation/stacks-errata-a04446e-r32-package-2026-08-30.json",
+      "validation/stacks-errata-a04446e-r32-release-2026-08-30.json",
+      "validation/stacks-errata-a04446e-r32-reproducibility-2026-08-30.json",
+      "validation/stacks-errata-a04446e-r32-reproducibility-second-2026-08-30.json",
+      "validation/stacks-errata-a04446e-r32-source-page-map-2026-08-30.json",
+      "validation/stacks-errata-a04446e-r32-visual-qa-2026-08-30.json",
+      "validation/stacks-errata-a04446e-r32-zenodo-publication-2026-08-30.json"
+    ],
+    "build_relevant_intervening_changes": 0,
+    "build_critical_equivalence": {
+      "status": "PASS",
+      "path_count": 35,
+      "paths": [
+        {
+          "path": "algebra.tex",
+          "git_blob": "dd1b82db7cd6393ab1a301e43cde88fe98a57282"
+        },
+        {
+          "path": "artin.tex",
+          "git_blob": "9a2acf0351493bec9b05f9e6650cb14de1ec561f"
+        },
+        {
+          "path": "brauer.tex",
+          "git_blob": "0e32fe2edcc0955506ea9eb076d562d30277805b"
+        },
+        {
+          "path": "categories.tex",
+          "git_blob": "c1129aa7054b28cbe04d0dca862515e94a5f8a5a"
+        },
+        {
+          "path": "chapters.tex",
+          "git_blob": "ed13cbcc7e71d74f71545da177eee93d73418c27"
+        },
+        {
+          "path": "crystalline.tex",
+          "git_blob": "c1b26c00e952b1655898b53e9547f23c0b89b468"
+        },
+        {
+          "path": "derived.tex",
+          "git_blob": "f62f8645b22d39a3dd5998256f3a296bcb677d37"
+        },
+        {
+          "path": "fields.tex",
+          "git_blob": "8a6a3f54472e9da507a71f052779a356bd0db5f8"
+        },
+        {
+          "path": "gaga.tex",
+          "git_blob": "343d8eb74e4fafc7a876797753500488a8004032"
+        },
+        {
+          "path": "homology.tex",
+          "git_blob": "54d6a4d51b25f03eb71bf09ff56288ebd0e43516"
+        },
+        {
+          "path": "hyperref.cfg",
+          "git_blob": "563eec20f6c78c7b5c694ab16db374568ea53290"
+        },
+        {
+          "path": "injectives.tex",
+          "git_blob": "abe50c79d998f134cc07293aa9bd673d3367abb3"
+        },
+        {
+          "path": "modules.tex",
+          "git_blob": "cdd258216a09be811c166bcbfd23705bbe679415"
+        },
+        {
+          "path": "moduli.tex",
+          "git_blob": "894297eb778bd7daf365509a9d761c9e1d1ae6fe"
+        },
+        {
+          "path": "more-algebra.tex",
+          "git_blob": "d53ee36a9b35cc847aa8ba4806fbb1fb85a55c88"
+        },
+        {
+          "path": "more-morphisms.tex",
+          "git_blob": "9cb82962c6d6198c2ae021a6eb8a03630852fff7"
+        },
+        {
+          "path": "morphisms.tex",
+          "git_blob": "a573bdd92d39290a7ab441fa7a1227a946434276"
+        },
+        {
+          "path": "my.bib",
+          "git_blob": "9983e89c16065ce1c7693509b63bf2c999a211db"
+        },
+        {
+          "path": "preamble.tex",
+          "git_blob": "1564ada1c30365b78bb708bd58f9f8b1ea0f1cb0"
+        },
+        {
+          "path": "properties.tex",
+          "git_blob": "592135cd811050b9ee2b18a3400912b4d4664622"
+        },
+        {
+          "path": "schemes.tex",
+          "git_blob": "67c046e5769aa7dba6ec3956bc70c1064d652d82"
+        },
+        {
+          "path": "sets.tex",
+          "git_blob": "05676a8dd249abe1d498174115d9d2f6321421cc"
+        },
+        {
+          "path": "sheaves.tex",
+          "git_blob": "334669ceab2e0dc381b639c2b7f87ecf2c0fc3f0"
+        },
+        {
+          "path": "simplicial.tex",
+          "git_blob": "bcec4895b138415bea4febc348ad4e3e9f519b44"
+        },
+        {
+          "path": "sites-modules.tex",
+          "git_blob": "17d423ae65e6e0994e4c11d5c2777fdafa9c8100"
+        },
+        {
+          "path": "sites.tex",
+          "git_blob": "e1bb85bb03b9eb66328d9d164d18c174b2e528c8"
+        },
+        {
+          "path": "smoothing.tex",
+          "git_blob": "8c1d7b7080ae6bd7e0f211d1dc33b39f9811ccfb"
+        },
+        {
+          "path": "spaces-cohomology.tex",
+          "git_blob": "c81a65febf47c11442bd3d3652b853ed10ca994e"
+        },
+        {
+          "path": "spaces-duality.tex",
+          "git_blob": "efbd4b4ba9db377c8a36b0b11f3877bda60a08f7"
+        },
+        {
+          "path": "stacks-limits.tex",
+          "git_blob": "06f8be6db2162b9cea88c11281ac3b775cf491f5"
+        },
+        {
+          "path": "stacks-project-book.cls",
+          "git_blob": "34c2b4699ad84ad7ea5b05057eb8c009b199a9c4"
+        },
+        {
+          "path": "stacks-project.cls",
+          "git_blob": "c723a060a73c27e030aca480530d33975d9eaefe"
+        },
+        {
+          "path": "tools/build_fixed_point.py",
+          "git_blob": "42c93456131ece54bf4ec0a1134556d41a05d996"
+        },
+        {
+          "path": "topology.tex",
+          "git_blob": "d206c8bbb4a13b0b3c4ea2a7c3b45687a5d29614"
+        },
+        {
+          "path": "validation/composition-current.json",
+          "git_blob": "ce3f8f76bc5e619f7ddaef2401df895a12d1e432"
+        }
+      ],
+      "tuple_sha256": "2C64AE4C230202E1013DB57A878B2C018C40F7B690CCE6EE70C8F2AAAE45BD57",
+      "different_paths": []
+    },
+    "profile": "ega-semantic",
+    "ega_semantic_checkpoint": {
+      "status": "PASS",
+      "schema": "unofficial-ai-integrated-stacks-ega-semantic-checkpoint/v1",
+      "base_commit": "4ef4ed5101b6140326c41d731ca6fb020c2c49f2",
+      "base_tree": "019fa23f06c1d4eb86924ddb9faa9b302927da25",
+      "content_commit": "85024a5e3456cadc79c6cde67bf1fcbbc09c48cb",
+      "content_tree": "2e5654859b2409da2b05f3a84d24c5862bf1c8ab",
+      "release_commit": "f1b8d56b5f3c9999010455a38a289bce76735070",
+      "release_tree": "8d2e7b4f3c84d825f39b673387e0266e09573b96",
+      "release_after_content_paths": [
+        "validation/ega-i-6.6.3-semantic-checkpoint-2026-08-30.json"
+      ],
+      "scope": {
+        "closed": "EGA I §6.6.3",
+        "continuation": "EGA I §6.6.4"
+      },
+      "changed_path_count": 6,
+      "changed_paths": [
+        {
+          "path": "ega/agent.csv",
+          "bytes": 134895,
+          "sha256": "6B46CED2A8F82A74CF44BCDF3A8BB84E64543A343C37A63DF1F69E898AC429DD",
+          "git_blob": "70290dc7bd40589e79f1d1611abd76aa8ab333d2"
+        },
+        {
+          "path": "ega/check.py",
+          "bytes": 411617,
+          "sha256": "5876A587B652A87B1771495FC0A667BE783C25D8051A41885764135D8A74C3DA",
+          "git_blob": "4bfa226c365931d94b26af1ac3ef34c0d1ca3370"
+        },
+        {
+          "path": "ega/dec.csv",
+          "bytes": 88154,
+          "sha256": "EB8ABC33A7E16F8F4EEBC0F537EC84BE7EDDBDDD8B3CE12B2FDA9FC7AA70703E",
+          "git_blob": "79f54e5a8c22fa884204dac188587889e91a75ff"
+        },
+        {
+          "path": "ega/resid.csv",
+          "bytes": 238388,
+          "sha256": "DAE6F852E2B0B4BD622BD3C7C235E5F7FBA139D42011CD3BDF6FB4CD82E18458",
+          "git_blob": "73698e681e014e8ab633f470ce3897399a03c3a4"
+        },
+        {
+          "path": "ega/scope.json",
+          "bytes": 25667,
+          "sha256": "357ECC4839BF7A685A926D8AF56A5BC796E808533EB7892A5A7B8FA6A7344637",
+          "git_blob": "d22a77edc27eaa809229cf6c836148afd32e8901"
+        },
+        {
+          "path": "ega/smap.csv",
+          "bytes": 547417,
+          "sha256": "C33EADB6F06627A15FC4CE1CCCFE7E4CC8A4AADE2077D44BEFBC358B0055307C",
+          "git_blob": "9b60762f3852e7f47b313672f2a42f86358db070"
+        }
+      ],
+      "git_diff_exact": true
+    }
+  },
+  "release_assets": [
+    {
+      "name": "README.md",
+      "bytes": 3119,
+      "sha256": "6F185D051351901E025736F4A0D33947A171427F5D98F04D125C95EE76F433C7"
+    },
+    {
+      "name": "RELEASE.json",
+      "bytes": 23317,
+      "sha256": "FF86CA03D6818C3EE442B951BA7291FFE73475D0BA3195810E92F378B0731BF6"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 580,
+      "sha256": "678519D1582DAF1361A56E0FF3349F59E7140101DD223B7B2D42DAEE2A716188"
+    },
+    {
+      "name": "unofficial-ai-integrated-stacks-project-ega-i-6.6.3-semantic-pdfs.zip",
+      "bytes": 21000346,
+      "sha256": "04B67B36F39AB596E14C9741352F503E2C787F1E41AEEDB3097D5B858BDA2F26"
+    },
+    {
+      "name": "unofficial-ai-integrated-stacks-project-ega-i-6.6.3-semantic-source-f1b8d56b.zip",
+      "bytes": 161340724,
+      "sha256": "48723E1936B7DA9AD25CC83306BCF33AEDD4DB453F255A453ED6EFBB9D9D22F9"
+    },
+    {
+      "name": "unofficial-ai-integrated-stacks-project-ega-i-6.6.3-semantic-validation.zip",
+      "bytes": 47363,
+      "sha256": "1A4BBA4E9BDE4A2FD57F5125788C0900885FFE7F529D064B204112BD8EB248E7"
+    }
+  ],
+  "archives": {
+    "source": {
+      "name": "unofficial-ai-integrated-stacks-project-ega-i-6.6.3-semantic-source-f1b8d56b.zip",
+      "entry_count": 2597,
+      "file_count": 2288,
+      "member_tuple_set_sha256": "6C01A750510BA7105111EEEAD6EE36976CED90AC81BA73D7722BC37F6E034DF9",
+      "privacy_redaction_manifest": "unofficial-ai-integrated-stacks-project-ega-i-6.6.3-semantic/SOURCE_PRIVACY_REDACTION_MANIFEST.json",
+      "redacted_member_count": 4,
+      "replacement_count": 6,
+      "private_git_archive": {
+        "bytes": 162080796,
+        "sha256": "211D3456DAF19CC84F6283CD397439EF1E4FC42DEC292EA797086153E0C4ED5B",
+        "entry_count": 2596,
+        "file_count": 2287,
+        "member_tuple_set_sha256": "7452D1C869DD51041ED4CCF17DF35D360927B7061720BF0134A97B83D85C724E"
+      },
+      "redactions": [
+        {
+          "name": "unofficial-ai-integrated-stacks-project-ega-i-6.6.3-semantic/ai-integrated/candidates/commons/stacks/errata/r14/builds/algebra.authority.log",
+          "occurrences": 2,
+          "original_bytes": 81607,
+          "original_sha256": "2AAF21A6E857F539C97BE1583922682E132715C453576B591D4170930407860B",
+          "public_bytes": 81643,
+          "public_sha256": "9E95F2DA33F4BFA03DFA6C95FA6F66D3CB7A8A9AC14E3BB175D6B88CD7BBD05C"
+        },
+        {
+          "name": "unofficial-ai-integrated-stacks-project-ega-i-6.6.3-semantic/ai-integrated/candidates/commons/stacks/errata/r14/builds/algebra.authority.pass3.txt",
+          "occurrences": 1,
+          "original_bytes": 68036,
+          "original_sha256": "E6B86077FCE4DB872CCD61240F5184176CBD3B5CF20DD675B7D21B815F90007D",
+          "public_bytes": 68054,
+          "public_sha256": "BBAEBE33DA1395D291F61F7DB9999277E6593938D74093306AAFE3B2E61F6388"
+        },
+        {
+          "name": "unofficial-ai-integrated-stacks-project-ega-i-6.6.3-semantic/ai-integrated/candidates/commons/stacks/errata/r14/builds/algebra.log",
+          "occurrences": 2,
+          "original_bytes": 81607,
+          "original_sha256": "47217D164CAE0F2FD9EFBD6643A79A7FD38C89E2B7921C01001A714AB4622CFA",
+          "public_bytes": 81643,
+          "public_sha256": "975504B2FE7ECE18506BDD537E2370F8D46A97D60246083FEBD197226E154687"
+        },
+        {
+          "name": "unofficial-ai-integrated-stacks-project-ega-i-6.6.3-semantic/ai-integrated/candidates/commons/stacks/errata/r14/builds/algebra.pass3.txt",
+          "occurrences": 1,
+          "original_bytes": 68036,
+          "original_sha256": "6BBC8C87DFCB4BD0487B14A330283D0E43972FCB1FA0F0D6526986524B30F91C",
+          "public_bytes": 68054,
+          "public_sha256": "1C23DB7E2877CAADF47ADE267A1F9C2038EBF8FB7BB5F71E2F8082890BBAD77B"
+        }
+      ]
+    },
+    "pdfs": {
+      "name": "unofficial-ai-integrated-stacks-project-ega-i-6.6.3-semantic-pdfs.zip",
+      "member_count": 27,
+      "member_tuple_set_sha256": "301530CFB02084E4E4FE5CDCA623944B6BDEF3ABC86659FEEF3EF4F5BA5B4B92",
+      "members": [
+        {
+          "name": "algebra.pdf",
+          "pages": 473,
+          "bytes": 3777301,
+          "sha256": "312CA0724F0BA1972292289785846B342893244B1F17F569988F53FBEA9F2FDB"
+        },
+        {
+          "name": "artin.pdf",
+          "pages": 69,
+          "bytes": 909119,
+          "sha256": "718E7C28CCB8F827629C80C0E26500021FD8FA451D7392D521F72385153F4796"
+        },
+        {
+          "name": "brauer.pdf",
+          "pages": 10,
+          "bytes": 349058,
+          "sha256": "4579899095CA9AA5297C110EEA503D66CED4203BB0C2BE00BDE30B36FF01F0B0"
+        },
+        {
+          "name": "categories.pdf",
+          "pages": 105,
+          "bytes": 1066251,
+          "sha256": "ED1242E9A9A93B766B403A4E8B48F090D7100FAA4386B3E4FFB4290CB72948AE"
+        },
+        {
+          "name": "crystalline.pdf",
+          "pages": 61,
+          "bytes": 870226,
+          "sha256": "5108EFC24C835281D03C1CD3BF5BDD66B2F3045002B6027DDD5C33B074402652"
+        },
+        {
+          "name": "derived.pdf",
+          "pages": 130,
+          "bytes": 1247727,
+          "sha256": "78F91BAA4EA088474247B3D96BF8DB548737ACEBB9CB258FF9664B2D72496BC6"
+        },
+        {
+          "name": "fields.pdf",
+          "pages": 42,
+          "bytes": 569767,
+          "sha256": "0906CC9CDE79C88F7A47B7638EE77B3B009EFBD0BA0B31D9498EF9E875918C99"
+        },
+        {
+          "name": "gaga.pdf",
+          "pages": 23,
+          "bytes": 489286,
+          "sha256": "0E9A92F0778EE2D43E1AF1649EB41A1679DBD1A1CF5247282D5E62A0520BE3D1"
+        },
+        {
+          "name": "homology.pdf",
+          "pages": 82,
+          "bytes": 886849,
+          "sha256": "5820791E44E0B3576D28DA879C86473C33E143753B16C4B266894CE892E97F76"
+        },
+        {
+          "name": "injectives.pdf",
+          "pages": 31,
+          "bytes": 571607,
+          "sha256": "D881623C98F2F831D572D30C4F4B1EF2C7B674AC2C90FE7B22C90A0DFFB290AB"
+        },
+        {
+          "name": "modules.pdf",
+          "pages": 55,
+          "bytes": 721555,
+          "sha256": "23EE91527D96AFD18BFF742EE6B6E2AE21B686E39CC441E63E77F51A7773A634"
+        },
+        {
+          "name": "moduli.pdf",
+          "pages": 83,
+          "bytes": 896658,
+          "sha256": "8FBFC282D15A2705B1C5E33C3481D5CC1D000A29E090C4FD27F199C7A12977EC"
+        },
+        {
+          "name": "more-algebra.pdf",
+          "pages": 406,
+          "bytes": 3385649,
+          "sha256": "A4DA4A250B1C109F6638B20E93E5050911B7238F94CA339791AACCF03D61D21E"
+        },
+        {
+          "name": "more-morphisms.pdf",
+          "pages": 260,
+          "bytes": 2308675,
+          "sha256": "3039D7A75EB716E73C662DDF7A5A641909660BE117203A2FFACCEC496CDA41D2"
+        },
+        {
+          "name": "morphisms.pdf",
+          "pages": 157,
+          "bytes": 1578010,
+          "sha256": "EC6771014B9E75F21C64916D7A0BCFCCB752D6F485F0E48D83065EE4703A0E21"
+        },
+        {
+          "name": "properties.pdf",
+          "pages": 54,
+          "bytes": 765314,
+          "sha256": "B94856D4321587CD6D203658D5589C84CD177AEB48ED9F041614842AA1055054"
+        },
+        {
+          "name": "schemes.pdf",
+          "pages": 51,
+          "bytes": 721432,
+          "sha256": "DCCB7F102260B8B7675DE9D5ACEC39166FDB7D43338276CF2F6EB52C919C8D87"
+        },
+        {
+          "name": "sets.pdf",
+          "pages": 14,
+          "bytes": 457498,
+          "sha256": "5255DADE8E93EA6284489503F9846F6C1737C14219931ECA9B0B31166D2942D5"
+        },
+        {
+          "name": "sheaves.pdf",
+          "pages": 54,
+          "bytes": 658460,
+          "sha256": "0DBA91E59768FFB4BA98277F0B41AED8DD2A6F20E4C496137B8337CC28B0BFB3"
+        },
+        {
+          "name": "simplicial.pdf",
+          "pages": 73,
+          "bytes": 834373,
+          "sha256": "06892B45F4A0600B61C2A3A3813B91C5613890BF3190B8A89F3B353B42A37F08"
+        },
+        {
+          "name": "sites-modules.pdf",
+          "pages": 80,
+          "bytes": 910819,
+          "sha256": "277AB7BBB7175651DC981A1FFC12753395AADCD61B01141B4CED577178871DC1"
+        },
+        {
+          "name": "sites.pdf",
+          "pages": 113,
+          "bytes": 1166835,
+          "sha256": "3A6F63FA222AF186BD6A2FE1024404F110C89DA6258669B362FF1E62C213A110"
+        },
+        {
+          "name": "smoothing.pdf",
+          "pages": 37,
+          "bytes": 650188,
+          "sha256": "29F08E8E0294E1C1B911FB749F4D17786F303D2A38E9831E5290ED6879D9197B"
+        },
+        {
+          "name": "spaces-cohomology.pdf",
+          "pages": 47,
+          "bytes": 626830,
+          "sha256": "0CB4B6241AC2AB4245B8CEA595F1C07E41E5C6C58481A9CEC8483F56CD963F56"
+        },
+        {
+          "name": "spaces-duality.pdf",
+          "pages": 25,
+          "bytes": 555974,
+          "sha256": "17EC9D6AFBBE2D035C0E760E42BC59CBB3EB8E64C6CDC6F19ADAC284733B3B9A"
+        },
+        {
+          "name": "stacks-limits.pdf",
+          "pages": 13,
+          "bytes": 348303,
+          "sha256": "C8F9AA41335BA82E63679BF21AADD392667E167335F2F94338306DBD6F5D2C2F"
+        },
+        {
+          "name": "topology.pdf",
+          "pages": 66,
+          "bytes": 797955,
+          "sha256": "B5F12E4A1DF614FD7AF2B5005CE256A3E4313F6C9C88822CCB2A04110F1A0654"
+        }
+      ]
+    },
+    "validation": {
+      "name": "unofficial-ai-integrated-stacks-project-ega-i-6.6.3-semantic-validation.zip",
+      "member_count": 7,
+      "member_tuple_set_sha256": "C16917FA8B123A12BDF4F9630B71978B6417C3E9EECB0B7F36E4CDED3C09761C",
+      "members": [
+        {
+          "name": "ega-i-6.6.3-semantic-checkpoint-2026-08-30.json",
+          "bytes": 11186,
+          "sha256": "58CC0464C1EDAC665CA72B80F8156E77773F9B983F83D76BA948551A3D15456E"
+        },
+        {
+          "name": "stacks-errata-a04446e-r32-build-2026-08-30.json",
+          "bytes": 37388,
+          "sha256": "75884847F2E1E3D947DCDDC3ACC201388A21629C563496F6902EBED8747A7D3E"
+        },
+        {
+          "name": "stacks-errata-a04446e-r32-release-2026-08-30.json",
+          "bytes": 50472,
+          "sha256": "E6B58701753A6239A3E7C0B4C228CD31199195B5C31AD40140AB70814EB5F2BF"
+        },
+        {
+          "name": "stacks-errata-a04446e-r32-reproducibility-2026-08-30.json",
+          "bytes": 7209,
+          "sha256": "01E861A97D9743095E3AAC14606F0292B361BDD245ECE512B8CA4CA2C40DF7DE"
+        },
+        {
+          "name": "stacks-errata-a04446e-r32-reproducibility-second-2026-08-30.json",
+          "bytes": 37388,
+          "sha256": "E5D796CE0DB8E9ED698290D56089DC1925B3F533A9AA2E9DD36ADF1AC8FDEF83"
+        },
+        {
+          "name": "stacks-errata-a04446e-r32-source-page-map-2026-08-30.json",
+          "bytes": 55207,
+          "sha256": "A475B6678375CFC89F4D244A7BDCA1DD72359D23A618B817348ED5EB9DDE02DA"
+        },
+        {
+          "name": "stacks-errata-a04446e-r32-visual-qa-2026-08-30.json",
+          "bytes": 6332,
+          "sha256": "0A1D0554DABDC0933295729DCAD9C4F65506DFAF53563B85F97DF020F420AAE7"
+        }
+      ]
+    }
+  },
+  "checks": {
+    "release_asset_count": 6,
+    "source_projection_reopen_and_listing": "PASS",
+    "pdf_listing_and_member_hashes": "PASS",
+    "validation_listing_and_member_hashes": "PASS",
+    "checksum_inventory": "PASS",
+    "release_metadata_and_validation_local_absolute_paths_absent": true,
+    "public_text_local_account_names_absent": true,
+    "source_archive_local_account_names_absent": true,
+    "source_archive_is_commit_bound_sanitized_projection": true,
+    "source_archive_differs_only_by_declared_redactions_and_manifest": true,
+    "source_archive_unchanged_members_byte_identical": true,
+    "source_archive_account_redacted_provenance_paths_allowed": true,
+    "package_receipt_is_release_asset": false,
+    "release_commit_descends_from_build_source": true,
+    "build_relevant_intervening_changes": 0
+  },
+  "profile": "ega-semantic",
+  "scope": {
+    "closed": "EGA I §6.6.3",
+    "continuation": "EGA I §6.6.4"
+  }
+}
