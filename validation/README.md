@@ -309,7 +309,34 @@ host. All 12 anonymous downloads matched by filename, byte count, and SHA-256
 with zero mismatches. The source archive is 154,766,484 bytes and contains
 2,312 entries. R27 remains the preceding immutable historical release.
 
-## Current R29/R30 composition, validation, and publication receipts
+## Current R31/R32 composition, validation, and publication receipts
+
+R31 and R32 advance the integrated registry to **33 overlays / 1,035 stable
+IDs** at the append-only successor
+`cdea2e13a447e7cdcf5f6f805d3a767d907fd679`, tree
+`b8466dd73dd960c73faeccb8d2c51fe44ecc4b14`. The R1–R32 Stacks errata
+subset contains 32 batches, 1,023 correction IDs, and 1,159 exact v2
+operations. Registry import is `3f0fa66780213432079c6c3044a6a515508b2576`;
+manifest-only source composition is
+`bb81deaa0f922caa8b4b4c1e85d928a03c955b24`, tree
+`64fc6c472f50c901320fcf6702769a3dc5e58522`, with topology bound at
+`e2c25bc25c6a650f6f4eb4069b4749fdc558163c`.
+
+The deterministic evidence is:
+
+- [`stacks-errata-a04446e-r32-build-2026-08-30.json`](stacks-errata-a04446e-r32-build-2026-08-30.json)
+  — 27 PDFs, 2,614 pages, 28,121,719 PDF bytes, and fixed point on sweep four;
+- [`stacks-errata-a04446e-r32-visual-qa-2026-08-30.json`](stacks-errata-a04446e-r32-visual-qa-2026-08-30.json)
+  — all 700 affected-chapter pages and 72 mapped loci inspected with zero
+  recorded rendering defects;
+- [`stacks-errata-a04446e-r32-reproducibility-2026-08-30.json`](stacks-errata-a04446e-r32-reproducibility-2026-08-30.json)
+  and the [second receipt](stacks-errata-a04446e-r32-reproducibility-second-2026-08-30.json)
+  — exact equality of all 27 PDF identities; and
+- [`stacks-errata-a04446e-r32-release-2026-08-30.json`](stacks-errata-a04446e-r32-release-2026-08-30.json)
+  — the GitHub tag, Zenodo DOI `10.5281/zenodo.22167418`, complete anonymous
+  readback, and current/inherited asset inventories.
+
+## Historical R29/R30 composition, validation, and publication receipts
 
 R29 and R30 advance the integrated registry to **31 overlays / 931 stable
 IDs** at cutoff `256846d6a4193f21cd6e1af675dc09e6950aa3d6`, tree
@@ -365,7 +392,7 @@ exact-head workflow `33250683600`, and Zenodo version DOI
 [`10.5281/zenodo.22161051`](https://doi.org/10.5281/zenodo.22161051) under concept
 DOI `10.5281/zenodo.22135180`. Six assets totaling 174,783,585 bytes per host
 matched across 12 public downloads, and all three ZIP member replays passed.
-The checkpoint changes no root TeX or PDF; R30 remains the latest errata
+The checkpoint changes no root TeX or PDF; R32 remains the latest errata
 release.
 
 The follow-on

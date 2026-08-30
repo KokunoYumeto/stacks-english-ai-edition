@@ -139,6 +139,18 @@ The histories were combined without flattening either input:
     checkpoint is projected from source head
     `e3def48650c66c0d65978a04f67dea88bd8b42ac`, tree
     `62bee382516e4a06df6746c5aa61a54b2fe6622f`.
+13. R31 was admitted at `1c67a23c057f6a36648d2f855013333cdcb3619c`;
+    R32 was admitted at `1a27a8ce494aeabbe65103a655e240947b1d8e8f`.
+    Their sole append-only registrar successor is
+    `cdea2e13a447e7cdcf5f6f805d3a767d907fd679`, tree
+    `b8466dd73dd960c73faeccb8d2c51fe44ecc4b14`. It was imported linearly at
+    `3f0fa66780213432079c6c3044a6a515508b2576`. The single R31 operation and
+    125 R32 operations were replayed in registry order at source commit
+    `bb81deaa0f922caa8b4b4c1e85d928a03c955b24`, tree
+    `64fc6c472f50c901320fcf6702769a3dc5e58522`, and topology was bound at
+    `e2c25bc25c6a650f6f4eb4069b4749fdc558163c`, tree
+    `6a5a81badb3916956fd4c48378e842c5bde9ed49`. No isolated payload replaced
+    cumulative source.
 
 The mathematical source therefore stays at the repository root while the
 complete evidence and registry system remains browsable under
@@ -178,28 +190,28 @@ high-resolution correction-locus pages. These receipts remain authoritative
 for that immutable R22/R23 tree and are not build or publication evidence for
 the later R24 source composition.
 
-The current validated R30 fixed-point build is bound to source
-`c521604343534f94c7a59086c94b99712eb1d754`, tree
-`4fe26c45da3edc493b8406824f90db06ef3df28c`. It preserves every earlier
-composed source identity while advancing `sites-modules.tex` and
-`injectives.tex` through the 71 R29/R30 operations. Two independent
-linked-worktree builds produced exactly matching identities for all 26 PDFs:
-2,572 pages, 27,531,529 bytes, and a global fixed point on sweep four. Visual
-QA covers all 111 affected pages, including all 42 correction-locus pages at
+The current validated R32 fixed-point build is bound to source
+`e2c25bc25c6a650f6f4eb4069b4749fdc558163c`, tree
+`6a5a81badb3916956fd4c48378e842c5bde9ed49`. It preserves every earlier
+composed source identity while advancing `sites-modules.tex`, `fields.tex`,
+`categories.tex`, and `algebra.tex` through the 126 R31/R32 operations. Two
+independent linked-worktree builds produced exactly matching identities for all
+27 PDFs: 2,614 pages, 28,121,719 bytes, and a global fixed point on sweep four.
+Visual QA covers all 700 affected pages, including all 72 correction-locus pages at
 high resolution.
 
-R30 is the current public errata preservation checkpoint at source head
-`e3def48650c66c0d65978a04f67dea88bd8b42ac`, tree
-`62bee382516e4a06df6746c5aa61a54b2fe6622f`, and tag
-[`ai-integrated-stacks-r30-2026-08-29`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r30-2026-08-29).
-Its source, 26 PDFs, and validation evidence are preserved as six
-byte-identical assets on GitHub and Zenodo version DOI
-[`10.5281/zenodo.22166456`](https://doi.org/10.5281/zenodo.22166456), under
+R32 is the current public errata preservation checkpoint at content head
+`2af5664a7edcd352ebe5f776c2a190859f1ee071`, tree
+`58f1917e35781ffa028c1de4ed28b9aee232a7d7`, and tag
+[`ai-integrated-stacks-r32-2026-08-30`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r32-2026-08-30).
+Its source, 27 PDFs, and validation evidence are preserved as six current assets
+on GitHub and Zenodo version DOI
+[`10.5281/zenodo.22167418`](https://doi.org/10.5281/zenodo.22167418), under
 concept DOI `10.5281/zenodo.22135180`, as recorded by the
-[R30 release receipt](validation/stacks-errata-a04446e-r30-release-2026-08-29.json).
-Anonymous readback matched all 178,510,756 bytes on each host across 12
-downloads with zero mismatches; the preserved PDF inventory contains 26
-artifacts, 2,572 pages, and 27,531,529 bytes.
+[R32 release receipt](validation/stacks-errata-a04446e-r32-release-2026-08-30.json).
+Anonymous readback matched the six current assets across both hosts and the
+three inherited R30 ZIPs preserved by Zenodo with zero mismatches; the current
+PDF inventory contains 27 artifacts, 2,614 pages, and 28,121,719 bytes.
 
 R28 remains publicly preserved as the preceding historical tag
 [`ai-integrated-stacks-r28-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r28-2026-08-28)
@@ -237,7 +249,7 @@ under the existing concept DOI `10.5281/zenodo.22135180`. The six-asset package
 is byte-identical across GitHub and Zenodo, totals 174,783,585 bytes per host,
 and is recorded by the
 [semantic release receipt](validation/ega-i-6.4-semantic-release-2026-08-29.json).
-It changes no root TeX or PDF, and R30 remains the latest errata release.
+It changes no root TeX or PDF, and R32 remains the latest errata release.
 
 ## Branch preservation
 

@@ -22,7 +22,7 @@ and routed without changing root TeX or any PDF. GitHub tag
 [`ega-i-6.4-semantic-2026-08-29`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.4-semantic-2026-08-29)
 and Zenodo version DOI [`10.5281/zenodo.22161051`](https://doi.org/10.5281/zenodo.22161051)
 preserve six byte-matched assets totaling 174,783,585 bytes per host. R28 remains
-historically preserved, while R30 is the latest errata release; the next EGA
+historically preserved, while R32 is the latest errata release; the next EGA
 cursor is §6.5.1.
 
 ## Errata state
@@ -35,12 +35,13 @@ contributes 125 operations across `fields.tex`, `categories.tex`, and
 28,121,719 bytes), and all 700 affected-chapter pages plus 72 mapped loci passed
 visual QA.
 
-- Current integrated registry: **31 overlays / 931 stable IDs**, frozen at R30
-  admission commit `256846d6a4193f21cd6e1af675dc09e6950aa3d6`, tree
-  `9a4f0ba1bd342cde5bf3f8f36a2d68cd7792aef3`.
-- The Stacks errata component is **R1–R30**: 30 batches, 919 stable correction
-  IDs, and 1,033 exact v2 operations. `MC-STK-ERR-1286` is the highest
-  identifier through R30; intentional gaps mean it is not a count of
+- Current integrated registry: **33 overlays / 1,035 stable IDs**, frozen at
+  the sole R31/R32 append-only successor
+  `cdea2e13a447e7cdcf5f6f805d3a767d907fd679`, tree
+  `b8466dd73dd960c73faeccb8d2c51fe44ecc4b14`.
+- The Stacks errata component is **R1–R32**: 32 batches, 1,023 stable correction
+  IDs, and 1,159 exact v2 operations. `MC-STK-ERR-1287` is the highest
+  identifier through R32; intentional gaps mean it is not a count of
   corrections.
 - The 22nd overlay is the separately admitted historical-source contribution
   `stacks-verdier-a04446e-1-2-13-r1`, containing 12 non-official stable units.
@@ -112,17 +113,24 @@ visual QA.
   `3e57820736a5a57ddb1c9fbaaf2206e455b5ee31`, tree
   `c4ce1faf96257fe11c0123ca649c9c020982aa33`, followed by validation binding
   `c521604343534f94c7a59086c94b99712eb1d754`.
-- R30 is the current public errata preservation checkpoint at source head
-  `e3def48650c66c0d65978a04f67dea88bd8b42ac`, tree
-  `62bee382516e4a06df6746c5aa61a54b2fe6622f`, and tag
-  [`ai-integrated-stacks-r30-2026-08-29`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r30-2026-08-29).
-  Its six assets total 178,510,756 bytes on each of GitHub and Zenodo; all 12
-  anonymous downloads matched by filename, byte count, and SHA-256. The Zenodo
+- R31 contributes one stable ID and one operation affecting cumulative
+  `sites-modules.tex`; R32 materializes 103 historical IDs as 125 operations
+  across `fields.tex`, `categories.tex`, and `algebra.tex`. The repaired
+  registry chain is imported at `3f0fa66780213432079c6c3044a6a515508b2576`,
+  source composition is `bb81deaa0f922caa8b4b4c1e85d928a03c955b24`, and
+  topology binding is `e2c25bc25c6a650f6f4eb4069b4749fdc558163c`.
+- R32 is the current public errata preservation checkpoint at content head
+  `2af5664a7edcd352ebe5f776c2a190859f1ee071`, tree
+  `58f1917e35781ffa028c1de4ed28b9aee232a7d7`, and tag
+  [`ai-integrated-stacks-r32-2026-08-30`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r32-2026-08-30).
+  Its six current assets total 181,650,621 bytes on each host. All six GitHub
+  assets and all nine Zenodo files—including three preserved inherited R30
+  ZIPs—passed anonymous byte/hash readback and ZIP reopen checks. The Zenodo
   version DOI is
-  [`10.5281/zenodo.22166456`](https://doi.org/10.5281/zenodo.22166456) under
-  concept DOI `10.5281/zenodo.22135180`. The package binds 26 PDFs, 2,572
-  pages, and 27,531,529 PDF bytes. See the
-  [R30 release receipt](validation/stacks-errata-a04446e-r30-release-2026-08-29.json).
+  [`10.5281/zenodo.22167418`](https://doi.org/10.5281/zenodo.22167418) under
+  concept DOI `10.5281/zenodo.22135180`. The current package binds 27 PDFs,
+  2,614 pages, and 28,121,719 PDF bytes. See the
+  [R32 release receipt](validation/stacks-errata-a04446e-r32-release-2026-08-30.json).
 - R28 remains publicly preserved as the preceding historical release at tag
   [`ai-integrated-stacks-r28-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r28-2026-08-28),
   commit `efa46473cf8a73646ef1b6e32354e63ce20fd172`, tree
@@ -155,8 +163,8 @@ proposals remain under
 ## Validation state
 
 The repository integrity gate checks the pinned authority, protected linear
-ancestry, all 31 registry entries and 931 stable IDs, the immutable Verdier and
-R22–R30 candidates, the retained Verdier insertion, all 1,033 exact v2
+ancestry, all 33 registry entries and 1,035 stable IDs, the immutable Verdier and
+R22–R32 candidates, the retained Verdier insertion, all 1,159 exact v2
 operations, exact manifest/source-map/payload/review joins, the independent
 source correction, public-document links, JSON registries, and unresolved merge
 markers. See [VALIDATION.md](VALIDATION.md).
@@ -164,27 +172,27 @@ markers. See [VALIDATION.md](VALIDATION.md).
 Per-corpus build and visual receipts remain linked from the detailed dossiers;
 they are not silently generalized beyond their recorded source identity.
 
-The current R30 gate built all 26 required chapters (2,572 pages and
-27,531,529 PDF bytes) to a global PDF fixed point on sweep four. It is bound to
-source `c521604343534f94c7a59086c94b99712eb1d754`, tree
-`4fe26c45da3edc493b8406824f90db06ef3df28c`, and records zero fatal,
+The current R32 gate built all 27 required chapters (2,614 pages and
+28,121,719 PDF bytes) to a global PDF fixed point on sweep four. It is bound to
+source `e2c25bc25c6a650f6f4eb4069b4749fdc558163c`, tree
+`6a5a81badb3916956fd4c48378e842c5bde9ed49`, and records zero fatal,
 missing-glyph, undefined-reference, undefined-citation, multiply-defined,
-rerun-required, or destination-warning diagnostics. Visual QA passed all 111
-pages of `sites-modules.pdf` and `injectives.pdf`, including all 42 unique
+rerun-required, or destination-warning diagnostics. Visual QA passed all 700
+pages of the four affected chapters, including all 72 unique
 manifest-bound locus pages at 180 DPI. The exact artifact inventory is in the
-[current fixed-point build receipt](validation/stacks-errata-a04446e-r30-build-2026-08-29.json).
+[current fixed-point build receipt](validation/stacks-errata-a04446e-r32-build-2026-08-30.json).
 
-The [parallel linked-worktree reproducibility gate](validation/stacks-errata-a04446e-r30-reproducibility-2026-08-29.json)
+The [parallel linked-worktree reproducibility gate](validation/stacks-errata-a04446e-r32-reproducibility-2026-08-30.json)
 is **PASS**. Both builds use the same commit, tree, builder, environment, and
-fixed-point sweep; all 26 `{stem, pages, bytes, sha256}` artifact tuples are
+fixed-point sweep; all 27 `{stem, pages, bytes, sha256}` artifact tuples are
 exactly equal. Earlier R24, R22/R23, Verdier, and R21 receipts remain preserved
 as historical evidence for their exact source identities and scopes.
 
-The [latest public R30 publication receipt](validation/stacks-errata-a04446e-r30-release-2026-08-29.json)
+The [latest public R32 publication receipt](validation/stacks-errata-a04446e-r32-release-2026-08-30.json)
 binds the public commit and tree, successful exact-head workflow, identical
-six-file package on GitHub and Zenodo, anonymous SHA-256 readback, and archive
-member replay. The R28 and R27 receipts remain historical evidence for their
-preceding immutable versions.
+six-file current package across GitHub and Zenodo, the three inherited Zenodo
+R30 ZIPs, anonymous SHA-256 readback, and archive-member replay. The R30, R28,
+and R27 receipts remain historical evidence for their immutable versions.
 
 The preceding Verdier content release remains public at
 `4947e4a6d22971ea793e4b4bc2b09d8ab8cc04d0`. Exact anonymous readback of 62

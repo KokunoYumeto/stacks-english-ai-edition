@@ -22,9 +22,9 @@ machine-readable validation evidence.
 [Current R32 fixed-point build: PASS](validation/stacks-errata-a04446e-r32-build-2026-08-30.json) ·
 [Current R32 visual QA: PASS](validation/stacks-errata-a04446e-r32-visual-qa-2026-08-30.json) ·
 [Current R32 reproducibility: PASS](validation/stacks-errata-a04446e-r32-reproducibility-2026-08-30.json) ·
-[Latest errata release receipt: R30 PASS](validation/stacks-errata-a04446e-r30-release-2026-08-29.json) ·
-[Latest errata preservation release: R30](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r30-2026-08-29) ·
-[Latest errata Zenodo version: R30](https://doi.org/10.5281/zenodo.22166456) ·
+[Latest errata release receipt: R32 PASS](validation/stacks-errata-a04446e-r32-release-2026-08-30.json) ·
+[Latest errata preservation release: R32](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r32-2026-08-30) ·
+[Latest errata Zenodo version: R32](https://doi.org/10.5281/zenodo.22167418) ·
 [Latest EGA semantic checkpoint receipt: PASS](validation/ega-i-6.4-semantic-release-2026-08-29.json) ·
 [Latest EGA semantic GitHub release: I §6.4](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.4-semantic-2026-08-29) ·
 [Latest EGA semantic Zenodo version: I §6.4](https://doi.org/10.5281/zenodo.22161051) ·
@@ -108,44 +108,44 @@ Run the fast repository-level integrity gate with:
 python tools/validate_unified_repository.py --pre-publication
 ```
 
-The current validated R30 build is bound to source
-`c521604343534f94c7a59086c94b99712eb1d754`, tree
-`4fe26c45da3edc493b8406824f90db06ef3df28c`. It produced 26 readable PDFs
-(2,572 pages; 27,531,529 bytes), reached a global fixed point on sweep four,
+The current validated R32 build is bound to source
+`e2c25bc25c6a650f6f4eb4069b4749fdc558163c`, tree
+`6a5a81badb3916956fd4c48378e842c5bde9ed49`. It produced 27 readable PDFs
+(2,614 pages; 28,121,719 bytes), reached a global fixed point on sweep four,
 and recorded zero fatal, missing-glyph, undefined-reference,
 undefined-citation, multiply-defined, rerun-required, or destination-warning
-diagnostics. All 111 pages of the affected `sites-modules.pdf` and
-`injectives.pdf` were rendered and reviewed; all 42 unique correction-locus
+diagnostics. All 700 pages of the four affected chapter PDFs were rendered and
+reviewed; all 72 unique correction-locus
 pages were also inspected individually at 180 DPI. A second linked-worktree
-build used the same source, builder, environment, and sweep, and all 26 PDF
+build used the same source, builder, environment, and sweep, and all 27 PDF
 identities were exactly equal.
 
-R29 and R30 use registry cutoff
-`256846d6a4193f21cd6e1af675dc09e6950aa3d6`, tree
-`9a4f0ba1bd342cde5bf3f8f36a2d68cd7792aef3`, imported linearly at
-`6df0e967030bcf818f3c49584fa5e9a992278d75`. Exact manifest-bound source
-composition is commit `3e57820736a5a57ddb1c9fbaaf2206e455b5ee31`, tree
-`c4ce1faf96257fe11c0123ca649c9c020982aa33`; the later `c5216043` commit
-binds validation and build policy. R29's 31 operations produce the 312,179-byte
-`sites-modules.tex` postimage with SHA-256
-`B097799584BD00B3D8046F62A0A56FCFE045516FD04D130C2A4C547CE3BB6C19`.
-R30's 40 operations produce the 105,225-byte `injectives.tex` postimage with
-SHA-256 `BDC721593BE0B491334C707B371A2EECD1787787903A71E059721BDB66C5AC04`.
-No isolated payload replaced either cumulative source.
+R31 and R32 use the sole append-only registry successor
+`cdea2e13a447e7cdcf5f6f805d3a767d907fd679`, tree
+`b8466dd73dd960c73faeccb8d2c51fe44ecc4b14`, imported linearly at
+`3f0fa66780213432079c6c3044a6a515508b2576`. Exact manifest-bound source
+composition is commit `bb81deaa0f922caa8b4b4c1e85d928a03c955b24`, tree
+`64fc6c472f50c901320fcf6702769a3dc5e58522`; the later `e2c25bc2` commit
+binds the composition topology. The single R31 operation yields 312,169-byte
+`sites-modules.tex` with SHA-256
+`3144CBC676F1FF16F76117BB4E6ABE35705B9293C7FA0987951A1A7D28ED93C4`.
+R32's 125 operations yield the recorded cumulative `fields.tex`,
+`categories.tex`, and `algebra.tex` postimages. No isolated payload replaced a
+cumulative source.
 
-R30 is the current public errata preservation checkpoint at source head
-`e3def48650c66c0d65978a04f67dea88bd8b42ac`, tree
-`62bee382516e4a06df6746c5aa61a54b2fe6622f`, and tag
-[`ai-integrated-stacks-r30-2026-08-29`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r30-2026-08-29).
-The same six assets total 178,510,756 bytes on each host and are preserved as
+R32 is the current public errata preservation checkpoint at content head
+`2af5664a7edcd352ebe5f776c2a190859f1ee071`, tree
+`58f1917e35781ffa028c1de4ed28b9aee232a7d7`, and tag
+[`ai-integrated-stacks-r32-2026-08-30`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r32-2026-08-30).
+Its six current assets total 181,650,621 bytes on each host and are preserved as
 Zenodo version DOI
-[`10.5281/zenodo.22166456`](https://doi.org/10.5281/zenodo.22166456) under
+[`10.5281/zenodo.22167418`](https://doi.org/10.5281/zenodo.22167418) under
 concept DOI [`10.5281/zenodo.22135180`](https://doi.org/10.5281/zenodo.22135180).
-Anonymous readback matched all 12 GitHub and Zenodo downloads by filename,
-byte count, and SHA-256, and all three downloaded ZIPs reopened with their
-complete listings intact. The package contains the exact 26-PDF, 2,572-page,
-27,531,529-byte build inventory. See the
-[R30 release receipt](validation/stacks-errata-a04446e-r30-release-2026-08-29.json).
+The Zenodo version also preserves three inherited R30 ZIPs. Anonymous readback
+matched all six GitHub files and all nine Zenodo files; all nine ZIP downloads
+reopened with complete listings and valid CRCs. The current package contains
+the exact 27-PDF, 2,614-page, 28,121,719-byte build inventory. See the
+[R32 release receipt](validation/stacks-errata-a04446e-r32-release-2026-08-30.json).
 
 R28 remains publicly preserved as a historical release at tag
 [`ai-integrated-stacks-r28-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r28-2026-08-28)
@@ -184,7 +184,7 @@ content commit `00adeb291487d04070b75bd0fd87759e3c43d3d3`, and Zenodo version
 DOI [`10.5281/zenodo.22161051`](https://doi.org/10.5281/zenodo.22161051) in the
 existing concept lineage. Its six assets total 174,783,585 bytes per host and
 passed 12-file cross-host readback. This semantic-only checkpoint changes no
-root TeX or PDF; R30 remains the latest errata release.
+root TeX or PDF; R32 remains the latest errata release.
 
 The preceding R22/R23 content release remains public at
 `3c2b49fe0d20519de4ab06951ac2cb5151b68782`, tree

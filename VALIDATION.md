@@ -28,19 +28,21 @@ The gate verifies:
 
 - ancestry of the pinned upstream, source-union, EGA, and protected linear
   registry/source history;
-- 31 admitted overlays containing exactly 931 stable IDs at R30 registry cutoff
-  `256846d6a4193f21cd6e1af675dc09e6950aa3d6`, tree
-  `9a4f0ba1bd342cde5bf3f8f36a2d68cd7792aef3`;
+- 33 admitted overlays containing exactly 1,035 stable IDs at the R31/R32
+  registry successor `cdea2e13a447e7cdcf5f6f805d3a767d907fd679`, tree
+  `b8466dd73dd960c73faeccb8d2c51fe44ecc4b14`;
 - the final immutable Verdier candidate, its 12 stable units, 27 manifest
   references, independent replay, rights boundary, and exact registered
   insertion into `derived.tex`;
-- the R1–R30 Stacks errata sequence: 30 batches, 919 correction IDs, and all
-  1,033 v2 operations, including the ordered R22/R23 replay, the 57-operation R24
+- the R1–R32 Stacks errata sequence: 32 batches, 1,023 correction IDs, and all
+  1,159 v2 operations, including the ordered R22/R23 replay, the 57-operation R24
   replay in `spaces-duality.tex`, the 154-operation R25 replay in `artin.tex`,
   the 39-operation R26 replay in `smoothing.tex`, the 14-operation R27 replay
   in `modules.tex`, the one-operation supersession-aware R28 replay in
   `smoothing.tex`, the 31-operation R29 replay in `sites-modules.tex`, and the
-  40-operation R30 replay in `injectives.tex`;
+  40-operation R30 replay in `injectives.tex`, the single R31 replay in
+  `sites-modules.tex`, and the 125-operation R32 replay across `fields.tex`,
+  `categories.tex`, and `algebra.tex`;
 - preservation of the historical R1–R21 snapshot at prior cutoff
   `13ca6aaaca454f5930c4885c93f427e30cf21959` and of the separately composed
   Verdier source;
@@ -56,59 +58,58 @@ The gate verifies:
 The same gate runs in
 [`validate.yml`](.github/workflows/validate.yml) with full Git history.
 
-The current R30 build result is recorded at
-[`validation/stacks-errata-a04446e-r30-build-2026-08-29.json`](validation/stacks-errata-a04446e-r30-build-2026-08-29.json).
-All 26 required chapters (2,572 pages; 27,531,529 PDF bytes) compiled
+The current R32 build result is recorded at
+[`validation/stacks-errata-a04446e-r32-build-2026-08-30.json`](validation/stacks-errata-a04446e-r32-build-2026-08-30.json).
+All 27 required chapters (2,614 pages; 28,121,719 PDF bytes) compiled
 successfully, were readable by `pdfinfo`, and reached a global PDF fixed point
 on sweep four. The build is bound to source commit
-`c521604343534f94c7a59086c94b99712eb1d754`, tree
-`4fe26c45da3edc493b8406824f90db06ef3df28c`. Aggregate diagnostics contain
+`e2c25bc25c6a650f6f4eb4069b4749fdc558163c`, tree
+`6a5a81badb3916956fd4c48378e842c5bde9ed49`. Aggregate diagnostics contain
 zero fatal, missing-glyph, undefined-reference, undefined-citation,
 multiply-defined, rerun-required, or destination-warning markers.
 
-Visual QA rendered and reviewed all 111 pages of the affected
-`sites-modules.pdf` and `injectives.pdf` at 96 DPI and inspected all 42 unique
+Visual QA rendered and reviewed all 700 pages of the affected `algebra.pdf`,
+`categories.pdf`, `fields.pdf`, and `sites-modules.pdf` at 96 DPI and inspected all 72 unique
 correction-locus pages individually at 180 DPI.
 The current
-[visual receipt](validation/stacks-errata-a04446e-r30-visual-qa-2026-08-29.json)
+[visual receipt](validation/stacks-errata-a04446e-r32-visual-qa-2026-08-30.json)
 records zero clipped, overlapping, blank, corrupt, missing-glyph, or
 broken-diagram defects. A second build ran independently in a parallel linked
 worktree. Both runs use the same source, builder, environment, and fixed-point
-sweep, and all 26 `{stem, pages, bytes, sha256}` tuples are exactly equal. See
-the [reproducibility summary](validation/stacks-errata-a04446e-r30-reproducibility-2026-08-29.json)
-and [second full receipt](validation/stacks-errata-a04446e-r30-reproducibility-second-2026-08-29.json).
+sweep, and all 27 `{stem, pages, bytes, sha256}` tuples are exactly equal. See
+the [reproducibility summary](validation/stacks-errata-a04446e-r32-reproducibility-2026-08-30.json)
+and [second full receipt](validation/stacks-errata-a04446e-r32-reproducibility-second-2026-08-30.json).
 
 The [source composition receipt](validation/composition-current.json) records
-R30 cutoff `256846d6a4193f21cd6e1af675dc09e6950aa3d6`, tree
-`9a4f0ba1bd342cde5bf3f8f36a2d68cd7792aef3`, linear registry import
-`6df0e967030bcf818f3c49584fa5e9a992278d75`, and exact composition source
-`3e57820736a5a57ddb1c9fbaaf2206e455b5ee31`, tree
-`c4ce1faf96257fe11c0123ca649c9c020982aa33`. It binds 1,033 cumulative v2
-operations. R29 yields 312,179-byte `sites-modules.tex` with SHA-256
-`B097799584BD00B3D8046F62A0A56FCFE045516FD04D130C2A4C547CE3BB6C19`;
-R30 yields 105,225-byte `injectives.tex` with SHA-256
-`BDC721593BE0B491334C707B371A2EECD1787787903A71E059721BDB66C5AC04`.
+R31/R32 cutoff `cdea2e13a447e7cdcf5f6f805d3a767d907fd679`, tree
+`b8466dd73dd960c73faeccb8d2c51fe44ecc4b14`, linear registry import
+`3f0fa66780213432079c6c3044a6a515508b2576`, and exact composition source
+`bb81deaa0f922caa8b4b4c1e85d928a03c955b24`, tree
+`64fc6c472f50c901320fcf6702769a3dc5e58522`. It binds 1,159 cumulative v2
+operations. R31 yields 312,169-byte `sites-modules.tex` with SHA-256
+`3144CBC676F1FF16F76117BB4E6ABE35705B9293C7FA0987951A1A7D28ED93C4`;
+R32 yields the manifest-bound cumulative postimages recorded for `fields.tex`,
+`categories.tex`, and `algebra.tex`.
 Historical R24, R22/R23, Verdier, and R21 receipts remain preserved and
 authoritative for their immutable source snapshots; they are not rebound to the
-R30 tree.
+R32 tree.
 
-R29's repaired final manifest SHA-256 is
-`52920239C887757CE937267C5505AD98980464329BC6BBBD62086ED4E1D98CE5`;
-R30's manifest SHA-256 is
-`C903DFCA06DA4063782BB88B2F2AC5FCF56352CF948CF03382D77F1A54A48C9E`.
+R31's repaired final manifest SHA-256 is
+`0A8ADFB87FDC9BB87EF98B4AF1A34ECE965D68991DF0006B9F5326BD1EFC3657`;
+R32's manifest SHA-256 is
+`9B38EAF1B99E9DAF5E7553E6B0278961A2FD0E63FBFDB7AE81FBA6163E827D7F`.
 
-The [R30 release receipt](validation/stacks-errata-a04446e-r30-release-2026-08-29.json)
-binds the current public errata preservation checkpoint at source head
-`e3def48650c66c0d65978a04f67dea88bd8b42ac`, tree
-`62bee382516e4a06df6746c5aa61a54b2fe6622f`, and tag
-[`ai-integrated-stacks-r30-2026-08-29`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r30-2026-08-29).
-Its six assets total 178,510,756 bytes on each of GitHub and Zenodo, and all 12
-anonymous downloads matched by filename, byte count, and SHA-256. The Zenodo
-version DOI is
-[`10.5281/zenodo.22166456`](https://doi.org/10.5281/zenodo.22166456) under
+The [R32 release receipt](validation/stacks-errata-a04446e-r32-release-2026-08-30.json)
+binds the current public errata preservation checkpoint at content head
+`2af5664a7edcd352ebe5f776c2a190859f1ee071`, tree
+`58f1917e35781ffa028c1de4ed28b9aee232a7d7`, and tag
+[`ai-integrated-stacks-r32-2026-08-30`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r32-2026-08-30).
+Its six current assets total 181,650,621 bytes on each host. Anonymous readback
+covered all six GitHub assets and all nine Zenodo files. The Zenodo version DOI is
+[`10.5281/zenodo.22167418`](https://doi.org/10.5281/zenodo.22167418) under
 concept DOI [`10.5281/zenodo.22135180`](https://doi.org/10.5281/zenodo.22135180).
-Archive replay passed, and the preservation package binds 26 PDFs, 2,572 pages,
-and 27,531,529 PDF bytes.
+Archive replay passed, and the current preservation package binds 27 PDFs,
+2,614 pages, and 28,121,719 PDF bytes.
 
 The historical [R28 release receipt](validation/stacks-errata-a04446e-r28-release-2026-08-28.json)
 binds the preceding published tag
@@ -147,7 +148,7 @@ successful exact-head workflow `33250683600`, and Zenodo version DOI
 [`10.5281/zenodo.22161051`](https://doi.org/10.5281/zenodo.22161051) under the
 existing concept DOI. All six assets and 174,783,585 bytes per host matched in
 12 public downloads; archive-member replay passed. The source mapping and
-residual evidence introduce no root TeX or PDF change, so R30 remains the latest
+residual evidence introduce no root TeX or PDF change, so R32 remains the latest
 errata release.
 
 The [historical R22/R23 publication receipt](validation/stacks-errata-a04446e-r22-r23-release-2026-08-27.json)
