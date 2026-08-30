@@ -10126,7 +10126,7 @@ We will use the results of
 Properties of Spaces, Lemma \ref{spaces-properties-lemma-codimension-0-points}
 without further mention. By what we've
 already shown, the codimension $0$ points of $U$ lie above
-codimension $0$ points in $U$ and these are locally finite by
+codimension $0$ points in $V$ and these are locally finite by
 assumption. Hence it suffices to show that for $v \in V$ of codimension $0$
 the codimension $0$ points of the scheme theoretic fibre $U_v = U \times_V v$
 are locally finite. This is true because $U_v$ is a scheme
@@ -10185,7 +10185,7 @@ Morphisms, Lemma \ref{morphisms-lemma-normalization-normal},
 there is a unique morphism $g^\nu : U^\nu \to V^\nu$
 such that $\nu_V \circ g^\nu = g \circ \nu_U$, see
 Morphisms, Lemma \ref{morphisms-lemma-normalization-normal}
-part (4) applied to the composition $X^\nu \to X \to Y$,
+part (4) applied to the composition $U^\nu \to U \to V$,
 \item[(d)] if $V \in \Ob(\mathcal{C})$ and $g : U \to V$ is
 \'etale or smooth, then $U \in \Ob(\mathcal{C})$ and
 $g \in \text{Arrows}(\mathcal{C})$ and the morphism $g^\nu$
@@ -10249,7 +10249,7 @@ Then we see that we have $U^\nu = X^\nu \times_X U$ by
 Groupoids, Lemma \ref{groupoids-lemma-criterion-fibre-product}.
 
 \medskip\noindent
-What have we shown in the previous paragraph is this: for every algebraic
+What we have shown in the previous paragraph is this: for every algebraic
 space $X$ over $S$ satisfying the equivalent conditions of
 Lemma \ref{lemma-prepare-normalization} if we choose a surjective \'etale
 morphism $g : U \to X$ where $U$ is a scheme, then we obtain
@@ -10308,7 +10308,7 @@ R^\nu = U^\nu \times_{X^\nu} U^\nu
 \to U^\nu \to V^\nu \to Y^\nu
 $$
 must be the same by our comments in the previous paragraph (applied
-with $Y$ in stead of $X$).
+with $Y$ instead of $X$).
 Since $X^\nu$ is constructed by taking the quotient of
 $U^\nu$ by $R^\nu$ it follows that we obtain a (unique)
 morphism $f^\nu : X^\nu \to Y^\nu$ as stated in (3).
@@ -10374,7 +10374,7 @@ equivalent conditions of Lemma \ref{lemma-prepare-normalization}.
 \item The map $|\nu| : |X^\nu| \to |X|$ induces a bijection between
 the sets of points of codimension $0$ (Properties of Spaces,
 Definition \ref{spaces-properties-definition-dimension-local-ring}).
-\item Let $Z \to X$ be a morphism. Assume $Z$ is a normal algebraic space
+\item Let $f : Z \to X$ be a morphism. Assume $Z$ is a normal algebraic space
 and that for $z \in |Z|$ we have: $z$ has codimension $0$ in
 $Z \Rightarrow f(z)$ has codimension $0$ in $X$. Then
 there exists a unique factorization $Z \to X^\nu \to X$.
@@ -10405,7 +10405,7 @@ $$
 agree because these maps are the unique factorization of the map
 $V \times_{U \times_X Z} V \to V \to U$.
 Since the algebraic space $U \times_X Z$ is equal to the quotient
-$V/V \times_{U \times_X Z} V$
+$V/(V \times_{U \times_X Z} V)$
 (see Spaces, Section \ref{spaces-section-presentations})
 we find a canonical morphism
 $U \times_X Z \to U^\nu$. Picture
@@ -10422,7 +10422,7 @@ Hence if we set $R = U \times_X U$ with projections $s, t : R \to U$,
 then we obtain a morphism $R \times_X Z \to R^\nu$ commuting with
 $s, t : R \to U$ and $s^\nu, t^\nu : R^\nu \to U^\nu$.
 Recall that $X^\nu = U^\nu/R^\nu$, see proof of
-Lemma \ref{lemma-normalization}. Since $X = U/R$ a
+Lemma \ref{lemma-normalization}. Since $X = U/R$, a
 simple sheaf theoretic argument
 shows that $Z = (U \times_X Z)/(R \times_X Z)$. Thus the morphisms
 $U \times_X Z \to U^\nu$ and $R \times_X Z \to R^\nu$ define a
