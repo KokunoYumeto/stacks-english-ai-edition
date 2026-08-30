@@ -1,0 +1,139 @@
+{
+  "$schema": "../../../../../schemas/candidate-manifest.schema.json",
+  "builds": [
+    {
+      "bytes": 171,
+      "path": "BUILD.md",
+      "sha256": "4BB632692BD6D28AE6714199B40C4CC8229400EF999AAE6A6CAC63F58921E6DE"
+    },
+    {
+      "bytes": 1111,
+      "path": "candidate.config.json",
+      "sha256": "C642D42C6AE6E9829544B82C19C8059E638BD95582BA813F8897D7B04EC597D2"
+    },
+    {
+      "bytes": 432,
+      "path": "LEASE.json",
+      "sha256": "1DECFC108624291307A326AC97D0755E33BA269B441BB4A5F03E103717284C40"
+    },
+    {
+      "bytes": 4923,
+      "path": "operation-spec.json",
+      "sha256": "5F8F0F972934B1CD9F19D27EFF4C65DC5521D55ABC3C946620D4BAEB1086F9DF"
+    },
+    {
+      "bytes": 534407,
+      "path": "payload/sites-cohomology.tex",
+      "sha256": "838F3D4F8DF122979FDFE21453E3A03277009887CEB68527253AE0D14122C571"
+    },
+    {
+      "bytes": 38364,
+      "path": "pipeline_r35.py",
+      "sha256": "C7E060AAA14F68D094D32C794104399D910CEB2E59BD01F81553BE5A530E5408"
+    },
+    {
+      "bytes": 372,
+      "path": "README.md",
+      "sha256": "180EFEE03B965CC434568E52694B46BB7D8501201767FDCF59596DD07CA96138"
+    },
+    {
+      "bytes": 553,
+      "path": "REGENERATION_RECEIPT.json",
+      "sha256": "C0CB34299D446ECE5989C7D2A91DA324255E7EB66F4C90C47DDF33AA10443128"
+    },
+    {
+      "bytes": 3435,
+      "path": "replay/independent-review.json",
+      "sha256": "763EB44C62DDAF89C4248CB5B6D0877058DDD4F19149A14BB5794058BD6E8B83"
+    },
+    {
+      "bytes": 1150,
+      "path": "source-validation.json",
+      "sha256": "E516BF0B54CB00DC32BA21D4F582080DCF25E78D28F411431B683232670F3E0C"
+    }
+  ],
+  "candidate_id": "stacks-errata-a04446e-r35",
+  "decision_ledger": {
+    "bytes": 1499,
+    "path": "decisions.jsonl",
+    "sha256": "20E7E2E8CD16D39D7ADB668509DF10C225A9C6378135F8511B7B7CC5256A6A9F"
+  },
+  "formula_diagram_inventory": {
+    "bytes": 400,
+    "path": "formula-diagram-inventory.json",
+    "sha256": "7BFC2F75F2DEC4EFD0C5C2810BDCEB9548E093C07A4205BF4D6CF54254A7D069"
+  },
+  "generated_at_utc": "2026-08-30T15:30:00Z",
+  "independent_replay": "passed",
+  "lease_id": "stacks-lease-000039-errata-r35",
+  "namespace": "commons/stacks/errata/r35",
+  "rejection_ledger": {
+    "bytes": 0,
+    "path": "rejections.jsonl",
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  "review_state": "performed",
+  "rights_state": "The authority and modified payload retain the Stacks Project GNU Free Documentation License 1.2; metadata and receipts do not relicense upstream content. This independently maintained AI-produced English correction overlay has no Stacks Project review, approval, affiliation, or endorsement.",
+  "schema": "mathematics-commons-stacks-candidate-manifest/v1",
+  "source_authorities": [
+    {
+      "bytes": 20404,
+      "path": "authority/COPYING",
+      "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"
+    },
+    {
+      "bytes": 448,
+      "path": "authority/producer/SITES_COHOMOLOGY_R35_PACKET_RECEIPT.json",
+      "sha256": "1AED39C974ED782F58A019E1692C5A94B2F4C7E400363EF332384F3AECC0EB1E"
+    },
+    {
+      "bytes": 1961,
+      "path": "authority/producer/SITES_COHOMOLOGY_SOURCE_DEFECT_LEDGER_012_013_028.csv",
+      "sha256": "815D3B3965B6622AB00CB750A624549E200CC2A0878FE5349B0A18FC7D5373DC"
+    },
+    {
+      "bytes": 534394,
+      "path": "authority/source/sites-cohomology.tex",
+      "sha256": "5B335CE2C7208A128B3C744B8828D93508063F41A4FABBCE2E921F890928895C"
+    },
+    {
+      "bytes": 455,
+      "path": "authority/upstream.lock.json",
+      "sha256": "EF96BACAA383972DAF8969C9E2A27911A409B3D1DEF1EEDFA769636F3CF3C7BD"
+    }
+  ],
+  "source_closure": {
+    "complete": true,
+    "enumerated": true,
+    "expected_units": 3,
+    "manifested_units": 3
+  },
+  "source_map": {
+    "bytes": 6467,
+    "path": "source-map.jsonl",
+    "sha256": "F0CEC493580D2DEB5F13EE77A77CD4C0DE6CDBBCDD68842DA02EC6699D833CEA"
+  },
+  "stable_unit_manifest": {
+    "bytes": 1438,
+    "path": "stable-units.json",
+    "sha256": "C86B8406E232FBBBDFAA42E4CD749A1AEDC54D8D8785898FB74A63688D4F96FA"
+  },
+  "stop_conditions": [
+    "Do not mutate pinned upstream authority or locale targets.",
+    "Do not include producer rows outside the exact selected three-row packet.",
+    "Any byte change requires a regenerated manifest and replay."
+  ],
+  "unresolved_defects": [
+    "Only SITES-COHOMOLOGY-012, SITES-COHOMOLOGY-013, and SITES-COHOMOLOGY-028 are included; every other producer row is excluded.",
+    "The producer replacement for SITES-COHOMOLOGY-012 is strengthened to the typed expression \\mathcal{M}^\\bullet(U); the original producer row is preserved as adverse evidence.",
+    "The mirrored reversed comparison map in cohomology.tex is outside this sites-cohomology-only packet and is queued for a distinct later unit.",
+    "This registrar candidate does not compose or push generated Stacks source.",
+    "Pinned authority and locale targets remain unmodified."
+  ],
+  "upstream": {
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "lock": "upstream/stacks.lock.json",
+    "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e"
+  },
+  "writer_task": "01a0256d-5693-77c1-96b2-cf37101e0c6c"
+}

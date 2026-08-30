@@ -1,0 +1,79 @@
+{
+  "schema": "mathematics-commons-stacks-errata-independent-review/v1",
+  "candidate_id": "stacks-errata-a04446e-r35",
+  "review_kind": "three_way_independent_exact_preimage_context_deduplication_and_payload_review",
+  "recorded_at_utc": "2026-08-30T15:30:00Z",
+  "passed": true,
+  "pass_is_unconditional": true,
+  "result": "PASS",
+  "conclusion": "UNCONDITIONAL PASS",
+  "input_bindings": {
+    "sites_cohomology_authority_sha256": "5B335CE2C7208A128B3C744B8828D93508063F41A4FABBCE2E921F890928895C",
+    "sites_cohomology_live_ledger_bytes": 7562,
+    "sites_cohomology_live_ledger_sha256": "AFD6E4910E2D263E1B25B3715D8C64348A8CF2802AC079D6B9DFEBB13CDE6F6E",
+    "sites_cohomology_selected_packet_bytes": 1961,
+    "sites_cohomology_selected_packet_sha256": "815D3B3965B6622AB00CB750A624549E200CC2A0878FE5349B0A18FC7D5373DC"
+  },
+  "independent_review_tasks": [
+    {
+      "task": "/root/r35_sites_012_audit",
+      "assigned_scope": "SITES-COHOMOLOGY-012",
+      "result": "defect accepted; producer replacement independently strengthened to include evaluation at U"
+    },
+    {
+      "task": "/root/r35_sites_013_audit",
+      "assigned_scope": "SITES-COHOMOLOGY-013",
+      "result": "accepted"
+    },
+    {
+      "task": "/root/r35_sites_028_audit",
+      "assigned_scope": "SITES-COHOMOLOGY-028",
+      "result": "accepted; distinct cohomology.tex mirror excluded from this source-path-bounded unit"
+    }
+  ],
+  "deduplication": {
+    "passed": true,
+    "registry_pre_admission_head": "stacks-errata-a04446e-r34",
+    "semantic_units": 3,
+    "accepted_new_units": [
+      "SITES-COHOMOLOGY-012",
+      "SITES-COHOMOLOGY-013",
+      "SITES-COHOMOLOGY-028"
+    ],
+    "stable_id_collisions": 0,
+    "operation_aliases": {}
+  },
+  "adverse_observations": [
+    "The SITES-COHOMOLOGY-012 preimage occurs at authority lines 11619 and 11671. Line 11619 is the legitimate generic complex from assumption (2); only line 11671 is corrected.",
+    "The producer's initial row-012 replacement omitted evaluation at U and remained ill-typed. The producer ledger and French draft were append-corrected before this candidate was regenerated; the selected packet preserves the corrected exact row.",
+    "SITES-COHOMOLOGY-028 has an analogous reversed comparison arrow in cohomology.tex:11924. That is a distinct source-path mirror and is excluded from this sites-cohomology-only packet for a later bounded unit.",
+    "R35 is registrar-only; downstream generated-source composition and publication are excluded from this candidate."
+  ],
+  "closure_checks": {
+    "passed": true,
+    "authority_files": 1,
+    "payload_files": 1,
+    "source_map_rows": 3,
+    "stable_ids_unique": 3,
+    "operation_ids_unique": 3,
+    "manifest_references_before_review_rebind": 19
+  },
+  "scratch_replay": {
+    "passed": true,
+    "apply_order": "descending_start_byte_per_source",
+    "stable_units": 3,
+    "operations": 3,
+    "payload_sha256": {
+      "sites-cohomology.tex": "838F3D4F8DF122979FDFE21453E3A03277009887CEB68527253AE0D14122C571"
+    }
+  },
+  "constraints_observed": {
+    "upstream_authority_mutated": false,
+    "locale_targets_mutated_by_registrar": false,
+    "registry_mutated_by_review": false,
+    "generated_source_composed": false,
+    "generated_source_pushed": false,
+    "nonselected_producer_rows_admitted": false
+  },
+  "pre_review_manifest_sha256": "063B42B486279FF5A869A6E597924B2299D6EE2D87C677A67920496721B9BDA8"
+}
