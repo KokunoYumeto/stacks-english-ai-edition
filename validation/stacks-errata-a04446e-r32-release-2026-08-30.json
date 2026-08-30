@@ -2,7 +2,7 @@
   "schema": "unofficial-ai-integrated-stacks-errata-release/v1",
   "status": "PUBLICATION_COMPLETE",
   "created_utc": "2026-08-30T01:19:08Z",
-  "updated_utc": "2026-08-30T01:19:08Z",
+  "updated_utc": "2026-08-30T01:30:44Z",
   "release": {
     "repository": "KokunoYumeto/unofficial-ai-integrated-stacks-project",
     "default_branch": "main",
@@ -13,8 +13,8 @@
     "registered_stable_ids": 1035,
     "published_content_head": "2af5664a7edcd352ebe5f776c2a190859f1ee071",
     "content_tree": "58f1917e35781ffa028c1de4ed28b9aee232a7d7",
-    "metadata_head": "2af5664a7edcd352ebe5f776c2a190859f1ee071",
-    "metadata_tree": "58f1917e35781ffa028c1de4ed28b9aee232a7d7",
+    "metadata_head": "11e1134bbe2b74e855a6d1470ef4ee485415fb56",
+    "metadata_tree": "abddd92839d1917ad8611f63e5fb6ee46b483887",
     "tag": "ai-integrated-stacks-r32-2026-08-30",
     "admitted_and_composed": [
       "stacks-errata-a04446e-r31",
@@ -152,7 +152,7 @@
   },
   "public_readback": {
     "status": "PASS",
-    "checked_utc": "2026-08-30T01:19:08Z",
+    "checked_utc": "2026-08-30T01:30:44Z",
     "method": "anonymous raw.githubusercontent.com HTTPS byte readback of all 107 R30-to-R32 changed paths plus all six current GitHub assets and all nine Zenodo record files; exact byte, SHA-256, Git-blob, ZIP reopen, CRC, complete-listing, and cross-host checks",
     "commit": "2af5664a7edcd352ebe5f776c2a190859f1ee071",
     "changed_path_readback_count": 107,
@@ -913,13 +913,13 @@
   },
   "workflow": {
     "name": "Unified repository validation",
-    "run_id": 33285185788,
+    "run_id": 33285717434,
     "attempt": 1,
-    "head_sha": "2af5664a7edcd352ebe5f776c2a190859f1ee071",
+    "head_sha": "11e1134bbe2b74e855a6d1470ef4ee485415fb56",
     "status": "completed",
     "conclusion": "success",
-    "url": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/actions/runs/33285185788",
-    "role": "successful fresh-ref pre-publication validation of the exact R32 package head"
+    "url": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/actions/runs/33285717434",
+    "role": "successful exact-head full validation for the first R32 publication-metadata head"
   },
   "preservation": {
     "status": "PUBLIC_READBACK_VERIFIED",
@@ -1078,5 +1078,99 @@
     "artifact_tuple_set_sha256": "27C9800A07FE0725BC7CC2FDE7BE72D43733A992E369FFE87D53C6A1431692EB",
     "public_identity_evidence": "validation/stacks-errata-a04446e-r32-build-2026-08-30.json"
   },
-  "scope_note": "This release composes and validates admitted Stacks errata through R32. The repository's EGA integration remains explicitly partial and is not claimed complete; formal verification is not claimed."
+  "scope_note": "This release composes and validates admitted Stacks errata through R32. The repository's EGA integration remains explicitly partial and is not claimed complete; formal verification is not claimed.",
+  "metadata_readback": {
+    "schema": "unofficial-ai-integrated-stacks-r32-metadata-readback/v1",
+    "status": "PASS",
+    "checked_utc": "2026-08-30T01:30:34Z",
+    "method": "anonymous raw.githubusercontent.com HTTPS byte readback of every path changed by the first R32 publication-metadata commit",
+    "commit": "11e1134bbe2b74e855a6d1470ef4ee485415fb56",
+    "tree": "abddd92839d1917ad8611f63e5fb6ee46b483887",
+    "checked_file_count": 9,
+    "checked_total_bytes": 152620,
+    "byte_or_hash_mismatches": 0,
+    "checked_paths": [
+      {
+        "path": "PROVENANCE.md",
+        "bytes": 16407,
+        "sha256": "BC0C8815FB539BCD1840CD6A1032DFAB0AB1140C76699841AD65FC6C4F909DF3",
+        "git_blob": "c9b140d03e2850a4d40febb969675638da9ec835",
+        "public_bytes": 16407,
+        "public_sha256": "BC0C8815FB539BCD1840CD6A1032DFAB0AB1140C76699841AD65FC6C4F909DF3",
+        "match": true
+      },
+      {
+        "path": "README.md",
+        "bytes": 14773,
+        "sha256": "4F868861F28272A3EB3F04A75D1195CA6556392A212C78D38D625183EBD90AF0",
+        "git_blob": "fd8c7eece065119b389da6c2308e6f9e191345b0",
+        "public_bytes": 14773,
+        "public_sha256": "4F868861F28272A3EB3F04A75D1195CA6556392A212C78D38D625183EBD90AF0",
+        "match": true
+      },
+      {
+        "path": "ROADMAP.md",
+        "bytes": 12688,
+        "sha256": "132927E97DE61F39FC53AF0896241C63C35EA180AA99DCA819BDBAF28B6FF4B3",
+        "git_blob": "4c4d8384508688c8fc5f932ca602d073de4342b1",
+        "public_bytes": 12688,
+        "public_sha256": "132927E97DE61F39FC53AF0896241C63C35EA180AA99DCA819BDBAF28B6FF4B3",
+        "match": true
+      },
+      {
+        "path": "STATUS.md",
+        "bytes": 13728,
+        "sha256": "C442A2208D654FD36D6F11F47C6B3ECA39DCB3FDD7F8F6421A9BF04FEC7CD7E7",
+        "git_blob": "34b762bd524d3c8cffc4ec3d80276d9abf2a90fd",
+        "public_bytes": 13728,
+        "public_sha256": "C442A2208D654FD36D6F11F47C6B3ECA39DCB3FDD7F8F6421A9BF04FEC7CD7E7",
+        "match": true
+      },
+      {
+        "path": "VALIDATION.md",
+        "bytes": 11153,
+        "sha256": "7F6B747A1B83AE96F03182B3F22BE92DE0DABB37DCE30EEC6A4BC0EF5DD8F2B7",
+        "git_blob": "625fd980f7a5e6f922330abe7ca17ba20e33f252",
+        "public_bytes": 11153,
+        "public_sha256": "7F6B747A1B83AE96F03182B3F22BE92DE0DABB37DCE30EEC6A4BC0EF5DD8F2B7",
+        "match": true
+      },
+      {
+        "path": "ai-integrated/README.md",
+        "bytes": 6736,
+        "sha256": "4F736D95CB7CBB8A0AB6AB67B1F38DBE4A6DF8ECCA8DDD8DA1420E15761A35A5",
+        "git_blob": "ca5a18acd3c8dd69eaadee1740e3b6b87641bfcb",
+        "public_bytes": 6736,
+        "public_sha256": "4F736D95CB7CBB8A0AB6AB67B1F38DBE4A6DF8ECCA8DDD8DA1420E15761A35A5",
+        "match": true
+      },
+      {
+        "path": "validation/README.md",
+        "bytes": 23717,
+        "sha256": "38B8EEEC4A6E8EDE74FCBDA25BEF2F40072BE099CC3B88C26B7DB7A0C9FC77AC",
+        "git_blob": "76ca08fbb5f4877a955b6d292fa8f216096e7939",
+        "public_bytes": 23717,
+        "public_sha256": "38B8EEEC4A6E8EDE74FCBDA25BEF2F40072BE099CC3B88C26B7DB7A0C9FC77AC",
+        "match": true
+      },
+      {
+        "path": "validation/stacks-errata-a04446e-r32-release-2026-08-30.json",
+        "bytes": 46482,
+        "sha256": "3BA8DC50BF4CAE79A4F63B512972DA564AA318732755BC972152180AAAAC09CF",
+        "git_blob": "eb4e0bcb60e60af97ecf55fd7e10edb04aeb9d83",
+        "public_bytes": 46482,
+        "public_sha256": "3BA8DC50BF4CAE79A4F63B512972DA564AA318732755BC972152180AAAAC09CF",
+        "match": true
+      },
+      {
+        "path": "validation/stacks-errata-a04446e-r32-zenodo-publication-2026-08-30.json",
+        "bytes": 6936,
+        "sha256": "DBE470FE3A6749863164DE9CC58364B18E8559780D9F9BD62070E328FE9ADD0C",
+        "git_blob": "806360d77819558f3520761054d3b9ec429fdee6",
+        "public_bytes": 6936,
+        "public_sha256": "DBE470FE3A6749863164DE9CC58364B18E8559780D9F9BD62070E328FE9ADD0C",
+        "match": true
+      }
+    ]
+  }
 }
