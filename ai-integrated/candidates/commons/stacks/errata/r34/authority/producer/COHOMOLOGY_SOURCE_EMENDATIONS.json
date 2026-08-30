@@ -1,0 +1,23 @@
+{
+  "schema": "stacks-fr-source-emendations-v1",
+  "chapter": 20,
+  "source_file": "cohomology.tex",
+  "authority_sha256": "FA9747D0082AFBF8B09244DCC6C260F8A122E5E3B4A3C69E2273506D76E18A42",
+  "source_line_range": {"start": 1, "end": 14528},
+  "operation_count": 1,
+  "emendations": [
+    {
+      "id": "COHOMOLOGY-CH20-OP001",
+      "source_defect_id": "COHOMOLOGY-CH20-D003",
+      "lease": "D",
+      "local_id": "COHOMOLOGY-003",
+      "line": 12907,
+      "old": "R\\SheafHom(R\\SheafHom(K_2, L), M)",
+      "new": "R\\SheafHom(R\\SheafHom(K_2, L), M) \\to",
+      "rationale": "The prose declares this row to be a distinguished triangle and the parallel preceding row contains both arrows; the omitted arrow between the K_2 and K_3 terms is mathematically forced.",
+      "status": "confirmed_source_error_emended_in_french",
+      "operation_sha256": "345ACADC6BB1C862FB3DF039DF4CB40DA752C998189DD534367D51A572841AF6"
+    }
+  ],
+  "rationale": "One exact formula correction is applied only in memory to the frozen English authority for invariant comparison and in the French target; the pinned authority bytes remain unchanged."
+}

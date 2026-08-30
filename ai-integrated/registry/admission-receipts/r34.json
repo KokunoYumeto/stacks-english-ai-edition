@@ -1,0 +1,100 @@
+{
+  "admitted_at_utc": "2026-08-30T14:30:00Z",
+  "candidate_id": "stacks-errata-a04446e-r34",
+  "constraints": {
+    "authority_mutated": false,
+    "generated_source_composed": false,
+    "generated_source_pushed": false,
+    "producer_target_mutated": false,
+    "published": false
+  },
+  "fresh_replay": {
+    "candidate_id": "stacks-errata-a04446e-r34",
+    "manifest_references": 24,
+    "operations": 14,
+    "passed": true,
+    "payload_sha256": {
+      "cohomology.tex": "DD44456392FE64B181B6DC67CA99865E40B7D69F667C998DE6706520B5DE661D",
+      "sites-cohomology.tex": "66A32CD69EF1CCA8FF31B2E6568396FF11D96B9DC52FB87E7EF9B18B2306330C"
+    },
+    "stable_ids": [
+      "MC-STK-ERR-1295",
+      "MC-STK-ERR-1296",
+      "MC-STK-ERR-1297",
+      "MC-STK-ERR-1298",
+      "MC-STK-ERR-1299",
+      "MC-STK-ERR-1300",
+      "MC-STK-ERR-1301",
+      "MC-STK-ERR-1302",
+      "MC-STK-ERR-1303",
+      "MC-STK-ERR-1304",
+      "MC-STK-ERR-1305",
+      "MC-STK-ERR-1306",
+      "MC-STK-ERR-1307",
+      "MC-STK-ERR-1308"
+    ],
+    "units": 14
+  },
+  "leases": {
+    "after_sha256": "A3DD86B0B4C173526FB72DF2B45298F01BF52A973D171F640F2CD64FF86841D5",
+    "before_sha256": "A2B79E60B52B8BCB984D32F30218463D68E696CA5FA437E084CCB8CDF001A8F1",
+    "issued_event": "lease-event-000072",
+    "released_event": "lease-event-000073"
+  },
+  "manifest": {
+    "bytes": 5636,
+    "path": "candidate.manifest.json",
+    "sha256": "89D253B19D00C0A9D3203E65A43974C765C42760D83B5E4E7D5040E4F6227196"
+  },
+  "producer_ids": [
+    "COHOMOLOGY-CH20-D001",
+    "COHOMOLOGY-CH20-D002",
+    "COHOMOLOGY-CH20-D003",
+    "SITES-COHOMOLOGY-001",
+    "SITES-COHOMOLOGY-002",
+    "SITES-COHOMOLOGY-003",
+    "SITES-COHOMOLOGY-004",
+    "SITES-COHOMOLOGY-005",
+    "SITES-COHOMOLOGY-006",
+    "SITES-COHOMOLOGY-007",
+    "SITES-COHOMOLOGY-008",
+    "SITES-COHOMOLOGY-009",
+    "SITES-COHOMOLOGY-010",
+    "SITES-COHOMOLOGY-011"
+  ],
+  "registry": {
+    "after_sha256": "E821CB02AFA33CE2CCEFEFD08351F46712F5E101E939BBB2EE6E4B831C517E78",
+    "before_sha256": "444314B02615DD4EC6EA1D2E70B17BF7723B43635F48D719CD954CDB4780D21A",
+    "last_overlay": "stacks-errata-a04446e-r34"
+  },
+  "schema": "mathematics-commons-stacks-registry-admission-receipt/v1",
+  "source_map": {
+    "bytes": 28398,
+    "path": "source-map.jsonl",
+    "sha256": "8AEC77764C4979F115C6EAD631D98072079D2E0ED7316118E2A874DF15E1AA96"
+  },
+  "stable_id_count": 14,
+  "stable_ids": [
+    "MC-STK-ERR-1295",
+    "MC-STK-ERR-1296",
+    "MC-STK-ERR-1297",
+    "MC-STK-ERR-1298",
+    "MC-STK-ERR-1299",
+    "MC-STK-ERR-1300",
+    "MC-STK-ERR-1301",
+    "MC-STK-ERR-1302",
+    "MC-STK-ERR-1303",
+    "MC-STK-ERR-1304",
+    "MC-STK-ERR-1305",
+    "MC-STK-ERR-1306",
+    "MC-STK-ERR-1307",
+    "MC-STK-ERR-1308"
+  ],
+  "status": "PASS",
+  "transport_repair": {
+    "history_rewritten": false,
+    "public_or_committed_predecessor_existed": false,
+    "reason": "The initial uncommitted admission changed LEASE.json after manifest generation; this receipt binds the regenerated released lease and final manifest.",
+    "status": "PASS"
+  }
+}

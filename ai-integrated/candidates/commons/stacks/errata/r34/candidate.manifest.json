@@ -1,0 +1,157 @@
+{
+  "$schema": "../../../../../schemas/candidate-manifest.schema.json",
+  "builds": [
+    {
+      "bytes": 171,
+      "path": "BUILD.md",
+      "sha256": "4F859AA3D1EACCC9BCDC61E075DD39FFF42C51CBC17438B167671BE6CB1B000A"
+    },
+    {
+      "bytes": 1978,
+      "path": "candidate.config.json",
+      "sha256": "E112E7C7EB265CE6762260B9043E95F2ED4074AE69C02650BDE190423E78E6D3"
+    },
+    {
+      "bytes": 432,
+      "path": "LEASE.json",
+      "sha256": "A583157CCA5782B1288F74616A457AD256265794ABEB2DFBA95C413B7B6A223B"
+    },
+    {
+      "bytes": 20375,
+      "path": "operation-spec.json",
+      "sha256": "F3D71DE544D9DE3728820B743B27231093B3E45A4B19EA07C0595BCB90C25DD3"
+    },
+    {
+      "bytes": 519289,
+      "path": "payload/cohomology.tex",
+      "sha256": "DD44456392FE64B181B6DC67CA99865E40B7D69F667C998DE6706520B5DE661D"
+    },
+    {
+      "bytes": 534417,
+      "path": "payload/sites-cohomology.tex",
+      "sha256": "66A32CD69EF1CCA8FF31B2E6568396FF11D96B9DC52FB87E7EF9B18B2306330C"
+    },
+    {
+      "bytes": 44072,
+      "path": "pipeline_r34.py",
+      "sha256": "497A0FF330868C35E7A10A92FF52C1E8C37CD59654729AE47980F4EA108A9868"
+    },
+    {
+      "bytes": 394,
+      "path": "README.md",
+      "sha256": "44D5ACAA6CFE2CF3A0ECEA47331DB4C9ADBA45CBADA8D42E0E198DBDA6202AC5"
+    },
+    {
+      "bytes": 743,
+      "path": "REGENERATION_RECEIPT.json",
+      "sha256": "4C313E8B53489C103A6F3B85E7671617902F1A0141793620CF4FC61FA3EE67A3"
+    },
+    {
+      "bytes": 4014,
+      "path": "replay/independent-review.json",
+      "sha256": "82755A96A15E22650DDDA6B6CE9ABE5C51F873D6F495FD1FD0F71B0CF3E21122"
+    },
+    {
+      "bytes": 1842,
+      "path": "source-validation.json",
+      "sha256": "11B89DFD715B9CB4D3DA9D77A25ADB5EEDE2B2059C24FE78CF7191F88A487614"
+    }
+  ],
+  "candidate_id": "stacks-errata-a04446e-r34",
+  "decision_ledger": {
+    "bytes": 1403,
+    "path": "decisions.jsonl",
+    "sha256": "591C96973F6A31F55B1B0648745846B47481426FEAFA726F4D4B619CF83166E0"
+  },
+  "formula_diagram_inventory": {
+    "bytes": 656,
+    "path": "formula-diagram-inventory.json",
+    "sha256": "27E6988EC2B5802D3090F4F76ECAB35A8B9319855BE28562E0BD3E49D1B23188"
+  },
+  "generated_at_utc": "2026-08-30T14:30:00Z",
+  "independent_replay": "passed",
+  "lease_id": "stacks-lease-000038-errata-r34",
+  "namespace": "commons/stacks/errata/r34",
+  "rejection_ledger": {
+    "bytes": 0,
+    "path": "rejections.jsonl",
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  "review_state": "performed",
+  "rights_state": "The authority and modified payload retain the Stacks Project GNU Free Documentation License 1.2; metadata and receipts do not relicense upstream content. This independently maintained AI-produced English correction overlay has no Stacks Project review, approval, affiliation, or endorsement.",
+  "schema": "mathematics-commons-stacks-candidate-manifest/v1",
+  "source_authorities": [
+    {
+      "bytes": 20404,
+      "path": "authority/COPYING",
+      "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"
+    },
+    {
+      "bytes": 2351,
+      "path": "authority/producer/COHOMOLOGY_SOURCE_DEFECT_LEDGER.csv",
+      "sha256": "7AA50ACD644F21BE569022B10D30790271B4EB36572D1B594B7FBED61B9455CC"
+    },
+    {
+      "bytes": 1138,
+      "path": "authority/producer/COHOMOLOGY_SOURCE_EMENDATIONS.json",
+      "sha256": "1D9EE84946783C1716E73733E201741558B67B762B42BF3C93E0EE5900152B01"
+    },
+    {
+      "bytes": 672,
+      "path": "authority/producer/SITES_COHOMOLOGY_PACKET_PREFIX_RECEIPT.json",
+      "sha256": "213063A29F9E8408900FB65D0494AE5C3F0933CA1164712B1CFF66BC620B304F"
+    },
+    {
+      "bytes": 5756,
+      "path": "authority/producer/SITES_COHOMOLOGY_SOURCE_DEFECT_LEDGER_001_011.csv",
+      "sha256": "73CEE46DD7AD6C334FD7E584A0F8279B0BD5670F98CD3BC4EFE5ED1CF88CFD2B"
+    },
+    {
+      "bytes": 519286,
+      "path": "authority/source/cohomology.tex",
+      "sha256": "FA9747D0082AFBF8B09244DCC6C260F8A122E5E3B4A3C69E2273506D76E18A42"
+    },
+    {
+      "bytes": 534394,
+      "path": "authority/source/sites-cohomology.tex",
+      "sha256": "5B335CE2C7208A128B3C744B8828D93508063F41A4FABBCE2E921F890928895C"
+    },
+    {
+      "bytes": 623,
+      "path": "authority/upstream.lock.json",
+      "sha256": "42AAEEEED93CAC21634501284827E1FB10232BB88AEF8FD2DFA502F9D6E4E9EA"
+    }
+  ],
+  "source_closure": {
+    "complete": true,
+    "enumerated": true,
+    "expected_units": 14,
+    "manifested_units": 14
+  },
+  "source_map": {
+    "bytes": 28398,
+    "path": "source-map.jsonl",
+    "sha256": "8AEC77764C4979F115C6EAD631D98072079D2E0ED7316118E2A874DF15E1AA96"
+  },
+  "stable_unit_manifest": {
+    "bytes": 6082,
+    "path": "stable-units.json",
+    "sha256": "46599957B8E764B7BE2E0AE8C8F9B3E4685737E3920F54503050582D6CE63E98"
+  },
+  "stop_conditions": [
+    "Do not mutate pinned upstream authority or locale targets.",
+    "Do not include producer suffix rows outside the exact handed-off packet.",
+    "Any byte change requires a regenerated manifest and replay."
+  ],
+  "unresolved_defects": [
+    "Only the exact handed-off COHOMOLOGY-CH20-D001..D003 and SITES-COHOMOLOGY-001..011 packets are included; later append-only producer suffix rows are excluded.",
+    "This registrar candidate does not compose or push generated Stacks source.",
+    "Pinned authority and locale targets remain unmodified."
+  ],
+  "upstream": {
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "lock": "upstream/stacks.lock.json",
+    "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e"
+  },
+  "writer_task": "01a0256d-5693-77c1-96b2-cf37101e0c6c"
+}
