@@ -822,11 +822,11 @@ scope = json.loads(scope_raw.decode("utf-8"))
 # The scope manifest is resealed whenever the append-only ledger frontier
 # advances.  Keep the byte/hash pin here (rather than deriving it at runtime)
 # so an accidental edit cannot silently widen the reviewed surface.  The
-# current seal closes the semantic-only EGA I 6.5.5 slice while preserving
+# current seal closes the semantic-only EGA I 6.6.1 slice while preserving
 # the existing visual and root-source surfaces.
-if (len(scope_raw) != 21613 or
+if (len(scope_raw) != 22288 or
         hashlib.sha256(scope_raw).hexdigest().upper() !=
-        "A48BA684BD9E199B24891F81E153128718FD8DBE150DB107B13C077B1B8ED82C"):
+        "F811AEC30393986CE95D15CF5B439F1443D04CAEF74C29197317BB968D74C547"):
     ERRORS.append("final scope manifest identity mismatch")
 if scope.get("status") != "discovery_scaffold":
     ERRORS.append("scope status must remain discovery_scaffold")
@@ -902,7 +902,7 @@ if (scope.get("reviewed_source_slices", {}).get("ega:I.6.4") !=
         set(scope.get("reviewed_source_slices", {})) != {
             "ega:I.6.1", "ega:I.6.2", "ega:I.6.3", "ega:I.6.4",
             "ega:I.6.5.1", "ega:I.6.5.2", "ega:I.6.5.3",
-            "ega:I.6.5.4", "ega:I.6.5.5"}):
+            "ega:I.6.5.4", "ega:I.6.5.5", "ega:I.6.6.1"}):
     ERRORS.append("EGA I 6.4 reviewed F37ZW source-slice receipt mismatch")
 expected_i651_source_slice = {
     "receipt": "F37ZW.json",
@@ -1034,6 +1034,28 @@ expected_i655_source_slice = {
 if scope.get("reviewed_source_slices", {}).get("ega:I.6.5.5") != (
         expected_i655_source_slice):
     ERRORS.append("EGA I 6.5.5 reviewed F37ZW source-slice receipt mismatch")
+expected_i661_source_slice = {
+    "receipt": "F37ZW.json",
+    "receipt_sha256":
+        "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+    "path": "ega1/ega1-6-fr.tex",
+    "full_bytes": 57781,
+    "full_sha256":
+        "F95D2C43C1074A1CC6485D74E24F02BF8C5F098ADB571AA024B4B499F5CDE3FE",
+    "lf_line_start": 998,
+    "lf_line_end": 1024,
+    "slice_bytes": 1431,
+    "slice_sha256":
+        "5C8CDC02B98888C42016E37E28B124326F15B581D16EF1AFA8C5A6962CB46A00",
+    "statement_lf_line_start": 1001,
+    "statement_lf_line_end": 1024,
+    "statement_bytes": 1324,
+    "statement_sha256":
+        "6765571D18DB985C4288888FC1C6C65C222C30E59965173EBAE9A7A7E1862862",
+}
+if scope.get("reviewed_source_slices", {}).get("ega:I.6.6.1") != (
+        expected_i661_source_slice):
+    ERRORS.append("EGA I 6.6.1 reviewed F37ZW source-slice receipt mismatch")
 
 # The direct-French topology receipt is a separate, immutable source-bound
 # artifact.  It records the larger §6.5 subsection scan while the scope slice
@@ -1941,9 +1963,13 @@ require_raw_line(
     decision_physical_lines, 325, 486,
     "0C6760E17B0185156B8A3BE1A7A02EBB15BF32EFD12B807B7C94DDB116374B97",
     "D000325")
-if (len(decision_raw) != 86615 or
+require_raw_line(
+    decision_physical_lines, 326, 410,
+    "5A763CFE186055A02C3C80BAB6CBF860F0ADA3AB59C3CD1DCF304A7009FF5AFF",
+    "D000326")
+if (len(decision_raw) != 87025 or
         hashlib.sha256(decision_raw).hexdigest().upper() !=
-    "C00D4ECFBDC8FB3DE5A123A560AD9CFDD433859C3D80F49A791D12C6DABE0C5A"):
+    "1202EC26FBCC82A36BA43205166FA36756A1329D91BA5EDD6A6C191290883840"):
     ERRORS.append("final decision manifest identity mismatch")
 require_lf_prefix(
     issue_raw, 62, 24019,
@@ -2950,6 +2976,20 @@ for decision_id, expected in i655_semantic_decision_contracts.items():
     if actual != expected or row.get("state") != "active":
         ERRORS.append(f"missing exact active EGA I 6.5.5 decision {decision_id}")
 
+i661_semantic_decision_contracts = {
+    "D000326": (
+        "ega:I.6.6.1",
+        "map_quasi_compact_morphism_definition_affine_basis_criterion_and_target_locality",
+        "F37ZW.json FR998-1024 5C8CDC02B98888C42016E37E28B124326F15B581D16EF1AFA8C5A6962CB46A00 and 01K3 01K4 01SG with D000267",
+        ""),
+}
+for decision_id, expected in i661_semantic_decision_contracts.items():
+    row = active_decision_by_id.get(decision_id)
+    actual = tuple(row.get(field) for field in (
+        "subject_id", "action", "evidence", "supersedes")) if row else None
+    if actual != expected or row.get("state") != "active":
+        ERRORS.append(f"missing exact active EGA I 6.6.1 decision {decision_id}")
+
 final_d48_issue_successors = {
     "I000079": ("I000077", "ega:I.5.1.5:diagram:xymatrix:1"),
     "I000080": ("I000078", "ega:I.5.1.9:diagram:xymatrix:2"),
@@ -3092,6 +3132,21 @@ if (ROOT / "units.csv").exists() and (ROOT / "files.csv").exists():
         if row["kind"] != "corpus" and row["volume"] not in logical_volumes:
             ERRORS.append(
                 f"invalid logical volume {row['volume']!r} for {row['unit_id']}")
+    expected_i661_discovery_units = {
+        "ega:subsection:I.6.6": (
+            "subsection", "ega:section:I.6", "ega1/ega1-6.tex", "712",
+            "596F8F3794B1241FDFD0CE8E32BE0D3263A1DB80EB4BB549399D68BF4167741E"),
+        "ega:I.6.6.1": (
+            "definition", "ega:subsection:I.6.6", "ega1/ega1-6.tex", "715",
+            "DD290BFCD243AB42A7522ED3C915B15B20AF7CF0C91F8CB61F1ACB4048929F30"),
+    }
+    for unit_id, expected in expected_i661_discovery_units.items():
+        row = units_by_id.get(unit_id)
+        actual = tuple(row.get(field) for field in (
+            "kind", "parent_id", "source_file", "line", "anchor_sha256"
+        )) if row else None
+        if actual != expected:
+            ERRORS.append(f"EGA I 6.6.1 English discovery unit changed for {unit_id}")
     expected_i61_unit_layout = [
         ("ega:I.6.1.1", "definition", "ega:subsection:I.6.1", "ega1/ega1-6.tex", "8"),
         ("ega:I.6.1.2", "proposition", "ega:subsection:I.6.1", "ega1/ega1-6.tex", "21"),
@@ -5127,9 +5182,13 @@ if smap_path.exists():
         smap_physical_lines, 1228, 1234, 3762,
         "6412CBD6E18DE62E492AA2489051C64806A62CCA1ED1B385D13933464007C9CC",
         "S001228-S001234")
-    if (len(smap_raw) != 539349 or
+    require_raw_block(
+        smap_physical_lines, 1235, 1241, 3644,
+        "282B416A937064324E2EAE538CE972771014825E945830E84A5E72097ACE832E",
+        "S001235-S001241")
+    if (len(smap_raw) != 542993 or
             hashlib.sha256(smap_raw).hexdigest().upper() !=
-        "FE0A0005CD4E9BE2E2FA5B2AEE4BE5A7BF89B32C22C0729EC8182C72A40986AC"):
+        "AD72226DBCEB54BF6D9663B9DD58BE8EC8FE0FF8FF35EF2C4DBACBAB802719DD"):
         ERRORS.append("final statement-map manifest identity mismatch")
     edge_ids = [row["edge_id"] for row in all_statement_edges]
     if len(edge_ids) != len(set(edge_ids)):
@@ -5682,6 +5741,79 @@ if smap_path.exists():
     if any(units_by_id[row["source_unit"]]["kind"] in {
             "diagram", "formula", "mathblock"} for row in i655_edges):
         ERRORS.append("EGA I 6.5.5 semantic block crosses the no-visual boundary")
+    i661_unit_ids = {"ega:I.6.6.1"}
+    i661_edges = [
+        row for row in statement_edges if row["source_unit"] in i661_unit_ids]
+    expected_i661_edge_ids = {
+        f"S{number:06d}" for number in range(1235, 1242)}
+    if ({row["edge_id"] for row in i661_edges} != expected_i661_edge_ids or
+            len(i661_edges) != 7 or
+            {row["source_unit"] for row in i661_edges} != i661_unit_ids):
+        ERRORS.append("EGA I 6.6.1 edge block is not the exact S1235-S1241 set")
+    expected_i661_receipt = (
+        expected_i661_source_slice["receipt"],
+        expected_i661_source_slice["receipt_sha256"])
+    if any((row["source_receipt"], row["source_receipt_sha256"]) !=
+           expected_i661_receipt for row in i661_edges):
+        ERRORS.append("EGA I 6.6.1 statement edge uses a non-F37ZW authority receipt")
+    if any(row["review_state"] != "reviewed_existing" or
+           row["stacks_commit"] != scope["stacks_upstream"] or
+           row["decision_id"] != "D000326" or row.get("supersedes")
+           for row in i661_edges):
+        ERRORS.append("EGA I 6.6.1 edge state or decision route changed")
+    expected_i661_edge_contracts = {
+        "S001235": (
+            "ega:I.6.6.1", "schemes.tex", "schemes-definition-quasi-compact",
+            "01K3", "equivalent", "reviewed_existing", "full_statement", "D000326"),
+        "S001236": (
+            "ega:I.6.6.1", "schemes.tex", "schemes-lemma-quasi-compact-affine",
+            "01K4", "split", "reviewed_existing", "covered_derived", "D000326"),
+        "S001237": (
+            "ega:I.6.6.1", "schemes.tex", "schemes-lemma-quasi-compact-affine",
+            "01K4", "split", "reviewed_existing", "component", "D000326"),
+        "S001238": (
+            "ega:I.6.6.1", "morphisms.tex", "morphisms-lemma-affine-permanence",
+            "01SG", "entailed_by_stronger", "reviewed_existing", "component", "D000326"),
+        "S001239": (
+            "ega:I.6.6.1", "schemes.tex", "schemes-lemma-quasi-compact-affine",
+            "01K4", "split", "reviewed_existing", "covered_derived", "D000326"),
+        "S001240": (
+            "ega:I.6.6.1", "schemes.tex", "schemes-lemma-quasi-compact-affine",
+            "01K4", "split", "reviewed_existing", "covered_derived", "D000326"),
+        "S001241": (
+            "ega:I.6.6.1", "schemes.tex", "schemes-lemma-quasi-compact-affine",
+            "01K4", "split", "reviewed_existing", "covered_derived", "D000326"),
+    }
+    for edge_id, expected in expected_i661_edge_contracts.items():
+        row = edge_by_id.get(edge_id)
+        actual = tuple(row.get(field) for field in (
+            "source_unit", "stacks_file", "stacks_label", "official_tag",
+            "relation", "review_state", "coverage_claim", "decision_id"
+        )) if row else None
+        if actual != expected or edge_id not in active_edge_ids:
+            ERRORS.append(f"missing exact active EGA I 6.6.1 edge {edge_id}")
+    i661_pinned_target_blocks = (
+        ("schemes.tex", 3575, 3581, 249,
+         "CEC2963E3676DC4C23BD326DFF53E73B3B559626B6EF5F4689B016DFD07DF9E6",
+         "01K3 quasi-compact morphism definition"),
+        ("schemes.tex", 3583, 3623, 1916,
+         "630E7070C9CCD5BDE3E84ED6B1E8E2EAF15D17825433D4A08C075067B5C515F4",
+         "01K4 affine detection and finite-union proof"),
+        ("morphisms.tex", 2023, 2040, 602,
+         "D35E37A9BE4108DEE745BDB812683E2171C31A4BCB83BC38AB0EBA9E43C10168",
+         "01SG affine permanence statement"),
+    )
+    for (target_file, first_line, last_line, expected_bytes,
+         expected_sha, target_name) in i661_pinned_target_blocks:
+        target_blob = git_blob(scope["stacks_upstream"], target_file)
+        target_lines = target_blob.splitlines(keepends=True) if target_blob else []
+        target_block = b"".join(target_lines[first_line - 1:last_line])
+        if (len(target_block) != expected_bytes or
+                hashlib.sha256(target_block).hexdigest().upper() != expected_sha):
+            ERRORS.append(f"EGA I 6.6.1 pinned target changed for {target_name}")
+    if any(units_by_id[row["source_unit"]]["kind"] in {
+            "diagram", "formula", "mathblock"} for row in i661_edges):
+        ERRORS.append("EGA I 6.6.1 semantic block crosses the no-visual boundary")
     i63_semantic_diagram_edges = {
         "ega:I.6.3.10:diagram:xymatrix:1": {"S001132"},
         "ega:I.6.3.10:diagram:xymatrix:2": {
@@ -5879,6 +6011,12 @@ if smap_path.exists():
     }
     if len(i655_join_triples) != 7:
         ERRORS.append("EGA I 6.5.5 pinned tag-label-file join cardinality changed")
+    i661_join_triples = {
+        (row["official_tag"], row["stacks_label"], row["stacks_file"])
+        for row in i661_edges if row["review_state"] == "reviewed_existing"
+    }
+    if len(i661_join_triples) != 3:
+        ERRORS.append("EGA I 6.6.1 pinned tag-label-file join cardinality changed")
 
     actual_statement_review = {
         "file": "smap.csv",
@@ -6078,9 +6216,13 @@ if residual_path.exists():
         residual_physical_lines, 810, 815, 1875,
         "E08E9EFE15B42887772A1EA63ADA69943FA9D3CF227F975A6CABCAA71FC7F6F2",
         "R000810-R000815")
-    if (len(residual_raw) != 234878 or
+    require_raw_block(
+        residual_physical_lines, 816, 819, 1285,
+        "DBAC8F856B73524BFD64A3D4B3CF022550D131E4580BC4E9E00975EB123B03D2",
+        "R000816-R000819")
+    if (len(residual_raw) != 236163 or
             hashlib.sha256(residual_raw).hexdigest().upper() !=
-        "C7D659A257D496DA8FEDC395B40F73E0662A1B1D5DC0481DCFAA3E6E8E6C5D6F"):
+        "96BBAD2B42C937A91D9B1903871AB867A69FEB5BF86754F2824F50DB71D89A2D"):
         ERRORS.append("final residual manifest identity mismatch")
     residual_ids = [row["residual_id"] for row in all_residuals]
     if len(residual_ids) != len(set(residual_ids)):
@@ -6453,6 +6595,36 @@ if residual_path.exists():
         if (actual != expected or residual_id not in active_residual_ids or
                 row.get("supersedes")):
             ERRORS.append(f"missing exact active EGA I 6.5.5 residual {residual_id}")
+    i661_residuals = [
+        row for row in residuals if row["source_unit"] in i661_unit_ids]
+    if ({row["residual_id"] for row in i661_residuals} != {
+            f"R{number:06d}" for number in range(816, 820)} or
+            len(i661_residuals) != 4):
+        ERRORS.append("EGA I 6.6.1 residual block is not the exact R816-R819 set")
+    expected_i661_residual_contracts = {
+        "R000816": (
+            "ega:I.6.6.1",
+            "arbitrary_quasi_compact_basis_criterion_is_not_a_separate_target_label",
+            "covered_derived", "D000326"),
+        "R000817": (
+            "ega:I.6.6.1",
+            "finite_affine_union_parenthetical_is_embedded_in_01K4_proof",
+            "covered_derived", "D000326"),
+        "R000818": (
+            "ega:I.6.6.1", "affine_target_example_reuses_mapped_5_5_10",
+            "covered_by_stronger", "D000326"),
+        "R000819": (
+            "ega:I.6.6.1",
+            "open_restriction_and_arbitrary_target_cover_locality_have_no_separate_tags",
+            "covered_derived", "D000326"),
+    }
+    for residual_id, expected in expected_i661_residual_contracts.items():
+        row = residual_by_id.get(residual_id)
+        actual = tuple(row.get(field) for field in (
+            "source_unit", "kind", "status", "decision_id")) if row else None
+        if (actual != expected or residual_id not in active_residual_ids or
+                row.get("supersedes")):
+            ERRORS.append(f"missing exact active EGA I 6.6.1 residual {residual_id}")
     i651_issue_residual_links = {
         "I000102": ("R000786", "D000320"),
     }
@@ -6969,6 +7141,10 @@ if agent_path.exists():
         agent_physical_lines, 253, 627,
         "7BA2CDD919258FDFB67A4E11F97827EEEB4E38EE02A699AC48541FB3B09137B9",
         "A000253")
+    require_raw_line(
+        agent_physical_lines, 254, 622,
+        "9FAA2F74E394B5520E5927B8BB9413DE56563FB627FC8135289AE1B44C7DF788",
+        "A000254")
     i61_audit_contracts = {
         "A000231": (
             "/root/ega_i_55_postwrite_math",
@@ -7164,9 +7340,24 @@ if agent_path.exists():
             "task_id", "scope", "disposition", "writes")) if row else None
         if actual != expected or not row or row.get("status") != "completed":
             ERRORS.append(f"missing exact EGA I 6.5.5 agent audit {run_id}")
-    if (len(agent_raw) != 132805 or
+    i661_audit_contracts = {
+        "A000254": (
+            "/root/ega_655_prepare",
+            "EGA I 6.6.1 direct French and English quasi-compact morphism affine-basis target-locality duplicate-root and append-only checker audit",
+            "accepted as final bounded semantic and checker audit without repository authority source publication or remote writes",
+            "none"),
+    }
+    for run_id, expected in i661_audit_contracts.items():
+        row = next(
+            (candidate for candidate in agent_rows
+             if candidate.get("run_id") == run_id), None)
+        actual = tuple(row.get(field) for field in (
+            "task_id", "scope", "disposition", "writes")) if row else None
+        if actual != expected or not row or row.get("status") != "completed":
+            ERRORS.append(f"missing exact EGA I 6.6.1 agent audit {run_id}")
+    if (len(agent_raw) != 133427 or
             hashlib.sha256(agent_raw).hexdigest().upper() !=
-        "EE7C29339FF7F0C9E091D93E7FC6340DAFAF6B9ADEE9FBA76A9158DC042A6FE5"):
+        "FCF9646117AD09F321A5E6D34F64A8233112B43E6FEBF808987389D0354C89D8"):
         ERRORS.append("final agent manifest identity mismatch")
     task_scopes = [(row["task_id"], row["scope"]) for row in agent_rows]
     if len(task_scopes) != len(set(task_scopes)):
