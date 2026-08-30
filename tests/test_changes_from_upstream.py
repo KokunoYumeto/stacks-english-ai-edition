@@ -27,12 +27,12 @@ class ChangesFromUpstreamTests(unittest.TestCase):
         cls.model, cls.payloads = cls.generator.generated_payloads(ROOT)
 
     def test_complete_errata_registry_coverage(self) -> None:
-        self.assertEqual(self.model.overlay_count, 32)
-        self.assertEqual(self.model.unit_count, 1023)
-        self.assertEqual(self.model.exact_operation_count, 1159)
+        self.assertEqual(self.model.overlay_count, 33)
+        self.assertEqual(self.model.unit_count, 1030)
+        self.assertEqual(self.model.exact_operation_count, 1166)
         self.assertEqual(self.model.reconstructed_operation_count, 68)
-        self.assertEqual(self.model.operation_count, 1227)
-        self.assertEqual(self.model.source_count, 22)
+        self.assertEqual(self.model.operation_count, 1234)
+        self.assertEqual(self.model.source_count, 23)
         self.assertEqual(
             self.model.excluded_overlay_ids,
             ("stacks-verdier-a04446e-1-2-13-r1",),
@@ -61,7 +61,7 @@ class ChangesFromUpstreamTests(unittest.TestCase):
         )
         self.assertIn("Original", page)
         self.assertIn("Replacement", page)
-        self.assertEqual(page.count('class="change-card"'), 1023)
+        self.assertEqual(page.count('class="change-card"'), 1030)
         self.assertIn('id="search"', page)
         self.assertIn('id="overlay"', page)
         self.assertIn('id="source"', page)

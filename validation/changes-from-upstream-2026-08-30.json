@@ -1,11 +1,11 @@
 {
   "coverage": {
-    "affected_source_path_count": 22,
-    "displayed_change_hunk_count": 1227,
+    "affected_source_path_count": 23,
+    "displayed_change_hunk_count": 1234,
     "hash_bound_reconstructed_legacy_hunk_count": 68,
-    "manifest_bound_exact_operation_count": 1159,
+    "manifest_bound_exact_operation_count": 1166,
     "missing_stable_ids": [],
-    "stable_unit_count": 1023,
+    "stable_unit_count": 1030,
     "unbound_display_rows": []
   },
   "generator": {
@@ -192,6 +192,11 @@
       "sha256": "9B38EAF1B99E9DAF5E7553E6B0278961A2FD0E63FBFDB7AE81FBA6163E827D7F"
     },
     {
+      "bytes": 5423,
+      "path": "ai-integrated/candidates/commons/stacks/errata/r33/candidate.manifest.json",
+      "sha256": "1D2EA4F6463FB775CFF3F0E3616BE125F6D20709BB32DB84D1D1889582BFAC75"
+    },
+    {
       "bytes": 15448,
       "path": "ai-integrated/candidates/commons/stacks/errata/r4/candidate.manifest.json",
       "sha256": "23689FD1C97501468D8E137BB89D149187241F65382A838958CF8DB855FF2465"
@@ -237,9 +242,9 @@
       "sha256": "F4694DF73A9676EB6B07971EBCA8C96A141DA40B6E7ED8790D8478AA97DA4591"
     },
     {
-      "bytes": 56353,
+      "bytes": 57415,
       "path": "ai-integrated/registry/overlays.json",
-      "sha256": "BB386A08B91DFE7065CDA250162756A74D2DCFDC2BF2540E90F11918B3F32A06"
+      "sha256": "444314B02615DD4EC6EA1D2E70B17BF7723B43635F48D719CD954CDB4780D21A"
     },
     {
       "bytes": 1771230,
@@ -1157,6 +1162,41 @@
       "sha256": "2402F62A6BDB520549F0A3F129D46BF2B66F815948E35499DB885346F3094EA3"
     },
     {
+      "bytes": 398506,
+      "path": "candidates/commons/stacks/errata/r33/authority/source/spaces-morphisms.tex",
+      "sha256": "22D2D9F7807D408335DD97053568304F7568144BD382E73A953EC15659DE3B33"
+    },
+    {
+      "bytes": 1330,
+      "path": "candidates/commons/stacks/errata/r33/decisions.jsonl",
+      "sha256": "1F1CF4CB5F1210846BB3A4026B714FB08845DB60D953E7671BDE80284752629C"
+    },
+    {
+      "bytes": 8082,
+      "path": "candidates/commons/stacks/errata/r33/operation-spec.json",
+      "sha256": "7C4090730AF1FA9114090D1827F8B8E434DB46666ACC9FCED99F5A2DD1C7178B"
+    },
+    {
+      "bytes": 398512,
+      "path": "candidates/commons/stacks/errata/r33/payload/spaces-morphisms.tex",
+      "sha256": "048BC16D80E71DBAA9C5CF11B109B69B481D920B278CBCB379C3BC9B8BBFC252"
+    },
+    {
+      "bytes": 2127,
+      "path": "candidates/commons/stacks/errata/r33/replay/independent-review.json",
+      "sha256": "35340E67D3044959289F7F1115AB0AA76473DE6966141EE61C7F58A348808AFD"
+    },
+    {
+      "bytes": 12417,
+      "path": "candidates/commons/stacks/errata/r33/source-map.jsonl",
+      "sha256": "4AEF705A3EA0A84037B25D46E2B47FE0CE6F40EE9919A262D4F43AEAA9093ED2"
+    },
+    {
+      "bytes": 3115,
+      "path": "candidates/commons/stacks/errata/r33/stable-units.json",
+      "sha256": "1B09B2694ADBD7DC4FE278A513486B0EE1B7F9897FC9D3BA50DFBE7E5DD63D1A"
+    },
+    {
       "bytes": 184841,
       "path": "candidates/commons/stacks/errata/r4/authority/source/sheaves.tex",
       "sha256": "AC4F9EDC7DB85E66329806EC9EA42816187A469772844BAEA663E1C9A9F00B38"
@@ -1383,14 +1423,14 @@
   },
   "outputs": [
     {
-      "bytes": 1703952,
+      "bytes": 1714848,
       "path": "CHANGES_FROM_UPSTREAM.md",
-      "sha256": "01F7716E0162D10BCB934FFE2DD39D834177C2456DA9825FD25FD074497C591F"
+      "sha256": "98D5569EE06260E75BA4128B2C17A987FA1ADC2DF6C6CF1D7FF38F0FD66D9957"
     },
     {
-      "bytes": 2815967,
+      "bytes": 2833493,
       "path": "ai-integrated/changes/index.html",
-      "sha256": "7E18DEF0BA1DF4BBD1B3F3D6768DE1A9FE3B46CA96562E7E577523B498C18C71"
+      "sha256": "E8A15A6D3D393DBD2E7F5D1FB3C052C2DB8C5D975F521F99471490780A148B9D"
     }
   ],
   "privacy": {
@@ -1398,12 +1438,12 @@
     "credentials_in_receipt": false
   },
   "registry": {
-    "errata_overlay_count": 32,
+    "errata_overlay_count": 33,
     "excluded_non_errata_overlays": [
       "stacks-verdier-a04446e-1-2-13-r1"
     ],
     "path": "ai-integrated/registry/overlays.json",
-    "sha256": "BB386A08B91DFE7065CDA250162756A74D2DCFDC2BF2540E90F11918B3F32A06"
+    "sha256": "444314B02615DD4EC6EA1D2E70B17BF7723B43635F48D719CD954CDB4780D21A"
   },
   "schema": "unofficial-ai-integrated-stacks-changes-from-upstream-validation/v1",
   "scope": "reader-facing admitted Stacks errata comparison; mathematical TeX unchanged",

@@ -6,13 +6,13 @@ unmarked: this generated sidecar shows what changed while the source and PDF
 remain readable as mathematics.
 
 - Pinned official baseline: [`a04446e57ec1fbc252a871afcec7752fb2807b14`](https://github.com/stacks/stacks-project/commit/a04446e57ec1fbc252a871afcec7752fb2807b14)
-- Admitted errata batches: **32**
-- Stable correction IDs: **1,023**
-- Displayed exact change hunks: **1,227**
-- Manifest/source-map exact operations: **1,159**
+- Admitted errata batches: **33**
+- Stable correction IDs: **1,030**
+- Displayed exact change hunks: **1,234**
+- Manifest/source-map exact operations: **1,166**
 - Hash-bound reconstructed legacy hunks: **68**
-- Affected source paths: **22**
-- Registry SHA-256: `BB386A08B91DFE7065CDA250162756A74D2DCFDC2BF2540E90F11918B3F32A06`
+- Affected source paths: **23**
+- Registry SHA-256: `444314B02615DD4EC6EA1D2E70B17BF7723B43635F48D719CD954CDB4780D21A`
 
 [Open the offline filterable browser](ai-integrated/changes/index.html) · 
 [Open the admitted registry](ai-integrated/registry/overlays.json)
@@ -28549,5 +28549,184 @@ Pinned-official lines `5335-5335`; bytes `190502:190515`.
 ````
 
 Original SHA-256 `8D9BA561FD6080D526D8F5C8B688D2BE0C6B030937E5A504CA3C2572C9FEA043`; replacement SHA-256 `6685ADEA5339C0A22CECB9A2E62600D8036DE0DB277B72CF95E30090705EDD01`.
+
+</details>
+
+## stacks-errata-a04446e-r33
+
+7 stable IDs · 7 displayed change hunks · admitted 2026-08-30T12:15:00Z.
+
+<details id="mc-stk-err-1288">
+<summary><code>MC-STK-ERR-1288 — spaces-morphisms.tex:spaces-morphisms.tex:10129 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r33`
+- Stable ID: `MC-STK-ERR-1288`; producer ID: `P08-E262`
+- Bound source locator: `spaces-morphisms.tex:spaces-morphisms.tex:10129`
+- Status: `accepted_deduplicated`; review state: `performed`
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/spaces-morphisms.tex#L10129) · [Integrated source](spaces-morphisms.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r33/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r33/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r33/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r33/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_and_alias_replay
+- Adverse evidence: Locale targets and every producer row remain frozen; alias rows are provenance, not additional operations.
+
+### Change 1: `MC-STK-ERR-1288-OP1`
+
+Pinned-official lines `10129-10129`; bytes `362763:362792`.
+
+````diff
+- codimension $0$ points in $U$
++ codimension $0$ points in $V$
+````
+
+Original SHA-256 `2F899AD222BCE89D3CB73B23D12E1D10FDCB84C3133492FE49020BE45C33E379`; replacement SHA-256 `886944161601D60602B1887BBF195451FABD2EDF3976E38B5DB59ECC707EB2C3`.
+
+</details>
+
+<details id="mc-stk-err-1289">
+<summary><code>MC-STK-ERR-1289 — spaces-morphisms.tex:spaces-morphisms.tex:10188 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r33`
+- Stable ID: `MC-STK-ERR-1289`; producer ID: `P08-E263`
+- Bound source locator: `spaces-morphisms.tex:spaces-morphisms.tex:10188`
+- Status: `accepted_deduplicated`; review state: `performed`
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/spaces-morphisms.tex#L10188) · [Integrated source](spaces-morphisms.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r33/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r33/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r33/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r33/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_and_alias_replay
+- Adverse evidence: Locale targets and every producer row remain frozen; alias rows are provenance, not additional operations.
+
+### Change 1: `MC-STK-ERR-1289-OP1`
+
+Pinned-official lines `10188-10188`; bytes `365599:365618`.
+
+````diff
+- $X^\nu \to X \to Y$
++ $U^\nu \to U \to V$
+````
+
+Original SHA-256 `226CF9AC3B0319C855E44AB3E7A45679343BDC5962F4603FAD736BC6A13F47D7`; replacement SHA-256 `4343031BEE1071DD25273521F84D7D7B63811DC95C7042561B634E8F166B5FC2`.
+
+</details>
+
+<details id="mc-stk-err-1290">
+<summary><code>MC-STK-ERR-1290 — spaces-morphisms.tex:spaces-morphisms.tex:10252 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r33`
+- Stable ID: `MC-STK-ERR-1290`; producer ID: `P08-E264`
+- Bound source locator: `spaces-morphisms.tex:spaces-morphisms.tex:10252`
+- Status: `accepted_deduplicated`; review state: `performed`
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/spaces-morphisms.tex#L10252) · [Integrated source](spaces-morphisms.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r33/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r33/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r33/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r33/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_and_alias_replay
+- Adverse evidence: Locale targets and every producer row remain frozen; alias rows are provenance, not additional operations.
+
+### Change 1: `MC-STK-ERR-1290-OP1`
+
+Pinned-official lines `10252-10252`; bytes `368562:368580`.
+
+````diff
+- What have we shown
++ What we have shown
+````
+
+Original SHA-256 `DDB605512765E299C61CAED0A1401D0A848EF99D1656B693C203C9A1DE28082D`; replacement SHA-256 `721F82E53AE5C98D7F792196EA7DF910885800B4C9262E6CADD6CF945024E1BE`.
+
+</details>
+
+<details id="mc-stk-err-1291">
+<summary><code>MC-STK-ERR-1291 — spaces-morphisms.tex:spaces-morphisms.tex:10311 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r33`
+- Stable ID: `MC-STK-ERR-1291`; producer ID: `P08-E265`
+- Bound source locator: `spaces-morphisms.tex:spaces-morphisms.tex:10311`
+- Status: `accepted_deduplicated`; review state: `performed`
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/spaces-morphisms.tex#L10311) · [Integrated source](spaces-morphisms.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r33/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r33/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r33/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r33/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_and_alias_replay
+- Adverse evidence: Locale targets and every producer row remain frozen; alias rows are provenance, not additional operations.
+
+### Change 1: `MC-STK-ERR-1291-OP1`
+
+Pinned-official lines `10311-10311`; bytes `370945:370956`.
+
+````diff
+- in stead of
++ instead of
+````
+
+Original SHA-256 `5D904AF91CCDA69B8CA5C773BDF05B724635E0C7F17049618C038251C3E0194A`; replacement SHA-256 `A2C8BC5A8E53F4350716CDBDCF4E9E366AA1FF5392CA146428C932D6216FD653`.
+
+</details>
+
+<details id="mc-stk-err-1292">
+<summary><code>MC-STK-ERR-1292 — spaces-morphisms.tex:spaces-morphisms.tex:10377 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r33`
+- Stable ID: `MC-STK-ERR-1292`; producer ID: `P08-E266`
+- Bound source locator: `spaces-morphisms.tex:spaces-morphisms.tex:10377`
+- Status: `accepted_deduplicated`; review state: `performed`
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/spaces-morphisms.tex#L10377) · [Integrated source](spaces-morphisms.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r33/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r33/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r33/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r33/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_and_alias_replay
+- Adverse evidence: Locale targets and every producer row remain frozen; alias rows are provenance, not additional operations.
+
+### Change 1: `MC-STK-ERR-1292-OP1`
+
+Pinned-official lines `10377-10377`; bytes `373598:373626`.
+
+````diff
+- Let $Z \to X$ be a morphism.
++ Let $f : Z \to X$ be a morphism.
+````
+
+Original SHA-256 `D428379D7F3C4271A49323958E512C9D5815CB604E01050B1D62492091225007`; replacement SHA-256 `9BC8116986FCFA58E04830ABFEE178B2CBAE9CA8B7655DF8F609CF8DBA540AC1`.
+
+</details>
+
+<details id="mc-stk-err-1293">
+<summary><code>MC-STK-ERR-1293 — spaces-morphisms.tex:spaces-morphisms.tex:10408 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r33`
+- Stable ID: `MC-STK-ERR-1293`; producer ID: `P08-E593`
+- Bound source locator: `spaces-morphisms.tex:spaces-morphisms.tex:10408`
+- Status: `accepted_new`; review state: `performed`
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/spaces-morphisms.tex#L10408) · [Integrated source](spaces-morphisms.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r33/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r33/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r33/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r33/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_and_alias_replay
+- Adverse evidence: Locale targets and every producer row remain frozen; alias rows are provenance, not additional operations.
+
+### Change 1: `MC-STK-ERR-1293-OP1`
+
+Pinned-official lines `10408-10408`; bytes `374996:375025`.
+
+````diff
+- $V/V \times_{U \times_X Z} V$
++ $V/(V \times_{U \times_X Z} V)$
+````
+
+Original SHA-256 `D309B0CAF051A983B3CFD05A6CEEB0041E597756D22E5FAE38A39BC62D0BB312`; replacement SHA-256 `AECB28560E60A2EFCAC7998F72C135FA9B4FBE2741FC3E8C5AEE7D882CA84DE3`.
+
+</details>
+
+<details id="mc-stk-err-1294">
+<summary><code>MC-STK-ERR-1294 — spaces-morphisms.tex:spaces-morphisms.tex:10425 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r33`
+- Stable ID: `MC-STK-ERR-1294`; producer ID: `P08-E594`
+- Bound source locator: `spaces-morphisms.tex:spaces-morphisms.tex:10425`
+- Status: `accepted_new`; review state: `performed`
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/spaces-morphisms.tex#L10425) · [Integrated source](spaces-morphisms.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r33/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r33/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r33/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r33/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_and_alias_replay
+- Adverse evidence: Locale targets and every producer row remain frozen; alias rows are provenance, not additional operations.
+
+### Change 1: `MC-STK-ERR-1294-OP1`
+
+Pinned-official lines `10425-10425`; bytes `375730:375747`.
+
+````diff
+- Since $X = U/R$ a
++ Since $X = U/R$, a
+````
+
+Original SHA-256 `924F6BAC9B243EE1C4FA7122856C540657AD437000E0AB56B1349246133EDA4D`; replacement SHA-256 `D51E595D76388AA9AC8D3CF4326DDDE6AAD2D857C10A4EC0DB2CD64FD818649D`.
 
 </details>

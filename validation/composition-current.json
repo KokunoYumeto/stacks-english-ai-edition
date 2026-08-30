@@ -1,14 +1,14 @@
 {
   "schema": "unofficial-ai-integrated-stacks-composition/v3",
   "status": "PASS",
-  "created_utc": "2026-08-30T12:27:01Z",
+  "created_utc": "2026-08-30T16:39:31Z",
   "authority": {
     "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
     "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e"
   },
   "previous_cutoff": {
-    "public_main_head": "07d48789594324dd1ee58d1c00aa16778e79e513",
-    "public_main_tree": "575dfe0b6076532db75e3809244452291aa8cbe9",
+    "public_main_head": "2df1d4e3ab6d4280b50ea47a38a0a6e8fb540b76",
+    "public_main_tree": "046edf94e3433ed4bda3e8ca5747e56c7717f3ac",
     "registry_commit": "cdea2e13a447e7cdcf5f6f805d3a767d907fd679",
     "registry_tree": "b8466dd73dd960c73faeccb8d2c51fe44ecc4b14",
     "last_admitted_overlay": "stacks-errata-a04446e-r32",
@@ -28,8 +28,8 @@
     "overlays_bytes": 57415,
     "overlays_sha256": "444314B02615DD4EC6EA1D2E70B17BF7723B43635F48D719CD954CDB4780D21A",
     "overlays_git_blob": "d100f56a924ad17ede0c5df389bfdd2d6a95c060",
-    "linear_import_commit": "98d095ed892a8d3e3c9248048e5df7e1dda84fbe",
-    "linear_import_tree": "14d3b67e176a92b2eddf35de08dff52fcd61e72e",
+    "linear_import_commit": "b2ffa008fc27bfdb8b93c431f4df0c3e197d3440",
+    "linear_import_tree": "6060dafa8cc8b08f365d6d78f300cb9193f90d69",
     "registered_overlays": 34,
     "registered_stable_ids": 1042,
     "last_admitted_overlay": "stacks-errata-a04446e-r33",
@@ -67,10 +67,10 @@
   ],
   "composition": {
     "mode": "manifest-bound registry-order replay rebased onto verified cumulative source",
-    "base_commit": "98d095ed892a8d3e3c9248048e5df7e1dda84fbe",
-    "base_tree": "14d3b67e176a92b2eddf35de08dff52fcd61e72e",
-    "source_commit": "458077f743a30774a4e00be1e1946f5e253b7c17",
-    "source_tree": "d4572db7b654575ddcf4a41440cfd4e156b1fcbd",
+    "base_commit": "b2ffa008fc27bfdb8b93c431f4df0c3e197d3440",
+    "base_tree": "6060dafa8cc8b08f365d6d78f300cb9193f90d69",
+    "source_commit": "9100eefe0819f9632c6129e6d6f19a4101d223d1",
+    "source_tree": "d786a8604e7c0be79fab77c380247bd971555520",
     "total_v2_operations": 1166,
     "new_operations": 7,
     "r1_r3_replacements": 69,
@@ -192,7 +192,7 @@
   ],
   "projection_verifier": {
     "path": "tools/compose_overlay_projection.py",
-    "command": "python tools/compose_overlay_projection.py --existing-rounds 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 --target-rounds 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 --base-revision 98d095ed892a8d3e3c9248048e5df7e1dda84fbe --check-revision 458077f743a30774a4e00be1e1946f5e253b7c17",
+    "command": "python tools/compose_overlay_projection.py --existing-rounds 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 --target-rounds 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 --base-revision b2ffa008fc27bfdb8b93c431f4df0c3e197d3440 --check-revision 9100eefe0819f9632c6129e6d6f19a4101d223d1",
     "status": "PASS"
   },
   "required_build_stems": [
