@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Publish and anonymously verify the EGA I 6.5.5--6.6.2 checkpoint.
+"""Publish and anonymously verify the EGA I 6.6.3 checkpoint.
 
 The publisher is deliberately transaction-oriented and resumable.  A dry run
 performs local identity checks and an anonymous Zenodo lineage preflight.  The
@@ -24,22 +24,22 @@ from pathlib import Path
 from typing import Any
 
 
-PREDECESSOR_ID = 22167946
+PREDECESSOR_ID = 22175419
 CONCEPT_RECORD_ID = "22135180"
 CONCEPT_DOI = "10.5281/zenodo.22135180"
-TITLE = "Unofficial AI-Integrated Stacks Project — EGA I §6.6.2 semantic checkpoint"
-VERSION = "EGA-I-6.5.5-6.6.2-semantic-2026-08-30"
-RELEASE_ID = "ega-i-6.5.5-6.6.2-semantic-2026-08-30"
-SOURCE_COMMIT = "3064dfe65b917859e8d4a83bfdfeb84b7be2c36a"
-SOURCE_TREE = "3e23599315081e6ae295f8cf6a08a0f240d5da3b"
-CONTENT_COMMIT = "c5d3bcd197f0da7ac1c87d23f353e1816afa8bb2"
+TITLE = "Unofficial AI-Integrated Stacks Project — EGA I §6.6.3 semantic checkpoint"
+VERSION = "EGA-I-6.6.3-semantic-2026-08-30"
+RELEASE_ID = "ega-i-6.6.3-semantic-2026-08-30"
+SOURCE_COMMIT = "f1b8d56b5f3c9999010455a38a289bce76735070"
+SOURCE_TREE = "8d2e7b4f3c84d825f39b673387e0266e09573b96"
+CONTENT_COMMIT = "85024a5e3456cadc79c6cde67bf1fcbbc09c48cb"
 DESCRIPTION = (
     "<p>This source-reproducible successor records the unofficial AI-integrated "
-    "Stacks mapping and evidence work for EGA I §§6.5.5–6.6.2.</p>"
+    "Stacks mapping and evidence work for EGA I §6.6.3.</p>"
     "<p>The generated R32 Stacks PDFs and their build-critical source bytes are "
     "unchanged from R32; this version adds semantic mapping, provenance, and "
     "validation evidence only. The incomplete EGA integration program continues "
-    "in source order at EGA I §6.6.3.</p>"
+    "in source order at EGA I §6.6.4.</p>"
     "<p>This is independent, unofficial work. No Stacks Project affiliation, "
     "review, approval, or endorsement is claimed.</p>"
 )
@@ -47,28 +47,28 @@ TOKEN_FILE = Path.home() / "Documents" / "Obsidian notes" / "New zenodo token.md
 
 EXPECTED_ASSETS: dict[str, tuple[int, str]] = {
     "README.md": (
-        3341,
-        "C838B969AAE0A6B2E8B78CBAC7BAAE0D131EA609A376E3D3CBF325478CFCDC61",
+        3119,
+        "6F185D051351901E025736F4A0D33947A171427F5D98F04D125C95EE76F433C7",
     ),
     "RELEASE.json": (
-        24695,
-        "95197D549844F9F30417D53E43B891AD82632A6F5629F45348F9C46973C2402F",
+        23317,
+        "FF86CA03D6818C3EE442B951BA7291FFE73475D0BA3195810E92F378B0731BF6",
     ),
     "SHA256SUMS.txt": (
-        598,
-        "DA26B2F90A4664B35B6EAB647EAFEDDAD7C5F6E8D45A0C11427D4CA739AFAE12",
+        580,
+        "678519D1582DAF1361A56E0FF3349F59E7140101DD223B7B2D42DAEE2A716188",
     ),
-    "unofficial-ai-integrated-stacks-project-ega-i-6.5.5-6.6.2-semantic-pdfs.zip": (
+    "unofficial-ai-integrated-stacks-project-ega-i-6.6.3-semantic-pdfs.zip": (
         21000346,
         "04B67B36F39AB596E14C9741352F503E2C787F1E41AEEDB3097D5B858BDA2F26",
     ),
-    "unofficial-ai-integrated-stacks-project-ega-i-6.5.5-6.6.2-semantic-source-3064dfe6.zip": (
-        161110574,
-        "70DAB624A722265971E8E2A548072542D6893E0BF560F20A27C71CCCFC2CC214",
+    "unofficial-ai-integrated-stacks-project-ega-i-6.6.3-semantic-source-f1b8d56b.zip": (
+        161340724,
+        "48723E1936B7DA9AD25CC83306BCF33AEDD4DB453F255A453ED6EFBB9D9D22F9",
     ),
-    "unofficial-ai-integrated-stacks-project-ega-i-6.5.5-6.6.2-semantic-validation.zip": (
-        73363,
-        "06293F24D6E6A5DBD188D64389A03F21487772B0EFEEAB1EBA918A0D4C879015",
+    "unofficial-ai-integrated-stacks-project-ega-i-6.6.3-semantic-validation.zip": (
+        47363,
+        "1A4BBA4E9BDE4A2FD57F5125788C0900885FFE7F529D064B204112BD8EB248E7",
     ),
 }
 
@@ -354,7 +354,7 @@ def validate_release_manifest(asset_dir: Path) -> None:
         or release.get("preservation", {}).get("zenodo_concept_doi") != CONCEPT_DOI
         or release.get("preservation", {}).get("license") != "gfdl-1.2-only"
         or release.get("scope_note")
-        != "EGA I §6.6.2 semantic integration is closed; the incomplete EGA integration program continues at EGA I §6.6.3. Complete EGA integration and formal verification are not claimed."
+        != "EGA I §6.6.3 semantic integration is closed; the incomplete EGA integration program continues at EGA I §6.6.4. Complete EGA integration and formal verification are not claimed."
     ):
         raise RuntimeError("RELEASE.json semantic identity or PASS state drifted")
     rows = release.get("assets")
@@ -370,9 +370,9 @@ def validate_release_manifest(asset_dir: Path) -> None:
         manifest_assets[name] = (int(row.get("bytes", -1)), str(row.get("sha256", "")).upper())
     expected_manifest_names = {
         "README.md",
-        "unofficial-ai-integrated-stacks-project-ega-i-6.5.5-6.6.2-semantic-pdfs.zip",
-        "unofficial-ai-integrated-stacks-project-ega-i-6.5.5-6.6.2-semantic-source-3064dfe6.zip",
-        "unofficial-ai-integrated-stacks-project-ega-i-6.5.5-6.6.2-semantic-validation.zip",
+        "unofficial-ai-integrated-stacks-project-ega-i-6.6.3-semantic-pdfs.zip",
+        "unofficial-ai-integrated-stacks-project-ega-i-6.6.3-semantic-source-f1b8d56b.zip",
+        "unofficial-ai-integrated-stacks-project-ega-i-6.6.3-semantic-validation.zip",
     }
     if set(manifest_assets) != expected_manifest_names:
         raise RuntimeError("RELEASE.json does not bind its exact four payload artifacts")
@@ -665,7 +665,7 @@ def make_initial_state(
 ) -> dict[str, Any]:
     links = validated_draft_links(draft)
     state = {
-        "schema": "ega-i-6.5.5-6.6.2-semantic-zenodo-state/v1",
+        "schema": "ega-i-6.6.3-semantic-zenodo-state/v1",
         "created_utc": utc_now(),
         "updated_utc": utc_now(),
         "status": "draft",
@@ -706,7 +706,7 @@ def load_state(
         state = json.loads(state_path.read_text(encoding="utf-8"))
     except json.JSONDecodeError as error:
         raise RuntimeError("Persisted release state is malformed") from error
-    if state.get("schema") != "ega-i-6.5.5-6.6.2-semantic-zenodo-state/v1":
+    if state.get("schema") != "ega-i-6.6.3-semantic-zenodo-state/v1":
         raise RuntimeError("Persisted release-state schema mismatch")
     if state.get("status") not in {"draft", "published", "verified"}:
         raise RuntimeError("Persisted release state has an invalid status")
@@ -968,7 +968,7 @@ def make_receipt(
     actions: list[dict[str, Any]],
 ) -> dict[str, Any]:
     receipt = {
-        "schema": "ega-i-6.5.5-6.6.2-semantic-zenodo-publication-receipt/v1",
+        "schema": "ega-i-6.6.3-semantic-zenodo-publication-receipt/v1",
         "created_utc": utc_now(),
         "status": "PASS",
         "predecessor": {
@@ -1268,7 +1268,7 @@ def verify_existing_record(
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Publish the EGA I §§6.5.5–6.6.2 semantic checkpoint to Zenodo."
+        description="Publish the EGA I §6.6.3 semantic checkpoint to Zenodo."
     )
     parser.add_argument("--asset-dir", type=Path, required=True)
     parser.add_argument("--state", type=Path, required=True)
@@ -1333,7 +1333,7 @@ def main() -> int:
 
     state = load_state(args.state, identities, predecessor)
     preflight = {
-        "schema": "ega-i-6.5.5-6.6.2-semantic-zenodo-preflight/v1",
+        "schema": "ega-i-6.6.3-semantic-zenodo-preflight/v1",
         "status": "PASS",
         "predecessor_id": PREDECESSOR_ID,
         "latest_public_id": int(latest["id"]),
