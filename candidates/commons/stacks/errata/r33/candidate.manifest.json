@@ -1,0 +1,147 @@
+{
+  "$schema": "../../../../../schemas/candidate-manifest.schema.json",
+  "builds": [
+    {
+      "bytes": 5364,
+      "path": "admit_r33.py",
+      "sha256": "F9B090C13C9073B53FC988067BBE85522BCFB5C01947BD1CFD5BC1EF899865FE"
+    },
+    {
+      "bytes": 365,
+      "path": "BUILD.md",
+      "sha256": "FA03775432D429ECEAA86450FF042D15F4648C9C3D026858615E26F4B2E4A73B"
+    },
+    {
+      "bytes": 1337,
+      "path": "candidate.config.json",
+      "sha256": "D5C3D4A3732EE9F07621750E5F4E96C1D8A809925198E8F31F50AE018124628A"
+    },
+    {
+      "bytes": 432,
+      "path": "LEASE.json",
+      "sha256": "A3E9E86562D13AC08CF7E28A5BC9DCE8AF44087DF0612356D26F30804EC8A882"
+    },
+    {
+      "bytes": 8082,
+      "path": "operation-spec.json",
+      "sha256": "7C4090730AF1FA9114090D1827F8B8E434DB46666ACC9FCED99F5A2DD1C7178B"
+    },
+    {
+      "bytes": 398512,
+      "path": "payload/spaces-morphisms.tex",
+      "sha256": "048BC16D80E71DBAA9C5CF11B109B69B481D920B278CBCB379C3BC9B8BBFC252"
+    },
+    {
+      "bytes": 448,
+      "path": "README.md",
+      "sha256": "FF3D8F76588DE5C41FC7B8F8E2869D70A60515EB4BB663DF9D5E33F00F4ECEFB"
+    },
+    {
+      "bytes": 18717,
+      "path": "regenerate_r33.py",
+      "sha256": "196E6ED8E5B501CC14E3EFDB73760EBB0D91F5382CDC653A8B61866EF98F1B76"
+    },
+    {
+      "bytes": 920,
+      "path": "REGENERATION_RECEIPT.json",
+      "sha256": "52FF56D037D9E5A43D55B869F40E16C2C71D2FA5CBA7E21FCEF108B45168EAB0"
+    },
+    {
+      "bytes": 2127,
+      "path": "replay/independent-review.json",
+      "sha256": "35340E67D3044959289F7F1115AB0AA76473DE6966141EE61C7F58A348808AFD"
+    },
+    {
+      "bytes": 808,
+      "path": "source-validation.json",
+      "sha256": "6EDF7F82C05D4C23324011C03AB200855AACE51D8C86EA5D9D316B51F08506A9"
+    },
+    {
+      "bytes": 7782,
+      "path": "verify_r33.py",
+      "sha256": "64E8F6765D8614D47822B23510F27922A07BF07EE0643F96F1B4C32022184350"
+    }
+  ],
+  "candidate_id": "stacks-errata-a04446e-r33",
+  "decision_ledger": {
+    "bytes": 1330,
+    "path": "decisions.jsonl",
+    "sha256": "1F1CF4CB5F1210846BB3A4026B714FB08845DB60D953E7671BDE80284752629C"
+  },
+  "formula_diagram_inventory": {
+    "bytes": 494,
+    "path": "formula-diagram-inventory.json",
+    "sha256": "1CEC699FF26250805360DF874293D59CA11BF4AF811AA2C9ABB431ECE7208AD8"
+  },
+  "generated_at_utc": "2026-08-30T12:15:00Z",
+  "independent_replay": "passed",
+  "lease_id": "stacks-lease-000037-errata-r33",
+  "namespace": "commons/stacks/errata/r33",
+  "rejection_ledger": {
+    "bytes": 0,
+    "path": "rejections.jsonl",
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  "review_state": "performed",
+  "rights_state": "The authority and modified payload retain the Stacks Project GNU Free Documentation License 1.2; metadata and receipts do not relicense upstream content. This is an independently maintained AI-produced English correction overlay with no Stacks Project review, approval, affiliation, or endorsement.",
+  "schema": "mathematics-commons-stacks-candidate-manifest/v1",
+  "source_authorities": [
+    {
+      "bytes": 20404,
+      "path": "authority/COPYING",
+      "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"
+    },
+    {
+      "bytes": 522040,
+      "path": "authority/producer/ERRATA_CANDIDATES.jsonl",
+      "sha256": "7A3431BCFA833691F058DA6050E5E50F8299374DA4D77792D6053050FEF889C6"
+    },
+    {
+      "bytes": 8027,
+      "path": "authority/producer/P08_E262_E266_E588_E594_ALIAS_CROSSWALK.json",
+      "sha256": "21483C73D19349A6B90B37E1C73E002358D5EAF57C7DDD26DAC31A5869D067A5"
+    },
+    {
+      "bytes": 398506,
+      "path": "authority/source/spaces-morphisms.tex",
+      "sha256": "22D2D9F7807D408335DD97053568304F7568144BD382E73A953EC15659DE3B33"
+    },
+    {
+      "bytes": 436,
+      "path": "authority/upstream.lock.json",
+      "sha256": "A771EBBED65527A3C0DD1766CB46CF7D5CAF75A82EA88D405D8AA7F85A382EEB"
+    }
+  ],
+  "source_closure": {
+    "complete": true,
+    "enumerated": true,
+    "expected_units": 7,
+    "manifested_units": 7
+  },
+  "source_map": {
+    "bytes": 12417,
+    "path": "source-map.jsonl",
+    "sha256": "4AEF705A3EA0A84037B25D46E2B47FE0CE6F40EE9919A262D4F43AEAA9093ED2"
+  },
+  "stable_unit_manifest": {
+    "bytes": 3115,
+    "path": "stable-units.json",
+    "sha256": "1B09B2694ADBD7DC4FE278A513486B0EE1B7F9897FC9D3BA50DFBE7E5DD63D1A"
+  },
+  "stop_conditions": [
+    "Do not mutate the pinned upstream authority.",
+    "Do not compose or push generated Stacks source in this registrar admission.",
+    "Any change to authority, producer evidence, operations, payload, or replay bytes requires a new manifest and verification."
+  ],
+  "unresolved_defects": [
+    "Five ko-KR producer observations are exact aliases of five earlier zh-Hans-CN producer observations; both identities and their locale-specific adverse dispositions are preserved, while each semantic correction is applied once.",
+    "This candidate performs source-overlay replay only. Generated-source composition, chapter builds, cumulative PDFs, and publication remain separate downstream work.",
+    "The frozen authority and locale targets were not mutated."
+  ],
+  "upstream": {
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "lock": "upstream/stacks.lock.json",
+    "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e"
+  },
+  "writer_task": "01a0256d-5693-77c1-96b2-cf37101e0c6c"
+}

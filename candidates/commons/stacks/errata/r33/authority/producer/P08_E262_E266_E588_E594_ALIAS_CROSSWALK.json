@@ -1,0 +1,221 @@
+{
+  "authority_sha256": "22D2D9F7807D408335DD97053568304F7568144BD382E73A953EC15659DE3B33",
+  "duplicate_alias_pair_count": 5,
+  "producer_id_count": 12,
+  "producer_sidecar_sha256": "7A3431BCFA833691F058DA6050E5E50F8299374DA4D77792D6053050FEF889C6",
+  "records": [
+    {
+      "all_producer_ids": [
+        "P08-E262",
+        "P08-E588"
+      ],
+      "canonical_producer_id": "P08-E262",
+      "disposition": "admit_once_preserve_all_aliases",
+      "duplicate_aliases": [
+        "P08-E588"
+      ],
+      "producer_rows": {
+        "P08-E262": {
+          "confidence": "high",
+          "producer_row_1_based": 262,
+          "row_bytes": 895,
+          "row_sha256": "3BEB78A0DC016A36A80627551A1196891539F41063EEEB557247D688ABDC3E0B",
+          "translation_impact": "The canonical zh-Hans-CN prose preserves the frozen second U and carries a non-rendering P08-E262 pointer."
+        },
+        "P08-E588": {
+          "confidence": "high",
+          "producer_row_1_based": 589,
+          "row_bytes": 1012,
+          "row_sha256": "3BB2A9F97CC939648827E6F0EB53E2753F76A888193C80FA8AFBF18130A24D14",
+          "translation_impact": "The ko-KR target follows the intended U-to-V argument and carries the non-rendering P08-E588 pointer; frozen source bytes remain unchanged."
+        }
+      },
+      "semantic_correction": {
+        "line": 10129,
+        "new": "codimension $0$ points in $V$",
+        "old": "codimension $0$ points in $U$"
+      },
+      "stable_id": "MC-STK-ERR-1288"
+    },
+    {
+      "all_producer_ids": [
+        "P08-E263",
+        "P08-E589"
+      ],
+      "canonical_producer_id": "P08-E263",
+      "disposition": "admit_once_preserve_all_aliases",
+      "duplicate_aliases": [
+        "P08-E589"
+      ],
+      "producer_rows": {
+        "P08-E263": {
+          "confidence": "high",
+          "producer_row_1_based": 263,
+          "row_bytes": 960,
+          "row_sha256": "14E25EBE6A247160330889AF7CA6B0822A77CDB0023F905DD21E3D82CCA38200",
+          "translation_impact": "The canonical zh-Hans-CN formula preserves the frozen X/Y composition and carries a non-rendering P08-E263 pointer."
+        },
+        "P08-E589": {
+          "confidence": "high",
+          "producer_row_1_based": 590,
+          "row_bytes": 1042,
+          "row_sha256": "878E3498AA1B11EDA20DD0DA7182F55B4076D73DD41B504F0AB95FF14F71246C",
+          "translation_impact": "The ko-KR target states the locally quantified U^nu -> U -> V composition and carries the non-rendering P08-E589 pointer; the immutable source remains unchanged."
+        }
+      },
+      "semantic_correction": {
+        "line": 10188,
+        "new": "$U^\\nu \\to U \\to V$",
+        "old": "$X^\\nu \\to X \\to Y$"
+      },
+      "stable_id": "MC-STK-ERR-1289"
+    },
+    {
+      "all_producer_ids": [
+        "P08-E264",
+        "P08-E590"
+      ],
+      "canonical_producer_id": "P08-E264",
+      "disposition": "admit_once_preserve_all_aliases",
+      "duplicate_aliases": [
+        "P08-E590"
+      ],
+      "producer_rows": {
+        "P08-E264": {
+          "confidence": "high",
+          "producer_row_1_based": 264,
+          "row_bytes": 791,
+          "row_sha256": "7A7A82082B790862561F6CAED993C1D0422535F6D551E1E4196BE9698329F53F",
+          "translation_impact": "The zh-Hans-CN prose renders the intended declarative meaning and carries a non-rendering P08-E264 pointer."
+        },
+        "P08-E590": {
+          "confidence": "high",
+          "producer_row_1_based": 591,
+          "row_bytes": 872,
+          "row_sha256": "036D2A8BCAB07EF4EE695F3921519E100EA81DE3D698352887601B336C43E934",
+          "translation_impact": "The ko-KR target uses a grammatical declarative summary and carries the non-rendering P08-E590 pointer."
+        }
+      },
+      "semantic_correction": {
+        "line": 10252,
+        "new": "What we have shown",
+        "old": "What have we shown"
+      },
+      "stable_id": "MC-STK-ERR-1290"
+    },
+    {
+      "all_producer_ids": [
+        "P08-E265",
+        "P08-E591"
+      ],
+      "canonical_producer_id": "P08-E265",
+      "disposition": "admit_once_preserve_all_aliases",
+      "duplicate_aliases": [
+        "P08-E591"
+      ],
+      "producer_rows": {
+        "P08-E265": {
+          "confidence": "high",
+          "producer_row_1_based": 265,
+          "row_bytes": 650,
+          "row_sha256": "3BDD51A7A47553BD19192ACF0B5F20C667E3B741BCF26FDAF203E3457843A7B6",
+          "translation_impact": "The zh-Hans-CN prose renders the intended substitution and carries a non-rendering P08-E265 pointer."
+        },
+        "P08-E591": {
+          "confidence": "high",
+          "producer_row_1_based": 592,
+          "row_bytes": 647,
+          "row_sha256": "ED1E35FB2B2D4439186BCED386069996019DAF914210E3C7047F2ED19200991C",
+          "translation_impact": "The ko-KR target uses the intended expression and carries the non-rendering P08-E591 pointer."
+        }
+      },
+      "semantic_correction": {
+        "line": 10311,
+        "new": "instead of",
+        "old": "in stead of"
+      },
+      "stable_id": "MC-STK-ERR-1291"
+    },
+    {
+      "all_producer_ids": [
+        "P08-E266",
+        "P08-E592"
+      ],
+      "canonical_producer_id": "P08-E266",
+      "disposition": "admit_once_preserve_all_aliases",
+      "duplicate_aliases": [
+        "P08-E592"
+      ],
+      "producer_rows": {
+        "P08-E266": {
+          "confidence": "high",
+          "producer_row_1_based": 266,
+          "row_bytes": 880,
+          "row_sha256": "42B1E859943F7BF671BC75BEC2309F5D80416A2BE15FC1CC16780C9CCA346E72",
+          "translation_impact": "The canonical zh-Hans-CN statement preserves the frozen unnamed map and f(z), with a non-rendering P08-E266 pointer."
+        },
+        "P08-E592": {
+          "confidence": "high",
+          "producer_row_1_based": 593,
+          "row_bytes": 933,
+          "row_sha256": "95E5DCAF0C4B6756A613330319AC83BFE651A4D096B12F44A46B06FCB36C1131",
+          "translation_impact": "The ko-KR target preserves both frozen formulas Z -> X and Z => f(z), adds only the non-rendering P08-E592 pointer, and does not silently name the morphism."
+        }
+      },
+      "semantic_correction": {
+        "line": 10377,
+        "new": "Let $f : Z \\to X$ be a morphism.",
+        "old": "Let $Z \\to X$ be a morphism."
+      },
+      "stable_id": "MC-STK-ERR-1292"
+    },
+    {
+      "all_producer_ids": [
+        "P08-E593"
+      ],
+      "canonical_producer_id": "P08-E593",
+      "disposition": "admit_new_unique_row",
+      "duplicate_aliases": [],
+      "producer_rows": {
+        "P08-E593": {
+          "confidence": "high",
+          "producer_row_1_based": 594,
+          "row_bytes": 1059,
+          "row_sha256": "AFDA3C33C89C9C6B32F75B3E12E71DA26C90B59D4315E4938A6054FB7C5F22C9",
+          "translation_impact": "The ko-KR target preserves the frozen ungrouped formula and carries only the non-rendering P08-E593 pointer."
+        }
+      },
+      "semantic_correction": {
+        "line": 10408,
+        "new": "$V/(V \\times_{U \\times_X Z} V)$",
+        "old": "$V/V \\times_{U \\times_X Z} V$"
+      },
+      "stable_id": "MC-STK-ERR-1293"
+    },
+    {
+      "all_producer_ids": [
+        "P08-E594"
+      ],
+      "canonical_producer_id": "P08-E594",
+      "disposition": "admit_new_unique_row",
+      "duplicate_aliases": [],
+      "producer_rows": {
+        "P08-E594": {
+          "confidence": "high",
+          "producer_row_1_based": 595,
+          "row_bytes": 769,
+          "row_sha256": "BE4CAB99956D506CCDFE9720A5A087D2087241E153E4A4255A663D82FF34182E",
+          "translation_impact": "Korean clause marking supplies the intended syntax; the target carries the non-rendering P08-E594 pointer and leaves source bytes unchanged."
+        }
+      },
+      "semantic_correction": {
+        "line": 10425,
+        "new": "Since $X = U/R$, a",
+        "old": "Since $X = U/R$ a"
+      },
+      "stable_id": "MC-STK-ERR-1294"
+    }
+  ],
+  "schema": "stacks-p08-spaces-morphisms-alias-crosswalk/v1",
+  "semantic_unit_count": 7
+}
