@@ -992,7 +992,7 @@ def make_receipt(
             "license_retained_exact": True,
             "stable_keys_verified": stable_keys,
             "r32_pdfs_unchanged_noted": True,
-            "continuation_at_ega_i_6_6_3_noted": True,
+            "continuation_at_ega_i_6_6_4_noted": True,
         },
         "release_inventory": identities,
         "draft_actions": actions,
