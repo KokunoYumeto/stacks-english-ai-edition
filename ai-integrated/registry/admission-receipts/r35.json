@@ -1,0 +1,60 @@
+{
+  "admitted_at_utc": "2026-08-30T15:30:00Z",
+  "candidate_id": "stacks-errata-a04446e-r35",
+  "constraints": {
+    "authority_mutated": false,
+    "generated_source_composed": false,
+    "generated_source_pushed": false,
+    "producer_target_mutated": false,
+    "published": false
+  },
+  "fresh_replay": {
+    "candidate_id": "stacks-errata-a04446e-r35",
+    "manifest_references": 20,
+    "operations": 3,
+    "passed": true,
+    "payload_sha256": {
+      "sites-cohomology.tex": "838F3D4F8DF122979FDFE21453E3A03277009887CEB68527253AE0D14122C571"
+    },
+    "stable_ids": [
+      "MC-STK-ERR-1309",
+      "MC-STK-ERR-1310",
+      "MC-STK-ERR-1311"
+    ],
+    "units": 3
+  },
+  "leases": {
+    "after_sha256": "B36833166356A7528B17A059A9581898C18056B95926484D0326FCA1F93FFC5F",
+    "before_sha256": "A3DD86B0B4C173526FB72DF2B45298F01BF52A973D171F640F2CD64FF86841D5",
+    "issued_event": "lease-event-000074",
+    "released_event": "lease-event-000075"
+  },
+  "manifest": {
+    "bytes": 5229,
+    "path": "candidate.manifest.json",
+    "sha256": "FCE804F72A9FAA21A4AFFD15C0A7FF0C685120EE44F7D63252E80B696C1E30C8"
+  },
+  "producer_ids": [
+    "SITES-COHOMOLOGY-012",
+    "SITES-COHOMOLOGY-013",
+    "SITES-COHOMOLOGY-028"
+  ],
+  "registry": {
+    "after_sha256": "5072983FA36D47470380DAE0E17C440489C48B27B04BF58226785C97FDD1F770",
+    "before_sha256": "E821CB02AFA33CE2CCEFEFD08351F46712F5E101E939BBB2EE6E4B831C517E78",
+    "last_overlay": "stacks-errata-a04446e-r35"
+  },
+  "schema": "mathematics-commons-stacks-registry-admission-receipt/v1",
+  "source_map": {
+    "bytes": 6467,
+    "path": "source-map.jsonl",
+    "sha256": "F0CEC493580D2DEB5F13EE77A77CD4C0DE6CDBBCDD68842DA02EC6699D833CEA"
+  },
+  "stable_id_count": 3,
+  "stable_ids": [
+    "MC-STK-ERR-1309",
+    "MC-STK-ERR-1310",
+    "MC-STK-ERR-1311"
+  ],
+  "status": "PASS"
+}
