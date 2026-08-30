@@ -826,7 +826,7 @@ scope = json.loads(scope_raw.decode("utf-8"))
 # the existing visual and root-source surfaces.
 if (len(scope_raw) != 25667 or
         hashlib.sha256(scope_raw).hexdigest().upper() !=
-        "E5BF001ABBF54034E6BFE548E71B52CBF2D84094E65E1257514BDC44C646A831"):
+        "357ECC4839BF7A685A926D8AF56A5BC796E808533EB7892A5A7B8FA6A7344637"):
     ERRORS.append("final scope manifest identity mismatch")
 if scope.get("status") != "discovery_scaffold":
     ERRORS.append("scope status must remain discovery_scaffold")
@@ -1139,12 +1139,12 @@ expected_i663_source_slice = {
         "printed_line_bytes": 77,
         "printed_line_sha256":
             "7A40F7F188C3926A9A05041FBF428B786111EECC2A2E55FA3DDE3152BFEBDF01",
-        "corrected_line_bytes": 82,
+        "corrected_line_bytes": 77,
         "corrected_line_sha256":
-            "4A7F14C5B89A5C2477926BAD2CB0300C4C579BC9DF01E2800F1767C5ECA7146B",
-        "prospective_full_bytes": 57786,
+            "32E024C62FDA6DA87473253A36DF29CD8FC942C315E91649DE8C8AA2AD84AC75",
+        "prospective_full_bytes": 57781,
         "prospective_full_sha256":
-            "6D47DE276252B7BB136C54549CCE6EE5641643550D2400B3AC33E35F7C00F27C",
+            "56B778FF148644E9953A5E87D9420C715C2F4F90E84AFD7389B80206AED87038",
     },
 }
 if scope.get("reviewed_source_slices", {}).get("ega:I.6.6.3") != (
@@ -6528,12 +6528,12 @@ if residual_path.exists():
         "A6F6FDDD34C764110D7E172C1E2A3D2977AACB4A9EA918FF29E93DA159040786",
         "R000820-R000822")
     require_raw_block(
-        residual_physical_lines, 823, 825, 1077,
-        "CB51CC1BACEFC33294E6EEB99258C7031FF5A7E96D93AF093956EC116CB224C6",
+        residual_physical_lines, 823, 825, 1082,
+        "0D3F5CB9B91810AF816DC3A5D671B69D34951D99CC326A4A1F0BDB3136339F69",
         "R000823-R000825")
-    if (len(residual_raw) != 238383 or
+    if (len(residual_raw) != 238388 or
             hashlib.sha256(residual_raw).hexdigest().upper() !=
-        "69FD7DC8184D9576C5AA2CB6A4497A13B53DD33765DD755A92570631E55AF3B0"):
+        "DAE6F852E2B0B4BD622BD3C7C235E5F7FBA139D42011CD3BDF6FB4CD82E18458"):
         ERRORS.append("final residual manifest identity mismatch")
     residual_ids = [row["residual_id"] for row in all_residuals]
     if len(residual_ids) != len(set(residual_ids)):
