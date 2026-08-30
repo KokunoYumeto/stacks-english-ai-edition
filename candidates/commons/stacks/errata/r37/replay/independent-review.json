@@ -1,0 +1,90 @@
+{
+  "adverse_observations": [
+    "SITES-COHOMOLOGY-014 and 023 required canon repairs to the producer's initial proposals; the live corrected packet and registrar audit now agree.",
+    "SITES-COHOMOLOGY-019 is locator-scoped because its old token occurs 22 times file-wide; only the three audited positions are changed.",
+    "Already admitted producer rows 001..013 and 028 are excluded from R37.",
+    "R37 is registrar-candidate-only; admission, generated-source composition, and publication are excluded from this build."
+  ],
+  "candidate_id": "stacks-errata-a04446e-r37",
+  "closure_checks": {
+    "authority_files": 1,
+    "operation_ids_unique": 28,
+    "passed": true,
+    "payload_files": 1,
+    "source_map_rows": 23,
+    "stable_ids_unique": 23
+  },
+  "conclusion": "UNCONDITIONAL PASS",
+  "constraints_observed": {
+    "generated_source_composed": false,
+    "generated_source_pushed": false,
+    "locale_targets_mutated_by_registrar": false,
+    "nonselected_producer_rows_admitted": false,
+    "registry_mutated_by_review": false,
+    "upstream_authority_mutated": false
+  },
+  "deduplication": {
+    "accepted_new_units": [
+      "SITES-COHOMOLOGY-014",
+      "SITES-COHOMOLOGY-015",
+      "SITES-COHOMOLOGY-016",
+      "SITES-COHOMOLOGY-017",
+      "SITES-COHOMOLOGY-018",
+      "SITES-COHOMOLOGY-019",
+      "SITES-COHOMOLOGY-020",
+      "SITES-COHOMOLOGY-021",
+      "SITES-COHOMOLOGY-022",
+      "SITES-COHOMOLOGY-023",
+      "SITES-COHOMOLOGY-024",
+      "SITES-COHOMOLOGY-025",
+      "SITES-COHOMOLOGY-026",
+      "SITES-COHOMOLOGY-027",
+      "SITES-COHOMOLOGY-029",
+      "SITES-COHOMOLOGY-030",
+      "SITES-COHOMOLOGY-031",
+      "SITES-COHOMOLOGY-032",
+      "SITES-COHOMOLOGY-033",
+      "SITES-COHOMOLOGY-034",
+      "SITES-COHOMOLOGY-035",
+      "SITES-COHOMOLOGY-036",
+      "SITES-COHOMOLOGY-037"
+    ],
+    "operation_aliases": {},
+    "operations": 28,
+    "passed": true,
+    "producer_id_collisions": 0,
+    "registry_pre_admission_head": "stacks-errata-a04446e-r36",
+    "semantic_units": 23,
+    "stable_id_collisions": 0
+  },
+  "input_bindings": {
+    "authority_sha256": "5B335CE2C7208A128B3C744B8828D93508063F41A4FABBCE2E921F890928895C",
+    "independent_audit": {
+      "bytes": 33581,
+      "path": "authority/registrar/STACKS_R37_INDEPENDENT_AUDIT_20260830.json",
+      "sha256": "70A04B1873D1B977713717C06C7EDCCE1B2E45ED1C1A67D61C77FDEA6FFD41B3"
+    },
+    "live_ledger_bytes": 17192,
+    "live_ledger_sha256": "087AEE1F16323974C8C95ECDC9596429D83362149214B96313107074F066A977",
+    "selected_packet": {
+      "bytes": 9785,
+      "path": "authority/producer/SITES_COHOMOLOGY_SOURCE_DEFECT_LEDGER_014_027_029_037.csv",
+      "sha256": "DC1AB6ED4EDCF7ACA9DB1192BA7EC13087FE1DE882CCB49802F7524E1A591BE4"
+    }
+  },
+  "pass_is_unconditional": true,
+  "passed": true,
+  "recorded_at_utc": "2026-08-30T17:15:00Z",
+  "result": "PASS",
+  "review_kind": "independent_exact_preimage_context_math_deduplication_and_payload_review",
+  "schema": "mathematics-commons-stacks-errata-independent-review/v1",
+  "scratch_replay": {
+    "apply_order": "descending_start_byte_per_source",
+    "operations": 28,
+    "passed": true,
+    "payload_sha256": {
+      "sites-cohomology.tex": "B802DEFA8FE11B40F71944DE28C3B001F12ED6059344B5080676A5B36B242B4D"
+    },
+    "stable_units": 23
+  }
+}

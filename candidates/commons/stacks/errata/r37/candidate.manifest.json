@@ -1,0 +1,144 @@
+{
+  "$schema": "../../../../../schemas/candidate-manifest.schema.json",
+  "builds": [
+    {
+      "bytes": 418,
+      "path": "BUILD.md",
+      "sha256": "AC9E0BA926F84EC7E2E04DD305E8253950144F32E127D1663F1B189FDFCABBF5"
+    },
+    {
+      "bytes": 2134,
+      "path": "candidate.config.json",
+      "sha256": "864597FF28CA178E52D003CB8C561B9A41FB570523B2F858C078076C645E2C32"
+    },
+    {
+      "bytes": 432,
+      "path": "LEASE.json",
+      "sha256": "5AA3BEBC8885A366224F2A468D491B20CD26EFABB26713BB8C9F78B2C542D02C"
+    },
+    {
+      "bytes": 49730,
+      "path": "operation-spec.json",
+      "sha256": "D11017B388ED6E117A3DD55C58674A5C8E4E5B7E908E057016F364A7C60E89CA"
+    },
+    {
+      "bytes": 534405,
+      "path": "payload/sites-cohomology.tex",
+      "sha256": "B802DEFA8FE11B40F71944DE28C3B001F12ED6059344B5080676A5B36B242B4D"
+    },
+    {
+      "bytes": 42625,
+      "path": "pipeline_r37.py",
+      "sha256": "CBDBE5C97CBB5F7DEB604FC09C41D3B2D7D1E6009ACF19B26403605CEA6C530B"
+    },
+    {
+      "bytes": 403,
+      "path": "README.md",
+      "sha256": "16E31F17CC2093FFE2E67A82752DF3DBE020C936792157DB592C110611743F6D"
+    },
+    {
+      "bytes": 630,
+      "path": "REGENERATION_RECEIPT.json",
+      "sha256": "A059EA7135D06C95D9CB2243F578104DF486D66345586B5022D801A01D9E63F2"
+    },
+    {
+      "bytes": 3316,
+      "path": "replay/independent-review.json",
+      "sha256": "C7EE393C9A465C56553A2995ED1D1FC08D33E6A7637D5C611E6A5A637687A51A"
+    },
+    {
+      "bytes": 1364,
+      "path": "source-validation.json",
+      "sha256": "FF6FE2AF1D84CD75F785EED1E670EA82667FFBF97C12737897410A16C96977C6"
+    }
+  ],
+  "candidate_id": "stacks-errata-a04446e-r37",
+  "decision_ledger": {
+    "bytes": 1643,
+    "path": "decisions.jsonl",
+    "sha256": "F645AB63761FB29395F3FC3202BF95B35E4FA3554F8C574CE5D55EBF66F0B209"
+  },
+  "formula_diagram_inventory": {
+    "bytes": 863,
+    "path": "formula-diagram-inventory.json",
+    "sha256": "EC33EC5E0ACA52DC14DF9678D241154DAF4C1FF46F44369291CD4C985F03071F"
+  },
+  "generated_at_utc": "2026-08-30T17:15:00Z",
+  "independent_replay": "passed",
+  "lease_id": "stacks-lease-000041-errata-r37",
+  "namespace": "commons/stacks/errata/r37",
+  "rejection_ledger": {
+    "bytes": 0,
+    "path": "rejections.jsonl",
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  "review_state": "performed",
+  "rights_state": "The authority and modified payload retain the Stacks Project GNU Free Documentation License 1.2; metadata and receipts do not relicense upstream content. This independently maintained AI-produced English correction overlay has no Stacks Project review, approval, affiliation, or endorsement.",
+  "schema": "mathematics-commons-stacks-candidate-manifest/v1",
+  "source_authorities": [
+    {
+      "bytes": 20404,
+      "path": "authority/COPYING",
+      "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"
+    },
+    {
+      "bytes": 9785,
+      "path": "authority/producer/SITES_COHOMOLOGY_SOURCE_DEFECT_LEDGER_014_027_029_037.csv",
+      "sha256": "DC1AB6ED4EDCF7ACA9DB1192BA7EC13087FE1DE882CCB49802F7524E1A591BE4"
+    },
+    {
+      "bytes": 1199,
+      "path": "authority/producer/SITES_COHOMOLOGY_R37_PACKET_RECEIPT.json",
+      "sha256": "71EB3D14CC6DB28E0DCF02523BFF015A98130C1CB98FEE2AD653F1D02FD0BFDE"
+    },
+    {
+      "bytes": 33581,
+      "path": "authority/registrar/STACKS_R37_INDEPENDENT_AUDIT_20260830.json",
+      "sha256": "70A04B1873D1B977713717C06C7EDCCE1B2E45ED1C1A67D61C77FDEA6FFD41B3"
+    },
+    {
+      "bytes": 534394,
+      "path": "authority/source/sites-cohomology.tex",
+      "sha256": "5B335CE2C7208A128B3C744B8828D93508063F41A4FABBCE2E921F890928895C"
+    },
+    {
+      "bytes": 411,
+      "path": "authority/upstream.lock.json",
+      "sha256": "71631039DE39B16B221446603990E3D0076D28EFF0015108C795E5EA813C4330"
+    }
+  ],
+  "source_closure": {
+    "complete": true,
+    "enumerated": true,
+    "expected_units": 23,
+    "manifested_units": 23
+  },
+  "source_map": {
+    "bytes": 62653,
+    "path": "source-map.jsonl",
+    "sha256": "8FDC1EEDED6B093367155A8878390BC204D2A197405074A9762F70648642F1BB"
+  },
+  "stable_unit_manifest": {
+    "bytes": 10181,
+    "path": "stable-units.json",
+    "sha256": "E2B5B9009CD58F705DE197B35B3B40D1838BB8CA9716C9D575AA33B257639B19"
+  },
+  "stop_conditions": [
+    "Do not mutate pinned upstream authority or locale targets.",
+    "Do not include producer rows outside 014..027 and 029..037.",
+    "Registrar admission may alter only the overlay/lease registries and the R37 admission receipt; do not compose generated source in this lane.",
+    "Any byte change requires a regenerated manifest and replay."
+  ],
+  "unresolved_defects": [
+    "Already admitted producer rows 001..013 and 028 are excluded.",
+    "The exact canon repairs for rows 014 and 023 supersede their initial producer proposals; corrected producer evidence and registrar audit are both bound.",
+    "This candidate is admitted to the registry but does not compose or push generated Stacks source.",
+    "Pinned authority and locale targets remain unmodified."
+  ],
+  "upstream": {
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "lock": "upstream/stacks.lock.json",
+    "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e"
+  },
+  "writer_task": "01a0256d-5693-77c1-96b2-cf37101e0c6c"
+}
