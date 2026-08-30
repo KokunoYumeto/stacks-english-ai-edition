@@ -1,0 +1,54 @@
+{
+  "admitted_at_utc": "2026-08-30T16:20:00Z",
+  "candidate_id": "stacks-errata-a04446e-r36",
+  "constraints": {
+    "authority_mutated": false,
+    "generated_source_composed": false,
+    "generated_source_pushed": false,
+    "producer_target_mutated": false,
+    "published": false
+  },
+  "fresh_replay": {
+    "candidate_id": "stacks-errata-a04446e-r36",
+    "manifest_references": 19,
+    "operations": 1,
+    "passed": true,
+    "payload_sha256": {
+      "cohomology.tex": "BF1DE1FE537E07F2EAF5711EBEFA28AB08D9A8F13BBB900BF9C72501CA1CFD83"
+    },
+    "stable_ids": [
+      "MC-STK-ERR-1312"
+    ],
+    "units": 1
+  },
+  "leases": {
+    "after_sha256": "DE5F068855355930821CAFB47725ACFC1C044D74C817F773F9FAFA5B992E29D3",
+    "before_sha256": "B36833166356A7528B17A059A9581898C18056B95926484D0326FCA1F93FFC5F",
+    "issued_event": "lease-event-000076",
+    "released_event": "lease-event-000077"
+  },
+  "manifest": {
+    "bytes": 4672,
+    "path": "candidate.manifest.json",
+    "sha256": "64509286722A1AAF114FC4F2165C429778003AA9B8240A304364B071E6CBBC3D"
+  },
+  "producer_ids": [
+    "CANON-COHOMOLOGY-001"
+  ],
+  "registry": {
+    "after_sha256": "3835AD948ED6F420584459472E630C2442BC5815232E2FCB26B6ACCDC6F003D2",
+    "before_sha256": "5072983FA36D47470380DAE0E17C440489C48B27B04BF58226785C97FDD1F770",
+    "last_overlay": "stacks-errata-a04446e-r36"
+  },
+  "schema": "mathematics-commons-stacks-registry-admission-receipt/v1",
+  "source_map": {
+    "bytes": 2047,
+    "path": "source-map.jsonl",
+    "sha256": "8F8C2428963BF2494520EB815DA44390CEA2565491BDB6F7BE89B96BDAD90A55"
+  },
+  "stable_id_count": 1,
+  "stable_ids": [
+    "MC-STK-ERR-1312"
+  ],
+  "status": "PASS"
+}

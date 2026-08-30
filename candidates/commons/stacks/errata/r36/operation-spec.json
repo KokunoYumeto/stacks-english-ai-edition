@@ -1,0 +1,32 @@
+{
+  "apply_order": "descending_start_byte_per_source",
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "operation_count": 1,
+  "operations": [
+    {
+      "class": "mathematical_arrow_direction",
+      "declared_line_range_occurrence_count": 1,
+      "end_byte_exclusive": 422336,
+      "occurrence_count_in_frozen_authority": 1,
+      "old_bytes": 46,
+      "old_sha256": "5F1C5C9573480A8BF0C5F23266BB461197D68C37A40CF9254D75A13DD73A57F1",
+      "old_text": "(\\mathcal{H}')^\\bullet \\to \\mathcal{H}^\\bullet",
+      "operation_aliases": [],
+      "operation_id": "MC-STK-ERR-1312-OP1",
+      "operation_index": 1,
+      "producer_id": "CANON-COHOMOLOGY-001",
+      "rationale": "The proof chooses the quasi-isomorphism \\mathcal{F}^\\bullet \\to \\mathcal{I}^\\bullet. Internal Hom is covariant in its second argument, so the induced map of total double complexes is \\mathcal{H}^\\bullet \\to (\\mathcal{H}')^\\bullet, matching the displayed cohomology map at lines 11935--11940; the printed reverse arrow has no source.",
+      "registrar_evidence": "authority/registrar/CANON_COHOMOLOGY_001.json",
+      "registrar_evidence_sha256": "F5DB409724E52DD4A79A6916AE1B8A0274241E5A00129FB0DDCF6325E283B2EF",
+      "replacement_bytes": 46,
+      "replacement_sha256": "327F3AD50620CC2ECDEBC1A030CA6B04ED475C4F1F3B574192018D7220017C33",
+      "replacement_text": "\\mathcal{H}^\\bullet \\to (\\mathcal{H}')^\\bullet",
+      "source": "cohomology.tex",
+      "source_end_line": 11924,
+      "source_start_line": 11924,
+      "stable_id": "MC-STK-ERR-1312",
+      "start_byte": 422290
+    }
+  ],
+  "schema": "mathematics-commons-stacks-errata-operation-spec/v1"
+}

@@ -1,0 +1,133 @@
+{
+  "$schema": "../../../../../schemas/candidate-manifest.schema.json",
+  "builds": [
+    {
+      "bytes": 171,
+      "path": "BUILD.md",
+      "sha256": "F5261E675BBF275C4637630E1B7A5182A7BDA182460938A41EBBC2CA82A74E3F"
+    },
+    {
+      "bytes": 1003,
+      "path": "candidate.config.json",
+      "sha256": "80799FC9657455B1996E4572A8B1FBE2139D2FD1F1FB5554E1BA021DA999E5FB"
+    },
+    {
+      "bytes": 432,
+      "path": "LEASE.json",
+      "sha256": "224127021F7CF77DA083886E1A58178DAB9B0E9BF8517D5004056BEF3BC67C66"
+    },
+    {
+      "bytes": 1680,
+      "path": "operation-spec.json",
+      "sha256": "E36FC8755868583D9D6110DCE7316F1C07471BA5D9838ECCC767A3DF4C1F0940"
+    },
+    {
+      "bytes": 519286,
+      "path": "payload/cohomology.tex",
+      "sha256": "BF1DE1FE537E07F2EAF5711EBEFA28AB08D9A8F13BBB900BF9C72501CA1CFD83"
+    },
+    {
+      "bytes": 26660,
+      "path": "pipeline_r36.py",
+      "sha256": "C47994B7383776F9F9E123A47B6FEA7D8D7F56D4E2340219759EFC0180401896"
+    },
+    {
+      "bytes": 358,
+      "path": "README.md",
+      "sha256": "129CE80DDFADEB1ADFCA88AB38E8706C63A3A432A2492D8717A6D73731C873ED"
+    },
+    {
+      "bytes": 542,
+      "path": "REGENERATION_RECEIPT.json",
+      "sha256": "154D3CB69875A86028EE1ABBAB4964D9B6A4B700FBDA413961878ED899D30F45"
+    },
+    {
+      "bytes": 1883,
+      "path": "replay/independent-review.json",
+      "sha256": "CEE7D742F63F5DEE59C7D595701F754ED4211DFB104CD1583C7EDC32F17A48D5"
+    },
+    {
+      "bytes": 948,
+      "path": "source-validation.json",
+      "sha256": "09179F08D397577F91938E8267DFECCC2B1AC89A9A9C1899DE2F81653EDADA62"
+    }
+  ],
+  "candidate_id": "stacks-errata-a04446e-r36",
+  "decision_ledger": {
+    "bytes": 1388,
+    "path": "decisions.jsonl",
+    "sha256": "EE8FCB1EA19211C98F0C238699EE7E0A46A5D68A5D8C228109F57165BD5C8032"
+  },
+  "formula_diagram_inventory": {
+    "bytes": 354,
+    "path": "formula-diagram-inventory.json",
+    "sha256": "F37324E678A7E0853121DB27169DDB5BD4DE24CE9314BDE61765B9C8635DFE1A"
+  },
+  "generated_at_utc": "2026-08-30T16:20:00Z",
+  "independent_replay": "passed",
+  "lease_id": "stacks-lease-000040-errata-r36",
+  "namespace": "commons/stacks/errata/r36",
+  "rejection_ledger": {
+    "bytes": 0,
+    "path": "rejections.jsonl",
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  "review_state": "performed",
+  "rights_state": "The authority and modified payload retain the Stacks Project GNU Free Documentation License 1.2; metadata and receipts do not relicense upstream content. This independently maintained AI-produced English correction overlay has no Stacks Project review, approval, affiliation, or endorsement.",
+  "schema": "mathematics-commons-stacks-candidate-manifest/v1",
+  "source_authorities": [
+    {
+      "bytes": 20404,
+      "path": "authority/COPYING",
+      "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"
+    },
+    {
+      "bytes": 1114,
+      "path": "authority/registrar/CANON_COHOMOLOGY_001.json",
+      "sha256": "F5DB409724E52DD4A79A6916AE1B8A0274241E5A00129FB0DDCF6325E283B2EF"
+    },
+    {
+      "bytes": 519286,
+      "path": "authority/source/cohomology.tex",
+      "sha256": "FA9747D0082AFBF8B09244DCC6C260F8A122E5E3B4A3C69E2273506D76E18A42"
+    },
+    {
+      "bytes": 449,
+      "path": "authority/upstream.lock.json",
+      "sha256": "7D4C9F69310B7E1F467351C6E2804A6629D6F60FFC6907058B7E094F53CFB7AE"
+    }
+  ],
+  "source_closure": {
+    "complete": true,
+    "enumerated": true,
+    "expected_units": 1,
+    "manifested_units": 1
+  },
+  "source_map": {
+    "bytes": 2047,
+    "path": "source-map.jsonl",
+    "sha256": "8F8C2428963BF2494520EB815DA44390CEA2565491BDB6F7BE89B96BDAD90A55"
+  },
+  "stable_unit_manifest": {
+    "bytes": 570,
+    "path": "stable-units.json",
+    "sha256": "334CFB47D8EA8FE4D95A968F332BF62A8CF3A16140FD251037F9C0FA93D2B535"
+  },
+  "stop_conditions": [
+    "Do not mutate pinned upstream authority or locale targets.",
+    "Do not reopen or alter R35.",
+    "Any byte change requires a regenerated manifest and replay."
+  ],
+  "unresolved_defects": [
+    "Only the independently discovered cohomology.tex:11924 mirror is included.",
+    "The analogous sites-cohomology.tex correction was admitted separately in R35 and is not repeated.",
+    "This registrar candidate does not compose or push generated Stacks source.",
+    "Pinned authority and locale targets remain unmodified."
+  ],
+  "upstream": {
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "lock": "upstream/stacks.lock.json",
+    "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e"
+  },
+  "writer_task": "01a0256d-5693-77c1-96b2-cf37101e0c6c"
+}
