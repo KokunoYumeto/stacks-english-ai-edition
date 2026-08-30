@@ -210,6 +210,43 @@
       "statement_lf_line_end": 1024,
       "statement_bytes": 1324,
       "statement_sha256": "6765571D18DB985C4288888FC1C6C65C222C30E59965173EBAE9A7A7E1862862"
+    },
+    "ega:I.6.6.2": {
+      "receipt": "F37ZW.json",
+      "receipt_sha256": "0A56D886058B8203C34A9CDAA52B2CBF4EF4E6ED871C053CB7ADAA0F766690A0",
+      "path": "ega1/ega1-6-fr.tex",
+      "full_bytes": 57781,
+      "full_sha256": "F95D2C43C1074A1CC6485D74E24F02BF8C5F098ADB571AA024B4B499F5CDE3FE",
+      "lf_line_start": 1026,
+      "lf_line_end": 1044,
+      "slice_bytes": 865,
+      "slice_sha256": "FA028DDA3B0D5E54600F39FB694179A512411FC36BF7838467BA7BBDA7304007",
+      "definition_lf_line_start": 1026,
+      "definition_lf_line_end": 1035,
+      "definition_bytes": 471,
+      "definition_sha256": "B7606C2421A1E10C2AC8311A18F2C92476DA8533135938FC88C3E77B7B4A267A",
+      "restriction_lf_line_start": 1037,
+      "restriction_lf_line_end": 1040,
+      "restriction_bytes": 236,
+      "restriction_sha256": "3A955C5DAB00632CBF3E32F782B0E2DDB70DB057B1163CE1564B951E2298D0EA",
+      "noetherian_lf_line_start": 1042,
+      "noetherian_lf_line_end": 1044,
+      "noetherian_bytes": 156,
+      "noetherian_sha256": "FAE680BBB303A42779B63CDC24871D00673C75F7335AF887FDEA86474683C807",
+      "source_correction": {
+        "state": "ROUTED_PENDING_SUCCESSOR_ADJUDICATION",
+        "proposed_issue_id": "I000103",
+        "successor_task": "01a047ab-fc94-7120-af1d-5701ba37aacd",
+        "authority_mutated": false,
+        "issue_ledger_mutated": false,
+        "lf_line": 1030,
+        "printed_line_bytes": 35,
+        "printed_line_sha256": "A3F1CA10218F6D6AADB85053624BE51EBE0E1EC319403BF205988E0303EC478E",
+        "corrected_line_bytes": 38,
+        "corrected_line_sha256": "83F1B59854CCA76465D1F1868949EDE94C0D3733B905247CC84FB5ADF84E7697",
+        "prospective_full_bytes": 57784,
+        "prospective_full_sha256": "F62919C4CAA7D7FDA64E307C5DFCC2FDCAFB43AA04FC59CF3F9EC4BCFF1FFB4C"
+      }
     }
   },
   "reviewed_errata_slices": {
@@ -389,19 +426,19 @@
   },
   "statement_review_snapshot": {
     "file": "smap.csv",
-    "statement_edge_rows": 1234,
-    "file_rows": 1241,
+    "statement_edge_rows": 1238,
+    "file_rows": 1245,
     "superseded_rows": 7,
-    "source_units": 413,
-    "existing_official_tag_rows": 1221,
+    "source_units": 414,
+    "existing_official_tag_rows": 1225,
     "distinct_existing_official_tags": 347,
     "local_untagged_rows": 13,
-    "full_statement_equivalences": 58
+    "full_statement_equivalences": 60
   },
   "residual_snapshot": {
     "file": "resid.csv",
-    "rows": 794,
-    "file_rows": 819,
+    "rows": 797,
+    "file_rows": 822,
     "superseded_rows": 25,
     "open_gaps": 12,
     "integrated_local_mirror": 13
