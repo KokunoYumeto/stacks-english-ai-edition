@@ -1,0 +1,84 @@
+{
+  "schema": "mathematics-commons-stacks-registry-admission-receipt/v1",
+  "candidate_id": "stacks-errata-a04446e-r33",
+  "admitted_at_utc": "2026-08-30T12:15:00Z",
+  "manifest": {
+    "path": "candidates/commons/stacks/errata/r33/candidate.manifest.json",
+    "bytes": 5423,
+    "sha256": "1D2EA4F6463FB775CFF3F0E3616BE125F6D20709BB32DB84D1D1889582BFAC75"
+  },
+  "source_map": {
+    "path": "candidates/commons/stacks/errata/r33/source-map.jsonl",
+    "bytes": 12417,
+    "sha256": "4AEF705A3EA0A84037B25D46E2B47FE0CE6F40EE9919A262D4F43AEAA9093ED2"
+  },
+  "stable_ids": [
+    "MC-STK-ERR-1288",
+    "MC-STK-ERR-1289",
+    "MC-STK-ERR-1290",
+    "MC-STK-ERR-1291",
+    "MC-STK-ERR-1292",
+    "MC-STK-ERR-1293",
+    "MC-STK-ERR-1294"
+  ],
+  "stable_id_count": 7,
+  "producer_ids": [
+    "P08-E262",
+    "P08-E263",
+    "P08-E264",
+    "P08-E265",
+    "P08-E266",
+    "P08-E588",
+    "P08-E589",
+    "P08-E590",
+    "P08-E591",
+    "P08-E592",
+    "P08-E593",
+    "P08-E594"
+  ],
+  "canonical_representatives": [
+    "P08-E262",
+    "P08-E263",
+    "P08-E264",
+    "P08-E265",
+    "P08-E266",
+    "P08-E593",
+    "P08-E594"
+  ],
+  "duplicate_aliases": [
+    "P08-E588",
+    "P08-E589",
+    "P08-E590",
+    "P08-E591",
+    "P08-E592"
+  ],
+  "registry": {
+    "before_sha256": "BB386A08B91DFE7065CDA250162756A74D2DCFDC2BF2540E90F11918B3F32A06",
+    "after_sha256": "444314B02615DD4EC6EA1D2E70B17BF7723B43635F48D719CD954CDB4780D21A",
+    "last_overlay": "stacks-errata-a04446e-r33"
+  },
+  "leases": {
+    "before_sha256": "59A13A5BF99321785AD8F32E642173462BF36449853BA9FDB4551615D5E2B2F6",
+    "after_sha256": "A2B79E60B52B8BCB984D32F30218463D68E696CA5FA437E084CCB8CDF001A8F1",
+    "issued_event": "lease-event-000070",
+    "released_event": "lease-event-000071"
+  },
+  "fresh_replay": {
+    "passed": true,
+    "authority_bytes": 398506,
+    "payload_bytes": 398512,
+    "payload_sha256": "048BC16D80E71DBAA9C5CF11B109B69B481D920B278CBCB379C3BC9B8BBFC252",
+    "operations": 7,
+    "stable_units": 7,
+    "producer_ids": 12,
+    "duplicate_alias_pairs": 5
+  },
+  "constraints": {
+    "authority_mutated": false,
+    "producer_target_mutated": false,
+    "generated_source_composed": false,
+    "generated_source_pushed": false,
+    "published": false
+  },
+  "status": "PASS"
+}

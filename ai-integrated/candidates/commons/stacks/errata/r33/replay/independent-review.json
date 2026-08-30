@@ -1,0 +1,72 @@
+{
+  "adverse_observations": [
+    "The five later ko-KR rows are preserved as duplicate aliases rather than applied twice.",
+    "R33 is registrar-only; downstream source composition and publication are excluded."
+  ],
+  "candidate_id": "stacks-errata-a04446e-r33",
+  "closure_checks": {
+    "manifest_references": 21,
+    "operation_ids_unique": 7,
+    "passed": true,
+    "source_map_rows": 7,
+    "stable_ids_unique": 7
+  },
+  "conclusion": "UNCONDITIONAL PASS",
+  "constraints_observed": {
+    "generated_source_composed": false,
+    "generated_source_pushed": false,
+    "locale_targets_mutated": false,
+    "registry_mutated_by_review": false,
+    "upstream_authority_mutated": false
+  },
+  "deduplication": {
+    "canonical_representatives": [
+      "P08-E262",
+      "P08-E263",
+      "P08-E264",
+      "P08-E265",
+      "P08-E266"
+    ],
+    "duplicate_aliases": [
+      "P08-E588",
+      "P08-E589",
+      "P08-E590",
+      "P08-E591",
+      "P08-E592"
+    ],
+    "new_unique_rows": [
+      "P08-E593",
+      "P08-E594"
+    ],
+    "passed": true,
+    "producer_rows_preserved": 12,
+    "semantic_units": 7
+  },
+  "pass_is_unconditional": true,
+  "passed": true,
+  "pre_review_manifest_sha256": "834310F27AE9B93DBBEBFEFE13F189E4355FAE73D8D1151AD06B854550884E65",
+  "recorded_at_utc": "2026-08-30T12:15:00Z",
+  "registry_pre_admission": {
+    "bytes": 56353,
+    "last_overlay": "stacks-errata-a04446e-r32",
+    "passed": true,
+    "path": "registry/overlays.json",
+    "r33_absent": true,
+    "sha256": "BB386A08B91DFE7065CDA250162756A74D2DCFDC2BF2540E90F11918B3F32A06",
+    "stable_id_collisions": 0
+  },
+  "result": "PASS",
+  "review_kind": "independent_exact_preimage_context_alias_and_payload_replay",
+  "schema": "mathematics-commons-stacks-errata-independent-review/v1",
+  "scratch_replay": {
+    "apply_order": "descending_start_byte",
+    "authority_bytes": 398506,
+    "duplicate_alias_pairs": 5,
+    "operations": 7,
+    "passed": true,
+    "payload_bytes": 398512,
+    "payload_sha256": "048BC16D80E71DBAA9C5CF11B109B69B481D920B278CBCB379C3BC9B8BBFC252",
+    "producer_ids": 12,
+    "stable_units": 7
+  }
+}
