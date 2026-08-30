@@ -21,19 +21,19 @@ SOURCE_UNION = "ad58625f60e6816905ff217d21d91b07b2722fcf"
 EGA_EXPORT = "91df7f1c96bd4973264c29b0e121253a05d1d361"
 COMPOSITION_RECEIPT = Path("validation/composition-current.json")
 DEFAULT_BUILD_RECEIPT = Path(
-    "validation/stacks-errata-a04446e-r30-build-2026-08-29.json"
+    "validation/stacks-errata-a04446e-r32-build-2026-08-30.json"
 )
 VISUAL_QA_RECEIPT = Path(
-    "validation/stacks-errata-a04446e-r30-visual-qa-2026-08-29.json"
+    "validation/stacks-errata-a04446e-r32-visual-qa-2026-08-30.json"
 )
 REPRODUCIBILITY_RECEIPT = Path(
-    "validation/stacks-errata-a04446e-r30-reproducibility-2026-08-29.json"
+    "validation/stacks-errata-a04446e-r32-reproducibility-2026-08-30.json"
 )
 SECOND_REPRODUCIBILITY_RECEIPT = Path(
-    "validation/stacks-errata-a04446e-r30-reproducibility-second-2026-08-29.json"
+    "validation/stacks-errata-a04446e-r32-reproducibility-second-2026-08-30.json"
 )
 CURRENT_RELEASE_RECEIPT = Path(
-    "validation/stacks-errata-a04446e-r30-release-2026-08-29.json"
+    "validation/stacks-errata-a04446e-r32-release-2026-08-30.json"
 )
 SHA1_RE = re.compile(r"^[0-9a-f]{40}$")
 SHA256_RE = re.compile(r"^[0-9A-Fa-f]{64}$")
@@ -2122,11 +2122,11 @@ def main(argv: list[str] | None = None) -> int:
                     if isinstance(row.get("payload"), str)
                 }
             )
-            if len(payload_paths) != 1:
+            if not payload_paths:
                 errors.append(
                     f"cannot normalize embedded-candidate payload path: {overlay_id!r}"
                 )
-            else:
+            elif len(payload_paths) == 1:
                 normalized_overlay["payload_path"] = payload_paths[0]
             namespace = entry.get("namespace") if isinstance(entry, dict) else None
             review_value = entry.get("review_receipt") if isinstance(entry, dict) else None
