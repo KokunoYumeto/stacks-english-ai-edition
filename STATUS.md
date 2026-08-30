@@ -1,6 +1,6 @@
 # Integration status
 
-Status date: **2026-08-29**
+Status date: **2026-08-30**
 
 Pinned official upstream: `a04446e57ec1fbc252a871afcec7752fb2807b14`
 
@@ -26,6 +26,14 @@ historically preserved, while R30 is the latest errata release; the next EGA
 cursor is §6.5.1.
 
 ## Errata state
+
+R31 and R32 are composed and validated in registry order. The live registry has
+**33 overlays / 1,035 stable IDs** and the cumulative v2 replay contains **1,159
+exact operations**. R31 contributes one operation to `sites-modules.tex`; R32
+contributes 125 operations across `fields.tex`, `categories.tex`, and
+`algebra.tex`. Two independent 27-PDF builds are byte-identical (2,614 pages;
+28,121,719 bytes), and all 700 affected-chapter pages plus 72 mapped loci passed
+visual QA.
 
 - Current integrated registry: **31 overlays / 931 stable IDs**, frozen at R30
   admission commit `256846d6a4193f21cd6e1af675dc09e6950aa3d6`, tree

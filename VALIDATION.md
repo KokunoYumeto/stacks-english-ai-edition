@@ -18,6 +18,14 @@ the complete gate.
 
 The gate verifies:
 
+- the repaired R31/R32 registry chain at cutoff
+  `cdea2e13a447e7cdcf5f6f805d3a767d907fd679`, comprising 33 overlays,
+  1,035 globally unique stable IDs, and 1,159 cumulative exact v2 operations;
+- manifest-only composition of one R31 operation in `sites-modules.tex` followed
+  by 125 R32 operations in `fields.tex`, `categories.tex`, and `algebra.tex`;
+- two byte-identical 27-PDF fixed-point builds (2,614 pages; 28,121,719 bytes)
+  and visual inspection of all 700 affected-chapter pages and 72 mapped loci;
+
 - ancestry of the pinned upstream, source-union, EGA, and protected linear
   registry/source history;
 - 31 admitted overlays containing exactly 931 stable IDs at R30 registry cutoff

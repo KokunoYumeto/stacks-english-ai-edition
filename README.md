@@ -19,9 +19,9 @@ machine-readable validation evidence.
 [Errata registry](ai-integrated/registry/overlays.json) ·
 [Validation](VALIDATION.md) ·
 [Current composition receipt](validation/composition-current.json) ·
-[Current R30 fixed-point build: PASS](validation/stacks-errata-a04446e-r30-build-2026-08-29.json) ·
-[Current R30 visual QA: PASS](validation/stacks-errata-a04446e-r30-visual-qa-2026-08-29.json) ·
-[Current R30 reproducibility: PASS](validation/stacks-errata-a04446e-r30-reproducibility-2026-08-29.json) ·
+[Current R32 fixed-point build: PASS](validation/stacks-errata-a04446e-r32-build-2026-08-30.json) ·
+[Current R32 visual QA: PASS](validation/stacks-errata-a04446e-r32-visual-qa-2026-08-30.json) ·
+[Current R32 reproducibility: PASS](validation/stacks-errata-a04446e-r32-reproducibility-2026-08-30.json) ·
 [Latest errata release receipt: R30 PASS](validation/stacks-errata-a04446e-r30-release-2026-08-29.json) ·
 [Latest errata preservation release: R30](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r30-2026-08-29) ·
 [Latest errata Zenodo version: R30](https://doi.org/10.5281/zenodo.22166456) ·
@@ -58,7 +58,7 @@ The pinned upstream baseline is
 | GAGA | Root chapter composed through r3; corpus review closed | All 126 units are classified and all 79 substantive units decided; the current unified `gaga.pdf` is 23 pages, while the sealed r3 dossier records its historical 22-page build | [r3 dossier](gaga_r3/STATUS.md) · [live chapter source](gaga.tex) |
 | FGA | Root additions composed and notation-normalized; corpus review closed | All 1,253 units and 1,612 term links are dispositioned; selected independently written additions are in the combined source; the fixed-point Moduli build is 83 pages | [Overview](fga/README.md) · [status](fga/status.md) |
 | EGA | Partial root-source composition; direct-source review active | Selected local additions are present in root TeX; the complete English discovery and diplomatic French editions remain separate read-only inputs; review is complete through EGA I §6.4.13 and continues at §6.5.1 | [EGA dossier](ega/README.md) |
-| Errata and Verdier | Root-composed, deterministically validated, and publicly preserved through R30 | The integrated tree contains 31 overlays / 931 stable IDs. Its R1–R30 Stacks errata subset contains 30 batches, 919 correction IDs, and 1,033 exact v2 operations; R29 updates `sites-modules.tex` and R30 updates `injectives.tex` | [Registry](ai-integrated/registry/overlays.json) · [R30 build](validation/stacks-errata-a04446e-r30-build-2026-08-29.json) · [R30 release](validation/stacks-errata-a04446e-r30-release-2026-08-29.json) · [errata evidence](ai-integrated/candidates/commons/stacks/errata/) |
+| Errata and Verdier | Root-composed and deterministically validated through R32 | The integrated tree contains 33 overlays / 1,035 stable IDs. Its R1–R32 Stacks errata subset contains 32 batches, 1,023 correction IDs, and 1,159 exact v2 operations; R31 updates `sites-modules.tex` and R32 updates `fields.tex`, `categories.tex`, and `algebra.tex` | [Registry](ai-integrated/registry/overlays.json) · [R32 build](validation/stacks-errata-a04446e-r32-build-2026-08-30.json) · [errata evidence](ai-integrated/candidates/commons/stacks/errata/) |
 
 “Root-composed” means that the live top-level TeX tree changed and participates
 in the unified build. “Dossier-only” means that mappings, decisions, and
