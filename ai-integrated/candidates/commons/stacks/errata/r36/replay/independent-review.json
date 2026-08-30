@@ -1,0 +1,43 @@
+{
+  "schema": "mathematics-commons-stacks-independent-review/v1",
+  "candidate_id": "stacks-errata-a04446e-r36",
+  "reviewed_at_utc": "2026-08-30T16:24:00Z",
+  "passed": true,
+  "pass_is_unconditional": true,
+  "authority": {
+    "source": "cohomology.tex",
+    "bytes": 519286,
+    "sha256": "FA9747D0082AFBF8B09244DCC6C260F8A122E5E3B4A3C69E2273506D76E18A42",
+    "hash_replay_pass": true,
+    "authority_mutated": false
+  },
+  "unit": {
+    "stable_id": "MC-STK-ERR-1312",
+    "producer_id": "CANON-COHOMOLOGY-001",
+    "source_locator": "cohomology.tex:11924",
+    "line_start_byte_zero_based": 422273,
+    "preimage_byte_span_zero_based": [422289, 422337],
+    "inner_operation_byte_span_zero_based": [422290, 422336],
+    "exact_preimage_occurrences": 1,
+    "exact_preimage": "(\\mathcal{H}')^\\bullet \\to \\mathcal{H}^\\bullet",
+    "exact_replacement": "\\mathcal{H}^\\bullet \\to (\\mathcal{H}')^\\bullet",
+    "mathematical_audit": "PASS: the proof chooses F^bullet -> I^bullet, and internal Hom is covariant in its second argument; hence the induced double-complex and cohomology maps go H^bullet -> (H')^bullet, exactly as the display at lines 11935-11940 requires.",
+    "preimage_and_type_check_pass": true
+  },
+  "deduplication": {
+    "registry_head_reviewed": "stacks-errata-a04446e-r35",
+    "exact_source_path_locus_operation_collisions": 0,
+    "related_distinct_unit": "MC-STK-ERR-1311 / SITES-COHOMOLOGY-028 / sites-cohomology.tex:12001",
+    "related_distinct_unit_repeated": false,
+    "pass": true
+  },
+  "replay": {
+    "payload_sha256": "BF1DE1FE537E07F2EAF5711EBEFA28AB08D9A8F13BBB900BF9C72501CA1CFD83",
+    "payload_diff_is_exactly_one_operation": true,
+    "stable_id_collision_count": 0,
+    "manifest_reference_replay_pass": true,
+    "locale_target_mutated": false,
+    "generated_source_composed": false,
+    "generated_source_pushed": false
+  }
+}
