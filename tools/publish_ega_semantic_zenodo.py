@@ -742,7 +742,9 @@ def load_state(
         raise RuntimeError("Persisted target metadata is not deterministic")
     if target.get("creators") != expected_preserved["creators"]:
         raise RuntimeError("Persisted target metadata would alter creators")
-    if target.get("license") != expected_preserved["license"]:
+    if canonical_license_id(target.get("license")) != canonical_license_id(
+        expected_preserved["license"]
+    ):
         raise RuntimeError("Persisted target metadata would alter the license")
     draft = state.get("draft")
     if not isinstance(draft, dict):
