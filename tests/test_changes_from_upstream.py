@@ -62,6 +62,8 @@ class ChangesFromUpstreamTests(unittest.TestCase):
         self.assertIn("Original", page)
         self.assertIn("Replacement", page)
         self.assertIn("Unofficial Stacks Project AI Drafts", page)
+        self.assertIn("Registry admission", page)
+        self.assertIn("Historical candidate status", page)
         self.assertEqual(page.count('class="change-card"'), 1030)
         self.assertIn('id="search"', page)
         self.assertIn('id="overlay"', page)

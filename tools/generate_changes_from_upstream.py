@@ -909,7 +909,8 @@ def render_markdown(model: Model) -> str:
                 f"- Overlay: `{unit.overlay_id}`",
                 f"- Stable ID: `{unit.stable_id}`" + (f"; producer ID: `{unit.producer_id}`" if unit.producer_id else ""),
                 f"- Bound source locator: `{unit.source}:{unit.locus}`",
-                f"- Status: `{unit.status}`; review state: `{unit.review_state}`",
+                "- Registry admission: `admitted`.",
+                f"- Historical candidate status: `{unit.status}`; candidate review state: `{unit.review_state}`. This frozen field is not the current admission status.",
                 f"- Fidelity: `{unit.operations[0].fidelity}`",
                 "- Links: "
                 + f"[Official]({official_source_link(unit.source_commit, unit.source, unit.operations)}) · "
@@ -1035,7 +1036,8 @@ def render_html(model: Model) -> str:
             '<dl>'
             f'<div><dt>Overlay</dt><dd>{html.escape(unit.overlay_id)}</dd></div>'
             f'<div><dt>Producer</dt><dd>{html.escape(unit.producer_id or "—")}</dd></div>'
-            f'<div><dt>Status</dt><dd>{html.escape(unit.status)} / {html.escape(unit.review_state)}</dd></div>'
+            '<div><dt>Registry admission</dt><dd>admitted</dd></div>'
+            f'<div><dt>Historical candidate status</dt><dd>{html.escape(unit.status)} / {html.escape(unit.review_state)} (frozen before admission)</dd></div>'
             f'<div><dt>Fidelity</dt><dd>{html.escape(fidelity)}</dd></div>'
             '</dl>'
             f'<nav>{" · ".join(links)}</nav>{rationale}{"".join(operations_html)}</article>'
