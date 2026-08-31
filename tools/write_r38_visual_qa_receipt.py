@@ -89,6 +89,14 @@ def text(value: object, label: str) -> str:
     return value
 
 
+def public_reviewer_label(value: str) -> str:
+    """Keep reviewer attribution without serializing a private agent path."""
+    label = value.replace("/root/", "agent/").replace("\\root\\", "agent/")
+    require("/root/" not in label and "\\root\\" not in label,
+            "reviewer label contains a private agent path")
+    return label
+
+
 def require_identity(value: object, expected: dict, label: str) -> None:
     require(isinstance(value, dict) and all(
         value.get(key) == expected[key] for key in ("bytes", "sha256")
@@ -552,7 +560,9 @@ def validate_ledgers(paths: list[Path], build: dict, page_map_identity: dict,
         require(ledger.get("schema") == LEDGER_SCHEMA and ledger.get("status") == "COMPLETE"
                 and ledger.get("inspection_method") == "direct_image_inspection",
                 f"ledger is not a completed direct-image inspection: {path}")
-        reviewer = text(ledger.get("reviewer"), f"reviewer for {path}")
+        reviewer = public_reviewer_label(
+            text(ledger.get("reviewer"), f"reviewer for {path}")
+        )
         require(ledger.get("source") == build["source"]
                 and ledger.get("page_map_sha256") == page_map_identity["sha256"],
                 f"ledger is bound to a different build or page map: {path}")

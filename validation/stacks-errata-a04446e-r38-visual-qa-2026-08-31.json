@@ -1,7 +1,7 @@
 {
   "schema": "unofficial-ai-integrated-stacks-visual-qa/v1",
   "status": "PASS",
-  "created_utc": "2026-08-31T13:51:34Z",
+  "created_utc": "2026-08-31T14:07:14Z",
   "source": {
     "commit": "bb6e7ccca41fe00a06815d81e174c5261e7a1ce3",
     "tree": "bfcfa4103af8bb253cac76ffacf791147ea7c683"
@@ -184,7 +184,7 @@
         "path": "tmp/pdfs/r38-visual-qa-20260831/cohomology-inspection.json",
         "bytes": 19739,
         "sha256": "DB3044C25B4406A8FF31348ADC79F54A0B564BDB40CCABFE20183CEE9158FC2A",
-        "reviewer": "Codex /root/r38_cohomology_visual",
+        "reviewer": "Codex agent/r38_cohomology_visual",
         "inspection_count": 13,
         "covered_stems": [
           "cohomology"
@@ -194,7 +194,7 @@
         "path": "tmp/pdfs/r38-visual-qa-20260831/sites-cohomology-inspection.json",
         "bytes": 33065,
         "sha256": "ABA3913F7B8D27FFD75CC988E3A41655A6EF1C5BFEC1390DFA2C78934F5D85F5",
-        "reviewer": "AI visual reviewer /root/r38_sites_visual",
+        "reviewer": "AI visual reviewer agent/r38_sites_visual",
         "inspection_count": 25,
         "covered_stems": [
           "sites-cohomology"
@@ -204,7 +204,7 @@
         "path": "tmp/pdfs/r38-visual-qa-20260831/sites-cohomology-late-inspection.json",
         "bytes": 13639,
         "sha256": "49A2C8E8DD48B100FC3F8D779F7C56EABEA08D909FFED52199C8C1A9D9E88426",
-        "reviewer": "AI agent /root/r38_sites_visual/sites_late_pages",
+        "reviewer": "AI agent agent/r38_sites_visual/sites_late_pages",
         "inspection_count": 9,
         "covered_stems": [
           "sites-cohomology"
@@ -214,7 +214,7 @@
         "path": "tmp/pdfs/r38-visual-qa-20260831/more-algebra-inspection.json",
         "bytes": 36468,
         "sha256": "84D801219D3130A5D625A1D3441E3F333C98AA44A635CD13A13C4D17513803DC",
-        "reviewer": "Codex agent /root/r38_algebra_visual",
+        "reviewer": "Codex agent agent/r38_algebra_visual",
         "inspection_count": 26,
         "covered_stems": [
           "more-algebra"
@@ -224,7 +224,7 @@
         "path": "tmp/pdfs/r38-visual-qa-20260831/more-algebra-contacts-early-inspection.json",
         "bytes": 17269,
         "sha256": "E745B0663CC4B45F704B35DC2A131968BBDDCC27F8C12635DDF0C977C792A268",
-        "reviewer": "AI agent /root/r38_algebra_visual/algebra_contacts_early",
+        "reviewer": "AI agent agent/r38_algebra_visual/algebra_contacts_early",
         "inspection_count": 13,
         "covered_stems": [
           "more-algebra"
@@ -253,7 +253,7 @@
           "sha256": "9AA2A026A94E7D9E26C83116DABC1AC6612F4471A8597EDD0C5912D016755910"
         }
       },
-      "reviewer": "Codex /root/r38_cohomology_visual",
+      "reviewer": "Codex agent/r38_cohomology_visual",
       "inspection_ledger": {
         "path": "tmp/pdfs/r38-visual-qa-20260831/cohomology-inspection.json",
         "bytes": 19739,
@@ -278,7 +278,7 @@
           "sha256": "9F38FEF619F59D570C09AF446FFF4DF02F26C03816E8F2BC02E5BB9EE3F0DB61"
         }
       },
-      "reviewer": "AI agent /root/r38_sites_visual/sites_late_pages",
+      "reviewer": "AI agent agent/r38_sites_visual/sites_late_pages",
       "inspection_ledger": {
         "path": "tmp/pdfs/r38-visual-qa-20260831/sites-cohomology-late-inspection.json",
         "bytes": 13639,
