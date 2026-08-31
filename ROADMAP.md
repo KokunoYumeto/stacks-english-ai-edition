@@ -58,7 +58,7 @@ Zenodo version DOI is
 [`10.5281/zenodo.22182175`](https://doi.org/10.5281/zenodo.22182175) under
 concept DOI `10.5281/zenodo.22135180`. The current package preserves 28 PDFs,
 2,730 pages, and 29,277,302 PDF bytes. The
-[R33 release receipt](../validation/stacks-errata-a04446e-r33-release-2026-08-30.json)
+[R33 release receipt](validation/stacks-errata-a04446e-r33-release-2026-08-30.json)
 binds the transaction and readback.
 
 R28 remains published as the preceding historical release at tag
