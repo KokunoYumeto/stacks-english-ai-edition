@@ -292,7 +292,13 @@ def download_file(url: str, family: str, directory: Path, sequence: int) -> Path
     target = directory / f"download-{sequence:06d}.bin"
     hasher = hashlib.sha256()  # stream once here; identity performs an independent pass
     total = 0
-    with public_request(url, family, accept="application/octet-stream") as response:
+    # Zenodo's content endpoint rejects an explicit ``application/octet-stream``
+    # Accept header with HTTP 406, even though it returns octet-stream when the
+    # client sends a wildcard (or no) media preference.  GitHub accepts the
+    # explicit header, so keep the transport family-specific and fail closed on
+    # the response status/content-length checks below.
+    download_accept = "*/*" if family == "zenodo" else "application/octet-stream"
+    with public_request(url, family, accept=download_accept) as response:
         require(response.status == 200, f"unexpected {family} download status")
         content_length = response.headers.get("Content-Length")
         with target.open("wb") as output:
@@ -363,7 +369,8 @@ def require_identity_match(
 
 
 def github_url(repository: str, suffix: str) -> str:
-    return f"https://api.github.com/repos/{repository}/{suffix}"
+    base = f"https://api.github.com/repos/{repository}"
+    return base if suffix == "" else f"{base}/{suffix}"
 
 
 def verify_github(
