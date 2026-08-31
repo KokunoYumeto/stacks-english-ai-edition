@@ -318,6 +318,81 @@ def validate_links(errors: list[str]) -> None:
                 errors.append(f"broken link in {relative}: {raw_target}")
 
 
+def validate_semantic_replacement_dispositions(
+    missing_operations: list[dict], projection_report: dict, composition_state: dict
+) -> None:
+    """Discharge absent literals only through the composer's exact rewrite proof."""
+    if not missing_operations:
+        return
+    import compose_overlay_projection as composer
+
+    base = composition_state.get("base_commit")
+    if (
+        not isinstance(base, str)
+        or not SHA1_RE.fullmatch(base)
+        or projection_report.get("status") != "PASS"
+        or projection_report.get("base_revision") != base
+        or projection_report.get("check_revision") != composition_state.get("source_commit")
+        or projection_report.get("write_requested") is not False
+    ):
+        raise ValueError("missing literal replacements lack an exact passing projection")
+    dispositions, digest = composer.load_semantic_dispositions(base)
+    binding = projection_report.get("semantic_dispositions")
+    expected_path = composer.SEMANTIC_DISPOSITIONS_PATH.relative_to(ROOT).as_posix()
+    if (
+        digest is None
+        or not isinstance(binding, dict)
+        or binding.get("path") != expected_path
+        or binding.get("sha256") != digest
+    ):
+        raise ValueError("semantic disposition file is absent or projection hash differs")
+    reported_ids = binding.get("consumed_operation_ids")
+    if (
+        not isinstance(reported_ids, list)
+        or not all(isinstance(value, str) for value in reported_ids)
+        or reported_ids != sorted(set(reported_ids))
+    ):
+        raise ValueError("invalid projection semantic-disposition consumption inventory")
+    report_sources = projection_report.get("sources")
+    if not isinstance(report_sources, dict):
+        raise ValueError("semantic disposition lacks projected source identities")
+    consumed: list[str] = []
+    for operation in missing_operations:
+        operation_id = operation["operation_id"]
+        source = operation["source"]
+        disposition = dispositions.get(operation_id)
+        if disposition is None:
+            raise ValueError(f"missing composed replacement {operation_id} in {source}")
+        composer.validate_semantic_disposition(
+            operation,
+            disposition,
+            composer.git_blob(composer.OFFICIAL_BASELINE, source),
+            composer.git_blob(base, source),
+            base,
+        )
+        projected = report_sources.get(source)
+        if not isinstance(projected, dict) or (
+            projected.get("matches_target_after") is not True
+            or projected.get("written") is not False
+            or not isinstance(projected.get("semantic_disposition_operation_ids"), list)
+            or projected["semantic_disposition_operation_ids"].count(operation_id) != 1
+        ):
+            raise ValueError(f"semantic disposition was not applied exactly once: {operation_id}")
+        current = composer.git_blob("HEAD", source)
+        current_blob = composer.git_blob_id(current)
+        if (
+            len(current) != projected.get("composed_bytes")
+            or composer.sha256(current) != projected.get("composed_sha256")
+            or current_blob != projected.get("composed_git_blob")
+            or composer.filtered_git_blob_id((ROOT / source).read_bytes(), source) != current_blob
+            or current.count(operation["old_text"].encode("utf-8")) != 0
+            or current.count(disposition["evidence"]["text"].encode("utf-8")) != 1
+        ):
+            raise ValueError(f"semantic disposition final source drift: {operation_id}")
+        consumed.append(operation_id)
+    composer.verify_semantic_disposition_consumption(set(reported_ids), consumed)
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -1128,6 +1203,7 @@ def main(argv: list[str] | None = None) -> int:
     proposed_local_labels: set[str] = set()
     illusie_local_labels: set[str] = set()
     superseded_operation_ids: set[str] = set()
+    missing_literal_operations: list[dict] = []
     for registry_entry in entries:
         if not isinstance(registry_entry, dict) or not isinstance(
             registry_entry.get("id"), str
@@ -1359,9 +1435,14 @@ def main(argv: list[str] | None = None) -> int:
                     operation["operation_id"] not in superseded_operation_ids
                     and replacement not in source_text
                 ):
-                    errors.append(
-                        f"missing composed replacement {operation['operation_id']} "
-                        f"in {row['source']}"
+                    round_match = re.fullmatch(r"stacks-errata-a04446e-r([1-9][0-9]*)", overlay_id)
+                    missing_literal_operations.append(
+                        {
+                            **operation,
+                            "source": row["source"],
+                            "stable_id": row["unit_id"],
+                            "round": int(round_match.group(1)) if round_match else None,
+                        }
                     )
         overlay_operation_counts[overlay_id] = overlay_operations
 
@@ -1787,6 +1868,7 @@ def main(argv: list[str] | None = None) -> int:
         if isinstance(composed_blob, str) and source_blob != composed_blob.lower():
             errors.append(f"composition source blob mismatch for {relative}")
 
+    projection_report: dict = {}
     projection_verifier = composition.get("projection_verifier")
     if (
         not isinstance(projection_verifier, dict)
@@ -2022,6 +2104,13 @@ def main(argv: list[str] | None = None) -> int:
                             errors.append(
                                 f"baseline-aware composer unexpectedly wrote {relative}"
                             )
+
+    try:
+        validate_semantic_replacement_dispositions(
+            missing_literal_operations, projection_report, composition_state
+        )
+    except (ValueError, RuntimeError, KeyError, TypeError, OSError) as exc:
+        errors.append(f"composed replacement disposition failed: {exc}")
 
     if any(stem not in required_build_stems for stem in affected_stems):
         errors.append("required build stems omit an affected source")
