@@ -16,6 +16,13 @@ from urllib.parse import unquote
 
 
 ROOT = Path(__file__).resolve().parents[1]
+# Both names identify repository 1332406685; historical receipts stay immutable.
+REPOSITORY_ALIASES = frozenset(
+    {
+        "KokunoYumeto/unofficial-stacks-project-ai-drafts",
+        "KokunoYumeto/unofficial-ai-integrated-stacks-project",
+    }
+)
 UPSTREAM = "a04446e57ec1fbc252a871afcec7752fb2807b14"
 SOURCE_UNION = "ad58625f60e6816905ff217d21d91b07b2722fcf"
 EGA_EXPORT = "91df7f1c96bd4973264c29b0e121253a05d1d361"
@@ -2624,7 +2631,7 @@ def main(argv: list[str] | None = None) -> int:
         if not isinstance(release_state, dict):
             errors.append("current release receipt lacks release state")
             release_state = {}
-        if release_state.get("repository") != "KokunoYumeto/unofficial-ai-integrated-stacks-project":
+        if release_state.get("repository") not in REPOSITORY_ALIASES:
             errors.append("current release receipt names the wrong repository")
         if release_state.get("default_branch") != "main":
             errors.append("current release receipt names the wrong default branch")

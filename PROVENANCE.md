@@ -12,6 +12,16 @@ The upstream source and this modified source retain the GNU Free Documentation
 License 1.2 recorded in [COPYING](COPYING). Nothing in this repository implies
 upstream review or endorsement.
 
+## Current project identity
+
+The public repository is now
+[Unofficial Stacks Project AI Drafts](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts).
+It was renamed from `unofficial-ai-integrated-stacks-project` on 2026-08-31;
+the GitHub repository identity, commit history, releases, and issues are
+unchanged. Historical receipts retain the name that was true when they were
+written. The draft framing describes the intended use of the work, not a
+change to its mathematical source or its upstream attribution.
+
 ## Pre-unification repositories
 
 Two public repositories previously split the work by workflow rather than by
@@ -19,13 +29,19 @@ mathematical product:
 
 | Repository | Pre-unification role | Captured refs |
 | --- | --- | --- |
-| [`KokunoYumeto/stacks-project`](https://github.com/KokunoYumeto/stacks-project) | Full Stacks source plus FAC, GAGA, and FGA source branches, the Tôhoku mapping dossier, and the EGA partial-integration scaffold | `master` plus five `codex/*` integration branches |
+| `KokunoYumeto/stacks-project` (deleted after preservation) | Full Stacks source plus FAC, GAGA, and FGA source branches, the Tôhoku mapping dossier, and the EGA partial-integration scaffold | `master` plus five `codex/*` integration branches, retained under `history/source/*` here |
 | [`KokunoYumeto/unofficial-ai-integrated-stacks-project`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project) | Errata candidates, overlay registry, schemas, and replay evidence | `main` and `codex/stacks-cjk-canon` |
 
 The split is now resolved in favor of one integrated public edition.
-The former `stacks-project` fork is retained publicly as a read-only archive;
-its six branch heads were verified unchanged after archival. Active integrated
-development and publication now use this repository's protected `main` branch.
+The former `stacks-project` fork was initially retained as a provenance
+fallback. At the user's explicit request it was deleted on 2026-08-31, after
+all six current branch heads were matched to this repository's preserved
+`history/source/*` branches and the full-history bundle below. Its sole
+discussion was transferred here as [issue #3](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/issues/3),
+with the issue body and all ten comments verified unchanged. Active integrated
+development and publication use this repository's protected `main` branch.
+The [identity-transition receipt](validation/repository-identity-transition-2026-08-31.json)
+records the preserved references, deletion check, and repository rename.
 
 ## Frozen full-history copies
 

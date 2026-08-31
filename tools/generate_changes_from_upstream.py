@@ -30,7 +30,7 @@ from urllib.parse import quote
 
 OFFICIAL_REPOSITORY = "https://github.com/stacks/stacks-project"
 INTEGRATED_REPOSITORY = (
-    "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project"
+    "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts"
 )
 REGISTRY_REL = Path("ai-integrated/registry/overlays.json")
 MARKDOWN_REL = Path("CHANGES_FROM_UPSTREAM.md")
@@ -1067,7 +1067,7 @@ applyFilters();
 """.strip()
     return f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Changes from Upstream — Unofficial AI-Integrated Stacks Project</title><style>{css}</style></head>
+<title>Changes from Upstream — Unofficial Stacks Project AI Drafts</title><style>{css}</style></head>
 <body><main class="page"><h1>Changes from Upstream</h1>
 <p class="lede">Offline, filterable comparison of every admitted Stacks erratum. The mathematical TeX remains unmarked. Every card is generated from the admitted registry and hash-bound candidate evidence; generation fails closed on drift. The official link is pinned to <code>{model.official_commit}</code>; the integrated link opens GitHub's readable cumulative source and the bundled link opens the adjacent offline file.</p>
 <p>{html_link('../../CHANGES_FROM_UPSTREAM.md','Readable Markdown')} · {html_link('../registry/overlays.json','Admitted registry')} · {html_link(f'{OFFICIAL_REPOSITORY}/commit/{model.official_commit}','Pinned official baseline')}</p>

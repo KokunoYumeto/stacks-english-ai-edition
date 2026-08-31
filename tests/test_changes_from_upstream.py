@@ -56,11 +56,12 @@ class ChangesFromUpstreamTests(unittest.TestCase):
         self.assertIn("Integrated source", page)
         self.assertIn("Bundled source", page)
         self.assertIn(
-            "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/blob/main/",
+            "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/blob/main/",
             page,
         )
         self.assertIn("Original", page)
         self.assertIn("Replacement", page)
+        self.assertIn("Unofficial Stacks Project AI Drafts", page)
         self.assertEqual(page.count('class="change-card"'), 1030)
         self.assertIn('id="search"', page)
         self.assertIn('id="overlay"', page)

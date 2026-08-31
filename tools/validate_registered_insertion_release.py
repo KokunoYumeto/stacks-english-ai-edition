@@ -20,6 +20,12 @@ from urllib.request import Request, urlopen
 
 
 SCHEMA = "unofficial-ai-integrated-stacks-composition/v4"
+REPOSITORY = "KokunoYumeto/unofficial-stacks-project-ai-drafts"
+REPOSITORY_ID = 1332406685
+# The old name is retained only to validate immutable pre-rename receipts.
+REPOSITORY_ALIASES = frozenset(
+    {REPOSITORY, "KokunoYumeto/unofficial-ai-integrated-stacks-project"}
+)
 MODE = "registered insertion rebased through unique unchanged context"
 OVERLAY_ID = "stacks-verdier-a04446e-1-2-13-r1"
 AUTHORITY_COMMIT = "a04446e57ec1fbc252a871afcec7752fb2807b14"
@@ -1255,7 +1261,7 @@ def anonymous_public_main_head() -> str:
         [
             "git",
             "ls-remote",
-            "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project.git",
+            f"https://github.com/{REPOSITORY}.git",
             "refs/heads/main",
         ],
         stdout=subprocess.PIPE,
@@ -1279,8 +1285,7 @@ def anonymous_public_main_head() -> str:
 
 def anonymous_raw_bytes(commit: str, path: str) -> bytes:
     url = (
-        "https://raw.githubusercontent.com/"
-        "KokunoYumeto/unofficial-ai-integrated-stacks-project/"
+        f"https://raw.githubusercontent.com/{REPOSITORY}/"
         f"{commit}/{quote(path, safe='/')}"
     )
     request = Request(url, headers={"User-Agent": "stacks-release-validator/1"})
@@ -1330,7 +1335,7 @@ def validate_release(
     publication = release.get("release")
     require(
         isinstance(publication, dict)
-        and publication.get("repository") == "KokunoYumeto/unofficial-ai-integrated-stacks-project"
+        and publication.get("repository") in REPOSITORY_ALIASES
         and publication.get("default_branch") == "main",
         "Verdier release destination mismatch",
     )
@@ -1538,12 +1543,14 @@ def validate_release(
         and workflow.get("head_sha") == metadata_head
         and isinstance(workflow.get("run_id"), int)
         and workflow.get("url")
-        == f"https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/actions/runs/{workflow.get('run_id')}",
+        in {
+            f"https://github.com/{repository}/actions/runs/{workflow.get('run_id')}"
+            for repository in REPOSITORY_ALIASES
+        },
         "release workflow binding did not pass",
     )
     workflow_api = anonymous_json(
-        "https://api.github.com/repos/"
-        "KokunoYumeto/unofficial-ai-integrated-stacks-project/actions/runs/"
+        f"https://api.github.com/repos/{REPOSITORY}/actions/runs/"
         f"{workflow['run_id']}",
         "GitHub Actions run",
     )
@@ -1552,10 +1559,16 @@ def validate_release(
         and workflow_api.get("head_sha") == metadata_head
         and workflow_api.get("status") == "completed"
         and workflow_api.get("conclusion") == "success"
-        and workflow_api.get("html_url") == workflow.get("url")
+        and workflow_api.get("id") == workflow.get("run_id")
+        and workflow_api.get("html_url")
+        in {
+            f"https://github.com/{repository}/actions/runs/{workflow['run_id']}"
+            for repository in REPOSITORY_ALIASES
+        }
         and isinstance(workflow_api.get("repository"), dict)
+        and workflow_api["repository"].get("id") == REPOSITORY_ID
         and workflow_api["repository"].get("full_name")
-        == "KokunoYumeto/unofficial-ai-integrated-stacks-project",
+        in REPOSITORY_ALIASES,
         "anonymous GitHub Actions run readback does not match the release receipt",
     )
     require(

@@ -32,7 +32,14 @@ from typing import Any, Iterator, Mapping, Sequence
 
 
 TOKEN_FILE = Path.home() / "Documents" / "Obsidian notes" / "New zenodo token.md"
-PROJECT_URL = "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project"
+PROJECT_URL = "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts"
+# The repository was renamed in place; frozen packages retain the former URL.
+PROJECT_URL_ALIASES = frozenset(
+    {
+        PROJECT_URL,
+        "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project",
+    }
+)
 PACKAGE_SCHEMA = "unofficial-ai-integrated-stacks-preservation-package/v2"
 STATE_SCHEMA = "unofficial-ai-integrated-stacks-errata-zenodo-state/v1"
 RECEIPT_SCHEMA = "unofficial-ai-integrated-stacks-errata-zenodo-receipt/v1"
@@ -230,7 +237,7 @@ def parse_release_manifest(
         raise RuntimeError("RELEASE.json does not bind a passing validation state")
     source = value.get("source", {})
     if (
-        source.get("repository") != PROJECT_URL
+        source.get("repository") not in PROJECT_URL_ALIASES
         or not isinstance(source.get("commit"), str)
         or HEX40_RE.fullmatch(source["commit"]) is None
         or not isinstance(source.get("tree"), str)

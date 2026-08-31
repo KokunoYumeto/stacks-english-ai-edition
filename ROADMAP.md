@@ -1,13 +1,40 @@
 # Integration roadmap
 
 This roadmap describes the intended order of future corpus integration for the
-[Unofficial AI-Integrated Stacks Project](README.md). It is a sequence of
+[Unofficial Stacks Project AI Drafts](README.md). It is a sequence of
 bounded, evidence-gated milestones—not a claim that the listed material has
 already been integrated. Current admitted coverage is recorded in
 [Project status](STATUS.md), while detailed EGA evidence and its exact semantic
 cursor live in the [EGA integration dossier](ega/README.md). EGA is only
 partially composed into the root source; its complete English discovery and
 French diplomatic editions remain separate read-only inputs.
+
+## Tohoku source-integration gap
+
+The historical Tôhoku dossier is not evidence that all of its draft proofs
+are present in the current readable source. A direct comparison at public
+commit `6c5f549dcdec6051dfeaf0e5300faf3b80576830` found these outstanding
+integration candidates:
+
+- Theorem 2.2.2: right satellites under injective-effacement hypotheses and
+  their exactness criterion; the dossier's corresponding labels are absent
+  from current `homology.tex`.
+- Theorem 2.4.1: the proposed composite-functor spectral sequence with
+  additive first functor and left-exact second functor; current `derived.tex`
+  still assumes both functors left exact.
+- Theorem 3.7.3: the Leray spectral sequence for relative families of
+  supports; its mapped proof label is absent from current `cohomology.tex`.
+- Theorems 5.5.6 and 5.6.3: equivariant Čech comparison and the three
+  equivariant Ext spectral sequences; the mapped new-proof labels are absent
+  from current `cohomology.tex`.
+
+The next production action for this gap is to locate the exact historical
+proof sources bound by the [r71 dossier](tohoku_r71/STATUS.md), independently
+check them against the current Stacks text and original hypotheses, and
+compose only nonduplicative accepted additions through the normal build and
+publication workflow. Do not copy an entire older chapter over this branch
+or count dossier closure as source integration. This remains unfinished work;
+it does not change the separately recorded EGA source-order cursor.
 
 ## Current maintenance baseline
 

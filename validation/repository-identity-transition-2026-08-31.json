@@ -1,0 +1,103 @@
+{
+  "schema": "stacks-project-ai-drafts-repository-identity-transition/v1",
+  "status": "PASS",
+  "checked_at_utc": "2026-08-31T12:48:31.3171914Z",
+  "authority": "Explicit user requests to delete the redundant KokunoYumeto/stacks-project repository after preservation and rename the unified repository to unofficial-stacks-project-ai-drafts.",
+  "deleted_repository": {
+    "full_name": "KokunoYumeto/stacks-project",
+    "repository_id": 1323952150,
+    "deletion_confirmed_anonymous_api_status": 404,
+    "git_refs_verified_unchanged_since_preservation": true,
+    "preserved_branch_heads": [
+      {
+        "old_ref": "refs/heads/master",
+        "preserved_ref": "refs/heads/history/source/master",
+        "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14"
+      },
+      {
+        "old_ref": "refs/heads/codex/commons-overlay-ega-export",
+        "preserved_ref": "refs/heads/history/source/commons-overlay-ega-export",
+        "commit": "91df7f1c96bd4973264c29b0e121253a05d1d361"
+      },
+      {
+        "old_ref": "refs/heads/codex/ega-scaffold",
+        "preserved_ref": "refs/heads/history/source/ega-scaffold",
+        "commit": "dc37296a6ed6cc2947ee0c2c9c5d4c88195cb322"
+      },
+      {
+        "old_ref": "refs/heads/codex/fac-tohoku-gaga",
+        "preserved_ref": "refs/heads/history/source/fac-tohoku-gaga",
+        "commit": "ad58625f60e6816905ff217d21d91b07b2722fcf"
+      },
+      {
+        "old_ref": "refs/heads/codex/fga-integration",
+        "preserved_ref": "refs/heads/history/source/fga-integration",
+        "commit": "1b422a9e2d36c95f9aaeccd82877760b349d1c39"
+      },
+      {
+        "old_ref": "refs/heads/codex/unofficial-ai-integrated-stacks-project",
+        "preserved_ref": "refs/heads/history/source/unofficial-ai-integrated-stacks-project",
+        "commit": "ad58625f60e6816905ff217d21d91b07b2722fcf"
+      }
+    ],
+    "non_git_inventory_checked_before_deletion": {
+      "tags": 0,
+      "releases": 0,
+      "pull_requests": 0,
+      "milestones": 0,
+      "issues": 1,
+      "issue_comments": 10,
+      "wiki_enabled": false,
+      "pages_enabled": false,
+      "discussions_enabled": false
+    },
+    "preservation_bundle": {
+      "url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/releases/download/pre-unification-snapshots-2026-08-25/KokunoYumeto-stacks-project-2026-08-25.bundle",
+      "bytes": 241336664,
+      "sha256": "0DFA9F785757BE07D755DB315947A90ECB18DA4152666CAFEAE4ADDDB47FF74D",
+      "current_anonymous_release_metadata_digest_exact": true,
+      "prior_full_byte_readback_receipt": "validation/unification-release-2026-08-25.json",
+      "prior_receipt_sha256": "BE81FBB618743E0A051835AF7A87E6C4BC7710E8B971E0E7756AA1DD23250892",
+      "bundle_redownloaded_this_transition": false
+    },
+    "transferred_issue": {
+      "old_url": "https://github.com/KokunoYumeto/stacks-project/issues/1",
+      "new_url": "https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/issues/3",
+      "title": "[cross-branch research handoff] FGA ↔ FAC–Tôhoku–GAGA standards",
+      "issue_body_exact": true,
+      "comment_bodies_exact": 10,
+      "comment_authors_and_creation_times_exact": true,
+      "graphql_ids_changed_by_transfer": true,
+      "anonymous_comments_downloaded_after_rename": 10,
+      "issue_body_sha256": "17A57015EED771709A545AA03A7A6D6E02012EC0D050BB292B449B58B0E388EC",
+      "comment_body_sha256s": [
+        "019122E66F26BE748E9FD4730ADC370AB91195C18D56F3CED42510D94643623F",
+        "18D44EF1D4A789C56DF533FC2806F268E8DA80CD01673D05F85C7A418F757A55",
+        "C148EDDAB88476E18FED4DD8C5B25BEFB1F60BCD90B9B3A569A1059DA6FD27BF",
+        "6F052F3D580BB545C332832EBC16DDC016EBB309C352E3373B39377564D61DB5",
+        "7C5E85FF5F385C653751C3BFD9208A98B43750E28F5AADC221AA77D89F54C062",
+        "BF57640FC11E846ADE096F618B2F3ED08873C1718E33B64561F5BA19B9CC5A4E",
+        "141A3399063F5AFB9181D517C27650CA9119AC61D1F438A78C8EB5B440E4F764",
+        "0ADF5B2E22B90FE3E298DB7F160A169028570297AB5ADB2CE7883A067E2D6496",
+        "3AE8A21567D25F6321C64110E1438B705B4731BB7F658E6B2425E3867FC960F9",
+        "31C5618FAD74A7CDCC5DF7858F13C0E8DB373FC02D083249C84358A5F1027EBF"
+      ]
+    }
+  },
+  "renamed_repository": {
+    "old_full_name": "KokunoYumeto/unofficial-ai-integrated-stacks-project",
+    "full_name": "KokunoYumeto/unofficial-stacks-project-ai-drafts",
+    "project_title": "Unofficial Stacks Project AI Drafts",
+    "repository_id": 1332406685,
+    "repository_node_id": "R_kgDOT2rpnQ",
+    "identity_unchanged": true,
+    "public": true,
+    "default_branch": "main",
+    "main_unchanged_by_rename": "6c5f549dcdec6051dfeaf0e5300faf3b80576830",
+    "old_api_url_redirects_to_same_repository": true,
+    "github_pages_enabled": false,
+    "existing_zenodo_concept_doi_unchanged": "10.5281/zenodo.22135180",
+    "historical_release_and_receipt_names_preserved": true
+  },
+  "scope": "Only the redundant repository was deleted. The unified repository was renamed in place, not recreated; its history and releases remain intact. No local mathematical source was deleted."
+}

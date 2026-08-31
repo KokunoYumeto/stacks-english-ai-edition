@@ -33,11 +33,11 @@ from typing import Any, Iterable, Mapping, Sequence
 import zipfile
 
 
-PROJECT_SLUG = "unofficial-ai-integrated-stacks-project"
-PROJECT_TITLE = "Unofficial AI-Integrated Stacks Project"
+PROJECT_SLUG = "unofficial-stacks-project-ai-drafts"
+PROJECT_TITLE = "Unofficial Stacks Project AI Drafts"
 PROJECT_URL = (
     "https://github.com/KokunoYumeto/"
-    "unofficial-ai-integrated-stacks-project"
+    "unofficial-stacks-project-ai-drafts"
 )
 ZENODO_CONCEPT_DOI = "10.5281/zenodo.22135180"
 LICENSE_ID = "gfdl-1.2-only"
