@@ -1,0 +1,44 @@
+{
+  "schema": "unofficial-stacks-ai-drafts-independent-cumulative-composition/v1",
+  "status": "PASS",
+  "review_state": "performed",
+  "review_method": "Separate reviewer matched immutable authority contexts against parent bytes, applied exact operations without invoking the composer, compared complete results, reversed every edit, and inspected both non-prose cohomology arrow corrections.",
+  "public_parent_source": "d4a2a2d40bee38ae8505fcfd98fcd1a757038f3d",
+  "composition_parent": "72d10f3135c6007a38fa20a1aee4273fc4cb5693",
+  "source_commit": "1242d514b71e60b4fe11b4c867f7de660f9a3b77",
+  "registrar_cutoff": "69f14d67c3a456c3d1447e1a201bdfc3f3d87f0c",
+  "exact_r38_import": "e4978987d5bf67f09a1b7649bda6fd90fe0fb2d8",
+  "preserved_unpublished_transport_attempt": "6c63bf78da1f3a584f2347b7785438bc3caecb40",
+  "accepted_unique_operations": 77,
+  "applied_byte_edits": 76,
+  "forward_replay_complete_files_exact": true,
+  "reverse_replay_restores_parent_files": true,
+  "all_bytes_outside_edit_spans_unchanged": true,
+  "previous_public_source_additions_preserved": true,
+  "sources": [
+    {"path": "cohomology.tex", "accepted_operations": 4, "byte_edits": 3, "bytes": 539704, "sha256": "591F19389EF437DDFE05B00214064DDA31AA225D44B019A779F9F98F6EC0B4DE"},
+    {"path": "sites-cohomology.tex", "accepted_operations": 42, "byte_edits": 42, "bytes": 534441, "sha256": "DDDCD6951A94B839540D4EBB35F03A34AEDB6D30516B63A55385BA6D8F5CB98B"},
+    {"path": "more-algebra.tex", "accepted_operations": 31, "byte_edits": 31, "bytes": 1518081, "sha256": "0490028F82EFFCF08C0D790D0C8145EEB8D55DB66BFB8CF7BA29CCD27FC3FABE"}
+  ],
+  "structurally_satisfied_operation": {
+    "id": "MC-STK-ERR-1296-OP1",
+    "rewrite_commit": "a9863dcc19b7bfaf488777021896afa8d4f07ee1",
+    "rewrite_parent": "e026d983bfbfae367a86a36dff4b864f31189f88",
+    "ancestor_verified": true,
+    "source_hashes_counts_offsets_and_lines_exact": true,
+    "positive_evidence_bytes": 523,
+    "positive_evidence_sha256": "908100394D830D1EE26FC2EBAF0454E270870B4041D8CC38103BAC307A69AB0B",
+    "production_line": 3214,
+    "unique_and_unchanged": true
+  },
+  "arrow_semantics": [
+    {"id": "MC-STK-ERR-1297-OP1", "production_line": 13353, "finding": "The inserted forward arrow between double-RSheafHom terms for K2 and K3 agrees with covariance restored by two contravariances and the sequence K1 to K2 to K3."},
+    {"id": "MC-STK-ERR-1312-OP1", "production_line": 12370, "finding": "F to I induces Hom(E,F) to Hom(E,I), hence H to H-prime, agreeing with the subsequent comparison."}
+  ],
+  "restored_pdf_blobs": [
+    {"path": "ai-integrated/candidates/commons/stacks/errata/r38/builds/more-algebra.authority.pdf", "bytes": 3109314, "sha256": "FD05F362ED5B48F084CD093504CDEDBED3BD01804FA0D55E5F373697FB6317B8"},
+    {"path": "ai-integrated/candidates/commons/stacks/errata/r38/builds/more-algebra.pdf", "bytes": 3109365, "sha256": "33442E13771087CE5661321CC6B6845E5782EC28D1D3945EB8A824C91D0C58E5"}
+  ],
+  "r38_direct_manifest_references_exact": 58,
+  "scope_qualification": "This proves exact cumulative source composition and admitted transport bytes, not PDF build or visual completion. R38's stale historical regeneration-to-review pointer remains separately recorded; MC-STK-ERR-1345 is equivalent notation normalization rather than a substantive mathematical defect. Fresh cumulative build, visual QA, publication and anonymous readback are still required."
+}

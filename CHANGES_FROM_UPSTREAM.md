@@ -6,13 +6,13 @@ unmarked: this generated sidecar shows what changed while the source and PDF
 remain readable as mathematics.
 
 - Pinned official baseline: [`a04446e57ec1fbc252a871afcec7752fb2807b14`](https://github.com/stacks/stacks-project/commit/a04446e57ec1fbc252a871afcec7752fb2807b14)
-- Admitted errata batches: **33**
-- Stable correction IDs: **1,030**
-- Displayed exact change hunks: **1,234**
-- Manifest/source-map exact operations: **1,166**
+- Admitted errata batches: **38**
+- Stable correction IDs: **1,094**
+- Displayed exact change hunks: **1,311**
+- Manifest/source-map exact operations: **1,243**
 - Hash-bound reconstructed legacy hunks: **68**
-- Affected source paths: **23**
-- Registry SHA-256: `444314B02615DD4EC6EA1D2E70B17BF7723B43635F48D719CD954CDB4780D21A`
+- Affected source paths: **25**
+- Registry SHA-256: `C1A561855086A651B210537410D2767037E19926049E6AC557309B6333CEBEB4`
 
 [Open the offline filterable browser](ai-integrated/changes/index.html) · 
 [Open the admitted registry](ai-integrated/registry/overlays.json)
@@ -29758,5 +29758,1820 @@ Pinned-official lines `10425-10425`; bytes `375730:375747`.
 ````
 
 Original SHA-256 `924F6BAC9B243EE1C4FA7122856C540657AD437000E0AB56B1349246133EDA4D`; replacement SHA-256 `D51E595D76388AA9AC8D3CF4326DDDE6AAD2D857C10A4EC0DB2CD64FD818649D`.
+
+</details>
+
+## stacks-errata-a04446e-r34
+
+14 stable IDs · 14 displayed change hunks · admitted 2026-08-30T14:30:00Z.
+
+<details id="mc-stk-err-1295">
+<summary><code>MC-STK-ERR-1295 — cohomology.tex:cohomology.tex:2582 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r34`
+- Stable ID: `MC-STK-ERR-1295`; producer ID: `COHOMOLOGY-CH20-D001`
+- Bound source locator: `cohomology.tex:cohomology.tex:2582`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/cohomology.tex#L2582) · [Integrated source](cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r34/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r34/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r34/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r34/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance; this overlay changes only the independently maintained AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1295-OP1`
+
+Pinned-official lines `2582-2582`; bytes `89293:89333`.
+
+````diff
+- making (\ref{equation-choice}) commutes.
++ making (\ref{equation-choice}) commute.
+````
+
+Original SHA-256 `4A88E1952DEBE04C51DBD9B3822B9D089094BE1DE20B1B89DE4BA55DBDE6D12B`; replacement SHA-256 `05E49B16A31953FE341841D9D1C7C494253F5B8155DA932F755C93E075F6477F`.
+
+</details>
+
+<details id="mc-stk-err-1296">
+<summary><code>MC-STK-ERR-1296 — cohomology.tex:cohomology.tex:2718 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r34`
+- Stable ID: `MC-STK-ERR-1296`; producer ID: `COHOMOLOGY-CH20-D002`
+- Bound source locator: `cohomology.tex:cohomology.tex:2718`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/cohomology.tex#L2718) · [Integrated source](cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r34/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r34/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r34/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r34/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance; this overlay changes only the independently maintained AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1296-OP1`
+
+Pinned-official lines `2718-2718`; bytes `94573:94607`.
+
+````diff
+- $X$ is hausdorff and quasi-compact
++ $X$ is Hausdorff and quasi-compact
+````
+
+Original SHA-256 `1AF08F576C393FF19999E80725256FA446181A1B0300CC094A2E369933B7ECCF`; replacement SHA-256 `0884B7E24244A064367787B6DC60BEED48AA41D98D6349B5A86F480736E98B6A`.
+
+</details>
+
+<details id="mc-stk-err-1297">
+<summary><code>MC-STK-ERR-1297 — cohomology.tex:cohomology.tex:12907-12908 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r34`
+- Stable ID: `MC-STK-ERR-1297`; producer ID: `COHOMOLOGY-CH20-D003`
+- Bound source locator: `cohomology.tex:cohomology.tex:12907-12908`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/cohomology.tex#L12907-L12908) · [Integrated source](cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r34/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r34/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r34/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r34/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance; this overlay changes only the independently maintained AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1297-OP1`
+
+Pinned-official lines `12907-12908`; bytes `459757:459824`.
+
+````diff
+- R\SheafHom(R\SheafHom(K_2, L), M)
+- R\SheafHom(R\SheafHom(K_3, L), M)
++ R\SheafHom(R\SheafHom(K_2, L), M) \to
++ R\SheafHom(R\SheafHom(K_3, L), M)
+````
+
+Original SHA-256 `D7D77D63CFE5A39F77E045D23E839ED6A3467ED525FB7160C27FB1DFA0B30154`; replacement SHA-256 `D8C2D4A320CF39C22F0B46F96118D797DE27EE46A2553B673CEDF295B47D996D`.
+
+</details>
+
+<details id="mc-stk-err-1298">
+<summary><code>MC-STK-ERR-1298 — sites-cohomology.tex:sites-cohomology.tex:10957 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r34`
+- Stable ID: `MC-STK-ERR-1298`; producer ID: `SITES-COHOMOLOGY-001`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:10957`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L10957) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r34/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r34/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r34/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r34/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance; this overlay changes only the independently maintained AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1298-OP1`
+
+Pinned-official lines `10957-10957`; bytes `399909:399974`.
+
+````diff
+- Since $\text{Map}(-, A)$ is a contravariant functor, implies that
++ Since $\text{Map}(-, A)$ is a contravariant functor, it follows that
+````
+
+Original SHA-256 `AF313F9863C67A2DBC5C172AE5147994B28BEA6E71D4FB1D580FAA0CA3A1253A`; replacement SHA-256 `E73A8F81DCA668688B5D6A16B13CB96D681051C8B9E619B42C40CC3C56C3D270`.
+
+</details>
+
+<details id="mc-stk-err-1299">
+<summary><code>MC-STK-ERR-1299 — sites-cohomology.tex:sites-cohomology.tex:10967-10968 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r34`
+- Stable ID: `MC-STK-ERR-1299`; producer ID: `SITES-COHOMOLOGY-002`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:10967-10968`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L10967-L10968) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r34/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r34/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r34/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r34/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance; this overlay changes only the independently maintained AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1299-OP1`
+
+Pinned-official lines `10967-10968`; bytes `400453:400534`.
+
+````diff
+- computes the left derived functors
+- $H^n(\mathcal{C}, -)$ of $H^0(\mathcal{C}, -)$
++ computes the right derived functors
++ $H^n(\mathcal{C}, -)$ of $H^0(\mathcal{C}, -)$
+````
+
+Original SHA-256 `5F36F4658604EDAF6E856F7503E34AC34CB1394BB9AAEDC6087C7972B4B8AEDF`; replacement SHA-256 `58F25ED2210872EE7DB3E03C0046E6F6DF52389F23A69F34083B2BD48626F09A`.
+
+</details>
+
+<details id="mc-stk-err-1300">
+<summary><code>MC-STK-ERR-1300 — sites-cohomology.tex:sites-cohomology.tex:11047 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r34`
+- Stable ID: `MC-STK-ERR-1300`; producer ID: `SITES-COHOMOLOGY-003`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:11047`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L11047) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r34/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r34/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r34/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r34/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance; this overlay changes only the independently maintained AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1300-OP1`
+
+Pinned-official lines `11047-11047`; bytes `403365:403413`.
+
+````diff
+- \Hom(\prod j_{U_i!}\mathcal{O}_{U_i}, p_{U, *}A)
++ \Hom(\bigoplus j_{U_i!}\mathcal{O}_{U_i}, p_{U, *}A)
+````
+
+Original SHA-256 `86CACE52CEFE749B18A4A6862D0144304C20A4D97CA3B0CDABC38FC61021D0C4`; replacement SHA-256 `98B3D27CE5219CD4C84703C3EC3271810DAF08EFE63992B5D8AF9A6DEC9AA35F`.
+
+</details>
+
+<details id="mc-stk-err-1301">
+<summary><code>MC-STK-ERR-1301 — sites-cohomology.tex:sites-cohomology.tex:11066-11067 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r34`
+- Stable ID: `MC-STK-ERR-1301`; producer ID: `SITES-COHOMOLOGY-004`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:11066-11067`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L11066-L11067) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r34/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r34/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r34/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r34/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance; this overlay changes only the independently maintained AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1301-OP1`
+
+Pinned-official lines `11066-11067`; bytes `404249:404295`.
+
+````diff
+- constant simplicial
+- set on a singleton $\{*\}$
++ constant simplicial
++ set $\Mor_\mathcal{C}(U, U')$
+````
+
+Original SHA-256 `359CC403CDD7FC6D13DBA0092189A1D266010A78DFF0AD50A0EA2137F64BBAC3`; replacement SHA-256 `9727C65F885260012E61AA52F632AE61A5C5C9A02F113B06AD7A8F47036A79A4`.
+
+</details>
+
+<details id="mc-stk-err-1302">
+<summary><code>MC-STK-ERR-1302 — sites-cohomology.tex:sites-cohomology.tex:11149 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r34`
+- Stable ID: `MC-STK-ERR-1302`; producer ID: `SITES-COHOMOLOGY-005`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:11149`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L11149) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r34/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r34/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r34/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r34/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance; this overlay changes only the independently maintained AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1302-OP1`
+
+Pinned-official lines `11149-11149`; bytes `407288:407351`.
+
+````diff
+- H^p(M)(V) \otimes_{\mathcal{O}(V)} \mathcal{O}(U) \to H^b(M)(U)
++ H^b(M)(V) \otimes_{\mathcal{O}(V)} \mathcal{O}(U) \to H^b(M)(U)
+````
+
+Original SHA-256 `1ED80ABC83C02BF61407A8F465116C2362B84DA68B9F814F3C1CD3C644302112`; replacement SHA-256 `274EABB11504F284BCE4C482637134A61027FAA8B8393DA63B0522B32005D6C4`.
+
+</details>
+
+<details id="mc-stk-err-1303">
+<summary><code>MC-STK-ERR-1303 — sites-cohomology.tex:sites-cohomology.tex:11278 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r34`
+- Stable ID: `MC-STK-ERR-1303`; producer ID: `SITES-COHOMOLOGY-006`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:11278`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L11278) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r34/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r34/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r34/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r34/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance; this overlay changes only the independently maintained AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1303-OP1`
+
+Pinned-official lines `11278-11278`; bytes `411702:411726`.
+
+````diff
+- For ever $U$ and $i$ let
++ For every $U$ and $i$ let
+````
+
+Original SHA-256 `2D7777B75E2D279F1EFABEC123E2543B45BF965E2DA06919E2B90E1BBE5B0702`; replacement SHA-256 `7AF4AC74451F9C7FBCB3A762328C1CCF8E9D021C3026D628B9F1DAF52755A4ED`.
+
+</details>
+
+<details id="mc-stk-err-1304">
+<summary><code>MC-STK-ERR-1304 — sites-cohomology.tex:sites-cohomology.tex:11286 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r34`
+- Stable ID: `MC-STK-ERR-1304`; producer ID: `SITES-COHOMOLOGY-007`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:11286`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L11286) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r34/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r34/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r34/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r34/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance; this overlay changes only the independently maintained AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1304-OP1`
+
+Pinned-official lines `11286-11286`; bytes `412005:412028`.
+
+````diff
+- $|\Omega^i_U| \leq |K|$
++ $|\Omega^i_U| \leq \max(\kappa, |K|)$
+````
+
+Original SHA-256 `C963D9E2475A7B4447AB7D57268F1E82E0CA39026A3EE3A304E5C1BB455D1047`; replacement SHA-256 `0AFFA2D9246A01B4C96C4D51D2B8A9D003109B42C1D70AD8D1EFBDEF7A34EB27`.
+
+</details>
+
+<details id="mc-stk-err-1305">
+<summary><code>MC-STK-ERR-1305 — sites-cohomology.tex:sites-cohomology.tex:11290 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r34`
+- Stable ID: `MC-STK-ERR-1305`; producer ID: `SITES-COHOMOLOGY-008`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:11290`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L11290) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r34/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r34/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r34/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r34/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance; this overlay changes only the independently maintained AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1305-OP1`
+
+Pinned-official lines `11290-11290`; bytes `412183:412240`.
+
+````diff
+- \mathcal{S}^i(U) \cup \Omega^i_U \subset \mathcal{F}^i(U)
++ \mathcal{S}_n^i(U) \cup \Omega^i_U \subset \mathcal{F}^i(U)
+````
+
+Original SHA-256 `213B41F8038E7C4568A041D573050EE2FC91BCD48051BD30020199FBE2F7BA94`; replacement SHA-256 `D7173C10B9788AEFC62FE2B03D9CB96AFA232E2DA0781FAB8322C1C9B97E3718`.
+
+</details>
+
+<details id="mc-stk-err-1306">
+<summary><code>MC-STK-ERR-1306 — sites-cohomology.tex:sites-cohomology.tex:11447 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r34`
+- Stable ID: `MC-STK-ERR-1306`; producer ID: `SITES-COHOMOLOGY-009`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:11447`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L11447) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r34/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r34/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r34/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r34/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance; this overlay changes only the independently maintained AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1306-OP1`
+
+Pinned-official lines `11447-11447`; bytes `418404:418447`.
+
+````diff
+- with containing those subsets and such that
++ containing those subsets and such that
+````
+
+Original SHA-256 `9CB60034C7AF78643689EDDE5E3A90F85D82024F496DBE8133249CD36DAD7A3C`; replacement SHA-256 `B3002CAE9131D0025992585B861AC63CBA1B8B540916C89E72238D0CE4BA52BD`.
+
+</details>
+
+<details id="mc-stk-err-1307">
+<summary><code>MC-STK-ERR-1307 — sites-cohomology.tex:sites-cohomology.tex:11600 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r34`
+- Stable ID: `MC-STK-ERR-1307`; producer ID: `SITES-COHOMOLOGY-010`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:11600`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L11600) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r34/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r34/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r34/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r34/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance; this overlay changes only the independently maintained AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1307-OP1`
+
+Pinned-official lines `11600-11600`; bytes `424942:425007`.
+
+````diff
+- $H^i(M)(U) \to H^i(M)(V) \otimes_{\mathcal{O}(V)} \mathcal{O}(U)$
++ $H^i(M)(V) \otimes_{\mathcal{O}(V)} \mathcal{O}(U) \to H^i(M)(U)$
+````
+
+Original SHA-256 `8F2BC1431F4A3C10103DD12BAAA3456B4F946A2682D4FD8D1D6270488E0E1ADA`; replacement SHA-256 `FE68B2EBEB720236F56409690CFE2B8557DFF2D8CD8606520DADE0ED6214B692`.
+
+</details>
+
+<details id="mc-stk-err-1308">
+<summary><code>MC-STK-ERR-1308 — sites-cohomology.tex:sites-cohomology.tex:11601-11602 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r34`
+- Stable ID: `MC-STK-ERR-1308`; producer ID: `SITES-COHOMOLOGY-011`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:11601-11602`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L11601-L11602) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r34/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r34/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r34/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r34/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance; this overlay changes only the independently maintained AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1308-OP1`
+
+Pinned-official lines `11601-11602`; bytes `425017:425099`.
+
+````diff
+- R\Gamma(V, K) \otimes_{\mathcal{O}(V)}^\mathbf{L} \mathcal{O}(U)
+- \to R\Gamma(U, K)
++ R\Gamma(V, M) \otimes_{\mathcal{O}(V)}^\mathbf{L} \mathcal{O}(U)
++ \to R\Gamma(U, M)
+````
+
+Original SHA-256 `3131C8C12BB5E16EEBC9F54F4B9D67034DF75A72C4F3AF5CCDA4B6CF670B6922`; replacement SHA-256 `137EE002CF7363768F09C713075CB4AB18C695D4508F812044E2EF2FB2F6A05B`.
+
+</details>
+
+## stacks-errata-a04446e-r35
+
+3 stable IDs · 3 displayed change hunks · admitted 2026-08-30T15:30:00Z.
+
+<details id="mc-stk-err-1309">
+<summary><code>MC-STK-ERR-1309 — sites-cohomology.tex:sites-cohomology.tex:11671 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r35`
+- Stable ID: `MC-STK-ERR-1309`; producer ID: `SITES-COHOMOLOGY-012`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:11671`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L11671) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r35/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r35/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r35/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r35/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance; this overlay changes only the independently maintained AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1309-OP1`
+
+Pinned-official lines `11671-11671`; bytes `428122:428175`.
+
+````diff
+- (M^\bullet \otimes_{\mathcal{O}(U)} \mathcal{O}_U)^\#
++ (\mathcal{M}^\bullet(U) \otimes_{\mathcal{O}(U)} \mathcal{O}_U)^\#
+````
+
+Original SHA-256 `434B90BDC1C6D2ABEF1D64EC900EDED934EF3E6D9A71CDE0BDD5F183D3247E52`; replacement SHA-256 `FCF7AF39AE341D522107545D4D2C1585D077F13D9DCB5BC4FC6F736EEAF9CBCB`.
+
+</details>
+
+<details id="mc-stk-err-1310">
+<summary><code>MC-STK-ERR-1310 — sites-cohomology.tex:sites-cohomology.tex:11933 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r35`
+- Stable ID: `MC-STK-ERR-1310`; producer ID: `SITES-COHOMOLOGY-013`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:11933`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L11933) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r35/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r35/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r35/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r35/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance; this overlay changes only the independently maintained AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1310-OP1`
+
+Pinned-official lines `11933-11933`; bytes `437391:437445`.
+
+````diff
+- \SheafHom_\mathcal{O}(\mathcal{L}^{-q}, \mathcal{I}^p)
++ \SheafHom_\mathcal{O}(\mathcal{E}^{-q}, \mathcal{I}^p)
+````
+
+Original SHA-256 `9187F625371F2BFFADC6C896373D1BE41682A9C9B6B725F912A23740F3550DCB`; replacement SHA-256 `D058CAAE81340B98C4D80073DB9ED993927996A5049FCB7B5B0F51D46C2CFC09`.
+
+</details>
+
+<details id="mc-stk-err-1311">
+<summary><code>MC-STK-ERR-1311 — sites-cohomology.tex:sites-cohomology.tex:12001 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r35`
+- Stable ID: `MC-STK-ERR-1311`; producer ID: `SITES-COHOMOLOGY-028`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:12001`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L12001) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r35/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r35/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r35/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r35/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance; this overlay changes only the independently maintained AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1311-OP1`
+
+Pinned-official lines `12001-12001`; bytes `440044:440090`.
+
+````diff
+- (\mathcal{H}')^\bullet \to \mathcal{H}^\bullet
++ \mathcal{H}^\bullet \to (\mathcal{H}')^\bullet
+````
+
+Original SHA-256 `5F1C5C9573480A8BF0C5F23266BB461197D68C37A40CF9254D75A13DD73A57F1`; replacement SHA-256 `327F3AD50620CC2ECDEBC1A030CA6B04ED475C4F1F3B574192018D7220017C33`.
+
+</details>
+
+## stacks-errata-a04446e-r36
+
+1 stable IDs · 1 displayed change hunks · admitted 2026-08-30T16:20:00Z.
+
+<details id="mc-stk-err-1312">
+<summary><code>MC-STK-ERR-1312 — cohomology.tex:cohomology.tex:11924 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r36`
+- Stable ID: `MC-STK-ERR-1312`; producer ID: `CANON-COHOMOLOGY-001`
+- Bound source locator: `cohomology.tex:cohomology.tex:11924`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/cohomology.tex#L11924) · [Integrated source](cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r36/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r36/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r36/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r36/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_math_and_registry_deduplication
+- Adverse evidence: The frozen source remains authority provenance. The same semantic defect in sites-cohomology.tex was a distinct R35 unit and is not duplicated here.
+
+### Change 1: `MC-STK-ERR-1312-OP1`
+
+Pinned-official lines `11924-11924`; bytes `422290:422336`.
+
+````diff
+- (\mathcal{H}')^\bullet \to \mathcal{H}^\bullet
++ \mathcal{H}^\bullet \to (\mathcal{H}')^\bullet
+````
+
+Original SHA-256 `5F1C5C9573480A8BF0C5F23266BB461197D68C37A40CF9254D75A13DD73A57F1`; replacement SHA-256 `327F3AD50620CC2ECDEBC1A030CA6B04ED475C4F1F3B574192018D7220017C33`.
+
+</details>
+
+## stacks-errata-a04446e-r37
+
+23 stable IDs · 28 displayed change hunks · admitted 2026-08-30T17:58:40Z.
+
+<details id="mc-stk-err-1313">
+<summary><code>MC-STK-ERR-1313 — sites-cohomology.tex:sites-cohomology.tex:112 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r37`
+- Stable ID: `MC-STK-ERR-1313`; producer ID: `SITES-COHOMOLOGY-014`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:112`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L112) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r37/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r37/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r37/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r37/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_math_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance. Producer evidence and the registrar audit are both preserved; this candidate changes only the future AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1313-OP1`
+
+Pinned-official lines `112-112`; bytes `3978:4048`.
+
+````diff
+- it the {\it $i$th cohomology group of $\mathcal{F}$ on $\mathcal{C}$}.
++ is the {\it $i$th cohomology group of $\mathcal{F}$ on $\mathcal{C}$}.
+````
+
+Original SHA-256 `41295D921A32D648824CAF3B8D997DDFAD01C719DEB1FCFE93F4FD8865FC3665`; replacement SHA-256 `E50CAC3217529FEFCF1A80B3F75BE617D684F09517952FF0CCF3CB5215B0B637`.
+
+</details>
+
+<details id="mc-stk-err-1314">
+<summary><code>MC-STK-ERR-1314 — sites-cohomology.tex:sites-cohomology.tex:115 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r37`
+- Stable ID: `MC-STK-ERR-1314`; producer ID: `SITES-COHOMOLOGY-015`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:115`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L115) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r37/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r37/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r37/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r37/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_math_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance. Producer evidence and the registrar audit are both preserved; this candidate changes only the future AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1314-OP1`
+
+Pinned-official lines `115-115`; bytes `4130:4205`.
+
+````diff
+- \textit{Mod}(\mathcal{C}) \to \text{Mod}_{\Gamma(\mathcal{C}, \mathcal{O})}
++ \textit{Mod}(\mathcal{O}) \to \text{Mod}_{\Gamma(\mathcal{C}, \mathcal{O})}
+````
+
+Original SHA-256 `D3DD5F5E1E6BB66A02B0FC380BEFE9F53B785F07B2DB965A9FB266A6C38C4060`; replacement SHA-256 `D2AABA66A1DA8B3AF01710F6762710A3DDE7C898919D4D779A3B1A9BC4E020CF`.
+
+</details>
+
+<details id="mc-stk-err-1315">
+<summary><code>MC-STK-ERR-1315 — sites-cohomology.tex:sites-cohomology.tex:684 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r37`
+- Stable ID: `MC-STK-ERR-1315`; producer ID: `SITES-COHOMOLOGY-016`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:684`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L684) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r37/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r37/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r37/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r37/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_math_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance. Producer evidence and the registrar audit are both preserved; this candidate changes only the future AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1315-OP1`
+
+Pinned-official lines `684-684`; bytes `22562:22589`.
+
+````diff
+- a morphism of $\mathcal{O}$
++ a morphism of $\mathcal{C}$
+````
+
+Original SHA-256 `E809D07EC77F84965912E9BCC01616B3D81AE53D526537E78E92707964CCCCC3`; replacement SHA-256 `E37BE3AE2CC9BC5BD54EC732755CE67FEC8E58EF1B8435D4D521DCD75AC956A2`.
+
+</details>
+
+<details id="mc-stk-err-1316">
+<summary><code>MC-STK-ERR-1316 — sites-cohomology.tex:sites-cohomology.tex:990 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r37`
+- Stable ID: `MC-STK-ERR-1316`; producer ID: `SITES-COHOMOLOGY-017`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:990`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L990) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r37/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r37/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r37/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r37/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_math_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance. Producer evidence and the registrar audit are both preserved; this candidate changes only the future AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1316-OP1`
+
+Pinned-official lines `990-990`; bytes `33934:33956`.
+
+````diff
+- \times_u U_{i_{p + 1}}
++ \times_U U_{i_{p + 1}}
+````
+
+Original SHA-256 `9D92B2EA57C2B3AC8A595F3D942307E5F8B00CCE6C323C41C114ED4DB521FF1E`; replacement SHA-256 `1DF5F4F0288F0C2FC8F13F4CF5FD40CFB46E1BA46F7544C004B5E319495B5468`.
+
+</details>
+
+<details id="mc-stk-err-1317">
+<summary><code>MC-STK-ERR-1317 — sites-cohomology.tex:sites-cohomology.tex:2087 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r37`
+- Stable ID: `MC-STK-ERR-1317`; producer ID: `SITES-COHOMOLOGY-018`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:2087`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L2087) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r37/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r37/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r37/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r37/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_math_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance. Producer evidence and the registrar audit are both preserved; this candidate changes only the future AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1317-OP1`
+
+Pinned-official lines `2087-2087`; bytes `72827:72837`.
+
+````diff
+- $K \to K'$
++ $K' \to K$
+````
+
+Original SHA-256 `882191A5B13B4C8953151C4AB9DC5326804C0BC2224D55B6781AC8F6993A1136`; replacement SHA-256 `938A4E690189274BE55AD8FF2621217F957542B9402BC56EA652C5EE0C2B466F`.
+
+</details>
+
+<details id="mc-stk-err-1318">
+<summary><code>MC-STK-ERR-1318 — sites-cohomology.tex:sites-cohomology.tex:2161;sites-cohomology.tex:2164 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r37`
+- Stable ID: `MC-STK-ERR-1318`; producer ID: `SITES-COHOMOLOGY-019`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:2161;sites-cohomology.tex:2164`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L2161-L2164) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r37/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r37/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r37/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r37/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_math_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance. Producer evidence and the registrar audit are both preserved; this candidate changes only the future AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1318-OP1`
+
+Pinned-official lines `2161-2161`; bytes `75699:75716`.
+
+````diff
+- g^{-1}\mathcal{I}
++ \mathcal{F}
+````
+
+Original SHA-256 `E49A1CC7EB7FD19FB8A2982C54DB40BB4EF847B9F1C6C9C1E06DDAE864A84967`; replacement SHA-256 `D4C885095AD8338F64F1B8EA59061955426D735F97B082CD9D9ABB4A7DB3494D`.
+
+### Change 2: `MC-STK-ERR-1318-OP2`
+
+Pinned-official lines `2164-2164`; bytes `75872:75889`.
+
+````diff
+- g^{-1}\mathcal{I}
++ \mathcal{F}
+````
+
+Original SHA-256 `E49A1CC7EB7FD19FB8A2982C54DB40BB4EF847B9F1C6C9C1E06DDAE864A84967`; replacement SHA-256 `D4C885095AD8338F64F1B8EA59061955426D735F97B082CD9D9ABB4A7DB3494D`.
+
+### Change 3: `MC-STK-ERR-1318-OP3`
+
+Pinned-official lines `2164-2164`; bytes `75908:75925`.
+
+````diff
+- g^{-1}\mathcal{I}
++ \mathcal{F}
+````
+
+Original SHA-256 `E49A1CC7EB7FD19FB8A2982C54DB40BB4EF847B9F1C6C9C1E06DDAE864A84967`; replacement SHA-256 `D4C885095AD8338F64F1B8EA59061955426D735F97B082CD9D9ABB4A7DB3494D`.
+
+</details>
+
+<details id="mc-stk-err-1319">
+<summary><code>MC-STK-ERR-1319 — sites-cohomology.tex:sites-cohomology.tex:2189 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r37`
+- Stable ID: `MC-STK-ERR-1319`; producer ID: `SITES-COHOMOLOGY-020`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:2189`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L2189) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r37/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r37/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r37/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r37/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_math_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance. Producer evidence and the registrar audit are both preserved; this candidate changes only the future AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1319-OP1`
+
+Pinned-official lines `2189-2189`; bytes `76970:76978`.
+
+````diff
+- covering
++ converging
+````
+
+Original SHA-256 `F2E10140A22606A996BF1D359503DC2E5951E5953C072DE31939EFB5CA0D151F`; replacement SHA-256 `2A6F5821D96DE561385DBD71C11EE2694B2E9A225ECD998B93BF1084D8FA573E`.
+
+</details>
+
+<details id="mc-stk-err-1320">
+<summary><code>MC-STK-ERR-1320 — sites-cohomology.tex:sites-cohomology.tex:2315 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r37`
+- Stable ID: `MC-STK-ERR-1320`; producer ID: `SITES-COHOMOLOGY-021`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:2315`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L2315) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r37/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r37/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r37/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r37/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_math_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance. Producer evidence and the registrar audit are both preserved; this candidate changes only the future AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1320-OP1`
+
+Pinned-official lines `2315-2315`; bytes `81677:81700`.
+
+````diff
+- \mathcal{O}_\mathcal{X}
++ \mathcal{O}_\mathcal{C}
+````
+
+Original SHA-256 `90AAC7EE44AD0F76FE4E12B6CBFC2AFD6DC328621B2DC513A345268EE57678C1`; replacement SHA-256 `B014A2B523EA2A468DDF82FC8ED36C33FAA449D157EDB22A505DF477578ED468`.
+
+</details>
+
+<details id="mc-stk-err-1321">
+<summary><code>MC-STK-ERR-1321 — sites-cohomology.tex:sites-cohomology.tex:2361-2362 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r37`
+- Stable ID: `MC-STK-ERR-1321`; producer ID: `SITES-COHOMOLOGY-022`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:2361-2362`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L2362) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r37/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r37/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r37/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r37/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_math_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance. Producer evidence and the registrar audit are both preserved; this candidate changes only the future AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1321-OP1`
+
+Pinned-official lines `2362-2362`; bytes `83533:83541`.
+
+````diff
+- converge
++ degenerate
+````
+
+Original SHA-256 `54CAAFA49296EC47F1839E46980ED744804FB7B23264BC6801E03AF643C5FBF1`; replacement SHA-256 `3315D257AFF82B4B687E6BC27B6FA220C7B64B0B43991FA8AA6AC3296EB80BAF`.
+
+</details>
+
+<details id="mc-stk-err-1322">
+<summary><code>MC-STK-ERR-1322 — sites-cohomology.tex:sites-cohomology.tex:2420;sites-cohomology.tex:2423;sites-cohomology.tex:2424 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r37`
+- Stable ID: `MC-STK-ERR-1322`; producer ID: `SITES-COHOMOLOGY-023`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:2420;sites-cohomology.tex:2423;sites-cohomology.tex:2424`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L2420-L2424) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r37/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r37/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r37/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r37/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_math_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance. Producer evidence and the registrar audit are both preserved; this candidate changes only the future AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1322-OP1`
+
+Pinned-official lines `2420-2420`; bytes `85498:85515`.
+
+````diff
+- an representative
++ a representative
+````
+
+Original SHA-256 `A2542BE1AF04CAE844566375AAEFF2CE9FBB212B9D0D5434A7A5EA3AA565297E`; replacement SHA-256 `23D6CC658230E7C5FF4B66A8572A4F0FCADA564415DA509AACBEC9D08D00BAE1`.
+
+### Change 2: `MC-STK-ERR-1322-OP2`
+
+Pinned-official lines `2423-2423`; bytes `85646:85658`.
+
+````diff
+- It preserved
++ It preserves
+````
+
+Original SHA-256 `C6BD8635B5F9DAFAC5B741446556E9F4FA7C35AE4750261B3F1E28E724B90119`; replacement SHA-256 `42AFAC12284E44DB061AF13F5C500D8F84F23C7F8071B1F2C5AA61D8B5A56C80`.
+
+### Change 3: `MC-STK-ERR-1322-OP3`
+
+Pinned-official lines `2424-2424`; bytes `85723:85731`.
+
+````diff
+- indicate
++ denote
+````
+
+Original SHA-256 `4932C716F725DF5E480E16C36A0FB72604DBBC790A9DFFB3E28E4BAA4D541518`; replacement SHA-256 `1CF38705E1B507A44C047B0EBAB43CCD53D09E92610AE9D6279FFD4989B85793`.
+
+</details>
+
+<details id="mc-stk-err-1323">
+<summary><code>MC-STK-ERR-1323 — sites-cohomology.tex:sites-cohomology.tex:2625-2626 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r37`
+- Stable ID: `MC-STK-ERR-1323`; producer ID: `SITES-COHOMOLOGY-024`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:2625-2626`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L2625-L2626) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r37/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r37/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r37/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r37/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_math_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance. Producer evidence and the registrar audit are both preserved; this candidate changes only the future AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1323-OP1`
+
+Pinned-official lines `2625-2626`; bytes `92426:92481`.
+
+````diff
+- Lemma \ref{lemma-cech-vanish-collection}.
+- are satisfied
++ Lemma \ref{lemma-cech-vanish-collection}
++ are satisfied
+````
+
+Original SHA-256 `8914B7B4E760FF3B0C43C215172031A5D1478ECB746914AB935ADB74D755C4E8`; replacement SHA-256 `F09013BA0F8EBA25935C21966E856257CFDB49BD164172140DE2E12CB073B9CC`.
+
+</details>
+
+<details id="mc-stk-err-1324">
+<summary><code>MC-STK-ERR-1324 — sites-cohomology.tex:sites-cohomology.tex:2733 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r37`
+- Stable ID: `MC-STK-ERR-1324`; producer ID: `SITES-COHOMOLOGY-025`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:2733`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L2733) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r37/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r37/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r37/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r37/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_math_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance. Producer evidence and the registrar audit are both preserved; this candidate changes only the future AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1324-OP1`
+
+Pinned-official lines `2733-2733`; bytes `97011:97049`.
+
+````diff
+- $S_n \subset \Ob(\Sh(\mathcal{C}/K^n)$
++ $S_n \subset \Ob(\Sh(\mathcal{C}/K^n))$
+````
+
+Original SHA-256 `46D5AE993CE4BD088AEE6DE6A5DD6725B277F81A7FB40F69CCBAB3503F788A6B`; replacement SHA-256 `E8C65D33D235C01CBE6E22EA95DB9B77DE62C79ED2AC595F81B2D8BD09B6C050`.
+
+</details>
+
+<details id="mc-stk-err-1325">
+<summary><code>MC-STK-ERR-1325 — sites-cohomology.tex:sites-cohomology.tex:2749 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r37`
+- Stable ID: `MC-STK-ERR-1325`; producer ID: `SITES-COHOMOLOGY-026`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:2749`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L2749) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r37/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r37/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r37/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r37/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_math_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance. Producer evidence and the registrar audit are both preserved; this candidate changes only the future AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1325-OP1`
+
+Pinned-official lines `2749-2749`; bytes `97906:97914`.
+
+````diff
+- possibly
++ possible
+````
+
+Original SHA-256 `2EAA6C981568DA7719A9F810F5EEA3F10F3AC0B150D5C2CB2D3F2D6BDB7452EA`; replacement SHA-256 `C4773DAF2E6A2E27EA8EDA78DD9E3AB3793CBB122698D941F50DC6F74B91B72C`.
+
+</details>
+
+<details id="mc-stk-err-1326">
+<summary><code>MC-STK-ERR-1326 — sites-cohomology.tex:sites-cohomology.tex:3145 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r37`
+- Stable ID: `MC-STK-ERR-1326`; producer ID: `SITES-COHOMOLOGY-027`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:3145`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L3145) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r37/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r37/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r37/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r37/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_math_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance. Producer evidence and the registrar audit are both preserved; this candidate changes only the future AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1326-OP1`
+
+Pinned-official lines `3145-3145`; bytes `111818:111827`.
+
+````diff
+- \otimes_R
++ \otimes_\mathcal{O}
+````
+
+Original SHA-256 `10D64144AE124A95453501984D86E2727C05BE2DB0332096A01D74BD3923D430`; replacement SHA-256 `9A38B889CDBF473051150460C1E395ED3EBE4D1A8DC9F71CCBAED4C71A0E0FA0`.
+
+</details>
+
+<details id="mc-stk-err-1327">
+<summary><code>MC-STK-ERR-1327 — sites-cohomology.tex:sites-cohomology.tex:3549;sites-cohomology.tex:3579 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r37`
+- Stable ID: `MC-STK-ERR-1327`; producer ID: `SITES-COHOMOLOGY-029`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:3549;sites-cohomology.tex:3579`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L3549-L3579) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r37/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r37/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r37/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r37/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_math_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance. Producer evidence and the registrar audit are both preserved; this candidate changes only the future AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1327-OP1`
+
+Pinned-official lines `3549-3549`; bytes `126515:126520`.
+
+````diff
+- below
++ above
+````
+
+Original SHA-256 `8ADA24BF6BF3139273899FED85010BE710367BBD1F8A176F19DA97A62BC3BC65`; replacement SHA-256 `88C7F08D0BE5407E361C165B1B84FDF5AE2F8CB7F76195C8D309330BD7B61527`.
+
+### Change 2: `MC-STK-ERR-1327-OP2`
+
+Pinned-official lines `3579-3579`; bytes `127885:127890`.
+
+````diff
+- below
++ above
+````
+
+Original SHA-256 `8ADA24BF6BF3139273899FED85010BE710367BBD1F8A176F19DA97A62BC3BC65`; replacement SHA-256 `88C7F08D0BE5407E361C165B1B84FDF5AE2F8CB7F76195C8D309330BD7B61527`.
+
+</details>
+
+<details id="mc-stk-err-1328">
+<summary><code>MC-STK-ERR-1328 — sites-cohomology.tex:sites-cohomology.tex:5534 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r37`
+- Stable ID: `MC-STK-ERR-1328`; producer ID: `SITES-COHOMOLOGY-030`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:5534`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L5534) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r37/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r37/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r37/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r37/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_math_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance. Producer evidence and the registrar audit are both preserved; this candidate changes only the future AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1328-OP1`
+
+Pinned-official lines `5534-5534`; bytes `199836:199848`.
+
+````diff
+- the sections
++ of the sections
+````
+
+Original SHA-256 `D59DEB48980C24E2E1A3BA85C1D4D7E159E2B137B4E8395D5AF792AF4746E078`; replacement SHA-256 `14C879D6D7F4F4EE9B5E3E6009C5BA47CD0FBB23EFA22C6697EE84D1FC5E8DF4`.
+
+</details>
+
+<details id="mc-stk-err-1329">
+<summary><code>MC-STK-ERR-1329 — sites-cohomology.tex:sites-cohomology.tex:5555 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r37`
+- Stable ID: `MC-STK-ERR-1329`; producer ID: `SITES-COHOMOLOGY-031`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:5555`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L5555) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r37/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r37/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r37/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r37/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_math_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance. Producer evidence and the registrar audit are both preserved; this candidate changes only the future AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1329-OP1`
+
+Pinned-official lines `5555-5555`; bytes `200449:200466`.
+
+````diff
+- produce a diagram
++ to produce a diagram
+````
+
+Original SHA-256 `BB71106E2E30221297E4455EACF3C265AC70100819BCD46BC166C5A66EF9A187`; replacement SHA-256 `73A2B5E80B64F3632634C146567653E80F8E225B91DE6C388BF2F56AA2AF00FC`.
+
+</details>
+
+<details id="mc-stk-err-1330">
+<summary><code>MC-STK-ERR-1330 — sites-cohomology.tex:sites-cohomology.tex:5587 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r37`
+- Stable ID: `MC-STK-ERR-1330`; producer ID: `SITES-COHOMOLOGY-032`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:5587`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L5587) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r37/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r37/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r37/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r37/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_math_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance. Producer evidence and the registrar audit are both preserved; this candidate changes only the future AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1330-OP1`
+
+Pinned-official lines `5587-5587`; bytes `201631:201671`.
+
+````diff
+- In the situation described above. Denote
++ In the situation described above, denote
+````
+
+Original SHA-256 `E22491C23428191962E1E3D70AA872762D2F4BC999634A1480A541C6432117EC`; replacement SHA-256 `BDCE8B66FB5C34C216C5B8AFE217DAC955A1EA8DDA6FDCA3246C9D2BCC52176D`.
+
+</details>
+
+<details id="mc-stk-err-1331">
+<summary><code>MC-STK-ERR-1331 — sites-cohomology.tex:sites-cohomology.tex:5597 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r37`
+- Stable ID: `MC-STK-ERR-1331`; producer ID: `SITES-COHOMOLOGY-033`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:5597`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L5597) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r37/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r37/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r37/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r37/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_math_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance. Producer evidence and the registrar audit are both preserved; this candidate changes only the future AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1331-OP1`
+
+Pinned-official lines `5597-5597`; bytes `202094:202121`.
+
+````diff
+- H^p(U. \mathcal{H}^{m - p})
++ H^p(U, \mathcal{H}^{m - p})
+````
+
+Original SHA-256 `9AD6CCA48C63B96A4CED7F0FB65BA516F011558771951B86CE0344E4C9459510`; replacement SHA-256 `5E1B13E90F0E13FD26B1858ADAF251DD1CC927780CB3CB7850A51D3670E30469`.
+
+</details>
+
+<details id="mc-stk-err-1332">
+<summary><code>MC-STK-ERR-1332 — sites-cohomology.tex:sites-cohomology.tex:6011 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r37`
+- Stable ID: `MC-STK-ERR-1332`; producer ID: `SITES-COHOMOLOGY-034`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:6011`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L6011) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r37/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r37/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r37/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r37/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_math_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance. Producer evidence and the registrar audit are both preserved; this candidate changes only the future AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1332-OP1`
+
+Pinned-official lines `6011-6011`; bytes `216606:216626`.
+
+````diff
+- Thus a canonical map
++ Thus we obtain a canonical map
+````
+
+Original SHA-256 `B7782087EC402128415D64F560E57E33D24D3785D1EB75026728F58D13C5493C`; replacement SHA-256 `28C423E128585794FD7F7E36BCCE23401EEC55CFF23DAB95062ADD4A5AD3E1F0`.
+
+</details>
+
+<details id="mc-stk-err-1333">
+<summary><code>MC-STK-ERR-1333 — sites-cohomology.tex:sites-cohomology.tex:6626 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r37`
+- Stable ID: `MC-STK-ERR-1333`; producer ID: `SITES-COHOMOLOGY-035`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:6626`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L6626) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r37/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r37/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r37/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r37/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_math_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance. Producer evidence and the registrar audit are both preserved; this candidate changes only the future AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1333-OP1`
+
+Pinned-official lines `6626-6626`; bytes `240107:240130`.
+
+````diff
+- \epsilon^*\mathcal{F}_2
++ \epsilon^*\mathcal{F}'_2
+````
+
+Original SHA-256 `9D7C6EEFF966F5807278FFFAAA45E5DE4201BF4848E919AC7F08A97C5BF60E7D`; replacement SHA-256 `E30CE5B6C4FEC7505B5DC23CE5D6F5F61C845D78B720998E58DA28695DBD156A`.
+
+</details>
+
+<details id="mc-stk-err-1334">
+<summary><code>MC-STK-ERR-1334 — sites-cohomology.tex:sites-cohomology.tex:6750 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r37`
+- Stable ID: `MC-STK-ERR-1334`; producer ID: `SITES-COHOMOLOGY-036`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:6750`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L6750) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r37/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r37/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r37/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r37/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_math_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance. Producer evidence and the registrar audit are both preserved; this candidate changes only the future AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1334-OP1`
+
+Pinned-official lines `6750-6750`; bytes `244814:244833`.
+
+````diff
+- is a a $\tau$-sheaf
++ is a $\tau$-sheaf
+````
+
+Original SHA-256 `C306BD2D6CE76BF146667C288A5254580E59E83A372CA6D3BA1296E92ABB0D04`; replacement SHA-256 `DE3827362A7B8E7552724C5878C3CF72978CC28E036797CD8960C9BCD5C7D6C2`.
+
+</details>
+
+<details id="mc-stk-err-1335">
+<summary><code>MC-STK-ERR-1335 — sites-cohomology.tex:sites-cohomology.tex:6781 — source_defect_correction</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r37`
+- Stable ID: `MC-STK-ERR-1335`; producer ID: `SITES-COHOMOLOGY-037`
+- Bound source locator: `sites-cohomology.tex:sites-cohomology.tex:6781`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_new`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/sites-cohomology.tex#L6781) · [Integrated source](sites-cohomology.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r37/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r37/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r37/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r37/replay/independent-review.json)
+- Rationale: accepted_after_independent_exact_preimage_context_math_and_registry_deduplication
+- Adverse evidence: Frozen authority and French target remain provenance. Producer evidence and the registrar audit are both preserved; this candidate changes only the future AI-open English edition when composed downstream.
+
+### Change 1: `MC-STK-ERR-1335-OP1`
+
+Pinned-official lines `6781-6781`; bytes `245814:245844`.
+
+````diff
+- urge the reader skip the proof
++ urge the reader to skip the proof
+````
+
+Original SHA-256 `288BEDBD5852A762376A4822C985AAFF845A690194ADFAD933E3D2FD9969D47E`; replacement SHA-256 `5094085BFAAE64453798CCE8B8017AAF959F3C4C8ACECF33096D965E22AA8D90`.
+
+</details>
+
+## stacks-errata-a04446e-r38
+
+23 stable IDs · 31 displayed change hunks · admitted 2026-08-31T03:01:28Z.
+
+<details id="mc-stk-err-1336">
+<summary><code>MC-STK-ERR-1336 — more-algebra.tex:more-algebra.tex:36642 — spelling_typo</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r38`
+- Stable ID: `MC-STK-ERR-1336`; producer ID: `MORE-ALGEBRA-L-001`
+- Bound source locator: `more-algebra.tex:more-algebra.tex:36642`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_materialized_source_replay_pass`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex#L36642) · [Integrated source](more-algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r38/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r38/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r38/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r38/replay/independent-review.json)
+- Rationale: Independent authority replay confirmed exact preimages, mathematical or grammatical necessity, and no R1-R37 duplicate.
+
+### Change 1: `MC-STK-ERR-1336-OP1`
+
+Pinned-official lines `36642-36642`; bytes `1393232:1393240`.
+
+````diff
+- suboject
++ subobject
+````
+
+Original SHA-256 `0C7A7E70EBE42EE3940E859C98EC9E64F9D7ADEFD8213065CADF73537EFC68C9`; replacement SHA-256 `6828E3490B961A3E4B9793F3DFC6B29A819B855DCCF77D20E9DA43D31F7E89BC`.
+
+</details>
+
+<details id="mc-stk-err-1337">
+<summary><code>MC-STK-ERR-1337 — more-algebra.tex:more-algebra.tex:37872 — missing_localization_preposition</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r38`
+- Stable ID: `MC-STK-ERR-1337`; producer ID: `MORE-ALGEBRA-L-002`
+- Bound source locator: `more-algebra.tex:more-algebra.tex:37872`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_materialized_source_replay_pass`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex#L37872) · [Integrated source](more-algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r38/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r38/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r38/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r38/replay/independent-review.json)
+- Rationale: Independent authority replay confirmed exact preimages, mathematical or grammatical necessity, and no R1-R37 duplicate.
+
+### Change 1: `MC-STK-ERR-1337-OP1`
+
+Pinned-official lines `37872-37872`; bytes `1439464:1439489`.
+
+````diff
+- of $R$ are maximal ideals
++ of $R$ at maximal ideals
+````
+
+Original SHA-256 `9406504DC4C8179A884FDA3E4A355D5CD914655586658EE3E6F70F131676B3BE`; replacement SHA-256 `6919C33FF5D0991A6B47129D761A31E7AC0CC6AD905E85FC53D5A14E88A0E7D5`.
+
+</details>
+
+<details id="mc-stk-err-1338">
+<summary><code>MC-STK-ERR-1338 — more-algebra.tex:more-algebra.tex:37888 — extraneous_preposition</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r38`
+- Stable ID: `MC-STK-ERR-1338`; producer ID: `MORE-ALGEBRA-L-003`
+- Bound source locator: `more-algebra.tex:more-algebra.tex:37888`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_materialized_source_replay_pass`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex#L37888) · [Integrated source](more-algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r38/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r38/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r38/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r38/replay/independent-review.json)
+- Rationale: Independent authority replay confirmed exact preimages, mathematical or grammatical necessity, and no R1-R37 duplicate.
+
+### Change 1: `MC-STK-ERR-1338-OP1`
+
+Pinned-official lines `37888-37888`; bytes `1440123:1440139`.
+
+````diff
+- is of isomorphic
++ is isomorphic
+````
+
+Original SHA-256 `87F706BA0C2F9D60A7485C63AB03BEFCDFE8E06562E940DE91747694B955C200`; replacement SHA-256 `0CFA26E4EBB1E43117491D27D260ED6A677EEA5F11077FC49835A4EE1339C081`.
+
+</details>
+
+<details id="mc-stk-err-1339">
+<summary><code>MC-STK-ERR-1339 — more-algebra.tex:more-algebra.tex:37903;37905 — wrong_local_factor_index</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r38`
+- Stable ID: `MC-STK-ERR-1339`; producer ID: `MORE-ALGEBRA-L-004`
+- Bound source locator: `more-algebra.tex:more-algebra.tex:37903;37905`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_materialized_source_replay_pass`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex#L37903-L37905) · [Integrated source](more-algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r38/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r38/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r38/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r38/replay/independent-review.json)
+- Rationale: Independent authority replay confirmed exact preimages, mathematical or grammatical necessity, and no R1-R37 duplicate.
+
+### Change 1: `MC-STK-ERR-1339-OP1`
+
+Pinned-official lines `37903-37903`; bytes `1440757:1440762`.
+
+````diff
+- $R_i$
++ $R_j$
+````
+
+Original SHA-256 `F9EED5F70032A56786D4421550D124716DB90F94E7C5E38F5ABCD795A5519EA2`; replacement SHA-256 `B84D8987AB984E22A32AAC5F13EAD27190FA08DC5580D754FFAEC0931BED19C8`.
+
+### Change 2: `MC-STK-ERR-1339-OP2`
+
+Pinned-official lines `37905-37905`; bytes `1440838:1440843`.
+
+````diff
+- $R_i$
++ $R_j$
+````
+
+Original SHA-256 `F9EED5F70032A56786D4421550D124716DB90F94E7C5E38F5ABCD795A5519EA2`; replacement SHA-256 `B84D8987AB984E22A32AAC5F13EAD27190FA08DC5580D754FFAEC0931BED19C8`.
+
+</details>
+
+<details id="mc-stk-err-1340">
+<summary><code>MC-STK-ERR-1340 — more-algebra.tex:more-algebra.tex:37904 — undefined_principal_kernel_generator</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r38`
+- Stable ID: `MC-STK-ERR-1340`; producer ID: `MORE-ALGEBRA-L-005`
+- Bound source locator: `more-algebra.tex:more-algebra.tex:37904`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_materialized_source_replay_pass`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex#L37904) · [Integrated source](more-algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r38/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r38/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r38/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r38/replay/independent-review.json)
+- Rationale: Independent authority replay confirmed exact preimages, mathematical or grammatical necessity, and no R1-R37 duplicate.
+
+### Change 1: `MC-STK-ERR-1340-OP1`
+
+Pinned-official lines `37904-37904`; bytes `1440830:1440832`.
+
+````diff
+- ).
++ ). Write $R_j = R/f_jR$ for some $f_j \in R$.
+````
+
+Original SHA-256 `C4B2896A2081395E282313D6683F07C81E3339EF8B9D2B5A299EA5B626A0998F`; replacement SHA-256 `13F11ABC55F7EBD6A6B522E54D2E9754010BA50FCF9E26472477ACE144B81BD2`.
+
+</details>
+
+<details id="mc-stk-err-1341">
+<summary><code>MC-STK-ERR-1341 — more-algebra.tex:more-algebra.tex:37922 — wrong_indefinite_article</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r38`
+- Stable ID: `MC-STK-ERR-1341`; producer ID: `MORE-ALGEBRA-L-007`
+- Bound source locator: `more-algebra.tex:more-algebra.tex:37922`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_materialized_source_replay_pass`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex#L37922) · [Integrated source](more-algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r38/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r38/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r38/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r38/replay/independent-review.json)
+- Rationale: Independent authority replay confirmed exact preimages, mathematical or grammatical necessity, and no R1-R37 duplicate.
+
+### Change 1: `MC-STK-ERR-1341-OP1`
+
+Pinned-official lines `37922-37922`; bytes `1441533:1441545`.
+
+````diff
+- a elementary
++ an elementary
+````
+
+Original SHA-256 `6AA82340185630E7D255D90F9E71768905880218BE41C0B8306169FEA0F62EC6`; replacement SHA-256 `BBFD7271F1260E9F098AF1B1848A8B6239498CDA70D3B3E1FD5454E246C4D43E`.
+
+</details>
+
+<details id="mc-stk-err-1342">
+<summary><code>MC-STK-ERR-1342 — more-algebra.tex:more-algebra.tex:37974 — missing_preposition</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r38`
+- Stable ID: `MC-STK-ERR-1342`; producer ID: `MORE-ALGEBRA-L-008`
+- Bound source locator: `more-algebra.tex:more-algebra.tex:37974`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_materialized_source_replay_pass`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex#L37974) · [Integrated source](more-algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r38/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r38/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r38/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r38/replay/independent-review.json)
+- Rationale: Independent authority replay confirmed exact preimages, mathematical or grammatical necessity, and no R1-R37 duplicate.
+
+### Change 1: `MC-STK-ERR-1342-OP1`
+
+Pinned-official lines `37974-37974`; bytes `1442887:1442902`.
+
+````diff
+- that a catenary
++ that for a catenary
+````
+
+Original SHA-256 `BE16EE5E76741290A320B76C1927D0FD45D8F5BDEAC3192BCF2E54C7CB908140`; replacement SHA-256 `7D8A2595573708437573683031887100C4158F2E80C2E7B85E2E7A39A293EEAB`.
+
+</details>
+
+<details id="mc-stk-err-1343">
+<summary><code>MC-STK-ERR-1343 — more-algebra.tex:more-algebra.tex:38165;38429 — repeated_missing_localization_subscript</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r38`
+- Stable ID: `MC-STK-ERR-1343`; producer ID: `MORE-ALGEBRA-L-009`
+- Bound source locator: `more-algebra.tex:more-algebra.tex:38165;38429`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_materialized_source_replay_pass`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex#L38165-L38429) · [Integrated source](more-algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r38/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r38/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r38/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r38/replay/independent-review.json)
+- Rationale: Independent authority replay confirmed exact preimages, mathematical or grammatical necessity, and no R1-R37 duplicate.
+
+### Change 1: `MC-STK-ERR-1343-OP1`
+
+Pinned-official lines `38165-38165`; bytes `1450375:1450396`.
+
+````diff
+- $(R/fR)\mathfrak q_j$
++ $(R/fR)_{\mathfrak q_j}$
+````
+
+Original SHA-256 `DC74A769D15D6C384D328BFA1F88AB4C813BE651E24296DA55662FD8076E5F04`; replacement SHA-256 `CE16C0DF38FEDB8D4CF3AFE9415CDEE4BFF6F712909E98C119A1A34C08756C5F`.
+
+### Change 2: `MC-STK-ERR-1343-OP2`
+
+Pinned-official lines `38429-38429`; bytes `1461084:1461105`.
+
+````diff
+- $(R/fR)\mathfrak q_j$
++ $(R/fR)_{\mathfrak q_j}$
+````
+
+Original SHA-256 `DC74A769D15D6C384D328BFA1F88AB4C813BE651E24296DA55662FD8076E5F04`; replacement SHA-256 `CE16C0DF38FEDB8D4CF3AFE9415CDEE4BFF6F712909E98C119A1A34C08756C5F`.
+
+</details>
+
+<details id="mc-stk-err-1344">
+<summary><code>MC-STK-ERR-1344 — more-algebra.tex:more-algebra.tex:38167;38431 — repeated_wrong_associated_prime_terminal_index</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r38`
+- Stable ID: `MC-STK-ERR-1344`; producer ID: `MORE-ALGEBRA-L-010`
+- Bound source locator: `more-algebra.tex:more-algebra.tex:38167;38431`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_materialized_source_replay_pass`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex#L38167-L38431) · [Integrated source](more-algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r38/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r38/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r38/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r38/replay/independent-review.json)
+- Rationale: Independent authority replay confirmed exact preimages, mathematical or grammatical necessity, and no R1-R37 duplicate.
+
+### Change 1: `MC-STK-ERR-1344-OP1`
+
+Pinned-official lines `38167-38167`; bytes `1450483:1450523`.
+
+````diff
+- \mathfrak q_j$ are the associated primes
++ \mathfrak q_s$ are the associated primes
+````
+
+Original SHA-256 `89EC17FA2781573D43F5311906D8816D94696C954B35C0E641BC4F8BE6183315`; replacement SHA-256 `E0AC530DA0652FB76F50ACD1F74552ADA3CB86971B0189A1FC5EA80ADD8351CD`.
+
+### Change 2: `MC-STK-ERR-1344-OP2`
+
+Pinned-official lines `38431-38431`; bytes `1461192:1461232`.
+
+````diff
+- \mathfrak q_j$ are the associated primes
++ \mathfrak q_s$ are the associated primes
+````
+
+Original SHA-256 `89EC17FA2781573D43F5311906D8816D94696C954B35C0E641BC4F8BE6183315`; replacement SHA-256 `E0AC530DA0652FB76F50ACD1F74552ADA3CB86971B0189A1FC5EA80ADD8351CD`.
+
+</details>
+
+<details id="mc-stk-err-1345">
+<summary><code>MC-STK-ERR-1345 — more-algebra.tex:more-algebra.tex:38247 — malformed_summation_range</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r38`
+- Stable ID: `MC-STK-ERR-1345`; producer ID: `MORE-ALGEBRA-L-011`
+- Bound source locator: `more-algebra.tex:more-algebra.tex:38247`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_materialized_source_replay_pass`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex#L38247) · [Integrated source](more-algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r38/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r38/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r38/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r38/replay/independent-review.json)
+- Rationale: Independent authority replay confirmed exact preimages, mathematical or grammatical necessity, and no R1-R37 duplicate.
+
+### Change 1: `MC-STK-ERR-1345-OP1`
+
+Pinned-official lines `38247-38247`; bytes `1453839:1453862`.
+
+````diff
+- \sum_{i = 1, \ldots, r}
++ \sum_{i = 1}^r
+````
+
+Original SHA-256 `41F2D2789EC25595C420E5385D6E2A7D6BACCE7BCB1FD0987E172D87F66CB3A1`; replacement SHA-256 `B6D68B454256FD8916A477C309ADBA136923B3C4A57D0FD9DED07E94DE49A9FF`.
+
+</details>
+
+<details id="mc-stk-err-1346">
+<summary><code>MC-STK-ERR-1346 — more-algebra.tex:more-algebra.tex:38301;38309 — wrong_terminal_parameter_index</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r38`
+- Stable ID: `MC-STK-ERR-1346`; producer ID: `MORE-ALGEBRA-L-012`
+- Bound source locator: `more-algebra.tex:more-algebra.tex:38301;38309`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_materialized_source_replay_pass`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex#L38301-L38309) · [Integrated source](more-algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r38/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r38/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r38/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r38/replay/independent-review.json)
+- Rationale: Independent authority replay confirmed exact preimages, mathematical or grammatical necessity, and no R1-R37 duplicate.
+
+### Change 1: `MC-STK-ERR-1346-OP1`
+
+Pinned-official lines `38301-38301`; bytes `1456021:1456024`.
+
+````diff
+- g_n
++ g_d
+````
+
+Original SHA-256 `15E892A32E1D61EE782785B18626714D299CAB29E6FBF25D31FD470D3827B1DA`; replacement SHA-256 `7CCF548C96AD41AC23E37D6514FFFF8A4D4711DB465F4D37C4C12B9A5335EBAD`.
+
+### Change 2: `MC-STK-ERR-1346-OP2`
+
+Pinned-official lines `38309-38309`; bytes `1456322:1456325`.
+
+````diff
+- g_n
++ g_d
+````
+
+Original SHA-256 `15E892A32E1D61EE782785B18626714D299CAB29E6FBF25D31FD470D3827B1DA`; replacement SHA-256 `7CCF548C96AD41AC23E37D6514FFFF8A4D4711DB465F4D37C4C12B9A5335EBAD`.
+
+</details>
+
+<details id="mc-stk-err-1347">
+<summary><code>MC-STK-ERR-1347 — more-algebra.tex:more-algebra.tex:38314;38318;38321;38325 — incomplete_minimal_prime_product_range</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r38`
+- Stable ID: `MC-STK-ERR-1347`; producer ID: `MORE-ALGEBRA-L-014`
+- Bound source locator: `more-algebra.tex:more-algebra.tex:38314;38318;38321;38325`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_materialized_source_replay_pass`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex#L38314-L38325) · [Integrated source](more-algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r38/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r38/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r38/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r38/replay/independent-review.json)
+- Rationale: Independent authority replay confirmed exact preimages, mathematical or grammatical necessity, and no R1-R37 duplicate.
+- Adverse evidence: The original one-operation L-015 proposal is preserved as correct but incomplete; linked product bounds at lines 38321 and 38325 are required.
+
+### Change 1: `MC-STK-ERR-1347-OP1`
+
+Pinned-official lines `38314-38314`; bytes `1456527:1456541`.
+
+````diff
+- \mathfrak p_t$
++ \mathfrak p_s$
+````
+
+Original SHA-256 `45821D9A64A81A1553577B71A885542D1591C9EF3C640D3545A8FDCFB3328703`; replacement SHA-256 `A34BEBB5D9FB36BA4B47A50FB76755189FF6174012B4E713B19704299E95A860`.
+
+### Change 2: `MC-STK-ERR-1347-OP2`
+
+Pinned-official lines `38318-38318`; bytes `1456610:1456620`.
+
+````diff
+- _{i = 1}^t
++ _{i = 1}^s
+````
+
+Original SHA-256 `2F3653C83756E1B1C56B50FCF65B8DE753A5055E479C97B2AC04C2B8FA07D74F`; replacement SHA-256 `F3D0311B70FA68016FE36F869762503F42C242EECE3ED2C0D15F2B39D84C4C07`.
+
+### Change 3: `MC-STK-ERR-1347-OP3`
+
+Pinned-official lines `38321-38321`; bytes `1456711:1456721`.
+
+````diff
+- _{i = 1}^t
++ _{i = 1}^s
+````
+
+Original SHA-256 `2F3653C83756E1B1C56B50FCF65B8DE753A5055E479C97B2AC04C2B8FA07D74F`; replacement SHA-256 `F3D0311B70FA68016FE36F869762503F42C242EECE3ED2C0D15F2B39D84C4C07`.
+
+### Change 4: `MC-STK-ERR-1347-OP4`
+
+Pinned-official lines `38325-38325`; bytes `1456847:1456855`.
+
+````diff
+- _{i=1}^t
++ _{i=1}^s
+````
+
+Original SHA-256 `049DE9A28B9A444F38499B9015727D26AFE4BD5EA0CC629243385140FFF41919`; replacement SHA-256 `8159CA8AA54D10B9BE9CA0C40EED1143904FD5847241FB786F8DF42B732E7146`.
+
+</details>
+
+<details id="mc-stk-err-1348">
+<summary><code>MC-STK-ERR-1348 — more-algebra.tex:more-algebra.tex:38367 — undefined_parameter_ideal_symbol</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r38`
+- Stable ID: `MC-STK-ERR-1348`; producer ID: `MORE-ALGEBRA-L-016`
+- Bound source locator: `more-algebra.tex:more-algebra.tex:38367`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_materialized_source_replay_pass`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex#L38367) · [Integrated source](more-algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r38/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r38/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r38/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r38/replay/independent-review.json)
+- Rationale: Independent authority replay confirmed exact preimages, mathematical or grammatical necessity, and no R1-R37 duplicate.
+
+### Change 1: `MC-STK-ERR-1348-OP1`
+
+Pinned-official lines `38367-38367`; bytes `1458765:1458771`.
+
+````diff
+- (f, g)
++ (f, g_1, \ldots, g_{d - 1})
+````
+
+Original SHA-256 `559555FCED7A69002CEB139EE514543732B88520D40384558B247492AAE98F1C`; replacement SHA-256 `9A3EF6B86ECEDA62BC95BCC80D9B17A66742DF8718D76DA58674EA08CA865020`.
+
+</details>
+
+<details id="mc-stk-err-1349">
+<summary><code>MC-STK-ERR-1349 — more-algebra.tex:more-algebra.tex:38437 — wrong_initial_parameter_index</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r38`
+- Stable ID: `MC-STK-ERR-1349`; producer ID: `MORE-ALGEBRA-L-019`
+- Bound source locator: `more-algebra.tex:more-algebra.tex:38437`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_materialized_source_replay_pass`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex#L38437) · [Integrated source](more-algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r38/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r38/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r38/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r38/replay/independent-review.json)
+- Rationale: Independent authority replay confirmed exact preimages, mathematical or grammatical necessity, and no R1-R37 duplicate.
+
+### Change 1: `MC-STK-ERR-1349-OP1`
+
+Pinned-official lines `38437-38437`; bytes `1461410:1461415`.
+
+````diff
+- $g_2,
++ $g_1,
+````
+
+Original SHA-256 `1708FC79F932B008C42320B6430BE6E24824DF917EBB1062A9B07EF2A6B5C0E8`; replacement SHA-256 `E4A0A0D4F6860891BD54141E4D7D6678BFF2F84A52F81D93137F3BFEF4726655`.
+
+</details>
+
+<details id="mc-stk-err-1350">
+<summary><code>MC-STK-ERR-1350 — more-algebra.tex:more-algebra.tex:38448 — wrong_quotient_dimension</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r38`
+- Stable ID: `MC-STK-ERR-1350`; producer ID: `MORE-ALGEBRA-L-020`
+- Bound source locator: `more-algebra.tex:more-algebra.tex:38448`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_materialized_source_replay_pass`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex#L38448) · [Integrated source](more-algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r38/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r38/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r38/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r38/replay/independent-review.json)
+- Rationale: Independent authority replay confirmed exact preimages, mathematical or grammatical necessity, and no R1-R37 duplicate.
+
+### Change 1: `MC-STK-ERR-1350-OP1`
+
+Pinned-official lines `38448-38448`; bytes `1462023:1462027`.
+
+````diff
+- = d$
++ = d - 1$
+````
+
+Original SHA-256 `F4A7F5212523D6AA3F007AB90F9E11C66A7C1C9D6F82E3C1C8511416420018FB`; replacement SHA-256 `617C7DAEC7850AE48814193E4E5555486EAC80BB256D45C7965A1B755EBBF8FB`.
+
+</details>
+
+<details id="mc-stk-err-1351">
+<summary><code>MC-STK-ERR-1351 — more-algebra.tex:more-algebra.tex:38491;38496 — repeated_missing_fraktur_prime_notation</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r38`
+- Stable ID: `MC-STK-ERR-1351`; producer ID: `MORE-ALGEBRA-L-021`
+- Bound source locator: `more-algebra.tex:more-algebra.tex:38491;38496`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_materialized_source_replay_pass`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex#L38491-L38496) · [Integrated source](more-algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r38/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r38/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r38/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r38/replay/independent-review.json)
+- Rationale: Independent authority replay confirmed exact preimages, mathematical or grammatical necessity, and no R1-R37 duplicate.
+
+### Change 1: `MC-STK-ERR-1351-OP1`
+
+Pinned-official lines `38491-38491`; bytes `1463810:1463819`.
+
+````diff
+- \cap q_s$
++ \cap \mathfrak q_s$
+````
+
+Original SHA-256 `9AB618DAA947762F01FE9D79FD2F12E36D3773C70A5C65480BD02E687F585944`; replacement SHA-256 `57AEA3E5CCE76F373ACF077485B781AA8FD013F506D72D72BA5C28632AE67126`.
+
+### Change 2: `MC-STK-ERR-1351-OP2`
+
+Pinned-official lines `38496-38496`; bytes `1464074:1464083`.
+
+````diff
+- \cap q_s$
++ \cap \mathfrak q_s$
+````
+
+Original SHA-256 `9AB618DAA947762F01FE9D79FD2F12E36D3773C70A5C65480BD02E687F585944`; replacement SHA-256 `57AEA3E5CCE76F373ACF077485B781AA8FD013F506D72D72BA5C28632AE67126`.
+
+</details>
+
+<details id="mc-stk-err-1352">
+<summary><code>MC-STK-ERR-1352 — more-algebra.tex:more-algebra.tex:38565 — extraneous_indefinite_article</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r38`
+- Stable ID: `MC-STK-ERR-1352`; producer ID: `MORE-ALGEBRA-L-023`
+- Bound source locator: `more-algebra.tex:more-algebra.tex:38565`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_materialized_source_replay_pass`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex#L38565) · [Integrated source](more-algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r38/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r38/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r38/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r38/replay/independent-review.json)
+- Rationale: Independent authority replay confirmed exact preimages, mathematical or grammatical necessity, and no R1-R37 duplicate.
+
+### Change 1: `MC-STK-ERR-1352-OP1`
+
+Pinned-official lines `38565-38565`; bytes `1466398:1466410`.
+
+````diff
+- exists an $1
++ exists $1
+````
+
+Original SHA-256 `AAFC5C0743607343F2CCEC9A12183A1B0BECFF72FB3C3E0B4C0A46833E8102CA`; replacement SHA-256 `28F649E81DFD6B53158BCC3B1BF74F52E82C275E7ABA6642072812F6989ADAF9`.
+
+</details>
+
+<details id="mc-stk-err-1353">
+<summary><code>MC-STK-ERR-1353 — more-algebra.tex:more-algebra.tex:38605 — number_agreement</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r38`
+- Stable ID: `MC-STK-ERR-1353`; producer ID: `MORE-ALGEBRA-L-024`
+- Bound source locator: `more-algebra.tex:more-algebra.tex:38605`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_materialized_source_replay_pass`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex#L38605) · [Integrated source](more-algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r38/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r38/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r38/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r38/replay/independent-review.json)
+- Rationale: Independent authority replay confirmed exact preimages, mathematical or grammatical necessity, and no R1-R37 duplicate.
+
+### Change 1: `MC-STK-ERR-1353-OP1`
+
+Pinned-official lines `38605-38605`; bytes `1468075:1468091`.
+
+````diff
+- K-flat complexes
++ K-flat complex
+````
+
+Original SHA-256 `CE5DFA4B4C625A39178E5623C2C0ABB5BD6251FD4FEBFEA8BA1E330C0A05F0C3`; replacement SHA-256 `8F1A10B826106AE4D0FC4DA3114101BAB289435139DB40EC3774F1C072033B34`.
+
+</details>
+
+<details id="mc-stk-err-1354">
+<summary><code>MC-STK-ERR-1354 — more-algebra.tex:more-algebra.tex:38737 — missing_relative_clause_verb</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r38`
+- Stable ID: `MC-STK-ERR-1354`; producer ID: `MORE-ALGEBRA-L-025`
+- Bound source locator: `more-algebra.tex:more-algebra.tex:38737`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_materialized_source_replay_pass`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex#L38737) · [Integrated source](more-algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r38/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r38/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r38/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r38/replay/independent-review.json)
+- Rationale: Independent authority replay confirmed exact preimages, mathematical or grammatical necessity, and no R1-R37 duplicate.
+
+### Change 1: `MC-STK-ERR-1354-OP1`
+
+Pinned-official lines `38737-38737`; bytes `1473141:1473167`.
+
+````diff
+- spaces which the following
++ spaces which has the following
+````
+
+Original SHA-256 `9B40AFD008D0771B0DA941DD6143AB3E0E36942354E8A64016D7C3B85026222A`; replacement SHA-256 `D46382EE60D1B8672EE88B29EF842D19B1590E88E0FBD1D70E3B825C9E0B6518`.
+
+</details>
+
+<details id="mc-stk-err-1355">
+<summary><code>MC-STK-ERR-1355 — more-algebra.tex:more-algebra.tex:38900 — missing_list_separator</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r38`
+- Stable ID: `MC-STK-ERR-1355`; producer ID: `MORE-ALGEBRA-L-026`
+- Bound source locator: `more-algebra.tex:more-algebra.tex:38900`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_materialized_source_replay_pass`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex#L38900) · [Integrated source](more-algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r38/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r38/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r38/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r38/replay/independent-review.json)
+- Rationale: Independent authority replay confirmed exact preimages, mathematical or grammatical necessity, and no R1-R37 duplicate.
+
+### Change 1: `MC-STK-ERR-1355-OP1`
+
+Pinned-official lines `38900-38900`; bytes `1479918:1479926`.
+
+````diff
+- \ldots m
++ \ldots, m
+````
+
+Original SHA-256 `50CCCD17F876BE9AA1AA5E18EB73AF872AE669EEEBAB6C4399E1C6CBB1AC3230`; replacement SHA-256 `35A67040D4B09F04CA6CFCCAC0DC36AA17A8A4AAFA6507A5BDF11280C860941D`.
+
+</details>
+
+<details id="mc-stk-err-1356">
+<summary><code>MC-STK-ERR-1356 — more-algebra.tex:more-algebra.tex:38906 — missing_preposition</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r38`
+- Stable ID: `MC-STK-ERR-1356`; producer ID: `MORE-ALGEBRA-L-027`
+- Bound source locator: `more-algebra.tex:more-algebra.tex:38906`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_materialized_source_replay_pass`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex#L38906) · [Integrated source](more-algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r38/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r38/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r38/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r38/replay/independent-review.json)
+- Rationale: Independent authority replay confirmed exact preimages, mathematical or grammatical necessity, and no R1-R37 duplicate.
+
+### Change 1: `MC-STK-ERR-1356-OP1`
+
+Pinned-official lines `38906-38906`; bytes `1480142:1480170`.
+
+````diff
+- linear combination images of
++ linear combination of images of
+````
+
+Original SHA-256 `D0A647A9C652663345900075A09C2A1D3A287CCFFCC57BF70F054060337BBC4F`; replacement SHA-256 `CA0DAC7FF086CDEC5BEDAC9256D435F742076A27C4DB1E9803F975860EC08650`.
+
+</details>
+
+<details id="mc-stk-err-1357">
+<summary><code>MC-STK-ERR-1357 — more-algebra.tex:more-algebra.tex:39043 — wrong_ambient_module</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r38`
+- Stable ID: `MC-STK-ERR-1357`; producer ID: `MORE-ALGEBRA-L-028`
+- Bound source locator: `more-algebra.tex:more-algebra.tex:39043`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_materialized_source_replay_pass`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex#L39043) · [Integrated source](more-algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r38/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r38/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r38/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r38/replay/independent-review.json)
+- Rationale: Independent authority replay confirmed exact preimages, mathematical or grammatical necessity, and no R1-R37 duplicate.
+
+### Change 1: `MC-STK-ERR-1357-OP1`
+
+Pinned-official lines `39043-39043`; bytes `1484911:1484918`.
+
+````diff
+- of $M'$
++ of $P/JP$
+````
+
+Original SHA-256 `9E9C2C700AF912584C2E266D1D025FDB66DE33F6DF7C157BCE14CCCE8C6F2125`; replacement SHA-256 `B98B71D30EA3B9A440D24B40E7225B578C6D00F2EC54D6C26E8D55AD7C2909BC`.
+
+</details>
+
+<details id="mc-stk-err-1358">
+<summary><code>MC-STK-ERR-1358 — more-algebra.tex:more-algebra.tex:39126 — spelling_typo</code></summary>
+
+- Overlay: `stacks-errata-a04446e-r38`
+- Stable ID: `MC-STK-ERR-1358`; producer ID: `MORE-ALGEBRA-L-029`
+- Bound source locator: `more-algebra.tex:more-algebra.tex:39126`
+- Registry admission: `admitted`.
+- Historical candidate status: `accepted_materialized_source_replay_pass`; candidate review state: `performed`. This frozen field is not the current admission status.
+- Fidelity: `manifest-bound exact operation`
+- Links: [Official](https://github.com/stacks/stacks-project/blob/a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex#L39126) · [Integrated source](more-algebra.tex) · [Manifest](ai-integrated/candidates/commons/stacks/errata/r38/candidate.manifest.json) · [Source map](ai-integrated/candidates/commons/stacks/errata/r38/source-map.jsonl) · [Stable units](ai-integrated/candidates/commons/stacks/errata/r38/stable-units.json) · [Independent review](ai-integrated/candidates/commons/stacks/errata/r38/replay/independent-review.json)
+- Rationale: Independent authority replay confirmed exact preimages, mathematical or grammatical necessity, and no R1-R37 duplicate.
+
+### Change 1: `MC-STK-ERR-1358-OP1`
+
+Pinned-official lines `39126-39126`; bytes `1488496:1488505`.
+
+````diff
+- surjectve
++ surjective
+````
+
+Original SHA-256 `D5CD4104BD93E7482C9A365C2F4D3ACCCF63DBEA7599DC7C70052DFA8D5A1DA0`; replacement SHA-256 `630561153C51164874A69CFD5DF11CCFC84B492FE441F766D64BFFFB0C6171AD`.
 
 </details>
