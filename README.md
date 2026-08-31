@@ -4,10 +4,17 @@
 
 ## Why this project exists
 
-We think AI is capable of contributing useful mathematics. This project is a
-practical test of that belief: cooperating AI agents read historical sources,
-compare them with the Stacks Project, and write draft statements and proofs
-in Stacks-style LaTeX.
+This repository is a collection of unofficial, AI-written drafts for possible
+later human use. It is not a campaign for the Stacks Project to accept AI
+contributions, and it is not a claim that these drafts are ready to become
+part of the canonical Stacks Project.
+
+The practical idea is modest: editable LaTeX editions of important
+French-school sources make it possible to compare those works with the Stacks
+Project, identify material that may still be useful, and prepare draft
+statements and proofs in Stacks-style LaTeX. The drafts are left here so that
+Stacks contributors—or other mathematicians—can inspect, correct, reuse, or
+mine them if and when someone with the relevant expertise has time to do so.
 
 The inputs include editable LaTeX editions of major French-school works:
 
@@ -22,13 +29,13 @@ These are independently maintained transcriptions or editions, not original
 author-produced LaTeX. The integration records pin the particular source
 versions used; the linked editions may continue to develop.
 
-The intended output is material that Stacks contributors—or any other
-mathematician—can inspect, correct, reuse, or mine for ideas if they find it
-worthwhile. It is not a request that the Stacks Project adopt AI. Maintaining
-mathematics requires people who can understand, explain, repair, and extend
-the proofs; producing a plausible draft does not transfer that understanding
-to its future maintainers. That is a legitimate consideration regardless of
-what any particular maintainer thinks about AI.
+We understand why a human-maintained project may choose not to rely on
+AI-generated material. Maintaining mathematics requires people who can
+understand, explain, repair, and extend the proofs; producing a plausible
+draft does not transfer that expertise to its future maintainers. Until a
+qualified reader has checked an addition and is prepared to understand and
+maintain it, it should be treated as an external draft—not as part of the
+human-maintained Stacks corpus.
 
 > [!IMPORTANT]
 > This is an unofficial, independently maintained draft derivative of the
@@ -214,6 +221,9 @@ that a reader accept a result because an AI or an automated check produced it.
 
 - [Latest readable PDF/source package](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/releases/latest)
   · [Zenodo preservation lineage](https://doi.org/10.5281/zenodo.22135180).
+- GitHub is the incremental working record. Zenodo is reserved for substantial,
+  coherent milestones—such as a large integrated source tranche or a major
+  cumulative errata release—not individual theorems or routine weekly updates.
 - [Latest EGA review checkpoint: I §6.6.3](validation/ega-i-6.6.3-semantic-checkpoint-2026-08-30.json)
   · [archived version](https://doi.org/10.5281/zenodo.22177421).
 - [Build and validation instructions](VALIDATION.md)
