@@ -1,0 +1,34 @@
+{
+  "current_repair": {
+    "aliases": [
+      "MORE-ALGEBRA-L-030",
+      "MORE-ALGEBRA-L-031"
+    ],
+    "emendations": {
+      "bytes": 9230,
+      "path": "authority/producer/MORE_ALGEBRA_L_SOURCE_EMENDATIONS.json",
+      "sha256": "B21321A9AEF236773E290B7AA390332843BAE42284911B7928AEE0FD57EC2FE7"
+    },
+    "invariants": {
+      "bytes": 18114,
+      "path": "authority/producer/MORE_ALGEBRA_L_INVARIANTS.json",
+      "sha256": "A14BFE198A1F3CCB47615D2BFD613011F61655C12164437085756AF9A91AD2BB"
+    }
+  },
+  "incomplete_proposal": {
+    "disposition": "correct but insufficient alone; superseded by the four-operation MC-STK-ERR-1347 unit",
+    "line": 38318,
+    "new": "_{i = 1}^s",
+    "old": "_{i = 1}^t",
+    "producer_id": "MORE-ALGEBRA-L-015"
+  },
+  "original_submission": {
+    "emendations_bytes": 8459,
+    "emendations_sha256": "3979731D70953EF119F6BA50398FDF6E3B82D7FA368879A44543C0CC52EB9E89",
+    "invariants_bytes": 17245,
+    "invariants_sha256": "70E31567B3A20362757E4870CE98CF50B931C841E92342F1FE6CE6B6B7999AB1",
+    "producer_ids": "MORE-ALGEBRA-L-001..029"
+  },
+  "schema": "mathematics-commons-stacks-adverse-history/v1",
+  "status": "SUPERSEDED_INCOMPLETE_EVIDENCE"
+}

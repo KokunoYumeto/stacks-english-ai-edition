@@ -1,0 +1,121 @@
+{
+  "authority": {
+    "bytes": 1492039,
+    "path": "authority/source/more-algebra.tex",
+    "sha256": "0106554339E8966FE04411B2AE9F9CD856B165849FEEF0C7BC37634819064708"
+  },
+  "build_receipt": {
+    "bytes": 80504,
+    "path": "builds/build-receipt.json",
+    "sha256": "7D68C2A9A9A9B297C69F53DEF23F7E4E3F94223439FAA133DA06FA0DB79EBA81"
+  },
+  "candidate_id": "stacks-errata-a04446e-r38",
+  "closure": {
+    "operations": 31,
+    "original_producer_allegations": 29,
+    "registrar_additive_aliases": 2,
+    "rejections": 0,
+    "stable_id_end": "MC-STK-ERR-1358",
+    "stable_id_start": "MC-STK-ERR-1336",
+    "stable_units": 23,
+    "unresolved": 0
+  },
+  "constraints": {
+    "authority_mutated": false,
+    "generated_source_mutated": false,
+    "git_mutated": false,
+    "producer_target_mutated": false,
+    "publication_performed": false,
+    "registry_mutated": false
+  },
+  "deduplication": {
+    "legacy_change_spans_checked": 59,
+    "maximum_numeric_stable_id": "MC-STK-ERR-1335",
+    "novel": true,
+    "registered_entries": 38,
+    "registered_operations_checked": 1212,
+    "registered_units_checked": 1057,
+    "registry": {
+      "bytes": 62014,
+      "path": "registry/overlays.json",
+      "sha256": "6F65B98754C59EE91E127FCB49AFF9F524D603FBCEE8B33786C6EA7854711439"
+    },
+    "same_locus_matches": [],
+    "same_old_new_matches": [],
+    "same_producer_id_matches": [],
+    "source_map_files_checked": 36,
+    "stable_ids_checked": 1083,
+    "total_explicit_operations_and_legacy_change_spans_checked": 1271
+  },
+  "deterministic_replay": {
+    "bytes": 987,
+    "path": "builds/deterministic-replay.json",
+    "sha256": "024F8C291733011A2B51FE832B2D56F0DFE8B828EB5853C61D183FE08D2479AD"
+  },
+  "operation_spec": {
+    "bytes": 24422,
+    "path": "operation-spec.json",
+    "sha256": "FB2750FF7E1C04CAD98A9F4F329C6BE98437FBA374509A018B136F92FCC88E11"
+  },
+  "page_392_dispute_resolved": {
+    "authority_control_render": {
+      "bytes": 416386,
+      "path": "private-authority-control/more-algebra_p392.png",
+      "sha256": "2CA08D29F0351C5688E87CD589A96F2580F781728171D03870EBC6A2EF1CC270"
+    },
+    "candidate_induced_header_defect": false,
+    "candidate_render": {
+      "bytes": 416908,
+      "path": "private-render/highres/more-algebra_p392.png",
+      "sha256": "CB68E0CC2FF6A9152549C6CF660023C14AD7940BE266EB4C184A42FB7765C43B"
+    },
+    "conclusion": "False positive. The page number, centered running header, top margin, and continuation text are pixel-identical to the separately built authority control; differences begin only in lower-body reflow from admitted corrections.",
+    "dimensions_pixels": [
+      1530,
+      1980
+    ],
+    "initial_observation": "One inspector reported a possible header-band collision.",
+    "pixel_difference_bbox": [
+      317,
+      1091,
+      1213,
+      1718
+    ],
+    "pixels_identical_from_y_0_through": 1090
+  },
+  "passed": true,
+  "payload": {
+    "bytes": 1492132,
+    "path": "payload/more-algebra.tex",
+    "sha256": "B4D8BF24D64BF7D5A50E4BC0791D02DDC19849F34A24FB4857CED6CB143DD196"
+  },
+  "pre_review_manifest": {
+    "bytes": 11336,
+    "path": "candidate.manifest.json",
+    "sha256": "51FEB5C8164664CEDAFB6D62FD6046BA8427837A28F1E308B4C7CB0E0385AAD4"
+  },
+  "private_render_manifest": {
+    "bytes": 86949,
+    "logical_path": "canon/private_evidence/errata-r38-20260831T021500Z/render/render-manifest.json",
+    "published": false,
+    "sha256": "8DE361859532144DD74AEB09F8464C1AD5A7FF17D207BB1B4AFA8346390F1999"
+  },
+  "result": "PASS",
+  "reviewed_at_utc": "2026-08-31T02:15:00Z",
+  "schema": "mathematics-commons-stacks-independent-review/v1",
+  "source_validation": {
+    "bytes": 2151,
+    "path": "source-validation.json",
+    "sha256": "E0D8285926E661AB99ABF77B3AD17D28E048ED73309DF5F64487D1454AA96E31"
+  },
+  "visual_inspection_adjudication": {
+    "bytes": 2998,
+    "path": "replay/VISUAL_INSPECTION_ADJUDICATION.json",
+    "sha256": "0DCC4A703D9605E9A415DFD042234076F34A4F84A9363B6EC690F802BB2BADA9"
+  },
+  "visual_qa": {
+    "bytes": 17796,
+    "path": "builds/visual-qa.json",
+    "sha256": "AEB16CF585476D6B7381E0FB6DB45D40D1E7F7D2FE4ADB097763275ED9821CB7"
+  }
+}

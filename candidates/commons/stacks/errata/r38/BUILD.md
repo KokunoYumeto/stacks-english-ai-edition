@@ -1,0 +1,3 @@
+# R38 build and replay
+
+Run `python pipeline_r38.py materialize` to reproduce the source-level closure. Then use the bound R23-derived helpers in two distinct fresh roots: `python replay-build.py --upstream-root FROZEN_TREE --work-root NEW_ROOT --private-evidence-root PRIVATE_ROOT`; repeat with a second fresh root, run `deterministic-replay.py`, `build-receipt.py`, derive SyncTeX page mappings, render every page, inspect every contact sheet and correction-sensitive page, run `visual-qa.py`, then finalize the independent replay and schema-conformant manifest. Candidate and authority use pdflatex, bibtex, pdflatex, pdflatex.

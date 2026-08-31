@@ -1,0 +1,259 @@
+{
+  "schema": "stacks-fr-source-emendations-v1",
+  "authority_sha256": "0106554339E8966FE04411B2AE9F9CD856B165849FEEF0C7BC37634819064708",
+  "lease": {
+    "id": "MORE_ALGEBRA_L",
+    "source_start": 36627,
+    "source_end": 39222
+  },
+  "emendations": [
+    {
+      "id": "MORE-ALGEBRA-L-001",
+      "line": 36642,
+      "old": "suboject",
+      "new": "subobject",
+      "rationale": "The word is an evident typographical error in a sentence defining the Fitting ideal of a subobject.",
+      "status": "accepted-local-emendation"
+    },
+    {
+      "id": "MORE-ALGEBRA-L-002",
+      "line": 37872,
+      "old": "of $R$ are maximal ideals",
+      "new": "of $R$ at maximal ideals",
+      "rationale": "The cited lemma states that localizations at maximal ideals are valuation rings.",
+      "status": "accepted-local-emendation"
+    },
+    {
+      "id": "MORE-ALGEBRA-L-003",
+      "line": 37888,
+      "old": "is of isomorphic",
+      "new": "is isomorphic",
+      "rationale": "The extra preposition makes the sentence ungrammatical.",
+      "status": "accepted-local-emendation"
+    },
+    {
+      "id": "MORE-ALGEBRA-L-004",
+      "line": 37903,
+      "old": "$R_i$",
+      "new": "$R_j$",
+      "rationale": "The product factors were introduced as R_j on the preceding line.",
+      "status": "accepted-local-emendation"
+    },
+    {
+      "id": "MORE-ALGEBRA-L-005",
+      "line": 37904,
+      "old": ").",
+      "new": "). Write $R_j = R/f_jR$ for some $f_j \\in R$.",
+      "rationale": "The proof uses f_j at line 37913 without defining it; each projection R to the local factor R_j has a principal kernel.",
+      "status": "accepted-local-emendation"
+    },
+    {
+      "id": "MORE-ALGEBRA-L-006",
+      "line": 37905,
+      "old": "$R_i$",
+      "new": "$R_j$",
+      "rationale": "The local factor under discussion is R_j, consistently with the decomposition and the subsequent M_j notation.",
+      "status": "accepted-local-emendation"
+    },
+    {
+      "id": "MORE-ALGEBRA-L-007",
+      "line": 37922,
+      "old": "a elementary",
+      "new": "an elementary",
+      "rationale": "The indefinite article is grammatically incorrect before a vowel sound.",
+      "status": "accepted-local-emendation"
+    },
+    {
+      "id": "MORE-ALGEBRA-L-008",
+      "line": 37974,
+      "old": "that a catenary",
+      "new": "that for a catenary",
+      "rationale": "The opening sentence is missing the preposition introducing the class of rings for which existence is asserted.",
+      "status": "accepted-local-emendation"
+    },
+    {
+      "id": "MORE-ALGEBRA-L-009",
+      "line": 38165,
+      "old": "$(R/fR)\\mathfrak q_j$",
+      "new": "$(R/fR)_{\\mathfrak q_j}$",
+      "rationale": "The proof localizes R/fR at the associated prime q_j; the missing subscript changes the expression.",
+      "status": "accepted-local-emendation"
+    },
+    {
+      "id": "MORE-ALGEBRA-L-010",
+      "line": 38167,
+      "old": "\\mathfrak q_j$ are the associated primes",
+      "new": "\\mathfrak q_s$ are the associated primes",
+      "rationale": "The full list was introduced as q_1 through q_s; q_j is merely the running index.",
+      "status": "accepted-local-emendation"
+    },
+    {
+      "id": "MORE-ALGEBRA-L-011",
+      "line": 38247,
+      "old": "\\sum_{i = 1, \\ldots, r}",
+      "new": "\\sum_{i = 1}^r",
+      "rationale": "The summation subscript is malformed; the divisor is the sum over i from 1 through r.",
+      "status": "accepted-local-emendation"
+    },
+    {
+      "id": "MORE-ALGEBRA-L-012",
+      "line": 38301,
+      "old": "g_n",
+      "new": "g_d",
+      "rationale": "The system of parameters was declared as g_1 through g_d; n is not defined in this lemma.",
+      "status": "accepted-local-emendation"
+    },
+    {
+      "id": "MORE-ALGEBRA-L-013",
+      "line": 38309,
+      "old": "g_n",
+      "new": "g_d",
+      "rationale": "The parameter ideal must use all declared parameters g_1 through g_d.",
+      "status": "accepted-local-emendation"
+    },
+    {
+      "id": "MORE-ALGEBRA-L-014",
+      "line": 38314,
+      "old": "\\mathfrak p_t$",
+      "new": "\\mathfrak p_s$",
+      "rationale": "A reduced ring injects into the product over all of its minimal primes, not only the t top-dimensional ones.",
+      "status": "accepted-local-emendation"
+    },
+    {
+      "id": "MORE-ALGEBRA-L-015",
+      "line": 38318,
+      "old": "_{i = 1}^t",
+      "new": "_{i = 1}^s",
+      "rationale": "The exact injection must take the product over all s minimal primes.",
+      "status": "accepted-local-emendation"
+    },
+    {
+      "id": "MORE-ALGEBRA-L-016",
+      "line": 38367,
+      "old": "(f, g)",
+      "new": "(f, g_1, \\ldots, g_{d - 1})",
+      "rationale": "The preceding sentence defines the parameter ideal with f and g_1 through g_{d-1}; plain g is undefined.",
+      "status": "accepted-local-emendation"
+    },
+    {
+      "id": "MORE-ALGEBRA-L-017",
+      "line": 38429,
+      "old": "$(R/fR)\\mathfrak q_j$",
+      "new": "$(R/fR)_{\\mathfrak q_j}$",
+      "rationale": "This repeated argument likewise requires localization at q_j.",
+      "status": "accepted-local-emendation"
+    },
+    {
+      "id": "MORE-ALGEBRA-L-018",
+      "line": 38431,
+      "old": "\\mathfrak q_j$ are the associated primes",
+      "new": "\\mathfrak q_s$ are the associated primes",
+      "rationale": "The associated-prime list runs from q_1 through q_s.",
+      "status": "accepted-local-emendation"
+    },
+    {
+      "id": "MORE-ALGEBRA-L-019",
+      "line": 38437,
+      "old": "$g_2,",
+      "new": "$g_1,",
+      "rationale": "The invoked lemma and every subsequent formula require the full sequence g_1 through g_{d-1}.",
+      "status": "accepted-local-emendation"
+    },
+    {
+      "id": "MORE-ALGEBRA-L-020",
+      "line": 38448,
+      "old": "= d$",
+      "new": "= d - 1$",
+      "rationale": "In a catenary local domain of dimension d, a height-one prime has quotient dimension d-1.",
+      "status": "accepted-local-emendation"
+    },
+    {
+      "id": "MORE-ALGEBRA-L-021",
+      "line": 38491,
+      "old": "\\cap q_s$",
+      "new": "\\cap \\mathfrak q_s$",
+      "rationale": "The last member is the prime ideal mathfrak q_s, consistently with the preceding members.",
+      "status": "accepted-local-emendation"
+    },
+    {
+      "id": "MORE-ALGEBRA-L-022",
+      "line": 38496,
+      "old": "\\cap q_s$",
+      "new": "\\cap \\mathfrak q_s$",
+      "rationale": "The repeated radical ideal uses the same prime ideal mathfrak q_s.",
+      "status": "accepted-local-emendation"
+    },
+    {
+      "id": "MORE-ALGEBRA-L-023",
+      "line": 38565,
+      "old": "exists an $1",
+      "new": "exists $1",
+      "rationale": "The article before the displayed inequality is ungrammatical.",
+      "status": "accepted-local-emendation"
+    },
+    {
+      "id": "MORE-ALGEBRA-L-024",
+      "line": 38605,
+      "old": "K-flat complexes",
+      "new": "K-flat complex",
+      "rationale": "The sentence chooses one complex N^bullet, so the noun must be singular.",
+      "status": "accepted-local-emendation"
+    },
+    {
+      "id": "MORE-ALGEBRA-L-025",
+      "line": 38737,
+      "old": "spaces which the following",
+      "new": "spaces which has the following",
+      "rationale": "The relative clause lacks its verb; it refers to the displayed exact sequence.",
+      "status": "accepted-local-emendation"
+    },
+    {
+      "id": "MORE-ALGEBRA-L-026",
+      "line": 38900,
+      "old": "\\ldots m",
+      "new": "\\ldots, m",
+      "rationale": "The finite index set is missing the comma before its last entry.",
+      "status": "accepted-local-emendation"
+    },
+    {
+      "id": "MORE-ALGEBRA-L-027",
+      "line": 38906,
+      "old": "linear combination images of",
+      "new": "linear combination of images of",
+      "rationale": "The phrase is missing the preposition joining linear combination to the images.",
+      "status": "accepted-local-emendation"
+    },
+    {
+      "id": "MORE-ALGEBRA-L-028",
+      "line": 39043,
+      "old": "of $M'$",
+      "new": "of $P/JP$",
+      "rationale": "The generator s'+m' lies in P/JP and generally not in M'; the next line chooses a splitting P/JP to R/J.",
+      "status": "accepted-local-emendation"
+    },
+    {
+      "id": "MORE-ALGEBRA-L-029",
+      "line": 39126,
+      "old": "surjectve",
+      "new": "surjective",
+      "rationale": "The adjective contains an evident typographical omission.",
+      "status": "accepted-local-emendation"
+    },
+    {
+      "id": "MORE-ALGEBRA-L-030",
+      "line": 38321,
+      "old": "_{i = 1}^t",
+      "new": "_{i = 1}^s",
+      "rationale": "This definition of M must use the complete list p_1 through p_s of minimal primes fixed in the corrected lines 38314 and 38318; t is reserved below for the top-dimensional sublist.",
+      "status": "accepted-canon-additive-correction"
+    },
+    {
+      "id": "MORE-ALGEBRA-L-031",
+      "line": 38325,
+      "old": "_{i=1}^t",
+      "new": "_{i=1}^s",
+      "rationale": "The localized product is the same full product M over p_1 through p_s; retaining t here contradicts both its definition and the localization argument, while t remains unchanged at lines 38341--38342.",
+      "status": "accepted-canon-additive-correction"
+    }
+  ]
+}

@@ -1,0 +1,431 @@
+{
+  "corrected_source_identities": {
+    "corrected_cumulative_effective_document_bytes": 1492205,
+    "corrected_cumulative_effective_document_sha256": "8E6112C28EEB2AE1D0AE64F145B448AD941353119C0FAD7E91656F01D6BB1ACC",
+    "cumulative_emendation_manifest_bytes": 32056,
+    "cumulative_emendation_manifest_path": "<WORKSPACE>/03_projects/language_management/romance/03_working_translations/stacks_fr_20260821/p02/evidence/MORE_ALGEBRA_SOURCE_EMENDATIONS.json",
+    "cumulative_emendation_manifest_sha256": "FDE743EFA898F320FEA704123F28FD047A56A3C06F0029219C2B5E37477F8A16",
+    "current_cumulative_effective_document_bytes": 1492205,
+    "current_cumulative_effective_document_sha256": "12B95584EEB1D202DDF40E5237D2A2212CFFB15F15414864C5A9067651C7F0B5",
+    "lease_l_effective_document_bytes": 1492132,
+    "lease_l_effective_document_sha256": "B4D8BF24D64BF7D5A50E4BC0791D02DDC19849F34A24FB4857CED6CB143DD196",
+    "lease_l_effective_slice_bytes": 99545,
+    "lease_l_effective_slice_sha256": "FE09139FD8ACF7B64BC490572BC867129F14ABF69FD6BC65E2181B53FEABE259"
+  },
+  "created_at_utc": "2026-08-31T02:02:05Z",
+  "french_propagation_required": {
+    "assembled_target_corrected_bytes": 1615294,
+    "assembled_target_corrected_sha256": "4DFA9D8528756FA5DE412672D0ED2C41DD2E798650C1BA26D06A95A90DB0BD85",
+    "assembled_target_current_bytes": 1615294,
+    "assembled_target_current_sha256": "4744DF96574170BFA9B1D6A5F2FF8C376A5AE33B1D84CD17C215681EED862F2F",
+    "assembled_target_path": "<WORKSPACE>/03_projects/language_management/romance/03_working_translations/stacks_fr_20260821/p02/tex/more-algebra.tex",
+    "assembled_target_required_lines": [
+      37582,
+      37586
+    ],
+    "current_checkpoint_bytes": 12844,
+    "current_checkpoint_path": "<WORKSPACE>/03_projects/language_management/romance/03_working_translations/stacks_fr_20260821/p02/evidence/MORE_ALGEBRA_CHECKPOINT_REPORT.json",
+    "current_checkpoint_sha256": "77C52056ABE6D1E1800A5222B43DA7548B46705F764EA80EBF706B556F52C671",
+    "current_pdf_bytes": 3431847,
+    "current_pdf_path": "<WORKSPACE>/03_projects/language_management/romance/03_working_translations/stacks_fr_20260821/p02/output/pdf/more-algebra.pdf",
+    "current_pdf_sha256": "CDE470EF7822E0ACC9AB777EDA80E103A91FB6A2B8EE8C7C54311BB7CEEB2382",
+    "current_whole_invariants_bytes": 38100,
+    "current_whole_invariants_path": "<WORKSPACE>/03_projects/language_management/romance/03_working_translations/stacks_fr_20260821/p02/evidence/MORE_ALGEBRA_WHOLE_INVARIANTS.json",
+    "current_whole_invariants_sha256": "84D7633F6E8848A183F777EFD5EE11D9F9D44CEBA42C5434FB9E7A868FEA2460",
+    "disposition": "PATCH_BOTH_FRENCH_TARGETS_THEN_REGENERATE_WHOLE_EMENDATION_MANIFEST_INVARIANTS_BUILD_PDF_VISUAL_QA_AND_CHECKPOINT_BEFORE_CUMULATIVE_PUBLICATION",
+    "lease_target_corrected_bytes": 107886,
+    "lease_target_corrected_sha256": "7B751201AF2696DE5F4952D15ABB0C6492E5580CFA6D188AEE29C299B1FD65D0",
+    "lease_target_current_bytes": 107886,
+    "lease_target_current_sha256": "630E8C7CEBDD63110120F8E5C0AC8BE1DE8AAC6F0BEAED6AB36DE7AE81E2F009",
+    "lease_target_path": "<WORKSPACE>/03_projects/language_management/romance/03_working_translations/stacks_fr_20260821/p02/draft/more-algebra.part-l.fr.tex",
+    "lease_target_required_lines": [
+      1672,
+      1676
+    ]
+  },
+  "independent_adjudication": {
+    "accepted_as_proposed_rows": 28,
+    "accepted_with_required_expansion_rows": 1,
+    "canonical_operation_count": 31,
+    "canonical_semantic_unit_count": 23,
+    "rejected_rows": 0,
+    "stable_id_range": [
+      "MC-STK-ERR-1336",
+      "MC-STK-ERR-1358"
+    ],
+    "units": [
+      {
+        "class": "spelling",
+        "disposition": "ACCEPT_AS_PROPOSED",
+        "locus": "more-algebra.tex:36642",
+        "operation_count": 1,
+        "producer_ids": [
+          "MORE-ALGEBRA-L-001"
+        ],
+        "stable_id": "MC-STK-ERR-1336"
+      },
+      {
+        "class": "missing_localization_preposition",
+        "disposition": "ACCEPT_AS_PROPOSED",
+        "locus": "more-algebra.tex:37872",
+        "operation_count": 1,
+        "producer_ids": [
+          "MORE-ALGEBRA-L-002"
+        ],
+        "stable_id": "MC-STK-ERR-1337"
+      },
+      {
+        "class": "extraneous_preposition",
+        "disposition": "ACCEPT_AS_PROPOSED",
+        "locus": "more-algebra.tex:37888",
+        "operation_count": 1,
+        "producer_ids": [
+          "MORE-ALGEBRA-L-003"
+        ],
+        "stable_id": "MC-STK-ERR-1338"
+      },
+      {
+        "class": "wrong_local_factor_index",
+        "disposition": "ACCEPT_GROUPED_LINKED_OPERATIONS",
+        "locus": "more-algebra.tex:37903;37905",
+        "operation_count": 2,
+        "producer_ids": [
+          "MORE-ALGEBRA-L-004",
+          "MORE-ALGEBRA-L-006"
+        ],
+        "stable_id": "MC-STK-ERR-1339"
+      },
+      {
+        "class": "undefined_principal_kernel_generator",
+        "disposition": "ACCEPT_AS_PROPOSED",
+        "locus": "more-algebra.tex:37904",
+        "operation_count": 1,
+        "producer_ids": [
+          "MORE-ALGEBRA-L-005"
+        ],
+        "stable_id": "MC-STK-ERR-1340"
+      },
+      {
+        "class": "wrong_indefinite_article",
+        "disposition": "ACCEPT_AS_PROPOSED",
+        "locus": "more-algebra.tex:37922",
+        "operation_count": 1,
+        "producer_ids": [
+          "MORE-ALGEBRA-L-007"
+        ],
+        "stable_id": "MC-STK-ERR-1341"
+      },
+      {
+        "class": "missing_preposition",
+        "disposition": "ACCEPT_AS_PROPOSED",
+        "locus": "more-algebra.tex:37974",
+        "operation_count": 1,
+        "producer_ids": [
+          "MORE-ALGEBRA-L-008"
+        ],
+        "stable_id": "MC-STK-ERR-1342"
+      },
+      {
+        "class": "repeated_missing_localization_subscript",
+        "disposition": "ACCEPT_GROUPED_REPEATED_OPERATIONS",
+        "locus": "more-algebra.tex:38165;38429",
+        "operation_count": 2,
+        "producer_ids": [
+          "MORE-ALGEBRA-L-009",
+          "MORE-ALGEBRA-L-017"
+        ],
+        "stable_id": "MC-STK-ERR-1343"
+      },
+      {
+        "class": "repeated_wrong_associated_prime_terminal_index",
+        "disposition": "ACCEPT_GROUPED_REPEATED_OPERATIONS",
+        "locus": "more-algebra.tex:38167;38431",
+        "operation_count": 2,
+        "producer_ids": [
+          "MORE-ALGEBRA-L-010",
+          "MORE-ALGEBRA-L-018"
+        ],
+        "stable_id": "MC-STK-ERR-1344"
+      },
+      {
+        "class": "malformed_summation_range",
+        "disposition": "ACCEPT_AS_PROPOSED",
+        "locus": "more-algebra.tex:38247",
+        "operation_count": 1,
+        "producer_ids": [
+          "MORE-ALGEBRA-L-011"
+        ],
+        "stable_id": "MC-STK-ERR-1345"
+      },
+      {
+        "class": "wrong_terminal_parameter_index",
+        "disposition": "ACCEPT_GROUPED_LINKED_OPERATIONS",
+        "locus": "more-algebra.tex:38301;38309",
+        "operation_count": 2,
+        "producer_ids": [
+          "MORE-ALGEBRA-L-012",
+          "MORE-ALGEBRA-L-013"
+        ],
+        "stable_id": "MC-STK-ERR-1346"
+      },
+      {
+        "class": "incomplete_minimal_prime_product_range",
+        "disposition": "ACCEPT_WITH_REQUIRED_REGISTRAR_EXPANSION",
+        "locus": "more-algebra.tex:38314;38318;38321;38325",
+        "operation_count": 4,
+        "producer_ids": [
+          "MORE-ALGEBRA-L-014",
+          "MORE-ALGEBRA-L-015"
+        ],
+        "stable_id": "MC-STK-ERR-1347"
+      },
+      {
+        "class": "undefined_parameter_ideal_symbol",
+        "disposition": "ACCEPT_AS_PROPOSED",
+        "locus": "more-algebra.tex:38367",
+        "operation_count": 1,
+        "producer_ids": [
+          "MORE-ALGEBRA-L-016"
+        ],
+        "stable_id": "MC-STK-ERR-1348"
+      },
+      {
+        "class": "wrong_initial_parameter_index",
+        "disposition": "ACCEPT_AS_PROPOSED",
+        "locus": "more-algebra.tex:38437",
+        "operation_count": 1,
+        "producer_ids": [
+          "MORE-ALGEBRA-L-019"
+        ],
+        "stable_id": "MC-STK-ERR-1349"
+      },
+      {
+        "class": "wrong_quotient_dimension",
+        "disposition": "ACCEPT_AS_PROPOSED",
+        "locus": "more-algebra.tex:38448",
+        "operation_count": 1,
+        "producer_ids": [
+          "MORE-ALGEBRA-L-020"
+        ],
+        "stable_id": "MC-STK-ERR-1350"
+      },
+      {
+        "class": "repeated_missing_fraktur_prime_notation",
+        "disposition": "ACCEPT_GROUPED_REPEATED_OPERATIONS",
+        "locus": "more-algebra.tex:38491;38496",
+        "operation_count": 2,
+        "producer_ids": [
+          "MORE-ALGEBRA-L-021",
+          "MORE-ALGEBRA-L-022"
+        ],
+        "stable_id": "MC-STK-ERR-1351"
+      },
+      {
+        "class": "extraneous_indefinite_article",
+        "disposition": "ACCEPT_AS_PROPOSED",
+        "locus": "more-algebra.tex:38565",
+        "operation_count": 1,
+        "producer_ids": [
+          "MORE-ALGEBRA-L-023"
+        ],
+        "stable_id": "MC-STK-ERR-1352"
+      },
+      {
+        "class": "number_agreement",
+        "disposition": "ACCEPT_AS_PROPOSED",
+        "locus": "more-algebra.tex:38605",
+        "operation_count": 1,
+        "producer_ids": [
+          "MORE-ALGEBRA-L-024"
+        ],
+        "stable_id": "MC-STK-ERR-1353"
+      },
+      {
+        "class": "missing_relative_clause_verb",
+        "disposition": "ACCEPT_AS_PROPOSED",
+        "locus": "more-algebra.tex:38737",
+        "operation_count": 1,
+        "producer_ids": [
+          "MORE-ALGEBRA-L-025"
+        ],
+        "stable_id": "MC-STK-ERR-1354"
+      },
+      {
+        "class": "missing_list_separator",
+        "disposition": "ACCEPT_AS_PROPOSED",
+        "locus": "more-algebra.tex:38900",
+        "operation_count": 1,
+        "producer_ids": [
+          "MORE-ALGEBRA-L-026"
+        ],
+        "stable_id": "MC-STK-ERR-1355"
+      },
+      {
+        "class": "missing_preposition",
+        "disposition": "ACCEPT_AS_PROPOSED",
+        "locus": "more-algebra.tex:38906",
+        "operation_count": 1,
+        "producer_ids": [
+          "MORE-ALGEBRA-L-027"
+        ],
+        "stable_id": "MC-STK-ERR-1356"
+      },
+      {
+        "class": "wrong_ambient_module",
+        "disposition": "ACCEPT_AS_PROPOSED",
+        "locus": "more-algebra.tex:39043",
+        "operation_count": 1,
+        "producer_ids": [
+          "MORE-ALGEBRA-L-028"
+        ],
+        "stable_id": "MC-STK-ERR-1357"
+      },
+      {
+        "class": "spelling",
+        "disposition": "ACCEPT_AS_PROPOSED",
+        "locus": "more-algebra.tex:39126",
+        "operation_count": 1,
+        "producer_ids": [
+          "MORE-ALGEBRA-L-029"
+        ],
+        "stable_id": "MC-STK-ERR-1358"
+      }
+    ],
+    "unresolved_rows": 0
+  },
+  "original_private_transport_identity": {
+    "bytes": 15023,
+    "private_paths_published": false,
+    "sha256": "D2A93C491B5FB7DE23DAF452B78F066C0349AFB62716F546F0745505A3583805"
+  },
+  "producer_evidence": {
+    "emendation_count": 29,
+    "emendations_bytes": 8459,
+    "emendations_path": "<WORKSPACE>/03_projects/language_management/romance/03_working_translations/stacks_fr_20260821/p02/evidence/MORE_ALGEBRA_L_SOURCE_EMENDATIONS.json",
+    "emendations_sha256": "3979731D70953EF119F6BA50398FDF6E3B82D7FA368879A44543C0CC52EB9E89",
+    "invariants_bytes": 17245,
+    "invariants_path": "<WORKSPACE>/03_projects/language_management/romance/03_working_translations/stacks_fr_20260821/p02/evidence/MORE_ALGEBRA_L_INVARIANTS.json",
+    "invariants_sha256": "70E31567B3A20362757E4870CE98CF50B931C841E92342F1FE6CE6B6B7999AB1",
+    "limitation": "The producer invariant gate is structurally exact but does not detect the semantic inconsistency left by the one-operation MORE-ALGEBRA-L-015 proposal.",
+    "mechanical_replay": {
+      "authority_hash_match": true,
+      "declared_line_preimage_failures": 0,
+      "declared_line_preimages_exactly_once": 29,
+      "producer_effective_hash_reproduced": true
+    },
+    "producer_effective_document_bytes": 1492132,
+    "producer_effective_document_sha256": "99C680AA4BAFDFCE2FE25B0161B0DEA4135216203B78A5E7CFB4A0725B7FE6C3",
+    "producer_effective_slice_bytes": 99545,
+    "producer_effective_slice_sha256": "4D41E83EE89167B11036E8EA07B7FF6A42E2F353EA90B96B17F09036CD2E6941"
+  },
+  "registry_deduplication": {
+    "latest_manifest_sha256": "0E32DA3122577F6A7614AFF606045FF3DFE89B6EF3993903CDD045E2F232DDC9",
+    "latest_overlay": "stacks-errata-a04446e-r37",
+    "maximum_numeric_stable_id": "MC-STK-ERR-1335",
+    "next_available_numeric_stable_id": "MC-STK-ERR-1336",
+    "numeric_stable_ids": 1071,
+    "producer_prefix_hits": 0,
+    "registered_entries": 38,
+    "registered_more_algebra_line_maximum": 32856,
+    "registered_more_algebra_line_minimum": 11360,
+    "registered_more_algebra_operations": 106,
+    "registered_operations_checked": 1259,
+    "registered_units_checked": 1057,
+    "registry_bytes": 62014,
+    "registry_head": "f6395eb5d171cc517a7231811fabf6855296505e",
+    "registry_path": "<WORKSPACE>/ai-stacks-r31-sites-modules-20260829/registry/overlays.json",
+    "registry_root": "<WORKSPACE>/ai-stacks-r31-sites-modules-20260829",
+    "registry_sha256": "6F65B98754C59EE91E127FCB49AFF9F524D603FBCEE8B33786C6EA7854711439",
+    "registry_tree": "f1b1ad6df92ba5b3ca63599317e01fbd710be60b",
+    "result": "NOVEL_AGAINST_R1_THROUGH_R37",
+    "same_locus_matches": 0,
+    "same_old_new_matches": 0,
+    "same_producer_id_matches": 0,
+    "source_map_files_checked": 36,
+    "stable_ids": 1083,
+    "unique_stable_ids": 1083
+  },
+  "registry_recommendation": {
+    "admit": true,
+    "admit_operations": 31,
+    "admit_semantic_units": 23,
+    "mutation_boundary": "This receipt does not mutate the registry, generated English source, frozen authority, or French targets.",
+    "next_overlay": "stacks-errata-a04446e-r38",
+    "rejections": [],
+    "stable_id_end": "MC-STK-ERR-1358",
+    "stable_id_start": "MC-STK-ERR-1336",
+    "superseded_evidence": [
+      {
+        "evidence_sha256": "3979731D70953EF119F6BA50398FDF6E3B82D7FA368879A44543C0CC52EB9E89",
+        "producer_id": "MORE-ALGEBRA-L-015",
+        "reason": "The single line-38318 operation is mathematically correct but insufficient without the linked line-38321 and line-38325 operations."
+      }
+    ]
+  },
+  "required_l015_expansion": {
+    "operations": [
+      {
+        "old_text": "\\mathfrak p_t$",
+        "origin": "PRODUCER",
+        "producer_id": "MORE-ALGEBRA-L-014",
+        "replacement_text": "\\mathfrak p_s$",
+        "source_end_line": 38314,
+        "source_start_line": 38314
+      },
+      {
+        "old_text": "_{i = 1}^t",
+        "origin": "PRODUCER",
+        "producer_id": "MORE-ALGEBRA-L-015",
+        "replacement_text": "_{i = 1}^s",
+        "source_end_line": 38318,
+        "source_start_line": 38318
+      },
+      {
+        "end_byte_exclusive": 1456721,
+        "old_bytes": 15,
+        "old_sha256": "7BD0D2F632CB58798FFA2E09DBDE001B4D776AF05AD843DE61C2373474AB66FD",
+        "old_text": "\\prod_{i = 1}^t",
+        "origin": "INDEPENDENT_REVIEW_REQUIRED_ADDITION",
+        "producer_id": "MORE-ALGEBRA-L-015",
+        "replacement_bytes": 15,
+        "replacement_sha256": "B378B9BB521773B994039386E993F18701CF453445491332704F22BF5E8E4BC2",
+        "replacement_text": "\\prod_{i = 1}^s",
+        "source_end_line": 38321,
+        "source_start_line": 38321,
+        "start_byte": 1456706
+      },
+      {
+        "end_byte_exclusive": 1456855,
+        "old_bytes": 22,
+        "old_sha256": "26FBC4970A0BE63974E978AECE6BD8D0824FDDF193A4DAC9337729D1FB88A45F",
+        "old_text": "\\prod\\nolimits_{i=1}^t",
+        "origin": "INDEPENDENT_REVIEW_REQUIRED_ADDITION",
+        "producer_id": "MORE-ALGEBRA-L-015",
+        "replacement_bytes": 22,
+        "replacement_sha256": "2ED650104357CC49B7DF1847225190D7BEAF621BB7DD8B73459170B72051B3BC",
+        "replacement_text": "\\prod\\nolimits_{i=1}^s",
+        "source_end_line": 38325,
+        "source_start_line": 38325,
+        "start_byte": 1456833
+      }
+    ],
+    "producer_one_operation_l015_disposition": "SUPERSEDED_INCOMPLETE_ADVERSE_EVIDENCE_DO_NOT_APPLY_ALONE",
+    "reason": "For a reduced Noetherian ring, the injection uses every minimal-prime quotient because the nilradical is the intersection of all minimal primes. The symbol t counts only the top-dimensional minimal primes and remains correct only in the later leading-coefficient argument at lines 38341-38342.",
+    "semantic_unit_stable_id": "MC-STK-ERR-1347"
+  },
+  "review_id": "CK-STK-MORE-ALGEBRA-L-20260831",
+  "schema": "canon-keeper-stacks-more-algebra-l-independent-review/v1",
+  "scope": {
+    "authority_bytes": 1492039,
+    "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "authority_path": "<WORKSPACE>/03_projects/language_management/cjk/03_working_translations/stacks_cjk_20260821/upstream/src/stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14/more-algebra.tex",
+    "authority_sha256": "0106554339E8966FE04411B2AE9F9CD856B165849FEEF0C7BC37634819064708",
+    "producer_ids": "MORE-ALGEBRA-L-001..029",
+    "producer_row_count": 29,
+    "source_line_end": 39222,
+    "source_line_start": 36627,
+    "source_slice_bytes": 99452,
+    "source_slice_sha256": "7F4F1303376737131D36A8A543EF07773507B069F09B3249C0AAFFC538540D76"
+  },
+  "status": "PASS_WITH_REQUIRED_OPERATION_EXPANSION"
+}
