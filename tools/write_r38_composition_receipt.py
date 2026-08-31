@@ -117,6 +117,12 @@ def main() -> int:
             "admission_parent": git("rev-parse", f"{admission}^"),
             "lease_release_event": release_events[0]["event_id"],
         })
+        successors = [event for event in leases["events"]
+                      if event.get("supersedes_event_id") == release_events[0]["event_id"]]
+        if len(successors) > 1:
+            raise ValueError(f"ambiguous successor lease event: R{number}")
+        if successors:
+            new_overlays[-1]["successor_lease_event"] = successors[0]["event_id"]
     preparations = []
     for revision in git("rev-list", "--reverse", f"{imported}..{base}").splitlines():
         preparations.append({
