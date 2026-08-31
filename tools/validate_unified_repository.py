@@ -28,19 +28,19 @@ SOURCE_UNION = "ad58625f60e6816905ff217d21d91b07b2722fcf"
 EGA_EXPORT = "91df7f1c96bd4973264c29b0e121253a05d1d361"
 COMPOSITION_RECEIPT = Path("validation/composition-current.json")
 DEFAULT_BUILD_RECEIPT = Path(
-    "validation/stacks-errata-a04446e-r33-build-2026-08-30.json"
+    "validation/stacks-errata-a04446e-r38-build-2026-08-31.json"
 )
 VISUAL_QA_RECEIPT = Path(
-    "validation/stacks-errata-a04446e-r33-visual-qa-2026-08-30.json"
+    "validation/stacks-errata-a04446e-r38-visual-qa-2026-08-31.json"
 )
 REPRODUCIBILITY_RECEIPT = Path(
-    "validation/stacks-errata-a04446e-r33-reproducibility-2026-08-30.json"
+    "validation/stacks-errata-a04446e-r38-reproducibility-2026-08-31.json"
 )
 SECOND_REPRODUCIBILITY_RECEIPT = Path(
-    "validation/stacks-errata-a04446e-r33-reproducibility-second-2026-08-30.json"
+    "validation/stacks-errata-a04446e-r38-reproducibility-second-2026-08-31.json"
 )
 CURRENT_RELEASE_RECEIPT = Path(
-    "validation/stacks-errata-a04446e-r33-release-2026-08-30.json"
+    "validation/stacks-errata-a04446e-r38-release-2026-08-31.json"
 )
 SHA1_RE = re.compile(r"^[0-9a-f]{40}$")
 SHA256_RE = re.compile(r"^[0-9A-Fa-f]{64}$")
@@ -504,10 +504,6 @@ def main(argv: list[str] | None = None) -> int:
             or import_tree_result.stdout.strip() != registry_import_tree
         ):
             errors.append("registry linear-import tree identity mismatch")
-    if composition_base_commit != registry_import_commit:
-        errors.append("composition base is not the registry linear-import commit")
-    if composition_base_tree != registry_import_tree:
-        errors.append("composition base tree is not the registry linear-import tree")
 
     cutoff_commit = require_sha1_identity(
         composition_registry.get("cutoff_commit"), "registry cutoff commit", errors
@@ -627,12 +623,13 @@ def main(argv: list[str] | None = None) -> int:
     require_ancestor(
         previous_public_main, "HEAD", "previous-public-main-to-HEAD", errors
     )
-    require_single_parent(
-        registry_import_commit,
-        "registry linear import",
-        errors,
-        previous_public_main,
-    )
+    from build_fixed_point import validate_import_preparation_topology
+
+    topology_binding = None
+    try:
+        topology_binding = validate_import_preparation_topology(ROOT, composition)
+    except (RuntimeError, ValueError, TypeError, UnicodeError) as exc:
+        errors.append(f"registry import/preparation topology failed: {exc}")
     for relative, identity in previous_source_blobs.items():
         if not isinstance(relative, str) or not isinstance(identity, dict):
             errors.append("previous cutoff contains an invalid source-blob row")
@@ -1681,8 +1678,8 @@ def main(argv: list[str] | None = None) -> int:
         "diff",
         "--name-only",
         "--diff-filter=ACMRTUXB",
-        f"{registry_import_commit}..{composition_source_commit}",
-    ) if registry_import_commit is not None and composition_source_commit is not None else None
+        f"{composition_base_commit}..{composition_source_commit}",
+    ) if composition_base_commit is not None and composition_source_commit is not None else None
     if changed_paths_result is None or changed_paths_result.returncode != 0:
         errors.append("could not inspect composition-source changed paths")
         changed_paths = ()
@@ -2220,6 +2217,8 @@ def main(argv: list[str] | None = None) -> int:
         "affected_source_stems": affected_stems,
         "affected_source_identities": affected_sources,
     }
+    if topology_binding is not None:
+        expected_build_binding["import_preparation_topology"] = topology_binding
     for key, expected in expected_build_binding.items():
         if receipt_composition.get(key) != expected:
             errors.append(

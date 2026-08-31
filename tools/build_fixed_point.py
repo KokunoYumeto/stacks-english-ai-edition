@@ -17,7 +17,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-DEFAULT_STEMS = (
+LEGACY_DEFAULT_STEMS = (
     "sets",
     "categories",
     "topology",
@@ -46,6 +46,30 @@ DEFAULT_STEMS = (
     "injectives",
     "gaga",
     "moduli",
+)
+
+# R34-R38 extend the existing complete profile by the two newly affected
+# chapters. Historical receipts keep their original ordered profile.
+DEFAULT_STEMS = (
+    *LEGACY_DEFAULT_STEMS[:26],
+    "cohomology",
+    "sites-cohomology",
+    *LEGACY_DEFAULT_STEMS[26:],
+)
+
+# Preparation is code/evidence maintenance, never a source or registry import.
+# Each actual commit must additionally declare its exact changed-path inventory.
+COMPOSITION_PREPARATION_PATHS = frozenset(
+    {
+        ".gitattributes",
+        ".github/workflows/validate.yml",
+        "tools/build_fixed_point.py",
+        "tools/validate_unified_repository.py",
+        "tools/compose_overlay_projection.py",
+        "tools/write_r38_composition_receipt.py",
+        "tests/test_semantic_composition.py",
+        "validation/overlay-composition-semantic-dispositions-v1.json",
+    }
 )
 
 DEFAULT_COMPOSITION_RECEIPT = Path("validation/composition-current.json")
@@ -427,6 +451,178 @@ def require_tree_identity(source: Path, commit: str, tree: object, label: str) -
     return tree
 
 
+def committed_path_changes(
+    source: Path, parent: str, commit: str
+) -> dict[str, tuple[str, str, str, str, str]]:
+    """Return exact mode/blob/status changes, with rename detection disabled."""
+    completed = subprocess.run(
+        [
+            "git", "-C", str(source), "diff-tree", "--no-commit-id", "--raw",
+            "--no-abbrev", "--no-renames", "-r", "-z", parent, commit, "--",
+        ],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        check=False,
+    )
+    if completed.returncode:
+        raise RuntimeError(
+            "cannot inspect committed path changes: "
+            + completed.stderr.decode("utf-8", errors="replace").strip()
+        )
+    fields = completed.stdout.split(b"\0")
+    if fields[-1] != b"" or (len(fields) - 1) % 2:
+        raise RuntimeError("invalid NUL-delimited committed path inventory")
+    changes: dict[str, tuple[str, str, str, str, str]] = {}
+    for index in range(0, len(fields) - 1, 2):
+        header = fields[index].decode("ascii").split()
+        path = fields[index + 1].decode("utf-8")
+        require_safe_posix_path(path, "committed change path")
+        if (
+            len(header) != 5
+            or not header[0].startswith(":")
+            or header[0][1:] not in {"000000", "100644", "100755"}
+            or header[1] not in {"000000", "100644", "100755"}
+            or not SHA1_PATTERN.fullmatch(header[2])
+            or not SHA1_PATTERN.fullmatch(header[3])
+            or header[4] not in {"A", "M", "D", "T"}
+            or path in changes
+        ):
+            raise RuntimeError(f"invalid committed change record for {path!r}")
+        changes[path] = (header[0][1:], *header[1:])
+    return changes
+
+
+def validate_import_preparation_topology(
+    source: Path, receipt: dict[str, object]
+) -> dict[str, object] | None:
+    """Prove exact imports and separately bounded preparation from Git objects.
+
+    Extended v3 receipts bind registry.linear_import_chain rows with
+    registry_commit/import_commit/import_tree and composition.preparation_commits
+    rows with commit/parent/tree/paths. No unlisted commit or path is permitted.
+    Legacy receipts retain the original single-import/direct-source topology.
+    """
+    previous = receipt.get("previous_cutoff")
+    registry = receipt.get("registry")
+    composition = receipt.get("composition")
+    if not all(isinstance(value, dict) for value in (previous, registry, composition)):
+        raise RuntimeError("missing import/preparation topology state")
+    previous_public = require_commit_object(
+        source, previous.get("public_main_head"), "previous public main"
+    )
+    previous_registry = require_commit_object(
+        source, previous.get("registry_commit"), "previous registry cutoff"
+    )
+    import_head = require_commit_object(
+        source, registry.get("linear_import_commit"), "registry import head"
+    )
+    import_tree = require_tree_identity(
+        source, import_head, registry.get("linear_import_tree"), "registry import head"
+    )
+    base = require_commit_object(source, composition.get("base_commit"), "composition base")
+    base_tree = require_tree_identity(
+        source, base, composition.get("base_tree"), "composition base"
+    )
+    chain = registry.get("linear_import_chain")
+    preparations = composition.get("preparation_commits")
+    if chain is None:
+        if preparations is not None:
+            raise RuntimeError("preparation commits require an explicit import chain")
+        if base != import_head or base_tree != import_tree:
+            raise RuntimeError("legacy composition base is not the registry import")
+        require_single_parent(source, import_head, "registry linear import", previous_public)
+        return None
+    if receipt.get("schema") != COMPOSITION_SCHEMA_V3:
+        raise RuntimeError("explicit import/preparation chains require composition v3")
+    if not isinstance(chain, list) or not chain or not isinstance(preparations, list):
+        raise RuntimeError("invalid explicit import chain or preparation inventory")
+    cutoff = require_commit_object(source, registry.get("cutoff_commit"), "registry cutoff")
+    integrated_parent = previous_public
+    registry_parent = previous_registry
+    normalized_imports: list[dict[str, object]] = []
+    imported_paths: set[str] = set()
+    for index, row in enumerate(chain, start=1):
+        if not isinstance(row, dict) or set(row) != {
+            "registry_commit", "import_commit", "import_tree"
+        }:
+            raise RuntimeError(f"invalid registry import-chain row {index}")
+        original = require_commit_object(source, row["registry_commit"], f"registry step {index}")
+        imported = require_commit_object(source, row["import_commit"], f"import step {index}")
+        require_single_parent(source, original, f"registry step {index}", registry_parent)
+        require_single_parent(source, imported, f"import step {index}", integrated_parent)
+        require_tree_identity(source, imported, row["import_tree"], f"import step {index}")
+        original_changes = committed_path_changes(source, registry_parent, original)
+        expected_changes = {
+            f"ai-integrated/{path}": identity
+            for path, identity in original_changes.items()
+        }
+        actual_changes = committed_path_changes(source, integrated_parent, imported)
+        if not expected_changes or actual_changes != expected_changes:
+            mismatches = [
+                path for path in sorted(set(expected_changes) | set(actual_changes))
+                if expected_changes.get(path) != actual_changes.get(path)
+            ]
+            raise RuntimeError(
+                f"registry import step {index} is not an exact prefixed mode/blob replay: "
+                + ", ".join(mismatches[:12])
+            )
+        imported_paths.update(actual_changes)
+        normalized_imports.append({**row, "changed_paths": sorted(actual_changes)})
+        registry_parent = original
+        integrated_parent = imported
+    if registry_parent != cutoff or integrated_parent != import_head:
+        raise RuntimeError("explicit import chain does not end at its bound cutoffs")
+    require_ancestor(source, previous_public, "public-to-import", import_head)
+    require_linear_suffix(source, previous_public, import_head, "registry import suffix")
+
+    normalized_preparations: list[dict[str, object]] = []
+    preparation_paths: set[str] = set()
+    for index, row in enumerate(preparations, start=1):
+        if not isinstance(row, dict) or set(row) != {"commit", "parent", "tree", "paths"}:
+            raise RuntimeError(f"invalid preparation row {index}")
+        commit = require_commit_object(source, row["commit"], f"preparation {index}")
+        if row["parent"] != integrated_parent:
+            raise RuntimeError(f"preparation {index} parent binding mismatch")
+        require_single_parent(source, commit, f"preparation {index}", integrated_parent)
+        require_tree_identity(source, commit, row["tree"], f"preparation {index}")
+        paths = row["paths"]
+        if (
+            not isinstance(paths, list)
+            or not paths
+            or not all(isinstance(path, str) for path in paths)
+            or paths != sorted(set(paths))
+            or not set(paths).issubset(COMPOSITION_PREPARATION_PATHS)
+        ):
+            raise RuntimeError(f"preparation {index} has an invalid exact path allowlist")
+        actual_changes = committed_path_changes(source, integrated_parent, commit)
+        if sorted(actual_changes) != paths:
+            raise RuntimeError(f"preparation {index} changed-path inventory mismatch")
+        if any(identity[4] not in {"A", "M"} for identity in actual_changes.values()):
+            raise RuntimeError(f"preparation {index} deletes or changes a file type")
+        preparation_paths.update(paths)
+        normalized_preparations.append(dict(row))
+        integrated_parent = commit
+    if integrated_parent != base:
+        raise RuntimeError("preparation inventory does not end at composition base")
+    require_ancestor(source, import_head, "import-to-composition-base", base)
+    require_linear_suffix(source, import_head, base, "composition preparation suffix")
+    if git(source, "rev-parse", f"{import_head}:ai-integrated") != git(
+        source, "rev-parse", f"{base}:ai-integrated"
+    ):
+        raise RuntimeError("preparation changed the imported registry/candidate subtree")
+    net_changes = committed_path_changes(source, previous_public, base)
+    if not set(net_changes).issubset(imported_paths | preparation_paths):
+        raise RuntimeError("unaccounted changes before source composition")
+    return {
+        "schema": "unofficial-ai-integrated-stacks-import-preparation-topology/v1",
+        "status": "PASS",
+        "registry_import_chain": normalized_imports,
+        "preparation_commits": normalized_preparations,
+        "root_source_inputs_unchanged_before_composition": True,
+        "imported_subtree_unchanged_by_preparation": True,
+    }
+
+
 def load_bound_registry_json(
     source: Path,
     registry: dict[str, object],
@@ -629,19 +825,7 @@ def load_composition_receipt(
         "authority-to-composition-base",
         composition_base_commit,
     )
-    if (
-        composition_base_commit != registry_import_commit
-        or composition_base_tree != registry_import_tree
-    ):
-        raise RuntimeError(
-            "composition base is not the receipt-bound registry import"
-        )
-    require_single_parent(
-        source,
-        composition_base_commit,
-        "composition base",
-        previous_public_head,
-    )
+    topology_binding = validate_import_preparation_topology(source, receipt)
     require_single_parent(
         source,
         composition_source_commit,
@@ -2032,7 +2216,8 @@ def load_composition_receipt(
     required_stems = validate_stems(
         receipt.get("required_build_stems"), "required_build_stems"
     )
-    if required_stems != DEFAULT_STEMS:
+    expected_profile = DEFAULT_STEMS if topology_binding is not None else LEGACY_DEFAULT_STEMS
+    if required_stems != expected_profile:
         raise RuntimeError(
             "composition receipt does not exactly match the ordered full build profile"
         )
@@ -2047,7 +2232,7 @@ def load_composition_receipt(
             "diff",
             "--name-only",
             "--diff-filter=ACMRTUXB",
-            f"{registry_import_commit}..{composition_source_commit}",
+            f"{composition_base_commit}..{composition_source_commit}",
         ).splitlines()
         if path
     )
@@ -2185,6 +2370,8 @@ def load_composition_receipt(
         "affected_source_identities": affected_sources,
         "verifier_reports": verifier_reports,
     }
+    if topology_binding is not None:
+        binding["import_preparation_topology"] = topology_binding
     if uses_bound_leases:
         binding.update(
             {
