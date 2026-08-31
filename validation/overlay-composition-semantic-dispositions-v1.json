@@ -1,0 +1,94 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-semantic-composition-dispositions/v1",
+  "status": "PASS",
+  "dispositions": [
+    {
+      "operation": {
+        "overlay_id": "stacks-errata-a04446e-r34",
+        "stable_id": "MC-STK-ERR-1296",
+        "operation_id": "MC-STK-ERR-1296-OP1",
+        "source": "cohomology.tex",
+        "old": {
+          "bytes": 34,
+          "sha256": "1AF08F576C393FF19999E80725256FA446181A1B0300CC094A2E369933B7ECCF"
+        },
+        "replacement": {
+          "bytes": 34,
+          "sha256": "0884B7E24244A064367787B6DC60BEED48AA41D98D6349B5A86F480736E98B6A"
+        }
+      },
+      "disposition": "structurally_superseded_by_ancestor_rewrite",
+      "authority_source": {
+        "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+        "git_blob": "0e2c7cd4265156c4e925e81a4d215ab59f73bbe3",
+        "bytes": 519286,
+        "sha256": "FA9747D0082AFBF8B09244DCC6C260F8A122E5E3B4A3C69E2273506D76E18A42"
+      },
+      "rewrite_transition": {
+        "commit": "a9863dcc19b7bfaf488777021896afa8d4f07ee1",
+        "parent_commit": "e026d983bfbfae367a86a36dff4b864f31189f88",
+        "parent_source": {
+          "git_blob": "7ea8b66a5c06fb32be35609e5d5db16d72f69ccd",
+          "bytes": 529269,
+          "sha256": "93A78525829D370AAC9B60766C52F2C46181EFEDDF93D8A5EB80EEB5F36A5C40"
+        },
+        "result_source": {
+          "git_blob": "01ff43d056e030caf3992cb2a1381062940f93d2",
+          "bytes": 530056,
+          "sha256": "500D4AC27E810F833FC99FA16CC6CDA0C685E6EC73A00A6E02D86C421C3CCBC9"
+        },
+        "parent_counts": {
+          "old": 1,
+          "replacement": 0,
+          "evidence": 0
+        },
+        "result_counts": {
+          "old": 0,
+          "replacement": 0,
+          "evidence": 1
+        }
+      },
+      "composition_base_source": {
+        "git_blob": "247b0aa09f05f31ed1952017229f7dceec9a896e",
+        "bytes": 539701,
+        "sha256": "9BD4A2C84CC68E2829A92E467798457C2C8069217DD82BC1DDDB5DA2488F7E39",
+        "old_count": 0,
+        "replacement_count": 0,
+        "evidence_count": 1
+      },
+      "evidence": {
+        "encoding": "utf-8",
+        "text": "\\begin{lemma}\n\\label{lemma-cech-Hausdorff-quasi-compact}\nLet $X$ be a Hausdorff and quasi-compact topological space. Let\n$\\mathcal{F}$ be an abelian sheaf on $X$. Then\nthe map $\\check{H}^n(X, \\mathcal{F}) \\to H^n(X, \\mathcal{F})$ defined\nin (\\ref{equation-cech-to-cohomology}) is an isomorphism for all $n$.\n\\end{lemma}\n\n\\begin{proof}\nEvery open covering of $X$ has a finite subcover, which is a locally finite\nrefinement. Thus $X$ is paracompact and the result follows from\nLemma \\ref{lemma-cech-paracompact}.\n\\end{proof}\n",
+        "bytes": 523,
+        "sha256": "908100394D830D1EE26FC2EBAF0454E270870B4041D8CC38103BAC307A69AB0B",
+        "occurrence_count": 1,
+        "rewrite": {
+          "byte_offset": 106534,
+          "line": 3023
+        },
+        "base": {
+          "byte_offset": 114390,
+          "line": 3214
+        }
+      },
+      "semantic_assertions": [
+        {
+          "scope": "positive_evidence",
+          "text": "Hausdorff and quasi-compact",
+          "occurrence_count": 1
+        },
+        {
+          "scope": "positive_evidence",
+          "text": "hausdorff and quasi-compact",
+          "occurrence_count": 0
+        },
+        {
+          "scope": "positive_evidence",
+          "text": "paracompact",
+          "occurrence_count": 2
+        }
+      ],
+      "rationale": "FAC commit a9863dcc19b7bfaf488777021896afa8d4f07ee1 structurally replaced the original proof locus with a paracompact reduction and retained the result as the uniquely labelled Hausdorff/quasi-compact corollary. Its exact parent-to-result transition removes the admitted defective phrase and introduces the bound lemma-and-proof evidence; that evidence remains unique in the cumulative composition base."
+    }
+  ]
+}

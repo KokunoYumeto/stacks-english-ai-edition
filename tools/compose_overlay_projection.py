@@ -17,7 +17,7 @@ import json
 import os
 import subprocess
 import tempfile
-from collections import defaultdict
+from collections import Counter, defaultdict
 from pathlib import Path
 
 from verify_overlay_projection import (
@@ -29,6 +29,12 @@ from verify_overlay_projection import (
     read_jsonl,
     sha256,
 )
+
+
+SEMANTIC_DISPOSITIONS_PATH = (
+    ROOT / "validation/overlay-composition-semantic-dispositions-v1.json"
+)
+OFFICIAL_BASELINE = "a04446e57ec1fbc252a871afcec7752fb2807b14"
 
 
 def filtered_git_blob_id(data: bytes, source: str) -> str:
@@ -59,11 +65,295 @@ def byte_offsets(lines: list[bytes]) -> list[int]:
     return offsets
 
 
+def git_is_ancestor(ancestor: str, descendant: str) -> bool:
+    completed = subprocess.run(
+        [
+            "git",
+            "-C",
+            str(ROOT),
+            "merge-base",
+            "--is-ancestor",
+            ancestor,
+            descendant,
+        ],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        check=False,
+    )
+    if completed.returncode not in (0, 1):
+        raise ValueError(
+            completed.stderr.decode("utf-8", errors="replace").strip()
+        )
+    return completed.returncode == 0
+
+
+def git_path_exists(revision: str, path: str) -> bool:
+    completed = subprocess.run(
+        ["git", "-C", str(ROOT), "cat-file", "-e", f"{revision}:{path}"],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        check=False,
+    )
+    return completed.returncode == 0
+
+
+def git_commit_parents(commit: str) -> list[str]:
+    completed = subprocess.run(
+        ["git", "-C", str(ROOT), "rev-list", "--parents", "-n", "1", commit],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+        check=False,
+    )
+    if completed.returncode:
+        raise ValueError(completed.stderr.strip())
+    fields = completed.stdout.strip().split()
+    if not fields or fields[0] != commit:
+        raise ValueError(f"cannot resolve exact commit parents: {commit}")
+    return fields[1:]
+
+
+def load_semantic_dispositions(
+    base_revision: str,
+) -> tuple[dict[str, dict], str | None]:
+    """Load dispositions only from the committed composition base."""
+
+    relative = SEMANTIC_DISPOSITIONS_PATH.relative_to(ROOT).as_posix()
+    if not git_path_exists(base_revision, relative):
+        return {}, None
+    raw = git_blob(base_revision, relative)
+    document = json.loads(raw.decode("utf-8"))
+    if (
+        document.get("schema")
+        != "unofficial-ai-integrated-stacks-semantic-composition-dispositions/v1"
+        or document.get("status") != "PASS"
+        or not isinstance(document.get("dispositions"), list)
+    ):
+        raise ValueError("invalid semantic composition disposition registry")
+    by_id: dict[str, dict] = {}
+    for disposition in document["dispositions"]:
+        if not isinstance(disposition, dict):
+            raise ValueError("semantic composition disposition is not an object")
+        operation = disposition.get("operation")
+        if not isinstance(operation, dict):
+            raise ValueError("semantic composition disposition lacks operation identity")
+        operation_id = operation.get("operation_id")
+        if not isinstance(operation_id, str) or not operation_id:
+            raise ValueError("semantic composition disposition lacks operation_id")
+        if operation_id in by_id:
+            raise ValueError(
+                f"duplicate semantic composition disposition: {operation_id}"
+            )
+        by_id[operation_id] = disposition
+    return by_id, sha256(raw)
+
+
+def verify_semantic_disposition_consumption(
+    applicable_ids: set[str], consumed_ids: list[str]
+) -> None:
+    """Require one and only one proved use of every applicable disposition."""
+    counts = Counter(consumed_ids)
+    unused = sorted(applicable_ids - counts.keys())
+    unexpected = sorted(counts.keys() - applicable_ids)
+    repeated = sorted(key for key, count in counts.items() if count != 1)
+    if unused or unexpected or repeated:
+        raise ValueError(
+            "semantic composition dispositions were not consumed exactly once: "
+            f"unused={unused}, unexpected={unexpected}, repeated={repeated}"
+        )
+
+
+def validate_semantic_disposition(
+    operation: dict,
+    disposition: dict,
+    authority: bytes,
+    current: bytes,
+    base_revision: str,
+) -> dict:
+    """Prove a structural predecessor already satisfies one admitted repair.
+
+    This is deliberately stricter than a prose waiver.  The disposition must
+    bind the admitted operation, the exact cumulative source blob, the earlier
+    introducing commit and source blob, a unique positive evidence block at
+    both revisions, and the absence of the exact defective authority text.
+    """
+
+    operation_id = operation["operation_id"]
+    source = operation["source"]
+    expected_operation = {
+        "overlay_id": f"stacks-errata-a04446e-r{operation['round']}",
+        "stable_id": operation["stable_id"],
+        "operation_id": operation_id,
+        "source": source,
+        "old": {
+            "bytes": operation["old_bytes"],
+            "sha256": operation["old_sha256"],
+        },
+        "replacement": {
+            "bytes": operation["replacement_bytes"],
+            "sha256": operation["replacement_sha256"],
+        },
+    }
+    if (
+        disposition.get("operation") != expected_operation
+        or disposition.get("disposition")
+        != "structurally_superseded_by_ancestor_rewrite"
+    ):
+        raise ValueError(f"semantic disposition identity mismatch: {operation_id}")
+
+    official_authority = git_blob(OFFICIAL_BASELINE, source)
+    if official_authority != authority:
+        raise ValueError(f"semantic disposition authority bytes differ: {operation_id}")
+    expected_authority_source = {
+        "commit": OFFICIAL_BASELINE,
+        "git_blob": git_blob_id(authority),
+        "bytes": len(authority),
+        "sha256": sha256(authority),
+    }
+    if disposition.get("authority_source") != expected_authority_source:
+        raise ValueError(
+            f"semantic disposition authority binding mismatch: {operation_id}"
+        )
+
+    old = operation["old_text"].encode("utf-8")
+    replacement = operation["replacement_text"].encode("utf-8")
+    evidence_record = disposition.get("evidence")
+    if (
+        not isinstance(evidence_record, dict)
+        or evidence_record.get("encoding") != "utf-8"
+        or not isinstance(evidence_record.get("text"), str)
+    ):
+        raise ValueError(f"semantic disposition lacks exact evidence: {operation_id}")
+    evidence = evidence_record["text"].encode("utf-8")
+    if not evidence:
+        raise ValueError(f"semantic disposition evidence is empty: {operation_id}")
+
+    transition = disposition.get("rewrite_transition")
+    if not isinstance(transition, dict):
+        raise ValueError(f"semantic disposition lacks rewrite transition: {operation_id}")
+    rewrite_commit = transition.get("commit")
+    parent_commit = transition.get("parent_commit")
+    if not isinstance(rewrite_commit, str) or not isinstance(parent_commit, str):
+        raise ValueError(f"semantic disposition rewrite IDs are invalid: {operation_id}")
+    if git_commit_parents(rewrite_commit) != [parent_commit]:
+        raise ValueError(
+            f"semantic disposition rewrite parent mismatch: {operation_id}"
+        )
+    if not git_is_ancestor(rewrite_commit, base_revision):
+        raise ValueError(
+            f"semantic disposition rewrite is not an ancestor: {operation_id}"
+        )
+    parent_source = git_blob(parent_commit, source)
+    result_source = git_blob(rewrite_commit, source)
+    expected_transition = {
+        "commit": rewrite_commit,
+        "parent_commit": parent_commit,
+        "parent_source": {
+            "git_blob": git_blob_id(parent_source),
+            "bytes": len(parent_source),
+            "sha256": sha256(parent_source),
+        },
+        "result_source": {
+            "git_blob": git_blob_id(result_source),
+            "bytes": len(result_source),
+            "sha256": sha256(result_source),
+        },
+        "parent_counts": {
+            "old": parent_source.count(old),
+            "replacement": parent_source.count(replacement),
+            "evidence": parent_source.count(evidence),
+        },
+        "result_counts": {
+            "old": result_source.count(old),
+            "replacement": result_source.count(replacement),
+            "evidence": result_source.count(evidence),
+        },
+    }
+    if transition != expected_transition:
+        raise ValueError(
+            f"semantic disposition rewrite transition mismatch: {operation_id}"
+        )
+    if (
+        expected_transition["parent_counts"]
+        != {"old": 1, "replacement": 0, "evidence": 0}
+        or expected_transition["result_counts"]
+        != {"old": 0, "replacement": 0, "evidence": 1}
+    ):
+        raise ValueError(
+            f"semantic disposition rewrite does not prove the transition: {operation_id}"
+        )
+
+    expected_base = {
+        "git_blob": git_blob_id(current),
+        "bytes": len(current),
+        "sha256": sha256(current),
+        "old_count": current.count(old),
+        "replacement_count": current.count(replacement),
+        "evidence_count": current.count(evidence),
+    }
+    if disposition.get("composition_base_source") != expected_base:
+        raise ValueError(
+            f"semantic disposition cumulative source mismatch: {operation_id}"
+        )
+    if expected_base["old_count"] != 0 or expected_base["evidence_count"] != 1:
+        raise ValueError(
+            f"semantic disposition is not satisfied in the base: {operation_id}"
+        )
+
+    base_offset = current.find(evidence)
+    rewrite_offset = result_source.find(evidence)
+    expected_evidence = {
+        "encoding": "utf-8",
+        "text": evidence_record["text"],
+        "bytes": len(evidence),
+        "sha256": sha256(evidence),
+        "occurrence_count": 1,
+        "rewrite": {
+            "byte_offset": rewrite_offset,
+            "line": result_source[:rewrite_offset].count(b"\n") + 1,
+        },
+        "base": {
+            "byte_offset": base_offset,
+            "line": current[:base_offset].count(b"\n") + 1,
+        },
+    }
+    if evidence_record != expected_evidence:
+        raise ValueError(
+            f"semantic disposition evidence binding mismatch: {operation_id}"
+        )
+
+    assertions = disposition.get("semantic_assertions")
+    if not isinstance(assertions, list) or not assertions:
+        raise ValueError(f"semantic disposition lacks assertions: {operation_id}")
+    evidence_text = evidence_record["text"]
+    for assertion in assertions:
+        if (
+            not isinstance(assertion, dict)
+            or not isinstance(assertion.get("text"), str)
+            or not isinstance(assertion.get("occurrence_count"), int)
+            or assertion.get("scope") != "positive_evidence"
+        ):
+            raise ValueError(
+                f"invalid semantic disposition assertion: {operation_id}"
+            )
+        if evidence_text.count(assertion["text"]) != assertion["occurrence_count"]:
+            raise ValueError(
+                f"semantic disposition assertion mismatch: {operation_id}"
+            )
+
+    return dict(disposition)
+
+
 def rebase_operations(
     authority: bytes,
     current: bytes,
     operations: list[dict],
     preapplied_operations: list[dict] | None = None,
+    semantic_dispositions: dict[str, dict] | None = None,
+    semantic_disposition_operations: list[dict] | None = None,
+    base_revision: str | None = None,
 ) -> list[dict]:
     """Map authority-bound operations through unchanged line blocks in current.
 
@@ -168,6 +458,16 @@ def rebase_operations(
                 if preapplied_operations is not None:
                     preapplied_operations.append(dict(operation))
                 continue
+            disposition = (semantic_dispositions or {}).get(
+                operation["operation_id"]
+            )
+            if disposition is not None and base_revision is not None:
+                validate_semantic_disposition(
+                    operation, disposition, authority, current, base_revision
+                )
+                if semantic_disposition_operations is not None:
+                    semantic_disposition_operations.append(dict(operation))
+                continue
             raise ValueError(
                 "operation does not map through exactly one unchanged region: "
                 f"{operation['operation_id']}"
@@ -183,6 +483,16 @@ def rebase_operations(
             if exact_preapplied(operation):
                 if preapplied_operations is not None:
                     preapplied_operations.append(dict(operation))
+                continue
+            disposition = (semantic_dispositions or {}).get(
+                operation["operation_id"]
+            )
+            if disposition is not None and base_revision is not None:
+                validate_semantic_disposition(
+                    operation, disposition, authority, current, base_revision
+                )
+                if semantic_disposition_operations is not None:
+                    semantic_disposition_operations.append(dict(operation))
                 continue
             raise ValueError(f"rebased preimage mismatch: {operation['operation_id']}")
         rebased.append(mapped)
@@ -360,8 +670,12 @@ def main() -> int:
         parser.error("target rounds must strictly extend the existing sequence")
 
     authorities, grouped, round_reports = collect_projection(target)
+    semantic_dispositions, semantic_dispositions_sha256 = (
+        load_semantic_dispositions(args.base_revision)
+    )
     existing_set = set(existing)
     prepared: dict[str, dict] = {}
+    consumed_semantic_disposition_ids: list[str] = []
 
     for source, operations in grouped.items():
         ordered = sorted(
@@ -410,6 +724,7 @@ def main() -> int:
             if operation.get("supersedes_operation_id") is not None
         ]
         preapplied_operations: list[dict] = []
+        semantic_disposition_operations: list[dict] = []
         if current_blob == previous_blob:
             # The checked cumulative source is the exact effective projection of
             # the prior rounds.  Recompute it from the immutable authority using
@@ -506,8 +821,15 @@ def main() -> int:
                         if operation["operation_id"] in new_active_ids
                     ],
                     preapplied_operations,
+                    semantic_dispositions,
+                    semantic_disposition_operations,
+                    args.base_revision,
                 )
                 projection = apply_operations(current, rebased)
+        consumed_semantic_disposition_ids.extend(
+            operation["operation_id"]
+            for operation in semantic_disposition_operations
+        )
         projection_blob = git_blob_id(projection)
         if current_blob == previous_blob and projection != authority_projection:
             raise ValueError(f"direct projection and rebased composition differ: {source}")
@@ -527,8 +849,19 @@ def main() -> int:
             "new_operations": new_operations,
             "rebased_operations": rebased,
             "preapplied_operations": preapplied_operations,
+            "semantic_disposition_operations": semantic_disposition_operations,
             "superseded_operation_ids": sorted(superseded_ids),
         }
+
+    applicable_semantic_disposition_ids = {
+        operation["operation_id"]
+        for item in prepared.values()
+        for operation in item["new_operations"]
+        if operation["operation_id"] in semantic_dispositions
+    }
+    verify_semantic_disposition_consumption(
+        applicable_semantic_disposition_ids, consumed_semantic_disposition_ids
+    )
 
     temporary_paths: dict[str, Path] = {}
     try:
@@ -604,6 +937,10 @@ def main() -> int:
                     operation["operation_id"]
                     for operation in item["preapplied_operations"]
                 ],
+                "semantic_disposition_operation_ids": [
+                    operation["operation_id"]
+                    for operation in item["semantic_disposition_operations"]
+                ],
                 "written": args.write
                 and item["current_blob"] != item["projection_blob"],
                 "matches_target_after": current_after_blob == item["projection_blob"],
@@ -632,6 +969,19 @@ def main() -> int:
             for item in prepared.values()
             for operation in item["preapplied_operations"]
         ),
+        "semantic_dispositions": {
+            "path": (
+                str(SEMANTIC_DISPOSITIONS_PATH.relative_to(ROOT)).replace(
+                    "\\", "/"
+                )
+                if semantic_dispositions_sha256 is not None
+                else None
+            ),
+            "sha256": semantic_dispositions_sha256,
+            "consumed_operation_ids": sorted(
+                consumed_semantic_disposition_ids
+            ),
+        },
         "overlays": round_reports,
         "sources": source_reports,
     }
