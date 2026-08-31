@@ -26,9 +26,10 @@ jobs:
       - name: Validate unified source, registry, and documentation
         shell: bash
         run: |
+          release_receipt="$(python -c 'from tools.validate_unified_repository import CURRENT_RELEASE_RECEIPT; print(CURRENT_RELEASE_RECEIPT)')"
           if test "${GITHUB_EVENT_NAME}" = push \
             && test "${GITHUB_REF}" = refs/heads/main \
-            && test -f validation/stacks-errata-a04446e-r30-release-2026-08-29.json; then
+            && test -f "${release_receipt}"; then
             python tools/validate_unified_repository.py
           else
             python tools/validate_unified_repository.py --pre-publication

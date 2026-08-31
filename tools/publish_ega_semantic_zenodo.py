@@ -73,7 +73,10 @@ EXPECTED_ASSETS: dict[str, tuple[int, str]] = {
 }
 
 MUTATED_METADATA_KEYS = {"access_right", "description", "title", "version"}
-VOLATILE_DRAFT_METADATA_KEYS = {"doi", "prereserve_doi"}
+# Zenodo assigns a fresh publication date to every new-version draft.  Treat
+# that server-owned value as volatile while continuing to reject drift in all
+# inherited project metadata.
+VOLATILE_DRAFT_METADATA_KEYS = {"doi", "prereserve_doi", "publication_date"}
 PUBLIC_STABLE_METADATA_KEYS = (
     "communities",
     "contributors",

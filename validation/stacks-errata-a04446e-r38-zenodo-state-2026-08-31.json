@@ -1,0 +1,673 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-errata-zenodo-state/v1",
+  "created_utc": "2026-08-31T14:21:40.106571+00:00",
+  "updated_utc": "2026-08-31T15:07:29.271149+00:00",
+  "status": "verified",
+  "stage": "anonymous_public_readback_complete",
+  "transaction": {
+    "predecessor_record_id": 22182175,
+    "concept_record_id": 22135180,
+    "concept_doi": "10.5281/zenodo.22135180",
+    "version": "R38-2026-08-31",
+    "release": "R38-2026-08-31",
+    "title": "Unofficial Stacks Project AI Drafts — validated R38 checkpoint"
+  },
+  "predecessor": {
+    "doi": "10.5281/zenodo.22182175",
+    "inventory": [
+      {
+        "remote_filename": "README.md",
+        "bytes": 2794,
+        "md5": "FF20F86152D8F93F37024EAFDD287F2F"
+      },
+      {
+        "remote_filename": "RELEASE.json",
+        "bytes": 12699,
+        "md5": "EA90C4877AAC224D9CE6F3A9490EF877"
+      },
+      {
+        "remote_filename": "SHA256SUMS.txt",
+        "bytes": 529,
+        "md5": "0F8DDEF598DB0EBA255487A421F0145A"
+      },
+      {
+        "remote_filename": "unofficial-ai-integrated-stacks-project-ega-i-6.6.3-semantic-pdfs.zip",
+        "bytes": 21000346,
+        "md5": "44D6F5D44708975EEE68207270B7747A"
+      },
+      {
+        "remote_filename": "unofficial-ai-integrated-stacks-project-ega-i-6.6.3-semantic-source-f1b8d56b.zip",
+        "bytes": 161340724,
+        "md5": "8DA7097919FC49A88D907B307B01F8DC"
+      },
+      {
+        "remote_filename": "unofficial-ai-integrated-stacks-project-ega-i-6.6.3-semantic-validation.zip",
+        "bytes": 47363,
+        "md5": "034948B13662566CAD745E49E53B9416"
+      },
+      {
+        "remote_filename": "unofficial-ai-integrated-stacks-project-r33-pdfs.zip",
+        "bytes": 21812329,
+        "md5": "A8AD00773BEA92722CEC0BAC0AFC0E3C"
+      },
+      {
+        "remote_filename": "unofficial-ai-integrated-stacks-project-r33-source-1c90a67e.zip",
+        "bytes": 162145484,
+        "md5": "3E465456933EA6288E87AA6B19D8EA10"
+      },
+      {
+        "remote_filename": "unofficial-ai-integrated-stacks-project-r33-validation.zip",
+        "bytes": 36483,
+        "md5": "F9FE9679085BCCBD2C64275B3193C287"
+      }
+    ]
+  },
+  "local_assets": [
+    {
+      "remote_filename": "README.md",
+      "bytes": 2737,
+      "md5": "A8A31BC6188B664E18B26D237FC385DF",
+      "sha256": "6A7BA7B96F415146EE751727E866207CD8D0E0DBADB4189F37C386A303D2DCE0"
+    },
+    {
+      "remote_filename": "RELEASE.json",
+      "bytes": 19053,
+      "md5": "F398541BD4E6B8A6930B096E3C85E0AE",
+      "sha256": "27586DEAB8725F980E4884EF244C9451F0436500CD036AA88B1E6BF77B64E4F4"
+    },
+    {
+      "remote_filename": "SHA256SUMS.txt",
+      "bytes": 517,
+      "md5": "A66A2517CE68C1F05361B077239319CC",
+      "sha256": "FFAC32724D55B786476BA7A887D262BD5A9529CDEA526B1FB2DDFB4184A203DA"
+    },
+    {
+      "remote_filename": "unofficial-stacks-project-ai-drafts-r38-pdfs.zip",
+      "bytes": 23828254,
+      "md5": "FD5E5D315643891117453E149BC6CF47",
+      "sha256": "5A32914775CB8ECAE13158299AD8AE4D9FECAF76C3C1BF40A4E3F9B66AE54B95",
+      "zip": {
+        "status": "PASS",
+        "entry_count": 30,
+        "file_count": 30,
+        "member_tuple_set_sha256": "B60AA4DD8EFBA051EF10D6127A6F7A428C8567B95C02663CB2EC2D9EDF7F95AE"
+      }
+    },
+    {
+      "remote_filename": "unofficial-stacks-project-ai-drafts-r38-source-218d2d8b.zip",
+      "bytes": 169072988,
+      "md5": "475A3E148F3CE5BF77585514A0AA3D6C",
+      "sha256": "05B345BABB363F4E8071FBA0E7F54E8DF56272CB828E351DC3926C238BC75CD7",
+      "zip": {
+        "status": "PASS",
+        "entry_count": 2861,
+        "file_count": 2509,
+        "member_tuple_set_sha256": "795EE0FA37EAAB91BBFF5661BA0033BBB82C481226A41D4BF21D5A29FB6DFCBD"
+      }
+    },
+    {
+      "remote_filename": "unofficial-stacks-project-ai-drafts-r38-validation.zip",
+      "bytes": 36919,
+      "md5": "6B416EDB5558113CDC2929F8BAD3F8D9",
+      "sha256": "CD55408E3EEC0A6D32B0F4E4D003E0D43862B0849CCC22EDE0D6DF6872CAFE67",
+      "zip": {
+        "status": "PASS",
+        "entry_count": 6,
+        "file_count": 6,
+        "member_tuple_set_sha256": "7BF463F1EB77E7EC024AA664BAC33F0750014D674454FA9CA3C648EEF1F20C63"
+      }
+    }
+  ],
+  "inherited_assets": [
+    {
+      "remote_filename": "unofficial-ai-integrated-stacks-project-ega-i-6.6.3-semantic-pdfs.zip",
+      "bytes": 21000346,
+      "md5": "44D6F5D44708975EEE68207270B7747A",
+      "sha256": "04B67B36F39AB596E14C9741352F503E2C787F1E41AEEDB3097D5B858BDA2F26",
+      "zip": {
+        "status": "PASS",
+        "entry_count": 27,
+        "file_count": 27,
+        "member_tuple_set_sha256": "4093700B2996BA62FED6CDE8989E5EF72DE16F8EC508D9DF6A936484F371E6F4"
+      }
+    },
+    {
+      "remote_filename": "unofficial-ai-integrated-stacks-project-ega-i-6.6.3-semantic-source-f1b8d56b.zip",
+      "bytes": 161340724,
+      "md5": "8DA7097919FC49A88D907B307B01F8DC",
+      "sha256": "48723E1936B7DA9AD25CC83306BCF33AEDD4DB453F255A453ED6EFBB9D9D22F9",
+      "zip": {
+        "status": "PASS",
+        "entry_count": 2597,
+        "file_count": 2288,
+        "member_tuple_set_sha256": "D4A239126B7866ACE0BE7F89449A991895E5822A6AE991EB65AC4C809D56C798"
+      }
+    },
+    {
+      "remote_filename": "unofficial-ai-integrated-stacks-project-ega-i-6.6.3-semantic-validation.zip",
+      "bytes": 47363,
+      "md5": "034948B13662566CAD745E49E53B9416",
+      "sha256": "1A4BBA4E9BDE4A2FD57F5125788C0900885FFE7F529D064B204112BD8EB248E7",
+      "zip": {
+        "status": "PASS",
+        "entry_count": 7,
+        "file_count": 7,
+        "member_tuple_set_sha256": "388502763151208ABB6DB4F2B6270DDC8D08868059AFAB4F23AE5FB7A4DBD2B5"
+      }
+    },
+    {
+      "remote_filename": "unofficial-ai-integrated-stacks-project-r33-pdfs.zip",
+      "bytes": 21812329,
+      "md5": "A8AD00773BEA92722CEC0BAC0AFC0E3C",
+      "sha256": "62663F72B1F4210F42A48C64D746E5F20758CA3DCA949543C44F37FC793A9794",
+      "zip": {
+        "status": "PASS",
+        "entry_count": 28,
+        "file_count": 28,
+        "member_tuple_set_sha256": "E4BC22C765AD7451FF18170D3BE45DB07ECA9F9FD6F7233AA98EC0289334C24D"
+      }
+    },
+    {
+      "remote_filename": "unofficial-ai-integrated-stacks-project-r33-source-1c90a67e.zip",
+      "bytes": 162145484,
+      "md5": "3E465456933EA6288E87AA6B19D8EA10",
+      "sha256": "6D057CC2A0C28760E197BA4AB4AB90024C4C3DD47C7C43FBFF9000B8DCB5291B",
+      "zip": {
+        "status": "PASS",
+        "entry_count": 2643,
+        "file_count": 2325,
+        "member_tuple_set_sha256": "1CDA7E853AFD113C8DA49D970EA2E803EF17ED6456A007B22D38B4A608410BB9"
+      }
+    },
+    {
+      "remote_filename": "unofficial-ai-integrated-stacks-project-r33-validation.zip",
+      "bytes": 36483,
+      "md5": "F9FE9679085BCCBD2C64275B3193C287",
+      "sha256": "FD40B3B98214B87C040733ED5BF0E0DFCFF59F3CA9E42B2A97BF9669E66BC66F",
+      "zip": {
+        "status": "PASS",
+        "entry_count": 7,
+        "file_count": 7,
+        "member_tuple_set_sha256": "D93227605C38F257E01DE1A28162D8DB145ED599E65517B4A6A85F798B1EE473"
+      }
+    }
+  ],
+  "collisions": [
+    {
+      "remote_filename": "README.md",
+      "disposition": "replace_document"
+    },
+    {
+      "remote_filename": "RELEASE.json",
+      "disposition": "replace_document"
+    },
+    {
+      "remote_filename": "SHA256SUMS.txt",
+      "disposition": "replace_document"
+    }
+  ],
+  "expected_final_inventory": [
+    {
+      "remote_filename": "README.md",
+      "bytes": 2737,
+      "md5": "A8A31BC6188B664E18B26D237FC385DF",
+      "sha256": "6A7BA7B96F415146EE751727E866207CD8D0E0DBADB4189F37C386A303D2DCE0",
+      "origin": "local"
+    },
+    {
+      "remote_filename": "RELEASE.json",
+      "bytes": 19053,
+      "md5": "F398541BD4E6B8A6930B096E3C85E0AE",
+      "sha256": "27586DEAB8725F980E4884EF244C9451F0436500CD036AA88B1E6BF77B64E4F4",
+      "origin": "local"
+    },
+    {
+      "remote_filename": "SHA256SUMS.txt",
+      "bytes": 517,
+      "md5": "A66A2517CE68C1F05361B077239319CC",
+      "sha256": "FFAC32724D55B786476BA7A887D262BD5A9529CDEA526B1FB2DDFB4184A203DA",
+      "origin": "local"
+    },
+    {
+      "remote_filename": "unofficial-ai-integrated-stacks-project-ega-i-6.6.3-semantic-pdfs.zip",
+      "bytes": 21000346,
+      "md5": "44D6F5D44708975EEE68207270B7747A",
+      "sha256": "04B67B36F39AB596E14C9741352F503E2C787F1E41AEEDB3097D5B858BDA2F26",
+      "zip": {
+        "status": "PASS",
+        "entry_count": 27,
+        "file_count": 27,
+        "member_tuple_set_sha256": "4093700B2996BA62FED6CDE8989E5EF72DE16F8EC508D9DF6A936484F371E6F4"
+      },
+      "origin": "inherited"
+    },
+    {
+      "remote_filename": "unofficial-ai-integrated-stacks-project-ega-i-6.6.3-semantic-source-f1b8d56b.zip",
+      "bytes": 161340724,
+      "md5": "8DA7097919FC49A88D907B307B01F8DC",
+      "sha256": "48723E1936B7DA9AD25CC83306BCF33AEDD4DB453F255A453ED6EFBB9D9D22F9",
+      "zip": {
+        "status": "PASS",
+        "entry_count": 2597,
+        "file_count": 2288,
+        "member_tuple_set_sha256": "D4A239126B7866ACE0BE7F89449A991895E5822A6AE991EB65AC4C809D56C798"
+      },
+      "origin": "inherited"
+    },
+    {
+      "remote_filename": "unofficial-ai-integrated-stacks-project-ega-i-6.6.3-semantic-validation.zip",
+      "bytes": 47363,
+      "md5": "034948B13662566CAD745E49E53B9416",
+      "sha256": "1A4BBA4E9BDE4A2FD57F5125788C0900885FFE7F529D064B204112BD8EB248E7",
+      "zip": {
+        "status": "PASS",
+        "entry_count": 7,
+        "file_count": 7,
+        "member_tuple_set_sha256": "388502763151208ABB6DB4F2B6270DDC8D08868059AFAB4F23AE5FB7A4DBD2B5"
+      },
+      "origin": "inherited"
+    },
+    {
+      "remote_filename": "unofficial-ai-integrated-stacks-project-r33-pdfs.zip",
+      "bytes": 21812329,
+      "md5": "A8AD00773BEA92722CEC0BAC0AFC0E3C",
+      "sha256": "62663F72B1F4210F42A48C64D746E5F20758CA3DCA949543C44F37FC793A9794",
+      "zip": {
+        "status": "PASS",
+        "entry_count": 28,
+        "file_count": 28,
+        "member_tuple_set_sha256": "E4BC22C765AD7451FF18170D3BE45DB07ECA9F9FD6F7233AA98EC0289334C24D"
+      },
+      "origin": "inherited"
+    },
+    {
+      "remote_filename": "unofficial-ai-integrated-stacks-project-r33-source-1c90a67e.zip",
+      "bytes": 162145484,
+      "md5": "3E465456933EA6288E87AA6B19D8EA10",
+      "sha256": "6D057CC2A0C28760E197BA4AB4AB90024C4C3DD47C7C43FBFF9000B8DCB5291B",
+      "zip": {
+        "status": "PASS",
+        "entry_count": 2643,
+        "file_count": 2325,
+        "member_tuple_set_sha256": "1CDA7E853AFD113C8DA49D970EA2E803EF17ED6456A007B22D38B4A608410BB9"
+      },
+      "origin": "inherited"
+    },
+    {
+      "remote_filename": "unofficial-ai-integrated-stacks-project-r33-validation.zip",
+      "bytes": 36483,
+      "md5": "F9FE9679085BCCBD2C64275B3193C287",
+      "sha256": "FD40B3B98214B87C040733ED5BF0E0DFCFF59F3CA9E42B2A97BF9669E66BC66F",
+      "zip": {
+        "status": "PASS",
+        "entry_count": 7,
+        "file_count": 7,
+        "member_tuple_set_sha256": "D93227605C38F257E01DE1A28162D8DB145ED599E65517B4A6A85F798B1EE473"
+      },
+      "origin": "inherited"
+    },
+    {
+      "remote_filename": "unofficial-stacks-project-ai-drafts-r38-pdfs.zip",
+      "bytes": 23828254,
+      "md5": "FD5E5D315643891117453E149BC6CF47",
+      "sha256": "5A32914775CB8ECAE13158299AD8AE4D9FECAF76C3C1BF40A4E3F9B66AE54B95",
+      "zip": {
+        "status": "PASS",
+        "entry_count": 30,
+        "file_count": 30,
+        "member_tuple_set_sha256": "B60AA4DD8EFBA051EF10D6127A6F7A428C8567B95C02663CB2EC2D9EDF7F95AE"
+      },
+      "origin": "local"
+    },
+    {
+      "remote_filename": "unofficial-stacks-project-ai-drafts-r38-source-218d2d8b.zip",
+      "bytes": 169072988,
+      "md5": "475A3E148F3CE5BF77585514A0AA3D6C",
+      "sha256": "05B345BABB363F4E8071FBA0E7F54E8DF56272CB828E351DC3926C238BC75CD7",
+      "zip": {
+        "status": "PASS",
+        "entry_count": 2861,
+        "file_count": 2509,
+        "member_tuple_set_sha256": "795EE0FA37EAAB91BBFF5661BA0033BBB82C481226A41D4BF21D5A29FB6DFCBD"
+      },
+      "origin": "local"
+    },
+    {
+      "remote_filename": "unofficial-stacks-project-ai-drafts-r38-validation.zip",
+      "bytes": 36919,
+      "md5": "6B416EDB5558113CDC2929F8BAD3F8D9",
+      "sha256": "CD55408E3EEC0A6D32B0F4E4D003E0D43862B0849CCC22EDE0D6DF6872CAFE67",
+      "zip": {
+        "status": "PASS",
+        "entry_count": 6,
+        "file_count": 6,
+        "member_tuple_set_sha256": "7BF463F1EB77E7EC024AA664BAC33F0750014D674454FA9CA3C648EEF1F20C63"
+      },
+      "origin": "local"
+    }
+  ],
+  "preserved_public_metadata": {
+    "creators": [
+      {
+        "name": "Codex AI Cooperative",
+        "affiliation": null
+      }
+    ],
+    "license": {
+      "id": "gfdl-1.2-only"
+    }
+  },
+  "baseline_metadata": {
+    "title": "Unofficial AI-Integrated Stacks Project — validated R33 checkpoint",
+    "publication_date": "2026-08-31",
+    "description": "<p>This source-reproducible successor records Unofficial AI-Integrated Stacks Project — validated R33 checkpoint.</p><p>EGA integration remains partial; its exact live continuation cursor is recorded in the repository&#x27;s EGA dossier. Complete EGA integration and formal verification are not claimed.</p><p>This is independent, unofficial work. No Stacks Project affiliation, review, approval, or endorsement is claimed.</p>",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "Codex AI Cooperative",
+        "affiliation": null
+      }
+    ],
+    "keywords": [
+      "Stacks Project",
+      "algebraic geometry",
+      "errata",
+      "AI-integrated edition",
+      "mathematical knowledge commons"
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r30-2026-08-29",
+        "relation": "isIdenticalTo",
+        "resource_type": "software",
+        "scheme": "url"
+      },
+      {
+        "identifier": "https://github.com/stacks/stacks-project/commit/a04446e57ec1fbc252a871afcec7752fb2807b14",
+        "relation": "isDerivedFrom",
+        "resource_type": "software",
+        "scheme": "url"
+      },
+      {
+        "identifier": "10.5281/zenodo.22164798",
+        "relation": "isNewVersionOf",
+        "resource_type": "software",
+        "scheme": "doi"
+      }
+    ],
+    "license": "gfdl-1.2-only",
+    "imprint_publisher": "Zenodo",
+    "upload_type": "software",
+    "prereserve_doi": {
+      "doi": "10.5281/zenodo.22209811",
+      "recid": 22209811
+    }
+  },
+  "target_metadata": {
+    "title": "Unofficial Stacks Project AI Drafts — validated R38 checkpoint",
+    "publication_date": "2026-08-31",
+    "description": "<p>This source-reproducible successor records Unofficial Stacks Project AI Drafts — validated R38 checkpoint.</p><p>EGA integration remains partial; its exact live continuation cursor is recorded in the repository&#x27;s EGA dossier. Complete EGA integration and formal verification are not claimed.</p><p>This is independent, unofficial work. No Stacks Project affiliation, review, approval, or endorsement is claimed.</p>",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "Codex AI Cooperative",
+        "affiliation": null
+      }
+    ],
+    "keywords": [
+      "Stacks Project",
+      "algebraic geometry",
+      "errata",
+      "AI-integrated edition",
+      "mathematical knowledge commons"
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r30-2026-08-29",
+        "relation": "isIdenticalTo",
+        "resource_type": "software",
+        "scheme": "url"
+      },
+      {
+        "identifier": "https://github.com/stacks/stacks-project/commit/a04446e57ec1fbc252a871afcec7752fb2807b14",
+        "relation": "isDerivedFrom",
+        "resource_type": "software",
+        "scheme": "url"
+      },
+      {
+        "identifier": "10.5281/zenodo.22164798",
+        "relation": "isNewVersionOf",
+        "resource_type": "software",
+        "scheme": "doi"
+      }
+    ],
+    "license": "gfdl-1.2-only",
+    "imprint_publisher": "Zenodo",
+    "upload_type": "software",
+    "prereserve_doi": {
+      "doi": "10.5281/zenodo.22209811",
+      "recid": 22209811
+    },
+    "version": "R38-2026-08-31"
+  },
+  "draft": {
+    "origin": "adopted_existing",
+    "record_id": 22209811,
+    "self_url": "https://zenodo.org/api/deposit/depositions/22209811",
+    "bucket_url": "https://zenodo.org/api/files/a134c32c-a355-44f7-a5c3-c747d040dde8",
+    "publish_url": "https://zenodo.org/api/deposit/depositions/22209811/actions/publish"
+  },
+  "draft_actions": [
+    {
+      "remote_filename": "README.md",
+      "action": "replaced_document",
+      "removed_bytes": 2794,
+      "removed_md5": "FF20F86152D8F93F37024EAFDD287F2F"
+    },
+    {
+      "remote_filename": "unofficial-ai-integrated-stacks-project-r33-source-1c90a67e.zip",
+      "action": "kept_exact"
+    },
+    {
+      "remote_filename": "unofficial-ai-integrated-stacks-project-ega-i-6.6.3-semantic-source-f1b8d56b.zip",
+      "action": "kept_exact"
+    },
+    {
+      "remote_filename": "unofficial-ai-integrated-stacks-project-ega-i-6.6.3-semantic-pdfs.zip",
+      "action": "kept_exact"
+    },
+    {
+      "remote_filename": "unofficial-ai-integrated-stacks-project-ega-i-6.6.3-semantic-validation.zip",
+      "action": "kept_exact"
+    },
+    {
+      "remote_filename": "RELEASE.json",
+      "action": "replaced_document",
+      "removed_bytes": 12699,
+      "removed_md5": "EA90C4877AAC224D9CE6F3A9490EF877"
+    },
+    {
+      "remote_filename": "SHA256SUMS.txt",
+      "action": "replaced_document",
+      "removed_bytes": 529,
+      "removed_md5": "0F8DDEF598DB0EBA255487A421F0145A"
+    },
+    {
+      "remote_filename": "unofficial-ai-integrated-stacks-project-r33-pdfs.zip",
+      "action": "kept_exact"
+    },
+    {
+      "remote_filename": "unofficial-ai-integrated-stacks-project-r33-validation.zip",
+      "action": "kept_exact"
+    },
+    {
+      "remote_filename": "README.md",
+      "action": "uploaded_local_asset"
+    },
+    {
+      "remote_filename": "RELEASE.json",
+      "action": "uploaded_local_asset"
+    },
+    {
+      "remote_filename": "SHA256SUMS.txt",
+      "action": "uploaded_local_asset"
+    },
+    {
+      "remote_filename": "unofficial-stacks-project-ai-drafts-r38-pdfs.zip",
+      "action": "uploaded_local_asset"
+    },
+    {
+      "remote_filename": "unofficial-stacks-project-ai-drafts-r38-source-218d2d8b.zip",
+      "action": "uploaded_local_asset"
+    },
+    {
+      "remote_filename": "unofficial-stacks-project-ai-drafts-r38-validation.zip",
+      "action": "uploaded_local_asset"
+    }
+  ],
+  "authenticated_draft_readback": [
+    {
+      "remote_filename": "README.md",
+      "bytes": 2737,
+      "md5": "A8A31BC6188B664E18B26D237FC385DF",
+      "sha256": "6A7BA7B96F415146EE751727E866207CD8D0E0DBADB4189F37C386A303D2DCE0",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "RELEASE.json",
+      "bytes": 19053,
+      "md5": "F398541BD4E6B8A6930B096E3C85E0AE",
+      "sha256": "27586DEAB8725F980E4884EF244C9451F0436500CD036AA88B1E6BF77B64E4F4",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "SHA256SUMS.txt",
+      "bytes": 517,
+      "md5": "A66A2517CE68C1F05361B077239319CC",
+      "sha256": "FFAC32724D55B786476BA7A887D262BD5A9529CDEA526B1FB2DDFB4184A203DA",
+      "status": "PASS"
+    },
+    {
+      "remote_filename": "unofficial-ai-integrated-stacks-project-ega-i-6.6.3-semantic-pdfs.zip",
+      "bytes": 21000346,
+      "md5": "44D6F5D44708975EEE68207270B7747A",
+      "sha256": "04B67B36F39AB596E14C9741352F503E2C787F1E41AEEDB3097D5B858BDA2F26",
+      "status": "PASS",
+      "zip": {
+        "status": "PASS",
+        "entry_count": 27,
+        "file_count": 27,
+        "member_tuple_set_sha256": "4093700B2996BA62FED6CDE8989E5EF72DE16F8EC508D9DF6A936484F371E6F4"
+      }
+    },
+    {
+      "remote_filename": "unofficial-ai-integrated-stacks-project-ega-i-6.6.3-semantic-source-f1b8d56b.zip",
+      "bytes": 161340724,
+      "md5": "8DA7097919FC49A88D907B307B01F8DC",
+      "sha256": "48723E1936B7DA9AD25CC83306BCF33AEDD4DB453F255A453ED6EFBB9D9D22F9",
+      "status": "PASS",
+      "zip": {
+        "status": "PASS",
+        "entry_count": 2597,
+        "file_count": 2288,
+        "member_tuple_set_sha256": "D4A239126B7866ACE0BE7F89449A991895E5822A6AE991EB65AC4C809D56C798"
+      }
+    },
+    {
+      "remote_filename": "unofficial-ai-integrated-stacks-project-ega-i-6.6.3-semantic-validation.zip",
+      "bytes": 47363,
+      "md5": "034948B13662566CAD745E49E53B9416",
+      "sha256": "1A4BBA4E9BDE4A2FD57F5125788C0900885FFE7F529D064B204112BD8EB248E7",
+      "status": "PASS",
+      "zip": {
+        "status": "PASS",
+        "entry_count": 7,
+        "file_count": 7,
+        "member_tuple_set_sha256": "388502763151208ABB6DB4F2B6270DDC8D08868059AFAB4F23AE5FB7A4DBD2B5"
+      }
+    },
+    {
+      "remote_filename": "unofficial-ai-integrated-stacks-project-r33-pdfs.zip",
+      "bytes": 21812329,
+      "md5": "A8AD00773BEA92722CEC0BAC0AFC0E3C",
+      "sha256": "62663F72B1F4210F42A48C64D746E5F20758CA3DCA949543C44F37FC793A9794",
+      "status": "PASS",
+      "zip": {
+        "status": "PASS",
+        "entry_count": 28,
+        "file_count": 28,
+        "member_tuple_set_sha256": "E4BC22C765AD7451FF18170D3BE45DB07ECA9F9FD6F7233AA98EC0289334C24D"
+      }
+    },
+    {
+      "remote_filename": "unofficial-ai-integrated-stacks-project-r33-source-1c90a67e.zip",
+      "bytes": 162145484,
+      "md5": "3E465456933EA6288E87AA6B19D8EA10",
+      "sha256": "6D057CC2A0C28760E197BA4AB4AB90024C4C3DD47C7C43FBFF9000B8DCB5291B",
+      "status": "PASS",
+      "zip": {
+        "status": "PASS",
+        "entry_count": 2643,
+        "file_count": 2325,
+        "member_tuple_set_sha256": "1CDA7E853AFD113C8DA49D970EA2E803EF17ED6456A007B22D38B4A608410BB9"
+      }
+    },
+    {
+      "remote_filename": "unofficial-ai-integrated-stacks-project-r33-validation.zip",
+      "bytes": 36483,
+      "md5": "F9FE9679085BCCBD2C64275B3193C287",
+      "sha256": "FD40B3B98214B87C040733ED5BF0E0DFCFF59F3CA9E42B2A97BF9669E66BC66F",
+      "status": "PASS",
+      "zip": {
+        "status": "PASS",
+        "entry_count": 7,
+        "file_count": 7,
+        "member_tuple_set_sha256": "D93227605C38F257E01DE1A28162D8DB145ED599E65517B4A6A85F798B1EE473"
+      }
+    },
+    {
+      "remote_filename": "unofficial-stacks-project-ai-drafts-r38-pdfs.zip",
+      "bytes": 23828254,
+      "md5": "FD5E5D315643891117453E149BC6CF47",
+      "sha256": "5A32914775CB8ECAE13158299AD8AE4D9FECAF76C3C1BF40A4E3F9B66AE54B95",
+      "status": "PASS",
+      "zip": {
+        "status": "PASS",
+        "entry_count": 30,
+        "file_count": 30,
+        "member_tuple_set_sha256": "B60AA4DD8EFBA051EF10D6127A6F7A428C8567B95C02663CB2EC2D9EDF7F95AE"
+      }
+    },
+    {
+      "remote_filename": "unofficial-stacks-project-ai-drafts-r38-source-218d2d8b.zip",
+      "bytes": 169072988,
+      "md5": "475A3E148F3CE5BF77585514A0AA3D6C",
+      "sha256": "05B345BABB363F4E8071FBA0E7F54E8DF56272CB828E351DC3926C238BC75CD7",
+      "status": "PASS",
+      "zip": {
+        "status": "PASS",
+        "entry_count": 2861,
+        "file_count": 2509,
+        "member_tuple_set_sha256": "795EE0FA37EAAB91BBFF5661BA0033BBB82C481226A41D4BF21D5A29FB6DFCBD"
+      }
+    },
+    {
+      "remote_filename": "unofficial-stacks-project-ai-drafts-r38-validation.zip",
+      "bytes": 36919,
+      "md5": "6B416EDB5558113CDC2929F8BAD3F8D9",
+      "sha256": "CD55408E3EEC0A6D32B0F4E4D003E0D43862B0849CCC22EDE0D6DF6872CAFE67",
+      "status": "PASS",
+      "zip": {
+        "status": "PASS",
+        "entry_count": 6,
+        "file_count": 6,
+        "member_tuple_set_sha256": "7BF463F1EB77E7EC024AA664BAC33F0750014D674454FA9CA3C648EEF1F20C63"
+      }
+    }
+  ],
+  "published_record_id": 22209811,
+  "receipt_identity": {
+    "bytes": 18515,
+    "sha256": "AC2D52FEB35918A28115193E4E51A11B193A99AEB9F155725F6B76E52FE30B20"
+  }
+}

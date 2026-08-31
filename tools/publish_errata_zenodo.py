@@ -60,9 +60,16 @@ STABLE_METADATA_KEYS = (
     "upload_type",
 )
 MUTATED_METADATA_KEYS = frozenset({"access_right", "description", "title", "version"})
-VOLATILE_DRAFT_METADATA_KEYS = frozenset({"doi", "prereserve_doi"})
+# Zenodo assigns a fresh publication date when it creates a new-version draft.
+# That server-owned value legitimately differs from the predecessor before any
+# client mutation, just like the draft DOI fields.
+VOLATILE_DRAFT_METADATA_KEYS = frozenset(
+    {"doi", "prereserve_doi", "publication_date"}
+)
 SAFE_VERSION_RE = re.compile(r"[A-Za-z0-9][A-Za-z0-9._+() -]{0,127}")
 HEX40_RE = re.compile(r"[0-9a-fA-F]{40}")
+TRANSIENT_GET_HTTP_CODES = frozenset({502, 503, 504})
+TRANSIENT_GET_RETRY_DELAYS = (2.0, 5.0)
 
 
 def utc_now() -> str:
@@ -354,16 +361,26 @@ def request_json(
     if payload is not None:
         headers["Content-Type"] = "application/json"
         body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
-    request = urllib.request.Request(url, data=body, headers=headers, method=method)
-    try:
-        with ZENODO_OPENER.open(request, timeout=timeout) as response:
-            raw = response.read()
-            status = response.status
-    except urllib.error.HTTPError as error:
-        raw_error = error.read().decode("utf-8", errors="replace")
-        raise RuntimeError(
-            f"Zenodo request failed with HTTP {error.code}: {raw_error[:1600]}"
-        ) from error
+    get_only = method.upper() == "GET" and payload is None
+    for attempt in range(len(TRANSIENT_GET_RETRY_DELAYS) + 1):
+        request = urllib.request.Request(url, data=body, headers=headers, method=method)
+        try:
+            with ZENODO_OPENER.open(request, timeout=timeout) as response:
+                raw = response.read()
+                status = response.status
+            break
+        except urllib.error.HTTPError as error:
+            raw_error = error.read().decode("utf-8", errors="replace")
+            if (
+                get_only
+                and error.code in TRANSIENT_GET_HTTP_CODES
+                and attempt < len(TRANSIENT_GET_RETRY_DELAYS)
+            ):
+                time.sleep(TRANSIENT_GET_RETRY_DELAYS[attempt])
+                continue
+            raise RuntimeError(
+                f"Zenodo request failed with HTTP {error.code}: {raw_error[:1600]}"
+            ) from error
     if status not in expected:
         raise RuntimeError(f"Unexpected Zenodo HTTP status {status}")
     if not raw:
@@ -402,30 +419,38 @@ def downloaded_file(
     headers: dict[str, str] = {}
     if token is not None:
         headers["Authorization"] = f"Bearer {token}"
-    request = urllib.request.Request(url, headers=headers)
     descriptor, temporary_name = tempfile.mkstemp(prefix="stacks-zenodo-readback-")
     os.close(descriptor)
     temporary = Path(temporary_name)
-    total = 0
-    sha256 = hashlib.sha256()
-    md5 = hashlib.md5()
     try:
-        try:
-            with ZENODO_OPENER.open(request, timeout=900) as response, temporary.open(
-                "wb"
-            ) as output:
-                while True:
-                    chunk = response.read(1024 * 1024)
-                    if not chunk:
-                        break
-                    output.write(chunk)
-                    total += len(chunk)
-                    sha256.update(chunk)
-                    md5.update(chunk)
-        except urllib.error.HTTPError as error:
-            raise RuntimeError(
-                f"Zenodo file readback failed with HTTP {error.code}"
-            ) from error
+        for attempt in range(len(TRANSIENT_GET_RETRY_DELAYS) + 1):
+            total = 0
+            sha256 = hashlib.sha256()
+            md5 = hashlib.md5()
+            request = urllib.request.Request(url, headers=headers)
+            try:
+                with ZENODO_OPENER.open(request, timeout=900) as response, temporary.open(
+                    "wb"
+                ) as output:
+                    while True:
+                        chunk = response.read(1024 * 1024)
+                        if not chunk:
+                            break
+                        output.write(chunk)
+                        total += len(chunk)
+                        sha256.update(chunk)
+                        md5.update(chunk)
+                break
+            except urllib.error.HTTPError as error:
+                if (
+                    error.code in TRANSIENT_GET_HTTP_CODES
+                    and attempt < len(TRANSIENT_GET_RETRY_DELAYS)
+                ):
+                    time.sleep(TRANSIENT_GET_RETRY_DELAYS[attempt])
+                    continue
+                raise RuntimeError(
+                    f"Zenodo file readback failed with HTTP {error.code}"
+                ) from error
         yield temporary, total, sha256.hexdigest().upper(), md5.hexdigest().upper()
     finally:
         try:
