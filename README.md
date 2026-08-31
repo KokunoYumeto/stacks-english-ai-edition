@@ -41,7 +41,7 @@ what any particular maintainer thinks about AI.
 > proof-assistant-checked mathematics. Automated checks and AI review do not
 > certify mathematical correctness.
 
-[Read the draft PDFs](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/releases/tag/ai-integrated-stacks-r33-2026-08-30) ·
+[Read the draft PDFs](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/releases/latest) ·
 [Browse the source](chapters.tex) ·
 [Compare with Stacks](CHANGES_FROM_UPSTREAM.md) ·
 [Detailed status](STATUS.md) ·
@@ -212,8 +212,8 @@ Start with a theorem above, inspect its proof and dependencies, then compare it
 with the historical source and the upstream Stacks text. There is no expectation
 that a reader accept a result because an AI or an automated check produced it.
 
-- [Latest readable PDF/source package: R33](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/releases/tag/ai-integrated-stacks-r33-2026-08-30)
-  · [Zenodo preservation version](https://doi.org/10.5281/zenodo.22182175).
+- [Latest readable PDF/source package](https://github.com/KokunoYumeto/unofficial-stacks-project-ai-drafts/releases/latest)
+  · [Zenodo preservation lineage](https://doi.org/10.5281/zenodo.22135180).
 - [Latest EGA review checkpoint: I §6.6.3](validation/ega-i-6.6.3-semantic-checkpoint-2026-08-30.json)
   · [archived version](https://doi.org/10.5281/zenodo.22177421).
 - [Build and validation instructions](VALIDATION.md)
