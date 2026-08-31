@@ -31,13 +31,23 @@ EGA integration manifest enter the repository's root TeX tree.
   historical checkpoint, not presented as the current edition or as a release
   of this integrated Stacks repository.
 - The integrated repository's current EGA semantic checkpoint covers EGA I
-  through §6.4.13 and is public at GitHub tag
-  [`ega-i-6.4-semantic-2026-08-29`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.4-semantic-2026-08-29)
+  through §6.6.3 and advances the next semantic cursor to §6.6.4. The sealed
+  checkpoint receipt is [PASS](../validation/ega-i-6.6.3-semantic-checkpoint-2026-08-30.json)
+  (SHA-256
+  `58CC0464C1EDAC665CA72B80F8156E77773F9B983F83D76BA948551A3D15456E`). Its
+  semantic content commit is `85024a5e3456cadc79c6cde67bf1fcbbc09c48cb`;
+  the public release content commit is `f1b8d56b5f3c9999010455a38a289bce76735070`
+  at GitHub tag
+  [`ega-i-6.6.3-semantic-2026-08-30`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.6.3-semantic-2026-08-30)
   and Zenodo version DOI
-  [`10.5281/zenodo.22161051`](https://doi.org/10.5281/zenodo.22161051) under the
-  existing integrated-project concept. Its six assets are byte-matched across
-  both hosts; it changes no root TeX or PDF, and R28 remains the latest errata
-  release. The next semantic cursor is EGA I §6.5.1.
+  [`10.5281/zenodo.22177421`](https://doi.org/10.5281/zenodo.22177421) under
+  concept `10.5281/zenodo.22135180`. This is a semantic-only checkpoint: it
+  changes no root TeX, root PDF, visual-QA, authority, issue, or errata
+  registry bytes, and makes no new canon correction claim. The fixed point has
+  256 agent rows, 328 decision rows, 1,242 operational statement edges, 1,249
+  statement-map rows, 825 residual rows, 102 issue rows, and zero quarantined
+  rows. I000104 remains routed pending successor adjudication; no root theorem
+  is justified by this slice.
 - Stacks upstream base: `a04446e57ec1fbc252a871afcec7752fb2807b14`.
 - English discovery manifest: R184, 92,445 bytes, SHA-256
   `5C64ECD32FD7C5458D2599D70ED667D2CF06D95517EFFA9C6D6DCEF7626913A0`;
@@ -271,13 +281,11 @@ EGA integration manifest enter the repository's root TeX tree.
   promotion requires its own active V row. Shared, full-page, and grouped crops
   do not qualify.
 - Current statement-level frontier: direct-French review is complete through
-  EGA I 6.5.1. The active graph has 1,198 edges across 404 generated units;
-  physical append-only history has 1,205 rows. Of the active edges 1,185
-  resolve to 342 distinct existing official tags and thirteen resolve to
-  explicitly untagged local-mirror integrations. Fifty-seven rows are exact
-  full-statement equivalences. Residual history has 768 active and 793
-  physical rows, with twelve open labelled-coverage gaps. The next semantic
-  cursor is EGA I 6.5.2.
+  EGA I 6.6.3. The sealed fixed point contains 1,242 operational statement
+  edges, 1,249 statement-map rows, 825 residual rows, 328 decisions, 256
+  agent audits, 102 issue rows, and zero quarantined rows. The next semantic
+  cursor is EGA I 6.6.4; the exact source, target, and append-only bindings
+  are recorded in the [6.6.3 checkpoint receipt](../validation/ega-i-6.6.3-semantic-checkpoint-2026-08-30.json).
 
 ## State model
 
@@ -347,7 +355,34 @@ maintainer feedback remain append-only.
   direct-authority crops for source-error evidence; these are not edition
   outputs or three-surface visual certifications.
 
-### Current reviewed frontier: EGA I 6.5.1
+### Current reviewed frontier: EGA I 6.6.3
+
+The latest sealed semantic-only slice closes EGA I §6.6.3 and is bound to the
+direct-French F37ZW lines 1046--1065 and the corresponding English discovery
+lines 739--751 at pinned Stacks commit
+`a04446e57ec1fbc252a871afcec7752fb2807b14`. The complete fixed-point receipt
+is [`ega-i-6.6.3-semantic-checkpoint-2026-08-30.json`](../validation/ega-i-6.6.3-semantic-checkpoint-2026-08-30.json),
+SHA-256
+`58CC0464C1EDAC665CA72B80F8156E77773F9B983F83D76BA948551A3D15456E`.
+
+The semantic content was recorded at commit
+`85024a5e3456cadc79c6cde67bf1fcbbc09c48cb` and publicly released from
+`f1b8d56b5f3c9999010455a38a289bce76735070` under tag
+[`ega-i-6.6.3-semantic-2026-08-30`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.6.3-semantic-2026-08-30)
+and Zenodo DOI
+[`10.5281/zenodo.22177421`](https://doi.org/10.5281/zenodo.22177421). The
+checkpoint is semantic-only: root TeX and PDF, visual QA, authority, issues,
+and the errata registry are unchanged. Its exact fixed point is D000328,
+S001246--S001249, R000823--R000825, and A000256: 256 agent rows, 328 decision
+rows, 1,242 operational statement edges, 1,249 statement-map rows, 825
+residual rows, 102 issue rows, and zero quarantined rows. The exact modern
+theorem is `01T1`; `01T2`, `01T3`, `01K3`, and `01K4` retain the historical
+proof components, so no nonduplicative root theorem is added. Proposed source
+issue I000104 remains routed to successor task
+`01a047ab-fc94-7120-af1d-5701ba37aacd`, pending its independent adjudication.
+The next semantic cursor is EGA I §6.6.4.
+
+### Prior reviewed frontier: EGA I 6.5.1
 
 The local determination and realization proposition is reviewed against the
 source-closed direct-French block at lines 771--864 in admitted F37ZW and exact
@@ -796,10 +831,12 @@ tree immediately before atomic promotion, closing the reproduced concurrent-
 producer race. Independent mathematical and governance inverse audits both
 returned HARD PASS after the repairs while preserving their earlier failures.
 
-The immediate semantic work continues after direct-French EGA I 6.5.1 at
-EGA I 6.5.2. Every reviewed claim remains bound to its own historical source
+The immediate semantic work continues after direct-French EGA I §6.6.3 at
+EGA I §6.6.4. Every reviewed claim remains bound to its own historical source
 receipt; the 5.4 and 5.5 rows use F33 plus direct authority evidence rather
-than a mutable producer frontier.
+than a mutable producer frontier. The §6.6.3 fixed point is sealed by
+`ega-i-6.6.3-semantic-checkpoint-2026-08-30.json` (SHA-256
+`58CC0464C1EDAC665CA72B80F8156E77773F9B983F83D76BA948551A3D15456E`).
 The last admitted reader interface is the D48 tuple
 F37ZW/R261/B37AJ/B239/D48/DIA48T/Q37CY/Q37DB. Later D49--D63 producer
 controls remain non-admitted because their inventory aggregates are stale;

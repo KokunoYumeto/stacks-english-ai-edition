@@ -190,28 +190,27 @@ high-resolution correction-locus pages. These receipts remain authoritative
 for that immutable R22/R23 tree and are not build or publication evidence for
 the later R24 source composition.
 
-The current validated R32 fixed-point build is bound to source
-`e2c25bc25c6a650f6f4eb4069b4749fdc558163c`, tree
-`6a5a81badb3916956fd4c48378e842c5bde9ed49`. It preserves every earlier
-composed source identity while advancing `sites-modules.tex`, `fields.tex`,
-`categories.tex`, and `algebra.tex` through the 126 R31/R32 operations. Two
-independent linked-worktree builds produced exactly matching identities for all
-27 PDFs: 2,614 pages, 28,121,719 bytes, and a global fixed point on sweep four.
-Visual QA covers all 700 affected pages, including all 72 correction-locus pages at
-high resolution.
+The current validated R33 fixed-point build is bound to source
+`1c90a67eb42de28884be05abd8fb58f781aed7db`, tree
+`3c292f9a4b94162ede69d2633b1272b057a498c3`. It preserves every earlier
+composed source identity while adding the seven manifest-bound
+`spaces-morphisms.tex` operations. Two independent linked-worktree builds
+produced exactly matching identities for all 28 PDFs: 2,730 pages, 29,277,302
+bytes, and a global fixed point on sweep four. Visual QA covers all 116 affected
+pages, including five correction-locus pages at high resolution.
 
-R32 is the current public errata preservation checkpoint at content head
-`2af5664a7edcd352ebe5f776c2a190859f1ee071`, tree
-`58f1917e35781ffa028c1de4ed28b9aee232a7d7`, and tag
-[`ai-integrated-stacks-r32-2026-08-30`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r32-2026-08-30).
-Its source, 27 PDFs, and validation evidence are preserved as six current assets
-on GitHub and Zenodo version DOI
-[`10.5281/zenodo.22167418`](https://doi.org/10.5281/zenodo.22167418), under
+R33 is the current public errata preservation checkpoint at content head
+`a52883a83081348d0ea4927a03d5fd8aa036890b`, tree
+`2d686e92dacdc8e01d6c6950bf81f250e657cd8f`, and tag
+[`ai-integrated-stacks-r33-2026-08-30`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r33-2026-08-30).
+Its source, 28 PDFs, and validation evidence are preserved as six current
+assets on GitHub and Zenodo version DOI
+[`10.5281/zenodo.22182175`](https://doi.org/10.5281/zenodo.22182175), under
 concept DOI `10.5281/zenodo.22135180`, as recorded by the
-[R32 release receipt](validation/stacks-errata-a04446e-r32-release-2026-08-30.json).
+[R33 release receipt](validation/stacks-errata-a04446e-r33-release-2026-08-30.json).
 Anonymous readback matched the six current assets across both hosts and the
-three inherited R30 ZIPs preserved by Zenodo with zero mismatches; the current
-PDF inventory contains 27 artifacts, 2,614 pages, and 28,121,719 bytes.
+three inherited EGA semantic ZIPs with zero mismatches; the current PDF
+inventory contains 28 artifacts, 2,730 pages, and 29,277,302 bytes.
 
 R28 remains publicly preserved as the preceding historical tag
 [`ai-integrated-stacks-r28-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r28-2026-08-28)
@@ -241,15 +240,17 @@ archive contains 2,245 entries and binds its exact Git preimage. R26 remains
 publicly preserved as the preceding immutable historical version.
 
 The current public EGA semantic checkpoint extends the source-bound review
-through EGA I §6.4.13 and sets §6.5.1 as the next cursor. It is bound to content
-commit `00adeb291487d04070b75bd0fd87759e3c43d3d3` by annotated GitHub tag
-[`ega-i-6.4-semantic-2026-08-29`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.4-semantic-2026-08-29)
-and Zenodo version DOI [`10.5281/zenodo.22161051`](https://doi.org/10.5281/zenodo.22161051)
-under the existing concept DOI `10.5281/zenodo.22135180`. The six-asset package
-is byte-identical across GitHub and Zenodo, totals 174,783,585 bytes per host,
-and is recorded by the
-[semantic release receipt](validation/ega-i-6.4-semantic-release-2026-08-29.json).
-It changes no root TeX or PDF, and R32 remains the latest errata release.
+through EGA I §6.6.3 and sets §6.6.4 as the next cursor. It is bound to content
+commit `85024a5e3456cadc79c6cde67bf1fcbbc09c48cb` by the semantic release line
+[`ega-i-6.6.3-semantic-2026-08-30`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.6.3-semantic-2026-08-30)
+and Zenodo version DOI [`10.5281/zenodo.22177421`](https://doi.org/10.5281/zenodo.22177421)
+under the existing concept DOI `10.5281/zenodo.22135180`. The exact checkpoint
+is recorded by
+[`ega-i-6.6.3-semantic-checkpoint-2026-08-30.json`](validation/ega-i-6.6.3-semantic-checkpoint-2026-08-30.json),
+which reports 256 agent rows, 328 decision rows, 1,242 operational statement
+edges, 1,249 statement-map rows, 825 residual rows, 102 issue rows, and zero
+quarantined rows. This semantic-only checkpoint changes no root TeX or PDF;
+R33 is the latest errata release.
 
 ## Branch preservation
 
@@ -259,9 +260,9 @@ branch. Their presence is provenance, not a claim that they remain competing
 editions. The published Verdier content release at
 `4947e4a6d22971ea793e4b4bc2b09d8ab8cc04d0` remains historical evidence for
 the 22-overlay / 559-ID cutoff at `60f1d97e`. The current validated source
-composition advances the validated repository state to 31 overlays and 931
-stable IDs at R30 cutoff `256846d6`; R22 and R23 affect only
+composition advances the validated repository state to 34 overlays and 1,042
+stable IDs at R33 cutoff `acb48c7edaf9595b542b003ed360399870188b7f`; R22 and R23 affect only
 `more-algebra.tex`, R24 affects only `spaces-duality.tex`, R25 affects only
 `artin.tex`, R26 and R28 affect only `smoothing.tex`, and R27 affects only
-`modules.tex`; R29 affects only `sites-modules.tex`, and R30 affects only
-`injectives.tex`.
+`modules.tex`; R29 affects only `sites-modules.tex`, R30 affects only
+`injectives.tex`, and R33 affects only `spaces-morphisms.tex`.

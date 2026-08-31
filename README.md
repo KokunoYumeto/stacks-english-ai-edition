@@ -21,12 +21,13 @@ machine-readable validation evidence.
 [Errata registry](ai-integrated/registry/overlays.json) ·
 [Validation](VALIDATION.md) ·
 [Current composition receipt](validation/composition-current.json) ·
-[Current R32 fixed-point build: PASS](validation/stacks-errata-a04446e-r32-build-2026-08-30.json) ·
-[Current R32 visual QA: PASS](validation/stacks-errata-a04446e-r32-visual-qa-2026-08-30.json) ·
-[Current R32 reproducibility: PASS](validation/stacks-errata-a04446e-r32-reproducibility-2026-08-30.json) ·
-[Latest errata release receipt: R32 PASS](validation/stacks-errata-a04446e-r32-release-2026-08-30.json) ·
-[Latest errata preservation release: R32](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r32-2026-08-30) ·
-[Latest errata Zenodo version: R32](https://doi.org/10.5281/zenodo.22167418) ·
+[Current R33 fixed-point build: PASS](validation/stacks-errata-a04446e-r33-build-2026-08-30.json) ·
+[Current R33 visual QA: PASS](validation/stacks-errata-a04446e-r33-visual-qa-2026-08-30.json) ·
+[Current R33 reproducibility: PASS](validation/stacks-errata-a04446e-r33-reproducibility-2026-08-30.json) ·
+[Latest errata public readback: PASS](validation/stacks-errata-a04446e-r33-public-readback-2026-08-30.json) ·
+[Latest errata release receipt: R33 PASS](validation/stacks-errata-a04446e-r33-release-2026-08-30.json) ·
+[Latest errata preservation release: R33](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r33-2026-08-30) ·
+[Latest errata Zenodo version: R33](https://doi.org/10.5281/zenodo.22182175) ·
 [Latest EGA semantic checkpoint receipt: PASS](validation/ega-i-6.6.3-semantic-checkpoint-2026-08-30.json) ·
 [Latest EGA semantic GitHub release: I §6.6.3](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.6.3-semantic-2026-08-30) ·
 [Latest EGA semantic Zenodo version: I §6.6.3](https://doi.org/10.5281/zenodo.22177421) ·
@@ -72,7 +73,7 @@ or replay drift.
 | GAGA | Root chapter composed through r3; corpus review closed | All 126 units are classified and all 79 substantive units decided; the current unified `gaga.pdf` is 23 pages, while the sealed r3 dossier records its historical 22-page build | [r3 dossier](gaga_r3/STATUS.md) · [live chapter source](gaga.tex) |
 | FGA | Root additions composed and notation-normalized; corpus review closed | All 1,253 units and 1,612 term links are dispositioned; selected independently written additions are in the combined source; the fixed-point Moduli build is 83 pages | [Overview](fga/README.md) · [status](fga/status.md) |
 | EGA | Partial root-source composition; direct-source review active | Selected local additions are present in root TeX; the complete English discovery and diplomatic French editions remain separate read-only inputs; review is public through EGA I §6.6.3 and continues at §6.6.4 | [EGA dossier](ega/README.md) |
-| Errata and Verdier | Root-composed and deterministically validated through R32 | The integrated tree contains 33 overlays / 1,035 stable IDs. Its R1–R32 Stacks errata subset contains 32 batches, 1,023 correction IDs, and 1,159 exact v2 operations; R31 updates `sites-modules.tex` and R32 updates `fields.tex`, `categories.tex`, and `algebra.tex` | [Registry](ai-integrated/registry/overlays.json) · [R32 build](validation/stacks-errata-a04446e-r32-build-2026-08-30.json) · [errata evidence](ai-integrated/candidates/commons/stacks/errata/) |
+| Errata and Verdier | Root-composed and deterministically validated through R33 | The integrated tree contains 34 overlays / 1,042 stable IDs. Its R1–R33 Stacks errata subset contains 33 batches, 1,030 correction IDs, and 1,166 exact v2 operations; R33 updates `spaces-morphisms.tex` with seven manifest-bound operations | [Registry](ai-integrated/registry/overlays.json) · [R33 build](validation/stacks-errata-a04446e-r33-build-2026-08-30.json) · [R33 release receipt](validation/stacks-errata-a04446e-r33-release-2026-08-30.json) · [errata evidence](ai-integrated/candidates/commons/stacks/errata/) |
 
 “Root-composed” means that the live top-level TeX tree changed and participates
 in the unified build. “Dossier-only” means that mappings, decisions, and
@@ -123,44 +124,39 @@ Run the fast repository-level integrity gate with:
 python tools/validate_unified_repository.py --pre-publication
 ```
 
-The current validated R32 build is bound to source
-`e2c25bc25c6a650f6f4eb4069b4749fdc558163c`, tree
-`6a5a81badb3916956fd4c48378e842c5bde9ed49`. It produced 27 readable PDFs
-(2,614 pages; 28,121,719 bytes), reached a global fixed point on sweep four,
+The current validated R33 build is bound to source
+`1c90a67eb42de28884be05abd8fb58f781aed7db`, tree
+`3c292f9a4b94162ede69d2633b1272b057a498c3`. It produced 28 readable PDFs
+(2,730 pages; 29,277,302 bytes), reached a global fixed point on sweep four,
 and recorded zero fatal, missing-glyph, undefined-reference,
 undefined-citation, multiply-defined, rerun-required, or destination-warning
-diagnostics. All 700 pages of the four affected chapter PDFs were rendered and
-reviewed; all 72 unique correction-locus
-pages were also inspected individually at 180 DPI. A second linked-worktree
-build used the same source, builder, environment, and sweep, and all 27 PDF
-identities were exactly equal.
+diagnostics. All 116 pages of `spaces-morphisms.pdf` were rendered and
+reviewed, including five correction-locus pages at 180 DPI. A second
+linked-worktree build used the same source, builder, environment, and sweep,
+and all 28 PDF identities were exactly equal.
 
-R31 and R32 use the sole append-only registry successor
-`cdea2e13a447e7cdcf5f6f805d3a767d907fd679`, tree
-`b8466dd73dd960c73faeccb8d2c51fe44ecc4b14`, imported linearly at
-`3f0fa66780213432079c6c3044a6a515508b2576`. Exact manifest-bound source
-composition is commit `bb81deaa0f922caa8b4b4c1e85d928a03c955b24`, tree
-`64fc6c472f50c901320fcf6702769a3dc5e58522`; the later `e2c25bc2` commit
-binds the composition topology. The single R31 operation yields 312,169-byte
-`sites-modules.tex` with SHA-256
-`3144CBC676F1FF16F76117BB4E6ABE35705B9293C7FA0987951A1A7D28ED93C4`.
-R32's 125 operations yield the recorded cumulative `fields.tex`,
-`categories.tex`, and `algebra.tex` postimages. No isolated payload replaced a
-cumulative source.
+R33 is the current manifest-bound registry successor: cutoff
+`acb48c7edaf9595b542b003ed360399870188b7f`, tree
+`8356ae1652ae4ce6a22a457855072c5a3e7b3ad4`, with 34 overlays and 1,042
+stable IDs (R1–R33 contain 1,030 Stacks errata IDs and 1,166 exact operations).
+The R33 linear registry import is `b2ffa008fc27bfdb8b93c431f4df0c3e197d3440`;
+its seven operations were replayed onto cumulative `spaces-morphisms.tex`,
+whose postimage is 398,512 bytes / SHA-256
+`048BC16D80E71DBAA9C5CF11B109B69B481D920B278CBCB379C3BC9B8BBFC252`.
+No isolated payload replaced a cumulative source.
 
-R32 is the current public errata preservation checkpoint at content head
-`2af5664a7edcd352ebe5f776c2a190859f1ee071`, tree
-`58f1917e35781ffa028c1de4ed28b9aee232a7d7`, and tag
-[`ai-integrated-stacks-r32-2026-08-30`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r32-2026-08-30).
-Its six current assets total 181,650,621 bytes on each host and are preserved as
-Zenodo version DOI
-[`10.5281/zenodo.22167418`](https://doi.org/10.5281/zenodo.22167418) under
+The R33 public content head is
+`a52883a83081348d0ea4927a03d5fd8aa036890b`, tagged
+[`ai-integrated-stacks-r33-2026-08-30`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r33-2026-08-30).
+Its six current assets total 184,010,318 bytes on each host and are preserved
+as Zenodo version DOI
+[`10.5281/zenodo.22182175`](https://doi.org/10.5281/zenodo.22182175) under
 concept DOI [`10.5281/zenodo.22135180`](https://doi.org/10.5281/zenodo.22135180).
-The Zenodo version also preserves three inherited R30 ZIPs. Anonymous readback
-matched all six GitHub files and all nine Zenodo files; all nine ZIP downloads
-reopened with complete listings and valid CRCs. The current package contains
-the exact 27-PDF, 2,614-page, 28,121,719-byte build inventory. See the
-[R32 release receipt](validation/stacks-errata-a04446e-r32-release-2026-08-30.json).
+The Zenodo successor contains the six R33 assets plus three inherited EGA
+semantic archives. Anonymous readback matched all six GitHub files and all
+nine Zenodo files; every ZIP reopened with complete listings and valid CRCs.
+See the [R33 release receipt](validation/stacks-errata-a04446e-r33-release-2026-08-30.json)
+and [public readback](validation/stacks-errata-a04446e-r33-public-readback-2026-08-30.json).
 
 R28 remains publicly preserved as a historical release at tag
 [`ai-integrated-stacks-r28-2026-08-28`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r28-2026-08-28)
@@ -199,7 +195,7 @@ content commit `f1b8d56b5f3c9999010455a38a289bce76735070`, and Zenodo version
 DOI [`10.5281/zenodo.22177421`](https://doi.org/10.5281/zenodo.22177421) in the
 existing concept lineage. Its six assets total 182,415,449 bytes per host and
 passed 12-file cross-host readback. This semantic-only checkpoint changes no
-root TeX or PDF; R32 remains the latest errata release.
+root TeX or PDF; R33 remains the latest errata release.
 
 The preceding R22/R23 content release remains public at
 `3c2b49fe0d20519de4ab06951ac2cb5151b68782`, tree

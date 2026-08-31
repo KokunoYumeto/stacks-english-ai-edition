@@ -309,7 +309,7 @@ host. All 12 anonymous downloads matched by filename, byte count, and SHA-256
 with zero mismatches. The source archive is 154,766,484 bytes and contains
 2,312 entries. R27 remains the preceding immutable historical release.
 
-## Current R31/R32 composition, validation, and publication receipts
+## Historical R31/R32 composition, validation, and publication receipts
 
 R31 and R32 advance the integrated registry to **33 overlays / 1,035 stable
 IDs** at the append-only successor
@@ -380,22 +380,65 @@ byte count, and SHA-256, and all three ZIPs passed reopen and complete-listing
 checks. The package preserves 26 PDFs, 2,572 pages, and 27,531,529 PDF bytes.
 R28 remains the preceding immutable historical errata release.
 
-## Current EGA I §6.4 semantic publication receipt
+## Current R33 composition, validation, and publication receipts
 
-The current public EGA semantic checkpoint covers EGA I through §6.4.13 and
-sets §6.5.1 as the next cursor. The
-[`ega-i-6.4-semantic-release-2026-08-29.json`](ega-i-6.4-semantic-release-2026-08-29.json)
-receipt binds content commit `00adeb291487d04070b75bd0fd87759e3c43d3d3`,
-annotated GitHub tag
-[`ega-i-6.4-semantic-2026-08-29`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.4-semantic-2026-08-29),
-exact-head workflow `33250683600`, and Zenodo version DOI
-[`10.5281/zenodo.22161051`](https://doi.org/10.5281/zenodo.22161051) under concept
-DOI `10.5281/zenodo.22135180`. Six assets totaling 174,783,585 bytes per host
-matched across 12 public downloads, and all three ZIP member replays passed.
-The checkpoint changes no root TeX or PDF; R32 remains the latest errata
-release.
+R33 is the current integrated Stacks checkpoint: **34 overlays / 1,042 stable
+IDs**. The R1–R33 errata subset contains 33 batches, 1,030 correction IDs, and
+1,166 exact v2 operations; R33 contributes seven manifest-bound operations to
+`spaces-morphisms.tex`. The registry cutoff is
+`acb48c7edaf9595b542b003ed360399870188b7f`, tree
+`8356ae1652ae4ce6a22a457855072c5a3e7b3ad4`; its linear registry import is
+`b2ffa008fc27bfdb8b93c431f4df0c3e197d3440`. The cumulative source composition
+is commit `9100eefe0819f9632c6129e6d6f19a4101d223d1`, tree
+`d786a8604e7c0be79fab77c380247bd971555520`, and the bounded R33 build source
+is commit `1c90a67eb42de28884be05abd8fb58f781aed7db`, tree
+`3c292f9a4b94162ede69d2633b1272b057a498c3`.
 
-The follow-on
-[`ega-i-6.4-semantic-metadata-readback-2026-08-29.json`](ega-i-6.4-semantic-metadata-readback-2026-08-29.json)
-receipt binds the public metadata seal, its exact-head workflow, and anonymous
-raw-byte readback of every changed path.
+The deterministic evidence is recorded in:
+
+- [`stacks-errata-a04446e-r33-build-2026-08-30.json`](stacks-errata-a04446e-r33-build-2026-08-30.json)
+  — 28 PDFs, 2,730 pages, 29,277,302 PDF bytes, and fixed point on sweep
+  four;
+- [`stacks-errata-a04446e-r33-visual-qa-2026-08-30.json`](stacks-errata-a04446e-r33-visual-qa-2026-08-30.json)
+  — 116 full review pages plus five high-resolution correction-locus pages;
+- [`stacks-errata-a04446e-r33-reproducibility-2026-08-30.json`](stacks-errata-a04446e-r33-reproducibility-2026-08-30.json)
+  and the [second receipt](stacks-errata-a04446e-r33-reproducibility-second-2026-08-30.json)
+  — exact equality of all 28 PDF identities across two builds; and
+- [`stacks-errata-a04446e-r33-public-readback-2026-08-30.json`](stacks-errata-a04446e-r33-public-readback-2026-08-30.json)
+  — PASS for the public GitHub and Zenodo inventories, including 46 changed
+  paths and the released archives.
+
+The [R33 package receipt](stacks-errata-a04446e-r33-package-2026-08-30.json),
+[Zenodo publication receipt](stacks-errata-a04446e-r33-zenodo-publication-2026-08-30.json),
+and [Zenodo state](stacks-errata-a04446e-r33-zenodo-state-2026-08-30.json)
+preserve the six-asset release and its inherited EGA semantic archives. The
+release is publicly available as
+[`ai-integrated-stacks-r33-2026-08-30`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r33-2026-08-30)
+and Zenodo version DOI
+[`10.5281/zenodo.22182175`](https://doi.org/10.5281/zenodo.22182175) under
+concept DOI `10.5281/zenodo.22135180`. The [R33 release
+receipt](stacks-errata-a04446e-r33-release-2026-08-30.json) binds content head
+`a52883a83081348d0ea4927a03d5fd8aa036890b` and its exact public readback.
+
+## Current EGA I §6.6.3 semantic checkpoint
+
+The current public EGA semantic checkpoint covers EGA I through §6.6.3 and
+sets §6.6.4 as the next cursor. The
+[`ega-i-6.6.3-semantic-checkpoint-2026-08-30.json`](ega-i-6.6.3-semantic-checkpoint-2026-08-30.json)
+receipt records a PASS semantic-only checkpoint at content commit
+`85024a5e3456cadc79c6cde67bf1fcbbc09c48cb`, tree
+`2e5654859b2409da2b05f3a84d24c5862bf1c8ab`. Its sealed semantic release is
+commit `f1b8d56b5f3c9999010455a38a289bce76735070`, tree
+`8d2e7b4f3c84d825f39b673387e0266e09573b96`, tagged
+[`ega-i-6.6.3-semantic-2026-08-30`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.6.3-semantic-2026-08-30)
+and preserved at Zenodo version DOI
+[`10.5281/zenodo.22177421`](https://doi.org/10.5281/zenodo.22177421) under
+concept DOI `10.5281/zenodo.22135180`.
+
+The [semantic package receipt](ega-i-6.6.3-semantic-package-2026-08-30.json),
+[public-assets readback](ega-i-6.6.3-semantic-public-assets-readback-2026-08-30.json),
+[Zenodo publication receipt](ega-i-6.6.3-semantic-zenodo-publication-receipt-2026-08-30.json),
+and [Zenodo state](ega-i-6.6.3-semantic-zenodo-state-2026-08-30.json) bind the
+six semantic assets and their exact hashes. The checkpoint changes no root TeX
+or PDF; proposed canon item I000104 remains explicitly routed to the successor
+canon-keeper, and §6.6.4 is the next executable semantic slice.

@@ -11,10 +11,10 @@ French diplomatic editions remain separate read-only inputs.
 
 ## Current maintenance baseline
 
-The current validated composition contains **33 overlays / 1,035 stable IDs** at
-the R31/R32 successor `cdea2e13a447e7cdcf5f6f805d3a767d907fd679`, tree
-`b8466dd73dd960c73faeccb8d2c51fe44ecc4b14`. Its Stacks errata component is
-R1–R32: 32 batches, 1,023 correction IDs, and 1,159 exact v2 operations. The 22nd
+The current validated composition contains **34 overlays / 1,042 stable IDs** at
+the R33 successor `acb48c7edaf9595b542b003ed360399870188b7f`, tree
+`8356ae1652ae4ce6a22a457855072c5a3e7b3ad4`. Its Stacks errata component is
+R1–R33: 33 batches, 1,030 correction IDs, and 1,166 exact v2 operations. The 22nd
 overlay, `stacks-verdier-a04446e-1-2-13-r1`, remains a separately admitted,
 independently written historical-source contribution with 12 non-official
 stable units. It inserts one manifest-bound lemma into cumulative `derived.tex`;
@@ -31,34 +31,34 @@ operation affecting only `smoothing.tex`, explicitly superseding R26 operation
 `injectives.tex`; R31 adds one operation to `sites-modules.tex`; and R32 adds
 125 operations across `fields.tex`, `categories.tex`, and `algebra.tex`. All
 are composed in registry order without replacing cumulative source wholesale.
-The R31/R32 registry import is
-`3f0fa66780213432079c6c3044a6a515508b2576`; source composition is
-`bb81deaa0f922caa8b4b4c1e85d928a03c955b24`, tree
-`64fc6c472f50c901320fcf6702769a3dc5e58522`, followed by topology binding
-`e2c25bc25c6a650f6f4eb4069b4749fdc558163c`. The exact authority, registry,
+The R33 registry import is
+`b2ffa008fc27bfdb8b93c431f4df0c3e197d3440`; source composition is
+`9100eefe0819f9632c6129e6d6f19a4101d223d1`, tree
+`d786a8604e7c0be79fab77c380247bd971555520`, followed by the validated build
+binding at `1c90a67eb42de28884be05abd8fb58f781aed7db`. The exact authority, registry,
 operation, source, and preservation identities are recorded in the
 [current composition receipt](validation/composition-current.json).
 
-The current R32 source passed two linked-worktree fixed-point builds at source
-`e2c25bc25c6a650f6f4eb4069b4749fdc558163c`, tree
-`6a5a81badb3916956fd4c48378e842c5bde9ed49`: 27 readable PDFs, 2,614 pages,
-28,121,719 PDF bytes, global fixed point on sweep four, and zero fatal or listed
-serious diagnostics. All 700 affected-chapter pages passed review, with all 72
-correction-locus pages at 180 DPI. All 27 PDF identities
+The current R33 source passed two linked-worktree fixed-point builds at source
+`1c90a67eb42de28884be05abd8fb58f781aed7db`, tree
+`3c292f9a4b94162ede69d2633b1272b057a498c3`: 28 readable PDFs, 2,730 pages,
+29,277,302 PDF bytes, global fixed point on sweep four, and zero fatal or listed
+serious diagnostics. All 116 affected-chapter pages passed review, with all 5
+correction-locus pages at 180 DPI. All 28 PDF identities
 match exactly between the two builds. Earlier R26, R24, R22/R23, Verdier, and R21 receipts
 remain preserved as historical evidence for their exact scopes.
 
-R32 is the current public errata preservation checkpoint at content head
-`2af5664a7edcd352ebe5f776c2a190859f1ee071`, tree
-`58f1917e35781ffa028c1de4ed28b9aee232a7d7`, and tag
-[`ai-integrated-stacks-r32-2026-08-30`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r32-2026-08-30).
-Its six current assets total 181,650,621 bytes on each host. All six GitHub
+R33 is the current public errata preservation checkpoint at content head
+`a52883a83081348d0ea4927a03d5fd8aa036890b`, tree
+`2d686e92dacdc8e01d6c6950bf81f250e657cd8f`, and tag
+[`ai-integrated-stacks-r33-2026-08-30`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r33-2026-08-30).
+Its six current assets total 184,010,318 bytes on each host. All six GitHub
 assets and all nine Zenodo files passed anonymous byte/hash readback. The
 Zenodo version DOI is
-[`10.5281/zenodo.22167418`](https://doi.org/10.5281/zenodo.22167418) under
-concept DOI `10.5281/zenodo.22135180`. The current package preserves 27 PDFs,
-2,614 pages, and 28,121,719 PDF bytes. The
-[R32 release receipt](validation/stacks-errata-a04446e-r32-release-2026-08-30.json)
+[`10.5281/zenodo.22182175`](https://doi.org/10.5281/zenodo.22182175) under
+concept DOI `10.5281/zenodo.22135180`. The current package preserves 28 PDFs,
+2,730 pages, and 29,277,302 PDF bytes. The
+[R33 release receipt](../validation/stacks-errata-a04446e-r33-release-2026-08-30.json)
 binds the transaction and readback.
 
 R28 remains published as the preceding historical release at tag
@@ -109,7 +109,7 @@ The rejected R26 producer `SMOOTHING-010` and R23 producer
 
 | Stage | Bounded milestone | Why it comes here |
 | --- | --- | --- |
-| **1. Complete EGA I** | Continue at EGA I §6.5.1 through §§6.5–6.6, followed by staged checkpoints through §10. | This continues from the exact existing cursor, preserves statement order, and finishes the language-of-schemes layer before later corpora depend on it. |
+| **1. Complete EGA I** | Continue at EGA I §6.6.4 through §§6.6–10 in source order, using staged checkpoints. | This continues from the exact existing cursor, preserves statement order, and finishes the language-of-schemes layer before later corpora depend on it. |
 | **2. Integrate EGA II** | Begin with §1 on affine morphisms; continue through §§2–4 on `Proj`, projective bundles, and ample sheaves; then close §§5–8 on quasi-projective, proper, projective, finite, and quasi-finite morphisms, valuative criteria, blowups, and contractions. | EGA II is the shortest path from scheme language to the global morphism machinery used by EGA III and substantial parts of SGA1. |
 | **3. Integrate the foundations of SGA1** | Treat Exposés I–V first, then the fibred-category bridge in Exposé VI and the descent layer in Exposés VIII–IX. The revised edition contains no Exposé VII. | This yields a coherent foundation in étale, smooth, and flat morphisms, Galois categories, fibred categories, and descent without prematurely taking on the advanced specialization and cohomological material. |
 | **4. Integrate EGA III** | Proceed in source order through coherent cohomology, projective and proper finiteness, formal functions, base change, and existence results. | EGA III can reuse EGA II's projective/proper foundation, the existing FAC, GAGA, and FGA source integrations, and the closed Tôhoku dossier-only mapping. It also supplies leverage for the advanced part of SGA1. |
@@ -118,18 +118,19 @@ The rejected R26 producer `SMOOTHING-010` and R23 producer
 
 ## Immediate milestones
 
-The next semantic cursor is **EGA I §6.5.1**. EGA I §6.4 is complete through
-§6.4.13: all 20 mathematical units are source-bound and routed, with no
-duplicate root addition and no root TeX or PDF change. The checkpoint is public
-at GitHub tag
-[`ega-i-6.4-semantic-2026-08-29`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.4-semantic-2026-08-29)
-and Zenodo version DOI [`10.5281/zenodo.22161051`](https://doi.org/10.5281/zenodo.22161051),
-with the exact transaction in the
-[semantic release receipt](validation/ega-i-6.4-semantic-release-2026-08-29.json).
+The current semantic cursor is **EGA I §6.6.4**. EGA I §6.6.3 is the latest
+source-bound semantic checkpoint, public at GitHub tag
+[`ega-i-6.6.3-semantic-2026-08-30`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ega-i-6.6.3-semantic-2026-08-30)
+and Zenodo version DOI [`10.5281/zenodo.22177421`](https://doi.org/10.5281/zenodo.22177421),
+with the exact checkpoint in
+[`ega-i-6.6.3-semantic-checkpoint-2026-08-30.json`](validation/ega-i-6.6.3-semantic-checkpoint-2026-08-30.json).
+It changes no root TeX or PDF and does not create a new errata round. Earlier
+6.4 and 6.5.x receipts remain preserved as historical evidence.
 The next checkpoints remain deliberately small enough to review, validate, and
 publish independently:
 
-1. **EGA I §§6.5–6.6** — continue in source order and close EGA I §6.
+1. **EGA I §6.6.4 and the remainder of §6** — continue in source order and
+   close EGA I §6.
 2. **EGA I §§7–10** — advance in source order through separately sealed
    section or subsection checkpoints until EGA I is complete.
 3. **EGA II §1** — seven subsections on affine morphisms, printed pages 5–18.

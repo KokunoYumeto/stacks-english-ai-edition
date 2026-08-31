@@ -21,12 +21,12 @@ unified repository, not a separate edition.
 
 ## Integrated registry cutoff
 
-- Current integrated overlays: **33**, containing **1,035 stable IDs**.
-- Current cutoff: sole R31/R32 append-only successor
-  `cdea2e13a447e7cdcf5f6f805d3a767d907fd679`, tree
-  `b8466dd73dd960c73faeccb8d2c51fe44ecc4b14`.
-- The Stacks errata subset is **R1–R32**: 32 batches, 1,023 correction IDs, and
-  1,159 exact v2 operations. Its highest identifier is `MC-STK-ERR-1287`; gaps
+- Current integrated overlays: **34**, containing **1,042 stable IDs**.
+- Current cutoff: R33 append-only successor
+  `acb48c7edaf9595b542b003ed360399870188b7f`, tree
+  `8356ae1652ae4ce6a22a457855072c5a3e7b3ad4`.
+- The Stacks errata subset is **R1–R33**: 33 batches, 1,030 correction IDs, and
+  1,166 exact v2 operations. Its highest identifier is `MC-STK-ERR-1294`; gaps
   are intentional.
 - The 22nd overlay is `stacks-verdier-a04446e-1-2-13-r1`, an independently
   written historical-source insertion with 12 non-official stable units. It
@@ -40,7 +40,8 @@ insertion, the R22-before-R23 `more-algebra.tex` composition, the R24
 `smoothing.tex` composition, the R27 `modules.tex` composition, and the R28
 supersession-aware `smoothing.tex` composition, the R29 `sites-modules.tex`
 and R30 `injectives.tex` compositions, and then the R31 `sites-modules.tex`
-and R32 `fields.tex`, `categories.tex`, and `algebra.tex` compositions;
+  and R32 `fields.tex`, `categories.tex`, and `algebra.tex` compositions, and
+  the R33 `spaces-morphisms.tex` composition;
 registry admission and source composition remain separately testable states.
 R21 is replayed as exact manifest-bound operations over cumulative
 `simplicial.tex`, and Verdier is inserted into cumulative `derived.tex` through
@@ -54,15 +55,21 @@ R24 adds 38 IDs and 57 operations affecting only `spaces-duality.tex`. R25 adds
 affecting only `smoothing.tex`, superseding `MC-STK-ERR-1183-OP1`.
 R29 adds 30 IDs and 31 operations affecting only `sites-modules.tex`; R30 adds
 40 IDs and 40 operations affecting only `injectives.tex`; R31 adds one ID and
-one operation affecting `sites-modules.tex`; and R32 materializes 103
-historical IDs as 125 operations across `fields.tex`, `categories.tex`, and
-`algebra.tex`. Every round is
+  one operation affecting `sites-modules.tex`; R32 materializes 103 historical
+  IDs as 125 operations across `fields.tex`, `categories.tex`, and `algebra.tex`;
+  and R33 adds seven operations to `spaces-morphisms.tex`. Every round is
 composed in registry order from manifest operations; no isolated payload
 replaces cumulative source wholesale. The R29/R30 registry import is
 `6df0e967030bcf818f3c49584fa5e9a992278d75`; exact source composition is
 `3e57820736a5a57ddb1c9fbaaf2206e455b5ee31`, tree
 `c4ce1faf96257fe11c0123ca649c9c020982aa33`, followed by validation binding
-`c521604343534f94c7a59086c94b99712eb1d754`. The cumulative postimages are
+  `c521604343534f94c7a59086c94b99712eb1d754`. R33 was imported at
+  `b2ffa008fc27bfdb8b93c431f4df0c3e197d3440` and composed at
+  `9100eefe0819f9632c6129e6d6f19a4101d223d1`, tree
+  `d786a8604e7c0be79fab77c380247bd971555520`; its seven operations yield
+  398,512-byte `spaces-morphisms.tex` / SHA-256
+  `048BC16D80E71DBAA9C5CF11B109B69B481D920B278CBCB379C3BC9B8BBFC252`.
+  The cumulative postimages are
 312,179-byte `sites-modules.tex` / SHA-256
 `B097799584BD00B3D8046F62A0A56FCFE045516FD04D130C2A4C547CE3BB6C19`
 and 105,225-byte `injectives.tex` / SHA-256
@@ -76,22 +83,23 @@ candidate `77fcc9fc2341e72b077224399743f1062e73b228`, and admission
 imported at `f3bfc1b987ac9defc1b7811650bac0ec84a01373`. The exact R27 manifest
 SHA-256 is `A4D03B8B47A1005B6DAC8B0EE4B9D0F4361E065E51D324B9634F38B51053DE3C`.
 
-The current R32 fixed-point receipts cover 27 PDFs, 2,614 pages, and 28,121,719
-PDF bytes at source `e2c25bc25c6a650f6f4eb4069b4749fdc558163c`, tree
-`6a5a81badb3916956fd4c48378e842c5bde9ed49`. Both linked-worktree builds are
-byte-for-byte reproducible. All 700 pages of the four affected chapters passed
-review, including all 72 correction-locus pages inspected individually at high
-resolution. R32 is the latest public errata preservation checkpoint at content
-head `2af5664a7edcd352ebe5f776c2a190859f1ee071`, tree
-`58f1917e35781ffa028c1de4ed28b9aee232a7d7`, and tag
-[`ai-integrated-stacks-r32-2026-08-30`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r32-2026-08-30).
-The six current assets total 181,650,621 bytes on each host; all six GitHub
+The current R33 fixed-point receipts cover 28 PDFs, 2,730 pages, and 29,277,302
+PDF bytes at source `1c90a67eb42de28884be05abd8fb58f781aed7db`, tree
+`3c292f9a4b94162ede69d2633b1272b057a498c3`. Both linked-worktree builds are
+byte-for-byte reproducible. All 116 pages of `spaces-morphisms.pdf` passed
+review, including all five correction-locus pages inspected individually at high
+resolution. R33 is the latest public errata preservation checkpoint at content
+head `a52883a83081348d0ea4927a03d5fd8aa036890b`, tree
+`2d686e92dacdc8e01d6c6950bf81f250e657cd8f`, and tag
+[`ai-integrated-stacks-r33-2026-08-30`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r33-2026-08-30).
+The six current assets total 184,010,318 bytes on each host; all six GitHub
 assets and all nine Zenodo files passed anonymous byte/hash readback. Zenodo
-version DOI [`10.5281/zenodo.22167418`](https://doi.org/10.5281/zenodo.22167418) remains
+version DOI [`10.5281/zenodo.22182175`](https://doi.org/10.5281/zenodo.22182175) is
 under concept DOI [`10.5281/zenodo.22135180`](https://doi.org/10.5281/zenodo.22135180).
-The release preserves the exact 27-PDF, 2,614-page, 28,121,719-byte build
+The release preserves the exact 28-PDF, 2,730-page, 29,277,302-byte build
 inventory. See the
-[R32 release receipt](../validation/stacks-errata-a04446e-r32-release-2026-08-30.json).
+[R33 release receipt](../validation/stacks-errata-a04446e-r33-release-2026-08-30.json)
+and [public readback](../validation/stacks-errata-a04446e-r33-public-readback-2026-08-30.json).
 R30 remains available as the preceding historical release, and R28 remains an
 [earlier historical release](../validation/stacks-errata-a04446e-r28-release-2026-08-28.json).
 
