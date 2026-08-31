@@ -1,0 +1,114 @@
+{
+  "adverse_evidence": [
+    "Standalone reader cross-chapter references remain visibly unresolved where the cumulative AUX set is absent; the authority and candidate undefined-target multisets match exactly.",
+    "The PDF is untagged; this retained accessibility limitation is not a layout failure."
+  ],
+  "candidate_id": "stacks-errata-a04446e-r38",
+  "disjoint_inspection_ranges": [
+    {
+      "contact_sheets": "01-07",
+      "high_resolution_pages": [
+        373,
+        385,
+        386
+      ],
+      "pages": "1-112",
+      "result": "PASS"
+    },
+    {
+      "contact_sheets": "08-14",
+      "high_resolution_pages": [
+        388,
+        389,
+        390
+      ],
+      "pages": "113-224",
+      "result": "PASS"
+    },
+    {
+      "contact_sheets": "15-20",
+      "high_resolution_pages": [
+        391,
+        392,
+        394
+      ],
+      "pages": "225-320",
+      "result": "PASS_AFTER_PAGE_392_ADJUDICATION"
+    },
+    {
+      "contact_sheets": "21-26",
+      "high_resolution_pages": [
+        395,
+        396,
+        397,
+        398
+      ],
+      "pages": "321-401",
+      "result": "PASS"
+    }
+  ],
+  "findings": {
+    "broken_diagrams": 0,
+    "clipping": 0,
+    "duplicate_pages": 0,
+    "missing_glyphs": 0,
+    "overlap": 0,
+    "unexpected_blank_pages": 0,
+    "unreadable_content": 0
+  },
+  "page_392_adjudication": {
+    "authority_control_render": {
+      "bytes": 416386,
+      "path": "private-authority-control/more-algebra_p392.png",
+      "sha256": "2CA08D29F0351C5688E87CD589A96F2580F781728171D03870EBC6A2EF1CC270"
+    },
+    "candidate_induced_header_defect": false,
+    "candidate_render": {
+      "bytes": 416908,
+      "path": "private-render/highres/more-algebra_p392.png",
+      "sha256": "CB68E0CC2FF6A9152549C6CF660023C14AD7940BE266EB4C184A42FB7765C43B"
+    },
+    "conclusion": "False positive. The page number, centered running header, top margin, and continuation text are pixel-identical to the separately built authority control; differences begin only in lower-body reflow from admitted corrections.",
+    "dimensions_pixels": [
+      1530,
+      1980
+    ],
+    "initial_observation": "One inspector reported a possible header-band collision.",
+    "pixel_difference_bbox": [
+      317,
+      1091,
+      1213,
+      1718
+    ],
+    "pixels_identical_from_y_0_through": 1090
+  },
+  "render_manifest": {
+    "bytes": 86949,
+    "logical_path": "canon/private_evidence/errata-r38-20260831T021500Z/render/render-manifest.json",
+    "published": false,
+    "sha256": "8DE361859532144DD74AEB09F8464C1AD5A7FF17D207BB1B4AFA8346390F1999"
+  },
+  "reviewed_scope": {
+    "contact_sheets": 26,
+    "dpi_all_pages": 96,
+    "dpi_high_resolution": 180,
+    "high_resolution_pages": [
+      373,
+      385,
+      386,
+      388,
+      389,
+      390,
+      391,
+      392,
+      394,
+      395,
+      396,
+      397,
+      398
+    ],
+    "pdf_pages": 401
+  },
+  "schema": "mathematics-commons-stacks-r38-visual-adjudication/v1",
+  "status": "PASS"
+}

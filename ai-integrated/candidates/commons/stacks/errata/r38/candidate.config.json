@@ -1,0 +1,198 @@
+{
+  "accepted": 23,
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_evidence": [
+    {
+      "bytes": 1197,
+      "path": "authority/adverse/ORIGINAL_L015_INCOMPLETE_SUBMISSION.json",
+      "sha256": "03CAAA78A3F9AB6D32B3423C5C5BC2D9B894ADA74DB3A2075260AB0FFD68D407"
+    },
+    {
+      "bytes": 20404,
+      "path": "authority/COPYING",
+      "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"
+    },
+    {
+      "bytes": 18114,
+      "path": "authority/producer/MORE_ALGEBRA_L_INVARIANTS.json",
+      "sha256": "A14BFE198A1F3CCB47615D2BFD613011F61655C12164437085756AF9A91AD2BB"
+    },
+    {
+      "bytes": 9230,
+      "path": "authority/producer/MORE_ALGEBRA_L_SOURCE_EMENDATIONS.json",
+      "sha256": "B21321A9AEF236773E290B7AA390332843BAE42284911B7928AEE0FD57EC2FE7"
+    },
+    {
+      "bytes": 5548,
+      "path": "authority/producer/MORE_ALGEBRA_LIVE_PART_MANIFEST.json",
+      "sha256": "D21C749593D1F158F4109D687BA4B691F5B6D487DF33D5B4622047D0D7DC5518"
+    },
+    {
+      "bytes": 17271,
+      "path": "authority/registrar/MORE_ALGEBRA_L_R38_INDEPENDENT_REVIEW_20260831.json",
+      "sha256": "39B3424B3E44E11993961558957FF4A26702964ABEF7E12B25EF3C46D264F00B"
+    },
+    {
+      "bytes": 6792,
+      "path": "authority/registrar/R38_ADJUDICATION_SPEC.json",
+      "sha256": "3C9956FAE4082AB5D6F068994F887EEC8A1FDDB6BD757042CE49E72D7AE95555"
+    },
+    {
+      "bytes": 1492039,
+      "path": "authority/source/more-algebra.tex",
+      "sha256": "0106554339E8966FE04411B2AE9F9CD856B165849FEEF0C7BC37634819064708"
+    },
+    {
+      "bytes": 1171,
+      "path": "authority/upstream.lock.json",
+      "sha256": "B195ECC83AB0F32C574A60D1FDBA9B0DA4D35B04E0DF7CB106DC9C0FDAD99C0D"
+    }
+  ],
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "build_render_admission_status": "build_deterministic_replay_and_visual_qa_pass",
+  "build_validation": {
+    "bytes": 1740,
+    "path": "builds/validation.json",
+    "sha256": "94C5A1A98BD89CDBC2678DFDA05C0838E2055C69152D34108F85E126D436B63D"
+  },
+  "candidate_id": "stacks-errata-a04446e-r38",
+  "expected_producer_ids": [
+    "MORE-ALGEBRA-L-001",
+    "MORE-ALGEBRA-L-002",
+    "MORE-ALGEBRA-L-003",
+    "MORE-ALGEBRA-L-004",
+    "MORE-ALGEBRA-L-005",
+    "MORE-ALGEBRA-L-006",
+    "MORE-ALGEBRA-L-007",
+    "MORE-ALGEBRA-L-008",
+    "MORE-ALGEBRA-L-009",
+    "MORE-ALGEBRA-L-010",
+    "MORE-ALGEBRA-L-011",
+    "MORE-ALGEBRA-L-012",
+    "MORE-ALGEBRA-L-013",
+    "MORE-ALGEBRA-L-014",
+    "MORE-ALGEBRA-L-015",
+    "MORE-ALGEBRA-L-016",
+    "MORE-ALGEBRA-L-017",
+    "MORE-ALGEBRA-L-018",
+    "MORE-ALGEBRA-L-019",
+    "MORE-ALGEBRA-L-020",
+    "MORE-ALGEBRA-L-021",
+    "MORE-ALGEBRA-L-022",
+    "MORE-ALGEBRA-L-023",
+    "MORE-ALGEBRA-L-024",
+    "MORE-ALGEBRA-L-025",
+    "MORE-ALGEBRA-L-026",
+    "MORE-ALGEBRA-L-027",
+    "MORE-ALGEBRA-L-028",
+    "MORE-ALGEBRA-L-029"
+  ],
+  "expected_unit_ids": [
+    "MC-STK-ERR-1336",
+    "MC-STK-ERR-1337",
+    "MC-STK-ERR-1338",
+    "MC-STK-ERR-1339",
+    "MC-STK-ERR-1340",
+    "MC-STK-ERR-1341",
+    "MC-STK-ERR-1342",
+    "MC-STK-ERR-1343",
+    "MC-STK-ERR-1344",
+    "MC-STK-ERR-1345",
+    "MC-STK-ERR-1346",
+    "MC-STK-ERR-1347",
+    "MC-STK-ERR-1348",
+    "MC-STK-ERR-1349",
+    "MC-STK-ERR-1350",
+    "MC-STK-ERR-1351",
+    "MC-STK-ERR-1352",
+    "MC-STK-ERR-1353",
+    "MC-STK-ERR-1354",
+    "MC-STK-ERR-1355",
+    "MC-STK-ERR-1356",
+    "MC-STK-ERR-1357",
+    "MC-STK-ERR-1358"
+  ],
+  "lease_id": "stacks-lease-000042-errata-r38",
+  "lease_status": "active; bound to registrar-issued LEASE.json",
+  "namespace": "commons/stacks/errata/r38",
+  "operation_count": 31,
+  "payload_expected_bytes": 1492132,
+  "payload_expected_sha256": "B4D8BF24D64BF7D5A50E4BC0791D02DDC19849F34A24FB4857CED6CB143DD196",
+  "private_render_logical_path": "canon/private_evidence/errata-r38-20260831T021500Z/render",
+  "producer_aliases": [
+    "MORE-ALGEBRA-L-030",
+    "MORE-ALGEBRA-L-031"
+  ],
+  "proof_closure": {
+    "accepted": 23,
+    "operations": 31,
+    "producer_rows": 29,
+    "registrar_additive_aliases": 2,
+    "rejected": 0,
+    "unresolved": 0
+  },
+  "rejected": 0,
+  "schema": "mathematics-commons-stacks-errata-candidate-config/v1",
+  "source_date_epoch": "1788142500",
+  "stems": {
+    "more-algebra": {
+      "authority_bytes": 1492039,
+      "authority_sha256": "0106554339E8966FE04411B2AE9F9CD856B165849FEEF0C7BC37634819064708",
+      "build_exceptions": {
+        "candidate_page_delta": 0
+      },
+      "display_delimiter_delta": 0,
+      "ordered_structure_exceptions": {},
+      "payload_bytes": 1492132,
+      "payload_sha256": "B4D8BF24D64BF7D5A50E4BC0791D02DDC19849F34A24FB4857CED6CB143DD196"
+    }
+  },
+  "unresolved": 0,
+  "visual_inspection_adjudication": {
+    "bytes": 2998,
+    "path": "replay/VISUAL_INSPECTION_ADJUDICATION.json",
+    "sha256": "0DCC4A703D9605E9A415DFD042234076F34A4F84A9363B6EC690F802BB2BADA9"
+  },
+  "visual_qa": {
+    "correction_sensitive_pages": {
+      "more-algebra": [
+        373,
+        385,
+        386,
+        388,
+        389,
+        390,
+        391,
+        392,
+        394,
+        395,
+        396,
+        397,
+        398
+      ]
+    },
+    "high_resolution_pages": {
+      "more-algebra": [
+        373,
+        385,
+        386,
+        388,
+        389,
+        390,
+        391,
+        392,
+        394,
+        395,
+        396,
+        397,
+        398
+      ]
+    },
+    "source_page_map": {
+      "bytes": 8770,
+      "path": "builds/source-page-map.json",
+      "sha256": "843F568F7B8478C3C35159CD9846028DE0878CF29A4D1965979E7FE817711D74"
+    }
+  },
+  "writer_task": "01a0256d-5693-77c1-96b2-cf37101e0c6c"
+}

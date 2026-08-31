@@ -1,0 +1,74 @@
+{
+  "authority": {
+    "bytes": 1492039,
+    "path": "authority/source/more-algebra.tex",
+    "sha256": "0106554339E8966FE04411B2AE9F9CD856B165849FEEF0C7BC37634819064708"
+  },
+  "brace_balance": {
+    "authority": [
+      18633,
+      18632
+    ],
+    "payload": [
+      18636,
+      18635
+    ]
+  },
+  "candidate_id": "stacks-errata-a04446e-r38",
+  "declared_line_preimages_exactly_once": 31,
+  "deduplication": {
+    "legacy_change_spans_checked": 59,
+    "maximum_numeric_stable_id": "MC-STK-ERR-1335",
+    "novel": true,
+    "registered_entries": 38,
+    "registered_operations_checked": 1212,
+    "registered_units_checked": 1057,
+    "registry": {
+      "bytes": 62014,
+      "path": "registry/overlays.json",
+      "sha256": "6F65B98754C59EE91E127FCB49AFF9F524D603FBCEE8B33786C6EA7854711439"
+    },
+    "same_locus_matches": [],
+    "same_old_new_matches": [],
+    "same_producer_id_matches": [],
+    "source_map_files_checked": 36,
+    "stable_ids_checked": 1083,
+    "total_explicit_operations_and_legacy_change_spans_checked": 1271
+  },
+  "descending_replay_payload_match": true,
+  "operation_count": 31,
+  "operation_spec": {
+    "bytes": 24422,
+    "path": "operation-spec.json",
+    "sha256": "FB2750FF7E1C04CAD98A9F4F329C6BE98437FBA374509A018B136F92FCC88E11"
+  },
+  "original_producer_allegations": 29,
+  "overlapping_operation_intervals": 0,
+  "passed": true,
+  "payload": {
+    "bytes": 1492132,
+    "path": "payload/more-algebra.tex",
+    "sha256": "B4D8BF24D64BF7D5A50E4BC0791D02DDC19849F34A24FB4857CED6CB143DD196"
+  },
+  "producer_invariants": {
+    "bytes": 18114,
+    "path": "authority/producer/MORE_ALGEBRA_L_INVARIANTS.json",
+    "sha256": "A14BFE198A1F3CCB47615D2BFD613011F61655C12164437085756AF9A91AD2BB"
+  },
+  "registrar_additive_aliases": 2,
+  "retained_t_scope": {
+    "line_38341_retains_top_dimensional_t": true,
+    "line_38342_continuation_unchanged": true
+  },
+  "schema": "mathematics-commons-stacks-source-validation/v1",
+  "stable_unit_count": 23,
+  "structure_parity": {
+    "begins": true,
+    "cites": true,
+    "ends": true,
+    "items": true,
+    "labels": true,
+    "refs": true,
+    "xymatrix": true
+  }
+}
