@@ -2207,19 +2207,30 @@ def main(argv: list[str] | None = None) -> int:
             overlay_id = overlay.get("id")
             entry = entry_by_id.get(overlay_id) if isinstance(overlay_id, str) else None
             directory = candidate_dir(overlay_id) if isinstance(overlay_id, str) else None
-            rows = read_jsonl(directory / "source-map.jsonl") if directory else []
-            payload_paths = sorted(
-                {
-                    row.get("payload")
-                    for row in rows
-                    if isinstance(row.get("payload"), str)
-                }
-            )
-            if not payload_paths:
-                errors.append(
-                    f"cannot normalize embedded-candidate payload path: {overlay_id!r}"
+            manifest = (
+                load_json_object(
+                    directory / "candidate.manifest.json",
+                    errors,
+                    f"embedded candidate manifest {overlay_id!r}",
                 )
-            elif len(payload_paths) == 1:
+                if directory
+                else None
+            )
+            builds = manifest.get("builds") if isinstance(manifest, dict) else None
+            payload_paths = sorted(
+                build.get("path")
+                for build in builds
+                if isinstance(build, dict)
+                and isinstance(build.get("path"), str)
+                and build["path"].startswith("payload/")
+                and str(build.get("sha256", "")).upper()
+                == str(overlay.get("payload_sha256", "")).upper()
+            ) if isinstance(builds, list) else []
+            if len(payload_paths) != 1:
+                errors.append(
+                    f"cannot uniquely normalize embedded-candidate payload path: {overlay_id!r}"
+                )
+            else:
                 normalized_overlay["payload_path"] = payload_paths[0]
             namespace = entry.get("namespace") if isinstance(entry, dict) else None
             review_value = entry.get("review_receipt") if isinstance(entry, dict) else None
