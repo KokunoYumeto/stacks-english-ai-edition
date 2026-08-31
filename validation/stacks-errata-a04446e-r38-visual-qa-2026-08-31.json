@@ -1,0 +1,351 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-visual-qa/v1",
+  "status": "PASS",
+  "created_utc": "2026-08-31T13:51:34Z",
+  "source": {
+    "commit": "bb6e7ccca41fe00a06815d81e174c5261e7a1ce3",
+    "tree": "bfcfa4103af8bb253cac76ffacf791147ea7c683"
+  },
+  "build_receipt": {
+    "path": "validation/stacks-errata-a04446e-r38-build-2026-08-31.json",
+    "bytes": 56669,
+    "sha256": "E9146EBB94F8B71DA1FBAD4E39005CF5ADED8A9649B47F11C07BD8A479FA69F9",
+    "status": "PASS",
+    "global_fixed_point_sweep": 4
+  },
+  "scope": {
+    "affected_chapters": [
+      "cohomology",
+      "more-algebra",
+      "sites-cohomology"
+    ],
+    "full_page_render_count": 681,
+    "full_page_contact_sheet_review_count": 681,
+    "high_resolution_locus_page_count": 42,
+    "high_resolution_locus_pages": {
+      "cohomology": [
+        27,
+        31,
+        114,
+        123
+      ],
+      "sites-cohomology": [
+        3,
+        7,
+        10,
+        20,
+        21,
+        23,
+        25,
+        26,
+        27,
+        30,
+        33,
+        34,
+        52,
+        56,
+        62,
+        63,
+        101,
+        102,
+        103,
+        104,
+        105,
+        107,
+        108,
+        110,
+        111
+      ],
+      "more-algebra": [
+        378,
+        390,
+        391,
+        393,
+        394,
+        395,
+        396,
+        397,
+        399,
+        400,
+        401,
+        402,
+        403
+      ]
+    },
+    "applied_byte_edit_count": 76,
+    "accepted_operation_count": 77,
+    "historical_noop_operation_count": 1,
+    "nonblocking_layout_observation_count": 2
+  },
+  "artifacts": {
+    "cohomology": {
+      "pdf": "cohomology.pdf",
+      "bytes": 1373198,
+      "sha256": "690B3441A4C077CD61CB7901F0535D343511BA48937000CDC375A60B091CDF0B",
+      "pages": 140,
+      "encrypted": false,
+      "media_box_points": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      "render_dimensions_pixels": [
+        816,
+        1056
+      ],
+      "pages_without_ink": 0,
+      "minimum_ink_pixels_below_245": 32001,
+      "duplicate_render_hashes": 0
+    },
+    "sites-cohomology": {
+      "pdf": "sites-cohomology.pdf",
+      "bytes": 1363987,
+      "sha256": "2D88F856A28363D12393A51E71F6E6D0CF55FD07D1486F7A9A32E71B07BA8518",
+      "pages": 135,
+      "encrypted": false,
+      "media_box_points": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      "render_dimensions_pixels": [
+        816,
+        1056
+      ],
+      "pages_without_ink": 0,
+      "minimum_ink_pixels_below_245": 17683,
+      "duplicate_render_hashes": 0
+    },
+    "more-algebra": {
+      "pdf": "more-algebra.pdf",
+      "bytes": 3386887,
+      "sha256": "29D5385FE4C9DED1EE5251E04C8C50513F222922ED836CC1D381B71E17B83155",
+      "pages": 406,
+      "encrypted": false,
+      "media_box_points": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      "render_dimensions_pixels": [
+        816,
+        1056
+      ],
+      "pages_without_ink": 0,
+      "minimum_ink_pixels_below_245": 29287,
+      "duplicate_render_hashes": 0
+    }
+  },
+  "render_protocol": {
+    "renderer": "Poppler pdftoppm via tools/render_visual_qa.py (version not recorded in manifests)",
+    "full_page_dpi": 96,
+    "full_page_layout": "ordered 4-by-4 contact sheets",
+    "contact_sheet_count": 44,
+    "high_resolution_dpi": 180,
+    "high_resolution_selection": "Every mapped page of all 76 applied R34--R38 byte edits and the one historical no-op",
+    "render_intermediates_published": false
+  },
+  "source_page_mapping": {
+    "path": "validation/stacks-errata-a04446e-r38-source-page-map-2026-08-31.json",
+    "bytes": 85995,
+    "sha256": "02C9B151D849AADF0A4DD6DC47414FF0422CD18A2ADA26A78C997E2C19B14438",
+    "operation_count": 76,
+    "accepted_operation_count": 77,
+    "historical_noop_operation_count": 1,
+    "mapping_failures": 0
+  },
+  "private_render_evidence": {
+    "published": false,
+    "manifests": {
+      "cohomology": {
+        "path": "tmp/pdfs/r38-visual-qa-20260831/cohomology/render-manifest.json",
+        "bytes": 46248,
+        "sha256": "817807FCED68E9B15CA94273EF698D1F3D3ED69B03EB6F84D2FE6BE129705D25"
+      },
+      "sites-cohomology": {
+        "path": "tmp/pdfs/r38-visual-qa-20260831/sites-cohomology/render-manifest.json",
+        "bytes": 48968,
+        "sha256": "57403BE50748654C68AE279816A4512C741D126D1DB0BDE9B9A3EC0F1D2027FC"
+      },
+      "more-algebra": {
+        "path": "tmp/pdfs/r38-visual-qa-20260831/more-algebra/render-manifest.json",
+        "bytes": 132722,
+        "sha256": "40CE5BF45450ACFFE64C0E4F680CEB873E2175E96DF9682926FFF7866528AC89"
+      }
+    }
+  },
+  "direct_inspection_evidence": {
+    "method": "direct_image_inspection",
+    "ledgers": [
+      {
+        "path": "tmp/pdfs/r38-visual-qa-20260831/cohomology-inspection.json",
+        "bytes": 19739,
+        "sha256": "DB3044C25B4406A8FF31348ADC79F54A0B564BDB40CCABFE20183CEE9158FC2A",
+        "reviewer": "Codex /root/r38_cohomology_visual",
+        "inspection_count": 13,
+        "covered_stems": [
+          "cohomology"
+        ]
+      },
+      {
+        "path": "tmp/pdfs/r38-visual-qa-20260831/sites-cohomology-inspection.json",
+        "bytes": 33065,
+        "sha256": "ABA3913F7B8D27FFD75CC988E3A41655A6EF1C5BFEC1390DFA2C78934F5D85F5",
+        "reviewer": "AI visual reviewer /root/r38_sites_visual",
+        "inspection_count": 25,
+        "covered_stems": [
+          "sites-cohomology"
+        ]
+      },
+      {
+        "path": "tmp/pdfs/r38-visual-qa-20260831/sites-cohomology-late-inspection.json",
+        "bytes": 13639,
+        "sha256": "49A2C8E8DD48B100FC3F8D779F7C56EABEA08D909FFED52199C8C1A9D9E88426",
+        "reviewer": "AI agent /root/r38_sites_visual/sites_late_pages",
+        "inspection_count": 9,
+        "covered_stems": [
+          "sites-cohomology"
+        ]
+      },
+      {
+        "path": "tmp/pdfs/r38-visual-qa-20260831/more-algebra-inspection.json",
+        "bytes": 36468,
+        "sha256": "84D801219D3130A5D625A1D3441E3F333C98AA44A635CD13A13C4D17513803DC",
+        "reviewer": "Codex agent /root/r38_algebra_visual",
+        "inspection_count": 26,
+        "covered_stems": [
+          "more-algebra"
+        ]
+      },
+      {
+        "path": "tmp/pdfs/r38-visual-qa-20260831/more-algebra-contacts-early-inspection.json",
+        "bytes": 17269,
+        "sha256": "E745B0663CC4B45F704B35DC2A131968BBDDCC27F8C12635DDF0C977C792A268",
+        "reviewer": "AI agent /root/r38_algebra_visual/algebra_contacts_early",
+        "inspection_count": 13,
+        "covered_stems": [
+          "more-algebra"
+        ]
+      }
+    ],
+    "inspection_count": 86,
+    "operation_page_locus_check_count": 77,
+    "attribution": "Visual findings are the named reviewers' recorded direct-image observations; this writer validates evidence and coverage, not visual appearance."
+  },
+  "layout_observations": [
+    {
+      "kind": "margin_overflow",
+      "stem": "cohomology",
+      "page": 123,
+      "operation_ids": [
+        "MC-STK-ERR-1297-OP1"
+      ],
+      "blocking": false,
+      "observations": "Direct high-resolution inspection shows that the long second double-RHom triangle extends into the right text margin while remaining fully inside the physical page; all symbols and arrows are readable and no other content is overlapped. The corresponding current cohomology.log warning is exactly: Overfull \\hbox (16.28908pt too wide) detected at line 13355. Root independently inspected this page and instructed retention of the exact admitted operation with this nonblocking margin residual disclosed. This is not claimed to be inherited and no zero-new-diagnostics or zero-formatting-issues claim is made.",
+      "evidence": {
+        "kind": "high_resolution",
+        "file": "high-resolution/cohomology_p123.png",
+        "image": {
+          "bytes": 388467,
+          "sha256": "9AA2A026A94E7D9E26C83116DABC1AC6612F4471A8597EDD0C5912D016755910"
+        }
+      },
+      "reviewer": "Codex /root/r38_cohomology_visual",
+      "inspection_ledger": {
+        "path": "tmp/pdfs/r38-visual-qa-20260831/cohomology-inspection.json",
+        "bytes": 19739,
+        "sha256": "DB3044C25B4406A8FF31348ADC79F54A0B564BDB40CCABFE20183CEE9158FC2A"
+      }
+    },
+    {
+      "kind": "external_reference",
+      "stem": "sites-cohomology",
+      "page": 102,
+      "operation_ids": [
+        "MC-STK-ERR-1300-OP1",
+        "MC-STK-ERR-1301-OP1"
+      ],
+      "blocking": false,
+      "observations": "The introductory paragraph under Modules on a category visibly refers to Sheaves on Stacks, Section ??. This lies outside the two corrected loci inspected on this page. The parent reviewer relayed root's source/build check identifying stacks-sheaves-section-QC at source line 11087 as external to the 30-chapter build profile, not an undefined internal reference. Recorded as a nonblocking external-reference residual; this layout PASS does not claim reference completeness or conceal the visible marker.",
+      "evidence": {
+        "kind": "high_resolution",
+        "file": "high-resolution/sites-cohomology_p102.png",
+        "image": {
+          "bytes": 401659,
+          "sha256": "9F38FEF619F59D570C09AF446FFF4DF02F26C03816E8F2BC02E5BB9EE3F0DB61"
+        }
+      },
+      "reviewer": "AI agent /root/r38_sites_visual/sites_late_pages",
+      "inspection_ledger": {
+        "path": "tmp/pdfs/r38-visual-qa-20260831/sites-cohomology-late-inspection.json",
+        "bytes": 13639,
+        "sha256": "49A2C8E8DD48B100FC3F8D779F7C56EABEA08D909FFED52199C8C1A9D9E88426"
+      }
+    }
+  ],
+  "qualification": {
+    "serious_defect_gates_unchanged": true,
+    "absence_of_all_layout_issues_claimed": false,
+    "reference_completeness_claimed": false,
+    "note": "Recorded nonblocking margin-overflow and external-reference observations are preserved verbatim with their inspection provenance. Passing the six serious-defect gates does not assert absence of all layout issues or complete references; numerical log diagnostics remain attributed observations."
+  },
+  "checks": {
+    "all_pages_rendered": true,
+    "all_pages_manually_inspected": true,
+    "all_manifest_bound_locus_pages_inspected_at_high_resolution": true,
+    "page_dimensions_consistent": true,
+    "headers_and_page_numbers_consistent": true,
+    "text_and_formulas_legible": true,
+    "diagrams_intact": true,
+    "rejected_simplicial_007_parenthesis_preserved": true,
+    "historical_noop_evidence_inspected_without_duplicate_byte_edit": true,
+    "clipped_content": 0,
+    "overlapping_content": 0,
+    "blank_pages": 0,
+    "corrupted_pages": 0,
+    "missing_or_unreadable_glyphs": 0,
+    "broken_diagrams": 0
+  },
+  "source_preservation_evidence": {
+    "rejected_simplicial_007_parenthesis_preserved": {
+      "method": "exact Git-blob byte equality",
+      "path": "simplicial.tex",
+      "source_commit": "bb6e7ccca41fe00a06815d81e174c5261e7a1ce3",
+      "previous_public_main_head": "d4a2a2d40bee38ae8505fcfd98fcd1a757038f3d",
+      "source_blob": {
+        "bytes": 241631,
+        "sha256": "23E8DB6115B5B3465D2C1292D7E6CB244308204C6D1B7EE5F3AC071092D643F9"
+      },
+      "previous_public_blob": {
+        "bytes": 241631,
+        "sha256": "23E8DB6115B5B3465D2C1292D7E6CB244308204C6D1B7EE5F3AC071092D643F9"
+      },
+      "identical": true
+    }
+  },
+  "semantic_qualification": {
+    "operation_id": "MC-STK-ERR-1345-OP1",
+    "description": "Optional equivalent summation-notation normalization; not a substantive mathematical defect."
+  },
+  "accessibility": {
+    "artifacts": {
+      "cohomology": {
+        "struct_tree_root_present": false,
+        "mark_info_present": false
+      },
+      "sites-cohomology": {
+        "struct_tree_root_present": false,
+        "mark_info_present": false
+      },
+      "more-algebra": {
+        "struct_tree_root_present": false,
+        "mark_info_present": false
+      }
+    },
+    "note": "PDF structure-tree and marking flags are reported from the live PDFs; direct visual inspection is not an accessibility-conformance audit."
+  },
+  "conclusion": "Completed, hash-bound direct-image ledgers record review of all 681 pages in 44 contact sheets and all 42 mapped high-resolution pages. Every required operation/page locus has an explicit passing observation, including the historical no-op evidence. The ledgers report zero clipping, overlap, blank or corrupted pages, unreadable glyphs, or broken diagrams. The receipt retains 2 nonblocking layout/reference observations; it does not claim absence of all layout issues or complete references."
+}

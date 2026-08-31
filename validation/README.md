@@ -1,5 +1,59 @@
 # Unified-build receipts
 
+## Current local R38 composition and build evidence
+
+The local source includes admitted R34–R38 corrections on top of the public
+R33 source. Independent composition replay, two byte-identical builds, and
+visual review pass with the observations below. **R38 is not yet published.** R33,
+described below, remains the latest public errata release, and no R38 DOI,
+successful publication workflow, or anonymous public readback is asserted.
+
+The current evidence is:
+
+- [Composition receipt](composition-current.json): registry cutoff
+  `69f14d67c3a456c3d1447e1a201bdfc3f3d87f0c`, source commit
+  `1242d514b71e60b4fe11b4c867f7de660f9a3b77`, 39 overlays and 1,106 stable
+  IDs (1,094 errata IDs plus 12 Verdier units).
+- [Independent cumulative replay](stacks-errata-a04446e-r38-independent-composition-2026-08-31.json):
+  all 77 accepted operations accounted for, with 76 exact byte edits across
+  `cohomology.tex`, `sites-cohomology.tex`, and `more-algebra.tex`. The one
+  historical structural no-op, `MC-STK-ERR-1296-OP1`, is already satisfied
+  and was not reapplied. Forward replay matches the complete sources;
+  reverse replay recovers the parent and preserves earlier additions.
+- [First fixed-point build](stacks-errata-a04446e-r38-build-2026-08-31.json),
+  [second build](stacks-errata-a04446e-r38-reproducibility-second-2026-08-31.json),
+  and [reproducibility comparison](stacks-errata-a04446e-r38-reproducibility-2026-08-31.json):
+  all 30 PDF identities match, totaling 3,005 pages and 32,046,922 bytes in
+  each run. Both reach a global fixed point on sweep four at build source
+  `bb6e7ccca41fe00a06815d81e174c5261e7a1ce3`, tree
+  `bfcfa4103af8bb253cac76ffacf791147ea7c683`.
+- [Source-to-page map](stacks-errata-a04446e-r38-source-page-map-2026-08-31.json):
+  no mapping failures; it binds the 76 changed operations and the historical
+  no-op to the exact PDFs.
+- [Completed visual review](stacks-errata-a04446e-r38-visual-qa-2026-08-31.json):
+  PASS for all 681 affected-chapter pages in 44 contact sheets and all 42
+  enlarged correction-bearing or preserved-evidence pages, totaling 86
+  inspected images. The two nonblocking observations remain explicit.
+
+The visible nonblocking layout residual is the double-derived-Hom display
+on `cohomology.pdf` page 123: 16.28908 pt beyond the text width, but within
+the page, legible, and without overlap or clipping. A successful build does
+not establish zero new box warnings.
+
+On `sites-cohomology.pdf` page 102, “Sheaves on Stacks, Section ??” is a
+visible external-reference residual. Its target, `stacks-sheaves-section-QC`,
+is outside the selected 30-chapter build profile, not an undefined internal
+reference. This visual PASS is not a claim of reference completeness across
+all 116 chapters.
+
+The [R38 admission clarification](../ai-integrated/registry/admission-receipts/r38-clarification-0001.json)
+preserves the immutable candidate while classifying `MC-STK-ERR-1345` as
+equivalent summation notation, not a substantive mathematical defect. It
+also identifies the final manifest-bound review behind an older receipt's
+stale nested pointer; the original historical evidence remains unchanged.
+
+## Historical R21 build receipts
+
 The preserved historical R21 build gate is recorded at the automation-stable path
 [`unified-fixed-point-2026-08-25-r19.json`](unified-fixed-point-2026-08-25-r19.json).
 The historical-looking filename is retained for automation compatibility; its
@@ -105,7 +159,7 @@ candidate and registry bytes, exact operation replay, earlier source identities,
 and source commit `10c1c62f371921cdafbaa5e89f438a821a013621`, tree
 `6ec98b8ee6919070a24130877d4eeb9e1a0e874b`.
 
-The current evidence is recorded in:
+The historical R24 evidence is recorded in:
 
 - [`stacks-errata-a04446e-r24-build-2026-08-27.json`](stacks-errata-a04446e-r24-build-2026-08-27.json)
   — source `c3bc402b03dea3c5ac92c9e226645b5895a78887`, tree
@@ -146,7 +200,7 @@ candidate and registry bytes, exact operation replay, earlier source identities,
 and source commit `63dfd5f1499bea1916f64256056a5a37bcfb8f9a`, tree
 `7ab863452c932dd5ef230f65abdfa5bdcd6b5771`.
 
-The current evidence is recorded in:
+The historical R25 evidence is recorded in:
 
 - [`stacks-errata-a04446e-r25-build-2026-08-28.json`](stacks-errata-a04446e-r25-build-2026-08-28.json)
   — source `a13d609ba9b146eac0a72f593bcf8aff5c5a6a33`, tree
@@ -225,8 +279,9 @@ R26 adjudication accepted 31 producer identities, aliased
 `SMOOTHING-002/003/004` to existing R1 corrections, rejected
 `SMOOTHING-010`, and merged the repeated semantic groups `005+031`,
 `008+012+013+014`, `016+018`, and `017+019` before materializing 25 new stable
-units. The active EGA I–IV integration program remains incomplete; its local
-semantic review now reaches EGA I §6.4.13 and resumes at §6.5.1.
+units. At that historical checkpoint, the incomplete EGA I–IV program had
+reached EGA I §6.4.13 and resumed at §6.5.1; the current public EGA cursor is
+recorded separately below.
 
 ## Historical R27 composition, validation, and publication receipts
 
@@ -282,7 +337,7 @@ one supersession-aware replacement affecting cumulative `smoothing.tex`.
 At the historical R28 checkpoint,
 [`composition-current.json`](composition-current.json) bound the R28 registry
 cutoff and source composition to the cumulative 962-operation projection; its
-live successor now binds R30.
+live successor now binds R38.
 
 The historical R28 deterministic evidence is recorded in:
 
@@ -348,7 +403,7 @@ source composition is `3e57820736a5a57ddb1c9fbaaf2206e455b5ee31`, tree
 bound by successor `c521604343534f94c7a59086c94b99712eb1d754`, tree
 `4fe26c45da3edc493b8406824f90db06ef3df28c`.
 
-The current deterministic evidence is:
+The historical R29/R30 deterministic evidence is:
 
 - [`stacks-errata-a04446e-r30-build-2026-08-29.json`](stacks-errata-a04446e-r30-build-2026-08-29.json)
   — 26 PDFs, 2,572 pages, 27,531,529 PDF bytes, fixed point on sweep four,
@@ -368,7 +423,7 @@ and 105,225 bytes / SHA-256
 `BDC721593BE0B491334C707B371A2EECD1787787903A71E059721BDB66C5AC04`.
 
 The [R30 release receipt](stacks-errata-a04446e-r30-release-2026-08-29.json)
-binds the current public errata preservation checkpoint at source head
+binds the historical R30 public errata preservation checkpoint at source head
 `e3def48650c66c0d65978a04f67dea88bd8b42ac`, tree
 `62bee382516e4a06df6746c5aa61a54b2fe6622f`, and GitHub tag
 [`ai-integrated-stacks-r30-2026-08-29`](https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project/releases/tag/ai-integrated-stacks-r30-2026-08-29).
@@ -380,9 +435,10 @@ byte count, and SHA-256, and all three ZIPs passed reopen and complete-listing
 checks. The package preserves 26 PDFs, 2,572 pages, and 27,531,529 PDF bytes.
 R28 remains the preceding immutable historical errata release.
 
-## Current R33 composition, validation, and publication receipts
+## Historical R33 validation and latest public errata release
 
-R33 is the current integrated Stacks checkpoint: **34 overlays / 1,042 stable
+R33 remains the latest public errata release while R38 is local. Its
+historical integrated checkpoint contains **34 overlays / 1,042 stable
 IDs**. The R1–R33 errata subset contains 33 batches, 1,030 correction IDs, and
 1,166 exact v2 operations; R33 contributes seven manifest-bound operations to
 `spaces-morphisms.tex`. The registry cutoff is

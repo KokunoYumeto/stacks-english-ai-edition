@@ -7,6 +7,12 @@ Pinned official upstream: `a04446e57ec1fbc252a871afcec7752fb2807b14`
 This dashboard summarizes the live integrated tree. Detailed evidence remains
 in each corpus dossier and in the machine-readable registry.
 
+**Local source is composed through R38; the latest public errata release is
+still R33.** The R34–R38 corrections have passed independent source replay,
+two byte-identical builds, and visual review of the three affected chapters
+with the two nonblocking observations below. R38 has not yet been published
+or publicly read back.
+
 ## Source integrations
 
 | Workstream | Current state | Bounded claim |
@@ -29,17 +35,54 @@ the latest errata release; the next EGA cursor is §6.6.4.
 The generated [`Changes from Upstream`](CHANGES_FROM_UPSTREAM.md) index and
 self-contained [`offline change browser`](ai-integrated/changes/index.html)
 place the pinned original and integrated replacement side by side for all
-1,030 admitted errata IDs, with direct evidence links and no annotations in
+1,094 admitted errata IDs, with direct evidence links and no annotations in
 the mathematical TeX.
 
-R1–R33 are composed and validated in registry order. The live registry has
-**34 overlays / 1,042 stable IDs** and the cumulative v2 replay contains
-**1,166 exact operations**. R33 contributes seven operations to
-`spaces-morphisms.tex`. Two independent 28-PDF builds are byte-identical
-(2,730 pages; 29,277,302 bytes), and all 116 affected-chapter pages plus five
-mapped loci passed visual QA.
+### R34–R38: composed locally, publication not yet complete
 
-- Current integrated registry: **34 overlays / 1,042 stable IDs**, frozen at
+The new work corrects the directions of two cohomological comparison maps,
+repairs indices and functor types in cohomology on sites, and fixes
+commutative-algebra arguments involving minimal primes, localization, and
+direct summands. Only the accepted edits were applied to `cohomology.tex`,
+`sites-cohomology.tex`, and `more-algebra.tex`; earlier additions were
+preserved, not replaced by isolated chapter payloads.
+
+The cumulative registry contains **39 overlays and 1,106 stable IDs**:
+1,094 errata IDs through R38 plus the 12-unit Verdier contribution. R34–R38
+add 77 accepted operations, of which 76 change source bytes. The remaining
+operation, `MC-STK-ERR-1296-OP1`, is already satisfied by an earlier
+structural rewrite and is not applied a second time. The cumulative exact
+operation ledger contains 1,243 entries; these are not 1,243 new edits.
+
+The [composition receipt](validation/composition-current.json) and
+[independent replay](validation/stacks-errata-a04446e-r38-independent-composition-2026-08-31.json)
+bind source commit `1242d514b71e60b4fe11b4c867f7de660f9a3b77` to the admitted
+registry cutoff `69f14d67c3a456c3d1447e1a201bdfc3f3d87f0c`. Two builds
+produce the same **30 PDFs, 3,005 pages, and 32,046,922 PDF bytes**. The
+[completed visual review](validation/stacks-errata-a04446e-r38-visual-qa-2026-08-31.json)
+covers all 681 affected-chapter pages in 44 contact sheets and all 42 enlarged
+correction-bearing or preserved-evidence pages: 86 inspected images in total.
+
+One visible layout residual is retained: on `cohomology.pdf` page 123, the
+double-derived-Hom display extends 16.28908 pt beyond the text width but
+remains inside the page, legible, and free of overlap or clipping. This is
+not a claim of zero new box warnings.
+
+A second nonblocking observation is the visible “Sheaves on Stacks,
+Section ??” reference on `sites-cohomology.pdf` page 102. Its target,
+`stacks-sheaves-section-QC`, is outside the selected 30-chapter build profile.
+The reference is disclosed, not treated as a resolved internal link. These
+builds do not establish reference completeness across all 116 chapters.
+
+The [R38 clarification](ai-integrated/registry/admission-receipts/r38-clarification-0001.json)
+also records that `MC-STK-ERR-1345` is equivalent summation notation, not a
+substantive mathematical defect. It identifies the final manifest-bound
+review where an older regeneration receipt retains a stale nested pointer;
+the immutable candidate and admission history remain unchanged.
+
+### Historical composition through R33
+
+- The R33 integrated registry contained **34 overlays / 1,042 stable IDs**, frozen at
   the R33 successor `acb48c7edaf9595b542b003ed360399870188b7f`, tree
   `8356ae1652ae4ce6a22a457855072c5a3e7b3ad4`.
 - The Stacks errata component is **R1–R33**: 33 batches, 1,030 stable
@@ -169,17 +212,21 @@ proposals remain under
 
 ## Validation state
 
-The repository integrity gate checks the pinned authority, protected linear
-ancestry, all 34 registry entries and 1,042 stable IDs, the immutable Verdier and
-R22–R33 candidates, the retained Verdier insertion, all 1,166 exact v2
-operations, exact manifest/source-map/payload/review joins, the independent
-source correction, public-document links, JSON registries, and unresolved merge
-markers. See [VALIDATION.md](VALIDATION.md).
+The current source replay, reproducibility, and visual receipts pass for R38
+with the disclosed layout and external-reference observations. The
+repository integrity gate covers the pinned authority, preserved history,
+39 registry entries, 1,106 stable IDs, 1,243 cumulative exact operations,
+candidate hashes, and source preservation. Publication completion remains a
+separate claim and is not inferred from successful local validation.
+See [VALIDATION.md](VALIDATION.md) for the local R38 evidence and outstanding
+publication steps.
 
 Per-corpus build and visual receipts remain linked from the detailed dossiers;
 they are not silently generalized beyond their recorded source identity.
 
-The current R33 gate built all 28 required chapters (2,730 pages and
+### Historical R33 validation and latest public release
+
+The R33 gate built all 28 required chapters (2,730 pages and
 29,277,302 PDF bytes) to a global PDF fixed point on sweep four. It is bound to
 source `1c90a67eb42de28884be05abd8fb58f781aed7db`, tree
 `3c292f9a4b94162ede69d2633b1272b057a498c3`, and records zero fatal,
@@ -187,7 +234,7 @@ missing-glyph, undefined-reference, undefined-citation, multiply-defined,
 rerun-required, or destination-warning diagnostics. Visual QA passed all 116
 pages of `spaces-morphisms.pdf`, including all five unique
 manifest-bound locus pages at 180 DPI. The exact artifact inventory is in the
-[current fixed-point build receipt](validation/stacks-errata-a04446e-r33-build-2026-08-30.json).
+[historical R33 fixed-point build receipt](validation/stacks-errata-a04446e-r33-build-2026-08-30.json).
 
 The [parallel linked-worktree reproducibility gate](validation/stacks-errata-a04446e-r33-reproducibility-2026-08-30.json)
 is **PASS**. Both builds use the same commit, tree, builder, environment, and

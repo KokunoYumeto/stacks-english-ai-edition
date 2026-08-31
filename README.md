@@ -183,6 +183,21 @@ Examples include:
 - **Localization at an object of a site:** using the sheaf category of the
   slice site in place of an unrelated quotient topos in the proof.
   [Original and replacement](CHANGES_FROM_UPSTREAM.md#mc-stk-err-1287).
+- **Functoriality of derived internal Hom:** restoring a missing arrow in a
+  distinguished triangle and correcting the direction of a comparison map.
+  [Triangle](CHANGES_FROM_UPSTREAM.md#mc-stk-err-1297) ·
+  [comparison map](CHANGES_FROM_UPSTREAM.md#mc-stk-err-1312).
+- **Commutative-algebra proofs:** repairing mismatched ring indices,
+  localization subscripts, and the use of all minimal primes in a
+  reduced-ring injection. These are local corrections, not replacement
+  proofs of the entire chapter.
+  [Chapter-by-chapter comparisons](ai-integrated/changes/index.html).
+
+Not every edit is a mathematical error correction: some improve prose or
+normalize equivalent notation. For example, the two summation conventions
+in [MC-STK-ERR-1345](CHANGES_FROM_UPSTREAM.md#mc-stk-err-1345) mean the same
+thing. [The classification clarification](ai-integrated/registry/admission-receipts/r38-clarification-0001.json)
+records that distinction explicitly.
 
 [Browse every recorded correction](CHANGES_FROM_UPSTREAM.md). This comparison
 places the pinned original beside the replacement and links the source,

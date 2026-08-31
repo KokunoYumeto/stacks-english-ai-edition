@@ -3,6 +3,67 @@
 Validation is layered so that repository integrity, mathematical-source
 composition, TeX compilation, and visual evidence are not conflated.
 
+## Current local R38 evidence
+
+R34–R38 are composed locally on top of the published R33 source. Independent
+source replay, two complete fixed-point builds, and affected-page visual
+review pass with the two disclosed observations below. **R38 is not yet a
+public release:** no R38 DOI, successful publication workflow, or anonymous
+public-byte readback is claimed here.
+
+The [composition receipt](validation/composition-current.json) binds registry
+cutoff `69f14d67c3a456c3d1447e1a201bdfc3f3d87f0c`, its linear import
+`e4978987d5bf67f09a1b7649bda6fd90fe0fb2d8`, and cumulative source commit
+`1242d514b71e60b4fe11b4c867f7de660f9a3b77`. The registry contains 39
+overlays and 1,106 stable IDs, including 1,094 errata IDs and 12 Verdier units.
+The new tranche has 77 accepted operations: 76 byte edits and one
+historically satisfied structural correction, `MC-STK-ERR-1296-OP1`.
+The cumulative exact-operation ledger contains 1,243 entries.
+
+The [independent composition review](validation/stacks-errata-a04446e-r38-independent-composition-2026-08-31.json)
+replayed the edits without calling the production composer, matched all
+three complete chapter postimages, reversed the edits to recover the parent,
+and checked the directions of the two non-prose cohomology arrows. The
+affected sources are `cohomology.tex`, `sites-cohomology.tex`, and
+`more-algebra.tex`; earlier source additions are preserved.
+
+The [first build](validation/stacks-errata-a04446e-r38-build-2026-08-31.json),
+[second build](validation/stacks-errata-a04446e-r38-reproducibility-second-2026-08-31.json),
+and [reproducibility comparison](validation/stacks-errata-a04446e-r38-reproducibility-2026-08-31.json)
+bind build source `bb6e7ccca41fe00a06815d81e174c5261e7a1ce3`, tree
+`bfcfa4103af8bb253cac76ffacf791147ea7c683`. Both builds reach a global fixed
+point on sweep four and produce exactly the same 30 PDF identities:
+**3,005 pages and 32,046,922 PDF bytes**. Their recorded fatal,
+missing-glyph, internal undefined-reference, undefined-citation, multiply-defined,
+rerun-required, and destination-warning marker counts are zero. This does
+not mean that all TeX box warnings are zero.
+
+The [completed visual review](validation/stacks-errata-a04446e-r38-visual-qa-2026-08-31.json)
+covers all 681 pages of the three affected chapters in 44 contact sheets,
+plus all 42 enlarged correction-bearing or preserved-evidence pages:
+86 inspected images. The [source-to-page map](validation/stacks-errata-a04446e-r38-source-page-map-2026-08-31.json)
+locates all 76 byte edits and the one historical no-op with no mapping
+failures. A known nonblocking layout residual remains on
+`cohomology.pdf` page 123: the double-derived-Hom display extends
+16.28908 pt beyond the text width, but stays within the page and remains
+legible without overlap or clipping. It must not be reported as zero new
+box warnings.
+
+The second nonblocking observation is the visible “Sheaves on Stacks,
+Section ??” reference on `sites-cohomology.pdf` page 102. The target
+`stacks-sheaves-section-QC` is outside this selected 30-chapter profile and
+is reported separately as an external reference, not an undefined internal
+reference. The visual PASS therefore does not claim complete references or
+full reference closure across all 116 chapters.
+
+The [append-only R38 clarification](ai-integrated/registry/admission-receipts/r38-clarification-0001.json)
+distinguishes the equivalent summation-notation change `MC-STK-ERR-1345`
+from a substantive mathematical defect. It also resolves the older
+regeneration receipt's stale nested review pointer to the final
+manifest-bound review, without rewriting any candidate, operation,
+manifest, or admission. Historical private raster references are not a
+substitute for fresh cumulative visual review.
+
 ## Fast unified-repository gate
 
 Run from the repository root:
@@ -16,26 +77,25 @@ All composition, registry, build, historical-preservation, and documentation
 checks remain active. After publication evidence exists, omit the flag to run
 the complete gate.
 
-The gate verifies:
+The gate is intended to verify the complete local validation package,
+including the completed visual receipt and its explicit qualifications.
+Passing local source, build, and visual checks is not proof of publication.
+Its scope includes:
 
-- the R33 registry chain at cutoff
-  `acb48c7edaf9595b542b003ed360399870188b7f`, comprising 34 overlays,
-  1,042 globally unique stable IDs, and 1,166 cumulative exact v2 operations;
-- manifest-only composition of the R31/R32 history followed by seven R33
-  operations in `spaces-morphisms.tex`;
-- two byte-identical 28-PDF fixed-point builds (2,730 pages; 29,277,302 bytes)
-  and visual inspection of all 116 affected-chapter pages and five mapped loci;
-
+- the R38 registry chain at cutoff
+  `69f14d67c3a456c3d1447e1a201bdfc3f3d87f0c`, comprising 39 overlays,
+  1,106 globally unique stable IDs, and 1,243 cumulative exact v2 operations;
+- manifest-only R34–R38 composition on cumulative source, with 76 byte edits
+  and one separately bound historical structural disposition;
+- two byte-identical 30-PDF fixed-point builds (3,005 pages; 32,046,922 bytes)
+  and the separate affected-page visual evidence;
 - ancestry of the pinned upstream, source-union, EGA, and protected linear
   registry/source history;
-- 34 admitted overlays containing exactly 1,042 stable IDs at the R33
-  registry successor `acb48c7edaf9595b542b003ed360399870188b7f`, tree
-  `8356ae1652ae4ce6a22a457855072c5a3e7b3ad4`;
 - the final immutable Verdier candidate, its 12 stable units, 27 manifest
   references, independent replay, rights boundary, and exact registered
   insertion into `derived.tex`;
-- the R1–R33 Stacks errata sequence: 33 batches, 1,030 correction IDs, and all
-  1,166 v2 operations, including the ordered R22/R23 replay, the 57-operation R24
+- the R1–R38 Stacks errata sequence: 38 batches, 1,094 correction IDs, and all
+  1,243 v2 operations, including the ordered R22/R23 replay, the 57-operation R24
   replay in `spaces-duality.tex`, the 154-operation R25 replay in `artin.tex`,
   the 39-operation R26 replay in `smoothing.tex`, the 14-operation R27 replay
   in `modules.tex`, the one-operation supersession-aware R28 replay in
@@ -43,7 +103,7 @@ The gate verifies:
   40-operation R30 replay in `injectives.tex`, the single R31 replay in
   `sites-modules.tex`, the 125-operation R32 replay across `fields.tex`,
   `categories.tex`, and `algebra.tex`, and the seven-operation R33 replay in
-  `spaces-morphisms.tex`;
+  `spaces-morphisms.tex`, followed by the R34–R38 tranche described above;
 - preservation of the historical R1–R21 snapshot at prior cutoff
   `13ca6aaaca454f5930c4885c93f427e30cf21959` and of the separately composed
   Verdier source;
@@ -59,7 +119,13 @@ The gate verifies:
 The same gate runs in
 [`validate.yml`](.github/workflows/validate.yml) with full Git history.
 
-The current R33 build result is recorded at
+## Historical R33 validation and latest public errata release
+
+R33 remains the latest publicly preserved errata checkpoint while the R38
+publication workflow is unfinished. Its evidence below
+applies to the historical R33 source, not the current local R38 tree.
+
+The R33 build result is recorded at
 [`validation/stacks-errata-a04446e-r33-build-2026-08-30.json`](validation/stacks-errata-a04446e-r33-build-2026-08-30.json).
 All 28 required chapters (2,730 pages; 29,277,302 PDF bytes) compiled
 successfully, were readable by `pdfinfo`, and reached a global PDF fixed point
@@ -72,7 +138,7 @@ multiply-defined, rerun-required, or destination-warning markers.
 Visual QA rendered and reviewed all 116 pages of the affected
 `spaces-morphisms.pdf` at 96 DPI and inspected all five unique correction-locus
 pages individually at 180 DPI.
-The current
+The historical R33
 [visual receipt](validation/stacks-errata-a04446e-r33-visual-qa-2026-08-30.json)
 records zero clipped, overlapping, blank, corrupt, missing-glyph, or
 broken-diagram defects. A second build ran independently in a parallel linked
@@ -81,8 +147,7 @@ sweep, and all 28 `{stem, pages, bytes, sha256}` tuples are exactly equal. See
 the [reproducibility summary](validation/stacks-errata-a04446e-r33-reproducibility-2026-08-30.json)
 and [second full receipt](validation/stacks-errata-a04446e-r33-reproducibility-second-2026-08-30.json).
 
-The [source composition receipt](validation/composition-current.json) records
-R33 cutoff `acb48c7edaf9595b542b003ed360399870188b7f`, tree
+The R33 composition recorded cutoff `acb48c7edaf9595b542b003ed360399870188b7f`, tree
 `8356ae1652ae4ce6a22a457855072c5a3e7b3ad4`, linear registry import
 `b2ffa008fc27bfdb8b93c431f4df0c3e197d3440`, and exact composition source
 `9100eefe0819f9632c6129e6d6f19a4101d223d1`, tree
@@ -90,9 +155,10 @@ R33 cutoff `acb48c7edaf9595b542b003ed360399870188b7f`, tree
 operations and the seven-operation `spaces-morphisms.tex` replay. The
 validated build source is `1c90a67eb42de28884be05abd8fb58f781aed7db`, tree
 `3c292f9a4b94162ede69d2633b1272b057a498c3`.
-Historical R24, R22/R23, Verdier, and R21 receipts remain preserved and
-authoritative for their immutable source snapshots; they are not rebound to the
-R33 tree.
+The live [composition receipt](validation/composition-current.json) now binds
+R38. Historical R33, R24, R22/R23, Verdier, and R21 receipts remain preserved
+and authoritative for their immutable source snapshots; they are not rebound
+to the R38 tree.
 
 R33's manifest SHA-256 is
 `1D2EA4F6463FB775CFF3F0E3616BE125F6D20709BB32DB84D1D1889582BFAC75`.

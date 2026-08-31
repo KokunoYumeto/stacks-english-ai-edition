@@ -74,6 +74,12 @@ NON_BUILD_RELEVANT_POST_BUILD_PATHS = frozenset(
         ".github/workflows/validate.yml",
         "tools/build_errata_preservation_package.py",
         "tools/validate_unified_repository.py",
+        "tools/instrument_r38_synctex.py",
+        "tools/map_r38_visual_qa.py",
+        "tools/write_r38_visual_qa_receipt.py",
+        "tools/write_r38_release_receipt.py",
+        "tests/test_changes_from_upstream.py",
+        "ai-integrated/registry/admission-receipts/r38-clarification-0001.json",
     }
 )
 NON_BUILD_RELEVANT_POST_BUILD_PREFIXES = ("validation/",)
@@ -894,6 +900,12 @@ def validate_release_source_binding(
             f"build: {preview}"
         )
 
+    critical_equivalence = validate_build_critical_blob_equivalence(
+        repository,
+        build_commit=build_commit,
+        release_commit=release_commit,
+        build_receipt=build_receipt,
+    )
     return {
         "status": "PASS",
         "build_commit": build_commit,
@@ -904,6 +916,7 @@ def validate_release_source_binding(
         "intervening_changed_path_count": len(changed_paths),
         "intervening_changed_paths": changed_paths,
         "build_relevant_intervening_changes": 0,
+        "build_critical_equivalence": critical_equivalence,
     }
 
 

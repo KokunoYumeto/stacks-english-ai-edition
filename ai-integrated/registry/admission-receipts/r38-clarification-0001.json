@@ -1,0 +1,89 @@
+{
+  "schema": "mathematics-commons-stacks-admission-clarification/v1",
+  "record_id": "stacks-r38-admission-clarification-0001",
+  "recorded_at_utc": "2026-08-31T13:23:48Z",
+  "candidate_id": "stacks-errata-a04446e-r38",
+  "scope": "Append-only clarification of one stale nested review pointer and one equivalent-notation classification; no new overlay or changed source operation.",
+  "admission_commit": "69f14d67c3a456c3d1447e1a201bdfc3f3d87f0c",
+  "admission_tree": "367d43b7eed72cdfd55a86b1ec887e01bf032280",
+  "admitted_manifest": {
+    "path": "candidates/commons/stacks/errata/r38/candidate.manifest.json",
+    "bytes": 11329,
+    "sha256": "9636737033D82B50569C81C697EDB8ACC5A0A9EB65F04D25FBF32E3D5C5F1A52"
+  },
+  "original_admission_receipt": {
+    "path": "registry/admission-receipts/r38.json",
+    "bytes": 3881,
+    "sha256": "098C5D562899C9EB20568DD0619BE95516DCE3FEBD59153FBB2BDFD550335784"
+  },
+  "review_pointer_clarification": {
+    "historical_receipt": {
+      "path": "candidates/commons/stacks/errata/r38/REGENERATION_RECEIPT.json",
+      "bytes": 2151,
+      "sha256": "FA15161AEE6F4FDC7A56ED779A6C68E85A5AEF8B9279BADC6753DF75F40C740D"
+    },
+    "superseded_assertion_json_pointer": "/independent_review",
+    "historical_nested_assertion": {
+      "path": "replay/independent-review.json",
+      "bytes": 5706,
+      "sha256": "1C82ED4A65BA9D1FDAF9076E46C060C2BACD98269FF3B6143DBE9A1318A9CCE9"
+    },
+    "controlling_final_review": {
+      "path": "candidates/commons/stacks/errata/r38/replay/independent-review.json",
+      "bytes": 4172,
+      "sha256": "1DB05892DD5F76C055432B4CB28E52273F41C3C9023A46C4E635AA6630C11AFD"
+    },
+    "disposition": "The admitted manifest correctly binds the final review and the historical regeneration receipt. The regeneration receipt retained an earlier nested review identity. For final-review resolution use the controlling_final_review above; retain the stale nested assertion as adverse historical evidence, not as a requirement that current final-review bytes match the earlier review.",
+    "does_not_supersede": "Any authority, payload, operation, final manifest, stable ID, original admission event, or correctly bound final review."
+  },
+  "classification_clarification": {
+    "stable_id": "MC-STK-ERR-1345",
+    "operation_id": "MC-STK-ERR-1345-OP1",
+    "producer_id": "MORE-ALGEBRA-L-011",
+    "locus": "more-algebra.tex:38247",
+    "historical_classification": "malformed_summation_range",
+    "effective_classification": "editorial_or_notational_clarification",
+    "description": "Equivalent summation-notation normalization; not a substantive mathematical defect.",
+    "old_text": "\\sum_{i = 1, \\ldots, r}",
+    "replacement_text": "\\sum_{i = 1}^r",
+    "rationale": "Both notations sum the same terms over the finite index set 1,...,r. The surrounding proof uses the same primes and coefficients. The operation changes notation only; its admitted byte replacement remains valid.",
+    "reporting_rule": "Do not count this unit as a substantive mathematical defect or repeat the generic necessity claim for this unit. Preserve its stable ID, producer alias and exact admitted operation."
+  },
+  "preserved_bindings": [
+    {
+      "path": "candidates/commons/stacks/errata/r38/source-map.jsonl",
+      "bytes": 35560,
+      "sha256": "826082CECC2819B4BE595DC842F9240D91836BE6073E6AFBE1A4580AD8932E20"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r38/stable-units.json",
+      "bytes": 11514,
+      "sha256": "6E4C3C6A7387A96638A006A4B07E17C940DB217D67652B7719304E1A9ADB339A"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r38/payload/more-algebra.tex",
+      "bytes": 1492132,
+      "sha256": "B4D8BF24D64BF7D5A50E4BC0791D02DDC19849F34A24FB4857CED6CB143DD196"
+    },
+    {
+      "path": "registry/overlays.json",
+      "bytes": 63508,
+      "sha256": "C1A561855086A651B210537410D2767037E19926049E6AC557309B6333CEBEB4"
+    }
+  ],
+  "preservation": {
+    "candidate_files_rewritten": false,
+    "manifest_rewritten": false,
+    "existing_admission_receipt_rewritten": false,
+    "overlay_entries_rewritten": false,
+    "history_rewritten": false,
+    "new_overlay_created": false,
+    "authority_mutated": false,
+    "generated_source_composed": false,
+    "locale_targets_mutated": false,
+    "stable_units_unchanged": 23,
+    "exact_operations_unchanged": 31,
+    "registered_entries_unchanged": 39
+  },
+  "consumer_discovery": "Read this additive receipt by its immutable commit/path/SHA-256 in the composer handoff. Overlay-only readers do not automatically discover auxiliary admission clarifications."
+}

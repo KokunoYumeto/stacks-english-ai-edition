@@ -1,0 +1,247 @@
+{
+  "schema": "unofficial-ai-integrated-stacks-synctex-instrumentation/v1",
+  "status": "PASS",
+  "created_utc": "2026-08-31T13:29:35.937907+00:00",
+  "source": {
+    "commit": "bb6e7ccca41fe00a06815d81e174c5261e7a1ce3",
+    "tree": "bfcfa4103af8bb253cac76ffacf791147ea7c683"
+  },
+  "build_receipt": {
+    "path": "validation/stacks-errata-a04446e-r38-build-2026-08-31.json",
+    "bytes": 56669,
+    "sha256": "E9146EBB94F8B71DA1FBAD4E39005CF5ADED8A9649B47F11C07BD8A479FA69F9"
+  },
+  "environment": {
+    "SOURCE_DATE_EPOCH": "1785270512",
+    "FORCE_SOURCE_DATE": "1",
+    "TZ": "UTC"
+  },
+  "artifacts": [
+    {
+      "stem": "cohomology",
+      "command": [
+        "pdflatex",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "-file-line-error",
+        "-synctex=1",
+        "cohomology.tex"
+      ],
+      "exit_code": 0,
+      "synctex_regenerated": true,
+      "sidecar_absent_before": true,
+      "started_at_utc": "2026-08-31T13:29:23.408942+00:00",
+      "completed_at_utc": "2026-08-31T13:29:26.429918+00:00",
+      "started_ns": 1788182963408964300,
+      "completed_ns": 1788182966429913400,
+      "synctex_mtime_ns": 1788182966367701900,
+      "pdf_before": {
+        "bytes": 1373198,
+        "sha256": "690B3441A4C077CD61CB7901F0535D343511BA48937000CDC375A60B091CDF0B"
+      },
+      "pdf_after": {
+        "bytes": 1373198,
+        "sha256": "690B3441A4C077CD61CB7901F0535D343511BA48937000CDC375A60B091CDF0B"
+      },
+      "synctex": {
+        "bytes": 1650511,
+        "sha256": "661DB65A852DEC056C72382091E0DAF1C58C42C2E77733A4EEF4734764B612C2"
+      },
+      "fixed_point_artifacts_before": {
+        "cohomology.aux": {
+          "bytes": 38362,
+          "sha256": "B23DFAFA2B97E4D17030B7FA8BAAADABCD61A169A96EF83F4E20DD891A376A7C"
+        },
+        "cohomology.bbl": {
+          "bytes": 2083,
+          "sha256": "89BFEC1259565960CDB8FC88DBB1C543A340F285F64A4218853CF09296043F5D"
+        },
+        "cohomology.out": {
+          "bytes": 11592,
+          "sha256": "249D738D7533A378F1391BA8E4029E5E56141672BDD0DAFBDE4099AF014F9FFE"
+        },
+        "cohomology.toc": {
+          "bytes": 5091,
+          "sha256": "4298A10AD5D7FEE2CAB45D085C323F5A97F3A88C39917E1A6A281925164105CC"
+        },
+        "cohomology.pdf": {
+          "bytes": 1373198,
+          "sha256": "690B3441A4C077CD61CB7901F0535D343511BA48937000CDC375A60B091CDF0B"
+        }
+      },
+      "fixed_point_artifacts_after": {
+        "cohomology.aux": {
+          "bytes": 38362,
+          "sha256": "B23DFAFA2B97E4D17030B7FA8BAAADABCD61A169A96EF83F4E20DD891A376A7C"
+        },
+        "cohomology.bbl": {
+          "bytes": 2083,
+          "sha256": "89BFEC1259565960CDB8FC88DBB1C543A340F285F64A4218853CF09296043F5D"
+        },
+        "cohomology.out": {
+          "bytes": 11592,
+          "sha256": "249D738D7533A378F1391BA8E4029E5E56141672BDD0DAFBDE4099AF014F9FFE"
+        },
+        "cohomology.toc": {
+          "bytes": 5091,
+          "sha256": "4298A10AD5D7FEE2CAB45D085C323F5A97F3A88C39917E1A6A281925164105CC"
+        },
+        "cohomology.pdf": {
+          "bytes": 1373198,
+          "sha256": "690B3441A4C077CD61CB7901F0535D343511BA48937000CDC375A60B091CDF0B"
+        }
+      }
+    },
+    {
+      "stem": "more-algebra",
+      "command": [
+        "pdflatex",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "-file-line-error",
+        "-synctex=1",
+        "more-algebra.tex"
+      ],
+      "exit_code": 0,
+      "synctex_regenerated": true,
+      "sidecar_absent_before": true,
+      "started_at_utc": "2026-08-31T13:29:26.438997+00:00",
+      "completed_at_utc": "2026-08-31T13:29:33.366722+00:00",
+      "started_ns": 1788182966439011700,
+      "completed_ns": 1788182973366718600,
+      "synctex_mtime_ns": 1788182973289889600,
+      "pdf_before": {
+        "bytes": 3386887,
+        "sha256": "29D5385FE4C9DED1EE5251E04C8C50513F222922ED836CC1D381B71E17B83155"
+      },
+      "pdf_after": {
+        "bytes": 3386887,
+        "sha256": "29D5385FE4C9DED1EE5251E04C8C50513F222922ED836CC1D381B71E17B83155"
+      },
+      "synctex": {
+        "bytes": 5136399,
+        "sha256": "7F0735F10A6F05D1C48870E435C6B464F8BD94F3CCAEE6595EDC3EE359B2DC23"
+      },
+      "fixed_point_artifacts_before": {
+        "more-algebra.aux": {
+          "bytes": 109640,
+          "sha256": "33C9DA1A5F0CD37B34227404A75DC9051E13845C2290D33DF7C888EBAA760F2D"
+        },
+        "more-algebra.bbl": {
+          "bytes": 7862,
+          "sha256": "AFF6C3A3E33E3BE0E0AE9CA67F696770B52710B9F324BF6F7B8A887D59F221C5"
+        },
+        "more-algebra.out": {
+          "bytes": 27552,
+          "sha256": "3E89191D358B6E3C51776CFAC482488B27BC675CE0DD6B40B46F06226FD48AB4"
+        },
+        "more-algebra.toc": {
+          "bytes": 11930,
+          "sha256": "1DC6668418FCCBC115200CF99727DA2A593A2571473744FCE4D14B86C91E6F3D"
+        },
+        "more-algebra.pdf": {
+          "bytes": 3386887,
+          "sha256": "29D5385FE4C9DED1EE5251E04C8C50513F222922ED836CC1D381B71E17B83155"
+        }
+      },
+      "fixed_point_artifacts_after": {
+        "more-algebra.aux": {
+          "bytes": 109640,
+          "sha256": "33C9DA1A5F0CD37B34227404A75DC9051E13845C2290D33DF7C888EBAA760F2D"
+        },
+        "more-algebra.bbl": {
+          "bytes": 7862,
+          "sha256": "AFF6C3A3E33E3BE0E0AE9CA67F696770B52710B9F324BF6F7B8A887D59F221C5"
+        },
+        "more-algebra.out": {
+          "bytes": 27552,
+          "sha256": "3E89191D358B6E3C51776CFAC482488B27BC675CE0DD6B40B46F06226FD48AB4"
+        },
+        "more-algebra.toc": {
+          "bytes": 11930,
+          "sha256": "1DC6668418FCCBC115200CF99727DA2A593A2571473744FCE4D14B86C91E6F3D"
+        },
+        "more-algebra.pdf": {
+          "bytes": 3386887,
+          "sha256": "29D5385FE4C9DED1EE5251E04C8C50513F222922ED836CC1D381B71E17B83155"
+        }
+      }
+    },
+    {
+      "stem": "sites-cohomology",
+      "command": [
+        "pdflatex",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "-file-line-error",
+        "-synctex=1",
+        "sites-cohomology.tex"
+      ],
+      "exit_code": 0,
+      "synctex_regenerated": true,
+      "sidecar_absent_before": true,
+      "started_at_utc": "2026-08-31T13:29:33.379074+00:00",
+      "completed_at_utc": "2026-08-31T13:29:35.933892+00:00",
+      "started_ns": 1788182973379085500,
+      "completed_ns": 1788182975933888500,
+      "synctex_mtime_ns": 1788182975885241200,
+      "pdf_before": {
+        "bytes": 1363987,
+        "sha256": "2D88F856A28363D12393A51E71F6E6D0CF55FD07D1486F7A9A32E71B07BA8518"
+      },
+      "pdf_after": {
+        "bytes": 1363987,
+        "sha256": "2D88F856A28363D12393A51E71F6E6D0CF55FD07D1486F7A9A32E71B07BA8518"
+      },
+      "synctex": {
+        "bytes": 1593054,
+        "sha256": "4BC663779EF8E084923B49E0F432D3419F96DA3F56BD15C0F3B74CCDA5691BD9"
+      },
+      "fixed_point_artifacts_before": {
+        "sites-cohomology.aux": {
+          "bytes": 36076,
+          "sha256": "FB11D359B44283B880EB343FD9887470D7575BC68804A6BB7EDBD0830C193316"
+        },
+        "sites-cohomology.bbl": {
+          "bytes": 1226,
+          "sha256": "CBB39B00BE342F864842DACEFB66E8F136B831B938728729CF3A65BA1077FE00"
+        },
+        "sites-cohomology.out": {
+          "bytes": 11022,
+          "sha256": "F0F97F40ECAE88CBBB157207835609B44BA8F6FC7FC4C90FD3B3C7B349499722"
+        },
+        "sites-cohomology.toc": {
+          "bytes": 4863,
+          "sha256": "BEFAE877EEE802A6D01295776CC76249986987607D09011514724BA05613596D"
+        },
+        "sites-cohomology.pdf": {
+          "bytes": 1363987,
+          "sha256": "2D88F856A28363D12393A51E71F6E6D0CF55FD07D1486F7A9A32E71B07BA8518"
+        }
+      },
+      "fixed_point_artifacts_after": {
+        "sites-cohomology.aux": {
+          "bytes": 36076,
+          "sha256": "FB11D359B44283B880EB343FD9887470D7575BC68804A6BB7EDBD0830C193316"
+        },
+        "sites-cohomology.bbl": {
+          "bytes": 1226,
+          "sha256": "CBB39B00BE342F864842DACEFB66E8F136B831B938728729CF3A65BA1077FE00"
+        },
+        "sites-cohomology.out": {
+          "bytes": 11022,
+          "sha256": "F0F97F40ECAE88CBBB157207835609B44BA8F6FC7FC4C90FD3B3C7B349499722"
+        },
+        "sites-cohomology.toc": {
+          "bytes": 4863,
+          "sha256": "BEFAE877EEE802A6D01295776CC76249986987607D09011514724BA05613596D"
+        },
+        "sites-cohomology.pdf": {
+          "bytes": 1363987,
+          "sha256": "2D88F856A28363D12393A51E71F6E6D0CF55FD07D1486F7A9A32E71B07BA8518"
+        }
+      }
+    }
+  ],
+  "scope": "Source-page instrumentation only. Canonical PDF and fixed-point auxiliary bytes are unchanged; visual inspection is a separate step."
+}
