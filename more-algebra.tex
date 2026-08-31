@@ -37262,7 +37262,7 @@ for definitions.
 If $(M, \varphi)$ is a simple object of this category, then
 $M$ is annihilated by $\mathfrak m$ since otherwise
 $(\mathfrak m M, \varphi|_{\mathfrak m M})$
-would be a nontrivial suboject. Also $\dim_\kappa(M) = \text{length}_R(M)$
+would be a nontrivial subobject. Also $\dim_\kappa(M) = \text{length}_R(M)$
 is finite. Thus we may define the determinant and the trace
 $$
 \det\nolimits_\kappa(\varphi),\quad \text{Trace}_\kappa(\varphi)
@@ -38492,7 +38492,7 @@ $M \cong R \oplus \Ker(M \to I)$ and we are done by induction as well.
 
 \medskip\noindent
 Let $M$ be a finitely presented $R$-module. Since the localizations
-of $R$ are maximal ideals are valuation rings
+of $R$ at maximal ideals are valuation rings
 (Lemma \ref{lemma-localize-bezout})
 we may apply Lemma \ref{lemma-warfield}.
 Thus $M$ is a summand of a module of the form
@@ -38508,7 +38508,7 @@ as desired.
 
 \begin{lemma}
 \label{lemma-modules-PID}
-Let $R$ be a PID. Every finite $R$-module $M$ is of isomorphic
+Let $R$ be a PID. Every finite $R$-module $M$ is isomorphic
 to a module of the form
 $$
 R^{\oplus r} \oplus \bigoplus\nolimits_{i = 1, \ldots, n} R/f_iR
@@ -38523,9 +38523,9 @@ means that the annihilator of $M$ is nonzero. Say $fM = 0$ for some
 $f \in R$ nonzero. Then we can think of $M$ as a module over $R/fR$.
 Since $R/fR$ is Noetherian of dimension $0$ (small detail omitted)
 we see that $R/fR = \prod R_j$ is a finite product of Artinian
-local rings $R_i$
-(Algebra, Proposition \ref{algebra-proposition-dimension-zero-ring}).
-Each $R_i$, being a local ring and a quotient of a PID, is a generalized
+local rings $R_j$
+(Algebra, Proposition \ref{algebra-proposition-dimension-zero-ring}). Write $R_j = R/f_jR$ for some $f_j \in R$.
+Each $R_j$, being a local ring and a quotient of a PID, is a generalized
 valuation ring in the sense of
 Lemma \ref{lemma-generalized-valuation-ring} (small detail omitted).
 Write $M = \prod M_j$ with $M_j = e_j M$ where $e_j \in R/fR$ is
@@ -38542,7 +38542,7 @@ as an $R$-module which finishes the proof.
 \end{proof}
 
 \noindent
-One can also prove that a PID is a elementary divisor domain (insert future
+One can also prove that a PID is an elementary divisor domain (insert future
 reference here), by proving lemmas similar to the following.
 
 \begin{lemma}
@@ -38594,7 +38594,7 @@ Observe that the left matrix is invertible because it has determinant $1$.
 \label{section-principal-radical-ideals}
 
 \noindent
-In this section we prove that a catenary Noetherian normal local domain
+In this section we prove that for a catenary Noetherian normal local domain
 there exists a nontrivial principal radical ideal. This result can be
 found in \cite{Artin-Lipman}.
 
@@ -38785,9 +38785,9 @@ Note for later use that each of the primes $\mathfrak p_i$
 occurs among the primes $\mathfrak q_j$.
 The ring $R/fR$ is reduced if and only if
 $m_j = 1$ for $j = 1, \ldots, s$. Namely, if $m_j$ is $1$ then
-$(R/fR)\mathfrak q_j$ is reduced and
+$(R/fR)_{\mathfrak q_j}$ is reduced and
 $R/fR \subset \prod (R/fR)_{\mathfrak q_j}$ as
-$\mathfrak q_1, \ldots, \mathfrak q_j$ are the associated primes
+$\mathfrak q_1, \ldots, \mathfrak q_s$ are the associated primes
 of $R/fR$, see Algebra, Lemmas
 \ref{algebra-lemma-zero-at-ass-zero} and
 \ref{algebra-lemma-normal-domain-intersection-localizations-height-1}.
@@ -38867,7 +38867,7 @@ $c^n$ for some $n$.
 \end{lemma}
 
 \begin{proof}
-Let $\text{div}(a) = \sum_{i = 1, \ldots, r} n_i \mathfrak p_i$
+Let $\text{div}(a) = \sum_{i = 1}^r n_i \mathfrak p_i$
 with notation as in the proof of Lemma \ref{lemma-radical-element}.
 Choose $c \in \mathfrak p_1 \cap \ldots \cap \mathfrak p_r$ with $A/cA$
 reduced, see Lemma \ref{lemma-radical-element}. For $n \geq \max(n_i)$
@@ -38921,7 +38921,7 @@ This proves the lemma.
 Let $(R, \mathfrak m)$ be a Noetherian local ring of dimension $d$, let $t$
 be the number of minimal prime ideals of $R$ of dimension $d$, and let
 $(g_1,\ldots,g_d)$ be a system of parameters. Then
-$t \leq \text{length}_R(R/(g_1,\ldots,g_n))$.
+$t \leq \text{length}_R(R/(g_1,\ldots,g_d))$.
 \end{lemma}
 
 \begin{proof}
@@ -38929,23 +38929,23 @@ If $d = 0$ the lemma is trivial. If $d = 1$ the lemma is
 Lemma \ref{lemma-minprimespoly}. Thus we may assume $d > 1$.
 Let $\mathfrak p_1, \ldots, \mathfrak p_s$ be the minimal prime ideals of
 $R$ where the first $t$ have dimension $d$, and denote
-$I = (g_1, \ldots, g_n)$. Arguing in exactly the same way as in
+$I = (g_1, \ldots, g_d)$. Arguing in exactly the same way as in
 the proof of Lemma \ref{lemma-minprimespoly} we can assume $R$ is reduced.
 
 \medskip\noindent
 Assume $R$ is reduced with minimal primes
-$\mathfrak p_1, \ldots, \mathfrak p_t$.
+$\mathfrak p_1, \ldots, \mathfrak p_s$.
 This means there is an exact sequence
 $$
 0 \to R \to
-\prod\nolimits_{i = 1}^t R/\mathfrak p_i \to Q \to 0
+\prod\nolimits_{i = 1}^s R/\mathfrak p_i \to Q \to 0
 $$
 Here $Q$ is the cokernel of the first map.
-Write $M = \prod_{i = 1}^t R/\mathfrak p_i$.
+Write $M = \prod_{i = 1}^s R/\mathfrak p_i$.
 Localizing at $\mathfrak p_j$ we see that
 $$
 R_{\mathfrak p_j} \to M_{\mathfrak p_j} =
-\left(\prod\nolimits_{i=1}^t R/\mathfrak p_i\right)_{\mathfrak p_j} =
+\left(\prod\nolimits_{i=1}^s R/\mathfrak p_i\right)_{\mathfrak p_j} =
 (R/\mathfrak p_j)_{\mathfrak p_j}
 $$
 is surjective. Thus $Q_{\mathfrak p_j} = 0$ for all $j$. Therefore no
@@ -38987,7 +38987,7 @@ By Lemma \ref{lemma-sopexists} there exist
 $g_1, \ldots, g_{d - 1} \in \mathfrak m$
 such that $f, g_1, \ldots, g_{d - 1}$ is a system of parameters for $R$.
 Then $\mathfrak m = \sqrt{(f, g_1, \ldots, g_{d - 1})}$.
-Thus there exists an $n$ such that $\mathfrak m^n \subset (f, g)$, see
+Thus there exists an $n$ such that $\mathfrak m^n \subset (f, g_1, \ldots, g_{d - 1})$, see
 Algebra, Lemma \ref{algebra-lemma-Noetherian-power}. We claim that
 $N = n + 1$ works.
 Namely, let $h \in \mathfrak m^N$. By our choice of $N$ we can write
@@ -39049,15 +39049,15 @@ as a formal linear combination of
 height one primes with integer coefficients.
 The ring $R/fR$ is reduced if and only if
 $m_j = 1$ for $j = 1, \ldots, s$. Namely, if $m_j$ is $1$ then
-$(R/fR)\mathfrak q_j$ is reduced and
+$(R/fR)_{\mathfrak q_j}$ is reduced and
 $R/fR \subset \prod (R/fR)_{\mathfrak q_j}$ as
-$\mathfrak q_1, \ldots, \mathfrak q_j$ are the associated primes
+$\mathfrak q_1, \ldots, \mathfrak q_s$ are the associated primes
 of $R/fR$, see Algebra, Lemmas
 \ref{algebra-lemma-zero-at-ass-zero} and
 \ref{algebra-lemma-normal-domain-intersection-localizations-height-1}.
 
 \medskip\noindent
-Choose and fix $g_2, \ldots, g_{d - 1}$ and $N$ as in
+Choose and fix $g_1, \ldots, g_{d - 1}$ and $N$ as in
 Lemma \ref{lemma-sysparhigher}.
 For a nonzero $y \in R$ denote $t(y)$ the number of primes minimal over $y$.
 Since $R$ is a normal domain, these primes
@@ -39068,7 +39068,7 @@ For example $t(f) = s$ is the number
 of primes $\mathfrak q_j$ occurring in $\text{div}(f)$.
 Let $h \in \mathfrak m^N$. Because $R$ is catenary, for each
 height one prime $\mathfrak p$ of $R$ we have
-$\dim(R/\mathfrak p) = d$. Hence by
+$\dim(R/\mathfrak p) = d - 1$. Hence by
 Lemma \ref{lemma-minprimespolyhigher}
 we have
 \begin{align*}
@@ -39111,12 +39111,12 @@ By prime avoidance (Algebra, Lemma \ref{algebra-lemma-silly})
 for each $1 \leq j \leq s$ we can find an element
 $a_j \in \mathfrak q_j \cap J$
 such that $a_j \not \in \mathfrak q_{j'}$ for $j' \not = j$.
-Next, we can pick $b_j \in J \cap \mathfrak q_1 \cap \ldots \cap q_s$
+Next, we can pick $b_j \in J \cap \mathfrak q_1 \cap \ldots \cap \mathfrak q_s$
 with $b_j \not \in \mathfrak q_j^{(2)}$. Here
 $\mathfrak q_j^{(2)} = \{x \in R \mid \text{ord}_{\mathfrak q_j}(x) \geq 2\}$
 is the second symbolic power of $\mathfrak q_j$.
 Prime avoidance applies because the ideal
-$J' = J \cap \mathfrak q_1 \cap \ldots \cap q_s$
+$J' = J \cap \mathfrak q_1 \cap \ldots \cap \mathfrak q_s$
 is radical, hence $R/J'$ is reduced, hence $(R/J')_{\mathfrak q_j}$
 is reduced, hence $J'$ contains an element $x$ with
 $\text{ord}_{\mathfrak q_j}(x) = 1$, hence
@@ -39185,7 +39185,7 @@ all $f_i$ which is bounded and consists of finite free $R$-modules.
 By descending induction on $a = \min(n_i; i = 1, \ldots, N)$.
 If $F^n = 0$ for $n \geq a$, then the result is true with
 $G^\bullet$ equal to the zero complex. In general, after renumbering
-we may assume there exists an $1 \leq r \leq N$ such that
+we may assume there exists $1 \leq r \leq N$ such that
 $n_1 = \ldots = n_r = a$ and $n_i > a$ for $i > r$.
 Choose a basis $b_j, j \in J$ for $F^a$. We can choose a finite subset
 $J' \subset J$ such that $f_i \in \bigoplus_{j \in J'} Rb_j$
@@ -39225,7 +39225,7 @@ Assume (1). Say $N$, $\eta : R \to M \otimes_R^\mathbf{L} N$, and
 $\epsilon : M \otimes_R^\mathbf{L} N \to R$ is a left dual
 as in Categories, Definition \ref{categories-definition-dual}.
 Choose a complex $M^\bullet$ representing $M$. Choose a
-K-flat complexes $N^\bullet$ with flat terms
+K-flat complex $N^\bullet$ with flat terms
 representing $N$, see Lemma \ref{lemma-K-flat-resolution}.
 Then $\eta$ is given by a map of complexes
 $$
@@ -39357,7 +39357,7 @@ canonical short exact sequence
 $$
 0 \to B(x) \to M(x) \to V(x) \to 0
 $$
-of $\kappa(x)$-vector spaces which the following
+of $\kappa(x)$-vector spaces which has the following
 property: for $s_1, \ldots, s_r \in M$ the following are equivalent
 \begin{enumerate}
 \item there exists an $f \in R$, $f \not \in x$ such that
@@ -39520,13 +39520,13 @@ as $s = u + ft$. Hence $Z \subset H$.
 Hence $Z$ is equal to an irreducible component of $H$
 as $Z$ has codimension $\leq k - 1$.
 Hence $Z = H_l$ for some $l \in \{1, \ldots, p\}$ or
-$Z = G_j$ for some $j \in \{1, \ldots m\}$.
+$Z = G_j$ for some $j \in \{1, \ldots, m\}$.
 \item But $Z = G_j$ is impossible as $s_1(y_j), \ldots, s_h(y_j)$
 map to linearly independent elements of $V(y_j)$ and
 $s(y_j) = u(y_j) + f(y_j) t(y_j) = u(y_j) + t(y_j)$
 maps to an element of the form
 $$
-\text{linear combination images of }s_i(y_j) + w_j
+\text{linear combination of images of }s_i(y_j) + w_j
 $$
 which is linearly independent of the images of $s_1(y_j), \ldots, s_h(y_j)$
 in $V(y_j)$ by our choice of $w_j$.
@@ -39663,7 +39663,7 @@ Algebra, Theorem \ref{algebra-theorem-projective-free-over-local-ring}.
 Denote $M' \subset P/JP$ the image of $M$ and $s' \in P/JP$ the
 image of $s$. Observe that $R/J s' + M' = P/JP$.
 Suppose we can find $m' \in M'$ such that
-$R/J(s' + m')$ is a free direct summand of $M'$.
+$R/J(s' + m')$ is a free direct summand of $P/JP$.
 Choose $\varphi' : P/JP \to R/J$ which gives a splitting, i.e.,
 we have $\varphi'(s' + m') = 1$ in $R/J$.
 Then since $P$ is a projective $R$-module we can find
@@ -39746,7 +39746,7 @@ to the case discussed in the next paragraph.
 Assume there exists a finite stably free direct summand $K \subset R \oplus P$
 such that $(0, s) \in K$. Choose a complement $K'$ of $K$, i.e.,
 such that $R \oplus P = K \oplus K'$. The projection
-$\pi : R \oplus P \to K'$ is surjectve, hence by
+$\pi : R \oplus P \to K'$ is surjective, hence by
 Lemma \ref{lemma-trick-to-find-good-element}
 we find a $p \in P$ such that $\pi(1, p) \in K'$ generates
 a free direct summand. Accordingly we write

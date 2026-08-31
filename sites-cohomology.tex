@@ -109,10 +109,10 @@ $\textit{Mod}(\mathcal{O}) \to \text{Mod}_{\mathcal{O}(U)}$. Similarly
 \label{equation-cohomology-modules}
 H^i(\mathcal{C}, \mathcal{F}) = H^i(\Gamma(\mathcal{C}, \mathcal{I}^\bullet))
 \end{equation}
-it the {\it $i$th cohomology group of $\mathcal{F}$ on $\mathcal{C}$}.
+is the {\it $i$th cohomology group of $\mathcal{F}$ on $\mathcal{C}$}.
 The family of functors $H^i(\mathcal{C}, -)$ forms a universal
 $\delta$-functor
-$\textit{Mod}(\mathcal{C}) \to \text{Mod}_{\Gamma(\mathcal{C}, \mathcal{O})}$.
+$\textit{Mod}(\mathcal{O}) \to \text{Mod}_{\Gamma(\mathcal{C}, \mathcal{O})}$.
 
 \medskip\noindent
 Let $f : (\Sh(\mathcal{C}), \mathcal{O}) \to (\Sh(\mathcal{D}), \mathcal{O}')$
@@ -681,7 +681,7 @@ which is an exact functor. Hence the lemma does indeed apply.
 \noindent
 Let $(\mathcal{C}, \mathcal{O})$ be a ringed site.
 Let $\mathcal{F}$ be a sheaf of $\mathcal{O}$-modules.
-Let $\varphi : U \to V$ be a morphism of $\mathcal{O}$.
+Let $\varphi : U \to V$ be a morphism of $\mathcal{C}$.
 Then there is a canonical {\it restriction mapping}
 \begin{equation}
 \label{equation-restriction-mapping}
@@ -987,7 +987,7 @@ $$
 where the last nonzero term is placed in degree $0$
 and where the map
 $$
-\mathbf{Z}_{U_{i_0} \times_U \ldots \times_u U_{i_{p + 1}}}
+\mathbf{Z}_{U_{i_0} \times_U \ldots \times_U U_{i_{p + 1}}}
 \longrightarrow
 \mathbf{Z}_{U_{i_0} \times_U
 \ldots \widehat{U_{i_j}} \ldots \times_U U_{i_{p + 1}}}
@@ -2084,7 +2084,7 @@ Since sheafification is exact, we see that
 $(K_p')^\#$ is equal to
 $(K')^\# \times_{K^\#} \ldots \times_{K^\#} (K')^\#$
 ($p + 1$-factors). Thus we may replace $K$ and $K'$ by
-their sheafifications and assume $K \to K'$ is a surjective
+their sheafifications and assume $K' \to K$ is a surjective
 map of sheaves. After replacing $\mathcal{C}$ by a ``larger'' site as in
 Sites, Lemma \ref{sites-lemma-topos-good-site} 
 we may assume that $K, K'$ are objects of $\mathcal{C}$ and that
@@ -2158,10 +2158,10 @@ then $\mathcal{F}$ is totally acyclic (and the converse holds too).
 \end{lemma}
 
 \begin{proof}
-By assumption (1) we have $H^p(h_U^\#, g^{-1}\mathcal{I}) = 0$ for all
+By assumption (1) we have $H^p(h_U^\#, \mathcal{F}) = 0$ for all
 $p > 0$ and all objects $U$ of $\mathcal{C}$. Note that if
 $K = \coprod K_i$ is a coproduct of sheaves of sets on $\mathcal{C}$
-then $H^p(K, g^{-1}\mathcal{I}) = \prod H^p(K_i, g^{-1}\mathcal{I})$.
+then $H^p(K, \mathcal{F}) = \prod H^p(K_i, \mathcal{F})$.
 For any sheaf of sets $K$ there exists a surjection
 $$
 K' = \coprod h_{U_i}^\# \longrightarrow K
@@ -2186,7 +2186,7 @@ spectral sequence with
 $$
 E_1^{p, q} = H^q(K'_p, \mathcal{F})
 $$
-covering to $H^{p + q}(K, \mathcal{F})$, see
+converging to $H^{p + q}(K, \mathcal{F})$, see
 Lemma \ref{lemma-cech-to-cohomology-sheaf-sets}.
 By $IH_n$ we see that $E_1^{p, q} = 0$ for $0 < q \leq n$ and by
 assumption (2) we see that $E_2^{p, 0} = 0$ for $p > 0$. Finally, we have
@@ -2312,7 +2312,7 @@ $$
 R\Gamma(\mathcal{D}, Rf_*\mathcal{F}) = R\Gamma(\mathcal{C}, \mathcal{F})
 $$
 for any sheaf of $\mathcal{O}_\mathcal{C}$-modules $\mathcal{F}$.
-Namely, for an injective $\mathcal{O}_\mathcal{X}$-module $\mathcal{I}$
+Namely, for an injective $\mathcal{O}_\mathcal{C}$-module $\mathcal{I}$
 the $\mathcal{O}_\mathcal{D}$-module $f_*\mathcal{I}$ is totally acyclic by
 Lemma \ref{lemma-direct-image-injective-sheaf}
 and a totally acyclic sheaf is acyclic for $\Gamma(\mathcal{D}, -)$ by
@@ -2359,7 +2359,7 @@ for all $q$.
 
 \begin{proof}
 These are two simple conditions that force the Leray spectral sequence to
-converge. You can also prove these facts directly (without using the
+degenerate. You can also prove these facts directly (without using the
 spectral sequence) which is a good exercise in cohomology of sheaves.
 \end{proof}
 
@@ -2417,11 +2417,11 @@ Hence it has a derived functor
 $$
 g^* : D(\mathcal{O}_\mathcal{D}) \to D(\mathcal{O}_\mathcal{C})
 $$
-which is computed by simply pulling back an representative of a given
+which is computed by simply pulling back a representative of a given
 object in $D(\mathcal{O}_\mathcal{D})$, see
 Derived Categories, Lemma \ref{derived-lemma-right-derived-exact-functor}.
-It preserved the bounded (above, below) subcategories.
-Hence as indicated we indicate this functor by $g^*$ rather than $Lg^*$.
+It preserves the bounded (above, below) subcategories.
+Hence as indicated we denote this functor by $g^*$ rather than $Lg^*$.
 
 \begin{lemma}
 \label{lemma-base-change-map-flat-case}
@@ -2622,7 +2622,7 @@ $\check{\mathcal{C}}^\bullet(\mathcal{U}, \colim_i \mathcal{I}_i)$
 is acyclic in degrees $\geq 1$. In other words we see that
 $\check{H}^p(\mathcal{U}, \colim_i \mathcal{I}_i) = 0$
 for all $p \geq 1$. Thus the assumptions of
-Lemma \ref{lemma-cech-vanish-collection}.
+Lemma \ref{lemma-cech-vanish-collection}
 are satisfied and the claim follows.
 \end{proof}
 
@@ -2730,7 +2730,7 @@ to the site $\mathcal{C}/K^n$ for all $n \geq 1$. Recall
 that $\Sh(\mathcal{C}/K^n) = \Sh(\mathcal{C})/K^n$, see
 Sites, Lemma \ref{sites-lemma-localize-topos-site}.
 Thus we may work in $\Sh(\mathcal{C})/K^n$.
-Denote $S_n \subset \Ob(\Sh(\mathcal{C}/K^n)$ the set
+Denote $S_n \subset \Ob(\Sh(\mathcal{C}/K^n))$ the set
 of objects of the form $K' \to K^n$. We check each property in turn:
 \begin{enumerate}
 \item By (3) and induction there exists a surjection
@@ -2746,7 +2746,7 @@ The subsheaf $K_1 \times_{K^n} K_2 \subset K_1 \times K_2$ is the
 equalizer of $a \circ \text{pr}_1$ and $b \circ \text{pr}_2$.
 Write $a = (a_1, \ldots, a_n)$ and $b = (b_1, \ldots, b_n)$.
 Pick $K_3 \to K_1 \times K_2$ surjective with $K_3 \in S$;
-this is possibly by assumption (3) for $\mathcal{C}$.
+this is possible by assumption (3) for $\mathcal{C}$.
 Pick
 $$
 K_4
@@ -3142,7 +3142,7 @@ In this case the spectral sequence of
 Homology, Lemma \ref{homology-lemma-first-quadrant-ss}
 has
 $$
-{}'E_1^{p, q} = H^p(\mathcal{L}^\bullet \otimes_R \mathcal{K}^q)
+{}'E_1^{p, q} = H^p(\mathcal{L}^\bullet \otimes_\mathcal{O} \mathcal{K}^q)
 $$
 which is zero as $\mathcal{K}^q$ is flat and $\mathcal{L}^\bullet$ acyclic.
 Hence we win.
@@ -3546,7 +3546,7 @@ $\mathcal{M}^\bullet$ is K-flat, and by the long exact
 cohomology sequence $\mathcal{M}^\bullet$ is acyclic (because
 the second arrow is a quasi-isomorphism). The pullback
 $f^*(\colim \mathcal{K}_n^\bullet) = \colim f^*\mathcal{K}_n^\bullet$
-is a colimit of bounded below complexes of flat $\mathcal{O}'$-modules
+is a colimit of bounded above complexes of flat $\mathcal{O}'$-modules
 and hence is K-flat (by the same lemmas as above).
 The pullback of our short exact sequence
 $$
@@ -3576,7 +3576,7 @@ $$
 By Modules on Sites, Lemma \ref{sites-modules-lemma-flat-ses}
 we see that the terms of the complex $\mathcal{M}_n^\bullet$ are flat.
 Hence we see that $\mathcal{M} = \colim \mathcal{M}_n^\bullet$
-is a filtered colimit of bounded below complexes of flat modules
+is a filtered colimit of bounded above complexes of flat modules
 in this case. Thus $f^*\mathcal{M}^\bullet$ is K-flat
 (same argument as above) and we win.
 \end{proof}
@@ -5531,7 +5531,7 @@ $$
 where the final equality follows from
 More on Algebra, Remark \ref{more-algebra-remark-compare-derived-limit}
 and assumption (2)(b). Thus $H^q(U, K)$ is the inverse limit
-the sections of the sheaves $H^q(K_n)$ over $U$. Since
+of the sections of the sheaves $H^q(K_n)$ over $U$. Since
 $\lim H^q(K_n)$ is a sheaf we find using assumption (1) that $H^q(K)$,
 which is the sheafification of the presheaf $U \mapsto H^q(U, K)$,
 is equal to $\lim H^q(K_n)$. This proves the lemma.
@@ -5552,7 +5552,7 @@ Let $\mathcal{F}^\bullet$ be a complex of $\mathcal{O}$-modules.
 The category $\textit{Mod}(\mathcal{O})$ has enough injectives, hence
 we can use
 Derived Categories, Lemma \ref{derived-lemma-special-inverse-system}
-produce a diagram
+to produce a diagram
 $$
 \xymatrix{
 \ldots \ar[r] &
@@ -5584,7 +5584,7 @@ conditions under which it is.
 
 \begin{lemma}
 \label{lemma-K-injective}
-In the situation described above. Denote
+In the situation described above, denote
 $\mathcal{H}^m = H^m(\mathcal{F}^\bullet)$ the $m$th cohomology sheaf.
 Let $\mathcal{B} \subset \Ob(\mathcal{C})$ be a subset.
 Let $d \in \mathbf{N}$.
@@ -5594,7 +5594,7 @@ Assume
 elements of $\mathcal{B}$,
 \item for every $U \in \mathcal{B}$ we have $H^p(U, \mathcal{H}^q) = 0$
 for $p > d$ and $q < 0$\footnote{It suffices if
-$\forall m$, $\exists p(m)$, $H^p(U. \mathcal{H}^{m - p}) = 0$ for
+$\forall m$, $\exists p(m)$, $H^p(U, \mathcal{H}^{m - p}) = 0$ for
 $p > p(m)$, see Lemma \ref{lemma-is-limit}.}.
 \end{enumerate}
 Then (\ref{equation-into-candidate-K-injective}) is a quasi-isomorphism.
@@ -6008,7 +6008,7 @@ $$
 \mathcal{I}^\bullet(Y) \xrightarrow{\beta}
 \mathcal{I}^\bullet(E)
 $$
-with $\beta \circ \alpha = 0$. Thus a canonical map
+with $\beta \circ \alpha = 0$. Thus we obtain a canonical map
 $$
 c^K_{X, Z, Y, E} :
 \mathcal{I}^\bullet(X)
@@ -6623,7 +6623,7 @@ in $\textit{Mod}(\mathcal{O}_\tau)$. Since $\mathcal{A}$ is
 a weak Serre subcategory and since
 $\epsilon^*\mathcal{F}'_0, \epsilon^*\mathcal{F}'_1,
 \epsilon^*\mathcal{F}'_3, \epsilon^*\mathcal{F}'_4$ are in
-$\mathcal{A}$, we conclude that $\epsilon^*\mathcal{F}_2$
+$\mathcal{A}$, we conclude that $\epsilon^*\mathcal{F}'_2$
 is in $\mathcal{A}$ by
 Homology, Definition \ref{homology-definition-serre-subcategory}.
 Consider the map of sequences
@@ -6747,7 +6747,7 @@ $$
 \Gamma(Y_\alpha, H^n(K')) \to
 \Gamma(E_\alpha, H^n(K'))
 $$
-We conclude that $H^n(K')$ is a a $\tau$-sheaf by assumption (1).
+We conclude that $H^n(K')$ is a $\tau$-sheaf by assumption (1).
 However, since the $\tau$-sheafification
 $\epsilon^{-1}H^n(K') = H^n(\epsilon^{-1}K')$ is $0$ as
 $\epsilon^{-1}K' = 0$
@@ -6778,7 +6778,7 @@ $R\epsilon_*$ the map $c^{K'}_{X, Z, Y, E}$ of Lemma \ref{lemma-c-square}
 \begin{proof}
 This helper lemma is an almost immediate consequence of
 Lemma \ref{lemma-square-triangle}
-and we strongly urge the reader skip the proof.
+and we strongly urge the reader to skip the proof.
 Say $K' = R\epsilon_*K$. Choose a K-injective complex of
 $\mathcal{O}_\tau$-modules $\mathcal{J}^\bullet$ representing $K$.
 Then $\epsilon_*\mathcal{J}^\bullet$ is a K-injective complex of
@@ -10954,7 +10954,7 @@ h_{n, i} :
 (U \to \ldots \to U \to U_i \to \ldots \to U_n, \text{id})
 $$
 for $i > 0$ and $h_{n, 0} = \text{id}$. Verifications omitted.
-Since $\text{Map}(-, A)$ is a contravariant functor, implies that
+Since $\text{Map}(-, A)$ is a contravariant functor, it follows that
 $K^\bullet(p_{U, *}A)$ has trivial cohomology in positive degrees
 (by the functoriality of
 Simplicial, Remark \ref{simplicial-remark-homotopy-better}
@@ -10964,7 +10964,7 @@ This implies that $K^\bullet(\mathcal{F})$ is acyclic in positive
 degrees also if $\mathcal{F}$ is a product of sheaves of the form
 $p_{U, *}A$. As every abelian sheaf on $\mathcal{C}$ embeds
 into such a product we conclude that $K^\bullet(\mathcal{F})$
-computes the left derived functors
+computes the right derived functors
 $H^n(\mathcal{C}, -)$ of $H^0(\mathcal{C}, -)$
 for example by
 Homology, Lemma \ref{homology-lemma-efface-implies-universal}
@@ -11044,7 +11044,7 @@ for any $\mathcal{F}$, in particular $\mathcal{F} = p_{U, *}A$.
 On $H^0$ we obtain
 $$
 0 \to \Hom(\mathcal{G}, p_{U, *}A) \to
-\Hom(\prod j_{U_i!}\mathcal{O}_{U_i}, p_{U, *}A) \to
+\Hom(\bigoplus j_{U_i!}\mathcal{O}_{U_i}, p_{U, *}A) \to
 \Hom(\mathcal{G}', p_{U, *}A) \to 0
 $$
 which is exact as
@@ -11064,7 +11064,7 @@ X_n = \coprod\nolimits_{U_0 \to \ldots \to U_{n - 1} \to U_n}
 \Mor_\mathcal{C}(U, U_0) \times \Mor_\mathcal{C}(U_n, U')
 $$
 This simplicial set is homotopy equivalent to the constant simplicial
-set on a singleton $\{*\}$ as can be proved in exactly the same way
+set $\Mor_\mathcal{C}(U, U')$ as can be proved in exactly the same way
 as the corresponding statement in Example \ref{example-right-derived-limits}.
 This finishes the proof of the claim.
 
@@ -11146,7 +11146,7 @@ By Modules on Sites, Lemma \ref{sites-modules-lemma-chaotic-quasi-coherent}
 it suffices to show that for every morphism $U \to V$ of
 $\mathcal{C}$ the map
 $$
-H^p(M)(V) \otimes_{\mathcal{O}(V)} \mathcal{O}(U) \to H^b(M)(U)
+H^b(M)(V) \otimes_{\mathcal{O}(V)} \mathcal{O}(U) \to H^b(M)(U)
 $$
 is an isomorphism. We are given that the map
 $$
@@ -11275,7 +11275,7 @@ $\mathcal{H}^\bullet = \bigcup \mathcal{S}_n^\bullet$ as our solution.
 
 \medskip\noindent
 Construction of $\mathcal{S}_{n + 1}^\bullet$ given
-$\mathcal{S}_n^\bullet$. For ever $U$ and $i$ let
+$\mathcal{S}_n^\bullet$. For every $U$ and $i$ let
 $\Omega^{i - 1}_U \subset \mathcal{F}^{i - 1}(U)$ be a subset
 such that $\text{d} : \mathcal{F}^{i - 1}(U) \to \mathcal{F}^i(U)$
 maps $\Omega^{i - 1}_U$ bijectively onto
@@ -11283,11 +11283,11 @@ $$
 \mathcal{S}_n^i(U) \cap
 \text{Im}(\text{d} : \mathcal{F}^{i - 1}(U)\to \mathcal{F}^i(U))
 $$
-Observe that $|\Omega^i_U| \leq |K|$ because $\mathcal{S}_n^i(U)$
+Observe that $|\Omega^i_U| \leq \max(\kappa, |K|)$ because $\mathcal{S}_n^i(U)$
 is so bounded. Then we get $\mathcal{S}_{n + 1}^\bullet$ by an
 application of Lemma \ref{lemma-build-from} to the subsets
 $$
-\mathcal{S}^i(U) \cup \Omega^i_U \subset \mathcal{F}^i(U)
+\mathcal{S}_n^i(U) \cup \Omega^i_U \subset \mathcal{F}^i(U)
 $$
 and everything is clear.
 \end{proof}
@@ -11444,7 +11444,7 @@ $$
 \mathcal{S}_{n + 1}^\bullet \subset
 \mathcal{F}^\bullet
 $$
-with containing those subsets and such that
+containing those subsets and such that
 $|\mathcal{S}_{n + 1}^\bullet| \leq \kappa$.
 Conditions (1) and (2) hold because the corresponding statements
 hold for 
@@ -11597,9 +11597,9 @@ due to the fact that the topology on $\mathcal{C}$ is chaotic.
 Conversely, if $M$ is an object of $D_\QCoh(\mathcal{O})$, then due to
 Modules on Sites, Lemma \ref{sites-modules-lemma-chaotic-quasi-coherent}
 we see that the map $R\Gamma(V, M) \to R\Gamma(U, M)$ induces isomorphisms
-$H^i(M)(U) \to H^i(M)(V) \otimes_{\mathcal{O}(V)} \mathcal{O}(U)$.
-Whence $R\Gamma(V, K) \otimes_{\mathcal{O}(V)}^\mathbf{L} \mathcal{O}(U)
-\to R\Gamma(U, K)$ is an isomorphism in $D(\mathcal{O}(U))$ by the flatness
+$H^i(M)(V) \otimes_{\mathcal{O}(V)} \mathcal{O}(U) \to H^i(M)(U)$.
+Whence $R\Gamma(V, M) \otimes_{\mathcal{O}(V)}^\mathbf{L} \mathcal{O}(U)
+\to R\Gamma(U, M)$ is an isomorphism in $D(\mathcal{O}(U))$ by the flatness
 of $\mathcal{O}(V) \to \mathcal{O}(U)$ and we
 conclude that $M$ is in $\mathit{QC}(\mathcal{O})$.
 \end{proof}
@@ -11668,7 +11668,7 @@ Hence
 $$
 R\Gamma(U, R\epsilon_*(\epsilon^*M)) =
 R\Gamma((\mathcal{C}/U)_\tau,
-(M^\bullet \otimes_{\mathcal{O}(U)} \mathcal{O}_U)^\#)
+(\mathcal{M}^\bullet(U) \otimes_{\mathcal{O}(U)} \mathcal{O}_U)^\#)
 $$
 and assumption (2) tells us this is equal to
 $R\Gamma(U, M) = \mathcal{M}^\bullet(U)$ as desired.
@@ -11930,7 +11930,7 @@ complex with terms
 $$
 (\mathcal{H}')^n =
 \prod\nolimits_{n = p + q}
-\SheafHom_\mathcal{O}(\mathcal{L}^{-q}, \mathcal{I}^p)
+\SheafHom_\mathcal{O}(\mathcal{E}^{-q}, \mathcal{I}^p)
 $$
 which represents $R\SheafHom(\mathcal{E}^\bullet, \mathcal{F}^\bullet)$
 by the construction in Section \ref{section-internal-hom}. It suffices
@@ -11998,7 +11998,7 @@ Note that $\mathcal{H}^\bullet$ is the total complex associated to
 the double complex with terms
 $\SheafHom_\mathcal{O}(\mathcal{E}^{-q}, \mathcal{F}^p)$
 and similarly for $(\mathcal{H}')^\bullet$.
-The natural map $(\mathcal{H}')^\bullet \to \mathcal{H}^\bullet$
+The natural map $\mathcal{H}^\bullet \to (\mathcal{H}')^\bullet$
 comes from a map of double complexes.
 Thus to show this map is a quasi-isomorphism, we may use the spectral
 sequence of a double complex
