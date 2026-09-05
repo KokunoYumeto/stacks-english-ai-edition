@@ -1,0 +1,82 @@
+{
+  "schema": "mathematics-commons-stacks-admission-clarification/v1",
+  "record_id": "stacks-r40-admission-clarification-0001",
+  "recorded_at_utc": "2026-09-05T12:06:18.558Z",
+  "candidate_id": "stacks-errata-a04446e-r40",
+  "scope": "Append-only clarification of one malformed nested stable-units hash copy in the sealed independent-review receipt; no new overlay or changed source operation.",
+  "admission_commit": "d4932376fbe80c32c7e03486ae7d1ef53c01c203",
+  "admission_tree": "e6501edf88bfa28c9e97d7bfc50eb420f9b5f81f",
+  "admitted_manifest": {
+    "path": "candidates/commons/stacks/errata/r40/candidate.manifest.json",
+    "bytes": 10704,
+    "sha256": "A3A3FFF0F01B84F73F9D426B14E6F2E6F95E93F79735795CD8D5741C45E22F5E"
+  },
+  "original_admission_receipt": {
+    "path": "registry/admission-receipts/r40.json",
+    "bytes": 4454,
+    "sha256": "494D3B61AE9A53E58A664897B14E88FBC03AA571EB2A1A80F73757F7A3F872A7"
+  },
+  "review_hash_clarification": {
+    "controlling_final_review": {
+      "path": "candidates/commons/stacks/errata/r40/replay/FINAL_INDEPENDENT_REVIEW.json",
+      "bytes": 7441,
+      "sha256": "2F04DDEF08FD15A08EC1D247FE106BC98797C073DA15A83F8E1E63A9FAF9FA9D"
+    },
+    "malformed_assertion_json_pointer": "/source/stable_units_sha256",
+    "historical_malformed_value": "107DC714C68B8781A18D2EAD094505DDB4E7EBA3FA4D8A2F2A03AFB87C333910C",
+    "effective_value": "107DC714C68B8781A18D2EAD094505DDB4E7EBA3FA4D8A2F2A03AFB87C333910",
+    "effective_binding": {
+      "path": "candidates/commons/stacks/errata/r40/stable-units.json",
+      "bytes": 4961,
+      "sha256": "107DC714C68B8781A18D2EAD094505DDB4E7EBA3FA4D8A2F2A03AFB87C333910"
+    },
+    "manifest_binding_matches_effective_value": true,
+    "disposition": "The sealed review contains an impossible 65-hex-character transcription with one extra trailing C. The admitted manifest independently and correctly binds the stable-units file at the 64-character effective value. Consumers must use the manifest and effective binding above, while retaining the malformed nested assertion as adverse historical evidence.",
+    "does_not_supersede": "Any authority, payload, operation, stable unit, final manifest, final-review file identity, original admission event, or correctly bound review conclusion."
+  },
+  "preserved_bindings": [
+    {
+      "path": "candidates/commons/stacks/errata/r40/operation-spec.json",
+      "bytes": 10497,
+      "sha256": "372E35A255ED5C4F0CE2FA89D1E21DE66EB9AADA5F858754ED2C6415C171123C"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r40/source-map.jsonl",
+      "bytes": 16298,
+      "sha256": "09DD323316FE40FDDACA12C62FFE61EA29B8CF147517979D03406B04162660CA"
+    },
+    {
+      "path": "candidates/commons/stacks/errata/r40/payload/descent.tex",
+      "bytes": 353794,
+      "sha256": "AA18A14DBBC153BD8F8D75C27EAE5D410BE7C0D52B54962AEFCDB59F75827BDA"
+    },
+    {
+      "path": "registry/overlays.json",
+      "bytes": 66732,
+      "sha256": "D5116AA61992DCC702453F391F02A0D24D0693FFBF9B57F0EB14F700127574ED"
+    },
+    {
+      "path": "registry/leases.json",
+      "bytes": 52025,
+      "sha256": "3C97169B9983F3752C702C2921190B2505EF35EACDE12492939A3930968D7407",
+      "state_at_r40_admission": true
+    }
+  ],
+  "preservation": {
+    "candidate_files_rewritten": false,
+    "manifest_rewritten": false,
+    "final_review_rewritten": false,
+    "existing_admission_receipt_rewritten": false,
+    "overlay_entries_rewritten": false,
+    "lease_events_rewritten": false,
+    "history_rewritten": false,
+    "new_overlay_created": false,
+    "authority_mutated": false,
+    "generated_source_composed": false,
+    "locale_targets_mutated": false,
+    "stable_units_unchanged": 11,
+    "exact_operations_unchanged": 11,
+    "registered_entries_unchanged": 41
+  },
+  "consumer_discovery": "Read this additive clarification by its immutable commit/path/SHA-256 in the composer handoff. Overlay-only readers do not automatically discover auxiliary admission clarifications."
+}
