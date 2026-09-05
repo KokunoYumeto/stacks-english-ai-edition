@@ -1,0 +1,181 @@
+{
+  "schema": "mathematics-commons-stacks-registry-admission-receipt/v1",
+  "candidate_id": "stacks-errata-a04446e-r46",
+  "status": "PASS",
+  "admitted_at_utc": "2026-09-05T18:19:31.722Z",
+  "candidate_commit": "d480f8e06111f3180e404c5c462301f037826806",
+  "candidate_tree": "239546eb2baaa59b54672fac5cf95730884a1935",
+  "manifest": {
+    "path": "candidate.manifest.json",
+    "bytes": 12149,
+    "sha256": "98709C03301EECAABD23D9694D521CB543DEB3E91173D57A31A6EC4D6B83856E"
+  },
+  "operation_spec": {
+    "path": "operation-spec.json",
+    "bytes": 45139,
+    "sha256": "F178C6416C8519495321A49077ACC9A4866B6CAFAE54A6A708009E006C3B8325"
+  },
+  "source_map": {
+    "path": "source-map.jsonl",
+    "bytes": 69434,
+    "sha256": "9B2DD65725C4221A641555A09D5A765918E9C1000F21D16D5062B073B47CAE91"
+  },
+  "final_review": {
+    "path": "replay/FINAL_INDEPENDENT_REVIEW.json",
+    "bytes": 5674,
+    "sha256": "05CFBAF8B0D73DC6D69865955507EBF0B0B7B28BB45AB7C030651B8A14C77D9C"
+  },
+  "stable_id_count": 43,
+  "stable_ids": [
+    "MC-STK-ERR-1480",
+    "MC-STK-ERR-1481",
+    "MC-STK-ERR-1482",
+    "MC-STK-ERR-1483",
+    "MC-STK-ERR-1484",
+    "MC-STK-ERR-1485",
+    "MC-STK-ERR-1486",
+    "MC-STK-ERR-1487",
+    "MC-STK-ERR-1488",
+    "MC-STK-ERR-1489",
+    "MC-STK-ERR-1490",
+    "MC-STK-ERR-1491",
+    "MC-STK-ERR-1492",
+    "MC-STK-ERR-1493",
+    "MC-STK-ERR-1494",
+    "MC-STK-ERR-1495",
+    "MC-STK-ERR-1496",
+    "MC-STK-ERR-1497",
+    "MC-STK-ERR-1498",
+    "MC-STK-ERR-1499",
+    "MC-STK-ERR-1500",
+    "MC-STK-ERR-1501",
+    "MC-STK-ERR-1502",
+    "MC-STK-ERR-1503",
+    "MC-STK-ERR-1504",
+    "MC-STK-ERR-1505",
+    "MC-STK-ERR-1506",
+    "MC-STK-ERR-1507",
+    "MC-STK-ERR-1508",
+    "MC-STK-ERR-1509",
+    "MC-STK-ERR-1510",
+    "MC-STK-ERR-1511",
+    "MC-STK-ERR-1512",
+    "MC-STK-ERR-1513",
+    "MC-STK-ERR-1514",
+    "MC-STK-ERR-1515",
+    "MC-STK-ERR-1516",
+    "MC-STK-ERR-1517",
+    "MC-STK-ERR-1518",
+    "MC-STK-ERR-1519",
+    "MC-STK-ERR-1520",
+    "MC-STK-ERR-1521",
+    "MC-STK-ERR-1522"
+  ],
+  "producer_ids": [
+    "FR-GROUPOIDS-001",
+    "FR-GROUPOIDS-002",
+    "FR-GROUPOIDS-003",
+    "FR-GROUPOIDS-004",
+    "FR-GROUPOIDS-006",
+    "FR-GROUPOIDS-008",
+    "FR-GROUPOIDS-010",
+    "FR-GROUPOIDS-011",
+    "FR-GROUPOIDS-012",
+    "FR-GROUPOIDS-013",
+    "FR-GROUPOIDS-014",
+    "FR-GROUPOIDS-016",
+    "FR-GROUPOIDS-017",
+    "FR-GROUPOIDS-018",
+    "FR-GROUPOIDS-019",
+    "FR-GROUPOIDS-020",
+    "FR-GROUPOIDS-021",
+    "FR-GROUPOIDS-022",
+    "FR-GROUPOIDS-023",
+    "FR-GROUPOIDS-024",
+    "FR-GROUPOIDS-025",
+    "FR-GROUPOIDS-026",
+    "FR-GROUPOIDS-027",
+    "FR-GROUPOIDS-028",
+    "FR-GROUPOIDS-029",
+    "FR-GROUPOIDS-030",
+    "FR-GROUPOIDS-031",
+    "FR-GROUPOIDS-032",
+    "FR-GROUPOIDS-033",
+    "FR-GROUPOIDS-034",
+    "FR-GROUPOIDS-035",
+    "FR-GROUPOIDS-036",
+    "FR-GROUPOIDS-037",
+    "FR-GROUPOIDS-038",
+    "FR-GROUPOIDS-039",
+    "FR-GROUPOIDS-040",
+    "FR-GROUPOIDS-041",
+    "FR-GROUPOIDS-042",
+    "FR-GROUPOIDS-043",
+    "FR-GROUPOIDS-044",
+    "FR-GROUPOIDS-045",
+    "FR-GROUPOIDS-046",
+    "FR-GROUPOIDS-047"
+  ],
+  "classification": {
+    "editorial_or_notational_clarification": 3,
+    "source_defect": 40
+  },
+  "rejected_producer_ids": [
+    "FR-GROUPOIDS-005",
+    "FR-GROUPOIDS-007",
+    "FR-GROUPOIDS-009",
+    "FR-GROUPOIDS-015"
+  ],
+  "grouping_notes": [
+    "Forty-three semantic units contain 46 exact, nonoverlapping operations; descending-byte replay reproduces payload/groupoids.tex byte-for-byte.",
+    "Four rejected producer proposals remain explicitly preserved in decisions.jsonl and rejections.jsonl and contribute no payload operation.",
+    "R46 follows R45 in registry and stable-ID order and modifies only groupoids.tex; all earlier candidate, registry, and lease history is preserved."
+  ],
+  "registry": {
+    "before_sha256": "382D67696118D59BC601B7360EC9DC11DD883C4FA445357818CE89BA6564F70D",
+    "after_sha256": "FB46BBEC97E7C2797F4BA9FE73525F4449AF4767D38B849F076EFC199CDE1487",
+    "last_overlay": "stacks-errata-a04446e-r46",
+    "prior_entries_unchanged": 46,
+    "current_entries": 47,
+    "unique_stable_ids": 1270
+  },
+  "leases": {
+    "before_sha256": "300D37DEA1502F5A2566F0B11C2160C2C65023AC367BD56391A4EED20339F56D",
+    "after_sha256": "6E6AB01CE0B7EE5D6C91A95D54E2A608871A1ED2ED112540C5E907A89204D695",
+    "issued_event": "lease-event-000096",
+    "released_event": "lease-event-000097",
+    "prior_events_unchanged": 96
+  },
+  "fresh_replay": {
+    "passed": true,
+    "units": 43,
+    "operations": 46,
+    "exact_preimages_descending_byte_replay": true,
+    "payload_sha256": {
+      "groupoids.tex": "6ED98A884E9F4AD6C3EF6720AE538F1FEFEED24E09E60111B1F9D825CF1A7C04"
+    },
+    "authority_sha256": {
+      "groupoids.tex": "157CC1C792F41465B8249582FEE0F6DFF266AC4224F06B05E936C66C65DB043A"
+    },
+    "manifest_references": 66,
+    "manifest_closure": "PASS: 66/66 manifest-bound files and 67/67 candidate files.",
+    "workflow_check": "47 admitted entries; 97 lease events; 1270 globally unique stable IDs."
+  },
+  "validation_reader": {
+    "pages": 55,
+    "bytes": 731597,
+    "sha256": "96BF9E8FD20DC80ADE31D3C8340044724152CFB16F11ACE2713BDDB6032E6C3B",
+    "reproducible": true,
+    "recorder_fls": "Six pdflatex invocations used -recorder; two independent candidate and authority phases reproduced PDFs and input closures byte-for-byte.",
+    "visual_gate": "All 55 pages were reviewed via complete contact sheets; all 33 correction-sensitive pages were individually inspected at 180 dpi with zero blocking finding.",
+    "adverse_evidence": "Attempt 001 failed only because BUILD.md was absent and is preserved; the complete corrected attempt passed. Two inherited overfull hboxes and isolated cross-chapter unresolved references remain; the PDF is untagged."
+  },
+  "constraints": {
+    "authority_mutated": false,
+    "producer_target_mutated": false,
+    "generated_source_composed": false,
+    "generated_source_pushed": false,
+    "published": false
+  },
+  "next_action": "Commit and validate the separate registrar admission. Generated-source composition remains outside this admission."
+}
