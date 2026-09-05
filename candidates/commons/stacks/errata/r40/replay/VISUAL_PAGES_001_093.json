@@ -1,0 +1,308 @@
+{
+  "absolute_private_paths_in_receipt": false,
+  "adverse_evidence": [
+    {
+      "kind": "unresolved_cross_references",
+      "observation": "Literal ?? references remain visible in this standalone chapter build; the deterministic build receipt proves the candidate and authority target multisets are equal."
+    },
+    {
+      "kind": "inherited_box_diagnostics",
+      "observation": "Candidate and authority each report twenty overfull hboxes and one underfull vbox. Every corresponding page was inspected at 180 dpi and no blocking visual defect was found."
+    },
+    {
+      "kind": "visible_link_borders",
+      "observation": "Red internal-link and green citation rectangles are visible and do not obscure text; they are retained hyperlink styling."
+    },
+    {
+      "kind": "coverage_limit",
+      "observation": "Contact sheets establish complete page and layout coverage, but do not constitute character-level reading of every unmodified page. All correction and diagnostic pages received individual high-resolution inspection."
+    }
+  ],
+  "blocking_layout_defects": [],
+  "checks": {
+    "correction_sensitive_pages": "All edited prose and formulas on pages 64,65,67,68,70,71,72,73 are readable and geometrically intact.",
+    "glyphs": "No visible missing-glyph boxes or broken mathematical glyphs.",
+    "margins": "All inspected material remains inside the physical page; running headers and text areas are consistent.",
+    "overlap": "No observed overlapping body text, formulas, diagram labels, or footnotes.",
+    "page_clipping": "No visible clipped body text, display, diagram, footnote, or bibliography content.",
+    "sequence": "Six contact sheets cover every page exactly once in page order 1-93."
+  },
+  "correction_sensitive_pages": [
+    64,
+    65,
+    67,
+    68,
+    70,
+    71,
+    72,
+    73
+  ],
+  "diagnostic_pages": [
+    8,
+    12,
+    13,
+    14,
+    31,
+    34,
+    35,
+    36,
+    37,
+    42,
+    62,
+    92
+  ],
+  "method": "Direct inspection of all six 4x4 contact sheets covering pages 1-93, then direct individual inspection of twenty existing 180-dpi renders: all eight correction-sensitive pages and all twelve pages carrying candidate/authority box diagnostics. No source, PDF, or render mutation.",
+  "producer_status": "producer_uncertified",
+  "render_manifest": {
+    "bytes": 22716,
+    "file": "render-manifest.json",
+    "sha256": "F0B83540D41092DFC22C998178F4C147FD950A36650567392843B1C5B3E15B68"
+  },
+  "result": "PASS_LAYOUT_WITH_RECORDED_CAVEATS",
+  "reviewer": "descent_packet_audit",
+  "schema": "stacks-r40-bounded-visual-review/v1",
+  "scope": {
+    "assigned_pages": [
+      1,
+      93
+    ],
+    "pdf": "builds/descent.pdf",
+    "pdf_bytes": 1037157,
+    "pdf_sha256": "7509EA4F8F48496A0F92F229ACD2675278A58C6D4D3994660F5C0B2AC79A99EF",
+    "reviewed_pages_count": 93,
+    "total_pdf_pages": 93,
+    "unreviewed_pages_in_assignment": []
+  },
+  "viewed_contact_artifacts": [
+    {
+      "bytes": 886980,
+      "file": "descent_01.png",
+      "matches_manifest": true,
+      "path": "contact_sheets/descent_01.png",
+      "sha256": "3FD723F522DCA2D9714A0A93C2B6FB57129FC9412F3E4A63BDF9301737D52190",
+      "sheet": 1
+    },
+    {
+      "bytes": 931094,
+      "file": "descent_02.png",
+      "matches_manifest": true,
+      "path": "contact_sheets/descent_02.png",
+      "sha256": "E1E21736F1B15AA97E1492EC934E274BD122054EFEB98A5BDCB3324112C5C6B6",
+      "sheet": 2
+    },
+    {
+      "bytes": 979556,
+      "file": "descent_03.png",
+      "matches_manifest": true,
+      "path": "contact_sheets/descent_03.png",
+      "sha256": "0AA74C0C1067E026E0667ED8F9DBB291B5E9038FCE39E6BEF9F54DFDD2556E52",
+      "sheet": 3
+    },
+    {
+      "bytes": 1011331,
+      "file": "descent_04.png",
+      "matches_manifest": true,
+      "path": "contact_sheets/descent_04.png",
+      "sha256": "CC4AD9B986162DC0AECD33EE381A4D5547DE48690972BEC4E33E39E13AA18ED6",
+      "sheet": 4
+    },
+    {
+      "bytes": 893830,
+      "file": "descent_05.png",
+      "matches_manifest": true,
+      "path": "contact_sheets/descent_05.png",
+      "sha256": "1E681B07CFAB7A4B2B0BE314F698C83B9EFCA3585742841F4A7038F862766EC4",
+      "sheet": 5
+    },
+    {
+      "bytes": 719479,
+      "file": "descent_06.png",
+      "matches_manifest": true,
+      "path": "contact_sheets/descent_06.png",
+      "sha256": "9A5B09401EDFDB9136AA879E132FB10145DAD1FF059DD9F2267BB09AA86C66CA",
+      "sheet": 6
+    }
+  ],
+  "viewed_high_resolution_artifacts": [
+    {
+      "bytes": 425136,
+      "file": "descent_p8.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 8,
+      "path": "highres/descent_p8.png",
+      "sha256": "2AC28E5ACF99921A64DD0E2C82D40D609B17D172D2A2B65AC1FC35629F0A6A68"
+    },
+    {
+      "bytes": 309557,
+      "file": "descent_p12.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 12,
+      "path": "highres/descent_p12.png",
+      "sha256": "9A606B95C5B43DBF6EF06344674C75D1DBA8D75CCAB50843DD8635AC3F0964E7"
+    },
+    {
+      "bytes": 318362,
+      "file": "descent_p13.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 13,
+      "path": "highres/descent_p13.png",
+      "sha256": "6C68DEEEB629BA65AB80910D9BA362CD4A6A9F517FDEE7BB7F1AE78DC81389D9"
+    },
+    {
+      "bytes": 295185,
+      "file": "descent_p14.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 14,
+      "path": "highres/descent_p14.png",
+      "sha256": "C31350AD4FBE499D6CC8A1A8A1F27B16EABBEEB40F2A5716539764EB5E1C2FAC"
+    },
+    {
+      "bytes": 435457,
+      "file": "descent_p31.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 31,
+      "path": "highres/descent_p31.png",
+      "sha256": "60260BD0B7DF542026DFB6D9D6E74337A56B3B6C05BA33A72D6E26618178DBE9"
+    },
+    {
+      "bytes": 530173,
+      "file": "descent_p34.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 34,
+      "path": "highres/descent_p34.png",
+      "sha256": "EA1A20054CF34F45A1E63E10B9654AD95BE627B3163BB387C46E3B7F255041DC"
+    },
+    {
+      "bytes": 442640,
+      "file": "descent_p35.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 35,
+      "path": "highres/descent_p35.png",
+      "sha256": "0E9EA435000C0536FB2BE539D8532BE5DB4BD434FF26BB2D866555CB12B8306E"
+    },
+    {
+      "bytes": 399882,
+      "file": "descent_p36.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 36,
+      "path": "highres/descent_p36.png",
+      "sha256": "E5C36F4B802741D5169F082EA1B93D7B5CE9BD1037FB5950D9101914E3FCD0EC"
+    },
+    {
+      "bytes": 383730,
+      "file": "descent_p37.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 37,
+      "path": "highres/descent_p37.png",
+      "sha256": "1F2A76BEC9C28C3D59428D52AF18F7939073EC05226ACA74B0EBA928B1ACB474"
+    },
+    {
+      "bytes": 433006,
+      "file": "descent_p42.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 42,
+      "path": "highres/descent_p42.png",
+      "sha256": "E7E2999709024810D705960337ECA37667AD02937BA08749377D17B604A6D452"
+    },
+    {
+      "bytes": 427772,
+      "file": "descent_p62.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 62,
+      "path": "highres/descent_p62.png",
+      "sha256": "6B91D12DF3C181790D9372D4E088E330DFE400AEDB622A725A93E818B5470C32"
+    },
+    {
+      "bytes": 436533,
+      "file": "descent_p64.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 64,
+      "path": "highres/descent_p64.png",
+      "sha256": "D6BB92187CC8A3CF6BCF2C77F60D37F73376F90A3F46E70221F81C25A25F13E9"
+    },
+    {
+      "bytes": 445172,
+      "file": "descent_p65.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 65,
+      "path": "highres/descent_p65.png",
+      "sha256": "CC5262093092A1AD7655955FCF0C39ED00F3A8506919756DAE8F01AFC696DA49"
+    },
+    {
+      "bytes": 434635,
+      "file": "descent_p67.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 67,
+      "path": "highres/descent_p67.png",
+      "sha256": "B266F6B1255E971CDE4735BC6C4167B0DC19393EEEC3A22EB47B611094C81020"
+    },
+    {
+      "bytes": 324544,
+      "file": "descent_p68.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 68,
+      "path": "highres/descent_p68.png",
+      "sha256": "48FC2D5A6BB786F86FD305B21CF1BC35F0A2272A501B0974A8596067BE5C7E9F"
+    },
+    {
+      "bytes": 417285,
+      "file": "descent_p70.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 70,
+      "path": "highres/descent_p70.png",
+      "sha256": "B323591AC385F6FCD88F6A00B6779435513DAA922149A7050D8FDA9F29C8E9A6"
+    },
+    {
+      "bytes": 420957,
+      "file": "descent_p71.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 71,
+      "path": "highres/descent_p71.png",
+      "sha256": "9D8AFAEBEBF66D6D2A3230A1A41C3EA4A39AFFF4B5AD8B39155EA85E4533B020"
+    },
+    {
+      "bytes": 350847,
+      "file": "descent_p72.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 72,
+      "path": "highres/descent_p72.png",
+      "sha256": "7720C3B8E2A294E4A5943F07423E37B69EB79761EDDC60C145BFC3BDB03B3EF8"
+    },
+    {
+      "bytes": 427119,
+      "file": "descent_p73.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 73,
+      "path": "highres/descent_p73.png",
+      "sha256": "7CCBA155808A70425FA10E1FF608B8483E31F08A9DC0AE6FF7222BF407746130"
+    },
+    {
+      "bytes": 500071,
+      "file": "descent_p92.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 92,
+      "path": "highres/descent_p92.png",
+      "sha256": "CB166F8D74DB242AADD89A5CFBC8024B9CC492974782394011CE32EC4FC9E312"
+    }
+  ]
+}

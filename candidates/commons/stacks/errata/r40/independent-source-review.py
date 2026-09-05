@@ -1,0 +1,212 @@
+"""Independent exact-byte review of the already materialized R40 source stage."""
+from __future__ import annotations
+
+import hashlib
+import json
+import re
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parent
+REPO = ROOT.parents[4]
+AUTH_SHA = "49483B3BCB36427A607A8227F4EA67730FCDDF1EECCB8E992CA61915ACE3B31D"
+PAYLOAD_SHA = "AA18A14DBBC153BD8F8D75C27EAE5D410BE7C0D52B54962AEFCDB59F75827BDA"
+EXPECTED_IDS = [f"MC-STK-ERR-{number}" for number in range(1402, 1413)]
+EXPECTED_PRODUCER_IDS = [f"DESCENT-{number:03d}" for number in range(13, 24)]
+
+
+def sha_bytes(data: bytes) -> str:
+    return hashlib.sha256(data).hexdigest().upper()
+
+
+def sha_path(path: Path) -> str:
+    return sha_bytes(path.read_bytes())
+
+
+def load(path: Path) -> dict:
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def evidence(relative: str) -> dict:
+    path = ROOT / relative
+    return {"path": relative, "bytes": path.stat().st_size, "sha256": sha_path(path)}
+
+
+def main() -> int:
+    authority = (ROOT / "authority/source/descent.tex").read_bytes()
+    payload = (ROOT / "payload/descent.tex").read_bytes()
+    assert len(authority) == 353760 and sha_bytes(authority) == AUTH_SHA
+    assert len(payload) == 353794 and sha_bytes(payload) == PAYLOAD_SHA
+
+    spec = load(ROOT / "operation-spec.json")
+    stable = load(ROOT / "stable-units.json")
+    maps = [json.loads(line) for line in (ROOT / "source-map.jsonl").read_text(encoding="utf-8").splitlines() if line]
+    decisions = [json.loads(line) for line in (ROOT / "decisions.jsonl").read_text(encoding="utf-8").splitlines() if line]
+    adjudication = load(ROOT / "authority/registrar/DESCENT_R40_INDEPENDENT_ADJUDICATION_20260905.json")
+    assert spec["authority_sha256"] == AUTH_SHA and spec["operation_count"] == 11
+    assert stable["unit_count"] == 11
+    assert [unit["id"] for unit in stable["units"]] == EXPECTED_IDS
+    assert [unit["producer_id"] for unit in stable["units"]] == EXPECTED_PRODUCER_IDS
+    assert [row["unit_id"] for row in maps] == EXPECTED_IDS
+    assert [row["stable_id"] for row in decisions] == EXPECTED_IDS
+    assert [row["stable_id"] for row in adjudication["rows"]] == EXPECTED_IDS
+
+    operations = sorted(spec["operations"], key=lambda row: row["start_byte"])
+    assert [row["stable_id"] for row in operations] == EXPECTED_IDS
+    assert len({row["operation_id"] for row in operations}) == 11
+    for left, right in zip(operations, operations[1:]):
+        assert left["end_byte_exclusive"] <= right["start_byte"]
+    for operation, unit, source_map in zip(operations, stable["units"], maps):
+        old = operation["old_text"].encode("utf-8")
+        replacement = operation["replacement_text"].encode("utf-8")
+        start = operation["start_byte"]
+        end = operation["end_byte_exclusive"]
+        assert authority[start:end] == old
+        assert authority.count(old) == 1
+        assert len(old) == operation["old_bytes"] and sha_bytes(old) == operation["old_sha256"]
+        assert len(replacement) == operation["replacement_bytes"] and sha_bytes(replacement) == operation["replacement_sha256"]
+        assert authority[:start].count(b"\n") + 1 == operation["source_start_line"] == operation["line"]
+        assert unit["operation_ids"] == [operation["operation_id"]]
+        assert source_map["operations"] == [operation]
+        assert source_map["authority_sha256"] == AUTH_SHA
+        assert source_map["producer_id"] == unit["producer_id"]
+
+    replay = authority
+    for operation in reversed(operations):
+        replay = (
+            replay[: operation["start_byte"]]
+            + operation["replacement_text"].encode("utf-8")
+            + replay[operation["end_byte_exclusive"] :]
+        )
+    assert replay == payload
+
+    for left, right in (
+        ("operation-spec.json", "operation-spec.input.json"),
+        ("stable-units.json", "stable-units.input.json"),
+        ("source-map.jsonl", "source-map.input.jsonl"),
+        ("decisions.jsonl", "decisions.input.jsonl"),
+        ("rejections.jsonl", "rejections.input.jsonl"),
+        ("candidate.config.json", "candidate.config.input.json"),
+    ):
+        assert (ROOT / left).read_bytes() == (ROOT / right).read_bytes(), (left, right)
+
+    patterns = {
+        "labels": rb"\\label\{[^}]*\}",
+        "refs": rb"\\(?:ref|eqref)\{[^}]*\}",
+        "environments": rb"\\(?:begin|end)\{[^}]*\}",
+        "inputs": rb"\\input\{[^}]*\}",
+        "cites": rb"\\cite(?:\[[^]]*\])?\{[^}]*\}",
+    }
+    structure = {}
+    for name, pattern in patterns.items():
+        before = re.findall(pattern, authority)
+        after = re.findall(pattern, payload)
+        assert before == after
+        structure[name] = len(before)
+
+    overlays = load(REPO / "registry/overlays.json")["registered_entries"]
+    prior_ids = [stable_id for entry in overlays for stable_id in entry["stable_ids"]]
+    assert not set(EXPECTED_IDS).intersection(prior_ids)
+    prior_descent_hits = 0
+    prior_preimage_hits = 0
+    exact_old = {operation["old_text"] for operation in operations}
+    checked_operation_specs = 0
+    checked_source_maps = 0
+    for path in (REPO / "candidates").rglob("operation-spec*.json"):
+        if ROOT in path.resolve().parents:
+            continue
+        checked_operation_specs += 1
+        text = path.read_text(encoding="utf-8")
+        prior_descent_hits += text.count('"source": "descent.tex"')
+        prior_preimage_hits += sum(text.count(old) for old in exact_old)
+    for path in (REPO / "candidates").rglob("source-map*.jsonl"):
+        if ROOT in path.resolve().parents:
+            continue
+        checked_source_maps += 1
+        text = path.read_text(encoding="utf-8")
+        prior_descent_hits += text.count('"source": "descent.tex"')
+        prior_preimage_hits += sum(text.count(old) for old in exact_old)
+    assert prior_descent_hits == 0 and prior_preimage_hits == 0
+
+    producer = (ROOT / "authority/producer/DESCENT_SOURCE_DEFECTS.md").read_text(encoding="utf-8")
+    listed = [int(value) for value in re.findall(r"(?m)^([0-9]+)\.", producer)]
+    assert all(number in listed for number in range(13, 24))
+    assert all(number in listed for number in range(24, 30))
+    assert b"descent.tex" not in (ROOT / "authority/producer/SOURCE_DEFECT_LEDGER.csv").read_bytes().lower()
+
+    observed = [
+        evidence(relative)
+        for relative in (
+            "candidate.config.json",
+            "candidate.config.input.json",
+            "operation-spec.json",
+            "operation-spec.input.json",
+            "stable-units.json",
+            "stable-units.input.json",
+            "source-map.jsonl",
+            "source-map.input.jsonl",
+            "decisions.jsonl",
+            "decisions.input.jsonl",
+            "rejections.jsonl",
+            "rejections.input.jsonl",
+            "source-validation.json",
+            "formula-diagram-inventory.json",
+            "REGENERATION_RECEIPT.json",
+            "authority/registrar/DESCENT_R40_INDEPENDENT_ADJUDICATION_20260905.json",
+            "authority/producer/DESCENT_SOURCE_DEFECTS.md",
+            "authority/producer/SOURCE_DEFECT_LEDGER.csv",
+            "authority/source/descent.tex",
+            "payload/descent.tex",
+        )
+    ]
+    report = {
+        "schema": "stacks-r40-independent-source-validation/v1",
+        "reviewer": "independent_exact_byte_validator",
+        "date": "2026-09-05",
+        "status": "PASS_SOURCE_ONLY",
+        "passed": True,
+        "scope": "Independent source replay, identity, structure, and local-registry dedup validation only; no build, visual, admission, composition, or publication claim.",
+        "authority": evidence("authority/source/descent.tex"),
+        "payload": evidence("payload/descent.tex"),
+        "checks": {
+            "exact_authority_hash": True,
+            "operations": 11,
+            "unique_operation_ids": 11,
+            "exact_byte_preimages_lengths_hashes_and_line_numbers": 11,
+            "exact_replacement_lengths_hashes": 11,
+            "nonoverlapping": True,
+            "descending_replay_equals_payload_byte_for_byte": True,
+            "stable_units": 11,
+            "stable_ids": "MC-STK-ERR-1402..MC-STK-ERR-1412",
+            "source_map_unit_operation_producer_identity_equality": True,
+            "structure_counts_and_order_equal": structure,
+            "prior_operation_specs_checked": checked_operation_specs,
+            "prior_source_maps_checked": checked_source_maps,
+            "prior_registry_descent_or_exact_preimage_hits": 0,
+            "global_stable_id_collisions": 0,
+            "input_output_stage_pairs_byte_equal": 6,
+        },
+        "classification": {
+            "source_defect": sum(unit["class"] == "source_defect" for unit in stable["units"]),
+            "editorial_or_notational_clarification": sum(unit["class"] == "editorial_or_notational_clarification" for unit in stable["units"]),
+        },
+        "producer_scope": {
+            "r40_rows": "DESCENT-013..023",
+            "preserved_out_of_scope_rows": "DESCENT-024..029 reserved for a later append-only round",
+        },
+        "observed_files": observed,
+        "blockers": [],
+        "build": "NOT_REVIEWED_BY_THIS_RECEIPT",
+        "visual": "NOT_REVIEWED_BY_THIS_RECEIPT",
+        "full_admission": "NOT_PERFORMED",
+        "mutations": "Only this new review receipt; no source, registry, build, generated-source, Git, or publication mutation.",
+    }
+    output = ROOT / "replay/SOURCE_INDEPENDENT_VALIDATION.json"
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(json.dumps(report, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8", newline="")
+    print(json.dumps({"passed": True, "units": 11, "operations": 11, "payload_sha256": PAYLOAD_SHA, "receipt_sha256": sha_path(output)}))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

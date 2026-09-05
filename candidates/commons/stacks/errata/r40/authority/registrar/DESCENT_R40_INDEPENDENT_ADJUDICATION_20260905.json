@@ -1,0 +1,208 @@
+{
+  "authority": {
+    "bytes": 353760,
+    "path": "authority/source/descent.tex",
+    "sha256": "49483B3BCB36427A607A8227F4EA67730FCDDF1EECCB8E992CA61915ACE3B31D"
+  },
+  "date": "2026-09-05",
+  "grouping": {
+    "authority_order": [
+      "MC-STK-ERR-1402",
+      "MC-STK-ERR-1403",
+      "MC-STK-ERR-1404",
+      "MC-STK-ERR-1405",
+      "MC-STK-ERR-1406",
+      "MC-STK-ERR-1407",
+      "MC-STK-ERR-1408",
+      "MC-STK-ERR-1409",
+      "MC-STK-ERR-1410",
+      "MC-STK-ERR-1411",
+      "MC-STK-ERR-1412"
+    ],
+    "independent_units": 11,
+    "similar_but_distinct": [
+      "DESCENT-013 is a distinct occurrence from the earlier smooth-case omission at lines 5337--5343.",
+      "DESCENT-016 and DESCENT-017 are separate proof halves with independent exact guards."
+    ]
+  },
+  "mutations": "This receipt records adjudication and deduplication only; authority, producer files, generated source, and upstream were not mutated.",
+  "passed": true,
+  "prelease_registry": {
+    "commit": "bf472632906dcfbc032620f8ce203fa687e929e5",
+    "leases_sha256": "BCDFF849CACF5C14657B76BE7BD43B5F147857ACE77621888CB3C2E4B9E7BD2A",
+    "matching_descent_or_exact_preimage_records": 0,
+    "operation_spec_files_checked": 42,
+    "overlays_sha256": "A259CAA4DBB502B35B7F0F0759D093CF59811D1590228B93AFD4D1714DC14FF0",
+    "prior_stable_id_max": "MC-STK-ERR-1401",
+    "registered_rounds_checked_through": 39,
+    "source_map_files_checked": 47
+  },
+  "producer_evidence_original": {
+    "bytes": 9699,
+    "logical_path": "<WORKSPACE>/03_projects/language_management/romance/03_working_translations/stacks_fr_20260821/p05/evidence/DESCENT_SOURCE_DEFECTS.md",
+    "scope_note": "The append-only producer file also contains later DESCENT-024..029 allegations. They are preserved as adverse/out-of-scope evidence and are not R40 units; the committed R40 lease ends at DESCENT-023.",
+    "sha256": "279C1FBF5732A56A192AE75C72FDFA46285381815CBE6536E178205BC86373A2"
+  },
+  "producer_ledger_original": {
+    "bytes": 528248,
+    "logical_path": "<WORKSPACE>/03_projects/language_management/romance/03_working_translations/stacks_fr_20260821/00_control/SOURCE_DEFECT_LEDGER.csv",
+    "matching_descent_entries": 0,
+    "sha256": "304D51200903ED870D2F72AF8F65C0AB28B314F6075B206C3B34F506B678F8CE"
+  },
+  "public_checks": {
+    "official_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "official_issue_pr_exact_matches": 0,
+    "official_source_retains_all_preimages": true,
+    "tags": {
+      "036L": "Comments (0)",
+      "036Q": "Comments (0)",
+      "04QV": "Comments (0)",
+      "04QY": "Comments (0)",
+      "04R1": "Comments (0)",
+      "04R2": "Comments (0)",
+      "04R3": "One unrelated comment about adding surjective; no matching correction",
+      "0CEZ": "Comments (0)"
+    }
+  },
+  "replay": {
+    "line_count": 9456,
+    "payload_bytes": 353794,
+    "payload_sha256": "AA18A14DBBC153BD8F8D75C27EAE5D410BE7C0D52B54962AEFCDB59F75827BDA"
+  },
+  "rows": [
+    {
+      "classification": "source_defect",
+      "exact_preimage_occurrences": 1,
+      "line": 6663,
+      "old": "resp.\\ \\'etale, resp.\\ an open immersion, the composition",
+      "producer_id": "DESCENT-013",
+      "reason": "The statement lists six topologies in order but only five corresponding precomposition classes; smooth is the missing fourth class between syntomic and etale.",
+      "recommendation": "accept",
+      "replacement": "resp.\\ smooth, resp.\\ \\'etale, resp.\\ an open immersion, the composition",
+      "stable_id": "MC-STK-ERR-1402",
+      "tag": "04QV"
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_preimage_occurrences": 1,
+      "line": 6790,
+      "old": "Then property",
+      "producer_id": "DESCENT-014",
+      "reason": "The sentence introducing the displayed predicate requires the definite article; no mathematical token changes.",
+      "recommendation": "accept",
+      "replacement": "The property",
+      "stable_id": "MC-STK-ERR-1403",
+      "tag": "036L"
+    },
+    {
+      "classification": "source_defect",
+      "exact_preimage_occurrences": 1,
+      "line": 6876,
+      "old": "Denote $f_i : X_i \\to X$ the compositions.",
+      "producer_id": "DESCENT-015",
+      "reason": "For f:X->Y and Xi->X, the named compositions are Xi->X->Y. The proof compares their universal openness as maps to Y; the preferred full-line repair also supplies the missing English 'by'.",
+      "recommendation": "accept",
+      "replacement": "Denote by $f_i : X_i \\to Y$ the compositions.",
+      "stable_id": "MC-STK-ERR-1404",
+      "tag": "036Q"
+    },
+    {
+      "classification": "source_defect",
+      "exact_preimage_occurrences": 1,
+      "line": 7081,
+      "old": "Assume $\\mathcal{P}(f)$. Let $f(x_i) \\leadsto y_i$",
+      "producer_id": "DESCENT-016",
+      "reason": "Here xi lies in Xi and fi:Xi->Yi is the base change; f has domain X. The next line uses gi(fi(xi))=f(hi(xi)).",
+      "recommendation": "accept",
+      "replacement": "Assume $\\mathcal{P}(f)$. Let $f_i(x_i) \\leadsto y_i$",
+      "stable_id": "MC-STK-ERR-1405",
+      "tag": "04QY"
+    },
+    {
+      "classification": "source_defect",
+      "exact_preimage_occurrences": 1,
+      "line": 7105,
+      "old": "$f(x_i) \\leadsto y$ be a specialization. Then $f(h_i(x_i)) \\leadsto y$ so",
+      "producer_id": "DESCENT-017",
+      "reason": "Since fi=f composed with hi has domain Xi, the specialization of xi must start at fi(xi), as confirmed by the following f(hi(xi)).",
+      "recommendation": "accept",
+      "replacement": "$f_i(x_i) \\leadsto y$ be a specialization. Then $f(h_i(x_i)) \\leadsto y$ so",
+      "stable_id": "MC-STK-ERR-1406",
+      "tag": "04QY"
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_preimage_occurrences": 1,
+      "line": 7132,
+      "old": "$V = X \\amalg Y$, let $a, b$ the obvious map, and let $h : U \\to V$",
+      "producer_id": "DESCENT-018",
+      "reason": "The construction introduces two evident morphisms a and b, so the copula and plural agreement are both required.",
+      "recommendation": "accept",
+      "replacement": "$V = X \\amalg Y$, let $a, b$ be the obvious maps, and let $h : U \\to V$",
+      "stable_id": "MC-STK-ERR-1407",
+      "tag": "04QY"
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_preimage_occurrences": 1,
+      "line": 7292,
+      "old": "(a) equivalent to (g).",
+      "producer_id": "DESCENT-019",
+      "reason": "The copula is missing. Condition (g) combines the target-cover and source-cover reductions already proved equivalent to (a).",
+      "recommendation": "accept",
+      "replacement": "(a) is equivalent to (g).",
+      "stable_id": "MC-STK-ERR-1408",
+      "tag": "04R1"
+    },
+    {
+      "classification": "source_defect",
+      "exact_preimage_occurrences": 1,
+      "line": 7481,
+      "old": "$\\{X \\to X \\times_Z Y, X' \\to X \\times_Y Z\\}$ is an \\'etale covering,",
+      "producer_id": "DESCENT-020",
+      "reason": "The diagram identifies X and X'=f_Y^{-1}(Y') as the two pieces covering X times_Z Y. X times_Y Z is not defined because no map Z->Y is given.",
+      "recommendation": "accept",
+      "replacement": "$\\{X \\to X \\times_Z Y, X' \\to X \\times_Z Y\\}$ is an \\'etale covering,",
+      "stable_id": "MC-STK-ERR-1409",
+      "tag": "04R2"
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_preimage_occurrences": 1,
+      "line": 7511,
+      "old": "\\item locally finite type, see",
+      "producer_id": "DESCENT-021",
+      "reason": "The standard property, and the cited lemma name immediately below it, are 'locally of finite type'. The existing public comment on this tag concerns adding surjective and is unrelated.",
+      "recommendation": "accept",
+      "replacement": "\\item locally of finite type, see",
+      "stable_id": "MC-STK-ERR-1410",
+      "tag": "04R3"
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_preimage_occurrences": 1,
+      "line": 7609,
+      "old": "we conclude that $f'_{U'} : U' \\to Y'$ has $\\mathcal{P}$.",
+      "producer_id": "DESCENT-022",
+      "reason": "Line 7606 already names the restriction f'|_{U'}:U'->V'; after composition with V'->Y', the same restricted morphism to Y' is meant. The subscripted f'_{U'} is undefined here.",
+      "recommendation": "accept",
+      "replacement": "we conclude that $f'|_{U'} : U' \\to Y'$ has $\\mathcal{P}$.",
+      "stable_id": "MC-STK-ERR-1411",
+      "tag": "0CEZ"
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_preimage_occurrences": 1,
+      "line": 7622,
+      "old": "morphism $g'|_U' : U' \\to X$. Then $\\{U' \\to U\\}$",
+      "producer_id": "DESCENT-023",
+      "reason": "The restriction is to the open U' in X'. Braces are required so the prime belongs to the subscript; the same restriction is written correctly at lines 7602, 7603, and 7615.",
+      "recommendation": "accept",
+      "replacement": "morphism $g'|_{U'} : U' \\to X$. Then $\\{U' \\to U\\}$",
+      "stable_id": "MC-STK-ERR-1412",
+      "tag": "0CEZ"
+    }
+  ],
+  "schema": "stacks-r40-descent-independent-adjudication/v1",
+  "status": "PASS_ACCEPT_11_NON_DUPLICATIVE_UNITS"
+}

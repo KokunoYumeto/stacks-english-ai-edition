@@ -1,0 +1,37 @@
+{
+  "next_command": "powershell -File run-builds-with-mutex.ps1 -UpstreamRoot <PINNED_SOURCE_DIRECTORY> -WorkRoot1 <NEW_DIRECTORY> -WorkRoot2 <NEW_DIRECTORY> -PrivateRoot1 <PRIVATE_DIRECTORY> -PrivateRoot2 <PRIVATE_DIRECTORY>",
+  "no_final_manifest": true,
+  "operation_spec": {
+    "bytes": 10497,
+    "path": "operation-spec.json",
+    "sha256": "372E35A255ED5C4F0CE2FA89D1E21DE66EB9AADA5F858754ED2C6415C171123C"
+  },
+  "payload": {
+    "bytes": 353794,
+    "path": "payload/descent.tex",
+    "sha256": "AA18A14DBBC153BD8F8D75C27EAE5D410BE7C0D52B54962AEFCDB59F75827BDA"
+  },
+  "pipeline": {
+    "bytes": 25743,
+    "path": "pipeline_r40.py",
+    "sha256": "392761CD241C9D5251D8D1465982397BFF2845CA2422DDCAF4F9C7F4B8DDC66B"
+  },
+  "schema": "stacks-r40-source-regeneration-v1",
+  "source_map": {
+    "bytes": 16298,
+    "path": "source-map.jsonl",
+    "sha256": "09DD323316FE40FDDACA12C62FFE61EA29B8CF147517979D03406B04162660CA"
+  },
+  "source_validation": {
+    "bytes": 2085,
+    "path": "source-validation.json",
+    "sha256": "F448463FBBB28970F034C6E922895DC8B12B7D880C86CA00697BB773946E1C41"
+  },
+  "stable_units": {
+    "bytes": 4961,
+    "path": "stable-units.json",
+    "sha256": "107DC714C68B8781A18D2EAD094505DDB4E7EBA3FA4D8A2F2A03AFB87C333910"
+  },
+  "status": "SOURCE_REPLAY_PASS_BUILD_PENDING",
+  "write_scope": "Only the leased R40 candidate; no TeX, admission, composition, or publication was performed."
+}

@@ -1,0 +1,66 @@
+{
+  "adjudication": {
+    "bytes": 9300,
+    "path": "authority/registrar/DESCENT_R40_INDEPENDENT_ADJUDICATION_20260905.json",
+    "sha256": "55CC51E4440F91D734E6547F4ED26B34EDE8146145C8C85A569CB8BC5C68831A"
+  },
+  "authority": {
+    "bytes": 353760,
+    "path": "authority/source/descent.tex",
+    "sha256": "49483B3BCB36427A607A8227F4EA67730FCDDF1EECCB8E992CA61915ACE3B31D"
+  },
+  "build": "NOT_PERFORMED",
+  "deduplication": {
+    "commit": "bf472632906dcfbc032620f8ce203fa687e929e5",
+    "leases_sha256": "BCDFF849CACF5C14657B76BE7BD43B5F147857ACE77621888CB3C2E4B9E7BD2A",
+    "matching_descent_or_exact_preimage_records": 0,
+    "operation_spec_files_checked": 42,
+    "overlays_sha256": "A259CAA4DBB502B35B7F0F0759D093CF59811D1590228B93AFD4D1714DC14FF0",
+    "prior_stable_id_max": "MC-STK-ERR-1401",
+    "registered_rounds_checked_through": 39,
+    "source_map_files_checked": 47
+  },
+  "independent_candidate_replay": "NOT_PERFORMED",
+  "line_preimages_exact": 11,
+  "nonoverlapping": true,
+  "operations": 11,
+  "passed": true,
+  "payload": {
+    "bytes": 353794,
+    "path": "payload/descent.tex",
+    "sha256": "AA18A14DBBC153BD8F8D75C27EAE5D410BE7C0D52B54962AEFCDB59F75827BDA"
+  },
+  "schema": "stacks-r40-source-validation-v1",
+  "scope": "Source-only exact replay and structural validation; no build, render, final independent replay, admission, or composition claim.",
+  "semantic_units": 11,
+  "structure": {
+    "cites": {
+      "authority": 20,
+      "candidate": 20,
+      "ordered_equal": true
+    },
+    "environments": {
+      "authority": 1010,
+      "candidate": 1010,
+      "ordered_equal": true
+    },
+    "inputs": {
+      "authority": 2,
+      "candidate": 2,
+      "ordered_equal": true
+    },
+    "labels": {
+      "authority": 286,
+      "candidate": 286,
+      "ordered_equal": true
+    },
+    "refs": {
+      "authority": 867,
+      "candidate": 867,
+      "ordered_equal": true
+    }
+  },
+  "unchanged_interval_sha256": "3EF333AB786F6FF2AB126B675209E17385F0888565209D8A800A88BB219B51D6",
+  "unlisted_byte_changes": 0,
+  "visual_qa": "NOT_PERFORMED"
+}
