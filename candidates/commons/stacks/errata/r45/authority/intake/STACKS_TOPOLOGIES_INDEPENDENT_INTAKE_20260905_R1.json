@@ -1,0 +1,683 @@
+{
+  "schema": "interlanguage-stacks-upstream-independent-intake/v1",
+  "receipt_id": "STACKS-TOPOLOGIES-INDEPENDENT-INTAKE-20260905-R1",
+  "created_at_utc": "2026-09-05T16:37:53Z",
+  "append_only": true,
+  "status": "independent_preflight_complete_not_registered_not_published",
+  "scope": {
+    "chapter": "34 topologies.tex",
+    "input_candidate_count": 19,
+    "write_boundary": "This newly created receipt only.",
+    "exclusions": [
+      "No contact with or mutation of P05.",
+      "No mutation of authority, French target, generated source, registrar, registry, release, or translation files.",
+      "No stable-ID allocation, candidate materialization, build, push, upload, or publication."
+    ]
+  },
+  "authorities": {
+    "candidate_state": {
+      "path": "<WORKSPACE>/03_projects/language_management/romance/03_working_translations/stacks_fr_20260821/p05/evidence/TOPOLOGIES_NATIVE_QA_STATE.json",
+      "bytes": 13853,
+      "expected_sha256": "595D45784CE9CB7107700A565D3FCA24635DAC0AE4DE4F0BE11DE90099D0ED49",
+      "observed_sha256": "595D45784CE9CB7107700A565D3FCA24635DAC0AE4DE4F0BE11DE90099D0ED49",
+      "hash_match": true,
+      "source_defect_records": 19
+    },
+    "pinned_source": {
+      "path": "<WORKSPACE>/03_projects/language_management/cjk/03_working_translations/stacks_cjk_20260821/upstream/src/stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14/topologies.tex",
+      "bytes": 166188,
+      "expected_sha256": "C984C98BCD458A191880433DED32A36AC9035543BBF8C98E191AE022A260F513",
+      "observed_sha256": "C984C98BCD458A191880433DED32A36AC9035543BBF8C98E191AE022A260F513",
+      "hash_match": true,
+      "line_count": 4512,
+      "line_endings": "LF",
+      "utf8_bom": false
+    },
+    "supporting_sources_read_only": [
+      {
+        "path": "<WORKSPACE>/03_projects/language_management/cjk/03_working_translations/stacks_cjk_20260821/upstream/src/stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14/sets.tex",
+        "bytes": 46628,
+        "sha256": "9BCC55E7F11CF36B0665AE549D5BA76BE6A0EDD00F7FCA36A567E367099603F9",
+        "use": "Candidate 5 cited-lemma adjudication."
+      },
+      {
+        "path": "<WORKSPACE>/03_projects/language_management/cjk/03_working_translations/stacks_cjk_20260821/upstream/src/stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14/morphisms.tex",
+        "bytes": 587157,
+        "sha256": "3350FD2C4E3ABC78A4AE3BCDB32694C70A5765E500C308C7EA7D239F5A3E3B69",
+        "use": "Candidate 7 cited-lemma adjudication."
+      },
+      {
+        "path": "<WORKSPACE>/03_projects/language_management/cjk/03_working_translations/stacks_cjk_20260821/upstream/src/stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14/spaces-topologies.tex",
+        "bytes": 49354,
+        "sha256": "C5BAE429F5F620DD1FC96C5785A8F6BB8FE1FD0703B2BEC8DD47CACFE3A8AC40",
+        "use": "Candidate 6 source-wide end-of-section marker convention."
+      }
+    ]
+  },
+  "preimage_replay": {
+    "encoding": "UTF-8 without BOM; LF",
+    "offset_rule": "Zero-based UTF-8 byte offsets into the pinned source; end_byte_exclusive is exclusive.",
+    "fragment_hash_rule": "SHA-256 of exact old_text UTF-8 bytes without an added trailing LF.",
+    "result": "PASS",
+    "operation_count": 36,
+    "all_fragments_match_declared_offsets_and_hashes": true,
+    "repeated_strings_are_locus_scoped_by_offset": true,
+    "postimage_simulation": {
+      "method": "Apply all 36 replacements in descending start-byte order to an in-memory copy only; write no source bytes.",
+      "bytes": 166236,
+      "sha256": "FA88114672E734B6B9677C62378691DFFA761D2376026EAE4340CDEFD053A8A9",
+      "lf_count": 4512,
+      "to_be_continued_occurrences": 2,
+      "overlap_or_order_failures": 0
+    }
+  },
+  "registrar_deduplication": {
+    "root": "<WORKSPACE>/ai-stacks-r31-sites-modules-20260829",
+    "registry": "registry/overlays.json",
+    "registry_bytes": 71560,
+    "registry_sha256": "0A86C8871E2459B7C0B2FB02620FFD696D01F1C175E5EA0F32A7BB589F03AAAD",
+    "registered_rounds_checked": "R1-R44 inclusive",
+    "registered_round_count": 44,
+    "latest_errata_lease_event": "lease-event-000093 released stacks-lease-000048-errata-r44",
+    "active_next_errata_lease_observed": false,
+    "material_basenames": [
+      "candidate.manifest.json",
+      "decisions.jsonl",
+      "decisions.input.jsonl",
+      "source-map.jsonl",
+      "source-map.input.jsonl",
+      "proofs.md",
+      "rejections.jsonl"
+    ],
+    "material_file_count": 203,
+    "canonical_source_map_records": 1196,
+    "canonical_and_input_source_map_records": 1622,
+    "material_inventory_sha256": "6C6FFE2A8A4A1C4320F3BEBA3D958E8702BE780CBF19B29CB2A099D614DE43BA",
+    "material_inventory_hash_rule": "Existing listed-basename files, sorted by full path; LF-joined relative_path<TAB>bytes<TAB>uppercase_SHA256 rows plus final LF.",
+    "round_binding_inventory_sha256": "94E4B934A740FEB3D4533D8FA55C829C1CCD821DF022E441EA1B928C83833BE3",
+    "round_binding_hash_rule": "For n=1..44, LF-joined Rn<TAB>registry_manifest_sha256<TAB>observed_manifest_sha256<TAB>canonical_source_map_sha256 rows plus final LF.",
+    "all_44_manifest_hashes_match_registry": true,
+    "registered_topologies_tex_hits": 0,
+    "registered_label_or_preimage_hits": 0,
+    "near_name_note": "R1 MC-STK-ERR-0008 only references singular topology.tex for a tags allocator update; R3 MC-STK-ERR-0033 through MC-STK-ERR-0055 and R4 MC-STK-ERR-0063 through MC-STK-ERR-0076 modify singular topology.tex at authority SHA-256 C6BAC8DCF8AD96DC47416BF34CB45BA4A10B894E40D67D3E1FA68D8EF0D9F872. MC-STK-ERR-0075 is a related editorial-placeholder precedent, not a duplicate locus. None concerns plural topologies.tex.",
+    "result": "NO_PUBLIC_REGISTRAR_DUPLICATES"
+  },
+  "summary": {
+    "accepted": 19,
+    "deferred": 0,
+    "rejected": 0,
+    "accepted_operations": 36,
+    "stable_ids_allocated": 0,
+    "duplicates_against_R1_R44": 0,
+    "internal_analogue_policy": "Related patterns at distinct source loci remain separate line-scoped replay operations."
+  },
+  "candidates": [
+    {
+      "ordinal": 1,
+      "location": "lemma-characterize-sheaf-big proof",
+      "decision": "accepted",
+      "class": "category_or_site_notation_defect",
+      "rationale": "The site is (\\Sch/S)_{Zar}; \\Sh((\\Sch/S)_{Zar}) is its topos. The proof evaluates F on site objects and constructs a presheaf on those objects, so removing only \\Sh is the uniform minimal repair.",
+      "registrar_duplicates": [],
+      "operations": [
+        {
+          "id": "TOP-01-OP1",
+          "lines": "664",
+          "start_byte": 24677,
+          "end_byte_exclusive": 24729,
+          "file_occurrences": 1,
+          "old_sha256": "DE779A50A0DE3105855862649A09B13FF4559C42103C76EA92EC6B4AE4CE733A",
+          "old_text": "Given a sheaf $\\mathcal{F}$ on $\\Sh((\\Sch/S)_{Zar})$",
+          "replacement_text": "Given a sheaf $\\mathcal{F}$ on $(\\Sch/S)_{Zar}$"
+        },
+        {
+          "id": "TOP-01-OP2",
+          "lines": "684",
+          "start_byte": 25797,
+          "end_byte_exclusive": 25860,
+          "file_occurrences": 1,
+          "old_sha256": "04E056421814547E52320AED746B402B03D14D7635A9608E3BEA7CBE57B4D33F",
+          "old_text": "we may define a presheaf $\\mathcal{F}$ on $\\Sh((\\Sch/S)_{Zar})$",
+          "replacement_text": "we may define a presheaf $\\mathcal{F}$ on $(\\Sch/S)_{Zar}$"
+        }
+      ]
+    },
+    {
+      "ordinal": 2,
+      "location": "lemma-composition-etale; lemma-composition-ph",
+      "decision": "accepted",
+      "class": "duplicated_variable",
+      "rationale": "Each following line declares f : X -> Y and g : Y -> Z. The second Y in the scheme list is unambiguously Z.",
+      "registrar_duplicates": [],
+      "operations": [
+        {
+          "id": "TOP-02-OP1",
+          "lines": "1251",
+          "start_byte": 45493,
+          "end_byte_exclusive": 45537,
+          "file_occurrences": 1,
+          "old_sha256": "A34A1BE507A7CF6C9725CBD97778DDDFD1C999AE91D3921A005B95C2A7A0FDAB",
+          "old_text": "Given schemes $X$, $Y$, $Y$ in $\\Sch_\\etale$",
+          "replacement_text": "Given schemes $X$, $Y$, $Z$ in $\\Sch_\\etale$"
+        },
+        {
+          "id": "TOP-02-OP2",
+          "lines": "2839",
+          "start_byte": 102346,
+          "end_byte_exclusive": 102392,
+          "file_occurrences": 1,
+          "old_sha256": "9F877A5436666897D2086D2062B08CFDB2A517B09DC4486722976B65334D4B70",
+          "old_text": "Given schemes $X$, $Y$, $Y$ in $(\\Sch/S)_{ph}$",
+          "replacement_text": "Given schemes $X$, $Y$, $Z$ in $(\\Sch/S)_{ph}$"
+        }
+      ]
+    },
+    {
+      "ordinal": 3,
+      "location": "lemma-characterize-sheaf-big-etale proof",
+      "decision": "accepted",
+      "class": "category_or_site_notation_defect",
+      "rationale": "As in candidate 1, \\Sh denotes the topos, not the site on which the presheaf is defined.",
+      "registrar_duplicates": [],
+      "operations": [
+        {
+          "id": "TOP-03-OP1",
+          "lines": "1324",
+          "start_byte": 48095,
+          "end_byte_exclusive": 48148,
+          "file_occurrences": 1,
+          "old_sha256": "FC3216A0A178B132E1B65FDCBC35EEA1F57C28127A0C73CAC465B60788C74A2B",
+          "old_text": "Given a sheaf $\\mathcal{F}$ on $\\Sh((\\Sch/S)_\\etale)$",
+          "replacement_text": "Given a sheaf $\\mathcal{F}$ on $(\\Sch/S)_\\etale$"
+        },
+        {
+          "id": "TOP-03-OP2",
+          "lines": "1348-1349",
+          "start_byte": 49408,
+          "end_byte_exclusive": 49472,
+          "file_occurrences": 1,
+          "old_sha256": "4397DAE90AE9CB90B9FF73740DC6758376A00561532A39E4078DA619B6C13574",
+          "old_text": "we may define a presheaf $\\mathcal{F}$ on\n$\\Sh((\\Sch/S)_\\etale)$",
+          "replacement_text": "we may define a presheaf $\\mathcal{F}$ on\n$(\\Sch/S)_\\etale$"
+        }
+      ]
+    },
+    {
+      "ordinal": 4,
+      "location": "lemma-verify-site-etale proof",
+      "decision": "accepted",
+      "class": "typographic_macro_defect",
+      "rationale": "The site is consistently denoted S_{affine, \\etale}; this is the sole use of the text accent command inside that math identifier.",
+      "registrar_duplicates": [],
+      "operations": [
+        {
+          "id": "TOP-04-OP1",
+          "lines": "942",
+          "start_byte": 35025,
+          "end_byte_exclusive": 35080,
+          "file_occurrences": 1,
+          "old_sha256": "A6DD6B9078B701D7A268C5B9FF1B2A395820FD2781FB6BE1420F655E0BFF72A5",
+          "old_text": "We omit the proof that $S_{affine, \\'etale}$ is a site.",
+          "replacement_text": "We omit the proof that $S_{affine, \\etale}$ is a site."
+        }
+      ]
+    },
+    {
+      "ordinal": 5,
+      "location": "lemma-etale-induced and smooth/syntomic/fppf/ph analogues",
+      "decision": "accepted",
+      "class": "systematic_wrong_reference_key",
+      "rationale": "sets-lemma-what-is-in-it supplies object-existence facts but not combinatorial equivalence of coverings. Item (3) of sets-lemma-coverings-site is exactly the required result. Only the third citation in each proof changes.",
+      "registrar_duplicates": [],
+      "operations": [
+        {
+          "id": "TOP-05-OP1",
+          "lines": "860-863",
+          "start_byte": 31696,
+          "end_byte_exclusive": 31881,
+          "file_occurrences": 1,
+          "old_sha256": "DD336CBA8132D22D383BB2BAAFE36D3B61C427B7040E41460A8D72AA8BAB3998",
+          "old_text": "Moreover, $\\{V_i \\to T\\}_{i \\in I}$ is combinatorially equivalent to a\ncovering $\\{U_j \\to T\\}_{j \\in J}$ of $T$ in the site\n$\\Sch_\\etale$ by\nSets, Lemma \\ref{sets-lemma-what-is-in-it}.",
+          "replacement_text": "Moreover, $\\{V_i \\to T\\}_{i \\in I}$ is combinatorially equivalent to a\ncovering $\\{U_j \\to T\\}_{j \\in J}$ of $T$ in the site\n$\\Sch_\\etale$ by\nSets, Lemma \\ref{sets-lemma-coverings-site}."
+        },
+        {
+          "id": "TOP-05-OP2",
+          "lines": "1522-1525",
+          "start_byte": 55183,
+          "end_byte_exclusive": 55370,
+          "file_occurrences": 1,
+          "old_sha256": "B0A83B4F8309F011251F17C37F370CD9942D40387BC82C8D62F1EF5955914A80",
+          "old_text": "Moreover, $\\{V_i \\to T\\}_{i \\in I}$ is combinatorially equivalent to a\ncovering $\\{U_j \\to T\\}_{j \\in J}$ of $T$ in the site\n$\\Sch_{smooth}$ by\nSets, Lemma \\ref{sets-lemma-what-is-in-it}.",
+          "replacement_text": "Moreover, $\\{V_i \\to T\\}_{i \\in I}$ is combinatorially equivalent to a\ncovering $\\{U_j \\to T\\}_{j \\in J}$ of $T$ in the site\n$\\Sch_{smooth}$ by\nSets, Lemma \\ref{sets-lemma-coverings-site}."
+        },
+        {
+          "id": "TOP-05-OP3",
+          "lines": "1779-1782",
+          "start_byte": 64188,
+          "end_byte_exclusive": 64377,
+          "file_occurrences": 1,
+          "old_sha256": "A8D998A84C25AA6916D5E9F15CD3C364CB0A60E128D6FECD12C7ADB4FAB19B4C",
+          "old_text": "Moreover, $\\{V_i \\to T\\}_{i \\in I}$ is combinatorially equivalent to a\ncovering $\\{U_j \\to T\\}_{j \\in J}$ of $T$ in the site\n$\\Sch_{syntomic}$ by\nSets, Lemma \\ref{sets-lemma-what-is-in-it}.",
+          "replacement_text": "Moreover, $\\{V_i \\to T\\}_{i \\in I}$ is combinatorially equivalent to a\ncovering $\\{U_j \\to T\\}_{j \\in J}$ of $T$ in the site\n$\\Sch_{syntomic}$ by\nSets, Lemma \\ref{sets-lemma-coverings-site}."
+        },
+        {
+          "id": "TOP-05-OP4",
+          "lines": "2055-2058",
+          "start_byte": 74028,
+          "end_byte_exclusive": 74213,
+          "file_occurrences": 1,
+          "old_sha256": "A71E2170D60DF9965F9CDBC367622A9A866A2A31566D671877B4446C14985FCD",
+          "old_text": "Moreover, $\\{V_i \\to T\\}_{i \\in I}$ is combinatorially equivalent to a\ncovering $\\{U_j \\to T\\}_{j \\in J}$ of $T$ in the site\n$\\Sch_{fppf}$ by\nSets, Lemma \\ref{sets-lemma-what-is-in-it}.",
+          "replacement_text": "Moreover, $\\{V_i \\to T\\}_{i \\in I}$ is combinatorially equivalent to a\ncovering $\\{U_j \\to T\\}_{j \\in J}$ of $T$ in the site\n$\\Sch_{fppf}$ by\nSets, Lemma \\ref{sets-lemma-coverings-site}."
+        },
+        {
+          "id": "TOP-05-OP5",
+          "lines": "2610-2613",
+          "start_byte": 93042,
+          "end_byte_exclusive": 93225,
+          "file_occurrences": 1,
+          "old_sha256": "5C2E31D0F5A21FA5F29A435A12E9AE239A876A10DAA99C6783FCB4889A60A26C",
+          "old_text": "Moreover, $\\{V_i \\to T\\}_{i \\in I}$ is combinatorially equivalent to a\ncovering $\\{U_j \\to T\\}_{j \\in J}$ of $T$ in the site\n$\\Sch_{ph}$ by\nSets, Lemma \\ref{sets-lemma-what-is-in-it}.",
+          "replacement_text": "Moreover, $\\{V_i \\to T\\}_{i \\in I}$ is combinatorially equivalent to a\ncovering $\\{U_j \\to T\\}_{j \\in J}$ of $T$ in the site\n$\\Sch_{ph}$ by\nSets, Lemma \\ref{sets-lemma-coverings-site}."
+        }
+      ]
+    },
+    {
+      "ordinal": 6,
+      "location": "section-smooth; section-syntomic",
+      "decision": "accepted",
+      "class": "editorial_marker_misplacement",
+      "rationale": "Each marker is followed immediately by a further lemma. The same-source convention places this marker after the final proof and before the next section or file end. Preserve it verbatim and relocate it after each actual final proof.",
+      "registrar_duplicates": [],
+      "operations": [
+        {
+          "id": "TOP-06-OP1",
+          "lines": "1585-1588",
+          "start_byte": 57571,
+          "end_byte_exclusive": 57614,
+          "file_occurrences": 2,
+          "old_sha256": "109E0D0424AA2863F6DDCFA946A1946E3CD07CE8A06D3BE940B0D651594C53BB",
+          "old_text": "\\noindent\nTo be continued...\n\n\\begin{lemma}",
+          "replacement_text": "\\begin{lemma}"
+        },
+        {
+          "id": "TOP-06-OP2",
+          "lines": "1842-1845",
+          "start_byte": 66630,
+          "end_byte_exclusive": 66673,
+          "file_occurrences": 2,
+          "old_sha256": "109E0D0424AA2863F6DDCFA946A1946E3CD07CE8A06D3BE940B0D651594C53BB",
+          "old_text": "\\noindent\nTo be continued...\n\n\\begin{lemma}",
+          "replacement_text": "\\begin{lemma}"
+        },
+        {
+          "id": "TOP-06-OP3",
+          "lines": "1627-1630",
+          "start_byte": 58813,
+          "end_byte_exclusive": 58970,
+          "file_occurrences": 5,
+          "old_sha256": "E898DA91C6036FBA67940ABE2EFE09A9FD2BA5477AF1C57F8AA17A65F6BD65F0",
+          "old_text": "Sites, Lemmas \\ref{sites-lemma-have-functor-other-way} and\n\\ref{sites-lemma-have-functor-other-way-morphism} to get the\nformula for $f_{big, *}$.\n\\end{proof}",
+          "replacement_text": "Sites, Lemmas \\ref{sites-lemma-have-functor-other-way} and\n\\ref{sites-lemma-have-functor-other-way-morphism} to get the\nformula for $f_{big, *}$.\n\\end{proof}\n\n\\noindent\nTo be continued..."
+        },
+        {
+          "id": "TOP-06-OP4",
+          "lines": "1884-1887",
+          "start_byte": 67892,
+          "end_byte_exclusive": 68049,
+          "file_occurrences": 5,
+          "old_sha256": "E898DA91C6036FBA67940ABE2EFE09A9FD2BA5477AF1C57F8AA17A65F6BD65F0",
+          "old_text": "Sites, Lemmas \\ref{sites-lemma-have-functor-other-way} and\n\\ref{sites-lemma-have-functor-other-way-morphism} to get the\nformula for $f_{big, *}$.\n\\end{proof}",
+          "replacement_text": "Sites, Lemmas \\ref{sites-lemma-have-functor-other-way} and\n\\ref{sites-lemma-have-functor-other-way-morphism} to get the\nformula for $f_{big, *}$.\n\\end{proof}\n\n\\noindent\nTo be continued..."
+        }
+      ]
+    },
+    {
+      "ordinal": 7,
+      "location": "lemma-fppf proof",
+      "decision": "accepted",
+      "class": "hypothesis_mismatch",
+      "rationale": "An fppf cover assumes flat morphisms locally of finite presentation, not globally of finite presentation. The cited composition and base-change lemmas explicitly include the required local results, so their keys remain unchanged.",
+      "registrar_duplicates": [],
+      "operations": [
+        {
+          "id": "TOP-07-OP1",
+          "lines": "1955-1959",
+          "start_byte": 69896,
+          "end_byte_exclusive": 70181,
+          "file_occurrences": 1,
+          "old_sha256": "7164AA40AC94BDB8F82B88A791DFD83284DC7DE72F8F80F45854D784A03C8A87",
+          "old_text": "The second follows as the composition of flat morphisms is flat\n(see Morphisms, Lemma \\ref{morphisms-lemma-composition-flat})\nand the composition of morphisms of finite presentation is\nof finite presentation\n(see Morphisms, Lemma \\ref{morphisms-lemma-composition-finite-presentation}).",
+          "replacement_text": "The second follows as the composition of flat morphisms is flat\n(see Morphisms, Lemma \\ref{morphisms-lemma-composition-flat})\nand the composition of morphisms which are locally of finite presentation is\nlocally of finite presentation\n(see Morphisms, Lemma \\ref{morphisms-lemma-composition-finite-presentation})."
+        },
+        {
+          "id": "TOP-07-OP2",
+          "lines": "1960-1964",
+          "start_byte": 70182,
+          "end_byte_exclusive": 70468,
+          "file_occurrences": 1,
+          "old_sha256": "4754CB6CF89BADEF58207853898E033C75F07D55AF5B965B13D099446529D90C",
+          "old_text": "The third follows as the base change of a flat morphism is flat\n(see Morphisms, Lemma \\ref{morphisms-lemma-base-change-flat})\nand the base change of a morphism of finite presentation is\nof finite presentation\n(see Morphisms, Lemma \\ref{morphisms-lemma-base-change-finite-presentation}).",
+          "replacement_text": "The third follows as the base change of a flat morphism is flat\n(see Morphisms, Lemma \\ref{morphisms-lemma-base-change-flat})\nand the base change of a morphism which is locally of finite presentation is\nlocally of finite presentation\n(see Morphisms, Lemma \\ref{morphisms-lemma-base-change-finite-presentation})."
+        }
+      ]
+    },
+    {
+      "ordinal": 8,
+      "location": "lemma-refine-by-standard-ph proof",
+      "decision": "accepted",
+      "class": "wrong_item_number",
+      "rationale": "The lemma has only items (1) and (2); this paragraph proves the iterated-cover refinement in item (2).",
+      "registrar_duplicates": [],
+      "operations": [
+        {
+          "id": "TOP-08-OP1",
+          "lines": "2353",
+          "start_byte": 82943,
+          "end_byte_exclusive": 82995,
+          "file_occurrences": 1,
+          "old_sha256": "F9D799DC59E61F6DBCBF04269D25360E932A88F8DF4EEA88C37233744D48EFED",
+          "old_text": "Proof of (3). Choose $U \\to T$ proper surjective and",
+          "replacement_text": "Proof of (2). Choose $U \\to T$ proper surjective and"
+        }
+      ]
+    },
+    {
+      "ordinal": 9,
+      "location": "lemma-ph proof of (3)",
+      "decision": "accepted",
+      "class": "missing_terminal_index",
+      "rationale": "The affine cover has j-indexed outer members and the next line has l=1,...,n_j inner covers. The conventional outer bound is m. The identical text in candidate 12 is a distinct, line-scoped sibling.",
+      "registrar_duplicates": [],
+      "operations": [
+        {
+          "id": "TOP-09-OP1",
+          "lines": "2517",
+          "start_byte": 89052,
+          "end_byte_exclusive": 89102,
+          "file_occurrences": 2,
+          "old_sha256": "DB8CC51C46B840BA8F6897DE34842A02DC37003A8A33F6022847F4B7DBEA34E7",
+          "old_text": "covering $U' = U'_1 \\cup \\ldots \\cup U'$ such that",
+          "replacement_text": "covering $U' = U'_1 \\cup \\ldots \\cup U'_m$ such that"
+        }
+      ]
+    },
+    {
+      "ordinal": 10,
+      "location": "example-not-fpqc",
+      "decision": "accepted",
+      "class": "accidental_variable_rename",
+      "rationale": "The ambient polynomial ring, the f_i, and the cited construction use t_i throughout. x_i is an isolated accidental rename.",
+      "registrar_duplicates": [],
+      "operations": [
+        {
+          "id": "TOP-10-OP1",
+          "lines": "2964",
+          "start_byte": 106328,
+          "end_byte_exclusive": 106396,
+          "file_occurrences": 1,
+          "old_sha256": "9EB0C032276FD966F47D5DD5B43987C8BF24C0AF5B483785ED14E5F802088EA5",
+          "old_text": "$x_1, \\ldots, x_m$. Then $p = (0, \\ldots, 0, 1, 0, \\ldots)$ with $1$",
+          "replacement_text": "$t_1, \\ldots, t_m$. Then $p = (0, \\ldots, 0, 1, 0, \\ldots)$ with $1$"
+        }
+      ]
+    },
+    {
+      "ordinal": 11,
+      "location": "lemma-standard-ph-standard-V second diagram",
+      "decision": "accepted",
+      "class": "wrong_base_object",
+      "rationale": "The proof defines U -> T and g : Spec(V) -> T. X is undefined here, and properness supplies the lift over T.",
+      "registrar_duplicates": [],
+      "operations": [
+        {
+          "id": "TOP-11-OP1",
+          "lines": "3470",
+          "start_byte": 127108,
+          "end_byte_exclusive": 127147,
+          "file_occurrences": 1,
+          "old_sha256": "5A706E183213278884EC2CCE6FA11767DAB73992545F76704F11DC99F2CF7A8E",
+          "old_text": "\\Spec(K) \\ar[r] & \\Spec(V) \\ar[r]^g & X",
+          "replacement_text": "\\Spec(K) \\ar[r] & \\Spec(V) \\ar[r]^g & T"
+        }
+      ]
+    },
+    {
+      "ordinal": 12,
+      "location": "lemma-V proof of (3)",
+      "decision": "accepted",
+      "class": "missing_terminal_index",
+      "rationale": "As in candidate 9, the j-indexed finite outer cover requires terminal member U'_m; this replacement is restricted to the declared offset.",
+      "registrar_duplicates": [],
+      "operations": [
+        {
+          "id": "TOP-12-OP1",
+          "lines": "3595",
+          "start_byte": 131192,
+          "end_byte_exclusive": 131242,
+          "file_occurrences": 2,
+          "old_sha256": "DB8CC51C46B840BA8F6897DE34842A02DC37003A8A33F6022847F4B7DBEA34E7",
+          "old_text": "covering $U' = U'_1 \\cup \\ldots \\cup U'$ such that",
+          "replacement_text": "covering $U' = U'_1 \\cup \\ldots \\cup U'_m$ such that"
+        }
+      ]
+    },
+    {
+      "ordinal": 13,
+      "location": "lemma-refine-qcqs-V proof of (3) implies (1)",
+      "decision": "accepted",
+      "class": "reversed_fibre_product",
+      "rationale": "The available arrows are X -> Y and Spec(V) -> U -> Y. Both products over X are ill-defined. The corrected object is Spec(V) x_Y X = Spec(V) x_U (U x_Y X), agreeing with the U_j cover used below.",
+      "registrar_duplicates": [],
+      "operations": [
+        {
+          "id": "TOP-13-OP1",
+          "lines": "3798-3800",
+          "start_byte": 139197,
+          "end_byte_exclusive": 139261,
+          "file_occurrences": 1,
+          "old_sha256": "EDABDAE049CB6DBD321846847CD44A423CE55DF499BE05F0F9D86F0EC31C466E",
+          "old_text": "$$\nT = \\Spec(V) \\times_X Y = \\Spec(V) \\times_U (U \\times_X Y)\n$$",
+          "replacement_text": "$$\nT = \\Spec(V) \\times_Y X = \\Spec(V) \\times_U (U \\times_Y X)\n$$"
+        }
+      ]
+    },
+    {
+      "ordinal": 14,
+      "location": "section-change-alpha introductory paragraph",
+      "decision": "accepted",
+      "class": "reversed_topology_strength",
+      "rationale": "Containment was defined by Cov(Sch_tau) being a subset of Cov(Sch'_tau'), so tau' has at least the covering families of tau and is the stronger/finer topology. The fppf-versus-etale example remains correct after the swap.",
+      "registrar_duplicates": [],
+      "operations": [
+        {
+          "id": "TOP-14-OP1",
+          "lines": "4000-4001",
+          "start_byte": 145932,
+          "end_byte_exclusive": 146040,
+          "file_occurrences": 1,
+          "old_sha256": "69A1AE45C1E91497B88158E9310CC000DF458B86852C114FEF69F796A770A506",
+          "old_text": "In this case $\\tau$ is stronger than $\\tau'$, for example, no fppf\nsite can be contained in an \\'etale site.",
+          "replacement_text": "In this case $\\tau'$ is stronger than $\\tau$, for example, no fppf\nsite can be contained in an \\'etale site."
+        }
+      ]
+    },
+    {
+      "ordinal": 15,
+      "location": "discussion following lemma-change-alpha",
+      "decision": "accepted",
+      "class": "ill_typed_restriction_identity",
+      "rationale": "F is on the smaller site and F' is on the larger site. The preceding sentence defines restriction from larger to smaller, so F' restricted to Sch_tau equals F; F cannot be restricted to the larger domain.",
+      "registrar_duplicates": [],
+      "operations": [
+        {
+          "id": "TOP-15-OP1",
+          "lines": "4072",
+          "start_byte": 148345,
+          "end_byte_exclusive": 148406,
+          "file_occurrences": 1,
+          "old_sha256": "8B594DF2066C6C3184F3AF956E5109D5AE20AFEC1997E82CAE10A71BF2197030",
+          "old_text": "$\\mathcal{F}|_{\\Sch'_\\tau} = \\mathcal{F}'$. In fact the sheaf",
+          "replacement_text": "$\\mathcal{F}'|_{\\Sch_\\tau} = \\mathcal{F}$. In fact the sheaf"
+        }
+      ]
+    },
+    {
+      "ordinal": 16,
+      "location": "lemma-extend proof, descended-cover paragraph",
+      "decision": "accepted",
+      "class": "wrong_condition_label",
+      "rationale": "Condition (a) is the sheaf condition and condition (b) is continuity under directed affine limits. This paragraph invokes only the sheaf condition.",
+      "registrar_duplicates": [],
+      "operations": [
+        {
+          "id": "TOP-16-OP1",
+          "lines": "4201",
+          "start_byte": 153522,
+          "end_byte_exclusive": 153585,
+          "file_occurrences": 1,
+          "old_sha256": "D19F39B56508EC68FD765351440CA6FD26EF2E733806578A0838FCEDFCE8B58A",
+          "old_text": "Hence the sheaf condition (b) for $F$ and the Zariski coverings",
+          "replacement_text": "Hence the sheaf condition (a) for $F$ and the Zariski coverings"
+        }
+      ]
+    },
+    {
+      "ordinal": 17,
+      "location": "lemma-extend proof, final general case",
+      "decision": "accepted",
+      "class": "undefined_notation_family",
+      "rationale": "The argument has X = lim X_i and has just chosen i. V, V_i, and their opens are undefined here. Uniformly restoring X_i, X_{i,k}, X_k, and X_{i',k} refers to the declared inverse system.",
+      "registrar_duplicates": [],
+      "operations": [
+        {
+          "id": "TOP-17-OP1",
+          "lines": "4271-4274",
+          "start_byte": 156347,
+          "end_byte_exclusive": 156574,
+          "file_occurrences": 1,
+          "old_sha256": "6DE1F2332E88E64707FCA2FC1CCA25C48B54AFA5C7E9E1113DCCE5491EB3F563",
+          "old_text": "a finite affine open covering $V_i = V_{i, 1} \\cup \\ldots \\cup V_{i, n}$\nsuch that $V_{i, k} \\to S$ factors through an affine open of $S$.\nLet $V_k \\subset V$ and $V_{i', k}$ for $i' \\geq i$\nbe the inverse images of $V_{i, k}$.",
+          "replacement_text": "a finite affine open covering $X_i = X_{i, 1} \\cup \\ldots \\cup X_{i, n}$\nsuch that $X_{i, k} \\to S$ factors through an affine open of $S$.\nLet $X_k \\subset X$ and $X_{i', k}$ for $i' \\geq i$\nbe the inverse images of $X_{i, k}$."
+        },
+        {
+          "id": "TOP-17-OP2",
+          "lines": "4276-4278",
+          "start_byte": 156608,
+          "end_byte_exclusive": 156674,
+          "file_occurrences": 1,
+          "old_sha256": "69BFD826BF3FEC84B653EBA05874E723A674EDA3A8CF50584A29DFAA3B07B09F",
+          "old_text": "$$\nF'_{V_k}(V_k) = \\colim_{i' \\geq i} F'_{V_{i', k}}(V_{i', k})\n$$",
+          "replacement_text": "$$\nF'_{X_k}(X_k) = \\colim_{i' \\geq i} F'_{X_{i', k}}(X_{i', k})\n$$"
+        },
+        {
+          "id": "TOP-17-OP3",
+          "lines": "4280-4283",
+          "start_byte": 156679,
+          "end_byte_exclusive": 156790,
+          "file_occurrences": 1,
+          "old_sha256": "610BC9000D6B1227582F3B1B9A0E3C42E43064F7A4604082335B49D2352C361E",
+          "old_text": "$$\nF'_{V_k \\cap V_l}(V_k \\cap V_l) =\n\\colim_{i' \\geq i}\nF'_{V_{i', k} \\cap V_{i', l}}(V_{i', k} \\cap V_{i', l})",
+          "replacement_text": "$$\nF'_{X_k \\cap X_l}(X_k \\cap X_l) =\n\\colim_{i' \\geq i}\nF'_{X_{i', k} \\cap X_{i', l}}(X_{i', k} \\cap X_{i', l})"
+        }
+      ]
+    },
+    {
+      "ordinal": 18,
+      "location": "lemma-limit-fppf-topology (2),(3)",
+      "decision": "accepted",
+      "class": "missing_covering_index",
+      "rationale": "Both assertions start with coverings V_i and V'_i of T_i. The unindexed V is undefined; its required domain is V_i before and after base change.",
+      "registrar_duplicates": [],
+      "operations": [
+        {
+          "id": "TOP-18-OP1",
+          "lines": "4312-4315",
+          "start_byte": 157999,
+          "end_byte_exclusive": 158140,
+          "file_occurrences": 1,
+          "old_sha256": "ECE7A603E7781BC12E9D95D16E06F2645E7093C3B25665D072526347F7CAE4B8",
+          "old_text": "$i' \\geq i$ and a morphism\n$f_{i'} : T_{i'} \\times_{T_i} \\mathcal{V} \\to\nT_{i'} \\times_{T_i} \\mathcal{V}'_i$\nwhose base change to $T$ is $f$.",
+          "replacement_text": "$i' \\geq i$ and a morphism\n$f_{i'} : T_{i'} \\times_{T_i} \\mathcal{V}_i \\to\nT_{i'} \\times_{T_i} \\mathcal{V}'_i$\nwhose base change to $T$ is $f$."
+        },
+        {
+          "id": "TOP-18-OP2",
+          "lines": "4316-4320",
+          "start_byte": 158141,
+          "end_byte_exclusive": 158364,
+          "file_occurrences": 1,
+          "old_sha256": "BA49467E88184F1ACEF9F46C999DEA1D831C5F2B9082CF4DD9DD9BBEA9B2C690",
+          "old_text": "\\item If\n$f, g : \\mathcal{V} \\to \\mathcal{V}'_i$\nare morphisms of standard $\\tau$-coverings of $T_i$ whose\nbase changes $f_T, g_T$ to $T$ are equal then there exists an\nindex $i' \\geq i$ such that $f_{T_{i'}} = g_{T_{i'}}$.",
+          "replacement_text": "\\item If\n$f, g : \\mathcal{V}_i \\to \\mathcal{V}'_i$\nare morphisms of standard $\\tau$-coverings of $T_i$ whose\nbase changes $f_T, g_T$ to $T$ are equal then there exists an\nindex $i' \\geq i$ such that $f_{T_{i'}} = g_{T_{i'}}$."
+        }
+      ]
+    },
+    {
+      "ordinal": 19,
+      "location": "lemma-extend-sheaf-general displayed equalizer argument",
+      "decision": "accepted",
+      "class": "limit_index_and_unclosed_parentheses",
+      "rationale": "The colimit varies k', so its summand is F(V_{k'}), not constant F(V_k). Each Equalizer( must close after its xymatrix; these repairs preserve the stated equalizer/filtered-colimit argument.",
+      "registrar_duplicates": [],
+      "operations": [
+        {
+          "id": "TOP-19-OP1",
+          "lines": "4408",
+          "start_byte": 162356,
+          "end_byte_exclusive": 162384,
+          "file_occurrences": 1,
+          "old_sha256": "7771E3C603AB3148B0A7DA4F23AB1998861A688D137654309E9BD25D7DF6DC73",
+          "old_text": "\\colim_{k' \\geq k} F(V_k) \\\\",
+          "replacement_text": "\\colim_{k' \\geq k} F(V_{k'}) \\\\"
+        },
+        {
+          "id": "TOP-19-OP2",
+          "lines": "4411-4416",
+          "start_byte": 162408,
+          "end_byte_exclusive": 162531,
+          "file_occurrences": 1,
+          "old_sha256": "68C10D7526FDB2F45422048C6A8360BBB11A4FEE6F421A4D9B7F21DF8EA244E2",
+          "old_text": "\\text{Equalizer}(\n\\xymatrix{\n\\prod F(V_{k', i})\n\\ar@<1ex>[r] \\ar@<-1ex>[r] &\n\\prod F(V_{k', i} \\times_{V_{k'}} V_{k', j})\n}",
+          "replacement_text": "\\text{Equalizer}(\n\\xymatrix{\n\\prod F(V_{k', i})\n\\ar@<1ex>[r] \\ar@<-1ex>[r] &\n\\prod F(V_{k', i} \\times_{V_{k'}} V_{k', j})\n})"
+        },
+        {
+          "id": "TOP-19-OP3",
+          "lines": "4419-4426",
+          "start_byte": 162539,
+          "end_byte_exclusive": 162700,
+          "file_occurrences": 1,
+          "old_sha256": "0C9C1E3A4BFB808111B4B38C9F16511C22E83E76004268C2EE9A70E6D79EBF33",
+          "old_text": "\\text{Equalizer}(\n\\xymatrix{\n\\colim_{k' \\geq k}\n\\prod F(V_{k', i})\n\\ar@<1ex>[r] \\ar@<-1ex>[r] &\n\\colim_{k' \\geq k}\n\\prod F(V_{k', i} \\times_{V_{k'}} V_{k', j})\n}",
+          "replacement_text": "\\text{Equalizer}(\n\\xymatrix{\n\\colim_{k' \\geq k}\n\\prod F(V_{k', i})\n\\ar@<1ex>[r] \\ar@<-1ex>[r] &\n\\colim_{k' \\geq k}\n\\prod F(V_{k', i} \\times_{V_{k'}} V_{k', j})\n})"
+        },
+        {
+          "id": "TOP-19-OP4",
+          "lines": "4429-4434",
+          "start_byte": 162708,
+          "end_byte_exclusive": 162808,
+          "file_occurrences": 1,
+          "old_sha256": "8F7B855D24300F2724C6F70E64B7FED6C2761C056A021C0D0912AB4AC7FF684A",
+          "old_text": "\\text{Equalizer}(\n\\xymatrix{\n\\prod F'(X_i)\n\\ar@<1ex>[r] \\ar@<-1ex>[r] &\n\\prod F'(X_i \\times_X X_j)\n}",
+          "replacement_text": "\\text{Equalizer}(\n\\xymatrix{\n\\prod F'(X_i)\n\\ar@<1ex>[r] \\ar@<-1ex>[r] &\n\\prod F'(X_i \\times_X X_j)\n})"
+        }
+      ]
+    }
+  ],
+  "exact_next_registrar_action": {
+    "precondition": "Refresh the bounded duplicate check against the live registry. If R44 remains latest and no errata lease is active, continue; otherwise derive the next namespace from refreshed state.",
+    "action": "The separate registrar should issue the next lease for commons/stacks/errata/r45. The lease-bound candidate owner should materialize exactly candidates 1-19 above as 19 accepted units comprising 36 line-scoped operations against authority SHA-256 C984C98BCD458A191880433DED32A36AC9035543BBF8C98E191AE022A260F513. The registrar, not this intake, allocates stable IDs. Preserve this receipt as intake provenance; then perform separate independent replay, candidate-contract validation, deterministic source/build QA, and a separate overlay-admission decision.",
+    "publication": "None at this intake stage."
+  },
+  "mutation_attestation": {
+    "p05_contacted": false,
+    "p05_files_mutated": false,
+    "authority_mutated": false,
+    "french_target_opened": false,
+    "french_target_mutated": false,
+    "generated_source_mutated": false,
+    "registrar_mutated": false,
+    "stable_ids_allocated": false,
+    "published": false,
+    "only_new_file": "<WORKSPACE>/03_projects/language_management/cjk/00_lane_control/STACKS_TOPOLOGIES_INDEPENDENT_INTAKE_20260905_R1.json"
+  }
+}

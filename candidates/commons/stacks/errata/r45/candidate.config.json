@@ -1,0 +1,102 @@
+{
+  "accepted": 19,
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_evidence": [
+    {
+      "bytes": 15525,
+      "path": "authority/registrar/TOPOLOGIES_R45_INDEPENDENT_ADJUDICATION_20260905.json",
+      "sha256": "88577E112176717E17E5A0CA3F01FB3E934F0FA89BF0A97E37072632BFDA0C81"
+    },
+    {
+      "bytes": 35968,
+      "path": "authority/intake/STACKS_TOPOLOGIES_INDEPENDENT_INTAKE_20260905_R1.json",
+      "sha256": "70F66C0C83B416D61FD7F2385750802955530623A11CA10381FDF5F46935A824"
+    },
+    {
+      "bytes": 13741,
+      "path": "authority/intake/TOPOLOGIES_NATIVE_QA_STATE.json",
+      "sha256": "6A37BE1FBD197C49DBFAF3F176B87AD72430E35AA48EFD85A22AC3D3228FD43B"
+    }
+  ],
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "build_render_admission_status": "NOT_PERFORMED",
+  "candidate_id": "stacks-errata-a04446e-r45",
+  "excluded_deferred": 0,
+  "expected_producer_ids": [
+    "TOPOLOGIES-NATIVE-001",
+    "TOPOLOGIES-NATIVE-005",
+    "TOPOLOGIES-NATIVE-004",
+    "TOPOLOGIES-NATIVE-002",
+    "TOPOLOGIES-NATIVE-003",
+    "TOPOLOGIES-NATIVE-006",
+    "TOPOLOGIES-NATIVE-007",
+    "TOPOLOGIES-NATIVE-008",
+    "TOPOLOGIES-NATIVE-009",
+    "TOPOLOGIES-NATIVE-010",
+    "TOPOLOGIES-NATIVE-011",
+    "TOPOLOGIES-NATIVE-012",
+    "TOPOLOGIES-NATIVE-013",
+    "TOPOLOGIES-NATIVE-014",
+    "TOPOLOGIES-NATIVE-015",
+    "TOPOLOGIES-NATIVE-016",
+    "TOPOLOGIES-NATIVE-017",
+    "TOPOLOGIES-NATIVE-018",
+    "TOPOLOGIES-NATIVE-019"
+  ],
+  "expected_unit_ids": [
+    "MC-STK-ERR-1461",
+    "MC-STK-ERR-1462",
+    "MC-STK-ERR-1463",
+    "MC-STK-ERR-1464",
+    "MC-STK-ERR-1465",
+    "MC-STK-ERR-1466",
+    "MC-STK-ERR-1467",
+    "MC-STK-ERR-1468",
+    "MC-STK-ERR-1469",
+    "MC-STK-ERR-1470",
+    "MC-STK-ERR-1471",
+    "MC-STK-ERR-1472",
+    "MC-STK-ERR-1473",
+    "MC-STK-ERR-1474",
+    "MC-STK-ERR-1475",
+    "MC-STK-ERR-1476",
+    "MC-STK-ERR-1477",
+    "MC-STK-ERR-1478",
+    "MC-STK-ERR-1479"
+  ],
+  "independent_replay": "not_performed",
+  "lease_id": "stacks-lease-000049-errata-r45",
+  "namespace": "commons/stacks/errata/r45",
+  "operation_count": 36,
+  "payload_expected_bytes": 166236,
+  "payload_expected_sha256": "FA88114672E734B6B9677C62378691DFFA761D2376026EAE4340CDEFD053A8A9",
+  "proof_closure": {
+    "accepted": 19,
+    "editorial_or_notational_clarification": 2,
+    "excluded_deferred": 0,
+    "operations": 36,
+    "producer_rows": 19,
+    "rejected": 0,
+    "source_defect": 17,
+    "unresolved": 0
+  },
+  "rejected": 0,
+  "schema": "mathematics-commons-stacks-errata-candidate-config/v1",
+  "source_date_epoch": "1788627469",
+  "stems": {
+    "topologies": {
+      "authority_bytes": 166188,
+      "authority_sha256": "C984C98BCD458A191880433DED32A36AC9035543BBF8C98E191AE022A260F513",
+      "build_exceptions": {
+        "candidate_undefined_reference_target_deltas": {
+          "sets-lemma-coverings-site": 5,
+          "sets-lemma-what-is-in-it": -5
+        }
+      },
+      "payload_bytes": 166236,
+      "payload_sha256": "FA88114672E734B6B9677C62378691DFFA761D2376026EAE4340CDEFD053A8A9"
+    }
+  },
+  "unresolved": 0,
+  "writer_task": "01a0256d-5693-77c1-96b2-cf37101e0c6c"
+}

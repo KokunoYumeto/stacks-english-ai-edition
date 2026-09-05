@@ -1,0 +1,364 @@
+{
+  "builds": [
+    {
+      "bytes": 8,
+      "path": ".gitattributes",
+      "sha256": "705FD4D6451A31D36B3DF7DE96F83F30AC976C9B4A6D1E51671D8E2F33E2D0DA"
+    },
+    {
+      "bytes": 12201,
+      "path": "build-receipt.py",
+      "sha256": "DCDBB21E75A839CEE5484FDB2793B5C70026FBBE11A7C0ED0AFAB9D4AF75EBD4"
+    },
+    {
+      "bytes": 430,
+      "path": "BUILD.md",
+      "sha256": "0DA3BCCE10C3108475668CED6FACCC8AFDAF2D9E59F1870E8BCF0D36889DDF3F"
+    },
+    {
+      "bytes": 8016,
+      "path": "builds/build-execution.json",
+      "sha256": "59C11AA829D982A06DD931D17EAF810197243E5E1A3F35AC3D48BB0B9F4C3177"
+    },
+    {
+      "bytes": 23956,
+      "path": "builds/build-receipt.json",
+      "sha256": "9283DB6F33B2C907FCC9C35C5764A0B64CB4F439FA5B5D5EC39643DBDEB742B1"
+    },
+    {
+      "bytes": 2102,
+      "path": "builds/BUILD_RENDER_STAGE.json",
+      "sha256": "E37FF1F0C7F3692915C6DA420709E46777AEDEB6E496730C2B5AAE143D2D66B2"
+    },
+    {
+      "bytes": 2128,
+      "path": "builds/deterministic-replay.json",
+      "sha256": "B58913D4456C2F38CD90CF490BA9FB6FC06177524BFB044AB9F15CA81D009BF1"
+    },
+    {
+      "bytes": 3759,
+      "path": "builds/FINAL_MECHANICAL_VALIDATION.json",
+      "sha256": "71E69BF1EF14529D19577DA7BB78B207043B722A52621F41AD3B4CCDF5CDB531"
+    },
+    {
+      "bytes": 421,
+      "path": "builds/PENDING.json",
+      "sha256": "8EEDD2E68B4482F7B6DAFAB58346B129E161AAC8F6DD915E46E6227A6BF883A0"
+    },
+    {
+      "bytes": 10225,
+      "path": "builds/source-page-map.json",
+      "sha256": "1F41813A43C09FFCDC14A66BB1BD5E2B49E2EF5D6F43327875DA315239A7B8C0"
+    },
+    {
+      "bytes": 883,
+      "path": "builds/TEX_MUTEX_RECEIPT.json",
+      "sha256": "6BEE7C69CDCD1A7ACCD840AE714FDA198D272F5404DA5330864116CD7ABDC711"
+    },
+    {
+      "bytes": 907,
+      "path": "builds/TEX_MUTEX_RECEIPT_ATTEMPT_001.json",
+      "sha256": "FEF4A9B0D2136D028F4118648266BA2DD844CFF579D805CF20DE33E38D2A3751"
+    },
+    {
+      "bytes": 147,
+      "path": "builds/topologies.authority.bibtex.txt",
+      "sha256": "8C7AA47FD4F2A3FE8E6C21D970368AEEF351255D8D0DD90D0928E0EFAFDE1F11"
+    },
+    {
+      "bytes": 27541,
+      "path": "builds/topologies.authority.fls",
+      "sha256": "0D93296EE08A0C0D5EF218330BF68F56F02B03DA848AFA480ABDC2EB29160A01"
+    },
+    {
+      "bytes": 62214,
+      "path": "builds/topologies.authority.fls-dependencies.json",
+      "sha256": "28DF0BB7374C294D582946F85FED47968E48113624C5BA5BC57E241F2A912C5C"
+    },
+    {
+      "bytes": 69865,
+      "path": "builds/topologies.authority.log",
+      "sha256": "CB1AFE0F01D2A3C57860E6A8F2C951A610AB981FFD675727728BB2D048528CAA"
+    },
+    {
+      "bytes": 56349,
+      "path": "builds/topologies.authority.pass3.txt",
+      "sha256": "6C3DDD4D721F9D4FBCD75E171949E022FBF0FDA866D1F7D5BA5F28DF56DA2224"
+    },
+    {
+      "bytes": 651034,
+      "path": "builds/topologies.authority.pdf",
+      "sha256": "8074C34A0B9AC0B2D4911A490CBCAD0B4306DF72BE8B8FC2D40D97EF9869EE14"
+    },
+    {
+      "bytes": 147,
+      "path": "builds/topologies.bibtex.txt",
+      "sha256": "8C7AA47FD4F2A3FE8E6C21D970368AEEF351255D8D0DD90D0928E0EFAFDE1F11"
+    },
+    {
+      "bytes": 27541,
+      "path": "builds/topologies.fls",
+      "sha256": "0D93296EE08A0C0D5EF218330BF68F56F02B03DA848AFA480ABDC2EB29160A01"
+    },
+    {
+      "bytes": 62214,
+      "path": "builds/topologies.fls-dependencies.json",
+      "sha256": "1218F3888A67FBED9BBF215A0903E7BB341E9306CFA5AF2B2E71374E071C78F7"
+    },
+    {
+      "bytes": 69802,
+      "path": "builds/topologies.log",
+      "sha256": "2FAD8521330CDD7C176CB839DEA4CE6E99C18D5F647B5E5DE1C4162EF4F09B14"
+    },
+    {
+      "bytes": 56283,
+      "path": "builds/topologies.pass3.txt",
+      "sha256": "2D46B434AD881452401DA6236F6936FE63D3C3590252901DF25B8AAABCC1FBC3"
+    },
+    {
+      "bytes": 650266,
+      "path": "builds/topologies.pdf",
+      "sha256": "7BE05DE504DDE96C24737886DEF2E630BFF1C2AEBE9F8C4A2A5D1CCFF86A3542"
+    },
+    {
+      "bytes": 3158,
+      "path": "candidate.config.input.json",
+      "sha256": "6B1ED7AC9BBA37E0B498DE664EC36952D5303AA3384F1BFD6BD5FAC1E19844CA"
+    },
+    {
+      "bytes": 3158,
+      "path": "candidate.config.json",
+      "sha256": "6B1ED7AC9BBA37E0B498DE664EC36952D5303AA3384F1BFD6BD5FAC1E19844CA"
+    },
+    {
+      "bytes": 2134,
+      "path": "check-manifest.py",
+      "sha256": "489D10B978F730B1EAAA9555B2472381D61EC75B6D4F31C8435A9929FE1405D0"
+    },
+    {
+      "bytes": 9165,
+      "path": "decisions.input.jsonl",
+      "sha256": "8B363AC8582A117D7079D2CA214728C346453707A04A07688A9AA05B0E24A1CF"
+    },
+    {
+      "bytes": 4655,
+      "path": "derive-visual-pages.py",
+      "sha256": "A4168D0101632D945B8650B61D0CE018995A270A7F9E30F09CD039A296A11DAA"
+    },
+    {
+      "bytes": 3670,
+      "path": "deterministic-replay.py",
+      "sha256": "5A9CE8F8B6FF9F43C70424CED2F1A7E4B36EE617CCFA10BD0D55A4C4680ADBF6"
+    },
+    {
+      "bytes": 740,
+      "path": "FINALIZATION.md",
+      "sha256": "A57CA05FEA8489E867363F566132F199EA991C17C9C8D7034370E6C1EADE3504"
+    },
+    {
+      "bytes": 20274,
+      "path": "finalize_r45.py",
+      "sha256": "61370DAF466ED860A2124A5490371F72497DAD5161BF42A1E212D194E9869ECF"
+    },
+    {
+      "bytes": 8494,
+      "path": "independent-final-review-r45.py",
+      "sha256": "8E0712641B8922D0EE059F7C30C111D9C69EE07DDB4F1E680CF58114C21B7806"
+    },
+    {
+      "bytes": 11013,
+      "path": "independent-source-review.py",
+      "sha256": "1A2AE9C0DE5EBCA01CCCF23ACE9F6E5D072B1DA8317228934228781E006CE0CB"
+    },
+    {
+      "bytes": 1155,
+      "path": "LEASE.json",
+      "sha256": "675845BD115080B224E7722C266E9216AFE7C76E77628C174AC727BB3D012C9A"
+    },
+    {
+      "bytes": 41551,
+      "path": "operation-spec.input.json",
+      "sha256": "9E36DE89FBF0B56BE5F06FC60BA9B7DF3794CCE38067EBF8BBB71A9FD6077D29"
+    },
+    {
+      "bytes": 41551,
+      "path": "operation-spec.json",
+      "sha256": "9E36DE89FBF0B56BE5F06FC60BA9B7DF3794CCE38067EBF8BBB71A9FD6077D29"
+    },
+    {
+      "bytes": 166236,
+      "path": "payload/topologies.tex",
+      "sha256": "FA88114672E734B6B9677C62378691DFFA761D2376026EAE4340CDEFD053A8A9"
+    },
+    {
+      "bytes": 27137,
+      "path": "pipeline_r45.py",
+      "sha256": "F8E3C3C8BA08A32F0D1852021A9F8CB3739BAE5629DB32F70BAC88EF89516C88"
+    },
+    {
+      "bytes": 472,
+      "path": "README.md",
+      "sha256": "BF2487B69EBB11D1D2C3997513EC8D83F57EFC39EB44165E313D1833262A53CB"
+    },
+    {
+      "bytes": 7590,
+      "path": "record-visual-r45.py",
+      "sha256": "98317D52A04C1A5103141562C7D535210E1A3F30A150EF161FDD3A5BAC4B5BA8"
+    },
+    {
+      "bytes": 1427,
+      "path": "REGENERATION_RECEIPT.json",
+      "sha256": "6123597A4DF3534E931E8F30A0D5857C34AEA2196B099D5C31B5595C9F4780DE"
+    },
+    {
+      "bytes": 2152,
+      "path": "REGENERATION_RECEIPT_SUCCESSOR_001.json",
+      "sha256": "81FED425B12BCA9EF24F6F2AB95080F53FA3DE6D6003B3AE334391FDBEF6B969"
+    },
+    {
+      "bytes": 0,
+      "path": "rejections.input.jsonl",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "bytes": 5072,
+      "path": "render-qa.py",
+      "sha256": "35CA33F77FA00D70E1543D0089F1E70E728359647CC325275F167DBC267CEE74"
+    },
+    {
+      "bytes": 4056,
+      "path": "replay/FINAL_INDEPENDENT_REVIEW.json",
+      "sha256": "A8947663FAE060ADAC2357E748D2BDBE8DD35A759676074EEF86DED9982043F9"
+    },
+    {
+      "bytes": 11346,
+      "path": "replay/FINAL_STAGE.json",
+      "sha256": "120D699B45DF0BE90877EE930A9D74F87BA5171401A73F8FD7B469BE7F9BAA4E"
+    },
+    {
+      "bytes": 9244,
+      "path": "replay/PAGE_COMPLETE_VISUAL_ADJUDICATION.json",
+      "sha256": "6117DA20F7DC34D01664175051F886BF8FBA611FE1E6B8770D8B558AD37B535C"
+    },
+    {
+      "bytes": 12865,
+      "path": "replay/RENDER_MANIFEST.json",
+      "sha256": "766CE650EE8A6BC8DE1E68E6C089DDDF65D5F162ACEDC0501DF42E5D476FB080"
+    },
+    {
+      "bytes": 3236,
+      "path": "replay/SOURCE_INDEPENDENT_VALIDATION.json",
+      "sha256": "FE6883CDB7EA045508940B6BF8F193C26A10B34388D71C5620516CE7903B32AF"
+    },
+    {
+      "bytes": 14224,
+      "path": "replay-build.py",
+      "sha256": "613206468A16358C78C2F686D8A89791995182286D44CBBAC319DD8E012C12F9"
+    },
+    {
+      "bytes": 3999,
+      "path": "run-builds-with-mutex.ps1",
+      "sha256": "6297C3C4AB2A00A35D02CED8ADBE565A96F1A3E775D139A717A9CBCFD17F260B"
+    },
+    {
+      "bytes": 51431,
+      "path": "source-map.input.jsonl",
+      "sha256": "CDF5D7D3D4DDF58F9388F7697AC971CC7189F015DCF637C74B50CFF42F8FD86E"
+    },
+    {
+      "bytes": 2607,
+      "path": "source-validation.json",
+      "sha256": "560934F57EDAB533C84817C0FFC098F4128B8708C0DB409B4DAAB28189A2ABD7"
+    },
+    {
+      "bytes": 12120,
+      "path": "stable-units.input.json",
+      "sha256": "F7753F07BA24F1C0D4FEA6CDA2239E21A9460980833F8F04613BB98C149F778B"
+    }
+  ],
+  "candidate_id": "stacks-errata-a04446e-r45",
+  "decision_ledger": {
+    "bytes": 9165,
+    "path": "decisions.jsonl",
+    "sha256": "8B363AC8582A117D7079D2CA214728C346453707A04A07688A9AA05B0E24A1CF"
+  },
+  "formula_diagram_inventory": {
+    "bytes": 14632,
+    "path": "formula-diagram-inventory.json",
+    "sha256": "E800A2AA6F19F660B58EFC2CBBFB94971C1109F11280C94CFDE2D4F0A3D21517"
+  },
+  "generated_at_utc": "2026-09-05T17:19:12.920072Z",
+  "independent_replay": "passed",
+  "lease_id": "stacks-lease-000049-errata-r45",
+  "namespace": "commons/stacks/errata/r45",
+  "rejection_ledger": {
+    "bytes": 0,
+    "path": "rejections.jsonl",
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  "review_state": "performed",
+  "rights_state": "Upstream GNU FDL rights are preserved in authority/COPYING; this independently prepared AI correction overlay is not an official Stacks Project edition or endorsement.",
+  "schema": "mathematics-commons-stacks-candidate-manifest/v1",
+  "source_authorities": [
+    {
+      "bytes": 20404,
+      "path": "authority/COPYING",
+      "sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"
+    },
+    {
+      "bytes": 35968,
+      "path": "authority/intake/STACKS_TOPOLOGIES_INDEPENDENT_INTAKE_20260905_R1.json",
+      "sha256": "70F66C0C83B416D61FD7F2385750802955530623A11CA10381FDF5F46935A824"
+    },
+    {
+      "bytes": 13741,
+      "path": "authority/intake/TOPOLOGIES_NATIVE_QA_STATE.json",
+      "sha256": "6A37BE1FBD197C49DBFAF3F176B87AD72430E35AA48EFD85A22AC3D3228FD43B"
+    },
+    {
+      "bytes": 15525,
+      "path": "authority/registrar/TOPOLOGIES_R45_INDEPENDENT_ADJUDICATION_20260905.json",
+      "sha256": "88577E112176717E17E5A0CA3F01FB3E934F0FA89BF0A97E37072632BFDA0C81"
+    },
+    {
+      "bytes": 166188,
+      "path": "authority/source/topologies.tex",
+      "sha256": "C984C98BCD458A191880433DED32A36AC9035543BBF8C98E191AE022A260F513"
+    },
+    {
+      "bytes": 356,
+      "path": "authority/upstream.lock.json",
+      "sha256": "70C3F752E80718DC0B1BF58B270374F443BB6772CD045DA202800D2F71080EDF"
+    }
+  ],
+  "source_closure": {
+    "complete": true,
+    "enumerated": true,
+    "expected_units": 19,
+    "manifested_units": 19
+  },
+  "source_map": {
+    "bytes": 51431,
+    "path": "source-map.jsonl",
+    "sha256": "CDF5D7D3D4DDF58F9388F7697AC971CC7189F015DCF637C74B50CFF42F8FD86E"
+  },
+  "stable_unit_manifest": {
+    "bytes": 12120,
+    "path": "stable-units.json",
+    "sha256": "F7753F07BA24F1C0D4FEA6CDA2239E21A9460980833F8F04613BB98C149F778B"
+  },
+  "stop_conditions": [
+    "A changed referenced byte invalidates this manifest. Registry admission and generated-source composition remain separate."
+  ],
+  "unresolved_defects": [
+    "Standalone cross-chapter reference warnings remain; exact configured reference-key deltas pass and cumulative AUX is not supplied.",
+    "Four inherited overfull hboxes remain in both candidate and authority, with no blocking visual defect.",
+    "Accessibility tagging is not asserted."
+  ],
+  "upstream": {
+    "commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "lock": "upstream/stacks.lock.json",
+    "tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e"
+  },
+  "writer_task": "01a0256d-5693-77c1-96b2-cf37101e0c6c"
+}

@@ -1,0 +1,85 @@
+{
+  "adjudication": {
+    "bytes": 15525,
+    "path": "authority/registrar/TOPOLOGIES_R45_INDEPENDENT_ADJUDICATION_20260905.json",
+    "sha256": "88577E112176717E17E5A0CA3F01FB3E934F0FA89BF0A97E37072632BFDA0C81"
+  },
+  "authority": {
+    "bytes": 166188,
+    "path": "authority/source/topologies.tex",
+    "sha256": "C984C98BCD458A191880433DED32A36AC9035543BBF8C98E191AE022A260F513"
+  },
+  "build": "NOT_PERFORMED",
+  "deduplication": {
+    "matching_producer_ids": 0,
+    "operation_spec_variants_checked": 52,
+    "overlays_sha256": "0A86C8871E2459B7C0B2FB02620FFD696D01F1C175E5EA0F32A7BB589F03AAAD",
+    "prelease_commit": "05d14edf76f2d54e8d6867b09359cbbc4e5ddd00",
+    "prior_exact_preimage_hits": 0,
+    "prior_stable_id_max": "MC-STK-ERR-1460",
+    "prior_target_interval_overlaps": 0,
+    "prior_topologies_operations": 0,
+    "registered_entries_checked": 45,
+    "registered_errata_rounds_checked_through": 44,
+    "source_map_variants_checked": 58
+  },
+  "independent_candidate_replay": "NOT_PERFORMED",
+  "line_preimages_exact": 36,
+  "nonoverlapping": true,
+  "operations": 36,
+  "passed": true,
+  "payload": {
+    "bytes": 166236,
+    "path": "payload/topologies.tex",
+    "sha256": "FA88114672E734B6B9677C62378691DFFA761D2376026EAE4340CDEFD053A8A9"
+  },
+  "schema": "stacks-r45-source-validation-v1",
+  "scope": "Source-only exact replay, semantic-unit grouping, structural token accounting, and registry dedup validation; no build, render, admission, composition, or publication claim.",
+  "semantic_units": 19,
+  "structure": {
+    "cites": {
+      "authority": 5,
+      "candidate": 5,
+      "count_equal": true,
+      "declared_changed_positions": [],
+      "ordered_equal": true
+    },
+    "environments": {
+      "authority": 562,
+      "candidate": 562,
+      "count_equal": true,
+      "declared_changed_positions": [],
+      "ordered_equal": true
+    },
+    "inputs": {
+      "authority": 2,
+      "candidate": 2,
+      "count_equal": true,
+      "declared_changed_positions": [],
+      "ordered_equal": true
+    },
+    "labels": {
+      "authority": 140,
+      "candidate": 140,
+      "count_equal": true,
+      "declared_changed_positions": [],
+      "ordered_equal": true
+    },
+    "refs": {
+      "authority": 334,
+      "candidate": 334,
+      "count_equal": true,
+      "declared_changed_positions": [
+        68,
+        121,
+        145,
+        173,
+        216
+      ],
+      "ordered_equal": false
+    }
+  },
+  "unchanged_interval_sha256": "C436744FA32F2ACC81333069AAAC03638354B655ECEA705CC2507B6F08106B99",
+  "unlisted_byte_changes": 0,
+  "visual_qa": "NOT_PERFORMED"
+}

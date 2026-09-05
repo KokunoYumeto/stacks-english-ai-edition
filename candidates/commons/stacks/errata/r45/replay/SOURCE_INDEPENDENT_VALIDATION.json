@@ -1,0 +1,110 @@
+{
+  "adjudication": {
+    "bytes": 15525,
+    "path": "authority/registrar/TOPOLOGIES_R45_INDEPENDENT_ADJUDICATION_20260905.json",
+    "sha256": "88577E112176717E17E5A0CA3F01FB3E934F0FA89BF0A97E37072632BFDA0C81"
+  },
+  "admission": "NOT_PERFORMED",
+  "authority": {
+    "bytes": 166188,
+    "path": "authority/source/topologies.tex",
+    "sha256": "C984C98BCD458A191880433DED32A36AC9035543BBF8C98E191AE022A260F513"
+  },
+  "build": "NOT_PERFORMED",
+  "candidate_id": "stacks-errata-a04446e-r45",
+  "composition": "NOT_PERFORMED",
+  "decisions": {
+    "bytes": 9165,
+    "path": "decisions.jsonl",
+    "sha256": "8B363AC8582A117D7079D2CA214728C346453707A04A07688A9AA05B0E24A1CF"
+  },
+  "deduplication": {
+    "exact_preimage_hits": 0,
+    "interval_overlaps": 0,
+    "prior_topologies_operations": 0,
+    "registered_rounds_checked_through": 44,
+    "stable_id_collisions": 0
+  },
+  "operation_spec": {
+    "bytes": 41551,
+    "path": "operation-spec.json",
+    "sha256": "9E36DE89FBF0B56BE5F06FC60BA9B7DF3794CCE38067EBF8BBB71A9FD6077D29"
+  },
+  "passed": true,
+  "payload": {
+    "bytes": 166236,
+    "path": "payload/topologies.tex",
+    "sha256": "FA88114672E734B6B9677C62378691DFFA761D2376026EAE4340CDEFD053A8A9"
+  },
+  "replay": {
+    "exact_operations": 36,
+    "exact_preimages": 36,
+    "nonoverlap": true,
+    "payload_byte_exact": true,
+    "semantic_units": 19,
+    "stable_ids_first_locus_ordered": true,
+    "structure": {
+      "cites": {
+        "authority": 5,
+        "candidate": 5,
+        "count_equal": true,
+        "declared_changed_positions": [],
+        "ordered_equal": true
+      },
+      "environments": {
+        "authority": 562,
+        "candidate": 562,
+        "count_equal": true,
+        "declared_changed_positions": [],
+        "ordered_equal": true
+      },
+      "inputs": {
+        "authority": 2,
+        "candidate": 2,
+        "count_equal": true,
+        "declared_changed_positions": [],
+        "ordered_equal": true
+      },
+      "labels": {
+        "authority": 140,
+        "candidate": 140,
+        "count_equal": true,
+        "declared_changed_positions": [],
+        "ordered_equal": true
+      },
+      "refs": {
+        "authority": 334,
+        "candidate": 334,
+        "count_equal": true,
+        "declared_changed_positions": [
+          68,
+          121,
+          145,
+          173,
+          216
+        ],
+        "ordered_equal": false
+      }
+    },
+    "unchanged_interval_sha256": "C436744FA32F2ACC81333069AAAC03638354B655ECEA705CC2507B6F08106B99",
+    "unlisted_byte_changes": 0
+  },
+  "schema": "stacks-r45-independent-source-validation/v1",
+  "scope": "Independent read-only reconstruction of the R45 source stage before any build or admission.",
+  "source_map": {
+    "bytes": 51431,
+    "path": "source-map.jsonl",
+    "sha256": "CDF5D7D3D4DDF58F9388F7697AC971CC7189F015DCF637C74B50CFF42F8FD86E"
+  },
+  "source_validation": {
+    "bytes": 2607,
+    "path": "source-validation.json",
+    "sha256": "560934F57EDAB533C84817C0FFC098F4128B8708C0DB409B4DAAB28189A2ABD7"
+  },
+  "stable_units": {
+    "bytes": 12120,
+    "path": "stable-units.json",
+    "sha256": "F7753F07BA24F1C0D4FEA6CDA2239E21A9460980833F8F04613BB98C149F778B"
+  },
+  "status": "PASS_SOURCE_ONLY"
+}

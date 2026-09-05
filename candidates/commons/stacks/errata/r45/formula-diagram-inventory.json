@@ -1,0 +1,303 @@
+{
+  "note": "All changes are exactly the 36 declared operations in 19 stable units; every unchanged byte interval is preserved.",
+  "operation_bound_changes": true,
+  "operations": [
+    {
+      "class": "source_defect",
+      "id": "MC-STK-ERR-1461-OP1",
+      "line": 664,
+      "new": "Given a sheaf $\\mathcal{F}$ on $(\\Sch/S)_{Zar}$",
+      "old": "Given a sheaf $\\mathcal{F}$ on $\\Sh((\\Sch/S)_{Zar})$"
+    },
+    {
+      "class": "source_defect",
+      "id": "MC-STK-ERR-1461-OP2",
+      "line": 684,
+      "new": "we may define a presheaf $\\mathcal{F}$ on $(\\Sch/S)_{Zar}$",
+      "old": "we may define a presheaf $\\mathcal{F}$ on $\\Sh((\\Sch/S)_{Zar})$"
+    },
+    {
+      "class": "source_defect",
+      "id": "MC-STK-ERR-1462-OP1",
+      "line": 860,
+      "new": "Moreover, $\\{V_i \\to T\\}_{i \\in I}$ is combinatorially equivalent to a\ncovering $\\{U_j \\to T\\}_{j \\in J}$ of $T$ in the site\n$\\Sch_\\etale$ by\nSets, Lemma \\ref{sets-lemma-coverings-site}.",
+      "old": "Moreover, $\\{V_i \\to T\\}_{i \\in I}$ is combinatorially equivalent to a\ncovering $\\{U_j \\to T\\}_{j \\in J}$ of $T$ in the site\n$\\Sch_\\etale$ by\nSets, Lemma \\ref{sets-lemma-what-is-in-it}."
+    },
+    {
+      "class": "source_defect",
+      "id": "MC-STK-ERR-1462-OP2",
+      "line": 1522,
+      "new": "Moreover, $\\{V_i \\to T\\}_{i \\in I}$ is combinatorially equivalent to a\ncovering $\\{U_j \\to T\\}_{j \\in J}$ of $T$ in the site\n$\\Sch_{smooth}$ by\nSets, Lemma \\ref{sets-lemma-coverings-site}.",
+      "old": "Moreover, $\\{V_i \\to T\\}_{i \\in I}$ is combinatorially equivalent to a\ncovering $\\{U_j \\to T\\}_{j \\in J}$ of $T$ in the site\n$\\Sch_{smooth}$ by\nSets, Lemma \\ref{sets-lemma-what-is-in-it}."
+    },
+    {
+      "class": "source_defect",
+      "id": "MC-STK-ERR-1462-OP3",
+      "line": 1779,
+      "new": "Moreover, $\\{V_i \\to T\\}_{i \\in I}$ is combinatorially equivalent to a\ncovering $\\{U_j \\to T\\}_{j \\in J}$ of $T$ in the site\n$\\Sch_{syntomic}$ by\nSets, Lemma \\ref{sets-lemma-coverings-site}.",
+      "old": "Moreover, $\\{V_i \\to T\\}_{i \\in I}$ is combinatorially equivalent to a\ncovering $\\{U_j \\to T\\}_{j \\in J}$ of $T$ in the site\n$\\Sch_{syntomic}$ by\nSets, Lemma \\ref{sets-lemma-what-is-in-it}."
+    },
+    {
+      "class": "source_defect",
+      "id": "MC-STK-ERR-1462-OP4",
+      "line": 2055,
+      "new": "Moreover, $\\{V_i \\to T\\}_{i \\in I}$ is combinatorially equivalent to a\ncovering $\\{U_j \\to T\\}_{j \\in J}$ of $T$ in the site\n$\\Sch_{fppf}$ by\nSets, Lemma \\ref{sets-lemma-coverings-site}.",
+      "old": "Moreover, $\\{V_i \\to T\\}_{i \\in I}$ is combinatorially equivalent to a\ncovering $\\{U_j \\to T\\}_{j \\in J}$ of $T$ in the site\n$\\Sch_{fppf}$ by\nSets, Lemma \\ref{sets-lemma-what-is-in-it}."
+    },
+    {
+      "class": "source_defect",
+      "id": "MC-STK-ERR-1462-OP5",
+      "line": 2610,
+      "new": "Moreover, $\\{V_i \\to T\\}_{i \\in I}$ is combinatorially equivalent to a\ncovering $\\{U_j \\to T\\}_{j \\in J}$ of $T$ in the site\n$\\Sch_{ph}$ by\nSets, Lemma \\ref{sets-lemma-coverings-site}.",
+      "old": "Moreover, $\\{V_i \\to T\\}_{i \\in I}$ is combinatorially equivalent to a\ncovering $\\{U_j \\to T\\}_{j \\in J}$ of $T$ in the site\n$\\Sch_{ph}$ by\nSets, Lemma \\ref{sets-lemma-what-is-in-it}."
+    },
+    {
+      "class": "editorial_or_notational_clarification",
+      "id": "MC-STK-ERR-1463-OP1",
+      "line": 942,
+      "new": "We omit the proof that $S_{affine, \\etale}$ is a site.",
+      "old": "We omit the proof that $S_{affine, \\'etale}$ is a site."
+    },
+    {
+      "class": "source_defect",
+      "id": "MC-STK-ERR-1464-OP1",
+      "line": 1251,
+      "new": "Given schemes $X$, $Y$, $Z$ in $\\Sch_\\etale$",
+      "old": "Given schemes $X$, $Y$, $Y$ in $\\Sch_\\etale$"
+    },
+    {
+      "class": "source_defect",
+      "id": "MC-STK-ERR-1464-OP2",
+      "line": 2839,
+      "new": "Given schemes $X$, $Y$, $Z$ in $(\\Sch/S)_{ph}$",
+      "old": "Given schemes $X$, $Y$, $Y$ in $(\\Sch/S)_{ph}$"
+    },
+    {
+      "class": "source_defect",
+      "id": "MC-STK-ERR-1465-OP1",
+      "line": 1324,
+      "new": "Given a sheaf $\\mathcal{F}$ on $(\\Sch/S)_\\etale$",
+      "old": "Given a sheaf $\\mathcal{F}$ on $\\Sh((\\Sch/S)_\\etale)$"
+    },
+    {
+      "class": "source_defect",
+      "id": "MC-STK-ERR-1465-OP2",
+      "line": 1348,
+      "new": "we may define a presheaf $\\mathcal{F}$ on\n$(\\Sch/S)_\\etale$",
+      "old": "we may define a presheaf $\\mathcal{F}$ on\n$\\Sh((\\Sch/S)_\\etale)$"
+    },
+    {
+      "class": "editorial_or_notational_clarification",
+      "id": "MC-STK-ERR-1466-OP1",
+      "line": 1585,
+      "new": "\\begin{lemma}",
+      "old": "\\noindent\nTo be continued...\n\n\\begin{lemma}"
+    },
+    {
+      "class": "editorial_or_notational_clarification",
+      "id": "MC-STK-ERR-1466-OP2",
+      "line": 1842,
+      "new": "\\begin{lemma}",
+      "old": "\\noindent\nTo be continued...\n\n\\begin{lemma}"
+    },
+    {
+      "class": "editorial_or_notational_clarification",
+      "id": "MC-STK-ERR-1466-OP3",
+      "line": 1627,
+      "new": "Sites, Lemmas \\ref{sites-lemma-have-functor-other-way} and\n\\ref{sites-lemma-have-functor-other-way-morphism} to get the\nformula for $f_{big, *}$.\n\\end{proof}\n\n\\noindent\nTo be continued...",
+      "old": "Sites, Lemmas \\ref{sites-lemma-have-functor-other-way} and\n\\ref{sites-lemma-have-functor-other-way-morphism} to get the\nformula for $f_{big, *}$.\n\\end{proof}"
+    },
+    {
+      "class": "editorial_or_notational_clarification",
+      "id": "MC-STK-ERR-1466-OP4",
+      "line": 1884,
+      "new": "Sites, Lemmas \\ref{sites-lemma-have-functor-other-way} and\n\\ref{sites-lemma-have-functor-other-way-morphism} to get the\nformula for $f_{big, *}$.\n\\end{proof}\n\n\\noindent\nTo be continued...",
+      "old": "Sites, Lemmas \\ref{sites-lemma-have-functor-other-way} and\n\\ref{sites-lemma-have-functor-other-way-morphism} to get the\nformula for $f_{big, *}$.\n\\end{proof}"
+    },
+    {
+      "class": "source_defect",
+      "id": "MC-STK-ERR-1467-OP1",
+      "line": 1955,
+      "new": "The second follows as the composition of flat morphisms is flat\n(see Morphisms, Lemma \\ref{morphisms-lemma-composition-flat})\nand the composition of morphisms which are locally of finite presentation is\nlocally of finite presentation\n(see Morphisms, Lemma \\ref{morphisms-lemma-composition-finite-presentation}).",
+      "old": "The second follows as the composition of flat morphisms is flat\n(see Morphisms, Lemma \\ref{morphisms-lemma-composition-flat})\nand the composition of morphisms of finite presentation is\nof finite presentation\n(see Morphisms, Lemma \\ref{morphisms-lemma-composition-finite-presentation})."
+    },
+    {
+      "class": "source_defect",
+      "id": "MC-STK-ERR-1467-OP2",
+      "line": 1960,
+      "new": "The third follows as the base change of a flat morphism is flat\n(see Morphisms, Lemma \\ref{morphisms-lemma-base-change-flat})\nand the base change of a morphism which is locally of finite presentation is\nlocally of finite presentation\n(see Morphisms, Lemma \\ref{morphisms-lemma-base-change-finite-presentation}).",
+      "old": "The third follows as the base change of a flat morphism is flat\n(see Morphisms, Lemma \\ref{morphisms-lemma-base-change-flat})\nand the base change of a morphism of finite presentation is\nof finite presentation\n(see Morphisms, Lemma \\ref{morphisms-lemma-base-change-finite-presentation})."
+    },
+    {
+      "class": "source_defect",
+      "id": "MC-STK-ERR-1468-OP1",
+      "line": 2353,
+      "new": "Proof of (2). Choose $U \\to T$ proper surjective and",
+      "old": "Proof of (3). Choose $U \\to T$ proper surjective and"
+    },
+    {
+      "class": "source_defect",
+      "id": "MC-STK-ERR-1469-OP1",
+      "line": 2517,
+      "new": "covering $U' = U'_1 \\cup \\ldots \\cup U'_m$ such that",
+      "old": "covering $U' = U'_1 \\cup \\ldots \\cup U'$ such that"
+    },
+    {
+      "class": "source_defect",
+      "id": "MC-STK-ERR-1470-OP1",
+      "line": 2964,
+      "new": "$t_1, \\ldots, t_m$. Then $p = (0, \\ldots, 0, 1, 0, \\ldots)$ with $1$",
+      "old": "$x_1, \\ldots, x_m$. Then $p = (0, \\ldots, 0, 1, 0, \\ldots)$ with $1$"
+    },
+    {
+      "class": "source_defect",
+      "id": "MC-STK-ERR-1471-OP1",
+      "line": 3470,
+      "new": "\\Spec(K) \\ar[r] & \\Spec(V) \\ar[r]^g & T",
+      "old": "\\Spec(K) \\ar[r] & \\Spec(V) \\ar[r]^g & X"
+    },
+    {
+      "class": "source_defect",
+      "id": "MC-STK-ERR-1472-OP1",
+      "line": 3595,
+      "new": "covering $U' = U'_1 \\cup \\ldots \\cup U'_m$ such that",
+      "old": "covering $U' = U'_1 \\cup \\ldots \\cup U'$ such that"
+    },
+    {
+      "class": "source_defect",
+      "id": "MC-STK-ERR-1473-OP1",
+      "line": 3798,
+      "new": "$$\nT = \\Spec(V) \\times_Y X = \\Spec(V) \\times_U (U \\times_Y X)\n$$",
+      "old": "$$\nT = \\Spec(V) \\times_X Y = \\Spec(V) \\times_U (U \\times_X Y)\n$$"
+    },
+    {
+      "class": "source_defect",
+      "id": "MC-STK-ERR-1474-OP1",
+      "line": 4000,
+      "new": "In this case $\\tau'$ is stronger than $\\tau$, for example, no fppf\nsite can be contained in an \\'etale site.",
+      "old": "In this case $\\tau$ is stronger than $\\tau'$, for example, no fppf\nsite can be contained in an \\'etale site."
+    },
+    {
+      "class": "source_defect",
+      "id": "MC-STK-ERR-1475-OP1",
+      "line": 4072,
+      "new": "$\\mathcal{F}'|_{\\Sch_\\tau} = \\mathcal{F}$. In fact the sheaf",
+      "old": "$\\mathcal{F}|_{\\Sch'_\\tau} = \\mathcal{F}'$. In fact the sheaf"
+    },
+    {
+      "class": "source_defect",
+      "id": "MC-STK-ERR-1476-OP1",
+      "line": 4201,
+      "new": "Hence the sheaf condition (a) for $F$ and the Zariski coverings",
+      "old": "Hence the sheaf condition (b) for $F$ and the Zariski coverings"
+    },
+    {
+      "class": "source_defect",
+      "id": "MC-STK-ERR-1477-OP1",
+      "line": 4271,
+      "new": "a finite affine open covering $X_i = X_{i, 1} \\cup \\ldots \\cup X_{i, n}$\nsuch that $X_{i, k} \\to S$ factors through an affine open of $S$.\nLet $X_k \\subset X$ and $X_{i', k}$ for $i' \\geq i$\nbe the inverse images of $X_{i, k}$.",
+      "old": "a finite affine open covering $V_i = V_{i, 1} \\cup \\ldots \\cup V_{i, n}$\nsuch that $V_{i, k} \\to S$ factors through an affine open of $S$.\nLet $V_k \\subset V$ and $V_{i', k}$ for $i' \\geq i$\nbe the inverse images of $V_{i, k}$."
+    },
+    {
+      "class": "source_defect",
+      "id": "MC-STK-ERR-1477-OP2",
+      "line": 4276,
+      "new": "$$\nF'_{X_k}(X_k) = \\colim_{i' \\geq i} F'_{X_{i', k}}(X_{i', k})\n$$",
+      "old": "$$\nF'_{V_k}(V_k) = \\colim_{i' \\geq i} F'_{V_{i', k}}(V_{i', k})\n$$"
+    },
+    {
+      "class": "source_defect",
+      "id": "MC-STK-ERR-1477-OP3",
+      "line": 4280,
+      "new": "$$\nF'_{X_k \\cap X_l}(X_k \\cap X_l) =\n\\colim_{i' \\geq i}\nF'_{X_{i', k} \\cap X_{i', l}}(X_{i', k} \\cap X_{i', l})",
+      "old": "$$\nF'_{V_k \\cap V_l}(V_k \\cap V_l) =\n\\colim_{i' \\geq i}\nF'_{V_{i', k} \\cap V_{i', l}}(V_{i', k} \\cap V_{i', l})"
+    },
+    {
+      "class": "source_defect",
+      "id": "MC-STK-ERR-1478-OP1",
+      "line": 4312,
+      "new": "$i' \\geq i$ and a morphism\n$f_{i'} : T_{i'} \\times_{T_i} \\mathcal{V}_i \\to\nT_{i'} \\times_{T_i} \\mathcal{V}'_i$\nwhose base change to $T$ is $f$.",
+      "old": "$i' \\geq i$ and a morphism\n$f_{i'} : T_{i'} \\times_{T_i} \\mathcal{V} \\to\nT_{i'} \\times_{T_i} \\mathcal{V}'_i$\nwhose base change to $T$ is $f$."
+    },
+    {
+      "class": "source_defect",
+      "id": "MC-STK-ERR-1478-OP2",
+      "line": 4316,
+      "new": "\\item If\n$f, g : \\mathcal{V}_i \\to \\mathcal{V}'_i$\nare morphisms of standard $\\tau$-coverings of $T_i$ whose\nbase changes $f_T, g_T$ to $T$ are equal then there exists an\nindex $i' \\geq i$ such that $f_{T_{i'}} = g_{T_{i'}}$.",
+      "old": "\\item If\n$f, g : \\mathcal{V} \\to \\mathcal{V}'_i$\nare morphisms of standard $\\tau$-coverings of $T_i$ whose\nbase changes $f_T, g_T$ to $T$ are equal then there exists an\nindex $i' \\geq i$ such that $f_{T_{i'}} = g_{T_{i'}}$."
+    },
+    {
+      "class": "source_defect",
+      "id": "MC-STK-ERR-1479-OP1",
+      "line": 4408,
+      "new": "\\colim_{k' \\geq k} F(V_{k'}) \\\\",
+      "old": "\\colim_{k' \\geq k} F(V_k) \\\\"
+    },
+    {
+      "class": "source_defect",
+      "id": "MC-STK-ERR-1479-OP2",
+      "line": 4411,
+      "new": "\\text{Equalizer}(\n\\xymatrix{\n\\prod F(V_{k', i})\n\\ar@<1ex>[r] \\ar@<-1ex>[r] &\n\\prod F(V_{k', i} \\times_{V_{k'}} V_{k', j})\n})",
+      "old": "\\text{Equalizer}(\n\\xymatrix{\n\\prod F(V_{k', i})\n\\ar@<1ex>[r] \\ar@<-1ex>[r] &\n\\prod F(V_{k', i} \\times_{V_{k'}} V_{k', j})\n}"
+    },
+    {
+      "class": "source_defect",
+      "id": "MC-STK-ERR-1479-OP3",
+      "line": 4419,
+      "new": "\\text{Equalizer}(\n\\xymatrix{\n\\colim_{k' \\geq k}\n\\prod F(V_{k', i})\n\\ar@<1ex>[r] \\ar@<-1ex>[r] &\n\\colim_{k' \\geq k}\n\\prod F(V_{k', i} \\times_{V_{k'}} V_{k', j})\n})",
+      "old": "\\text{Equalizer}(\n\\xymatrix{\n\\colim_{k' \\geq k}\n\\prod F(V_{k', i})\n\\ar@<1ex>[r] \\ar@<-1ex>[r] &\n\\colim_{k' \\geq k}\n\\prod F(V_{k', i} \\times_{V_{k'}} V_{k', j})\n}"
+    },
+    {
+      "class": "source_defect",
+      "id": "MC-STK-ERR-1479-OP4",
+      "line": 4429,
+      "new": "\\text{Equalizer}(\n\\xymatrix{\n\\prod F'(X_i)\n\\ar@<1ex>[r] \\ar@<-1ex>[r] &\n\\prod F'(X_i \\times_X X_j)\n})",
+      "old": "\\text{Equalizer}(\n\\xymatrix{\n\\prod F'(X_i)\n\\ar@<1ex>[r] \\ar@<-1ex>[r] &\n\\prod F'(X_i \\times_X X_j)\n}"
+    }
+  ],
+  "schema": "stacks-r45-formula-diagram-inventory-v1",
+  "source": "topologies.tex",
+  "structure": {
+    "cites": {
+      "authority": 5,
+      "candidate": 5,
+      "count_equal": true,
+      "declared_changed_positions": [],
+      "ordered_equal": true
+    },
+    "environments": {
+      "authority": 562,
+      "candidate": 562,
+      "count_equal": true,
+      "declared_changed_positions": [],
+      "ordered_equal": true
+    },
+    "inputs": {
+      "authority": 2,
+      "candidate": 2,
+      "count_equal": true,
+      "declared_changed_positions": [],
+      "ordered_equal": true
+    },
+    "labels": {
+      "authority": 140,
+      "candidate": 140,
+      "count_equal": true,
+      "declared_changed_positions": [],
+      "ordered_equal": true
+    },
+    "refs": {
+      "authority": 334,
+      "candidate": 334,
+      "count_equal": true,
+      "declared_changed_positions": [
+        68,
+        121,
+        145,
+        173,
+        216
+      ],
+      "ordered_equal": false
+    }
+  }
+}

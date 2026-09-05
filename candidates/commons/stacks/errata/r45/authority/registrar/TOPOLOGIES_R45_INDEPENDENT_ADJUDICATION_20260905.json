@@ -1,0 +1,443 @@
+{
+  "authority": {
+    "bytes": 166188,
+    "path": "authority/source/topologies.tex",
+    "sha256": "C984C98BCD458A191880433DED32A36AC9035543BBF8C98E191AE022A260F513"
+  },
+  "classification": {
+    "editorial_or_notational_clarification": 2,
+    "source_defect": 17
+  },
+  "date": "2026-09-05",
+  "grouping": {
+    "deferred": 0,
+    "exact_operations": 36,
+    "multi_operation_units": {
+      "MC-STK-ERR-1461": 2,
+      "MC-STK-ERR-1462": 5,
+      "MC-STK-ERR-1464": 2,
+      "MC-STK-ERR-1465": 2,
+      "MC-STK-ERR-1466": 4,
+      "MC-STK-ERR-1467": 2,
+      "MC-STK-ERR-1477": 3,
+      "MC-STK-ERR-1478": 2,
+      "MC-STK-ERR-1479": 4
+    },
+    "rejected": 0,
+    "semantic_units": 19,
+    "stable_ids_in_first_locus_authority_order": [
+      "MC-STK-ERR-1461",
+      "MC-STK-ERR-1462",
+      "MC-STK-ERR-1463",
+      "MC-STK-ERR-1464",
+      "MC-STK-ERR-1465",
+      "MC-STK-ERR-1466",
+      "MC-STK-ERR-1467",
+      "MC-STK-ERR-1468",
+      "MC-STK-ERR-1469",
+      "MC-STK-ERR-1470",
+      "MC-STK-ERR-1471",
+      "MC-STK-ERR-1472",
+      "MC-STK-ERR-1473",
+      "MC-STK-ERR-1474",
+      "MC-STK-ERR-1475",
+      "MC-STK-ERR-1476",
+      "MC-STK-ERR-1477",
+      "MC-STK-ERR-1478",
+      "MC-STK-ERR-1479"
+    ]
+  },
+  "intake_originals": [
+    {
+      "bytes": 36164,
+      "logical_path": "<WORKSPACE>/03_projects/language_management/cjk/00_lane_control/STACKS_TOPOLOGIES_INDEPENDENT_INTAKE_20260905_R1.json",
+      "sha256": "DCAEB62D9F21D92AE551104AAED8BC9EB5A19F07FC098422F221ACF8F89996D9"
+    },
+    {
+      "bytes": 13853,
+      "logical_path": "<WORKSPACE>/03_projects/language_management/romance/03_working_translations/stacks_fr_20260821/p05/evidence/TOPOLOGIES_NATIVE_QA_STATE.json",
+      "sha256": "595D45784CE9CB7107700A565D3FCA24635DAC0AE4DE4F0BE11DE90099D0ED49"
+    }
+  ],
+  "mutations": "Only the leased R45 candidate is materialized; frozen authority, producer/French/CJK sources, generated source, upstream, and registry admission remain untouched.",
+  "passed": true,
+  "prelease_registry": {
+    "matching_producer_ids": 0,
+    "operation_spec_variants_checked": 52,
+    "overlays_sha256": "0A86C8871E2459B7C0B2FB02620FFD696D01F1C175E5EA0F32A7BB589F03AAAD",
+    "prelease_commit": "05d14edf76f2d54e8d6867b09359cbbc4e5ddd00",
+    "prior_exact_preimage_hits": 0,
+    "prior_stable_id_max": "MC-STK-ERR-1460",
+    "prior_target_interval_overlaps": 0,
+    "prior_topologies_operations": 0,
+    "registered_entries_checked": 45,
+    "registered_errata_rounds_checked_through": 44,
+    "source_map_variants_checked": 58
+  },
+  "replay": {
+    "payload_bytes": 166236,
+    "payload_sha256": "FA88114672E734B6B9677C62378691DFFA761D2376026EAE4340CDEFD053A8A9",
+    "physical_lines": 4512
+  },
+  "rows": [
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1,
+        1
+      ],
+      "logical_location": "lemma-characterize-sheaf-big proof",
+      "operation_count": 2,
+      "producer_class": "category_or_site_notation_defect",
+      "producer_id": "TOPOLOGIES-NATIVE-001",
+      "producer_ordinal": 1,
+      "reason": "The site is (\\Sch/S)_{Zar}; \\Sh((\\Sch/S)_{Zar}) is its topos. The proof evaluates F on site objects and constructs a presheaf on those objects, so removing only \\Sh is the uniform minimal repair.",
+      "recommendation": "accept",
+      "source_lines": [
+        664,
+        684
+      ],
+      "stable_id": "MC-STK-ERR-1461"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "logical_location": "lemma-etale-induced and smooth/syntomic/fppf/ph analogues",
+      "operation_count": 5,
+      "producer_class": "systematic_wrong_reference_key",
+      "producer_id": "TOPOLOGIES-NATIVE-005",
+      "producer_ordinal": 5,
+      "reason": "sets-lemma-what-is-in-it supplies object-existence facts but not combinatorial equivalence of coverings. Item (3) of sets-lemma-coverings-site is exactly the required result. Only the third citation in each proof changes.",
+      "recommendation": "accept",
+      "source_lines": [
+        860,
+        1522,
+        1779,
+        2055,
+        2610
+      ],
+      "stable_id": "MC-STK-ERR-1462"
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "lemma-verify-site-etale proof",
+      "operation_count": 1,
+      "producer_class": "typographic_macro_defect",
+      "producer_id": "TOPOLOGIES-NATIVE-004",
+      "producer_ordinal": 4,
+      "reason": "The site is consistently denoted S_{affine, \\etale}; this is the sole use of the text accent command inside that math identifier.",
+      "recommendation": "accept",
+      "source_lines": [
+        942
+      ],
+      "stable_id": "MC-STK-ERR-1463"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1,
+        1
+      ],
+      "logical_location": "lemma-composition-etale; lemma-composition-ph",
+      "operation_count": 2,
+      "producer_class": "duplicated_variable",
+      "producer_id": "TOPOLOGIES-NATIVE-002",
+      "producer_ordinal": 2,
+      "reason": "Each following line declares f : X -> Y and g : Y -> Z. The second Y in the scheme list is unambiguously Z.",
+      "recommendation": "accept",
+      "source_lines": [
+        1251,
+        2839
+      ],
+      "stable_id": "MC-STK-ERR-1464"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1,
+        1
+      ],
+      "logical_location": "lemma-characterize-sheaf-big-etale proof",
+      "operation_count": 2,
+      "producer_class": "category_or_site_notation_defect",
+      "producer_id": "TOPOLOGIES-NATIVE-003",
+      "producer_ordinal": 3,
+      "reason": "As in candidate 1, \\Sh denotes the topos, not the site on which the presheaf is defined.",
+      "recommendation": "accept",
+      "source_lines": [
+        1324,
+        1348
+      ],
+      "stable_id": "MC-STK-ERR-1465"
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_line_preimage_occurrences": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "logical_location": "section-smooth; section-syntomic",
+      "operation_count": 4,
+      "producer_class": "editorial_marker_misplacement",
+      "producer_id": "TOPOLOGIES-NATIVE-006",
+      "producer_ordinal": 6,
+      "reason": "Each marker is followed immediately by a further lemma. The same-source convention places this marker after the final proof and before the next section or file end. Preserve it verbatim and relocate it after each actual final proof.",
+      "recommendation": "accept",
+      "source_lines": [
+        1585,
+        1842,
+        1627,
+        1884
+      ],
+      "stable_id": "MC-STK-ERR-1466"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1,
+        1
+      ],
+      "logical_location": "lemma-fppf proof",
+      "operation_count": 2,
+      "producer_class": "hypothesis_mismatch",
+      "producer_id": "TOPOLOGIES-NATIVE-007",
+      "producer_ordinal": 7,
+      "reason": "An fppf cover assumes flat morphisms locally of finite presentation, not globally of finite presentation. The cited composition and base-change lemmas explicitly include the required local results, so their keys remain unchanged.",
+      "recommendation": "accept",
+      "source_lines": [
+        1955,
+        1960
+      ],
+      "stable_id": "MC-STK-ERR-1467"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "lemma-refine-by-standard-ph proof",
+      "operation_count": 1,
+      "producer_class": "wrong_item_number",
+      "producer_id": "TOPOLOGIES-NATIVE-008",
+      "producer_ordinal": 8,
+      "reason": "The lemma has only items (1) and (2); this paragraph proves the iterated-cover refinement in item (2).",
+      "recommendation": "accept",
+      "source_lines": [
+        2353
+      ],
+      "stable_id": "MC-STK-ERR-1468"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "lemma-ph proof of (3)",
+      "operation_count": 1,
+      "producer_class": "missing_terminal_index",
+      "producer_id": "TOPOLOGIES-NATIVE-009",
+      "producer_ordinal": 9,
+      "reason": "The affine cover has j-indexed outer members and the next line has l=1,...,n_j inner covers. The conventional outer bound is m. The identical text in candidate 12 is a distinct, line-scoped sibling.",
+      "recommendation": "accept",
+      "source_lines": [
+        2517
+      ],
+      "stable_id": "MC-STK-ERR-1469"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "example-not-fpqc",
+      "operation_count": 1,
+      "producer_class": "accidental_variable_rename",
+      "producer_id": "TOPOLOGIES-NATIVE-010",
+      "producer_ordinal": 10,
+      "reason": "The ambient polynomial ring, the f_i, and the cited construction use t_i throughout. x_i is an isolated accidental rename.",
+      "recommendation": "accept",
+      "source_lines": [
+        2964
+      ],
+      "stable_id": "MC-STK-ERR-1470"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "lemma-standard-ph-standard-V second diagram",
+      "operation_count": 1,
+      "producer_class": "wrong_base_object",
+      "producer_id": "TOPOLOGIES-NATIVE-011",
+      "producer_ordinal": 11,
+      "reason": "The proof defines U -> T and g : Spec(V) -> T. X is undefined here, and properness supplies the lift over T.",
+      "recommendation": "accept",
+      "source_lines": [
+        3470
+      ],
+      "stable_id": "MC-STK-ERR-1471"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "lemma-V proof of (3)",
+      "operation_count": 1,
+      "producer_class": "missing_terminal_index",
+      "producer_id": "TOPOLOGIES-NATIVE-012",
+      "producer_ordinal": 12,
+      "reason": "As in candidate 9, the j-indexed finite outer cover requires terminal member U'_m; this replacement is restricted to the declared offset.",
+      "recommendation": "accept",
+      "source_lines": [
+        3595
+      ],
+      "stable_id": "MC-STK-ERR-1472"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "lemma-refine-qcqs-V proof of (3) implies (1)",
+      "operation_count": 1,
+      "producer_class": "reversed_fibre_product",
+      "producer_id": "TOPOLOGIES-NATIVE-013",
+      "producer_ordinal": 13,
+      "reason": "The available arrows are X -> Y and Spec(V) -> U -> Y. Both products over X are ill-defined. The corrected object is Spec(V) x_Y X = Spec(V) x_U (U x_Y X), agreeing with the U_j cover used below.",
+      "recommendation": "accept",
+      "source_lines": [
+        3798
+      ],
+      "stable_id": "MC-STK-ERR-1473"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "section-change-alpha introductory paragraph",
+      "operation_count": 1,
+      "producer_class": "reversed_topology_strength",
+      "producer_id": "TOPOLOGIES-NATIVE-014",
+      "producer_ordinal": 14,
+      "reason": "Containment was defined by Cov(Sch_tau) being a subset of Cov(Sch'_tau'), so tau' has at least the covering families of tau and is the stronger/finer topology. The fppf-versus-etale example remains correct after the swap.",
+      "recommendation": "accept",
+      "source_lines": [
+        4000
+      ],
+      "stable_id": "MC-STK-ERR-1474"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "discussion following lemma-change-alpha",
+      "operation_count": 1,
+      "producer_class": "ill_typed_restriction_identity",
+      "producer_id": "TOPOLOGIES-NATIVE-015",
+      "producer_ordinal": 15,
+      "reason": "F is on the smaller site and F' is on the larger site. The preceding sentence defines restriction from larger to smaller, so F' restricted to Sch_tau equals F; F cannot be restricted to the larger domain.",
+      "recommendation": "accept",
+      "source_lines": [
+        4072
+      ],
+      "stable_id": "MC-STK-ERR-1475"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "lemma-extend proof, descended-cover paragraph",
+      "operation_count": 1,
+      "producer_class": "wrong_condition_label",
+      "producer_id": "TOPOLOGIES-NATIVE-016",
+      "producer_ordinal": 16,
+      "reason": "Condition (a) is the sheaf condition and condition (b) is continuity under directed affine limits. This paragraph invokes only the sheaf condition.",
+      "recommendation": "accept",
+      "source_lines": [
+        4201
+      ],
+      "stable_id": "MC-STK-ERR-1476"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1,
+        1,
+        1
+      ],
+      "logical_location": "lemma-extend proof, final general case",
+      "operation_count": 3,
+      "producer_class": "undefined_notation_family",
+      "producer_id": "TOPOLOGIES-NATIVE-017",
+      "producer_ordinal": 17,
+      "reason": "The argument has X = lim X_i and has just chosen i. V, V_i, and their opens are undefined here. Uniformly restoring X_i, X_{i,k}, X_k, and X_{i',k} refers to the declared inverse system.",
+      "recommendation": "accept",
+      "source_lines": [
+        4271,
+        4276,
+        4280
+      ],
+      "stable_id": "MC-STK-ERR-1477"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1,
+        1
+      ],
+      "logical_location": "lemma-limit-fppf-topology (2),(3)",
+      "operation_count": 2,
+      "producer_class": "missing_covering_index",
+      "producer_id": "TOPOLOGIES-NATIVE-018",
+      "producer_ordinal": 18,
+      "reason": "Both assertions start with coverings V_i and V'_i of T_i. The unindexed V is undefined; its required domain is V_i before and after base change.",
+      "recommendation": "accept",
+      "source_lines": [
+        4312,
+        4316
+      ],
+      "stable_id": "MC-STK-ERR-1478"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "logical_location": "lemma-extend-sheaf-general displayed equalizer argument",
+      "operation_count": 4,
+      "producer_class": "limit_index_and_unclosed_parentheses",
+      "producer_id": "TOPOLOGIES-NATIVE-019",
+      "producer_ordinal": 19,
+      "reason": "The colimit varies k', so its summand is F(V_{k'}), not constant F(V_k). Each Equalizer( must close after its xymatrix; these repairs preserve the stated equalizer/filtered-colimit argument.",
+      "recommendation": "accept",
+      "source_lines": [
+        4408,
+        4411,
+        4419,
+        4429
+      ],
+      "stable_id": "MC-STK-ERR-1479"
+    }
+  ],
+  "schema": "stacks-r45-topologies-independent-adjudication/v1",
+  "status": "PASS_ACCEPT_19_NON_DUPLICATIVE_UNITS_36_OPERATIONS"
+}

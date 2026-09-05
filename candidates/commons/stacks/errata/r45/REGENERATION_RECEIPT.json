@@ -1,0 +1,37 @@
+{
+  "next_command": "powershell -File run-builds-with-mutex.ps1 -UpstreamRoot <PINNED_SOURCE_DIRECTORY> -WorkRoot1 <NEW_DIRECTORY> -WorkRoot2 <NEW_DIRECTORY> -PrivateRoot1 <PRIVATE_DIRECTORY> -PrivateRoot2 <PRIVATE_DIRECTORY>",
+  "no_final_manifest": true,
+  "operation_spec": {
+    "bytes": 41551,
+    "path": "operation-spec.json",
+    "sha256": "9E36DE89FBF0B56BE5F06FC60BA9B7DF3794CCE38067EBF8BBB71A9FD6077D29"
+  },
+  "payload": {
+    "bytes": 166236,
+    "path": "payload/topologies.tex",
+    "sha256": "FA88114672E734B6B9677C62378691DFFA761D2376026EAE4340CDEFD053A8A9"
+  },
+  "pipeline": {
+    "bytes": 26918,
+    "path": "pipeline_r45.py",
+    "sha256": "FC6B593E38C623752EE46B7A4F35B3E220F87D65A0DA2A2E0BFD01D9459560F2"
+  },
+  "schema": "stacks-r45-source-regeneration/v1",
+  "source_map": {
+    "bytes": 51431,
+    "path": "source-map.jsonl",
+    "sha256": "CDF5D7D3D4DDF58F9388F7697AC971CC7189F015DCF637C74B50CFF42F8FD86E"
+  },
+  "source_validation": {
+    "bytes": 2607,
+    "path": "source-validation.json",
+    "sha256": "560934F57EDAB533C84817C0FFC098F4128B8708C0DB409B4DAAB28189A2ABD7"
+  },
+  "stable_units": {
+    "bytes": 12120,
+    "path": "stable-units.json",
+    "sha256": "F7753F07BA24F1C0D4FEA6CDA2239E21A9460980833F8F04613BB98C149F778B"
+  },
+  "status": "SOURCE_REPLAY_PASS_BUILD_PENDING",
+  "write_scope": "Only the leased R45 candidate; no TeX, admission, composition, or publication was performed."
+}

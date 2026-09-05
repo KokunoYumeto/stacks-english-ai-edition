@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "chapter": "34 topologies.tex",
+  "source": "<WORKSPACE>/03_projects/language_management/cjk/03_working_translations/stacks_cjk_20260821/upstream/src/stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14/topologies.tex",
+  "source_sha256": "C984C98BCD458A191880433DED32A36AC9035543BBF8C98E191AE022A260F513",
+  "target": "<WORKSPACE>/03_projects/language_management/romance/03_working_translations/stacks_fr_20260821/p05/draft/topologies.fr.tex",
+  "initial_target_sha256": "7A2EBDDD99E248108DF96B3A62D270F52A4D646FA597F1E07B62ECB3B7BE09BE",
+  "authority": "Current delegated request; immutable English source and exact live French target. Historical p04/evidence/TOPOLOGIES_TRANSLATION_STATE.json was inspected only as a locator and is stale machine output, not authoritative translation or completion evidence.",
+  "write_boundary": "p05/draft/topologies.fr.tex and TOPOLOGIES-prefixed evidence only; no build, no other chapter, no Git scan, no subagent",
+  "status": "translation_frozen_source_and_native_french_qa_passed",
+  "deterministic_initial_checks": {
+    "math_expression_count_source": 2501,
+    "math_expression_count_target": 2501,
+    "math_sequence_equal_after_whitespace_normalization": true
+  },
+  "completed_sections": [
+    "section-introduction",
+    "section-procedure",
+    "section-zariski",
+    "section-etale",
+    "section-smooth",
+    "section-syntomic",
+    "section-fppf",
+    "section-ph",
+    "section-fpqc",
+    "section-V",
+    "section-change-topologies",
+    "section-change-alpha",
+    "section-extending-functors"
+  ],
+  "section_checkpoints": [
+    {
+      "sections": [
+        "section-introduction",
+        "section-procedure",
+        "section-zariski"
+      ],
+      "source_read": "Exact English source lines 1-710; complete French corresponding sections read.",
+      "native_witnesses": [
+        "definition-big-zariski-site: restored the omitted qualifier grand in the general procedure; corrected choisir un ensemble quelconque.",
+        "lemma-composition: poussage/tirage en arrière replaced by image directe/image inverse.",
+        "lemma-characterize-sheaf-big: cartes and f-map replaced by applications and f-application; the pullback of a section is an image inverse, not a produit fibré.",
+        "lemma-fibre-products-Zariski: plural affine hypothesis and conclusion repaired without changing any mathematical expression."
+      ],
+      "deterministic_checks": "2501 source/target dollar-math expressions initially identical after whitespace normalization; 481 label/reference/citation/input/bibliography commands, 562 begin/end commands, and 169 item markers are equal in ordered sequence after revision."
+    },
+    {
+      "sections": [
+        "section-etale",
+        "section-smooth",
+        "section-syntomic",
+        "section-fppf"
+      ],
+      "source_read": "Exact English lines 716-2277 and complete corresponding French sections.",
+      "native_witnesses": [
+        "Repaired étale spelling and morphism-family agreement; retained the deliberate distinction between standard étale coverings and standard étale morphisms.",
+        "Replaced site lisse de grande dimension by grand site lisse; normalized cocontinu spécial.",
+        "Replaced section pullback/produit fibré/rétropulls confusions with image inverse and corrected fppf definition quantifier agreement."
+      ],
+      "target_sha256_at_checkpoint": "693FFBFF2BC8B8F496D212A2594822AECDEEAD33037B1252A06258971D08D277",
+      "deterministic_checks": "2501 math expressions, 481 reference/label/cite/input/bibliography commands, 562 environment markers, 169 item markers remain sequence-equal."
+    },
+    {
+      "sections": [
+        "section-ph",
+        "section-fpqc"
+      ],
+      "source_read": "Exact English lines 2278-3374 and complete corresponding French sections.",
+      "native_witnesses": [
+        "definition-ph-covering: repaired un ph standard recouvrant affinant to un recouvrement ph standard raffinant without changing locally-finite-type hypothesis.",
+        "lemma-characterize-sheaf: repaired maps-to, pullback of sections, compatibility on intersections, and uniqueness wording; all conditions (1),(2),(2') retained.",
+        "fpqc set-theoretic discussion: absence de borne, faisceautisation, cardinal bounds and nonexistence assertion retained.",
+        "lemma-family-flat-fpqc-local-covering: this covering refines is now ce recouvrement raffine; no condition weakened."
+      ],
+      "deterministic_checks": "Final QA passed at target SHA256 B276585AA0FBF99FFE1D82CFAB95D8A1EC26F91BF856F2CDDE3FB4CE3E3A6FB5"
+    },
+    {
+      "sections": [
+        "section-V"
+      ],
+      "source_read": "Exact English source lines 3375-3885 and complete French section.",
+      "native_witnesses": [
+        "lemma-sheaf-property-V: repaired the reversed refinement direction: un V standard recouvrant ... raffiné par became un recouvrement V standard ... raffinant. The source morphisms h_j point from the standard cover into the original cover.",
+        "lemma-refine-qcqs-V: restored native French for the lifting-of-specializations criterion and images of generic/closed points; immutable source fiber-product typo is recorded below.",
+        "lemma-V-covering-universally-submersive: replaced cartes with morphismes and fermé par spécialisation with stable par spécialisation."
+      ],
+      "deterministic_checks": "Passed final ordered formula/reference/environment/control-word checks."
+    },
+    {
+      "sections": [
+        "section-change-topologies",
+        "section-change-alpha",
+        "section-extending-functors"
+      ],
+      "source_read": "Exact English source lines 3886-4512 and complete French corresponding sections.",
+      "native_witnesses": [
+        "lemma-change-alpha: faisceauté replaced by faisceau associé; canonical extension and restriction wording reviewed against source.",
+        "lemma-extend (a): restored translation-lost footnote terminator }. The source closes the footnote before item (b). Final source and target both have exactly 2743 opening and 2743 closing active braces.",
+        "lemma-extend proof: f-carte/cartes replaced by f-application/applications; inverse images of descended affine opens and commutation of filtered colimits with equalizers stated in native French.",
+        "lemma-limit-fppf-topology and lemma-extend-sheaf-general: repaired malformed τ-covering syntax, colimite gender, standard-cover descent wording, and the final sheaf argument."
+      ],
+      "deterministic_checks": "Passed final ordered formula/reference/environment/control-word checks."
+    }
+  ],
+  "source_defects": [
+    {
+      "location": "lemma-characterize-sheaf-big proof",
+      "evidence": "The English source twice says a (pre)sheaf on \\Sh((\\Sch/S)_{Zar}), although the site is (\\Sch/S)_{Zar} and \\Sh denotes its topos.",
+      "disposition": "Preserved the source mathematical notation; recorded rather than silently emended."
+    },
+    {
+      "location": "lemma-composition-etale; lemma-composition-ph",
+      "evidence": "Source lists X,Y,Y although the next morphism has target Z.",
+      "disposition": "Source math preserved exactly."
+    },
+    {
+      "location": "lemma-characterize-sheaf-big-etale proof",
+      "evidence": "As in the Zariski analogue, source twice says a (pre)sheaf on Sh((Sch/S)_etale).",
+      "disposition": "Source math preserved exactly."
+    },
+    {
+      "location": "lemma-verify-site-etale proof",
+      "evidence": "Source uses S_{affine, \\'etale} once in math rather than S_{affine, \\etale}.",
+      "disposition": "Source math preserved exactly."
+    },
+    {
+      "location": "lemma-etale-induced and smooth/syntomic/fppf/ph analogues",
+      "evidence": "Source cites sets-lemma-what-is-in-it for combinatorial equivalence of covering families, whereas its adjacent Zariski argument cites sets-lemma-coverings-site.",
+      "disposition": "Reference keys preserved; potential citation defect recorded, not silently repaired."
+    },
+    {
+      "location": "section-smooth; section-syntomic",
+      "evidence": "Source includes To be continued... before its final lemma.",
+      "disposition": "Translated as À suivre...; this is inherited source prose, not unfinished French translation."
+    },
+    {
+      "location": "lemma-fppf proof",
+      "evidence": "Source proof says finite presentation for composition/base change although the covering definition uses locally finite presentation.",
+      "disposition": "Source qualification retained and recorded."
+    },
+    {
+      "location": "lemma-refine-by-standard-ph proof",
+      "evidence": "Source says Proof of (3) although the lemma lists only (1),(2).",
+      "disposition": "Number preserved."
+    },
+    {
+      "location": "lemma-ph proof of (3)",
+      "evidence": "Source affine cover is U' = U'_1 ∪ ... ∪ U' with the final index missing.",
+      "disposition": "Source formula preserved."
+    },
+    {
+      "location": "example-not-fpqc",
+      "evidence": "Source starts with variables t_i but later calls the finite set of variables x_1,...,x_m.",
+      "disposition": "Source formula preserved."
+    },
+    {
+      "location": "lemma-standard-ph-standard-V second diagram",
+      "evidence": "Bottom-right object is X although the base throughout the proof is T.",
+      "disposition": "Diagram retained byte-for-byte modulo whitespace."
+    },
+    {
+      "location": "lemma-V proof of (3)",
+      "evidence": "Affine cover U' = U'_1 ∪ ... ∪ U' again omits the final index, as in lemma-ph.",
+      "disposition": "Source formula preserved."
+    },
+    {
+      "location": "lemma-refine-qcqs-V proof of (3) implies (1)",
+      "evidence": "Displayed T = Spec(V) ×_X Y = Spec(V) ×_U (U ×_X Y) reverses X/Y relative to the preceding morphism X→Y and cover U×_Y X.",
+      "disposition": "Source formula preserved exactly; no silent mathematical emendation."
+    },
+    {
+      "location": "section-change-alpha introductory paragraph",
+      "evidence": "Source calls τ stronger than τ' under Cov(Sch_τ)⊂Cov(Sch'_τ'); the following example excludes containing an fppf site in an étale site. This is an apparent direction inconsistency.",
+      "disposition": "The source's stronger wording is faithfully translated; potential mathematical defect recorded."
+    },
+    {
+      "location": "discussion following lemma-change-alpha",
+      "evidence": "Source writes F|_{Sch'_τ}=F' although F was introduced on Sch_τ and F' on Sch'_τ.",
+      "disposition": "Source formula preserved."
+    },
+    {
+      "location": "lemma-extend proof, descended-cover paragraph",
+      "evidence": "Source calls the sheaf condition (b), whereas (a) is the sheaf condition and (b) is the limit condition.",
+      "disposition": "Source condition label preserved."
+    },
+    {
+      "location": "lemma-extend proof, final general case",
+      "evidence": "Source switches from X,X_i to V,V_i,V_k in the affine-cover argument without redefining the notation.",
+      "disposition": "Source mathematical symbols preserved."
+    },
+    {
+      "location": "lemma-limit-fppf-topology (2),(3)",
+      "evidence": "Source uses unindexed mathcal V where the surrounding statement uses mathcal V_i.",
+      "disposition": "Source indices preserved."
+    },
+    {
+      "location": "lemma-extend-sheaf-general displayed equalizer argument",
+      "evidence": "Source begins colim_{k'≥k} F(V_k) with unprimed k, and the three Equalizer( displays omit closing parentheses.",
+      "disposition": "Source display preserved; these are inherited mathematical notation defects, not French incompleteness."
+    }
+  ],
+  "next_action": "Chapter translation work is complete and frozen at the recorded hash. Parent may integrate this target into the part build/release workflow and consume the source-defect list. Re-run TOPOLOGIES_SOURCE_QA.ps1 after any later target change; no further chapter translation remains.",
+  "final_target_sha256": "B276585AA0FBF99FFE1D82CFAB95D8A1EC26F91BF856F2CDDE3FB4CE3E3A6FB5",
+  "final_target_bytes": 182844,
+  "final_source_line_count": 4512,
+  "final_target_line_count": 2412,
+  "final_qa_receipt": "<WORKSPACE>/03_projects/language_management/romance/03_working_translations/stacks_fr_20260821/p05/evidence/TOPOLOGIES_SOURCE_QA_FINAL.json",
+  "chapter_freeze": "<WORKSPACE>/03_projects/language_management/romance/03_working_translations/stacks_fr_20260821/p05/evidence/TOPOLOGIES_CHAPTER_FREEZE.json",
+  "final_native_review": {
+    "method": "Direct complete section-by-section English/French reading followed by native revision and a targeted residual review of the revised target. No generic MT, online service, local model, subordinate agent, or build was used.",
+    "english_prose_residual_lines": 0,
+    "protected_math_text": "The source's and and Equalizer inside math and symbolic identifiers are intentionally unchanged. Control-word and mathematical-expression sequences match exactly.",
+    "semantic_spot_checks": [
+      "Refinement arrows in V and ph sheaf proofs",
+      "Restriction/image-direct/image-inverse adjunction descriptions",
+      "Locally finite type and finite presentation hypotheses",
+      "Quasi-separated hypothesis in fpqc criterion",
+      "All implications and item numbering, with inherited source defects explicitly recorded"
+    ],
+    "source_fidelity": "passed",
+    "native_french": "passed",
+    "mathematical_correctness_claim": "No claim that inherited upstream defects are mathematically correct; this freeze certifies faithful translation plus documented source defects.",
+    "build_status": "Not run: delegated write/build boundary forbids builds in this lane."
+  }
+}

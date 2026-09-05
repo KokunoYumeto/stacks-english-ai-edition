@@ -1,0 +1,237 @@
+{
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_inputs": {
+    "topologies.tex": {
+      "bytes": 166188,
+      "path": "topologies.tex",
+      "sha256": "C984C98BCD458A191880433DED32A36AC9035543BBF8C98E191AE022A260F513"
+    }
+  },
+  "authority_phase": {
+    "stems": {
+      "topologies": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "topologies.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 70324,
+            "stdout_sha256_raw": "614FAA3987AAFB3FAD881E81C248A452B0DC46674CB020316BEAC333B9D2374A"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "topologies"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 147,
+            "stdout_sha256_raw": "8C7AA47FD4F2A3FE8E6C21D970368AEEF351255D8D0DD90D0928E0EFAFDE1F11"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "topologies.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 57470,
+            "stdout_sha256_raw": "3C2A2A73CB87EA67766A672F0D281D0C4409086EF55F67118EF59EB682C19468"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "topologies.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 56791,
+            "stdout_sha256_raw": "234B17F337DE6DE6C4207525EA13F1079C6048CF8D0C904C23A78BE6DC5288B3"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 147,
+            "path": "builds/topologies.authority.bibtex.txt",
+            "sha256": "8C7AA47FD4F2A3FE8E6C21D970368AEEF351255D8D0DD90D0928E0EFAFDE1F11"
+          },
+          "fls": {
+            "bytes": 27541,
+            "path": "builds/topologies.authority.fls",
+            "sha256": "0D93296EE08A0C0D5EF218330BF68F56F02B03DA848AFA480ABDC2EB29160A01"
+          },
+          "fls_dependencies": {
+            "bytes": 62214,
+            "path": "builds/topologies.authority.fls-dependencies.json",
+            "sha256": "28DF0BB7374C294D582946F85FED47968E48113624C5BA5BC57E241F2A912C5C"
+          },
+          "log": {
+            "bytes": 69865,
+            "path": "builds/topologies.authority.log",
+            "sha256": "CB1AFE0F01D2A3C57860E6A8F2C951A610AB981FFD675727728BB2D048528CAA"
+          },
+          "pass3_stdout": {
+            "bytes": 56349,
+            "path": "builds/topologies.authority.pass3.txt",
+            "sha256": "6C3DDD4D721F9D4FBCD75E171949E022FBF0FDA866D1F7D5BA5F28DF56DA2224"
+          },
+          "pdf": {
+            "bytes": 651034,
+            "path": "builds/topologies.authority.pdf",
+            "sha256": "8074C34A0B9AC0B2D4911A490CBCAD0B4306DF72BE8B8FC2D40D97EF9869EE14"
+          }
+        },
+        "source": {
+          "bytes": 166188,
+          "path": "topologies.tex",
+          "sha256": "C984C98BCD458A191880433DED32A36AC9035543BBF8C98E191AE022A260F513"
+        }
+      }
+    }
+  },
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "candidate_id": "stacks-errata-a04446e-r45",
+  "candidate_inputs": {
+    "topologies.tex": {
+      "bytes": 166236,
+      "path": "topologies.tex",
+      "sha256": "FA88114672E734B6B9677C62378691DFFA761D2376026EAE4340CDEFD053A8A9"
+    }
+  },
+  "candidate_phase": {
+    "stems": {
+      "topologies": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "topologies.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 70258,
+            "stdout_sha256_raw": "9C8A02B2CD863D24A433870BC033FC3A882C5E1234B87D5779505DA59918803D"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "topologies"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 147,
+            "stdout_sha256_raw": "8C7AA47FD4F2A3FE8E6C21D970368AEEF351255D8D0DD90D0928E0EFAFDE1F11"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "topologies.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 57404,
+            "stdout_sha256_raw": "9B7458EFD57849A0DEDDCD02A7AD90D62839B3A9105DCD744B25A004A279E9E6"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "topologies.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 56725,
+            "stdout_sha256_raw": "891CCC2BC896F877B180A47F7CED3407B0497C4E7D07F10C54651077AFCB5204"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 147,
+            "path": "builds/topologies.bibtex.txt",
+            "sha256": "8C7AA47FD4F2A3FE8E6C21D970368AEEF351255D8D0DD90D0928E0EFAFDE1F11"
+          },
+          "fls": {
+            "bytes": 27541,
+            "path": "builds/topologies.fls",
+            "sha256": "0D93296EE08A0C0D5EF218330BF68F56F02B03DA848AFA480ABDC2EB29160A01"
+          },
+          "fls_dependencies": {
+            "bytes": 62214,
+            "path": "builds/topologies.fls-dependencies.json",
+            "sha256": "1218F3888A67FBED9BBF215A0903E7BB341E9306CFA5AF2B2E71374E071C78F7"
+          },
+          "log": {
+            "bytes": 69802,
+            "path": "builds/topologies.log",
+            "sha256": "2FAD8521330CDD7C176CB839DEA4CE6E99C18D5F647B5E5DE1C4162EF4F09B14"
+          },
+          "pass3_stdout": {
+            "bytes": 56283,
+            "path": "builds/topologies.pass3.txt",
+            "sha256": "2D46B434AD881452401DA6236F6936FE63D3C3590252901DF25B8AAABCC1FBC3"
+          },
+          "pdf": {
+            "bytes": 650266,
+            "path": "builds/topologies.pdf",
+            "sha256": "7BE05DE504DDE96C24737886DEF2E630BFF1C2AEBE9F8C4A2A5D1CCFF86A3542"
+          }
+        },
+        "source": {
+          "bytes": 166236,
+          "path": "topologies.tex",
+          "sha256": "FA88114672E734B6B9677C62378691DFFA761D2376026EAE4340CDEFD053A8A9"
+        }
+      }
+    }
+  },
+  "completed_at_utc": "2026-09-05T17:08:34Z",
+  "passed": true,
+  "restored_authority_inputs": {
+    "topologies.tex": {
+      "bytes": 166188,
+      "path": "topologies.tex",
+      "sha256": "C984C98BCD458A191880433DED32A36AC9035543BBF8C98E191AE022A260F513"
+    }
+  },
+  "schema": "mathematics-commons-stacks-errata-build-execution/v1",
+  "source_date_epoch": "1788627469",
+  "started_at_utc": "2026-09-05T17:08:17Z",
+  "tools": {
+    "bibtex": "MiKTeX-BibTeX 4.2 (MiKTeX 26.5)",
+    "pdflatex": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5)",
+    "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]"
+  },
+  "work_root": "new empty task-local directory outside source and candidate; exact path retained only in private evidence"
+}

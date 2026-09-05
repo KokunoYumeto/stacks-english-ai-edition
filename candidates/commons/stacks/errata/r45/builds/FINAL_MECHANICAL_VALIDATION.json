@@ -1,0 +1,99 @@
+{
+  "adverse_evidence": [
+    "The first complete TeX attempt failed only its generic reference-parity validator; the failure receipt is retained and the corrected exact signed-delta validator passed a complete new deterministic build.",
+    "The candidate and authority each retain four inherited overfull hboxes; the separate visual receipt found no blocking layout defect.",
+    "The isolated chapter retains cross-chapter unresolved references; no cumulative AUX closure is asserted.",
+    "The PDF is untagged."
+  ],
+  "bad_link_rectangles": [],
+  "build_execution": {
+    "bytes": 8016,
+    "path": "builds/build-execution.json",
+    "sha256": "59C11AA829D982A06DD931D17EAF810197243E5E1A3F35AC3D48BB0B9F4C3177"
+  },
+  "build_receipt": {
+    "bytes": 23956,
+    "path": "builds/build-receipt.json",
+    "sha256": "9283DB6F33B2C907FCC9C35C5764A0B64CB4F439FA5B5D5EC39643DBDEB742B1"
+  },
+  "candidate_id": "stacks-errata-a04446e-r45",
+  "candidate_pdf": {
+    "bytes": 650266,
+    "path": "builds/topologies.pdf",
+    "sha256": "7BE05DE504DDE96C24737886DEF2E630BFF1C2AEBE9F8C4A2A5D1CCFF86A3542"
+  },
+  "deterministic_replay": {
+    "bytes": 2128,
+    "path": "builds/deterministic-replay.json",
+    "sha256": "B58913D4456C2F38CD90CF490BA9FB6FC06177524BFB044AB9F15CA81D009BF1"
+  },
+  "generated_source_composed": false,
+  "passed": true,
+  "pdf_links": 159,
+  "pdf_pages": 46,
+  "recorder_fls": {
+    "authority": {
+      "artifact": {
+        "bytes": 62214,
+        "path": "builds/topologies.authority.fls-dependencies.json",
+        "sha256": "28DF0BB7374C294D582946F85FED47968E48113624C5BA5BC57E241F2A912C5C"
+      },
+      "input_closure_sha256": "5249BB185930D82DCBC17EBD002EE08C846A014F492FD8A28838C7571E390FAA",
+      "input_count": 274,
+      "output_count": 5,
+      "private_fresh_builds_rehashed": 2
+    },
+    "candidate": {
+      "artifact": {
+        "bytes": 62214,
+        "path": "builds/topologies.fls-dependencies.json",
+        "sha256": "1218F3888A67FBED9BBF215A0903E7BB341E9306CFA5AF2B2E71374E071C78F7"
+      },
+      "input_closure_sha256": "10234D7A3EDD721F555731552450843FB6EDCD0DA2AF712E94884499C946DDE3",
+      "input_count": 274,
+      "output_count": 5,
+      "private_fresh_builds_rehashed": 2
+    }
+  },
+  "regeneration_successor": {
+    "bytes": 2152,
+    "path": "REGENERATION_RECEIPT_SUCCESSOR_001.json",
+    "sha256": "81FED425B12BCA9EF24F6F2AB95080F53FA3DE6D6003B3AE334391FDBEF6B969"
+  },
+  "registry_admission": "NOT_PERFORMED",
+  "render_artifacts_rehashed": 72,
+  "render_manifest": {
+    "bytes": 12865,
+    "path": "replay/RENDER_MANIFEST.json",
+    "sha256": "766CE650EE8A6BC8DE1E68E6C089DDDF65D5F162ACEDC0501DF42E5D476FB080"
+  },
+  "schema": "stacks-r45-final-mechanical-validation/v1",
+  "source_independent_validation": {
+    "bytes": 3236,
+    "path": "replay/SOURCE_INDEPENDENT_VALIDATION.json",
+    "sha256": "FE6883CDB7EA045508940B6BF8F193C26A10B34388D71C5620516CE7903B32AF"
+  },
+  "source_operations_mapped": 36,
+  "source_page_map": {
+    "bytes": 10225,
+    "path": "builds/source-page-map.json",
+    "sha256": "1F41813A43C09FFCDC14A66BB1BD5E2B49E2EF5D6F43327875DA315239A7B8C0"
+  },
+  "tagged_pdf": false,
+  "tex_mutex_adverse_attempt": {
+    "bytes": 907,
+    "path": "builds/TEX_MUTEX_RECEIPT_ATTEMPT_001.json",
+    "sha256": "FEF4A9B0D2136D028F4118648266BA2DD844CFF579D805CF20DE33E38D2A3751"
+  },
+  "tex_mutex_success": {
+    "bytes": 883,
+    "path": "builds/TEX_MUTEX_RECEIPT.json",
+    "sha256": "6BEE7C69CDCD1A7ACCD840AE714FDA198D272F5404DA5330864116CD7ABDC711"
+  },
+  "visual_conclusion_recomputed": false,
+  "visual_receipt": {
+    "bytes": 9244,
+    "path": "replay/PAGE_COMPLETE_VISUAL_ADJUDICATION.json",
+    "sha256": "6117DA20F7DC34D01664175051F886BF8FBA611FE1E6B8770D8B558AD37B535C"
+  }
+}
