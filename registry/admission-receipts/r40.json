@@ -1,0 +1,109 @@
+{
+  "schema": "mathematics-commons-stacks-registry-admission-receipt/v1",
+  "candidate_id": "stacks-errata-a04446e-r40",
+  "status": "PASS",
+  "admitted_at_utc": "2026-09-05T11:52:35.419Z",
+  "candidate_commit": "a85e10f90950cce3890fc03fb5f158d51fc29036",
+  "candidate_tree": "8c0095af095cee30ee4ab4953d5cc66d6c7814c5",
+  "manifest": {
+    "path": "candidate.manifest.json",
+    "bytes": 10704,
+    "sha256": "A3A3FFF0F01B84F73F9D426B14E6F2E6F95E93F79735795CD8D5741C45E22F5E"
+  },
+  "operation_spec": {
+    "path": "operation-spec.json",
+    "bytes": 10497,
+    "sha256": "372E35A255ED5C4F0CE2FA89D1E21DE66EB9AADA5F858754ED2C6415C171123C"
+  },
+  "source_map": {
+    "path": "source-map.jsonl",
+    "bytes": 16298,
+    "sha256": "09DD323316FE40FDDACA12C62FFE61EA29B8CF147517979D03406B04162660CA"
+  },
+  "final_review": {
+    "path": "replay/FINAL_INDEPENDENT_REVIEW.json",
+    "bytes": 7441,
+    "sha256": "2F04DDEF08FD15A08EC1D247FE106BC98797C073DA15A83F8E1E63A9FAF9FA9D"
+  },
+  "stable_id_count": 11,
+  "stable_ids": [
+    "MC-STK-ERR-1402",
+    "MC-STK-ERR-1403",
+    "MC-STK-ERR-1404",
+    "MC-STK-ERR-1405",
+    "MC-STK-ERR-1406",
+    "MC-STK-ERR-1407",
+    "MC-STK-ERR-1408",
+    "MC-STK-ERR-1409",
+    "MC-STK-ERR-1410",
+    "MC-STK-ERR-1411",
+    "MC-STK-ERR-1412"
+  ],
+  "producer_ids": [
+    "DESCENT-013",
+    "DESCENT-014",
+    "DESCENT-015",
+    "DESCENT-016",
+    "DESCENT-017",
+    "DESCENT-018",
+    "DESCENT-019",
+    "DESCENT-020",
+    "DESCENT-021",
+    "DESCENT-022",
+    "DESCENT-023"
+  ],
+  "classification": {
+    "source_defect": 5,
+    "editorial_or_notational_clarification": 6
+  },
+  "grouping_notes": [
+    "DESCENT-013 is one atomic line-6663 correction adding the missing smooth case to the ordered topology/precomposition-class list.",
+    "DESCENT-015 uses the preferred complete-line operation at source line 6876, adding 'by' and correcting the codomain to Y in one inseparable sentence-level unit.",
+    "DESCENT-020 corrects the second base-change codomain at source line 7481 to the fibre product typed by the adjacent diagram."
+  ],
+  "registry": {
+    "before_sha256": "A259CAA4DBB502B35B7F0F0759D093CF59811D1590228B93AFD4D1714DC14FF0",
+    "after_sha256": "D5116AA61992DCC702453F391F02A0D24D0693FFBF9B57F0EB14F700127574ED",
+    "last_overlay": "stacks-errata-a04446e-r40",
+    "prior_entries_unchanged": 40,
+    "current_entries": 41,
+    "unique_stable_ids": 1160
+  },
+  "leases": {
+    "before_sha256": "00C5B64BB264D28442BE66161D3A9A03E3BB1D1D90CD8BA9038FDB8F7F32A88B",
+    "after_sha256": "3C97169B9983F3752C702C2921190B2505EF35EACDE12492939A3930968D7407",
+    "issued_event": "lease-event-000084",
+    "released_event": "lease-event-000085",
+    "prior_events_unchanged": 84
+  },
+  "fresh_replay": {
+    "passed": true,
+    "units": 11,
+    "operations": 11,
+    "producer_rows": 11,
+    "manifest_references": 59,
+    "payload_sha256": {
+      "descent.tex": "AA18A14DBBC153BD8F8D75C27EAE5D410BE7C0D52B54962AEFCDB59F75827BDA"
+    },
+    "exact_preimages_descending_byte_replay": true,
+    "strict_registry_schemas": 2,
+    "workflow_check": "41 admitted manifests and exact byte closures; 85 lease events; 1160 globally unique stable IDs; 3 unrelated active leases"
+  },
+  "validation_reader": {
+    "pages": 93,
+    "bytes": 1037157,
+    "sha256": "7509EA4F8F48496A0F92F229ACD2675278A58C6D4D3994660F5C0B2AC79A99EF",
+    "reproducible": true,
+    "visual_gate": "All 93 pages covered by six contact sheets; twenty high-resolution pages included all correction-sensitive and inherited-diagnostic loci; zero blocking findings.",
+    "adverse_evidence": "Inherited 397 distinct/561 occurrence external-reference warnings, 20 overfull hboxes, and one underfull vbox match authority; untagged standalone PDF; not a complete cumulative reader or independent certification."
+  },
+  "workflow_successor": "Extends the append-only registry with the separately leased, independently replayed DESCENT-013..023 batch while preserving every prior registry entry and lease event byte-for-byte.",
+  "constraints": {
+    "authority_mutated": false,
+    "producer_target_mutated": false,
+    "generated_source_composed": false,
+    "generated_source_pushed": false,
+    "published": false
+  },
+  "next_action": "Commit the separate registrar admission; verify committed and fresh-checkout bytes, then publish only the registrar branch and anonymously read back this exact batch. Hand off R40 only to the separate composer."
+}
