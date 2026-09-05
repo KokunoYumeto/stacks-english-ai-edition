@@ -1,0 +1,33 @@
+{
+  "schema": "stacks-r41-tex-mutex-execution/v1",
+  "candidate_id": "stacks-errata-a04446e-r41",
+  "mutex_name": "Global\\InterlanguageTeXSlotV1",
+  "wait_timeout_seconds": 600,
+  "acquisition_started_at_utc": "2026-09-05T12:39:08.8563616Z",
+  "acquired": true,
+  "acquired_at_utc": "2026-09-05T12:39:08.9662203Z",
+  "abandoned_mutex_recovered": false,
+  "holder_pid": 61708,
+  "guarded_commands": [
+    {
+      "role": "fresh_candidate_authority_build_1",
+      "exit_code": 0
+    },
+    {
+      "role": "fresh_candidate_authority_build_2",
+      "exit_code": 0
+    },
+    {
+      "role": "deterministic_pdf_comparison",
+      "exit_code": 0
+    },
+    {
+      "role": "immediate_log_and_build_preflight",
+      "exit_code": 0
+    }
+  ],
+  "released": true,
+  "released_at_utc": "2026-09-05T12:40:15.8674286Z",
+  "passed": true,
+  "failure": null
+}

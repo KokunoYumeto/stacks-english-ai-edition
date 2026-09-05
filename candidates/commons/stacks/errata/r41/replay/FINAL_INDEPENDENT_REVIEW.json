@@ -1,0 +1,133 @@
+{
+  "blockers": [],
+  "build": {
+    "authority_pdf_bytes": 1037159,
+    "authority_pdf_sha256": "199B9363F65BD59EA17BCC01C3A4EA541DC2712460BCBA14F513448F666FFAF1",
+    "bad_link_rectangles": 0,
+    "candidate_pdf_bytes": 1037214,
+    "candidate_pdf_sha256": "B2891281F31B3D8DD1F226BAA58D5EC7ECFE9EB1951E7AB657650AA4C33A6FD8",
+    "candidate_and_authority_pages": 93,
+    "candidate_and_authority_reference_multisets_equal": true,
+    "candidate_and_authority_undefined_citation_targets_each": 0,
+    "candidate_and_authority_undefined_reference_distinct_targets_each": 397,
+    "candidate_and_authority_undefined_reference_occurrences_each": 561,
+    "candidate_and_authority_warnings_each": {
+      "fatal_markers": 0,
+      "missing_glyph_markers": 0,
+      "overfull_hboxes": 20,
+      "overfull_vboxes": 0,
+      "underfull_hboxes": 0,
+      "underfull_vboxes": 1
+    },
+    "deterministic_replay_sha256": "BF8A712D94FD5972373C34F3E5F99C3A9CEFC9BB1D41752A7459DFDBAAEA9FE0",
+    "link_rectangles_verified": 498,
+    "mutex_acquired_and_released": true,
+    "mutex_name": "Global\\InterlanguageTeXSlotV1",
+    "mutex_receipt_sha256": "BC50CA3592DE47B164456E3228041FD76111E6F7FCC9EAE4BE7507D0C6EF033F",
+    "new_builds_run_by_reviewer": 0,
+    "two_private_authority_pdfs_and_authority_export_byte_identical": true,
+    "two_private_candidate_pdfs_and_candidate_export_byte_identical": true
+  },
+  "date": "2026-09-05",
+  "final_stage_bytes": 10223,
+  "final_stage_sha256": "A9DDAACD24A2E0C2597071742E3134C3B9EC548825C33305C39A5EAD54DDF0F2",
+  "finalizer_readiness": {
+    "acyclic_order": "The immutable final stage freezes all preceding files; this independent receipt binds that stage; the top manifest is sealed afterward and binds this receipt. The stage is not rewritten to hash its future reviewer.",
+    "candidate_manifest_absent_during_review": true,
+    "finalizer_read": true,
+    "seal_not_run_by_reviewer": true,
+    "top_manifest_must_still_be_sealed_and_schema_inventory_checked": true
+  },
+  "mutations": "Only this new review receipt; no candidate input, historical receipt, source, build, render, registry, Git, generated-source, composition, or publication change.",
+  "passed": true,
+  "render_and_mapping": {
+    "all_hashes_and_sizes_exact": true,
+    "artifacts_rehashed": 114,
+    "contact_sheets": 6,
+    "high_resolution_pages": 15,
+    "mapped_operation_ids_equal_all_6_source_operations": true,
+    "mapping_pdf_payload_operation_spec_and_synctex_hashes_verified": true,
+    "mapping_source_lines_and_stable_ids_match": true,
+    "page_renders": 93,
+    "render_manifest_bytes": 21806,
+    "render_manifest_sha256": "E0F2EDE267D0E2F46B7E3BF6175F8405EA7964963CDB40973944D45A00DD6982",
+    "source_page_map_sha256": "D1C1507D0A1918BD3803A5710F6A6186848C5743E15627CF72FECB0C79DF21FC",
+    "unique_correction_sensitive_pages": [
+      73,
+      74,
+      75
+    ]
+  },
+  "reviewer": "independent_r41_final_stage_validator",
+  "rights_privacy": {
+    "credentials_accessed": false,
+    "official_commit_tree_and_source_identity_preserved": true,
+    "text_files_scanned": 55,
+    "textual_absolute_account_paths_found": 0,
+    "unexpected_private_or_temporary_files": 0,
+    "unofficial_ai_overlay_and_nonendorsement_stated": true,
+    "upstream_COPYING_bytes": 20404,
+    "upstream_COPYING_preserved": true,
+    "upstream_COPYING_sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"
+  },
+  "schema": "stacks-r41-final-independent-review/v1",
+  "scope_limit": "Independent validation of the frozen R41 candidate evidence and rendered validation reader; not registry admission, generated-source composition, official-upstream mutation, complete-corpus reference resolution, human or expert certification, or publication.",
+  "snapshot": {
+    "aggregate_bytes": 4010094,
+    "files_verified": 57,
+    "hash_or_size_mismatches": 0,
+    "missing_files": 0,
+    "unexpected_files": 0
+  },
+  "source": {
+    "authority_bytes": 353760,
+    "authority_sha256": "49483B3BCB36427A607A8227F4EA67730FCDDF1EECCB8E992CA61915ACE3B31D",
+    "classification": {
+      "editorial_or_notational_clarification": 5,
+      "source_defect": 1
+    },
+    "decision_ids": "R41-D001..R41-D006",
+    "decision_source_map_adjudication_rationales_equal": true,
+    "decisions_sha256": "7498E0B81044D85D20B69E1DEAEDCB7A6D828266133F3C9F1E047244A1E4EEF7",
+    "descending_replay_equals_payload_byte_for_byte": true,
+    "exact_preimages_lengths_hashes_lines_and_occurrences": 6,
+    "input_output_stage_pairs_byte_equal": 6,
+    "nonoverlapping": true,
+    "operation_spec_sha256": "9D6A9B3950AD4F0DC727B1718F31FD2A50AA84C62FC35FF89D3E815C80A55AB0",
+    "operations": 6,
+    "payload_bytes": 353786,
+    "payload_lines": 9456,
+    "payload_sha256": "834AD705629446C8914FA71EB178735C19A2A3C02AD50205FAF07BC8BA40F3CD",
+    "producer_id_range": "DESCENT-024..DESCENT-029",
+    "source_map_sha256": "F06C93C135D2799FE81EDEFFE4640B509F2B43252F345B26A251E05F85FC9A21",
+    "source_stage_independent_receipt_sha256": "4541833F3A7881BC05D7FD9C0440EE5404106457F7005B10AA6030BB5FC79858",
+    "stable_id_range": "MC-STK-ERR-1413..MC-STK-ERR-1418",
+    "stable_source_decision_and_adjudication_identity_equal": true,
+    "stable_units": 6,
+    "stable_units_sha256": "F135E1EBCAA841944EBF8E93764CBB7E131BB339E0003423975B0818DE2C291E",
+    "unchanged_interval_sha256": "F4807A973B3371458FD1D9BAD1BD3B2FC43C05014CD196D73DF3048FF5838280"
+  },
+  "status": "PASS_FINAL_CANDIDATE_REVIEW",
+  "transitive_closure": {
+    "historical_receipts": "Source-stage NOT_PERFORMED fields and builds/PENDING.json are preserved historical states and are not promoted to current final-stage claims.",
+    "logical_build_source_rows_checked": 5,
+    "named_candidate_artifact_bindings_checked": 98,
+    "private_render_relative_paths": "Resolved against the declared private render root and rehashed; they are validation evidence, not missing candidate payload files.",
+    "unexplained_stale_hashes": 0
+  },
+  "visual_review": {
+    "additional_direct_view_by_final_reviewer": "The three enlarged correction-sensitive pages 73, 74, and 75 were directly displayed. Corrected prose, formulas, diagrams, and surrounding text were readable and geometrically intact; no clipping, overlap, or missing glyph was observed. The displayed 1530x1980 images were resized to 1376x1780 by the interface.",
+    "aggregate_no_blocking_findings": true,
+    "aggregate_sha256": "25994F5BF4BE9E43AC2E404D703B23CB406C3625F6C9181590A65F892D384A05",
+    "caveats": [
+      "Literal standalone cross-chapter references remain unresolved; their exact multiset matches authority.",
+      "Twenty overfull hboxes and one underfull vbox remain in both candidate and authority; no warning-free claim is made.",
+      "Visible link borders are retained hyperlink styling and do not obscure text.",
+      "Contact-sheet coverage is not character-level inspection of every unmodified page.",
+      "The PDF is untagged; bounded AI inspection is not human or expert certification."
+    ],
+    "coverage": "Six contact sheets cover pages 1-93 in order; all three correction-sensitive pages and all twelve diagnostic pages were inspected individually at 180 dpi.",
+    "raw_review_artifact_identities_rehashed": 21,
+    "raw_review_sha256": "6C4E7404A2ACE4F5A69FD144CF973A7FB97A214B5A880D0DDDC6EC8978CFB46A"
+  }
+}

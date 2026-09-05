@@ -1,0 +1,139 @@
+{
+  "authority": {
+    "bytes": 353760,
+    "path": "authority/source/descent.tex",
+    "sha256": "49483B3BCB36427A607A8227F4EA67730FCDDF1EECCB8E992CA61915ACE3B31D"
+  },
+  "date": "2026-09-05",
+  "grouping": {
+    "authority_order": [
+      "MC-STK-ERR-1413",
+      "MC-STK-ERR-1414",
+      "MC-STK-ERR-1415",
+      "MC-STK-ERR-1416",
+      "MC-STK-ERR-1417",
+      "MC-STK-ERR-1418"
+    ],
+    "independent_units": 6,
+    "similar_but_distinct": [
+      "DESCENT-024 and DESCENT-028 repair the same grammatical omission at distinct byte loci and therefore remain separate full-line-guarded units.",
+      "R40 ends at DESCENT-023 and preserves DESCENT-024..029 only as explicitly out-of-scope evidence, not as materialized or admitted operations."
+    ]
+  },
+  "mutations": "This receipt records adjudication and deduplication only; authority, producer files, generated source, and upstream were not mutated.",
+  "passed": true,
+  "prelease_registry": {
+    "canonical_operation_spec_files_checked": 35,
+    "canonical_source_map_files_checked": 40,
+    "commit": "d4932376fbe80c32c7e03486ae7d1ef53c01c203",
+    "leases_sha256": "3C97169B9983F3752C702C2921190B2505EF35EACDE12492939A3930968D7407",
+    "matching_descent_or_exact_preimage_records": 0,
+    "operation_spec_variants_checked": 44,
+    "overlays_sha256": "D5116AA61992DCC702453F391F02A0D24D0693FFBF9B57F0EB14F700127574ED",
+    "prior_stable_id_max": "MC-STK-ERR-1412",
+    "registered_rounds_checked_through": 40,
+    "source_map_variants_checked": 49
+  },
+  "producer_evidence_original": {
+    "bytes": 13386,
+    "logical_path": "<WORKSPACE>/03_projects/language_management/romance/03_working_translations/stacks_fr_20260821/p05/evidence/DESCENT_SOURCE_DEFECTS.md",
+    "scope_note": "The append-only producer file also contains later DESCENT-030..040 allegations. They are preserved as adverse/out-of-scope evidence and are not R41 units; the committed R41 lease ends at DESCENT-029.",
+    "sha256": "0DCEEC598C76CF377FE47A6D343AC4FAD5726C6CD1BBA35282BB5B825FA68772"
+  },
+  "producer_ledger_original": {
+    "bytes": 528248,
+    "logical_path": "<WORKSPACE>/03_projects/language_management/romance/03_working_translations/stacks_fr_20260821/00_control/SOURCE_DEFECT_LEDGER.csv",
+    "matching_descent_entries": 0,
+    "sha256": "304D51200903ED870D2F72AF8F65C0AB28B314F6075B206C3B34F506B678F8CE"
+  },
+  "public_checks": {
+    "official_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "official_issue_pr_exact_matches": 0,
+    "official_source_retains_all_preimages": true,
+    "tags": {
+      "0CF0": "Comments (0)",
+      "0CF1": "Comments (0)"
+    }
+  },
+  "replay": {
+    "line_count": 9456,
+    "payload_bytes": 353786,
+    "payload_sha256": "834AD705629446C8914FA71EB178735C19A2A3C02AD50205FAF07BC8BA40F3CD"
+  },
+  "rows": [
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_preimage_occurrences": 1,
+      "line": 7632,
+      "old": "$i \\not = j$ and $d \\geq 0$ denote $T_{i, j, d}$ the automorphism",
+      "producer_id": "DESCENT-024",
+      "reason": "English requires 'denote by T the automorphism'; the full-line guard distinguishes this locus from the parallel omission at line 7779 and changes no mathematical object.",
+      "recommendation": "accept",
+      "replacement": "$i \\not = j$ and $d \\geq 0$ denote by $T_{i, j, d}$ the automorphism",
+      "stable_id": "MC-STK-ERR-1413",
+      "tag": "0CF0"
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_preimage_occurrences": 1,
+      "line": 7652,
+      "old": "such that at least one of $x_1, \\ldots, x_n$ is transcendental over the",
+      "producer_id": "DESCENT-025",
+      "reason": "Line 7650 defines the chosen point as xi=(xi_1,...,xi_n), and line 7666 immediately renumbers so xi_n is transcendental; x_i denotes an ambient coordinate function, not the chosen coordinate value.",
+      "recommendation": "accept",
+      "replacement": "such that at least one of $\\xi_1, \\ldots, \\xi_n$ is transcendental over the",
+      "stable_id": "MC-STK-ERR-1414",
+      "tag": "0CF0"
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_preimage_occurrences": 1,
+      "line": 7712,
+      "old": "such that $g$ is smooth $y'$ and $X' \\to X \\times_Y Y'$ is \\'etale",
+      "producer_id": "DESCENT-026",
+      "reason": "The morphism g:Y'->Y is assumed smooth at the domain point y'; the proof then works in open neighbourhoods of y' and uses smooth locality on the target.",
+      "recommendation": "accept",
+      "replacement": "such that $g$ is smooth at $y'$ and $X' \\to X \\times_Y Y'$ is \\'etale",
+      "stable_id": "MC-STK-ERR-1415",
+      "tag": "0CF1"
+    },
+    {
+      "classification": "source_defect",
+      "exact_preimage_occurrences": 1,
+      "line": 7718,
+      "old": "Since $\\mathcal{P}$ is \\'etale local on the source we see\nthat $x \\in W(f)$ if and only if the image of $x$ in\n$X \\times_Y Y'$ is in $W(X \\times_Y Y' \\to Y')$. Hence we",
+      "producer_id": "DESCENT-027",
+      "reason": "For the etale morphism X'->X times_Y Y' at x', source locality compares x' in W(f') with its image in the base-change open. The point x alone has no chosen lift to the fibre product, and x in W(f) is the conclusion still being proved.",
+      "recommendation": "accept",
+      "replacement": "Since $\\mathcal{P}$ is \\'etale local on the source we see\nthat $x' \\in W(f')$ if and only if the image of $x'$ in\n$X \\times_Y Y'$ is in $W(X \\times_Y Y' \\to Y')$. Hence we",
+      "stable_id": "MC-STK-ERR-1416",
+      "tag": "0CF1"
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_preimage_occurrences": 1,
+      "line": 7779,
+      "old": "denote $T_{i, j, d}$ the automorphism of $\\mathbf{A}^n$ defined",
+      "producer_id": "DESCENT-028",
+      "reason": "English requires 'denote by T the automorphism'; this full-line guard is unique despite the parallel omission at line 7632 and changes no mathematical object.",
+      "recommendation": "accept",
+      "replacement": "denote by $T_{i, j, d}$ the automorphism of $\\mathbf{A}^n$ defined",
+      "stable_id": "MC-STK-ERR-1417",
+      "tag": "0CF1"
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_preimage_occurrences": 1,
+      "line": 7814,
+      "old": "T_p^{-1}(W) \\cap \\mathbf{A}^n_x = W \\cap \\mathbf{A}^n_x",
+      "producer_id": "DESCENT-029",
+      "reason": "No standalone W is introduced in this proof; lines 7748--7753 establish W(f_n), and applying the cited etale-locality lemma to the T_p square gives invariance of that open on the fibre over x.",
+      "recommendation": "accept",
+      "replacement": "T_p^{-1}(W(f_n)) \\cap \\mathbf{A}^n_x = W(f_n) \\cap \\mathbf{A}^n_x",
+      "stable_id": "MC-STK-ERR-1418",
+      "tag": "0CF1"
+    }
+  ],
+  "schema": "stacks-r41-descent-independent-adjudication/v1",
+  "status": "PASS_ACCEPT_6_NON_DUPLICATIVE_UNITS"
+}

@@ -1,0 +1,68 @@
+{
+  "adjudication": {
+    "bytes": 7003,
+    "path": "authority/registrar/DESCENT_R41_INDEPENDENT_ADJUDICATION_20260905.json",
+    "sha256": "2409BC436B2E9E38DEEED0E192BA7B222FD83EE6B07949C2AC6D893FE7C423EC"
+  },
+  "authority": {
+    "bytes": 353760,
+    "path": "authority/source/descent.tex",
+    "sha256": "49483B3BCB36427A607A8227F4EA67730FCDDF1EECCB8E992CA61915ACE3B31D"
+  },
+  "build": "NOT_PERFORMED",
+  "deduplication": {
+    "canonical_operation_spec_files_checked": 35,
+    "canonical_source_map_files_checked": 40,
+    "commit": "d4932376fbe80c32c7e03486ae7d1ef53c01c203",
+    "leases_sha256": "3C97169B9983F3752C702C2921190B2505EF35EACDE12492939A3930968D7407",
+    "matching_descent_or_exact_preimage_records": 0,
+    "operation_spec_variants_checked": 44,
+    "overlays_sha256": "D5116AA61992DCC702453F391F02A0D24D0693FFBF9B57F0EB14F700127574ED",
+    "prior_stable_id_max": "MC-STK-ERR-1412",
+    "registered_rounds_checked_through": 40,
+    "source_map_variants_checked": 49
+  },
+  "independent_candidate_replay": "NOT_PERFORMED",
+  "line_preimages_exact": 6,
+  "nonoverlapping": true,
+  "operations": 6,
+  "passed": true,
+  "payload": {
+    "bytes": 353786,
+    "path": "payload/descent.tex",
+    "sha256": "834AD705629446C8914FA71EB178735C19A2A3C02AD50205FAF07BC8BA40F3CD"
+  },
+  "schema": "stacks-r41-source-validation-v1",
+  "scope": "Source-only exact replay and structural validation; no build, render, final independent replay, admission, or composition claim.",
+  "semantic_units": 6,
+  "structure": {
+    "cites": {
+      "authority": 20,
+      "candidate": 20,
+      "ordered_equal": true
+    },
+    "environments": {
+      "authority": 1010,
+      "candidate": 1010,
+      "ordered_equal": true
+    },
+    "inputs": {
+      "authority": 2,
+      "candidate": 2,
+      "ordered_equal": true
+    },
+    "labels": {
+      "authority": 286,
+      "candidate": 286,
+      "ordered_equal": true
+    },
+    "refs": {
+      "authority": 867,
+      "candidate": 867,
+      "ordered_equal": true
+    }
+  },
+  "unchanged_interval_sha256": "F4807A973B3371458FD1D9BAD1BD3B2FC43C05014CD196D73DF3048FF5838280",
+  "unlisted_byte_changes": 0,
+  "visual_qa": "NOT_PERFORMED"
+}
