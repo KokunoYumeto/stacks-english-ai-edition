@@ -1,0 +1,99 @@
+{
+  "schema": "mathematics-commons-stacks-registry-admission-receipt/v1",
+  "candidate_id": "stacks-errata-a04446e-r41",
+  "status": "PASS",
+  "admitted_at_utc": "2026-09-05T12:58:34.350Z",
+  "candidate_commit": "c4fccd058f8a0fafe8bd9f5083623395d8325194",
+  "candidate_tree": "5a95cdce7ed753e25628a8726c7ae7b8b7429624",
+  "manifest": {
+    "path": "candidate.manifest.json",
+    "bytes": 10700,
+    "sha256": "62CC4D62ACB89337D8280CAF04448B636549CBB8984C42C304D2B0349809EB9E"
+  },
+  "operation_spec": {
+    "path": "operation-spec.json",
+    "bytes": 6310,
+    "sha256": "9D6A9B3950AD4F0DC727B1718F31FD2A50AA84C62FC35FF89D3E815C80A55AB0"
+  },
+  "source_map": {
+    "path": "source-map.jsonl",
+    "bytes": 9778,
+    "sha256": "F06C93C135D2799FE81EDEFFE4640B509F2B43252F345B26A251E05F85FC9A21"
+  },
+  "final_review": {
+    "path": "replay/FINAL_INDEPENDENT_REVIEW.json",
+    "bytes": 7366,
+    "sha256": "AC2D55939AEC439FCEED967E2AAAB41F20B0496989BF80C0867D6E59F99BBC2E"
+  },
+  "stable_id_count": 6,
+  "stable_ids": [
+    "MC-STK-ERR-1413",
+    "MC-STK-ERR-1414",
+    "MC-STK-ERR-1415",
+    "MC-STK-ERR-1416",
+    "MC-STK-ERR-1417",
+    "MC-STK-ERR-1418"
+  ],
+  "producer_ids": [
+    "DESCENT-024",
+    "DESCENT-025",
+    "DESCENT-026",
+    "DESCENT-027",
+    "DESCENT-028",
+    "DESCENT-029"
+  ],
+  "classification": {
+    "source_defect": 1,
+    "editorial_or_notational_clarification": 5
+  },
+  "grouping_notes": [
+    "DESCENT-027 is one atomic three-line correction replacing the unprimed point and morphism by x' and f' throughout the base-change equivalence.",
+    "Each accepted stable unit has exactly one nonoverlapping exact-preimage operation; all six operations replay in descending-byte order to the payload byte-for-byte.",
+    "The R41 loci begin after the admitted R40 interval, so this batch composes strictly after R40 without a source-locus overlap."
+  ],
+  "registry": {
+    "before_sha256": "D5116AA61992DCC702453F391F02A0D24D0693FFBF9B57F0EB14F700127574ED",
+    "after_sha256": "2E6591520F9ADE96B69A0463DB5A5617E319046DD91218170B7DA48DDFFCA14B",
+    "last_overlay": "stacks-errata-a04446e-r41",
+    "prior_entries_unchanged": 41,
+    "current_entries": 42,
+    "unique_stable_ids": 1166
+  },
+  "leases": {
+    "before_sha256": "BA73C7AD3D221EA870298787511E31DBE9B3128CB372CA09BD376E33C22F6C68",
+    "after_sha256": "4BDEF2CC7327779CA1C6A996E836A59148359CAC835CE146458A7143A46C7F5E",
+    "issued_event": "lease-event-000086",
+    "released_event": "lease-event-000087",
+    "prior_events_unchanged": 86
+  },
+  "fresh_replay": {
+    "passed": true,
+    "units": 6,
+    "operations": 6,
+    "producer_rows": 6,
+    "manifest_references": 59,
+    "payload_sha256": {
+      "descent.tex": "834AD705629446C8914FA71EB178735C19A2A3C02AD50205FAF07BC8BA40F3CD"
+    },
+    "exact_preimages_descending_byte_replay": true,
+    "strict_registry_schemas": 2,
+    "workflow_check": "42 admitted manifests and exact byte closures; 87 lease events; 1166 globally unique stable IDs; 3 unrelated active leases"
+  },
+  "validation_reader": {
+    "pages": 93,
+    "bytes": 1037214,
+    "sha256": "B2891281F31B3D8DD1F226BAA58D5EC7ECFE9EB1951E7AB657650AA4C33A6FD8",
+    "reproducible": true,
+    "visual_gate": "All 93 pages covered by six contact sheets; fifteen high-resolution pages included all three correction-sensitive and twelve inherited-diagnostic pages; zero blocking findings.",
+    "adverse_evidence": "Inherited 397 distinct/561 occurrence external-reference warnings, 20 overfull hboxes, and one underfull vbox match authority; untagged standalone PDF; not a complete cumulative reader or independent certification."
+  },
+  "workflow_successor": "Extends the append-only registry with the separately leased, independently replayed DESCENT-024..029 batch while preserving every prior registry entry and lease event byte-for-byte.",
+  "constraints": {
+    "authority_mutated": false,
+    "producer_target_mutated": false,
+    "generated_source_composed": false,
+    "generated_source_pushed": false,
+    "published": false
+  },
+  "next_action": "Commit the separate registrar admission; verify committed and fresh-checkout bytes, then publish only the registrar branch and anonymously read back this exact batch. Hand off R41 only to the separate composer."
+}
