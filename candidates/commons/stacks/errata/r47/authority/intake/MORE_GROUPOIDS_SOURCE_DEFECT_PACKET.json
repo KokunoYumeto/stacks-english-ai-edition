@@ -1,0 +1,635 @@
+{
+  "schema": "stacks-fr-bounded-source-defect-packet-v1",
+  "chapter": 40,
+  "source_file": "more-groupoids.tex",
+  "recorded_at": "2026-09-05T16:49:17.448392+00:00",
+  "authority": {
+    "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\03_working_translations\\stacks_cjk_20260821\\upstream\\src\\stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14\\more-groupoids.tex",
+    "bytes": 121107,
+    "sha256": "F2D59ED504EC35DDA72BF2906F579312EAC2593CE952B84688ACE59B3CF87199"
+  },
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "producer": "French Stacks translation lane",
+  "disposition": "PROVISIONAL_FOR_CANON_ADJUDICATION",
+  "unit_count": 23,
+  "notes": [
+    "Single bounded packet from all six chapter direct-review receipts.",
+    "Canon must independently deduplicate, verify, and assign canonical erratum IDs."
+  ],
+  "units": [
+    {
+      "producer_id": "FR-MORE-GROUPOIDS-001",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\MORE_GROUPOIDS_DIRECT_QA_00001_00550.json",
+        "bytes": 12076,
+        "sha256": "1799AE05C9BF66E42C70DDE20110B358A47F21187A613EC4144F6D4416C9E385"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        228
+      ],
+      "authority_excerpt_utf8_lf": "of the lemma. Thus to prove statement we only have to show\n",
+      "authority_excerpt_sha256": "70885FC3DDEE1786756A9B07E10F32FC1DF7C75BBBCB08DF7EAEA053AD0A217E",
+      "producer_observation": {
+        "authority_line": 228,
+        "confidence": "high",
+        "kind": "prose_grammar",
+        "observation": "The authority reads 'Thus to prove statement'; standard English requires 'Thus to prove the statement'.",
+        "handling": "The intended statement was rendered idiomatically in French; authority and protected formal material were not changed."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-MORE-GROUPOIDS-002",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\MORE_GROUPOIDS_DIRECT_QA_00001_00550.json",
+        "bytes": 12076,
+        "sha256": "1799AE05C9BF66E42C70DDE20110B358A47F21187A613EC4144F6D4416C9E385"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        249,
+        250
+      ],
+      "authority_excerpt_utf8_lf": "is a base change of the morphism $U \\to [U/R]$ (see\nDiagram (\\ref{equation-quotient-stack}).\n",
+      "authority_excerpt_sha256": "750FD745D89A237AE94AE7E56113498778B0DE86E485DFC380600F796463E22A",
+      "producer_observation": {
+        "authority_lines": [
+          249,
+          250
+        ],
+        "confidence": "high",
+        "kind": "unbalanced_prose_parenthesis",
+        "observation": "The parenthesis opened by '(see' is not separately closed from the parenthesis around the diagram reference.",
+        "handling": "The French prose closes both parentheses on authority-aligned line 250; the reference token is unchanged, and the authority was not mutated."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-MORE-GROUPOIDS-003",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\MORE_GROUPOIDS_DIRECT_QA_00001_00550.json",
+        "bytes": 12076,
+        "sha256": "1799AE05C9BF66E42C70DDE20110B358A47F21187A613EC4144F6D4416C9E385"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        269,
+        499,
+        500,
+        549,
+        550
+      ],
+      "authority_excerpt_utf8_lf": "Denote $h$ the composition\nFor a point $u \\in U$ we will denote $F_u = s^{-1}(u)$ the scheme\ntheoretic fibre of $s : R \\to U$ over $u$. For example the diagram\nDenote $F_u = s^{-1}(u)$ and $F_{u'} = s^{-1}(u')$ the scheme\ntheoretic fibres.\n",
+      "authority_excerpt_sha256": "6EBAFEA9D31E7A40711D637996C5ACBBBDD9F359296B8D81A9AF2EC5B2A34DCB",
+      "producer_observation": {
+        "authority_lines": [
+          269,
+          499,
+          500,
+          549,
+          550
+        ],
+        "confidence": "medium",
+        "kind": "recurrent_prose_syntax",
+        "observation": "The authority repeatedly uses 'denote X the ...' without 'by' (or an equivalent construction), including 'Denote h the composition' and 'Denote F_u ... the fibres'.",
+        "handling": "Idiomatic French 'notons' constructions were used; all symbols and formulas remain exact."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-MORE-GROUPOIDS-004",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\MORE_GROUPOIDS_DIRECT_QA_00001_00550.json",
+        "bytes": 12076,
+        "sha256": "1799AE05C9BF66E42C70DDE20110B358A47F21187A613EC4144F6D4416C9E385"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        340,
+        341,
+        342,
+        345,
+        346,
+        347
+      ],
+      "authority_excerpt_utf8_lf": "the two projections of the left hand side\nto $U' \\times_{g, U, t} R$ agree with the morphisms $\\text{pr}_{01}$\nand $\\text{pr}_{02}$ on the right hand side. Since\nwe conclude that $W(\\mathcal{P}, h)$ is the inverse image of a subset of $U$,\nwhich is necessarily the open set\n$W = \\sigma^{-1}(W(\\mathcal{P}, h))$.\n",
+      "authority_excerpt_sha256": "40EE8FB6A36E600188EAA2ADB8F652293FCA1AC6EE38F3C41545CB9B4CD84B8A",
+      "producer_observation": {
+        "authority_lines": [
+          340,
+          341,
+          342,
+          345,
+          346,
+          347
+        ],
+        "confidence": "high",
+        "kind": "base_space_mismatch",
+        "observation": "The descent argument identifies the two projections over U' and uses the section sigma from U', but line 345 says the invariant open is the inverse image of a subset of U rather than U'.",
+        "handling": "The formula token $U$ was preserved byte-for-byte under the math-byte contract; no silent mathematical correction or canon contact was made."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-MORE-GROUPOIDS-005",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\MORE_GROUPOIDS_DIRECT_QA_00001_00550.json",
+        "bytes": 12076,
+        "sha256": "1799AE05C9BF66E42C70DDE20110B358A47F21187A613EC4144F6D4416C9E385"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        524,
+        525
+      ],
+      "authority_excerpt_utf8_lf": "\\item $g$ and $g'$ are an open immersion (resp.\\ \\'etale, smooth, syntomic,\nflat and locally of finite presentation) at $s''$,\n",
+      "authority_excerpt_sha256": "6CB88B3974C06EDB89655995A435D1A4A77B0CB05435C805C4F9944A42A8C186",
+      "producer_observation": {
+        "authority_lines": [
+          524,
+          525
+        ],
+        "confidence": "high",
+        "kind": "prose_number_agreement",
+        "observation": "The plural subject formed by g and g-prime is followed by the singular predicate 'are an open immersion'.",
+        "handling": "The French predicate was rendered in the plural while preserving all symbols and TeX commands."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-MORE-GROUPOIDS-006",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\MORE_GROUPOIDS_DIRECT_QA_00551_01100.json",
+        "bytes": 14063,
+        "sha256": "D869F0F18951C9B15FDDDB6E2CCE27866F853AD4CDA1F45879ED438E5FC3576B"
+      },
+      "receipt_field": "bounded_source_defect_candidates",
+      "authority_lines": [
+        597,
+        599
+      ],
+      "authority_excerpt_utf8_lf": "These can be used to show that properties (1) and (2) of the\n$\\tau$-topology''.\n",
+      "authority_excerpt_sha256": "9E3FEABD902CCBB337F8E803B7B1E8D105C12D65646F4DE481E8327BCB3256D3",
+      "producer_observation": {
+        "id": "MG02-SD-001",
+        "authority_line_range": {
+          "start": 597,
+          "end": 599
+        },
+        "source_excerpt_sha256_lf": "332E05E5F4DBCC7CF47A1280F0AE05CFC312EBDB0E64D6A87FE87683E1647062",
+        "evidence": "The clause introduced by show that ends after the noun phrase properties (1) and (2) of the definition and has no predicate.",
+        "likely_issue": "Omitted predicate such as hold.",
+        "target_action": "The incomplete syntax is preserved in French; no silent repair was made."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-MORE-GROUPOIDS-007",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\MORE_GROUPOIDS_DIRECT_QA_00551_01100.json",
+        "bytes": 14063,
+        "sha256": "D869F0F18951C9B15FDDDB6E2CCE27866F853AD4CDA1F45879ED438E5FC3576B"
+      },
+      "receipt_field": "bounded_source_defect_candidates",
+      "authority_lines": [
+        654,
+        655
+      ],
+      "authority_excerpt_utf8_lf": "This gives us an open $U' \\subset U$ such that\nLet $t^{-1}(U') \\subset R$ is the largest open subscheme of $R$\n",
+      "authority_excerpt_sha256": "F1572B8D0721D1E4151D21DB55DEC6B4B21153027D0F5CE86BA52F15546D678A",
+      "producer_observation": {
+        "id": "MG02-SD-002",
+        "authority_line_range": {
+          "start": 654,
+          "end": 655
+        },
+        "source_excerpt_sha256_lf": "F1572B8D0721D1E4151D21DB55DEC6B4B21153027D0F5CE86BA52F15546D678A",
+        "evidence": "After such that, the next sentence begins with Let but continues with is, producing an ill-formed construction.",
+        "likely_issue": "Stray Let.",
+        "target_action": "The corresponding stray Soit is preserved; no silent repair was made."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-MORE-GROUPOIDS-008",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\MORE_GROUPOIDS_DIRECT_QA_00551_01100.json",
+        "bytes": 14063,
+        "sha256": "D869F0F18951C9B15FDDDB6E2CCE27866F853AD4CDA1F45879ED438E5FC3576B"
+      },
+      "receipt_field": "bounded_source_defect_candidates",
+      "authority_lines": [
+        769
+      ],
+      "authority_excerpt_utf8_lf": "let $h' = s' \\circ \\text{pr}_1 : U'' \\times_{g', U', t} R \\to U'$, and\n",
+      "authority_excerpt_sha256": "D566916ABED016651B9F9B0BDCAC91EBA59290B453639DC2E5DB10B9816C1A38",
+      "producer_observation": {
+        "id": "MG02-SD-003",
+        "authority_line_range": {
+          "start": 769,
+          "end": 769
+        },
+        "source_excerpt_sha256_lf": "D566916ABED016651B9F9B0BDCAC91EBA59290B453639DC2E5DB10B9816C1A38",
+        "evidence": "The declared domain of h-prime ends in R although h-prime uses s-prime, whose source is R-prime; the diagram at line 774 uses R-prime.",
+        "likely_issue": "R should possibly be R-prime in the displayed domain.",
+        "target_action": "Formula bytes are preserved exactly."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-MORE-GROUPOIDS-009",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\MORE_GROUPOIDS_DIRECT_QA_00551_01100.json",
+        "bytes": 14063,
+        "sha256": "D869F0F18951C9B15FDDDB6E2CCE27866F853AD4CDA1F45879ED438E5FC3576B"
+      },
+      "receipt_field": "bounded_source_defect_candidates",
+      "authority_lines": [
+        854
+      ],
+      "authority_excerpt_utf8_lf": "((u', r_0), (u'', r_1)) = ((v', p), (v'', c(r, p))\n",
+      "authority_excerpt_sha256": "A6E3E5BE8B087C6CCC19F29A7DC1D102008E521541B3765CEFA4D503D6EFDDC8",
+      "producer_observation": {
+        "id": "MG02-SD-004",
+        "authority_line_range": {
+          "start": 854,
+          "end": 854
+        },
+        "source_excerpt_sha256_lf": "A6E3E5BE8B087C6CCC19F29A7DC1D102008E521541B3765CEFA4D503D6EFDDC8",
+        "evidence": "The right-hand side of the displayed ordered-pair equality has one unmatched opening parenthesis.",
+        "likely_issue": "One closing parenthesis is missing.",
+        "target_action": "Formula bytes are preserved exactly."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-MORE-GROUPOIDS-010",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\MORE_GROUPOIDS_DIRECT_QA_00551_01100.json",
+        "bytes": 14063,
+        "sha256": "D869F0F18951C9B15FDDDB6E2CCE27866F853AD4CDA1F45879ED438E5FC3576B"
+      },
+      "receipt_field": "bounded_source_defect_candidates",
+      "authority_lines": [
+        867
+      ],
+      "authority_excerpt_utf8_lf": "let $h' = s' \\circ \\text{pr}_1 : U'' \\times_{g', U', t} R \\to U'$, and\n",
+      "authority_excerpt_sha256": "D566916ABED016651B9F9B0BDCAC91EBA59290B453639DC2E5DB10B9816C1A38",
+      "producer_observation": {
+        "id": "MG02-SD-005",
+        "authority_line_range": {
+          "start": 867,
+          "end": 867
+        },
+        "source_excerpt_sha256_lf": "D566916ABED016651B9F9B0BDCAC91EBA59290B453639DC2E5DB10B9816C1A38",
+        "evidence": "The same h-prime domain ending in R reappears although h-prime uses s-prime.",
+        "likely_issue": "Repeated occurrence of MG02-SD-003.",
+        "target_action": "Formula bytes are preserved exactly."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-MORE-GROUPOIDS-011",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\MORE_GROUPOIDS_DIRECT_QA_00551_01100.json",
+        "bytes": 14063,
+        "sha256": "D869F0F18951C9B15FDDDB6E2CCE27866F853AD4CDA1F45879ED438E5FC3576B"
+      },
+      "receipt_field": "bounded_source_defect_candidates",
+      "authority_lines": [
+        895,
+        896
+      ],
+      "authority_excerpt_utf8_lf": "$\\{\\text{pr}_0 : U' \\times_{g, U, t} R \\to U'\\}$ is a $\\tau$-covering\nas a base change of $\\tau$ and condition (a).\n",
+      "authority_excerpt_sha256": "746EA7FA1503EA571B825F4AC35E86B8E556698BDAF772F9DBC6CBB6BBC8437A",
+      "producer_observation": {
+        "id": "MG02-SD-006",
+        "authority_line_range": {
+          "start": 895,
+          "end": 896
+        },
+        "source_excerpt_sha256_lf": "746EA7FA1503EA571B825F4AC35E86B8E556698BDAF772F9DBC6CBB6BBC8437A",
+        "evidence": "The projection is described as a base change of tau, but tau is a topology rather than a morphism; condition (a) concerns the morphism t.",
+        "likely_issue": "The intended phrase may be base change of t, using condition (a).",
+        "target_action": "The source statement is translated without mathematical correction."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-MORE-GROUPOIDS-012",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\MORE_GROUPOIDS_DIRECT_QA_00551_01100.json",
+        "bytes": 14063,
+        "sha256": "D869F0F18951C9B15FDDDB6E2CCE27866F853AD4CDA1F45879ED438E5FC3576B"
+      },
+      "receipt_field": "bounded_source_defect_candidates",
+      "authority_lines": [
+        1082
+      ],
+      "authority_excerpt_utf8_lf": "Then extend to $\\tau : \\kappa(\\alpha) \\to k'$ using that $k'$ is\n",
+      "authority_excerpt_sha256": "D3D5AE6236B40707D54892B89535A3B3A0A63FC33AA3DD3323E0C47D79349A66",
+      "producer_observation": {
+        "id": "MG02-SD-007",
+        "authority_line_range": {
+          "start": 1082,
+          "end": 1082
+        },
+        "source_excerpt_sha256_lf": "D3D5AE6236B40707D54892B89535A3B3A0A63FC33AA3DD3323E0C47D79349A66",
+        "evidence": "The field kappa(alpha) is undefined in context, the extension map is named tau although the preceding embedding is sigma, and tau is introduced later as an automorphism of k-prime.",
+        "likely_issue": "Both the field and the map name appear inconsistent with the surrounding construction.",
+        "target_action": "Formula bytes are preserved exactly."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-MORE-GROUPOIDS-013",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\MORE_GROUPOIDS_DIRECT_QA_01651_02200.json",
+        "bytes": 10211,
+        "sha256": "6EE56DEF17C62522C23694E1DCE53868EDF805265DA0709809EDCA42DA581E88"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        1736
+      ],
+      "authority_excerpt_utf8_lf": "Hence the scheme $Z \\times_{\\text{pr}_1, U, \\text{pr}_0} Z \\subset Z$\n",
+      "authority_excerpt_sha256": "1F1EDA984B8DFA3C39EEE413C1115C9BDFFE35E0323F9102BEFE4011716EE6FB",
+      "producer_observation": {
+        "authority_line": 1736,
+        "confidence": "high",
+        "kind": "formula_typing",
+        "observation": "The displayed-in-prose inclusion places the composable-arrow fibre product Z ×_U Z inside Z, although no such canonical immersion is available at this point; the proof is establishing a composition morphism from that fibre product to Z.",
+        "handling": "Formula bytes preserved exactly; no authority mutation and no canon contact."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-MORE-GROUPOIDS-014",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\MORE_GROUPOIDS_DIRECT_QA_01651_02200.json",
+        "bytes": 10211,
+        "sha256": "6EE56DEF17C62522C23694E1DCE53868EDF805265DA0709809EDCA42DA581E88"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        1944,
+        1949,
+        1972
+      ],
+      "authority_excerpt_utf8_lf": "B/s(\\mathfrak m)B + t(\\mathfrak m)B\nB_{\\mathfrak q}/s(\\mathfrak m)B_{\\mathfrak q} + t(\\mathfrak m)B_{\\mathfrak q}\nB_{\\mathfrak q}/s(\\mathfrak m)B_{\\mathfrak q} + t(\\mathfrak m)B_{\\mathfrak q}$\n",
+      "authority_excerpt_sha256": "260E832F648FED9D9AE6CC5A6AFB0299EDC2B8E4469BC2A560D2A21C6467D482",
+      "producer_observation": {
+        "authority_lines": [
+          1944,
+          1949,
+          1972
+        ],
+        "confidence": "high",
+        "kind": "quotient_parenthesization",
+        "observation": "The denominators are printed without parentheses as B/s(m)B + t(m)B (and its localized form), while the surrounding tensor-product computation and later formulas require B/(s(m)B + t(m)B).",
+        "handling": "Formula bytes preserved exactly; no authority mutation and no canon contact."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-MORE-GROUPOIDS-015",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\MORE_GROUPOIDS_DIRECT_QA_01651_02200.json",
+        "bytes": 10211,
+        "sha256": "6EE56DEF17C62522C23694E1DCE53868EDF805265DA0709809EDCA42DA581E88"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        1957
+      ],
+      "authority_excerpt_utf8_lf": "\\dim(B_{\\mathfrak q}/(s(\\mathfrak m)B_{\\mathfrak q} + fB_{\\mathfrak q}) < d_2\n",
+      "authority_excerpt_sha256": "E7427DB3FD1D67B8A08442FDE888492F0BC57E1AD6F0830F5B0AC4C61255987E",
+      "producer_observation": {
+        "authority_line": 1957,
+        "confidence": "high",
+        "kind": "formula_syntax_and_typing",
+        "observation": "The formula lacks the closing parenthesis for dim(·) before < d_2 and writes fB_q inside the t-side B_q-algebra, where the subsequent proof uses t(f)B_q.",
+        "handling": "Formula bytes preserved exactly; no authority mutation and no canon contact."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-MORE-GROUPOIDS-016",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\MORE_GROUPOIDS_DIRECT_QA_01651_02200.json",
+        "bytes": 10211,
+        "sha256": "6EE56DEF17C62522C23694E1DCE53868EDF805265DA0709809EDCA42DA581E88"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        1974
+      ],
+      "authority_excerpt_utf8_lf": "$\\mathfrak m \\not \\subset t^{-1}(\\mathfrak n_i)$.\n",
+      "authority_excerpt_sha256": "DD9E3006F79A3A2ECD83116D9E05E56235E0D37DD4D4B271A3D5656C2FEC1E94",
+      "producer_observation": {
+        "authority_line": 1974,
+        "confidence": "high",
+        "kind": "index_inconsistency",
+        "observation": "The minimal primes are indexed by j immediately before and after this line, but the formula here uses n_i.",
+        "handling": "Formula bytes preserved exactly; no authority mutation and no canon contact."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-MORE-GROUPOIDS-017",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\MORE_GROUPOIDS_DIRECT_QA_01651_02200.json",
+        "bytes": 10211,
+        "sha256": "6EE56DEF17C62522C23694E1DCE53868EDF805265DA0709809EDCA42DA581E88"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        1998
+      ],
+      "authority_excerpt_utf8_lf": "Cohen-Macaulay ring of positive dimension and $f$ is not contained\n",
+      "authority_excerpt_sha256": "B3BB9437C4AEBA3461ECD36E67A0FB35CAC382CC2681E7933365F07FEDAD02C9",
+      "producer_observation": {
+        "authority_line": 1998,
+        "confidence": "high",
+        "kind": "prose_typing",
+        "observation": "The text says f is not contained in any minimal prime of the B_q-quotient, whereas the proved statement is that t(f) avoids those minimal primes.",
+        "handling": "The reader-facing prose was translated without silently replacing f by t(f); no authority mutation and no canon contact."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-MORE-GROUPOIDS-018",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\MORE_GROUPOIDS_DIRECT_QA_01651_02200.json",
+        "bytes": 10211,
+        "sha256": "6EE56DEF17C62522C23694E1DCE53868EDF805265DA0709809EDCA42DA581E88"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        2047
+      ],
+      "authority_excerpt_utf8_lf": "\\item $\\dim_{e(u)}(F'_u) = \\dim(G'_u)$.\n",
+      "authority_excerpt_sha256": "939175889E39134747EF4CEF638E9D02BF8F256454906FFE46E46FB46DC3A59F",
+      "producer_observation": {
+        "authority_line": 2047,
+        "confidence": "high",
+        "kind": "point_notation",
+        "observation": "The dimension of F'_u is taken at e(u), although the corresponding point on the restricted groupoid is e'(u), as used at authority lines 1873 and 2084.",
+        "handling": "Formula bytes preserved exactly; no authority mutation and no canon contact."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-MORE-GROUPOIDS-019",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\MORE_GROUPOIDS_DIRECT_QA_02201_02750.json",
+        "bytes": 13182,
+        "sha256": "21836E642CE5EF8539E5A589FFD05380DF6228A4FFF3EB285291B78A5BBBBA42"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        2437
+      ],
+      "authority_excerpt_utf8_lf": "$s_*\\mathcal{O}_R$ contains $\\mathcal{O}_S$ as a direct summand.\n",
+      "authority_excerpt_sha256": "A791C8DA055ABFC7E82BB917143CC8FD78CB69E184A5A8EBB94F0BDC828F53D0",
+      "producer_observation": {
+        "id": "MG05-SD-2437",
+        "authority_line": 2437,
+        "authority_text": "$s_*\\mathcal{O}_R$ contains $\\mathcal{O}_S$ as a direct summand.",
+        "bounded_evidence": "Authority line 2436 says that $e : U \\to R$ is a section of $s : R \\to U$. The induced split algebra map is naturally $\\mathcal{O}_U \\to s_*\\mathcal{O}_R$, whereas $\\mathcal{O}_S$ is not an $\\mathcal{O}_U$-module here without an unstated pullback.",
+        "likely_intended_token": "\\mathcal{O}_U",
+        "confidence": "very high",
+        "target_action": "reported only; the authority token \\mathcal{O}_S was preserved"
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-MORE-GROUPOIDS-020",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\MORE_GROUPOIDS_DIRECT_QA_02201_02750.json",
+        "bytes": 13182,
+        "sha256": "21836E642CE5EF8539E5A589FFD05380DF6228A4FFF3EB285291B78A5BBBBA42"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        2479
+      ],
+      "authority_excerpt_utf8_lf": "subscheme of $U$, it is true that $W_0$ is a thickening of $W'_0$,\n",
+      "authority_excerpt_sha256": "D375A321AC612F0620E4714A5C8B7936A5457801D04A1B33D5B2ED46BE517707",
+      "producer_observation": {
+        "id": "MG05-SD-2479",
+        "authority_line": 2479,
+        "authority_text": "it is true that $W_0$ is a thickening of $W'_0$",
+        "bounded_evidence": "Authority line 2478 defines $W_1 = W'_1 = U \\setminus Z_1$ and lines 2480-2482 immediately discuss the restriction indexed by 1. No $W_0$ or $W'_0$ is defined in this construction.",
+        "likely_intended_tokens": [
+          "W_1",
+          "W'_1"
+        ],
+        "confidence": "very high",
+        "target_action": "reported only; the authority subscripts 0 were preserved"
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-MORE-GROUPOIDS-021",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\MORE_GROUPOIDS_DIRECT_QA_02201_02750.json",
+        "bytes": 13182,
+        "sha256": "21836E642CE5EF8539E5A589FFD05380DF6228A4FFF3EB285291B78A5BBBBA42"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        2661
+      ],
+      "authority_excerpt_utf8_lf": "we can find an affine open containing $\\{u_{ij}\\}$\n",
+      "authority_excerpt_sha256": "E58ACCC6242AFBD887B0B4D6A1DD9B30F4F9F73D6F0B975A3815031E3A800C5F",
+      "producer_observation": {
+        "id": "MG05-SD-2661",
+        "authority_line": 2661,
+        "authority_text": "we can find an affine open containing $\\{u_{ij}\\}$",
+        "bounded_evidence": "Authority line 2643 names the orbit of $u_j$ as $\\{u_{j1}, \\ldots, u_{jn_j}\\}$. Reversing the indices to $u_{ij}$ at line 2661 is inconsistent with the locally established notation.",
+        "likely_intended_token": "\\{u_{ji}\\}",
+        "confidence": "high",
+        "target_action": "reported only; the authority index order was preserved"
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-MORE-GROUPOIDS-022",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\MORE_GROUPOIDS_DIRECT_QA_02201_02750.json",
+        "bytes": 13182,
+        "sha256": "21836E642CE5EF8539E5A589FFD05380DF6228A4FFF3EB285291B78A5BBBBA42"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        2750
+      ],
+      "authority_excerpt_utf8_lf": "and $u, u' \\in R$ are distinct points in the same orbit,\n",
+      "authority_excerpt_sha256": "451B1D0887E0BE50F991563F5B0CD09C04AE5880534AED0CA96AF6F86E980185",
+      "producer_observation": {
+        "id": "MG05-SD-2750",
+        "authority_line": 2750,
+        "authority_text": "and $u, u' \\in R$ are distinct points in the same orbit,",
+        "bounded_evidence": "Authority lines 2531-2532 define the $R$-orbit of a point $u \\in U$ as a subset of $U$. The membership $u, u' \\in R$ at line 2750 is therefore type-inconsistent with the lease-local definition.",
+        "likely_intended_token": "U",
+        "confidence": "very high",
+        "target_action": "reported only; the authority membership in R was preserved"
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-MORE-GROUPOIDS-023",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\MORE_GROUPOIDS_DIRECT_QA_02751_03205.json",
+        "bytes": 11357,
+        "sha256": "9D0F791836FEF361B9CB6A23FBD5746459AB5EF77ACBD124E70736AC8C681BB9"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        2941,
+        2944
+      ],
+      "authority_excerpt_utf8_lf": "Let $f' \\in A_h$ be the image of $f$. Then $(j')^{-1}D(f')$\nHence $(j')^{-1}D(f)$ is affine. Finally,\n",
+      "authority_excerpt_sha256": "07E1B843A11ED9E3E36D2E08549FAE0E4436C6C1690E7D1F7B738861FFE04591",
+      "producer_observation": {
+        "candidate_id": "MG-06-SRC-001",
+        "authority_lines": [
+          2941,
+          2944
+        ],
+        "kind": "notation_inconsistency",
+        "confidence": "high",
+        "evidence": "Authority line 2941 defines f' as the image of f in A_h and states the condition with (j')^{-1}D(f'); authority line 2944 then says (j')^{-1}D(f) is affine, although the ambient spectrum is Spec(A_h) and the immediately invoked affine criterion is phrased using f'.",
+        "probable_intent": "Use (j')^{-1}D(f') at authority line 2944.",
+        "target_disposition": "The source formula (j')^{-1}D(f) was preserved byte-for-byte; no silent correction was made.",
+        "canon_contacted": false
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    }
+  ]
+}

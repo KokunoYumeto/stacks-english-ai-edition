@@ -1,0 +1,237 @@
+{
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_inputs": {
+    "more-groupoids.tex": {
+      "bytes": 121107,
+      "path": "more-groupoids.tex",
+      "sha256": "F2D59ED504EC35DDA72BF2906F579312EAC2593CE952B84688ACE59B3CF87199"
+    }
+  },
+  "authority_phase": {
+    "stems": {
+      "more-groupoids": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "more-groupoids.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 64320,
+            "stdout_sha256_raw": "ADAB69C8799F385EF019E813CB7496844CC43708AEA7442CA46AA5A7B1D1425B"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "more-groupoids"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 151,
+            "stdout_sha256_raw": "5C8156A8A3A135B610CCC1C8A71342DA0F445C55F4409FD5D625D03558BEA17B"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "more-groupoids.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 54678,
+            "stdout_sha256_raw": "08434EB69CA0760F7CDB1E3F48BAA6B11E7780F42A9789ECD9DE508A2ECB1461"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "more-groupoids.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 54323,
+            "stdout_sha256_raw": "F2B33B02A522EE9088591F29E5CD8202D473F3D0230FD04BEDECAA5FC38FAD75"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 151,
+            "path": "builds/more-groupoids.authority.bibtex.txt",
+            "sha256": "5C8156A8A3A135B610CCC1C8A71342DA0F445C55F4409FD5D625D03558BEA17B"
+          },
+          "fls": {
+            "bytes": 27580,
+            "path": "builds/more-groupoids.authority.fls",
+            "sha256": "31DC123FDAF9E603C8E8AAE50EAF7E44B9543763638297424787C0684F3B3BB5"
+          },
+          "fls_dependencies": {
+            "bytes": 62013,
+            "path": "builds/more-groupoids.authority.fls-dependencies.json",
+            "sha256": "23AF5B2A97B4DBF6189F59B9650AD369BF3258E9E8AF0B41C166718FEA48E24E"
+          },
+          "log": {
+            "bytes": 67543,
+            "path": "builds/more-groupoids.authority.log",
+            "sha256": "B202715FC4CED82446938A2A7BE3BD0F15D5A3EAB654192D49C3EA4DF3343292"
+          },
+          "pass3_stdout": {
+            "bytes": 53899,
+            "path": "builds/more-groupoids.authority.pass3.txt",
+            "sha256": "B4EAA3FD656BD42FB81C7BF7DC01A897DDE6A6AED8D9D90E098C4B56269320CC"
+          },
+          "pdf": {
+            "bytes": 593488,
+            "path": "builds/more-groupoids.authority.pdf",
+            "sha256": "BC40C852E1457996E6D7AC79ECE0462D1ACEC244CDC3441A6FDF3DFFCF54A482"
+          }
+        },
+        "source": {
+          "bytes": 121107,
+          "path": "more-groupoids.tex",
+          "sha256": "F2D59ED504EC35DDA72BF2906F579312EAC2593CE952B84688ACE59B3CF87199"
+        }
+      }
+    }
+  },
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "candidate_id": "stacks-errata-a04446e-r47",
+  "candidate_inputs": {
+    "more-groupoids.tex": {
+      "bytes": 121125,
+      "path": "more-groupoids.tex",
+      "sha256": "039BA96AEA5ED3BA59A7CB0EECB5D8F7491CCF1C2FCEB49211BA7CECF1C0BDDF"
+    }
+  },
+  "candidate_phase": {
+    "stems": {
+      "more-groupoids": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "more-groupoids.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 64320,
+            "stdout_sha256_raw": "0CC53FE0AB7F840B5B85C9965DC4BF035E1C3A951A53090C8406AD19207704A5"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "more-groupoids"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 151,
+            "stdout_sha256_raw": "5C8156A8A3A135B610CCC1C8A71342DA0F445C55F4409FD5D625D03558BEA17B"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "more-groupoids.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 54678,
+            "stdout_sha256_raw": "0E9987D8C78A411182D46C5611D4FEBC26A6A16EE31DF7242EA3AD31C9413521"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "more-groupoids.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 54323,
+            "stdout_sha256_raw": "F3A56FED3F6BA466DFD27F54781CD910EA4E9EEB2931FCAC04CAB9381499B7D1"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 151,
+            "path": "builds/more-groupoids.bibtex.txt",
+            "sha256": "5C8156A8A3A135B610CCC1C8A71342DA0F445C55F4409FD5D625D03558BEA17B"
+          },
+          "fls": {
+            "bytes": 27580,
+            "path": "builds/more-groupoids.fls",
+            "sha256": "31DC123FDAF9E603C8E8AAE50EAF7E44B9543763638297424787C0684F3B3BB5"
+          },
+          "fls_dependencies": {
+            "bytes": 62013,
+            "path": "builds/more-groupoids.fls-dependencies.json",
+            "sha256": "097217FF5F5D0729BE5264C96CB2F965BEBCB188ADD8BDEBCA4BB7BBF88878C5"
+          },
+          "log": {
+            "bytes": 67543,
+            "path": "builds/more-groupoids.log",
+            "sha256": "7B658C695D382A12458D6C6CA0B4E64431BBD598B8109F5DE3597615BB9259A6"
+          },
+          "pass3_stdout": {
+            "bytes": 53899,
+            "path": "builds/more-groupoids.pass3.txt",
+            "sha256": "9AB030C0E5B45258BD6B7009788A7E93DFE838AF7C646E193B9FD5916699AC56"
+          },
+          "pdf": {
+            "bytes": 593445,
+            "path": "builds/more-groupoids.pdf",
+            "sha256": "E21A25766BCE00DE2E850F0BA7E5692FC9949BC65686CDA5CA46AA729CCD7D8C"
+          }
+        },
+        "source": {
+          "bytes": 121125,
+          "path": "more-groupoids.tex",
+          "sha256": "039BA96AEA5ED3BA59A7CB0EECB5D8F7491CCF1C2FCEB49211BA7CECF1C0BDDF"
+        }
+      }
+    }
+  },
+  "completed_at_utc": "2026-09-05T18:38:00Z",
+  "passed": true,
+  "restored_authority_inputs": {
+    "more-groupoids.tex": {
+      "bytes": 121107,
+      "path": "more-groupoids.tex",
+      "sha256": "F2D59ED504EC35DDA72BF2906F579312EAC2593CE952B84688ACE59B3CF87199"
+    }
+  },
+  "schema": "mathematics-commons-stacks-errata-build-execution/v1",
+  "source_date_epoch": "1788633056",
+  "started_at_utc": "2026-09-05T18:37:49Z",
+  "tools": {
+    "bibtex": "MiKTeX-BibTeX 4.2 (MiKTeX 26.5)",
+    "pdflatex": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5)",
+    "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]"
+  },
+  "work_root": "new empty task-local directory outside source and candidate; exact path retained only in private evidence"
+}

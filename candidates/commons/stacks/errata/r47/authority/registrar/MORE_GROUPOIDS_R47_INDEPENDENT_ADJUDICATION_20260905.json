@@ -1,0 +1,516 @@
+{
+  "authority": {
+    "bytes": 121107,
+    "path": "authority/source/more-groupoids.tex",
+    "sha256": "F2D59ED504EC35DDA72BF2906F579312EAC2593CE952B84688ACE59B3CF87199"
+  },
+  "classification": {
+    "editorial_or_notational_clarification": 6,
+    "source_defect": 16
+  },
+  "date": "2026-09-05",
+  "grouping": {
+    "deferred": 0,
+    "exact_operations": 27,
+    "merged_producer_rows": {
+      "FR-MORE-GROUPOIDS-008": "FR-MORE-GROUPOIDS-010"
+    },
+    "multi_operation_units": {
+      "MC-STK-ERR-1525": 3,
+      "MC-STK-ERR-1530": 2,
+      "MC-STK-ERR-1535": 3
+    },
+    "producer_rows": 23,
+    "rejected": 0,
+    "semantic_units": 22,
+    "stable_ids_in_first_locus_authority_order": [
+      "MC-STK-ERR-1523",
+      "MC-STK-ERR-1524",
+      "MC-STK-ERR-1525",
+      "MC-STK-ERR-1526",
+      "MC-STK-ERR-1527",
+      "MC-STK-ERR-1528",
+      "MC-STK-ERR-1529",
+      "MC-STK-ERR-1530",
+      "MC-STK-ERR-1531",
+      "MC-STK-ERR-1532",
+      "MC-STK-ERR-1533",
+      "MC-STK-ERR-1534",
+      "MC-STK-ERR-1535",
+      "MC-STK-ERR-1536",
+      "MC-STK-ERR-1537",
+      "MC-STK-ERR-1538",
+      "MC-STK-ERR-1539",
+      "MC-STK-ERR-1540",
+      "MC-STK-ERR-1541",
+      "MC-STK-ERR-1542",
+      "MC-STK-ERR-1543",
+      "MC-STK-ERR-1544"
+    ]
+  },
+  "intake_originals": [
+    {
+      "bytes": 35737,
+      "logical_path": "<WORKSPACE>/03_projects/language_management/cjk/00_lane_control/STACKS_MORE_GROUPOIDS_INDEPENDENT_INTAKE_20260905_R1.json",
+      "sha256": "E6C73AB66A0C1F182B727B38DA7B53876ED0321CAC8DD006B778A9E044CEE2F5"
+    },
+    {
+      "bytes": 32660,
+      "logical_path": "<WORKSPACE>/03_projects/language_management/romance/03_working_translations/stacks_fr_20260821/p06/evidence/MORE_GROUPOIDS_SOURCE_DEFECT_PACKET.json",
+      "sha256": "9FC8445851924F602BEC1C28C9D0D10F06DD2A48957C24B617AB8E69E5218FEA"
+    }
+  ],
+  "mutations": "Only the leased R47 candidate is materialized; frozen authority, producer/French/CJK sources, generated source, upstream, and registry admission remain untouched.",
+  "passed": true,
+  "prelease_registry": {
+    "matching_producer_ids": 0,
+    "operation_spec_variants_checked": 56,
+    "overlays_sha256": "FB46BBEC97E7C2797F4BA9FE73525F4449AF4767D38B849F076EFC199CDE1487",
+    "prelease_commit": "fad67a6af1c0e957cba18af0676f6ea5540109ed",
+    "prior_exact_preimage_hits": 0,
+    "prior_more_groupoids_operations": 0,
+    "prior_stable_id_max": "MC-STK-ERR-1522",
+    "prior_target_interval_overlaps": 0,
+    "registered_entries_checked": 47,
+    "registered_errata_rounds_checked_through": 46,
+    "source_map_variants_checked": 62
+  },
+  "replay": {
+    "payload_bytes": 121125,
+    "payload_sha256": "039BA96AEA5ED3BA59A7CB0EECB5D8F7491CCF1C2FCEB49211BA7CECF1C0BDDF",
+    "physical_lines": 3205
+  },
+  "rows": [
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-MORE-GROUPOIDS-001 at more-groupoids.tex:228",
+      "operation_count": 1,
+      "producer_class": "prose_grammar",
+      "producer_id": "FR-MORE-GROUPOIDS-001",
+      "producer_ids": [
+        "FR-MORE-GROUPOIDS-001"
+      ],
+      "reason": "The definite statement established by the lemma requires the article: 'to prove the statement'.",
+      "recommendation": "accept",
+      "source_lines": [
+        228
+      ],
+      "stable_id": "MC-STK-ERR-1523"
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-MORE-GROUPOIDS-002 at more-groupoids.tex:250",
+      "operation_count": 1,
+      "producer_class": "unbalanced_parenthesis",
+      "producer_id": "FR-MORE-GROUPOIDS-002",
+      "producer_ids": [
+        "FR-MORE-GROUPOIDS-002"
+      ],
+      "reason": "The parenthesis introduced by '(see' is distinct from the inner parenthesis around the reference and needs its own closing delimiter.",
+      "recommendation": "accept",
+      "source_lines": [
+        250
+      ],
+      "stable_id": "MC-STK-ERR-1524"
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_line_preimage_occurrences": [
+        1,
+        1,
+        1
+      ],
+      "logical_location": "FR-MORE-GROUPOIDS-003 at more-groupoids.tex:269,499,549",
+      "operation_count": 3,
+      "producer_class": "recurrent_prose_syntax",
+      "producer_id": "FR-MORE-GROUPOIDS-003",
+      "producer_ids": [
+        "FR-MORE-GROUPOIDS-003"
+      ],
+      "reason": "In all three constructions, English 'denote by X the object' requires the preposition 'by'.",
+      "recommendation": "accept",
+      "source_lines": [
+        269,
+        499,
+        549
+      ],
+      "stable_id": "MC-STK-ERR-1525"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-MORE-GROUPOIDS-004 at more-groupoids.tex:345",
+      "operation_count": 1,
+      "producer_class": "base_space_mismatch",
+      "producer_id": "FR-MORE-GROUPOIDS-004",
+      "producer_ids": [
+        "FR-MORE-GROUPOIDS-004"
+      ],
+      "reason": "The equalizer descent is along the split projection to U-prime, and sigma has source U-prime; the descended subset is therefore a subset of U-prime, not U.",
+      "recommendation": "accept",
+      "source_lines": [
+        345
+      ],
+      "stable_id": "MC-STK-ERR-1526"
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-MORE-GROUPOIDS-005 at more-groupoids.tex:524",
+      "operation_count": 1,
+      "producer_class": "number_agreement",
+      "producer_id": "FR-MORE-GROUPOIDS-005",
+      "producer_ids": [
+        "FR-MORE-GROUPOIDS-005"
+      ],
+      "reason": "The two morphisms form a plural subject and must be described as open immersions.",
+      "recommendation": "accept",
+      "source_lines": [
+        524
+      ],
+      "stable_id": "MC-STK-ERR-1527"
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-MORE-GROUPOIDS-006 at more-groupoids.tex:599",
+      "operation_count": 1,
+      "producer_class": "missing_predicate",
+      "producer_id": "FR-MORE-GROUPOIDS-006",
+      "producer_ids": [
+        "FR-MORE-GROUPOIDS-006"
+      ],
+      "reason": "The clause introduced by 'show that' otherwise ends with a noun phrase; adding 'hold' supplies the required predicate.",
+      "recommendation": "accept",
+      "source_lines": [
+        599
+      ],
+      "stable_id": "MC-STK-ERR-1528"
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-MORE-GROUPOIDS-007 at more-groupoids.tex:655",
+      "operation_count": 1,
+      "producer_class": "stray_keyword",
+      "producer_id": "FR-MORE-GROUPOIDS-007",
+      "producer_ids": [
+        "FR-MORE-GROUPOIDS-007"
+      ],
+      "reason": "The sentence begins on the previous line with 'such that'; deleting the stray 'Let' restores the grammatical assertion.",
+      "recommendation": "accept",
+      "source_lines": [
+        655
+      ],
+      "stable_id": "MC-STK-ERR-1529"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1,
+        1
+      ],
+      "logical_location": "FR-MORE-GROUPOIDS-008 + FR-MORE-GROUPOIDS-010 at more-groupoids.tex:769,867",
+      "operation_count": 2,
+      "producer_class": "recurrent_restriction_domain_mismatch",
+      "producer_id": "FR-MORE-GROUPOIDS-008",
+      "producer_ids": [
+        "FR-MORE-GROUPOIDS-008",
+        "FR-MORE-GROUPOIDS-010"
+      ],
+      "reason": "Both definitions compose with s-prime, whose source is R-prime; the displayed comparison diagram likewise uses R-prime. The two producer rows are linked occurrences of one defect.",
+      "recommendation": "accept",
+      "source_lines": [
+        769,
+        867
+      ],
+      "stable_id": "MC-STK-ERR-1530"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-MORE-GROUPOIDS-009 at more-groupoids.tex:854",
+      "operation_count": 1,
+      "producer_class": "unbalanced_parenthesis",
+      "producer_id": "FR-MORE-GROUPOIDS-009",
+      "producer_ids": [
+        "FR-MORE-GROUPOIDS-009"
+      ],
+      "reason": "The outer ordered pair on the right-hand side lacks its final closing parenthesis.",
+      "recommendation": "accept",
+      "source_lines": [
+        854
+      ],
+      "stable_id": "MC-STK-ERR-1531"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-MORE-GROUPOIDS-011 at more-groupoids.tex:896",
+      "operation_count": 1,
+      "producer_class": "wrong_base_change_morphism",
+      "producer_id": "FR-MORE-GROUPOIDS-011",
+      "producer_ids": [
+        "FR-MORE-GROUPOIDS-011"
+      ],
+      "reason": "The projection is the base change of t along g; tau is a topology, not a morphism.",
+      "recommendation": "accept",
+      "source_lines": [
+        896
+      ],
+      "stable_id": "MC-STK-ERR-1532"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-MORE-GROUPOIDS-012 at more-groupoids.tex:1082",
+      "operation_count": 1,
+      "producer_class": "undefined_field_and_map",
+      "producer_id": "FR-MORE-GROUPOIDS-012",
+      "producer_ids": [
+        "FR-MORE-GROUPOIDS-012"
+      ],
+      "reason": "The preceding construction defines sigma on the rational function field inside kappa(r), then extends sigma to kappa(r); kappa(alpha) is undefined and tau is reserved for the later automorphism of k-prime.",
+      "recommendation": "accept",
+      "source_lines": [
+        1082
+      ],
+      "stable_id": "MC-STK-ERR-1533"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-MORE-GROUPOIDS-013 at more-groupoids.tex:1736",
+      "operation_count": 1,
+      "producer_class": "false_inclusion",
+      "producer_id": "FR-MORE-GROUPOIDS-013",
+      "producer_ids": [
+        "FR-MORE-GROUPOIDS-013"
+      ],
+      "reason": "The fibre product is not canonically a subscheme of Z; the proof needs only that it is reduced before constructing the composition morphism to Z.",
+      "recommendation": "accept",
+      "source_lines": [
+        1736
+      ],
+      "stable_id": "MC-STK-ERR-1534"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1,
+        1,
+        1
+      ],
+      "logical_location": "FR-MORE-GROUPOIDS-014 at more-groupoids.tex:1944,1949,1972",
+      "operation_count": 3,
+      "producer_class": "recurrent_quotient_parenthesization",
+      "producer_id": "FR-MORE-GROUPOIDS-014",
+      "producer_ids": [
+        "FR-MORE-GROUPOIDS-014"
+      ],
+      "reason": "The tensor-product computation and the subsequent local quotient require quotienting by the sum of the two ideals, not adding the second ideal after taking a quotient.",
+      "recommendation": "accept",
+      "source_lines": [
+        1944,
+        1949,
+        1972
+      ],
+      "stable_id": "MC-STK-ERR-1535"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-MORE-GROUPOIDS-015 at more-groupoids.tex:1957",
+      "operation_count": 1,
+      "producer_class": "formula_syntax_and_map_mismatch",
+      "producer_id": "FR-MORE-GROUPOIDS-015",
+      "producer_ids": [
+        "FR-MORE-GROUPOIDS-015"
+      ],
+      "reason": "The dimension expression needs its outer closing parenthesis, and the relevant B-element is t(f), as used throughout the following flatness and fibre computation.",
+      "recommendation": "accept",
+      "source_lines": [
+        1957
+      ],
+      "stable_id": "MC-STK-ERR-1536"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-MORE-GROUPOIDS-016 at more-groupoids.tex:1974",
+      "operation_count": 1,
+      "producer_class": "index_inconsistency",
+      "producer_id": "FR-MORE-GROUPOIDS-016",
+      "producer_ids": [
+        "FR-MORE-GROUPOIDS-016"
+      ],
+      "reason": "The minimal primes are indexed by j before and after this line; i is unbound here.",
+      "recommendation": "accept",
+      "source_lines": [
+        1974
+      ],
+      "stable_id": "MC-STK-ERR-1537"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-MORE-GROUPOIDS-017 at more-groupoids.tex:1998",
+      "operation_count": 1,
+      "producer_class": "wrong_element_under_ring_map",
+      "producer_id": "FR-MORE-GROUPOIDS-017",
+      "producer_ids": [
+        "FR-MORE-GROUPOIDS-017"
+      ],
+      "reason": "The element of B whose nonzerodivisor property is established is t(f), not the element f of A itself.",
+      "recommendation": "accept",
+      "source_lines": [
+        1998
+      ],
+      "stable_id": "MC-STK-ERR-1538"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-MORE-GROUPOIDS-018 at more-groupoids.tex:2047",
+      "operation_count": 1,
+      "producer_class": "restricted_identity_point_mismatch",
+      "producer_id": "FR-MORE-GROUPOIDS-018",
+      "producer_ids": [
+        "FR-MORE-GROUPOIDS-018"
+      ],
+      "reason": "The fibre and stabilizer belong to the restricted groupoid, whose identity point is e-prime(u), as used in the slicing lemma and induction proof.",
+      "recommendation": "accept",
+      "source_lines": [
+        2047
+      ],
+      "stable_id": "MC-STK-ERR-1539"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-MORE-GROUPOIDS-019 at more-groupoids.tex:2437",
+      "operation_count": 1,
+      "producer_class": "wrong_structure_sheaf",
+      "producer_id": "FR-MORE-GROUPOIDS-019",
+      "producer_ids": [
+        "FR-MORE-GROUPOIDS-019"
+      ],
+      "reason": "A section e:U to R splits the O_U-algebra map O_U to s_*O_R; O_S is not the direct summand supplied by this section.",
+      "recommendation": "accept",
+      "source_lines": [
+        2437
+      ],
+      "stable_id": "MC-STK-ERR-1540"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-MORE-GROUPOIDS-020 at more-groupoids.tex:2479",
+      "operation_count": 1,
+      "producer_class": "undefined_inductive_index",
+      "producer_id": "FR-MORE-GROUPOIDS-020",
+      "producer_ids": [
+        "FR-MORE-GROUPOIDS-020"
+      ],
+      "reason": "The construction has just defined W_1 and W-prime_1; W_0 and W-prime_0 do not exist in this proof.",
+      "recommendation": "accept",
+      "source_lines": [
+        2479
+      ],
+      "stable_id": "MC-STK-ERR-1541"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-MORE-GROUPOIDS-021 at more-groupoids.tex:2661",
+      "operation_count": 1,
+      "producer_class": "reversed_local_indices",
+      "producer_id": "FR-MORE-GROUPOIDS-021",
+      "producer_ids": [
+        "FR-MORE-GROUPOIDS-021"
+      ],
+      "reason": "The orbit of u_j was named {u_{j1},...,u_{jn_j}} and is consistently indexed first by j, then by i.",
+      "recommendation": "accept",
+      "source_lines": [
+        2661
+      ],
+      "stable_id": "MC-STK-ERR-1542"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-MORE-GROUPOIDS-022 at more-groupoids.tex:2750",
+      "operation_count": 1,
+      "producer_class": "object_membership_mismatch",
+      "producer_id": "FR-MORE-GROUPOIDS-022",
+      "producer_ids": [
+        "FR-MORE-GROUPOIDS-022"
+      ],
+      "reason": "Orbits of the groupoid are subsets of U, and the proof immediately chooses r in R with source u and target u-prime.",
+      "recommendation": "accept",
+      "source_lines": [
+        2750
+      ],
+      "stable_id": "MC-STK-ERR-1543"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-MORE-GROUPOIDS-023 at more-groupoids.tex:2944",
+      "operation_count": 1,
+      "producer_class": "ambient_ring_notation_mismatch",
+      "producer_id": "FR-MORE-GROUPOIDS-023",
+      "producer_ids": [
+        "FR-MORE-GROUPOIDS-023"
+      ],
+      "reason": "The principal open in Spec(A_h) is defined by f-prime, the image of f in A_h, exactly as in the preceding sentence.",
+      "recommendation": "accept",
+      "source_lines": [
+        2944
+      ],
+      "stable_id": "MC-STK-ERR-1544"
+    }
+  ],
+  "schema": "stacks-r47-more-groupoids-independent-adjudication/v1",
+  "status": "PASS_ACCEPT_22_NON_DUPLICATIVE_UNITS_27_OPERATIONS"
+}

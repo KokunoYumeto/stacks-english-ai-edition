@@ -1,0 +1,85 @@
+{
+  "adjudication": {
+    "bytes": 17396,
+    "path": "authority/registrar/MORE_GROUPOIDS_R47_INDEPENDENT_ADJUDICATION_20260905.json",
+    "sha256": "B4EBCBDDFA60CE318A91205E1A4B46F680AD6C1AE06D509AF065983EECA41F0F"
+  },
+  "authority": {
+    "bytes": 121107,
+    "path": "authority/source/more-groupoids.tex",
+    "sha256": "F2D59ED504EC35DDA72BF2906F579312EAC2593CE952B84688ACE59B3CF87199"
+  },
+  "build": "NOT_PERFORMED",
+  "deduplication": {
+    "matching_producer_ids": 0,
+    "operation_spec_variants_checked": 56,
+    "overlays_sha256": "FB46BBEC97E7C2797F4BA9FE73525F4449AF4767D38B849F076EFC199CDE1487",
+    "prelease_commit": "fad67a6af1c0e957cba18af0676f6ea5540109ed",
+    "prior_exact_preimage_hits": 0,
+    "prior_more_groupoids_operations": 0,
+    "prior_stable_id_max": "MC-STK-ERR-1522",
+    "prior_target_interval_overlaps": 0,
+    "registered_entries_checked": 47,
+    "registered_errata_rounds_checked_through": 46,
+    "source_map_variants_checked": 62
+  },
+  "independent_candidate_replay": "NOT_PERFORMED",
+  "line_preimages_exact": 27,
+  "nonoverlapping": true,
+  "operations": 27,
+  "passed": true,
+  "payload": {
+    "bytes": 121125,
+    "path": "payload/more-groupoids.tex",
+    "sha256": "039BA96AEA5ED3BA59A7CB0EECB5D8F7491CCF1C2FCEB49211BA7CECF1C0BDDF"
+  },
+  "producer_rows": 23,
+  "schema": "stacks-r47-source-validation-v1",
+  "scope": "Source-only exact replay, semantic-unit grouping, structural token accounting, and registry dedup validation; no build, render, admission, composition, or publication claim.",
+  "semantic_units": 22,
+  "structure": {
+    "cites": {
+      "authority": 1,
+      "candidate": 1,
+      "count_equal": true,
+      "declared_changed_positions": [],
+      "ordered_equal": true
+    },
+    "dollar_delimiters": {
+      "authority": 4438,
+      "candidate": 4438,
+      "count_equal": true
+    },
+    "environments": {
+      "authority": 288,
+      "candidate": 288,
+      "count_equal": true,
+      "declared_changed_positions": [],
+      "ordered_equal": true
+    },
+    "inputs": {
+      "authority": 2,
+      "candidate": 2,
+      "count_equal": true,
+      "declared_changed_positions": [],
+      "ordered_equal": true
+    },
+    "labels": {
+      "authority": 75,
+      "candidate": 75,
+      "count_equal": true,
+      "declared_changed_positions": [],
+      "ordered_equal": true
+    },
+    "refs": {
+      "authority": 263,
+      "candidate": 263,
+      "count_equal": true,
+      "declared_changed_positions": [],
+      "ordered_equal": true
+    }
+  },
+  "unchanged_interval_sha256": "9DDF0FC93AD4C9BB096B639145908721752D3942F8DC255760FF7D0F471BACEA",
+  "unlisted_byte_changes": 0,
+  "visual_qa": "NOT_PERFORMED"
+}

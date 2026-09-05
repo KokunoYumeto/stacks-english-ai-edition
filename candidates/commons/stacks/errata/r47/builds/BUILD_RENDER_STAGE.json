@@ -1,0 +1,63 @@
+{
+  "adverse_history": "Attempt 001 acquired and released the TeX mutex but failed closed before starting TeX because its requested work root was outside the required temporary-directory boundary. The full workflow was then repeated with fresh temporary work roots and passed.",
+  "build_receipt": {
+    "bytes": 31040,
+    "path": "builds/build-receipt.json",
+    "sha256": "73B7061A2EF2ACB44F68DC5B9219D6DA2EBA9828C9657B64C3D44500B87804B3"
+  },
+  "candidate_id": "stacks-errata-a04446e-r47",
+  "contact_sheets": 3,
+  "deterministic_replay": {
+    "bytes": 2152,
+    "path": "builds/deterministic-replay.json",
+    "sha256": "5B19878EB00FDE39E030C64B51D99FC3611B21A33584F75BC81D8F12E43AB30B"
+  },
+  "generated_source_composed": false,
+  "high_resolution_pages": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    12,
+    19,
+    21,
+    22,
+    26,
+    27,
+    29,
+    31
+  ],
+  "pages": 36,
+  "registry_admission": "NOT_PERFORMED",
+  "render_manifest": {
+    "bytes": 9978,
+    "path": "replay/RENDER_MANIFEST.json",
+    "sha256": "89087CD999697CE909C127265AAF8DD50AF06484554EB6F78ABC7B4EE82B0D7D"
+  },
+  "schema": "stacks-r47-build-render-stage/v1",
+  "source_page_map": {
+    "bytes": 7654,
+    "path": "builds/source-page-map.json",
+    "sha256": "E822CDE4260BC8397364B43399DC13E4F5D5466CB14659B7707BA7F0CFF012D9"
+  },
+  "status": "BUILD_DETERMINISTIC_RENDER_VISUAL_PASS",
+  "tex_mutex_adverse_attempt": {
+    "bytes": 657,
+    "path": "builds/TEX_MUTEX_RECEIPT_ATTEMPT_001.json",
+    "sha256": "22F84E1C98E59C67ED06784638F9A0D5434F6DC3A46CFF4BFAFB0FEA1AE2BE45"
+  },
+  "tex_mutex_success": {
+    "bytes": 883,
+    "path": "builds/TEX_MUTEX_RECEIPT.json",
+    "sha256": "118D3BD6EF749C2BE23BD89D5F1AC223FCC01ECE14EA3413C074E262452665B7"
+  },
+  "visual_adjudication": {
+    "bytes": 7428,
+    "path": "replay/PAGE_COMPLETE_VISUAL_ADJUDICATION.json",
+    "sha256": "A0773006FC8F069D7BC3B713ADF9204DC8D6974437345CDDFCE5CE1C1B9F9915"
+  }
+}

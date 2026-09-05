@@ -1,0 +1,37 @@
+{
+  "next_command": "powershell -File run-builds-with-mutex.ps1 -UpstreamRoot <PINNED_SOURCE_DIRECTORY> -WorkRoot1 <NEW_DIRECTORY> -WorkRoot2 <NEW_DIRECTORY> -PrivateRoot1 <PRIVATE_DIRECTORY> -PrivateRoot2 <PRIVATE_DIRECTORY>",
+  "no_final_manifest": true,
+  "operation_spec": {
+    "bytes": 29064,
+    "path": "operation-spec.json",
+    "sha256": "372272311DCBD2DD319C7E152E6F2AE145D63FFE86906C4405A76E4B7FB3462E"
+  },
+  "payload": {
+    "bytes": 121125,
+    "path": "payload/more-groupoids.tex",
+    "sha256": "039BA96AEA5ED3BA59A7CB0EECB5D8F7491CCF1C2FCEB49211BA7CECF1C0BDDF"
+  },
+  "pipeline": {
+    "bytes": 26008,
+    "path": "pipeline_r47.py",
+    "sha256": "50739ECE036819E681199849E62EF3B7FCB91B5FD48C98080C19C33D7F58D916"
+  },
+  "schema": "stacks-r47-source-regeneration/v1",
+  "source_map": {
+    "bytes": 42086,
+    "path": "source-map.jsonl",
+    "sha256": "059DD9DD051E528E73FE26004D21A60BB25635427CE6B2601303082E7C189433"
+  },
+  "source_validation": {
+    "bytes": 2683,
+    "path": "source-validation.json",
+    "sha256": "B435946488F23894718C808D6552A56813BE2B6D863BFBBE8411A4B8175977E3"
+  },
+  "stable_units": {
+    "bytes": 14192,
+    "path": "stable-units.json",
+    "sha256": "1543BAA98283821F3168DC4B04A7957C294640D406CA9F65E7115A7296CC2F47"
+  },
+  "status": "SOURCE_REPLAY_PASS_BUILD_PENDING",
+  "write_scope": "Only the leased R47 candidate; no TeX, admission, composition, or publication was performed."
+}

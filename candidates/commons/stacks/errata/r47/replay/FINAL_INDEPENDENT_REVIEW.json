@@ -1,0 +1,134 @@
+{
+  "adverse_evidence_preserved": [
+    "Attempt 001 failed closed at the fresh-build boundary and remains immutable; the complete corrected two-build workflow passed separately.",
+    "One inherited overfull hbox, one inherited underfull vbox, and standalone cross-chapter unresolved references remain explicitly recorded.",
+    "The validation PDF is untagged."
+  ],
+  "authority_mutated": false,
+  "build_receipt": {
+    "bytes": 31040,
+    "path": "builds/build-receipt.json",
+    "sha256": "73B7061A2EF2ACB44F68DC5B9219D6DA2EBA9828C9657B64C3D44500B87804B3"
+  },
+  "candidate_id": "stacks-errata-a04446e-r47",
+  "created_at_utc": "2026-09-05T18:46:31.828291Z",
+  "deduplication_boundary": {
+    "prior_more_groupoids_operations": 0,
+    "registered_rounds_checked_through": 46,
+    "stable_id_collisions": 0
+  },
+  "deterministic_replay": {
+    "bytes": 2152,
+    "path": "builds/deterministic-replay.json",
+    "sha256": "5B19878EB00FDE39E030C64B51D99FC3611B21A33584F75BC81D8F12E43AB30B"
+  },
+  "final_stage": {
+    "bytes": 10952,
+    "path": "replay/FINAL_STAGE.json",
+    "sha256": "C16FAEA4A8AE6686077B4A71722039ED478AEF17863991EC37BE99557EDCD885"
+  },
+  "final_stage_sha256": "C16FAEA4A8AE6686077B4A71722039ED478AEF17863991EC37BE99557EDCD885",
+  "generated_source_composed": false,
+  "identity_replay": {
+    "decision_rows": 22,
+    "operation_ids_unique": true,
+    "producer_ids": [
+      "FR-MORE-GROUPOIDS-001",
+      "FR-MORE-GROUPOIDS-002",
+      "FR-MORE-GROUPOIDS-003",
+      "FR-MORE-GROUPOIDS-004",
+      "FR-MORE-GROUPOIDS-005",
+      "FR-MORE-GROUPOIDS-006",
+      "FR-MORE-GROUPOIDS-007",
+      "FR-MORE-GROUPOIDS-008",
+      "FR-MORE-GROUPOIDS-010",
+      "FR-MORE-GROUPOIDS-009",
+      "FR-MORE-GROUPOIDS-011",
+      "FR-MORE-GROUPOIDS-012",
+      "FR-MORE-GROUPOIDS-013",
+      "FR-MORE-GROUPOIDS-014",
+      "FR-MORE-GROUPOIDS-015",
+      "FR-MORE-GROUPOIDS-016",
+      "FR-MORE-GROUPOIDS-017",
+      "FR-MORE-GROUPOIDS-018",
+      "FR-MORE-GROUPOIDS-019",
+      "FR-MORE-GROUPOIDS-020",
+      "FR-MORE-GROUPOIDS-021",
+      "FR-MORE-GROUPOIDS-022",
+      "FR-MORE-GROUPOIDS-023"
+    ],
+    "producer_ids_unique": true,
+    "rejection_rows": 0,
+    "stable_ids": [
+      "MC-STK-ERR-1523",
+      "MC-STK-ERR-1524",
+      "MC-STK-ERR-1525",
+      "MC-STK-ERR-1526",
+      "MC-STK-ERR-1527",
+      "MC-STK-ERR-1528",
+      "MC-STK-ERR-1529",
+      "MC-STK-ERR-1530",
+      "MC-STK-ERR-1531",
+      "MC-STK-ERR-1532",
+      "MC-STK-ERR-1533",
+      "MC-STK-ERR-1534",
+      "MC-STK-ERR-1535",
+      "MC-STK-ERR-1536",
+      "MC-STK-ERR-1537",
+      "MC-STK-ERR-1538",
+      "MC-STK-ERR-1539",
+      "MC-STK-ERR-1540",
+      "MC-STK-ERR-1541",
+      "MC-STK-ERR-1542",
+      "MC-STK-ERR-1543",
+      "MC-STK-ERR-1544"
+    ],
+    "stable_ids_unique": true
+  },
+  "mechanical_validation": {
+    "bytes": 4954,
+    "path": "builds/FINAL_MECHANICAL_VALIDATION.json",
+    "sha256": "B092E60B23FB6AFA764807735BEF37232822AD1C8430CA292E6EA33C417BDEA6"
+  },
+  "passed": true,
+  "producer_target_mutated": false,
+  "registry_admission": "NOT_PERFORMED",
+  "schema": "stacks-r47-final-independent-review/v1",
+  "snapshot_extra": [],
+  "snapshot_files_rehashed": 61,
+  "snapshot_missing": [],
+  "source_replay": {
+    "authority": {
+      "bytes": 121107,
+      "path": "authority/source/more-groupoids.tex",
+      "sha256": "F2D59ED504EC35DDA72BF2906F579312EAC2593CE952B84688ACE59B3CF87199"
+    },
+    "descending_byte_replay_payload_exact": true,
+    "exact_preimages": 27,
+    "nonoverlapping": true,
+    "operations": 27,
+    "payload": {
+      "bytes": 121125,
+      "path": "payload/more-groupoids.tex",
+      "sha256": "039BA96AEA5ED3BA59A7CB0EECB5D8F7491CCF1C2FCEB49211BA7CECF1C0BDDF"
+    },
+    "producer_rows": 23,
+    "semantic_units": 22,
+    "unlisted_byte_changes": 0
+  },
+  "tex_mutex_adverse_attempt": {
+    "bytes": 657,
+    "path": "builds/TEX_MUTEX_RECEIPT_ATTEMPT_001.json",
+    "sha256": "22F84E1C98E59C67ED06784638F9A0D5434F6DC3A46CFF4BFAFB0FEA1AE2BE45"
+  },
+  "tex_mutex_success": {
+    "bytes": 883,
+    "path": "builds/TEX_MUTEX_RECEIPT.json",
+    "sha256": "118D3BD6EF749C2BE23BD89D5F1AC223FCC01ECE14EA3413C074E262452665B7"
+  },
+  "visual_adjudication": {
+    "bytes": 7428,
+    "path": "replay/PAGE_COMPLETE_VISUAL_ADJUDICATION.json",
+    "sha256": "A0773006FC8F069D7BC3B713ADF9204DC8D6974437345CDDFCE5CE1C1B9F9915"
+  }
+}
