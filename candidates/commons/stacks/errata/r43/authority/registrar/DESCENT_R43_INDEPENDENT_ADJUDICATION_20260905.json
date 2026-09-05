@@ -1,0 +1,248 @@
+{
+  "authority": {
+    "bytes": 353760,
+    "path": "authority/source/descent.tex",
+    "sha256": "49483B3BCB36427A607A8227F4EA67730FCDDF1EECCB8E992CA61915ACE3B31D"
+  },
+  "date": "2026-09-05",
+  "grouping": {
+    "authority_order": [
+      "MC-STK-ERR-1430",
+      "MC-STK-ERR-1431",
+      "MC-STK-ERR-1432",
+      "MC-STK-ERR-1433",
+      "MC-STK-ERR-1434",
+      "MC-STK-ERR-1435",
+      "MC-STK-ERR-1436"
+    ],
+    "exact_operations": 7,
+    "independent_units": 7,
+    "similar_but_distinct": [
+      "DESCENT-042 uses one atomic two-line guard because the corrected singular noun begins on the second physical line.",
+      "DESCENT-046 is the sole source-defect classification; the other six units are editorial or grammatical clarifications.",
+      "R42 ends at DESCENT-040; R43 starts at DESCENT-041 and introduces no predecessor payload operation."
+    ]
+  },
+  "mutations": "This receipt records adjudication and deduplication only; authority, producer files, generated source, and upstream were not mutated.",
+  "passed": true,
+  "prelease_registry": {
+    "canonical_operation_spec_files_checked": 37,
+    "canonical_source_map_files_checked": 42,
+    "commit": "c2107a9d5f6f0644abc7af42d739ff741c9dc675",
+    "leases_sha256": "17787014140DFB45E7915A2584A5EB9E06E437C27FF7A2743F309533C1993628",
+    "matching_descent_or_exact_preimage_records": 0,
+    "operation_spec_variants_checked": 47,
+    "overlays_sha256": "DA19549F9CF827415FEB484D5C4351123231805CC80709E04D91561DE3423DA0",
+    "prior_stable_id_max": "MC-STK-ERR-1429",
+    "registered_rounds_checked_through": 42,
+    "source_map_variants_checked": 52
+  },
+  "producer_evidence_original": {
+    "bytes": 15222,
+    "logical_path": "<WORKSPACE>/03_projects/language_management/romance/03_working_translations/stacks_fr_20260821/p05/evidence/DESCENT_SOURCE_DEFECTS.md",
+    "scope_note": "R43 is exactly the append-only DESCENT-041..047 suffix. Earlier DESCENT-001..040 findings remain preserved in predecessor rounds and are not resent or rematerialized here.",
+    "sha256": "282E9EFFEEA7BD2A102E935052D325BF0E3ACD732D88AAE4CCB5F7479988AB1F"
+  },
+  "producer_ledger_original": {
+    "bytes": 528248,
+    "logical_path": "<WORKSPACE>/03_projects/language_management/romance/03_working_translations/stacks_fr_20260821/00_control/SOURCE_DEFECT_LEDGER.csv",
+    "matching_descent_entries": 0,
+    "sha256": "304D51200903ED870D2F72AF8F65C0AB28B314F6075B206C3B34F506B678F8CE"
+  },
+  "public_checks": {
+    "official_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "official_issue_pr_exact_matches": 0,
+    "official_source_retains_all_preimages": true,
+    "tags": {
+      "02VY": "Comments (0)",
+      "02W1": "Comments (0)",
+      "02W3": "Comments (0)",
+      "02W5": "Comments (0)",
+      "0AP4": "Comments (0)"
+    }
+  },
+  "replay": {
+    "line_count": 9456,
+    "payload_bytes": 353754,
+    "payload_sha256": "1D879A4F8874CDA6C3D57D9C8D059C5E6AC1FAE2EE4467BF4C4C7C9621B8F907"
+  },
+  "rows": [
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "line": 8830,
+      "lines": [
+        8830
+      ],
+      "operations": [
+        {
+          "end_line": 8830,
+          "line": 8830,
+          "old": "The functor is faithful and fully faithful by",
+          "replacement": "The functor is fully faithful by"
+        }
+      ],
+      "producer_id": "DESCENT-041",
+      "reason": "Full faithfulness already implies faithfulness, so the phrase 'faithful and fully faithful' is redundant; the minimal repair retains the mathematically stronger property used by the cited result.",
+      "recommendation": "accept",
+      "stable_id": "MC-STK-ERR-1430",
+      "tags": [
+        "02VY"
+      ]
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "line": 8955,
+      "lines": [
+        8955
+      ],
+      "operations": [
+        {
+          "end_line": 8956,
+          "line": 8955,
+          "old": "is a glueing\ndata as in Schemes",
+          "replacement": "is a glueing\ndatum as in Schemes"
+        }
+      ],
+      "producer_id": "DESCENT-042",
+      "reason": "The sentence refers to one collection of gluing isomorphisms satisfying the cocycle condition, so the singular count noun is 'datum', not 'data'.",
+      "recommendation": "accept",
+      "stable_id": "MC-STK-ERR-1431",
+      "tags": [
+        "0AP4"
+      ]
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "line": 8976,
+      "lines": [
+        8976
+      ],
+      "operations": [
+        {
+          "end_line": 8976,
+          "line": 8976,
+          "old": "relative to a fpqc-covering",
+          "replacement": "relative to an fpqc-covering"
+        }
+      ],
+      "producer_id": "DESCENT-043",
+      "reason": "The initialism 'fpqc' begins with a vowel sound, so the indefinite article is 'an'.",
+      "recommendation": "accept",
+      "stable_id": "MC-STK-ERR-1432",
+      "tags": [
+        "02W1"
+      ]
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "line": 8986,
+      "lines": [
+        8986
+      ],
+      "operations": [
+        {
+          "end_line": 8986,
+          "line": 8986,
+          "old": "then it is sometime the",
+          "replacement": "then it is sometimes the"
+        }
+      ],
+      "producer_id": "DESCENT-044",
+      "reason": "The adverb modifying the recurring condition is 'sometimes'; 'sometime' denotes an unspecified time and is not grammatical here.",
+      "recommendation": "accept",
+      "stable_id": "MC-STK-ERR-1433",
+      "tags": [
+        "02W1"
+      ]
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "line": 9060,
+      "lines": [
+        9060
+      ],
+      "operations": [
+        {
+          "end_line": 9060,
+          "line": 9060,
+          "old": "if we pullback",
+          "replacement": "if we pull back"
+        }
+      ],
+      "producer_id": "DESCENT-045",
+      "reason": "The phrasal verb is 'pull back'; the closed compound 'pullback' is a noun or adjective, not the finite verb required after 'we'.",
+      "recommendation": "accept",
+      "stable_id": "MC-STK-ERR-1434",
+      "tags": [
+        "02W3"
+      ]
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "line": 9125,
+      "lines": [
+        9125
+      ],
+      "operations": [
+        {
+          "end_line": 9125,
+          "line": 9125,
+          "old": "restricting to smaller affine opens in $X$.",
+          "replacement": "restricting to smaller affine opens in $S$."
+        }
+      ],
+      "producer_id": "DESCENT-046",
+      "reason": "The proof shrinks the affine base opens S_i covering S so that their pullbacks X_i retain the desired property; the smaller affine opens are therefore opens of S, not opens of X.",
+      "recommendation": "accept",
+      "stable_id": "MC-STK-ERR-1435",
+      "tags": [
+        "02W3"
+      ]
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "line": 9395,
+      "lines": [
+        9395
+      ],
+      "operations": [
+        {
+          "end_line": 9395,
+          "line": 9395,
+          "old": "For each $i$ denote $F_i$ the sheaf",
+          "replacement": "For each $i$ denote by $F_i$ the sheaf"
+        }
+      ],
+      "producer_id": "DESCENT-047",
+      "reason": "English requires 'denote by F_i the sheaf'; inserting 'by' is the minimal grammatical repair and changes no mathematical object.",
+      "recommendation": "accept",
+      "stable_id": "MC-STK-ERR-1436",
+      "tags": [
+        "02W5"
+      ]
+    }
+  ],
+  "schema": "stacks-r43-descent-independent-adjudication/v1",
+  "status": "PASS_ACCEPT_7_NON_DUPLICATIVE_UNITS_7_OPERATIONS"
+}

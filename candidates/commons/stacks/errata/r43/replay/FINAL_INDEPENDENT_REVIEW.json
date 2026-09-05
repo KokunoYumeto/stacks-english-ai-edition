@@ -1,0 +1,209 @@
+{
+  "blockers": [],
+  "build": {
+    "authority_pdf_bytes": 1037159,
+    "authority_pdf_sha256": "5662B95221AE05E5016DEA0E8E1B4AC964C60D8C661E7F0A91CDDC798A5FC723",
+    "bad_link_rectangles": 0,
+    "candidate_pdf_bytes": 1037191,
+    "candidate_pdf_sha256": "D3C0A4860B04A72C24DDA10E49B6858E39BC0226B79CFD2136FA5EA5DED4A425",
+    "candidate_and_authority_pages": 93,
+    "candidate_and_authority_reference_multisets_equal": true,
+    "candidate_and_authority_undefined_citation_targets_each": 0,
+    "candidate_and_authority_undefined_reference_distinct_targets_each": 397,
+    "candidate_and_authority_undefined_reference_occurrences_each": 561,
+    "candidate_and_authority_warnings_each": {
+      "fatal_markers": 0,
+      "missing_glyph_markers": 0,
+      "overfull_hboxes": 20,
+      "overfull_vboxes": 0,
+      "underfull_hboxes": 0,
+      "underfull_vboxes": 1
+    },
+    "deterministic_replay_sha256": "71925D0C6E30B7E07B7823AA4742EBFFEBB33499BE82CAAFAF946A9F1C782386",
+    "fls_dependency_closure": "NOT_CLAIMED: the frozen R43 build used no -recorder option and retained no .fls artifact. This is an explicit limitation, not a retrospective gate under the established R41/R42 contract; recorder/FLS closure is prospective for later rounds.",
+    "link_rectangles_verified": 498,
+    "mutex_acquired_and_released": true,
+    "mutex_name": "Global\\InterlanguageTeXSlotV1",
+    "mutex_receipt_sha256": "B6F67F69163F230B2AF54AC864036E921223B26C9E4D36CE76316AED0C8B34F4",
+    "new_builds_run_by_reviewer": 0,
+    "recorded_build_argv_has_recorder": false,
+    "recorded_build_argv_verified": true,
+    "tagged_pdf": false,
+    "two_private_authority_pdfs_and_authority_export_byte_identical": true,
+    "two_private_candidate_pdfs_and_candidate_export_byte_identical": true
+  },
+  "date": "2026-09-05",
+  "final_stage_bytes": 10225,
+  "final_stage_sha256": "75DC58DE1E430C4464D9A5B561696C4F7CB77D2393E41005D055A874FC4A981A",
+  "finalizer_readiness": {
+    "acyclic_order": "The immutable final stage freezes all preceding files; this independent receipt binds that stage; the top manifest is sealed afterward and binds this receipt. The stage is not rewritten to hash its future reviewer.",
+    "candidate_manifest_absent_during_review": true,
+    "finalizer_read": true,
+    "seal_not_run_by_reviewer": true,
+    "top_manifest_must_still_be_sealed_and_schema_inventory_checked": true
+  },
+  "mutations": "Only this new review receipt; no candidate input, historical receipt, source, build, render, registry, Git, generated-source, composition, or publication change.",
+  "passed": true,
+  "render_and_mapping": {
+    "all_retained_hashes_and_sizes_exact": true,
+    "contact_sheets": 6,
+    "high_resolution_pages": 17,
+    "mapped_operation_ids_equal_all_7_source_operations": true,
+    "mapping_pdf_payload_and_operation_spec_hashes_verified": true,
+    "mapping_source_lines_and_stable_ids_match": true,
+    "page_renders": 93,
+    "private_render_files_including_manifest": 117,
+    "render_artifacts_rehashed": 116,
+    "render_manifest_bytes": 22170,
+    "render_manifest_sha256": "449E8C704124AC1B583F24685F72DAABF86E967B04197261E8BDF8B703A5DE04",
+    "source_page_map_sha256": "EDD6AC759C5D1DBF030046643EEEC9BF302E1E400E6A302A2AF919F0FD3A5C99",
+    "synctex_raw_artifact": "NOT_RETAINED: source-page-map.json records SyncTeX SHA-256 CDE706D36656732CAE5C12AF266AB262435E09D1DE9FB85BC89E16CB69C50E7C, but the transient private SyncTeX file is not independently rehashed by this review.",
+    "unique_correction_sensitive_pages": [
+      85,
+      86,
+      87,
+      88,
+      90
+    ]
+  },
+  "reviewer": "independent_r43_final_stage_validator",
+  "rights_privacy": {
+    "credential_patterns_found": 0,
+    "credentials_accessed": false,
+    "official_commit_tree_and_source_identity_preserved": true,
+    "text_files_scanned": 53,
+    "textual_absolute_account_paths_found": 0,
+    "unexpected_private_or_temporary_files": 0,
+    "unofficial_ai_overlay_and_nonendorsement_stated": true,
+    "upstream_COPYING_bytes": 20404,
+    "upstream_COPYING_preserved": true,
+    "upstream_COPYING_sha256": "4B2C8FC390F802CD92F0622DC00A708A588BEC54D0145D2EE135D6D7672BFE85"
+  },
+  "schema": "stacks-r43-final-independent-review/v1",
+  "scope_limit": "Independent validation of the frozen R43 candidate evidence and rendered validation reader; not registry admission, generated-source composition, official-upstream mutation, raw FLS or SyncTeX dependency replay, complete-corpus reference resolution, human or expert certification, or publication.",
+  "snapshot": {
+    "aggregate_bytes": 4019555,
+    "files_verified": 57,
+    "hash_or_size_mismatches": 0,
+    "missing_files": 0,
+    "unexpected_files": 0
+  },
+  "source": {
+    "authority_bytes": 353760,
+    "authority_sha256": "49483B3BCB36427A607A8227F4EA67730FCDDF1EECCB8E992CA61915ACE3B31D",
+    "classification": {
+      "editorial_or_notational_clarification": 6,
+      "source_defect": 1
+    },
+    "decision_ids": "R43-D001..R43-D007",
+    "decision_source_map_adjudication_rationales_equal": true,
+    "decisions_sha256": "31FB660C3E7B9807B9F12899BB79F972B5D627B8826C94039D2629D11A4D6217",
+    "descending_replay_equals_payload_byte_for_byte": true,
+    "exact_preimages_lengths_hashes_lines_and_occurrences": 7,
+    "global_registered_stable_id_collisions": 0,
+    "input_output_stage_pairs_byte_equal": 6,
+    "nonoverlapping": true,
+    "operation_spec_sha256": "DFCDAFD91091EF96667CB0ADE71C6E4407CA5F18CC002436FF04C052637E46AC",
+    "operations": 7,
+    "payload_bytes": 353754,
+    "payload_lines": 9456,
+    "payload_sha256": "1D879A4F8874CDA6C3D57D9C8D059C5E6AC1FAE2EE4467BF4C4C7C9621B8F907",
+    "prior_descent_operations_checked": 116,
+    "prior_exact_preimage_hits": 0,
+    "prior_maximum_stable_id": "MC-STK-ERR-1429",
+    "prior_operation_specs_checked": 48,
+    "prior_source_maps_checked": 54,
+    "prior_target_interval_overlaps": 0,
+    "producer_id_range": "DESCENT-041..DESCENT-047",
+    "semantic_review": [
+      {
+        "producer_id": "DESCENT-041",
+        "result": "PASS",
+        "stable_id": "MC-STK-ERR-1430",
+        "reason": "Full faithfulness already implies faithfulness; removing the redundant weaker phrase preserves the property used by the cited lemma."
+      },
+      {
+        "producer_id": "DESCENT-042",
+        "result": "PASS",
+        "stable_id": "MC-STK-ERR-1431",
+        "reason": "The sentence names one glueing datum, so the singular noun is required."
+      },
+      {
+        "producer_id": "DESCENT-043",
+        "result": "PASS",
+        "stable_id": "MC-STK-ERR-1432",
+        "reason": "The spoken initialism fpqc begins with a vowel sound, so the article is an."
+      },
+      {
+        "producer_id": "DESCENT-044",
+        "result": "PASS",
+        "stable_id": "MC-STK-ERR-1433",
+        "reason": "Sometimes is the adverb required for a recurring circumstance; sometime is not grammatical in this sentence."
+      },
+      {
+        "producer_id": "DESCENT-045",
+        "result": "PASS",
+        "stable_id": "MC-STK-ERR-1434",
+        "reason": "Pull back is the finite phrasal verb; pullback is a noun or adjective."
+      },
+      {
+        "producer_id": "DESCENT-046",
+        "result": "PASS",
+        "stable_id": "MC-STK-ERR-1435",
+        "reason": "The compatibility varies with affine base opens V' contained in V contained in S, so the smaller affine opens are in S, not X."
+      },
+      {
+        "producer_id": "DESCENT-047",
+        "result": "PASS",
+        "stable_id": "MC-STK-ERR-1436",
+        "reason": "English requires denote by F_i the sheaf; the insertion changes no mathematical object."
+      }
+    ],
+    "source_map_sha256": "9CC3EEFB080EAF9BBE95963F32D6C4770BDC162C2695A1FB9B2934C3A85FDAA6",
+    "source_stage_independent_receipt_sha256": "13B883D2E20BB695F95437E5BD5C6E26D9758CED204DC8821D03683E0CC7B97F",
+    "stable_id_range": "MC-STK-ERR-1430..MC-STK-ERR-1436",
+    "stable_source_decision_and_adjudication_identity_equal": true,
+    "stable_units": 7,
+    "stable_units_sha256": "1E313FB23E0AF9923E49B5D176A81B08293C3387C3E5C9B7422F729E66F48EBF",
+    "structure_counts_and_order_equal": {
+      "cites": 20,
+      "environments": 1010,
+      "inputs": 2,
+      "labels": 286,
+      "refs": 867
+    },
+    "unchanged_interval_bytes": 353542,
+    "unchanged_interval_sha256": "2C29DFB269B83DD43BDCA7EE8296E639B3E975ABAF27CB894FAB7D2D17606E4F"
+  },
+  "status": "PASS_FINAL_CANDIDATE_REVIEW",
+  "transitive_closure": {
+    "build_receipt_artifact_rows_checked": 15,
+    "build_render_stage_identity_rows_checked": 12,
+    "historical_receipts": "Source-stage NOT_PERFORMED fields and builds/PENDING.json remain preserved historical states and are not promoted to current final-stage claims.",
+    "private_render_artifact_rows_checked": 116,
+    "private_render_relative_paths": "Resolved against the declared CJK evidence root and rehashed; they are validation evidence, not missing candidate payload files.",
+    "render_manifest_artifact_rows_checked": 116,
+    "snapshot_inventory_rows_checked": 57,
+    "source_stage_observed_rows_checked": 20,
+    "unexplained_stale_hashes": 0,
+    "unretained_raw_dependency_evidence": [
+      ".fls was never produced under the frozen R43 build recipe.",
+      "The source-page map records the private SyncTeX identity, but its transient raw file is no longer retained."
+    ]
+  },
+  "visual_review": {
+    "additional_direct_view_by_final_reviewer": "All six 1240x1688 contact sheets and all seventeen 1530x1980 high-resolution pages 8, 12, 13, 14, 31, 34, 35, 36, 37, 42, 62, 85, 86, 87, 88, 90, and 92 were directly displayed. Corrected prose, formulas, diagrams, references, and surrounding text were readable and geometrically intact; no clipping, overlap, or missing glyph was observed. The high-resolution images were displayed at 1376x1780 by the interface.",
+    "aggregate_no_blocking_findings": true,
+    "aggregate_sha256": "3010D8AA11B9A8B5380647EDF596572F1D6C3298DFD0B13D503226334B545714",
+    "caveats": [
+      "Literal standalone cross-chapter references remain unresolved; their exact multiset matches authority.",
+      "Twenty overfull hboxes and one underfull vbox remain in both candidate and authority; no warning-free claim is made.",
+      "Visible link borders are retained hyperlink styling and do not obscure text.",
+      "Contact-sheet coverage is not character-level inspection of every unmodified page.",
+      "The PDF is untagged; bounded AI inspection is not human or expert certification."
+    ],
+    "coverage": "The bound raw review covers six contact sheets for pages 1-93 in exact order and seventeen individual 180-dpi correction-sensitive or diagnostic pages. This final reviewer independently rehashed and directly displayed every one of those 23 review artifacts.",
+    "raw_review_artifact_identities_rehashed": 23,
+    "raw_review_sha256": "43D6C7068D4BFC68BD1DA92B901728AACD156FD98BE9081CD1D8B5F2D285B7D9"
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "authority": {
+    "bytes": 353760,
+    "path": "authority/source/descent.tex",
+    "sha256": "49483B3BCB36427A607A8227F4EA67730FCDDF1EECCB8E992CA61915ACE3B31D"
+  },
+  "blockers": [],
+  "build": "NOT_REVIEWED_BY_THIS_RECEIPT",
+  "checks": {
+    "descending_replay_equals_payload_byte_for_byte": true,
+    "exact_authority_hash": true,
+    "exact_byte_preimages_lengths_hashes_and_line_numbers": 7,
+    "exact_replacement_lengths_hashes": 7,
+    "global_stable_id_collisions": 0,
+    "input_output_stage_pairs_byte_equal": 6,
+    "nonoverlapping": true,
+    "operations": 7,
+    "prior_descent_operations_observed": 116,
+    "prior_exact_preimage_hits": 0,
+    "prior_operation_specs_checked": 48,
+    "prior_source_maps_checked": 54,
+    "prior_target_interval_overlaps": 0,
+    "source_map_unit_operation_producer_identity_equality": true,
+    "stable_ids": "MC-STK-ERR-1430..MC-STK-ERR-1436",
+    "stable_units": 7,
+    "structure_counts_and_order_equal": {
+      "cites": 20,
+      "environments": 1010,
+      "inputs": 2,
+      "labels": 286,
+      "refs": 867
+    },
+    "unique_operation_ids": 7
+  },
+  "classification": {
+    "editorial_or_notational_clarification": 6,
+    "source_defect": 1
+  },
+  "date": "2026-09-05",
+  "full_admission": "NOT_PERFORMED",
+  "mutations": "Only this new review receipt; no source, registry, build, generated-source, Git, or publication mutation.",
+  "observed_files": [
+    {
+      "bytes": 2210,
+      "path": "candidate.config.json",
+      "sha256": "280644DA19DAE2C6187C06B5E3CC52AB83748CA9F6F91D1D50E3B5918C6C69AA"
+    },
+    {
+      "bytes": 2210,
+      "path": "candidate.config.input.json",
+      "sha256": "280644DA19DAE2C6187C06B5E3CC52AB83748CA9F6F91D1D50E3B5918C6C69AA"
+    },
+    {
+      "bytes": 6535,
+      "path": "operation-spec.json",
+      "sha256": "DFCDAFD91091EF96667CB0ADE71C6E4407CA5F18CC002436FF04C052637E46AC"
+    },
+    {
+      "bytes": 6535,
+      "path": "operation-spec.input.json",
+      "sha256": "DFCDAFD91091EF96667CB0ADE71C6E4407CA5F18CC002436FF04C052637E46AC"
+    },
+    {
+      "bytes": 3268,
+      "path": "stable-units.json",
+      "sha256": "1E313FB23E0AF9923E49B5D176A81B08293C3387C3E5C9B7422F729E66F48EBF"
+    },
+    {
+      "bytes": 3268,
+      "path": "stable-units.input.json",
+      "sha256": "1E313FB23E0AF9923E49B5D176A81B08293C3387C3E5C9B7422F729E66F48EBF"
+    },
+    {
+      "bytes": 10344,
+      "path": "source-map.jsonl",
+      "sha256": "9CC3EEFB080EAF9BBE95963F32D6C4770BDC162C2695A1FB9B2934C3A85FDAA6"
+    },
+    {
+      "bytes": 10344,
+      "path": "source-map.input.jsonl",
+      "sha256": "9CC3EEFB080EAF9BBE95963F32D6C4770BDC162C2695A1FB9B2934C3A85FDAA6"
+    },
+    {
+      "bytes": 2875,
+      "path": "decisions.jsonl",
+      "sha256": "31FB660C3E7B9807B9F12899BB79F972B5D627B8826C94039D2629D11A4D6217"
+    },
+    {
+      "bytes": 2875,
+      "path": "decisions.input.jsonl",
+      "sha256": "31FB660C3E7B9807B9F12899BB79F972B5D627B8826C94039D2629D11A4D6217"
+    },
+    {
+      "bytes": 0,
+      "path": "rejections.jsonl",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "bytes": 0,
+      "path": "rejections.input.jsonl",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "bytes": 2184,
+      "path": "source-validation.json",
+      "sha256": "9A95DA2DBB1C484DCD9920978F9D8183CB749357D3BEA867D9AFE986820A066D"
+    },
+    {
+      "bytes": 2373,
+      "path": "formula-diagram-inventory.json",
+      "sha256": "FCF0CDB6412B5F24C6B7E8415EB527447165209A06EE52E7C9FD1FF67AB63F3B"
+    },
+    {
+      "bytes": 1422,
+      "path": "REGENERATION_RECEIPT.json",
+      "sha256": "F9EF6CCE8B190DCB1D389AC37CF9A482A7BECF74FBA55CF4055F23FEE467FBF9"
+    },
+    {
+      "bytes": 8127,
+      "path": "authority/registrar/DESCENT_R43_INDEPENDENT_ADJUDICATION_20260905.json",
+      "sha256": "400D521969D3949E49355383CCA0A5800A3CCDAF662E0BAD5E254DDB76D98D79"
+    },
+    {
+      "bytes": 15222,
+      "path": "authority/producer/DESCENT_SOURCE_DEFECTS.md",
+      "sha256": "282E9EFFEEA7BD2A102E935052D325BF0E3ACD732D88AAE4CCB5F7479988AB1F"
+    },
+    {
+      "bytes": 528248,
+      "path": "authority/producer/SOURCE_DEFECT_LEDGER.csv",
+      "sha256": "304D51200903ED870D2F72AF8F65C0AB28B314F6075B206C3B34F506B678F8CE"
+    },
+    {
+      "bytes": 353760,
+      "path": "authority/source/descent.tex",
+      "sha256": "49483B3BCB36427A607A8227F4EA67730FCDDF1EECCB8E992CA61915ACE3B31D"
+    },
+    {
+      "bytes": 353754,
+      "path": "payload/descent.tex",
+      "sha256": "1D879A4F8874CDA6C3D57D9C8D059C5E6AC1FAE2EE4467BF4C4C7C9621B8F907"
+    }
+  ],
+  "passed": true,
+  "payload": {
+    "bytes": 353754,
+    "path": "payload/descent.tex",
+    "sha256": "1D879A4F8874CDA6C3D57D9C8D059C5E6AC1FAE2EE4467BF4C4C7C9621B8F907"
+  },
+  "producer_scope": {
+    "preserved_predecessor_rows": "DESCENT-001..040 remain bound to earlier append-only rounds and are not resent",
+    "r43_rows": "DESCENT-041..047"
+  },
+  "reviewer": "independent_exact_byte_validator",
+  "schema": "stacks-r43-independent-source-validation/v1",
+  "scope": "Independent source replay, identity, structure, and local-registry dedup validation only; no build, visual, admission, composition, or publication claim.",
+  "status": "PASS_SOURCE_ONLY",
+  "visual": "NOT_REVIEWED_BY_THIS_RECEIPT"
+}
