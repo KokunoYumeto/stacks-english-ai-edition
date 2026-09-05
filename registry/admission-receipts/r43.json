@@ -1,0 +1,102 @@
+{
+  "schema": "mathematics-commons-stacks-registry-admission-receipt/v1",
+  "candidate_id": "stacks-errata-a04446e-r43",
+  "status": "PASS",
+  "admitted_at_utc": "2026-09-05T14:30:42.371Z",
+  "candidate_commit": "3002c87029ec8dd8405acc56787659b44bb42c19",
+  "candidate_tree": "fb4e74d3e1b89c35eb4e4b402b3ae14ef288b029",
+  "manifest": {
+    "path": "candidate.manifest.json",
+    "bytes": 10703,
+    "sha256": "92E9492AD1A0D9434405207473B17815BF025DD3F78BE90F6FDDAC76E1C0DB47"
+  },
+  "operation_spec": {
+    "path": "operation-spec.json",
+    "bytes": 6535,
+    "sha256": "DFCDAFD91091EF96667CB0ADE71C6E4407CA5F18CC002436FF04C052637E46AC"
+  },
+  "source_map": {
+    "path": "source-map.jsonl",
+    "bytes": 10344,
+    "sha256": "9CC3EEFB080EAF9BBE95963F32D6C4770BDC162C2695A1FB9B2934C3A85FDAA6"
+  },
+  "final_review": {
+    "path": "replay/FINAL_INDEPENDENT_REVIEW.json",
+    "bytes": 10967,
+    "sha256": "0A7DB21B4B23ED38DAB85378DB4FA41F23BDEA5172DEFEC1A846E6C8CCD8A605"
+  },
+  "stable_id_count": 7,
+  "stable_ids": [
+    "MC-STK-ERR-1430",
+    "MC-STK-ERR-1431",
+    "MC-STK-ERR-1432",
+    "MC-STK-ERR-1433",
+    "MC-STK-ERR-1434",
+    "MC-STK-ERR-1435",
+    "MC-STK-ERR-1436"
+  ],
+  "producer_ids": [
+    "DESCENT-041",
+    "DESCENT-042",
+    "DESCENT-043",
+    "DESCENT-044",
+    "DESCENT-045",
+    "DESCENT-046",
+    "DESCENT-047"
+  ],
+  "classification": {
+    "source_defect": 1,
+    "editorial_or_notational_clarification": 6
+  },
+  "grouping_notes": [
+    "All seven semantic units are single-operation exact replacements and are nonoverlapping.",
+    "DESCENT-046 corrects the mathematical base from smaller affine opens in X to smaller affine opens in S; the other six units are certain grammatical or notational repairs.",
+    "The batch follows R42 in producer and registry order, and descending-byte replay produces the declared payload byte-for-byte."
+  ],
+  "registry": {
+    "before_sha256": "DA19549F9CF827415FEB484D5C4351123231805CC80709E04D91561DE3423DA0",
+    "after_sha256": "05E01334F67E83AD9B226E119A60AEFDEABBB0B1436F4A56297A35010E50A554",
+    "last_overlay": "stacks-errata-a04446e-r43",
+    "prior_entries_unchanged": 43,
+    "current_entries": 44,
+    "unique_stable_ids": 1184
+  },
+  "leases": {
+    "before_sha256": "55E2C847FB7EA01CDF912D9E1BD37DBD3017E2584334EC70C6850CE2A92C9B19",
+    "after_sha256": "BD24F0BBCAD50427B07C3C86F7923328EAD0A983E08D4F82FE9B6563F45C817C",
+    "issued_event": "lease-event-000090",
+    "released_event": "lease-event-000091",
+    "prior_events_unchanged": 90
+  },
+  "fresh_replay": {
+    "passed": true,
+    "units": 7,
+    "operations": 7,
+    "producer_rows": 7,
+    "manifest_references": 59,
+    "payload_sha256": {
+      "descent.tex": "1D879A4F8874CDA6C3D57D9C8D059C5E6AC1FAE2EE4467BF4C4C7C9621B8F907"
+    },
+    "exact_preimages_descending_byte_replay": true,
+    "strict_registry_schemas": 2,
+    "committed_archive_manifest_closure": "PASS: 59/59 manifest-bound files, strict candidate schema, no missing or extra file.",
+    "workflow_check": "44 admitted manifests and exact byte closures; 91 lease events; 1184 globally unique stable IDs; 3 unrelated active leases"
+  },
+  "validation_reader": {
+    "pages": 93,
+    "bytes": 1037191,
+    "sha256": "D3C0A4860B04A72C24DDA10E49B6858E39BC0226B79CFD2136FA5EA5DED4A425",
+    "reproducible": true,
+    "visual_gate": "All 93 pages are covered by six contact sheets; seventeen high-resolution pages include all five correction-sensitive pages and twelve inherited diagnostic pages; zero blocking findings.",
+    "adverse_evidence": "Inherited 397 distinct/561 occurrence external-reference warnings, 20 overfull hboxes, and one underfull vbox match authority; the PDF is untagged. Recorder/FLS dependency closure was not part of the frozen R43 contract and is not claimed; raw SyncTeX was used to derive the bound source-page map but was not retained. This is not a complete cumulative reader or human/expert certification."
+  },
+  "workflow_successor": "Extends the append-only registry with the separately leased, independently replayed DESCENT-041..047 batch while preserving every prior registry entry, clarification, and lease event byte-for-byte.",
+  "constraints": {
+    "authority_mutated": false,
+    "producer_target_mutated": false,
+    "generated_source_composed": false,
+    "generated_source_pushed": false,
+    "published": false
+  },
+  "next_action": "Commit the separate registrar admission; verify committed and fresh-checkout bytes, publish only the registrar branch, anonymously read back this exact batch, and hand R43 to the separate composer once."
+}
