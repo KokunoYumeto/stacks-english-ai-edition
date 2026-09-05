@@ -1,0 +1,10 @@
+{
+  "candidate_id": "stacks-errata-a04446e-r46",
+  "failed_assertion": "source-map row count was incorrectly required to be at least the operation count",
+  "passed": false,
+  "receipt_written": false,
+  "remedy": "Require 43 semantic-unit source-map rows and independently sum their nested operations to 46; regenerate the pre-review snapshot before rerun.",
+  "schema": "stacks-r46-final-review-preflight-attempt/v1",
+  "source_or_evidence_bytes_changed": false,
+  "stage": "independent-final-review"
+}

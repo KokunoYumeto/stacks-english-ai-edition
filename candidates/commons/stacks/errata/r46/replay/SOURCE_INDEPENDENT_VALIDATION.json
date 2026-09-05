@@ -1,0 +1,109 @@
+{
+  "adjudication": {
+    "bytes": 28438,
+    "path": "authority/registrar/GROUPOIDS_R46_INDEPENDENT_ADJUDICATION_20260905.json",
+    "sha256": "63F005D59393EA106C693EDEB56D82669237927B20FDEE6599E693E2934FC8F7"
+  },
+  "admission": "NOT_PERFORMED",
+  "authority": {
+    "bytes": 189166,
+    "path": "authority/source/groupoids.tex",
+    "sha256": "157CC1C792F41465B8249582FEE0F6DFF266AC4224F06B05E936C66C65DB043A"
+  },
+  "build": "NOT_PERFORMED",
+  "candidate_id": "stacks-errata-a04446e-r46",
+  "composition": "NOT_PERFORMED",
+  "decisions": {
+    "bytes": 19925,
+    "path": "decisions.jsonl",
+    "sha256": "9B6EE16ADD5C231B579CFA415DA85C0EBFE58C8BC29998C6CD2F93C3520B06A4"
+  },
+  "deduplication": {
+    "exact_preimage_hits": 0,
+    "interval_overlaps": 0,
+    "prior_groupoids_operations": 0,
+    "registered_rounds_checked_through": 45,
+    "stable_id_collisions": 0
+  },
+  "operation_spec": {
+    "bytes": 45139,
+    "path": "operation-spec.json",
+    "sha256": "F178C6416C8519495321A49077ACC9A4866B6CAFAE54A6A708009E006C3B8325"
+  },
+  "passed": true,
+  "payload": {
+    "bytes": 189152,
+    "path": "payload/groupoids.tex",
+    "sha256": "6ED98A884E9F4AD6C3EF6720AE538F1FEFEED24E09E60111B1F9D825CF1A7C04"
+  },
+  "replay": {
+    "dollar_delimiters": {
+      "authority": 6898,
+      "candidate": 6908,
+      "declared_operation_bound_delta": 10
+    },
+    "exact_operations": 46,
+    "exact_preimages": 46,
+    "nonoverlap": true,
+    "payload_byte_exact": true,
+    "semantic_units": 43,
+    "stable_ids_first_locus_ordered": true,
+    "structure": {
+      "cites": {
+        "authority": 8,
+        "candidate": 8,
+        "count_equal": true,
+        "declared_changed_positions": [],
+        "ordered_equal": true
+      },
+      "environments": {
+        "authority": 562,
+        "candidate": 562,
+        "count_equal": true,
+        "declared_changed_positions": [],
+        "ordered_equal": true
+      },
+      "inputs": {
+        "authority": 2,
+        "candidate": 2,
+        "count_equal": true,
+        "declared_changed_positions": [],
+        "ordered_equal": true
+      },
+      "labels": {
+        "authority": 158,
+        "candidate": 158,
+        "count_equal": true,
+        "declared_changed_positions": [],
+        "ordered_equal": true
+      },
+      "refs": {
+        "authority": 349,
+        "candidate": 349,
+        "count_equal": true,
+        "declared_changed_positions": [],
+        "ordered_equal": true
+      }
+    },
+    "unchanged_interval_sha256": "C2E581CB8B9841B72D863C56EF1860416CBFC5B310249CB59B43D7E2B15B3B92",
+    "unlisted_byte_changes": 0
+  },
+  "schema": "stacks-r46-independent-source-validation/v1",
+  "scope": "Independent read-only reconstruction of the R46 source stage before any build or admission.",
+  "source_map": {
+    "bytes": 69434,
+    "path": "source-map.jsonl",
+    "sha256": "9B2DD65725C4221A641555A09D5A765918E9C1000F21D16D5062B073B47CAE91"
+  },
+  "source_validation": {
+    "bytes": 2532,
+    "path": "source-validation.json",
+    "sha256": "07B94002F8A7F772213BFC3FDC1CCFC84F21952BA55ABDDEA20E8D3A6006503F"
+  },
+  "stable_units": {
+    "bytes": 25250,
+    "path": "stable-units.json",
+    "sha256": "F3F0C645BACB2B173113CEA81D6F8C3D340C8FBA3C375FFCDDFB8BFCD9FC5505"
+  },
+  "status": "PASS_SOURCE_ONLY"
+}

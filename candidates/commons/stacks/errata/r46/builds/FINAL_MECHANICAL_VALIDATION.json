@@ -1,0 +1,144 @@
+{
+  "adverse_evidence": [
+    "Attempt 001 failed only because the build recipe file had not yet been materialized; the attempt receipt is retained and a complete two-build rerun passed.",
+    "The candidate and authority each retain two inherited overfull hboxes; page-complete visual review found no blocking defect.",
+    "The isolated chapter retains cross-chapter unresolved references with an identical target multiset in candidate and authority.",
+    "The PDF is untagged."
+  ],
+  "bad_link_rectangles": [],
+  "build_execution": {
+    "bytes": 7986,
+    "path": "builds/build-execution.json",
+    "sha256": "26215A68E70380C5951723AE2C22124313E24C7E0B38B242CBB93AA5007CB6AA"
+  },
+  "build_receipt": {
+    "bytes": 32939,
+    "path": "builds/build-receipt.json",
+    "sha256": "A5D10F8D99E85E113DAC3370585D0A897953189AAF5BE85C966BCBB24BF8E7A9"
+  },
+  "candidate_id": "stacks-errata-a04446e-r46",
+  "candidate_pdf": {
+    "bytes": 731597,
+    "path": "builds/groupoids.pdf",
+    "sha256": "96BF9E8FD20DC80ADE31D3C8340044724152CFB16F11ACE2713BDDB6032E6C3B"
+  },
+  "deterministic_replay": {
+    "bytes": 2122,
+    "path": "builds/deterministic-replay.json",
+    "sha256": "7E75F4B3D69FBFF0835FEBDB2655F43C38F81A454E09577379AC2E26DB062C4B"
+  },
+  "generated_source_composed": false,
+  "passed": true,
+  "pdf_links": 212,
+  "pdf_pages": 55,
+  "recorder_fls": {
+    "authority": {
+      "artifact": {
+        "bytes": 62714,
+        "path": "builds/groupoids.authority.fls-dependencies.json",
+        "sha256": "4395B3E7E91866D3D5B5D4D1668FD01CE595888421DF86D66034EB8EA74EB585"
+      },
+      "input_closure_sha256": "9EEE050834C90371A763F8E9F4B02A30773F4EE21267176085E46C880BD1C998",
+      "input_count": 276,
+      "output_count": 5,
+      "private_fresh_builds_rehashed": 2
+    },
+    "candidate": {
+      "artifact": {
+        "bytes": 62714,
+        "path": "builds/groupoids.fls-dependencies.json",
+        "sha256": "0F929B8FB290453F25299D1006B3C9AD64878CF98CEFF2B03046DC68E051342C"
+      },
+      "input_closure_sha256": "3823DA1440F5DF3F1735C939BE56A950CBE2A70F48C1A8D86601E22BB1519711",
+      "input_count": 276,
+      "output_count": 5,
+      "private_fresh_builds_rehashed": 2
+    }
+  },
+  "registry_admission": "NOT_PERFORMED",
+  "render_artifacts_rehashed": 92,
+  "render_manifest": {
+    "bytes": 16335,
+    "path": "replay/RENDER_MANIFEST.json",
+    "sha256": "A95BC3C0CA87C83B97C2494AE1CE859F6CA3B2E0ADA1622010B81222FA35BFE5"
+  },
+  "schema": "stacks-r46-final-mechanical-validation/v1",
+  "source_independent_validation": {
+    "bytes": 3277,
+    "path": "replay/SOURCE_INDEPENDENT_VALIDATION.json",
+    "sha256": "BB33E7A7B0314777F7F7908A6CD5501CBD07A802DA58481B23BF16D69D59B7CE"
+  },
+  "source_operations_mapped": 46,
+  "source_page_map": {
+    "bytes": 12513,
+    "path": "builds/source-page-map.json",
+    "sha256": "F7B86097F4B41743963E64861CCE043C59F4F2AFE0A331576698E43DBA58421D"
+  },
+  "source_regeneration": {
+    "bytes": 1426,
+    "path": "REGENERATION_RECEIPT.json",
+    "sha256": "E26CA57A7F91DCDCA4DFB3AE25AF4F9902A1DDECE304BC51E776DF2115F9FD47"
+  },
+  "stable_ids": [
+    "MC-STK-ERR-1480",
+    "MC-STK-ERR-1481",
+    "MC-STK-ERR-1482",
+    "MC-STK-ERR-1483",
+    "MC-STK-ERR-1484",
+    "MC-STK-ERR-1485",
+    "MC-STK-ERR-1486",
+    "MC-STK-ERR-1487",
+    "MC-STK-ERR-1488",
+    "MC-STK-ERR-1489",
+    "MC-STK-ERR-1490",
+    "MC-STK-ERR-1491",
+    "MC-STK-ERR-1492",
+    "MC-STK-ERR-1493",
+    "MC-STK-ERR-1494",
+    "MC-STK-ERR-1495",
+    "MC-STK-ERR-1496",
+    "MC-STK-ERR-1497",
+    "MC-STK-ERR-1498",
+    "MC-STK-ERR-1499",
+    "MC-STK-ERR-1500",
+    "MC-STK-ERR-1501",
+    "MC-STK-ERR-1502",
+    "MC-STK-ERR-1503",
+    "MC-STK-ERR-1504",
+    "MC-STK-ERR-1505",
+    "MC-STK-ERR-1506",
+    "MC-STK-ERR-1507",
+    "MC-STK-ERR-1508",
+    "MC-STK-ERR-1509",
+    "MC-STK-ERR-1510",
+    "MC-STK-ERR-1511",
+    "MC-STK-ERR-1512",
+    "MC-STK-ERR-1513",
+    "MC-STK-ERR-1514",
+    "MC-STK-ERR-1515",
+    "MC-STK-ERR-1516",
+    "MC-STK-ERR-1517",
+    "MC-STK-ERR-1518",
+    "MC-STK-ERR-1519",
+    "MC-STK-ERR-1520",
+    "MC-STK-ERR-1521",
+    "MC-STK-ERR-1522"
+  ],
+  "tagged_pdf": false,
+  "tex_mutex_adverse_attempt": {
+    "bytes": 939,
+    "path": "builds/TEX_MUTEX_RECEIPT_ATTEMPT_001.json",
+    "sha256": "669B807198729324254BB1524F8F1182B125396745A0FBEDD3FC9F60D89102E5"
+  },
+  "tex_mutex_success": {
+    "bytes": 883,
+    "path": "builds/TEX_MUTEX_RECEIPT.json",
+    "sha256": "8366D949437622C816AAE376EFF40122A1D1DF9F2B793A8A24ADEF257A0E9754"
+  },
+  "visual_conclusion_recomputed": false,
+  "visual_receipt": {
+    "bytes": 11998,
+    "path": "replay/PAGE_COMPLETE_VISUAL_ADJUDICATION.json",
+    "sha256": "C59533A5510F6E340435D9AE4708608E61DD3FCDADCE8CF088F54A2534C70A06"
+  }
+}

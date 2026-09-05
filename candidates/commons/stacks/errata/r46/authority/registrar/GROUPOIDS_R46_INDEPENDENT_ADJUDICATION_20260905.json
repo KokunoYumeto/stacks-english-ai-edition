@@ -1,0 +1,847 @@
+{
+  "authority": {
+    "bytes": 189166,
+    "path": "authority/source/groupoids.tex",
+    "sha256": "157CC1C792F41465B8249582FEE0F6DFF266AC4224F06B05E936C66C65DB043A"
+  },
+  "classification": {
+    "editorial_or_notational_clarification": 3,
+    "source_defect": 40
+  },
+  "date": "2026-09-05",
+  "grouping": {
+    "deferred": 0,
+    "exact_operations": 46,
+    "multi_operation_units": {
+      "MC-STK-ERR-1491": 2,
+      "MC-STK-ERR-1500": 2,
+      "MC-STK-ERR-1516": 2
+    },
+    "rejected": 4,
+    "rejected_producer_ids": [
+      "FR-GROUPOIDS-005",
+      "FR-GROUPOIDS-007",
+      "FR-GROUPOIDS-009",
+      "FR-GROUPOIDS-015"
+    ],
+    "semantic_units": 43,
+    "stable_ids_in_first_locus_authority_order": [
+      "MC-STK-ERR-1480",
+      "MC-STK-ERR-1481",
+      "MC-STK-ERR-1482",
+      "MC-STK-ERR-1483",
+      "MC-STK-ERR-1484",
+      "MC-STK-ERR-1485",
+      "MC-STK-ERR-1486",
+      "MC-STK-ERR-1487",
+      "MC-STK-ERR-1488",
+      "MC-STK-ERR-1489",
+      "MC-STK-ERR-1490",
+      "MC-STK-ERR-1491",
+      "MC-STK-ERR-1492",
+      "MC-STK-ERR-1493",
+      "MC-STK-ERR-1494",
+      "MC-STK-ERR-1495",
+      "MC-STK-ERR-1496",
+      "MC-STK-ERR-1497",
+      "MC-STK-ERR-1498",
+      "MC-STK-ERR-1499",
+      "MC-STK-ERR-1500",
+      "MC-STK-ERR-1501",
+      "MC-STK-ERR-1502",
+      "MC-STK-ERR-1503",
+      "MC-STK-ERR-1504",
+      "MC-STK-ERR-1505",
+      "MC-STK-ERR-1506",
+      "MC-STK-ERR-1507",
+      "MC-STK-ERR-1508",
+      "MC-STK-ERR-1509",
+      "MC-STK-ERR-1510",
+      "MC-STK-ERR-1511",
+      "MC-STK-ERR-1512",
+      "MC-STK-ERR-1513",
+      "MC-STK-ERR-1514",
+      "MC-STK-ERR-1515",
+      "MC-STK-ERR-1516",
+      "MC-STK-ERR-1517",
+      "MC-STK-ERR-1518",
+      "MC-STK-ERR-1519",
+      "MC-STK-ERR-1520",
+      "MC-STK-ERR-1521",
+      "MC-STK-ERR-1522"
+    ]
+  },
+  "intake_originals": [
+    {
+      "bytes": 60278,
+      "logical_path": "<WORKSPACE>/03_projects/language_management/cjk/00_lane_control/STACKS_GROUPOIDS_INDEPENDENT_INTAKE_20260905_R1.json",
+      "sha256": "83000418E293CE4C9D841C7F40AC8114F716BDF506F9A573227060075EF29243"
+    },
+    {
+      "bytes": 63431,
+      "logical_path": "<WORKSPACE>/03_projects/language_management/romance/03_working_translations/stacks_fr_20260821/p06/evidence/GROUPOIDS_SOURCE_DEFECT_PACKET.json",
+      "sha256": "C16B9AC06CE172FA71EB50E99379D8DF18B8A4F459D75F82A2E5AE201332E34B"
+    }
+  ],
+  "mutations": "Only the leased R46 candidate is materialized; frozen authority, producer/French/CJK sources, generated source, upstream, and registry admission remain untouched.",
+  "passed": true,
+  "prelease_registry": {
+    "matching_producer_ids": 0,
+    "operation_spec_variants_checked": 54,
+    "overlays_sha256": "382D67696118D59BC601B7360EC9DC11DD883C4FA445357818CE89BA6564F70D",
+    "prelease_commit": "34d2d62ca3d99f3a99ea5b59ad2e2a75bd813aee",
+    "prior_exact_preimage_hits": 0,
+    "prior_groupoids_operations": 0,
+    "prior_stable_id_max": "MC-STK-ERR-1479",
+    "prior_target_interval_overlaps": 0,
+    "registered_entries_checked": 46,
+    "registered_errata_rounds_checked_through": 45,
+    "source_map_variants_checked": 60
+  },
+  "replay": {
+    "payload_bytes": 189152,
+    "payload_sha256": "6ED98A884E9F4AD6C3EF6720AE538F1FEFEED24E09E60111B1F9D825CF1A7C04",
+    "physical_lines": 5123
+  },
+  "rows": [
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-001 at groupoids.tex:71",
+      "operation_count": 1,
+      "producer_class": "prose_syntax",
+      "producer_id": "FR-GROUPOIDS-001",
+      "producer_ordinal": 1,
+      "reason": "A relation is the subset R itself; 'a subset of R subset A times A' is malformed. Removing only 'of' restores the definition.",
+      "recommendation": "accept",
+      "source_lines": [
+        71
+      ],
+      "stable_id": "MC-STK-ERR-1480"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-002 at groupoids.tex:172",
+      "operation_count": 1,
+      "producer_class": "prose_syntax",
+      "producer_id": "FR-GROUPOIDS-002",
+      "producer_ordinal": 2,
+      "reason": "The construction 'denote by X the morphisms' requires 'by'.",
+      "recommendation": "accept",
+      "source_lines": [
+        172
+      ],
+      "stable_id": "MC-STK-ERR-1481"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-003 at groupoids.tex:229",
+      "operation_count": 1,
+      "producer_class": "prose_grammar",
+      "producer_id": "FR-GROUPOIDS-003",
+      "producer_ordinal": 3,
+      "reason": "'Unramified' is predicative here and does not take an indefinite article.",
+      "recommendation": "accept",
+      "source_lines": [
+        229
+      ],
+      "stable_id": "MC-STK-ERR-1482"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-004 at groupoids.tex:264",
+      "operation_count": 1,
+      "producer_class": "prose_grammar",
+      "producer_id": "FR-GROUPOIDS-004",
+      "producer_ordinal": 4,
+      "reason": "The indefinite article before i(g) must be 'an'.",
+      "recommendation": "accept",
+      "source_lines": [
+        264
+      ],
+      "stable_id": "MC-STK-ERR-1483"
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-006 at groupoids.tex:375",
+      "operation_count": 1,
+      "producer_class": "editorial_residue",
+      "producer_id": "FR-GROUPOIDS-006",
+      "producer_ordinal": 6,
+      "reason": "'Add more as needed.' is an authoring instruction embedded in a finished mathematical definition and should not be reader text.",
+      "recommendation": "accept",
+      "source_lines": [
+        375
+      ],
+      "stable_id": "MC-STK-ERR-1484"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-008 at groupoids.tex:510",
+      "operation_count": 1,
+      "producer_class": "formula_index_omission",
+      "producer_id": "FR-GROUPOIDS-008",
+      "producer_ordinal": 8,
+      "reason": "The comultiplication entry for matrix multiplication sums over the repeated index k; the printed sum has no index and is incomplete.",
+      "recommendation": "accept",
+      "source_lines": [
+        510
+      ],
+      "stable_id": "MC-STK-ERR-1485"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-010 at groupoids.tex:749",
+      "operation_count": 1,
+      "producer_class": "sentence_fragment",
+      "producer_id": "FR-GROUPOIDS-010",
+      "producer_ordinal": 10,
+      "reason": "The lemma introduces its data rather than stating a conditional. Replacing the initial 'If' by 'Let' repairs the fragment without changing meaning.",
+      "recommendation": "accept",
+      "source_lines": [
+        749
+      ],
+      "stable_id": "MC-STK-ERR-1486"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-011 at groupoids.tex:991",
+      "operation_count": 1,
+      "producer_class": "spelling",
+      "producer_id": "FR-GROUPOIDS-011",
+      "producer_ordinal": 11,
+      "reason": "'Quasi-compect' is a typographical error for 'quasi-compact'.",
+      "recommendation": "accept",
+      "source_lines": [
+        991
+      ],
+      "stable_id": "MC-STK-ERR-1487"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-012 at groupoids.tex:1028",
+      "operation_count": 1,
+      "producer_class": "spelling",
+      "producer_id": "FR-GROUPOIDS-012",
+      "producer_ordinal": 12,
+      "reason": "'Subsgroup' is a typographical error for 'subgroup'.",
+      "recommendation": "accept",
+      "source_lines": [
+        1028
+      ],
+      "stable_id": "MC-STK-ERR-1488"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-013 at groupoids.tex:1150",
+      "operation_count": 1,
+      "producer_class": "proof_hypothesis_omission",
+      "producer_id": "FR-GROUPOIDS-013",
+      "producer_ordinal": 13,
+      "reason": "The next sentence uses left G^0-invariance of W to infer g^{-1}U is contained in W. This requires the affine neighbourhood U to be chosen inside W; W is open and contains G^0 after the reduction.",
+      "recommendation": "accept",
+      "source_lines": [
+        1150
+      ],
+      "stable_id": "MC-STK-ERR-1489"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-014 at groupoids.tex:1164",
+      "operation_count": 1,
+      "producer_class": "coordinate_order",
+      "producer_id": "FR-GROUPOIDS-014",
+      "producer_ordinal": 14,
+      "reason": "The domain is U times T and the formula uses u in U and t in T, so the displayed input pair must be (u,t).",
+      "recommendation": "accept",
+      "source_lines": [
+        1164
+      ],
+      "stable_id": "MC-STK-ERR-1490"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1,
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-016 at groupoids.tex:1534,1557",
+      "operation_count": 2,
+      "producer_class": "fixed_locus_misnamed_kernel",
+      "producer_id": "FR-GROUPOIDS-016",
+      "producer_ordinal": 16,
+      "reason": "An inner automorphism has trivial ordinary kernel, whereas the proof requires the equalizer with the identity: the closed centralizer locus containing every subscheme on which conjugation is the identity.",
+      "recommendation": "accept",
+      "source_lines": [
+        1534,
+        1557
+      ],
+      "stable_id": "MC-STK-ERR-1491"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-017 at groupoids.tex:1554",
+      "operation_count": 1,
+      "producer_class": "duplicated_copula",
+      "producer_id": "FR-GROUPOIDS-017",
+      "producer_ordinal": 17,
+      "reason": "The sentence has two competing predicates joined without a conjunction. The components are both irreducible components and translates of G^0.",
+      "recommendation": "accept",
+      "source_lines": [
+        1554
+      ],
+      "stable_id": "MC-STK-ERR-1492"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-018 at groupoids.tex:1567",
+      "operation_count": 1,
+      "producer_class": "missing_verb",
+      "producer_id": "FR-GROUPOIDS-018",
+      "producer_ordinal": 18,
+      "reason": "The let-construction requires 'be'.",
+      "recommendation": "accept",
+      "source_lines": [
+        1567
+      ],
+      "stable_id": "MC-STK-ERR-1493"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-019 at groupoids.tex:1771",
+      "operation_count": 1,
+      "producer_class": "missing_nonzero_hypothesis",
+      "producer_id": "FR-GROUPOIDS-019",
+      "producer_ordinal": 19,
+      "reason": "For d=0 and positive-dimensional A, multiplication by d is not finite and the displayed degree argument degenerates. The proof and statement require a nonzero integer.",
+      "recommendation": "accept",
+      "source_lines": [
+        1771
+      ],
+      "stable_id": "MC-STK-ERR-1494"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-020 at groupoids.tex:2132",
+      "operation_count": 1,
+      "producer_class": "article_agreement",
+      "producer_id": "FR-GROUPOIDS-020",
+      "producer_ordinal": 20,
+      "reason": "The pronounced initial consonant in G requires 'a', not 'an'.",
+      "recommendation": "accept",
+      "source_lines": [
+        2132
+      ],
+      "stable_id": "MC-STK-ERR-1495"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-021 at groupoids.tex:2220",
+      "operation_count": 1,
+      "producer_class": "subject_verb_agreement",
+      "producer_id": "FR-GROUPOIDS-021",
+      "producer_ordinal": 21,
+      "reason": "The plural subject 'answers' requires 'are'.",
+      "recommendation": "accept",
+      "source_lines": [
+        2220
+      ],
+      "stable_id": "MC-STK-ERR-1496"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-022 at groupoids.tex:2314",
+      "operation_count": 1,
+      "producer_class": "missing_predicate",
+      "producer_id": "FR-GROUPOIDS-022",
+      "producer_ordinal": 22,
+      "reason": "The clause 'verify that' is followed only by a diagram and where-clause. Naming commutativity supplies the missing predicate.",
+      "recommendation": "accept",
+      "source_lines": [
+        2314
+      ],
+      "stable_id": "MC-STK-ERR-1497"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-023 at groupoids.tex:2360",
+      "operation_count": 1,
+      "producer_class": "tensor_factor_omission",
+      "producer_id": "FR-GROUPOIDS-023",
+      "producer_ordinal": 23,
+      "reason": "Coassociativity sends f_n tensor x^n to f_n tensor x^n tensor x^n. The printed right-hand side multiplies f_n by x^n across distinct tensor factors.",
+      "recommendation": "accept",
+      "source_lines": [
+        2360
+      ],
+      "stable_id": "MC-STK-ERR-1498"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-024 at groupoids.tex:2643",
+      "operation_count": 1,
+      "producer_class": "missing_noun",
+      "producer_id": "FR-GROUPOIDS-024",
+      "producer_ordinal": 24,
+      "reason": "The displayed object is a commutative diagram, not 'a commutative'.",
+      "recommendation": "accept",
+      "source_lines": [
+        2643
+      ],
+      "stable_id": "MC-STK-ERR-1499"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1,
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-025 at groupoids.tex:2849,2850",
+      "operation_count": 2,
+      "producer_class": "missing_predicates_and_number_agreement",
+      "producer_id": "FR-GROUPOIDS-025",
+      "producer_ordinal": 25,
+      "reason": "Both explanatory clauses lack 'holds'; the first and last are two equalities and therefore require the plural.",
+      "recommendation": "accept",
+      "source_lines": [
+        2849,
+        2850
+      ],
+      "stable_id": "MC-STK-ERR-1500"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-026 at groupoids.tex:2860",
+      "operation_count": 1,
+      "producer_class": "groupoid_structure_order",
+      "producer_id": "FR-GROUPOIDS-026",
+      "producer_ordinal": 26,
+      "reason": "Because j=(t,s), the equivalence-relation groupoid on R has source pr_1 and target pr_0. The morphism displayed immediately afterward uses that correct order.",
+      "recommendation": "accept",
+      "source_lines": [
+        2860
+      ],
+      "stable_id": "MC-STK-ERR-1501"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-027 at groupoids.tex:2991",
+      "operation_count": 1,
+      "producer_class": "word_substitution",
+      "producer_id": "FR-GROUPOIDS-027",
+      "producer_ordinal": 27,
+      "reason": "The infinitive is 'to show'; 'the show' is a typographical substitution.",
+      "recommendation": "accept",
+      "source_lines": [
+        2991
+      ],
+      "stable_id": "MC-STK-ERR-1502"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-028 at groupoids.tex:3145",
+      "operation_count": 1,
+      "producer_class": "number_agreement",
+      "producer_id": "FR-GROUPOIDS-028",
+      "producer_ordinal": 28,
+      "reason": "The article and predicate select one quasi-coherent module.",
+      "recommendation": "accept",
+      "source_lines": [
+        3145
+      ],
+      "stable_id": "MC-STK-ERR-1503"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-029 at groupoids.tex:3183",
+      "operation_count": 1,
+      "producer_class": "duplicated_comparative",
+      "producer_id": "FR-GROUPOIDS-029",
+      "producer_ordinal": 29,
+      "reason": "The symbolic relation greater-than-or-equal already supplies the comparison; 'than' is extraneous.",
+      "recommendation": "accept",
+      "source_lines": [
+        3183
+      ],
+      "stable_id": "MC-STK-ERR-1504"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-030 at groupoids.tex:3215",
+      "operation_count": 1,
+      "producer_class": "malformed_quantification",
+      "producer_id": "FR-GROUPOIDS-030",
+      "producer_ordinal": 30,
+      "reason": "The identity-overlap convention has j=i, hence k lies in I_ii and m lies in M_i. Writing those domains explicitly removes the malformed variable list.",
+      "recommendation": "accept",
+      "source_lines": [
+        3215
+      ],
+      "stable_id": "MC-STK-ERR-1505"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-031 at groupoids.tex:3432",
+      "operation_count": 1,
+      "producer_class": "incomplete_sentence",
+      "producer_id": "FR-GROUPOIDS-031",
+      "producer_ordinal": 31,
+      "reason": "The conditional clause requires the displayed action as its main subject; deleting 'which' supplies the missing predicate.",
+      "recommendation": "accept",
+      "source_lines": [
+        3432
+      ],
+      "stable_id": "MC-STK-ERR-1506"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-032 at groupoids.tex:3518",
+      "operation_count": 1,
+      "producer_class": "adverb_spelling",
+      "producer_id": "FR-GROUPOIDS-032",
+      "producer_ordinal": 32,
+      "reason": "The adverb is 'sometimes'.",
+      "recommendation": "accept",
+      "source_lines": [
+        3518
+      ],
+      "stable_id": "MC-STK-ERR-1507"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-033 at groupoids.tex:3614",
+      "operation_count": 1,
+      "producer_class": "wrong_morphism_attribution",
+      "producer_id": "FR-GROUPOIDS-033",
+      "producer_ordinal": 33,
+      "reason": "The inverse image s^{-1}(W) is open by continuity; its image is open because t is open. Naming t makes the stated inference direct.",
+      "recommendation": "accept",
+      "source_lines": [
+        3614
+      ],
+      "stable_id": "MC-STK-ERR-1508"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-034 at groupoids.tex:3865",
+      "operation_count": 1,
+      "producer_class": "missing_verb",
+      "producer_id": "FR-GROUPOIDS-034",
+      "producer_ordinal": 34,
+      "reason": "The let-construction requires 'be'.",
+      "recommendation": "accept",
+      "source_lines": [
+        3865
+      ],
+      "stable_id": "MC-STK-ERR-1509"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-035 at groupoids.tex:4050",
+      "operation_count": 1,
+      "producer_class": "parenthetical_punctuation",
+      "producer_id": "FR-GROUPOIDS-035",
+      "producer_ordinal": 35,
+      "reason": "The nonrestrictive parenthetical 'which we omit' requires a closing comma.",
+      "recommendation": "accept",
+      "source_lines": [
+        4050
+      ],
+      "stable_id": "MC-STK-ERR-1510"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-036 at groupoids.tex:4172",
+      "operation_count": 1,
+      "producer_class": "wrong_implication_target",
+      "producer_id": "FR-GROUPOIDS-036",
+      "producer_ordinal": 36,
+      "reason": "The preceding paragraph proves that condition (b) gives the identity-section property (c). The implication (b) to (a) was not established there and is handled through (c) in the next paragraph.",
+      "recommendation": "accept",
+      "source_lines": [
+        4172
+      ],
+      "stable_id": "MC-STK-ERR-1511"
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-037 at groupoids.tex:4224",
+      "operation_count": 1,
+      "producer_class": "editorial_reference_placeholder",
+      "producer_id": "FR-GROUPOIDS-037",
+      "producer_ordinal": 37,
+      "reason": "The unresolved authoring placeholder is not a citation and contributes no mathematical content; delete the parenthetical residue.",
+      "recommendation": "accept",
+      "source_lines": [
+        4224
+      ],
+      "stable_id": "MC-STK-ERR-1512"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-038 at groupoids.tex:4276",
+      "operation_count": 1,
+      "producer_class": "fibre_product_map_typo",
+      "producer_id": "FR-GROUPOIDS-038",
+      "producer_ordinal": 38,
+      "reason": "The fibre product is formed using the source morphism s and target morphism t, as in the defining diagram at line 4266. Capital S is the base scheme and is ill-typed in this subscript.",
+      "recommendation": "accept",
+      "source_lines": [
+        4276
+      ],
+      "stable_id": "MC-STK-ERR-1513"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-039 at groupoids.tex:4309",
+      "operation_count": 1,
+      "producer_class": "duplicated_biconditional",
+      "producer_id": "FR-GROUPOIDS-039",
+      "producer_ordinal": 39,
+      "reason": "The symbolic biconditional and the words 'if and only if' duplicate the same connective.",
+      "recommendation": "accept",
+      "source_lines": [
+        4309
+      ],
+      "stable_id": "MC-STK-ERR-1514"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-040 at groupoids.tex:4421",
+      "operation_count": 1,
+      "producer_class": "wrong_base_change_object",
+      "producer_id": "FR-GROUPOIDS-040",
+      "producer_ordinal": 40,
+      "reason": "U' was defined as Spec(A tensor_C C') and A' abbreviates that ring. Spec(C') maps to Spec(C), not directly to U.",
+      "recommendation": "accept",
+      "source_lines": [
+        4421
+      ],
+      "stable_id": "MC-STK-ERR-1515"
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_line_preimage_occurrences": [
+        1,
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-041 at groupoids.tex:4537,4541",
+      "operation_count": 2,
+      "producer_class": "editorial_reference_placeholders",
+      "producer_id": "FR-GROUPOIDS-041",
+      "producer_ordinal": 41,
+      "reason": "Both parentheticals are unresolved authoring placeholders, not valid references. Removing them preserves the mathematical assertions and removes reader-facing residue.",
+      "recommendation": "accept",
+      "source_lines": [
+        4537,
+        4541
+      ],
+      "stable_id": "MC-STK-ERR-1516"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-042 at groupoids.tex:4570",
+      "operation_count": 1,
+      "producer_class": "omitted_structure_datum",
+      "producer_id": "FR-GROUPOIDS-042",
+      "producer_ordinal": 42,
+      "reason": "A groupoid-scheme tuple includes composition c. The source groupoid therefore requires c', which the same proof uses explicitly at line 4615.",
+      "recommendation": "accept",
+      "source_lines": [
+        4570
+      ],
+      "stable_id": "MC-STK-ERR-1517"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-043 at groupoids.tex:4641",
+      "operation_count": 1,
+      "producer_class": "word_typo",
+      "producer_id": "FR-GROUPOIDS-043",
+      "producer_ordinal": 43,
+      "reason": "The sentence requires the sequencing adverb 'Then', not the article 'The'.",
+      "recommendation": "accept",
+      "source_lines": [
+        4641
+      ],
+      "stable_id": "MC-STK-ERR-1518"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-044 at groupoids.tex:4777",
+      "operation_count": 1,
+      "producer_class": "spelling",
+      "producer_id": "FR-GROUPOIDS-044",
+      "producer_ordinal": 44,
+      "reason": "'Tow' is a typographical error for 'two'.",
+      "recommendation": "accept",
+      "source_lines": [
+        4777
+      ],
+      "stable_id": "MC-STK-ERR-1519"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-045 at groupoids.tex:4788",
+      "operation_count": 1,
+      "producer_class": "malformed_prose",
+      "producer_id": "FR-GROUPOIDS-045",
+      "producer_ordinal": 45,
+      "reason": "The phrase requires the definite article 'the'; 'then' has no syntactic role.",
+      "recommendation": "accept",
+      "source_lines": [
+        4788
+      ],
+      "stable_id": "MC-STK-ERR-1520"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-046 at groupoids.tex:4941",
+      "operation_count": 1,
+      "producer_class": "set_difference_precedence",
+      "producer_id": "FR-GROUPOIDS-046",
+      "producer_ordinal": 46,
+      "reason": "The subsequent closedness, containment W' subset W, and invariant-orbit description require the complement of s^{-1}(W) intersect t^{-1}(W), not the left-associative intersection of a complement with t^{-1}(W).",
+      "recommendation": "accept",
+      "source_lines": [
+        4941
+      ],
+      "stable_id": "MC-STK-ERR-1521"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "logical_location": "FR-GROUPOIDS-047 at groupoids.tex:5049",
+      "operation_count": 1,
+      "producer_class": "unbound_quantifier",
+      "producer_id": "FR-GROUPOIDS-047",
+      "producer_ordinal": 47,
+      "reason": "The tuple length d is unbound in the statement. Quantifying over every positive integer d states the required hypothesis; the proof then applies it at the uniform fibre bound chosen afterward.",
+      "recommendation": "accept",
+      "source_lines": [
+        5049
+      ],
+      "stable_id": "MC-STK-ERR-1522"
+    }
+  ],
+  "schema": "stacks-r46-groupoids-independent-adjudication/v1",
+  "status": "PASS_ACCEPT_43_NON_DUPLICATIVE_UNITS_46_OPERATIONS_REJECT_4"
+}

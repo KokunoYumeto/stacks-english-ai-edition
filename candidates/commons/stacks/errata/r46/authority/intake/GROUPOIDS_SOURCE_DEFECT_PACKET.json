@@ -1,0 +1,1269 @@
+{
+  "schema": "stacks-fr-bounded-source-defect-packet-v1",
+  "chapter": 39,
+  "source_file": "groupoids.tex",
+  "recorded_at": "2026-09-05T16:48:42.925205+00:00",
+  "authority": {
+    "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\03_working_translations\\stacks_cjk_20260821\\upstream\\src\\stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14\\groupoids.tex",
+    "bytes": 189166,
+    "sha256": "157CC1C792F41465B8249582FEE0F6DFF266AC4224F06B05E936C66C65DB043A"
+  },
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "producer": "French Stacks translation lane",
+  "disposition": "PROVISIONAL_FOR_CANON_ADJUDICATION",
+  "unit_count": 47,
+  "notes": [
+    "Single bounded packet from the complete nine-receipt chapter review.",
+    "Prose defects may be rendered idiomatically in French; formal mathematical candidates remain source-exact in the French body unless a receipt explicitly states otherwise.",
+    "Canon must independently deduplicate, verify, and assign canonical erratum IDs."
+  ],
+  "units": [
+    {
+      "producer_id": "FR-GROUPOIDS-001",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_00001_00600.json",
+        "bytes": 7179,
+        "sha256": "9FDA77B6303AAC50D4D4F3DF9CF4750EE5C9EB9447F1D7796B5E8B0F68C3BAA2"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        71,
+        72
+      ],
+      "authority_excerpt_utf8_lf": "Recall that a {\\it relation} $R$ on a set $A$ is just a subset\nof $R \\subset A \\times A$. We usually write $a R b$ to indicate\n",
+      "authority_excerpt_sha256": "D4A657938E66DF3DE3D6ECFE8D9905F067EDAEB0E68BCA4E8903B900832CEDCA",
+      "producer_observation": {
+        "authority_lines": [
+          71,
+          72
+        ],
+        "confidence": "high",
+        "kind": "prose_syntax",
+        "observation": "The authority reads 'a subset of R \\subset A \\times A'; the word 'of' makes the definition malformed, and the apparent intent is 'a subset R \\subset A \\times A'.",
+        "handling": "No authority mutation and no canon contact; the intended definition was rendered idiomatically in French."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-002",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_00001_00600.json",
+        "bytes": 7179,
+        "sha256": "9FDA77B6303AAC50D4D4F3DF9CF4750EE5C9EB9447F1D7796B5E8B0F68C3BAA2"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        172,
+        173
+      ],
+      "authority_excerpt_utf8_lf": "Denote $x_K, y_K, z_K : \\Spec(K) \\to U$\nthe morphisms\n",
+      "authority_excerpt_sha256": "213115B066B55572F4717F38B0B2495EFAB5866DAC63257F2B5932BBF7084FBF",
+      "producer_observation": {
+        "authority_lines": [
+          172,
+          173
+        ],
+        "confidence": "high",
+        "kind": "prose_syntax",
+        "observation": "The authority reads 'Denote x_K, y_K, z_K ... the morphisms'; standard English requires 'Denote by ... the morphisms'.",
+        "handling": "No authority mutation and no canon contact; idiomatic French syntax was used."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-003",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_00001_00600.json",
+        "bytes": 7179,
+        "sha256": "9FDA77B6303AAC50D4D4F3DF9CF4750EE5C9EB9447F1D7796B5E8B0F68C3BAA2"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        229
+      ],
+      "authority_excerpt_utf8_lf": "we see that $j$ is a unramified. Then\n",
+      "authority_excerpt_sha256": "DB06EA50B7D801773C5597B303CC1599B743430D16A219C993314547BE83ACAE",
+      "producer_observation": {
+        "authority_line": 229,
+        "confidence": "high",
+        "kind": "prose_grammar",
+        "observation": "The authority reads 'j is a unramified'; the indefinite article is both unnecessary and incompatible with 'unramified'.",
+        "handling": "No authority mutation and no canon contact; idiomatic French grammar was used."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-004",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_00001_00600.json",
+        "bytes": 7179,
+        "sha256": "9FDA77B6303AAC50D4D4F3DF9CF4750EE5C9EB9447F1D7796B5E8B0F68C3BAA2"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        264
+      ],
+      "authority_excerpt_utf8_lf": "\\item (inverse) for all $g \\in G$ there exists a $i(g) \\in G$\n",
+      "authority_excerpt_sha256": "3811876ADE1F56800AB89E0400EE37D34A4BD19AF6AA22042658712719AF09EA",
+      "producer_observation": {
+        "authority_line": 264,
+        "confidence": "high",
+        "kind": "prose_grammar",
+        "observation": "The authority reads 'there exists a i(g)'; the article should be 'an', or the noun 'element' should be supplied.",
+        "handling": "No authority mutation and no canon contact; the French text supplies 'un élément'."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-005",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_00001_00600.json",
+        "bytes": 7179,
+        "sha256": "9FDA77B6303AAC50D4D4F3DF9CF4750EE5C9EB9447F1D7796B5E8B0F68C3BAA2"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        276
+      ],
+      "authority_excerpt_utf8_lf": "insures that $\\psi(e) = e'$ and $i'(\\psi(g)) = \\psi(i(g))$.\n",
+      "authority_excerpt_sha256": "F8B9BF4C05CC28AFEF64BBBE2CE4A49C9BBDCA4BDAAF4F3E32E53B27AEFCDC25",
+      "producer_observation": {
+        "authority_line": 276,
+        "confidence": "medium",
+        "kind": "prose_word_choice",
+        "observation": "The authority uses 'insures' where the mathematical sense calls for 'ensures'.",
+        "handling": "No authority mutation and no canon contact; the intended implication was rendered idiomatically in French."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-006",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_00001_00600.json",
+        "bytes": 7179,
+        "sha256": "9FDA77B6303AAC50D4D4F3DF9CF4750EE5C9EB9447F1D7796B5E8B0F68C3BAA2"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        375
+      ],
+      "authority_excerpt_utf8_lf": "Add more as needed.\n",
+      "authority_excerpt_sha256": "4AFE36C0F25366A428FFD72E4DEDBDF318C79CBBE4BD3B991F1BEC777DD99EDD",
+      "producer_observation": {
+        "authority_line": 375,
+        "confidence": "medium",
+        "kind": "editorial_residue",
+        "observation": "'Add more as needed.' appears to be a residual editorial instruction embedded in the definition.",
+        "handling": "No authority mutation and no canon contact; the sentence remains present and is translated as reader-facing prose."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-007",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_00001_00600.json",
+        "bytes": 7179,
+        "sha256": "9FDA77B6303AAC50D4D4F3DF9CF4750EE5C9EB9447F1D7796B5E8B0F68C3BAA2"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        419
+      ],
+      "authority_excerpt_utf8_lf": "Let $n \\in \\mathbf{N}$.\n",
+      "authority_excerpt_sha256": "CC76C540FD973143490C368E9C2960EE2CF697530A445753CE4E079FE52F6C30",
+      "producer_observation": {
+        "authority_line": 419,
+        "confidence": "medium",
+        "kind": "domain_boundary",
+        "observation": "The example assumes only n in the natural numbers. If the convention includes n = 0, the stated functor is G_m whereas Spec(Z[x]/(x^0 - 1)) is affine one-space; the intended hypothesis appears to be n >= 1.",
+        "handling": "The displayed hypothesis and formula were preserved; no authority mutation and no canon contact."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-008",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_00001_00600.json",
+        "bytes": 7179,
+        "sha256": "9FDA77B6303AAC50D4D4F3DF9CF4750EE5C9EB9447F1D7796B5E8B0F68C3BAA2"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        510
+      ],
+      "authority_excerpt_utf8_lf": "\\sum x_{ik} \\otimes x_{kj} & \\leftarrow & x_{ij}\n",
+      "authority_excerpt_sha256": "055AAFCF1345A717E2759AFDD3F97E075F133B05F8815AFCC0FD017166C6FBD3",
+      "producer_observation": {
+        "authority_line": 510,
+        "confidence": "medium",
+        "kind": "formula_typography",
+        "observation": "The matrix-product formula uses \\sum x_{ik} \\otimes x_{kj} without an explicit summation index or bounds; \\sum_k (or bounds k = 1,...,n) appears intended.",
+        "handling": "Formula preserved byte-for-byte; no authority mutation and no canon contact."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-009",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_00001_00600.json",
+        "bytes": 7179,
+        "sha256": "9FDA77B6303AAC50D4D4F3DF9CF4750EE5C9EB9447F1D7796B5E8B0F68C3BAA2"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        518
+      ],
+      "authority_excerpt_utf8_lf": "\\text{GL}_{n, S}(T) = \\text{GL}_n(T) =\\text{GL}_n(\\Gamma(T, \\mathcal{O}_T))\n",
+      "authority_excerpt_sha256": "A6388974A4FCC6F63FB5DC22F2D817D505051F2C8AD938C05A20C8586554BE21",
+      "producer_observation": {
+        "authority_line": 518,
+        "confidence": "high",
+        "kind": "tex_spacing",
+        "observation": "The authority has no source space in '=\\text{GL}_n', unlike the surrounding equality spacing.",
+        "handling": "Source spacing preserved byte-for-byte; no authority mutation and no canon contact."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-010",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_00601_01200.json",
+        "bytes": 4996,
+        "sha256": "2ED182DB49BCD7033D04BC2906C10BA6EA0BAD70FD52A8B8EB8236D10B8567D3"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        749
+      ],
+      "authority_excerpt_utf8_lf": "If $(G, m)$ is a group scheme over a field $k$. Let $U \\subset G$\n",
+      "authority_excerpt_sha256": "992A2CF4F17ED6D53D6658FB76D4765AA04E82ECC8EE01BEAFD73831461E2555",
+      "producer_observation": {
+        "authority_lines": [
+          749
+        ],
+        "kind": "source_syntax",
+        "summary": "The sentence begins with the conditional fragment 'If ... .' and then restarts with 'Let', leaving the conditional grammatically incomplete.",
+        "translation_disposition": "Rendered with complete French grammar without changing the mathematical content."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-011",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_00601_01200.json",
+        "bytes": 4996,
+        "sha256": "2ED182DB49BCD7033D04BC2906C10BA6EA0BAD70FD52A8B8EB8236D10B8567D3"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        991
+      ],
+      "authority_excerpt_utf8_lf": "$W \\to G$ is quasi-compect by Schemes, Lemma\n",
+      "authority_excerpt_sha256": "F1A95025085B5082FD040B415602DF112EA548D7D3ADD4471204DB98E30BD87C",
+      "producer_observation": {
+        "authority_lines": [
+          991
+        ],
+        "kind": "source_typo",
+        "summary": "The adjective 'quasi-compect' is a typographical error for 'quasi-compact'.",
+        "translation_disposition": "Rendered with the correct French term 'quasi-compacte'."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-012",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_00601_01200.json",
+        "bytes": 4996,
+        "sha256": "2ED182DB49BCD7033D04BC2906C10BA6EA0BAD70FD52A8B8EB8236D10B8567D3"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        1028
+      ],
+      "authority_excerpt_utf8_lf": "To show that $G^0$ is a closed subsgroup scheme we will use the\n",
+      "authority_excerpt_sha256": "0DA955EFC89939EC9BB6E76A733DC864A9274C0986EF40F49766A8E0386EE884",
+      "producer_observation": {
+        "authority_lines": [
+          1028
+        ],
+        "kind": "source_typo",
+        "summary": "The noun 'subsgroup' is a typographical error for 'subgroup'.",
+        "translation_disposition": "Rendered with the correct French term 'sous-schéma en groupes'."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-013",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_00601_01200.json",
+        "bytes": 4996,
+        "sha256": "2ED182DB49BCD7033D04BC2906C10BA6EA0BAD70FD52A8B8EB8236D10B8567D3"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        1150,
+        1153
+      ],
+      "authority_excerpt_utf8_lf": "Choose an affine open neighbourhood $U \\subset G$\nThis will finish the proof as $g^{-1}U \\subset W$ by the left\n",
+      "authority_excerpt_sha256": "6F32739F5940DFEE208E3DAB4105364266A2EDA789BC51F1D092D40DD12044EA",
+      "producer_observation": {
+        "authority_lines": [
+          1150,
+          1153
+        ],
+        "kind": "proof_omission",
+        "summary": "The conclusion g^{-1}U subset W from left G^0-invariance of W requires choosing the affine neighbourhood U of the identity inside W, but line 1150 states only U subset G.",
+        "translation_disposition": "The stated containment and proof text were preserved; no missing hypothesis was inserted."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-014",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_00601_01200.json",
+        "bytes": 4996,
+        "sha256": "2ED182DB49BCD7033D04BC2906C10BA6EA0BAD70FD52A8B8EB8236D10B8567D3"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        1163,
+        1164
+      ],
+      "authority_excerpt_utf8_lf": "U \\times_k T \\longrightarrow G \\times_k T,\\quad\n(t, u) \\longrightarrow (uf(t)^{-1}, t)\n",
+      "authority_excerpt_sha256": "8D5F9B2BB2623C4622E025C461946114F62007BD84E3CD5CD599C8B17AAAC7FC",
+      "producer_observation": {
+        "authority_lines": [
+          1163,
+          1164
+        ],
+        "kind": "coordinate_order",
+        "summary": "For the displayed morphism with domain U times T, the coordinates are written (t, u), while the formula u f(t)^{-1} requires the order (u, t).",
+        "translation_disposition": "The displayed formula was preserved exactly and not silently repaired."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-015",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_01201_01800.json",
+        "bytes": 5173,
+        "sha256": "ADC90C1D5F8174202241D5C0F5A2539A3BE3C2897AF72DDFFAFD408D04596C5E"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        1295
+      ],
+      "authority_excerpt_utf8_lf": "\\label{lemma-reduced-group-scheme-prefect-field-characteristic-p-smooth}\n",
+      "authority_excerpt_sha256": "2CCA2FB36EDC538D9E6D607031E68FE84B45F8D55E2B1419339CC8B05937AA27",
+      "producer_observation": {
+        "authority_lines": [
+          1295
+        ],
+        "kind": "identifier_typo",
+        "summary": "The immutable label contains 'prefect' where the English adjective would normally be 'perfect'.",
+        "translation_disposition": "Preserved verbatim as an identifier."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-016",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_01201_01800.json",
+        "bytes": 5173,
+        "sha256": "ADC90C1D5F8174202241D5C0F5A2539A3BE3C2897AF72DDFFAFD408D04596C5E"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        1535,
+        1536,
+        1537,
+        1557
+      ],
+      "authority_excerpt_utf8_lf": "$K = \\Ker(\\text{inn}_h : G_S \\to G_S)$.\nThis is a closed subgroup scheme of $G_S$ over $S$ containing the\nclosed subschemes $G_{n, S}$ for $n \\geq 1$.\nC = H \\cap \\bigcap\\nolimits_i \\Ker(\\text{inn}_{g_i} : G \\to G)\n",
+      "authority_excerpt_sha256": "5313E5FE161118DDDF71BF5BDBF2E6E21D26364A8C29E0B2B03A6506755E5EFD",
+      "producer_observation": {
+        "authority_lines": [
+          1535,
+          1536,
+          1537,
+          1557
+        ],
+        "kind": "mathematical_notation_or_definition",
+        "summary": "The argument requires the fixed-point equalizer of the inner automorphism and the identity, but the source writes an ordinary kernel; an automorphism's ordinary kernel would not contain subschemes on which it acts identically. The same notation recurs in the displayed formula at line 1557.",
+        "translation_disposition": "Preserved exactly; not silently repaired."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-017",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_01201_01800.json",
+        "bytes": 5173,
+        "sha256": "ADC90C1D5F8174202241D5C0F5A2539A3BE3C2897AF72DDFFAFD408D04596C5E"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        1554,
+        1555
+      ],
+      "authority_excerpt_utf8_lf": "this case the connected components of $G$ are the irreducible components\nof $G$ are the translates of $G^0$ by our $g_i$. We claim that\n",
+      "authority_excerpt_sha256": "63E27F29D158DCFD1D760A803BC735567B353E5EA1CB5095159070E99BD16E06",
+      "producer_observation": {
+        "authority_lines": [
+          1554,
+          1555
+        ],
+        "kind": "source_syntax",
+        "summary": "The phrase duplicates the copula in 'the connected components ... are the irreducible components ... are the translates'.",
+        "translation_disposition": "Rendered with the intended relative coordination in French, without changing mathematical content."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-018",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_01201_01800.json",
+        "bytes": 5173,
+        "sha256": "ADC90C1D5F8174202241D5C0F5A2539A3BE3C2897AF72DDFFAFD408D04596C5E"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        1567
+      ],
+      "authority_excerpt_utf8_lf": "$A \\subset G_{\\overline{k}}$ the closed subgroup scheme representing\n",
+      "authority_excerpt_sha256": "75C14FA941BFADEF4081951914450E27854AA803FB3AF8EBD0D4990B64228A7B",
+      "producer_observation": {
+        "authority_lines": [
+          1567
+        ],
+        "kind": "source_syntax",
+        "summary": "The phrase 'let A ... the closed subgroup scheme' appears to omit 'be'.",
+        "translation_disposition": "Rendered with complete French grammar."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-019",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_01201_01800.json",
+        "bytes": 5173,
+        "sha256": "ADC90C1D5F8174202241D5C0F5A2539A3BE3C2897AF72DDFFAFD408D04596C5E"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        1769,
+        1770,
+        1771,
+        1772,
+        1789,
+        1790,
+        1791,
+        1792,
+        1793,
+        1794
+      ],
+      "authority_excerpt_utf8_lf": "\\label{lemma-degree-multiplication-by-d}\nLet $k$ be a field. Let $A$ be an abelian variety over $k$.\nLet $[d] : A \\to A$ be the multiplication by $d$.\nThen $[d]$ is finite locally free of degree $d^{2\\dim(A)}$.\nTo get a contradiction, let $C$ be a proper curve contained in a\nfibre of $[d]$. Then $\\mathcal{N}^{\\otimes d^2}|_C \\cong \\mathcal{O}_C$\nis an ample invertible $\\mathcal{O}_C$-module of degree $0$ which\ncontradicts Varieties, Lemma \\ref{varieties-lemma-ample-curve} for example.\n(You can also use Varieties, Lemma \\ref{varieties-lemma-ample-positive}.)\nThus every fibre of $[d]$ has dimension $0$ and hence $[d]$ is finite\n",
+      "authority_excerpt_sha256": "C00B1C0EAC94D300705684C67F9D46C900C54163B280ADBE98EB3A5318CB03EE",
+      "producer_observation": {
+        "authority_lines": [
+          1769,
+          1770,
+          1771,
+          1772,
+          1789,
+          1790,
+          1791,
+          1792,
+          1793,
+          1794
+        ],
+        "kind": "missing_hypothesis",
+        "summary": "The multiplication-by-d lemma appears to require d nonzero. For d = 0 on a positive-dimensional abelian variety, [0] is not finite, and the proof's ampleness contradiction requires d squared to be positive.",
+        "translation_disposition": "Statement and proof preserved without inserting a hypothesis."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-020",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_01801_02400.json",
+        "bytes": 4482,
+        "sha256": "C0CF3C55AA74608C9151116A0FE48B638057667CE097DE0354B3359A2537530D"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        2132
+      ],
+      "authority_excerpt_utf8_lf": "an $G$-equivariant isomorphism $G \\to X$ over $S$ where $G$ acts on\n",
+      "authority_excerpt_sha256": "428B88552AEBA85E792CD26FF28A8141DC89E243B737C17258FA4FA96A109829",
+      "producer_observation": {
+        "authority_line": 2132,
+        "confidence": "high",
+        "kind": "prose_grammar",
+        "observation": "The authority reads \"an $G$-equivariant isomorphism\"; the indefinite article disagrees with the following pronunciation.",
+        "handling": "No authority mutation and no canon contact; idiomatic French grammar used."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-021",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_01801_02400.json",
+        "bytes": 4482,
+        "sha256": "C0CF3C55AA74608C9151116A0FE48B638057667CE097DE0354B3359A2537530D"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        2220
+      ],
+      "authority_excerpt_utf8_lf": "In general the answers to these questions is no. To get a positive answer\n",
+      "authority_excerpt_sha256": "D5E3E398FED6B714798666AE856B80CC5575847BF1210DE99AE212D4EEB3C3F4",
+      "producer_observation": {
+        "authority_line": 2220,
+        "confidence": "high",
+        "kind": "prose_agreement",
+        "observation": "The authority reads \"the answers to these questions is no\"; plural subject and singular verb disagree.",
+        "handling": "No authority mutation and no canon contact; idiomatic French agreement used."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-022",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_01801_02400.json",
+        "bytes": 4482,
+        "sha256": "C0CF3C55AA74608C9151116A0FE48B638057667CE097DE0354B3359A2537530D"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        2314,
+        2324
+      ],
+      "authority_excerpt_utf8_lf": "Namely, to check this we have to verify that\nThis is immediately clear when evaluating on a homogeneous element.\n",
+      "authority_excerpt_sha256": "3609D3049862F12B5B6BDEE59DFDD262E9057D8A4A7E0001FE60A7E8CBC11864",
+      "producer_observation": {
+        "authority_lines": [
+          2314,
+          2324
+        ],
+        "confidence": "medium",
+        "kind": "syntactic_omission",
+        "observation": "The sentence beginning \"we have to verify that\" presents a diagram and a where-clause but contains no explicit predicate such as \"commutes\".",
+        "handling": "Authority topology retained; no predicate inserted, no authority mutation, and no canon contact."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-023",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_01801_02400.json",
+        "bytes": 4482,
+        "sha256": "C0CF3C55AA74608C9151116A0FE48B638057667CE097DE0354B3359A2537530D"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        2360
+      ],
+      "authority_excerpt_utf8_lf": "\\sum (f_n)_m \\otimes x^m \\otimes x^n = \\sum f_n x^n \\otimes x^n\n",
+      "authority_excerpt_sha256": "5D276F9178AF263ADC040036745EEE32098FDF0D48663BA9C85FEDBC863DB6C2",
+      "producer_observation": {
+        "authority_line": 2360,
+        "confidence": "high",
+        "kind": "formula_typing",
+        "observation": "The right-hand side is written as \\sum f_n x^n \\otimes x^n; the coaction identity appears to require \\sum f_n \\otimes x^n \\otimes x^n.",
+        "handling": "Formula preserved byte-for-byte in the draft; no authority mutation and no canon contact."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-024",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_02401_03000.json",
+        "bytes": 5811,
+        "sha256": "A1FDDE639C06CD9FF295F78988E3DC0D2803476ED9E403975F6BB0EFF98B8C15"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        2643
+      ],
+      "authority_excerpt_utf8_lf": "is a commutative in the category of\n",
+      "authority_excerpt_sha256": "9538556122F91043986E1603E221FA2690D852544CD388449BF2985CD7931C77",
+      "producer_observation": {
+        "authority_lines": [
+          2643
+        ],
+        "kind": "source_syntax",
+        "summary": "The phrase 'is a commutative in the category of' contains a spurious article and lacks a noun after it.",
+        "translation_disposition": "Rendered with complete French grammar; mathematical content and TeX structure were unchanged."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-025",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_02401_03000.json",
+        "bytes": 5811,
+        "sha256": "A1FDDE639C06CD9FF295F78988E3DC0D2803476ED9E403975F6BB0EFF98B8C15"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        2849,
+        2850,
+        2851
+      ],
+      "authority_excerpt_utf8_lf": "The middle equality because $t \\circ c = t \\circ \\text{pr}_0$ as\nmorphisms $R \\times_{s, U, t} R \\to U$, and the first and the last\nequality because we know that base change and pushforward commute in\n",
+      "authority_excerpt_sha256": "91282DBF9A261E802B1859F325E82C363A328EDB528C918DA8239227E0987ED5",
+      "producer_observation": {
+        "authority_lines": [
+          2849,
+          2850,
+          2851
+        ],
+        "kind": "source_syntax",
+        "summary": "The clauses 'The middle equality because ...' and 'the first and the last equality because ...' omit a finite predicate; the latter also refers to two equalities with singular 'equality'.",
+        "translation_disposition": "Rendered as a complete grammatical French sentence without changing the chain of equalities."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-026",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_02401_03000.json",
+        "bytes": 5811,
+        "sha256": "A1FDDE639C06CD9FF295F78988E3DC0D2803476ED9E403975F6BB0EFF98B8C15"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        2860,
+        2866
+      ],
+      "authority_excerpt_utf8_lf": "$(R, R \\times_{t, U, t} R, \\text{pr}_0, \\text{pr}_1, \\text{pr}_{02})$\n(R, R \\times_{t, U, t} R, \\text{pr}_1, \\text{pr}_0, \\text{pr}_{02})\n",
+      "authority_excerpt_sha256": "F2201C5A23DB301B7050E653C1C31C01D098391852D07FF4B742ABB6FCA854FD",
+      "producer_observation": {
+        "authority_lines": [
+          2860,
+          2866
+        ],
+        "kind": "mathematical_notation_or_definition",
+        "summary": "The associated equivalence-relation groupoid at line 2860 is written with (pr_0, pr_1), whereas the source groupoid of the immediately following morphism at line 2866 uses (pr_1, pr_0). In view of the convention j = (t, s) at line 2493 and the arrow r_0^{-1} composed with r_1, the latter ordering appears to be the intended one.",
+        "translation_disposition": "Both displayed tuples were preserved exactly; no silent mathematical correction was made."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-027",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_02401_03000.json",
+        "bytes": 5811,
+        "sha256": "A1FDDE639C06CD9FF295F78988E3DC0D2803476ED9E403975F6BB0EFF98B8C15"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        2991
+      ],
+      "authority_excerpt_utf8_lf": "is coherent, it suffices the show that\n",
+      "authority_excerpt_sha256": "DBCDE4261FE02C3FFA4EDF60450ACDDC77FD72F0B1517D261469577E6E306ADB",
+      "producer_observation": {
+        "authority_lines": [
+          2991
+        ],
+        "kind": "source_typo",
+        "summary": "The phrase 'it suffices the show' appears to have 'the' in place of 'to'.",
+        "translation_disposition": "Rendered with the intended complete French grammar."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-028",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_03001_03600.json",
+        "bytes": 9886,
+        "sha256": "C9E7CB5B6CA68D8C48B418D7DC2B39105A8093586953EB4933956995E3861FFF"
+      },
+      "receipt_field": "upstream_defect_candidates",
+      "authority_lines": [],
+      "authority_excerpt_utf8_lf": "",
+      "authority_excerpt_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "producer_observation": {
+        "source_locator": "groupoids.tex:3145",
+        "source_excerpt": "is a quasi-coherent modules on",
+        "kind": "grammar",
+        "diagnosis": "Number disagreement: the article and verb select singular, while modules is plural.",
+        "suggested_upstream_reading": "is a quasi-coherent module on"
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-029",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_03001_03600.json",
+        "bytes": 9886,
+        "sha256": "C9E7CB5B6CA68D8C48B418D7DC2B39105A8093586953EB4933956995E3861FFF"
+      },
+      "receipt_field": "upstream_defect_candidates",
+      "authority_lines": [],
+      "authority_excerpt_utf8_lf": "",
+      "authority_excerpt_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "producer_observation": {
+        "source_locator": "groupoids.tex:3183",
+        "source_excerpt": "cardinal $\\geq$ than the cardinality",
+        "kind": "grammar/typesetting",
+        "diagnosis": "The relation symbol is followed by the comparative marker than; one of the two comparison forms should be removed.",
+        "suggested_upstream_reading": "cardinal greater than or equal to the cardinality, or cardinal $\\geq$ the cardinality"
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-030",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_03001_03600.json",
+        "bytes": 9886,
+        "sha256": "C9E7CB5B6CA68D8C48B418D7DC2B39105A8093586953EB4933956995E3861FFF"
+      },
+      "receipt_field": "upstream_defect_candidates",
+      "authority_lines": [],
+      "authority_excerpt_utf8_lf": "",
+      "authority_excerpt_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "producer_observation": {
+        "source_locator": "groupoids.tex:3215-3216",
+        "source_excerpt": "for all $i, j = i, k, m$ when $k \\in I_{ij}$",
+        "kind": "malformed quantification",
+        "diagnosis": "The quantified-variable list incorporates the constraint j = i in a syntactically unclear way and conflicts with the preceding phrase for all.",
+        "suggested_upstream_reading": "Clarify the intended quantifiers, plausibly for all i, k, m with j = i and k in I_{ii}."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-031",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_03001_03600.json",
+        "bytes": 9886,
+        "sha256": "C9E7CB5B6CA68D8C48B418D7DC2B39105A8093586953EB4933956995E3861FFF"
+      },
+      "receipt_field": "upstream_defect_candidates",
+      "authority_lines": [],
+      "authority_excerpt_utf8_lf": "",
+      "authority_excerpt_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "producer_observation": {
+        "source_locator": "groupoids.tex:3426-3432",
+        "source_excerpt": "If $R_p \\not = \\emptyset$, then the action ... which turns $R_p$ into a ... torsor",
+        "kind": "incomplete sentence",
+        "diagnosis": "The conditional clause has no main predicate because the displayed action is followed by a relative clause beginning with which.",
+        "suggested_upstream_reading": "Replace which turns with turns, or insert is an action before the relative clause."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-032",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_03001_03600.json",
+        "bytes": 9886,
+        "sha256": "C9E7CB5B6CA68D8C48B418D7DC2B39105A8093586953EB4933956995E3861FFF"
+      },
+      "receipt_field": "upstream_defect_candidates",
+      "authority_lines": [],
+      "authority_excerpt_utf8_lf": "",
+      "authority_excerpt_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "producer_observation": {
+        "source_locator": "groupoids.tex:3518",
+        "source_excerpt": "We sometime use the notation",
+        "kind": "grammar",
+        "diagnosis": "The adverb should be sometimes.",
+        "suggested_upstream_reading": "We sometimes use the notation"
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-033",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_03601_04200.json",
+        "bytes": 14036,
+        "sha256": "1A951D6B1ACE9485FB86667FADA38DC38F132C1B87D44183616B964962A6AD32"
+      },
+      "receipt_field": "upstream_defect_candidates",
+      "authority_lines": [
+        3614
+      ],
+      "authority_excerpt_utf8_lf": "Since $s$ is open the set $W' = t(s^{-1}(W))$ is an open subset of $U$.\n",
+      "authority_excerpt_sha256": "3277102F173BB37E90148AADA76479A179009E52C5FE0D27DE202C3B0F1270CE",
+      "producer_observation": {
+        "id": "GROUPOIDS-3614-WRONG-OPEN-MORPHISM",
+        "classification": "proof attribution",
+        "source_locator": {
+          "path": "groupoids.tex",
+          "line": 3614,
+          "context_label": "lemma-constructing-invariant-opens"
+        },
+        "observed_source": "Since $s$ is open the set $W' = t(s^{-1}(W))$ is an open subset of $U$.",
+        "diagnosis": "The displayed set is the image under t of the open inverse image under s; its openness is directly supplied by openness of t, not openness of s. In a groupoid the two openness properties are equivalent via inversion, but the named morphism in this sentence is still misleading.",
+        "suggested_upstream_reading": "Since $t$ is open, the set $W' = t(s^{-1}(W))$ is an open subset of $U$.",
+        "target_action": "preserved the source attribution in translation and recorded the candidate",
+        "authority_mutated": false,
+        "upstream_contacted": false
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-034",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_03601_04200.json",
+        "bytes": 14036,
+        "sha256": "1A951D6B1ACE9485FB86667FADA38DC38F132C1B87D44183616B964962A6AD32"
+      },
+      "receipt_field": "upstream_defect_candidates",
+      "authority_lines": [
+        3865
+      ],
+      "authority_excerpt_utf8_lf": "Let $g : U' \\to U$ a morphism of schemes over $S$.\n",
+      "authority_excerpt_sha256": "B0253BB204D61B9C2DB7E97D19CED7E67233C14AD88FDB0A38384DBC747B35DA",
+      "producer_observation": {
+        "id": "GROUPOIDS-3865-MISSING-BE",
+        "classification": "grammar",
+        "source_locator": {
+          "path": "groupoids.tex",
+          "line": 3865,
+          "context_label": "lemma-quotient-groupoid-restrict"
+        },
+        "observed_source": "Let $g : U' \\to U$ a morphism of schemes over $S$.",
+        "diagnosis": "The English let-construction is missing the finite verb be.",
+        "suggested_upstream_reading": "Let $g : U' \\to U$ be a morphism of schemes over $S$.",
+        "target_action": "translated with the grammatically required French construction",
+        "authority_mutated": false,
+        "upstream_contacted": false
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-035",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_03601_04200.json",
+        "bytes": 14036,
+        "sha256": "1A951D6B1ACE9485FB86667FADA38DC38F132C1B87D44183616B964962A6AD32"
+      },
+      "receipt_field": "upstream_defect_candidates",
+      "authority_lines": [
+        4050
+      ],
+      "authority_excerpt_utf8_lf": "A computation, which we omit shows that we obtain a groupoid scheme\n",
+      "authority_excerpt_sha256": "73F385FBC5A80E8F065D197C98D2439FCD2319946E581F12D9EBF1ACEE30E8A6",
+      "producer_observation": {
+        "id": "GROUPOIDS-4050-MISSING-PARENTHETICAL-COMMA",
+        "classification": "grammar/punctuation",
+        "source_locator": {
+          "path": "groupoids.tex",
+          "line": 4050,
+          "context_label": "lemma-characterize-cartesian-schemes"
+        },
+        "observed_source": "A computation, which we omit shows that we obtain a groupoid scheme",
+        "diagnosis": "The nonrestrictive parenthetical which we omit lacks its closing comma.",
+        "suggested_upstream_reading": "A computation, which we omit, shows that we obtain a groupoid scheme",
+        "target_action": "translated with normal French parenthetical punctuation",
+        "authority_mutated": false,
+        "upstream_contacted": false
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-036",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_03601_04200.json",
+        "bytes": 14036,
+        "sha256": "1A951D6B1ACE9485FB86667FADA38DC38F132C1B87D44183616B964962A6AD32"
+      },
+      "receipt_field": "upstream_defect_candidates",
+      "authority_lines": [
+        4172
+      ],
+      "authority_excerpt_utf8_lf": "Thus (b) $\\Rightarrow$ (a) in both (1) and (2).\n",
+      "authority_excerpt_sha256": "3C9C5A7AF397E8DC365278F7188E41F9C24B48D1D04AF70E28DE613CFE98D7E6",
+      "producer_observation": {
+        "id": "GROUPOIDS-4172-WRONG-IMPLICATION-TARGET",
+        "classification": "proof cross-reference",
+        "source_locator": {
+          "path": "groupoids.tex",
+          "line": 4172,
+          "context_label": "lemma-diagonal"
+        },
+        "observed_source": "Thus (b) $\\Rightarrow$ (a) in both (1) and (2).",
+        "diagnosis": "The immediately preceding paragraph proves that separatedness or quasi-separatedness of the stabilizer makes the identity section respectively a closed immersion or quasi-compact. It therefore establishes (b) implies (c), not the already established (b) implies (a).",
+        "suggested_upstream_reading": "Thus (b) $\\Rightarrow$ (c) in both (1) and (2).",
+        "target_action": "preserved the source implication exactly in translation and recorded the candidate",
+        "authority_mutated": false,
+        "upstream_contacted": false
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-037",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_04201_04800.json",
+        "bytes": 10525,
+        "sha256": "7264184970397390A8707C921769168266951DB91F541B46F49DD4083A909C9F"
+      },
+      "receipt_field": "upstream_defect_candidates",
+      "authority_lines": [
+        4224
+      ],
+      "authority_excerpt_utf8_lf": "length elsewhere (insert future reference here); here we just discuss some\n",
+      "authority_excerpt_sha256": "D0FD2C5CC7B823DBDAC2A0EDBE8ECAB119E7EA14CC7976E92E0A2D89F524034C",
+      "producer_observation": {
+        "id": "GROUPOIDS-4224-REFERENCE-PLACEHOLDER",
+        "classification": "unresolved editorial placeholder",
+        "source_locator": {
+          "path": "groupoids.tex",
+          "line": 4224,
+          "context_label": "section-finite-flat"
+        },
+        "observed_source": "(insert future reference here)",
+        "reason": "The published source text retains an explicit future-reference placeholder.",
+        "authority_mutated": false,
+        "upstream_contacted": false
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-038",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_04201_04800.json",
+        "bytes": 10525,
+        "sha256": "7264184970397390A8707C921769168266951DB91F541B46F49DD4083A909C9F"
+      },
+      "receipt_field": "upstream_defect_candidates",
+      "authority_lines": [
+        4276
+      ],
+      "authority_excerpt_utf8_lf": "$\\Gamma(R \\times_{S, U, t} R, \\mathcal{O})$.\n",
+      "authority_excerpt_sha256": "087F18939B422A445F8CB178F59A2F7E1D9E923A07399581C52AA4314E86B327",
+      "producer_observation": {
+        "id": "GROUPOIDS-4276-FIBRE-PRODUCT-S-VS-SOURCE-SCHEME",
+        "classification": "likely TeX variable typo",
+        "source_locator": {
+          "path": "groupoids.tex",
+          "line": 4276,
+          "comparison_line": 4266,
+          "context_label": "lemma-determinant-trick"
+        },
+        "observed_source": "\\Gamma(R \\times_{S, U, t} R, \\mathcal{O})",
+        "reason": "The diagram at line 4266 uses the fibre product R \\times_{s,U,t} R; the capital S at line 4276 is inconsistent with that object and is likely intended to be the morphism s.",
+        "authority_mutated": false,
+        "upstream_contacted": false
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-039",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_04201_04800.json",
+        "bytes": 10525,
+        "sha256": "7264184970397390A8707C921769168266951DB91F541B46F49DD4083A909C9F"
+      },
+      "receipt_field": "upstream_defect_candidates",
+      "authority_lines": [
+        4309
+      ],
+      "authority_excerpt_utf8_lf": "Note that $u \\in U_r \\Leftrightarrow$ if and only if the scheme theoretic fibre\n",
+      "authority_excerpt_sha256": "009AD4E8C0C3E49D4FD61A44F8CEC77F99C35816FAE948334DB7C15863D49952",
+      "producer_observation": {
+        "id": "GROUPOIDS-4309-DUPLICATED-BICONDITIONAL",
+        "classification": "duplicated logical connective",
+        "source_locator": {
+          "path": "groupoids.tex",
+          "line": 4309,
+          "context_label": "lemma-finite-locally-free-disjoint-free"
+        },
+        "observed_source": "$u \\in U_r \\Leftrightarrow$ if and only if",
+        "reason": "The symbolic biconditional and the immediately following words duplicate the same connective.",
+        "authority_mutated": false,
+        "upstream_contacted": false
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-040",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_04201_04800.json",
+        "bytes": 10525,
+        "sha256": "7264184970397390A8707C921769168266951DB91F541B46F49DD4083A909C9F"
+      },
+      "receipt_field": "upstream_defect_candidates",
+      "authority_lines": [
+        4421
+      ],
+      "authority_excerpt_utf8_lf": "are finite locally free of rank $r$. Pulling back by $U' = \\Spec(C') \\to U$\n",
+      "authority_excerpt_sha256": "2305C65DDDF45C6355CE7D65690E26D1383E56B450530364A3F122D4338DD8B3",
+      "producer_observation": {
+        "id": "GROUPOIDS-4421-INCONSISTENT-BASE-CHANGE-OBJECT",
+        "classification": "notation/type inconsistency",
+        "source_locator": {
+          "path": "groupoids.tex",
+          "line": 4421,
+          "definition_lines": [
+            4373,
+            4374
+          ],
+          "context_label": "lemma-invariants-base-change"
+        },
+        "observed_source": "Pulling back by $U' = \\Spec(C') \\to U$",
+        "reason": "Earlier U' is defined as Spec(A \\otimes_C C'), while Spec(C') maps naturally to Spec(C), not to U. The sentence appears to conflate the base morphism with the base-changed object.",
+        "authority_mutated": false,
+        "upstream_contacted": false
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-041",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_04201_04800.json",
+        "bytes": 10525,
+        "sha256": "7264184970397390A8707C921769168266951DB91F541B46F49DD4083A909C9F"
+      },
+      "receipt_field": "upstream_defect_candidates",
+      "authority_lines": [
+        4537,
+        4541,
+        4542
+      ],
+      "authority_excerpt_utf8_lf": "invertible (insert future reference on property determinant here).\nhence its norm is not a unit (insert future reference\non property determinant here). We conclude that $C^1$ contains\n",
+      "authority_excerpt_sha256": "EA4516993F9A5E588BFC54A7BEB2B7C6093AB68059ADE55D25B906E35C6AF827",
+      "producer_observation": {
+        "id": "GROUPOIDS-4537-4542-DETERMINANT-REFERENCE-PLACEHOLDERS",
+        "classification": "unresolved editorial placeholders",
+        "source_locator": {
+          "path": "groupoids.tex",
+          "lines": [
+            4537,
+            4541,
+            4542
+          ],
+          "context_label": "lemma-points"
+        },
+        "observed_source": "Two occurrences of insert future reference on property determinant here",
+        "reason": "Both determinant/norm justifications retain explicit future-reference placeholders.",
+        "authority_mutated": false,
+        "upstream_contacted": false
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-042",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_04201_04800.json",
+        "bytes": 10525,
+        "sha256": "7264184970397390A8707C921769168266951DB91F541B46F49DD4083A909C9F"
+      },
+      "receipt_field": "upstream_defect_candidates",
+      "authority_lines": [
+        4570
+      ],
+      "authority_excerpt_utf8_lf": "Let $S$ be a scheme. Let $f : (U', R', s', t') \\to (U, R, s, t, c)$ be a\n",
+      "authority_excerpt_sha256": "F906565F8186C2DC017BAA9072B5F6A5585DB7EA41B86743C8C5491F19536F7B",
+      "producer_observation": {
+        "id": "GROUPOIDS-4570-MISSING-C-PRIME",
+        "classification": "omitted groupoid structure datum",
+        "source_locator": {
+          "path": "groupoids.tex",
+          "line": 4570,
+          "corroborating_line": 4615,
+          "context_label": "lemma-etale"
+        },
+        "observed_source": "$f : (U', R', s', t') \\to (U, R, s, t, c)$",
+        "reason": "A morphism of groupoid schemes normally includes the composition datum c' in the source tuple; the same proof explicitly uses (U', R', s', t', c') at line 4615.",
+        "authority_mutated": false,
+        "upstream_contacted": false
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-043",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_04201_04800.json",
+        "bytes": 10525,
+        "sha256": "7264184970397390A8707C921769168266951DB91F541B46F49DD4083A909C9F"
+      },
+      "receipt_field": "upstream_defect_candidates",
+      "authority_lines": [
+        4641
+      ],
+      "authority_excerpt_utf8_lf": "The $M_1 = \\lim M_i$ and similarly for the other schemes.\n",
+      "authority_excerpt_sha256": "06FA035A8A370C016F35B84D0CF1E89BC77E5A40F6979D184E65B37E08AFBBB2",
+      "producer_observation": {
+        "id": "GROUPOIDS-4641-THE-FOR-THEN",
+        "classification": "prose typo",
+        "source_locator": {
+          "path": "groupoids.tex",
+          "line": 4641,
+          "context_label": "lemma-etale"
+        },
+        "observed_source": "The $M_1 = \\lim M_i$ and similarly for the other schemes.",
+        "reason": "The sentence requires Then rather than The.",
+        "authority_mutated": false,
+        "upstream_contacted": false
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-044",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_04201_04800.json",
+        "bytes": 10525,
+        "sha256": "7264184970397390A8707C921769168266951DB91F541B46F49DD4083A909C9F"
+      },
+      "receipt_field": "upstream_defect_candidates",
+      "authority_lines": [
+        4777
+      ],
+      "authority_excerpt_utf8_lf": "Moreover the tow left squares are cocartesian in the category of rings, and\n",
+      "authority_excerpt_sha256": "F8A2AB6BAD7891E2B70831DB44E27010F0B8653B064D3465978349080E3DE066",
+      "producer_observation": {
+        "id": "GROUPOIDS-4777-TOW-FOR-TWO",
+        "classification": "prose typo",
+        "source_locator": {
+          "path": "groupoids.tex",
+          "line": 4777,
+          "context_label": "lemma-basis"
+        },
+        "observed_source": "the tow left squares",
+        "reason": "Tow is a typographical error for two.",
+        "authority_mutated": false,
+        "upstream_contacted": false
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-045",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_04201_04800.json",
+        "bytes": 10525,
+        "sha256": "7264184970397390A8707C921769168266951DB91F541B46F49DD4083A909C9F"
+      },
+      "receipt_field": "upstream_defect_candidates",
+      "authority_lines": [
+        4788
+      ],
+      "authority_excerpt_utf8_lf": "in particular that $s$ (and hence also then isomorphic arrow $t$)\n",
+      "authority_excerpt_sha256": "FB34367E5E83F822643DB06FB3C34BF328EAFB4AF37BAE98E1031A09D974FB08",
+      "producer_observation": {
+        "id": "GROUPOIDS-4788-MALFORMED-ISOMORPHIC-ARROW-PHRASE",
+        "classification": "malformed prose",
+        "source_locator": {
+          "path": "groupoids.tex",
+          "line": 4788,
+          "context_label": "lemma-basis"
+        },
+        "observed_source": "and hence also then isomorphic arrow $t$",
+        "reason": "The phrase is grammatically malformed; the evident intended reading is and hence also the isomorphic arrow t.",
+        "authority_mutated": false,
+        "upstream_contacted": false
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-046",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_04801_05124.json",
+        "bytes": 5890,
+        "sha256": "B3CBA1DBED00269158A408360DB2CF0475CFFE141F117A55F6907B71A895CA74"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        4941
+      ],
+      "authority_excerpt_utf8_lf": "$Z = R \\setminus s^{-1}(W) \\cap t^{-1}(W)$. This is a closed subset\n",
+      "authority_excerpt_sha256": "E0411783BE428A5454429797442D02BED6B6555B03A31EFE23B27E37F08C5145",
+      "producer_observation": {
+        "id": "GROUPOIDS-4941-SET-DIFFERENCE-PRECEDENCE",
+        "classification": "notation/semantic ambiguity",
+        "source_locator": {
+          "path": "groupoids.tex",
+          "line": 4941,
+          "consistency_line": 4942,
+          "context_label": "lemma-find-invariant-affine"
+        },
+        "observed_source": "$Z = R \\setminus s^{-1}(W) \\cap t^{-1}(W)$. This is a closed subset of $R$.",
+        "reason": "Without parentheses, conventional left-associative reading gives $(R \\setminus s^{-1}(W)) \\cap t^{-1}(W)$, which need not be closed; the immediately asserted closedness and the subsequent orbit description instead point to the complement of the intersection as the likely intent.",
+        "handling": "Formula preserved exactly; no authority mutation and no canon contact."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    },
+    {
+      "producer_id": "FR-GROUPOIDS-047",
+      "receipt": {
+        "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p06\\evidence\\GROUPOIDS_DIRECT_QA_04801_05124.json",
+        "bytes": 5890,
+        "sha256": "B3CBA1DBED00269158A408360DB2CF0475CFFE141F117A55F6907B71A895CA74"
+      },
+      "receipt_field": "source_defect_candidates",
+      "authority_lines": [
+        5049,
+        5052
+      ],
+      "authority_excerpt_utf8_lf": "Let $V$ be a scheme over $X$ such that for all \n$U \\subset V$ with $v_1, \\ldots, v_d \\in U$.\n",
+      "authority_excerpt_sha256": "AC3BB9D1E5A5424EE2B45C66A4853000FB65A1D42CDBD419676191713A2BB5A4",
+      "producer_observation": {
+        "id": "GROUPOIDS-5049-UNBOUND-D",
+        "classification": "unbound variable in lemma statement",
+        "source_locator": {
+          "path": "groupoids.tex",
+          "lines": [
+            5049,
+            5052
+          ],
+          "corroborating_proof_line": 5059,
+          "context_label": "lemma-descend-along-finite"
+        },
+        "observed_source": "The hypothesis quantifies tuples $(y, v_1, \\ldots, v_d)$ but the lemma statement introduces no integer $d$; the proof introduces a bound $d$ only later.",
+        "reason": "The occurrence of $d$ in the hypothesis is not bound in the statement. The later proof-local choice at line 5059 cannot bind that earlier statement occurrence.",
+        "handling": "Authority statement and formula preserved exactly; no authority mutation and no canon contact."
+      },
+      "authority_mutated": false,
+      "french_formal_tokens_silently_corrected": false
+    }
+  ]
+}

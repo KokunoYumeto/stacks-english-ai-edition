@@ -1,0 +1,181 @@
+{
+  "adverse_evidence_preserved": [
+    "Attempt 001 BUILD.md absence is retained and not overwritten; the full corrected workflow is a separate successful attempt.",
+    "The first final-review preflight used the wrong source-map row cardinality; the failed attempt is retained and the corrected nested-operation check is applied here.",
+    "Two inherited overfull hboxes and standalone cross-chapter unresolved references remain explicitly recorded.",
+    "Four independently rejected producer rows remain in the rejection ledger.",
+    "The validation PDF is untagged."
+  ],
+  "authority_mutated": false,
+  "build_receipt": {
+    "bytes": 32939,
+    "path": "builds/build-receipt.json",
+    "sha256": "A5D10F8D99E85E113DAC3370585D0A897953189AAF5BE85C966BCBB24BF8E7A9"
+  },
+  "candidate_id": "stacks-errata-a04446e-r46",
+  "created_at_utc": "2026-09-05T18:16:25.827672Z",
+  "deduplication_boundary": {
+    "prior_groupoids_operations": 0,
+    "registered_rounds_checked_through": 45,
+    "stable_id_collisions": 0
+  },
+  "deterministic_replay": {
+    "bytes": 2122,
+    "path": "builds/deterministic-replay.json",
+    "sha256": "7E75F4B3D69FBFF0835FEBDB2655F43C38F81A454E09577379AC2E26DB062C4B"
+  },
+  "final_review_preflight_adverse_attempt": {
+    "bytes": 505,
+    "path": "replay/FINAL_REVIEW_PREFLIGHT_ATTEMPT_001.json",
+    "sha256": "2584ACFDB5FDE2EC4A75B3D107048F6A6DEDAE3CB445021AEDACF4419BAD6BBF"
+  },
+  "final_stage": {
+    "bytes": 11351,
+    "path": "replay/FINAL_STAGE.json",
+    "sha256": "055A1DA4AD680A6AF1C548000EB029951CA51DC4C7E11AD3E602783DE14E54E2"
+  },
+  "final_stage_sha256": "055A1DA4AD680A6AF1C548000EB029951CA51DC4C7E11AD3E602783DE14E54E2",
+  "generated_source_composed": false,
+  "identity_replay": {
+    "decision_rows": 47,
+    "operation_ids_unique": true,
+    "producer_ids": [
+      "FR-GROUPOIDS-001",
+      "FR-GROUPOIDS-002",
+      "FR-GROUPOIDS-003",
+      "FR-GROUPOIDS-004",
+      "FR-GROUPOIDS-006",
+      "FR-GROUPOIDS-008",
+      "FR-GROUPOIDS-010",
+      "FR-GROUPOIDS-011",
+      "FR-GROUPOIDS-012",
+      "FR-GROUPOIDS-013",
+      "FR-GROUPOIDS-014",
+      "FR-GROUPOIDS-016",
+      "FR-GROUPOIDS-017",
+      "FR-GROUPOIDS-018",
+      "FR-GROUPOIDS-019",
+      "FR-GROUPOIDS-020",
+      "FR-GROUPOIDS-021",
+      "FR-GROUPOIDS-022",
+      "FR-GROUPOIDS-023",
+      "FR-GROUPOIDS-024",
+      "FR-GROUPOIDS-025",
+      "FR-GROUPOIDS-026",
+      "FR-GROUPOIDS-027",
+      "FR-GROUPOIDS-028",
+      "FR-GROUPOIDS-029",
+      "FR-GROUPOIDS-030",
+      "FR-GROUPOIDS-031",
+      "FR-GROUPOIDS-032",
+      "FR-GROUPOIDS-033",
+      "FR-GROUPOIDS-034",
+      "FR-GROUPOIDS-035",
+      "FR-GROUPOIDS-036",
+      "FR-GROUPOIDS-037",
+      "FR-GROUPOIDS-038",
+      "FR-GROUPOIDS-039",
+      "FR-GROUPOIDS-040",
+      "FR-GROUPOIDS-041",
+      "FR-GROUPOIDS-042",
+      "FR-GROUPOIDS-043",
+      "FR-GROUPOIDS-044",
+      "FR-GROUPOIDS-045",
+      "FR-GROUPOIDS-046",
+      "FR-GROUPOIDS-047"
+    ],
+    "producer_ids_unique": true,
+    "rejection_rows": 4,
+    "stable_ids": [
+      "MC-STK-ERR-1480",
+      "MC-STK-ERR-1481",
+      "MC-STK-ERR-1482",
+      "MC-STK-ERR-1483",
+      "MC-STK-ERR-1484",
+      "MC-STK-ERR-1485",
+      "MC-STK-ERR-1486",
+      "MC-STK-ERR-1487",
+      "MC-STK-ERR-1488",
+      "MC-STK-ERR-1489",
+      "MC-STK-ERR-1490",
+      "MC-STK-ERR-1491",
+      "MC-STK-ERR-1492",
+      "MC-STK-ERR-1493",
+      "MC-STK-ERR-1494",
+      "MC-STK-ERR-1495",
+      "MC-STK-ERR-1496",
+      "MC-STK-ERR-1497",
+      "MC-STK-ERR-1498",
+      "MC-STK-ERR-1499",
+      "MC-STK-ERR-1500",
+      "MC-STK-ERR-1501",
+      "MC-STK-ERR-1502",
+      "MC-STK-ERR-1503",
+      "MC-STK-ERR-1504",
+      "MC-STK-ERR-1505",
+      "MC-STK-ERR-1506",
+      "MC-STK-ERR-1507",
+      "MC-STK-ERR-1508",
+      "MC-STK-ERR-1509",
+      "MC-STK-ERR-1510",
+      "MC-STK-ERR-1511",
+      "MC-STK-ERR-1512",
+      "MC-STK-ERR-1513",
+      "MC-STK-ERR-1514",
+      "MC-STK-ERR-1515",
+      "MC-STK-ERR-1516",
+      "MC-STK-ERR-1517",
+      "MC-STK-ERR-1518",
+      "MC-STK-ERR-1519",
+      "MC-STK-ERR-1520",
+      "MC-STK-ERR-1521",
+      "MC-STK-ERR-1522"
+    ],
+    "stable_ids_unique": true
+  },
+  "mechanical_validation": {
+    "bytes": 4716,
+    "path": "builds/FINAL_MECHANICAL_VALIDATION.json",
+    "sha256": "880A7C39B9DC7FA533FE7A33AAE0967F43F8D6E8A3C809D6CC40B9F3758A099C"
+  },
+  "passed": true,
+  "producer_target_mutated": false,
+  "registry_admission": "NOT_PERFORMED",
+  "schema": "stacks-r46-final-independent-review/v1",
+  "snapshot_extra": [],
+  "snapshot_files_rehashed": 64,
+  "snapshot_missing": [],
+  "source_replay": {
+    "authority": {
+      "bytes": 189166,
+      "path": "authority/source/groupoids.tex",
+      "sha256": "157CC1C792F41465B8249582FEE0F6DFF266AC4224F06B05E936C66C65DB043A"
+    },
+    "descending_byte_replay_payload_exact": true,
+    "exact_preimages": 46,
+    "nonoverlapping": true,
+    "operations": 46,
+    "payload": {
+      "bytes": 189152,
+      "path": "payload/groupoids.tex",
+      "sha256": "6ED98A884E9F4AD6C3EF6720AE538F1FEFEED24E09E60111B1F9D825CF1A7C04"
+    },
+    "semantic_units": 43,
+    "unlisted_byte_changes": 0
+  },
+  "tex_mutex_adverse_attempt": {
+    "bytes": 939,
+    "path": "builds/TEX_MUTEX_RECEIPT_ATTEMPT_001.json",
+    "sha256": "669B807198729324254BB1524F8F1182B125396745A0FBEDD3FC9F60D89102E5"
+  },
+  "tex_mutex_success": {
+    "bytes": 883,
+    "path": "builds/TEX_MUTEX_RECEIPT.json",
+    "sha256": "8366D949437622C816AAE376EFF40122A1D1DF9F2B793A8A24ADEF257A0E9754"
+  },
+  "visual_adjudication": {
+    "bytes": 11998,
+    "path": "replay/PAGE_COMPLETE_VISUAL_ADJUDICATION.json",
+    "sha256": "C59533A5510F6E340435D9AE4708608E61DD3FCDADCE8CF088F54A2534C70A06"
+  }
+}

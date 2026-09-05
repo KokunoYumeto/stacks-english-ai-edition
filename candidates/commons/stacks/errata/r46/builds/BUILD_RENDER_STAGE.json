@@ -1,0 +1,80 @@
+{
+  "adverse_history": "Attempt 001 completed both deterministic TeX executions but its postflight failed because BUILD.md was then absent. The recipe was added and the entire two-build workflow was repeated under the mutex successfully.",
+  "build_receipt": {
+    "bytes": 32939,
+    "path": "builds/build-receipt.json",
+    "sha256": "A5D10F8D99E85E113DAC3370585D0A897953189AAF5BE85C966BCBB24BF8E7A9"
+  },
+  "candidate_id": "stacks-errata-a04446e-r46",
+  "contact_sheets": 4,
+  "deterministic_replay": {
+    "bytes": 2122,
+    "path": "builds/deterministic-replay.json",
+    "sha256": "7E75F4B3D69FBFF0835FEBDB2655F43C38F81A454E09577379AC2E26DB062C4B"
+  },
+  "generated_source_composed": false,
+  "high_resolution_pages": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    11,
+    13,
+    17,
+    19,
+    23,
+    24,
+    25,
+    28,
+    30,
+    31,
+    33,
+    34,
+    36,
+    37,
+    38,
+    40,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    52,
+    53
+  ],
+  "pages": 55,
+  "registry_admission": "NOT_PERFORMED",
+  "render_manifest": {
+    "bytes": 16335,
+    "path": "replay/RENDER_MANIFEST.json",
+    "sha256": "A95BC3C0CA87C83B97C2494AE1CE859F6CA3B2E0ADA1622010B81222FA35BFE5"
+  },
+  "schema": "stacks-r46-build-render-stage/v1",
+  "source_page_map": {
+    "bytes": 12513,
+    "path": "builds/source-page-map.json",
+    "sha256": "F7B86097F4B41743963E64861CCE043C59F4F2AFE0A331576698E43DBA58421D"
+  },
+  "status": "BUILD_DETERMINISTIC_RENDER_VISUAL_PASS",
+  "tex_mutex_adverse_attempt": {
+    "bytes": 939,
+    "path": "builds/TEX_MUTEX_RECEIPT_ATTEMPT_001.json",
+    "sha256": "669B807198729324254BB1524F8F1182B125396745A0FBEDD3FC9F60D89102E5"
+  },
+  "tex_mutex_success": {
+    "bytes": 883,
+    "path": "builds/TEX_MUTEX_RECEIPT.json",
+    "sha256": "8366D949437622C816AAE376EFF40122A1D1DF9F2B793A8A24ADEF257A0E9754"
+  },
+  "visual_adjudication": {
+    "bytes": 11998,
+    "path": "replay/PAGE_COMPLETE_VISUAL_ADJUDICATION.json",
+    "sha256": "C59533A5510F6E340435D9AE4708608E61DD3FCDADCE8CF088F54A2534C70A06"
+  }
+}
