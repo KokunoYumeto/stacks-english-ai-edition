@@ -1,0 +1,127 @@
+{
+  "schema": "mathematics-commons-stacks-registry-admission-receipt/v1",
+  "candidate_id": "stacks-errata-a04446e-r45",
+  "status": "PASS",
+  "admitted_at_utc": "2026-09-05T17:21:29.735Z",
+  "candidate_commit": "7e36f931fd0bb762c436a0af9478243357c53f63",
+  "candidate_tree": "b5d22aa19293641380808fb2191399e7e2accaa9",
+  "manifest": {
+    "path": "candidate.manifest.json",
+    "bytes": 12142,
+    "sha256": "FAFF8C70CC572134056CFAE2659E58815FB94078547DB2926B6FF4134666A0DD"
+  },
+  "operation_spec": {
+    "path": "operation-spec.json",
+    "bytes": 41551,
+    "sha256": "9E36DE89FBF0B56BE5F06FC60BA9B7DF3794CCE38067EBF8BBB71A9FD6077D29"
+  },
+  "source_map": {
+    "path": "source-map.jsonl",
+    "bytes": 51431,
+    "sha256": "CDF5D7D3D4DDF58F9388F7697AC971CC7189F015DCF637C74B50CFF42F8FD86E"
+  },
+  "final_review": {
+    "path": "replay/FINAL_INDEPENDENT_REVIEW.json",
+    "bytes": 4056,
+    "sha256": "A8947663FAE060ADAC2357E748D2BDBE8DD35A759676074EEF86DED9982043F9"
+  },
+  "stable_id_count": 19,
+  "stable_ids": [
+    "MC-STK-ERR-1461",
+    "MC-STK-ERR-1462",
+    "MC-STK-ERR-1463",
+    "MC-STK-ERR-1464",
+    "MC-STK-ERR-1465",
+    "MC-STK-ERR-1466",
+    "MC-STK-ERR-1467",
+    "MC-STK-ERR-1468",
+    "MC-STK-ERR-1469",
+    "MC-STK-ERR-1470",
+    "MC-STK-ERR-1471",
+    "MC-STK-ERR-1472",
+    "MC-STK-ERR-1473",
+    "MC-STK-ERR-1474",
+    "MC-STK-ERR-1475",
+    "MC-STK-ERR-1476",
+    "MC-STK-ERR-1477",
+    "MC-STK-ERR-1478",
+    "MC-STK-ERR-1479"
+  ],
+  "producer_ids": [
+    "TOPOLOGIES-NATIVE-001",
+    "TOPOLOGIES-NATIVE-005",
+    "TOPOLOGIES-NATIVE-004",
+    "TOPOLOGIES-NATIVE-002",
+    "TOPOLOGIES-NATIVE-003",
+    "TOPOLOGIES-NATIVE-006",
+    "TOPOLOGIES-NATIVE-007",
+    "TOPOLOGIES-NATIVE-008",
+    "TOPOLOGIES-NATIVE-009",
+    "TOPOLOGIES-NATIVE-010",
+    "TOPOLOGIES-NATIVE-011",
+    "TOPOLOGIES-NATIVE-012",
+    "TOPOLOGIES-NATIVE-013",
+    "TOPOLOGIES-NATIVE-014",
+    "TOPOLOGIES-NATIVE-015",
+    "TOPOLOGIES-NATIVE-016",
+    "TOPOLOGIES-NATIVE-017",
+    "TOPOLOGIES-NATIVE-018",
+    "TOPOLOGIES-NATIVE-019"
+  ],
+  "classification": {
+    "source_defect": 17,
+    "editorial_or_notational_clarification": 2
+  },
+  "grouping_notes": [
+    "Nineteen semantic units contain 36 exact, nonoverlapping operations; descending-byte replay reproduces payload/topologies.tex byte-for-byte.",
+    "Five linked reference-key replacements are validated by exact signed target deltas (-5 obsolete key, +5 correct key).",
+    "R45 follows R44 in registry and stable-ID order and modifies only topologies.tex; all earlier candidate, registry, and lease history is preserved."
+  ],
+  "registry": {
+    "before_sha256": "0A86C8871E2459B7C0B2FB02620FFD696D01F1C175E5EA0F32A7BB589F03AAAD",
+    "after_sha256": "382D67696118D59BC601B7360EC9DC11DD883C4FA445357818CE89BA6564F70D",
+    "last_overlay": "stacks-errata-a04446e-r45",
+    "prior_entries_unchanged": 45,
+    "current_entries": 46,
+    "unique_stable_ids": 1227
+  },
+  "leases": {
+    "before_sha256": "2179DA342E8AAEDABE32BE09C3EB4370AC385BE4A6D68BB2D41775ED74E03C3B",
+    "after_sha256": "CCA96DC9A9F75BA1477D8180E5F54CF3A3CF91E4CB4A7097505E3F6F528904EF",
+    "issued_event": "lease-event-000094",
+    "released_event": "lease-event-000095",
+    "prior_events_unchanged": 94
+  },
+  "fresh_replay": {
+    "passed": true,
+    "units": 19,
+    "operations": 36,
+    "exact_preimages_descending_byte_replay": true,
+    "payload_sha256": {
+      "topologies.tex": "FA88114672E734B6B9677C62378691DFFA761D2376026EAE4340CDEFD053A8A9"
+    },
+    "authority_sha256": {
+      "topologies.tex": "C984C98BCD458A191880433DED32A36AC9035543BBF8C98E191AE022A260F513"
+    },
+    "manifest_references": 66,
+    "manifest_closure": "PASS: 66/66 manifest-bound files and 67/67 candidate files.",
+    "workflow_check": "46 admitted entries; 95 lease events; 1227 globally unique stable IDs."
+  },
+  "validation_reader": {
+    "pages": 46,
+    "bytes": 650266,
+    "sha256": "7BE05DE504DDE96C24737886DEF2E630BFF1C2AEBE9F8C4A2A5D1CCFF86A3542",
+    "reproducible": true,
+    "recorder_fls": "Six pdflatex invocations used -recorder; two independent candidate and authority phases reproduced PDFs and input closures byte-for-byte.",
+    "visual_gate": "All 46 pages were reviewed via complete contact sheets; all 23 correction-sensitive pages were individually inspected at 180 dpi with zero blocking finding.",
+    "adverse_evidence": "Attempt 001 failed only its generic reference-parity validator and is preserved; the complete corrected attempt passed. Four inherited overfull hboxes and isolated cross-chapter unresolved references remain; the PDF is untagged."
+  },
+  "constraints": {
+    "authority_mutated": false,
+    "producer_target_mutated": false,
+    "generated_source_composed": false,
+    "generated_source_pushed": false,
+    "published": false
+  },
+  "next_action": "Commit and validate the separate registrar admission. Generated-source composition remains outside this admission."
+}
