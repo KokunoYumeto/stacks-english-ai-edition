@@ -1,0 +1,140 @@
+{
+  "schema": "mathematics-commons-stacks-registry-admission-receipt/v1",
+  "candidate_id": "stacks-errata-a04446e-r44",
+  "status": "PASS",
+  "admitted_at_utc": "2026-09-05T16:10:45.000Z",
+  "candidate_commit": "9f9d196fc7771edf5c4b6a50eeafc7a6a48c33cd",
+  "candidate_tree": "ac7a72da4fe2bba0809651641372b3163a7fc28b",
+  "manifest": {
+    "path": "candidate.manifest.json",
+    "bytes": 13049,
+    "sha256": "7D1123B09465CBE31256E05AEF49B76F7ED4DD7B28AB667C53F23A7A76575521"
+  },
+  "operation_spec": {
+    "path": "operation-spec.json",
+    "bytes": 31325,
+    "sha256": "BBF1CA4B4B2F56969EA386B4DFEA909055FC9AB01DE72F731BF337FF5F67F0CC"
+  },
+  "source_map": {
+    "path": "source-map.jsonl",
+    "bytes": 45134,
+    "sha256": "251F2EC01B2379FE1679C33EF462E787408D2B11701B3593C49457A2F3581AC1"
+  },
+  "final_review": {
+    "path": "replay/FINAL_INDEPENDENT_REVIEW.json",
+    "bytes": 9785,
+    "sha256": "4CEDF7E10D74235839F712774C0F7FD9D3234E6A5D2FAAEBF63A0AAB77381603"
+  },
+  "stable_id_count": 24,
+  "stable_ids": [
+    "MC-STK-ERR-1437",
+    "MC-STK-ERR-1438",
+    "MC-STK-ERR-1439",
+    "MC-STK-ERR-1440",
+    "MC-STK-ERR-1441",
+    "MC-STK-ERR-1442",
+    "MC-STK-ERR-1443",
+    "MC-STK-ERR-1444",
+    "MC-STK-ERR-1445",
+    "MC-STK-ERR-1446",
+    "MC-STK-ERR-1447",
+    "MC-STK-ERR-1448",
+    "MC-STK-ERR-1449",
+    "MC-STK-ERR-1450",
+    "MC-STK-ERR-1451",
+    "MC-STK-ERR-1452",
+    "MC-STK-ERR-1453",
+    "MC-STK-ERR-1454",
+    "MC-STK-ERR-1455",
+    "MC-STK-ERR-1456",
+    "MC-STK-ERR-1457",
+    "MC-STK-ERR-1458",
+    "MC-STK-ERR-1459",
+    "MC-STK-ERR-1460"
+  ],
+  "producer_ids": [
+    "PERFECT-SRC-046",
+    "PERFECT-SRC-047",
+    "PERFECT-SRC-048",
+    "PERFECT-SRC-049",
+    "PERFECT-SRC-050",
+    "PERFECT-SRC-051",
+    "PERFECT-SRC-052",
+    "PERFECT-SRC-054",
+    "PERFECT-SRC-055",
+    "PERFECT-SRC-056",
+    "PERFECT-SRC-057",
+    "PERFECT-SRC-058",
+    "PERFECT-SRC-059",
+    "PERFECT-SRC-060",
+    "PERFECT-SRC-061",
+    "PERFECT-SRC-064",
+    "PERFECT-SRC-065",
+    "PERFECT-SRC-066",
+    "PERFECT-SRC-067",
+    "PERFECT-SRC-068",
+    "PERFECT-SRC-069",
+    "PERFECT-SRC-070",
+    "PERFECT-SRC-071",
+    "PERFECT-SRC-072"
+  ],
+  "classification": {
+    "source_defect": 13,
+    "editorial_or_notational_clarification": 11
+  },
+  "grouping_notes": [
+    "The 24 semantic units contain 32 exact, nonoverlapping source operations; descending-byte replay reproduces payload/perfect.tex byte-for-byte.",
+    "PERFECT-SRC-053, PERFECT-SRC-062, and PERFECT-SRC-063 remain deferred adverse history and are excluded from R44; they are neither admitted nor silently rejected.",
+    "R44 follows R43 in stable-ID and registry order. It modifies only perfect.tex and preserves all earlier candidate, registry, clarification, rejection, and lease history."
+  ],
+  "registry": {
+    "before_sha256": "05E01334F67E83AD9B226E119A60AEFDEABBB0B1436F4A56297A35010E50A554",
+    "after_sha256": "0A86C8871E2459B7C0B2FB02620FFD696D01F1C175E5EA0F32A7BB589F03AAAD",
+    "last_overlay": "stacks-errata-a04446e-r44",
+    "prior_entries_unchanged": 44,
+    "current_entries": 45,
+    "unique_stable_ids": 1208
+  },
+  "leases": {
+    "before_sha256": "D36D5C8C3303F01410BD67BC5A11B57105180228F7BF99AE7A5A1658D6A2898F",
+    "after_sha256": "ABEE417734C755B3F4D45E53575B33C7720B438ABEB0D67EE5D3FE66867165B6",
+    "issued_event": "lease-event-000092",
+    "released_event": "lease-event-000093",
+    "prior_events_unchanged": 92
+  },
+  "fresh_replay": {
+    "passed": true,
+    "units": 24,
+    "operations": 32,
+    "producer_rows": 24,
+    "manifest_references": 72,
+    "payload_sha256": {
+      "perfect.tex": "31EF572D294E8C79AB31A1AD3A9C8662CE2ACA6E26CF41BD28B541CB2AFA19B7"
+    },
+    "authority_sha256": {
+      "perfect.tex": "83BD632E693848D32B54ACC48EA7D89B0ED024C4B84499486687E31E92BFDCF0"
+    },
+    "exact_preimages_descending_byte_replay": true,
+    "strict_registry_schemas": 2,
+    "committed_archive_manifest_closure": "PASS: 72/72 manifest-bound files and 73/73 candidate files, strict candidate schema, no missing or extra file.",
+    "workflow_check": "45 admitted entries; 93 lease events; 1208 globally unique stable IDs; prior entries and events byte-semantically unchanged"
+  },
+  "validation_reader": {
+    "pages": 109,
+    "bytes": 1139029,
+    "sha256": "479AE64026CE882CB96F504F4CC6EF19D686C988AA78EB2160546F1E04D95BB3",
+    "reproducible": true,
+    "recorder_fls": "Six pdflatex invocations used -recorder; two independent candidate and authority build phases reproduced PDFs byte-for-byte and retained sanitized FLS/dependency inventories.",
+    "visual_gate": "All 109 pages were individually opened and inspected in four disjoint page-complete reviews; page numbers and render hashes cover 1-109 exactly once with zero blocking findings.",
+    "adverse_evidence": "Authority and candidate share 25 overfull hboxes, one underfull vbox, and the same isolated cross-chapter unresolved-reference warnings; the PDF is untagged. A stale out-of-candidate preliminary private execution locator and nonretained TeX intermediate/stdout bytes are preserved as nonrelied-upon history; the manifest binds only the final in-candidate mechanical closure. This is not a complete cumulative reader or human/expert certification."
+  },
+  "workflow_successor": "Extends the append-only registry with the separately leased, independently replayed PERFECT-SRC-046..072 accepted subset while preserving deferred producer IDs and every prior registry entry and lease event.",
+  "constraints": {
+    "authority_mutated": false,
+    "producer_target_mutated": false,
+    "generated_source_composed": false,
+    "generated_source_pushed": false,
+    "published": false
+  },
+  "next_action": "Commit the separate registrar admission; validate fresh committed bytes, push only the public registrar branch, anonymously read back the exact commit/tree/inventory, and hand R44 to the separate composer exactly once."
+}
