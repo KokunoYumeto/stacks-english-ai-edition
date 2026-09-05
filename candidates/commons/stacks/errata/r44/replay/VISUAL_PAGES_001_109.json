@@ -1,0 +1,460 @@
+{
+  "absolute_private_paths_in_receipt": false,
+  "adverse_evidence": [
+    {
+      "kind": "unresolved_cross_references",
+      "observation": "Literal ?? references remain visible in this standalone chapter build; the deterministic build receipt proves the candidate and authority target multisets are equal."
+    },
+    {
+      "kind": "inherited_box_diagnostics",
+      "observation": "Candidate and authority each report 25 overfull hboxes and 1 underfull vbox. Every corresponding page was inspected at 180 dpi and no blocking visual defect was found."
+    },
+    {
+      "kind": "visible_link_borders",
+      "observation": "Red internal-link and green citation rectangles are visible and do not obscure text; they are retained hyperlink styling."
+    },
+    {
+      "kind": "coverage_limit",
+      "observation": "Contact sheets establish complete page and layout coverage, but do not constitute character-level reading of every unmodified page. All correction and diagnostic pages received individual high-resolution inspection."
+    }
+  ],
+  "blocking_layout_defects": [],
+  "checks": {
+    "correction_sensitive_pages": "All edited prose and formulas on pages 91,92,93,96,97,98,99,100,101,102,103,104,105,106 are readable and geometrically intact.",
+    "glyphs": "No visible missing-glyph boxes or broken mathematical glyphs.",
+    "margins": "All inspected material remains inside the physical page; running headers and text areas are consistent.",
+    "overlap": "No observed overlapping body text, formulas, diagram labels, or footnotes.",
+    "page_clipping": "No visible clipped body text, display, diagram, footnote, or bibliography content.",
+    "sequence": "7 contact sheets cover every page exactly once in page order 1-109."
+  },
+  "correction_sensitive_pages": [
+    91,
+    92,
+    93,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106
+  ],
+  "diagnostic_pages": [
+    11,
+    12,
+    13,
+    15,
+    16,
+    25,
+    26,
+    28,
+    32,
+    33,
+    39,
+    43,
+    49,
+    50,
+    58,
+    59,
+    65,
+    96,
+    97,
+    99,
+    100,
+    101,
+    102,
+    108
+  ],
+  "method": "Direct inspection of all 7 4x4 contact sheets covering pages 1-109, then direct individual inspection of 34 existing 180-dpi renders: all 14 correction-sensitive pages and all 24 pages carrying candidate/authority box diagnostics. No source, PDF, or render mutation.",
+  "producer_status": "producer_uncertified",
+  "render_manifest": {
+    "bytes": 28608,
+    "file": "render-manifest.json",
+    "sha256": "F392ACE82BA87909779444BB409D46EBC329A1314DE74ADFA0AF603B6D32FDF4"
+  },
+  "result": "PASS_LAYOUT_WITH_RECORDED_CAVEATS",
+  "reviewer": "perfect_packet_audit",
+  "schema": "stacks-r44-bounded-visual-review/v1",
+  "scope": {
+    "assigned_pages": [
+      1,
+      109
+    ],
+    "pdf": "builds/perfect.pdf",
+    "pdf_bytes": 1139029,
+    "pdf_sha256": "479AE64026CE882CB96F504F4CC6EF19D686C988AA78EB2160546F1E04D95BB3",
+    "reviewed_pages_count": 109,
+    "total_pdf_pages": 109,
+    "unreviewed_pages_in_assignment": []
+  },
+  "viewed_contact_artifacts": [
+    {
+      "bytes": 887049,
+      "file": "perfect_01.png",
+      "matches_manifest": true,
+      "path": "contact_sheets/perfect_01.png",
+      "sha256": "6FABE562CB1E52F2DBDE349799721BBD4216A650975B52646134A1FBB011E5D5",
+      "sheet": 1
+    },
+    {
+      "bytes": 946021,
+      "file": "perfect_02.png",
+      "matches_manifest": true,
+      "path": "contact_sheets/perfect_02.png",
+      "sha256": "B0DF2D32CA195BE44C1B80CEBC6228CAC09E5E20267A657F8E8ABC8EDB7F0871",
+      "sheet": 2
+    },
+    {
+      "bytes": 975145,
+      "file": "perfect_03.png",
+      "matches_manifest": true,
+      "path": "contact_sheets/perfect_03.png",
+      "sha256": "1F80B33C15A23391EAA89391BE7CF5C2F1C1CEF4968F76E913CDD0FC8317CCB8",
+      "sheet": 3
+    },
+    {
+      "bytes": 919516,
+      "file": "perfect_04.png",
+      "matches_manifest": true,
+      "path": "contact_sheets/perfect_04.png",
+      "sha256": "62AC6D43628529AB797281D892B72ED14E556037C0E04FB157C804821B182A4F",
+      "sheet": 4
+    },
+    {
+      "bytes": 935577,
+      "file": "perfect_05.png",
+      "matches_manifest": true,
+      "path": "contact_sheets/perfect_05.png",
+      "sha256": "78E353229BB1D3534F6F161310F17C3E1342C797B3B4AD69475EF05A49CF7AF1",
+      "sheet": 5
+    },
+    {
+      "bytes": 985636,
+      "file": "perfect_06.png",
+      "matches_manifest": true,
+      "path": "contact_sheets/perfect_06.png",
+      "sha256": "A9E3727D27F94027383D0C7B137FACE8BFA3EE4FF9668174BC9DF7A601B19ABF",
+      "sheet": 6
+    },
+    {
+      "bytes": 728595,
+      "file": "perfect_07.png",
+      "matches_manifest": true,
+      "path": "contact_sheets/perfect_07.png",
+      "sha256": "038627993CB784B16D7C229DDB1450B22BB34C4FFD6D40EC35D2AEE021C22B0F",
+      "sheet": 7
+    }
+  ],
+  "viewed_high_resolution_artifacts": [
+    {
+      "bytes": 274831,
+      "file": "perfect_p1.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 1,
+      "path": "highres/perfect_p1.png",
+      "sha256": "C48431076A496A645E86EA4C869D7BB29F4C3EAB830DFF6EB8288E2AA981F8ED"
+    },
+    {
+      "bytes": 373461,
+      "file": "perfect_p11.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 11,
+      "path": "highres/perfect_p11.png",
+      "sha256": "FA54C30E0EF9DB881EF4B9AECB07D922A73495820944A55C9FD72803B70C7A00"
+    },
+    {
+      "bytes": 397092,
+      "file": "perfect_p12.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 12,
+      "path": "highres/perfect_p12.png",
+      "sha256": "CF11F78819DA8A8B00C61C8BA01DFE04BA5CFEEFB4E93D36F90EA87B0E150F3E"
+    },
+    {
+      "bytes": 298514,
+      "file": "perfect_p13.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 13,
+      "path": "highres/perfect_p13.png",
+      "sha256": "701825A4249271E00C5654C0BA708A20F0CD1A31C9A8A6B0CD25A8810C939096"
+    },
+    {
+      "bytes": 404474,
+      "file": "perfect_p15.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 15,
+      "path": "highres/perfect_p15.png",
+      "sha256": "886FAC32003385655A3AB6D6B6AE37FD4AB5AA07C918E8E3B23480FBA1186A50"
+    },
+    {
+      "bytes": 371566,
+      "file": "perfect_p16.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 16,
+      "path": "highres/perfect_p16.png",
+      "sha256": "E4C425ABE83370463F1F081984C93100414AF73A8A305E02DEDA57928F05E89F"
+    },
+    {
+      "bytes": 418916,
+      "file": "perfect_p25.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 25,
+      "path": "highres/perfect_p25.png",
+      "sha256": "06D6F7D69BD86F968BE30BAD4422E9537A5F18C096FD09DAF0C26CB8C4615CFC"
+    },
+    {
+      "bytes": 369135,
+      "file": "perfect_p26.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 26,
+      "path": "highres/perfect_p26.png",
+      "sha256": "CEE6868FCBC9DAB3A45479BA9526C0DB0452074805CE46967BBCA1B5E00CB41D"
+    },
+    {
+      "bytes": 421703,
+      "file": "perfect_p28.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 28,
+      "path": "highres/perfect_p28.png",
+      "sha256": "04846287CADD6DDAC6DAB5D58031CC60FE65E8E3622632DA400F3DEFF9E2D839"
+    },
+    {
+      "bytes": 324607,
+      "file": "perfect_p32.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 32,
+      "path": "highres/perfect_p32.png",
+      "sha256": "C3FCD2C7479D330E6D5D5951ABB694CA4D51BBDA6B31ED647AB4382605A61F8F"
+    },
+    {
+      "bytes": 401546,
+      "file": "perfect_p33.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 33,
+      "path": "highres/perfect_p33.png",
+      "sha256": "D4491B5650051655B41FF1ACD3E65087E744706568801C52439295404649D028"
+    },
+    {
+      "bytes": 369595,
+      "file": "perfect_p39.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 39,
+      "path": "highres/perfect_p39.png",
+      "sha256": "ABE974807463705AE37BC87CD7CA84491C8D86996EA549C1302667A3350EBABA"
+    },
+    {
+      "bytes": 454658,
+      "file": "perfect_p43.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 43,
+      "path": "highres/perfect_p43.png",
+      "sha256": "0DFF96C43B21B95B8ED9FEB6A294D366422ED2B40FCCA10BBD779B21B2DEE00E"
+    },
+    {
+      "bytes": 425043,
+      "file": "perfect_p49.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 49,
+      "path": "highres/perfect_p49.png",
+      "sha256": "8156C29F217BD5D86BBEF3E92178E62A172CA6EFB83F73DC46C85CF899464BC2"
+    },
+    {
+      "bytes": 457418,
+      "file": "perfect_p50.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 50,
+      "path": "highres/perfect_p50.png",
+      "sha256": "62B1A0A7E1E209A532B64691380E935AA1ACD0AAA516ABDF77495BC715B2D066"
+    },
+    {
+      "bytes": 461056,
+      "file": "perfect_p58.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 58,
+      "path": "highres/perfect_p58.png",
+      "sha256": "D5E025177F48F5332734A60F9EA69725358B5A8B7DAE841BC8C2C16E2EEC3764"
+    },
+    {
+      "bytes": 416353,
+      "file": "perfect_p59.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 59,
+      "path": "highres/perfect_p59.png",
+      "sha256": "11B7B8372FE47CD1E857DB176244BB078E3ABD2EB7222F41D71622E928C7436E"
+    },
+    {
+      "bytes": 344764,
+      "file": "perfect_p65.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 65,
+      "path": "highres/perfect_p65.png",
+      "sha256": "73EF25CDDE13723C3914309516195554358D023BEBCFDD0918E4FC2B2C7007B7"
+    },
+    {
+      "bytes": 419356,
+      "file": "perfect_p91.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 91,
+      "path": "highres/perfect_p91.png",
+      "sha256": "F14A7CF06CD2950C7D766B4F244ED756966EC1A3826D1524422D8DA178CF068C"
+    },
+    {
+      "bytes": 431009,
+      "file": "perfect_p92.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 92,
+      "path": "highres/perfect_p92.png",
+      "sha256": "E1FCA78500E8999C054137F863621F39F606E2ADF2BD5232200141BA58BC73CC"
+    },
+    {
+      "bytes": 436360,
+      "file": "perfect_p93.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 93,
+      "path": "highres/perfect_p93.png",
+      "sha256": "73E8CAD1ABAB2BC2FA51FD79A05FBA67800D4080094406A3033AD67203820F73"
+    },
+    {
+      "bytes": 458443,
+      "file": "perfect_p96.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 96,
+      "path": "highres/perfect_p96.png",
+      "sha256": "CB6F65674BB351368795EC5224DD7F688B9847DE20AC1BADE867047EF8B7D24E"
+    },
+    {
+      "bytes": 419762,
+      "file": "perfect_p97.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 97,
+      "path": "highres/perfect_p97.png",
+      "sha256": "F7A3C766D567AC8F69DC0B04FEB570ABC16BA5382494443F02E680AE99691CC6"
+    },
+    {
+      "bytes": 388556,
+      "file": "perfect_p98.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 98,
+      "path": "highres/perfect_p98.png",
+      "sha256": "F2355B84A3D2C45389C98DDD33BEC1F45C21C92BE639E7079AE92DE963EE7393"
+    },
+    {
+      "bytes": 380875,
+      "file": "perfect_p99.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 99,
+      "path": "highres/perfect_p99.png",
+      "sha256": "035084E6E65327BF066B2735D7E928B19BCE61CD4797498216B755DE30C4A910"
+    },
+    {
+      "bytes": 389917,
+      "file": "perfect_p100.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 100,
+      "path": "highres/perfect_p100.png",
+      "sha256": "B661129131B7CB9AC25DC9C67F2BA8FAD73F581F382EEE13CF4BFDF13C9FE1DF"
+    },
+    {
+      "bytes": 429440,
+      "file": "perfect_p101.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 101,
+      "path": "highres/perfect_p101.png",
+      "sha256": "2183AB7374D969CD4B1E2AD00A746DA1E980C96E371E67AC043173E22EB037D5"
+    },
+    {
+      "bytes": 417193,
+      "file": "perfect_p102.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 102,
+      "path": "highres/perfect_p102.png",
+      "sha256": "5E802053F8347CA4B5F1D5C8CC8D0567C87F6153F9CDB5096CBAE8038E935886"
+    },
+    {
+      "bytes": 433222,
+      "file": "perfect_p103.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 103,
+      "path": "highres/perfect_p103.png",
+      "sha256": "0F63EB415FEB35A543779237CA3A95207C48146EDC8B42F750BACDD65217ACB0"
+    },
+    {
+      "bytes": 437876,
+      "file": "perfect_p104.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 104,
+      "path": "highres/perfect_p104.png",
+      "sha256": "F568EDD62C6AF45EFA0501F287D2A75415D211CD321DB1B162C6B8CB6A789AAD"
+    },
+    {
+      "bytes": 425955,
+      "file": "perfect_p105.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 105,
+      "path": "highres/perfect_p105.png",
+      "sha256": "EA12C543D17561A4EF5FE2A82032C722BD619A9BB8E8466061DA277AA6E41909"
+    },
+    {
+      "bytes": 450942,
+      "file": "perfect_p106.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 106,
+      "path": "highres/perfect_p106.png",
+      "sha256": "D96D80EF996ADBE946F0DD789F7D48EEA228995616894C9F7E6E7FA2D319203A"
+    },
+    {
+      "bytes": 498110,
+      "file": "perfect_p108.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 108,
+      "path": "highres/perfect_p108.png",
+      "sha256": "16EAD18273D0DF42FD079320BF9A59C87D7F26266F8772B92843744327CFBBC6"
+    },
+    {
+      "bytes": 53245,
+      "file": "perfect_p109.png",
+      "layout_result": "PASS",
+      "matches_manifest": true,
+      "page": 109,
+      "path": "highres/perfect_p109.png",
+      "sha256": "6D41206D906C3B18E57BDAFF50F424A43782FFF69B5DB03980C139CF4DCFB2A5"
+    }
+  ]
+}

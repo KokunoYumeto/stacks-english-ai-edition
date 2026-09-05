@@ -1,0 +1,474 @@
+{
+  "schema": "stacks_cjk_manager_perfect_errata_intake/v1",
+  "receipt_id": "STACKS-PERFECT-LATE-CHAPTER-INTAKE-20260905-R3",
+  "created_utc": "2026-09-05T13:03:42.3812336Z",
+  "status": "PASS_ALL_EIGHT_SEMANTIC_UNITS_READY_FOR_FORMAL_ADMISSION",
+  "append_only_predecessor": {
+    "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\00_lane_control\\STACKS_PERFECT_LATE_CHAPTER_INTAKE_20260905_R2.json",
+    "bytes": 17579,
+    "sha256": "65BAD203F40809C4CBF80E783D70284291D90B3C5902933C62D8F6979ACF27B3",
+    "preserved_ready_ids": [
+      "PERFECT-SRC-046",
+      "PERFECT-SRC-047",
+      "PERFECT-SRC-048",
+      "PERFECT-SRC-049",
+      "PERFECT-SRC-050",
+      "PERFECT-SRC-051",
+      "PERFECT-SRC-052",
+      "PERFECT-SRC-054",
+      "PERFECT-SRC-055",
+      "PERFECT-SRC-056",
+      "PERFECT-SRC-057",
+      "PERFECT-SRC-058",
+      "PERFECT-SRC-059",
+      "PERFECT-SRC-060",
+      "PERFECT-SRC-061",
+      "PERFECT-SRC-064"
+    ],
+    "preserved_deferred_ids": [
+      "PERFECT-SRC-053",
+      "PERFECT-SRC-062",
+      "PERFECT-SRC-063"
+    ]
+  },
+  "scope": {
+    "fourth_packet_ids": [
+      "PERFECT-SRC-065",
+      "PERFECT-SRC-066",
+      "PERFECT-SRC-067",
+      "PERFECT-SRC-068"
+    ],
+    "fifth_packet_ids": [
+      "PERFECT-SRC-069",
+      "PERFECT-SRC-070",
+      "PERFECT-SRC-071",
+      "PERFECT-SRC-072"
+    ],
+    "semantic_units": 8,
+    "exact_operations": 16,
+    "ready_for_formal_admission_count": 8,
+    "deferred_count": 0,
+    "authority_mutated": false,
+    "producer_files_mutated": false,
+    "generated_source_composed": false,
+    "registry_mutated": false,
+    "producer_or_composer_contacted": false
+  },
+  "authority": {
+    "upstream_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\03_working_translations\\stacks_cjk_20260821\\upstream\\src\\stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14\\perfect.tex",
+    "bytes": 417503,
+    "physical_lines_by_Get_Content": 10895,
+    "line_feed_bytes": 10895,
+    "carriage_return_bytes": 0,
+    "ascii_only": true,
+    "utf8_bom": false,
+    "sha256": "83BD632E693848D32B54ACC48EA7D89B0ED024C4B84499486687E31E92BFDCF0"
+  },
+  "producer_evidence": {
+    "ledger_path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p05\\evidence\\PERFECT_SOURCE_DEFECT_LEDGER.csv",
+    "fourth_packet_observed_identity": {
+      "bytes": 25828,
+      "sha256": "71268AE781F856D44DB416A12E82D8B83791ABF4D83C239B3882858A6B48318B",
+      "data_rows": 68,
+      "unique_ids": 68,
+      "duplicate_id_groups": 0,
+      "queried_rows_065_through_068_present_once_each": 4
+    },
+    "current_fifth_packet_identity": {
+      "bytes": 27120,
+      "sha256": "A006730A408B232A724D99FEDAB15A8D8A3D14E20F2AFF236F2D17815D578E7D",
+      "data_rows": 72,
+      "unique_ids": 72,
+      "duplicate_id_groups": 0,
+      "queried_rows_065_through_072_present_once_each": 8
+    },
+    "fourth_packet_qa": {
+      "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p05\\evidence\\PERFECT_DIRECT_QA_00001_10743.json",
+      "bytes": 2240,
+      "sha256": "476B8FD875A2419E147E3658FFACDB1600A80FD3BCDAACDE46E79B7CC2237879",
+      "json_parse": "PASS",
+      "declared_all_checks_pass": true,
+      "declared_chapter_complete": false,
+      "declared_build_run": false,
+      "validated_source_lines": 10743,
+      "source_slice_start_line": 10357,
+      "source_slice_end_line": 10743,
+      "source_slice_lf_utf8_bytes_recomputed": 16314,
+      "source_slice_lf_utf8_sha256_recomputed": "A3CC3F3F7B0B06F1181580BBB419ADDF07EA7570125EE3DFE29C35EDBB16702E",
+      "target_path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p05\\draft\\perfect.fr.10357-10743.tex",
+      "target_bytes_recomputed": 17621,
+      "target_lines_recomputed": 387,
+      "target_sha256_recomputed": "EA51DB31C45239D1E6D8A67B33AC64CCE3C3A4B77DB86BCBF6FFE03B25B59DF4"
+    },
+    "fifth_packet_qa": {
+      "path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p05\\evidence\\PERFECT_DIRECT_QA_00001_10895.json",
+      "bytes": 2544,
+      "sha256": "289865AC9C98486785373200A42DA6CAEEB8C756CE8A0D7E8780F1A41DC2E181",
+      "json_parse": "PASS",
+      "declared_all_checks_pass": true,
+      "declared_chapter_complete": false,
+      "declared_translation_sections_complete": true,
+      "declared_build_run": false,
+      "validated_source_lines": 10895,
+      "source_slice_start_line": 10744,
+      "source_slice_end_line": 10895,
+      "source_slice_lf_utf8_bytes_recomputed": 6099,
+      "source_slice_lf_utf8_sha256_recomputed": "CFFFC2E479E2CB88567D881022DB4B315BB0DBE00022F1641C08AAB017344C7B",
+      "target_path": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p05\\draft\\perfect.fr.10744-10895.tex",
+      "target_bytes_recomputed": 6638,
+      "target_lines_recomputed": 152,
+      "target_sha256_recomputed": "BB3471839BD9D5EC27CA4D4EB1BC0442BA0ED63643A698DE98A2D779230E6F49"
+    }
+  },
+  "registry_dedup": {
+    "repository": "https://github.com/KokunoYumeto/unofficial-ai-integrated-stacks-project",
+    "public_registry_branch": "codex/r31-sites-modules-20260829",
+    "anonymous_public_remote_head_rechecked": "2911b4cdf5141e1f3a275aeb83ed5cbc9e980bd4",
+    "public_registry_snapshot_inherited_from_r2": {
+      "head": "2911b4cdf5141e1f3a275aeb83ed5cbc9e980bd4",
+      "registry_bytes": 66732,
+      "registry_sha256": "D5116AA61992DCC702453F391F02A0D24D0693FFBF9B57F0EB14F700127574ED",
+      "registered_entries": 41,
+      "registered_stable_ids": 1160,
+      "perfect_tex_source_hits": 0
+    },
+    "additional_unpublished_local_queue_snapshot": {
+      "checkout": "<WORKSPACE>\\ai-stacks-r31-sites-modules-20260829",
+      "observed_head": "3056e01f8a2dd26f52066434d80ff2c59901dea8",
+      "registry_path": "<WORKSPACE>\\ai-stacks-r31-sites-modules-20260829\\registry\\overlays.json",
+      "registry_bytes": 67777,
+      "registry_sha256": "2E6591520F9ADE96B69A0463DB5A5617E319046DD91218170B7DA48DDFFCA14B",
+      "registered_entries": 42,
+      "registered_stable_ids": 1166,
+      "source_map_files_parsed": 41,
+      "source_map_records_parsed": 1154,
+      "source_map_parse_errors": 0,
+      "source_map_duplicate_unit_id_groups": 0,
+      "perfect_tex_source_hits": 0,
+      "producer_id_hits_for_perfect_065_through_072": 0
+    },
+    "disposition": "NO_PUBLIC_OR_LOCALLY_QUEUED_PERFECT_TEX_OPERATION_AND_NO_PRODUCER_ID_DUPLICATE_FOUND"
+  },
+  "semantic_units": [
+    {
+      "producer_id": "PERFECT-SRC-065",
+      "source_locus": "perfect.tex:10387;10432",
+      "source_labels": [
+        "lemma-orthogonal-koszul-first-variant",
+        "lemma-orthogonal-koszul-second-variant"
+      ],
+      "class": "ill_typed_restriction_argument",
+      "independent_rationale": "Both equalities are adjunction calculations in D(O_U). Their first argument is K|_U[-n], and the second must likewise be an object on U. The surrounding term Rj_*(E|_U) already identifies the intended restriction. Plain E is an object on X and is ill-typed as written.",
+      "intake_disposition": "READY_FOR_FORMAL_ADMISSION_AS_ONE_TWO_LOCUS_SEMANTIC_UNIT",
+      "exact_operations": [
+        {
+          "source_line": 10387,
+          "old_text": "\\Hom_{D(\\mathcal{O}_U)}(K|_U[-n], E)",
+          "replacement_text": "\\Hom_{D(\\mathcal{O}_U)}(K|_U[-n], E|_U)",
+          "old_sha256": "5920EAC5FF900324E1815FDB242D205B0E21363F6458B2EDB4E114AFAF07354F",
+          "replacement_sha256": "7F65153D916ACC0F790DFBD4F31617D41870606A3A18409667AF708BAFB32310",
+          "start_byte_zero_based": 396294,
+          "end_byte_exclusive_zero_based": 396330,
+          "global_preimage_count": 2,
+          "line_preimage_count": 1
+        },
+        {
+          "source_line": 10432,
+          "old_text": "\\Hom_{D(\\mathcal{O}_U)}(K|_U[-n], E)",
+          "replacement_text": "\\Hom_{D(\\mathcal{O}_U)}(K|_U[-n], E|_U)",
+          "old_sha256": "5920EAC5FF900324E1815FDB242D205B0E21363F6458B2EDB4E114AFAF07354F",
+          "replacement_sha256": "7F65153D916ACC0F790DFBD4F31617D41870606A3A18409667AF708BAFB32310",
+          "start_byte_zero_based": 398224,
+          "end_byte_exclusive_zero_based": 398260,
+          "global_preimage_count": 2,
+          "line_preimage_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "PERFECT-SRC-066",
+      "source_locus": "perfect.tex:10423;10427-10435;10444;10446;10449-10450",
+      "source_label": "lemma-orthogonal-koszul-second-variant",
+      "class": "lost_long_exact_sequence_shift_with_consequent_implication_and_bound_errors",
+      "independent_derivation": [
+        "Write B = Rj_*(E|_U). Rotating the triangle E -> B -> N -> E[1] gives N[-1] -> E -> B.",
+        "Because Hom(K[-n], B[q]) vanishes for every shift q, the long exact Hom sequence gives Hom(K[-n], N[-1]) isomorphic to Hom(K[-n], E).",
+        "Hom(K[-n], N[-1]) equals Hom(K[-n+1], N). Therefore condition (2) for n <= a is equivalent, after m = n - 1, to Hom(K[-m], N) = 0 for m <= a - 1, not m <= a.",
+        "Condition (1) at a implies tau_{<=a-1}N = 0 and is implied by tau_{<=a}N = 0. Hence (1)_a implies (2)_a, while (2)_a implies (1)_{a-1}. The printed implication order is reversed because it relies on the lost shift."
+      ],
+      "rejected_partial_repairs": [
+        "Changing only the Hom index on line 10435 would leave the repeated bounds and final truncation conclusion inconsistent.",
+        "Preserving line 10423 would require changing the hypothesis in item (2) to n <= a + 1; that is mathematically valid but less faithful than preserving the stated condition and repairing the proof and implication order."
+      ],
+      "intake_disposition": "READY_FOR_FORMAL_ADMISSION_AS_ONE_SIX_OPERATION_SEMANTIC_UNIT",
+      "exact_operations": [
+        {
+          "source_line": 10423,
+          "old_text": "Then (2) implies (1) and (1) implies (2) with $a$ replaced by $a - 1$.",
+          "replacement_text": "Then (1) implies (2) and (2) implies (1) with $a$ replaced by $a - 1$.",
+          "old_sha256": "57CD0AFF3A68B513B40C1DD94C98C4350AAD6FBEACA89A3291B33DA4A29EEBAB",
+          "replacement_sha256": "C302F18A2F3249364049CF038E02D1A3ED2A39151DD052BF33E6FDC9F1E3B096",
+          "start_byte_zero_based": 397912,
+          "end_byte_exclusive_zero_based": 397982,
+          "global_preimage_count": 1,
+          "line_preimage_count": 1
+        },
+        {
+          "source_line": 10435,
+          "old_text": "$\\Hom_{D(\\mathcal{O}_X)}(K[-n], N) = 0$ for all $n \\leq a$.",
+          "replacement_text": "$\\Hom_{D(\\mathcal{O}_X)}(K[-n], N) = 0$ for all $n \\leq a - 1$.",
+          "old_sha256": "1FCF4C4F78B59B690147D2D6417A666A2EC16C6E9FEAC5ECC163F7D149A30B73",
+          "replacement_sha256": "DCD5BBC8D4B1527A823DE7C32A0698F9E8F89791982656CD79FA1A10BB10EFBF",
+          "start_byte_zero_based": 398321,
+          "end_byte_exclusive_zero_based": 398380,
+          "global_preimage_count": 1,
+          "line_preimage_count": 1
+        },
+        {
+          "source_line": 10444,
+          "old_text": "$\\Hom_{D(\\mathcal{O}_X)}(K[-n], N) = 0$ for all $n \\leq a$",
+          "replacement_text": "$\\Hom_{D(\\mathcal{O}_X)}(K[-n], N) = 0$ for all $n \\leq a - 1$",
+          "old_sha256": "922EFEB3372BD9BB45C05D03EB96D0FF9EC1B47B656C7F2833D75AE35FD6EA92",
+          "replacement_sha256": "35BCF49B10B3BD4697D3A69014594E20BFD0FFC782EECB8495B6BCEBF4AACBBD",
+          "start_byte_zero_based": 398735,
+          "end_byte_exclusive_zero_based": 398793,
+          "global_preimage_count": 2,
+          "line_preimage_count": 1
+        },
+        {
+          "source_line": 10446,
+          "old_text": "$\\Hom_{D(\\mathcal{O}_X)}(K_e[-n], N) = 0$ for all $n \\leq a$ and all $e \\geq 1$",
+          "replacement_text": "$\\Hom_{D(\\mathcal{O}_X)}(K_e[-n], N) = 0$ for all $n \\leq a - 1$ and all $e \\geq 1$",
+          "old_sha256": "B7EC3FE50BD31A88BCFEE563369524AC5B0120F19047BBC29A4C10215A262541",
+          "replacement_sha256": "654E9A09D8D4FD0A651482E5E907B9B666F22268ADE7F20E18F3A33A24A86D15",
+          "start_byte_zero_based": 398811,
+          "end_byte_exclusive_zero_based": 398890,
+          "global_preimage_count": 1,
+          "line_preimage_count": 1
+        },
+        {
+          "source_line": 10449,
+          "old_text": "$H^n(X, N) = 0$ for $n \\leq a$. We conclude that (2) is equivalent to",
+          "replacement_text": "$H^n(X, N) = 0$ for $n \\leq a - 1$. We conclude that (2) is equivalent to",
+          "old_sha256": "FF4F12FD45F74D708712AE6E9B5A13015711FAE0A89589BF777B7C6AB5B2336A",
+          "replacement_sha256": "B91AA4C677FE58FFDC40BFE674560F0793B64BD13302F8F9D956B83228F0FAA8",
+          "start_byte_zero_based": 399036,
+          "end_byte_exclusive_zero_based": 399105,
+          "global_preimage_count": 1,
+          "line_preimage_count": 1
+        },
+        {
+          "source_line": 10450,
+          "old_text": "$\\tau_{\\leq a}N = 0$ since $N$ is determined by the complex of",
+          "replacement_text": "$\\tau_{\\leq a - 1}N = 0$ since $N$ is determined by the complex of",
+          "old_sha256": "D393927ABE90BD0219F4AAAB295C6AD47E6E950DBAC1ED06AC15976A82600ADF",
+          "replacement_sha256": "EC62BFA63A9D7DF228D60B67D6F651C3106D61249D8F9BAE9F1F96C59CB4FB47",
+          "start_byte_zero_based": 399106,
+          "end_byte_exclusive_zero_based": 399168,
+          "global_preimage_count": 1,
+          "line_preimage_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "PERFECT-SRC-067",
+      "source_locus": "perfect.tex:10534;10652",
+      "source_labels": [
+        "proposition-detecting-bounded-above",
+        "proposition-detecting-bounded-below"
+      ],
+      "class": "number_agreement",
+      "independent_rationale": "Each sentence coordinates two separately numbered parts, so the singular noun Part is grammatically wrong at both parallel loci.",
+      "intake_disposition": "READY_FOR_FORMAL_ADMISSION_AS_ONE_TWO_LOCUS_SEMANTIC_UNIT",
+      "exact_operations": [
+        {
+          "source_line": 10534,
+          "old_text": "Part (5) and (6)",
+          "replacement_text": "Parts (5) and (6)",
+          "old_sha256": "59CB79502E17FFA31D1B3F6F6134F89F17E4830CBADDC90E5BA6DB7D5047BC84",
+          "replacement_sha256": "5D4884EED8BCA5C3EEA5C0B26743FC0190B5FF0C6E066B7D0F65EB0976310F97",
+          "start_byte_zero_based": 402215,
+          "end_byte_exclusive_zero_based": 402231,
+          "global_preimage_count": 2,
+          "line_preimage_count": 1
+        },
+        {
+          "source_line": 10652,
+          "old_text": "Part (5) and (6)",
+          "replacement_text": "Parts (5) and (6)",
+          "old_sha256": "59CB79502E17FFA31D1B3F6F6134F89F17E4830CBADDC90E5BA6DB7D5047BC84",
+          "replacement_sha256": "5D4884EED8BCA5C3EEA5C0B26743FC0190B5FF0C6E066B7D0F65EB0976310F97",
+          "start_byte_zero_based": 407483,
+          "end_byte_exclusive_zero_based": 407499,
+          "global_preimage_count": 2,
+          "line_preimage_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "PERFECT-SRC-068",
+      "source_locus": "perfect.tex:10552-10553;10670-10671",
+      "source_labels": [
+        "proposition-detecting-bounded-above",
+        "proposition-detecting-bounded-below"
+      ],
+      "class": "number_agreement",
+      "independent_rationale": "Both parallel phrases name the distinct properties (7)(b) and (7)(c), so the shared singular noun property must be plural.",
+      "intake_disposition": "READY_FOR_FORMAL_ADMISSION_AS_ONE_TWO_LOCUS_SEMANTIC_UNIT",
+      "exact_operations": [
+        {
+          "source_line": 10552,
+          "old_text": "except that for property\n(7)(b) and (7)(c)",
+          "replacement_text": "except that for properties\n(7)(b) and (7)(c)",
+          "old_sha256": "98430BA417C6A8165037552AB13517A7018C7225F1BCAA36F7AC7985C5C6066B",
+          "replacement_sha256": "D0E43BE0607763D528773DDE4DA2039B9BD3CCDC4C536B91877C089047ECBC12",
+          "start_byte_zero_based": 403227,
+          "end_byte_exclusive_zero_based": 403269,
+          "global_preimage_count": 2,
+          "line_preimage_count": 1
+        },
+        {
+          "source_line": 10670,
+          "old_text": "except that for property\n(7)(b) and (7)(c)",
+          "replacement_text": "except that for properties\n(7)(b) and (7)(c)",
+          "old_sha256": "98430BA417C6A8165037552AB13517A7018C7225F1BCAA36F7AC7985C5C6066B",
+          "replacement_sha256": "D0E43BE0607763D528773DDE4DA2039B9BD3CCDC4C536B91877C089047ECBC12",
+          "start_byte_zero_based": 408495,
+          "end_byte_exclusive_zero_based": 408537,
+          "global_preimage_count": 2,
+          "line_preimage_count": 1
+        }
+      ]
+    },
+    {
+      "producer_id": "PERFECT-SRC-069",
+      "source_line": 10772,
+      "source_label": "section-QC",
+      "class": "article_number_agreement",
+      "old_text": "a morphisms of ringed sites",
+      "replacement_text": "a morphism of ringed sites",
+      "old_sha256": "0784F7868E136825CC99E76E5696C5B4DA2DD46694EDA8BDDBB28ED26150E36C",
+      "replacement_sha256": "1B879064D4E817B48A85A472505EF0C026FBA763724D939EB175DED0B7F82219",
+      "start_byte_zero_based": 412574,
+      "end_byte_exclusive_zero_based": 412601,
+      "global_preimage_count": 1,
+      "line_preimage_count": 1,
+      "independent_rationale": "The indefinite article a requires the singular count noun morphism.",
+      "intake_disposition": "READY_FOR_FORMAL_ADMISSION"
+    },
+    {
+      "producer_id": "PERFECT-SRC-070",
+      "source_line": 10792,
+      "source_label": "lemma-DQCoh-alternative-small",
+      "class": "wrong_structure_sheaf_notation",
+      "old_text": "$D_\\QCoh(X_{affine}, \\mathcal{O}_X)$",
+      "replacement_text": "$D_\\QCoh(X_{affine}, \\mathcal{O})$",
+      "old_sha256": "DF6E35F6B3684E73BA532C4B734F5D16BC925B3D46B9B14CEE6D1ECCB8574387",
+      "replacement_sha256": "28975FD2C0626F8102A4A938F7E3DE10B490CEE4F368D2EFE4323BD7C80F8CC8",
+      "start_byte_zero_based": 413279,
+      "end_byte_exclusive_zero_based": 413315,
+      "global_preimage_count": 1,
+      "line_preimage_count": 1,
+      "independent_rationale": "Lines 10768-10777 explicitly define the chaotic site X_affine with structure sheaf O, item (5) uses (X_affine,O), and the proof at lines 10827-10842 applies a result to the ringed site (X_affine,O). The cited Cohomology on Sites lemma likewise takes a sheaf O on the category. O_X belongs to the ringed space X and is not the named sheaf in item (4).",
+      "intake_disposition": "READY_FOR_FORMAL_ADMISSION"
+    },
+    {
+      "producer_id": "PERFECT-SRC-071",
+      "source_line": 10822,
+      "source_label": "lemma-DQCoh-alternative-small",
+      "class": "duplicated_space",
+      "old_text": "Thus  we get",
+      "replacement_text": "Thus we get",
+      "old_sha256": "0747F757EA8E096C4ADC2247B01AE9BEDAF8498EC62E6D7E246D286325C0942E",
+      "replacement_sha256": "802FD9B793248625A8F4B69269ABD42C5C3A76A724270D039172C1EB86869FD5",
+      "start_byte_zero_based": 414589,
+      "end_byte_exclusive_zero_based": 414601,
+      "global_preimage_count": 1,
+      "line_preimage_count": 1,
+      "independent_rationale": "The doubled interword space is an isolated source typography defect.",
+      "intake_disposition": "READY_FOR_FORMAL_ADMISSION"
+    },
+    {
+      "producer_id": "PERFECT-SRC-072",
+      "source_locus": "perfect.tex:10859-10860",
+      "source_label": "lemma-DQCoh-alternative-small",
+      "class": "missing_governing_verb",
+      "old_text": "Thus the result by the discussion in\nSchemes, Section",
+      "replacement_text": "Thus the result follows from the discussion in\nSchemes, Section",
+      "old_sha256": "7414230C8A034C13B3E1BBC6BF7BFBC3CC97F99FE5395856E3F45A8E36B5E2F1",
+      "replacement_sha256": "A6C82F7247EA0EB9050893565963CD0D797C46EDBC254C4902AA4736D8B8A621",
+      "start_byte_zero_based": 416505,
+      "end_byte_exclusive_zero_based": 416558,
+      "global_preimage_count": 1,
+      "line_preimage_count": 1,
+      "independent_rationale": "The sentence has no predicate as printed. Follows from supplies the evident relation to the cited discussion while preserving its target.",
+      "intake_disposition": "READY_FOR_FORMAL_ADMISSION"
+    }
+  ],
+  "deterministic_replay": {
+    "all_declared_loci_match_computed_first_lines": true,
+    "every_exact_operation_has_one_match_on_its_declared_line_or_line_pair": true,
+    "repeated_preimages_are_disambiguated_by_bound_line_and_byte_offset": true,
+    "all_sixteen_r3_operation_intervals_nonoverlapping": true,
+    "all_r3_intervals_nonoverlapping_with_r1_and_r2_ready_operations": true,
+    "r3_ready_overlay": {
+      "semantic_ids": [
+        "PERFECT-SRC-065",
+        "PERFECT-SRC-066",
+        "PERFECT-SRC-067",
+        "PERFECT-SRC-068",
+        "PERFECT-SRC-069",
+        "PERFECT-SRC-070",
+        "PERFECT-SRC-071",
+        "PERFECT-SRC-072"
+      ],
+      "exact_operations": 16,
+      "result_bytes": 417541,
+      "result_physical_lines": 10895,
+      "result_sha256": "2D6653AF23028E985FFDA2F2EEE0A939E681425DBCD910A7E184E179E32E57BE"
+    },
+    "cumulative_r1_r2_r3_ready_overlay_excluding_053_062_063": {
+      "semantic_ids": [
+        "PERFECT-SRC-046",
+        "PERFECT-SRC-047",
+        "PERFECT-SRC-048",
+        "PERFECT-SRC-049",
+        "PERFECT-SRC-050",
+        "PERFECT-SRC-051",
+        "PERFECT-SRC-052",
+        "PERFECT-SRC-054",
+        "PERFECT-SRC-055",
+        "PERFECT-SRC-056",
+        "PERFECT-SRC-057",
+        "PERFECT-SRC-058",
+        "PERFECT-SRC-059",
+        "PERFECT-SRC-060",
+        "PERFECT-SRC-061",
+        "PERFECT-SRC-064",
+        "PERFECT-SRC-065",
+        "PERFECT-SRC-066",
+        "PERFECT-SRC-067",
+        "PERFECT-SRC-068",
+        "PERFECT-SRC-069",
+        "PERFECT-SRC-070",
+        "PERFECT-SRC-071",
+        "PERFECT-SRC-072"
+      ],
+      "semantic_units": 24,
+      "exact_operations": 32,
+      "result_bytes": 417517,
+      "result_physical_lines": 10895,
+      "result_sha256": "31EF572D294E8C79AB31A1AD3A9C8662CE2ACA6E26CF41BD28B541CB2AFA19B7"
+    }
+  },
+  "adverse_evidence": [
+    "The producer ledger advanced from its 68-row fourth-packet identity to its 72-row fifth-packet identity during this bounded audit. Both immutable observed identities are recorded; neither R1 nor R2 was rewritten.",
+    "The French target deliberately preserves the formal source tokens implicated by PERFECT-SRC-065, PERFECT-SRC-066, and PERFECT-SRC-070. Diplomatic preservation is not evidence against the independently proved English corrections.",
+    "PERFECT-SRC-066's producer row identifies the lost shift but does not declare a complete replacement set. Independent long-exact-sequence replay proves that a partial one-line correction would be inconsistent, so this receipt binds six exact edits as one indivisible semantic unit.",
+    "The producer QA receipts are fragment-level structure checks. Even though translation_sections_complete is true at line 10895, chapter_complete remains false and build_run remains false; this receipt makes no chapter-build or visual-certification claim.",
+    "The public registry branch remains behind the observed local queue. Both surfaces were checked read-only, and neither contains perfect.tex or these producer IDs.",
+    "No stable IDs were allocated, no registry or authority byte was changed, and no generated-source composition was authorized."
+  ],
+  "next_executable_admission_action": "Preserve R1, R2, and this R3 as one append-only intake chain. After the already-routed registrar rounds close, allocate one new stable ID per R3 semantic unit in source order, keeping PERFECT-SRC-066 indivisible across its six exact operations. Replay all sixteen R3 operations from authority SHA-256 83BD632E..., then replay the full 32-operation ready chain to the bound 31EF572D... result; validate schemas, manifest identities, unique stable IDs, source-map uniqueness, and fresh-checkout closure; commit and anonymously read back the public registry. Only after that admission may a compact handoff be sent to the generated-source composer. Keep predecessor-deferred PERFECT-SRC-053, PERFECT-SRC-062, and PERFECT-SRC-063 excluded unless separately resolved."
+}

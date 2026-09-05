@@ -1,0 +1,170 @@
+{
+  "authority": {
+    "bytes": 417503,
+    "path": "authority/source/perfect.tex",
+    "sha256": "83BD632E693848D32B54ACC48EA7D89B0ED024C4B84499486687E31E92BFDCF0"
+  },
+  "blockers": [],
+  "build": "NOT_REVIEWED_BY_THIS_RECEIPT",
+  "checks": {
+    "deferred_ids_absent_from_candidate": [
+      "PERFECT-SRC-053",
+      "PERFECT-SRC-062",
+      "PERFECT-SRC-063"
+    ],
+    "descending_replay_equals_payload_byte_for_byte": true,
+    "exact_authority_hash": true,
+    "exact_byte_preimages_lengths_hashes_and_line_numbers": 32,
+    "exact_replacement_lengths_hashes": 32,
+    "global_stable_id_collisions": 0,
+    "input_output_stage_pairs_byte_equal": 6,
+    "nonoverlapping": true,
+    "operations": 32,
+    "prior_operation_specs_checked": 50,
+    "prior_perfect_operations_observed": 0,
+    "prior_producer_id_hits": 0,
+    "prior_source_maps_checked": 56,
+    "prior_target_interval_overlaps": 0,
+    "source_map_unit_operation_producer_identity_equality": true,
+    "stable_ids": "MC-STK-ERR-1437..MC-STK-ERR-1460",
+    "stable_units": 24,
+    "structure_counts_and_order_equal": {
+      "cites": 20,
+      "environments": 1054,
+      "inputs": 2,
+      "labels": 281,
+      "refs": 1080
+    },
+    "unique_operation_ids": 32
+  },
+  "classification": {
+    "editorial_or_notational_clarification": 11,
+    "source_defect": 13
+  },
+  "date": "2026-09-05",
+  "full_admission": "NOT_PERFORMED",
+  "mutations": "Only this new review receipt; no source, registry, build, generated-source, Git, or publication mutation.",
+  "observed_files": [
+    {
+      "bytes": 3529,
+      "path": "candidate.config.json",
+      "sha256": "2E76E177E5AAE456DDD5A23A18BEE466CEDE6E4CDD894BB54FA90B424E63DF05"
+    },
+    {
+      "bytes": 3529,
+      "path": "candidate.config.input.json",
+      "sha256": "2E76E177E5AAE456DDD5A23A18BEE466CEDE6E4CDD894BB54FA90B424E63DF05"
+    },
+    {
+      "bytes": 31325,
+      "path": "operation-spec.json",
+      "sha256": "BBF1CA4B4B2F56969EA386B4DFEA909055FC9AB01DE72F731BF337FF5F67F0CC"
+    },
+    {
+      "bytes": 31325,
+      "path": "operation-spec.input.json",
+      "sha256": "BBF1CA4B4B2F56969EA386B4DFEA909055FC9AB01DE72F731BF337FF5F67F0CC"
+    },
+    {
+      "bytes": 12271,
+      "path": "stable-units.json",
+      "sha256": "B4F1ECF990AD3C7AEDD822FE5ADAE3ABBD51A21F2E71A391368E5EDC2721A88D"
+    },
+    {
+      "bytes": 12271,
+      "path": "stable-units.input.json",
+      "sha256": "B4F1ECF990AD3C7AEDD822FE5ADAE3ABBD51A21F2E71A391368E5EDC2721A88D"
+    },
+    {
+      "bytes": 45134,
+      "path": "source-map.jsonl",
+      "sha256": "251F2EC01B2379FE1679C33EF462E787408D2B11701B3593C49457A2F3581AC1"
+    },
+    {
+      "bytes": 45134,
+      "path": "source-map.input.jsonl",
+      "sha256": "251F2EC01B2379FE1679C33EF462E787408D2B11701B3593C49457A2F3581AC1"
+    },
+    {
+      "bytes": 11173,
+      "path": "decisions.jsonl",
+      "sha256": "6F6D9253501F1126F4058BA0AAA101256F88F076D132D549FF5D090543DDDBE2"
+    },
+    {
+      "bytes": 11173,
+      "path": "decisions.input.jsonl",
+      "sha256": "6F6D9253501F1126F4058BA0AAA101256F88F076D132D549FF5D090543DDDBE2"
+    },
+    {
+      "bytes": 0,
+      "path": "rejections.jsonl",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "bytes": 0,
+      "path": "rejections.input.jsonl",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "bytes": 2320,
+      "path": "source-validation.json",
+      "sha256": "2A5C1FFA53EDCB397F1A12CCDEE3AA6E3B07D028618E81A2B454488818F67BB0"
+    },
+    {
+      "bytes": 7898,
+      "path": "formula-diagram-inventory.json",
+      "sha256": "E59ACC8CFA9746EEC3666E92E1AC377A8B916940367FC86AB9B70F0B51C3CD6F"
+    },
+    {
+      "bytes": 1424,
+      "path": "REGENERATION_RECEIPT.json",
+      "sha256": "77993A9439B0B30171265F37860D7B851538E5CA6412F2C729BC0B3BB8F6FA25"
+    },
+    {
+      "bytes": 20240,
+      "path": "authority/registrar/PERFECT_R44_INDEPENDENT_ADJUDICATION_20260905.json",
+      "sha256": "72FF862A1520C70CDEC571B30B8D7A471399CDC631378368B629D073617BC47D"
+    },
+    {
+      "bytes": 15718,
+      "path": "authority/intake/STACKS_PERFECT_LATE_CHAPTER_INTAKE_20260905_R1.json",
+      "sha256": "BDDD0E75149EECD56EF96D9C30CCC2BB56BC807CDDF48076FBEA6A6C95C0F06E"
+    },
+    {
+      "bytes": 17323,
+      "path": "authority/intake/STACKS_PERFECT_LATE_CHAPTER_INTAKE_20260905_R2.json",
+      "sha256": "4339D0F8F2C49597E3B06B42A703CD0E00DF5323D307C7284B090DEEECEA075B"
+    },
+    {
+      "bytes": 24408,
+      "path": "authority/intake/STACKS_PERFECT_LATE_CHAPTER_INTAKE_20260905_R3.json",
+      "sha256": "B63A000465F558B46CD8CDBC948381406FB09C49A13858CAEBFC136181BCE21B"
+    },
+    {
+      "bytes": 6842,
+      "path": "authority/intake/STACKS_PERFECT_FROZEN_HARVEST_20260905.json",
+      "sha256": "D7383B18154AB7C58BA4CEAA61FA42D227683560A053A8761A05E6DA097127EA"
+    },
+    {
+      "bytes": 417503,
+      "path": "authority/source/perfect.tex",
+      "sha256": "83BD632E693848D32B54ACC48EA7D89B0ED024C4B84499486687E31E92BFDCF0"
+    },
+    {
+      "bytes": 417517,
+      "path": "payload/perfect.tex",
+      "sha256": "31EF572D294E8C79AB31A1AD3A9C8662CE2ACA6E26CF41BD28B541CB2AFA19B7"
+    }
+  ],
+  "passed": true,
+  "payload": {
+    "bytes": 417517,
+    "path": "payload/perfect.tex",
+    "sha256": "31EF572D294E8C79AB31A1AD3A9C8662CE2ACA6E26CF41BD28B541CB2AFA19B7"
+  },
+  "reviewer": "independent_exact_byte_validator",
+  "schema": "stacks-r44-independent-source-validation/v1",
+  "scope": "Independent source replay, identity, semantic grouping, structure, intake binding, and registry dedup validation only; no build, visual, admission, composition, or publication claim.",
+  "status": "PASS_SOURCE_ONLY",
+  "visual": "NOT_REVIEWED_BY_THIS_RECEIPT"
+}

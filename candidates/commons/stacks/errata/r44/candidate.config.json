@@ -1,0 +1,117 @@
+{
+  "accepted": 24,
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_evidence": [
+    {
+      "bytes": 20240,
+      "path": "authority/registrar/PERFECT_R44_INDEPENDENT_ADJUDICATION_20260905.json",
+      "sha256": "72FF862A1520C70CDEC571B30B8D7A471399CDC631378368B629D073617BC47D"
+    },
+    {
+      "bytes": 15718,
+      "path": "authority/intake/STACKS_PERFECT_LATE_CHAPTER_INTAKE_20260905_R1.json",
+      "sha256": "BDDD0E75149EECD56EF96D9C30CCC2BB56BC807CDDF48076FBEA6A6C95C0F06E"
+    },
+    {
+      "bytes": 17323,
+      "path": "authority/intake/STACKS_PERFECT_LATE_CHAPTER_INTAKE_20260905_R2.json",
+      "sha256": "4339D0F8F2C49597E3B06B42A703CD0E00DF5323D307C7284B090DEEECEA075B"
+    },
+    {
+      "bytes": 24408,
+      "path": "authority/intake/STACKS_PERFECT_LATE_CHAPTER_INTAKE_20260905_R3.json",
+      "sha256": "B63A000465F558B46CD8CDBC948381406FB09C49A13858CAEBFC136181BCE21B"
+    },
+    {
+      "bytes": 6842,
+      "path": "authority/intake/STACKS_PERFECT_FROZEN_HARVEST_20260905.json",
+      "sha256": "D7383B18154AB7C58BA4CEAA61FA42D227683560A053A8761A05E6DA097127EA"
+    }
+  ],
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "build_render_admission_status": "NOT_PERFORMED",
+  "candidate_id": "stacks-errata-a04446e-r44",
+  "excluded_deferred": 3,
+  "expected_producer_ids": [
+    "PERFECT-SRC-046",
+    "PERFECT-SRC-047",
+    "PERFECT-SRC-048",
+    "PERFECT-SRC-049",
+    "PERFECT-SRC-050",
+    "PERFECT-SRC-051",
+    "PERFECT-SRC-052",
+    "PERFECT-SRC-054",
+    "PERFECT-SRC-055",
+    "PERFECT-SRC-056",
+    "PERFECT-SRC-057",
+    "PERFECT-SRC-058",
+    "PERFECT-SRC-059",
+    "PERFECT-SRC-060",
+    "PERFECT-SRC-061",
+    "PERFECT-SRC-064",
+    "PERFECT-SRC-065",
+    "PERFECT-SRC-066",
+    "PERFECT-SRC-067",
+    "PERFECT-SRC-068",
+    "PERFECT-SRC-069",
+    "PERFECT-SRC-070",
+    "PERFECT-SRC-071",
+    "PERFECT-SRC-072"
+  ],
+  "expected_unit_ids": [
+    "MC-STK-ERR-1437",
+    "MC-STK-ERR-1438",
+    "MC-STK-ERR-1439",
+    "MC-STK-ERR-1440",
+    "MC-STK-ERR-1441",
+    "MC-STK-ERR-1442",
+    "MC-STK-ERR-1443",
+    "MC-STK-ERR-1444",
+    "MC-STK-ERR-1445",
+    "MC-STK-ERR-1446",
+    "MC-STK-ERR-1447",
+    "MC-STK-ERR-1448",
+    "MC-STK-ERR-1449",
+    "MC-STK-ERR-1450",
+    "MC-STK-ERR-1451",
+    "MC-STK-ERR-1452",
+    "MC-STK-ERR-1453",
+    "MC-STK-ERR-1454",
+    "MC-STK-ERR-1455",
+    "MC-STK-ERR-1456",
+    "MC-STK-ERR-1457",
+    "MC-STK-ERR-1458",
+    "MC-STK-ERR-1459",
+    "MC-STK-ERR-1460"
+  ],
+  "independent_replay": "not_performed",
+  "lease_id": "stacks-lease-000048-errata-r44",
+  "namespace": "commons/stacks/errata/r44",
+  "operation_count": 32,
+  "payload_expected_bytes": 417517,
+  "payload_expected_sha256": "31EF572D294E8C79AB31A1AD3A9C8662CE2ACA6E26CF41BD28B541CB2AFA19B7",
+  "proof_closure": {
+    "accepted": 24,
+    "editorial_or_notational_clarification": 11,
+    "excluded_deferred": 3,
+    "operations": 32,
+    "producer_rows": 24,
+    "rejected": 0,
+    "source_defect": 13,
+    "unresolved": 0
+  },
+  "rejected": 0,
+  "schema": "mathematics-commons-stacks-errata-candidate-config/v1",
+  "source_date_epoch": "1788619234",
+  "stems": {
+    "perfect": {
+      "authority_bytes": 417503,
+      "authority_sha256": "83BD632E693848D32B54ACC48EA7D89B0ED024C4B84499486687E31E92BFDCF0",
+      "build_exceptions": {},
+      "payload_bytes": 417517,
+      "payload_sha256": "31EF572D294E8C79AB31A1AD3A9C8662CE2ACA6E26CF41BD28B541CB2AFA19B7"
+    }
+  },
+  "unresolved": 0,
+  "writer_task": "01a0256d-5693-77c1-96b2-cf37101e0c6c"
+}

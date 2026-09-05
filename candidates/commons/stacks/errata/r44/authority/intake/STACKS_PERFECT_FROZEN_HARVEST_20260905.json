@@ -1,0 +1,145 @@
+{
+  "schema": "stacks-fr-perfect-manager-harvest-v1",
+  "owner": "manager",
+  "checked_utc": "2026-09-05T14:32:13.4504927Z",
+  "chapter": 36,
+  "chapter_key": "perfect",
+  "producer_root": "<WORKSPACE>\\03_projects\\language_management\\romance\\03_working_translations\\stacks_fr_20260821\\p05",
+  "constraints_observed": {
+    "producer_contacted": false,
+    "tex_run": false,
+    "producer_files_edited": false,
+    "published": false,
+    "errata_admitted": false
+  },
+  "authority": {
+    "path": "<WORKSPACE>\\03_projects\\language_management\\cjk\\03_working_translations\\stacks_cjk_20260821\\upstream\\src\\stacks-project-a04446e57ec1fbc252a871afcec7752fb2807b14\\perfect.tex",
+    "bytes": 417503,
+    "sha256": "83BD632E693848D32B54ACC48EA7D89B0ED024C4B84499486687E31E92BFDCF0",
+    "physical_lines": 10895,
+    "status": "EXACT"
+  },
+  "assembled_target": {
+    "path": "draft\\perfect.fr.tex",
+    "bytes": 448397,
+    "sha256": "4A18C0542455FD126A0AF07F40D3EE798612ABCC4699C862AD345F6AA21819EA",
+    "physical_lines": 10879,
+    "fragment_count": 39,
+    "source_line_coverage": "1-10895 contiguous",
+    "byte_identical_to_ordered_fragment_concatenation": true,
+    "status": "EXACT"
+  },
+  "delivered_pdf": {
+    "path": "output\\pdf\\stacks-project-chapter-36-perfect-fr.pdf",
+    "bytes": 1171535,
+    "sha256": "9267DD6E66F3890B467BCD9024CA431B473032C23D615861AB71C4E0DCD0E5F0",
+    "pages": 118,
+    "media_box_points": [612, 792],
+    "byte_identical_to_build_pdf": true,
+    "status": "EXACT"
+  },
+  "evidence_identities": [
+    {"path": "evidence\\PERFECT_DIRECT_REVIEW_STATE.json", "bytes": 28641, "sha256": "4E81CC9E6A3337BD03506D3C84894F0FA4E2A04D56C77C6BBBDB0AA80B70B930"},
+    {"path": "evidence\\PERFECT_DIRECT_QA_00001_10895.json", "bytes": 2544, "sha256": "289865AC9C98486785373200A42DA6CAEEB8C756CE8A0D7E8780F1A41DC2E181"},
+    {"path": "evidence\\PERFECT_ASSEMBLY.json", "bytes": 15626, "sha256": "8A86541DC7BAC8C02F6D5F60786E35F39408EEB7BB3136173D1630F9D7F1B8FC"},
+    {"path": "evidence\\PERFECT_WHOLE_QA.json", "bytes": 3247, "sha256": "D210CFD7E0CA6F48AE07E2DA23E88EA8B37E650FDC75DDD20CA980664965DF44"},
+    {"path": "evidence\\PERFECT_LAYOUT_QA.json", "bytes": 6919, "sha256": "BD728845256EDA6706ACA4637E1411226BE21705A5ED75366F3F5C439DE40049"},
+    {"path": "evidence\\PERFECT_TYPOGRAPHY_ALLOWLIST.json", "bytes": 5977, "sha256": "B1DA0900DADE53872B2B539D6A3568968022CCCA94B09DE04E60088975094B6F"},
+    {"path": "evidence\\PERFECT_SOURCE_DEFECT_LEDGER.csv", "bytes": 27120, "sha256": "A006730A408B232A724D99FEDAB15A8D8A3D14E20F2AFF236F2D17815D578E7D"},
+    {"path": "evidence\\PERFECT_TERMINOLOGY_WITNESSES.csv", "bytes": 5599, "sha256": "CA0401FB18D543F9E6CB3388C28C74AFD652F7E170644C384DE36CC87B55A8C2"},
+    {"path": "evidence\\PERFECT_BUILD_COMMANDS.json", "bytes": 129025, "sha256": "B88285767488E63527BEDCD496550465D35A5D827B833BEA780AD8CA1398AB95"},
+    {"path": "evidence\\PERFECT_BUILD_AUDIT.json", "bytes": 153022, "sha256": "A2F9171B34881F47A8C3971F48297BA67F119370296B2CD7798E8D53C83A0485"},
+    {"path": "evidence\\PERFECT_VISUAL_QA.json", "bytes": 3112, "sha256": "5EB435D2BBA77EAC42DDD896760B3666E178257D07F1252462452216F467AF47"}
+  ],
+  "parse_replay": {
+    "perfect_json_files_parsed": 48,
+    "perfect_csv_files_parsed": 2,
+    "source_defect_rows": 72,
+    "terminology_witness_rows": 11,
+    "rectangular_csv": true,
+    "status": "PASS"
+  },
+  "source_invariants": {
+    "math": {"source": 6006, "target": 6006, "ordered_equal": true},
+    "equations": {"source": 19, "target": 19, "ordered_equal": true},
+    "display_environments": {"source": 26, "target": 26, "ordered_equal": true},
+    "bracket_math": {"source": 0, "target": 0, "ordered_equal": true},
+    "tags": {"source": 0, "target": 0, "ordered_equal": true},
+    "labels": {"source": 281, "target": 281, "ordered_equal": true},
+    "references": {"source": 1080, "target": 1080, "ordered_equal": true},
+    "citation_keys": {"source": 20, "target": 20, "ordered_equal": true},
+    "environments": {"source": 1054, "target": 1054, "ordered_equal": true},
+    "commands": {"source": 12828, "target": 12828, "ordered_equal": true},
+    "inputs": {"source": 2, "target": 2, "ordered_equal": true},
+    "normalization": "Only the 12 authority-bound typography repairs and the recorded mathematical-prose substitutions were normalized.",
+    "mt_placeholder_residue": false,
+    "status": "PASS"
+  },
+  "allowlist_and_ledgers": {
+    "typography_repair_count": 12,
+    "authority_bound": true,
+    "fragment_transition_after_hashes_exact": true,
+    "layout_token_deltas_exact": true,
+    "repair_occurrence_counts_exact": true,
+    "source_defect_ledger_identity_exact": true,
+    "terminology_witness_identity_exact": true,
+    "status": "PASS"
+  },
+  "build_replay": {
+    "build_artifact_count": 8,
+    "build_invocation_count": 7,
+    "all_invocations_exit_zero_and_closed": true,
+    "mutex_sessions": 3,
+    "initial_bounded_timeout_closed": true,
+    "successful_mutex_sessions_acquired_released_and_closed": 2,
+    "final_command_state": "TYPOGRAPHY_PASS_MUTEX_RELEASED",
+    "log": {
+      "bytes": 106021,
+      "sha256": "DE229AA21C889E94A4BC9F16DA8C2A405E6F51776265BF0DC6007C1F997DBEEE",
+      "fatal_diagnostics": 0,
+      "undefined_references": 0,
+      "undefined_citations": 0,
+      "overfull_hboxes": 0,
+      "records_exact_pdf_pages_and_bytes": true
+    },
+    "fls": {
+      "bytes": 31687,
+      "sha256": "93A3F5096B1D8F10C3FEC6ADBD0353AA7A4E1E95D0020C13023B097ABF2CF0FF",
+      "live_raw_input_set_matches_audit": true,
+      "live_raw_output_set_matches_audit": true,
+      "inputs": 171,
+      "outputs": 5,
+      "all_recorded_input_identities_exact": true,
+      "outputs_confined": true,
+      "staged_target_and_support_exact": true
+    },
+    "status": "PASS"
+  },
+  "render_replay": {
+    "pages": 118,
+    "filenames": "page-001.png through page-118.png contiguous",
+    "dimensions_pixels": [1020, 1320],
+    "all_recorded_byte_counts_and_sha256_exact": true,
+    "unique_sha256": 118,
+    "render_transcript_bytes": 0,
+    "render_transcript_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+    "status": "PASS"
+  },
+  "visual_replay": {
+    "producer_ledger_partitions": ["1-59", "60-118"],
+    "producer_ledger_contiguous": true,
+    "producer_ledger_findings": [],
+    "manager_original_resolution_pages_inspected": [1, 13, 42, 63, 84, 108, 109, 110, 111, 112, 113, 115, 118],
+    "required_pages_111_and_113_clean": true,
+    "observed_blank_missing_duplicate_cropped_truncated_scaled_overprinted_pages": 0,
+    "observed_broken_displays_or_unreadable_glyphs": 0,
+    "status": "PASS"
+  },
+  "independent_replay": {
+    "checks_passed": 844,
+    "discrepancy_count": 0,
+    "discrepancies": [],
+    "status": "PASS"
+  },
+  "status": "EXACT_FROZEN_PASS"
+}

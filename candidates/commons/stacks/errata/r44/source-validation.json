@@ -1,0 +1,74 @@
+{
+  "adjudication": {
+    "bytes": 20240,
+    "path": "authority/registrar/PERFECT_R44_INDEPENDENT_ADJUDICATION_20260905.json",
+    "sha256": "72FF862A1520C70CDEC571B30B8D7A471399CDC631378368B629D073617BC47D"
+  },
+  "authority": {
+    "bytes": 417503,
+    "path": "authority/source/perfect.tex",
+    "sha256": "83BD632E693848D32B54ACC48EA7D89B0ED024C4B84499486687E31E92BFDCF0"
+  },
+  "build": "NOT_PERFORMED",
+  "deduplication": {
+    "commit": "c69900fe75119d39025084ed520abc8bb24d507b",
+    "leases_sha256": "BD24F0BBCAD50427B07C3C86F7923328EAD0A983E08D4F82FE9B6563F45C817C",
+    "matching_producer_ids": 0,
+    "operation_spec_variants_checked": 50,
+    "overlays_sha256": "05E01334F67E83AD9B226E119A60AEFDEABBB0B1436F4A56297A35010E50A554",
+    "prior_exact_preimage_hits": 0,
+    "prior_perfect_operations": 0,
+    "prior_stable_id_max": "MC-STK-ERR-1436",
+    "prior_target_interval_overlaps": 0,
+    "registered_rounds_checked_through": 43,
+    "source_map_variants_checked": 56
+  },
+  "excluded_deferred_producer_ids": [
+    "PERFECT-SRC-053",
+    "PERFECT-SRC-062",
+    "PERFECT-SRC-063"
+  ],
+  "independent_candidate_replay": "NOT_PERFORMED",
+  "line_preimages_exact": 32,
+  "nonoverlapping": true,
+  "operations": 32,
+  "passed": true,
+  "payload": {
+    "bytes": 417517,
+    "path": "payload/perfect.tex",
+    "sha256": "31EF572D294E8C79AB31A1AD3A9C8662CE2ACA6E26CF41BD28B541CB2AFA19B7"
+  },
+  "schema": "stacks-r44-source-validation-v1",
+  "scope": "Source-only exact replay, semantic-unit grouping, structural equality, and registry dedup validation; no build, render, admission, or composition claim.",
+  "semantic_units": 24,
+  "structure": {
+    "cites": {
+      "authority": 20,
+      "candidate": 20,
+      "ordered_equal": true
+    },
+    "environments": {
+      "authority": 1054,
+      "candidate": 1054,
+      "ordered_equal": true
+    },
+    "inputs": {
+      "authority": 2,
+      "candidate": 2,
+      "ordered_equal": true
+    },
+    "labels": {
+      "authority": 281,
+      "candidate": 281,
+      "ordered_equal": true
+    },
+    "refs": {
+      "authority": 1080,
+      "candidate": 1080,
+      "ordered_equal": true
+    }
+  },
+  "unchanged_interval_sha256": "74DCBA4E4785EA287C6457CED34C04D12B67AB58D477173562D448EC49ADF705",
+  "unlisted_byte_changes": 0,
+  "visual_qa": "NOT_PERFORMED"
+}

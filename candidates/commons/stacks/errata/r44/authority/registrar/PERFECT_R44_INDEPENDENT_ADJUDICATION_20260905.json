@@ -1,0 +1,582 @@
+{
+  "authority": {
+    "bytes": 417503,
+    "path": "authority/source/perfect.tex",
+    "sha256": "83BD632E693848D32B54ACC48EA7D89B0ED024C4B84499486687E31E92BFDCF0"
+  },
+  "classification": {
+    "editorial_or_notational_clarification": 11,
+    "source_defect": 13
+  },
+  "date": "2026-09-05",
+  "frozen_french_checkpoint": {
+    "build_fls_status": "PASS",
+    "pdf_sha256": "9267DD6E66F3890B467BCD9024CA431B473032C23D615861AB71C4E0DCD0E5F0",
+    "status": "EXACT_FROZEN_PASS",
+    "target_sha256": "4A18C0542455FD126A0AF07F40D3EE798612ABCC4699C862AD345F6AA21819EA",
+    "visual_status": "PASS"
+  },
+  "grouping": {
+    "authority_order": [
+      "MC-STK-ERR-1437",
+      "MC-STK-ERR-1438",
+      "MC-STK-ERR-1439",
+      "MC-STK-ERR-1440",
+      "MC-STK-ERR-1441",
+      "MC-STK-ERR-1442",
+      "MC-STK-ERR-1443",
+      "MC-STK-ERR-1444",
+      "MC-STK-ERR-1445",
+      "MC-STK-ERR-1446",
+      "MC-STK-ERR-1447",
+      "MC-STK-ERR-1448",
+      "MC-STK-ERR-1449",
+      "MC-STK-ERR-1450",
+      "MC-STK-ERR-1451",
+      "MC-STK-ERR-1452",
+      "MC-STK-ERR-1453",
+      "MC-STK-ERR-1454",
+      "MC-STK-ERR-1455",
+      "MC-STK-ERR-1456",
+      "MC-STK-ERR-1457",
+      "MC-STK-ERR-1458",
+      "MC-STK-ERR-1459",
+      "MC-STK-ERR-1460"
+    ],
+    "deferred_disposition": "Not assigned stable IDs, not present in source map, and not applied to payload.",
+    "exact_operations": 32,
+    "excluded_deferred_producer_ids": [
+      "PERFECT-SRC-053",
+      "PERFECT-SRC-062",
+      "PERFECT-SRC-063"
+    ],
+    "multi_operation_units": {
+      "MC-STK-ERR-1453": 2,
+      "MC-STK-ERR-1454": 6,
+      "MC-STK-ERR-1455": 2,
+      "MC-STK-ERR-1456": 2
+    },
+    "semantic_units": 24
+  },
+  "intake_originals": [
+    {
+      "bytes": 15942,
+      "logical_path": "<WORKSPACE>/03_projects/language_management/cjk/00_lane_control/STACKS_PERFECT_LATE_CHAPTER_INTAKE_20260905_R1.json",
+      "sha256": "AB99E12E79DF738D480C1A41A8C1B7C07F431A303D5AC447315343871E8E7B99"
+    },
+    {
+      "bytes": 17579,
+      "logical_path": "<WORKSPACE>/03_projects/language_management/cjk/00_lane_control/STACKS_PERFECT_LATE_CHAPTER_INTAKE_20260905_R2.json",
+      "sha256": "65BAD203F40809C4CBF80E783D70284291D90B3C5902933C62D8F6979ACF27B3"
+    },
+    {
+      "bytes": 24696,
+      "logical_path": "<WORKSPACE>/03_projects/language_management/cjk/00_lane_control/STACKS_PERFECT_LATE_CHAPTER_INTAKE_20260905_R3.json",
+      "sha256": "5A178ECA6CE995A55A3FEB726692A6CD4E83F6D37B0BE699AB3553B5B885B2E6"
+    },
+    {
+      "bytes": 6906,
+      "logical_path": "<WORKSPACE>/03_projects/language_management/cjk/00_lane_control/STACKS_PERFECT_FROZEN_HARVEST_20260905.json",
+      "sha256": "39A8166112D5BB55E372A95EB6F81E90841D899916EF1764F5B3874EF5A4E8A9"
+    }
+  ],
+  "mutations": "Only the leased R44 candidate is materialized; frozen authority, producer/French/CJK sources, generated source, upstream, and registry admission remain untouched.",
+  "passed": true,
+  "prelease_registry": {
+    "commit": "c69900fe75119d39025084ed520abc8bb24d507b",
+    "leases_sha256": "BD24F0BBCAD50427B07C3C86F7923328EAD0A983E08D4F82FE9B6563F45C817C",
+    "matching_producer_ids": 0,
+    "operation_spec_variants_checked": 50,
+    "overlays_sha256": "05E01334F67E83AD9B226E119A60AEFDEABBB0B1436F4A56297A35010E50A554",
+    "prior_exact_preimage_hits": 0,
+    "prior_perfect_operations": 0,
+    "prior_stable_id_max": "MC-STK-ERR-1436",
+    "prior_target_interval_overlaps": 0,
+    "registered_rounds_checked_through": 43,
+    "source_map_variants_checked": 56
+  },
+  "replay": {
+    "payload_bytes": 417517,
+    "payload_sha256": "31EF572D294E8C79AB31A1AD3A9C8662CE2ACA6E26CF41BD28B541CB2AFA19B7",
+    "physical_lines": 10895
+  },
+  "rows": [
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "intake_round": 1,
+      "operation_count": 1,
+      "producer_class": "duplicate_word",
+      "producer_id": "PERFECT-SRC-046",
+      "reason": "The second occurrence of module has no grammatical or mathematical role; deleting it preserves the finite-presentation condition and the module type.",
+      "recommendation": "accept",
+      "source_labels": [
+        "section-resolution-property"
+      ],
+      "source_lines": [
+        9226
+      ],
+      "stable_id": "MC-STK-ERR-1437"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "intake_round": 1,
+      "operation_count": 1,
+      "producer_class": "transposed_index",
+      "producer_id": "PERFECT-SRC-047",
+      "reason": "Lines 9262 and 9269-9273 define s_{j,i} with exponent n_{j,i} and place it in H_{-n_{j,i}}; adjunction followed by tensoring back therefore requires L^{otimes n_{j,i}}.",
+      "recommendation": "accept",
+      "source_labels": [
+        "lemma-resolution-property-ample-relative"
+      ],
+      "source_lines": [
+        9277
+      ],
+      "stable_id": "MC-STK-ERR-1438"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "intake_round": 1,
+      "operation_count": 1,
+      "producer_class": "transposed_index",
+      "producer_id": "PERFECT-SRC-048",
+      "reason": "The only section family introduced is s_{j,i}, over V_j, and H'_{i,j} is explicitly a submodule of H_{-n_{j,i}}.",
+      "recommendation": "accept",
+      "source_labels": [
+        "lemma-resolution-property-ample-relative"
+      ],
+      "source_lines": [
+        9284
+      ],
+      "stable_id": "MC-STK-ERR-1439"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "intake_round": 1,
+      "operation_count": 1,
+      "producer_class": "transposed_index",
+      "producer_id": "PERFECT-SRC-049",
+      "reason": "The preceding sentence constructs H'_{i,j}; the resolution-property surjection from E_{i,j} must target that same finite-type submodule.",
+      "recommendation": "accept",
+      "source_labels": [
+        "lemma-resolution-property-ample-relative"
+      ],
+      "source_lines": [
+        9286
+      ],
+      "stable_id": "MC-STK-ERR-1440"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "intake_round": 1,
+      "operation_count": 1,
+      "producer_class": "tex_subscript_omission",
+      "producer_id": "PERFECT-SRC-050",
+      "reason": "The prose calls this the ideal on U_j, so U_j must be the restriction subscript; without the underscore the TeX does not express a restriction.",
+      "recommendation": "accept",
+      "source_labels": [
+        "lemma-resolution-property-finite-number"
+      ],
+      "source_lines": [
+        9371
+      ],
+      "stable_id": "MC-STK-ERR-1441"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "intake_round": 1,
+      "operation_count": 1,
+      "producer_class": "wrong_cover_index",
+      "producer_id": "PERFECT-SRC-051",
+      "reason": "The section s_{jk} lives on U_j and the immediately following composition uses I_j^{n_{jk}}; I_i is not the covering ideal for this step.",
+      "recommendation": "accept",
+      "source_labels": [
+        "lemma-resolution-property-finite-number"
+      ],
+      "source_lines": [
+        9403
+      ],
+      "stable_id": "MC-STK-ERR-1442"
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "intake_round": 1,
+      "operation_count": 1,
+      "producer_class": "number_agreement",
+      "producer_id": "PERFECT-SRC-052",
+      "reason": "Resolution property is the singular defined property used throughout the statement and proof.",
+      "recommendation": "accept",
+      "source_labels": [
+        "lemma-resolution-property-descends"
+      ],
+      "source_lines": [
+        9448
+      ],
+      "stable_id": "MC-STK-ERR-1443"
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "intake_round": 1,
+      "operation_count": 1,
+      "producer_class": "spelling",
+      "producer_id": "PERFECT-SRC-054",
+      "reason": "The proposition twice uses the established phrase triangulated categories; trianglated is an unambiguous spelling error.",
+      "recommendation": "accept",
+      "source_labels": [
+        "proposition-perfect-resolution-property"
+      ],
+      "source_lines": [
+        9790
+      ],
+      "stable_id": "MC-STK-ERR-1444"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "intake_round": 2,
+      "operation_count": 1,
+      "producer_class": "missing_closing_parenthesis",
+      "producer_id": "PERFECT-SRC-055",
+      "reason": "The nested K_0(D^b(Coh(O_X))) expression opens three ordinary parentheses but the line closes only two before the equality; the adjacent first and third terms are balanced.",
+      "recommendation": "accept",
+      "source_labels": [
+        "lemma-Noetherian-Kprime"
+      ],
+      "source_lines": [
+        9869
+      ],
+      "stable_id": "MC-STK-ERR-1445"
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "intake_round": 2,
+      "operation_count": 1,
+      "producer_class": "duplicated_phrase",
+      "producer_id": "PERFECT-SRC-056",
+      "reason": "Line 9902 already ends with 'It is the'; deleting the repeated 'is the' at the start of line 9903 yields the intended single copular phrase.",
+      "recommendation": "accept",
+      "source_labels": [
+        "definition-K-groups"
+      ],
+      "source_lines": [
+        9903
+      ],
+      "stable_id": "MC-STK-ERR-1446"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "intake_round": 2,
+      "operation_count": 1,
+      "producer_class": "wrong_sequence_index",
+      "producer_id": "PERFECT-SRC-057",
+      "reason": "The displayed acyclic-complex decomposition advances from F^{a+1} to E^{a+2} and therefore has cokernel F^{a+2}; a+3 breaks the consecutive exact-sequence pattern used in the alternating-sum proof.",
+      "recommendation": "accept",
+      "source_labels": [
+        "lemma-K0-derived"
+      ],
+      "source_lines": [
+        10062
+      ],
+      "stable_id": "MC-STK-ERR-1447"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "intake_round": 2,
+      "operation_count": 1,
+      "producer_class": "missing_exponent",
+      "producer_id": "PERFECT-SRC-058",
+      "reason": "This is the Euler characteristic, and the immediately following expansion uses (-1)^n; without the exponent the first sum is a constant negative sum and the stated cancellation does not follow.",
+      "recommendation": "accept",
+      "source_labels": [
+        "lemma-K0-derived"
+      ],
+      "source_lines": [
+        10073
+      ],
+      "stable_id": "MC-STK-ERR-1448"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "intake_round": 2,
+      "operation_count": 1,
+      "producer_class": "wrong_cone_variable",
+      "producer_id": "PERFECT-SRC-059",
+      "reason": "The proof introduces the quasi-isomorphism a and its cone C(a) at lines 10090 and 10093; no f is introduced in this argument.",
+      "recommendation": "accept",
+      "source_labels": [
+        "lemma-K0-derived"
+      ],
+      "source_lines": [
+        10098
+      ],
+      "stable_id": "MC-STK-ERR-1449"
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "intake_round": 2,
+      "operation_count": 1,
+      "producer_class": "duplicated_article",
+      "producer_id": "PERFECT-SRC-060",
+      "reason": "The repeated definite article is a source-prose typo with no mathematical effect.",
+      "recommendation": "accept",
+      "source_labels": [
+        "lemma-K0-vector-bundles"
+      ],
+      "source_lines": [
+        10120
+      ],
+      "stable_id": "MC-STK-ERR-1450"
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "intake_round": 2,
+      "operation_count": 1,
+      "producer_class": "unidiomatic_redundancy",
+      "producer_id": "PERFECT-SRC-061",
+      "reason": "Only and most often assert incompatible uniqueness and frequency claims. Removing only is the smallest repair and preserves the explicit practical-frequency statement without adding exclusivity.",
+      "recommendation": "accept",
+      "source_labels": [
+        "remark-K-prime-pushforward"
+      ],
+      "source_lines": [
+        10205
+      ],
+      "stable_id": "MC-STK-ERR-1451"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "intake_round": 2,
+      "operation_count": 1,
+      "producer_class": "extraneous_object_symbol",
+      "producer_id": "PERFECT-SRC-064",
+      "reason": "The sentence's subject is already Lf^*K. The second K appears between the predicate noun and its of-complement, has no syntactic role, and falsely renames the pullback object; deleting it restores the intended assertion.",
+      "recommendation": "accept",
+      "source_labels": [
+        "remark-functorial-det"
+      ],
+      "source_lines": [
+        10342
+      ],
+      "stable_id": "MC-STK-ERR-1452"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1,
+        1
+      ],
+      "intake_round": 3,
+      "operation_count": 2,
+      "producer_class": "ill_typed_restriction_argument",
+      "producer_id": "PERFECT-SRC-065",
+      "reason": "Both equalities are adjunction calculations in D(O_U). Their first argument is K|_U[-n], and the second must likewise be an object on U. The surrounding term Rj_*(E|_U) already identifies the intended restriction. Plain E is an object on X and is ill-typed as written.",
+      "recommendation": "accept",
+      "source_labels": [
+        "lemma-orthogonal-koszul-first-variant",
+        "lemma-orthogonal-koszul-second-variant"
+      ],
+      "source_lines": [
+        10387,
+        10432
+      ],
+      "stable_id": "MC-STK-ERR-1453"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "intake_round": 3,
+      "operation_count": 6,
+      "producer_class": "lost_long_exact_sequence_shift_with_consequent_implication_and_bound_errors",
+      "producer_id": "PERFECT-SRC-066",
+      "reason": "Write B = Rj_*(E|_U). Rotating the triangle E -> B -> N -> E[1] gives N[-1] -> E -> B. Because Hom(K[-n], B[q]) vanishes for every shift q, the long exact Hom sequence gives Hom(K[-n], N[-1]) isomorphic to Hom(K[-n], E). Hom(K[-n], N[-1]) equals Hom(K[-n+1], N). Therefore condition (2) for n <= a is equivalent, after m = n - 1, to Hom(K[-m], N) = 0 for m <= a - 1, not m <= a. Condition (1) at a implies tau_{<=a-1}N = 0 and is implied by tau_{<=a}N = 0. Hence (1)_a implies (2)_a, while (2)_a implies (1)_{a-1}. The printed implication order is reversed because it relies on the lost shift. Rejected partial repair: Changing only the Hom index on line 10435 would leave the repeated bounds and final truncation conclusion inconsistent. Rejected partial repair: Preserving line 10423 would require changing the hypothesis in item (2) to n <= a + 1; that is mathematically valid but less faithful than preserving the stated condition and repairing the proof and implication order.",
+      "recommendation": "accept",
+      "source_labels": [
+        "lemma-orthogonal-koszul-second-variant"
+      ],
+      "source_lines": [
+        10423,
+        10435,
+        10444,
+        10446,
+        10449,
+        10450
+      ],
+      "stable_id": "MC-STK-ERR-1454"
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_line_preimage_occurrences": [
+        1,
+        1
+      ],
+      "intake_round": 3,
+      "operation_count": 2,
+      "producer_class": "number_agreement",
+      "producer_id": "PERFECT-SRC-067",
+      "reason": "Each sentence coordinates two separately numbered parts, so the singular noun Part is grammatically wrong at both parallel loci.",
+      "recommendation": "accept",
+      "source_labels": [
+        "proposition-detecting-bounded-above",
+        "proposition-detecting-bounded-below"
+      ],
+      "source_lines": [
+        10534,
+        10652
+      ],
+      "stable_id": "MC-STK-ERR-1455"
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_line_preimage_occurrences": [
+        1,
+        1
+      ],
+      "intake_round": 3,
+      "operation_count": 2,
+      "producer_class": "number_agreement",
+      "producer_id": "PERFECT-SRC-068",
+      "reason": "Both parallel phrases name the distinct properties (7)(b) and (7)(c), so the shared singular noun property must be plural.",
+      "recommendation": "accept",
+      "source_labels": [
+        "proposition-detecting-bounded-above",
+        "proposition-detecting-bounded-below"
+      ],
+      "source_lines": [
+        10552,
+        10670
+      ],
+      "stable_id": "MC-STK-ERR-1456"
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "intake_round": 3,
+      "operation_count": 1,
+      "producer_class": "article_number_agreement",
+      "producer_id": "PERFECT-SRC-069",
+      "reason": "The indefinite article a requires the singular count noun morphism.",
+      "recommendation": "accept",
+      "source_labels": [
+        "section-QC"
+      ],
+      "source_lines": [
+        10772
+      ],
+      "stable_id": "MC-STK-ERR-1457"
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "intake_round": 3,
+      "operation_count": 1,
+      "producer_class": "wrong_structure_sheaf_notation",
+      "producer_id": "PERFECT-SRC-070",
+      "reason": "Lines 10768-10777 explicitly define the chaotic site X_affine with structure sheaf O, item (5) uses (X_affine,O), and the proof at lines 10827-10842 applies a result to the ringed site (X_affine,O). The cited Cohomology on Sites lemma likewise takes a sheaf O on the category. O_X belongs to the ringed space X and is not the named sheaf in item (4).",
+      "recommendation": "accept",
+      "source_labels": [
+        "lemma-DQCoh-alternative-small"
+      ],
+      "source_lines": [
+        10792
+      ],
+      "stable_id": "MC-STK-ERR-1458"
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "intake_round": 3,
+      "operation_count": 1,
+      "producer_class": "duplicated_space",
+      "producer_id": "PERFECT-SRC-071",
+      "reason": "The doubled interword space is an isolated source typography defect.",
+      "recommendation": "accept",
+      "source_labels": [
+        "lemma-DQCoh-alternative-small"
+      ],
+      "source_lines": [
+        10822
+      ],
+      "stable_id": "MC-STK-ERR-1459"
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "intake_round": 3,
+      "operation_count": 1,
+      "producer_class": "missing_governing_verb",
+      "producer_id": "PERFECT-SRC-072",
+      "reason": "The sentence has no predicate as printed. Follows from supplies the evident relation to the cited discussion while preserving its target.",
+      "recommendation": "accept",
+      "source_labels": [
+        "lemma-DQCoh-alternative-small"
+      ],
+      "source_lines": [
+        10859
+      ],
+      "stable_id": "MC-STK-ERR-1460"
+    }
+  ],
+  "schema": "stacks-r44-perfect-independent-adjudication/v1",
+  "status": "PASS_ACCEPT_24_NON_DUPLICATIVE_UNITS_32_OPERATIONS"
+}

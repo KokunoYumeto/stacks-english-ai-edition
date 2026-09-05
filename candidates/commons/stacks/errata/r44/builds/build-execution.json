@@ -1,0 +1,237 @@
+{
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_inputs": {
+    "perfect.tex": {
+      "bytes": 417503,
+      "path": "perfect.tex",
+      "sha256": "83BD632E693848D32B54ACC48EA7D89B0ED024C4B84499486687E31E92BFDCF0"
+    }
+  },
+  "authority_phase": {
+    "stems": {
+      "perfect": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "perfect.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 163902,
+            "stdout_sha256_raw": "0D1F80750B910107D88715216848B96D1A2974C4D43507ECBB9695B47BF8B80C"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "perfect"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 144,
+            "stdout_sha256_raw": "D4C8EC4BC0AD8D8E30E291DFA64ACC801A2392A245978B75E96E03F5A63B9AFF"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "perfect.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 110114,
+            "stdout_sha256_raw": "D7BB21F7C59053CC2513BD465365DD82E5FC4C64E723765C5832548E3D33F315"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "perfect.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 108512,
+            "stdout_sha256_raw": "705AD7DA29085054F8A5FC4300C745E95FABA480745B5C187CFDD8DCC722A53B"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 144,
+            "path": "builds/perfect.authority.bibtex.txt",
+            "sha256": "D4C8EC4BC0AD8D8E30E291DFA64ACC801A2392A245978B75E96E03F5A63B9AFF"
+          },
+          "fls": {
+            "bytes": 28365,
+            "path": "builds/perfect.authority.fls",
+            "sha256": "1C812824FF1EAA3FBA2623384ED8150ABC3B13818F1B070A706907D731DDE51B"
+          },
+          "fls_dependencies": {
+            "bytes": 63470,
+            "path": "builds/perfect.authority.fls-dependencies.json",
+            "sha256": "39B90B0013E4516DE7F2E7F636C677DF41A8ABAA7CDDC9E17019A154B613DEBB"
+          },
+          "log": {
+            "bytes": 120033,
+            "path": "builds/perfect.authority.log",
+            "sha256": "94A2D976BA413BA09E655F075FE881E949E3831E14D1BC1110E3D3694729E39D"
+          },
+          "pass3_stdout": {
+            "bytes": 108094,
+            "path": "builds/perfect.authority.pass3.txt",
+            "sha256": "8CEE3CD499ECD27B8D71E366E26DDC55E057D2FFBF2B129076362A370005B84A"
+          },
+          "pdf": {
+            "bytes": 1138721,
+            "path": "builds/perfect.authority.pdf",
+            "sha256": "70FC4CF609BCD8A7EF94FAF5B0165B381A50B4F259B7E3C72DA3A25C19BB9915"
+          }
+        },
+        "source": {
+          "bytes": 417503,
+          "path": "perfect.tex",
+          "sha256": "83BD632E693848D32B54ACC48EA7D89B0ED024C4B84499486687E31E92BFDCF0"
+        }
+      }
+    }
+  },
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "candidate_id": "stacks-errata-a04446e-r44",
+  "candidate_inputs": {
+    "perfect.tex": {
+      "bytes": 417517,
+      "path": "perfect.tex",
+      "sha256": "31EF572D294E8C79AB31A1AD3A9C8662CE2ACA6E26CF41BD28B541CB2AFA19B7"
+    }
+  },
+  "candidate_phase": {
+    "stems": {
+      "perfect": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "perfect.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 163902,
+            "stdout_sha256_raw": "F698B16E073823D3B5740F37DC4A0569CE6DBC4A4FF163B71E89DB5293E69EA2"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "perfect"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 144,
+            "stdout_sha256_raw": "D4C8EC4BC0AD8D8E30E291DFA64ACC801A2392A245978B75E96E03F5A63B9AFF"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "perfect.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 110114,
+            "stdout_sha256_raw": "4C474933703A10D077529A31E0E22C2CF7F1D158F901AF4B1895E592C787A8A3"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-recorder",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "perfect.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 108512,
+            "stdout_sha256_raw": "0805B489DE361A26C20511C1E2CA0BA7EE615315458E6FB6D5901C03B206AE1F"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 144,
+            "path": "builds/perfect.bibtex.txt",
+            "sha256": "D4C8EC4BC0AD8D8E30E291DFA64ACC801A2392A245978B75E96E03F5A63B9AFF"
+          },
+          "fls": {
+            "bytes": 28365,
+            "path": "builds/perfect.fls",
+            "sha256": "1C812824FF1EAA3FBA2623384ED8150ABC3B13818F1B070A706907D731DDE51B"
+          },
+          "fls_dependencies": {
+            "bytes": 63470,
+            "path": "builds/perfect.fls-dependencies.json",
+            "sha256": "6AFD634A292388196EEC030094BD978CD819CE4882902EFC19F4DBE5E8BE4F12"
+          },
+          "log": {
+            "bytes": 120033,
+            "path": "builds/perfect.log",
+            "sha256": "EEA25CB461CDFC4A208F08FA60523F4E3A42F1703751DBABD2CB6223AD84E85F"
+          },
+          "pass3_stdout": {
+            "bytes": 108094,
+            "path": "builds/perfect.pass3.txt",
+            "sha256": "B51B780596EB08F46BF11F6FC4EA918ADE53DC1B2373032C77A017EA8AB6D79F"
+          },
+          "pdf": {
+            "bytes": 1139029,
+            "path": "builds/perfect.pdf",
+            "sha256": "479AE64026CE882CB96F504F4CC6EF19D686C988AA78EB2160546F1E04D95BB3"
+          }
+        },
+        "source": {
+          "bytes": 417517,
+          "path": "perfect.tex",
+          "sha256": "31EF572D294E8C79AB31A1AD3A9C8662CE2ACA6E26CF41BD28B541CB2AFA19B7"
+        }
+      }
+    }
+  },
+  "completed_at_utc": "2026-09-05T14:53:57Z",
+  "passed": true,
+  "restored_authority_inputs": {
+    "perfect.tex": {
+      "bytes": 417503,
+      "path": "perfect.tex",
+      "sha256": "83BD632E693848D32B54ACC48EA7D89B0ED024C4B84499486687E31E92BFDCF0"
+    }
+  },
+  "schema": "mathematics-commons-stacks-errata-build-execution/v1",
+  "source_date_epoch": "1788619234",
+  "started_at_utc": "2026-09-05T14:53:34Z",
+  "tools": {
+    "bibtex": "MiKTeX-BibTeX 4.2 (MiKTeX 26.5)",
+    "pdflatex": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5)",
+    "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]"
+  },
+  "work_root": "new empty task-local directory outside source and candidate; exact path retained only in private evidence"
+}

@@ -1,0 +1,597 @@
+{
+  "schema": "stacks-r44-page-complete-visual-review/v1",
+  "reviewed_at_utc": "2026-09-05T15:37:26.242Z",
+  "reviewer": {
+    "agent_task": "/root/r44_finalize_publish/r44_visual_057_084",
+    "independence": "Independent bounded review of the assigned page range."
+  },
+  "candidate_pdf": {
+    "path": "builds/perfect.pdf",
+    "bytes": 1139029,
+    "sha256": "479AE64026CE882CB96F504F4CC6EF19D686C988AA78EB2160546F1E04D95BB3",
+    "manifest_sha256": "479AE64026CE882CB96F504F4CC6EF19D686C988AA78EB2160546F1E04D95BB3",
+    "sha256_matches_manifest": true,
+    "total_pages": 109,
+    "page_size_points": {
+      "width": 612,
+      "height": 792
+    },
+    "pdf_version": "1.5"
+  },
+  "render_manifest": {
+    "bytes": 28608,
+    "sha256": "F392ACE82BA87909779444BB409D46EBC329A1314DE74ADFA0AF603B6D32FDF4",
+    "schema": "mathematics-commons-stacks-private-render-manifest/v1",
+    "authority_entry": "pdfs.perfect",
+    "dpi": 96,
+    "identity": "private-render-manifest",
+    "file": "render-manifest.json"
+  },
+  "scope": {
+    "page_range": {
+      "first": 57,
+      "last": 84
+    },
+    "page_count": 28,
+    "pages": [
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84
+    ],
+    "unreviewed_pages_in_range": []
+  },
+  "method": {
+    "visual_review": "Each authoritative PNG from page-057.png through page-084.png was opened and inspected individually as a full page at original render pixels. Contact sheets were not used as review evidence.",
+    "identity_review": "Every assigned PNG byte length and SHA-256 was recomputed from the live file and compared with render-manifest.json after visual inspection.",
+    "ambiguity_resolution": "Pages 72 and 82 had running heads that appeared ambiguous only in the full-page UI downscale. Transient nearest-neighbour enlargements of their header pixels confirmed the complete, intact text 'DERIVED CATEGORIES OF SCHEMES'. Authoritative render files were not modified.",
+    "source_mutation": "None. No source, candidate PDF, manifest, or authoritative render PNG was changed."
+  },
+  "inspection_criteria": [
+    "overall layout and legibility",
+    "clipping or overlap",
+    "missing or broken glyphs",
+    "margins",
+    "headers, footers, and page numbers",
+    "diagrams and formulas",
+    "unexpected blank pages"
+  ],
+  "per_page": [
+    {
+      "page": 57,
+      "file": "page-057.png",
+      "dimensions_pixels": {
+        "width": 816,
+        "height": 1056
+      },
+      "manifest_bytes": 197600,
+      "actual_bytes": 197600,
+      "bytes_match": true,
+      "manifest_sha256": "67611EBFDA5CA7C1103F02325790792D2A421835A4C19C1501AF157BEFE5CFF0",
+      "actual_sha256": "67611EBFDA5CA7C1103F02325790792D2A421835A4C19C1501AF157BEFE5CFF0",
+      "sha256_match": true,
+      "result": "PASS",
+      "findings": []
+    },
+    {
+      "page": 58,
+      "file": "page-058.png",
+      "dimensions_pixels": {
+        "width": 816,
+        "height": 1056
+      },
+      "manifest_bytes": 214239,
+      "actual_bytes": 214239,
+      "bytes_match": true,
+      "manifest_sha256": "6BE021ABFB8A1694B389ABC49B331C7F17491261541790388A67170BBF04A8F8",
+      "actual_sha256": "6BE021ABFB8A1694B389ABC49B331C7F17491261541790388A67170BBF04A8F8",
+      "sha256_match": true,
+      "result": "PASS",
+      "findings": []
+    },
+    {
+      "page": 59,
+      "file": "page-059.png",
+      "dimensions_pixels": {
+        "width": 816,
+        "height": 1056
+      },
+      "manifest_bytes": 194719,
+      "actual_bytes": 194719,
+      "bytes_match": true,
+      "manifest_sha256": "0BC53FC0FA43C7FF2CD23F34D7CDF241401696C84CE25903FBC997292FE4EDE8",
+      "actual_sha256": "0BC53FC0FA43C7FF2CD23F34D7CDF241401696C84CE25903FBC997292FE4EDE8",
+      "sha256_match": true,
+      "result": "PASS",
+      "findings": []
+    },
+    {
+      "page": 60,
+      "file": "page-060.png",
+      "dimensions_pixels": {
+        "width": 816,
+        "height": 1056
+      },
+      "manifest_bytes": 143178,
+      "actual_bytes": 143178,
+      "bytes_match": true,
+      "manifest_sha256": "E7E816478A3D9BA1B2D32C6328CF9B70BBC04C48CC3384A86D307B27829EA7C5",
+      "actual_sha256": "E7E816478A3D9BA1B2D32C6328CF9B70BBC04C48CC3384A86D307B27829EA7C5",
+      "sha256_match": true,
+      "result": "PASS",
+      "findings": []
+    },
+    {
+      "page": 61,
+      "file": "page-061.png",
+      "dimensions_pixels": {
+        "width": 816,
+        "height": 1056
+      },
+      "manifest_bytes": 146953,
+      "actual_bytes": 146953,
+      "bytes_match": true,
+      "manifest_sha256": "7AEE4752B2EA6E8D564F6295B03D29B0D8B16A7051F08EE85472C0F5B2D7FB59",
+      "actual_sha256": "7AEE4752B2EA6E8D564F6295B03D29B0D8B16A7051F08EE85472C0F5B2D7FB59",
+      "sha256_match": true,
+      "result": "PASS",
+      "findings": []
+    },
+    {
+      "page": 62,
+      "file": "page-062.png",
+      "dimensions_pixels": {
+        "width": 816,
+        "height": 1056
+      },
+      "manifest_bytes": 152589,
+      "actual_bytes": 152589,
+      "bytes_match": true,
+      "manifest_sha256": "05684FBFBD2F40202CB1B32681C3B4DB576B91E15D44E92BF62FB6084E2F83C5",
+      "actual_sha256": "05684FBFBD2F40202CB1B32681C3B4DB576B91E15D44E92BF62FB6084E2F83C5",
+      "sha256_match": true,
+      "result": "PASS",
+      "findings": []
+    },
+    {
+      "page": 63,
+      "file": "page-063.png",
+      "dimensions_pixels": {
+        "width": 816,
+        "height": 1056
+      },
+      "manifest_bytes": 166559,
+      "actual_bytes": 166559,
+      "bytes_match": true,
+      "manifest_sha256": "38478DBE1CBEB842917CA8821466559658FAFFC45C6730076F346B2A74132057",
+      "actual_sha256": "38478DBE1CBEB842917CA8821466559658FAFFC45C6730076F346B2A74132057",
+      "sha256_match": true,
+      "result": "PASS",
+      "findings": []
+    },
+    {
+      "page": 64,
+      "file": "page-064.png",
+      "dimensions_pixels": {
+        "width": 816,
+        "height": 1056
+      },
+      "manifest_bytes": 165615,
+      "actual_bytes": 165615,
+      "bytes_match": true,
+      "manifest_sha256": "4C7D6697DFD2B117CA5929424B400AD8BFD666B50F07DF3D856A8A72CE30C904",
+      "actual_sha256": "4C7D6697DFD2B117CA5929424B400AD8BFD666B50F07DF3D856A8A72CE30C904",
+      "sha256_match": true,
+      "result": "PASS",
+      "findings": []
+    },
+    {
+      "page": 65,
+      "file": "page-065.png",
+      "dimensions_pixels": {
+        "width": 816,
+        "height": 1056
+      },
+      "manifest_bytes": 162202,
+      "actual_bytes": 162202,
+      "bytes_match": true,
+      "manifest_sha256": "021E353AB8E9AFD50625BD9CACF58614E6BF6FC5615560609588C9814F06D88C",
+      "actual_sha256": "021E353AB8E9AFD50625BD9CACF58614E6BF6FC5615560609588C9814F06D88C",
+      "sha256_match": true,
+      "result": "PASS",
+      "findings": []
+    },
+    {
+      "page": 66,
+      "file": "page-066.png",
+      "dimensions_pixels": {
+        "width": 816,
+        "height": 1056
+      },
+      "manifest_bytes": 160235,
+      "actual_bytes": 160235,
+      "bytes_match": true,
+      "manifest_sha256": "070D1ACB9B5EB56C284B5FD99D054DFBC456971D4D4F8213A36E047DE15A72F5",
+      "actual_sha256": "070D1ACB9B5EB56C284B5FD99D054DFBC456971D4D4F8213A36E047DE15A72F5",
+      "sha256_match": true,
+      "result": "PASS",
+      "findings": []
+    },
+    {
+      "page": 67,
+      "file": "page-067.png",
+      "dimensions_pixels": {
+        "width": 816,
+        "height": 1056
+      },
+      "manifest_bytes": 176988,
+      "actual_bytes": 176988,
+      "bytes_match": true,
+      "manifest_sha256": "6AFAB82723A735CFFF9961C0AEB463B36C804D27C9D7A39FE020EFDFC4891EB8",
+      "actual_sha256": "6AFAB82723A735CFFF9961C0AEB463B36C804D27C9D7A39FE020EFDFC4891EB8",
+      "sha256_match": true,
+      "result": "PASS",
+      "findings": []
+    },
+    {
+      "page": 68,
+      "file": "page-068.png",
+      "dimensions_pixels": {
+        "width": 816,
+        "height": 1056
+      },
+      "manifest_bytes": 182669,
+      "actual_bytes": 182669,
+      "bytes_match": true,
+      "manifest_sha256": "E2C45D430A95D229E0C419563829C70C8775A60D5596CE8CFB33D798B95374D7",
+      "actual_sha256": "E2C45D430A95D229E0C419563829C70C8775A60D5596CE8CFB33D798B95374D7",
+      "sha256_match": true,
+      "result": "PASS",
+      "findings": []
+    },
+    {
+      "page": 69,
+      "file": "page-069.png",
+      "dimensions_pixels": {
+        "width": 816,
+        "height": 1056
+      },
+      "manifest_bytes": 150736,
+      "actual_bytes": 150736,
+      "bytes_match": true,
+      "manifest_sha256": "178B1EF8F87A411A883D728FD06D8329C1AC2D230B13D7347A2DDDB03AC8C39F",
+      "actual_sha256": "178B1EF8F87A411A883D728FD06D8329C1AC2D230B13D7347A2DDDB03AC8C39F",
+      "sha256_match": true,
+      "result": "PASS",
+      "findings": []
+    },
+    {
+      "page": 70,
+      "file": "page-070.png",
+      "dimensions_pixels": {
+        "width": 816,
+        "height": 1056
+      },
+      "manifest_bytes": 188720,
+      "actual_bytes": 188720,
+      "bytes_match": true,
+      "manifest_sha256": "4D9C6B71C0F7622C807DB469830C75105224DFA2F31C4C6F03EE165823DD4295",
+      "actual_sha256": "4D9C6B71C0F7622C807DB469830C75105224DFA2F31C4C6F03EE165823DD4295",
+      "sha256_match": true,
+      "result": "PASS",
+      "findings": []
+    },
+    {
+      "page": 71,
+      "file": "page-071.png",
+      "dimensions_pixels": {
+        "width": 816,
+        "height": 1056
+      },
+      "manifest_bytes": 161047,
+      "actual_bytes": 161047,
+      "bytes_match": true,
+      "manifest_sha256": "048CAD7D90597A42EFF420061765ADB62F5466441587A18A6C15AFE36CD0859D",
+      "actual_sha256": "048CAD7D90597A42EFF420061765ADB62F5466441587A18A6C15AFE36CD0859D",
+      "sha256_match": true,
+      "result": "PASS",
+      "findings": []
+    },
+    {
+      "page": 72,
+      "file": "page-072.png",
+      "dimensions_pixels": {
+        "width": 816,
+        "height": 1056
+      },
+      "manifest_bytes": 198834,
+      "actual_bytes": 198834,
+      "bytes_match": true,
+      "manifest_sha256": "F5F42D82ABF5993F310F5C2A62DC30330E254FB5EA79548D7ED500488356ED14",
+      "actual_sha256": "F5F42D82ABF5993F310F5C2A62DC30330E254FB5EA79548D7ED500488356ED14",
+      "sha256_match": true,
+      "result": "PASS",
+      "findings": []
+    },
+    {
+      "page": 73,
+      "file": "page-073.png",
+      "dimensions_pixels": {
+        "width": 816,
+        "height": 1056
+      },
+      "manifest_bytes": 205774,
+      "actual_bytes": 205774,
+      "bytes_match": true,
+      "manifest_sha256": "288A22AEC7214ED5C64F61FDC2E59C63EB850D4FA4D52EC9056366AB63A91F99",
+      "actual_sha256": "288A22AEC7214ED5C64F61FDC2E59C63EB850D4FA4D52EC9056366AB63A91F99",
+      "sha256_match": true,
+      "result": "PASS",
+      "findings": []
+    },
+    {
+      "page": 74,
+      "file": "page-074.png",
+      "dimensions_pixels": {
+        "width": 816,
+        "height": 1056
+      },
+      "manifest_bytes": 205851,
+      "actual_bytes": 205851,
+      "bytes_match": true,
+      "manifest_sha256": "EA44EABD2FD130370B3CCF35522985B16BC2E6839303A9994A071E4B9E14CD63",
+      "actual_sha256": "EA44EABD2FD130370B3CCF35522985B16BC2E6839303A9994A071E4B9E14CD63",
+      "sha256_match": true,
+      "result": "PASS",
+      "findings": []
+    },
+    {
+      "page": 75,
+      "file": "page-075.png",
+      "dimensions_pixels": {
+        "width": 816,
+        "height": 1056
+      },
+      "manifest_bytes": 204455,
+      "actual_bytes": 204455,
+      "bytes_match": true,
+      "manifest_sha256": "671C22A61BBEDE6C0F5E04F6E12FFF5958F8EF82A2C6D6F30796E104E34E9371",
+      "actual_sha256": "671C22A61BBEDE6C0F5E04F6E12FFF5958F8EF82A2C6D6F30796E104E34E9371",
+      "sha256_match": true,
+      "result": "PASS",
+      "findings": []
+    },
+    {
+      "page": 76,
+      "file": "page-076.png",
+      "dimensions_pixels": {
+        "width": 816,
+        "height": 1056
+      },
+      "manifest_bytes": 177688,
+      "actual_bytes": 177688,
+      "bytes_match": true,
+      "manifest_sha256": "522351A6190EFD766A414944E66EE4E6139D139E33061AFBD6BEB128BD8AA767",
+      "actual_sha256": "522351A6190EFD766A414944E66EE4E6139D139E33061AFBD6BEB128BD8AA767",
+      "sha256_match": true,
+      "result": "PASS",
+      "findings": []
+    },
+    {
+      "page": 77,
+      "file": "page-077.png",
+      "dimensions_pixels": {
+        "width": 816,
+        "height": 1056
+      },
+      "manifest_bytes": 207309,
+      "actual_bytes": 207309,
+      "bytes_match": true,
+      "manifest_sha256": "8BB02A34C18AD12B387AC6E69D00D9893B0C774C4B6CB6A5621B94CEB05D5F10",
+      "actual_sha256": "8BB02A34C18AD12B387AC6E69D00D9893B0C774C4B6CB6A5621B94CEB05D5F10",
+      "sha256_match": true,
+      "result": "PASS",
+      "findings": []
+    },
+    {
+      "page": 78,
+      "file": "page-078.png",
+      "dimensions_pixels": {
+        "width": 816,
+        "height": 1056
+      },
+      "manifest_bytes": 194913,
+      "actual_bytes": 194913,
+      "bytes_match": true,
+      "manifest_sha256": "06978D6B47393C868C57B4C045E94878609E98C90785D98D6DD0AABDE5886FFA",
+      "actual_sha256": "06978D6B47393C868C57B4C045E94878609E98C90785D98D6DD0AABDE5886FFA",
+      "sha256_match": true,
+      "result": "PASS",
+      "findings": []
+    },
+    {
+      "page": 79,
+      "file": "page-079.png",
+      "dimensions_pixels": {
+        "width": 816,
+        "height": 1056
+      },
+      "manifest_bytes": 198668,
+      "actual_bytes": 198668,
+      "bytes_match": true,
+      "manifest_sha256": "59DCEAE54E3097447D363949FD44BFC96222AED20F48F29C3A54364E22B05743",
+      "actual_sha256": "59DCEAE54E3097447D363949FD44BFC96222AED20F48F29C3A54364E22B05743",
+      "sha256_match": true,
+      "result": "PASS",
+      "findings": []
+    },
+    {
+      "page": 80,
+      "file": "page-080.png",
+      "dimensions_pixels": {
+        "width": 816,
+        "height": 1056
+      },
+      "manifest_bytes": 218930,
+      "actual_bytes": 218930,
+      "bytes_match": true,
+      "manifest_sha256": "341FD2B44D923C0AFC5889911D786DF657B9723405577E76C7000960790CF35E",
+      "actual_sha256": "341FD2B44D923C0AFC5889911D786DF657B9723405577E76C7000960790CF35E",
+      "sha256_match": true,
+      "result": "PASS",
+      "findings": []
+    },
+    {
+      "page": 81,
+      "file": "page-081.png",
+      "dimensions_pixels": {
+        "width": 816,
+        "height": 1056
+      },
+      "manifest_bytes": 219022,
+      "actual_bytes": 219022,
+      "bytes_match": true,
+      "manifest_sha256": "C9BB8F1EC59E796ACCEC988F89104ACA295F0AEB9AD57D415930FD6A48F1BE61",
+      "actual_sha256": "C9BB8F1EC59E796ACCEC988F89104ACA295F0AEB9AD57D415930FD6A48F1BE61",
+      "sha256_match": true,
+      "result": "PASS",
+      "findings": []
+    },
+    {
+      "page": 82,
+      "file": "page-082.png",
+      "dimensions_pixels": {
+        "width": 816,
+        "height": 1056
+      },
+      "manifest_bytes": 210934,
+      "actual_bytes": 210934,
+      "bytes_match": true,
+      "manifest_sha256": "9E1CF3FD34C847F6EBA78CCA717B8DE836BDC39577625B5B94A819F313330696",
+      "actual_sha256": "9E1CF3FD34C847F6EBA78CCA717B8DE836BDC39577625B5B94A819F313330696",
+      "sha256_match": true,
+      "result": "PASS",
+      "findings": []
+    },
+    {
+      "page": 83,
+      "file": "page-083.png",
+      "dimensions_pixels": {
+        "width": 816,
+        "height": 1056
+      },
+      "manifest_bytes": 186082,
+      "actual_bytes": 186082,
+      "bytes_match": true,
+      "manifest_sha256": "A08DF90C0A412BFD40748CB51140B4AFD74D73B4F55ADF0EBA78E600A944F187",
+      "actual_sha256": "A08DF90C0A412BFD40748CB51140B4AFD74D73B4F55ADF0EBA78E600A944F187",
+      "sha256_match": true,
+      "result": "PASS",
+      "findings": []
+    },
+    {
+      "page": 84,
+      "file": "page-084.png",
+      "dimensions_pixels": {
+        "width": 816,
+        "height": 1056
+      },
+      "manifest_bytes": 156869,
+      "actual_bytes": 156869,
+      "bytes_match": true,
+      "manifest_sha256": "0CFB1DAD32E2CAEB727C574C2F44C977103A9D2B60699D1DB3F3AF1B725AE549",
+      "actual_sha256": "0CFB1DAD32E2CAEB727C574C2F44C977103A9D2B60699D1DB3F3AF1B725AE549",
+      "sha256_match": true,
+      "result": "PASS",
+      "findings": []
+    }
+  ],
+  "findings": {
+    "blocking_visual_defects": [],
+    "known_nonblocking_adverse_evidence": [
+      {
+        "artifact": "literal ?? cross-chapter references",
+        "pages": [
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84
+        ],
+        "occurrences_in_assigned_range": 117,
+        "acceptance": "Preserved, legible, and nonblocking: deterministic candidate/authority reference multisets are exact, while this isolated chapter build lacks the cumulative AUX needed to resolve these cross-chapter references.",
+        "layout_result": "PASS"
+      }
+    ],
+    "nonblocking_observations": [
+      "All 28 assigned pages are populated; there are no unexpected blank pages.",
+      "Body text, headings, inline and displayed mathematics, proof-end squares, and commutative diagrams are legible and intact.",
+      "No clipping, overlap, missing or broken glyphs, truncated equations, or content outside the page bounds was observed.",
+      "Margins, running heads, alternating page-number placement, and bottom whitespace remain consistent and unobstructed throughout the range.",
+      "Red and occasional green rectangular hyperlink outlines around linked references or citations are visible but consistent, do not obscure content, and were not treated as layout defects."
+    ],
+    "resolved_visual_ambiguities": [
+      {
+        "pages": [
+          72,
+          82
+        ],
+        "item": "running head",
+        "resolution": "PASS after direct pixel enlargement; the apparent omissions were UI downscaling artifacts, not defects in the authoritative PNGs."
+      }
+    ]
+  },
+  "caveats": [
+    "This attestation is bounded to visual layout of the authoritative 96-dpi page PNGs for pages 57-84 and to byte/hash identity; it is not a semantic proof review.",
+    "The transient enlarged header crops were inspection aids only and are not evidence authorities; the manifest-listed per-page PNGs remain the byte authorities."
+  ],
+  "all_page_identities_match_manifest": true,
+  "all_pages_visually_pass": true,
+  "passed": true
+}

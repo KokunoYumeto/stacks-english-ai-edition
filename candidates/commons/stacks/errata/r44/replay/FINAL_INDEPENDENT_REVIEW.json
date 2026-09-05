@@ -1,0 +1,216 @@
+{
+  "schema": "stacks-r44-final-independent-review/v1",
+  "candidate_id": "stacks-errata-a04446e-r44",
+  "reviewer": "independent_adverse_evidence_adjudication",
+  "passed": true,
+  "status": "INDEPENDENT_REVIEW_PASS_READY_FOR_MANIFEST_SEALING_NOT_ADMITTED",
+  "candidate_manifest_absent_during_review": true,
+  "final_stage_sha256": "88A71673806421450ABF99D16EF4E1D6457696300C84DD2D138D68E47BA2CFEC",
+  "final_stage_successor_sha256": "948628DB780F8960425A06BE28E27C38D1F19FF53301AF0A282274C089E0D216",
+  "page_complete_visual_gate": "PASS_ALL_109_PAGES_INDIVIDUALLY_INSPECTED",
+  "scope": {
+    "source": "perfect.tex",
+    "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+    "stable_id_first": "MC-STK-ERR-1437",
+    "stable_id_last": "MC-STK-ERR-1460",
+    "stable_id_count": 24,
+    "operation_count": 32,
+    "excluded_deferred_producer_ids": [
+      "PERFECT-SRC-053",
+      "PERFECT-SRC-062",
+      "PERFECT-SRC-063"
+    ]
+  },
+  "candidate_contract": {
+    "lease_and_writer_boundary_match": true,
+    "all_reviewed_candidate_artifacts_are_inside_the_leased_path": true,
+    "authority_and_payload_are_separately_bound": true,
+    "candidate_construction_and_registry_admission_remain_separate": true,
+    "generated_stacks_source_was_not_composed": true,
+    "manifest_was_not_present_or_reviewed_as_a_precondition": true
+  },
+  "source_replay": {
+    "authority": {
+      "path": "authority/source/perfect.tex",
+      "bytes": 417503,
+      "sha256": "83BD632E693848D32B54ACC48EA7D89B0ED024C4B84499486687E31E92BFDCF0"
+    },
+    "payload": {
+      "path": "payload/perfect.tex",
+      "bytes": 417517,
+      "sha256": "31EF572D294E8C79AB31A1AD3A9C8662CE2ACA6E26CF41BD28B541CB2AFA19B7"
+    },
+    "operation_spec": {
+      "path": "operation-spec.json",
+      "bytes": 31325,
+      "sha256": "BBF1CA4B4B2F56969EA386B4DFEA909055FC9AB01DE72F731BF337FF5F67F0CC"
+    },
+    "stable_units": {
+      "path": "stable-units.json",
+      "bytes": 12271,
+      "sha256": "B4F1ECF990AD3C7AEDD822FE5ADAE3ABBD51A21F2E71A391368E5EDC2721A88D"
+    },
+    "checks": {
+      "stable_ids_unique_and_exactly_1437_through_1460": true,
+      "operation_ids_unique": true,
+      "old_text_hashes_and_declared_authority_preimages_exact": true,
+      "operations_nonoverlapping_after_start_byte_sort": true,
+      "descending_start_byte_application_reproduces_payload_byte_for_byte": true,
+      "source_map_and_decision_ledger_cover_all_24_units": true,
+      "deferred_053_062_063_absent_from_payload_operations": true,
+      "unlisted_byte_changes": 0
+    }
+  },
+  "snapshot_replay": {
+    "final_stage": {
+      "path": "replay/FINAL_STAGE.json",
+      "bytes": 11354,
+      "sha256": "88A71673806421450ABF99D16EF4E1D6457696300C84DD2D138D68E47BA2CFEC",
+      "inventory_rows": 63,
+      "exact_rows": 63,
+      "mismatches": 0
+    },
+    "successor": {
+      "path": "replay/FINAL_STAGE_SUCCESSOR_001.json",
+      "bytes": 12411,
+      "sha256": "948628DB780F8960425A06BE28E27C38D1F19FF53301AF0A282274C089E0D216",
+      "inventory_rows": 70,
+      "exact_rows": 70,
+      "mismatches": 0,
+      "predecessor_inventory_rows_reverified": 63
+    }
+  },
+  "page_complete_visual_replay": {
+    "aggregate": {
+      "path": "replay/PAGE_COMPLETE_VISUAL_ADJUDICATION.json",
+      "bytes": 3551,
+      "sha256": "0A6DB5440678F3707358473D882C2CC65582A52D916909B719C50D699FC0DC50",
+      "passed": true
+    },
+    "receipts": [
+      {
+        "path": "replay/PAGE_COMPLETE_VISUAL_001_028.json",
+        "bytes": 8149,
+        "sha256": "2EE1DECD4AD474D0AF395A7CCD6C908094DBE3BE2ED8C1D642CF3B400B454477",
+        "pages": "1-28",
+        "page_count": 28
+      },
+      {
+        "path": "replay/PAGE_COMPLETE_VISUAL_029_056.json",
+        "bytes": 20166,
+        "sha256": "5E5FDE3A86E8886F644745A0B2DD710BC5770B24BBE45BDFCFC94655412C2093",
+        "pages": "29-56",
+        "page_count": 28
+      },
+      {
+        "path": "replay/PAGE_COMPLETE_VISUAL_057_084.json",
+        "bytes": 18638,
+        "sha256": "02EABF90C06837B881035DB6ADDFEF3AD42438441495F950A24B28DF8626A887",
+        "pages": "57-84",
+        "page_count": 28
+      },
+      {
+        "path": "replay/PAGE_COMPLETE_VISUAL_085_109.json",
+        "bytes": 15252,
+        "sha256": "DBB8B268AC3F0B8182982DBCE7867641DF02E7905404A89B6199534E7645F488",
+        "pages": "85-109",
+        "page_count": 25
+      }
+    ],
+    "checks": {
+      "page_numbers_cover_1_through_109_exactly_once": true,
+      "duplicate_pages": 0,
+      "unreviewed_pages": 0,
+      "all_page_hashes_match_the_bound_render_manifest": true,
+      "all_page_results_pass": true,
+      "blocking_visual_findings": 0
+    },
+    "pdf": {
+      "path": "builds/perfect.pdf",
+      "bytes": 1139029,
+      "pages": 109,
+      "sha256": "479AE64026CE882CB96F504F4CC6EF19D686C988AA78EB2160546F1E04D95BB3"
+    }
+  },
+  "build_and_recorder_replay": {
+    "final_mechanical_validation": {
+      "path": "builds/FINAL_MECHANICAL_VALIDATION.json",
+      "bytes": 8196,
+      "sha256": "931F87AE1441E05D3244FC7284D7BAADB1740C80C810E7E2640421701E33757F",
+      "passed": true
+    },
+    "build_execution": {
+      "path": "builds/build-execution.json",
+      "bytes": 7938,
+      "sha256": "0A333AA41C03D553931EBBFBC1F8653285706801C5C91C2BC6179CEB64D85139",
+      "passed": true
+    },
+    "build_receipt": {
+      "path": "builds/build-receipt.json",
+      "bytes": 52200,
+      "sha256": "F65DDE5A8C77F22A934BAB120538BBEBF42D9C999129C1A1523F8551013E6A19",
+      "passed": true
+    },
+    "deterministic_replay": {
+      "path": "builds/deterministic-replay.json",
+      "bytes": 2114,
+      "sha256": "11AED9DCBE3E30031A98D43229877118EB3E661525CD1A2212FDB2E65A3FB1EE",
+      "passed": true,
+      "fresh_candidate_pdfs_byte_identical": true,
+      "fresh_authority_pdfs_byte_identical": true
+    },
+    "recorder": {
+      "pdflatex_invocations_with_recorder": 6,
+      "fresh_phase_closures_compared": 2,
+      "candidate_input_closure_sha256": "D9D9D79531D45B33FCB3637F3ADA2EBF3E4F931856C188713BF0983E4DD82558",
+      "authority_input_closure_sha256": "139D15A1EEF21E5F266CE963DA9670720663528E61B6A7A1C815B856F52315C4",
+      "retained_candidate_fls_inventory_sha256": "6AFD634A292388196EEC030094BD978CD819CE4882902EFC19F4DBE5E8BE4F12",
+      "retained_authority_fls_inventory_sha256": "39B90B0013E4516DE7F2E7F636C677DF41A8ABAA7CDDC9E17019A154B613DEBB",
+      "retained_sanitized_fls_sha256": "1C812824FF1EAA3FBA2623384ED8150ABC3B13818F1B070A706907D731DDE51B"
+    },
+    "mutex_receipt": {
+      "path": "builds/TEX_MUTEX_RECEIPT.json",
+      "bytes": 882,
+      "sha256": "9A8915CB88979B81B2C96ECAE29F23DD29C0200A4DDA1A8A4F36980FD2EA94E8",
+      "passed": true,
+      "released": true
+    }
+  },
+  "adverse_history_disposition": {
+    "private_build_1_stale_public_execution_binding": {
+      "observed_stale_sha256": "D13AFDAA750D7E8F92E51D5294B6559D0A96E0F7D875E83B86ABF9143013A584",
+      "current_public_execution_sha256": "0A333AA41C03D553931EBBFBC1F8653285706801C5C91C2BC6179CEB64D85139",
+      "classification": "NONRELIED_UPON_PRIVATE_PRELIMINARY_HISTORY_NONBLOCKING",
+      "reason": "The stale locator occurs only in an out-of-candidate private build-1 provenance receipt. The retained public candidate does not reference that receipt. The separate private build-2 receipt binds the current retained public execution, whose outputs, deterministic replay, recorder closure, and final mechanical receipt were independently rechecked. Candidate admission relies only on in-lease manifest-bound artifacts."
+    },
+    "ephemeral_fls_outputs": {
+      "classification": "BUILD_TIME_CLOSURE_EVIDENCE_NOT_A_RETAINED_ARTIFACT_PROMISE_NONBLOCKING",
+      "reason": "The FLS inventories honestly record build-time auxiliary outputs such as .aux, .out, .toc, and .bbl. Those rows use logical build-worktree paths and are not candidate artifact path references. The contract requires retained source and build evidence, which is supplied by the PDFs, sanitized logs, pass-3 and BibTeX transcripts, raw sanitized FLS files, dependency inventories, execution receipt, deterministic replay, and final mechanical validation."
+    },
+    "unretained_pass_1_and_pass_2_stdout": {
+      "classification": "HASH_RECORDED_TRANSIENT_STREAMS_NONBLOCKING",
+      "reason": "The execution receipt records byte counts and raw hashes for pass-1 and pass-2 stdout but asserts no retained path for those transient streams. The final pass transcript and final logs are retained. Neither the candidate contract nor any in-candidate receipt claims that all intermediate stdout must be retained."
+    },
+    "standalone_reader_findings": {
+      "classification": "PRESERVED_NONBLOCKING_ADVERSE_EVIDENCE",
+      "findings": [
+        "Standalone cross-chapter question-mark references match the frozen authority build.",
+        "Candidate and authority each report 25 overfull hboxes and one underfull vbox; page-complete visual review found no clipping or overlap blocker.",
+        "The PDF is untagged; this is disclosed and is not represented as human or expert certification."
+      ]
+    }
+  },
+  "rights_and_privacy": {
+    "upstream_copying_retained": true,
+    "upstream_source_not_relicensed": true,
+    "commons_metadata_boundary_preserved": true,
+    "upstream_endorsement_not_claimed": true,
+    "absolute_private_paths_in_public_candidate_evidence": 0,
+    "credential_or_token_patterns_found": 0,
+    "sanitized_fls_uses_logical_user_root_placeholder": true,
+    "passed": true
+  },
+  "blocking_findings": [],
+  "admission_boundary": "This receipt permits sealing candidate.manifest.json last. It does not itself admit R44, release the lease, compose generated Stacks source, or publish anything."
+}

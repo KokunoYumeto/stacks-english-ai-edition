@@ -1,0 +1,37 @@
+{
+  "next_command": "powershell -File run-builds-with-mutex.ps1 -UpstreamRoot <PINNED_SOURCE_DIRECTORY> -WorkRoot1 <NEW_DIRECTORY> -WorkRoot2 <NEW_DIRECTORY> -PrivateRoot1 <PRIVATE_DIRECTORY> -PrivateRoot2 <PRIVATE_DIRECTORY>",
+  "no_final_manifest": true,
+  "operation_spec": {
+    "bytes": 31325,
+    "path": "operation-spec.json",
+    "sha256": "BBF1CA4B4B2F56969EA386B4DFEA909055FC9AB01DE72F731BF337FF5F67F0CC"
+  },
+  "payload": {
+    "bytes": 417517,
+    "path": "payload/perfect.tex",
+    "sha256": "31EF572D294E8C79AB31A1AD3A9C8662CE2ACA6E26CF41BD28B541CB2AFA19B7"
+  },
+  "pipeline": {
+    "bytes": 27568,
+    "path": "pipeline_r44.py",
+    "sha256": "CFB154CF71724D7308A6986661490B6180D0F746398EA0C7E00D865100DBBA73"
+  },
+  "schema": "stacks-r44-source-regeneration/v1",
+  "source_map": {
+    "bytes": 45134,
+    "path": "source-map.jsonl",
+    "sha256": "251F2EC01B2379FE1679C33EF462E787408D2B11701B3593C49457A2F3581AC1"
+  },
+  "source_validation": {
+    "bytes": 2320,
+    "path": "source-validation.json",
+    "sha256": "2A5C1FFA53EDCB397F1A12CCDEE3AA6E3B07D028618E81A2B454488818F67BB0"
+  },
+  "stable_units": {
+    "bytes": 12271,
+    "path": "stable-units.json",
+    "sha256": "B4F1ECF990AD3C7AEDD822FE5ADAE3ABBD51A21F2E71A391368E5EDC2721A88D"
+  },
+  "status": "SOURCE_REPLAY_PASS_BUILD_PENDING",
+  "write_scope": "Only the leased R44 candidate; no TeX, admission, composition, or publication was performed."
+}
