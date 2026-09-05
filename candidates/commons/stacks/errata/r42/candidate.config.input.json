@@ -1,0 +1,79 @@
+{
+  "accepted": 11,
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_evidence": [
+    {
+      "bytes": 12614,
+      "path": "authority/registrar/DESCENT_R42_INDEPENDENT_ADJUDICATION_20260905.json",
+      "sha256": "3A04AB89975DE3B8EF41A1AC4B7C6F196F757CD1F294EE6750AC66FD776E41C2"
+    },
+    {
+      "bytes": 15222,
+      "path": "authority/producer/DESCENT_SOURCE_DEFECTS.md",
+      "sha256": "282E9EFFEEA7BD2A102E935052D325BF0E3ACD732D88AAE4CCB5F7479988AB1F"
+    },
+    {
+      "bytes": 528248,
+      "path": "authority/producer/SOURCE_DEFECT_LEDGER.csv",
+      "sha256": "304D51200903ED870D2F72AF8F65C0AB28B314F6075B206C3B34F506B678F8CE"
+    }
+  ],
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "build_render_admission_status": "NOT_PERFORMED",
+  "candidate_id": "stacks-errata-a04446e-r42",
+  "expected_producer_ids": [
+    "DESCENT-030",
+    "DESCENT-031",
+    "DESCENT-032",
+    "DESCENT-033",
+    "DESCENT-034",
+    "DESCENT-035",
+    "DESCENT-036",
+    "DESCENT-037",
+    "DESCENT-038",
+    "DESCENT-039",
+    "DESCENT-040"
+  ],
+  "expected_unit_ids": [
+    "MC-STK-ERR-1419",
+    "MC-STK-ERR-1420",
+    "MC-STK-ERR-1421",
+    "MC-STK-ERR-1422",
+    "MC-STK-ERR-1423",
+    "MC-STK-ERR-1424",
+    "MC-STK-ERR-1425",
+    "MC-STK-ERR-1426",
+    "MC-STK-ERR-1427",
+    "MC-STK-ERR-1428",
+    "MC-STK-ERR-1429"
+  ],
+  "independent_replay": "not_performed",
+  "lease_id": "stacks-lease-000046-errata-r42",
+  "namespace": "commons/stacks/errata/r42",
+  "operation_count": 12,
+  "payload_expected_bytes": 353780,
+  "payload_expected_sha256": "D5D48A9B8B22B18985B84529BD8B14483C6682B932912FAFEABEB9FCA07700A7",
+  "proof_closure": {
+    "accepted": 11,
+    "editorial_or_notational_clarification": 5,
+    "operations": 12,
+    "producer_rows": 11,
+    "rejected": 0,
+    "source_defect": 6,
+    "unresolved": 0
+  },
+  "rejected": 0,
+  "schema": "mathematics-commons-stacks-errata-candidate-config/v1",
+  "source_date_epoch": "1788613521",
+  "stems": {
+    "descent": {
+      "authority_bytes": 353760,
+      "authority_sha256": "49483B3BCB36427A607A8227F4EA67730FCDDF1EECCB8E992CA61915ACE3B31D",
+      "build_exceptions": {},
+      "payload_bytes": 353780,
+      "payload_sha256": "D5D48A9B8B22B18985B84529BD8B14483C6682B932912FAFEABEB9FCA07700A7"
+    }
+  },
+  "unresolved": 0,
+  "writer_task": "01a0256d-5693-77c1-96b2-cf37101e0c6c"
+}

@@ -1,0 +1,21 @@
+{
+    "schema":  "stacks-r42-tex-mutex-execution/v1",
+    "candidate_id":  "stacks-errata-a04446e-r42",
+    "mutex_name":  "Global\\InterlanguageTeXSlotV1",
+    "wait_timeout_seconds":  600,
+    "acquisition_started_at_utc":  "2026-09-05T13:26:18.1863832Z",
+    "acquired":  true,
+    "acquired_at_utc":  "2026-09-05T13:26:31.8842580Z",
+    "abandoned_mutex_recovered":  false,
+    "holder_pid":  55772,
+    "guarded_commands":  [
+                             {
+                                 "role":  "fresh_candidate_authority_build_1",
+                                 "exit_code":  1
+                             }
+                         ],
+    "released":  true,
+    "released_at_utc":  "2026-09-05T13:26:32.3896711Z",
+    "passed":  false,
+    "failure":  "fresh_candidate_authority_build_1 failed with exit code 1"
+}

@@ -1,0 +1,211 @@
+{
+  "authority_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+  "authority_inputs": {
+    "descent.tex": {
+      "bytes": 353760,
+      "path": "descent.tex",
+      "sha256": "49483B3BCB36427A607A8227F4EA67730FCDDF1EECCB8E992CA61915ACE3B31D"
+    }
+  },
+  "authority_phase": {
+    "stems": {
+      "descent": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "descent.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 137204,
+            "stdout_sha256_raw": "C8B8AE60E8C7B7E532987359BBD1E0551532B8CCA0BCC05BD6B48871E9390911"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "descent"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 144,
+            "stdout_sha256_raw": "FFA5F40A1602DB9FE63D0193106AEF19440C3FDFA11C6BDEC062789D9D998344"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "descent.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 92264,
+            "stdout_sha256_raw": "43397BFC96D719DF78F735DEE006F23C7EBFF28A90FA0A292B9F0D4D37F51A9F"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "descent.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 90467,
+            "stdout_sha256_raw": "43D8FC46850CBAEE01C4B5EB3171BF8CBF076805707A12621E6F97B81D23EDB7"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 144,
+            "path": "builds/descent.authority.bibtex.txt",
+            "sha256": "FFA5F40A1602DB9FE63D0193106AEF19440C3FDFA11C6BDEC062789D9D998344"
+          },
+          "log": {
+            "bytes": 102519,
+            "path": "builds/descent.authority.log",
+            "sha256": "AFBDE0A4286A9388EF48C0A10972A3DC3205C335AF441D28CF7D007D99D429A2"
+          },
+          "pass3_stdout": {
+            "bytes": 90045,
+            "path": "builds/descent.authority.pass3.txt",
+            "sha256": "913F4355164D4C81980954C27E86851F828C6BC109BC0BE9277A9FA51A6AD695"
+          },
+          "pdf": {
+            "bytes": 1037159,
+            "path": "builds/descent.authority.pdf",
+            "sha256": "8175EE10026FD73B0FC411B4EE669FD009FCBC85CF32797648125644268DF107"
+          }
+        },
+        "source": {
+          "bytes": 353760,
+          "path": "descent.tex",
+          "sha256": "49483B3BCB36427A607A8227F4EA67730FCDDF1EECCB8E992CA61915ACE3B31D"
+        }
+      }
+    }
+  },
+  "authority_tree": "3feeb703b931a6e7259782c10e7d1575adc83e5e",
+  "candidate_id": "stacks-errata-a04446e-r42",
+  "candidate_inputs": {
+    "descent.tex": {
+      "bytes": 353780,
+      "path": "descent.tex",
+      "sha256": "D5D48A9B8B22B18985B84529BD8B14483C6682B932912FAFEABEB9FCA07700A7"
+    }
+  },
+  "candidate_phase": {
+    "stems": {
+      "descent": {
+        "commands": [
+          {
+            "argv": [
+              "pdflatex",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "descent.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_1",
+            "stdout_bytes": 137204,
+            "stdout_sha256_raw": "8806798831E7A9E0A7AAEBA4A4606B149A9E07AC4D8AF2B1E8ADE0C059EE2AA6"
+          },
+          {
+            "argv": [
+              "bibtex",
+              "descent"
+            ],
+            "exit_code": 0,
+            "role": "bibtex",
+            "stdout_bytes": 144,
+            "stdout_sha256_raw": "FFA5F40A1602DB9FE63D0193106AEF19440C3FDFA11C6BDEC062789D9D998344"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "descent.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_2",
+            "stdout_bytes": 92264,
+            "stdout_sha256_raw": "E91E41A8F7A1EA361B6B83983C35ED43219909C80E325AB9E2BB1E036C55F357"
+          },
+          {
+            "argv": [
+              "pdflatex",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-halt-on-error",
+              "-file-line-error",
+              "descent.tex"
+            ],
+            "exit_code": 0,
+            "role": "pdflatex_pass_3",
+            "stdout_bytes": 90467,
+            "stdout_sha256_raw": "6CAF1CD7ECF7919FCC2E0776AEDEBC1B22C3F5A69589A39B91AC1A043442B2A7"
+          }
+        ],
+        "outputs": {
+          "bibtex_stdout": {
+            "bytes": 144,
+            "path": "builds/descent.bibtex.txt",
+            "sha256": "FFA5F40A1602DB9FE63D0193106AEF19440C3FDFA11C6BDEC062789D9D998344"
+          },
+          "log": {
+            "bytes": 102519,
+            "path": "builds/descent.log",
+            "sha256": "20DBE9D2F977A19E03FC187640D645F21C6C7E3CD2C18D0CED00197C5F9CF5E4"
+          },
+          "pass3_stdout": {
+            "bytes": 90045,
+            "path": "builds/descent.pass3.txt",
+            "sha256": "440A171782B98CADA4C4B84E8E2236D3CCDF95F48CD90CB8005000310C9F1477"
+          },
+          "pdf": {
+            "bytes": 1036918,
+            "path": "builds/descent.pdf",
+            "sha256": "5E3061831B27F755F91FFF814691DD752BC0A1A586C0D9549D80D20279A56516"
+          }
+        },
+        "source": {
+          "bytes": 353780,
+          "path": "descent.tex",
+          "sha256": "D5D48A9B8B22B18985B84529BD8B14483C6682B932912FAFEABEB9FCA07700A7"
+        }
+      }
+    }
+  },
+  "completed_at_utc": "2026-09-05T13:28:55Z",
+  "passed": true,
+  "restored_authority_inputs": {
+    "descent.tex": {
+      "bytes": 353760,
+      "path": "descent.tex",
+      "sha256": "49483B3BCB36427A607A8227F4EA67730FCDDF1EECCB8E992CA61915ACE3B31D"
+    }
+  },
+  "schema": "mathematics-commons-stacks-errata-build-execution/v1",
+  "source_date_epoch": "1788613521",
+  "started_at_utc": "2026-09-05T13:28:11Z",
+  "tools": {
+    "bibtex": "MiKTeX-BibTeX 4.2 (MiKTeX 26.5)",
+    "pdflatex": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5)",
+    "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]"
+  },
+  "work_root": "new empty task-local directory outside source and candidate; exact path retained only in private evidence"
+}

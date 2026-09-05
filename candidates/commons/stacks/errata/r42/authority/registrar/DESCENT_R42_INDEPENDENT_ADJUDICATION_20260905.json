@@ -1,0 +1,366 @@
+{
+  "authority": {
+    "bytes": 353760,
+    "path": "authority/source/descent.tex",
+    "sha256": "49483B3BCB36427A607A8227F4EA67730FCDDF1EECCB8E992CA61915ACE3B31D"
+  },
+  "date": "2026-09-05",
+  "grouping": {
+    "authority_order": [
+      "MC-STK-ERR-1419",
+      "MC-STK-ERR-1420",
+      "MC-STK-ERR-1421",
+      "MC-STK-ERR-1422",
+      "MC-STK-ERR-1423",
+      "MC-STK-ERR-1424",
+      "MC-STK-ERR-1425",
+      "MC-STK-ERR-1426",
+      "MC-STK-ERR-1427",
+      "MC-STK-ERR-1428",
+      "MC-STK-ERR-1429"
+    ],
+    "exact_operations": 12,
+    "independent_units": 11,
+    "similar_but_distinct": [
+      "DESCENT-038 is one mathematical defect unit with two required line-bound operations; both are retained under one stable ID.",
+      "DESCENT-039 uses a full two-line guard so the valid f-based parenthetical at lines 8565--8566 remains unchanged.",
+      "R41 ends at DESCENT-029 and preserves DESCENT-030..040 only as explicitly out-of-scope evidence, not as materialized or admitted operations."
+    ]
+  },
+  "mutations": "This receipt records adjudication and deduplication only; authority, producer files, generated source, and upstream were not mutated.",
+  "passed": true,
+  "prelease_registry": {
+    "canonical_operation_spec_files_checked": 36,
+    "canonical_source_map_files_checked": 41,
+    "commit": "3056e01f8a2dd26f52066434d80ff2c59901dea8",
+    "leases_sha256": "4BDEF2CC7327779CA1C6A996E836A59148359CAC835CE146458A7143A46C7F5E",
+    "matching_descent_or_exact_preimage_records": 0,
+    "operation_spec_variants_checked": 46,
+    "overlays_sha256": "2E6591520F9ADE96B69A0463DB5A5617E319046DD91218170B7DA48DDFFCA14B",
+    "prior_stable_id_max": "MC-STK-ERR-1418",
+    "registered_rounds_checked_through": 41,
+    "source_map_variants_checked": 51
+  },
+  "producer_evidence_original": {
+    "bytes": 15222,
+    "logical_path": "<WORKSPACE>/03_projects/language_management/romance/03_working_translations/stacks_fr_20260821/p05/evidence/DESCENT_SOURCE_DEFECTS.md",
+    "scope_note": "The append-only producer file also contains later DESCENT-041..047 allegations. They are preserved as adverse/out-of-scope evidence and are not R42 units; the committed R42 lease ends at DESCENT-040.",
+    "sha256": "282E9EFFEEA7BD2A102E935052D325BF0E3ACD732D88AAE4CCB5F7479988AB1F"
+  },
+  "producer_ledger_original": {
+    "bytes": 528248,
+    "logical_path": "<WORKSPACE>/03_projects/language_management/romance/03_working_translations/stacks_fr_20260821/00_control/SOURCE_DEFECT_LEDGER.csv",
+    "matching_descent_entries": 0,
+    "sha256": "304D51200903ED870D2F72AF8F65C0AB28B314F6075B206C3B34F506B678F8CE"
+  },
+  "public_checks": {
+    "official_commit": "a04446e57ec1fbc252a871afcec7752fb2807b14",
+    "official_issue_pr_exact_matches": 0,
+    "official_source_retains_all_preimages": true,
+    "tags": {
+      "023V": "Comments (0)",
+      "023Z": "Comments (0)",
+      "02VS": "Comments (0)",
+      "02VU": "Comments (0)",
+      "02VV": "Comments (0)",
+      "02VZ": "Comments (0)",
+      "040J": "Comments (0)",
+      "040K": "Comments (0)",
+      "04NK": "Comments (0)",
+      "04R7": "Comments (0)"
+    }
+  },
+  "replay": {
+    "line_count": 9456,
+    "payload_bytes": 353780,
+    "payload_sha256": "D5D48A9B8B22B18985B84529BD8B14483C6682B932912FAFEABEB9FCA07700A7"
+  },
+  "rows": [
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "line": 7896,
+      "lines": [
+        7896
+      ],
+      "operations": [
+        {
+          "end_line": 7896,
+          "line": 7896,
+          "old": "Let $Q$ be the associated property",
+          "replacement": "Let $\\mathcal{Q}$ be the associated property"
+        }
+      ],
+      "producer_id": "DESCENT-030",
+      "reason": "The associated property is defined as mathcal Q at lines 7856--7865 and item (2) of this lemma again names it mathcal Q at line 7904; bare Q is an inconsistent notation.",
+      "recommendation": "accept",
+      "stable_id": "MC-STK-ERR-1419",
+      "tags": [
+        "04R7"
+      ]
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "line": 8051,
+      "lines": [
+        8051
+      ],
+      "operations": [
+        {
+          "end_line": 8051,
+          "line": 8051,
+          "old": "$\\text{trdeg}_{\\kappa(v)} \\kappa(u) = \\text{trdeg}_{\\kappa(v')} \\kappa(u)$",
+          "replacement": "$\\text{trdeg}_{\\kappa(v)} \\kappa(u) = \\text{trdeg}_{\\kappa(v')} \\kappa(u')$"
+        }
+      ],
+      "producer_id": "DESCENT-031",
+      "reason": "The vertical etale maps give finite separable residue-field extensions kappa(u')/kappa(u) and kappa(v')/kappa(v), so invariance of transcendence degree compares kappa(u') over kappa(v') with kappa(u) over kappa(v); the unprimed final u is ill-typed for the right-hand base field.",
+      "recommendation": "accept",
+      "stable_id": "MC-STK-ERR-1420",
+      "tags": [
+        "04NK"
+      ]
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "line": 8141,
+      "lines": [
+        8141
+      ],
+      "operations": [
+        {
+          "end_line": 8141,
+          "line": 8141,
+          "old": "This because $X \\times_{\\Delta, X \\times_S X} (V \\times_S X) = V$",
+          "replacement": "This is because $X \\times_{\\Delta, X \\times_S X} (V \\times_S X) = V$"
+        }
+      ],
+      "producer_id": "DESCENT-032",
+      "reason": "The sentence lacks its finite copula; inserting 'is' yields the grammatical explanation 'This is because' and changes neither fibre-product identity.",
+      "recommendation": "accept",
+      "stable_id": "MC-STK-ERR-1421",
+      "tags": [
+        "023V"
+      ]
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "line": 8362,
+      "lines": [
+        8362
+      ],
+      "operations": [
+        {
+          "end_line": 8362,
+          "line": 8362,
+          "old": "family $\\{V_j \\to S'\\}$. The system",
+          "replacement": "family $\\{V_j \\to S\\}$. The system"
+        }
+      ],
+      "producer_id": "DESCENT-033",
+      "reason": "Line 8355 defines mathcal V as the family {V_j -> S}; S' is instead the target of the U_i family, so the stated V-family base must be S.",
+      "recommendation": "accept",
+      "stable_id": "MC-STK-ERR-1422",
+      "tags": [
+        "02VS"
+      ]
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "line": 8370,
+      "lines": [
+        8370
+      ],
+      "operations": [
+        {
+          "end_line": 8370,
+          "line": 8370,
+          "old": "is a descent datum relative to $\\mathcal{V}$.",
+          "replacement": "is a descent datum relative to $\\mathcal{U}$."
+        }
+      ],
+      "producer_id": "DESCENT-034",
+      "reason": "The displayed system is indexed by i and obtained by pulling the V-data to U_i via g_i, hence it is descent data relative to mathcal U; keeping mathcal V contradicts the construction and the change-of-base direction.",
+      "recommendation": "accept",
+      "stable_id": "MC-STK-ERR-1423",
+      "tags": [
+        "02VS"
+      ]
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "line": 8423,
+      "lines": [
+        8423
+      ],
+      "operations": [
+        {
+          "end_line": 8423,
+          "line": 8423,
+          "old": "denote $(X \\times_S U, can)$ this descent datum.",
+          "replacement": "denote by $(X \\times_S U, can)$ this descent datum."
+        }
+      ],
+      "producer_id": "DESCENT-035",
+      "reason": "English requires 'denote by O this datum'; inserting 'by' is the minimal grammatical repair and changes no mathematical object.",
+      "recommendation": "accept",
+      "stable_id": "MC-STK-ERR-1424",
+      "tags": [
+        "023Z"
+      ]
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "line": 8453,
+      "lines": [
+        8453
+      ],
+      "operations": [
+        {
+          "end_line": 8453,
+          "line": 8453,
+          "old": "We denote this descent datum $(X_i \\times_S U, can)$.",
+          "replacement": "We denote this descent datum by $(X_i \\times_S U, can)$."
+        }
+      ],
+      "producer_id": "DESCENT-036",
+      "reason": "English requires 'denote this datum by O'; inserting 'by' is the minimal grammatical repair and changes no indexed object.",
+      "recommendation": "accept",
+      "stable_id": "MC-STK-ERR-1425",
+      "tags": [
+        "02VU"
+      ]
+    },
+    {
+      "classification": "editorial_or_notational_clarification",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "line": 8472,
+      "lines": [
+        8472
+      ],
+      "operations": [
+        {
+          "end_line": 8472,
+          "line": 8472,
+          "old": "\\section{Fully faithfulness of the pullback functors}",
+          "replacement": "\\section{Full faithfulness of the pullback functors}"
+        }
+      ],
+      "producer_id": "DESCENT-037",
+      "reason": "The standard noun corresponding to 'fully faithful' is 'full faithfulness'; 'fully faithfulness' is ungrammatical and the section body immediately states that the functor is fully faithful.",
+      "recommendation": "accept",
+      "stable_id": "MC-STK-ERR-1426",
+      "tags": [
+        "02VV"
+      ]
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1,
+        1
+      ],
+      "line": 8708,
+      "lines": [
+        8708,
+        8727
+      ],
+      "operations": [
+        {
+          "end_line": 8708,
+          "line": 8708,
+          "old": "The first morphism has a section",
+          "replacement": "The first morphism has a retraction"
+        },
+        {
+          "end_line": 8727,
+          "line": 8727,
+          "old": "The first morphism has a section",
+          "replacement": "The first morphism has a retraction"
+        }
+      ],
+      "producer_id": "DESCENT-038",
+      "reason": "In each factorization X -> X times_S X' -> X', the first arrow is the graph of f and the first projection is its retraction; the graph is a section, but is not thereby a morphism having a section. Both repeated proofs require 'has a retraction' to invoke the equivalence lemma in the correct categorical direction.",
+      "recommendation": "accept",
+      "stable_id": "MC-STK-ERR-1427",
+      "tags": [
+        "040J",
+        "040K"
+      ]
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "line": 8718,
+      "lines": [
+        8718
+      ],
+      "operations": [
+        {
+          "end_line": 8719,
+          "line": 8718,
+          "old": "Assume $\\{X \\to S\\}$ is an fpqc covering (for example if $f$ is\nsurjective, flat and quasi-compact).",
+          "replacement": "Assume $\\{X \\to S\\}$ is an fpqc covering (for example if $X \\to S$ is\nsurjective, flat and quasi-compact)."
+        }
+      ],
+      "producer_id": "DESCENT-039",
+      "reason": "The hypothesis is that X -> S is an fpqc covering. Surjectivity, flatness, and quasi-compactness of the different morphism f:X->X' do not imply that hypothesis, so the parenthetical sufficient condition must refer to X -> S. The full two-line guard avoids changing the valid f-based parenthetical at lines 8565--8566.",
+      "recommendation": "accept",
+      "stable_id": "MC-STK-ERR-1428",
+      "tags": [
+        "040K"
+      ]
+    },
+    {
+      "classification": "source_defect",
+      "exact_line_preimage_occurrences": [
+        1
+      ],
+      "line": 8766,
+      "lines": [
+        8766
+      ],
+      "operations": [
+        {
+          "end_line": 8766,
+          "line": 8766,
+          "old": "via the morphism $g_{\\alpha(i)}$",
+          "replacement": "via the morphism $g_i$"
+        }
+      ],
+      "producer_id": "DESCENT-040",
+      "reason": "The family morphisms are g_i:U_i->V_{alpha(i)} indexed by i in I, while alpha(i) lies in J and does not index a g-map; the ith coproduct component is therefore mapped by g_i.",
+      "recommendation": "accept",
+      "stable_id": "MC-STK-ERR-1429",
+      "tags": [
+        "02VZ"
+      ]
+    }
+  ],
+  "schema": "stacks-r42-descent-independent-adjudication/v1",
+  "status": "PASS_ACCEPT_11_NON_DUPLICATIVE_UNITS_12_OPERATIONS"
+}
