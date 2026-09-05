@@ -1,0 +1,137 @@
+{
+  "schema": "mathematics-commons-stacks-registry-admission-receipt/v1",
+  "candidate_id": "stacks-errata-a04446e-r47",
+  "status": "PASS",
+  "admitted_at_utc": "2026-09-05T18:48:21.145Z",
+  "candidate_commit": "14ac670b72acfd91b4acd78c763616d602d1a76b",
+  "candidate_tree": "64e6df20b333a9845ba3bbeb3d749274b9f38372",
+  "manifest": {
+    "path": "candidate.manifest.json",
+    "bytes": 11782,
+    "sha256": "B39114EBACAD2A74050AC9A2DF77C2C5FE11B20DE22249870B203ACEDAAD05D4"
+  },
+  "operation_spec": {
+    "path": "operation-spec.json",
+    "bytes": 29064,
+    "sha256": "372272311DCBD2DD319C7E152E6F2AE145D63FFE86906C4405A76E4B7FB3462E"
+  },
+  "source_map": {
+    "path": "source-map.jsonl",
+    "bytes": 42086,
+    "sha256": "059DD9DD051E528E73FE26004D21A60BB25635427CE6B2601303082E7C189433"
+  },
+  "final_review": {
+    "path": "replay/FINAL_INDEPENDENT_REVIEW.json",
+    "bytes": 4361,
+    "sha256": "D0F85701E5CB3AF8DA764E4FC9FA7DCF2EB8D528579B44DEE99C09F26E44A919"
+  },
+  "stable_id_count": 22,
+  "stable_ids": [
+    "MC-STK-ERR-1523",
+    "MC-STK-ERR-1524",
+    "MC-STK-ERR-1525",
+    "MC-STK-ERR-1526",
+    "MC-STK-ERR-1527",
+    "MC-STK-ERR-1528",
+    "MC-STK-ERR-1529",
+    "MC-STK-ERR-1530",
+    "MC-STK-ERR-1531",
+    "MC-STK-ERR-1532",
+    "MC-STK-ERR-1533",
+    "MC-STK-ERR-1534",
+    "MC-STK-ERR-1535",
+    "MC-STK-ERR-1536",
+    "MC-STK-ERR-1537",
+    "MC-STK-ERR-1538",
+    "MC-STK-ERR-1539",
+    "MC-STK-ERR-1540",
+    "MC-STK-ERR-1541",
+    "MC-STK-ERR-1542",
+    "MC-STK-ERR-1543",
+    "MC-STK-ERR-1544"
+  ],
+  "producer_row_count": 23,
+  "producer_ids": [
+    "FR-MORE-GROUPOIDS-001",
+    "FR-MORE-GROUPOIDS-002",
+    "FR-MORE-GROUPOIDS-003",
+    "FR-MORE-GROUPOIDS-004",
+    "FR-MORE-GROUPOIDS-005",
+    "FR-MORE-GROUPOIDS-006",
+    "FR-MORE-GROUPOIDS-007",
+    "FR-MORE-GROUPOIDS-008",
+    "FR-MORE-GROUPOIDS-010",
+    "FR-MORE-GROUPOIDS-009",
+    "FR-MORE-GROUPOIDS-011",
+    "FR-MORE-GROUPOIDS-012",
+    "FR-MORE-GROUPOIDS-013",
+    "FR-MORE-GROUPOIDS-014",
+    "FR-MORE-GROUPOIDS-015",
+    "FR-MORE-GROUPOIDS-016",
+    "FR-MORE-GROUPOIDS-017",
+    "FR-MORE-GROUPOIDS-018",
+    "FR-MORE-GROUPOIDS-019",
+    "FR-MORE-GROUPOIDS-020",
+    "FR-MORE-GROUPOIDS-021",
+    "FR-MORE-GROUPOIDS-022",
+    "FR-MORE-GROUPOIDS-023"
+  ],
+  "classification": {
+    "editorial_or_notational_clarification": 6,
+    "source_defect": 16
+  },
+  "rejected_producer_ids": [],
+  "grouping_notes": [
+    "Twenty-two semantic units contain 23 producer rows and 27 exact, nonoverlapping operations; descending-byte replay reproduces payload/more-groupoids.tex byte-for-byte.",
+    "FR-MORE-GROUPOIDS-008 and FR-MORE-GROUPOIDS-010 form one recurrent semantic unit while preserving both producer identities.",
+    "R47 follows R46 in registry and stable-ID order and modifies only more-groupoids.tex; all earlier candidate, registry, and lease history is preserved."
+  ],
+  "registry": {
+    "before_sha256": "FB46BBEC97E7C2797F4BA9FE73525F4449AF4767D38B849F076EFC199CDE1487",
+    "after_sha256": "180D91A7C2FFD034B469EFF40339AB3C312E77CE6745968CB172289CA934223A",
+    "last_overlay": "stacks-errata-a04446e-r47",
+    "prior_entries_unchanged": 47,
+    "current_entries": 48,
+    "unique_stable_ids": 1292
+  },
+  "leases": {
+    "before_sha256": "F995102AC25E227EFFFF7B00D3B27C10674B5EA909EAE23586238A32AC816D11",
+    "after_sha256": "D29883FB7C8A64752FFE131A74AAAB4D577CB88248E50608F57997E2EB556F49",
+    "issued_event": "lease-event-000098",
+    "released_event": "lease-event-000099",
+    "prior_events_unchanged": 98
+  },
+  "fresh_replay": {
+    "passed": true,
+    "units": 22,
+    "producer_rows": 23,
+    "operations": 27,
+    "exact_preimages_descending_byte_replay": true,
+    "payload_sha256": {
+      "more-groupoids.tex": "039BA96AEA5ED3BA59A7CB0EECB5D8F7491CCF1C2FCEB49211BA7CECF1C0BDDF"
+    },
+    "authority_sha256": {
+      "more-groupoids.tex": "F2D59ED504EC35DDA72BF2906F579312EAC2593CE952B84688ACE59B3CF87199"
+    },
+    "manifest_references": 63,
+    "manifest_closure": "PASS: 63/63 manifest-bound files and 64/64 candidate files.",
+    "workflow_check": "48 admitted entries; 99 lease events; 1292 globally unique stable IDs."
+  },
+  "validation_reader": {
+    "pages": 36,
+    "bytes": 593445,
+    "sha256": "E21A25766BCE00DE2E850F0BA7E5692FC9949BC65686CDA5CA46AA729CCD7D8C",
+    "reproducible": true,
+    "recorder_fls": "Six pdflatex invocations used -recorder; two independent candidate and authority phases reproduced PDFs and input closures byte-for-byte.",
+    "visual_gate": "All 36 pages were reviewed via complete contact sheets; all 16 correction-sensitive pages were individually inspected at 180 dpi with zero blocking finding.",
+    "adverse_evidence": "Attempt 001 failed closed at the fresh-build boundary and is preserved; the complete corrected attempt passed. One inherited overfull hbox, one inherited underfull vbox, and isolated cross-chapter unresolved references remain; the PDF is untagged."
+  },
+  "constraints": {
+    "authority_mutated": false,
+    "producer_target_mutated": false,
+    "generated_source_composed": false,
+    "generated_source_pushed": false,
+    "published": false
+  },
+  "next_action": "Commit, validate, and publish the separate registrar admission. Generated-source composition remains outside this admission."
+}
