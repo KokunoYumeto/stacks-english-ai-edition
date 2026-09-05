@@ -1,0 +1,53 @@
+{
+  "schema": "mathematics-commons-stacks-registry-fresh-checkout-receipt/v1",
+  "candidate_id": "stacks-errata-a04446e-r47",
+  "status": "PASS",
+  "verified_at_utc": "2026-09-05T19:01:27.0468973Z",
+  "admission_commit": "26f564b5f99993bee3ca6716b0ead218ca354fe3",
+  "admission_tree": "1a15fabadebe5eb9820bc480afa974d86ca6905a",
+  "candidate_commit": "14ac670b72acfd91b4acd78c763616d602d1a76b",
+  "candidate_manifest": {
+    "path": "candidates/commons/stacks/errata/r47/candidate.manifest.json",
+    "bytes": 11782,
+    "sha256": "B39114EBACAD2A74050AC9A2DF77C2C5FE11B20DE22249870B203ACEDAAD05D4",
+    "closure": "PASS: 63/63 manifest-bound files"
+  },
+  "admission_receipt": {
+    "path": "registry/admission-receipts/r47.json",
+    "bytes": 5282,
+    "sha256": "3B8AD976A6C555299DA58100B6C1181190EFB4B659D8C0F4C42CFE19C6080934"
+  },
+  "registry": {
+    "path": "registry/overlays.json",
+    "bytes": 76477,
+    "sha256": "180D91A7C2FFD034B469EFF40339AB3C312E77CE6745968CB172289CA934223A",
+    "admitted_overlays": 48,
+    "globally_unique_stable_ids": 1292
+  },
+  "leases": {
+    "path": "registry/leases.json",
+    "bytes": 60709,
+    "sha256": "D29883FB7C8A64752FFE131A74AAAB4D577CB88248E50608F57997E2EB556F49",
+    "events": 99,
+    "active_leases_excluded_from_admission": 3
+  },
+  "workflow_validator": {
+    "path": ".github/workflows/validate.yml",
+    "bytes": 15215,
+    "sha256": "D08C6B1BB17E457D33C555EFF4FC79E796C5CC07BFA8CD3C3552DD0155F96FF9",
+    "result": "PASS: exact Stacks pin, 48 admitted overlays, 99 lease events, 48 manifest/hash closures, 1292 globally unique stable IDs; 3 active leases remain separate from admission"
+  },
+  "fresh_checkout": {
+    "detached_at_exact_admission_commit": true,
+    "candidate_manifest_checker": "PASS",
+    "embedded_registry_validator": "PASS",
+    "temporary_checkout_path_persisted": false
+  },
+  "constraints": {
+    "authority_mutated": false,
+    "producer_target_mutated": false,
+    "generated_source_composed": false,
+    "generated_source_pushed": false,
+    "credential_material_present": false
+  }
+}
